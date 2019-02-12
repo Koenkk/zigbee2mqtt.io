@@ -39,6 +39,8 @@ serial:
 advanced:
   # Optional: ZigBee pan ID
   pan_id: 0x1a62
+  # Optional: Zigbee extended pan ID
+  ext_pan_id: [0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD]
   # Optional: ZigBee channel
   channel: 11
   # Optional: state caching
@@ -55,7 +57,7 @@ advanced:
   # Optional: soft reset ZNP after timeout (in seconds); 0 is disabled
   soft_reset_timeout: 0
   # Optional: network encryption key, changing requires repairing of all devices.
-  network_key: [1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13],
+  network_key: [1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]
   # Optional: Add a last_seen attribute to MQTT messages, contains date/time of last Zigbee message
   # possible values are: disable (default), ISO_8601, epoch
   last_seen: 'disable'
@@ -65,4 +67,7 @@ advanced:
   # When enabled, devices will be checked if they are still online.
   # Only AC powered routers are checked for availability.
   availability_timeout: 0
+  # Blacklist devices from being checked for availability
+  availability_blacklist:
+    - DEVICE_FRIENDLY_NAME
 ```
