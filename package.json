@@ -19,7 +19,8 @@
   ],
   "scripts": {
     "docgen": "node docgen/docgen.js",
-    "test": "mocha --recursive"
+    "test": "mocha --recursive",
+    "eslint": "node_modules/.bin/eslint ."
   },
   "author": "Koen Kanters",
   "license": "GPL-3.0",
