@@ -1,0 +1,42 @@
+{
+  "name": "zigbee2mqtt.io",
+  "description": "Zigbee2mqtt documenation",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Koenkk/zigbee2mqtt.io.git"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "keywords": [
+    "xiaomi",
+    "tradfri",
+    "hue",
+    "bridge",
+    "zigbee",
+    "mqtt",
+    "cc2531"
+  ],
+  "scripts": {
+    "docgen": "node docgen/docgen.js",
+    "test": "mocha --recursive"
+  },
+  "author": "Koen Kanters",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Koenkk/zigbee2mqtt.io/issues"
+  },
+  "homepage": "https://koenkk.github.io/zigbee2mqtt",
+  "dependencies": {
+    "image-size": "*",
+    "json2yaml": "*",
+    "zigbee2mqtt": "git://github.com/koenkk/zigbee2mqtt.git#1.1.1"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "eslint": "*",
+    "eslint-config-google": "*",
+    "eslint-plugin-mocha": "*",
+    "mocha": "*"
+  }
+}
