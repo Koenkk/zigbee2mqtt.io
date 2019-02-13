@@ -422,7 +422,7 @@ Mirror display and set child protection.
 *Eurotronic error status*
 ```json
 {
-  "eurotronic_error_status": 0 // leave empty when reading  
+  "eurotronic_error_status": 0  
 }
 ```
 This field is a readonly bitmap
