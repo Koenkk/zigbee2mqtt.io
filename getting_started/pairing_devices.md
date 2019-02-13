@@ -30,6 +30,9 @@ I start with bulb on, then off, and then 6 “on’s”, where I kill the light 
 
 * To factory reset the TRADFRI drivers (ICPSHC24-10EU-IL-1 and ICPSHC24-30EU-IL-1) use a small pin or paperclip to push the reset button once.
 
+### IKEA TRADFRI signal repeater (E1746)
+Push the reset button of the device with a paperclip for 5 seconds. While pairing the LED is flashing/dimming slowly. Once the pairing is finished, the LED stays on.
+
 ### IKEA TRADFRI remote control (E1524)
 This device requires extra setup as it is meant to only control groups. Therefore it does not send any information directly to the coordinator. As the group ID is randomized upon factor reset we need to find out the group ID where it sends its commands to. This can be done by using Zigbee sniffing.
 
