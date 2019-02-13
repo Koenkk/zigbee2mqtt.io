@@ -7,12 +7,21 @@ zigbee2mqtt publishes the bridge state to this topic. Possible message are:
 * `"online"`: published when the bridge is running (on startup)
 * `"offline"`: published right before the bridge stops
 
+## zigbee2mqtt/bridge/config
+zigbee2mqtt publishes it configuration to this topic containing the `log_level` and `permit_join`.
+
 ## zigbee2mqtt/bridge/log
 zigbee2mqtt will output log to this endpoint. Message are always in the form of `{"type":"TYPE","message":"MESSAGE"}`. Possible message types are:
 * `"pairing"`: logging when device is connecting to the network.
 * `"device_connected"`: send when a new device connects to the network.
 * `"device_removed"`: send when a device is removed from the network.
 * `"device_banned"`: send when a device is banned from the network.
+* `"device_renamed"`: send when a device is renamed.
+* `"device_bind"`: send when a device is bound.
+* `"device_unbind"`: send when a device is unbound.
+* `"device_group_add"`: send when a device is added to a group.
+* `"device_group_remove"`: send when a device is removed from a group.
+* `"device_group_remove_all"`: send when a device is removed from all groups.
 * `"devices"`: a list of all devices, this message can be triggered by sending a message to `zigbee2mqtt/bridge/config/devices` (payload doesn't matter).
 
 ## zigbee2mqtt/bridge/config/permit_join
