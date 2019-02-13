@@ -1150,8 +1150,8 @@
       }
     },
     "zigbee2mqtt": {
-      "version": "git://github.com/koenkk/zigbee2mqtt.git#d9ddce579792f86d1c9158eb98e31d01e2135bca",
-      "from": "git://github.com/koenkk/zigbee2mqtt.git",
+      "version": "git://github.com/koenkk/zigbee2mqtt.git#a85c68cca0671d526e512fecd483e5d04a6fd51c",
+      "from": "git://github.com/koenkk/zigbee2mqtt.git#a85c68cca0671d526e512fecd483e5d04a6fd51c",
       "requires": {
         "git-last-commit": "*",
         "js-yaml": "*",
@@ -5696,11 +5696,11 @@
             "chai": "*",
             "debounce": "*",
             "debug": "3.2.6",
-            "zcl-id": "https://github.com/koenkk/zcl-id/tarball/master"
+            "zcl-id": "https://github.com/koenkk/zcl-id/tarball/509f77ab620ece6ad8e83a008283457a5280c8db"
           },
           "dependencies": {
             "zcl-id": {
-              "version": "https://github.com/koenkk/zcl-id/tarball/master",
+              "version": "https://github.com/koenkk/zcl-id/tarball/509f77ab620ece6ad8e83a008283457a5280c8db",
               "integrity": "sha512-VzHMq1JqhdCVVLWBmCECLrkQMEY6DYL/0gp4GrsJbyQuBE4wcMGs0zAHhF9DxlWZ4eT6zkiH0e5z6hEhUSRLRA==",
               "requires": {
                 "busyman": "^0.3.0",
