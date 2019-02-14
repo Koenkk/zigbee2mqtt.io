@@ -337,6 +337,14 @@ Possible values:
 | `cool`
 | `heat`
 
+Valve position / heating demand
+```
+{
+  "pi_heating_demand": 0       // leave empty when reading
+}
+```
+Will report the valve position or heating amount depending on device. 0=min, 255=max
+
 Get or set weekly schedule
 ```
 {
@@ -368,3 +376,73 @@ tz.thermostat_relay_status_log
 Get relay status log response
 tz.thermostat_relay_status_log_rsp
 -->
+
+#### Eurotronic Spirit Zigbee specific attributes
+*Current heating setpoint*
+```json
+{
+  "current_heating_setpoint": 21.5
+}
+```
+Current heating setpoint is also modified when occupied or unoccupied heating setpoint is set.
+
+*Eurotronic system mode*
+
+This is a bitmap encoded field to set several device specific features. Please remind it is not possible to set single bits, always the full bitmap is written. Bit 0 doesnt seem to be writeable, it is always reported as set, so expect your written value + 1 to be reported.
+
+Bit | Position
+--- | --------
+0 | unknown (default 1)
+1 | Mirror display
+2 | Boost
+3 | unknown
+4 | disable window open
+5 | set window open (is reported as disable window open)
+6 | unknown
+7 | Child protection 
+
+Examples for eurotronic_system_mode:
+
+Mirror display, reported as 3
+```json
+{
+  "eurotronic_system_mode": 2
+}
+```
+signal external window open, current_heating_setpoint will report "5", device display shows "OFF"
+```json
+{
+  "eurotronic_system_mode": 32
+}
+```
+signal external window close, will restore last current_heating_setpoint value
+```json
+{
+  "eurotronic_system_mode": 16  
+}
+```
+Mirror display and set child protection.
+```json
+{
+  "eurotronic_system_mode": 66
+}
+```
+
+*Eurotronic error status*
+```json
+{
+  "eurotronic_error_status": 0  
+}
+```
+This field is a readonly bitmap
+
+Bit | Position
+--- | --------
+0 | reserved
+1 | reserved
+2 | reserved
+3 | Valve adaption failed (E1)
+4 | Valve movement too slow (E2)
+5 | Valve not moving/blocked (E3)
+6 | reserved
+7 | reserved
