@@ -86,7 +86,7 @@ Groups are not auto-discovered. Use the following configuration:
   schema: json
   name: MY_GROUP
   command_topic: "zigbee2mqtt/[GROUP_FRIENDLY_NAME]/set"
-  state_topic: "zigbee2mqtt/[GROUP_FRIENDLY_NAME]/set"
+  state_topic: "zigbee2mqtt/[GROUP_FRIENDLY_NAME]"
 
   // Modify according to features supported by all devices in group
   color_temp: true
