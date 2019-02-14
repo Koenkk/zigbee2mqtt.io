@@ -34,27 +34,7 @@ I start with bulb on, then off, and then 6 “on’s”, where I kill the light 
 Push the reset button of the device with a paperclip for 5 seconds. While pairing the LED is flashing/dimming slowly. Once the pairing is finished, the LED stays on.
 
 ### IKEA TRADFRI remote control (E1524)
-This device requires extra setup as it is meant to only control groups. Therefore it does not send any information directly to the coordinator. As the group ID is randomized upon factor reset we need to find out the group ID where it sends its commands to. This can be done by using Zigbee sniffing.
-
-1. Pair the remote to Zigbee2mqtt by holding it close to the coordinator and pressing the button next to the battery 4 times. The red light on the remote will now flash a few times.
-2. Setup your Zigbee traffic sniffer by following [How to sniff Zigbee traffic](../how_tos/how_to_sniff_zigbee_traffic.md).
-3. Press the middle (power) button on the remote, this will produce the following message in Wireshark:
-![E1524 group](../images/E1524_group.png)
-4. Retrieve the group from the message, which is `0xeb12` in the above example.
-5. Add the group to the device in `configuration.yaml`, example:
-```yaml
-devices:
-  '0x000b57fffecb472d':
-    friendly_name: '0x000b57fffecb472d'
-    retain: false
-    coordinator_group: 0xeb12
-```
-6. Restart Zigbee2mqtt, when everything went OK you will see:
-```
-zigbee2mqtt:info 1/8/2019, 8:42:40 PM Sucesfully applied coordinator group for IKEA TRADFRI remote control (0x000b57fffecb472d)
-```
-### Why is this needed?
-The TRADFRI remote sends the group ID using touchlink commissioning (while holding the reset button close to a bulb) but this is currently not supported by the firmware (Z-Stack 1.2 HA). Perhaps it will work in Z-Stack 3.0.
+Pair the remote to Zigbee2mqtt by holding it close to the coordinator and pressing the button next to the battery 4 times. The red light on the remote will now flash a few times. Now follow [Coordinator group](../information/coordinator_group.md)
 
 ## Philips Hue
 Factory reset the light bulb see [HOWTO: Factory reset a Hue bulb](https://www.youtube.com/watch?v=qvlEAELiJKs). After resetting the bulb will automatically connect.
