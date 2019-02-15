@@ -58,7 +58,9 @@ it is equal to the Zigbee2mqtt `friendly_name`. Is updated if the Zigbee2mqtt `f
 - Home Assistant `friendly_name` (`customize.yaml`): overrides the name in the Home Assistant web interface.
 
 ## Responding to button clicks
-To respond to button clicks (e.g. WXKG01LM) you can use the following Home Assistant configuration:
+To respond to button clicks (e.g. WXKG01LM) you can use one of the following two Home Assistant configurations.
+
+### Via MQTT
 
 {% raw %}
 ```yaml
@@ -72,6 +74,23 @@ automation:
       value_template: '{{ "single" == trigger.payload_json.click }}'
     action:
       entity_id: light.bedroom
+      service: light.toggle
+```
+{% endraw %}
+
+### Via Home Assistant entity
+Due to a [limitation in Home Assistant](https://github.com/home-assistant/home-assistant/pull/20716), this automation can only trigger 1 time per 1 or 2 seconds. If you need this, use the MQTT trigger from the example above.
+
+{% raw %}
+```yaml
+automation:
+  - alias: Respond to button click
+    trigger:
+      platform: state
+      entity_id: sensor.my_switch_click
+      to: 'single'
+    action:
+      entity_id: light.my_bulb_light
       service: light.toggle
 ```
 {% endraw %}
