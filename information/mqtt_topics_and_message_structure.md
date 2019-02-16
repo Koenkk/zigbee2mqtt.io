@@ -29,6 +29,9 @@ Allows you to permit joining of new devices via MQTT. This is not persistent (wi
 * `"true"`: permit joining of new devices
 * `"false"`: disable joining of new devices
 
+## zigbee2mqtt/bridge/config/reset
+Resets the ZNP (CC2530/CC2531).
+
 ## zigbee2mqtt/bridge/config/log_level
 Allows you to switch the `log_level` during runtime. This is not persistent (will not be saved to `configuration.yaml`). Possible payloads are: `"debug"`, `"info"`, `"warn"`, `"error"`.
 
@@ -399,7 +402,7 @@ Bit | Position
 4 | disable window open
 5 | set window open (is reported as disable window open)
 6 | unknown
-7 | Child protection 
+7 | Child protection
 
 Examples for eurotronic_system_mode:
 
@@ -418,7 +421,7 @@ signal external window open, current_heating_setpoint will report "5", device di
 signal external window close, will restore last current_heating_setpoint value
 ```json
 {
-  "eurotronic_system_mode": 16  
+  "eurotronic_system_mode": 16
 }
 ```
 Mirror display and set child protection.
@@ -431,7 +434,7 @@ Mirror display and set child protection.
 *Eurotronic error status*
 ```json
 {
-  "eurotronic_error_status": 0  
+  "eurotronic_error_status": 0
 }
 ```
 This field is a readonly bitmap
