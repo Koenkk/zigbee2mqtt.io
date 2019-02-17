@@ -24,10 +24,10 @@ Allows you to permit joining of new devices via MQTT. This is not persistent (wi
 Allows you to switch the `log_level` during runtime. This is not persistent (will not be saved to `configuration.yaml`). Possible payloads are: `"debug"`, `"info"`, `"warn"`, `"error"`.
 
 ## zigbee2mqtt/bridge/config/remove
-Allows you to remove devices from the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful remove a [`device_removed`](https://koenkk.github.io/zigbee2mqtt/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is send.
+Allows you to remove devices from the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful remove a [`device_removed`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is send.
 
 ## zigbee2mqtt/bridge/config/ban
-Allows you to ban devices from the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful ban a [`device_banned`](https://koenkk.github.io/zigbee2mqtt/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is send.
+Allows you to ban devices from the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful ban a [`device_banned`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is send.
 
 ## zigbee2mqtt/bridge/config/rename
 Allows you to change the `friendly_name` of a device on the fly.

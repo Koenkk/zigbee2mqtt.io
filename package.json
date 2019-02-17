@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/Koenkk/zigbee2mqtt.io/issues"
   },
-  "homepage": "https://koenkk.github.io/zigbee2mqtt",
+  "homepage": "https://www.zigbee2mqtt.io",
   "dependencies": {
     "image-size": "*",
     "json2yaml": "*",
