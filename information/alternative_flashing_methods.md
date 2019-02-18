@@ -123,3 +123,34 @@ Flashing:
 
 Completed
 ```
+
+### Via Arduino Uno/CCLoader
+
+**This has only been tested with a Genuine Arudino Uno, but is significantly faster**
+
+1. Download and unpack CCLoader firmware and tools https://github.com/RedBearLab/CCLoader
+
+2. Download the correct firmware, this example will be using the CC2531 [](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator)
+
+3. Unpack firmware and place CC2531ZNP-Prod.bin in the Windows folder of CCLoader with CCLoader.exe
+
+4. Flash Arudino Uno with Arduino\CCLoader\CCLoader.ino, note the COM port number this will be used later
+
+5. Connect pins as described to debug header
+
+```
+Arduino | CC Header
+GND -> GND
+4 -> DC (Debug Clock)
+5 -> RESETn
+6 -> DD (Debug Data)
+```
+
+![](https://www.waveshare.com/img/devkit/CC-Debugger/CC-Debugger-JTAG-Header.jpg)
+
+6. Connect Arduino first, then within a couple seconds connect the CC2531 to USB power
+
+7. Open a command window in the Windows folder with CCLoader.exe
+
+8. Start the flash with ```CCLoader_x86_64.exe COMNUM CC2531ZNP-Prod.bin 0```
+Example: CCLoader_x86_64.exe 7 CC2531ZNP-Prod.bin 0
