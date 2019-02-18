@@ -46,4 +46,3 @@ Welcome to the Zigbee2mqtt documentation!
 * [Alternative flashing methods](information/alternative_flashing_methods.md)
 * [Running Zigbee2mqtt in Virtual Environment](information/virtual_environment.md)
 * [Flashing without re-pairing](information/flashing_without_re-pairing.md)
-* [Coordinator group](information/coordinator_group.md)

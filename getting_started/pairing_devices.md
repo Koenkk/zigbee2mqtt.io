@@ -34,7 +34,7 @@ I start with bulb on, then off, and then 6 “on’s”, where I kill the light 
 Push the reset button of the device with a paperclip for 5 seconds. While pairing the LED is flashing/dimming slowly. Once the pairing is finished, the LED stays on.
 
 ### IKEA TRADFRI remote control (E1524)
-Pair the remote to Zigbee2mqtt by holding it close to the coordinator and pressing the button next to the battery 4 times. The red light on the remote will now flash a few times. Now follow [Coordinator group](../information/coordinator_group.md)
+Pair the remote to Zigbee2mqtt by holding it close to the coordinator and pressing the button next to the battery 4 times. The red light on the remote will now flash a few times.
 
 ## Philips Hue
 Factory reset the light bulb see [HOWTO: Factory reset a Hue bulb](https://www.youtube.com/watch?v=qvlEAELiJKs). After resetting the bulb will automatically connect.
