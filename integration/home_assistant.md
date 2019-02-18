@@ -79,7 +79,9 @@ automation:
 {% endraw %}
 
 ### Via Home Assistant entity
-Due to a [limitation in Home Assistant](https://github.com/home-assistant/home-assistant/pull/20716), this automation can only trigger 1 time per 1 or 2 seconds. If you need this, use the MQTT trigger from the example above.
+Due to a [limitation in Home Assistant](https://github.com/home-assistant/home-assistant/pull/20716),
+this automation can only trigger 1 time per 1 or 2 seconds.
+If you need this, use the MQTT trigger from the example above.
 
 {% raw %}
 ```yaml
