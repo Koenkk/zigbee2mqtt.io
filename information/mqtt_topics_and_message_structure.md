@@ -42,6 +42,9 @@ See [Groups](groups.md)
 ## zigbee2mqtt/bridge/(bind|unbind)/[friendly_name]
 See [Binding](binding.md)
 
+## zigbee2mqtt/bridge/device/[friendly_name]/get_group_membership
+Returns the list of groups a device is in, and its group capacity.
+
 ## zigbee2mqtt/[DEVICE_ID]
 Where `[DEVICE_ID]` is E.G. `0x00158d0001b79111`. Message published to this topic are **always** in a JSON format. Each device produces a different JSON message, **some** examples:
 
