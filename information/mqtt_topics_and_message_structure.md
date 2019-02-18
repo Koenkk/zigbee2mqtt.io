@@ -146,6 +146,7 @@ Sets the Philips Hue power-on behavior which was introduced with the November/De
   "hue_power_on_color_temperature": 280,  //default, same values as color_temp, default = 366
 }
 ```
+
 Attribute Value | Description
 ----------------|-----------------------------------------------
 default         | reset to factory default value
@@ -230,6 +231,7 @@ Payload:
   }
 }
 ```
+
 Response      | Description
 --------------|-----------------------------------------------
 18            | Button controls left relay
@@ -296,6 +298,7 @@ Increase or decrease heating setpoint by NUMBER degrees in °C.
   }
 }
 ```
+
 Attribute Value | Description
 ----------------|-----------------------------------------------
 0x00            | Heat (adjust Heat Setpoint)
@@ -308,6 +311,7 @@ Get or set whether the local temperature, outdoor temperature and occupancy are 
   "remote_sensing": "NUMBER"      // Possible values: see table below; leave empty to read
 }
 ```
+
 Bit Number | Description
 -----------|-----------------------------------------
 0          | 0 – local temperature sensed internally <br> 1 – local temperature sensed remotely
@@ -320,6 +324,7 @@ Get or set control sequence of operation
   "control_sequence_of_operation": "VALUE"       // Possible values: see table below; leave empty to read
 }
 ```
+
 Values                                    | Possible Values of SystemMode
 ------------------------------------------|-------------------------------------
 `cooling only`                            | Heat and Emergency are not possible
@@ -335,6 +340,7 @@ Get or set system mode
   "system_mode": "VALUE"       // Possible values: see table below; leave empty to read
 }
 ```
+
 Values              |
 --------------------|
 `off`               |
@@ -371,6 +377,7 @@ Get or set weekly schedule
   }                                                   // leave empty to read
 }
 ```
+
 Attribute Value | Description
 ----------------|---------------------------------------------------------------------------
 0               | 0 – Simple/setpoint mode. This mode means the thermostat setpoint is altered only by manual up/down changes at the thermostat or remotely, not by internal schedule programming. <br> 1 – Schedule programming mode. This enables or disables any programmed weekly schedule configurations. <br> Note: It does not clear or delete previous weekly schedule programming configurations.
