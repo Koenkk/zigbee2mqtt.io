@@ -153,4 +153,5 @@ GND -> GND
 7. Open a command window in the Windows folder with CCLoader.exe
 
 8. Start the flash with ```CCLoader_x86_64.exe COMNUM CC2531ZNP-Prod.bin 0```
-Example: CCLoader_x86_64.exe 7 CC2531ZNP-Prod.bin 0
+
+  Example: CCLoader_x86_64.exe 7 CC2531ZNP-Prod.bin 0
