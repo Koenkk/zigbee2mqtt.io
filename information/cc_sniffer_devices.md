@@ -18,9 +18,14 @@ For more information about a coordinator and routers can be found [here](zigbee_
 | **CC2530 with RFX2401** | Serial connected Zigbee sniffer based on CC2530 with RFX2401 RF frontend and external antenna. A more expensive option with increased range (~50-60m line of sight) and higher sensitivity. More difficult to connect unless paired with serial-USB (such as the example shown). **Note** that for the GBAN unit shown it is necessary to connect P04, P06 and P20 to GND - see [here](https://github.com/Koenkk/zigbee2mqtt/issues/52#issuecomment-391115143)| [Coordinator firmware (same as CC2530 + CC2591)](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/CC2530_CC2591/bin) <br/><br/> [Router firmware (same as CC2530 + CC2591)](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/CC2530_CC2591/bin) | ![CC2530 with RFX2401](../images/cc2530_rfx2401.png) | [GBAN](http://www.gban.cn/en/product_show.asp?id=43)<br/><br/>[Aliexpress](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104722&SearchText=cc2530+rf) |
 
 
-NOTE: When using a CC2530 based device the following configuration is necessary:
+## Required configuration for CC2530 coordinator
+When using a CC2530 based device as a coordinator the following configuration is necessary:
 
 ```yaml
 advanced:
   rtscts: false
 ```
+
+## Re-pairing CC2530/CC2530 router
+- CC2531 can be re-paired pressing the S2 button for 5 seconds.
+- СС2530 can be re-paired if you power on/power off the device three times (power on, wait 2 seconds, power off, repeat this cycle three times).

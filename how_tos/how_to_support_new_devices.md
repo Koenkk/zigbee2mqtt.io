@@ -7,13 +7,13 @@ This page will guide you through the process of adding support for new devices t
 In case you require any help feel free to create an [issue](https://github.com/Koenkk/zigbee2mqtt/issues).
 
 ## 1. Pairing the device with Zigbee2mqtt
-The first step is to pair the device with zigbee2mqtt. It should be possible to pair your unsupported device out of the box because zigbee2mqtt can pair with any zigbee device. You need to find out how to bring your device into pairing mode, most of the time via a factory reset. For some vendors this is already documented [here](https://koenkk.github.io/zigbee2mqtt/getting_started/pairing_devices.html).
+The first step is to pair the device with zigbee2mqtt. It should be possible to pair your unsupported device out of the box because zigbee2mqtt can pair with any zigbee device. You need to find out how to bring your device into pairing mode, most of the time via a factory reset. For some vendors this is already documented [here](https://www.zigbee2mqtt.io/getting_started/pairing_devices.html).
 
 Once you successfully paired the device you will see something like:
 ```
 2018-5-1 18:06:41 INFO New device with address 0x00158d0001b79111 connected!
 2018-5-1 18:06:42 WARN Device with modelID 'lumi.sens' is not supported.
-2018-5-1 18:06:42 WARN Please see: https://koenkk.github.io/zigbee2mqtt/how_tos/how_to_support_new_devices.html
+2018-5-1 18:06:42 WARN Please see: https://www.zigbee2mqtt.io/how_tos/how_to_support_new_devices.html
 ```
 
 *NOTE: Make sure that `permit_join: true` is set in `configuration.yaml` otherwise new devices cannot join the network.*
