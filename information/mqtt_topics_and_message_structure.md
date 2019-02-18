@@ -211,7 +211,9 @@ This might be useful to assign some custom actions to buttons and control relay 
 This command also allows to redefine which button controls which relay for double switch.
 
 Special topics should be used:
+
 `zigbee2mqtt/[DEVICE_ID]/system/set` to modify operating mode.
+
 Payload:
 ```js
 {
@@ -222,8 +224,8 @@ Payload:
 }
 ```
 `zigbee2mqtt/[DEVICE_ID]/system/get` to read current mode.
-Payload:
 
+Payload:
 ```js
 {
   "decoupled_mode": {
