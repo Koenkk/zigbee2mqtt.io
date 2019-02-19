@@ -41,7 +41,7 @@ advanced:
   pan_id: 0x1a62
   # Optional: Zigbee extended pan ID
   ext_pan_id: [0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD]
-  # Optional: ZigBee channel
+  # Optional: ZigBee channel, changing requires re-pairing of all devices.
   channel: 11
   # Optional: state caching
   # https://github.com/Koenkk/zigbee2mqtt/commit/9396bde1f3b022e0f634487d1a37d2a5127c8cb3#diff-f68567477d803b49930337bf7fe1556bR16
@@ -56,7 +56,7 @@ advanced:
   rtscts: true
   # Optional: soft reset ZNP after timeout (in seconds); 0 is disabled
   soft_reset_timeout: 0
-  # Optional: network encryption key, changing requires repairing of all devices.
+  # Optional: network encryption key, changing requires re-pairing of all devices.
   network_key: [1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]
   # Optional: Add a last_seen attribute to MQTT messages, contains date/time of last Zigbee message
   # possible values are: disable (default), ISO_8601, epoch

@@ -37,6 +37,7 @@ Welcome to the Zigbee2mqtt documentation!
 * [FAQ](information/FAQ.md)
 * [Supported devices](information/supported_devices.md)
 * [MQTT topics and message structure](information/mqtt_topics_and_message_structure.md)
+* [What does and does not require repairing of all devices?](information/what_does_and_doesnt_require_repairing.md)
 * [Groups](information/groups.md)
 * [Binding](information/binding.md)
 * [Docker](information/docker.md)
@@ -45,4 +46,3 @@ Welcome to the Zigbee2mqtt documentation!
 * [CC sniffer devices](information/cc_sniffer_devices.md)
 * [Alternative flashing methods](information/alternative_flashing_methods.md)
 * [Running Zigbee2mqtt in Virtual Environment](information/virtual_environment.md)
-* [Flashing without re-pairing](information/flashing_without_re-pairing.md)

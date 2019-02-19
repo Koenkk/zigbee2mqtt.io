@@ -5,7 +5,7 @@ By default your Zigbee network isn't as secured as possible. The following setti
 To disable joining it's important that `permit_join: false` is set in your `configuration.yaml`. Otherwise rogue devices are able to join allowing them to send and receive Zigbee traffic.
 
 ## Change Zigbee network encryption key
-**Changing the key requires repairing of all devices!**
+**Changing the network key requires repairing of all devices!**
 
 Zigbee2mqtt uses a known default encryption key. Therefore it is recommended to use a different one. To use a different encryption key add the following to your `configuration.yaml`:
 
