@@ -96,7 +96,7 @@ Where `[DEVICE_ID]` is E.G. `0x00158d0001b79111`. Message published to this topi
 ```
 
 **Xiaomi Aqara curtain motor (ZNCLDJ11LM)**
-```
+```js
 {
   "position": 60,       // Value between 0 and 100, (0 - closed / 100 - open)
   "running": true,      // Curtain is moving
@@ -106,7 +106,7 @@ Where `[DEVICE_ID]` is E.G. `0x00158d0001b79111`. Message published to this topi
 ## zigbee2mqtt/[DEVICE_ID]/set
 Publishing messages to this topic allows you to control your Zigbee devices via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH).
 
-```
+```js
 {
   "state": "ON", // Or "OFF", "TOGGLE"
   "brightness": 255,
@@ -154,28 +154,29 @@ Remove attributes which are not supported for your device. E.G. in case of a Xia
 Only used when `homeassistant: true` in `configuration.yaml`. Required for [Home Assistant MQTT discovery](https://www.home-assistant.io/docs/mqtt/discovery/).
 
 ## Device specific
-Device specific commands are always send to the topic: `zigbee2mqtt/[DEVICE_ID]/set`. Below you will find the possible payloads.
+Device specific commands are always send to the topic: `zigbee2mqtt/[DEVICE_ID]/set`. Some commands also support reading of current value by sending request to `zigbee2mqtt/[DEVICE_ID]/get`. Below you will find the possible payloads.
 
 ### Philips Hue power-on behavior
 Sets the Philips Hue power-on behavior which was introduced with the November/December '18 firmware update.
-```
+```js
 {
   "hue_power_on_behavior": "on",          //default, on, off, recover, default = on
   "hue_power_on_brightness": 125,         //default, same values as brightness, default = 255
   "hue_power_on_color_temperature": 280,  //default, same values as color_temp, default = 366
 }
 ```
+
 Attribute Value | Description
 ----------------|-----------------------------------------------
-default | reset to factory default value
-on | lamps on after power loss with configured brightness, color-temperature, color (to-do)
-off | lamps off after power loss
-recover | last running state after power loss
+default         | reset to factory default value
+on              | lamps on after power loss with configured brightness, color-temperature, color (to-do)
+off             | lamps off after power loss
+recover         | last running state after power loss
 
 ### Philips Hue motion detector (SML001)
 Sets the sensors timeout between last motion detected
 and sensor reports occupance false
-```
+```js
 {
     // Value >= 0,
     // 0 - 10: 10sec (min possible timeout)
@@ -187,7 +188,7 @@ and sensor reports occupance false
 
 ### Xiaomi Aqara vibration sensor (DJT11LM)
 Set the sensitivity of the sensor. **NOTE:** As this device is sleeping most of the time, right before sending this command press the button on the device.
-```
+```js
 {
   "sensitivity": "medium"     // Possible values: 'low', 'medium', 'high'
 }
@@ -195,7 +196,7 @@ Set the sensitivity of the sensor. **NOTE:** As this device is sleeping most of 
 
 ### Xiaomi MiJia gas leak detector (JTQJBF01LMBW)
 Set/read the sensitivity of the sensor.
-```
+```js
 {
   "sensitivity": "medium"     // Possible values; to set: 'low', 'medium', 'high'; to read: 'read'
 }
@@ -210,17 +211,59 @@ Execute selftest
 
 ### Xiaomi Aqara curtain motor (ZNCLDJ11LM)
 Set the state of the curtain.
-```
+```js
 {
   "state": "open"       // Possible values to set: 'open', 'close', 'stop'
 }
 ```
 
 Set the position of the curtain.
-```
+```js
 {
   "position": 50      // Possible values to set: 0 - 100 (0 - closed / 100 - open)
 }
+```
+
+### Xiaomi Aqara wired wall switch (QBKG03LM and QBKG04LM)
+Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
+This might be useful to assign some custom actions to buttons and control relay remotely.
+This command also allows to redefine which button controls which relay for double switch.
+
+Special topics should be used:
+
+`zigbee2mqtt/[DEVICE_ID]/system/set` to modify operation mode.
+
+Payload:
+```js
+{
+  "operation_mode": {
+    "button": "single"|"left"|"right",
+    "state": "VALUE"
+  }
+}
+```
+
+Values                | Description
+----------------------|---------------------------------------------------------
+`control_relay`       | Button directly controls relay (for single switch)
+`control_left_relay`  | Button directly controls left relay (for double switch)
+`control_right_relay` | Button directly controls right relay (for double switch)
+`decoupled`           | Button doesn't control any relay
+
+`zigbee2mqtt/[DEVICE_ID]/system/get` to read current mode.
+
+Payload:
+```js
+{
+  "operation_mode": {
+    "button": "single"|"left"|"right"
+  }
+}
+```
+
+Response will be sent to `zigbee2mqtt/[DEVICE_ID]`:
+```json
+{"operation_mode_right":"control_right_relay"}
 ```
 
 ### SmartThings arrival sensor (STS-PRS-251)
@@ -240,14 +283,14 @@ Get local temperature in degrees Celsius (in the range 0x954d to 0x7fff, i.e. -2
 ```
 
 Get or set offset added to/subtracted from the actual displayed room temperature to NUMBER, in steps of 0.1°C
-```
+```js
 {
   "local_temperature_calibration": "NUMBER"       // Possible values: –2.5 to +2.5; leave empty to read
 }
 ```
 
 Set temperature display mode
-```
+```js
 {
   "temperature_display_mode": ""      // Possible values: 0 to set °C or 1 so set °F
 }
@@ -261,21 +304,21 @@ Get room occupancy. Specifies whether the heated/cooled space is occupied or not
 ```
 
 Get or set occupied heating setpoint to NUMBER in degrees Celsius.
-```
+```js
 {
   "occupied_heating_setpoint": "NUMBER"       // Possible values: MinHeatSetpointLimit to  MaxHeatSetpointLimit, i.e. 7 to 30 by default; leave empty to read
 }
 ```
 
 Get or set unoccupied heating setpoint to NUMBER in degrees Celsius
-```
+```js
 {
   "unoccupied_heating_setpoint": "NUMBER"       // Possible values: MinHeatSetpointLimit to MaxHeatSetpointLimit, i.e. 7 to 30 by default; leave empty to read
 }
 ```
 
 Increase or decrease heating setpoint by NUMBER degrees in °C.
-```
+```js
 {
   "setpoint_raise_lower": {
     "mode": "0x00",       // Possible values: see table below
@@ -283,6 +326,7 @@ Increase or decrease heating setpoint by NUMBER degrees in °C.
   }
 }
 ```
+
 Attribute Value | Description
 ----------------|-----------------------------------------------
 0x00            | Heat (adjust Heat Setpoint)
@@ -290,11 +334,12 @@ Attribute Value | Description
 0x02            | Both (adjust Heat Setpoint and Cool Setpoint)
 
 Get or set whether the local temperature, outdoor temperature and occupancy are being sensed by internal sensors or remote networked sensors
-```
+```js
 {
   "remote_sensing": "NUMBER"      // Possible values: see table below; leave empty to read
 }
 ```
+
 Bit Number | Description
 -----------|-----------------------------------------
 0          | 0 – local temperature sensed internally <br> 1 – local temperature sensed remotely
@@ -302,11 +347,12 @@ Bit Number | Description
 2          | 0 – occupancy sensed internally <br> 1 – occupancy sensed remotely
 
 Get or set control sequence of operation
-```
+```js
 {
   "control_sequence_of_operation": "VALUE"       // Possible values: see table below; leave empty to read
 }
 ```
+
 Values                                    | Possible Values of SystemMode
 ------------------------------------------|-------------------------------------
 `cooling only`                            | Heat and Emergency are not possible
@@ -317,35 +363,37 @@ Values                                    | Possible Values of SystemMode
 `cooling and heating 4-pipes with reheat` | All modes are possible
 
 Get or set system mode
-```
+```js
 {
   "system_mode": "VALUE"       // Possible values: see table below; leave empty to read
 }
 ```
-| Values
-|------------------
-| `off`
-| `auto`
-| `cool`
-| `heat`
-| `emergency heating`
-| `precooling`
-| `fan only`
-| `dry`
-| `sleep`
+
+Values              |
+--------------------|
+`off`               |
+`auto`              |
+`cool`              |
+`heat`              |
+`emergency heating` |
+`precooling`        |
+`fan only`          |
+`dry`               |
+`sleep`             |
 
 Get running state
-```
+```js
 {
   "running_state": ""       // leave empty when reading
 }
 ```
 Possible values:
-| Values
-|------------------
-| `off`
-| `cool`
-| `heat`
+
+Values |
+-------|
+`off`  |
+`cool` |
+`heat` |
 
 Valve position / heating demand
 ```
@@ -356,7 +404,7 @@ Valve position / heating demand
 Will report the valve position or heating amount depending on device. 0=min, 255=max
 
 Get or set weekly schedule
-```
+```js
 {
   "weekly_schedule": {
     "TemperatureSetpointHold": "0x00",                // 0x00 setpoint hold off or 0x01 on
@@ -365,6 +413,7 @@ Get or set weekly schedule
   }                                                   // leave empty to read
 }
 ```
+
 Attribute Value | Description
 ----------------|---------------------------------------------------------------------------
 0               | 0 – Simple/setpoint mode. This mode means the thermostat setpoint is altered only by manual up/down changes at the thermostat or remotely, not by internal schedule programming. <br> 1 – Schedule programming mode. This enables or disables any programmed weekly schedule configurations. <br> Note: It does not clear or delete previous weekly schedule programming configurations.
