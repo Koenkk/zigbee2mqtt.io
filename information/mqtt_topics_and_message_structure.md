@@ -212,33 +212,40 @@ This command also allows to redefine which button controls which relay for doubl
 
 Special topics should be used:
 
-`zigbee2mqtt/[DEVICE_ID]/system/set` to modify operating mode.
+`zigbee2mqtt/[DEVICE_ID]/system/set` to modify operation mode.
 
 Payload:
 ```js
 {
-  "decoupled_mode": {
+  "operation_mode": {
     "button": "single"|"left"|"right",
-    "state": "decoupled"|"toggle_left"|"toggle_right"
+    "state": "VALUE"
   }
 }
 ```
+
+Values                | Description
+----------------------|---------------------------------------------------------
+`control_relay`       | Button directly controls relay (for single switch)
+`control_left_relay`  | Button directly controls left relay (for double switch)
+`control_right_relay` | Button directly controls right relay (for double switch)
+`decoupled`           | Button doesn't control any relay
+
 `zigbee2mqtt/[DEVICE_ID]/system/get` to read current mode.
 
 Payload:
 ```js
 {
-  "decoupled_mode": {
+  "operation_mode": {
     "button": "single"|"left"|"right"
   }
 }
 ```
 
-Response      | Description
---------------|-----------------------------------------------
-18            | Button controls left relay
-34            | Button controls right relay
-254           | Button is decoupled from the relays
+Response will be sent to `zigbee2mqtt/[DEVICE_ID]`:
+```json
+{"operation_mode_right":"control_right_relay"}
+```
 
 ### SmartThings arrival sensor (STS-PRS-251)
 Let the device beep.
