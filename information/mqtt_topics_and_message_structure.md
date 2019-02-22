@@ -39,6 +39,18 @@ Resets the ZNP (CC2530/CC2531).
 ## zigbee2mqtt/bridge/config/log_level
 Allows you to switch the `log_level` during runtime. This is not persistent (will not be saved to `configuration.yaml`). Possible payloads are: `"debug"`, `"info"`, `"warn"`, `"error"`.
 
+## zigbee2mqtt/bridge/config/device_options
+Allows you to change device specific options during runtime. Options can only be changed, not added or deleted. The payload should be a JSON message, example:
+
+```json
+{
+  "friendly_name": "motion_sensor_toilet",
+  "options": {
+    "occupancy_timeout": 100
+  }
+}
+```
+
 ## zigbee2mqtt/bridge/config/remove
 Allows you to remove devices from the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful remove a [`device_removed`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is send.
 
