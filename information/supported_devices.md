@@ -5,7 +5,7 @@
 Currently **191** devices are supported from **39** different vendors.
 
 In case you own a Zigbee device which is **NOT** listed here, please see
-[How to support new devices](how_tos/how_to_support_new_devices.md).
+[How to support new devices](../how_tos/how_to_support_new_devices.md).
 
 ### AduroSmart
 
