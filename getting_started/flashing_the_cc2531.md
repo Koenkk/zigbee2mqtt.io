@@ -43,8 +43,8 @@ make
 sudo ./cc-tool -e -w CC2531ZNP-Prod.hex
 ```
 
-# Check the installed Firmware Version
-zigbee2mqtt will output the installed firmware Version to the zigbee2mqtt log file:
+# How-to check the installed firmware version
+Zigbee2mqtt will output the installed firmware version to the zigbee2mqtt log on startup:
 ```
 2019-2-23 01:03:53 - info: Coordinator firmware version: '20190109'
 ```
