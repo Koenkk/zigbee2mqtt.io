@@ -34,7 +34,7 @@ Download and install the latest version of [Wireshark](https://www.wireshark.org
 ## 3. Sniffing traffic
 On Ubuntu start wireshark with `sudo whsniff -c ZIGBEE_CHANNEL_NUMBER | wireshark -k -i -`. For Windows run the ZBOSS executable in `gui\zboss_sniffer.exe`, enter the path to your Wireshark executable and click on the `Start` button.
 
-Wireshark will start and log the Zigbee messages. As these messages are encrypted we need to add 2 encryption keys. The first one is the Trust Center link key, which is the same for (almost) every Zigbee network. The second on is the network encryption key.
+Wireshark will start and log the Zigbee messages. As these messages are encrypted we need to add 2 encryption keys. The first one is the Trust Center link key, which is the same for (almost) every Zigbee network. The second on is the network encryption key (Transport Key).
 
 Add the Trust Center link key by going to to Edit -> Preferences -> Protocols -> ZigBee. Set Security Level to *AES-128 Encryption, 32-bit Integrity Protection* and click on *Edit*. Click on *+* and add `5A:69:67:42:65:65:41:6C:6C:69:61:6E:63:65:30:39` with Byte Order Normal.
 
@@ -42,7 +42,7 @@ Add the Trust Center link key by going to to Edit -> Preferences -> Protocols ->
 
 ![Wireshark Trust Center link key](../images/wireshark_tclink_key.png)
 
-Next we need to figure out the network encryption key. There are two ways to do this:
+Next we need to figure out the network encryption key (Transport Key). There are two ways to do this:
 
 1) By default, if you haven't changed `network_key` in your `configuration.yaml` this will be `01:03:05:07:09:0B:0D:0F:00:02:04:06:08:0A:0C:0D`. If you changed your `network_key`, then convert each number into its 2-digit hexadecimal value, and combine them all with `:` between. E.g. `[1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]` -> `01:03:05:07:09:0B:0D:0F:00:02:04:06:08:0A:0C:0D`
 
