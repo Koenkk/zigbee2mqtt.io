@@ -71,3 +71,38 @@ advanced:
   availability_blacklist:
     - DEVICE_FRIENDLY_NAME
 ```
+
+## Specifying devices and groups in a separate file
+Normally devices and groups are specified in the `configuration.yaml`, example:
+
+```yaml
+devices:
+  '0x00158d0001d82999':
+    friendly_name: 'my_occupancy_sensor'
+    retain: true
+
+groups:
+  '1':
+    friendly_name: group_1
+```
+
+In case you want to specify devices and groups in a separate file, the following configuration can be used (equivalent of the above example).
+
+**configuration.yaml**
+```yaml
+devices: devices.yaml
+groups: groups.yaml
+```
+
+**devices.yaml**
+```yaml
+'0x00158d0001d82999':
+    friendly_name: 'my_occupancy_sensor'
+    retain: true
+```
+
+**groups.yaml**
+```yaml
+'1':
+    friendly_name: group_1
+```
