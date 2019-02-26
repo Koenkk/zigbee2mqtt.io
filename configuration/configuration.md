@@ -70,6 +70,8 @@ advanced:
   # Blacklist devices from being checked for availability
   availability_blacklist:
     - DEVICE_FRIENDLY_NAME
+  # Enables report feature (see information -> report for more details)
+  report: true
 ```
 
 ## Specifying devices and groups in a separate file
