@@ -40,6 +40,7 @@ Welcome to the Zigbee2mqtt documentation!
 * [What does and does not require repairing of all devices?](information/what_does_and_doesnt_require_repairing.md)
 * [Groups](information/groups.md)
 * [Binding](information/binding.md)
+* [Report](information/report.md)
 * [Docker](information/docker.md)
 * [Zigbee network](information/zigbee_network.md)
 * [3D cases](information/3d_cases.md)
