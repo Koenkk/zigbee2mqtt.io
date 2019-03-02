@@ -59,7 +59,7 @@ advanced:
   # Optional: network encryption key, changing requires re-pairing of all devices.
   network_key: [1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]
   # Optional: Add a last_seen attribute to MQTT messages, contains date/time of last Zigbee message
-  # possible values are: disable (default), ISO_8601, epoch
+  # possible values are: disable (default), ISO_8601, ISO_8601_local, epoch
   last_seen: 'disable'
   # Optional: Add an elapsed attribute to MQTT messages, contains milliseconds since the previous msg
   elapsed: false
