@@ -1,17 +1,18 @@
 # Supported devices
 
 <style type="text/css">
-  .main-content table {
+.main-content table {
+  table-layout: fixed;
   display: table !important;
 }
-.main-content table tr td:first-child {
-    width: 15%;
+.main-content table tr th:nth-child(1) {
+  width: 15%;
 }
-.main-content table tr td:last-child {
+.main-content table tr th:nth-child(2) {
+  width: 60%;
+}
+.main-content table tr th:nth-child(3) {
   width: 25%;
-}
-.main-content table tr td:nth-child(2) {
-  width: 65%;
 }
 </style>
 
