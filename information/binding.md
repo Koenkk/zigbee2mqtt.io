@@ -13,3 +13,17 @@ Binding can be configured using the following topics:
 
 - `zigbee2mqtt/bridge/bind/[SOURCE_DEVICE_FRIENDLY_NAME]` with payload `TARGET_DEVICE_FRIENDLY_NAME` will bind the source device to the target device. In the above example, the TRADFRI wireless dimmer would be the source device and the bulb the target device.
 - `zigbee2mqtt/bridge/unbind/[SOURCE_DEVICE_FRIENDLY_NAME]` with payload `TARGET_DEVICE_FRIENDLY_NAME` will unbind the devices.
+
+## Devices
+Not all devices support this, it basically comes down to the Zigbee implementation of the device itself. Below is a list of results.
+
+### IKEA TRADRI remote control (E1524)
+This device does not support binding (limitation of the device). A workaround is to sniff the group ID where the remote is sending it's commands to and add bulbs to the same group.
+
+1. Pair the device to Zigbee2mqtt.
+2. Setup your Zigbee traffic sniffer by following [How to sniff Zigbee traffic](../how_tos/how_to_sniff_zigbee_traffic.md).
+3. Press a button on the device, this will produce the following message in Wireshark:
+![E1524 group](../images/E1524_group.png)
+4. Retrieve the group from the message, which is `0xeb12` in the above example.
+5. Conver this hexadecimal number to decimal using [Hexadecimal to Decimal Converter](https://www.binaryhexconverter.com/hex-to-decimal-converter). E.g. `0xeb12` = `60178`.
+6. Add this group to `configuration.yaml` and add your device (e.g.) bulb to this group. ([documentation](./groups.md))
