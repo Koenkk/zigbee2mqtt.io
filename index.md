@@ -32,6 +32,7 @@ Welcome to the Zigbee2mqtt documentation!
 * [How to secure your Zigbee network](how_tos/how_to_secure_network.md)
 * [How to connect a CC2530 coordinator using a USB to serial adapter](how_tos/how_to_connect_a_cc2530_coordinator_using_a_usb_to_serial_adapter.md)
 * [How to connect a CC2530 coordinator via an ESP8266](how_tos/how_to_esp8266_with_cc2530.md)
+* [How to switch to the dev branch](how_tos/how-to-switch-to-dev-branch.md)
 
 ### Information
 * [FAQ](information/FAQ.md)

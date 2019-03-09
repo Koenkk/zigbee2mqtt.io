@@ -7,7 +7,7 @@ To disable joining it's important that `permit_join: false` is set in your `conf
 ## Change Zigbee network encryption key
 **Changing the network key requires repairing of all devices!**
 
-Zigbee2mqtt uses a known default encryption key. Therefore it is recommended to use a different one. To use a different encryption key add the following to your `configuration.yaml`:
+Zigbee2mqtt uses a known default encryption key (Zigbee Transport Key). Therefore it is recommended to use a different one. To use a different encryption key add the following to your `configuration.yaml`:
 
 **Do not use this exact key.**
 ```

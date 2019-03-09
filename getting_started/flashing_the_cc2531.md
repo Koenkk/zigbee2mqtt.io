@@ -6,7 +6,7 @@ The CC2531 USB stick needs to be flashed with a custom firmware.
 *NOTE 2: Reflashing does not require repairing of all devices, see [What does and does not require repairing of all devices?](../information/what_does_and_doesnt_require_repairing.md)*
 
 ## Windows
-1. Install [SmartRF Flash programmer](http://www.ti.com/tool/FLASH-PROGRAMMER) (**NOT V2**). This software is free but requires a Texas Instruments account in order to download.
+1. Install [SmartRF Flash programmer](http://www.ti.com/tool/flash-programmer) (**NOT V2**). This software is free but requires a Texas Instruments account in order to download.
 2. Install the [CC debugger driver](http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=swrc212&fileType=zip) on your PC (Windows only). Before continuing, verify that the CC Debugger driver has been installed correctly. See [Figure 1. Verify Correct Driver Installation @ Chapter 5.1](http://www.ti.com/lit/ug/swru197h/swru197h.pdf). In case the CC Debugger is not recognized correctly [install the driver manually](https://www.youtube.com/watch?v=jyKrxxXOvQY).
 2. Connect `CC debugger --> Downloader cable CC2531 --> CC2531 USB sniffer`.
 3. Connect **BOTH** the `CC2531 USB sniffer` and the `CC debugger` to your PC using USB.
@@ -41,6 +41,12 @@ make
 7. Flash your firmware:
 ```
 sudo ./cc-tool -e -w CC2531ZNP-Prod.hex
+```
+
+# How-to check the installed firmware version
+Zigbee2mqtt will output the installed firmware version to the zigbee2mqtt log on startup:
+```
+2019-2-23 01:03:53 - info: Coordinator firmware version: '20190109'
 ```
 
 # What's next?
