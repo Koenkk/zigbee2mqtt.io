@@ -34,7 +34,7 @@ Allows you to permit joining of new devices via MQTT. This is not persistent (wi
 Allows you to set the `advanced` -> `last_seen` configuration option. See [Configuration](../configuration/configuration.md) for possible values.
 
 ## zigbee2mqtt/bridge/config/elapsed
-Allows you to set the `advanced` -> `last_seen` configuration option. See [Configuration](../configuration/configuration.md) for possible values.
+Allows you to set the `advanced` -> `elapsed` configuration option. See [Configuration](../configuration/configuration.md) for possible values.
 
 ## zigbee2mqtt/bridge/config/reset
 Resets the ZNP (CC2530/CC2531).
