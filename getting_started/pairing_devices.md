@@ -43,7 +43,7 @@ Factory reset the light bulb see [HOWTO: Factory reset a Hue bulb](https://www.y
 * Philips Hue Lightstrip Plus V2 have been successfully reset using the [Hue Dimmer Switch](https://www2.meethue.com/en-us/support/dimmer-switch) by holding the On and Off buttons at the same time for 10 seconds while holding next to the Lightstrip controller, afterwards the Lightstrips can join Zigbee2MQTT.
 * For the 7146060PH (Philips Hue Go), **the power cord has to be connected**, after the blinking light (**INSTEAD** of step four in the video), press and keep holding the button on the bottom until the device is paired (+- 60 seconds). While holding the button the Hue Go will give you a nice light show :smile:.
 
-### Philips Living Colors IRIS (Friends of HUE)
+### Philips LivingColors (Friends of HUE)
 Philips LivingColors IRIS and Philips LivingColors Bloom Devices that comes with Philips (HUE) Remote Gen 2 (Touch Wheel) or Gen 3 (Round Click Wheel) can be paired via Zigbee. Devices with Gen 1 Remote don't use Zigbee and can not be paired.
 The Philips LivingColors Remote can not be paired via Zigbee because it only support ZigBee Light Link (ZLL).
 
