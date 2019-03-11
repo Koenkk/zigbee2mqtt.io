@@ -49,7 +49,7 @@ The Philips LivingColors Remote can not be paired via Zigbee because it only sup
 
 To Pair hold Button ON and Bottom Left Key (Favorite 1) on the Remote in Front of the Device until the Device Light blinks and lights Orange. If connection was succesfull the Device Light will light Green.
 
-**WARNING**: If you pair your Device to a Zigbee Network which is not using a ZLL Zigbee Channel you can't reset the Device with the Philips LivingColors Remote Gen 3 because the Remote only try ZLL Channels to find the Device! Maybe it's possible to reset the Device with a Philips LivingColors Remote Gen 2 as it should try all Zigbee Channels to find the Device.
+**WARNING**: If you pair your Device to a Zigbee Network which is not using a ZLL Channel you can't reset the Device with the Philips LivingColors Remote Gen 3. The Gen 3 Remote will only try ZLL Channels to find the Device! Maybe it's possible to reset the Device with a Philips LivingColors Remote Gen 2 as it should try all Zigbee Channels to find the Device.
 
 [Philips LivingColors Bloom Manual](https://www.download.p4c.philips.com/files/7/7099760pu/7099760pu_dfu_eng.pdf)
 
