@@ -162,6 +162,15 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
 
 Remove attributes which are not supported for your device. E.G. in case of a Xiaomi Mi power plug ZigBee (ZNCZ02LM) only send the `"state"` attribute.
 
+## zigbee2mqtt/[DEVICE_ID]/get
+This is the counterpart of the `set` command. It allows you to read a value from a device. To read e.g. the state of a device send the payload:
+
+```js
+{
+  "state": ""
+}
+```
+
 ## homeassistant/[DEVICE_TYPE]/[DEVICE_ID]/[OBJECT_ID]/config
 Only used when `homeassistant: true` in `configuration.yaml`. Required for [Home Assistant MQTT discovery](https://www.home-assistant.io/docs/mqtt/discovery/).
 
