@@ -64,6 +64,12 @@ Allows you to ban devices from the network. Payload should be the `friendly_name
 Allows you to change the `friendly_name` of a device on the fly.
 Format should be: `{"old": "OLD_FRIENDLY_NAME", "new": "NEW_FRIENDLY_NAME"}`.
 
+## zigbee2mqtt/bridge/config/add_group
+Allows you to add a group, payload should be the name of the group, e.g. `my_group`.
+
+## zigbee2mqtt/bridge/config/remove_group
+Allows you to remove a group, payload should be the name of the group, e.g. `my_group`.
+
 ## zigbee2mqtt/bridge/networkmap
 Allows you to retrieve a map of your zigbee network. Possible payloads are `raw`, `graphviz`. Zigbee2mqtt will send the networkmap to `zigbee2mqtt/bridge/networkmap/[graphviz OR raw]`.
 
