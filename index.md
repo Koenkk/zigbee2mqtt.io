@@ -20,6 +20,7 @@ Welcome to the Zigbee2mqtt documentation!
 * [Home Assistant](integration/home_assistant.md)
 * [Admin Panel for Node-Red](https://github.com/ben423423n32j14e/zigbee2mqttadminpanel)
 * [Domoticz](https://github.com/stas-demydiuk/domoticz-zigbee2mqtt-plugin)
+* [Majordomo](https://github.com/directman66/majordomo-zigbee2mqtt/) (Support for Russian-speaking users)
 
 ### How tos
 * [How to support new devices](how_tos/how_to_support_new_devices.md)
