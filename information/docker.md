@@ -71,3 +71,7 @@ docker run \
 ```
 
 After that follow the [guide](https://www.zigbee2mqtt.io/how_tos/how_to_support_new_devices.html) to add support for new devices.
+
+
+## docker-compose Example
+https://github.com/Koenkk/zigbee2mqtt/blob/master/docker/docker-compose.yml
