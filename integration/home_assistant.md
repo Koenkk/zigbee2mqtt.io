@@ -117,6 +117,9 @@ Groups are not auto-discovered. Use the following configuration:
 
 {% endraw %}
 
+## Zigbee Network Map (Custom Component)
+https://github.com/rgruebel/ha_zigbee2mqtt_networkmap
+
 ## Controlling Zigbee2mqtt via Home Assistant
 The following Home Assistant configuration allows you to control Zigbee2mqtt from Home Assistant.
 
