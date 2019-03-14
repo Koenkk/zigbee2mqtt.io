@@ -62,7 +62,7 @@ Allows you to change the `friendly_name` of a device on the fly.
 Format should be: `{"old": "OLD_FRIENDLY_NAME", "new": "NEW_FRIENDLY_NAME"}`.
 
 ## zigbee2mqtt/bridge/networkmap
-Allows you to retrieve a map of your zigbee network. Possible payloads are `raw`, `graphviz`. Zigbee2mqtt will send the networkmap to `zigbee2mqtt/bridge/networkmap/[graphviz OR raw]`.
+Allows you to retrieve a map of your zigbee network. Possible payloads are `raw` and `graphviz`. Zigbee2mqtt will send the networkmap to topic `zigbee2mqtt/bridge/networkmap/[graphviz OR raw]`. <br /> Use [webgraphviz.com](http://www.webgraphviz.com/) or other Tools to generate Network Graph. <br /> **NOTE:** zigbee2mqtt 1.2.1+ required.
 
 ## zigbee2mqtt/bridge/group/[friendly_name]/(add|remove|remove_all)
 See [Groups](groups.md)
