@@ -65,7 +65,7 @@ docker run \
    -it \
    -v $(pwd)/data:/app/data \
    -v $(pwd)/data/zigbee-shepherd-converters:/app/node_modules/zigbee-shepherd-converters
-   -v $(pwd)/data/lib/extension/homeassistant.js:/app/node_modules/lib/extension/homeassistant.js
+   -v $(pwd)/data/lib/extension/homeassistant.js:/app/lib/extension/homeassistant.js
    --device=/dev/ttyACM0 \
    koenkk/zigbee2mqtt
 ```
