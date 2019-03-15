@@ -245,7 +245,7 @@ Set the position of the curtain.
 }
 ```
 
-### Xiaomi Aqara wired wall switch (QBKG03LM and QBKG04LM)
+### Xiaomi Aqara wired wall switch (QBKG03LM, QBKG04LM, QBKG12LM and QBKG11LM)
 Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
 This might be useful to assign some custom actions to buttons and control relay remotely.
 This command also allows to redefine which button controls which relay for double switch.
