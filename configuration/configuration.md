@@ -72,6 +72,8 @@ advanced:
     - DEVICE_FRIENDLY_NAME
   # Enables report feature (see information -> report for more details)
   report: true
+  # Home Assistant discovery topic
+  homeassistant_discovery_topic: 'homeassistant',
 ```
 
 ## Specifying devices and groups in a separate file
