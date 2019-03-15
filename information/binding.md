@@ -14,6 +14,13 @@ Binding can be configured using the following topics:
 - `zigbee2mqtt/bridge/bind/[SOURCE_DEVICE_FRIENDLY_NAME]` with payload `TARGET_DEVICE_FRIENDLY_NAME` will bind the source device to the target device. In the above example, the TRADFRI wireless dimmer would be the source device and the bulb the target device.
 - `zigbee2mqtt/bridge/unbind/[SOURCE_DEVICE_FRIENDLY_NAME]` with payload `TARGET_DEVICE_FRIENDLY_NAME` will unbind the devices.
 
+### Binding specific endpoint
+**This is not applicable for most users**
+
+By default, the first endpoint is taken. In case your device has multiple endpoints, e.g. `left` and `right`. The following can be done to specifcy an endpoint:
+- **Source**: append the endpoint friendly name to the topic, e.g. `zigbee2mqtt/bridge/bind/my_switch/left`
+- **Target**: append the endpoint friendly name to the payload, e.g. `my_switch/right`
+
 ## Devices
 Not all devices support this, it basically comes down to the Zigbee implementation of the device itself. Below is a list of results.
 
