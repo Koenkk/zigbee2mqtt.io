@@ -6,6 +6,7 @@ The `configuration.yaml` allows to set device specific configuration. The follow
 * `retain`: Retain MQTT messages of this device.
 * `qos`: QoS level for MQTT messages of this device. [What is QoS?](https://www.npmjs.com/package/mqtt#about-qos)
 * `homeassistant`: Allows to override values of the Home Assistant discovery payload. See example below.
+* `debounce`: Debounces messages of this device. When setting e.g. `debounce: 1` and a message from a device is recieved, zigbee2mqtt will not immediately publish this message but combine it with other messages received in that same second of that device. This is handy for e.g. the `WSDCGQ11LM` which publishes humidity, temperature and pressure at the same time but as 3 different messages.
 
 ## Device specific
 
@@ -29,6 +30,7 @@ devices:
     occupancy_timeout: 20
     no_occupancy_since: [10, 600]
     qos: 1
+    debounce: 0.5
     homeassistant:
       # Applied to all discovered entities.
       expire_after: 30
