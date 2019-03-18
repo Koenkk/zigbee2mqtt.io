@@ -526,3 +526,20 @@ Bit | Position
 5 | Valve not moving/blocked (E3)
 6 | reserved
 7 | reserved
+### Osram/Sylvania LED (Various)
+**Set default power on/off transition 'osram_set_transition'**
+
+Various Osram/Sylvania LED support setting a default transition when turning a light on and off.
+```js
+{
+  "osram_set_transition": 0.1,            //time in seconds (integer or float)
+}
+```
+**Remember current light state 'osram_remember_state'**
+
+Various Osram/Sylvania LED support remembering their current state in case of power loss, or if a light is manually switched off then on. Lights will remember their respective attributes (i.e. brightness, color, saturation, etc.). NOTE: This must be executed everytime you make changes to a light's attributes for it to then 'remember' it.
+```js
+{
+  "osram_remember_state": true,            // true, false (boolean)
+}
+```
