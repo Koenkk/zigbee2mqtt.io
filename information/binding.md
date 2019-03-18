@@ -25,5 +25,5 @@ This device does not support binding (limitation of the device). A workaround is
 3. Press a button on the device, this will produce the following message in Wireshark:
 ![E1524 group](../images/E1524_group.png)
 4. Retrieve the group from the message, which is `0xeb12` in the above example.
-5. Conver this hexadecimal number to decimal using [Hexadecimal to Decimal Converter](https://www.binaryhexconverter.com/hex-to-decimal-converter). E.g. `0xeb12` = `60178`.
+5. Convert this hexadecimal number to decimal using [Hexadecimal to Decimal Converter](https://www.binaryhexconverter.com/hex-to-decimal-converter). E.g. `0xeb12` = `60178`.
 6. Add this group to `configuration.yaml` and add your device (e.g.) bulb to this group. ([documentation](./groups.md))
