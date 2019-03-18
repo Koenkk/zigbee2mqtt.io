@@ -97,5 +97,8 @@ If this fails, the `modelID` has to be set manually in `data/database.db`. First
 *{"id":50,"type":"Router","ieeeAddr":"0x00124b0019c606cd","nwkAddr":10828,"manufId":0,"manufName":"GLEDOPTO","powerSource":"Mains (single phase)",**"modelId":"GL-S-007Z"**,"epList":[11,13],"status":"offline","joinTime":null,"endpoints":{"11":{"profId":49246,"epId":11,"devId":528,"inClusterList":[0,3,4,5,6,8,768],"outClusterList":[],"clusters":{"genBasic":{"dir":{"value":1},"attrs":{}},"genIdentify":{"dir":{"value":1},"attrs":{}},"genGroups":{"dir":{"value":1},"attrs":{}},"genScenes":{"dir":{"value":1},"attrs":{}},"genOnOff":{"dir":{"value":1},"attrs":{}},"genLevelCtrl":{"dir":{"value":1},"attrs":{}},"lightingColorCtrl":{"dir":{"value":1},"attrs":{}}}},"13":{"profId":49246,"epId":13,"devId":57694,"inClusterList":[4096],"outClusterList":[4096],"clusters":{"lightLink":{"dir":{"value":3},"attrs":{}}}}},"_id":"geCEMkRqlaMe6muE"}*
 
 ## Trust
+### Trust Remote control (ZYCT-202)
+Factory reset the remote by holding the 0 (off) button for +-20 seconds.
+To establish a connection keep the remote within 2 meters from the hub. Press and hold the smart group button (button with two bulbs) and wait until the lights, below the channels, flash.
 ### Trust Wireless contact sensor (ZCTS-808)
 When pairing the sensor with Zigbee2MQTT, keep opening and closing the sensor (pull/insert the sensor parts next to eachother) for 10 seconds, otherwise device will fall asleep before it gets fully configured and will not send state changes.
