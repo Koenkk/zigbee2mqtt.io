@@ -23,6 +23,7 @@ zigbee2mqtt will output log to this endpoint. Message are always in the form of 
 * `"device_group_remove"`: send when a device is removed from a group.
 * `"device_group_remove_all"`: send when a device is removed from all groups.
 * `"devices"`: a list of all devices, this message can be triggered by sending a message to `zigbee2mqtt/bridge/config/devices` (payload doesn't matter).
+* `"groups"`: a list of all groups, this message can be triggered by sending a message to `zigbee2mqtt/bridge/config/groups` (payload doesn't matter).
 * `"zigbee_publish_error"`: logged when a Zigbee publish errors occurs, contains the error and metadata containing the device and command.
 
 ## zigbee2mqtt/bridge/config/permit_join
