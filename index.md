@@ -21,6 +21,7 @@ Welcome to the Zigbee2mqtt documentation! Besides the documentation, you can als
 * [Admin Panel for Node-Red](https://github.com/ben423423n32j14e/zigbee2mqttadminpanel)
 * [Domoticz](https://github.com/stas-demydiuk/domoticz-zigbee2mqtt-plugin)
 * [Majordomo](https://github.com/directman66/majordomo-zigbee2mqtt/) (Only for Russian speaking users)
+* [MQTT Explorer](https://mqtt-explorer.com) (debug tool for custom integrations)
 
 ### How tos
 * [How to support new devices](how_tos/how_to_support_new_devices.md)
