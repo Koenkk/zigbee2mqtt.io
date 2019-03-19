@@ -4,7 +4,7 @@
     </a>
 </div>
 
-Welcome to the Zigbee2mqtt documentation!
+Welcome to the Zigbee2mqtt documentation! Besides the documentation, you can also get support and ask questions on the [Forum](http://zigbee2mqtt.discourse.group/) and [Discord channel](https://discord.gg/NyseBeK).
 
 ### Getting started
 * [What do I need?](getting_started/what_do_i_need.md)
