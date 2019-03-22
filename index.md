@@ -39,6 +39,7 @@ Welcome to the Zigbee2mqtt documentation! Besides the documentation, you can als
 ### Information
 * [FAQ](information/FAQ.md)
 * [Supported devices](information/supported_devices.md)
+* [Zigbee2mqtt fails to start](information/zigbee2mqtt_fails_to_start.md)
 * [MQTT topics and message structure](information/mqtt_topics_and_message_structure.md)
 * [What does and does not require repairing of all devices?](information/what_does_and_doesnt_require_repairing.md)
 * [Groups](information/groups.md)
