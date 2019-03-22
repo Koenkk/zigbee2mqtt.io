@@ -178,3 +178,47 @@ Under Linux start the flash with ```./a.out USBDEV CC2531ZNP-Prod.bin 0```
 - Example ./a.out /dev/ttyACM0 CC2531ZNP-Prod.bin 0
 
 If burning fails/gets stuck at "Request sent already! Waiting for respond..." - try again, check your wiring, try using "1" instead of "0" as the last parameter.
+
+### With Raspberry
+
+1. Install [wiringPi](http://wiringpi.com/download-and-install/), if not already installed.
+
+2. Install [flash_cc2531](https://github.com/jmichault/flash_cc2531) :
+```bash
+git clone https://github.com/jmichault/flash_cc2531.git
+```
+3. Connect the following pins of the debug port to the GPIO port :
+ * pin 1 (GND)	  -->	pin 39 (GND)
+ * pin 7 (reset)	-->	pin 35 (GPIO24, BCM19)
+ * pin 3 (DC)	  -->	pin 36 (GPIO27, BCM16)
+ * pin 4 (DD)	  -->	pin 38 (GPIO28, BCM20)
+
+See above for the dispositions of pins on CC2531, and at [https://pinout.xyz/](https://pinout.xyz/) for pins on Raspberry.
+
+A downloader cable CC2531 ![](https://www.zigbee2mqtt.io/images/downloader_cable.png) and 4 Dupont line Female to Female are perfect for this purpose. 
+
+Now insert the usb dongle in an USB port :
+
+![](https://github.com/jmichault/files/blob/master/Raspberry-CC2531.jpg)
+
+4. Test by running :
+
+```bash
+cd flash_cc2531
+./cc_chipid
+```
+it should return :
+```
+  ID = b524.
+```
+If you see 0000 or ffff, something is wrong and you should probably check your wiring.
+
+5. Download and extract the latest firmware [CC2531ZNP-Prod.hex](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/CC2531/bin)
+
+6. Erase and flash the CC2531 :
+
+```bash
+./cc_erase
+./cc_write CC2531ZNP-Prod.hex
+```
+It takes around 3 minutes.
