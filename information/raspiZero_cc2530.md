@@ -21,7 +21,7 @@ Disable the modem system service (on the command line):
 sudo systemctl disable hciuart
 ```
 
-Remove the console entry by removing the any of those entries from `/boot/cmdline.txt` if present:
+Remove the console entry by removing any of those entries from `/boot/cmdline.txt` if present:
 
 ```
 console=serial0,115200 console=ttyAMA0,115200
