@@ -1,6 +1,6 @@
-# Connection CC2530 to a Raspberry PI Zero
+# Connecting CC2530 to a Raspberry PI (Zero)
 
-CC2530 can be connected to a Raspberry PI Zero via GPIO Pins - no USB2FTDI is needed.
+CC2530 can be connected to a Raspberry PI (Zero) via GPIO Pins - no USB2FTDI is needed.
 
 ### The use of UART by the installed Linux has to be disabled:
 
@@ -39,6 +39,10 @@ GND -> GND (Pin6)
 P02 -> TXD (Pin8 / BCM 14) 
 P03 -> RXD (Pin10 / BCM 15)
 ```
+
+![CC2531PI](../images/CC2530_PI.JPG)
+
+
 ### Configuring zigbee2mqtt
 
 Change the Serial Port in your `data/configuration.yaml` file:
