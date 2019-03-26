@@ -35,6 +35,10 @@ serial:
   # Optional: disable LED of CC2531 USB sniffer
   disable_led: false
 
+# Optional: ban devices from the network (by ieeeAddr)
+ban:
+  - '0x000b57fffec6a5b2'
+
 # Optional: advanced settings
 advanced:
   # Optional: ZigBee pan ID
