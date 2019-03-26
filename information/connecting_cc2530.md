@@ -1,12 +1,11 @@
-# Connecting CC2530 to a Raspberry PI (Zero)
+# Connecting the CC2530
 
+## To a Raspberry Pi (Zero)
 CC2530 can be connected to a Raspberry PI (Zero) via GPIO Pins - no USB2FTDI is needed.
 
-### The use of UART by the installed Linux has to be disabled:
+The use of UART by the installed Linux has to be disabled: [Detailed explanation here](https://www.raspberrypi.org/documentation/configuration/uart.md)
 
-[Detailed explanation here](https://www.raspberrypi.org/documentation/configuration/uart.md)
-
-Enable UART in the Kernel and disable UART use for BlueTooth.  
+Enable UART in the Kernel and disable UART use for BlueTooth.
 
 In `/boot/config.txt` add following lines:
 
@@ -34,9 +33,9 @@ Reboot your Raspberry.
 
 ```
 CC C2530 -> Raspberry
-VCC -> 3,3V (Pin1) 
+VCC -> 3,3V (Pin1)
 GND -> GND (Pin6)
-P02 -> TXD (Pin8 / BCM 14) 
+P02 -> TXD (Pin8 / BCM 14)
 P03 -> RXD (Pin10 / BCM 15)
 ```
 

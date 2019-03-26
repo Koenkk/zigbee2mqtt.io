@@ -44,6 +44,7 @@ Welcome to the Zigbee2mqtt documentation!
 * [Report](information/report.md)
 * [Docker](information/docker.md)
 * [Zigbee network](information/zigbee_network.md)
+* [Connecting the CC2530](information/connecting_cc2530.md)
 * [3D cases](information/3d_cases.md)
 * [CC sniffer devices](information/cc_sniffer_devices.md)
 * [Alternative flashing methods](information/alternative_flashing_methods.md)
