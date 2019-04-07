@@ -175,6 +175,14 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
 
 Remove attributes which are not supported for your device. E.G. in case of a Xiaomi Mi power plug ZigBee (ZNCZ02LM) only send the `"state"` attribute.
 
+### Without JSON
+In case you don't want to use JSON, publishing to `zigbee2mqtt/[DEVICE_ID]/set/state` with payload `ON` is the same as publishing to `zigbee2mqtt/[DEVICE_ID]/set`
+```js
+{
+  "state": "ON"
+}
+```
+
 ## zigbee2mqtt/[DEVICE_ID]/get
 This is the counterpart of the `set` command. It allows you to read a value from a device. To read e.g. the state of a device send the payload:
 
