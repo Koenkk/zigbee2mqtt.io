@@ -137,12 +137,12 @@ Completed
 4. Under Windows: (not tested by me)
     objcopy.exe --gap-fill 0xFF --pad-to 0x040000 -I ihex CC2531ZNP-Prod.hex -O binary CC2531ZNP-Prod.bin
     Place the resulting CC2531ZNP-Prod.bin in the Windows folder of CCLoader with CCLoader.exe.
-    
+
    Under Linux:
     objcopy --gap-fill 0xFF --pad-to 0x040000 -I ihex CC2531ZNP-Prod.hex -O binary /tmp/CC2531ZNP-Prod.bin
 
 objcopy is part of the bintools package.
-    
+
 5. Flash Arudino Uno with Arduino\CCLoader\CCLoader.ino, note the COM port number/device this will be used later
 
 6. Connect pins as described to debug header
@@ -157,7 +157,7 @@ GND -> GND
 
 ![](https://www.waveshare.com/img/devkit/CC-Debugger/CC-Debugger-JTAG-Header.jpg)
 
-If you have a 3.3V Arduino you can optionaly connect 
+If you have a 3.3V Arduino you can optionaly connect
 ```
 3.3V -> Target Voltage Sense (Pin 2)
 ```
@@ -195,7 +195,7 @@ git clone https://github.com/jmichault/flash_cc2531.git
 
 See above for the dispositions of pins on CC2531, and at [https://pinout.xyz/](https://pinout.xyz/) for pins on Raspberry.
 
-A downloader cable CC2531 ![](https://www.zigbee2mqtt.io/images/downloader_cable.png) and 4 Dupont line Female to Female are perfect for this purpose. 
+A downloader cable CC2531 ![](https://www.zigbee2mqtt.io/images/downloader_cable.png) and 4 Dupont line Female to Female are perfect for this purpose.
 
 Now insert the usb dongle in an USB port :
 
@@ -213,7 +213,7 @@ it should return :
 ```
 If you see 0000 or ffff, something is wrong and you should probably check your wiring.
 
-5. Download and extract the latest firmware [CC2531ZNP-Prod.hex](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/CC2531/bin)
+5. Download and extract the latest firmware [CC2531ZNP-Prod.hex](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/default/CC2531)
 
 6. Erase and flash the CC2531 :
 
