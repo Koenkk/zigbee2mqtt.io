@@ -254,6 +254,9 @@ automation:
 ```
 {% endraw %}
 
+## Zigbee Network Map (Custom Component)
+https://github.com/rgruebel/ha_zigbee2mqtt_networkmap
+
 ## Configuration when NOT using Home Assistant MQTT discovery
 
 ### ZNLDP12LM

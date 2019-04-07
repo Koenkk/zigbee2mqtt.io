@@ -75,7 +75,7 @@ Allows you to add a group, payload should be the name of the group, e.g. `my_gro
 Allows you to remove a group, payload should be the name of the group, e.g. `my_group`.
 
 ## zigbee2mqtt/bridge/networkmap
-Allows you to retrieve a map of your zigbee network. Possible payloads are `raw`, `graphviz`. Zigbee2mqtt will send the networkmap to `zigbee2mqtt/bridge/networkmap/[graphviz OR raw]`.
+Allows you to retrieve a map of your zigbee network. Possible payloads are `raw` and `graphviz`. Zigbee2mqtt will send the networkmap to topic `zigbee2mqtt/bridge/networkmap/[graphviz OR raw]`. <br /> Use [webgraphviz.com](http://www.webgraphviz.com/) or other Tools to generate Network Graph. <br /> **NOTE:** zigbee2mqtt 1.2.1+ required.
 
 ## zigbee2mqtt/bridge/group/[friendly_name]/(add|remove|remove_all)
 See [Groups](groups.md)
@@ -174,6 +174,15 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
 `transition` specifies the number of seconds the transition to this state takes (0 by default).
 
 Remove attributes which are not supported for your device. E.G. in case of a Xiaomi Mi power plug ZigBee (ZNCZ02LM) only send the `"state"` attribute.
+
+## zigbee2mqtt/[DEVICE_ID]/get
+This is the counterpart of the `set` command. It allows you to read a value from a device. To read e.g. the state of a device send the payload:
+
+```js
+{
+  "state": ""
+}
+```
 
 ## homeassistant/[DEVICE_TYPE]/[DEVICE_ID]/[OBJECT_ID]/config
 Only used when `homeassistant: true` in `configuration.yaml`. Required for [Home Assistant MQTT discovery](https://www.home-assistant.io/docs/mqtt/discovery/).
@@ -298,6 +307,25 @@ Let the device beep.
   "beep": 5
 }
 ```
+
+### Osram/Sylvania LED (Various)
+**Set default power on/off transition 'osram_set_transition'**
+
+Various Osram/Sylvania LED support setting a default transition when turning a light on and off.
+```js
+{
+  "osram_set_transition": 0.1,            //time in seconds (integer or float)
+}
+```
+**Remember current light state 'osram_remember_state'**
+
+Various Osram/Sylvania LED support remembering their current state in case of power loss, or if a light is manually switched off then on. Lights will remember their respective attributes (i.e. brightness, color, saturation, etc.). NOTE: This must be executed everytime you make changes to a light's attributes for it to then 'remember' it.
+```js
+{
+  "osram_remember_state": true,            // true, false (boolean)
+}
+```
+
 
 ### eCozy Smart heating thermostat (1TST-EU), Bitron Wireless wall thermostat with relay (AV2010/32)
 Get local temperature in degrees Celsius (in the range 0x954d to 0x7fff, i.e. -273.15°C to 327.67 ºC)

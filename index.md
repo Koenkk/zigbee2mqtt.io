@@ -4,7 +4,7 @@
     </a>
 </div>
 
-Welcome to the Zigbee2mqtt documentation!
+Welcome to the Zigbee2mqtt documentation! Besides the documentation, you can also get support and ask questions on the [Forum](http://zigbee2mqtt.discourse.group/) and [Discord channel](https://discord.gg/NyseBeK).
 
 ### Getting started
 * [What do I need?](getting_started/what_do_i_need.md)
@@ -20,6 +20,8 @@ Welcome to the Zigbee2mqtt documentation!
 * [Home Assistant](integration/home_assistant.md)
 * [Admin Panel for Node-Red](https://github.com/ben423423n32j14e/zigbee2mqttadminpanel)
 * [Domoticz](https://github.com/stas-demydiuk/domoticz-zigbee2mqtt-plugin)
+* [Majordomo](https://github.com/directman66/majordomo-zigbee2mqtt/) (Only for Russian speaking users)
+* [MQTT Explorer](https://mqtt-explorer.com) (debug tool for custom integrations)
 
 ### How tos
 * [How to support new devices](how_tos/how_to_support_new_devices.md)
@@ -37,6 +39,7 @@ Welcome to the Zigbee2mqtt documentation!
 ### Information
 * [FAQ](information/FAQ.md)
 * [Supported devices](information/supported_devices.md)
+* [Zigbee2mqtt fails to start](information/zigbee2mqtt_fails_to_start.md)
 * [MQTT topics and message structure](information/mqtt_topics_and_message_structure.md)
 * [What does and does not require repairing of all devices?](information/what_does_and_doesnt_require_repairing.md)
 * [Groups](information/groups.md)

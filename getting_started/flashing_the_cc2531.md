@@ -21,7 +21,7 @@ Credits to [@Frans-Willem](https://github.com/frans-Willem) for majority of inst
 
 1. Install prerequisites for [CC-Tool](https://github.com/dashesy/cc-tool) using a package manager (e.g. [Homebrew](https://brew.sh/) for macOS)
 * Ubuntu: dh-autoreconf, libusb-1.0, libboost-all-dev
-* Fedora: dh-autoreconf, boost-devel, libusb1-devel
+* Fedora: dh-autoreconf, boost-devel, libusb1-devel, gcc-c++
 * Archlinux: dh-autoreconf, libusb, boost
 * macOS: brew install autoconf automake libusb boost pkgconfig libtool
 

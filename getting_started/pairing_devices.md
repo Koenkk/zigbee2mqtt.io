@@ -36,6 +36,13 @@ Push the reset button of the device with a paperclip for 5 seconds. While pairin
 ### IKEA TRADFRI remote control (E1524)
 Pair the remote to Zigbee2mqtt by holding it close to the coordinator and pressing the button next to the battery 4 times. The red light on the remote will now flash a few times.
 
+## Müller Licht 
+### Tint remote control (MLI-404011)
+Remove the battery cover and use the cover to press the button above the batteries. Press and hold this button for 10-20 seconds and release the button. After that the remote should show up as a paired device.
+
+### Tint LED bulb GU10/E14/E27 350/470/806 lumen, dimmable, color, opal white (404000/404005/404012)
+Turn the light bulb five times on and off. After turning it on the sixth time, it will indicate with colors that the bulb is pairing.
+
 ## Philips Hue
 Factory reset the light bulb see [HOWTO: Factory reset a Hue bulb](https://www.youtube.com/watch?v=qvlEAELiJKs). After resetting the bulb will automatically connect.
 
@@ -49,7 +56,7 @@ The Philips LivingColors Remote can not be paired via Zigbee because it only sup
 
 To Pair hold Button ON and Bottom Left Key (Favorite 1) on the Remote in Front of the Device until the Device Light blinks and lights Orange. If connection was succesfull the Device Light will light Green.
 
-**WARNING**: If you pair your Device to a Zigbee Network which is not using a ZLL Zigbee Channel you can't reset the Device with the Philips LivingColors Remote Gen 3 because the Remote only try ZLL Channels to find the Device! Maybe it's possible to reset the Device with a Philips LivingColors Remote Gen 2 as it should try all Zigbee Channels to find the Device.
+**WARNING**: If you pair your Device to a Zigbee Network which is not using a ZLL Channel you can't reset the Device with the Philips LivingColors Remote Gen 3. The Gen 3 Remote will only try ZLL Channels to find the Device! Maybe it's possible to reset the Device with a Philips LivingColors Remote Gen 2 as it should try all Zigbee Channels to find the Device.
 
 [Philips LivingColors Bloom Manual](https://www.download.p4c.philips.com/files/7/7099760pu/7099760pu_dfu_eng.pdf)
 
@@ -88,3 +95,10 @@ Some of the Gledopto devices are not providing a `modelID`, in that case the mod
 If this fails, the `modelID` has to be set manually in `data/database.db`. First find out the `modelID` of your devices from the [Supported devices page](../information/supported_devices.md). Then open `data/database.db` and add the `modelId` as highlighted in **bold** below.
 
 *{"id":50,"type":"Router","ieeeAddr":"0x00124b0019c606cd","nwkAddr":10828,"manufId":0,"manufName":"GLEDOPTO","powerSource":"Mains (single phase)",**"modelId":"GL-S-007Z"**,"epList":[11,13],"status":"offline","joinTime":null,"endpoints":{"11":{"profId":49246,"epId":11,"devId":528,"inClusterList":[0,3,4,5,6,8,768],"outClusterList":[],"clusters":{"genBasic":{"dir":{"value":1},"attrs":{}},"genIdentify":{"dir":{"value":1},"attrs":{}},"genGroups":{"dir":{"value":1},"attrs":{}},"genScenes":{"dir":{"value":1},"attrs":{}},"genOnOff":{"dir":{"value":1},"attrs":{}},"genLevelCtrl":{"dir":{"value":1},"attrs":{}},"lightingColorCtrl":{"dir":{"value":1},"attrs":{}}}},"13":{"profId":49246,"epId":13,"devId":57694,"inClusterList":[4096],"outClusterList":[4096],"clusters":{"lightLink":{"dir":{"value":3},"attrs":{}}}}},"_id":"geCEMkRqlaMe6muE"}*
+
+## Trust
+### Trust Remote control (ZYCT-202)
+Factory reset the remote by holding the 0 (off) button for +-20 seconds.
+To establish a connection keep the remote within 2 meters from the hub. Press and hold the smart group button (button with two bulbs) and wait until the lights, below the channels, flash.
+### Trust Wireless contact sensor (ZCTS-808)
+When pairing the sensor with Zigbee2MQTT, keep opening and closing the sensor (pull/insert the sensor parts next to eachother) for 10 seconds, otherwise device will fall asleep before it gets fully configured and will not send state changes.
