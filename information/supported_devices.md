@@ -418,7 +418,7 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | 3216431P5 | Philips Hue white ambiance Aurelle round panel light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3216431P5.jpg](../images/devices/3216431P5.jpg) |
 | 4033930P7 | Philips Hue white ambiance suspension Fair (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/4033930P7.jpg](../images/devices/4033930P7.jpg) |
 | 7199960PH | Philips Hue Iris (on/off, brightness, color xy, power-on behavior) | ![../images/devices/7199960PH.jpg](../images/devices/7199960PH.jpg) |
-| 324131092621 | Philips Hue dimmer switch (on/off) | ![../images/devices/324131092621.jpg](../images/devices/324131092621.jpg) |
+| 324131092621 | Philips Hue dimmer switch (on/off, brightness up/down) | ![../images/devices/324131092621.jpg](../images/devices/324131092621.jpg) |
 | 9290012607 | Philips Hue motion sensor (occupancy, temperature, illuminance) | ![../images/devices/9290012607.jpg](../images/devices/9290012607.jpg) |
 | 9290019758 | Philips Hue motion outdoor sensor (occupancy, temperature, illuminance) | ![../images/devices/9290019758.jpg](../images/devices/9290019758.jpg) |
 
