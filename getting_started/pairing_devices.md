@@ -96,6 +96,18 @@ If this fails, the `modelID` has to be set manually in `data/database.db`. First
 
 *{"id":50,"type":"Router","ieeeAddr":"0x00124b0019c606cd","nwkAddr":10828,"manufId":0,"manufName":"GLEDOPTO","powerSource":"Mains (single phase)",**"modelId":"GL-S-007Z"**,"epList":[11,13],"status":"offline","joinTime":null,"endpoints":{"11":{"profId":49246,"epId":11,"devId":528,"inClusterList":[0,3,4,5,6,8,768],"outClusterList":[],"clusters":{"genBasic":{"dir":{"value":1},"attrs":{}},"genIdentify":{"dir":{"value":1},"attrs":{}},"genGroups":{"dir":{"value":1},"attrs":{}},"genScenes":{"dir":{"value":1},"attrs":{}},"genOnOff":{"dir":{"value":1},"attrs":{}},"genLevelCtrl":{"dir":{"value":1},"attrs":{}},"lightingColorCtrl":{"dir":{"value":1},"attrs":{}}}},"13":{"profId":49246,"epId":13,"devId":57694,"inClusterList":[4096],"outClusterList":[4096],"clusters":{"lightLink":{"dir":{"value":3},"attrs":{}}}}},"_id":"geCEMkRqlaMe6muE"}*
 
+## SecuriFi
+### Peanut Smart Plug (PP-WHT-US)
+Additional steps are required because the Peanut Smart Plug does not provide a `ModelId` in its database entry, and thus zigbee2mqtt cannot identify the product or how to handle it.
+
+Reset the device and initiate pairing mode by holding the pairing button (the small button next to the on/off button) for ten seconds, releasing the button, and unplugging the device.  When plugged back in, the front LED will be blinking red and ready to receive a pairing request.  When paired successfully, the red LED on the plug will stop blinking.
+
+After pairing, you must stop zigbee2mqtt and manually edit the zigbee2mqtt `database.db` file with a text editor (note that the file may be owned by root).  Find each line where the Peanut Smart Plug is listed (look for "SecuriFi Ltd." in the `ManufName` field) and **add** `"ModelId":"PP-WHT-US",` between two existing fields.
+
+*For example,* change `..."manufId":4098,"manufName":"Securifi Ltd....` to `..."manufId":4098,"ModelId":"PP-WHT-US","manufName":"Securifi Ltd....` on each line for the device.
+
+Save the file and restart zigbee2mqtt.
+
 ## Trust
 ### Trust Remote control (ZYCT-202)
 Factory reset the remote by holding the 0 (off) button for +-20 seconds.
