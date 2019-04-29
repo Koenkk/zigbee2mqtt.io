@@ -14,12 +14,16 @@ groups:
   '1':
     # Name which will be used to control the group
     friendly_name: group_1
+    # Devices of this group,
+    # Note: this has to be the ieeeAddr of the device, not the friendly_name!
+    devices:
+      - '0x00158d00018255df'
 ```
 
 The group ID (in the above example `'1'`) should be a numerical string. In case you want to use a hexadecimal group ID (e.g. `0xe24c`) you should first convert it to a numerical string (e.g. `57932`).
 
 ## Commands
-The group of a node can be configured using the following commands:
+The group of a device can also be configured using the following commands:
 
 - `zigbee2mqtt/bridge/group/[GROUP_FRIENDLY_NAME]/add` with payload `DEVICE_FRIENDLY_NAME` will add a device to a group.
 - `zigbee2mqtt/bridge/group/[GROUP_FRIENDLY_NAME]/remove` with payload `DEVICE_FRIENDLY_NAME` will remove a device from a group.
@@ -33,6 +37,9 @@ Controlling a group is similar to controlling a single device. For example to tu
   "state": "ON",
 }
 ```
+
+## State changes
+When one of the devices in a group changes it's state, the group state will also update. E.g. device A is in group 1, when group A turns off, a message to `zigbee2mqtt/1` with payload `{"state": "OFF"}` will be published.
 
 ## How do groups work?
 By using the above `add` command above, a device will be added to a group. The device itself is responsible for storing to which groups it belongs. Others, e.g. the coordinator, do not have knowledge to which device a groups belongs.
