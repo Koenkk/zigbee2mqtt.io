@@ -39,7 +39,7 @@ Controlling a group is similar to controlling a single device. For example to tu
 ```
 
 ## State changes
-When one of the devices in a group changes it's state, the group state will also update. E.g. device A is in group 1, when group A turns off, a message to `zigbee2mqtt/1` with payload `{"state": "OFF"}` will be published.
+When one of the devices in a group changes it's state, the group state will also update. E.g. device A is in group `1` with `friendly_name: my_group`, when group A turns off, a message to `zigbee2mqtt/my_group` with payload `{"state": "OFF"}` will be published.
 
 ## How do groups work?
 By using the above `add` command above, a device will be added to a group. The device itself is responsible for storing to which groups it belongs. Others, e.g. the coordinator, do not have knowledge to which device a groups belongs.
