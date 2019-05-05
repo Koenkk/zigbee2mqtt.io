@@ -17,6 +17,9 @@ The `configuration.yaml` allows to set device specific configuration. The follow
 ### RTCGQ01LM, RTCGQ11LM
 * `no_occupancy_since`: Timeout (in seconds) after `no_occupancy_since` is send. This indicates the time since last occupancy was detected. For example `no_occupancy_since: [10, 60]` will send a `{"no_occupancy_since": 10}` after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds.
 
+### WXKG01LM
+* `long_timeout`: The WXKG01LM only reports a button press and release. By default, Zigbee2mqtt publishes a long click when there is at least 1000 ms between both events. It could be that due to delays in the network the release message is received late. This causes a single click to be identified as a long click. If you are experiencing this you can try experimenting with this option (e.g. `long_timeout: 2000`).
+
 ### Temperature, humidity and pressure devices
 * `temperature_precision`: Controls the precision of `temperature` values, e.g. `0`, `1` or `2`; default `2`.
 * `humidity_precision`: Controls the precision of `humidity` values, e.g. `0`, `1` or `2`; default `2`.
