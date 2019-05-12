@@ -22,6 +22,8 @@ groups:
 
 The group ID (in the above example `'1'`) should be a numerical string. In case you want to use a hexadecimal group ID (e.g. `0xe24c`) you should first convert it to a numerical string (e.g. `57932`).
 
+If using the Hassio add-on, restart it after modifying your `configuration.yaml` as above.
+
 ## Commands
 The group of a device can also be configured using the following commands:
 
