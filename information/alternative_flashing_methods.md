@@ -82,7 +82,7 @@ Debug config:
 ```
 [Another example of connection on MacOS](https://github.com/wavesoft/CCLib/issues/22#issuecomment-384452424)
 
-7. If everything is successful, download [the firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator).
+7. If everything is successful, download [the firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin/).
 Before we flash the firmware we need to make a modification to it. Open the `.hex`
 file in a text editor and **remove the second last line**. Now save the file.
 
@@ -130,7 +130,7 @@ Completed
 
 1. Download and unpack CCLoader firmware and tools https://github.com/RedBearLab/CCLoader
 
-2. Download the correct firmware, this example will be using the CC2531 [](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator)
+2. Download the correct firmware, this example will be using the [CC2531 firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin/).
 
 3. Unpack firmware and convert the hex-file to bin.
 
@@ -213,7 +213,7 @@ it should return :
 ```
 If you see 0000 or ffff, something is wrong and you should probably check your wiring.
 
-5. Download and extract the latest firmware [CC2531ZNP-Prod.hex](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/default/CC2531)
+5. Download and extract the latest firmware [CC2531_20190425.zip](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin/CC2531_20190425.zip).
 
 6. Erase and flash the CC2531 :
 

@@ -27,8 +27,8 @@ Zigbee2mqtt logs the device type of your devices on startup, e.g.:
 ```
 
 ## Network size
-The [CC2531 USB sniffer coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/default/CC2531) has a limit of 20 **direct** children. This means 1 coordinator + 20 end devices and 0 routers.
+The [CC2531 USB sniffer coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin) has a limit of 25 **direct** children. This means 1 coordinator + 25 end devices and 0 routers.
 
-However by adding routers to your network you can overcome the limit of 20 devices. This means that, e.g. a network of 1 coordinator, 4 routers and 50 end devices is possible.
+However by adding routers to your network you can overcome the limit of 25 devices. This means that, e.g. a network of 1 coordinator, 4 routers and 50 end devices is possible.
 
 The number of childs that a router support differs per device! Therefore, the increased size of a network by adding a router is arbitrary.

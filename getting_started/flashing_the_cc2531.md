@@ -12,7 +12,7 @@ The CC2531 USB stick needs to be flashed with a custom firmware.
 3. Connect **BOTH** the `CC2531 USB sniffer` and the `CC debugger` to your PC using USB.
 3. If the light on the CC debugger is RED press set reset button on the CC debugger. The light on the CC debugger should now turn GREEN. If not use [CC debugger user guide](http://www.ti.com/lit/ug/swru197h/swru197h.pdf) to troubleshoot your problem.
 ![How to connect](../images/connected.jpg)
-4. Download the firmware [CC2531ZNP-Prod.hex](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/default/CC2531)
+4. Download the firmware [CC2531_20190425.zip](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin/CC2531_20190425.zip)
 5. Start SmartRF Flash Programmer, setup as shown below and press `Perform actions`. Make sure to select the `.hex` file, not the `.bin` file!
 ![SmartRF Flash Programmer](../images/smartrf.png)
 
@@ -37,7 +37,7 @@ make
 4. Connect **BOTH** the `CC2531 USB sniffer` and the `CC debugger` to your PC using USB.
 5. If the light on the CC debugger is RED, press the Reset button on the CC debugger. The light on the CC debugger should now turn GREEN. If not, follow the [CC debugger user guide](http://www.ti.com/lit/ug/swru197h/swru197h.pdf) to troubleshoot your problem.
 ![How to connect](../images/connected.jpg)
-6. Download the firmware [CC2531ZNP-Prod.hex](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/default/CC2531).
+6. Download the firmware [CC2531_20190425.zip](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin/CC2531_20190425.zip).
 7. Flash your firmware:
 ```
 sudo ./cc-tool -e -w CC2531ZNP-Prod.hex
