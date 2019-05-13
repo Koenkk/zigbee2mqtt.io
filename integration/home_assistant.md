@@ -60,7 +60,24 @@ it is equal to the Zigbee2mqtt `friendly_name`. Is updated if the Zigbee2mqtt `f
 ## Responding to button clicks
 To respond to button clicks (e.g. WXKG01LM) you can use one of the following two Home Assistant configurations.
 
+### Via Home Assistant entity
+
+{% raw %}
+```yaml
+automation:
+  - alias: Respond to button click
+    trigger:
+      platform: state
+      entity_id: sensor.my_switch_click
+      to: 'single'
+    action:
+      entity_id: light.my_bulb_light
+      service: light.toggle
+```
+{% endraw %}
+
 ### Via MQTT
+As an alternative to the above way of integrating, you can also listen to MQTT topics.
 
 {% raw %}
 ```yaml
@@ -74,25 +91,6 @@ automation:
       value_template: '{{ "single" == trigger.payload_json.click }}'
     action:
       entity_id: light.bedroom
-      service: light.toggle
-```
-{% endraw %}
-
-### Via Home Assistant entity
-Due to a [limitation in Home Assistant](https://github.com/home-assistant/home-assistant/pull/20716),
-this automation can only trigger 1 time per 1 or 2 seconds.
-If you need this, use the MQTT trigger from the example above.
-
-{% raw %}
-```yaml
-automation:
-  - alias: Respond to button click
-    trigger:
-      platform: state
-      entity_id: sensor.my_switch_click
-      to: 'single'
-    action:
-      entity_id: light.my_bulb_light
       service: light.toggle
 ```
 {% endraw %}
@@ -289,7 +287,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -317,7 +314,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -345,7 +341,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -373,7 +368,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -401,7 +395,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -438,7 +431,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -475,7 +467,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -513,7 +504,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -559,7 +549,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -812,7 +801,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -974,7 +962,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -1283,7 +1270,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -1448,7 +1434,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -1468,7 +1453,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -2057,6 +2041,26 @@ sensor:
 ```
 {% endraw %}
 
+### 046677476816
+{% raw %}
+```yaml
+light:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
 ### 7199960PH
 {% raw %}
 ```yaml
@@ -2087,7 +2091,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -2235,6 +2238,27 @@ sensor:
     unit_of_measurement: "Watt"
     icon: "mdi:flash"
     value_template: "{{ value_json.power }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+### SWITCH EDP RE:DY
+{% raw %}
+```yaml
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
 
 sensor:
   - platform: "mqtt"
@@ -2407,6 +2431,33 @@ sensor:
 ### 1TST-EU
 {% raw %}
 ```yaml
+climate:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    min_temp: 7
+    max_temp: 30
+    modes: 
+      - "off"
+      - "auto"
+      - "heat"
+    mode_state_topic: true
+    mode_state_template: "{{ value_json.system_mode }}"
+    mode_command_topic: true
+    current_temperature_topic: true
+    current_temperature_template: "{{ value_json.local_temperature }}"
+    temperature_state_topic: true
+    temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
+    temperature_command_topic: true
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    device_class: "battery"
+    value_template: "{{ value_json.battery }}"
+
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
@@ -2735,6 +2786,28 @@ sensor:
 ```
 {% endraw %}
 
+### AC0363900NJ
+{% raw %}
+```yaml
+light:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    color_temp: true
+    xy: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
 ### AB35996
 {% raw %}
 ```yaml
@@ -2836,7 +2909,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -3182,6 +3254,27 @@ sensor:
 {% endraw %}
 
 ### RS 128 T
+{% raw %}
+```yaml
+light:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    color_temp: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+### RS 228 T
 {% raw %}
 ```yaml
 light:
@@ -3662,6 +3755,26 @@ sensor:
 ```
 {% endraw %}
 
+### 74580
+{% raw %}
+```yaml
+light:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
 ### 22670
 {% raw %}
 ```yaml
@@ -3916,7 +4029,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -4037,7 +4149,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -4057,7 +4168,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 switch:
   - platform: "mqtt"
@@ -4095,7 +4205,26 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+### LXZB-02A
+{% raw %}
+```yaml
+light:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
 
 sensor:
   - platform: "mqtt"
@@ -4420,6 +4549,27 @@ light:
     brightness: true
     color_temp: true
     xy: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+### GL-S-004Z
+{% raw %}
+```yaml
+light:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    color_temp: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
 
@@ -4985,6 +5135,43 @@ sensor:
 ```
 {% endraw %}
 
+### IM6001-MPP01
+{% raw %}
+```yaml
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "°C"
+    device_class: "temperature"
+    value_template: "{{ value_json.temperature }}"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: false
+    payload_off: true
+    value_template: "{{ value_json.contact }}"
+    device_class: "door"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    device_class: "battery"
+    value_template: "{{ value_json.battery }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
 ### 3310-S
 {% raw %}
 ```yaml
@@ -5096,7 +5283,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -5124,7 +5310,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -5187,6 +5372,27 @@ binary_sensor:
     payload_off: true
     value_template: "{{ value_json.contact }}"
     device_class: "door"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+### 50043
+{% raw %}
+```yaml
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
 
 sensor:
   - platform: "mqtt"
@@ -5268,7 +5474,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -5604,6 +5809,28 @@ sensor:
 ```
 {% endraw %}
 
+### SCM-5ZBS
+{% raw %}
+```yaml
+cover:
+  - platform: "mqtt"
+    state_topic: false
+    availability_topic: "zigbee2mqtt/bridge/state"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    position_topic: true
+    set_position_topic: true
+    set_position_template: "{ \"position\": {{ position }} }"
+    value_template: "{{ value_json.position }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
 ### HS2SK
 {% raw %}
 ```yaml
@@ -5777,6 +6004,27 @@ sensor:
 ```
 {% endraw %}
 
+### HS1-WL-E
+{% raw %}
+```yaml
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.water_leak }}"
+    device_class: "moisture"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
 ### HS1RC-M
 {% raw %}
 ```yaml
@@ -5786,7 +6034,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -6001,6 +6248,27 @@ sensor:
 ```
 {% endraw %}
 
+### 100.425.90
+{% raw %}
+```yaml
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
 ### ICZB-IW11D
 {% raw %}
 ```yaml
@@ -6073,7 +6341,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -6144,7 +6411,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
-    expire_after: 1
 
 sensor:
   - platform: "mqtt"
@@ -6326,6 +6592,52 @@ sensor:
     unit_of_measurement: "%"
     device_class: "battery"
     value_template: "{{ value_json.battery }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+### YRD226HA2619
+{% raw %}
+```yaml
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    device_class: "battery"
+    value_template: "{{ value_json.battery }}"
+
+lock:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    value_template: "{{ value_json.state }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+### YMF40
+{% raw %}
+```yaml
+lock:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    value_template: "{{ value_json.state }}"
 
 sensor:
   - platform: "mqtt"
@@ -6622,6 +6934,46 @@ sensor:
 ```
 {% endraw %}
 
+### HLC610-Z
+{% raw %}
+```yaml
+light:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+### HLC821-Z-SC
+{% raw %}
+```yaml
+light:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
 ### U86K31ND6
 {% raw %}
 ```yaml
@@ -6661,6 +7013,25 @@ sensor:
 ```
 {% endraw %}
 
+### V3-BTZB
+{% raw %}
+```yaml
+lock:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    value_template: "{{ value_json.state }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
 ### N2G-SP
 {% raw %}
 ```yaml
@@ -6680,6 +7051,134 @@ switch:
     payload_on: "ON"
     value_template: "{{ value_json.state }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+### 3RSS008Z
+{% raw %}
+```yaml
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    device_class: "battery"
+    value_template: "{{ value_json.battery }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+### 99432
+{% raw %}
+```yaml
+fan:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    state_value_template: "{{ value_json.fan_state }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "fan_state"
+    speed_state_topic: true
+    speed_command_topic: true
+    speed_value_template: "{{ value_json.fan_mode }}"
+    speeds: 
+      - "off"
+      - "low"
+      - "medium"
+      - "high"
+      - "on"
+      - "auto"
+      - "smart"
+
+light:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+### 511.10
+{% raw %}
+```yaml
+light:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+### 67200BL
+{% raw %}
+```yaml
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+### 2430-100
+{% raw %}
+```yaml
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:gesture-double-tap"
+    value_template: "{{ value_json.action }}"
 
 sensor:
   - platform: "mqtt"
