@@ -6,6 +6,11 @@ The range of the CC2531 can greatly be improved when connecting it with an USB e
 cable instead of directly plugging it into the computer (e.g. Raspberry Pi). When plugged directly in the computer, the CC2531 antenna suffers from interference of radio signals and electrical components of the computer. Also be sure not to position the CC2531 too close
 to any other radio transmitting devices (e.g. Wifi router). A USB extension cable of 50 cm is already enough to reduce the interference.
 
+## Try different orientation of the CC2531
+RF connection between the CC2531 and other devices also depends on the way it is oriented in space. You might be having very poor `linkquality` reports and intermittent ping failures but once the CC2531 is rotated a little it all can change greatly without re-locating the coordinator far away. Try to experiment with positioning and orienting the CC2531 in space while controlling the `linkquality` values reported. You might find it useful to buy a small rotating USB connector. Like this:
+
+![rotating USB connector](https://i.imgur.com/AI41Oxz.png)
+
 ## Reduce Wifi interference by changing the Zigbee channel
 **NOTE: Changing the Zigbee channel requires repairing of all your devices!**
 
