@@ -24,7 +24,7 @@ The factory reset procedure differs between TRADFRI components:
 What works for me every time is using (very) short “on’s” and a little bit longer “off’s”…
 I start with bulb on, then off, and then 6 “on’s”, where I kill the light as soon as the bulb shows signs of turning on… Hope that make sense…?
 
-* To factory reset the TRADFRI wireless dimmer (ICTC-G-1) press the button 4 times (so the red lights starts blinking).
+* To factory reset the TRADFRI wireless dimmer (ICTC-G-1) press the button 4 times (so the red lights starts blinking). After the blinks you migth be willing to rotate the dimmer like you are trying to control your lights. It will prevent the device from going to sleep and ensure successful paiting. In case the dimmer was recognized but no actions seems to be detected, try to restart the zigbee2mqtt. See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koenkk/zigbee2mqtt/issues/620).
 
 * To factory reset the TRADFRI control outlet, press and hold the reset button (pinhole underneath the light, located at the top of the outlet) with a paperclip until the white light starts fading. Hold onto the button for a few more seconds, then release. After this, the outlet will automatically connect.
 
