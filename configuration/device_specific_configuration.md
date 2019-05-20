@@ -14,6 +14,8 @@ The `configuration.yaml` allows to set device specific configuration. The follow
 ### RTCGQ01LM, RTCGQ11LM and AV2010/22
 * `occupancy_timeout`: Timeout (in seconds) after the `occupancy: false` message is sent, only available for occupany sensors. If not set, the timeout is `90` seconds. When set to `0` no `occupancy: false` is send.
 
+**IMPORTANT**: `occupancy_timeout` should not be set to lower than 60 seconds. The reason is this: after detecting a motion the sensor ignores any movements for exactly 60 seconds. In case there are movements after this, a new message (`occupancy: true`) will be sent and the sensor will go for one more minute sleep, and so on. This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/issues/270#issuecomment-414999973)). To work around this, a [hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806) is needed.
+
 ### RTCGQ01LM, RTCGQ11LM
 * `no_occupancy_since`: Timeout (in seconds) after `no_occupancy_since` is send. This indicates the time since last occupancy was detected. For example `no_occupancy_since: [10, 60]` will send a `{"no_occupancy_since": 10}` after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds.
 
@@ -31,7 +33,7 @@ devices:
   '0x00158d0001d82999':
     friendly_name: 'my_occupancy_sensor'
     retain: true
-    occupancy_timeout: 20
+    occupancy_timeout: 120
     no_occupancy_since: [10, 600]
     qos: 1
     debounce: 0.5
@@ -49,6 +51,6 @@ The default values used for the device specific configuration can be overriden v
 
 ```yaml
 device_options:
-  occupancy_timeout: 30
+  occupancy_timeout: 130
   temperature_precision: 1
 ```
