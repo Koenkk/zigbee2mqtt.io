@@ -46,3 +46,5 @@ By using the above `add` command above, a device will be added to a group. The d
 
 When using the `set` command, e.g. to turn on all devices in a group, a broadcast request is send to **all* devices in the network. The device itself then determines if it belongs to that group and if it should execute the command.
 
+## Adding a specific endpoint
+In case you want to add a device to a group with multiple endpoints, e.g. a QBKG03LM with 2 buttons you can specify it by sending to `zigbee2mqtt/bridge/group/[GROUP_FRIENDLY_NAME]/add` with payload `DEVICE_FRIENDLY_NAME/ENDPOINT`. In case of the QBKG03LM e.g `my_device/right`
