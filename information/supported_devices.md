@@ -587,9 +587,9 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | WXKG12LM | Xiaomi Aqara wireless switch (with gyroscope) (single, double, shake, hold, release) | ![../images/devices/WXKG12LM.jpg](../images/devices/WXKG12LM.jpg) |
 | WXKG03LM | Xiaomi Aqara single key wireless wall switch (single (and double, hold, release and long click depending on model)) | ![../images/devices/WXKG03LM.jpg](../images/devices/WXKG03LM.jpg) |
 | WXKG02LM | Xiaomi Aqara double key wireless wall switch (left, right, both click (and double, long click for left, right and both depending on model)) | ![../images/devices/WXKG02LM.jpg](../images/devices/WXKG02LM.jpg) |
-| QBKG04LM | Xiaomi Aqara single key wired wall switch (on/off) | ![../images/devices/QBKG04LM.jpg](../images/devices/QBKG04LM.jpg) |
+| QBKG04LM | Xiaomi Aqara single key wired wall switch (on/off). Please note that this wall switch won't work as router in Zigbee network. | ![../images/devices/QBKG04LM.jpg](../images/devices/QBKG04LM.jpg) |
 | QBKG11LM | Xiaomi Aqara single key wired wall switch (on/off, power measurement) | ![../images/devices/QBKG11LM.jpg](../images/devices/QBKG11LM.jpg) |
-| QBKG03LM | Xiaomi Aqara double key wired wall switch (release/hold, on/off) | ![../images/devices/QBKG03LM.jpg](../images/devices/QBKG03LM.jpg) |
+| QBKG03LM | Xiaomi Aqara double key wired wall switch (release/hold, on/off). Please note that this wall switch won't work as router in Zigbee network. | ![../images/devices/QBKG03LM.jpg](../images/devices/QBKG03LM.jpg) |
 | QBKG12LM | Xiaomi Aqara double key wired wall switch (on/off, power measurement) | ![../images/devices/QBKG12LM.jpg](../images/devices/QBKG12LM.jpg) |
 | WSDCGQ01LM | Xiaomi MiJia temperature & humidity sensor  (temperature and humidity) | ![../images/devices/WSDCGQ01LM.jpg](../images/devices/WSDCGQ01LM.jpg) |
 | WSDCGQ11LM | Xiaomi Aqara temperature, humidity and pressure sensor (temperature, humidity and pressure) | ![../images/devices/WSDCGQ11LM.jpg](../images/devices/WSDCGQ11LM.jpg) |
