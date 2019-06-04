@@ -13,6 +13,8 @@ Routers are responsible for routing traffic between different nodes. Routers may
 
 *Examples: LED1545G12, 7146060PH, ZNCZ02LM, [CC2531 USB sniffer flashed with the  router firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/CC2531/bin)*
 
+*Note: Xiaomi Wall Switches (without neutral line - QBKG03LM and QBKG04LM) are not working as routers in the Zigbee network.*
+
 
 ### Coordinator
 A coordinator is a special router. In addition to all of the router capabilities, the coordinator is responsible for forming the network. To do that, it must select the appropriate channel, PAN ID, and extended network address. It is also responsible for selecting the security mode of the network.
