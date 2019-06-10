@@ -309,6 +309,14 @@ Press and hold the button on the device for +- 10 seconds
 *NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
 `,
     },
+    {
+        vendor: 'Innr',
+        supports: 'brightness',
+        note: `
+### Pairing
+Factory reset the light bulb ([video](https://www.youtube.com/watch?v=4zkpZSv84H4)).
+`,
+    },
 ];
 
 module.exports = notes;
