@@ -159,7 +159,7 @@ the Device with a Philips LivingColors Remote Gen 2 as it should try all Zigbee 
     },
     {
         vendor: 'Philips',
-        supports: 'brightness',
+        supports: ['brightness'],
         note: `
 ### Pairing
 Factory reset the light bulb see
@@ -254,7 +254,7 @@ small pin or paperclip to push the reset button once.
     },
     {
         vendor: 'IKEA',
-        supports: 'brightness',
+        supports: ['brightness'],
         notModel: ['E1524', 'ICPSHC24-10EU-IL-1', 'ICPSHC24-30EU-IL-1', 'ICTC-G-1'],
         note: `
 ### Pairing
@@ -311,10 +311,89 @@ Press and hold the button on the device for +- 10 seconds
     },
     {
         vendor: 'Innr',
-        supports: 'brightness',
+        supports: ['brightness'],
         note: `
 ### Pairing
 Factory reset the light bulb ([video](https://www.youtube.com/watch?v=4zkpZSv84H4)).
+`,
+    },
+    {
+        model: ['RTCGQ01LM', 'RTCGQ11LM'],
+        note: `
+### Device type specific configuration
+*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+
+* \`no_occupancy_since\`: Timeout (in seconds) after \`no_occupancy_since\` is send.
+This indicates the time since last occupancy was detected.
+For example \`no_occupancy_since: [10, 60]\` will send a \`{"no_occupancy_since": 10}\` after 10 seconds
+and a \`{"no_occupancy_since": 60}\` after 60 seconds.
+* \`occupancy_timeout\`: Timeout (in seconds) after the \`occupancy: false\` message is sent.
+If not set, the timeout is \`90\` seconds.
+When set to \`0\` no \`occupancy: false\` is send.
+
+**IMPORTANT**: \`occupancy_timeout\` should not be set to lower than 60 seconds.
+The reason is this: after detecting a motion the sensor ignores any movements for
+exactly 60 seconds. In case there are movements after this, a new message
+(\`occupancy: true\`) will be sent and the sensor will go for one more minute sleep, and so on.
+This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/issues/270#issuecomment-414999973)).
+To work around this, a
+[hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
+is needed.
+`,
+    },
+    {
+        model: ['AV2010/22'],
+        note: `
+### Device type specific configuration
+*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+
+* \`occupancy_timeout\`: Timeout (in seconds) after the \`occupancy: false\` message is sent.
+If not set, the timeout is \`90\` seconds.
+When set to \`0\` no \`occupancy: false\` is send.
+`,
+    },
+    {
+        model: ['WXKG01LM'],
+        note: `
+### Device type specific configuration
+*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+
+* \`long_timeout\`: The WXKG01LM only reports a button press and release.
+By default, Zigbee2mqtt publishes a long click when there is at
+least 1000 ms between both events. It could be that due to
+delays in the network the release message is received late. This causes a single
+click to be identified as a long click. If you are experiencing this you can try
+experimenting with this option (e.g. \`long_timeout: 2000\`).
+`,
+    },
+
+    // Temperatue humidty and pressure
+    {
+        supports: ['temperature', 'humidity', 'pressure'],
+        notSupports: ['color temperature'],
+        note: `
+### Device type specific configuration
+*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+`,
+    },
+    {
+        supports: ['temperature'],
+        notSupports: ['color temperature'],
+        note: `
+* \`temperature_precision\`: Controls the precision of \`temperature\` values,
+e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
+`,
+    },
+    {
+        supports: ['humidity'],
+        note: `
+* \`humidity_precision\`: Controls the precision of \`humidity\` values, e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
+`,
+    },
+    {
+        supports: ['pressure'],
+        note: `
+* \`pressure_precision\`: Controls the precision of \`pressure\` values, e.g. \`0\` or \`1\`; default \`1\`.
 `,
     },
 ];

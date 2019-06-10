@@ -21,3 +21,14 @@ This keeps the device awake, otherwise pairing will **fail!**.
 
 *NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
 
+
+### Device type specific configuration
+*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+
+
+* `temperature_precision`: Controls the precision of `temperature` values,
+e.g. `0`, `1` or `2`; default `2`.
+
+
+* `humidity_precision`: Controls the precision of `humidity` values, e.g. `0`, `1` or `2`; default `2`.
+

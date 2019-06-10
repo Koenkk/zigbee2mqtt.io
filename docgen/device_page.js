@@ -28,7 +28,11 @@ ${getNotes(device)}
 function getNotes(device) {
     const note = notes
         .filter((n) => {
-            if (n.hasOwnProperty('supports') && !device.supports.includes(n.supports)) {
+            if (n.hasOwnProperty('supports') && n.supports.filter((s) => device.supports.includes(s)).length === 0) {
+                return false;
+            }
+
+            if (n.hasOwnProperty('notSupports') && n.notSupports.filter((s) => device.supports.includes(s)).length !== 0) {
                 return false;
             }
 
@@ -37,6 +41,10 @@ function getNotes(device) {
             }
 
             if (typeof(n.model) == 'object' && n.model.includes(device.model)) {
+                return true;
+            }
+
+            if (!n.hasOwnProperty('model') && !n.hasOwnProperty('vendor')) {
                 return true;
             }
 

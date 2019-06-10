@@ -21,3 +21,14 @@ This keeps the device awake, otherwise pairing will **fail!**.
 
 *NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
 
+
+### Device type specific configuration
+*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+
+* `long_timeout`: The WXKG01LM only reports a button press and release.
+By default, Zigbee2mqtt publishes a long click when there is at
+least 1000 ms between both events. It could be that due to
+delays in the network the release message is received late. This causes a single
+click to be identified as a long click. If you are experiencing this you can try
+experimenting with this option (e.g. `long_timeout: 2000`).
+
