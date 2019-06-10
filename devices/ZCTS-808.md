@@ -18,3 +18,31 @@ When pairing the sensor with Zigbee2MQTT,
 keep opening and closing the sensor (pull/insert the sensor parts next to eachother) for 10 seconds,
 otherwise device will fall asleep before it gets fully configured and will not send state changes.
 
+
+## Manual Home Assistant configuration
+Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
+manual integration is possbile with the following configuration:
+
+
+### ZCTS-808
+{% raw %}
+```yaml
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: false
+    payload_off: true
+    value_template: "{{ value_json.contact }}"
+    device_class: "door"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+

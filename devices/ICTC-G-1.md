@@ -22,3 +22,45 @@ from going to sleep and ensure successful paiting. In case the dimmer was
 recognized but no actions seems to be detected, try to restart the zigbee2mqtt.
 See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koenkk/zigbee2mqtt/issues/620).
 
+
+## Manual Home Assistant configuration
+Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
+manual integration is possbile with the following configuration:
+
+
+### ICTC-G-1
+{% raw %}
+```yaml
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "brightness"
+    icon: "mdi:brightness-5"
+    value_template: "{{ value_json.brightness }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    device_class: "battery"
+    value_template: "{{ value_json.battery }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:gesture-double-tap"
+    value_template: "{{ value_json.action }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+
