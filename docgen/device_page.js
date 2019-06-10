@@ -23,7 +23,7 @@ ${getNotes(device)}
 }
 
 function getNotes(device) {
-    const note = notes.filter((n) => n.model === device.model).map((n) => n.description).join('\n');
+    const note = notes.filter((n) => n.model === device.model).map((n) => n.note).join('\n');
     return note === '' ? 'None' : note;
 }
 
