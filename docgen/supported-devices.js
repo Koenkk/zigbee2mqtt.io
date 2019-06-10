@@ -3,8 +3,7 @@
  */
 
 const devices = require('zigbee2mqtt/node_modules/zigbee-shepherd-converters').devices;
-const replaceByDash = [new RegExp('/', 'g'), new RegExp(':', 'g'), new RegExp(' ', 'g')];
-const imageBase = '../images/devices/';
+const utils = require('./utils');
 
 function onlyUnique(value, index, self) {
     return self.indexOf(value) === index;
@@ -46,10 +45,9 @@ const generateTable = (devices) => {
     text += '| ------------- | ------------- | -------------------------- |\n';
     devices = new Map(devices.map((d) => [d.model, d]));
     devices.forEach((d) => {
-        let image = d.model;
-        replaceByDash.forEach((r) => image = image.replace(r, '-'));
-        image = imageBase + `${image}.jpg`;
-        text += `| ${d.model} | ${d.vendor} ${d.description} (${d.supports}) | ![${image}](${image}) |\n`;
+        const image = utils.getImage(d.model);
+        // eslint-disable-next-line
+        text += `| [${d.model}](../devices/${utils.normalizeModel(d.model)}) | ${d.vendor} ${d.description} (${d.supports}) | ![${image}](${image}) |\n`;
     });
 
     return text;
