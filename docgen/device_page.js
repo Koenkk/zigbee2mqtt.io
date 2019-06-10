@@ -8,7 +8,7 @@ function generate(device) {
     const image = utils.getImage(device.model);
 
     return `
-*To contribute tot his page, edit the following
+*To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
 # Device
