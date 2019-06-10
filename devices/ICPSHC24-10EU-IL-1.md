@@ -1,4 +1,7 @@
 
+*To contribute tot his page, edit the following
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+
 # Device
 
 | Model | ICPSHC24-10EU-IL-1  |
@@ -9,4 +12,8 @@
 
 ## Notes
 
-None
+
+### Pairing
+To factory reset the TRADFRI drivers use a
+small pin or paperclip to push the reset button once.
+

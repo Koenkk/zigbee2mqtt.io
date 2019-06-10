@@ -11,6 +11,7 @@ Welcome to the Zigbee2mqtt documentation! Besides the documentation, you can als
 * [Flashing the CC2531 USB stick](getting_started/flashing_the_cc2531.md)
 * [Running Zigbee2mqtt](getting_started/running_zigbee2mqtt.md)
 * [Pairing devices](getting_started/pairing_devices.md)
+* [Supported devices](information/supported_devices.md)
 
 ### Configuration
 * [Configuration](configuration/configuration.md)
@@ -38,7 +39,6 @@ Welcome to the Zigbee2mqtt documentation! Besides the documentation, you can als
 
 ### Information
 * [FAQ](information/FAQ.md)
-* [Supported devices](information/supported_devices.md)
 * [Zigbee2mqtt fails to start](information/zigbee2mqtt_fails_to_start.md)
 * [MQTT topics and message structure](information/mqtt_topics_and_message_structure.md)
 * [What does and does not require repairing of all devices?](information/what_does_and_doesnt_require_repairing.md)

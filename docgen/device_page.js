@@ -8,6 +8,9 @@ function generate(device) {
     const image = utils.getImage(device.model);
 
     return `
+*To contribute tot his page, edit the following
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+
 # Device
 
 | Model | ${device.model}  |
@@ -23,7 +26,24 @@ ${getNotes(device)}
 }
 
 function getNotes(device) {
-    const note = notes.filter((n) => n.model === device.model).map((n) => n.note).join('\n');
+    const note = notes
+        .filter((n) => {
+            if (n.hasOwnProperty('supports') && !device.supports.includes(n.supports)) {
+                return false;
+            }
+
+            if (n.hasOwnProperty('notModel') && n.notModel.includes(device.model)) {
+                return false;
+            }
+
+            if (typeof(n.model) == 'object' && n.model.includes(device.model)) {
+                return true;
+            }
+
+            return n.model === device.model || n.vendor === device.vendor;
+        })
+        .map((n) => n.note)
+        .join('\n');
     return note === '' ? 'None' : note;
 }
 

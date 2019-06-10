@@ -1,4 +1,7 @@
 
+*To contribute tot his page, edit the following
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+
 # Device
 
 | Model | PLUG EDP RE:DY  |
@@ -9,4 +12,7 @@
 
 ## Notes
 
-None
+
+### Pairing
+Factory reset the plug (hold the switch button for >10sec). After resetting the switch will automatically connect.
+

@@ -1,4 +1,7 @@
 
+*To contribute tot his page, edit the following
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+
 # Device
 
 | Model | MFKZQ01LM  |
@@ -9,4 +12,9 @@
 
 ## Notes
 
-None
+
+### Pairing
+[Video: Pairing Xiaomi Aqara Cube MFKZQ01LM](https://www.youtube.com/watch?v=uhMrcIAdGxg&feature=youtu.be)
+
+*NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
+

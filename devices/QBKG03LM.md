@@ -1,4 +1,7 @@
 
+*To contribute tot his page, edit the following
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+
 # Device
 
 | Model | QBKG03LM  |
@@ -9,4 +12,8 @@
 
 ## Notes
 
-None
+
+### Pairing
+Press and hold the button on the device for +- 10 seconds
+(until the blue light starts blinking and stops blinking), release and wait.
+
