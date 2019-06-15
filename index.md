@@ -55,4 +55,5 @@ Welcome to the Zigbee2mqtt documentation! Besides the documentation, you can als
 
 ### Support
 * [Forum](http://zigbee2mqtt.discourse.group/)
-* [Discord channel](https://discord.gg/NyseBeK).
+* [Discord channel](https://discord.gg/NyseBeK)
+* [Bugs](https://github.com/koenkk/zigbee2mqtt/issues)
