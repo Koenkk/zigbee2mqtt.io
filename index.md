@@ -52,3 +52,7 @@ Welcome to the Zigbee2mqtt documentation! Besides the documentation, you can als
 * [CC sniffer devices](information/cc_sniffer_devices.md)
 * [Alternative flashing methods](information/alternative_flashing_methods.md)
 * [Running Zigbee2mqtt in Virtual Environment](information/virtual_environment.md)
+
+### Support
+* [Forum](http://zigbee2mqtt.discourse.group/)
+* [Discord channel](https://discord.gg/NyseBeK).
