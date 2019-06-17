@@ -27,7 +27,7 @@ The group of a device can also be configured using the following commands:
 
 - `zigbee2mqtt/bridge/group/[GROUP_FRIENDLY_NAME]/add` with payload `DEVICE_FRIENDLY_NAME` will add a device to a group.
 - `zigbee2mqtt/bridge/group/[GROUP_FRIENDLY_NAME]/remove` with payload `DEVICE_FRIENDLY_NAME` will remove a device from a group.
-- `zigbee2mqtt/bridge/group/[GROUP_FRIENDLY_NAME]/remove_all` with payload `DEVICE_FRIENDLY_NAME` will remove a device from **all** groups.
+- `zigbee2mqtt/bridge/group/remove_all` with payload `DEVICE_FRIENDLY_NAME` will remove a device from **all** groups.
 
 ## Controlling
 Controlling a group is similar to controlling a single device. For example to turn on all devices that are part of group send a MQTT message to `zigbee2mqtt/[GROUP_FRIENDLY_NAME]/set` with payload:
