@@ -400,8 +400,9 @@ e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
         model: ['9290012607', '9290019758'],
         note: `
 ### Motion sensitivity
-The motion sensitivity can be changed by publishing to \`zigbee2mqtt/[DEVICE_ID]/set\` one
-of the following values: \`low\`,  \`medium\`,  \`high\` (default).
+The motion sensitivity can be changed by publishing to \`zigbee2mqtt/[DEVICE_ID]/set\`
+\`{"motion_sensitivity": "SENSITIVITY"}\` where \`SENSITVITIY\` is one of the following
+values: \`low\`,  \`medium\`,  \`high\` (default).
 `,
     },
 ];
