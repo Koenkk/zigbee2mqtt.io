@@ -396,6 +396,14 @@ e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
 * \`pressure_precision\`: Controls the precision of \`pressure\` values, e.g. \`0\` or \`1\`; default \`1\`.
 `,
     },
+    {
+        model: ['9290012607', '9290019758'],
+        note: `
+### Motion sensitivity
+The motion sensitivity can be changed by publishing to \`zigbee2mqtt/[DEVICE_ID]/set\` one
+of the following values: \`low\`,  \`medium\`,  \`high\` (default).
+`,
+    },
 ];
 
 module.exports = notes;
