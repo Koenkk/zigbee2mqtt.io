@@ -1,0 +1,68 @@
+
+*To contribute to this page, edit the following
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+
+# Device
+
+| Model | 1TST-EU  |
+| Vendor  | eCozy  |
+| Description | Smart heating thermostat |
+| Supports | temperature, occupancy, un-/occupied heating, schedule |
+| Picture | ![../images/devices/1TST-EU.jpg](../images/devices/1TST-EU.jpg) |
+
+## Notes
+
+
+### Device type specific configuration
+*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+
+
+* `temperature_precision`: Controls the precision of `temperature` values,
+e.g. `0`, `1` or `2`; default `2`.
+
+
+## Manual Home Assistant configuration
+Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
+manual integration is possbile with the following configuration:
+
+
+### 1TST-EU
+{% raw %}
+```yaml
+climate:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    min_temp: 7
+    max_temp: 30
+    modes: 
+      - "off"
+      - "auto"
+      - "heat"
+    mode_state_topic: true
+    mode_state_template: "{{ value_json.system_mode }}"
+    mode_command_topic: true
+    current_temperature_topic: true
+    current_temperature_template: "{{ value_json.local_temperature }}"
+    temperature_state_topic: true
+    temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
+    temperature_command_topic: true
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    device_class: "battery"
+    value_template: "{{ value_json.battery }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+

@@ -150,8 +150,8 @@ objcopy is part of the bintools package.
 ```
 Arduino | CC Header
 GND -> GND
-4 -> DC (Debug Clock)
-5 -> RESETn
+4 -> RESETn
+5 -> DC (Debug Clock)
 6 -> DD (Debug Data)
 ```
 
@@ -167,15 +167,15 @@ and programm the CC2531 without connecting the CC2531 to USB (in the next step).
 
 8. Under Windows - open a command window in the Windows folder with CCLoader.exe
 
-Under Linux you have to compile CCLoader first - so change to CCLoader/SourceCode/Linux, and run ```gcc main.c```.
+Under Linux you have to compile CCLoader first - so change to CCLoader/SourceCode/Linux, and run ```gcc main.c -o CCLoader```.
 
 9. Under Windows start the flash with ```CCLoader_x86_64.exe COMNUM CC2531ZNP-Prod.bin 0```
 
 - Example: CCLoader_x86_64.exe 7 CC2531ZNP-Prod.bin 0
 
-Under Linux start the flash with ```./a.out USBDEV CC2531ZNP-Prod.bin 0```
+Under Linux start the flash with ```./CCLoader USBDEV CC2531ZNP-Prod.bin 0```
 
-- Example ./a.out /dev/ttyACM0 CC2531ZNP-Prod.bin 0
+- Example ./CCLoader /dev/ttyACM0 CC2531ZNP-Prod.bin 0
 
 If burning fails/gets stuck at "Request sent already! Waiting for respond..." - try again, check your wiring, try using "1" instead of "0" as the last parameter.
 
