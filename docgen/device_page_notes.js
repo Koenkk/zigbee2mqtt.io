@@ -396,6 +396,19 @@ e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
 * \`pressure_precision\`: Controls the precision of \`pressure\` values, e.g. \`0\` or \`1\`; default \`1\`.
 `,
     },
+    {
+        model: ['CC2530.ROUTER'],
+        note: `
+### Pairing
+At first boot it will automatically be in pairing mode and join your network. To reset it into pairing mode power-cycle it three times as follows:
+
+1) power on
+2) wait 2sec
+3) power off
+4) repeat above steps 2 further times
+5) power on and wait for it to join your network
+    `,
+    },
 ];
 
 module.exports = notes;
