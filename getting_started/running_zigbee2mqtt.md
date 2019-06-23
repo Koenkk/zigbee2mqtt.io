@@ -25,6 +25,9 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 # Setup Node.js repository
 sudo curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
+If you are on a RaspberryPi Zero that won't work.
+Follow this guide https://warlord0blog.wordpress.com/2018/06/27/node-js-v8-on-raspberry-pi-zero/
+
 # Install Node.js
 sudo apt-get install -y nodejs git make g++ gcc
 
