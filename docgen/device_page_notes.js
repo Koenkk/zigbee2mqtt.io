@@ -400,13 +400,22 @@ e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
         model: ['CC2530.ROUTER'],
         note: `
 ### Pairing
-At first boot it will automatically be in pairing mode and join your network. To reset it into pairing mode power-cycle it three times as follows:
+At first boot it will automatically be in pairing mode and join your network.
+To reset it into pairing mode power-cycle it three times as follows:
 
 1) power on
 2) wait 2sec
 3) power off
 4) repeat above steps 2 further times
 5) power on and wait for it to join your network
+    `,
+    },
+    {
+        model: ['IM6001-MPP01'],
+        note: `
+### Pairing
+When pairing, make sure to keep the sensor awake for 20 seconds by openinig and closing the contact
+every second.
     `,
     },
 ];
