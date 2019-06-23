@@ -77,6 +77,15 @@ Allows you to remove a group, payload should be the name of the group, e.g. `my_
 ## zigbee2mqtt/bridge/networkmap
 Allows you to retrieve a map of your zigbee network. Possible payloads are `raw` and `graphviz`. Zigbee2mqtt will send the networkmap to topic `zigbee2mqtt/bridge/networkmap/[graphviz OR raw]`. <br /> Use [webgraphviz.com](http://www.webgraphviz.com/) or other Tools to generate Network Graph. <br /> **NOTE:** zigbee2mqtt 1.2.1+ required.
 
+The graphviz map shows the devices as follows:
+* Coordinator :  rectangle with bold outline
+* Router : rectangle with rounded corners
+* End device : rectangle with rounded corners and dashed outline
+
+Links are labelled with link quality (0..255) and active routes (listed by short 16 bit destination address). Arrow indicates direction of messaging. Coordinator and routers will typically have two lines for each connection showing bi-directional message path. Line style is:
+* To end devices : dashed lines (signifying message is retrieved by end device when it wakes)
+* To and between coordinator and routers : solid line for active routes or dotted line for no active routes
+
 ## zigbee2mqtt/bridge/group/[friendly_name]/(add|remove|remove_all)
 See [Groups](groups.md)
 
