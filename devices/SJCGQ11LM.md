@@ -14,11 +14,9 @@
 
 
 ### Pairing
-Press and hold reset button on the device for +- 5 seconds until the
-blue light blinks three times, release the reset button (the blue light will blink once more) and wait.
-
-*NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
-
+Press and hold water logo on the device for +- 10 seconds until the blue light blinks
+three times, release the water logo (the blue light will blink once more) and wait.
+    
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

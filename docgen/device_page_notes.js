@@ -296,7 +296,7 @@ This keeps the device awake, otherwise pairing will **fail!**.
     },
     {
         model: [
-            'WXKG11LM', 'WXKG12LM', 'WSDCGQ11LM', 'RTCGQ11LM', 'MCCGQ11LM', 'SJCGQ11LM', 'JTYJ-GD-01LM/BW',
+            'WXKG11LM', 'WXKG12LM', 'WSDCGQ11LM', 'RTCGQ11LM', 'MCCGQ11LM', 'JTYJ-GD-01LM/BW',
             'JTQJ-BF-01LM/BW', 'DJT11LM',
         ],
         note: `
@@ -431,6 +431,14 @@ To reset it into pairing mode power-cycle it three times as follows:
 ### Pairing
 When pairing, make sure to keep the sensor awake for 20 seconds by openinig and closing the contact
 every second.
+    `,
+    },
+    {
+        model: ['SJCGQ11LM'],
+        note: `
+### Pairing
+Press and hold water logo on the device for +- 10 seconds until the blue light blinks
+three times, release the water logo (the blue light will blink once more) and wait.
     `,
     },
 ];
