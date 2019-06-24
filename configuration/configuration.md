@@ -78,6 +78,8 @@ advanced:
   report: true
   # Home Assistant discovery topic
   homeassistant_discovery_topic: 'homeassistant',
+  # Home Assistant status topic
+  homeassistant_status_topic: 'hass/status',
 ```
 
 ## Specifying devices and groups in a separate file
