@@ -253,7 +253,9 @@ automation:
 {% endraw %}
 
 ## Zigbee Network Map (Custom Component)
-https://github.com/rgruebel/ha_zigbee2mqtt_networkmap
+[Zigbee Network Map Home Assistant addon](https://github.com/rgruebel/ha_zigbee2mqtt_networkmap).
+
+**NOTE:** This addon is not password protected (if you have provided external access to your Home Assistant instance **EVERYONE** can access your Network Map).
 
 ## Configuration when NOT using Home Assistant MQTT discovery
-Visit the device page (([Supported devices](../information/supported_devices.md), click on the model number)) to see the Home Assistant configuration when not using MQTT discovery.
+Visit the device page ([Supported devices](../information/supported_devices.md), click on the model number) to see the Home Assistant configuration when not using MQTT discovery.
