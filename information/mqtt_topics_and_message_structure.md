@@ -16,6 +16,7 @@ zigbee2mqtt will output log to this endpoint. Message are always in the form of 
 * `"device_connected"`: send when a new device connects to the network.
 * `"device_removed"`: send when a device is removed from the network.
 * `"device_banned"`: send when a device is banned from the network.
+* `"device_whitelisted"`: send when a device is whitelisted from the network.
 * `"device_renamed"`: send when a device is renamed.
 * `"device_bind"`: send when a device is bound.
 * `"device_unbind"`: send when a device is unbound.
@@ -63,6 +64,9 @@ Allows you to remove devices from the network. Payload should be the `friendly_n
 
 ## zigbee2mqtt/bridge/config/ban
 Allows you to ban devices from the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful ban a [`device_banned`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is send.
+
+## zigbee2mqtt/bridge/config/whitelist
+Allows you to whitelist devices in the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful ban a [`device_whitelisted`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is send. Note that when devices are whitelisted, all device which are not whitelisted will be removed from the network.
 
 ## zigbee2mqtt/bridge/config/rename
 Allows you to change the `friendly_name` of a device on the fly.

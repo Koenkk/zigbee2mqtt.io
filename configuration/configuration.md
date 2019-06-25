@@ -39,6 +39,11 @@ serial:
 ban:
   - '0x000b57fffec6a5b2'
 
+# Optional: whitelist devices from the network (by ieeeAddr)
+# Note that when devices are whitelisted, all device which are not whitelisted will be removed from the network.
+whitelist:
+  - '0x000b57fffec6a5b3'
+
 # Optional: advanced settings
 advanced:
   # Optional: ZigBee pan ID
