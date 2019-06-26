@@ -85,6 +85,23 @@ advanced:
   homeassistant_discovery_topic: 'homeassistant',
   # Home Assistant status topic
   homeassistant_status_topic: 'hass/status',
+
+# Optional: networkmap options
+map_options:
+  graphviz:
+    # Colors to be used in the graphviz network map
+    colors:
+      fill:
+        enddevice: '#fff8ce'
+        coordinator: '#e04e5d'
+        router: '#4ea3e0'
+      font:
+        coordinator: '#ffffff'
+        router: '#ffffff'
+        enddevice: '#000000'
+      line:
+        active: '#009900'
+        inactive: '#994444'
 ```
 
 ## Specifying devices and groups in a separate file
