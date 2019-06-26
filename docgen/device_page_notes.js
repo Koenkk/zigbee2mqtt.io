@@ -1,5 +1,12 @@
 const notes = [
     {
+        model: 'ZNLDP12LM',
+        note: `
+### Pairing
+Switch the lamp on five times until the bulb blinks several times.
+`,
+    },
+    {
         model: 'E1743',
         note: `
 ### Binding
