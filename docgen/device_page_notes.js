@@ -159,6 +159,7 @@ the Device with a Philips LivingColors Remote Gen 2 as it should try all Zigbee 
     },
     {
         vendor: 'Philips',
+        notModel: ['324131092621'],
         supports: ['brightness'],
         note: `
 ### Pairing
@@ -170,6 +171,20 @@ This may also be possible with the
 [Tradfri Remote Control](https://www.ikea.com/us/en/images/products/tradfri-remote-control__0489469_PE623665_S4.JPG)
 by pressing and holding the reset button on the bottom of the remote (next to the battery).
 [This may not always work](https://github.com/Koenkk/zigbee2mqtt/issues/296#issuecomment-416923751).
+`,
+    },
+    {
+        model: ['324131092621'],
+        note: `
+### Pairing
+Factory reset the Hue dimmer switch by pressing and holding the setup button on the back for 10 seconds.
+
+Restart the Hue dimmer switch by holding all 4 buttons of the Hue dimmer switch.
+You can let go when the light on the front flashes red/green briefly.
+
+Use the Hue dimmer switch to factory reset a Hue light bulb see
+[HOWTO: Factory reset a Hue bulb](https://www.youtube.com/watch?v=qvlEAELiJKs).
+After resetting the bulb will automatically connect.
 `,
     },
     {
@@ -281,7 +296,7 @@ This keeps the device awake, otherwise pairing will **fail!**.
     },
     {
         model: [
-            'WXKG11LM', 'WXKG12LM', 'WSDCGQ11LM', 'RTCGQ11LM', 'MCCGQ11LM', 'SJCGQ11LM', 'JTYJ-GD-01LM/BW',
+            'WXKG11LM', 'WXKG12LM', 'WSDCGQ11LM', 'RTCGQ11LM', 'MCCGQ11LM', 'JTYJ-GD-01LM/BW',
             'JTQJ-BF-01LM/BW', 'DJT11LM',
         ],
         note: `
@@ -404,6 +419,36 @@ The motion sensitivity can be changed by publishing to \`zigbee2mqtt/[DEVICE_ID]
 \`{"motion_sensitivity": "SENSITIVITY"}\` where \`SENSITVITIY\` is one of the following
 values: \`low\`,  \`medium\`,  \`high\` (default).
 `,
+    },
+    {
+        model: ['CC2530.ROUTER'],
+        note: `
+### Pairing
+At first boot it will automatically be in pairing mode and join your network.
+To reset it into pairing mode power-cycle it three times as follows:
+
+1) power on
+2) wait 2sec
+3) power off
+4) repeat above steps 2 further times
+5) power on and wait for it to join your network
+    `,
+    },
+    {
+        model: ['IM6001-MPP01'],
+        note: `
+### Pairing
+When pairing, make sure to keep the sensor awake for 20 seconds by openinig and closing the contact
+every second.
+    `,
+    },
+    {
+        model: ['SJCGQ11LM'],
+        note: `
+### Pairing
+Press and hold water logo on the device for +- 10 seconds until the blue light blinks
+three times, release the water logo (the blue light will blink once more) and wait.
+    `,
     },
 ];
 

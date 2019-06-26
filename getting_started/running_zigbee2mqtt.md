@@ -23,6 +23,7 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 ## 2. Installing
 ```bash
 # Setup Node.js repository
+# NOTE: For Raspberry Pi Zero follow https://warlord0blog.wordpress.com/2018/06/27/node-js-v8-on-raspberry-pi-zero/
 sudo curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
 # Install Node.js
