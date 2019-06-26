@@ -8,6 +8,9 @@ For more information about a coordinator and routers can be found [here](zigbee_
 - [CC2530 based devices](http://ptvo.info/how-to-select-and-flash-cc2530-144/)
 - [CC2531 based devices](../getting_started/flashing_the_cc2531.md)
 
+## Coordinator firmware types
+The are 2 types of coordinator firmwares available, **default** and **source routing**. The pros and cons for these 2 types can be read [here](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator).
+
 ## Supported devices
 
 | Device| Description | Firmware | Example | Link |
