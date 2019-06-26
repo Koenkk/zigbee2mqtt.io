@@ -193,8 +193,8 @@ git clone https://github.com/jmichault/flash_cc2531.git
  * pin 3 (DC)	  -->	pin 36 (GPIO27, BCM16)
  * pin 4 (DD)	  -->	pin 38 (GPIO28, BCM20)
  
- As with the arduino option above, connecting pin 1 to a 3.3v source eliminates the need to plug the device into a usb port, so optionally connect the following too:
- * pin 2 (Target Voltage Sense) --> pin 1 or pin 17 (3.3v)
+ As with the arduino option above, connecting Target Voltage Sense to a 3.3v source eliminates the need to plug the device into a usb port, so optionally connect the following too:
+ * pin 2 (Target Voltage Sense) --> pin 1 or pin 17 (3.3v) on Raspi
 
 See above for the dispositions of pins on CC2531, and at [https://pinout.xyz/](https://pinout.xyz/) for pins on Raspberry.
 
