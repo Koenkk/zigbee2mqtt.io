@@ -448,6 +448,16 @@ Press and hold water logo on the device for +- 10 seconds until the blue light b
 three times, release the water logo (the blue light will blink once more) and wait.
     `,
     },
+    {
+        model: 'HGZB-42',
+        note: `
+### Pairing
+Remove the glass cover then press and hold the reset button on the board for at least 10 seconds.
+The top switch LED should begin to flash. The switch will now attempt to pair to your Zigbee network.
+To remove the glass cover, insert a flathead screwdriver into the small hole in the top/bottom of the
+switch and pry it open.
+    `,
+    },
 ];
 
 module.exports = notes;
