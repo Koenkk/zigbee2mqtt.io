@@ -21,6 +21,7 @@ Welcome to the Zigbee2mqtt documentation! Besides the documentation, you can als
 * [Home Assistant](integration/home_assistant.md)
 * [Admin Panel for Node-Red](https://github.com/ben423423n32j14e/zigbee2mqttadminpanel)
 * [Domoticz](https://github.com/stas-demydiuk/domoticz-zigbee2mqtt-plugin)
+* [Mozilla IoT WebThings Gateway via zigbee2mqtt adapter](https://github.com/kabbi/zigbee2mqtt-adapter)
 * [Majordomo](https://github.com/directman66/majordomo-zigbee2mqtt/) (Only for Russian speaking users)
 * [MQTT Explorer](https://mqtt-explorer.com) (debug tool for custom integrations)
 
