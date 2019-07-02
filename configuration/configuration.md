@@ -103,13 +103,13 @@ map_options:
         active: '#009900'
         inactive: '#994444'
 
-  # Queue settings, useful when your zigbee stick get's
-  # unstable when executing many commands
-  queue:
-    # Delay in ms between each command
-    delay: 250
-    # Max no. of simultaneously running commands
-    simultaneously: 5
+# Queue settings, useful when your zigbee stick get's
+# unstable when executing many commands
+queue:
+  # Delay in ms between each command
+  delay: 250
+  # Max no. of simultaneously running commands
+  simultaneously: 5
 ```
 
 ## Specifying devices and groups in a separate file
