@@ -12,8 +12,10 @@
 
 ## Notes
 
+
 ### Pairing
 Switch the lamp on five times until the bulb blinks several times.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

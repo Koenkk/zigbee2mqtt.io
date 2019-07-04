@@ -4,11 +4,11 @@
 
 # Device
 
-| Model | HS1WL  |
+| Model | HS1CA-E  |
 | Vendor  | HEIMAN  |
-| Description | Water leakage sensor |
-| Supports | water leak |
-| Picture | ![../images/devices/HS1WL.jpg](../images/devices/HS1WL.jpg) |
+| Description | Smart carbon monoxide sensor |
+| Supports | carbon monoxide |
+| Picture | ![../images/devices/HS1CA-E.jpg](../images/devices/HS1CA-E.jpg) |
 
 ## Notes
 
@@ -19,7 +19,7 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### HS1WL
+### HS1CA-E
 {% raw %}
 ```yaml
 binary_sensor:
@@ -28,8 +28,25 @@ binary_sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_on: true
     payload_off: false
-    value_template: "{{ value_json.water_leak }}"
-    device_class: "moisture"
+    value_template: "{{ value_json.carbon_monoxide }}"
+    device_class: "safety"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.battery_low}}"
+    device_class: "battery"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    device_class: "battery"
+    value_template: "{{ value_json.battery }}"
 
 sensor:
   - platform: "mqtt"

@@ -6,8 +6,8 @@
 
 | Model | QBKG04LM  |
 | Vendor  | Xiaomi  |
-| Description | Aqara single key wired wall switch |
-| Supports | on/off |
+| Description | Aqara single key wired wall switch without neutral wire. Doesn't work as a router and doesn't support power meter |
+| Supports | release/hold, on/off |
 | Picture | ![../images/devices/QBKG04LM.jpg](../images/devices/QBKG04LM.jpg) |
 
 ## Notes
@@ -41,6 +41,13 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:gesture-double-tap"
+    value_template: "{{ value_json.action }}"
 
 sensor:
   - platform: "mqtt"

@@ -31,7 +31,7 @@ manual integration is possbile with the following configuration:
 ```yaml
 climate:
   - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    state_topic: false
     availability_topic: "zigbee2mqtt/bridge/state"
     min_temp: 7
     max_temp: 30
