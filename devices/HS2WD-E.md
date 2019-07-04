@@ -15,11 +15,11 @@
 
 ### Triggering the alarm
 The alarm can be trigged by publishing to `zigbee2mqtt/[DEVICE_ID]/set` message
-`{"warning": {"duration": 10, "mode": "emergency", "strobe:: false}}`.
+`{"warning": {"duration": 10, "mode": "emergency", "strobe": false}}`.
 
 Where:
 - `duration`: the number of seconds the alarm will be on (max is 1800 seconds)
-- `mode`: `stop` or `emegency`
+- `mode`: `stop` or `emergency`
 - `strobe`: `true` or `false` will let the strobe flash once during the alarm
         
 
