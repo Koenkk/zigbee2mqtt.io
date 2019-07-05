@@ -87,8 +87,8 @@ The graphviz map shows the devices as follows:
 * End device : rectangle with rounded corners and dashed outline
 
 Links are labelled with link quality (0..255) and active routes (listed by short 16 bit destination address). Arrow indicates direction of messaging. Coordinator and routers will typically have two lines for each connection showing bi-directional message path. Line style is:
-* To end devices : dashed lines (signifying message is retrieved by end device when it wakes)
-* To and between coordinator and routers : solid line for active routes or dotted line for no active routes
+* To end devices : normal line
+* To and between coordinator and routers : heavy line for active routes or thin line for no active routes
 
 ## zigbee2mqtt/bridge/group/[friendly_name]/(add|remove|remove_all)
 See [Groups](groups.md)
