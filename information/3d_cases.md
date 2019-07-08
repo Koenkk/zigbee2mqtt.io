@@ -15,6 +15,9 @@
 ## CC2530 + CC2591 Combination
 - Case design for a [minimal case compatible with the CC2530 + CC2591 combination][thingiverse-cc2530-cc2591-case]
 
+## CC2531 Zigbee dongle with external antenna
+ - Case design for a [CC2531 Zigbee dongle with external antenna](https://www.thingiverse.com/thing:3731958)
+ 
 ## Alternatives
 A lot of different case designs can be found via the [Thingiverse search][thingiverse-search-rpi]
 
