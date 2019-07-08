@@ -17,10 +17,11 @@ mqtt:
   base_topic: zigbee2mqtt
   # Required: MQTT server URL (use mqtts:// for SSL/TLS connection)
   server: 'mqtt://localhost:1883'
-  # Optional: absolute paths to SSL/TLS keys and certificates
-  key: '/etc/ssl/mqtt.pem'
-  cert: '/etc/ssl/mqtt.cert.pem'
-  ca: '/etc/ssl/ca.cert.pem'
+  # Optional: absolute path to SSL/TLS certificate of CA used to sign server and client certificates
+  ca: '/etc/ssl/mqtt-ca.crt'
+  # Optional: absolute paths to SSL/TLS key and certificate for client-authentication
+  key: '/etc/ssl/mqtt-client.key'
+  cert: '/etc/ssl/mqtt-client.crt'
   # Optional: MQTT server authentication user
   user: my_user
   # Optional: MQTT server authentication password
