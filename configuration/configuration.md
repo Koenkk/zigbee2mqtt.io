@@ -15,8 +15,13 @@ permit_join: true
 mqtt:
   # Required: MQTT base topic for zigbee2mqtt MQTT messages
   base_topic: zigbee2mqtt
-  # Required: MQTT server URL
+  # Required: MQTT server URL (use mqtts:// for SSL/TLS connection)
   server: 'mqtt://localhost:1883'
+  # Optional: absolute path to SSL/TLS certificate of CA used to sign server and client certificates
+  ca: '/etc/ssl/mqtt-ca.crt'
+  # Optional: absolute paths to SSL/TLS key and certificate for client-authentication
+  key: '/etc/ssl/mqtt-client.key'
+  cert: '/etc/ssl/mqtt-client.crt'
   # Optional: MQTT server authentication user
   user: my_user
   # Optional: MQTT server authentication password
