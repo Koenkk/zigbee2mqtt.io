@@ -469,7 +469,7 @@ Where:
 - \`mode\`: \`stop\` or \`emergency\`
 - \`strobe\`: \`true\` or \`false\` will let the strobe flash once during the alarm
         `,
-    }
+    },
 ];
 
 module.exports = notes;
