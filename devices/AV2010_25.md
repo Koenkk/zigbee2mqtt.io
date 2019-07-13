@@ -35,8 +35,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "Watt"
-    icon: "mdi:flash"
+    unit_of_measurement: "W"
+    icon: "mdi:factory"
     value_template: "{{ value_json.power }}"
 
 sensor:

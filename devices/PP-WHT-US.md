@@ -56,9 +56,25 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "Watt"
-    icon: "mdi:flash"
+    unit_of_measurement: "W"
+    icon: "mdi:factory"
     value_template: "{{ value_json.power }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "A"
+    icon: "mdi:power-plug"
+    value_template: "{{ value_json.current }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "V"
+    icon: "mdi:flash"
+    value_template: "{{ value_json.voltage }}"
 
 sensor:
   - platform: "mqtt"
