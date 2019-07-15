@@ -62,5 +62,5 @@ Now Wireshark is able to decrypt the messages. When e.g. turning on a light you 
 ![Wireshark packet](../images/wireshark_packet.png)
 
 ### Troubleshooting
-If you get "couldn't run /usr/bin/dumpcap in child process: permission denied" when runnign whsniff. Check if /usr/bin/dumpcap is executable for everyone. Or chmod 755 /usr/bin/dumpcap`.
+If you get "couldn't run /usr/bin/dumpcap in child process: permission denied" when runnign whsniff. Check if /usr/bin/dumpcap is executable for everyone. Or `chmod 755 /usr/bin/dumpcap`.
 
