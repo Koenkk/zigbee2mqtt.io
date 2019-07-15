@@ -10,8 +10,13 @@ Sniffing Zigbee traffic can be handy sometimes. E.g. when you want to analyze th
 ## 1. Flashing the CC2531 stick
 The CC2531 needs to be flashed with a sniffer firmware. Flash the firmware using the instructions from [Flashing the CC2531](../getting_started/flashing_the_cc2531.md).
 
-### Ubuntu
-For Ubuntu this firmware is included with [PACKET-SNIFFER](http://www.ti.com/tool/PACKET-SNIFFER) (not **PACKET-SNIFFER-2!**). Download and install PACKET-SNIFFER. The firmware can then be found here: `C:\Program Files (x86)\Texas Instruments\SmartRF Tools\Packet Sniffer\bin\general\firmware\sniffer_fw_cc2531.hex`.
+### Linux
+The firmware is included with [PACKET-SNIFFER](http://www.ti.com/tool/PACKET-SNIFFER) (not **PACKET-SNIFFER-2!**). Download PACKET-SNIFFER. As the sniffer firmware is only available in the windows installer we need to extact the hex file. This would require 7zip (p7zip-full or p7zip-plugins package depending on distro)
+```bash
+unzip swrc045z.zip -d PACKET-SNIFFER
+7z e PACKET-SNIFFER/Setup_SmartRF_Packet_Sniffer_2.18.0.exe bin/general/firmware/sniffer_fw_cc2531.hex
+sudo <path-to>/cc-tool -e -w <path-to>/sniffer_fw_cc2531.hex
+```
 
 ### Windows (and possibly Ubuntu)
 For Windows this firmware is included with [ZBOSS](http://zboss.dsr-wireless.com/downloads/index/zboss). Register an account and download *ZBOSS Sniffer for Windows 64-bit*. Included in the ZIP file is the firmware in subfolder `hw\CC2531 USB dongle\zboss_sniffer.hex`. Please note that ZBOSS is also available for Ubuntu.
@@ -55,3 +60,7 @@ Copy the key value, as shown above and go to Edit -> Preferences -> Protocols ->
 Now Wireshark is able to decrypt the messages. When e.g. turning on a light you will see a message similar to:
 
 ![Wireshark packet](../images/wireshark_packet.png)
+
+### Troubleshooting
+If you get "couldn't run /usr/bin/dumpcap in child process: permission denied" when runnign whsniff. Check if /usr/bin/dumpcap is executable for everyone. Or chmod 755 /usr/bin/dumpcap`.
+
