@@ -90,6 +90,8 @@ Links are labelled with link quality (0..255) and active routes (listed by short
 * To end devices : normal line
 * To and between coordinator and routers : heavy line for active routes or thin line for no active routes
 
+To request a networkmap with routes use `zigbee2mqtt/bridge/networkmap/routes` as topic.
+
 ## zigbee2mqtt/bridge/group/[friendly_name]/(add|remove|remove_all)
 See [Groups](groups.md)
 
