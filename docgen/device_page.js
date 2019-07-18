@@ -19,7 +19,7 @@ description: "Integrate your ${device.vendor} ${device.model} via Zigbee2mqtt wi
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device ${device.vendor} ${device.model}
+# ${device.vendor} ${device.model}
 
 | Model | ${device.model}  |
 | Vendor  | ${device.vendor}  |
