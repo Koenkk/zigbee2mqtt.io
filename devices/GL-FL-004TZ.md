@@ -1,8 +1,13 @@
+---
+title: "Gledopto GL-FL-004TZ control via MQTT"
+description: "Integrate your Gledopto GL-FL-004TZ via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Gledopto GL-FL-004TZ
 
 | Model | GL-FL-004TZ  |
 | Vendor  | Gledopto  |

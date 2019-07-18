@@ -1,8 +1,13 @@
+---
+title: "Sunricher ZG9101SAC-HP control via MQTT"
+description: "Integrate your Sunricher ZG9101SAC-HP via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Sunricher ZG9101SAC-HP
 
 | Model | ZG9101SAC-HP  |
 | Vendor  | Sunricher  |

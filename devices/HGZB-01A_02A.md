@@ -1,8 +1,13 @@
+---
+title: "Nue / 3A HGZB-01A/02A control via MQTT"
+description: "Integrate your Nue / 3A HGZB-01A/02A via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Nue / 3A HGZB-01A/02A
 
 | Model | HGZB-01A/02A  |
 | Vendor  | Nue / 3A  |

@@ -1,8 +1,13 @@
+---
+title: "SmartThings STS-PRS-251 control via MQTT"
+description: "Integrate your SmartThings STS-PRS-251 via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# SmartThings STS-PRS-251
 
 | Model | STS-PRS-251  |
 | Vendor  | SmartThings  |

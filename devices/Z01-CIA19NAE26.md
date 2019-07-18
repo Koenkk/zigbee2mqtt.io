@@ -1,8 +1,13 @@
+---
+title: "Sengled Z01-CIA19NAE26 control via MQTT"
+description: "Integrate your Sengled Z01-CIA19NAE26 via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Sengled Z01-CIA19NAE26
 
 | Model | Z01-CIA19NAE26  |
 | Vendor  | Sengled  |

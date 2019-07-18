@@ -1,8 +1,13 @@
+---
+title: "NET2GRID N2G-SP control via MQTT"
+description: "Integrate your NET2GRID N2G-SP via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# NET2GRID N2G-SP
 
 | Model | N2G-SP  |
 | Vendor  | NET2GRID  |

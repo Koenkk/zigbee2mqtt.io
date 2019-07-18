@@ -1,8 +1,13 @@
+---
+title: "Xiaomi QBKG12LM control via MQTT"
+description: "Integrate your Xiaomi QBKG12LM via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Xiaomi QBKG12LM
 
 | Model | QBKG12LM  |
 | Vendor  | Xiaomi  |

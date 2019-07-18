@@ -1,8 +1,13 @@
+---
+title: "Smart Home Pty HGZB-07A control via MQTT"
+description: "Integrate your Smart Home Pty HGZB-07A via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Smart Home Pty HGZB-07A
 
 | Model | HGZB-07A  |
 | Vendor  | Smart Home Pty  |

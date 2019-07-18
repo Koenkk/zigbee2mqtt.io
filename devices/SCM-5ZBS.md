@@ -1,8 +1,13 @@
+---
+title: "Climax SCM-5ZBS control via MQTT"
+description: "Integrate your Climax SCM-5ZBS via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Climax SCM-5ZBS
 
 | Model | SCM-5ZBS  |
 | Vendor  | Climax  |

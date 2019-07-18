@@ -1,8 +1,13 @@
+---
+title: "Custom devices (DiY) ZigUP control via MQTT"
+description: "Integrate your Custom devices (DiY) ZigUP via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Custom devices (DiY) ZigUP
 
 | Model | ZigUP  |
 | Vendor  | Custom devices (DiY)  |

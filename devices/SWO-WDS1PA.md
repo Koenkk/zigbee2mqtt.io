@@ -1,8 +1,13 @@
+---
+title: "Swann SWO-WDS1PA control via MQTT"
+description: "Integrate your Swann SWO-WDS1PA via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Swann SWO-WDS1PA
 
 | Model | SWO-WDS1PA  |
 | Vendor  | Swann  |

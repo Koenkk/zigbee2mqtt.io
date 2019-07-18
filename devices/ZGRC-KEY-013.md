@@ -1,8 +1,13 @@
+---
+title: "RGB Genie ZGRC-KEY-013 control via MQTT"
+description: "Integrate your RGB Genie ZGRC-KEY-013 via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# RGB Genie ZGRC-KEY-013
 
 | Model | ZGRC-KEY-013  |
 | Vendor  | RGB Genie  |

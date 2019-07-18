@@ -1,8 +1,13 @@
+---
+title: "iCasa ICZB-IW11D control via MQTT"
+description: "Integrate your iCasa ICZB-IW11D via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# iCasa ICZB-IW11D
 
 | Model | ICZB-IW11D  |
 | Vendor  | iCasa  |

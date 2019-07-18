@@ -1,8 +1,13 @@
+---
+title: "Gledopto GL-S-003Z control via MQTT"
+description: "Integrate your Gledopto GL-S-003Z via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Gledopto GL-S-003Z
 
 | Model | GL-S-003Z  |
 | Vendor  | Gledopto  |

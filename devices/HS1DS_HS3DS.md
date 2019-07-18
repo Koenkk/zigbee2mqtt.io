@@ -1,8 +1,13 @@
+---
+title: "HEIMAN HS1DS/HS3DS control via MQTT"
+description: "Integrate your HEIMAN HS1DS/HS3DS via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# HEIMAN HS1DS/HS3DS
 
 | Model | HS1DS/HS3DS  |
 | Vendor  | HEIMAN  |

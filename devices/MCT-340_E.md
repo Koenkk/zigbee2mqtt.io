@@ -1,8 +1,13 @@
+---
+title: "Visonic MCT-340 E control via MQTT"
+description: "Integrate your Visonic MCT-340 E via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Visonic MCT-340 E
 
 | Model | MCT-340 E  |
 | Vendor  | Visonic  |
