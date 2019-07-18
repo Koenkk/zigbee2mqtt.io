@@ -1,8 +1,13 @@
+---
+title: "Climax PSM-29ZBSR control via MQTT"
+description: "Integrate your Climax PSM-29ZBSR via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Climax PSM-29ZBSR
 
 | Model | PSM-29ZBSR  |
 | Vendor  | Climax  |

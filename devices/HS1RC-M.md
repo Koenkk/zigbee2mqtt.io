@@ -1,8 +1,13 @@
+---
+title: "HEIMAN HS1RC-M control via MQTT"
+description: "Integrate your HEIMAN HS1RC-M via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# HEIMAN HS1RC-M
 
 | Model | HS1RC-M  |
 | Vendor  | HEIMAN  |

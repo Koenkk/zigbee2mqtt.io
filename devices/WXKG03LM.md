@@ -1,8 +1,13 @@
+---
+title: "Xiaomi WXKG03LM control via MQTT"
+description: "Integrate your Xiaomi WXKG03LM via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Xiaomi WXKG03LM
 
 | Model | WXKG03LM  |
 | Vendor  | Xiaomi  |

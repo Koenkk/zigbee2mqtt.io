@@ -1,0 +1,3 @@
+User-Agent: *
+
+Sitemap: https://www.zigbee2mqtt.io/sitemap.xml

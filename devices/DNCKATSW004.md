@@ -1,8 +1,13 @@
+---
+title: "Custom devices (DiY) DNCKATSW004 control via MQTT"
+description: "Integrate your Custom devices (DiY) DNCKATSW004 via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Custom devices (DiY) DNCKATSW004
 
 | Model | DNCKATSW004  |
 | Vendor  | Custom devices (DiY)  |

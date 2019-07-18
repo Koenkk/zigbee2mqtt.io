@@ -1,8 +1,13 @@
+---
+title: "Sercomm SZ-ESW01-AU control via MQTT"
+description: "Integrate your Sercomm SZ-ESW01-AU via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Sercomm SZ-ESW01-AU
 
 | Model | SZ-ESW01-AU  |
 | Vendor  | Sercomm  |

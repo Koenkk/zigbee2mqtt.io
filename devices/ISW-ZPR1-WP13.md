@@ -1,8 +1,13 @@
+---
+title: "Bosch ISW-ZPR1-WP13 control via MQTT"
+description: "Integrate your Bosch ISW-ZPR1-WP13 via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Bosch ISW-ZPR1-WP13
 
 | Model | ISW-ZPR1-WP13  |
 | Vendor  | Bosch  |

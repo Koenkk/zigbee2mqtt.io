@@ -1,8 +1,13 @@
+---
+title: "OSRAM ST8AU-CON control via MQTT"
+description: "Integrate your OSRAM ST8AU-CON via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# OSRAM ST8AU-CON
 
 | Model | ST8AU-CON  |
 | Vendor  | OSRAM  |

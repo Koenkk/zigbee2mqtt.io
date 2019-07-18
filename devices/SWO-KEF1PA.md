@@ -1,8 +1,13 @@
+---
+title: "Swann SWO-KEF1PA control via MQTT"
+description: "Integrate your Swann SWO-KEF1PA via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Swann SWO-KEF1PA
 
 | Model | SWO-KEF1PA  |
 | Vendor  | Swann  |

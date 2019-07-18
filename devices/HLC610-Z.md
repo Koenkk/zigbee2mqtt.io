@@ -1,8 +1,13 @@
+---
+title: "Shenzhen Homa HLC610-Z control via MQTT"
+description: "Integrate your Shenzhen Homa HLC610-Z via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Shenzhen Homa HLC610-Z
 
 | Model | HLC610-Z  |
 | Vendor  | Shenzhen Homa  |

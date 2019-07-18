@@ -1,8 +1,13 @@
+---
+title: "Yale YRD256HA20BP control via MQTT"
+description: "Integrate your Yale YRD256HA20BP via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Yale YRD256HA20BP
 
 | Model | YRD256HA20BP  |
 | Vendor  | Yale  |

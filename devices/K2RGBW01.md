@@ -1,8 +1,13 @@
+---
+title: "JIAWEN K2RGBW01 control via MQTT"
+description: "Integrate your JIAWEN K2RGBW01 via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# JIAWEN K2RGBW01
 
 | Model | K2RGBW01  |
 | Vendor  | JIAWEN  |

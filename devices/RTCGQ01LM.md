@@ -1,8 +1,13 @@
+---
+title: "Xiaomi RTCGQ01LM control via MQTT"
+description: "Integrate your Xiaomi RTCGQ01LM via Zigbee2mqtt with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
 
-# Device
+# Xiaomi RTCGQ01LM
 
 | Model | RTCGQ01LM  |
 | Vendor  | Xiaomi  |
