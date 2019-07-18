@@ -170,10 +170,17 @@ the Device with a Philips LivingColors Remote Gen 2 as it should try all Zigbee 
         supports: ['brightness'],
         note: `
 ### Pairing
-Factory reset the light bulb see
-[HOWTO: Factory reset a Hue bulb](https://www.youtube.com/watch?v=qvlEAELiJKs).
+Factory resetting a Hue bulb can be accomplished in 3 ways.
 After resetting the bulb will automatically connect.
 
+**Hue bridge**
+When the bulb is still connected to the Hue bridge, you can simply factory reset the bulb
+by removing it from the bridge via the Hue app.
+
+**Hue dimmer switch**
+[VIDEO: Factory reset a Hue bulb with Hue dimmer switch](https://www.youtube.com/watch?v=qvlEAELiJKs).
+
+**TRADFRI remote control**
 This may also be possible with the
 [Tradfri Remote Control](https://www.ikea.com/us/en/images/products/tradfri-remote-control__0489469_PE623665_S4.JPG)
 by pressing and holding the reset button on the bottom of the remote (next to the battery).
