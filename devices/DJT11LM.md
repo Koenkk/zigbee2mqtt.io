@@ -15,7 +15,9 @@
 
 ### Pairing
 Press and hold reset button on the device for +- 5 seconds until the
-blue light blinks three times, release the reset button (the blue light will blink once more) and wait. If it does not pair at once, keep pressing the reset button every 1-2 seconds for about 10 times to prevent it from sleeping before it has paired.
+blue light blinks three times, release the reset button (the blue light will blink once more) and wait.
+If it does not pair at once, keep pressing the reset button every 1-2 seconds for about
+10 times to prevent it from sleeping before it has paired.
 
 *NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
 
