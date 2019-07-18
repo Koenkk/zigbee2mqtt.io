@@ -11,7 +11,9 @@ function onlyUnique(value, index, self) {
 
 const vendorsCount = devices.map((d) => d.vendor).filter(onlyUnique).length;
 
-let template = `# Supported devices
+let template = `---
+---
+# Supported devices
 
 <style type="text/css">
 .main-content table {
