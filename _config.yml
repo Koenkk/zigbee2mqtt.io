@@ -5,6 +5,3 @@ plugins:
   - jekyll-sitemap
 
 source: _source
-
-safe                : false
-strict_front_matter : false
