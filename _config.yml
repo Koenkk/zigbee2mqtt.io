@@ -3,3 +3,8 @@ url: https://www.zigbee2mqtt.io
 
 plugins:
   - jekyll-sitemap
+
+source: _source
+
+safe                : false
+strict_front_matter : false
