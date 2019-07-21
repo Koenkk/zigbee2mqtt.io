@@ -11,9 +11,7 @@ function onlyUnique(value, index, self) {
 
 const vendorsCount = devices.map((d) => d.vendor).filter(onlyUnique).length;
 
-let template = `---
----
-# Supported devices
+let template = `# Supported devices
 
 <style type="text/css">
 .main-content table {
@@ -49,7 +47,7 @@ const generateTable = (devices) => {
     devices.forEach((d) => {
         const image = utils.getImage(d.model);
         // eslint-disable-next-line
-        text += `| [${d.model}](../devices/${utils.normalizeModel(d.model)}.html) | ${d.vendor} ${d.description} (${d.supports}) | ![${image}](${image}) |\n`;
+        text += `| [${d.model}](../devices/${utils.normalizeModel(d.model)}) | ${d.vendor} ${d.description} (${d.supports}) | ![${image}](${image}) |\n`;
     });
 
     return text;
