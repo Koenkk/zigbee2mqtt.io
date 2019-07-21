@@ -25,7 +25,7 @@ description: "Integrate your ${device.vendor} ${device.model} via Zigbee2mqtt wi
 | Vendor  | ${device.vendor}  |
 | Description | ${device.description} |
 | Supports | ${device.supports} |
-| Picture | ![${image}](${image}) |
+| Picture | ![${device.vendor} ${device.model}](${image}) |
 
 ## Notes
 
