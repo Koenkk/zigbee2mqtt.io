@@ -18,6 +18,8 @@ This allows Zigbee2mqtt to automatically add devices to Home Assistant.
 To achieve the best possible integration (including MQTT discovery):
 - In your **Zigbee2mqtt** `configuration.yaml` set `homeassistant: true`
 - In your **Home Assistant** `configuration.yaml`:
+
+{% raw %}
 ```yaml
 mqtt:
   discovery: true
@@ -29,6 +31,7 @@ mqtt:
     topic: 'hass/status'
     payload: 'offline'
 ```
+{% endraw %}
 
 Mind you that if you want to use the embedded broker of Home Assistant you
 have to [follow this guide](https://www.home-assistant.io/docs/mqtt/broker#embedded-broker).
