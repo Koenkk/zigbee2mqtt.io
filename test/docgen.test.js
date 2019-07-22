@@ -2,7 +2,7 @@ const chai = require('chai');
 const fs = require('fs');
 const path = require('path');
 
-const base = path.join(__dirname, '..');
+const base = path.join(__dirname, '..', 'docs');
 
 const supportDevices = require('../docgen/supported-devices');
 

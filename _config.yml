@@ -3,3 +3,5 @@ url: https://www.zigbee2mqtt.io
 
 plugins:
   - jekyll-sitemap
+
+source: docs
