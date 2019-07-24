@@ -14,6 +14,8 @@ groups:
   '1':
     # Name which will be used to control the group
     friendly_name: group_1
+    # Retain messages (true/false)
+    retain: false
     # Devices of this group,
     # Note: this has to be the ieeeAddr of the device, not the friendly_name!
     devices:

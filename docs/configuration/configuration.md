@@ -131,6 +131,7 @@ devices:
 groups:
   '1':
     friendly_name: group_1
+    retain: true
 ```
 
 In case you want to specify devices and groups in a separate file, the following configuration can be used (equivalent of the above example).
@@ -152,4 +153,5 @@ groups: groups.yaml
 ```yaml
 '1':
     friendly_name: group_1
+    retain: true
 ```
