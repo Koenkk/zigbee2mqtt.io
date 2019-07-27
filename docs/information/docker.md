@@ -76,4 +76,19 @@ After that follow the [guide](https://www.zigbee2mqtt.io/how_tos/how_to_support_
 
 
 ## docker-compose Example
-https://github.com/Koenkk/zigbee2mqtt/blob/master/docker/docker-compose.yml
+```yaml
+  version: '3'
+  services:
+    zigbee2mqtt:
+      container_name: zigbee2mqtt
+      image: koenkk/zigbee2mqtt
+      volumes:
+        - ./data:/app/data
+      devices:
+        # CC251
+        #- /dev/ttyUSB_cc2531:/dev/ttyACM0
+        # CC2530 / GBAN GB2530S
+        #- /dev/ttyUSB_cc2530:/dev/ttyACM0
+      restart: always
+      network_mode: host
+```
