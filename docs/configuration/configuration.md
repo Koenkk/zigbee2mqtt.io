@@ -73,7 +73,7 @@ advanced:
   # Optional: soft reset ZNP after timeout (in seconds); 0 is disabled
   soft_reset_timeout: 0
   # Optional: network encryption key, will improve security (Note: changing requires repairing of all devices)
-  network_key: [1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13],
+  network_key: [1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]
   # Optional: Add a last_seen attribute to MQTT messages, contains date/time of last Zigbee message
   # possible values are: disable (default), ISO_8601, ISO_8601_local, epoch
   last_seen: 'disable'
@@ -89,9 +89,9 @@ advanced:
   # Enables report feature (see information -> report for more details)
   report: true
   # Home Assistant discovery topic
-  homeassistant_discovery_topic: 'homeassistant',
+  homeassistant_discovery_topic: 'homeassistant'
   # Home Assistant status topic
-  homeassistant_status_topic: 'hass/status',
+  homeassistant_status_topic: 'hass/status'
 
 # Optional: networkmap options
 map_options:
