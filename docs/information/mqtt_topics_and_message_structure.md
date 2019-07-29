@@ -151,7 +151,7 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
 ```js
 {
   "state": "ON", // Or "OFF", "TOGGLE"
-  "brightness": 255,
+  "brightness": 255, // Value between 0 and 255
   "color_temp": 155,
   "color": {
     // XY color
