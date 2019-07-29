@@ -26,6 +26,7 @@ Credits to [@Frans-Willem](https://github.com/frans-Willem) for majority of inst
 * Fedora: dh-autoreconf, boost-devel, libusb1-devel, gcc-c++
 * Archlinux: dh-autoreconf, libusb, boost
 * macOS: brew install autoconf automake libusb boost pkgconfig libtool
+* Raspbian: dh-autoreconf, libusb-1.0-0-dev, libboost-all-dev
 
 2. Build cc-tool
 ```bash
