@@ -16,6 +16,7 @@ docker run \
    -it \
    -v $(pwd)/data:/app/data \
    --device=/dev/ttyACM0 \
+   -e TZ=Europe/Amsterdam \
    koenkk/zigbee2mqtt
 ```
 
@@ -25,6 +26,7 @@ docker run \
    -it \
    -v $(pwd)/data:/app/data \
    --device=/dev/ttyACM0 \
+   -e TZ=Europe/Amsterdam \
    koenkk/zigbee2mqtt:arm32v6
 ```
 
@@ -34,6 +36,7 @@ docker run \
    -it \
    -v $(pwd)/data:/app/data \
    --device=/dev/ttyACM0 \
+   -e TZ=Europe/Amsterdam \
    koenkk/zigbee2mqtt:arm64v8
 ```
 
@@ -69,6 +72,7 @@ docker run \
    -v $(pwd)/data/zigbee-shepherd-converters:/app/node_modules/zigbee-shepherd-converters \
    -v $(pwd)/data/lib/extension/homeassistant.js:/app/lib/extension/homeassistant.js \
    --device=/dev/ttyACM0 \
+   -e TZ=Europe/Amsterdam \
    koenkk/zigbee2mqtt
 ```
 
@@ -91,4 +95,6 @@ After that follow the [guide](https://www.zigbee2mqtt.io/how_tos/how_to_support_
         #- /dev/ttyUSB_cc2530:/dev/ttyACM0
       restart: always
       network_mode: host
+      environment:
+        - TZ=Europe/Amsterdam
 ```
