@@ -16,7 +16,7 @@ RF connection between the CC2531 and other devices also depends on the way it is
 ## Reduce Wifi interference by changing the Zigbee channel
 **NOTE: Changing the Zigbee channel requires repairing of all your devices!**
 
-As Wifi and Zigbee both operate on the same frequency space (2.4 GHz); they can interfere with each other. By using the correct Zigbee channel interference with Wifi can (partly) be avoided. There is a good article available explaining this: https://support.metageek.com/hc/en-us/articles/203845040-ZigBee-and-WiFi-Coexistence
+As Wifi and Zigbee both operate on the same frequency space (2.4 GHz); they can interfere with each other. By using the correct Zigbee channel interference with Wifi can (partly) be avoided. There is a good article available explaining this: https://www.metageek.com/training/resources/zigbee-wifi-coexistence.html
 
 To change the Zigbee channel Zigbee2mqtt uses you have to set the [`channel` in `configuration.yaml`](../configuration/configuration.md).
 
