@@ -257,6 +257,61 @@ automation:
 ```
 {% endraw %}
 
+## Renaming & Removing Devices from Home Assistant
+Add the following yaml to your `configuration.yaml` to allow renaming and removing devices from Home Assistant.
+{% raw %}
+
+```yaml
+# Input text to input Zigbee2mqtt friendly_name for scripts
+input_text:
+  zigbee2mqtt_old_name:
+    name: Zigbee2mqtt Old Name
+  zigbee2mqtt_new_name:
+    name: Zigbee2mqtt New Name
+  zigbee2mqtt_remove:
+    name: Zigbee2mqtt Remove
+
+# Scripts for renaming & removing devices
+script:
+  zigbee2mqtt_rename:
+    alias: Zigbee2mqtt Rename
+    sequence:
+      service: mqtt.publish
+      data_template:
+        topic: zigbee2mqtt/bridge/config/rename
+        payload_template: >-
+          {
+            "old": "{{ states.input_text.zigbee2mqtt_old_name.state | string }}",
+            "new": "{{ states.input_text.zigbee2mqtt_new_name.state | string }}"
+          }
+  zigbee2mqtt_remove:
+    alias: Zigbee2mqtt Remove
+    sequence:
+      service: mqtt.publish
+      data_template:
+        topic: zigbee2mqtt/bridge/config/remove
+        payload_template: "{{ states.input_text.zigbee2mqtt_remove.state | string }}"
+```
+
+{% endraw %}
+
+Then add the following yaml to your lovelace configuration to allow inputting text & executing the scripts from Home Assistant.
+{% raw %}
+
+```yaml
+title: Zigbee2mqtt Rename & Remove
+type: entities
+show_header_toggle: false
+  - entity: input_text.zigbee2mqtt_old_name
+  - entity: input_text.zigbee2mqtt_new_name
+  - entity: script.zigbee2mqtt_rename
+  - type: divider
+  - entity: input_text.zigbee2mqtt_remove
+  - entity: script.zigbee2mqtt_remove
+```
+
+{% endraw %}
+
 ## Zigbee Network Map (Custom Component)
 [Zigbee Network Map Home Assistant addon](https://github.com/rgruebel/ha_zigbee2mqtt_networkmap).
 
