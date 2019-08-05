@@ -5,7 +5,7 @@ description: "Integrate your SmartThings STS-PRS-251 via Zigbee2mqtt with whatev
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/STS-PRS-251.md)*
 
 # SmartThings STS-PRS-251
 

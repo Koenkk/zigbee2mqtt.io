@@ -5,7 +5,7 @@ description: "Integrate your Xiaomi MFKZQ01LM via Zigbee2mqtt with whatever smar
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MFKZQ01LM.md)*
 
 # Xiaomi MFKZQ01LM
 

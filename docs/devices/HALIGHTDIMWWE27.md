@@ -5,7 +5,7 @@ description: "Integrate your Hive HALIGHTDIMWWE27 via Zigbee2mqtt with whatever 
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HALIGHTDIMWWE27.md)*
 
 # Hive HALIGHTDIMWWE27
 

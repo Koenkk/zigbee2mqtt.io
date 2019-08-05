@@ -5,7 +5,7 @@ description: "Integrate your HEIMAN HS2WD-E via Zigbee2mqtt with whatever smart 
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS2WD-E.md)*
 
 # HEIMAN HS2WD-E
 

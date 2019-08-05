@@ -5,7 +5,7 @@ description: "Integrate your JIAWEN K2RGBW01 via Zigbee2mqtt with whatever smart
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/K2RGBW01.md)*
 
 # JIAWEN K2RGBW01
 

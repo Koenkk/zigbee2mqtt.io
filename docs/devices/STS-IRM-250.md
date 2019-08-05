@@ -5,7 +5,7 @@ description: "Integrate your SmartThings STS-IRM-250 via Zigbee2mqtt with whatev
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/STS-IRM-250.md)*
 
 # SmartThings STS-IRM-250
 

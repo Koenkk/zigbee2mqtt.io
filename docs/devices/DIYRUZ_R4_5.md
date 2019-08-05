@@ -5,7 +5,7 @@ description: "Integrate your Custom devices (DiY) DIYRUZ_R4_5 via Zigbee2mqtt wi
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DIYRUZ_R4_5.md)*
 
 # Custom devices (DiY) DIYRUZ_R4_5
 

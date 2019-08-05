@@ -5,7 +5,7 @@ description: "Integrate your Sengled E1ACA4ABE38A via Zigbee2mqtt with whatever 
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/E1ACA4ABE38A.md)*
 
 # Sengled E1ACA4ABE38A
 

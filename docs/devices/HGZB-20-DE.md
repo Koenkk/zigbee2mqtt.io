@@ -5,7 +5,7 @@ description: "Integrate your Smart Home Pty HGZB-20-DE via Zigbee2mqtt with what
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-20-DE.md)*
 
 # Smart Home Pty HGZB-20-DE
 

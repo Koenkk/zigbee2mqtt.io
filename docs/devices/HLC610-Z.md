@@ -5,7 +5,7 @@ description: "Integrate your Shenzhen Homa HLC610-Z via Zigbee2mqtt with whateve
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HLC610-Z.md)*
 
 # Shenzhen Homa HLC610-Z
 

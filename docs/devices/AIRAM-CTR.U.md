@@ -5,7 +5,7 @@ description: "Integrate your Airam AIRAM-CTR.U via Zigbee2mqtt with whatever sma
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/AIRAM-CTR.U.md)*
 
 # Airam AIRAM-CTR.U
 

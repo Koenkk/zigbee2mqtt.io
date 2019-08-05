@@ -5,7 +5,7 @@ description: "Integrate your iCasa ICZB-IW11D via Zigbee2mqtt with whatever smar
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ICZB-IW11D.md)*
 
 # iCasa ICZB-IW11D
 

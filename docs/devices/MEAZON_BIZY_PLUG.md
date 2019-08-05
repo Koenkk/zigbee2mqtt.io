@@ -5,7 +5,7 @@ description: "Integrate your Meazon MEAZON_BIZY_PLUG via Zigbee2mqtt with whatev
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MEAZON_BIZY_PLUG.md)*
 
 # Meazon MEAZON_BIZY_PLUG
 

@@ -5,7 +5,7 @@ description: "Integrate your Hive HV-GSCXZB279_HV-GSCXZB229 via Zigbee2mqtt with
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HV-GSCXZB279_HV-GSCXZB229.md)*
 
 # Hive HV-GSCXZB279_HV-GSCXZB229
 

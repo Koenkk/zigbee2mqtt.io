@@ -5,7 +5,7 @@ description: "Integrate your IKEA ICPSHC24-30EU-IL-1 via Zigbee2mqtt with whatev
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ICPSHC24-30EU-IL-1.md)*
 
 # IKEA ICPSHC24-30EU-IL-1
 

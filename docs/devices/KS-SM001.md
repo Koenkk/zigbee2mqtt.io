@@ -5,7 +5,7 @@ description: "Integrate your Ksentry Electronics KS-SM001 via Zigbee2mqtt with w
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/KS-SM001.md)*
 
 # Ksentry Electronics KS-SM001
 

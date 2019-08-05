@@ -5,7 +5,7 @@ description: "Integrate your SmartThings STSS-MULT-001 via Zigbee2mqtt with what
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/STSS-MULT-001.md)*
 
 # SmartThings STSS-MULT-001
 

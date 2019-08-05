@@ -5,7 +5,7 @@ description: "Integrate your HEIMAN HS2SK via Zigbee2mqtt with whatever smart ho
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS2SK.md)*
 
 # HEIMAN HS2SK
 

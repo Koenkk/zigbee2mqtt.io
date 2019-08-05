@@ -5,7 +5,7 @@ description: "Integrate your eCozy 1TST-EU via Zigbee2mqtt with whatever smart h
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/1TST-EU.md)*
 
 # eCozy 1TST-EU
 
