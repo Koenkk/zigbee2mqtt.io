@@ -30,7 +30,6 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### DJT11LM
 {% raw %}
 ```yaml
 sensor:

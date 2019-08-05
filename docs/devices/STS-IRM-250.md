@@ -31,7 +31,6 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### STS-IRM-250
 {% raw %}
 ```yaml
 binary_sensor:

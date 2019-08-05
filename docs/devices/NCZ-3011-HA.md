@@ -34,7 +34,6 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### NCZ-3011-HA
 {% raw %}
 ```yaml
 binary_sensor:

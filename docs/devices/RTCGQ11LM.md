@@ -51,7 +51,6 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### RTCGQ11LM
 {% raw %}
 ```yaml
 binary_sensor:

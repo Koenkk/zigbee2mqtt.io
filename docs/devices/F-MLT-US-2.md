@@ -24,7 +24,6 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### F-MLT-US-2
 {% raw %}
 ```yaml
 sensor:

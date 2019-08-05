@@ -24,7 +24,6 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### CR701-YZ
 {% raw %}
 ```yaml
 binary_sensor:
