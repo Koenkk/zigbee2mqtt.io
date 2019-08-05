@@ -19,7 +19,8 @@ description: "Integrate your Xiaomi DJT11LM via Zigbee2mqtt with whatever smart 
 
 
 ### Pairing
-Press the reset button for about 5 seconds. The LED lights up 3 times. Then press the button again every 2 seconds (maximum 20 times).
+Press the reset button for about 5 seconds. The LED lights up 3 times.
+Then press the button again every 2 seconds (maximum 20 times).
 
 *NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
 
