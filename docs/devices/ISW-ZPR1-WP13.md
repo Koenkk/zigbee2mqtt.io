@@ -5,7 +5,7 @@ description: "Integrate your Bosch ISW-ZPR1-WP13 via Zigbee2mqtt with whatever s
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ISW-ZPR1-WP13.md)*
 
 # Bosch ISW-ZPR1-WP13
 

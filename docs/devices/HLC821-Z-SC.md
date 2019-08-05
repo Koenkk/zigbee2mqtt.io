@@ -5,7 +5,7 @@ description: "Integrate your Shenzhen Homa HLC821-Z-SC via Zigbee2mqtt with what
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HLC821-Z-SC.md)*
 
 # Shenzhen Homa HLC821-Z-SC
 

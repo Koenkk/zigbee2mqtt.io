@@ -5,7 +5,7 @@ description: "Integrate your GMY Smart Bulb B07KG5KF5R via Zigbee2mqtt with what
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/B07KG5KF5R.md)*
 
 # GMY Smart Bulb B07KG5KF5R
 

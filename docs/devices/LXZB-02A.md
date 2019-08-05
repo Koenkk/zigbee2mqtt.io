@@ -5,7 +5,7 @@ description: "Integrate your Nue / 3A LXZB-02A via Zigbee2mqtt with whatever sma
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LXZB-02A.md)*
 
 # Nue / 3A LXZB-02A
 

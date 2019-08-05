@@ -5,7 +5,7 @@ description: "Integrate your Yale YMF40 via Zigbee2mqtt with whatever smart home
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YMF40.md)*
 
 # Yale YMF40
 

@@ -5,7 +5,7 @@ description: "Integrate your Xiaomi WXKG12LM via Zigbee2mqtt with whatever smart
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/WXKG12LM.md)*
 
 # Xiaomi WXKG12LM
 

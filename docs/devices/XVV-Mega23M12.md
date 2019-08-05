@@ -5,7 +5,7 @@ description: "Integrate your Dresden Elektronik XVV-Mega23M12 via Zigbee2mqtt wi
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/XVV-Mega23M12.md)*
 
 # Dresden Elektronik XVV-Mega23M12
 
