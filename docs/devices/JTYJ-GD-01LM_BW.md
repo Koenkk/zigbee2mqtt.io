@@ -30,7 +30,6 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### JTYJ-GD-01LM/BW
 {% raw %}
 ```yaml
 binary_sensor:

@@ -53,7 +53,6 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### GD-CZ-006
 {% raw %}
 ```yaml
 light:

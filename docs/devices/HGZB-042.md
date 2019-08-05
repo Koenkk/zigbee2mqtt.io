@@ -24,7 +24,6 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### HGZB-042
 {% raw %}
 ```yaml
 switch:

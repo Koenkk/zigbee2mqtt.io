@@ -37,7 +37,6 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### ICPSHC24-10EU-IL-1
 {% raw %}
 ```yaml
 light:

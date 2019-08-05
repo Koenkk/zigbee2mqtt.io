@@ -72,7 +72,6 @@ function getNotes(device) {
 
 function getHomeAssistantConfig(device) {
     let configuration = `
-### ${device.model}
 {% raw %}
 \`\`\`yaml
 `;

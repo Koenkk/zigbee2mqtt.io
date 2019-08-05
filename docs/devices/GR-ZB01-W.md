@@ -24,7 +24,6 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### GR-ZB01-W
 {% raw %}
 ```yaml
 cover:

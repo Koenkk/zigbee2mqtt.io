@@ -32,7 +32,6 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### B07KG5KF5R
 {% raw %}
 ```yaml
 light:

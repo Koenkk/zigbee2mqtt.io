@@ -24,7 +24,6 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### MCT-340 E
 {% raw %}
 ```yaml
 binary_sensor:

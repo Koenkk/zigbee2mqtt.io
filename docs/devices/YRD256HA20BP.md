@@ -24,7 +24,6 @@ Although Home Assistant integration through [MQTT discovery](../integration/home
 manual integration is possbile with the following configuration:
 
 
-### YRD256HA20BP
 {% raw %}
 ```yaml
 sensor:
