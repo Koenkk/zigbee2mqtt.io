@@ -412,10 +412,9 @@ experimenting with this option (e.g. \`long_timeout: 2000\`).
 `,
     },
 
-    // Temperatue humidty and pressure
+    // Device specific configuration
     {
-        supports: ['temperature', 'humidity', 'pressure'],
-        notSupports: ['color temperature'],
+        supports: ['temperature', 'humidity', 'pressure', 'brightness', 'color temperature', 'color'],
         note: `
 ### Device type specific configuration
 *[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
@@ -441,6 +440,15 @@ e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
 * \`pressure_precision\`: Controls the precision of \`pressure\` values, e.g. \`0\` or \`1\`; default \`1\`.
 `,
     },
+    {
+        supports: ['brightness', 'color temperature', 'color'],
+        note: `
+* \`transition\`: Controls the transition time (in seconds) of brightness,
+color temperature (if applicable) and color (if applicable) changes. Defaults to \`0\` (no transition).
+Note that this value is overridden if a \`transition\` value is present in the MQTT command payload.
+`,
+    },
+
     {
         model: ['9290012607', '9290019758'],
         note: `
