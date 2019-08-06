@@ -123,43 +123,51 @@ Groups are not auto-discovered. Use the following configuration:
 ## Controlling Zigbee2mqtt via Home Assistant
 The following Home Assistant configuration allows you to control Zigbee2mqtt from Home Assistant.
 
+You can add it to the appropriate section of your `configuration.yaml`, or you can add it as a [Home Assistant Package](https://www.home-assistant.io/docs/configuration/packages/) by adding the following to `zigbee2mqtt.yaml` in your packages folder.
+
 {% raw %}
 ```yaml
-# Group
-group:
-  zigbee_group:
-    view: false
-    control: hidden
-    name: Zigbee2mqtt
-    entities:
-      - input_boolean.zigbee_permit_join
-      - timer.zigbee_permit_join
-      - sensor.zigbee2mqtt_bridge_state
-      - switch.zigbee2mqtt_main_join
-      - automation.enable_zigbee_joining
-      - automation.disable_zigbee_joining
-      - automation.disable_zigbee_joining_by_timer
-      - input_select.zigbee2mqtt_log_level
-      - automation.zigbee2mqtt_log_level
-
 # Input select for Zigbee2mqtt debug level
 input_select:
   zigbee2mqtt_log_level:
     name: Zigbee2mqtt Log Level
     options:
-     - debug
-     - info
-     - warn
-     - error
+      - debug
+      - info
+      - warn
+      - error
     initial: info
     icon: mdi:format-list-bulleted
 
-# Input boolean for enabling/disabling joining
-input_boolean:
-  zigbee_permit_join:
-    name: Allow devices to join
-    initial: off
-    icon: mdi:cellphone-wireless
+# Input text to input Zigbee2mqtt friendly_name for scripts
+input_text:
+  zigbee2mqtt_old_name:
+    name: Zigbee2mqtt Old Name
+  zigbee2mqtt_new_name:
+    name: Zigbee2mqtt New Name
+  zigbee2mqtt_remove:
+    name: Zigbee2mqtt Remove
+
+# Scripts for renaming & removing devices
+script:
+  zigbee2mqtt_rename:
+    alias: Zigbee2mqtt Rename
+    sequence:
+      service: mqtt.publish
+      data_template:
+        topic: zigbee2mqtt/bridge/config/rename
+        payload_template: >-
+          {
+            "old": "{{ states.input_text.zigbee2mqtt_old_name.state | string }}",
+            "new": "{{ states.input_text.zigbee2mqtt_new_name.state | string }}"
+          }
+  zigbee2mqtt_remove:
+    alias: Zigbee2mqtt Remove
+    sequence:
+      service: mqtt.publish
+      data_template:
+        topic: zigbee2mqtt/bridge/config/remove
+        payload_template: "{{ states.input_text.zigbee2mqtt_remove.state | string }}"
 
 # Timer for joining time remaining (120 sec = 2 min)
 timer:
@@ -167,12 +175,24 @@ timer:
     name: Time remaining
     duration: 120
 
-# Sensor for monitoring the bridge state
 sensor:
+  # Sensor for monitoring the bridge state
   - platform: mqtt
     name: Zigbee2mqtt Bridge state
     state_topic: "zigbee2mqtt/bridge/state"
     icon: mdi:router-wireless
+  # Sensor for Showing the Zigbee2mqtt Version
+  - platform: mqtt
+    name: Zigbee2mqtt Version
+    state_topic: "zigbee2mqtt/bridge/config"
+    value_template: "{{ value_json.version }}"
+    icon: mdi:zigbee
+  # Sensor for Showing the Coordinator Version
+  - platform: mqtt
+    name: Coordinator Version
+    state_topic: "zigbee2mqtt/bridge/config"
+    value_template: "{{ value_json.coordinator }}"
+    icon: mdi:chip
 
 # Switch for enabling joining
 switch:
@@ -183,78 +203,76 @@ switch:
     payload_on: "true"
     payload_off: "false"
 
-# Automations
 automation:
+  # Automation for sending MQTT message on input select change
   - alias: Zigbee2mqtt Log Level
-    initial_state: 'on'
+    initial_state: "on"
     trigger:
-      - platform: state
-        entity_id: input_select.zigbee2mqtt_log_level
-        to: debug
-      - platform: state
-        entity_id: input_select.zigbee2mqtt_log_level
-        to: warn
-      - platform: state
-        entity_id: input_select.zigbee2mqtt_log_level
-        to: error
-      - platform: state
-        entity_id: input_select.zigbee2mqtt_log_level
-        to: info
+      platform: state
+      entity_id: input_select.zigbee2mqtt_log_level
     action:
       - service: mqtt.publish
         data:
-          payload_template: '{{ states(''input_select.zigbee2mqtt_log_level'') }}'
+          payload_template: "{{ states('input_select.zigbee2mqtt_log_level') }}"
           topic: zigbee2mqtt/bridge/config/log_level
-
-  - id: enable_zigbee_join
-    alias: Enable Zigbee joining
+  # Automation to start timer when enable join is turned on
+  - id: zigbee_join_enabled
+    alias: Zigbee Join Enabled
     hide_entity: true
     trigger:
       platform: state
-      entity_id: input_boolean.zigbee_permit_join
-      to: 'on'
+      entity_id: switch.zigbee2mqtt_main_join
+      to: "on"
     action:
-    - service: mqtt.publish
-      data:
-        topic: zigbee2mqtt/bridge/config/permit_join
-        payload: 'true'
-    - service: timer.start
-      data:
-        entity_id: timer.zigbee_permit_join
-
-  - id: disable_zigbee_join
-    alias: Disable Zigbee joining
+      service: timer.start
+      entity_id: timer.zigbee_permit_join
+  # Automation to stop timer when switch turned off and turn off switch when timer finished
+  - id: zigbee_join_disabled
+    alias: Zigbee Join Disabled
     hide_entity: true
     trigger:
-    - entity_id: input_boolean.zigbee_permit_join
-      platform: state
-      to: 'off'
+      - platform: event
+        event_type: timer.finished
+        event_data:
+          entity_id: timer.zigbee_permit_join
+      - platform: state
+        entity_id: switch.zigbee2mqtt_main_join
+        to: "off"
     action:
-    - data:
-        payload: 'false'
-        topic: zigbee2mqtt/bridge/config/permit_join
-      service: mqtt.publish
-    - data:
-        entity_id: timer.zigbee_permit_join
-      service: timer.cancel
+      - service: timer.cancel
+        data:
+          entity_id: timer.zigbee_permit_join
+      - service: switch.turn_off
+        entity_id: switch.zigbee2mqtt_main_join
 
-  - id: disable_zigbee_join_timer
-    alias: Disable Zigbee joining by timer
-    hide_entity: true
-    trigger:
-    - platform: event
-      event_type: timer.finished
-      event_data:
-        entity_id: timer.zigbee_permit_join
-    action:
-    - service: mqtt.publish
-      data:
-        topic: zigbee2mqtt/bridge/config/permit_join
-        payload: 'false'
-    - service: input_boolean.turn_off
-      data:
-        entity_id: input_boolean.zigbee_permit_join
 ```
+{% endraw %}
+
+The following is an example lovelace card configuration.
+
+{% raw %}
+
+```yaml
+title: Zigbee2mqtt
+type: entities
+show_header_toggle: false
+entities:
+  - entity: sensor.zigbee2mqtt_bridge_state
+  - entity: sensor.zigbee2mqtt_version
+  - entity: sensor.coordinator_version
+  - entity: input_select.zigbee2mqtt_log_level
+  - type: divider
+  - entity: switch.zigbee2mqtt_main_join
+  - entity: timer.zigbee_permit_join
+  - type: divider
+  - entity: input_text.zigbee2mqtt_old_name
+  - entity: input_text.zigbee2mqtt_new_name
+  - entity: script.zigbee2mqtt_rename
+  - type: divider
+  - entity: input_text.zigbee2mqtt_remove
+  - entity: script.zigbee2mqtt_remove
+```
+
 {% endraw %}
 
 ## Zigbee Network Map (Custom Component)
