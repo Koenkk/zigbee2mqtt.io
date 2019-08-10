@@ -288,12 +288,12 @@ small pin or paperclip to push the reset button once.
         note: `
 ### Pairing
 Factory reset the light bulb ([video](https://www.youtube.com/watch?v=npxOrPxVfe0)).
-After resetting the bulb will automatically connect.
-
-While pairing, keep the bulb close the the CC2531 USB sniffer.
-
 What works is to use (very) short “on’s” and a little bit longer “off’s”.
 Start with bulb on, then off, and then 6 “on’s”, where you kill the light as soon as the bulb shows signs of turning on.
+
+While pairing, keep the bulb close the the CC2531 USB sniffer. Pairing may also be possible with the
+[Tradfri Remote Control](https://www.ikea.com/us/en/images/products/tradfri-remote-control__0489469_PE623665_S4.JPG)
+by pressing and holding the reset button on the bottom of the remote (next to the battery) close to the bulb.
 `,
     },
     {
