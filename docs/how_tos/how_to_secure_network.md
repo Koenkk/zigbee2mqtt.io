@@ -21,7 +21,13 @@ The network encryption key size is `128-bit` which is essentially 16 decimal val
 
 If you need to transform your decimals to hexadecimals (or vice versa) please use a [converter](https://www.binaryhexconverter.com/decimal-to-hex-converter). Example: 92 (decimal) would become 5C (hexadecimal).
 
-You can generate a valid key with the following command in most linux systems:
+You can generate a valid decimal key with the following command in most linux systems:
+```
+dd if=/dev/urandom bs=1 count=16 2>/dev/null | od -A n -t u1 | awk '{printf "["} {for(i = 1; i< NF; i++) {printf "%s, ", $i}} {printf "%s]\n", $NF}'
+```
+Please be aware that if you use the Hass.io add-on for zigbee2mqtt only decimal keys are supported. 
+
+You can generate a valid hex key with the following command in most linux systems:
 ```
 dd if=/dev/urandom bs=1 count=16 2>/dev/null | od -A n -t x1 | awk '{printf "["} {for(i = 1; i< NF; i++) {printf "0x%s, ", $i}} {printf "0x%s]\n", $NF}'
 ```
