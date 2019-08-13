@@ -410,18 +410,29 @@ experimenting with this option (e.g. \`long_timeout: 2000\`).
 
     // Device specific configuration
     {
-        supports: ['temperature', 'humidity', 'pressure', 'brightness', 'color temperature', 'color'],
+        supports: ['temperature', 'humidity', 'pressure', 'brightness', 'color temperature', 'color', 'illuminance'],
+        notDescription: ['thermostat'],
         note: `
 ### Device type specific configuration
 *[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
 `,
     },
     {
+        supports: ['illuminance'],
+        note: `
+* \`illuminance_calibration\`: Allows to manually calibrate illuminance values,
+e.g. \`95\` would take 95% to the illuminance reported by the device; default \`100\`.
+`,
+    },
+    {
         supports: ['temperature'],
         notSupports: ['color temperature'],
+        notDescription: ['thermostat'],
         note: `
 * \`temperature_precision\`: Controls the precision of \`temperature\` values,
 e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
+* \`temperature_calibration\`: Allows to manually calibrate temperature values,
+e.g. \`1\` would add 1 degree to the temperature reported by the device; default \`0\`.
 `,
     },
     {
@@ -434,6 +445,8 @@ e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
         supports: ['pressure'],
         note: `
 * \`pressure_precision\`: Controls the precision of \`pressure\` values, e.g. \`0\` or \`1\`; default \`1\`.
+* \`pressure_calibration\`: Allows to manually calibrate pressure values,
+e.g. \`1\` would add 1 to the pressure reported by the device; default \`0\`.
 `,
     },
     {

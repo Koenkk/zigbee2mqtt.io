@@ -51,6 +51,11 @@ function getNotes(device) {
                 return false;
             }
 
+            if (n.hasOwnProperty('notDescription') &&
+                n.notDescription.filter((s) => device.description.includes(s)).length !== 0) {
+                return false;
+            }
+
             if (n.hasOwnProperty('notModel') && n.notModel.includes(device.model)) {
                 return false;
             }

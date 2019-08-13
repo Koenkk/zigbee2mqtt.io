@@ -46,6 +46,14 @@ To work around this, a
 is needed.
 
 
+### Device type specific configuration
+*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+
+
+* `illuminance_calibration`: Allows to manually calibrate illuminance values,
+e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
+
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possbile with the following configuration:
