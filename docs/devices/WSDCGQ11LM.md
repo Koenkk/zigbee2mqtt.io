@@ -31,12 +31,16 @@ blue light blinks three times, release the reset button (the blue light will bli
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
+* `temperature_calibration`: Allows to manually calibrate temperature values,
+e.g. `1` would add 1 degree to the temperature reported by the device; default `0`.
 
 
 * `humidity_precision`: Controls the precision of `humidity` values, e.g. `0`, `1` or `2`; default `2`.
 
 
 * `pressure_precision`: Controls the precision of `pressure` values, e.g. `0` or `1`; default `1`.
+* `pressure_calibration`: Allows to manually calibrate pressure values,
+e.g. `1` would add 1 to the pressure reported by the device; default `0`.
 
 
 ## Manual Home Assistant configuration
