@@ -275,6 +275,9 @@ entities:
 
 {% endraw %}
 
+## Zigbee Network Map (Custom Card)
+[Zigbee Network Map Home Assistant Custom Card](https://github.com/azuwis/zigbee2mqtt-networkmap/).
+
 ## Zigbee Network Map (Custom Component)
 [Zigbee Network Map Home Assistant addon](https://github.com/rgruebel/ha_zigbee2mqtt_networkmap).
 
