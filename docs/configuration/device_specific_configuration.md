@@ -38,6 +38,8 @@ devices:
       # Only applied to discovered temperature sensor.
       temperature:
         icon: mdi:oil-temperature
+        # Omit values by setting them to null, e.g. don't send device_class
+        device_class: null
     # Device type specific examples
     occupancy_timeout: 120
     no_occupancy_since: [10, 600]
