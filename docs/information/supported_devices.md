@@ -362,10 +362,11 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 
 ### Lupus
 
-| Model | Description | Picture |
-| ------------- | ------------- | -------------------------- |
-| [12031](../devices/12031.html) | Lupus Roller shutter (open/close) | ![../images/devices/12031.jpg](../images/devices/12031.jpg) |
-| [12050](../devices/12050.html) | Lupus LUPUSEC mains socket with power meter (on/off, power measurement) | ![../images/devices/12050.jpg](../images/devices/12050.jpg) |
+| Model                          | Description                                                             | Picture                                                               |
+| ------------------------------ | ----------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| [12134](../devices/12134.html) | Lupus temperature & humidity sensor                                     | ![../images/devices/WSDCGQ01LM.jpg](../images/devices/WSDCGQ01LM.jpg) |
+| [12031](../devices/12031.html) | Lupus Roller shutter (open/close)                                       | ![../images/devices/12031.jpg](../images/devices/12031.jpg)           |
+| [12050](../devices/12050.html) | Lupus LUPUSEC mains socket with power meter (on/off, power measurement) | ![../images/devices/12050.jpg](../images/devices/12050.jpg)           |
 
 ### Meazon
 
