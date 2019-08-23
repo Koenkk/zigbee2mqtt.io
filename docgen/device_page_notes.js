@@ -268,7 +268,7 @@ See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koe
         note: `
 ### Pairing
 To factory reset the TRADFRI control outlet, press and hold the reset button
-(pinhole underneath the light, located at the top of the outlet) with a
+(pinhole underneath the light, located at the top (bottom if UK) of the outlet) with a
 paperclip until the white light starts fading. Hold onto the button for a
 few more seconds, then release. After this, the outlet will automatically connect.
 `,
