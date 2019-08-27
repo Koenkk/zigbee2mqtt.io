@@ -40,7 +40,8 @@ While the procedure above is very useful for adding / debugging support for devi
 `"zigbee_shepherd_devices": true`
 
 3. Add custom `devices.js` to the config path of the add-on.\
-This path is `/share/zigbee2mqtt` by default, and controlled with the `data_path` option in the config of the add-on.
+This path is `/share/zigbee2mqtt` by default, and controlled with the `data_path` option in the config of the add-on.\
+Be careful to get a `devices.js` matching your current zigbee-sheperd version. Either use the one of your current installation or fetch the one from the [master branch on github](https://github.com/Koenkk/zigbee-shepherd-converters/blob/master/devices.js).
 
 4. Restart the add-on.
 
