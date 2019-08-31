@@ -117,6 +117,10 @@ queue:
   delay: 250
   # Max no. of simultaneously running commands
   simultaneously: 5
+
+# Device specific options
+device_options:
+  # See https://www.zigbee2mqtt.io/configuration/device_specific_configuration.html
 ```
 
 ## Specifying devices and groups in a separate file
