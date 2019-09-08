@@ -262,7 +262,7 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | [L1528](../devices/L1528.html) | IKEA FLOALT LED light panel, dimmable, white spectrum (30x90 cm) (on/off, brightness, color temperature) | ![../images/devices/L1528.jpg](../images/devices/L1528.jpg) |
 | [L1531](../devices/L1531.html) | IKEA SURTE door light panel, dimmable, white spectrum (38x64 cm) (on/off, brightness, color temperature) | ![../images/devices/L1531.jpg](../images/devices/L1531.jpg) |
 | [E1603/E1702](../devices/E1603_E1702.html) | IKEA TRADFRI control outlet (on/off) | ![../images/devices/E1603-E1702.jpg](../images/devices/E1603-E1702.jpg) |
-| [E1524/E1810](../devices/E1524_E1810.html) | IKEA TRADFRI remote control (toggle, arrow left/right click/hold/release, brightness up/down click/hold/release) | ![../images/devices/E1524-E1810.jpg](../images/devices/E1524-E1810.jpg) |
+| [E1524](../devices/E1524.html) | IKEA TRADFRI remote control (toggle, arrow left/right click/hold/release, brightness up/down click/hold/release) | ![../images/devices/E1524.jpg](../images/devices/E1524.jpg) |
 | [E1743](../devices/E1743.html) | IKEA TRADFRI ON/OFF switch (on, off, brightness up/down/stop) | ![../images/devices/E1743.jpg](../images/devices/E1743.jpg) |
 | [E1525](../devices/E1525.html) | IKEA TRADFRI motion sensor (occupancy) | ![../images/devices/E1525.jpg](../images/devices/E1525.jpg) |
 | [E1746](../devices/E1746.html) | IKEA TRADFRI signal repeater () | ![../images/devices/E1746.jpg](../images/devices/E1746.jpg) |

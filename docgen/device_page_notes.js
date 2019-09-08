@@ -266,6 +266,12 @@ See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koe
     {
         model: ['E1603/E1702'],
         note: `
+The TRADFRI control outlet also acts as a Zigbee router.
+`,
+    },
+    {
+        model: ['E1603/E1702'],
+        note: `
 ### Pairing
 To factory reset the TRADFRI control outlet, press and hold the reset button
 (pinhole underneath the light, located at the top (bottom if UK) of the outlet) with a
