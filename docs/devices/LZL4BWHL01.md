@@ -1,31 +1,21 @@
 ---
-title: "IKEA LED1624G9 control via MQTT"
-description: "Integrate your IKEA LED1624G9 via Zigbee2mqtt with whatever smart home
+title: "Lutron LZL4BWHL01 control via MQTT"
+description: "Integrate your Lutron LZL4BWHL01 via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LED1624G9.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LZL4BWHL01.md)*
 
-# IKEA LED1624G9
+# Lutron LZL4BWHL01
 
-| Model | LED1624G9  |
-| Vendor  | IKEA  |
-| Description | TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white |
-| Supports | on/off, brightness, color xy |
-| Picture | ![IKEA LED1624G9](../images/devices/LED1624G9.jpg) |
+| Model | LZL4BWHL01  |
+| Vendor  | Lutron  |
+| Description | Connected bulb remote control |
+| Supports | on/off, brightness |
+| Picture | ![Lutron LZL4BWHL01](../images/devices/LZL4BWHL01.jpg) |
 
 ## Notes
-
-
-### Pairing
-Factory reset the light bulb ([video](https://www.youtube.com/watch?v=npxOrPxVfe0)).
-After resetting the bulb will automatically connect.
-
-While pairing, keep the bulb close the the CC2531 USB sniffer.
-
-What works is to use (very) short “on’s” and a little bit longer “off’s”.
-Start with bulb on, then off, and then 6 “on’s”, where you kill the light as soon as the bulb shows signs of turning on.
 
 
 ### Device type specific configuration
@@ -44,14 +34,12 @@ manual integration is possbile with the following configuration:
 
 {% raw %}
 ```yaml
-light:
+sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    brightness: true
-    xy: true
-    schema: "json"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    icon: "mdi:gesture-double-tap"
+    value_template: "{{ value_json.action }}"
 
 sensor:
   - platform: "mqtt"

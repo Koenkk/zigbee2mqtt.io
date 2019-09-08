@@ -1,27 +1,23 @@
 ---
-title: "IKEA E1746 control via MQTT"
-description: "Integrate your IKEA E1746 via Zigbee2mqtt with whatever smart home
+title: "Custom devices (DiY) DIYRuZ_KEYPAD20 control via MQTT"
+description: "Integrate your Custom devices (DiY) DIYRuZ_KEYPAD20 via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/E1746.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DIYRuZ_KEYPAD20.md)*
 
-# IKEA E1746
+# Custom devices (DiY) DIYRuZ_KEYPAD20
 
-| Model | E1746  |
-| Vendor  | IKEA  |
-| Description | TRADFRI signal repeater |
-| Supports | linkquality |
-| Picture | ![IKEA E1746](../images/devices/E1746.jpg) |
+| Model | DIYRuZ_KEYPAD20  |
+| Vendor  | Custom devices (DiY)  |
+| Description | [DiY 20 button keypad](http://modkam.ru/?p=1114) |
+| Supports | click |
+| Picture | ![Custom devices (DiY) DIYRuZ_KEYPAD20](../images/devices/DIYRuZ_KEYPAD20.jpg) |
 
 ## Notes
 
-
-### Pairing
-Push the reset button of the device with a paperclip for 5 seconds.
-While pairing the LED is flashing/dimming slowly. Once the pairing is finished, the LED stays on.
-
+None
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

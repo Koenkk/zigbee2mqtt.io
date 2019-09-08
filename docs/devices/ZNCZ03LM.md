@@ -1,19 +1,19 @@
 ---
-title: "Nue / 3A HGZB-01A control via MQTT"
-description: "Integrate your Nue / 3A HGZB-01A via Zigbee2mqtt with whatever smart home
+title: "Xiaomi ZNCZ03LM control via MQTT"
+description: "Integrate your Xiaomi ZNCZ03LM via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-01A.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZNCZ03LM.md)*
 
-# Nue / 3A HGZB-01A
+# Xiaomi ZNCZ03LM
 
-| Model | HGZB-01A  |
-| Vendor  | Nue / 3A  |
-| Description | Smart in-wall switch |
-| Supports | on/off |
-| Picture | ![Nue / 3A HGZB-01A](../images/devices/HGZB-01A.jpg) |
+| Model | ZNCZ03LM  |
+| Vendor  | Xiaomi  |
+| Description | Mi power plug ZigBee TW |
+| Supports | on/off, power measurement |
+| Picture | ![Xiaomi ZNCZ03LM](../images/devices/ZNCZ03LM.jpg) |
 
 ## Notes
 
@@ -34,6 +34,14 @@ switch:
     payload_on: "ON"
     value_template: "{{ value_json.state }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "W"
+    icon: "mdi:factory"
+    value_template: "{{ value_json.power }}"
 
 sensor:
   - platform: "mqtt"

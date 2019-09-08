@@ -1,26 +1,21 @@
 ---
-title: "Xiaomi QBKG03LM control via MQTT"
-description: "Integrate your Xiaomi QBKG03LM via Zigbee2mqtt with whatever smart home
+title: "SmartThings F-WTR-UK-V2 control via MQTT"
+description: "Integrate your SmartThings F-WTR-UK-V2 via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QBKG03LM.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/F-WTR-UK-V2.md)*
 
-# Xiaomi QBKG03LM
+# SmartThings F-WTR-UK-V2
 
-| Model | QBKG03LM  |
-| Vendor  | Xiaomi  |
-| Description | Aqara double key wired wall switch without neutral wire. Doesn't work as a router and doesn't support power meter |
-| Supports | release/hold, on/off, temperature |
-| Picture | ![Xiaomi QBKG03LM](../images/devices/QBKG03LM.jpg) |
+| Model | F-WTR-UK-V2  |
+| Vendor  | SmartThings  |
+| Description | Water leak sensor (2018 model) |
+| Supports | water leak and temperature |
+| Picture | ![SmartThings F-WTR-UK-V2](../images/devices/F-WTR-UK-V2.jpg) |
 
 ## Notes
-
-
-### Pairing
-Press and hold the button on the device for +- 10 seconds
-(until the blue light starts blinking and stops blinking), release and wait.
 
 
 ### Device type specific configuration
@@ -40,31 +35,6 @@ manual integration is possbile with the following configuration:
 
 {% raw %}
 ```yaml
-switch:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_off: "OFF"
-    payload_on: "ON"
-    value_template: "{{ value_json.state_left }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/left/set"
-
-switch:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_off: "OFF"
-    payload_on: "ON"
-    value_template: "{{ value_json.state_right }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/right/set"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:toggle-switch"
-    value_template: "{{ value_json.click }}"
-
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
@@ -72,6 +42,23 @@ sensor:
     unit_of_measurement: "°C"
     device_class: "temperature"
     value_template: "{{ value_json.temperature }}"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.water_leak }}"
+    device_class: "moisture"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    device_class: "battery"
+    value_template: "{{ value_json.battery }}"
 
 sensor:
   - platform: "mqtt"

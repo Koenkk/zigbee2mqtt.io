@@ -228,7 +228,7 @@ After that the remote should show up as a paired device.
 `,
     },
     {
-        model: ['E1524'],
+        model: ['E1524/E1810'],
         note: `
 ### Pairing
 Pair the remote to Zigbee2mqtt by holding it close to the coordinator and
@@ -290,7 +290,7 @@ small pin or paperclip to push the reset button once.
     {
         vendor: 'IKEA',
         supports: ['brightness'],
-        notModel: ['E1524', 'ICPSHC24-10EU-IL-1', 'ICPSHC24-30EU-IL-1', 'ICTC-G-1'],
+        notModel: ['E1524/E1810', 'ICPSHC24-10EU-IL-1', 'ICPSHC24-30EU-IL-1', 'ICTC-G-1'],
         note: `
 ### Pairing
 Factory reset the light bulb ([video](https://www.youtube.com/watch?v=npxOrPxVfe0)).

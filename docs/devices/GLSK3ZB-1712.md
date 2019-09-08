@@ -1,19 +1,19 @@
 ---
-title: "Nue / 3A HGZB-01A control via MQTT"
-description: "Integrate your Nue / 3A HGZB-01A via Zigbee2mqtt with whatever smart home
+title: "Hej GLSK3ZB-1712 control via MQTT"
+description: "Integrate your Hej GLSK3ZB-1712 via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-01A.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GLSK3ZB-1712.md)*
 
-# Nue / 3A HGZB-01A
+# Hej GLSK3ZB-1712
 
-| Model | HGZB-01A  |
-| Vendor  | Nue / 3A  |
-| Description | Smart in-wall switch |
+| Model | GLSK3ZB-1712  |
+| Vendor  | Hej  |
+| Description | Goqual 2 gang Switch |
 | Supports | on/off |
-| Picture | ![Nue / 3A HGZB-01A](../images/devices/HGZB-01A.jpg) |
+| Picture | ![Hej GLSK3ZB-1712](../images/devices/GLSK3ZB-1712.jpg) |
 
 ## Notes
 
@@ -32,8 +32,17 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
-    value_template: "{{ value_json.state }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    value_template: "{{ value_json.state_top }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/top/set"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state_bottom }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/bottom/set"
 
 sensor:
   - platform: "mqtt"

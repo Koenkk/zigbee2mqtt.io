@@ -1,19 +1,19 @@
 ---
-title: "Nue / 3A HGZB-01A/02A control via MQTT"
-description: "Integrate your Nue / 3A HGZB-01A/02A via Zigbee2mqtt with whatever smart home
+title: "Dawon DNS PM-C140-ZB control via MQTT"
+description: "Integrate your Dawon DNS PM-C140-ZB via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-01A/02A.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PM-C140-ZB.md)*
 
-# Nue / 3A HGZB-01A/02A
+# Dawon DNS PM-C140-ZB
 
-| Model | HGZB-01A/02A  |
-| Vendor  | Nue / 3A  |
-| Description | Smart 1 gang wall or in-wall switch |
-| Supports | on/off |
-| Picture | ![Nue / 3A HGZB-01A/02A](../images/devices/HGZB-01A-02A.jpg) |
+| Model | PM-C140-ZB  |
+| Vendor  | Dawon DNS  |
+| Description | IOT remote control smart buried-type outlet |
+| Supports | on/off, power and energy measurement |
+| Picture | ![Dawon DNS PM-C140-ZB](../images/devices/PM-C140-ZB.jpg) |
 
 ## Notes
 
@@ -26,6 +26,14 @@ manual integration is possbile with the following configuration:
 
 {% raw %}
 ```yaml
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "W"
+    icon: "mdi:factory"
+    value_template: "{{ value_json.power }}"
+
 switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"

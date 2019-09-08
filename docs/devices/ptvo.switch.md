@@ -1,19 +1,19 @@
 ---
-title: "Custom devices (DiY) DIYRuZ_R4_5 control via MQTT"
-description: "Integrate your Custom devices (DiY) DIYRuZ_R4_5 via Zigbee2mqtt with whatever smart home
+title: "Custom devices (DiY) ptvo.switch control via MQTT"
+description: "Integrate your Custom devices (DiY) ptvo.switch via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DIYRuZ_R4_5.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ptvo.switch.md)*
 
-# Custom devices (DiY) DIYRuZ_R4_5
+# Custom devices (DiY) ptvo.switch
 
-| Model | DIYRuZ_R4_5  |
+| Model | ptvo.switch  |
 | Vendor  | Custom devices (DiY)  |
-| Description | [DiY 4 Relays + 4 switches + 1 buzzer](http://modkam.ru/?p=1054) |
-| Supports | on/off |
-| Picture | ![Custom devices (DiY) DIYRuZ_R4_5](../images/devices/DIYRuZ_R4_5.jpg) |
+| Description | [Multi-channel relay switch](https://ptvo.info/zigbee-switch-configurable-firmware-router-199/) |
+| Supports | hold, single, double and triple click, on/off |
+| Picture | ![Custom devices (DiY) ptvo.switch](../images/devices/ptvo.switch.jpg) |
 
 ## Notes
 

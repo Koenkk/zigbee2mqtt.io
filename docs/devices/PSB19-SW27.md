@@ -1,31 +1,21 @@
 ---
-title: "IKEA LED1624G9 control via MQTT"
-description: "Integrate your IKEA LED1624G9 via Zigbee2mqtt with whatever smart home
+title: "GE PSB19-SW27 control via MQTT"
+description: "Integrate your GE PSB19-SW27 via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LED1624G9.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PSB19-SW27.md)*
 
-# IKEA LED1624G9
+# GE PSB19-SW27
 
-| Model | LED1624G9  |
-| Vendor  | IKEA  |
-| Description | TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white |
-| Supports | on/off, brightness, color xy |
-| Picture | ![IKEA LED1624G9](../images/devices/LED1624G9.jpg) |
+| Model | PSB19-SW27  |
+| Vendor  | GE  |
+| Description | Link smart LED light bulb, A19 soft white (2700K) |
+| Supports | on/off, brightness |
+| Picture | ![GE PSB19-SW27](../images/devices/PSB19-SW27.jpg) |
 
 ## Notes
-
-
-### Pairing
-Factory reset the light bulb ([video](https://www.youtube.com/watch?v=npxOrPxVfe0)).
-After resetting the bulb will automatically connect.
-
-While pairing, keep the bulb close the the CC2531 USB sniffer.
-
-What works is to use (very) short “on’s” and a little bit longer “off’s”.
-Start with bulb on, then off, and then 6 “on’s”, where you kill the light as soon as the bulb shows signs of turning on.
 
 
 ### Device type specific configuration
@@ -49,7 +39,6 @@ light:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
-    xy: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
 

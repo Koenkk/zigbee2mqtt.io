@@ -1,19 +1,19 @@
 ---
-title: "Nue / 3A HGZB-01A control via MQTT"
-description: "Integrate your Nue / 3A HGZB-01A via Zigbee2mqtt with whatever smart home
+title: "HEIMAN HS1CG-M control via MQTT"
+description: "Integrate your HEIMAN HS1CG-M via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-01A.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1CG-M.md)*
 
-# Nue / 3A HGZB-01A
+# HEIMAN HS1CG-M
 
-| Model | HGZB-01A  |
-| Vendor  | Nue / 3A  |
-| Description | Smart in-wall switch |
-| Supports | on/off |
-| Picture | ![Nue / 3A HGZB-01A](../images/devices/HGZB-01A.jpg) |
+| Model | HS1CG-M  |
+| Vendor  | HEIMAN  |
+| Description | Combustible gas sensor |
+| Supports | gas |
+| Picture | ![HEIMAN HS1CG-M](../images/devices/HS1CG-M.jpg) |
 
 ## Notes
 
@@ -26,14 +26,14 @@ manual integration is possbile with the following configuration:
 
 {% raw %}
 ```yaml
-switch:
+binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    payload_off: "OFF"
-    payload_on: "ON"
-    value_template: "{{ value_json.state }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.gas }}"
+    device_class: "gas"
 
 sensor:
   - platform: "mqtt"

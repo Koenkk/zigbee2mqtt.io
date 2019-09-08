@@ -1,19 +1,19 @@
 ---
-title: "Nue / 3A HGZB-01A control via MQTT"
-description: "Integrate your Nue / 3A HGZB-01A via Zigbee2mqtt with whatever smart home
+title: "LivingWise LVS-ZB15S control via MQTT"
+description: "Integrate your LivingWise LVS-ZB15S via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-01A.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LVS-ZB15S.md)*
 
-# Nue / 3A HGZB-01A
+# LivingWise LVS-ZB15S
 
-| Model | HGZB-01A  |
-| Vendor  | Nue / 3A  |
-| Description | Smart in-wall switch |
+| Model | LVS-ZB15S  |
+| Vendor  | LivingWise  |
+| Description | ZigBee smart in-wall switch |
 | Supports | on/off |
-| Picture | ![Nue / 3A HGZB-01A](../images/devices/HGZB-01A.jpg) |
+| Picture | ![LivingWise LVS-ZB15S](../images/devices/LVS-ZB15S.jpg) |
 
 ## Notes
 

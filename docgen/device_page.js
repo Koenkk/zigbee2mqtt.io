@@ -6,8 +6,28 @@ const notes = require('./device_page_notes');
 const YAML = require('json2yaml');
 const HomeassistantExtension = require('zigbee2mqtt/lib/extension/homeassistant');
 const homeassistant = new HomeassistantExtension(null, null, null, null);
+const assert = require('assert');
+const devices = require('zigbee2mqtt/node_modules/zigbee-shepherd-converters').devices;
 
 function generate(device) {
+    // verify that all model and notModel exist;
+    for (const note of notes) {
+        const check = (attr) => {
+            if (note[attr]) {
+                if (typeof note[attr] === 'string') {
+                    assert(devices.find((d) => d.model === note[attr]), note[attr]);
+                } else {
+                    for (const m of note[attr]) {
+                        assert(devices.find((d) => d.model === m), m);
+                    }
+                }
+            }
+        };
+
+        check('model');
+        check('notModel');
+    }
+
     const image = utils.getImage(device.model);
 
     return `---

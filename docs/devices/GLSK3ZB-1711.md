@@ -1,19 +1,19 @@
 ---
-title: "Nue / 3A HGZB-01A control via MQTT"
-description: "Integrate your Nue / 3A HGZB-01A via Zigbee2mqtt with whatever smart home
+title: "Hej GLSK3ZB-1711 control via MQTT"
+description: "Integrate your Hej GLSK3ZB-1711 via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-01A.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GLSK3ZB-1711.md)*
 
-# Nue / 3A HGZB-01A
+# Hej GLSK3ZB-1711
 
-| Model | HGZB-01A  |
-| Vendor  | Nue / 3A  |
-| Description | Smart in-wall switch |
+| Model | GLSK3ZB-1711  |
+| Vendor  | Hej  |
+| Description | Goqual 1 gang Switch |
 | Supports | on/off |
-| Picture | ![Nue / 3A HGZB-01A](../images/devices/HGZB-01A.jpg) |
+| Picture | ![Hej GLSK3ZB-1711](../images/devices/GLSK3ZB-1711.jpg) |
 
 ## Notes
 
