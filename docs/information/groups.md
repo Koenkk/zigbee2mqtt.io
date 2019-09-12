@@ -16,8 +16,6 @@ groups:
     friendly_name: group_1
     # Retain messages (true/false)
     retain: false
-    # Default transition to be used when e.g. changing brightness (in seconds), default 0
-    transition: 2
     # Devices of this group,
     # Note: this has to be the ieeeAddr of the device, not the friendly_name!
     devices:
