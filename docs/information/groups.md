@@ -12,14 +12,16 @@ Add the following to your `configuration.yaml`.
 groups:
   # ID, each group should have a different numerical ID
   '1':
-    # Name which will be used to control the group
+    # Required: Name which will be used to control the group
     friendly_name: group_1
-    # Retain messages (true/false)
+    # Required: Retain messages (true/false)
     retain: false
-    # Default transition to be used when e.g. changing brightness (in seconds), default 0
+    # Optional: Default transition to be used when e.g. changing brightness (in seconds) (default: 0)
     transition: 2
-    # Devices of this group,
-    # Note: this has to be the ieeeAddr of the device, not the friendly_name!
+    # Optional: Change group state when one of the devices in it changes state, see 'State changes' below (default: true)
+    optimistic: true
+    # Optional: Devices of this group,
+    # Note: this has to be the ieeeAddr of the device, not the friendly_name! (default: empty)
     devices:
       - '0x00158d00018255df'
 ```
