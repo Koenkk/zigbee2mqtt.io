@@ -25,10 +25,13 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 ## 2. Installing
 ```bash
 # Setup Node.js repository
-# NOTE: For Raspberry Pi Zero follow https://warlord0blog.wordpress.com/2018/06/27/node-js-v8-on-raspberry-pi-zero/
 sudo curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
-# Install Node.js
+# NOTE: If you see the message below please follow: https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb.
+# ## You appear to be running on ARMv6 hardware. Unfortunately this is not currently supported by the NodeSource Linux distributions. Please use the 'linux-armv6l' binary tarballs available directly from nodejs.org for Node.js 4 and later.
+# IMPORTANT: In this case instead of the apt-get install mentioned below; do: sudo apt-get install -y git make g++ gcc
+
+# Install Node.js;
 sudo apt-get install -y nodejs git make g++ gcc
 
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
