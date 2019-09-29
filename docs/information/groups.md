@@ -18,8 +18,8 @@ groups:
     retain: false
     # Optional: Default transition to be used when e.g. changing brightness (in seconds) (default: 0)
     transition: 2
-    # Optional: Change group state when one of the devices in it changes state, see 'State changes' below (default: 'group')
-    optimistic: 'group'
+    # Optional: Change group state when one of the devices in it changes state, see 'State changes' below (default: true)
+    optimistic: true
     # Optional: Devices of this group,
     # Note: this has to be the ieeeAddr of the device, not the friendly_name! (default: empty)
     devices:
@@ -47,13 +47,7 @@ Controlling a group is similar to controlling a single device. For example to tu
 ```
 
 ## State changes
-By default when one of the devices in a group changes it's state, the group state will also change. This can be controlled through the `optimistic` setting which supports the modes below.
-
-To explain the different modes we will use the following example; group `group_1` has the following devices in it: `device_1` and `device_2`.
-
-- `disable`: no state changes are published when `device_1` or `device_2` changes it state.
-- `group` (default): when `device_1` or `device_2` changes it state, only `group_1` will also change its state.
-- `group_devices`: when `device_1` or `device_2` changes it state, `group_1`, `device_1` and `device_2` will also change its state.
+By default when one of the devices in a group changes it's state, the group state will also change. Also when the state of a group is changed by a command (so not via a state change of a device in it; see previous line), all devices in the group will also change it's state. This behaviour can be disabled by setting `optimistic: false` for the group.
 
 ## How do groups work?
 By using the above `add` command above, a device will be added to a group. The device itself is responsible for storing to which groups it belongs. Others, e.g. the coordinator, do not have knowledge to which device a groups belongs.
