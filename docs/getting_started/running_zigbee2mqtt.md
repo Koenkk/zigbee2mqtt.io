@@ -43,7 +43,7 @@ npm --version  # Should output 6.X
 sudo git clone https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 sudo chown -R pi:pi /opt/zigbee2mqtt
 
-# Install dependencies
+# Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
 npm install
 ```
