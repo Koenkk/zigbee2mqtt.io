@@ -249,7 +249,7 @@ The workaround is based on the solution found at [Add support for devices with "
 	Set permissions:
 
 	```shell
-	sudo chmod 644 /usr/local/bin/docker-setup-cc2531.sh
+	sudo chmod 744 /usr/local/bin/docker-setup-cc2531.sh
 	```
 
 4. Create docker-event-listener.sh
@@ -265,11 +265,12 @@ The workaround is based on the solution found at [Add support for devices with "
 	docker events --filter 'event=start'| \
 	while read line; do
 		/usr/local/bin/docker-setup-cc2531.sh
+	done
 	```
 	Set permissions:
 
 	```shell
-	sudo chmod 644 /usr/local/bin/docker-event-listener.sh
+	sudo chmod 744 /usr/local/bin/docker-event-listener.sh
 	```
 
 5. Create docker-event-listener.service
@@ -299,7 +300,7 @@ The workaround is based on the solution found at [Add support for devices with "
 	Set permissions:
 
 	```shell
-	sudo chmod 644 /etc/systemd/system/docker-event-listener.service
+	sudo chmod 744 /etc/systemd/system/docker-event-listener.service
 	```
 
 	Reload daemon
