@@ -2,6 +2,8 @@
 ---
 # How to support new devices
 
+*NOTE: If you are using the zigbee2mqtt Hass.io addon, you may want to [start here](https://www.zigbee2mqtt.io/how_tos/how_to_support_new_devices_on_hassio.html)!*
+
 Zigbee2mqtt uses [zigbee-shepherd-converters](https://github.com/Koenkk/zigbee-shepherd-converters) to parse messages to and from devices. This was originally part of Zigbee2mqtt but has been moved to a separate library so that other projects can also take advantage of this.
 
 This page will guide you through the process of adding support for new devices to [zigbee-shepherd-converters](https://github.com/Koenkk/zigbee-shepherd-converters).
