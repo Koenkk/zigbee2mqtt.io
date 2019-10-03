@@ -17,9 +17,7 @@ description: "Integrate your Sercomm SZ-ESW01-AU via Zigbee2mqtt with whatever s
 
 ## Notes
 
-Pairing
-
-Press and hold the pairing button while plugging in the device.
+None
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
