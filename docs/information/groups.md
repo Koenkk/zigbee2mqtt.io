@@ -47,7 +47,7 @@ Controlling a group is similar to controlling a single device. For example to tu
 ```
 
 ## State changes
-By default when one of the devices in a group changes it's state, the group state will also change. Also when the state of a group is changed by a command (so not via a state change of a device in it; see previous line), all devices in the group will also change it's state. This behaviour can be disabled by setting `optimistic: false` for the group.
+By default when one of the devices in a group changes its state, the group state will update to reflect the change. If any lights within the group have a state of `on`, the group state will stay `on`. Also when the state of a group is changed by a command (so not via a state change of a device in it; see previous line), all devices in the group will also change its state. This behaviour can be disabled by setting `optimistic: false` for the group.
 
 ## How do groups work?
 By using the above `add` command above, a device will be added to a group. The device itself is responsible for storing to which groups it belongs. Others, e.g. the coordinator, do not have knowledge to which device a groups belongs.
