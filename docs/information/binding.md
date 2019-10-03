@@ -36,3 +36,11 @@ This device does not support binding (limitation of the device). A workaround is
 4. Retrieve the group from the message, which is `0xeb12` in the above example.
 5. Convert this hexadecimal number to decimal using [Hexadecimal to Decimal Converter](https://www.binaryhexconverter.com/hex-to-decimal-converter). E.g. `0xeb12` = `60178`.
 6. Add this group to `configuration.yaml` and add your device (e.g.) bulb to this group. ([documentation](./groups.md))
+
+With newer version of Zigbee2mqtt (> 1.6) you do not need to sniff the group ID ([discussion](https://github.com/Koenkk/zigbee2mqtt/issues/782#issuecomment-514526256)).
+
+1. Pair the IKEA TRADRI remote control
+2. Enable debug logging (log_level: debug) ([documentation](../configuration/configuration.md))
+3. You will get log output like this: 10/3/2019, 9:28:02 AM - debug: Received Zigbee message from '0x90fd9ffffe90d778' of type 'commandToggle' with data '{}' from endpoint 1 with groupID 57173`
+4. Retrieve the group from the log output, which is `57173` in the above example.
+5. Add this group to `configuration.yaml` and add your device (e.g.) bulb to this group. ([documentation](./groups.md))
