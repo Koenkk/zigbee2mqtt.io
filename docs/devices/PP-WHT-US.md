@@ -39,7 +39,7 @@ on each line for the device.
 
 Save the file and restart zigbee2mqtt.
 
-# Power measurements
+## Power measurements
 This device only support power measurements with an up-to-date firmware on the plug which can only be done via the original hub. In case of an older firmware you will only see 0 values in the measurements. Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
 
 ## Manual Home Assistant configuration
