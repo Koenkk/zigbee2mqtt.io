@@ -32,6 +32,7 @@ devices:
     qos: 1
     debounce: 0.5
     retrieve_state: false
+    # Set `homeassistant: null` to skip discovery for this device
     homeassistant:
       # Applied to all discovered entities.
       expire_after: 30
