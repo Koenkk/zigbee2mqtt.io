@@ -3,7 +3,7 @@
 # Running Zigbee2mqtt in Virtual Environment
 It is possible to run Zigbee2mqtt in a virtual environment, this has been tested with a Raspberry Pi 3B+.
 
-This guide is similar to the [Running zigbee2mqtt guide](../information/running_zigbee2mqtt.md), follow the steps from there by replacing the steps with the ones from below.
+This guide is similar to the [Running zigbee2mqtt guide](../getting_started/running_zigbee2mqtt.md), follow the steps from there by replacing the steps with the ones from below.
 
 ## 2. Installing
 ```bash
