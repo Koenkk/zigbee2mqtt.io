@@ -45,9 +45,9 @@ or
 
 I connected only 3 specified contacts and GND. During the firmware, the stick and Arduino must be connected to the USB.
 
-![](https://github.com/kirovilya/files/blob/master/IMG_20180111_193941.jpg)
-![](https://github.com/kirovilya/files/blob/master/IMG_20180111_193923.jpg)
-![](https://github.com/kirovilya/files/blob/master/IMG_20180110_234401.jpg)
+![](../images/kirovilya/IMG_20180111_193941.jpg)
+![](../images/kirovilya/IMG_20180111_193923.jpg)
+![](../images/kirovilya/IMG_20180110_234401.jpg)
 
 6. After that, try to get information about the chip - if it works, then the connection is correct (example for COM9 port - Arduino port):
 
