@@ -128,58 +128,69 @@ Completed
 
 ### Via Arduino Uno/CCLoader
 
-**This has only been tested with a Genuine Arudino Uno (and an Arduino Pro Micro - China clone), but is significantly faster**
+**This has only been tested with a Genuine Arudino Uno (and an Arduino Pro Micro - China clone), but is significantly faster than CCLib**
 
-1. Download and unpack CCLoader firmware and tools https://github.com/RedBearLab/CCLoader
+#### Prepare the firmware
+1. Download the correct firmware (in this example we'll be using the [CC2531 firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin/))
+1. Unpack firmware and convert the hex file to binary using `objcopy` (do not use the included binary file!)
 
-2. Download the correct firmware, this example will be using the [CC2531 firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin/).
+   ***Windows***: download `objcopy.exe` as per [this](https://stackoverflow.com/questions/11054534/how-to-use-install-gnu-binutils-objdump) answer from StackOverflow.
+   ```
+   objcopy.exe --gap-fill 0xFF --pad-to 0x040000 -I ihex CC2531ZNP-Prod.hex -O binary CC2531ZNP-Prod.bin
+   ```
+   **Linux or Bash on Ubuntu on Windows**: install the `bintools` package using your package manager
+   ```bash
+   objcopy --gap-fill 0xFF --pad-to 0x040000 -I ihex CC2531ZNP-Prod.hex -O binary /tmp/CC2531ZNP-Prod.bin
+   ```
 
-3. Unpack firmware and convert the hex-file to bin.
+#### Prepare CCLoader
+1. Download and unpack [CCLoader](https://github.com/RedBearLab/CCLoader)
+1. On Windows you can use the precompiled `CCloader.exe`
+1. On Linux you have to compile `CCLoader` yourself so change directory to `CCLoader/SourceCode/Linux`, and run 
+   ```bash
+   gcc main.c -o CCLoader
+   ```
 
-4. Under Windows: (not tested by me)
-    objcopy.exe --gap-fill 0xFF --pad-to 0x040000 -I ihex CC2531ZNP-Prod.hex -O binary CC2531ZNP-Prod.bin
-    Place the resulting CC2531ZNP-Prod.bin in the Windows folder of CCLoader with CCLoader.exe.
+#### Flashing the Arduino and the CC2531 device 
 
-   Under Linux:
-    objcopy --gap-fill 0xFF --pad-to 0x040000 -I ihex CC2531ZNP-Prod.hex -O binary /tmp/CC2531ZNP-Prod.bin
+1. Flash Arudino Uno with `Arduino\CCLoader\CCLoader.ino`
+1. Note the COM port number or device name as this will be used later
+1. Connect Arduino pins as described below to the debug header of the CC device
 
-objcopy is part of the bintools package.
+   | Arduino | CC Pin | CC Name |
+   |---|---|---|
+   | GND | 1 | GND |
+   | D4 | 7 | RESETn |
+   | D5 | 3 | DC (Debug Clock) |
+   | D6 | 4 | DD (Debug Data) |
 
-5. Flash Arudino Uno with Arduino\CCLoader\CCLoader.ino, note the COM port number/device this will be used later
+   ![](https://www.waveshare.com/img/devkit/CC-Debugger/CC-Debugger-JTAG-Header.jpg)
 
-6. Connect pins as described to debug header
+   If you have a 3.3V Arduino you can optionaly connect `3.3V -> Target Voltage Sense (Pin 2)` and program the CC2531 without connecting the CC2531 to USB (in the next step).
+1. Connect Arduino first, then within a couple seconds connect the CC2531 to USB power
+1. Place the prepared `CC2531ZNP-Prod.bin` next to the executable file
+1. Start the flashing process
+   
+   **Windows**
+   ```
+   CCLoader_x86_64.exe [Number of the COM port] CC2531ZNP-Prod.bin 0
+   ```
+   *Example:* Arduino UNO on COM7
+   ```
+   CCLoader_x86_64.exe 7 CC2531ZNP-Prod.bin 0
+   ```
+   **Linux**
+   ```
+   ./CCLoader [Name of the USB device] CC2531ZNP-Prod.bin 0
+   ```
+   *Example:* Arduino Uno on `/dev/ttyACM0`
+   ```
+   ./CCLoader /dev/ttyACM0 CC2531ZNP-Prod.bin 0
+   ```
 
-```
-Arduino | CC Header
-GND -> GND
-4 -> RESETn
-5 -> DC (Debug Clock)
-6 -> DD (Debug Data)
-```
+It should be done in a few minutes.
 
-![](https://www.waveshare.com/img/devkit/CC-Debugger/CC-Debugger-JTAG-Header.jpg)
-
-If you have a 3.3V Arduino you can optionaly connect
-```
-3.3V -> Target Voltage Sense (Pin 2)
-```
-and programm the CC2531 without connecting the CC2531 to USB (in the next step).
-
-7. Connect Arduino first, then within a couple seconds connect the CC2531 to USB power
-
-8. Under Windows - open a command window in the Windows folder with CCLoader.exe
-
-Under Linux you have to compile CCLoader first - so change to CCLoader/SourceCode/Linux, and run ```gcc main.c -o CCLoader```.
-
-9. Under Windows start the flash with ```CCLoader_x86_64.exe COMNUM CC2531ZNP-Prod.bin 0```
-
-- Example: CCLoader_x86_64.exe 7 CC2531ZNP-Prod.bin 0
-
-Under Linux start the flash with ```./CCLoader USBDEV CC2531ZNP-Prod.bin 0```
-
-- Example ./CCLoader /dev/ttyACM0 CC2531ZNP-Prod.bin 0
-
-If burning fails/gets stuck at "Request sent already! Waiting for respond..." - try again, check your wiring, try using "1" instead of "0" as the last parameter.
+If burning fails/gets stuck at `Request sent already! Waiting for respond...` - try again, check your wiring, try using `1` instead of `0` as the last parameter.
 
 ### With Raspberry
 
