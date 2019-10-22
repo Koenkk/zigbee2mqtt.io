@@ -14,17 +14,17 @@ zigbee2mqtt publishes it configuration to this topic containing the `log_level` 
 
 ## zigbee2mqtt/bridge/log
 zigbee2mqtt will output log to this endpoint. Message are always in the form of `{"type":"TYPE","message":"MESSAGE"}`. Possible message types are:
-* `"pairing"`: logging when device is connecting to the network.
-* `"device_connected"`: send when a new device connects to the network.
-* `"device_removed"`: send when a device is removed from the network.
-* `"device_banned"`: send when a device is banned from the network.
-* `"device_whitelisted"`: send when a device is whitelisted from the network.
-* `"device_renamed"`: send when a device is renamed.
-* `"device_bind"`: send when a device is bound.
-* `"device_unbind"`: send when a device is unbound.
-* `"device_group_add"`: send when a device is added to a group.
-* `"device_group_remove"`: send when a device is removed from a group.
-* `"device_group_remove_all"`: send when a device is removed from all groups.
+* `"pairing"`: logged when device is connecting to the network.
+* `"device_connected"`: sent when a new device connects to the network.
+* `"device_removed"`: sent when a device is removed from the network.
+* `"device_banned"`: sent when a device is banned from the network.
+* `"device_whitelisted"`: sent when a device is whitelisted from the network.
+* `"device_renamed"`: sent when a device is renamed.
+* `"device_bind"`: sent when a device is bound.
+* `"device_unbind"`: sent when a device is unbound.
+* `"device_group_add"`: sent when a device is added to a group.
+* `"device_group_remove"`: sent when a device is removed from a group.
+* `"device_group_remove_all"`: sent when a device is removed from all groups.
 * `"devices"`: a list of all devices, this message can be triggered by sending a message to `zigbee2mqtt/bridge/config/devices` (payload doesn't matter).
 * `"groups"`: a list of all groups, this message can be triggered by sending a message to `zigbee2mqtt/bridge/config/groups` (payload doesn't matter).
 * `"zigbee_publish_error"`: logged when a Zigbee publish errors occurs, contains the error and metadata containing the device and command.
@@ -62,13 +62,13 @@ Allows you to change device specific options during runtime. Options can only be
 ```
 
 ## zigbee2mqtt/bridge/config/remove
-Allows you to remove devices from the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful remove a [`device_removed`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is send.
+Allows you to remove devices from the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful remove a [`device_removed`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is sent.
 
 ## zigbee2mqtt/bridge/config/ban
-Allows you to ban devices from the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful ban a [`device_banned`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is send.
+Allows you to ban devices from the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful ban a [`device_banned`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is sent.
 
 ## zigbee2mqtt/bridge/config/whitelist
-Allows you to whitelist devices in the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful ban a [`device_whitelisted`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is send. Note that when devices are whitelisted, all device which are not whitelisted will be removed from the network.
+Allows you to whitelist devices in the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful whitelisting a [`device_whitelisted`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is sent. Note that when devices are whitelisted, all device which are not whitelisted will be removed from the network.
 
 ## zigbee2mqtt/bridge/config/rename
 Allows you to change the `friendly_name` of a device on the fly.
@@ -213,7 +213,7 @@ This is the counterpart of the `set` command. It allows you to read a value from
 Only used when `homeassistant: true` in `configuration.yaml`. Required for [Home Assistant MQTT discovery](https://www.home-assistant.io/docs/mqtt/discovery/).
 
 ## Device specific
-Device specific commands are always send to the topic: `zigbee2mqtt/[DEVICE_ID]/set`. Some commands also support reading of current value by sending request to `zigbee2mqtt/[DEVICE_ID]/get`. Below you will find the possible payloads.
+Device specific commands are always sent to the topic: `zigbee2mqtt/[DEVICE_ID]/set`. Some commands also support reading of current value by sending a request to `zigbee2mqtt/[DEVICE_ID]/get`. Below you will find the possible payloads.
 
 ### Philips Hue power-on behavior
 Sets the Philips Hue power-on behavior which was introduced with the November/December '18 firmware update.
