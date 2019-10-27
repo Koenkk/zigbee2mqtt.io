@@ -19,10 +19,8 @@ description: "Integrate your Xiaomi JTQJ-BF-01LM/BW via Zigbee2mqtt with whateve
 
 
 ### Pairing
-Press and hold reset button on the device for +- 5 seconds until the
-blue light blinks three times, release the reset button (the blue light will blink once more) and wait.
-
-*NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
+Plug the device in and wait for around 5mins, while it performs its self-tests. A successful self-test is indicated by couple of beeps and a steady green led.
+Now the device is ready for pairing. To initiate pairing quickly press the button three times in a row.
 
 
 ## Manual Home Assistant configuration
