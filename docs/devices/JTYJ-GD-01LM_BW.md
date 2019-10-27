@@ -19,8 +19,7 @@ description: "Integrate your Xiaomi JTYJ-GD-01LM/BW via Zigbee2mqtt with whateve
 
 
 ### Pairing
-Press and hold reset button on the device for +- 5 seconds until the
-blue light blinks three times, release the reset button (the blue light will blink once more) and wait.
+Press the button 3 times in a row and wait until the sensor is successfully interviewed.
 
 *NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
 
