@@ -160,19 +160,22 @@ groups: groups.yaml
     retain: true
 ```
 
-## Specifying MQTT user and password in a different file
-To specify the MQTT user and password in a different file, e.g `secret.yaml`, use the following configuration.
+## Specifying MQTT user/password and network_key in a different file
+To specify the MQTT user/password and network_key in a different file, e.g `secret.yaml`, use the following configuration.
 
 **configuration.yaml**
 ```yaml
+# IMPORTANT: Don't forget the quotes!
 mqtt:
-  # IMPORTANT: Don't forget the quotes!
   user: '!secret user'
   password: '!secret password'
+advanced:
+  network_key: '!secret network_key'
 ```
 
 **secret.yaml**
 ```yaml
 user: mqtt_user
 password: mqtt_password
+network_key: [1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]
 ```
