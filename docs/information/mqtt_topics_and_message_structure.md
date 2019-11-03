@@ -64,6 +64,27 @@ Allows you to change device specific options during runtime. Options can only be
 ## zigbee2mqtt/bridge/config/remove
 Allows you to remove devices from the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful remove a [`device_removed`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is sent.
 
+Note that in Zigbee the coordinator can only **request** a device to remove itself from the network.
+Which means that in case a device refuses to respond to this request it is not removed from the network.
+This can happen for e.g. battery powered devices which are sleeping and thus not receiving this request.
+In this case you will see the following in the zigbee2mqtt log:
+
+```
+zigbee2mqtt:info  2019-11-03T13:39:30: Removing 'dimmer'
+zigbee2mqtt:error 2019-11-03T13:39:40: Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)
+```
+
+An alternative way to remove the device is by factory resetting it, this probably won't work for all devices as it depends on the device itself.
+In case the device did remove itself from the network, you will see:
+
+```
+zigbee2mqtt:warn  2019-11-03T13:36:18: Device '0x00158d00024a5e57' left the network
+```
+
+In case all of the above fails, you can force remove a device. Note that a force remove will **only** remove the device from the database. Until this device is factory resetted, it will still hold the network encryption key and thus is still able to communicate over the network!
+
+To force remove a device use the following topic: `zigbee2mqtt/bridge/config/force_remove`
+
 ## zigbee2mqtt/bridge/config/ban
 Allows you to ban devices from the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful ban a [`device_banned`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is sent.
 
