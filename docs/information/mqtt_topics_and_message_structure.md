@@ -81,7 +81,7 @@ In case the device did remove itself from the network, you will see:
 zigbee2mqtt:warn  2019-11-03T13:36:18: Device '0x00158d00024a5e57' left the network
 ```
 
-In case all of the above fails, you can force remove a device. Note that a force remove will **only** remove the device from the database. Until this device is factory resetted, it will still hold the network encryption key and thus is still able to communicate over the network!
+In case all of the above fails, you can force remove a device. Note that a force remove will **only** remove the device from the database. Until this device is factory reset, it will still hold the network encryption key and thus is still able to communicate over the network!
 
 To force remove a device use the following topic: `zigbee2mqtt/bridge/config/force_remove`
 
