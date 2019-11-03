@@ -24,6 +24,10 @@ keep opening and closing the sensor (pull/insert the sensor parts next to eachot
 otherwise device will fall asleep before it gets fully configured and will not send state changes.
 
 
+### Device specific configuration
+This devices does not have any device specific configuration.
+
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possbile with the following configuration:

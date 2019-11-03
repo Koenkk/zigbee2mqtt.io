@@ -24,6 +24,10 @@ To establish a connection keep the remote within 2 meters from the hub.
 Press and hold the smart group button (button with two bulbs) and wait until the lights, below the channels, flash.
 
 
+### Device specific configuration
+This devices does not have any device specific configuration.
+
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possbile with the following configuration:

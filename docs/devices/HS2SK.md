@@ -17,7 +17,10 @@ description: "Integrate your HEIMAN HS2SK via Zigbee2mqtt with whatever smart ho
 
 ## Notes
 
-None
+
+### Device specific configuration
+This devices does not have any device specific configuration.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

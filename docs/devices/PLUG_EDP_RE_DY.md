@@ -22,6 +22,10 @@ description: "Integrate your EDP PLUG EDP RE:DY via Zigbee2mqtt with whatever sm
 Factory reset the plug (hold the switch button for >10sec). After resetting the switch will automatically connect.
 
 
+### Device specific configuration
+This devices does not have any device specific configuration.
+
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possbile with the following configuration:

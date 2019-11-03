@@ -17,7 +17,10 @@ description: "Integrate your SmartThings STS-PRS-251 via Zigbee2mqtt with whatev
 
 ## Notes
 
-None
+
+### Device specific configuration
+This devices does not have any device specific configuration.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

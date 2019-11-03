@@ -17,7 +17,10 @@ description: "Integrate your SmartThings F-MLT-US-2 via Zigbee2mqtt with whateve
 
 ## Notes
 
-None
+
+### Device specific configuration
+This devices does not have any device specific configuration.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

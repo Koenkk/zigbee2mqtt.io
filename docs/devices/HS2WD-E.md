@@ -18,6 +18,10 @@ description: "Integrate your HEIMAN HS2WD-E via Zigbee2mqtt with whatever smart 
 ## Notes
 
 
+### Device specific configuration
+This devices does not have any device specific configuration.
+
+
 ### Triggering the alarm
 The alarm can be trigged by publishing to `zigbee2mqtt/[DEVICE_ID]/set` message
 `{"warning": {"duration": 10, "mode": "emergency", "strobe": false}}`.

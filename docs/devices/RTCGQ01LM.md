@@ -48,6 +48,10 @@ To work around this, a
 is needed.
 
 
+### Device specific configuration
+This devices does not have any device specific configuration.
+
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possbile with the following configuration:

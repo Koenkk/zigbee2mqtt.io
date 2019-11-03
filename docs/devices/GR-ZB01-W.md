@@ -17,7 +17,10 @@ description: "Integrate your AXIS GR-ZB01-W via Zigbee2mqtt with whatever smart 
 
 ## Notes
 
-None
+
+### Device specific configuration
+This devices does not have any device specific configuration.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

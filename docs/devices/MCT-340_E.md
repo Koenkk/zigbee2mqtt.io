@@ -17,7 +17,10 @@ description: "Integrate your Visonic MCT-340 E via Zigbee2mqtt with whatever sma
 
 ## Notes
 
-None
+
+### Device specific configuration
+This devices does not have any device specific configuration.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

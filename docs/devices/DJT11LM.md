@@ -25,6 +25,10 @@ Then press the button again every 2 seconds (maximum 20 times).
 *NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
 
 
+### Device specific configuration
+This devices does not have any device specific configuration.
+
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possbile with the following configuration:

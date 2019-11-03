@@ -23,6 +23,10 @@ Press and hold water logo on the device for +- 10 seconds until the blue light b
 three times, release the water logo (the blue light will blink once more) and wait.
     
 
+### Device specific configuration
+This devices does not have any device specific configuration.
+
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possbile with the following configuration:

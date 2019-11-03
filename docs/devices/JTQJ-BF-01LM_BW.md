@@ -23,6 +23,10 @@ Plug the device in and wait for around 5mins, while it performs its self-tests. 
 Now the device is ready for pairing. To initiate pairing quickly press the button three times in a row.
 
 
+### Device specific configuration
+This devices does not have any device specific configuration.
+
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possbile with the following configuration:

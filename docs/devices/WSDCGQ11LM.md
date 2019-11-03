@@ -43,6 +43,10 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 e.g. `1` would add 1 to the pressure reported by the device; default `0`.
 
 
+### Device specific configuration
+This devices does not have any device specific configuration.
+
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possbile with the following configuration:

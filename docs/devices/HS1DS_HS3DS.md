@@ -17,7 +17,10 @@ description: "Integrate your HEIMAN HS1DS/HS3DS via Zigbee2mqtt with whatever sm
 
 ## Notes
 
-None
+
+### Device specific configuration
+This devices does not have any device specific configuration.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

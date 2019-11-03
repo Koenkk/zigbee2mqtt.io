@@ -28,6 +28,8 @@ blue light blinks three times, release the reset button (the blue light will bli
 ### Device type specific configuration
 *[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
 
+* `illuminance_calibration`: Allows to manually calibrate illuminance values,
+e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
 * `no_occupancy_since`: Timeout (in seconds) after `no_occupancy_since` is send.
 This indicates the time since last occupancy was detected.
 For example `no_occupancy_since: [10, 60]` will send a `{"no_occupancy_since": 10}` after 10 seconds
@@ -46,12 +48,8 @@ To work around this, a
 is needed.
 
 
-### Device type specific configuration
-*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
-
-
-* `illuminance_calibration`: Allows to manually calibrate illuminance values,
-e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
+### Device specific configuration
+This devices does not have any device specific configuration.
 
 
 ## Manual Home Assistant configuration
