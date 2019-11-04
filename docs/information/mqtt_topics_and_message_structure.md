@@ -98,6 +98,8 @@ Format should be: `{"old": "OLD_FRIENDLY_NAME", "new": "NEW_FRIENDLY_NAME"}`.
 ## zigbee2mqtt/bridge/config/add_group
 Allows you to add a group, payload should be the name of the group, e.g. `my_group`.
 
+In case you also want to specify the group ID, provide the following payload `{"friendly_name": "my_group", "id": 42}`.
+
 ## zigbee2mqtt/bridge/config/remove_group
 Allows you to remove a group, payload should be the name of the group, e.g. `my_group`.
 
