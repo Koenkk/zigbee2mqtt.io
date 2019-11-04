@@ -136,6 +136,17 @@ For the OSRAM Smart+ plug (AB3257001NJ) hold the on/off button until your hear a
 `,
     },
     {
+        model: ['ZLED-2709'],
+        note: `
+### Pairing
+After a factory reset the bulb will automatically connect.
+
+Power on and off the bulb 5 times (screw/uscrew the bulb if you don't have a physical switch)
+to perform a factory reset.
+As a reset confirmation the bulb will blink 4 times.
+`,
+    },
+    {
         model: [
             '4058075816718', 'AA69697', 'AC03645', 'AC03642', 'AA70155', 'AA68199', 'AB32840', '4058075816794',
             'AC03641', '4052899926158', 'AB401130055', 'AB35996', 'AC08562', 'AC03648',
