@@ -17,8 +17,12 @@ description: "Integrate your Xiaomi JTQJ-BF-01LM/BW via Zigbee2mqtt with whateve
 
 ## Notes
 
+
 ### Pairing
-Press the button on the device 3 times, after this it will automatically pair.
+Plug the device in and wait for around 5mins, while it performs its self-tests.
+A successful self-test is indicated by couple of beeps and a steady green led.
+Now the device is ready for pairing. To initiate pairing quickly press the button three times in a row.
+
 
 ### Sensitivity
 The sensitivity can be changed by publishing to `zigbee2mqtt/[DEVICE_ID]/set`
@@ -29,6 +33,7 @@ values: `low`, `medium`,  `high`.
 A self-test can be trigged by publishing to `zigbee2mqtt/[DEVICE_ID]/set`
 `{"selftest": ""}`.
 If the selftest is executed succesfully you will hear the device beep in 30 seconds.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

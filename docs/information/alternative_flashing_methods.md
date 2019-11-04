@@ -4,7 +4,104 @@
 
 *NOTE: When you have already flashed the stick and paired devices to it, reflashing it requires to re-pair all your devices!*
 
-### Via Arduino/ESP8266
+### Via Arduino Uno/ESP8266 with CCLoader
+
+**This has been tested with a Genuine Arudino Uno, an Arduino Pro Micro - China clone, and a NodeMCU ESP8266 and is significantly faster than CCLib**
+
+#### Prepare the firmware
+1. Download the correct firmware (in this example we'll be using the [CC2531 firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin/))
+1. Unpack firmware and convert the hex file to binary using `objcopy` (do not use the included binary file!)
+
+   ***Windows***: download `objcopy.exe` as per [this](https://stackoverflow.com/questions/11054534/how-to-use-install-gnu-binutils-objdump) answer from StackOverflow.
+   ```
+   objcopy.exe --gap-fill 0xFF --pad-to 0x040000 -I ihex CC2531ZNP-Prod.hex -O binary CC2531ZNP-Prod.bin
+   ```
+   **Linux or Bash on Ubuntu on Windows**: install the `bintools` package using your package manager
+   ```bash
+   objcopy --gap-fill 0xFF --pad-to 0x040000 -I ihex CC2531ZNP-Prod.hex -O binary /tmp/CC2531ZNP-Prod.bin
+   ```
+
+#### Prepare CCLoader
+1. Download and unpack [CCLoader](https://github.com/RedBearLab/CCLoader)
+1. On Windows you can use the precompiled `CCloader.exe`
+1. On Linux you have to compile `CCLoader` yourself so change directory to `CCLoader/SourceCode/Linux`, and run 
+   ```bash
+   gcc main.c -o CCLoader
+   ```
+
+#### Flashing the Arduino or ESP8266 and the CC2531 device 
+
+1. For Arduino, leave the pins set as default in 'Arduino\CCLoader\CCLoader.ino' (lines 86-90):
+```
+// Debug control pins & the indicate LED
+int DD = 6;
+int DC = 5;
+int RESET = 4;
+int LED = 13;
+```
+
+For ESP8266 (NodeMCU or WeMos D1 Mini) edit those pins in 'Arduino\CCLoader\CCLoader.ino' (lines 86-90) to usable pins for the ESP8266, these worked for me (note that the number is the GPIO number, not the label on the NodeMCU):
+```
+// Debug control pins & the indicate LED
+int DD = 14; //GPIO14=D5 on NodeMCU/WeMos D1 Mini
+int DC = 4; //GPIO4=D2 on NodeMCU/WeMos D1 Mini
+int RESET = 5; //GPIO5=D1 on NodeMCU/WeMos D1 Mini
+int LED = 2; //GPIO2=D4 and the Blue LED on the WeMos D1 Mini and the ESP-12E module on the NodeMCU, or can use GPIO16=D0 for the other Blue LED on NodeMCU
+```
+
+1. Flash Arduino Uno or ESP8266 board with `Arduino\CCLoader\CCLoader.ino` (For NodeMCU on Windows: install [the Arduino IDE](https://www.arduino.cc/en/main/software), then in Preferences, add the following URL to the Additional Boards Manager URL field: http://arduino.esp8266.com/stable/package_esp8266com_index.json , then go to the Boards Manager and install the esp8266 package, then set the board to "NodeMCU 1.0 (ESP-12E module)" or if you are using a WeMos D1 Mini set it to "LOLIN(WEMOS) D1 R2 & Mini", then set Port to the correct COM port (it was COM3 for me with a NodeMCU), then Upload the sketch.)
+1. Note the COM port number or device name as this will be used later
+1. Connect Arduino pins as described below to the debug header of the CC device
+
+   | Arduino | CC Pin | CC Name |
+   |---|---|---|
+   | GND | 1 | GND |
+   | D4 | 7 | RESETn |
+   | D5 | 3 | DC (Debug Clock) |
+   | D6 | 4 | DD (Debug Data) |
+
+   ![](https://www.waveshare.com/img/devkit/CC-Debugger/CC-Debugger-JTAG-Header.jpg)
+
+   If you have a 3.3V Arduino you can optionaly connect `3.3V -> Target Voltage Sense (Pin 2)` and program the CC2531 without connecting the CC2531 to USB (in the next step).
+   
+   Connect the ESP8266 pins as described below to the debug header of the CC device
+   
+   | ESP8266 | CC Pin | CC Name |
+   |---|---|---|
+   | GND | 1 | GND |
+   | D1/GPIO5 | 7 | RESETn |
+   | D2/GPIO4 | 3 | DC (Debug Clock) |
+   | D5/GPIO14 | 4 | DD (Debug Data) |
+   
+   ![C2531 debug pins](https://user-images.githubusercontent.com/35885181/67834765-dcab2280-faad-11e9-8755-971f0e456217.jpg)
+   ![CC2531 stick and NodeMCU](https://user-images.githubusercontent.com/35885181/67834764-dc128c00-faad-11e9-8e06-0937e1bb6790.jpg)
+   
+1. Connect Arduino/ESP8266 first, then within a couple seconds connect the CC2531 to USB power
+1. Place the prepared `CC2531ZNP-Prod.bin` next to the executable file
+1. Start the flashing process
+   
+   **Windows**
+   ```
+   CCLoader_x86_64.exe [Number of the COM port] CC2531ZNP-Prod.bin 0
+   ```
+   *Example:* Arduino UNO on COM7
+   ```
+   CCLoader_x86_64.exe 7 CC2531ZNP-Prod.bin 0
+   ```
+   **Linux**
+   ```
+   ./CCLoader [Name of the USB device] CC2531ZNP-Prod.bin 0
+   ```
+   *Example:* Arduino Uno on `/dev/ttyACM0`
+   ```
+   ./CCLoader /dev/ttyACM0 CC2531ZNP-Prod.bin 0
+   ```
+
+It should be done in a few minutes.
+
+If burning fails/gets stuck at `Request sent already! Waiting for respond...` - try again, check your wiring, try using `1` instead of `0` as the last parameter.
+
+### Via Arduino/ESP8266 with CCLib
 Flashing firmware via Arduino is implemented using the project https://github.com/wavesoft/CCLib
 **But with minor improvements!!!**
 
@@ -45,9 +142,9 @@ or
 
 I connected only 3 specified contacts and GND. During the firmware, the stick and Arduino must be connected to the USB.
 
-![](https://github.com/kirovilya/files/blob/master/IMG_20180111_193941.jpg)
-![](https://github.com/kirovilya/files/blob/master/IMG_20180111_193923.jpg)
-![](https://github.com/kirovilya/files/blob/master/IMG_20180110_234401.jpg)
+![](../images/kirovilya/IMG_20180111_193941.jpg)
+![](../images/kirovilya/IMG_20180111_193923.jpg)
+![](../images/kirovilya/IMG_20180110_234401.jpg)
 
 6. After that, try to get information about the chip - if it works, then the connection is correct (example for COM9 port - Arduino port):
 
@@ -125,61 +222,6 @@ Flashing:
 
 Completed
 ```
-
-### Via Arduino Uno/CCLoader
-
-**This has only been tested with a Genuine Arudino Uno (and an Arduino Pro Micro - China clone), but is significantly faster**
-
-1. Download and unpack CCLoader firmware and tools https://github.com/RedBearLab/CCLoader
-
-2. Download the correct firmware, this example will be using the [CC2531 firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin/).
-
-3. Unpack firmware and convert the hex-file to bin.
-
-4. Under Windows: (not tested by me)
-    objcopy.exe --gap-fill 0xFF --pad-to 0x040000 -I ihex CC2531ZNP-Prod.hex -O binary CC2531ZNP-Prod.bin
-    Place the resulting CC2531ZNP-Prod.bin in the Windows folder of CCLoader with CCLoader.exe.
-
-   Under Linux:
-    objcopy --gap-fill 0xFF --pad-to 0x040000 -I ihex CC2531ZNP-Prod.hex -O binary /tmp/CC2531ZNP-Prod.bin
-
-objcopy is part of the bintools package.
-
-5. Flash Arudino Uno with Arduino\CCLoader\CCLoader.ino, note the COM port number/device this will be used later
-
-6. Connect pins as described to debug header
-
-```
-Arduino | CC Header
-GND -> GND
-4 -> RESETn
-5 -> DC (Debug Clock)
-6 -> DD (Debug Data)
-```
-
-![](https://www.waveshare.com/img/devkit/CC-Debugger/CC-Debugger-JTAG-Header.jpg)
-
-If you have a 3.3V Arduino you can optionaly connect
-```
-3.3V -> Target Voltage Sense (Pin 2)
-```
-and programm the CC2531 without connecting the CC2531 to USB (in the next step).
-
-7. Connect Arduino first, then within a couple seconds connect the CC2531 to USB power
-
-8. Under Windows - open a command window in the Windows folder with CCLoader.exe
-
-Under Linux you have to compile CCLoader first - so change to CCLoader/SourceCode/Linux, and run ```gcc main.c -o CCLoader```.
-
-9. Under Windows start the flash with ```CCLoader_x86_64.exe COMNUM CC2531ZNP-Prod.bin 0```
-
-- Example: CCLoader_x86_64.exe 7 CC2531ZNP-Prod.bin 0
-
-Under Linux start the flash with ```./CCLoader USBDEV CC2531ZNP-Prod.bin 0```
-
-- Example ./CCLoader /dev/ttyACM0 CC2531ZNP-Prod.bin 0
-
-If burning fails/gets stuck at "Request sent already! Waiting for respond..." - try again, check your wiring, try using "1" instead of "0" as the last parameter.
 
 ### With Raspberry
 

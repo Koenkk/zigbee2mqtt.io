@@ -7,6 +7,25 @@ Switch the lamp on five times until the bulb blinks several times.
 `,
     },
     {
+        model: 'E1525',
+        note: `
+### Pairing
+Pair the sensor to Zigbee2mqtt by pressing the pair button 4 times in a row.
+The red light on the front side should flash a few times and the turn off.
+After a few seconds it turns back on and pulsate. When connected, the light turns off.
+`,
+    },
+    {
+        model: 'E1743',
+        note: `
+### Pairing
+Pair the switch to Zigbee2mqtt by pressing the pair button (found under the back cover next to the battery)
+4 times in a row. The red light on the front side should flash a few times and the turn off
+(it's more visible to see the light from the back). After a few seconds it turns back on and pulsate.
+When connected, the light turns off.
+`,
+    },
+    {
         model: 'E1743',
         note: `
 ### Binding
@@ -64,24 +83,10 @@ Save the file and restart zigbee2mqtt.
         vendor: 'Gledopto',
         note: `
 ### Pairing
-Some of the Gledopto devices are not providing a \`modelID\`, in that case the modelID \`undefined\` is shown.
-Sometimes it helps to repair the device while keeping it close to the coordinator (less than one meter).
-
-If this fails, the \`modelID\` has to be set manually in \`data/database.db\`.
-First find out the \`modelID\` of your devices from
-the [Supported devices page](../information/supported_devices.md).
-Then open \`data/database.db\` and add the \`modelId\` as highlighted in **bold** below.
-
-*{"id":50,"type":"Router","ieeeAddr":"0x00124b0019c606cd","nwkAddr":10828,"manufId":0,
-"manufName":"GLEDOPTO","powerSource":"Mains (single phase)",**"modelId":"GL-S-007Z"**,
-"epList":[11,13],"status":"offline","joinTime":null,"endpoints":{
-"11":{"profId":49246,"epId":11,"devId":528,"inClusterList":[0,3,4,5,6,8,768],
-"outClusterList":[],"clusters":{"genBasic":{"dir":{"value":1},"attrs":{}},
-"genIdentify":{"dir":{"value":1},"attrs":{}},"genGroups":{"dir":{"value":1},"attrs":{}},
-"genScenes":{"dir":{"value":1},"attrs":{}},"genOnOff":{"dir":{"value":1},"attrs":{}},
-"genLevelCtrl":{"dir":{"value":1},"attrs":{}},"lightingColorCtrl":{"dir":{"value":1},"attrs":{}}}},
-"13":{"profId":49246,"epId":13,"devId":57694,"inClusterList":[4096],"outClusterList":[4096],
-"clusters":{"lightLink":{"dir":{"value":3},"attrs":{}}}}},"_id":"geCEMkRqlaMe6muE"}*
+1. Switch on your device.
+2. Now switch off and on within 2 seconds.
+3. Repeat off/on four times.
+4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 `,
     },
     {
@@ -94,6 +99,17 @@ Factory reset by:
 - After releasing the Binding Key, press the Switch Key within 2 seconds. The network indicator
 will rapidly flash green.
 - After fast flashes, Z809A will reboot, and the restore is completed. The socket will automatically connect now.
+`,
+    },
+    {
+        model: '4713407',
+        note: `
+### Pairing
+1. Turn bulb on.
+2. Turn power off for 2 seconds.
+3. Turn power on for 1 second.
+4. Repeat turning off and turning on six times.
+5. Bulb will flash and is now reset.
 `,
     },
     {
@@ -188,6 +204,20 @@ by pressing and holding the reset button on the bottom of the remote (next to th
 `,
     },
     {
+        model: ['AIRAM-CTR.U'],
+        note: `
+### Pairing
+Hold small reset button pressed (located under battery cover on the backside of remote) for 4
+seconds and device will reset and will attempt to join network.
+Keep clicking any button on the frontside of the device to keep device awake while pairing.
+You should be clicking every two seconds until pairing is complete.
+
+Device seems to join network also when it is paired directly to Airam bulb (which is joined to network already)
+(https://www.zigbee2mqtt.io/devices/4713407.html) by keeping ON and DIM buttons pressed while holding remote
+within 5 centimeters away from Airam bulb.
+`,
+    },
+    {
         model: ['324131092621'],
         note: `
 ### Pairing
@@ -199,6 +229,8 @@ You can let go when the light on the front flashes red/green briefly.
 Use the Hue dimmer switch to factory reset a Hue light bulb see
 [HOWTO: Factory reset a Hue bulb](https://www.youtube.com/watch?v=qvlEAELiJKs).
 After resetting the bulb will automatically connect.
+This method also works for Philips Hue Lightstrips.
+Hue dimmer switch can also be used to factory reset Ikea Trådfri light bulbs using the same method described above.
 `,
     },
     {
@@ -232,7 +264,8 @@ After that the remote should show up as a paired device.
         note: `
 ### Pairing
 Pair the remote to Zigbee2mqtt by holding it close to the coordinator and
-pressing the button next to the battery 4 times. The red light on the remote will now flash a few times.
+pressing the inside button, next to the CR2032 battery, 4 times.
+The red light on the remote will now flash a few times.
 `,
     },
     {
@@ -290,7 +323,7 @@ small pin or paperclip to push the reset button once.
     {
         vendor: 'IKEA',
         supports: ['brightness'],
-        notModel: ['E1524/E1810', 'ICPSHC24-10EU-IL-1', 'ICPSHC24-30EU-IL-1', 'ICTC-G-1'],
+        notModel: ['E1524/E1810', 'ICPSHC24-10EU-IL-1', 'ICPSHC24-30EU-IL-1', 'ICTC-G-1', 'E1743'],
         note: `
 ### Pairing
 Factory reset the light bulb ([video](https://www.youtube.com/watch?v=npxOrPxVfe0)).
@@ -316,8 +349,7 @@ This keeps the device awake, otherwise pairing will **fail!**.
     },
     {
         model: [
-            'WXKG11LM', 'WXKG12LM', 'WSDCGQ11LM', 'RTCGQ11LM', 'MCCGQ11LM', 'JTYJ-GD-01LM/BW',
-            'JTQJ-BF-01LM/BW',
+            'WXKG11LM', 'WXKG12LM', 'WSDCGQ11LM', 'RTCGQ11LM', 'MCCGQ11LM',
         ],
         note: `
 ### Pairing
@@ -325,6 +357,46 @@ Press and hold reset button on the device for +- 5 seconds until the
 blue light blinks three times, release the reset button (the blue light will blink once more) and wait.
 
 *NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
+`,
+    },
+    {
+        model: ['TI0001'],
+        note: `
+### Important
+These devices can only be used on channel 26.
+These devices are locked to the manufacturer's network key (ext_pan_id).
+Your configuration file [data/configuration.yaml](../configuration/configuration) must contain the following:
+
+\`\`\`yaml
+advanced:
+  ext_pan_id: [33,117,141,25,0,75,18,0]
+  channel: 26
+\`\`\`
+
+Therefore these devices may not co-existence with other Zigbee devices.
+Maybe, you need to add a dedicated coordinator and create a new network for Livolo.
+If you decided to create a new network, you should specify another 'pan_id'.
+
+\`\`\`yaml
+advanced:
+  pan_id: 6756
+\`\`\`
+`,
+    },
+    {
+        model: ['JTQJ-BF-01LM/BW', 'JTYJ-GD-01LM/BW'],
+        note: `
+### Pairing
+Plug the device in and wait for around 5mins, while it performs its self-tests.
+A successful self-test is indicated by couple of beeps and a steady green led.
+Now the device is ready for pairing. To initiate pairing quickly press the button three times in a row.
+`,
+    },
+    {
+        model: ['SZ-ESW01-AU'],
+        note: `
+### Pairing
+Press and hold the pairing button while plugging in the device.
 `,
     },
     {
@@ -343,6 +415,15 @@ Then press the button again every 2 seconds (maximum 20 times).
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
+`,
+    },
+    {
+        model: ['9290012607', '9290019758'],
+        note: `
+### Pairing
+Press and hold the setup button on the rear of the device for +- 10 seconds (until the green light goes solid)
+to initiate pairing. Please note that the pairing indicator light is below the main sensor
+(as oppose to the obvious indicator above the main sensor).
 `,
     },
     {
@@ -461,7 +542,30 @@ color temperature (if applicable) and color (if applicable) changes. Defaults to
 Note that this value is overridden if a \`transition\` value is present in the MQTT command payload.
 `,
     },
+    {
+        model: ['JTQJ-BF-01LM/BW', 'JTYJ-GD-01LM/BW'],
+        note: `
+### Sensitivity
+The sensitivity can be changed by publishing to \`zigbee2mqtt/[DEVICE_ID]/set\`
+\`{"sensitivity": "SENSITIVITY"}\` where \`SENSITVITIY\` is one of the following
+values: \`low\`, \`medium\`,  \`high\`.
 
+### Self-test
+A self-test can be trigged by publishing to \`zigbee2mqtt/[DEVICE_ID]/set\`
+\`{"selftest": ""}\`.
+If the selftest is executed succesfully you will hear the device beep in 30 seconds.
+`,
+    },
+    {
+        model: ['DJT11LM'],
+        note: `
+### Sensitivity
+The sensitivity can be changed by publishing to \`zigbee2mqtt/[DEVICE_ID]/set\`
+\`{"sensitivity": "SENSITIVITY"}\` where \`SENSITVITIY\` is one of the following
+values: \`low\`, \`medium\`,  \`high\`.
+
+`,
+    },
     {
         model: ['9290012607', '9290019758'],
         note: `
@@ -514,6 +618,111 @@ Where:
 - \`strobe\`: \`true\` or \`false\` will let the strobe flash once during the alarm
         `,
     },
+    {
+        model: ['E1524/E1810'],
+        note: `
+### Toggle button
+When clicking the middle (center) button on the remote it will send a \`{"click": "toggle"}\`, when holding it
+it will **also** send a \`{"click": "toggle_hold"}\`. It is not possible to skip the \`toggle\` when the button is hold.
+Also the remote won't send anything when the button is released.
+See [link](https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691885) for more details.
+`,
+    },
+    {
+        model: ['PP-WHT-US'],
+        note: `
+### Power measurements
+This device only support power measurements with an up-to-date firmware on the plug which can only be done
+via the original hub. In case of an older firmware you will only see 0 values in the measurements.
+Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
+`,
+    },
+    {
+        model: ['J1'],
+        note: `
+### Configuration of device attributes
+By publishing to \`zigbee2mqtt/[DEVICE_ID]/set\` various device attributes can be configured:
+\`\`\`json
+{
+    "configure_j1": {
+        "windowCoveringType": xxx,
+        "configStatus": xxx,
+        "installedOpenLimitLiftCm": xxx,
+        "installedClosedLimitLiftCm": xxx,
+        "installedOpenLimitTiltDdegree": xxx,
+        "installedClosedLimitTiltDdegree": xxx,
+        "turnaroundGuardTime": xxx,
+        "liftToTiltTransitionSteps": xxx,
+        "totalSteps": xxx,
+        "liftToTiltTransitionSteps2": xxx,
+        "totalSteps2": xxx,
+        "additionalSteps": xxx,
+        "inactivePowerThreshold": xxx,
+        "startupSteps": xxx,
+        "totalSteps": xxx,
+        "totalSteps2": xxx
+    }
+}
+\`\`\`
+For further details on these attributes please take a look at the
+[ubisys J1 technical reference manual](https://www.ubisys.de/wp-content/uploads/ubisys-j1-technical-reference.pdf),
+chapter "7.2.5. Window Covering Cluster (Server)".
+
+As an alternative to the attributes listed above, the following properties may be used for convenience:
+* \`open_to_closed_s\`: corresponds to \`totalSteps\`, but takes value in seconds instead of in full AC waves
+* \`closed_to_open_s\`: ditto for \`totalSteps2\`,
+* \`lift_to_tilt_transition_ms\`: sets both \`liftToTiltTransitionSteps\` and \`liftToTiltTransitionSteps2\`
+(they shall both be equal according to ubisys manual), but takes value in *milli*seconds instead of in full AC waves
+* \`steps_per_second\`: factor to be used for conversion, defaults to 50 full AC waves per second if not provided
+
+By publishing to \`zigbee2mqtt/[DEVICE_ID]/get/configure_j1\` the values of the configuration attributes can
+also be read back from the device and be printed to the normal zigbee2mqtt log.
+
+### Calibration
+By publishing \`{"configure_j1": {"calibrate": 1}}\` to \`zigbee2mqtt/[DEVICE_ID]/set\` the device can also be
+calibrated after installation to support more advanced positioning features
+(i.e. go to lift percentage / go to tilt percentage). This can be combined with setting attributes as shown above,
+for example:
+\`\`\`json
+{
+    "configure_j1": {
+        "calibrate" : 1,
+        "windowCoveringType": 8,
+        "lift_to_tilt_transition_ms": 1600
+    }
+}
+\`\`\`
+The calibration procedure will move the shutter up and down several times and the current stage of the
+calibration process will again be logged to the normal zigbee2mqtt log for the user to get some feedback.
+For details on the calibration procedure please again take a look at
+the [ubisys J1 technical reference manual](https://www.ubisys.de/wp-content/uploads/ubisys-j1-technical-reference.pdf),
+chapter "7.2.5.1. Calibration".
+Please note that tilt transition steps cannot be determined automatically and must therefore be
+configured manually for the device to also support "go to tilt percentage". One possibility to determine the
+correct value is to take a video of the blinds moving from 0 to 100 percent tilt and then getting the exact timing
+from the video by playing it slow motion.
+
+### Home Assistant cover features when using [MQTT discovery](../integration/home_assistant)
+The cover will be offered to Home Assistant as supporting lift and tilt by default, but for covers with reduced
+functionality this can be passed along to Home Assistant by disabling some of the topics in \`configuration.yaml\`,
+for example:
+\`\`\`yaml
+'0x001fee0000001234':
+    friendly_name: cover_not_supporting_tilt'
+    homeassistant:
+    tilt_command_topic: null
+    tilt_status_topic: null
+'0x001fee0000001234':
+    friendly_name: cover_supporting_neither_lift_nor_tilt'
+    homeassistant:
+    set_position_topic: null
+    position_topic: null
+    tilt_command_topic: null
+    tilt_status_topic: null
+\`\`\`
+`,
+    },
+
 ];
 
 module.exports = notes;

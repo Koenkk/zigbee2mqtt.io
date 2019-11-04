@@ -3,7 +3,7 @@
 # Running Zigbee2mqtt
 These instructions explain how to run Zigbee2mqtt on bare-metal Linux.
 
-Other ways to run Zigbee2mqtt are [Docker](../information/docker.md), the [Hass.io Zigbee2mqtt add-on](https://github.com/danielwelch/hassio-zigbee2mqtt) and [Virtual Enviroment](../information/virtual_environment.md).
+You can also run Zigbee2mqtt in a [Docker container](../information/docker.md), as the [Hass.io Zigbee2mqtt add-on](https://github.com/danielwelch/hassio-zigbee2mqtt), in a [Python Virtual Enviroment](../information/virtual_environment.md) or even on [Windows](../information/windows.md).
 
 For the sake of simplicity this guide assumes running on a Raspberry Pi 3 with Raspbian Stretch Lite, but will work on any Linux machine.
 
@@ -25,10 +25,13 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 ## 2. Installing
 ```bash
 # Setup Node.js repository
-# NOTE: For Raspberry Pi Zero follow https://warlord0blog.wordpress.com/2018/06/27/node-js-v8-on-raspberry-pi-zero/
 sudo curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
-# Install Node.js
+# NOTE: If you see the message below please follow: https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb.
+# ## You appear to be running on ARMv6 hardware. Unfortunately this is not currently supported by the NodeSource Linux distributions. Please use the 'linux-armv6l' binary tarballs available directly from nodejs.org for Node.js 4 and later.
+# IMPORTANT: In this case instead of the apt-get install mentioned below; do: sudo apt-get install -y git make g++ gcc
+
+# Install Node.js;
 sudo apt-get install -y nodejs git make g++ gcc
 
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
@@ -40,7 +43,7 @@ npm --version  # Should output 6.X
 sudo git clone https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 sudo chown -R pi:pi /opt/zigbee2mqtt
 
-# Install dependencies
+# Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
 npm install
 ```
