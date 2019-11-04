@@ -19,9 +19,9 @@ description: "Integrate your Xiaomi JTYJ-GD-01LM/BW via Zigbee2mqtt with whateve
 
 
 ### Pairing
-Press the button 3 times in a row and wait until the sensor is successfully interviewed.
-
-*NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
+Plug the device in and wait for around 5mins, while it performs its self-tests.
+A successful self-test is indicated by couple of beeps and a steady green led.
+Now the device is ready for pairing. To initiate pairing quickly press the button three times in a row.
 
 
 ## Manual Home Assistant configuration
