@@ -363,7 +363,7 @@ After this the device will automatically join.
 ### Important
 These devices can only be used on channel 26.
 These devices are locked to the manufacturer's network key (ext_pan_id).
-Your configuration file [data/configuration.yaml](../configuration/configuration) must contain the following:
+Your configuration file [data/configuration.yaml](../information/configuration) must contain the following:
 
 \`\`\`yaml
 advanced:
@@ -436,7 +436,7 @@ Factory reset the light bulb ([video](https://www.youtube.com/watch?v=4zkpZSv84H
         model: ['RTCGQ01LM', 'RTCGQ11LM'],
         note: `
 ### Device type specific configuration
-*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+*[How to use device type specific configuration](../information/configuration.md)*
 
 * \`no_occupancy_since\`: Timeout (in seconds) after \`no_occupancy_since\` is send.
 This indicates the time since last occupancy was detected.
@@ -460,7 +460,7 @@ is needed.
         model: ['AV2010/22'],
         note: `
 ### Device type specific configuration
-*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+*[How to use device type specific configuration](../information/configuration.md)*
 
 * \`occupancy_timeout\`: Timeout (in seconds) after the \`occupancy: false\` message is sent.
 If not set, the timeout is \`90\` seconds.
@@ -471,7 +471,7 @@ When set to \`0\` no \`occupancy: false\` is send.
         model: ['WXKG01LM'],
         note: `
 ### Device type specific configuration
-*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+*[How to use device type specific configuration](../information/configuration.md)*
 
 * \`long_timeout\`: The WXKG01LM only reports a button press and release.
 By default, Zigbee2mqtt publishes a long click when there is at
@@ -488,7 +488,7 @@ experimenting with this option (e.g. \`long_timeout: 2000\`).
         notDescription: ['thermostat'],
         note: `
 ### Device type specific configuration
-*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+*[How to use device type specific configuration](../information/configuration.md)*
 `,
     },
     {

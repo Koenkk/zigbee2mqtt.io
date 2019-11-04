@@ -24,7 +24,7 @@ Press and hold the button on the device for +- 10 seconds
 
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+*[How to use device type specific configuration](../information/configuration.md)*
 
 
 * `temperature_precision`: Controls the precision of `temperature` values,

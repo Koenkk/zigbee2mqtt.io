@@ -24,7 +24,7 @@ Follow instructions from
 
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+*[How to use device type specific configuration](../information/configuration.md)*
 
 
 * `transition`: Controls the transition time (in seconds) of brightness,

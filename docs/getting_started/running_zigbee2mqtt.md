@@ -86,7 +86,7 @@ Now that we have setup everything correctly we can start zigbee2mqtt.
 cd /opt/zigbee2mqtt
 npm start
 ```
-
+#TODO
 When started successfully, you will see:
 ```bash
 2018-5-18 20:35:07 INFO Starting zigbee-shepherd

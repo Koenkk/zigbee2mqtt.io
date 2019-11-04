@@ -2,7 +2,7 @@
 ---
 # MQTT topics and message structure
 
-This page describes which MQTT topics are used by Zigbee2mqtt. Note that the base topic (by default `zigbee2mqtt`) is configurable in the [Zigbee2mqtt `configuration.yaml`](../configuration/configuration.md).
+This page describes which MQTT topics are used by Zigbee2mqtt. Note that the base topic (by default `zigbee2mqtt`) is configurable in the [Zigbee2mqtt `configuration.yaml`](../information/configuration.md).
 
 ## zigbee2mqtt/bridge/state
 zigbee2mqtt publishes the bridge state to this topic. Possible message are:
@@ -38,10 +38,10 @@ Allows you to permit joining of new devices via MQTT. This is not persistent (wi
 * `"false"`: disable joining of new devices
 
 ## zigbee2mqtt/bridge/config/last_seen
-Allows you to set the `advanced` -> `last_seen` configuration option. See [Configuration](../configuration/configuration.md) for possible values.
+Allows you to set the `advanced` -> `last_seen` configuration option. See [Configuration](../information/configuration.md) for possible values.
 
 ## zigbee2mqtt/bridge/config/elapsed
-Allows you to set the `advanced` -> `elapsed` configuration option. See [Configuration](../configuration/configuration.md) for possible values.
+Allows you to set the `advanced` -> `elapsed` configuration option. See [Configuration](../information/configuration.md) for possible values.
 
 ## zigbee2mqtt/bridge/config/reset
 Resets the ZNP (CC2530/CC2531).

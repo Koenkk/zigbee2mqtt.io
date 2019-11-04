@@ -19,7 +19,7 @@ description: "Integrate your Bosch RADON TriTech ZB via Zigbee2mqtt with whateve
 
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+*[How to use device type specific configuration](../information/configuration.md)*
 
 
 * `temperature_precision`: Controls the precision of `temperature` values,

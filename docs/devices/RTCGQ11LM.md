@@ -24,7 +24,7 @@ After this the device will automatically join.
 
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+*[How to use device type specific configuration](../information/configuration.md)*
 
 * `no_occupancy_since`: Timeout (in seconds) after `no_occupancy_since` is send.
 This indicates the time since last occupancy was detected.
@@ -45,7 +45,7 @@ is needed.
 
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+*[How to use device type specific configuration](../information/configuration.md)*
 
 
 * `illuminance_calibration`: Allows to manually calibrate illuminance values,

@@ -15,27 +15,44 @@ Welcome to the Zigbee2mqtt documentation! Besides the documentation, you can als
 * [Pairing devices](getting_started/pairing_devices.md)
 * [Supported devices](information/supported_devices.md)
 
-### Configuration
-* [Configuration](configuration/configuration.md)
-* [Device specific configuration](configuration/device_specific_configuration.md)
+### Information
+* [Configuration](information/configuration.md)
+
+### How tos
+* [How to create a CC2530 router](how_tos/how_to_create_a_cc2530_router.md)
+* [How to improve network range](how_tos/how_to_improve_network_range.md)
+* [How to sniff Zigbee traffic](how_tos/how_to_sniff_zigbee_traffic.md)
 
 ### Integration
 * [Home Assistant](integration/home_assistant.md)
 * [Admin Panel for Node-Red](https://github.com/ben423423n32j14e/zigbee2mqttadminpanel)
 * [Domoticz](https://github.com/stas-demydiuk/domoticz-zigbee2mqtt-plugin)
 * [Mozilla IoT WebThings Gateway via zigbee2mqtt adapter](https://github.com/kabbi/zigbee2mqtt-adapter)
-* [Majordomo](https://github.com/directman66/majordomo-zigbee2mqtt/) (Only for Russian speaking users)
+* [Majordomo](https://github.com/directman66/majordomo-zigbee2mqtt/) (Russian)
 * [MQTT Explorer](https://mqtt-explorer.com) (debug tool for custom integrations)
 * [Zigbee2MqttAssistant](https://github.com/yllibed/Zigbee2MqttAssistant) (GUI for Zigbee2Mqtt)
 
+### Support
+* [Forum](http://zigbee2mqtt.discourse.group/)
+* [Discord channel](https://discord.gg/NyseBeK)
+* [Bugs](https://github.com/koenkk/zigbee2mqtt/issues)
+
+
+# TODO
+- Search and fix for todo
+- Move specific mqtt device commands to device pages (from mqtt topics)
+- adapters (2531/2652r)
+- When adding support for a new devices check if it is already supporte din the dev branch
+- Docker -v /run/udev:/run/udev:ro --privileged=true docker
+- konke channel 15, 20 en 25
+- azure pipelines
+- All below
+
 ### How tos
 * [How to support new devices](how_tos/how_to_support_new_devices.md)
-* [How to improve network range](how_tos/how_to_improve_network_range.md)
 * [How to debug](how_tos/how_to_debug.md)
 * [How to support new devices on Hass.io](how_tos/how_to_support_new_devices_on_hassio.md)
-* [How to sniff Zigbee traffic](how_tos/how_to_sniff_zigbee_traffic.md)
 * [How to sniff Zigbee traffic with an HUSBZB-1 stick](how_tos/how_to_sniff_zigbee_husbzb.md)
-* [How to create a CC2530 router](how_tos/how_to_create_a_cc2530_router.md)
 * [How to secure your Zigbee network](how_tos/how_to_secure_network.md)
 * [How to connect a CC2530 coordinator using a USB to serial adapter](how_tos/how_to_connect_a_cc2530_coordinator_using_a_usb_to_serial_adapter.md)
 * [How to connect a CC2530 coordinator via an ESP8266](how_tos/how_to_esp8266_with_cc2530.md)
@@ -56,8 +73,3 @@ Welcome to the Zigbee2mqtt documentation! Besides the documentation, you can als
 * [CC sniffer devices](information/cc_sniffer_devices.md)
 * [Alternative flashing methods](information/alternative_flashing_methods.md)
 * [Running Zigbee2mqtt in Virtual Environment](information/virtual_environment.md)
-
-### Support
-* [Forum](http://zigbee2mqtt.discourse.group/)
-* [Discord channel](https://discord.gg/NyseBeK)
-* [Bugs](https://github.com/koenkk/zigbee2mqtt/issues)

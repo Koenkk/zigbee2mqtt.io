@@ -30,7 +30,7 @@ Not all devices support this, it basically comes down to the Zigbee implementati
 This device does not support binding (limitation of the device). A workaround is to first get the group ID where the remote is sending it's commands to and add bulbs to the same group ([discussion](https://github.com/Koenkk/zigbee2mqtt/issues/782#issuecomment-514526256)).
 
 1. Pair the IKEA TRADRI remote control to Zigbee2mqtt.
-2. Enable debug logging (log_level: debug) ([documentation](../configuration/configuration.md)).
+2. Enable debug logging (log_level: debug) ([documentation](../information/configuration.md)).
 3. You will get log output like this: 10/3/2019, 9:28:02 AM - debug: Received Zigbee message from '0x90fd9ffffe90d778' of type 'commandToggle' with data '{}' from endpoint 1 with groupID 57173`.
 4. Retrieve the group from the log output, which is `57173` in the above example.
 5. Add this group to `configuration.yaml` and add your device (e.g.) bulb to this group. ([documentation](./groups.md)).

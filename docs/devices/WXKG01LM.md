@@ -24,7 +24,7 @@ After this the device will automatically join.
 
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../configuration/device_specific_configuration.md)*
+*[How to use device type specific configuration](../information/configuration.md)*
 
 * `long_timeout`: The WXKG01LM only reports a button press and release.
 By default, Zigbee2mqtt publishes a long click when there is at
