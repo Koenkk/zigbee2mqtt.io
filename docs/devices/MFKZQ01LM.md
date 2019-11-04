@@ -19,9 +19,8 @@ description: "Integrate your Xiaomi MFKZQ01LM via Zigbee2mqtt with whatever smar
 
 
 ### Pairing
-[Video: Pairing Xiaomi Aqara Cube MFKZQ01LM](https://www.youtube.com/watch?v=uhMrcIAdGxg&feature=youtu.be)
-
-*NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
+Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
+After this the device will automatically join.
 
 
 ## Manual Home Assistant configuration

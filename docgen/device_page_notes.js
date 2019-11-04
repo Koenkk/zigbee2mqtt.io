@@ -347,27 +347,14 @@ Start with bulb on, then off, and then 6 “on’s”, where you kill the light 
 `,
     },
     {
-        model: ['WXKG01LM', 'WSDCGQ01LM', 'RTCGQ01LM', 'MCCGQ01LM'],
-        note: `
-### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-
-**IMPORTANT**: Release and start pressing the reset button every second.
-This keeps the device awake, otherwise pairing will **fail!**.
-
-*NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
-`,
-    },
-    {
         model: [
-            'WXKG11LM', 'WXKG12LM', 'WSDCGQ11LM', 'RTCGQ11LM', 'MCCGQ11LM',
+            'WXKG01LM', 'WSDCGQ01LM', 'RTCGQ01LM', 'MCCGQ01LM', 'WXKG11LM', 'WXKG12LM', 'WSDCGQ11LM', 'RTCGQ11LM',
+            'MCCGQ11LM', 'MFKZQ01LM',
         ],
         note: `
 ### Pairing
-Press and hold reset button on the device for +- 5 seconds until the
-blue light blinks three times, release the reset button (the blue light will blink once more) and wait.
-
-*NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
+Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
+After this the device will automatically join.
 `,
     },
     {
@@ -435,15 +422,6 @@ Press and hold the button on the device for +- 10 seconds
 Press and hold the setup button on the rear of the device for +- 10 seconds (until the green light goes solid)
 to initiate pairing. Please note that the pairing indicator light is below the main sensor
 (as oppose to the obvious indicator above the main sensor).
-`,
-    },
-    {
-        model: ['MFKZQ01LM'],
-        note: `
-### Pairing
-[Video: Pairing Xiaomi Aqara Cube MFKZQ01LM](https://www.youtube.com/watch?v=uhMrcIAdGxg&feature=youtu.be)
-
-*NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
 `,
     },
     {

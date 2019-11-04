@@ -19,10 +19,8 @@ description: "Integrate your Xiaomi WSDCGQ11LM via Zigbee2mqtt with whatever sma
 
 
 ### Pairing
-Press and hold reset button on the device for +- 5 seconds until the
-blue light blinks three times, release the reset button (the blue light will blink once more) and wait.
-
-*NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
+Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
+After this the device will automatically join.
 
 
 ### Device type specific configuration
