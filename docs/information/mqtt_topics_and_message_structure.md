@@ -128,8 +128,8 @@ See [Binding](binding.md)
 ## zigbee2mqtt/bridge/device/[friendly_name]/get_group_membership
 Returns the list of groups a device is in, and its group capacity.
 
-## zigbee2mqtt/[DEVICE_ID]
-Where `[DEVICE_ID]` is E.G. `0x00158d0001b79111`. Message published to this topic are **always** in a JSON format. Each device produces a different JSON message, **some** examples:
+## zigbee2mqtt/[FRIENDLY_NAME]
+Where `[FRIENDLY_NAME]` is E.G. `0x00158d0001b79111`. Message published to this topic are **always** in a JSON format. Each device produces a different JSON message, **some** examples:
 
 **Xiaomi MiJia temperature & humidity sensor (WSDCGQ01LM)**
 ```json
@@ -170,7 +170,7 @@ Where `[DEVICE_ID]` is E.G. `0x00158d0001b79111`. Message published to this topi
 }
 ```
 
-## zigbee2mqtt/[DEVICE_ID]/set
+## zigbee2mqtt/[FRIENDLY_NAME]/set
 Publishing messages to this topic allows you to control your Zigbee devices via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH).
 
 ```js
@@ -218,14 +218,14 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
 Remove attributes which are not supported for your device. E.G. in case of a Xiaomi Mi power plug ZigBee (ZNCZ02LM) only send the `"state"` attribute.
 
 ### Without JSON
-In case you don't want to use JSON, publishing to `zigbee2mqtt/[DEVICE_ID]/set/state` with payload `ON` is the same as publishing to `zigbee2mqtt/[DEVICE_ID]/set`
+In case you don't want to use JSON, publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set/state` with payload `ON` is the same as publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set`
 ```js
 {
   "state": "ON"
 }
 ```
 
-## zigbee2mqtt/[DEVICE_ID]/get
+## zigbee2mqtt/[FRIENDLY_NAME]/get
 This is the counterpart of the `set` command. It allows you to read a value from a device. To read e.g. the state of a device send the payload:
 
 ```js
@@ -234,11 +234,11 @@ This is the counterpart of the `set` command. It allows you to read a value from
 }
 ```
 
-## homeassistant/[DEVICE_TYPE]/[DEVICE_ID]/[OBJECT_ID]/config
+## homeassistant/[DEVICE_TYPE]/[IEEEADDR]/[OBJECT_ID]/config
 Only used when `homeassistant: true` in `configuration.yaml`. Required for [Home Assistant MQTT discovery](https://www.home-assistant.io/docs/mqtt/discovery/).
 
 ## Device specific
-Device specific commands are always sent to the topic: `zigbee2mqtt/[DEVICE_ID]/set`. Some commands also support reading of current value by sending a request to `zigbee2mqtt/[DEVICE_ID]/get`. Below you will find the possible payloads.
+Device specific commands are always sent to the topic: `zigbee2mqtt/[FRIENDLY_NAME]/set`. Some commands also support reading of current value by sending a request to `zigbee2mqtt/[FRIENDLY_NAME]/get`. Below you will find the possible payloads.
 
 ### Philips Hue power-on behavior
 Sets the Philips Hue power-on behavior which was introduced with the November/December '18 firmware update.
@@ -315,7 +315,7 @@ This command also allows to redefine which button controls which relay for doubl
 
 Special topics should be used:
 
-`zigbee2mqtt/[DEVICE_ID]/system/set` to modify operation mode.
+`zigbee2mqtt/[FRIENDLY_NAME]/system/set` to modify operation mode.
 
 Payload:
 ```js
@@ -334,7 +334,7 @@ Values                | Description
 `control_right_relay` | Button directly controls right relay (for double switch)
 `decoupled`           | Button doesn't control any relay
 
-`zigbee2mqtt/[DEVICE_ID]/system/get` to read current mode.
+`zigbee2mqtt/[FRIENDLY_NAME]/system/get` to read current mode.
 
 Payload:
 ```js
@@ -345,7 +345,7 @@ Payload:
 }
 ```
 
-Response will be sent to `zigbee2mqtt/[DEVICE_ID]`:
+Response will be sent to `zigbee2mqtt/[FRIENDLY_NAME]`:
 ```json
 {"operation_mode_right":"control_right_relay"}
 ```

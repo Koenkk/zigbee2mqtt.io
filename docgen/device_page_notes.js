@@ -535,12 +535,12 @@ Note that this value is overridden if a \`transition\` value is present in the M
         model: ['JTQJ-BF-01LM/BW', 'JTYJ-GD-01LM/BW'],
         note: `
 ### Sensitivity
-The sensitivity can be changed by publishing to \`zigbee2mqtt/[DEVICE_ID]/set\`
+The sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
 \`{"sensitivity": "SENSITIVITY"}\` where \`SENSITVITIY\` is one of the following
 values: \`low\`, \`medium\`,  \`high\`.
 
 ### Self-test
-A self-test can be trigged by publishing to \`zigbee2mqtt/[DEVICE_ID]/set\`
+A self-test can be trigged by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
 \`{"selftest": ""}\`.
 If the selftest is executed succesfully you will hear the device beep in 30 seconds.
 `,
@@ -549,7 +549,7 @@ If the selftest is executed succesfully you will hear the device beep in 30 seco
         model: ['DJT11LM'],
         note: `
 ### Sensitivity
-The sensitivity can be changed by publishing to \`zigbee2mqtt/[DEVICE_ID]/set\`
+The sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
 \`{"sensitivity": "SENSITIVITY"}\` where \`SENSITVITIY\` is one of the following
 values: \`low\`, \`medium\`,  \`high\`.
 
@@ -559,7 +559,7 @@ values: \`low\`, \`medium\`,  \`high\`.
         model: ['9290012607', '9290019758'],
         note: `
 ### Motion sensitivity
-The motion sensitivity can be changed by publishing to \`zigbee2mqtt/[DEVICE_ID]/set\`
+The motion sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
 \`{"motion_sensitivity": "SENSITIVITY"}\` where \`SENSITVITIY\` is one of the following
 values: \`low\`,  \`medium\`,  \`high\` (default).
 `,
@@ -598,7 +598,7 @@ three times, release the water logo (the blue light will blink once more) and wa
         model: 'HS2WD-E',
         note: `
 ### Triggering the alarm
-The alarm can be trigged by publishing to \`zigbee2mqtt/[DEVICE_ID]/set\` message
+The alarm can be trigged by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` message
 \`{"warning": {"duration": 10, "mode": "emergency", "strobe": false}}\`.
 
 Where:
@@ -630,7 +630,7 @@ Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
         model: ['J1'],
         note: `
 ### Configuration of device attributes
-By publishing to \`zigbee2mqtt/[DEVICE_ID]/set\` various device attributes can be configured:
+By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
 \`\`\`json
 {
     "configure_j1": {
@@ -664,11 +664,11 @@ As an alternative to the attributes listed above, the following properties may b
 (they shall both be equal according to ubisys manual), but takes value in *milli*seconds instead of in full AC waves
 * \`steps_per_second\`: factor to be used for conversion, defaults to 50 full AC waves per second if not provided
 
-By publishing to \`zigbee2mqtt/[DEVICE_ID]/get/configure_j1\` the values of the configuration attributes can
+By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/get/configure_j1\` the values of the configuration attributes can
 also be read back from the device and be printed to the normal zigbee2mqtt log.
 
 ### Calibration
-By publishing \`{"configure_j1": {"calibrate": 1}}\` to \`zigbee2mqtt/[DEVICE_ID]/set\` the device can also be
+By publishing \`{"configure_j1": {"calibrate": 1}}\` to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` the device can also be
 calibrated after installation to support more advanced positioning features
 (i.e. go to lift percentage / go to tilt percentage). This can be combined with setting attributes as shown above,
 for example:

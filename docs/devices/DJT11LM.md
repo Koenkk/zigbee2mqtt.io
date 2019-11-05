@@ -26,7 +26,7 @@ Then press the button again every 2 seconds (maximum 20 times).
 
 
 ### Sensitivity
-The sensitivity can be changed by publishing to `zigbee2mqtt/[DEVICE_ID]/set`
+The sensitivity can be changed by publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set`
 `{"sensitivity": "SENSITIVITY"}` where `SENSITVITIY` is one of the following
 values: `low`, `medium`,  `high`.
 

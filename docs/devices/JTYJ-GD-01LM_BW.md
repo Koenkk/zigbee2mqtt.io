@@ -25,12 +25,12 @@ Now the device is ready for pairing. To initiate pairing quickly press the butto
 
 
 ### Sensitivity
-The sensitivity can be changed by publishing to `zigbee2mqtt/[DEVICE_ID]/set`
+The sensitivity can be changed by publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set`
 `{"sensitivity": "SENSITIVITY"}` where `SENSITVITIY` is one of the following
 values: `low`, `medium`,  `high`.
 
 ### Self-test
-A self-test can be trigged by publishing to `zigbee2mqtt/[DEVICE_ID]/set`
+A self-test can be trigged by publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set`
 `{"selftest": ""}`.
 If the selftest is executed succesfully you will hear the device beep in 30 seconds.
 
