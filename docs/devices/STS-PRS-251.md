@@ -17,7 +17,14 @@ description: "Integrate your SmartThings STS-PRS-251 via Zigbee2mqtt with whatev
 
 ## Notes
 
-None
+
+### Let the device beep.
+```json
+{
+    "beep": 5
+}
+```
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

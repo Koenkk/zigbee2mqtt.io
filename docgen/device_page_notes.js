@@ -215,6 +215,55 @@ by pressing and holding the reset button on the bottom of the remote (next to th
 `,
     },
     {
+        vendor: 'Philips',
+        notModel: ['324131092621'],
+        supports: ['brightness'],
+        note: `
+### Power-on behavior
+Allows to set the power-on behavior of the bulb.
+Note that this requires at least November/December '18 firmware update of the bulb.
+\`\`\`js
+{
+    "hue_power_on_behavior": "on",          //default, on, off, recover, default = on
+    "hue_power_on_brightness": 125,         //default, same values as brightness, default = 255
+    "hue_power_on_color_temperature": 280,  //default, same values as color_temp, default = 366
+}
+\`\`\`
+
+Attribute Value | Description
+----------------|-----------------------------------------------
+default         | reset to factory default value
+on              | lamps on after power loss with configured brightness, color-temperature, color (to-do)
+off             | lamps off after power loss
+recover         | last running state after power loss
+`,
+    },
+    {
+        vendor: ['OSRAM', 'Sylvania'],
+        notModel: [],
+        supports: ['brightness'],
+        note: `
+### Set default power on/off transition
+Various Osram/Sylvania LED support setting a default transition when turning a light on and off.
+\`\`\`js
+{
+    "osram_set_transition": 0.1,            //time in seconds (integer or float)
+}
+\`\`\`
+
+### Remember current light state
+Various Osram/Sylvania LED support remembering their current state in case of power loss, or if a light
+is manually switched off then on. Lights will remember their respective attributes
+(i.e. brightness, color, saturation, etc.).
+NOTE: This must be executed everytime you make changes to a light's attributes for it to then 'remember' it.
+\`\`\`js
+{
+    "osram_remember_state": true,            // true, false (boolean)
+}
+\`\`\`
+`,
+    },
+    {
         model: ['AIRAM-CTR.U'],
         note: `
 ### Pairing
@@ -277,6 +326,23 @@ After that the remote should show up as a paired device.
 Pair the remote to Zigbee2mqtt by holding it close to the coordinator and
 pressing the inside button, next to the CR2032 battery, 4 times.
 The red light on the remote will now flash a few times.
+`,
+    },
+    {
+        model: ['E1524/E1810'],
+        note: `
+### Binding
+This device does not support binding (limitation of the device). A workaround is to first
+get the group ID where the remote is sending it's commands to and add bulbs to the
+same group ([discussion](https://github.com/Koenkk/zigbee2mqtt/issues/782#issuecomment-514526256)).
+
+1. Pair the IKEA TRADRI remote control to Zigbee2mqtt.
+2. Enable debug logging (log_level: debug) ([documentation](../information/configuration.md)).
+3. You will get log output like this: \`10/3/2019, 9:28:02 AM - debug: Received Zigbee message from '0x90fd9ffffe90d778'
+of type 'commandToggle' with data '{}' from endpoint 1 with groupID 57173\`.
+4. Retrieve the group from the log output, which is \`57173\` in the above example.
+5. Add this group to \`configuration.yaml\` and add your device (e.g.) bulb to this group.
+([documentation](../information/groups.md)).
 `,
     },
     {
@@ -562,6 +628,18 @@ values: \`low\`, \`medium\`,  \`high\`.
 The motion sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
 \`{"motion_sensitivity": "SENSITIVITY"}\` where \`SENSITVITIY\` is one of the following
 values: \`low\`,  \`medium\`,  \`high\` (default).
+
+### Occupany timeout
+Sets the sensors timeout between last motion detected and sensor reports occupance false
+\`\`\`js
+{
+    // Value >= 0,
+    // 0 - 10: 10sec (min possible timeout)
+    //   > 10: timeout in sec
+    // (must be written to (default) endpoint 2)
+    "occupancy_timeout": 0,
+}
+\`\`\`
 `,
     },
     {
@@ -608,6 +686,63 @@ Where:
         `,
     },
     {
+        model: 'STS-PRS-251',
+        note: `
+### Let the device beep.
+\`\`\`json
+{
+    "beep": 5
+}
+\`\`\`
+`,
+    },
+    {
+        model: ['QBKG03LM', 'QBKG04LM', 'QBKG12LM', 'QBKG11LM'],
+        note: `
+### Decoupled mode
+Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
+This might be useful to assign some custom actions to buttons and control relay remotely.
+This command also allows to redefine which button controls which relay for double switch.
+
+Special topics should be used:
+
+\`zigbee2mqtt/[FRIENDLY_NAME]/system/set\` to modify operation mode.
+
+Payload:
+\`\`\`js
+{
+    "operation_mode": {
+    "button": "single"|"left"|"right",
+    "state": "VALUE"
+    }
+}
+\`\`\`
+
+Values                | Description
+----------------------|---------------------------------------------------------
+\`control_relay\`       | Button directly controls relay (for single switch)
+\`control_left_relay\`  | Button directly controls left relay (for double switch)
+\`control_right_relay\` | Button directly controls right relay (for double switch)
+\`decoupled\`           | Button doesn't control any relay
+
+\`zigbee2mqtt/[FRIENDLY_NAME]/system/get\` to read current mode.
+
+Payload:
+\`\`\`js
+{
+    "operation_mode": {
+    "button": "single"|"left"|"right"
+    }
+}
+\`\`\`
+
+Response will be sent to \`zigbee2mqtt/[FRIENDLY_NAME]\`:
+\`\`\`json
+{"operation_mode_right":"control_right_relay"}
+\`\`\`
+`,
+    },
+    {
         model: ['E1524/E1810'],
         note: `
 ### Toggle button
@@ -624,6 +759,80 @@ See [link](https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691
 This device only support power measurements with an up-to-date firmware on the plug which can only be done
 via the original hub. In case of an older firmware you will only see 0 values in the measurements.
 Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
+`,
+    },
+    {
+        model: ['SPZB0001'],
+        note: `
+### Controlling
+*Current heating setpoint*
+\`\`\`json
+{
+    "current_heating_setpoint": 21.5
+}
+\`\`\`
+Current heating setpoint is also modified when occupied or unoccupied heating setpoint is set.
+
+*Eurotronic system mode*
+
+This is a bitmap encoded field to set several device specific features. Please remind it is not possible to set single bits, always the full bitmap is written. Bit 0 doesnt seem to be writeable, it is always reported as set, so expect your written value + 1 to be reported.
+
+Bit | Position
+--- | --------
+0 | unknown (default 1)
+1 | Mirror display
+2 | Boost
+3 | unknown
+4 | disable window open
+5 | set window open (is reported as disable window open)
+6 | unknown
+7 | Child protection
+
+Examples for eurotronic_system_mode:
+
+Mirror display, reported as 3
+\`\`\`json
+{
+    "eurotronic_system_mode": 2
+}
+\`\`\`
+signal external window open, current_heating_setpoint will report "5", device display shows "OFF"
+\`\`\`json
+{
+    "eurotronic_system_mode": 32
+}
+\`\`\`
+signal external window close, will restore last current_heating_setpoint value
+\`\`\`json
+{
+    "eurotronic_system_mode": 16
+}
+\`\`\`
+Mirror display and set child protection.
+\`\`\`json
+{
+    "eurotronic_system_mode": 66
+}
+\`\`\`
+
+*Eurotronic error status*
+\`\`\`json
+{
+    "eurotronic_error_status": 0
+}
+\`\`\`
+This field is a readonly bitmap
+
+Bit | Position
+--- | --------
+0 | reserved
+1 | reserved
+2 | reserved
+3 | Valve adaption failed (E1)
+4 | Valve movement too slow (E2)
+5 | Valve not moving/blocked (E3)
+6 | reserved
+7 | reserved
 `,
     },
     {
@@ -711,7 +920,173 @@ for example:
 \`\`\`
 `,
     },
+    {
+        model: ['1TST-EU', 'AV2010/32'],
+        note: `
+### Controlling
+Get local temperature in degrees Celsius (in the range 0x954d to 0x7fff, i.e. -273.15°C to 327.67 ºC)
+\`\`\`json
+{
+    "local_temperature": ""
+}
+\`\`\`
 
+Get or set offset added to/subtracted from the actual displayed room temperature to NUMBER, in steps of 0.1°C
+\`\`\`js
+{
+    "local_temperature_calibration": "NUMBER"       // Possible values: –2.5 to +2.5; leave empty to read
+}
+\`\`\`
+
+Set temperature display mode
+\`\`\`js
+{
+    "temperature_display_mode": ""      // Possible values: 0 to set °C or 1 so set °F
+}
+\`\`\`
+
+Get room occupancy. Specifies whether the heated/cooled space is occupied or not. If 1, the space is occupied,
+else it is unoccupied.
+\`\`\`json
+{
+    "thermostat_occupancy": ""
+}
+\`\`\`
+
+Get or set occupied heating setpoint to NUMBER in degrees Celsius.
+\`\`\`js
+{
+    "occupied_heating_setpoint": "NUMBER"       // Possible values: MinHeatSetpointLimit to  MaxHeatSetpointLimit, i.e. 7 to 30 by default; leave empty to read
+}
+\`\`\`
+
+Get or set unoccupied heating setpoint to NUMBER in degrees Celsius
+\`\`\`js
+{
+    "unoccupied_heating_setpoint": "NUMBER"       // Possible values: MinHeatSetpointLimit to MaxHeatSetpointLimit, i.e. 7 to 30 by default; leave empty to read
+}
+\`\`\`
+
+Increase or decrease heating setpoint by NUMBER degrees in °C.
+\`\`\`js
+{
+    "setpoint_raise_lower": {
+    "mode": "0x00",       // Possible values: see table below
+    "amount": "NUMBER"    // Possible values: signed 8-bit integer that specifies the amount the setpoint(s) are to be increased (or decreased) by, in steps of 0.1°C
+    }
+}
+\`\`\`
+
+Attribute Value | Description
+----------------|-----------------------------------------------
+0x00            | Heat (adjust Heat Setpoint)
+0x01            | Cool (adjust Cool Setpoint)
+0x02            | Both (adjust Heat Setpoint and Cool Setpoint)
+
+Get or set whether the local temperature, outdoor temperature and occupancy are being sensed by internal sensors or remote networked sensors
+\`\`\`js
+{
+    "remote_sensing": "NUMBER"      // Possible values: see table below; leave empty to read
+}
+\`\`\`
+
+Bit Number | Description
+-----------|-----------------------------------------
+0          | 0 – local temperature sensed internally <br> 1 – local temperature sensed remotely
+1          | 0 – outdoor temperature sensed internally <br> 1 – outdoor temperature sensed remotely
+2          | 0 – occupancy sensed internally <br> 1 – occupancy sensed remotely
+
+Get or set control sequence of operation
+\`\`\`js
+{
+    "control_sequence_of_operation": "VALUE"       // Possible values: see table below; leave empty to read
+}
+\`\`\`
+
+Values                                    | Possible Values of SystemMode
+------------------------------------------|-------------------------------------
+\`cooling only\`                            | Heat and Emergency are not possible
+\`cooling with reheat\`                     | Heat and Emergency are not possible
+\`heating only\`                            | Cool and precooling are not possible
+\`heating with reheat\`                     | Cool and precooling are not possible
+\`cooling and heating 4-pipes\`             | All modes are possible
+\`cooling and heating 4-pipes with reheat\` | All modes are possible
+
+Get or set system mode
+\`\`\`js
+{
+    "system_mode": "VALUE"       // Possible values: see table below; leave empty to read
+}
+\`\`\`
+
+Values              |
+--------------------|
+\`off\`               |
+\`auto\`              |
+\`cool\`              |
+\`heat\`              |
+\`emergency heating\` |
+\`precooling\`        |
+\`fan only\`          |
+\`dry\`               |
+\`sleep\`             |
+
+Get running state
+\`\`\`js
+{
+    "running_state": ""       // leave empty when reading
+}
+\`\`\`
+Possible values:
+
+Values |
+-------|
+\`off\`  |
+\`cool\` |
+\`heat\` |
+
+Valve position / heating demand
+\`\`\`
+{
+    "pi_heating_demand": 0       // leave empty when reading
+}
+\`\`\`
+Will report the valve position or heating amount depending on device. 0=min, 255=max
+
+Get or set weekly schedule
+\`\`\`js
+{
+    "weekly_schedule": {
+    "TemperatureSetpointHold": "0x00",                // 0x00 setpoint hold off or 0x01 on
+    "TemperatureSetpointHoldDuration": "0xffff",      // 0xffff to 0x05a0
+    "ThermostatProgrammingOperationMode": "00xxxxxx"  //see table below
+    }                                                   // leave empty to read
+}
+\`\`\`
+
+Attribute Value | Description
+----------------|---------------------------------------------------------------------------
+0               | 0 – Simple/setpoint mode. This mode means the thermostat setpoint is altered only by manual up/down changes at the thermostat or remotely, not by internal schedule programming. <br> 1 – Schedule programming mode. This enables or disables any programmed weekly schedule configurations. <br> Note: It does not clear or delete previous weekly schedule programming configurations.
+1               | 0 - Auto/recovery mode set to OFF <br> 1 – Auto/recovery mode set to ON
+2               | 0 – Economy/EnergyStar mode set to OFF <br> 1 – Economy/EnergyStar mode set to ON
+
+Clear weekly schedule
+\`\`\`json
+{
+    "clear_weekly_schedule": ""
+}
+\`\`\`
+<!--
+Coming soon:
+Get weekly schedule response
+tz.thermostat_weekly_schedule_rsp
+Get relay status log
+tz.thermostat_relay_status_log
+Get relay status log response
+tz.thermostat_relay_status_log_rsp
+-->
+`,
+    },
 ];
 
 module.exports = notes;

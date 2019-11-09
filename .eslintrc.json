@@ -12,7 +12,7 @@
     "rules": {
         "require-jsdoc": "off",
         "indent": ["error", 4],
-        "max-len": ["error", { "code": 120 }],
+        "max-len": "off",
         "mocha/no-exclusive-tests": "error",
         "no-prototype-builtins": "off"
     },

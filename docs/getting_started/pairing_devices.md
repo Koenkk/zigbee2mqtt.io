@@ -10,5 +10,7 @@ First check if the device page ([Supported devices](../information/supported_dev
 
 If no instructions are available, the device can probably be paired by factory resetting it.
 
-# TODO
-Once you see something similar to `New device with address 0x00159d00016da0c8 connected!` in the log your device is paired.
+Once you see something similar to below in the log your device is paired.
+```
+zigbee2mqtt:info  2019-11-09T12:19:56: Successfully interviewed '0x00158d0001dc126a', device has successfully been paired
+```

@@ -14,7 +14,7 @@ groups:
   '1':
     # Required: Name which will be used to control the group
     friendly_name: group_1
-    # Required: Retain messages (true/false)
+    # Required: Retain messages (true/false) (default: false)
     retain: false
     # Optional: Default transition to be used when e.g. changing brightness (in seconds) (default: 0)
     transition: 2

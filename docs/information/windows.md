@@ -69,6 +69,3 @@ A successful setup produces an output similar to this:
 The `Coordinator firmware version: '20190608'` entry means that Zigbee2mqtt has successfully communicated with the USB sniffer.
 
 Zigbee2mqtt can be stopped anytime by pressing `CTRL + C` and then confirming with `Y` (on English locales at least).
-
-# What's next?
-[Pairing devices](../getting_started/pairing_devices.md)

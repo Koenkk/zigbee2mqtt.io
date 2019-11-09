@@ -86,15 +86,21 @@ Now that we have setup everything correctly we can start zigbee2mqtt.
 cd /opt/zigbee2mqtt
 npm start
 ```
-#TODO
-When started successfully, you will see:
+
+When started successfully, you will see something like:
 ```bash
-2018-5-18 20:35:07 INFO Starting zigbee-shepherd
-2018-5-18 20:35:09 INFO zigbee-shepherd started
-2018-5-18 20:35:09 INFO Currently 0 devices are joined:
-2018-5-18 20:35:09 INFO Connecting to MQTT server at mqtt://localhost
-2018-5-18 20:35:09 INFO zigbee-shepherd ready
-2018-5-18 20:35:09 INFO Connected to MQTT server
+zigbee2mqtt:info  2019-11-09T13:04:01: Logging to directory: '/opt/zigbee2mqtt/data/log/2019-11-09.14-04-01'
+zigbee2mqtt:info  2019-11-09T13:04:01: Starting zigbee2mqtt version 1.6.0 (commit #720e393)
+zigbee2mqtt:info  2019-11-09T13:04:01: Starting zigbee-herdsman...
+zigbee2mqtt:info  2019-11-09T13:04:03: zigbee-herdsman started
+zigbee2mqtt:info  2019-11-09T13:04:03: Coordinator firmware version: '{"type":"zStack30x","meta":{"transportrev":2,"product":2,"majorrel":2,"minorrel":7,"maintrel":2,"revision":20190425}}'
+zigbee2mqtt:info  2019-11-09T13:04:03: Currently 0 devices are joined:
+zigbee2mqtt:warn  2019-11-09T13:04:03: `permit_join` set to  `true` in configuration.yaml.
+zigbee2mqtt:warn  2019-11-09T13:04:03: Allowing new devices to join.
+zigbee2mqtt:warn  2019-11-09T13:04:03: Set `permit_join` to `false` once you joined all devices.
+zigbee2mqtt:info  2019-11-09T13:04:03: Zigbee: allowing new devices to join.
+zigbee2mqtt:info  2019-11-09T13:04:03: Connecting to MQTT server at mqtt://localhost
+zigbee2mqtt:info  2019-11-09T13:04:03: Connected to MQTT server
 ```
 
 Zigbee2mqtt can be stopped by pressing `CTRL + C`.

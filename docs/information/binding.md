@@ -1,7 +1,7 @@
 ---
 ---
 # Binding
-*This is an experimental feature, ongoing discussion can be found here: https://github.com/Koenkk/zigbee2mqtt/issues/782*
+*Ongoing discussion about this feature can be found here: https://github.com/Koenkk/zigbee2mqtt/issues/782*
 
 Zigbee has support for binding which makes it possible that devices can directly control each other without the intervention of zigbee2mqtt or any home automation software.
 
@@ -24,13 +24,4 @@ By default, the first endpoint is taken. In case your device has multiple endpoi
 - **Target**: append the endpoint friendly name to the payload, e.g. `my_switch/right`
 
 ## Devices
-Not all devices support this, it basically comes down to the Zigbee implementation of the device itself. Below is a list of results.
-
-### IKEA TRADRI remote control (E1524)
-This device does not support binding (limitation of the device). A workaround is to first get the group ID where the remote is sending it's commands to and add bulbs to the same group ([discussion](https://github.com/Koenkk/zigbee2mqtt/issues/782#issuecomment-514526256)).
-
-1. Pair the IKEA TRADRI remote control to Zigbee2mqtt.
-2. Enable debug logging (log_level: debug) ([documentation](../information/configuration.md)).
-3. You will get log output like this: 10/3/2019, 9:28:02 AM - debug: Received Zigbee message from '0x90fd9ffffe90d778' of type 'commandToggle' with data '{}' from endpoint 1 with groupID 57173`.
-4. Retrieve the group from the log output, which is `57173` in the above example.
-5. Add this group to `configuration.yaml` and add your device (e.g.) bulb to this group. ([documentation](./groups.md)).
+Not all devices support this, it basically comes down to the Zigbee implementation of the device itself. Check the device specific page for more info (can be reached via the supported devices page)

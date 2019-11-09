@@ -88,7 +88,7 @@ function getNotes(device) {
                 return true;
             }
 
-            return n.model === device.model || n.vendor === device.vendor;
+            return n.model === device.model || (Array.isArray(n.vendor) ? n.vendor.includes(device.vendor) : n.vendor === device.vendor);
         })
         .map((n) => n.note)
         .join('\n');

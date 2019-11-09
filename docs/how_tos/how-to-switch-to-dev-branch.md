@@ -35,5 +35,5 @@ sudo systemctl start zigbee2mqtt
 ## Docker
 Use Docker images postfixed with the `-dev` tag.
 
-## Hass.io
+## Hass.io addon
 Use the `edge` version.

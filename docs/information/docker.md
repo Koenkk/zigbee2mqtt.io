@@ -3,85 +3,48 @@
 # Docker
 It is possible to run Zigbee2mqtt in a Docker container using the official [Zigbee2mqtt Docker image](https://hub.docker.com/r/koenkk/zigbee2mqtt/).
 
+This image support the following architectures: `386`, `amd64`, `arm/v6`, `arm/v7`, `arm64`.
+Since zigbee2mqtt images are manifest listed, Docker will auto-detect the architecture and pull the right image.
+
 First run the container, this will create the configuration directory. Change `configuration.yaml` according to your situation and start again.
 
-### Parameters
-* `-v $(pwd)/data:/app/data`: Directory where Zigbee2mqtt stores it configuration
-* `--device=/dev/ttyACM0`: Location of CC2531 USB sniffer
+## Running
+Run by executing the following commmand:
 
-## Supported architectures
-### amd64
 ```bash
 docker run \
    -it \
    -v $(pwd)/data:/app/data \
    --device=/dev/ttyACM0 \
    -e TZ=Europe/Amsterdam \
+   -v /run/udev:/run/udev:ro \
+   --privileged=true \
    koenkk/zigbee2mqtt
 ```
 
-### arm32v6 (E.G. Raspberry Pi)
-```bash
-docker run \
-   -it \
-   -v $(pwd)/data:/app/data \
-   --device=/dev/ttyACM0 \
-   -e TZ=Europe/Amsterdam \
-   koenkk/zigbee2mqtt:arm32v6
-```
-
-### arm64v8
-```bash
-docker run \
-   -it \
-   -v $(pwd)/data:/app/data \
-   --device=/dev/ttyACM0 \
-   -e TZ=Europe/Amsterdam \
-   koenkk/zigbee2mqtt:arm64v8
-```
+### Parameters explanation
+* `-v $(pwd)/data:/app/data`: Directory where Zigbee2mqtt stores it configuration
+* `--device=/dev/ttyACM0`: Location of adapter (e.g. CC2531)
+* `-v /run/udev:/run/udev:ro --privileged=true`: is optional, only required for autodetecting the port
 
 ## Updating
 To update to the latest Docker image:
 ```bash
 docker rm -f [ZIGBEE2MQTT_CONTAINER_NAME]
-docker rmi -f [ZIGBEE2MQTT_IMAGE_NAME] # e.g. koenkk/zigbee2mqtt:arm32v6
+docker rmi -f [ZIGBEE2MQTT_IMAGE_NAME] # e.g. koenkk/zigbee2mqtt:latest
 # Now run the container again, Docker will automatically pull the latest image.
 ```
 
 ## Tags
 The following tags are available:
-- Latest release version: `latest`, `arm32v6`, `arm64v8`
-- Latest dev version (based on [`dev`](https://github.com/Koenkk/zigbee2mqtt/tree/dev) branch): `latest-dev`, `arm32v6-dev`, `arm64v8-dev`
-- Locked to a specific release version: `X.X.X` (e.g. `0.2.0`), `X.X.X-arm32v6` (e.g. `0.2.0-arm32v6`), `X.X.X-arm64v8` (e.g. `0.2.0-arm64v8`)
-
-__note__: since zigbee2mqtt images are manifest listed, there is no need to use explicit tags for the architecture. Docker will auto-detect the architecture and pull the right image.
+- Latest release version: `latest`
+- Latest dev version (based on [`dev`](https://github.com/Koenkk/zigbee2mqtt/tree/dev) branch): `latest-dev`
+- Specific release version, e.g: `1.7.0`
 
 ## Support new devices
-To add support for new devices, you'll need to git clone zigbee-shepherd-converters to ```$(pwd)/data/zigbee-shepherd-converters``` first:
+See [How to support new devices](../how_tos/how_to_support_new_devices.md)
 
-```bash
-git clone https://github.com/Koenkk/zigbee-shepherd-converters.git $(pwd)/data/zigbee-shepherd-converters
-```
-
-If you're integrating zigbee2mqtt with HomeAssistant, you'll also need to copy homeassistant.js (https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/extension/homeassistant.js) to ```$(pwd)/data/lib/extension/homeassistant.js```.
-
-Then run the docker command like this:
-
-```bash
-docker run \
-   -it \
-   -v $(pwd)/data:/app/data \
-   -v $(pwd)/data/zigbee-shepherd-converters:/app/node_modules/zigbee-shepherd-converters \
-   -v $(pwd)/data/lib/extension/homeassistant.js:/app/lib/extension/homeassistant.js \
-   --device=/dev/ttyACM0 \
-   -e TZ=Europe/Amsterdam \
-   koenkk/zigbee2mqtt
-```
-
-After that follow the [guide](https://www.zigbee2mqtt.io/how_tos/how_to_support_new_devices.html) to add support for new devices.
-
-
-## docker-compose Example
+## docker-compose example
 ```yaml
   version: '3'
   services:
@@ -89,19 +52,20 @@ After that follow the [guide](https://www.zigbee2mqtt.io/how_tos/how_to_support_
       container_name: zigbee2mqtt
       image: koenkk/zigbee2mqtt
       volumes:
-        - ./data:/app/data
+		- ./data:/app/data
+		- /run/udev:/run/udev:ro
       devices:
-        # CC251
-        #- /dev/ttyUSB_cc2531:/dev/ttyACM0
-        # CC2530 / GBAN GB2530S
-        #- /dev/ttyUSB_cc2530:/dev/ttyACM0
+        - /dev/ttyACM0:/dev/ttyACM0
       restart: always
-      network_mode: host
+	  network_mode: host
+	  privileged: true
       environment:
         - TZ=Europe/Amsterdam
 ```
 
 ## Docker Stack device mapping
+*This is only relevant when using Docker Stack*
+
 Docker stack doesn't support device mappings with option `--devices` when deploying a stack in Swam mode. A workaround is to bind the device as volume binding and set the right permissions.
 
 The workaround is based on the solution found at [Add support for devices with "service create"](https://github.com/docker/swarmkit/issues/1244#issuecomment-285935430), all credits goes this him.
@@ -120,11 +84,11 @@ The workaround is based on the solution found at [Add support for devices with "
 	  bDescriptorType         1
 	  bcdUSB               2.00
 	  bDeviceClass            2 Communications
-	  bDeviceSubClass         0 
-	  bDeviceProtocol         0 
+	  bDeviceSubClass         0
+	  bDeviceProtocol         0
 	  bMaxPacketSize0        32
 	  idVendor           0x0451 Texas Instruments, Inc.
-	  idProduct          0x16a8 
+	  idProduct          0x16a8
 	  bcdDevice            0.09
 	  iManufacturer           1 Texas Instruments
 	  iProduct                2 TI CC2531 USB CDC
@@ -136,7 +100,7 @@ The workaround is based on the solution found at [Add support for devices with "
 		wTotalLength           67
 		bNumInterfaces          2
 		bConfigurationValue     1
-		iConfiguration          0 
+		iConfiguration          0
 		bmAttributes         0x80
 		  (Bus Powered)
 		MaxPower               50mA
@@ -149,7 +113,7 @@ The workaround is based on the solution found at [Add support for devices with "
 		  bInterfaceClass         2 Communications
 		  bInterfaceSubClass      2 Abstract (modem)
 		  bInterfaceProtocol      1 AT-commands (v.25ter)
-		  iInterface              0 
+		  iInterface              0
 		  CDC Header:
 			bcdCDC               1.10
 		  CDC ACM:
@@ -157,7 +121,7 @@ The workaround is based on the solution found at [Add support for devices with "
 			  line coding and serial state
 		  CDC Union:
 			bMasterInterface        0
-			bSlaveInterface         1 
+			bSlaveInterface         1
 		  CDC Call Management:
 			bmCapabilities       0x00
 			bDataInterface          1
@@ -179,8 +143,8 @@ The workaround is based on the solution found at [Add support for devices with "
 		  bNumEndpoints           2
 		  bInterfaceClass        10 CDC Data
 		  bInterfaceSubClass      0 Unused
-		  bInterfaceProtocol      0 
-		  iInterface              0 
+		  bInterfaceProtocol      0
+		  iInterface              0
 		  Endpoint Descriptor:
 			bLength                 7
 			bDescriptorType         5

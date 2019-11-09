@@ -17,7 +17,7 @@ cd /opt/zigbee2mqtt
 # Install python env
 python3 -m venv .
 
-# Activate environment 
+# Activate environment
 source /opt/zigbee2mqtt/bin/activate
 
 # Upgrade pip, wheel and setuptools
@@ -37,7 +37,7 @@ source /opt/zigbee2mqtt/bin/activate
 cd /opt/zigbee2mqtt
 npm install
 
-# Deactivate environment 
+# Deactivate environment
 deactivate
 ```
 
@@ -94,7 +94,7 @@ To update Zigbee2mqtt to the latest version, execute:
 sudo systemctl stop zigbee2mqtt
 cd /opt/zigbee2mqtt
 
-# Activate environment 
+# Activate environment
 source /opt/zigbee2mqtt/bin/activate
 
 # Backup configuration
