@@ -20,6 +20,9 @@
 ## CC2531 Zigbee dongle with external antenna
  - Case design for a [CC2531 Zigbee dongle with external antenna](https://www.thingiverse.com/thing:3731958)
 
+## CC1352P1, CC1352P-2 and CC2652R LaunchXL
+- Case designs for [TI LaunchXL boards for CC1352P1, CC1352P-2 and CC2652R](https://www.thingiverse.com/thing:3928171)
+
 ## Alternatives
 A lot of different case designs can be found via the [Thingiverse search][thingiverse-search-rpi]
 
