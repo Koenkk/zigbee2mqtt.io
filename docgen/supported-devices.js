@@ -2,7 +2,7 @@
  * This script generates the supported devices page.
  */
 
-const devices = require('zigbee2mqtt/node_modules/zigbee-shepherd-converters').devices;
+const devices = require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices;
 const utils = require('./utils');
 
 function onlyUnique(value, index, self) {

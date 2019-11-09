@@ -17,7 +17,10 @@ description: "Integrate your Konke 2AJZ4KPKEY via Zigbee2mqtt with whatever smar
 
 ## Notes
 
-None
+
+### Important
+Konke devices only work on Zigbee channel 15, 20 and 25.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

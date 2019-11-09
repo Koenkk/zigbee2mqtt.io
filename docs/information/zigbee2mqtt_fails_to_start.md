@@ -1,7 +1,7 @@
 ---
 ---
 # Zigbee2mqtt fails to start
-Most of the times this is caused by zigbee-shepherd not being able to communicate with your CC2530 or CC2531.
+Most of the times this is caused by zigbee-herdsman not being able to communicate with your CC2530 or CC2531.
 
 ## Verify that you put the correct port in configuration.yaml
 Execute the following command to find out the correct path:

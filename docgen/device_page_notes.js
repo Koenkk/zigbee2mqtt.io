@@ -753,6 +753,13 @@ See [link](https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691
 `,
     },
     {
+        vendor: 'Konke',
+        note: `
+### Important
+Konke devices only work on Zigbee channel 15, 20 and 25.
+`,
+    },
+    {
         model: ['PP-WHT-US'],
         note: `
 ### Power measurements

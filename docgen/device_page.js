@@ -7,7 +7,7 @@ const YAML = require('json2yaml');
 const HomeassistantExtension = require('zigbee2mqtt/lib/extension/homeassistant');
 const homeassistant = new HomeassistantExtension(null, null, null, null);
 const assert = require('assert');
-const devices = require('zigbee2mqtt/node_modules/zigbee-shepherd-converters').devices;
+const devices = require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices;
 
 function generate(device) {
     // verify that all model and notModel exist;

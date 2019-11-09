@@ -11,8 +11,8 @@ description: "Integrate your Gledopto GL-B-008Z via Zigbee2mqtt with whatever sm
 
 | Model | GL-B-008Z  |
 | Vendor  | Gledopto  |
-| Description | Smart 12W E27 RGB / CW LED bulb |
-| Supports | on/off, brightness, color temperature, color xy |
+| Description | Smart 12W E27 RGB / CCT LED bulb |
+| Supports | on/off, brightness, color temperature, color |
 | Picture | ![Gledopto GL-B-008Z](../images/devices/GL-B-008Z.jpg) |
 
 ## Notes

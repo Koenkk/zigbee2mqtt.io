@@ -155,10 +155,10 @@ pi@raspberry:/opt/zigbee2mqtt $ systemctl status zigbee2mqtt.service
            └─679 node index.js
 
 Jun 07 20:27:22 raspberry systemd[1]: Started zigbee2mqtt.
-Jun 07 20:27:23 raspberry npm[665]: > zigbee2mqtt@0.1.0 start /opt/zigbee2mqtt
+Jun 07 20:27:23 raspberry npm[665]: > zigbee2mqtt@1.6.0 start /opt/zigbee2mqtt
 Jun 07 20:27:23 raspberry npm[665]: > node index.js
-Jun 07 20:27:24 raspberry npm[665]: 2018-6-7 20:27:24 INFO Starting zigbee-shepherd
-Jun 07 20:27:25 raspberry npm[665]: 2018-6-7 20:27:25 INFO zigbee-shepherd started
+Jun 07 20:27:24 raspberry npm[665]: zigbee2mqtt:info  2019-11-09T13:04:01: Logging to directory: '/opt/zigbee2mqtt/data/log/2019-11-09.14-04-01'
+Jun 07 20:27:25 raspberry npm[665]: zigbee2mqtt:info  2019-11-09T13:04:01: Starting zigbee2mqtt version 1.6.0 (commit #720e393)
 ```
 
 Now that everything works, we want systemctl to start zigbee2mqtt automatically on boot, this can be done by executing:

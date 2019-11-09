@@ -193,8 +193,8 @@ climate:
   - platform: "mqtt"
     state_topic: false
     availability_topic: "zigbee2mqtt/bridge/state"
-    min_temp: 7
-    max_temp: 30
+    min_temp: "7"
+    max_temp: "30"
     modes: 
       - "off"
       - "auto"
@@ -206,7 +206,7 @@ climate:
     current_temperature_template: "{{ value_json.local_temperature }}"
     temperature_state_topic: true
     temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
-    temperature_command_topic: true
+    temperature_command_topic: "occupied_heating_setpoint"
 
 sensor:
   - platform: "mqtt"
