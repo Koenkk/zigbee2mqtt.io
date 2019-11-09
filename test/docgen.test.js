@@ -12,7 +12,7 @@ describe('Docgen', () => {
         chai.assert.strictEqual(
             supportDevices,
             actual,
-            'supported-devices.md is not up-to-date, forgot to run npm run docgen?'
+            'supported-devices.md is not up-to-date, forgot to run npm run docgen?',
         );
     });
 });
