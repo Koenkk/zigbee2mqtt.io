@@ -22,6 +22,9 @@ description: "Integrate your Xiaomi MCCGQ01LM via Zigbee2mqtt with whatever smar
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
 After this the device will automatically join.
 
+If the device doesn't automatically join, or you encounter the `Cannot get the Node Descriptior of the Device: ` error, try the following:
+* Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking)
+* Press the reset button every few seconds until the device has successfully joined.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
