@@ -37,6 +37,7 @@ Besides running Zigbee2mqtt on [bare-metal Linux](getting_started/running_zigbee
 
 ### How tos
 * [How to create a CC2530 router](how_tos/how_to_create_a_cc2530_router.md)
+* [How to connect to a remote adapter](how_tos/how_to_connect_to_a_remote_adapter.md)
 * [How to improve network range](how_tos/how_to_improve_network_range.md)
 * [How to secure your Zigbee network](how_tos/how_to_secure_network.md)
 * [How to sniff Zigbee traffic](how_tos/how_to_sniff_zigbee_traffic.md)
