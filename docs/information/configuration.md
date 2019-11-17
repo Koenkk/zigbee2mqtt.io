@@ -121,7 +121,7 @@ queue:
 
 # Optional: Device specific options
 device_options:
-  # See https://www.zigbee2mqtt.io/configuration/device_specific_configuration.html
+  # See 'Device specific configuration' below
 ```
 
 ### Specifying devices and groups in a separate file
