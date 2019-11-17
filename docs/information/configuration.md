@@ -93,6 +93,8 @@ advanced:
   homeassistant_discovery_topic: 'homeassistant'
   # Optional: Home Assistant status topic (default: shown below)
   homeassistant_status_topic: 'hass/status'
+  # Optional: log timestamp format (default: shown below)
+  timestamp_format: 'YYYY-MM-DD HH:mm:ss'
 
 # Optional: networkmap options
 map_options:
