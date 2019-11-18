@@ -16,7 +16,7 @@ In this example the correct `port` would be `/dev/ttyAMC0`.
 ## Verify that the user you run Zigbee2mqtt as has write access to the port
 This can be tested by executing: `test -w [PORT] && echo success || echo failure` (e.g. `test -w /dev/ttyACM0 && echo success || echo failure`).
 
-If it outputs `failure`. Assign write acces by executing: `sudo chown [USER] [PORT]` (e.g. `sudo chown pi /dev/ttyACM0`).
+If it outputs `failure`. On Debian-based Linux (Debian/Ubuntu/Raspbian) add your user to the dialout group so you have appropriate permissions on the device(s) by executing `sudo usermod -a -G dialout $USER`. You need to logout and back in for the new group to take effect. On other Linux distributions assign write acces by executing: `sudo chown [USER] [PORT]` (e.g. `sudo chown pi /dev/ttyACM0`).
 
 ## Verify that you have a CC2530 or CC2531 (and not a CC2540)
 The CC2540 can be confused easily with the CC2531 as it looks (almost) exactly the same. However, this device does not support zigbee but bluetooth. This can be verified by looking at the chip.
