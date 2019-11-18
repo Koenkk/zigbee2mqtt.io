@@ -210,6 +210,10 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
 
   // Specifies the number of seconds the transition to this state takes (0 by default).
   "transition": 3,
+
+  // Instead of setting a brightness by value, you can also move it and stop it after a certain time
+  "brightness_move": -40, // Starts moving the brightness down at 40 units per second
+  "brightness_move": "stop", // Stops the brightness move
 }
 ```
 
