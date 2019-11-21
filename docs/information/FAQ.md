@@ -2,7 +2,17 @@
 ---
 # Frequently asked questions
 
+## Why don't my devices pair when using a Raspberry Pi 4?
+<details>
+  <summary>Click to expand</summary>
+
+When the adapter is plugged directly into the Raspberry Pi 4 it could be that devices refuse to pair. This is because there is too much interference. Connnecting the adapter through a USB extension cable should fix this issue.
+
+</details>
+
 ## What does and does not require repairing of all devices?
+<details>
+  <summary>Click to expand</summary>
 
 ### Requires repairing
 You need to re-pair all you devices when:
@@ -28,8 +38,12 @@ You **don't** need to re-pair your devices when:
 - Switching from CC2530/CC2531 device (physically).
 - Switching the system running Zigbee2mqtt.
     - When doing this, make sure to copy over the contents of the `data` directory.
+</details>
 
 ## Help, Zigbee2mqtt fails to start!
+<details>
+  <summary>Click to expand</summary>
+
 Most of the times this is caused by zigbee-herdsman not being able to communicate with your adapter (e.g. CC2531).
 
 ### Verify that you put the correct port in configuration.yaml
@@ -53,8 +67,12 @@ The CC2540 can be confused easily with the CC2531 as it looks (almost) exactly t
 ### [ModemManager](https://www.freedesktop.org/wiki/Software/ModemManager/) is installed
 ModemManger, which is default installed on e.g. Ubuntu, is known to cause problems. It can easily be fixed by removing ModemManager through `sudo apt-get purge modemmanager`.
 
+</details>
 
 ## I read that zigbee2mqtt has a limit of 20 devices, is this true?
+<details>
+  <summary>Click to expand</summary>
+
 Definitely not! Example given: the default Zigbee2mqtt CC2531 firmware indeed supports 20 devices connected **directly** to the coordinator. However, by having routers in your network the network size can be extended. Probably all AC powered devices e.g. bulbs serve as a router, you can even use another [CC2530/CC2531 as a router](../information/cc_sniffer_devices.md) (which has a limit of 21 devices).
 
 ### Example
@@ -63,3 +81,5 @@ When using the default Zigbee2mqtt CC2531 coordinator firmware + 2 CC2531 router
 - Router 1: 21
 - Router 2: 21
 - **Device limit of 55 devices**
+
+</details>
