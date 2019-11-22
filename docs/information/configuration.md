@@ -87,6 +87,9 @@ advanced:
   # Optional: Blacklist devices from being checked for availability (default: empty)
   availability_blacklist:
     - DEVICE_FRIENDLY_NAME
+  # Optional: Whitelist of devices being checked for availability (default: empty)
+  availability_whitelist:
+    - DEVICE_FRIENDLY_NAME
   # Optional: Enables report feature (see information -> report for more details) (default: false)
   report: true
   # Optional: Home Assistant discovery topic (default: shown below)
