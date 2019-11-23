@@ -17,7 +17,8 @@ description: "Integrate your Xiaomi LLKZMK11LM via Zigbee2mqtt with whatever sma
 
 ## Notes
 
-## Interlock
+
+### Interlock
 This option allows to inter connect the relays which will make sure that only one relay is on at a time. To do this publish to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"interlock": true}` or `{"interlock": false}`. By default this option is `false`.
 
 

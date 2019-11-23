@@ -197,17 +197,20 @@ the Device with a Philips LivingColors Remote Gen 2 as it should try all Zigbee 
         supports: ['brightness'],
         note: `
 ### Pairing
-Factory resetting a Hue bulb can be accomplished in 3 ways.
+Factory resetting a Hue bulb can be accomplished in 4 ways.
 After resetting the bulb will automatically connect.
 
-**Hue bridge**
+#### Touchlink factory reset
+See [Touchlink](../information/touchlink)
+
+#### Hue bridge
 When the bulb is still connected to the Hue bridge, you can simply factory reset the bulb
 by removing it from the bridge via the Hue app.
 
-**Hue dimmer switch**
+#### Hue dimmer switch
 [VIDEO: Factory reset a Hue bulb with Hue dimmer switch](https://www.youtube.com/watch?v=qvlEAELiJKs).
 
-**TRADFRI remote control**
+#### TRADFRI remote control
 This may also be possible with the
 [Tradfri Remote Control](https://www.ikea.com/us/en/images/products/tradfri-remote-control__0489469_PE623665_S4.JPG)
 by pressing and holding the reset button on the bottom of the remote (next to the battery).
@@ -329,10 +332,53 @@ The red light on the remote will now flash a few times.
 `,
     },
     {
+        model: ['LLKZMK11LM'],
+        note: `
+### Interlock
+This option allows to inter connect the relays which will make sure that only one relay is on at a time. To do this publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"interlock": true}\` or \`{"interlock": false}\`. By default this option is \`false\`.
+`,
+    },
+    {
+        model: ['E1744'],
+        note: `
+### Recommendation
+This device sends multiple messages in short time period with the same payload. It's worth setting \`debounce\` option with \`debounce_ignore: - action\` to throttle them without loosing unique action payloads.
+
+E.g. (devices.yaml)
+
+{% raw %}
+\`\`\`yaml
+'0xabc457fffe679xyz':
+    friendly_name: Symfonisk ikea volume
+    debounce: 0.5
+    debounce_ignore:
+    - action
+\`\`\`
+{% endraw %}
+
+To find optimal "smoothness" play with debounce time or if you need all unique rotation steps consider adding \`brightness\` to \`debounce_ignore\` option
+
+{% raw %}
+\`\`\`yaml
+'0xabc457fffe679xyz':
+    friendly_name: Symfonisk ikea volume
+    debounce: 0.1
+    debounce_ignore:
+    - action
+    - brightness
+\`\`\`
+{% endraw %}
+`,
+    },
+    {
         model: ['E1524/E1810'],
         note: `
 ### Binding
-This device does not support binding (limitation of the device). A workaround is to first
+The remote can be bound to groups using [binding](../information/binding) since firmware 2.3.014.
+It can only be bound to 1 group at a time.
+
+#### Note
+This device with old firmware < 2.3.014 does not support binding (limitation of the device). A workaround is to first
 get the group ID where the remote is sending it's commands to and add bulbs to the
 same group ([discussion](https://github.com/Koenkk/zigbee2mqtt/issues/782#issuecomment-514526256)).
 
@@ -361,6 +407,13 @@ While pairing the LED is flashing/dimming slowly. Once the pairing is finished, 
 `,
     },
     {
+        model: ['BASICZBR3'],
+        note: `
+### Pairing
+If brand new, when powered on it will attempt to pair to Zigbee2mqtt automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the (relay) button on the top for about 5 seconds until the relay cliks and the red LED flashes several times. The device will then go into pairing mode and the blue LED will begin to flash. When connected, the blue LED will turn on solid. It should then be connected to Zigbee2mqtt. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
+`,
+    },
+    {
         model: ['ICTC-G-1'],
         note: `
 ### Pairing
@@ -368,7 +421,7 @@ To factory reset the TRADFRI wireless dimmer (ICTC-G-1) press the button
 4 times (so the red lights starts blinking).
 After the blinks you might be willing to rotate the dimmer
 like you are trying to control your lights. It will prevent the device
-from going to sleep and ensure successful paiting. In case the dimmer was
+from going to sleep and ensure successful pairing. In case the dimmer was
 recognized but no actions seems to be detected, try to restart the zigbee2mqtt.
 See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koenkk/zigbee2mqtt/issues/620).
 `,
@@ -750,6 +803,13 @@ When clicking the middle (center) button on the remote it will send a \`{"click"
 it will **also** send a \`{"click": "toggle_hold"}\`. It is not possible to skip the \`toggle\` when the button is hold.
 Also the remote won't send anything when the button is released.
 See [link](https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691885) for more details.
+`,
+    },
+    {
+        model: ['324131092621'],
+        note: `
+### Binding
+If you want to bind the dimmer to a (Hue) lamp you'll have to *[bind it to the lamp through MQTT](../information/binding.html)* and unbind it from the coordinator. Use the dimmer as source and coordinator as target for that.
 `,
     },
     {
