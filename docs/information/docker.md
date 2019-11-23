@@ -52,13 +52,13 @@ See [How to support new devices](../how_tos/how_to_support_new_devices.md)
       container_name: zigbee2mqtt
       image: koenkk/zigbee2mqtt
       volumes:
-		- ./data:/app/data
-		- /run/udev:/run/udev:ro
+        - ./data:/app/data
+        - /run/udev:/run/udev:ro
       devices:
         - /dev/ttyACM0:/dev/ttyACM0
       restart: always
-	  network_mode: host
-	  privileged: true
+      network_mode: host
+      privileged: true
       environment:
         - TZ=Europe/Amsterdam
 ```
