@@ -6,7 +6,7 @@ Touchlink is a feature of Zigbee which allows devices physically close to each o
 Note that not all Zigbee devices support Touchlink, but most bulbs of common brands like Philips and IKEA support this.
 
 ## Factory reset device
-Zigbee2mqtt allows to factory reset devices through Touchlink. This is especially handy for e.g. Philips Hue bulbs as they cannot be factory resetted by turning them on/off 5 times.
+Zigbee2mqtt allows to factory reset devices through Touchlink. This is especially handy for e.g. Philips Hue bulbs as they cannot be factory resetted by turning them on/off 5 times. Demo: [video](https://www.youtube.com/watch?v=kcRj77YGyKk)
 
 To factory reset a device through Touchlink bring the device close (< 10 cm) to your coordinator (e.g. CC2531 adapter). After this send a MQTT message to `zigbee2mqtt/bridge/config/touchlink/factory_reset` with an empty payload.
 
