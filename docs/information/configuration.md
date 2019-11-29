@@ -67,6 +67,10 @@ advanced:
   log_level: info
   # Optional: Location of log directory (default: shown below)
   log_directory: data/log/%TIMESTAMP%
+  # Optional: Output location of the log (default: shown below), leave empty to supress logging (log_output: [])
+  log_output:
+    - console
+    - file
   # Optional: Baudrate for serial port (default: shown below)
   baudrate: 115200
   # Optional: RTS / CTS Hardware Flow Control for serial port (default: true)
