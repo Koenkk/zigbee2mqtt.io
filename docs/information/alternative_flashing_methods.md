@@ -264,7 +264,7 @@ If you see 0000 or ffff, something is wrong and you should probably check your w
 
 ```bash
 cd ~/flash_cc2531       #assumming you git-cloned the program to your home directory
-wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/CC2531_DEFAULT_20190608.zip
+wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip
 unzip CC2531_DEFAULT_20190608.zip  
 ```
 
