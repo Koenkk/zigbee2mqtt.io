@@ -16,7 +16,7 @@
    ```
    objcopy.exe --gap-fill 0xFF --pad-to 0x040000 -I ihex CC2531ZNP-Prod.hex -O binary CC2531ZNP-Prod.bin
    ```
-   **Linux or Bash on Ubuntu on Windows**: install the `bintools` package using your package manager
+   **Linux or Bash on Ubuntu on Windows**: install the `binutils` package using your package manager
    ```bash
    objcopy --gap-fill 0xFF --pad-to 0x040000 -I ihex CC2531ZNP-Prod.hex -O binary /tmp/CC2531ZNP-Prod.bin
    ```
@@ -264,7 +264,7 @@ If you see 0000 or ffff, something is wrong and you should probably check your w
 
 ```bash
 cd ~/flash_cc2531       #assumming you git-cloned the program to your home directory
-wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/CC2531_DEFAULT_20190608.zip
+wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip
 unzip CC2531_DEFAULT_20190608.zip  
 ```
 
