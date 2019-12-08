@@ -98,6 +98,9 @@ Allows you to whitelist devices in the network. Payload should be the `friendly_
 Allows you to change the `friendly_name` of a device on the fly.
 Format should be: `{"old": "OLD_FRIENDLY_NAME", "new": "NEW_FRIENDLY_NAME"}`.
 
+## zigbee2mqtt/bridge/config/rename_last
+Allows you to rename the last joined device. Payload should be the new name e.g. `my_new_device_name`.
+
 ## zigbee2mqtt/bridge/config/add_group
 Allows you to add a group, payload should be the name of the group, e.g. `my_group`.
 
