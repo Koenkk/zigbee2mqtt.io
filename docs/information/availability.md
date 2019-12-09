@@ -35,6 +35,9 @@ advanced:
   availability_whitelist: ['my_bulb','my_other_bulb'] # = list of friendly names
 ```
 
+Note that not all devices can be pinged for availability (e.g. battery powered devices).
+This category of devices will be marked as `unavailable` when they did not send a message for 25 hours.
+
 ## State retrieval
 While this feature is enabled and a bulb reconnects or announces itself on the network, Zigbee2mqtt will retrieve the new state of the device.
 This will make sure that e.g. a bulb is powered off and on again the state (on/off, brightness, color temperature or color) is correct.
