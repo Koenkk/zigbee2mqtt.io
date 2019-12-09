@@ -771,6 +771,12 @@ Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
     {
         model: ['SPZB0001'],
         note: `
+### Pairing
+If you are having trouble pairing, reset the device.
+- hold boost, +, and - (a count from 1 to 10 will be on the display)
+- release ones 'rES' is displayed
+- hit boot once after 'Jin' is displayed
+
 ### Controlling
 *Current heating setpoint*
 \`\`\`json

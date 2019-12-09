@@ -189,7 +189,7 @@ The `configuration.yaml` allows to set device specific configuration. The follow
 * `retrieve_state`: Retrieves the state after setting it. Should only be enabled when the [reporting feature](../information/report.md) does not work for this device.
 
 ### Device type specific
-Some devices support device type specific configuration, e.g. [RTCGQ11LM](../devices/RTCGQ11LM). To see if your device has device type specific configuration, visit the device page by going to [Supported devices](../information/supported_devices.md) and clicking on the model number.
+Some devices support device type specific configuration, e.g. [RTCGQ11LM](../devices/RTCGQ11LM.md). To see if your device has device type specific configuration, visit the device page by going to [Supported devices](../information/supported_devices.md) and clicking on the model number.
 
 #### Changing device type specific defaults
 The default values used for the device specific configuration can be overriden via e.g.:
