@@ -29,915 +29,915 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [GR-ZB01-W](../devices/GR-ZB01-W.html) | AXIS Gear window shade motor (open, close, position, battery) | ![../images/devices/GR-ZB01-W.jpg](../images/devices/GR-ZB01-W.jpg) |
+| [GR-ZB01-W](../devices/GR-ZB01-W.md) | AXIS Gear window shade motor (open, close, position, battery) | ![../images/devices/GR-ZB01-W.jpg](../images/devices/GR-ZB01-W.jpg) |
 
 ### AduroSmart
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [81809](../devices/81809.html) | AduroSmart ERIA colors and white shades smart light bulb A19 (on/off, brightness, color temperature, color xy) | ![../images/devices/81809.jpg](../images/devices/81809.jpg) |
-| [81825](../devices/81825.html) | AduroSmart ERIA smart wireless dimming switch (on, off, up, down) | ![../images/devices/81825.jpg](../images/devices/81825.jpg) |
+| [81809](../devices/81809.md) | AduroSmart ERIA colors and white shades smart light bulb A19 (on/off, brightness, color temperature, color xy) | ![../images/devices/81809.jpg](../images/devices/81809.jpg) |
+| [81825](../devices/81825.md) | AduroSmart ERIA smart wireless dimming switch (on, off, up, down) | ![../images/devices/81825.jpg](../images/devices/81825.jpg) |
 
 ### Airam
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [4713407](../devices/4713407.html) | Airam LED OP A60 ZB 9W/827 E27 (on/off, brightness) | ![../images/devices/4713407.jpg](../images/devices/4713407.jpg) |
-| [AIRAM-CTR.U](../devices/AIRAM-CTR.U.html) | Airam CTR.U remote (on/off, brightness up/down and click/hold/release) | ![../images/devices/AIRAM-CTR.U.jpg](../images/devices/AIRAM-CTR.U.jpg) |
+| [4713407](../devices/4713407.md) | Airam LED OP A60 ZB 9W/827 E27 (on/off, brightness) | ![../images/devices/4713407.jpg](../images/devices/4713407.jpg) |
+| [AIRAM-CTR.U](../devices/AIRAM-CTR.U.md) | Airam CTR.U remote (on/off, brightness up/down and click/hold/release) | ![../images/devices/AIRAM-CTR.U.jpg](../images/devices/AIRAM-CTR.U.jpg) |
 
 ### Anchor
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [67200BL](../devices/67200BL.html) | Anchor Vetaar smart plug (on/off) | ![../images/devices/67200BL.jpg](../images/devices/67200BL.jpg) |
+| [67200BL](../devices/67200BL.md) | Anchor Vetaar smart plug (on/off) | ![../images/devices/67200BL.jpg](../images/devices/67200BL.jpg) |
 
 ### Belkin
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [F7C033](../devices/F7C033.html) | Belkin WeMo smart LED bulb (on/off, brightness) | ![../images/devices/F7C033.jpg](../images/devices/F7C033.jpg) |
+| [F7C033](../devices/F7C033.md) | Belkin WeMo smart LED bulb (on/off, brightness) | ![../images/devices/F7C033.jpg](../images/devices/F7C033.jpg) |
 
 ### Bitron
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [AV2010/34](../devices/AV2010_34.html) | Bitron 4-Touch single click buttons (click) | ![../images/devices/AV2010-34.jpg](../images/devices/AV2010-34.jpg) |
-| [AV2010/22](../devices/AV2010_22.html) | Bitron Wireless motion detector (occupancy) | ![../images/devices/AV2010-22.jpg](../images/devices/AV2010-22.jpg) |
-| [AV2010/25](../devices/AV2010_25.html) | Bitron Video wireless socket (on/off, power measurement) | ![../images/devices/AV2010-25.jpg](../images/devices/AV2010-25.jpg) |
-| [AV2010/32](../devices/AV2010_32.html) | Bitron Wireless wall thermostat with relay (temperature, heating/cooling system control) | ![../images/devices/AV2010-32.jpg](../images/devices/AV2010-32.jpg) |
+| [AV2010/34](../devices/AV2010_34.md) | Bitron 4-Touch single click buttons (click) | ![../images/devices/AV2010-34.jpg](../images/devices/AV2010-34.jpg) |
+| [AV2010/22](../devices/AV2010_22.md) | Bitron Wireless motion detector (occupancy) | ![../images/devices/AV2010-22.jpg](../images/devices/AV2010-22.jpg) |
+| [AV2010/25](../devices/AV2010_25.md) | Bitron Video wireless socket (on/off, power measurement) | ![../images/devices/AV2010-25.jpg](../images/devices/AV2010-25.jpg) |
+| [AV2010/32](../devices/AV2010_32.md) | Bitron Wireless wall thermostat with relay (temperature, heating/cooling system control) | ![../images/devices/AV2010-32.jpg](../images/devices/AV2010-32.jpg) |
 
 ### Blaupunkt
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [SCM-S1](../devices/SCM-S1.html) | Blaupunkt Roller shutter (open/close) | ![../images/devices/SCM-S1.jpg](../images/devices/SCM-S1.jpg) |
+| [SCM-S1](../devices/SCM-S1.md) | Blaupunkt Roller shutter (open/close) | ![../images/devices/SCM-S1.jpg](../images/devices/SCM-S1.jpg) |
 
 ### Bosch
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [RADON TriTech ZB](../devices/RADON_TriTech_ZB.html) | Bosch Wireless motion detector (occupancy and temperature) | ![../images/devices/RADON-TriTech-ZB.jpg](../images/devices/RADON-TriTech-ZB.jpg) |
-| [ISW-ZPR1-WP13](../devices/ISW-ZPR1-WP13.html) | Bosch Motion sensor (occupancy and temperature) | ![../images/devices/ISW-ZPR1-WP13.jpg](../images/devices/ISW-ZPR1-WP13.jpg) |
+| [RADON TriTech ZB](../devices/RADON_TriTech_ZB.md) | Bosch Wireless motion detector (occupancy and temperature) | ![../images/devices/RADON-TriTech-ZB.jpg](../images/devices/RADON-TriTech-ZB.jpg) |
+| [ISW-ZPR1-WP13](../devices/ISW-ZPR1-WP13.md) | Bosch Motion sensor (occupancy and temperature) | ![../images/devices/ISW-ZPR1-WP13.jpg](../images/devices/ISW-ZPR1-WP13.jpg) |
 
 ### Busch-Jaeger
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [6717-84](../devices/6717-84.html) | Busch-Jaeger Adaptor plug (on/off) | ![../images/devices/6717-84.jpg](../images/devices/6717-84.jpg) |
+| [6717-84](../devices/6717-84.md) | Busch-Jaeger Adaptor plug (on/off) | ![../images/devices/6717-84.jpg](../images/devices/6717-84.jpg) |
 
 ### CREE
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [B00TN589ZG](../devices/B00TN589ZG.html) | CREE Connected bulb (on/off, brightness) | ![../images/devices/B00TN589ZG.jpg](../images/devices/B00TN589ZG.jpg) |
+| [B00TN589ZG](../devices/B00TN589ZG.md) | CREE Connected bulb (on/off, brightness) | ![../images/devices/B00TN589ZG.jpg](../images/devices/B00TN589ZG.jpg) |
 
 ### Calex
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [421786](../devices/421786.html) | Calex LED A60 Zigbee GLS-lamp (on/off, brightness) | ![../images/devices/421786.jpg](../images/devices/421786.jpg) |
-| [421792](../devices/421792.html) | Calex LED A60 Zigbee RGB lamp (on/off, brightness, color temperature, color xy) | ![../images/devices/421792.jpg](../images/devices/421792.jpg) |
+| [421786](../devices/421786.md) | Calex LED A60 Zigbee GLS-lamp (on/off, brightness) | ![../images/devices/421786.jpg](../images/devices/421786.jpg) |
+| [421792](../devices/421792.md) | Calex LED A60 Zigbee RGB lamp (on/off, brightness, color temperature, color xy) | ![../images/devices/421792.jpg](../images/devices/421792.jpg) |
 
 ### Centralite
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [4256251-RZHAC](../devices/4256251-RZHAC.html) | Centralite White Swiss power outlet switch with power meter (switch and power meter) | ![../images/devices/4256251-RZHAC.jpg](../images/devices/4256251-RZHAC.jpg) |
-| [4257050-ZHAC](../devices/4257050-ZHAC.html) | Centralite 3-Series smart dimming outlet (on/off, brightness, power meter) | ![../images/devices/4257050-ZHAC.jpg](../images/devices/4257050-ZHAC.jpg) |
+| [4256251-RZHAC](../devices/4256251-RZHAC.md) | Centralite White Swiss power outlet switch with power meter (switch and power meter) | ![../images/devices/4256251-RZHAC.jpg](../images/devices/4256251-RZHAC.jpg) |
+| [4257050-ZHAC](../devices/4257050-ZHAC.md) | Centralite 3-Series smart dimming outlet (on/off, brightness, power meter) | ![../images/devices/4257050-ZHAC.jpg](../images/devices/4257050-ZHAC.jpg) |
 
 ### Climax
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [PSS-23ZBS](../devices/PSS-23ZBS.html) | Climax Power plug (on/off) | ![../images/devices/PSS-23ZBS.jpg](../images/devices/PSS-23ZBS.jpg) |
-| [SCM-5ZBS](../devices/SCM-5ZBS.html) | Climax Roller shutter (open/close) | ![../images/devices/SCM-5ZBS.jpg](../images/devices/SCM-5ZBS.jpg) |
-| [PSM-29ZBSR](../devices/PSM-29ZBSR.html) | Climax Power plug (on/off) | ![../images/devices/PSM-29ZBSR.jpg](../images/devices/PSM-29ZBSR.jpg) |
+| [PSS-23ZBS](../devices/PSS-23ZBS.md) | Climax Power plug (on/off) | ![../images/devices/PSS-23ZBS.jpg](../images/devices/PSS-23ZBS.jpg) |
+| [SCM-5ZBS](../devices/SCM-5ZBS.md) | Climax Roller shutter (open/close) | ![../images/devices/SCM-5ZBS.jpg](../images/devices/SCM-5ZBS.jpg) |
+| [PSM-29ZBSR](../devices/PSM-29ZBSR.md) | Climax Power plug (on/off) | ![../images/devices/PSM-29ZBSR.jpg](../images/devices/PSM-29ZBSR.jpg) |
 
 ### Commercial Electric
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [53170161](../devices/53170161.html) | Commercial Electric Matte White Recessed Retrofit Smart Led Downlight - 4 Inch (on/off, brightness, color temperature) | ![../images/devices/53170161.jpg](../images/devices/53170161.jpg) |
+| [53170161](../devices/53170161.md) | Commercial Electric Matte White Recessed Retrofit Smart Led Downlight - 4 Inch (on/off, brightness, color temperature) | ![../images/devices/53170161.jpg](../images/devices/53170161.jpg) |
 
 ### Custom devices (DiY)
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [CC2530.ROUTER](../devices/CC2530.ROUTER.html) | Custom devices (DiY) [CC2530 router](http://ptvo.info/cc2530-based-zigbee-coordinator-and-router-112/) (state, description, type, rssi) | ![../images/devices/CC2530.ROUTER.jpg](../images/devices/CC2530.ROUTER.jpg) |
-| [ptvo.switch](../devices/ptvo.switch.html) | Custom devices (DiY) [Multi-channel relay switch](https://ptvo.info/zigbee-switch-configurable-firmware-router-199/) (hold, single, double and triple click, on/off) | ![../images/devices/ptvo.switch.jpg](../images/devices/ptvo.switch.jpg) |
-| [DNCKATSW001](../devices/DNCKATSW001.html) | Custom devices (DiY) [DNCKAT single key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) (on/off) | ![../images/devices/DNCKATSW001.jpg](../images/devices/DNCKATSW001.jpg) |
-| [DNCKATSW002](../devices/DNCKATSW002.html) | Custom devices (DiY) [DNCKAT double key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) (hold/release, on/off) | ![../images/devices/DNCKATSW002.jpg](../images/devices/DNCKATSW002.jpg) |
-| [DNCKATSW003](../devices/DNCKATSW003.html) | Custom devices (DiY) [DNCKAT triple key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) (hold/release, on/off) | ![../images/devices/DNCKATSW003.jpg](../images/devices/DNCKATSW003.jpg) |
-| [DNCKATSW004](../devices/DNCKATSW004.html) | Custom devices (DiY) [DNCKAT quadruple key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) (hold/release, on/off) | ![../images/devices/DNCKATSW004.jpg](../images/devices/DNCKATSW004.jpg) |
-| [ZigUP](../devices/ZigUP.html) | Custom devices (DiY) [CC2530 based ZigBee relais, switch, sensor and router](https://github.com/formtapez/ZigUP/) (relais, RGB-stripe, sensors, S0-counter, ADC, digital I/O) | ![../images/devices/ZigUP.jpg](../images/devices/ZigUP.jpg) |
-| [DIYRuZ_R4_5](../devices/DIYRuZ_R4_5.html) | Custom devices (DiY) [DiY 4 Relays + 4 switches + 1 buzzer](http://modkam.ru/?p=1054) (on/off) | ![../images/devices/DIYRuZ_R4_5.jpg](../images/devices/DIYRuZ_R4_5.jpg) |
-| [DIYRuZ_KEYPAD20](../devices/DIYRuZ_KEYPAD20.html) | Custom devices (DiY) [DiY 20 button keypad](http://modkam.ru/?p=1114) (click) | ![../images/devices/DIYRuZ_KEYPAD20.jpg](../images/devices/DIYRuZ_KEYPAD20.jpg) |
-| [ZWallRemote0](../devices/ZWallRemote0.html) | Custom devices (DiY) Matts Wall Switch Remote (https://github.com/mattlokes/ZWallRemote) (on/off) | ![../images/devices/ZWallRemote0.jpg](../images/devices/ZWallRemote0.jpg) |
-| [DTB190502A1](../devices/DTB190502A1.html) | Custom devices (DiY) [CC2530 based IO Board https://databyte.ch/?portfolio=zigbee-erstes-board-dtb190502a) (switch, buttons) | ![../images/devices/DTB190502A1.jpg](../images/devices/DTB190502A1.jpg) |
+| [CC2530.ROUTER](../devices/CC2530.ROUTER.md) | Custom devices (DiY) [CC2530 router](http://ptvo.info/cc2530-based-zigbee-coordinator-and-router-112/) (state, description, type, rssi) | ![../images/devices/CC2530.ROUTER.jpg](../images/devices/CC2530.ROUTER.jpg) |
+| [ptvo.switch](../devices/ptvo.switch.md) | Custom devices (DiY) [Multi-channel relay switch](https://ptvo.info/zigbee-switch-configurable-firmware-router-199/) (hold, single, double and triple click, on/off) | ![../images/devices/ptvo.switch.jpg](../images/devices/ptvo.switch.jpg) |
+| [DNCKATSW001](../devices/DNCKATSW001.md) | Custom devices (DiY) [DNCKAT single key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) (on/off) | ![../images/devices/DNCKATSW001.jpg](../images/devices/DNCKATSW001.jpg) |
+| [DNCKATSW002](../devices/DNCKATSW002.md) | Custom devices (DiY) [DNCKAT double key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) (hold/release, on/off) | ![../images/devices/DNCKATSW002.jpg](../images/devices/DNCKATSW002.jpg) |
+| [DNCKATSW003](../devices/DNCKATSW003.md) | Custom devices (DiY) [DNCKAT triple key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) (hold/release, on/off) | ![../images/devices/DNCKATSW003.jpg](../images/devices/DNCKATSW003.jpg) |
+| [DNCKATSW004](../devices/DNCKATSW004.md) | Custom devices (DiY) [DNCKAT quadruple key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) (hold/release, on/off) | ![../images/devices/DNCKATSW004.jpg](../images/devices/DNCKATSW004.jpg) |
+| [ZigUP](../devices/ZigUP.md) | Custom devices (DiY) [CC2530 based ZigBee relais, switch, sensor and router](https://github.com/formtapez/ZigUP/) (relais, RGB-stripe, sensors, S0-counter, ADC, digital I/O) | ![../images/devices/ZigUP.jpg](../images/devices/ZigUP.jpg) |
+| [DIYRuZ_R4_5](../devices/DIYRuZ_R4_5.md) | Custom devices (DiY) [DiY 4 Relays + 4 switches + 1 buzzer](http://modkam.ru/?p=1054) (on/off) | ![../images/devices/DIYRuZ_R4_5.jpg](../images/devices/DIYRuZ_R4_5.jpg) |
+| [DIYRuZ_KEYPAD20](../devices/DIYRuZ_KEYPAD20.md) | Custom devices (DiY) [DiY 20 button keypad](http://modkam.ru/?p=1114) (click) | ![../images/devices/DIYRuZ_KEYPAD20.jpg](../images/devices/DIYRuZ_KEYPAD20.jpg) |
+| [ZWallRemote0](../devices/ZWallRemote0.md) | Custom devices (DiY) Matts Wall Switch Remote (https://github.com/mattlokes/ZWallRemote) (on/off) | ![../images/devices/ZWallRemote0.jpg](../images/devices/ZWallRemote0.jpg) |
+| [DTB190502A1](../devices/DTB190502A1.md) | Custom devices (DiY) [CC2530 based IO Board https://databyte.ch/?portfolio=zigbee-erstes-board-dtb190502a) (switch, buttons) | ![../images/devices/DTB190502A1.jpg](../images/devices/DTB190502A1.jpg) |
 
 ### DIYRuZ
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [DIYRuZ_magnet](../devices/DIYRuZ_magnet.html) | DIYRuZ [DIYRuZ contact sensor](https://modkam.ru/?p=1220) (contact) | ![../images/devices/DIYRuZ_magnet.jpg](../images/devices/DIYRuZ_magnet.jpg) |
+| [DIYRuZ_magnet](../devices/DIYRuZ_magnet.md) | DIYRuZ [DIYRuZ contact sensor](https://modkam.ru/?p=1220) (contact) | ![../images/devices/DIYRuZ_magnet.jpg](../images/devices/DIYRuZ_magnet.jpg) |
 
 ### Danalock
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [V3-BTZB](../devices/V3-BTZB.html) | Danalock BT/ZB smartlock (lock/unlock, battery) | ![../images/devices/V3-BTZB.jpg](../images/devices/V3-BTZB.jpg) |
+| [V3-BTZB](../devices/V3-BTZB.md) | Danalock BT/ZB smartlock (lock/unlock, battery) | ![../images/devices/V3-BTZB.jpg](../images/devices/V3-BTZB.jpg) |
 
 ### Dawon DNS
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [PM-C140-ZB](../devices/PM-C140-ZB.html) | Dawon DNS IOT remote control smart buried-type outlet (on/off, power and energy measurement) | ![../images/devices/PM-C140-ZB.jpg](../images/devices/PM-C140-ZB.jpg) |
+| [PM-C140-ZB](../devices/PM-C140-ZB.md) | Dawon DNS IOT remote control smart buried-type outlet (on/off, power and energy measurement) | ![../images/devices/PM-C140-ZB.jpg](../images/devices/PM-C140-ZB.jpg) |
 
 ### Dresden Elektronik
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [Mega23M12](../devices/Mega23M12.html) | Dresden Elektronik ZigBee Light Link wireless electronic ballast (on/off, brightness, color temperature, color xy) | ![../images/devices/Mega23M12.jpg](../images/devices/Mega23M12.jpg) |
-| [XVV-Mega23M12](../devices/XVV-Mega23M12.html) | Dresden Elektronik ZigBee Light Link wireless electronic ballast color temperature (on/off, brightness, color temperature) | ![../images/devices/XVV-Mega23M12.jpg](../images/devices/XVV-Mega23M12.jpg) |
+| [Mega23M12](../devices/Mega23M12.md) | Dresden Elektronik ZigBee Light Link wireless electronic ballast (on/off, brightness, color temperature, color xy) | ![../images/devices/Mega23M12.jpg](../images/devices/Mega23M12.jpg) |
+| [XVV-Mega23M12](../devices/XVV-Mega23M12.md) | Dresden Elektronik ZigBee Light Link wireless electronic ballast color temperature (on/off, brightness, color temperature) | ![../images/devices/XVV-Mega23M12.jpg](../images/devices/XVV-Mega23M12.jpg) |
 
 ### EDP
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [PLUG EDP RE:DY](../devices/PLUG_EDP_RE_DY.html) | EDP re:dy plug (on/off, power measurement) | ![../images/devices/PLUG-EDP-RE-DY.jpg](../images/devices/PLUG-EDP-RE-DY.jpg) |
-| [SWITCH EDP RE:DY](../devices/SWITCH_EDP_RE_DY.html) | EDP re:dy switch (on/off) | ![../images/devices/SWITCH-EDP-RE-DY.jpg](../images/devices/SWITCH-EDP-RE-DY.jpg) |
+| [PLUG EDP RE:DY](../devices/PLUG_EDP_RE_DY.md) | EDP re:dy plug (on/off, power measurement) | ![../images/devices/PLUG-EDP-RE-DY.jpg](../images/devices/PLUG-EDP-RE-DY.jpg) |
+| [SWITCH EDP RE:DY](../devices/SWITCH_EDP_RE_DY.md) | EDP re:dy switch (on/off) | ![../images/devices/SWITCH-EDP-RE-DY.jpg](../images/devices/SWITCH-EDP-RE-DY.jpg) |
 
 ### ELKO
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [316GLEDRF](../devices/316GLEDRF.html) | ELKO ZigBee in-wall smart dimmer (on/off, brightness) | ![../images/devices/316GLEDRF.jpg](../images/devices/316GLEDRF.jpg) |
+| [316GLEDRF](../devices/316GLEDRF.md) | ELKO ZigBee in-wall smart dimmer (on/off, brightness) | ![../images/devices/316GLEDRF.jpg](../images/devices/316GLEDRF.jpg) |
 
 ### EcoSmart
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [D1821](../devices/D1821.html) | EcoSmart A19 RGB bulb (on/off, brightness, color temperature, color xy) | ![../images/devices/D1821.jpg](../images/devices/D1821.jpg) |
-| [D1531](../devices/D1531.html) | EcoSmart A19 bright white bulb (on/off, brightness) | ![../images/devices/D1531.jpg](../images/devices/D1531.jpg) |
-| [D1532](../devices/D1532.html) | EcoSmart A19 soft white bulb (on/off, brightness) | ![../images/devices/D1532.jpg](../images/devices/D1532.jpg) |
-| [D1542](../devices/D1542.html) | EcoSmart GU10 adjustable white bulb (on/off, brightness, color temperature) | ![../images/devices/D1542.jpg](../images/devices/D1542.jpg) |
+| [D1821](../devices/D1821.md) | EcoSmart A19 RGB bulb (on/off, brightness, color temperature, color xy) | ![../images/devices/D1821.jpg](../images/devices/D1821.jpg) |
+| [D1531](../devices/D1531.md) | EcoSmart A19 bright white bulb (on/off, brightness) | ![../images/devices/D1531.jpg](../images/devices/D1531.jpg) |
+| [D1532](../devices/D1532.md) | EcoSmart A19 soft white bulb (on/off, brightness) | ![../images/devices/D1532.jpg](../images/devices/D1532.jpg) |
+| [D1542](../devices/D1542.md) | EcoSmart GU10 adjustable white bulb (on/off, brightness, color temperature) | ![../images/devices/D1542.jpg](../images/devices/D1542.jpg) |
 
 ### Eurotronic
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [SPZB0001](../devices/SPZB0001.html) | Eurotronic Spirit Zigbee wireless heater thermostat (temperature, heating system control) | ![../images/devices/SPZB0001.jpg](../images/devices/SPZB0001.jpg) |
+| [SPZB0001](../devices/SPZB0001.md) | Eurotronic Spirit Zigbee wireless heater thermostat (temperature, heating system control) | ![../images/devices/SPZB0001.jpg](../images/devices/SPZB0001.jpg) |
 
 ### GE
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [PSB19-SW27](../devices/PSB19-SW27.html) | GE Link smart LED light bulb, A19 soft white (2700K) (on/off, brightness) | ![../images/devices/PSB19-SW27.jpg](../images/devices/PSB19-SW27.jpg) |
-| [22670](../devices/22670.html) | GE Link smart LED light bulb, A19/BR30 soft white (2700K) (on/off, brightness) | ![../images/devices/22670.jpg](../images/devices/22670.jpg) |
-| [45852GE](../devices/45852GE.html) | GE ZigBee plug-in smart dimmer (on/off, brightness) | ![../images/devices/45852GE.jpg](../images/devices/45852GE.jpg) |
-| [45853GE](../devices/45853GE.html) | GE Plug-in smart switch (on/off) | ![../images/devices/45853GE.jpg](../images/devices/45853GE.jpg) |
-| [45856GE](../devices/45856GE.html) | GE In-wall smart switch (on/off) | ![../images/devices/45856GE.jpg](../images/devices/45856GE.jpg) |
-| [45857GE](../devices/45857GE.html) | GE ZigBee in-wall smart dimmer (on/off, brightness) | ![../images/devices/45857GE.jpg](../images/devices/45857GE.jpg) |
-| [PTAPT-WH02](../devices/PTAPT-WH02.html) | GE Quirky smart switch (on/off) | ![../images/devices/PTAPT-WH02.jpg](../images/devices/PTAPT-WH02.jpg) |
+| [PSB19-SW27](../devices/PSB19-SW27.md) | GE Link smart LED light bulb, A19 soft white (2700K) (on/off, brightness) | ![../images/devices/PSB19-SW27.jpg](../images/devices/PSB19-SW27.jpg) |
+| [22670](../devices/22670.md) | GE Link smart LED light bulb, A19/BR30 soft white (2700K) (on/off, brightness) | ![../images/devices/22670.jpg](../images/devices/22670.jpg) |
+| [45852GE](../devices/45852GE.md) | GE ZigBee plug-in smart dimmer (on/off, brightness) | ![../images/devices/45852GE.jpg](../images/devices/45852GE.jpg) |
+| [45853GE](../devices/45853GE.md) | GE Plug-in smart switch (on/off) | ![../images/devices/45853GE.jpg](../images/devices/45853GE.jpg) |
+| [45856GE](../devices/45856GE.md) | GE In-wall smart switch (on/off) | ![../images/devices/45856GE.jpg](../images/devices/45856GE.jpg) |
+| [45857GE](../devices/45857GE.md) | GE ZigBee in-wall smart dimmer (on/off, brightness) | ![../images/devices/45857GE.jpg](../images/devices/45857GE.jpg) |
+| [PTAPT-WH02](../devices/PTAPT-WH02.md) | GE Quirky smart switch (on/off) | ![../images/devices/PTAPT-WH02.jpg](../images/devices/PTAPT-WH02.jpg) |
 
 ### GMY Smart Bulb
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [B07KG5KF5R](../devices/B07KG5KF5R.html) | GMY Smart Bulb GMY Smart bulb, 470lm, vintage dimmable, 2700-6500k, E27 (on/off, brightness, color temperature) | ![../images/devices/B07KG5KF5R.jpg](../images/devices/B07KG5KF5R.jpg) |
+| [B07KG5KF5R](../devices/B07KG5KF5R.md) | GMY Smart Bulb GMY Smart bulb, 470lm, vintage dimmable, 2700-6500k, E27 (on/off, brightness, color temperature) | ![../images/devices/B07KG5KF5R.jpg](../images/devices/B07KG5KF5R.jpg) |
 
 ### Gira
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [2430-100](../devices/2430-100.html) | Gira ZigBee Light Link wall transmitter (action) | ![../images/devices/2430-100.jpg](../images/devices/2430-100.jpg) |
+| [2430-100](../devices/2430-100.md) | Gira ZigBee Light Link wall transmitter (action) | ![../images/devices/2430-100.jpg](../images/devices/2430-100.jpg) |
 
 ### Gledopto
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [GL-C-006](../devices/GL-C-006.html) | Gledopto Zigbee LED controller WW/CW (on/off, brightness, color temperature) | ![../images/devices/GL-C-006.jpg](../images/devices/GL-C-006.jpg) |
-| [GL-C-007](../devices/GL-C-007.html) | Gledopto Zigbee LED controller RGBW (on/off, brightness, color, white) | ![../images/devices/GL-C-007.jpg](../images/devices/GL-C-007.jpg) |
-| [GL-C-008](../devices/GL-C-008.html) | Gledopto Zigbee LED controller RGB + CCT (on/off, brightness, color temperature, color) | ![../images/devices/GL-C-008.jpg](../images/devices/GL-C-008.jpg) |
-| [GL-C-008S](../devices/GL-C-008S.html) | Gledopto Zigbee LED controller RGB + CCT plus model (on/off, brightness, color temperature, color) | ![../images/devices/GL-C-008S.jpg](../images/devices/GL-C-008S.jpg) |
-| [GL-C-009](../devices/GL-C-009.html) | Gledopto Zigbee LED controller dimmer (on/off, brightness) | ![../images/devices/GL-C-009.jpg](../images/devices/GL-C-009.jpg) |
-| [GL-MC-001](../devices/GL-MC-001.html) | Gledopto Zigbee USB mini LED controller RGB + CCT (on/off, brightness, color temperature, color) | ![../images/devices/GL-MC-001.jpg](../images/devices/GL-MC-001.jpg) |
-| [GL-S-004Z](../devices/GL-S-004Z.html) | Gledopto Zigbee Smart WW/CW GU10 (on/off, brightness, color temperature) | ![../images/devices/GL-S-004Z.jpg](../images/devices/GL-S-004Z.jpg) |
-| [GL-S-007Z](../devices/GL-S-007Z.html) | Gledopto Smart RGBW GU10 (on/off, brightness, color, white) | ![../images/devices/GL-S-007Z.jpg](../images/devices/GL-S-007Z.jpg) |
-| [GL-B-001Z](../devices/GL-B-001Z.html) | Gledopto Smart 4W E14 RGB / CCT LED bulb (on/off, brightness, color temperature, color) | ![../images/devices/GL-B-001Z.jpg](../images/devices/GL-B-001Z.jpg) |
-| [GL-G-001Z](../devices/GL-G-001Z.html) | Gledopto Smart garden lamp (on/off, brightness, color temperature, color) | ![../images/devices/GL-G-001Z.jpg](../images/devices/GL-G-001Z.jpg) |
-| [GL-B-007Z](../devices/GL-B-007Z.html) | Gledopto Smart 6W E27 RGB / CCT LED bulb (on/off, brightness, color temperature, color) | ![../images/devices/GL-B-007Z.jpg](../images/devices/GL-B-007Z.jpg) |
-| [GL-B-008Z](../devices/GL-B-008Z.html) | Gledopto Smart 12W E27 RGB / CCT LED bulb (on/off, brightness, color temperature, color) | ![../images/devices/GL-B-008Z.jpg](../images/devices/GL-B-008Z.jpg) |
-| [GL-B-008ZS](../devices/GL-B-008ZS.html) | Gledopto Smart 12W E27 RGB / CW LED bulb (on/off, brightness, color temperature, color) | ![../images/devices/GL-B-008ZS.jpg](../images/devices/GL-B-008ZS.jpg) |
-| [GL-D-003Z](../devices/GL-D-003Z.html) | Gledopto LED RGB + CCT downlight  (on/off, brightness, color temperature, color) | ![../images/devices/GL-D-003Z.jpg](../images/devices/GL-D-003Z.jpg) |
-| [GL-D-005Z](../devices/GL-D-005Z.html) | Gledopto LED RGB + CCT downlight  (on/off, brightness, color temperature, color) | ![../images/devices/GL-D-005Z.jpg](../images/devices/GL-D-005Z.jpg) |
-| [GL-S-003Z](../devices/GL-S-003Z.html) | Gledopto Smart RGBW GU10  (on/off, brightness, color, white) | ![../images/devices/GL-S-003Z.jpg](../images/devices/GL-S-003Z.jpg) |
-| [GD-CZ-006](../devices/GD-CZ-006.html) | Gledopto Zigbee LED Driver (on/off, brightness) | ![../images/devices/GD-CZ-006.jpg](../images/devices/GD-CZ-006.jpg) |
-| [GL-FL-004TZ](../devices/GL-FL-004TZ.html) | Gledopto Zigbee 10W floodlight RGB CCT (on/off, brightness, color temperature, color) | ![../images/devices/GL-FL-004TZ.jpg](../images/devices/GL-FL-004TZ.jpg) |
-| [GL-W-001Z](../devices/GL-W-001Z.html) | Gledopto Zigbee ON/OFF Wall Switch (on/off) | ![../images/devices/GL-W-001Z.jpg](../images/devices/GL-W-001Z.jpg) |
+| [GL-C-006](../devices/GL-C-006.md) | Gledopto Zigbee LED controller WW/CW (on/off, brightness, color temperature) | ![../images/devices/GL-C-006.jpg](../images/devices/GL-C-006.jpg) |
+| [GL-C-007](../devices/GL-C-007.md) | Gledopto Zigbee LED controller RGBW (on/off, brightness, color, white) | ![../images/devices/GL-C-007.jpg](../images/devices/GL-C-007.jpg) |
+| [GL-C-008](../devices/GL-C-008.md) | Gledopto Zigbee LED controller RGB + CCT (on/off, brightness, color temperature, color) | ![../images/devices/GL-C-008.jpg](../images/devices/GL-C-008.jpg) |
+| [GL-C-008S](../devices/GL-C-008S.md) | Gledopto Zigbee LED controller RGB + CCT plus model (on/off, brightness, color temperature, color) | ![../images/devices/GL-C-008S.jpg](../images/devices/GL-C-008S.jpg) |
+| [GL-C-009](../devices/GL-C-009.md) | Gledopto Zigbee LED controller dimmer (on/off, brightness) | ![../images/devices/GL-C-009.jpg](../images/devices/GL-C-009.jpg) |
+| [GL-MC-001](../devices/GL-MC-001.md) | Gledopto Zigbee USB mini LED controller RGB + CCT (on/off, brightness, color temperature, color) | ![../images/devices/GL-MC-001.jpg](../images/devices/GL-MC-001.jpg) |
+| [GL-S-004Z](../devices/GL-S-004Z.md) | Gledopto Zigbee Smart WW/CW GU10 (on/off, brightness, color temperature) | ![../images/devices/GL-S-004Z.jpg](../images/devices/GL-S-004Z.jpg) |
+| [GL-S-007Z](../devices/GL-S-007Z.md) | Gledopto Smart RGBW GU10 (on/off, brightness, color, white) | ![../images/devices/GL-S-007Z.jpg](../images/devices/GL-S-007Z.jpg) |
+| [GL-B-001Z](../devices/GL-B-001Z.md) | Gledopto Smart 4W E14 RGB / CCT LED bulb (on/off, brightness, color temperature, color) | ![../images/devices/GL-B-001Z.jpg](../images/devices/GL-B-001Z.jpg) |
+| [GL-G-001Z](../devices/GL-G-001Z.md) | Gledopto Smart garden lamp (on/off, brightness, color temperature, color) | ![../images/devices/GL-G-001Z.jpg](../images/devices/GL-G-001Z.jpg) |
+| [GL-B-007Z](../devices/GL-B-007Z.md) | Gledopto Smart 6W E27 RGB / CCT LED bulb (on/off, brightness, color temperature, color) | ![../images/devices/GL-B-007Z.jpg](../images/devices/GL-B-007Z.jpg) |
+| [GL-B-008Z](../devices/GL-B-008Z.md) | Gledopto Smart 12W E27 RGB / CCT LED bulb (on/off, brightness, color temperature, color) | ![../images/devices/GL-B-008Z.jpg](../images/devices/GL-B-008Z.jpg) |
+| [GL-B-008ZS](../devices/GL-B-008ZS.md) | Gledopto Smart 12W E27 RGB / CW LED bulb (on/off, brightness, color temperature, color) | ![../images/devices/GL-B-008ZS.jpg](../images/devices/GL-B-008ZS.jpg) |
+| [GL-D-003Z](../devices/GL-D-003Z.md) | Gledopto LED RGB + CCT downlight  (on/off, brightness, color temperature, color) | ![../images/devices/GL-D-003Z.jpg](../images/devices/GL-D-003Z.jpg) |
+| [GL-D-005Z](../devices/GL-D-005Z.md) | Gledopto LED RGB + CCT downlight  (on/off, brightness, color temperature, color) | ![../images/devices/GL-D-005Z.jpg](../images/devices/GL-D-005Z.jpg) |
+| [GL-S-003Z](../devices/GL-S-003Z.md) | Gledopto Smart RGBW GU10  (on/off, brightness, color, white) | ![../images/devices/GL-S-003Z.jpg](../images/devices/GL-S-003Z.jpg) |
+| [GD-CZ-006](../devices/GD-CZ-006.md) | Gledopto Zigbee LED Driver (on/off, brightness) | ![../images/devices/GD-CZ-006.jpg](../images/devices/GD-CZ-006.jpg) |
+| [GL-FL-004TZ](../devices/GL-FL-004TZ.md) | Gledopto Zigbee 10W floodlight RGB CCT (on/off, brightness, color temperature, color) | ![../images/devices/GL-FL-004TZ.jpg](../images/devices/GL-FL-004TZ.jpg) |
+| [GL-W-001Z](../devices/GL-W-001Z.md) | Gledopto Zigbee ON/OFF Wall Switch (on/off) | ![../images/devices/GL-W-001Z.jpg](../images/devices/GL-W-001Z.jpg) |
 
 ### HEIMAN
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [HS1CA-M](../devices/HS1CA-M.html) | HEIMAN Smart carbon monoxide sensor (carbon monoxide) | ![../images/devices/HS1CA-M.jpg](../images/devices/HS1CA-M.jpg) |
-| [HS3MS](../devices/HS3MS.html) | HEIMAN Smart motion sensor (occupancy) | ![../images/devices/HS3MS.jpg](../images/devices/HS3MS.jpg) |
-| [HS2SK](../devices/HS2SK.html) | HEIMAN Smart metering plug (on/off, power measurement) | ![../images/devices/HS2SK.jpg](../images/devices/HS2SK.jpg) |
-| [HS1SA](../devices/HS1SA.html) | HEIMAN Smoke detector (smoke) | ![../images/devices/HS1SA.jpg](../images/devices/HS1SA.jpg) |
-| [HS3SA](../devices/HS3SA.html) | HEIMAN Smoke detector (smoke) | ![../images/devices/HS3SA.jpg](../images/devices/HS3SA.jpg) |
-| [HS3CG](../devices/HS3CG.html) | HEIMAN Combustible gas sensor (gas) | ![../images/devices/HS3CG.jpg](../images/devices/HS3CG.jpg) |
-| [HS1CG-M](../devices/HS1CG-M.html) | HEIMAN Combustible gas sensor (gas) | ![../images/devices/HS1CG-M.jpg](../images/devices/HS1CG-M.jpg) |
-| [HS1CG_M](../devices/HS1CG_M.html) | HEIMAN Combustible gas sensor (gas) | ![../images/devices/HS1CG_M.jpg](../images/devices/HS1CG_M.jpg) |
-| [HS1DS/HS3DS](../devices/HS1DS_HS3DS.html) | HEIMAN Door sensor (contact) | ![../images/devices/HS1DS-HS3DS.jpg](../images/devices/HS1DS-HS3DS.jpg) |
-| [HEIMAN-M1](../devices/HEIMAN-M1.html) | HEIMAN Door sensor (contact) | ![../images/devices/HEIMAN-M1.jpg](../images/devices/HEIMAN-M1.jpg) |
-| [HS1DS-E](../devices/HS1DS-E.html) | HEIMAN Door sensor (contact) | ![../images/devices/HS1DS-E.jpg](../images/devices/HS1DS-E.jpg) |
-| [HS1WL/HS3WL](../devices/HS1WL_HS3WL.html) | HEIMAN Water leakage sensor (water leak) | ![../images/devices/HS1WL-HS3WL.jpg](../images/devices/HS1WL-HS3WL.jpg) |
-| [HS1-WL-E](../devices/HS1-WL-E.html) | HEIMAN Water leakage sensor (water leak) | ![../images/devices/HS1-WL-E.jpg](../images/devices/HS1-WL-E.jpg) |
-| [HS1RC-M](../devices/HS1RC-M.html) | HEIMAN Smart remote controller (action) | ![../images/devices/HS1RC-M.jpg](../images/devices/HS1RC-M.jpg) |
-| [HS1CA-E](../devices/HS1CA-E.html) | HEIMAN Smart carbon monoxide sensor (carbon monoxide) | ![../images/devices/HS1CA-E.jpg](../images/devices/HS1CA-E.jpg) |
-| [HS2WD-E](../devices/HS2WD-E.html) | HEIMAN Smart siren (warning) | ![../images/devices/HS2WD-E.jpg](../images/devices/HS2WD-E.jpg) |
+| [HS1CA-M](../devices/HS1CA-M.md) | HEIMAN Smart carbon monoxide sensor (carbon monoxide) | ![../images/devices/HS1CA-M.jpg](../images/devices/HS1CA-M.jpg) |
+| [HS3MS](../devices/HS3MS.md) | HEIMAN Smart motion sensor (occupancy) | ![../images/devices/HS3MS.jpg](../images/devices/HS3MS.jpg) |
+| [HS2SK](../devices/HS2SK.md) | HEIMAN Smart metering plug (on/off, power measurement) | ![../images/devices/HS2SK.jpg](../images/devices/HS2SK.jpg) |
+| [HS1SA](../devices/HS1SA.md) | HEIMAN Smoke detector (smoke) | ![../images/devices/HS1SA.jpg](../images/devices/HS1SA.jpg) |
+| [HS3SA](../devices/HS3SA.md) | HEIMAN Smoke detector (smoke) | ![../images/devices/HS3SA.jpg](../images/devices/HS3SA.jpg) |
+| [HS3CG](../devices/HS3CG.md) | HEIMAN Combustible gas sensor (gas) | ![../images/devices/HS3CG.jpg](../images/devices/HS3CG.jpg) |
+| [HS1CG-M](../devices/HS1CG-M.md) | HEIMAN Combustible gas sensor (gas) | ![../images/devices/HS1CG-M.jpg](../images/devices/HS1CG-M.jpg) |
+| [HS1CG_M](../devices/HS1CG_M.md) | HEIMAN Combustible gas sensor (gas) | ![../images/devices/HS1CG_M.jpg](../images/devices/HS1CG_M.jpg) |
+| [HS1DS/HS3DS](../devices/HS1DS_HS3DS.md) | HEIMAN Door sensor (contact) | ![../images/devices/HS1DS-HS3DS.jpg](../images/devices/HS1DS-HS3DS.jpg) |
+| [HEIMAN-M1](../devices/HEIMAN-M1.md) | HEIMAN Door sensor (contact) | ![../images/devices/HEIMAN-M1.jpg](../images/devices/HEIMAN-M1.jpg) |
+| [HS1DS-E](../devices/HS1DS-E.md) | HEIMAN Door sensor (contact) | ![../images/devices/HS1DS-E.jpg](../images/devices/HS1DS-E.jpg) |
+| [HS1WL/HS3WL](../devices/HS1WL_HS3WL.md) | HEIMAN Water leakage sensor (water leak) | ![../images/devices/HS1WL-HS3WL.jpg](../images/devices/HS1WL-HS3WL.jpg) |
+| [HS1-WL-E](../devices/HS1-WL-E.md) | HEIMAN Water leakage sensor (water leak) | ![../images/devices/HS1-WL-E.jpg](../images/devices/HS1-WL-E.jpg) |
+| [HS1RC-M](../devices/HS1RC-M.md) | HEIMAN Smart remote controller (action) | ![../images/devices/HS1RC-M.jpg](../images/devices/HS1RC-M.jpg) |
+| [HS1CA-E](../devices/HS1CA-E.md) | HEIMAN Smart carbon monoxide sensor (carbon monoxide) | ![../images/devices/HS1CA-E.jpg](../images/devices/HS1CA-E.jpg) |
+| [HS2WD-E](../devices/HS2WD-E.md) | HEIMAN Smart siren (warning) | ![../images/devices/HS2WD-E.jpg](../images/devices/HS2WD-E.jpg) |
 
 ### Hampton Bay
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [99432](../devices/99432.html) | Hampton Bay Universal wink enabled white ceiling fan premier remote control (on/off, brightness, fan_mode and fan_state) | ![../images/devices/99432.jpg](../images/devices/99432.jpg) |
-| [54668161](../devices/54668161.html) | Hampton Bay 12 in. LED smart puff (on/off, brightness, color temperature) | ![../images/devices/54668161.jpg](../images/devices/54668161.jpg) |
+| [99432](../devices/99432.md) | Hampton Bay Universal wink enabled white ceiling fan premier remote control (on/off, brightness, fan_mode and fan_state) | ![../images/devices/99432.jpg](../images/devices/99432.jpg) |
+| [54668161](../devices/54668161.md) | Hampton Bay 12 in. LED smart puff (on/off, brightness, color temperature) | ![../images/devices/54668161.jpg](../images/devices/54668161.jpg) |
 
 ### Hej
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [GLSK3ZB-1711](../devices/GLSK3ZB-1711.html) | Hej Goqual 1 gang Switch (on/off) | ![../images/devices/GLSK3ZB-1711.jpg](../images/devices/GLSK3ZB-1711.jpg) |
-| [GLSK3ZB-1712](../devices/GLSK3ZB-1712.html) | Hej Goqual 2 gang Switch (on/off) | ![../images/devices/GLSK3ZB-1712.jpg](../images/devices/GLSK3ZB-1712.jpg) |
-| [GLSK3ZB-1713](../devices/GLSK3ZB-1713.html) | Hej Goqual 3 gang Switch (on/off) | ![../images/devices/GLSK3ZB-1713.jpg](../images/devices/GLSK3ZB-1713.jpg) |
-| [GLSK6ZB-1714](../devices/GLSK6ZB-1714.html) | Hej Goqual 4 gang Switch (on/off) | ![../images/devices/GLSK6ZB-1714.jpg](../images/devices/GLSK6ZB-1714.jpg) |
-| [GLSK6ZB-1715](../devices/GLSK6ZB-1715.html) | Hej Goqual 5 gang Switch (on/off) | ![../images/devices/GLSK6ZB-1715.jpg](../images/devices/GLSK6ZB-1715.jpg) |
-| [GLSK6ZB-1716](../devices/GLSK6ZB-1716.html) | Hej Goqual 6 gang Switch (on/off) | ![../images/devices/GLSK6ZB-1716.jpg](../images/devices/GLSK6ZB-1716.jpg) |
+| [GLSK3ZB-1711](../devices/GLSK3ZB-1711.md) | Hej Goqual 1 gang Switch (on/off) | ![../images/devices/GLSK3ZB-1711.jpg](../images/devices/GLSK3ZB-1711.jpg) |
+| [GLSK3ZB-1712](../devices/GLSK3ZB-1712.md) | Hej Goqual 2 gang Switch (on/off) | ![../images/devices/GLSK3ZB-1712.jpg](../images/devices/GLSK3ZB-1712.jpg) |
+| [GLSK3ZB-1713](../devices/GLSK3ZB-1713.md) | Hej Goqual 3 gang Switch (on/off) | ![../images/devices/GLSK3ZB-1713.jpg](../images/devices/GLSK3ZB-1713.jpg) |
+| [GLSK6ZB-1714](../devices/GLSK6ZB-1714.md) | Hej Goqual 4 gang Switch (on/off) | ![../images/devices/GLSK6ZB-1714.jpg](../images/devices/GLSK6ZB-1714.jpg) |
+| [GLSK6ZB-1715](../devices/GLSK6ZB-1715.md) | Hej Goqual 5 gang Switch (on/off) | ![../images/devices/GLSK6ZB-1715.jpg](../images/devices/GLSK6ZB-1715.jpg) |
+| [GLSK6ZB-1716](../devices/GLSK6ZB-1716.md) | Hej Goqual 6 gang Switch (on/off) | ![../images/devices/GLSK6ZB-1716.jpg](../images/devices/GLSK6ZB-1716.jpg) |
 
 ### Hive
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [HALIGHTDIMWWE27](../devices/HALIGHTDIMWWE27.html) | Hive Active smart bulb white LED (E27) (on/off, brightness) | ![../images/devices/HALIGHTDIMWWE27.jpg](../images/devices/HALIGHTDIMWWE27.jpg) |
-| [HALIGHTDIMWWB22](../devices/HALIGHTDIMWWB22.html) | Hive Active smart bulb white LED (B22) (on/off, brightness) | ![../images/devices/HALIGHTDIMWWB22.jpg](../images/devices/HALIGHTDIMWWB22.jpg) |
-| [1613V](../devices/1613V.html) | Hive Active plug (on/off, power measurement) | ![../images/devices/1613V.jpg](../images/devices/1613V.jpg) |
-| [HV-GSCXZB269](../devices/HV-GSCXZB269.html) | Hive Active light cool to warm white (E26)  (on/off, brightness, color temperature) | ![../images/devices/HV-GSCXZB269.jpg](../images/devices/HV-GSCXZB269.jpg) |
-| [HV-GSCXZB279_HV-GSCXZB229](../devices/HV-GSCXZB279_HV-GSCXZB229.html) | Hive Active light, warm to cool white (E27 & B22) (on/off, brightness, color temperature) | ![../images/devices/HV-GSCXZB279_HV-GSCXZB229.jpg](../images/devices/HV-GSCXZB279_HV-GSCXZB229.jpg) |
-| [HV-GUCXZB5](../devices/HV-GUCXZB5.html) | Hive Active light, warm to cool white (GU10) (on/off, brightness, color temperature) | ![../images/devices/HV-GUCXZB5.jpg](../images/devices/HV-GUCXZB5.jpg) |
+| [HALIGHTDIMWWE27](../devices/HALIGHTDIMWWE27.md) | Hive Active smart bulb white LED (E27) (on/off, brightness) | ![../images/devices/HALIGHTDIMWWE27.jpg](../images/devices/HALIGHTDIMWWE27.jpg) |
+| [HALIGHTDIMWWB22](../devices/HALIGHTDIMWWB22.md) | Hive Active smart bulb white LED (B22) (on/off, brightness) | ![../images/devices/HALIGHTDIMWWB22.jpg](../images/devices/HALIGHTDIMWWB22.jpg) |
+| [1613V](../devices/1613V.md) | Hive Active plug (on/off, power measurement) | ![../images/devices/1613V.jpg](../images/devices/1613V.jpg) |
+| [HV-GSCXZB269](../devices/HV-GSCXZB269.md) | Hive Active light cool to warm white (E26)  (on/off, brightness, color temperature) | ![../images/devices/HV-GSCXZB269.jpg](../images/devices/HV-GSCXZB269.jpg) |
+| [HV-GSCXZB279_HV-GSCXZB229](../devices/HV-GSCXZB279_HV-GSCXZB229.md) | Hive Active light, warm to cool white (E27 & B22) (on/off, brightness, color temperature) | ![../images/devices/HV-GSCXZB279_HV-GSCXZB229.jpg](../images/devices/HV-GSCXZB279_HV-GSCXZB229.jpg) |
+| [HV-GUCXZB5](../devices/HV-GUCXZB5.md) | Hive Active light, warm to cool white (GU10) (on/off, brightness, color temperature) | ![../images/devices/HV-GUCXZB5.jpg](../images/devices/HV-GUCXZB5.jpg) |
 
 ### Honyar
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [U86K31ND6](../devices/U86K31ND6.html) | Honyar 3 gang switch  (on/off) | ![../images/devices/U86K31ND6.jpg](../images/devices/U86K31ND6.jpg) |
+| [U86K31ND6](../devices/U86K31ND6.md) | Honyar 3 gang switch  (on/off) | ![../images/devices/U86K31ND6.jpg](../images/devices/U86K31ND6.jpg) |
 
 ### IKEA
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [LED1545G12](../devices/LED1545G12.html) | IKEA TRADFRI LED bulb E26/E27 980 lumen, dimmable, white spectrum, opal white (on/off, brightness, color temperature) | ![../images/devices/LED1545G12.jpg](../images/devices/LED1545G12.jpg) |
-| [LED1546G12](../devices/LED1546G12.html) | IKEA TRADFRI LED bulb E26/E27 950 lumen, dimmable, white spectrum, clear (on/off, brightness, color temperature) | ![../images/devices/LED1546G12.jpg](../images/devices/LED1546G12.jpg) |
-| [LED1623G12](../devices/LED1623G12.html) | IKEA TRADFRI LED bulb E27 1000 lumen, dimmable, opal white (on/off, brightness) | ![../images/devices/LED1623G12.jpg](../images/devices/LED1623G12.jpg) |
-| [LED1537R6](../devices/LED1537R6.html) | IKEA TRADFRI LED bulb GU10 400 lumen, dimmable, white spectrum (on/off, brightness, color temperature) | ![../images/devices/LED1537R6.jpg](../images/devices/LED1537R6.jpg) |
-| [LED1650R5](../devices/LED1650R5.html) | IKEA TRADFRI LED bulb GU10 400 lumen, dimmable (on/off, brightness) | ![../images/devices/LED1650R5.jpg](../images/devices/LED1650R5.jpg) |
-| [LED1536G5](../devices/LED1536G5.html) | IKEA TRADFRI LED bulb E12/E14 400 lumen, dimmable, white spectrum, opal white (on/off, brightness, color temperature) | ![../images/devices/LED1536G5.jpg](../images/devices/LED1536G5.jpg) |
-| [LED1837R5](../devices/LED1837R5.html) | IKEA TRADFRI LED bulb GU10 400 lumen, dimmable (on/off, brightness) | ![../images/devices/LED1837R5.jpg](../images/devices/LED1837R5.jpg) |
-| [LED1842G3](../devices/LED1842G3.html) | IKEA TRADFRI LED bulb E27 WW clear 250 lumen, dimmable (on/off, brightness) | ![../images/devices/LED1842G3.jpg](../images/devices/LED1842G3.jpg) |
-| [LED1733G7](../devices/LED1733G7.html) | IKEA TRADFRI LED bulb E14 600 lumen, dimmable, white spectrum, opal white (on/off, brightness, color temperature) | ![../images/devices/LED1733G7.jpg](../images/devices/LED1733G7.jpg) |
-| [LED1622G12](../devices/LED1622G12.html) | IKEA TRADFRI LED bulb E26 1000 lumen, dimmable, opal white (on/off, brightness) | ![../images/devices/LED1622G12.jpg](../images/devices/LED1622G12.jpg) |
-| [LED1624G9](../devices/LED1624G9.html) | IKEA TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white (on/off, brightness, color xy) | ![../images/devices/LED1624G9.jpg](../images/devices/LED1624G9.jpg) |
-| [LED1649C5](../devices/LED1649C5.html) | IKEA TRADFRI LED bulb E12/E14/E17 400 lumen, dimmable warm white, chandelier opal (on/off, brightness) | ![../images/devices/LED1649C5.jpg](../images/devices/LED1649C5.jpg) |
-| [LED1732G11](../devices/LED1732G11.html) | IKEA TRADFRI LED bulb E27 1000 lumen, dimmable, white spectrum, opal white (on/off, brightness, color temperature) | ![../images/devices/LED1732G11.jpg](../images/devices/LED1732G11.jpg) |
-| [LED1836G9](../devices/LED1836G9.html) | IKEA TRADFRI LED bulb E27 806 lumen, dimmable, warm white (on/off, brightness) | ![../images/devices/LED1836G9.jpg](../images/devices/LED1836G9.jpg) |
-| [LED1736G9](../devices/LED1736G9.html) | IKEA TRADFRI LED bulb E27 806 lumen, dimmable, white spectrum, clear (on/off, brightness, color temperature) | ![../images/devices/LED1736G9.jpg](../images/devices/LED1736G9.jpg) |
-| [T1820](../devices/T1820.html) | IKEA LEPTITER Recessed spot light, dimmable, white spectrum (on/off, brightness, color temperature) | ![../images/devices/T1820.jpg](../images/devices/T1820.jpg) |
-| [ICTC-G-1](../devices/ICTC-G-1.html) | IKEA TRADFRI wireless dimmer (brightness [0-255] (quick rotate for instant 0/255), action) | ![../images/devices/ICTC-G-1.jpg](../images/devices/ICTC-G-1.jpg) |
-| [ICPSHC24-10EU-IL-1](../devices/ICPSHC24-10EU-IL-1.html) | IKEA TRADFRI driver for wireless control (10 watt) (on/off, brightness) | ![../images/devices/ICPSHC24-10EU-IL-1.jpg](../images/devices/ICPSHC24-10EU-IL-1.jpg) |
-| [ICPSHC24-30EU-IL-1](../devices/ICPSHC24-30EU-IL-1.html) | IKEA TRADFRI driver for wireless control (30 watt) (on/off, brightness) | ![../images/devices/ICPSHC24-30EU-IL-1.jpg](../images/devices/ICPSHC24-30EU-IL-1.jpg) |
-| [L1527](../devices/L1527.html) | IKEA FLOALT LED light panel, dimmable, white spectrum (30x30 cm) (on/off, brightness, color temperature) | ![../images/devices/L1527.jpg](../images/devices/L1527.jpg) |
-| [L1529](../devices/L1529.html) | IKEA FLOALT LED light panel, dimmable, white spectrum (60x60 cm) (on/off, brightness, color temperature) | ![../images/devices/L1529.jpg](../images/devices/L1529.jpg) |
-| [L1528](../devices/L1528.html) | IKEA FLOALT LED light panel, dimmable, white spectrum (30x90 cm) (on/off, brightness, color temperature) | ![../images/devices/L1528.jpg](../images/devices/L1528.jpg) |
-| [L1531](../devices/L1531.html) | IKEA SURTE door light panel, dimmable, white spectrum (38x64 cm) (on/off, brightness, color temperature) | ![../images/devices/L1531.jpg](../images/devices/L1531.jpg) |
-| [E1603/E1702](../devices/E1603_E1702.html) | IKEA TRADFRI control outlet (on/off) | ![../images/devices/E1603-E1702.jpg](../images/devices/E1603-E1702.jpg) |
-| [E1524/E1810](../devices/E1524_E1810.html) | IKEA TRADFRI remote control (toggle, arrow left/right click/hold/release, brightness up/down click/hold/release) | ![../images/devices/E1524-E1810.jpg](../images/devices/E1524-E1810.jpg) |
-| [E1743](../devices/E1743.html) | IKEA TRADFRI ON/OFF switch (on, off, brightness up/down/stop) | ![../images/devices/E1743.jpg](../images/devices/E1743.jpg) |
-| [E1744](../devices/E1744.html) | IKEA SYMFONISK sound controller (volume up/down, play/pause, skip forward/backward) | ![../images/devices/E1744.jpg](../images/devices/E1744.jpg) |
-| [E1525](../devices/E1525.html) | IKEA TRADFRI motion sensor (occupancy) | ![../images/devices/E1525.jpg](../images/devices/E1525.jpg) |
-| [E1746](../devices/E1746.html) | IKEA TRADFRI signal repeater (linkquality) | ![../images/devices/E1746.jpg](../images/devices/E1746.jpg) |
-| [E1757](../devices/E1757.html) | IKEA FYRTUR roller blind (open, close, stop, position) | ![../images/devices/E1757.jpg](../images/devices/E1757.jpg) |
-| [E1926](../devices/E1926.html) | IKEA KADRILJ roller blind (open, close, stop, position) | ![../images/devices/E1926.jpg](../images/devices/E1926.jpg) |
-| [E1766](../devices/E1766.html) | IKEA TRADFRI open/close remote (click) | ![../images/devices/E1766.jpg](../images/devices/E1766.jpg) |
-| [T1829](../devices/T1829.html) | IKEA GUNNARP panel 40*40 (on/off, brightness, color temperature) | ![../images/devices/T1829.jpg](../images/devices/T1829.jpg) |
-| [LED1738G7](../devices/LED1738G7.html) | IKEA TRADFRI LED bulb E12 600 lumen, dimmable, white spectrum, opal white (on/off, brightness, color temperature) | ![../images/devices/LED1738G7.jpg](../images/devices/LED1738G7.jpg) |
+| [LED1545G12](../devices/LED1545G12.md) | IKEA TRADFRI LED bulb E26/E27 980 lumen, dimmable, white spectrum, opal white (on/off, brightness, color temperature) | ![../images/devices/LED1545G12.jpg](../images/devices/LED1545G12.jpg) |
+| [LED1546G12](../devices/LED1546G12.md) | IKEA TRADFRI LED bulb E26/E27 950 lumen, dimmable, white spectrum, clear (on/off, brightness, color temperature) | ![../images/devices/LED1546G12.jpg](../images/devices/LED1546G12.jpg) |
+| [LED1623G12](../devices/LED1623G12.md) | IKEA TRADFRI LED bulb E27 1000 lumen, dimmable, opal white (on/off, brightness) | ![../images/devices/LED1623G12.jpg](../images/devices/LED1623G12.jpg) |
+| [LED1537R6](../devices/LED1537R6.md) | IKEA TRADFRI LED bulb GU10 400 lumen, dimmable, white spectrum (on/off, brightness, color temperature) | ![../images/devices/LED1537R6.jpg](../images/devices/LED1537R6.jpg) |
+| [LED1650R5](../devices/LED1650R5.md) | IKEA TRADFRI LED bulb GU10 400 lumen, dimmable (on/off, brightness) | ![../images/devices/LED1650R5.jpg](../images/devices/LED1650R5.jpg) |
+| [LED1536G5](../devices/LED1536G5.md) | IKEA TRADFRI LED bulb E12/E14 400 lumen, dimmable, white spectrum, opal white (on/off, brightness, color temperature) | ![../images/devices/LED1536G5.jpg](../images/devices/LED1536G5.jpg) |
+| [LED1837R5](../devices/LED1837R5.md) | IKEA TRADFRI LED bulb GU10 400 lumen, dimmable (on/off, brightness) | ![../images/devices/LED1837R5.jpg](../images/devices/LED1837R5.jpg) |
+| [LED1842G3](../devices/LED1842G3.md) | IKEA TRADFRI LED bulb E27 WW clear 250 lumen, dimmable (on/off, brightness) | ![../images/devices/LED1842G3.jpg](../images/devices/LED1842G3.jpg) |
+| [LED1733G7](../devices/LED1733G7.md) | IKEA TRADFRI LED bulb E14 600 lumen, dimmable, white spectrum, opal white (on/off, brightness, color temperature) | ![../images/devices/LED1733G7.jpg](../images/devices/LED1733G7.jpg) |
+| [LED1622G12](../devices/LED1622G12.md) | IKEA TRADFRI LED bulb E26 1000 lumen, dimmable, opal white (on/off, brightness) | ![../images/devices/LED1622G12.jpg](../images/devices/LED1622G12.jpg) |
+| [LED1624G9](../devices/LED1624G9.md) | IKEA TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white (on/off, brightness, color xy) | ![../images/devices/LED1624G9.jpg](../images/devices/LED1624G9.jpg) |
+| [LED1649C5](../devices/LED1649C5.md) | IKEA TRADFRI LED bulb E12/E14/E17 400 lumen, dimmable warm white, chandelier opal (on/off, brightness) | ![../images/devices/LED1649C5.jpg](../images/devices/LED1649C5.jpg) |
+| [LED1732G11](../devices/LED1732G11.md) | IKEA TRADFRI LED bulb E27 1000 lumen, dimmable, white spectrum, opal white (on/off, brightness, color temperature) | ![../images/devices/LED1732G11.jpg](../images/devices/LED1732G11.jpg) |
+| [LED1836G9](../devices/LED1836G9.md) | IKEA TRADFRI LED bulb E27 806 lumen, dimmable, warm white (on/off, brightness) | ![../images/devices/LED1836G9.jpg](../images/devices/LED1836G9.jpg) |
+| [LED1736G9](../devices/LED1736G9.md) | IKEA TRADFRI LED bulb E27 806 lumen, dimmable, white spectrum, clear (on/off, brightness, color temperature) | ![../images/devices/LED1736G9.jpg](../images/devices/LED1736G9.jpg) |
+| [T1820](../devices/T1820.md) | IKEA LEPTITER Recessed spot light, dimmable, white spectrum (on/off, brightness, color temperature) | ![../images/devices/T1820.jpg](../images/devices/T1820.jpg) |
+| [ICTC-G-1](../devices/ICTC-G-1.md) | IKEA TRADFRI wireless dimmer (brightness [0-255] (quick rotate for instant 0/255), action) | ![../images/devices/ICTC-G-1.jpg](../images/devices/ICTC-G-1.jpg) |
+| [ICPSHC24-10EU-IL-1](../devices/ICPSHC24-10EU-IL-1.md) | IKEA TRADFRI driver for wireless control (10 watt) (on/off, brightness) | ![../images/devices/ICPSHC24-10EU-IL-1.jpg](../images/devices/ICPSHC24-10EU-IL-1.jpg) |
+| [ICPSHC24-30EU-IL-1](../devices/ICPSHC24-30EU-IL-1.md) | IKEA TRADFRI driver for wireless control (30 watt) (on/off, brightness) | ![../images/devices/ICPSHC24-30EU-IL-1.jpg](../images/devices/ICPSHC24-30EU-IL-1.jpg) |
+| [L1527](../devices/L1527.md) | IKEA FLOALT LED light panel, dimmable, white spectrum (30x30 cm) (on/off, brightness, color temperature) | ![../images/devices/L1527.jpg](../images/devices/L1527.jpg) |
+| [L1529](../devices/L1529.md) | IKEA FLOALT LED light panel, dimmable, white spectrum (60x60 cm) (on/off, brightness, color temperature) | ![../images/devices/L1529.jpg](../images/devices/L1529.jpg) |
+| [L1528](../devices/L1528.md) | IKEA FLOALT LED light panel, dimmable, white spectrum (30x90 cm) (on/off, brightness, color temperature) | ![../images/devices/L1528.jpg](../images/devices/L1528.jpg) |
+| [L1531](../devices/L1531.md) | IKEA SURTE door light panel, dimmable, white spectrum (38x64 cm) (on/off, brightness, color temperature) | ![../images/devices/L1531.jpg](../images/devices/L1531.jpg) |
+| [E1603/E1702](../devices/E1603_E1702.md) | IKEA TRADFRI control outlet (on/off) | ![../images/devices/E1603-E1702.jpg](../images/devices/E1603-E1702.jpg) |
+| [E1524/E1810](../devices/E1524_E1810.md) | IKEA TRADFRI remote control (toggle, arrow left/right click/hold/release, brightness up/down click/hold/release) | ![../images/devices/E1524-E1810.jpg](../images/devices/E1524-E1810.jpg) |
+| [E1743](../devices/E1743.md) | IKEA TRADFRI ON/OFF switch (on, off, brightness up/down/stop) | ![../images/devices/E1743.jpg](../images/devices/E1743.jpg) |
+| [E1744](../devices/E1744.md) | IKEA SYMFONISK sound controller (volume up/down, play/pause, skip forward/backward) | ![../images/devices/E1744.jpg](../images/devices/E1744.jpg) |
+| [E1525](../devices/E1525.md) | IKEA TRADFRI motion sensor (occupancy) | ![../images/devices/E1525.jpg](../images/devices/E1525.jpg) |
+| [E1746](../devices/E1746.md) | IKEA TRADFRI signal repeater (linkquality) | ![../images/devices/E1746.jpg](../images/devices/E1746.jpg) |
+| [E1757](../devices/E1757.md) | IKEA FYRTUR roller blind (open, close, stop, position) | ![../images/devices/E1757.jpg](../images/devices/E1757.jpg) |
+| [E1926](../devices/E1926.md) | IKEA KADRILJ roller blind (open, close, stop, position) | ![../images/devices/E1926.jpg](../images/devices/E1926.jpg) |
+| [E1766](../devices/E1766.md) | IKEA TRADFRI open/close remote (click) | ![../images/devices/E1766.jpg](../images/devices/E1766.jpg) |
+| [T1829](../devices/T1829.md) | IKEA GUNNARP panel 40*40 (on/off, brightness, color temperature) | ![../images/devices/T1829.jpg](../images/devices/T1829.jpg) |
+| [LED1738G7](../devices/LED1738G7.md) | IKEA TRADFRI LED bulb E12 600 lumen, dimmable, white spectrum, opal white (on/off, brightness, color temperature) | ![../images/devices/LED1738G7.jpg](../images/devices/LED1738G7.jpg) |
 
 ### ITEAD
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [BASICZBR3](../devices/BASICZBR3.html) | ITEAD SONOFF ZigBee DIY Smart Switch (on/off) | ![../images/devices/BASICZBR3.jpg](../images/devices/BASICZBR3.jpg) |
+| [BASICZBR3](../devices/BASICZBR3.md) | ITEAD SONOFF ZigBee DIY Smart Switch (on/off) | ![../images/devices/BASICZBR3.jpg](../images/devices/BASICZBR3.jpg) |
 
 ### Iluminize
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [511.10](../devices/511.10.html) | Iluminize Zigbee LED-Controller  (on/off, brightness) | ![../images/devices/511.10.jpg](../images/devices/511.10.jpg) |
-| [511.201](../devices/511.201.html) | Iluminize HV LED dimmer (on/off, brightness) | ![../images/devices/511.201.jpg](../images/devices/511.201.jpg) |
+| [511.10](../devices/511.10.md) | Iluminize Zigbee LED-Controller  (on/off, brightness) | ![../images/devices/511.10.jpg](../images/devices/511.10.jpg) |
+| [511.201](../devices/511.201.md) | Iluminize HV LED dimmer (on/off, brightness) | ![../images/devices/511.201.jpg](../images/devices/511.201.jpg) |
 
 ### Immax
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [IM-Z3.0-DIM](../devices/IM-Z3.0-DIM.html) | Immax LED E14/230V C35 5W TB 440LM ZIGBEE DIM (on/off, brightness) | ![../images/devices/IM-Z3.0-DIM.jpg](../images/devices/IM-Z3.0-DIM.jpg) |
+| [IM-Z3.0-DIM](../devices/IM-Z3.0-DIM.md) | Immax LED E14/230V C35 5W TB 440LM ZIGBEE DIM (on/off, brightness) | ![../images/devices/IM-Z3.0-DIM.jpg](../images/devices/IM-Z3.0-DIM.jpg) |
 
 ### Innr
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [BF 263](../devices/BF_263.html) | Innr B22 filament bulb dimmable (on/off, brightness) | ![../images/devices/BF-263.jpg](../images/devices/BF-263.jpg) |
-| [RB 185 C](../devices/RB_185_C.html) | Innr E27 bulb RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/RB-185-C.jpg](../images/devices/RB-185-C.jpg) |
-| [BY 185 C](../devices/BY_185_C.html) | Innr B22 bulb RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/BY-185-C.jpg](../images/devices/BY-185-C.jpg) |
-| [RB 250 C](../devices/RB_250_C.html) | Innr E14 bulb RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/RB-250-C.jpg](../images/devices/RB-250-C.jpg) |
-| [RB 265](../devices/RB_265.html) | Innr E27 bulb (on/off, brightness) | ![../images/devices/RB-265.jpg](../images/devices/RB-265.jpg) |
-| [RF 265](../devices/RF_265.html) | Innr E27 bulb filament clear (on/off, brightness) | ![../images/devices/RF-265.jpg](../images/devices/RF-265.jpg) |
-| [RB 278 T](../devices/RB_278_T.html) | Innr E27 bulb (on/off, brightness) | ![../images/devices/RB-278-T.jpg](../images/devices/RB-278-T.jpg) |
-| [RB 285 C](../devices/RB_285_C.html) | Innr E27 bulb RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/RB-285-C.jpg](../images/devices/RB-285-C.jpg) |
-| [BY 285 C](../devices/BY_285_C.html) | Innr B22 bulb RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/BY-285-C.jpg](../images/devices/BY-285-C.jpg) |
-| [RB 165](../devices/RB_165.html) | Innr E27 bulb (on/off, brightness) | ![../images/devices/RB-165.jpg](../images/devices/RB-165.jpg) |
-| [RB 175 W](../devices/RB_175_W.html) | Innr E27 bulb warm dimming (on/off, brightness) | ![../images/devices/RB-175-W.jpg](../images/devices/RB-175-W.jpg) |
-| [RB 178 T](../devices/RB_178_T.html) | Innr Smart bulb tunable white E27 (on/off, brightness, color temperature) | ![../images/devices/RB-178-T.jpg](../images/devices/RB-178-T.jpg) |
-| [BY 178 T](../devices/BY_178_T.html) | Innr Smart bulb tunable white B22 (on/off, brightness, color temperature) | ![../images/devices/BY-178-T.jpg](../images/devices/BY-178-T.jpg) |
-| [RS 122](../devices/RS_122.html) | Innr GU10 spot (on/off, brightness) | ![../images/devices/RS-122.jpg](../images/devices/RS-122.jpg) |
-| [RS 125](../devices/RS_125.html) | Innr GU10 spot (on/off, brightness) | ![../images/devices/RS-125.jpg](../images/devices/RS-125.jpg) |
-| [RS 225](../devices/RS_225.html) | Innr GU10 Spot (on/off, brightness) | ![../images/devices/RS-225.jpg](../images/devices/RS-225.jpg) |
-| [RS 128 T](../devices/RS_128_T.html) | Innr GU10 spot 350 lm, dimmable, white spectrum (on/off, brightness, color temperature) | ![../images/devices/RS-128-T.jpg](../images/devices/RS-128-T.jpg) |
-| [RS 228 T](../devices/RS_228_T.html) | Innr GU10 spot 350 lm, dimmable, white spectrum (on/off, brightness, color temperature) | ![../images/devices/RS-228-T.jpg](../images/devices/RS-228-T.jpg) |
-| [RB 145](../devices/RB_145.html) | Innr E14 candle (on/off, brightness) | ![../images/devices/RB-145.jpg](../images/devices/RB-145.jpg) |
-| [RB 245](../devices/RB_245.html) | Innr E14 candle (on/off, brightness) | ![../images/devices/RB-245.jpg](../images/devices/RB-245.jpg) |
-| [RB 248 T](../devices/RB_248_T.html) | Innr E14 candle with white spectrum (on/off, brightness, color temperature) | ![../images/devices/RB-248-T.jpg](../images/devices/RB-248-T.jpg) |
-| [RB 148 T](../devices/RB_148_T.html) | Innr E14 candle with white spectrum (on/off, brightness, color temperature) | ![../images/devices/RB-148-T.jpg](../images/devices/RB-148-T.jpg) |
-| [RF 263](../devices/RF_263.html) | Innr E27 filament bulb dimmable (on/off, brightness) | ![../images/devices/RF-263.jpg](../images/devices/RF-263.jpg) |
-| [BY 165](../devices/BY_165.html) | Innr B22 bulb dimmable (on/off, brightness) | ![../images/devices/BY-165.jpg](../images/devices/BY-165.jpg) |
-| [PL 110](../devices/PL_110.html) | Innr Puck Light (on/off, brightness) | ![../images/devices/PL-110.jpg](../images/devices/PL-110.jpg) |
-| [ST 110](../devices/ST_110.html) | Innr Strip Light (on/off, brightness) | ![../images/devices/ST-110.jpg](../images/devices/ST-110.jpg) |
-| [UC 110](../devices/UC_110.html) | Innr Under cabinet light (on/off, brightness) | ![../images/devices/UC-110.jpg](../images/devices/UC-110.jpg) |
-| [DL 110 N](../devices/DL_110_N.html) | Innr Spot narrow (on/off, brightness) | ![../images/devices/DL-110-N.jpg](../images/devices/DL-110-N.jpg) |
-| [DL 110 W](../devices/DL_110_W.html) | Innr Spot wide (on/off, brightness) | ![../images/devices/DL-110-W.jpg](../images/devices/DL-110-W.jpg) |
-| [SL 110 N](../devices/SL_110_N.html) | Innr Spot Flex narrow (on/off, brightness) | ![../images/devices/SL-110-N.jpg](../images/devices/SL-110-N.jpg) |
-| [SL 110 M](../devices/SL_110_M.html) | Innr Spot Flex medium (on/off, brightness) | ![../images/devices/SL-110-M.jpg](../images/devices/SL-110-M.jpg) |
-| [SL 110 W](../devices/SL_110_W.html) | Innr Spot Flex wide (on/off, brightness) | ![../images/devices/SL-110-W.jpg](../images/devices/SL-110-W.jpg) |
-| [SP 120](../devices/SP_120.html) | Innr Smart plug (on/off, power measurement) | ![../images/devices/SP-120.jpg](../images/devices/SP-120.jpg) |
-| [SP 222](../devices/SP_222.html) | Innr Smart plug (on/off) | ![../images/devices/SP-222.jpg](../images/devices/SP-222.jpg) |
+| [BF 263](../devices/BF_263.md) | Innr B22 filament bulb dimmable (on/off, brightness) | ![../images/devices/BF-263.jpg](../images/devices/BF-263.jpg) |
+| [RB 185 C](../devices/RB_185_C.md) | Innr E27 bulb RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/RB-185-C.jpg](../images/devices/RB-185-C.jpg) |
+| [BY 185 C](../devices/BY_185_C.md) | Innr B22 bulb RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/BY-185-C.jpg](../images/devices/BY-185-C.jpg) |
+| [RB 250 C](../devices/RB_250_C.md) | Innr E14 bulb RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/RB-250-C.jpg](../images/devices/RB-250-C.jpg) |
+| [RB 265](../devices/RB_265.md) | Innr E27 bulb (on/off, brightness) | ![../images/devices/RB-265.jpg](../images/devices/RB-265.jpg) |
+| [RF 265](../devices/RF_265.md) | Innr E27 bulb filament clear (on/off, brightness) | ![../images/devices/RF-265.jpg](../images/devices/RF-265.jpg) |
+| [RB 278 T](../devices/RB_278_T.md) | Innr E27 bulb (on/off, brightness) | ![../images/devices/RB-278-T.jpg](../images/devices/RB-278-T.jpg) |
+| [RB 285 C](../devices/RB_285_C.md) | Innr E27 bulb RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/RB-285-C.jpg](../images/devices/RB-285-C.jpg) |
+| [BY 285 C](../devices/BY_285_C.md) | Innr B22 bulb RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/BY-285-C.jpg](../images/devices/BY-285-C.jpg) |
+| [RB 165](../devices/RB_165.md) | Innr E27 bulb (on/off, brightness) | ![../images/devices/RB-165.jpg](../images/devices/RB-165.jpg) |
+| [RB 175 W](../devices/RB_175_W.md) | Innr E27 bulb warm dimming (on/off, brightness) | ![../images/devices/RB-175-W.jpg](../images/devices/RB-175-W.jpg) |
+| [RB 178 T](../devices/RB_178_T.md) | Innr Smart bulb tunable white E27 (on/off, brightness, color temperature) | ![../images/devices/RB-178-T.jpg](../images/devices/RB-178-T.jpg) |
+| [BY 178 T](../devices/BY_178_T.md) | Innr Smart bulb tunable white B22 (on/off, brightness, color temperature) | ![../images/devices/BY-178-T.jpg](../images/devices/BY-178-T.jpg) |
+| [RS 122](../devices/RS_122.md) | Innr GU10 spot (on/off, brightness) | ![../images/devices/RS-122.jpg](../images/devices/RS-122.jpg) |
+| [RS 125](../devices/RS_125.md) | Innr GU10 spot (on/off, brightness) | ![../images/devices/RS-125.jpg](../images/devices/RS-125.jpg) |
+| [RS 225](../devices/RS_225.md) | Innr GU10 Spot (on/off, brightness) | ![../images/devices/RS-225.jpg](../images/devices/RS-225.jpg) |
+| [RS 128 T](../devices/RS_128_T.md) | Innr GU10 spot 350 lm, dimmable, white spectrum (on/off, brightness, color temperature) | ![../images/devices/RS-128-T.jpg](../images/devices/RS-128-T.jpg) |
+| [RS 228 T](../devices/RS_228_T.md) | Innr GU10 spot 350 lm, dimmable, white spectrum (on/off, brightness, color temperature) | ![../images/devices/RS-228-T.jpg](../images/devices/RS-228-T.jpg) |
+| [RB 145](../devices/RB_145.md) | Innr E14 candle (on/off, brightness) | ![../images/devices/RB-145.jpg](../images/devices/RB-145.jpg) |
+| [RB 245](../devices/RB_245.md) | Innr E14 candle (on/off, brightness) | ![../images/devices/RB-245.jpg](../images/devices/RB-245.jpg) |
+| [RB 248 T](../devices/RB_248_T.md) | Innr E14 candle with white spectrum (on/off, brightness, color temperature) | ![../images/devices/RB-248-T.jpg](../images/devices/RB-248-T.jpg) |
+| [RB 148 T](../devices/RB_148_T.md) | Innr E14 candle with white spectrum (on/off, brightness, color temperature) | ![../images/devices/RB-148-T.jpg](../images/devices/RB-148-T.jpg) |
+| [RF 263](../devices/RF_263.md) | Innr E27 filament bulb dimmable (on/off, brightness) | ![../images/devices/RF-263.jpg](../images/devices/RF-263.jpg) |
+| [BY 165](../devices/BY_165.md) | Innr B22 bulb dimmable (on/off, brightness) | ![../images/devices/BY-165.jpg](../images/devices/BY-165.jpg) |
+| [PL 110](../devices/PL_110.md) | Innr Puck Light (on/off, brightness) | ![../images/devices/PL-110.jpg](../images/devices/PL-110.jpg) |
+| [ST 110](../devices/ST_110.md) | Innr Strip Light (on/off, brightness) | ![../images/devices/ST-110.jpg](../images/devices/ST-110.jpg) |
+| [UC 110](../devices/UC_110.md) | Innr Under cabinet light (on/off, brightness) | ![../images/devices/UC-110.jpg](../images/devices/UC-110.jpg) |
+| [DL 110 N](../devices/DL_110_N.md) | Innr Spot narrow (on/off, brightness) | ![../images/devices/DL-110-N.jpg](../images/devices/DL-110-N.jpg) |
+| [DL 110 W](../devices/DL_110_W.md) | Innr Spot wide (on/off, brightness) | ![../images/devices/DL-110-W.jpg](../images/devices/DL-110-W.jpg) |
+| [SL 110 N](../devices/SL_110_N.md) | Innr Spot Flex narrow (on/off, brightness) | ![../images/devices/SL-110-N.jpg](../images/devices/SL-110-N.jpg) |
+| [SL 110 M](../devices/SL_110_M.md) | Innr Spot Flex medium (on/off, brightness) | ![../images/devices/SL-110-M.jpg](../images/devices/SL-110-M.jpg) |
+| [SL 110 W](../devices/SL_110_W.md) | Innr Spot Flex wide (on/off, brightness) | ![../images/devices/SL-110-W.jpg](../images/devices/SL-110-W.jpg) |
+| [SP 120](../devices/SP_120.md) | Innr Smart plug (on/off, power measurement) | ![../images/devices/SP-120.jpg](../images/devices/SP-120.jpg) |
+| [SP 222](../devices/SP_222.md) | Innr Smart plug (on/off) | ![../images/devices/SP-222.jpg](../images/devices/SP-222.jpg) |
 
 ### Iris
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [3210-L](../devices/3210-L.html) | Iris Smart plug (on/off) | ![../images/devices/3210-L.jpg](../images/devices/3210-L.jpg) |
-| [3326-L](../devices/3326-L.html) | Iris Motion and temperature sensor (occupancy and temperature) | ![../images/devices/3326-L.jpg](../images/devices/3326-L.jpg) |
-| [3320-L](../devices/3320-L.html) | Iris Contact and temperature sensor (contact and temperature) | ![../images/devices/3320-L.jpg](../images/devices/3320-L.jpg) |
+| [3210-L](../devices/3210-L.md) | Iris Smart plug (on/off) | ![../images/devices/3210-L.jpg](../images/devices/3210-L.jpg) |
+| [3326-L](../devices/3326-L.md) | Iris Motion and temperature sensor (occupancy and temperature) | ![../images/devices/3326-L.jpg](../images/devices/3326-L.jpg) |
+| [3320-L](../devices/3320-L.md) | Iris Contact and temperature sensor (contact and temperature) | ![../images/devices/3320-L.jpg](../images/devices/3320-L.jpg) |
 
 ### JIAWEN
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [K2RGBW01](../devices/K2RGBW01.html) | JIAWEN Wireless Bulb E27 9W RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/K2RGBW01.jpg](../images/devices/K2RGBW01.jpg) |
+| [K2RGBW01](../devices/K2RGBW01.md) | JIAWEN Wireless Bulb E27 9W RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/K2RGBW01.jpg](../images/devices/K2RGBW01.jpg) |
 
 ### Keen Home
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [SV01](../devices/SV01.html) | Keen Home Smart vent (open, close, position, temperature, pressure, battery) | ![../images/devices/SV01.jpg](../images/devices/SV01.jpg) |
-| [SV02](../devices/SV02.html) | Keen Home Smart vent (open, close, position, temperature, pressure, battery) | ![../images/devices/SV02.jpg](../images/devices/SV02.jpg) |
+| [SV01](../devices/SV01.md) | Keen Home Smart vent (open, close, position, temperature, pressure, battery) | ![../images/devices/SV01.jpg](../images/devices/SV01.jpg) |
+| [SV02](../devices/SV02.md) | Keen Home Smart vent (open, close, position, temperature, pressure, battery) | ![../images/devices/SV02.jpg](../images/devices/SV02.jpg) |
 
 ### Konke
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [2AJZ4KPKEY](../devices/2AJZ4KPKEY.html) | Konke Multi-function button (single, double and long click) | ![../images/devices/2AJZ4KPKEY.jpg](../images/devices/2AJZ4KPKEY.jpg) |
-| [2AJZ4KPBS](../devices/2AJZ4KPBS.html) | Konke Motion sensor (occupancy) | ![../images/devices/2AJZ4KPBS.jpg](../images/devices/2AJZ4KPBS.jpg) |
-| [2AJZ4KPFT](../devices/2AJZ4KPFT.html) | Konke Temperature and humidity sensor (temperature and humidity) | ![../images/devices/2AJZ4KPFT.jpg](../images/devices/2AJZ4KPFT.jpg) |
-| [2AJZ4KPDR](../devices/2AJZ4KPDR.html) | Konke Contact sensor (contact) | ![../images/devices/2AJZ4KPDR.jpg](../images/devices/2AJZ4KPDR.jpg) |
-| [LH07321](../devices/LH07321.html) | Konke Water detector (water_leak) | ![../images/devices/LH07321.jpg](../images/devices/LH07321.jpg) |
+| [2AJZ4KPKEY](../devices/2AJZ4KPKEY.md) | Konke Multi-function button (single, double and long click) | ![../images/devices/2AJZ4KPKEY.jpg](../images/devices/2AJZ4KPKEY.jpg) |
+| [2AJZ4KPBS](../devices/2AJZ4KPBS.md) | Konke Motion sensor (occupancy) | ![../images/devices/2AJZ4KPBS.jpg](../images/devices/2AJZ4KPBS.jpg) |
+| [2AJZ4KPFT](../devices/2AJZ4KPFT.md) | Konke Temperature and humidity sensor (temperature and humidity) | ![../images/devices/2AJZ4KPFT.jpg](../images/devices/2AJZ4KPFT.jpg) |
+| [2AJZ4KPDR](../devices/2AJZ4KPDR.md) | Konke Contact sensor (contact) | ![../images/devices/2AJZ4KPDR.jpg](../images/devices/2AJZ4KPDR.jpg) |
+| [LH07321](../devices/LH07321.md) | Konke Water detector (water_leak) | ![../images/devices/LH07321.jpg](../images/devices/LH07321.jpg) |
 
 ### Ksentry Electronics
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [KS-SM001](../devices/KS-SM001.html) | Ksentry Electronics [Zigbee OnOff Controller](http://ksentry.manufacturer.globalsources.com/si/6008837134660/pdtl/ZigBee-module/1162731630/zigbee-on-off-controller-modules.htm) (on/off) | ![../images/devices/KS-SM001.jpg](../images/devices/KS-SM001.jpg) |
+| [KS-SM001](../devices/KS-SM001.md) | Ksentry Electronics [Zigbee OnOff Controller](http://ksentry.manufacturer.globalsources.com/si/6008837134660/pdtl/ZigBee-module/1162731630/zigbee-on-off-controller-modules.htm) (on/off) | ![../images/devices/KS-SM001.jpg](../images/devices/KS-SM001.jpg) |
 
 ### Leedarson
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [ZM350STW1TCF](../devices/ZM350STW1TCF.html) | Leedarson LED PAR16 50 GU10 tunable white (on/off, brightness, color temperature) | ![../images/devices/ZM350STW1TCF.jpg](../images/devices/ZM350STW1TCF.jpg) |
-| [M350STW1](../devices/M350STW1.html) | Leedarson LED PAR16 50 GU10 (on/off, brightness) | ![../images/devices/M350STW1.jpg](../images/devices/M350STW1.jpg) |
-| [A806S-Q1R](../devices/A806S-Q1R.html) | Leedarson LED E27 tunable white (on/off, brightness) | ![../images/devices/A806S-Q1R.jpg](../images/devices/A806S-Q1R.jpg) |
-| [ZA806SQ1TCF](../devices/ZA806SQ1TCF.html) | Leedarson LED E27 tunable white (on/off, brightness, color temperature) | ![../images/devices/ZA806SQ1TCF.jpg](../images/devices/ZA806SQ1TCF.jpg) |
+| [ZM350STW1TCF](../devices/ZM350STW1TCF.md) | Leedarson LED PAR16 50 GU10 tunable white (on/off, brightness, color temperature) | ![../images/devices/ZM350STW1TCF.jpg](../images/devices/ZM350STW1TCF.jpg) |
+| [M350STW1](../devices/M350STW1.md) | Leedarson LED PAR16 50 GU10 (on/off, brightness) | ![../images/devices/M350STW1.jpg](../images/devices/M350STW1.jpg) |
+| [A806S-Q1R](../devices/A806S-Q1R.md) | Leedarson LED E27 tunable white (on/off, brightness) | ![../images/devices/A806S-Q1R.jpg](../images/devices/A806S-Q1R.jpg) |
+| [ZA806SQ1TCF](../devices/ZA806SQ1TCF.md) | Leedarson LED E27 tunable white (on/off, brightness, color temperature) | ![../images/devices/ZA806SQ1TCF.jpg](../images/devices/ZA806SQ1TCF.jpg) |
 
 ### Lingan
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [DZ4743-00B](../devices/DZ4743-00B.html) | Lingan Zigbee OnOff controller (on/off) | ![../images/devices/DZ4743-00B.jpg](../images/devices/DZ4743-00B.jpg) |
+| [DZ4743-00B](../devices/DZ4743-00B.md) | Lingan Zigbee OnOff controller (on/off) | ![../images/devices/DZ4743-00B.jpg](../images/devices/DZ4743-00B.jpg) |
 
 ### LivingWise
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [LVS-ZB500D](../devices/LVS-ZB500D.html) | LivingWise ZigBee smart dimmer switch (on/off, brightness) | ![../images/devices/LVS-ZB500D.jpg](../images/devices/LVS-ZB500D.jpg) |
-| [LVS-ZB15S](../devices/LVS-ZB15S.html) | LivingWise ZigBee smart in-wall switch (on/off) | ![../images/devices/LVS-ZB15S.jpg](../images/devices/LVS-ZB15S.jpg) |
-| [LVS-SM10ZW](../devices/LVS-SM10ZW.html) | LivingWise Door or window contact switch (contact) | ![../images/devices/LVS-SM10ZW.jpg](../images/devices/LVS-SM10ZW.jpg) |
-| [LVS-SN10ZW_SN11](../devices/LVS-SN10ZW_SN11.html) | LivingWise Occupancy sensor (occupancy) | ![../images/devices/LVS-SN10ZW_SN11.jpg](../images/devices/LVS-SN10ZW_SN11.jpg) |
-| [LVS-ZB15R](../devices/LVS-ZB15R.html) | LivingWise Zigbee smart outlet (on/off) | ![../images/devices/LVS-ZB15R.jpg](../images/devices/LVS-ZB15R.jpg) |
+| [LVS-ZB500D](../devices/LVS-ZB500D.md) | LivingWise ZigBee smart dimmer switch (on/off, brightness) | ![../images/devices/LVS-ZB500D.jpg](../images/devices/LVS-ZB500D.jpg) |
+| [LVS-ZB15S](../devices/LVS-ZB15S.md) | LivingWise ZigBee smart in-wall switch (on/off) | ![../images/devices/LVS-ZB15S.jpg](../images/devices/LVS-ZB15S.jpg) |
+| [LVS-SM10ZW](../devices/LVS-SM10ZW.md) | LivingWise Door or window contact switch (contact) | ![../images/devices/LVS-SM10ZW.jpg](../images/devices/LVS-SM10ZW.jpg) |
+| [LVS-SN10ZW_SN11](../devices/LVS-SN10ZW_SN11.md) | LivingWise Occupancy sensor (occupancy) | ![../images/devices/LVS-SN10ZW_SN11.jpg](../images/devices/LVS-SN10ZW_SN11.jpg) |
+| [LVS-ZB15R](../devices/LVS-ZB15R.md) | LivingWise Zigbee smart outlet (on/off) | ![../images/devices/LVS-ZB15R.jpg](../images/devices/LVS-ZB15R.jpg) |
 
 ### Livolo
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [TI0001](../devices/TI0001.html) | Livolo Zigbee switch (1 and 2 gang) [work in progress](https://github.com/Koenkk/zigbee2mqtt/issues/592) (on/off) | ![../images/devices/TI0001.jpg](../images/devices/TI0001.jpg) |
+| [TI0001](../devices/TI0001.md) | Livolo Zigbee switch (1 and 2 gang) [work in progress](https://github.com/Koenkk/zigbee2mqtt/issues/592) (on/off) | ![../images/devices/TI0001.jpg](../images/devices/TI0001.jpg) |
 
 ### Lonsonho
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [4000116784070](../devices/4000116784070.html) | Lonsonho Smart plug EU (on/off) | ![../images/devices/4000116784070.jpg](../images/devices/4000116784070.jpg) |
+| [4000116784070](../devices/4000116784070.md) | Lonsonho Smart plug EU (on/off) | ![../images/devices/4000116784070.jpg](../images/devices/4000116784070.jpg) |
 
 ### Lupus
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [12031](../devices/12031.html) | Lupus Roller shutter (open/close) | ![../images/devices/12031.jpg](../images/devices/12031.jpg) |
-| [12050](../devices/12050.html) | Lupus LUPUSEC mains socket with power meter (on/off, power measurement) | ![../images/devices/12050.jpg](../images/devices/12050.jpg) |
+| [12031](../devices/12031.md) | Lupus Roller shutter (open/close) | ![../images/devices/12031.jpg](../images/devices/12031.jpg) |
+| [12050](../devices/12050.md) | Lupus LUPUSEC mains socket with power meter (on/off, power measurement) | ![../images/devices/12050.jpg](../images/devices/12050.jpg) |
 
 ### Lutron
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [LZL4BWHL01](../devices/LZL4BWHL01.html) | Lutron Connected bulb remote control (on/off, brightness) | ![../images/devices/LZL4BWHL01.jpg](../images/devices/LZL4BWHL01.jpg) |
-| [Z3-1BRL](../devices/Z3-1BRL.html) | Lutron Aurora smart bulb dimmer (brightness) | ![../images/devices/Z3-1BRL.jpg](../images/devices/Z3-1BRL.jpg) |
+| [LZL4BWHL01](../devices/LZL4BWHL01.md) | Lutron Connected bulb remote control (on/off, brightness) | ![../images/devices/LZL4BWHL01.jpg](../images/devices/LZL4BWHL01.jpg) |
+| [Z3-1BRL](../devices/Z3-1BRL.md) | Lutron Aurora smart bulb dimmer (brightness) | ![../images/devices/Z3-1BRL.jpg](../images/devices/Z3-1BRL.jpg) |
 
 ### Meazon
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [MEAZON_BIZY_PLUG](../devices/MEAZON_BIZY_PLUG.html) | Meazon Bizy plug meter (on/off, power, energy measurement and temperature) | ![../images/devices/MEAZON_BIZY_PLUG.jpg](../images/devices/MEAZON_BIZY_PLUG.jpg) |
-| [MEAZON_DINRAIL](../devices/MEAZON_DINRAIL.html) | Meazon DinRail 1-phase meter (on/off, power, energy measurement and temperature) | ![../images/devices/MEAZON_DINRAIL.jpg](../images/devices/MEAZON_DINRAIL.jpg) |
+| [MEAZON_BIZY_PLUG](../devices/MEAZON_BIZY_PLUG.md) | Meazon Bizy plug meter (on/off, power, energy measurement and temperature) | ![../images/devices/MEAZON_BIZY_PLUG.jpg](../images/devices/MEAZON_BIZY_PLUG.jpg) |
+| [MEAZON_DINRAIL](../devices/MEAZON_DINRAIL.md) | Meazon DinRail 1-phase meter (on/off, power, energy measurement and temperature) | ![../images/devices/MEAZON_DINRAIL.jpg](../images/devices/MEAZON_DINRAIL.jpg) |
 
 ### Müller Licht
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [404000/404005/404012](../devices/404000_404005_404012.html) | Müller Licht Tint LED bulb GU10/E14/E27 350/470/806 lumen, dimmable, color, opal white (on/off, brightness, color temperature, color xy) | ![../images/devices/404000-404005-404012.jpg](../images/devices/404000-404005-404012.jpg) |
-| [404006/404008/404004](../devices/404006_404008_404004.html) | Müller Licht Tint LED bulb GU10/E14/E27 350/470/806 lumen, dimmable, opal white (on/off, brightness, color temperature) | ![../images/devices/404006-404008-404004.jpg](../images/devices/404006-404008-404004.jpg) |
-| [MLI-404011](../devices/MLI-404011.html) | Müller Licht Tint remote control (toggle, brightness, other buttons are not supported yet!) | ![../images/devices/MLI-404011.jpg](../images/devices/MLI-404011.jpg) |
+| [404000/404005/404012](../devices/404000_404005_404012.md) | Müller Licht Tint LED bulb GU10/E14/E27 350/470/806 lumen, dimmable, color, opal white (on/off, brightness, color temperature, color xy) | ![../images/devices/404000-404005-404012.jpg](../images/devices/404000-404005-404012.jpg) |
+| [404006/404008/404004](../devices/404006_404008_404004.md) | Müller Licht Tint LED bulb GU10/E14/E27 350/470/806 lumen, dimmable, opal white (on/off, brightness, color temperature) | ![../images/devices/404006-404008-404004.jpg](../images/devices/404006-404008-404004.jpg) |
+| [MLI-404011](../devices/MLI-404011.md) | Müller Licht Tint remote control (toggle, brightness, other buttons are not supported yet!) | ![../images/devices/MLI-404011.jpg](../images/devices/MLI-404011.jpg) |
 
 ### NET2GRID
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [N2G-SP](../devices/N2G-SP.html) | NET2GRID White Net2Grid power outlet switch with power meter (on/off, power and energy measurement) | ![../images/devices/N2G-SP.jpg](../images/devices/N2G-SP.jpg) |
+| [N2G-SP](../devices/N2G-SP.md) | NET2GRID White Net2Grid power outlet switch with power meter (on/off, power and energy measurement) | ![../images/devices/N2G-SP.jpg](../images/devices/N2G-SP.jpg) |
 
 ### Nanoleaf
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [NL08-0800](../devices/NL08-0800.html) | Nanoleaf Smart Ivy Bulb E27 (on/off, brightness) | ![../images/devices/NL08-0800.jpg](../images/devices/NL08-0800.jpg) |
+| [NL08-0800](../devices/NL08-0800.md) | Nanoleaf Smart Ivy Bulb E27 (on/off, brightness) | ![../images/devices/NL08-0800.jpg](../images/devices/NL08-0800.jpg) |
 
 ### Netvox
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [Z809A](../devices/Z809A.html) | Netvox Power socket with power consumption monitoring (on/off, power measurement) | ![../images/devices/Z809A.jpg](../images/devices/Z809A.jpg) |
+| [Z809A](../devices/Z809A.md) | Netvox Power socket with power consumption monitoring (on/off, power measurement) | ![../images/devices/Z809A.jpg](../images/devices/Z809A.jpg) |
 
 ### Ninja Blocks
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [Z809AF](../devices/Z809AF.html) | Ninja Blocks Zigbee smart plug with power meter (on/off, power measurement) | ![../images/devices/Z809AF.jpg](../images/devices/Z809AF.jpg) |
+| [Z809AF](../devices/Z809AF.md) | Ninja Blocks Zigbee smart plug with power meter (on/off, power measurement) | ![../images/devices/Z809AF.jpg](../images/devices/Z809AF.jpg) |
 
 ### Nue / 3A
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [HGZB-1S](../devices/HGZB-1S.html) | Nue / 3A Smart 1 key scene wall switch (on/off, click) | ![../images/devices/HGZB-1S.jpg](../images/devices/HGZB-1S.jpg) |
-| [HGZB-02S](../devices/HGZB-02S.html) | Nue / 3A Smart 2 key scene wall switch (on/off, click) | ![../images/devices/HGZB-02S.jpg](../images/devices/HGZB-02S.jpg) |
-| [HGZB-045](../devices/HGZB-045.html) | Nue / 3A Smart 4 key scene wall switch (on/off, click) | ![../images/devices/HGZB-045.jpg](../images/devices/HGZB-045.jpg) |
-| [LXZB-02A](../devices/LXZB-02A.html) | Nue / 3A Smart light controller (on/off, brightness) | ![../images/devices/LXZB-02A.jpg](../images/devices/LXZB-02A.jpg) |
-| [HGZB-43](../devices/HGZB-43.html) | Nue / 3A Smart light switch - 3 gang v2.0 (on/off) | ![../images/devices/HGZB-43.jpg](../images/devices/HGZB-43.jpg) |
-| [HGZB-043](../devices/HGZB-043.html) | Nue / 3A Smart light switch - 3 gang (on/off) | ![../images/devices/HGZB-043.jpg](../images/devices/HGZB-043.jpg) |
-| [HGZB-04D / HGZB-4D-UK](../devices/HGZB-04D___HGZB-4D-UK.html) | Nue / 3A Smart dimmer wall switch (on/off, brightness) | ![../images/devices/HGZB-04D---HGZB-4D-UK.jpg](../images/devices/HGZB-04D---HGZB-4D-UK.jpg) |
-| [HGZB-042](../devices/HGZB-042.html) | Nue / 3A Smart light switch - 2 gang (on/off) | ![../images/devices/HGZB-042.jpg](../images/devices/HGZB-042.jpg) |
-| [HGZB-42](../devices/HGZB-42.html) | Nue / 3A Smart light switch - 2 gang v2.0 (on/off) | ![../images/devices/HGZB-42.jpg](../images/devices/HGZB-42.jpg) |
-| [HGZB-20A](../devices/HGZB-20A.html) | Nue / 3A Power plug (on/off) | ![../images/devices/HGZB-20A.jpg](../images/devices/HGZB-20A.jpg) |
-| [HGZB-41](../devices/HGZB-41.html) | Nue / 3A Smart one gang wall switch (on/off) | ![../images/devices/HGZB-41.jpg](../images/devices/HGZB-41.jpg) |
-| [MG-AUWS01](../devices/MG-AUWS01.html) | Nue / 3A Smart Double GPO (on/off) | ![../images/devices/MG-AUWS01.jpg](../images/devices/MG-AUWS01.jpg) |
-| [XY12S-15](../devices/XY12S-15.html) | Nue / 3A Smart light controller RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/XY12S-15.jpg](../images/devices/XY12S-15.jpg) |
-| [HGZB-01A](../devices/HGZB-01A.html) | Nue / 3A Smart in-wall switch (on/off) | ![../images/devices/HGZB-01A.jpg](../images/devices/HGZB-01A.jpg) |
-| [HGZB-02A](../devices/HGZB-02A.html) | Nue / 3A Smart light controller (on/off, brightness) | ![../images/devices/HGZB-02A.jpg](../images/devices/HGZB-02A.jpg) |
-| [HGZB-42-UK / HGZB-41](../devices/HGZB-42-UK___HGZB-41.html) | Nue / 3A Smart switch 1 or 2 gang (on/off) | ![../images/devices/HGZB-42-UK---HGZB-41.jpg](../images/devices/HGZB-42-UK---HGZB-41.jpg) |
-| [HGZB-06A](../devices/HGZB-06A.html) | Nue / 3A Smart 7W E27 light bulb (on/off, brightness, color temperature, color xy) | ![../images/devices/HGZB-06A.jpg](../images/devices/HGZB-06A.jpg) |
-| [HGZB-20-UK](../devices/HGZB-20-UK.html) | Nue / 3A Power plug (on/off) | ![../images/devices/HGZB-20-UK.jpg](../images/devices/HGZB-20-UK.jpg) |
+| [HGZB-1S](../devices/HGZB-1S.md) | Nue / 3A Smart 1 key scene wall switch (on/off, click) | ![../images/devices/HGZB-1S.jpg](../images/devices/HGZB-1S.jpg) |
+| [HGZB-02S](../devices/HGZB-02S.md) | Nue / 3A Smart 2 key scene wall switch (on/off, click) | ![../images/devices/HGZB-02S.jpg](../images/devices/HGZB-02S.jpg) |
+| [HGZB-045](../devices/HGZB-045.md) | Nue / 3A Smart 4 key scene wall switch (on/off, click) | ![../images/devices/HGZB-045.jpg](../images/devices/HGZB-045.jpg) |
+| [LXZB-02A](../devices/LXZB-02A.md) | Nue / 3A Smart light controller (on/off, brightness) | ![../images/devices/LXZB-02A.jpg](../images/devices/LXZB-02A.jpg) |
+| [HGZB-43](../devices/HGZB-43.md) | Nue / 3A Smart light switch - 3 gang v2.0 (on/off) | ![../images/devices/HGZB-43.jpg](../images/devices/HGZB-43.jpg) |
+| [HGZB-043](../devices/HGZB-043.md) | Nue / 3A Smart light switch - 3 gang (on/off) | ![../images/devices/HGZB-043.jpg](../images/devices/HGZB-043.jpg) |
+| [HGZB-04D / HGZB-4D-UK](../devices/HGZB-04D___HGZB-4D-UK.md) | Nue / 3A Smart dimmer wall switch (on/off, brightness) | ![../images/devices/HGZB-04D---HGZB-4D-UK.jpg](../images/devices/HGZB-04D---HGZB-4D-UK.jpg) |
+| [HGZB-042](../devices/HGZB-042.md) | Nue / 3A Smart light switch - 2 gang (on/off) | ![../images/devices/HGZB-042.jpg](../images/devices/HGZB-042.jpg) |
+| [HGZB-42](../devices/HGZB-42.md) | Nue / 3A Smart light switch - 2 gang v2.0 (on/off) | ![../images/devices/HGZB-42.jpg](../images/devices/HGZB-42.jpg) |
+| [HGZB-20A](../devices/HGZB-20A.md) | Nue / 3A Power plug (on/off) | ![../images/devices/HGZB-20A.jpg](../images/devices/HGZB-20A.jpg) |
+| [HGZB-41](../devices/HGZB-41.md) | Nue / 3A Smart one gang wall switch (on/off) | ![../images/devices/HGZB-41.jpg](../images/devices/HGZB-41.jpg) |
+| [MG-AUWS01](../devices/MG-AUWS01.md) | Nue / 3A Smart Double GPO (on/off) | ![../images/devices/MG-AUWS01.jpg](../images/devices/MG-AUWS01.jpg) |
+| [XY12S-15](../devices/XY12S-15.md) | Nue / 3A Smart light controller RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/XY12S-15.jpg](../images/devices/XY12S-15.jpg) |
+| [HGZB-01A](../devices/HGZB-01A.md) | Nue / 3A Smart in-wall switch (on/off) | ![../images/devices/HGZB-01A.jpg](../images/devices/HGZB-01A.jpg) |
+| [HGZB-02A](../devices/HGZB-02A.md) | Nue / 3A Smart light controller (on/off, brightness) | ![../images/devices/HGZB-02A.jpg](../images/devices/HGZB-02A.jpg) |
+| [HGZB-42-UK / HGZB-41](../devices/HGZB-42-UK___HGZB-41.md) | Nue / 3A Smart switch 1 or 2 gang (on/off) | ![../images/devices/HGZB-42-UK---HGZB-41.jpg](../images/devices/HGZB-42-UK---HGZB-41.jpg) |
+| [HGZB-06A](../devices/HGZB-06A.md) | Nue / 3A Smart 7W E27 light bulb (on/off, brightness, color temperature, color xy) | ![../images/devices/HGZB-06A.jpg](../images/devices/HGZB-06A.jpg) |
+| [HGZB-20-UK](../devices/HGZB-20-UK.md) | Nue / 3A Power plug (on/off) | ![../images/devices/HGZB-20-UK.jpg](../images/devices/HGZB-20-UK.jpg) |
 
 ### Nyce
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [NCZ-3011-HA](../devices/NCZ-3011-HA.html) | Nyce Door/window sensor (motion, humidity and temperature) | ![../images/devices/NCZ-3011-HA.jpg](../images/devices/NCZ-3011-HA.jpg) |
-| [NCZ-3043-HA](../devices/NCZ-3043-HA.html) | Nyce Ceiling motion sensor (motion, humidity and temperature) | ![../images/devices/NCZ-3043-HA.jpg](../images/devices/NCZ-3043-HA.jpg) |
-| [NCZ-3041-HA](../devices/NCZ-3041-HA.html) | Nyce Wall motion sensor (motion, humidity and temperature) | ![../images/devices/NCZ-3041-HA.jpg](../images/devices/NCZ-3041-HA.jpg) |
-| [NCZ-3045-HA](../devices/NCZ-3045-HA.html) | Nyce Curtain motion sensor (motion, humidity and temperature) | ![../images/devices/NCZ-3045-HA.jpg](../images/devices/NCZ-3045-HA.jpg) |
+| [NCZ-3011-HA](../devices/NCZ-3011-HA.md) | Nyce Door/window sensor (motion, humidity and temperature) | ![../images/devices/NCZ-3011-HA.jpg](../images/devices/NCZ-3011-HA.jpg) |
+| [NCZ-3043-HA](../devices/NCZ-3043-HA.md) | Nyce Ceiling motion sensor (motion, humidity and temperature) | ![../images/devices/NCZ-3043-HA.jpg](../images/devices/NCZ-3043-HA.jpg) |
+| [NCZ-3041-HA](../devices/NCZ-3041-HA.md) | Nyce Wall motion sensor (motion, humidity and temperature) | ![../images/devices/NCZ-3041-HA.jpg](../images/devices/NCZ-3041-HA.jpg) |
+| [NCZ-3045-HA](../devices/NCZ-3045-HA.md) | Nyce Curtain motion sensor (motion, humidity and temperature) | ![../images/devices/NCZ-3045-HA.jpg](../images/devices/NCZ-3045-HA.jpg) |
 
 ### ORVIBO
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [CR11S8UZ](../devices/CR11S8UZ.html) | ORVIBO Smart sticker switch (click, hold, release) | ![../images/devices/CR11S8UZ.jpg](../images/devices/CR11S8UZ.jpg) |
+| [CR11S8UZ](../devices/CR11S8UZ.md) | ORVIBO Smart sticker switch (click, hold, release) | ![../images/devices/CR11S8UZ.jpg](../images/devices/CR11S8UZ.jpg) |
 
 ### OSRAM
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [4058075816718](../devices/4058075816718.html) | OSRAM SMART+ outdoor wall lantern RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/4058075816718.jpg](../images/devices/4058075816718.jpg) |
-| [AA69697](../devices/AA69697.html) | OSRAM Classic A60 RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/AA69697.jpg](../images/devices/AA69697.jpg) |
-| [AC03645](../devices/AC03645.html) | OSRAM LIGHTIFY LED CLA60 E27 RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/AC03645.jpg](../images/devices/AC03645.jpg) |
-| [AC03642](../devices/AC03642.html) | OSRAM SMART+ CLASSIC A 60 TW (on/off, brightness, color temperature) | ![../images/devices/AC03642.jpg](../images/devices/AC03642.jpg) |
-| [AC08560](../devices/AC08560.html) | OSRAM SMART+ LED PAR16 GU10 (on/off, brightness) | ![../images/devices/AC08560.jpg](../images/devices/AC08560.jpg) |
-| [AC03647](../devices/AC03647.html) | OSRAM SMART+ LED CLASSIC E27 RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/AC03647.jpg](../images/devices/AC03647.jpg) |
-| [AA70155](../devices/AA70155.html) | OSRAM LIGHTIFY LED A19 tunable white / Classic A60 TW (on/off, brightness, color temperature) | ![../images/devices/AA70155.jpg](../images/devices/AA70155.jpg) |
-| [AA68199](../devices/AA68199.html) | OSRAM LIGHTIFY LED PAR16 50 GU10 tunable white (on/off, brightness, color temperature) | ![../images/devices/AA68199.jpg](../images/devices/AA68199.jpg) |
-| [AB32840](../devices/AB32840.html) | OSRAM LIGHTIFY LED Classic B40 tunable white (on/off, brightness, color temperature) | ![../images/devices/AB32840.jpg](../images/devices/AB32840.jpg) |
-| [4058075816794](../devices/4058075816794.html) | OSRAM Smart+ Ceiling TW (on/off, brightness, color temperature) | ![../images/devices/4058075816794.jpg](../images/devices/4058075816794.jpg) |
-| [AC03641](../devices/AC03641.html) | OSRAM LIGHTIFY LED Classic A60 clear (on/off, brightness) | ![../images/devices/AC03641.jpg](../images/devices/AC03641.jpg) |
-| [4052899926158](../devices/4052899926158.html) | OSRAM LIGHTIFY Surface Light TW (on/off, brightness) | ![../images/devices/4052899926158.jpg](../images/devices/4052899926158.jpg) |
-| [AB401130055](../devices/AB401130055.html) | OSRAM LIGHTIFY Surface Light LED Tunable White (on/off, brightness, color temperature) | ![../images/devices/AB401130055.jpg](../images/devices/AB401130055.jpg) |
-| [AB3257001NJ](../devices/AB3257001NJ.html) | OSRAM Smart+ plug (on/off) | ![../images/devices/AB3257001NJ.jpg](../images/devices/AB3257001NJ.jpg) |
-| [AC10691](../devices/AC10691.html) | OSRAM Smart+ plug (on/off) | ![../images/devices/AC10691.jpg](../images/devices/AC10691.jpg) |
-| [4052899926110](../devices/4052899926110.html) | OSRAM Flex RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/4052899926110.jpg](../images/devices/4052899926110.jpg) |
-| [4058075036185](../devices/4058075036185.html) | OSRAM Outdoor Flex RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/4058075036185.jpg](../images/devices/4058075036185.jpg) |
-| [4058075036147](../devices/4058075036147.html) | OSRAM Smart+ gardenpole RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/4058075036147.jpg](../images/devices/4058075036147.jpg) |
-| [AC0363900NJ](../devices/AC0363900NJ.html) | OSRAM Smart+ mini gardenpole RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/AC0363900NJ.jpg](../images/devices/AC0363900NJ.jpg) |
-| [AB35996](../devices/AB35996.html) | OSRAM Smart+ Spot GU10 Multicolor (on/off, brightness, color temperature, color xy) | ![../images/devices/AB35996.jpg](../images/devices/AB35996.jpg) |
-| [AC08559](../devices/AC08559.html) | OSRAM SMART+ Spot GU10 Multicolor (on/off, brightness, color temperature, color xy) | ![../images/devices/AC08559.jpg](../images/devices/AC08559.jpg) |
-| [AC08562](../devices/AC08562.html) | OSRAM SMART+ Candle E14 Dimmable White (on/off, brightness) | ![../images/devices/AC08562.jpg](../images/devices/AC08562.jpg) |
-| [AC01353010G](../devices/AC01353010G.html) | OSRAM SMART+ Motion Sensor (occupancy and temperature) | ![../images/devices/AC01353010G.jpg](../images/devices/AC01353010G.jpg) |
-| [AC03648](../devices/AC03648.html) | OSRAM SMART+ spot GU5.3 tunable white (on/off, brightness, color temperature) | ![../images/devices/AC03648.jpg](../images/devices/AC03648.jpg) |
-| [AC0251100NJ](../devices/AC0251100NJ.html) | OSRAM Smart+ switch mini (circle, up, down and hold/release) | ![../images/devices/AC0251100NJ.jpg](../images/devices/AC0251100NJ.jpg) |
-| [ST8AU-CON](../devices/ST8AU-CON.html) | OSRAM OSRAM SubstiTUBE T8 Advanced UO Connected (on/off, brightness) | ![../images/devices/ST8AU-CON.jpg](../images/devices/ST8AU-CON.jpg) |
+| [4058075816718](../devices/4058075816718.md) | OSRAM SMART+ outdoor wall lantern RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/4058075816718.jpg](../images/devices/4058075816718.jpg) |
+| [AA69697](../devices/AA69697.md) | OSRAM Classic A60 RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/AA69697.jpg](../images/devices/AA69697.jpg) |
+| [AC03645](../devices/AC03645.md) | OSRAM LIGHTIFY LED CLA60 E27 RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/AC03645.jpg](../images/devices/AC03645.jpg) |
+| [AC03642](../devices/AC03642.md) | OSRAM SMART+ CLASSIC A 60 TW (on/off, brightness, color temperature) | ![../images/devices/AC03642.jpg](../images/devices/AC03642.jpg) |
+| [AC08560](../devices/AC08560.md) | OSRAM SMART+ LED PAR16 GU10 (on/off, brightness) | ![../images/devices/AC08560.jpg](../images/devices/AC08560.jpg) |
+| [AC03647](../devices/AC03647.md) | OSRAM SMART+ LED CLASSIC E27 RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/AC03647.jpg](../images/devices/AC03647.jpg) |
+| [AA70155](../devices/AA70155.md) | OSRAM LIGHTIFY LED A19 tunable white / Classic A60 TW (on/off, brightness, color temperature) | ![../images/devices/AA70155.jpg](../images/devices/AA70155.jpg) |
+| [AA68199](../devices/AA68199.md) | OSRAM LIGHTIFY LED PAR16 50 GU10 tunable white (on/off, brightness, color temperature) | ![../images/devices/AA68199.jpg](../images/devices/AA68199.jpg) |
+| [AB32840](../devices/AB32840.md) | OSRAM LIGHTIFY LED Classic B40 tunable white (on/off, brightness, color temperature) | ![../images/devices/AB32840.jpg](../images/devices/AB32840.jpg) |
+| [4058075816794](../devices/4058075816794.md) | OSRAM Smart+ Ceiling TW (on/off, brightness, color temperature) | ![../images/devices/4058075816794.jpg](../images/devices/4058075816794.jpg) |
+| [AC03641](../devices/AC03641.md) | OSRAM LIGHTIFY LED Classic A60 clear (on/off, brightness) | ![../images/devices/AC03641.jpg](../images/devices/AC03641.jpg) |
+| [4052899926158](../devices/4052899926158.md) | OSRAM LIGHTIFY Surface Light TW (on/off, brightness) | ![../images/devices/4052899926158.jpg](../images/devices/4052899926158.jpg) |
+| [AB401130055](../devices/AB401130055.md) | OSRAM LIGHTIFY Surface Light LED Tunable White (on/off, brightness, color temperature) | ![../images/devices/AB401130055.jpg](../images/devices/AB401130055.jpg) |
+| [AB3257001NJ](../devices/AB3257001NJ.md) | OSRAM Smart+ plug (on/off) | ![../images/devices/AB3257001NJ.jpg](../images/devices/AB3257001NJ.jpg) |
+| [AC10691](../devices/AC10691.md) | OSRAM Smart+ plug (on/off) | ![../images/devices/AC10691.jpg](../images/devices/AC10691.jpg) |
+| [4052899926110](../devices/4052899926110.md) | OSRAM Flex RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/4052899926110.jpg](../images/devices/4052899926110.jpg) |
+| [4058075036185](../devices/4058075036185.md) | OSRAM Outdoor Flex RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/4058075036185.jpg](../images/devices/4058075036185.jpg) |
+| [4058075036147](../devices/4058075036147.md) | OSRAM Smart+ gardenpole RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/4058075036147.jpg](../images/devices/4058075036147.jpg) |
+| [AC0363900NJ](../devices/AC0363900NJ.md) | OSRAM Smart+ mini gardenpole RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/AC0363900NJ.jpg](../images/devices/AC0363900NJ.jpg) |
+| [AB35996](../devices/AB35996.md) | OSRAM Smart+ Spot GU10 Multicolor (on/off, brightness, color temperature, color xy) | ![../images/devices/AB35996.jpg](../images/devices/AB35996.jpg) |
+| [AC08559](../devices/AC08559.md) | OSRAM SMART+ Spot GU10 Multicolor (on/off, brightness, color temperature, color xy) | ![../images/devices/AC08559.jpg](../images/devices/AC08559.jpg) |
+| [AC08562](../devices/AC08562.md) | OSRAM SMART+ Candle E14 Dimmable White (on/off, brightness) | ![../images/devices/AC08562.jpg](../images/devices/AC08562.jpg) |
+| [AC01353010G](../devices/AC01353010G.md) | OSRAM SMART+ Motion Sensor (occupancy and temperature) | ![../images/devices/AC01353010G.jpg](../images/devices/AC01353010G.jpg) |
+| [AC03648](../devices/AC03648.md) | OSRAM SMART+ spot GU5.3 tunable white (on/off, brightness, color temperature) | ![../images/devices/AC03648.jpg](../images/devices/AC03648.jpg) |
+| [AC0251100NJ](../devices/AC0251100NJ.md) | OSRAM Smart+ switch mini (circle, up, down and hold/release) | ![../images/devices/AC0251100NJ.jpg](../images/devices/AC0251100NJ.jpg) |
+| [ST8AU-CON](../devices/ST8AU-CON.md) | OSRAM OSRAM SubstiTUBE T8 Advanced UO Connected (on/off, brightness) | ![../images/devices/ST8AU-CON.jpg](../images/devices/ST8AU-CON.jpg) |
 
 ### Oujiabao
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [CR701-YZ](../devices/CR701-YZ.html) | Oujiabao Gas and carbon monoxide alarm (gas and carbon monoxide) | ![../images/devices/CR701-YZ.jpg](../images/devices/CR701-YZ.jpg) |
+| [CR701-YZ](../devices/CR701-YZ.md) | Oujiabao Gas and carbon monoxide alarm (gas and carbon monoxide) | ![../images/devices/CR701-YZ.jpg](../images/devices/CR701-YZ.jpg) |
 
 ### PEQ
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [3300-P](../devices/3300-P.html) | PEQ Door & window contact sensor (contact, temperature) | ![../images/devices/3300-P.jpg](../images/devices/3300-P.jpg) |
+| [3300-P](../devices/3300-P.md) | PEQ Door & window contact sensor (contact, temperature) | ![../images/devices/3300-P.jpg](../images/devices/3300-P.jpg) |
 
 ### Paul Neuhaus
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [100.424.11](../devices/100.424.11.html) | Paul Neuhaus Q-INIGO LED ceiling light (on/off, brightness, color temperature) | ![../images/devices/100.424.11.jpg](../images/devices/100.424.11.jpg) |
-| [100.469.65](../devices/100.469.65.html) | Paul Neuhaus Q-INIGO, LED panel, Smart-Home RGB (on/off, brightness, color temperature) | ![../images/devices/100.469.65.jpg](../images/devices/100.469.65.jpg) |
-| [100.110.39](../devices/100.110.39.html) | Paul Neuhaus Q-FLAG LED Panel, Smart-Home RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/100.110.39.jpg](../images/devices/100.110.39.jpg) |
-| [100.425.90](../devices/100.425.90.html) | Paul Neuhaus Q-PLUG adapter plug with night orientation light (on/off) | ![../images/devices/100.425.90.jpg](../images/devices/100.425.90.jpg) |
+| [100.424.11](../devices/100.424.11.md) | Paul Neuhaus Q-INIGO LED ceiling light (on/off, brightness, color temperature) | ![../images/devices/100.424.11.jpg](../images/devices/100.424.11.jpg) |
+| [100.469.65](../devices/100.469.65.md) | Paul Neuhaus Q-INIGO, LED panel, Smart-Home RGB (on/off, brightness, color temperature) | ![../images/devices/100.469.65.jpg](../images/devices/100.469.65.jpg) |
+| [100.110.39](../devices/100.110.39.md) | Paul Neuhaus Q-FLAG LED Panel, Smart-Home RGBW (on/off, brightness, color temperature, color xy) | ![../images/devices/100.110.39.jpg](../images/devices/100.110.39.jpg) |
+| [100.425.90](../devices/100.425.90.md) | Paul Neuhaus Q-PLUG adapter plug with night orientation light (on/off) | ![../images/devices/100.425.90.jpg](../images/devices/100.425.90.jpg) |
 
 ### Paulmann
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [50043](../devices/50043.html) | Paulmann SmartHome Zigbee Cephei Switch Controller (on/off) | ![../images/devices/50043.jpg](../images/devices/50043.jpg) |
-| [50045](../devices/50045.html) | Paulmann SmartHome Zigbee LED-stripe (on/off, brightness) | ![../images/devices/50045.jpg](../images/devices/50045.jpg) |
-| [50049](../devices/50049.html) | Paulmann SmartHome Yourled RGB Controller (on/off, brightness, color temperature, color xy) | ![../images/devices/50049.jpg](../images/devices/50049.jpg) |
-| [50064](../devices/50064.html) | Paulmann SmartHome led spot (on/off, brightness, color temperature) | ![../images/devices/50064.jpg](../images/devices/50064.jpg) |
+| [50043](../devices/50043.md) | Paulmann SmartHome Zigbee Cephei Switch Controller (on/off) | ![../images/devices/50043.jpg](../images/devices/50043.jpg) |
+| [50045](../devices/50045.md) | Paulmann SmartHome Zigbee LED-stripe (on/off, brightness) | ![../images/devices/50045.jpg](../images/devices/50045.jpg) |
+| [50049](../devices/50049.md) | Paulmann SmartHome Yourled RGB Controller (on/off, brightness, color temperature, color xy) | ![../images/devices/50049.jpg](../images/devices/50049.jpg) |
+| [50064](../devices/50064.md) | Paulmann SmartHome led spot (on/off, brightness, color temperature) | ![../images/devices/50064.jpg](../images/devices/50064.jpg) |
 
 ### Philips
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [3306431P7](../devices/3306431P7.html) | Philips Hue Struana (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3306431P7.jpg](../images/devices/3306431P7.jpg) |
-| [7299760PH](../devices/7299760PH.html) | Philips Hue Bloom (on/off, brightness, color xy, power-on behavior) | ![../images/devices/7299760PH.jpg](../images/devices/7299760PH.jpg) |
-| [7146060PH](../devices/7146060PH.html) | Philips Hue Go (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/7146060PH.jpg](../images/devices/7146060PH.jpg) |
-| [4090531P7](../devices/4090531P7.html) | Philips Hue Flourish white and color ambiance ceiling light (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/4090531P7.jpg](../images/devices/4090531P7.jpg) |
-| [929001953101](../devices/929001953101.html) | Philips Hue White and Color Ambiance GU10 (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/929001953101.jpg](../images/devices/929001953101.jpg) |
-| [8718699688820](../devices/8718699688820.html) | Philips Hue Filament Standard A60/E27 bluetooth (on/off, brightness, power-on behavior) | ![../images/devices/8718699688820.jpg](../images/devices/8718699688820.jpg) |
-| [433714](../devices/433714.html) | Philips Hue Lux A19 bulb E27 (on/off, brightness, power-on behavior) | ![../images/devices/433714.jpg](../images/devices/433714.jpg) |
-| [9290011370](../devices/9290011370.html) | Philips Hue white A60 bulb E27 (on/off, brightness, power-on behavior) | ![../images/devices/9290011370.jpg](../images/devices/9290011370.jpg) |
-| [8718699673147](../devices/8718699673147.html) | Philips Hue white A60 bulb E27 bluetooth (on/off, brightness, power-on behavior) | ![../images/devices/8718699673147.jpg](../images/devices/8718699673147.jpg) |
-| [9290022169](../devices/9290022169.html) | Philips Hue white ambiance E27 with Bluetooth (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/9290022169.jpg](../images/devices/9290022169.jpg) |
-| [8718696449691](../devices/8718696449691.html) | Philips Hue White Single bulb B22 (on/off, brightness, power-on behavior) | ![../images/devices/8718696449691.jpg](../images/devices/8718696449691.jpg) |
-| [9290018195](../devices/9290018195.html) | Philips Hue white GU10 (on/off, brightness, power-on behavior) | ![../images/devices/9290018195.jpg](../images/devices/9290018195.jpg) |
-| [LWG004](../devices/LWG004.html) | Philips Hue white GU10 bluetooth (on/off, brightness, power-on behavior) | ![../images/devices/LWG004.jpg](../images/devices/LWG004.jpg) |
-| [8718699688882](../devices/8718699688882.html) | Philips Hue white Filament bulb G93 E27 bluetooth (on/off, brightness, power-on behavior) | ![../images/devices/8718699688882.jpg](../images/devices/8718699688882.jpg) |
-| [7299355PH](../devices/7299355PH.html) | Philips Hue white and color ambiance LightStrip (on/off, brightness, color xy, power-on behavior) | ![../images/devices/7299355PH.jpg](../images/devices/7299355PH.jpg) |
-| [915005106701](../devices/915005106701.html) | Philips Hue white and color ambiance LightStrip plus (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/915005106701.jpg](../images/devices/915005106701.jpg) |
-| [9290018187B](../devices/9290018187B.html) | Philips Hue white and color ambiance LightStrip Outdoor (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/9290018187B.jpg](../images/devices/9290018187B.jpg) |
-| [9290022166](../devices/9290022166.html) | Philips Hue white and color ambiance E26/E27 (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/9290022166.jpg](../images/devices/9290022166.jpg) |
-| [9290012573A](../devices/9290012573A.html) | Philips Hue white and color ambiance E26/E27/E14 (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/9290012573A.jpg](../images/devices/9290012573A.jpg) |
-| [9290002579A](../devices/9290002579A.html) | Philips Hue white and color ambiance BR30 (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/9290002579A.jpg](../images/devices/9290002579A.jpg) |
-| [8718696485880](../devices/8718696485880.html) | Philips Hue white and color ambiance GU10 (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/8718696485880.jpg](../images/devices/8718696485880.jpg) |
-| [915005733701](../devices/915005733701.html) | Philips Hue White and color ambiance Play Lightbar (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/915005733701.jpg](../images/devices/915005733701.jpg) |
-| [464800](../devices/464800.html) | Philips Hue white ambiance BR30 flood light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/464800.jpg](../images/devices/464800.jpg) |
-| [8718696695203](../devices/8718696695203.html) | Philips Hue white ambiance E14 (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/8718696695203.jpg](../images/devices/8718696695203.jpg) |
-| [9290020399](../devices/9290020399.html) | Philips Hue white E14 (on/off, brightness, power-on behavior) | ![../images/devices/9290020399.jpg](../images/devices/9290020399.jpg) |
-| [8718696598283](../devices/8718696598283.html) | Philips Hue white ambiance GU10 (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/8718696598283.jpg](../images/devices/8718696598283.jpg) |
-| [929001953301](../devices/929001953301.html) | Philips Hue white ambiance GU10 with Bluetooth (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/929001953301.jpg](../images/devices/929001953301.jpg) |
-| [9290011998B](../devices/9290011998B.html) | Philips Hue white ambiance E26 (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/9290011998B.jpg](../images/devices/9290011998B.jpg) |
-| [9290022167](../devices/9290022167.html) | Philips Hue white ambiance E26 with Bluetooth (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/9290022167.jpg](../images/devices/9290022167.jpg) |
-| [8718696548738](../devices/8718696548738.html) | Philips Hue white ambiance E26/E27 (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/8718696548738.jpg](../images/devices/8718696548738.jpg) |
-| [915005587401](../devices/915005587401.html) | Philips Hue white ambiance Adore light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/915005587401.jpg](../images/devices/915005587401.jpg) |
-| [4090130P7](../devices/4090130P7.html) | Philips Hue Sana (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/4090130P7.jpg](../images/devices/4090130P7.jpg) |
-| [3261030P7](../devices/3261030P7.html) | Philips Hue Being (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3261030P7.jpg](../images/devices/3261030P7.jpg) |
-| [3261331P7](../devices/3261331P7.html) | Philips Hue white ambiance Still (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3261331P7.jpg](../images/devices/3261331P7.jpg) |
-| [4096730U7](../devices/4096730U7.html) | Philips Hue Cher ceiling light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/4096730U7.jpg](../images/devices/4096730U7.jpg) |
-| [3216131P5](../devices/3216131P5.html) | Philips Hue white ambiance Aurelle square panel light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3216131P5.jpg](../images/devices/3216131P5.jpg) |
-| [3216331P5](../devices/3216331P5.html) | Philips Hue white ambiance Aurelle rectangle panel light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3216331P5.jpg](../images/devices/3216331P5.jpg) |
-| [3216431P5](../devices/3216431P5.html) | Philips Hue white ambiance Aurelle round panel light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3216431P5.jpg](../images/devices/3216431P5.jpg) |
-| [4033930P7](../devices/4033930P7.html) | Philips Hue white ambiance suspension Fair (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/4033930P7.jpg](../images/devices/4033930P7.jpg) |
-| [9290011370B](../devices/9290011370B.html) | Philips Hue white A60 bulb E27 (on/off, brightness, power-on behavior) | ![../images/devices/9290011370B.jpg](../images/devices/9290011370B.jpg) |
-| [046677476816](../devices/046677476816.html) | Philips Hue white PAR38 outdoor (on/off, brightness, power-on behavior) | ![../images/devices/046677476816.jpg](../images/devices/046677476816.jpg) |
-| [7199960PH](../devices/7199960PH.html) | Philips Hue Iris (on/off, brightness, color xy, power-on behavior) | ![../images/devices/7199960PH.jpg](../images/devices/7199960PH.jpg) |
-| [324131092621](../devices/324131092621.html) | Philips Hue dimmer switch (on/off, brightness, up/down/hold/release, click count) | ![../images/devices/324131092621.jpg](../images/devices/324131092621.jpg) |
-| [9290012607](../devices/9290012607.html) | Philips Hue motion sensor (occupancy, temperature, illuminance) | ![../images/devices/9290012607.jpg](../images/devices/9290012607.jpg) |
-| [9290019758](../devices/9290019758.html) | Philips Hue motion outdoor sensor (occupancy, temperature, illuminance) | ![../images/devices/9290019758.jpg](../images/devices/9290019758.jpg) |
-| [929002240401](../devices/929002240401.html) | Philips Hue smart plug - EU (on/off) | ![../images/devices/929002240401.jpg](../images/devices/929002240401.jpg) |
-| [046677552343](../devices/046677552343.html) | Philips Hue smart plug bluetooth (on/off) | ![../images/devices/046677552343.jpg](../images/devices/046677552343.jpg) |
-| [7099860PH](../devices/7099860PH.html) | Philips LivingColors Aura (on/off, brightness, color xy, power-on behavior) | ![../images/devices/7099860PH.jpg](../images/devices/7099860PH.jpg) |
-| [3216231P5](../devices/3216231P5.html) | Philips Hue white ambiance Aurelle rectangle panel light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3216231P5.jpg](../images/devices/3216231P5.jpg) |
-| [8718696170625](../devices/8718696170625.html) | Philips Hue Fuzo outdoor wall light (on/off, brightness, power-on behavior) | ![../images/devices/8718696170625.jpg](../images/devices/8718696170625.jpg) |
-| [17436/30/P7](../devices/17436_30_P7.html) | Philips Hue Welcome white flood light (on/off, brightness, power-on behavior) | ![../images/devices/17436-30-P7.jpg](../images/devices/17436-30-P7.jpg) |
-| [1741830P7](../devices/1741830P7.html) | Philips Hue Lily outdoor spot light (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/1741830P7.jpg](../images/devices/1741830P7.jpg) |
-| [929002241201](../devices/929002241201.html) | Philips Hue white filament Edison E27 LED (on/off, brightness, power-on behavior) | ![../images/devices/929002241201.jpg](../images/devices/929002241201.jpg) |
-| [3115331PH](../devices/3115331PH.html) | Philips Phoenix light (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/3115331PH.jpg](../images/devices/3115331PH.jpg) |
+| [3306431P7](../devices/3306431P7.md) | Philips Hue Struana (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3306431P7.jpg](../images/devices/3306431P7.jpg) |
+| [7299760PH](../devices/7299760PH.md) | Philips Hue Bloom (on/off, brightness, color xy, power-on behavior) | ![../images/devices/7299760PH.jpg](../images/devices/7299760PH.jpg) |
+| [7146060PH](../devices/7146060PH.md) | Philips Hue Go (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/7146060PH.jpg](../images/devices/7146060PH.jpg) |
+| [4090531P7](../devices/4090531P7.md) | Philips Hue Flourish white and color ambiance ceiling light (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/4090531P7.jpg](../images/devices/4090531P7.jpg) |
+| [929001953101](../devices/929001953101.md) | Philips Hue White and Color Ambiance GU10 (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/929001953101.jpg](../images/devices/929001953101.jpg) |
+| [8718699688820](../devices/8718699688820.md) | Philips Hue Filament Standard A60/E27 bluetooth (on/off, brightness, power-on behavior) | ![../images/devices/8718699688820.jpg](../images/devices/8718699688820.jpg) |
+| [433714](../devices/433714.md) | Philips Hue Lux A19 bulb E27 (on/off, brightness, power-on behavior) | ![../images/devices/433714.jpg](../images/devices/433714.jpg) |
+| [9290011370](../devices/9290011370.md) | Philips Hue white A60 bulb E27 (on/off, brightness, power-on behavior) | ![../images/devices/9290011370.jpg](../images/devices/9290011370.jpg) |
+| [8718699673147](../devices/8718699673147.md) | Philips Hue white A60 bulb E27 bluetooth (on/off, brightness, power-on behavior) | ![../images/devices/8718699673147.jpg](../images/devices/8718699673147.jpg) |
+| [9290022169](../devices/9290022169.md) | Philips Hue white ambiance E27 with Bluetooth (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/9290022169.jpg](../images/devices/9290022169.jpg) |
+| [8718696449691](../devices/8718696449691.md) | Philips Hue White Single bulb B22 (on/off, brightness, power-on behavior) | ![../images/devices/8718696449691.jpg](../images/devices/8718696449691.jpg) |
+| [9290018195](../devices/9290018195.md) | Philips Hue white GU10 (on/off, brightness, power-on behavior) | ![../images/devices/9290018195.jpg](../images/devices/9290018195.jpg) |
+| [LWG004](../devices/LWG004.md) | Philips Hue white GU10 bluetooth (on/off, brightness, power-on behavior) | ![../images/devices/LWG004.jpg](../images/devices/LWG004.jpg) |
+| [8718699688882](../devices/8718699688882.md) | Philips Hue white Filament bulb G93 E27 bluetooth (on/off, brightness, power-on behavior) | ![../images/devices/8718699688882.jpg](../images/devices/8718699688882.jpg) |
+| [7299355PH](../devices/7299355PH.md) | Philips Hue white and color ambiance LightStrip (on/off, brightness, color xy, power-on behavior) | ![../images/devices/7299355PH.jpg](../images/devices/7299355PH.jpg) |
+| [915005106701](../devices/915005106701.md) | Philips Hue white and color ambiance LightStrip plus (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/915005106701.jpg](../images/devices/915005106701.jpg) |
+| [9290018187B](../devices/9290018187B.md) | Philips Hue white and color ambiance LightStrip Outdoor (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/9290018187B.jpg](../images/devices/9290018187B.jpg) |
+| [9290022166](../devices/9290022166.md) | Philips Hue white and color ambiance E26/E27 (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/9290022166.jpg](../images/devices/9290022166.jpg) |
+| [9290012573A](../devices/9290012573A.md) | Philips Hue white and color ambiance E26/E27/E14 (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/9290012573A.jpg](../images/devices/9290012573A.jpg) |
+| [9290002579A](../devices/9290002579A.md) | Philips Hue white and color ambiance BR30 (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/9290002579A.jpg](../images/devices/9290002579A.jpg) |
+| [8718696485880](../devices/8718696485880.md) | Philips Hue white and color ambiance GU10 (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/8718696485880.jpg](../images/devices/8718696485880.jpg) |
+| [915005733701](../devices/915005733701.md) | Philips Hue White and color ambiance Play Lightbar (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/915005733701.jpg](../images/devices/915005733701.jpg) |
+| [464800](../devices/464800.md) | Philips Hue white ambiance BR30 flood light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/464800.jpg](../images/devices/464800.jpg) |
+| [8718696695203](../devices/8718696695203.md) | Philips Hue white ambiance E14 (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/8718696695203.jpg](../images/devices/8718696695203.jpg) |
+| [9290020399](../devices/9290020399.md) | Philips Hue white E14 (on/off, brightness, power-on behavior) | ![../images/devices/9290020399.jpg](../images/devices/9290020399.jpg) |
+| [8718696598283](../devices/8718696598283.md) | Philips Hue white ambiance GU10 (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/8718696598283.jpg](../images/devices/8718696598283.jpg) |
+| [929001953301](../devices/929001953301.md) | Philips Hue white ambiance GU10 with Bluetooth (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/929001953301.jpg](../images/devices/929001953301.jpg) |
+| [9290011998B](../devices/9290011998B.md) | Philips Hue white ambiance E26 (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/9290011998B.jpg](../images/devices/9290011998B.jpg) |
+| [9290022167](../devices/9290022167.md) | Philips Hue white ambiance E26 with Bluetooth (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/9290022167.jpg](../images/devices/9290022167.jpg) |
+| [8718696548738](../devices/8718696548738.md) | Philips Hue white ambiance E26/E27 (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/8718696548738.jpg](../images/devices/8718696548738.jpg) |
+| [915005587401](../devices/915005587401.md) | Philips Hue white ambiance Adore light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/915005587401.jpg](../images/devices/915005587401.jpg) |
+| [4090130P7](../devices/4090130P7.md) | Philips Hue Sana (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/4090130P7.jpg](../images/devices/4090130P7.jpg) |
+| [3261030P7](../devices/3261030P7.md) | Philips Hue Being (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3261030P7.jpg](../images/devices/3261030P7.jpg) |
+| [3261331P7](../devices/3261331P7.md) | Philips Hue white ambiance Still (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3261331P7.jpg](../images/devices/3261331P7.jpg) |
+| [4096730U7](../devices/4096730U7.md) | Philips Hue Cher ceiling light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/4096730U7.jpg](../images/devices/4096730U7.jpg) |
+| [3216131P5](../devices/3216131P5.md) | Philips Hue white ambiance Aurelle square panel light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3216131P5.jpg](../images/devices/3216131P5.jpg) |
+| [3216331P5](../devices/3216331P5.md) | Philips Hue white ambiance Aurelle rectangle panel light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3216331P5.jpg](../images/devices/3216331P5.jpg) |
+| [3216431P5](../devices/3216431P5.md) | Philips Hue white ambiance Aurelle round panel light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3216431P5.jpg](../images/devices/3216431P5.jpg) |
+| [4033930P7](../devices/4033930P7.md) | Philips Hue white ambiance suspension Fair (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/4033930P7.jpg](../images/devices/4033930P7.jpg) |
+| [9290011370B](../devices/9290011370B.md) | Philips Hue white A60 bulb E27 (on/off, brightness, power-on behavior) | ![../images/devices/9290011370B.jpg](../images/devices/9290011370B.jpg) |
+| [046677476816](../devices/046677476816.md) | Philips Hue white PAR38 outdoor (on/off, brightness, power-on behavior) | ![../images/devices/046677476816.jpg](../images/devices/046677476816.jpg) |
+| [7199960PH](../devices/7199960PH.md) | Philips Hue Iris (on/off, brightness, color xy, power-on behavior) | ![../images/devices/7199960PH.jpg](../images/devices/7199960PH.jpg) |
+| [324131092621](../devices/324131092621.md) | Philips Hue dimmer switch (on/off, brightness, up/down/hold/release, click count) | ![../images/devices/324131092621.jpg](../images/devices/324131092621.jpg) |
+| [9290012607](../devices/9290012607.md) | Philips Hue motion sensor (occupancy, temperature, illuminance) | ![../images/devices/9290012607.jpg](../images/devices/9290012607.jpg) |
+| [9290019758](../devices/9290019758.md) | Philips Hue motion outdoor sensor (occupancy, temperature, illuminance) | ![../images/devices/9290019758.jpg](../images/devices/9290019758.jpg) |
+| [929002240401](../devices/929002240401.md) | Philips Hue smart plug - EU (on/off) | ![../images/devices/929002240401.jpg](../images/devices/929002240401.jpg) |
+| [046677552343](../devices/046677552343.md) | Philips Hue smart plug bluetooth (on/off) | ![../images/devices/046677552343.jpg](../images/devices/046677552343.jpg) |
+| [7099860PH](../devices/7099860PH.md) | Philips LivingColors Aura (on/off, brightness, color xy, power-on behavior) | ![../images/devices/7099860PH.jpg](../images/devices/7099860PH.jpg) |
+| [3216231P5](../devices/3216231P5.md) | Philips Hue white ambiance Aurelle rectangle panel light (on/off, brightness, color temperature, power-on behavior) | ![../images/devices/3216231P5.jpg](../images/devices/3216231P5.jpg) |
+| [8718696170625](../devices/8718696170625.md) | Philips Hue Fuzo outdoor wall light (on/off, brightness, power-on behavior) | ![../images/devices/8718696170625.jpg](../images/devices/8718696170625.jpg) |
+| [17436/30/P7](../devices/17436_30_P7.md) | Philips Hue Welcome white flood light (on/off, brightness, power-on behavior) | ![../images/devices/17436-30-P7.jpg](../images/devices/17436-30-P7.jpg) |
+| [1741830P7](../devices/1741830P7.md) | Philips Hue Lily outdoor spot light (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/1741830P7.jpg](../images/devices/1741830P7.jpg) |
+| [929002241201](../devices/929002241201.md) | Philips Hue white filament Edison E27 LED (on/off, brightness, power-on behavior) | ![../images/devices/929002241201.jpg](../images/devices/929002241201.jpg) |
+| [3115331PH](../devices/3115331PH.md) | Philips Phoenix light (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/3115331PH.jpg](../images/devices/3115331PH.jpg) |
 
 ### Piri
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [HSIO18008](../devices/HSIO18008.html) | Piri Combustible gas sensor (gas) | ![../images/devices/HSIO18008.jpg](../images/devices/HSIO18008.jpg) |
+| [HSIO18008](../devices/HSIO18008.md) | Piri Combustible gas sensor (gas) | ![../images/devices/HSIO18008.jpg](../images/devices/HSIO18008.jpg) |
 
 ### RGB Genie
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [ZGRC-KEY-013](../devices/ZGRC-KEY-013.html) | RGB Genie 3 Zone remote and dimmer (click) | ![../images/devices/ZGRC-KEY-013.jpg](../images/devices/ZGRC-KEY-013.jpg) |
+| [ZGRC-KEY-013](../devices/ZGRC-KEY-013.md) | RGB Genie 3 Zone remote and dimmer (click) | ![../images/devices/ZGRC-KEY-013.jpg](../images/devices/ZGRC-KEY-013.jpg) |
 
 ### ROBB
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [ROB_200-004-0](../devices/ROB_200-004-0.html) | ROBB ZigBee AC phase-cut dimmer (on/off, brightness) | ![../images/devices/ROB_200-004-0.jpg](../images/devices/ROB_200-004-0.jpg) |
+| [ROB_200-004-0](../devices/ROB_200-004-0.md) | ROBB ZigBee AC phase-cut dimmer (on/off, brightness) | ![../images/devices/ROB_200-004-0.jpg](../images/devices/ROB_200-004-0.jpg) |
 
 ### Salus
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [SP600](../devices/SP600.html) | Salus Smart plug (on/off, power measurement) | ![../images/devices/SP600.jpg](../images/devices/SP600.jpg) |
+| [SP600](../devices/SP600.md) | Salus Smart plug (on/off, power measurement) | ![../images/devices/SP600.jpg](../images/devices/SP600.jpg) |
 
 ### Securifi
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [PP-WHT-US](../devices/PP-WHT-US.html) | Securifi Peanut Smart Plug (on/off, power measurement) | ![../images/devices/PP-WHT-US.jpg](../images/devices/PP-WHT-US.jpg) |
+| [PP-WHT-US](../devices/PP-WHT-US.md) | Securifi Peanut Smart Plug (on/off, power measurement) | ![../images/devices/PP-WHT-US.jpg](../images/devices/PP-WHT-US.jpg) |
 
 ### Sengled
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [E11-G13](../devices/E11-G13.html) | Sengled Element Classic (A19) (on/off, brightness) | ![../images/devices/E11-G13.jpg](../images/devices/E11-G13.jpg) |
-| [E11-G23/E11-G33](../devices/E11-G23_E11-G33.html) | Sengled Element Classic (A60) (on/off, brightness) | ![../images/devices/E11-G23-E11-G33.jpg](../images/devices/E11-G23-E11-G33.jpg) |
-| [Z01-CIA19NAE26](../devices/Z01-CIA19NAE26.html) | Sengled Element Touch (A19) (on/off, brightness) | ![../images/devices/Z01-CIA19NAE26.jpg](../images/devices/Z01-CIA19NAE26.jpg) |
-| [Z01-A19NAE26](../devices/Z01-A19NAE26.html) | Sengled Element Plus (A19) (on/off, brightness, color temperature) | ![../images/devices/Z01-A19NAE26.jpg](../images/devices/Z01-A19NAE26.jpg) |
-| [Z01-A60EAE27](../devices/Z01-A60EAE27.html) | Sengled Element Plus (A60) (on/off, brightness, color temperature) | ![../images/devices/Z01-A60EAE27.jpg](../images/devices/Z01-A60EAE27.jpg) |
-| [E11-N1EA](../devices/E11-N1EA.html) | Sengled Element Plus Color (A19) (on/off, brightness, color temperature, color xy) | ![../images/devices/E11-N1EA.jpg](../images/devices/E11-N1EA.jpg) |
-| [E12-N14](../devices/E12-N14.html) | Sengled Element Classic (BR30) (on/off, brightness) | ![../images/devices/E12-N14.jpg](../images/devices/E12-N14.jpg) |
-| [E1ACA4ABE38A](../devices/E1ACA4ABE38A.html) | Sengled Element downlight smart LED bulb (on/off, brightness) | ![../images/devices/E1ACA4ABE38A.jpg](../images/devices/E1ACA4ABE38A.jpg) |
+| [E11-G13](../devices/E11-G13.md) | Sengled Element Classic (A19) (on/off, brightness) | ![../images/devices/E11-G13.jpg](../images/devices/E11-G13.jpg) |
+| [E11-G23/E11-G33](../devices/E11-G23_E11-G33.md) | Sengled Element Classic (A60) (on/off, brightness) | ![../images/devices/E11-G23-E11-G33.jpg](../images/devices/E11-G23-E11-G33.jpg) |
+| [Z01-CIA19NAE26](../devices/Z01-CIA19NAE26.md) | Sengled Element Touch (A19) (on/off, brightness) | ![../images/devices/Z01-CIA19NAE26.jpg](../images/devices/Z01-CIA19NAE26.jpg) |
+| [Z01-A19NAE26](../devices/Z01-A19NAE26.md) | Sengled Element Plus (A19) (on/off, brightness, color temperature) | ![../images/devices/Z01-A19NAE26.jpg](../images/devices/Z01-A19NAE26.jpg) |
+| [Z01-A60EAE27](../devices/Z01-A60EAE27.md) | Sengled Element Plus (A60) (on/off, brightness, color temperature) | ![../images/devices/Z01-A60EAE27.jpg](../images/devices/Z01-A60EAE27.jpg) |
+| [E11-N1EA](../devices/E11-N1EA.md) | Sengled Element Plus Color (A19) (on/off, brightness, color temperature, color xy) | ![../images/devices/E11-N1EA.jpg](../images/devices/E11-N1EA.jpg) |
+| [E12-N14](../devices/E12-N14.md) | Sengled Element Classic (BR30) (on/off, brightness) | ![../images/devices/E12-N14.jpg](../images/devices/E12-N14.jpg) |
+| [E1ACA4ABE38A](../devices/E1ACA4ABE38A.md) | Sengled Element downlight smart LED bulb (on/off, brightness) | ![../images/devices/E1ACA4ABE38A.jpg](../images/devices/E1ACA4ABE38A.jpg) |
 
 ### Sercomm
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [SZ-ESW01](../devices/SZ-ESW01.html) | Sercomm Telstra smart plug (on/off, power consumption) | ![../images/devices/SZ-ESW01.jpg](../images/devices/SZ-ESW01.jpg) |
-| [SZ-ESW01-AU](../devices/SZ-ESW01-AU.html) | Sercomm Telstra smart plug (on/off, power consumption) | ![../images/devices/SZ-ESW01-AU.jpg](../images/devices/SZ-ESW01-AU.jpg) |
-| [XHS2-SE](../devices/XHS2-SE.html) | Sercomm Magnetic door & window contact sensor (contact, temperature) | ![../images/devices/XHS2-SE.jpg](../images/devices/XHS2-SE.jpg) |
+| [SZ-ESW01](../devices/SZ-ESW01.md) | Sercomm Telstra smart plug (on/off, power consumption) | ![../images/devices/SZ-ESW01.jpg](../images/devices/SZ-ESW01.jpg) |
+| [SZ-ESW01-AU](../devices/SZ-ESW01-AU.md) | Sercomm Telstra smart plug (on/off, power consumption) | ![../images/devices/SZ-ESW01-AU.jpg](../images/devices/SZ-ESW01-AU.jpg) |
+| [XHS2-SE](../devices/XHS2-SE.md) | Sercomm Magnetic door & window contact sensor (contact, temperature) | ![../images/devices/XHS2-SE.jpg](../images/devices/XHS2-SE.jpg) |
 
 ### Shenzhen Homa
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [HLD812-Z-SC](../devices/HLD812-Z-SC.html) | Shenzhen Homa Smart LED driver (on/off, brightness) | ![../images/devices/HLD812-Z-SC.jpg](../images/devices/HLD812-Z-SC.jpg) |
-| [HLC610-Z](../devices/HLC610-Z.html) | Shenzhen Homa Wireless dimmable controller (on/off, brightness) | ![../images/devices/HLC610-Z.jpg](../images/devices/HLC610-Z.jpg) |
-| [HLC821-Z-SC](../devices/HLC821-Z-SC.html) | Shenzhen Homa ZigBee AC phase-cut dimmer (on/off, brightness) | ![../images/devices/HLC821-Z-SC.jpg](../images/devices/HLC821-Z-SC.jpg) |
+| [HLD812-Z-SC](../devices/HLD812-Z-SC.md) | Shenzhen Homa Smart LED driver (on/off, brightness) | ![../images/devices/HLD812-Z-SC.jpg](../images/devices/HLD812-Z-SC.jpg) |
+| [HLC610-Z](../devices/HLC610-Z.md) | Shenzhen Homa Wireless dimmable controller (on/off, brightness) | ![../images/devices/HLC610-Z.jpg](../images/devices/HLC610-Z.jpg) |
+| [HLC821-Z-SC](../devices/HLC821-Z-SC.md) | Shenzhen Homa ZigBee AC phase-cut dimmer (on/off, brightness) | ![../images/devices/HLC821-Z-SC.jpg](../images/devices/HLC821-Z-SC.jpg) |
 
 ### Sinope
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [TH1123ZB](../devices/TH1123ZB.html) | Sinope Zigbee line volt thermostat (local temp, units, keypad lockout, mode, state, backlight, outdoor temp, time) | ![../images/devices/TH1123ZB.jpg](../images/devices/TH1123ZB.jpg) |
+| [TH1123ZB](../devices/TH1123ZB.md) | Sinope Zigbee line volt thermostat (local temp, units, keypad lockout, mode, state, backlight, outdoor temp, time) | ![../images/devices/TH1123ZB.jpg](../images/devices/TH1123ZB.jpg) |
 
 ### Smart Home Pty
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [HGZB-07A](../devices/HGZB-07A.html) | Smart Home Pty RGBW Downlight (on/off, brightness, color temperature, color xy) | ![../images/devices/HGZB-07A.jpg](../images/devices/HGZB-07A.jpg) |
-| [HGZB-20-DE](../devices/HGZB-20-DE.html) | Smart Home Pty Power plug (on/off) | ![../images/devices/HGZB-20-DE.jpg](../images/devices/HGZB-20-DE.jpg) |
+| [HGZB-07A](../devices/HGZB-07A.md) | Smart Home Pty RGBW Downlight (on/off, brightness, color temperature, color xy) | ![../images/devices/HGZB-07A.jpg](../images/devices/HGZB-07A.jpg) |
+| [HGZB-20-DE](../devices/HGZB-20-DE.md) | Smart Home Pty Power plug (on/off) | ![../images/devices/HGZB-20-DE.jpg](../images/devices/HGZB-20-DE.jpg) |
 
 ### SmartThings
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [STSS-MULT-001](../devices/STSS-MULT-001.html) | SmartThings Multipurpose sensor (contact) | ![../images/devices/STSS-MULT-001.jpg](../images/devices/STSS-MULT-001.jpg) |
-| [STS-PRS-251](../devices/STS-PRS-251.html) | SmartThings Arrival sensor (presence) | ![../images/devices/STS-PRS-251.jpg](../images/devices/STS-PRS-251.jpg) |
-| [3325-S](../devices/3325-S.html) | SmartThings Motion sensor (2015 model) (occupancy and temperature) | ![../images/devices/3325-S.jpg](../images/devices/3325-S.jpg) |
-| [3321-S](../devices/3321-S.html) | SmartThings Multi Sensor (2015 model) (contact and temperature) | ![../images/devices/3321-S.jpg](../images/devices/3321-S.jpg) |
-| [IM6001-OTP05](../devices/IM6001-OTP05.html) | SmartThings Outlet (on/off) | ![../images/devices/IM6001-OTP05.jpg](../images/devices/IM6001-OTP05.jpg) |
-| [STS-OUT-US-2](../devices/STS-OUT-US-2.html) | SmartThings Outlet (on/off) | ![../images/devices/STS-OUT-US-2.jpg](../images/devices/STS-OUT-US-2.jpg) |
-| [IM6001-MTP01](../devices/IM6001-MTP01.html) | SmartThings Motion sensor (2018 model) (occupancy and temperature) | ![../images/devices/IM6001-MTP01.jpg](../images/devices/IM6001-MTP01.jpg) |
-| [STS-IRM-250](../devices/STS-IRM-250.html) | SmartThings Motion sensor (2016 model) (occupancy and temperature) | ![../images/devices/STS-IRM-250.jpg](../images/devices/STS-IRM-250.jpg) |
-| [3305-S](../devices/3305-S.html) | SmartThings Motion sensor (2014 model) (occupancy and temperature) | ![../images/devices/3305-S.jpg](../images/devices/3305-S.jpg) |
-| [3300-S](../devices/3300-S.html) | SmartThings Door sensor (contact and temperature) | ![../images/devices/3300-S.jpg](../images/devices/3300-S.jpg) |
-| [F-MLT-US-2](../devices/F-MLT-US-2.html) | SmartThings Multipurpose sensor (2016 model) (contact) | ![../images/devices/F-MLT-US-2.jpg](../images/devices/F-MLT-US-2.jpg) |
-| [IM6001-MPP01](../devices/IM6001-MPP01.html) | SmartThings Multipurpose sensor (2018 model) (contact) | ![../images/devices/IM6001-MPP01.jpg](../images/devices/IM6001-MPP01.jpg) |
-| [3310-S](../devices/3310-S.html) | SmartThings Temperature and humidity sensor (temperature) | ![../images/devices/3310-S.jpg](../images/devices/3310-S.jpg) |
-| [IM6001-WLP01](../devices/IM6001-WLP01.html) | SmartThings Water leak sensor (water leak) | ![../images/devices/IM6001-WLP01.jpg](../images/devices/IM6001-WLP01.jpg) |
-| [3315-S](../devices/3315-S.html) | SmartThings Water sensor (water and temperature) | ![../images/devices/3315-S.jpg](../images/devices/3315-S.jpg) |
-| [F-WTR-UK-V2](../devices/F-WTR-UK-V2.html) | SmartThings Water leak sensor (2018 model) (water leak and temperature) | ![../images/devices/F-WTR-UK-V2.jpg](../images/devices/F-WTR-UK-V2.jpg) |
-| [3315-G](../devices/3315-G.html) | SmartThings Water sensor (water and temperature) | ![../images/devices/3315-G.jpg](../images/devices/3315-G.jpg) |
-| [IM6001-BTP01](../devices/IM6001-BTP01.html) | SmartThings Button (single click, double click, hold and temperature) | ![../images/devices/IM6001-BTP01.jpg](../images/devices/IM6001-BTP01.jpg) |
+| [STSS-MULT-001](../devices/STSS-MULT-001.md) | SmartThings Multipurpose sensor (contact) | ![../images/devices/STSS-MULT-001.jpg](../images/devices/STSS-MULT-001.jpg) |
+| [STS-PRS-251](../devices/STS-PRS-251.md) | SmartThings Arrival sensor (presence) | ![../images/devices/STS-PRS-251.jpg](../images/devices/STS-PRS-251.jpg) |
+| [3325-S](../devices/3325-S.md) | SmartThings Motion sensor (2015 model) (occupancy and temperature) | ![../images/devices/3325-S.jpg](../images/devices/3325-S.jpg) |
+| [3321-S](../devices/3321-S.md) | SmartThings Multi Sensor (2015 model) (contact and temperature) | ![../images/devices/3321-S.jpg](../images/devices/3321-S.jpg) |
+| [IM6001-OTP05](../devices/IM6001-OTP05.md) | SmartThings Outlet (on/off) | ![../images/devices/IM6001-OTP05.jpg](../images/devices/IM6001-OTP05.jpg) |
+| [STS-OUT-US-2](../devices/STS-OUT-US-2.md) | SmartThings Outlet (on/off) | ![../images/devices/STS-OUT-US-2.jpg](../images/devices/STS-OUT-US-2.jpg) |
+| [IM6001-MTP01](../devices/IM6001-MTP01.md) | SmartThings Motion sensor (2018 model) (occupancy and temperature) | ![../images/devices/IM6001-MTP01.jpg](../images/devices/IM6001-MTP01.jpg) |
+| [STS-IRM-250](../devices/STS-IRM-250.md) | SmartThings Motion sensor (2016 model) (occupancy and temperature) | ![../images/devices/STS-IRM-250.jpg](../images/devices/STS-IRM-250.jpg) |
+| [3305-S](../devices/3305-S.md) | SmartThings Motion sensor (2014 model) (occupancy and temperature) | ![../images/devices/3305-S.jpg](../images/devices/3305-S.jpg) |
+| [3300-S](../devices/3300-S.md) | SmartThings Door sensor (contact and temperature) | ![../images/devices/3300-S.jpg](../images/devices/3300-S.jpg) |
+| [F-MLT-US-2](../devices/F-MLT-US-2.md) | SmartThings Multipurpose sensor (2016 model) (contact) | ![../images/devices/F-MLT-US-2.jpg](../images/devices/F-MLT-US-2.jpg) |
+| [IM6001-MPP01](../devices/IM6001-MPP01.md) | SmartThings Multipurpose sensor (2018 model) (contact) | ![../images/devices/IM6001-MPP01.jpg](../images/devices/IM6001-MPP01.jpg) |
+| [3310-S](../devices/3310-S.md) | SmartThings Temperature and humidity sensor (temperature) | ![../images/devices/3310-S.jpg](../images/devices/3310-S.jpg) |
+| [IM6001-WLP01](../devices/IM6001-WLP01.md) | SmartThings Water leak sensor (water leak) | ![../images/devices/IM6001-WLP01.jpg](../images/devices/IM6001-WLP01.jpg) |
+| [3315-S](../devices/3315-S.md) | SmartThings Water sensor (water and temperature) | ![../images/devices/3315-S.jpg](../images/devices/3315-S.jpg) |
+| [F-WTR-UK-V2](../devices/F-WTR-UK-V2.md) | SmartThings Water leak sensor (2018 model) (water leak and temperature) | ![../images/devices/F-WTR-UK-V2.jpg](../images/devices/F-WTR-UK-V2.jpg) |
+| [3315-G](../devices/3315-G.md) | SmartThings Water sensor (water and temperature) | ![../images/devices/3315-G.jpg](../images/devices/3315-G.jpg) |
+| [IM6001-BTP01](../devices/IM6001-BTP01.md) | SmartThings Button (single click, double click, hold and temperature) | ![../images/devices/IM6001-BTP01.jpg](../images/devices/IM6001-BTP01.jpg) |
 
 ### Stelpro
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [ST218](../devices/ST218.html) | Stelpro Built-in electronic thermostat (temperature ) | ![../images/devices/ST218.jpg](../images/devices/ST218.jpg) |
+| [ST218](../devices/ST218.md) | Stelpro Built-in electronic thermostat (temperature ) | ![../images/devices/ST218.jpg](../images/devices/ST218.jpg) |
 
 ### Sunricher
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [ZG9101SAC-HP](../devices/ZG9101SAC-HP.html) | Sunricher ZigBee AC phase-cut dimmer (on/off, brightness) | ![../images/devices/ZG9101SAC-HP.jpg](../images/devices/ZG9101SAC-HP.jpg) |
-| [SR-ZG9001K4-DIM2](../devices/SR-ZG9001K4-DIM2.html) | Sunricher ZigBee double key wall switch (on/off, brightness) | ![../images/devices/SR-ZG9001K4-DIM2.jpg](../images/devices/SR-ZG9001K4-DIM2.jpg) |
+| [ZG9101SAC-HP](../devices/ZG9101SAC-HP.md) | Sunricher ZigBee AC phase-cut dimmer (on/off, brightness) | ![../images/devices/ZG9101SAC-HP.jpg](../images/devices/ZG9101SAC-HP.jpg) |
+| [SR-ZG9001K4-DIM2](../devices/SR-ZG9001K4-DIM2.md) | Sunricher ZigBee double key wall switch (on/off, brightness) | ![../images/devices/SR-ZG9001K4-DIM2.jpg](../images/devices/SR-ZG9001K4-DIM2.jpg) |
 
 ### Swann
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [SWO-KEF1PA](../devices/SWO-KEF1PA.html) | Swann Key fob remote (panic, home, away, sleep) | ![../images/devices/SWO-KEF1PA.jpg](../images/devices/SWO-KEF1PA.jpg) |
-| [SWO-WDS1PA](../devices/SWO-WDS1PA.html) | Swann Window/door sensor (contact) | ![../images/devices/SWO-WDS1PA.jpg](../images/devices/SWO-WDS1PA.jpg) |
+| [SWO-KEF1PA](../devices/SWO-KEF1PA.md) | Swann Key fob remote (panic, home, away, sleep) | ![../images/devices/SWO-KEF1PA.jpg](../images/devices/SWO-KEF1PA.jpg) |
+| [SWO-WDS1PA](../devices/SWO-WDS1PA.md) | Swann Window/door sensor (contact) | ![../images/devices/SWO-WDS1PA.jpg](../images/devices/SWO-WDS1PA.jpg) |
 
 ### Sylvania
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [73742](../devices/73742.html) | Sylvania LIGHTIFY LED adjustable white RT 5/6 (on/off, brightness, color temperature) | ![../images/devices/73742.jpg](../images/devices/73742.jpg) |
-| [73741](../devices/73741.html) | Sylvania LIGHTIFY LED adjustable color RT 5/6 (on/off, brightness, color temperature, color xy) | ![../images/devices/73741.jpg](../images/devices/73741.jpg) |
-| [73740](../devices/73740.html) | Sylvania LIGHTIFY LED adjustable white BR30 (on/off, brightness, color temperature) | ![../images/devices/73740.jpg](../images/devices/73740.jpg) |
-| [73739](../devices/73739.html) | Sylvania LIGHTIFY LED RGBW BR30 (on/off, brightness, color temperature, color xy) | ![../images/devices/73739.jpg](../images/devices/73739.jpg) |
-| [73693](../devices/73693.html) | Sylvania LIGHTIFY LED RGBW A19 (on/off, brightness, color temperature, color xy) | ![../images/devices/73693.jpg](../images/devices/73693.jpg) |
-| [74283](../devices/74283.html) | Sylvania LIGHTIFY LED soft white dimmable A19 (on/off, brightness) | ![../images/devices/74283.jpg](../images/devices/74283.jpg) |
-| [74696](../devices/74696.html) | Sylvania LIGHTIFY LED soft white dimmable A19 (on/off, brightness) | ![../images/devices/74696.jpg](../images/devices/74696.jpg) |
-| [72922-A](../devices/72922-A.html) | Sylvania SMART+ Smart Plug (on/off) | ![../images/devices/72922-A.jpg](../images/devices/72922-A.jpg) |
-| [71831](../devices/71831.html) | Sylvania Smart Home adjustable white A19 LED bulb (on/off, brightness, color temperature) | ![../images/devices/71831.jpg](../images/devices/71831.jpg) |
-| [74282](../devices/74282.html) | Sylvania Smart Home adjustable white MR16 LED bulb (on/off, brightness, color temperature) | ![../images/devices/74282.jpg](../images/devices/74282.jpg) |
-| [LTFY004](../devices/LTFY004.html) | Sylvania LIGHTIFY LED gardenspot mini RGB (on/off, brightness, color xy) | ![../images/devices/LTFY004.jpg](../images/devices/LTFY004.jpg) |
-| [74580](../devices/74580.html) | Sylvania Smart Home soft white PAR38 outdoor bulb (on/off, brightness) | ![../images/devices/74580.jpg](../images/devices/74580.jpg) |
+| [73742](../devices/73742.md) | Sylvania LIGHTIFY LED adjustable white RT 5/6 (on/off, brightness, color temperature) | ![../images/devices/73742.jpg](../images/devices/73742.jpg) |
+| [73741](../devices/73741.md) | Sylvania LIGHTIFY LED adjustable color RT 5/6 (on/off, brightness, color temperature, color xy) | ![../images/devices/73741.jpg](../images/devices/73741.jpg) |
+| [73740](../devices/73740.md) | Sylvania LIGHTIFY LED adjustable white BR30 (on/off, brightness, color temperature) | ![../images/devices/73740.jpg](../images/devices/73740.jpg) |
+| [73739](../devices/73739.md) | Sylvania LIGHTIFY LED RGBW BR30 (on/off, brightness, color temperature, color xy) | ![../images/devices/73739.jpg](../images/devices/73739.jpg) |
+| [73693](../devices/73693.md) | Sylvania LIGHTIFY LED RGBW A19 (on/off, brightness, color temperature, color xy) | ![../images/devices/73693.jpg](../images/devices/73693.jpg) |
+| [74283](../devices/74283.md) | Sylvania LIGHTIFY LED soft white dimmable A19 (on/off, brightness) | ![../images/devices/74283.jpg](../images/devices/74283.jpg) |
+| [74696](../devices/74696.md) | Sylvania LIGHTIFY LED soft white dimmable A19 (on/off, brightness) | ![../images/devices/74696.jpg](../images/devices/74696.jpg) |
+| [72922-A](../devices/72922-A.md) | Sylvania SMART+ Smart Plug (on/off) | ![../images/devices/72922-A.jpg](../images/devices/72922-A.jpg) |
+| [71831](../devices/71831.md) | Sylvania Smart Home adjustable white A19 LED bulb (on/off, brightness, color temperature) | ![../images/devices/71831.jpg](../images/devices/71831.jpg) |
+| [74282](../devices/74282.md) | Sylvania Smart Home adjustable white MR16 LED bulb (on/off, brightness, color temperature) | ![../images/devices/74282.jpg](../images/devices/74282.jpg) |
+| [LTFY004](../devices/LTFY004.md) | Sylvania LIGHTIFY LED gardenspot mini RGB (on/off, brightness, color xy) | ![../images/devices/LTFY004.jpg](../images/devices/LTFY004.jpg) |
+| [74580](../devices/74580.md) | Sylvania Smart Home soft white PAR38 outdoor bulb (on/off, brightness) | ![../images/devices/74580.jpg](../images/devices/74580.jpg) |
 
 ### TERNCY
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [TERNCY-PP01](../devices/TERNCY-PP01.html) | TERNCY Awareness switch (temperature, occupancy, illuminance, click, double click, triple click) | ![../images/devices/TERNCY-PP01.jpg](../images/devices/TERNCY-PP01.jpg) |
+| [TERNCY-PP01](../devices/TERNCY-PP01.md) | TERNCY Awareness switch (temperature, occupancy, illuminance, click, double click, triple click) | ![../images/devices/TERNCY-PP01.jpg](../images/devices/TERNCY-PP01.jpg) |
 
 ### TUYATEC
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [RH3040](../devices/RH3040.html) | TUYATEC PIR sensor (occupancy) | ![../images/devices/RH3040.jpg](../images/devices/RH3040.jpg) |
-| [TT001ZAV20](../devices/TT001ZAV20.html) | TUYATEC Temperature & humidity sensor (temperature and humidity) | ![../images/devices/TT001ZAV20.jpg](../images/devices/TT001ZAV20.jpg) |
+| [RH3040](../devices/RH3040.md) | TUYATEC PIR sensor (occupancy) | ![../images/devices/RH3040.jpg](../images/devices/RH3040.jpg) |
+| [TT001ZAV20](../devices/TT001ZAV20.md) | TUYATEC Temperature & humidity sensor (temperature and humidity) | ![../images/devices/TT001ZAV20.jpg](../images/devices/TT001ZAV20.jpg) |
 
 ### Third Reality
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [3RSS008Z](../devices/3RSS008Z.html) | Third Reality RealitySwitch Plus (on/off, battery) | ![../images/devices/3RSS008Z.jpg](../images/devices/3RSS008Z.jpg) |
+| [3RSS008Z](../devices/3RSS008Z.md) | Third Reality RealitySwitch Plus (on/off, battery) | ![../images/devices/3RSS008Z.jpg](../images/devices/3RSS008Z.jpg) |
 
 ### Trust
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [ZWLD-100](../devices/ZWLD-100.html) | Trust Water leakage detector (water leak) | ![../images/devices/ZWLD-100.jpg](../images/devices/ZWLD-100.jpg) |
-| [ZYCT-202](../devices/ZYCT-202.html) | Trust Remote control (on, off, stop, up-press, down-press) | ![../images/devices/ZYCT-202.jpg](../images/devices/ZYCT-202.jpg) |
-| [ZLED-2709](../devices/ZLED-2709.html) | Trust Smart Dimmable LED Bulb (on/off, brightness) | ![../images/devices/ZLED-2709.jpg](../images/devices/ZLED-2709.jpg) |
-| [ZLED-TUNE9](../devices/ZLED-TUNE9.html) | Trust Smart tunable LED bulb (on/off, brightness, color temperature) | ![../images/devices/ZLED-TUNE9.jpg](../images/devices/ZLED-TUNE9.jpg) |
-| [ZPIR-8000](../devices/ZPIR-8000.html) | Trust Motion Sensor (occupancy) | ![../images/devices/ZPIR-8000.jpg](../images/devices/ZPIR-8000.jpg) |
-| [ZCTS-808](../devices/ZCTS-808.html) | Trust Wireless contact sensor (contact) | ![../images/devices/ZCTS-808.jpg](../images/devices/ZCTS-808.jpg) |
+| [ZWLD-100](../devices/ZWLD-100.md) | Trust Water leakage detector (water leak) | ![../images/devices/ZWLD-100.jpg](../images/devices/ZWLD-100.jpg) |
+| [ZYCT-202](../devices/ZYCT-202.md) | Trust Remote control (on, off, stop, up-press, down-press) | ![../images/devices/ZYCT-202.jpg](../images/devices/ZYCT-202.jpg) |
+| [ZLED-2709](../devices/ZLED-2709.md) | Trust Smart Dimmable LED Bulb (on/off, brightness) | ![../images/devices/ZLED-2709.jpg](../images/devices/ZLED-2709.jpg) |
+| [ZLED-TUNE9](../devices/ZLED-TUNE9.md) | Trust Smart tunable LED bulb (on/off, brightness, color temperature) | ![../images/devices/ZLED-TUNE9.jpg](../images/devices/ZLED-TUNE9.jpg) |
+| [ZPIR-8000](../devices/ZPIR-8000.md) | Trust Motion Sensor (occupancy) | ![../images/devices/ZPIR-8000.jpg](../images/devices/ZPIR-8000.jpg) |
+| [ZCTS-808](../devices/ZCTS-808.md) | Trust Wireless contact sensor (contact) | ![../images/devices/ZCTS-808.jpg](../images/devices/ZCTS-808.jpg) |
 
 ### Ubisys
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [S1](../devices/S1.html) | Ubisys Power switch S1 (on/off, power measurement) | ![../images/devices/S1.jpg](../images/devices/S1.jpg) |
-| [S2](../devices/S2.html) | Ubisys Power switch S2 (on/off, power measurement) | ![../images/devices/S2.jpg](../images/devices/S2.jpg) |
-| [D1](../devices/D1.html) | Ubisys Universal dimmer D1 (on/off, brightness, power measurement) | ![../images/devices/D1.jpg](../images/devices/D1.jpg) |
-| [J1](../devices/J1.html) | Ubisys Shutter control J1 (open, close, stop, position, tilt) | ![../images/devices/J1.jpg](../images/devices/J1.jpg) |
+| [S1](../devices/S1.md) | Ubisys Power switch S1 (on/off, power measurement) | ![../images/devices/S1.jpg](../images/devices/S1.jpg) |
+| [S2](../devices/S2.md) | Ubisys Power switch S2 (on/off, power measurement) | ![../images/devices/S2.jpg](../images/devices/S2.jpg) |
+| [D1](../devices/D1.md) | Ubisys Universal dimmer D1 (on/off, brightness, power measurement) | ![../images/devices/D1.jpg](../images/devices/D1.jpg) |
+| [J1](../devices/J1.md) | Ubisys Shutter control J1 (open, close, stop, position, tilt) | ![../images/devices/J1.jpg](../images/devices/J1.jpg) |
 
 ### Visonic
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [MCT-350 SMA](../devices/MCT-350_SMA.html) | Visonic Magnetic door & window contact sensor (contact) | ![../images/devices/MCT-350-SMA.jpg](../images/devices/MCT-350-SMA.jpg) |
-| [MCT-340 E](../devices/MCT-340_E.html) | Visonic Magnetic door & window contact sensor (contact, temperature) | ![../images/devices/MCT-340-E.jpg](../images/devices/MCT-340-E.jpg) |
-| [MCT-340 SMA](../devices/MCT-340_SMA.html) | Visonic Magnetic door & window contact sensor (contact, temperature) | ![../images/devices/MCT-340-SMA.jpg](../images/devices/MCT-340-SMA.jpg) |
+| [MCT-350 SMA](../devices/MCT-350_SMA.md) | Visonic Magnetic door & window contact sensor (contact) | ![../images/devices/MCT-350-SMA.jpg](../images/devices/MCT-350-SMA.jpg) |
+| [MCT-340 E](../devices/MCT-340_E.md) | Visonic Magnetic door & window contact sensor (contact, temperature) | ![../images/devices/MCT-340-E.jpg](../images/devices/MCT-340-E.jpg) |
+| [MCT-340 SMA](../devices/MCT-340_SMA.md) | Visonic Magnetic door & window contact sensor (contact, temperature) | ![../images/devices/MCT-340-SMA.jpg](../images/devices/MCT-340-SMA.jpg) |
 
 ### Xiaomi
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [ZNLDP12LM](../devices/ZNLDP12LM.html) | Xiaomi Aqara smart LED bulb (on/off, brightness, color temperature) | ![../images/devices/ZNLDP12LM.jpg](../images/devices/ZNLDP12LM.jpg) |
-| [WXKG01LM](../devices/WXKG01LM.html) | Xiaomi MiJia wireless switch (single, double, triple, quadruple, many, long, long_release click) | ![../images/devices/WXKG01LM.jpg](../images/devices/WXKG01LM.jpg) |
-| [WXKG11LM](../devices/WXKG11LM.html) | Xiaomi Aqara wireless switch (single, double click (and triple, quadruple, hold, release depending on model)) | ![../images/devices/WXKG11LM.jpg](../images/devices/WXKG11LM.jpg) |
-| [WXKG12LM](../devices/WXKG12LM.html) | Xiaomi Aqara wireless switch (with gyroscope) (single, double, shake, hold, release) | ![../images/devices/WXKG12LM.jpg](../images/devices/WXKG12LM.jpg) |
-| [WXKG03LM](../devices/WXKG03LM.html) | Xiaomi Aqara single key wireless wall switch (single (and double, hold, release and long click depending on model)) | ![../images/devices/WXKG03LM.jpg](../images/devices/WXKG03LM.jpg) |
-| [WXKG02LM](../devices/WXKG02LM.html) | Xiaomi Aqara double key wireless wall switch (left, right, both click (and double, long click for left, right and both depending on model)) | ![../images/devices/WXKG02LM.jpg](../images/devices/WXKG02LM.jpg) |
-| [QBKG04LM](../devices/QBKG04LM.html) | Xiaomi Aqara single key wired wall switch without neutral wire. Doesn't work as a router and doesn't support power meter (release/hold, on/off) | ![../images/devices/QBKG04LM.jpg](../images/devices/QBKG04LM.jpg) |
-| [QBKG11LM](../devices/QBKG11LM.html) | Xiaomi Aqara single key wired wall switch (on/off, power measurement) | ![../images/devices/QBKG11LM.jpg](../images/devices/QBKG11LM.jpg) |
-| [QBKG03LM](../devices/QBKG03LM.html) | Xiaomi Aqara double key wired wall switch without neutral wire. Doesn't work as a router and doesn't support power meter (release/hold, on/off, temperature) | ![../images/devices/QBKG03LM.jpg](../images/devices/QBKG03LM.jpg) |
-| [QBKG12LM](../devices/QBKG12LM.html) | Xiaomi Aqara double key wired wall switch (on/off, power measurement) | ![../images/devices/QBKG12LM.jpg](../images/devices/QBKG12LM.jpg) |
-| [WSDCGQ01LM](../devices/WSDCGQ01LM.html) | Xiaomi MiJia temperature & humidity sensor (temperature and humidity) | ![../images/devices/WSDCGQ01LM.jpg](../images/devices/WSDCGQ01LM.jpg) |
-| [WSDCGQ11LM](../devices/WSDCGQ11LM.html) | Xiaomi Aqara temperature, humidity and pressure sensor (temperature, humidity and pressure) | ![../images/devices/WSDCGQ11LM.jpg](../images/devices/WSDCGQ11LM.jpg) |
-| [RTCGQ01LM](../devices/RTCGQ01LM.html) | Xiaomi MiJia human body movement sensor (occupancy) | ![../images/devices/RTCGQ01LM.jpg](../images/devices/RTCGQ01LM.jpg) |
-| [RTCGQ11LM](../devices/RTCGQ11LM.html) | Xiaomi Aqara human body movement and illuminance sensor (occupancy and illuminance) | ![../images/devices/RTCGQ11LM.jpg](../images/devices/RTCGQ11LM.jpg) |
-| [MCCGQ01LM](../devices/MCCGQ01LM.html) | Xiaomi MiJia door & window contact sensor (contact) | ![../images/devices/MCCGQ01LM.jpg](../images/devices/MCCGQ01LM.jpg) |
-| [MCCGQ11LM](../devices/MCCGQ11LM.html) | Xiaomi Aqara door & window contact sensor (contact) | ![../images/devices/MCCGQ11LM.jpg](../images/devices/MCCGQ11LM.jpg) |
-| [SJCGQ11LM](../devices/SJCGQ11LM.html) | Xiaomi Aqara water leak sensor (water leak true/false) | ![../images/devices/SJCGQ11LM.jpg](../images/devices/SJCGQ11LM.jpg) |
-| [MFKZQ01LM](../devices/MFKZQ01LM.html) | Xiaomi Mi/Aqara smart home cube (shake, wakeup, fall, tap, slide, flip180, flip90, rotate_left and rotate_right) | ![../images/devices/MFKZQ01LM.jpg](../images/devices/MFKZQ01LM.jpg) |
-| [ZNCZ02LM](../devices/ZNCZ02LM.html) | Xiaomi Mi power plug ZigBee (on/off, power measurement) | ![../images/devices/ZNCZ02LM.jpg](../images/devices/ZNCZ02LM.jpg) |
-| [ZNCZ03LM](../devices/ZNCZ03LM.html) | Xiaomi Mi power plug ZigBee TW (on/off, power measurement) | ![../images/devices/ZNCZ03LM.jpg](../images/devices/ZNCZ03LM.jpg) |
-| [QBCZ11LM](../devices/QBCZ11LM.html) | Xiaomi Aqara socket Zigbee (on/off, power measurement) | ![../images/devices/QBCZ11LM.jpg](../images/devices/QBCZ11LM.jpg) |
-| [JTYJ-GD-01LM/BW](../devices/JTYJ-GD-01LM_BW.html) | Xiaomi MiJia Honeywell smoke detector (smoke) | ![../images/devices/JTYJ-GD-01LM-BW.jpg](../images/devices/JTYJ-GD-01LM-BW.jpg) |
-| [JTQJ-BF-01LM/BW](../devices/JTQJ-BF-01LM_BW.html) | Xiaomi MiJia gas leak detector  (gas) | ![../images/devices/JTQJ-BF-01LM-BW.jpg](../images/devices/JTQJ-BF-01LM-BW.jpg) |
-| [A6121](../devices/A6121.html) | Xiaomi Vima Smart Lock (inserted, forgotten, key error) | ![../images/devices/A6121.jpg](../images/devices/A6121.jpg) |
-| [DJT11LM](../devices/DJT11LM.html) | Xiaomi Aqara vibration sensor (drop, tilt and touch) | ![../images/devices/DJT11LM.jpg](../images/devices/DJT11LM.jpg) |
-| [ZNCLDJ11LM](../devices/ZNCLDJ11LM.html) | Xiaomi Aqara curtain motor (open, close, stop, position) | ![../images/devices/ZNCLDJ11LM.jpg](../images/devices/ZNCLDJ11LM.jpg) |
-| [ZNCLDJ12LM](../devices/ZNCLDJ12LM.html) | Xiaomi Aqara B1 curtain motor  (open, close, stop, position) | ![../images/devices/ZNCLDJ12LM.jpg](../images/devices/ZNCLDJ12LM.jpg) |
-| [LLKZMK11LM](../devices/LLKZMK11LM.html) | Xiaomi Aqara wireless relay controller (on/off, power measurement) | ![../images/devices/LLKZMK11LM.jpg](../images/devices/LLKZMK11LM.jpg) |
-| [ZNMS12LM](../devices/ZNMS12LM.html) | Xiaomi Aqara S2 Lock (report: open, close, operation) | ![../images/devices/ZNMS12LM.jpg](../images/devices/ZNMS12LM.jpg) |
-| [ZNMS13LM](../devices/ZNMS13LM.html) | Xiaomi Aqara S2 Lock Pro (report: open, close, operation) | ![../images/devices/ZNMS13LM.jpg](../images/devices/ZNMS13LM.jpg) |
-| [TS0201](../devices/TS0201.html) | Xiaomi Aqara temperature & humidity sensor with display (temperature and humidity) | ![../images/devices/TS0201.jpg](../images/devices/TS0201.jpg) |
+| [ZNLDP12LM](../devices/ZNLDP12LM.md) | Xiaomi Aqara smart LED bulb (on/off, brightness, color temperature) | ![../images/devices/ZNLDP12LM.jpg](../images/devices/ZNLDP12LM.jpg) |
+| [WXKG01LM](../devices/WXKG01LM.md) | Xiaomi MiJia wireless switch (single, double, triple, quadruple, many, long, long_release click) | ![../images/devices/WXKG01LM.jpg](../images/devices/WXKG01LM.jpg) |
+| [WXKG11LM](../devices/WXKG11LM.md) | Xiaomi Aqara wireless switch (single, double click (and triple, quadruple, hold, release depending on model)) | ![../images/devices/WXKG11LM.jpg](../images/devices/WXKG11LM.jpg) |
+| [WXKG12LM](../devices/WXKG12LM.md) | Xiaomi Aqara wireless switch (with gyroscope) (single, double, shake, hold, release) | ![../images/devices/WXKG12LM.jpg](../images/devices/WXKG12LM.jpg) |
+| [WXKG03LM](../devices/WXKG03LM.md) | Xiaomi Aqara single key wireless wall switch (single (and double, hold, release and long click depending on model)) | ![../images/devices/WXKG03LM.jpg](../images/devices/WXKG03LM.jpg) |
+| [WXKG02LM](../devices/WXKG02LM.md) | Xiaomi Aqara double key wireless wall switch (left, right, both click (and double, long click for left, right and both depending on model)) | ![../images/devices/WXKG02LM.jpg](../images/devices/WXKG02LM.jpg) |
+| [QBKG04LM](../devices/QBKG04LM.md) | Xiaomi Aqara single key wired wall switch without neutral wire. Doesn't work as a router and doesn't support power meter (release/hold, on/off) | ![../images/devices/QBKG04LM.jpg](../images/devices/QBKG04LM.jpg) |
+| [QBKG11LM](../devices/QBKG11LM.md) | Xiaomi Aqara single key wired wall switch (on/off, power measurement) | ![../images/devices/QBKG11LM.jpg](../images/devices/QBKG11LM.jpg) |
+| [QBKG03LM](../devices/QBKG03LM.md) | Xiaomi Aqara double key wired wall switch without neutral wire. Doesn't work as a router and doesn't support power meter (release/hold, on/off, temperature) | ![../images/devices/QBKG03LM.jpg](../images/devices/QBKG03LM.jpg) |
+| [QBKG12LM](../devices/QBKG12LM.md) | Xiaomi Aqara double key wired wall switch (on/off, power measurement) | ![../images/devices/QBKG12LM.jpg](../images/devices/QBKG12LM.jpg) |
+| [WSDCGQ01LM](../devices/WSDCGQ01LM.md) | Xiaomi MiJia temperature & humidity sensor (temperature and humidity) | ![../images/devices/WSDCGQ01LM.jpg](../images/devices/WSDCGQ01LM.jpg) |
+| [WSDCGQ11LM](../devices/WSDCGQ11LM.md) | Xiaomi Aqara temperature, humidity and pressure sensor (temperature, humidity and pressure) | ![../images/devices/WSDCGQ11LM.jpg](../images/devices/WSDCGQ11LM.jpg) |
+| [RTCGQ01LM](../devices/RTCGQ01LM.md) | Xiaomi MiJia human body movement sensor (occupancy) | ![../images/devices/RTCGQ01LM.jpg](../images/devices/RTCGQ01LM.jpg) |
+| [RTCGQ11LM](../devices/RTCGQ11LM.md) | Xiaomi Aqara human body movement and illuminance sensor (occupancy and illuminance) | ![../images/devices/RTCGQ11LM.jpg](../images/devices/RTCGQ11LM.jpg) |
+| [MCCGQ01LM](../devices/MCCGQ01LM.md) | Xiaomi MiJia door & window contact sensor (contact) | ![../images/devices/MCCGQ01LM.jpg](../images/devices/MCCGQ01LM.jpg) |
+| [MCCGQ11LM](../devices/MCCGQ11LM.md) | Xiaomi Aqara door & window contact sensor (contact) | ![../images/devices/MCCGQ11LM.jpg](../images/devices/MCCGQ11LM.jpg) |
+| [SJCGQ11LM](../devices/SJCGQ11LM.md) | Xiaomi Aqara water leak sensor (water leak true/false) | ![../images/devices/SJCGQ11LM.jpg](../images/devices/SJCGQ11LM.jpg) |
+| [MFKZQ01LM](../devices/MFKZQ01LM.md) | Xiaomi Mi/Aqara smart home cube (shake, wakeup, fall, tap, slide, flip180, flip90, rotate_left and rotate_right) | ![../images/devices/MFKZQ01LM.jpg](../images/devices/MFKZQ01LM.jpg) |
+| [ZNCZ02LM](../devices/ZNCZ02LM.md) | Xiaomi Mi power plug ZigBee (on/off, power measurement) | ![../images/devices/ZNCZ02LM.jpg](../images/devices/ZNCZ02LM.jpg) |
+| [ZNCZ03LM](../devices/ZNCZ03LM.md) | Xiaomi Mi power plug ZigBee TW (on/off, power measurement) | ![../images/devices/ZNCZ03LM.jpg](../images/devices/ZNCZ03LM.jpg) |
+| [QBCZ11LM](../devices/QBCZ11LM.md) | Xiaomi Aqara socket Zigbee (on/off, power measurement) | ![../images/devices/QBCZ11LM.jpg](../images/devices/QBCZ11LM.jpg) |
+| [JTYJ-GD-01LM/BW](../devices/JTYJ-GD-01LM_BW.md) | Xiaomi MiJia Honeywell smoke detector (smoke) | ![../images/devices/JTYJ-GD-01LM-BW.jpg](../images/devices/JTYJ-GD-01LM-BW.jpg) |
+| [JTQJ-BF-01LM/BW](../devices/JTQJ-BF-01LM_BW.md) | Xiaomi MiJia gas leak detector  (gas) | ![../images/devices/JTQJ-BF-01LM-BW.jpg](../images/devices/JTQJ-BF-01LM-BW.jpg) |
+| [A6121](../devices/A6121.md) | Xiaomi Vima Smart Lock (inserted, forgotten, key error) | ![../images/devices/A6121.jpg](../images/devices/A6121.jpg) |
+| [DJT11LM](../devices/DJT11LM.md) | Xiaomi Aqara vibration sensor (drop, tilt and touch) | ![../images/devices/DJT11LM.jpg](../images/devices/DJT11LM.jpg) |
+| [ZNCLDJ11LM](../devices/ZNCLDJ11LM.md) | Xiaomi Aqara curtain motor (open, close, stop, position) | ![../images/devices/ZNCLDJ11LM.jpg](../images/devices/ZNCLDJ11LM.jpg) |
+| [ZNCLDJ12LM](../devices/ZNCLDJ12LM.md) | Xiaomi Aqara B1 curtain motor  (open, close, stop, position) | ![../images/devices/ZNCLDJ12LM.jpg](../images/devices/ZNCLDJ12LM.jpg) |
+| [LLKZMK11LM](../devices/LLKZMK11LM.md) | Xiaomi Aqara wireless relay controller (on/off, power measurement) | ![../images/devices/LLKZMK11LM.jpg](../images/devices/LLKZMK11LM.jpg) |
+| [ZNMS12LM](../devices/ZNMS12LM.md) | Xiaomi Aqara S2 Lock (report: open, close, operation) | ![../images/devices/ZNMS12LM.jpg](../images/devices/ZNMS12LM.jpg) |
+| [ZNMS13LM](../devices/ZNMS13LM.md) | Xiaomi Aqara S2 Lock Pro (report: open, close, operation) | ![../images/devices/ZNMS13LM.jpg](../images/devices/ZNMS13LM.jpg) |
+| [TS0201](../devices/TS0201.md) | Xiaomi Aqara temperature & humidity sensor with display (temperature and humidity) | ![../images/devices/TS0201.jpg](../images/devices/TS0201.jpg) |
 
 ### Yale
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [YRD426NRSC](../devices/YRD426NRSC.html) | Yale Assure lock (lock/unlock, battery) | ![../images/devices/YRD426NRSC.jpg](../images/devices/YRD426NRSC.jpg) |
-| [YRD226HA2619](../devices/YRD226HA2619.html) | Yale Assure lock (lock/unlock, battery) | ![../images/devices/YRD226HA2619.jpg](../images/devices/YRD226HA2619.jpg) |
-| [YRD256HA20BP](../devices/YRD256HA20BP.html) | Yale Assure lock SL (lock/unlock, battery) | ![../images/devices/YRD256HA20BP.jpg](../images/devices/YRD256HA20BP.jpg) |
-| [YMF40](../devices/YMF40.html) | Yale Real living lock (lock/unlock, battery) | ![../images/devices/YMF40.jpg](../images/devices/YMF40.jpg) |
-| [YRD210-HA-605](../devices/YRD210-HA-605.html) | Yale Real living keyless push button deadbolt lock (lock/unlock, battery) | ![../images/devices/YRD210-HA-605.jpg](../images/devices/YRD210-HA-605.jpg) |
-| [YRD226/246 TSDB](../devices/YRD226_246_TSDB.html) | Yale Assure lock (lock/unlock, battery) | ![../images/devices/YRD226-246-TSDB.jpg](../images/devices/YRD226-246-TSDB.jpg) |
+| [YRD426NRSC](../devices/YRD426NRSC.md) | Yale Assure lock (lock/unlock, battery) | ![../images/devices/YRD426NRSC.jpg](../images/devices/YRD426NRSC.jpg) |
+| [YRD226HA2619](../devices/YRD226HA2619.md) | Yale Assure lock (lock/unlock, battery) | ![../images/devices/YRD226HA2619.jpg](../images/devices/YRD226HA2619.jpg) |
+| [YRD256HA20BP](../devices/YRD256HA20BP.md) | Yale Assure lock SL (lock/unlock, battery) | ![../images/devices/YRD256HA20BP.jpg](../images/devices/YRD256HA20BP.jpg) |
+| [YMF40](../devices/YMF40.md) | Yale Real living lock (lock/unlock, battery) | ![../images/devices/YMF40.jpg](../images/devices/YMF40.jpg) |
+| [YRD210-HA-605](../devices/YRD210-HA-605.md) | Yale Real living keyless push button deadbolt lock (lock/unlock, battery) | ![../images/devices/YRD210-HA-605.jpg](../images/devices/YRD210-HA-605.jpg) |
+| [YRD226/246 TSDB](../devices/YRD226_246_TSDB.md) | Yale Assure lock (lock/unlock, battery) | ![../images/devices/YRD226-246-TSDB.jpg](../images/devices/YRD226-246-TSDB.jpg) |
 
 ### Zemismart
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [ZM-CSW002-D](../devices/ZM-CSW002-D.html) | Zemismart 2 gang switch (on/off) | ![../images/devices/ZM-CSW002-D.jpg](../images/devices/ZM-CSW002-D.jpg) |
-| [LXZB-12A](../devices/LXZB-12A.html) | Zemismart RGB LED downlight (on/off, brightness, color temperature, color xy) | ![../images/devices/LXZB-12A.jpg](../images/devices/LXZB-12A.jpg) |
-| [ZM-CSW032-D](../devices/ZM-CSW032-D.html) | Zemismart Curtain/roller blind switch (open, close, stop) | ![../images/devices/ZM-CSW032-D.jpg](../images/devices/ZM-CSW032-D.jpg) |
+| [ZM-CSW002-D](../devices/ZM-CSW002-D.md) | Zemismart 2 gang switch (on/off) | ![../images/devices/ZM-CSW002-D.jpg](../images/devices/ZM-CSW002-D.jpg) |
+| [LXZB-12A](../devices/LXZB-12A.md) | Zemismart RGB LED downlight (on/off, brightness, color temperature, color xy) | ![../images/devices/LXZB-12A.jpg](../images/devices/LXZB-12A.jpg) |
+| [ZM-CSW032-D](../devices/ZM-CSW032-D.md) | Zemismart Curtain/roller blind switch (open, close, stop) | ![../images/devices/ZM-CSW032-D.jpg](../images/devices/ZM-CSW032-D.jpg) |
 
 ### Zen
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [Zen-01-W](../devices/Zen-01-W.html) | Zen Thermostat (temperature, heating/cooling system control) | ![../images/devices/Zen-01-W.jpg](../images/devices/Zen-01-W.jpg) |
+| [Zen-01-W](../devices/Zen-01-W.md) | Zen Thermostat (temperature, heating/cooling system control) | ![../images/devices/Zen-01-W.jpg](../images/devices/Zen-01-W.jpg) |
 
 ### eCozy
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [1TST-EU](../devices/1TST-EU.html) | eCozy Smart heating thermostat (temperature, occupancy, un-/occupied heating, schedule) | ![../images/devices/1TST-EU.jpg](../images/devices/1TST-EU.jpg) |
+| [1TST-EU](../devices/1TST-EU.md) | eCozy Smart heating thermostat (temperature, occupancy, un-/occupied heating, schedule) | ![../images/devices/1TST-EU.jpg](../images/devices/1TST-EU.jpg) |
 
 ### iCasa
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [ICZB-IW11D](../devices/ICZB-IW11D.html) | iCasa Zigbee 3.0 Dimmer (on/off, brightness) | ![../images/devices/ICZB-IW11D.jpg](../images/devices/ICZB-IW11D.jpg) |
-| [ICZB-IW11SW](../devices/ICZB-IW11SW.html) | iCasa Zigbee 3.0 Switch (on/off) | ![../images/devices/ICZB-IW11SW.jpg](../images/devices/ICZB-IW11SW.jpg) |
-| [ICZB-KPD18S](../devices/ICZB-KPD18S.html) | iCasa Zigbee 3.0 Keypad Pulse 8S (click) | ![../images/devices/ICZB-KPD18S.jpg](../images/devices/ICZB-KPD18S.jpg) |
+| [ICZB-IW11D](../devices/ICZB-IW11D.md) | iCasa Zigbee 3.0 Dimmer (on/off, brightness) | ![../images/devices/ICZB-IW11D.jpg](../images/devices/ICZB-IW11D.jpg) |
+| [ICZB-IW11SW](../devices/ICZB-IW11SW.md) | iCasa Zigbee 3.0 Switch (on/off) | ![../images/devices/ICZB-IW11SW.jpg](../images/devices/ICZB-IW11SW.jpg) |
+| [ICZB-KPD18S](../devices/ICZB-KPD18S.md) | iCasa Zigbee 3.0 Keypad Pulse 8S (click) | ![../images/devices/ICZB-KPD18S.jpg](../images/devices/ICZB-KPD18S.jpg) |
 
 ### iHORN
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [LH-32ZB](../devices/LH-32ZB.html) | iHORN Temperature & humidity sensor (temperature and humidity) | ![../images/devices/LH-32ZB.jpg](../images/devices/LH-32ZB.jpg) |
+| [LH-32ZB](../devices/LH-32ZB.md) | iHORN Temperature & humidity sensor (temperature and humidity) | ![../images/devices/LH-32ZB.jpg](../images/devices/LH-32ZB.jpg) |
 
 ### ilux
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [900008-WW](../devices/900008-WW.html) | ilux Dimmable A60 E27 LED Bulb (on/off, brightness) | ![../images/devices/900008-WW.jpg](../images/devices/900008-WW.jpg) |
+| [900008-WW](../devices/900008-WW.md) | ilux Dimmable A60 E27 LED Bulb (on/off, brightness) | ![../images/devices/900008-WW.jpg](../images/devices/900008-WW.jpg) |
 
 
