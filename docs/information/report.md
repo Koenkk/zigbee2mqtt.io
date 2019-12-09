@@ -16,3 +16,16 @@ Zigbee2mqtt will discover devices which are eligible for reporting. The zigbee2m
 
 ## Note for CC2530/CC2531 users
 As this feature increases the amount of messages on the Zigbee network, it could cause stability issues when you are using a CC2531 or CC2530 as adapter.
+
+## Support
+In order for this feature to work, the device has to support it. As devices from the same manufacturer (mostly) have the same features the table below might help to find out if your device supports it.
+
+| Brand           | On/Off    | Brightness | Color | Color temperature |
+| :---            | :---:     | :---:      | :---: | :---:             |
+| Philips Hue     | Y         | N(1)       | N     | N                 |
+| Trådfri(2)      | Y         | Y          | Y     | N                 |
+| Innr            | Y         | Y          | Y     | Y                 |
+| GLEDOPTO        | N         | N          | N     | N                 |
+
+1. Zigbee2mqtt will manual poll for change if a binding updates the bulb.
+2. The color/brightness of a Trådfri bulb can be changed while the state=off, it also reports back the change.
