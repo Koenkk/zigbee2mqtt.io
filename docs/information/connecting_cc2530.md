@@ -186,7 +186,7 @@ Restart=always
 RestartSec=10
 
 [Install]
-WantedBy=multi-user.targett
+WantedBy=multi-user.target
 ```
 Save the file and exit.
 
