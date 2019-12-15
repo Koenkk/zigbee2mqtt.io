@@ -52,6 +52,7 @@ climate:
     temperature_state_topic: true
     temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
     temperature_command_topic: "occupied_heating_setpoint"
+    temp_step: 1
 
 sensor:
   - platform: "mqtt"

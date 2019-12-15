@@ -1,19 +1,19 @@
 ---
-title: "ITEAD BASICZBR3 control via MQTT"
-description: "Integrate your ITEAD BASICZBR3 via Zigbee2mqtt with whatever smart home
+title: "SONOFF BASICZBR3 control via MQTT"
+description: "Integrate your SONOFF BASICZBR3 via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/BASICZBR3.md)*
 
-# ITEAD BASICZBR3
+# SONOFF BASICZBR3
 
 | Model | BASICZBR3  |
-| Vendor  | ITEAD  |
-| Description | SONOFF ZigBee DIY Smart Switch |
+| Vendor  | SONOFF  |
+| Description | Zigbee smart switch |
 | Supports | on/off |
-| Picture | ![ITEAD BASICZBR3](../images/devices/BASICZBR3.jpg) |
+| Picture | ![SONOFF BASICZBR3](../images/devices/BASICZBR3.jpg) |
 
 ## Notes
 

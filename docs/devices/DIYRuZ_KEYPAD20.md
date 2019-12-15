@@ -1,19 +1,19 @@
 ---
-title: "Custom devices (DiY) DIYRuZ_KEYPAD20 control via MQTT"
-description: "Integrate your Custom devices (DiY) DIYRuZ_KEYPAD20 via Zigbee2mqtt with whatever smart home
+title: "DIYRuZ DIYRuZ_KEYPAD20 control via MQTT"
+description: "Integrate your DIYRuZ DIYRuZ_KEYPAD20 via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DIYRuZ_KEYPAD20.md)*
 
-# Custom devices (DiY) DIYRuZ_KEYPAD20
+# DIYRuZ DIYRuZ_KEYPAD20
 
 | Model | DIYRuZ_KEYPAD20  |
-| Vendor  | Custom devices (DiY)  |
+| Vendor  | DIYRuZ  |
 | Description | [DiY 20 button keypad](http://modkam.ru/?p=1114) |
 | Supports | click |
-| Picture | ![Custom devices (DiY) DIYRuZ_KEYPAD20](../images/devices/DIYRuZ_KEYPAD20.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_KEYPAD20](../images/devices/DIYRuZ_KEYPAD20.jpg) |
 
 ## Notes
 

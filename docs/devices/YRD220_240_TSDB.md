@@ -1,19 +1,19 @@
 ---
-title: "Nue / 3A HGZB-42-UK / HGZB-41 control via MQTT"
-description: "Integrate your Nue / 3A HGZB-42-UK / HGZB-41 via Zigbee2mqtt with whatever smart home
+title: "Yale YRD220/240 TSDB control via MQTT"
+description: "Integrate your Yale YRD220/240 TSDB via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-42-UK / HGZB-41.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YRD220/240 TSDB.md)*
 
-# Nue / 3A HGZB-42-UK / HGZB-41
+# Yale YRD220/240 TSDB
 
-| Model | HGZB-42-UK / HGZB-41  |
-| Vendor  | Nue / 3A  |
-| Description | Smart switch 1 or 2 gang |
-| Supports | on/off |
-| Picture | ![Nue / 3A HGZB-42-UK / HGZB-41](../images/devices/HGZB-42-UK---HGZB-41.jpg) |
+| Model | YRD220/240 TSDB  |
+| Vendor  | Yale  |
+| Description | Lockwood keyless push button deadbolt lock |
+| Supports | lock/unlock, battery |
+| Picture | ![Yale YRD220/240 TSDB](../images/devices/YRD220-240-TSDB.jpg) |
 
 ## Notes
 
@@ -26,14 +26,20 @@ manual integration is possbile with the following configuration:
 
 {% raw %}
 ```yaml
-switch:
+lock:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    payload_off: "OFF"
-    payload_on: "ON"
-    value_template: "{{ value_json.state }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    value_template: "{{ value_json.state }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    device_class: "battery"
+    value_template: "{{ value_json.battery }}"
 
 sensor:
   - platform: "mqtt"

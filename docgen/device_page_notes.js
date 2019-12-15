@@ -157,10 +157,10 @@ Factory reset the plug (hold the switch button for >10sec). After resetting the 
 `,
     },
     {
-        model: 'AC0251100NJ',
+        model: 'AC0251100NJ/AC0251700NJ',
         note: `
 ### Pairing
-For the OSRAM Smart+ Switch Mini (AC0251100NJ) hold the Middle and Arrow Down Buttons for 10 Seconds
+For the OSRAM Smart+ Switch Mini (AC0251100NJ/AC0251700NJ) hold the Middle and Arrow Down Buttons for 10 Seconds
 to Reset the Device. Hold the Middle and Arrow Up Buttons for 3 Seconds to connect.
 If the Switch is connected hold Middle and Arrow Up Buttons for 3 Seconds to disconnect.
 `,
@@ -1199,7 +1199,7 @@ tz.thermostat_relay_status_log_rsp
 `,
     },
     {
-        model: 'HS1SA',
+        model: 'HS1SA-M',
         note: `
 ### Important
 There are 3 versions of this device: Standalone, Zigbee and Z-wave. These are visualy identical. Make sure to get the correct version that will work with zigbee2mqtt:

@@ -1,19 +1,19 @@
 ---
-title: "Lingan DZ4743-00B control via MQTT"
-description: "Integrate your Lingan DZ4743-00B via Zigbee2mqtt with whatever smart home
+title: "TUYATEC GDKES-01TZXD control via MQTT"
+description: "Integrate your TUYATEC GDKES-01TZXD via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DZ4743-00B.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GDKES-01TZXD.md)*
 
-# Lingan DZ4743-00B
+# TUYATEC GDKES-01TZXD
 
-| Model | DZ4743-00B  |
-| Vendor  | Lingan  |
-| Description | Zigbee OnOff controller |
+| Model | GDKES-01TZXD  |
+| Vendor  | TUYATEC  |
+| Description | Smart light switch - 1 gang without neutral wire |
 | Supports | on/off |
-| Picture | ![Lingan DZ4743-00B](../images/devices/DZ4743-00B.jpg) |
+| Picture | ![TUYATEC GDKES-01TZXD](../images/devices/GDKES-01TZXD.jpg) |
 
 ## Notes
 

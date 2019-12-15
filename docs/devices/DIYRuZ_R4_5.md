@@ -1,19 +1,19 @@
 ---
-title: "Custom devices (DiY) DIYRuZ_R4_5 control via MQTT"
-description: "Integrate your Custom devices (DiY) DIYRuZ_R4_5 via Zigbee2mqtt with whatever smart home
+title: "DIYRuZ DIYRuZ_R4_5 control via MQTT"
+description: "Integrate your DIYRuZ DIYRuZ_R4_5 via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DIYRuZ_R4_5.md)*
 
-# Custom devices (DiY) DIYRuZ_R4_5
+# DIYRuZ DIYRuZ_R4_5
 
 | Model | DIYRuZ_R4_5  |
-| Vendor  | Custom devices (DiY)  |
+| Vendor  | DIYRuZ  |
 | Description | [DiY 4 Relays + 4 switches + 1 buzzer](http://modkam.ru/?p=1054) |
 | Supports | on/off |
-| Picture | ![Custom devices (DiY) DIYRuZ_R4_5](../images/devices/DIYRuZ_R4_5.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_R4_5](../images/devices/DIYRuZ_R4_5.jpg) |
 
 ## Notes
 

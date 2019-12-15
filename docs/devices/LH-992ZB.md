@@ -1,35 +1,23 @@
 ---
-title: "HEIMAN HS1SA control via MQTT"
-description: "Integrate your HEIMAN HS1SA via Zigbee2mqtt with whatever smart home
+title: "iHORN LH-992ZB control via MQTT"
+description: "Integrate your iHORN LH-992ZB via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1SA.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LH-992ZB.md)*
 
-# HEIMAN HS1SA
+# iHORN LH-992ZB
 
-| Model | HS1SA  |
-| Vendor  | HEIMAN  |
-| Description | Smoke detector |
-| Supports | smoke |
-| Picture | ![HEIMAN HS1SA](../images/devices/HS1SA.jpg) |
+| Model | LH-992ZB  |
+| Vendor  | iHORN  |
+| Description | Motion sensor |
+| Supports | occupancy |
+| Picture | ![iHORN LH-992ZB](../images/devices/LH-992ZB.jpg) |
 
 ## Notes
 
-
-### Important
-There are 3 versions of this device: Standalone, Zigbee and Z-wave. These are visualy identical. Make sure to get the correct version that will work with zigbee2mqtt:
-
-Supported:
-- **HS1SA-M : Zigbee**
-
-Unsupported:
-- HS1SA : Standalone
-- HS1SA-Z : Z-wave
-
-The product code should end in *-M* for the Zigbee version. The label inside the battery compartment should also show the Zigbee logo.
-
+None
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -44,8 +32,8 @@ binary_sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_on: true
     payload_off: false
-    value_template: "{{ value_json.smoke }}"
-    device_class: "smoke"
+    value_template: "{{ value_json.occupancy }}"
+    device_class: "motion"
 
 binary_sensor:
   - platform: "mqtt"
