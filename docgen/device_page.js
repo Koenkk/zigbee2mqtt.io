@@ -135,6 +135,20 @@ function getHomeassistantConfigForConfiguration(device) {
 
     delete payload.command_topic_prefix;
 
+    if (!payload.state_topic) {
+        delete payload.state_topic;
+    }
+
+    if (payload.position_topic) {
+        payload.position_topic = 'zigbee2mqtt/<FRIENDLY_NAME>';
+    }
+
+    if (payload.set_position_topic) {
+        payload.set_position_topic = 'zigbee2mqtt/<FRIENDLY_NAME>/set';
+    }
+
+    console.log(payload.state_topic)
+
     let yml = YAML.stringify([payload]);
     yml = yml.replace(/(-) \n {4}/g, '- ');
     yml = yml.replace('---', `${device.type}:`);
