@@ -206,6 +206,26 @@ Show status
 systemctl status socat-vusb.service
 ```
 
+In case you run Zigbee2mqtt as daemon, replace the contents of `sudo nano /etc/systemd/system/zigbee2mqtt.service` with below:
+
+```
+[Unit]
+Description=zigbee2mqtt
+Wants=socat-vusb.service
+After=network.target socat-vusb.service
+
+[Service]
+ExecStart=/usr/bin/npm start
+WorkingDirectory=/opt/zigbee2mqtt
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+```
+
 ### Restart and check Log
 ```bash
 sudo systemctl restart socat-vusb.service && sudo journalctl -f -u socat-vusb.service
