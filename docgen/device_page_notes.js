@@ -1,5 +1,42 @@
 const notes = [
     {
+        model: 'E1926',
+        note: `
+### Pairing
+Short press both buttons on the blind (next to battery lid) for 5 seconds, until a white light between both buttons is turned on.
+The device is now awake and ready to pair for 2 minutes.
+
+Keep the CC2531 USB sniffer very close to the blind battery lid, until the white light is turned off (this should mean the pairing is successful).
+`,
+    },
+    {
+        model: 'E1766',
+        note: `
+### Pairing
+Open the back cover of the remote and find the pairing button.
+Reset the remote with 4 short pushes on the pairing button on the back (within 5 seconds) and a red light will shine steadily on the remote.
+
+Now keep the CC2531 USB sniffer very close to the remote for pairing (red light will stop shinning when done).
+`,
+    },
+    {
+        model: 'E1757',
+        note: `
+### Pairing
+Short press both buttons on the blind (next to battery lid) for 5 seconds, until a white light between both buttons is turned on.
+The device is now awake and ready to pair for 2 minutes.
+
+Keep the CC2531 USB sniffer very close to the blind battery lid, until the white light is turned off (this should mean the pairing is successful).
+`,
+    },
+    {
+        model: 'BASICZBR3',
+        note: `
+### Pairing
+If brand new, when powered on it will attempt to pair to Zigbee2mqtt automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the (relay) button on the top for about 5 seconds until the relay cliks and the red LED flashes several times. The device will then go into pairing mode and the blue LED will begin to flash. When connected, the blue LED will turn on solid. It should then be connected to Zigbee2mqtt. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
+`,
+    },
+    {
         model: 'ZNLDP12LM',
         note: `
 ### Pairing
@@ -294,6 +331,9 @@ Use the Hue dimmer switch to factory reset a Hue light bulb see
 After resetting the bulb will automatically connect.
 This method also works for Philips Hue Lightstrips.
 Hue dimmer switch can also be used to factory reset Ikea Trådfri light bulbs using the same method described above.
+
+### Binding
+If you want to bind the dimmer to a (Hue) lamp you'll have to *[bind it to the lamp through MQTT](../information/binding.html)* and unbind it from the coordinator. Use the dimmer as source and coordinator as target for that.
 `,
     },
     {
@@ -755,19 +795,17 @@ Where:
 ### Decoupled mode
 Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
 This might be useful to assign some custom actions to buttons and control relay remotely.
-This command also allows to redefine which button controls which relay for double switch.
+This command also allows to redefine which button controls which relay for the double switch.
 
-Special topics should be used:
-
-\`zigbee2mqtt/[FRIENDLY_NAME]/system/set\` to modify operation mode.
+Special topics should be used: \`zigbee2mqtt/[FRIENDLY_NAME]/set\` to modify operation mode.
 
 Payload:
 \`\`\`js
 {
-    "operation_mode": {
+  "operation_mode": {
     "button": "single"|"left"|"right",
     "state": "VALUE"
-    }
+  }
 }
 \`\`\`
 
@@ -778,14 +816,14 @@ Values                | Description
 \`control_right_relay\` | Button directly controls right relay (for double switch)
 \`decoupled\`           | Button doesn't control any relay
 
-\`zigbee2mqtt/[FRIENDLY_NAME]/system/get\` to read current mode.
+\`zigbee2mqtt/[FRIENDLY_NAME]/get\` to read current mode.
 
 Payload:
 \`\`\`js
 {
-    "operation_mode": {
+  "operation_mode": {
     "button": "single"|"left"|"right"
-    }
+  }
 }
 \`\`\`
 
@@ -1158,6 +1196,22 @@ tz.thermostat_relay_status_log
 Get relay status log response
 tz.thermostat_relay_status_log_rsp
 -->
+`,
+    },
+    {
+        model: 'HS1SA',
+        note: `
+### Important
+There are 3 versions of this device: Standalone, Zigbee and Z-wave. These are visualy identical. Make sure to get the correct version that will work with zigbee2mqtt:
+
+Supported:
+- **HS1SA-M : Zigbee**
+
+Unsupported:
+- HS1SA : Standalone
+- HS1SA-Z : Z-wave
+
+The product code should end in *-M* for the Zigbee version. The label inside the battery compartment should also show the Zigbee logo.
 `,
     },
 ];
