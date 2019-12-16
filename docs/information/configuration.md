@@ -236,4 +236,5 @@ devices:
     no_occupancy_since: [10, 600]
 ```
 
-
+## Different location
+To specify a different location for the `configuration.yaml` (by default inside the `data` directory), set the `ZIGBEE2MQTT_CONFIG`.
