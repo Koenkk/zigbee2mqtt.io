@@ -38,9 +38,16 @@ The next step is the to add an entry of your device to `node_modules/zigbee-herd
 },
 ```
 
+Now set the Zigbee2mqtt `log_level` to `debug` by adding the following to your Zigbee2mqtt `configuration.yaml`.
+
+```yaml
+advanced:
+  log_level: debug
+```
+
 Once finished, restart Zigbee2mqtt and trigger some actions on the device. You will see messages like:
 ```
-zigbee2mqtt:warn  2019-11-09T12:24:22: No converter available for 'WSDCGQ01LM' with cluster 'msTemperatureMeasurement' and type 'attributeReport' and data '{"measuredValue":2512}'
+zigbee2mqtt:debug  2019-11-09T12:24:22: No converter available for 'WSDCGQ01LM' with cluster 'msTemperatureMeasurement' and type 'attributeReport' and data '{"measuredValue":2512}'
 ```
 
 In case your device is not reporting anything, it could be that this device requires additional configuration. This can be done by adding a `configure:` section ([examples here](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices.js)). It can help to look at similar devices.
@@ -52,7 +59,7 @@ Before adding new converters, please check if you can reuse any existing one.
 
 For E.G. the following message
 ```
-zigbee2mqtt:warn  2019-11-09T12:24:22: No converter available for 'WSDCGQ01LM' with cluster 'msTemperatureMeasurement' and type 'attributeReport' and data '{"measuredValue":2512}'
+zigbee2mqtt:debug  2019-11-09T12:24:22: No converter available for 'WSDCGQ01LM' with cluster 'msTemperatureMeasurement' and type 'attributeReport' and data '{"measuredValue":2512}'
 ```
 
 You would add to `node_modules/zigbee-herdsman-converters/converters/fromZigbee.js`:
