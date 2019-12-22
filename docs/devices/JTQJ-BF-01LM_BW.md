@@ -37,7 +37,7 @@ If the selftest is executed succesfully you will hear the device beep in 30 seco
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
-manual integration is possbile with the following configuration:
+manual integration is possible with the following configuration:
 
 
 {% raw %}
