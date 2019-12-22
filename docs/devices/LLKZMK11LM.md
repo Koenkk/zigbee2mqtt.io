@@ -24,7 +24,7 @@ This option allows to inter connect the relays which will make sure that only on
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
-manual integration is possbile with the following configuration:
+manual integration is possible with the following configuration:
 
 
 {% raw %}

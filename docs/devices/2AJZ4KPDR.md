@@ -24,7 +24,7 @@ Konke devices only work on Zigbee channel 15, 20 and 25.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
-manual integration is possbile with the following configuration:
+manual integration is possible with the following configuration:
 
 
 {% raw %}

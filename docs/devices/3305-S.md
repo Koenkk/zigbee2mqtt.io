@@ -30,7 +30,7 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
-manual integration is possbile with the following configuration:
+manual integration is possible with the following configuration:
 
 
 {% raw %}
