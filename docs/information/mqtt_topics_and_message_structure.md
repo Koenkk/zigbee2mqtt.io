@@ -135,7 +135,7 @@ See [Binding](binding.md)
 Returns the list of groups a device is in, and its group capacity.
 
 ## zigbee2mqtt/bridge/configure
-Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected. Payload should be friendly name of the device, e.g. `my_remote`.
+Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected, also not all devices require this. Payload should be friendly name of the device, e.g. `my_remote`.
 
 ## zigbee2mqtt/[FRIENDLY_NAME]
 Where `[FRIENDLY_NAME]` is E.G. `0x00158d0001b79111`. Message published to this topic are **always** in a JSON format. Each device produces a different JSON message, **some** examples:
