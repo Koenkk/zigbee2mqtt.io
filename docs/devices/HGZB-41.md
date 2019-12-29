@@ -17,7 +17,7 @@ description: "Integrate your Nue / 3A HGZB-41 via Zigbee2mqtt with whatever smar
 
 ## Notes
 
-None
+Reset of network is done by holding button for 20 secs until it starts to flash green.  Will now be able to re-pair with co-ordinator
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
