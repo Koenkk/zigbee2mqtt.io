@@ -19,6 +19,8 @@ description: "Integrate your Leviton Lumina RF 15A in-wall Switch via Zigbee2mqt
 
 To pair this device, hold the ON for few seconds until the red light is blinking. After that, simple tap once on the ON again to start the pairing process.
 
+Note: This device doesn't support Zigbee channels 25 & 26.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possbile with the following configuration:
