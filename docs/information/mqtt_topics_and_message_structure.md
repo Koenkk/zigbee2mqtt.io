@@ -16,15 +16,23 @@ zigbee2mqtt publishes it configuration to this topic containing the `log_level` 
 zigbee2mqtt will output log to this endpoint. Message are always in the form of `{"type":"TYPE","message":"MESSAGE"}`. Possible message types are:
 * `"pairing"`: logged when device is connecting to the network.
 * `"device_connected"`: sent when a new device connects to the network.
+* `"device_ban"`: sent when a device is banned from the network.
+* `"device_ban_failed"`: sent when request to ban a device failed.
 * `"device_removed"`: sent when a device is removed from the network.
+* `"device_removed_failed"`: sent when request to remove a device failed.
+* `"device_force_removed"`: sent when a device is removed from the network using the _forced_ mode.
+* `"device_force_removed_failed"`: sent when request to remove a device failed using the _forced_ mode.
 * `"device_banned"`: sent when a device is banned from the network.
 * `"device_whitelisted"`: sent when a device is whitelisted from the network.
 * `"device_renamed"`: sent when a device is renamed.
 * `"device_bind"`: sent when a device is bound.
 * `"device_unbind"`: sent when a device is unbound.
 * `"device_group_add"`: sent when a device is added to a group.
+* `"device_group_add_failed"`: sent when a request to add a device to a group failed.
 * `"device_group_remove"`: sent when a device is removed from a group.
+* `"device_group_remove_failed"`: sent when a request to removed from a group failed.
 * `"device_group_remove_all"`: sent when a device is removed from all groups.
+* `"device_group_remove_all_failed"`: sent when a request to remove a device from all groups failed.
 * `"devices"`: a list of all devices, this message can be triggered by sending a message to `zigbee2mqtt/bridge/config/devices` (payload doesn't matter).
 * `"groups"`: a list of all groups, this message can be triggered by sending a message to `zigbee2mqtt/bridge/config/groups` (payload doesn't matter).
 * `"zigbee_publish_error"`: logged when a Zigbee publish errors occurs, contains the error and metadata containing the device and command.
