@@ -17,9 +17,7 @@ description: "Integrate your Xiaomi ZNCLDJ11LM via Zigbee2mqtt with whatever sma
 
 ## Notes
 
-None
-
-## Configuration of device attributes
+### Configuration of device attributes
 By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can be configured:
 ```json
 {
