@@ -13,7 +13,7 @@ A use case for this is e.g. the TRADFRI wireless dimmer. Binding the dimmer dire
 ## Commands
 Binding can be configured using the following topics:
 
-- `zigbee2mqtt/bridge/bind/[SOURCE_DEVICE_FRIENDLY_NAME]` with payload `TARGET_DEVICE_FRIENDLY_NAME` will bind the source device to the target device. In the above example, the TRADFRI wireless dimmer would be the source device and the bulb the target device.
+- `zigbee2mqtt/bridge/bind/[SOURCE_DEVICE_FRIENDLY_NAME]` with payload `TARGET_DEVICE_FRIENDLY_NAME` will bind the source device to the target device or target group. In the above example, the TRADFRI wireless dimmer would be the source device and the bulb the target device. When using a group as target, using the group's friendly name is mandatory, group ID will not work.
 - `zigbee2mqtt/bridge/unbind/[SOURCE_DEVICE_FRIENDLY_NAME]` with payload `TARGET_DEVICE_FRIENDLY_NAME` will unbind the devices.
 
 ### Binding specific endpoint
