@@ -17,7 +17,19 @@ description: "Integrate your Xiaomi WXCJKG11LM via Zigbee2mqtt with whatever sma
 
 ## Notes
 
-None
+### Binding 
+By default the switch is bound with the Coordinator and command all the lights of the network.
+You probably want to unbind it from the coordinator first.
+You can then bind it directly to any light or group. (see https://www.zigbee2mqtt.io/information/binding.html )
+Press the reset button once after sending the bind/unbind mqtt message.
+
+When bound to a lamp, the behavior is as follows:
+left click: turn off
+right click: turn on
+left double click: light dim down (by 33% step)
+right double click: light dim up (by 33% step)
+long left click: warm white
+long right click: cold white
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
