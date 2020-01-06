@@ -644,10 +644,11 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [50043](../devices/50043.md) | Paulmann SmartHome Zigbee Cephei Switch Controller (on/off) | ![../images/devices/50043.jpg](../images/devices/50043.jpg) |
-| [50045](../devices/50045.md) | Paulmann SmartHome Zigbee LED-stripe (on/off, brightness) | ![../images/devices/50045.jpg](../images/devices/50045.jpg) |
-| [50049](../devices/50049.md) | Paulmann SmartHome Yourled RGB Controller (on/off, brightness, color temperature, color xy) | ![../images/devices/50049.jpg](../images/devices/50049.jpg) |
-| [50064](../devices/50064.md) | Paulmann SmartHome led spot (on/off, brightness, color temperature) | ![../images/devices/50064.jpg](../images/devices/50064.jpg) |
+| [500.43](../devices/50043.md) | Paulmann SmartHome Zigbee Cephei Switch Controller (on/off) | ![../images/devices/50043.jpg](../images/devices/50043.jpg) |
+| [500.44](../devices/50044.md) | Paulmann SmartHome Zigbee Dimmer (on/off, brightness) | ![../images/devices/50044.jpg](../images/devices/50044.jpg) |
+| [500.45](../devices/50045.md) | Paulmann SmartHome Zigbee LED-stripe (on/off, brightness) | ![../images/devices/50045.jpg](../images/devices/50045.jpg) |
+| [500.49](../devices/50049.md) | Paulmann SmartHome Yourled RGB Controller (on/off, brightness, color temperature, color xy) | ![../images/devices/50049.jpg](../images/devices/50049.jpg) |
+| [500.64](../devices/50064.md) | Paulmann SmartHome led spot (on/off, brightness, color temperature) | ![../images/devices/50064.jpg](../images/devices/50064.jpg) |
 
 ### Philips
 
