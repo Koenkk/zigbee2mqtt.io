@@ -90,10 +90,10 @@ advanced:
   availability_timeout: 0
   # Optional: Blacklist devices from being checked for availability (default: empty)
   availability_blacklist:
-    - DEVICE_FRIENDLY_NAME
+    - DEVICE_FRIENDLY_NAME or DEVICE_IEEE_ADDRESS
   # Optional: Whitelist of devices being checked for availability (default: empty)
   availability_whitelist:
-    - DEVICE_FRIENDLY_NAME
+    - DEVICE_FRIENDLY_NAME or DEVICE_IEEE_ADDRESS
   # Optional: Enables report feature (see information -> report for more details) (default: false)
   report: true
   # Optional: Home Assistant discovery topic (default: shown below)
