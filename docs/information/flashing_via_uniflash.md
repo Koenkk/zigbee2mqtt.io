@@ -12,3 +12,5 @@ UNIFLASH can be used to flash certain Texas Instruments MCUs (e.g. CC26X2R1 and 
 6. Now click *Load image* to upload the firmware
 ![Load](../images/uniflash/load.png)
 7. Done!
+
+*Note:* When migrating from another dongle (e.g. CC2531), make sure to modify your pan_id in your [configuration](configuration.md).
