@@ -190,14 +190,19 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
   "color": {
     // XY color
     "x": 0.123,
-    "y": 0.123,
+    "y": 0.123
 
     // OR
 
     // RGB color
     "r": 46,
     "g": 102,
-    "b": 193,
+    "b": 193
+    
+    // OR
+
+    // RGB color
+    "rgb": "46,102,193"
 
     // OR
 
@@ -209,6 +214,42 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
     // Hue and/or saturation color
     "hue": 360,
     "saturation": 100
+
+    // OR
+
+    // Hue, saturation, brightness (in HSB space)
+    "h": 360,
+    "s": 100,
+    "b": 100
+
+    // OR
+
+    // Hue, saturation, brightness (in HSB space)
+    "hsb": "360,100,100"
+    
+    // OR
+
+    // Hue, saturation, brightness (in HSV space)
+    "h": 360,
+    "s": 100,
+    "v": 100
+
+    // OR
+
+    // Hue, saturation, brightness (in HSV space)
+    "hsv": "360,100,100"
+
+    // OR
+
+    // Hue, saturation, lightness (in HSL space)
+    "h": 360,
+    "s": 100,
+    "l": 100
+    
+    // OR
+
+    // Hue, saturation, brightness (in HSL space)
+    "hsl": "360,100,100"
   },
 
   // Blinks the bulbs, possible values:
