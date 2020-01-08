@@ -12,7 +12,7 @@ In order to run zigbee2mqtt we need the following hardware:
 | PC or Raspberry Pi (*) to run bridge | - | ![Raspberry Pi](../images/pi.jpg) |
 | Optional: Male to female USB extension cable ([why?](../how_tos/how_to_improve_network_range.md)) | +-2$ | ![USB extension cable](../images/usb_extension_cable.jpg) |
 
-(*) NOTE: It is also possible to flash the CC2531 sniffer with a Raspberry Pi or an MCU like the Arduino or ESP8266 without a CC debugger. This however requires you to buy 4 female-female Dupont cables. You will also need to bend the debug pins on your CC2531 if you don't want to buy a downloader cable too.*
+(*) NOTE: It is also possible to flash the CC2531 sniffer with a Raspberry Pi or an MCU like the Arduino or ESP8266 without a CC debugger. This however requires you to buy 4 female-female Dupont cables. You will also need to bend the debug pins on your CC2531 if you don't want to buy a downloader cable too.
 
 
 # What's next?
