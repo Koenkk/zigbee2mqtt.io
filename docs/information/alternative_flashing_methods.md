@@ -4,7 +4,60 @@
 
 *NOTE: When you have already flashed the stick and paired devices to it, reflashing it requires to re-pair all your devices!*
 
-### Via Arduino Uno/ESP8266 with CCLoader
+### With Raspberry Pi (~3min)
+
+1. Install [wiringPi](http://wiringpi.com/download-and-install/), if not already installed.
+
+2. Install [flash_cc2531](https://github.com/jmichault/flash_cc2531) :
+```bash
+git clone https://github.com/jmichault/flash_cc2531.git
+```
+3. Connect the following pins of the debug port to the GPIO port :
+ * pin 1 (GND)	  -->	pin 39 (GND)
+ * pin 7 (reset)	-->	pin 35 (GPIO24, BCM19)
+ * pin 3 (DC)	  -->	pin 36 (GPIO27, BCM16)
+ * pin 4 (DD)	  -->	pin 38 (GPIO28, BCM20)
+ 
+ As with the arduino option above, connecting Target Voltage Sense to a 3.3v source eliminates the need to plug the device into a usb port, so optionally connect the following too:
+ * pin 2 (Target Voltage Sense) --> pin 1 or pin 17 (3.3v) on Raspi
+
+See above for the dispositions of pins on CC2531, and at [https://pinout.xyz/](https://pinout.xyz/) for pins on Raspberry.
+
+A downloader cable CC2531 ![](https://www.zigbee2mqtt.io/images/downloader_cable.png) and 4 Dupont line Female to Female are perfect for this purpose. If you don't want to buy a downloader cable, you need to bend the debug pins outwards to be able to connect your Dupont cables since the pins are too close together to connect the Dupont cables directly.
+
+Now insert the usb dongle in an USB port :
+
+![](https://github.com/jmichault/files/blob/master/Raspberry-CC2531.jpg)
+
+4. Test by running :
+
+```bash
+cd flash_cc2531
+./cc_chipid
+```
+it should return :
+```
+  ID = b524.
+```
+If you see 0000 or ffff, something is wrong and you should probably check your wiring.
+
+5. Download and extract the latest firmware [CC2531_DEFAULT_20190608.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip).
+
+```bash
+cd ~/flash_cc2531       #assumming you git-cloned the program to your home directory
+wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip
+unzip CC2531_DEFAULT_20190608.zip  
+```
+
+6. Erase and flash the CC2531 :
+
+```bash
+./cc_erase
+./cc_write CC2531ZNP-Prod.hex
+```
+It takes around 3 minutes.
+
+### Via Arduino Uno/ESP8266 with CCLoader (~3hrs)
 
 **This has been tested with a Genuine Arudino Uno, an Arduino Pro Micro - China clone, and a NodeMCU ESP8266 and is significantly faster than CCLib**
 
@@ -222,56 +275,3 @@ Flashing:
 
 Completed
 ```
-
-### With Raspberry
-
-1. Install [wiringPi](http://wiringpi.com/download-and-install/), if not already installed.
-
-2. Install [flash_cc2531](https://github.com/jmichault/flash_cc2531) :
-```bash
-git clone https://github.com/jmichault/flash_cc2531.git
-```
-3. Connect the following pins of the debug port to the GPIO port :
- * pin 1 (GND)	  -->	pin 39 (GND)
- * pin 7 (reset)	-->	pin 35 (GPIO24, BCM19)
- * pin 3 (DC)	  -->	pin 36 (GPIO27, BCM16)
- * pin 4 (DD)	  -->	pin 38 (GPIO28, BCM20)
- 
- As with the arduino option above, connecting Target Voltage Sense to a 3.3v source eliminates the need to plug the device into a usb port, so optionally connect the following too:
- * pin 2 (Target Voltage Sense) --> pin 1 or pin 17 (3.3v) on Raspi
-
-See above for the dispositions of pins on CC2531, and at [https://pinout.xyz/](https://pinout.xyz/) for pins on Raspberry.
-
-A downloader cable CC2531 ![](https://www.zigbee2mqtt.io/images/downloader_cable.png) and 4 Dupont line Female to Female are perfect for this purpose.
-
-Now insert the usb dongle in an USB port :
-
-![](https://github.com/jmichault/files/blob/master/Raspberry-CC2531.jpg)
-
-4. Test by running :
-
-```bash
-cd flash_cc2531
-./cc_chipid
-```
-it should return :
-```
-  ID = b524.
-```
-If you see 0000 or ffff, something is wrong and you should probably check your wiring.
-
-5. Download and extract the latest firmware [CC2531_DEFAULT_20190608.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip).
-
-```bash
-cd ~/flash_cc2531       #assumming you git-cloned the program to your home directory
-wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip
-unzip CC2531_DEFAULT_20190608.zip  
-```
-
-6. Erase and flash the CC2531 :
-
-```bash
-./cc_erase
-./cc_write CC2531ZNP-Prod.hex
-```
-It takes around 3 minutes.
