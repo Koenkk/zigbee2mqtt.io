@@ -65,7 +65,7 @@ When using the default Zigbee2mqtt CC2531 coordinator firmware + 2 CC2531 router
 - Router 2: 21
 - **Device limit of 55 devices**
 
-## Which port should I use for CC26X2R1, /dev/ttyACM0 or /dev/ttyACM1?
+## Which port should I use for CC26X2R1/CC1352P-2, /dev/ttyACM0 or /dev/ttyACM1?
 The CC26X2R1 has a build in debugger. This debugger also registers a port next to the device data port. Of course this is not necessarily number 0 and 1. But normally the lowest number is the device data port and the other the debugger.
 
 To find the correct port, execute:
