@@ -24,7 +24,7 @@ In order to exclude devices from this feature use `availability_blacklist`, exam
 ```yaml
 advanced:
   availability_timeout: 60
-  availability_blacklist: ['my_bulb'] # = list of friendly names
+  availability_blacklist: ['my_bulb','0x000b57fffec6a5b2'] # = list of friendly names or IEEE addresses
 ```
 
 In order to set availability check for certain devices only from this feature use `availability_whitelist`, example:
@@ -32,7 +32,7 @@ In order to set availability check for certain devices only from this feature us
 ```yaml
 advanced:
   availability_timeout: 60
-  availability_whitelist: ['my_bulb','my_other_bulb'] # = list of friendly names
+  availability_whitelist: ['my_bulb','my_other_bulb','0x000b57fffec6a5b2'] # = list of friendly names or IEEE addresses
 ```
 
 Note that not all devices can be pinged for availability (e.g. battery powered devices).
