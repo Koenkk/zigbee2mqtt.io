@@ -1,7 +1,7 @@
 ---
 ---
 # Binding
-*Ongoing discussion about this feature can be found here: https://github.com/Koenkk/zigbee2mqtt/issues/782*
+*Ongoing discussion about this feature can be found here: <https://github.com/Koenkk/zigbee2mqtt/issues/782>*
 
 Zigbee has support for binding which makes it possible that devices can directly control each other without the intervention of zigbee2mqtt or any home automation software.
 
@@ -22,6 +22,15 @@ Binding can be configured using the following topics:
 By default, the first endpoint is taken. In case your device has multiple endpoints, e.g. `left` and `right`. The following can be done to specifcy an endpoint:
 - **Source**: append the endpoint friendly name to the topic, e.g. `zigbee2mqtt/bridge/bind/my_switch/left`
 - **Target**: append the endpoint friendly name to the payload, e.g. `my_switch/right`
+
+## Binding a group
+Steps to bind switch with groups, which some devices like IKEA E1743 require:
+
+1. Make a group to which you want to add your device(s) and light(s) in configuration.yaml, and give it a friendly_name. See <https://www.zigbee2mqtt.io/information/groups.html>.
+2. Make sure both the switch and devices are paired with your zigbee2mqtt coordinator and send mqtt commands:
+     - zigbee2mqtt/bridge/bind/switchname   payload: groupname
+     - zigbee2mqtt/bridge/group/groupname/add  payload: devicename (repeat for multiple devices)
+3. If this doesn't work, send mqtt commands again and if that doesn't work, reset switch and light and try again.
 
 ## Devices
 Not all devices support this, it basically comes down to the Zigbee implementation of the device itself. Check the device specific page for more info (can be reached via the supported devices page)
