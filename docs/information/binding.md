@@ -23,14 +23,14 @@ By default, the first endpoint is taken. In case your device has multiple endpoi
 - **Source**: append the endpoint friendly name to the topic, e.g. `zigbee2mqtt/bridge/bind/my_switch/left`
 - **Target**: append the endpoint friendly name to the payload, e.g. `my_switch/right`
 
-## Binding a group
+### Binding a group
 Steps to bind switch with groups, which some devices like IKEA E1743 require:
 
-1. Make a group to which you want to add your device(s) and light(s) in configuration.yaml, and give it a friendly_name. See <https://www.zigbee2mqtt.io/information/groups.html>.
-2. Make sure both the switch and devices are paired with your zigbee2mqtt coordinator and send mqtt commands:
-     - zigbee2mqtt/bridge/bind/switchname   payload: groupname
-     - zigbee2mqtt/bridge/group/groupname/add  payload: devicename (repeat for multiple devices)
-3. If this doesn't work, send mqtt commands again and if that doesn't work, reset switch and light and try again.
+1. Make a group to which you want to add your device(s) and light(s) in `configuration.yaml`, and give it a `friendly_name`. See <https://www.zigbee2mqtt.io/information/groups.html>.
+2. Make sure both the switch and devices are paired with your Zigbee2mqtt coordinator and send MQTT commands:
+     - `zigbee2mqtt/bridge/bind/switchname`   payload: `GROUPNAME`
+     - `zigbee2mqtt/bridge/group/groupname/add`  payload: `DEVICENAME` (repeat for multiple devices)
+3. If this doesn't work, send MQTT commands again and if that doesn't work, reset switch and light and try again.
 
 ## Devices
 Not all devices support this, it basically comes down to the Zigbee implementation of the device itself. Check the device specific page for more info (can be reached via the supported devices page)
