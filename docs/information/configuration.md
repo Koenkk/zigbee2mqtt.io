@@ -120,14 +120,6 @@ map_options:
         active: '#009900'
         inactive: '#994444'
 
-# Optional: Queue settings, useful when your zigbee stick get's
-# unstable when executing many commands
-queue:
-  # Optional: Delay in ms between each command (default: shown below)
-  delay: 250
-  # Optional: Max no. of simultaneously running commands (default: shown below)
-  simultaneously: 5
-
 # Optional: Device specific options
 device_options:
   # See 'Device specific configuration' below
