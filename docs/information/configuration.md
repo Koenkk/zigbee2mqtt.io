@@ -103,6 +103,15 @@ advanced:
   # Optional: log timestamp format (default: shown below)
   timestamp_format: 'YYYY-MM-DD HH:mm:ss'
 
+# Optional: experimental options
+experimental:
+  # Optional: MQTT output type: json, attribute or json_and_attribute (default: shown below)
+  # Examples when 'state' of a device is published
+  # json: topic: 'zigbee2mqtt/my_bulb' payload '{"state": "ON"}'
+  # attribute: topic 'zigbee2mqtt/my_bulb/state' payload 'ON"
+  # json_and_attribute: both json and attribute (see above)
+  output: 'json'
+
 # Optional: networkmap options
 map_options:
   graphviz:
