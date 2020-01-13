@@ -55,6 +55,12 @@ The CC2540 can be confused easily with the CC2531 as it looks (almost) exactly t
 ### [ModemManager](https://www.freedesktop.org/wiki/Software/ModemManager/) is installed
 ModemManger, which is default installed on e.g. Ubuntu, is known to cause problems. It can easily be fixed by removing ModemManager through `sudo apt-get purge modemmanager`.
 
+### Press the reset button on the device (only applicable for CC2531)
+When you plug the CC2531 in your computer, the green LED should go on.
+By pressing the reset button on the CC2531 the green LED should go off.
+The CC2531 has 2 buttons on it, the reset button is the one which is closest to the USB port.
+Now try starting Zigbee2mqtt again.
+
 ## I read that zigbee2mqtt has a limit of 20 devices, is this true?
 Definitely not! Example given: the default Zigbee2mqtt CC2531 firmware indeed supports 20 devices connected **directly** to the coordinator. However, by having routers in your network the network size can be extended. Probably all AC powered devices e.g. bulbs serve as a router, you can even use another [CC2530/CC2531 as a router](../information/cc_sniffer_devices.md) (which has a limit of 21 devices).
 
