@@ -6,6 +6,9 @@ It is possible to run Zigbee2mqtt in a Docker container using the official [Zigb
 This image support the following architectures: `386`, `amd64`, `arm/v6`, `arm/v7`, `arm64`.
 Since zigbee2mqtt images are manifest listed, Docker will auto-detect the architecture and pull the right image.
 
+Note for Raspberry Pi 1 and zero users: there is a bug in Docker which selects the wrong image architecture.
+Before executing `docker run` pull the correct image with `docker pull koenkk/zigbee2mqtt --platform linux/arm/v6`.
+
 First run the container, this will create the configuration directory. Change `configuration.yaml` according to your situation and start again.
 
 ## Running
