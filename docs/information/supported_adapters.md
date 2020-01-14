@@ -45,6 +45,7 @@ advanced:
 - Can be bought via [Texas Instruments](http://www.ti.com/tool/LAUNCHXL-CC26X2R1)
 - [Flash via UNIFLASH](./flashing_via_uniflash.md)
 - NOTE: When migrating from another dongle (e.g. CC2531), make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2mqtt won't start.
+- This device has two serial devices built in. Make sure you put the right serial device in the [configuration](configuration.md) or use auto detect if you only have one CC26X2R1.
 
 ### Texas Instruments CC1352P-2
 ![CC1352P-2](../images/cc1352p2.jpg)
