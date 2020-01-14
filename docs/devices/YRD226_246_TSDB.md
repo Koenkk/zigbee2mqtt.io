@@ -5,7 +5,7 @@ description: "Integrate your Yale YRD226/246 TSDB via Zigbee2mqtt with whatever 
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YRD226/246 TSDB.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YRD226_246_TSDB.md)*
 
 # Yale YRD226/246 TSDB
 

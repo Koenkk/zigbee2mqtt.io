@@ -1,5 +1,12 @@
 const notes = [
     {
+        model: 'HGZB-41',
+        note: `
+### Pairing
+Reset of device is done by holding button for 20 secs until it starts to flash green. It will now automatically pair.
+`,
+    },
+    {
         model: 'E1926',
         note: `
 ### Pairing
@@ -27,13 +34,6 @@ Short press both buttons on the blind (next to battery lid) for 5 seconds, until
 The device is now awake and ready to pair for 2 minutes.
 
 Keep the CC2531 USB sniffer very close to the blind battery lid, until the white light is turned off (this should mean the pairing is successful).
-`,
-    },
-    {
-        model: 'BASICZBR3',
-        note: `
-### Pairing
-If brand new, when powered on it will attempt to pair to Zigbee2mqtt automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the (relay) button on the top for about 5 seconds until the relay cliks and the red LED flashes several times. The device will then go into pairing mode and the blue LED will begin to flash. When connected, the blue LED will turn on solid. It should then be connected to Zigbee2mqtt. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
 `,
     },
     {
@@ -69,8 +69,10 @@ When connected, the light turns off.
 The E1743 can be bound to groups using [binding](../information/binding).
 It can only be bound to 1 group at a time.
 
-Note that < zigbee2mqtt 1.4 automatically bound this device to group 99.
+Note 1: that < zigbee2mqtt 1.4 automatically bound this device to group 99.
 If you want to bind it to a different group you first have to unbind it from group 99.
+
+Note 2: Binding works but only when binding to a group. You should not bind to a specific devices.
 `,
     },
     {
@@ -368,7 +370,7 @@ After that the remote should show up as a paired device.
 ### Pairing
 Pair the remote to Zigbee2mqtt by holding it close to the coordinator and
 pressing the inside button, next to the CR2032 battery, 4 times.
-The red light on the remote will now flash a few times.
+The red light on the (front of the) remote will now flash a few times.
 `,
     },
     {
@@ -415,7 +417,7 @@ To find optimal "smoothness" play with debounce time or if you need all unique r
         note: `
 ### Binding
 The remote can be bound to groups using [binding](../information/binding) since firmware 2.3.014.
-It can only be bound to 1 group at a time.
+It can only be bound to 1 group at a time. Use the group name as \`TARGET_DEVICE_FRIENDLY_NAME\`.
 
 #### Note
 This device with old firmware < 2.3.014 does not support binding (limitation of the device). A workaround is to first
@@ -429,6 +431,25 @@ of type 'commandToggle' with data '{}' from endpoint 1 with groupID 57173\`.
 4. Retrieve the group from the log output, which is \`57173\` in the above example.
 5. Add this group to \`configuration.yaml\` and add your device (e.g.) bulb to this group.
 ([documentation](../information/groups.md)).
+`,
+    },
+    {
+        model: 'WXCJKG11LM',
+        note: `
+### Binding
+By default the switch is bound to the coordinator but this device can also be used to directly control other lights and switches in the network.
+
+First you probably want to unbind it from the coordinator first, then you can bind it to any other device or group. (see https://www.zigbee2mqtt.io/information/binding.html )
+
+As the device is sleeping by default, you need to wake it up after sending the bind/unbind command by pressing the reset button once.
+
+When bound to a lamp, the behavior is as follows:
+- left click: turn off
+- right click: turn on
+- left double click: light dim down (by steps of 33%)
+- right double click: light dim up (by steps of 33%)
+- long left click: warm white
+- long right click: cold white
 `,
     },
     {
@@ -884,7 +905,35 @@ If you are having trouble pairing, reset the device.
 \`\`\`
 Current heating setpoint is also modified when occupied or unoccupied heating setpoint is set.
 
+*System mode*
+
+The system mode will be either \`off\`, \`auto\`, or \`heat\`. When set to \`heat\` the boost host flags will be set, when using \`off\` the window_open hostflag will be set (and off will be displayed on the display).
+
+*Eurotronic host flags*
+
+The \`eurotronic_host_flags\` property contains an object with a true/false field for each host option.
+
+\`\`\`json
+{
+  "eurotronic_host_flags": {
+    "mirror_display": false,
+    "boost": false,
+    "window_open": false,
+    "child_protection": true
+  }
+}
+\`\`\`
+
+You can toggle these flags by publishing a message to the \`set\` mqtt topic containing \`eurotronic_host_flags\`. e.g. enabling the display mirroring:
+\`\`\`json
+{"eurotronic_host_flags": {"mirror_display": true}}
+\`\`\`
+
+**Note that \`true\` or \`false\` do not have quotes aroud them!**
+
 *Eurotronic system mode*
+
+**This is deprecated in favor of eurotronic_host_flags, but will still work for now.**
 
 This is a bitmap encoded field to set several device specific features. Please remind it is not possible to set single bits, always the full bitmap is written. Bit 0 doesnt seem to be writeable, it is always reported as set, so expect your written value + 1 to be reported.
 

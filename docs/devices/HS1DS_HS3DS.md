@@ -5,7 +5,7 @@ description: "Integrate your HEIMAN HS1DS/HS3DS via Zigbee2mqtt with whatever sm
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1DS/HS3DS.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1DS_HS3DS.md)*
 
 # HEIMAN HS1DS/HS3DS
 

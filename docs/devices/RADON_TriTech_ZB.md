@@ -5,7 +5,7 @@ description: "Integrate your Bosch RADON TriTech ZB via Zigbee2mqtt with whateve
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/RADON TriTech ZB.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/RADON_TriTech_ZB.md)*
 
 # Bosch RADON TriTech ZB
 

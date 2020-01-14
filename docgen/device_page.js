@@ -37,7 +37,7 @@ description: "Integrate your ${device.vendor} ${device.model} via Zigbee2mqtt wi
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/${device.model}.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/${utils.normalizeModel(device.model)}.md)*
 
 # ${device.vendor} ${device.model}
 

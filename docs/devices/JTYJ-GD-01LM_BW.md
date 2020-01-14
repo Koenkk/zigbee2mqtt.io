@@ -5,7 +5,7 @@ description: "Integrate your Xiaomi JTYJ-GD-01LM/BW via Zigbee2mqtt with whateve
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/JTYJ-GD-01LM/BW.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/JTYJ-GD-01LM_BW.md)*
 
 # Xiaomi JTYJ-GD-01LM/BW
 

@@ -5,7 +5,7 @@ description: "Integrate your EDP SWITCH EDP RE:DY via Zigbee2mqtt with whatever 
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SWITCH EDP RE:DY.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SWITCH_EDP_RE_DY.md)*
 
 # EDP SWITCH EDP RE:DY
 

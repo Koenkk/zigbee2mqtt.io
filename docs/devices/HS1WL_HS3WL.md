@@ -5,7 +5,7 @@ description: "Integrate your HEIMAN HS1WL/HS3WL via Zigbee2mqtt with whatever sm
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1WL/HS3WL.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1WL_HS3WL.md)*
 
 # HEIMAN HS1WL/HS3WL
 

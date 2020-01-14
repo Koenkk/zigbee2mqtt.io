@@ -5,7 +5,7 @@ description: "Integrate your Nue / 3A HGZB-04D / HGZB-4D-UK via Zigbee2mqtt with
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-04D / HGZB-4D-UK.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-04D___HGZB-4D-UK.md)*
 
 # Nue / 3A HGZB-04D / HGZB-4D-UK
 

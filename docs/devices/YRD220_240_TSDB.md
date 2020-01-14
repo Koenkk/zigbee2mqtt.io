@@ -5,7 +5,7 @@ description: "Integrate your Yale YRD220/240 TSDB via Zigbee2mqtt with whatever 
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YRD220/240 TSDB.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YRD220_240_TSDB.md)*
 
 # Yale YRD220/240 TSDB
 

@@ -5,7 +5,7 @@ description: "Integrate your EDP PLUG EDP RE:DY via Zigbee2mqtt with whatever sm
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PLUG EDP RE:DY.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PLUG_EDP_RE_DY.md)*
 
 # EDP PLUG EDP RE:DY
 

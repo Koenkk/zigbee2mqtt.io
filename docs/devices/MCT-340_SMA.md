@@ -5,7 +5,7 @@ description: "Integrate your Visonic MCT-340 SMA via Zigbee2mqtt with whatever s
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MCT-340 SMA.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MCT-340_SMA.md)*
 
 # Visonic MCT-340 SMA
 

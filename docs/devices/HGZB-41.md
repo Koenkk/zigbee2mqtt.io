@@ -17,8 +17,10 @@ description: "Integrate your Nue / 3A HGZB-41 via Zigbee2mqtt with whatever smar
 
 ## Notes
 
+
 ### Pairing
 Reset of device is done by holding button for 20 secs until it starts to flash green. It will now automatically pair.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

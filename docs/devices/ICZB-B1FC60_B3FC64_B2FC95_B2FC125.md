@@ -5,7 +5,7 @@ description: "Integrate your iCasa ICZB-B1FC60/B3FC64/B2FC95/B2FC125 via Zigbee2
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ICZB-B1FC60/B3FC64/B2FC95/B2FC125.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ICZB-B1FC60_B3FC64_B2FC95_B2FC125.md)*
 
 # iCasa ICZB-B1FC60/B3FC64/B2FC95/B2FC125
 
