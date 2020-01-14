@@ -1,5 +1,14 @@
 const notes = [
     {
+        model: 'DL15S-1BZ',
+        note: `
+### Pairing
+To pair this device, hold the ON for few seconds until the red light is blinking. After that, simple tap once on the ON again to start the pairing process.
+
+Note: This device doesn't support Zigbee channels 25 & 26.
+`,
+    },
+    {
         model: 'HGZB-41',
         note: `
 ### Pairing
@@ -44,7 +53,7 @@ Switch the lamp on five times until the bulb blinks several times.
 `,
     },
     {
-        model: 'E1525',
+        model: 'E1525/E1745',
         note: `
 ### Pairing
 Pair the sensor to Zigbee2mqtt by pressing the pair button 4 times in a row.
@@ -691,6 +700,7 @@ e.g. \`1\` would add 1 degree to the temperature reported by the device; default
     },
     {
         supports: ['humidity'],
+        notModel: ['SMT402'],
         note: `
 * \`humidity_precision\`: Controls the precision of \`humidity\` values, e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
 `,
@@ -869,6 +879,39 @@ See [link](https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691
         note: `
 ### Binding
 If you want to bind the dimmer to a (Hue) lamp you'll have to *[bind it to the lamp through MQTT](../information/binding.html)* and unbind it from the coordinator. Use the dimmer as source and coordinator as target for that.
+`,
+    },
+    {
+        model: ['ZNCZ02LM'],
+        note: `
+### Power outage memory
+This option allows the device to restore the last on/off state when it's reconnected to power.
+To set this option publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"power_outage_memory": true}\` (or \`false\`).
+Now toggle the plug once with the button on it, from now on it will restore its state when reconnecting to power.
+`,
+    },
+    {
+        model: ['ZNCLDJ11LM'],
+        note: `
+### Configuration of device attributes
+By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
+\`\`\`json
+{
+    "options":{
+        "reverse_direction": xxx,
+        "hand_open": xxx,
+        "reset_move": xxx
+    }
+}
+\`\`\`
+
+- **reverse_direction**: (\`true\`/\`false\`, default: \`false\`). Device can be configured to act in an opposite direction.
+- **hand_open**: (\`true\`/\`false\`, default: \`true\`). By default motor starts rotating when you pull the curtain by hand. You can disable this behaviour.
+- **reset_move**: (\`true\`/\`false\`, default: \`false\`). Reset the motor. When a path was cleared from obstacles.
+
+You can send a subset of options, all options that won't be specified will be revered to default.
+
+After changing \`reverse_direction\` you will need to fully open and fully close the curtain so the motor will redetect edges. \`reverse_direction\` will get new state only after this recalibration.
 `,
     },
     {
@@ -1261,6 +1304,129 @@ Unsupported:
 - HS1SA-Z : Z-wave
 
 The product code should end in *-M* for the Zigbee version. The label inside the battery compartment should also show the Zigbee logo.
+`,
+    },
+    {
+        model: 'WV704R0A0902',
+        note: `
+### Device pairing/installation
+To put the TRV in installation mode twist and hold the cap in the  **+** direction
+until the central LED flashes green.  The device is ready for joining when:
+
+- left/right LEDs flash red/blue
+- central LED shows a solid orange
+
+If central light shows a solid green, your TRV has been paired and is connected to the zigbee network. See [commissioning](Comisioning).
+
+If blinking with yellow, then your TRV is not paired or can't connect to the zigbee network. If Zigbee2MQTT is running and accepting new devices the valve should join the network. **Note**  Zigbee2MQTT might not be able to correctly configure the TRV until you have commissioned it.
+
+If the valve is not recognized, you can turn the boost button to positive and hold it; the red light starts to blink slowly. Release the button once the red light stops blinking.
+
+### Comisioning
+After installing the TRV twist the cap in the **-** direction and hold for
+2 seconds until the blue LED lights up.
+
+### Device hard reset
+If the device fails to pair/join the network (\`red:yellow:blue\` on paring mode) or you changed the network id/channel, connect to another network, bought the TRV second hand, you can perform a factory reset to start fresh.
+
+1. Make sure that the TRV is NOT in pairing mode.
+2. Twist the cap in the **-** direction and hold till blue light turns off and then center light blinks red (about 15 seconds).
+3. Release the button, you should see a \`red:gree:blue\` short flash; the valve will go into installation mode.
+
+### Controlling
+
+Valve sometimes fails to respond/acknowledge a setting, just send the command again.
+
+- Get local temperature in degrees Celsius.
+    \`\`\`json
+    {
+        "local_temperature": ""
+    }
+    \`\`\`
+
+- Get or set occupied heating setpoint to *&lt;temperature&gt;* in degrees Celsius. Possible values: 7 to 30 by default; leave empty to read.
+    \`\`\`json
+    {
+        "occupied_heating_setpoint": "<temperature>"
+    }
+    \`\`\`
+
+- Get or set the keypad lock, i.e. enable/disable twist-top boost. Possible values: "unlock", "lock1". **WARNING** Setting the keypad to lock (i.e. "lock1") disables the twist-top boost button which impedes setting the valve to installation mode or hard-reseting it.
+    \`\`\`json
+    {
+        "keypad_lockout": ""
+    }
+    \`\`\`
+
+- Get the battery level, in percentage. Possible values 0 to 100 (%). The level corresponds voltages in the range 2.2 V (0%) to 3.0 V (100%). The levels where chosen so a 0% indicates that batteries must be replaced, but the valve will still work.
+    \`\`\`json
+    {
+        "battery": ""
+    }
+    \`\`\`
+
+- Get the battery voltage. Possible values 0.0 to 3.0 (V). This is a direct measure of the battery voltage.
+    \`\`\`json
+    {
+        "voltage": ""
+    }
+    \`\`\`
+
+- Get the (latest) twist-top boost state. Possible values:
+    Attribute Value | Description
+    -----------------|-----------------------------------------------
+    1            | Boost up
+    0            | No boost
+    -1          | Boost down
+
+    Note that the valve will not automatically toggle the value to 0 after some time, i.e. configuration/automation logic is needed to use the value. E.g. in Home Assistant the \`expire_after\` setting can be used to handle this.
+
+- Get the valve position / heating demand. Will report the valve position or heating amount depending. Possible values 0 to 100 (%).
+    \`\`\`json
+    {
+        "pi_heating_demand": ""
+    }
+    \`\`\`
+- Get the valve motor state. Possible values: "Stall", others. String description of the motor state. Seems to change when the motor is moving.
+    \`\`\`json
+    {
+        "MOT": ""
+    }
+    \`\`\`
+- Get the Zigbee link quality. Possible values 0 to 100 (%).
+    \`\`\`json
+    {
+        "linkquality": ""
+    }
+    \`\`\`
+`,
+    },
+    {
+        model: ['SMT402', 'STZB402'],
+        note: `
+### Setting outdoor temperature
+To set _outdoor temperature_, you need to send the value to the following MQTT topic:
+\`\`\`
+zigbee2mqtt/<FRIENDLY_NAME>/set/thermostat_outdoor_temperature
+\`\`\`
+
+If you want to automate the publishing of the outdoor temperature using Home Assistant, you may create an automation like this:
+
+\`\`\` yaml
+- id: auto_publish_outdoor_temp
+  description: publish the outdoor temperature to Stelpro thermostat
+  trigger:
+    - platform: state
+      entity_id: sensor.outdoor_sensor_temperature
+      condition: []
+  action:
+    - service: mqtt.publish
+      data_template:
+      payload: '{{ states(trigger.entity_id) }}'
+      topic: 'zigbee2mqtt/THERMOSTAT_FRIENDLY_NAME/set/thermostat_outdoor_temperature'
+\`\`\`
+
+**IMPORTANT**: The outdoor temperature need to be refreshed at least each 4 hours, or the \`EXT\` display will be cleared on the thermostat.
 `,
     },
 ];

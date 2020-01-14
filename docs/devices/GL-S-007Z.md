@@ -46,8 +46,8 @@ light:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
+    color_temp: true
     xy: true
-    white_value: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
 

@@ -1,28 +1,23 @@
 ---
-title: "IKEA E1525 control via MQTT"
-description: "Integrate your IKEA E1525 via Zigbee2mqtt with whatever smart home
+title: "HEIMAN SOHM-I1 control via MQTT"
+description: "Integrate your HEIMAN SOHM-I1 via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/E1525.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SOHM-I1.md)*
 
-# IKEA E1525
+# HEIMAN SOHM-I1
 
-| Model | E1525  |
-| Vendor  | IKEA  |
-| Description | TRADFRI motion sensor |
-| Supports | occupancy |
-| Picture | ![IKEA E1525](../images/devices/E1525.jpg) |
+| Model | SOHM-I1  |
+| Vendor  | HEIMAN  |
+| Description | Door contact sensor |
+| Supports | contact |
+| Picture | ![HEIMAN SOHM-I1](../images/devices/SOHM-I1.jpg) |
 
 ## Notes
 
-
-### Pairing
-Pair the sensor to Zigbee2mqtt by pressing the pair button 4 times in a row.
-The red light on the front side should flash a few times and the turn off.
-After a few seconds it turns back on and pulsate. When connected, the light turns off.
-
+None
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -35,18 +30,19 @@ binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    payload_on: true
-    payload_off: false
-    value_template: "{{ value_json.occupancy }}"
-    device_class: "motion"
+    payload_on: false
+    payload_off: true
+    value_template: "{{ value_json.contact }}"
+    device_class: "door"
 
-sensor:
+binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.battery_low}}"
     device_class: "battery"
-    value_template: "{{ value_json.battery }}"
 
 sensor:
   - platform: "mqtt"

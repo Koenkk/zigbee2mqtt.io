@@ -17,15 +17,16 @@ description: "Integrate your Xiaomi ZNCLDJ11LM via Zigbee2mqtt with whatever sma
 
 ## Notes
 
+
 ### Configuration of device attributes
 By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can be configured:
 ```json
 {
-  "options":{
-    "reverse_direction": xxx,
-    "hand_open": xxx,
-    "reset_move": xxx
-  }
+    "options":{
+        "reverse_direction": xxx,
+        "hand_open": xxx,
+        "reset_move": xxx
+    }
 }
 ```
 
@@ -36,6 +37,7 @@ By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can
 You can send a subset of options, all options that won't be specified will be revered to default.
 
 After changing `reverse_direction` you will need to fully open and fully close the curtain so the motor will redetect edges. `reverse_direction` will get new state only after this recalibration.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

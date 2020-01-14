@@ -1,19 +1,19 @@
 ---
-title: "Paulmann 50045 control via MQTT"
-description: "Integrate your Paulmann 50045 via Zigbee2mqtt with whatever smart home
+title: "TUYATEC gq8b1uv control via MQTT"
+description: "Integrate your TUYATEC gq8b1uv via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/50045.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/gq8b1uv.md)*
 
-# Paulmann 50045
+# TUYATEC gq8b1uv
 
-| Model | 50045  |
-| Vendor  | Paulmann  |
-| Description | SmartHome Zigbee LED-stripe |
+| Model | gq8b1uv  |
+| Vendor  | TUYATEC  |
+| Description | Zigbee smart dimmer |
 | Supports | on/off, brightness |
-| Picture | ![Paulmann 50045](../images/devices/50045.jpg) |
+| Picture | ![TUYATEC gq8b1uv](../images/devices/gq8b1uv.jpg) |
 
 ## Notes
 

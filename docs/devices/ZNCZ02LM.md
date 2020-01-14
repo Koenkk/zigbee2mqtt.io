@@ -22,10 +22,12 @@ description: "Integrate your Xiaomi ZNCZ02LM via Zigbee2mqtt with whatever smart
 Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
 
+
 ### Power outage memory
 This option allows the device to restore the last on/off state when it's reconnected to power.
-To set this option publish to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"power_outage_memory": true}` (or `false`). 
+To set this option publish to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"power_outage_memory": true}` (or `false`).
 Now toggle the plug once with the button on it, from now on it will restore its state when reconnecting to power.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
