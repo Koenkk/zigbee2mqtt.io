@@ -1,19 +1,19 @@
 ---
-title: "Ubisys S2 control via MQTT"
-description: "Integrate your Ubisys S2 via Zigbee2mqtt with whatever smart home
+title: "Dawon DNS PM-B430-ZB control via MQTT"
+description: "Integrate your Dawon DNS PM-B430-ZB via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/S2.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PM-B430-ZB.md)*
 
-# Ubisys S2
+# Dawon DNS PM-B430-ZB
 
-| Model | S2  |
-| Vendor  | Ubisys  |
-| Description | Power switch S2 |
-| Supports | on/off, power measurement |
-| Picture | ![Ubisys S2](../images/devices/S2.jpg) |
+| Model | PM-B430-ZB  |
+| Vendor  | Dawon DNS  |
+| Description | IOT smart plug 10A |
+| Supports | on/off, power and energy measurement |
+| Picture | ![Dawon DNS PM-B430-ZB](../images/devices/PM-B430-ZB.jpg) |
 
 ## Notes
 
@@ -26,24 +26,6 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
-switch:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_off: "OFF"
-    payload_on: "ON"
-    value_template: "{{ value_json.state_l1 }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/l1/set"
-
-switch:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_off: "OFF"
-    payload_on: "ON"
-    value_template: "{{ value_json.state_l2 }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/l2/set"
-
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
@@ -51,6 +33,15 @@ sensor:
     unit_of_measurement: "W"
     icon: "mdi:factory"
     value_template: "{{ value_json.power }}"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
 
 sensor:
   - platform: "mqtt"
