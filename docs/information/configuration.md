@@ -32,6 +32,8 @@ mqtt:
   reject_unauthorized: true
   # Optional: Include device information to mqtt messages (default: false)
   include_device_information: true
+  # Optional: MQTT keepalive in seconds (default: 60)
+  keepalive: 60
 
 # Required: serial settings
 serial:
