@@ -601,6 +601,9 @@ Press the reset button for about 5 seconds. The LED lights up 3 times.
 Then press the button again every 2 seconds (maximum 20 times).
 
 *NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
+
+### Meaning of \`strength\` value
+The \`strength\` value, which is reported every 300 seconds after vibration is detected, is the max strength measured during a period of 300 second.
 `,
     },
     {

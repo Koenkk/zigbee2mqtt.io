@@ -27,6 +27,7 @@ Then press the button again every 2 seconds (maximum 20 times).
 ### Meaning of `strength` value
 The `strength` value, which is reported every 300 seconds after vibration is detected, is the max strength measured during a period of 300 second.
 
+
 ### Sensitivity
 The sensitivity can be changed by publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set`
 `{"sensitivity": "SENSITIVITY"}` where `SENSITVITIY` is one of the following
