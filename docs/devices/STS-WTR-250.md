@@ -16,7 +16,9 @@ description: "Integrate your SmartThings STS-WTR-250 via Zigbee2mqtt with whatev
 | Picture | ![STS-WTR-250](../images/devices/STS-WTR-250.jpg) |
 
 ## Notes
-Pairing: hold the "Connect" button while inserting the battery. Release the button when the LED is lit. The LED will blink blue while attempting to connect. Will turn green once connected.
+
+### Pairing
+Hold the "Connect" button while inserting the battery. Release the button when the LED is lit. The LED will blink blue while attempting to connect. Will turn green once connected.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
