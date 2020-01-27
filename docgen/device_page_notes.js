@@ -76,12 +76,10 @@ When connected, the light turns off.
         note: `
 ### Binding
 The E1743 can be bound to groups using [binding](../information/binding).
-It can only be bound to 1 group at a time.
+It can only be bound to 1 group at a time and cannot be bound to a device.
 
-Note 1: that < zigbee2mqtt 1.4 automatically bound this device to group 99.
-If you want to bind it to a different group you first have to unbind it from group 99.
-
-Note 2: Binding works but only when binding to a group. You should not bind to a specific devices.
+By default this remote is bound to the default bind group which you first have to unbind it from.
+This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENLDY_NAME]]\` payload \`default_bind_group\`.
 `,
     },
     {
@@ -442,6 +440,8 @@ To find optimal "smoothness" play with debounce time or if you need all unique r
 ### Binding
 The remote can be bound to groups using [binding](../information/binding) since firmware 2.3.014.
 It can only be bound to 1 group at a time. Use the group name as \`TARGET_DEVICE_FRIENDLY_NAME\`.
+By default this remote is bound to the default bind group which you first have to unbind it from.
+This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENLDY_NAME]]\` payload \`default_bind_group\`.
 
 #### Note
 This device with old firmware < 2.3.014 does not support binding (limitation of the device). A workaround is to first
