@@ -57,7 +57,7 @@ unzip CC2531_DEFAULT_20190608.zip
 ```
 It takes around 3 minutes.
 
-### Via Arduino Uno/ESP8266 with CCLoader (~3hrs)
+### Via Arduino Uno/ESP8266 with CCLoader (~3min)
 
 **This has been tested with a Genuine Arudino Uno, an Arduino Pro Micro - China clone, and a NodeMCU ESP8266 and is significantly faster than CCLib**
 
@@ -154,7 +154,7 @@ It should be done in a few minutes.
 
 If burning fails/gets stuck at `Request sent already! Waiting for respond...` - try again, check your wiring, try using `1` instead of `0` as the last parameter.
 
-### Via Arduino/ESP8266 with CCLib
+### Via Arduino/ESP8266 with CCLib (~3hrs)
 Flashing firmware via Arduino is implemented using the project https://github.com/wavesoft/CCLib
 **But with minor improvements!!!**
 
