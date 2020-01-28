@@ -62,3 +62,4 @@ Besides running Zigbee2mqtt on [bare-metal Linux](getting_started/running_zigbee
   * [Tweakers (Dutch)](https://gathering.tweakers.net/forum/list_messages/1901662)
   * [Home Assistant forum (English)](https://community.home-assistant.io/t/zigbee2mqtt-getting-rid-of-your-proprietary-zigbee-bridges-xiaomi-hue-tradfri/52108)
   * [HassioHelp (Italian)](https://hassiohelp.eu/2019/04/14/indice/#ZigBee)
+  * [Russian community telegram chat (Russian)](https://t.me/zigbeer)
