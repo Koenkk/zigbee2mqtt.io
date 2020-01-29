@@ -1334,13 +1334,15 @@ until the central LED flashes green.  The device is ready for joining when:
 - left/right LEDs flash red/blue
 - central LED shows a solid orange
 
-If central light shows a solid green, your TRV has been paired and is connected to the zigbee network. See [commissioning](Comisioning).
+If central light shows a solid green, your TRV has been paired and is connected to the zigbee network.
 
-If blinking with yellow, then your TRV is not paired or can't connect to the zigbee network. If Zigbee2MQTT is running and accepting new devices the valve should join the network. **Note**  Zigbee2MQTT might not be able to correctly configure the TRV until you have commissioned it.
+If blinking with yellow, then your TRV is not paired or can't connect to the zigbee network. If Zigbee2MQTT is running and accepting new devices the valve should join the network. Sometimes you may need to twist and hold the cap in the **+** direction for 3 seconds before it will try to join.
+
+**Note:** Zigbee2MQTT might not be able to correctly configure the TRV until you have [calibrated](#calibrate) it.
 
 If the valve is not recognized, you can turn the boost button to positive and hold it; the red light starts to blink slowly. Release the button once the red light stops blinking.
 
-### Comisioning
+### Calibrate
 After installing the TRV twist the cap in the **-** direction and hold for
 2 seconds until the blue LED lights up.
 
@@ -1391,11 +1393,12 @@ Valve sometimes fails to respond/acknowledge a setting, just send the command ag
     \`\`\`
 
 - Get the (latest) twist-top boost state. Possible values:
-    Attribute Value | Description
-    -----------------|-----------------------------------------------
-    1            | Boost up
-    0            | No boost
-    -1          | Boost down
+
+    | Attribute Value | Description |
+    | -----------------|----------------------------------------------- |
+    | 1 | Boost up |
+    | 0 | No boost |
+    | -1 | Boost down |
 
     Note that the valve will not automatically toggle the value to 0 after some time, i.e. configuration/automation logic is needed to use the value. E.g. in Home Assistant the \`expire_after\` setting can be used to handle this.
 
