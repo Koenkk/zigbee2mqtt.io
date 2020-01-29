@@ -22,7 +22,7 @@ description: "Integrate your Sunricher SR-ZG9001K4-DIM2 via Zigbee2mqtt with wha
 *[How to use device type specific configuration](../information/configuration.md)*
 
 
-* `transition`: Controls the transition time (in seconds) of brightness,
+* `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
 

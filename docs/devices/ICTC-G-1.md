@@ -61,7 +61,7 @@ See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koe
 *[How to use device type specific configuration](../information/configuration.md)*
 
 
-* `transition`: Controls the transition time (in seconds) of brightness,
+* `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
 

@@ -22,7 +22,7 @@ description: "Integrate your Hive HV-GSCXZB279_HV-GSCXZB229 via Zigbee2mqtt with
 *[How to use device type specific configuration](../information/configuration.md)*
 
 
-* `transition`: Controls the transition time (in seconds) of brightness,
+* `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
 
