@@ -63,7 +63,7 @@ This can be tested by executing: `test -w [PORT] && echo success || echo failure
 
 If it outputs `failure`. Assign write acces by executing: `sudo chown [USER] [PORT]` (e.g. `sudo chown pi /dev/ttyACM0`).
 
-### In case of a CC2530 or CC2513 adapter, verify that don't have a CC2540
+### In case of a CC2530 or CC2531 adapter, verify that don't have a CC2540
 The CC2540 can be confused easily with the CC2531 as it looks (almost) exactly the same. However, this device does not support zigbee but bluetooth. This can be verified by looking at the chip.
 
 ### [ModemManager](https://www.freedesktop.org/wiki/Software/ModemManager/) is installed
