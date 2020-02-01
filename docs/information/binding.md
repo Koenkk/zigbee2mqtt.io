@@ -23,14 +23,18 @@ By default, the first endpoint is taken. In case your device has multiple endpoi
 - **Source**: append the endpoint friendly name to the topic, e.g. `zigbee2mqtt/bridge/bind/my_switch/left`
 - **Target**: append the endpoint friendly name to the payload, e.g. `my_switch/right`
 
-### Binding a group
-Steps to bind switch with groups, which some devices like IKEA E1743 require:
+### Binding a remote to a group
+Binding a remote to a group allows a remote to directly control a group of devices without intervention of Zigbee2mqtt.
 
-1. Make a group to which you want to add your device(s) and light(s) in `configuration.yaml`, and give it a `friendly_name`. See <https://www.zigbee2mqtt.io/information/groups.html>.
-2. Make sure both the switch and devices are paired with your Zigbee2mqtt coordinator and send MQTT commands:
-     - `zigbee2mqtt/bridge/bind/switchname`   payload: `GROUPNAME`
-     - `zigbee2mqtt/bridge/group/groupname/add`  payload: `DEVICENAME` (repeat for multiple devices)
-3. If this doesn't work, send MQTT commands again and if that doesn't work, reset switch and light and try again.
+When we for example have an IKEA E1743 remote called `my_remote` and two bulbs called `bulb_1` and `bulb_2`, we can control the 2 bulbs with the remote by putting them in the same group and binding the remote to it.
+
+To do this execute the following steps:
+1. Create a new group in `configuration.yaml` and give it a `friendly_name` (see [Groups](./groups)). In this example we will set the `friendly_name` to `my_group`.
+2. Add the 2 bulbs to the group by sending the following two MQTT messages.
+    - `zigbee2mqtt/bridge/group/my_group/add` with payload `bulb_1`
+    - `zigbee2mqtt/bridge/group/my_group/add` with payload `bulb_2`
+3. Bind the remote to the group by sending the following MQTT message. If this fails it might be because the remote is sleeping. This can be fixed by waking it up right before sending the MQTT message. To wake it up press a button on the remote.
+    - `zigbee2mqtt/bridge/bind/my_remote` with payload `my_group`
 
 ## Devices
 Not all devices support this, it basically comes down to the Zigbee implementation of the device itself. Check the device specific page for more info (can be reached via the supported devices page)
