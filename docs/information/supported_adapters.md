@@ -64,6 +64,7 @@ advanced:
 
 ### Texas Instruments CC2538 + CC2592 RF frontend or without
 ![CC2538](../images/cc2538-1.jpg)![CC2538](../images/cc2538-2.jpg)![CC2538](../images/cc2538-3.jpg)
+
 [related zigbee2mqtt issue](https://github.com/Koenkk/zigbee2mqtt/issues/1568)
 
 - Powerful, will easily handle networks of 100+ devices
