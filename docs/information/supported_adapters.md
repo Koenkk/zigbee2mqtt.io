@@ -63,14 +63,15 @@ advanced:
 - This device has two serial devices built in. Make sure you put the right serial device in the [configuration](configuration.md) or use auto detect if you only have one Texas Instruments CC devices connected to your system.
 
 ### Texas Instruments CC2538 + CC2592 RF frontend or without
+![CC2538](../images/cc2538-1.jpg)![CC2538](../images/cc2538-2.jpg)![CC2538](../images/cc2538-3.jpg)
 [related zigbee2mqtt issue](https://github.com/Koenkk/zigbee2mqtt/issues/1568)
 
 - Powerful, will easily handle networks of 100+ devices
 - Good range (without RF frontend) and very good range (with CC2592)
-- Requires SEGGER J-Link ([v8](https://aliexpress.ru/item/4000122977922.html) or v9) to be flashed via JTAG
+- Requires SEGGER J-Link ([v8](https://aliexpress.ru/item/4000122977922.html) or [v9](https://aliexpress.ru/item/32858691304.html)) to be flashed via JTAG
 - Coordinator firmware based on Z-Stack 3.0.2:
-  - https://github.com/antst/CC2538-ZNP-Coordinator-firmware 
+  - https://github.com/antst/CC2538-ZNP-Coordinator-firmware
   - https://github.com/reverieline/CC2538-CC2592-ZNP/tree/master/MODKAMRU_V3
-- Custom USB-stick https://modkam.ru/?p=1112 based on module https://aliexpress.ru/item/32880588264.html 
-- Dev board https://aliexpress.ru/item/32836343416.html
-- USB-stick without RF frontend https://aliexpress.ru/item/4000016607626.html or https://aliexpress.ru/item/32737589263.html
+- [Custom USB-stick](https://modkam.ru/?p=1112) based on [module from Aliexpress](https://aliexpress.ru/item/32880588264.html)
+- [Dev board](https://aliexpress.ru/item/32836343416.html)
+- USB-stick without RF frontend [one](https://aliexpress.ru/item/4000016607626.html) or [another](https://aliexpress.ru/item/32737589263.html)
