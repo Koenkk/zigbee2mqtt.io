@@ -18,6 +18,35 @@ description: "Integrate your IKEA ICTC-G-1 via Zigbee2mqtt with whatever smart h
 ## Notes
 
 
+### Recommendation
+This device sends multiple messages in short time period with the same payload. It's worth setting `debounce` option with `debounce_ignore: - action` to throttle them without loosing unique action payloads.
+
+E.g. (devices.yaml)
+
+{% raw %}
+```yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_remote
+    debounce: 0.5
+    debounce_ignore:
+    - action
+```
+{% endraw %}
+
+To find optimal "smoothness" play with debounce time or if you need all unique rotation steps consider adding `brightness` to `debounce_ignore` option
+
+{% raw %}
+```yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_remote
+    debounce: 0.1
+    debounce_ignore:
+    - action
+    - brightness
+```
+{% endraw %}
+
+
 ### Pairing
 To factory reset the TRADFRI wireless dimmer (ICTC-G-1) press the button
 4 times (so the red lights starts blinking).

@@ -392,6 +392,13 @@ This option allows to inter connect the relays which will make sure that only on
     {
         model: ['E1744'],
         note: `
+### Pairing
+Press the button on the device 4 times (until the red light turns on).
+`,
+    },
+    {
+        model: ['E1744', 'ICTC-G-1'],
+        note: `
 ### Recommendation
 This device sends multiple messages in short time period with the same payload. It's worth setting \`debounce\` option with \`debounce_ignore: - action\` to throttle them without loosing unique action payloads.
 
@@ -400,7 +407,7 @@ E.g. (devices.yaml)
 {% raw %}
 \`\`\`yaml
 '0xabc457fffe679xyz':
-    friendly_name: Symfonisk ikea volume
+    friendly_name: my_remote
     debounce: 0.5
     debounce_ignore:
     - action
@@ -412,7 +419,7 @@ To find optimal "smoothness" play with debounce time or if you need all unique r
 {% raw %}
 \`\`\`yaml
 '0xabc457fffe679xyz':
-    friendly_name: Symfonisk ikea volume
+    friendly_name: my_remote
     debounce: 0.1
     debounce_ignore:
     - action
