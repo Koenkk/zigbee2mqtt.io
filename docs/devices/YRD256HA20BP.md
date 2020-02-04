@@ -40,6 +40,8 @@ lock:
     availability_topic: "zigbee2mqtt/bridge/state"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     value_template: "{{ value_json.state }}"
+    state_locked: "LOCK"
+    state_unlocked: "UNLOCK"
 
 sensor:
   - platform: "mqtt"
