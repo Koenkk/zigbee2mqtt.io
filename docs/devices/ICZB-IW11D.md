@@ -11,7 +11,7 @@ description: "Integrate your iCasa ICZB-IW11D via Zigbee2mqtt with whatever smar
 
 | Model | ICZB-IW11D  |
 | Vendor  | iCasa  |
-| Description | Zigbee 3.0 Dimmer |
+| Description | ZigBee AC dimmer |
 | Supports | on/off, brightness |
 | Picture | ![iCasa ICZB-IW11D](../images/devices/ICZB-IW11D.jpg) |
 
@@ -46,7 +46,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    icon: "mdi:signal"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
 ```
 {% endraw %}

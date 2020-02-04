@@ -11,8 +11,8 @@ description: "Integrate your SmartThings STS-OUT-US-2 via Zigbee2mqtt with whate
 
 | Model | STS-OUT-US-2  |
 | Vendor  | SmartThings  |
-| Description | Outlet |
-| Supports | on/off |
+| Description | Zigbee smart plug with power meter |
+| Supports | on/off, power measurement |
 | Picture | ![SmartThings STS-OUT-US-2](../images/devices/STS-OUT-US-2.jpg) |
 
 ## Notes
@@ -39,7 +39,16 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "W"
+    icon: "mdi:factory"
+    value_template: "{{ value_json.power }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:signal"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
 ```
 {% endraw %}

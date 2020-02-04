@@ -7,18 +7,17 @@ description: "Integrate your SmartThings STS-WTR-250 via Zigbee2mqtt with whatev
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/STS-WTR-250.md)*
 
-# SmartThings 3315-S
+# SmartThings STS-WTR-250
 
-| Model | STS-WTR-250 |
+| Model | STS-WTR-250  |
 | Vendor  | SmartThings  |
-| Description | Water sensor |
-| Supports | water and temperature |
-| Picture | ![STS-WTR-250](../images/devices/STS-WTR-250.jpg) |
+| Description | Water leak sensor (2016 model) |
+| Supports | water leak |
+| Picture | ![SmartThings STS-WTR-250](../images/devices/STS-WTR-250.jpg) |
 
 ## Notes
 
-### Pairing
-Hold the "Connect" button while inserting the battery. Release the button when the LED is lit. The LED will blink blue while attempting to connect. Will turn green once connected.
+None
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -27,14 +26,6 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
-    device_class: "temperature"
-    value_template: "{{ value_json.temperature }}"
-
 binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
@@ -56,7 +47,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    icon: "mdi:signal"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
 ```
 {% endraw %}
