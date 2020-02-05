@@ -17,6 +17,7 @@ description: "Integrate your Danalock V3-BTZB via Zigbee2mqtt with whatever smar
 
 ## Notes
 
+
 ### Pairing
 If pairing failed, try the followings:
 - Pairing it closer to the coordinator
@@ -25,6 +26,7 @@ If pairing failed, try the followings:
 
 ### App
 This device also come with an iOS app (Android as well but not tested). It is recommanded to do the setups via the app for better control of the lock.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

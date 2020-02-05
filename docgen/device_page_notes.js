@@ -1,5 +1,18 @@
 const notes = [
     {
+        model: 'V3-BTZB',
+        note: `
+### Pairing
+If pairing failed, try the followings:
+- Pairing it closer to the coordinator
+- Connecting the CC2531 via an USB extension cable (to avoid interference)
+- Replacing the batteries of the danalock.
+
+### App
+This device also come with an iOS app (Android as well but not tested). It is recommanded to do the setups via the app for better control of the lock.
+`,
+    },
+    {
         model: 'DL15S-1BZ',
         note: `
 ### Pairing
