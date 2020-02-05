@@ -266,11 +266,11 @@ by pressing and holding the reset button on the bottom of the remote (next to th
     {
         vendor: 'Philips',
         notModel: ['324131092621'],
-        supports: ['brightness'],
+        supports: ['brightness', 'on/off'],
         note: `
 ### Power-on behavior
-Allows to set the power-on behavior of the bulb.
-Note that this requires at least November/December '18 firmware update of the bulb.
+Allows to set the power-on behavior of the plug/bulb.
+Note that this requires at least November/December '18 firmware update of the device.
 \`\`\`js
 {
     "hue_power_on_behavior": "on",          // default, on, off, recover
