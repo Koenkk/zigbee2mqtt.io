@@ -16,8 +16,12 @@ description: "Integrate your Danalock V3-BTZB via Zigbee2mqtt with whatever smar
 | Picture | ![Danalock V3-BTZB](../images/devices/V3-BTZB.jpg) |
 
 ## Notes
+This device also come with an iOS app (Android as well but not tested). It is recommanded to do the setups via the app for better control of the lock.
 
-None
+If pairing failed, try the followings:
+- Pairing it closer to the coordinator
+- Connecting the CC2531 via an USB extension cable (to avoid interference)
+- Replacing the batteries of the danalock.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
