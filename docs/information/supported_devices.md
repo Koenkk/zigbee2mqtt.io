@@ -328,7 +328,6 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | [HS2ESK-E](../devices/HS2ESK-E.md) | HEIMAN Smart in wall plug (on/off, power measurement) | ![../images/devices/HS2ESK-E.jpg](../images/devices/HS2ESK-E.jpg) |
 | [SGMHM-I1](../devices/SGMHM-I1.md) | HEIMAN Combustible gas sensor (gas) | ![../images/devices/SGMHM-I1.jpg](../images/devices/SGMHM-I1.jpg) |
 | [STHM-I1H](../devices/STHM-I1H.md) | HEIMAN Heiman temperature & humidity sensor (temperature and humidity) | ![../images/devices/STHM-I1H.jpg](../images/devices/STHM-I1H.jpg) |
-| [M420](../devices/M420.md) | HEIMAN Zigbee 3.0 smart siren (warning) | ![../images/devices/M420.jpg](../images/devices/M420.jpg) |
 
 ### Hampton Bay
 
@@ -767,6 +766,7 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | [7146060PH](../devices/7146060PH.md) | Philips Hue Go (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/7146060PH.jpg](../images/devices/7146060PH.jpg) |
 | [9290022411](../devices/9290022411.md) | Philips White single filament bulb A19 E26 with Bluetooth (on/off, brightness, power-on behavior) | ![../images/devices/9290022411.jpg](../images/devices/9290022411.jpg) |
 | [7602031P7](../devices/7602031P7.md) | Philips Hue Go with Bluetooth (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/7602031P7.jpg](../images/devices/7602031P7.jpg) |
+| [8718696167991](../devices/8718696167991.md) | Philips Hue Calla outdoor (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/8718696167991.jpg](../images/devices/8718696167991.jpg) |
 | [4090531P7](../devices/4090531P7.md) | Philips Hue Flourish white and color ambiance ceiling light (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/4090531P7.jpg](../images/devices/4090531P7.jpg) |
 | [929001953101](../devices/929001953101.md) | Philips Hue White and Color Ambiance GU10 (on/off, brightness, color temperature, color xy, power-on behavior) | ![../images/devices/929001953101.jpg](../images/devices/929001953101.jpg) |
 | [8718699688820](../devices/8718699688820.md) | Philips Hue Filament Standard A60/E27 bluetooth (on/off, brightness, power-on behavior) | ![../images/devices/8718699688820.jpg](../images/devices/8718699688820.jpg) |
