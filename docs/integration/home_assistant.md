@@ -225,7 +225,6 @@ automation:
   # Automation to start timer when enable join is turned on
   - id: zigbee_join_enabled
     alias: Zigbee Join Enabled
-    hide_entity: true
     trigger:
       platform: state
       entity_id: switch.zigbee2mqtt_main_join
@@ -236,7 +235,6 @@ automation:
   # Automation to stop timer when switch turned off and turn off switch when timer finished
   - id: zigbee_join_disabled
     alias: Zigbee Join Disabled
-    hide_entity: true
     trigger:
       - platform: event
         event_type: timer.finished
