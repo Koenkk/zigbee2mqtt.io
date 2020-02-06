@@ -53,7 +53,7 @@ advanced:
 - USB connected Zigbee adapter.
 - Expensive but **very powerful** ($50), will easily handle networks of 100+ devices.
 - Very good range
-- Only benefit compared to the CC26X2R1 is that it allows an external antenna to be connected which could increase range even further.
+- Only benefit compared to the CC26X2R1 is that it allows an external antenna to be connected ([requires resoldering a tiny capacitor](https://github.com/Koenkk/zigbee2mqtt/issues/2162#issuecomment-570286663)) which could increase range even further.
 - Only available as a development board, therefore it is quite large (it's larger than the CC26X2R1)
 - Has an onboard flasher, no additional hardware required to flash
 - Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin)
