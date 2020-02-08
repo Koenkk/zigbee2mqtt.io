@@ -57,6 +57,9 @@ Resets the ZNP (CC2530/CC2531).
 ## zigbee2mqtt/bridge/config/touchlink/factory_reset
 See [Touchlink](./touchlink).
 
+## zigbee2mqtt/bridge/ota_update/+
+See [OTA updates](./ota_updates).
+
 ## zigbee2mqtt/bridge/config/log_level
 Allows you to switch the `log_level` during runtime. This is not persistent (will not be saved to `configuration.yaml`). Possible payloads are: `"debug"`, `"info"`, `"warn"`, `"error"`.
 
@@ -211,7 +214,7 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
     "r": 46,
     "g": 102,
     "b": 193
-    
+
     // OR
 
     // RGB color
@@ -239,7 +242,7 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
 
     // Hue, saturation, brightness (in HSB space)
     "hsb": "360,100,100"
-    
+
     // OR
 
     // Hue, saturation, brightness (in HSV space)
@@ -258,7 +261,7 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
     "h": 360,
     "s": 100,
     "l": 100
-    
+
     // OR
 
     // Hue, saturation, brightness (in HSL space)
