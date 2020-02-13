@@ -55,10 +55,10 @@ Allows you to set the `advanced` -> `elapsed` configuration option. See [Configu
 Resets the ZNP (CC2530/CC2531).
 
 ## zigbee2mqtt/bridge/config/touchlink/factory_reset
-See [Touchlink](./touchlink).
+See [Touchlink](./touchlink.md).
 
 ## zigbee2mqtt/bridge/ota_update/+
-See [OTA updates](./ota_updates).
+See [OTA updates](./ota_updates.md).
 
 ## zigbee2mqtt/bridge/config/log_level
 Allows you to switch the `log_level` during runtime. This is not persistent (will not be saved to `configuration.yaml`). Possible payloads are: `"debug"`, `"info"`, `"warn"`, `"error"`.
