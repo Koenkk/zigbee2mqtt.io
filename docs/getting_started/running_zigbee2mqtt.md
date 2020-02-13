@@ -49,16 +49,16 @@ sudo chown -R pi:pi /opt/zigbee2mqtt
 
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
-npm install
+npm ci
 ```
 
-If everything went correctly the output of `npm install` is similar to (the number of packages and seconds is probably different on your device):
+If everything went correctly the output of `npm ci` is similar to (the number of packages and seconds is probably different on your device):
 ```bash
 node-pre-gyp info ok
 added 383 packages in 111.613s
 ```
 
-Note that the `npm install` produces some `warning` which can be ignored.
+Note that the `npm ci` produces some `warning` which can be ignored.
 
 ## 3. Configuring
 Before we can start Zigbee2mqtt we need to edit the `configuration.yaml` file. This file contains the configuration which will be used by Zigbee2mqtt.
@@ -198,8 +198,7 @@ cp -R data data-backup
 # Update
 git checkout HEAD -- npm-shrinkwrap.json
 git pull
-rm -rf node_modules
-npm install
+npm ci
 
 # Restore configuration
 cp -R data-backup/* data

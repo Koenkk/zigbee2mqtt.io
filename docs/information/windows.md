@@ -30,7 +30,7 @@ Before you start make sure you have [already flashed](../getting_started/flashin
     * otherwise use the green `Clone or download` button to download the zip archive, then extract it
 1. Change to the newly created directory and install dependencies with Node.js' own package manager `npm`
     ```bash
-    npm install
+    npm ci
     ```
 
 ## 3. Configuring

@@ -21,8 +21,7 @@ git checkout HEAD -- npm-shrinkwrap.json
 git fetch
 git checkout dev # Change 'dev' to 'master' to switch back to the release version
 git pull
-rm -rf node_modules
-npm install
+npm ci
 
 # Restore configuration
 cp -R data-backup/* data

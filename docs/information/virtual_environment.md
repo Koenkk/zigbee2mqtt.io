@@ -35,7 +35,7 @@ source /opt/zigbee2mqtt/bin/activate
 
 # Install dependencies
 cd /opt/zigbee2mqtt
-npm install
+npm ci
 
 # Deactivate environment
 deactivate
@@ -103,8 +103,7 @@ cp -R data data-backup
 # Update
 git checkout HEAD -- npm-shrinkwrap.json
 git pull
-rm -rf node_modules
-npm install
+npm ci
 
 # Restore configuration
 cp -R data-backup/* data
