@@ -8,13 +8,11 @@ This feature allows to update your Zigbee devices over-the-air.
 Not all manufacturers make their updates available, therefore only the following devices support it:
 - IKEA TRÅDFRI devices
 
-## Check if an update is available
-To check if an update is available for your device send a message to `zigbee2mqtt/bridge/ota_update/check` with payload `DEVICE_FRIENDLY_NAME`. The Zigbee2mqtt log will show if one is available, example:
+Zigbee2mqtt automatically checks if updates are available for your devices.
+In case an update is available it will publish `zigbee2mqtt/[DEVICE_FRIENLDY_NAME]` payload `{update_available: true}`.
 
-```
-zigbee2mqtt:info  2020-02-08 19:18:01: Checking if update available for 'bulb'
-zigbee2mqtt:info  2020-02-08 19:18:04: Update available for 'bulb'
-```
+## Check if an update is available
+To check if an update is available for your device send a message to `zigbee2mqtt/bridge/ota_update/check` with payload `DEVICE_FRIENDLY_NAME`.
 
 ## Update to latest firmware
 Once an update is available, send to `zigbee2mqtt/bridge/ota_update/update` with payload `DEVICE_FRIENDLY_NAME` to update your device.
