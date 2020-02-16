@@ -9,7 +9,7 @@ Not all manufacturers make their updates available, therefore only the following
 - IKEA TRÅDFRI devices
 
 Zigbee2mqtt automatically checks if updates are available for your devices.
-In case an update is available it will publish `zigbee2mqtt/[DEVICE_FRIENLDY_NAME]` payload `{update_available: true}`.
+In case an update is available it will publish `zigbee2mqtt/[DEVICE_FRIENLDY_NAME]` payload `{"update_available": true}`.
 
 ## Check if an update is available
 To check if an update is available for your device send a message to `zigbee2mqtt/bridge/ota_update/check` with payload `DEVICE_FRIENDLY_NAME`.
