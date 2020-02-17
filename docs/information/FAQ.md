@@ -63,6 +63,27 @@ This can be tested by executing: `test -w [PORT] && echo success || echo failure
 
 If it outputs `failure`. Assign write acces by executing: `sudo chown [USER] [PORT]` (e.g. `sudo chown pi /dev/ttyACM0`).
 
+You need to apply this on every reboot. To fix this you can use a 'udev' rule:
+
+1. `udevadm info -a -n /dev/ttyACM0 | grep 'serial'`
+get the serial to your device `YOURSERIAL`
+
+2. Create the rule file with:
+`sudo nano /etc/udev/rules.d/99-usb-serial.rules`
+
+3. add this line:
+`SUBSYSTEM=="tty", ATTRS{idVendor}=="0451", ATTRS{idProduct}=="16a8", ATTRS{serial}=="YOURSERIAL", SYMLINK="ttyUSB.CC2531-01", OWNER="pi"`
+
+4. modify your zigbee2mqtt config to adjust new SYMLINK name:
+`nano /opt/zigbee2mqtt/data/configuration.yaml`
+
+`…
+serial:
+  port: /dev/ttyUSB.CC2531-01
+…`
+
+After reboot your dedvice will have the right permissions and always the same name.
+
 ### In case of a CC2530 or CC2531 adapter, verify that don't have a CC2540
 The CC2540 can be confused easily with the CC2531 as it looks (almost) exactly the same. However, this device does not support zigbee but bluetooth. This can be verified by looking at the chip.
 
