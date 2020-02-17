@@ -65,22 +65,22 @@ If it outputs `failure`. Assign write acces by executing: `sudo chown [USER] [PO
 
 You need to apply this on every reboot. To fix this you can use a 'udev' rule:
 
-1. 'udevadm info -a -n /dev/ttyACM0 | grep 'serial''
-get the serial to your device 'YOURSERIAL'
+1. `udevadm info -a -n /dev/ttyACM0 | grep 'serial'`
+get the serial to your device `YOURSERIAL`
 
 2. Create the rule file with:
-'sudo nano /etc/udev/rules.d/99-usb-serial.rules'
+`sudo nano /etc/udev/rules.d/99-usb-serial.rules`
 
 3. add this line:
-'SUBSYSTEM=="tty", ATTRS{idVendor}=="0451", ATTRS{idProduct}=="16a8", ATTRS{serial}=="YOURSERIAL", SYMLINK="ttyUSB.CC2531-01", OWNER="pi"'
+`SUBSYSTEM=="tty", ATTRS{idVendor}=="0451", ATTRS{idProduct}=="16a8", ATTRS{serial}=="YOURSERIAL", SYMLINK="ttyUSB.CC2531-01", OWNER="pi"`
 
 4. modify your zigbee2mqtt config to adjust new SYMLINK name:
-'nano /opt/zigbee2mqtt/data/configuration.yaml'
+`nano /opt/zigbee2mqtt/data/configuration.yaml`
 
-'…
+`…
 serial:
   port: /dev/ttyUSB.CC2531-01
-…'
+…`
 
 After reboot your dedvice will have the right permissions and always the same name.
 
