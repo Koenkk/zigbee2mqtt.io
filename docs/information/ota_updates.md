@@ -7,6 +7,7 @@ This feature allows to update your Zigbee devices over-the-air.
 
 Not all manufacturers make their updates available, therefore only the following devices support it:
 - IKEA TRÅDFRI devices
+- Salus SP600 Smart plug
 
 Zigbee2mqtt automatically checks if updates are available for your devices.
 In case an update is available it will publish `zigbee2mqtt/[DEVICE_FRIENLDY_NAME]` payload `{"update_available": true}`.
