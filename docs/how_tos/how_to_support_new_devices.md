@@ -89,10 +89,20 @@ Now update your device in `node_modules/zigbee-herdsman-converters/devices.js` w
 
 Repeat until your device does not produce any more log messages like: `2018-5-1 18:19:41 WARN No converter available for 'WSDCGQ01LM' with....`
 
-### 4. (Optional) Add home assistant configuration for your device
+### 4. (Optional) Add device to zigbee2mqtt.io documentation
+This step is optional and can be skipped as the device page will automatically be generated on the next Zigbee2mqtt release. Only do it when you e.g. want to a specific pairing instructions for this device.
+
+1. Clone [zigbee2mqtt.io](https://github.com/Koenkk/zigbee2mqtt.io)
+2. Add a markdown file for your device to `docs/devices`, use the `model` property of the `devices.js` file as the filename.
+3. Add a picture (`.jpg`, 150x150) to `docs/images/devices` and link it in file of the previous step.
+4. Create a Pull Request to [zigbee2mqtt.io](https://github.com/Koenkk/zigbee2mqtt.io).
+
+On the next release of Zigbee2mqtt, the documentation will be updated and your device file will be linked in `docs/information/supported_devices.md` automatically.
+
+### 5. (Optional) Add home assistant configuration for your device
 In order to automatically discover this device in home assistant your device needs to be added to `mapping` in `lib/extension/homeassistant.js`.
 
-### 5. Done!
+### 6. Done!
 Now it's time to submit a pull request to [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) so this device is supported out of the box by Zigbee2mqtt. :smiley:
 
 ## Docker
