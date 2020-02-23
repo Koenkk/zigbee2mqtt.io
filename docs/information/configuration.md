@@ -192,7 +192,7 @@ network_key: [1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]
 ```
 
 ## Device specific configuration
-The `configuration.yaml` allows to set device specific configuration. The following options are available.
+The `configuration.yaml` allows to set device specific configuration. This can also be used in combination with groups. The following options are available.
 
 ### All devices
 * `friendly_name`: Used in the MQTT topic of a device. By default this is the device ID (e.g. `0x00128d0001d9e1d2`).
