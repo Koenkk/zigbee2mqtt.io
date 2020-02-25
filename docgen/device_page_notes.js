@@ -566,7 +566,7 @@ Start with bulb on, then off, and then 6 “on’s”, where you kill the light 
     {
         model: [
             'WXKG01LM', 'WSDCGQ01LM', 'RTCGQ01LM', 'MCCGQ01LM', 'WXKG11LM', 'WXKG12LM', 'WSDCGQ11LM', 'RTCGQ11LM',
-            'MCCGQ11LM', 'MFKZQ01LM',
+            'MCCGQ11LM', 'MFKZQ01LM', 'GZCGQ01LM',
         ],
         note: `
 ### Pairing
