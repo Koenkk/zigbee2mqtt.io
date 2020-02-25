@@ -50,7 +50,10 @@ description: "Integrate your ${device.vendor} ${device.model} via Zigbee2mqtt wi
 ## Notes
 
 ${getNotes(device)}
-
+${device.hasOwnProperty('ota') ? `
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+` : ''}
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:

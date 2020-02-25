@@ -22,7 +22,8 @@ description: "Integrate your Xiaomi MCCGQ11LM via Zigbee2mqtt with whatever smar
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
 After this the device will automatically join.
 
-## Recommendation
+
+### Recommendation
 If the contact is being made via a horizontal slide (e.g. the sensor is placed at the top of a sliding door), the sensor may provide three or more messages with conflicting states. To get around this issue, consider using the `debounce` option in your device specific configuration.
 
 E.g. (devices.yaml)

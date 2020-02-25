@@ -566,7 +566,7 @@ Start with bulb on, then off, and then 6 “on’s”, where you kill the light 
     {
         model: [
             'WXKG01LM', 'WSDCGQ01LM', 'RTCGQ01LM', 'MCCGQ01LM', 'WXKG11LM', 'WXKG12LM', 'WSDCGQ11LM', 'RTCGQ11LM',
-            'MCCGQ11LM', 'MFKZQ01LM', 'GZCGQ01LM',
+            'MCCGQ11LM', 'MFKZQ01LM',
         ],
         note: `
 ### Pairing
@@ -706,6 +706,7 @@ experimenting with this option (e.g. \`long_timeout: 2000\`).
     {
         supports: ['temperature', 'humidity', 'pressure', 'brightness', 'color temperature', 'color', 'illuminance'],
         notDescription: ['thermostat'],
+        notModel: ['324131092621'],
         note: `
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
@@ -746,6 +747,7 @@ e.g. \`1\` would add 1 to the pressure reported by the device; default \`0\`.
     },
     {
         supports: ['brightness', 'color temperature', 'color'],
+        notModel: ['324131092621'],
         note: `
 * \`transition\`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to \`0\` (no transition).
@@ -795,6 +797,23 @@ Sets the sensors timeout between last motion detected and sensor reports occupan
     "occupancy_timeout": 0,
 }
 \`\`\`
+`,
+    },
+    {
+        model: ['MCCGQ11LM'],
+        note: `
+### Recommendation
+If the contact is being made via a horizontal slide (e.g. the sensor is placed at the top of a sliding door), the sensor may provide three or more messages with conflicting states. To get around this issue, consider using the \`debounce\` option in your device specific configuration.
+
+E.g. (devices.yaml)
+
+{% raw %}
+\`\`\`yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_sensor
+    debounce: 1
+\`\`\`
+{% endraw %}
 `,
     },
     {
@@ -859,7 +878,7 @@ Decoupled mode allows to turn wired switch into wireless button with separately 
 This might be useful to assign some custom actions to buttons and control relay remotely.
 This command also allows to redefine which button controls which relay for the double switch.
 
-Special topics should be used: \`zigbee2mqtt/[FRIENDLY_NAME]/set\` to modify operation mode.
+Special topics should be used: \`zigbee2mqtt/[FRIENDLY_NAME]/system/set\` to modify operation mode.
 
 Payload:
 \`\`\`js
@@ -878,7 +897,7 @@ Values                | Description
 \`control_right_relay\` | Button directly controls right relay (for double switch)
 \`decoupled\`           | Button doesn't control any relay
 
-\`zigbee2mqtt/[FRIENDLY_NAME]/get\` to read current mode.
+\`zigbee2mqtt/[FRIENDLY_NAME]/system/get\` to read current mode.
 
 Payload:
 \`\`\`js
@@ -903,13 +922,6 @@ When clicking the middle (center) button on the remote it will send a \`{"click"
 it will **also** send a \`{"click": "toggle_hold"}\`. It is not possible to skip the \`toggle\` when the button is hold.
 Also the remote won't send anything when the button is released.
 See [link](https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691885) for more details.
-`,
-    },
-    {
-        model: ['324131092621'],
-        note: `
-### Binding
-If you want to bind the dimmer to a (Hue) lamp you'll have to *[bind it to the lamp through MQTT](../information/binding.html)* and unbind it from the coordinator. Use the dimmer as source and coordinator as target for that.
 `,
     },
     {
