@@ -7,6 +7,7 @@ This feature allows to update your Zigbee devices over-the-air.
 
 Not all manufacturers make their updates available, therefore only the following devices support it:
 - IKEA TRÅDFRI devices
+- Ubysis devices
 - Salus SP600 Smart plug
 - Osram/Ledvance devices (not every firmware is made available by them, in case not you will see the following exception in the log `No image available for ...`)
 
