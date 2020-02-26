@@ -22,7 +22,7 @@ docker run \
    -e TZ=Europe/Amsterdam \
    -v /run/udev:/run/udev:ro \
    --privileged=true \
-   --network=host \
+   --network host \
    koenkk/zigbee2mqtt
 ```
 
