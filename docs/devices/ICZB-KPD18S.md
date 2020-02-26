@@ -12,7 +12,7 @@ description: "Integrate your iCasa ICZB-KPD18S via Zigbee2mqtt with whatever sma
 | Model | ICZB-KPD18S  |
 | Vendor  | iCasa  |
 | Description | Zigbee 3.0 Keypad Pulse 8S |
-| Supports | click |
+| Supports | click, action, brightness, scenes |
 | Picture | ![iCasa ICZB-KPD18S](../images/devices/ICZB-KPD18S.jpg) |
 
 ## Notes
@@ -30,6 +30,14 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    device_class: "battery"
+    value_template: "{{ value_json.battery }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
 
@@ -37,9 +45,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
-    device_class: "battery"
-    value_template: "{{ value_json.battery }}"
+    icon: "mdi:gesture-double-tap"
+    value_template: "{{ value_json.action }}"
 
 sensor:
   - platform: "mqtt"

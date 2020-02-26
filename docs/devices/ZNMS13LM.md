@@ -11,8 +11,8 @@ description: "Integrate your Xiaomi ZNMS13LM via Zigbee2mqtt with whatever smart
 
 | Model | ZNMS13LM  |
 | Vendor  | Xiaomi  |
-| Description | Aqara S2 Lock Pro |
-| Supports | report: open, close, operation |
+| Description | Aqara S2 lock pro |
+| Supports | open, close, operation (reporting only) |
 | Picture | ![Xiaomi ZNMS13LM](../images/devices/ZNMS13LM.jpg) |
 
 ## Notes

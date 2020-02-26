@@ -28,7 +28,7 @@ Decoupled mode allows to turn wired switch into wireless button with separately 
 This might be useful to assign some custom actions to buttons and control relay remotely.
 This command also allows to redefine which button controls which relay for the double switch.
 
-Special topics should be used: `zigbee2mqtt/[FRIENDLY_NAME]/set` to modify operation mode.
+Special topics should be used: `zigbee2mqtt/[FRIENDLY_NAME]/system/set` to modify operation mode.
 
 Payload:
 ```js
@@ -47,7 +47,7 @@ Values                | Description
 `control_right_relay` | Button directly controls right relay (for double switch)
 `decoupled`           | Button doesn't control any relay
 
-`zigbee2mqtt/[FRIENDLY_NAME]/get` to read current mode.
+`zigbee2mqtt/[FRIENDLY_NAME]/system/get` to read current mode.
 
 Payload:
 ```js
