@@ -17,15 +17,7 @@ description: "Integrate your iCasa ICZB-KPD14S via Zigbee2mqtt with whatever sma
 
 ## Notes
 
-
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
-
-* `transition`: Controls the transition time (in seconds) of on/off, brightness,
-color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
-Note that this value is overridden if a `transition` value is present in the MQTT command payload.
-
+None
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

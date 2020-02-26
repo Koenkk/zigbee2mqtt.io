@@ -706,7 +706,7 @@ experimenting with this option (e.g. \`long_timeout: 2000\`).
     {
         supports: ['temperature', 'humidity', 'pressure', 'brightness', 'color temperature', 'color', 'illuminance'],
         notDescription: ['thermostat'],
-        notModel: ['324131092621', 'ICZB-KPD18S'],
+        notModel: ['324131092621', 'ICZB-KPD18S', 'ICZB-KPD14S'],
         note: `
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
@@ -747,7 +747,7 @@ e.g. \`1\` would add 1 to the pressure reported by the device; default \`0\`.
     },
     {
         supports: ['brightness', 'color temperature', 'color'],
-        notModel: ['324131092621', 'ICZB-KPD18S'],
+        notModel: ['324131092621', 'ICZB-KPD18S', 'ICZB-KPD14S'],
         note: `
 * \`transition\`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to \`0\` (no transition).
