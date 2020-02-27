@@ -22,7 +22,6 @@ docker run \
    -e TZ=Europe/Amsterdam \
    -v /run/udev:/run/udev:ro \
    --privileged=true \
-   --network host \
    koenkk/zigbee2mqtt
 ```
 
@@ -30,6 +29,7 @@ docker run \
 * `-v $(pwd)/data:/app/data`: Directory where Zigbee2mqtt stores it configuration
 * `--device=/dev/ttyACM0`: Location of adapter (e.g. CC2531)
 * `-v /run/udev:/run/udev:ro --privileged=true`: is optional, only required for autodetecting the port
+* Optional: in case your MQTT broker is running on `localhost` and is not within the same Docker network as the Zigbee2mqtt container also add `--network host \`.
 
 ## Updating
 To update to the latest Docker image:
