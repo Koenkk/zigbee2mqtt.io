@@ -1,7 +1,7 @@
 ---
 ---
 # OTA updates
-*This is an experimental feature, ongoing discussion can be found here: https://github.com/Koenkk/zigbee2mqtt/issues/2921*
+*This is an experimental feature, ongoing discussion can be found here: [#2921](https://github.com/Koenkk/zigbee2mqtt/issues/2921)*
 
 This feature allows to update your Zigbee devices over-the-air.
 
