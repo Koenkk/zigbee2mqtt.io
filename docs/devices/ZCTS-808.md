@@ -20,7 +20,7 @@ description: "Integrate your Trust ZCTS-808 via Zigbee2mqtt with whatever smart 
 
 ### Pairing
 When pairing the sensor with Zigbee2MQTT,
-keep opening and closing the sensor (pull/insert the sensor parts next to eachother) for 10 seconds,
+keep opening and closing the sensor (pull/insert the sensor parts next to each other) for 10 seconds,
 otherwise device will fall asleep before it gets fully configured and will not send state changes.
 
 
