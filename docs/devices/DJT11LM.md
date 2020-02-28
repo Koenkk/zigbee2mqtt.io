@@ -30,7 +30,7 @@ The `strength` value, which is reported every 300 seconds after vibration is det
 
 ### Sensitivity
 The sensitivity can be changed by publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set`
-`{"sensitivity": "SENSITIVITY"}` where `SENSITVITIY` is one of the following
+`{"sensitivity": "SENSITIVITY"}` where `SENSITIVITY` is one of the following
 values: `low`, `medium`,  `high`.
 
 

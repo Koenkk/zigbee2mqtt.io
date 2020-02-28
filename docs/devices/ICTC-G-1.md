@@ -19,7 +19,7 @@ description: "Integrate your IKEA ICTC-G-1 via Zigbee2mqtt with whatever smart h
 
 
 ### Recommendation
-This device sends multiple messages in short time period with the same payload. It's worth setting `debounce` option with `debounce_ignore: - action` to throttle them without loosing unique action payloads.
+This device sends multiple messages in short time period with the same payload. It's worth setting `debounce` option with `debounce_ignore: - action` to throttle them without losing unique action payloads.
 
 E.g. (devices.yaml)
 
