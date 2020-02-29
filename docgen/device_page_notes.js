@@ -29,16 +29,6 @@ Reset of device is done by holding button for 20 secs until it starts to flash g
 `,
     },
     {
-        model: 'E1926',
-        note: `
-### Pairing
-Short press both buttons on the blind (next to battery lid) for 5 seconds, until a white light between both buttons is turned on.
-The device is now awake and ready to pair for 2 minutes.
-
-Keep the CC2531 USB sniffer very close to the blind battery lid, until the white light is turned off (this should mean the pairing is successful).
-`,
-    },
-    {
         model: 'E1766',
         note: `
 ### Pairing
@@ -49,13 +39,13 @@ Now keep the CC2531 USB sniffer very close to the remote for pairing (red light 
 `,
     },
     {
-        model: 'E1757',
+        model: ['E1757', 'E1926'],
         note: `
 ### Pairing
-Short press both buttons on the blind (next to battery lid) for 5 seconds, until a white light between both buttons is turned on.
+It's recommend to first pair the included TRADFRI signal repeater in the room where you want to put the blinds.
+Now press both buttons on the blind (next to battery lid) for 5 seconds until a white light between both buttons is turned on.
 The device is now awake and ready to pair for 2 minutes.
-
-Keep the CC2531 USB sniffer very close to the blind battery lid, until the white light is turned off (this should mean the pairing is successful).
+After that pair the blind by holding the blind battery lid very close to the TRADFRI signal repeater until the white light is turned off (this should mean the pairing is successful).
 `,
     },
     {
