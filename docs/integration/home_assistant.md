@@ -249,6 +249,20 @@ automation:
           entity_id: timer.zigbee_permit_join
       - service: switch.turn_off
         entity_id: switch.zigbee2mqtt_main_join
+  - id: "zigbee2mqtt_create_notification_on_successfull_interview"
+    trigger:
+      platform: mqtt
+      topic: 'zigbee2mqtt/bridge/log'
+    condition:
+      condition: template
+      value_template: '{{trigger.payload_json.type == "pairing" and trigger.payload_json.message == "interview_successful"}}'
+     action:
+      - service: persistent_notification.create
+        data_template:
+          title: Device joined the zigbee2mqtt network
+          message: "Name: {{trigger.payload_json.meta.friendly_name}}, 
+                    Vendor: {{trigger.payload_json.meta.vendor}}, 
+                    Description: {{trigger.payload_json.meta.description}}"
 
 ```
 {% endraw %}
