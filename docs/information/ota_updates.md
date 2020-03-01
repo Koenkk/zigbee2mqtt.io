@@ -26,3 +26,4 @@ The Zigbee2mqtt log will show the progress of the OTA update.
 
 ## Troubleshooting
 - `Device didn't respond to OTA request`: try restarting the device by disconnecting the power.
+- For battery powered devices make sure that the battery is 70%+ as OTA updating is very power consuming.
