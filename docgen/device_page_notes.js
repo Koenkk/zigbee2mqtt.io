@@ -9,7 +9,7 @@ If pairing failed, try the followings:
 - Replacing the batteries of the danalock.
 
 ### App
-This device also come with an iOS app (Android as well but not tested). It is recommanded to do the setups via the app for better control of the lock.
+This device also come with an iOS app (Android as well but not tested). It is recommended to do the setups via the app for better control of the lock.
 `,
     },
     {
@@ -29,16 +29,6 @@ Reset of device is done by holding button for 20 secs until it starts to flash g
 `,
     },
     {
-        model: 'E1926',
-        note: `
-### Pairing
-Short press both buttons on the blind (next to battery lid) for 5 seconds, until a white light between both buttons is turned on.
-The device is now awake and ready to pair for 2 minutes.
-
-Keep the CC2531 USB sniffer very close to the blind battery lid, until the white light is turned off (this should mean the pairing is successful).
-`,
-    },
-    {
         model: 'E1766',
         note: `
 ### Pairing
@@ -49,13 +39,13 @@ Now keep the CC2531 USB sniffer very close to the remote for pairing (red light 
 `,
     },
     {
-        model: 'E1757',
+        model: ['E1757', 'E1926'],
         note: `
 ### Pairing
-Short press both buttons on the blind (next to battery lid) for 5 seconds, until a white light between both buttons is turned on.
+It's recommend to first pair the included TRADFRI signal repeater in the room where you want to put the blinds.
+Now press both buttons on the blind (next to battery lid) for 5 seconds until a white light between both buttons is turned on.
 The device is now awake and ready to pair for 2 minutes.
-
-Keep the CC2531 USB sniffer very close to the blind battery lid, until the white light is turned off (this should mean the pairing is successful).
+After that pair the blind by holding the blind battery lid very close to the TRADFRI signal repeater until the white light is turned off (this should mean the pairing is successful).
 `,
     },
     {
@@ -92,7 +82,7 @@ The E1743 can be bound to groups using [binding](../information/binding).
 It can only be bound to 1 group at a time and cannot be bound to a device.
 
 By default this remote is bound to the default bind group which you first have to unbind it from.
-This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENLDY_NAME]]\` payload \`default_bind_group\`.
+This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENDLY_NAME]]\` payload \`default_bind_group\`.
 `,
     },
     {
@@ -109,7 +99,7 @@ Press and hold the smart group button (button with two bulbs) and wait until the
         note: `
 ### Pairing
 When pairing the sensor with Zigbee2MQTT,
-keep opening and closing the sensor (pull/insert the sensor parts next to eachother) for 10 seconds,
+keep opening and closing the sensor (pull/insert the sensor parts next to each other) for 10 seconds,
 otherwise device will fall asleep before it gets fully configured and will not send state changes.
 `,
     },
@@ -200,7 +190,7 @@ For the OSRAM Smart+ plug (AB3257001NJ) hold the on/off button until your hear a
 ### Pairing
 After a factory reset the bulb will automatically connect.
 
-Power on and off the bulb 5 times (screw/uscrew the bulb if you don't have a physical switch)
+Power on and off the bulb 5 times (screw/unscrew the bulb if you don't have a physical switch)
 to perform a factory reset.
 As a reset confirmation the bulb will blink 4 times.
 `,
@@ -238,7 +228,7 @@ Devices with Gen 1 Remote don't use Zigbee and can not be paired.
 The Philips LivingColors Remote can not be paired via Zigbee because it only support ZigBee Light Link (ZLL).
 
 To Pair hold Button ON and Bottom Left Key (Favorite 1) on the Remote in Front of the Device until
-the Device Light blinks and lights Orange. If connection was succesfull the Device Light will light Green.
+the Device Light blinks and lights Orange. If connection was successful the Device Light will light Green.
 
 **WARNING**: If you pair your Device to a Zigbee Network which is not using a ZLL Channel
 you can't reset the Device with the Philips LivingColors Remote Gen 3.
@@ -325,7 +315,7 @@ Various Osram/Sylvania LED support setting a default transition when turning a l
 Various Osram/Sylvania LED support remembering their current state in case of power loss, or if a light
 is manually switched off then on. Lights will remember their respective attributes
 (i.e. brightness, color, saturation, etc.).
-NOTE: This must be executed everytime you make changes to a light's attributes for it to then 'remember' it.
+NOTE: This must be executed every time you make changes to a light's attributes for it to then 'remember' it.
 \`\`\`js
 {
     "osram_remember_state": true,            // true, false (boolean)
@@ -419,7 +409,7 @@ Press the button on the device 4 times (until the red light turns on).
         model: ['E1744', 'ICTC-G-1'],
         note: `
 ### Recommendation
-This device sends multiple messages in short time period with the same payload. It's worth setting \`debounce\` option with \`debounce_ignore: - action\` to throttle them without loosing unique action payloads.
+This device sends multiple messages in short time period with the same payload. It's worth setting \`debounce\` option with \`debounce_ignore: - action\` to throttle them without losing unique action payloads.
 
 E.g. (devices.yaml)
 
@@ -454,14 +444,14 @@ To find optimal "smoothness" play with debounce time or if you need all unique r
 The remote can be bound to groups using [binding](../information/binding) since firmware 2.3.014.
 It can only be bound to 1 group at a time. Use the group name as \`TARGET_DEVICE_FRIENDLY_NAME\`.
 By default this remote is bound to the default bind group which you first have to unbind it from.
-This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENLDY_NAME]]\` payload \`default_bind_group\`.
+This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENDLY_NAME]]\` payload \`default_bind_group\`.
 
 #### Note
 This device with old firmware < 2.3.014 does not support binding (limitation of the device). A workaround is to first
 get the group ID where the remote is sending it's commands to and add bulbs to the
 same group ([discussion](https://github.com/Koenkk/zigbee2mqtt/issues/782#issuecomment-514526256)).
 
-1. Pair the IKEA TRADRI remote control to Zigbee2mqtt.
+1. Pair the IKEA TRADFRI remote control to Zigbee2mqtt.
 2. Enable debug logging (log_level: debug) ([documentation](../information/configuration.md)).
 3. You will get log output like this: \`10/3/2019, 9:28:02 AM - debug: Received Zigbee message from '0x90fd9ffffe90d778'
 of type 'commandToggle' with data '{}' from endpoint 1 with groupID 57173\`.
@@ -508,7 +498,7 @@ While pairing the LED is flashing/dimming slowly. Once the pairing is finished, 
         model: ['BASICZBR3'],
         note: `
 ### Pairing
-If brand new, when powered on it will attempt to pair to Zigbee2mqtt automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the (relay) button on the top for about 5 seconds until the relay cliks and the red LED flashes several times. The device will then go into pairing mode and the blue LED will begin to flash. When connected, the blue LED will turn on solid. It should then be connected to Zigbee2mqtt. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
+If brand new, when powered on it will attempt to pair to Zigbee2mqtt automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the (relay) button on the top for about 5 seconds until the relay clicks and the red LED flashes several times. The device will then go into pairing mode and the blue LED will begin to flash. When connected, the blue LED will turn on solid. It should then be connected to Zigbee2mqtt. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
 `,
     },
     {
@@ -759,13 +749,13 @@ Note that this value is overridden if a \`transition\` value is present in the M
         note: `
 ### Sensitivity
 The sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
-\`{"sensitivity": "SENSITIVITY"}\` where \`SENSITVITIY\` is one of the following
+\`{"sensitivity": "SENSITIVITY"}\` where \`SENSITIVITY\` is one of the following
 values: \`low\`, \`medium\`,  \`high\`.
 
 ### Self-test
 A self-test can be trigged by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
 \`{"selftest": ""}\`.
-If the selftest is executed succesfully you will hear the device beep in 30 seconds.
+If the selftest is executed successfully you will hear the device beep in 30 seconds.
 `,
     },
     {
@@ -773,7 +763,7 @@ If the selftest is executed succesfully you will hear the device beep in 30 seco
         note: `
 ### Sensitivity
 The sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
-\`{"sensitivity": "SENSITIVITY"}\` where \`SENSITVITIY\` is one of the following
+\`{"sensitivity": "SENSITIVITY"}\` where \`SENSITIVITY\` is one of the following
 values: \`low\`, \`medium\`,  \`high\`.
 
 `,
@@ -783,10 +773,10 @@ values: \`low\`, \`medium\`,  \`high\`.
         note: `
 ### Motion sensitivity
 The motion sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
-\`{"motion_sensitivity": "SENSITIVITY"}\` where \`SENSITVITIY\` is one of the following
+\`{"motion_sensitivity": "SENSITIVITY"}\` where \`SENSITIVITY\` is one of the following
 values: \`low\`,  \`medium\`,  \`high\` (default).
 
-### Occupany timeout
+### Occupancy timeout
 Sets the sensors timeout between last motion detected and sensor reports occupance false
 \`\`\`js
 {
@@ -834,7 +824,7 @@ To reset it into pairing mode power-cycle it three times as follows:
         model: ['IM6001-MPP01'],
         note: `
 ### Pairing
-When pairing, make sure to keep the sensor awake for 20 seconds by openinig and closing the contact
+When pairing, make sure to keep the sensor awake for 20 seconds by opening and closing the contact
 every second.
     `,
     },
@@ -954,7 +944,7 @@ By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes c
 
 You can send a subset of options, all options that won't be specified will be revered to default.
 
-After changing \`reverse_direction\` you will need to fully open and fully close the curtain so the motor will redetect edges. \`reverse_direction\` will get new state only after this recalibration.
+After changing \`reverse_direction\` you will need to fully open and fully close the curtain so the motor will re-detect edges. \`reverse_direction\` will get new state only after this recalibration.
 `,
     },
     {
@@ -993,7 +983,7 @@ Current heating setpoint is also modified when occupied or unoccupied heating se
 
 *System mode*
 
-The system mode will be either \`off\`, \`auto\`, or \`heat\`. When set to \`heat\` the boost host flags will be set, when using \`off\` the window_open hostflag will be set (and off will be displayed on the display).
+The system mode will be either \`off\`, \`auto\`, or \`heat\`. When set to \`heat\` the boost host flags will be set, when using \`off\` the window_open host flag will be set (and off will be displayed on the display).
 
 *Eurotronic host flags*
 

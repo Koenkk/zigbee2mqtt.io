@@ -1,7 +1,7 @@
 ---
 ---
 # OTA updates
-*This is an experimental feature, ongoing discussion can be found here: https://github.com/Koenkk/zigbee2mqtt/issues/2921*
+*This is an experimental feature, ongoing discussion can be found here: [#2921](https://github.com/Koenkk/zigbee2mqtt/issues/2921)*
 
 This feature allows to update your Zigbee devices over-the-air.
 
@@ -26,3 +26,4 @@ The Zigbee2mqtt log will show the progress of the OTA update.
 
 ## Troubleshooting
 - `Device didn't respond to OTA request`: try restarting the device by disconnecting the power.
+- For battery powered devices make sure that the battery is 70%+ as OTA updating is very power consuming.

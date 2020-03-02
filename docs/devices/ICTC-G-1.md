@@ -19,7 +19,7 @@ description: "Integrate your IKEA ICTC-G-1 via Zigbee2mqtt with whatever smart h
 
 
 ### Recommendation
-This device sends multiple messages in short time period with the same payload. It's worth setting `debounce` option with `debounce_ignore: - action` to throttle them without loosing unique action payloads.
+This device sends multiple messages in short time period with the same payload. It's worth setting `debounce` option with `debounce_ignore: - action` to throttle them without losing unique action payloads.
 
 E.g. (devices.yaml)
 
@@ -106,6 +106,14 @@ sensor:
     icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.update_available}}"
 ```
 {% endraw %}
 
