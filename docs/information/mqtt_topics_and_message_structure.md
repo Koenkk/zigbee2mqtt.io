@@ -40,6 +40,7 @@ zigbee2mqtt will output log to this endpoint. Message are always in the form of 
 * `"groups"`: a list of all groups, this message can be triggered by sending a message to `zigbee2mqtt/bridge/config/groups` (payload doesn't matter).
 * `"zigbee_publish_error"`: logged when a Zigbee publish errors occurs, contains the error and metadata containing the device and command.
 * `"ota_update"`: logs related to OTA updates
+* `"touchlink"`: logs related to TouchLink
 
 ## zigbee2mqtt/bridge/config/devices/get
 Allows you to retrieve all connected devices. Publish an empty payload to this topic. Response will be published to `zigbee2mqtt/bridge/config/devices`.
