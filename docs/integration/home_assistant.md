@@ -256,7 +256,7 @@ automation:
     condition:
       condition: template
       value_template: '{{trigger.payload_json.type == "pairing" and trigger.payload_json.message == "interview_successful"}}'
-     action:
+    action:
       - service: persistent_notification.create
         data_template:
           title: Device joined the zigbee2mqtt network
