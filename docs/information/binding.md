@@ -36,6 +36,8 @@ To do this execute the following steps:
 3. Bind the remote to the group by sending the following MQTT message. If this fails it might be because the remote is sleeping. This can be fixed by waking it up right before sending the MQTT message. To wake it up press a button on the remote.
     - `zigbee2mqtt/bridge/bind/my_remote` with payload `my_group`
 
+Note: It may be needed to perform first an OTA update and after succesfull upgrade, un-pair and re-pair the remote and try the binding commands. https://github.com/Koenkk/zigbee2mqtt/issues/782#issuecomment-593781667
+
 ## Devices
 Not all devices support this, it basically comes down to the Zigbee implementation of the device itself. Check the device specific page for more info (can be reached via the supported devices page)
 
