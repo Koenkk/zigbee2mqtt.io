@@ -109,11 +109,11 @@ advanced:
 
 # Optional: experimental options
 experimental:
-  # Optional: MQTT output type: json, attribute or json_and_attribute (default: shown below)
+  # Optional: MQTT output type: json, attribute or attribute_and_json (default: shown below)
   # Examples when 'state' of a device is published
   # json: topic: 'zigbee2mqtt/my_bulb' payload '{"state": "ON"}'
   # attribute: topic 'zigbee2mqtt/my_bulb/state' payload 'ON"
-  # json_and_attribute: both json and attribute (see above)
+  # attribute_and_json: both json and attribute (see above)
   output: 'json'
 
 # Optional: networkmap options
