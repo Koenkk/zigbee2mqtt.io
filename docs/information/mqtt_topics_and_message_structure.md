@@ -18,6 +18,7 @@ zigbee2mqtt will output log to this endpoint. Message are always in the form of 
 * `"device_connected"`: sent when a new device connects to the network.
 * `"device_ban"`: sent when a device is banned from the network.
 * `"device_ban_failed"`: sent when request to ban a device failed.
+* `"device_announced"`: sent when a device announces itself on the network.
 * `"device_removed"`: sent when a device is removed from the network.
 * `"device_removed_failed"`: sent when request to remove a device failed.
 * `"device_force_removed"`: sent when a device is removed from the network using the _forced_ mode.
