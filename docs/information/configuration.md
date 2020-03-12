@@ -34,6 +34,9 @@ mqtt:
   include_device_information: true
   # Optional: MQTT keepalive in seconds (default: 60)
   keepalive: 60
+  # Optional: MQTT protocol version (default: 4), set this to 5 if you
+  # use the 'retention' device specific configuration
+  version: 4
 
 # Required: serial settings
 serial:
@@ -197,6 +200,7 @@ The `configuration.yaml` allows to set device specific configuration. This can a
 ### All devices
 * `friendly_name`: Used in the MQTT topic of a device. By default this is the device ID (e.g. `0x00128d0001d9e1d2`).
 * `retain`: Retain MQTT messages of this device (default `false`).
+* `retention`: Sets the MQTT Message Expiry (default: not enabled). Make sure to set `mqtt.version` to `5` (see `mqtt` configuration above)
 * `qos`: QoS level for MQTT messages of this device. [What is QoS?](https://www.npmjs.com/package/mqtt#about-qos)
 * `homeassistant`: Allows to override values of the Home Assistant discovery payload. See example below.
 * `debounce`: Debounces messages of this device. When setting e.g. `debounce: 1` and a message from a device is received, zigbee2mqtt will not immediately publish this message but combine it with other messages received in that same second of that device. This is handy for e.g. the `WSDCGQ11LM` which publishes humidity, temperature and pressure at the same time but as 3 different messages.
