@@ -50,7 +50,7 @@ description: "Integrate your ${device.vendor} ${device.model} via Zigbee2mqtt wi
 ## Notes
 
 ${getNotes(device)}
-${device.hasOwnProperty('ota') ? `
+${device.hasOwnProperty('ota') && ['AC01353010G'].includes(device.model) === false ? `
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 ` : ''}
