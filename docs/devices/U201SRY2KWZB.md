@@ -1,19 +1,19 @@
 ---
-title: "Smart9 S9TSZGB control via MQTT"
-description: "Integrate your Smart9 S9TSZGB via Zigbee2mqtt with whatever smart home
+title: "Schneider Electric U201SRY2KWZB control via MQTT"
+description: "Integrate your Schneider Electric U201SRY2KWZB via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/S9TSZGB.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/U201SRY2KWZB.md)*
 
-# Smart9 S9TSZGB
+# Schneider Electric U201SRY2KWZB
 
-| Model | S9TSZGB  |
-| Vendor  | Smart9  |
-| Description | Touch switch |
-| Supports | action |
-| Picture | ![Smart9 S9TSZGB](../images/devices/S9TSZGB.jpg) |
+| Model | U201SRY2KWZB  |
+| Vendor  | Schneider Electric  |
+| Description | Ulti 240V 9.1 A 1 gang relay switch impress switch module, amber LED |
+| Supports | on/off |
+| Picture | ![Schneider Electric U201SRY2KWZB](../images/devices/U201SRY2KWZB.jpg) |
 
 ## Notes
 
@@ -26,12 +26,14 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
-sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:gesture-double-tap"
-    value_template: "{{ value_json.action }}"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
 
 sensor:
   - platform: "mqtt"

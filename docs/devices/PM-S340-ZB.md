@@ -11,7 +11,7 @@ description: "Integrate your Dawon DNS PM-S340-ZB via Zigbee2mqtt with whatever 
 
 | Model | PM-S340-ZB  |
 | Vendor  | Dawon DNS  |
-| Description | IOT smart switch 3Gang |
+| Description | IOT smart switch 3 gang |
 | Supports | on/off |
 | Picture | ![Dawon DNS PM-S340-ZB](../images/devices/PM-S340-ZB.jpg) |
 
@@ -26,7 +26,7 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
-light:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
@@ -35,7 +35,7 @@ light:
     value_template: "{{ value_json.state_top }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/top/set"
 
-light:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
@@ -44,7 +44,7 @@ light:
     value_template: "{{ value_json.state_center }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/center/set"
 
-light:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"

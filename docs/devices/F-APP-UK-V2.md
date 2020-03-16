@@ -11,8 +11,8 @@ description: "Integrate your SmartThings F-APP-UK-V2 via Zigbee2mqtt with whatev
 
 | Model | F-APP-UK-V2  |
 | Vendor  | SmartThings  |
-| Description | Outlet UK |
-| Supports | on/off |
+| Description | Zigbee Outlet UK with power meter |
+| Supports | on/off, power measurement |
 | Picture | ![SmartThings F-APP-UK-V2](../images/devices/F-APP-UK-V2.jpg) |
 
 ## Notes
@@ -34,6 +34,14 @@ switch:
     payload_on: "ON"
     value_template: "{{ value_json.state }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "W"
+    icon: "mdi:factory"
+    value_template: "{{ value_json.power }}"
 
 sensor:
   - platform: "mqtt"

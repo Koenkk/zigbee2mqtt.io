@@ -11,7 +11,7 @@ description: "Integrate your Dawon DNS PM-S140-ZB via Zigbee2mqtt with whatever 
 
 | Model | PM-S140-ZB  |
 | Vendor  | Dawon DNS  |
-| Description | IOT smart switch 1Gang |
+| Description | IOT smart switch 1 gang |
 | Supports | on/off |
 | Picture | ![Dawon DNS PM-S140-ZB](../images/devices/PM-S140-ZB.jpg) |
 
@@ -26,7 +26,7 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
-light:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"

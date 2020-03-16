@@ -13,6 +13,17 @@ This device also come with an iOS app (Android as well but not tested). It is re
 `,
     },
     {
+        model: '3RSS007Z',
+        note: `
+### Pairing mode
+To put the device in pairing mode, hold the switch's button for 30 seconds until LED starts blinking fast (2 blinks per second)
+
+### Swap ON/OFF
+If the switch is showing off when it is actually on, hold the button till the LED comes on then release, it will change the switch position while keeping the current state.
+
+`,
+    },
+    {
         model: 'DL15S-1BZ',
         note: `
 ### Pairing
