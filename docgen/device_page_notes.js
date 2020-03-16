@@ -22,6 +22,46 @@ Note: This device doesn't support Zigbee channels 25 & 26.
 `,
     },
     {
+        model: 'C4',
+        note: `
+### General
+The ubisys C4 remote control unit seems to be primarily targeted to be directly bound to other ZigBee devices to control them. Therefore it does not emit plain "click" events or similar but can be configured to send ZigBee commands like on, off, toggle, cover up, cover down etc. from up to 6 endpoints (4 with on/off, level and scene clusters for lights and another 2 to control window covering devices).
+When used with Zigbee2mqtt all endpoints get bound to the coordinator automatically. Therefore all actions will be sent to the coordinator and forwarded to MQTT in addition to being sent directly via ZigBee to other devices that have potentially been bound manually (see [Binding](../information/binding.html) for more information).
+In it's factory reset configuration an ubisys C4 just sends a toggle command (originating from endpoints 1 to 4 respectively) for each input. Therefore basic keypresses on attached momentary switches can be processed through Zigbee2mqtt even without further input configuration.
+
+
+### Configuring Inputs
+By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` the following device attributes can be set to configure inputs:
+\`\`\`json
+{
+    "configure_device_setup": {
+        "inputConfigurations": [0, 0, 0, 0],
+        "inputActions": [
+            [0, 13, 1, 6, 0, 2],
+            [1, 13, 2, 6, 0, 2],
+            [2, 13, 3, 6, 0, 2],
+            [3, 13, 4, 6, 0, 2]
+        ]
+    }
+}
+\`\`\`
+For further details on these attributes please take a look at the
+[ubisys C4 Technical Reference Manual](https://www.ubisys.de/wp-content/uploads/ubisys-c4-technical-reference.pdf),
+chapter "7.8.5. Device Setup Cluster (Server)" and the "ZigBee Device Physical Input Configurations Integrator's Guide" (which can be obtained directly from ubisys upon request).
+Please note that there seems to be a size limit on the amount of data that can successfullly be written to \`inputActions\`, so not all configurations theoretically possbile might work in reality.
+
+By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/get/configure_device_setup\` the values of the configuration attributes can
+also be read back from the device and be printed to the normal zigbee2mqtt log.
+`,
+    },
+    {
+        model: ['D1', 'J1', 'S1', 'S2'],
+        note: `
+### Configuring Inputs
+In case the inputs need to be reconfigured (e.g. to use stationary switches instead of momentary ones) this can be done in the same way as [it is being done for the ubisys C4](C4.html#configuring-inputs).
+`,
+    },
+    {
         model: '3RSS008Z',
         note: `
 ### Pairing
@@ -773,6 +813,7 @@ The sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/se
 \`{"sensitivity": "SENSITIVITY"}\` where \`SENSITIVITY\` is one of the following
 values: \`low\`, \`medium\`,  \`high\`.
 
+After setting the sensitivity you immediately have to start pressing the reset button with an interval of 1 second until you see Zigbee2mqtt publishing the new sensitivity to MQTT.
 `,
     },
     {
