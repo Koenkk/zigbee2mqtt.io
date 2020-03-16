@@ -107,6 +107,10 @@ advanced:
   homeassistant_discovery_topic: 'homeassistant'
   # Optional: Home Assistant status topic (default: shown below)
   homeassistant_status_topic: 'hass/status'
+  # Optional: Home Assistant legacy triggers (default: shown below), when enabled:
+  # - Zigbee2mqt will send an empty 'action' or 'click' after one has been send
+  # - A 'sensor_action' and 'sensor_click' will be discoverd
+  homeassistant_legacy_triggers: true
   # Optional: log timestamp format (default: shown below)
   timestamp_format: 'YYYY-MM-DD HH:mm:ss'
 
