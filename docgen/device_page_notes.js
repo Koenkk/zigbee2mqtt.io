@@ -24,7 +24,7 @@ Note: This device doesn't support Zigbee channels 25 & 26.
     {
         model: '3RSS008Z',
         note: `
-### Pairing mode
+### Pairing
 To put the device in pairing mode, hold the switch's button for 30 seconds until LED starts blinking fast (2 blinks per second)
 `,
     },
@@ -1333,11 +1333,16 @@ tz.thermostat_relay_status_log_rsp
     {
         model: 'HS1SA-M',
         note: `
+### Pairing
+
+Press the side button of the device with a paper clip for more than 2 seconds. The main button led will flash. Then make sure the device is awake during pairing phase or the configuration may fail. To ensure device is awake press the main button every 2 seconds until configuration is done in zigbee2mqtt logs.
+
 ### Important
 There are 3 versions of this device: Standalone, Zigbee and Z-wave. These are visualy identical. Make sure to get the correct version that will work with zigbee2mqtt:
 
 Supported:
 - **HS1SA-M : Zigbee**
+- **HS1SA-N : Zigbee**
 
 Unsupported:
 - HS1SA : Standalone
