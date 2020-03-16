@@ -22,6 +22,13 @@ Note: This device doesn't support Zigbee channels 25 & 26.
 `,
     },
     {
+        model: '3RSS008Z',
+        note: `
+### Pairing mode
+To put the device in pairing mode, hold the switch's button for 30 seconds until LED starts blinking fast (2 blinks per second)
+`,
+    },
+    {
         model: 'HGZB-41',
         note: `
 ### Pairing
