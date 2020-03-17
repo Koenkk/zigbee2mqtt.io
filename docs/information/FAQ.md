@@ -102,6 +102,15 @@ By pressing the reset button on the CC2531 the green LED should go off.
 The CC2531 has 2 buttons on it, the reset button is the one which is closest to the USB port.
 Now try starting Zigbee2mqtt again.
 
+### CC26XR1 LaunchPad coordinators only: verify that you have the correct revision
+The revision of your board can be seen in UniFlash by clicking *more info* in the top, now press *Read device info*.
+
+The correct revision is: **E** like shown below.
+
+![cc26xr1_revision](../images/cc26xr1_revision.png)
+
+All earlier version are not supported (these are development boards). Return this board to the seller immidiately.
+
 ## I read that zigbee2mqtt has a limit of 20 devices, is this true?
 Definitely not! Example given: the default Zigbee2mqtt CC2531 firmware indeed supports 20 devices connected **directly** to the coordinator. However, by having routers in your network the network size can be extended. Probably all AC powered devices e.g. bulbs serve as a router, you can even use another [CC2530/CC2531 as a router](../information/cc_sniffer_devices.md) (which has a limit of 21 devices).
 
