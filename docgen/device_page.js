@@ -46,7 +46,7 @@ description: "Integrate your ${device.vendor} ${device.model} via Zigbee2mqtt wi
 | Description | ${device.description} |
 | Supports | ${device.supports} |
 | Picture | ![${device.vendor} ${device.model}](${image}) |
-
+${device.whiteLabel ? `| White-label | ${device.whiteLabel.map((d) => `${d.vendor} ${d.model}`).join(', ')} |\n` : ''}
 ## Notes
 
 ${getNotes(device)}

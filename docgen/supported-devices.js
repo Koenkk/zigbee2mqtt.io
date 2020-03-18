@@ -2,7 +2,25 @@
  * This script generates the supported devices page.
  */
 
-const devices = require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices;
+const devices = [...require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices];
+
+for (const device of devices) {
+    if (device.whiteLabel) {
+        for (const whiteLabel of device.whiteLabel) {
+            const whiteLabelDevice = {
+                ...device,
+                model: whiteLabel.model,
+                vendor: whiteLabel.vendor,
+                whiteLabelOf: device,
+            };
+
+            delete whiteLabelDevice.whiteLabel;
+
+            devices.push(whiteLabelDevice);
+        }
+    }
+}
+
 const utils = require('./utils');
 
 function onlyUnique(value, index, self) {
@@ -47,9 +65,14 @@ const generateTable = (devices) => {
     text += '| ------------- | ------------- | -------------------------- |\n';
     devices = new Map(devices.map((d) => [d.model, d]));
     devices.forEach((d) => {
-        const image = utils.getImage(d.model);
+        const model = d.whiteLabelOf ? d.whiteLabelOf.model : d.model;
+        const image = utils.getImage(model);
+        let description = d.description;
+        if (d.whiteLabelOf) {
+            description = `${description} (white-label of ${d.whiteLabelOf.vendor} ${d.whiteLabelOf.model})`;
+        }
         // eslint-disable-next-line
-        text += `| [${d.model}](../devices/${utils.normalizeModel(d.model)}.md) | ${d.vendor} ${d.description} (${d.supports}) | ![${image}](${image}) |\n`;
+        text += `| [${d.model}](../devices/${utils.normalizeModel(model)}.md) | ${d.vendor} ${description} (${d.supports}) | ![${image}](${image}) |\n`;
     });
 
     return text;

@@ -34,6 +34,9 @@ mqtt:
   include_device_information: true
   # Optional: MQTT keepalive in seconds (default: 60)
   keepalive: 60
+  # Optional: MQTT protocol version (default: 4), set this to 5 if you
+  # use the 'retention' device specific configuration
+  version: 4
 
 # Required: serial settings
 serial:
@@ -104,6 +107,10 @@ advanced:
   homeassistant_discovery_topic: 'homeassistant'
   # Optional: Home Assistant status topic (default: shown below)
   homeassistant_status_topic: 'hass/status'
+  # Optional: Home Assistant legacy triggers (default: shown below), when enabled:
+  # - Zigbee2mqt will send an empty 'action' or 'click' after one has been send
+  # - A 'sensor_action' and 'sensor_click' will be discoverd
+  homeassistant_legacy_triggers: true
   # Optional: log timestamp format (default: shown below)
   timestamp_format: 'YYYY-MM-DD HH:mm:ss'
 
@@ -197,11 +204,13 @@ The `configuration.yaml` allows to set device specific configuration. This can a
 ### All devices
 * `friendly_name`: Used in the MQTT topic of a device. By default this is the device ID (e.g. `0x00128d0001d9e1d2`).
 * `retain`: Retain MQTT messages of this device (default `false`).
+* `retention`: Sets the MQTT Message Expiry (default: not enabled). Make sure to set `mqtt.version` to `5` (see `mqtt` configuration above)
 * `qos`: QoS level for MQTT messages of this device. [What is QoS?](https://www.npmjs.com/package/mqtt#about-qos)
 * `homeassistant`: Allows to override values of the Home Assistant discovery payload. See example below.
 * `debounce`: Debounces messages of this device. When setting e.g. `debounce: 1` and a message from a device is received, zigbee2mqtt will not immediately publish this message but combine it with other messages received in that same second of that device. This is handy for e.g. the `WSDCGQ11LM` which publishes humidity, temperature and pressure at the same time but as 3 different messages.
 * `debounce_ignore` Protects unique payload values of specified payload properties from overriding within debounce time. When setting e.g. `debounce: 1` and `debounce_ignore: - action` every payload with unique `action` value will be published. This is handy for e.g. the `E1744` which publishes multiple messages in short time period after one turn and `debounce` option without `debounce_ignore` publishes only last payload with action `rotate_stop`. On the other hand `debounce: 1` with `debounce_ignore: - action` will publish all unique action messages, at least two (e.g. `action: rotate_left` and `action: rotate_stop`)
 * `retrieve_state`: Retrieves the state after setting it. Should only be enabled when the [reporting feature](../information/report.md) does not work for this device.
+* `filtered_attributes`: Allows to prevent certain attributes from being published. When a device would e.g. publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will publish `{"temperature": 10}`.
 
 ### Device type specific
 Some devices support device type specific configuration, e.g. [RTCGQ11LM](../devices/RTCGQ11LM.md). To see if your device has device type specific configuration, visit the device page by going to [Supported devices](../information/supported_devices.md) and clicking on the model number.

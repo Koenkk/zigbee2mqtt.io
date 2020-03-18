@@ -9,8 +9,6 @@ use their documentation*
 
 
 ## MQTT discovery
-**At least Home Assistant >= 0.84 is required!**
-
 **NOTE:** Groups are not auto-discovered, see configuration below.
 
 The easiest way to integrate Zigbee2mqtt with Home Assistant is by
@@ -67,6 +65,31 @@ it is equal to the Zigbee2mqtt `friendly_name`. Is updated if the Zigbee2mqtt `f
 
 ## Responding to button clicks
 To respond to button clicks (e.g. WXKG01LM) you can use one of the following two Home Assistant configurations.
+
+### Via MQTT device trigger (recommended)
+[MQTT device trigger](https://www.home-assistant.io/integrations/device_trigger.mqtt/) is the recommended way to respond to button clicks.
+Note that it atleast requires Home Assistant 0.106.0.
+
+The MQTT device triggers are discovered by Zigbee2mqtt once the event is triggered on the device once.
+
+{% raw %}
+```yaml
+automation:
+  - alias: Respond to button click
+    trigger:
+    - device_id: ad44cabee4c646f493814306aa6446e1
+      discovery_id: 0x000b57fffecb472d action_arrow_left_click
+      domain: mqtt
+      platform: device
+      subtype: arrow_left_click
+      type: action
+    action:
+      entity_id: light.my_bulb_light
+      service: light.toggle
+```
+{% endraw %}
+
+If you only plan to use this and want to disable the *Via Home Assistant entity* integration below, set `homeassistant_legacy_triggers: false` (see [Configuration](../information/configuration.md) for more info).
 
 ### Via Home Assistant entity
 
@@ -260,8 +283,8 @@ automation:
       - service: persistent_notification.create
         data_template:
           title: Device joined the zigbee2mqtt network
-          message: "Name: {{trigger.payload_json.meta.friendly_name}}, 
-                    Vendor: {{trigger.payload_json.meta.vendor}}, 
+          message: "Name: {{trigger.payload_json.meta.friendly_name}},
+                    Vendor: {{trigger.payload_json.meta.vendor}},
                     Description: {{trigger.payload_json.meta.description}}"
 
 ```

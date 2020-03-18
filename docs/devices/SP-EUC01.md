@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi SP-EUC01 via Zigbee2mqtt with whatever smart
 | Model | SP-EUC01  |
 | Vendor  | Xiaomi  |
 | Description | Aqara EU smart plug |
-| Supports | on/off |
+| Supports | on/off, power measurements |
 | Picture | ![Xiaomi SP-EUC01](../images/devices/SP-EUC01.jpg) |
 
 ## Notes
@@ -34,6 +34,14 @@ switch:
     payload_on: "ON"
     value_template: "{{ value_json.state }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "W"
+    icon: "mdi:factory"
+    value_template: "{{ value_json.power }}"
 
 sensor:
   - platform: "mqtt"

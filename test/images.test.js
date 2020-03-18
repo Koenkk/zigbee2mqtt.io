@@ -8,6 +8,25 @@ const imageBase = path.join(__dirname, '..', 'docs', 'images', 'devices');
 const replaceByDash = [new RegExp('/', 'g'), new RegExp(':', 'g'), new RegExp(' ', 'g')];
 
 describe('Device images', () => {
+    it('Shouldnt only contain images of supported device', () => {
+        const pictures = devices.map((d) => {
+            let image = d.model;
+            replaceByDash.forEach((r) => image = image.replace(r, '-'));
+            image = `${image}.jpg`;
+            return image;
+        });
+
+        for (const file of fs.readdirSync(imageBase)) {
+            if (['.DS_Store'].includes(file)) {
+                continue;
+            }
+
+            if (!pictures.includes(file)) {
+                chai.assert.fail(`${file} in images directory but is not supported`);
+            }
+        }
+    });
+
     it('All devices should have an image in jpg format', () => {
         const missing = [];
 

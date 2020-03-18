@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG12LM via Zigbee2mqtt with whatever smart
 | Model | QBKG12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara double key wired wall switch |
-| Supports | on/off, power measurement |
+| Supports | on/off, power measurement, temperature |
 | Picture | ![Xiaomi QBKG12LM](../images/devices/QBKG12LM.jpg) |
 
 ## Notes
@@ -21,6 +21,16 @@ description: "Integrate your Xiaomi QBKG12LM via Zigbee2mqtt with whatever smart
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
+
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+
+* `temperature_precision`: Controls the precision of `temperature` values,
+e.g. `0`, `1` or `2`; default `2`.
+* `temperature_calibration`: Allows to manually calibrate temperature values,
+e.g. `1` would add 1 degree to the temperature reported by the device; default `0`.
 
 
 ### Decoupled mode
@@ -103,6 +113,14 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "°C"
+    device_class: "temperature"
+    value_template: "{{ value_json.temperature }}"
 
 sensor:
   - platform: "mqtt"

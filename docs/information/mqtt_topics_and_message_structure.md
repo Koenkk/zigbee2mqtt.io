@@ -18,6 +18,7 @@ zigbee2mqtt will output log to this endpoint. Message are always in the form of 
 * `"device_connected"`: sent when a new device connects to the network.
 * `"device_ban"`: sent when a device is banned from the network.
 * `"device_ban_failed"`: sent when request to ban a device failed.
+* `"device_announced"`: sent when a device announces itself on the network.
 * `"device_removed"`: sent when a device is removed from the network.
 * `"device_removed_failed"`: sent when request to remove a device failed.
 * `"device_force_removed"`: sent when a device is removed from the network using the _forced_ mode.
@@ -25,7 +26,9 @@ zigbee2mqtt will output log to this endpoint. Message are always in the form of 
 * `"device_banned"`: sent when a device is banned from the network.
 * `"device_whitelisted"`: sent when a device is whitelisted from the network.
 * `"device_renamed"`: sent when a device is renamed.
-* `"group_renamed"`: sent when a device is renamed.
+* `"group_renamed"`: sent when a group is renamed.
+* `"group_added"`: sent when a group is added.
+* `"group_removed"`: sent when a group is removed.
 * `"device_bind"`: sent when a device is bound.
 * `"device_unbind"`: sent when a device is unbound.
 * `"device_group_add"`: sent when a device is added to a group.
@@ -38,6 +41,7 @@ zigbee2mqtt will output log to this endpoint. Message are always in the form of 
 * `"groups"`: a list of all groups, this message can be triggered by sending a message to `zigbee2mqtt/bridge/config/groups` (payload doesn't matter).
 * `"zigbee_publish_error"`: logged when a Zigbee publish errors occurs, contains the error and metadata containing the device and command.
 * `"ota_update"`: logs related to OTA updates
+* `"touchlink"`: logs related to TouchLink
 
 ## zigbee2mqtt/bridge/config/devices/get
 Allows you to retrieve all connected devices. Publish an empty payload to this topic. Response will be published to `zigbee2mqtt/bridge/config/devices`.
