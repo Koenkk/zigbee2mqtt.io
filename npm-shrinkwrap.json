@@ -1057,24 +1057,24 @@
       }
     },
     "minimist": {
-      "version": "0.0.8",
-      "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
-      "integrity": "sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=",
+      "version": "1.2.5",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
+      "integrity": "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==",
       "dev": true
     },
     "mkdirp": {
-      "version": "0.5.1",
-      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz",
-      "integrity": "sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=",
+      "version": "0.5.3",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.3.tgz",
+      "integrity": "sha512-P+2gwrFqx8lhew375MQHHeTlY8AuOJSrGf0R5ddkEndUkmwpgUob/vQuBD1V22/Cw1/lJr4x+EjllSezBThzBg==",
       "dev": true,
       "requires": {
-        "minimist": "0.0.8"
+        "minimist": "^1.2.5"
       }
     },
     "mocha": {
-      "version": "7.1.0",
-      "resolved": "https://registry.npmjs.org/mocha/-/mocha-7.1.0.tgz",
-      "integrity": "sha512-MymHK8UkU0K15Q/zX7uflZgVoRWiTjy0fXE/QjKts6mowUvGxOdPhZ2qj3b0iZdUrNZlW9LAIMFHB4IW+2b3EQ==",
+      "version": "7.1.1",
+      "resolved": "https://registry.npmjs.org/mocha/-/mocha-7.1.1.tgz",
+      "integrity": "sha512-3qQsu3ijNS3GkWcccT5Zw0hf/rWvu1fTN9sPvEd81hlwsr30GX2GcDSSoBxo24IR8FelmrAydGC6/1J5QQP4WA==",
       "dev": true,
       "requires": {
         "ansi-colors": "3.2.3",
@@ -1090,7 +1090,7 @@
         "js-yaml": "3.13.1",
         "log-symbols": "3.0.0",
         "minimatch": "3.0.4",
-        "mkdirp": "0.5.1",
+        "mkdirp": "0.5.3",
         "ms": "2.1.1",
         "node-environment-flags": "1.0.6",
         "object.assign": "4.1.0",
@@ -1098,8 +1098,8 @@
         "supports-color": "6.0.0",
         "which": "1.3.1",
         "wide-align": "1.1.3",
-        "yargs": "13.3.0",
-        "yargs-parser": "13.1.1",
+        "yargs": "13.3.2",
+        "yargs-parser": "13.1.2",
         "yargs-unparser": "1.6.0"
       },
       "dependencies": {
@@ -1807,9 +1807,9 @@
       "dev": true
     },
     "yargs": {
-      "version": "13.3.0",
-      "resolved": "https://registry.npmjs.org/yargs/-/yargs-13.3.0.tgz",
-      "integrity": "sha512-2eehun/8ALW8TLoIl7MVaRUrg+yCnenu8B4kBlRxj3GJGDKU1Og7sMXPNm1BYyM1DOJmTZ4YeN/Nwxv+8XJsUA==",
+      "version": "13.3.2",
+      "resolved": "https://registry.npmjs.org/yargs/-/yargs-13.3.2.tgz",
+      "integrity": "sha512-AX3Zw5iPruN5ie6xGRIDgqkT+ZhnRlZMLMHAs8tg7nRruy2Nb+i5o9bwghAogtM08q1dpr2LVoS8KSTMYpWXUw==",
       "dev": true,
       "requires": {
         "cliui": "^5.0.0",
@@ -1821,7 +1821,7 @@
         "string-width": "^3.0.0",
         "which-module": "^2.0.0",
         "y18n": "^4.0.0",
-        "yargs-parser": "^13.1.1"
+        "yargs-parser": "^13.1.2"
       },
       "dependencies": {
         "emoji-regex": {
@@ -1850,9 +1850,9 @@
       }
     },
     "yargs-parser": {
-      "version": "13.1.1",
-      "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-13.1.1.tgz",
-      "integrity": "sha512-oVAVsHz6uFrg3XQheFII8ESO2ssAf9luWuAd6Wexsu4F3OtIW0o8IribPXYrD4WC24LWtPrJlGy87y5udK+dxQ==",
+      "version": "13.1.2",
+      "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-13.1.2.tgz",
+      "integrity": "sha512-3lbsNRf/j+A4QuSZfDRA7HRSfWrzO0YjqTJd5kjAq37Zep1CEgaYmrH9Q3GwPiB9cHyd1Y1UwggGhJGoxipbzg==",
       "dev": true,
       "requires": {
         "camelcase": "^5.0.0",
@@ -1871,8 +1871,8 @@
       }
     },
     "zigbee2mqtt": {
-      "version": "git://github.com/koenkk/zigbee2mqtt.git#11ee61fb1cb438c232de7fd5d2195a74dc7f276f",
-      "from": "git://github.com/koenkk/zigbee2mqtt.git#dev",
+      "version": "git://github.com/koenkk/zigbee2mqtt.git#840b9d966c96ff18d2e08e95914cd1473e2611c9",
+      "from": "git://github.com/koenkk/zigbee2mqtt.git#1.12.0",
       "requires": {
         "ajv": "*",
         "debounce": "*",
@@ -1886,8 +1886,8 @@
         "rimraf": "*",
         "semver": "*",
         "winston": "*",
-        "zigbee-herdsman": "0.12.63",
-        "zigbee-herdsman-converters": "12.0.50"
+        "zigbee-herdsman": "0.12.64",
+        "zigbee-herdsman-converters": "12.0.51"
       },
       "dependencies": {
         "@babel/code-frame": {
@@ -5962,11 +5962,11 @@
           "integrity": "sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus="
         },
         "json5": {
-          "version": "2.1.1",
-          "resolved": "https://registry.npmjs.org/json5/-/json5-2.1.1.tgz",
-          "integrity": "sha512-l+3HXD0GEI3huGq1njuqtzYK8OYJyXMkOLtQ53pjWh89tvWS2h6l+1zMkYWqlb57+SiQodKZyvMEFb2X+KrFhQ==",
+          "version": "2.1.2",
+          "resolved": "https://registry.npmjs.org/json5/-/json5-2.1.2.tgz",
+          "integrity": "sha512-MoUOQ4WdiN3yxhm7NEVJSJrieAo5hNSLQ5sj05OTRHPL9HOBy8u4Bu88jsC1jvqAdN+E1bJmsUcZH+1HQxliqQ==",
           "requires": {
-            "minimist": "^1.2.0"
+            "minimist": "^1.2.5"
           }
         },
         "jsprim": {
@@ -6156,18 +6156,11 @@
           "integrity": "sha512-gbTtiEu8P/GSMh1lAa0YYNr8XIfDzFgnWtetw3Hfz9nw6YXySHNYOZF/uUTgyp8GHvFnNw/EG7VhOkD6zfVb6A=="
         },
         "mkdirp": {
-          "version": "0.5.1",
-          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz",
-          "integrity": "sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=",
+          "version": "0.5.3",
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.3.tgz",
+          "integrity": "sha512-P+2gwrFqx8lhew375MQHHeTlY8AuOJSrGf0R5ddkEndUkmwpgUob/vQuBD1V22/Cw1/lJr4x+EjllSezBThzBg==",
           "requires": {
-            "minimist": "0.0.8"
-          },
-          "dependencies": {
-            "minimist": {
-              "version": "0.0.8",
-              "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
-              "integrity": "sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0="
-            }
+            "minimist": "^1.2.5"
           }
         },
         "moment": {
@@ -8099,9 +8092,9 @@
           }
         },
         "zigbee-herdsman": {
-          "version": "0.12.63",
-          "resolved": "https://registry.npmjs.org/zigbee-herdsman/-/zigbee-herdsman-0.12.63.tgz",
-          "integrity": "sha512-RJ864w1xARtRJTBuMJurGZHkcZ3VCS+J0A/cm8fcDVeSQVtl0rsI8sga5Oy+Sq4UkCoszKEsXirM+rKuDE5AcQ==",
+          "version": "0.12.64",
+          "resolved": "https://registry.npmjs.org/zigbee-herdsman/-/zigbee-herdsman-0.12.64.tgz",
+          "integrity": "sha512-VmXGONwIiBJgmGQVCQToz/lZ64iw7j888OPXqXWEHzoOqvBNFbqGmEfkR/DF6y/3rF5h0p6Rwds3Yb1lFj9kdg==",
           "requires": {
             "debug": "^4.1.1",
             "fast-deep-equal": "^2.0.1",
@@ -16058,9 +16051,9 @@
           }
         },
         "zigbee-herdsman-converters": {
-          "version": "12.0.50",
-          "resolved": "https://registry.npmjs.org/zigbee-herdsman-converters/-/zigbee-herdsman-converters-12.0.50.tgz",
-          "integrity": "sha512-evBHPMLxc0/+sLbOl+wLuCP4tAy38TJ2aC59v+K6iSJz9YzHg7meyOEoSQLcU5AMyfTbZMf+ODlFjPy8rsWpkg==",
+          "version": "12.0.51",
+          "resolved": "https://registry.npmjs.org/zigbee-herdsman-converters/-/zigbee-herdsman-converters-12.0.51.tgz",
+          "integrity": "sha512-0oHwO9eHSizz/M79Yp9+u+YFs2L9f9eDh6grWp5mrmw40ajpcfXj0k2kzWNCFFdOj5M7FR4glAzpUj6SZyyeXA==",
           "requires": {
             "axios": "*",
             "tar-stream": "*"
