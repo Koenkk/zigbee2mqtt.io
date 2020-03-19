@@ -45,6 +45,8 @@ serial:
   port: /dev/ttyACM0
   # Optional: disable LED of the adapter if supported (default: false)
   disable_led: false
+  # Optional: adapter type, not needed unless you are experiencing problems (default: shown below, options: zstack, deconz)
+  adapter: null
 
 # Optional: ban devices from the network (by ieeeAddr) (default: empty)
 ban:
