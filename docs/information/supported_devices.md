@@ -167,8 +167,8 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | [DNCKATSW003](../devices/DNCKATSW003.md) | Custom devices (DiY) [DNCKAT triple key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) (hold/release, on/off) | ![../images/devices/DNCKATSW003.jpg](../images/devices/DNCKATSW003.jpg) |
 | [DNCKATSW004](../devices/DNCKATSW004.md) | Custom devices (DiY) [DNCKAT quadruple key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) (hold/release, on/off) | ![../images/devices/DNCKATSW004.jpg](../images/devices/DNCKATSW004.jpg) |
 | [ZigUP](../devices/ZigUP.md) | Custom devices (DiY) [CC2530 based ZigBee relais, switch, sensor and router](https://github.com/formtapez/ZigUP/) (relais, RGB-stripe, sensors, S0-counter, ADC, digital I/O) | ![../images/devices/ZigUP.jpg](../images/devices/ZigUP.jpg) |
-| [ZWallRemote0](../devices/ZWallRemote0.md) | Custom devices (DiY) Matts Wall Switch Remote (https://github.com/mattlokes/ZWallRemote) (on/off) | ![../images/devices/ZWallRemote0.jpg](../images/devices/ZWallRemote0.jpg) |
-| [DTB190502A1](../devices/DTB190502A1.md) | Custom devices (DiY) [CC2530 based IO Board https://databyte.ch/?portfolio=zigbee-erstes-board-dtb190502a) (switch, buttons) | ![../images/devices/DTB190502A1.jpg](../images/devices/DTB190502A1.jpg) |
+| [ZWallRemote0](../devices/ZWallRemote0.md) | Custom devices (DiY) [Matts Wall Switch Remote](https://github.com/mattlokes/ZWallRemote) (on/off) | ![../images/devices/ZWallRemote0.jpg](../images/devices/ZWallRemote0.jpg) |
+| [DTB190502A1](../devices/DTB190502A1.md) | Custom devices (DiY) [CC2530 based IO Board](https://databyte.ch/?portfolio=zigbee-erstes-board-dtb190502a) (switch, buttons) | ![../images/devices/DTB190502A1.jpg](../images/devices/DTB190502A1.jpg) |
 
 ### DIYRuZ
 
