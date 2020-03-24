@@ -27,7 +27,7 @@ A downloader cable CC2531 ![](https://www.zigbee2mqtt.io/images/downloader_cable
 
 Now insert the usb dongle in an USB port :
 
-![](https://github.com/jmichault/files/blob/master/Raspberry-CC2531.jpg)
+![](https://raw.githubusercontent.com/jmichault/files/master/Raspberry-CC2531.jpg)
 
 4. Test by running :
 
