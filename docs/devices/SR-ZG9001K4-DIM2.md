@@ -17,6 +17,9 @@ description: "Integrate your Sunricher SR-ZG9001K4-DIM2 via Zigbee2mqtt with wha
 
 ## Notes
 
+###Pairing
+
+First reset. Press and hold the upper two buttons for 5 seconds untill led turns blue. Then press the upper "0" 5 times really quickly - practise. Second pair. Press and hold the upper two buttons for 5 seconds again, untill the led turns blue. Then press the "0" once. It should now enter pair mode.
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
