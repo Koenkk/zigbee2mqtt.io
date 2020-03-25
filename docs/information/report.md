@@ -27,6 +27,7 @@ In order for this feature to work, the device has to support it. As devices from
 | Innr            | Y         | Y          | Y     | Y                 |
 | GLEDOPTO        | N         | N          | N     | N                 |
 | OSRAM           | Y         | Y          | N     | N                 | 
+| Müller Light    | N         | N          | N     | N                 |
 
 1. Bulbs on old firmware (date 20170908 or older) do report On/Off
 2. Zigbee2mqtt will manual poll for change if a binding updates the bulb.
