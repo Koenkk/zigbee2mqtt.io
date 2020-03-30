@@ -115,6 +115,8 @@ advanced:
   homeassistant_legacy_triggers: true
   # Optional: log timestamp format (default: shown below)
   timestamp_format: 'YYYY-MM-DD HH:mm:ss'
+  # Optional: configure adapter concurrency (e.g. 2 for CC2531 or 16 for CC26X2R1) (default: null, uses recommended value)
+  adapter_concurrent: null
 
 # Optional: experimental options
 experimental:
