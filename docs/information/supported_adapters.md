@@ -45,6 +45,7 @@ advanced:
 - Can be bought via [Texas Instruments](http://www.ti.com/tool/LAUNCHXL-CC26X2R1)
 - [Flash via UNIFLASH](./flashing_via_uniflash.md)
 - When migrating from another dongle (e.g. CC2531), make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2mqtt won't start.
+- Has UF.L connector for external antenna ([requires resoldering a tiny capacitor (moving C14 to C24)](http://e2e.ti.com/support/wireless-connectivity/zigbee-and-thread/f/158/t/880219?LAUNCHXL-CC26X2R1-Antenna-CC26X2R1)) which could increase range even further.
 - This device has two serial devices built in. Make sure you put the right serial device in the [configuration](configuration.md) or use auto detect if you only have one Texas Instruments CC devices connected to your system.
 
 ### Texas Instruments CC1352P-2
@@ -53,7 +54,8 @@ advanced:
 - USB connected Zigbee adapter.
 - Expensive but **very powerful** ($50), will easily handle networks of 100+ devices.
 - Very good range
-- Only benefit compared to the CC26X2R1 is that it allows an external antenna to be connected ([requires resoldering a tiny capacitor](https://github.com/Koenkk/zigbee2mqtt/issues/2162#issuecomment-570286663)) which could increase range even further.
+- Only benefit compared to the CC26X2R1 is that it is capable of sub-1GHz 
+- Has SMA connector for external antenna ([requires resoldering a tiny capacitor](https://github.com/Koenkk/zigbee2mqtt/issues/2162#issuecomment-570286663)) which could increase range even further.
 - Only available as a development board, therefore it is quite large (it's larger than the CC26X2R1)
 - Has an onboard flasher, no additional hardware required to flash
 - Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin)
