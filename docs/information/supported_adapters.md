@@ -54,7 +54,7 @@ advanced:
 - USB connected Zigbee adapter.
 - Expensive but **very powerful** ($50), will easily handle networks of 100+ devices.
 - Very good range
-- Only benefit compared to the CC26X2R1 is that it is capable of sub-1GHz 
+- Only benefit compared to the CC26X2R1 is that it is capable of sub-1GHz  (for Zigbee2mqtt use-case this makes no difference)
 - Has SMA connector for external antenna ([requires resoldering a tiny capacitor](https://github.com/Koenkk/zigbee2mqtt/issues/2162#issuecomment-570286663)) which could increase range even further.
 - Only available as a development board, therefore it is quite large (it's larger than the CC26X2R1)
 - Has an onboard flasher, no additional hardware required to flash
