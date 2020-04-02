@@ -10,7 +10,7 @@ UNIFLASH can be used to flash certain Texas Instruments MCUs (e.g. CC26X2R1 and 
 ![Erase](../images/uniflash/erase.png)
 5. Go to *Settings & Utilities* -> *Program Load* and select *All Unprotected Sectors*, click *Perform Blank Check*
 ![Load](../images/uniflash/sectors.png)
-6. Go to *Program* -> *Flash Image(s)*, press *Browse* to select the firmware.
+6. Go to *Program* -> *Flash Image(s)*, press *Browse* to select the firmware. Ensure that the path and file name do not contain any spaces (otherwise flashing may fail with "Error! Unable to open file ...").
 7. Now click *Load image* to upload the firmware
 ![Load](../images/uniflash/load.png)
 8. Done!
