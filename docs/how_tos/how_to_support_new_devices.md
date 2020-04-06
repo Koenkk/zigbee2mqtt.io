@@ -111,6 +111,9 @@ To setup a local copy of zigbee-herdsman-converters so that you can modify e.g. 
 ```bash
 cd /opt
 git clone https://github.com/Koenkk/zigbee-herdsman-converters.git
+cd zigbee-herdsman-converters
+npm ci
+cd ..
 # If you also want to add Home Assistant integration for this devices
 wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/lib/extension/homeassistant.js
 ```
