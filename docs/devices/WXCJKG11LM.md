@@ -24,7 +24,7 @@ By default the switch is bound to the coordinator but this device can also be us
 First unbind it from the coordinator, then you can bind it to any other device or group. (see https://www.zigbee2mqtt.io/information/binding.html )
 
 Now change the operation mode of the device, by default it is in `event` mode, but when binding we need to change it to `command` mode.
-To do this send to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"operation_mode": "event"}`, right before doing this make sure to wakeup the device.
+To do this send to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"operation_mode": "command"}`, right before doing this make sure to wakeup the device.
 
 As the device is sleeping by default, you need to wake it up after sending the bind/unbind command by pressing the reset button once.
 
