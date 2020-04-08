@@ -67,7 +67,7 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "W"
-    icon: "mdi:factory"
+    icon: "mdi:flash"
     value_template: "{{ value_json.power }}"
 
 sensor:
@@ -75,7 +75,7 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "A"
-    icon: "mdi:power-plug"
+    icon: "mdi:current-ac"
     value_template: "{{ value_json.current }}"
 
 sensor:
@@ -83,7 +83,7 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "V"
-    icon: "mdi:flash"
+    icon: "mdi:alpha-v"
     value_template: "{{ value_json.voltage }}"
 
 sensor:

@@ -1,19 +1,19 @@
 ---
-title: "HEIMAN HM-900SW_3 control via MQTT"
-description: "Integrate your HEIMAN HM-900SW_3 via Zigbee2mqtt with whatever smart home
+title: "Feibit SLS301ZB_3 control via MQTT"
+description: "Integrate your Feibit SLS301ZB_3 via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HM-900SW_3.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SLS301ZB_3.md)*
 
-# HEIMAN HM-900SW_3
+# Feibit SLS301ZB_3
 
-| Model | HM-900SW_3  |
-| Vendor  | HEIMAN  |
-| Description | Smart switch - 3 gang with neutral wire |
+| Model | SLS301ZB_3  |
+| Vendor  | Feibit  |
+| Description | Smart light switch - 3 gang |
 | Supports | on/off |
-| Picture | ![HEIMAN HM-900SW_3](../images/devices/HM-900SW_3.jpg) |
+| Picture | ![Feibit SLS301ZB_3](../images/devices/SLS301ZB_3.jpg) |
 
 ## Notes
 
