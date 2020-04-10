@@ -21,7 +21,7 @@ The CC2531 USB stick needs to be flashed with a custom firmware. This firmware c
 Credits to [@Frans-Willem](https://github.com/frans-Willem) for majority of instructions.
 
 1. Install prerequisites for [CC-Tool](https://github.com/dashesy/cc-tool) using a package manager (e.g. [Homebrew](https://brew.sh/) for macOS)
-* Ubuntu: dh-autoreconf, libusb-1.0, libboost-all-dev
+* Ubuntu/Debian: dh-autoreconf, libusb-1.0, libboost-all-dev
 * Fedora: dh-autoreconf, boost-devel, libusb1-devel, gcc-c++
 * Archlinux: dh-autoreconf, libusb, boost
 * macOS: brew install autoconf automake libusb boost pkgconfig libtool
@@ -37,7 +37,7 @@ make
 ```
 3. Connect `CC debugger --> Downloader cable CC2531 --> CC2531 USB sniffer`.
 4. Connect **BOTH** the `CC2531 USB sniffer` and the `CC debugger` to your PC using USB.
-5. If the light on the CC debugger is RED, press the Reset button on the CC debugger. The light on the CC debugger should now turn GREEN. If not, follow the [CC debugger user guide](http://www.ti.com/lit/ug/swru197h/swru197h.pdf) to troubleshoot your problem.
+5. If the light on the CC debugger is RED, press the Reset button on the CC debugger. The light on the CC debugger should now turn GREEN. If not, try to reboot and retry or follow the [CC debugger user guide](http://www.ti.com/lit/ug/swru197h/swru197h.pdf) to troubleshoot your problem.
 ![How to connect](../images/connected.jpg)
 6. Download the firmware [CC2531_DEFAULT_20190608.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip).
 7. Flash your firmware:
