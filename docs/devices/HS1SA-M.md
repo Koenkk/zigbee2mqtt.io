@@ -14,6 +14,7 @@ description: "Integrate your HEIMAN HS1SA-M via Zigbee2mqtt with whatever smart 
 | Description | Smoke detector |
 | Supports | smoke |
 | Picture | ![HEIMAN HS1SA-M](../images/devices/HS1SA-M.jpg) |
+| White-label | Wattle HCSMOKEDETECT |
 
 ## Notes
 
