@@ -22,6 +22,8 @@ This is a Zigbee Green Power device which allows it to be very energy efficient.
 Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
 Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
 
+Green Power devices don't support binding and are not included in network scans.
+
 ### Pairing Philips Hue Tap
 This device requires your Zigbee network to run on channel 15, 20 or 25. In order to pair it hold the corresponding button for that channel 10 seconds.
 
