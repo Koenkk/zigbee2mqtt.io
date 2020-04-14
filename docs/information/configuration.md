@@ -147,7 +147,7 @@ map_options:
         inactive: '#994444'
 
 # Optional: Device specific options
-device_options:
+device_options: {}
   # See 'Device specific configuration' below
 ```
 
