@@ -17,6 +17,15 @@ description: "Integrate your Develco SMSZB-120 via Zigbee2mqtt with whatever sma
 
 ## Notes
 
+### Triggering alarm
+This smoke alarm can be triggered manually by sending these commands to it:
+
+To start (Change duration to what you need):
+* `{"warning": {"mode": "burglar", "level": "high", "strobe": false, "duration": 300}}`
+
+To stop:
+* `{"warning": {"mode": "stop", "level": "low", "strobe": false, "duration": 300}}`
+
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
