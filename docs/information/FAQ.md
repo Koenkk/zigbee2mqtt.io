@@ -87,6 +87,31 @@ serial:
 
 After reboot your dedvice will have the right permissions and always the same name.
 
+### Raspberry Pi users: use a good power supply
+A bad power supply can make your system and its USB devices unstable.
+Make sure to use a good power supply.
+
+In case you see message like below when running `dmesg -w` you are using a bad power supply.
+```
+[44870.355590] Under-voltage detected! (0x00050005)
+[44874.515618] Voltage normalised (0x00000000)
+[44880.755718] Under-voltage detected! (0x00050005)
+[44889.075627] Voltage normalised (0x00000000)
+```
+
+### Make sure the extension cable works
+A bad extension cable can lead to connection issues between the system and the adpater.
+Symptoms of this are disconnection messages in the `dmesg -w` log like below.
+
+```
+[44929.156957] usb 1-1.5: USB disconnect, device number 119
+[44929.455555] usb 1-1.5: new full-speed USB device number 120 using dwc_otg
+[44929.604582] usb 1-1.5: New USB device found, idVendor=0451, idProduct=16a8, bcdDevice= 0.09
+[44929.604596] usb 1-1.5: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[44929.604606] usb 1-1.5: Product: TI CC2531 USB CDC
+[44929.604615] usb 1-1.5: Manufacturer: Texas Instruments
+```
+
 ### In case of a CC2530 or CC2531 adapter, verify that don't have a CC2540
 The CC2540 can be confused easily with the CC2531 as it looks (almost) exactly the same. However, this device does not support zigbee but bluetooth. This can be verified by looking at the chip.
 
