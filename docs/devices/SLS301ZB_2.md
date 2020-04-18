@@ -1,19 +1,19 @@
 ---
-title: "HEIMAN HM-900SW_1 control via MQTT"
-description: "Integrate your HEIMAN HM-900SW_1 via Zigbee2mqtt with whatever smart home
+title: "Feibit SLS301ZB_2 control via MQTT"
+description: "Integrate your Feibit SLS301ZB_2 via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HM-900SW_1.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SLS301ZB_2.md)*
 
-# HEIMAN HM-900SW_1
+# Feibit SLS301ZB_2
 
-| Model | HM-900SW_1  |
-| Vendor  | HEIMAN  |
-| Description | Smart switch - 1 gang with neutral wire |
+| Model | SLS301ZB_2  |
+| Vendor  | Feibit  |
+| Description | Smart light switch - 2 gang |
 | Supports | on/off |
-| Picture | ![HEIMAN HM-900SW_1](../images/devices/HM-900SW_1.jpg) |
+| Picture | ![Feibit SLS301ZB_2](../images/devices/SLS301ZB_2.jpg) |
 
 ## Notes
 
@@ -32,8 +32,17 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
-    value_template: "{{ value_json.state }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    value_template: "{{ value_json.state_left }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/left/set"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state_right }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/right/set"
 
 sensor:
   - platform: "mqtt"

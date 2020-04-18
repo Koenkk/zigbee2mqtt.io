@@ -1,19 +1,19 @@
 ---
-title: "Piri HSIO18008 control via MQTT"
-description: "Integrate your Piri HSIO18008 via Zigbee2mqtt with whatever smart home
+title: "Feibit SDM01ZB control via MQTT"
+description: "Integrate your Feibit SDM01ZB via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HSIO18008.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SDM01ZB.md)*
 
-# Piri HSIO18008
+# Feibit SDM01ZB
 
-| Model | HSIO18008  |
-| Vendor  | Piri  |
-| Description | Combustible gas sensor |
-| Supports | gas |
-| Picture | ![Piri HSIO18008](../images/devices/HSIO18008.jpg) |
+| Model | SDM01ZB  |
+| Vendor  | Feibit  |
+| Description | Door or window contact switch |
+| Supports | contact |
+| Picture | ![Feibit SDM01ZB](../images/devices/SDM01ZB.jpg) |
 
 ## Notes
 
@@ -30,19 +30,18 @@ binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    payload_on: true
-    payload_off: false
-    value_template: "{{ value_json.gas }}"
-    device_class: "gas"
+    payload_on: false
+    payload_off: true
+    value_template: "{{ value_json.contact }}"
+    device_class: "door"
 
-binary_sensor:
+sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    payload_on: true
-    payload_off: false
-    value_template: "{{ value_json.battery_low}}"
+    unit_of_measurement: "%"
     device_class: "battery"
+    value_template: "{{ value_json.battery }}"
 
 sensor:
   - platform: "mqtt"

@@ -45,6 +45,8 @@ serial:
   port: /dev/ttyACM0
   # Optional: disable LED of the adapter if supported (default: false)
   disable_led: false
+  # Optional: adapter type, not needed unless you are experiencing problems (default: shown below, options: zstack, deconz)
+  adapter: null
 
 # Optional: ban devices from the network (by ieeeAddr) (default: empty)
 ban:
@@ -74,6 +76,8 @@ advanced:
   log_directory: data/log/%TIMESTAMP%
   # Optional: Log file name, can also contain timestamp, e.g.: zigbee2mqtt_%TIMESTAMP%.log (default: shown below)
   log_file: log.txt
+  # Optional: Log rotation (default: shown below)
+  log_rotation: true
   # Optional: Output location of the log (default: shown below), leave empty to supress logging (log_output: [])
   log_output:
     - console
@@ -113,6 +117,8 @@ advanced:
   homeassistant_legacy_triggers: true
   # Optional: log timestamp format (default: shown below)
   timestamp_format: 'YYYY-MM-DD HH:mm:ss'
+  # Optional: configure adapter concurrency (e.g. 2 for CC2531 or 16 for CC26X2R1) (default: null, uses recommended value)
+  adapter_concurrent: null
 
 # Optional: experimental options
 experimental:

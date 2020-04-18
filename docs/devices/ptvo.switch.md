@@ -12,7 +12,7 @@ description: "Integrate your Custom devices (DiY) ptvo.switch via Zigbee2mqtt wi
 | Model | ptvo.switch  |
 | Vendor  | Custom devices (DiY)  |
 | Description | [Multi-channel relay switch](https://ptvo.info/zigbee-switch-configurable-firmware-router-199/) |
-| Supports | hold, single, double and triple click, on/off |
+| Supports | hold, single, double and triple click, on/off, type, rssi |
 | Picture | ![Custom devices (DiY) ptvo.switch](../images/devices/ptvo.switch.jpg) |
 
 ## Notes

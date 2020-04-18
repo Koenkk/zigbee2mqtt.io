@@ -87,6 +87,13 @@ Reset of device is done by holding button for 20 secs until it starts to flash g
 `,
     },
     {
+        model: 'SR-ZG9001K4-DIM2',
+        note: `
+### Pairing
+First reset. Press and hold the upper two buttons for 5 seconds untill led turns blue. Then press the upper "0" 5 times really quickly - practise. Second pair. Press and hold the upper two buttons for 5 seconds again, untill the led turns blue. Then press the "0" once. It should now enter pair mode.
+`,
+    },
+    {
         model: 'E1766',
         note: `
 ### Pairing
@@ -104,6 +111,9 @@ It's recommend to first pair the included TRADFRI signal repeater in the room wh
 Now press both buttons on the blind (next to battery lid) for 5 seconds until a white light between both buttons is turned on.
 The device is now awake and ready to pair for 2 minutes.
 After that pair the blind by holding the blind battery lid very close to the TRADFRI signal repeater until the white light is turned off (this should mean the pairing is successful).
+
+### End Position
+The roller blind maximum extension can be set by moving the blind to the desired position and then double pressing the up or down button.
 `,
     },
     {
@@ -217,6 +227,35 @@ will rapidly flash green.
 3. Turn power on for 1 second.
 4. Repeat turning off and turning on six times.
 5. Bulb will flash and is now reset.
+`,
+    },
+    {
+        model: 'EMIZB-132',
+        note: `
+### Configuring interface mode
+In order to get measurements, after pairing the device you need to configure the interface mode.
+
+To do this send to \`zigbee2mqtt/FRIENDLY_NAME/set\` payload \`{"interface_mode": "INTERFACE_MODE"}\`.
+
+Possible values for \`INTERFACE_MODE\` are:
+
+| Value | Description |
+| - | - |
+| \`norwegian_han\` | Norwegian HAN  |
+| \`norwegian_han_extra_load\` | Norwegian HAN – Enable extra load. This is need to enable Adion meter
+communication |
+| \`aidon_meter\` | Aidon Meter supporting Norwegian HAN HW interface.
+SW protocol is Aidon Manufacture Specific |
+| \`kaifa_and_kamstrup\` | Kaifa meter and Kamstrup meters running old firmware |
+
+Example of payload: \`{"interface_mode": "norwegian_han_extra_load"}\`
+
+### Not getting measurements
+In case you are not getting any measurements, it could be that your firmware is too old. You can ask Wattle for a replacement.
+
+Related issues:
+- https://github.com/Koenkk/zigbee-herdsman-converters/issues/974#issuecomment-590450035
+- https://github.com/dresden-elektronik/deconz-rest-plugin/issues/2127#issuecomment-587949747
 `,
     },
     {
@@ -411,7 +450,7 @@ This method also works for Philips Hue Lightstrips.
 Hue dimmer switch can also be used to factory reset Ikea Trådfri light bulbs using the same method described above.
 
 ### Binding
-If you want to bind the dimmer to a (Hue) lamp you'll have to *[bind it to the lamp through MQTT](../information/binding.html)* and unbind it from the coordinator. Use the dimmer as source and coordinator as target for that.
+If you want to bind the dimmer to a (Hue) lamp you'll have to *[bind it to the lamp through MQTT](../information/binding.html)* and unbind it from the coordinator. Use the dimmer as source and a literal \`coordinator\` as target for that.
 `,
     },
     {
@@ -527,7 +566,7 @@ By default the switch is bound to the coordinator but this device can also be us
 First unbind it from the coordinator, then you can bind it to any other device or group. (see https://www.zigbee2mqtt.io/information/binding.html )
 
 Now change the operation mode of the device, by default it is in \`event\` mode, but when binding we need to change it to \`command\` mode.
-To do this send to \`zigbee2mqtt/FRIENDLY_NAME/set\` payload \`{"operation_mode": "event"}\`, right before doing this make sure to wakeup the device.
+To do this send to \`zigbee2mqtt/FRIENDLY_NAME/set\` payload \`{"operation_mode": "command"}\`, right before doing this make sure to wakeup the device.
 
 As the device is sleeping by default, you need to wake it up after sending the bind/unbind command by pressing the reset button once.
 

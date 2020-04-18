@@ -1,19 +1,19 @@
 ---
-title: "HEIMAN HM-900SW_2 control via MQTT"
-description: "Integrate your HEIMAN HM-900SW_2 via Zigbee2mqtt with whatever smart home
+title: "HEIMAN HS2SW3A-N control via MQTT"
+description: "Integrate your HEIMAN HS2SW3A-N via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HM-900SW_2.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS2SW3A-N.md)*
 
-# HEIMAN HM-900SW_2
+# HEIMAN HS2SW3A-N
 
-| Model | HM-900SW_2  |
+| Model | HS2SW3A-N  |
 | Vendor  | HEIMAN  |
-| Description | Smart switch - 2 gang with neutral wire |
+| Description | Smart switch - 3 gang with neutral wire |
 | Supports | on/off |
-| Picture | ![HEIMAN HM-900SW_2](../images/devices/HM-900SW_2.jpg) |
+| Picture | ![HEIMAN HS2SW3A-N](../images/devices/HS2SW3A-N.jpg) |
 
 ## Notes
 
@@ -43,6 +43,15 @@ switch:
     payload_on: "ON"
     value_template: "{{ value_json.state_right }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/right/set"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state_center }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/center/set"
 
 sensor:
   - platform: "mqtt"
