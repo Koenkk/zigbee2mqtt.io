@@ -83,6 +83,18 @@ mqtt:
 ```
 Save the file and exit.
 
+It is recommended to use a custom network key. This can be done by adding the following to your `configuration.yaml`. With this Zigbee2mqtt will generate a network key on next startup.
+
+```yaml
+advanced:
+    network_key: GENERATE
+```
+
+This can be done with the following command:
+```bash
+echo "\n\nadvanced:\n    network_key: GENERATE" >> /opt/zigbee2mqtt/data/configuration.yaml
+```
+
 ## 4. Starting zigbee2mqtt
 Now that we have setup everything correctly we can start zigbee2mqtt.
 
