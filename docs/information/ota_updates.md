@@ -12,6 +12,7 @@ Not all manufacturers make their updates available, therefore only the following
 - Osram/Ledvance devices (not every firmware is made available by them, in case not you will see the following exception in the log `No image available for ...`)
 - Philips Hue devices (not every firmware is made available by them, in case not you will see the following exception in the log `No image available for ...`)
 - Gira 2430-100 and Jung ZLLxx5004M
+- Sengled devices
 
 Zigbee2mqtt automatically checks if updates are available for your devices.
 In case an update is available it will publish `zigbee2mqtt/[DEVICE_FRIENLDY_NAME]` payload `{"update_available": true}`.
