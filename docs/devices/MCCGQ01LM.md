@@ -19,8 +19,7 @@ description: "Integrate your Xiaomi MCCGQ01LM via Zigbee2mqtt with whatever smar
 
 
 ### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join.
+Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking). The reset button is the small hole in the side of the device - you will need a pin or needle to push into the small hole. After this the device will automatically join.
 
 
 ## Manual Home Assistant configuration
