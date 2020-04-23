@@ -19,8 +19,7 @@ description: "Integrate your Xiaomi WSDCGQ01LM via Zigbee2mqtt with whatever sma
 
 
 ### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join.
+Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking). The reset button is the small button on the 'top' of the device. After this the device will automatically join.
 
 
 ### Device type specific configuration
