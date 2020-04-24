@@ -13,7 +13,7 @@ A use case for this is e.g. the TRADFRI wireless dimmer. Binding the dimmer dire
 ## Commands
 Binding can be configured using the following topics:
 
-- `zigbee2mqtt/bridge/bind/[SOURCE_DEVICE_FRIENDLY_NAME]` with payload `TARGET_DEVICE_FRIENDLY_NAME` will bind the source device to the target device or target group. In the above example, the TRADFRI wireless dimmer would be the source device and the bulb the target device. When using a group as target, using the group's friendly name is mandatory, group ID will not work.
+- `zigbee2mqtt/bridge/bind/[SOURCE_DEVICE_FRIENDLY_NAME]` with payload `TARGET_DEVICE_FRIENDLY_NAME` will bind the source device to the target device or target group. If this fails it might be because the remote is sleeping. This can be fixed by waking it up right before sending the MQTT message. To wake it up press a button on the remote. In the above example, the TRADFRI wireless dimmer would be the source device and the bulb the target device. When using a group as target, using the group's friendly name is mandatory, group ID will not work. 
 - `zigbee2mqtt/bridge/unbind/[SOURCE_DEVICE_FRIENDLY_NAME]` with payload `TARGET_DEVICE_FRIENDLY_NAME` will unbind the devices.
 
 ### Binding specific endpoint
@@ -33,7 +33,7 @@ To do this execute the following steps:
 2. Add the 2 bulbs to the group by sending the following two MQTT messages.
     - `zigbee2mqtt/bridge/group/my_group/add` with payload `bulb_1`
     - `zigbee2mqtt/bridge/group/my_group/add` with payload `bulb_2`
-3. Bind the remote to the group by sending the following MQTT message. If this fails it might be because the remote is sleeping. This can be fixed by waking it up right before sending the MQTT message. To wake it up press a button on the remote.
+3. Bind the remote to the group by sending the following MQTT message.
     - `zigbee2mqtt/bridge/bind/my_remote` with payload `my_group`
 
 ## Devices
