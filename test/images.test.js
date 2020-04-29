@@ -22,7 +22,7 @@ describe('Device images', () => {
                     let image = whiteLabel.model;
                     replaceByDash.forEach((r) => image = image.replace(r, '-'));
                     image = `${image}.jpg`;
-                    pictures.push(image)
+                    pictures.push(image);
                 }
             }
         }
@@ -45,7 +45,7 @@ describe('Device images', () => {
             let image = model;
             replaceByDash.forEach((r) => image = image.replace(r, '-'));
             image = `${image}.jpg`;
-            let imagePath = path.join(imageBase, image);
+            const imagePath = path.join(imageBase, image);
 
             return {exists: fs.existsSync(imagePath), path: image};
         };
