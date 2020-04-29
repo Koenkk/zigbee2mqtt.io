@@ -1,5 +1,52 @@
 const notes = [
     {
+        model: ['SMSZB-120'],
+        note: `
+### Triggering alarm
+This smoke alarm can be triggered manually by sending these commands to it:
+
+To start (Change duration to what you need):
+* \`{"warning": {"mode": "burglar", "level": "high", "strobe": false, "duration": 300}}\`
+
+To stop:
+* \`{"warning": {"mode": "stop", "level": "low", "strobe": false, "duration": 300}}\`
+`,
+    },
+    {
+        model: 'TH1123ZB',
+        note: `
+### Setting outdoor temperature
+To set _outdoor temperature_, you need to send the value to the following MQTT topic:
+\`\`\`
+zigbee2mqtt/<FRIENDLY_NAME>/set/thermostat_outdoor_temperature
+\`\`\`
+
+If you want to automate the publishing of the outdoor temperature using Home Assistant, you may create an automation like this:
+
+\`\`\` yaml
+- id: 'Auto_Publish_Outdoor_Temprature'
+  alias: Auto_Publish_Outdoor_Temprature
+  description: Automatically Publish the outdoor temperature to thermostats
+  trigger:
+  - entity_id: sensor.outdoor_temprature_sensor
+    platform: state
+  condition: []
+  action:
+  - data:
+      payload_template: '{{ states(''sensor.outdoor_temprature_sensor'') | string }}'
+      topic: zigbee2mqtt/<FRIENDLY_NAME>/set/thermostat_outdoor_temperature
+    service: mqtt.publish
+\`\`\`
+
+### Enabling time
+To enable _time_ you need to send a _blank_ message to the following MQTT topic:
+\`\`\`
+zigbee2mqtt/<FRIENDLY_NAME>/set/thermostat_time
+\`\`\`
+Everytime the above message is sent, Zigbee2mqtt will calculate the current time and send it to the thermostat.
+`,
+    },
+    {
         model: 'V3-BTZB',
         note: `
 ### Pairing
@@ -87,7 +134,7 @@ Reset of device is done by holding button for 20 secs until it starts to flash g
 `,
     },
     {
-        model: 'SR-ZG9001K4-DIM2',
+        model: 'ROB_200-008-0',
         note: `
 ### Pairing
 First reset. Press and hold the upper two buttons for 5 seconds untill led turns blue. Then press the upper "0" 5 times really quickly - practise. Second pair. Press and hold the upper two buttons for 5 seconds again, untill the led turns blue. Then press the "0" once. It should now enter pair mode.
@@ -451,6 +498,11 @@ Hue dimmer switch can also be used to factory reset Ikea Trådfri light bulbs us
 
 ### Binding
 If you want to bind the dimmer to a (Hue) lamp you'll have to *[bind it to the lamp through MQTT](../information/binding.html)* and unbind it from the coordinator. Use the dimmer as source and a literal \`coordinator\` as target for that.
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* \`multiple_press_timeout\`: Controls how long (in seconds) subsequent key presses may be apart and still count as one event. The default is 250ms (0.25).
 `,
     },
     {
@@ -654,14 +706,28 @@ Start with bulb on, then off, and then 6 “on’s”, where you kill the light 
 `,
     },
     {
+        model: ['MCCGQ01LM'],
+        note: `
+### Pairing
+Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking). The reset button is the small hole in the side of the device - you will need a pin or needle to push into the small hole. After this the device will automatically join.
+`,
+    },
+    {
         model: [
-            'WXKG01LM', 'WSDCGQ01LM', 'RTCGQ01LM', 'MCCGQ01LM', 'WXKG11LM', 'WXKG12LM', 'WSDCGQ11LM', 'RTCGQ11LM',
-            'MCCGQ11LM', 'MFKZQ01LM',
+            'WXKG01LM', 'WSDCGQ11LM', 'RTCGQ01LM', 'MCCGQ11LM', 'WXKG11LM', 'WXKG12LM', 'RTCGQ11LM',
+            'MFKZQ01LM',
         ],
         note: `
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
 After this the device will automatically join.
+`,
+    },
+    {
+        model: ['WSDCGQ01LM'],
+        note: `
+### Pairing
+Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking). The reset button is the small button on the 'top' of the device. After this the device will automatically join.
 `,
     },
     {
@@ -826,8 +892,62 @@ e.g. \`1\` would add 1 degree to the temperature reported by the device; default
 `,
     },
     {
+        model: ['owvfni3'],
+        note: `
+### Configuration of device attributes
+By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
+\`\`\`json
+{
+    "options":{
+        "reverse_direction": xxx
+    }
+}
+\`\`\`
+
+- **reverse_direction**: (\`true\`/\`false\`, default: \`false\`). Device can be configured to act in an opposite direction.
+`,
+    },
+    {
+        model: ['GreenPower_On_Off_Switch', 'GreenPower_7'],
+        note: `
+### Green Power
+This is a Zigbee Green Power device which allows it to be very energy efficient.
+Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
+Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
+
+Green Power devices don't support binding and are not included in network scans.
+
+### Pairing Philips Hue Tap
+This device requires your Zigbee network to run on channel 15, 20 or 25. In order to pair it hold the corresponding button for that channel 10 seconds.
+
+| Button (dots) | Channel |
+|-|-|
+| 2 | 15 |
+| 3 | 20 |
+| 4 | 25 |
+
+### Pairing Friends of Hue switches (EnOcean PTM 216Z module based)
+This device has 4 buttons: A0 (left-top), A1 (left-bottom), B0 (right-top), B1 (right-bottom). In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
+
+To pair it hold the corresponding button for that channel for 7 seconds or more.
+
+| Button | Channel |
+|-|-|
+| A0 | 15 |
+| A1 | 20 |
+| B0 | 11 |
+| B1 | 25 |
+
+Once the device is paired you need to confirm the channel. To do this press A1 and B0 together. Important: don't press any other buttons between this and the pairing.
+
+In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds.
+
+This device can work on any channel, not only 15, 20, 11 or 25. For this refer to the [EnOcean PTM 216Z manual chapter 5.3](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/)
+`,
+    },
+    {
         supports: ['humidity'],
-        notModel: ['SMT402'],
+        notModel: ['SMT402', 'SMT402AD'],
         note: `
 * \`humidity_precision\`: Controls the precision of \`humidity\` values, e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
 To control the precision based on the humidity value set it to e.g. \`{80: 0, 10: 1}\`,
@@ -1031,6 +1151,28 @@ See [link](https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691
 This option allows the device to restore the last on/off state when it's reconnected to power.
 To set this option publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"power_outage_memory": true}\` (or \`false\`).
 Now toggle the plug once with the button on it, from now on it will restore its state when reconnecting to power.
+`,
+    },
+    {
+        model: ['ZNCLDJ12LM'],
+        note: `
+### Configuration of device attributes
+By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
+\`\`\`json
+{
+    "options":{
+        "reverse_direction": xxx,
+        "auto_close": xxx
+    }
+}
+\`\`\`
+
+- **reverse_direction**: (\`true\`/\`false\`, default: \`false\`). Device can be configured to act in an opposite direction.
+- **auto_close**: (\`true\`/\`false\`, default: \`true\`). Enables/disabled auto close
+
+You can send a subset of options, all options that won't be specified will be revered to default.
+
+After changing \`reverse_direction\` you will need to fully open and fully close the curtain so the motor will re-detect edges. \`reverse_direction\` will get new state only after this recalibration.
 `,
     },
     {

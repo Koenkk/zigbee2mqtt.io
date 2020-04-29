@@ -13,6 +13,8 @@ description: "Integrate your GreenPower GreenPower_On_Off_Switch via Zigbee2mqtt
 | Vendor  | GreenPower  |
 | Description | On/off switch |
 | Supports | action |
+| Picture | ![GreenPower GreenPower_On_Off_Switch](../images/devices/GreenPower_On_Off_Switch.jpg) |
+| White-label | Philips 8718696743133, Niko 91004 |
 
 ## Notes
 
@@ -50,3 +52,30 @@ Once the device is paired you need to confirm the channel. To do this press A1 a
 In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds.
 
 This device can work on any channel, not only 15, 20, 11 or 25. For this refer to the [EnOcean PTM 216Z manual chapter 5.3](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/)
+
+
+## Manual Home Assistant configuration
+Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
+manual integration is possible with the following configuration:
+
+
+{% raw %}
+```yaml
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:gesture-double-tap"
+    value_template: "{{ value_json.action }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:signal"
+    unit_of_measurement: "lqi"
+    value_template: "{{ value_json.linkquality }}"
+```
+{% endraw %}
+
+

@@ -11,6 +11,7 @@ for (const device of devices) {
                 ...device,
                 model: whiteLabel.model,
                 vendor: whiteLabel.vendor,
+                description: whiteLabel.description,
                 whiteLabelOf: device,
             };
 
@@ -67,8 +68,8 @@ const generateTable = (devices) => {
     devices = new Map(devices.map((d) => [d.model, d]));
     devices.forEach((d) => {
         const model = d.whiteLabelOf ? d.whiteLabelOf.model : d.model;
-        const image = utils.getImage(model);
-        let description = d.description;
+        const image = utils.getImage(d.model);
+        let description = d.description || d.whiteLabelOf.description;
         if (d.whiteLabelOf) {
             description = `${description} (white-label of ${d.whiteLabelOf.vendor} ${d.whiteLabelOf.model})`;
         }

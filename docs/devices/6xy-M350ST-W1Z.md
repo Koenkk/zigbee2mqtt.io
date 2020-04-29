@@ -1,19 +1,19 @@
 ---
-title: "LifeControl LifeControl_RGB_Led control via MQTT"
-description: "Integrate your LifeControl LifeControl_RGB_Led via Zigbee2mqtt with whatever smart home
+title: "Leedarson 6xy-M350ST-W1Z control via MQTT"
+description: "Integrate your Leedarson 6xy-M350ST-W1Z via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LifeControl_RGB_Led.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/6xy-M350ST-W1Z.md)*
 
-# LifeControl LifeControl_RGB_Led
+# Leedarson 6xy-M350ST-W1Z
 
-| Model | LifeControl_RGB_Led  |
-| Vendor  | LifeControl  |
-| Description | RGB LED lamp |
-| Supports | on/off, brightness, color temperature, color xy |
-| Picture | ![LifeControl LifeControl_RGB_Led](../images/devices/LifeControl_RGB_Led.jpg) |
+| Model | 6xy-M350ST-W1Z  |
+| Vendor  | Leedarson  |
+| Description | PAR16 tunable white |
+| Supports | on/off, brightness, color temperature |
+| Picture | ![Leedarson 6xy-M350ST-W1Z](../images/devices/6xy-M350ST-W1Z.jpg) |
 
 ## Notes
 
@@ -40,7 +40,6 @@ light:
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
     color_temp: true
-    xy: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
 
