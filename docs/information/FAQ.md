@@ -87,14 +87,41 @@ serial:
 
 After reboot your dedvice will have the right permissions and always the same name.
 
+### Raspberry Pi users: use a good power supply
+A bad power supply can make your system and its USB devices unstable.
+Make sure to use a good power supply.
+
+In case you see message like below when running `dmesg -w` you are using a bad power supply.
+```
+[44870.355590] Under-voltage detected! (0x00050005)
+[44874.515618] Voltage normalised (0x00000000)
+[44880.755718] Under-voltage detected! (0x00050005)
+[44889.075627] Voltage normalised (0x00000000)
+```
+
+### Make sure the extension cable works
+A bad extension cable can lead to connection issues between the system and the adpater.
+Symptoms of this are disconnection messages in the `dmesg -w` log like below.
+
+```
+[44929.156957] usb 1-1.5: USB disconnect, device number 119
+[44929.455555] usb 1-1.5: new full-speed USB device number 120 using dwc_otg
+[44929.604582] usb 1-1.5: New USB device found, idVendor=0451, idProduct=16a8, bcdDevice= 0.09
+[44929.604596] usb 1-1.5: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[44929.604606] usb 1-1.5: Product: TI CC2531 USB CDC
+[44929.604615] usb 1-1.5: Manufacturer: Texas Instruments
+```
+
 ### In case of a CC2530 or CC2531 adapter, verify that don't have a CC2540
 The CC2540 can be confused easily with the CC2531 as it looks (almost) exactly the same. However, this device does not support zigbee but bluetooth. This can be verified by looking at the chip.
 
 ### [ModemManager](https://www.freedesktop.org/wiki/Software/ModemManager/) is installed
 ModemManger, which is default installed on e.g. Ubuntu, is known to cause problems. It can easily be fixed by removing ModemManager through `sudo apt-get purge modemmanager`.
 
-### CC1352P-2 coordinators only: press the reset button on the device
+### CC1352P-2/CC26X2R1 coordinators only: press the reset button on the device
 If zigbee2mqtt fails to start with a CC1352P-2 with `Error: SRSP - SYS - version after 6000ms`, you most probably have connected your device to a system that requires pressing the reset button (the one next to the USB connector) momentarily/shortly after connecting the USB cable. This issue has primarily been observed on x86 architectures only (e.g., Intel NUC, HPE Microserver, i7 laptop), see also [#2162](https://github.com/Koenkk/zigbee2mqtt/issues/2162). The procedure has to be repeated every time the CC1352P-2 is re-connected and it's not clear yet, whether this can be fixed at all. It does not seem to occur on ARM based boards (Raspberry Pi, ODROID XU4).
+
+Something that can also solve the issue is to replug the USB cable.
 
 ### CC2531 coordinators only: press the reset button on the device
 When you plug the CC2531 in your computer, the green LED should go on.
