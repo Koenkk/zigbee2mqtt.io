@@ -54,6 +54,7 @@ Besides running Zigbee2mqtt on [bare-metal Linux](getting_started/running_zigbee
 * [Majordomo](https://github.com/directman66/majordomo-zigbee2mqtt/) (Russian)
 * [Mozilla IoT WebThings Gateway via zigbee2mqtt adapter](https://github.com/kabbi/zigbee2mqtt-adapter)
 * [Zigbee2MqttAssistant](https://github.com/yllibed/Zigbee2MqttAssistant) (GUI for Zigbee2Mqtt)
+* [openHAB](https://community.openhab.org/t/howto-use-zigbee2mqtt-with-openhab-removing-proprietary-bridges-gateways/48768)
 
 ### Support
 * [Bugs](https://github.com/koenkk/zigbee2mqtt/issues)
