@@ -1722,6 +1722,23 @@ If you want to automate the publishing of the outdoor temperature using Home Ass
 **IMPORTANT**: The outdoor temperature need to be refreshed at least each 4 hours, or the \`EXT\` display will be cleared on the thermostat.
 `,
     },
+    {
+        model: ['GS361A-H04'],
+        note: `
+### Installing the TRV
+- open battery cover (twist and slide)
+- insert batteries (a orange wrench should appear)
+- close battery cover (slide and twist)
+- press front button until `F1₁` is displayed
+- install TRV
+- press front button until `F1₂` is displayed (after 10-30 seconds the TRV should be to pair)
+
+### Pairing
+- press front button 3x to enter pairing mode (LED will flash green)
+
+If you get a warning that the model is undefined, which might happen after removing the device. Try removing it from the network again while in pairning mode.
+`,
+    },
 ];
 
 module.exports = notes;
