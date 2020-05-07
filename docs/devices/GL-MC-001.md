@@ -61,4 +61,6 @@ sensor:
 ```
 {% endraw %}
 
+### Hotfixes
 
+If the device send back timeout errors or take too long to respond to color changes,try to add `meta: {options: {disableDefaultResponse: true}, configureKey: 1},` to the device.js file in your zigbee-herdsman-converters.
