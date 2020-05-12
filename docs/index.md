@@ -47,7 +47,7 @@ Besides running Zigbee2mqtt on [bare-metal Linux](getting_started/running_zigbee
 * [How to switch to the dev branch](how_tos/how-to-switch-to-dev-branch.md)
 
 ### Integration
-* [Admin Panel for Node-Red](https://github.com/ben423423n32j14e/zigbee2mqttadminpanel)
+* [Admin Panel for Node-Red](https://github.com/ben423423n32j14e/zigbee2mqttadminpanel) or [node-red-contrib-zigbee2mqtt ](https://flows.nodered.org/node/node-red-contrib-zigbee2mqtt)
 * [Domoticz](https://github.com/stas-demydiuk/domoticz-zigbee2mqtt-plugin)
 * [Home Assistant](integration/home_assistant.md)
 * [MQTT Explorer](https://mqtt-explorer.com) (debug tool for custom integrations)
