@@ -11,7 +11,7 @@ Not all manufacturers make their updates available, therefore only the following
 - Salus SP600 Smart plug
 - Osram/Ledvance devices (not every firmware is made available by them, in case not you will see the following exception in the log `No image available for ...`)
 - Philips Hue devices (not every firmware is made available by them, in case not you will see the following exception in the log `No image available for ...`)
-- Gira 2430-100 and Jung ZLLxx5004M
+- Jung ZLLxx5004M (Gira does unfortunately not seem to offer firmware updates for their almost identical 2430-100 devices and the update file for the Jung ZLLxx5004M does not seem to work for Gira)
 - Sengled devices
 
 Zigbee2mqtt automatically checks if updates are available for your devices.
