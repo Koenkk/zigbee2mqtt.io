@@ -314,4 +314,4 @@ This is the counterpart of the `set` command. It allows you to read a value from
 Only used when `homeassistant: true` in `configuration.yaml`. Required for [Home Assistant MQTT discovery](https://www.home-assistant.io/docs/mqtt/discovery/).
 
 ## Device specific commands
-Some devices offer device specific commands. Example: for the Xiaomi DJT11LM Aqara vibration sensor you can set the `sensitivity`. To find out wether your device supports any specific commands, checkout the device page (which can be reached via the supported devices page).
+Some devices offer device specific commands. Example: for the Xiaomi DJT11LM Aqara vibration sensor you can set the `sensitivity`. To find out whether your device supports any specific commands, checkout the device page (which can be reached via the supported devices page).
