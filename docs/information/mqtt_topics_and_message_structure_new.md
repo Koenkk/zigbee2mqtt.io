@@ -116,6 +116,8 @@ Allows to permit or disable joining of new devices. Allowed payloads are `{"valu
 
 
 
+TODO:
+- add feedback from https://github.com/Koenkk/zigbee2mqtt/issues/3281#issuecomment-629787842
 EVERYTHING BELOW THIS IS OLD STUFF
 
 -----------------
