@@ -116,7 +116,10 @@ Allows to permit or disable joining of new devices. Allowed payloads are `{"valu
 
 
 
+EVERYTHING BELOW THIS IS OLD STUFF
+
 -----------------
+
 
 
 
