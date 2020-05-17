@@ -2,6 +2,14 @@
 ---
 # Connecting the CC2530
 
+## Pin layouts
+The pin layout is different between each CC2530 module
+
+| Name | Pin layout | Picture |
+| ------------- | ------------- | ------------- |
+| CC2530 | ![CC2530 pin layout](../images/cc2530_pin_layout.png) | ![CC2530](../images/cc2530.jpg)
+| Webee CC2530 + CC2591 | ![Webee CC2530 + CC2591 pin layout](../images/webee_cc2530_cc2591_pinlayout.png) | ![CC2530 + CC2591](../images/cc2530_cc2591.jpg)
+
 ## Using a USB to serial adapter
 
 ### Confirmed working
