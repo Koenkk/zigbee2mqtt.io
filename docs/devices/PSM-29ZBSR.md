@@ -12,7 +12,7 @@ description: "Integrate your Climax PSM-29ZBSR via Zigbee2mqtt with whatever sma
 | Model | PSM-29ZBSR  |
 | Vendor  | Climax  |
 | Description | Power plug |
-| Supports | on/off |
+| Supports | on/off, power measurement |
 | Picture | ![Climax PSM-29ZBSR](../images/devices/PSM-29ZBSR.jpg) |
 
 ## Notes
@@ -34,6 +34,14 @@ switch:
     payload_on: "ON"
     value_template: "{{ value_json.state }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "W"
+    icon: "mdi:flash"
+    value_template: "{{ value_json.power }}"
 
 sensor:
   - platform: "mqtt"

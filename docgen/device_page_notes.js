@@ -807,6 +807,65 @@ Press and hold the pairing button while plugging in the device.
 `,
     },
     {
+        model: ['ZBHT-1'],
+        note: `
+### Similar Devices
+This device is older and seems to be similar to the netvox Z711 (and others).
+
+### Pairing
+
+#### Resetting the Device/Restore to Factory Defaults
+1. Remove the battery to power off the device.
+2. Press and hold the only button.
+3. Re-install the batteries to power on the device
+4. Release the button.
+ * The LED will blink quickly, and the reset/restore is complete
+
+#### Joining the Network
+1. Remove battery from device
+2. Enable permit-join on Zigbee2mqtt
+3. Re-install battery in the device
+ * The LED will flash 5 times to indicate success (no flashing means not successful)
+4. After successfully joining, press and hold the only button for 3 seconds to broadcast the binding request.
+5. The LED will flash once.
+6. The LED flashes 5 times after the binding is completed; otherwise, it flashes 10 times.
+
+#### Waking the Device
+If the device is asleep (which is most of the time) and you need it to be awake for some reason, tap the only button on the device. The LED will flash 5 times and the device will be awake for a brief period.
+
+### Status of Functions
+1. Temperature monitoring - Works
+2. Humidity monitoring - Works
+3. Battery monitoring - untested.
+ * In theory the device LED will flash ONCE if the voltage falls below 2.4V
+ * In theory the device will send a low-power report to the ZigBee network if the voltage falls below 2.4V - no other battery reporting.
+`,
+    },
+    {
+        model: ['TS0601'],
+        note: `
+### Configuration of device attributes
+By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
+\`\`\`json
+{
+    "options":{
+        "reverse_direction": xxx
+    }
+}
+\`\`\`
+
+- **reverse_direction**: (\`true\`/\`false\`, default: \`false\`). Device can be configured to act in an opposite direction.
+`,
+    },
+    {
+        model: ['TERNCY-DC01'],
+        note: `
+### Pairing
+Press and hold the reset button on the device for +- 5 seconds (until the green light starts blinking).
+After this the device will automatically join.
+`,
+    },
+    {
         model: ['DJT11LM'],
         note: `
 ### Pairing
@@ -960,10 +1019,11 @@ Not all Zigbee devices can do this translation, currently the only devices known
 Green Power devices don't support binding and are not included in network scans.
 
 ### Pairing Philips Hue Tap
-This device requires your Zigbee network to run on channel 15, 20 or 25. In order to pair it hold the corresponding button for that channel 10 seconds.
+This device requires your Zigbee network to run on channel 11, 15, 20 or 25. In order to pair it hold the corresponding button for that channel 10 seconds.
 
 | Button (dots) | Channel |
 |-|-|
+| 1 | 11 |
 | 2 | 15 |
 | 3 | 20 |
 | 4 | 25 |

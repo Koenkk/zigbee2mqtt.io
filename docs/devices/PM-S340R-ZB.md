@@ -11,7 +11,7 @@ description: "Integrate your Dawon DNS PM-S340R-ZB via Zigbee2mqtt with whatever
 
 | Model | PM-S340R-ZB  |
 | Vendor  | Dawon DNS  |
-| Description | IOT smart switch 3 gang |
+| Description | IOT smart switch 3 gang without neutral wire |
 | Supports | on/off |
 | Picture | ![Dawon DNS PM-S340R-ZB](../images/devices/PM-S340R-ZB.jpg) |
 
