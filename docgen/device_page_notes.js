@@ -177,6 +177,9 @@ Switch the lamp on five times until the bulb blinks several times.
 Pair the sensor to Zigbee2mqtt by pressing the pair button 4 times in a row.
 The red light on the front side should flash a few times and the turn off.
 After a few seconds it turns back on and pulsate. When connected, the light turns off.
+
+### Binding
+The E1745 can be bound to groups using [binding](../information/binding).
 `,
     },
     {
@@ -490,7 +493,9 @@ Factory reset the Hue dimmer switch by pressing and holding the setup button on 
 Restart the Hue dimmer switch by holding all 4 buttons of the Hue dimmer switch.
 You can let go when the light on the front flashes red/green briefly.
 
-Use the Hue dimmer switch to factory reset a Hue light bulb see
+#### Using the dimmer to reset a Hue light bulb
+
+To use the Hue dimmer switch to factory reset a Hue light bulb see
 [HOWTO: Factory reset a Hue bulb](https://www.youtube.com/watch?v=qvlEAELiJKs).
 After resetting the bulb will automatically connect.
 This method also works for Philips Hue Lightstrips.
@@ -503,6 +508,27 @@ If you want to bind the dimmer to a (Hue) lamp you'll have to *[bind it to the l
 *[How to use device type specific configuration](../information/configuration.md)*
 
 * \`multiple_press_timeout\`: Controls how long (in seconds) subsequent key presses may be apart and still count as one event. The default is 250ms (0.25).
+
+### Troubleshooting
+
+#### Resetting the device
+
+- Method 1: Press all four buttons for 4 seconds. When the light turns green, release the buttons. The device will flash green and red alternatively after which it will reconnect to the network.
+- Method 2: Use a needle or paperclip to press the reset button on the back for 10 seconds. The behavior is similar to method 1
+
+#### Device refuses actions
+
+If actions (e.g.  applying zigbee2mqtt/bridge/config/remove to a dimmer) result in timeouts, perform a reset (see above) and apply the action right after the device announced itself in the network.
+
+#### Device announces itself but the buttons don't work
+
+The dimmer appears to be working normally and the logs in zigbee2mqtt look good. However, nothing happens when a button is pressed (no light, no log message in zigbee2mqtt). In this case:
+
+- Reset the device
+- Use zigbee2mqtt/bridge/config/remove to remove the device from the network (this should result in a "left the network" log message)
+- Allow joining of new devices in zigbee2mqtt
+- Reset the device again
+- Wait for it to pair again. The device should now be operational.
 `,
     },
     {
@@ -538,6 +564,9 @@ After that the remote should show up as a paired device.
 Pair the remote to Zigbee2mqtt by holding it close to the coordinator and
 pressing the inside button, next to the CR2032 battery, 4 times.
 The red light on the (front of the) remote will now flash a few times.
+
+### Toubleshooting: no battery level
+It may help to remove the battery for a few seconds and after that reconfigure it via [Configure](../information/mqtt_topics_and_message_structure.md#zigbee2mqttbridgeconfigure). Right before executing the Configure make sure to wake up the device by pressing a button on it.
 `,
     },
     {
@@ -731,6 +760,13 @@ Press and hold the reset button on the device for +- 5 seconds (until the blue l
 `,
     },
     {
+        model: ['WXKG01LM'],
+        note: `
+### Binding
+This device does **not** support binding.
+`,
+    },
+    {
         model: ['TI0001'],
         note: `
 ### Important
@@ -870,10 +906,16 @@ experimenting with this option (e.g. \`long_timeout: 2000\`).
     },
     {
         supports: ['illuminance'],
+        notModel: ['RTCGQ11LM'],
         note: `
 * \`illuminance_lux_precision\`: Controls the precision of \`illuminance_lux\` values, e.g. \`0\` or \`1\`; default \`1\`.
 To control the precision based on the illuminance_lux value set it to e.g. \`{1000: 0, 100: 1}\`,
 when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 precision will be 1.
+`,
+    },
+    {
+        supports: ['illuminance'],
+        note: `
 * \`illuminance_lux_calibration\`: Allows to manually calibrate illuminance values,
 e.g. \`95\` would take 95% to the illuminance reported by the device; default \`100\`.
 `,
@@ -1576,6 +1618,13 @@ tz.thermostat_relay_status_log_rsp
 `,
     },
     {
+        model: ['PM-S140-ZB', 'PM-S240-ZB', 'PM-S340-ZB'],
+        note: `
+### Routing functionallity
+This device does **not** act as a router.
+`,
+    },
+    {
         model: 'HS1SA-M',
         note: `
 ### Pairing
@@ -1720,6 +1769,171 @@ If you want to automate the publishing of the outdoor temperature using Home Ass
 \`\`\`
 
 **IMPORTANT**: The outdoor temperature need to be refreshed at least each 4 hours, or the \`EXT\` display will be cleared on the thermostat.
+`,
+    },
+    {
+        model: ['067771'],
+        note: `
+### Model numbers
+Model number depends on the country and the colour of the devices, for instance:
+
+- French models are branded as Céliane with Netatmo, and models for this device depends on the colour, with the following numbers: "0 677 21", "0 677 71" and "0 648 91".
+
+- Spanish models are branded as Legrand Valena Next, and models for this device depends on the colour, with the following numbers: "7 418 10", "7 418 40" and "7 418 70".
+
+Other brand names depending on the country:
+- Availability for Céliane™ with Netatmo &#8594;	 France and Overseas territories, Greece, Poland, Hungary, Tunisia, Morocco, Ivory Coast, Czech Republic, Russia, Mauritius
+- Availability for Dooxie™ with Netatmo &#8594;	 France and Overseas territories
+- Availability for Mosaic™ with Netatmo &#8594;	 France and Overseas territories, Ivory Coast
+- Availability for Living Now™ with Netatmo &#8594;	 Italy, Belgium, Greece, Portugal, Lebanon, Israel, Chile, Peru, Mexico
+- Availability for Valena Allure™ with Netatmo &#8594;	 Greece, Germany, Austria, Poland, Slovakia, Bulgaria, Czech Republic, Hungary, Russia
+- Availability for Valena Life™ with Netatmo &#8594;	Greece, Germany, Austria, Portugal, Poland, Slovakia, Bulgaria, Czech Republic, Hungary, Lituania, Russia
+- Availability for Valena Next™ with Netatmo &#8594;	Spain, Belgium
+- Availability for Arteor™ with Netatmo &#8594;	Australia, New Zealand, India, Malaysia, Lebanon, Mauritius, South Africa
+- Availability for Plexo™ with Netatmo &#8594;	France and Overseas territories, Spain, Belgium
+- Availability for Modul'Up™ with Netatmo &#8594;	France and Overseas territories
+
+### LED configuration
+* \`permanent_led\`: enable or disable the permanent blue LED. Values: \`ON\` / \`OFF\` (default)
+* \`led_when_on\`: enables the LED when the light is on. Values: \`ON\` / \`OFF\` (default)
+
+Example of MQTT message payload to disable permanent LED and enable LED when the lights are on. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+
+\`\`\`js
+{
+    "permanent_led": "OFF",
+    "led_when_on": "ON"
+}
+\`\`\`
+
+### Dimmer
+* \`dimmer_enabled\`: enable or disable the dimming functions. Values: \`ON\` / \`OFF\` (default)
+
+Example of MQTT message payload to enable dimming. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+
+\`\`\`
+{
+    "dimmer_enabled": "ON"
+}
+\`\`\`
+
+### Identify
+Helps to identify the switch using the LED.
+
+* \`identify['effect']\`:  only works for blink3 & fixed in \`effect\`. Values:
+    - \`blink3\`
+    - \`fixed\`
+    - \`blinkgreen\`
+    - \`blinkblue\`
+
+* \`identify['color']\`:  only works for blink3 & fixed in \`effect\`. Values:
+    - \`default\`
+    - \`red\`
+    - \`green\`
+    - \`blue\`
+    - \`lightblue\`
+    - \`yellow\`
+    - \`pink\`
+    - \`white\`
+
+Example of MQTT message payload to Identify the switch. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+
+\`\`\`js
+{
+  "identify": {
+    "effect": "blink3",
+    "color": "white"
+  }
+}
+\`\`\`
+`,
+    },
+    {
+        model: ['067773'],
+        note: `
+### Model numbers
+Model number depends on the country and the colour of the devices.
+French models are branded as Céliane with Netatmo, and models for this device depends on the colour, with the following numbers: "0 677 23", "0 677 73", and "0 648 93".
+Spanish models are branded as Legrand Valena Next, and models for this device depends on the colour, with the following numbers: "7 418 13", "7 418 43" and "7 418 73".
+
+### Binding
+The remote supports [binding](../information/binding).
+`,
+    },
+    {
+        model: ['067776'],
+        note: `
+### Model number
+Model number depends on the country and the colour of the devices.
+French models are branded as Céliane with Netatmo, and models for this device depends on the colour, with the following numbers: "0 677 26", "0 677 76" and "0 648 96".
+Spanish models are branded as Legrand Valena Next, and models for this device depends on the colour, with the following numbers: "7 418 07", "7 418 37" and "7 418 67".
+`,
+    },
+    {
+        model: ['E1603/E1702'],
+        note: `
+## OpenHAB configuration
+You have to enable attribute output. Via configuration.yaml in Zigbee2MQTT.
+
+### Item
+
+{% raw %}
+\`\`\`yaml
+Switch      GF_NameDevice_Button_Press              "NameDevice"                     <button>            (GF_Room, gButton)     ["Button"]      {channel="mqtt:topic:MQTTBroker:NameDevice:state"}
+Number      GF_NameDevice_Button_Link               "Link"                 <link>              (gButton)                       ["link"]        {channel="mqtt:topic:MQTTBroker:NameDevice" }
+String      GF_NameDevice_Button_update_available  "Update[%s]"      <icon>            (gButton)              ["update_available"]     {channel="mqtt:topic:MQTTBroker:NameDevice:update_available"}
+\`\`\`
+{% endraw %}
+
+### Thing
+
+{% raw %}
+\`\`\`yaml
+    Thing topic NameDevice "NameDevice" {
+        Channels:
+            Type switch : state "state" [ stateTopic = "zigbee2mqtt/NameDevice/state", commandTopic = "zigbee2mqtt/NameDevice/set/state", on="ON", off="OFF" ]
+            Type string : update_available "update_available"     [ stateTopic="zigbee2mqtt/NameDevice/update_available"] //It shows only if an update is available
+            Type number : linkquality      "linkquality"     [ stateTopic="zigbee2mqtt/NameDevice/linkquality" ]
+\`\`\`
+{% endraw %}
+`,
+    },
+    {
+        model: ['MCCGQ01LM'],
+        note: `
+## OpenHAB integration and configuration
+In OpenHAB you need the MQTT Binding to be installed. It is possible to add this sensor as a generic mqtt thing, but here it is described how to add the sensor manually via an editor.
+
+To make the following configuration work it is neccessary to enable the experimental attribute output in the configuration.yaml.
+\`\`\`yaml
+experimental:
+  output: attribute
+\`\`\`
+
+### Thing
+To add this Xiaomi MCCGQ01LM MiJia door & window contact sensor as Thing it is necessary to embed the Thing into a bridge definition of a mqtt broker. Please concider that for the door window sensor OPEN is false (no contact) and CLOSED is true (contact). So make sure that on(OPEN) = "false" and off(CLOSED) = "true".
+
+\`\`\`yaml
+Bridge mqtt:broker:zigbeeBroker [ host="YourHostname", secure=false, username="your_username", password="your_password" ]
+{
+    Thing mqtt:topic:MijiaDoorSensor "MiJia door & window contact sensor"  @ "Your room"
+    {
+        Channels:
+            Type contact  : status      "status"      [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/contact", on="false", off="true" ]
+            Type number   : voltage     "voltage"     [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/voltage" ]
+            Type number   : battery     "battery"     [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/battery" ]
+            Type number   : linkquality "linkquality" [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/linkquality" ]
+    }
+}
+\`\`\`
+
+### Items
+\`\`\`yaml
+Contact  door_window_sensor_isOpen      "open status" <door>                    {channel="mqtt:topic:MijiaDoorSensor:status"}
+Number   door_window_sensor_VOLTAGE     "voltage [%d mV]"                       {channel="mqtt:topic:MijiaDoorSensor:voltage"}
+Number   door_window_sensor_BATTERY     "battery [%.1f %%]" <battery>           {channel="mqtt:topic:MijiaDoorSensor:battery"}
+Number   door_window_sensor_LINKQUALITY "link qualitiy [%d]" <qualityofservice> {channel="mqtt:topic:MijiaDoorSensor:linkquality"}
+\`\`\`
 `,
     },
 ];

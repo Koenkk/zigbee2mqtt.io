@@ -17,8 +17,10 @@ description: "Integrate your Dawon DNS PM-S140-ZB via Zigbee2mqtt with whatever 
 
 ## Notes
 
+
 ### Routing functionallity
 This device does **not** act as a router.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
