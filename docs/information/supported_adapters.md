@@ -48,6 +48,14 @@ advanced:
 - Has UF.L connector for external antenna ([requires resoldering a tiny capacitor (moving C14 to C24)](http://e2e.ti.com/support/wireless-connectivity/zigbee-and-thread/f/158/t/880219?LAUNCHXL-CC26X2R1-Antenna-CC26X2R1)) which could increase range even further.
 - This device has two serial devices built in. Make sure you put the right serial device in the [configuration](configuration.md) or use auto detect if you only have one Texas Instruments CC devices connected to your system.
 
+Some devices like zig-a-zig-ah! which is based on the CC26X2R
+- Requires following in `configuration.yaml`
+
+```yaml
+advanced:
+  rtscts: false
+```
+
 ### Texas Instruments CC1352P-2
 ![CC1352P-2](../images/cc1352p2.jpg)
 
