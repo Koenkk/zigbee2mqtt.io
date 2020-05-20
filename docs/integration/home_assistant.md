@@ -273,6 +273,7 @@ automation:
       - service: switch.turn_off
         entity_id: switch.zigbee2mqtt_main_join
   - id: "zigbee2mqtt_create_notification_on_successfull_interview"
+    alias: Zigbee Device Joined Notification
     trigger:
       platform: mqtt
       topic: 'zigbee2mqtt/bridge/log'
