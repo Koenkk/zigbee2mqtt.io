@@ -81,3 +81,10 @@ advanced:
 - [Flash via UNIFLASH](./flashing_via_uniflash.md)
 - When migrating from another dongle (e.g. CC2531), make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2mqtt won't start.
 - This device has two serial devices built in. Make sure you put the right serial device in the [configuration](configuration.md) or use auto detect if you only have one Texas Instruments CC devices connected to your system.
+
+### ConBee II
+![Conbee II](../images/conbee.jpg)
+
+- USB connnected Zigbee adapter
+- **Very powerful**, will easily handle networks of 100+ devices.
+- Support is still experimental. ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/72))
