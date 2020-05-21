@@ -1247,7 +1247,7 @@ See [link](https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691
 `,
     },
     {
-        model: ['ZNCZ02LM'],
+        model: ['ZNCZ02LM', 'ZNCZ04LM'],
         note: `
 ### Power outage memory
 This option allows the device to restore the last on/off state when it's reconnected to power.
