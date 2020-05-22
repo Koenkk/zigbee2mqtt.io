@@ -127,8 +127,8 @@ Now add the volumes to the Docker container by adding the following to your `doc
 Now you can start modifying e.g. `/opt/zigbee-herdsman-converters/devices.js`. Note that after each modification you need to restart the container for the changes to take effect.
 
 ## Hass.io addon
-1. Enable access to your Hass.io host following these instructions
-https://developers.home-assistant.io/docs/en/hassio_debugging.html
+1. Enable SSH access to your Hass.io host following these instructions
+https://developers.home-assistant.io/docs/operating-system/debugging/#ssh-access-to-the-host
 
 2. Connect to your Hass.io host:
 ```bash
