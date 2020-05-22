@@ -17,7 +17,7 @@ description: "Integrate your TUYATEC GDKES-01TZXD via Zigbee2mqtt with whatever 
 
 ## Notes
 
-None
+Also branded as Yagusmart in the UK, with a version that does not require a neutral wire.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
