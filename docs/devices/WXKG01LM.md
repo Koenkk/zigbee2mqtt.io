@@ -19,8 +19,11 @@ description: "Integrate your Xiaomi WXKG01LM via Zigbee2mqtt with whatever smart
 
 
 ### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join.
+1. Press and hold device main switch
+2. Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
+3. Release the reset button while still holding the main switch
+4. Keep pressing the reset button repeatedly (every 1-2 seconds) until the device joined successfully (which usually happens after 5-10 seconds)
+5. Release device main switch
 
 
 ### Binding
