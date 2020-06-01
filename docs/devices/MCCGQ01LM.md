@@ -37,23 +37,33 @@ To add this Xiaomi MCCGQ01LM MiJia door & window contact sensor as Thing it is n
 ```yaml
 Bridge mqtt:broker:zigbeeBroker [ host="YourHostname", secure=false, username="your_username", password="your_password" ]
 {
-    Thing mqtt:topic:MijiaDoorSensor "MiJia door & window contact sensor"  @ "Your room"
+    Thing topic MijiaDoorSensor "MiJia door & window contact sensor"  @ "Your room"
     {
         Channels:
             Type contact  : status      "status"      [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/contact", on="false", off="true" ]
             Type number   : voltage     "voltage"     [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/voltage" ]
             Type number   : battery     "battery"     [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/battery" ]
             Type number   : linkquality "linkquality" [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/linkquality" ]
+          /****************************************************************************************************
+            If you want to know when the sensor has been last changed you cann add to your configuration.yaml:
+            advanced:
+              last_seen: ISO_8601_local
+              
+            and add another channel:
+           ****************************************************************************************************/
+            Type datetime : last_change "last change" [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/last_seen" ]
     }
 }
 ```
 
 ### Items
 ```yaml
-Contact  door_window_sensor_isOpen      "open status" <door>                    {channel="mqtt:topic:MijiaDoorSensor:status"}
-Number   door_window_sensor_VOLTAGE     "voltage [%d mV]"                       {channel="mqtt:topic:MijiaDoorSensor:voltage"}
-Number   door_window_sensor_BATTERY     "battery [%.1f %%]" <battery>           {channel="mqtt:topic:MijiaDoorSensor:battery"}
-Number   door_window_sensor_LINKQUALITY "link qualitiy [%d]" <qualityofservice> {channel="mqtt:topic:MijiaDoorSensor:linkquality"}
+Contact  door_window_sensor_isOpen      "open status" <door>                                {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:status"}
+Number   door_window_sensor_VOLTAGE     "voltage [%d mV]"                                   {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:voltage"}
+Number   door_window_sensor_BATTERY     "battery [%.1f %%]" <battery>                       {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:battery"}
+Number   door_window_sensor_LINKQUALITY "link qualitiy [%d]" <qualityofservice>             {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:linkquality"}
+/* See comment above */
+DateTime door_window_sensor_last_change "last change [%1$td.%1$tm.%1$tY %1$tH:%1$tM:%1$tS]" {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:last_change"}
 ```
 
 
