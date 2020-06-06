@@ -79,9 +79,22 @@ advanced:
   # Optional: Log rotation (default: shown below)
   log_rotation: true
   # Optional: Output location of the log (default: shown below), leave empty to supress logging (log_output: [])
+  # possible options: 'console', 'file', 'syslog'
   log_output:
     - console
     - file
+  # Optional: syslog configuration, skip values or entirely to use defaults. Only use when 'syslog' in 'log_output' (see above)
+  log_syslog:
+    host: localhost # The host running syslogd, defaults to localhost.
+    port: 123 # The port on the host that syslog is running on, defaults to syslogd's default port.
+    protocol: tcp4 # The network protocol to log over (e.g. tcp4, udp4, tls4, unix, unix-connect, etc).
+    path:  /dev/log # The path to the syslog dgram socket (i.e. /dev/log or /var/run/syslog for OS X).
+    pid: process.pid # PID of the process that log messages are coming from (Default process.pid).
+    facility: local0 # Syslog facility to use (Default: local0).
+    localhost: localhost # Host to indicate that log messages are coming from (Default: localhost).
+    type: 5424 # The type of the syslog protocol to use (Default: BSD, also valid: 5424).
+    app_name: zigbee2mqtt # The name of the application (Default: zigbee2mqtt).
+    eol: '\n' # The end of line character to be added to the end of the message (Default: Message without modifications).
   # Optional: Baudrate for serial port (default: shown below)
   baudrate: 115200
   # Optional: RTS / CTS Hardware Flow Control for serial port (default: true)
