@@ -64,7 +64,7 @@ it is equal to the Zigbee2mqtt `friendly_name`. Is updated if the Zigbee2mqtt `f
 - Home Assistant `friendly_name` (`customize.yaml`): overrides the name in the Home Assistant web interface.
 
 ## Responding to button clicks
-To respond to button clicks (e.g. WXKG01LM) you can use one of the following two Home Assistant configurations.
+To respond to button clicks (e.g. WXKG01LM) you can use one of the following three Home Assistant configurations.
 
 ### Via MQTT device trigger (recommended)
 [MQTT device trigger](https://www.home-assistant.io/integrations/device_trigger.mqtt/) is the recommended way to respond to button clicks.
