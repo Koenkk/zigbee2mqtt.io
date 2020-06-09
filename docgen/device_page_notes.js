@@ -446,7 +446,7 @@ Rules:
 `,
     },
     {
-        vendor: ['OSRAM', 'Sylvania'],
+        vendor: ['OSRAM', 'Sylvania', 'LEDVANCE'],
         notModel: [],
         supports: ['brightness'],
         note: `
@@ -454,7 +454,7 @@ Rules:
 Various Osram/Sylvania LED support setting a default transition when turning a light on and off.
 \`\`\`js
 {
-    "osram_set_transition": 0.1,            //time in seconds (integer or float)
+    "set_transition": 0.1,            //time in seconds (integer or float)
 }
 \`\`\`
 
@@ -465,7 +465,7 @@ is manually switched off then on. Lights will remember their respective attribut
 NOTE: This must be executed every time you make changes to a light's attributes for it to then 'remember' it.
 \`\`\`js
 {
-    "osram_remember_state": true,            // true, false (boolean)
+    "remember_state": true,            // true, false (boolean)
 }
 \`\`\`
 `,
