@@ -69,7 +69,19 @@ Example payload:
         "dateCode":"20180410",
         "interviewing":false,
         "interviewCompleted":true
-    }
+    },
+    {
+        "ieeeAddr":"0x00169a00022256da",
+        "type":"Router",
+        "networkAddress":22160,
+        "supported":false,
+        "friendlyName":"my_sensor",
+        "definition":null,
+        "powerSource":"Battery",
+        "dateCode":"04-28-2019",
+        "interviewing":false,
+        "interviewCompleted":true
+    },
 ]
 ```
 
@@ -102,9 +114,9 @@ Events will be published to this topic. Possible types are `deviceJoined`, `devi
 - `{"type":"deviceLeave","data":{"ieeeAddress":"0x90fd9ffffe6494fc"}}`
 
 ## zigbee2mqtt/bridge/request/+
-This can be used to e.g. configure certain settings like allowing new devices to join. Zigbee2mqtt will always respond with the same topic on `zigbee2mqtt/bridge/response/+`. The response payload will at least contain a `status` and `data` property. If `status` = `error` it will also contain an `error` property.
+This can be used to e.g. configure certain settings like allowing new devices to join. Zigbee2mqtt will always respond with the same topic on `zigbee2mqtt/bridge/response/+`. The response payload will at least contain a `status` and `data` property, `status` is either `ok` or `error`. If `status` = `error` it will also contain an `error` property containing a description of the error.
 
-Example: when publishing `zigbee2mqtt/bridge/request/permitJoin` with payload `{"value": true}` Zigbee2mqtt will respond to `zigbee2mqtt/bridge/response/permitJoin` with payload `{"data":{"value":true},"status":"ok"}`. In case this request failed the response will be `{"data":{"value":true}, "error": "Permit join failed","status":"error"}`.
+Example: when publishing `zigbee2mqtt/bridge/request/permitJoin` with payload `{"value": true}` Zigbee2mqtt will respond to `zigbee2mqtt/bridge/response/permitJoin` with payload `{"data":{"value":true},"status":"ok"}`. In case this request failed the response will be `{"data":{}, "error": "Failed to connect to adapter","status":"error"}`.
 
 Optionally, a `transaction` property can be included in the request. This allows to easily match requests with responses. When a `transaction` property is included Zigbee2mqtt will include it in the response. Example: `zigbee2mqtt/bridge/request/permitJoin` with payload `{"value": true, "transaction":23}` will be responded to on `zigbee2mqtt/bridge/response/permitJoin` with payload `{"data":{"value":true},"status":"ok","transaction":23}`
 

@@ -1,6 +1,6 @@
 # Supported adapters
 
-Zigbee2mqtt supports the following adapters:
+Zigbee2mqtt oficially supports the following adapters:
 
 ### Texas Instruments CC2531
 ![CC2531](../images/cc2531.jpg)
@@ -33,7 +33,25 @@ advanced:
   rtscts: false
 ```
 
-### Texas Instruments CC26X2R1
+### Electrolama zig-a-zig-ah! (zzh!)
+![zzh](../images/zzh.jpg)
+
+- Preferred over the Texas Instruments LAUNCHXL-CC26X2R1 and LAUNCHXL-CC1352P-2 due to smaller form factor and lower price. Uses the same chip as LAUNCHXL-CC26X2R1 (CC2652R).
+- USB connnected Zigbee adapter
+- **Very powerful**, will easily handle networks of 100+ devices.
+- Very good range (due to external antenna)
+- Can be bought on [Tindie](https://www.tindie.com/products/electrolama/zzh-cc2652r-multiprotocol-rf-stick/#product-reviews)
+- Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) (use **CC26X2R1_*.zip**)
+- [Flashing guide](https://electrolama.com/projects/zig-a-zig-ah/#flash-firmware) (requires no additional hardware to flash)
+- When migrating from another dongle (e.g. CC2531), make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2mqtt won't start.
+- Requires following in `configuration.yaml`
+
+```yaml
+advanced:
+  rtscts: false
+```
+
+### Texas Instruments LAUNCHXL-CC26X2R1
 ![CC26X2R1](../images/cc26x2r1.jpg)
 
 - USB connected Zigbee adapter.
@@ -41,14 +59,14 @@ advanced:
 - Very good range
 - Only available as a development board, therefore it is quite large
 - Has an onboard flasher, no additional hardware required to flash
-- Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin)
+- Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) (use **CC26X2R1_*.zip**)
 - Can be bought via [Texas Instruments](http://www.ti.com/tool/LAUNCHXL-CC26X2R1)
 - [Flash via UNIFLASH](./flashing_via_uniflash.md)
 - When migrating from another dongle (e.g. CC2531), make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2mqtt won't start.
 - Has UF.L connector for external antenna ([requires resoldering a tiny capacitor (moving C14 to C24)](http://e2e.ti.com/support/wireless-connectivity/zigbee-and-thread/f/158/t/880219?LAUNCHXL-CC26X2R1-Antenna-CC26X2R1)) which could increase range even further.
 - This device has two serial devices built in. Make sure you put the right serial device in the [configuration](configuration.md) or use auto detect if you only have one Texas Instruments CC devices connected to your system.
 
-### Texas Instruments CC1352P-2
+### Texas Instruments LAUNCHXL-CC1352P-2
 ![CC1352P-2](../images/cc1352p2.jpg)
 
 - USB connected Zigbee adapter.
@@ -58,8 +76,15 @@ advanced:
 - Has SMA connector for external antenna ([requires resoldering a tiny capacitor](https://github.com/Koenkk/zigbee2mqtt/issues/2162#issuecomment-570286663)) which could increase range even further.
 - Only available as a development board, therefore it is quite large (it's larger than the CC26X2R1)
 - Has an onboard flasher, no additional hardware required to flash
-- Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin)
+- Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) (use **CC1352P_2_*.zip**)
 - Can be bought via [Texas Instruments](http://www.ti.com/tool/LAUNCHXL-CC1352P)
 - [Flash via UNIFLASH](./flashing_via_uniflash.md)
 - When migrating from another dongle (e.g. CC2531), make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2mqtt won't start.
 - This device has two serial devices built in. Make sure you put the right serial device in the [configuration](configuration.md) or use auto detect if you only have one Texas Instruments CC devices connected to your system.
+
+### ConBee II
+![Conbee II](../images/conbee.jpg)
+
+- USB connnected Zigbee adapter
+- **Very powerful**, will easily handle networks of 100+ devices.
+- Support is still experimental. ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/72))

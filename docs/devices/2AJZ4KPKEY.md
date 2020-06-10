@@ -21,6 +21,9 @@ description: "Integrate your Konke 2AJZ4KPKEY via Zigbee2mqtt with whatever smar
 ### Important
 Konke devices only work on Zigbee channel 15, 20 and 25.
 
+### Pairing
+Press and hold the reset button in the side of the device for +- 5 seconds (until the blue light starts blinking).
+You will need a needle or a pin to do it. After this the device will automatically join.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
