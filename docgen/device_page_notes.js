@@ -47,6 +47,13 @@ Everytime the above message is sent, Zigbee2mqtt will calculate the current time
 `,
     },
     {
+        model: 'XDD12LM',
+        note: `
+### Pairing
+Switch the lamp on five times until the lamp blinks several times.
+`,
+    },
+    {
         model: 'V3-BTZB',
         note: `
 ### Pairing
@@ -744,7 +751,7 @@ Press and hold the reset button on the device for +- 5 seconds (until the blue l
     {
         model: [
             'WXKG01LM', 'WSDCGQ11LM', 'RTCGQ01LM', 'MCCGQ11LM', 'WXKG11LM', 'WXKG12LM', 'RTCGQ11LM',
-            'MFKZQ01LM',
+            'MFKZQ01LM', 'WSDCGQ12LM',
         ],
         note: `
 ### Pairing
@@ -842,7 +849,7 @@ If the device is asleep (which is most of the time) and you need it to be awake 
 `,
     },
     {
-        model: ['TS0601'],
+        model: ['TS0601', 'mcdj3aq'],
         note: `
 ### Configuration of device attributes
 By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
@@ -866,6 +873,93 @@ After this the device will automatically join.
 `,
     },
     {
+        model: ['500.67'],
+        note: `
+### Pairing
+- Press W-key for 3 seconds
+- Press Power On/Off Key for 5 seconds
+Now the device should showup.
+
+### Extended hue
+The device gives extended hue values. Zigbee2mqtt calculates also the normal hue and provides both via mqtt.
+- hue = extendedhue * 360 / 65536 % 360
+`,
+    },
+    {
+        model: ['AC01353010G'],
+        note: `
+### Pairing
+The following steps have to be taken to reset the device:
+
+* remove the battery for at least 6 seconds
+* press the button on the device and keep it pressed
+* insert the battery
+* release the button when the LED turns red
+`,
+    },
+    {
+        model: ['GL-C-008-2ID'],
+        note: `
+### 2ID handling
+This device exposes the two specific endpoints \`rgb\` and \`cct\`. The command topics are \`zigbee2mqtt/<FRIENDLY_NAME>/rgb/set\`, and \`zigbee2mqtt/<FRIENDLY_NAME>/cct/set\`. Both [specific endpoints can be added to a group](../information/groups.md#adding-a-specific-endpoint). These endpoints are \`<FRIENDLY_NAME>/rgb\`, and \`<FRIENDLY_NAME>/cct\`.
+`,
+    },
+    {
+        model: ['GDKES-01TZXD', 'GDKES-02TZXD', 'GDKES-03TZXD'],
+        note: `
+### Rebrand
+Also branded as Yagusmart in the UK, with a version that does not require a neutral wire.
+`,
+    },
+    {
+        model: ['E1E-G7F'],
+        note: `
+### Pairing
+Factory reset the switch by pressing and holding the on and off buttons at the same time for at least 33 seconds. The indicator will start flashing, indicating a successul reset. The device will enter pairing mode for one minute. If the device is not connected in one minute, you must restart the pairing process.
+
+
+### Long press action
+The device will sometimes output a single push in addition to a long press. You can mitigate this by using the Debounce device configuration. Refer to *[How to use device type specific configuration](../information/configuration.md)*.
+`,
+    },
+    {
+        model: ['DIYRuZ_FreePad'],
+        note: `
+### Firmware
+Open source firmware can be found here: [Github](https://github.com/diyruz/freepad)
+
+### How to join:
+#### If device in FN(factory new) state:
+1. Press and hold button (1) for 2-3 seconds, until device start flashing led
+2. Wait, in case of successful join, device will flash led 5 times
+3. If join failed, device will flash led 3 times
+
+#### If device in a network:
+1. Hold button (1) for 10 seconds, this will reset device to FN(factory new) status
+2. Go to step 1 for FN device
+
+### How to use touch link
+1. Bring you remote near to TL device
+2. Hold button (2) for 5 seconds
+TL funtionality can work without connecting to network
+`,
+    },
+    {
+        model: ['2AJZ4KPKEY'],
+        note: `
+### Pairing
+Press and hold the reset button in the side of the device for +- 5 seconds (until the blue light starts blinking).
+You will need a needle or a pin to do it. After this the device will automatically join.
+`,
+    },
+    {
+        model: ['SWO-MOS1PA'],
+        note: `
+### Temperature not supported
+Device is listed as having temperature detection. This feature is still being investigated.
+`,
+    },
+    {
         model: ['DJT11LM'],
         note: `
 ### Pairing
@@ -879,7 +973,7 @@ The \`strength\` value, which is reported every 300 seconds after vibration is d
 `,
     },
     {
-        model: ['WXKG03LM', 'WXKG02LM', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'ZNCZ02LM'],
+        model: ['WXKG03LM', 'WXKG06LM', 'WXKG02LM', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'ZNCZ02LM', 'QBKG25LM', 'QBKG22LM', 'QBKG24LM'],
         note: `
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
@@ -965,7 +1059,7 @@ experimenting with this option (e.g. \`long_timeout: 2000\`).
     },
     {
         supports: ['illuminance'],
-        notModel: ['RTCGQ11LM'],
+        notModel: ['RTCGQ11LM', 'GZCGQ01LM'],
         note: `
 * \`illuminance_lux_precision\`: Controls the precision of \`illuminance_lux\` values, e.g. \`0\` or \`1\`; default \`1\`.
 To control the precision based on the illuminance_lux value set it to e.g. \`{1000: 0, 100: 1}\`,
@@ -990,22 +1084,6 @@ To control the precision based on the temperature value set it to e.g. \`{30: 0,
 when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1.
 * \`temperature_calibration\`: Allows to manually calibrate temperature values,
 e.g. \`1\` would add 1 degree to the temperature reported by the device; default \`0\`.
-`,
-    },
-    {
-        model: ['owvfni3'],
-        note: `
-### Configuration of device attributes
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
-\`\`\`json
-{
-    "options":{
-        "reverse_direction": xxx
-    }
-}
-\`\`\`
-
-- **reverse_direction**: (\`true\`/\`false\`, default: \`false\`). Device can be configured to act in an opposite direction.
 `,
     },
     {
@@ -1161,7 +1239,7 @@ every second.
     `,
     },
     {
-        model: ['SJCGQ11LM'],
+        model: ['SJCGQ11LM', 'SJCGQ12LM'],
         note: `
 ### Pairing
 Press and hold water logo on the device for +- 10 seconds until the blue light blinks
@@ -1685,6 +1763,22 @@ This device does **not** act as a router.
 `,
     },
     {
+        model: ['LZL4BWHL01'],
+        note: `
+### Pairing
+Factory reset the Lutron Connected Bulb Remote by pressing and holding the remote's top and bottom buttons for approximately 15 seconds. The light on the remote will blink rapidly to indicate that the remote has been reset.
+
+After resetting the remote can be paired to a network by pressing and holding the top button for approximately 2 seconds.
+
+#### Using the Connected Bulb Remote to reset a connected light bulb (Hue, Cree, GE Link)
+Connected light bulbs can be reset with the Lutron Connected Bulb Remote by bringing the remote close (~3 inches) to the light bulb and pressing and holding the remote's 2nd and bottom buttons. The light bulb will flash and the remote's LED will turn on. Continue to hold both buttons until the remote's LED turns off.
+
+After resetting the bulb will automatically attempt to join a network.
+
+This method should work for Philips Hue bulbs, IKEA TRADFRI bulbs, GE Link bulbs, Connected Cree bulbs, and EcoSmart SMART bulbs.
+`,
+    },
+    {
         model: 'HS1SA-M',
         note: `
 ### Pairing
@@ -1967,7 +2061,7 @@ In OpenHAB you need the MQTT Binding to be installed. It is possible to add this
 To make the following configuration work it is neccessary to enable the experimental attribute output in the configuration.yaml.
 \`\`\`yaml
 experimental:
-  output: attribute
+    output: attribute
 \`\`\`
 
 ### Thing
@@ -1976,23 +2070,33 @@ To add this Xiaomi MCCGQ01LM MiJia door & window contact sensor as Thing it is n
 \`\`\`yaml
 Bridge mqtt:broker:zigbeeBroker [ host="YourHostname", secure=false, username="your_username", password="your_password" ]
 {
-    Thing mqtt:topic:MijiaDoorSensor "MiJia door & window contact sensor"  @ "Your room"
+    Thing topic MijiaDoorSensor "MiJia door & window contact sensor"  @ "Your room"
     {
         Channels:
             Type contact  : status      "status"      [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/contact", on="false", off="true" ]
             Type number   : voltage     "voltage"     [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/voltage" ]
             Type number   : battery     "battery"     [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/battery" ]
             Type number   : linkquality "linkquality" [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/linkquality" ]
+            /****************************************************************************************************
+            If you want to know when the sensor has been last changed you cann add to your configuration.yaml:
+            advanced:
+                last_seen: ISO_8601_local
+
+            and add another channel:
+            ****************************************************************************************************/
+            Type datetime : last_change "last change" [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/last_seen" ]
     }
 }
 \`\`\`
 
 ### Items
 \`\`\`yaml
-Contact  door_window_sensor_isOpen      "open status" <door>                    {channel="mqtt:topic:MijiaDoorSensor:status"}
-Number   door_window_sensor_VOLTAGE     "voltage [%d mV]"                       {channel="mqtt:topic:MijiaDoorSensor:voltage"}
-Number   door_window_sensor_BATTERY     "battery [%.1f %%]" <battery>           {channel="mqtt:topic:MijiaDoorSensor:battery"}
-Number   door_window_sensor_LINKQUALITY "link qualitiy [%d]" <qualityofservice> {channel="mqtt:topic:MijiaDoorSensor:linkquality"}
+Contact  door_window_sensor_isOpen      "open status" <door>                                {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:status"}
+Number   door_window_sensor_VOLTAGE     "voltage [%d mV]"                                   {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:voltage"}
+Number   door_window_sensor_BATTERY     "battery [%.1f %%]" <battery>                       {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:battery"}
+Number   door_window_sensor_LINKQUALITY "link qualitiy [%d]" <qualityofservice>             {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:linkquality"}
+/* See comment above */
+DateTime door_window_sensor_last_change "last change [%1$td.%1$tm.%1$tY %1$tH:%1$tM:%1$tS]" {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:last_change"}
 \`\`\`
 `,
     },

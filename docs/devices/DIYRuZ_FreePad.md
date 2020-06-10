@@ -17,6 +17,7 @@ description: "Integrate your DIYRuZ DIYRuZ_FreePad via Zigbee2mqtt with whatever
 
 ## Notes
 
+
 ### Firmware
 Open source firmware can be found here: [Github](https://github.com/diyruz/freepad)
 
@@ -34,6 +35,7 @@ Open source firmware can be found here: [Github](https://github.com/diyruz/freep
 1. Bring you remote near to TL device
 2. Hold button (2) for 5 seconds
 TL funtionality can work without connecting to network
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

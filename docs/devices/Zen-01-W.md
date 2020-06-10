@@ -40,7 +40,7 @@ manual integration is possible with the following configuration:
 climate:
   - platform: "mqtt"
     availability_topic: "zigbee2mqtt/bridge/state"
-    min_temp: "7"
+    min_temp: "10"
     max_temp: "30"
     modes: 
       - "off"
@@ -54,9 +54,9 @@ climate:
     temperature_state_topic: true
     temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
     temperature_command_topic: "occupied_heating_setpoint"
-    temp_step: 1
+    temp_step: 0.5
     action_topic: true
-    action_template: "{{ value_json.operation }}"
+    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
 
 sensor:
   - platform: "mqtt"

@@ -28,7 +28,7 @@ In OpenHAB you need the MQTT Binding to be installed. It is possible to add this
 To make the following configuration work it is neccessary to enable the experimental attribute output in the configuration.yaml.
 ```yaml
 experimental:
-  output: attribute
+    output: attribute
 ```
 
 ### Thing
@@ -44,13 +44,13 @@ Bridge mqtt:broker:zigbeeBroker [ host="YourHostname", secure=false, username="y
             Type number   : voltage     "voltage"     [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/voltage" ]
             Type number   : battery     "battery"     [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/battery" ]
             Type number   : linkquality "linkquality" [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/linkquality" ]
-          /****************************************************************************************************
+            /****************************************************************************************************
             If you want to know when the sensor has been last changed you cann add to your configuration.yaml:
             advanced:
-              last_seen: ISO_8601_local
-              
+                last_seen: ISO_8601_local
+
             and add another channel:
-           ****************************************************************************************************/
+            ****************************************************************************************************/
             Type datetime : last_change "last change" [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/last_seen" ]
     }
 }

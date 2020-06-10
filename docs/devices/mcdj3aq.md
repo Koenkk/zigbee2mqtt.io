@@ -1,19 +1,19 @@
 ---
-title: "Zemismart ZM25TQ control via MQTT"
-description: "Integrate your Zemismart ZM25TQ tubular motor (Zigbee connectivity Tuya based) via Zigbee2mqtt with whatever smart home
+title: "TuYa mcdj3aq control via MQTT"
+description: "Integrate your TuYa mcdj3aq via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZM25TQ.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/mcdj3aq.md)*
 
-# Zemismart ZM25TQ
+# TuYa mcdj3aq
 
-| Model | ZM25TQ  |
-| Vendor  | Zemismart  |
+| Model | mcdj3aq  |
+| Vendor  | TuYa  |
 | Description | Tubular motor |
 | Supports | open, close, stop, position |
-| Picture | ![Zemismart ZM25TQ](../images/devices/ZM25TQ.jpg) |
+| Picture | ![TuYa mcdj3aq](../images/devices/mcdj3aq.jpg) |
 | White-label | Zemismart ZM25TQ |
 
 ## Notes
@@ -57,3 +57,5 @@ sensor:
     value_template: "{{ value_json.linkquality }}"
 ```
 {% endraw %}
+
+

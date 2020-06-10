@@ -11,8 +11,8 @@ description: "Integrate your Sengled E1E-G7F via Zigbee2mqtt with whatever smart
 
 | Model | E1E-G7F  |
 | Vendor  | Sengled  |
-| Description | Smart light switch |
-| Supports | on/off, brightness, single/double/long press |
+| Description | Smart switch  |
+| Supports | action |
 | Picture | ![Sengled E1E-G7F](../images/devices/E1E-G7F.jpg) |
 
 ## Notes
@@ -24,6 +24,7 @@ Factory reset the switch by pressing and holding the on and off buttons at the s
 
 ### Long press action
 The device will sometimes output a single push in addition to a long press. You can mitigate this by using the Debounce device configuration. Refer to *[How to use device type specific configuration](../information/configuration.md)*.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -46,7 +47,6 @@ sensor:
     icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
-
 ```
 {% endraw %}
 
