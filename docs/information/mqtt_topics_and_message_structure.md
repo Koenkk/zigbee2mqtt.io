@@ -288,6 +288,10 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
   // In case you want this you can use "brightness_move_onoff" instead of "brightness_move".
   "brightness_move": -40, // Starts moving the brightness down at 40 units per second
   "brightness_move": "stop", // Stops the brightness move
+
+  // Similar to brightness_move, color_temp_move will move the color temperature.
+  "color_temp_move": 40, // Starts moving the color temperature up at 40 units per second
+  "color_temp_move": "stop", // Stops the color temperature move
 }
 ```
 
