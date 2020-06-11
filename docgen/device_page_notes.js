@@ -2117,6 +2117,20 @@ DateTime door_window_sensor_last_change "last change [%1$td.%1$tm.%1$tY %1$tH:%1
 If you get a warning that the model is undefined, which might happen after removing the device. Try removing it from the network again while in pairning mode.
 `,
     },
+    {
+        model: ['ZK03840'],
+        note: `
+### Installing the TRV
+- install the correct adaptor on the valve
+- open cover (push clip on bottom and push front side to slide open)
+- insert batteries (\`--\` should be on the display)
+- press the button on the top (\`--\` + \`((•))\` should be on the display)
+- wait for the device to pair, it took about 2 minutes for me to get the success message in zigbee2mqtt
+- install the TRV on the adaptor (push hard until you feel a click, rotate the TRV until display faces up)
+- press the button on the top for 3 seconds (motor will turn, \`21°\` + \`((•))\` should be on the display)
+- close the cover
+`,
+    },
 ];
 
 module.exports = notes;
