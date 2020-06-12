@@ -12,7 +12,7 @@ description: "Integrate your Climax RS-23ZBS via Zigbee2mqtt with whatever smart
 | Model | RSS-23ZBS  |
 | Vendor  | Climax  |
 | Description | Temperature and humidity sensor |
-| Supports | Temperature |
+| Supports | Temperature and relative humidity |
 | Picture | ![Climax RS-23ZBS](../images/devices/RS-23ZBS.jpg) |
 | Webpage | [Climax RS-23ZBS webpage](https://www.climax.com.tw/new/rs23zb.php) |
 
@@ -41,6 +41,13 @@ sensor:
     device_class: "temperature"
     unit_of_measurement: "°C" # "°F" if Fahrenheit configuration is in place.
     value_template: "{{ value_json.temperature }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    device_class: "humidity"
+    unit_of_measurement: "%"
+    value_template: "{{ value_json.humidity}}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
 ```
 {% endraw %}
