@@ -543,6 +543,7 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | ------------- | ------------- | -------------------------- |
 | [07005B](../devices/07005B.md) | Immax Neo SMART LED E14 5W warm white, dimmable, Zigbee 3.0 (on/off, brightness) | ![../images/devices/07005B.jpg](../images/devices/07005B.jpg) |
 | [07004D](../devices/07004D.md) | Immax Neo SMART LED E27 8,5W color, dimmable, Zigbee 3.0 (on/off, brightness, color temperature, color xy) | ![../images/devices/07004D.jpg](../images/devices/07004D.jpg) |
+| [07008L](../devices/07008L.md) | Immax Neo Smart LED Strip, color, dimmable, ZigBee 3.0 (on/off, brightness, color temperature, color xy) | ![../images/devices/07008L.jpg](../images/devces/07008L.jpg) |
 | [07046L](../devices/07046L.md) | Immax 4-Touch single click buttons (action) | ![../images/devices/07046L.jpg](../images/devices/07046L.jpg) |
 | [07045L](../devices/07045L.md) | Immax Magnetic contact sensor (contact, tamper) | ![../images/devices/07045L.jpg](../images/devices/07045L.jpg) |
 | [07048L](../devices/07048L.md) | Immax NEO SMART plug (on/off, power and energy measurement) | ![../images/devices/07048L.jpg](../images/devices/07048L.jpg) |
