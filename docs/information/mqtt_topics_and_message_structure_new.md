@@ -125,7 +125,24 @@ Optionally, a `transaction` property can be included in the request. This allows
 #### `zigbee2mqtt/bridge/request/permitJoin`
 Allows to permit or disable joining of new devices. Allowed payloads are `{"value": true}`, `{"value": false}`, `true` or `false`. Example response: ``{"data":{"value":true},"status":"ok"}`. This is not persistent (will not be saved to `configuration.yaml`).
 
+#### `zigbee2mqtt/bridge/device/remove`
+Removes a device from the network. Allowed payloads are `{"ID": ID}` or `ID` where ID can be the `ieeeAddress` or `friendlyName` of the device. Example; request: `{"ID": "my_bulb"}` or `my_bulb`, response: `{"data":{"ID": "bulb","ban":false,"force":false},"status":"ok"}`.
 
+Note that in Zigbee the coordinator can only **request** a device to remove itself from the network.
+Which means that in case a device refuses to respond to this request it is not removed from the network.
+This can happen for e.g. battery powered devices which are sleeping and thus not receiving this request.
+In case removal fails the reponse will be e.g. `{"data":{"ID": "bulb","ban":false,"force":false},"status":"error","error":"Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)"}`.
+
+An alternative way to remove the device is by factory resetting it, this probably won't work for all devices as it depends on the device itself.
+In case the device did remove itself from the network, you will get a `deviceLeave` event on `zigbee2mqtt/bridge/event`.
+
+In case all of the above fails, you can force remove a device. Note that a force remove will **only** remove the device from the database. Until this device is factory reset, it will still hold the network encryption key and thus is still able to communicate over the network!
+To force remove a device add the optional `force` property (default `false`) to the payload, example: `{"ID":"my_bulb","force":true}`.
+
+In case you also want to ban the device the optional `ban` property (default `false`) can be added, example: `{"ID":"my_bulb","ban":true}`. Note that Zigbee doesn't have a ban functionallity, therefore when a device is banned, Zigbee2mqtt will immediately request the device to remove itself from the network when it joins.
+
+#### `zigbee2mqtt/bridge/group/remove`
+Removes a group from the network. Allowed payloads are `{"ID": ID}` or `ID` where ID can be the `groupID` or `friendlyName` of the group. Example; request: `{"ID": "my_group"}` or `my_group`, response: `{"data":{"ID": "my_group"},"status":"ok"}`.
 
 
 TODO:
@@ -166,33 +183,6 @@ Allows you to change device specific options during runtime. Options can only be
   }
 }
 ```
-
-## zigbee2mqtt/bridge/config/remove
-Allows you to remove devices from the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful remove a [`device_removed`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is sent.
-
-Note that in Zigbee the coordinator can only **request** a device to remove itself from the network.
-Which means that in case a device refuses to respond to this request it is not removed from the network.
-This can happen for e.g. battery powered devices which are sleeping and thus not receiving this request.
-In this case you will see the following in the zigbee2mqtt log:
-
-```
-zigbee2mqtt:info  2019-11-03T13:39:30: Removing 'dimmer'
-zigbee2mqtt:error 2019-11-03T13:39:40: Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)
-```
-
-An alternative way to remove the device is by factory resetting it, this probably won't work for all devices as it depends on the device itself.
-In case the device did remove itself from the network, you will see:
-
-```
-zigbee2mqtt:warn  2019-11-03T13:36:18: Device '0x00158d00024a5e57' left the network
-```
-
-In case all of the above fails, you can force remove a device. Note that a force remove will **only** remove the device from the database. Until this device is factory reset, it will still hold the network encryption key and thus is still able to communicate over the network!
-
-To force remove a device use the following topic: `zigbee2mqtt/bridge/config/force_remove`
-
-## zigbee2mqtt/bridge/config/ban
-Allows you to ban devices from the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful ban a [`device_banned`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is sent.
 
 ## zigbee2mqtt/bridge/config/whitelist
 Allows you to whitelist devices in the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful whitelisting a [`device_whitelisted`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is sent. Note that when devices are whitelisted, all device which are not whitelisted will be removed from the network.
