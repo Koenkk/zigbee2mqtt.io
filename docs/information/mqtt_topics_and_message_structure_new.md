@@ -142,7 +142,10 @@ To force remove a device add the optional `force` property (default `false`) to 
 In case you also want to ban the device the optional `ban` property (default `false`) can be added, example: `{"ID":"my_bulb","ban":true}`. Note that Zigbee doesn't have a ban functionallity, therefore when a device is banned, Zigbee2mqtt will immediately request the device to remove itself from the network when it joins.
 
 #### `zigbee2mqtt/bridge/request/group/remove`
-Removes a group from the network. Allowed payloads are `{"ID": "groupID"}` or `groupID` where groupID can be the `groupID` or `friendlyName` of the group. Example; request: `{"ID": "my_group"}` or `my_group`, response: `{"data":{"ID": "my_group"},"status":"ok"}`.
+Removes a group. Allowed payloads are `{"ID": "groupID"}` or `groupID` where groupID can be the `groupID` or `friendlyName` of the group. Example; request: `{"ID": "my_group"}` or `my_group`, response: `{"data":{"ID": "my_group"},"status":"ok"}`.
+
+#### `zigbee2mqtt/bridge/request/group/add`
+Adds a group. Allowed payloads are `{"friendlyName": NAME, "ID": NUMBER}` or `NAME`. Example; request: `{"ID": 9, "friendlyName": "new_group"}` or `new_group`, response: `{"data":{"ID": 9,"friendlyName":"new_group"},"status":"ok"}`. The `ID` property is optional.
 
 #### zigbee2mqtt/bridge/request/device/rename
 Allows you to change the `friendly_name` of a device on the fly. Payload format is `{"from": deviceID, "to": deviceID}` where deviceID can be the `ieeeAddress` or `friendlyName` of the device, example: `{"from": "my_bulb", "to": "my_bulb_new_name"}`. Response will be `{"data":{"from":"my_bulb","to":"my_bulb_new_name"},"status":"ok"}`.
@@ -152,6 +155,11 @@ In case you want to rename the last joined device, omit the `from` property and 
 #### zigbee2mqtt/bridge/request/group/rename
 Allows you to change the `friendly_name` of a group on the fly. Payload format is `{"from": groupID, "to": groupID}` where groupID can be the `groupID` or `friendlyName` of the group, example: `{"from": "my_group", "to": "my_group_new_name"}`. Response will be `{"data":{"from":"my_group","to":"my_group_new_name"},"status":"ok"}`.
 
+#### zigbee2mqtt/bridge/request/device/changeOptions
+Allows you to change device options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"ID": deviceID,"options": OPTIONS}` where deviceID can be the `ieeeAddress` or `friendlyName` of the device, example: `{"ID": "my_bulb", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"ID":"my_bulb"},"status":"ok"}`.
+
+#### zigbee2mqtt/bridge/request/group/changeOptions
+Allows you to change group options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"ID": groupID,"options": OPTIONS}` where groupID can be the `groupID` or `friendlyName` of the group, example: `{"ID": "my_group", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"ID":"my_group"},"status":"ok"}`.
 
 
 
@@ -179,25 +187,10 @@ See [OTA updates](./ota_updates.md).
 ## zigbee2mqtt/bridge/config/log_level
 Allows you to switch the `log_level` during runtime. This is not persistent (will not be saved to `configuration.yaml`). Possible payloads are: `"debug"`, `"info"`, `"warn"`, `"error"`.
 
-## zigbee2mqtt/bridge/config/device_options
-Allows you to change device specific options during runtime. Options can only be changed, not added or deleted. The payload should be a JSON message, example:
 
-```json
-{
-  "friendly_name": "motion_sensor_toilet",
-  "options": {
-    "occupancy_timeout": 100
-  }
-}
-```
 
 ## zigbee2mqtt/bridge/config/whitelist
 Allows you to whitelist devices in the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful whitelisting a [`device_whitelisted`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is sent. Note that when devices are whitelisted, all device which are not whitelisted will be removed from the network.
-
-## zigbee2mqtt/bridge/config/add_group
-Allows you to add a group, payload should be the name of the group, e.g. `my_group`.
-
-In case you also want to specify the group ID, provide the following payload `{"friendly_name": "my_group", "id": 42}`.
 
 ## zigbee2mqtt/bridge/networkmap
 **WARNING: During the networkmap scan your network will be not/less responsive. Depending on the size of your network this can take somewhere between 10 seconds and 2 minutes. Therefore it is recommended to only trigger these scans manually!**
