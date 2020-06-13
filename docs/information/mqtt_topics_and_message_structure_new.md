@@ -125,8 +125,8 @@ Optionally, a `transaction` property can be included in the request. This allows
 #### `zigbee2mqtt/bridge/request/permitJoin`
 Allows to permit or disable joining of new devices. Allowed payloads are `{"value": true}`, `{"value": false}`, `true` or `false`. Example response: ``{"data":{"value":true},"status":"ok"}`. This is not persistent (will not be saved to `configuration.yaml`).
 
-#### `zigbee2mqtt/bridge/device/remove`
-Removes a device from the network. Allowed payloads are `{"ID": ID}` or `ID` where ID can be the `ieeeAddress` or `friendlyName` of the device. Example; request: `{"ID": "my_bulb"}` or `my_bulb`, response: `{"data":{"ID": "bulb","ban":false,"force":false},"status":"ok"}`.
+#### `zigbee2mqtt/bridge/request/device/remove`
+Removes a device from the network. Allowed payloads are `{"ID": "deviceID"}` or `deviceID` where deviceID can be the `ieeeAddress` or `friendlyName` of the device. Example; request: `{"ID": "my_bulb"}` or `my_bulb`, response: `{"data":{"ID": "bulb","ban":false,"force":false},"status":"ok"}`.
 
 Note that in Zigbee the coordinator can only **request** a device to remove itself from the network.
 Which means that in case a device refuses to respond to this request it is not removed from the network.
@@ -141,8 +141,18 @@ To force remove a device add the optional `force` property (default `false`) to 
 
 In case you also want to ban the device the optional `ban` property (default `false`) can be added, example: `{"ID":"my_bulb","ban":true}`. Note that Zigbee doesn't have a ban functionallity, therefore when a device is banned, Zigbee2mqtt will immediately request the device to remove itself from the network when it joins.
 
-#### `zigbee2mqtt/bridge/group/remove`
-Removes a group from the network. Allowed payloads are `{"ID": ID}` or `ID` where ID can be the `groupID` or `friendlyName` of the group. Example; request: `{"ID": "my_group"}` or `my_group`, response: `{"data":{"ID": "my_group"},"status":"ok"}`.
+#### `zigbee2mqtt/bridge/request/group/remove`
+Removes a group from the network. Allowed payloads are `{"ID": "groupID"}` or `groupID` where groupID can be the `groupID` or `friendlyName` of the group. Example; request: `{"ID": "my_group"}` or `my_group`, response: `{"data":{"ID": "my_group"},"status":"ok"}`.
+
+#### zigbee2mqtt/bridge/request/device/rename
+Allows you to change the `friendly_name` of a device on the fly. Payload format is `{"from": deviceID, "to": deviceID}` where deviceID can be the `ieeeAddress` or `friendlyName` of the device, example: `{"from": "my_bulb", "to": "my_bulb_new_name"}`. Response will be `{"data":{"from":"my_bulb","to":"my_bulb_new_name"},"status":"ok"}`.
+
+In case you want to rename the last joined device, omit the `from` property and set `last` to `true`. Example: `{"last": true, "to": "my_bulb_new_name"}`.
+
+#### zigbee2mqtt/bridge/request/group/rename
+Allows you to change the `friendly_name` of a group on the fly. Payload format is `{"from": groupID, "to": groupID}` where groupID can be the `groupID` or `friendlyName` of the group, example: `{"from": "my_group", "to": "my_group_new_name"}`. Response will be `{"data":{"from":"my_group","to":"my_group_new_name"},"status":"ok"}`.
+
+
 
 
 TODO:
@@ -153,9 +163,6 @@ EVERYTHING BELOW THIS IS OLD STUFF
 
 
 
-
-## zigbee2mqtt/bridge/config/devices/get
-Allows you to retrieve all connected devices. Publish an empty payload to this topic. Response will be published to `zigbee2mqtt/bridge/config/devices`.
 
 ## zigbee2mqtt/bridge/config/last_seen
 Allows you to set the `advanced` -> `last_seen` configuration option. See [Configuration](../information/configuration.md) for possible values.
@@ -187,20 +194,10 @@ Allows you to change device specific options during runtime. Options can only be
 ## zigbee2mqtt/bridge/config/whitelist
 Allows you to whitelist devices in the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful whitelisting a [`device_whitelisted`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is sent. Note that when devices are whitelisted, all device which are not whitelisted will be removed from the network.
 
-## zigbee2mqtt/bridge/config/rename
-Allows you to change the `friendly_name` of a device or group on the fly.
-Format should be: `{"old": "OLD_FRIENDLY_NAME", "new": "NEW_FRIENDLY_NAME"}`.
-
-## zigbee2mqtt/bridge/config/rename_last
-Allows you to rename the last joined device. Payload should be the new name e.g. `my_new_device_name`.
-
 ## zigbee2mqtt/bridge/config/add_group
 Allows you to add a group, payload should be the name of the group, e.g. `my_group`.
 
 In case you also want to specify the group ID, provide the following payload `{"friendly_name": "my_group", "id": 42}`.
-
-## zigbee2mqtt/bridge/config/remove_group
-Allows you to remove a group, payload should be the name of the group, e.g. `my_group`.
 
 ## zigbee2mqtt/bridge/networkmap
 **WARNING: During the networkmap scan your network will be not/less responsive. Depending on the size of your network this can take somewhere between 10 seconds and 2 minutes. Therefore it is recommended to only trigger these scans manually!**
@@ -229,167 +226,3 @@ Returns the list of groups a device is in, and its group capacity.
 
 ## zigbee2mqtt/bridge/configure
 Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected, also not all devices require this. Payload should be friendly name of the device, e.g. `my_remote`.
-
-## zigbee2mqtt/[FRIENDLY_NAME]
-Where `[FRIENDLY_NAME]` is E.G. `0x00158d0001b79111`. Message published to this topic are **always** in a JSON format. Each device produces a different JSON message, **some** examples:
-
-**Xiaomi MiJia temperature & humidity sensor (WSDCGQ01LM)**
-```json
-{
-  "temperature": 27.34,
-  "humidity": 44.72
-}
-```
-
-**Xiaomi MiJia wireless switch (WXKG01LM)**
-```json
-{
-  "click": "double"
-}
-```
-
-**Xiaomi MiJia human body movement sensor (RTCGQ01LM)**
-```json
-{
-  "occupancy": true
-}
-```
-
-**IKEA TRADFRI LED bulb E27 980 lumen, dimmable, white spectrum, opal white (LED1545G12)**
-```json
-{
-  "state": "ON",
-  "brightness": 215,
-  "color_temp": 325
-}
-```
-
-**Xiaomi Aqara curtain motor (ZNCLDJ11LM)**
-```js
-{
-  "position": 60,       // Value between 0 and 100, (0 - closed / 100 - open)
-  "running": true,      // Curtain is moving
-}
-```
-
-## zigbee2mqtt/[FRIENDLY_NAME]/set
-Publishing messages to this topic allows you to control your Zigbee devices via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH).
-
-```js
-{
-  "state": "ON", // Or "OFF", "TOGGLE"
-  "brightness": 255, // Value between 0 and 255
-
-  // Color temperature in Reciprocal MegaKelvin, a.k.a. Mirek scale.
-  // Mirek = 1,000,000 / Color Temperature in Kelvin
-  // Values typically between 50 and 400. The higher the value, the warmer the color.
-  "color_temp": 155,
-
-  "color": {
-    // XY color
-    "x": 0.123,
-    "y": 0.123
-
-    // OR
-
-    // RGB color
-    "r": 46,
-    "g": 102,
-    "b": 193
-
-    // OR
-
-    // RGB color
-    "rgb": "46,102,193"
-
-    // OR
-
-    // HEX color
-    "hex": "#547CFF",
-
-    // OR
-
-    // Hue and/or saturation color
-    "hue": 360,
-    "saturation": 100
-
-    // OR
-
-    // Hue, saturation, brightness (in HSB space)
-    "h": 360,
-    "s": 100,
-    "b": 100
-
-    // OR
-
-    // Hue, saturation, brightness (in HSB space)
-    "hsb": "360,100,100"
-
-    // OR
-
-    // Hue, saturation, brightness (in HSV space)
-    "h": 360,
-    "s": 100,
-    "v": 100
-
-    // OR
-
-    // Hue, saturation, brightness (in HSV space)
-    "hsv": "360,100,100"
-
-    // OR
-
-    // Hue, saturation, lightness (in HSL space)
-    "h": 360,
-    "s": 100,
-    "l": 100
-
-    // OR
-
-    // Hue, saturation, brightness (in HSL space)
-    "hsl": "360,100,100"
-  },
-
-  // Blinks the bulbs, possible values:
-  // - "select": single blink
-  // - "lselect": blinking for a longer time
-  // - "none": stop blinking
-  "alert": "select",
-
-  // Specifies the number of seconds the transition to this state takes (0 by default).
-  "transition": 3,
-
-  // Instead of setting a brightness by value, you can also move it and stop it after a certain time
-  // "brightness_move" will stop at brightnes 1 and won't turn on bulb when they are off.
-  // In case you want this you can use "brightness_move_onoff" instead of "brightness_move".
-  "brightness_move": -40, // Starts moving the brightness down at 40 units per second
-  "brightness_move": "stop", // Stops the brightness move
-}
-```
-
-`transition` specifies the number of seconds the transition to this state takes (0 by default).
-
-Remove attributes which are not supported for your device. E.G. in case of a Xiaomi Mi power plug ZigBee (ZNCZ02LM) only send the `"state"` attribute.
-
-### Without JSON
-In case you don't want to use JSON, publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set/state` with payload `ON` is the same as publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set`
-```js
-{
-  "state": "ON"
-}
-```
-
-## zigbee2mqtt/[FRIENDLY_NAME]/get
-This is the counterpart of the `set` command. It allows you to read a value from a device. To read e.g. the state of a device send the payload:
-
-```js
-{
-  "state": ""
-}
-```
-
-## homeassistant/[DEVICE_TYPE]/[IEEEADDR]/[OBJECT_ID]/config
-Only used when `homeassistant: true` in `configuration.yaml`. Required for [Home Assistant MQTT discovery](https://www.home-assistant.io/docs/mqtt/discovery/).
-
-## Device specific commands
-Some devices offer device specific commands. Example: for the Xiaomi DJT11LM Aqara vibration sensor you can set the `sensitivity`. To find out wether your device supports any specific commands, checkout the device page (which can be reached via the supported devices page).
