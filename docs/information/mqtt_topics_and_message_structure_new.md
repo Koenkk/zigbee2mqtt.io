@@ -122,10 +122,10 @@ Optionally, a `transaction` property can be included in the request. This allows
 
 ### Possible requests
 
-#### `zigbee2mqtt/bridge/request/permitJoin`
+#### zigbee2mqtt/bridge/request/permitJoin
 Allows to permit or disable joining of new devices. Allowed payloads are `{"value": true}`, `{"value": false}`, `true` or `false`. Example response: ``{"data":{"value":true},"status":"ok"}`. This is not persistent (will not be saved to `configuration.yaml`).
 
-#### `zigbee2mqtt/bridge/request/device/remove`
+#### zigbee2mqtt/bridge/request/device/remove
 Removes a device from the network. Allowed payloads are `{"ID": "deviceID"}` or `deviceID` where deviceID can be the `ieeeAddress` or `friendlyName` of the device. Example; request: `{"ID": "my_bulb"}` or `my_bulb`, response: `{"data":{"ID": "bulb","ban":false,"force":false},"status":"ok"}`.
 
 Note that in Zigbee the coordinator can only **request** a device to remove itself from the network.
@@ -141,10 +141,10 @@ To force remove a device add the optional `force` property (default `false`) to 
 
 In case you also want to ban the device the optional `ban` property (default `false`) can be added, example: `{"ID":"my_bulb","ban":true}`. Note that Zigbee doesn't have a ban functionallity, therefore when a device is banned, Zigbee2mqtt will immediately request the device to remove itself from the network when it joins.
 
-#### `zigbee2mqtt/bridge/request/group/remove`
+#### zigbee2mqtt/bridge/request/group/remove
 Removes a group. Allowed payloads are `{"ID": "groupID"}` or `groupID` where groupID can be the `groupID` or `friendlyName` of the group. Example; request: `{"ID": "my_group"}` or `my_group`, response: `{"data":{"ID": "my_group"},"status":"ok"}`.
 
-#### `zigbee2mqtt/bridge/request/group/add`
+#### zigbee2mqtt/bridge/request/group/add
 Adds a group. Allowed payloads are `{"friendlyName": NAME, "ID": NUMBER}` or `NAME`. Example; request: `{"ID": 9, "friendlyName": "new_group"}` or `new_group`, response: `{"data":{"ID": 9,"friendlyName":"new_group"},"status":"ok"}`. The `ID` property is optional.
 
 #### zigbee2mqtt/bridge/request/device/rename
