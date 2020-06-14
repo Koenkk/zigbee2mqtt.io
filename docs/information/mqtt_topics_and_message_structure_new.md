@@ -155,11 +155,23 @@ In case you want to rename the last joined device, omit the `from` property and 
 #### zigbee2mqtt/bridge/request/group/rename
 Allows you to change the `friendly_name` of a group on the fly. Payload format is `{"from": groupID, "to": groupID}` where groupID can be the `groupID` or `friendlyName` of the group, example: `{"from": "my_group", "to": "my_group_new_name"}`. Response will be `{"data":{"from":"my_group","to":"my_group_new_name"},"status":"ok"}`.
 
-#### zigbee2mqtt/bridge/request/device/changeOptions
+#### zigbee2mqtt/bridge/request/device/options
 Allows you to change device options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"ID": deviceID,"options": OPTIONS}` where deviceID can be the `ieeeAddress` or `friendlyName` of the device, example: `{"ID": "my_bulb", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"ID":"my_bulb"},"status":"ok"}`.
 
-#### zigbee2mqtt/bridge/request/group/changeOptions
+#### zigbee2mqtt/bridge/request/group/options
 Allows you to change group options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"ID": groupID,"options": OPTIONS}` where groupID can be the `groupID` or `friendlyName` of the group, example: `{"ID": "my_group", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"ID":"my_group"},"status":"ok"}`.
+
+#### zigbee2mqtt/bridge/request/config/lastSeen
+Sets `advanced` -> `last_seen` (persistent). Payload format is `{"value": VALUE}`, example: `{"value":"disable"}`, response: `{"data":{"value": "disable"},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
+
+#### zigbee2mqtt/bridge/request/config/elapsed
+Sets `advanced` -> `elapsed` (persistent). Payload format is `{"value": VALUE}`, example: `{"value":true}`, response: `{"data":{"value": true},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
+
+#### zigbee2mqtt/bridge/request/config/logLevel
+Sets `advanced` -> `log_level` (persistent). Payload format is `{"value": VALUE}`, example: `{"value":"debug"}`, response: `{"data":{"value": "debug"},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
+
+
+
 
 
 
@@ -170,27 +182,12 @@ EVERYTHING BELOW THIS IS OLD STUFF
 -----------------
 
 
-
-
-## zigbee2mqtt/bridge/config/last_seen
-Allows you to set the `advanced` -> `last_seen` configuration option. See [Configuration](../information/configuration.md) for possible values.
-
-## zigbee2mqtt/bridge/config/elapsed
-Allows you to set the `advanced` -> `elapsed` configuration option. See [Configuration](../information/configuration.md) for possible values.
-
 ## zigbee2mqtt/bridge/config/touchlink/factory_reset
 See [Touchlink](./touchlink.md).
 
 ## zigbee2mqtt/bridge/ota_update/+
 See [OTA updates](./ota_updates.md).
 
-## zigbee2mqtt/bridge/config/log_level
-Allows you to switch the `log_level` during runtime. This is not persistent (will not be saved to `configuration.yaml`). Possible payloads are: `"debug"`, `"info"`, `"warn"`, `"error"`.
-
-
-
-## zigbee2mqtt/bridge/config/whitelist
-Allows you to whitelist devices in the network. Payload should be the `friendly_name`, e.g. `0x00158d0001b79111`. On successful whitelisting a [`device_whitelisted`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgelog) message is sent. Note that when devices are whitelisted, all device which are not whitelisted will be removed from the network.
 
 ## zigbee2mqtt/bridge/networkmap
 **WARNING: During the networkmap scan your network will be not/less responsive. Depending on the size of your network this can take somewhere between 10 seconds and 2 minutes. Therefore it is recommended to only trigger these scans manually!**
