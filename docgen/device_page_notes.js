@@ -1,5 +1,18 @@
 const notes = [
     {
+        model: ['ICTC-G-1'],
+        note: `
+### Pairing
+To factory reset the TRADFRI wireless dimmer (ICTC-G-1) press the button
+4 times (so the red lights starts blinking).
+After the blinks you might be willing to rotate the dimmer
+like you are trying to control your lights. It will prevent the device
+from going to sleep and ensure successful pairing. In case the dimmer was
+recognized but no actions seems to be detected, try to restart the zigbee2mqtt.
+See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koenkk/zigbee2mqtt/issues/620).
+`,
+    },
+    {
         model: ['SMSZB-120'],
         note: `
 ### Triggering alarm
@@ -593,6 +606,22 @@ Press the button on the device 4 times (until the red light turns on).
     {
         model: ['E1744', 'ICTC-G-1'],
         note: `
+### Legacy integration
+By default (for backwards compatibility purposes) the legacy integration is enabled.
+For new users it is recommended to **disable** this as it has several problems.
+To disable the legac integration add the following to your \`configuration.yaml\`:
+
+{% raw %}
+\`\`\`yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_remote
+    legacy: false
+\`\`\`
+{% endraw %}
+
+
+The information below only applies to the legacy integration.
+
 ### Recommendation
 This device sends multiple messages in short time period with the same payload. It's worth setting \`debounce\` option with \`debounce_ignore: - action\` to throttle them without losing unique action payloads.
 
@@ -687,19 +716,6 @@ While pairing the LED is flashing/dimming slowly. Once the pairing is finished, 
         note: `
 ### Pairing
 If brand new, when powered on it will attempt to pair to Zigbee2mqtt automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the (relay) button on the top for about 5 seconds until the relay clicks and the red LED flashes several times. The device will then go into pairing mode and the blue LED will begin to flash. When connected, the blue LED will turn on solid. It should then be connected to Zigbee2mqtt. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
-`,
-    },
-    {
-        model: ['ICTC-G-1'],
-        note: `
-### Pairing
-To factory reset the TRADFRI wireless dimmer (ICTC-G-1) press the button
-4 times (so the red lights starts blinking).
-After the blinks you might be willing to rotate the dimmer
-like you are trying to control your lights. It will prevent the device
-from going to sleep and ensure successful pairing. In case the dimmer was
-recognized but no actions seems to be detected, try to restart the zigbee2mqtt.
-See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koenkk/zigbee2mqtt/issues/620).
 `,
     },
     {
