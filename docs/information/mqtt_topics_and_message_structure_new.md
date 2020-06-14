@@ -192,7 +192,7 @@ See [OTA updates](./ota_updates.md).
 ## zigbee2mqtt/bridge/networkmap
 **WARNING: During the networkmap scan your network will be not/less responsive. Depending on the size of your network this can take somewhere between 10 seconds and 2 minutes. Therefore it is recommended to only trigger these scans manually!**
 
-Allows you to retrieve a map of your zigbee network. Possible payloads are `raw` and `graphviz`. Zigbee2mqtt will send the networkmap to topic `zigbee2mqtt/bridge/networkmap/[graphviz OR raw]`. <br /> Use [webgraphviz.com](http://www.webgraphviz.com/) or other Tools to generate Network Graph. <br /> **NOTE:** zigbee2mqtt 1.2.1+ required.
+Allows you to retrieve a map of your zigbee network. Possible payloads are `raw`, `graphviz`, and `plantuml`. Zigbee2mqtt will send the networkmap to topic `zigbee2mqtt/bridge/networkmap/[raw|graphviz|plantuml]`. <br /> Use [webgraphviz.com](http://www.webgraphviz.com/) (for `graphviz`), [planttext.com](https://www.planttext.com/) (for `plantuml`), or other tools to generate the Network Graph. <br /> **NOTE:** zigbee2mqtt 1.2.1+ required.
 
 The graphviz map shows the devices as follows:
 * Coordinator :  rectangle with bold outline
@@ -203,7 +203,7 @@ Links are labelled with link quality (0..255) and active routes (listed by short
 * To end devices : normal line
 * To and between coordinator and routers : heavy line for active routes or thin line for no active routes
 
-To request a networkmap with routes use `zigbee2mqtt/bridge/networkmap/routes` as topic.
+To request a networkmap with **routes** use `zigbee2mqtt/bridge/networkmap/routes` as topic.
 
 ## zigbee2mqtt/bridge/group/[friendly_name]/(add|remove|remove_all)
 See [Groups](groups.md)
