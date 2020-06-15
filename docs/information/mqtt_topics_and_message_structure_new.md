@@ -173,6 +173,26 @@ Sets `advanced` -> `log_level` (persistent). Payload format is `{"value": VALUE}
 #### zigbee2mqtt/bridge/request/touchlink/factoryReset
 See [Touchlink](./touchlink.md).
 
+#### zigbee2mqtt/bridge/request/networkmap
+**WARNING: During the networkmap scan your network will be not/less responsive. Depending on the size of your network this can take somewhere between 10 seconds and 2 minutes. Therefore it is recommended to only trigger these scans manually!**
+
+Allows you to retrieve a map of your Zigbee network. Payload format is `{"type": TYPE, "routes": BOOL}` or `TYPE`, example: `graphviz`, response `{"data":{"value": "NETWORKMAP","type":"graphviz","routes":false},"status":"ok"}`. Possible types are `raw`, `graphviz` and `plantuml`. In case you want to include routes set `routes` to `true`, `routes` is optional and is `false` by default.
+
+Use [webgraphviz.com](http://www.webgraphviz.com/) or other Tools to generate Network Graph.
+
+The graphviz map shows the devices as follows:
+* Coordinator :  rectangle with bold outline
+* Router : rectangle with rounded corners
+* End device : rectangle with rounded corners and dashed outline
+
+Links are labelled with link quality (0..255) and active routes (listed by short 16 bit destination address). Arrow indicates direction of messaging. Coordinator and routers will typically have two lines for each connection showing bi-directional message path. Line style is:
+* To end devices : normal line
+* To and between coordinator and routers : heavy line for active routes or thin line for no active routes
+
+
+
+
+
 
 
 TODO:
@@ -185,31 +205,11 @@ EVERYTHING BELOW THIS IS OLD STUFF
 ## zigbee2mqtt/bridge/ota_update/+
 See [OTA updates](./ota_updates.md).
 
-
-## zigbee2mqtt/bridge/networkmap
-**WARNING: During the networkmap scan your network will be not/less responsive. Depending on the size of your network this can take somewhere between 10 seconds and 2 minutes. Therefore it is recommended to only trigger these scans manually!**
-
-Allows you to retrieve a map of your zigbee network. Possible payloads are `raw` and `graphviz`. Zigbee2mqtt will send the networkmap to topic `zigbee2mqtt/bridge/networkmap/[graphviz OR raw]`. <br /> Use [webgraphviz.com](http://www.webgraphviz.com/) or other Tools to generate Network Graph. <br /> **NOTE:** zigbee2mqtt 1.2.1+ required.
-
-The graphviz map shows the devices as follows:
-* Coordinator :  rectangle with bold outline
-* Router : rectangle with rounded corners
-* End device : rectangle with rounded corners and dashed outline
-
-Links are labelled with link quality (0..255) and active routes (listed by short 16 bit destination address). Arrow indicates direction of messaging. Coordinator and routers will typically have two lines for each connection showing bi-directional message path. Line style is:
-* To end devices : normal line
-* To and between coordinator and routers : heavy line for active routes or thin line for no active routes
-
-To request a networkmap with routes use `zigbee2mqtt/bridge/networkmap/routes` as topic.
-
 ## zigbee2mqtt/bridge/group/[friendly_name]/(add|remove|remove_all)
 See [Groups](groups.md)
 
 ## zigbee2mqtt/bridge/(bind|unbind)/[friendly_name]
 See [Binding](binding.md)
-
-## zigbee2mqtt/bridge/device/[friendly_name]/get_group_membership
-Returns the list of groups a device is in, and its group capacity.
 
 ## zigbee2mqtt/bridge/configure
 Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected, also not all devices require this. Payload should be friendly name of the device, e.g. `my_remote`.
