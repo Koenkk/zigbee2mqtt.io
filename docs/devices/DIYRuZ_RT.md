@@ -17,7 +17,10 @@ description: "Integrate your DIYRuZ DIYRuZ_RT via Zigbee2mqtt with whatever smar
 
 ## Notes
 
-None
+This firmware can be used to flash any CC2530 device to support zigbee 3.0
+For example the Sonoff BasicZBR3
+Firmware download: https://github.com/diyruz/diyruz_rt
+Blog about supporting Zigbee 3.0 to CC2530: https://habr.com/ru/company/iobroker/blog/495926/
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
