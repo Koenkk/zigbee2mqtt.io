@@ -161,7 +161,8 @@ map_options:
 
 # Optional: Device specific options
 device_options: {}
-  # See 'Device specific configuration' below
+# Optional, See 'External converters configuration' below
+external_converters: []
 ```
 
 ### Specifying devices and groups in a separate file
@@ -233,6 +234,16 @@ The `configuration.yaml` allows to set device specific configuration. This can a
 
 ### Device type specific
 Some devices support device type specific configuration, e.g. [RTCGQ11LM](../devices/RTCGQ11LM.md). To see if your device has device type specific configuration, visit the device page by going to [Supported devices](../information/supported_devices.md) and clicking on the model number.
+
+### External converters configuration
+You can define external converters, it can be file with .js extension in `data` directory, or npm package.
+Ensure that default export from your external converter exports array or device object (refer to `devices.js`)
+Here are some external converters [examples](https://gist.github.com/nurikk/b9c7389e0abf81fec9a1b99baa21f49c)
+```yaml
+external_converters:
+  - freepad_ext.js
+  - one-more-converter.js
+```
 
 #### Changing device type specific defaults
 The default values used for the device specific configuration can be overriden via e.g.:
