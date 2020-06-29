@@ -24,6 +24,7 @@ groups:
     # Note: this has to be the ieeeAddr of the device, not the friendly_name! (default: empty)
     devices:
       - '0x00158d00018255df'
+      - '0x00269a02031469ab'
 ```
 
 The group ID (in the above example `'1'`) should be a numerical string. In case you want to use a hexadecimal group ID (e.g. `0xe24c`) you should first convert it to a numerical string (e.g. `57932`).

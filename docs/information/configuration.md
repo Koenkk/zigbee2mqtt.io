@@ -28,7 +28,7 @@ mqtt:
   password: my_password
   # Optional: MQTT client ID (default: nothing)
   client_id: 'MY_CLIENT_ID'
-  # Optional: disable self-signed SSL certificates (default: false)
+  # Optional: disable self-signed SSL certificates (default: true)
   reject_unauthorized: true
   # Optional: Include device information to mqtt messages (default: false)
   include_device_information: true
