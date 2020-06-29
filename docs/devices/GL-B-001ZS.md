@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-B-001ZS via Zigbee2mqtt with whatever s
 | Model | GL-B-001ZS  |
 | Vendor  | Gledopto  |
 | Description | Smart 4W E14 RGB / CCT LED bulb |
-| Supports | on/off, brightness, color temperature, color |
+| Supports | on/off, brightness, color temperature, color xy |
 | Picture | ![Gledopto GL-B-001ZS](../images/devices/GL-B-001ZS.jpg) |
 
 ## Notes

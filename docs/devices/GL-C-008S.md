@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-C-008S via Zigbee2mqtt with whatever sm
 | Model | GL-C-008S  |
 | Vendor  | Gledopto  |
 | Description | Zigbee LED controller RGB + CCT plus model |
-| Supports | on/off, brightness, color temperature, color |
+| Supports | on/off, brightness, color temperature, color xy |
 | Picture | ![Gledopto GL-C-008S](../images/devices/GL-C-008S.jpg) |
 
 ## Notes

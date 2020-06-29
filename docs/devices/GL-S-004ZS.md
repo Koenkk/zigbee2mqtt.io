@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-S-004ZS via Zigbee2mqtt with whatever s
 | Model | GL-S-004ZS  |
 | Vendor  | Gledopto  |
 | Description | Zigbee smart RGB+CCT 4W MR16 |
-| Supports | on/off, brightness, color temperature, color |
+| Supports | on/off, brightness, color temperature, color xy |
 | Picture | ![Gledopto GL-S-004ZS](../images/devices/GL-S-004ZS.jpg) |
 
 ## Notes

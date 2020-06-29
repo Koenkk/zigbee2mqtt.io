@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-G-001Z via Zigbee2mqtt with whatever sm
 | Model | GL-G-001Z  |
 | Vendor  | Gledopto  |
 | Description | Smart garden lamp |
-| Supports | on/off, brightness, color temperature, color |
+| Supports | on/off, brightness, color temperature, color xy |
 | Picture | ![Gledopto GL-G-001Z](../images/devices/GL-G-001Z.jpg) |
 
 ## Notes

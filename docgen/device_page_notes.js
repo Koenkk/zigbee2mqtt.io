@@ -80,6 +80,36 @@ This device also come with an iOS app (Android as well but not tested). It is re
 `,
     },
     {
+        model: '07008L',
+        note: `
+### How to reset device
+Turn power on/off five times.
+`,
+    },
+    {
+        model: '43080',
+        note: `
+### LED status indicator
+To change the LED status indicator press the top of rocker 3 times and then the bottom of the rocker 1 time. This will cycle between these modes:
+1. LED is ON when the load if OFF (Default)
+2. LED is ON when the load if ON
+3. LED is always OFF
+
+### Pairing
+Factory reset the dimmer by pressing the top of the rocker 10 times quickly.
+`,
+    },
+    {
+        model: 'DIYRuZ_RT',
+        note: `
+# Firmware
+This firmware can be used to flash any CC2530 device to support zigbee 3.0
+For example the Sonoff BasicZBR3
+Firmware download: https://github.com/diyruz/diyruz_rt
+Blog about supporting Zigbee 3.0 to CC2530: https://habr.com/ru/company/iobroker/blog/495926/
+`,
+    },
+    {
         model: '3RSS007Z',
         note: `
 ### Pairing mode
