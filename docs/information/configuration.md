@@ -159,9 +159,9 @@ map_options:
         active: '#009900'
         inactive: '#994444'
 
-# Optional: Device specific options
+# Optional: see 'Device specific configuration' below
 device_options: {}
-# Optional, See 'External converters configuration' below
+# Optional, see 'External converters configuration' below
 external_converters: []
 ```
 
@@ -236,9 +236,8 @@ The `configuration.yaml` allows to set device specific configuration. This can a
 Some devices support device type specific configuration, e.g. [RTCGQ11LM](../devices/RTCGQ11LM.md). To see if your device has device type specific configuration, visit the device page by going to [Supported devices](../information/supported_devices.md) and clicking on the model number.
 
 ### External converters configuration
-You can define external converters, it can be file with .js extension in `data` directory, or npm package.
-Ensure that default export from your external converter exports array or device object (refer to `devices.js`)
-Here are some external converters [examples](https://gist.github.com/nurikk/b9c7389e0abf81fec9a1b99baa21f49c)
+You can define external converters to e.g. add support for a DiY device. The extension can be a file with `.js` extension in the `data` directory or a NPM package. Ensure that default export from your external converter exports an array or device object (refer to `devices.js` of zigbee-herdsman-converters). Some examples can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/tree/master/docs/externalConvertersExample). For this example put the files in the `data` folder and add the following to `configuration.yaml`:
+
 ```yaml
 external_converters:
   - freepad_ext.js
