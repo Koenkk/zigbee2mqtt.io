@@ -1,3 +1,4 @@
+/* eslint-disable */
 const zigbeeHerdsmanConverters = require('zigbee-herdsman-converters');
 
 const getKey = (object, value) => {
