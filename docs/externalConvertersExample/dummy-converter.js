@@ -33,6 +33,19 @@ const tz = {
     },
 };
 
+// This is the 'switch' example, more examples can be found here: (search for: 'const cfg')
+// https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/extension/homeassistant.js
+const homeAssistantSwitch = {
+    type: 'switch',
+    object_id: 'switch',
+    discovery_payload: {
+        payload_off: 'OFF',
+        payload_on: 'ON',
+        value_template: '{{ value_json.state }}',
+        command_topic: true,
+    },
+};
+
 const device = {
     zigbeeModel: ['dummy device'],
     model: 'dummy device',
@@ -49,5 +62,7 @@ const device = {
     configure: async (device, coordinatorEndpoint) => {
         // dummy configure
     },
+    // Optional: add support for Home Assistant discovery
+    homeassistant: [homeAssistantSwitch],
 };
 module.exports = device;
