@@ -28,6 +28,7 @@ There are 3 versions of this device: Standalone, Zigbee and Z-wave. These are vi
 Supported:
 - **HS1SA-M : Zigbee**
 - **HS1SA-N : Zigbee**
+- **HS1SA-E : Zigbee 3.0**
 
 Unsupported:
 - HS1SA : Standalone
