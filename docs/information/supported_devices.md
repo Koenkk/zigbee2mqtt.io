@@ -1605,4 +1605,9 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | ------------- | ------------- | -------------------------- |
 | [900008-WW](../devices/900008-WW.md) | ilux Dimmable A60 E27 LED Bulb (on/off, brightness) | ![../images/devices/900008-WW.jpg](../images/devices/900008-WW.jpg) |
 
+### Samotech
+
+| Model | Description | Picture |
+| ------------- | ------------- | -------------------------- |
+| [SM311](../devices/ZG2835RAC.md) | Samotech Rotary Zigbee Dimmer (white-label of Sunricher ZG2835RAC) (on/off, brightness) | ![../images/devices/SM311.jpg](../images/devices/SM311.jpg) |
 
