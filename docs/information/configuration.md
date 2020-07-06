@@ -95,10 +95,10 @@ advanced:
     type: 5424 # The type of the syslog protocol to use (Default: BSD, also valid: 5424).
     app_name: zigbee2mqtt # The name of the application (Default: zigbee2mqtt).
     eol: '\n' # The end of line character to be added to the end of the message (Default: Message without modifications).
-  # Optional: Baudrate for serial port (default: shown below)
+  # Optional: Baudrate for serial port (default: 115200 for Z-Stack, 38400 for Deconz)
   baudrate: 115200
-  # Optional: RTS / CTS Hardware Flow Control for serial port (default: true)
-  rtscts: true
+  # Optional: RTS / CTS Hardware Flow Control for serial port (default: false)
+  rtscts: false
   # Optional: soft reset ZNP after timeout (in seconds); 0 is disabled (default: 0)
   soft_reset_timeout: 0
   # Optional: network encryption key, will improve security (Note: changing requires repairing of all devices) (default: shown below)

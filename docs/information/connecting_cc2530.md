@@ -38,17 +38,7 @@ Connect to CC2530 to the USB to serial adapter using the following mapping:
 | TXD | P02 |
 | RXD | P03 |
 
-Now plug in the USB-to-serial adapter in your USB port.
-
-### Configuration
-Add the following to your Zigbee2mqtt `configuration.yaml`:
-
-```yaml
-advanced:
-  rtscts: false
-```
-
-and start Zigbee2mqtt, enjoy!
+Now plug in the USB-to-serial adapter in your USB port and start Zigbee2mqtt, enjoy!
 
 ## To a Raspberry Pi (Zero)
 CC2530 can be connected to a Raspberry PI (Zero) via GPIO Pins - no USB2FTDI is needed.
@@ -99,9 +89,6 @@ Change the Serial Port in your `data/configuration.yaml` file:
 ```
 serial:
   port: /dev/ttyAMA0
-advanced:
-  baudrate: 115200
-  rtscts: false
 ```
 
 Have fun.
