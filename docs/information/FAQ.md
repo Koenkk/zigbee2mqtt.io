@@ -141,7 +141,7 @@ The correct revision is: **E** like shown below.
 All earlier version are not supported (these are development boards). Return this board to the seller immidiately.
 
 ## I read that zigbee2mqtt has a limit of 20 devices, is this true?
-Definitely not! Example given: the default Zigbee2mqtt CC2531 firmware indeed supports 20 devices connected **directly** to the coordinator. However, by having routers in your network the network size can be extended. Probably all AC powered devices e.g. bulbs serve as a router, you can even use another [CC2530/CC2531 as a router](../information/cc_sniffer_devices.md) (which has a limit of 21 devices).
+Definitely not! Example given: the default Zigbee2mqtt CC2531 firmware indeed supports 20 devices connected **directly** to the coordinator. However, by having routers in your network the network size can be extended. Probably all AC powered devices e.g. bulbs serve as a router, you can even use another [CC2530/CC2531 as a router](../how_tos/how_to_create_a_cc2530_router.md) (which has a limit of 21 devices).
 
 ### Example
 When using the default Zigbee2mqtt CC2531 coordinator firmware + 2 CC2531 routers your device limit will be:
