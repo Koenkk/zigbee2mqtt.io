@@ -26,12 +26,6 @@ Zigbee2mqtt oficially supports the following adapters:
 - Can be bought on e.g. AliExpress: [CC2530](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104041&SearchText=cc2530), [CC2530 + CC2591](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104521&SearchText=cc2530+cc2591), [GBAN GB2530](http://www.gban.cn/en/product_show.asp?id=43)
 - How to flash: see flashing section of [How to create a CC2530 router](../how_tos/how_to_create_a_cc2530_router.md) or [alternative flashing methods](./alternative_flashing_methods.md)
 - [Connecting the CC2530](./connecting_cc2530.md)
-- Requires following in `configuration.yaml`
-
-```yaml
-advanced:
-  rtscts: false
-```
 
 ### Electrolama zig-a-zig-ah! (zzh!)
 ![zzh](../images/zzh.jpg)
@@ -44,12 +38,6 @@ advanced:
 - Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) (use **CC26X2R1_*.zip**)
 - [Flashing guide](https://electrolama.com/projects/zig-a-zig-ah/#flash-firmware) (requires no additional hardware to flash)
 - When migrating from another dongle (e.g. CC2531), make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2mqtt won't start.
-- Requires following in `configuration.yaml`
-
-```yaml
-advanced:
-  rtscts: false
-```
 
 ### Texas Instruments LAUNCHXL-CC26X2R1
 ![CC26X2R1](../images/cc26x2r1.jpg)
