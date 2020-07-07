@@ -142,7 +142,9 @@ To force remove a device add the optional `force` property (default `false`) to 
 In case you also want to ban the device the optional `ban` property (default `false`) can be added, example: `{"ID":"my_bulb","ban":true}`. Note that Zigbee doesn't have a ban functionallity, therefore when a device is banned, Zigbee2mqtt will immediately request the device to remove itself from the network when it joins.
 
 #### zigbee2mqtt/bridge/request/group/remove
-Removes a group. Allowed payloads are `{"ID": "groupID"}` or `groupID` where groupID can be the `groupID` or `friendlyName` of the group. Example; request: `{"ID": "my_group"}` or `my_group`, response: `{"data":{"ID": "my_group"},"status":"ok"}`.
+Removes a group. Allowed payloads are `{"ID": "groupID"}` or `groupID` where groupID can be the `groupID` or `friendlyName` of the group. Example; request: `{"ID": "my_group"}` or `my_group`, response: `{"data":{"ID": "my_group", "force": false},"status":"ok"}`.
+
+Group removal can fail if one of the devices fails to remove itself from the group (e.g. due to being offline). In this case you can force a group removal by setting the optional `force` property to `true`, example payload `{"ID": "my_group", "force": true}`. Note that in this case the device will still be in the group, in case the groupID is later reused, the device will be part of that group.
 
 #### zigbee2mqtt/bridge/request/group/add
 Adds a group. Allowed payloads are `{"friendlyName": NAME, "ID": NUMBER}` or `NAME`. Example; request: `{"ID": 9, "friendlyName": "new_group"}` or `new_group`, response: `{"data":{"ID": 9,"friendlyName":"new_group"},"status":"ok"}`. The `ID` property is optional.
