@@ -125,6 +125,7 @@ In case you also want to specify the group ID, provide the following payload `{"
 
 ## zigbee2mqtt/bridge/config/remove_group
 Allows you to remove a group, payload should be the name of the group, e.g. `my_group`.
+In case group removal fails because on of the devices cannot be removed from the group you can force it via `zigbee2mqtt/bridge/config/remove_group`.
 
 ## zigbee2mqtt/bridge/networkmap
 **WARNING: During the networkmap scan your network will be not/less responsive. Depending on the size of your network this can take somewhere between 10 seconds and 2 minutes. Therefore it is recommended to only trigger these scans manually!**
