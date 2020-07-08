@@ -97,7 +97,7 @@ Example payload:
         "friendlyName":"my_group",
         "members":[
             {
-                "ieeeAddr":"0x90fd9ffffe6494fc",
+                "ieeeAddress":"0x90fd9ffffe6494fc",
                 "endpoint":1
             }
         ]
@@ -140,6 +140,9 @@ In case all of the above fails, you can force remove a device. Note that a force
 To force remove a device add the optional `force` property (default `false`) to the payload, example: `{"ID":"my_bulb","force":true}`.
 
 In case you also want to ban the device the optional `ban` property (default `false`) can be added, example: `{"ID":"my_bulb","ban":true}`. Note that Zigbee doesn't have a ban functionallity, therefore when a device is banned, Zigbee2mqtt will immediately request the device to remove itself from the network when it joins.
+
+#### zigbee2mqtt/bridge/request/device/otaUpdate/(check|update)
+See [OTA updates](./ota_updates.md).
 
 #### zigbee2mqtt/bridge/request/device/configure
 Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected (e.g. not reporting certain values), not all devices can be configured (only when the defintion has a `configure` in [`devices.js`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices.js)). Allowed payloads are `{"ID": "deviceID"}` or `deviceID` where deviceID can be the `ieeeAddress` or `friendlyName` of the device. Example; request: `{"ID": "my_remote"}` or `my_remote`, response: `{"data":{"ID": "my_remote"},"status":"ok"}`.
@@ -206,15 +209,9 @@ EVERYTHING BELOW THIS IS OLD STUFF
 
 -----------------
 
-
-## zigbee2mqtt/bridge/ota_update/+
-See [OTA updates](./ota_updates.md).
-
 ## zigbee2mqtt/bridge/group/[friendly_name]/(add|remove|remove_all)
 See [Groups](groups.md)
 
 ## zigbee2mqtt/bridge/(bind|unbind)/[friendly_name]
 See [Binding](binding.md)
 
-## zigbee2mqtt/bridge/configure
-Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected, also not all devices require this. Payload should be friendly name of the device, e.g. `my_remote`.
