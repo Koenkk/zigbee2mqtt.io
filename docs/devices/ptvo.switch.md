@@ -12,7 +12,7 @@ description: "Integrate your Custom devices (DiY) ptvo.switch via Zigbee2mqtt wi
 | Model | ptvo.switch  |
 | Vendor  | Custom devices (DiY)  |
 | Description | [Multi-channel relay switch](https://ptvo.info/zigbee-switch-configurable-firmware-v2-210/) |
-| Supports | hold, single, double and triple click, on/off |
+| Supports | hold, single, double and triple click, on/off, type, rssi |
 | Picture | ![Custom devices (DiY) ptvo.switch](../images/devices/ptvo.switch.jpg) |
 
 ## Notes
@@ -21,7 +21,7 @@ The following page describes all possible topics and commands, but it may depend
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
-manual integration is possbile with the following configuration:
+manual integration is possible with the following configuration:
 
 
 {% raw %}
@@ -165,7 +165,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    icon: "mdi:signal"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
 ```
 {% endraw %}
