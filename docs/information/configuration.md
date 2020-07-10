@@ -70,6 +70,10 @@ advanced:
   # Optional: state caching, MQTT message payload will contain all attributes, not only changed ones.
   # Has to be true when integrating via Home Assistant (default: true)
   cache_state: true
+  # Optional: persist cached state, only used when cache_state: true (default: true)
+  cache_state_persistent: true
+  # Optional: send cached state on startup, only used when cache_state: true (default: true)
+  cache_state_send_on_startup: true
   # Optional: Logging level, options: debug, info, warn, error (default: info)
   log_level: info
   # Optional: Location of log directory (default: shown below)
