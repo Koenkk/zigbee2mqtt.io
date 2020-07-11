@@ -1,19 +1,19 @@
 ---
-title: "TUYATEC gq8b1uv control via MQTT"
-description: "Integrate your TUYATEC gq8b1uv via Zigbee2mqtt with whatever smart home
+title: "TuYa gq8b1uv control via MQTT"
+description: "Integrate your TuYa gq8b1uv via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/gq8b1uv.md)*
 
-# TUYATEC gq8b1uv
+# TuYa gq8b1uv
 
 | Model | gq8b1uv  |
-| Vendor  | TUYATEC  |
+| Vendor  | TuYa  |
 | Description | Zigbee smart dimmer |
 | Supports | on/off, brightness |
-| Picture | ![TUYATEC gq8b1uv](../images/devices/gq8b1uv.jpg) |
+| Picture | ![TuYa gq8b1uv](../images/devices/gq8b1uv.jpg) |
 
 ## Notes
 
@@ -41,6 +41,7 @@ light:
     brightness: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    brightness_scale: 254
 
 sensor:
   - platform: "mqtt"

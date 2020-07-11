@@ -2,8 +2,6 @@
 ---
 # Alternative flashing methods
 
-*NOTE: When you have already flashed the stick and paired devices to it, reflashing it requires to re-pair all your devices!*
-
 ### With Raspberry Pi (~3min)
 
 1. Install [wiringPi](http://wiringpi.com/download-and-install/), if not already installed.

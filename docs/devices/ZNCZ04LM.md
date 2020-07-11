@@ -17,7 +17,12 @@ description: "Integrate your Xiaomi ZNCZ04LM via Zigbee2mqtt with whatever smart
 
 ## Notes
 
-None
+
+### Power outage memory
+This option allows the device to restore the last on/off state when it's reconnected to power.
+To set this option publish to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"power_outage_memory": true}` (or `false`).
+Now toggle the plug once with the button on it, from now on it will restore its state when reconnecting to power.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -42,6 +47,38 @@ sensor:
     unit_of_measurement: "W"
     icon: "mdi:flash"
     value_template: "{{ value_json.power }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "kWh"
+    value_template: "{{ value_json.consumption }}"
+    icon: "mdi:flash"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "A"
+    icon: "mdi:current-ac"
+    value_template: "{{ value_json.current }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "V"
+    icon: "mdi:alpha-v"
+    value_template: "{{ value_json.voltage }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "°C"
+    device_class: "temperature"
+    value_template: "{{ value_json.temperature }}"
 
 sensor:
   - platform: "mqtt"

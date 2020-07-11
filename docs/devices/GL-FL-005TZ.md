@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-FL-005TZ via Zigbee2mqtt with whatever 
 | Model | GL-FL-005TZ  |
 | Vendor  | Gledopto  |
 | Description | Zigbee 30W floodlight RGB CCT |
-| Supports | on/off, brightness, color temperature, color |
+| Supports | on/off, brightness, color temperature, color xy |
 | Picture | ![Gledopto GL-FL-005TZ](../images/devices/GL-FL-005TZ.jpg) |
 
 ## Notes
@@ -50,6 +50,7 @@ light:
     xy: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    brightness_scale: 254
 
 sensor:
   - platform: "mqtt"

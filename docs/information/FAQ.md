@@ -17,6 +17,8 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
   - If none of the above helps, try to reflash the coordinator (does not require repairing of already paired devices).
 
 ### Interview fails
+- Try pairing the device closer to the coordinator.
+- There can be too much interference, try connecting the coordinator USB through an USB extension cable. This problem occurs a lot when used in combination with a Raspberry Pi 4.
 - Try repairing the device again for 2 or 3 times.
 - This might be a Zigbee2mqtt bug, [Create a new issue](https://github.com/Koenkk/zigbee2mqtt/issues/new) with the zigbee-herdsman debug logging attached to it. [How to enable zigbee-herdsman debug logging](https://www.zigbee2mqtt.io/information/debug.html#zigbee-herdsman-debug-logging).
 - If device joins with `0x000000000000000` as `ieeeAddress` (you will see: `Starting interview of '0x0000000000000000'` in the Zigbee2mqtt log) your CC253X might be broken. [See issue #2761](https://github.com/Koenkk/zigbee2mqtt/issues/2761).
@@ -116,7 +118,7 @@ Symptoms of this are disconnection messages in the `dmesg -w` log like below.
 The CC2540 can be confused easily with the CC2531 as it looks (almost) exactly the same. However, this device does not support zigbee but bluetooth. This can be verified by looking at the chip.
 
 ### [ModemManager](https://www.freedesktop.org/wiki/Software/ModemManager/) is installed
-ModemManger, which is default installed on e.g. Ubuntu, is known to cause problems. It can easily be fixed by removing ModemManager through `sudo apt-get purge modemmanager`.
+ModemManager, which is default installed on e.g. Ubuntu, is known to cause problems. It can easily be fixed by removing ModemManager through `sudo apt-get purge modemmanager`.
 
 ### CC1352P-2/CC26X2R1 coordinators only: press the reset button on the device
 If zigbee2mqtt fails to start with a CC1352P-2 with `Error: SRSP - SYS - version after 6000ms`, you most probably have connected your device to a system that requires pressing the reset button (the one next to the USB connector) momentarily/shortly after connecting the USB cable. This issue has primarily been observed on x86 architectures only (e.g., Intel NUC, HPE Microserver, i7 laptop), see also [#2162](https://github.com/Koenkk/zigbee2mqtt/issues/2162). The procedure has to be repeated every time the CC1352P-2 is re-connected and it's not clear yet, whether this can be fixed at all. It does not seem to occur on ARM based boards (Raspberry Pi, ODROID XU4).
@@ -139,7 +141,7 @@ The correct revision is: **E** like shown below.
 All earlier version are not supported (these are development boards). Return this board to the seller immidiately.
 
 ## I read that zigbee2mqtt has a limit of 20 devices, is this true?
-Definitely not! Example given: the default Zigbee2mqtt CC2531 firmware indeed supports 20 devices connected **directly** to the coordinator. However, by having routers in your network the network size can be extended. Probably all AC powered devices e.g. bulbs serve as a router, you can even use another [CC2530/CC2531 as a router](../information/cc_sniffer_devices.md) (which has a limit of 21 devices).
+Definitely not! Example given: the default Zigbee2mqtt CC2531 firmware indeed supports 20 devices connected **directly** to the coordinator. However, by having routers in your network the network size can be extended. Probably all AC powered devices e.g. bulbs serve as a router, you can even use another [CC2530/CC2531 as a router](../how_tos/how_to_create_a_cc2530_router.md) (which has a limit of 21 devices).
 
 ### Example
 When using the default Zigbee2mqtt CC2531 coordinator firmware + 2 CC2531 routers your device limit will be:

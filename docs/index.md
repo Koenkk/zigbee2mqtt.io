@@ -47,7 +47,7 @@ Besides running Zigbee2mqtt on [bare-metal Linux](getting_started/running_zigbee
 * [How to switch to the dev branch](how_tos/how-to-switch-to-dev-branch.md)
 
 ### Integration
-* [Admin Panel for Node-Red](https://github.com/ben423423n32j14e/zigbee2mqttadminpanel)
+* [Admin Panel for Node-Red](https://github.com/ben423423n32j14e/zigbee2mqttadminpanel) or [node-red-contrib-zigbee2mqtt ](https://flows.nodered.org/node/node-red-contrib-zigbee2mqtt)
 * [Domoticz](https://github.com/stas-demydiuk/domoticz-zigbee2mqtt-plugin)
 * [Home Assistant](integration/home_assistant.md)
 * [MQTT Explorer](https://mqtt-explorer.com) (debug tool for custom integrations)
@@ -65,3 +65,4 @@ Besides running Zigbee2mqtt on [bare-metal Linux](getting_started/running_zigbee
   * [Home Assistant forum (English)](https://community.home-assistant.io/t/zigbee2mqtt-getting-rid-of-your-proprietary-zigbee-bridges-xiaomi-hue-tradfri/52108)
   * [HassioHelp (Italian)](https://hassiohelp.eu/2019/04/14/indice/#ZigBee)
   * [Russian community telegram chat (Russian)](https://t.me/zigbeer)
+  * [Danish guide about Zigbee2mqtt on Home Assistant (Danish)](https://robotnet.dk/2020/installer-mosquitto-mqtt-broker-og-zigbee2mqtt.html)

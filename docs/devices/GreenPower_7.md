@@ -27,10 +27,11 @@ Not all Zigbee devices can do this translation, currently the only devices known
 Green Power devices don't support binding and are not included in network scans.
 
 ### Pairing Philips Hue Tap
-This device requires your Zigbee network to run on channel 15, 20 or 25. In order to pair it hold the corresponding button for that channel 10 seconds.
+This device requires your Zigbee network to run on channel 11, 15, 20 or 25. In order to pair it hold the corresponding button for that channel 10 seconds.
 
 | Button (dots) | Channel |
 |-|-|
+| 1 | 11 |
 | 2 | 15 |
 | 3 | 20 |
 | 4 | 25 |

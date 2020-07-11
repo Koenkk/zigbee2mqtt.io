@@ -22,4 +22,4 @@ If it outputs `failure`. On Debian-based Linux (Debian/Ubuntu/Raspbian) add your
 The CC2540 can be confused easily with the CC2531 as it looks (almost) exactly the same. However, this device does not support zigbee but bluetooth. This can be verified by looking at the chip.
 
 ## [ModemManager](https://www.freedesktop.org/wiki/Software/ModemManager/) is installed
-ModemManger, which is default installed on e.g. Ubuntu, is known to cause problems. It can easily be fixed by removing ModemManager through `sudo apt-get purge modemmanager`.
+ModemManager, which is default installed on e.g. Ubuntu, is known to cause problems. It can easily be fixed by removing ModemManager through `sudo apt-get purge modemmanager`.

@@ -22,9 +22,6 @@ description: "Integrate your Xiaomi GZCGQ01LM via Zigbee2mqtt with whatever smar
 *[How to use device type specific configuration](../information/configuration.md)*
 
 
-* `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.
-To control the precision based on the illuminance_lux value set it to e.g. `{1000: 0, 100: 1}`,
-when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 precision will be 1.
 * `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
 e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
 

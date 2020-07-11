@@ -1,23 +1,26 @@
 ---
-title: "TUYATEC GDKES-03TZXD control via MQTT"
-description: "Integrate your TUYATEC GDKES-03TZXD via Zigbee2mqtt with whatever smart home
+title: "TuYa GDKES-03TZXD control via MQTT"
+description: "Integrate your TuYa GDKES-03TZXD via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GDKES-03TZXD.md)*
 
-# TUYATEC GDKES-03TZXD
+# TuYa GDKES-03TZXD
 
 | Model | GDKES-03TZXD  |
-| Vendor  | TUYATEC  |
+| Vendor  | TuYa  |
 | Description | Smart light switch - 3 gang without neutral wire |
 | Supports | on/off |
-| Picture | ![TUYATEC GDKES-03TZXD](../images/devices/GDKES-03TZXD.jpg) |
+| Picture | ![TuYa GDKES-03TZXD](../images/devices/GDKES-03TZXD.jpg) |
 
 ## Notes
 
-None
+
+### Rebrand
+Also branded as Yagusmart in the UK, with a version that does not require a neutral wire.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

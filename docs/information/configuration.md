@@ -28,7 +28,7 @@ mqtt:
   password: my_password
   # Optional: MQTT client ID (default: nothing)
   client_id: 'MY_CLIENT_ID'
-  # Optional: disable self-signed SSL certificates (default: false)
+  # Optional: disable self-signed SSL certificates (default: true)
   reject_unauthorized: true
   # Optional: Include device information to mqtt messages (default: false)
   include_device_information: true
@@ -70,6 +70,10 @@ advanced:
   # Optional: state caching, MQTT message payload will contain all attributes, not only changed ones.
   # Has to be true when integrating via Home Assistant (default: true)
   cache_state: true
+  # Optional: persist cached state, only used when cache_state: true (default: true)
+  cache_state_persistent: true
+  # Optional: send cached state on startup, only used when cache_state: true (default: true)
+  cache_state_send_on_startup: true
   # Optional: Logging level, options: debug, info, warn, error (default: info)
   log_level: info
   # Optional: Location of log directory (default: shown below)
@@ -79,13 +83,26 @@ advanced:
   # Optional: Log rotation (default: shown below)
   log_rotation: true
   # Optional: Output location of the log (default: shown below), leave empty to supress logging (log_output: [])
+  # possible options: 'console', 'file', 'syslog'
   log_output:
     - console
     - file
-  # Optional: Baudrate for serial port (default: shown below)
+  # Optional: syslog configuration, skip values or entirely to use defaults. Only use when 'syslog' in 'log_output' (see above)
+  log_syslog:
+    host: localhost # The host running syslogd, defaults to localhost.
+    port: 123 # The port on the host that syslog is running on, defaults to syslogd's default port.
+    protocol: tcp4 # The network protocol to log over (e.g. tcp4, udp4, tls4, unix, unix-connect, etc).
+    path:  /dev/log # The path to the syslog dgram socket (i.e. /dev/log or /var/run/syslog for OS X).
+    pid: process.pid # PID of the process that log messages are coming from (Default process.pid).
+    facility: local0 # Syslog facility to use (Default: local0).
+    localhost: localhost # Host to indicate that log messages are coming from (Default: localhost).
+    type: 5424 # The type of the syslog protocol to use (Default: BSD, also valid: 5424).
+    app_name: zigbee2mqtt # The name of the application (Default: zigbee2mqtt).
+    eol: '\n' # The end of line character to be added to the end of the message (Default: Message without modifications).
+  # Optional: Baudrate for serial port (default: 115200 for Z-Stack, 38400 for Deconz)
   baudrate: 115200
-  # Optional: RTS / CTS Hardware Flow Control for serial port (default: true)
-  rtscts: true
+  # Optional: RTS / CTS Hardware Flow Control for serial port (default: false)
+  rtscts: false
   # Optional: soft reset ZNP after timeout (in seconds); 0 is disabled (default: 0)
   soft_reset_timeout: 0
   # Optional: network encryption key, will improve security (Note: changing requires repairing of all devices) (default: shown below)
@@ -146,9 +163,10 @@ map_options:
         active: '#009900'
         inactive: '#994444'
 
-# Optional: Device specific options
+# Optional: see 'Device specific configuration' below
 device_options: {}
-  # See 'Device specific configuration' below
+# Optional, see 'External converters configuration' below
+external_converters: []
 ```
 
 ### Specifying devices and groups in a separate file
@@ -210,7 +228,7 @@ The `configuration.yaml` allows to set device specific configuration. This can a
 ### All devices
 * `friendly_name`: Used in the MQTT topic of a device. By default this is the device ID (e.g. `0x00128d0001d9e1d2`).
 * `retain`: Retain MQTT messages of this device (default `false`).
-* `retention`: Sets the MQTT Message Expiry (default: not enabled). Make sure to set `mqtt.version` to `5` (see `mqtt` configuration above)
+* `retention`: Sets the MQTT Message Expiry in seconds e.g. `retention: 900` = 15 minutes (default: not enabled). Make sure to set `mqtt.version` to `5` (see `mqtt` configuration above)
 * `qos`: QoS level for MQTT messages of this device. [What is QoS?](https://www.npmjs.com/package/mqtt#about-qos)
 * `homeassistant`: Allows to override values of the Home Assistant discovery payload. See example below.
 * `debounce`: Debounces messages of this device. When setting e.g. `debounce: 1` and a message from a device is received, zigbee2mqtt will not immediately publish this message but combine it with other messages received in that same second of that device. This is handy for e.g. the `WSDCGQ11LM` which publishes humidity, temperature and pressure at the same time but as 3 different messages.
@@ -220,6 +238,15 @@ The `configuration.yaml` allows to set device specific configuration. This can a
 
 ### Device type specific
 Some devices support device type specific configuration, e.g. [RTCGQ11LM](../devices/RTCGQ11LM.md). To see if your device has device type specific configuration, visit the device page by going to [Supported devices](../information/supported_devices.md) and clicking on the model number.
+
+### External converters configuration
+You can define external converters to e.g. add support for a DiY device. The extension can be a file with `.js` extension in the `data` directory or a NPM package. Ensure that default export from your external converter exports an array or device object (refer to `devices.js` of zigbee-herdsman-converters). Some examples can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/tree/master/docs/externalConvertersExample). For this example put the files in the `data` folder and add the following to `configuration.yaml`:
+
+```yaml
+external_converters:
+  - freepad_ext.js
+  - one-more-converter.js
+```
 
 #### Changing device type specific defaults
 The default values used for the device specific configuration can be overriden via e.g.:

@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-G-007Z via Zigbee2mqtt with whatever sm
 | Model | GL-G-007Z  |
 | Vendor  | Gledopto  |
 | Description | Smart garden lamp 9W RGB / CCT |
-| Supports | on/off, brightness, color temperature, color |
+| Supports | on/off, brightness, color temperature, color xy |
 | Picture | ![Gledopto GL-G-007Z](../images/devices/GL-G-007Z.jpg) |
 
 ## Notes
@@ -50,6 +50,7 @@ light:
     xy: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    brightness_scale: 254
 
 sensor:
   - platform: "mqtt"

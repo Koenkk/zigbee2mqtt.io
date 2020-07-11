@@ -11,13 +11,16 @@ description: "Integrate your Dawon DNS PM-S140-ZB via Zigbee2mqtt with whatever 
 
 | Model | PM-S140-ZB  |
 | Vendor  | Dawon DNS  |
-| Description | IOT smart switch 1 gang |
+| Description | IOT smart switch 1 gang without neutral wire |
 | Supports | on/off |
 | Picture | ![Dawon DNS PM-S140-ZB](../images/devices/PM-S140-ZB.jpg) |
 
 ## Notes
 
-None
+
+### Routing functionallity
+This device does **not** act as a router.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

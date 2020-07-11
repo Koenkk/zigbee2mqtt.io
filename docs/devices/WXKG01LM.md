@@ -23,6 +23,10 @@ Press and hold the reset button on the device for +- 5 seconds (until the blue l
 After this the device will automatically join.
 
 
+### Binding
+This device does **not** support binding.
+
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 

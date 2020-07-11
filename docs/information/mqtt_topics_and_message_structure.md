@@ -125,22 +125,25 @@ In case you also want to specify the group ID, provide the following payload `{"
 
 ## zigbee2mqtt/bridge/config/remove_group
 Allows you to remove a group, payload should be the name of the group, e.g. `my_group`.
+In case group removal fails because on of the devices cannot be removed from the group you can force it via `zigbee2mqtt/bridge/config/remove_group`.
 
 ## zigbee2mqtt/bridge/networkmap
 **WARNING: During the networkmap scan your network will be not/less responsive. Depending on the size of your network this can take somewhere between 10 seconds and 2 minutes. Therefore it is recommended to only trigger these scans manually!**
 
-Allows you to retrieve a map of your zigbee network. Possible payloads are `raw` and `graphviz`. Zigbee2mqtt will send the networkmap to topic `zigbee2mqtt/bridge/networkmap/[graphviz OR raw]`. <br /> Use [webgraphviz.com](http://www.webgraphviz.com/) or other Tools to generate Network Graph. <br /> **NOTE:** zigbee2mqtt 1.2.1+ required.
+Allows you to retrieve a map of your zigbee network. Possible payloads are `raw`, `graphviz`, and `plantuml`. Zigbee2mqtt will send the networkmap to topic `zigbee2mqtt/bridge/networkmap/[raw|graphviz|plantuml]`. <br /> Use [webgraphviz.com](http://www.webgraphviz.com/) (for `graphviz`), [planttext.com](https://www.planttext.com/) (for `plantuml`), or other tools to generate the Network Graph. <br /> **NOTE:** zigbee2mqtt 1.2.1+ required.
+
+To request a networkmap with **routes** use `zigbee2mqtt/bridge/networkmap/routes` as topic.
+
+### graphviz
 
 The graphviz map shows the devices as follows:
-* Coordinator :  rectangle with bold outline
-* Router : rectangle with rounded corners
-* End device : rectangle with rounded corners and dashed outline
+* **Coordinator:** rectangle with bold outline
+* **Router:** rectangle with rounded corners
+* **End device:** rectangle with rounded corners and dashed outline
 
 Links are labelled with link quality (0..255) and active routes (listed by short 16 bit destination address). Arrow indicates direction of messaging. Coordinator and routers will typically have two lines for each connection showing bi-directional message path. Line style is:
-* To end devices : normal line
-* To and between coordinator and routers : heavy line for active routes or thin line for no active routes
-
-To request a networkmap with routes use `zigbee2mqtt/bridge/networkmap/routes` as topic.
+* To **end devices**: normal line
+* To and between **coordinator** and **routers**: heavy line for active routes or thin line for no active routes
 
 ## zigbee2mqtt/bridge/group/[friendly_name]/(add|remove|remove_all)
 See [Groups](groups.md)
@@ -288,6 +291,10 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
   // In case you want this you can use "brightness_move_onoff" instead of "brightness_move".
   "brightness_move": -40, // Starts moving the brightness down at 40 units per second
   "brightness_move": "stop", // Stops the brightness move
+
+  // Similar to brightness_move, color_temp_move will move the color temperature.
+  "color_temp_move": 40, // Starts moving the color temperature up at 40 units per second
+  "color_temp_move": "stop", // Stops the color temperature move
 }
 ```
 
@@ -316,4 +323,4 @@ This is the counterpart of the `set` command. It allows you to read a value from
 Only used when `homeassistant: true` in `configuration.yaml`. Required for [Home Assistant MQTT discovery](https://www.home-assistant.io/docs/mqtt/discovery/).
 
 ## Device specific commands
-Some devices offer device specific commands. Example: for the Xiaomi DJT11LM Aqara vibration sensor you can set the `sensitivity`. To find out wether your device supports any specific commands, checkout the device page (which can be reached via the supported devices page).
+Some devices offer device specific commands. Example: for the Xiaomi DJT11LM Aqara vibration sensor you can set the `sensitivity`. To find out whether your device supports any specific commands, checkout the device page (which can be reached via the supported devices page).

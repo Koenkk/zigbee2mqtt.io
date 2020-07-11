@@ -1,19 +1,19 @@
 ---
-title: "TUYATEC U86KCJ-ZP control via MQTT"
-description: "Integrate your TUYATEC U86KCJ-ZP via Zigbee2mqtt with whatever smart home
+title: "TuYa U86KCJ-ZP control via MQTT"
+description: "Integrate your TuYa U86KCJ-ZP via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/U86KCJ-ZP.md)*
 
-# TUYATEC U86KCJ-ZP
+# TuYa U86KCJ-ZP
 
 | Model | U86KCJ-ZP  |
-| Vendor  | TUYATEC  |
+| Vendor  | TuYa  |
 | Description | Smart 6 key scene wall switch |
 | Supports | action |
-| Picture | ![TUYATEC U86KCJ-ZP](../images/devices/U86KCJ-ZP.jpg) |
+| Picture | ![TuYa U86KCJ-ZP](../images/devices/U86KCJ-ZP.jpg) |
 
 ## Notes
 

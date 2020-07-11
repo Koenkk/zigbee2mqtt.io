@@ -42,7 +42,19 @@ light:
     color_temp: true
     xy: true
     schema: "json"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/rgb/set"
+    brightness_scale: 254
+    state_topic_postfix: "rgb"
+
+light:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/white/set"
+    brightness_scale: 254
+    state_topic_postfix: "white"
 
 sensor:
   - platform: "mqtt"

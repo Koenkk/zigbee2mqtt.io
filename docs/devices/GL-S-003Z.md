@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-S-003Z via Zigbee2mqtt with whatever sm
 | Model | GL-S-003Z  |
 | Vendor  | Gledopto  |
 | Description | Smart RGBW GU10  |
-| Supports | on/off, brightness, color, white |
+| Supports | on/off, brightness, color xy |
 | Picture | ![Gledopto GL-S-003Z](../images/devices/GL-S-003Z.jpg) |
 
 ## Notes
@@ -47,9 +47,9 @@ light:
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
     xy: true
-    white_value: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    brightness_scale: 254
 
 sensor:
   - platform: "mqtt"

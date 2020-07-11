@@ -22,6 +22,51 @@ description: "Integrate your Xiaomi MCCGQ01LM via Zigbee2mqtt with whatever smar
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking). The reset button is the small hole in the side of the device - you will need a pin or needle to push into the small hole. After this the device will automatically join.
 
 
+## OpenHAB integration and configuration
+In OpenHAB you need the MQTT Binding to be installed. It is possible to add this sensor as a generic mqtt thing, but here it is described how to add the sensor manually via an editor.
+
+To make the following configuration work it is neccessary to enable the experimental attribute output in the configuration.yaml.
+```yaml
+experimental:
+    output: attribute
+```
+
+### Thing
+To add this Xiaomi MCCGQ01LM MiJia door & window contact sensor as Thing it is necessary to embed the Thing into a bridge definition of a mqtt broker. Please concider that for the door window sensor OPEN is false (no contact) and CLOSED is true (contact). So make sure that on(OPEN) = "false" and off(CLOSED) = "true".
+
+```yaml
+Bridge mqtt:broker:zigbeeBroker [ host="YourHostname", secure=false, username="your_username", password="your_password" ]
+{
+    Thing topic MijiaDoorSensor "MiJia door & window contact sensor"  @ "Your room"
+    {
+        Channels:
+            Type contact  : status      "status"      [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/contact", on="false", off="true" ]
+            Type number   : voltage     "voltage"     [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/voltage" ]
+            Type number   : battery     "battery"     [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/battery" ]
+            Type number   : linkquality "linkquality" [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/linkquality" ]
+            /****************************************************************************************************
+            If you want to know when the sensor has been last changed you cann add to your configuration.yaml:
+            advanced:
+                last_seen: ISO_8601_local
+
+            and add another channel:
+            ****************************************************************************************************/
+            Type datetime : last_change "last change" [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/last_seen" ]
+    }
+}
+```
+
+### Items
+```yaml
+Contact  door_window_sensor_isOpen      "open status" <door>                                {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:status"}
+Number   door_window_sensor_VOLTAGE     "voltage [%d mV]"                                   {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:voltage"}
+Number   door_window_sensor_BATTERY     "battery [%.1f %%]" <battery>                       {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:battery"}
+Number   door_window_sensor_LINKQUALITY "link qualitiy [%d]" <qualityofservice>             {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:linkquality"}
+/* See comment above */
+DateTime door_window_sensor_last_change "last change [%1$td.%1$tm.%1$tY %1$tH:%1$tM:%1$tS]" {channel="mqtt:topic:zigbeeBroker:MijiaDoorSensor:last_change"}
+```
+
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
@@ -56,37 +101,4 @@ sensor:
 ```
 {% endraw %}
 
-## OpenHAB integration and configuration
-In OpenHAB you need the MQTT Binding to be installed. It is possible to add this sensor as a generic mqtt thing, but here it is described how to add the sensor manually via an editor.
-
-To make the following configuration work it is neccessary to enable the experimental attribute output in the configuration.yaml.
-```yaml
-experimental:
-  output: attribute
-```
-
-### Thing
-To add this Xiaomi MCCGQ01LM MiJia door & window contact sensor as Thing it is necessary to embed the Thing into a bridge definition of a mqtt broker. Please concider that for the door window sensor OPEN is false (no contact) and CLOSED is true (contact). So make sure that on(OPEN) = "false" and off(CLOSED) = "true". 
-
-```yaml
-Bridge mqtt:broker:zigbeeBroker [ host="YourHostname", secure=false, username="your_username", password="your_password" ]
-{
-    Thing mqtt:topic:MijiaDoorSensor "MiJia door & window contact sensor"  @ "Your room"
-    {
-        Channels:
-            Type contact  : status      "status"      [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/contact", on="false", off="true" ] 
-            Type number   : voltage     "voltage"     [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/voltage" ]
-            Type number   : battery     "battery"     [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/battery" ]     
-            Type number   : linkquality "linkquality" [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/linkquality" ]
-    }
-}
-```
-
-### Items
-```yaml
-Contact  door_window_sensor_isOpen      "open status" <door>                    {channel="mqtt:topic:MijiaDoorSensor:status"}
-Number   door_window_sensor_VOLTAGE     "voltage [%d mV]"                       {channel="mqtt:topic:MijiaDoorSensor:voltage"}
-Number   door_window_sensor_BATTERY     "battery [%.1f %%]" <battery>           {channel="mqtt:topic:MijiaDoorSensor:battery"}
-Number   door_window_sensor_LINKQUALITY "link qualitiy [%d]" <qualityofservice> {channel="mqtt:topic:MijiaDoorSensor:linkquality"}
-```
 
