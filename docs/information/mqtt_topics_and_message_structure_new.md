@@ -122,66 +122,22 @@ Optionally, a `transaction` property can be included in the request. This allows
 
 ### Possible requests
 
-#### zigbee2mqtt/bridge/request/permitJoin
-Allows to permit or disable joining of new devices. Allowed payloads are `{"value": true}`, `{"value": false}`, `true` or `false`. Example response: ``{"data":{"value":true},"status":"ok"}`. This is not persistent (will not be saved to `configuration.yaml`).
+#### General
+<details>
+<summary>zigbee2mqtt/bridge/request/permitJoin</summary>
 
-#### zigbee2mqtt/bridge/request/device/remove
-Removes a device from the network. Allowed payloads are `{"ID": "deviceID"}` or `deviceID` where deviceID can be the `ieeeAddress` or `friendlyName` of the device. Example; request: `{"ID": "my_bulb"}` or `my_bulb`, response: `{"data":{"ID": "my_bulb","ban":false,"force":false},"status":"ok"}`.
+Allows to permit or disable joining of new devices. Allowed payloads are `{"value": true}`, `{"value": false}`, `true` or `false`. Example response: `{"data":{"value":true},"status":"ok"}`. This is not persistent (will not be saved to `configuration.yaml`).
+</details>
 
-Note that in Zigbee the coordinator can only **request** a device to remove itself from the network.
-Which means that in case a device refuses to respond to this request it is not removed from the network.
-This can happen for e.g. battery powered devices which are sleeping and thus not receiving this request.
-In case removal fails the reponse will be e.g. `{"data":{"ID": "my_bulb","ban":false,"force":false},"status":"error","error":"Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)"}`.
+<details>
+<summary>zigbee2mqtt/bridge/request/touchlink/factoryReset</summary>
 
-An alternative way to remove the device is by factory resetting it, this probably won't work for all devices as it depends on the device itself.
-In case the device did remove itself from the network, you will get a `deviceLeave` event on `zigbee2mqtt/bridge/event`.
-
-In case all of the above fails, you can force remove a device. Note that a force remove will **only** remove the device from the database. Until this device is factory reset, it will still hold the network encryption key and thus is still able to communicate over the network!
-To force remove a device add the optional `force` property (default `false`) to the payload, example: `{"ID":"my_bulb","force":true}`.
-
-In case you also want to ban the device the optional `ban` property (default `false`) can be added, example: `{"ID":"my_bulb","ban":true}`. Note that Zigbee doesn't have a ban functionallity, therefore when a device is banned, Zigbee2mqtt will immediately request the device to remove itself from the network when it joins.
-
-#### zigbee2mqtt/bridge/request/device/otaUpdate/(check|update)
-See [OTA updates](./ota_updates.md).
-
-#### zigbee2mqtt/bridge/request/device/configure
-Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected (e.g. not reporting certain values), not all devices can be configured (only when the defintion has a `configure` in [`devices.js`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices.js)). Allowed payloads are `{"ID": "deviceID"}` or `deviceID` where deviceID can be the `ieeeAddress` or `friendlyName` of the device. Example; request: `{"ID": "my_remote"}` or `my_remote`, response: `{"data":{"ID": "my_remote"},"status":"ok"}`.
-
-#### zigbee2mqtt/bridge/request/group/remove
-Removes a group. Allowed payloads are `{"ID": "groupID"}` or `groupID` where groupID can be the `groupID` or `friendlyName` of the group. Example; request: `{"ID": "my_group"}` or `my_group`, response: `{"data":{"ID": "my_group", "force": false},"status":"ok"}`.
-
-Group removal can fail if one of the devices fails to remove itself from the group (e.g. due to being offline). In this case you can force a group removal by setting the optional `force` property to `true`, example payload `{"ID": "my_group", "force": true}`. Note that in this case the device will still be in the group, in case the groupID is later reused, the device will be part of that group.
-
-#### zigbee2mqtt/bridge/request/group/add
-Adds a group. Allowed payloads are `{"friendlyName": NAME, "ID": NUMBER}` or `NAME`. Example; request: `{"ID": 9, "friendlyName": "new_group"}` or `new_group`, response: `{"data":{"ID": 9,"friendlyName":"new_group"},"status":"ok"}`. The `ID` property is optional.
-
-#### zigbee2mqtt/bridge/request/device/rename
-Allows you to change the `friendly_name` of a device on the fly. Payload format is `{"from": deviceID, "to": deviceID}` where deviceID can be the `ieeeAddress` or `friendlyName` of the device, example: `{"from": "my_bulb", "to": "my_bulb_new_name"}`. Response will be `{"data":{"from":"my_bulb","to":"my_bulb_new_name"},"status":"ok"}`.
-
-In case you want to rename the last joined device, omit the `from` property and set `last` to `true`. Example: `{"last": true, "to": "my_bulb_new_name"}`.
-
-#### zigbee2mqtt/bridge/request/group/rename
-Allows you to change the `friendly_name` of a group on the fly. Payload format is `{"from": groupID, "to": groupID}` where groupID can be the `groupID` or `friendlyName` of the group, example: `{"from": "my_group", "to": "my_group_new_name"}`. Response will be `{"data":{"from":"my_group","to":"my_group_new_name"},"status":"ok"}`.
-
-#### zigbee2mqtt/bridge/request/device/options
-Allows you to change device options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"ID": deviceID,"options": OPTIONS}` where deviceID can be the `ieeeAddress` or `friendlyName` of the device, example: `{"ID": "my_bulb", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"ID":"my_bulb"},"status":"ok"}`.
-
-#### zigbee2mqtt/bridge/request/group/options
-Allows you to change group options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"ID": groupID,"options": OPTIONS}` where groupID can be the `groupID` or `friendlyName` of the group, example: `{"ID": "my_group", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"ID":"my_group"},"status":"ok"}`.
-
-#### zigbee2mqtt/bridge/request/config/lastSeen
-Sets `advanced` -> `last_seen` (persistent). Payload format is `{"value": VALUE}`, example: `{"value":"disable"}`, response: `{"data":{"value": "disable"},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
-
-#### zigbee2mqtt/bridge/request/config/elapsed
-Sets `advanced` -> `elapsed` (persistent). Payload format is `{"value": VALUE}`, example: `{"value":true}`, response: `{"data":{"value": true},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
-
-#### zigbee2mqtt/bridge/request/config/logLevel
-Sets `advanced` -> `log_level` (persistent). Payload format is `{"value": VALUE}`, example: `{"value":"debug"}`, response: `{"data":{"value": "debug"},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
-
-#### zigbee2mqtt/bridge/request/touchlink/factoryReset
 See [Touchlink](./touchlink.md).
+</details>
 
-#### zigbee2mqtt/bridge/request/networkmap
+<details>
+<summary>zigbee2mqtt/bridge/request/networkmap</summary>
+
 **WARNING: During the networkmap scan your network will be not/less responsive. Depending on the size of your network this can take somewhere between 10 seconds and 2 minutes. Therefore it is recommended to only trigger these scans manually!**
 
 Allows you to retrieve a map of your Zigbee network. Payload format is `{"type": TYPE, "routes": BOOL}` or `TYPE`, example: `graphviz`, response `{"data":{"value": "NETWORKMAP","type":"graphviz","routes":false},"status":"ok"}`. Possible types are `raw`, `graphviz` and `plantuml`. In case you want to include routes set `routes` to `true`, `routes` is optional and is `false` by default.
@@ -196,7 +152,117 @@ The graphviz map shows the devices as follows:
 Links are labelled with link quality (0..255) and active routes (listed by short 16 bit destination address). Arrow indicates direction of messaging. Coordinator and routers will typically have two lines for each connection showing bi-directional message path. Line style is:
 * To end devices : normal line
 * To and between coordinator and routers : heavy line for active routes or thin line for no active routes
+</details>
 
+#### Device
+<details>
+<summary>zigbee2mqtt/bridge/request/device/remove</summary>
+
+Removes a device from the network. Allowed payloads are `{"ID": "deviceID"}` or `deviceID` where deviceID can be the `ieeeAddress` or `friendlyName` of the device. Example; request: `{"ID": "my_bulb"}` or `my_bulb`, response: `{"data":{"ID": "my_bulb","ban":false,"force":false},"status":"ok"}`.
+
+Note that in Zigbee the coordinator can only **request** a device to remove itself from the network.
+Which means that in case a device refuses to respond to this request it is not removed from the network.
+This can happen for e.g. battery powered devices which are sleeping and thus not receiving this request.
+In case removal fails the reponse will be e.g. `{"data":{"ID": "my_bulb","ban":false,"force":false},"status":"error","error":"Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)"}`.
+
+An alternative way to remove the device is by factory resetting it, this probably won't work for all devices as it depends on the device itself.
+In case the device did remove itself from the network, you will get a `deviceLeave` event on `zigbee2mqtt/bridge/event`.
+
+In case all of the above fails, you can force remove a device. Note that a force remove will **only** remove the device from the database. Until this device is factory reset, it will still hold the network encryption key and thus is still able to communicate over the network!
+To force remove a device add the optional `force` property (default `false`) to the payload, example: `{"ID":"my_bulb","force":true}`.
+
+In case you also want to ban the device the optional `ban` property (default `false`) can be added, example: `{"ID":"my_bulb","ban":true}`. Note that Zigbee doesn't have a ban functionallity, therefore when a device is banned, Zigbee2mqtt will immediately request the device to remove itself from the network when it joins.
+</details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/device/otaUpdate/check</summary>
+
+See [OTA updates](./ota_updates.md).
+</details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/device/otaUpdate/update</summary>
+
+See [OTA updates](./ota_updates.md).
+</details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/device/configure</summary>
+
+Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected (e.g. not reporting certain values), not all devices can be configured (only when the defintion has a `configure` in [`devices.js`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices.js)). Allowed payloads are `{"ID": "deviceID"}` or `deviceID` where deviceID can be the `ieeeAddress` or `friendlyName` of the device. Example; request: `{"ID": "my_remote"}` or `my_remote`, response: `{"data":{"ID": "my_remote"},"status":"ok"}`.
+</details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/device/options</summary>
+
+Allows you to change device options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"ID": deviceID,"options": OPTIONS}` where deviceID can be the `ieeeAddress` or `friendlyName` of the device, example: `{"ID": "my_bulb", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"ID":"my_bulb"},"status":"ok"}`.
+</details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/device/rename</summary>
+
+Allows you to change the `friendly_name` of a device on the fly. Payload format is `{"from": deviceID, "to": deviceID}` where deviceID can be the `ieeeAddress` or `friendlyName` of the device, example: `{"from": "my_bulb", "to": "my_bulb_new_name"}`. Response will be `{"data":{"from":"my_bulb","to":"my_bulb_new_name"},"status":"ok"}`.
+
+In case you want to rename the last joined device, omit the `from` property and set `last` to `true`. Example: `{"last": true, "to": "my_bulb_new_name"}`.
+</details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/device/bind</summary>
+
+See [Binding](./binding.md).
+</details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/device/unbind</summary>
+
+See [Binding](./binding.md).
+</details>
+
+#### Group
+<details>
+<summary>zigbee2mqtt/bridge/request/group/remove</summary>
+
+Removes a group. Allowed payloads are `{"ID": "groupID"}` or `groupID` where groupID can be the `groupID` or `friendlyName` of the group. Example; request: `{"ID": "my_group"}` or `my_group`, response: `{"data":{"ID": "my_group", "force": false},"status":"ok"}`.
+
+Group removal can fail if one of the devices fails to remove itself from the group (e.g. due to being offline). In this case you can force a group removal by setting the optional `force` property to `true`, example payload `{"ID": "my_group", "force": true}`. Note that in this case the device will still be in the group, in case the groupID is later reused, the device will be part of that group.
+</details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/group/add</summary>
+
+Adds a group. Allowed payloads are `{"friendlyName": NAME, "ID": NUMBER}` or `NAME`. Example; request: `{"ID": 9, "friendlyName": "new_group"}` or `new_group`, response: `{"data":{"ID": 9,"friendlyName":"new_group"},"status":"ok"}`. The `ID` property is optional.
+</details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/group/rename</summary>
+
+Allows you to change the `friendly_name` of a group on the fly. Payload format is `{"from": groupID, "to": groupID}` where groupID can be the `groupID` or `friendlyName` of the group, example: `{"from": "my_group", "to": "my_group_new_name"}`. Response will be `{"data":{"from":"my_group","to":"my_group_new_name"},"status":"ok"}`.
+</details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/group/options</summary>
+
+Allows you to change group options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"ID": groupID,"options": OPTIONS}` where groupID can be the `groupID` or `friendlyName` of the group, example: `{"ID": "my_group", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"ID":"my_group"},"status":"ok"}`.
+</details>
+
+#### Configuration
+<details>
+<summary>zigbee2mqtt/bridge/request/config/lastSeen</summary>
+
+Sets `advanced` -> `last_seen` (persistent). Payload format is `{"value": VALUE}`, example: `{"value":"disable"}`, response: `{"data":{"value": "disable"},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
+</details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/config/elapsed</summary>
+
+Sets `advanced` -> `elapsed` (persistent). Payload format is `{"value": VALUE}`, example: `{"value":true}`, response: `{"data":{"value": true},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
+</details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/config/logLevel</summary>
+
+Sets `advanced` -> `log_level` (persistent). Payload format is `{"value": VALUE}`, example: `{"value":"debug"}`, response: `{"data":{"value": "debug"},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
+</details>
 
 
 

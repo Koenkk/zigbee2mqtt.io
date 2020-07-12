@@ -3,7 +3,7 @@
 # Binding
 *Ongoing discussion about this feature can be found here: <https://github.com/Koenkk/zigbee2mqtt/issues/782>*
 
-Zigbee has support for binding which makes it possible that devices can directly control each other without the intervention of zigbee2mqtt or any home automation software.
+Zigbee has support for binding which makes it possible that devices can directly control each other without the intervention of Zigbee2mqtt or any home automation software.
 
 ## When to use this
 A use case for this is e.g. the TRADFRI wireless dimmer. Binding the dimmer directly to a bulb or group has the following advantages:
@@ -11,17 +11,16 @@ A use case for this is e.g. the TRADFRI wireless dimmer. Binding the dimmer dire
 - It will work even when home automation software, zigbee2mqtt or the coordinator is down.
 
 ## Commands
-Binding can be configured using the following topics:
+Binding can be configured by using either `zigbee2mqtt/bridge/request/device/bind` to bind and `zigbee2mqtt/bridge/request/device/unbind` to unbind. The payload should be `{"from": SOURCE, "to": TARGET}` where `SOURCE` and `TARGET` can be the `friendly_name` of a group or device. Example request payload: `{"from": "my_remote", "to": "my_bulb"}`, example response payload: `{"data":{"from":"my_remote","to":"my_bulb","clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`. The `clusters` in the response indicate the bound/unbound clusters, `failed` indicates any failed to bind/unbind clusters. In case all clusters fail to bind the `status` is set to `error`.
 
-- `zigbee2mqtt/bridge/bind/[SOURCE_DEVICE_FRIENDLY_NAME]` with payload `TARGET_DEVICE_FRIENDLY_NAME` will bind the source device to the target device or target group. If this fails it might be because the remote is sleeping. This can be fixed by waking it up right before sending the MQTT message. To wake it up press a button on the remote. In the above example, the TRADFRI wireless dimmer would be the source device and the bulb the target device. When using a group as target, using the group's friendly name is mandatory, group ID will not work. 
-- `zigbee2mqtt/bridge/unbind/[SOURCE_DEVICE_FRIENDLY_NAME]` with payload `TARGET_DEVICE_FRIENDLY_NAME` will unbind the devices.
+When binding/unbinding of a battery powered device fails, this is most of the time caused becuase the device is sleeping. This can be fixed by waking it up right before sending the MQTT message. To wake it up press a button on the remote.
+
+In the above example, the TRADFRI wireless dimmer would be the `SOURCE` device and the bulb the `TARGET` device. When using a group as target, using the group's friendly name is mandatory, group ID will not work.
 
 ### Binding specific endpoint
 **This is not applicable for most users**
 
-By default, the first endpoint is taken. In case your device has multiple endpoints, e.g. `left` and `right`. The following can be done to specifcy an endpoint:
-- **Source**: append the endpoint friendly name to the topic, e.g. `zigbee2mqtt/bridge/bind/my_switch/left`
-- **Target**: append the endpoint friendly name to the payload, e.g. `my_switch/right`
+By default, the first endpoint is taken. In case your device has multiple endpoints, e.g. `left` and `right`. You can specify `SOURCE` or `TARGET` as e.g. `my_switch/right` to bind/unbind the `right` endpoint.
 
 ### Binding a remote to a group
 Binding a remote to a group allows a remote to directly control a group of devices without intervention of Zigbee2mqtt.
@@ -34,7 +33,7 @@ To do this execute the following steps:
     - `zigbee2mqtt/bridge/group/my_group/add` with payload `bulb_1`
     - `zigbee2mqtt/bridge/group/my_group/add` with payload `bulb_2`
 3. Bind the remote to the group by sending the following MQTT message.
-    - `zigbee2mqtt/bridge/bind/my_remote` with payload `my_group`
+    - `zigbee2mqtt/bridge/request/device/bind` with payload `{"from": "my_remote", "to": "my_group"}`
 
 ## Devices
 Not all devices support this, it basically comes down to the Zigbee implementation of the device itself. Check the device specific page for more info (can be reached via the supported devices page)
