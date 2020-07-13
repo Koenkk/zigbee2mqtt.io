@@ -276,17 +276,18 @@ automation:
     alias: Zigbee Device Joined Notification
     trigger:
       platform: mqtt
-      topic: 'zigbee2mqtt/bridge/log'
+      topic: 'zigbee2mqtt/bridge/event'
     condition:
       condition: template
-      value_template: '{{trigger.payload_json.type == "pairing" and trigger.payload_json.message == "interview_successful"}}'
+      value_template: '{{trigger.payload_json.type == "deviceInterview" and trigger.payload_json.data.status == "successful" and trigger.payload_json.data.supported}}'
     action:
       - service: persistent_notification.create
         data_template:
-          title: Device joined the zigbee2mqtt network
-          message: "Name: {{trigger.payload_json.meta.friendly_name}},
-                    Vendor: {{trigger.payload_json.meta.vendor}},
-                    Description: {{trigger.payload_json.meta.description}}"
+          title: Device joined the Zigbee2mqtt network
+          message: "Name: {{trigger.payload_json.data.friendly_name}},
+                    Vendor: {{trigger.payload_json.data.definition.vendor}},
+                    Model: {{trigger.payload_json.data.definition.model}},
+                    Description: {{trigger.payload_json.data.definition.description}}"
 
 ```
 {% endraw %}

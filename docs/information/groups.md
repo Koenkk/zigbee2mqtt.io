@@ -31,12 +31,13 @@ The group ID (in the above example `'1'`) should be a numerical string. In case 
 
 If using the Hassio add-on, restart it after modifying your `configuration.yaml` as above.
 
-## Commands
-The group of a device can also be configured using the following commands:
+## MQTT commands
+Devices can also be added/removed from groups via MQTT, the possible topics are:
+- `zigbee2mqtt/bridge/request/group/members/add`: add a device to a group
+- `zigbee2mqtt/bridge/request/group/members/remove` remove a device from a group
+- `zigbee2mqtt/bridge/request/group/members/remove_all` remove a device from all groups
 
-- `zigbee2mqtt/bridge/group/[GROUP_FRIENDLY_NAME]/add` with payload `DEVICE_FRIENDLY_NAME` will add a device to a group.
-- `zigbee2mqtt/bridge/group/[GROUP_FRIENDLY_NAME]/remove` with payload `DEVICE_FRIENDLY_NAME` will remove a device from a group.
-- `zigbee2mqtt/bridge/group/remove_all` with payload `DEVICE_FRIENDLY_NAME` will remove a device from **all** groups.
+The payload should be `{"group": GROUP, "device": DEVICE}` where `GROUP` is the `friendly_name` of the group you want to add/remove the device from, `DEVICE` is the `friendly_name` of the device you want to add/remove from the group. Example payload: `{"group":"my_group","device":"my_bulb"}`, example response: `{"data":{"device":"my_bulb","group":"my_group"},"status":"ok"}`. In case of executing a `remove_all` the `group` propert in the request can be omitted.
 
 ## Controlling
 Controlling a group is similar to controlling a single device. For example to turn on all devices that are part of group send a MQTT message to `zigbee2mqtt/[GROUP_FRIENDLY_NAME]/set` with payload:
@@ -56,4 +57,4 @@ By using the above `add` command above, a device will be added to a group. The d
 When using the `set` command, e.g. to turn on all devices in a group, a broadcast request is send to **all* devices in the network. The device itself then determines if it belongs to that group and if it should execute the command.
 
 ## Adding a specific endpoint
-In case you want to add a device to a group with multiple endpoints, e.g. a QBKG03LM with 2 buttons you can specify it by sending to `zigbee2mqtt/bridge/group/[GROUP_FRIENDLY_NAME]/add` with payload `DEVICE_FRIENDLY_NAME/ENDPOINT`. In case of the QBKG03LM e.g `my_device/right`
+In case you want to add a device to a group with multiple endpoints, e.g. a QBKG03LM with 2 buttons you can specify it by adding the endpoint name to the `DEVICE` in the request payload in the format of `DEVICE/ENDPOINT`. Example request payload `{"group":"my_group","device":"my_switch/right"}`.

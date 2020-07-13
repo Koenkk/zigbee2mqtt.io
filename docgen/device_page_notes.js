@@ -568,14 +568,14 @@ If you want to bind the dimmer to a (Hue) lamp you'll have to *[bind it to the l
 
 #### Device refuses actions
 
-If actions (e.g.  applying zigbee2mqtt/bridge/config/remove to a dimmer) result in timeouts, perform a reset (see above) and apply the action right after the device announced itself in the network.
+If actions (e.g. applying zigbee2mqtt/bridge/request/device/remove to a dimmer) result in timeouts, perform a reset (see above) and apply the action right after the device announced itself in the network.
 
 #### Device announces itself but the buttons don't work
 
 The dimmer appears to be working normally and the logs in zigbee2mqtt look good. However, nothing happens when a button is pressed (no light, no log message in zigbee2mqtt). In this case:
 
 - Reset the device
-- Use zigbee2mqtt/bridge/config/remove to remove the device from the network (this should result in a "left the network" log message)
+- Use zigbee2mqtt/bridge/request/device/remove to remove the device from the network (this should result in a "left the network" log message)
 - Allow joining of new devices in zigbee2mqtt
 - Reset the device again
 - Wait for it to pair again. The device should now be operational.

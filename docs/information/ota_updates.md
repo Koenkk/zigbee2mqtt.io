@@ -18,10 +18,10 @@ Zigbee2mqtt automatically checks if updates are available for your devices.
 In case an update is available it will publish `zigbee2mqtt/[DEVICE_FRIENLDY_NAME]` payload `{"update_available": true}`.
 
 ## Check if an update is available
-To check if an update is available for your device send a message to `zigbee2mqtt/bridge/request/device/otaUpdate/check` with payload `{"ID": "deviceID"}` or `deviceID` where deviceID can be the `ieeeAddress` or `friendlyName` of the device. Example; request: `{"ID": "my_remote"}` or `my_remote`, response: `{"data":{"ID": "my_remote","updateAvailable":true},"status":"ok"}`.
+To check if an update is available for your device send a message to `zigbee2mqtt/bridge/request/device/ota_update/check` with payload `{"ID": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"ID": "my_remote"}` or `my_remote`, response: `{"data":{"ID": "my_remote","updateAvailable":true},"status":"ok"}`.
 
 ## Update to latest firmware
-Once an update is available you can update it by sending to `zigbee2mqtt/bridge/request/device/otaUpdate/update` with payload `{"ID": "deviceID"}` or `deviceID` where deviceID can be the `ieeeAddress` or `friendlyName` of the device, example request: `{"ID": "my_remote"}` or `my_remote`. Once the update is completed a response is send, example response: `{"data":{"ID": "my_remote","from":{"softwareBuildID":1,"dateCode":"20190101"},"to":{"softwareBuildID":2,"dateCode":"20190102"}},"status":"ok"}`.
+Once an update is available you can update it by sending to `zigbee2mqtt/bridge/request/device/ota_update/update` with payload `{"ID": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device, example request: `{"ID": "my_remote"}` or `my_remote`. Once the update is completed a response is send, example response: `{"data":{"ID": "my_remote","from":{"software_build_ID":1,"date_code":"20190101"},"to":{"software_build_ID":2,"date_code":"20190102"}},"status":"ok"}`.
 
 An update typically takes +- 10 minutes. While a device is updating a lot of traffic is generated on the network, therefore it is not recommend to execute multiple updates at the same time.
 
