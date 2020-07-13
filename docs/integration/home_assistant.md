@@ -185,18 +185,18 @@ script:
     sequence:
       service: mqtt.publish
       data_template:
-        topic: zigbee2mqtt/bridge/config/rename
+        topic: zigbee2mqtt/bridge/request/device/rename
         payload_template: >-
           {
-            "old": "{{ states.input_text.zigbee2mqtt_old_name.state | string }}",
-            "new": "{{ states.input_text.zigbee2mqtt_new_name.state | string }}"
+            "from": "{{ states.input_text.zigbee2mqtt_old_name.state | string }}",
+            "to": "{{ states.input_text.zigbee2mqtt_new_name.state | string }}"
           }
   zigbee2mqtt_remove:
     alias: Zigbee2mqtt Remove
     sequence:
       service: mqtt.publish
       data_template:
-        topic: zigbee2mqtt/bridge/config/remove
+        topic: zigbee2mqtt/bridge/request/device/remove
         payload_template: "{{ states.input_text.zigbee2mqtt_remove.state | string }}"
 
 # Timer for joining time remaining (120 sec = 2 min)
@@ -228,8 +228,9 @@ sensor:
 switch:
   - platform: mqtt
     name: "Zigbee2mqtt Main join"
-    state_topic: "zigbee2mqtt/bridge/config/permit_join"
-    command_topic: "zigbee2mqtt/bridge/config/permit_join"
+    state_topic: "zigbee2mqtt/bridge/info"
+    value_template: '{{ value_json.permit_join }}'
+    command_topic: "zigbee2mqtt/bridge/request/permit_join"
     payload_on: "true"
     payload_off: "false"
 
@@ -244,7 +245,7 @@ automation:
       - service: mqtt.publish
         data:
           payload_template: "{{ states('input_select.zigbee2mqtt_log_level') }}"
-          topic: zigbee2mqtt/bridge/config/log_level
+          topic: zigbee2mqtt/bridge/request/config/log_level
   # Automation to start timer when enable join is turned on
   - id: zigbee_join_enabled
     alias: Zigbee Join Enabled
@@ -279,7 +280,7 @@ automation:
       topic: 'zigbee2mqtt/bridge/event'
     condition:
       condition: template
-      value_template: '{{trigger.payload_json.type == "deviceInterview" and trigger.payload_json.data.status == "successful" and trigger.payload_json.data.supported}}'
+      value_template: '{{trigger.payload_json.type == "device_interview" and trigger.payload_json.data.status == "successful" and trigger.payload_json.data.supported}}'
     action:
       - service: persistent_notification.create
         data_template:

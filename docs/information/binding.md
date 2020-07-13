@@ -30,8 +30,8 @@ When we for example have an IKEA E1743 remote called `my_remote` and two bulbs c
 To do this execute the following steps:
 1. Create a new group in `configuration.yaml` and give it a `friendly_name` (see [Groups](./groups)). In this example we will set the `friendly_name` to `my_group`.
 2. Add the 2 bulbs to the group by sending the following two MQTT messages.
-    - `zigbee2mqtt/bridge/group/my_group/add` with payload `bulb_1`
-    - `zigbee2mqtt/bridge/group/my_group/add` with payload `bulb_2`
+    - `zigbee2mqtt/bridge/request/group/members/add` with payload `{"group":"my_group","device":"bulb_1"}`
+    - `zigbee2mqtt/bridge/request/group/members/add` with payload `{"group":"my_group","device":"bulb_2"}`
 3. Bind the remote to the group by sending the following MQTT message.
     - `zigbee2mqtt/bridge/request/device/bind` with payload `{"from": "my_remote", "to": "my_group"}`
 

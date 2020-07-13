@@ -429,17 +429,17 @@ See [Groups](./groups.md).
 <details>
 <summary>zigbee2mqtt/bridge/request/config/last_seen</summary>
 
-Sets `advanced` -> `last_seen` (persistent). Payload format is `{"value": VALUE}`, example: `{"value":"disable"}`, response: `{"data":{"value": "disable"},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
+Sets `advanced` -> `last_seen` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":"disable"}`, response: `{"data":{"value": "disable"},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
 </details>
 
 <details>
 <summary>zigbee2mqtt/bridge/request/config/elapsed</summary>
 
-Sets `advanced` -> `elapsed` (persistent). Payload format is `{"value": VALUE}`, example: `{"value":true}`, response: `{"data":{"value": true},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
+Sets `advanced` -> `elapsed` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":true}`, response: `{"data":{"value": true},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
 </details>
 
 <details>
 <summary>zigbee2mqtt/bridge/request/config/log_level</summary>
 
-Sets `advanced` -> `log_level` (persistent). Payload format is `{"value": VALUE}`, example: `{"value":"debug"}`, response: `{"data":{"value": "debug"},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
+Sets `advanced` -> `log_level` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":"debug"}`, response: `{"data":{"value": "debug"},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
 </details>
