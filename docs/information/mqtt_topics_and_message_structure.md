@@ -227,7 +227,7 @@ Example payload:
             "supports":"on/off, brightness, color xy"
         },
         "power_source":"Mains (single phase)",
-        "software_build_ID":"1.3.009",
+        "software_build_id":"1.3.009",
         "date_code":"20180410",
         "interviewing":false,
         "interview_completed":true
@@ -255,7 +255,7 @@ Example payload:
 ```json
 [
     {
-        "ID":1,
+        "id":1,
         "friendly_name":"my_group",
         "members":[
             {
@@ -320,20 +320,20 @@ Links are labelled with link quality (0..255) and active routes (listed by short
 <details>
 <summary>zigbee2mqtt/bridge/request/device/remove</summary>
 
-Removes a device from the network. Allowed payloads are `{"ID": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"ID": "my_bulb"}` or `my_bulb`, response: `{"data":{"ID": "my_bulb","ban":false,"force":false},"status":"ok"}`.
+Removes a device from the network. Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_bulb"}` or `my_bulb`, response: `{"data":{"id": "my_bulb","ban":false,"force":false},"status":"ok"}`.
 
 Note that in Zigbee the coordinator can only **request** a device to remove itself from the network.
 Which means that in case a device refuses to respond to this request it is not removed from the network.
 This can happen for e.g. battery powered devices which are sleeping and thus not receiving this request.
-In case removal fails the reponse will be e.g. `{"data":{"ID": "my_bulb","ban":false,"force":false},"status":"error","error":"Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)"}`.
+In case removal fails the reponse will be e.g. `{"data":{"id": "my_bulb","ban":false,"force":false},"status":"error","error":"Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)"}`.
 
 An alternative way to remove the device is by factory resetting it, this probably won't work for all devices as it depends on the device itself.
 In case the device did remove itself from the network, you will get a `device_leave` event on `zigbee2mqtt/bridge/event`.
 
 In case all of the above fails, you can force remove a device. Note that a force remove will **only** remove the device from the database. Until this device is factory reset, it will still hold the network encryption key and thus is still able to communicate over the network!
-To force remove a device add the optional `force` property (default `false`) to the payload, example: `{"ID":"my_bulb","force":true}`.
+To force remove a device add the optional `force` property (default `false`) to the payload, example: `{"id":"my_bulb","force":true}`.
 
-In case you also want to ban the device the optional `ban` property (default `false`) can be added, example: `{"ID":"my_bulb","ban":true}`. Note that Zigbee doesn't have a ban functionallity, therefore when a device is banned, Zigbee2mqtt will immediately request the device to remove itself from the network when it joins.
+In case you also want to ban the device the optional `ban` property (default `false`) can be added, example: `{"id":"my_bulb","ban":true}`. Note that Zigbee doesn't have a ban functionallity, therefore when a device is banned, Zigbee2mqtt will immediately request the device to remove itself from the network when it joins.
 </details>
 
 <details>
@@ -351,13 +351,13 @@ See [OTA updates](./ota_updates.md).
 <details>
 <summary>zigbee2mqtt/bridge/request/device/configure</summary>
 
-Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected (e.g. not reporting certain values), not all devices can be configured (only when the defintion has a `configure` in [`devices.js`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices.js)). Allowed payloads are `{"ID": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"ID": "my_remote"}` or `my_remote`, response: `{"data":{"ID": "my_remote"},"status":"ok"}`.
+Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected (e.g. not reporting certain values), not all devices can be configured (only when the defintion has a `configure` in [`devices.js`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices.js)). Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_remote"}` or `my_remote`, response: `{"data":{"id": "my_remote"},"status":"ok"}`.
 </details>
 
 <details>
 <summary>zigbee2mqtt/bridge/request/device/options</summary>
 
-Allows you to change device options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"ID": deviceID,"options": OPTIONS}` where deviceID can be the `ieee_address` or `friendly_name` of the device, example: `{"ID": "my_bulb", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"ID":"my_bulb"},"status":"ok"}`.
+Allows you to change device options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"id": deviceID,"options": OPTIONS}` where deviceID can be the `ieee_address` or `friendly_name` of the device, example: `{"id": "my_bulb", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"id":"my_bulb"},"status":"ok"}`.
 </details>
 
 <details>
@@ -384,15 +384,15 @@ See [Binding](./binding.md).
 <details>
 <summary>zigbee2mqtt/bridge/request/group/remove</summary>
 
-Removes a group. Allowed payloads are `{"ID": "groupID"}` or `groupID` where groupID can be the `group_ID` or `friendly_name` of the group. Example; request: `{"ID": "my_group"}` or `my_group`, response: `{"data":{"ID": "my_group", "force": false},"status":"ok"}`.
+Removes a group. Allowed payloads are `{"id": "groupID"}` or `groupID` where groupID can be the `groupID` or `friendly_name` of the group. Example; request: `{"id": "my_group"}` or `my_group`, response: `{"data":{"id": "my_group", "force": false},"status":"ok"}`.
 
-Group removal can fail if one of the devices fails to remove itself from the group (e.g. due to being offline). In this case you can force a group removal by setting the optional `force` property to `true`, example payload `{"ID": "my_group", "force": true}`. Note that in this case the device will still be in the group, in case the groupID is later reused, the device will be part of that group.
+Group removal can fail if one of the devices fails to remove itself from the group (e.g. due to being offline). In this case you can force a group removal by setting the optional `force` property to `true`, example payload `{"id": "my_group", "force": true}`. Note that in this case the device will still be in the group, in case the groupID is later reused, the device will be part of that group.
 </details>
 
 <details>
 <summary>zigbee2mqtt/bridge/request/group/add</summary>
 
-Adds a group. Allowed payloads are `{"friendly_name": NAME, "ID": NUMBER}` or `NAME`. Example; request: `{"ID": 9, "friendly_name": "new_group"}` or `new_group`, response: `{"data":{"ID": 9,"friendly_name":"new_group"},"status":"ok"}`. The `ID` property is optional.
+Adds a group. Allowed payloads are `{"friendly_name": NAME, "id": NUMBER}` or `NAME`. Example; request: `{"id": 9, "friendly_name": "new_group"}` or `new_group`, response: `{"data":{"id": 9,"friendly_name":"new_group"},"status":"ok"}`. The `id` property is optional.
 </details>
 
 <details>
@@ -404,7 +404,7 @@ Allows you to change the `friendly_name` of a group on the fly. Payload format i
 <details>
 <summary>zigbee2mqtt/bridge/request/group/options</summary>
 
-Allows you to change group options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"ID": groupID,"options": OPTIONS}` where groupID can be the `group_ID` or `friendly_name` of the group, example: `{"ID": "my_group", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"ID":"my_group"},"status":"ok"}`.
+Allows you to change group options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"id": groupID,"options": OPTIONS}` where groupID can be the `group_ID` or `friendly_name` of the group, example: `{"id": "my_group", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"id":"my_group"},"status":"ok"}`.
 </details>
 
 <details>
