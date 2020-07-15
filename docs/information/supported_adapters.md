@@ -88,3 +88,9 @@ advanced:
 - USB connnected Zigbee adapter
 - **Very powerful**, will easily handle networks of 100+ devices.
 - Support is still experimental. ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/72))
+- In case you are getting the following error: `Error: Failed to connect to the adapter (Error: SRSP - SYS - ping after 6000ms)` set the following in your `configuration.yaml`.
+
+```yaml
+serial:
+  adapter: deconz
+```

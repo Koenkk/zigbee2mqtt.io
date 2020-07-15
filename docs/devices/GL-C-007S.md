@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-C-007S via Zigbee2mqtt with whatever sm
 | Model | GL-C-007S  |
 | Vendor  | Gledopto  |
 | Description | Zigbee LED controller RGBW plus model |
-| Supports | on/off, brightness, color, white |
+| Supports | on/off, brightness, color xy |
 | Picture | ![Gledopto GL-C-007S](../images/devices/GL-C-007S.jpg) |
 
 ## Notes
@@ -47,7 +47,6 @@ light:
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
     xy: true
-    white_value: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     brightness_scale: 254

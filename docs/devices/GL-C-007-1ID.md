@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-C-007-1ID via Zigbee2mqtt with whatever
 | Model | GL-C-007-1ID  |
 | Vendor  | Gledopto  |
 | Description | Zigbee LED controller RGBW (1 ID) |
-| Supports | on/off, brightness, color temperature, color |
+| Supports | on/off, brightness, color temperature, color xy |
 | Picture | ![Gledopto GL-C-007-1ID](../images/devices/GL-C-007-1ID.jpg) |
 
 ## Notes

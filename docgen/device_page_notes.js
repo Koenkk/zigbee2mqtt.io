@@ -1,5 +1,18 @@
 const notes = [
     {
+        model: ['ICTC-G-1'],
+        note: `
+### Pairing
+To factory reset the TRADFRI wireless dimmer (ICTC-G-1) press the button
+4 times (so the red lights starts blinking).
+After the blinks you might be willing to rotate the dimmer
+like you are trying to control your lights. It will prevent the device
+from going to sleep and ensure successful pairing. In case the dimmer was
+recognized but no actions seems to be detected, try to restart the zigbee2mqtt.
+See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koenkk/zigbee2mqtt/issues/620).
+`,
+    },
+    {
         model: ['SMSZB-120'],
         note: `
 ### Triggering alarm
@@ -64,6 +77,36 @@ If pairing failed, try the followings:
 
 ### App
 This device also come with an iOS app (Android as well but not tested). It is recommended to do the setups via the app for better control of the lock.
+`,
+    },
+    {
+        model: '07008L',
+        note: `
+### How to reset device
+Turn power on/off five times.
+`,
+    },
+    {
+        model: '43080',
+        note: `
+### LED status indicator
+To change the LED status indicator press the top of rocker 3 times and then the bottom of the rocker 1 time. This will cycle between these modes:
+1. LED is ON when the load if OFF (Default)
+2. LED is ON when the load if ON
+3. LED is always OFF
+
+### Pairing
+Factory reset the dimmer by pressing the top of the rocker 10 times quickly.
+`,
+    },
+    {
+        model: 'DIYRuZ_RT',
+        note: `
+# Firmware
+This firmware can be used to flash any CC2530 device to support zigbee 3.0
+For example the Sonoff BasicZBR3
+Firmware download: https://github.com/diyruz/diyruz_rt
+Blog about supporting Zigbee 3.0 to CC2530: https://habr.com/ru/company/iobroker/blog/495926/
 `,
     },
     {
@@ -593,6 +636,22 @@ Press the button on the device 4 times (until the red light turns on).
     {
         model: ['E1744', 'ICTC-G-1'],
         note: `
+### Legacy integration
+By default (for backwards compatibility purposes) the legacy integration is enabled.
+For new users it is recommended to **disable** this as it has several problems.
+To disable the legac integration add the following to your \`configuration.yaml\`:
+
+{% raw %}
+\`\`\`yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_remote
+    legacy: false
+\`\`\`
+{% endraw %}
+
+
+The information below only applies to the legacy integration.
+
 ### Recommendation
 This device sends multiple messages in short time period with the same payload. It's worth setting \`debounce\` option with \`debounce_ignore: - action\` to throttle them without losing unique action payloads.
 
@@ -687,19 +746,6 @@ While pairing the LED is flashing/dimming slowly. Once the pairing is finished, 
         note: `
 ### Pairing
 If brand new, when powered on it will attempt to pair to Zigbee2mqtt automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the (relay) button on the top for about 5 seconds until the relay clicks and the red LED flashes several times. The device will then go into pairing mode and the blue LED will begin to flash. When connected, the blue LED will turn on solid. It should then be connected to Zigbee2mqtt. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
-`,
-    },
-    {
-        model: ['ICTC-G-1'],
-        note: `
-### Pairing
-To factory reset the TRADFRI wireless dimmer (ICTC-G-1) press the button
-4 times (so the red lights starts blinking).
-After the blinks you might be willing to rotate the dimmer
-like you are trying to control your lights. It will prevent the device
-from going to sleep and ensure successful pairing. In case the dimmer was
-recognized but no actions seems to be detected, try to restart the zigbee2mqtt.
-See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koenkk/zigbee2mqtt/issues/620).
 `,
     },
     {
@@ -2115,6 +2161,20 @@ DateTime door_window_sensor_last_change "last change [%1$td.%1$tm.%1$tY %1$tH:%1
 - press front button 3x to enter pairing mode (LED will flash green)
 
 If you get a warning that the model is undefined, which might happen after removing the device. Try removing it from the network again while in pairning mode.
+`,
+    },
+    {
+        model: ['ZK03840'],
+        note: `
+### Installing the TRV
+- install the correct adaptor on the valve
+- open cover (push clip on bottom and push front side to slide open)
+- insert batteries (\`--\` should be on the display)
+- press the button on the top (\`--\` + \`((•))\` should be on the display)
+- wait for the device to pair, it took about 2 minutes for me to get the success message in zigbee2mqtt
+- install the TRV on the adaptor (push hard until you feel a click, rotate the TRV until display faces up)
+- press the button on the top for 3 seconds (motor will turn, \`21°\` + \`((•))\` should be on the display)
+- close the cover
 `,
     },
 ];

@@ -28,7 +28,7 @@ mqtt:
   password: my_password
   # Optional: MQTT client ID (default: nothing)
   client_id: 'MY_CLIENT_ID'
-  # Optional: disable self-signed SSL certificates (default: false)
+  # Optional: disable self-signed SSL certificates (default: true)
   reject_unauthorized: true
   # Optional: Include device information to mqtt messages (default: false)
   include_device_information: true
@@ -159,9 +159,10 @@ map_options:
         active: '#009900'
         inactive: '#994444'
 
-# Optional: Device specific options
+# Optional: see 'Device specific configuration' below
 device_options: {}
-  # See 'Device specific configuration' below
+# Optional, see 'External converters configuration' below
+external_converters: []
 ```
 
 ### Specifying devices and groups in a separate file
@@ -233,6 +234,15 @@ The `configuration.yaml` allows to set device specific configuration. This can a
 
 ### Device type specific
 Some devices support device type specific configuration, e.g. [RTCGQ11LM](../devices/RTCGQ11LM.md). To see if your device has device type specific configuration, visit the device page by going to [Supported devices](../information/supported_devices.md) and clicking on the model number.
+
+### External converters configuration
+You can define external converters to e.g. add support for a DiY device. The extension can be a file with `.js` extension in the `data` directory or a NPM package. Ensure that default export from your external converter exports an array or device object (refer to `devices.js` of zigbee-herdsman-converters). Some examples can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/tree/master/docs/externalConvertersExample). For this example put the files in the `data` folder and add the following to `configuration.yaml`:
+
+```yaml
+external_converters:
+  - freepad_ext.js
+  - one-more-converter.js
+```
 
 #### Changing device type specific defaults
 The default values used for the device specific configuration can be overriden via e.g.:

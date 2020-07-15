@@ -20,7 +20,7 @@ description: "Integrate your Xiaomi MCCGQ11LM via Zigbee2mqtt with whatever smar
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join.
+After this the device will automatically join. If this doesn't work, try with a single short button press.
 
 
 ### Recommendation

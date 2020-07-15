@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-MC-001 via Zigbee2mqtt with whatever sm
 | Model | GL-MC-001  |
 | Vendor  | Gledopto  |
 | Description | Zigbee USB mini LED controller RGB + CCT |
-| Supports | on/off, brightness, color temperature, color |
+| Supports | on/off, brightness, color temperature, color xy |
 | Picture | ![Gledopto GL-MC-001](../images/devices/GL-MC-001.jpg) |
 
 ## Notes

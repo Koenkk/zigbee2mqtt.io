@@ -33,7 +33,8 @@ describe('Device images', () => {
             }
 
             if (!pictures.includes(file)) {
-                chai.assert.fail(`${file} in images directory but is not supported`);
+                // Don't throw errors as it makes PR to add docs for to be supported devices fail.
+                console.log(`${file} in images directory but is not supported`);
             }
         }
     });

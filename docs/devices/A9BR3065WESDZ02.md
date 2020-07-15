@@ -1,28 +1,21 @@
 ---
-title: "Gledopto GL-C-007/GL-C-008 control via MQTT"
-description: "Integrate your Gledopto GL-C-007/GL-C-008 via Zigbee2mqtt with whatever smart home
+title: "EcoSmart A9BR3065WESDZ02 control via MQTT"
+description: "Integrate your EcoSmart A9BR3065WESDZ02 via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GL-C-007_GL-C-008.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/A9BR3065WESDZ02.md)*
 
-# Gledopto GL-C-007/GL-C-008
+# EcoSmart A9BR3065WESDZ02
 
-| Model | GL-C-007/GL-C-008  |
-| Vendor  | Gledopto  |
-| Description | Zigbee LED controller RGB + CCT or RGBW |
-| Supports | on/off, brightness, color temperature or white, color |
-| Picture | ![Gledopto GL-C-007/GL-C-008](../images/devices/GL-C-007-GL-C-008.jpg) |
+| Model | A9BR3065WESDZ02  |
+| Vendor  | EcoSmart  |
+| Description | Tuneable white (BR30) |
+| Supports | on/off, brightness, color temperature |
+| Picture | ![EcoSmart A9BR3065WESDZ02](../images/devices/A9BR3065WESDZ02.jpg) |
 
 ## Notes
-
-
-### Pairing
-1. Switch on your device.
-2. Now switch off and on within 2 seconds.
-3. Repeat off/on four times.
-4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
 
 ### Device type specific configuration
@@ -46,11 +39,9 @@ light:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
-    xy: true
-    white_value: true
+    color_temp: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
-    color_temp: true
     brightness_scale: 254
 
 sensor:
