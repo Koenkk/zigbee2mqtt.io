@@ -19,20 +19,20 @@ The `availability_timeout` defines the interval in seconds at which devices are 
 Note that only non-battery powered devices are checked for availability.
 By default `availability_timeout: 0` is set, which means that this feature is disabled.
 
-In order to exclude devices from this feature use `availability_blacklist`, example:
+In order to exclude devices from this feature use `availability_blocklist`, example:
 
 ```yaml
 advanced:
   availability_timeout: 60
-  availability_blacklist: ['my_bulb','0x000b57fffec6a5b2'] # = list of friendly names or IEEE addresses
+  availability_blocklist: ['my_bulb','0x000b57fffec6a5b2'] # = list of friendly names or IEEE addresses
 ```
 
-In order to set availability check for certain devices only from this feature use `availability_whitelist`, example:
+In order to set availability check for certain devices only from this feature use `availability_passlist`, example:
 
 ```yaml
 advanced:
   availability_timeout: 60
-  availability_whitelist: ['my_bulb','my_other_bulb','0x000b57fffec6a5b2'] # = list of friendly names or IEEE addresses
+  availability_passlist: ['my_bulb','my_other_bulb','0x000b57fffec6a5b2'] # = list of friendly names or IEEE addresses
 ```
 
 ## Non-pingable devices

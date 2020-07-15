@@ -48,14 +48,16 @@ serial:
   # Optional: adapter type, not needed unless you are experiencing problems (default: shown below, options: zstack, deconz)
   adapter: null
 
-# Optional: ban devices from the network (by ieeeAddr) (default: empty)
-ban:
+# Optional: Block devices from the network (by ieeeAddr) (default: empty)
+# Previously called `ban` (which is deprecated)
+blocklist:
   - '0x000b57fffec6a5b2'
 
-# Optional: whitelist devices from the network (by ieeeAddr)
-# Note that when devices are whitelisted, all device which are not whitelisted will be removed from the network.
+# Optional: Allow only certain devices to join the network (by ieeeAddr)
+# Note that all devices not on the passlist will be removed from the network!
 # (default: empty)
-whitelist:
+# Previously called `whitelist` (which is deprecated)
+passlist:
   - '0x000b57fffec6a5b3'
 
 # Optional: advanced settings
@@ -116,11 +118,13 @@ advanced:
   # When enabled, devices will be checked if they are still online.
   # Only AC powered routers are checked for availability. (default: 0)
   availability_timeout: 0
-  # Optional: Blacklist devices from being checked for availability (default: empty)
-  availability_blacklist:
+  # Optional: Prevent devices from being checked for availability (default: empty)
+  # Previously called `availability_blacklist` (which is deprecated)
+  availability_blocklist:
     - DEVICE_FRIENDLY_NAME or DEVICE_IEEE_ADDRESS
-  # Optional: Whitelist of devices being checked for availability (default: empty)
-  availability_whitelist:
+  # Optional: Only enable availability check for certain devices (default: empty)
+  # Previously called `availability_whitelist` (which is deprecated)
+  availability_passlist:
     - DEVICE_FRIENDLY_NAME or DEVICE_IEEE_ADDRESS
   # Optional: Enables report feature (see information -> report for more details) (default: false)
   report: true
