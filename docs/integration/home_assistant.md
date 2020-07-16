@@ -24,6 +24,7 @@ To achieve the best possible integration (including MQTT discovery):
 mqtt:
   discovery: true
   broker: [YOUR MQTT BROKER]  # Remove if you want to use builtin-in MQTT broker
+  # birth_message and will_message is not required anymore for Home Assistant 0.113 >=
   birth_message:
     topic: 'hass/status'
     payload: 'online'
