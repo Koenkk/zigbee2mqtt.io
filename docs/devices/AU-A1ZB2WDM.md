@@ -13,7 +13,7 @@ description: "Integrate your Aurora Lighting AU-A1ZB2WDM via Zigbee2mqtt with wh
 | Vendor  | Aurora lighting  |
 | Description | AOne 250W Smart Rotary Dimmer Module |
 | Supports | on/off, brightness |
-| Picture | ![AU-A1ZB2WDM](../images/devices/AU-A1ZB2WDM.png) |
+| Picture | ![AU-A1ZB2WDM](../images/devices/AU-A1ZB2WDM.jpg) |
 
 ## Notes
 
