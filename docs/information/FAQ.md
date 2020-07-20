@@ -90,6 +90,9 @@ serial:
 
 After reboot your dedvice will have the right permissions and always the same name.
 
+### Error: `Resource temporarily unavailable Cannot lock port`
+This error occurs when another program is already using (and thus locking) the adapter. You can find out which via the following command: `ls -l /proc/[0-9]/fd/ |grep /dev/ttyACM0` (replace `/dev/ttyACM0` with your adapter port).
+
 ### Raspberry Pi users: use a good power supply
 A bad power supply can make your system and its USB devices unstable.
 Make sure to use a good power supply.
