@@ -1,19 +1,19 @@
 ---
-title: "Yale YRL 220L control via MQTT"
-description: "Integrate your Yale YRL 220L via Zigbee2mqtt with whatever smart home
+title: "Yale YRL-220L control via MQTT"
+description: "Integrate your Yale YRL-220L via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YRL-220L.md)*
 
-# Yale YRL 220L
+# Yale YRL-220L
 
-| Model | YRL 220L  |
+| Model | YRL-220L  |
 | Vendor  | Yale  |
-| Description | Real living keyless push button deadbolt lock |
+| Description | Real living keyless leveler lock |
 | Supports | lock/unlock, battery |
-| Picture | ![Yale YRL 220L](../images/devices/YRL-220L.jpg) |
+| Picture | ![Yale YRL-220L](../images/devices/YRL-220L.jpg) |
 
 ## Notes
 

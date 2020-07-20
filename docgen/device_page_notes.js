@@ -130,6 +130,44 @@ Note: This device doesn't support Zigbee channels 25 & 26.
 `,
     },
     {
+        model: ['SNZB-01', 'SNZB-02'],
+        note: `
+### Pairing
+Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
+`,
+    },
+    {
+        model: ['SNZB-03'],
+        note: `
+### Pairing
+If brand new, when powered on it will attempt to pair to Zigbee2mqtt automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the  button on the top for about 5 seconds until the light flashes several times. The device will then go into pairing mode  It should then be connected to Zigbee2mqtt. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
+`,
+    },
+    {
+        model: ['SNZB-04'],
+        note: `
+### Pairing
+Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
+`,
+    },
+    {
+        model: ['AU-A1ZB2WDM'],
+        note: `
+### Pairing
+To pair the dimmer, press and hold the knob for 6 seconds.
+The connected load, and the red LED indicator behind the dimmer knob will flash twice to indicate it has entered pairing mode.
+The connected load, and the red LED indicator behind the dimmer knob will flash a third time to indicate that it has paird successfully.
+`,
+    },
+    {
+        model: ['YSR-MINI-01'],
+        note: `
+### Pairing
+1. Hold button until LED start flashing (about 6 seconds), then release.
+2. Pairing is done when LED stop flashing.
+`,
+    },
+    {
         model: 'C4',
         note: `
 ### General
@@ -639,7 +677,7 @@ Press the button on the device 4 times (until the red light turns on).
 ### Legacy integration
 By default (for backwards compatibility purposes) the legacy integration is enabled.
 For new users it is recommended to **disable** this as it has several problems.
-To disable the legac integration add the following to your \`configuration.yaml\`:
+To disable the legacy integration add the following to your \`configuration.yaml\`:
 
 {% raw %}
 \`\`\`yaml
@@ -802,7 +840,7 @@ Press and hold the reset button on the device for +- 5 seconds (until the blue l
         note: `
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join.
+After this the device will automatically join. If this doesn't work, try with a single short button press.
 `,
     },
     {
@@ -1380,6 +1418,33 @@ Now toggle the plug once with the button on it, from now on it will restore its 
 `,
     },
     {
+        model: ['QBKG23LM'],
+        note: `
+### Pairing
+Press and hold the button on the device for +- 10 seconds
+(until the blue light starts blinking and stops blinking), release and wait.
+`,
+    },
+    {
+        model: ['067694'],
+        note: `
+### Binding
+The remote supports [binding](../information/binding) for toggle action.
+`,
+    },
+    {
+        model: ['067774'],
+        note: `
+### Model numbers
+Model number depends on the country and the colour of the devices. For example:
+- French models are branded as Céliane with Netatmo, and models for this device depends on the colour, with the following numbers: "0 677 24", "0 677 74", and "0 677 94".
+- Spanish models are branded as Legrand Valena Next, and models for this device depends on the colour, with the following numbers: "7 418 12", "7 418 42" and "7 418 72".
+
+### Binding
+The remote supports [binding](../information/binding) on each endpoint, so you can bind each button to a different device/group.
+`,
+    },
+    {
         model: ['ZNCLDJ12LM'],
         note: `
 ### Configuration of device attributes
@@ -1837,6 +1902,7 @@ There are 3 versions of this device: Standalone, Zigbee and Z-wave. These are vi
 Supported:
 - **HS1SA-M : Zigbee**
 - **HS1SA-N : Zigbee**
+- **HS1SA-E : Zigbee 3.0**
 
 Unsupported:
 - HS1SA : Standalone
@@ -2175,6 +2241,91 @@ If you get a warning that the model is undefined, which might happen after remov
 - install the TRV on the adaptor (push hard until you feel a click, rotate the TRV until display faces up)
 - press the button on the top for 3 seconds (motor will turn, \`21°\` + \`((•))\` should be on the display)
 - close the cover
+`,
+    },
+    {
+        model: ['412015'],
+        note: `
+### Model numbers
+In Legrand, model number depends on the country and the colour of the devices, for instance:
+
+- French models are branded as Céliane with Netatmo, whereas Spanish models are branded as Legrand Valena Next. However, this device has no colour options, so there is only one model: "412015" or "4 120 15"
+
+Other brand names depending on the country:
+- Availability for Céliane™ with Netatmo &#8594;     France and Overseas territories, Greece, Poland, Hungary, Tunisia, Morocco, Ivory Coast, Czech Republic, Russia, Mauritius
+- Availability for Dooxie™ with Netatmo &#8594;     France and Overseas territories
+- Availability for Mosaic™ with Netatmo &#8594;     France and Overseas territories, Ivory Coast
+- Availability for Living Now™ with Netatmo &#8594;     Italy, Belgium, Greece, Portugal, Lebanon, Israel, Chile, Peru, Mexico
+- Availability for Valena Allure™ with Netatmo &#8594;     Greece, Germany, Austria, Poland, Slovakia, Bulgaria, Czech Republic, Hungary, Russia
+- Availability for Valena Life™ with Netatmo &#8594;    Greece, Germany, Austria, Portugal, Poland, Slovakia, Bulgaria, Czech Republic, Hungary, Lituania, Russia
+- Availability for Valena Next™ with Netatmo &#8594;    Spain, Belgium
+- Availability for Arteor™ with Netatmo &#8594;    Australia, New Zealand, India, Malaysia, Lebanon, Mauritius, South Africa
+- Availability for Plexo™ with Netatmo &#8594;    France and Overseas territories, Spain, Belgium
+- Availability for Modul'Up™ with Netatmo &#8594;    France and Overseas territories
+
+### Force read power
+* \`power\`: Asks the device for the current active power.
+
+Example of MQTT message payload to ask for the active power. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/get\`:
+
+\`\`\`js
+{
+    "power"
+}
+\`\`\`
+
+
+### Power Alarm Configuration
+* \`power_alarm\`: enables or disables the power alarm, and sets the value: \`DISABLE\` (default) / \`integer\` (in kwh)
+
+Example of MQTT message payload to disable the power alarm. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+
+\`\`\`js
+{
+    "power_alarm": "DISABLE"
+}
+\`\`\`
+
+Example of MQTT message payload to enable the power alarm at 3.3 kwh. This should be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+
+\`\`\`js
+{
+    "power_alarm": "3300"
+}
+\`\`\`
+
+When it reaches that value, the \`power_alarm_active\` binary_sensor will change to \`true\`.
+
+
+### Identify
+Helps to identify the device using the LED.
+
+* \`identify['effect']\`:  only works for blink3 & fixed in \`effect\`. Values:
+    - \`blink3\`
+    - \`fixed\`
+    - \`blinkgreen\`
+    - \`blinkblue\`
+
+* \`identify['color']\`:  only works for blink3 & fixed in \`effect\`. Values:
+    - \`default\`
+    - \`red\`
+    - \`green\`
+    - \`blue\`
+    - \`lightblue\`
+    - \`yellow\`
+    - \`pink\`
+    - \`white\`
+
+Example of MQTT message payload to Identify the device. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+
+\`\`\`js
+{
+    "identify": {
+    "effect": "blink3",
+    "color": "white"
+    }
+}
+\`\`\`
 `,
     },
 ];

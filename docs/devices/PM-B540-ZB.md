@@ -1,19 +1,19 @@
 ---
-title: "eWeLink RHK09 control via MQTT"
-description: "Integrate your eWeLink RHK09 via Zigbee2mqtt with whatever smart home
+title: "Dawon DNS PM-B540-ZB control via MQTT"
+description: "Integrate your Dawon DNS PM-B540-ZB via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/RHK09.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PM-B540-ZB.md)*
 
-# eWeLink RHK09
+# Dawon DNS PM-B540-ZB
 
-| Model | RHK09  |
-| Vendor  | eWeLink  |
-| Description | Motion sensor |
-| Supports | occupancy |
-| Picture | ![eWeLink RHK09](../images/devices/RHK09.jpg) |
+| Model | PM-B540-ZB  |
+| Vendor  | Dawon DNS  |
+| Description | IOT smart plug 16A |
+| Supports | on/off, power and energy measurement |
+| Picture | ![Dawon DNS PM-B540-ZB](../images/devices/PM-B540-ZB.jpg) |
 
 ## Notes
 
@@ -26,22 +26,22 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_on: true
-    payload_off: false
-    value_template: "{{ value_json.occupancy }}"
-    device_class: "motion"
-
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
-    device_class: "battery"
-    value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "W"
+    icon: "mdi:flash"
+    value_template: "{{ value_json.power }}"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
 
 sensor:
   - platform: "mqtt"

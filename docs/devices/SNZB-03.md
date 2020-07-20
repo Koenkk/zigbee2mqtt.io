@@ -11,9 +11,10 @@ description: "Integrate your SONOFF SNZB-03 via Zigbee2mqtt with whatever smart 
 
 | Model | SNZB-03  |
 | Vendor  | SONOFF  |
-| Description | Zigbee motion sensor |
+| Description | Motion sensor |
 | Supports | occupancy |
 | Picture | ![SONOFF SNZB-03](../images/devices/SNZB-03.jpg) |
+| White-label | eWeLink RHK09 |
 
 ## Notes
 
@@ -28,6 +29,32 @@ manual integration is possible with the following configuration:
 
 
 {% raw %}
-None yet
+```yaml
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.occupancy }}"
+    device_class: "motion"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    device_class: "battery"
+    value_template: "{{ value_json.battery }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:signal"
+    unit_of_measurement: "lqi"
+    value_template: "{{ value_json.linkquality }}"
+```
 {% endraw %}
+
 

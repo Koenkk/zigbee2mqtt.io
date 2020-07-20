@@ -10,17 +10,28 @@ description: "Integrate your Aurora Lighting AU-A1ZB2WDM via Zigbee2mqtt with wh
 # Aurora Lighting AU-A1ZB2WDM
 
 | Model | AU-A1ZB2WDM  |
-| Vendor  | Aurora lighting  |
-| Description | AOne 250W Smart Rotary Dimmer Module |
+| Vendor  | Aurora Lighting  |
+| Description | AOne 250W smart rotary dimmer module |
 | Supports | on/off, brightness |
-| Picture | ![AU-A1ZB2WDM](../images/devices/AU-A1ZB2WDM.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZB2WDM](../images/devices/AU-A1ZB2WDM.jpg) |
 
 ## Notes
+
 
 ### Pairing
 To pair the dimmer, press and hold the knob for 6 seconds.
 The connected load, and the red LED indicator behind the dimmer knob will flash twice to indicate it has entered pairing mode.
 The connected load, and the red LED indicator behind the dimmer knob will flash a third time to indicate that it has paird successfully.
+
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+
+* `transition`: Controls the transition time (in seconds) of on/off, brightness,
+color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
+Note that this value is overridden if a `transition` value is present in the MQTT command payload.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

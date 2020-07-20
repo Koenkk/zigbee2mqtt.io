@@ -129,7 +129,7 @@ binary_sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_on: true
     payload_off: false
-    value_template: "{{ value_json.update_available }}"
+    value_template: "{{ value_json.update_available}}"
 ```
 {% endraw %}
 
