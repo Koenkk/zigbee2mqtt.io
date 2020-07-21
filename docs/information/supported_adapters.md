@@ -51,6 +51,25 @@ advanced:
   rtscts: false
 ```
 
+### slaesh's CC2652RB stick
+![slaesh's CC2652RB stick](../images/slaeshs_cc2652rb_stick.jpg)
+
+- Preferred over the Texas Instruments LAUNCHXL-CC26X2R1 and LAUNCHXL-CC1352P-2 due to smaller form factor and lower price. Uses the same chip as LAUNCHXL-CC2652RB (CC2652RB).
+- USB connnected Zigbee adapter
+- **Very powerful**, will easily handle networks of 100+ devices.
+- Very good range (due to external antenna, SMA female connector)
+- Can be bought on [Tindie](https://www.tindie.com/products/slaesh/cc2652-zigbee-coordinator-or-openthread-router/#product-reviews)
+- Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) (use **CC26X2RB_*.zip**)
+- [Flashing guide](https://slae.sh/projects/cc2652/#flashing) (requires no additional hardware to flash)
+- When migrating from another dongle (e.g. CC2531), make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2mqtt won't start.
+- See this [Guide](https://slae.sh/projects/cc2652/#updating-zigbee2mqtt-and-the-zigbee-herdsman) to update the herdsman.
+- Requires following in `configuration.yaml`
+
+```yaml
+advanced:
+  rtscts: false
+```
+
 ### Texas Instruments LAUNCHXL-CC26X2R1
 ![CC26X2R1](../images/cc26x2r1.jpg)
 
