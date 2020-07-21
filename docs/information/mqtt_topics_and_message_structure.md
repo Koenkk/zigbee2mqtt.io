@@ -298,6 +298,12 @@ See [Touchlink](./touchlink.md).
 </details>
 
 <details>
+<summary>zigbee2mqtt/bridge/request/health_check</summary>
+
+Allows to check wether Zigbee2mqtt is healthy. Payload has to be empty, example response: `{"data":{"healthy":true},"status":"ok"}`.
+</details>
+
+<details>
 <summary>zigbee2mqtt/bridge/request/networkmap</summary>
 
 **WARNING: During the networkmap scan your network will be not/less responsive. Depending on the size of your network this can take somewhere between 10 seconds and 2 minutes. Therefore it is recommended to only trigger these scans manually!**
