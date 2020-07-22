@@ -62,7 +62,6 @@ advanced:
 - Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) (use **CC26X2RB_*.zip**)
 - [Flashing guide](https://slae.sh/projects/cc2652/#flashing) (requires no additional hardware to flash)
 - When migrating from another dongle (e.g. CC2531), make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2mqtt won't start.
-- See this [Guide](https://slae.sh/projects/cc2652/#updating-zigbee2mqtt-and-the-zigbee-herdsman) to update the herdsman.
 - Requires at least [Version 1.14.2](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.14.2)
 
 ### Texas Instruments LAUNCHXL-CC26X2R1
