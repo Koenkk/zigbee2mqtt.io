@@ -36,7 +36,7 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [81809](../devices/81809.md) | AduroSmart ERIA colors and white shades smart light bulb A19 (on/off, brightness, color temperature, color xy) | ![../images/devices/81809.jpg](../images/devices/81809.jpg) |
+| [81809/81813](../devices/81809_81813.md) | AduroSmart ERIA colors and white shades smart light bulb A19/BR30 (on/off, brightness, color temperature, color xy) | ![../images/devices/81809-81813.jpg](../images/devices/81809-81813.jpg) |
 | [81825](../devices/81825.md) | AduroSmart ERIA smart wireless dimming switch (on, off, up, down) | ![../images/devices/81825.jpg](../images/devices/81825.jpg) |
 
 ### Airam
