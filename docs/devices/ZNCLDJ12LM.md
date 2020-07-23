@@ -36,6 +36,29 @@ You can send a subset of options, all options that won't be specified will be re
 
 After changing `reverse_direction` you will need to fully open and fully close the curtain so the motor will re-detect edges. `reverse_direction` will get new state only after this recalibration.
 
+## Xiaomi ZNCLDJ12LM with battery
+
+| Picture | ![Xiaomi ZNCLDJ12LM with battery](../images/devices/ZNCLDJ12LM_w_battery.jpg) |
+
+If motor is used without battery it loses configuration when power down. After that you need to perform end stops calibration again. You can use the following automation for that:
+```yaml
+- alias: Calibrate curtain
+  trigger:
+  - platform: homeassistant
+    event: start
+  action:
+  - service: mqtt.publish
+    data:
+      topic: zigbee2mqtt/<FRIENDLY_NAME>/set
+      payload: "{'discovery': true}"
+  - service: cover.close_cover
+    entity_id: cover.<COVER_ID>
+  - delay:
+      seconds: 13 #wait for closure complete
+  - service: cover.open_cover
+    entity_id: cover.<COVER_ID>
+```
+Motor leaves calibration mode automatically after it reaches the both open and close curtain position limits. Calibration is mandatory for proper position reporting and ability to set intermediate positions.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
