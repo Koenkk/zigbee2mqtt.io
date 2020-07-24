@@ -3,7 +3,16 @@ const notes = [
         model: ['WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM', 'WXKG06LM', 'WXKG02LM', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'WXKG07LM', 'QBKG21LM', 'QBKG22LM', 'E1743', 'E1766', 'ptvo.switch', 'DIYRuZ_R8_8', 'HGZB-1S', 'HGZB-02S', 'HGZB-045', 'IM6001-BTP01', 'AV2010/34', 'HS1EB', 'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'ZGRC-KEY-013', '6ARCZABZH', 'MEAZON_BIZY_PLUG', 'MEAZON_DINRAIL', '2AJZ4KPKEY', 'TERNCY-PP01', 'TERNCY-SD01'],
         note: `
 ### Deprecated click event
-This device exposes a deprecated \`click\` event. It's recommended to use the \`action\` event instead.
+By default this device exposes a deprecated \`click\` event. It's recommended to use the \`action\` event instead.
+
+To disable the \`click\` event, set \`legacy: false\` for this device in \`configuration.yaml\`. Example:
+
+\`\`\`yaml
+devices:
+  '0x12345678':
+    friendly_name: my_device
+    legacy: false
+\`\`\`
 `,
     },
     {

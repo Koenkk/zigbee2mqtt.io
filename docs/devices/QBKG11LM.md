@@ -19,7 +19,16 @@ description: "Integrate your Xiaomi QBKG11LM via Zigbee2mqtt with whatever smart
 
 
 ### Deprecated click event
-This device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
+To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+
+```yaml
+devices:
+  '0x12345678':
+    friendly_name: my_device
+    legacy: false
+```
 
 
 ### Pairing
