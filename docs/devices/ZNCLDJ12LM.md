@@ -40,7 +40,13 @@ After changing `reverse_direction` you will need to fully open and fully close t
 
 | Picture | ![Xiaomi ZNCLDJ12LM with battery](../images/devices/ZNCLDJ12LM_w_battery.jpg) |
 
-If motor is used without battery it loses configuration when power down. After that you need to perform end stops calibration again. You can use the following automation for that:
+If motor is used without battery it loses configuration when power down. After that you need to perform end stops calibration again publishing the following command sequence with topic `zigbee2mqtt/[FRIENDLY_NAME]/set`:
+1. `{ "discovery": "" }`
+2. `{ "position": "close" }`
+3. Wait here for curtain closure.
+4. `{ "position": "open" }`
+
+Home Assistant automation example:
 ```yaml
 - alias: Calibrate curtain
   trigger:
@@ -50,7 +56,7 @@ If motor is used without battery it loses configuration when power down. After t
   - service: mqtt.publish
     data:
       topic: zigbee2mqtt/<FRIENDLY_NAME>/set
-      payload: "{'discovery': true}"
+      payload: "{'discovery': ''}"
   - service: cover.close_cover
     entity_id: cover.<COVER_ID>
   - delay:
