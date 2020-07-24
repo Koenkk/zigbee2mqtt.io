@@ -17,7 +17,10 @@ description: "Integrate your Custom devices (DiY) ptvo.switch via Zigbee2mqtt wi
 
 ## Notes
 
-None
+
+### Deprecated click event
+This device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

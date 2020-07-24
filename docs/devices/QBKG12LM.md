@@ -18,6 +18,10 @@ description: "Integrate your Xiaomi QBKG12LM via Zigbee2mqtt with whatever smart
 ## Notes
 
 
+### Deprecated click event
+This device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
+
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.

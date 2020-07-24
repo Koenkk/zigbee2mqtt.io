@@ -18,6 +18,10 @@ description: "Integrate your Meazon MEAZON_BIZY_PLUG via Zigbee2mqtt with whatev
 ## Notes
 
 
+### Deprecated click event
+This device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 

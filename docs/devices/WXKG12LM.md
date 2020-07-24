@@ -18,6 +18,10 @@ description: "Integrate your Xiaomi WXKG12LM via Zigbee2mqtt with whatever smart
 ## Notes
 
 
+### Deprecated click event
+This device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
+
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
 After this the device will automatically join. If this doesn't work, try with a single short button press.
