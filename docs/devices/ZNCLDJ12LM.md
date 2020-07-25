@@ -42,9 +42,9 @@ After changing `reverse_direction` you will need to fully open and fully close t
 
 If motor is used without battery it loses configuration when power down. After that you need to perform end stops calibration again publishing the following command sequence with topic `zigbee2mqtt/[FRIENDLY_NAME]/set`:
 1. `{ "discovery": "" }`
-2. `{ "position": "close" }`
+2. `{ "state": "close" }`
 3. Wait here for curtain closure.
-4. `{ "position": "open" }`
+4. `{ "state": "open" }`
 
 Home Assistant automation example:
 ```yaml
