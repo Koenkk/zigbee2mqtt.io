@@ -31,7 +31,7 @@ By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can
 ```
 
 - **reverse_direction**: (`true`/`false`, default: `false`). Device can be configured to act in an opposite direction.
-- **hand_open**: (`true`/`false`, default: `true`). Enables/disabled auto close.
+- **hand_open**: (`true`/`false`, default: `true`). Option to activate the motor by pulling the curtain.
 - **reset_limits**: (`true`/`false`, defuault: `false`). Activates discovery mode to re-detect edges.
 
 You can send a subset of options, all options that won't be specified will be reverted to default.
