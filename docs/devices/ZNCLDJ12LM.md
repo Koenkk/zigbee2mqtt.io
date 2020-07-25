@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi ZNCLDJ12LM via Zigbee2mqtt with whatever sma
 | Model | ZNCLDJ12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara B1 curtain motor  |
-| Supports | open, close, stop, position |
+| Supports | state (open, close, on, off, stop), position, options |
 | Picture | ![Xiaomi ZNCLDJ12LM](../images/devices/ZNCLDJ12LM.jpg) |
 
 ## Notes
@@ -22,26 +22,28 @@ description: "Integrate your Xiaomi ZNCLDJ12LM via Zigbee2mqtt with whatever sma
 By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can be configured:
 ```json
 {
-    "options":{
+    "options": {
         "reverse_direction": xxx,
-        "auto_close": xxx
+        "hand_open": xxx,
+        "reset_limits": xxx
     }
 }
 ```
 
 - **reverse_direction**: (`true`/`false`, default: `false`). Device can be configured to act in an opposite direction.
-- **auto_close**: (`true`/`false`, default: `true`). Enables/disabled auto close
+- **hand_open**: (`true`/`false`, default: `true`). Enables/disabled auto close.
+- **reset_limits**: (`true`/`false`, defuault: `false`). Activates discovery mode to re-detect edges.
 
-You can send a subset of options, all options that won't be specified will be revered to default.
+You can send a subset of options, all options that won't be specified will be reverted to default.
 
-After changing `reverse_direction` you will need to fully open and fully close the curtain so the motor will re-detect edges. `reverse_direction` will get new state only after this recalibration.
+After setting `reset_limits` to `true` or changing `reverse_direction` you will need to fully open and fully close the curtain so the motor will re-detect edges. `reverse_direction` will get new state only after this recalibration.
 
 ## Xiaomi ZNCLDJ12LM with battery
 
 | Picture | ![Xiaomi ZNCLDJ12LM with battery](../images/devices/ZNCLDJ12LM_w_battery.jpg) |
 
-If motor is used without battery it loses configuration when power down. After that you need to perform end stops calibration again publishing the following command sequence with topic `zigbee2mqtt/[FRIENDLY_NAME]/set`:
-1. `{ "discovery": "" }`
+If motor is used without battery it may lose configuration after long power outage. In that case you need to perform end stops calibration again publishing the following command sequence with topic `zigbee2mqtt/[FRIENDLY_NAME]/set`:
+1. `{ "options": { "reset_limits": true } }`
 2. `{ "state": "close" }`
 3. Wait here for curtain closure.
 4. `{ "state": "open" }`
@@ -56,7 +58,7 @@ Home Assistant automation example:
   - service: mqtt.publish
     data:
       topic: zigbee2mqtt/<FRIENDLY_NAME>/set
-      payload: "{'discovery': ''}"
+      payload: "{ 'options': { 'reset_limits': true } }"
   - service: cover.close_cover
     entity_id: cover.<COVER_ID>
   - delay:
