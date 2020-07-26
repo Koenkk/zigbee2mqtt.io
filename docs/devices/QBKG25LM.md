@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG25LM via Zigbee2mqtt with whatever smart
 | Model | QBKG25LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 3 gang smart wall switch (no neutral wire) |
-| Supports | on/off, action, power measurement |
+| Supports | on/off, action |
 | Picture | ![Xiaomi QBKG25LM](../images/devices/QBKG25LM.jpg) |
 
 ## Notes
@@ -21,6 +21,33 @@ description: "Integrate your Xiaomi QBKG25LM via Zigbee2mqtt with whatever smart
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
+
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `power_outage_memory`: Whether or not to preserve switch state during a power outage.
+* `do_not_disturb`: Turns off indicator lights between 9pm and 9am.
+
+
+### Decoupled mode
+Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
+This might be useful to assign some custom actions to buttons and control relay remotely.
+This command also allows to redefine which button controls which relay for the double switch.
+
+Special topics should be used: `zigbee2mqtt/[FRIENDLY_NAME]/left|center|right/set` to modify operation mode.
+
+Payload:
+```js
+{
+  "operation_mode": "VALUE"
+}
+```
+
+Values                | Description
+----------------------|---------------------------------------------------------
+`control_relay`       | Button controls relay
+`decoupled`           | Button doesn't control any relay
 
 
 ## Manual Home Assistant configuration
@@ -63,14 +90,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "W"
-    icon: "mdi:flash"
-    value_template: "{{ value_json.power }}"
 
 sensor:
   - platform: "mqtt"

@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG22LM via Zigbee2mqtt with whatever smart
 | Model | QBKG22LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 2 gang smart wall switch (no neutral wire) |
-| Supports | on/off, action, power measurement |
+| Supports | on/off, action |
 | Picture | ![Xiaomi QBKG22LM](../images/devices/QBKG22LM.jpg) |
 
 ## Notes
@@ -35,6 +35,48 @@ devices:
 Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
 
+You may have to unpair the switch from an existing coordinator before the pairing process will start.
+
+
+### Decoupled mode
+Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
+This might be useful to assign some custom actions to buttons and control relay remotely.
+This command also allows to redefine which button controls which relay for the double switch.
+
+Special topics should be used: `zigbee2mqtt/[FRIENDLY_NAME]/system/set` to modify operation mode.
+
+Payload:
+```js
+{
+  "operation_mode": {
+    "button": "left"|"right",
+    "state": "VALUE"
+  }
+}
+```
+
+Values                | Description
+----------------------|---------------------------------------------------------
+`control_left_relay`  | Button directly controls left relay
+`control_right_relay` | Button directly controls right relay
+`decoupled`           | Button doesn't control any relay
+
+`zigbee2mqtt/[FRIENDLY_NAME]/system/get` to read current mode.
+
+Payload:
+```js
+{
+  "operation_mode": {
+    "button": "left"|"right"
+  }
+}
+```
+
+Response will be sent to `zigbee2mqtt/[FRIENDLY_NAME]`:
+```json
+{"operation_mode_right":"control_right_relay"}
+```
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -49,8 +91,17 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
-    value_template: "{{ value_json.state }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    value_template: "{{ value_json.state_left }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/left/set"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state_right }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/right/set"
 
 sensor:
   - platform: "mqtt"
@@ -58,14 +109,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
-    device_class: "temperature"
-    value_template: "{{ value_json.temperature }}"
 
 sensor:
   - platform: "mqtt"

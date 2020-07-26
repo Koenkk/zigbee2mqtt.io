@@ -1513,8 +1513,8 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | [QBKG12LM](../devices/QBKG12LM.md) | Xiaomi Aqara double key wired wall switch (on/off, power measurement, temperature) | ![../images/devices/QBKG12LM.jpg](../images/devices/QBKG12LM.jpg) |
 | [WXKG07LM](../devices/WXKG07LM.md) | Xiaomi Aqara D1 double key wireless wall switch (action) | ![../images/devices/WXKG07LM.jpg](../images/devices/WXKG07LM.jpg) |
 | [QBKG21LM](../devices/QBKG21LM.md) | Xiaomi Aqara D1 single gang smart wall switch (no neutral wire) (on/off, action) | ![../images/devices/QBKG21LM.jpg](../images/devices/QBKG21LM.jpg) |
-| [QBKG22LM](../devices/QBKG22LM.md) | Xiaomi Aqara D1 2 gang smart wall switch (no neutral wire) (on/off, action, power measurement) | ![../images/devices/QBKG22LM.jpg](../images/devices/QBKG22LM.jpg) |
-| [QBKG25LM](../devices/QBKG25LM.md) | Xiaomi Aqara D1 3 gang smart wall switch (no neutral wire) (on/off, action, power measurement) | ![../images/devices/QBKG25LM.jpg](../images/devices/QBKG25LM.jpg) |
+| [QBKG22LM](../devices/QBKG22LM.md) | Xiaomi Aqara D1 2 gang smart wall switch (no neutral wire) (on/off, action) | ![../images/devices/QBKG22LM.jpg](../images/devices/QBKG22LM.jpg) |
+| [QBKG25LM](../devices/QBKG25LM.md) | Xiaomi Aqara D1 3 gang smart wall switch (no neutral wire) (on/off, action) | ![../images/devices/QBKG25LM.jpg](../images/devices/QBKG25LM.jpg) |
 | [QBKG23LM](../devices/QBKG23LM.md) | Xiaomi Aqara D1 1 gang smart wall switch (with neutral wire) (on/off, power measurement) | ![../images/devices/QBKG23LM.jpg](../images/devices/QBKG23LM.jpg) |
 | [QBKG24LM](../devices/QBKG24LM.md) | Xiaomi Aqara D1 2 gang smart wall switch (with neutral wire) (on/off, power measurement) | ![../images/devices/QBKG24LM.jpg](../images/devices/QBKG24LM.jpg) |
 | [WSDCGQ01LM](../devices/WSDCGQ01LM.md) | Xiaomi MiJia temperature & humidity sensor (temperature and humidity) | ![../images/devices/WSDCGQ01LM.jpg](../images/devices/WSDCGQ01LM.jpg) |
