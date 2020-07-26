@@ -26,6 +26,20 @@ After this the device will automatically join. If this doesn't work, try with a 
 ### Binding
 This device does **not** support binding.
 
+### Legacy integration
+This device supports the deprecated `click` and also the newer `action` format. 
+By default (for backwards compatibility purposes) the deprecated version is enabled until Zigbee2Mqtt 2.0. 
+For new users it is recommended to **disable** this for more consistency and easier integration with newer Versions.
+To disable the legacy version add the following to your `configuration.yaml`:
+
+{% raw %}
+```yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_remote
+    legacy: false
+```
+{% endraw %}
+
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
