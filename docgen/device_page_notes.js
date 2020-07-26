@@ -688,11 +688,28 @@ Press the button on the device 4 times (until the red light turns on).
 `,
     },
     {
+        model: ['ICZB-KPD14S', 'ICZB-KPD18S', '067773'],
+        note: `
+### Legacy integration
+By default (for backwards compatibility purposes) the legacy integration is enabled.
+For new users it is recommended to **disable** this as it has several fundamental problems.
+To disable the legacy integration add the following to your \`configuration.yaml\`:
+
+{% raw %}
+\`\`\`yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_remote
+    legacy: false
+\`\`\`
+{% endraw %}
+`,
+    },
+    {
         model: ['E1744', 'ICTC-G-1'],
         note: `
 ### Legacy integration
 By default (for backwards compatibility purposes) the legacy integration is enabled.
-For new users it is recommended to **disable** this as it has several problems.
+For new users it is recommended to **disable** this as it has several fundamental problems.
 To disable the legacy integration add the following to your \`configuration.yaml\`:
 
 {% raw %}

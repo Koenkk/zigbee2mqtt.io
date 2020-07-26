@@ -31,6 +31,20 @@ devices:
 ```
 
 
+### Legacy integration
+By default (for backwards compatibility purposes) the legacy integration is enabled.
+For new users it is recommended to **disable** this as it has several fundamental problems.
+To disable the legacy integration add the following to your `configuration.yaml`:
+
+{% raw %}
+```yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_remote
+    legacy: false
+```
+{% endraw %}
+
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
