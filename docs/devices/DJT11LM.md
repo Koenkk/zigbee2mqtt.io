@@ -28,6 +28,16 @@ Then press the button again every 2 seconds (maximum 20 times).
 The `strength` value, which is reported every 300 seconds after vibration is detected, is the max strength measured during a period of 300 second.
 
 
+### Troubleshooting: device stops sending messages/disconnects from network
+Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes happens that they disconnect from the network.
+Most of the times this happens because of the following reasons:
+- Device has a weak signal, you can see the signal quality in the published messages as `linkquality`. A linkquality < 20 is considered weak.
+- Low battery voltage, this can even happen when the battery still appears full. Try a different battery.
+- The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, OSRAM, Sylvania, SmartThings, Securifi.
+
+More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
+
+
 ### Sensitivity
 The sensitivity can be changed by publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set`
 `{"sensitivity": "SENSITIVITY"}` where `SENSITIVITY` is one of the following
