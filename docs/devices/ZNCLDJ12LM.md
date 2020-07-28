@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi ZNCLDJ12LM via Zigbee2mqtt with whatever sma
 | Model | ZNCLDJ12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara B1 curtain motor  |
-| Supports | state (open, close, on, off, stop), position, options |
+| Supports | open, close, stop, position |
 | Picture | ![Xiaomi ZNCLDJ12LM](../images/devices/ZNCLDJ12LM.jpg) |
 
 ## Notes
@@ -22,7 +22,7 @@ description: "Integrate your Xiaomi ZNCLDJ12LM via Zigbee2mqtt with whatever sma
 By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can be configured:
 ```json
 {
-    "options": {
+    "options":{
         "reverse_direction": xxx,
         "hand_open": xxx,
         "reset_limits": xxx
@@ -31,17 +31,14 @@ By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can
 ```
 
 - **reverse_direction**: (`true`/`false`, default: `false`). Device can be configured to act in an opposite direction.
-- **hand_open**: (`true`/`false`, default: `true`). Option to activate the motor by pulling the curtain.
-- **reset_limits**: (`true`/`false`, defuault: `false`). Activates discovery mode to re-detect edges.
+- **hand_open**: (`true`/`false`, default: `true`). By default motor starts rotating when you pull the curtain by hand. You can disable this behaviour.
+- **reset_limits**: (`true`/`false`, default: `false`). Reset the motor. When a path was cleared from obstacles.
 
-You can send a subset of options, all options that won't be specified will be reverted to default.
+You can send a subset of options, all options that won't be specified will be revered to default.
 
-After setting `reset_limits` to `true` or changing `reverse_direction` you will need to fully open and fully close the curtain so the motor will re-detect edges. `reverse_direction` will get new state only after this recalibration.
+After changing `reverse_direction` you will need to fully open and fully close the curtain so the motor will re-detect edges. `reverse_direction` will get new state only after this recalibration.
 
-## Xiaomi ZNCLDJ12LM with battery
-
-| Picture | ![Xiaomi ZNCLDJ12LM with battery](../images/devices/ZNCLDJ12LM_w_battery.jpg) |
-
+### Lost configuration on long power outage
 If motor is used without battery it may lose configuration after long power outage. In that case you need to perform end stops calibration again publishing the following command sequence with topic `zigbee2mqtt/[FRIENDLY_NAME]/set`:
 1. `{ "options": { "reset_limits": true } }`
 2. `{ "state": "close" }`
@@ -66,7 +63,9 @@ Home Assistant automation example:
   - service: cover.open_cover
     entity_id: cover.<COVER_ID>
 ```
+
 Motor leaves calibration mode automatically after it reaches the both open and close curtain position limits. Calibration is mandatory for proper position reporting and ability to set intermediate positions.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

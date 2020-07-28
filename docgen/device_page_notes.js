@@ -1445,29 +1445,7 @@ The remote supports [binding](../information/binding) on each endpoint, so you c
 `,
     },
     {
-        model: ['ZNCLDJ12LM'],
-        note: `
-### Configuration of device attributes
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
-\`\`\`json
-{
-    "options":{
-        "reverse_direction": xxx,
-        "auto_close": xxx
-    }
-}
-\`\`\`
-
-- **reverse_direction**: (\`true\`/\`false\`, default: \`false\`). Device can be configured to act in an opposite direction.
-- **auto_close**: (\`true\`/\`false\`, default: \`true\`). Enables/disabled auto close
-
-You can send a subset of options, all options that won't be specified will be revered to default.
-
-After changing \`reverse_direction\` you will need to fully open and fully close the curtain so the motor will re-detect edges. \`reverse_direction\` will get new state only after this recalibration.
-`,
-    },
-    {
-        model: ['ZNCLDJ11LM'],
+        model: ['ZNCLDJ12LM', 'ZNCLDJ11LM'],
         note: `
 ### Configuration of device attributes
 By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
@@ -1476,18 +1454,46 @@ By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes c
     "options":{
         "reverse_direction": xxx,
         "hand_open": xxx,
-        "reset_move": xxx
+        "reset_limits": xxx
     }
 }
 \`\`\`
 
 - **reverse_direction**: (\`true\`/\`false\`, default: \`false\`). Device can be configured to act in an opposite direction.
 - **hand_open**: (\`true\`/\`false\`, default: \`true\`). By default motor starts rotating when you pull the curtain by hand. You can disable this behaviour.
-- **reset_move**: (\`true\`/\`false\`, default: \`false\`). Reset the motor. When a path was cleared from obstacles.
+- **reset_limits**: (\`true\`/\`false\`, default: \`false\`). Reset the motor. When a path was cleared from obstacles.
 
 You can send a subset of options, all options that won't be specified will be revered to default.
 
 After changing \`reverse_direction\` you will need to fully open and fully close the curtain so the motor will re-detect edges. \`reverse_direction\` will get new state only after this recalibration.
+
+### Lost configuration on long power outage
+If motor is used without battery it may lose configuration after long power outage. In that case you need to perform end stops calibration again publishing the following command sequence with topic \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+1. \`{ "options": { "reset_limits": true } }\`
+2. \`{ "state": "close" }\`
+3. Wait here for curtain closure.
+4. \`{ "state": "open" }\`
+
+Home Assistant automation example:
+\`\`\`yaml
+- alias: Calibrate curtain
+  trigger:
+  - platform: homeassistant
+    event: start
+  action:
+  - service: mqtt.publish
+    data:
+      topic: zigbee2mqtt/<FRIENDLY_NAME>/set
+      payload: "{ 'options': { 'reset_limits': true } }"
+  - service: cover.close_cover
+    entity_id: cover.<COVER_ID>
+  - delay:
+      seconds: 13 #wait for closure complete
+  - service: cover.open_cover
+    entity_id: cover.<COVER_ID>
+\`\`\`
+
+Motor leaves calibration mode automatically after it reaches the both open and close curtain position limits. Calibration is mandatory for proper position reporting and ability to set intermediate positions.
 `,
     },
     {
