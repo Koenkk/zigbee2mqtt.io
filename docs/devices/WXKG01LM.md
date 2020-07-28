@@ -53,13 +53,13 @@ More detailed information about this can be found [here](https://community.hubit
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
-* `long_timeout`: The WXKG01LM only reports a button press and release.
-By default, Zigbee2mqtt publishes a long click when there is at
+* `hold_timeout`: The WXKG01LM only reports a button press and release.
+By default, Zigbee2mqtt publishes a `hold` action when there is at
 least 1000 ms between both events. It could be that due to
 delays in the network the release message is received late. This causes a single
-click to be identified as a long click. If you are experiencing this you can try
-experimenting with this option (e.g. `long_timeout: 2000`).
-
+click to be identified as a `hold` action. If you are experiencing this you can try
+experimenting with this option (e.g. `hold_timeout_expire: 2000`).
+* `hold_timeout_expire`: Sometimes it happens that the button does not send a release. To avoid problems Zigbee2mqtt expires the `hold` leading to no `release` being send. The default timeout is 4000 ms, you can increase it with this option.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
