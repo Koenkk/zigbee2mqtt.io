@@ -452,3 +452,9 @@ Sets `advanced` -> `elapsed` (persistent). Payload format is `{"value": VALUE}` 
 
 Sets `advanced` -> `log_level` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":"debug"}`, response: `{"data":{"value": "debug"},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
 </details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/config/homeassistant</summary>
+
+Enable or disable the Home Assistant integration on the fly (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":true}`, response: `{"data":{"value": "true"},"status":"ok"}`. Possible values are `true` or `false`.
+</details>
