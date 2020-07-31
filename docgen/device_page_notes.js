@@ -1464,7 +1464,7 @@ See [link](https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691
 ### Power outage memory
 This option allows the device to restore the last on/off state when it's reconnected to power.
 To set this option publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"power_outage_memory": true}\` (or \`false\`).
-Now toggle the plug/swich once with the button on it, from now on it will restore its state when reconnecting to power.
+Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
 `,
     },
     {
