@@ -1095,6 +1095,8 @@ The \`strength\` value, which is reported every 300 seconds after vibration is d
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
+
+You may have to unpair the switch from an existing coordinator before the pairing process will start.
 `,
     },
     {
@@ -1404,20 +1406,22 @@ Where:
 `,
     },
     {
-        model: ['QBKG03LM', 'QBKG04LM', 'QBKG12LM', 'QBKG11LM'],
+        model: ['QBKG03LM', 'QBKG04LM', 'QBKG12LM', 'QBKG11LM', 'QBKG21LM', 'QBKG22LM', 'QBKG25LM'],
         note: `
 ### Decoupled mode
 Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
 This might be useful to assign some custom actions to buttons and control relay remotely.
-This command also allows to redefine which button controls which relay for the double switch.
+This command also allows to redefine which button controls which relay for the double switch (not supported for QBKG25LM).
 
-Special topics should be used: \`zigbee2mqtt/[FRIENDLY_NAME]/system/set\` to modify operation mode.
+Topic \`zigbee2mqtt/[FRIENDLY_NAME]/system/set\` should be used to modify operation mode.
+
+**NOTE:** For QBKG25LM instead of \`system\` use \`left\`, \`center\` or \`right\` and leave out the \`button\` property in the payload.
 
 Payload:
 \`\`\`js
 {
   "operation_mode": {
-    "button": "single"|"left"|"right",
+    "button": "single"|"left"|"right", // Always use single for a single switch
     "state": "VALUE"
   }
 }
@@ -1425,9 +1429,9 @@ Payload:
 
 Values                | Description
 ----------------------|---------------------------------------------------------
-\`control_relay\`       | Button directly controls relay (for single switch)
-\`control_left_relay\`  | Button directly controls left relay (for double switch)
-\`control_right_relay\` | Button directly controls right relay (for double switch)
+\`control_relay\`       | Button directly controls relay (for single switch and QBKG25LM)
+\`control_left_relay\`  | Button directly controls left relay (for double switch, not supported for QBKG25LM)
+\`control_right_relay\` | Button directly controls right relay (for double switch, not supported for QBKG25LM)
 \`decoupled\`           | Button doesn't control any relay
 
 \`zigbee2mqtt/[FRIENDLY_NAME]/system/get\` to read current mode.
@@ -1436,15 +1440,12 @@ Payload:
 \`\`\`js
 {
   "operation_mode": {
-    "button": "single"|"left"|"right"
+    "button": "single"|"left"|"right" // Always use single for a single switch
   }
 }
 \`\`\`
 
-Response will be sent to \`zigbee2mqtt/[FRIENDLY_NAME]\`:
-\`\`\`json
-{"operation_mode_right":"control_right_relay"}
-\`\`\`
+Response will be sent to \`zigbee2mqtt/[FRIENDLY_NAME]\`, example: \`{"operation_mode_right":"control_right_relay"}\`
 `,
     },
     {
@@ -1458,12 +1459,20 @@ See [link](https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691
 `,
     },
     {
-        model: ['ZNCZ02LM', 'ZNCZ04LM', 'QBCZ11LM'],
+        model: ['ZNCZ02LM', 'ZNCZ04LM', 'QBCZ11LM', 'QBKG25LM'],
         note: `
 ### Power outage memory
 This option allows the device to restore the last on/off state when it's reconnected to power.
 To set this option publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"power_outage_memory": true}\` (or \`false\`).
-Now toggle the plug once with the button on it, from now on it will restore its state when reconnecting to power.
+Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
+`,
+    },
+    {
+        model: ['QBKG25LM'],
+        note: `
+### Do not disturb mode
+This option allows to turn off the indicator lights between 21:00 and 09:00.
+To set this option publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"do_not_disturb": true}\` (or \`false\`).
 `,
     },
     {
