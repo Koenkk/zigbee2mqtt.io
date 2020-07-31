@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG25LM via Zigbee2mqtt with whatever smart
 | Model | QBKG25LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 3 gang smart wall switch (no neutral wire) |
-| Supports | on/off, action |
+| Supports | on/off, action, power measurement |
 | Picture | ![Xiaomi QBKG25LM](../images/devices/QBKG25LM.jpg) |
 
 ## Notes
@@ -22,32 +22,58 @@ description: "Integrate your Xiaomi QBKG25LM via Zigbee2mqtt with whatever smart
 Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
 
-
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
-* `power_outage_memory`: Whether or not to preserve switch state during a power outage.
-* `do_not_disturb`: Turns off indicator lights between 9pm and 9am.
+You may have to unpair the switch from an existing coordinator before the pairing process will start.
 
 
 ### Decoupled mode
 Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
 This might be useful to assign some custom actions to buttons and control relay remotely.
-This command also allows to redefine which button controls which relay for the double switch.
+This command also allows to redefine which button controls which relay for the double switch (not supported for QBKG25LM).
 
-Special topics should be used: `zigbee2mqtt/[FRIENDLY_NAME]/left|center|right/set` to modify operation mode.
+Topic `zigbee2mqtt/[FRIENDLY_NAME]/system/set` should be used to modify operation mode.
+
+**NOTE:** For QBKG25LM instead of `system` use `left`, `center` or `right` and leave out the `button` property in the payload.
 
 Payload:
 ```js
 {
-  "operation_mode": "VALUE"
+  "operation_mode": {
+    "button": "single"|"left"|"right", // Always use single for a single switch
+    "state": "VALUE"
+  }
 }
 ```
 
 Values                | Description
 ----------------------|---------------------------------------------------------
-`control_relay`       | Button controls relay
+`control_relay`       | Button directly controls relay (for single switch and QBKG25LM)
+`control_left_relay`  | Button directly controls left relay (for double switch, not supported for QBKG25LM)
+`control_right_relay` | Button directly controls right relay (for double switch, not supported for QBKG25LM)
 `decoupled`           | Button doesn't control any relay
+
+`zigbee2mqtt/[FRIENDLY_NAME]/system/get` to read current mode.
+
+Payload:
+```js
+{
+  "operation_mode": {
+    "button": "single"|"left"|"right" // Always use single for a single switch
+  }
+}
+```
+
+Response will be sent to `zigbee2mqtt/[FRIENDLY_NAME]`, example: `{"operation_mode_right":"control_right_relay"}`
+
+
+### Power outage memory
+This option allows the device to restore the last on/off state when it's reconnected to power.
+To set this option publish to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"power_outage_memory": true}` (or `false`).
+Now toggle the plug/swich once with the button on it, from now on it will restore its state when reconnecting to power.
+
+
+### Do not disturb mode
+This option allows to turn off the indicator lights between 21:00 and 09:00.
+To set this option publish to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"do_not_disturb": true}` (or `false`).
 
 
 ## Manual Home Assistant configuration
@@ -90,6 +116,14 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "W"
+    icon: "mdi:flash"
+    value_template: "{{ value_json.power }}"
 
 sensor:
   - platform: "mqtt"
