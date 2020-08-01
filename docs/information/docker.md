@@ -1,10 +1,10 @@
 ---
 ---
 # Docker
-It is possible to run Zigbee2mqtt in a Docker container using the official [Zigbee2mqtt Docker image](https://hub.docker.com/r/koenkk/zigbee2mqtt/).
+It is possible to run Zigbee2MQTT in a Docker container using the official [Zigbee2MQTT Docker image](https://hub.docker.com/r/koenkk/zigbee2mqtt/).
 
 This image support the following architectures: `386`, `amd64`, `arm/v6`, `arm/v7`, `arm64`.
-Since zigbee2mqtt images are manifest listed, Docker will auto-detect the architecture and pull the right image.
+Since Zigbee2MQTT images are manifest listed, Docker will auto-detect the architecture and pull the right image.
 
 Note for Raspberry Pi 1 and zero users: there is a bug in Docker which selects the wrong image architecture.
 Before executing `docker run` pull the correct image with `docker pull koenkk/zigbee2mqtt --platform linux/arm/v6`.
@@ -26,10 +26,10 @@ docker run \
 ```
 
 ### Parameters explanation
-* `-v $(pwd)/data:/app/data`: Directory where Zigbee2mqtt stores it configuration
+* `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration
 * `--device=/dev/ttyACM0`: Location of adapter (e.g. CC2531)
 * `-v /run/udev:/run/udev:ro --privileged=true`: is optional, only required for autodetecting the port
-* Optional: in case your MQTT broker is running on `localhost` and is not within the same Docker network as the Zigbee2mqtt container also add `--network host \`.
+* Optional: in case your MQTT broker is running on `localhost` and is not within the same Docker network as the Zigbee2MQTT container also add `--network host \`.
 
 ## Updating
 To update to the latest Docker image:
@@ -295,7 +295,7 @@ The workaround is based on the solution found at [Add support for devices with "
 	sudo systemctl enable docker-event-listener.service
 	```
 
-6. Verify and deploy Zigbee2Mqtt stack
+6. Verify and deploy Zigbee2MQTT stack
 
 	Now reconnect the cc2531. Verify using the following command:
 
@@ -331,7 +331,7 @@ The workaround is based on the solution found at [Add support for devices with "
 	```
 	In the above example, `proxy_traefik-net` is the network to connect to the mqtt broker. The constraint makes sure Docker deploys only to this (`rpi-3`) node, where the cc2531 is connected to. The volume binding `/mnt/docker-cluster/zigbee2mqtt/data` is the zigbee2mqtt persistent directory, where `configuration.yaml` is saved.
 
-	The zigbee2mqtt `configuration.yaml` should point to `/dev/cc2531`:
+	The zigbee2Zigbee2MQTTmqtt `configuration.yaml` should point to `/dev/cc2531`:
 
 	```yaml
 	[...]

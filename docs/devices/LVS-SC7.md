@@ -1,6 +1,6 @@
 ---
 title: "LivingWise LVS-SC7 control via MQTT"
-description: "Integrate your LivingWise LVS-SC7 via Zigbee2mqtt with whatever smart home
+description: "Integrate your LivingWise LVS-SC7 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

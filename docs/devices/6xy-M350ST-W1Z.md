@@ -1,6 +1,6 @@
 ---
 title: "Leedarson 6xy-M350ST-W1Z control via MQTT"
-description: "Integrate your Leedarson 6xy-M350ST-W1Z via Zigbee2mqtt with whatever smart home
+description: "Integrate your Leedarson 6xy-M350ST-W1Z via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

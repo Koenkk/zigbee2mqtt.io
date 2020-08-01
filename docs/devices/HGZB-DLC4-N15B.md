@@ -1,6 +1,6 @@
 ---
 title: "Zemismart HGZB-DLC4-N15B control via MQTT"
-description: "Integrate your Zemismart HGZB-DLC4-N15B via Zigbee2mqtt with whatever smart home
+description: "Integrate your Zemismart HGZB-DLC4-N15B via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

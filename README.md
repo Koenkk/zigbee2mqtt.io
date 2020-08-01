@@ -1,5 +1,5 @@
-# Zigbee2mqtt.io
-This repository contains the Zigbee2mqtt documentation.
+# Zigbee2MQTT.io
+This repository contains the Zigbee2MQTT documentation.
 
 ## Running locally
 To run locally, execute the following commands:

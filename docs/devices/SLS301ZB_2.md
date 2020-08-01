@@ -1,6 +1,6 @@
 ---
 title: "Feibit SLS301ZB_2 control via MQTT"
-description: "Integrate your Feibit SLS301ZB_2 via Zigbee2mqtt with whatever smart home
+description: "Integrate your Feibit SLS301ZB_2 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

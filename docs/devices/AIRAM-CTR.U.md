@@ -1,6 +1,6 @@
 ---
 title: "Airam AIRAM-CTR.U control via MQTT"
-description: "Integrate your Airam AIRAM-CTR.U via Zigbee2mqtt with whatever smart home
+description: "Integrate your Airam AIRAM-CTR.U via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

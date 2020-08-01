@@ -1,6 +1,6 @@
 ---
 title: "eWeLink SA-003-Zigbee control via MQTT"
-description: "Integrate your eWeLink SA-003-Zigbee via Zigbee2mqtt with whatever smart home
+description: "Integrate your eWeLink SA-003-Zigbee via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

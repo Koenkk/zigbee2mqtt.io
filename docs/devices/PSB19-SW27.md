@@ -1,6 +1,6 @@
 ---
 title: "GE PSB19-SW27 control via MQTT"
-description: "Integrate your GE PSB19-SW27 via Zigbee2mqtt with whatever smart home
+description: "Integrate your GE PSB19-SW27 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

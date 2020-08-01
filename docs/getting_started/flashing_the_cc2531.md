@@ -46,12 +46,12 @@ sudo ./cc-tool -e -w CC2531ZNP-Prod.hex
 ```
 
 # How-to check the installed firmware version
-Zigbee2mqtt will output the installed firmware version to the Zigbee2mqtt log on startup:
+Zigbee2MQTT will output the installed firmware version to the Zigbee2MQTT log on startup:
 ```
-zigbee2mqtt:info  2019-11-09T13:01:14: Coordinator firmware version: '{"type":"zStack30x","meta":{"transportrev":2,"product":2,"majorrel":2,"minorrel":7,"maintrel":2,"revision":20190425}}'
+Zigbee2MQTT:info  2019-11-09T13:01:14: Coordinator firmware version: '{"type":"zStack30x","meta":{"transportrev":2,"product":2,"majorrel":2,"minorrel":7,"maintrel":2,"revision":20190425}}'
 ```
 
 In the above example the version is `20190425`.
 
 # What's next?
-[Running Zigbee2mqtt](running_zigbee2mqtt.md)
+[Running Zigbee2MQTT](running_zigbee2mqtt.md)

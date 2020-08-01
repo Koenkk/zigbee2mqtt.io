@@ -1,6 +1,6 @@
 ---
 title: "NET2GRID N2G-SP control via MQTT"
-description: "Integrate your NET2GRID N2G-SP via Zigbee2mqtt with whatever smart home
+description: "Integrate your NET2GRID N2G-SP via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

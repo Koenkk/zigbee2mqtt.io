@@ -1,6 +1,6 @@
 ---
 title: "GMY Smart Bulb B07KG5KF5R control via MQTT"
-description: "Integrate your GMY Smart Bulb B07KG5KF5R via Zigbee2mqtt with whatever smart home
+description: "Integrate your GMY Smart Bulb B07KG5KF5R via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

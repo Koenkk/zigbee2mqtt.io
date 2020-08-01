@@ -1,6 +1,6 @@
 ---
 title: "Innr OFL 120 C control via MQTT"
-description: "Integrate your Innr OFL 120 C via Zigbee2mqtt with whatever smart home
+description: "Integrate your Innr OFL 120 C via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

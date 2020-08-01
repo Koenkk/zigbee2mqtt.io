@@ -1,6 +1,6 @@
 ---
 title: "Hej GLSK6ZB-1715 control via MQTT"
-description: "Integrate your Hej GLSK6ZB-1715 via Zigbee2mqtt with whatever smart home
+description: "Integrate your Hej GLSK6ZB-1715 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi QBKG21LM control via MQTT"
-description: "Integrate your Xiaomi QBKG21LM via Zigbee2mqtt with whatever smart home
+description: "Integrate your Xiaomi QBKG21LM via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

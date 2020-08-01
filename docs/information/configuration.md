@@ -13,7 +13,7 @@ permit_join: true
 
 # Required: MQTT settings
 mqtt:
-  # Required: MQTT base topic for zigbee2mqtt MQTT messages
+  # Required: MQTT base topic for Zigbee2MQTT MQTT messages
   base_topic: zigbee2mqtt
   # Required: MQTT server URL (use mqtts:// for SSL/TLS connection)
   server: 'mqtt://localhost:1883'
@@ -99,7 +99,7 @@ advanced:
     facility: local0 # Syslog facility to use (Default: local0).
     localhost: localhost # Host to indicate that log messages are coming from (Default: localhost).
     type: 5424 # The type of the syslog protocol to use (Default: BSD, also valid: 5424).
-    app_name: zigbee2mqtt # The name of the application (Default: zigbee2mqtt).
+    app_name: Zigbee2MQTT # The name of the application (Default: Zigbee2MQTT).
     eol: '\n' # The end of line character to be added to the end of the message (Default: Message without modifications).
   # Optional: Baudrate for serial port (default: 115200 for Z-Stack, 38400 for Deconz)
   baudrate: 115200
@@ -235,7 +235,7 @@ The `configuration.yaml` allows to set device specific configuration. This can a
 * `retention`: Sets the MQTT Message Expiry in seconds e.g. `retention: 900` = 15 minutes (default: not enabled). Make sure to set `mqtt.version` to `5` (see `mqtt` configuration above)
 * `qos`: QoS level for MQTT messages of this device. [What is QoS?](https://www.npmjs.com/package/mqtt#about-qos)
 * `homeassistant`: Allows to override values of the Home Assistant discovery payload. See example below.
-* `debounce`: Debounces messages of this device. When setting e.g. `debounce: 1` and a message from a device is received, zigbee2mqtt will not immediately publish this message but combine it with other messages received in that same second of that device. This is handy for e.g. the `WSDCGQ11LM` which publishes humidity, temperature and pressure at the same time but as 3 different messages.
+* `debounce`: Debounces messages of this device. When setting e.g. `debounce: 1` and a message from a device is received, Zigbee2MQTT will not immediately publish this message but combine it with other messages received in that same second of that device. This is handy for e.g. the `WSDCGQ11LM` which publishes humidity, temperature and pressure at the same time but as 3 different messages.
 * `debounce_ignore` Protects unique payload values of specified payload properties from overriding within debounce time. When setting e.g. `debounce: 1` and `debounce_ignore: - action` every payload with unique `action` value will be published. This is handy for e.g. the `E1744` which publishes multiple messages in short time period after one turn and `debounce` option without `debounce_ignore` publishes only last payload with action `rotate_stop`. On the other hand `debounce: 1` with `debounce_ignore: - action` will publish all unique action messages, at least two (e.g. `action: rotate_left` and `action: rotate_stop`)
 * `retrieve_state`: Retrieves the state after setting it. Should only be enabled when the [reporting feature](../information/report.md) does not work for this device.
 * `filtered_attributes`: Allows to prevent certain attributes from being published. When a device would e.g. publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will publish `{"temperature": 10}`.

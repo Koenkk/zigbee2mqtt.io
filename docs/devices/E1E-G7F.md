@@ -1,6 +1,6 @@
 ---
 title: "Sengled E1E-G7F control via MQTT"
-description: "Integrate your Sengled E1E-G7F via Zigbee2mqtt with whatever smart home
+description: "Integrate your Sengled E1E-G7F via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

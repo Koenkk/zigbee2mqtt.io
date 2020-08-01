@@ -1,6 +1,6 @@
 ---
 title: "Konke 2AJZ4KPBS control via MQTT"
-description: "Integrate your Konke 2AJZ4KPBS via Zigbee2mqtt with whatever smart home
+description: "Integrate your Konke 2AJZ4KPBS via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

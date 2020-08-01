@@ -1,6 +1,6 @@
 ---
 title: "ORVIBO W40CZ control via MQTT"
-description: "Integrate your ORVIBO W40CZ via Zigbee2mqtt with whatever smart home
+description: "Integrate your ORVIBO W40CZ via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

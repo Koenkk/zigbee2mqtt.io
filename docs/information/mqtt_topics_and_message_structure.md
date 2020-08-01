@@ -2,18 +2,18 @@
 ---
 # MQTT topics and message structure
 
-This page describes which MQTT topics are used by Zigbee2mqtt. Note that the base topic (by default `zigbee2mqtt`) is configurable in the [Zigbee2mqtt `configuration.yaml`](../information/configuration.md).
+This page describes which MQTT topics are used by Zigbee2MQTT. Note that the base topic (by default `zigbee2mqtt`) is configurable in the [Zigbee2MQTT `configuration.yaml`](../information/configuration.md).
 
 ## zigbee2mqtt/bridge/state
-zigbee2mqtt publishes the bridge state to this topic. Possible message are:
+Zigbee2MQTT publishes the bridge state to this topic. Possible message are:
 * `"online"`: published when the bridge is running (on startup)
 * `"offline"`: published right before the bridge stops
 
 ## zigbee2mqtt/bridge/config
-zigbee2mqtt publishes it configuration to this topic containing the `log_level` and `permit_join`.
+Zigbee2MQTT publishes it configuration to this topic containing the `log_level` and `permit_join`.
 
 ## zigbee2mqtt/bridge/log
-zigbee2mqtt will output log to this endpoint. Message are always in the form of `{"type":"TYPE","message":"MESSAGE"}`. Possible message types are:
+Zigbee2MQTT will output log to this endpoint. Message are always in the form of `{"type":"TYPE","message":"MESSAGE"}`. Possible message types are:
 * `"pairing"`: logged when device is connecting to the network.
 * `"device_connected"`: sent when a new device connects to the network.
 * `"device_ban"`: sent when a device is banned from the network.
@@ -87,18 +87,18 @@ Allows you to remove devices from the network. Payload should be the `friendly_n
 Note that in Zigbee the coordinator can only **request** a device to remove itself from the network.
 Which means that in case a device refuses to respond to this request it is not removed from the network.
 This can happen for e.g. battery powered devices which are sleeping and thus not receiving this request.
-In this case you will see the following in the zigbee2mqtt log:
+In this case you will see the following in the Zigbee2MQTT log:
 
 ```
-zigbee2mqtt:info  2019-11-03T13:39:30: Removing 'dimmer'
-zigbee2mqtt:error 2019-11-03T13:39:40: Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)
+Zigbee2MQTT:info  2019-11-03T13:39:30: Removing 'dimmer'
+Zigbee2MQTT:error 2019-11-03T13:39:40: Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)
 ```
 
 An alternative way to remove the device is by factory resetting it, this probably won't work for all devices as it depends on the device itself.
 In case the device did remove itself from the network, you will see:
 
 ```
-zigbee2mqtt:warn  2019-11-03T13:36:18: Device '0x00158d00024a5e57' left the network
+Zigbee2MQTT:warn  2019-11-03T13:36:18: Device '0x00158d00024a5e57' left the network
 ```
 
 In case all of the above fails, you can force remove a device. Note that a force remove will **only** remove the device from the database. Until this device is factory reset, it will still hold the network encryption key and thus is still able to communicate over the network!
@@ -130,7 +130,7 @@ In case group removal fails because on of the devices cannot be removed from the
 ## zigbee2mqtt/bridge/networkmap
 **WARNING: During the networkmap scan your network will be not/less responsive. Depending on the size of your network this can take somewhere between 10 seconds and 2 minutes. Therefore it is recommended to only trigger these scans manually!**
 
-Allows you to retrieve a map of your zigbee network. Possible payloads are `raw`, `graphviz`, and `plantuml`. Zigbee2mqtt will send the networkmap to topic `zigbee2mqtt/bridge/networkmap/[raw|graphviz|plantuml]`. <br /> Use [webgraphviz.com](http://www.webgraphviz.com/) (for `graphviz`), [planttext.com](https://www.planttext.com/) (for `plantuml`), or other tools to generate the Network Graph. <br /> **NOTE:** zigbee2mqtt 1.2.1+ required.
+Allows you to retrieve a map of your zigbee network. Possible payloads are `raw`, `graphviz`, and `plantuml`. Zigbee2MQTT will send the networkmap to topic `zigbee2mqtt/bridge/networkmap/[raw|graphviz|plantuml]`. <br /> Use [webgraphviz.com](http://www.webgraphviz.com/) (for `graphviz`), [planttext.com](https://www.planttext.com/) (for `plantuml`), or other tools to generate the Network Graph. <br /> **NOTE:** Zigbee2MQTT 1.2.1+ required.
 
 To request a networkmap with **routes** use `zigbee2mqtt/bridge/networkmap/routes` as topic.
 

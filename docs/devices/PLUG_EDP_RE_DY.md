@@ -1,6 +1,6 @@
 ---
 title: "EDP PLUG EDP RE:DY control via MQTT"
-description: "Integrate your EDP PLUG EDP RE:DY via Zigbee2mqtt with whatever smart home
+description: "Integrate your EDP PLUG EDP RE:DY via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

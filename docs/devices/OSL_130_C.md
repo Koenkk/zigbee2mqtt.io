@@ -1,6 +1,6 @@
 ---
 title: "Innr OSL 130 C control via MQTT"
-description: "Integrate your Innr OSL 130 C via Zigbee2mqtt with whatever smart home
+description: "Integrate your Innr OSL 130 C via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

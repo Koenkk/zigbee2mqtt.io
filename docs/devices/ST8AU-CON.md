@@ -1,6 +1,6 @@
 ---
 title: "OSRAM ST8AU-CON control via MQTT"
-description: "Integrate your OSRAM ST8AU-CON via Zigbee2mqtt with whatever smart home
+description: "Integrate your OSRAM ST8AU-CON via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

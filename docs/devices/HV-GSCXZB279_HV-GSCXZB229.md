@@ -1,6 +1,6 @@
 ---
 title: "Hive HV-GSCXZB279_HV-GSCXZB229 control via MQTT"
-description: "Integrate your Hive HV-GSCXZB279_HV-GSCXZB229 via Zigbee2mqtt with whatever smart home
+description: "Integrate your Hive HV-GSCXZB279_HV-GSCXZB229 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

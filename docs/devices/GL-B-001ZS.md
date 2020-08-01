@@ -1,6 +1,6 @@
 ---
 title: "Gledopto GL-B-001ZS control via MQTT"
-description: "Integrate your Gledopto GL-B-001ZS via Zigbee2mqtt with whatever smart home
+description: "Integrate your Gledopto GL-B-001ZS via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

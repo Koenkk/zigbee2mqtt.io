@@ -1,6 +1,6 @@
 ---
 title: "Shenzhen Homa HLC614-ZLL control via MQTT"
-description: "Integrate your Shenzhen Homa HLC614-ZLL via Zigbee2mqtt with whatever smart home
+description: "Integrate your Shenzhen Homa HLC614-ZLL via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

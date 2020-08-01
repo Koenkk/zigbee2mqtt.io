@@ -1,6 +1,6 @@
 ---
 title: "ORVIBO CR11S8UZ control via MQTT"
-description: "Integrate your ORVIBO CR11S8UZ via Zigbee2mqtt with whatever smart home
+description: "Integrate your ORVIBO CR11S8UZ via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

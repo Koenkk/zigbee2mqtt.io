@@ -9,7 +9,7 @@ To disable joining it's important that `permit_join: false` is set in your `conf
 ## Change Zigbee network encryption key
 **Changing the network key requires repairing of all devices!**
 
-Zigbee2mqtt uses a known default encryption key (Zigbee Transport Key). Therefore it is recommended to use a different one. To use a different encryption key add the following to your `configuration.yaml`:
+Zigbee2MQTT uses a known default encryption key (Zigbee Transport Key). Therefore it is recommended to use a different one. To use a different encryption key add the following to your `configuration.yaml`:
 
 **Do not use this exact key.**
 ```yaml
@@ -21,7 +21,7 @@ The network encryption key size is `128-bit` which is essentially 16 decimal val
 
 If you need to transform your decimals to hexadecimals (or vice versa) please use a [converter](https://www.binaryhexconverter.com/decimal-to-hex-converter). Example: 92 (decimal) would become 5C (hexadecimal).
 
-To let Zigbee2mqtt generate a new network key on next startup, add the following to `configuration.yaml`:
+To let Zigbee2MQTT generate a new network key on next startup, add the following to `configuration.yaml`:
 ```yaml
 advanced:
   network_key: GENERATE

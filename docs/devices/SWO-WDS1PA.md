@@ -1,6 +1,6 @@
 ---
 title: "Swann SWO-WDS1PA control via MQTT"
-description: "Integrate your Swann SWO-WDS1PA via Zigbee2mqtt with whatever smart home
+description: "Integrate your Swann SWO-WDS1PA via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "LifeControl MCLH-03 control via MQTT"
-description: "Integrate your LifeControl MCLH-03 via Zigbee2mqtt with whatever smart home
+description: "Integrate your LifeControl MCLH-03 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

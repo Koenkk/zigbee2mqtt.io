@@ -1,6 +1,6 @@
 ---
 title: "Sengled E11-N1EA control via MQTT"
-description: "Integrate your Sengled E11-N1EA via Zigbee2mqtt with whatever smart home
+description: "Integrate your Sengled E11-N1EA via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
