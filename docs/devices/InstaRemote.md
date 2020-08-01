@@ -1,6 +1,6 @@
 ---
 title: "Insta InstaRemote control via MQTT"
-description: "Integrate your Insta InstaRemote via Zigbee2mqtt with whatever smart home
+description: "Integrate your Insta InstaRemote via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

@@ -1,6 +1,6 @@
 {
   "name": "zigbee2mqtt.io",
-  "description": "Zigbee2mqtt documentation",
+  "description": "Zigbee2MQTT documentation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Koenkk/zigbee2mqtt.io.git"

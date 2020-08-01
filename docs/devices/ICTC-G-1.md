@@ -1,6 +1,6 @@
 ---
 title: "IKEA ICTC-G-1 control via MQTT"
-description: "Integrate your IKEA ICTC-G-1 via Zigbee2mqtt with whatever smart home
+description: "Integrate your IKEA ICTC-G-1 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -24,7 +24,7 @@ To factory reset the TRADFRI wireless dimmer (ICTC-G-1) press the button
 After the blinks you might be willing to rotate the dimmer
 like you are trying to control your lights. It will prevent the device
 from going to sleep and ensure successful pairing. In case the dimmer was
-recognized but no actions seems to be detected, try to restart the zigbee2mqtt.
+recognized but no actions seems to be detected, try to restart Zigbee2MQTT.
 See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koenkk/zigbee2mqtt/issues/620).
 
 

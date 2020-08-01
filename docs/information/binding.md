@@ -3,12 +3,12 @@
 # Binding
 *Ongoing discussion about this feature can be found here: <https://github.com/Koenkk/zigbee2mqtt/issues/782>*
 
-Zigbee has support for binding which makes it possible that devices can directly control each other without the intervention of Zigbee2mqtt or any home automation software.
+Zigbee has support for binding which makes it possible that devices can directly control each other without the intervention of Zigbee2MQTT or any home automation software.
 
 ## When to use this
 A use case for this is e.g. the TRADFRI wireless dimmer. Binding the dimmer directly to a bulb or group has the following advantages:
 - Smoothness; this will greatly improve the dimming feedback as the dimmer directly dims the bulb and thus does not have to make the MQTT/home automation software roundtrip.
-- It will work even when home automation software, zigbee2mqtt or the coordinator is down.
+- It will work even when home automation software, Zigbee2MQTT or the coordinator is down.
 
 ## Commands
 Binding can be configured by using either `zigbee2mqtt/bridge/request/device/bind` to bind and `zigbee2mqtt/bridge/request/device/unbind` to unbind. The payload should be `{"from": SOURCE, "to": TARGET}` where `SOURCE` and `TARGET` can be the `friendly_name` of a group or device. Example request payload: `{"from": "my_remote", "to": "my_bulb"}`, example response payload: `{"data":{"from":"my_remote","to":"my_bulb","clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`. The `clusters` in the response indicate the bound/unbound clusters, `failed` indicates any failed to bind/unbind clusters. In case all clusters fail to bind the `status` is set to `error`.
@@ -25,7 +25,7 @@ In the above example, the TRADFRI wireless dimmer would be the `SOURCE` device a
 By default, the first endpoint is taken. In case your device has multiple endpoints, e.g. `left` and `right`. You can specify `SOURCE` or `TARGET` as e.g. `my_switch/right` to bind/unbind the `right` endpoint.
 
 ### Binding a remote to a group
-Binding a remote to a group allows a remote to directly control a group of devices without intervention of Zigbee2mqtt.
+Binding a remote to a group allows a remote to directly control a group of devices without intervention of Zigbee2MQTT.
 
 When we for example have an IKEA E1743 remote called `my_remote` and two bulbs called `bulb_1` and `bulb_2`, we can control the 2 bulbs with the remote by putting them in the same group and binding the remote to it.
 

@@ -9,7 +9,7 @@ You need to re-pair all you devices when:
 
 ## Doesn't require repairing
 You **don't** need to re-pair your devices when:
-- Updating or downgrading Zigbee2mqtt to a different version.
+- Updating or downgrading Zigbee2MQTT to a different version.
 - Updating the coordinator (CC2530/CC2531 stick) firmware.
   - This is only applicable when flashing firmware version `20190215` or later. It doesn't matter from which firmware version you come from.
   - If after flashing you fail to control your devices it helps to:
@@ -22,5 +22,5 @@ You **don't** need to re-pair your devices when:
         pan_id: 0x1a63
     ```
 - Switching from CC2530/CC2531 device (physically).
-- Switching the system running Zigbee2mqtt.
+- Switching the system running Zigbee2MQTT.
     - When doing this, make sure to copy over the contents of the `data` directory.

@@ -1,6 +1,6 @@
 ---
 title: "TERNCY TERNCY-SD01 control via MQTT"
-description: "Integrate your TERNCY TERNCY-SD01 via Zigbee2mqtt with whatever smart home
+description: "Integrate your TERNCY TERNCY-SD01 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

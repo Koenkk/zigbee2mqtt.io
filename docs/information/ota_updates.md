@@ -14,7 +14,7 @@ Not all manufacturers make their updates available, therefore only the following
 - Jung ZLLxx5004M (Gira does unfortunately not seem to offer firmware updates for their almost identical 2430-100 devices and the update file for the Jung ZLLxx5004M does not seem to work for Gira)
 - Sengled devices
 
-Zigbee2mqtt automatically checks if updates are available for your devices.
+Zigbee2MQTT automatically checks if updates are available for your devices.
 In case an update is available it will publish `zigbee2mqtt/[DEVICE_FRIENLDY_NAME]` payload `{"update_available": true}`.
 
 ## Check if an update is available

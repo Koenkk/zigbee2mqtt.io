@@ -24,7 +24,7 @@ To factory reset the TRADFRI wireless dimmer (ICTC-G-1) press the button
 After the blinks you might be willing to rotate the dimmer
 like you are trying to control your lights. It will prevent the device
 from going to sleep and ensure successful pairing. In case the dimmer was
-recognized but no actions seems to be detected, try to restart the zigbee2mqtt.
+recognized but no actions seems to be detected, try to restart Zigbee2MQTT.
 See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koenkk/zigbee2mqtt/issues/620).
 `,
     },
@@ -72,7 +72,7 @@ To enable _time_ you need to send a _blank_ message to the following MQTT topic:
 \`\`\`
 zigbee2mqtt/<FRIENDLY_NAME>/set/thermostat_time
 \`\`\`
-Everytime the above message is sent, Zigbee2mqtt will calculate the current time and send it to the thermostat.
+Everytime the above message is sent, Zigbee2MQTT will calculate the current time and send it to the thermostat.
 `,
     },
     {
@@ -156,7 +156,7 @@ Long press reset button for 5s until the LED indicator flashes three times, whic
         model: ['SNZB-03'],
         note: `
 ### Pairing
-If brand new, when powered on it will attempt to pair to Zigbee2mqtt automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the  button on the top for about 5 seconds until the light flashes several times. The device will then go into pairing mode  It should then be connected to Zigbee2mqtt. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
+If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the  button on the top for about 5 seconds until the light flashes several times. The device will then go into pairing mode  It should then be connected to Zigbee2MQTT. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
 `,
     },
     {
@@ -188,8 +188,8 @@ The connected load, and the red LED indicator behind the dimmer knob will flash 
         note: `
 ### General
 The ubisys C4 remote control unit seems to be primarily targeted to be directly bound to other ZigBee devices to control them. Therefore it does not emit plain "click" events or similar but can be configured to send ZigBee commands like on, off, toggle, cover up, cover down etc. from up to 6 endpoints (4 with on/off, level and scene clusters for lights and another 2 to control window covering devices).
-When used with Zigbee2mqtt all endpoints get bound to the coordinator automatically. Therefore all actions will be sent to the coordinator and forwarded to MQTT in addition to being sent directly via ZigBee to other devices that have potentially been bound manually (see [Binding](../information/binding.html) for more information).
-In it's factory reset configuration an ubisys C4 just sends a toggle command (originating from endpoints 1 to 4 respectively) for each input. Therefore basic keypresses on attached momentary switches can be processed through Zigbee2mqtt even without further input configuration.
+When used with Zigbee2MQTT all endpoints get bound to the coordinator automatically. Therefore all actions will be sent to the coordinator and forwarded to MQTT in addition to being sent directly via ZigBee to other devices that have potentially been bound manually (see [Binding](../information/binding.html) for more information).
+In it's factory reset configuration an ubisys C4 just sends a toggle command (originating from endpoints 1 to 4 respectively) for each input. Therefore basic keypresses on attached momentary switches can be processed through Zigbee2MQTT even without further input configuration.
 
 
 ### Configuring Inputs
@@ -213,7 +213,7 @@ chapter "7.8.5. Device Setup Cluster (Server)" and the "ZigBee Device Physical I
 Please note that there seems to be a size limit on the amount of data that can successfullly be written to \`inputActions\`, so not all configurations theoretically possbile might work in reality.
 
 By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/get/configure_device_setup\` the values of the configuration attributes can
-also be read back from the device and be printed to the normal zigbee2mqtt log.
+also be read back from the device and be printed to the normal Zigbee2MQTT log.
 `,
     },
     {
@@ -278,7 +278,7 @@ Switch the lamp on five times until the bulb blinks several times.
         model: 'E1525/E1745',
         note: `
 ### Pairing
-Pair the sensor to Zigbee2mqtt by pressing the pair button 4 times in a row.
+Pair the sensor to Zigbee2MQTT by pressing the pair button 4 times in a row.
 The red light on the front side should flash a few times and the turn off.
 After a few seconds it turns back on and pulsate. When connected, the light turns off.
 
@@ -290,7 +290,7 @@ The E1745 can be bound to groups using [binding](../information/binding).
         model: 'E1743',
         note: `
 ### Pairing
-Pair the switch to Zigbee2mqtt by pressing the pair button (found under the back cover next to the battery)
+Pair the switch to Zigbee2MQTT by pressing the pair button (found under the back cover next to the battery)
 4 times in a row. The red light on the front side should flash a few times and the turn off
 (it's more visible to see the light from the back). After a few seconds it turns back on and pulsate.
 When connected, the light turns off.
@@ -330,7 +330,7 @@ otherwise device will fall asleep before it gets fully configured and will not s
         note: `
 ### Pairing
 Additional steps are required because the Peanut Smart Plug does not provide a \`modelId\` in its database entry,
-and thus zigbee2mqtt cannot identify the product or how to handle it.
+and thus Zigbee2MQTT cannot identify the product or how to handle it.
 
 Reset the device and initiate pairing mode by holding the pairing button
 (the small button next to the on/off button) for ten seconds, releasing the button,
@@ -338,7 +338,7 @@ and unplugging the device.
 When plugged back in, the front LED will be blinking red and ready to receive a pairing request.
 When paired successfully, the red LED on the plug will stop blinking.
 
-After pairing, you must stop zigbee2mqtt and manually edit the zigbee2mqtt \`database.db\` file with a
+After pairing, you must stop Zigbee2MQTT and manually edit the Zigbee2MQTT \`database.db\` file with a
 text editor (note that the file may be owned by root).
 Find each line where the Peanut Smart Plug is listed (look for "SecuriFi Ltd." in the \`ManufName\` field)
 and **add** \`"modelId":"PP-WHT-US",\` between two existing fields.
@@ -347,7 +347,7 @@ and **add** \`"modelId":"PP-WHT-US",\` between two existing fields.
 to \`..."manufId":4098,"modelId":"PP-WHT-US","manufName":"Securifi Ltd....\`
 on each line for the device.
 
-Save the file and restart zigbee2mqtt.
+Save the file and restart Zigbee2MQTT.
 `,
     },
     {
@@ -626,11 +626,11 @@ If actions (e.g. applying zigbee2mqtt/bridge/request/device/remove to a dimmer) 
 
 #### Device announces itself but the buttons don't work
 
-The dimmer appears to be working normally and the logs in zigbee2mqtt look good. However, nothing happens when a button is pressed (no light, no log message in zigbee2mqtt). In this case:
+The dimmer appears to be working normally and the logs in Zigbee2MQTT look good. However, nothing happens when a button is pressed (no light, no log message in Zigbee2MQTT). In this case:
 
 - Reset the device
 - Use zigbee2mqtt/bridge/request/device/remove to remove the device from the network (this should result in a "left the network" log message)
-- Allow joining of new devices in zigbee2mqtt
+- Allow joining of new devices in Zigbee2MQTT
 - Reset the device again
 - Wait for it to pair again. The device should now be operational.
 `,
@@ -665,7 +665,7 @@ After that the remote should show up as a paired device.
         model: ['E1524/E1810'],
         note: `
 ### Pairing
-Pair the remote to Zigbee2mqtt by holding it close to the coordinator and
+Pair the remote to Zigbee2MQTT by holding it close to the coordinator and
 pressing the inside button, next to the CR2032 battery, 4 times.
 The red light on the (front of the) remote will now flash a few times.
 
@@ -767,7 +767,7 @@ This device with old firmware < 2.3.014 does not support binding (limitation of 
 get the group ID where the remote is sending it's commands to and add bulbs to the
 same group ([discussion](https://github.com/Koenkk/zigbee2mqtt/issues/782#issuecomment-514526256)).
 
-1. Pair the IKEA TRADFRI remote control to Zigbee2mqtt.
+1. Pair the IKEA TRADFRI remote control to Zigbee2MQTT.
 2. Enable debug logging (log_level: debug) ([documentation](../information/configuration.md)).
 3. You will get log output like this: \`10/3/2019, 9:28:02 AM - debug: Received Zigbee message from '0x90fd9ffffe90d778'
 of type 'commandToggle' with data '{}' from endpoint 1 with groupID 57173\`.
@@ -817,7 +817,7 @@ While pairing the LED is flashing/dimming slowly. Once the pairing is finished, 
         model: ['BASICZBR3'],
         note: `
 ### Pairing
-If brand new, when powered on it will attempt to pair to Zigbee2mqtt automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the (relay) button on the top for about 5 seconds until the relay clicks and the red LED flashes several times. The device will then go into pairing mode and the blue LED will begin to flash. When connected, the blue LED will turn on solid. It should then be connected to Zigbee2mqtt. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
+If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the (relay) button on the top for about 5 seconds until the relay clicks and the red LED flashes several times. The device will then go into pairing mode and the blue LED will begin to flash. When connected, the blue LED will turn on solid. It should then be connected to Zigbee2MQTT. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
 `,
     },
     {
@@ -948,7 +948,7 @@ This device is older and seems to be similar to the netvox Z711 (and others).
 
 #### Joining the Network
 1. Remove battery from device
-2. Enable permit-join on Zigbee2mqtt
+2. Enable permit-join on Zigbee2MQTT
 3. Re-install battery in the device
  * The LED will flash 5 times to indicate success (no flashing means not successful)
 4. After successfully joining, press and hold the only button for 3 seconds to broadcast the binding request.
@@ -999,7 +999,7 @@ After this the device will automatically join.
 Now the device should showup.
 
 ### Extended hue
-The device gives extended hue values. Zigbee2mqtt calculates also the normal hue and provides both via mqtt.
+The device gives extended hue values. Zigbee2MQTT calculates also the normal hue and provides both via mqtt.
 - hue = extendedhue * 360 / 65536 % 360
 `,
     },
@@ -1175,7 +1175,7 @@ When set to \`0\` no \`occupancy: false\` is send.
 *[How to use device type specific configuration](../information/configuration.md)*
 
 * \`long_timeout\`: The WXKG01LM only reports a button press and release.
-By default, Zigbee2mqtt publishes a long click when there is at
+By default, Zigbee2MQTT publishes a long click when there is at
 least 1000 ms between both events. It could be that due to
 delays in the network the release message is received late. This causes a single
 click to be identified as a long click. If you are experiencing this you can try
@@ -1311,7 +1311,7 @@ The sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/se
 \`{"sensitivity": "SENSITIVITY"}\` where \`SENSITIVITY\` is one of the following
 values: \`low\`, \`medium\`,  \`high\`.
 
-After setting the sensitivity you immediately have to start pressing the reset button with an interval of 1 second until you see Zigbee2mqtt publishing the new sensitivity to MQTT.
+After setting the sensitivity you immediately have to start pressing the reset button with an interval of 1 second until you see Zigbee2MQTT publishing the new sensitivity to MQTT.
 `,
     },
     {
@@ -1718,7 +1718,7 @@ As an alternative to the attributes listed above, the following properties may b
 * \`steps_per_second\`: factor to be used for conversion, defaults to 50 full AC waves per second if not provided
 
 By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/get/configure_j1\` the values of the configuration attributes can
-also be read back from the device and be printed to the normal zigbee2mqtt log.
+also be read back from the device and be printed to the normal Zigbee2MQTT log.
 
 ### Calibration
 By publishing \`{"configure_j1": {"calibrate": 1}}\` to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` the device can also be
@@ -1735,7 +1735,7 @@ for example:
 }
 \`\`\`
 The calibration procedure will move the shutter up and down several times and the current stage of the
-calibration process will again be logged to the normal zigbee2mqtt log for the user to get some feedback.
+calibration process will again be logged to the normal Zigbee2MQTT log for the user to get some feedback.
 For details on the calibration procedure please again take a look at
 the [ubisys J1 technical reference manual](https://www.ubisys.de/wp-content/uploads/ubisys-j1-technical-reference.pdf),
 chapter "7.2.5.1. Calibration".
@@ -1959,10 +1959,10 @@ This method should work for Philips Hue bulbs, IKEA TRADFRI bulbs, GE Link bulbs
         note: `
 ### Pairing
 
-Press the side button of the device with a paper clip for more than 2 seconds. The main button led will flash. Then make sure the device is awake during pairing phase or the configuration may fail. To ensure device is awake press the main button every 2 seconds until configuration is done in zigbee2mqtt logs.
+Press the side button of the device with a paper clip for more than 2 seconds. The main button led will flash. Then make sure the device is awake during pairing phase or the configuration may fail. To ensure device is awake press the main button every 2 seconds until configuration is done in Zigbee2MQTT logs.
 
 ### Important
-There are 3 versions of this device: Standalone, Zigbee and Z-wave. These are visualy identical. Make sure to get the correct version that will work with zigbee2mqtt:
+There are 3 versions of this device: Standalone, Zigbee and Z-wave. These are visualy identical. Make sure to get the correct version that will work with Zigbee2MQTT:
 
 Supported:
 - **HS1SA-M : Zigbee**
@@ -2302,7 +2302,7 @@ If you get a warning that the model is undefined, which might happen after remov
 - open cover (push clip on bottom and push front side to slide open)
 - insert batteries (\`--\` should be on the display)
 - press the button on the top (\`--\` + \`((•))\` should be on the display)
-- wait for the device to pair, it took about 2 minutes for me to get the success message in zigbee2mqtt
+- wait for the device to pair, it took about 2 minutes for me to get the success message in Zigbee2MQTT
 - install the TRV on the adaptor (push hard until you feel a click, rotate the TRV until display faces up)
 - press the button on the top for 3 seconds (motor will turn, \`21°\` + \`((•))\` should be on the display)
 - close the cover

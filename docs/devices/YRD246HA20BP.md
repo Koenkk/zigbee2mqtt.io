@@ -1,6 +1,6 @@
 ---
 title: "Yale YRD246HA20BP control via MQTT"
-description: "Integrate your Yale YRD246HA20BP via Zigbee2mqtt with whatever smart home
+description: "Integrate your Yale YRD246HA20BP via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Dawon DNS PM-B430-ZB control via MQTT"
-description: "Integrate your Dawon DNS PM-B430-ZB via Zigbee2mqtt with whatever smart home
+description: "Integrate your Dawon DNS PM-B430-ZB via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

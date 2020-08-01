@@ -1,6 +1,6 @@
 ---
 title: "ORVIBO SM10ZW control via MQTT"
-description: "Integrate your ORVIBO SM10ZW via Zigbee2mqtt with whatever smart home
+description: "Integrate your ORVIBO SM10ZW via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

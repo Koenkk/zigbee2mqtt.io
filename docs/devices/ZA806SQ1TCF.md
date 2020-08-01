@@ -1,6 +1,6 @@
 ---
 title: "Leedarson ZA806SQ1TCF control via MQTT"
-description: "Integrate your Leedarson ZA806SQ1TCF via Zigbee2mqtt with whatever smart home
+description: "Integrate your Leedarson ZA806SQ1TCF via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

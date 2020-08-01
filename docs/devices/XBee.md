@@ -1,6 +1,6 @@
 ---
 title: "Digi XBee control via MQTT"
-description: "Integrate your Digi XBee via Zigbee2mqtt with whatever smart home
+description: "Integrate your Digi XBee via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

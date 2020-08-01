@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi WXKG03LM control via MQTT"
-description: "Integrate your Xiaomi WXKG03LM via Zigbee2mqtt with whatever smart home
+description: "Integrate your Xiaomi WXKG03LM via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

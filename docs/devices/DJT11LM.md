@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi DJT11LM control via MQTT"
-description: "Integrate your Xiaomi DJT11LM via Zigbee2mqtt with whatever smart home
+description: "Integrate your Xiaomi DJT11LM via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -43,7 +43,7 @@ The sensitivity can be changed by publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set
 `{"sensitivity": "SENSITIVITY"}` where `SENSITIVITY` is one of the following
 values: `low`, `medium`,  `high`.
 
-After setting the sensitivity you immediately have to start pressing the reset button with an interval of 1 second until you see Zigbee2mqtt publishing the new sensitivity to MQTT.
+After setting the sensitivity you immediately have to start pressing the reset button with an interval of 1 second until you see Zigbee2MQTT publishing the new sensitivity to MQTT.
 
 
 ## Manual Home Assistant configuration

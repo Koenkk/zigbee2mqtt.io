@@ -2,7 +2,7 @@
 ---
 # MQTT topics and message structure
 
-This page describes which MQTT topics are used by Zigbee2mqtt. Note that the base topic (by default `zigbee2mqtt`) is configurable in the [Zigbee2mqtt `configuration.yaml`](../information/configuration.md).
+This page describes which MQTT topics are used by Zigbee2MQTT. Note that the base topic (by default `zigbee2mqtt`) is configurable in the [Zigbee2mqtt `configuration.yaml`](../information/configuration.md).
 
 ## zigbee2mqtt/[FRIENDLY_NAME]
 Where `[FRIENDLY_NAME]` is e.g. `0x00158d0001b79111`. Message published to this topic are **always** in a JSON format. Each device produces a different JSON message, **some** examples:
@@ -280,11 +280,11 @@ Events will be published to this topic. Possible types are `device_joined`, `dev
 - `{"type":"device_leave","data":{"ieee_address":"0x90fd9ffffe6494fc"}}`
 
 ## zigbee2mqtt/bridge/request/+
-This can be used to e.g. configure certain settings like allowing new devices to join. Zigbee2mqtt will always respond with the same topic on `zigbee2mqtt/bridge/response/+`. The response payload will at least contain a `status` and `data` property, `status` is either `ok` or `error`. If `status` is `error` it will also contain an `error` property containing a description of the error.
+This can be used to e.g. configure certain settings like allowing new devices to join. Zigbee2MQTT will always respond with the same topic on `zigbee2mqtt/bridge/response/+`. The response payload will at least contain a `status` and `data` property, `status` is either `ok` or `error`. If `status` is `error` it will also contain an `error` property containing a description of the error.
 
-Example: when publishing `zigbee2mqtt/bridge/request/permit_join` with payload `{"value": true}` Zigbee2mqtt will respond to `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"value":true},"status":"ok"}`. In case this request failed the response will be `{"data":{}, "error": "Failed to connect to adapter","status":"error"}`.
+Example: when publishing `zigbee2mqtt/bridge/request/permit_join` with payload `{"value": true}` Zigbee2MQTT will respond to `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"value":true},"status":"ok"}`. In case this request failed the response will be `{"data":{}, "error": "Failed to connect to adapter","status":"error"}`.
 
-Optionally, a `transaction` property can be included in the request. This allows to easily match requests with responses. When a `transaction` property is included Zigbee2mqtt will include it in the response. Example: `zigbee2mqtt/bridge/request/permit_join` with payload `{"value": true, "transaction":23}` will be responded to on `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"value":true},"status":"ok","transaction":23}`
+Optionally, a `transaction` property can be included in the request. This allows to easily match requests with responses. When a `transaction` property is included Zigbee2MQTT will include it in the response. Example: `zigbee2mqtt/bridge/request/permit_join` with payload `{"value": true, "transaction":23}` will be responded to on `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"value":true},"status":"ok","transaction":23}`
 
 ### Possible requests
 
@@ -304,7 +304,7 @@ See [Touchlink](./touchlink.md).
 <details>
 <summary>zigbee2mqtt/bridge/request/health_check</summary>
 
-Allows to check wether Zigbee2mqtt is healthy. Payload has to be empty, example response: `{"data":{"healthy":true},"status":"ok"}`.
+Allows to check wether Zigbee2MQTT is healthy. Payload has to be empty, example response: `{"data":{"healthy":true},"status":"ok"}`.
 </details>
 
 <details>
@@ -343,7 +343,7 @@ In case the device did remove itself from the network, you will get a `device_le
 In case all of the above fails, you can force remove a device. Note that a force remove will **only** remove the device from the database. Until this device is factory reset, it will still hold the network encryption key and thus is still able to communicate over the network!
 To force remove a device add the optional `force` property (default `false`) to the payload, example: `{"id":"my_bulb","force":true}`.
 
-In case you also want to block the device the optional `block` property (default `false`) can be added, example: `{"id":"my_bulb","block":true}`. Note that Zigbee doesn't have a block functionallity, therefore when a device is blocked, Zigbee2mqtt will immediately request the device to remove itself from the network when it joins.
+In case you also want to block the device the optional `block` property (default `false`) can be added, example: `{"id":"my_bulb","block":true}`. Note that Zigbee doesn't have a block functionallity, therefore when a device is blocked, Zigbee2MQTT will immediately request the device to remove itself from the network when it joins.
 </details>
 
 <details>

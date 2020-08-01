@@ -1,6 +1,6 @@
 ---
 title: "Custom devices (DiY) ptvo.switch control via MQTT"
-description: "Integrate your Custom devices (DiY) ptvo.switch via Zigbee2mqtt with whatever smart home
+description: "Integrate your Custom devices (DiY) ptvo.switch via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

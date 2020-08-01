@@ -1,6 +1,6 @@
 ---
 title: "Ksentry Electronics KS-SM001 control via MQTT"
-description: "Integrate your Ksentry Electronics KS-SM001 via Zigbee2mqtt with whatever smart home
+description: "Integrate your Ksentry Electronics KS-SM001 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

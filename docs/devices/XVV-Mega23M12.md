@@ -1,6 +1,6 @@
 ---
 title: "Dresden Elektronik XVV-Mega23M12 control via MQTT"
-description: "Integrate your Dresden Elektronik XVV-Mega23M12 via Zigbee2mqtt with whatever smart home
+description: "Integrate your Dresden Elektronik XVV-Mega23M12 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
