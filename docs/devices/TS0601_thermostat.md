@@ -1,19 +1,20 @@
 ---
-title: "Moes HY369RT control via MQTT"
-description: "Integrate your Moes HY369RT via Zigbee2mqtt with whatever smart home
+title: "TuYa TS0601_thermostat control via MQTT"
+description: "Integrate your TuYa TS0601_thermostat via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HY369RT.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0601_thermostat.md)*
 
-# Moes HY369RT
+# TuYa TS0601_thermostat
 
-| Model | HY369RT  |
-| Vendor  | Moes  |
+| Model | TS0601_thermostat  |
+| Vendor  | TuYa  |
 | Description | Radiator valve with thermostat |
 | Supports | thermostat, temperature |
-| Picture | ![Moes HY369RT](../images/devices/HY369RT.jpg) |
+| Picture | ![TuYa TS0601_thermostat](../images/devices/TS0601_thermostat.jpg) |
+| White-label | Moes HY369RT, SHOJZJ 378RT |
 
 ## Notes
 
@@ -63,6 +64,14 @@ switch:
     state_on: "ON"
     value_template: "{{ value_json.valve_detection }}"
 
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    device_class: "battery"
+    value_template: "{{ value_json.battery }}"
+
 climate:
   - platform: "mqtt"
     availability_topic: "zigbee2mqtt/bridge/state"
@@ -83,14 +92,6 @@ climate:
     temp_step: 0.5
     action_topic: true
     action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
-    device_class: "battery"
-    value_template: "{{ value_json.battery }}"
 
 sensor:
   - platform: "mqtt"

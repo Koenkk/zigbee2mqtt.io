@@ -8,6 +8,7 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 ### No logging is shown at all
 - Make sure joining is enabled by setting `permit_join: true` in the [configuration](https://www.zigbee2mqtt.io/information/configuration.html).
 - There can be too much interference, try connecting the coordinator USB through an USB extension cable. This problem occurs a lot when used in combination with a Raspberry Pi 4.
+- If you are using a Raspberry Pi, try disconnecting any other USB devices. If after that pairing works, try connecting the USB devices via a powered USB hub.
 - Make sure that any other Zigbee networks/hubs are powered down. When you e.g. want to pair an IKEA bulb which was first paired to the IKEA gateway make sure to power down the IKEA gateway. If that doesn't help also try powering down all devices that are connected to the IKEA hub.
 - If it's a battery powered device, try replacing the battery.
 - You've hit the device limit of the coordinator, especially occurs when using the CC2531 or CC2530 in combination with the source routing firmware. Try reflashing the coordinator and immidiately pair the device after starting Zigbee2mqtt.
@@ -88,6 +89,9 @@ serial:
 …`
 
 After reboot your dedvice will have the right permissions and always the same name.
+
+### Error: `Resource temporarily unavailable Cannot lock port`
+This error occurs when another program is already using (and thus locking) the adapter. You can find out which via the following command: `ls -l /proc/[0-9]/fd/ |grep /dev/ttyACM0` (replace `/dev/ttyACM0` with your adapter port).
 
 ### Raspberry Pi users: use a good power supply
 A bad power supply can make your system and its USB devices unstable.

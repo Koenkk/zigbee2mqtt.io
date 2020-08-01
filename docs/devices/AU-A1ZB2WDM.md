@@ -1,21 +1,27 @@
 ---
-title: "AduroSmart 81809 control via MQTT"
-description: "Integrate your AduroSmart 81809 via Zigbee2mqtt with whatever smart home
+title: "Aurora Lighting AU-A1ZB2WDM control via MQTT"
+description: "Integrate your Aurora Lighting AU-A1ZB2WDM via Zigbee2mqtt with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/81809.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/AU-A1ZB2WDM.md)*
 
-# AduroSmart 81809
+# Aurora Lighting AU-A1ZB2WDM
 
-| Model | 81809  |
-| Vendor  | AduroSmart  |
-| Description | ERIA colors and white shades smart light bulb A19 |
-| Supports | on/off, brightness, color temperature, color xy |
-| Picture | ![AduroSmart 81809](../images/devices/81809.jpg) |
+| Model | AU-A1ZB2WDM  |
+| Vendor  | Aurora Lighting  |
+| Description | AOne 250W smart rotary dimmer module |
+| Supports | on/off, brightness |
+| Picture | ![Aurora Lighting AU-A1ZB2WDM](../images/devices/AU-A1ZB2WDM.jpg) |
 
 ## Notes
+
+
+### Pairing
+To pair the dimmer, press and hold the knob for 6 seconds.
+The connected load, and the red LED indicator behind the dimmer knob will flash twice to indicate it has entered pairing mode.
+The connected load, and the red LED indicator behind the dimmer knob will flash a third time to indicate that it has paird successfully.
 
 
 ### Device type specific configuration
@@ -39,8 +45,6 @@ light:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
-    color_temp: true
-    xy: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     brightness_scale: 254

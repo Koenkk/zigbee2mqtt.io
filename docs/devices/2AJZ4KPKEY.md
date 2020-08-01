@@ -18,6 +18,19 @@ description: "Integrate your Konke 2AJZ4KPKEY via Zigbee2mqtt with whatever smar
 ## Notes
 
 
+### Deprecated click event
+By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
+To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+
+```yaml
+devices:
+  '0x12345678':
+    friendly_name: my_device
+    legacy: false
+```
+
+
 ### Pairing
 Press and hold the reset button in the side of the device for +- 5 seconds (until the blue light starts blinking).
 You will need a needle or a pin to do it. After this the device will automatically join.

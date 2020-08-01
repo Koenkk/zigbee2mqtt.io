@@ -15,7 +15,7 @@ git clone https://github.com/jmichault/flash_cc2531.git
  * pin 7 (reset)	-->	pin 35 (GPIO24, BCM19)
  * pin 3 (DC)	  -->	pin 36 (GPIO27, BCM16)
  * pin 4 (DD)	  -->	pin 38 (GPIO28, BCM20)
- 
+
  As with the arduino option above, connecting Target Voltage Sense to a 3.3v source eliminates the need to plug the device into a usb port, so optionally connect the following too:
  * pin 2 (Target Voltage Sense) --> pin 1 or pin 17 (3.3v) on Raspi
 
@@ -57,7 +57,7 @@ It takes around 3 minutes.
 
 ### Via Arduino Uno/ESP8266 with CCLoader (~3min)
 
-**This has been tested with a Genuine Arudino Uno, an Arduino Pro Micro - China clone, and a NodeMCU ESP8266 and is significantly faster than CCLib**
+**This has been tested with a Genuine Arduino Uno, an Arduino Pro Micro - China clone, and a NodeMCU ESP8266 and is significantly faster than CCLib**
 
 #### Prepare the firmware
 1. Download the correct firmware (in this example we'll be using the [CC2531 firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin/))
@@ -75,12 +75,12 @@ It takes around 3 minutes.
 #### Prepare CCLoader
 1. Download and unpack [CCLoader](https://github.com/RedBearLab/CCLoader)
 1. On Windows you can use the precompiled `CCloader.exe`
-1. On Linux you have to compile `CCLoader` yourself so change directory to `CCLoader/SourceCode/Linux`, and run 
+1. On Linux you have to compile `CCLoader` yourself so change directory to `CCLoader/SourceCode/Linux`, and run
    ```bash
    gcc main.c -o CCLoader
    ```
 
-#### Flashing the Arduino or ESP8266 and the CC2531 device 
+#### Flashing the Arduino or ESP8266 and the CC2531 device
 
 1. For Arduino, leave the pins set as default in 'Arduino\CCLoader\CCLoader.ino' (lines 86-90):
 ```
@@ -114,23 +114,23 @@ int LED = 2; //GPIO2=D4 and the Blue LED on the WeMos D1 Mini and the ESP-12E mo
    ![](https://www.waveshare.com/img/devkit/CC-Debugger/CC-Debugger-JTAG-Header.jpg)
 
    If you have a 3.3V Arduino you can optionaly connect `3.3V -> Target Voltage Sense (Pin 2)` and program the CC2531 without connecting the CC2531 to USB (in the next step).
-   
+
    Connect the ESP8266 pins as described below to the debug header of the CC device
-   
+
    | ESP8266 | CC Pin | CC Name |
    |---|---|---|
    | GND | 1 | GND |
    | D1/GPIO5 | 7 | RESETn |
    | D2/GPIO4 | 3 | DC (Debug Clock) |
    | D5/GPIO14 | 4 | DD (Debug Data) |
-   
+
    ![C2531 debug pins](https://user-images.githubusercontent.com/35885181/67834765-dcab2280-faad-11e9-8755-971f0e456217.jpg)
    ![CC2531 stick and NodeMCU](https://user-images.githubusercontent.com/35885181/67834764-dc128c00-faad-11e9-8e06-0937e1bb6790.jpg)
-   
+
 1. Connect Arduino/ESP8266 first, then within a couple seconds connect the CC2531 to USB power
 1. Place the prepared `CC2531ZNP-Prod.bin` next to the executable file
 1. Start the flashing process
-   
+
    **Windows**
    ```
    CCLoader_x86_64.exe [Number of the COM port] CC2531ZNP-Prod.bin 0

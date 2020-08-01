@@ -1,5 +1,21 @@
 const notes = [
     {
+        model: ['WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM', 'WXKG06LM', 'WXKG02LM', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'WXKG07LM', 'QBKG21LM', 'QBKG22LM', 'E1743', 'E1766', 'ptvo.switch', 'DIYRuZ_R8_8', 'HGZB-1S', 'HGZB-02S', 'HGZB-045', 'IM6001-BTP01', 'AV2010/34', 'HS1EB', 'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'ZGRC-KEY-013', '6ARCZABZH', 'MEAZON_BIZY_PLUG', 'MEAZON_DINRAIL', '2AJZ4KPKEY', 'TERNCY-PP01', 'TERNCY-SD01'],
+        note: `
+### Deprecated click event
+By default this device exposes a deprecated \`click\` event. It's recommended to use the \`action\` event instead.
+
+To disable the \`click\` event, set \`legacy: false\` for this device in \`configuration.yaml\`. Example:
+
+\`\`\`yaml
+devices:
+  '0x12345678':
+    friendly_name: my_device
+    legacy: false
+\`\`\`
+`,
+    },
+    {
         model: ['ICTC-G-1'],
         note: `
 ### Pairing
@@ -127,6 +143,44 @@ If the switch is showing off when it is actually on, hold the button till the LE
 To pair this device, hold the ON for few seconds until the red light is blinking. After that, simple tap once on the ON again to start the pairing process.
 
 Note: This device doesn't support Zigbee channels 25 & 26.
+`,
+    },
+    {
+        model: ['SNZB-01', 'SNZB-02'],
+        note: `
+### Pairing
+Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
+`,
+    },
+    {
+        model: ['SNZB-03'],
+        note: `
+### Pairing
+If brand new, when powered on it will attempt to pair to Zigbee2mqtt automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the  button on the top for about 5 seconds until the light flashes several times. The device will then go into pairing mode  It should then be connected to Zigbee2mqtt. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
+`,
+    },
+    {
+        model: ['SNZB-04'],
+        note: `
+### Pairing
+Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
+`,
+    },
+    {
+        model: ['AU-A1ZB2WDM'],
+        note: `
+### Pairing
+To pair the dimmer, press and hold the knob for 6 seconds.
+The connected load, and the red LED indicator behind the dimmer knob will flash twice to indicate it has entered pairing mode.
+The connected load, and the red LED indicator behind the dimmer knob will flash a third time to indicate that it has paird successfully.
+`,
+    },
+    {
+        model: ['YSR-MINI-01'],
+        note: `
+### Pairing
+1. Hold button until LED start flashing (about 6 seconds), then release.
+2. Pairing is done when LED stop flashing.
 `,
     },
     {
@@ -634,12 +688,29 @@ Press the button on the device 4 times (until the red light turns on).
 `,
     },
     {
+        model: ['ICZB-KPD14S', 'ICZB-KPD18S', '067773'],
+        note: `
+### Legacy integration
+By default (for backwards compatibility purposes) the legacy integration is enabled.
+For new users it is recommended to **disable** this as it has several fundamental problems.
+To disable the legacy integration add the following to your \`configuration.yaml\`:
+
+{% raw %}
+\`\`\`yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_remote
+    legacy: false
+\`\`\`
+{% endraw %}
+`,
+    },
+    {
         model: ['E1744', 'ICTC-G-1'],
         note: `
 ### Legacy integration
 By default (for backwards compatibility purposes) the legacy integration is enabled.
-For new users it is recommended to **disable** this as it has several problems.
-To disable the legac integration add the following to your \`configuration.yaml\`:
+For new users it is recommended to **disable** this as it has several fundamental problems.
+To disable the legacy integration add the following to your \`configuration.yaml\`:
 
 {% raw %}
 \`\`\`yaml
@@ -803,7 +874,7 @@ Press and hold the reset button on the device for +- 5 seconds (until the blue l
         note: `
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join.
+After this the device will automatically join. If this doesn't work, try with a single short button press.
 `,
     },
     {
@@ -1025,6 +1096,8 @@ The \`strength\` value, which is reported every 300 seconds after vibration is d
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
+
+You may have to unpair the switch from an existing coordinator before the pairing process will start.
 `,
     },
     {
@@ -1034,6 +1107,22 @@ Press and hold the button on the device for +- 10 seconds
 Press and hold the setup button on the rear of the device for +- 10 seconds (until the green light goes solid)
 to initiate pairing. Please note that the pairing indicator light is below the main sensor
 (as oppose to the obvious indicator above the main sensor).
+`,
+    },
+    {
+        model: [
+            'WXKG01LM', 'WSDCGQ11LM', 'RTCGQ01LM', 'MCCGQ11LM', 'WXKG11LM', 'WXKG12LM', 'RTCGQ11LM',
+            'MFKZQ01LM', 'WSDCGQ12LM', 'MCCGQ01LM', 'DJT11LM',
+        ],
+        note: `
+### Troubleshooting: device stops sending messages/disconnects from network
+Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes happens that they disconnect from the network.
+Most of the times this happens because of the following reasons:
+- Device has a weak signal, you can see the signal quality in the published messages as \`linkquality\`. A linkquality < 20 is considered weak.
+- Low battery voltage, this can even happen when the battery still appears full. Try a different battery.
+- The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, OSRAM, Sylvania, SmartThings, Securifi.
+
+More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 `,
     },
     {
@@ -1318,20 +1407,22 @@ Where:
 `,
     },
     {
-        model: ['QBKG03LM', 'QBKG04LM', 'QBKG12LM', 'QBKG11LM'],
+        model: ['QBKG03LM', 'QBKG04LM', 'QBKG12LM', 'QBKG11LM', 'QBKG21LM', 'QBKG22LM', 'QBKG25LM'],
         note: `
 ### Decoupled mode
 Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
 This might be useful to assign some custom actions to buttons and control relay remotely.
-This command also allows to redefine which button controls which relay for the double switch.
+This command also allows to redefine which button controls which relay for the double switch (not supported for QBKG25LM).
 
-Special topics should be used: \`zigbee2mqtt/[FRIENDLY_NAME]/system/set\` to modify operation mode.
+Topic \`zigbee2mqtt/[FRIENDLY_NAME]/system/set\` should be used to modify operation mode.
+
+**NOTE:** For QBKG25LM instead of \`system\` use \`left\`, \`center\` or \`right\` and leave out the \`button\` property in the payload.
 
 Payload:
 \`\`\`js
 {
   "operation_mode": {
-    "button": "single"|"left"|"right",
+    "button": "single"|"left"|"right", // Always use single for a single switch
     "state": "VALUE"
   }
 }
@@ -1339,9 +1430,9 @@ Payload:
 
 Values                | Description
 ----------------------|---------------------------------------------------------
-\`control_relay\`       | Button directly controls relay (for single switch)
-\`control_left_relay\`  | Button directly controls left relay (for double switch)
-\`control_right_relay\` | Button directly controls right relay (for double switch)
+\`control_relay\`       | Button directly controls relay (for single switch and QBKG25LM)
+\`control_left_relay\`  | Button directly controls left relay (for double switch, not supported for QBKG25LM)
+\`control_right_relay\` | Button directly controls right relay (for double switch, not supported for QBKG25LM)
 \`decoupled\`           | Button doesn't control any relay
 
 \`zigbee2mqtt/[FRIENDLY_NAME]/system/get\` to read current mode.
@@ -1350,15 +1441,12 @@ Payload:
 \`\`\`js
 {
   "operation_mode": {
-    "button": "single"|"left"|"right"
+    "button": "single"|"left"|"right" // Always use single for a single switch
   }
 }
 \`\`\`
 
-Response will be sent to \`zigbee2mqtt/[FRIENDLY_NAME]\`:
-\`\`\`json
-{"operation_mode_right":"control_right_relay"}
-\`\`\`
+Response will be sent to \`zigbee2mqtt/[FRIENDLY_NAME]\`, example: \`{"operation_mode_right":"control_right_relay"}\`
 `,
     },
     {
@@ -1372,38 +1460,51 @@ See [link](https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691
 `,
     },
     {
-        model: ['ZNCZ02LM', 'ZNCZ04LM', 'QBCZ11LM'],
+        model: ['ZNCZ02LM', 'ZNCZ04LM', 'QBCZ11LM', 'QBKG25LM'],
         note: `
 ### Power outage memory
 This option allows the device to restore the last on/off state when it's reconnected to power.
 To set this option publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"power_outage_memory": true}\` (or \`false\`).
-Now toggle the plug once with the button on it, from now on it will restore its state when reconnecting to power.
+Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
 `,
     },
     {
-        model: ['ZNCLDJ12LM'],
+        model: ['QBKG25LM'],
         note: `
-### Configuration of device attributes
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
-\`\`\`json
-{
-    "options":{
-        "reverse_direction": xxx,
-        "auto_close": xxx
-    }
-}
-\`\`\`
-
-- **reverse_direction**: (\`true\`/\`false\`, default: \`false\`). Device can be configured to act in an opposite direction.
-- **auto_close**: (\`true\`/\`false\`, default: \`true\`). Enables/disabled auto close
-
-You can send a subset of options, all options that won't be specified will be revered to default.
-
-After changing \`reverse_direction\` you will need to fully open and fully close the curtain so the motor will re-detect edges. \`reverse_direction\` will get new state only after this recalibration.
+### Do not disturb mode
+This option allows to turn off the indicator lights between 21:00 and 09:00.
+To set this option publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"do_not_disturb": true}\` (or \`false\`).
 `,
     },
     {
-        model: ['ZNCLDJ11LM'],
+        model: ['QBKG23LM'],
+        note: `
+### Pairing
+Press and hold the button on the device for +- 10 seconds
+(until the blue light starts blinking and stops blinking), release and wait.
+`,
+    },
+    {
+        model: ['067694'],
+        note: `
+### Binding
+The remote supports [binding](../information/binding) for toggle action.
+`,
+    },
+    {
+        model: ['067774'],
+        note: `
+### Model numbers
+Model number depends on the country and the colour of the devices. For example:
+- French models are branded as Céliane with Netatmo, and models for this device depends on the colour, with the following numbers: "0 677 24", "0 677 74", and "0 677 94".
+- Spanish models are branded as Legrand Valena Next, and models for this device depends on the colour, with the following numbers: "7 418 12", "7 418 42" and "7 418 72".
+
+### Binding
+The remote supports [binding](../information/binding) on each endpoint, so you can bind each button to a different device/group.
+`,
+    },
+    {
+        model: ['ZNCLDJ12LM', 'ZNCLDJ11LM'],
         note: `
 ### Configuration of device attributes
 By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
@@ -1412,18 +1513,46 @@ By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes c
     "options":{
         "reverse_direction": xxx,
         "hand_open": xxx,
-        "reset_move": xxx
+        "reset_limits": xxx
     }
 }
 \`\`\`
 
 - **reverse_direction**: (\`true\`/\`false\`, default: \`false\`). Device can be configured to act in an opposite direction.
 - **hand_open**: (\`true\`/\`false\`, default: \`true\`). By default motor starts rotating when you pull the curtain by hand. You can disable this behaviour.
-- **reset_move**: (\`true\`/\`false\`, default: \`false\`). Reset the motor. When a path was cleared from obstacles.
+- **reset_limits**: (\`true\`/\`false\`, default: \`false\`). Reset the motor. When a path was cleared from obstacles.
 
 You can send a subset of options, all options that won't be specified will be revered to default.
 
 After changing \`reverse_direction\` you will need to fully open and fully close the curtain so the motor will re-detect edges. \`reverse_direction\` will get new state only after this recalibration.
+
+### Lost configuration on long power outage
+If motor is used without battery it may lose configuration after long power outage. In that case you need to perform end stops calibration again publishing the following command sequence with topic \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+1. \`{ "options": { "reset_limits": true } }\`
+2. \`{ "state": "close" }\`
+3. Wait here for curtain closure.
+4. \`{ "state": "open" }\`
+
+Home Assistant automation example:
+\`\`\`yaml
+- alias: Calibrate curtain
+  trigger:
+  - platform: homeassistant
+    event: start
+  action:
+  - service: mqtt.publish
+    data:
+      topic: zigbee2mqtt/<FRIENDLY_NAME>/set
+      payload: "{ 'options': { 'reset_limits': true } }"
+  - service: cover.close_cover
+    entity_id: cover.<COVER_ID>
+  - delay:
+      seconds: 13 #wait for closure complete
+  - service: cover.open_cover
+    entity_id: cover.<COVER_ID>
+\`\`\`
+
+Motor leaves calibration mode automatically after it reaches the both open and close curtain position limits. Calibration is mandatory for proper position reporting and ability to set intermediate positions.
 `,
     },
     {
@@ -1838,6 +1967,7 @@ There are 3 versions of this device: Standalone, Zigbee and Z-wave. These are vi
 Supported:
 - **HS1SA-M : Zigbee**
 - **HS1SA-N : Zigbee**
+- **HS1SA-E : Zigbee 3.0**
 
 Unsupported:
 - HS1SA : Standalone
@@ -2176,6 +2306,91 @@ If you get a warning that the model is undefined, which might happen after remov
 - install the TRV on the adaptor (push hard until you feel a click, rotate the TRV until display faces up)
 - press the button on the top for 3 seconds (motor will turn, \`21°\` + \`((•))\` should be on the display)
 - close the cover
+`,
+    },
+    {
+        model: ['412015'],
+        note: `
+### Model numbers
+In Legrand, model number depends on the country and the colour of the devices, for instance:
+
+- French models are branded as Céliane with Netatmo, whereas Spanish models are branded as Legrand Valena Next. However, this device has no colour options, so there is only one model: "412015" or "4 120 15"
+
+Other brand names depending on the country:
+- Availability for Céliane™ with Netatmo &#8594;     France and Overseas territories, Greece, Poland, Hungary, Tunisia, Morocco, Ivory Coast, Czech Republic, Russia, Mauritius
+- Availability for Dooxie™ with Netatmo &#8594;     France and Overseas territories
+- Availability for Mosaic™ with Netatmo &#8594;     France and Overseas territories, Ivory Coast
+- Availability for Living Now™ with Netatmo &#8594;     Italy, Belgium, Greece, Portugal, Lebanon, Israel, Chile, Peru, Mexico
+- Availability for Valena Allure™ with Netatmo &#8594;     Greece, Germany, Austria, Poland, Slovakia, Bulgaria, Czech Republic, Hungary, Russia
+- Availability for Valena Life™ with Netatmo &#8594;    Greece, Germany, Austria, Portugal, Poland, Slovakia, Bulgaria, Czech Republic, Hungary, Lituania, Russia
+- Availability for Valena Next™ with Netatmo &#8594;    Spain, Belgium
+- Availability for Arteor™ with Netatmo &#8594;    Australia, New Zealand, India, Malaysia, Lebanon, Mauritius, South Africa
+- Availability for Plexo™ with Netatmo &#8594;    France and Overseas territories, Spain, Belgium
+- Availability for Modul'Up™ with Netatmo &#8594;    France and Overseas territories
+
+### Force read power
+* \`power\`: Asks the device for the current active power.
+
+Example of MQTT message payload to ask for the active power. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/get\`:
+
+\`\`\`js
+{
+    "power"
+}
+\`\`\`
+
+
+### Power Alarm Configuration
+* \`power_alarm\`: enables or disables the power alarm, and sets the value: \`DISABLE\` (default) / \`integer\` (in kwh)
+
+Example of MQTT message payload to disable the power alarm. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+
+\`\`\`js
+{
+    "power_alarm": "DISABLE"
+}
+\`\`\`
+
+Example of MQTT message payload to enable the power alarm at 3.3 kwh. This should be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+
+\`\`\`js
+{
+    "power_alarm": "3300"
+}
+\`\`\`
+
+When it reaches that value, the \`power_alarm_active\` binary_sensor will change to \`true\`.
+
+
+### Identify
+Helps to identify the device using the LED.
+
+* \`identify['effect']\`:  only works for blink3 & fixed in \`effect\`. Values:
+    - \`blink3\`
+    - \`fixed\`
+    - \`blinkgreen\`
+    - \`blinkblue\`
+
+* \`identify['color']\`:  only works for blink3 & fixed in \`effect\`. Values:
+    - \`default\`
+    - \`red\`
+    - \`green\`
+    - \`blue\`
+    - \`lightblue\`
+    - \`yellow\`
+    - \`pink\`
+    - \`white\`
+
+Example of MQTT message payload to Identify the device. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+
+\`\`\`js
+{
+    "identify": {
+    "effect": "blink3",
+    "color": "white"
+    }
+}
+\`\`\`
 `,
     },
 ];

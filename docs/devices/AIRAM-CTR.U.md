@@ -18,6 +18,19 @@ description: "Integrate your Airam AIRAM-CTR.U via Zigbee2mqtt with whatever sma
 ## Notes
 
 
+### Deprecated click event
+By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
+To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+
+```yaml
+devices:
+  '0x12345678':
+    friendly_name: my_device
+    legacy: false
+```
+
+
 ### Pairing
 Hold small reset button pressed (located under battery cover on the backside of remote) for 4
 seconds and device will reset and will attempt to join network.

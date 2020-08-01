@@ -18,6 +18,19 @@ description: "Integrate your Meazon MEAZON_BIZY_PLUG via Zigbee2mqtt with whatev
 ## Notes
 
 
+### Deprecated click event
+By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
+To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+
+```yaml
+devices:
+  '0x12345678':
+    friendly_name: my_device
+    legacy: false
+```
+
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 

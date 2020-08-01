@@ -12,7 +12,7 @@ description: "Integrate your Sunricher ZG2835RAC via Zigbee2mqtt with whatever s
 | Model | ZG2835RAC  |
 | Vendor  | Sunricher  |
 | Description | ZigBee knob smart dimmer |
-| Supports | on/off, brightness |
+| Supports | on/off, brightness, power measurements |
 | Picture | ![Sunricher ZG2835RAC](../images/devices/ZG2835RAC.jpg) |
 | White-label | YPHIX 50208695, Samotech SM311 |
 
@@ -43,6 +43,22 @@ light:
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     brightness_scale: 254
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "W"
+    icon: "mdi:flash"
+    value_template: "{{ value_json.power }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "kWh"
+    icon: "mdi:power-plug"
+    value_template: "{{ value_json.energy }}"
 
 sensor:
   - platform: "mqtt"
