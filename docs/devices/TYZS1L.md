@@ -11,8 +11,8 @@ description: "Integrate your TuYa TYZS1L via Zigbee2mqtt with whatever smart hom
 
 | Model | TYZS1L  |
 | Vendor  | TuYa  |
-| Description | Zigbee LED Strip controller RGB + CCT or RGBW |
-| Supports | on/off, brightness, color temperature, color xy |
+| Description | Zigbee LED Strip controller HSB |
+| Supports | on/off, color hs |
 | Picture | ![TuYa TYZS1L](../images/devices/TYZS1L.jpg) |
 
 ## Notes
