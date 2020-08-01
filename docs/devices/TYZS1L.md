@@ -17,14 +17,11 @@ description: "Integrate your TuYa TYZS1L via Zigbee2mqtt with whatever smart hom
 
 ## Notes
 
-
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
-
-* `transition`: Controls the transition time (in seconds) of on/off, brightness,
-color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
-Note that this value is overridden if a `transition` value is present in the MQTT command payload.
+### Limitations
+This device has various limitations:
+- Changing brightness is not supported
+- On/off and color transition is not supported
+- Color can only be set via hue/saturation, example payload `{"hue": 360, "saturation": 100}`.
 
 
 ## Manual Home Assistant configuration
