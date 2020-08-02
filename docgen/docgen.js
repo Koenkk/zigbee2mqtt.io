@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const devices = require('zigbee2mqtt/node_modules/zigbee-shepherd-converters').devices;
+const devices = require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices;
 const utils = require('./utils');
 
-const base = path.join(__dirname, '..');
+const base = path.join(__dirname, '..', 'docs');
 
 const supportDevices = require('./supported-devices');
 const devicePage = require('./device_page');

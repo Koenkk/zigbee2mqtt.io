@@ -5,9 +5,29 @@ const utils = require('./utils');
 const notes = require('./device_page_notes');
 const YAML = require('json2yaml');
 const HomeassistantExtension = require('zigbee2mqtt/lib/extension/homeassistant');
-const homeassistant = new HomeassistantExtension(null, null, null, null);
+const homeassistant = new HomeassistantExtension(null, null, null, null, {on: () => {}});
+const assert = require('assert');
+const devices = require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices;
 
 function generate(device) {
+    // verify that all model and notModel exist;
+    for (const note of notes) {
+        const check = (attr) => {
+            if (note[attr]) {
+                if (typeof note[attr] === 'string') {
+                    assert(devices.find((d) => d.model === note[attr]), note[attr]);
+                } else {
+                    for (const m of note[attr]) {
+                        assert(devices.find((d) => d.model === m), m);
+                    }
+                }
+            }
+        };
+
+        check('model');
+        check('notModel');
+    }
+
     const image = utils.getImage(device.model);
 
     return `---
@@ -17,7 +37,7 @@ description: "Integrate your ${device.vendor} ${device.model} via Zigbee2mqtt wi
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docgen/device_page_notes.js)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/${utils.normalizeModel(device.model)}.md)*
 
 # ${device.vendor} ${device.model}
 
@@ -25,15 +45,18 @@ description: "Integrate your ${device.vendor} ${device.model} via Zigbee2mqtt wi
 | Vendor  | ${device.vendor}  |
 | Description | ${device.description} |
 | Supports | ${device.supports} |
-| Picture | ![${image}](${image}) |
-
+| Picture | ![${device.vendor} ${device.model}](${image}) |
+${device.whiteLabel ? `| White-label | ${device.whiteLabel.map((d) => `${d.vendor} ${d.model}`).join(', ')} |\n` : ''}
 ## Notes
 
 ${getNotes(device)}
-
+${device.hasOwnProperty('ota') && ['AC01353010G'].includes(device.model) === false ? `
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+` : ''}
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
-manual integration is possbile with the following configuration:
+manual integration is possible with the following configuration:
 
 ${getHomeAssistantConfig(device)}
 `;
@@ -51,6 +74,11 @@ function getNotes(device) {
                 return false;
             }
 
+            if (n.hasOwnProperty('notDescription') &&
+                n.notDescription.filter((s) => device.description.includes(s)).length !== 0) {
+                return false;
+            }
+
             if (n.hasOwnProperty('notModel') && n.notModel.includes(device.model)) {
                 return false;
             }
@@ -63,7 +91,7 @@ function getNotes(device) {
                 return true;
             }
 
-            return n.model === device.model || n.vendor === device.vendor;
+            return n.model === device.model || (Array.isArray(n.vendor) ? n.vendor.includes(device.vendor) : n.vendor === device.vendor);
         })
         .map((n) => n.note)
         .join('\n');
@@ -72,11 +100,10 @@ function getNotes(device) {
 
 function getHomeAssistantConfig(device) {
     let configuration = `
-### ${device.model}
 {% raw %}
 \`\`\`yaml
 `;
-    const configurations = homeassistant._getMapping()[device.model];
+    const configurations = homeassistant.getConfigs(device);
 
     if (configurations) {
         configurations.forEach((d, i) => {
@@ -110,6 +137,18 @@ function getHomeassistantConfigForConfiguration(device) {
     }
 
     delete payload.command_topic_prefix;
+
+    if (!payload.state_topic) {
+        delete payload.state_topic;
+    }
+
+    if (payload.position_topic) {
+        payload.position_topic = 'zigbee2mqtt/<FRIENDLY_NAME>';
+    }
+
+    if (payload.set_position_topic) {
+        payload.set_position_topic = 'zigbee2mqtt/<FRIENDLY_NAME>/set';
+    }
 
     let yml = YAML.stringify([payload]);
     yml = yml.replace(/(-) \n {4}/g, '- ');

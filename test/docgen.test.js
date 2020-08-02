@@ -2,7 +2,7 @@ const chai = require('chai');
 const fs = require('fs');
 const path = require('path');
 
-const base = path.join(__dirname, '..');
+const base = path.join(__dirname, '..', 'docs');
 
 const supportDevices = require('../docgen/supported-devices');
 
@@ -12,7 +12,7 @@ describe('Docgen', () => {
         chai.assert.strictEqual(
             supportDevices,
             actual,
-            'supported-devices.md is not up-to-date, forgot to run npm run docgen?'
+            'supported-devices.md is not up-to-date, forgot to run npm run docgen?',
         );
     });
 });

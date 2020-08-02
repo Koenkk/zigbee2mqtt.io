@@ -1,5 +1,0 @@
-theme: jekyll-theme-cayman
-url: https://www.zigbee2mqtt.io
-
-plugins:
-  - jekyll-sitemap

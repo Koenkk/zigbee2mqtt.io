@@ -1,0 +1,8 @@
+theme: jekyll-theme-cayman
+url: https://www.zigbee2mqtt.io
+
+plugins:
+  - jekyll-sitemap
+
+github:
+  repository_url: https://github.com/koenkk/zigbee2mqtt
