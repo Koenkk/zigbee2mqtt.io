@@ -15,7 +15,14 @@ Not all manufacturers make their updates available, therefore only the following
 - Sengled devices
 
 Zigbee2MQTT automatically checks if updates are available for your devices.
-In case an update is available it will publish `zigbee2mqtt/[DEVICE_FRIENLDY_NAME]` payload `{"update_available": true}`.
+
+The update state will be published to `zigbee2mqtt/[DEVICE_FRIENLDY_NAME]`, example payload: `{"update": {"state": "available"}}`.
+The possible states are:
+- `available`: an update is available for this device
+- `updating`: update is in progress. During this the progress in % and remaining time in seconds is also added to the payload, example: `{"update": {"state": "updating","progress":13.37,"remaining": 219}}`.
+- `idle`: no update available/in progress
+
+*NOTE: there is also a property `update_available` which is deprecated*.
 
 ## Check if an update is available
 To check if an update is available for your device send a message to `zigbee2mqtt/bridge/request/device/ota_update/check` with payload `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_remote"}` or `my_remote`, response: `{"data":{"id": "my_remote","updateAvailable":true},"status":"ok"}`.
