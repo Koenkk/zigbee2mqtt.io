@@ -1189,7 +1189,7 @@ experimenting with this option (e.g. \`hold_timeout: 2000\`).
 This device has various limitations:
 - Changing brightness is not supported
 - On/off and color transition is not supported
-- Color can only be set via hue/saturation, example payload \`{"color":{"hue": 360, "saturation": 100}}\` or \`{"color":{"h": 360, "s": 100}}\`.
+- Color can only be set via hue/saturation, example payload \`{"color":{"h": 360, "s": 100}}\`.
 `,
     },
 
