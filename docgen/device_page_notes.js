@@ -1195,6 +1195,16 @@ This device has various limitations:
 
     // Device specific configuration
     {
+        supports: ['position'],
+        notModel: ['SV01', 'SV02'],
+        note: `
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* \`invert_cover\`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
+`,
+    },
+    {
         supports: ['temperature', 'humidity', 'pressure', 'brightness', 'color temperature', 'color', 'illuminance'],
         notDescription: ['thermostat'],
         notModel: ['324131092621', 'ICZB-KPD18S', 'ICZB-KPD14S', 'TYZS1L'],

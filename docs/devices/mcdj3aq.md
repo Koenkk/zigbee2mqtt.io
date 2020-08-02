@@ -32,6 +32,12 @@ By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can
 - **reverse_direction**: (`true`/`false`, default: `false`). Device can be configured to act in an opposite direction.
 
 
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
+
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
