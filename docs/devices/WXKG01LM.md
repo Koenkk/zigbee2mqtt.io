@@ -61,6 +61,7 @@ click to be identified as a `hold` action. If you are experiencing this you can 
 experimenting with this option (e.g. `hold_timeout: 2000`).
 * `hold_timeout_expire`: Sometimes it happens that the button does not send a release. To avoid problems Zigbee2mqtt expires the `hold` leading to no `release` being send. The default timeout is 4000 ms, you can increase it with this option.
 
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:

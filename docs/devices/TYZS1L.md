@@ -11,17 +11,18 @@ description: "Integrate your TuYa TYZS1L via Zigbee2MQTT with whatever smart hom
 
 | Model | TYZS1L  |
 | Vendor  | TuYa  |
-| Description | Zigbee LED Strip controller HSB |
-| Supports | on/off, color hs |
+| Description | Zigbee LED Strip controller RGB + CCT or RGBW |
+| Supports | on/off, brightness, color temperature, color xy |
 | Picture | ![TuYa TYZS1L](../images/devices/TYZS1L.jpg) |
 
 ## Notes
+
 
 ### Limitations
 This device has various limitations:
 - Changing brightness is not supported
 - On/off and color transition is not supported
-- Color can only be set via hue/saturation, example payload `{"color":{"hue": 360, "saturation": 100}}`.
+- Color can only be set via hue/saturation, example payload `{"color":{"hue": 360, "saturation": 100}}` or `{"color":{"h": 360, "s": 100}}`.
 
 
 ## Manual Home Assistant configuration
