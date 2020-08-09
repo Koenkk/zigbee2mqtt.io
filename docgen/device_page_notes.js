@@ -1111,7 +1111,7 @@ to initiate pairing. Please note that the pairing indicator light is below the m
     {
         model: [
             'WXKG01LM', 'WSDCGQ11LM', 'RTCGQ01LM', 'MCCGQ11LM', 'WXKG11LM', 'WXKG12LM', 'RTCGQ11LM',
-            'MFKZQ01LM', 'WSDCGQ12LM', 'MCCGQ01LM', 'DJT11LM',
+            'MFKZQ01LM', 'WSDCGQ12LM', 'MCCGQ01LM', 'DJT11LM', 'WSDCGQ01LM',
         ],
         note: `
 ### Troubleshooting: device stops sending messages/disconnects from network
