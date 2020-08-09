@@ -236,7 +236,8 @@ switch:
 
 automation:
   # Automation for sending MQTT message on input select change
-  - alias: Zigbee2MQTT Log Level
+  - id: zigbee2mqtt_log_level
+    alias: Zigbee2MQTT log level
     initial_state: "on"
     trigger:
       platform: state
