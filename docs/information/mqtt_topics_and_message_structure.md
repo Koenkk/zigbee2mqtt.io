@@ -292,6 +292,10 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
   "brightness_move": -40, // Starts moving the brightness down at 40 units per second
   "brightness_move": "stop", // Stops the brightness move
 
+  // It is also possible to increase/decrease the brightness with a certain value.
+  // "brightness_step" will stop at 1 and therefore not turn off the bulb, for this use "brightness_step_onoff" instead.
+  "brightness_step": 40 // Increases the brightness by 40, to decrease use e.g. '-40'
+
   // Similar to brightness_move, color_temp_move will move the color temperature.
   "color_temp_move": 40, // Starts moving the color temperature up at 40 units per second
   "color_temp_move": "stop", // Stops the color temperature move
