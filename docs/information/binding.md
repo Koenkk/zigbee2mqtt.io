@@ -19,7 +19,7 @@ Binding can be configured using the following topics:
 ### Binding specific endpoint
 **This is not applicable for most users**
 
-By default, the first endpoint is taken. In case your device has multiple endpoints, e.g. `left` and `right`. The following can be done to specifcy an endpoint:
+By default, the first endpoint is taken. In case your device has multiple endpoints, e.g. `left` and `right`. The following can be done to specify an endpoint:
 - **Source**: append the endpoint friendly name to the topic, e.g. `zigbee2mqtt/bridge/bind/my_switch/left`
 - **Target**: append the endpoint friendly name to the payload, e.g. `my_switch/right`
 
