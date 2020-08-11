@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-1S via Zigbee2MQTT with whatever smar
 | Model | HGZB-1S  |
 | Vendor  | Nue / 3A  |
 | Description | Smart 1 key scene wall switch |
-| Supports | on/off, click |
+| Supports | on/off, click, action |
 | Picture | ![Nue / 3A HGZB-1S](../images/devices/HGZB-1S.jpg) |
 
 ## Notes
@@ -53,6 +53,13 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:gesture-double-tap"
+    value_template: "{{ value_json.action }}"
 
 sensor:
   - platform: "mqtt"

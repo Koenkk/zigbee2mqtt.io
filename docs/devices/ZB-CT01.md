@@ -1,19 +1,19 @@
 ---
-title: "Paul Neuhaus 100.110.39 control via MQTT"
-description: "Integrate your Paul Neuhaus 100.110.39 via Zigbee2MQTT with whatever smart home
+title: "YSRSAI ZB-CT01 control via MQTT"
+description: "Integrate your YSRSAI ZB-CT01 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/100.110.39.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZB-CT01.md)*
 
-# Paul Neuhaus 100.110.39
+# YSRSAI ZB-CT01
 
-| Model | 100.110.39  |
-| Vendor  | Paul Neuhaus  |
-| Description | Q-FLAG LED Panel, Smart-Home RGBW |
-| Supports | on/off, brightness, color temperature, color xy |
-| Picture | ![Paul Neuhaus 100.110.39](../images/devices/100.110.39.jpg) |
+| Model | ZB-CT01  |
+| Vendor  | YSRSAI  |
+| Description | Zigbee LED controller (WW/CW) |
+| Supports | on/off, brightness, color temperature |
+| Picture | ![YSRSAI ZB-CT01](../images/devices/ZB-CT01.jpg) |
 
 ## Notes
 
@@ -64,7 +64,6 @@ light:
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
     color_temp: true
-    xy: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     brightness_scale: 254

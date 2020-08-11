@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG25LM via Zigbee2MQTT with whatever smart
 | Model | QBKG25LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 3 gang smart wall switch (no neutral wire) |
-| Supports | on/off, action, power measurement |
+| Supports | on/off, action |
 | Picture | ![Xiaomi QBKG25LM](../images/devices/QBKG25LM.jpg) |
 
 ## Notes
@@ -116,14 +116,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "W"
-    icon: "mdi:flash"
-    value_template: "{{ value_json.power }}"
 
 sensor:
   - platform: "mqtt"

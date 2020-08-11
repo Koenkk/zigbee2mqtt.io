@@ -12,7 +12,7 @@ description: "Integrate your RGB Genie ZGRC-KEY-013 via Zigbee2MQTT with whateve
 | Model | ZGRC-KEY-013  |
 | Vendor  | RGB Genie  |
 | Description | 3 Zone remote and dimmer |
-| Supports | click |
+| Supports | click, action |
 | Picture | ![RGB Genie ZGRC-KEY-013](../images/devices/ZGRC-KEY-013.jpg) |
 
 ## Notes
@@ -44,6 +44,13 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:gesture-double-tap"
+    value_template: "{{ value_json.action }}"
 
 sensor:
   - platform: "mqtt"

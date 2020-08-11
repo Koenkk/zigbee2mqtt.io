@@ -966,7 +966,7 @@ If the device is asleep (which is most of the time) and you need it to be awake 
 `,
     },
     {
-        model: ['TS0601', 'mcdj3aq'],
+        model: ['TS0601_curtain', 'mcdj3aq'],
         note: `
 ### Configuration of device attributes
 By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
@@ -1022,7 +1022,7 @@ This device exposes the two specific endpoints \`rgb\` and \`cct\`. The command 
 `,
     },
     {
-        model: ['GDKES-01TZXD', 'GDKES-02TZXD', 'GDKES-03TZXD'],
+        model: ['TS0011', 'TS0012', 'TS0013'],
         note: `
 ### Rebrand
 Also branded as Yagusmart in the UK, with a version that does not require a neutral wire.

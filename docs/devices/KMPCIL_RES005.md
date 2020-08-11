@@ -98,6 +98,14 @@ sensor:
     device_class: "illuminance"
     value_template: "{{ value_json.illuminance }}"
 
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lx"
+    device_class: "illuminance"
+    value_template: "{{ value_json.illuminance_lux }}"
+
 binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"

@@ -1,19 +1,19 @@
 ---
-title: "BTicino K4003C control via MQTT"
-description: "Integrate your BTicino K4003C via Zigbee2MQTT with whatever smart home
+title: "Paul Neuhaus NLG-CCT light control via MQTT"
+description: "Integrate your Paul Neuhaus NLG-CCT light via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/K4003C.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/NLG-CCT_light.md)*
 
-# BTicino K4003C
+# Paul Neuhaus NLG-CCT light
 
-| Model | K4003C  |
-| Vendor  | BTicino  |
-| Description | Light switch with neutral |
-| Supports | on/off, led color |
-| Picture | ![BTicino K4003C](../images/devices/K4003C.jpg) |
+| Model | NLG-CCT light  |
+| Vendor  | Paul Neuhaus  |
+| Description | Various color temperature lights (e.g. 100.424.11) |
+| Supports | on/off, brightness, color temperature |
+| Picture | ![Paul Neuhaus NLG-CCT light](../images/devices/NLG-CCT-light.jpg) |
 
 ## Notes
 
@@ -58,21 +58,15 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
-switch:
+light:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    payload_off: "OFF"
-    payload_on: "ON"
-    value_template: "{{ value_json.state }}"
+    brightness: true
+    color_temp: true
+    schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:gesture-double-tap"
-    value_template: "{{ value_json.action }}"
+    brightness_scale: 254
 
 sensor:
   - platform: "mqtt"

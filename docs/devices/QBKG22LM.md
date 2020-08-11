@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG22LM via Zigbee2MQTT with whatever smart
 | Model | QBKG22LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 2 gang smart wall switch (no neutral wire) |
-| Supports | on/off, action, power measurement |
+| Supports | on/off, action |
 | Picture | ![Xiaomi QBKG22LM](../images/devices/QBKG22LM.jpg) |
 
 ## Notes
@@ -91,8 +91,24 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
-    value_template: "{{ value_json.state }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    value_template: "{{ value_json.state_left }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/left/set"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state_right }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/right/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:gesture-double-tap"
+    value_template: "{{ value_json.action }}"
 
 sensor:
   - platform: "mqtt"
@@ -100,14 +116,6 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
-    device_class: "temperature"
-    value_template: "{{ value_json.temperature }}"
 
 sensor:
   - platform: "mqtt"

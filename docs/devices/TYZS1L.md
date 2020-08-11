@@ -11,8 +11,8 @@ description: "Integrate your TuYa TYZS1L via Zigbee2MQTT with whatever smart hom
 
 | Model | TYZS1L  |
 | Vendor  | TuYa  |
-| Description | Zigbee LED Strip controller RGB + CCT or RGBW |
-| Supports | on/off, brightness, color temperature, color xy |
+| Description | Led strip controller HSB |
+| Supports | on/off, color (hue/saturation) |
 | Picture | ![TuYa TYZS1L](../images/devices/TYZS1L.jpg) |
 
 ## Notes
@@ -36,12 +36,9 @@ light:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    brightness: true
-    color_temp: true
-    xy: true
+    hs: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
-    brightness_scale: 254
 
 sensor:
   - platform: "mqtt"
