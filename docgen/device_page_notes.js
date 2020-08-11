@@ -1310,6 +1310,46 @@ Note that this value is overridden if a \`transition\` value is present in the M
 `,
     },
     {
+        model: ['9GED18000-009'],
+        note: `
+### Pin code usage
+To retrieve the state, send a \`get\` message to the device topic (\`zigbee2mqtt/[DEVICE_FRIENDLY_NAME]/get\`) with the body \`{"pin_code":{"user":0}}\`. To set, sent a \`set\` message to the device topic (\`zigbee2mqtt/[DEVICE_FRIENDLY_NAME]/set\`) with the body \`{"pin_code":{"user":0,"pin_code":1234}}\`. To clear a code, call \`set\` but omit the value for \`pin_code\`.
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* \`expose_pin\`: Allows to retrieve the \`pin_code\` value, rather than just user status (\`available\`/\`enabled\`), for \`pin_code\` endpoints (default: \`false\`)
+`,
+    },
+    {
+        supports: ['color'],
+        notModel: ['324131092621', 'ICZB-KPD18S', 'ICZB-KPD14S', 'TYZS1L'],
+        note: `
+* \`hue_correction\`: (optional) Corrects hue values based on a correction map for matching color
+rendition to other lights. Provide a minimum of 2 data sets in the correction map. To build a map:
+    * choose one of your other lights to be the color reference
+    * send a sample color to both lights (reference and non-reference)
+    * modify hue value for non-reference light until it color matches the reference light
+    * take note of the in and out values, where
+        * \`in\` is the hue value you sent to your reference light
+        * \`out\` is the hue value you had to dial your non-reference light to
+    * repeat with a few other sample colors (4-5 should suffice)
+
+    **Example correction map:**
+    \`\`\`yaml
+    hue_correction:
+        - in: 28
+            out: 45
+        - in: 89
+            out: 109
+        - in: 184
+            out: 203
+        - in: 334
+            out: 318
+    \`\`\`
+`,
+    },
+    {
         model: ['JTQJ-BF-01LM/BW', 'JTYJ-GD-01LM/BW'],
         note: `
 ### Sensitivity
