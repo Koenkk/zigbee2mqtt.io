@@ -1808,8 +1808,8 @@
       }
     },
     "zigbee2mqtt": {
-      "version": "git://github.com/koenkk/zigbee2mqtt.git#4f1a0ae9cdc3a2a1d6d11c0a7d07b0d569f3a426",
-      "from": "git://github.com/koenkk/zigbee2mqtt.git#dev",
+      "version": "git://github.com/koenkk/zigbee2mqtt.git#c0143cb40d9f139e03e32b23393f5846e86a941c",
+      "from": "git://github.com/koenkk/zigbee2mqtt.git#1.14.3",
       "requires": {
         "ajv": "^6.12.3",
         "debounce": "^1.2.0",
