@@ -18,6 +18,7 @@ description: "Integrate your TuYa TS0601_thermostat via Zigbee2mqtt with whateve
 
 ## Notes
 
+### Local temperature
 If you'd like to force device to send local_temperature you can use this mqtt command:
 * `topic`: zigbee2mqtt/FRIENDLY_NAME/set/local_temperature_calibration
 * `payload`: YOUR_CURRENT_CALIBRATION_VALUE
