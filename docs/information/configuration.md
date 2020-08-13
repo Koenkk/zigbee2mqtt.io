@@ -289,3 +289,16 @@ devices:
 
 ## Different location
 To specify a different location for the `configuration.yaml` (by default inside the `data` directory), set the `ZIGBEE2MQTT_CONFIG`.
+
+## Override via environment variables
+It is possible to override the values in `configuration.yaml` via environment variables.
+The name of the environment variable should start with `ZIGBEE2MQTT_CONFIG_` followed by the path to the property you want to set in uppercase split by a `_`.
+
+In case you want to for example override:
+
+```yaml
+mqtt:
+  base_topic: zigbee2mqtt
+```
+
+set `ZIGBEE2MQTT_CONFIG_MQTT_BASE_TOPIC` to the desired value.
