@@ -217,10 +217,35 @@ also be read back from the device and be printed to the normal Zigbee2MQTT log.
 `,
     },
     {
-        model: ['D1', 'J1', 'S1', 'S2'],
+        model: ['D1', 'J1'],
         note: `
 ### Configuring Inputs
 In case the inputs need to be reconfigured (e.g. to use stationary switches instead of momentary ones) this can be done in the same way as [it is being done for the ubisys C4](C4.html#configuring-inputs).
+`,
+    },
+    {
+        model: ['S1', 'S2'],
+        note: `
+### Configuring Inputs
+In case the inputs need to be reconfigured (e.g. to use stationary switches instead of momentary ones) this can be done in the same way as [it is being done for the ubisys C4](C4.html#configuring-inputs).
+
+### Decoupling
+You can decouple the switch input form the state, this allows you to control a group of lights using the switch without cutting the power to the bulbs.
+
+By default the input is bound to itself, so we need to unbind it and then bind a zigbee group
+
+\`\`\`
+mosquitto_pub -t zigbee2mqtt/bridge/unbind/<switch_friendly_name>/2 -m <switch_friendly_name>
+mosquitto_pub -t zigbee2mqtt/bridge/bind/<switch_friendly_name>/2 -m <group_name>
+\`\`\`
+
+To restore the original behavior you unbind the group and rebind the device
+
+\`\`\`
+mosquitto_pub -t zigbee2mqtt/bridge/unbind/<switch_friendly_name>/2 -m <group_name>
+mosquitto_pub -t zigbee2mqtt/bridge/bind/<switch_friendly_name>/2 -m <switch_friendly_name>
+\`\`\`
+
 `,
     },
     {
