@@ -31,6 +31,10 @@ To set this option publish to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"power
 Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
 
 
+### Voltage
+Some versions of the plug provide voltage. This depends on the firmware on the device. Confirmed working are the ones with `dateCode` `02-28-2017` (can be checked in `data/database.db`). Note that Xiaomi doesn't provide firmware files, so the software cannot be downgraded/upgraded.
+
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
