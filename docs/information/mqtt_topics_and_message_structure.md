@@ -287,14 +287,15 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
   "transition": 3,
 
   // Instead of setting a brightness by value, you can also move it and stop it after a certain time
-  // "brightness_move" will stop at brightnes 1 and won't turn on bulb when they are off.
-  // In case you want this you can use "brightness_move_onoff" instead of "brightness_move".
+  // "brightness_move" will stop at brightness 1 and won't turn on the bulb if off.
   "brightness_move": -40, // Starts moving the brightness down at 40 units per second
   "brightness_move": "stop", // Stops the brightness move
+  // NOTE: In case you want turn on/off use "brightness_move_onoff" instead of "brightness_move".
 
   // It is also possible to increase/decrease the brightness with a certain value.
-  // "brightness_step" will stop at 1 and therefore not turn off the bulb, for this use "brightness_step_onoff" instead.
+  // "brightness_step" will stop at 1 and therefore not turn off the bulb
   "brightness_step": 40 // Increases the brightness by 40, to decrease use e.g. '-40'
+  // NOTE: In case you want turn on/off use "brightness_step_onoff" instead of "brightness_step".
 
   // Similar to brightness_move, color_temp_move will move the color temperature.
   "color_temp_move": 40, // Starts moving the color temperature up at 40 units per second
