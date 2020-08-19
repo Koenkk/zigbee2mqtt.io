@@ -150,7 +150,7 @@ int LED = 2; //GPIO2=D4 and the Blue LED on the WeMos D1 Mini and the ESP-12E mo
 
 It should be done in a few minutes.
 
-If burning fails/gets stuck at `Request sent already! Waiting for respond...` - try again, check your wiring, try using `1` instead of `0` as the last parameter.
+If burning fails/gets stuck at `Request sent already! Waiting for respond...` - try again, check your wiring, try using `1` instead of `0` as the last parameter. Or try run command with `sudo`.
 
 ### Via Arduino/ESP8266 with CCLib (~3hrs)
 Flashing firmware via Arduino is implemented using the project https://github.com/wavesoft/CCLib
