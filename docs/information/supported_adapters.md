@@ -39,7 +39,7 @@ Zigbee2MQTT officially supports the following adapters:
 - Router firmware: **not yet available**.
 - Bare module can be bought on [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2538)
 - Complete dongle preflashed can be bought on [Tindie](https://www.tindie.com/products/GiovanniCas/cc2538-cc2592-zigbee-dongle-new-zb30/)
-- [How to flash](../getting_started/flashing_the_cc2538.md)
+- [How to flash](./flashing_the_cc2538.md)
 
 ### Electrolama zig-a-zig-ah! (zzh!)
 ![zzh](../images/zzh.jpg)

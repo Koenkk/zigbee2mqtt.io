@@ -30,5 +30,3 @@ Zigbee2MQTT:info  2019-11-09T13:01:14: Coordinator firmware version: '{"type":"z
 
 In the above example the version is `20190425`.
 
-# What's next?
-[Running Zigbee2MQTT](running_zigbee2mqtt.md)
