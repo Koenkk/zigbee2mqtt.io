@@ -31,13 +31,14 @@ Zigbee2MQTT officially supports the following adapters:
 ![CC2538](../images/cc2538.jpg)
 
 - Serial connected Zigbee adapter with external antenna.
-- Cheap but needs specific PCBs to be used as coordinator (+- $5 bare chip / +-20$ for a full dongle), capable to handle +150 devices directly connected.
+- Cheap but needs specific PCBs to be used as coordinator (+- $5 bare chip)
+- Very poferful and capable to handle +150 devices directly connected.
 - Very good range, ~800m line of sight, sensitivity is increased as modules are available only with CC2592
 - Requires JTAG programmer to be flashed
 - Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
-- Router firmware: [Zigbee 3.0]not yet available.
+- Router firmware: **not yet available**.
 - Bare module can be bought on [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2538)
-- Complete dongle preflashed can be bought on Tindie [Tindie](https://www.tindie.com/products/GiovanniCas/cc2538-cc2592-zigbee-dongle-new-zb30/)
+- Complete dongle preflashed can be bought on [Tindie](https://www.tindie.com/products/GiovanniCas/cc2538-cc2592-zigbee-dongle-new-zb30/)
 - [How to flash](../getting_started/flashing_the_cc2538.md)
 
 ### Electrolama zig-a-zig-ah! (zzh!)
