@@ -1,20 +1,20 @@
 ---
-title: "TuYa TS110F control via MQTT"
-description: "Integrate your TuYa TS110F via Zigbee2MQTT with whatever smart home
+title: "TuYa QS-Zigbee-D02-TRIAC-2C-LN control via MQTT"
+description: "Integrate your TuYa QS-Zigbee-D02-TRIAC-2C-LN via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0043.md)*
 
-# TuYa TS110F
+# TuYa QS-Zigbee-D02-TRIAC-2C-LN
 
-| Model | TS110F  |
+| Model | QS-Zigbee-D02-TRIAC-2C-LN  |
 | Vendor  | TuYa  |
 | Description | Wireless switch with 2 gang |
 | Supports | on/off, brightness |
-| Picture | ![TuYa TS110F](../images/devices/TS110F.jpg) |
-| White-label | Lonsonho TS110F |
+| Picture | ![TuYa QS-Zigbee-D02-TRIAC-2C-LN](../images/devices/QS-Zigbee-D02-TRIAC-2C-LN.jpg) |
+| White-label | Lonsonho QS-Zigbee-D02-TRIAC-2C-LN |
 
 ## Notes
 
