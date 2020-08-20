@@ -5,19 +5,22 @@ The CC2538 module needs to be flashed with a custom firmware. This firmware can 
 The programmer can be found on [Aliexpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=jlink+V8+jtag)
 
 ## Windows
-1.
-2. 
-3. 
+1. Install SEGGER [J-Link Software](https://www.segger.com/downloads/jlink/)
+(../images/cc2538-jtag-2.png)
+2. Open SEGGER J-Link Configurator and ensure your JTAG has the latest firmware (upgrade it if this is not your case)
+(../images/cc2538-jtag-3.png)
+3. Connect JTAG programmer to CC2538 module following below diagram:
+(../images/cc2538-jtag-1.png)
+4. Download the firmware [CC2538_CC2592_MODKAMRU_V3_20200211.zip](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.0.x/bin/CC2538_CC2592_MODKAMRU_V3_20200211.zip) and extract it in a folder
+4. Open SEGGER J-Link Flash and select "Create a New Project"
+(../images/cc2538-jtag-4.png)
+5. Make sure you select the right module [TI CC2538SF53] and [JTAG] as Target Interface
+(../images/cc2538-jtag-5.png)
+6. Now select "Open Data File..." and select the right firmware [MODKAMRU_V3_USB.hex]
+(../images/cc2538-jtag-6.png)
+7. Now as a final step in order to successfully program the module select first [Target/Manual Programming/Erase Chip] (or press F4) and then [Target/Manual Programming/Program & Verify] (or press F6)
+(../images/cc2538-jtag-7.png)
 
-1. Install [SmartRF Flash programmer](http://www.ti.com/tool/flash-programmer) (**NOT V2**). This software is free but requires a Texas Instruments account in order to download.
-2. Install the [CC debugger driver](http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=swrc212&fileType=zip) on your PC (Windows only). Before continuing, verify that the CC Debugger driver has been installed correctly. See [Figure 1. Verify Correct Driver Installation @ Chapter 5.1](http://www.ti.com/lit/ug/swru197h/swru197h.pdf). In case the CC Debugger is not recognized correctly [install the driver manually](https://www.youtube.com/watch?v=jyKrxxXOvQY).
-2. Connect `CC debugger --> Downloader cable CC2531 --> CC2531 USB sniffer`.
-3. Connect **BOTH** the `CC2531 USB sniffer` and the `CC debugger` to your PC using USB.
-3. If the light on the CC debugger is RED press set reset button on the CC debugger. The light on the CC debugger should now turn GREEN. If not use [CC debugger user guide](http://www.ti.com/lit/ug/swru197h/swru197h.pdf) to troubleshoot your problem.
-![How to connect](../images/connected.jpg)
-4. Download the firmware [CC2531_DEFAULT_20190608.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip)
-5. Start SmartRF Flash Programmer, setup as shown below and press `Perform actions`. Make sure to select the `.hex` file, not the `.bin` file!
-![SmartRF Flash Programmer](../images/smartrf.png)
 
 # How-to check the installed firmware version
 Zigbee2MQTT will output the installed firmware version to the Zigbee2MQTT log on startup:
