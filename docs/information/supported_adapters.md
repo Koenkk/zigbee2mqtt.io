@@ -1,6 +1,6 @@
 # Supported adapters
 
-Zigbee2MQTT oficially supports the following adapters:
+Zigbee2MQTT officially supports the following adapters:
 
 ### Texas Instruments CC2531
 ![CC2531](../images/cc2531.jpg)
@@ -26,6 +26,19 @@ Zigbee2MQTT oficially supports the following adapters:
 - Can be bought on e.g. AliExpress: [CC2530](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104041&SearchText=cc2530), [CC2530 + CC2591](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104521&SearchText=cc2530+cc2591), [GBAN GB2530](http://www.gban.cn/en/product_show.asp?id=43)
 - How to flash: see flashing section of [How to create a CC2530 router](../how_tos/how_to_create_a_cc2530_router.md) or [alternative flashing methods](./alternative_flashing_methods.md)
 - [Connecting the CC2530](./connecting_cc2530.md)
+
+### Texas Instruments CC2538 with CC2592 RF Amplifier
+![CC2538](../images/cc2538.jpg)
+
+- Serial connected Zigbee adapter with external antenna.
+- Cheap but needs specific PCBs to be used as coordinator (+- $5 bare chip / +-20$ for a full dongle), capable to handle +150 devices directly connected.
+- Very good range, ~800m line of sight, sensitivity is increased as modules are available only with CC2592
+- Requires JTAG programmer to be flashed
+- Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
+- Router firmware: [Zigbee 3.0]not yet available.
+- Bare module can be bought on [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2538)
+- Complete dongle preflashed can be bought on Tindie [Tindie](https://www.tindie.com/products/GiovanniCas/cc2538-cc2592-zigbee-dongle-new-zb30/)
+- [How to flash](../getting_started/flashing_the_cc2538.md)
 
 ### Electrolama zig-a-zig-ah! (zzh!)
 ![zzh](../images/zzh.jpg)
