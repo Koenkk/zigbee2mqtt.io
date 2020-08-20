@@ -33,7 +33,7 @@ Zigbee2MQTT officially supports the following adapters:
 - Serial connected Zigbee adapter with external antenna.
 - Cheap but needs specific PCBs to be used as coordinator (+- $5 bare chip)
 - Very poferful and capable to handle +150 devices directly connected.
-- Very good range, ~800m line of sight, sensitivity is increased as modules are available only with CC2592
+- Very good range, ~800m line of sight, sensitivity is due to the onboard CC2592 Power Amplifier (20db)
 - Requires JTAG programmer to be flashed
 - Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
 - Router firmware: **not yet available**.
