@@ -2,7 +2,7 @@
 ---
 # Flashing the firmware on the CC2538 MODULE
 The CC2538 module needs to be flashed with a custom firmware. This firmware can be flashed with a JTAG programmer.
-The programmer can be found on [Aliexpress](https://it.aliexpress.com/af/jlink-V8-jtag.html?d=y&origin=n&SearchText=jlink+V8+jtag)
+The programmer can be found on [Aliexpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=jlink+V8+jtag)
 
 ## Windows
 1.
