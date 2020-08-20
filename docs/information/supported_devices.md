@@ -795,6 +795,7 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | [TS0042](../devices/TS0042.md) | Lonsonho Wireless switch with 2 buttons (white-label of TuYa TS0042) (action) | ![../images/devices/TS0042.jpg](../images/devices/TS0042.jpg) |
 | [TS0043](../devices/TS0043.md) | Lonsonho Wireless switch with 3 buttons (white-label of TuYa TS0043) (action) | ![../images/devices/TS0043.jpg](../images/devices/TS0043.jpg) |
 | [QS-Zigbee-S05-L](../devices/TS0011.md) | Lonsonho 1 gang smart switch module without neutral wire (white-label of TuYa TS0011) (on/off) | ![../images/devices/QS-Zigbee-S05-L.jpg](../images/devices/QS-Zigbee-S05-L.jpg) |
+| [TS110F](../devices/TS110F.md) | Lonsonho 2 gang smart dimmer switch module with neutral (white-label of TuYa TS110F) (on/off) | ![../images/devices/TS110F.jpg](../images/devices/TS110F.jpg) |
 
 ### Lupus
 
@@ -1213,6 +1214,7 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
 | [SM301Z](../devices/RH3040.md) | Samotech PIR sensor (white-label of TuYa RH3040) (occupancy) | ![../images/devices/SM301Z.jpg](../images/devices/SM301Z.jpg) |
+| [SM309](../devices/ZG9101SAC-HP.md) | ZigBee dimmer 400W (white-label of Sunricher ZG9101SAC-HP) | ![../images/devices/SM309.jpg](../images/devices/SM309.jpg) |
 | [SM311](../devices/ZG2835RAC.md) | Samotech ZigBee knob smart dimmer (white-label of Sunricher ZG2835RAC) (on/off, brightness, power measurements) | ![../images/devices/SM311.jpg](../images/devices/SM311.jpg) |
 
 ### Schlage
