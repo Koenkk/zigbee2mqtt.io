@@ -24,7 +24,7 @@ Zigbee2MQTT:warn  2019-11-09T12:19:56: Device '0x00158d0001dc126a' with Zigbee m
 ### 2. Adding your device
 The next step is the to add an entry of your device to `node_modules/zigbee-herdsman-converters/devices.js`. In order to provide support for E.G. the `lumi.sens` from step 1 you would add:
 
-*NOTE: For installations using the official Hass.io addon and Docker users, devices.js and the other necessary files are accessed differently. This process is explained below for [Hass.io](https://www.zigbee2mqtt.io/how_tos/how_to_support_new_devices.html#hassio-addon) and [Docker](https://www.zigbee2mqtt.io/how_tos/how_to_support_new_devices.html#docker).*
+*NOTE: For installations using the official Hass.io addon and Docker users, devices.js and the other necessary files are accessed differently. This process is explained below for [Home Assistant](https://www.zigbee2mqtt.io/how_tos/how_to_support_new_devices.html#hassio-addon) and [Docker](https://www.zigbee2mqtt.io/how_tos/how_to_support_new_devices.html#docker).*
 
 ```js
 {
