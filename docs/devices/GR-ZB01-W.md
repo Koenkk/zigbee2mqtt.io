@@ -1,6 +1,6 @@
 ---
 title: "AXIS GR-ZB01-W control via MQTT"
-description: "Integrate your AXIS GR-ZB01-W via Zigbee2mqtt with whatever smart home
+description: "Integrate your AXIS GR-ZB01-W via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -17,7 +17,12 @@ description: "Integrate your AXIS GR-ZB01-W via Zigbee2mqtt with whatever smart 
 
 ## Notes
 
-None
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

@@ -38,7 +38,7 @@ Connect to CC2530 to the USB to serial adapter using the following mapping:
 | TXD | P02 |
 | RXD | P03 |
 
-Now plug in the USB-to-serial adapter in your USB port and start Zigbee2mqtt, enjoy!
+Now plug in the USB-to-serial adapter in your USB port and start Zigbee2MQTT, enjoy!
 
 ## To a Raspberry Pi (Zero)
 CC2530 can be connected to a Raspberry PI (Zero) via GPIO Pins - no USB2FTDI is needed.
@@ -82,7 +82,7 @@ P03 -> RXD (Pin10 / BCM 15)
 ![CC2531PI](../images/CC2530_PI.JPG)
 
 
-### Configuring zigbee2mqtt
+### Configuring Zigbee2MQTT
 
 Change the Serial Port in your `data/configuration.yaml` file:
 
@@ -94,7 +94,7 @@ serial:
 Have fun.
 
 ## Via an ESP8266
-This setup allows you to connect a CC2530 to an ESP8266 which can be put everywhere in your house. Via a serial socket, Zigbee2mqtt will connect to your CC2530.
+This setup allows you to connect a CC2530 to an ESP8266 which can be put everywhere in your house. Via a serial socket, Zigbee2MQTT will connect to your CC2530.
 
 ### Wiring
 Wire the CC2530 to the ESP8266 using the following scheme:
@@ -136,8 +136,8 @@ j.    Event processing: Generic
 
 Press Submit, the setup is now completed.
 
-### Zigbee2mqtt configuration
-Now add the following to the Zigbee2mqtt `configuration.yaml`:
+### Zigbee2MQTT configuration
+Now add the following to the Zigbee2MQTT `configuration.yaml`:
 
 ```yaml
 serial:

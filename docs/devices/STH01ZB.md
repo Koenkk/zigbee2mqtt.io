@@ -1,6 +1,6 @@
 ---
 title: "Feibit STH01ZB control via MQTT"
-description: "Integrate your Feibit STH01ZB via Zigbee2mqtt with whatever smart home
+description: "Integrate your Feibit STH01ZB via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

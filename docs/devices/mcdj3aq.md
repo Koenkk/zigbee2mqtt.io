@@ -1,6 +1,6 @@
 ---
 title: "TuYa mcdj3aq control via MQTT"
-description: "Integrate your TuYa mcdj3aq via Zigbee2mqtt with whatever smart home
+description: "Integrate your TuYa mcdj3aq via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -30,6 +30,12 @@ By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can
 ```
 
 - **reverse_direction**: (`true`/`false`, default: `false`). Device can be configured to act in an opposite direction.
+
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
 
 
 ## Manual Home Assistant configuration

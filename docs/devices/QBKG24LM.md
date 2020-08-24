@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi QBKG24LM control via MQTT"
-description: "Integrate your Xiaomi QBKG24LM via Zigbee2mqtt with whatever smart home
+description: "Integrate your Xiaomi QBKG24LM via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -21,6 +21,8 @@ description: "Integrate your Xiaomi QBKG24LM via Zigbee2mqtt with whatever smart
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
+
+You may have to unpair the switch from an existing coordinator before the pairing process will start.
 
 
 ## Manual Home Assistant configuration

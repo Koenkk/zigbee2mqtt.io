@@ -1,6 +1,6 @@
 ---
 title: "SmartThings GP-LBU019BBAWU control via MQTT"
-description: "Integrate your SmartThings GP-LBU019BBAWU via Zigbee2mqtt with whatever smart home
+description: "Integrate your SmartThings GP-LBU019BBAWU via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

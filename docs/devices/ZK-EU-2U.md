@@ -1,6 +1,6 @@
 ---
 title: "Moes ZK-EU-2U control via MQTT"
-description: "Integrate your Moes ZK-EU-2U via Zigbee2mqtt with whatever smart home
+description: "Integrate your Moes ZK-EU-2U via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

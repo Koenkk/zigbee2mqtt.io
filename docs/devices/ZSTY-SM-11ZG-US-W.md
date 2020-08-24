@@ -1,19 +1,19 @@
 ---
-title: "Smart9 S9TSZGB_1 control via MQTT"
-description: "Integrate your Smart9 S9TSZGB_1 via Zigbee2mqtt with whatever smart home
+title: " Somgoms ZSTY-SM-11ZG-US-W control via MQTT"
+description: "Integrate your  Somgoms ZSTY-SM-11ZG-US-W via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/S9TSZGB_1.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZSTY-SM-11ZG-US-W.md)*
 
-# Smart9 S9TSZGB_1
+#  Somgoms ZSTY-SM-11ZG-US-W
 
-| Model | S9TSZGB_1  |
-| Vendor  | Smart9  |
-| Description | Touch switch (1 button) |
-| Supports | action |
-| Picture | ![Smart9 S9TSZGB_1](../images/devices/S9TSZGB_1.jpg) |
+| Model | ZSTY-SM-11ZG-US-W  |
+| Vendor  |  Somgoms  |
+| Description | 1 gang switch |
+| Supports | on/off |
+| Picture | ![ Somgoms ZSTY-SM-11ZG-US-W](../images/devices/ZSTY-SM-11ZG-US-W.jpg) |
 
 ## Notes
 
@@ -26,12 +26,14 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
-sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:gesture-double-tap"
-    value_template: "{{ value_json.action }}"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
 
 sensor:
   - platform: "mqtt"

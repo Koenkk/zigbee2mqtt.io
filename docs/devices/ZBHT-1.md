@@ -1,6 +1,6 @@
 ---
 title: "Smartenit ZBHT-1 control via MQTT"
-description: "Integrate your Smartenit ZBHT-1 via Zigbee2mqtt with whatever smart home
+description: "Integrate your Smartenit ZBHT-1 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -32,7 +32,7 @@ This device is older and seems to be similar to the netvox Z711 (and others).
 
 #### Joining the Network
 1. Remove battery from device
-2. Enable permit-join on Zigbee2mqtt
+2. Enable permit-join on Zigbee2MQTT
 3. Re-install battery in the device
  * The LED will flash 5 times to indicate success (no flashing means not successful)
 4. After successfully joining, press and hold the only button for 3 seconds to broadcast the binding request.

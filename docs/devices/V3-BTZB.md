@@ -1,6 +1,6 @@
 ---
 title: "Danalock V3-BTZB control via MQTT"
-description: "Integrate your Danalock V3-BTZB via Zigbee2mqtt with whatever smart home
+description: "Integrate your Danalock V3-BTZB via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

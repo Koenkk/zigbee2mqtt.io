@@ -1,6 +1,6 @@
 {
   "name": "zigbee2mqtt.io",
-  "description": "Zigbee2mqtt documentation",
+  "description": "Zigbee2MQTT documentation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Koenkk/zigbee2mqtt.io.git"
@@ -31,7 +31,7 @@
   "dependencies": {
     "image-size": "*",
     "json2yaml": "*",
-    "zigbee2mqtt": "git://github.com/koenkk/zigbee2mqtt.git#1.14.2"
+    "zigbee2mqtt": "git://github.com/koenkk/zigbee2mqtt.git#1.14.3"
   },
   "devDependencies": {
     "chai": "*",

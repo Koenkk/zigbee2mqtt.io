@@ -1,6 +1,6 @@
 ---
 title: "DIYRuZ DIYRuZ_Geiger control via MQTT"
-description: "Integrate your DIYRuZ DIYRuZ_Geiger via Zigbee2mqtt with whatever smart home
+description: "Integrate your DIYRuZ DIYRuZ_Geiger via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

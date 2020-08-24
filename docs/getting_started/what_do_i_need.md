@@ -1,7 +1,7 @@
 ---
 ---
 # What do I need?
-In order to run zigbee2mqtt we need the following hardware:
+In order to run Zigbee2MQTT we need the following hardware:
 
 | Name | Price | Picture |
 | ------------- | ------------- | ------------- |

@@ -1,6 +1,6 @@
 ---
 title: "Gledopto GD-CZ-006 control via MQTT"
-description: "Integrate your Gledopto GD-CZ-006 via Zigbee2mqtt with whatever smart home
+description: "Integrate your Gledopto GD-CZ-006 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

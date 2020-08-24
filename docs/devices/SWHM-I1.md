@@ -1,6 +1,6 @@
 ---
 title: "HEIMAN SWHM-I1 control via MQTT"
-description: "Integrate your HEIMAN SWHM-I1 via Zigbee2mqtt with whatever smart home
+description: "Integrate your HEIMAN SWHM-I1 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

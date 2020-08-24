@@ -1,6 +1,6 @@
 ---
 title: "SmartThings F-MLT-US-2 control via MQTT"
-description: "Integrate your SmartThings F-MLT-US-2 via Zigbee2mqtt with whatever smart home
+description: "Integrate your SmartThings F-MLT-US-2 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -59,6 +59,14 @@ binary_sensor:
     payload_off: false
     value_template: "{{ value_json.battery_low}}"
     device_class: "battery"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.moving}}"
 
 sensor:
   - platform: "mqtt"

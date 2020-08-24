@@ -1,6 +1,6 @@
 ---
 title: "TuYa TYZS1L control via MQTT"
-description: "Integrate your TuYa TYZS1L via Zigbee2mqtt with whatever smart home
+description: "Integrate your TuYa TYZS1L via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -11,20 +11,18 @@ description: "Integrate your TuYa TYZS1L via Zigbee2mqtt with whatever smart hom
 
 | Model | TYZS1L  |
 | Vendor  | TuYa  |
-| Description | Zigbee LED Strip controller RGB + CCT or RGBW |
-| Supports | on/off, brightness, color temperature, color xy |
+| Description | Led strip controller HSB |
+| Supports | on/off, color (hue/saturation) |
 | Picture | ![TuYa TYZS1L](../images/devices/TYZS1L.jpg) |
 
 ## Notes
 
 
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
-
-* `transition`: Controls the transition time (in seconds) of on/off, brightness,
-color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
-Note that this value is overridden if a `transition` value is present in the MQTT command payload.
+### Limitations
+This device has various limitations:
+- Changing brightness is not supported
+- On/off and color transition is not supported
+- Color can only be set via hue/saturation, example payload `{"color":{"h": 360, "s": 100}}`.
 
 
 ## Manual Home Assistant configuration
@@ -38,12 +36,9 @@ light:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    brightness: true
-    color_temp: true
-    xy: true
+    hs: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
-    brightness_scale: 254
 
 sensor:
   - platform: "mqtt"

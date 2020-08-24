@@ -1,6 +1,6 @@
 ---
 title: "TuYa TS0601_thermostat control via MQTT"
-description: "Integrate your TuYa TS0601_thermostat via Zigbee2mqtt with whatever smart home
+description: "Integrate your TuYa TS0601_thermostat via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -18,7 +18,13 @@ description: "Integrate your TuYa TS0601_thermostat via Zigbee2mqtt with whateve
 
 ## Notes
 
-None
+### Local temperature
+If you'd like to force device to send local_temperature you can use this mqtt command:
+* `topic`: zigbee2mqtt/FRIENDLY_NAME/set/local_temperature_calibration
+* `payload`: YOUR_CURRENT_CALIBRATION_VALUE
+
+YOUR_CURRENT_CALIBRATION_VALUE can be 0, but if you calibrated temperature for this device send current value.
+After this command thermostat responds with two messages. One for calibration change confirmation, and other with current local_temperature.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

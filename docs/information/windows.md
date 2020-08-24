@@ -1,6 +1,6 @@
-# Running Zigbee2mqtt on Windows
+# Running Zigbee2MQTT on Windows
 
-Since Node.js is fully cross-platform it is possible to run Zigbee2mqtt on Windows.
+Since Node.js is fully cross-platform it is possible to run Zigbee2MQTT on Windows.
 
 Before you start make sure you have [already flashed](../getting_started/flashing_the_cc2531.html) your Zigbee adapter with the appropriate firmware.
 
@@ -22,7 +22,7 @@ Before you start make sure you have [already flashed](../getting_started/flashin
     ```bash
     node --version
     ```
-1. Choose a suitable directory for Zigbee2mqtt and copy all the files from the [Zigbee2mqtt repository](https://github.com/koenkk/zigbee2mqtt)
+1. Choose a suitable directory for Zigbee2MQTT and copy all the files from the [Zigbee2MQTT repository](https://github.com/koenkk/zigbee2mqtt)
     * if you prefer to use git (which you should), just clone the whole repository
         ```bash
         git clone git@github.com:Koenkk/zigbee2mqtt.git
@@ -44,9 +44,9 @@ Before you start make sure you have [already flashed](../getting_started/flashin
 1. Make sure other settings are correct as well
 1. Save and exit
 
-Congratulations, you're now ready to start your Zigbee2mqtt installation
+Congratulations, you're now ready to start your Zigbee2MQTT installation
 
-## 4. Starting Zigbee2mqtt
+## 4. Starting Zigbee2MQTT
 
 Just change to the root directory of your installation and run the application:
 ```bash
@@ -59,13 +59,13 @@ A successful setup produces an output similar to this:
 > zigbee2mqtt@1.6.0 start C:\Users\me\Documents\GitHub\zigbee2mqtt
 > node index.js
 
-  zigbee2mqtt:info 2019-10-18 10:56:22 PM Logging to directory: 'D:\Documents\GitHub\zigbee2mqtt\data\log\2019-10-18.22-56-22'
-  zigbee2mqtt:info 2019-10-18 10:56:22 PM Starting zigbee2mqtt version 1.6.0 (commit #e26ad2a)
-  zigbee2mqtt:info 2019-10-18 10:56:22 PM Starting zigbee-shepherd
-  zigbee2mqtt:info 2019-10-18 10:56:24 PM zigbee-shepherd started
-  zigbee2mqtt:info 2019-10-18 10:56:24 PM Coordinator firmware version: '20190608'
+  Zigbee2MQTT:info 2019-10-18 10:56:22 PM Logging to directory: 'D:\Documents\GitHub\zigbee2mqtt\data\log\2019-10-18.22-56-22'
+  Zigbee2MQTT:info 2019-10-18 10:56:22 PM Starting Zigbee2MQTT version 1.6.0 (commit #e26ad2a)
+  Zigbee2MQTT:info 2019-10-18 10:56:22 PM Starting zigbee-shepherd
+  Zigbee2MQTT:info 2019-10-18 10:56:24 PM zigbee-shepherd started
+  Zigbee2MQTT:info 2019-10-18 10:56:24 PM Coordinator firmware version: '20190608'
 ```
 
-The `Coordinator firmware version: '20190608'` entry means that Zigbee2mqtt has successfully communicated with the USB sniffer.
+The `Coordinator firmware version: '20190608'` entry means that Zigbee2MQTT has successfully communicated with the USB sniffer.
 
-Zigbee2mqtt can be stopped anytime by pressing `CTRL + C` and then confirming with `Y` (on English locales at least).
+Zigbee2MQTT can be stopped anytime by pressing `CTRL + C` and then confirming with `Y` (on English locales at least).

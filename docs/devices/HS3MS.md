@@ -1,6 +1,6 @@
 ---
 title: "HEIMAN HS3MS control via MQTT"
-description: "Integrate your HEIMAN HS3MS via Zigbee2mqtt with whatever smart home
+description: "Integrate your HEIMAN HS3MS via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

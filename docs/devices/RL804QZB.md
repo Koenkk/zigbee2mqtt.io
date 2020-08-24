@@ -1,6 +1,6 @@
 ---
 title: "ORVIBO RL804QZB control via MQTT"
-description: "Integrate your ORVIBO RL804QZB via Zigbee2mqtt with whatever smart home
+description: "Integrate your ORVIBO RL804QZB via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
