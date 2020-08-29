@@ -286,20 +286,22 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
   // Specifies the number of seconds the transition to this state takes (0 by default).
   "transition": 3,
 
-  // Instead of setting a brightness by value, you can also move it and stop it after a certain time
-  // "brightness_move" will stop at brightness 1 and won't turn on the bulb if off.
-  "brightness_move": -40, // Starts moving the brightness down at 40 units per second
-  "brightness_move": "stop", // Stops the brightness move
-  // NOTE: In case you want turn on/off use "brightness_move_onoff" instead of "brightness_move".
-
-  // It is also possible to increase/decrease the brightness with a certain value.
-  // "brightness_step" will stop at 1 and therefore not turn off the bulb
-  "brightness_step": 40 // Increases the brightness by 40, to decrease use e.g. '-40'
-  // NOTE: In case you want turn on/off use "brightness_step_onoff" instead of "brightness_step".
-
-  // Similar to brightness_move, color_temp_move will move the color temperature.
-  "color_temp_move": 40, // Starts moving the color temperature up at 40 units per second
-  "color_temp_move": "stop", // Stops the color temperature move
+  // Instead of setting a brightness, color_temp, hue or saturation it is also possible to:
+  // - move: this will automatically move the value over time, to stop send value "stop" or "0".
+  // - step: this will increment/decrement the current value by the given one.
+  // The direction of move and step can be either up or down, provide a negative value to move/step down, a positive value to move/step up.
+  // NOTE: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use "brightness_move_onoff"/"brightness_step_onoff"
+  // Examples:
+  "brightness_move": -40, // Starts moving brightness down at 40 units per second
+  "brightness_move": 0, // Stop moving brightness
+  "brightness_step": 40 // Increases brightness by 40
+  "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
+  "color_temp_move": "stop", // Stop moving color temperature
+  "color_temp_step": 99, // Increase color temperature by 99
+  "hue_move": 40, // Starts moving hue up at 40 units per second, will endlessly loop (allowed value range: -255 till 255)
+  "hue_step": -90, // Decrease hue by 90 (allowed value range: -255 till 255)
+  "saturation_move": -55, // Starts moving saturation down at -55 units per second (allowed value range: -255 till 255)
+  "saturation_step": 66, // Increase saturation by 66 (allowed value range: -255 till 255)
 }
 ```
 
