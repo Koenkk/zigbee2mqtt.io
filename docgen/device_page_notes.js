@@ -421,10 +421,8 @@ Possible values for \`INTERFACE_MODE\` are:
 | Value | Description |
 | - | - |
 | \`norwegian_han\` | Norwegian HAN  |
-| \`norwegian_han_extra_load\` | Norwegian HAN – Enable extra load. This is need to enable Adion meter
-communication |
-| \`aidon_meter\` | Aidon Meter supporting Norwegian HAN HW interface.
-SW protocol is Aidon Manufacture Specific |
+| \`norwegian_han_extra_load\` | Norwegian HAN – Enable extra load. This is need to enable Adion meter communication |
+| \`aidon_meter\` | Aidon Meter supporting Norwegian HAN HW interface. SW protocol is Aidon Manufacture Specific |
 | \`kaifa_and_kamstrup\` | Kaifa meter and Kamstrup meters running old firmware |
 
 Example of payload: \`{"interface_mode": "norwegian_han_extra_load"}\`
@@ -1551,6 +1549,34 @@ See [link](https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691
 This option allows the device to restore the last on/off state when it's reconnected to power.
 To set this option publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"power_outage_memory": true}\` (or \`false\`).
 Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
+`,
+    },
+    {
+        model: ['ZNCZ02LM'],
+        note: `
+### Voltage
+Some versions of the plug provide voltage. This depends on the firmware on the device. Confirmed working are the ones with \`dateCode\` \`02-28-2017\` (can be checked in \`data/database.db\`). Note that Xiaomi doesn't provide firmware files, so the software cannot be downgraded/upgraded.
+`,
+    },
+    {
+        model: ['TS0601_thermostat'],
+        note: `
+### Local temperature
+If you'd like to force device to send local_temperature you can use this mqtt command:
+* \`topic\`: zigbee2mqtt/FRIENDLY_NAME/set/local_temperature_calibration
+* \`payload\`: YOUR_CURRENT_CALIBRATION_VALUE
+
+YOUR_CURRENT_CALIBRATION_VALUE can be 0, but if you calibrated temperature for this device send current value.
+After this command thermostat responds with two messages. One for calibration change confirmation, and other with current local_temperature.
+`,
+    },
+    {
+        model: ['STS-PRS-251', 'STSS-PRES-001'],
+        note: `
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* \`presence_timeout\`: Timeout (in seconds) after which \`presence: false\` will be send when the device has not checked-in. By default 100 seconds, don't go lower then 30 seconds.
 `,
     },
     {

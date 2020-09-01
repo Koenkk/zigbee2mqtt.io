@@ -12,7 +12,7 @@ description: "Integrate your YSRSAI ZB-CT01 via Zigbee2MQTT with whatever smart 
 | Model | ZB-CT01  |
 | Vendor  | YSRSAI  |
 | Description | Zigbee LED controller (WW/CW) |
-| Supports | on/off, brightness, color temperature |
+| Supports | on/off, brightness, color temperature, color xy |
 | Picture | ![YSRSAI ZB-CT01](../images/devices/ZB-CT01.jpg) |
 
 ## Notes
@@ -64,6 +64,7 @@ light:
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
     color_temp: true
+    xy: true
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     brightness_scale: 254
