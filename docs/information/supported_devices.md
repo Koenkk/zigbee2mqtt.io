@@ -307,6 +307,7 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
 | [43076](../devices/43076.md) | Enbrighten Zigbee in-wall smart switch (on/off) | ![../images/devices/43076.jpg](../images/devices/43076.jpg) |
+| [43084](../devices/43084.md) | Enbrighten Zigbee in-wall smart switch (on/off) | ![../images/devices/43084.jpg](../images/devices/43084.jpg) |
 | [43080](../devices/43080.md) | Enbrighten Zigbee in-wall smart dimmer (on/off, brightness) | ![../images/devices/43080.jpg](../images/devices/43080.jpg) |
 | [43102](../devices/43102.md) | Enbrighten Zigbee in-wall outlet (on/off) | ![../images/devices/43102.jpg](../images/devices/43102.jpg) |
 
