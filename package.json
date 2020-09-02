@@ -31,7 +31,7 @@
   "dependencies": {
     "image-size": "*",
     "json2yaml": "*",
-    "zigbee2mqtt": "git://github.com/koenkk/zigbee2mqtt.git#dev"
+    "zigbee2mqtt": "git://github.com/koenkk/zigbee2mqtt.git#1.14.4"
   },
   "devDependencies": {
     "chai": "*",
