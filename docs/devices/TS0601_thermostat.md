@@ -18,6 +18,7 @@ description: "Integrate your TuYa TS0601_thermostat via Zigbee2MQTT with whateve
 
 ## Notes
 
+
 ### Local temperature
 If you'd like to force device to send local_temperature you can use this mqtt command:
 * `topic`: zigbee2mqtt/FRIENDLY_NAME/set/local_temperature_calibration
@@ -25,6 +26,7 @@ If you'd like to force device to send local_temperature you can use this mqtt co
 
 YOUR_CURRENT_CALIBRATION_VALUE can be 0, but if you calibrated temperature for this device send current value.
 After this command thermostat responds with two messages. One for calibration change confirmation, and other with current local_temperature.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -81,23 +83,33 @@ sensor:
 climate:
   - platform: "mqtt"
     availability_topic: "zigbee2mqtt/bridge/state"
+    temperature_unit: "C"
     min_temp: "5"
     max_temp: "30"
-    modes: 
-      - "off"
-      - "auto"
-      - "heat"
     mode_state_topic: true
     mode_state_template: "{{ value_json.system_mode }}"
     mode_command_topic: true
     current_temperature_topic: true
     current_temperature_template: "{{ value_json.local_temperature }}"
-    temperature_state_topic: true
-    temperature_state_template: "{{ value_json.current_heating_setpoint }}"
-    temperature_command_topic: "current_heating_setpoint"
     temp_step: 0.5
     action_topic: true
     action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
+    modes: 
+      - "auto"
+    hold_modes: 
+      - "schedule"
+      - "manual"
+      - "away"
+      - "boost"
+      - "complex"
+      - "comfort"
+      - "eco"
+    hold_command_topic: true
+    hold_state_template: "{{ value_json.preset }}"
+    hold_state_topic: true
+    temperature_state_topic: true
+    temperature_state_template: "{{ value_json.current_heating_setpoint }}"
+    temperature_command_topic: "current_heating_setpoint"
 
 sensor:
   - platform: "mqtt"

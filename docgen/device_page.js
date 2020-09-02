@@ -103,7 +103,7 @@ function getHomeAssistantConfig(device) {
 {% raw %}
 \`\`\`yaml
 `;
-    const configurations = homeassistant.getConfigs(device);
+    const configurations = homeassistant.getConfigs({definition: device, settings: {}});
 
     if (configurations) {
         configurations.forEach((d, i) => {

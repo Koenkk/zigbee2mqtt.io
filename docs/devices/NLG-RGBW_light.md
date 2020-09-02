@@ -11,7 +11,7 @@ description: "Integrate your Paul Neuhaus NLG-RGBW light via Zigbee2MQTT with wh
 
 | Model | NLG-RGBW light  |
 | Vendor  | Paul Neuhaus  |
-| Description | Various RGBW lights (e.g. 100.110.39, 100.111.57) |
+| Description | Various RGBW lights (e.g. 100.111.57) |
 | Supports | on/off, brightness, color temperature, color xy |
 | Picture | ![Paul Neuhaus NLG-RGBW light](../images/devices/NLG-RGBW-light.jpg) |
 
