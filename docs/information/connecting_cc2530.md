@@ -26,7 +26,7 @@ and the following USB to serial adapters:
 | **CP2102** | ![CP2102](../images/CP2102.png) |
 
 ##### Flashing the firmware
-The required coordinator fimrware can be found here: [Zigbee 1.2](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin) and [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin).
+The required coordinator firmware can be found here: [Zigbee 1.2](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin) and [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin).
 
 ### Connecting
 Connect to CC2530 to the USB to serial adapter using the following mapping:
