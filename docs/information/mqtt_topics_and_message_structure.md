@@ -181,7 +181,8 @@ Example payload:
     },
     "network":{"channel":15,"pan_id":5674,"extended_pan_id":[0,11,22]},
     "log_level":"debug",
-    "permit_join":true
+    "permit_join":true,
+    "config": {...} // Will contain the complete Zigbee2MQTT config expect the network_key
 }
 ```
 
