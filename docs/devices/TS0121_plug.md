@@ -18,7 +18,10 @@ description: "Integrate your TuYa TS0121_plug via Zigbee2MQTT with whatever smar
 
 ## Notes
 
-None
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 10 seconds.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
