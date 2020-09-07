@@ -24,6 +24,9 @@
 ## CC1352P1, CC1352P-2 and CC2652R LaunchXL
 - Case designs for [TI LaunchXL boards for CC1352P1, CC1352P-2 and CC2652R](https://www.thingiverse.com/thing:3928171)
 
+## CC2530 + CC2591 with PSU and C7 socket
+- Case design for a [CC2530 + CC2591 Enclosure](https://www.thingiverse.com/thing:4590891) which has room for an AC to DC 3.3v PSU and a C7 socket
+
 ## Alternatives
 A lot of different case designs can be found via the [Thingiverse search][thingiverse-search-rpi]
 
