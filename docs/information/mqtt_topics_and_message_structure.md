@@ -328,6 +328,12 @@ See [Touchlink](./touchlink.md).
 </details>
 
 <details>
+<summary>zigbee2mqtt/bridge/request/touchlink/scan</summary>
+
+See [Touchlink](./touchlink.md).
+</details>
+
+<details>
 <summary>zigbee2mqtt/bridge/request/health_check</summary>
 
 Allows to check wether Zigbee2MQTT is healthy. Payload has to be empty, example response: `{"data":{"healthy":true},"status":"ok"}`.
