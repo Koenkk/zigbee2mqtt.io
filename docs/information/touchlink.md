@@ -7,6 +7,9 @@ Note that not all Zigbee devices support Touchlink, but most bulbs of common bra
 This allows to scan for Touchlink enabled devices. The outcome of this scan can be used later to determine what device to factory reset. To scan send a MQTT message to `zigbee2mqtt/bridge/request/touchlink/scan` with an empty payload.
 The response will be send to `zigbee2mqtt/bridge/response/touchlink/scan`, example payload: `{"data":{"found":[{ieee_address: '0x12345678', channel: 12}, {ieee_address: '0x12654321', channel: 24}]},"status":"ok"}`.
 
+## Identify
+This allows to identify (e.g. bulb blinking) a device via Touchlink. To identify send a MQTT message to `zigbee2mqtt/bridge/request/touchlink/identify` with payload e.g. `{ieee_address: '0x12345678', channel: 12}` (use scan from above to determine `ieee_address` and `channel`).
+
 ## Factory reset device
 Zigbee2MQTT allows to factory reset devices through Touchlink. This is especially handy for e.g. Philips Hue bulbs as they cannot be factory resetted by turning them on/off 5 times. Demo: [video](https://www.youtube.com/watch?v=kcRj77YGyKk)
 

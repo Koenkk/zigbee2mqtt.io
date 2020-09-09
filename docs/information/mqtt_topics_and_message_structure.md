@@ -322,18 +322,6 @@ Allows to permit or disable joining of new devices. Allowed payloads are `{"valu
 </details>
 
 <details>
-<summary>zigbee2mqtt/bridge/request/touchlink/factory_reset</summary>
-
-See [Touchlink](./touchlink.md).
-</details>
-
-<details>
-<summary>zigbee2mqtt/bridge/request/touchlink/scan</summary>
-
-See [Touchlink](./touchlink.md).
-</details>
-
-<details>
 <summary>zigbee2mqtt/bridge/request/health_check</summary>
 
 Allows to check wether Zigbee2MQTT is healthy. Payload has to be empty, example response: `{"data":{"healthy":true},"status":"ok"}`.
@@ -492,4 +480,24 @@ Sets `advanced` -> `log_level` (persistent). Payload format is `{"value": VALUE}
 <summary>zigbee2mqtt/bridge/request/config/homeassistant</summary>
 
 Enable or disable the Home Assistant integration on the fly (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":true}`, response: `{"data":{"value": "true"},"status":"ok"}`. Possible values are `true` or `false`.
+</details>
+
+#### Touchlink
+
+<details>
+<summary>zigbee2mqtt/bridge/request/touchlink/factory_reset</summary>
+
+See [Touchlink](./touchlink.md).
+</details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/touchlink/scan</summary>
+
+See [Touchlink](./touchlink.md).
+</details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/touchlink/identify</summary>
+
+See [Touchlink](./touchlink.md).
 </details>
