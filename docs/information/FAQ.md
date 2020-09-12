@@ -24,6 +24,7 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - Try repairing the device again for 2 or 3 times.
 - This might be a Zigbee2MQTT bug, [Create a new issue](https://github.com/Koenkk/zigbee2mqtt/issues/new) with the zigbee-herdsman debug logging attached to it. [How to enable zigbee-herdsman debug logging](https://www.zigbee2mqtt.io/information/debug.html#zigbee-herdsman-debug-logging).
 - If device joins with `0x000000000000000` as `ieeeAddress` (you will see: `Starting interview of '0x0000000000000000'` in the Zigbee2MQTT log) your CC253X might be broken. [See issue #2761](https://github.com/Koenkk/zigbee2mqtt/issues/2761).
+- In case the device is a bulb, try resetting it through [Touclink](./touchlink.md)
 
 
 ## What does and does not require repairing of all devices?
