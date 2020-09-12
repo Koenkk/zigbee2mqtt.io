@@ -26,6 +26,7 @@ Welcome to the Zigbee2MQTT documentation! Besides the documentation, you can als
 * [MQTT topics and message structure](information/mqtt_topics_and_message_structure.md)
 * [OTA updates](information/ota_updates.md)
 * [Report](information/report.md)
+* [Scenes](information/scenes.md)
 * [Supported adapters](information/supported_adapters.md)
 * [Touchlink](information/touchlink.md)
 * [Zigbee network](information/zigbee_network.md)
