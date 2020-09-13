@@ -6,6 +6,8 @@
 You need to re-pair all you devices when:
 - Changing the network key (`network_key`) in `configuration.yaml`.
 - Changing the Zigbee channel (`channel`) in `configuration.yaml`.
+- Swiching between a Zigbee 1.2/3.0 coordinator firmware
+- Switching between adapter types (e.g. CC2531 -> CC26X2R1)
 
 ## Doesn't require repairing
 You **don't** need to re-pair your devices when:
