@@ -37,7 +37,8 @@ advanced:
 
 ## Non-pingable devices
 Note that not all devices can be pinged for availability (e.g. battery powered devices).
-This category of devices will be marked as `unavailable` when no message has been received from them for 25 hours.
+This category of devices will be marked as `unavailable` when no message has been received from them for 25 hours (persistent across restarts)
+This is only enabled when the availability feature is enabled.
 
 ## State retrieval
 While this feature is enabled and a bulb reconnects or announces itself on the network, Zigbee2MQTT will retrieve the new state of the device.
