@@ -1,5 +1,5 @@
 # Touchlink
-*NOTE: This is an experimental feature, for an ongoing discussion see: [#2396](https://github.com/Koenkk/zigbee2mqtt/issues/2396)*
+*NOTE: Touchlink is not supported for Deconz adapters (e.g. Conbee II)*
 
 Touchlink is a feature of Zigbee which allows devices physically close to each other to communicate with each other **without** being in the same network.
 
