@@ -126,38 +126,5 @@ Now add the volumes to the Docker container by adding the following to your `doc
 
 Now you can start modifying e.g. `/opt/zigbee-herdsman-converters/devices.js`. Note that after each modification you need to restart the container for the changes to take effect.
 
-## Hass.io addon
-1. Enable SSH access to your Hass.io host following these instructions
-https://developers.home-assistant.io/docs/operating-system/debugging/#ssh-access-to-the-host
-
-2. Connect to your Hass.io host:
-```bash
-ssh root@hassio.local -p 22222
-login
-```
-
-3. Identify the container ID of Zigbee2MQTT using `docker ps`. Look for IMAGE dwelch2101/zigbee2mqtt-armhf and its corresponding CONTAINER ID example: **622baa375aa1**
-
-4. Enter the running container (replace the below container id with yours)
-```bash
-docker exec -it 622baa375aa1 bash
-```
-
-5. You are now inside the Zigbee2MQTT container, examples for opening relevant files:
-```bash
-vi /app/node_modules/zigbee-herdsman-converters/devices.js
-vi /app/node_modules/zigbee-herdsman-converters/converters/fromZigbee.js
-vi /app/node_modules/zigbee-herdsman-converters/converters/toZigbee.js
-vi /app/lib/extension/homeassistant.js
-```
-
-6.  The VI editor is installed on the image, if you are not familiar with VI you may want take a look here:
- [https://www.guru99.com/the-vi-editor.html](https://www.guru99.com/the-vi-editor.html)
-
-7. After making required modifications restart the container for the changes to take effect:
-```bash
-exit
-docker restart 622baa375aa1
-```
-
-Be aware that changes are not persistent, any changes that recreate the Docker container will result in the changes being lost, so make sure your modifications are provided back to the project for out-of-the-box support. Also using the *Restart* button from the web interface will remove your changes.
+## Home Assistant Add-on: hassio-zigbee2mqtt
+To support a new custom device using `hassio-zigbee2mqtt` add-on in preparation for a Pull Request, please follow the instructions here: https://github.com/danielwelch/hassio-zigbee2mqtt#adding-support-for-new-devices
