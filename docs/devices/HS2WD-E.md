@@ -1,6 +1,6 @@
 ---
 title: "HEIMAN HS2WD-E control via MQTT"
-description: "Integrate your HEIMAN HS2WD-E via Zigbee2mqtt with whatever smart home
+description: "Integrate your HEIMAN HS2WD-E via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

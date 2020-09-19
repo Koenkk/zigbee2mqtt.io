@@ -32,7 +32,7 @@ function generate(device) {
 
     return `---
 title: "${device.vendor} ${device.model} control via MQTT"
-description: "Integrate your ${device.vendor} ${device.model} via Zigbee2mqtt with whatever smart home
+description: "Integrate your ${device.vendor} ${device.model} via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -103,7 +103,7 @@ function getHomeAssistantConfig(device) {
 {% raw %}
 \`\`\`yaml
 `;
-    const configurations = homeassistant.getConfigs(device);
+    const configurations = homeassistant.getConfigs({definition: device, settings: {}});
 
     if (configurations) {
         configurations.forEach((d, i) => {

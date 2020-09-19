@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi QBKG12LM control via MQTT"
-description: "Integrate your Xiaomi QBKG12LM via Zigbee2mqtt with whatever smart home
+description: "Integrate your Xiaomi QBKG12LM via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -18,9 +18,24 @@ description: "Integrate your Xiaomi QBKG12LM via Zigbee2mqtt with whatever smart
 ## Notes
 
 
+### Deprecated click event
+By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
+To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+
+```yaml
+devices:
+  '0x12345678':
+    friendly_name: my_device
+    legacy: false
+```
+
+
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
+
+You may have to unpair the switch from an existing coordinator before the pairing process will start.
 
 
 ### Device type specific configuration
@@ -38,15 +53,17 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 ### Decoupled mode
 Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
 This might be useful to assign some custom actions to buttons and control relay remotely.
-This command also allows to redefine which button controls which relay for the double switch.
+This command also allows to redefine which button controls which relay for the double switch (not supported for QBKG25LM).
 
-Special topics should be used: `zigbee2mqtt/[FRIENDLY_NAME]/system/set` to modify operation mode.
+Topic `zigbee2mqtt/[FRIENDLY_NAME]/system/set` should be used to modify operation mode.
+
+**NOTE:** For QBKG25LM instead of `system` use `left`, `center` or `right` and leave out the `button` property in the payload.
 
 Payload:
 ```js
 {
   "operation_mode": {
-    "button": "single"|"left"|"right",
+    "button": "single"|"left"|"right", // Always use single for a single switch
     "state": "VALUE"
   }
 }
@@ -54,9 +71,9 @@ Payload:
 
 Values                | Description
 ----------------------|---------------------------------------------------------
-`control_relay`       | Button directly controls relay (for single switch)
-`control_left_relay`  | Button directly controls left relay (for double switch)
-`control_right_relay` | Button directly controls right relay (for double switch)
+`control_relay`       | Button directly controls relay (for single switch and QBKG25LM)
+`control_left_relay`  | Button directly controls left relay (for double switch, not supported for QBKG25LM)
+`control_right_relay` | Button directly controls right relay (for double switch, not supported for QBKG25LM)
 `decoupled`           | Button doesn't control any relay
 
 `zigbee2mqtt/[FRIENDLY_NAME]/system/get` to read current mode.
@@ -65,15 +82,12 @@ Payload:
 ```js
 {
   "operation_mode": {
-    "button": "single"|"left"|"right"
+    "button": "single"|"left"|"right" // Always use single for a single switch
   }
 }
 ```
 
-Response will be sent to `zigbee2mqtt/[FRIENDLY_NAME]`:
-```json
-{"operation_mode_right":"control_right_relay"}
-```
+Response will be sent to `zigbee2mqtt/[FRIENDLY_NAME]`, example: `{"operation_mode_right":"control_right_relay"}`
 
 
 ## Manual Home Assistant configuration
@@ -123,6 +137,13 @@ sensor:
     unit_of_measurement: "°C"
     device_class: "temperature"
     value_template: "{{ value_json.temperature }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:gesture-double-tap"
+    value_template: "{{ value_json.action }}"
 
 sensor:
   - platform: "mqtt"

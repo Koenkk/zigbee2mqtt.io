@@ -1,6 +1,6 @@
 ---
 title: "NET2GRID N2G-SP control via MQTT"
-description: "Integrate your NET2GRID N2G-SP via Zigbee2mqtt with whatever smart home
+description: "Integrate your NET2GRID N2G-SP via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -17,7 +17,19 @@ description: "Integrate your NET2GRID N2G-SP via Zigbee2mqtt with whatever smart
 
 ## Notes
 
-None
+
+### Deprecated click event
+By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
+To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+
+```yaml
+devices:
+  '0x12345678':
+    friendly_name: my_device
+    legacy: false
+```
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -42,6 +54,14 @@ switch:
     payload_on: "ON"
     value_template: "{{ value_json.state }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "kWh"
+    icon: "mdi:power-plug"
+    value_template: "{{ value_json.energy }}"
 
 sensor:
   - platform: "mqtt"

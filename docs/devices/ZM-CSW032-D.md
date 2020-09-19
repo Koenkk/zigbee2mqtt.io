@@ -1,6 +1,6 @@
 ---
 title: "Zemismart ZM-CSW032-D control via MQTT"
-description: "Integrate your Zemismart ZM-CSW032-D via Zigbee2mqtt with whatever smart home
+description: "Integrate your Zemismart ZM-CSW032-D via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

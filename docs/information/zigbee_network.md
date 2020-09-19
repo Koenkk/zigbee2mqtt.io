@@ -3,7 +3,7 @@
 # Zigbee network
 
 ## Device types
-In Zigbee, there are three different types of devices: end device, router, and coordinator. A Zigbee network always has **one** (and no more) coordinator, and can have multiple routers and end devices. In the case of zigbee2mqtt, the coordinator is your CC2531 USB stick.
+In Zigbee, there are three different types of devices: end device, router, and coordinator. A Zigbee network always has **one** (and no more) coordinator, and can have multiple routers and end devices. In the case of Zigbee2MQTT, the coordinator is your CC2531 USB stick.
 
 ### End Device
 End devices do not route traffic. They may also sleep, which makes end devices a suitable choice for battery operated devices. An end device only has one parent, either the coordinator or a router, generally the closest device when it was paired. All communications to and from the end device is via their parent. If a parent router goes offline all traffic to its children will cease until those end devices time out and attempt to find a new parent. Some models of end device, notably Xiaomi, don't attempt to find a new parent so will remain isolated until re-paired with the network.
@@ -24,7 +24,7 @@ A coordinator is a special router. In addition to all of the router capabilities
 *Examples: [CC2531 USB sniffer flashed with the coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/default)*
 
 ### Finding out the type of your device
-Zigbee2mqtt logs the device type of your devices on startup, e.g.:
+Zigbee2MQTT logs the device type of your devices on startup, e.g.:
 ```
 2018-5-28 20:39:46 INFO 0x00158d00018255df (0x00158d00018255df): ZNCZ02LM - Xiaomi Mi power plug ZigBee (Router)
 2018-5-28 20:39:46 INFO 0x00158d0001b79111 (0x00158d0001b79111): WSDCGQ01LM - Xiaomi MiJia temperature & humidity sensor (EndDevice)

@@ -1,6 +1,6 @@
 ---
 title: "Develco EMIZB-132 control via MQTT"
-description: "Integrate your Develco EMIZB-132 via Zigbee2mqtt with whatever smart home
+description: "Integrate your Develco EMIZB-132 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -28,10 +28,8 @@ Possible values for `INTERFACE_MODE` are:
 | Value | Description |
 | - | - |
 | `norwegian_han` | Norwegian HAN  |
-| `norwegian_han_extra_load` | Norwegian HAN – Enable extra load. This is need to enable Adion meter
-communication |
-| `aidon_meter` | Aidon Meter supporting Norwegian HAN HW interface.
-SW protocol is Aidon Manufacture Specific |
+| `norwegian_han_extra_load` | Norwegian HAN – Enable extra load. This is need to enable Adion meter communication |
+| `aidon_meter` | Aidon Meter supporting Norwegian HAN HW interface. SW protocol is Aidon Manufacture Specific |
 | `kaifa_and_kamstrup` | Kaifa meter and Kamstrup meters running old firmware |
 
 Example of payload: `{"interface_mode": "norwegian_han_extra_load"}`

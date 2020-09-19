@@ -1,6 +1,6 @@
 ---
 title: "Climax PSM-29ZBSR control via MQTT"
-description: "Integrate your Climax PSM-29ZBSR via Zigbee2mqtt with whatever smart home
+description: "Integrate your Climax PSM-29ZBSR via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -14,6 +14,7 @@ description: "Integrate your Climax PSM-29ZBSR via Zigbee2mqtt with whatever sma
 | Description | Power plug |
 | Supports | on/off, power measurement |
 | Picture | ![Climax PSM-29ZBSR](../images/devices/PSM-29ZBSR.jpg) |
+| White-label | Blaupunkt PSM-S1 |
 
 ## Notes
 

@@ -6,12 +6,12 @@
     </a>
 </div>
 
-Welcome to the Zigbee2mqtt documentation! Besides the documentation, you can also get support and ask questions on the [Forum](http://zigbee2mqtt.discourse.group/) and [Discord channel](https://discord.gg/NyseBeK). In case you want to donate click the 'Sponsor' button [here](https://github.com/Koenkk/zigbee2mqtt).
+Welcome to the Zigbee2MQTT documentation! Besides the documentation, you can also get support and ask questions on the [Forum](http://zigbee2mqtt.discourse.group/) and [Discord channel](https://discord.gg/NyseBeK). In case you want to donate click the 'Sponsor' button [here](https://github.com/Koenkk/zigbee2mqtt).
 
 ### Getting started
 * [What do I need?](getting_started/what_do_i_need.md)
 * [Flashing the CC2531 USB stick](getting_started/flashing_the_cc2531.md)
-* [Running Zigbee2mqtt](getting_started/running_zigbee2mqtt.md)
+* [Running Zigbee2MQTT](getting_started/running_zigbee2mqtt.md)
 * [Pairing devices](getting_started/pairing_devices.md)
 * [Supported devices](information/supported_devices.md)
 
@@ -30,10 +30,10 @@ Welcome to the Zigbee2mqtt documentation! Besides the documentation, you can als
 * [Touchlink](information/touchlink.md)
 * [Zigbee network](information/zigbee_network.md)
 
-### Running Zigbee2mqtt on ...
-Besides running Zigbee2mqtt on [bare-metal Linux](getting_started/running_zigbee2mqtt.md) it can also run on:
+### Running Zigbee2MQTT on ...
+Besides running Zigbee2MQTT on [bare-metal Linux](getting_started/running_zigbee2mqtt.md) it can also run on:
 * [Docker](information/docker.md)
-* [Hass.io (official Zigbee2mqtt add-on)](https://github.com/danielwelch/hassio-zigbee2mqtt)
+* [Home Assistant (official Zigbee2MQTT add-on)](https://github.com/danielwelch/hassio-zigbee2mqtt)
 * [Virtual environment](information/virtual_environment.md)
 * [Windows](information/windows.md)
 
@@ -52,8 +52,8 @@ Besides running Zigbee2mqtt on [bare-metal Linux](getting_started/running_zigbee
 * [Home Assistant](integration/home_assistant.md)
 * [MQTT Explorer](https://mqtt-explorer.com) (debug tool for custom integrations)
 * [Majordomo](https://github.com/directman66/majordomo-zigbee2mqtt/) (Russian)
-* [Mozilla IoT WebThings Gateway via zigbee2mqtt adapter](https://github.com/kabbi/zigbee2mqtt-adapter)
-* [Zigbee2MqttAssistant](https://github.com/yllibed/Zigbee2MqttAssistant) (GUI for Zigbee2Mqtt)
+* [Mozilla IoT WebThings Gateway via Zigbee2MQTT adapter](https://github.com/kabbi/zigbee2mqtt-adapter)
+* [Zigbee2MqttAssistant](https://github.com/yllibed/Zigbee2MqttAssistant) (GUI for Zigbee2MQTT)
 * [openHAB](https://community.openhab.org/t/howto-use-zigbee2mqtt-with-openhab-removing-proprietary-bridges-gateways/48768)
 
 ### Support
@@ -65,4 +65,4 @@ Besides running Zigbee2mqtt on [bare-metal Linux](getting_started/running_zigbee
   * [Home Assistant forum (English)](https://community.home-assistant.io/t/zigbee2mqtt-getting-rid-of-your-proprietary-zigbee-bridges-xiaomi-hue-tradfri/52108)
   * [HassioHelp (Italian)](https://hassiohelp.eu/2019/04/14/indice/#ZigBee)
   * [Russian community telegram chat (Russian)](https://t.me/zigbeer)
-  * [Danish guide about Zigbee2mqtt on Home Assistant (Danish)](https://robotnet.dk/2020/installer-mosquitto-mqtt-broker-og-zigbee2mqtt.html)
+  * [Danish guide about Zigbee2MQTT on Home Assistant (Danish)](https://robotnet.dk/2020/installer-mosquitto-mqtt-broker-og-zigbee2mqtt.html)

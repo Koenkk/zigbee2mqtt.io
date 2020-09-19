@@ -87,4 +87,21 @@ describe('Device images', () => {
 
         chai.assert.strictEqual(invalid.length, 0, `Invalid device image dimensions: ${invalid.join(', ')}`);
     });
+
+    it('All device images should be .jpg', () => {
+        const invalid = [];
+
+        fs.readdirSync(imageBase).forEach((file) => {
+            if (['.DS_Store'].includes(path.basename(file))) {
+                return;
+            }
+
+            if (!file.toLowerCase().endsWith('.jpg')) {
+                invalid.push(file);
+                return;
+            }
+        });
+
+        chai.assert.strictEqual(invalid.length, 0, `Device image not .jpg: ${invalid.join(', ')}`);
+    });
 });

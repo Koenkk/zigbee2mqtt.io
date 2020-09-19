@@ -1,13 +1,13 @@
 ---
 ---
-# Running Zigbee2mqtt in Virtual Environment
-It is possible to run Zigbee2mqtt in a virtual environment, this has been tested with a Raspberry Pi 3B+.
+# Running Zigbee2MQTT in Virtual Environment
+It is possible to run Zigbee2MQTT in a virtual environment, this has been tested with a Raspberry Pi 3B+.
 
-This guide is similar to the [Running zigbee2mqtt guide](../getting_started/running_zigbee2mqtt.md), follow the steps from there by replacing the steps with the ones from below.
+This guide is similar to the [Running Zigbee2MQTT guide](../getting_started/running_zigbee2mqtt.md), follow the steps from there by replacing the steps with the ones from below.
 
 ## 2. Installing
 ```bash
-# Clone zigbee2mqtt repository
+# Clone Zigbee2MQTT repository
 sudo git clone https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 sudo chown -R pi:pi /opt/zigbee2mqtt
 
@@ -41,7 +41,7 @@ npm ci
 deactivate
 ```
 
-## 4. Starting zigbee2mqtt
+## 4. Starting Zigbee2MQTT
 ```bash
 # Enter folder
 cd /opt/zigbee2mqtt
@@ -59,9 +59,9 @@ deactivate
 ```
 
 ## 5. (Optional) Running as a daemon with systemctl
-To run zigbee2mqtt as daemon (in background) and start it automatically on boot we will run Zigbee2mqtt with systemctl.
+To run Zigbee2MQTT as daemon (in background) and start it automatically on boot we will run Zigbee2MQTT with systemctl.
 ```bash
-# Create a systemctl configuration file for zigbee2mqtt
+# Create a systemctl configuration file for Zigbee2MQTT
 sudo nano /etc/systemd/system/zigbee2mqtt.service
 ```
 
@@ -84,13 +84,13 @@ User=pi
 WantedBy=multi-user.target
 ```
 
-Now continue with *Verify that the configuration works:* from the *Running Zigbee2mqtt guide*.
+Now continue with *Verify that the configuration works:* from the *Running Zigbee2MQTT guide*.
 
-## 6. (For later) Update Zigbee2mqtt to the latest version
-To update Zigbee2mqtt to the latest version, execute:
+## 6. (For later) Update Zigbee2MQTT to the latest version
+To update Zigbee2MQTT to the latest version, execute:
 
 ```sh
-# Stop zigbee2mqtt and go to directory
+# Stop Zigbee2MQTT and go to directory
 sudo systemctl stop zigbee2mqtt
 cd /opt/zigbee2mqtt
 
@@ -112,6 +112,6 @@ rm -rf data-backup
 # Deactivate environment
 deactivate
 
-# Start zigbee2mqtt
+# Start Zigbee2MQTT
 sudo systemctl start zigbee2mqtt
 ```

@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi MCCGQ11LM control via MQTT"
-description: "Integrate your Xiaomi MCCGQ11LM via Zigbee2mqtt with whatever smart home
+description: "Integrate your Xiaomi MCCGQ11LM via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -20,7 +20,17 @@ description: "Integrate your Xiaomi MCCGQ11LM via Zigbee2mqtt with whatever smar
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join.
+After this the device will automatically join. If this doesn't work, try with a single short button press.
+
+
+### Troubleshooting: device stops sending messages/disconnects from network
+Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes happens that they disconnect from the network.
+Most of the times this happens because of the following reasons:
+- Device has a weak signal, you can see the signal quality in the published messages as `linkquality`. A linkquality < 20 is considered weak.
+- Low battery voltage, this can even happen when the battery still appears full. Try a different battery.
+- The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, OSRAM, Sylvania, SmartThings, Securifi.
+
+More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
 
 ### Recommendation

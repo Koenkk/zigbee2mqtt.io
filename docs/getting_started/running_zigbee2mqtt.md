@@ -1,9 +1,9 @@
 ---
 ---
-# Running Zigbee2mqtt
-These instructions explain how to run Zigbee2mqtt on bare-metal Linux.
+# Running Zigbee2MQTT
+These instructions explain how to run Zigbee2MQTT on bare-metal Linux.
 
-You can also run Zigbee2mqtt in a [Docker container](../information/docker.md), as the [Hass.io Zigbee2mqtt add-on](https://github.com/danielwelch/hassio-zigbee2mqtt), in a [Python Virtual Enviroment](../information/virtual_environment.md) or even on [Windows](../information/windows.md).
+You can also run Zigbee2MQTT in a [Docker container](../information/docker.md), as the [Home Assistant Zigbee2MQTT add-on](https://github.com/danielwelch/hassio-zigbee2mqtt), in a [Python Virtual Enviroment](../information/virtual_environment.md) or even on [Windows](../information/windows.md).
 
 For the sake of simplicity this guide assumes running on a Raspberry Pi 3 with Raspbian Stretch Lite, but will work on any Linux machine.
 
@@ -45,7 +45,7 @@ sudo apt-get install -y nodejs git make g++ gcc
 node --version  # Should output v12.X or v10.X
 npm --version  # Should output 6.X
 
-# Clone zigbee2mqtt repository
+# Clone Zigbee2MQTT repository
 sudo git clone https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 sudo chown -R pi:pi /opt/zigbee2mqtt
 
@@ -63,7 +63,7 @@ added 383 packages in 111.613s
 Note that the `npm ci` produces some `warning` which can be ignored.
 
 ## 3. Configuring
-Before we can start Zigbee2mqtt we need to edit the `configuration.yaml` file. This file contains the configuration which will be used by Zigbee2mqtt.
+Before we can start Zigbee2MQTT we need to edit the `configuration.yaml` file. This file contains the configuration which will be used by Zigbee2MQTT.
 
 Open the configuration file:
 ```bash
@@ -75,7 +75,7 @@ For a basic configuration, the default settings are probably good. The only thin
 ```yaml
 # MQTT settings
 mqtt:
-  # MQTT base topic for zigbee2mqtt MQTT messages
+  # MQTT base topic for Zigbee2MQTT MQTT messages
   base_topic: zigbee2mqtt
   # MQTT server URL
   server: 'mqtt://localhost'
@@ -85,7 +85,7 @@ mqtt:
 ```
 Save the file and exit.
 
-It is recommended to use a custom network key. This can be done by adding the following to your `configuration.yaml`. With this Zigbee2mqtt will generate a network key on next startup.
+It is recommended to use a custom network key. This can be done by adding the following to your `configuration.yaml`. With this Zigbee2MQTT will generate a network key on next startup.
 
 ```yaml
 advanced:
@@ -97,8 +97,8 @@ This can be done with the following command:
 echo "\n\nadvanced:\n    network_key: GENERATE" >> /opt/zigbee2mqtt/data/configuration.yaml
 ```
 
-## 4. Starting zigbee2mqtt
-Now that we have setup everything correctly we can start zigbee2mqtt.
+## 4. Starting Zigbee2MQTT
+Now that we have setup everything correctly we can start Zigbee2MQTT.
 
 ```bash
 cd /opt/zigbee2mqtt
@@ -107,27 +107,27 @@ npm start
 
 When started successfully, you will see something like:
 ```bash
-zigbee2mqtt:info  2019-11-09T13:04:01: Logging to directory: '/opt/zigbee2mqtt/data/log/2019-11-09.14-04-01'
-zigbee2mqtt:info  2019-11-09T13:04:01: Starting zigbee2mqtt version 1.6.0 (commit #720e393)
-zigbee2mqtt:info  2019-11-09T13:04:01: Starting zigbee-herdsman...
-zigbee2mqtt:info  2019-11-09T13:04:03: zigbee-herdsman started
-zigbee2mqtt:info  2019-11-09T13:04:03: Coordinator firmware version: '{"type":"zStack30x","meta":{"transportrev":2,"product":2,"majorrel":2,"minorrel":7,"maintrel":2,"revision":20190425}}'
-zigbee2mqtt:info  2019-11-09T13:04:03: Currently 0 devices are joined:
-zigbee2mqtt:warn  2019-11-09T13:04:03: `permit_join` set to  `true` in configuration.yaml.
-zigbee2mqtt:warn  2019-11-09T13:04:03: Allowing new devices to join.
-zigbee2mqtt:warn  2019-11-09T13:04:03: Set `permit_join` to `false` once you joined all devices.
-zigbee2mqtt:info  2019-11-09T13:04:03: Zigbee: allowing new devices to join.
-zigbee2mqtt:info  2019-11-09T13:04:03: Connecting to MQTT server at mqtt://localhost
-zigbee2mqtt:info  2019-11-09T13:04:03: Connected to MQTT server
+Zigbee2MQTT:info  2019-11-09T13:04:01: Logging to directory: '/opt/zigbee2mqtt/data/log/2019-11-09.14-04-01'
+Zigbee2MQTT:info  2019-11-09T13:04:01: Starting Zigbee2MQTT version 1.6.0 (commit #720e393)
+Zigbee2MQTT:info  2019-11-09T13:04:01: Starting zigbee-herdsman...
+Zigbee2MQTT:info  2019-11-09T13:04:03: zigbee-herdsman started
+Zigbee2MQTT:info  2019-11-09T13:04:03: Coordinator firmware version: '{"type":"zStack30x","meta":{"transportrev":2,"product":2,"majorrel":2,"minorrel":7,"maintrel":2,"revision":20190425}}'
+Zigbee2MQTT:info  2019-11-09T13:04:03: Currently 0 devices are joined:
+Zigbee2MQTT:warn  2019-11-09T13:04:03: `permit_join` set to  `true` in configuration.yaml.
+Zigbee2MQTT:warn  2019-11-09T13:04:03: Allowing new devices to join.
+Zigbee2MQTT:warn  2019-11-09T13:04:03: Set `permit_join` to `false` once you joined all devices.
+Zigbee2MQTT:info  2019-11-09T13:04:03: Zigbee: allowing new devices to join.
+Zigbee2MQTT:info  2019-11-09T13:04:03: Connecting to MQTT server at mqtt://localhost
+Zigbee2MQTT:info  2019-11-09T13:04:03: Connected to MQTT server
 ```
 
-Zigbee2mqtt can be stopped by pressing `CTRL + C`.
+Zigbee2MQTT can be stopped by pressing `CTRL + C`.
 
 ## 5. (Optional) Running as a daemon with systemctl
-To run zigbee2mqtt as daemon (in background) and start it automatically on boot we will run Zigbee2mqtt with systemctl.
+To run Zigbee2MQTT as daemon (in background) and start it automatically on boot we will run Zigbee2MQTT with systemctl.
 
 ```bash
-# Create a systemctl configuration file for zigbee2mqtt
+# Create a systemctl configuration file for Zigbee2MQTT
 sudo nano /etc/systemd/system/zigbee2mqtt.service
 ```
 
@@ -155,7 +155,7 @@ Save the file and exit.
 
 Verify that the configuration works:
 ```bash
-# Start zigbee2mqtt
+# Start Zigbee2MQTT
 sudo systemctl start zigbee2mqtt
 
 # Show status
@@ -177,11 +177,11 @@ pi@raspberry:/opt/zigbee2mqtt $ systemctl status zigbee2mqtt.service
 Jun 07 20:27:22 raspberry systemd[1]: Started zigbee2mqtt.
 Jun 07 20:27:23 raspberry npm[665]: > zigbee2mqtt@1.6.0 start /opt/zigbee2mqtt
 Jun 07 20:27:23 raspberry npm[665]: > node index.js
-Jun 07 20:27:24 raspberry npm[665]: zigbee2mqtt:info  2019-11-09T13:04:01: Logging to directory: '/opt/zigbee2mqtt/data/log/2019-11-09.14-04-01'
-Jun 07 20:27:25 raspberry npm[665]: zigbee2mqtt:info  2019-11-09T13:04:01: Starting zigbee2mqtt version 1.6.0 (commit #720e393)
+Jun 07 20:27:24 raspberry npm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Logging to directory: '/opt/zigbee2mqtt/data/log/2019-11-09.14-04-01'
+Jun 07 20:27:25 raspberry npm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Starting Zigbee2MQTT version 1.6.0 (commit #720e393)
 ```
 
-Now that everything works, we want systemctl to start zigbee2mqtt automatically on boot, this can be done by executing:
+Now that everything works, we want systemctl to start Zigbee2MQTT automatically on boot, this can be done by executing:
 ```bash
 sudo systemctl enable zigbee2mqtt.service
 ```
@@ -190,21 +190,21 @@ Done! 😃
 
 Some tips that can be handy later:
 ```bash
-# Stopping zigbee2mqtt
+# Stopping Zigbee2MQTT
 sudo systemctl stop zigbee2mqtt
 
-# Starting zigbee2mqtt
+# Starting Zigbee2MQTT
 sudo systemctl start zigbee2mqtt
 
-# View the log of zigbee2mqtt
+# View the log of Zigbee2MQTT
 sudo journalctl -u zigbee2mqtt.service -f
 ```
 
-## 6. (For later) Update Zigbee2mqtt to the latest version
-To update Zigbee2mqtt to the latest version, execute:
+## 6. (For later) Update Zigbee2MQTT to the latest version
+To update Zigbee2MQTT to the latest version, execute:
 
 ```sh
-# Stop zigbee2mqtt and go to directory
+# Stop Zigbee2MQTT and go to directory
 sudo systemctl stop zigbee2mqtt
 cd /opt/zigbee2mqtt
 
@@ -220,7 +220,7 @@ npm ci
 cp -R data-backup/* data
 rm -rf data-backup
 
-# Start zigbee2mqtt
+# Start Zigbee2MQTT
 sudo systemctl start zigbee2mqtt
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: "Nue / 3A HGZB-01A control via MQTT"
-description: "Integrate your Nue / 3A HGZB-01A via Zigbee2mqtt with whatever smart home
+description: "Integrate your Nue / 3A HGZB-01A via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 

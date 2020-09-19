@@ -1,6 +1,6 @@
 ---
 title: "Oujiabao CR701-YZ control via MQTT"
-description: "Integrate your Oujiabao CR701-YZ via Zigbee2mqtt with whatever smart home
+description: "Integrate your Oujiabao CR701-YZ via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
