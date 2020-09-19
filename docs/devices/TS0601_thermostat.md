@@ -21,7 +21,7 @@ description: "Integrate your TuYa TS0601_thermostat via Zigbee2MQTT with whateve
 
 ### Pairing
 
-While pairing, keep the valve close to the CC2531 USB sniffer.
+While pairing, keep the valve close to the coordinator.
 
 1. *Turn the display on*: Short press home (:house:).
 2. *Enter settings*: Long press home (:house:) for 3sec.
