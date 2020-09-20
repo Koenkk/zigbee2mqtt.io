@@ -30,9 +30,9 @@ Zigbee2MQTT logs the device type of your devices on startup, e.g.:
 2018-5-28 20:39:46 INFO 0x00158d0001b79111 (0x00158d0001b79111): WSDCGQ01LM - Xiaomi MiJia temperature & humidity sensor (EndDevice)
 ```
 
-# Zigbee networking
+## Zigbee networking
 
-This section is an overview of how the zigbee protocol stack divides into layers (See (Wikipedia - IP layers)[https://en.wikipedia.org/wiki/Internet_protocol_suite#Layer_names_and_number_of_layers_in_the_literature] ).  The number of layers in this type of description often varies; this discussion uses 4:
+This section is an overview of how the zigbee protocol stack divides into layers (See [Wikipedia - IP layers](https://en.wikipedia.org/wiki/Internet_protocol_suite#Layer_names_and_number_of_layers_in_the_literature) ).  The number of layers in this type of description often varies; this discussion uses 4:
 
 * the physical and MAC layers, 
 * the network and transport layer,
@@ -41,17 +41,17 @@ This section is an overview of how the zigbee protocol stack divides into layers
 
 Most of the focus will be on the last two layers.
 
-## Physical and MAC layers
+### Physical and MAC layers
 
-The Physical and MAC layers of the Zigbee protocol are defined by (IEEE 802.15.4)[https://en.wikipedia.org/wiki/IEEE_802.15.4].  This is a common set of standards that are used by multiple protocol stacks, including Zigbee, 6LoWPAN, Thread and Z-Wave.  There are actually a few different frequency bands that IEEE 802.15.4 can use; the same 2.4 GHz band that WiFi can use, and then an 800 MhZ and a 900MhZ band whose use varies by country.  In general, devices using one stack choose one of these and avoid the others.  For example, Zigbee devices generally use the 2.4 GHz band and Z-Wave devices generally use the 8/900 MHz bands (depending on country).
+The Physical and MAC layers of the Zigbee protocol are defined by [IEEE 802.15.4](https://en.wikipedia.org/wiki/IEEE_802.15.4).  This is a common set of standards that are used by multiple protocol stacks, including Zigbee, 6LoWPAN, Thread and Z-Wave.  There are actually a few different frequency bands that IEEE 802.15.4 can use; the same 2.4 GHz band that WiFi can use, and then an 800 MhZ and a 900MhZ band whose use varies by country.  In general, devices using one stack choose one of these and avoid the others.  For example, Zigbee devices generally use the 2.4 GHz band and Z-Wave devices generally use the 8/900 MHz bands (depending on country).
 
-## The Network and Transport layers
+### The Network and Transport layers
 
-The Network and Transport layers are where the routing, security and transport between the various nodes in a Zigbee network are defined.  This includes things like the network encryption model.  This is also where the difference between the controller, routers and end-nodes is defined in the Zigbee network - see #device-types.  There is one other Zigbee concept that I’ll put at the transport layer; the concept of Endpoints.  Similar to ports in TCP/IP, Endpoints allow each physical device to have multiple virtual devices on the network.  For example, a 3-gang zigbee switch might have a single radio, and hence only one MAC address and only one zigbee network address, but have three endpoints - one for each switch.  Each endpoint can then run a single ‘switch’ interface.
+The Network and Transport layers are where the routing, security and transport between the various nodes in a Zigbee network are defined.  This includes things like the network encryption model.  This is also where the difference between the controller, routers and end-nodes is defined in the Zigbee network - see [device types](#device-types).  There is one other Zigbee concept that I’ll put at the transport layer; the concept of Endpoints.  Similar to ports in TCP/IP, Endpoints allow each physical device to have multiple virtual devices on the network.  For example, a 3-gang zigbee switch might have a single radio, and hence only one MAC address and only one zigbee network address, but have three endpoints - one for each switch.  Each endpoint can then run a single ‘switch’ interface.
 
-## The application layer
+### The application layer
 
-Zigbee is more than just a networking technology; it defines a bunch of standard applications that run on the network.  These applications are defined in the Zigbee Cluster Library specification (see link).  Each ‘cluster’ defines one type of application communication.  Each cluster type has its own integer ID, and comes in two flavours; client and server.  There are clusters for low-level information gathering - getting the device model number, listing the endpoints and the clusters each endpoint implements (each endpoint can implement multiple clusters).  There are clusters for simple network setup purposes, such as the Identify cluster which allows someone to ask a device to identify itself, e.g. a light asked to identify itself might start pulsing.  There are clusters for on/off light control, where a light might implement the on/off server cluster and a switch might implement the on/off client cluster.  There are clusters for configuration that allow a controller to configure devices in various ways.
+Zigbee is more than just a networking technology; it defines a bunch of standard applications that run on the network.  These applications are defined in the Zigbee Cluster Library specification (see [Zigbee Cluster Library Specification v7](https://github.com/Koenkk/zigbee-herdsman/raw/master/docs/Zigbee%20Cluster%20Library%20Specification%20v7.pdf)).  Each ‘cluster’ defines one type of application communication.  Each cluster type has its own integer ID, and comes in two flavours; client and server.  There are clusters for low-level information gathering - getting the device model number, listing the endpoints and the clusters each endpoint implements (each endpoint can implement multiple clusters).  There are clusters for simple network setup purposes, such as the Identify cluster which allows someone to ask a device to identify itself, e.g. a light asked to identify itself might start pulsing.  There are clusters for on/off light control, where a light might implement the on/off server cluster and a switch might implement the on/off client cluster.  There are clusters for configuration that allow a controller to configure devices in various ways.
 
 As noted above, each cluster comes in two flavours; client and server.  Generally the server is the endpoint that is running more frequently, and the client chooses to connect to the server.  In many cases this isn’t clear-cut when considering the cluster functionality, so the spec decides pretty much arbitrarily.
 
@@ -63,7 +63,7 @@ Similarly, the scene cluster allows a device to be configured to remember parame
 
 Scenes and groups are designed to work together.  One might imagine setting up a bunch of different devices, then joining them all into a group, then sending the group a ‘remember scene’ command.  One could then send a ‘recall scene’ command to the group with the appropriate scene ID to cause many devices to configure themselves in a given way with minimal network traffic, and hence minimal latency.
 
-## Zigbee2MQTT
+### Zigbee2MQTT
 
 The Zigbee stack has a certain amount of home automation protocol already defined; as discussed, devices can be formed into groups and scenes defined, switches can be bound to those groups.  In such a setup the Zigbee controller might help configure the network, but afterwards it is passive at the application level.
 
