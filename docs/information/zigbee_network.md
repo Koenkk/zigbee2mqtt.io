@@ -34,10 +34,10 @@ Zigbee2MQTT logs the device type of your devices on startup, e.g.:
 
 This section is an overview of how the zigbee protocol stack divides into layers (See [Wikipedia - IP layers](https://en.wikipedia.org/wiki/Internet_protocol_suite#Layer_names_and_number_of_layers_in_the_literature) ).  The number of layers in this type of description often varies; this discussion uses 4:
 
-1 the physical and MAC layers, 
-2 the network and transport layer,
-3 the application layer, and
-4 the Zigbee2MQTT layer.
+1. the physical and MAC layers, 
+2. the network and transport layer,
+3. the application layer, and
+4. the Zigbee2MQTT layer.
 
 Most of the focus will be on the last two layers.
 
