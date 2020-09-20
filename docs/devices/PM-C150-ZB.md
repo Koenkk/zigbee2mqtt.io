@@ -1,19 +1,19 @@
 ---
-title: "Dawon DNS PM-S140R-ZB control via MQTT"
-description: "Integrate your Dawon DNS PM-S140R-ZB via Zigbee2MQTT with whatever smart home
+title: "Dawon DNS PM-C150-ZB control via MQTT"
+description: "Integrate your Dawon DNS PM-C150-ZB via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PM-S140R-ZB.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PM-C150-ZB.md)*
 
-# Dawon DNS PM-S140R-ZB
+# Dawon DNS PM-C150-ZB
 
-| Model | PM-S140R-ZB  |
+| Model | PM-C150-ZB  |
 | Vendor  | Dawon DNS  |
-| Description | IOT smart switch 1 gang router without neutral wire (Discontinued) |
-| Supports | on/off |
-| Picture | ![Dawon DNS PM-S140R-ZB](../images/devices/PM-S140R-ZB.jpg) |
+| Description | IOT remote control smart buried-type outlet |
+| Supports | on/off, power and energy measurement |
+| Picture | ![Dawon DNS PM-C150-ZB](../images/devices/PM-C150-ZB.jpg) |
 
 ## Notes
 
@@ -26,6 +26,14 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "W"
+    icon: "mdi:flash"
+    value_template: "{{ value_json.power }}"
+
 switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"

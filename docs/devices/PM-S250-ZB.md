@@ -1,19 +1,19 @@
 ---
-title: "Dawon DNS PM-S140R-ZB control via MQTT"
-description: "Integrate your Dawon DNS PM-S140R-ZB via Zigbee2MQTT with whatever smart home
+title: "Dawon DNS PM-S250-ZB control via MQTT"
+description: "Integrate your Dawon DNS PM-S250-ZB via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PM-S140R-ZB.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PM-S250-ZB.md)*
 
-# Dawon DNS PM-S140R-ZB
+# Dawon DNS PM-S250-ZB
 
-| Model | PM-S140R-ZB  |
+| Model | PM-S250-ZB  |
 | Vendor  | Dawon DNS  |
-| Description | IOT smart switch 1 gang router without neutral wire (Discontinued) |
+| Description | IOT smart switch 2 gang without neutral wire |
 | Supports | on/off |
-| Picture | ![Dawon DNS PM-S140R-ZB](../images/devices/PM-S140R-ZB.jpg) |
+| Picture | ![Dawon DNS PM-S250-ZB](../images/devices/PM-S250-ZB.jpg) |
 
 ## Notes
 
@@ -32,8 +32,17 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
-    value_template: "{{ value_json.state }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    value_template: "{{ value_json.state_top }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/top/set"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state_bottom }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/bottom/set"
 
 sensor:
   - platform: "mqtt"
