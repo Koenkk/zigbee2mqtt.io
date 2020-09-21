@@ -75,5 +75,4 @@ With this setup, when a switch is activated, it sends a message to the Zigbee2MQ
 
 This system is significantly more flexible than the base Zigbee system.  But it is also higher latency (it takes longer for the system to react to a switch being toggled) and it has more points of failure.  With the base Zigbee setup, not even the controller is involved once setup is complete.  With the Zigbee2MQTT setup there are two zigbee messages, two MQTT messages, and three extra processing steps (the main controller deciding what to do, and MQTT processing the messages in each direction).
 
-In addition, Zigbee2MQTT currently binds to each endpoint in the network.  Many of these endpoints will broadcast state information periodically to anything bound to them.  By binding to every device in the network, whether its state is relevant or not, zigbee2MQTT is causing a bunch of traffic on the zigbee network that would otherwise not be there.  This limits the practical size of the network.
-
+Note that in some commercial Zigbee systems, such as Phillips Hue, the controller node in the zigbee network is also the automation controller that can add additional smarts on top of the base Zigbee setup.  Zigbee2MQTT inserts MQTT between the two allowing them to be decoupled.
