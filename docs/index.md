@@ -10,6 +10,7 @@ Welcome to the Zigbee2MQTT documentation! Besides the documentation, you can als
 
 ### Getting started
 * [What do I need?](getting_started/what_do_i_need.md)
+* [Supported adapters](information/supported_adapters.md)
 * [Flashing the CC2531 USB stick](getting_started/flashing_the_cc2531.md)
 * [Running Zigbee2MQTT](getting_started/running_zigbee2mqtt.md)
 * [Pairing devices](getting_started/pairing_devices.md)
@@ -26,7 +27,6 @@ Welcome to the Zigbee2MQTT documentation! Besides the documentation, you can als
 * [MQTT topics and message structure](information/mqtt_topics_and_message_structure.md)
 * [OTA updates](information/ota_updates.md)
 * [Report](information/report.md)
-* [Supported adapters](information/supported_adapters.md)
 * [Touchlink](information/touchlink.md)
 * [Zigbee network](information/zigbee_network.md)
 
