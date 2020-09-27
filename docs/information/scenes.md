@@ -23,6 +23,7 @@ This is the easiest way to create a scene. First set the device or group in the 
         "state": "ON", // state, should be 'ON' or 'OFF'
         "brightness": 254, // brightness (0 - 254)
         "color_temp": 0, // color temperature (0 - 500)
+        "color": {"x": 0.123, "y": 0.123}, // color in x/y OR
         "color": "#0000FF" // color in hex notation
     }
 }
