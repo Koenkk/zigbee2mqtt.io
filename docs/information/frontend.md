@@ -6,10 +6,10 @@
 Zigbee2MQTT has a built-in webbased frontend. To enable the frontend add the following to your `configuration.yaml`:
 
 ```yaml
+frontend:
+  port: 8080
 experimental:
   new_api: true
-  frontend:
-    port: 8080
 ```
 
 ## Screenshot
