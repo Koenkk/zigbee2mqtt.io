@@ -11,7 +11,7 @@ Sniffing Zigbee traffic can be handy sometimes. E.g. when you want to analyze th
 * CC2531 stick
 
 #### 1. Flashing the CC2531 stick
-The CC2531 needs to be flashed with a sniffer firmware. Flash the firmware using the instructions from [Flashing the CC2531](../getting_started/flashing_the_cc2531.md).
+The CC2531 needs to be flashed with a sniffer firmware. Flash the firmware using the instructions from [Flashing the CC2531](../information/flashing_the_cc2531.md).
 
 ##### Linux
 The firmware is included with [PACKET-SNIFFER](http://www.ti.com/tool/PACKET-SNIFFER) (not **PACKET-SNIFFER-2!**). Download PACKET-SNIFFER. As the sniffer firmware is only available in the windows installer we need to extact the hex file. This would require 7zip (p7zip-full or p7zip-plugins package depending on distro)
