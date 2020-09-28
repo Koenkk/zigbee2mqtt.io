@@ -6,22 +6,44 @@ Zigbee2MQTT officially supports the following adapters:
 ![CC2531](../images/cc2531.jpg)
 
 - USB connected Zigbee adapter with PCB antenna.
-- Cheap but not very powerful (+- $5), may not be powerfull enough for larger networks (30/40+ devices).
+- Cheap but not very powerful (+- $5), may not be powerfull enough for larger networks (20+ devices).
 - Limited range, ~30m line of sight
-- Requires CC debugger to be flashed
-- Coordinator firmware: [Zigbee 1.2](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin) and [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
+- Requires additional hardware to be flashed (CC debugger and downloader cable)
+- Coordinator firmware: [Zigbee 1.2 (recommended)](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin) and [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
 - Router firmware: [Zigbee 1.2](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/CC2531/bin), can be re-paired pressing the S2 button for 5 seconds.
 - Can be bought on [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2531)
-- [How to flash](../getting_started/flashing_the_cc2531.md) or [alternative flashing methods](./alternative_flashing_methods.md)
+- [How to flash with CC debugger](../information/flashing_the_cc2531.md) or [alternative flashing methods](./alternative_flashing_methods.md)
+
+### Electrolama zig-a-zig-ah! (zzh!)
+![zzh](../images/zzh.jpg)
+
+- USB connnected Zigbee adapter
+- **Very powerful**, will easily handle networks of 100+ devices.
+- Very good range (due to external antenna)
+- Can be bought on [Tindie](https://www.tindie.com/products/electrolama/zzh-cc2652r-multiprotocol-rf-stick/#product-reviews)
+- Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) (use **CC26X2R1_*.zip**)
+- [Flashing guide](https://electrolama.com/projects/zig-a-zig-ah/#flash-firmware) (requires no additional hardware to flash)
+- When migrating from another dongle (e.g. CC2531), make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2MQTT won't start.
+
+### slaesh's CC2652RB stick
+![slaesh's CC2652RB stick](../images/slaeshs_cc2652rb_stick.jpg)
+
+- USB connnected Zigbee adapter
+- **Very powerful**, will easily handle networks of 100+ devices.
+- Very good range (due to external antenna, SMA female connector)
+- Can be bought on [Tindie](https://www.tindie.com/products/slaesh/cc2652-zigbee-coordinator-or-openthread-router/#product-reviews)
+- Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) (use **CC2652RB_*.zip**)
+- [Flashing guide](https://slae.sh/projects/cc2652/#flashing) (requires no additional hardware to flash)
+- When migrating from another dongle (e.g. CC2531), make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2MQTT won't start.
 
 ### Texas Instruments CC2530 (optionally with a CC2591 or CC2592 RF frontend)
 ![CC2530](../images/cc2530.jpg)
 
 - Serial connected Zigbee adapter with most of the times and external atenna.
-- Cheap but not very powerful (+- $10), may not be powerfull enough for larger networks (30/40+ devices).
+- Cheap but not very powerful (+- $10), may not be powerfull enough for larger networks (20+ devices).
 - Good range, ~50-60m line of sight, sensitivity can be increased when used together with a CC2591 or CC2592
-- Requires CC debugger to be flashed
-- Coordinator firmware: [Zigbee 1.2](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin) and [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
+- Requires additional hardware to be flashed (CC debugger)
+- Coordinator firmware: [Zigbee 1.2 (recommended)](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin) and [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
 - Router firmware: [Zigbee 1.2](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/CC2530/bin), can be re-paired if you power on/power off the device three times (power on, wait 2 seconds, power off, repeat this cycle three times)
 - Can be bought on e.g. AliExpress: [CC2530](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104041&SearchText=cc2530), [CC2530 + CC2591](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104521&SearchText=cc2530+cc2591), [GBAN GB2530](http://www.gban.cn/en/product_show.asp?id=43)
 - How to flash: see flashing section of [How to create a CC2530 router](../how_tos/how_to_create_a_cc2530_router.md) or [alternative flashing methods](./alternative_flashing_methods.md)
@@ -36,35 +58,9 @@ Zigbee2MQTT officially supports the following adapters:
 - Very good range, ~800m line of sight, sensitivity is due to the onboard CC2592 Power Amplifier (20db)
 - Requires JTAG programmer to be flashed
 - Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
-- Router firmware: **not yet available**.
 - Bare module can be bought on [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2538)
 - Complete dongle preflashed can be bought on [Tindie](https://www.tindie.com/products/GiovanniCas/cc2538-cc2592-zigbee-dongle-new-zb30/)
 - [How to flash](./flashing_the_cc2538.md)
-
-### Electrolama zig-a-zig-ah! (zzh!)
-![zzh](../images/zzh.jpg)
-
-- Preferred over the Texas Instruments LAUNCHXL-CC26X2R1 and LAUNCHXL-CC1352P-2 due to smaller form factor and lower price. Uses the same chip as LAUNCHXL-CC26X2R1 (CC2652R).
-- USB connnected Zigbee adapter
-- **Very powerful**, will easily handle networks of 100+ devices.
-- Very good range (due to external antenna)
-- Can be bought on [Tindie](https://www.tindie.com/products/electrolama/zzh-cc2652r-multiprotocol-rf-stick/#product-reviews)
-- Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) (use **CC26X2R1_*.zip**)
-- [Flashing guide](https://electrolama.com/projects/zig-a-zig-ah/#flash-firmware) (requires no additional hardware to flash)
-- When migrating from another dongle (e.g. CC2531), make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2MQTT won't start.
-
-### slaesh's CC2652RB stick
-![slaesh's CC2652RB stick](../images/slaeshs_cc2652rb_stick.jpg)
-
-- Preferred over the Texas Instruments LAUNCHXL-CC26X2R1 and LAUNCHXL-CC1352P-2 due to smaller form factor and lower price. Uses the same chip as LAUNCHXL-CC2652RB (CC2652RB).
-- USB connnected Zigbee adapter
-- **Very powerful**, will easily handle networks of 100+ devices.
-- Very good range (due to external antenna, SMA female connector)
-- Can be bought on [Tindie](https://www.tindie.com/products/slaesh/cc2652-zigbee-coordinator-or-openthread-router/#product-reviews)
-- Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) (use **CC2652RB_*.zip**)
-- [Flashing guide](https://slae.sh/projects/cc2652/#flashing) (requires no additional hardware to flash)
-- When migrating from another dongle (e.g. CC2531), make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2MQTT won't start.
-- **Requires** at least [Version 1.14.2](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.14.2)
 
 ### Texas Instruments LAUNCHXL-CC26X2R1
 ![CC26X2R1](../images/cc26x2r1.jpg)
