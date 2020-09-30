@@ -1,10 +1,19 @@
 ---
 ---
-# Flashing the firmware on the CC2531 USB stick
-The CC2531 USB stick needs to be flashed with a custom firmware. This firmware can be flashed with multiple devices. The easiest but most expensive option is with the *CC Debugger* from Texas Instruments, which is described on this page. However, you can also use a *Raspberry Pi* or a MCU like the *Arduino Uno* or the cheap *ESP8266* with four dupont cables and optionally a downloader cable. Information about these methods can be found here: [Alternative firmware flashing methods](../information/alternative_flashing_methods.md).
+# Flashing the CC2531 USB stick
+The firmware can be flashed with multiple devices. The easiest but most expensive option is with the *CC Debugger* from Texas Instruments, which is described on this page. However, you can also use a *Raspberry Pi* or a MCU like the *Arduino Uno* or the cheap *ESP8266* with four dupont cables and optionally a downloader cable. Information about these methods can be found here: [Alternative firmware flashing methods](../information/alternative_flashing_methods.md).
 
 
-*NOTE: Reflashing does not require repairing of all devices, see [What does and does not require repairing of all devices?](../information/what_does_and_doesnt_require_repairing.md)*
+*NOTE: In case you are already running a Zigbee network: reflashing does not require repairing of all devices, see [What does and does not require repairing of all devices?](../information/what_does_and_doesnt_require_repairing.md)*
+
+## Required hardware
+The following additional hardware is required in order to flash the CC2531:
+
+| Name | Price | Picture |
+| ------------- | ------------- | ------------- |
+| CC debugger | +-9$ on AliExpress | ![CC debugger](../images/cc_debugger.jpg) |
+| CC2531 downloader cable | +-2$ on AliExpress | ![Downloader cable CC2531](../images/downloader_cable.png) |
+
 
 ## Windows
 1. Install [SmartRF Flash programmer](http://www.ti.com/tool/flash-programmer) (**NOT V2**). This software is free but requires a Texas Instruments account in order to download.
@@ -52,6 +61,3 @@ Zigbee2MQTT:info  2019-11-09T13:01:14: Coordinator firmware version: '{"type":"z
 ```
 
 In the above example the version is `20190425`.
-
-# What's next?
-[Running Zigbee2MQTT](running_zigbee2mqtt.md)

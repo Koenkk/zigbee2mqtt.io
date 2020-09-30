@@ -10,7 +10,6 @@ Welcome to the Zigbee2MQTT documentation! Besides the documentation, you can als
 
 ### Getting started
 * [What do I need?](getting_started/what_do_i_need.md)
-* [Flashing the CC2531 USB stick](getting_started/flashing_the_cc2531.md)
 * [Running Zigbee2MQTT](getting_started/running_zigbee2mqtt.md)
 * [Pairing devices](getting_started/pairing_devices.md)
 * [Supported devices](information/supported_devices.md)
@@ -42,7 +41,7 @@ Besides running Zigbee2MQTT on [bare-metal Linux](getting_started/running_zigbee
 ### How tos
 * [How to create a CC2530 router](how_tos/how_to_create_a_cc2530_router.md)
 * [How to connect to a remote adapter](how_tos/how_to_connect_to_a_remote_adapter.md)
-* [How to improve network range](how_tos/how_to_improve_network_range.md)
+* [How to improve network range](how_tos/how_to_improve_network_range_and_stability.md)
 * [How to secure your Zigbee network](how_tos/how_to_secure_network.md)
 * [How to sniff Zigbee traffic](how_tos/how_to_sniff_zigbee_traffic.md)
 * [How to support new devices](how_tos/how_to_support_new_devices.md)
