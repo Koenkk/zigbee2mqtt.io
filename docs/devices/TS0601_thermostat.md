@@ -30,7 +30,6 @@ While pairing, keep the valve close to the coordinator.
 5. *Enable pairing mode*: Long press home (:house:). WiFi logo is now blinking.
 6. *Keep display on*: Touch home (:house:) every few seconds.
 
-
 ### Local temperature
 If you'd like to force device to send local_temperature you can use this mqtt command:
 * `topic`: zigbee2mqtt/FRIENDLY_NAME/set/local_temperature_calibration

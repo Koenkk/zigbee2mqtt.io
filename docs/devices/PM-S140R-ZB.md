@@ -11,7 +11,7 @@ description: "Integrate your Dawon DNS PM-S140R-ZB via Zigbee2MQTT with whatever
 
 | Model | PM-S140R-ZB  |
 | Vendor  | Dawon DNS  |
-| Description | IOT smart switch 1 gang router without neutral wire (Discontinued) |
+| Description | IOT smart switch 1 gang router without neutral wire |
 | Supports | on/off |
 | Picture | ![Dawon DNS PM-S140R-ZB](../images/devices/PM-S140R-ZB.jpg) |
 
