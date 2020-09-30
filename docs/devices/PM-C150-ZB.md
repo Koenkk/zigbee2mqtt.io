@@ -11,7 +11,7 @@ description: "Integrate your Dawon DNS PM-C150-ZB via Zigbee2MQTT with whatever 
 
 | Model | PM-C150-ZB  |
 | Vendor  | Dawon DNS  |
-| Description | IOT remote control smart buried-type outlet |
+| Description | IOT remote control smart buried-type 16A outlet |
 | Supports | on/off, power and energy measurement |
 | Picture | ![Dawon DNS PM-C150-ZB](../images/devices/PM-C150-ZB.jpg) |
 
