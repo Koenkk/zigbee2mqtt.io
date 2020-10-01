@@ -231,7 +231,7 @@ Example payload:
             "model":"LED1624G9",
             "vendor":"IKEA",
             "description":"TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white",
-            "supports":"on/off, brightness, color xy"
+            "exposes":{"type":"light","features":["state","brightness","color_xy"]},
         },
         "power_source":"Mains (single phase)",
         "software_build_id":"1.3.009",
@@ -275,6 +275,15 @@ Example payload:
     },
 ]
 ```
+
+### Exposes
+A device definition will either have `supports` OR `exposes`, `supports` is in the process of being gradually replaced by `exposes`.
+All exposes will have the property `type`. In case it exposes a capability on a certain endpoint the endpoint name is added to the optional property `endpoint`, e.g: `{"type":"light","features":["state","brightness"],"endpoint":"left"}`.
+
+#### Light
+Indicates a device exposes a light. Will always have the `features` property which can contain the following: `state`, `brightness`, `color_temp`, `color_xy` or `color_hs`.
+
+Example: `{"type":"light","features":["state","brightness","color_temp","color_xy"]}`
 
 ## zigbee2mqtt/bridge/groups
 Contains the groups.
