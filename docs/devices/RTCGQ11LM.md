@@ -22,6 +22,7 @@ description: "Integrate your Xiaomi RTCGQ11LM via Zigbee2MQTT with whatever smar
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
 After this the device will automatically join. If this doesn't work, try with a single short button press.
 
+
 ### Troubleshooting: no occupancy, only illuminance is published
 Some routers are not able to handle the RTCGQ11LM as a child correctly. This leads to an illuminance value being published but no occupancy.
 This mostly seems to happen when the parent of the RTCGQ11LM is an OSRAM device.

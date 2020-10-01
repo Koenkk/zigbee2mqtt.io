@@ -1,19 +1,19 @@
 ---
-title: "Norklmes MKS-CM-W5 control via MQTT"
-description: "Integrate your Norklmes MKS-CM-W5 via Zigbee2MQTT with whatever smart home
+title: "Nue / 3A NUE-ZBFLB control via MQTT"
+description: "Integrate your Nue / 3A NUE-ZBFLB via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MKS-CM-W5.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/NUE-ZBFLB.md)*
 
-# Norklmes MKS-CM-W5
+# Nue / 3A NUE-ZBFLB
 
-| Model | MKS-CM-W5  |
-| Vendor  | Norklmes  |
-| Description | 1, 2, 3 or 4 gang switch |
+| Model | NUE-ZBFLB  |
+| Vendor  | Nue / 3A  |
+| Description | Smart fan light switch |
 | Supports | on/off |
-| Picture | ![Norklmes MKS-CM-W5](../images/devices/MKS-CM-W5.jpg) |
+| Picture | ![Nue / 3A NUE-ZBFLB](../images/devices/NUE-ZBFLB.jpg) |
 
 ## Notes
 
@@ -32,8 +32,8 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
-    value_template: "{{ value_json.state_l1 }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/l1/set"
+    value_template: "{{ value_json.state_button_light }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_light/set"
 
 switch:
   - platform: "mqtt"
@@ -41,8 +41,8 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
-    value_template: "{{ value_json.state_l2 }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/l2/set"
+    value_template: "{{ value_json.state_button_fan_high }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_fan_high/set"
 
 switch:
   - platform: "mqtt"
@@ -50,8 +50,8 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
-    value_template: "{{ value_json.state_l3 }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/l3/set"
+    value_template: "{{ value_json.state_button_fan_med }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_fan_med/set"
 
 switch:
   - platform: "mqtt"
@@ -59,8 +59,8 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
-    value_template: "{{ value_json.state_l4 }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/l4/set"
+    value_template: "{{ value_json.state_button_fan_low }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_fan_low/set"
 
 sensor:
   - platform: "mqtt"

@@ -1,19 +1,19 @@
 ---
-title: "HEIMAN HS2SW3A-N control via MQTT"
-description: "Integrate your HEIMAN HS2SW3A-N via Zigbee2MQTT with whatever smart home
+title: "TuYa TS0601_switch_2_gang control via MQTT"
+description: "Integrate your TuYa TS0601_switch_2_gang via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS2SW3A-N.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0601_switch_2_gang.md)*
 
-# HEIMAN HS2SW3A-N
+# TuYa TS0601_switch_2_gang
 
-| Model | HS2SW3A-N  |
-| Vendor  | HEIMAN  |
-| Description | Smart switch - 3 gang with neutral wire |
+| Model | TS0601_switch_2_gang  |
+| Vendor  | TuYa  |
+| Description | 2 gang switch |
 | Supports | on/off |
-| Picture | ![HEIMAN HS2SW3A-N](../images/devices/HS2SW3A-N.jpg) |
+| Picture | ![TuYa TS0601_switch_2_gang](../images/devices/TS0601_switch_2_gang.jpg) |
 
 ## Notes
 
@@ -32,8 +32,8 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
-    value_template: "{{ value_json.state_left }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/left/set"
+    value_template: "{{ value_json.state_l1 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/l1/set"
 
 switch:
   - platform: "mqtt"
@@ -41,17 +41,8 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
-    value_template: "{{ value_json.state_right }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/right/set"
-
-switch:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_off: "OFF"
-    payload_on: "ON"
-    value_template: "{{ value_json.state_center }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/center/set"
+    value_template: "{{ value_json.state_l2 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/l2/set"
 
 sensor:
   - platform: "mqtt"

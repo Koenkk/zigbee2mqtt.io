@@ -1,6 +1,6 @@
 const notes = [
     {
-        model: ['WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM', 'WXKG06LM', 'WXKG02LM', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'WXKG07LM', 'QBKG21LM', 'QBKG22LM', 'E1743', 'E1766', 'ptvo.switch', 'DIYRuZ_R8_8', 'HGZB-1S', 'HGZB-02S', 'HGZB-045', 'IM6001-BTP01', 'AV2010/34', 'HS1EB', 'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'ZGRC-KEY-013', '6ARCZABZH', 'MEAZON_BIZY_PLUG', 'MEAZON_DINRAIL', '2AJZ4KPKEY', 'TERNCY-PP01', 'TERNCY-SD01'],
+        model: ['WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM', 'WXKG06LM', 'WXKG02LM', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'WXKG07LM', 'QBKG21LM', 'QBKG22LM', 'E1743', 'E1766', 'ptvo.switch', 'DIYRuZ_R8_8', 'HGZB-1S', 'HGZB-02S', 'HGZB-045', 'IM6001-BTP01', 'AV2010/34', 'HS1EB/HS1EB-E', 'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'ZGRC-KEY-013', '6ARCZABZH', 'MEAZON_BIZY_PLUG', 'MEAZON_DINRAIL', '2AJZ4KPKEY', 'TERNCY-PP01', 'TERNCY-SD01'],
         note: `
 ### Deprecated click event
 By default this device exposes a deprecated \`click\` event. It's recommended to use the \`action\` event instead.
@@ -13,6 +13,31 @@ devices:
     friendly_name: my_device
     legacy: false
 \`\`\`
+`,
+    },
+    {
+        model: ['MEG5113-0300/MEG5165-0000'],
+        note: `
+### Pairing
+To get the device into pairing mode, press the up button 3 times briefly and then hold it for a long time (almost 20s). After about 10s the LED starts blinking slowly, continue to hold until it starts blinking rapidly. Now you can release it. Pairing will take a while to complete. The LED will blink and change color during this process.
+
+### Control
+The shutter control uses a simple timer to control the duration to open/close the shutter. Unfortunately the Zigbee command to set the timer is not known yet. Even if you set the timer via Bluetooth, it will be reset to the default 2 minutes every time you bring it back to Zigbee mode.
+The consequence is, that if your shutter is faster than 2 minutes, the position information will not match with the shutter position (since the transition from 0% to 100% takes 120s).
+Example: If your shutter motor needs 20 seconds to move from open to closed, it will already be closed at 1/6 of the time, i.e. at position 85. It will still take 120s for the position information to go from 100 down to 0.
+
+If you use a shutter motor with positional switches, that stops at the Open or closed position, this will not be an issue. If you rely on the control to shut of the motor, the current implementation will keep the motor pulling until the timer has elapsed, that might not be a good idea.
+If your shutter motor needs more than 2 minutes, I suppose it will stop before reaching the final position.
+`,
+    },
+    {
+        model: ['DM A60F'],
+        note: `
+### Pairing
+Factory reset the light bulb by turning the bulb on/off seven times.
+After resetting the bulb will go into pairing mode for 20 seconds.
+
+While pairing, keep the bulb close to the adapter.
 `,
     },
     {
@@ -39,6 +64,103 @@ To start (Change duration to what you need):
 
 To stop:
 * \`{"warning": {"mode": "stop", "level": "low", "strobe": false, "duration": 300}}\`
+`,
+    },
+    {
+        model: 'TH1300ZB',
+        note: `
+### Pairing
+Press the two buttons simultaneously for 3 seconds. The wireless icon will blink when searching
+for the zigbee network and stay steady when paired to it. Repeat if unsuccessfull.
+
+### Unpairing
+Press the two buttons simultaneoulsy for 10 seconds and release.
+The device will restart. The wireless icon will disapear from the display.
+
+### The following thermostats parameters can be changed trough MQTT
+
+#### Occupancy / Unoccupancy
+The thermostat can be instructed to use the occupancy or unoccupancy setpoints by
+publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"thermostat_occupancy": "OCCUPANCY"}\`
+where \`OCCUPANCY\` is one of the following values: \`occupied\`, \`unoccupied\`.
+The factory default value is \`occupied\`.
+
+#### Floor control mode
+The sensor used by the thermostat for temperature regulation can be changed by publishing
+to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"floor_control_mode": "SENSOR"}\`
+where \`SENSOR\` is one of the following values: \`ambiant\`, \`floor\`.
+The factory default value is \`floor\`.
+
+#### Ambiant maximum heating setpoint
+The maximum ambiant temperature setpoint of the thermostat can be changed by publishing
+to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"ambiant_max_heat_setpoint": "TEMPERATURE"}\`
+where \`TEMPERATURE\` is the desired value (between 5 and 36 Celcius).
+This feature is disabled by default.
+
+#### Floor minimum heating setpoint
+The minimum floor temperature setpoint of the thermostat can be changed by publishing
+to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"floor_min_heat_setpoint": "TEMPERATURE"}\`
+where \`TEMPERATURE\` is the desired value (between 5 and 36 Celcius).
+This feature is disabled by default.
+
+#### Floor maximum heating setpoint
+The maximum floor temperature setpoint of the thermostat can be changed by publishing
+to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"floor_max_heat_setpoint": "TEMPERATURE"}\`
+where \`TEMPERATURE\` is the desired value (between 5 and 36 Celcius).
+This feature is disabled by default.
+
+#### Floor temperature sensor
+The floor thermistor temperature sensor value connected to the thermostat can be changed by
+publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"temperature_sensor": "SENSOR"}\`
+where \`SENSOR\` is one of the following values: \`10k\`, \`12k\`.
+The factory default value is \`10k\`.
+
+#### Display backlight
+The thermostat display can be set to turn on only when a button is pressed or stay on and auto dim by
+publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"backlight_auto_dim": "BACKLIGHT"}\`
+where \`BACKLIGHT\` is one of the following values: \`on demand\`, \`sensing\`.
+The factory default value is \`sensing\`.
+
+#### Time to display
+The time clock value to display on the thermostat can be set by
+publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"thermostat_time": "TIME"}\`
+where \`TIME\` is the number of seconds since 2000-01-01 or empty.
+The zigbee gateway local time will be used when publishing an empty value.
+By default, the time clock is not displayed.
+
+#### Time format displayed
+The time clock format on the thermostat display can be changed by
+publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"time_format": "FORMAT"}\`
+where \`FORMAT\` is one of the following values: \`12h\`, \`24h\`.
+The factory default value is \`24h\`.
+
+#### Enable outdoor temperature display
+The display of outdoor temperature on the thermostat can be enabled / disabled by
+publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"enable_outdoor_temperature": "ENABLE"}\`
+where \`ENABLE\` is one of the following values: \`on\`, \`off\`.
+\`on\` value will set the outdoor temperature refresh timeout to 3 hours.
+\`off\` value will set the outdoor temperature refresh timeout to 30 seconds.
+When the refresh timeout is expired the thermostat setpoint temperature will be displayed.
+The outdoor temperature is not displayed by default.
+
+#### Outdoor temperature to display
+The outdoor temperature to display on the thermostat can be changed by
+publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"thermostat_outdoor_temperature": "TEMPERATURE"}\`
+where \`TEMPERATURE\` is between -100 to +100.
+
+### The following status are reported by the thermostat
+
+#### Groud fault circuit indicator status (GFCi)
+Turns \`on\` when the thermostat GFCi detects a ground fault. The status is reported
+to the device state as \`gfci_status\` every hour or when it changes.
+\`gfci_status\` has one of the following values: \`on\`, \`off\`.
+The default value is \`off\`.
+
+#### Floor limit status
+This status is \`on\` when the floor temperature exceeds the maximum floor heating setpoint.
+It is reported to the device state as \`floor_limit_status\` every hour or when it changes.
+\`floor_limit_status\` has one of the following values: \`on\`, \`off\`.
+The default value is \`off\`.
 `,
     },
     {
@@ -124,6 +246,14 @@ For example the Sonoff BasicZBR3
 Firmware download: https://github.com/diyruz/diyruz_rt
 Blog about supporting Zigbee 3.0 to CC2530: https://habr.com/ru/company/iobroker/blog/495926/
 `,
+    },
+    {
+        model: 'TS0121_plug',
+        note: `
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* \`measurement_poll_interval\`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 10 seconds.`,
     },
     {
         model: '3RSS007Z',
@@ -263,10 +393,17 @@ Reset of device is done by holding button for 20 secs until it starts to flash g
 `,
     },
     {
+        model: 'ROB_200-007-0',
+        note: `
+### Pairing
+First reset. Press and hold the upper two buttons for 5 seconds untill led lights up (contiunously blue or green). Then press the upper "0" 5 times - depending on the model, or in a pace of 2 times per second or in a pace of 5 times per second. Second pair. Press and hold the upper two buttons for 5 seconds again, untill the led turns on. Then press the "0" once. It should now enter pair mode an start blinking - if it does not get connected, just try the second step again.
+`,
+    },
+    {
         model: 'ROB_200-008-0',
         note: `
 ### Pairing
-First reset. Press and hold the upper two buttons for 5 seconds untill led turns blue. Then press the upper "0" 5 times really quickly - practise. Second pair. Press and hold the upper two buttons for 5 seconds again, untill the led turns blue. Then press the "0" once. It should now enter pair mode.
+First reset. Press and hold the upper two buttons for 5 seconds untill led lights up (contiunously blue or green). Then press the upper "0" 5 times - depending on the model, or in a pace of 2 times per second or in a pace of 5 times per second. Second pair. Press and hold the upper two buttons for 5 seconds again, untill the led turns on. Then press the "0" once. It should now enter pair mode an start blinking - if it does not get connected, just try the second step again.
 `,
     },
     {
@@ -456,6 +593,13 @@ If the Switch is connected hold Middle and Arrow Up Buttons for 3 Seconds to dis
         note: `
 ### Pairing
 For the OSRAM Smart+ plug (AB3257001NJ) hold the on/off button until your hear a click (+- 10 seconds).
+
+### Caveats
+Does not pass every attribute when acting as the routing parent for some end devices.
+E.g. \`occupancy\` is gobbled when routing Xiaomi [RTCGQ11LM](RTCGQ11LM.md) traffic resulting in
+motion updates not getting propagated to the network.
+
+See also [#2274](https://github.com/Koenkk/zigbee2mqtt/issues/2274).
 `,
     },
     {
@@ -520,7 +664,7 @@ the Device with a Philips LivingColors Remote Gen 2 as it should try all Zigbee 
         supports: ['brightness'],
         note: `
 ### Pairing
-Factory resetting a Hue bulb can be accomplished in 4 ways.
+Factory resetting a Hue bulb can be accomplished in 5 ways.
 After resetting the bulb will automatically connect.
 
 #### Touchlink factory reset
@@ -532,6 +676,11 @@ by removing it from the bridge via the Hue app.
 
 #### Hue dimmer switch
 [VIDEO: Factory reset a Hue bulb with Hue dimmer switch](https://www.youtube.com/watch?v=qvlEAELiJKs).
+
+#### Bluetooth (if supported by device)
+Install the Philips Hue Bluetooth app for [Android](https://play.google.com/store/apps/details?id=com.signify.hue.blue)
+or iPhone. You can use the app to trigger a factory reset on a paired light. (Note: The light will only be in bluetooth pairing
+mode for a couple of minutes after poweron)
 
 #### TRADFRI remote control
 This may also be possible with the
@@ -900,6 +1049,15 @@ After this the device will automatically join. If this doesn't work, try with a 
 `,
     },
     {
+        model: ['RTCGQ11LM'],
+        note: `
+### Troubleshooting: no occupancy, only illuminance is published
+Some routers are not able to handle the RTCGQ11LM as a child correctly. This leads to an illuminance value being published but no occupancy.
+This mostly seems to happen when the parent of the RTCGQ11LM is an OSRAM device.
+A discussion about this can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/2274). This cannot be fixed from Zigbee2MQTT, make sure the RTCGQ11LM uses another router as it's parent by positioning a non OSRAM device close.
+`,
+    },
+    {
         model: ['WSDCGQ01LM'],
         note: `
 ### Pairing
@@ -1018,11 +1176,31 @@ After this the device will automatically join.
 ### Pairing
 - Press W-key for 3 seconds
 - Press Power On/Off Key for 5 seconds
+- Press Power On/Off again for 3 seconds
 Now the device should showup.
 
 ### Extended hue
 The device gives extended hue values. Zigbee2MQTT calculates also the normal hue and provides both via mqtt.
 - hue = extendedhue * 360 / 65536 % 360
+`,
+    },
+    {
+        model: ['902010/24'],
+        note: `
+### Activating the alert
+Activating the alert is done by sending a JSON
+
+{% raw %}
+\`\`\`json
+{"warning":{"duration":1,"mode":"burglar","strobe":false,"level":"high"}}
+\`\`\`
+{% endraw %}
+
+This gives an audible alert with the LED flashing of around 2 seconds duration.
+
+If you set strobe to true it'll not work. Level "low" does not give a sound, the other valid levels don't make a difference in loudness. There doesn't not seem to be a difference between different modes.
+
+The device seems to be a little bit picky about switching off - set both "mode":"none" and "duration":1 - but to another value than before.
 `,
     },
     {
@@ -1129,6 +1307,8 @@ You may have to unpair the switch from an existing coordinator before the pairin
 Press and hold the setup button on the rear of the device for +- 10 seconds (until the green light goes solid)
 to initiate pairing. Please note that the pairing indicator light is below the main sensor
 (as oppose to the obvious indicator above the main sensor).
+
+This specific device has been reported to have issues repairing to a Zigbee network after upgrading from a CC2531 to a CC2652 controller (Zigbee 1.2 to 3.0). (Re)pairing may only work after pairing the device to another network and channel first (has been tested with a Philips Hue 2.0 hub in this instance) before pairing it back to the Zigbee2MQTT network again.
 `,
     },
     {
@@ -1229,6 +1409,7 @@ This device has various limitations:
     },
     {
         supports: ['temperature', 'humidity', 'pressure', 'brightness', 'color temperature', 'color', 'illuminance'],
+        notSupports: ['thermostat'],
         notDescription: ['thermostat'],
         notModel: ['324131092621', 'ICZB-KPD18S', 'ICZB-KPD14S', 'TYZS1L'],
         note: `
@@ -1254,7 +1435,7 @@ e.g. \`95\` would take 95% to the illuminance reported by the device; default \`
     },
     {
         supports: ['temperature'],
-        notSupports: ['color temperature'],
+        notSupports: ['color temperature', 'thermostat'],
         notDescription: ['thermostat'],
         note: `
 * \`temperature_precision\`: Controls the precision of \`temperature\` values,
@@ -1561,6 +1742,17 @@ Some versions of the plug provide voltage. This depends on the firmware on the d
     {
         model: ['TS0601_thermostat'],
         note: `
+### Pairing
+
+While pairing, keep the valve close to the coordinator.
+
+1. *Turn the display on*: Short press home (:house:).
+2. *Enter settings*: Long press home (:house:) for 3sec.
+3. *Select WiFi settings*: Press the plus button (:heavy_plus_sign:) button 4 times to see the digital **\`5\`** on the right hand side and the blinking WiFi logo.
+4. *Enter WiFi settings*: Press home (:house:) once again. Now only WiFi logo is showing without blinking.
+5. *Enable pairing mode*: Long press home (:house:). WiFi logo is now blinking.
+6. *Keep display on*: Touch home (:house:) every few seconds.
+
 ### Local temperature
 If you'd like to force device to send local_temperature you can use this mqtt command:
 * \`topic\`: zigbee2mqtt/FRIENDLY_NAME/set/local_temperature_calibration
@@ -1725,9 +1917,23 @@ Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
         note: `
 ### Pairing
 If you are having trouble pairing, reset the device.
-- hold boost, +, and - (a count from 1 to 10 will be on the display)
-- release ones 'rES' is displayed
-- hit boot once after 'Jin' is displayed
+- hold boost, +, and - (a count from 1 to 10 will be on the display, it may be required for the thermostat to de dismounted from the radiator valve for this to work)
+- release once 'rES' is displayed
+- hit boot once after 'Jin' is displayed to start pairing to the ZigBee network
+- once successfully paired 'Ins' should be displayed and the boost button should flash green. Make sure the thermostat is mounted on the radiator valve before pressing the boost button again.
+- now the display should read 'Ada' indicating the adapting process is started which should mechanically calibrate the thermostat to the valve.
+
+### Recommendation
+This device sends multiple messages in short time period with the same payload. It’s worth setting debounce option to throttle them without losing unique action payloads.
+
+E.g. (devices.yaml)
+
+
+\`\`\`yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_device
+    debounce: 0.5
+\`\`\`
 
 ### Controlling
 *Current heating setpoint*
