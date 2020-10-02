@@ -285,6 +285,11 @@ Indicates a device exposes a light. Will always have the `features` property whi
 
 Example: `{"type":"light","features":["state","brightness","color_temp","color_xy"]}`
 
+#### Switch
+Indicates a device exposes a switch.
+
+Example: `{"type":"switch"}`
+
 ## zigbee2mqtt/bridge/groups
 Contains the groups.
 Whenever a group is added/removed or when devices are added/removed from a group this is republished.
