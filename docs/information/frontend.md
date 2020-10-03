@@ -26,14 +26,13 @@ server {
 }
 
 server {
-    listen      443 http2;
-    listen      [::]:443 http2;
+    listen      443 ssl http2;
+    listen      [::]:443 sll http2;
 
     # In case you want to use basic authentication:
     auth_basic "Login";
     auth_basic_user_file /zigbee2mqtt_htpasswd;
 
-    ssl on;
     ssl_certificate     /config/etc/letsencrypt/live/mydomain.com/fullchain.pem;
     ssl_certificate_key /config/etc/letsencrypt/live/mydomain.com/privkey.pem;
 
