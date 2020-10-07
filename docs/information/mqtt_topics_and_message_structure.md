@@ -290,6 +290,16 @@ Indicates a device exposes a switch.
 
 Example: `{"type":"switch"}`
 
+#### Numeric
+Indicates a device exposes a numeric value. Always contains `property`, optionally includes a `unit`.
+
+Example: `{"type":"numeric","property":"temperature","unit":"°C"}`
+
+#### Boolean
+Indicates a device exposes a boolean value. Always contains `property`.
+
+Example: `{"type":"boolean","property":"occupancy"}`
+
 ## zigbee2mqtt/bridge/groups
 Contains the groups.
 Whenever a group is added/removed or when devices are added/removed from a group this is republished.
