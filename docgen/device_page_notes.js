@@ -265,7 +265,7 @@ Blog about supporting Zigbee 3.0 to CC2530: https://habr.com/ru/company/iobroker
 `,
     },
     {
-        model: 'TS0121_plug',
+        model: ['TS0121_plug', 'HS2SK_nxp'],
         note: `
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
