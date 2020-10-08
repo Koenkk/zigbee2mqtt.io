@@ -59,11 +59,6 @@ To work around this, a
 [hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
 is needed.
 
-
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
-
 * `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
 e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
 
