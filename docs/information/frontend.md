@@ -27,7 +27,7 @@ server {
 
 server {
     listen      443 ssl http2;
-    listen      [::]:443 sll http2;
+    listen      [::]:443 ssl http2;
 
     # In case you want to use basic authentication:
     auth_basic "Login";
