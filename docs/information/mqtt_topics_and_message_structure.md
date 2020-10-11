@@ -343,6 +343,8 @@ Optionally, a `transaction` property can be included in the request. This allows
 <summary>zigbee2mqtt/bridge/request/permit_join</summary>
 
 Allows to permit or disable joining of new devices. Allowed payloads are `{"value": true}`, `{"value": false}`, `true` or `false`. Example response: `{"data":{"value":true},"status":"ok"}`. This is not persistent (will not be saved to `configuration.yaml`).
+
+To allow joining via a specific device set the `friendly_name` in the `device` property. E.g. `{"value": true, "device": "my_bulb"}`.
 </details>
 
 <details>
