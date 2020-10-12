@@ -24,10 +24,8 @@ For example the Sonoff BasicZBR3
 Firmware download: https://github.com/diyruz/diyruz_rt
 Blog about supporting Zigbee 3.0 to CC2530: https://habr.com/ru/company/iobroker/blog/495926/
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

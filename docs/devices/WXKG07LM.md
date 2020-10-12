@@ -30,6 +30,11 @@ devices:
     legacy: false
 ```
 
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `true` to disable the legacy integration (highly recommended!)
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

@@ -30,6 +30,11 @@ devices:
     legacy: false
 ```
 
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `true` to disable the legacy integration (highly recommended!)
+
 
 ### Decoupled mode
 Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.

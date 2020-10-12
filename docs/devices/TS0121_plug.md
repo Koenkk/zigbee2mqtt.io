@@ -18,7 +18,6 @@ description: "Integrate your TuYa TS0121_plug via Zigbee2MQTT with whatever smar
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 

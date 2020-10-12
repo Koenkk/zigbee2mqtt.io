@@ -17,7 +17,6 @@ description: "Integrate your HEIMAN HS2CM-N-DC via Zigbee2MQTT with whatever sma
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 

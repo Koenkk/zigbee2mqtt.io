@@ -35,6 +35,11 @@ devices:
 Press and hold the reset button in the side of the device for +- 5 seconds (until the blue light starts blinking).
 You will need a needle or a pin to do it. After this the device will automatically join.
 
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `true` to disable the legacy integration (highly recommended!)
+
 
 ### Important
 Konke devices only work on Zigbee channel 15, 20 and 25.

@@ -17,10 +17,8 @@ description: "Integrate your HEIMAN HS2SW2A/HS2SW2A-N via Zigbee2MQTT with whate
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

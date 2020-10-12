@@ -31,7 +31,6 @@ By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can
 
 - **reverse_direction**: (`true`/`false`, default: `false`). Device can be configured to act in an opposite direction.
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 

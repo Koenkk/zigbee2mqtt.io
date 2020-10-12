@@ -17,10 +17,8 @@ description: "Integrate your Smart Home Pty HGZB-07A via Zigbee2MQTT with whatev
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

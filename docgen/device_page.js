@@ -63,6 +63,7 @@ ${getHomeAssistantConfig(device)}
 }
 
 function getNotes(device) {
+    let deviceTypeSpecificConfigurationHeader = false;
     const note = notes
         .filter((n) => {
             if (n.hasOwnProperty('supports') && n.supports.filter((s) => device.supports.includes(s)).length === 0) {
@@ -93,7 +94,16 @@ function getNotes(device) {
 
             return n.model === device.model || (Array.isArray(n.vendor) ? n.vendor.includes(device.vendor) : n.vendor === device.vendor);
         })
-        .map((n) => n.note)
+        .map((n) => {
+            if (n.deviceTypeSpecificConfiguration && !deviceTypeSpecificConfigurationHeader) {
+                deviceTypeSpecificConfigurationHeader = true;
+                return `### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+${n.note}`;
+            } else {
+                return n.note;
+            }
+        })
         .join('\n');
     return note === '' ? 'None' : note;
 }

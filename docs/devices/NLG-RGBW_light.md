@@ -17,10 +17,8 @@ description: "Integrate your Paul Neuhaus NLG-RGBW light via Zigbee2MQTT with wh
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

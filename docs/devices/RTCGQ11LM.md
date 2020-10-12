@@ -64,7 +64,6 @@ To work around this, a
 [hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
 is needed.
 
-
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:

@@ -17,7 +17,6 @@ description: "Integrate your SmartThings STSS-PRES-001 via Zigbee2MQTT with what
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 

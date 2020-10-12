@@ -30,9 +30,10 @@ devices:
     legacy: false
 ```
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `true` to disable the legacy integration (highly recommended!)
 
 
 * `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.

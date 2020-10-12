@@ -17,10 +17,8 @@ description: "Integrate your Titan Products TPZRCO2HT-Z3 via Zigbee2MQTT with wh
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

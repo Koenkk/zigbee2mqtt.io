@@ -17,7 +17,6 @@ description: "Integrate your ORVIBO W40CZ via Zigbee2MQTT with whatever smart ho
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 

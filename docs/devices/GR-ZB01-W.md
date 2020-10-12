@@ -17,7 +17,6 @@ description: "Integrate your AXIS GR-ZB01-W via Zigbee2MQTT with whatever smart 
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 

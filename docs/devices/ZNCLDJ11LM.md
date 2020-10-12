@@ -17,7 +17,6 @@ description: "Integrate your Xiaomi ZNCLDJ11LM via Zigbee2MQTT with whatever sma
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 

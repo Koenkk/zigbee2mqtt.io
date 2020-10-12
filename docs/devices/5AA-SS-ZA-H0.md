@@ -17,10 +17,8 @@ description: "Integrate your Leedarson 5AA-SS-ZA-H0 via Zigbee2MQTT with whateve
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.
 To control the precision based on the illuminance_lux value set it to e.g. `{1000: 0, 100: 1}`,

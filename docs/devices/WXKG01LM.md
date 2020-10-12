@@ -49,7 +49,6 @@ Most of the times this happens because of the following reasons:
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
@@ -60,6 +59,9 @@ delays in the network the release message is received late. This causes a single
 click to be identified as a `hold` action. If you are experiencing this you can try
 experimenting with this option (e.g. `hold_timeout: 2000`).
 * `hold_timeout_expire`: Sometimes it happens that the button does not send a release. To avoid problems Zigbee2mqtt expires the `hold` leading to no `release` being send. The default timeout is 4000 ms, you can increase it with this option.
+
+
+* `legacy`: Set to `true` to disable the legacy integration (highly recommended!)
 
 
 ## Manual Home Assistant configuration

@@ -17,7 +17,6 @@ description: "Integrate your Somgoms ZSTY-SM-1CTZG-US-W via Zigbee2MQTT with wha
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 

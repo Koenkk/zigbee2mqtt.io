@@ -22,10 +22,8 @@ description: "Integrate your IKEA ICPSHC24-30EU-IL-1 via Zigbee2MQTT with whatev
 To factory reset the TRADFRI drivers use a
 small pin or paperclip to push the reset button once.
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

@@ -22,10 +22,8 @@ description: "Integrate your SONOFF SNZB-02 via Zigbee2MQTT with whatever smart 
 ### Pairing
 Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

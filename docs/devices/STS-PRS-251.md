@@ -25,7 +25,6 @@ description: "Integrate your SmartThings STS-PRS-251 via Zigbee2MQTT with whatev
 }
 ```
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 

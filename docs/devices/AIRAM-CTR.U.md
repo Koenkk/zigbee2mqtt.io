@@ -41,9 +41,10 @@ Device seems to join network also when it is paired directly to Airam bulb (whic
 (https://www.zigbee2mqtt.io/devices/4713407.html) by keeping ON and DIM buttons pressed while holding remote
 within 5 centimeters away from Airam bulb.
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `true` to disable the legacy integration (highly recommended!)
 
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,

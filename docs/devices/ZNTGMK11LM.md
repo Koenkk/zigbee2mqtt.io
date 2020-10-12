@@ -17,10 +17,8 @@ description: "Integrate your Xiaomi ZNTGMK11LM via Zigbee2MQTT with whatever sma
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

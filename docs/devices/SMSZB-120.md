@@ -27,10 +27,8 @@ To start (Change `duration` in number of seconds to what you need):
 To stop:
 * `{"warning": {"mode": "stop", "level": "low", "strobe": false, "duration": 300}}`
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

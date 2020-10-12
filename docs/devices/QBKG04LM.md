@@ -37,6 +37,11 @@ Press and hold the button on the device for +- 10 seconds
 
 You may have to unpair the switch from an existing coordinator before the pairing process will start.
 
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `true` to disable the legacy integration (highly recommended!)
+
 
 ### Decoupled mode
 Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.

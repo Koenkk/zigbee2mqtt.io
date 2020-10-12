@@ -21,10 +21,8 @@ description: "Integrate your Innr OSL 130 C via Zigbee2MQTT with whatever smart 
 ### Pairing
 Factory reset the light bulb ([video](https://www.youtube.com/watch?v=4zkpZSv84H4)).
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
