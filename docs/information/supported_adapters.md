@@ -46,6 +46,7 @@ Zigbee2MQTT officially supports the following adapters:
 - Coordinator firmware: [Zigbee 1.2 (recommended)](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin) and [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
 - Router firmware: [Zigbee 1.2](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/CC2530/bin), can be re-paired if you power on/power off the device three times (power on, wait 2 seconds, power off, repeat this cycle three times)
 - Can be bought on e.g. AliExpress: [CC2530](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104041&SearchText=cc2530), [CC2530 + CC2591](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104521&SearchText=cc2530+cc2591), [GBAN GB2530](http://www.gban.cn/en/product_show.asp?id=43)
+- Complete dongle preflashed (coordinator or router) can be bought on [Tindie](https://www.tindie.com/products/GiovanniCas/cc2530-cc2592-zigbee-dongle/)
 - How to flash: see flashing section of [How to create a CC2530 router](../how_tos/how_to_create_a_cc2530_router.md) or [alternative flashing methods](./alternative_flashing_methods.md)
 - [Connecting the CC2530](./connecting_cc2530.md)
 
@@ -54,7 +55,7 @@ Zigbee2MQTT officially supports the following adapters:
 
 - Serial connected Zigbee adapter with external antenna.
 - Cheap but needs specific PCBs to be used as coordinator (+- $5 bare chip)
-- Very powerful and capable to handle +150 devices directly connected.
+- **Very powerful** and capable to handle **+150 devices directly connected**.
 - Very good range, ~800m line of sight, sensitivity is due to the onboard CC2592 Power Amplifier (20db)
 - Requires JTAG programmer to be flashed
 - Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)

@@ -107,6 +107,8 @@ In case you see message like below when running `dmesg -w` you are using a bad p
 [44889.075627] Voltage normalised (0x00000000)
 ```
 
+When you have a SSD connected to the Pi, try connecting the adapter via a powered USB hub.
+
 ### Make sure the extension cable works
 A bad extension cable can lead to connection issues between the system and the adpater.
 Symptoms of this are disconnection messages in the `dmesg -w` log like below.
@@ -120,13 +122,16 @@ Symptoms of this are disconnection messages in the `dmesg -w` log like below.
 [44929.604615] usb 1-1.5: Manufacturer: Texas Instruments
 ```
 
+### For Openhab users: disable zwave binding
+The Openhab zwave binding interferes with Zigbee2MQTT, click [here](https://community.openhab.org/t/apparently-the-zwave-binding-blocks-the-dev-ttyusb0-port-in-combination-with-a-cc2652rb-zigbee2mqtt-dongle/103245) for more information.
+
 ### In case of a CC2530 or CC2531 adapter, verify that don't have a CC2540
 The CC2540 can be confused easily with the CC2531 as it looks (almost) exactly the same. However, this device does not support zigbee but bluetooth. This can be verified by looking at the chip.
 
 ### [ModemManager](https://www.freedesktop.org/wiki/Software/ModemManager/) is installed
 ModemManager, which is default installed on e.g. Ubuntu, is known to cause problems. It can easily be fixed by removing ModemManager through `sudo apt-get purge modemmanager`.
 
-### CC1352P-2/CC26X2R1 coordinators only: press the reset button on the device
+### CC1352P-2/CC26X2R1 launchpad coordinators only: press the reset button on the device
 If Zigbee2MQTT fails to start with a CC1352P-2 with `Error: SRSP - SYS - version after 6000ms`, you most probably have connected your device to a system that requires pressing the reset button (the one next to the USB connector) momentarily/shortly after connecting the USB cable. This issue has primarily been observed on x86 architectures only (e.g., Intel NUC, HPE Microserver, i7 laptop), see also [#2162](https://github.com/Koenkk/zigbee2mqtt/issues/2162). The procedure has to be repeated every time the CC1352P-2 is re-connected and it's not clear yet, whether this can be fixed at all. It does not seem to occur on ARM based boards (Raspberry Pi, ODROID XU4).
 
 Something that can also solve the issue is to replug the USB cable.
