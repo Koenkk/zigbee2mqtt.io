@@ -17,6 +17,7 @@ description: "Integrate your eWeLink SA-003-Zigbee via Zigbee2MQTT with whatever
 
 ## Notes
 
+### Pairing
 Reset by unplugging any devices plugged into the socket, hold the button down for 10 secs until the light flashes Green/Orange and the Socket switches on and off. pair within 60 secs
 
 ## Manual Home Assistant configuration
