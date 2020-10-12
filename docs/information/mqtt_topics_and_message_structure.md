@@ -285,6 +285,11 @@ Indicates a device exposes a light. Will always have the `features` property whi
 
 Example: `{"type":"light","features":["state","brightness","color_temp","color_xy"]}`
 
+#### Cover
+Indicates a device exposes a cover. Will always have the `features` property which can contain the following: `state`, `position`, `tilt`.
+
+Example: `{"type":"cover","features":["state","position"]}`
+
 #### Switch
 Indicates a device exposes a switch.
 
