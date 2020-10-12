@@ -36,6 +36,17 @@ devices:
 * `legacy`: Set to `true` to disable the legacy integration (highly recommended!)
 
 
+* `simulated_brightness`: Set to `true` to simulate a `brightness` value (default: `false`).
+If this device provides a `brightness_move_up` or `brightness_move_down` action it is possible to specify the update
+interval and delta. This can be done by instead of specifying `true`:
+
+```yaml
+simulated_brightness:
+  delta: 20 # delta per interval, default = 20
+  interval: 200 # interval in milliseconds, default = 200
+```
+
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:

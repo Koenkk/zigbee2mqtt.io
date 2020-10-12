@@ -265,11 +265,9 @@ Blog about supporting Zigbee 3.0 to CC2530: https://habr.com/ru/company/iobroker
 `,
     },
     {
-        model: ['TS0121_plug', 'HS2SK_nxp'],
+        model: ['TS0121_plug'], //, 'HS2SK_nxp'],
+        deviceTypeSpecificConfiguration: true,
         note: `
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
 * \`measurement_poll_interval\`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 10 seconds.`,
     },
     {
@@ -1744,10 +1742,8 @@ Factory reset the light bulb ([video](https://www.youtube.com/watch?v=4zkpZSv84H
     },
     {
         model: ['AV2010/22'],
+        deviceTypeSpecificConfiguration: true,
         note: `
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
 * \`occupancy_timeout\`: Timeout (in seconds) after the \`occupancy: false\` message is sent.
 If not set, the timeout is \`90\` seconds.
 When set to \`0\` no \`occupancy: false\` is send.
@@ -1755,10 +1751,8 @@ When set to \`0\` no \`occupancy: false\` is send.
     },
     {
         model: ['WXKG01LM'],
+        deviceTypeSpecificConfiguration: true,
         note: `
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
 * \`hold_timeout\`: The WXKG01LM only reports a button press and release.
 By default, Zigbee2mqtt publishes a \`hold\` action when there is at
 least 1000 ms between both events. It could be that due to
@@ -1783,21 +1777,23 @@ This device has various limitations:
     {
         supports: ['position'],
         notModel: ['SV01', 'SV02'],
+        deviceTypeSpecificConfiguration: true,
         note: `
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
 * \`invert_cover\`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
 `,
     },
     {
-        supports: ['temperature', 'humidity', 'pressure', 'brightness', 'color temperature', 'color', 'illuminance'],
-        notSupports: ['thermostat'],
-        notDescription: ['thermostat'],
-        notModel: ['324131092621', 'ICZB-KPD18S', 'ICZB-KPD14S', 'TYZS1L'],
+        model: [
+            'WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM', 'WXKG06LM', 'WXKG02LM', 'QBKG04LM', 'QBKG11LM',
+            'QBKG03LM', 'QBKG12LM', 'WXKG07LM', 'QBKG21LM', 'QBKG22LM', 'E1743', 'E1766', 'ptvo.switch',
+            'DIYRuZ_R8_8', 'HGZB-1S', 'HGZB-02S', 'HGZB-045', 'IM6001-BTP01', 'AV2010/34', 'HS1EB/HS1EB-E',
+            'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'ZGRC-KEY-013', '6ARCZABZH',
+            'MEAZON_BIZY_PLUG', 'MEAZON_DINRAIL', '2AJZ4KPKEY', 'TERNCY-PP01', 'TERNCY-SD01',
+            'ICZB-KPD14S', 'ICZB-KPD18S', '067773', 'E1744', 'ICTC-G-1',
+        ],
+        deviceTypeSpecificConfiguration: true,
         note: `
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+* \`legacy\`: Set to \`true\` to disable the legacy integration (highly recommended!)
 `,
     },
     {
@@ -1810,6 +1806,7 @@ This device has various limitations:
     {
         supports: ['illuminance'],
         notModel: ['RTCGQ11LM', 'GZCGQ01LM'],
+        deviceTypeSpecificConfiguration: true,
         note: `
 * \`illuminance_lux_precision\`: Controls the precision of \`illuminance_lux\` values, e.g. \`0\` or \`1\`; default \`1\`.
 To control the precision based on the illuminance_lux value set it to e.g. \`{1000: 0, 100: 1}\`,
@@ -1818,6 +1815,7 @@ when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 pr
     },
     {
         supports: ['illuminance'],
+        deviceTypeSpecificConfiguration: true,
         note: `
 * \`illuminance_lux_calibration\`: Allows to manually calibrate illuminance values,
 e.g. \`95\` would take 95% to the illuminance reported by the device; default \`100\`.
@@ -1826,7 +1824,9 @@ e.g. \`95\` would take 95% to the illuminance reported by the device; default \`
     {
         supports: ['temperature'],
         notSupports: ['color temperature', 'thermostat'],
+        deviceTypeSpecificConfiguration: true,
         notDescription: ['thermostat'],
+        notModel: ['Zen-01-W'],
         note: `
 * \`temperature_precision\`: Controls the precision of \`temperature\` values,
 e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
@@ -1895,8 +1895,24 @@ e.g. \`1\` would add 1 to the pressure reported by the device; default \`0\`.
 `,
     },
     {
+        simulatedBrightness: true,
+        deviceTypeSpecificConfiguration: true,
+        note: `
+* \`simulated_brightness\`: Set to \`true\` to simulate a \`brightness\` value (default: \`false\`).
+If this device provides a \`brightness_move_up\` or \`brightness_move_down\` action it is possible to specify the update
+interval and delta. This can be done by instead of specifying \`true\`:
+
+\`\`\`yaml
+simulated_brightness:
+  delta: 20 # delta per interval, default = 20
+  interval: 200 # interval in milliseconds, default = 200
+\`\`\`
+`,
+    },
+    {
         supports: ['brightness', 'color temperature', 'color'],
         notModel: ['324131092621', 'ICZB-KPD18S', 'ICZB-KPD14S', 'TYZS1L'],
+        deviceTypeSpecificConfiguration: true,
         note: `
 * \`transition\`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to \`0\` (no transition).
@@ -2161,10 +2177,8 @@ After this command thermostat responds with two messages. One for calibration ch
     },
     {
         model: ['STS-PRS-251', 'STSS-PRES-001'],
+        deviceTypeSpecificConfiguration: true,
         note: `
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
 * \`presence_timeout\`: Timeout (in seconds) after which \`presence: false\` will be send when the device has not checked-in. By default 100 seconds, don't go lower then 30 seconds.
 `,
     },

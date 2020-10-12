@@ -9,6 +9,13 @@ const homeassistant = new HomeassistantExtension(null, null, null, null, {on: ()
 const assert = require('assert');
 const devices = require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices;
 
+function arrayEquals(a, b) {
+    return Array.isArray(a) &&
+      Array.isArray(b) &&
+      a.length === b.length &&
+      a.every((val, index) => val === b[index]);
+}
+
 function generate(device) {
     // verify that all model and notModel exist;
     for (const note of notes) {
@@ -66,6 +73,15 @@ function getNotes(device) {
     let deviceTypeSpecificConfigurationHeader = false;
     const note = notes
         .filter((n) => {
+            if (n.simulatedBrightness) {
+                if (device.model === 'ICTC-G-1') return true;
+                return device.fromZigbee.find((c) => {
+                    return arrayEquals(c.type, ['commandMoveToLevel', 'commandMoveToLevelWithOnOff']) ||
+                        arrayEquals(c.type, ['commandMove', 'commandMoveWithOnOff']) ||
+                        arrayEquals(c.type, ['commandStep', 'commandStepWithOnOff']);
+                });
+            }
+
             if (n.hasOwnProperty('supports') && n.supports.filter((s) => device.supports.includes(s)).length === 0) {
                 return false;
             }
