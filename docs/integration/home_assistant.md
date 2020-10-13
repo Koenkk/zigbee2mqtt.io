@@ -151,6 +151,29 @@ light:
 
 {% endraw %}
 
+## Exposing switch as a light
+If your device is currently discovered as a switch and you want to discover it as a light, the following config in the Zigbee2MQTT `configuration.yaml` can be used:
+
+```yaml
+devices:
+  "0x12345678":
+    friendly_name: my_switch
+    homeassistant:
+      switch:
+        type: light
+        object_id: light
+        name: my_switch
+      # OR if your devices has multiple endpoints (e.g. left/right)
+      switch_left:
+        type: light
+        object_id: light_left
+        name: my_switch_left
+      switch_right:
+        type: light
+        object_id: light_right
+        name: my_switch_right
+```
+
 ## Controlling Zigbee2MQTT via Home Assistant
 The following Home Assistant configuration allows you to control Zigbee2MQTT from Home Assistant.
 
