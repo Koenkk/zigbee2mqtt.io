@@ -28,7 +28,8 @@ To do this send to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"operation_mode": "
 
 As the device is sleeping by default, you need to wake it up after sending the bind/unbind command by pressing the reset button once.
 
-This device publish only one endpoint (no up/down specific endpoint).
+This device does not allow to bind 2 target devices whereas it has 2 x 2 switches (2 bands) ; bind only one target.
+It does not have 2 specific endpoints.
 
 When bound to a lamp, the behavior is as follows (for WXCJKG12LM Aqara Opple switch 2 band):
 - up left click: turn off
