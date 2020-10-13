@@ -58,7 +58,7 @@ Request:
 {
     "learn": {
         "id": 1,
-        "key_code": 1,
+        "key_code": 31,
     }
 }
 ```
@@ -131,8 +131,8 @@ Request:
 ```json
 {
     "delete":{
-        "id": xxx,
-        "key_code": xxx
+        "id": 1,
+        "key_code": 31
     }
 }
 ```
