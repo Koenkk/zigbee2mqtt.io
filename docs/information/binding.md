@@ -19,9 +19,11 @@ Binding can be configured using the following topics:
 ### Binding specific endpoint
 **This is not applicable for most users**
 
-By default, the first endpoint is taken. In case your device has multiple endpoints, e.g. `left` and `right`. The following can be done to specify an endpoint:
+By default, the first endpoint is taken. In case your device has multiple endpoints (e.g. `left` and `right`), the following can be done to specify an endpoint:
 - **Source**: append the endpoint friendly name to the topic, e.g. `zigbee2mqtt/bridge/bind/my_switch/left`
 - **Target**: append the endpoint friendly name to the payload, e.g. `my_switch/right`
+
+It is also possible to specify the endpoints in numeric form both for source and target (e.g. `zigbee2mqtt/bridge/bind/my_switch/3`).
 
 ### Binding a remote to a group
 Binding a remote to a group allows a remote to directly control a group of devices without intervention of Zigbee2MQTT.
