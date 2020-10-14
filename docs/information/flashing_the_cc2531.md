@@ -3,8 +3,9 @@
 # Flashing the CC2531 USB stick
 The firmware can be flashed with multiple devices. The easiest but most expensive option is with the *CC Debugger* from Texas Instruments, which is described on this page. However, you can also use a *Raspberry Pi* or a MCU like the *Arduino Uno* or the cheap *ESP8266* with four dupont cables and optionally a downloader cable. Information about these methods can be found here: [Alternative firmware flashing methods](../information/alternative_flashing_methods.md).
 
+**NOTE 1**: In case you are already running a Zigbee network: reflashing does not require repairing of all devices, see [What does and does not require repairing of all devices?](../information/FAQ.html#what-does-and-does-not-require-repairing-of-all-devices)
 
-*NOTE: In case you are already running a Zigbee network: reflashing does not require repairing of all devices, see [What does and does not require repairing of all devices?](../information/FAQ.html#what-does-and-does-not-require-repairing-of-all-devices)*
+**NOTE 2**: In this tutorial we will flash the default firmware. For larger network (20+) or when experiencing stability problems the [source routing firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/source_routing) is recommended. This firmware has a limiation of 5 direct children so make sure to have enough routers in your network.
 
 ## Required hardware
 The following additional hardware is required in order to flash the CC2531:
