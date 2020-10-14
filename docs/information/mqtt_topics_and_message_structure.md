@@ -277,11 +277,9 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
     "hsl": "360,100,100"
   },
 
-  // Blinks the bulbs, possible values:
-  // - "select": single blink
-  // - "lselect": blinking for a longer time
-  // - "none": stop blinking
-  "alert": "select",
+  // Identify a device (e.g. bulb blinks)
+  // Supported: blink, breathe, okay, channel_change, finish_effect and stop_effect
+  "identify": "blink",
 
   // Specifies the number of seconds the transition to this state takes (0 by default).
   "transition": 3,
