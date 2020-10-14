@@ -1,6 +1,6 @@
 ---
-title: "Tuya SNTZ007 control via MQTT"
-description: "Integrate your Tuya SNTZ007 via Zigbee2MQTT with whatever smart home
+title: "TuYa SNTZ007 control via MQTT"
+description: "Integrate your TuYa SNTZ007 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
