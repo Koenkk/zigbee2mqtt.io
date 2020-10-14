@@ -27,13 +27,13 @@ Unfortunately Gira seems to have dropped support for their ZigBee transmitters c
 * Press and hold buttons `3` and `4` simultaneously for about 10 seconds until the green LEDs start to flash.
 * Release buttons `3` and `4` and then briefly press button `O` within 10 seconds.
 * The LEDs should light up green for 3 seconds and the transmitter has been reset.  
-![Reset](../images/devices/InstaRemote-reset.jpg)
+![Reset](../images/InstaRemote-reset.jpg)
 
 ### Join Network (8-Button Devices)
 * Press and hold buttons `5` and `I` simultaneously until the green LEDs start to flash. Then release the buttons again.
 * After 10 more seconds the transmitter will start to search for an open network in order to join it.
 * If the transmitter was able to join a network, the LEDs will light up green for 3 seconds (otherwise the LEDs will flash red quickly for 3 seconds).  
-![Join Network](../images/devices/InstaRemote-join-network.jpg)
+![Join Network](../images/InstaRemote-join-network.jpg)
 
 
 ## OTA updates
