@@ -15,7 +15,9 @@ advanced:
 ```
 
 ### Zigbee-herdsman debug logging
-To enable debug logging for Zigbee-herdman start Zigbee2MQTT with: `DEBUG=zigbee-herdsman* npm start`. Zigbee-herdsman is the Zigbee library where Zigbee2MQTT is based up-on
+To enable debug logging for Zigbee-herdman start Zigbee2MQTT with: `DEBUG=zigbee-herdsman* npm start`. Zigbee-herdsman is the Zigbee library where Zigbee2MQTT is based up-on.
+
+**Important:** this is **not** logged to the log files and is only available on the STDOUT.
 
 ### Docker
 To enable debug logging in the Zigbee2MQTT Docker container add `-e DEBUG=zigbee-herdsman*` to your `docker run` command.
