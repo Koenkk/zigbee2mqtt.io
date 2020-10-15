@@ -16,7 +16,7 @@ Indicates a device exposes a binary value. Always has `value_on` and `value_off`
 
 Examples:
 - `{"type":"binary","name":"occupancy","value_on":true,"value_off":false,"access":"r"}`
-- `{"type":"binary","name":"state","value_on":"ON","value_off":"OFF","value_toggle","TOGGLE","access":"rw"}`
+- `{"type":"binary","name":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":"rw"}`
 
 ### Numeric
 Indicates a device exposes a numeric value. Opionally has `value_max`, `value_min` and `unit`.
@@ -42,7 +42,7 @@ Example:
 {
     "type": "light",
     "features": [
-        {"type":"binary","name":"state","value_on":"ON","value_off":"OFF","value_toggle","TOGGLE","access":"rw"},
+        {"type":"binary","name":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":"rw"},
         {"type":"numeric","name":"brightness","value_min":0,"value_max":254,"access":"rw"},
         {"type":"numeric","name":"color_temp","access":"rw"}
         // TODO: color??
@@ -59,7 +59,7 @@ Example:
 {
     "type": "switch",
     "features": [
-        {"type":"binary","name":"state","value_on":"ON","value_off":"OFF","value_toggle","TOGGLE","access":"rw"}
+        {"type":"binary","name":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":"rw"}
     ]
 }
 ```
