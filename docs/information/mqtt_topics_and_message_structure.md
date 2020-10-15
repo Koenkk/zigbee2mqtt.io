@@ -277,33 +277,7 @@ Example payload:
 ```
 
 ### Exposes
-A device definition will either have `supports` OR `exposes`, `supports` is in the process of being gradually replaced by `exposes`.
-All exposes will have the property `type`. In case it exposes a capability on a certain endpoint the endpoint name is added to the optional property `endpoint`, e.g: `{"type":"light","features":["state","brightness"],"endpoint":"left"}`.
-
-#### Light
-Indicates a device exposes a light. Will always have the `features` property which can contain the following: `state`, `brightness`, `color_temp`, `color_xy` or `color_hs`.
-
-Example: `{"type":"light","features":["state","brightness","color_temp","color_xy"]}`
-
-#### Cover
-Indicates a device exposes a cover. Will always have the `features` property which can contain the following: `state`, `position`, `tilt`.
-
-Example: `{"type":"cover","features":["state","position"]}`
-
-#### Switch
-Indicates a device exposes a switch.
-
-Example: `{"type":"switch"}`
-
-#### Numeric
-Indicates a device exposes a numeric value. Always contains `property`, optionally includes a `unit`.
-
-Example: `{"type":"numeric","property":"temperature","unit":"°C"}`
-
-#### Boolean
-Indicates a device exposes a boolean value. Always contains `property`.
-
-Example: `{"type":"boolean","property":"occupancy"}`
+A device definition will either have `supports` OR `exposes`, `supports` is in the process of being gradually replaced by `exposes`. The format of `exposes` is documented in [Exposes](./exposes).
 
 ## zigbee2mqtt/bridge/groups
 Contains the groups.
