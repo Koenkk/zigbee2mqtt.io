@@ -31,6 +31,12 @@ Indicates a device exposes an enum value. Always has `values` indicating all pos
 Examples:
 - `{"type":"enum","name":"identify","values":["blink","okay"],"access":"w"}`
 
+### JSON
+Indicates a device exposes a JSON value. Always has `schema` indicating the [JSON Schema](https://json-schema.org/).
+
+Examples:
+- `{"type":"json","name":"color","schema":{"type":"object","properties":{"x":{"type":"number"},"y":{"type":"number"}}},"access":"rw"}`
+
 ## Specific
 
 ### Light
@@ -44,8 +50,21 @@ Example:
     "features": [
         {"type":"binary","name":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":"rw"},
         {"type":"numeric","name":"brightness","value_min":0,"value_max":254,"access":"rw"},
-        {"type":"numeric","name":"color_temp","access":"rw"}
-        // TODO: color??
+        {"type":"numeric","name":"color_temp","access":"rw"},
+        {
+            "type":"json",
+            "name":"color",
+            "schema":{
+                "type":"object",
+                "properties":{
+                    "x":{"type":"number"},
+                    "y":{"type":"number"},
+                    "hue":{"type":"number"},
+                    "saturation":{"type":"number"}
+                }
+            },
+            "access":"rw"
+        }
     ]
 }
 ```
