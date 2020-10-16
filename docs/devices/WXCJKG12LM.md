@@ -28,13 +28,15 @@ To do this send to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"operation_mode": "
 
 As the device is sleeping by default, you need to wake it up after sending the bind/unbind command by pressing the reset button once.
 
-When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple switch 1 band):
-- left click: turn off
-- right click: turn on
-- left double click: light dim down (by steps of 33%)
-- right double click: light dim up (by steps of 33%)
-- long left click: warm white
-- long right click: cold white
+Note that the WXCJKG12LM can only be bound to one device at a time.
+
+When bound to a lamp, the behavior is as follows (for WXCJKG12LM Aqara Opple switch 2 band). 
+- up left click: turn off
+- up right click: turn on
+- down left click: light dim down (by steps of 33%)
+- down right click: light dim up (by steps of 33%)
+- down left double click: warm white
+- down right double click: cold white
 
 
 ## Manual Home Assistant configuration
