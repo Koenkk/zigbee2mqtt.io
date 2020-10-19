@@ -277,9 +277,9 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
     "hsl": "360,100,100"
   },
 
-  // Identify a device (e.g. bulb blinks)
+  // Trigger effect on a device (e.g. bulb blinks)
   // Supported: blink, breathe, okay, channel_change, finish_effect and stop_effect
-  "identify": "blink",
+  "effect": "blink",
 
   // Specifies the number of seconds the transition to this state takes (0 by default).
   "transition": 3,
