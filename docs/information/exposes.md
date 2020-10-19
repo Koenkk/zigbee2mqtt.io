@@ -99,3 +99,16 @@ Example:
 }
 ```
 
+### Lock
+Indicates a device exposes a lock.
+
+Example:
+
+```json
+{
+    "type": "lock",
+    "features": [
+        {"type":"binary","name":"state","value_on":"LOCK","value_off":"UNLOCK","access":"rw"}
+    ]
+}
+```
