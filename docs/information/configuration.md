@@ -288,7 +288,7 @@ devices:
 ```
 
 ## Different location
-To specify a different location for the `configuration.yaml` (by default inside the `data` directory), set the `ZIGBEE2MQTT_CONFIG`.
+To specify a different data directory (by default `data`), set the `ZIGBEE2MQTT_DATA` environment variable. The value of `ZIGBEE2MQTT_DATA` should be a path to a directory e.g. `/tmp/z2m_data`, this directory should at least contain a `configuration.yaml`.
 
 ## Override via environment variables
 It is possible to override the values in `configuration.yaml` via environment variables.
