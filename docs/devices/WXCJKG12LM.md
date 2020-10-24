@@ -17,6 +17,8 @@ description: "Integrate your Xiaomi WXCJKG12LM via Zigbee2MQTT with whatever sma
 
 ## Notes
 
+### Pairing Instructions
+Press and hold the button on the backside of the device until the blue light starts blinking, release it and the pairing should begin.
 
 ### Binding
 By default the switch is bound to the coordinator but this device can also be used to directly control other lights and switches in the network.
