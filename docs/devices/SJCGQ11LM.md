@@ -17,11 +17,9 @@ description: "Integrate your Xiaomi SJCGQ11LM via Zigbee2MQTT with whatever smar
 
 ## Notes
 
-
 ### Pairing
-Press and hold water logo on the device for +- 10 seconds until the blue light blinks
+Press and hold water logo on the device for +- 10 seconds (you have to press quite hard). until the blue light blinks
 three times, release the water logo (the blue light will blink once more) and wait.
-    
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
