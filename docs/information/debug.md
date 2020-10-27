@@ -22,7 +22,7 @@ To enable debug logging for Zigbee-herdman start Zigbee2MQTT with: `DEBUG=zigbee
 ### Docker
 To enable debug logging in the Zigbee2MQTT Docker container add `-e DEBUG=zigbee-herdsman*` to your `docker run` command.
 
-### Hass.io addon
+### Home Assistant OS/Supervised addon
 Set `"zigbee_herdsman_debug": true` in the configuration.
 
 ## Change log level during runtime
