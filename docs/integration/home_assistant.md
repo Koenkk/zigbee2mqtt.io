@@ -170,6 +170,16 @@ input_select:
     initial: info
     icon: mdi:format-list-bulleted
 
+# Input number for joining time remaining (in minutes)
+input_number:
+  zigbee2mqtt_join_minutes:
+    name: "Zigbee2MQTT join minutes"
+    initial: 2
+    min: 1
+    max: 5
+    step: 1
+    mode: slider
+    
 # Input text to input Zigbee2MQTT friendly_name for scripts
 input_text:
   zigbee2mqtt_old_name:
@@ -200,11 +210,10 @@ script:
         topic: zigbee2mqtt/bridge/config/remove
         payload_template: "{{ states.input_text.zigbee2mqtt_remove.state | string }}"
 
-# Timer for joining time remaining (120 sec = 2 min)
+# Timer for joining time remaining
 timer:
   zigbee_permit_join:
     name: Time remaining
-    duration: 120
 
 sensor:
   # Sensor for monitoring the bridge state
@@ -257,6 +266,8 @@ automation:
     action:
       service: timer.start
       entity_id: timer.zigbee_permit_join
+      data_template:
+        duration: "{{ '00:0%i:00' % (states('input_number.zigbee2mqtt_join_minutes') | int ) }}"
   # Automation to stop timer when switch turned off and turn off switch when timer finished
   - id: zigbee_join_disabled
     alias: Zigbee Join Disabled
@@ -308,6 +319,7 @@ entities:
   - entity: input_select.zigbee2mqtt_log_level
   - type: divider
   - entity: switch.zigbee2mqtt_main_join
+  - entity: input_number.zigbee2mqtt_join_minutes
   - entity: timer.zigbee_permit_join
   - type: divider
   - entity: input_text.zigbee2mqtt_old_name
