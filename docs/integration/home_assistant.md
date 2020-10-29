@@ -184,10 +184,13 @@ input_number:
 input_text:
   zigbee2mqtt_old_name:
     name: Zigbee2MQTT Old Name
+    initial: ""
   zigbee2mqtt_new_name:
     name: Zigbee2MQTT New Name
+    initial: ""
   zigbee2mqtt_remove:
     name: Zigbee2MQTT Remove
+    initial: ""
 
 # Scripts for renaming & removing devices
 script:
