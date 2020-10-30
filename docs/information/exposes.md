@@ -31,6 +31,12 @@ Indicates a device exposes an enum value. Always has `values` indicating all pos
 Examples:
 - `{"type":"enum","name":"identify","property":"identify","values":["blink","okay"],"access":"w"}`
 
+### Text
+Indicates a device exposes a textual value.
+
+Examples:
+- `{"type":"text","name":"inserted","property":"inserted","access":"w"}`
+
 ### Composite
 Composite combines the above generic types in the `features` array. Unlike other generic types, it does not have the `access` property since the `access` is defined per feature.
 
@@ -93,6 +99,21 @@ Example:
     "type": "switch",
     "features": [
         {"type":"binary","name":"state","property":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":"rw"}
+    ]
+}
+```
+
+### Fan
+Indicates a device exposes a fan. Possible features are `state` and `mode`.
+
+Example:
+
+```json
+{
+    "type": "fan",
+    "features": [
+        {"type":"binary","name":"state","property":"fan_state","value_on":"ON","value_off":"OFF","access":"rw"},
+        {"type":"enum","name":"mode","property":"fan_mode","values":["off", "low", "medium", "high", "on", "auto", "smart"],"access":"rw"}
     ]
 }
 ```
