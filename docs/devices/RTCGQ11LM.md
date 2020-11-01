@@ -42,6 +42,11 @@ More detailed information about this can be found [here](https://community.hubit
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
+
+* `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
+e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
+
+
 * `no_occupancy_since`: Timeout (in seconds) after `no_occupancy_since` is send.
 This indicates the time since last occupancy was detected.
 For example `no_occupancy_since: [10, 60]` will send a `{"no_occupancy_since": 10}` after 10 seconds
@@ -58,9 +63,6 @@ This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/iss
 To work around this, a
 [hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
 is needed.
-
-* `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
-e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
 
 
 ## Manual Home Assistant configuration

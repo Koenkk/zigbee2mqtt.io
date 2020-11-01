@@ -17,6 +17,7 @@ description: "Integrate your HEIMAN HS2IRC via Zigbee2MQTT with whatever smart h
 
 ## Notes
 
+
 Device can learn up to 15 devices and up to 30 keycodes for each device.
 
 ### Configuring
@@ -47,7 +48,7 @@ Response:
 
 - **action_result**: (`success`/`error`). Action result.
 - **action_model_type**: User-defined model ID. `1..255`
-- **action_id**: Internal device slot ID. Total IR transmitter can store up to 15 devices with ID `1..15` 
+- **action_id**: Internal device slot ID. Total IR transmitter can store up to 15 devices with ID `1..15`
 
 NOTE: You should call `get_list` manually to refresh `devices` topic.
 
@@ -66,7 +67,7 @@ Request:
 - **id**: Internal device slot ID. `1..15`.
 - **key_code**: Keycode slot ID. `1..30` - Store/replace specific key in speicified slot ID. `>=31` - Create slot ID.
 
-NOTE: You should store keys one-by-one if you specified `key_code` by yourself. 
+NOTE: You should store keys one-by-one if you specified `key_code` by yourself.
 
 Response:
 ```json
@@ -139,6 +140,7 @@ Request:
 
 - **id**: `1..15` - Delete specific device with ID. `>=16` - Delete all devices.
 - **key_code**: `1..30` -Delete speicifc keycode. `>=31` - Delete all keycodes for specified device ID.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,

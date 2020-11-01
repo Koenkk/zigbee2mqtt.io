@@ -36,6 +36,7 @@ More detailed information about this can be found [here](https://community.hubit
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
+
 * `no_occupancy_since`: Timeout (in seconds) after `no_occupancy_since` is send.
 This indicates the time since last occupancy was detected.
 For example `no_occupancy_since: [10, 60]` will send a `{"no_occupancy_since": 10}` after 10 seconds

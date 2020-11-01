@@ -31,6 +31,16 @@ If your shutter motor needs more than 2 minutes, I suppose it will stop before r
 `,
     },
     {
+        model: ['404021'],
+        note: `
+### Pairing
+Press the reset button (or connected switch) 5 times.
+
+### External switch
+Device only supports momentary switches, not tumble switches.
+`,
+    },
+    {
         model: ['DM A60F'],
         note: `
 ### Pairing
@@ -57,9 +67,9 @@ See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koe
         model: ['SMSZB-120'],
         note: `
 ### Triggering alarm
-This smoke alarm can be triggered manually by sending these commands to it:
+This smoke alarm can be triggered manually by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` with the payloads:
 
-To start (Change duration to what you need):
+To start (Change \`duration\` in number of seconds to what you need):
 * \`{"warning": {"mode": "burglar", "level": "high", "strobe": false, "duration": 300}}\`
 
 To stop:
@@ -205,6 +215,13 @@ Switch the lamp on five times until the lamp blinks several times.
 `,
     },
     {
+        model: ['X711A', 'X712A', 'X713A'],
+        note: `
+### Pairing
+Press and hold the button on the device for more then 10 seconds (until the led light starts blinking), release and wait.
+`,
+    },
+    {
         model: 'V3-BTZB',
         note: `
 ### Pairing
@@ -286,7 +303,7 @@ Long press reset button for 5s until the LED indicator flashes three times, whic
         model: ['SNZB-03'],
         note: `
 ### Pairing
-If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the  button on the top for about 5 seconds until the light flashes several times. The device will then go into pairing mode  It should then be connected to Zigbee2MQTT. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
+If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the reset button through the small hole at the top for about 5 seconds until the light flashes several times. The device will then go into pairing mode. It should then be connected to Zigbee2MQTT. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
 `,
     },
     {
@@ -319,16 +336,166 @@ The connected load, and the red LED indicator behind the dimmer knob will flash 
 ### General
 The ubisys C4 remote control unit seems to be primarily targeted to be directly bound to other ZigBee devices to control them. Therefore it does not emit plain "click" events or similar but can be configured to send ZigBee commands like on, off, toggle, cover up, cover down etc. from up to 6 endpoints (4 with on/off, level and scene clusters for lights and another 2 to control window covering devices).
 When used with Zigbee2MQTT all endpoints get bound to the coordinator automatically. Therefore all actions will be sent to the coordinator and forwarded to MQTT in addition to being sent directly via ZigBee to other devices that have potentially been bound manually (see [Binding](../information/binding.html) for more information).
-In it's factory reset configuration an ubisys C4 just sends a toggle command (originating from endpoints 1 to 4 respectively) for each input. Therefore basic keypresses on attached momentary switches can be processed through Zigbee2MQTT even without further input configuration.
+In its factory reset configuration an ubisys C4 just sends a toggle command (originating from endpoints 1 to 4 respectively) for each input. Therefore basic keypresses on attached momentary switches can be processed through Zigbee2MQTT even without further input configuration.
 
 
 ### Configuring Inputs
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` the following device attributes can be set to configure inputs:
+The inputs of most ubisys devices can be configured in a very flexible way to map state transitions (e.g. 'released' to
+'pressed') to Zigbee commands (e.g. 'toggle'). This even applies to the way in which these inputs control a local load (for ubisys devices other than the C4).
+
+#### Templates
+By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` using the JSON properties \`configure_device_setup\` and \`input_action_templates\` the inputs can be configured using templates. This allows to configure some common use cases without having to fully dive into the details of \`input_actions\` (see [Raw Configuration](#raw-configuration) below).
+
+Valid template types are:
+* \`toggle\`: Use one push button input to toggle the state of a light (or a similar actuator). A 'toggle' command will be sent on every push of the button.
+* \`toggle_switch\`: Use one stationary switch to toogle. A 'toggle' command will be sent when the switch is turned on as well as when the switch is turned off.
+* \`on_off_switch\`: Use one stationary switch to turn on and off. An 'on' command will be sent when the switch is turned on and an 'off' command when it is turned off. Helpful to ensure that lights stay synchronised when controlling a group.
+* \`on\`: Only send an 'on' command on every push of a button. Helpful to e.g. use a C4 as a more direct interface to some other physical device with a relais, e.g. to turn on all lights when the (physical) alarm system signals an intrusion.
+* \`off\`: Only send an 'off' command on every push of a button (also see \`on\`).
+* \`dimmer_single\`: Use one push button to toggle the state of a light and also to control its level. A short press will send a 'toggle' command and long presses will move the level up and down alternately.
+* \`dimmer_double\`: Use two push buttons to switch a light on and off and also to control its level. On the first input, a short press will send an 'on' command and a long press a 'move level up' command. On the second input, a short press will send an 'off' command and a long press a 'move level down' command.
+* \`cover\`: Use two push buttons to control a cover. A press on the first input will send a 'move up' command and if released within 1 second, it will send a 'stop' command. The same applies for the second input with 'move down' and 'stop' commands. This allows to use short presses to e.g. control the tilt of lift & tilt blinds whereas long presses will move up or down completely.
+* \`cover_switch\`: Use two stationary switches to control a cover. Similar to \`cover\`, but the 'stop' command will always be sent when a switch is turned off.
+* \`cover_up\`: Only send a 'move up' command on every push of a button (also see \`on\`).
+* \`cover_down\`: Only send a 'move down' command on every push of a button (also see \`on\`).
+* \`scene\`: Use a push button to select a scene (using its id). A short press will send a 'recall scene' command using \`scene_id\` and if \`scene_id_2\` is present a long press will do the same using \`scene_id_2\`.
+* \`scene_switch\`: Use a stationary switch to select a scene. Very similar to \`scene\`: turning the switch on will send \`scene_id\` and turning it off will send \`scene_id_2\` (if configured).
+
+General attributes:
+* \`input\`: Optional, selects the input(s) to use for a template. If not specified, the first template will use input 0 and then it will be incremented automatically for every further template. In case a templates uses two inputs, \`input\` and \`input+1\` will be used and following template will use \`input+2\`.
+* \`inputs\`: Optional, selects both inputs separatly for templates using two inputs. Allows to e.g. switch up and down inputs in case they are wired differently. The following template will use \`Math.max(...inputs)+1\`.
+* \`endpoint\`: Optional, selects the _outbound_ endpoint to use for sending the commands. The C4 only contains _outbound_ endpoints starting with endpoint 1 (see above). For the other ubisys devices endpoint 1 usually is an _inbound_ endpoint controlling the load, but starting at 2 or 3 they also contain _outbound_ endpoints that are per default bound to their respective load controlling endpoint but can also be changed (e.g. from switch to push button) or unbound and rebound to e.g. control a different light using the second input of a S1-R or D1. If not specified, the first template will use the first available _outbound_ endpoint on the specific device and then it will be incremented automatically for every further template. For a C4, cover templates will start at endpoint 5 (since endpoints 1-4 do not host a window covering cluster and can therefore only be used for lights etc).
+
+The input(s) and endpoint used will also be output to the Zigbee2MQTT log (flagged as warnings but only to make sure they do not get suppressed).
+
+Attributes only used with dimmer templates:
+* \`no_onoff_down\`: Optional, changes the commands sent to not automatically turn the light off when moving the level fully down. Useful to be able to dim a light down completely without turning it off.
+* \`no_onoff_up\`: Optional, changes the commands sent to not automatically turn the light on when moving the level up.
+* \`no_onoff\`: Optional, combination of \`no_onoff_up\` and \`no_onoff_down\`.
+* \`rate\`: Optional (default is 50), specifies the rate in steps per second when moving the level up or down.
+
+Attributes only used with scene templates
+* \`scene_id\`: Mandatory, specifies the scene id to send for the primary function of the template (i.e. short button press or switch turned on).
+* \`group_id\`: Specifies the group id to send the 'recall scene' to (needs to be identical to the one used in the group definition in \`configuration.yaml\` / \`groups\` and to the one used when storing the scene. Can be ommitted on subsequent scene templates.
+* \`scene_id_2\`: Optional, if present it specifies the scene id to send for the secondary function of the template (i.e. long button press or switch turned off).
+* \`group_id_2\`: Optional, specifies the group id to send with \`scene_id_2\`. Only needed if different from \`group_id\`.
+
+**On the C4, the respective _outbound_ endpoint also needs to be bound to one or more target devices (see [Binding](#binding) below) for most of the template types (besides scene control).**
+
+Please also note that there seems to be a size limit on the amount of data that can successfullly be written using \`input_action_templates\`, so not all combinations theoretically possbile will work in reality.
+
+
+#### Template Examples
+\`"//_comment"\` fields are really just comments only, will be ignored (as any other additional JSON properties) and can certainly be omitted. They are just used here since normal JavaScript comments (\`//\`) would not be considered valid JSON and therefore Zigbee2MQTT would throw an error.
+
+C4 Default Configuration
 \`\`\`json
 {
     "configure_device_setup": {
-        "inputConfigurations": [0, 0, 0, 0],
-        "inputActions": [
+        "input_action_templates": [
+            {
+                "//_comment": "will automatically use input 0 and endpoint 1",
+                "type": "toggle"
+            },
+            {
+                "//_comment": "will automatically use input 1 and endpoint 2",
+                "type": "toggle"
+            },
+            {
+                "//_comment": "will automatically use input 2 and endpoint 3",
+                "type": "toggle"
+            },
+            {
+                "//_comment": "will automatically use input 4 and endpoint 4",
+                "type": "toggle"
+            }
+        ]
+    }
+}
+\`\`\`
+
+Control a dimming light with inputs 1 (up) and 0 (down) and use input 3 to toggle a different light
+\`\`\`json
+{
+    "configure_device_setup": {
+        "input_action_templates": [
+            {
+                "//_comment": "will automatically use endpoint 1",
+                "type": "dimmer_double",
+                "inputs": [1, 0]
+            },
+            {
+                "//_comment": "will automatically use endpoint 2",
+                "type": "toggle",
+                "input": 3
+            }
+        ]
+    }
+}
+\`\`\`
+
+Use separate up and down push buttons with a D1
+\`\`\`json
+{
+    "configure_device_setup": {
+        "input_action_templates": [
+            {
+                "//_comment": "will automatically use inputs 0 and 1 and endpoint 2 (first outbound endpoint on a D1)",
+                "type": "dimmer_double"
+            }
+        ]
+    }
+}
+\`\`\`
+
+Use stationary switches instead of push buttons with a J1
+\`\`\`json
+{
+    "configure_device_setup": {
+        "input_action_templates": [
+            {
+                "//_comment": "will automatically use inputs 0 and 1 and endpoint 2 (first outbound endpoint on a J1)",
+                "type": "cover_switch"
+            }
+        ]
+    }
+}
+\`\`\`
+
+
+Control a dimming light with inputs 0 and 1 and recall scenes with 3 and 4
+\`\`\`json
+{
+    "configure_device_setup": {
+        "input_action_templates": [
+            {
+                "//_comment": "will automatically use inputs 0 and 1 and endpoint 1",
+                "type": "dimmer_double"
+            },
+            {
+                "//_comment": "will automatically use input 3 (endpoint does not really matter for scenes)",
+                "type": "scene",
+                "group_id": 1000,
+                "scene_id": 10
+            },
+            {
+                "//_comment": "will automatically use input 4 and group id 1000",
+                "type": "scene",
+                "scene_id": 11
+            }
+        ]
+    }
+}
+\`\`\`
+
+#### Raw Configuration
+
+By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` the following device attributes can be set to rawly configure inputs:
+\`\`\`json
+{
+    "configure_device_setup": {
+        "input_configurations": [0, 0, 0, 0],
+        "input_actions": [
             [0, 13, 1, 6, 0, 2],
             [1, 13, 2, 6, 0, 2],
             [2, 13, 3, 6, 0, 2],
@@ -339,43 +506,226 @@ By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` the following device attrib
 \`\`\`
 For further details on these attributes please take a look at the
 [ubisys C4 Technical Reference Manual](https://www.ubisys.de/wp-content/uploads/ubisys-c4-technical-reference.pdf),
-chapter "7.8.5. Device Setup Cluster (Server)" and the "ZigBee Device Physical Input Configurations Integrator's Guide" (which can be obtained directly from ubisys upon request).
-Please note that there seems to be a size limit on the amount of data that can successfullly be written to \`inputActions\`, so not all configurations theoretically possbile might work in reality.
+chapter "7.8.5. Device Setup Cluster (Server)" (or the respective ubisys reference manual of the device in use in case it's not a C4) and the "ZigBee Device Physical Input Configurations Integrator's Guide" (which can be obtained directly from ubisys upon request).
+
+Please note that there seems to be a size limit on the amount of data that can successfullly be written to \`input_actions\`, so not all configurations theoretically possbile might work in reality.
 
 By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/get/configure_device_setup\` the values of the configuration attributes can
 also be read back from the device and be printed to the normal Zigbee2MQTT log.
+
+### Binding
+Most of the \`input_actions\` and \`input_action_templates\` (besides scene control) do not reference a target device directly but make use of the binding table of a specific _outbound_ endpoint (for C4 see [General](#general) above, for other ubisys devices take a look at the respective ubisys reference manual). For the C4, Zigbee2MQTT will always bind all endpoints to the coordinator automatically (so Zigbee2MQTT will be able to forward button presses to MQTT), but to control any other ZigBee device or group directly, it is necessary to bind the _outbound_ endpoints used to the target (device or group).
+
+When binding (or unbinding), it is important to explicitely specify the _outbound_ endpoint as the source, e.g. \`zigbee2mqtt/bridge/bind/[SOURCE_DEVICE_FRIENDLY_NAME]/3\` (also see [Binding specific endpoint](../information/binding.html#binding-specific-endpoint)). Endpoints can be specified in numeric form and it is usually not necessary to specify an endpoint for the target device.
+
+For ubisys devices other than the C4 this also allows to use the secondary input to control a different device. Example: Use the secondary input on a D1 (uses _outbound_ endpoint 3 in the factory configuration) to control a separate ZigBee bulb:
+\`\`\`
+mosquitto_pub -t zigbee2mqtt/bridge/bind/<dimmer_friendly_name>/3 -m <another_bulb_friendly_name>
+\`\`\`
+
+### Decoupling
+For ubisys devices other than the C4 this even allows to completely decouple the local input from the local output. Example: Unbind the switch input from the local load and use it to instead control a group of lights without cutting the power to the bulbs (the switch output can still be controlled via ZigBee, e.g. via MQTT through Zigbee2MQTT):
+\`\`\`
+mosquitto_pub -t zigbee2mqtt/bridge/unbind/<switch_friendly_name>/2 -m <switch_friendly_name>
+mosquitto_pub -t zigbee2mqtt/bridge/bind/<switch_friendly_name>/2 -m <group_name>
+\`\`\`
+
+To restore the original behavior you unbind the group and rebind the device:
+\`\`\`
+mosquitto_pub -t zigbee2mqtt/bridge/unbind/<switch_friendly_name>/2 -m <group_name>
+mosquitto_pub -t zigbee2mqtt/bridge/bind/<switch_friendly_name>/2 -m <switch_friendly_name>
+\`\`\`
 `,
     },
     {
-        model: ['D1', 'J1'],
+        model: ['D1'],
         note: `
 ### Configuring Inputs
-In case the inputs need to be reconfigured (e.g. to use stationary switches instead of momentary ones) this can be done in the same way as [it is being done for the ubisys C4](C4.html#configuring-inputs).
+In case the inputs need to be reconfigured (e.g. to use stationary switches instead of momentary ones or vice versa) this can be done in the same way as [it is being done for the ubisys C4](C4.html#configuring-inputs).
+
+### (Re-)Binding and/or Decoupling
+Also see [the ubisys C4 documentation](C4.html#binding), example use cases:
+* Use the second input to control a different ZigBee device.
+* Completely decouple the input(s) from the local load.
+
+### Ballast Configuration
+By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` the dimmer's ballast configuration attributes (\`min_level\` and \`max_level\`) can be set.
+Example:
+\`\`\`json
+{
+    "ballast_config": {
+        "min_level": 3
+    }
+}
+\`\`\`
+
+By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/get/ballast_config\` the values of the ballast configuration attributes can
+also be read back from the device and be printed to the normal Zigbee2MQTT log (flagged as warnings but only to make sure they do not get suppressed).
+To account for errors due to missing optional attributes (since this is a general function), every cluster attribute will be queried separately and the complete process can therefore take a moment.
 `,
     },
     {
         model: ['S1', 'S2'],
         note: `
 ### Configuring Inputs
-In case the inputs need to be reconfigured (e.g. to use stationary switches instead of momentary ones) this can be done in the same way as [it is being done for the ubisys C4](C4.html#configuring-inputs).
+In case the input(s) need to be reconfigured (e.g. to use stationary switches instead of momentary ones or vice versa) this can be done in the same way as [it is being done for the ubisys C4](C4.html#configuring-inputs).
 
-### Decoupling
-You can decouple the switch input form the state, this allows you to control a group of lights using the switch without cutting the power to the bulbs.
+### (Re-)Binding and/or Decoupling
+Also see [the ubisys C4 documentation](C4.html#binding), example use cases:
+* Use the second input to control a different Zigbee device (S1-R only, S1 only has one input)
+* Completely decouple the input(s) from the local load
+`,
+    },
+    {
+        model: 'InstaRemote',
+        note: `
+### Transmitters Loosing Connection in ZigBee 3 Networks
+With their factory firmware, the transmitters loose network connection after a few hours when ZigBee 3 devices are present in the network (which is a pretty much standard nowadays). For the Jung wall and handheld transmitters there is a firmware update available that fixes this problem (see [OTA updates](#ota-updates) below), but in turn decreases battery lifetime down to a few months.
 
-By default the input is bound to itself, so we need to unbind it and then bind a zigbee group
+Unfortunately Gira seems to have dropped support for their ZigBee transmitters completely and does not offer any firmware updates at all. For the Gira handheld transmitter the Jung update seems to work (and to fix the problem), but for the Gira wall transmitter this is not the case (it only has 6 buttons instead of 8 on the Jung wall transmitter and would therefore need a different firmware). There does not seem to be real solution for this problem rendering the Gira wall transmitters pretty much useless nowadays.
 
+### Factory Reset (8-Button Devices)
+* Press and hold buttons \`3\` and \`4\` simultaneously for about 10 seconds until the green LEDs start to flash.
+* Release buttons \`3\` and \`4\` and then briefly press button \`O\` within 10 seconds.
+* The LEDs should light up green for 3 seconds and the transmitter has been reset.
+![Reset](../images/InstaRemote-reset.jpg)
+
+### Join Network (8-Button Devices)
+* Press and hold buttons \`5\` and \`I\` simultaneously until the green LEDs start to flash. Then release the buttons again.
+* After 10 more seconds the transmitter will start to search for an open network in order to join it.
+* If the transmitter was able to join a network, the LEDs will light up green for 3 seconds (otherwise the LEDs will flash red quickly for 3 seconds).
+![Join Network](../images/InstaRemote-join-network.jpg)
+
+### OTA
+For the device to ask for/accept OTA updates, it needs to be in "programming mode" (same mode as for joining a network, see above).
+In case the device does still not accept updates or seems to be stuck somehow, it may help to do a factory reset, join the network again and then again enter programming mode before starting the OTA update again.
+`,
+    },
+    {
+        model: 'HS2IRC',
+        note: `
+Device can learn up to 15 devices and up to 30 keycodes for each device.
+
+### Configuring
+By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
+
+#### Create device
+
+Request:
+\`\`\`json
+{
+    "create": {
+        "model_type": 55,
+    }
+}
 \`\`\`
-mosquitto_pub -t zigbee2mqtt/bridge/unbind/<switch_friendly_name>/2 -m <switch_friendly_name>
-mosquitto_pub -t zigbee2mqtt/bridge/bind/<switch_friendly_name>/2 -m <group_name>
+
+- **model_type**: User-defined model ID. Used just for reference. Can be \`1..255\`.
+
+Response:
+\`\`\`json
+{
+    "action": "create",
+    "action_result": "success",
+    "action_model_type": 55,
+    "action_id": 1,
+}
 \`\`\`
 
-To restore the original behavior you unbind the group and rebind the device
+- **action_result**: (\`success\`/\`error\`). Action result.
+- **action_model_type**: User-defined model ID. \`1..255\`
+- **action_id**: Internal device slot ID. Total IR transmitter can store up to 15 devices with ID \`1..15\`
 
-\`\`\`
-mosquitto_pub -t zigbee2mqtt/bridge/unbind/<switch_friendly_name>/2 -m <group_name>
-mosquitto_pub -t zigbee2mqtt/bridge/bind/<switch_friendly_name>/2 -m <switch_friendly_name>
+NOTE: You should call \`get_list\` manually to refresh \`devices\` topic.
+
+#### Learn key
+
+Request:
+\`\`\`json
+{
+    "learn": {
+        "id": 1,
+        "key_code": 31,
+    }
+}
 \`\`\`
 
+- **id**: Internal device slot ID. \`1..15\`.
+- **key_code**: Keycode slot ID. \`1..30\` - Store/replace specific key in speicified slot ID. \`>=31\` - Create slot ID.
+
+NOTE: You should store keys one-by-one if you specified \`key_code\` by yourself.
+
+Response:
+\`\`\`json
+{
+    "action": "learn",
+    "action_result": "success",
+    "action_key_code": 1,
+    "action_id": 1,
+}
+\`\`\`
+
+- **action_result**: (\`success\`/\`error\`). Action result.
+- **action_key_code**: Internal keycode slot ID, where key was stored. \`1...30\`
+- **action_id**: Internal device slot ID. \`1..15\`
+
+NOTE: You should call \`get_list\` manually to refresh \`devices\` topic after learning key.
+
+#### Send stored key
+
+Request:
+\`\`\`json
+{
+    "send_key": {
+        "id": 1,
+        "key_code": 1,
+    }
+}
+\`\`\`
+
+- **id**: Internal device slot ID. \`1..15\`.
+- **key_code**: Keycode slot ID. \`1..30\`.
+
+#### Get list of the stored devices and keys
+
+Request:
+\`\`\`json
+{
+    "get_list": ""
+}
+\`\`\`
+
+Response:
+
+\`\`\`json
+{
+  "devices": [
+    {
+      "id": 1,
+      "key_codes": [
+        1,
+      ],
+      "model_type": 55
+    }
+  ]
+}
+\`\`\`
+
+
+#### Delete device or keycode
+
+Request:
+\`\`\`json
+{
+    "delete":{
+        "id": 1,
+        "key_code": 31
+    }
+}
+\`\`\`
+
+- **id**: \`1..15\` - Delete specific device with ID. \`>=16\` - Delete all devices.
+- **key_code**: \`1..30\` -Delete speicifc keycode. \`>=31\` - Delete all keycodes for specified device ID.
 `,
     },
     {
@@ -467,6 +817,7 @@ It can only be bound to 1 group at a time and cannot be bound to a device.
 
 By default this remote is bound to the default bind group which you first have to unbind it from.
 This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENDLY_NAME]]\` payload \`default_bind_group\`.
+Right before executing the commands make sure to wake up the device by pressing a button on it.
 `,
     },
     {
@@ -672,21 +1023,21 @@ See [Touchlink](../information/touchlink)
 
 #### Hue bridge
 When the bulb is still connected to the Hue bridge, you can simply factory reset the bulb
-by removing it from the bridge via the Hue app.
+by removing it from the bridge via the Hue app. Orphaned bulbs (configured to connect to a non-existing zigbee network) can be adopted by a Hue bridge by entering the 6 character serial number in the Philips Hue app.
 
 #### Hue dimmer switch
 [VIDEO: Factory reset a Hue bulb with Hue dimmer switch](https://www.youtube.com/watch?v=qvlEAELiJKs).
 
 #### Bluetooth (if supported by device)
 Install the Philips Hue Bluetooth app for [Android](https://play.google.com/store/apps/details?id=com.signify.hue.blue)
-or iPhone. You can use the app to trigger a factory reset on a paired light. (Note: The light will only be in bluetooth pairing
+or [iOS](https://apps.apple.com/us/app/philips-hue-bluetooth/id1456604186). You can use the app to trigger a factory reset on a paired light. (Note: The light will only be in bluetooth pairing (Note: The light will only be in bluetooth pairing
 mode for a couple of minutes after poweron)
 
 #### TRADFRI remote control
 This may also be possible with the
 [Tradfri Remote Control](https://www.ikea.com/us/en/images/products/tradfri-remote-control__0489469_PE623665_S4.JPG)
 by pressing and holding the reset button on the bottom of the remote (next to the battery).
-[This may not always work](https://github.com/Koenkk/zigbee2mqtt/issues/296#issuecomment-416923751).
+[This may not always work, even if the Hue bulb starts flashing](https://github.com/Koenkk/zigbee2mqtt/issues/296#issuecomment-416923751).
 `,
     },
     {
@@ -932,6 +1283,7 @@ The remote can be bound to groups using [binding](../information/binding) since 
 It can only be bound to 1 group at a time. Use the group name as \`TARGET_DEVICE_FRIENDLY_NAME\`.
 By default this remote is bound to the default bind group which you first have to unbind it from.
 This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENDLY_NAME]]\` payload \`default_bind_group\`.
+Wake up the device right before sending the commands by pressing a button on it.
 
 #### Note
 This device with old firmware < 2.3.014 does not support binding (limitation of the device). A workaround is to first
@@ -950,6 +1302,9 @@ of type 'commandToggle' with data '{}' from endpoint 1 with groupID 57173\`.
     {
         model: ['WXCJKG11LM', 'WXCJKG12LM', 'WXCJKG13LM'],
         note: `
+### Pairing Instructions
+Press and hold the button on the backside of the device until the blue light starts blinking, release it and the pairing should begin.
+
 ### Binding
 By default the switch is bound to the coordinator but this device can also be used to directly control other lights and switches in the network.
 
@@ -959,7 +1314,11 @@ Now change the operation mode of the device, by default it is in \`event\` mode,
 To do this send to \`zigbee2mqtt/FRIENDLY_NAME/set\` payload \`{"operation_mode": "command"}\`, right before doing this make sure to wakeup the device.
 
 As the device is sleeping by default, you need to wake it up after sending the bind/unbind command by pressing the reset button once.
-
+`,
+    },
+    {
+        model: ['WXCJKG11LM', 'WXCJKG13LM'],
+        note: `
 When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple switch 1 band):
 - left click: turn off
 - right click: turn on
@@ -970,11 +1329,59 @@ When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple swi
 `,
     },
     {
+        model: ['WXCJKG12LM'],
+        note: `
+Note that the WXCJKG12LM can only be bound to one device at a time.
+
+When bound to a lamp, the behavior is as follows (for WXCJKG12LM Aqara Opple switch 2 band).
+- up left click: turn off
+- up right click: turn on
+- down left click: light dim down (by steps of 33%)
+- down right click: light dim up (by steps of 33%)
+- down left double click: warm white
+- down right double click: cold white
+
+`,
+    },
+    {
         model: ['E1746'],
         note: `
 ### Pairing
 Push the reset button of the device with a paperclip for 5 seconds.
 While pairing the LED is flashing/dimming slowly. Once the pairing is finished, the LED stays on.
+
+## Tips for monitoring this device
+The device send a payload exactly 1 hours after the first pairing and a payload each exactly 4 hours after.
+You can track the activity of this device by observing the lastseen value. If now () - lastseen > 4 h, then
+your equipment has lost its connectivity
+`,
+    },
+    {
+        model: ['SP 120'],
+        note: `
+### Pairing
+Factory reset by press & hold the power button for 5 seconds. The LED is then starting to blink during pairing process.
+
+### Specs
+- Rating: 220-240VAC, 10A, 50Hz
+- Standby Power: <= 0.5W
+
+### Manual
+[Supplier's manual](https://www.innr.com/wp-content/uploads/2019/12/Installation-Manual-Smart-Plug-EU-version-SP-120.pdf)
+`,
+    },
+    {
+        model: ['TS0001'],
+        note: `
+### Pairing
+Press and hold the button on the device for more then 10 seconds (until the led light starts blinking), release and wait.
+`,
+    },
+    {
+        model: ['TS0044'],
+        note: `
+### Pairing
+To enter pairing mode hold bottom left button for 10 seconds until all 4 LEDs start flashing
 `,
     },
     {
@@ -1336,30 +1743,6 @@ Factory reset the light bulb ([video](https://www.youtube.com/watch?v=4zkpZSv84H
 `,
     },
     {
-        model: ['RTCGQ01LM', 'RTCGQ11LM'],
-        note: `
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
-* \`no_occupancy_since\`: Timeout (in seconds) after \`no_occupancy_since\` is send.
-This indicates the time since last occupancy was detected.
-For example \`no_occupancy_since: [10, 60]\` will send a \`{"no_occupancy_since": 10}\` after 10 seconds
-and a \`{"no_occupancy_since": 60}\` after 60 seconds.
-* \`occupancy_timeout\`: Timeout (in seconds) after the \`occupancy: false\` message is sent.
-If not set, the timeout is \`90\` seconds.
-When set to \`0\` no \`occupancy: false\` is send.
-
-**IMPORTANT**: \`occupancy_timeout\` should not be set to lower than 60 seconds.
-The reason is this: after detecting a motion the sensor ignores any movements for
-exactly 60 seconds. In case there are movements after this, a new message
-(\`occupancy: true\`) will be sent and the sensor will go for one more minute sleep, and so on.
-This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/issues/270#issuecomment-414999973)).
-To work around this, a
-[hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
-is needed.
-`,
-    },
-    {
         model: ['AV2010/22'],
         note: `
 ### Device type specific configuration
@@ -1412,6 +1795,13 @@ This device has various limitations:
         notSupports: ['thermostat'],
         notDescription: ['thermostat'],
         notModel: ['324131092621', 'ICZB-KPD18S', 'ICZB-KPD14S', 'TYZS1L'],
+        note: `
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+`,
+    },
+    {
+        model: ['RTCGQ01LM'],
         note: `
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
@@ -1639,10 +2029,17 @@ every second.
     `,
     },
     {
+        model: ['SA-003-Zigbee'],
+        note: `
+### Pairing
+Reset by unplugging any devices plugged into the socket, hold the button down for 10 secs until the light flashes Green/Orange and the Socket switches on and off. pair within 60 secs
+    `,
+    },
+    {
         model: ['SJCGQ11LM', 'SJCGQ12LM'],
         note: `
 ### Pairing
-Press and hold water logo on the device for +- 10 seconds until the blue light blinks
+Press and hold water logo on the device for +- 10 seconds (you have to press quite hard) until the blue light blinks
 three times, release the water logo (the blue light will blink once more) and wait.
     `,
     },
@@ -2037,6 +2434,9 @@ Bit | Position
     {
         model: ['J1'],
         note: `
+### Configuring Inputs
+In case the inputs need to be reconfigured (e.g. to use stationary switches instead of momentary ones or vice versa) this can be done in the same way as [it is being done for the ubisys C4](C4.html#configuring-inputs).
+
 ### Configuration of device attributes
 By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
 \`\`\`json
@@ -2746,6 +3146,27 @@ Example of MQTT message payload to Identify the device. This shouuld be sent to 
     }
 }
 \`\`\`
+`,
+    },
+    {
+        model: ['RTCGQ01LM', 'RTCGQ11LM'],
+        note: `
+* \`no_occupancy_since\`: Timeout (in seconds) after \`no_occupancy_since\` is send.
+This indicates the time since last occupancy was detected.
+For example \`no_occupancy_since: [10, 60]\` will send a \`{"no_occupancy_since": 10}\` after 10 seconds
+and a \`{"no_occupancy_since": 60}\` after 60 seconds.
+* \`occupancy_timeout\`: Timeout (in seconds) after the \`occupancy: false\` message is sent.
+If not set, the timeout is \`90\` seconds.
+When set to \`0\` no \`occupancy: false\` is send.
+
+**IMPORTANT**: \`occupancy_timeout\` should not be set to lower than 60 seconds.
+The reason is this: after detecting a motion the sensor ignores any movements for
+exactly 60 seconds. In case there are movements after this, a new message
+(\`occupancy: true\`) will be sent and the sensor will go for one more minute sleep, and so on.
+This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/issues/270#issuecomment-414999973)).
+To work around this, a
+[hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
+is needed.
 `,
     },
 ];

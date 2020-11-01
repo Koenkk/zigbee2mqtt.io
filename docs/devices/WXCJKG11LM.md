@@ -17,6 +17,7 @@ description: "Integrate your Xiaomi WXCJKG11LM via Zigbee2MQTT with whatever sma
 
 ## Notes
 
+
 ### Pairing Instructions
 Press and hold the button on the backside of the device until the blue light starts blinking, release it and the pairing should begin.
 
@@ -29,6 +30,7 @@ Now change the operation mode of the device, by default it is in `event` mode, b
 To do this send to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"operation_mode": "command"}`, right before doing this make sure to wakeup the device.
 
 As the device is sleeping by default, you need to wake it up after sending the bind/unbind command by pressing the reset button once.
+
 
 When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple switch 1 band):
 - left click: turn off
