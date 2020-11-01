@@ -265,7 +265,7 @@ Blog about supporting Zigbee 3.0 to CC2530: https://habr.com/ru/company/iobroker
 `,
     },
     {
-        model: ['TS0121_plug'], //, 'HS2SK_nxp'],
+        model: ['TS0121_plug', 'HS2SK_nxp'],
         deviceTypeSpecificConfiguration: true,
         note: `
 * \`measurement_poll_interval\`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 10 seconds.`,
