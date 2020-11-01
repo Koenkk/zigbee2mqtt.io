@@ -2724,7 +2724,7 @@ This method should work for Philips Hue bulbs, IKEA TRADFRI bulbs, GE Link bulbs
 `,
     },
     {
-        model: 'HS1SA-M',
+        model: 'HS1SA',
         note: `
 ### Pairing
 

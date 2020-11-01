@@ -66,6 +66,7 @@ light:
     brightness: true
     color_temp: true
     xy: true
+    hs: false
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/rgb/set"
     brightness_scale: 254
@@ -76,6 +77,9 @@ light:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
+    color_temp: false
+    xy: false
+    hs: false
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/white/set"
     brightness_scale: 254
@@ -85,9 +89,9 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 
 binary_sensor:
   - platform: "mqtt"

@@ -11,7 +11,7 @@ description: "Integrate your Moes ZK-EU-2U via Zigbee2MQTT with whatever smart h
 
 | Model | ZK-EU-2U  |
 | Vendor  | Moes  |
-| Description | ZigBee3.0 dual USB wireless socket plug |
+| Description | Zigbee 3.0 dual USB wireless socket plug |
 | Supports | on/off |
 | Picture | ![Moes ZK-EU-2U](../images/devices/ZK-EU-2U.jpg) |
 
@@ -32,16 +32,25 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
-    value_template: "{{ value_json.state }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    value_template: "{{ value_json.state_l1 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/l1/set"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state_l2 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/l2/set"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

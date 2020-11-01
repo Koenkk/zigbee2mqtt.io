@@ -12,7 +12,7 @@ description: "Integrate your Ajax Online Aj_Zigbee_Led_Strip via Zigbee2MQTT wit
 | Model | Aj_Zigbee_Led_Strip  |
 | Vendor  | Ajax Online  |
 | Description | LED Strip |
-| Supports | on/off, brightness, color xy |
+| Supports | on/off, brightness, color temperature, color xy |
 | Picture | ![Ajax Online Aj_Zigbee_Led_Strip](../images/devices/Aj_Zigbee_Led_Strip.jpg) |
 
 ## Notes
@@ -63,17 +63,26 @@ light:
     brightness: true
     color_temp: true
     xy: true
+    hs: false
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     brightness_scale: 254
+    effect: true
+    effect_list: 
+      - "blink"
+      - "breathe"
+      - "okay"
+      - "channel_change"
+      - "finish_effect"
+      - "stop_effect"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

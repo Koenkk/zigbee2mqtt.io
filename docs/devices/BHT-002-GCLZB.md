@@ -11,7 +11,7 @@ description: "Integrate your Moes BHT-002-GCLZB via Zigbee2MQTT with whatever sm
 
 | Model | BHT-002-GCLZB  |
 | Vendor  | Moes  |
-| Description | Room thermostat water/gas boiler |
+| Description | Moes BHT series Thermostat |
 | Supports | thermostat, temperature |
 | Picture | ![Moes BHT-002-GCLZB](../images/devices/BHT-002-GCLZB.jpg) |
 
@@ -54,8 +54,13 @@ climate:
     action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
     modes: 
       - "off"
-      - "auto"
       - "heat"
+    hold_modes: 
+      - "hold"
+      - "program"
+    hold_command_topic: true
+    hold_state_template: "{{ value_json.preset }}"
+    hold_state_topic: true
     temperature_state_topic: true
     temperature_state_template: "{{ value_json.current_heating_setpoint }}"
     temperature_command_topic: "current_heating_setpoint"

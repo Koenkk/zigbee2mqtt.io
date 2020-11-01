@@ -39,6 +39,9 @@ YOUR_CURRENT_CALIBRATION_VALUE can be 0, but if you calibrated temperature for t
 After this command thermostat responds with two messages. One for calibration change confirmation, and other with current local_temperature.
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
@@ -107,10 +110,12 @@ climate:
     action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
     modes: 
       - "auto"
+    away_mode_command_topic: true
+    away_mode_state_topic: true
+    away_mode_state_template: "{{ value_json.away_mode }}"
     hold_modes: 
       - "schedule"
       - "manual"
-      - "away"
       - "boost"
       - "complex"
       - "comfort"
@@ -129,6 +134,14 @@ sensor:
     icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.update_available}}"
 ```
 {% endraw %}
 

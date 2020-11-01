@@ -12,7 +12,7 @@ description: "Integrate your IKEA ICTC-G-1 via Zigbee2MQTT with whatever smart h
 | Model | ICTC-G-1  |
 | Vendor  | IKEA  |
 | Description | TRADFRI wireless dimmer |
-| Supports | brightness [0-255] (quick rotate for instant 0/255), action |
+| Supports | action |
 | Picture | ![IKEA ICTC-G-1](../images/devices/ICTC-G-1.jpg) |
 
 ## Notes
@@ -89,11 +89,6 @@ simulated_brightness:
 ```
 
 
-* `transition`: Controls the transition time (in seconds) of on/off, brightness,
-color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
-Note that this value is overridden if a `transition` value is present in the MQTT command payload.
-
-
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 
@@ -117,23 +112,23 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "%"
-    device_class: "battery"
     value_template: "{{ value_json.battery }}"
+    device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
+    icon: "mdi:gesture-double-tap"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 
 binary_sensor:
   - platform: "mqtt"

@@ -7,13 +7,13 @@ description: "Integrate your LED Trading HK-LN-DIM-A via Zigbee2MQTT with whatev
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HK-LN-DIM-A.md)*
 
-# LED Trading HK-LN-DIM-A 
+# LED Trading HK-LN-DIM-A
 
 | Model | HK-LN-DIM-A  |
 | Vendor  | LED Trading  |
 | Description | ZigBee AC phase-cut dimmer |
 | Supports | on/off, brightness |
-| Picture | ![ROBB ROB_200-004-0](../images/devices/HK-LN-DIM-A.jpg) |
+| Picture | ![LED Trading HK-LN-DIM-A](../images/devices/HK-LN-DIM-A.jpg) |
 
 ## Notes
 
@@ -37,17 +37,28 @@ light:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
+    color_temp: false
+    xy: false
+    hs: false
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     brightness_scale: 254
+    effect: true
+    effect_list: 
+      - "blink"
+      - "breathe"
+      - "okay"
+      - "channel_change"
+      - "finish_effect"
+      - "stop_effect"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

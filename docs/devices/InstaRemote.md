@@ -11,10 +11,10 @@ description: "Integrate your Insta InstaRemote via Zigbee2MQTT with whatever sma
 
 | Model | InstaRemote  |
 | Vendor  | Insta  |
-| Description | ZigBee Light Link wall transmitter |
+| Description | ZigBee Light Link wall/handheld transmitter |
 | Supports | action |
 | Picture | ![Insta InstaRemote](../images/devices/InstaRemote.jpg) |
-| White-label | Gira 2430-100, Jung ZLLxx5004M |
+| White-label | Gira 2430-100, Gira 2435-10, Jung ZLLCD5004M, Jung ZLLLS5004M, Jung ZLLA5004M, Jung ZLLHS4 |
 
 ## Notes
 
@@ -55,16 +55,16 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
+    icon: "mdi:gesture-double-tap"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 
 binary_sensor:
   - platform: "mqtt"

@@ -1,19 +1,19 @@
 ---
-title: "HEIMAN HS1SA-M control via MQTT"
-description: "Integrate your HEIMAN HS1SA-M via Zigbee2MQTT with whatever smart home
+title: "HEIMAN HS1SA control via MQTT"
+description: "Integrate your HEIMAN HS1SA via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1SA-M.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1SA.md)*
 
-# HEIMAN HS1SA-M
+# HEIMAN HS1SA
 
-| Model | HS1SA-M  |
+| Model | HS1SA  |
 | Vendor  | HEIMAN  |
 | Description | Smoke detector |
 | Supports | smoke |
-| Picture | ![HEIMAN HS1SA-M](../images/devices/HS1SA-M.jpg) |
+| Picture | ![HEIMAN HS1SA](../images/devices/HS1SA.jpg) |
 
 ## Notes
 
@@ -48,27 +48,43 @@ binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.smoke }}"
     payload_on: true
     payload_off: false
-    value_template: "{{ value_json.smoke }}"
     device_class: "smoke"
 
 binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.battery_low }}"
     payload_on: true
     payload_off: false
-    value_template: "{{ value_json.battery_low}}"
+    device_class: "battery"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.tamper }}"
+    payload_on: true
+    payload_off: false
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    value_template: "{{ value_json.battery }}"
     device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 
