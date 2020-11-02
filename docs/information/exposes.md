@@ -19,7 +19,7 @@ Examples:
 - `{"type":"binary","name":"state","property":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":"rw"}`
 
 ### Numeric
-Indicates a device exposes a numeric value. Opionally has `value_max`, `value_min` and `unit`.
+Indicates a device exposes a numeric value. Optionally has `value_max`, `value_min`, `value_step` and `unit`.
 
 Examples:
 - `{"type":"numeric","name":"brightness","property":"brightness","value_min":0,"value_max":254,"access":"rw"}`
@@ -135,7 +135,7 @@ Example:
 ```
 
 ### Lock
-Indicates a device exposes a lock.
+Indicates a device exposes a lock. Only possible feature is `state`.
 
 Example:
 
@@ -144,6 +144,27 @@ Example:
     "type": "lock",
     "features": [
         {"type":"binary","name":"state","property":"state","value_on":"LOCK","value_off":"UNLOCK","access":"rw"}
+    ]
+}
+```
+
+### Climate
+Indicates this device exposes climate functionallity.
+- Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
+- Never has both `occupied_heating_setpoint` and `current_heating_setpoint`.
+- Possible values for `system_mode` are `off`, `heat`, `cool` and `auto`.
+- Possible values for `running_state` are `idle`, `heat`, `cool`.
+
+Example:
+
+```json
+{
+    "type": "climate",
+    "features": [
+        {"type":"numeric","name":"occupied_heating_setpoint","property":"occupied_heating_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":"rw","unit":"°C"},
+        {"type":"numeric","name":"local_temperature","property":"local_temperature","access":"r","unit":"°C"},
+        {"type":"enum","name":"system_mode","property":"system_mode","values":["off", "auto", "heat", "cool"],"access":"rw"},
+        {"type":"enum","name":"running_state","property":"running_state","values":["idle", "heat", "cool"],"access":"r"},
     ]
 }
 ```
