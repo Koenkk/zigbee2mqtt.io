@@ -212,8 +212,7 @@ Example payload:
         "definition":{
             "model":"ZNCZ02LM",
             "vendor":"Xiaomi",
-            "description":"Mi power plug ZigBee",
-            "supports":"on/off, power measurement"
+            "description":"Mi power plug ZigBee"
         },
         "power_source":"Mains (single phase)",
         "date_code":"02-28-2017",
@@ -277,7 +276,7 @@ Example payload:
 ```
 
 ### Exposes
-A device definition will either have `supports` OR `exposes`, `supports` is in the process of being gradually replaced by `exposes`. The format of `exposes` is documented in [Exposes](./exposes).
+A device definition will always have an `exposes` property. The format of `exposes` is documented in [Exposes](./exposes).
 
 ## zigbee2mqtt/bridge/groups
 Contains the groups.
@@ -304,7 +303,7 @@ Events will be published to this topic. Possible types are `device_joined`, `dev
 - `{"type":"device_joined","data":{"friendly_name":"0x90fd9ffffe6494fc","ieee_address":"0x90fd9ffffe6494fc"}}`
 - `{"type":"device_announce","data":{"friendly_name":"0x90fd9ffffe6494fc","ieee_address":"0x90fd9ffffe6494fc"}}`
 - `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"started","ieee_address":"0x90fd9ffffe6494fc"}}`
-- `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"successful","ieee_address":"0x90fd9ffffe6494fc","supported":true,"definition":{"model":"LED1624G9","vendor":"IKEA","description":"TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white","supports":"on/off, brightness, color xy"}}}`
+- `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"successful","ieee_address":"0x90fd9ffffe6494fc","supported":true,"definition":{"model":"LED1624G9","vendor":"IKEA","description":"TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white"}}}`
 - `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"failed","ieee_address":"0x90fd9ffffe6494fc"}}`
 - `{"type":"device_leave","data":{"ieee_address":"0x90fd9ffffe6494fc"}}`
 

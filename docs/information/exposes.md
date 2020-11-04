@@ -150,7 +150,7 @@ Example:
 
 ### Climate
 Indicates this device exposes climate functionallity.
-- Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
+- Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `occupied_cooling_setpoint`, `local_temperature`, `system_mode`, `running_state`, `fan_mode`, `preset` and `away_mode`.
 - Never has both `occupied_heating_setpoint` and `current_heating_setpoint`.
 - Possible values for `system_mode` are `off`, `heat`, `cool`, `auto`, `dry` and `fan_only`.
 - Possible values for `running_state` are `idle`, `heat`, `cool`.
@@ -162,9 +162,13 @@ Example:
     "type": "climate",
     "features": [
         {"type":"numeric","name":"occupied_heating_setpoint","property":"occupied_heating_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":"rw","unit":"°C"},
+        {"type":"numeric","name":"occupied_cooling_setpoint","property":"occupied_heating_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":"rw","unit":"°C"},
         {"type":"numeric","name":"local_temperature","property":"local_temperature","access":"r","unit":"°C"},
         {"type":"enum","name":"system_mode","property":"system_mode","values":["off", "auto", "heat", "cool"],"access":"rw"},
+        {"type":"enum","name":"preset","property":"preset","values":["hold", "program"],"access":"rw"},
         {"type":"enum","name":"running_state","property":"running_state","values":["idle", "heat", "cool"],"access":"r"},
+        {"type":"enum","name":"mode","property":"fan_mode","values":["off", "low", "medium", "high", "on", "auto", "smart"],"access":"rw"},
+        {"type":"binary","name":"away_mode","property":"away_mode","value_on":"ON","value_off":"OFF","access":"rw"},
     ]
 }
 ```
