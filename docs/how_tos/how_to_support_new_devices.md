@@ -35,6 +35,7 @@ The next step is the to add an entry of your device to `node_modules/zigbee-herd
     supports: 'temperature and humidity', // Actions this device supports (only used for documentation)
     fromZigbee: [], // We will add this later
     toZigbee: [], // Should be empty, unless device can be controlled (e.g. lights, switches).
+    exposes: [e.battery(), e.temperature(), e.humidity()], // Defines what this device exposes, used for e.g. Home Assistant discovery
 },
 ```
 
@@ -103,10 +104,7 @@ This step is optional and can be skipped as the device page will automatically b
 
 On the next release of Zigbee2MQTT, the documentation will be updated and your device file will be linked in `docs/information/supported_devices.md` automatically.
 
-### 5. (Optional) Add home assistant configuration for your device
-In order to automatically discover this device in home assistant your device needs to be added to `mapping` in `lib/extension/homeassistant.js`.
-
-### 6. Done!
+### 5. Done!
 Now it's time to submit a pull request to [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) so this device is supported out of the box by Zigbee2MQTT. :smiley:
 
 ## Docker
@@ -117,15 +115,12 @@ cd /opt
 git clone https://github.com/Koenkk/zigbee-herdsman-converters.git
 cd zigbee-herdsman-converters
 npm ci
-cd ..
-# If you also want to add Home Assistant integration for this devices
-wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/lib/extension/homeassistant.js
 ```
 
 Now add the volumes to the Docker container by adding the following to your `docker run` command.:
 
 ```bash
--v /opt/zigbee-herdsman-converters:/app/node_modules/zigbee-herdsman-converters -v /opt/homeassistant.js:/app/lib/extension/homeassistant.js
+-v /opt/zigbee-herdsman-converters:/app/node_modules/zigbee-herdsman-converters
 ```
 
 Now you can start modifying e.g. `/opt/zigbee-herdsman-converters/devices.js`. Note that after each modification you need to restart the container for the changes to take effect.
