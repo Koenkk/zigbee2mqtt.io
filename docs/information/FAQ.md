@@ -132,6 +132,9 @@ The CC2540 can be confused easily with the CC2531 as it looks (almost) exactly t
 ### [ModemManager](https://www.freedesktop.org/wiki/Software/ModemManager/) is installed
 ModemManager, which is default installed on e.g. Ubuntu, is known to cause problems. It can easily be fixed by removing ModemManager through `sudo apt-get purge modemmanager`.
 
+### [hciuart] is running
+hciuart can be disabled by executing: `sudo systemctl disable hciuart`.
+
 ### CC1352P-2/CC26X2R1 launchpad coordinators only: press the reset button on the device
 If Zigbee2MQTT fails to start with a CC1352P-2 with `Error: SRSP - SYS - version after 6000ms`, you most probably have connected your device to a system that requires pressing the reset button (the one next to the USB connector) momentarily/shortly after connecting the USB cable. This issue has primarily been observed on x86 architectures only (e.g., Intel NUC, HPE Microserver, i7 laptop), see also [#2162](https://github.com/Koenkk/zigbee2mqtt/issues/2162). The procedure has to be repeated every time the CC1352P-2 is re-connected and it's not clear yet, whether this can be fixed at all. It does not seem to occur on ARM based boards (Raspberry Pi, ODROID XU4).
 
