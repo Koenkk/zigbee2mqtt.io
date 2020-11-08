@@ -7,7 +7,19 @@ There are two types of exposes:
 - Generic: types like `numeric` and `binary`
 - Specific: represents a specific capability of a device like a `light` or `switch`.
 
-Both types will always have a `type` property. The generic types (except composite) will always have an `access` property, indicating if the property can be read (`r`), written (`w`) or both (`rw`). All generic types will always have a `name` property indicating the context. All generic types will always have a `property` type indicating where the value is exposed on, usually this is equal to the name but in case when the `endpoint` is defined it is `name_endpoint`. The specific and the generic composite type will always have a `features` property, this is an array containing the generic exposes types. Optionally both types can have a property `endpoint`, indicating the device exposes this capability on a specific endpoint.
+Both types will always have a `type` property. The generic types (except composite) will always have an `access` property. All generic types will always have a `name` property indicating the context. All generic types will always have a `property` type indicating where the value is exposed on, usually this is equal to the name but in case when the `endpoint` is defined it is `name_endpoint`. The specific and the generic composite type will always have a `features` property, this is an array containing the generic exposes types. Optionally both types can have a property `endpoint`, indicating the device exposes this capability on a specific endpoint.
+
+### Access
+The `access` property is a 3-bit bitmask.
+- Bit 1: The property can be found in the published state of this device.
+- Bit 2: The property can be set with a `/set` command
+- Bit 3: The property can be retrieved with a `/get` command (when this bit is true, bit 1 will also be true)
+
+Examples:
+- A Xiaomi WSDCGQ01LM climate sensor exposes a numeric temperature sensor. Since the device is sleeping most of the time it cannot be retrieved with a `/get` command. Access will be `1` (binary: `0b001`).
+- A Philips 7146060PH Hue Go light exposes brightness. This can be `/get`, `/set` and is also in the published state. Access will be `7` (binary: `0b111`)
+- A Philips 7146060PH Hue Go light exposes effect (e.g. to trigger a flashing effect). This can only be `/set`. Access will be `2` (binary: `0b010`)
+- A Xiaomi ZNCZ02LM power plug exposes a numeric power sensor. This can be `/get` and is published in the state. Access will be `5` (binary: `0b101`)
 
 ## Generic
 
