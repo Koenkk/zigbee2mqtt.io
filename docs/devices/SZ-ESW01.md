@@ -17,7 +17,8 @@ description: "Integrate your Sercomm SZ-ESW01 via Zigbee2MQTT with whatever smar
 
 ## Notes
 
-None
+### Pairing
+With the device unplugged (or socket switched off), press and hold the pairing button for ~4 seconds. Continue holding the pairing button while plugging in the device (or switching the socket on) and continue to hold for 2 seconds. If pairing is successful the red LED will switch off for ~2 seconds, then flash.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
