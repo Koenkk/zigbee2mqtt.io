@@ -27,27 +27,27 @@ Examples:
 Indicates a device exposes a binary value. Always has `value_on` and `value_off` which indicates how to interpet the value. Optionally has a `value_toggle` which can be send to toggle the value.
 
 Examples:
-- `{"type":"binary","name":"occupancy","property":"occupancy","value_on":true,"value_off":false,"access":"r"}`
-- `{"type":"binary","name":"state","property":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":"rw"}`
+- `{"type":"binary","name":"occupancy","property":"occupancy","value_on":true,"value_off":false,"access":1}`
+- `{"type":"binary","name":"state","property":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":7}`
 
 ### Numeric
 Indicates a device exposes a numeric value. Optionally has `value_max`, `value_min`, `value_step` and `unit`.
 
 Examples:
-- `{"type":"numeric","name":"brightness","property":"brightness","value_min":0,"value_max":254,"access":"rw"}`
-- `{"type":"numeric","name":"temperature","property":"temperature","unit":"°C","access":"r"}`
+- `{"type":"numeric","name":"brightness","property":"brightness","value_min":0,"value_max":254,"access":7}`
+- `{"type":"numeric","name":"temperature","property":"temperature","unit":"°C","access":1}`
 
 ### Enum
 Indicates a device exposes an enum value. Always has `values` indicating all possible values.
 
 Examples:
-- `{"type":"enum","name":"identify","property":"identify","values":["blink","okay"],"access":"w"}`
+- `{"type":"enum","name":"identify","property":"identify","values":["blink","okay"],"access":2}`
 
 ### Text
 Indicates a device exposes a textual value.
 
 Examples:
-- `{"type":"text","name":"inserted","property":"inserted","access":"w"}`
+- `{"type":"text","name":"inserted","property":"inserted","access":1}`
 
 ### Composite
 Composite combines the above generic types in the `features` array. Unlike other generic types, it does not have the `access` property since the `access` is defined per feature.
@@ -59,8 +59,8 @@ Example:
     "name":"color_xy",
     "property":"color",
     "features": [
-        {"type":"numeric","name":"x","property":"x","access":"rw"},
-        {"type":"numeric","name":"y","property":"y","access":"rw"},
+        {"type":"numeric","name":"x","property":"x","access":7},
+        {"type":"numeric","name":"y","property":"y","access":7},
     ]
 }
 ```
@@ -76,16 +76,16 @@ Example:
 {
     "type": "light",
     "features": [
-        {"type":"binary","name":"state","property":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":"rw"},
-        {"type":"numeric","name":"brightness","property":"brightness","value_min":0,"value_max":254,"access":"rw"},
-        {"type":"numeric","name":"color_temp","property":"color_temp","access":"rw"},
+        {"type":"binary","name":"state","property":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":7},
+        {"type":"numeric","name":"brightness","property":"brightness","value_min":0,"value_max":254,"access":7},
+        {"type":"numeric","name":"color_temp","property":"color_temp","access":7},
         {
             "type":"composite",
             "name":"color_xy",
             "property":"color",
             "features": [
-                {"type":"numeric","name":"x","property":"x","access":"rw"},
-                {"type":"numeric","name":"y","property":"y","access":"rw"}
+                {"type":"numeric","name":"x","property":"x","access":7},
+                {"type":"numeric","name":"y","property":"y","access":7}
             ]
         },
         {
@@ -93,8 +93,8 @@ Example:
             "name":"color_hs",
             "property":"color",
             "features": [
-                {"type":"numeric","name":"hue","property":"hue","access":"rw"},
-                {"type":"numeric","name":"saturation","propertsaturation":"saturation","access":"rw"}
+                {"type":"numeric","name":"hue","property":"hue","access":7},
+                {"type":"numeric","name":"saturation","propertsaturation":"saturation","access":7}
             ]
         }
     ]
@@ -110,7 +110,7 @@ Example:
 {
     "type": "switch",
     "features": [
-        {"type":"binary","name":"state","property":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":"rw"}
+        {"type":"binary","name":"state","property":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":7}
     ]
 }
 ```
@@ -124,8 +124,8 @@ Example:
 {
     "type": "fan",
     "features": [
-        {"type":"binary","name":"state","property":"fan_state","value_on":"ON","value_off":"OFF","access":"rw"},
-        {"type":"enum","name":"mode","property":"fan_mode","values":["off", "low", "medium", "high", "on", "auto", "smart"],"access":"rw"}
+        {"type":"binary","name":"state","property":"fan_state","value_on":"ON","value_off":"OFF","access":7},
+        {"type":"enum","name":"mode","property":"fan_mode","values":["off", "low", "medium", "high", "on", "auto", "smart"],"access":7}
     ]
 }
 ```
@@ -139,9 +139,9 @@ Example:
 {
     "type": "cover",
     "features": [
-        {"type":"binary","name":"state","property":"state","value_on":"OPEN","value_off":"CLOSE","access":"rw"},
-        {"type":"numeric","name":"position","property":"position","value_min":0,"value_max":100,"access":"rw"},
-        {"type":"numeric","name":"tilt","property":"tilt","value_min":0,"value_max":100,"access":"rw"}
+        {"type":"binary","name":"state","property":"state","value_on":"OPEN","value_off":"CLOSE","access":7},
+        {"type":"numeric","name":"position","property":"position","value_min":0,"value_max":100,"access":7},
+        {"type":"numeric","name":"tilt","property":"tilt","value_min":0,"value_max":100,"access":7}
     ]
 }
 ```
@@ -155,7 +155,7 @@ Example:
 {
     "type": "lock",
     "features": [
-        {"type":"binary","name":"state","property":"state","value_on":"LOCK","value_off":"UNLOCK","access":"rw"}
+        {"type":"binary","name":"state","property":"state","value_on":"LOCK","value_off":"UNLOCK","access":7}
     ]
 }
 ```
@@ -173,14 +173,14 @@ Example:
 {
     "type": "climate",
     "features": [
-        {"type":"numeric","name":"occupied_heating_setpoint","property":"occupied_heating_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":"rw","unit":"°C"},
-        {"type":"numeric","name":"occupied_cooling_setpoint","property":"occupied_heating_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":"rw","unit":"°C"},
-        {"type":"numeric","name":"local_temperature","property":"local_temperature","access":"r","unit":"°C"},
-        {"type":"enum","name":"system_mode","property":"system_mode","values":["off", "auto", "heat", "cool"],"access":"rw"},
-        {"type":"enum","name":"preset","property":"preset","values":["hold", "program"],"access":"rw"},
-        {"type":"enum","name":"running_state","property":"running_state","values":["idle", "heat", "cool"],"access":"r"},
-        {"type":"enum","name":"mode","property":"fan_mode","values":["off", "low", "medium", "high", "on", "auto", "smart"],"access":"rw"},
-        {"type":"binary","name":"away_mode","property":"away_mode","value_on":"ON","value_off":"OFF","access":"rw"},
+        {"type":"numeric","name":"occupied_heating_setpoint","property":"occupied_heating_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":7,"unit":"°C"},
+        {"type":"numeric","name":"occupied_cooling_setpoint","property":"occupied_heating_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":7,"unit":"°C"},
+        {"type":"numeric","name":"local_temperature","property":"local_temperature","access":3,"unit":"°C"},
+        {"type":"enum","name":"system_mode","property":"system_mode","values":["off", "auto", "heat", "cool"],"access":7},
+        {"type":"enum","name":"preset","property":"preset","values":["hold", "program"],"access":7},
+        {"type":"enum","name":"running_state","property":"running_state","values":["idle", "heat", "cool"],"access":3},
+        {"type":"enum","name":"mode","property":"fan_mode","values":["off", "low", "medium", "high", "on", "auto", "smart"],"access":7},
+        {"type":"binary","name":"away_mode","property":"away_mode","value_on":"ON","value_off":"OFF","access":7},
     ]
 }
 ```
