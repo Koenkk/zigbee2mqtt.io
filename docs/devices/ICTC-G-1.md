@@ -75,7 +75,7 @@ To find optimal "smoothness" play with debounce time or if you need all unique r
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
-* `legacy`: Set to `true` to disable the legacy integration (highly recommended!)
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!)
 
 
 * `simulated_brightness`: Set to `true` to simulate a `brightness` value (default: `false`).
