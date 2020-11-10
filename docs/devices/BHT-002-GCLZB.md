@@ -17,7 +17,15 @@ description: "Integrate your Moes BHT-002-GCLZB via Zigbee2MQTT with whatever sm
 
 ## Notes
 
-None
+### Stop message flooding
+This unit has a bug that makes it send multiple messages when updating. To stop this from flooding your MQTT Queues, please add the following to your `configuration.yaml` file:
+
+{% raw %}
+devices:
+  '0x12345678':
+    friendly_name: thermostat
+    debounce: 1
+{% endraw %}
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
