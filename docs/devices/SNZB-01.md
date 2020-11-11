@@ -20,8 +20,8 @@ description: "Integrate your SONOFF SNZB-01 via Zigbee2MQTT with whatever smart 
 
 
 ### Pairing
-Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
-
+Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode.
+The reset button can be found by removing the back cover.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
