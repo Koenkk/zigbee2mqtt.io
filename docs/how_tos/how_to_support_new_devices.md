@@ -16,7 +16,7 @@ The first step is to pair the device with Zigbee2MQTT. It should be possible to 
 Once you successfully paired the device you will see something like:
 ```
 Zigbee2MQTT:info  2019-11-09T12:19:56: Successfully interviewed '0x00158d0001dc126a', device has successfully been paired
-Zigbee2MQTT:warn  2019-11-09T12:19:56: Device '0x00158d0001dc126a' with Zigbee model 'lumi.sens' is NOT supported, please follow https://www.zigbee2mqtt.io/how_tos/how_to_support_new_devices.html
+Zigbee2MQTT:warn  2019-11-09T12:19:56: Device '0x00158d0001dc126a' with Zigbee model 'lumi.sens' and manufacturer name 'some_name' is NOT supported, please follow https://www.zigbee2mqtt.io/how_tos/how_to_support_new_devices.html
 ```
 
 *NOTE: Make sure that `permit_join: true` is set in `configuration.yaml` otherwise new devices cannot join the network.*
@@ -28,7 +28,13 @@ The next step is the to add an entry of your device to `node_modules/zigbee-herd
 
 ```js
 {
-    zigbeeModel: ['lumi.sens'], // The model ID from: Device with modelID 'lumi.sens' is not supported.
+    fingerprint: [
+        {
+            modelID: 'lumi.sens', // The model ID from: Device with modelID 'lumi.sens' is not supported.
+                                  // You may need to add \u0000 at the end of the name in some cases
+            manufacturerName: 'some_name' // The manufacturer name from: Device with modelID 'lumi.sens' is not supported.
+        },
+    ],
     model: 'WSDCGQ01LM', // Vendor model number, look on the device for a model number
     vendor: 'Xiaomi', // Vendor of the device (only used for documentation and startup logging)
     description: 'MiJia temperature & humidity sensor ', // Description of the device, copy from vendor site. (only used for documentation and startup logging)
@@ -37,6 +43,8 @@ The next step is the to add an entry of your device to `node_modules/zigbee-herd
     toZigbee: [], // Should be empty, unless device can be controlled (e.g. lights, switches).
 },
 ```
+
+If your device is advertised as "Tuya compatible" and/or requires Tuya gateway/app to operate look [here](how_to_support_new_tuya_devices.md) for additional info
 
 Now set the Zigbee2MQTT `log_level` to `debug` by adding the following to your Zigbee2MQTT `configuration.yaml`.
 
@@ -51,6 +59,8 @@ Zigbee2MQTT:debug  2019-11-09T12:24:22: No converter available for 'WSDCGQ01LM' 
 ```
 
 In case your device is not reporting anything, it could be that this device requires additional configuration. This can be done by adding a `configure:` section ([examples here](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices.js)). It can help to look at similar devices.
+
+If your device reports anything with 'manuSpecificTuya' then it's a "Tuya compatible" device and additional instructions for adding those are [here](how_to_support_new_tuya_devices.md)
 
 ### 3. Adding converter(s) for your device
 In order to parse the messages of your zigbee device we need to add converter(s) to `node_modules/zigbee-herdsman-converters/converters/fromZigbee.js`.
