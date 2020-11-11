@@ -28,13 +28,7 @@ The next step is the to add an entry of your device to `node_modules/zigbee-herd
 
 ```js
 {
-    fingerprint: [
-        {
-            modelID: 'lumi.sens', // The model ID from: Device with modelID 'lumi.sens' is not supported.
-                                  // You may need to add \u0000 at the end of the name in some cases
-            manufacturerName: 'some_name' // The manufacturer name from: Device with modelID 'lumi.sens' is not supported.
-        },
-    ],
+    zigbeeModel: ['lumi.sens'], // The model ID from: Device with modelID 'lumi.sens' is not supported.
     model: 'WSDCGQ01LM', // Vendor model number, look on the device for a model number
     vendor: 'Xiaomi', // Vendor of the device (only used for documentation and startup logging)
     description: 'MiJia temperature & humidity sensor ', // Description of the device, copy from vendor site. (only used for documentation and startup logging)

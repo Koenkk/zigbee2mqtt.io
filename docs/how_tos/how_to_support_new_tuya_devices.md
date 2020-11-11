@@ -1,6 +1,6 @@
 ---
 ---
-# How to support new devices
+# How to support new Tuya devices
 Tuya devices use a custom `manuSpecificTuya` cluster, the instructions below will help you understand it better and provide some tools to ease discovery of their functions
 
 ## Instructions
@@ -12,8 +12,13 @@ Adding an entry of your device to `node_modules/zigbee-herdsman-converters/devic
 
 ```js
 {
-    fingerprint: [
-        {modelID: 'TS0601', manufacturerName: '_TZE200_c88teujp'},
+    fingerprint: [ // Since a lot of Tuya devices use the same modelID, but use different data points
+                   // it's usually necessary to provide a fingerprint
+        {
+            modelID: 'TS0601', // The model ID from: Device with modelID 'TS0601' is not supported.
+                               // You may need to add \u0000 at the end of the name in some cases
+            manufacturerName: '_TZE200_c88teujp' // The manufacturer name from: Device with modelID 'TS0601' is not supported.
+        },
     ],
     model: 'SEA802-Zigbee',
     vendor: 'Saswell',
@@ -21,7 +26,7 @@ Adding an entry of your device to `node_modules/zigbee-herdsman-converters/devic
     supports: 'thermostat, temperature',
     fromZigbee: [
         fz.ignore_basic_report, // Add this if you are getting no converter for 'genBasic'
-        fz.tuya_data_point_dump, // This is a debug converter it will be described in next part
+        fz.tuya_data_point_dump, // This is a debug converter, it will be described in the next part
     ],
     toZigbee: [
         tz.tuya_data_point_test, // Another debug converter
