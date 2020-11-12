@@ -5,9 +5,9 @@ In order to run Zigbee2MQTT we need the following hardware:
 
 | Name | Price | Picture |
 | ------------- | ------------- | ------------- |
-| A supported [Zigbee adapter](../information/supported_adapters.md) (with Zigbee coordinator firmware) | 5$ - 40$ | ![CC2531 USB sniffer](../images/cc2531.jpg) |
+| A supported [Zigbee adapter](../information/supported_adapters.md) | 5$ - 40$ | ![CC2531 USB sniffer](../images/cc2531.jpg) |
 | One or more [supported Zigbee device(s)](../information/supported_devices.md) | - | ![Zigbee devices](../images/xiaomi_sensors.jpg) |
-| A PC or a Raspberry Pi (to run the Zigbee2MQTT software) | - | ![Raspberry Pi](../images/pi.jpg) |
+| A computer (e.g. a Raspberry Pi) to run the Zigbee2MQTT software | - | ![Raspberry Pi](../images/pi.jpg) |
 | **Highly recommended**: Male to female USB extension cable ([why?](../how_tos/how_to_improve_network_range_and_stability.md)) | +-2$ | ![USB extension cable](../images/usb_extension_cable.jpg) |
 
 ## Supported Zigbee adapter
