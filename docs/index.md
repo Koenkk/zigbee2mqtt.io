@@ -45,6 +45,7 @@ Besides running Zigbee2MQTT on [bare-metal Linux](getting_started/running_zigbee
 * [How to secure your Zigbee network](how_tos/how_to_secure_network.md)
 * [How to sniff Zigbee traffic](how_tos/how_to_sniff_zigbee_traffic.md)
 * [How to support new devices](how_tos/how_to_support_new_devices.md)
+* [How to support new Tuya compatible devices](how_tos/how_to_support_new_tuya_devices.md)
 * [How to switch to the dev branch](how_tos/how-to-switch-to-dev-branch.md)
 
 ### Integration
