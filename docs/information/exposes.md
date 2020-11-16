@@ -7,7 +7,7 @@ There are two types of exposes:
 - Generic: types like `numeric` and `binary`
 - Specific: represents a specific capability of a device like a `light` or `switch`.
 
-Both types will always have a `type` property. The generic types (except composite) will always have an `access` property. All generic types will always have a `name` property indicating the context. All generic types will always have a `property` type indicating where the value is exposed on, usually this is equal to the name but in case when the `endpoint` is defined it is `name_endpoint`. The specific and the generic composite type will always have a `features` property, this is an array containing the generic exposes types. Optionally both types can have a property `endpoint`, indicating the device exposes this capability on a specific endpoint.
+Both types will always have a `type` property. The generic types (except composite) will always have an `access` property and an optional `description` property. All generic types will always have a `name` property indicating the context. All generic types will always have a `property` type indicating where the value is exposed on, usually this is equal to the name but in case when the `endpoint` is defined it is `name_endpoint`. The specific and the generic composite type will always have a `features` property, this is an array containing the generic exposes types. Optionally both types can have a property `endpoint`, indicating the device exposes this capability on a specific endpoint.
 
 ### Access
 The `access` property is a 3-bit bitmask.
