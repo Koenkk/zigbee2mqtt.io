@@ -37,6 +37,10 @@ mqtt:
   # Optional: MQTT protocol version (default: 4), set this to 5 if you
   # use the 'retention' device specific configuration
   version: 4
+  # Optional: Disable retain for all send messages. ONLY enable if you MQTT broker doesn't
+  # support retained message (e.g. AWS IoT core, Azure IoT Hub, Google Cloud IoT core, IBM Watson IoT Platform).
+  # Enabling will break the Home Assistant integration. (default: false)
+  force_disable_retain: false
 
 # Required: serial settings
 serial:
