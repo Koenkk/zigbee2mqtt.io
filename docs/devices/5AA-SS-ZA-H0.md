@@ -29,6 +29,32 @@ when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 pr
 e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
 
 
+
+## Exposes
+### Occupancy (binary)
+Indicates whether the device detected occupancy.
+Value can be found in the published state on the `occupancy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` occupancy is ON, if `false` OFF.
+
+### Illuminance (numeric)
+Raw measured illuminance.
+Value can be found in the published state on the `illuminance` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Illuminance_lux (numeric)
+Measured illuminance in lux.
+Value can be found in the published state on the `illuminance_lux` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:

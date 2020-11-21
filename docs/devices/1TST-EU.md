@@ -182,6 +182,25 @@ tz.thermostat_relay_status_log_rsp
 -->
 
 
+
+## Exposes
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Climate 
+TODO
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
@@ -189,43 +208,43 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
-climate:
-  - platform: "mqtt"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    temperature_unit: "C"
-    min_temp: "7"
-    max_temp: "30"
-    mode_state_topic: true
-    mode_state_template: "{{ value_json.system_mode }}"
-    mode_command_topic: true
-    current_temperature_topic: true
-    current_temperature_template: "{{ value_json.local_temperature }}"
-    temp_step: 1
-    action_topic: true
-    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
-    modes: 
-      - "off"
-      - "auto"
-      - "heat"
-    temperature_state_topic: true
-    temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
-    temperature_command_topic: "occupied_heating_setpoint"
-
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "%"
-    device_class: "battery"
     value_template: "{{ value_json.battery }}"
+    device_class: "battery"
+
+climate:
+  - platform: "mqtt"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    temperature_unit: "C"
+    temp_step: 1
+    min_temp: "7"
+    max_temp: "30"
+    current_temperature_topic: true
+    current_temperature_template: "{{ value_json.local_temperature }}"
+    mode_state_topic: true
+    mode_state_template: "{{ value_json.system_mode }}"
+    modes: 
+      - "off"
+      - "auto"
+      - "heat"
+    mode_command_topic: true
+    action_topic: true
+    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
+    temperature_command_topic: "occupied_heating_setpoint"
+    temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
+    temperature_state_topic: true
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

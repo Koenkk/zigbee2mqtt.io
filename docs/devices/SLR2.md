@@ -19,6 +19,21 @@ description: "Integrate your Hive SLR2 via Zigbee2MQTT with whatever smart home
 
 None
 
+
+## Exposes
+### Climate (heat endpoint)
+TODO
+
+### Climate (water endpoint)
+TODO
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
@@ -30,55 +45,55 @@ climate:
   - platform: "mqtt"
     availability_topic: "zigbee2mqtt/bridge/state"
     temperature_unit: "C"
+    temp_step: 1
     min_temp: "7"
     max_temp: "30"
-    mode_state_topic: true
-    mode_state_template: "{{ value_json.system_mode_heat }}"
-    mode_command_topic: true
     current_temperature_topic: true
     current_temperature_template: "{{ value_json.local_temperature_heat }}"
-    temp_step: 1
-    action_topic: true
-    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state_heat] }}"
-    state_topic_postfix: "heat"
+    mode_state_topic: true
+    mode_state_template: "{{ value_json.system_mode_heat }}"
     modes: 
       - "off"
       - "auto"
       - "heat"
-    temperature_state_topic: true
-    temperature_state_template: "{{ value_json.occupied_heating_setpoint_heat }}"
+    mode_command_topic: true
+    action_topic: true
+    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state_heat] }}"
     temperature_command_topic: "occupied_heating_setpoint"
+    temperature_state_template: "{{ value_json.occupied_heating_setpoint_heat }}"
+    temperature_state_topic: true
+    state_topic_postfix: "heat"
 
 climate:
   - platform: "mqtt"
     availability_topic: "zigbee2mqtt/bridge/state"
     temperature_unit: "C"
+    temp_step: 1
     min_temp: "7"
     max_temp: "30"
-    mode_state_topic: true
-    mode_state_template: "{{ value_json.system_mode_cool }}"
-    mode_command_topic: true
     current_temperature_topic: true
-    current_temperature_template: "{{ value_json.local_temperature_cool }}"
-    temp_step: 1
-    action_topic: true
-    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state_cool] }}"
-    state_topic_postfix: "cool"
+    current_temperature_template: "{{ value_json.local_temperature_water }}"
+    mode_state_topic: true
+    mode_state_template: "{{ value_json.system_mode_water }}"
     modes: 
       - "off"
       - "auto"
       - "heat"
-    temperature_state_topic: true
-    temperature_state_template: "{{ value_json.occupied_heating_setpoint_cool }}"
+    mode_command_topic: true
+    action_topic: true
+    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state_water] }}"
     temperature_command_topic: "occupied_heating_setpoint"
+    temperature_state_template: "{{ value_json.occupied_heating_setpoint_water }}"
+    temperature_state_topic: true
+    state_topic_postfix: "water"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

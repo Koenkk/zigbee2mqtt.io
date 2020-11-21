@@ -33,6 +33,39 @@ To control the precision based on the humidity value set it to e.g. `{80: 0, 10:
 when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1.
 
 
+
+## Exposes
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Humidity (numeric)
+Measured relative humidity.
+Value can be found in the published state on the `humidity` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `%`.
+
+### Voc (numeric)
+Measured VOC value.
+Value can be found in the published state on the `voc` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `ppb`.
+
+### Eco2 (numeric)
+Measured eCO2 value.
+Value can be found in the published state on the `eco2` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `ppm`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:

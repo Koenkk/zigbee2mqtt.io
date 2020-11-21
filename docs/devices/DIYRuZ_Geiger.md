@@ -19,6 +19,31 @@ description: "Integrate your DIYRuZ DIYRuZ_Geiger via Zigbee2MQTT with whatever 
 
 None
 
+
+## Exposes
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `on`, `off`.
+
+### Radioactive_events_per_minute (numeric)
+Value can be found in the published state on the `radioactive_events_per_minute` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `rpm`.
+
+### Radiation_dose_per_hour (numeric)
+Value can be found in the published state on the `radiation_dose_per_hour` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `rph`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:

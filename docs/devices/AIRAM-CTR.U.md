@@ -52,6 +52,21 @@ color temperature (if applicable) and color (if applicable) changes. Defaults to
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
 
 
+
+## Exposes
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `on`, `off`, `brightness_down_click`, `brightness_up_click`, `brightness_down_hold`, `brightness_up_hold`, `brightness_down_release`, `brightness_up_release`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:

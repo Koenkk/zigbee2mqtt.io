@@ -25,6 +25,18 @@ This device has various limitations:
 - Color can only be set via hue/saturation, example payload `{"color":{"h": 360, "s": 100}}`.
 
 
+
+## Exposes
+### Light 
+TODO
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:

@@ -3,6 +3,7 @@
  */
 const utils = require('./utils');
 const notes = require('./device_page_notes');
+const exposes = require('./device_page_exposes');
 const YAML = require('json2yaml');
 const HomeassistantExtension = require('zigbee2mqtt/lib/extension/homeassistant');
 const homeassistant = new HomeassistantExtension(null, null, null, null, {on: () => {}});
@@ -61,6 +62,7 @@ ${device.hasOwnProperty('ota') && ['AC01353010G'].includes(device.model) === fal
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 ` : ''}
+${exposes.generate(device)}
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:

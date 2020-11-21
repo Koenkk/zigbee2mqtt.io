@@ -52,6 +52,21 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 
+
+## Exposes
+### Light (rgb endpoint)
+TODO
+
+### Light (white endpoint)
+TODO
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:

@@ -36,6 +36,55 @@ devices:
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 
+
+## Exposes
+### Switch (l1 endpoint)
+The current state of this switch is in the published state under the `state_l1` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_l1": "ON"}`, `{"state_l1": "OFF"}` or `{"state_l1": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_l1": ""}`.
+
+### Switch (l2 endpoint)
+The current state of this switch is in the published state under the `state_l2` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_l2": ""}`.
+
+### Switch (l3 endpoint)
+The current state of this switch is in the published state under the `state_l3` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_l3": "ON"}`, `{"state_l3": "OFF"}` or `{"state_l3": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_l3": ""}`.
+
+### Switch (l4 endpoint)
+The current state of this switch is in the published state under the `state_l4` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_l4": "ON"}`, `{"state_l4": "OFF"}` or `{"state_l4": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_l4": ""}`.
+
+### Switch (l5 endpoint)
+The current state of this switch is in the published state under the `state_l5` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_l5": "ON"}`, `{"state_l5": "OFF"}` or `{"state_l5": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_l5": ""}`.
+
+### Switch (l6 endpoint)
+The current state of this switch is in the published state under the `state_l6` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_l6": "ON"}`, `{"state_l6": "OFF"}` or `{"state_l6": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_l6": ""}`.
+
+### Switch (l7 endpoint)
+The current state of this switch is in the published state under the `state_l7` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_l7": "ON"}`, `{"state_l7": "OFF"}` or `{"state_l7": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_l7": ""}`.
+
+### Switch (l8 endpoint)
+The current state of this switch is in the published state under the `state_l8` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_l8": "ON"}`, `{"state_l8": "OFF"}` or `{"state_l8": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_l8": ""}`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
