@@ -75,7 +75,10 @@ Motor leaves calibration mode automatically after it reaches the both open and c
 
 ## Exposes
 ### Cover 
-TODO
+The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
+To control this cover publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state": "OPEN"}` or `{"state": "CLOSE"}`.
+To read the current state of this cover publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state": ""}`.
+To change the position publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

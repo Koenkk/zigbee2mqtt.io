@@ -19,7 +19,7 @@ function capitalizeFirstLetter(string) {
 }
 
 function getExposeDocs(expose) {
-    // TODO light, fan, cover, lock, climate
+    // TODO light, fan, climate
     const lines = [];
     const title = [];
     if (expose.name) title.push(expose.type);
@@ -71,7 +71,7 @@ function getExposeDocs(expose) {
         if (expose.type === 'enum') {
             lines.push(`The possible values are: ${expose.values.map((e) => `\`${e}\``).join(', ')}.`);
         }
-    } else if (expose.type === 'switch' || expose.type === 'lock') {
+    } else if (expose.type === 'switch' || expose.type === 'lock' || expose.type === 'cover') {
         const state = expose.features.find((e) => e.name === 'state');
         lines.push(`The current state of this ${expose.type} is in the published state under the \`${state.property}\` property (value is \`${state.value_on}\` or \`${state.value_off}\`).`);
         expose.type === 'switch' ?
@@ -79,6 +79,12 @@ function getExposeDocs(expose) {
             lines.push(`To control this ${expose.type} publish a message to topic \`zigbee2mqtt/[FRIENDLY_NAME]/set\` with payload \`{"${state.property}": "${state.value_on}"}\` or \`{"${state.property}": "${state.value_off}"}\`.`);
 
         lines.push(`To read the current state of this ${expose.type} publish a message to topic \`zigbee2mqtt/[FRIENDLY_NAME]/get\` with payload \`{"${state.property}": ""}\`.`);
+
+        if (expose.type === 'cover') {
+            for (const e of expose.features.filter((e) => e.name === 'position' || e.name === 'tilt')) {
+                lines.push(`To change the ${e.name} publish a message to topic \`zigbee2mqtt/[FRIENDLY_NAME]/set\` with payload \`{"${e.property}": VALUE}\` where \`VALUE\` is a number between \`${e.value_min}\` and \`${e.value_max}\`.`);
+            }
+        }
     } else {
         lines.push('TODO');
     }
