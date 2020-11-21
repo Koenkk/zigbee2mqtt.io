@@ -19,7 +19,7 @@ function capitalizeFirstLetter(string) {
 }
 
 function getExposeDocs(expose) {
-    // TODO light, fan, climate
+    // TODO light, climate
     const lines = [];
     const title = [];
     if (expose.name) title.push(expose.type);
@@ -71,7 +71,7 @@ function getExposeDocs(expose) {
         if (expose.type === 'enum') {
             lines.push(`The possible values are: ${expose.values.map((e) => `\`${e}\``).join(', ')}.`);
         }
-    } else if (expose.type === 'switch' || expose.type === 'lock' || expose.type === 'cover') {
+    } else if (['switch', 'lock', 'cover', 'fan'].includes(expose.type)) {
         const state = expose.features.find((e) => e.name === 'state');
         lines.push(`The current state of this ${expose.type} is in the published state under the \`${state.property}\` property (value is \`${state.value_on}\` or \`${state.value_off}\`).`);
         expose.type === 'switch' ?
@@ -83,6 +83,13 @@ function getExposeDocs(expose) {
         if (expose.type === 'cover') {
             for (const e of expose.features.filter((e) => e.name === 'position' || e.name === 'tilt')) {
                 lines.push(`To change the ${e.name} publish a message to topic \`zigbee2mqtt/[FRIENDLY_NAME]/set\` with payload \`{"${e.property}": VALUE}\` where \`VALUE\` is a number between \`${e.value_min}\` and \`${e.value_max}\`.`);
+            }
+        }
+
+        if (expose.type === 'fan') {
+            const mode = expose.features.find((e) => e.name === 'mode');
+            if (mode) {
+                lines.push(`To change the mode publish a message to topic \`zigbee2mqtt/[FRIENDLY_NAME]/set\` with payload \`{"${mode.property}": VALUE}\` where \`VALUE\` can be: ${mode.values.map((e) => `\`${e}\``).join(', ')}.`);
             }
         }
     } else {
