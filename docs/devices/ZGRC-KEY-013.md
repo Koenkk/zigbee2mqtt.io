@@ -33,7 +33,7 @@ devices:
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
-* `legacy`: Set to `true` to disable the legacy integration (highly recommended!)
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 
 * `simulated_brightness`: Set to `true` to simulate a `brightness` value (default: `false`).

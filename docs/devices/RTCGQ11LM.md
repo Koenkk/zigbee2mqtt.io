@@ -56,8 +56,8 @@ When set to `0` no `occupancy: false` is sent.
 **IMPORTANT**: `occupancy_timeout` should not be set to lower than 60 seconds.
 The reason is this: after detecting a motion the sensor ignores any movements for
 exactly 60 seconds. In case there are movements after this 60 seconds, a new message
-(`occupancy: true`) will be sent and the sensor will go to sleep for another minute, and so on. 
-Therefore, in order to sustain `occupancy: true`, you need a reasonable window after this 60s sleep 
+(`occupancy: true`) will be sent and the sensor will go to sleep for another minute, and so on.
+Therefore, in order to sustain `occupancy: true`, you need a reasonable window after this 60s sleep
 to determine continued occupancy.
 This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/issues/270#issuecomment-414999973)).
 To work around this, a

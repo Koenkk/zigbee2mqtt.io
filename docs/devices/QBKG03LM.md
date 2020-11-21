@@ -40,7 +40,7 @@ You may have to unpair the switch from an existing coordinator before the pairin
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
-* `legacy`: Set to `true` to disable the legacy integration (highly recommended!)
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 
 * `temperature_precision`: Controls the precision of `temperature` values,

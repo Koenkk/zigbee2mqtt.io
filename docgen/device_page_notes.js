@@ -16,6 +16,30 @@ devices:
 `,
     },
     {
+        model: ['81825'],
+        note: `
+### Pairing
+To pair the remote you will first need to factory reset the remote then pair it to the controller.
+
+1. Reset the remote by holding down the two middle (arrow) buttons, if reset successfully the LED on the remote should blink once.
+2. Then pair the remote to the controller by placing it in proximity to the controller whilst it is searching. Hold down the off (circle) button for 10 seconds until it blinks green 3 times. If it does, then the remote is paired to the controller.
+`,
+    },
+    {
+        model: ['BHT-002-GCLZB'],
+        note: `
+### Stop message flooding
+This unit has a bug that makes it send multiple messages when updating. To stop this from flooding your MQTT Queues, please add the following to your \`configuration.yaml\` file:
+
+{% raw %}
+devices:
+  '0x12345678':
+    friendly_name: thermostat
+    debounce: 1
+{% endraw %}
+`,
+    },
+    {
         model: ['MEG5113-0300/MEG5165-0000'],
         note: `
 ### Pairing
@@ -291,7 +315,15 @@ Note: This device doesn't support Zigbee channels 25 & 26.
 `,
     },
     {
-        model: ['SNZB-01', 'SNZB-02'],
+        model: ['SNZB-01'],
+        note: `
+### Pairing
+Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode.
+The reset button can be found by removing the back cover.
+`,
+    },
+    {
+        model: ['SNZB-02'],
         note: `
 ### Pairing
 Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
@@ -814,7 +846,7 @@ The E1743 can be bound to groups using [binding](../information/binding).
 It can only be bound to 1 group at a time and cannot be bound to a device.
 
 By default this remote is bound to the default bind group which you first have to unbind it from.
-This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENDLY_NAME]]\` payload \`default_bind_group\`.
+This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENDLY_NAME]\` payload \`default_bind_group\`.
 Right before executing the commands make sure to wake up the device by pressing a button on it.
 `,
     },
@@ -1044,8 +1076,9 @@ by pressing and holding the reset button on the bottom of the remote (next to th
         supports: ['brightness', 'on/off'],
         note: `
 ### Power-on behavior
-Allows to set the power-on behavior of the plug/bulb.
-Note that this requires at least November/December '18 firmware update of the device.
+This device allows you to set the power-on behavior. Note that this requires at least November/December '18 firmware update of the device.
+Send a MQTT command to [\`zigbee2mqtt/[FRIENDLY_NAME]/set\`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttfriendly_nameset) with the following payload.
+
 \`\`\`js
 {
     "hue_power_on_behavior": "on",          // default, on, off, recover
@@ -1068,6 +1101,8 @@ Rules:
 - \`hue_power_on_brightness\`, \`hue_power_on_color_temperature\` and \`hue_power_on_color\` can only be provided when \`hue_power_on_behavior\` = \`on\`
 - \`hue_power_on_color_temperature\` and \`hue_power_on_color\` cannot be provided together, only one can be set
 - When setting \`hue_power_on_behavior\` = \`on\`, any not provided values will be reset to their factory defaults
+
+Note: if \`hue_power_on_behavior\` is set to \`off\`, then the only way to turn the bulb on will be through a paired smart device (see pairing above). You will NOT be able to turn the bulb on by sequentialy switching power on and off.
 `,
     },
     {
@@ -1180,6 +1215,22 @@ it will indicate with colors that the bulb is pairing.
 Remove the battery cover and use the cover to press the button above the batteries.
 Press and hold this button for 10-20 seconds and release the button.
 After that the remote should show up as a paired device.
+
+### Groups binding
+This remote is able to deal with 4 groups:
+group0 = All three leds lit
+group1 = first led lit
+group2 = second led lit
+group3 = third let lit
+
+you can direct bind each remote group with a different zigbee group, however there is a caveat: the four zigbee groups have to use consecutive group ids.
+The group you will bind (using the frontend or [mqtt command](../information/binding.html)) will be bound to group0 of the remote.
+The 3 consecutive groups will be bound to group1 to group3.
+
+This means that you probably should carefully [define your groups id](../information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgeconfigadd_group)  when creating them.
+
+It is possible to bind to a device instead of a group. The device will be bound to group0.
+In this case, group0 to group3 will not be usable.
 `,
     },
     {
@@ -1280,7 +1331,7 @@ To find optimal "smoothness" play with debounce time or if you need all unique r
 The remote can be bound to groups using [binding](../information/binding) since firmware 2.3.014.
 It can only be bound to 1 group at a time. Use the group name as \`TARGET_DEVICE_FRIENDLY_NAME\`.
 By default this remote is bound to the default bind group which you first have to unbind it from.
-This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENDLY_NAME]]\` payload \`default_bind_group\`.
+This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENDLY_NAME]\` payload \`default_bind_group\`.
 Wake up the device right before sending the commands by pressing a button on it.
 
 #### Note
@@ -1510,10 +1561,10 @@ Now the device is ready for pairing. To initiate pairing quickly press the butto
 `,
     },
     {
-        model: ['SZ-ESW01-AU'],
+        model: ['SZ-ESW01-AU', 'SZ-ESW01'],
         note: `
 ### Pairing
-Press and hold the pairing button while plugging in the device.
+With the device unplugged (or socket switched off), press and hold the pairing button for ~4 seconds. Continue holding the pairing button while plugging in the device (or switching the socket on) and continue to hold for 2 seconds. If pairing is successful the red LED will switch off for ~2 seconds, then flash.
 `,
     },
     {
@@ -1744,9 +1795,9 @@ Factory reset the light bulb ([video](https://www.youtube.com/watch?v=4zkpZSv84H
         model: ['AV2010/22'],
         deviceTypeSpecificConfiguration: true,
         note: `
-* \`occupancy_timeout\`: Timeout (in seconds) after the \`occupancy: false\` message is sent.
+* \`occupancy_timeout\`: Timeout (in seconds) after which the \`occupancy: false\` message is sent.
 If not set, the timeout is \`90\` seconds.
-When set to \`0\` no \`occupancy: false\` is send.
+When set to \`0\` no \`occupancy: false\` is sent.
 `,
     },
     {
@@ -1793,7 +1844,7 @@ This device has various limitations:
         ],
         deviceTypeSpecificConfiguration: true,
         note: `
-* \`legacy\`: Set to \`true\` to disable the legacy integration (highly recommended!)
+* \`legacy\`: Set to \`false\` to disable the legacy integration (highly recommended!) (default: true)
 `,
     },
     {
@@ -3165,18 +3216,20 @@ Example of MQTT message payload to Identify the device. This shouuld be sent to 
     {
         model: ['RTCGQ01LM', 'RTCGQ11LM'],
         note: `
-* \`no_occupancy_since\`: Timeout (in seconds) after \`no_occupancy_since\` is send.
-This indicates the time since last occupancy was detected.
+* \`no_occupancy_since\`: Timeout (in seconds) after which \`no_occupancy_since\` is sent.
+This indicates the time since the last occupancy was detected.
 For example \`no_occupancy_since: [10, 60]\` will send a \`{"no_occupancy_since": 10}\` after 10 seconds
 and a \`{"no_occupancy_since": 60}\` after 60 seconds.
-* \`occupancy_timeout\`: Timeout (in seconds) after the \`occupancy: false\` message is sent.
+* \`occupancy_timeout\`: Timeout (in seconds) after which the \`occupancy: false\` message is sent.
 If not set, the timeout is \`90\` seconds.
-When set to \`0\` no \`occupancy: false\` is send.
+When set to \`0\` no \`occupancy: false\` is sent.
 
 **IMPORTANT**: \`occupancy_timeout\` should not be set to lower than 60 seconds.
 The reason is this: after detecting a motion the sensor ignores any movements for
-exactly 60 seconds. In case there are movements after this, a new message
-(\`occupancy: true\`) will be sent and the sensor will go for one more minute sleep, and so on.
+exactly 60 seconds. In case there are movements after this 60 seconds, a new message
+(\`occupancy: true\`) will be sent and the sensor will go to sleep for another minute, and so on.
+Therefore, in order to sustain \`occupancy: true\`, you need a reasonable window after this 60s sleep
+to determine continued occupancy.
 This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/issues/270#issuecomment-414999973)).
 To work around this, a
 [hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)

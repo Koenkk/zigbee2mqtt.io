@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WXKG01LM via Zigbee2MQTT with whatever smart
 | Model | WXKG01LM  |
 | Vendor  | Xiaomi  |
 | Description | MiJia wireless switch |
-| Supports | single, double, triple, quadruple, many, hold, release |
+| Supports | single, double, triple, quadruple, many, long, long_release click |
 | Picture | ![Xiaomi WXKG01LM](../images/devices/WXKG01LM.jpg) |
 
 ## Notes
@@ -61,7 +61,7 @@ experimenting with this option (e.g. `hold_timeout: 2000`).
 * `hold_timeout_expire`: Sometimes it happens that the button does not send a release. To avoid problems Zigbee2mqtt expires the `hold` leading to no `release` being send. The default timeout is 4000 ms, you can increase it with this option.
 
 
-* `legacy`: Set to `false` to disable the legacy integration (highly recommended!)
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 
 ## Manual Home Assistant configuration
