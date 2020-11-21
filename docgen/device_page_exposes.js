@@ -19,6 +19,7 @@ function capitalizeFirstLetter(string) {
 }
 
 function getExposeDocs(expose) {
+    // TODO light, fan, cover, lock, climate
     const lines = [];
     const title = [];
     if (expose.name) title.push(expose.type);
@@ -70,11 +71,14 @@ function getExposeDocs(expose) {
         if (expose.type === 'enum') {
             lines.push(`The possible values are: ${expose.values.map((e) => `\`${e}\``).join(', ')}.`);
         }
-    } else if (expose.type === 'switch') {
+    } else if (expose.type === 'switch' || expose.type === 'lock') {
         const state = expose.features.find((e) => e.name === 'state');
-        lines.push(`The current state of this switch is in the published state under the \`${state.property}\` property (value is \`${state.value_on}\` or \`${state.value_off}\`).`);
-        lines.push(`To control this switch publish a message to topic \`zigbee2mqtt/[FRIENDLY_NAME]/set\` with payload \`{"${state.property}": "${state.value_on}"}\`, \`{"${state.property}": "${state.value_off}"}\` or \`{"${state.property}": "${state.value_toggle}"}\`.`);
-        lines.push(`To read the current state of this switch publish a message to topic \`zigbee2mqtt/[FRIENDLY_NAME]/get\` with payload \`{"${state.property}": ""}\`.`);
+        lines.push(`The current state of this ${expose.type} is in the published state under the \`${state.property}\` property (value is \`${state.value_on}\` or \`${state.value_off}\`).`);
+        expose.type === 'switch' ?
+            lines.push(`To control this ${expose.type} publish a message to topic \`zigbee2mqtt/[FRIENDLY_NAME]/set\` with payload \`{"${state.property}": "${state.value_on}"}\`, \`{"${state.property}": "${state.value_off}"}\` or \`{"${state.property}": "${state.value_toggle}"}\`.`) :
+            lines.push(`To control this ${expose.type} publish a message to topic \`zigbee2mqtt/[FRIENDLY_NAME]/set\` with payload \`{"${state.property}": "${state.value_on}"}\` or \`{"${state.property}": "${state.value_off}"}\`.`);
+
+        lines.push(`To read the current state of this ${expose.type} publish a message to topic \`zigbee2mqtt/[FRIENDLY_NAME]/get\` with payload \`{"${state.property}": ""}\`.`);
     } else {
         lines.push('TODO');
     }

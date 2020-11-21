@@ -45,7 +45,9 @@ This device supports OTA updates, for more information see [OTA updates](../info
 
 ## Exposes
 ### Lock 
-TODO
+The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
+To control this lock publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+To read the current state of this lock publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"child_lock": ""}`.
 
 ### Switch 
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
