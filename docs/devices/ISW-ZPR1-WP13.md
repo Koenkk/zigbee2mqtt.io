@@ -12,7 +12,7 @@ description: "Integrate your Bosch ISW-ZPR1-WP13 via Zigbee2MQTT with whatever s
 | Model | ISW-ZPR1-WP13  |
 | Vendor  | Bosch  |
 | Description | Motion sensor |
-| Supports | occupancy and temperature |
+| Exposes | temperature, battery, occupancy, battery_low, tamper, linkquality |
 | Picture | ![Bosch ISW-ZPR1-WP13](../images/devices/ISW-ZPR1-WP13.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your LifeControl MCLH-08 via Zigbee2MQTT with whatever s
 | Model | MCLH-08  |
 | Vendor  | LifeControl  |
 | Description | Air sensor |
-| Supports | voc, eco2, temperature, humidity |
+| Exposes | temperature, humidity, voc, eco2, linkquality |
 | Picture | ![LifeControl MCLH-08](../images/devices/MCLH-08.jpg) |
 
 ## Notes

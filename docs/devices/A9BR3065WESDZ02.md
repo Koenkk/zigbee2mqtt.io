@@ -12,7 +12,7 @@ description: "Integrate your EcoSmart A9BR3065WESDZ02 via Zigbee2MQTT with whate
 | Model | A9BR3065WESDZ02  |
 | Vendor  | EcoSmart  |
 | Description | Tuneable white (BR30) |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![EcoSmart A9BR3065WESDZ02](../images/devices/A9BR3065WESDZ02.jpg) |
 
 ## Notes

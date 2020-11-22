@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS3DS via Zigbee2MQTT with whatever smart ho
 | Model | HS3DS  |
 | Vendor  | HEIMAN  |
 | Description | Door sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![HEIMAN HS3DS](../images/devices/HS3DS.jpg) |
 
 ## Notes

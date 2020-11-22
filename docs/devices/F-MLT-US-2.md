@@ -12,7 +12,7 @@ description: "Integrate your SmartThings F-MLT-US-2 via Zigbee2MQTT with whateve
 | Model | F-MLT-US-2  |
 | Vendor  | SmartThings  |
 | Description | Multipurpose sensor (2016 model) |
-| Supports | contact |
+| Exposes | temperature, contact, battery_low, tamper, battery, moving, linkquality |
 | Picture | ![SmartThings F-MLT-US-2](../images/devices/F-MLT-US-2.jpg) |
 
 ## Notes

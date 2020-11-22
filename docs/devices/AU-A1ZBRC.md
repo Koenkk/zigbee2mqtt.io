@@ -12,7 +12,7 @@ description: "Integrate your Aurora Lighting AU-A1ZBRC via Zigbee2MQTT with what
 | Model | AU-A1ZBRC  |
 | Vendor  | Aurora Lighting  |
 | Description | AOne smart remote |
-| Supports | action |
+| Exposes | battery, action, linkquality |
 | Picture | ![Aurora Lighting AU-A1ZBRC](../images/devices/AU-A1ZBRC.jpg) |
 
 ## Notes

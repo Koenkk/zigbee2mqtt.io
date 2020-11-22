@@ -12,7 +12,7 @@ description: "Integrate your TuYa HY08WE via Zigbee2MQTT with whatever smart hom
 | Model | HY08WE  |
 | Vendor  | TuYa  |
 | Description | Wall-mount thermostat |
-| Supports | thermostat, temperature |
+| Exposes | climate (current_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![TuYa HY08WE](../images/devices/HY08WE.jpg) |
 
 ## Notes

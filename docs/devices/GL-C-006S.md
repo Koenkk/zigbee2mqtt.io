@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-C-006S via Zigbee2MQTT with whatever sm
 | Model | GL-C-006S  |
 | Vendor  | Gledopto  |
 | Description | Zigbee LED controller WW/CW plus model |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Gledopto GL-C-006S](../images/devices/GL-C-006S.jpg) |
 
 ## Notes

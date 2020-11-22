@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-D-003ZS via Zigbee2MQTT with whatever s
 | Model | GL-D-003ZS  |
 | Vendor  | Gledopto  |
 | Description | Smart+ 6W LED spot |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Gledopto GL-D-003ZS](../images/devices/GL-D-003ZS.jpg) |
 
 ## Notes

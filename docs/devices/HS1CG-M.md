@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS1CG-M via Zigbee2MQTT with whatever smart 
 | Model | HS1CG-M  |
 | Vendor  | HEIMAN  |
 | Description | Combustible gas sensor |
-| Supports | gas |
+| Exposes | gas, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN HS1CG-M](../images/devices/HS1CG-M.jpg) |
 
 ## Notes

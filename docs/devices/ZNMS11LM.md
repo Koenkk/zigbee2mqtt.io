@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi ZNMS11LM via Zigbee2MQTT with whatever smart
 | Model | ZNMS11LM  |
 | Vendor  | Xiaomi  |
 | Description | Xiaomi Aqara smart lock |
-| Supports | open, close, operation (reporting only) |
+| Exposes | state, reverse, action, linkquality |
 | Picture | ![Xiaomi ZNMS11LM](../images/devices/ZNMS11LM.jpg) |
 
 ## Notes

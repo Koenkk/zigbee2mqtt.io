@@ -12,7 +12,7 @@ description: "Integrate your TuYa TS0601_switch_2_gang via Zigbee2MQTT with what
 | Model | TS0601_switch_2_gang  |
 | Vendor  | TuYa  |
 | Description | 2 gang switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![TuYa TS0601_switch_2_gang](../images/devices/TS0601_switch_2_gang.jpg) |
 
 ## Notes

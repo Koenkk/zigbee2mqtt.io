@@ -12,7 +12,7 @@ description: "Integrate your JAVIS JS-SLK2-ZB via Zigbee2MQTT with whatever smar
 | Model | JS-SLK2-ZB  |
 | Vendor  | JAVIS  |
 | Description | Intelligent biometric digital lock |
-| Supports | action |
+| Exposes | battery, action, linkquality |
 | Picture | ![JAVIS JS-SLK2-ZB](../images/devices/JS-SLK2-ZB.jpg) |
 
 ## Notes

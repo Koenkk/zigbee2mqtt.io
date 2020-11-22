@@ -12,7 +12,7 @@ description: "Integrate your TERNCY TERNCY-DC01 via Zigbee2MQTT with whatever sm
 | Model | TERNCY-DC01  |
 | Vendor  | TERNCY  |
 | Description | Temperature & contact sensor  |
-| Supports | temperature, contact |
+| Exposes | temperature, contact, linkquality |
 | Picture | ![TERNCY TERNCY-DC01](../images/devices/TERNCY-DC01.jpg) |
 
 ## Notes

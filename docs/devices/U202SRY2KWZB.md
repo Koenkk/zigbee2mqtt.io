@@ -12,7 +12,7 @@ description: "Integrate your Schneider Electric U202SRY2KWZB via Zigbee2MQTT wit
 | Model | U202SRY2KWZB  |
 | Vendor  | Schneider Electric  |
 | Description | Ulti 240V 9.1 A 2 gangs relay switch impress switch module, amber LED |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Schneider Electric U202SRY2KWZB](../images/devices/U202SRY2KWZB.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Titan Products TPZRCO2HT-Z3 via Zigbee2MQTT with wh
 | Model | TPZRCO2HT-Z3  |
 | Vendor  | Titan Products  |
 | Description | Room CO2, humidity & temperature sensor |
-| Supports | temperature, humidity and co2 |
+| Exposes | battery, humidity, temperature, co2, linkquality |
 | Picture | ![Titan Products TPZRCO2HT-Z3](../images/devices/TPZRCO2HT-Z3.jpg) |
 
 ## Notes

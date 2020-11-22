@@ -12,7 +12,7 @@ description: "Integrate your Swann SWO-WDS1PA via Zigbee2MQTT with whatever smar
 | Model | SWO-WDS1PA  |
 | Vendor  | Swann  |
 | Description | Window/door sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, linkquality |
 | Picture | ![Swann SWO-WDS1PA](../images/devices/SWO-WDS1PA.jpg) |
 
 ## Notes

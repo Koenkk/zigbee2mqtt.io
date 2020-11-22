@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi SSM-U01 via Zigbee2MQTT with whatever smart 
 | Model | SSM-U01  |
 | Vendor  | Xiaomi  |
 | Description | Aqara single switch module T1 (with neutral) |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), energy, power, linkquality |
 | Picture | ![Xiaomi SSM-U01](../images/devices/SSM-U01.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Trust ZWLD-100 via Zigbee2MQTT with whatever smart 
 | Model | ZWLD-100  |
 | Vendor  | Trust  |
 | Description | Water leakage detector |
-| Supports | water leak |
+| Exposes | water_leak, battery_low, tamper, battery, linkquality |
 | Picture | ![Trust ZWLD-100](../images/devices/ZWLD-100.jpg) |
 
 ## Notes

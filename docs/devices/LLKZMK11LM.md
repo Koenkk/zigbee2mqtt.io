@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi LLKZMK11LM via Zigbee2MQTT with whatever sma
 | Model | LLKZMK11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara wireless relay controller |
-| Supports | on/off, power measurement |
+| Exposes | power, energy, temperature, voltage, switch (state), linkquality |
 | Picture | ![Xiaomi LLKZMK11LM](../images/devices/LLKZMK11LM.jpg) |
 
 ## Notes

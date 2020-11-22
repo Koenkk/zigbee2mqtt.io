@@ -12,7 +12,7 @@ description: "Integrate your Leviton DL15S-1BZ via Zigbee2MQTT with whatever sma
 | Model | DL15S-1BZ  |
 | Vendor  | Leviton  |
 | Description | Lumina RF 15A switch, 120/277V |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Leviton DL15S-1BZ](../images/devices/DL15S-1BZ.jpg) |
 
 ## Notes

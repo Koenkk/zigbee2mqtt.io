@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS1CA-M via Zigbee2MQTT with whatever smart 
 | Model | HS1CA-M  |
 | Vendor  | HEIMAN  |
 | Description | Smart carbon monoxide sensor |
-| Supports | carbon monoxide |
+| Exposes | carbon_monoxide, battery_low, tamper, battery, linkquality |
 | Picture | ![HEIMAN HS1CA-M](../images/devices/HS1CA-M.jpg) |
 
 ## Notes

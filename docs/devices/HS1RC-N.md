@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS1RC-N via Zigbee2MQTT with whatever smart 
 | Model | HS1RC-N  |
 | Vendor  | HEIMAN  |
 | Description | Smart remote controller |
-| Supports | action |
+| Exposes | battery, action, linkquality |
 | Picture | ![HEIMAN HS1RC-N](../images/devices/HS1RC-N.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Niviss PS-ZIGBEE-SMART-CONTROLER-1CH-DIMMABLE via Z
 | Model | PS-ZIGBEE-SMART-CONTROLER-1CH-DIMMABLE  |
 | Vendor  | Niviss  |
 | Description | Zigbee smart controller |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Niviss PS-ZIGBEE-SMART-CONTROLER-1CH-DIMMABLE](../images/devices/PS-ZIGBEE-SMART-CONTROLER-1CH-DIMMABLE.jpg) |
 
 ## Notes

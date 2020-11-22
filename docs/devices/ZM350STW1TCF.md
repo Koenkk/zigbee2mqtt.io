@@ -12,7 +12,7 @@ description: "Integrate your Leedarson ZM350STW1TCF via Zigbee2MQTT with whateve
 | Model | ZM350STW1TCF  |
 | Vendor  | Leedarson  |
 | Description | LED PAR16 50 GU10 tunable white |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Leedarson ZM350STW1TCF](../images/devices/ZM350STW1TCF.jpg) |
 
 ## Notes

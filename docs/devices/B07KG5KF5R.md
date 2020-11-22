@@ -12,7 +12,7 @@ description: "Integrate your GMY Smart Bulb B07KG5KF5R via Zigbee2MQTT with what
 | Model | B07KG5KF5R  |
 | Vendor  | GMY Smart Bulb  |
 | Description | GMY Smart bulb, 470lm, vintage dimmable, 2700-6500k, E27 |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![GMY Smart Bulb B07KG5KF5R](../images/devices/B07KG5KF5R.jpg) |
 
 ## Notes

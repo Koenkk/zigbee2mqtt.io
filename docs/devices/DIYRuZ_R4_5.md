@@ -12,7 +12,7 @@ description: "Integrate your DIYRuZ DIYRuZ_R4_5 via Zigbee2MQTT with whatever sm
 | Model | DIYRuZ_R4_5  |
 | Vendor  | DIYRuZ  |
 | Description | [DiY 4 Relays + 4 switches + 1 buzzer](http://modkam.ru/?p=1054) |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![DIYRuZ DIYRuZ_R4_5](../images/devices/DIYRuZ_R4_5.jpg) |
 
 ## Notes

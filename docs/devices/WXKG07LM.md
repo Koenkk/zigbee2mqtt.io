@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WXKG07LM via Zigbee2MQTT with whatever smart
 | Model | WXKG07LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 double key wireless wall switch |
-| Supports | action |
+| Exposes | battery, action, linkquality |
 | Picture | ![Xiaomi WXKG07LM](../images/devices/WXKG07LM.jpg) |
 
 ## Notes

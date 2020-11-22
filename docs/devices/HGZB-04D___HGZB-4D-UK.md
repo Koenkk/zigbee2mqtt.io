@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-04D / HGZB-4D-UK via Zigbee2MQTT with
 | Model | HGZB-04D / HGZB-4D-UK  |
 | Vendor  | Nue / 3A  |
 | Description | Smart dimmer wall switch |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Nue / 3A HGZB-04D / HGZB-4D-UK](../images/devices/HGZB-04D---HGZB-4D-UK.jpg) |
 
 ## Notes

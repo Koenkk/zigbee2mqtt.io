@@ -12,7 +12,7 @@ description: "Integrate your Securifi PP-WHT-US via Zigbee2MQTT with whatever sm
 | Model | PP-WHT-US  |
 | Vendor  | Securifi  |
 | Description | Peanut Smart Plug |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, current, voltage, linkquality |
 | Picture | ![Securifi PP-WHT-US](../images/devices/PP-WHT-US.jpg) |
 
 ## Notes

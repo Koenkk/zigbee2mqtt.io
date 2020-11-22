@@ -12,7 +12,7 @@ description: "Integrate your SmartThings STSS-IRM-001 via Zigbee2MQTT with whate
 | Model | STSS-IRM-001  |
 | Vendor  | SmartThings  |
 | Description | Motion sensor (2013 model) |
-| Supports | occupancy |
+| Exposes | occupancy, battery_low, tamper, linkquality |
 | Picture | ![SmartThings STSS-IRM-001](../images/devices/STSS-IRM-001.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your SONOFF SNZB-01 via Zigbee2MQTT with whatever smart 
 | Model | SNZB-01  |
 | Vendor  | SONOFF  |
 | Description | Wireless button |
-| Supports | single, double, long |
+| Exposes | battery, action, linkquality |
 | Picture | ![SONOFF SNZB-01](../images/devices/SNZB-01.jpg) |
 | White-label | eWeLink RHK07 |
 

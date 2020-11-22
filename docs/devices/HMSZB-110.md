@@ -12,7 +12,7 @@ description: "Integrate your Develco HMSZB-110 via Zigbee2MQTT with whatever sma
 | Model | HMSZB-110  |
 | Vendor  | Develco  |
 | Description | Temperature & humidity sensor |
-| Supports | temperature, humidity |
+| Exposes | battery, temperature, humidity, linkquality |
 | Picture | ![Develco HMSZB-110](../images/devices/HMSZB-110.jpg) |
 
 ## Notes

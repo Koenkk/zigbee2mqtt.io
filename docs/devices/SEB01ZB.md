@@ -12,7 +12,7 @@ description: "Integrate your Feibit SEB01ZB via Zigbee2MQTT with whatever smart 
 | Model | SEB01ZB  |
 | Vendor  | Feibit  |
 | Description | SOS button |
-| Supports | sos |
+| Exposes | sos, battery_low, tamper, battery, linkquality |
 | Picture | ![Feibit SEB01ZB](../images/devices/SEB01ZB.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your LivingWise LVS-SM10ZW via Zigbee2MQTT with whatever
 | Model | LVS-SM10ZW  |
 | Vendor  | LivingWise  |
 | Description | Door or window contact switch |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, linkquality |
 | Picture | ![LivingWise LVS-SM10ZW](../images/devices/LVS-SM10ZW.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS1HT via Zigbee2MQTT with whatever smart ho
 | Model | HS1HT  |
 | Vendor  | HEIMAN  |
 | Description | Smart temperature & humidity Sensor |
-| Supports | temperature and humidity |
+| Exposes | battery, temperature, humidity, linkquality |
 | Picture | ![HEIMAN HS1HT](../images/devices/HS1HT.jpg) |
 | White-label | Ferguson TH-T_V14 |
 

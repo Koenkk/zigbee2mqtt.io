@@ -12,7 +12,7 @@ description: "Integrate your SmartThings STSS-MULT-001 via Zigbee2MQTT with what
 | Model | STSS-MULT-001  |
 | Vendor  | SmartThings  |
 | Description | Multipurpose sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, linkquality |
 | Picture | ![SmartThings STSS-MULT-001](../images/devices/STSS-MULT-001.jpg) |
 
 ## Notes

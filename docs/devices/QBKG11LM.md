@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG11LM via Zigbee2MQTT with whatever smart
 | Model | QBKG11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara single key wired wall switch |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, temperature, action, linkquality |
 | Picture | ![Xiaomi QBKG11LM](../images/devices/QBKG11LM.jpg) |
 
 ## Notes

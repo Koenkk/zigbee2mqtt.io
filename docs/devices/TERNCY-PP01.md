@@ -12,7 +12,7 @@ description: "Integrate your TERNCY TERNCY-PP01 via Zigbee2MQTT with whatever sm
 | Model | TERNCY-PP01  |
 | Vendor  | TERNCY  |
 | Description | Awareness switch |
-| Supports | temperature, occupancy, illuminance, click, double click, triple click |
+| Exposes | temperature, occupancy, illuminance_lux, illuminance, action, linkquality |
 | Picture | ![TERNCY TERNCY-PP01](../images/devices/TERNCY-PP01.jpg) |
 
 ## Notes

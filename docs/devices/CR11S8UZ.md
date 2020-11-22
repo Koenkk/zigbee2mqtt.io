@@ -12,7 +12,7 @@ description: "Integrate your ORVIBO CR11S8UZ via Zigbee2MQTT with whatever smart
 | Model | CR11S8UZ  |
 | Vendor  | ORVIBO  |
 | Description | Smart sticker switch |
-| Supports | click, hold, release |
+| Exposes | action, linkquality |
 | Picture | ![ORVIBO CR11S8UZ](../images/devices/CR11S8UZ.jpg) |
 
 ## Notes

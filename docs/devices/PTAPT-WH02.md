@@ -12,7 +12,7 @@ description: "Integrate your GE PTAPT-WH02 via Zigbee2MQTT with whatever smart h
 | Model | PTAPT-WH02  |
 | Vendor  | GE  |
 | Description | Quirky smart switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![GE PTAPT-WH02](../images/devices/PTAPT-WH02.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WXKG01LM via Zigbee2MQTT with whatever smart
 | Model | WXKG01LM  |
 | Vendor  | Xiaomi  |
 | Description | MiJia wireless switch |
-| Supports | single, double, triple, quadruple, many, hold, release |
+| Exposes | battery, action, linkquality |
 | Picture | ![Xiaomi WXKG01LM](../images/devices/WXKG01LM.jpg) |
 
 ## Notes

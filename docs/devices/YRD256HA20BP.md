@@ -12,7 +12,7 @@ description: "Integrate your Yale YRD256HA20BP via Zigbee2MQTT with whatever sma
 | Model | YRD256HA20BP  |
 | Vendor  | Yale  |
 | Description | Assure lock SL |
-| Supports | lock/unlock, battery |
+| Exposes | lock (state), battery, linkquality |
 | Picture | ![Yale YRD256HA20BP](../images/devices/YRD256HA20BP.jpg) |
 
 ## Notes

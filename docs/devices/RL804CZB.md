@@ -12,7 +12,7 @@ description: "Integrate your Orvibo RL804CZB via Zigbee2MQTT with whatever smart
 | Model | RL804CZB  |
 | Vendor  | Orvibo  |
 | Description | Zigbee LED controller RGB + CCT or RGBW |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Orvibo RL804CZB](../images/devices/RL804CZB.jpg) |
 
 ## Notes

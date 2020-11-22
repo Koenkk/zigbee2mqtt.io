@@ -12,7 +12,7 @@ description: "Integrate your Lonsonho QS-Zigbee-S04-2C-LN via Zigbee2MQTT with w
 | Model | QS-Zigbee-S04-2C-LN  |
 | Vendor  | Lonsonho  |
 | Description | 2 gang switch module with neutral wire |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Lonsonho QS-Zigbee-S04-2C-LN](../images/devices/QS-Zigbee-S04-2C-LN.jpg) |
 
 ## Notes

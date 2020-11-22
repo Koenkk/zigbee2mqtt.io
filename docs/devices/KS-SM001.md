@@ -12,7 +12,7 @@ description: "Integrate your Ksentry Electronics KS-SM001 via Zigbee2MQTT with w
 | Model | KS-SM001  |
 | Vendor  | Ksentry Electronics  |
 | Description | [Zigbee OnOff Controller](http://ksentry.manufacturer.globalsources.com/si/6008837134660/pdtl/ZigBee-module/1162731630/zigbee-on-off-controller-modules.htm) |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Ksentry Electronics KS-SM001](../images/devices/KS-SM001.jpg) |
 
 ## Notes

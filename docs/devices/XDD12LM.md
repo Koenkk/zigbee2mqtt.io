@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi XDD12LM via Zigbee2MQTT with whatever smart 
 | Model | XDD12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara Opple MX650 |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Xiaomi XDD12LM](../images/devices/XDD12LM.jpg) |
 
 ## Notes

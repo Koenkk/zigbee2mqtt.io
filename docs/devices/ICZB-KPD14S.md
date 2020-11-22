@@ -12,7 +12,7 @@ description: "Integrate your iCasa ICZB-KPD14S via Zigbee2MQTT with whatever sma
 | Model | ICZB-KPD14S  |
 | Vendor  | iCasa  |
 | Description | Zigbee 3.0 Keypad Pulse 4S |
-| Supports | click, action, brightness, scenes |
+| Exposes | battery, action, linkquality |
 | Picture | ![iCasa ICZB-KPD14S](../images/devices/ICZB-KPD14S.jpg) |
 
 ## Notes

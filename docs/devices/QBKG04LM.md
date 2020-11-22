@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG04LM via Zigbee2MQTT with whatever smart
 | Model | QBKG04LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara single key wired wall switch without neutral wire. Doesn't work as a router and doesn't support power meter |
-| Supports | release/hold, on/off |
+| Exposes | switch (state), action, linkquality |
 | Picture | ![Xiaomi QBKG04LM](../images/devices/QBKG04LM.jpg) |
 
 ## Notes

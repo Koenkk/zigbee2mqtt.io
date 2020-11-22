@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi MCCGQ01LM via Zigbee2MQTT with whatever smar
 | Model | MCCGQ01LM  |
 | Vendor  | Xiaomi  |
 | Description | MiJia door & window contact sensor |
-| Supports | contact |
+| Exposes | battery, contact, linkquality |
 | Picture | ![Xiaomi MCCGQ01LM](../images/devices/MCCGQ01LM.jpg) |
 
 ## Notes

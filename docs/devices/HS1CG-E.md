@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS1CG-E via Zigbee2MQTT with whatever smart 
 | Model | HS1CG-E  |
 | Vendor  | HEIMAN  |
 | Description | Combustible gas sensor |
-| Supports | gas |
+| Exposes | gas, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN HS1CG-E](../images/devices/HS1CG-E.jpg) |
 | White-label | Piri HSIO18008 |
 

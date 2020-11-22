@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS1EB/HS1EB-E via Zigbee2MQTT with whatever 
 | Model | HS1EB/HS1EB-E  |
 | Vendor  | HEIMAN  |
 | Description | Smart emergency button |
-| Supports | action |
+| Exposes | battery, action, linkquality |
 | Picture | ![HEIMAN HS1EB/HS1EB-E](../images/devices/HS1EB-HS1EB-E.jpg) |
 
 ## Notes

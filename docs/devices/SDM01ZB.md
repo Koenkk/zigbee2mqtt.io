@@ -12,7 +12,7 @@ description: "Integrate your Feibit SDM01ZB via Zigbee2MQTT with whatever smart 
 | Model | SDM01ZB  |
 | Vendor  | Feibit  |
 | Description | Door or window contact switch |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![Feibit SDM01ZB](../images/devices/SDM01ZB.jpg) |
 
 ## Notes

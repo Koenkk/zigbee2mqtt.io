@@ -12,7 +12,7 @@ description: "Integrate your Aurora Lighting AU-A1ZBPIA via Zigbee2MQTT with wha
 | Model | AU-A1ZBPIA  |
 | Vendor  | Aurora Lighting  |
 | Description | Aurora smart plug |
-| Supports | on/off, power measurement, temperature |
+| Exposes | switch (state), power, voltage, current, device_temperature, energy, linkquality |
 | Picture | ![Aurora Lighting AU-A1ZBPIA](../images/devices/AU-A1ZBPIA.jpg) |
 
 ## Notes

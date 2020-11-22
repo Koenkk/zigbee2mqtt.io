@@ -12,7 +12,7 @@ description: "Integrate your Sylvania LTFY004 via Zigbee2MQTT with whatever smar
 | Model | LTFY004  |
 | Vendor  | Sylvania  |
 | Description | LIGHTIFY LED gardenspot mini RGB |
-| Supports | on/off, brightness, color xy |
+| Exposes | light (state, brightness, color_xy), effect, linkquality |
 | Picture | ![Sylvania LTFY004](../images/devices/LTFY004.jpg) |
 
 ## Notes

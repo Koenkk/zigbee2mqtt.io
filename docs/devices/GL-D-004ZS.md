@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-D-004ZS via Zigbee2MQTT with whatever s
 | Model | GL-D-004ZS  |
 | Vendor  | Gledopto  |
 | Description | LED RGB + CCT downlight plus version 9W |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Gledopto GL-D-004ZS](../images/devices/GL-D-004ZS.jpg) |
 
 ## Notes

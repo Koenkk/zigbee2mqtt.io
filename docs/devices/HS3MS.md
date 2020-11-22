@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS3MS via Zigbee2MQTT with whatever smart ho
 | Model | HS3MS  |
 | Vendor  | HEIMAN  |
 | Description | Smart motion sensor |
-| Supports | occupancy |
+| Exposes | occupancy, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN HS3MS](../images/devices/HS3MS.jpg) |
 
 ## Notes

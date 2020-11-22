@@ -12,7 +12,7 @@ description: "Integrate your Swann SWO-KEF1PA via Zigbee2MQTT with whatever smar
 | Model | SWO-KEF1PA  |
 | Vendor  | Swann  |
 | Description | Key fob remote |
-| Supports | panic, home, away, sleep |
+| Exposes | action, linkquality |
 | Picture | ![Swann SWO-KEF1PA](../images/devices/SWO-KEF1PA.jpg) |
 
 ## Notes

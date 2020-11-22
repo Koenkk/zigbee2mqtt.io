@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi RTCGQ11LM via Zigbee2MQTT with whatever smar
 | Model | RTCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara human body movement and illuminance sensor |
-| Supports | occupancy and illuminance |
+| Exposes | battery, occupancy, illuminance, linkquality |
 | Picture | ![Xiaomi RTCGQ11LM](../images/devices/RTCGQ11LM.jpg) |
 
 ## Notes

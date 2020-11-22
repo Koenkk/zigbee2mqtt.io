@@ -12,7 +12,7 @@ description: "Integrate your TuYa gq8b1uv via Zigbee2MQTT with whatever smart ho
 | Model | gq8b1uv  |
 | Vendor  | TuYa  |
 | Description | Zigbee smart dimmer |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![TuYa gq8b1uv](../images/devices/gq8b1uv.jpg) |
 
 ## Notes

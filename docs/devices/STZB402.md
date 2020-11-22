@@ -12,7 +12,7 @@ description: "Integrate your Stelpro STZB402 via Zigbee2MQTT with whatever smart
 | Model | STZB402  |
 | Vendor  | Stelpro  |
 | Description | Ki, line-voltage thermostat |
-| Supports | temperature |
+| Exposes | local_temperature, lock (state), climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![Stelpro STZB402](../images/devices/STZB402.jpg) |
 
 ## Notes

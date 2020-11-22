@@ -12,7 +12,7 @@ description: "Integrate your Feibit TZSW22FW-L4 via Zigbee2MQTT with whatever sm
 | Model | TZSW22FW-L4  |
 | Vendor  | Feibit  |
 | Description | Smart light switch - 2 gang |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Feibit TZSW22FW-L4](../images/devices/TZSW22FW-L4.jpg) |
 
 ## Notes

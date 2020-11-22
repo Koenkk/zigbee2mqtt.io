@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WXKG11LM via Zigbee2MQTT with whatever smart
 | Model | WXKG11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara wireless switch |
-| Supports | single, double click (and triple, quadruple, hold, release depending on model) |
+| Exposes | battery, action, linkquality |
 | Picture | ![Xiaomi WXKG11LM](../images/devices/WXKG11LM.jpg) |
 
 ## Notes

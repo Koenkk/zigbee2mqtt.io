@@ -12,7 +12,7 @@ description: "Integrate your Climax RS-23ZBS via Zigbee2MQTT with whatever smart
 | Model | RS-23ZBS  |
 | Vendor  | Climax  |
 | Description | Temperature & humidity sensor |
-| Supports | temperature, humidity |
+| Exposes | temperature, humidity, linkquality |
 | Picture | ![Climax RS-23ZBS](../images/devices/RS-23ZBS.jpg) |
 
 ## Notes

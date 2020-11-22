@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS2SK via Zigbee2MQTT with whatever smart ho
 | Model | HS2SK  |
 | Vendor  | HEIMAN  |
 | Description | Smart metering plug |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, current, voltage, linkquality |
 | Picture | ![HEIMAN HS2SK](../images/devices/HS2SK.jpg) |
 
 ## Notes

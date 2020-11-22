@@ -12,7 +12,7 @@ description: "Integrate your iCasa ICZB-KPD18S via Zigbee2MQTT with whatever sma
 | Model | ICZB-KPD18S  |
 | Vendor  | iCasa  |
 | Description | Zigbee 3.0 Keypad Pulse 8S |
-| Supports | click, action, brightness, scenes |
+| Exposes | battery, action, linkquality |
 | Picture | ![iCasa ICZB-KPD18S](../images/devices/ICZB-KPD18S.jpg) |
 
 ## Notes

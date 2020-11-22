@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG03LM via Zigbee2MQTT with whatever smart
 | Model | QBKG03LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara double key wired wall switch without neutral wire. Doesn't work as a router and doesn't support power meter |
-| Supports | release/hold, on/off, temperature |
+| Exposes | switch (state), temperature, action, linkquality |
 | Picture | ![Xiaomi QBKG03LM](../images/devices/QBKG03LM.jpg) |
 
 ## Notes

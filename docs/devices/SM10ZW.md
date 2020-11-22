@@ -12,7 +12,7 @@ description: "Integrate your ORVIBO SM10ZW via Zigbee2MQTT with whatever smart h
 | Model | SM10ZW  |
 | Vendor  | ORVIBO  |
 | Description | Door or window contact switch |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![ORVIBO SM10ZW](../images/devices/SM10ZW.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your GreenPower GreenPower_On_Off_Switch via Zigbee2MQTT
 | Model | GreenPower_On_Off_Switch  |
 | Vendor  | GreenPower  |
 | Description | On/off switch |
-| Supports | action |
+| Exposes | action, linkquality |
 | Picture | ![GreenPower GreenPower_On_Off_Switch](../images/devices/GreenPower_On_Off_Switch.jpg) |
 | White-label | Philips 8718696743133, Niko 91004 |
 

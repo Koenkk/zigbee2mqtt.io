@@ -12,7 +12,7 @@ description: "Integrate your SONOFF SNZB-04 via Zigbee2MQTT with whatever smart 
 | Model | SNZB-04  |
 | Vendor  | SONOFF  |
 | Description | Contact sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![SONOFF SNZB-04](../images/devices/SNZB-04.jpg) |
 | White-label | eWeLink RHK06 |
 

@@ -12,7 +12,7 @@ description: "Integrate your Custom devices (DiY) DNCKATSW004 via Zigbee2MQTT wi
 | Model | DNCKATSW004  |
 | Vendor  | Custom devices (DiY)  |
 | Description | [DNCKAT quadruple key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) |
-| Supports | hold/release, on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Custom devices (DiY) DNCKATSW004](../images/devices/DNCKATSW004.jpg) |
 
 ## Notes

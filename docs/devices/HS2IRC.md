@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS2IRC via Zigbee2MQTT with whatever smart h
 | Model | HS2IRC  |
 | Vendor  | HEIMAN  |
 | Description | Smart IR Control |
-| Supports | ir control |
+| Exposes | battery, linkquality |
 | Picture | ![HEIMAN HS2IRC](../images/devices/HS2IRC.jpg) |
 
 ## Notes

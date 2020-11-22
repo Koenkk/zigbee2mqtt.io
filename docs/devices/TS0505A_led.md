@@ -12,7 +12,7 @@ description: "Integrate your TuYa TS0505A_led via Zigbee2MQTT with whatever smar
 | Model | TS0505A_led  |
 | Vendor  | TuYa  |
 | Description | RGB+CCT LED |
-| Supports | on/off, color (hue/saturation), brightness, color_temp |
+| Exposes | light (state, brightness, color_temp, color_hs), linkquality |
 | Picture | ![TuYa TS0505A_led](../images/devices/TS0505A_led.jpg) |
 
 ## Notes

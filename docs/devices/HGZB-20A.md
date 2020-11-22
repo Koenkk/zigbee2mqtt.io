@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-20A via Zigbee2MQTT with whatever sma
 | Model | HGZB-20A  |
 | Vendor  | Nue / 3A  |
 | Description | Power plug |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A HGZB-20A](../images/devices/HGZB-20A.jpg) |
 
 ## Notes

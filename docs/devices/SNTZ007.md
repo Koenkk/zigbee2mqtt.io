@@ -12,7 +12,7 @@ description: "Integrate your TuYa SNTZ007 via Zigbee2MQTT with whatever smart ho
 | Model | SNTZ007  |
 | Vendor  | TuYa  |
 | Description | Rechargeable Zigbee contact sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![TuYa SNTZ007](../images/devices/SNTZ007.jpg) |
 | White-label | BlitzWolf BW-IS2 |
 

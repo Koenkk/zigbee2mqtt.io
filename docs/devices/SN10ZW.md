@@ -12,7 +12,7 @@ description: "Integrate your ORVIBO SN10ZW via Zigbee2MQTT with whatever smart h
 | Model | SN10ZW  |
 | Vendor  | ORVIBO  |
 | Description | Occupancy sensor |
-| Supports | occupancy |
+| Exposes | occupancy, battery_low, tamper, battery, linkquality |
 | Picture | ![ORVIBO SN10ZW](../images/devices/SN10ZW.jpg) |
 
 ## Notes

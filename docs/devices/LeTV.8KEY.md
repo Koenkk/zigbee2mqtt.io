@@ -12,7 +12,7 @@ description: "Integrate your LeTV LeTV.8KEY via Zigbee2MQTT with whatever smart 
 | Model | LeTV.8KEY  |
 | Vendor  | LeTV  |
 | Description | 8key switch |
-| Supports | action |
+| Exposes | action, linkquality |
 | Picture | ![LeTV LeTV.8KEY](../images/devices/LeTV.8KEY.jpg) |
 
 ## Notes

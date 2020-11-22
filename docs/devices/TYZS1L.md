@@ -12,7 +12,7 @@ description: "Integrate your TuYa TYZS1L via Zigbee2MQTT with whatever smart hom
 | Model | TYZS1L  |
 | Vendor  | TuYa  |
 | Description | Led strip controller HSB |
-| Supports | on/off, color (hue/saturation) |
+| Exposes | light (state, color_hs), linkquality |
 | Picture | ![TuYa TYZS1L](../images/devices/TYZS1L.jpg) |
 
 ## Notes

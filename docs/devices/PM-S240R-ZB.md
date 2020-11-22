@@ -12,7 +12,7 @@ description: "Integrate your Dawon DNS PM-S240R-ZB via Zigbee2MQTT with whatever
 | Model | PM-S240R-ZB  |
 | Vendor  | Dawon DNS  |
 | Description | IOT smart switch 2 gang without neutral wire |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Dawon DNS PM-S240R-ZB](../images/devices/PM-S240R-ZB.jpg) |
 
 ## Notes

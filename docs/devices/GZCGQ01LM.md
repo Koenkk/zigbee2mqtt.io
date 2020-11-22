@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi GZCGQ01LM via Zigbee2MQTT with whatever smar
 | Model | GZCGQ01LM  |
 | Vendor  | Xiaomi  |
 | Description | MiJia light intensity sensor |
-| Supports | illuminance |
+| Exposes | battery, illuminance, illuminance_lux, linkquality |
 | Picture | ![Xiaomi GZCGQ01LM](../images/devices/GZCGQ01LM.jpg) |
 
 ## Notes

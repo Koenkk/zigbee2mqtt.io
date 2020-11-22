@@ -12,7 +12,7 @@ description: "Integrate your Hive HV-GSCXZB229B via Zigbee2MQTT with whatever sm
 | Model | HV-GSCXZB229B  |
 | Vendor  | Hive  |
 | Description | Active light, warm to cool white (E27 & B22) |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Hive HV-GSCXZB229B](../images/devices/HV-GSCXZB229B.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Trust ZLED-TUNE9 via Zigbee2MQTT with whatever smar
 | Model | ZLED-TUNE9  |
 | Vendor  | Trust  |
 | Description | Smart tunable LED bulb |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Trust ZLED-TUNE9](../images/devices/ZLED-TUNE9.jpg) |
 
 ## Notes

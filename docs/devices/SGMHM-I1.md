@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN SGMHM-I1 via Zigbee2MQTT with whatever smart
 | Model | SGMHM-I1  |
 | Vendor  | HEIMAN  |
 | Description | Combustible gas sensor |
-| Supports | gas |
+| Exposes | gas, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN SGMHM-I1](../images/devices/SGMHM-I1.jpg) |
 
 ## Notes

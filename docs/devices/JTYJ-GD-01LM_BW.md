@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi JTYJ-GD-01LM/BW via Zigbee2MQTT with whateve
 | Model | JTYJ-GD-01LM/BW  |
 | Vendor  | Xiaomi  |
 | Description | MiJia Honeywell smoke detector |
-| Supports | smoke |
+| Exposes | smoke, battery_low, tamper, battery, sensitivity, smoke_density, selftest, linkquality |
 | Picture | ![Xiaomi JTYJ-GD-01LM/BW](../images/devices/JTYJ-GD-01LM-BW.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Qmotion QZR-ZIG2400 via Zigbee2MQTT with whatever s
 | Model | QZR-ZIG2400  |
 | Vendor  | Qmotion  |
 | Description | 5 channel remote |
-| Supports | open, close, stop, position |
+| Exposes | action, position, linkquality |
 | Picture | ![Qmotion QZR-ZIG2400](../images/devices/QZR-ZIG2400.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi HLQDQ01LM via Zigbee2MQTT with whatever smar
 | Model | HLQDQ01LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara zigbee LED-controller  |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Xiaomi HLQDQ01LM](../images/devices/HLQDQ01LM.jpg) |
 
 ## Notes

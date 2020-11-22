@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-01A via Zigbee2MQTT with whatever sma
 | Model | HGZB-01A  |
 | Vendor  | Nue / 3A  |
 | Description | Smart in-wall switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A HGZB-01A](../images/devices/HGZB-01A.jpg) |
 
 ## Notes

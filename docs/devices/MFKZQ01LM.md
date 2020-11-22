@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi MFKZQ01LM via Zigbee2MQTT with whatever smar
 | Model | MFKZQ01LM  |
 | Vendor  | Xiaomi  |
 | Description | Mi/Aqara smart home cube |
-| Supports | shake, wakeup, fall, tap, slide, flip180, flip90, rotate_left and rotate_right |
+| Exposes | battery, action, linkquality |
 | Picture | ![Xiaomi MFKZQ01LM](../images/devices/MFKZQ01LM.jpg) |
 
 ## Notes

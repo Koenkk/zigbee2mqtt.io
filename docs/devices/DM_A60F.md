@@ -12,7 +12,7 @@ description: "Integrate your CY-LIGHTING DM A60F via Zigbee2MQTT with whatever s
 | Model | DM A60F  |
 | Vendor  | CY-LIGHTING  |
 | Description | 6W smart dimmable E27 lamp 2700K |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![CY-LIGHTING DM A60F](../images/devices/DM-A60F.jpg) |
 
 ## Notes

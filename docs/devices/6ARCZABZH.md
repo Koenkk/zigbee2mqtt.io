@@ -12,7 +12,7 @@ description: "Integrate your Leedarson 6ARCZABZH via Zigbee2MQTT with whatever s
 | Model | 6ARCZABZH  |
 | Vendor  | Leedarson  |
 | Description | 4-Key Remote Controller |
-| Supports | on/off, brightness up/down and click/hold/release, cct |
+| Exposes | battery, action, linkquality |
 | Picture | ![Leedarson 6ARCZABZH](../images/devices/6ARCZABZH.jpg) |
 
 ## Notes

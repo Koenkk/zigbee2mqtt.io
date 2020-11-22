@@ -12,7 +12,7 @@ description: "Integrate your Visonic MCT-350 SMA via Zigbee2MQTT with whatever s
 | Model | MCT-350 SMA  |
 | Vendor  | Visonic  |
 | Description | Magnetic door & window contact sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, linkquality |
 | Picture | ![Visonic MCT-350 SMA](../images/devices/MCT-350-SMA.jpg) |
 
 ## Notes

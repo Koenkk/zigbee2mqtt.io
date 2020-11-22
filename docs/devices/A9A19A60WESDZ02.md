@@ -12,7 +12,7 @@ description: "Integrate your EcoSmart A9A19A60WESDZ02 via Zigbee2MQTT with whate
 | Model | A9A19A60WESDZ02  |
 | Vendor  | EcoSmart  |
 | Description | Tuneable white (A19) |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![EcoSmart A9A19A60WESDZ02](../images/devices/A9A19A60WESDZ02.jpg) |
 
 ## Notes

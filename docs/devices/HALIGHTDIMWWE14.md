@@ -12,7 +12,7 @@ description: "Integrate your Hive HALIGHTDIMWWE14 via Zigbee2MQTT with whatever 
 | Model | HALIGHTDIMWWE14  |
 | Vendor  | Hive  |
 | Description | Active smart bulb white LED (E14) |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Hive HALIGHTDIMWWE14](../images/devices/HALIGHTDIMWWE14.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Feibit SWA01ZB via Zigbee2MQTT with whatever smart 
 | Model | SWA01ZB  |
 | Vendor  | Feibit  |
 | Description | Water leakage sensor |
-| Supports | water leak |
+| Exposes | water_leak, battery_low, tamper, battery, linkquality |
 | Picture | ![Feibit SWA01ZB](../images/devices/SWA01ZB.jpg) |
 
 ## Notes

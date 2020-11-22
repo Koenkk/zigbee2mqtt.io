@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN STHM-I1H via Zigbee2MQTT with whatever smart
 | Model | STHM-I1H  |
 | Vendor  | HEIMAN  |
 | Description | Heiman temperature & humidity sensor |
-| Supports | temperature and humidity |
+| Exposes | temperature, humidity, battery, linkquality |
 | Picture | ![HEIMAN STHM-I1H](../images/devices/STHM-I1H.jpg) |
 
 ## Notes

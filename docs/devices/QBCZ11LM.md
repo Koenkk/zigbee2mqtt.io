@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBCZ11LM via Zigbee2MQTT with whatever smart
 | Model | QBCZ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara socket Zigbee |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, energy, temperature, voltage, linkquality |
 | Picture | ![Xiaomi QBCZ11LM](../images/devices/QBCZ11LM.jpg) |
 
 ## Notes

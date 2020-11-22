@@ -12,7 +12,7 @@ description: "Integrate your Zemismart ZM-L03E-Z via Zigbee2MQTT with whatever s
 | Model | ZM-L03E-Z  |
 | Vendor  | Zemismart  |
 | Description | Smart light switch - 3 gang with neutral wire |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Zemismart ZM-L03E-Z](../images/devices/ZM-L03E-Z.jpg) |
 
 ## Notes

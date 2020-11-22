@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-02S via Zigbee2MQTT with whatever sma
 | Model | HGZB-02S  |
 | Vendor  | Nue / 3A  |
 | Description | Smart 2 key scene wall switch |
-| Supports | on/off, click, action |
+| Exposes | action, switch (state), linkquality |
 | Picture | ![Nue / 3A HGZB-02S](../images/devices/HGZB-02S.jpg) |
 
 ## Notes

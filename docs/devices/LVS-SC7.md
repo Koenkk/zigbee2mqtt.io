@@ -12,7 +12,7 @@ description: "Integrate your LivingWise LVS-SC7 via Zigbee2MQTT with whatever sm
 | Model | LVS-SC7  |
 | Vendor  | LivingWise  |
 | Description | Scene controller  |
-| Supports | action |
+| Exposes | action, linkquality |
 | Picture | ![LivingWise LVS-SC7](../images/devices/LVS-SC7.jpg) |
 
 ## Notes

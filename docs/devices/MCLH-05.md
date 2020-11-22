@@ -12,7 +12,7 @@ description: "Integrate your LifeControl MCLH-05 via Zigbee2MQTT with whatever s
 | Model | MCLH-05  |
 | Vendor  | LifeControl  |
 | Description | Motion sensor |
-| Supports | occupancy |
+| Exposes | occupancy, battery_low, tamper, battery, linkquality |
 | Picture | ![LifeControl MCLH-05](../images/devices/MCLH-05.jpg) |
 
 ## Notes

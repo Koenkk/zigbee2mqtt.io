@@ -12,7 +12,7 @@ description: "Integrate your Hive HALIGHTDIMWWB22 via Zigbee2MQTT with whatever 
 | Model | HALIGHTDIMWWB22  |
 | Vendor  | Hive  |
 | Description | Active smart bulb white LED (B22) |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Hive HALIGHTDIMWWB22](../images/devices/HALIGHTDIMWWB22.jpg) |
 
 ## Notes

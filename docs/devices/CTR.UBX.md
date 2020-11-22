@@ -12,7 +12,7 @@ description: "Integrate your Airam CTR.UBX via Zigbee2MQTT with whatever smart h
 | Model | CTR.UBX  |
 | Vendor  | Airam  |
 | Description | CTR.U remote BX |
-| Supports | action |
+| Exposes | action, linkquality |
 | Picture | ![Airam CTR.UBX](../images/devices/CTR.UBX.jpg) |
 
 ## Notes

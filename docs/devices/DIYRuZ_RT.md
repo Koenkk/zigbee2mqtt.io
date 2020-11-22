@@ -12,7 +12,7 @@ description: "Integrate your DIYRuZ DIYRuZ_RT via Zigbee2MQTT with whatever smar
 | Model | DIYRuZ_RT  |
 | Vendor  | DIYRuZ  |
 | Description | [DiY CC2530 Zigbee 3.0 firmware](https://habr.com/ru/company/iobroker/blog/495926/) |
-| Supports | on/off, temperature |
+| Exposes | switch (state), temperature, linkquality |
 | Picture | ![DIYRuZ DIYRuZ_RT](../images/devices/DIYRuZ_RT.jpg) |
 
 ## Notes

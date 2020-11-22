@@ -12,7 +12,7 @@ description: "Integrate your Sengled E1F-N5E via Zigbee2MQTT with whatever smart
 | Model | E1F-N5E  |
 | Vendor  | Sengled  |
 | Description | Element color plus E12 |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Sengled E1F-N5E](../images/devices/E1F-N5E.jpg) |
 
 ## Notes

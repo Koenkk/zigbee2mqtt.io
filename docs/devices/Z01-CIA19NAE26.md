@@ -12,7 +12,7 @@ description: "Integrate your Sengled Z01-CIA19NAE26 via Zigbee2MQTT with whateve
 | Model | Z01-CIA19NAE26  |
 | Vendor  | Sengled  |
 | Description | Element Touch (A19) |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Sengled Z01-CIA19NAE26](../images/devices/Z01-CIA19NAE26.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your iCasa ICZB-R11D via Zigbee2MQTT with whatever smart
 | Model | ICZB-R11D  |
 | Vendor  | iCasa  |
 | Description | Zigbee AC dimmer |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![iCasa ICZB-R11D](../images/devices/ICZB-R11D.jpg) |
 
 ## Notes

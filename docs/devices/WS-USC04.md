@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WS-USC04 via Zigbee2MQTT with whatever smart
 | Model | WS-USC04  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall switch (neutral, double rocker) |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Xiaomi WS-USC04](../images/devices/WS-USC04.jpg) |
 
 ## Notes

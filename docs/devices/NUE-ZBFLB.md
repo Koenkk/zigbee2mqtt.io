@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A NUE-ZBFLB via Zigbee2MQTT with whatever sm
 | Model | NUE-ZBFLB  |
 | Vendor  | Nue / 3A  |
 | Description | Smart fan light switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A NUE-ZBFLB](../images/devices/NUE-ZBFLB.jpg) |
 
 ## Notes

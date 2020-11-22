@@ -12,7 +12,7 @@ description: "Integrate your Sunricher SR-ZG9001T4-DIM-EU via Zigbee2MQTT with w
 | Model | SR-ZG9001T4-DIM-EU  |
 | Vendor  | Sunricher  |
 | Description | Zigbee wireless touch dimmer switch |
-| Supports | action |
+| Exposes | action, linkquality |
 | Picture | ![Sunricher SR-ZG9001T4-DIM-EU](../images/devices/SR-ZG9001T4-DIM-EU.jpg) |
 
 ## Notes

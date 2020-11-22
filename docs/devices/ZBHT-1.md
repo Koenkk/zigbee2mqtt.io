@@ -12,7 +12,7 @@ description: "Integrate your Smartenit ZBHT-1 via Zigbee2MQTT with whatever smar
 | Model | ZBHT-1  |
 | Vendor  | Smartenit  |
 | Description | Temperature & humidity sensor  |
-| Supports | temperature and humidity |
+| Exposes | battery, temperature, humidity, linkquality |
 | Picture | ![Smartenit ZBHT-1](../images/devices/ZBHT-1.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your SmartThings GP-LBU019BBAWU via Zigbee2MQTT with wha
 | Model | GP-LBU019BBAWU  |
 | Vendor  | SmartThings  |
 | Description | Smart bulb |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![SmartThings GP-LBU019BBAWU](../images/devices/GP-LBU019BBAWU.jpg) |
 
 ## Notes

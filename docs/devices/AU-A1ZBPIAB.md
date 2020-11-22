@@ -12,7 +12,7 @@ description: "Integrate your Aurora Lighting AU-A1ZBPIAB via Zigbee2MQTT with wh
 | Model | AU-A1ZBPIAB  |
 | Vendor  | Aurora Lighting  |
 | Description | Power plug Zigbee EU |
-| Supports | on/off, power measurements |
+| Exposes | switch (state), power, voltage, current, linkquality |
 | Picture | ![Aurora Lighting AU-A1ZBPIAB](../images/devices/AU-A1ZBPIAB.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Konke 2AJZ4KPDR via Zigbee2MQTT with whatever smart
 | Model | 2AJZ4KPDR  |
 | Vendor  | Konke  |
 | Description | Contact sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![Konke 2AJZ4KPDR](../images/devices/2AJZ4KPDR.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your GS BDHM8E27W70-I1 via Zigbee2MQTT with whatever sma
 | Model | BDHM8E27W70-I1  |
 | Vendor  | GS  |
 | Description | Active light, warm to cool white (E27 & B22) |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![GS BDHM8E27W70-I1](../images/devices/BDHM8E27W70-I1.jpg) |
 
 ## Notes

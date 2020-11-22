@@ -12,7 +12,7 @@ description: "Integrate your TuYa TS0121_switch via Zigbee2MQTT with whatever sm
 | Model | TS0121_switch  |
 | Vendor  | TuYa  |
 | Description | Smart light switch module (1 gang) |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![TuYa TS0121_switch](../images/devices/TS0121_switch.jpg) |
 | White-label | Moes MS-104Z-1 |
 

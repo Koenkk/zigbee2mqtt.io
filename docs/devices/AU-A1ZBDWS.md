@@ -12,7 +12,7 @@ description: "Integrate your Aurora Lighting AU-A1ZBDWS via Zigbee2MQTT with wha
 | Model | AU-A1ZBDWS  |
 | Vendor  | Aurora Lighting  |
 | Description | Magnetic door & window contact sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![Aurora Lighting AU-A1ZBDWS](../images/devices/AU-A1ZBDWS.jpg) |
 
 ## Notes

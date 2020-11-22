@@ -12,7 +12,7 @@ description: "Integrate your TuYa D3-DPWK-TY via Zigbee2MQTT with whatever smart
 | Model | D3-DPWK-TY  |
 | Vendor  | TuYa  |
 | Description | HVAC controller |
-| Supports | temperature, heating/cooling system control, fan mode |
+| Exposes | climate (current_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![TuYa D3-DPWK-TY](../images/devices/D3-DPWK-TY.jpg) |
 
 ## Notes

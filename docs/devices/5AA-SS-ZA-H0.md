@@ -12,7 +12,7 @@ description: "Integrate your Leedarson 5AA-SS-ZA-H0 via Zigbee2MQTT with whateve
 | Model | 5AA-SS-ZA-H0  |
 | Vendor  | Leedarson  |
 | Description | Motion sensor |
-| Supports | occupancy, illuminance |
+| Exposes | occupancy, illuminance, illuminance_lux, linkquality |
 | Picture | ![Leedarson 5AA-SS-ZA-H0](../images/devices/5AA-SS-ZA-H0.jpg) |
 
 ## Notes

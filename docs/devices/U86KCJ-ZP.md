@@ -12,7 +12,7 @@ description: "Integrate your TuYa U86KCJ-ZP via Zigbee2MQTT with whatever smart 
 | Model | U86KCJ-ZP  |
 | Vendor  | TuYa  |
 | Description | Smart 6 key scene wall switch |
-| Supports | action |
+| Exposes | action, linkquality |
 | Picture | ![TuYa U86KCJ-ZP](../images/devices/U86KCJ-ZP.jpg) |
 
 ## Notes

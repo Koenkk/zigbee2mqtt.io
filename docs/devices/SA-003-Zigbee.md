@@ -12,7 +12,7 @@ description: "Integrate your eWeLink SA-003-Zigbee via Zigbee2MQTT with whatever
 | Model | SA-003-Zigbee  |
 | Vendor  | eWeLink  |
 | Description | Zigbee smart plug |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![eWeLink SA-003-Zigbee](../images/devices/SA-003-Zigbee.jpg) |
 
 ## Notes

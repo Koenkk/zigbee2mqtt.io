@@ -12,7 +12,7 @@ description: "Integrate your Hej GLSK6ZB-1715 via Zigbee2MQTT with whatever smar
 | Model | GLSK6ZB-1715  |
 | Vendor  | Hej  |
 | Description | Goqual 5 gang Switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Hej GLSK6ZB-1715](../images/devices/GLSK6ZB-1715.jpg) |
 
 ## Notes

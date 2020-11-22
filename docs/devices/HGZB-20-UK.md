@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-20-UK via Zigbee2MQTT with whatever s
 | Model | HGZB-20-UK  |
 | Vendor  | Nue / 3A  |
 | Description | Power plug |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A HGZB-20-UK](../images/devices/HGZB-20-UK.jpg) |
 
 ## Notes

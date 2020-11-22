@@ -12,7 +12,7 @@ description: "Integrate your Climax PSM-29ZBSR via Zigbee2MQTT with whatever sma
 | Model | PSM-29ZBSR  |
 | Vendor  | Climax  |
 | Description | Power plug |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, energy, linkquality |
 | Picture | ![Climax PSM-29ZBSR](../images/devices/PSM-29ZBSR.jpg) |
 | White-label | Blaupunkt PSM-S1 |
 

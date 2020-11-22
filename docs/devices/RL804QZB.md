@@ -12,7 +12,7 @@ description: "Integrate your ORVIBO RL804QZB via Zigbee2MQTT with whatever smart
 | Model | RL804QZB  |
 | Vendor  | ORVIBO  |
 | Description | Multi-functional 3 gang relay |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![ORVIBO RL804QZB](../images/devices/RL804QZB.jpg) |
 
 ## Notes

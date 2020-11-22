@@ -12,7 +12,7 @@ description: "Integrate your Aurora Lighting AU-A1ZBPIRS via Zigbee2MQTT with wh
 | Model | AU-A1ZBPIRS  |
 | Vendor  | Aurora Lighting  |
 | Description | AOne PIR sensor |
-| Supports | occupancy |
+| Exposes | occupancy, battery_low, tamper, illuminance, illuminance_lux, linkquality |
 | Picture | ![Aurora Lighting AU-A1ZBPIRS](../images/devices/AU-A1ZBPIRS.jpg) |
 
 ## Notes

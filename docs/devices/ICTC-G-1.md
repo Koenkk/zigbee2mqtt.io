@@ -12,7 +12,7 @@ description: "Integrate your IKEA ICTC-G-1 via Zigbee2MQTT with whatever smart h
 | Model | ICTC-G-1  |
 | Vendor  | IKEA  |
 | Description | TRADFRI wireless dimmer |
-| Supports | action |
+| Exposes | battery, action, linkquality |
 | Picture | ![IKEA ICTC-G-1](../images/devices/ICTC-G-1.jpg) |
 
 ## Notes

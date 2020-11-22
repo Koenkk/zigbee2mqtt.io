@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-B-007Z via Zigbee2MQTT with whatever sm
 | Model | GL-B-007Z  |
 | Vendor  | Gledopto  |
 | Description | Smart 6W E27 RGB / CCT LED bulb |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Gledopto GL-B-007Z](../images/devices/GL-B-007Z.jpg) |
 
 ## Notes

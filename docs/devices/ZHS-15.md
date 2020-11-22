@@ -12,7 +12,7 @@ description: "Integrate your Schwaiger ZHS-15 via Zigbee2MQTT with whatever smar
 | Model | ZHS-15  |
 | Vendor  | Schwaiger  |
 | Description | Power socket on/off with power consumption monitoring |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, current, voltage, linkquality |
 | Picture | ![Schwaiger ZHS-15](../images/devices/ZHS-15.jpg) |
 
 ## Notes

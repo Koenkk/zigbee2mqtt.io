@@ -12,7 +12,7 @@ description: "Integrate your Trust ZYCT-202 via Zigbee2MQTT with whatever smart 
 | Model | ZYCT-202  |
 | Vendor  | Trust  |
 | Description | Remote control |
-| Supports | on, off, stop, up-press, down-press |
+| Exposes | action, linkquality |
 | Picture | ![Trust ZYCT-202](../images/devices/ZYCT-202.jpg) |
 
 ## Notes

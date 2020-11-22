@@ -12,7 +12,7 @@ description: "Integrate your LifeControl MCLH-02 via Zigbee2MQTT with whatever s
 | Model | MCLH-02  |
 | Vendor  | LifeControl  |
 | Description | RGB LED lamp |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![LifeControl MCLH-02](../images/devices/MCLH-02.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN SKHMP30-I1 via Zigbee2MQTT with whatever sma
 | Model | SKHMP30-I1  |
 | Vendor  | HEIMAN  |
 | Description | Smart metering plug |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, current, voltage, linkquality |
 | Picture | ![HEIMAN SKHMP30-I1](../images/devices/SKHMP30-I1.jpg) |
 
 ## Notes

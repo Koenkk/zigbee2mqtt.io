@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-S-004Z via Zigbee2MQTT with whatever sm
 | Model | GL-S-004Z  |
 | Vendor  | Gledopto  |
 | Description | Zigbee Smart WW/CW GU10 |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Gledopto GL-S-004Z](../images/devices/GL-S-004Z.jpg) |
 
 ## Notes

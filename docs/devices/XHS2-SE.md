@@ -12,7 +12,7 @@ description: "Integrate your Sercomm XHS2-SE via Zigbee2MQTT with whatever smart
 | Model | XHS2-SE  |
 | Vendor  | Sercomm  |
 | Description | Magnetic door & window contact sensor |
-| Supports | contact, temperature |
+| Exposes | contact, battery_low, tamper, temperature, battery, linkquality |
 | Picture | ![Sercomm XHS2-SE](../images/devices/XHS2-SE.jpg) |
 
 ## Notes

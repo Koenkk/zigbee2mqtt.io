@@ -12,7 +12,7 @@ description: "Integrate your Trust ZCTS-808 via Zigbee2MQTT with whatever smart 
 | Model | ZCTS-808  |
 | Vendor  | Trust  |
 | Description | Wireless contact sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![Trust ZCTS-808](../images/devices/ZCTS-808.jpg) |
 
 ## Notes

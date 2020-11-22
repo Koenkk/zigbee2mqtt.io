@@ -12,7 +12,7 @@ description: "Integrate your Airam AIRAM-CTR.U via Zigbee2MQTT with whatever sma
 | Model | AIRAM-CTR.U  |
 | Vendor  | Airam  |
 | Description | CTR.U remote |
-| Supports | on/off, brightness up/down and click/hold/release |
+| Exposes | action, linkquality |
 | Picture | ![Airam AIRAM-CTR.U](../images/devices/AIRAM-CTR.U.jpg) |
 
 ## Notes

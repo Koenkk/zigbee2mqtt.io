@@ -12,7 +12,7 @@ description: "Integrate your SmartThings SZ-SRN12N via Zigbee2MQTT with whatever
 | Model | SZ-SRN12N  |
 | Vendor  | SmartThings  |
 | Description | Smart siren |
-| Supports | warning |
+| Exposes | linkquality |
 | Picture | ![SmartThings SZ-SRN12N](../images/devices/SZ-SRN12N.jpg) |
 
 ## Notes

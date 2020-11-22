@@ -12,7 +12,7 @@ description: "Integrate your Moes ZK-EU-2U via Zigbee2MQTT with whatever smart h
 | Model | ZK-EU-2U  |
 | Vendor  | Moes  |
 | Description | Zigbee 3.0 dual USB wireless socket plug |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Moes ZK-EU-2U](../images/devices/ZK-EU-2U.jpg) |
 
 ## Notes

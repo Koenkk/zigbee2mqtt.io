@@ -12,7 +12,7 @@ description: "Integrate your SmartThings STS-OUT-US-2 via Zigbee2MQTT with whate
 | Model | STS-OUT-US-2  |
 | Vendor  | SmartThings  |
 | Description | Zigbee smart plug with power meter |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, current, voltage, linkquality |
 | Picture | ![SmartThings STS-OUT-US-2](../images/devices/STS-OUT-US-2.jpg) |
 
 ## Notes

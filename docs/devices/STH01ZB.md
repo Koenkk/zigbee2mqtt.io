@@ -12,7 +12,7 @@ description: "Integrate your Feibit STH01ZB via Zigbee2MQTT with whatever smart 
 | Model | STH01ZB  |
 | Vendor  | Feibit  |
 | Description | Smart temperature & humidity Sensor |
-| Supports | temperature, humidity |
+| Exposes | temperature, humidity, battery, linkquality |
 | Picture | ![Feibit STH01ZB](../images/devices/STH01ZB.jpg) |
 
 ## Notes

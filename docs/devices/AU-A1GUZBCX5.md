@@ -12,7 +12,7 @@ description: "Integrate your Aurora Lighting AU-A1GUZBCX5 via Zigbee2MQTT with w
 | Model | AU-A1GUZBCX5  |
 | Vendor  | Aurora Lighting  |
 | Description | AOne 5.4W smart tuneable GU10 lamp |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Aurora Lighting AU-A1GUZBCX5](../images/devices/AU-A1GUZBCX5.jpg) |
 
 ## Notes

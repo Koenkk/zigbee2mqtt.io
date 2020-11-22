@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A MG-AUWS01 via Zigbee2MQTT with whatever sm
 | Model | MG-AUWS01  |
 | Vendor  | Nue / 3A  |
 | Description | Smart Double GPO |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A MG-AUWS01](../images/devices/MG-AUWS01.jpg) |
 
 ## Notes

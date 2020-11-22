@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi JTQJ-BF-01LM/BW via Zigbee2MQTT with whateve
 | Model | JTQJ-BF-01LM/BW  |
 | Vendor  | Xiaomi  |
 | Description | MiJia gas leak detector  |
-| Supports | gas |
+| Exposes | gas, battery_low, tamper, sensitivity, gas_density, selftest, linkquality |
 | Picture | ![Xiaomi JTQJ-BF-01LM/BW](../images/devices/JTQJ-BF-01LM-BW.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your RGB Genie ZGRC-KEY-013 via Zigbee2MQTT with whateve
 | Model | ZGRC-KEY-013  |
 | Vendor  | RGB Genie  |
 | Description | 3 Zone remote and dimmer |
-| Supports | click, action |
+| Exposes | battery, action, linkquality |
 | Picture | ![RGB Genie ZGRC-KEY-013](../images/devices/ZGRC-KEY-013.jpg) |
 
 ## Notes

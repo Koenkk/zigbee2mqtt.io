@@ -12,7 +12,7 @@ description: "Integrate your LivingWise LVS-SN10ZW_SN11 via Zigbee2MQTT with wha
 | Model | LVS-SN10ZW_SN11  |
 | Vendor  | LivingWise  |
 | Description | Occupancy sensor |
-| Supports | occupancy |
+| Exposes | battery, occupancy, battery_low, tamper, linkquality |
 | Picture | ![LivingWise LVS-SN10ZW_SN11](../images/devices/LVS-SN10ZW_SN11.jpg) |
 
 ## Notes

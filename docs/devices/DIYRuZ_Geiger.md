@@ -12,7 +12,7 @@ description: "Integrate your DIYRuZ DIYRuZ_Geiger via Zigbee2MQTT with whatever 
 | Model | DIYRuZ_Geiger  |
 | Vendor  | DIYRuZ  |
 | Description | [DiY Geiger counter](https://modkam.ru/?p=1591) |
-| Supports | radioactive pulses perminute |
+| Exposes | action, radioactive_events_per_minute, radiation_dose_per_hour, linkquality |
 | Picture | ![DIYRuZ DIYRuZ_Geiger](../images/devices/DIYRuZ_Geiger.jpg) |
 
 ## Notes

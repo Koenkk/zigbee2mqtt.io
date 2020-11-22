@@ -12,7 +12,7 @@ description: "Integrate your iCasa ICZB-R12D via Zigbee2MQTT with whatever smart
 | Model | ICZB-R12D  |
 | Vendor  | iCasa  |
 | Description | Zigbee AC dimmer |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![iCasa ICZB-R12D](../images/devices/ICZB-R12D.jpg) |
 
 ## Notes

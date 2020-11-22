@@ -12,7 +12,7 @@ description: "Integrate your SONOFF SNZB-03 via Zigbee2MQTT with whatever smart 
 | Model | SNZB-03  |
 | Vendor  | SONOFF  |
 | Description | Motion sensor |
-| Supports | occupancy |
+| Exposes | occupancy, battery_low, tamper, battery, linkquality |
 | Picture | ![SONOFF SNZB-03](../images/devices/SNZB-03.jpg) |
 | White-label | eWeLink RHK09 |
 

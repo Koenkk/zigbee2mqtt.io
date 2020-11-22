@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-S-007ZS via Zigbee2MQTT with whatever s
 | Model | GL-S-007ZS  |
 | Vendor  | Gledopto  |
 | Description | Smart RGB+CCT 4W GU10 plus model |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Gledopto GL-S-007ZS](../images/devices/GL-S-007ZS.jpg) |
 
 ## Notes

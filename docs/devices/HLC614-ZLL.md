@@ -12,7 +12,7 @@ description: "Integrate your Shenzhen Homa HLC614-ZLL via Zigbee2MQTT with whate
 | Model | HLC614-ZLL  |
 | Vendor  | Shenzhen Homa  |
 | Description | 3 channel relay module |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Shenzhen Homa HLC614-ZLL](../images/devices/HLC614-ZLL.jpg) |
 
 ## Notes

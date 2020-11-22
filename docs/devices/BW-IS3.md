@@ -12,7 +12,7 @@ description: "Integrate your BlitzWolf BW-IS3 via Zigbee2MQTT with whatever smar
 | Model | BW-IS3  |
 | Vendor  | BlitzWolf  |
 | Description | Rechargeable Zigbee PIR motion sensor |
-| Supports | occupancy |
+| Exposes | occupancy, linkquality |
 | Picture | ![BlitzWolf BW-IS3](../images/devices/BW-IS3.jpg) |
 
 ## Notes

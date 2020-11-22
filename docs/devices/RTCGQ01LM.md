@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi RTCGQ01LM via Zigbee2MQTT with whatever smar
 | Model | RTCGQ01LM  |
 | Vendor  | Xiaomi  |
 | Description | MiJia human body movement sensor |
-| Supports | occupancy |
+| Exposes | battery, occupancy, linkquality |
 | Picture | ![Xiaomi RTCGQ01LM](../images/devices/RTCGQ01LM.jpg) |
 
 ## Notes

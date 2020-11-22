@@ -12,7 +12,7 @@ description: "Integrate your DIYRuZ DIYRuZ_R8_8 via Zigbee2MQTT with whatever sm
 | Model | DIYRuZ_R8_8  |
 | Vendor  | DIYRuZ  |
 | Description | [DiY 8 Relays + 8 switches](https://modkam.ru/?p=1638) |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![DIYRuZ DIYRuZ_R8_8](../images/devices/DIYRuZ_R8_8.jpg) |
 
 ## Notes

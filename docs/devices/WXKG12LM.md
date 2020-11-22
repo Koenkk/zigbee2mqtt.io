@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WXKG12LM via Zigbee2MQTT with whatever smart
 | Model | WXKG12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara wireless switch (with gyroscope) |
-| Supports | single, double, shake, hold, release |
+| Exposes | battery, action, linkquality |
 | Picture | ![Xiaomi WXKG12LM](../images/devices/WXKG12LM.jpg) |
 
 ## Notes

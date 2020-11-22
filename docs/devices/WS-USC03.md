@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WS-USC03 via Zigbee2MQTT with whatever smart
 | Model | WS-USC03  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall switch (neutral, single rocker) |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Xiaomi WS-USC03](../images/devices/WS-USC03.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Shenzhen Homa HLC833-Z-SC via Zigbee2MQTT with what
 | Model | HLC833-Z-SC  |
 | Vendor  | Shenzhen Homa  |
 | Description | Wireless dimmable controller |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Shenzhen Homa HLC833-Z-SC](../images/devices/HLC833-Z-SC.jpg) |
 
 ## Notes

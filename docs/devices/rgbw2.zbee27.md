@@ -12,7 +12,7 @@ description: "Integrate your Zipato rgbw2.zbee27 via Zigbee2MQTT with whatever s
 | Model | rgbw2.zbee27  |
 | Vendor  | Zipato  |
 | Description | RGBW LED bulb with dimmer |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Zipato rgbw2.zbee27](../images/devices/rgbw2.zbee27.jpg) |
 
 ## Notes

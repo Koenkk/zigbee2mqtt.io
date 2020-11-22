@@ -12,7 +12,7 @@ description: "Integrate your Meazon MEAZON_DINRAIL via Zigbee2MQTT with whatever
 | Model | MEAZON_DINRAIL  |
 | Vendor  | Meazon  |
 | Description | DinRail 1-phase meter |
-| Supports | on/off, power, energy measurement and temperature |
+| Exposes | switch (state), power, voltage, current, linkquality |
 | Picture | ![Meazon MEAZON_DINRAIL](../images/devices/MEAZON_DINRAIL.jpg) |
 
 ## Notes

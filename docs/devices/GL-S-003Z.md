@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-S-003Z via Zigbee2MQTT with whatever sm
 | Model | GL-S-003Z  |
 | Vendor  | Gledopto  |
 | Description | Smart RGBW GU10  |
-| Supports | on/off, brightness, color xy |
+| Exposes | light (state, brightness, color_xy), effect, linkquality |
 | Picture | ![Gledopto GL-S-003Z](../images/devices/GL-S-003Z.jpg) |
 
 ## Notes

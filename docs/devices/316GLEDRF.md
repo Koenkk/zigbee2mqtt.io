@@ -12,7 +12,7 @@ description: "Integrate your ELKO 316GLEDRF via Zigbee2MQTT with whatever smart 
 | Model | 316GLEDRF  |
 | Vendor  | ELKO  |
 | Description | ZigBee in-wall smart dimmer |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![ELKO 316GLEDRF](../images/devices/316GLEDRF.jpg) |
 
 ## Notes

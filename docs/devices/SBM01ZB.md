@@ -12,7 +12,7 @@ description: "Integrate your Feibit SBM01ZB via Zigbee2MQTT with whatever smart 
 | Model | SBM01ZB  |
 | Vendor  | Feibit  |
 | Description | Human body movement sensor |
-| Supports | occupancy, tamper |
+| Exposes | occupancy, battery_low, tamper, battery, linkquality |
 | Picture | ![Feibit SBM01ZB](../images/devices/SBM01ZB.jpg) |
 
 ## Notes

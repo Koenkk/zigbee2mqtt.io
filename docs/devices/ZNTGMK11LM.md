@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi ZNTGMK11LM via Zigbee2MQTT with whatever sma
 | Model | ZNTGMK11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart RGBW light controller |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Xiaomi ZNTGMK11LM](../images/devices/ZNTGMK11LM.jpg) |
 
 ## Notes

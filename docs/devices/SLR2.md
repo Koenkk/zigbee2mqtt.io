@@ -12,7 +12,7 @@ description: "Integrate your Hive SLR2 via Zigbee2MQTT with whatever smart home
 | Model | SLR2  |
 | Vendor  | Hive  |
 | Description | Dual channel heating and hot water thermostat |
-| Supports | thermostat, occupied heating, weekly schedule |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![Hive SLR2](../images/devices/SLR2.jpg) |
 
 ## Notes

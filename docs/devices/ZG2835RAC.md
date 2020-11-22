@@ -12,7 +12,7 @@ description: "Integrate your Sunricher ZG2835RAC via Zigbee2MQTT with whatever s
 | Model | ZG2835RAC  |
 | Vendor  | Sunricher  |
 | Description | ZigBee knob smart dimmer |
-| Supports | on/off, brightness, power measurements |
+| Exposes | light (state, brightness), power, energy, linkquality |
 | Picture | ![Sunricher ZG2835RAC](../images/devices/ZG2835RAC.jpg) |
 | White-label | YPHIX 50208695, Samotech SM311 |
 

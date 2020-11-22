@@ -12,7 +12,7 @@ description: "Integrate your Sercomm SZ-ESW01 via Zigbee2MQTT with whatever smar
 | Model | SZ-ESW01  |
 | Vendor  | Sercomm  |
 | Description | Telstra smart plug |
-| Supports | on/off, power consumption |
+| Exposes | switch (state), power, linkquality |
 | Picture | ![Sercomm SZ-ESW01](../images/devices/SZ-ESW01.jpg) |
 
 ## Notes

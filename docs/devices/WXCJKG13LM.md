@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WXCJKG13LM via Zigbee2MQTT with whatever sma
 | Model | WXCJKG13LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara Opple switch 3 bands |
-| Supports | action |
+| Exposes | battery, action, operation_mode, linkquality |
 | Picture | ![Xiaomi WXCJKG13LM](../images/devices/WXCJKG13LM.jpg) |
 
 ## Notes

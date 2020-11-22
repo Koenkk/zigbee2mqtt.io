@@ -12,7 +12,7 @@ description: "Integrate your LifeControl MCLH-03 via Zigbee2MQTT with whatever s
 | Model | MCLH-03  |
 | Vendor  | LifeControl  |
 | Description | Power plug |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, current, voltage, linkquality |
 | Picture | ![LifeControl MCLH-03](../images/devices/MCLH-03.jpg) |
 
 ## Notes

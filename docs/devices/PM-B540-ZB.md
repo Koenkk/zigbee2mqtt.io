@@ -12,7 +12,7 @@ description: "Integrate your Dawon DNS PM-B540-ZB via Zigbee2MQTT with whatever 
 | Model | PM-B540-ZB  |
 | Vendor  | Dawon DNS  |
 | Description | IOT smart plug 16A |
-| Supports | on/off, power and energy measurement |
+| Exposes | switch (state), power, energy, linkquality |
 | Picture | ![Dawon DNS PM-B540-ZB](../images/devices/PM-B540-ZB.jpg) |
 
 ## Notes

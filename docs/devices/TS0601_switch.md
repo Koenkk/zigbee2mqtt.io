@@ -12,7 +12,7 @@ description: "Integrate your TuYa TS0601_switch via Zigbee2MQTT with whatever sm
 | Model | TS0601_switch  |
 | Vendor  | TuYa  |
 | Description | 1, 2, 3 or 4 gang switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![TuYa TS0601_switch](../images/devices/TS0601_switch.jpg) |
 | White-label | Norklmes MKS-CM-W5, Somgoms ZSQB-SMB-ZB, Moes WS-EUB1-ZG |
 

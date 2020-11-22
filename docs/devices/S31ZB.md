@@ -12,7 +12,7 @@ description: "Integrate your SONOFF S31ZB via Zigbee2MQTT with whatever smart ho
 | Model | S31ZB  |
 | Vendor  | SONOFF  |
 | Description | Zigbee smart plug (US version) |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![SONOFF S31ZB](../images/devices/S31ZB.jpg) |
 
 ## Notes

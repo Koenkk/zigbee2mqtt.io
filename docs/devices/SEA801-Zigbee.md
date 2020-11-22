@@ -12,7 +12,7 @@ description: "Integrate your Saswell SEA801-Zigbee via Zigbee2MQTT with whatever
 | Model | SEA801-Zigbee  |
 | Vendor  | Saswell  |
 | Description | Thermostatic radiator valve |
-| Supports | thermostat, temperature |
+| Exposes | battery_low, switch (state), lock (state), climate (current_heating_setpoint, local_temperature, system_mode, running_state, preset, away_mode), linkquality |
 | Picture | ![Saswell SEA801-Zigbee](../images/devices/SEA801-Zigbee.jpg) |
 
 ## Notes

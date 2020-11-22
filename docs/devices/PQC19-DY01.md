@@ -12,7 +12,7 @@ description: "Integrate your GE PQC19-DY01 via Zigbee2MQTT with whatever smart h
 | Model | PQC19-DY01  |
 | Vendor  | GE  |
 | Description | Link smart LED light bulb, A19/BR30 cold white (5000K) |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![GE PQC19-DY01](../images/devices/PQC19-DY01.jpg) |
 
 ## Notes

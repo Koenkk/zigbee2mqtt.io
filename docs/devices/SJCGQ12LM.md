@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi SJCGQ12LM via Zigbee2MQTT with whatever smar
 | Model | SJCGQ12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara water leak sensor |
-| Supports | water leak true/false |
+| Exposes | battery, water_leak, battery_low, tamper, linkquality |
 | Picture | ![Xiaomi SJCGQ12LM](../images/devices/SJCGQ12LM.jpg) |
 
 ## Notes

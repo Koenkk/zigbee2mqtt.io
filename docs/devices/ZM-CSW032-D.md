@@ -12,7 +12,7 @@ description: "Integrate your Zemismart ZM-CSW032-D via Zigbee2MQTT with whatever
 | Model | ZM-CSW032-D  |
 | Vendor  | Zemismart  |
 | Description | Curtain/roller blind switch |
-| Supports | open, close, stop |
+| Exposes | cover (state, position), linkquality |
 | Picture | ![Zemismart ZM-CSW032-D](../images/devices/ZM-CSW032-D.jpg) |
 
 ## Notes

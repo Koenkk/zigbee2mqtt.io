@@ -12,7 +12,7 @@ description: "Integrate your Develco MOSZB-130 via Zigbee2MQTT with whatever sma
 | Model | MOSZB-130  |
 | Vendor  | Develco  |
 | Description | Motion sensor |
-| Supports | occupancy |
+| Exposes | occupancy, battery_low, tamper, linkquality |
 | Picture | ![Develco MOSZB-130](../images/devices/MOSZB-130.jpg) |
 
 ## Notes

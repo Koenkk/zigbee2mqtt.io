@@ -12,7 +12,7 @@ description: "Integrate your SmartThings WTR-UK-V2 via Zigbee2MQTT with whatever
 | Model | WTR-UK-V2  |
 | Vendor  | SmartThings  |
 | Description | Water leak sensor (2015 model) |
-| Supports | water and temperature |
+| Exposes | temperature, water_leak, battery_low, tamper, battery, linkquality |
 | Picture | ![SmartThings WTR-UK-V2](../images/devices/WTR-UK-V2.jpg) |
 
 ## Notes

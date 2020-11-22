@@ -12,7 +12,7 @@ description: "Integrate your Aurora Lighting AU-A1GSZ9RGBW via Zigbee2MQTT with 
 | Model | AU-A1GSZ9RGBW  |
 | Vendor  | Aurora Lighting  |
 | Description | AOne 9.5W smart RGBW GLS E27/B22 |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Aurora Lighting AU-A1GSZ9RGBW](../images/devices/AU-A1GSZ9RGBW.jpg) |
 
 ## Notes

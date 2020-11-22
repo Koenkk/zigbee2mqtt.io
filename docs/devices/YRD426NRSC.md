@@ -12,7 +12,7 @@ description: "Integrate your Yale YRD426NRSC via Zigbee2MQTT with whatever smart
 | Model | YRD426NRSC  |
 | Vendor  | Yale  |
 | Description | Assure lock |
-| Supports | lock/unlock, battery |
+| Exposes | lock (state), battery, linkquality |
 | Picture | ![Yale YRD426NRSC](../images/devices/YRD426NRSC.jpg) |
 
 ## Notes

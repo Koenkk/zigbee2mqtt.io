@@ -12,7 +12,7 @@ description: "Integrate your LivingWise LVS-ZB15S via Zigbee2MQTT with whatever 
 | Model | LVS-ZB15S  |
 | Vendor  | LivingWise  |
 | Description | ZigBee smart in-wall switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![LivingWise LVS-ZB15S](../images/devices/LVS-ZB15S.jpg) |
 
 ## Notes

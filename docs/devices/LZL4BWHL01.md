@@ -12,7 +12,7 @@ description: "Integrate your Lutron LZL4BWHL01 via Zigbee2MQTT with whatever sma
 | Model | LZL4BWHL01  |
 | Vendor  | Lutron  |
 | Description | Connected bulb remote control |
-| Supports | on/off, brightness |
+| Exposes | action, linkquality |
 | Picture | ![Lutron LZL4BWHL01](../images/devices/LZL4BWHL01.jpg) |
 
 ## Notes

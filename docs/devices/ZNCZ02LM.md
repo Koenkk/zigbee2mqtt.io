@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi ZNCZ02LM via Zigbee2MQTT with whatever smart
 | Model | ZNCZ02LM  |
 | Vendor  | Xiaomi  |
 | Description | Mi power plug ZigBee |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, energy, temperature, linkquality |
 | Picture | ![Xiaomi ZNCZ02LM](../images/devices/ZNCZ02LM.jpg) |
 
 ## Notes

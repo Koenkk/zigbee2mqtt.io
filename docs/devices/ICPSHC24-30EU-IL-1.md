@@ -12,7 +12,7 @@ description: "Integrate your IKEA ICPSHC24-30EU-IL-1 via Zigbee2MQTT with whatev
 | Model | ICPSHC24-30EU-IL-1  |
 | Vendor  | IKEA  |
 | Description | TRADFRI driver for wireless control (30 watt) |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![IKEA ICPSHC24-30EU-IL-1](../images/devices/ICPSHC24-30EU-IL-1.jpg) |
 
 ## Notes

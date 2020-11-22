@@ -12,7 +12,7 @@ description: "Integrate your Smart9 S9ZGBRC01 via Zigbee2MQTT with whatever smar
 | Model | S9ZGBRC01  |
 | Vendor  | Smart9  |
 | Description | Smart remote controller |
-| Supports | action |
+| Exposes | battery, action, linkquality |
 | Picture | ![Smart9 S9ZGBRC01](../images/devices/S9ZGBRC01.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your LifeControl MCLH-04 via Zigbee2MQTT with whatever s
 | Model | MCLH-04  |
 | Vendor  | LifeControl  |
 | Description | Door sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![LifeControl MCLH-04](../images/devices/MCLH-04.jpg) |
 
 ## Notes

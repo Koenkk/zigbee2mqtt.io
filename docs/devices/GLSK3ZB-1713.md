@@ -12,7 +12,7 @@ description: "Integrate your Hej GLSK3ZB-1713 via Zigbee2MQTT with whatever smar
 | Model | GLSK3ZB-1713  |
 | Vendor  | Hej  |
 | Description | Goqual 3 gang Switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Hej GLSK3ZB-1713](../images/devices/GLSK3ZB-1713.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your JIAWEN K2RGBW01 via Zigbee2MQTT with whatever smart
 | Model | K2RGBW01  |
 | Vendor  | JIAWEN  |
 | Description | Wireless Bulb E27 9W RGBW |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![JIAWEN K2RGBW01](../images/devices/K2RGBW01.jpg) |
 
 ## Notes

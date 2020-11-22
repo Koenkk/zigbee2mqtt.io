@@ -12,7 +12,7 @@ description: "Integrate your SmartThings STS-PRS-251 via Zigbee2MQTT with whatev
 | Model | STS-PRS-251  |
 | Vendor  | SmartThings  |
 | Description | Arrival sensor |
-| Supports | presence |
+| Exposes | battery, presence, action, beep, linkquality |
 | Picture | ![SmartThings STS-PRS-251](../images/devices/STS-PRS-251.jpg) |
 
 ## Notes

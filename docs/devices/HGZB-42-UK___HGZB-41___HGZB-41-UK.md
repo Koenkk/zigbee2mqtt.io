@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-42-UK / HGZB-41 / HGZB-41-UK via Zigb
 | Model | HGZB-42-UK / HGZB-41 / HGZB-41-UK  |
 | Vendor  | Nue / 3A  |
 | Description | Smart switch 1 or 2 gang |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A HGZB-42-UK / HGZB-41 / HGZB-41-UK](../images/devices/HGZB-42-UK---HGZB-41---HGZB-41-UK.jpg) |
 
 ## Notes

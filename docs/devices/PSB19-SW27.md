@@ -12,7 +12,7 @@ description: "Integrate your GE PSB19-SW27 via Zigbee2MQTT with whatever smart h
 | Model | PSB19-SW27  |
 | Vendor  | GE  |
 | Description | Link smart LED light bulb, A19 soft white (2700K) |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![GE PSB19-SW27](../images/devices/PSB19-SW27.jpg) |
 
 ## Notes

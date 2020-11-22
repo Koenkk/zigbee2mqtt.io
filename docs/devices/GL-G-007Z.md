@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-G-007Z via Zigbee2MQTT with whatever sm
 | Model | GL-G-007Z  |
 | Vendor  | Gledopto  |
 | Description | Smart garden lamp 9W RGB / CCT |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Gledopto GL-G-007Z](../images/devices/GL-G-007Z.jpg) |
 
 ## Notes

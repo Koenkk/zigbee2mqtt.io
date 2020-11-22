@@ -12,7 +12,7 @@ description: "Integrate your Shenzhen Homa HLC821-Z-SC via Zigbee2MQTT with what
 | Model | HLC821-Z-SC  |
 | Vendor  | Shenzhen Homa  |
 | Description | ZigBee AC phase-cut dimmer |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Shenzhen Homa HLC821-Z-SC](../images/devices/HLC821-Z-SC.jpg) |
 
 ## Notes

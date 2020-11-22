@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN SOHM-I1 via Zigbee2MQTT with whatever smart 
 | Model | SOHM-I1  |
 | Vendor  | HEIMAN  |
 | Description | Door contact sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN SOHM-I1](../images/devices/SOHM-I1.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your TuYa E220-KR4N0Z0-HA via Zigbee2MQTT with whatever 
 | Model | E220-KR4N0Z0-HA  |
 | Vendor  | TuYa  |
 | Description | Multiprise with 4 AC outlets and 2 USB super charging ports (16A) |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![TuYa E220-KR4N0Z0-HA](../images/devices/E220-KR4N0Z0-HA.jpg) |
 | White-label | LEELKI WP33-EU |
 

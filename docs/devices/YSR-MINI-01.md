@@ -12,7 +12,7 @@ description: "Integrate your YSRSAI YSR-MINI-01 via Zigbee2MQTT with whatever sm
 | Model | YSR-MINI-01  |
 | Vendor  | YSRSAI  |
 | Description | Zigbee LED controller (RGB+CCT) |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![YSRSAI YSR-MINI-01](../images/devices/YSR-MINI-01.jpg) |
 
 ## Notes

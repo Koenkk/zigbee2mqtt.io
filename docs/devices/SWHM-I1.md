@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN SWHM-I1 via Zigbee2MQTT with whatever smart 
 | Model | SWHM-I1  |
 | Vendor  | HEIMAN  |
 | Description | Water leakage sensor |
-| Supports | water leak |
+| Exposes | water_leak, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN SWHM-I1](../images/devices/SWHM-I1.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-14A via Zigbee2MQTT with whatever sma
 | Model | HGZB-14A  |
 | Vendor  | Nue / 3A  |
 | Description | Water leakage sensor |
-| Supports | water leak |
+| Exposes | water_leak, battery_low, tamper, battery, linkquality |
 | Picture | ![Nue / 3A HGZB-14A](../images/devices/HGZB-14A.jpg) |
 
 ## Notes

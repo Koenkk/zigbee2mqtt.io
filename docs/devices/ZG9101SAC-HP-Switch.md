@@ -12,7 +12,7 @@ description: "Integrate your Sunricher ZG9101SAC-HP-Switch via Zigbee2MQTT with 
 | Model | ZG9101SAC-HP-Switch  |
 | Vendor  | Sunricher  |
 | Description | Zigbee AC in wall switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Sunricher ZG9101SAC-HP-Switch](../images/devices/ZG9101SAC-HP-Switch.jpg) |
 
 ## Notes

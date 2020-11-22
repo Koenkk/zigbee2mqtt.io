@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS2SW1A/HS2SW1A-N via Zigbee2MQTT with whate
 | Model | HS2SW1A/HS2SW1A-N  |
 | Vendor  | HEIMAN  |
 | Description | Smart switch - 1 gang with neutral wire |
-| Supports | on/off, temperature |
+| Exposes | switch (state), device_temperature, linkquality |
 | Picture | ![HEIMAN HS2SW1A/HS2SW1A-N](../images/devices/HS2SW1A-HS2SW1A-N.jpg) |
 
 ## Notes

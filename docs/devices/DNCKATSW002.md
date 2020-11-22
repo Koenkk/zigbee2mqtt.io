@@ -12,7 +12,7 @@ description: "Integrate your Custom devices (DiY) DNCKATSW002 via Zigbee2MQTT wi
 | Model | DNCKATSW002  |
 | Vendor  | Custom devices (DiY)  |
 | Description | [DNCKAT double key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) |
-| Supports | hold/release, on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Custom devices (DiY) DNCKATSW002](../images/devices/DNCKATSW002.jpg) |
 
 ## Notes

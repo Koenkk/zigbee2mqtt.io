@@ -12,7 +12,7 @@ description: "Integrate your Sunricher ZG9101SAC-HP via Zigbee2MQTT with whateve
 | Model | ZG9101SAC-HP  |
 | Vendor  | Sunricher  |
 | Description | ZigBee AC phase-cut dimmer |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Sunricher ZG9101SAC-HP](../images/devices/ZG9101SAC-HP.jpg) |
 
 ## Notes

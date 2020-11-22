@@ -12,7 +12,7 @@ description: "Integrate your Innr OSL 130 C via Zigbee2MQTT with whatever smart 
 | Model | OSL 130 C  |
 | Vendor  | Innr  |
 | Description | Outdoor smart spot colour, 230lm/spot, RGBW |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Innr OSL 130 C](../images/devices/OSL-130-C.jpg) |
 
 ## Notes

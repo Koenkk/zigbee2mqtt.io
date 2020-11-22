@@ -12,7 +12,7 @@ description: "Integrate your Meazon MEAZON_BIZY_PLUG via Zigbee2MQTT with whatev
 | Model | MEAZON_BIZY_PLUG  |
 | Vendor  | Meazon  |
 | Description | Bizy plug meter |
-| Supports | on/off, power, energy measurement and temperature |
+| Exposes | switch (state), power, voltage, current, linkquality |
 | Picture | ![Meazon MEAZON_BIZY_PLUG](../images/devices/MEAZON_BIZY_PLUG.jpg) |
 
 ## Notes

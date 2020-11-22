@@ -12,7 +12,7 @@ description: "Integrate your Sercomm SZ-DWS04 via Zigbee2MQTT with whatever smar
 | Model | SZ-DWS04  |
 | Vendor  | Sercomm  |
 | Description | Magnetic door & window contact sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, temperature, battery, linkquality |
 | Picture | ![Sercomm SZ-DWS04](../images/devices/SZ-DWS04.jpg) |
 
 ## Notes

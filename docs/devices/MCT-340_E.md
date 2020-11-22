@@ -12,7 +12,7 @@ description: "Integrate your Visonic MCT-340 E via Zigbee2MQTT with whatever sma
 | Model | MCT-340 E  |
 | Vendor  | Visonic  |
 | Description | Magnetic door & window contact sensor |
-| Supports | contact, temperature |
+| Exposes | contact, battery_low, tamper, temperature, battery, linkquality |
 | Picture | ![Visonic MCT-340 E](../images/devices/MCT-340-E.jpg) |
 
 ## Notes

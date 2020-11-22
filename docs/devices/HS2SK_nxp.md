@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS2SK_nxp via Zigbee2MQTT with whatever smar
 | Model | HS2SK_nxp  |
 | Vendor  | HEIMAN  |
 | Description | Smart metering plug |
-| Supports | on/off |
+| Exposes | switch (state), power, current, voltage, linkquality |
 | Picture | ![HEIMAN HS2SK_nxp](../images/devices/HS2SK_nxp.jpg) |
 
 ## Notes

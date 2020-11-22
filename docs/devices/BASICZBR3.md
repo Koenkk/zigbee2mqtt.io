@@ -12,7 +12,7 @@ description: "Integrate your SONOFF BASICZBR3 via Zigbee2MQTT with whatever smar
 | Model | BASICZBR3  |
 | Vendor  | SONOFF  |
 | Description | Zigbee smart switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![SONOFF BASICZBR3](../images/devices/BASICZBR3.jpg) |
 
 ## Notes

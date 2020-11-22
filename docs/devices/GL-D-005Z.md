@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-D-005Z via Zigbee2MQTT with whatever sm
 | Model | GL-D-005Z  |
 | Vendor  | Gledopto  |
 | Description | LED RGB + CCT downlight |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Gledopto GL-D-005Z](../images/devices/GL-D-005Z.jpg) |
 
 ## Notes

@@ -74,7 +74,8 @@ const generateTable = (devices) => {
             description = `${description} (white-label of ${d.whiteLabelOf.vendor} ${d.whiteLabelOf.model})`;
         }
         // eslint-disable-next-line
-        text += `| [${d.model}](../devices/${utils.normalizeModel(model)}.md) | ${d.vendor} ${description} (${d.supports}) | ![${image}](${image}) |\n`;
+        const exposes = Array.from(new Set(d.exposes.map(e => e.name ? e.name : e.type).filter(e => e !== 'linkquality' && e !== 'effect'))).join(', ');
+        text += `| [${d.model}](../devices/${utils.normalizeModel(model)}.md) | ${d.vendor} ${description} (${exposes}) | ![${image}](${image}) |\n`;
     });
 
     return text;

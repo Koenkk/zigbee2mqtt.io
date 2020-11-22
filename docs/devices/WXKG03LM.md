@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WXKG03LM via Zigbee2MQTT with whatever smart
 | Model | WXKG03LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara single key wireless wall switch |
-| Supports | single (and double, hold, release and long click depending on model) |
+| Exposes | battery, action, linkquality |
 | Picture | ![Xiaomi WXKG03LM](../images/devices/WXKG03LM.jpg) |
 
 ## Notes

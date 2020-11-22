@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-S-005Z via Zigbee2MQTT with whatever sm
 | Model | GL-S-005Z  |
 | Vendor  | Gledopto  |
 | Description | Smart RGBW MR16 |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Gledopto GL-S-005Z](../images/devices/GL-S-005Z.jpg) |
 
 ## Notes

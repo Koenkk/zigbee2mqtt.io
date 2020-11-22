@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi MCCGQ11LM via Zigbee2MQTT with whatever smar
 | Model | MCCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara door & window contact sensor |
-| Supports | contact |
+| Exposes | battery, contact, linkquality |
 | Picture | ![Xiaomi MCCGQ11LM](../images/devices/MCCGQ11LM.jpg) |
 
 ## Notes

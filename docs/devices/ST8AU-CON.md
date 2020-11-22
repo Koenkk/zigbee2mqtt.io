@@ -12,7 +12,7 @@ description: "Integrate your OSRAM ST8AU-CON via Zigbee2MQTT with whatever smart
 | Model | ST8AU-CON  |
 | Vendor  | OSRAM  |
 | Description | OSRAM SubstiTUBE T8 Advanced UO Connected |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![OSRAM ST8AU-CON](../images/devices/ST8AU-CON.jpg) |
 
 ## Notes

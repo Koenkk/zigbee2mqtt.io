@@ -12,7 +12,7 @@ description: "Integrate your TuYa TS0601_roller_blind via Zigbee2MQTT with whate
 | Model | TS0601_roller_blind  |
 | Vendor  | TuYa  |
 | Description | Roller blind motor |
-| Supports | open, close, stop, position |
+| Exposes | cover (state, position), linkquality |
 | Picture | ![TuYa TS0601_roller_blind](../images/devices/TS0601_roller_blind.jpg) |
 
 ## Notes

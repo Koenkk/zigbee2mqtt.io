@@ -12,7 +12,7 @@ description: "Integrate your iHORN LH-32ZB via Zigbee2MQTT with whatever smart h
 | Model | LH-32ZB  |
 | Vendor  | iHORN  |
 | Description | Temperature & humidity sensor |
-| Supports | temperature and humidity |
+| Exposes | humidity, temperature, battery, linkquality |
 | Picture | ![iHORN LH-32ZB](../images/devices/LH-32ZB.jpg) |
 
 ## Notes

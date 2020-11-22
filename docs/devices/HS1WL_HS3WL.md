@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS1WL/HS3WL via Zigbee2MQTT with whatever sm
 | Model | HS1WL/HS3WL  |
 | Vendor  | HEIMAN  |
 | Description | Water leakage sensor |
-| Supports | water leak |
+| Exposes | water_leak, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN HS1WL/HS3WL](../images/devices/HS1WL-HS3WL.jpg) |
 
 ## Notes

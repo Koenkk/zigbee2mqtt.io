@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG21LM via Zigbee2MQTT with whatever smart
 | Model | QBKG21LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 single gang smart wall switch (no neutral wire) |
-| Supports | on/off, action |
+| Exposes | switch (state), action, linkquality |
 | Picture | ![Xiaomi QBKG21LM](../images/devices/QBKG21LM.jpg) |
 
 ## Notes

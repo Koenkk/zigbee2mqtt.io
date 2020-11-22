@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-DLC4-N12B via Zigbee2MQTT with whatev
 | Model | HGZB-DLC4-N12B  |
 | Vendor  | Nue / 3A  |
 | Description | RGB LED downlight |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Nue / 3A HGZB-DLC4-N12B](../images/devices/HGZB-DLC4-N12B.jpg) |
 
 ## Notes

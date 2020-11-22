@@ -12,7 +12,7 @@ description: "Integrate your Neo NAS-AB02B0 via Zigbee2MQTT with whatever smart 
 | Model | NAS-AB02B0  |
 | Vendor  | Neo  |
 | Description | Temperature & humidity sensor and alarm |
-| Supports | temperature, humidity, alarm |
+| Exposes | temperature, humidity, humidity_alarm, temperature_alarm, alarm, melody, duration, temperature_min, temperature_max, humidity_min, humidity_max, volume, linkquality |
 | Picture | ![Neo NAS-AB02B0](../images/devices/NAS-AB02B0.jpg) |
 
 ## Notes

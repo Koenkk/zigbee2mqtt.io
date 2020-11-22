@@ -12,7 +12,7 @@ description: "Integrate your DIYRuZ DIYRuZ_rspm via Zigbee2MQTT with whatever sm
 | Model | DIYRuZ_rspm  |
 | Vendor  | DIYRuZ  |
 | Description | [DIYRuZ relay switch power meter](https://modkam.ru/?p=1309) |
-| Supports | relay, switch, adc |
+| Exposes | switch (state), power, current, cpu_temperature, action, linkquality |
 | Picture | ![DIYRuZ DIYRuZ_rspm](../images/devices/DIYRuZ_rspm.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your TuYa U86KWF-ZPSJ via Zigbee2MQTT with whatever smar
 | Model | U86KWF-ZPSJ  |
 | Vendor  | TuYa  |
 | Description | Environment controller |
-| Supports | temperature, heating/cooling system control |
+| Exposes | climate (current_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![TuYa U86KWF-ZPSJ](../images/devices/U86KWF-ZPSJ.jpg) |
 
 ## Notes

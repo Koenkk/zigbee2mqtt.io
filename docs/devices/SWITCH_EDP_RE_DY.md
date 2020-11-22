@@ -12,7 +12,7 @@ description: "Integrate your EDP SWITCH EDP RE:DY via Zigbee2MQTT with whatever 
 | Model | SWITCH EDP RE:DY  |
 | Vendor  | EDP  |
 | Description | re:dy switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![EDP SWITCH EDP RE:DY](../images/devices/SWITCH-EDP-RE-DY.jpg) |
 
 ## Notes

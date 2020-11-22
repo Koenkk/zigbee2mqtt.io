@@ -12,7 +12,7 @@ description: "Integrate your GreenPower GreenPower_7 via Zigbee2MQTT with whatev
 | Model | GreenPower_7  |
 | Vendor  | GreenPower  |
 | Description | device 7 |
-| Supports | action |
+| Exposes | action, linkquality |
 | Picture | ![GreenPower GreenPower_7](../images/devices/GreenPower_7.jpg) |
 | White-label | EnOcean EWSxZG |
 

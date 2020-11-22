@@ -12,7 +12,7 @@ description: "Integrate your Hive WPT1 via Zigbee2MQTT with whatever smart home
 | Model | WPT1  |
 | Vendor  | Hive  |
 | Description | Heating thermostat remote control |
-| Supports | none, communicate via thermostat |
+| Exposes | linkquality |
 | Picture | ![Hive WPT1](../images/devices/WPT1.jpg) |
 
 ## Notes

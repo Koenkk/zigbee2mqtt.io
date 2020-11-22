@@ -12,7 +12,7 @@ description: "Integrate your TuYa mcdj3aq via Zigbee2MQTT with whatever smart ho
 | Model | mcdj3aq  |
 | Vendor  | TuYa  |
 | Description | Tubular motor |
-| Supports | open, close, stop, position |
+| Exposes | cover (state, position), linkquality |
 | Picture | ![TuYa mcdj3aq](../images/devices/mcdj3aq.jpg) |
 | White-label | Zemismart ZM25TQ |
 

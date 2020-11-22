@@ -12,7 +12,7 @@ description: "Integrate your Paul Neuhaus NLG-RGB-TW light via Zigbee2MQTT with 
 | Model | NLG-RGB-TW light  |
 | Vendor  | Paul Neuhaus  |
 | Description | Various RGB + tunable white lights (e.g. 100.470.92) |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Paul Neuhaus NLG-RGB-TW light](../images/devices/NLG-RGB-TW-light.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Somgoms ZSTY-SM-1CTZG-US-W via Zigbee2MQTT with wha
 | Model | ZSTY-SM-1CTZG-US-W  |
 | Vendor  | Somgoms  |
 | Description | Curtain switch |
-| Supports | open, close, stop, position |
+| Exposes | cover (state, position), linkquality |
 | Picture | ![Somgoms ZSTY-SM-1CTZG-US-W](../images/devices/ZSTY-SM-1CTZG-US-W.jpg) |
 
 ## Notes

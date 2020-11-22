@@ -12,7 +12,7 @@ description: "Integrate your Develco WISZB-120 via Zigbee2MQTT with whatever sma
 | Model | WISZB-120  |
 | Vendor  | Develco  |
 | Description | Window sensor |
-| Supports | contact, temperature |
+| Exposes | contact, battery_low, tamper, temperature, linkquality |
 | Picture | ![Develco WISZB-120](../images/devices/WISZB-120.jpg) |
 
 ## Notes

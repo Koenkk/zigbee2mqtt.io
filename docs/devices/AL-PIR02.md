@@ -12,7 +12,7 @@ description: "Integrate your Sercomm AL-PIR02 via Zigbee2MQTT with whatever smar
 | Model | AL-PIR02  |
 | Vendor  | Sercomm  |
 | Description | PIR motion sensor |
-| Supports | occupancy |
+| Exposes | occupancy, battery_low, tamper, battery, linkquality |
 | Picture | ![Sercomm AL-PIR02](../images/devices/AL-PIR02.jpg) |
 
 ## Notes

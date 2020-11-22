@@ -12,7 +12,7 @@ description: "Integrate your SmartThings GP-WOU019BBDWG via Zigbee2MQTT with wha
 | Model | GP-WOU019BBDWG  |
 | Vendor  | SmartThings  |
 | Description | Outlet with power meter |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, current, voltage, energy, linkquality |
 | Picture | ![SmartThings GP-WOU019BBDWG](../images/devices/GP-WOU019BBDWG.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Sengled E1C-NB6 via Zigbee2MQTT with whatever smart
 | Model | E1C-NB6  |
 | Vendor  | Sengled  |
 | Description | Smart plug |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Sengled E1C-NB6](../images/devices/E1C-NB6.jpg) |
 
 ## Notes

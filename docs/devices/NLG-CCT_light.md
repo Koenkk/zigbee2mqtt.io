@@ -12,7 +12,7 @@ description: "Integrate your Paul Neuhaus NLG-CCT light via Zigbee2MQTT with wha
 | Model | NLG-CCT light  |
 | Vendor  | Paul Neuhaus  |
 | Description | Various color temperature lights (e.g. 100.424.11) |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Paul Neuhaus NLG-CCT light](../images/devices/NLG-CCT-light.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your iCasa ICZB-IW11D via Zigbee2MQTT with whatever smar
 | Model | ICZB-IW11D  |
 | Vendor  | iCasa  |
 | Description | ZigBee AC dimmer |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![iCasa ICZB-IW11D](../images/devices/ICZB-IW11D.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Custom devices (DiY) DNCKATSD001 via Zigbee2MQTT wi
 | Model | DNCKATSD001  |
 | Vendor  | Custom devices (DiY)  |
 | Description | [DNCKAT single key wired wall dimmable light switch](https://github.com/dzungpv/dnckatsw00x/) |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Custom devices (DiY) DNCKATSD001](../images/devices/DNCKATSD001.jpg) |
 
 ## Notes

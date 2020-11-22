@@ -12,7 +12,7 @@ description: "Integrate your Develco EMIZB-132 via Zigbee2MQTT with whatever sma
 | Model | EMIZB-132  |
 | Vendor  | Develco  |
 | Description | Wattle AMS HAN power-meter sensor |
-| Supports | power measurements |
+| Exposes | power, energy, current, voltage, current_phase_b, voltage_phase_b, current_phase_c, voltage_phase_c, linkquality |
 | Picture | ![Develco EMIZB-132](../images/devices/EMIZB-132.jpg) |
 
 ## Notes

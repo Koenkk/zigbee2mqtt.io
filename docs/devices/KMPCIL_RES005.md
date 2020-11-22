@@ -12,7 +12,7 @@ description: "Integrate your KMPCIL KMPCIL_RES005 via Zigbee2MQTT with whatever 
 | Model | KMPCIL_RES005  |
 | Vendor  | KMPCIL  |
 | Description | Environment sensor |
-| Supports | battery, temperature, humidity, pressure, illuminance, occupancy, switch |
+| Exposes | battery, temperature, humidity, pressure, illuminance, illuminance_lux, occupancy, switch (state), linkquality |
 | Picture | ![KMPCIL KMPCIL_RES005](../images/devices/KMPCIL_RES005.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your EcoDim Eco-Dim.07 via Zigbee2MQTT with whatever sma
 | Model | Eco-Dim.07  |
 | Vendor  | EcoDim  |
 | Description | Zigbee & Z-wave dimmer  |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![EcoDim Eco-Dim.07](../images/devices/Eco-Dim.07.jpg) |
 
 ## Notes

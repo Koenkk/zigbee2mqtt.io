@@ -12,7 +12,7 @@ description: "Integrate your Feibit SCA01ZB via Zigbee2MQTT with whatever smart 
 | Model | SCA01ZB  |
 | Vendor  | Feibit  |
 | Description | Smart carbon monoxide sensor |
-| Supports | carbon monoxide |
+| Exposes | carbon_monoxide, battery_low, tamper, battery, linkquality |
 | Picture | ![Feibit SCA01ZB](../images/devices/SCA01ZB.jpg) |
 
 ## Notes

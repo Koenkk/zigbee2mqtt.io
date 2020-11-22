@@ -12,7 +12,7 @@ description: "Integrate your TuYa TS0121_plug via Zigbee2MQTT with whatever smar
 | Model | TS0121_plug  |
 | Vendor  | TuYa  |
 | Description | 10A UK or 16A EU smart plug |
-| Supports | on/off, power measurements |
+| Exposes | switch (state), power, current, voltage, energy, linkquality |
 | Picture | ![TuYa TS0121_plug](../images/devices/TS0121_plug.jpg) |
 | White-label | BlitzWolf BW-SHP13 |
 

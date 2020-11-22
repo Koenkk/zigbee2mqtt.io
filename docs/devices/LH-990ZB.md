@@ -12,7 +12,7 @@ description: "Integrate your iHORN LH-990ZB via Zigbee2MQTT with whatever smart 
 | Model | LH-990ZB  |
 | Vendor  | iHORN  |
 | Description | PIR motion sensor |
-| Supports | occupancy |
+| Exposes | occupancy, battery_low, tamper, linkquality |
 | Picture | ![iHORN LH-990ZB](../images/devices/LH-990ZB.jpg) |
 
 ## Notes

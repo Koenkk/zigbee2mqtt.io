@@ -12,7 +12,7 @@ description: "Integrate your Feibit SSA01ZB via Zigbee2MQTT with whatever smart 
 | Model | SSA01ZB  |
 | Vendor  | Feibit  |
 | Description | Smoke detector |
-| Supports | smoke |
+| Exposes | smoke, battery_low, tamper, battery, linkquality |
 | Picture | ![Feibit SSA01ZB](../images/devices/SSA01ZB.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Blaupunkt SCM-S1 via Zigbee2MQTT with whatever smar
 | Model | SCM-S1  |
 | Vendor  | Blaupunkt  |
 | Description | Roller shutter |
-| Supports | open/close |
+| Exposes | cover (state, position), linkquality |
 | Picture | ![Blaupunkt SCM-S1](../images/devices/SCM-S1.jpg) |
 
 ## Notes

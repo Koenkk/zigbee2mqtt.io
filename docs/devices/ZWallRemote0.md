@@ -12,7 +12,7 @@ description: "Integrate your Custom devices (DiY) ZWallRemote0 via Zigbee2MQTT w
 | Model | ZWallRemote0  |
 | Vendor  | Custom devices (DiY)  |
 | Description | [Matts Wall Switch Remote](https://github.com/mattlokes/ZWallRemote) |
-| Supports | action |
+| Exposes | action, linkquality |
 | Picture | ![Custom devices (DiY) ZWallRemote0](../images/devices/ZWallRemote0.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-045 via Zigbee2MQTT with whatever sma
 | Model | HGZB-045  |
 | Vendor  | Nue / 3A  |
 | Description | Smart 4 key scene wall switch |
-| Supports | on/off, click, action |
+| Exposes | action, switch (state), linkquality |
 | Picture | ![Nue / 3A HGZB-045](../images/devices/HGZB-045.jpg) |
 
 ## Notes

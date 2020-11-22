@@ -12,7 +12,7 @@ description: "Integrate your Digi XBee via Zigbee2MQTT with whatever smart home
 | Model | XBee  |
 | Vendor  | Digi  |
 | Description | Router |
-| Supports | router only |
+| Exposes | linkquality |
 | Picture | ![Digi XBee](../images/devices/XBee.jpg) |
 
 ## Notes

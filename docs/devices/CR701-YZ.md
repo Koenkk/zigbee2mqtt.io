@@ -12,7 +12,7 @@ description: "Integrate your Oujiabao CR701-YZ via Zigbee2MQTT with whatever sma
 | Model | CR701-YZ  |
 | Vendor  | Oujiabao  |
 | Description | Gas and carbon monoxide alarm |
-| Supports | gas and carbon monoxide |
+| Exposes | gas, carbon_monoxide, tamper, battery_low, linkquality |
 | Picture | ![Oujiabao CR701-YZ](../images/devices/CR701-YZ.jpg) |
 
 ## Notes

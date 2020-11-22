@@ -12,7 +12,7 @@ description: "Integrate your Innr OFL 140 C via Zigbee2MQTT with whatever smart 
 | Model | OFL 140 C  |
 | Vendor  | Innr  |
 | Description | Outdoor flex light colour LED strip 4m, 1000lm, RGBW |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Innr OFL 140 C](../images/devices/OFL-140-C.jpg) |
 
 ## Notes

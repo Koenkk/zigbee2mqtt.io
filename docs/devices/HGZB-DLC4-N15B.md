@@ -12,7 +12,7 @@ description: "Integrate your Zemismart HGZB-DLC4-N15B via Zigbee2MQTT with whate
 | Model | HGZB-DLC4-N15B  |
 | Vendor  | Zemismart  |
 | Description | RGB LED downlight |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Zemismart HGZB-DLC4-N15B](../images/devices/HGZB-DLC4-N15B.jpg) |
 
 ## Notes

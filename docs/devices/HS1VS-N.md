@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS1VS-N via Zigbee2MQTT with whatever smart 
 | Model | HS1VS-N  |
 | Vendor  | HEIMAN  |
 | Description | Vibration sensor |
-| Supports | vibration |
+| Exposes | vibration, battery_low, tamper, battery, linkquality |
 | Picture | ![HEIMAN HS1VS-N](../images/devices/HS1VS-N.jpg) |
 
 ## Notes

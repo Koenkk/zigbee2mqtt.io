@@ -12,7 +12,7 @@ description: "Integrate your Hive SLT3 via Zigbee2MQTT with whatever smart home
 | Model | SLT3  |
 | Vendor  | Hive  |
 | Description | Heating thermostat remote control |
-| Supports | none, communicate via thermostat |
+| Exposes | linkquality |
 | Picture | ![Hive SLT3](../images/devices/SLT3.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Smart Home Pty HGZB-07A via Zigbee2MQTT with whatev
 | Model | HGZB-07A  |
 | Vendor  | Smart Home Pty  |
 | Description | RGBW Downlight |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Smart Home Pty HGZB-07A](../images/devices/HGZB-07A.jpg) |
 
 ## Notes

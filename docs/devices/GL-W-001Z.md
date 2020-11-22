@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-W-001Z via Zigbee2MQTT with whatever sm
 | Model | GL-W-001Z  |
 | Vendor  | Gledopto  |
 | Description | Zigbee ON/OFF Wall Switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Gledopto GL-W-001Z](../images/devices/GL-W-001Z.jpg) |
 
 ## Notes

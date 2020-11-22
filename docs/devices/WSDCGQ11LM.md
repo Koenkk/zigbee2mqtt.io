@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WSDCGQ11LM via Zigbee2MQTT with whatever sma
 | Model | WSDCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara temperature, humidity and pressure sensor |
-| Supports | temperature, humidity and pressure |
+| Exposes | battery, temperature, humidity, pressure, linkquality |
 | Picture | ![Xiaomi WSDCGQ11LM](../images/devices/WSDCGQ11LM.jpg) |
 
 ## Notes

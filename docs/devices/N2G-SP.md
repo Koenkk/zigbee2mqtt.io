@@ -12,7 +12,7 @@ description: "Integrate your NET2GRID N2G-SP via Zigbee2MQTT with whatever smart
 | Model | N2G-SP  |
 | Vendor  | NET2GRID  |
 | Description | White Net2Grid power outlet switch with power meter |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, energy, linkquality |
 | Picture | ![NET2GRID N2G-SP](../images/devices/N2G-SP.jpg) |
 
 ## Notes

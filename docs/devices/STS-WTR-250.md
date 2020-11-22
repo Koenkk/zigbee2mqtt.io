@@ -12,7 +12,7 @@ description: "Integrate your SmartThings STS-WTR-250 via Zigbee2MQTT with whatev
 | Model | STS-WTR-250  |
 | Vendor  | SmartThings  |
 | Description | Water leak sensor (2016 model) |
-| Supports | water leak |
+| Exposes | water_leak, battery_low, tamper, battery, temperature, linkquality |
 | Picture | ![SmartThings STS-WTR-250](../images/devices/STS-WTR-250.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your TuYa TS0601_curtain_switch via Zigbee2MQTT with wha
 | Model | TS0601_curtain_switch  |
 | Vendor  | TuYa  |
 | Description | Curtain switch |
-| Supports | open, close, stop |
+| Exposes | cover (state, position), linkquality |
 | Picture | ![TuYa TS0601_curtain_switch](../images/devices/TS0601_curtain_switch.jpg) |
 | White-label | Larkkey ZSTY-SM-1SRZG-EU |
 

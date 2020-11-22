@@ -12,7 +12,7 @@ description: "Integrate your iHORN HO-09ZB via Zigbee2MQTT with whatever smart h
 | Model | HO-09ZB  |
 | Vendor  | iHORN  |
 | Description | Door or window contact switch |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![iHORN HO-09ZB](../images/devices/HO-09ZB.jpg) |
 
 ## Notes

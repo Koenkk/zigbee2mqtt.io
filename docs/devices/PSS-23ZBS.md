@@ -12,7 +12,7 @@ description: "Integrate your Climax PSS-23ZBS via Zigbee2MQTT with whatever smar
 | Model | PSS-23ZBS  |
 | Vendor  | Climax  |
 | Description | Power plug |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Climax PSS-23ZBS](../images/devices/PSS-23ZBS.jpg) |
 
 ## Notes

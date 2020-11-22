@@ -12,7 +12,7 @@ description: "Integrate your Hive SLB2 via Zigbee2MQTT with whatever smart home
 | Model | SLB2  |
 | Vendor  | Hive  |
 | Description | Signal booster |
-| Supports | linkquality |
+| Exposes | linkquality |
 | Picture | ![Hive SLB2](../images/devices/SLB2.jpg) |
 
 ## Notes

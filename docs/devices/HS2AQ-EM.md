@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS2AQ-EM via Zigbee2MQTT with whatever smart
 | Model | HS2AQ-EM  |
 | Vendor  | HEIMAN  |
 | Description | Air quality monitor |
-| Supports | air quality |
+| Exposes | battery, temperature, humidity, pm25, hcho, voc, aqi, pm10, battery_state, linkquality |
 | Picture | ![HEIMAN HS2AQ-EM](../images/devices/HS2AQ-EM.jpg) |
 
 ## Notes

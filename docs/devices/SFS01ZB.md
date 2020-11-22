@@ -12,7 +12,7 @@ description: "Integrate your Feibit SFS01ZB via Zigbee2MQTT with whatever smart 
 | Model | SFS01ZB  |
 | Vendor  | Feibit  |
 | Description | Power plug |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Feibit SFS01ZB](../images/devices/SFS01ZB.jpg) |
 
 ## Notes

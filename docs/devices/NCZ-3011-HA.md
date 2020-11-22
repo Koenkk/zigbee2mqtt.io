@@ -12,7 +12,7 @@ description: "Integrate your Nyce NCZ-3011-HA via Zigbee2MQTT with whatever smar
 | Model | NCZ-3011-HA  |
 | Vendor  | Nyce  |
 | Description | Door/window sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![Nyce NCZ-3011-HA](../images/devices/NCZ-3011-HA.jpg) |
 
 ## Notes

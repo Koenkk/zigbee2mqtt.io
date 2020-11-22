@@ -12,7 +12,7 @@ description: "Integrate your Dresden Elektronik XVV-Mega23M12 via Zigbee2MQTT wi
 | Model | XVV-Mega23M12  |
 | Vendor  | Dresden Elektronik  |
 | Description | ZigBee Light Link wireless electronic ballast color temperature |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Dresden Elektronik XVV-Mega23M12](../images/devices/XVV-Mega23M12.jpg) |
 
 ## Notes

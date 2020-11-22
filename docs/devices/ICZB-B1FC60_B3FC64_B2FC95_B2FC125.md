@@ -12,7 +12,7 @@ description: "Integrate your iCasa ICZB-B1FC60/B3FC64/B2FC95/B2FC125 via Zigbee2
 | Model | ICZB-B1FC60/B3FC64/B2FC95/B2FC125  |
 | Vendor  | iCasa  |
 | Description | Zigbee 3.0 Filament Lamp 60/64/95/125 mm, 806 lumen, dimmable, clear |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![iCasa ICZB-B1FC60/B3FC64/B2FC95/B2FC125](../images/devices/ICZB-B1FC60-B3FC64-B2FC95-B2FC125.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your SmartThings F-APP-UK-V2 via Zigbee2MQTT with whatev
 | Model | F-APP-UK-V2  |
 | Vendor  | SmartThings  |
 | Description | Zigbee Outlet UK with power meter |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, current, voltage, linkquality |
 | Picture | ![SmartThings F-APP-UK-V2](../images/devices/F-APP-UK-V2.jpg) |
 
 ## Notes

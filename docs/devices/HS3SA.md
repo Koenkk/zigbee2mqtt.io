@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS3SA via Zigbee2MQTT with whatever smart ho
 | Model | HS3SA  |
 | Vendor  | HEIMAN  |
 | Description | Smoke detector |
-| Supports | smoke |
+| Exposes | smoke, battery_low, tamper, battery, linkquality |
 | Picture | ![HEIMAN HS3SA](../images/devices/HS3SA.jpg) |
 
 ## Notes

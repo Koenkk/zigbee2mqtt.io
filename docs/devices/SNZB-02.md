@@ -12,7 +12,7 @@ description: "Integrate your SONOFF SNZB-02 via Zigbee2MQTT with whatever smart 
 | Model | SNZB-02  |
 | Vendor  | SONOFF  |
 | Description | Temperature and humidity sensor |
-| Supports | temperature and humidity |
+| Exposes | battery, temperature, humidity, linkquality |
 | Picture | ![SONOFF SNZB-02](../images/devices/SNZB-02.jpg) |
 | White-label | eWeLink RHK08 |
 

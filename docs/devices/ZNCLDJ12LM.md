@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi ZNCLDJ12LM via Zigbee2MQTT with whatever sma
 | Model | ZNCLDJ12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara B1 curtain motor  |
-| Supports | open, close, stop, position |
+| Exposes | cover (state, position), battery, linkquality |
 | Picture | ![Xiaomi ZNCLDJ12LM](../images/devices/ZNCLDJ12LM.jpg) |
 
 ## Notes

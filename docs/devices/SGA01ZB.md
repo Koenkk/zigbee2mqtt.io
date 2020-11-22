@@ -12,7 +12,7 @@ description: "Integrate your Feibit SGA01ZB via Zigbee2MQTT with whatever smart 
 | Model | SGA01ZB  |
 | Vendor  | Feibit  |
 | Description | Combustible gas sensor |
-| Supports | gas |
+| Exposes | gas, battery_low, tamper, linkquality |
 | Picture | ![Feibit SGA01ZB](../images/devices/SGA01ZB.jpg) |
 
 ## Notes

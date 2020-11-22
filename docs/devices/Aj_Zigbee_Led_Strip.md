@@ -12,7 +12,7 @@ description: "Integrate your Ajax Online Aj_Zigbee_Led_Strip via Zigbee2MQTT wit
 | Model | Aj_Zigbee_Led_Strip  |
 | Vendor  | Ajax Online  |
 | Description | LED Strip |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Ajax Online Aj_Zigbee_Led_Strip](../images/devices/Aj_Zigbee_Led_Strip.jpg) |
 
 ## Notes

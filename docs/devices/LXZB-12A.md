@@ -12,7 +12,7 @@ description: "Integrate your Zemismart LXZB-12A via Zigbee2MQTT with whatever sm
 | Model | LXZB-12A  |
 | Vendor  | Zemismart  |
 | Description | RGB LED downlight |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Zemismart LXZB-12A](../images/devices/LXZB-12A.jpg) |
 
 ## Notes

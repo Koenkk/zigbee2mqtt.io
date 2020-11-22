@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A LXN59-2S7LX1.0 via Zigbee2MQTT with whatev
 | Model | LXN59-2S7LX1.0  |
 | Vendor  | Nue / 3A  |
 | Description | Smart light relay - 2 gang |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A LXN59-2S7LX1.0](../images/devices/LXN59-2S7LX1.0.jpg) |
 | White-label | Zemismart ZW-EU-02 |
 

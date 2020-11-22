@@ -12,7 +12,7 @@ description: "Integrate your  Somgoms ZSTY-SM-11ZG-US-W via Zigbee2MQTT with wha
 | Model | ZSTY-SM-11ZG-US-W  |
 | Vendor  |  Somgoms  |
 | Description | 1 gang switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![ Somgoms ZSTY-SM-11ZG-US-W](../images/devices/ZSTY-SM-11ZG-US-W.jpg) |
 
 ## Notes

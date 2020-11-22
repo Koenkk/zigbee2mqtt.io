@@ -12,7 +12,7 @@ description: "Integrate your Develco SPLZB-132 via Zigbee2MQTT with whatever sma
 | Model | SPLZB-132  |
 | Vendor  | Develco  |
 | Description | Power plug |
-| Supports | on/off, power measurements |
+| Exposes | switch (state), power, current, voltage, energy, device_temperature, linkquality |
 | Picture | ![Develco SPLZB-132](../images/devices/SPLZB-132.jpg) |
 
 ## Notes

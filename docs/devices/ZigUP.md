@@ -12,7 +12,7 @@ description: "Integrate your Custom devices (DiY) ZigUP via Zigbee2MQTT with wha
 | Model | ZigUP  |
 | Vendor  | Custom devices (DiY)  |
 | Description | [CC2530 based ZigBee relais, switch, sensor and router](https://github.com/formtapez/ZigUP/) |
-| Supports | relais, RGB-stripe, sensors, S0-counter, ADC, digital I/O |
+| Exposes | switch (state), linkquality |
 | Picture | ![Custom devices (DiY) ZigUP](../images/devices/ZigUP.jpg) |
 
 ## Notes

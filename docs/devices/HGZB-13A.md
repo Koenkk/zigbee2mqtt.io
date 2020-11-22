@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-13A via Zigbee2MQTT with whatever sma
 | Model | HGZB-13A  |
 | Vendor  | Nue / 3A  |
 | Description | Door/window sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, linkquality |
 | Picture | ![Nue / 3A HGZB-13A](../images/devices/HGZB-13A.jpg) |
 
 ## Notes

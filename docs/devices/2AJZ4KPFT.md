@@ -12,7 +12,7 @@ description: "Integrate your Konke 2AJZ4KPFT via Zigbee2MQTT with whatever smart
 | Model | 2AJZ4KPFT  |
 | Vendor  | Konke  |
 | Description | Temperature and humidity sensor |
-| Supports | temperature and humidity |
+| Exposes | temperature, humidity, battery, linkquality |
 | Picture | ![Konke 2AJZ4KPFT](../images/devices/2AJZ4KPFT.jpg) |
 
 ## Notes

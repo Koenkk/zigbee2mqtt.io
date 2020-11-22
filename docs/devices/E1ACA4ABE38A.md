@@ -12,7 +12,7 @@ description: "Integrate your Sengled E1ACA4ABE38A via Zigbee2MQTT with whatever 
 | Model | E1ACA4ABE38A  |
 | Vendor  | Sengled  |
 | Description | Element downlight smart LED bulb |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Sengled E1ACA4ABE38A](../images/devices/E1ACA4ABE38A.jpg) |
 
 ## Notes

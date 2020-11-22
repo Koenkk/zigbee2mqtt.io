@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-02A via Zigbee2MQTT with whatever sma
 | Model | HGZB-02A  |
 | Vendor  | Nue / 3A  |
 | Description | Smart light controller |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Nue / 3A HGZB-02A](../images/devices/HGZB-02A.jpg) |
 
 ## Notes

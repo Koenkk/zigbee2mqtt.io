@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS2SS via Zigbee2MQTT with whatever smart ho
 | Model | HS2SS  |
 | Vendor  | HEIMAN  |
 | Description | Smart scene switch |
-| Supports | action |
+| Exposes | battery, action, linkquality |
 | Picture | ![HEIMAN HS2SS](../images/devices/HS2SS.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Moes BHT-002-GCLZB via Zigbee2MQTT with whatever sm
 | Model | BHT-002-GCLZB  |
 | Vendor  | Moes  |
 | Description | Moes BHT series Thermostat |
-| Supports | thermostat, temperature |
+| Exposes | lock (state), climate (current_heating_setpoint, local_temperature, system_mode, running_state, preset), linkquality |
 | Picture | ![Moes BHT-002-GCLZB](../images/devices/BHT-002-GCLZB.jpg) |
 
 ## Notes

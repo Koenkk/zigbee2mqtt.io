@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-43 via Zigbee2MQTT with whatever smar
 | Model | HGZB-43  |
 | Vendor  | Nue / 3A  |
 | Description | Smart light switch - 3 gang v2.0 |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A HGZB-43](../images/devices/HGZB-43.jpg) |
 
 ## Notes

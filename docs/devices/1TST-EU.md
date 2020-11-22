@@ -12,7 +12,7 @@ description: "Integrate your eCozy 1TST-EU via Zigbee2MQTT with whatever smart h
 | Model | 1TST-EU  |
 | Vendor  | eCozy  |
 | Description | Smart heating thermostat |
-| Supports | temperature, occupancy, un-/occupied heating, schedule |
+| Exposes | battery, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![eCozy 1TST-EU](../images/devices/1TST-EU.jpg) |
 
 ## Notes

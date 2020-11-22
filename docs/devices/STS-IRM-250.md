@@ -12,7 +12,7 @@ description: "Integrate your SmartThings STS-IRM-250 via Zigbee2MQTT with whatev
 | Model | STS-IRM-250  |
 | Vendor  | SmartThings  |
 | Description | Motion sensor (2016 model) |
-| Supports | occupancy and temperature |
+| Exposes | temperature, occupancy, battery_low, tamper, battery, linkquality |
 | Picture | ![SmartThings STS-IRM-250](../images/devices/STS-IRM-250.jpg) |
 
 ## Notes

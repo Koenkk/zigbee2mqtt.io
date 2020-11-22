@@ -12,7 +12,7 @@ description: "Integrate your LED Trading HK-LN-DIM-A via Zigbee2MQTT with whatev
 | Model | HK-LN-DIM-A  |
 | Vendor  | LED Trading  |
 | Description | ZigBee AC phase-cut dimmer |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![LED Trading HK-LN-DIM-A](../images/devices/HK-LN-DIM-A.jpg) |
 
 ## Notes

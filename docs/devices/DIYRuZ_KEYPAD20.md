@@ -12,7 +12,7 @@ description: "Integrate your DIYRuZ DIYRuZ_KEYPAD20 via Zigbee2MQTT with whateve
 | Model | DIYRuZ_KEYPAD20  |
 | Vendor  | DIYRuZ  |
 | Description | [DiY 20 button keypad](http://modkam.ru/?p=1114) |
-| Supports | click |
+| Exposes | battery, linkquality |
 | Picture | ![DIYRuZ DIYRuZ_KEYPAD20](../images/devices/DIYRuZ_KEYPAD20.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your iCasa ICZB-IW11SW via Zigbee2MQTT with whatever sma
 | Model | ICZB-IW11SW  |
 | Vendor  | iCasa  |
 | Description | Zigbee 3.0 AC switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![iCasa ICZB-IW11SW](../images/devices/ICZB-IW11SW.jpg) |
 
 ## Notes

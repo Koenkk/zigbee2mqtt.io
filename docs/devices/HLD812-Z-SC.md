@@ -12,7 +12,7 @@ description: "Integrate your Shenzhen Homa HLD812-Z-SC via Zigbee2MQTT with what
 | Model | HLD812-Z-SC  |
 | Vendor  | Shenzhen Homa  |
 | Description | Smart LED driver |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Shenzhen Homa HLD812-Z-SC](../images/devices/HLD812-Z-SC.jpg) |
 
 ## Notes

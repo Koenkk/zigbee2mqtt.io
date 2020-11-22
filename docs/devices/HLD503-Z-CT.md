@@ -12,7 +12,7 @@ description: "Integrate your Shenzhen Homa HLD503-Z-CT via Zigbee2MQTT with what
 | Model | HLD503-Z-CT  |
 | Vendor  | Shenzhen Homa  |
 | Description | Smart LED driver |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Shenzhen Homa HLD503-Z-CT](../images/devices/HLD503-Z-CT.jpg) |
 
 ## Notes

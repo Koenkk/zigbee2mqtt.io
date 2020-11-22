@@ -12,7 +12,7 @@ description: "Integrate your iHORN LH-992ZB via Zigbee2MQTT with whatever smart 
 | Model | LH-992ZB  |
 | Vendor  | iHORN  |
 | Description | Motion sensor |
-| Supports | occupancy |
+| Exposes | occupancy, battery_low, tamper, linkquality |
 | Picture | ![iHORN LH-992ZB](../images/devices/LH-992ZB.jpg) |
 
 ## Notes

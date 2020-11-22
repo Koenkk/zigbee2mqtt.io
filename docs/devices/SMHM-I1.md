@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN SMHM-I1 via Zigbee2MQTT with whatever smart 
 | Model | SMHM-I1  |
 | Vendor  | HEIMAN  |
 | Description | Smart motion sensor |
-| Supports | occupancy |
+| Exposes | occupancy, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN SMHM-I1](../images/devices/SMHM-I1.jpg) |
 
 ## Notes

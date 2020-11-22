@@ -12,7 +12,7 @@ description: "Integrate your DIYRuZ DIYRuZ_magnet via Zigbee2MQTT with whatever 
 | Model | DIYRuZ_magnet  |
 | Vendor  | DIYRuZ  |
 | Description | [DIYRuZ contact sensor](https://modkam.ru/?p=1220) |
-| Supports | contact |
+| Exposes | battery, contact, linkquality |
 | Picture | ![DIYRuZ DIYRuZ_magnet](../images/devices/DIYRuZ_magnet.jpg) |
 
 ## Notes

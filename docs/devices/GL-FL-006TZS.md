@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-FL-006TZS via Zigbee2MQTT with whatever
 | Model | GL-FL-006TZS  |
 | Vendor  | Gledopto  |
 | Description | Zigbee 60W floodlight RGB CCT |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Gledopto GL-FL-006TZS](../images/devices/GL-FL-006TZS.jpg) |
 
 ## Notes

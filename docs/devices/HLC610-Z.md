@@ -12,7 +12,7 @@ description: "Integrate your Shenzhen Homa HLC610-Z via Zigbee2MQTT with whateve
 | Model | HLC610-Z  |
 | Vendor  | Shenzhen Homa  |
 | Description | Wireless dimmable controller |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Shenzhen Homa HLC610-Z](../images/devices/HLC610-Z.jpg) |
 
 ## Notes

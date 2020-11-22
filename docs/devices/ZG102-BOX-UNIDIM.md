@@ -12,7 +12,7 @@ description: "Integrate your Envilar ZG102-BOX-UNIDIM via Zigbee2MQTT with whate
 | Model | ZG102-BOX-UNIDIM  |
 | Vendor  | Envilar  |
 | Description | ZigBee AC phase-cut dimmer |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Envilar ZG102-BOX-UNIDIM](../images/devices/ZG102-BOX-UNIDIM.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your DIYRuZ DIYRuZ_FreePad via Zigbee2MQTT with whatever
 | Model | DIYRuZ_FreePad  |
 | Vendor  | DIYRuZ  |
 | Description | [DiY 8/12/20 button keypad](http://modkam.ru/?p=1114) |
-| Supports | single, double, triple, quadruple, many, hold/release |
+| Exposes | battery, action, switch_type, switch_actions, linkquality |
 | Picture | ![DIYRuZ DIYRuZ_FreePad](../images/devices/DIYRuZ_FreePad.jpg) |
 
 ## Notes

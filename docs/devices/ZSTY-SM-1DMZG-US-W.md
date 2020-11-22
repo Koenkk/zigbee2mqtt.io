@@ -12,7 +12,7 @@ description: "Integrate your Somgoms ZSTY-SM-1DMZG-US-W via Zigbee2MQTT with wha
 | Model | ZSTY-SM-1DMZG-US-W  |
 | Vendor  | Somgoms  |
 | Description | Dimmer switch |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Somgoms ZSTY-SM-1DMZG-US-W](../images/devices/ZSTY-SM-1DMZG-US-W.jpg) |
 
 ## Notes

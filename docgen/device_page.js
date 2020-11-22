@@ -37,7 +37,7 @@ function generate(device) {
     }
 
     const image = utils.getImage(device.model);
-
+    const exposesDescription = Array.from(new Set(device.exposes.map((e) => e.hasOwnProperty('name') ? e.name : `${e.type} (${e.features.map((f) => f.name).join(', ')})`))).join(', ');
     return `---
 title: "${device.vendor} ${device.model} control via MQTT"
 description: "Integrate your ${device.vendor} ${device.model} via Zigbee2MQTT with whatever smart home
@@ -52,7 +52,7 @@ description: "Integrate your ${device.vendor} ${device.model} via Zigbee2MQTT wi
 | Model | ${device.model}  |
 | Vendor  | ${device.vendor}  |
 | Description | ${device.description} |
-| Supports | ${device.supports} |
+| Exposes | ${exposesDescription} |
 | Picture | ![${device.vendor} ${device.model}](${image}) |
 ${device.whiteLabel ? `| White-label | ${device.whiteLabel.map((d) => `${d.vendor} ${d.model}`).join(', ')} |\n` : ''}
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Lonsonho QS-Zigbee-D02-TRIAC-LN via Zigbee2MQTT wit
 | Model | QS-Zigbee-D02-TRIAC-LN  |
 | Vendor  | Lonsonho  |
 | Description | 1 gang smart dimmer switch module with neutral |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-LN](../images/devices/QS-Zigbee-D02-TRIAC-LN.jpg) |
 
 ## Notes

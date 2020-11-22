@@ -12,7 +12,7 @@ description: "Integrate your Swann SWO-MOS1PA via Zigbee2MQTT with whatever smar
 | Model | SWO-MOS1PA  |
 | Vendor  | Swann  |
 | Description | Motion and temperature sensor |
-| Supports | occupancy |
+| Exposes | occupancy, battery_low, tamper, linkquality |
 | Picture | ![Swann SWO-MOS1PA](../images/devices/SWO-MOS1PA.jpg) |
 
 ## Notes

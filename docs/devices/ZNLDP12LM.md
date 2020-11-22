@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi ZNLDP12LM via Zigbee2MQTT with whatever smar
 | Model | ZNLDP12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart LED bulb |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Xiaomi ZNLDP12LM](../images/devices/ZNLDP12LM.jpg) |
 
 ## Notes

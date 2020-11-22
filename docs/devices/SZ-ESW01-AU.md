@@ -12,7 +12,7 @@ description: "Integrate your Sercomm SZ-ESW01-AU via Zigbee2MQTT with whatever s
 | Model | SZ-ESW01-AU  |
 | Vendor  | Sercomm  |
 | Description | Telstra smart plug |
-| Supports | on/off, power consumption |
+| Exposes | switch (state), power, linkquality |
 | Picture | ![Sercomm SZ-ESW01-AU](../images/devices/SZ-ESW01-AU.jpg) |
 
 ## Notes

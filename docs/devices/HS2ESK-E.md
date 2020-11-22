@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS2ESK-E via Zigbee2MQTT with whatever smart
 | Model | HS2ESK-E  |
 | Vendor  | HEIMAN  |
 | Description | Smart in wall plug |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, current, voltage, linkquality |
 | Picture | ![HEIMAN HS2ESK-E](../images/devices/HS2ESK-E.jpg) |
 
 ## Notes

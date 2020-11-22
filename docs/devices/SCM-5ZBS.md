@@ -12,7 +12,7 @@ description: "Integrate your Climax SCM-5ZBS via Zigbee2MQTT with whatever smart
 | Model | SCM-5ZBS  |
 | Vendor  | Climax  |
 | Description | Roller shutter |
-| Supports | open/close |
+| Exposes | cover (state, position), linkquality |
 | Picture | ![Climax SCM-5ZBS](../images/devices/SCM-5ZBS.jpg) |
 
 ## Notes

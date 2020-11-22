@@ -12,7 +12,7 @@ description: "Integrate your AXIS GR-ZB01-W via Zigbee2MQTT with whatever smart 
 | Model | GR-ZB01-W  |
 | Vendor  | AXIS  |
 | Description | Gear window shade motor |
-| Supports | open, close, position, battery |
+| Exposes | cover (state, position), battery, linkquality |
 | Picture | ![AXIS GR-ZB01-W](../images/devices/GR-ZB01-W.jpg) |
 
 ## Notes

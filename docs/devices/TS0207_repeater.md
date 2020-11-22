@@ -12,7 +12,7 @@ description: "Integrate your Tuya TS0207_repeater via Zigbee2MQTT with whatever 
 | Model | TS0207_repeater  |
 | Vendor  | Tuya  |
 | Description | Repeater |
-| Supports | linkquality |
+| Exposes | linkquality |
 | Picture | ![Tuya TS0207_repeater](../images/devices/TS0207_repeater.jpg) |
 
 ## Notes

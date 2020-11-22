@@ -12,7 +12,7 @@ description: "Integrate your Leedarson ZA806SQ1TCF via Zigbee2MQTT with whatever
 | Model | ZA806SQ1TCF  |
 | Vendor  | Leedarson  |
 | Description | LED E27 tunable white |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Leedarson ZA806SQ1TCF](../images/devices/ZA806SQ1TCF.jpg) |
 
 ## Notes

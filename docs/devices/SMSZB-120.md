@@ -12,7 +12,7 @@ description: "Integrate your Develco SMSZB-120 via Zigbee2MQTT with whatever sma
 | Model | SMSZB-120  |
 | Vendor  | Develco  |
 | Description | Smoke detector with siren |
-| Supports | smoke, warning, temperature |
+| Exposes | temperature, battery, smoke, battery_low, tamper, linkquality |
 | Picture | ![Develco SMSZB-120](../images/devices/SMSZB-120.jpg) |
 
 ## Notes

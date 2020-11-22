@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi DJT11LM via Zigbee2MQTT with whatever smart 
 | Model | DJT11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara vibration sensor |
-| Supports | drop, tilt and touch |
+| Exposes | battery, action, strength, sensitivity, linkquality |
 | Picture | ![Xiaomi DJT11LM](../images/devices/DJT11LM.jpg) |
 
 ## Notes

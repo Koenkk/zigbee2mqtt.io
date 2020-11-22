@@ -12,7 +12,7 @@ description: "Integrate your Gledopto GL-FL-005TZ via Zigbee2MQTT with whatever 
 | Model | GL-FL-005TZ  |
 | Vendor  | Gledopto  |
 | Description | Zigbee 30W floodlight RGB CCT |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Gledopto GL-FL-005TZ](../images/devices/GL-FL-005TZ.jpg) |
 
 ## Notes

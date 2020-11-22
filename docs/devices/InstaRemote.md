@@ -12,7 +12,7 @@ description: "Integrate your Insta InstaRemote via Zigbee2MQTT with whatever sma
 | Model | InstaRemote  |
 | Vendor  | Insta  |
 | Description | ZigBee Light Link wall/handheld transmitter |
-| Supports | action |
+| Exposes | action, linkquality |
 | Picture | ![Insta InstaRemote](../images/devices/InstaRemote.jpg) |
 | White-label | Gira 2430-100, Gira 2435-10, Jung ZLLCD5004M, Jung ZLLLS5004M, Jung ZLLA5004M, Jung ZLLHS4 |
 

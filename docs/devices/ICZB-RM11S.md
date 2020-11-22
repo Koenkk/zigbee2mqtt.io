@@ -12,7 +12,7 @@ description: "Integrate your iCasa ICZB-RM11S via Zigbee2MQTT with whatever smar
 | Model | ICZB-RM11S  |
 | Vendor  | iCasa  |
 | Description | Zigbee 3.0 remote control |
-| Supports | action |
+| Exposes | battery, action, linkquality |
 | Picture | ![iCasa ICZB-RM11S](../images/devices/ICZB-RM11S.jpg) |
 
 ## Notes

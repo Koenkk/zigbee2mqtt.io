@@ -12,7 +12,7 @@ description: "Integrate your LivingWise LVS-ZB15R via Zigbee2MQTT with whatever 
 | Model | LVS-ZB15R  |
 | Vendor  | LivingWise  |
 | Description | Zigbee smart outlet |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![LivingWise LVS-ZB15R](../images/devices/LVS-ZB15R.jpg) |
 
 ## Notes

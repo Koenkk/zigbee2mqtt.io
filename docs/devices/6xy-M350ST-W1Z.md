@@ -12,7 +12,7 @@ description: "Integrate your Leedarson 6xy-M350ST-W1Z via Zigbee2MQTT with whate
 | Model | 6xy-M350ST-W1Z  |
 | Vendor  | Leedarson  |
 | Description | PAR16 tunable white |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Leedarson 6xy-M350ST-W1Z](../images/devices/6xy-M350ST-W1Z.jpg) |
 
 ## Notes

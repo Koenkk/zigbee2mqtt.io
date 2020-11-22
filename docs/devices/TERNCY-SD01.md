@@ -12,7 +12,7 @@ description: "Integrate your TERNCY TERNCY-SD01 via Zigbee2MQTT with whatever sm
 | Model | TERNCY-SD01  |
 | Vendor  | TERNCY  |
 | Description | Knob smart dimmer |
-| Supports | single, double and triple click, rotate |
+| Exposes | battery, action, direction, linkquality |
 | Picture | ![TERNCY TERNCY-SD01](../images/devices/TERNCY-SD01.jpg) |
 
 ## Notes

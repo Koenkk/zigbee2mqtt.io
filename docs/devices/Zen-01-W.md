@@ -12,7 +12,7 @@ description: "Integrate your Zen Zen-01-W via Zigbee2MQTT with whatever smart ho
 | Model | Zen-01-W  |
 | Vendor  | Zen  |
 | Description | Thermostat |
-| Supports | temperature, heating/cooling system control |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![Zen Zen-01-W](../images/devices/Zen-01-W.jpg) |
 
 ## Notes

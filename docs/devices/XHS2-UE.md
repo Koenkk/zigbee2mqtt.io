@@ -12,7 +12,7 @@ description: "Integrate your Universal Electronics Inc XHS2-UE via Zigbee2MQTT w
 | Model | XHS2-UE  |
 | Vendor  | Universal Electronics Inc  |
 | Description | Magnetic door & window contact sensor |
-| Supports | contact, temperature |
+| Exposes | contact, battery_low, tamper, temperature, battery, linkquality |
 | Picture | ![Universal Electronics Inc XHS2-UE](../images/devices/XHS2-UE.jpg) |
 
 ## Notes

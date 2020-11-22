@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS2CM-N-DC via Zigbee2MQTT with whatever sma
 | Model | HS2CM-N-DC  |
 | Vendor  | HEIMAN  |
 | Description | Gear window shade motor |
-| Supports | open, close, position |
+| Exposes | cover (state, position), linkquality |
 | Picture | ![HEIMAN HS2CM-N-DC](../images/devices/HS2CM-N-DC.jpg) |
 
 ## Notes

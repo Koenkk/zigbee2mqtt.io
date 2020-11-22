@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS3CG via Zigbee2MQTT with whatever smart ho
 | Model | HS3CG  |
 | Vendor  | HEIMAN  |
 | Description | Combustible gas sensor |
-| Supports | gas |
+| Exposes | gas, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN HS3CG](../images/devices/HS3CG.jpg) |
 
 ## Notes

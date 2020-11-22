@@ -12,7 +12,7 @@ description: "Integrate your Smart Home Pty HGZB-20-DE via Zigbee2MQTT with what
 | Model | HGZB-20-DE  |
 | Vendor  | Smart Home Pty  |
 | Description | Power plug |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Smart Home Pty HGZB-20-DE](../images/devices/HGZB-20-DE.jpg) |
 
 ## Notes

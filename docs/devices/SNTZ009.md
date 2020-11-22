@@ -12,7 +12,7 @@ description: "Integrate your TuYa SNTZ009 via Zigbee2MQTT with whatever smart ho
 | Model | SNTZ009  |
 | Vendor  | TuYa  |
 | Description | Water leak sensor |
-| Supports | water leak |
+| Exposes | water_leak, linkquality |
 | Picture | ![TuYa SNTZ009](../images/devices/SNTZ009.jpg) |
 
 ## Notes

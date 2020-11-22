@@ -12,7 +12,7 @@ description: "Integrate your Sengled E1D-G73WNA via Zigbee2MQTT with whatever sm
 | Model | E1D-G73WNA  |
 | Vendor  | Sengled  |
 | Description | Smart window and door sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, linkquality |
 | Picture | ![Sengled E1D-G73WNA](../images/devices/E1D-G73WNA.jpg) |
 
 ## Notes

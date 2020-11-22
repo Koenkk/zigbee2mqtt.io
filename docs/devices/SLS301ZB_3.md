@@ -12,7 +12,7 @@ description: "Integrate your Feibit SLS301ZB_3 via Zigbee2MQTT with whatever sma
 | Model | SLS301ZB_3  |
 | Vendor  | Feibit  |
 | Description | Smart light switch - 3 gang |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Feibit SLS301ZB_3](../images/devices/SLS301ZB_3.jpg) |
 
 ## Notes

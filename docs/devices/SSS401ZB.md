@@ -12,7 +12,7 @@ description: "Integrate your Feibit SSS401ZB via Zigbee2MQTT with whatever smart
 | Model | SSS401ZB  |
 | Vendor  | Feibit  |
 | Description | Smart 4 key scene wall switch |
-| Supports | on/off, action |
+| Exposes | action, switch (state), linkquality |
 | Picture | ![Feibit SSS401ZB](../images/devices/SSS401ZB.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your LivingWise LVS-ZB500D via Zigbee2MQTT with whatever
 | Model | LVS-ZB500D  |
 | Vendor  | LivingWise  |
 | Description | ZigBee smart dimmer switch |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![LivingWise LVS-ZB500D](../images/devices/LVS-ZB500D.jpg) |
 
 ## Notes

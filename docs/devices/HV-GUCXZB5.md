@@ -12,7 +12,7 @@ description: "Integrate your Hive HV-GUCXZB5 via Zigbee2MQTT with whatever smart
 | Model | HV-GUCXZB5  |
 | Vendor  | Hive  |
 | Description | Active light, warm to cool white (GU10) |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Hive HV-GUCXZB5](../images/devices/HV-GUCXZB5.jpg) |
 
 ## Notes

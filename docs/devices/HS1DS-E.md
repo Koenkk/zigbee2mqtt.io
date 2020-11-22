@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS1DS-E via Zigbee2MQTT with whatever smart 
 | Model | HS1DS-E  |
 | Vendor  | HEIMAN  |
 | Description | Door sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN HS1DS-E](../images/devices/HS1DS-E.jpg) |
 
 ## Notes

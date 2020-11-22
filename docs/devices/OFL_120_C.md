@@ -12,7 +12,7 @@ description: "Integrate your Innr OFL 120 C via Zigbee2MQTT with whatever smart 
 | Model | OFL 120 C  |
 | Vendor  | Innr  |
 | Description | Outdoor flex light colour LED strip 2m, 550lm, RGBW |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Innr OFL 120 C](../images/devices/OFL-120-C.jpg) |
 
 ## Notes

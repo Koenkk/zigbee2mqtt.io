@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-41 via Zigbee2MQTT with whatever smar
 | Model | HGZB-41  |
 | Vendor  | Nue / 3A  |
 | Description | Smart one gang wall switch |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A HGZB-41](../images/devices/HGZB-41.jpg) |
 
 ## Notes

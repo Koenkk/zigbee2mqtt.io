@@ -12,7 +12,7 @@ description: "Integrate your Sengled E1E-G7F via Zigbee2MQTT with whatever smart
 | Model | E1E-G7F  |
 | Vendor  | Sengled  |
 | Description | Smart switch  |
-| Supports | action |
+| Exposes | action, linkquality |
 | Picture | ![Sengled E1E-G7F](../images/devices/E1E-G7F.jpg) |
 
 ## Notes

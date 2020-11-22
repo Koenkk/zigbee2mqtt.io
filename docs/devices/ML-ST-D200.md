@@ -12,7 +12,7 @@ description: "Integrate your M-ELEC ML-ST-D200 via Zigbee2MQTT with whatever sma
 | Model | ML-ST-D200  |
 | Vendor  | M-ELEC  |
 | Description | Stitchy Dim switchable wall module |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![M-ELEC ML-ST-D200](../images/devices/ML-ST-D200.jpg) |
 
 ## Notes

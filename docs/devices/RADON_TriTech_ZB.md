@@ -12,7 +12,7 @@ description: "Integrate your Bosch RADON TriTech ZB via Zigbee2MQTT with whateve
 | Model | RADON TriTech ZB  |
 | Vendor  | Bosch  |
 | Description | Wireless motion detector |
-| Supports | occupancy and temperature |
+| Exposes | temperature, battery, occupancy, battery_low, tamper, linkquality |
 | Picture | ![Bosch RADON TriTech ZB](../images/devices/RADON-TriTech-ZB.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Konke 2AJZ4KPBS via Zigbee2MQTT with whatever smart
 | Model | 2AJZ4KPBS  |
 | Vendor  | Konke  |
 | Description | Motion sensor |
-| Supports | occupancy |
+| Exposes | occupancy, battery_low, tamper, battery, linkquality |
 | Picture | ![Konke 2AJZ4KPBS](../images/devices/2AJZ4KPBS.jpg) |
 
 ## Notes

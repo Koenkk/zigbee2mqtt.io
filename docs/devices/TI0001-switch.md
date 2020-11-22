@@ -12,7 +12,7 @@ description: "Integrate your Livolo TI0001-switch via Zigbee2MQTT with whatever 
 | Model | TI0001-switch  |
 | Vendor  | Livolo  |
 | Description | New Zigbee Switch [work in progress](https://github.com/Koenkk/zigbee2mqtt/issues/3560) |
-| Supports | on/off |
+| Exposes | switch (state), linkquality |
 | Picture | ![Livolo TI0001-switch](../images/devices/TI0001-switch.jpg) |
 
 ## Notes

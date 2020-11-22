@@ -12,7 +12,7 @@ description: "Integrate your Stelpro SMT402AD via Zigbee2MQTT with whatever smar
 | Model | SMT402AD  |
 | Vendor  | Stelpro  |
 | Description | Maestro, line-voltage thermostat |
-| Supports | temperature, humidity, outdoor temp display |
+| Exposes | local_temperature, lock (state), climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![Stelpro SMT402AD](../images/devices/SMT402AD.jpg) |
 
 ## Notes

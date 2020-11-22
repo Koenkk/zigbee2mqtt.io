@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS2SW3A/HS2SW3A-N via Zigbee2MQTT with whate
 | Model | HS2SW3A/HS2SW3A-N  |
 | Vendor  | HEIMAN  |
 | Description | Smart switch - 3 gang with neutral wire |
-| Supports | on/off, temperature |
+| Exposes | switch (state), device_temperature, linkquality |
 | Picture | ![HEIMAN HS2SW3A/HS2SW3A-N](../images/devices/HS2SW3A-HS2SW3A-N.jpg) |
 
 ## Notes

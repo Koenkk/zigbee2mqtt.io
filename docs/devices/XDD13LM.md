@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi XDD13LM via Zigbee2MQTT with whatever smart 
 | Model | XDD13LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara Opple MX480 |
-| Supports | on/off, brightness, color temperature |
+| Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Xiaomi XDD13LM](../images/devices/XDD13LM.jpg) |
 
 ## Notes

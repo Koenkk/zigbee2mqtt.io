@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HEIMAN-M1 via Zigbee2MQTT with whatever smar
 | Model | HEIMAN-M1  |
 | Vendor  | HEIMAN  |
 | Description | Door sensor |
-| Supports | contact |
+| Exposes | contact, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN HEIMAN-M1](../images/devices/HEIMAN-M1.jpg) |
 
 ## Notes

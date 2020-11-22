@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG12LM via Zigbee2MQTT with whatever smart
 | Model | QBKG12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara double key wired wall switch |
-| Supports | on/off, power measurement, temperature |
+| Exposes | switch (state), temperature, power, action, linkquality |
 | Picture | ![Xiaomi QBKG12LM](../images/devices/QBKG12LM.jpg) |
 
 ## Notes

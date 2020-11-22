@@ -12,7 +12,7 @@ description: "Integrate your Konke 2AJZ4KPKEY via Zigbee2MQTT with whatever smar
 | Model | 2AJZ4KPKEY  |
 | Vendor  | Konke  |
 | Description | Multi-function button |
-| Supports | single, double and long click |
+| Exposes | battery, action, linkquality |
 | Picture | ![Konke 2AJZ4KPKEY](../images/devices/2AJZ4KPKEY.jpg) |
 
 ## Notes

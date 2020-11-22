@@ -12,7 +12,7 @@ description: "Integrate your DIYRuZ DIYRuZ_Flower via Zigbee2MQTT with whatever 
 | Model | DIYRuZ_Flower  |
 | Vendor  | DIYRuZ  |
 | Description | [Flower sensor](http://modkam.ru/?p=1700) |
-| Supports | temperature, humidity, illuminance, soil_moisture, pressure, battery |
+| Exposes | temperature, humidity, illuminance, illuminance_lux, soil_moisture, pressure, battery, linkquality |
 | Picture | ![DIYRuZ DIYRuZ_Flower](../images/devices/DIYRuZ_Flower.jpg) |
 
 ## Notes

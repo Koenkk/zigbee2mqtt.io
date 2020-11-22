@@ -12,7 +12,7 @@ description: "Integrate your Nue / 3A HGZB-06A via Zigbee2MQTT with whatever sma
 | Model | HGZB-06A  |
 | Vendor  | Nue / 3A  |
 | Description | Smart 7W E27 light bulb |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Nue / 3A HGZB-06A](../images/devices/HGZB-06A.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS2WD-E via Zigbee2MQTT with whatever smart 
 | Model | HS2WD-E  |
 | Vendor  | HEIMAN  |
 | Description | Smart siren |
-| Supports | warning |
+| Exposes | battery, linkquality |
 | Picture | ![HEIMAN HS2WD-E](../images/devices/HS2WD-E.jpg) |
 
 ## Notes

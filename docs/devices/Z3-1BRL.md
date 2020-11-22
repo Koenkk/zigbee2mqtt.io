@@ -12,7 +12,7 @@ description: "Integrate your Lutron Z3-1BRL via Zigbee2MQTT with whatever smart 
 | Model | Z3-1BRL  |
 | Vendor  | Lutron  |
 | Description | Aurora smart bulb dimmer |
-| Supports | brightness |
+| Exposes | action, brightness, linkquality |
 | Picture | ![Lutron Z3-1BRL](../images/devices/Z3-1BRL.jpg) |
 
 ## Notes

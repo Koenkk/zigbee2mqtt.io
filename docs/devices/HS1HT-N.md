@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS1HT-N via Zigbee2MQTT with whatever smart 
 | Model | HS1HT-N  |
 | Vendor  | HEIMAN  |
 | Description | Smart temperature & humidity Sensor |
-| Supports | temperature and humidity |
+| Exposes | temperature, humidity, battery, linkquality |
 | Picture | ![HEIMAN HS1HT-N](../images/devices/HS1HT-N.jpg) |
 
 ## Notes

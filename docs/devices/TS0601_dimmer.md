@@ -12,7 +12,7 @@ description: "Integrate your TuYa TS0601_dimmer via Zigbee2MQTT with whatever sm
 | Model | TS0601_dimmer  |
 | Vendor  | TuYa  |
 | Description | Zigbee smart dimmer |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![TuYa TS0601_dimmer](../images/devices/TS0601_dimmer.jpg) |
 | White-label | Larkkey ZSTY-SM-1DMZG-EU, Earda EDM-1ZAA-EU |
 

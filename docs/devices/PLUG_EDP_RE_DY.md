@@ -12,7 +12,7 @@ description: "Integrate your EDP PLUG EDP RE:DY via Zigbee2MQTT with whatever sm
 | Model | PLUG EDP RE:DY  |
 | Vendor  | EDP  |
 | Description | re:dy plug |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, energy, linkquality |
 | Picture | ![EDP PLUG EDP RE:DY](../images/devices/PLUG-EDP-RE-DY.jpg) |
 
 ## Notes

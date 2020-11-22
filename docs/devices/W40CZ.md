@@ -12,7 +12,7 @@ description: "Integrate your ORVIBO W40CZ via Zigbee2MQTT with whatever smart ho
 | Model | W40CZ  |
 | Vendor  | ORVIBO  |
 | Description | Smart curtain motor  |
-| Supports | open, close, stop, position |
+| Exposes | cover (state, position), linkquality |
 | Picture | ![ORVIBO W40CZ](../images/devices/W40CZ.jpg) |
 
 ## Notes

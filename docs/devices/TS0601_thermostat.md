@@ -12,7 +12,7 @@ description: "Integrate your TuYa TS0601_thermostat via Zigbee2MQTT with whateve
 | Model | TS0601_thermostat  |
 | Vendor  | TuYa  |
 | Description | Radiator valve with thermostat |
-| Supports | thermostat, temperature |
+| Exposes | lock (state), switch (state), battery, battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, running_state, away_mode, preset), linkquality |
 | Picture | ![TuYa TS0601_thermostat](../images/devices/TS0601_thermostat.jpg) |
 | White-label | Moes HY369RT, SHOJZJ 378RT |
 

@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG24LM via Zigbee2MQTT with whatever smart
 | Model | QBKG24LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 2 gang smart wall switch (with neutral wire) |
-| Supports | on/off, power measurement |
+| Exposes | switch (state), power, action, linkquality |
 | Picture | ![Xiaomi QBKG24LM](../images/devices/QBKG24LM.jpg) |
 
 ## Notes

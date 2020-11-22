@@ -12,7 +12,7 @@ description: "Integrate your LifeControl MCLH-07 via Zigbee2MQTT with whatever s
 | Model | MCLH-07  |
 | Vendor  | LifeControl  |
 | Description | Water leak switch |
-| Supports | water leak |
+| Exposes | water_leak, battery_low, tamper, battery, linkquality |
 | Picture | ![LifeControl MCLH-07](../images/devices/MCLH-07.jpg) |
 
 ## Notes

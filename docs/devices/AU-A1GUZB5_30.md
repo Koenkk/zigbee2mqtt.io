@@ -12,7 +12,7 @@ description: "Integrate your Aurora Lighting AU-A1GUZB5/30 via Zigbee2MQTT with 
 | Model | AU-A1GUZB5/30  |
 | Vendor  | Aurora Lighting  |
 | Description | AOne 4.8W smart dimmable GU10 lamp 3000K |
-| Supports | on/off, brightness |
+| Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Aurora Lighting AU-A1GUZB5/30](../images/devices/AU-A1GUZB5-30.jpg) |
 
 ## Notes

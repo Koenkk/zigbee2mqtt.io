@@ -12,7 +12,7 @@ description: "Integrate your Hive SLR1b via Zigbee2MQTT with whatever smart home
 | Model | SLR1b  |
 | Vendor  | Hive  |
 | Description | Heating thermostat |
-| Supports | thermostat, occupied heating, weekly schedule |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![Hive SLR1b](../images/devices/SLR1b.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Nyce NCZ-3041-HA via Zigbee2MQTT with whatever smar
 | Model | NCZ-3041-HA  |
 | Vendor  | Nyce  |
 | Description | Wall motion sensor |
-| Supports | motion, humidity and temperature |
+| Exposes | occupancy, humidity, temperature, battery, battery_low, tamper, linkquality |
 | Picture | ![Nyce NCZ-3041-HA](../images/devices/NCZ-3041-HA.jpg) |
 
 ## Notes

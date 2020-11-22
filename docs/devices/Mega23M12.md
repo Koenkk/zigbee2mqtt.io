@@ -12,7 +12,7 @@ description: "Integrate your Dresden Elektronik Mega23M12 via Zigbee2MQTT with w
 | Model | Mega23M12  |
 | Vendor  | Dresden Elektronik  |
 | Description | ZigBee Light Link wireless electronic ballast |
-| Supports | on/off, brightness, color temperature, color xy |
+| Exposes | light (state, brightness, color_temp, color_xy), light (state, brightness), linkquality |
 | Picture | ![Dresden Elektronik Mega23M12](../images/devices/Mega23M12.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your SmartThings STSS-PRES-001 via Zigbee2MQTT with what
 | Model | STSS-PRES-001  |
 | Vendor  | SmartThings  |
 | Description | Presence sensor |
-| Supports | presence |
+| Exposes | battery, presence, linkquality |
 | Picture | ![SmartThings STSS-PRES-001](../images/devices/STSS-PRES-001.jpg) |
 
 ## Notes

@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WXKG06LM via Zigbee2MQTT with whatever smart
 | Model | WXKG06LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 single key wireless wall switch |
-| Supports | action |
+| Exposes | battery, action, linkquality |
 | Picture | ![Xiaomi WXKG06LM](../images/devices/WXKG06LM.jpg) |
 
 ## Notes

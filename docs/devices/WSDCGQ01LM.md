@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WSDCGQ01LM via Zigbee2MQTT with whatever sma
 | Model | WSDCGQ01LM  |
 | Vendor  | Xiaomi  |
 | Description | MiJia temperature & humidity sensor |
-| Supports | temperature and humidity |
+| Exposes | battery, temperature, humidity, linkquality |
 | Picture | ![Xiaomi WSDCGQ01LM](../images/devices/WSDCGQ01LM.jpg) |
 
 ## Notes
