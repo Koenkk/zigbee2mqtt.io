@@ -30,7 +30,7 @@ Decoupled mode allows to turn wired switch into wireless button with separately 
 This might be useful to assign some custom actions to buttons and control relay remotely.
 This command also allows to redefine which button controls which relay for the double switch (not supported for QBKG25LM).
 
-Topic `zigbee2mqtt/[FRIENDLY_NAME]/system/set` should be used to modify operation mode.
+Topic `zigbee2mqtt/FRIENDLY_NAME/system/set` should be used to modify operation mode.
 
 **NOTE:** For QBKG25LM instead of `system` use `left`, `center` or `right` and leave out the `button` property in the payload.
 
@@ -51,7 +51,7 @@ Values                | Description
 `control_right_relay` | Button directly controls right relay (for double switch, not supported for QBKG25LM)
 `decoupled`           | Button doesn't control any relay
 
-`zigbee2mqtt/[FRIENDLY_NAME]/system/get` to read current mode.
+`zigbee2mqtt/FRIENDLY_NAME/system/get` to read current mode.
 
 Payload:
 ```js
@@ -62,36 +62,36 @@ Payload:
 }
 ```
 
-Response will be sent to `zigbee2mqtt/[FRIENDLY_NAME]`, example: `{"operation_mode_right":"control_right_relay"}`
+Response will be sent to `zigbee2mqtt/FRIENDLY_NAME`, example: `{"operation_mode_right":"control_right_relay"}`
 
 
 ### Power outage memory
 This option allows the device to restore the last on/off state when it's reconnected to power.
-To set this option publish to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"power_outage_memory": true}` (or `false`).
+To set this option publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"power_outage_memory": true}` (or `false`).
 Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
 
 
 ### Do not disturb mode
 This option allows to turn off the indicator lights between 21:00 and 09:00.
-To set this option publish to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"do_not_disturb": true}` (or `false`).
+To set this option publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"do_not_disturb": true}` (or `false`).
 
 
 
 ## Exposes
 ### Switch (left endpoint)
 The current state of this switch is in the published state under the `state_left` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_left": "ON"}`, `{"state_left": "OFF"}` or `{"state_left": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_left": ""}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_left": "ON"}`, `{"state_left": "OFF"}` or `{"state_left": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_left": ""}`.
 
 ### Switch (center endpoint)
 The current state of this switch is in the published state under the `state_center` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_center": "ON"}`, `{"state_center": "OFF"}` or `{"state_center": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_center": ""}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_center": "ON"}`, `{"state_center": "OFF"}` or `{"state_center": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_center": ""}`.
 
 ### Switch (right endpoint)
 The current state of this switch is in the published state under the `state_right` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_right": ""}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

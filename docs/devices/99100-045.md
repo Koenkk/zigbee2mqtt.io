@@ -23,8 +23,8 @@ None
 ## Exposes
 ### Lock 
 The current state of this lock is in the published state under the `state` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state": "LOCK"}` or `{"state": "UNLOCK"}`.
-To read the current state of this lock publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state": ""}`.
+To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "LOCK"}` or `{"state": "UNLOCK"}`.
+To read the current state of this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
 ### Battery (numeric)
 Remaining battery in %.

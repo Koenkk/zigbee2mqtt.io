@@ -21,7 +21,7 @@ description: "Integrate your HEIMAN HS2IRC via Zigbee2MQTT with whatever smart h
 Device can learn up to 15 devices and up to 30 keycodes for each device.
 
 ### Configuring
-By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can be configured:
+By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can be configured:
 
 #### Create device
 

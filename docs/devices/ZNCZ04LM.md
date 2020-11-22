@@ -20,7 +20,7 @@ description: "Integrate your Xiaomi ZNCZ04LM via Zigbee2MQTT with whatever smart
 
 ### Power outage memory
 This option allows the device to restore the last on/off state when it's reconnected to power.
-To set this option publish to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"power_outage_memory": true}` (or `false`).
+To set this option publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"power_outage_memory": true}` (or `false`).
 Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
 
 
@@ -28,20 +28,20 @@ Now toggle the plug/switch once with the button on it, from now on it will resto
 ## Exposes
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state": ""}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"power": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
 
 ### Energy (numeric)
 Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"energy": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
@@ -54,14 +54,14 @@ The unit of this value is `°C`.
 ### Voltage (numeric)
 Measured electrical potential value.
 Value can be found in the published state on the `voltage` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"voltage": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `V`.
 
 ### Current (numeric)
 Instantaneous measured electrical current.
 Value can be found in the published state on the `current` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"current": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `A`.
 

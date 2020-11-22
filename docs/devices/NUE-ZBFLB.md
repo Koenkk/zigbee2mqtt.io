@@ -23,23 +23,23 @@ None
 ## Exposes
 ### Switch (button_light endpoint)
 The current state of this switch is in the published state under the `state_button_light` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_button_light": "ON"}`, `{"state_button_light": "OFF"}` or `{"state_button_light": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_button_light": ""}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_button_light": "ON"}`, `{"state_button_light": "OFF"}` or `{"state_button_light": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_button_light": ""}`.
 
 ### Switch (button_fan_high endpoint)
 The current state of this switch is in the published state under the `state_button_fan_high` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_button_fan_high": "ON"}`, `{"state_button_fan_high": "OFF"}` or `{"state_button_fan_high": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_button_fan_high": ""}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_button_fan_high": "ON"}`, `{"state_button_fan_high": "OFF"}` or `{"state_button_fan_high": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_button_fan_high": ""}`.
 
 ### Switch (button_fan_med endpoint)
 The current state of this switch is in the published state under the `state_button_fan_med` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_button_fan_med": "ON"}`, `{"state_button_fan_med": "OFF"}` or `{"state_button_fan_med": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_button_fan_med": ""}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_button_fan_med": "ON"}`, `{"state_button_fan_med": "OFF"}` or `{"state_button_fan_med": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_button_fan_med": ""}`.
 
 ### Switch (button_fan_low endpoint)
 The current state of this switch is in the published state under the `state_button_fan_low` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_button_fan_low": "ON"}`, `{"state_button_fan_low": "OFF"}` or `{"state_button_fan_low": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_button_fan_low": ""}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_button_fan_low": "ON"}`, `{"state_button_fan_low": "OFF"}` or `{"state_button_fan_low": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_button_fan_low": ""}`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

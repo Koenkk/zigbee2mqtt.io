@@ -91,7 +91,7 @@ See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koe
         model: ['SMSZB-120'],
         note: `
 ### Triggering alarm
-This smoke alarm can be triggered manually by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` with the payloads:
+This smoke alarm can be triggered manually by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with the payloads:
 
 To start (Change \`duration\` in number of seconds to what you need):
 * \`{"warning": {"mode": "burglar", "level": "high", "strobe": false, "duration": 300}}\`
@@ -115,62 +115,62 @@ The device will restart. The wireless icon will disapear from the display.
 
 #### Occupancy / Unoccupancy
 The thermostat can be instructed to use the occupancy or unoccupancy setpoints by
-publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"thermostat_occupancy": "OCCUPANCY"}\`
+publishing to \`zigbee2mqtt/FRIENDLY_NAME/set {"thermostat_occupancy": "OCCUPANCY"}\`
 where \`OCCUPANCY\` is one of the following values: \`occupied\`, \`unoccupied\`.
 The factory default value is \`occupied\`.
 
 #### Floor control mode
 The sensor used by the thermostat for temperature regulation can be changed by publishing
-to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"floor_control_mode": "SENSOR"}\`
+to \`zigbee2mqtt/FRIENDLY_NAME/set {"floor_control_mode": "SENSOR"}\`
 where \`SENSOR\` is one of the following values: \`ambiant\`, \`floor\`.
 The factory default value is \`floor\`.
 
 #### Ambiant maximum heating setpoint
 The maximum ambiant temperature setpoint of the thermostat can be changed by publishing
-to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"ambiant_max_heat_setpoint": "TEMPERATURE"}\`
+to \`zigbee2mqtt/FRIENDLY_NAME/set {"ambiant_max_heat_setpoint": "TEMPERATURE"}\`
 where \`TEMPERATURE\` is the desired value (between 5 and 36 Celcius).
 This feature is disabled by default.
 
 #### Floor minimum heating setpoint
 The minimum floor temperature setpoint of the thermostat can be changed by publishing
-to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"floor_min_heat_setpoint": "TEMPERATURE"}\`
+to \`zigbee2mqtt/FRIENDLY_NAME/set {"floor_min_heat_setpoint": "TEMPERATURE"}\`
 where \`TEMPERATURE\` is the desired value (between 5 and 36 Celcius).
 This feature is disabled by default.
 
 #### Floor maximum heating setpoint
 The maximum floor temperature setpoint of the thermostat can be changed by publishing
-to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"floor_max_heat_setpoint": "TEMPERATURE"}\`
+to \`zigbee2mqtt/FRIENDLY_NAME/set {"floor_max_heat_setpoint": "TEMPERATURE"}\`
 where \`TEMPERATURE\` is the desired value (between 5 and 36 Celcius).
 This feature is disabled by default.
 
 #### Floor temperature sensor
 The floor thermistor temperature sensor value connected to the thermostat can be changed by
-publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"temperature_sensor": "SENSOR"}\`
+publishing to \`zigbee2mqtt/FRIENDLY_NAME/set {"temperature_sensor": "SENSOR"}\`
 where \`SENSOR\` is one of the following values: \`10k\`, \`12k\`.
 The factory default value is \`10k\`.
 
 #### Display backlight
 The thermostat display can be set to turn on only when a button is pressed or stay on and auto dim by
-publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"backlight_auto_dim": "BACKLIGHT"}\`
+publishing to \`zigbee2mqtt/FRIENDLY_NAME/set {"backlight_auto_dim": "BACKLIGHT"}\`
 where \`BACKLIGHT\` is one of the following values: \`on demand\`, \`sensing\`.
 The factory default value is \`sensing\`.
 
 #### Time to display
 The time clock value to display on the thermostat can be set by
-publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"thermostat_time": "TIME"}\`
+publishing to \`zigbee2mqtt/FRIENDLY_NAME/set {"thermostat_time": "TIME"}\`
 where \`TIME\` is the number of seconds since 2000-01-01 or empty.
 The zigbee gateway local time will be used when publishing an empty value.
 By default, the time clock is not displayed.
 
 #### Time format displayed
 The time clock format on the thermostat display can be changed by
-publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"time_format": "FORMAT"}\`
+publishing to \`zigbee2mqtt/FRIENDLY_NAME/set {"time_format": "FORMAT"}\`
 where \`FORMAT\` is one of the following values: \`12h\`, \`24h\`.
 The factory default value is \`24h\`.
 
 #### Enable outdoor temperature display
 The display of outdoor temperature on the thermostat can be enabled / disabled by
-publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"enable_outdoor_temperature": "ENABLE"}\`
+publishing to \`zigbee2mqtt/FRIENDLY_NAME/set {"enable_outdoor_temperature": "ENABLE"}\`
 where \`ENABLE\` is one of the following values: \`on\`, \`off\`.
 \`on\` value will set the outdoor temperature refresh timeout to 3 hours.
 \`off\` value will set the outdoor temperature refresh timeout to 30 seconds.
@@ -179,7 +179,7 @@ The outdoor temperature is not displayed by default.
 
 #### Outdoor temperature to display
 The outdoor temperature to display on the thermostat can be changed by
-publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set {"thermostat_outdoor_temperature": "TEMPERATURE"}\`
+publishing to \`zigbee2mqtt/FRIENDLY_NAME/set {"thermostat_outdoor_temperature": "TEMPERATURE"}\`
 where \`TEMPERATURE\` is between -100 to +100.
 
 ### The following status are reported by the thermostat
@@ -374,7 +374,7 @@ The inputs of most ubisys devices can be configured in a very flexible way to ma
 'pressed') to Zigbee commands (e.g. 'toggle'). This even applies to the way in which these inputs control a local load (for ubisys devices other than the C4).
 
 #### Templates
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` using the JSON properties \`configure_device_setup\` and \`input_action_templates\` the inputs can be configured using templates. This allows to configure some common use cases without having to fully dive into the details of \`input_actions\` (see [Raw Configuration](#raw-configuration) below).
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` using the JSON properties \`configure_device_setup\` and \`input_action_templates\` the inputs can be configured using templates. This allows to configure some common use cases without having to fully dive into the details of \`input_actions\` (see [Raw Configuration](#raw-configuration) below).
 
 Valid template types are:
 * \`toggle\`: Use one push button input to toggle the state of a light (or a similar actuator). A 'toggle' command will be sent on every push of the button.
@@ -520,7 +520,7 @@ Control a dimming light with inputs 0 and 1 and recall scenes with 3 and 4
 
 #### Raw Configuration
 
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` the following device attributes can be set to rawly configure inputs:
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` the following device attributes can be set to rawly configure inputs:
 \`\`\`json
 {
     "configure_device_setup": {
@@ -540,7 +540,7 @@ chapter "7.8.5. Device Setup Cluster (Server)" (or the respective ubisys referen
 
 Please note that there seems to be a size limit on the amount of data that can successfullly be written to \`input_actions\`, so not all configurations theoretically possbile might work in reality.
 
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/get/configure_device_setup\` the values of the configuration attributes can
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/get/configure_device_setup\` the values of the configuration attributes can
 also be read back from the device and be printed to the normal Zigbee2MQTT log.
 
 ### Binding
@@ -579,7 +579,7 @@ Also see [the ubisys C4 documentation](C4.html#binding), example use cases:
 * Completely decouple the input(s) from the local load.
 
 ### Ballast Configuration
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` the dimmer's ballast configuration attributes (\`min_level\` and \`max_level\`) can be set.
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` the dimmer's ballast configuration attributes (\`min_level\` and \`max_level\`) can be set.
 Example:
 \`\`\`json
 {
@@ -589,7 +589,7 @@ Example:
 }
 \`\`\`
 
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/get/ballast_config\` the values of the ballast configuration attributes can
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/get/ballast_config\` the values of the ballast configuration attributes can
 also be read back from the device and be printed to the normal Zigbee2MQTT log (flagged as warnings but only to make sure they do not get suppressed).
 To account for errors due to missing optional attributes (since this is a general function), every cluster attribute will be queried separately and the complete process can therefore take a moment.
 `,
@@ -637,7 +637,7 @@ In case the device does still not accept updates or seems to be stuck somehow, i
 Device can learn up to 15 devices and up to 30 keycodes for each device.
 
 ### Configuring
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` various device attributes can be configured:
 
 #### Create device
 
@@ -846,7 +846,7 @@ The E1743 can be bound to groups using [binding](../information/binding).
 It can only be bound to 1 group at a time and cannot be bound to a device.
 
 By default this remote is bound to the default bind group which you first have to unbind it from.
-This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENDLY_NAME]\` payload \`default_bind_group\`.
+This can be done by sending to \`zigbee2mqtt/bridge/unbind/DEVICE_FRIENDLY_NAME\` payload \`default_bind_group\`.
 Right before executing the commands make sure to wake up the device by pressing a button on it.
 `,
     },
@@ -1077,7 +1077,7 @@ by pressing and holding the reset button on the bottom of the remote (next to th
         note: `
 ### Power-on behavior
 This device allows you to set the power-on behavior. Note that this requires at least November/December '18 firmware update of the device.
-Send a MQTT command to [\`zigbee2mqtt/[FRIENDLY_NAME]/set\`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttfriendly_nameset) with the following payload.
+Send a MQTT command to [\`zigbee2mqtt/FRIENDLY_NAME/set\`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttfriendly_nameset) with the following payload.
 
 \`\`\`js
 {
@@ -1249,7 +1249,7 @@ It may help to remove the battery for a few seconds and after that reconfigure i
         model: ['LLKZMK11LM'],
         note: `
 ### Interlock
-This option allows to inter connect the relays which will make sure that only one relay is on at a time. To do this publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"interlock": true}\` or \`{"interlock": false}\`. By default this option is \`false\`.
+This option allows to inter connect the relays which will make sure that only one relay is on at a time. To do this publish to \`zigbee2mqtt/FRIENDLY_NAME/set\` payload \`{"interlock": true}\` or \`{"interlock": false}\`. By default this option is \`false\`.
 `,
     },
     {
@@ -1331,7 +1331,7 @@ To find optimal "smoothness" play with debounce time or if you need all unique r
 The remote can be bound to groups using [binding](../information/binding) since firmware 2.3.014.
 It can only be bound to 1 group at a time. Use the group name as \`TARGET_DEVICE_FRIENDLY_NAME\`.
 By default this remote is bound to the default bind group which you first have to unbind it from.
-This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENDLY_NAME]\` payload \`default_bind_group\`.
+This can be done by sending to \`zigbee2mqtt/bridge/unbind/DEVICE_FRIENDLY_NAME\` payload \`default_bind_group\`.
 Wake up the device right before sending the commands by pressing a button on it.
 
 #### Note
@@ -1606,7 +1606,7 @@ If the device is asleep (which is most of the time) and you need it to be awake 
         model: ['TS0601_curtain', 'mcdj3aq'],
         note: `
 ### Configuration of device attributes
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` various device attributes can be configured:
 \`\`\`json
 {
     "options":{
@@ -1974,7 +1974,7 @@ Note that this value is overridden if a \`transition\` value is present in the M
         model: ['9GED18000-009'],
         note: `
 ### Pin code usage
-To retrieve the state, send a \`get\` message to the device topic (\`zigbee2mqtt/[DEVICE_FRIENDLY_NAME]/get\`) with the body \`{"pin_code":{"user":0}}\`. To set, sent a \`set\` message to the device topic (\`zigbee2mqtt/[DEVICE_FRIENDLY_NAME]/set\`) with the body \`{"pin_code":{"user":0,"pin_code":1234}}\`. To clear a code, call \`set\` but omit the value for \`pin_code\`.
+To retrieve the state, send a \`get\` message to the device topic (\`zigbee2mqtt/DEVICE_FRIENDLY_NAME/get\`) with the body \`{"pin_code":{"user":0}}\`. To set, sent a \`set\` message to the device topic (\`zigbee2mqtt/DEVICE_FRIENDLY_NAME/set\`) with the body \`{"pin_code":{"user":0,"pin_code":1234}}\`. To clear a code, call \`set\` but omit the value for \`pin_code\`.
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
@@ -2014,12 +2014,12 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
         model: ['JTQJ-BF-01LM/BW', 'JTYJ-GD-01LM/BW'],
         note: `
 ### Sensitivity
-The sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
+The sensitivity can be changed by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\`
 \`{"sensitivity": "SENSITIVITY"}\` where \`SENSITIVITY\` is one of the following
 values: \`low\`, \`medium\`,  \`high\`.
 
 ### Self-test
-A self-test can be trigged by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
+A self-test can be trigged by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\`
 \`{"selftest": ""}\`.
 If the selftest is executed successfully you will hear the device beep in 30 seconds.
 `,
@@ -2028,7 +2028,7 @@ If the selftest is executed successfully you will hear the device beep in 30 sec
         model: ['DJT11LM'],
         note: `
 ### Sensitivity
-The sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
+The sensitivity can be changed by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\`
 \`{"sensitivity": "SENSITIVITY"}\` where \`SENSITIVITY\` is one of the following
 values: \`low\`, \`medium\`,  \`high\`.
 
@@ -2039,7 +2039,7 @@ After setting the sensitivity you immediately have to start pressing the reset b
         model: ['9290012607', '9290019758'],
         note: `
 ### Motion sensitivity
-The motion sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
+The motion sensitivity can be changed by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\`
 \`{"motion_sensitivity": "SENSITIVITY"}\` where \`SENSITIVITY\` is one of the following
 values: \`low\`,  \`medium\`,  \`high\` (default).
 
@@ -2114,7 +2114,7 @@ three times, release the water logo (the blue light will blink once more) and wa
         model: 'HS2WD-E',
         note: `
 ### Triggering the alarm
-The alarm can be trigged by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` message
+The alarm can be trigged by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` message
 \`{"warning": {"duration": 10, "mode": "emergency", "strobe": false}}\`.
 
 Where:
@@ -2142,7 +2142,7 @@ Decoupled mode allows to turn wired switch into wireless button with separately 
 This might be useful to assign some custom actions to buttons and control relay remotely.
 This command also allows to redefine which button controls which relay for the double switch (not supported for QBKG25LM).
 
-Topic \`zigbee2mqtt/[FRIENDLY_NAME]/system/set\` should be used to modify operation mode.
+Topic \`zigbee2mqtt/FRIENDLY_NAME/system/set\` should be used to modify operation mode.
 
 **NOTE:** For QBKG25LM instead of \`system\` use \`left\`, \`center\` or \`right\` and leave out the \`button\` property in the payload.
 
@@ -2163,7 +2163,7 @@ Values                | Description
 \`control_right_relay\` | Button directly controls right relay (for double switch, not supported for QBKG25LM)
 \`decoupled\`           | Button doesn't control any relay
 
-\`zigbee2mqtt/[FRIENDLY_NAME]/system/get\` to read current mode.
+\`zigbee2mqtt/FRIENDLY_NAME/system/get\` to read current mode.
 
 Payload:
 \`\`\`js
@@ -2174,7 +2174,7 @@ Payload:
 }
 \`\`\`
 
-Response will be sent to \`zigbee2mqtt/[FRIENDLY_NAME]\`, example: \`{"operation_mode_right":"control_right_relay"}\`
+Response will be sent to \`zigbee2mqtt/FRIENDLY_NAME\`, example: \`{"operation_mode_right":"control_right_relay"}\`
 `,
     },
     {
@@ -2192,7 +2192,7 @@ See [link](https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691
         note: `
 ### Power outage memory
 This option allows the device to restore the last on/off state when it's reconnected to power.
-To set this option publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"power_outage_memory": true}\` (or \`false\`).
+To set this option publish to \`zigbee2mqtt/FRIENDLY_NAME/set\` payload \`{"power_outage_memory": true}\` (or \`false\`).
 Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
 `,
     },
@@ -2276,7 +2276,7 @@ In case you want to confirm this action (e.g. \`action_code\` value is OK), resp
         note: `
 ### Do not disturb mode
 This option allows to turn off the indicator lights between 21:00 and 09:00.
-To set this option publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"do_not_disturb": true}\` (or \`false\`).
+To set this option publish to \`zigbee2mqtt/FRIENDLY_NAME/set\` payload \`{"do_not_disturb": true}\` (or \`false\`).
 `,
     },
     {
@@ -2310,7 +2310,7 @@ The remote supports [binding](../information/binding) on each endpoint, so you c
         model: ['ZNCLDJ12LM', 'ZNCLDJ11LM'],
         note: `
 ### Configuration of device attributes
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` various device attributes can be configured:
 \`\`\`json
 {
     "options":{
@@ -2330,7 +2330,7 @@ You can send a subset of options, all options that won't be specified will be re
 After changing \`reverse_direction\` you will need to fully open and fully close the curtain so the motor will re-detect edges. \`reverse_direction\` will get new state only after this recalibration.
 
 ### Lost configuration on long power outage
-If motor is used without battery it may lose configuration after long power outage. In that case you need to perform end stops calibration again publishing the following command sequence with topic \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+If motor is used without battery it may lose configuration after long power outage. In that case you need to perform end stops calibration again publishing the following command sequence with topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 1. \`{ "options": { "reset_limits": true } }\`
 2. \`{ "state": "close" }\`
 3. Wait here for curtain closure.
@@ -2503,7 +2503,7 @@ Bit | Position
 In case the inputs need to be reconfigured (e.g. to use stationary switches instead of momentary ones or vice versa) this can be done in the same way as [it is being done for the ubisys C4](C4.html#configuring-inputs).
 
 ### Configuration of device attributes
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` various device attributes can be configured:
 \`\`\`json
 {
     "configure_j1": {
@@ -2537,11 +2537,11 @@ As an alternative to the attributes listed above, the following properties may b
 (they shall both be equal according to ubisys manual), but takes value in *milli*seconds instead of in full AC waves
 * \`steps_per_second\`: factor to be used for conversion, defaults to 50 full AC waves per second if not provided
 
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/get/configure_j1\` the values of the configuration attributes can
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/get/configure_j1\` the values of the configuration attributes can
 also be read back from the device and be printed to the normal Zigbee2MQTT log.
 
 ### Calibration
-By publishing \`{"configure_j1": {"calibrate": 1}}\` to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` the device can also be
+By publishing \`{"configure_j1": {"calibrate": 1}}\` to \`zigbee2mqtt/FRIENDLY_NAME/set\` the device can also be
 calibrated after installation to support more advanced positioning features
 (i.e. go to lift percentage / go to tilt percentage). This can be combined with setting attributes as shown above,
 for example:
@@ -2948,7 +2948,7 @@ Other brand names depending on the country:
 * \`permanent_led\`: enable or disable the permanent blue LED. Values: \`ON\` / \`OFF\` (default)
 * \`led_when_on\`: enables the LED when the light is on. Values: \`ON\` / \`OFF\` (default)
 
-Example of MQTT message payload to disable permanent LED and enable LED when the lights are on. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+Example of MQTT message payload to disable permanent LED and enable LED when the lights are on. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
 \`\`\`js
 {
@@ -2960,7 +2960,7 @@ Example of MQTT message payload to disable permanent LED and enable LED when the
 ### Dimmer
 * \`dimmer_enabled\`: enable or disable the dimming functions. Values: \`ON\` / \`OFF\` (default)
 
-Example of MQTT message payload to enable dimming. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+Example of MQTT message payload to enable dimming. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
 \`\`\`
 {
@@ -2987,7 +2987,7 @@ Helps to identify the switch using the LED.
     - \`pink\`
     - \`white\`
 
-Example of MQTT message payload to Identify the switch. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+Example of MQTT message payload to Identify the switch. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
 \`\`\`js
 {
@@ -3151,7 +3151,7 @@ Other brand names depending on the country:
 ### Force read power
 * \`power\`: Asks the device for the current active power.
 
-Example of MQTT message payload to ask for the active power. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/get\`:
+Example of MQTT message payload to ask for the active power. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/get\`:
 
 \`\`\`js
 {
@@ -3163,7 +3163,7 @@ Example of MQTT message payload to ask for the active power. This shouuld be sen
 ### Power Alarm Configuration
 * \`power_alarm\`: enables or disables the power alarm, and sets the value: \`DISABLE\` (default) / \`integer\` (in kwh)
 
-Example of MQTT message payload to disable the power alarm. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+Example of MQTT message payload to disable the power alarm. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
 \`\`\`js
 {
@@ -3171,7 +3171,7 @@ Example of MQTT message payload to disable the power alarm. This shouuld be sent
 }
 \`\`\`
 
-Example of MQTT message payload to enable the power alarm at 3.3 kwh. This should be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+Example of MQTT message payload to enable the power alarm at 3.3 kwh. This should be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
 \`\`\`js
 {
@@ -3201,7 +3201,7 @@ Helps to identify the device using the LED.
     - \`pink\`
     - \`white\`
 
-Example of MQTT message payload to Identify the device. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+Example of MQTT message payload to Identify the device. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
 \`\`\`js
 {

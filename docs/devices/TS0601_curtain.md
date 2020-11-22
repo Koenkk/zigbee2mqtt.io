@@ -20,7 +20,7 @@ description: "Integrate your TuYa TS0601_curtain via Zigbee2MQTT with whatever s
 
 
 ### Configuration of device attributes
-By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can be configured:
+By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can be configured:
 ```json
 {
     "options":{
@@ -41,9 +41,9 @@ By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can
 ## Exposes
 ### Cover 
 The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
-To control this cover publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state": "OPEN"}` or `{"state": "CLOSE"}`.
-To read the current state of this cover publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state": ""}`.
-To change the position publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
+To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}` or `{"state": "CLOSE"}`.
+To read the current state of this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

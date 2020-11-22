@@ -41,7 +41,7 @@ Decoupled mode allows to turn wired switch into wireless button with separately 
 This might be useful to assign some custom actions to buttons and control relay remotely.
 This command also allows to redefine which button controls which relay for the double switch (not supported for QBKG25LM).
 
-Topic `zigbee2mqtt/[FRIENDLY_NAME]/system/set` should be used to modify operation mode.
+Topic `zigbee2mqtt/FRIENDLY_NAME/system/set` should be used to modify operation mode.
 
 **NOTE:** For QBKG25LM instead of `system` use `left`, `center` or `right` and leave out the `button` property in the payload.
 
@@ -62,7 +62,7 @@ Values                | Description
 `control_right_relay` | Button directly controls right relay (for double switch, not supported for QBKG25LM)
 `decoupled`           | Button doesn't control any relay
 
-`zigbee2mqtt/[FRIENDLY_NAME]/system/get` to read current mode.
+`zigbee2mqtt/FRIENDLY_NAME/system/get` to read current mode.
 
 Payload:
 ```js
@@ -73,15 +73,15 @@ Payload:
 }
 ```
 
-Response will be sent to `zigbee2mqtt/[FRIENDLY_NAME]`, example: `{"operation_mode_right":"control_right_relay"}`
+Response will be sent to `zigbee2mqtt/FRIENDLY_NAME`, example: `{"operation_mode_right":"control_right_relay"}`
 
 
 
 ## Exposes
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state": ""}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

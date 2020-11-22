@@ -30,7 +30,7 @@ Decoupled mode allows to turn wired switch into wireless button with separately 
 This might be useful to assign some custom actions to buttons and control relay remotely.
 This command also allows to redefine which button controls which relay for the double switch (not supported for QBKG25LM).
 
-Topic `zigbee2mqtt/[FRIENDLY_NAME]/system/set` should be used to modify operation mode.
+Topic `zigbee2mqtt/FRIENDLY_NAME/system/set` should be used to modify operation mode.
 
 **NOTE:** For QBKG25LM instead of `system` use `left`, `center` or `right` and leave out the `button` property in the payload.
 
@@ -51,7 +51,7 @@ Values                | Description
 `control_right_relay` | Button directly controls right relay (for double switch, not supported for QBKG25LM)
 `decoupled`           | Button doesn't control any relay
 
-`zigbee2mqtt/[FRIENDLY_NAME]/system/get` to read current mode.
+`zigbee2mqtt/FRIENDLY_NAME/system/get` to read current mode.
 
 Payload:
 ```js
@@ -62,25 +62,25 @@ Payload:
 }
 ```
 
-Response will be sent to `zigbee2mqtt/[FRIENDLY_NAME]`, example: `{"operation_mode_right":"control_right_relay"}`
+Response will be sent to `zigbee2mqtt/FRIENDLY_NAME`, example: `{"operation_mode_right":"control_right_relay"}`
 
 
 
 ## Exposes
 ### Switch (left endpoint)
 The current state of this switch is in the published state under the `state_left` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_left": "ON"}`, `{"state_left": "OFF"}` or `{"state_left": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_left": ""}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_left": "ON"}`, `{"state_left": "OFF"}` or `{"state_left": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_left": ""}`.
 
 ### Switch (right endpoint)
 The current state of this switch is in the published state under the `state_right` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state_right": ""}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
 
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"power": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
 

@@ -27,20 +27,20 @@ Press and hold the button on the device for +- 10 seconds
 ## Exposes
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state": ""}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"power": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
 
 ### Energy (numeric)
 Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"energy": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
@@ -53,7 +53,7 @@ The unit of this value is `°C`.
 ### Voltage (numeric)
 Measured electrical potential value.
 Value can be found in the published state on the `voltage` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"voltage": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `V`.
 

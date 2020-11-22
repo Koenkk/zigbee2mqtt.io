@@ -59,8 +59,8 @@ The possible values are: `button_1_hold`, `button_1_release`, `button_1_single`,
 ### Operation_mode (enum)
 Operation mode, select "command" to enable bindings.
 Value can be found in the published state on the `operation_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"operation_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"operation_mode": NEW_VALUE}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `command`, `event`.
 
 ### Linkquality (numeric)

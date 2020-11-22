@@ -48,14 +48,14 @@ If you want to automate the publishing of the outdoor temperature using Home Ass
 ### Local_temperature (numeric)
 Current temperature measured on the device.
 Value can be found in the published state on the `local_temperature` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"local_temperature": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Lock 
 The current state of this lock is in the published state under the `keypad_lockout` property (value is `1` or `0`).
-To control this lock publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"keypad_lockout": "1"}` or `{"keypad_lockout": "0"}`.
-To read the current state of this lock publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"keypad_lockout": ""}`.
+To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keypad_lockout": "1"}` or `{"keypad_lockout": "0"}`.
+To read the current state of this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keypad_lockout": ""}`.
 
 ### Climate 
 TODO

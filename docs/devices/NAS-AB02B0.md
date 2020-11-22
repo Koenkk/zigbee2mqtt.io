@@ -49,62 +49,62 @@ The unit of this value is `%`.
 
 ### Humidity_alarm (binary)
 Value can be found in the published state on the `humidity_alarm` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"humidity_alarm": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"humidity_alarm": NEW_VALUE}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_alarm": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_alarm": NEW_VALUE}`.
 If value equals `true` humidity_alarm is ON, if `false` OFF.
 
 ### Temperature_alarm (binary)
 Value can be found in the published state on the `temperature_alarm` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"temperature_alarm": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"temperature_alarm": NEW_VALUE}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_alarm": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_alarm": NEW_VALUE}`.
 If value equals `true` temperature_alarm is ON, if `false` OFF.
 
 ### Alarm (binary)
 Value can be found in the published state on the `alarm` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"alarm": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"alarm": NEW_VALUE}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
 If value equals `true` alarm is ON, if `false` OFF.
 
 ### Melody (enum)
 Value can be found in the published state on the `melody` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"melody": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"melody": NEW_VALUE}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"melody": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"melody": NEW_VALUE}`.
 The possible values are: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`.
 
 ### Duration (numeric)
 Value can be found in the published state on the `duration` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"duration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"duration": NEW_VALUE}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"duration": NEW_VALUE}`.
 The unit of this value is `second`.
 
 ### Temperature_min (numeric)
 Value can be found in the published state on the `temperature_min` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"temperature_min": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"temperature_min": NEW_VALUE}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_min": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_min": NEW_VALUE}`.
 The unit of this value is `°C`.
 
 ### Temperature_max (numeric)
 Value can be found in the published state on the `temperature_max` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"temperature_max": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"temperature_max": NEW_VALUE}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_max": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_max": NEW_VALUE}`.
 The unit of this value is `°C`.
 
 ### Humidity_min (numeric)
 Value can be found in the published state on the `humidity_min` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"humidity_min": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"humidity_min": NEW_VALUE}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_min": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_min": NEW_VALUE}`.
 The unit of this value is `%`.
 
 ### Humidity_max (numeric)
 Value can be found in the published state on the `humidity_max` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"humidity_max": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"humidity_max": NEW_VALUE}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_max": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_max": NEW_VALUE}`.
 The unit of this value is `%`.
 
 ### Volume (enum)
 Value can be found in the published state on the `volume` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"volume": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"volume": NEW_VALUE}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"volume": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Linkquality (numeric)

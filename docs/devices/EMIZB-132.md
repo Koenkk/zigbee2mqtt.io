@@ -47,35 +47,35 @@ Related issues:
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"power": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
 
 ### Energy (numeric)
 Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"energy": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### Current (numeric)
 Instantaneous measured electrical current.
 Value can be found in the published state on the `current` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"current": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `A`.
 
 ### Voltage (numeric)
 Measured electrical potential value.
 Value can be found in the published state on the `voltage` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"voltage": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `V`.
 
 ### Current_phase_b (numeric)
 Instantaneous measured electrical current on phase B.
 Value can be found in the published state on the `current_phase_b` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"current_phase_b": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_phase_b": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `A`.
 
@@ -88,7 +88,7 @@ The unit of this value is `V`.
 ### Current_phase_c (numeric)
 Instantaneous measured electrical current on phase C.
 Value can be found in the published state on the `current_phase_c` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"current_phase_c": ""}`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_phase_c": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `A`.
 

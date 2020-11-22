@@ -24,7 +24,7 @@ description: "Integrate your Xiaomi ZNCLDJ12LM via Zigbee2MQTT with whatever sma
 
 
 ### Configuration of device attributes
-By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can be configured:
+By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can be configured:
 ```json
 {
     "options":{
@@ -44,7 +44,7 @@ You can send a subset of options, all options that won't be specified will be re
 After changing `reverse_direction` you will need to fully open and fully close the curtain so the motor will re-detect edges. `reverse_direction` will get new state only after this recalibration.
 
 ### Lost configuration on long power outage
-If motor is used without battery it may lose configuration after long power outage. In that case you need to perform end stops calibration again publishing the following command sequence with topic `zigbee2mqtt/[FRIENDLY_NAME]/set`:
+If motor is used without battery it may lose configuration after long power outage. In that case you need to perform end stops calibration again publishing the following command sequence with topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 1. `{ "options": { "reset_limits": true } }`
 2. `{ "state": "close" }`
 3. Wait here for curtain closure.
@@ -76,9 +76,9 @@ Motor leaves calibration mode automatically after it reaches the both open and c
 ## Exposes
 ### Cover 
 The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
-To control this cover publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"state": "OPEN"}` or `{"state": "CLOSE"}`.
-To read the current state of this cover publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"state": ""}`.
-To change the position publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
+To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}` or `{"state": "CLOSE"}`.
+To read the current state of this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Battery (numeric)
 Remaining battery in %.

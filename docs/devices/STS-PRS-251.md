@@ -55,7 +55,7 @@ The possible values are: `beeping`.
 ### Beep (enum)
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"beep": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"beep": NEW_VALUE}`.
 The possible values are: ``.
 
 ### Linkquality (numeric)

@@ -19,7 +19,7 @@ description: "Integrate your HEIMAN HS2WD-E via Zigbee2MQTT with whatever smart 
 
 
 ### Triggering the alarm
-The alarm can be trigged by publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` message
+The alarm can be trigged by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` message
 `{"warning": {"duration": 10, "mode": "emergency", "strobe": false}}`.
 
 Where:

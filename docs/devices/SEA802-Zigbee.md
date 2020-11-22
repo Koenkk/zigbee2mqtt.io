@@ -30,13 +30,13 @@ If value equals `true` battery_low is ON, if `false` OFF.
 
 ### Switch 
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"window_detection": ""}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_detection": ""}`.
 
 ### Lock 
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
-To read the current state of this lock publish a message to topic `zigbee2mqtt/[FRIENDLY_NAME]/get` with payload `{"child_lock": ""}`.
+To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+To read the current state of this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
 
 ### Climate 
 TODO
