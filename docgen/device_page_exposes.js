@@ -19,7 +19,6 @@ function capitalizeFirstLetter(string) {
 }
 
 function getExposeDocs(expose) {
-    // TODO climate
     const lines = [];
     const title = [];
     if (expose.name) title.push(expose.type);
