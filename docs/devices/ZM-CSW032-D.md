@@ -17,7 +17,11 @@ description: "Integrate your Zemismart ZM-CSW032-D via Zigbee2MQTT with whatever
 
 ## Notes
 
-None
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
+
 
 
 ## Exposes

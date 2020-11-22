@@ -1042,7 +1042,7 @@ the Device with a Philips LivingColors Remote Gen 2 as it should try all Zigbee 
     {
         vendor: 'Philips',
         notModel: ['324131092621'],
-        supports: ['brightness'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'light' && e.features.find((f) => f.name === 'brightness')),
         note: `
 ### Pairing
 Factory resetting a Hue bulb can be accomplished in 5 ways.
@@ -1073,7 +1073,7 @@ by pressing and holding the reset button on the bottom of the remote (next to th
     {
         vendor: 'Philips',
         notModel: ['324131092621'],
-        supports: ['brightness', 'on/off'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'light' || e.type === 'switch'),
         note: `
 ### Power-on behavior
 This device allows you to set the power-on behavior. Note that this requires at least November/December '18 firmware update of the device.
@@ -1108,7 +1108,7 @@ Note: if \`hue_power_on_behavior\` is set to \`off\`, then the only way to turn 
     {
         vendor: ['OSRAM', 'Sylvania', 'LEDVANCE'],
         notModel: [],
-        supports: ['brightness'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'light' && e.features.find((f) => f.name === 'brightness')),
         note: `
 ### Set default power on/off transition
 Various Osram/Sylvania LED support setting a default transition when turning a light on and off.
@@ -1473,7 +1473,7 @@ small pin or paperclip to push the reset button once.
     },
     {
         vendor: 'IKEA',
-        supports: ['brightness'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'light' && e.features.find((f) => f.name === 'brightness')),
         notModel: ['E1524/E1810', 'ICPSHC24-10EU-IL-1', 'ICPSHC24-30EU-IL-1', 'ICTC-G-1', 'E1743'],
         note: `
 ### Pairing
@@ -1785,7 +1785,7 @@ More detailed information about this can be found [here](https://community.hubit
     },
     {
         vendor: 'Innr',
-        supports: ['brightness'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'light' && e.features.find((f) => f.name === 'brightness')),
         note: `
 ### Pairing
 Factory reset the light bulb ([video](https://www.youtube.com/watch?v=4zkpZSv84H4)).
@@ -1826,7 +1826,7 @@ This device has various limitations:
 
     // Device specific configuration
     {
-        supports: ['position'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'cover' && e.features.find((f) => f.name === 'position')),
         notModel: ['SV01', 'SV02'],
         deviceTypeSpecificConfiguration: true,
         note: `
@@ -1855,7 +1855,7 @@ This device has various limitations:
 `,
     },
     {
-        supports: ['illuminance'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'numeric' && e.name === 'illuminance'),
         notModel: ['RTCGQ11LM', 'GZCGQ01LM'],
         deviceTypeSpecificConfiguration: true,
         note: `
@@ -1865,7 +1865,7 @@ when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 pr
 `,
     },
     {
-        supports: ['illuminance'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'numeric' && e.name === 'illuminance'),
         deviceTypeSpecificConfiguration: true,
         note: `
 * \`illuminance_lux_calibration\`: Allows to manually calibrate illuminance values,
@@ -1873,10 +1873,8 @@ e.g. \`95\` would take 95% to the illuminance reported by the device; default \`
 `,
     },
     {
-        supports: ['temperature'],
-        notSupports: ['color temperature', 'thermostat'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'numeric' && e.name === 'temperature'),
         deviceTypeSpecificConfiguration: true,
-        notDescription: ['thermostat'],
         notModel: ['Zen-01-W'],
         note: `
 * \`temperature_precision\`: Controls the precision of \`temperature\` values,
@@ -1927,7 +1925,7 @@ This device can work on any channel, not only 15, 20, 11 or 25. For this refer t
 `,
     },
     {
-        supports: ['humidity'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'numeric' && e.name === 'humidity'),
         notModel: ['SMT402', 'SMT402AD'],
         note: `
 * \`humidity_precision\`: Controls the precision of \`humidity\` values, e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
@@ -1936,7 +1934,7 @@ when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1
 `,
     },
     {
-        supports: ['pressure'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'numeric' && e.name === 'pressure'),
         note: `
 * \`pressure_precision\`: Controls the precision of \`pressure\` values, e.g. \`0\` or \`1\`; default \`1\`.
 To control the precision based on the pressure value set it to e.g. \`{1000: 0, 100: 1}\`,
@@ -1961,7 +1959,7 @@ simulated_brightness:
 `,
     },
     {
-        supports: ['brightness', 'color temperature', 'color'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'light'),
         notModel: ['324131092621', 'ICZB-KPD18S', 'ICZB-KPD14S', 'TYZS1L'],
         deviceTypeSpecificConfiguration: true,
         note: `
@@ -1983,8 +1981,7 @@ To retrieve the state, send a \`get\` message to the device topic (\`zigbee2mqtt
 `,
     },
     {
-        supports: ['color'],
-        notModel: ['324131092621', 'ICZB-KPD18S', 'ICZB-KPD14S', 'TYZS1L'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'light' && e.features.find((f) => f.name === 'color_hs' || f.name === 'color_xy')),
         note: `
 * \`hue_correction\`: (optional) Corrects hue values based on a correction map for matching color
 rendition to other lights. Provide a minimum of 2 data sets in the correction map. To build a map:

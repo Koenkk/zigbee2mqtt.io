@@ -17,13 +17,6 @@ description: "Integrate your Lutron LZL4BWHL01 via Zigbee2MQTT with whatever sma
 
 ## Notes
 
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
-* `transition`: Controls the transition time (in seconds) of on/off, brightness,
-color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
-Note that this value is overridden if a `transition` value is present in the MQTT command payload.
-
 
 ### Pairing
 Factory reset the Lutron Connected Bulb Remote by pressing and holding the remote's top and bottom buttons for approximately 15 seconds. The light on the remote will blink rapidly to indicate that the remote has been reset.

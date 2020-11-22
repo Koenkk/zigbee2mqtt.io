@@ -84,12 +84,7 @@ function getNotes(device) {
                 });
             }
 
-            if (n.hasOwnProperty('supports') && n.supports.filter((s) => device.supports.includes(s)).length === 0) {
-                return false;
-            }
-
-            if (n.hasOwnProperty('notSupports') &&
-                n.notSupports.filter((s) => device.supports.includes(s)).length !== 0) {
+            if (n.hasOwnProperty('exposes') && !n.exposes(device.exposes)) {
                 return false;
             }
 

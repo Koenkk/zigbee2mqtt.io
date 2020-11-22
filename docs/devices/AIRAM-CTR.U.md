@@ -47,11 +47,6 @@ within 5 centimeters away from Airam bulb.
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 
-* `transition`: Controls the transition time (in seconds) of on/off, brightness,
-color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
-Note that this value is overridden if a `transition` value is present in the MQTT command payload.
-
-
 
 ## Exposes
 ### Action (enum)
