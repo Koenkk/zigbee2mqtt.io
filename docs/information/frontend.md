@@ -8,6 +8,7 @@ Zigbee2MQTT has a built-in webbased frontend. To enable the frontend add the fol
 ```yaml
 frontend:
   port: 8080
+  auth_token: your-secret-token # optional, to enable authentification
 experimental:
   new_api: true
 ```
