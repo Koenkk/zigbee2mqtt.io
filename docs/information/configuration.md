@@ -210,6 +210,19 @@ groups: groups.yaml
     friendly_name: group_1
 ```
 
+To define devices/groups in multiple files put the following in your `configuration.yaml`:
+
+```yaml
+devices:
+  - devices1.yaml
+  - devices2.yaml
+groups:
+  - groups1.yaml
+  - groups2.yaml
+```
+
+Any newly added devices will always be added to the first file (`devices1.yaml`/`groups1.yaml` in this example).
+
 ### Specifying MQTT user/password and network_key in a different file
 To specify the MQTT user/password and network_key in a different file, e.g `secret.yaml`, use the following configuration.
 
