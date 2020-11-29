@@ -1,6 +1,6 @@
 ---
 title: "Custom devices (DiY) ZWallRemote0 control via MQTT"
-description: "Integrate your Custom devices (DiY) ZWallRemote0 via Zigbee2mqtt with whatever smart home
+description: "Integrate your Custom devices (DiY) ZWallRemote0 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -11,8 +11,8 @@ description: "Integrate your Custom devices (DiY) ZWallRemote0 via Zigbee2mqtt w
 
 | Model | ZWallRemote0  |
 | Vendor  | Custom devices (DiY)  |
-| Description | Matts Wall Switch Remote (https://github.com/mattlokes/ZWallRemote) |
-| Supports | on/off |
+| Description | [Matts Wall Switch Remote](https://github.com/mattlokes/ZWallRemote) |
+| Supports | action |
 | Picture | ![Custom devices (DiY) ZWallRemote0](../images/devices/ZWallRemote0.jpg) |
 
 ## Notes
@@ -37,8 +37,16 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    value_template: "{{ value_json.action }}"
+    icon: "mdi:gesture-double-tap"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

@@ -1,6 +1,6 @@
 ---
 title: "eWeLink SA-003-Zigbee control via MQTT"
-description: "Integrate your eWeLink SA-003-Zigbee via Zigbee2mqtt with whatever smart home
+description: "Integrate your eWeLink SA-003-Zigbee via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -17,7 +17,10 @@ description: "Integrate your eWeLink SA-003-Zigbee via Zigbee2mqtt with whatever
 
 ## Notes
 
-None
+
+### Pairing
+Reset by unplugging any devices plugged into the socket, hold the button down for 10 secs until the light flashes Green/Orange and the Socket switches on and off. pair within 60 secs
+    
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -39,8 +42,9 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi ZNMS13LM control via MQTT"
-description: "Integrate your Xiaomi ZNMS13LM via Zigbee2mqtt with whatever smart home
+description: "Integrate your Xiaomi ZNMS13LM via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -11,8 +11,8 @@ description: "Integrate your Xiaomi ZNMS13LM via Zigbee2mqtt with whatever smart
 
 | Model | ZNMS13LM  |
 | Vendor  | Xiaomi  |
-| Description | Aqara S2 Lock Pro |
-| Supports | report: open, close, operation |
+| Description | Aqara S2 lock pro |
+| Supports | open, close, operation (reporting only) |
 | Picture | ![Xiaomi ZNMS13LM](../images/devices/ZNMS13LM.jpg) |
 
 ## Notes
@@ -26,37 +26,36 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.state }}"
+    payload_on: "UNLOCK"
+    payload_off: "LOCK"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.reverse }}"
+    payload_on: "UNLOCK"
+    payload_off: "LOCK"
+
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
-
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_on: "UNLOCK"
-    payload_off: "LOCK"
-    value_template: "{{ value_json.state}}"
-    device_class: "lock"
-
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_on: "UNLOCK"
-    payload_off: "LOCK"
-    value_template: "{{ value_json.reverse}}"
-    device_class: "lock"
+    icon: "mdi:gesture-double-tap"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

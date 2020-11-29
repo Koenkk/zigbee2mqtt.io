@@ -44,7 +44,7 @@ The CC2530 has to be flashed with a router firmware which has to be done with a 
 | Webee CC2530 + CC2591 | ![Webee CC2530 + CC2591 pin layout](../images/webee_cc2530_cc2591_pinlayout.png) | ![CC2530 + CC2591](../images/cc2530_cc2591.jpg)
 
 ### Flashing
-Now the CC2530 can be flashed using the same instructions as [Flashing the CC2531](../getting_started/flashing_the_cc2531.md). The router firmwares can be found [here](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router).
+Now the CC2530 can be flashed using the same instructions as [Flashing the CC2531](../information/flashing_the_cc2531.md). The router firmwares can be found [here](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router).
 
 ![CC debugger connected to CC2530](../images/ccdebugger_cc2530.jpg)
 

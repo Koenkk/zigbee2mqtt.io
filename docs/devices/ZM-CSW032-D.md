@@ -1,6 +1,6 @@
 ---
 title: "Zemismart ZM-CSW032-D control via MQTT"
-description: "Integrate your Zemismart ZM-CSW032-D via Zigbee2mqtt with whatever smart home
+description: "Integrate your Zemismart ZM-CSW032-D via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -28,17 +28,20 @@ manual integration is possible with the following configuration:
 ```yaml
 cover:
   - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
-    optimistic: true
+    value_template: "{{ value_json.position }}"
+    set_position_template: "{ \"position\": {{ position }} }"
+    set_position_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    position_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

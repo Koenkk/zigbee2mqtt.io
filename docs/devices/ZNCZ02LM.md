@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi ZNCZ02LM control via MQTT"
-description: "Integrate your Xiaomi ZNCZ02LM via Zigbee2mqtt with whatever smart home
+description: "Integrate your Xiaomi ZNCZ02LM via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -21,6 +21,18 @@ description: "Integrate your Xiaomi ZNCZ02LM via Zigbee2mqtt with whatever smart
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
+
+You may have to unpair the switch from an existing coordinator before the pairing process will start.
+
+
+### Power outage memory
+This option allows the device to restore the last on/off state when it's reconnected to power.
+To set this option publish to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"power_outage_memory": true}` (or `false`).
+Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
+
+
+### Voltage
+Some versions of the plug provide voltage. This depends on the firmware on the device. Confirmed working are the ones with `dateCode` `02-28-2017` (can be checked in `data/database.db`). Note that Xiaomi doesn't provide firmware files, so the software cannot be downgraded/upgraded.
 
 
 ## Manual Home Assistant configuration
@@ -44,15 +56,32 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "W"
-    icon: "mdi:factory"
     value_template: "{{ value_json.power }}"
+    icon: "mdi:flash"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "kWh"
+    value_template: "{{ value_json.energy }}"
+    icon: "mdi:power-plug"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.temperature }}"
+    device_class: "temperature"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

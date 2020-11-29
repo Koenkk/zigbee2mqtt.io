@@ -1,6 +1,6 @@
 ---
 title: "Securifi PP-WHT-US control via MQTT"
-description: "Integrate your Securifi PP-WHT-US via Zigbee2mqtt with whatever smart home
+description: "Integrate your Securifi PP-WHT-US via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -20,7 +20,7 @@ description: "Integrate your Securifi PP-WHT-US via Zigbee2mqtt with whatever sm
 
 ### Pairing
 Additional steps are required because the Peanut Smart Plug does not provide a `modelId` in its database entry,
-and thus zigbee2mqtt cannot identify the product or how to handle it.
+and thus Zigbee2MQTT cannot identify the product or how to handle it.
 
 Reset the device and initiate pairing mode by holding the pairing button
 (the small button next to the on/off button) for ten seconds, releasing the button,
@@ -28,7 +28,7 @@ and unplugging the device.
 When plugged back in, the front LED will be blinking red and ready to receive a pairing request.
 When paired successfully, the red LED on the plug will stop blinking.
 
-After pairing, you must stop zigbee2mqtt and manually edit the zigbee2mqtt `database.db` file with a
+After pairing, you must stop Zigbee2MQTT and manually edit the Zigbee2MQTT `database.db` file with a
 text editor (note that the file may be owned by root).
 Find each line where the Peanut Smart Plug is listed (look for "SecuriFi Ltd." in the `ManufName` field)
 and **add** `"modelId":"PP-WHT-US",` between two existing fields.
@@ -37,7 +37,7 @@ and **add** `"modelId":"PP-WHT-US",` between two existing fields.
 to `..."manufId":4098,"modelId":"PP-WHT-US","manufName":"Securifi Ltd....`
 on each line for the device.
 
-Save the file and restart zigbee2mqtt.
+Save the file and restart Zigbee2MQTT.
 
 
 ### Power measurements
@@ -45,6 +45,9 @@ This device only support power measurements with an up-to-date firmware on the p
 via the original hub. In case of an older firmware you will only see 0 values in the measurements.
 Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -67,31 +70,40 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "W"
-    icon: "mdi:factory"
     value_template: "{{ value_json.power }}"
+    icon: "mdi:flash"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "A"
-    icon: "mdi:power-plug"
     value_template: "{{ value_json.current }}"
+    icon: "mdi:current-ac"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "V"
-    icon: "mdi:flash"
     value_template: "{{ value_json.voltage }}"
+    icon: "mdi:alpha-v"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.update_available}}"
 ```
 {% endraw %}
 

@@ -5,9 +5,16 @@ const utils = require('./utils');
 const notes = require('./device_page_notes');
 const YAML = require('json2yaml');
 const HomeassistantExtension = require('zigbee2mqtt/lib/extension/homeassistant');
-const homeassistant = new HomeassistantExtension(null, null, null, null);
+const homeassistant = new HomeassistantExtension(null, null, null, null, {on: () => {}});
 const assert = require('assert');
 const devices = require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices;
+
+function arrayEquals(a, b) {
+    return Array.isArray(a) &&
+      Array.isArray(b) &&
+      a.length === b.length &&
+      a.every((val, index) => val === b[index]);
+}
 
 function generate(device) {
     // verify that all model and notModel exist;
@@ -32,12 +39,12 @@ function generate(device) {
 
     return `---
 title: "${device.vendor} ${device.model} control via MQTT"
-description: "Integrate your ${device.vendor} ${device.model} via Zigbee2mqtt with whatever smart home
+description: "Integrate your ${device.vendor} ${device.model} via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/${device.model}.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/${utils.normalizeModel(device.model)}.md)*
 
 # ${device.vendor} ${device.model}
 
@@ -46,11 +53,14 @@ description: "Integrate your ${device.vendor} ${device.model} via Zigbee2mqtt wi
 | Description | ${device.description} |
 | Supports | ${device.supports} |
 | Picture | ![${device.vendor} ${device.model}](${image}) |
-
+${device.whiteLabel ? `| White-label | ${device.whiteLabel.map((d) => `${d.vendor} ${d.model}`).join(', ')} |\n` : ''}
 ## Notes
 
 ${getNotes(device)}
-
+${device.hasOwnProperty('ota') && ['AC01353010G'].includes(device.model) === false ? `
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+` : ''}
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
@@ -60,8 +70,18 @@ ${getHomeAssistantConfig(device)}
 }
 
 function getNotes(device) {
+    let deviceTypeSpecificConfigurationHeader = false;
     const note = notes
         .filter((n) => {
+            if (n.simulatedBrightness) {
+                if (device.model === 'ICTC-G-1') return true;
+                return device.fromZigbee.find((c) => {
+                    return arrayEquals(c.type, ['commandMoveToLevel', 'commandMoveToLevelWithOnOff']) ||
+                        arrayEquals(c.type, ['commandMove', 'commandMoveWithOnOff']) ||
+                        arrayEquals(c.type, ['commandStep', 'commandStepWithOnOff']);
+                });
+            }
+
             if (n.hasOwnProperty('supports') && n.supports.filter((s) => device.supports.includes(s)).length === 0) {
                 return false;
             }
@@ -90,7 +110,16 @@ function getNotes(device) {
 
             return n.model === device.model || (Array.isArray(n.vendor) ? n.vendor.includes(device.vendor) : n.vendor === device.vendor);
         })
-        .map((n) => n.note)
+        .map((n) => {
+            if (n.deviceTypeSpecificConfiguration && !deviceTypeSpecificConfigurationHeader) {
+                deviceTypeSpecificConfigurationHeader = true;
+                return `### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+${n.note}`;
+            } else {
+                return n.note;
+            }
+        })
         .join('\n');
     return note === '' ? 'None' : note;
 }
@@ -100,7 +129,7 @@ function getHomeAssistantConfig(device) {
 {% raw %}
 \`\`\`yaml
 `;
-    const configurations = homeassistant._getMapping()[device.model];
+    const configurations = homeassistant.getConfigs({definition: device, settings: {}});
 
     if (configurations) {
         configurations.forEach((d, i) => {

@@ -1,6 +1,6 @@
 ---
 title: "Hej GLSK6ZB-1715 control via MQTT"
-description: "Integrate your Hej GLSK6ZB-1715 via Zigbee2mqtt with whatever smart home
+description: "Integrate your Hej GLSK6ZB-1715 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -41,6 +41,15 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
+    value_template: "{{ value_json.state_top_right }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/top_right/set"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
     value_template: "{{ value_json.state_center_left }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/center_left/set"
 
@@ -59,15 +68,6 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
-    value_template: "{{ value_json.state_top_right }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/top_right/set"
-
-switch:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_off: "OFF"
-    payload_on: "ON"
     value_template: "{{ value_json.state_bottom_right }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/bottom_right/set"
 
@@ -75,8 +75,9 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

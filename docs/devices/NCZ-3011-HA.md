@@ -1,6 +1,6 @@
 ---
 title: "Nyce NCZ-3011-HA control via MQTT"
-description: "Integrate your Nyce NCZ-3011-HA via Zigbee2mqtt with whatever smart home
+description: "Integrate your Nyce NCZ-3011-HA via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -12,24 +12,12 @@ description: "Integrate your Nyce NCZ-3011-HA via Zigbee2mqtt with whatever smar
 | Model | NCZ-3011-HA  |
 | Vendor  | Nyce  |
 | Description | Door/window sensor |
-| Supports | motion, humidity and temperature |
+| Supports | contact |
 | Picture | ![Nyce NCZ-3011-HA](../images/devices/NCZ-3011-HA.jpg) |
 
 ## Notes
 
-
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
-
-* `temperature_precision`: Controls the precision of `temperature` values,
-e.g. `0`, `1` or `2`; default `2`.
-* `temperature_calibration`: Allows to manually calibrate temperature values,
-e.g. `1` would add 1 degree to the temperature reported by the device; default `0`.
-
-
-* `humidity_precision`: Controls the precision of `humidity` values, e.g. `0`, `1` or `2`; default `2`.
-
+None
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -42,33 +30,43 @@ binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.contact }}"
+    payload_on: false
+    payload_off: true
+    device_class: "door"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.battery_low }}"
     payload_on: true
     payload_off: false
-    value_template: "{{ value_json.occupancy }}"
-    device_class: "motion"
+    device_class: "battery"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.tamper }}"
+    payload_on: true
+    payload_off: false
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "%"
-    device_class: "humidity"
-    value_template: "{{ value_json.humidity }}"
+    value_template: "{{ value_json.battery }}"
+    device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
-    device_class: "temperature"
-    value_template: "{{ value_json.temperature }}"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

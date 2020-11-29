@@ -2,11 +2,62 @@
 ---
 # Alternative flashing methods
 
-*NOTE: When you have already flashed the stick and paired devices to it, reflashing it requires to re-pair all your devices!*
+### With Raspberry Pi (~3min)
 
-### Via Arduino Uno/ESP8266 with CCLoader
+1. Install [wiringPi](http://wiringpi.com/download-and-install/), if not already installed.
 
-**This has been tested with a Genuine Arudino Uno, an Arduino Pro Micro - China clone, and a NodeMCU ESP8266 and is significantly faster than CCLib**
+2. Install [flash_cc2531](https://github.com/jmichault/flash_cc2531) :
+```bash
+git clone https://github.com/jmichault/flash_cc2531.git
+```
+3. Connect the following pins of the debug port to the GPIO port :
+ * pin 1 (GND)	  -->	pin 39 (GND)
+ * pin 7 (reset)	-->	pin 35 (GPIO24, BCM19)
+ * pin 3 (DC)	  -->	pin 36 (GPIO27, BCM16)
+ * pin 4 (DD)	  -->	pin 38 (GPIO28, BCM20)
+
+ As with the arduino option above, connecting Target Voltage Sense to a 3.3v source eliminates the need to plug the device into a usb port, so optionally connect the following too:
+ * pin 2 (Target Voltage Sense) --> pin 1 or pin 17 (3.3v) on Raspi
+
+See above for the dispositions of pins on CC2531, and at [https://pinout.xyz/](https://pinout.xyz/) for pins on Raspberry.
+
+A downloader cable CC2531 ![](https://www.zigbee2mqtt.io/images/downloader_cable.png) and 4 Dupont line Female to Female are perfect for this purpose. If you don't want to buy a downloader cable, you need to bend the debug pins outwards to be able to connect your Dupont cables since the pins are too close together to connect the Dupont cables directly.
+
+Now insert the usb dongle in an USB port :
+
+![](https://raw.githubusercontent.com/jmichault/files/master/Raspberry-CC2531.jpg)
+
+4. Test by running :
+
+```bash
+cd flash_cc2531
+./cc_chipid
+```
+it should return :
+```
+  ID = b524.
+```
+If you see 0000 or ffff, something is wrong and you should probably check your wiring.
+
+5. Download and extract the latest firmware [CC2531_DEFAULT_20190608.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip).
+
+```bash
+cd ~/flash_cc2531       #assumming you git-cloned the program to your home directory
+wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip
+unzip CC2531_DEFAULT_20190608.zip  
+```
+
+6. Erase and flash the CC2531 :
+
+```bash
+./cc_erase
+./cc_write CC2531ZNP-Prod.hex
+```
+It takes around 3 minutes.
+
+### Via Arduino Uno/ESP8266 with CCLoader (~3min)
+
+**This has been tested with a Genuine Arduino Uno, an Arduino Pro Micro - China clone, and a NodeMCU ESP8266 and is significantly faster than CCLib**
 
 #### Prepare the firmware
 1. Download the correct firmware (in this example we'll be using the [CC2531 firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin/))
@@ -24,12 +75,12 @@
 #### Prepare CCLoader
 1. Download and unpack [CCLoader](https://github.com/RedBearLab/CCLoader)
 1. On Windows you can use the precompiled `CCloader.exe`
-1. On Linux you have to compile `CCLoader` yourself so change directory to `CCLoader/SourceCode/Linux`, and run 
+1. On Linux you have to compile `CCLoader` yourself so change directory to `CCLoader/SourceCode/Linux`, and run
    ```bash
    gcc main.c -o CCLoader
    ```
 
-#### Flashing the Arduino or ESP8266 and the CC2531 device 
+#### Flashing the Arduino or ESP8266 and the CC2531 device
 
 1. For Arduino, leave the pins set as default in 'Arduino\CCLoader\CCLoader.ino' (lines 86-90):
 ```
@@ -63,23 +114,23 @@ int LED = 2; //GPIO2=D4 and the Blue LED on the WeMos D1 Mini and the ESP-12E mo
    ![](https://www.waveshare.com/img/devkit/CC-Debugger/CC-Debugger-JTAG-Header.jpg)
 
    If you have a 3.3V Arduino you can optionaly connect `3.3V -> Target Voltage Sense (Pin 2)` and program the CC2531 without connecting the CC2531 to USB (in the next step).
-   
+
    Connect the ESP8266 pins as described below to the debug header of the CC device
-   
+
    | ESP8266 | CC Pin | CC Name |
    |---|---|---|
    | GND | 1 | GND |
    | D1/GPIO5 | 7 | RESETn |
    | D2/GPIO4 | 3 | DC (Debug Clock) |
    | D5/GPIO14 | 4 | DD (Debug Data) |
-   
+
    ![C2531 debug pins](https://user-images.githubusercontent.com/35885181/67834765-dcab2280-faad-11e9-8755-971f0e456217.jpg)
    ![CC2531 stick and NodeMCU](https://user-images.githubusercontent.com/35885181/67834764-dc128c00-faad-11e9-8e06-0937e1bb6790.jpg)
-   
+
 1. Connect Arduino/ESP8266 first, then within a couple seconds connect the CC2531 to USB power
 1. Place the prepared `CC2531ZNP-Prod.bin` next to the executable file
 1. Start the flashing process
-   
+
    **Windows**
    ```
    CCLoader_x86_64.exe [Number of the COM port] CC2531ZNP-Prod.bin 0
@@ -99,9 +150,9 @@ int LED = 2; //GPIO2=D4 and the Blue LED on the WeMos D1 Mini and the ESP-12E mo
 
 It should be done in a few minutes.
 
-If burning fails/gets stuck at `Request sent already! Waiting for respond...` - try again, check your wiring, try using `1` instead of `0` as the last parameter.
+If burning fails/gets stuck at `Request sent already! Waiting for respond...` - try again, check your wiring, try using `1` instead of `0` as the last parameter. Or try run command with `sudo`.
 
-### Via Arduino/ESP8266 with CCLib
+### Via Arduino/ESP8266 with CCLib (~3hrs)
 Flashing firmware via Arduino is implemented using the project https://github.com/wavesoft/CCLib
 **But with minor improvements!!!**
 
@@ -222,56 +273,3 @@ Flashing:
 
 Completed
 ```
-
-### With Raspberry
-
-1. Install [wiringPi](http://wiringpi.com/download-and-install/), if not already installed.
-
-2. Install [flash_cc2531](https://github.com/jmichault/flash_cc2531) :
-```bash
-git clone https://github.com/jmichault/flash_cc2531.git
-```
-3. Connect the following pins of the debug port to the GPIO port :
- * pin 1 (GND)	  -->	pin 39 (GND)
- * pin 7 (reset)	-->	pin 35 (GPIO24, BCM19)
- * pin 3 (DC)	  -->	pin 36 (GPIO27, BCM16)
- * pin 4 (DD)	  -->	pin 38 (GPIO28, BCM20)
- 
- As with the arduino option above, connecting Target Voltage Sense to a 3.3v source eliminates the need to plug the device into a usb port, so optionally connect the following too:
- * pin 2 (Target Voltage Sense) --> pin 1 or pin 17 (3.3v) on Raspi
-
-See above for the dispositions of pins on CC2531, and at [https://pinout.xyz/](https://pinout.xyz/) for pins on Raspberry.
-
-A downloader cable CC2531 ![](https://www.zigbee2mqtt.io/images/downloader_cable.png) and 4 Dupont line Female to Female are perfect for this purpose.
-
-Now insert the usb dongle in an USB port :
-
-![](https://github.com/jmichault/files/blob/master/Raspberry-CC2531.jpg)
-
-4. Test by running :
-
-```bash
-cd flash_cc2531
-./cc_chipid
-```
-it should return :
-```
-  ID = b524.
-```
-If you see 0000 or ffff, something is wrong and you should probably check your wiring.
-
-5. Download and extract the latest firmware [CC2531_DEFAULT_20190608.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip).
-
-```bash
-cd ~/flash_cc2531       #assumming you git-cloned the program to your home directory
-wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip
-unzip CC2531_DEFAULT_20190608.zip  
-```
-
-6. Erase and flash the CC2531 :
-
-```bash
-./cc_erase
-./cc_write CC2531ZNP-Prod.hex
-```
-It takes around 3 minutes.

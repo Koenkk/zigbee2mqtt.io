@@ -1,14 +1,16 @@
 # How to connect to a remote adapter
-This how-to explains how to run Zigbee2mqtt with an adapter on a remote location.
+This how-to explains how to run Zigbee2MQTT with an adapter on a remote location.
 We will use ser2net for this which allows to connect to a serial port over TCP.
-In this way you can e.g. setup a Raspberry Pi Zero with the adapter connected while running Zigbee2mqtt on a different system. The instructions below have to be executed on the system where the adapter is connected to.
+In this way you can e.g. setup a Raspberry Pi Zero with the adapter connected while running Zigbee2MQTT on a different system. The instructions below have to be executed on the system where the adapter is connected to.
+
+DeCONZ Conbee II is not supported over tcp connections using this or any other configuration at this time. 
 
 ## 1. Install ser2net
 ```bash
 sudo apt-get install ser2net
 ```
 
-## 2. Configure ser2net
+## 2(a). Configure ser2net (<4.0)
 ```bash
 sudo nano /etc/ser2net.conf
 ```
@@ -24,12 +26,33 @@ After this reboot the system.
 reboot
 ```
 
+## 2(b). Configure ser2net (>=4.0)
+```bash
+sudo nano /etc/ser2net.yaml
+```
+
+Add the following entry, replace `/dev/ttyACM0` with the correct path to your adapter.
+
+```
+connection: &con01
+  accepter: tcp,20108
+  connector: serialdev,/dev/ttyACM0,115200n81,local
+  options:
+    kickolduser: true
+```
+
+After this reboot the system.
+```bash
+reboot
+```
+
+
 ## 3. Configure
-Now edit the Zigbee2mqtt `configuration.yaml` accordingly, replace `192.168.2.13` with the IP of your system where the adapter is connectd to.
+Now edit the Zigbee2MQTT `configuration.yaml` accordingly, replace `192.168.2.13` with the IP or hostname of your system where the adapter is connectd to.
 
 ```yaml
 serial:
     port: 'tcp://192.168.2.13:20108'
 ```
 
-Done! Now you can start Zigbee2mqtt.
+Done! Now you can start Zigbee2MQTT.

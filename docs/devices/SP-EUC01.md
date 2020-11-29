@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi SP-EUC01 control via MQTT"
-description: "Integrate your Xiaomi SP-EUC01 via Zigbee2mqtt with whatever smart home
+description: "Integrate your Xiaomi SP-EUC01 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi SP-EUC01 via Zigbee2mqtt with whatever smart
 | Model | SP-EUC01  |
 | Vendor  | Xiaomi  |
 | Description | Aqara EU smart plug |
-| Supports | on/off |
+| Supports | on/off, power measurements (depends on firmware) |
 | Picture | ![Xiaomi SP-EUC01](../images/devices/SP-EUC01.jpg) |
 
 ## Notes
@@ -39,8 +39,49 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "W"
+    value_template: "{{ value_json.power }}"
+    icon: "mdi:flash"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "kWh"
+    value_template: "{{ value_json.energy }}"
+    icon: "mdi:power-plug"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.temperature }}"
+    device_class: "temperature"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "V"
+    value_template: "{{ value_json.voltage }}"
+    icon: "mdi:alpha-v"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "A"
+    value_template: "{{ value_json.current }}"
+    icon: "mdi:current-ac"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

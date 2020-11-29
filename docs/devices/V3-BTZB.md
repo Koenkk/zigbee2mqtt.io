@@ -1,6 +1,6 @@
 ---
 title: "Danalock V3-BTZB control via MQTT"
-description: "Integrate your Danalock V3-BTZB via Zigbee2mqtt with whatever smart home
+description: "Integrate your Danalock V3-BTZB via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -17,7 +17,16 @@ description: "Integrate your Danalock V3-BTZB via Zigbee2mqtt with whatever smar
 
 ## Notes
 
-None
+
+### Pairing
+If pairing failed, try the followings:
+- Pairing it closer to the coordinator
+- Connecting the CC2531 via an USB extension cable (to avoid interference)
+- Replacing the batteries of the danalock.
+
+### App
+This device also come with an iOS app (Android as well but not tested). It is recommended to do the setups via the app for better control of the lock.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -32,13 +41,24 @@ lock:
     availability_topic: "zigbee2mqtt/bridge/state"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     value_template: "{{ value_json.state }}"
+    state_locked: "LOCK"
+    state_unlocked: "UNLOCK"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "%"
+    value_template: "{{ value_json.battery }}"
+    device_class: "battery"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

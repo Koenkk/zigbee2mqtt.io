@@ -1,6 +1,6 @@
 ---
 title: "TERNCY TERNCY-PP01 control via MQTT"
-description: "Integrate your TERNCY TERNCY-PP01 via Zigbee2mqtt with whatever smart home
+description: "Integrate your TERNCY TERNCY-PP01 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -18,16 +18,37 @@ description: "Integrate your TERNCY TERNCY-PP01 via Zigbee2mqtt with whatever sm
 ## Notes
 
 
+### Deprecated click event
+By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
+To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+
+```yaml
+devices:
+  '0x12345678':
+    friendly_name: my_device
+    legacy: false
+```
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
-* `illuminance_calibration`: Allows to manually calibrate illuminance values,
+
+* `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.
+To control the precision based on the illuminance_lux value set it to e.g. `{1000: 0, 100: 1}`,
+when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 precision will be 1.
+
+
+* `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
 e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
 
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
+To control the precision based on the temperature value set it to e.g. `{30: 0, 10: 1}`,
+when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1.
 * `temperature_calibration`: Allows to manually calibrate temperature values,
 e.g. `1` would add 1 degree to the temperature reported by the device; default `0`.
 
@@ -43,31 +64,6 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
-    device_class: "temperature"
-    value_template: "{{ value_json.temperature }}"
-
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_on: true
-    payload_off: false
-    value_template: "{{ value_json.occupancy }}"
-    device_class: "motion"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lx"
-    device_class: "illuminance"
-    value_template: "{{ value_json.illuminance }}"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
 
@@ -75,8 +71,49 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.temperature }}"
+    device_class: "temperature"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.occupancy }}"
+    payload_on: true
+    payload_off: false
+    device_class: "motion"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lx"
+    value_template: "{{ value_json.illuminance_lux }}"
+    device_class: "illuminance"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "-"
+    value_template: "{{ value_json.illuminance }}"
+    device_class: "illuminance"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.action }}"
+    icon: "mdi:gesture-double-tap"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

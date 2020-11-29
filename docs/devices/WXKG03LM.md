@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi WXKG03LM control via MQTT"
-description: "Integrate your Xiaomi WXKG03LM via Zigbee2mqtt with whatever smart home
+description: "Integrate your Xiaomi WXKG03LM via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -18,9 +18,29 @@ description: "Integrate your Xiaomi WXKG03LM via Zigbee2mqtt with whatever smart
 ## Notes
 
 
+### Deprecated click event
+By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
+To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+
+```yaml
+devices:
+  '0x12345678':
+    friendly_name: my_device
+    legacy: false
+```
+
+
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
+
+You may have to unpair the switch from an existing coordinator before the pairing process will start.
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 
 ## Manual Home Assistant configuration
@@ -42,22 +62,23 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "%"
-    device_class: "battery"
     value_template: "{{ value_json.battery }}"
+    device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
+    icon: "mdi:gesture-double-tap"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

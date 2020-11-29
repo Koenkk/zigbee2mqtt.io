@@ -1,6 +1,6 @@
 ---
 title: "Nue / 3A HGZB-41 control via MQTT"
-description: "Integrate your Nue / 3A HGZB-41 via Zigbee2mqtt with whatever smart home
+description: "Integrate your Nue / 3A HGZB-41 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -17,8 +17,10 @@ description: "Integrate your Nue / 3A HGZB-41 via Zigbee2mqtt with whatever smar
 
 ## Notes
 
+
 ### Pairing
 Reset of device is done by holding button for 20 secs until it starts to flash green. It will now automatically pair.
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -40,8 +42,9 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

@@ -1,6 +1,6 @@
 ---
 title: "eCozy 1TST-EU control via MQTT"
-description: "Integrate your eCozy 1TST-EU via Zigbee2mqtt with whatever smart home
+description: "Integrate your eCozy 1TST-EU via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -192,21 +192,24 @@ manual integration is possible with the following configuration:
 climate:
   - platform: "mqtt"
     availability_topic: "zigbee2mqtt/bridge/state"
+    temperature_unit: "C"
     min_temp: "7"
     max_temp: "30"
-    modes: 
-      - "off"
-      - "auto"
-      - "heat"
     mode_state_topic: true
     mode_state_template: "{{ value_json.system_mode }}"
     mode_command_topic: true
     current_temperature_topic: true
     current_temperature_template: "{{ value_json.local_temperature }}"
+    temp_step: 1
+    action_topic: true
+    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
+    modes: 
+      - "off"
+      - "auto"
+      - "heat"
     temperature_state_topic: true
     temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
     temperature_command_topic: "occupied_heating_setpoint"
-    temp_step: 1
 
 sensor:
   - platform: "mqtt"
@@ -220,7 +223,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    icon: "mdi:signal"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
 ```
 {% endraw %}

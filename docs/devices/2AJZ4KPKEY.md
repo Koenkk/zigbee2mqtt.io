@@ -1,6 +1,6 @@
 ---
 title: "Konke 2AJZ4KPKEY control via MQTT"
-description: "Integrate your Konke 2AJZ4KPKEY via Zigbee2mqtt with whatever smart home
+description: "Integrate your Konke 2AJZ4KPKEY via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -16,6 +16,29 @@ description: "Integrate your Konke 2AJZ4KPKEY via Zigbee2mqtt with whatever smar
 | Picture | ![Konke 2AJZ4KPKEY](../images/devices/2AJZ4KPKEY.jpg) |
 
 ## Notes
+
+
+### Deprecated click event
+By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
+To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+
+```yaml
+devices:
+  '0x12345678':
+    friendly_name: my_device
+    legacy: false
+```
+
+
+### Pairing
+Press and hold the reset button in the side of the device for +- 5 seconds (until the blue light starts blinking).
+You will need a needle or a pin to do it. After this the device will automatically join.
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 
 ### Important
@@ -41,15 +64,23 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "%"
-    device_class: "battery"
     value_template: "{{ value_json.battery }}"
+    device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    value_template: "{{ value_json.action }}"
+    icon: "mdi:gesture-double-tap"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

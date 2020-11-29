@@ -11,7 +11,7 @@ Sniffing Zigbee traffic can be handy sometimes. E.g. when you want to analyze th
 * CC2531 stick
 
 #### 1. Flashing the CC2531 stick
-The CC2531 needs to be flashed with a sniffer firmware. Flash the firmware using the instructions from [Flashing the CC2531](../getting_started/flashing_the_cc2531.md).
+The CC2531 needs to be flashed with a sniffer firmware. Flash the firmware using the instructions from [Flashing the CC2531](../information/flashing_the_cc2531.md).
 
 ##### Linux
 The firmware is included with [PACKET-SNIFFER](http://www.ti.com/tool/PACKET-SNIFFER) (not **PACKET-SNIFFER-2!**). Download PACKET-SNIFFER. As the sniffer firmware is only available in the windows installer we need to extact the hex file. This would require 7zip (p7zip-full or p7zip-plugins package depending on distro)
@@ -40,7 +40,7 @@ sudo make install
 Download and install the latest version of [Wireshark](https://www.wireshark.org/download.html). ZBOSS itself is portable and won't need to be installed.
 
 #### 3. Sniffing traffic
-On Ubuntu start wireshark with `sudo whsniff -c ZIGBEE_CHANNEL_NUMBER | wireshark -k -i -`. For Windows run the ZBOSS executable in `gui\zboss_sniffer.exe`, enter the path to your Wireshark executable and click on the `Start` button.
+On Ubuntu start wireshark with `sudo whsniff -c ZIGBEE_CHANNEL_NUMBER | wireshark -k -i -`. For Windows run the ZBOSS executable in `gui\zboss_sniffer.exe`, enter the path to your Wireshark executable and click on the `Start` button. For ZBOSS make sure the correct Zigbee channel is set, by default it will sniff on channel `0x0C (12)` but the default Zigbee2MQTT channel is 11 (`0x0B (11)`).
 
 Wireshark will start and log the Zigbee messages. As these messages are encrypted we need to add 2 encryption keys. The first one is the Trust Center link key, which is the same for (almost) every Zigbee network. The second one is the network encryption key (Transport Key).
 

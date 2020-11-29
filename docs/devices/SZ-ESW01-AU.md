@@ -1,6 +1,6 @@
 ---
 title: "Sercomm SZ-ESW01-AU control via MQTT"
-description: "Integrate your Sercomm SZ-ESW01-AU via Zigbee2mqtt with whatever smart home
+description: "Integrate your Sercomm SZ-ESW01-AU via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -19,7 +19,7 @@ description: "Integrate your Sercomm SZ-ESW01-AU via Zigbee2mqtt with whatever s
 
 
 ### Pairing
-Press and hold the pairing button while plugging in the device.
+With the device unplugged (or socket switched off), press and hold the pairing button for ~4 seconds. Continue holding the pairing button while plugging in the device (or switching the socket on) and continue to hold for 2 seconds. If pairing is successful the red LED will switch off for ~2 seconds, then flash.
 
 
 ## Manual Home Assistant configuration
@@ -29,14 +29,6 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "W"
-    icon: "mdi:factory"
-    value_template: "{{ value_json.power }}"
-
 switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
@@ -50,8 +42,17 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "W"
+    value_template: "{{ value_json.power }}"
+    icon: "mdi:flash"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

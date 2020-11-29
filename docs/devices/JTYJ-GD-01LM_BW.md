@@ -1,11 +1,11 @@
 ---
 title: "Xiaomi JTYJ-GD-01LM/BW control via MQTT"
-description: "Integrate your Xiaomi JTYJ-GD-01LM/BW via Zigbee2mqtt with whatever smart home
+description: "Integrate your Xiaomi JTYJ-GD-01LM/BW via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/JTYJ-GD-01LM/BW.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/JTYJ-GD-01LM_BW.md)*
 
 # Xiaomi JTYJ-GD-01LM/BW
 
@@ -26,13 +26,13 @@ Now the device is ready for pairing. To initiate pairing quickly press the butto
 
 ### Sensitivity
 The sensitivity can be changed by publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set`
-`{"sensitivity": "SENSITIVITY"}` where `SENSITVITIY` is one of the following
+`{"sensitivity": "SENSITIVITY"}` where `SENSITIVITY` is one of the following
 values: `low`, `medium`,  `high`.
 
 ### Self-test
 A self-test can be trigged by publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set`
 `{"selftest": ""}`.
-If the selftest is executed succesfully you will hear the device beep in 30 seconds.
+If the selftest is executed successfully you will hear the device beep in 30 seconds.
 
 
 ## Manual Home Assistant configuration
@@ -46,30 +46,47 @@ binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.smoke }}"
     payload_on: true
     payload_off: false
-    value_template: "{{ value_json.smoke }}"
     device_class: "smoke"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.battery_low }}"
+    payload_on: true
+    payload_off: false
+    device_class: "battery"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.tamper }}"
+    payload_on: true
+    payload_off: false
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "%"
-    device_class: "battery"
     value_template: "{{ value_json.battery }}"
+    device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.sensitivity }}"
-    icon: "mdi:filter-variant"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
     value_template: "{{ value_json.smoke_density }}"
     icon: "mdi:google-circles-communities"
 
@@ -77,8 +94,9 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

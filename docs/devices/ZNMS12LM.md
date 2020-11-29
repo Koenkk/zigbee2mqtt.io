@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi ZNMS12LM control via MQTT"
-description: "Integrate your Xiaomi ZNMS12LM via Zigbee2mqtt with whatever smart home
+description: "Integrate your Xiaomi ZNMS12LM via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -11,8 +11,8 @@ description: "Integrate your Xiaomi ZNMS12LM via Zigbee2mqtt with whatever smart
 
 | Model | ZNMS12LM  |
 | Vendor  | Xiaomi  |
-| Description | Aqara S2 Lock |
-| Supports | report: open, close, operation |
+| Description | Aqara S2 lock |
+| Supports | open, close, operation (reporting only) |
 | Picture | ![Xiaomi ZNMS12LM](../images/devices/ZNMS12LM.jpg) |
 
 ## Notes
@@ -30,33 +30,49 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:gesture-double-tap"
-    value_template: "{{ value_json.action }}"
+    unit_of_measurement: "%"
+    value_template: "{{ value_json.battery }}"
+    device_class: "battery"
 
 binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    payload_on: "UNLOCK"
-    payload_off: "LOCK"
-    value_template: "{{ value_json.state}}"
-    device_class: "lock"
+    value_template: "{{ value_json.battery_low }}"
+    payload_on: true
+    payload_off: false
+    device_class: "battery"
 
 binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.state }}"
     payload_on: "UNLOCK"
     payload_off: "LOCK"
-    value_template: "{{ value_json.reverse}}"
-    device_class: "lock"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.reverse }}"
+    payload_on: "UNLOCK"
+    payload_off: "LOCK"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    value_template: "{{ value_json.action }}"
+    icon: "mdi:gesture-double-tap"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

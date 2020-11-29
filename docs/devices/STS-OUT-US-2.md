@@ -1,6 +1,6 @@
 ---
 title: "SmartThings STS-OUT-US-2 control via MQTT"
-description: "Integrate your SmartThings STS-OUT-US-2 via Zigbee2mqtt with whatever smart home
+description: "Integrate your SmartThings STS-OUT-US-2 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -11,8 +11,8 @@ description: "Integrate your SmartThings STS-OUT-US-2 via Zigbee2mqtt with whate
 
 | Model | STS-OUT-US-2  |
 | Vendor  | SmartThings  |
-| Description | Outlet |
-| Supports | on/off |
+| Description | Zigbee smart plug with power meter |
+| Supports | on/off, power measurement |
 | Picture | ![SmartThings STS-OUT-US-2](../images/devices/STS-OUT-US-2.jpg) |
 
 ## Notes
@@ -39,8 +39,33 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "W"
+    value_template: "{{ value_json.power }}"
+    icon: "mdi:flash"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "A"
+    value_template: "{{ value_json.current }}"
+    icon: "mdi:current-ac"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "V"
+    value_template: "{{ value_json.voltage }}"
+    icon: "mdi:alpha-v"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

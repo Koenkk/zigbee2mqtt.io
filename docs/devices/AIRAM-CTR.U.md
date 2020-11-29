@@ -1,6 +1,6 @@
 ---
 title: "Airam AIRAM-CTR.U control via MQTT"
-description: "Integrate your Airam AIRAM-CTR.U via Zigbee2mqtt with whatever smart home
+description: "Integrate your Airam AIRAM-CTR.U via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -18,6 +18,19 @@ description: "Integrate your Airam AIRAM-CTR.U via Zigbee2mqtt with whatever sma
 ## Notes
 
 
+### Deprecated click event
+By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
+To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+
+```yaml
+devices:
+  '0x12345678':
+    friendly_name: my_device
+    legacy: false
+```
+
+
 ### Pairing
 Hold small reset button pressed (located under battery cover on the backside of remote) for 4
 seconds and device will reset and will attempt to join network.
@@ -28,12 +41,13 @@ Device seems to join network also when it is paired directly to Airam bulb (whic
 (https://www.zigbee2mqtt.io/devices/4713407.html) by keeping ON and DIM buttons pressed while holding remote
 within 5 centimeters away from Airam bulb.
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
-* `transition`: Controls the transition time (in seconds) of brightness,
+
+* `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
 
@@ -49,8 +63,16 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    value_template: "{{ value_json.action }}"
+    icon: "mdi:gesture-double-tap"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

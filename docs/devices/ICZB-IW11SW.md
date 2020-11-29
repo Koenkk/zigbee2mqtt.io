@@ -1,6 +1,6 @@
 ---
 title: "iCasa ICZB-IW11SW control via MQTT"
-description: "Integrate your iCasa ICZB-IW11SW via Zigbee2mqtt with whatever smart home
+description: "Integrate your iCasa ICZB-IW11SW via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -11,7 +11,7 @@ description: "Integrate your iCasa ICZB-IW11SW via Zigbee2mqtt with whatever sma
 
 | Model | ICZB-IW11SW  |
 | Vendor  | iCasa  |
-| Description | Zigbee 3.0 Switch |
+| Description | Zigbee 3.0 AC switch |
 | Supports | on/off |
 | Picture | ![iCasa ICZB-IW11SW](../images/devices/ICZB-IW11SW.jpg) |
 
@@ -39,8 +39,9 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

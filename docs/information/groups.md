@@ -3,7 +3,7 @@
 # Groups
 *Ongoing discussion can be found here: https://github.com/Koenkk/zigbee2mqtt/issues/764*
 
-Zigbee2mqtt has support for Zigbee groups. By using Zigbee groups you can control multiple devices simultaneously with one command.
+Zigbee2MQTT has support for Zigbee groups. By using Zigbee groups you can control multiple devices simultaneously with one command.
 
 ## Configuration
 Add the following to your `configuration.yaml`.
@@ -24,6 +24,7 @@ groups:
     # Note: this has to be the ieeeAddr of the device, not the friendly_name! (default: empty)
     devices:
       - '0x00158d00018255df'
+      - '0x00269a02031469ab'
 ```
 
 The group ID (in the above example `'1'`) should be a numerical string. In case you want to use a hexadecimal group ID (e.g. `0xe24c`) you should first convert it to a numerical string (e.g. `57932`).

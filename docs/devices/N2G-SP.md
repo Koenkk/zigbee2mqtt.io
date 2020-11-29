@@ -1,6 +1,6 @@
 ---
 title: "NET2GRID N2G-SP control via MQTT"
-description: "Integrate your NET2GRID N2G-SP via Zigbee2mqtt with whatever smart home
+description: "Integrate your NET2GRID N2G-SP via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -12,12 +12,29 @@ description: "Integrate your NET2GRID N2G-SP via Zigbee2mqtt with whatever smart
 | Model | N2G-SP  |
 | Vendor  | NET2GRID  |
 | Description | White Net2Grid power outlet switch with power meter |
-| Supports | on/off, power and energy measurement |
+| Supports | on/off, power measurement |
 | Picture | ![NET2GRID N2G-SP](../images/devices/N2G-SP.jpg) |
 
 ## Notes
 
-None
+
+### Deprecated click event
+By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
+
+To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
+
+```yaml
+devices:
+  '0x12345678':
+    friendly_name: my_device
+    legacy: false
+```
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
+
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -26,14 +43,6 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "W"
-    icon: "mdi:factory"
-    value_template: "{{ value_json.power }}"
-
 switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
@@ -47,8 +56,25 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "W"
+    value_template: "{{ value_json.power }}"
+    icon: "mdi:flash"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "kWh"
+    value_template: "{{ value_json.energy }}"
+    icon: "mdi:power-plug"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

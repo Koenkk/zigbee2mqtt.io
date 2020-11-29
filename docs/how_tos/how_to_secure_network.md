@@ -9,10 +9,10 @@ To disable joining it's important that `permit_join: false` is set in your `conf
 ## Change Zigbee network encryption key
 **Changing the network key requires repairing of all devices!**
 
-Zigbee2mqtt uses a known default encryption key (Zigbee Transport Key). Therefore it is recommended to use a different one. To use a different encryption key add the following to your `configuration.yaml`:
+Zigbee2MQTT uses a known default encryption key (Zigbee Transport Key). Therefore it is recommended to use a different one. To use a different encryption key add the following to your `configuration.yaml`:
 
 **Do not use this exact key.**
-```
+```yaml
 advanced:
   network_key: [7, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 11, 12, 13]
 ```
@@ -21,13 +21,8 @@ The network encryption key size is `128-bit` which is essentially 16 decimal val
 
 If you need to transform your decimals to hexadecimals (or vice versa) please use a [converter](https://www.binaryhexconverter.com/decimal-to-hex-converter). Example: 92 (decimal) would become 5C (hexadecimal).
 
-You can generate a valid decimal key with the following command in most linux systems:
-```
-dd if=/dev/urandom bs=1 count=16 2>/dev/null | od -A n -t u1 | awk '{printf "["} {for(i = 1; i< NF; i++) {printf "%s, ", $i}} {printf "%s]\n", $NF}'
-```
-Please be aware that if you use the Hass.io add-on for zigbee2mqtt only decimal keys are supported. 
-
-You can generate a valid hex key with the following command in most linux systems:
-```
-dd if=/dev/urandom bs=1 count=16 2>/dev/null | od -A n -t x1 | awk '{printf "["} {for(i = 1; i< NF; i++) {printf "0x%s, ", $i}} {printf "0x%s]\n", $NF}'
+To let Zigbee2MQTT generate a new network key on next startup, add the following to `configuration.yaml`:
+```yaml
+advanced:
+  network_key: GENERATE
 ```

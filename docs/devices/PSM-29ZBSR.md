@@ -1,6 +1,6 @@
 ---
 title: "Climax PSM-29ZBSR control via MQTT"
-description: "Integrate your Climax PSM-29ZBSR via Zigbee2mqtt with whatever smart home
+description: "Integrate your Climax PSM-29ZBSR via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -12,8 +12,9 @@ description: "Integrate your Climax PSM-29ZBSR via Zigbee2mqtt with whatever sma
 | Model | PSM-29ZBSR  |
 | Vendor  | Climax  |
 | Description | Power plug |
-| Supports | on/off |
+| Supports | on/off, power measurement |
 | Picture | ![Climax PSM-29ZBSR](../images/devices/PSM-29ZBSR.jpg) |
+| White-label | Blaupunkt PSM-S1 |
 
 ## Notes
 
@@ -39,8 +40,25 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "W"
+    value_template: "{{ value_json.power }}"
+    icon: "mdi:flash"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "kWh"
+    value_template: "{{ value_json.energy }}"
+    icon: "mdi:power-plug"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

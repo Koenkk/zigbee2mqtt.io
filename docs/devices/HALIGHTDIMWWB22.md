@@ -1,6 +1,6 @@
 ---
 title: "Hive HALIGHTDIMWWB22 control via MQTT"
-description: "Integrate your Hive HALIGHTDIMWWB22 via Zigbee2mqtt with whatever smart home
+description: "Integrate your Hive HALIGHTDIMWWB22 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -22,12 +22,10 @@ description: "Integrate your Hive HALIGHTDIMWWB22 via Zigbee2mqtt with whatever 
 Follow instructions from
 [How do I reset my Hive Active Light?](https://www.hivehome.com/ca/support/Help_installing_Hive/HIH_Hive_Active_Light/How-do-I-reset-my-Hive-Active-Light). After resetting the bulb will automatically connect.
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
-
-* `transition`: Controls the transition time (in seconds) of brightness,
+* `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
 
@@ -44,15 +42,28 @@ light:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
+    color_temp: false
+    xy: false
+    hs: false
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    brightness_scale: 254
+    effect: true
+    effect_list: 
+      - "blink"
+      - "breathe"
+      - "okay"
+      - "channel_change"
+      - "finish_effect"
+      - "stop_effect"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
+    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 
