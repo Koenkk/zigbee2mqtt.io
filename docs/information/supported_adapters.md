@@ -111,6 +111,7 @@ serial:
 ![ZiGate USB-TTL](../images/zigate_usb_ttl.png)
 
 - USB connnected Zigbee adapter
+- Hardware based on NXP JN516x ( JN5168 / JN5169 ) chip with open source [ZiGate firmware](https://github.com/fairecasoimeme/ZiGate) from @fairecasoimeme
 - Support is still experimental. ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/242))
 - In case you are getting the following error: `Error: Failed to connect to the adapter (Error: SRSP - SYS - ping after 6000ms)` set the following in your `configuration.yaml`.
 
