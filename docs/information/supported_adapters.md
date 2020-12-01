@@ -14,6 +14,19 @@ Zigbee2MQTT officially supports the following adapters:
 - Can be bought on [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2531)
 - [How to flash with CC debugger](../information/flashing_the_cc2531.md) or [alternative flashing methods](./alternative_flashing_methods.md)
 
+### Raspberry CC2538 HAT
+![cc2538hat](../images/cc2538hat.jpg)
+
+- Raspberry pinout compatible HAT with CC2538 and optional external antenna.
+- Can be used to create a very compact and powerful hub that runs independently by your home automation hub
+- **Very powerful** and capable to handle **+150 devices directly connected**.
+- Very good range, ~800m line of sight, sensitivity is due to the onboard CC2592 Power Amplifier (20db)
+- Can be programmed via JTAG programmer or via software if proper bootloader enabled firmware is preloaded
+- Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
+- Complete HAT preflashed can be bought on [Tindie](https://www.tindie.com/products/GiovanniCas/zigbee-hat-with-cc2538-for-raspberry/)
+- [How to flash with JTAG](./flashing_the_cc2538.md)
+- [How to flash via SERIAL](https://github.com/JelmerT/cc2538-bsl)
+
 ### Electrolama zig-a-zig-ah! (zzh!)
 ![zzh](../images/zzh.jpg)
 
@@ -57,11 +70,12 @@ Zigbee2MQTT officially supports the following adapters:
 - Cheap but needs specific PCBs to be used as coordinator (+- $5 bare chip)
 - **Very powerful** and capable to handle **+150 devices directly connected**.
 - Very good range, ~800m line of sight, sensitivity is due to the onboard CC2592 Power Amplifier (20db)
-- Requires JTAG programmer to be flashed
+- Can be programmed via JTAG programmer or via software if proper bootloader enabled firmware is preloaded
 - Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
 - Bare module can be bought on [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2538)
 - Complete dongle preflashed can be bought on [Tindie](https://www.tindie.com/products/GiovanniCas/cc2538-cc2592-zigbee-dongle-new-zb30/)
-- [How to flash](./flashing_the_cc2538.md)
+- [How to flash via JTAG](./flashing_the_cc2538.md)
+- [How to flash via SERIAL](https://www.tindie.com/products/GiovanniCas/zigbee-hat-with-cc2538-for-raspberry/)
 
 ### Texas Instruments LAUNCHXL-CC26X2R1
 ![CC26X2R1](../images/cc26x2r1.jpg)
