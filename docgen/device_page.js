@@ -9,6 +9,8 @@ const HomeassistantExtension = require('zigbee2mqtt/lib/extension/homeassistant'
 const homeassistant = new HomeassistantExtension(null, null, null, null, {on: () => {}});
 const assert = require('assert');
 const devices = require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices;
+const path = require('path');
+const imageBase = path.join(__dirname, '..', 'docs', 'images', 'devices');
 
 function arrayEquals(a, b) {
     return Array.isArray(a) &&
@@ -36,7 +38,7 @@ function generate(device) {
         check('notModel');
     }
 
-    const image = utils.getImage(device.model);
+    const image = utils.getImage(device, imageBase);
     const exposesDescription = Array.from(new Set(device.exposes.map((e) => e.hasOwnProperty('name') ? e.name : `${e.type} (${e.features.map((f) => f.name).join(', ')})`))).join(', ');
     return `---
 title: "${device.vendor} ${device.model} control via MQTT"

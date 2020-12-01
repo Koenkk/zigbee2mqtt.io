@@ -1,4 +1,13 @@
 const imageBase = '../images/devices/';
+const fs = require('fs');
+const path = require('path');
+
+function getImageName(model) {
+    const replaceByDash = [new RegExp('/', 'g'), new RegExp(':', 'g'), new RegExp(' ', 'g')];
+    let image = model;
+    replaceByDash.forEach((r) => image = image.replace(r, '-'));
+    return `${image}.jpg`;
+}
 
 module.exports = {
     normalizeModel: (model) => {
@@ -6,11 +15,13 @@ module.exports = {
         const re = new RegExp(find, 'g');
         return model.replace(re, '_');
     },
-    getImage: (model) => {
-        const replaceByDash = [new RegExp('/', 'g'), new RegExp(':', 'g'), new RegExp(' ', 'g')];
-        let image = model;
-        replaceByDash.forEach((r) => image = image.replace(r, '-'));
-        image = imageBase + `${image}.jpg`;
-        return image;
+    getImage: (definition, imagePathBase) => {
+        let result = getImageName(definition.model);
+
+        if (definition.whiteLabelOf && !fs.existsSync(path.join(imagePathBase, result))) {
+            result = getImageName(definition.whiteLabelOf.model);
+        }
+
+        return imageBase + result;
     },
 };

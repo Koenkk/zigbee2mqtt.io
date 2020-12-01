@@ -327,6 +327,9 @@ The reset button can be found by removing the back cover.
         note: `
 ### Pairing
 Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
+
+### Reporting intervals
+It has been reported, that the sensor reports humidity changes quite frequently (changes on 2nd digit level), but temperature changes are reported only once per hour or when temperature has changed > ~0.6°C. This results in a *staircase* development in recorded temperatures and inhibits fine-granular climate control. No resolution is known so far. See also [Homeassistant Community Forums](https://community.home-assistant.io/t/sonoff-snzb-02-temp-sensor-reporting-interval/216315/7)
 `,
     },
     {
@@ -344,12 +347,87 @@ Long press reset button for 5s until the LED indicator flashes three times, whic
 `,
     },
     {
+        model: ['TS130F'],
+        note: `
+### Calibration
+
+* Open curtains completly
+* Send calibration command to the switch: mosquitto_pub -d -m 'on' -t 'zigbee2mqtt/Living_Room_Sunblind_Switch/set/calibration'
+* Press on close button on the switch, wait until curtains are fully closed
+* Send calibration command to the switch: mosquitto_pub -d -m 'off' -t 'zigbee2mqtt/Living_Room_Sunblind_Switch/set/calibration'
+`,
+    },
+    {
         model: ['AU-A1ZB2WDM'],
         note: `
 ### Pairing
 To pair the dimmer, press and hold the knob for 6 seconds.
 The connected load, and the red LED indicator behind the dimmer knob will flash twice to indicate it has entered pairing mode.
 The connected load, and the red LED indicator behind the dimmer knob will flash a third time to indicate that it has paird successfully.
+`,
+    },
+    {
+        model: ['HG06467'],
+        note: `
+### Pairing
+Factory reset the LED string by holding the "F" button for 5 seconds.
+When you let go of the button the LED string should blink slowly
+After resetting the LED string will automatically connect.
+
+While pairing, keep the string close to the adapter.
+
+
+### Trigger effects
+Controls the 16 build-in effects of the LED string. An effect expects 3 parameters: \`speed\`, \`colors\` and \`effect\`. To trigger an effect send a message to \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"effect": {"effect": EFFECT, "speed": SPEED, "colors": COLORS}}\`. Description:
+ * \`SPEED\` should be a number between 1 and 100.
+ * \`COLORS\` is an array of JSON objects containing \`r\`, \`g\`, \`b\`. Note: some effects support multiple colors
+ * \`EFFECT\` is a string, below is a list of possible values and the amount of colors it supports
+\`\`\`
+|     effect             |     # colors    |
+|------------------------|-----------------|
+|     steady             |     1           |
+|     snow               |     1           |
+|     rainbow            |     0           |
+|     snake              |     6           |
+|     twinkle            |     2           |
+|     firework           |     2           |
+|     horizontal_flag    |     3           |
+|     waves              |     3           |
+|     updown             |     2           |
+|     vintage            |     1           |
+|     fading             |     1           |
+|     collide            |     1           |
+|     strobe             |     5           |
+|     sparkles           |     3           |
+|     carnaval           |     6           |
+|     glow               |     6           |
+\`\`\`
+#### Example message payload
+\`\`\`json
+{
+    "effect": {
+        "effect": "snake",
+        "speed": 100,
+        "colors": [
+            {
+                "r": 255,
+                "g": 0,
+                "b": 0
+            },
+            {
+                "r": 0,
+                "g": 255,
+                "b": 0
+            },
+            {
+                "r": 0,
+                "g": 0,
+                "b": 255
+            },
+        ]
+    }
+}
+\`\`\`
 `,
     },
     {
@@ -1482,8 +1560,8 @@ After resetting the bulb will automatically connect.
 
 While pairing, keep the bulb close to the CC2531 USB sniffer.
 
-What works is to use (very) short “on’s” and a little bit longer “off’s”.
-Start with bulb on, then off, and then 6 “on’s”, where you kill the light as soon as the bulb shows signs of turning on.
+What works is to use (very) short “on’s” and a little bit longer “off’s”, where you kill the light as soon as the bulb shows signs of turning on.
+Start with bulb on, then off, and then 6 “on’s”, wait in the 6th ON state. (If you try play safe and go for 7 "on's" the reset sometimes fails.)
 `,
     },
     {
@@ -2289,6 +2367,13 @@ Press and hold the button on the device for +- 10 seconds
         note: `
 ### Binding
 The remote supports [binding](../information/binding) for toggle action.
+`,
+    },
+    {
+        model: ['GL-G-001P'],
+        note: `
+### Remark
+This devices is similar to GL-G-001Z, except that zigbee routing should work for this one.
 `,
     },
     {
