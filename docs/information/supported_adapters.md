@@ -99,10 +99,23 @@ Zigbee2MQTT officially supports the following adapters:
 
 - USB connnected Zigbee adapter
 - **Very powerful**, will easily handle networks of 100+ devices.
-- Support is still experimental. ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/72))
+- Support is still **experimental**. ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/72))
 - In case you are getting the following error: `Error: Failed to connect to the adapter (Error: SRSP - SYS - ping after 6000ms)` set the following in your `configuration.yaml`.
 
 ```yaml
 serial:
   adapter: deconz
+```
+
+### ZiGate USB-TTL
+![ZiGate USB-TTL](../images/zigate_usb_ttl.png)
+
+- USB connnected Zigbee adapter
+- Hardware based on NXP JN516x ( JN5168 / JN5169 ) chip with open source [ZiGate firmware](https://github.com/fairecasoimeme/ZiGate) from @fairecasoimeme
+- Support is still **experimental**. ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/242))
+- In case you are getting the following error: `Error: Failed to connect to the adapter (Error: SRSP - SYS - ping after 6000ms)` set the following in your `configuration.yaml`.
+
+```yaml
+serial:
+  adapter: zigate
 ```
