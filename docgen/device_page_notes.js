@@ -624,24 +624,24 @@ also be read back from the device and be printed to the normal Zigbee2MQTT log.
 ### Binding
 Most of the \`input_actions\` and \`input_action_templates\` (besides scene control) do not reference a target device directly but make use of the binding table of a specific _outbound_ endpoint (for C4 see [General](#general) above, for other ubisys devices take a look at the respective ubisys reference manual). For the C4, Zigbee2MQTT will always bind all endpoints to the coordinator automatically (so Zigbee2MQTT will be able to forward button presses to MQTT), but to control any other ZigBee device or group directly, it is necessary to bind the _outbound_ endpoints used to the target (device or group).
 
-When binding (or unbinding), it is important to explicitely specify the _outbound_ endpoint as the source, e.g. \`zigbee2mqtt/bridge/bind/[SOURCE_DEVICE_FRIENDLY_NAME]/3\` (also see [Binding specific endpoint](../information/binding.html#binding-specific-endpoint)). Endpoints can be specified in numeric form and it is usually not necessary to specify an endpoint for the target device.
+When binding (or unbinding), it is important to explicitely specify the _outbound_ endpoint as the source, e.g. \`zigbee2mqtt/bridge/request/device/bind\` payload \`{"from": "SOURCE_DEVICE_FRIENDLY_NAME/2", "to": "TARGET"}\` (also see [Binding specific endpoint](../information/binding.html#binding-specific-endpoint)). Endpoints can be specified in numeric form and it is usually not necessary to specify an endpoint for the target device.
 
 For ubisys devices other than the C4 this also allows to use the secondary input to control a different device. Example: Use the secondary input on a D1 (uses _outbound_ endpoint 3 in the factory configuration) to control a separate ZigBee bulb:
 \`\`\`
-mosquitto_pub -t zigbee2mqtt/bridge/bind/<dimmer_friendly_name>/3 -m <another_bulb_friendly_name>
+mosquitto_pub -t zigbee2mqtt/bridge/request/device/bind -m '{"from": "DIMMER_FRIENDLY_NAME/3", "to": "ANOTHER_BULB_FRIENDLY_NAME"}'
 \`\`\`
 
 ### Decoupling
 For ubisys devices other than the C4 this even allows to completely decouple the local input from the local output. Example: Unbind the switch input from the local load and use it to instead control a group of lights without cutting the power to the bulbs (the switch output can still be controlled via ZigBee, e.g. via MQTT through Zigbee2MQTT):
 \`\`\`
-mosquitto_pub -t zigbee2mqtt/bridge/unbind/<switch_friendly_name>/2 -m <switch_friendly_name>
-mosquitto_pub -t zigbee2mqtt/bridge/bind/<switch_friendly_name>/2 -m <group_name>
+mosquitto_pub -t zigbee2mqtt/bridge/request/device/unbind -m '{"from": "SWITCH_FRIENDLY_NAME/2", "to": "SWITCH_FRIENDLY_NAME"}'
+mosquitto_pub -t zigbee2mqtt/bridge/request/device/bind -m '{"from": "SWITCH_FRIENDLY_NAME/2", "to": "GROUP_NAME"}'
 \`\`\`
 
 To restore the original behavior you unbind the group and rebind the device:
 \`\`\`
-mosquitto_pub -t zigbee2mqtt/bridge/unbind/<switch_friendly_name>/2 -m <group_name>
-mosquitto_pub -t zigbee2mqtt/bridge/bind/<switch_friendly_name>/2 -m <switch_friendly_name>
+mosquitto_pub -t zigbee2mqtt/bridge/request/device/unbind -m '{"from": "SWITCH_FRIENDLY_NAME/2", "to": "GROUP_NAME"}'
+mosquitto_pub -t zigbee2mqtt/bridge/request/device/bind -m '{"from": "SWITCH_FRIENDLY_NAME/2", "to": "SWITCH_FRIENDLY_NAME"}'
 \`\`\`
 `,
     },
@@ -924,7 +924,7 @@ The E1743 can be bound to groups using [binding](../information/binding).
 It can only be bound to 1 group at a time and cannot be bound to a device.
 
 By default this remote is bound to the default bind group which you first have to unbind it from.
-This can be done by sending to \`zigbee2mqtt/bridge/unbind/DEVICE_FRIENDLY_NAME\` payload \`default_bind_group\`.
+This can be done by sending to \`zigbee2mqtt/bridge/request/device/unbind\` payload \`{"from": "DEVICE_FRIENDLY_NAME", "to": "default_bind_group"}\`.
 Right before executing the commands make sure to wake up the device by pressing a button on it.
 `,
     },
@@ -1256,14 +1256,14 @@ If you want to bind the dimmer to a (Hue) lamp you'll have to *[bind it to the l
 
 #### Device refuses actions
 
-If actions (e.g.  applying zigbee2mqtt/bridge/config/remove to a dimmer) result in timeouts, perform a reset (see above) and apply the action right after the device announced itself in the network.
+If actions (e.g. applying zigbee2mqtt/bridge/request/device/remove to a dimmer) result in timeouts, perform a reset (see above) and apply the action right after the device announced itself in the network.
 
 #### Device announces itself but the buttons don't work
 
 The dimmer appears to be working normally and the logs in Zigbee2MQTT look good. However, nothing happens when a button is pressed (no light, no log message in Zigbee2MQTT). In this case:
 
 - Reset the device
-- Use zigbee2mqtt/bridge/config/remove to remove the device from the network (this should result in a "left the network" log message)
+- Use zigbee2mqtt/bridge/request/device/remove to remove the device from the network (this should result in a "left the network" log message)
 - Allow joining of new devices in Zigbee2MQTT
 - Reset the device again
 - Wait for it to pair again. The device should now be operational.
@@ -1409,7 +1409,7 @@ To find optimal "smoothness" play with debounce time or if you need all unique r
 The remote can be bound to groups using [binding](../information/binding) since firmware 2.3.014.
 It can only be bound to 1 group at a time. Use the group name as \`TARGET_DEVICE_FRIENDLY_NAME\`.
 By default this remote is bound to the default bind group which you first have to unbind it from.
-This can be done by sending to \`zigbee2mqtt/bridge/unbind/DEVICE_FRIENDLY_NAME\` payload \`default_bind_group\`.
+This can be done by sending to \`zigbee2mqtt/bridge/request/device/unbind\` payload \`{"from": "DEVICE_FRIENDLY_NAME", "to": "default_bind_group"}\`.
 Wake up the device right before sending the commands by pressing a button on it.
 
 #### Note
