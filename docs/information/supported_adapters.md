@@ -113,6 +113,8 @@ Zigbee2MQTT officially supports the following adapters:
 
 - USB connnected Zigbee adapter
 - **Very powerful**, will easily handle networks of 100+ devices.
+- Coordinator firmware: Recommend upgrading to latest [deCONZ Zigbee Home Automation 1.2 coordinator firmware](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually).
+  - Note! There is [no deCONZ Zigbee 3.0 coordinator firmware for ConBee or RaspBee as of yet](https://github.com/dresden-elektronik/deconz-rest-plugin/issues/2057).
 - Support is still **experimental**. ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/72))
 - In case you are getting the following error: `Error: Failed to connect to the adapter (Error: SRSP - SYS - ping after 6000ms)` set the following in your `configuration.yaml`.
 
