@@ -61,6 +61,7 @@ Besides running Zigbee2MQTT on [bare-metal Linux](getting_started/running_zigbee
 ### Support
 * [Bugs](https://github.com/koenkk/zigbee2mqtt/issues)
 * [Discord channel](https://discord.gg/NyseBeK)
+* [Github discussions](https://github.com/Koenkk/zigbee2mqtt/discussions)
 * [Forum](http://zigbee2mqtt.discourse.group/)
 * External:
   * [Tweakers (Dutch)](https://gathering.tweakers.net/forum/list_messages/1901662)
