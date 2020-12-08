@@ -44,7 +44,7 @@ Controlling a group is similar to controlling a single device. For example to tu
 
 ```json
 {
-  "state": "ON",
+  "state": "ON"
 }
 ```
 
