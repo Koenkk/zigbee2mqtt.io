@@ -146,6 +146,8 @@ advanced:
   adapter_concurrent: null
   # Optional: disables the legacy api (default: shown below)
   legacy_api: true
+  # Optional: use IKEA TRADFRI OTA test server, see OTA updates documentation (default: false)
+  ikea_ota_use_test_url: false
 
 # Optional: experimental options
 experimental:
