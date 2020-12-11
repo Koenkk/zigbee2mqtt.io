@@ -37,7 +37,7 @@ Zigbee2MQTT will output log to this endpoint. Message are always in the form of 
 * `"device_group_remove_failed"`: sent when a request to removed from a group failed.
 * `"device_group_remove_all"`: sent when a device is removed from all groups.
 * `"device_group_remove_all_failed"`: sent when a request to remove a device from all groups failed.
-* `"devices"`: a list of all devices, this message can be triggered by sending a message to `zigbee2mqtt/bridge/config/devices` (payload doesn't matter).
+* `"devices"`: a list of all devices, this message can be triggered by sending a message to `zigbee2mqtt/bridge/config/devices/get` (payload doesn't matter).
 * `"groups"`: a list of all groups, this message can be triggered by sending a message to `zigbee2mqtt/bridge/config/groups` (payload doesn't matter).
 * `"zigbee_publish_error"`: logged when a Zigbee publish errors occurs, contains the error and metadata containing the device and command.
 * `"ota_update"`: logs related to OTA updates
