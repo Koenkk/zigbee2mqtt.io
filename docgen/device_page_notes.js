@@ -2773,7 +2773,7 @@ Values              |
 \`heat\`              |
 \`emergency heating\` |
 \`precooling\`        |
-\`fan only\`          |
+\`fan_only\`          |
 \`dry\`               |
 \`sleep\`             |
 
