@@ -682,6 +682,8 @@ In case the input(s) need to be reconfigured (e.g. to use stationary switches in
 Also see [the ubisys C4 documentation](C4.html#binding), example use cases:
 * Use the second input to control a different Zigbee device (S1-R only, S1 only has one input)
 * Completely decouple the input(s) from the local load
+
+When decoupled, 'action' will be published when pressing the attached switch button.
 `,
     },
     {
