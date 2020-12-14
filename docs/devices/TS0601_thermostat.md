@@ -178,7 +178,7 @@ climate:
       - "auto"
     mode_command_topic: true
     action_topic: true
-    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
+    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan_only':'fan'} %}{{ values[value_json.running_state] }}"
     temperature_command_topic: "current_heating_setpoint"
     temperature_state_template: "{{ value_json.current_heating_setpoint }}"
     temperature_state_topic: true
