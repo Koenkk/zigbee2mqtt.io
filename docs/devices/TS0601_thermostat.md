@@ -38,11 +38,7 @@ If you'd like to force device to send local_temperature you can use this mqtt co
 YOUR_CURRENT_CALIBRATION_VALUE can be 0, but if you calibrated temperature for this device send current value.
 After this command thermostat responds with two messages. One for calibration change confirmation, and other with current local_temperature.
 
-
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
-
-## Controlling device specific settings
+### Controlling device specific features
 
 - If all you need is to control on and off, you can set "force" with topic `zigbee2mqtt/FRIENDLY_NAME/set`. The payload values are:
   open -> fully opens valve and stays there
@@ -113,7 +109,10 @@ This device supports OTA updates, for more information see [OTA updates](../info
     {
         "eco_temperature": 17
     }
-    ```    
+    ``` 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).   
 
 ## Exposes
 ### Lock 
