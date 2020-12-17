@@ -42,6 +42,78 @@ After this command thermostat responds with two messages. One for calibration ch
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 
+## Controlling device specific settings
+
+- If all you need is to control on and off, you can set "force" with topic `zigbee2mqtt/FRIENDLY_NAME/set`. The payload values are:
+  open -> fully opens valve and stays there
+  close -> fully closes valve and stays there
+  normal -> normal valve operation
+  
+    ```json
+    {
+        "force": "open"
+    }
+    ```
+
+- Use topic `zigbee2mqtt/FRIENDLY_NAME/set/schedule` to set the schedule of the device with 6 timeslots on workdays or holidays (e.g. weekend). Example payload values are:
+
+    ```json
+    {
+        "workdays":[
+            {"hour":6,"minute":0,"temperature":19},
+            {"hour":8,"minute":0,"temperature":20},
+            {"hour":18,"minute":0,"temperature":21},
+            {"hour":20,"minute":30,"temperature":20},
+            {"hour":22,"minute":0,"temperature":19},
+            {"hour":23,"minute":30,"temperature":15}
+        ]
+    }
+    ```
+    
+    ```json
+    {
+        "holidays":[
+            {"hour":6,"minute":0,"temperature":19},
+            {"hour":8,"minute":0,"temperature":20},
+            {"hour":18,"minute":0,"temperature":21},
+            {"hour":20,"minute":30,"temperature":20},
+            {"hour":22,"minute":0,"temperature":19},
+            {"hour":23,"minute":30,"temperature":15}
+        ]
+    }
+    ```
+- You can set "week" schedule pattern with topic `zigbee2mqtt/FRIENDLY_NAME/set`. The payload values are:
+  5+2 -> to be used when workdays for example are monday-friday and saturday & sunday are holidays 
+  6+1 -> to be used when workdays for example are monday-saturday and sunday is a holiday
+  7 -> to be used when workdays schedule will be used for the whole week 
+
+    ```json
+    {
+        "week": "5+2"
+    }
+    ```
+    
+- You can set "boost time" with topic `zigbee2mqtt/FRIENDLY_NAME/set`. But be aware that it rounds the values down to multiple of 100.
+
+    ```json
+    {
+        "boost_time": 200
+    }
+    ```
+- You can set "comfort temperature" level on the device with topic `zigbee2mqtt/FRIENDLY_NAME/set`. 
+
+    ```json
+    {
+        "comfort_temperature": 21
+    }
+    ```
+- You can set "eco temperature" level on the device with topic `zigbee2mqtt/FRIENDLY_NAME/set`. 
+
+    ```json
+    {
+        "eco_temperature": 17
+    }
+    ```    
 
 ## Exposes
 ### Lock 
