@@ -21,11 +21,11 @@ description: "Integrate your TuYa TS0121_plug via Zigbee2MQTT with whatever smar
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
-* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 10 seconds.
+* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds.
 
 
 ## Exposes
-### Switch 
+### Switch
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
