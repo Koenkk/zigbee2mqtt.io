@@ -147,7 +147,7 @@ Example:
 ```
 
 ### Lock
-Indicates a device exposes a lock. Only possible feature is `state`.
+Indicates a device exposes a lock. Possible features are `state` and `lock_state`.
 
 Example:
 
@@ -156,6 +156,7 @@ Example:
     "type": "lock",
     "features": [
         {"type":"binary","name":"state","property":"state","value_on":"LOCK","value_off":"UNLOCK","access":7}
+        {"type":"enum","name":"lock_state","property":"lock_state","values":["not_fully_locked","locked","unlocked"],"access":1}
     ]
 }
 ```
