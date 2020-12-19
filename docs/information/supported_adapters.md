@@ -31,7 +31,7 @@ Zigbee2MQTT officially supports the following adapters:
 - USB connnected Zigbee adapter
 - **Very powerful**, will easily handle networks of 100+ devices.
 - Very good range (due to external antenna, SMA female connector)
-- Can be bought on [Tindie](https://www.tindie.com/products/slaesh/cc2652-zigbee-coordinator-or-openthread-router/#product-reviews)
+- Can be bought on [here](https://slae.sh/projects/cc2652/)
 - Coordinator firmware: [Zigbee 3.0](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) (use **CC2652RB_*.zip**)
 - [Flashing guide](https://slae.sh/projects/cc2652/#flashing) (requires no additional hardware to flash)
 - When migrating from another dongle (e.g. CC2531), make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2MQTT won't start.
