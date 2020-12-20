@@ -17,6 +17,9 @@ description: "Integrate your Xiaomi ZNCZ04LM via Zigbee2MQTT with whatever smart
 
 ## Notes
 
+### Pairing
+Press and hold the button on the device until the blue light starts blinking, release it and and the device will automatically join. 
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
