@@ -1,7 +1,7 @@
 ---
 ---
 # Report
-*An ongoing discussion about this feature can be found here: https://github.com/Koenkk/zigbee2mqtt/issues/1064*
+*An ongoing discussion about this feature can be found here: [#1064](https://github.com/Koenkk/zigbee2mqtt/issues/1064)*
 
 When report is enabled, devices will report their state changes to Zigbee2MQTT even when the change is not directly done by Zigbee2MQTT. This is especially handy when the state of a bulb is changed by e.g. a remote or via groups.
 
