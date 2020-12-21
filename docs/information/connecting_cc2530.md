@@ -142,7 +142,7 @@ The ESP8266 needs to be flashed with Tasmota firmware, **"zbbridge" build**. Ple
 - https://tasmota.github.io/docs/Getting-Started/
 - https://tasmota.github.io/docs/Serial-to-TCP-Bridge/
 
-You don't need MQTT for the serial to netowrk functionality but it is a nice option to monitor your bridge.
+You don't need MQTT for the serial to network functionality but it is a nice option to monitor your bridge.
 
 ### Setting up Tasmota
 
