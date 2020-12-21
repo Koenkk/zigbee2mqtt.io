@@ -138,9 +138,9 @@ Press Submit, the setup is now completed.
 
 ### Option 2 - Flashing the ESP8266 with Tasmota
 The ESP8266 needs to be flashed with Tasmota firmware, **"zbbridge" build**. Please find flashing instructions in the following guides:
-- https://github.com/arendst/Tasmota
-- https://tasmota.github.io/docs/Getting-Started/
-- https://tasmota.github.io/docs/Serial-to-TCP-Bridge/
+- [Tasmota github](https://github.com/arendst/Tasmota)
+- [Getting started](https://tasmota.github.io/docs/Getting-Started/)
+- [Serial to TCP Bridge docs](https://tasmota.github.io/docs/Serial-to-TCP-Bridge/)
 
 You don't need MQTT for the serial to network functionality but it is a nice option to monitor your bridge.
 
