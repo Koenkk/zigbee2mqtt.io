@@ -93,7 +93,7 @@ serial:
 
 Have fun.
 
-## Via an ESP8266
+## Via an ESP8266 as a serial to WiFi bridge
 This setup allows you to connect a CC2530 to an ESP8266 which can be put everywhere in your house. Via a serial socket, Zigbee2MQTT will connect to your CC2530.
 
 ### Wiring
@@ -109,13 +109,13 @@ Wire the CC2530 to the ESP8266 using the following scheme:
 | GND     | P04 |
 | GND     | P05 |
 
-### Flashing the ESP8266
+### Option 1 - Flashing the ESP8266 with ESPEasy
 The ESP8266 needs to be flashed with ESPEasy. ESPEasy has suficient documentation on how to get you up and running:
 - [How to flash the ESP8266 with ESPEasy](https://www.letscontrolit.com/wiki/index.php?title=Tutorial_ESPEasy_Firmware_Upload)
 - ESP8266 firmware: [ESP_Easy_mega-XXXXXXXX_normal_ESP8266_4096.bin](https://github.com/letscontrolit/ESPEasy/releases)
 - [More information about ESPEasy](https://www.letscontrolit.com/wiki/index.php/ESPEasy#Introduction)
 
-### Setting up the ESP8266
+### Setting up ESPEasy
 Open the ESPEasy web interface and complete the setup. Afterwards open the web interface again.
 
 Click on *Devices* Edit of the first task and select *Communication - Serial Server* from the dropdown list.
@@ -135,6 +135,24 @@ j.    Event processing: Generic
 ```
 
 Press Submit, the setup is now completed.
+
+### Option 2 - Flashing the ESP8266 with Tasmota
+The ESP8266 needs to be flashed with Tasmota firmware, **"zbbridge" build**. Please find flashing instructions in the following guides:
+- https://github.com/arendst/Tasmota
+- https://tasmota.github.io/docs/Getting-Started/
+- https://tasmota.github.io/docs/Serial-to-TCP-Bridge/
+
+You don't need MQTT for the serial to network functionality but it is a nice option to monitor your bridge.
+
+### Setting up Tasmota
+
+Open the Tasmota web interface and complete the basic network setup. Next in "Configuration", "Configure Module" define your RX and TX pins. The Rx/Tx are relative to the ESP device. For example with ESP8266/ESP01's hardware serial, set GPIO1 as ``TCP Tx`` and GPIO3 as ``TCP Rx``.
+
+Next, in Tasmota's main screen, open "Console". Enter ``TCPBaudRate 115200``. Decide on the port number to use and set it. For example for port = 8888 run:  
+```
+Rule1 ON System#Boot do TCPStart 8888 endon
+Rule1 1
+```
 
 ### Zigbee2MQTT configuration
 Now add the following to the Zigbee2MQTT `configuration.yaml`:
