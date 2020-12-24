@@ -28,7 +28,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` gas is ON, if `false` OFF.
 
 ### Carbon_monoxide (binary)
-Indicates if CO2 (carbon monoxide) is detected.
+Indicates if CO (carbon monoxide) is detected.
 Value can be found in the published state on the `carbon_monoxide` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` carbon_monoxide is ON, if `false` OFF.
