@@ -53,7 +53,7 @@ function getExposeDocs(expose) {
 
         if (expose.type === 'numeric') {
             if (expose.hasOwnProperty('value_max') && expose.hasOwnProperty('value_max')) {
-                lines.push(`The minimimal value is \`${expose.value_min}\` and the maximum value is \`${expose.value_max}\`.`);
+                lines.push(`The minimal value is \`${expose.value_min}\` and the maximum value is \`${expose.value_max}\`.`);
             }
 
             if (expose.unit) {
