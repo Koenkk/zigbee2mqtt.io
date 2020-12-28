@@ -59,7 +59,7 @@ const device = {
     meta: {
         configureKey: 1,
     },
-    configure: async (device, coordinatorEndpoint) => {
+    configure: async (device, coordinatorEndpoint, logger) => {
         // dummy configure
     },
     // Optional: add support for Home Assistant discovery

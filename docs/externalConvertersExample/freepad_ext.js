@@ -77,7 +77,7 @@ const device = {
     meta: {
         configureKey: 1,
     },
-    configure: async (device, coordinatorEndpoint) => {
+    configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
         await bind(endpoint, coordinatorEndpoint, ['genPowerCfg']);
         const payload = [{
