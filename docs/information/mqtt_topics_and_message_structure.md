@@ -97,7 +97,7 @@ Example payload:
         "network_address":29159,
         "supported":true,
         "friendly_name":"my_plug",
-        "endpoints":{"1":{"bindings":[],"clusters":{"input":["genOnOff","genBasic"],"output":[]}}},
+        "endpoints":{"1":{"bindings":[],"configured_reportings":[],"clusters":{"input":["genOnOff","genBasic"],"output":[]}}},
         "definition":{
             "model":"ZNCZ02LM",
             "vendor":"Xiaomi",
@@ -114,7 +114,7 @@ Example payload:
         "network_address":57440,
         "supported":true,
         "friendly_name":"my_bulb",
-        "endpoints":{"1":{"bindings":[],"clusters":{"input":["genOnOff","genBasic","genLevelCtrl"],"output":["genOta"]}}},
+        "endpoints":{"1":{"bindings":[],"configured_reportings":[],"clusters":{"input":["genOnOff","genBasic","genLevelCtrl"],"output":["genOta"]}}},
         "definition":{
             "model":"LED1624G9",
             "vendor":"IKEA",
@@ -136,6 +136,9 @@ Example payload:
               {"cluster":"genOnOff","target":{"type":"endpoint","endpoint":1,"ieee_address":"0x000b57fffec6a5b3"}},
               {"cluster":"genOnOff","target":{"type":"group","id":1}},
             ],
+            "configured_reportings":[
+              {"cluster":"genOnOff","attribute":"onOff","maximum_report_interval":10,"minimum_report_interval":1,"reportable_change":1}
+            ],
             "clusters":{"input":["genBasic","msIlluminanceMeasurement"],"output":["genOnOff"]}
           }
         },
@@ -153,7 +156,7 @@ Example payload:
         "type":"Coordinator",
         "network_address":0,
         "supported":false,
-        "endpoints":{"1":{"bindings":[],"clusters":{"input":[],"output":[]}}},
+        "endpoints":{"1":{"bindings":[],"configured_reportings":[],"clusters":{"input":[],"output":[]}}},
         "friendly_name":"Coordinator",
         "definition":null,
         "power_source":null,
