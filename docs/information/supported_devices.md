@@ -328,6 +328,7 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
 | [EDM-1ZAA-EU](../devices/TS0601_dimmer.md) | Earda Zigbee smart dimmer (white-label of TuYa TS0601_dimmer) (light) | ![../images/devices/TS0601_dimmer.jpg](../images/devices/TS0601_dimmer.jpg) |
+| [EDM-1ZBA-EU](../devices/TS0601_dimmer.md) | Earda Zigbee smart dimmer (white-label of TuYa TS0601_dimmer) (light) | ![../images/devices/TS0601_dimmer_rotary.jpg](../images/devices/TS0601_dimmer_rotary.jpg) |
 | [ESW-2ZAA-EU](../devices/TS0012.md) | Earda Smart light switch - 2 gang without neutral wire (white-label of TuYa TS0012) (switch) | ![../images/devices/TS0012.jpg](../images/devices/TS0012.jpg) |
 
 ### EchoStar
