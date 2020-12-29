@@ -105,6 +105,7 @@ Example payload:
         },
         "power_source":"Mains (single phase)",
         "date_code":"02-28-2017",
+        "model_id":"lumi.plug",
         "interviewing":false,
         "interview_completed":true
     },
@@ -123,6 +124,7 @@ Example payload:
         },
         "power_source":"Mains (single phase)",
         "software_build_id":"1.3.009",
+        "model_id":"TRADFRI bulb E27 CWS opal 600lm",
         "date_code":"20180410",
         "interviewing":false,
         "interview_completed":true
@@ -148,6 +150,7 @@ Example payload:
         "definition":null,
         "power_source":"Battery",
         "date_code":"04-28-2019",
+        "model_id":null,
         "interviewing":false,
         "interview_completed":true
     },
@@ -161,6 +164,7 @@ Example payload:
         "definition":null,
         "power_source":null,
         "date_code":null,
+        "model_id":null,
         "interviewing":false,
         "interview_completed":true
     },
