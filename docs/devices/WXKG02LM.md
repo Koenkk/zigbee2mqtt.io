@@ -56,7 +56,7 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_left`, `single_right`, `single_both`, `double_left`, `double_right`, `double_both`, `hold_left`, `hold_right`, `hold_both`, `release_left`, `release_right`, `release_both`.
+The possible values are: `single_left`, `single_right`, `single_both`, `double_left`, `double_right`, `double_both`, `hold_left`, `hold_right`, `hold_both`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
