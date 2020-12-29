@@ -114,7 +114,7 @@ To setup a local copy of zigbee-herdsman-converters so that you can modify e.g. 
 cd /opt
 git clone https://github.com/Koenkk/zigbee-herdsman-converters.git
 cd zigbee-herdsman-converters
-npm ci
+docker run -v "$PWD":/app -w /app --rm node:12 npm ci
 ```
 
 Now add the volumes to the Docker container by adding the following to your `docker run` command.:
