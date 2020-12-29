@@ -204,7 +204,9 @@ This can be used to e.g. configure certain settings like allowing new devices to
 
 Example: when publishing `zigbee2mqtt/bridge/request/permit_join` with payload `{"value": true}` Zigbee2MQTT will respond to `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"value":true},"status":"ok"}`. In case this request failed the response will be `{"data":{}, "error": "Failed to connect to adapter","status":"error"}`.
 
-Optionally, a `transaction` property can be included in the request. This allows to easily match requests with responses. When a `transaction` property is included Zigbee2MQTT will include it in the response. Example: `zigbee2mqtt/bridge/request/permit_join` with payload `{"value": true, "transaction":23}` will be responded to on `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"value":true},"status":"ok","transaction":23}`
+Optionally, a `transaction` property can be included in the request. This allows to easily match requests with responses. When a `transaction` property is included Zigbee2MQTT will include it in the response. Example: `zigbee2mqtt/bridge/request/permit_join` with payload `{"value": true, "transaction":23}` will be responded to on `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"value":true},"status":"ok","transaction":23}`.
+
+For requests where a device is involved you can select a specific endpoint by adding `/ENDPOINT_ID` where `ENDPOINT_ID` is the endpoint number (e.g `1`, `2`) or the endpoint name (e.g. `left`, `l1`). By default the first endpoint is taken. Example of a `zigbee2mqtt/bridge/request/device/bind` payload: `{"from": "my_remote/left", "to": "my_bulb"}`.
 
 ### Possible requests
 
