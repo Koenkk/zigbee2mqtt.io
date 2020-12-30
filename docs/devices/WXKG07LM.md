@@ -49,7 +49,7 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `left`, `right`, `both`, `left_long`, `left_double`, `right_long`, `right_double`, `both_long`, `both_double`.
+The possible values are: `left`, `right`, `both`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

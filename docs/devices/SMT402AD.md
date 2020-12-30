@@ -17,7 +17,11 @@ description: "Integrate your Stelpro SMT402AD via Zigbee2MQTT with whatever smar
 
 ## Notes
 
-None
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
+
 
 
 ## Exposes
@@ -89,7 +93,7 @@ climate:
       - "heat"
     mode_command_topic: true
     action_topic: true
-    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan_only':'fan'} %}{{ values[value_json.running_state] }}"
+    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
     temperature_command_topic: "occupied_heating_setpoint"
     temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
     temperature_state_topic: true

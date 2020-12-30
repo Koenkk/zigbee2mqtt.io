@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi RTCGQ11LM via Zigbee2MQTT with whatever smar
 | Model | RTCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara human body movement and illuminance sensor |
-| Exposes | battery, occupancy, illuminance, linkquality |
+| Exposes | battery, occupancy, illuminance_lux, linkquality |
 | Picture | ![Xiaomi RTCGQ11LM](../images/devices/RTCGQ11LM.jpg) |
 
 ## Notes
@@ -31,12 +31,6 @@ Most of the times this happens because of the following reasons:
 - The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, OSRAM, Sylvania, SmartThings, Securifi.
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
-
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
-* `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
-e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
 
 
 * `no_occupancy_since`: Timeout (in seconds) after which `no_occupancy_since` is sent.
@@ -74,8 +68,8 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Illuminance (numeric)
-Raw measured illuminance.
+### Illuminance_lux (numeric)
+Measured illuminance in lux.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.

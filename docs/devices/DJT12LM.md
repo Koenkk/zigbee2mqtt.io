@@ -11,7 +11,7 @@ description: "Integrate your Xiaomi DJT12LM via Zigbee2MQTT with whatever smart 
 
 | Model | DJT12LM  |
 | Vendor  | Xiaomi  |
-| Description | Aqara vibration sensor |
+| Description | Aqara T1 vibration sensor |
 | Exposes | action, linkquality |
 | Picture | ![Xiaomi DJT12LM](../images/devices/DJT12LM.jpg) |
 

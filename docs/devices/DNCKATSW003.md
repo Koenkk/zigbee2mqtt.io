@@ -12,12 +12,16 @@ description: "Integrate your Custom devices (DiY) DNCKATSW003 via Zigbee2MQTT wi
 | Model | DNCKATSW003  |
 | Vendor  | Custom devices (DiY)  |
 | Description | [DNCKAT triple key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) |
-| Exposes | switch (state), linkquality |
+| Exposes | switch (state), action, linkquality |
 | Picture | ![Custom devices (DiY) DNCKATSW003](../images/devices/DNCKATSW003.jpg) |
 
 ## Notes
 
-None
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
+
 
 
 ## Exposes
@@ -35,6 +39,12 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 The current state of this switch is in the published state under the `state_center` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_center": "ON"}`, `{"state_center": "OFF"}` or `{"state_center": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_center": ""}`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `release_left`, `hold_left`, `release_right`, `hold_right`, `release_center`, `hold_center`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -76,6 +86,13 @@ switch:
     payload_on: "ON"
     value_template: "{{ value_json.state_center }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/center/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.action }}"
+    icon: "mdi:gesture-double-tap"
 
 sensor:
   - platform: "mqtt"

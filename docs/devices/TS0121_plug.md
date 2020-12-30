@@ -12,7 +12,7 @@ description: "Integrate your TuYa TS0121_plug via Zigbee2MQTT with whatever smar
 | Model | TS0121_plug  |
 | Vendor  | TuYa  |
 | Description | 10A UK or 16A EU smart plug |
-| Exposes | switch (state), power, current, voltage, energy, linkquality |
+| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
 | Picture | ![TuYa TS0121_plug](../images/devices/TS0121_plug.jpg) |
 | White-label | BlitzWolf BW-SHP13 |
 
@@ -25,7 +25,7 @@ description: "Integrate your TuYa TS0121_plug via Zigbee2MQTT with whatever smar
 
 
 ## Exposes
-### Switch
+### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
@@ -57,6 +57,13 @@ Value can be found in the published state on the `energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Power_outage_memory (enum)
+Recover state after power outage.
+Value can be found in the published state on the `power_outage_memory` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+The possible values are: `on`, `off`, `restore`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -112,6 +119,12 @@ sensor:
     unit_of_measurement: "kWh"
     value_template: "{{ value_json.energy }}"
     icon: "mdi:power-plug"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.power_outage_memory }}"
 
 sensor:
   - platform: "mqtt"

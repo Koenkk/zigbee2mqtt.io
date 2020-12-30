@@ -1,6 +1,13 @@
 const notes = [
     {
-        model: ['WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM', 'WXKG06LM', 'WXKG02LM', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'WXKG07LM', 'QBKG21LM', 'QBKG22LM', 'E1743', 'E1766', 'ptvo.switch', 'DIYRuZ_R8_8', 'HGZB-1S', 'HGZB-02S', 'HGZB-045', 'IM6001-BTP01', 'AV2010/34', 'HS1EB/HS1EB-E', 'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'ZGRC-KEY-013', '6ARCZABZH', 'MEAZON_BIZY_PLUG', 'MEAZON_DINRAIL', '2AJZ4KPKEY', 'TERNCY-PP01', 'TERNCY-SD01'],
+        model: ['ZNCZ04LM'],
+        note: `
+### Pairing
+Press and hold the button on the device until the blue light starts blinking, release it and and the device will automatically join.
+`,
+    },
+    {
+        model: ['WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM_rev1', 'WXKG03LM_rev2', 'WXKG06LM', 'WXKG02LM_rev1', 'WXKG02LM_rev2', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'WXKG07LM', 'QBKG21LM', 'QBKG22LM', 'E1743', 'E1766', 'ptvo.switch', 'DIYRuZ_R8_8', 'HGZB-1S', 'HGZB-02S', 'HGZB-045', 'IM6001-BTP01', 'AV2010/34', 'HS1EB/HS1EB-E', 'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'ZGRC-KEY-013', '6ARCZABZH', 'MEAZON_BIZY_PLUG', 'MEAZON_DINRAIL', '2AJZ4KPKEY', 'TERNCY-PP01', 'TERNCY-SD01'],
         note: `
 ### Deprecated click event
 By default this device exposes a deprecated \`click\` event. It's recommended to use the \`action\` event instead.
@@ -23,6 +30,38 @@ To pair the remote you will first need to factory reset the remote then pair it 
 
 1. Reset the remote by holding down the two middle (arrow) buttons, if reset successfully the LED on the remote should blink once.
 2. Then pair the remote to the controller by placing it in proximity to the controller whilst it is searching. Hold down the off (circle) button for 10 seconds until it blinks green 3 times. If it does, then the remote is paired to the controller.
+`,
+    },
+    {
+        model: ['HR-C99C-Z-C045'],
+        note: `
+### Pairing
+Hold small reset button pressed (located on the backside of remote) for 3
+seconds (until the front LED blicks) and device will reset and will attempt to join network.
+`,
+    },
+    {
+        model: ['L4531C'],
+        note: `
+### Pairing
+Try few times with reset for pairing.
+`,
+    },
+    {
+        model: ['HLU2909K'],
+        note: `
+### Power cut
+ZigBee 3.0, cuts power if too high temperature monitoring and if overloaded.
+
+### Pairing
+Factory reset by press & hold the power button for 12 seconds. The LED is then starting to blink 3 times RED in intervals during pairing process.
+
+### Specs
+- Rating: 220-240VAC, 16A, 50Hz
+- Standby Power: <= 0.5W
+
+### Manual
+[Supplier's manual](http://www.nonline.no/wp-content/uploads/2020/03/Apex_Smart_Plug_UserManual.pdf)
 `,
     },
     {
@@ -246,6 +285,13 @@ Press and hold the button on the device for more then 10 seconds (until the led 
 `,
     },
     {
+        model: ['ZNCLDJ11LM'],
+        note: `
+### Pairing
+Hold button for a few seconds until red light turn on.
+`,
+    },
+    {
         model: 'V3-BTZB',
         note: `
 ### Pairing
@@ -423,7 +469,7 @@ Controls the 16 build-in effects of the LED string. An effect expects 3 paramete
                 "r": 0,
                 "g": 0,
                 "b": 255
-            },
+            }
         ]
     }
 }
@@ -431,7 +477,7 @@ Controls the 16 build-in effects of the LED string. An effect expects 3 paramete
 `,
     },
     {
-        model: ['YSR-MINI-01'],
+        model: ['YSR-MINI-01_rgbcct', 'YSR-MINI-01_wwcw', 'YSR-MINI-01_dimmer'],
         note: `
 ### Pairing
 1. Hold button until LED start flashing (about 6 seconds), then release.
@@ -897,6 +943,112 @@ Switch the lamp on five times until the bulb blinks several times.
 `,
     },
     {
+        model: 'F20T60A',
+        note: `
+### Force read power
+* \`power\`: Asks the device for the current active power.
+
+Example of MQTT message payload to ask for the active power. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/get\`:
+
+\`\`\`js
+{
+    "power"
+}
+\`\`\`
+
+
+### Power Alarm Configuration
+* \`power_alarm\`: enables or disables the power alarm, and sets the value: \`DISABLE\` (default) / \`integer\` (in kwh)
+
+Example of MQTT message payload to disable the power alarm. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`js
+{
+    "power_alarm": "DISABLE"
+}
+\`\`\`
+
+Example of MQTT message payload to enable the power alarm at 3.3 kwh. This should be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`js
+{
+    "power_alarm": "3300"
+}
+\`\`\`
+
+When it reaches that value, the \`power_alarm_active\` binary_sensor will change to \`true\`.
+
+
+### Identify
+Helps to identify the device using the LED.
+
+* \`identify['effect']\`:  only works for blink3 & fixed in \`effect\`. Values:
+    - \`blink3\`
+    - \`fixed\`
+    - \`blinkgreen\`
+    - \`blinkblue\`
+
+* \`identify['color']\`:  only works for blink3 & fixed in \`effect\`. Values:
+    - \`default\`
+    - \`red\`
+    - \`green\`
+    - \`blue\`
+    - \`lightblue\`
+    - \`yellow\`
+    - \`pink\`
+    - \`white\`
+
+Example of MQTT message payload to Identify the device. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`js
+{
+    "identify": {
+    "effect": "blink3",
+    "color": "white"
+    }
+}
+\`\`\`
+`,
+    },
+    {
+        model: 'HG06335',
+        note: `
+### Pairing
+Factory reset the motion detector by holding the reset button (little hole on the side) for 5 seconds.
+When you let go of the button an LED should blink.
+After resetting the motion detector will automatically connect.
+While pairing, keep the motion detector close to the adapter.
+
+
+### Tamper
+If the button on the back is pressed (i.e. the device is on the mounting plate), the value of \`tamper\` equals \`true\` otherwise it is \`false\`.
+`,
+    },
+    {
+        model: 'HG06338',
+        note: `
+### Pairing
+Factory reset the 3 gang switch by holding the power button for 5 seconds.
+When you let go of the button an LED should blink.
+After resetting the 3 gang switch will automatically connect.
+
+While pairing, keep the 3 gang switch close to the adapter.
+`,
+    },
+    {
+        model: 'HG06336',
+        note: `
+### Pairing
+Use the pin tool (or any SIM removal tool) to hold down the reset pinhole for 5 seconds.
+This is the side with a single hole (other side has 3) When you let go, the led will start flashing green.
+After setting pair mode the sensor will automatically connect.
+While pairing, keep the sensor close to the adapter.
+
+### Meaning of tamper
+The tamper is triggerd to \`true\` when a small black button underneath the battery compartment is no longer pressed down by the battery lid.
+`,
+    },
+    {
         model: 'E1525/E1745',
         note: `
 ### Pairing
@@ -906,6 +1058,10 @@ After a few seconds it turns back on and pulsate. When connected, the light turn
 
 ### Binding
 The E1745 can be bound to groups using [binding](../information/binding).
+
+## Detection cooldown (E1745 version)
+This device will pause detection of presence for approximately 1 min 37 sec after detection. In other words; with continuous detection, every 1:37 a new publish (occupancy: true) will be done.
+Cooldown of detection is 3 min. In other words; 3 min after last published detection (and trigger no longer present) occupancy will be published as false.
 `,
     },
     {
@@ -996,7 +1152,7 @@ will rapidly flash green.
 `,
     },
     {
-        model: '4713407',
+        model: ['4713407', '404001'],
         note: `
 ### Pairing
 1. Turn bulb on.
@@ -1072,6 +1228,13 @@ After a factory reset the bulb will automatically connect.
 Power on and off the bulb 5 times (screw/unscrew the bulb if you don't have a physical switch)
 to perform a factory reset.
 As a reset confirmation the bulb will blink 4 times.
+`,
+    },
+    {
+        model: ['LED1623G12'],
+        note: `
+### Known Issue with sending effects with brightness 1
+There is a [known issue](https://github.com/Koenkk/zigbee2mqtt/issues/5237) with the bulb brightness incorrectly returning to max after an effect is sent. This only occurs if \`brightness\` is set to 2> and off, then turned on with \`brightness: 1\`. Once the effect has finished the bulb will report as being \`brightness: 1\` however it outputs max brightness. Workarounds are to use \`brightness: 2\` and above or turn on without \`brightness\` then send the \`brightness: 1\` in another command. This behaviour is confirmed present in the IKEA TRADFRI firmware v1.2.214.
 `,
     },
     {
@@ -1585,15 +1748,6 @@ After this the device will automatically join. If this doesn't work, try with a 
 `,
     },
     {
-        model: ['RTCGQ11LM'],
-        note: `
-### Troubleshooting: no occupancy, only illuminance is published
-Some routers are not able to handle the RTCGQ11LM as a child correctly. This leads to an illuminance value being published but no occupancy.
-This mostly seems to happen when the parent of the RTCGQ11LM is an OSRAM device.
-A discussion about this can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/2274). This cannot be fixed from Zigbee2MQTT, make sure the RTCGQ11LM uses another router as it's parent by positioning a non OSRAM device close.
-`,
-    },
-    {
         model: ['WSDCGQ01LM'],
         note: `
 ### Pairing
@@ -1827,7 +1981,7 @@ The \`strength\` value, which is reported every 300 seconds after vibration is d
 `,
     },
     {
-        model: ['WXKG03LM', 'WXKG06LM', 'WXKG02LM', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'ZNCZ02LM', 'QBKG25LM', 'QBKG22LM', 'QBKG24LM'],
+        model: ['WXKG03LM_rev1', 'WXKG03LM_rev2', 'WXKG06LM', 'WXKG02LM_rev1', 'WXKG02LM_rev2', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'ZNCZ02LM', 'QBKG25LM', 'QBKG22LM', 'QBKG24LM'],
         note: `
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
@@ -1915,10 +2069,10 @@ This device has various limitations:
     },
     {
         model: [
-            'WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM', 'WXKG06LM', 'WXKG02LM', 'QBKG04LM', 'QBKG11LM',
+            'WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM_rev1', 'WXKG03LM_rev2', 'WXKG06LM', 'WXKG02LM_rev1', 'WXKG02LM_rev2', 'QBKG04LM', 'QBKG11LM',
             'QBKG03LM', 'QBKG12LM', 'WXKG07LM', 'QBKG21LM', 'QBKG22LM', 'E1743', 'E1766', 'ptvo.switch',
             'DIYRuZ_R8_8', 'HGZB-1S', 'HGZB-02S', 'HGZB-045', 'IM6001-BTP01', 'AV2010/34', 'HS1EB/HS1EB-E',
-            'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'ZGRC-KEY-013', '6ARCZABZH',
+            'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'ZGRC-KEY-013',
             'MEAZON_BIZY_PLUG', 'MEAZON_DINRAIL', '2AJZ4KPKEY', 'TERNCY-PP01', 'TERNCY-SD01',
             'ICZB-KPD14S', 'ICZB-KPD18S', '067773', 'E1744', 'ICTC-G-1', 'MFKZQ01LM', '07046L', 'SWO-KEF1PA',
             'QBKG25LM', 'TS0218', 'DNCKATSW002', 'DNCKATSW003', 'DNCKATSW004', 'AIRAM-CTR.U', '4058075816459',
@@ -1927,7 +2081,7 @@ This device has various limitations:
             '81825', 'ZYCT-202', 'STS-PRS-251', 'Z3-1BRL', 'AV2010/32', 'U86KWF-ZPSJ', '1TST-EU', 'UK7004240',
             'SLR1b', 'SLR2', 'RC-2000WH', '3157100', '014G2461', 'ST218', 'STZB402', 'SMT402', 'SMT402AD', 'TH1124ZB', 'TH1300ZB',
             'TH1500ZB', 'Zen-01-W', 'TH1400ZB', 'TH1123ZB', 'ZK03840', 'SPZB0001', 'WV704R0A0902', 'TERNCY-SD01', 'C4', 'HT-08', 'HT-10',
-            '07703L', 'SEA801-Zigbee', 'SEA802-Zigbee', '6ARCZABZH', '324131092621',
+            '07703L', 'SEA801-Zigbee/SEA802-Zigbee', '6ARCZABZH', '324131092621',
         ],
         deviceTypeSpecificConfiguration: true,
         note: `
@@ -2068,6 +2222,21 @@ To retrieve the state, send a \`get\` message to the device topic (\`zigbee2mqtt
 `,
     },
     {
+        model: ['89665'],
+        note: `
+### Manual
+[Supplier's manual](https://www.elektroimportoren.no/docs/lib/89665-Brukerveiledning-5.pdf)
+
+### Pairing
+Factory resetting this Namron Lightsrip can be accomplished in several ways.
+Please read instructions in attached link for the User Manual.
+After resetting the bulb will automatically connect.
+
+#### Touchlink
+Please read instructions in attached link for the User Manual.
+`,
+    },
+    {
         exposes: (exposes) => exposes.find((e) => e.type === 'light' && e.features.find((f) => f.name === 'color_hs' || f.name === 'color_xy')),
         note: `
 * \`hue_correction\`: (optional) Corrects hue values based on a correction map for matching color
@@ -2156,6 +2325,13 @@ E.g. (devices.yaml)
 \`\`\`
 {% endraw %}
 `,
+    },
+    {
+        model: ['170-33505'],
+        note: `
+### Pairing
+To pair the socket outlet to your network, press the button at least 3 times within 6 seconds. Then the socket outlet will be in pairing modus for 5 minutes. The led will be blinking blue.
+    `,
     },
     {
         model: ['CC2530.ROUTER'],
@@ -2308,6 +2484,79 @@ If you'd like to force device to send local_temperature you can use this mqtt co
 
 YOUR_CURRENT_CALIBRATION_VALUE can be 0, but if you calibrated temperature for this device send current value.
 After this command thermostat responds with two messages. One for calibration change confirmation, and other with current local_temperature.
+
+### Controlling device specific features
+
+- If all you need is to control on and off, you can set "force" with topic \`zigbee2mqtt/FRIENDLY_NAME/set\`. The payload values are:
+  open -> fully opens valve and stays there
+  close -> fully closes valve and stays there
+  normal -> normal valve operation
+
+    \`\`\`json
+    {
+        "force": "open"
+    }
+    \`\`\`
+
+- Use topic \`zigbee2mqtt/FRIENDLY_NAME/set/schedule\` to set the schedule of the device with 6 timeslots on workdays or holidays (e.g. weekend). Example payload values are:
+
+    \`\`\`json
+    {
+        "workdays":[
+            {"hour":6,"minute":0,"temperature":19},
+            {"hour":8,"minute":0,"temperature":20},
+            {"hour":18,"minute":0,"temperature":21},
+            {"hour":20,"minute":30,"temperature":20},
+            {"hour":22,"minute":0,"temperature":19},
+            {"hour":23,"minute":30,"temperature":15}
+        ]
+    }
+    \`\`\`
+
+    \`\`\`json
+    {
+        "holidays":[
+            {"hour":6,"minute":0,"temperature":19},
+            {"hour":8,"minute":0,"temperature":20},
+            {"hour":18,"minute":0,"temperature":21},
+            {"hour":20,"minute":30,"temperature":20},
+            {"hour":22,"minute":0,"temperature":19},
+            {"hour":23,"minute":30,"temperature":15}
+        ]
+    }
+    \`\`\`
+- You can set "week" schedule pattern with topic \`zigbee2mqtt/FRIENDLY_NAME/set\`. The payload values are:
+  5+2 -> to be used when workdays for example are monday-friday and saturday & sunday are holidays
+  6+1 -> to be used when workdays for example are monday-saturday and sunday is a holiday
+  7 -> to be used when workdays schedule will be used for the whole week
+
+    \`\`\`json
+    {
+        "week": "5+2"
+    }
+    \`\`\`
+
+- You can set "boost time" with topic \`zigbee2mqtt/FRIENDLY_NAME/set\`. But be aware that it rounds the values down to multiple of 100.
+
+    \`\`\`json
+    {
+        "boost_time": 200
+    }
+    \`\`\`
+- You can set "comfort temperature" level on the device with topic \`zigbee2mqtt/FRIENDLY_NAME/set\`.
+
+    \`\`\`json
+    {
+        "comfort_temperature": 21
+    }
+    \`\`\`
+- You can set "eco temperature" level on the device with topic \`zigbee2mqtt/FRIENDLY_NAME/set\`.
+
+    \`\`\`json
+    {
+        "eco_temperature": 17
+    }
+    \`\`\`
 `,
     },
     {

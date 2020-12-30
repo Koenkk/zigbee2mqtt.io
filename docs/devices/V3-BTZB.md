@@ -12,7 +12,7 @@ description: "Integrate your Danalock V3-BTZB via Zigbee2MQTT with whatever smar
 | Model | V3-BTZB  |
 | Vendor  | Danalock  |
 | Description | BT/ZB smartlock |
-| Exposes | lock (state), battery, linkquality |
+| Exposes | lock (state, lock_state), battery, linkquality |
 | Picture | ![Danalock V3-BTZB](../images/devices/V3-BTZB.jpg) |
 
 ## Notes

@@ -12,10 +12,15 @@ description: "Integrate your eCozy 1TST-EU via Zigbee2MQTT with whatever smart h
 | Model | 1TST-EU  |
 | Vendor  | eCozy  |
 | Description | Smart heating thermostat |
-| Exposes | battery, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
+| Exposes | battery, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration), linkquality |
 | Picture | ![eCozy 1TST-EU](../images/devices/1TST-EU.jpg) |
 
 ## Notes
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 
 ### Controlling
@@ -192,7 +197,7 @@ The minimimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Climate 
-This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
+This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`, `local_temperature_calibration`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `7` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
@@ -237,7 +242,7 @@ climate:
       - "heat"
     mode_command_topic: true
     action_topic: true
-    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan_only':'fan'} %}{{ values[value_json.running_state] }}"
+    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
     temperature_command_topic: "occupied_heating_setpoint"
     temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
     temperature_state_topic: true

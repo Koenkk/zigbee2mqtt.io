@@ -36,6 +36,9 @@ devices:
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+
 
 ## Exposes
 ### Battery (numeric)
@@ -49,7 +52,7 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `triple`, `quadruple`.
+The possible values are: `single`, `double`, `triple`, `quadruple`, `rotate`.
 
 ### Direction (text)
 Value can be found in the published state on the `direction` property.
@@ -104,6 +107,21 @@ sensor:
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
     icon: "mdi:signal"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:update"
+    value_template: "{{ value_json['update']['state'] }}"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.update_available}}"
 ```
 {% endraw %}
 

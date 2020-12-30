@@ -14,7 +14,7 @@ description: "Integrate your TuYa TS0601_curtain via Zigbee2MQTT with whatever s
 | Description | Curtain motor |
 | Exposes | cover (state, position), linkquality |
 | Picture | ![TuYa TS0601_curtain](../images/devices/TS0601_curtain.jpg) |
-| White-label | Yushun YS-MT750, Zemismart ZM79E-DT, Binthen BCM100D, Binthen CV01A, Zemismart M515EGB, Tuya DT82LEMA-1.2N |
+| White-label | Yushun YS-MT750, Zemismart ZM79E-DT, Binthen BCM100D, Binthen CV01A, Zemismart M515EGB, TuYa DT82LEMA-1.2N, Moes AM43-0.45/40-ES-EB |
 
 ## Notes
 

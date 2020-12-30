@@ -17,7 +17,11 @@ description: "Integrate your Hive SLR2 via Zigbee2MQTT with whatever smart home
 
 ## Notes
 
-None
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
+
 
 
 ## Exposes
@@ -66,7 +70,7 @@ climate:
       - "heat"
     mode_command_topic: true
     action_topic: true
-    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan_only':'fan'} %}{{ values[value_json.running_state_heat] }}"
+    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state_heat] }}"
     temperature_command_topic: "occupied_heating_setpoint"
     temperature_state_template: "{{ value_json.occupied_heating_setpoint_heat }}"
     temperature_state_topic: true
@@ -89,7 +93,7 @@ climate:
       - "heat"
     mode_command_topic: true
     action_topic: true
-    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan_only':'fan'} %}{{ values[value_json.running_state_water] }}"
+    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state_water] }}"
     temperature_command_topic: "occupied_heating_setpoint"
     temperature_state_template: "{{ value_json.occupied_heating_setpoint_water }}"
     temperature_state_topic: true

@@ -17,7 +17,11 @@ description: "Integrate your Xiaomi ZNMS12LM via Zigbee2MQTT with whatever smart
 
 ## Notes
 
-None
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
+
 
 
 ## Exposes

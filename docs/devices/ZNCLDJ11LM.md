@@ -17,6 +17,7 @@ description: "Integrate your Xiaomi ZNCLDJ11LM via Zigbee2MQTT with whatever sma
 
 ## Notes
 
+
 ### Pairing
 Hold button for a few seconds until red light turn on.
 

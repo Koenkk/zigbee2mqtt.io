@@ -12,7 +12,7 @@ description: "Integrate your SmartThings GP-WOU019BBDWG via Zigbee2MQTT with wha
 | Model | GP-WOU019BBDWG  |
 | Vendor  | SmartThings  |
 | Description | Outlet with power meter |
-| Exposes | switch (state), power, current, voltage, energy, linkquality |
+| Exposes | switch (state), power, energy, linkquality |
 | Picture | ![SmartThings GP-WOU019BBDWG](../images/devices/GP-WOU019BBDWG.jpg) |
 
 ## Notes
@@ -32,20 +32,6 @@ Value can be found in the published state on the `power` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
-
-### Current (numeric)
-Instantaneous measured electrical current.
-Value can be found in the published state on the `current` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `A`.
-
-### Voltage (numeric)
-Measured electrical potential value.
-Value can be found in the published state on the `voltage` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `V`.
 
 ### Energy (numeric)
 Sum of consumed energy.
@@ -84,22 +70,6 @@ sensor:
     unit_of_measurement: "W"
     value_template: "{{ value_json.power }}"
     icon: "mdi:flash"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "A"
-    value_template: "{{ value_json.current }}"
-    icon: "mdi:current-ac"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "V"
-    value_template: "{{ value_json.voltage }}"
-    icon: "mdi:alpha-v"
 
 sensor:
   - platform: "mqtt"

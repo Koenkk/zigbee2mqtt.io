@@ -67,7 +67,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Sensitivity (enum)
 Value can be found in the published state on the `sensitivity` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 

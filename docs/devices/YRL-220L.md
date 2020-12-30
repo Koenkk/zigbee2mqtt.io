@@ -12,7 +12,7 @@ description: "Integrate your Yale YRL-220L via Zigbee2MQTT with whatever smart h
 | Model | YRL-220L  |
 | Vendor  | Yale  |
 | Description | Real living keyless leveler lock |
-| Exposes | lock (state), battery, linkquality |
+| Exposes | lock (state, lock_state), battery, linkquality |
 | Picture | ![Yale YRL-220L](../images/devices/YRL-220L.jpg) |
 
 ## Notes

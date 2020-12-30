@@ -17,6 +17,11 @@ description: "Integrate your Lutron LZL4BWHL01 via Zigbee2MQTT with whatever sma
 
 ## Notes
 
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
+
 
 ### Pairing
 Factory reset the Lutron Connected Bulb Remote by pressing and holding the remote's top and bottom buttons for approximately 15 seconds. The light on the remote will blink rapidly to indicate that the remote has been reset.

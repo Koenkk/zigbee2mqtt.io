@@ -12,7 +12,7 @@ description: "Integrate your Yale YRD246HA20BP via Zigbee2MQTT with whatever sma
 | Model | YRD246HA20BP  |
 | Vendor  | Yale  |
 | Description | Assure lock key free deadbolt with Zigbee |
-| Exposes | lock (state), battery, linkquality |
+| Exposes | lock (state, lock_state), battery, linkquality |
 | Picture | ![Yale YRD246HA20BP](../images/devices/YRD246HA20BP.jpg) |
 
 ## Notes

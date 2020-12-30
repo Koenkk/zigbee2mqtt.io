@@ -17,6 +17,11 @@ description: "Integrate your Stelpro STZB402 via Zigbee2MQTT with whatever smart
 
 ## Notes
 
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
+
 
 ### Setting outdoor temperature
 To set _outdoor temperature_, you need to send the value to the following MQTT topic:
@@ -113,7 +118,7 @@ climate:
       - "heat"
     mode_command_topic: true
     action_topic: true
-    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan_only':'fan'} %}{{ values[value_json.running_state] }}"
+    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
     temperature_command_topic: "occupied_heating_setpoint"
     temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
     temperature_state_topic: true

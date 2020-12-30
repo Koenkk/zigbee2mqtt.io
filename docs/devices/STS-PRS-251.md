@@ -17,6 +17,11 @@ description: "Integrate your SmartThings STS-PRS-251 via Zigbee2MQTT with whatev
 
 ## Notes
 
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
+
 
 ### Let the device beep.
 ```json
@@ -25,8 +30,6 @@ description: "Integrate your SmartThings STS-PRS-251 via Zigbee2MQTT with whatev
 }
 ```
 
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
 
 * `presence_timeout`: Timeout (in seconds) after which `presence: false` will be send when the device has not checked-in. By default 100 seconds, don't go lower then 30 seconds.
 

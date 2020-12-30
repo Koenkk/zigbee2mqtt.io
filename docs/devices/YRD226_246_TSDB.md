@@ -12,7 +12,7 @@ description: "Integrate your Yale YRD226/246 TSDB via Zigbee2MQTT with whatever 
 | Model | YRD226/246 TSDB  |
 | Vendor  | Yale  |
 | Description | Assure lock |
-| Exposes | lock (state), battery, linkquality |
+| Exposes | lock (state, lock_state), battery, linkquality |
 | Picture | ![Yale YRD226/246 TSDB](../images/devices/YRD226-246-TSDB.jpg) |
 
 ## Notes

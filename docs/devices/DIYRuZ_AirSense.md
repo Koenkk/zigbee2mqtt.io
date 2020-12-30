@@ -42,8 +42,8 @@ e.g. `1` would add 1 to the pressure reported by the device; default `0`.
 
 
 ## Exposes
-### CO (numeric)
-The measured CO (carbon monoxide) value.
+### Co2 (numeric)
+The measured CO2 (carbon monoxide) value.
 Value can be found in the published state on the `co2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ppm`.
@@ -81,14 +81,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `ON` enable_abc is ON, if `OFF` OFF.
 
 ### Threshold1 (numeric)
-Warning (LED2) CO level.
+Warning (LED2) CO2 level.
 Value can be found in the published state on the `threshold1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"threshold1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"threshold1": NEW_VALUE}`.
 The unit of this value is `ppm`.
 
 ### Threshold2 (numeric)
-Critical (LED3) CO level.
+Critical (LED3) CO2 level.
 Value can be found in the published state on the `threshold2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"threshold2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"threshold2": NEW_VALUE}`.
