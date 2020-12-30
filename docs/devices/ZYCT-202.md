@@ -23,6 +23,9 @@ Factory reset the remote by holding the 0 (off) button for +-20 seconds.
 To establish a connection keep the remote within 2 meters from the hub.
 Press and hold the smart group button (button with two bulbs) and wait until the lights, below the channels, flash.
 
+### Binding
+This device does not support binding
+
 
 
 ## Exposes
