@@ -20,7 +20,7 @@ description: "Integrate your HEIMAN HS2SK_nxp via Zigbee2MQTT with whatever smar
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
-* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 10 seconds.
+* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds.
 
 
 ## Exposes
@@ -54,7 +54,7 @@ The unit of this value is `V`.
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration

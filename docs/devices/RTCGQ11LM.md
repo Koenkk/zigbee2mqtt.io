@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi RTCGQ11LM via Zigbee2MQTT with whatever smar
 | Model | RTCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara human body movement and illuminance sensor |
-| Exposes | battery, occupancy, illuminance, linkquality |
+| Exposes | battery, occupancy, illuminance_lux, linkquality |
 | Picture | ![Xiaomi RTCGQ11LM](../images/devices/RTCGQ11LM.jpg) |
 
 ## Notes
@@ -23,12 +23,6 @@ Press and hold the reset button on the device for +- 5 seconds (until the blue l
 After this the device will automatically join. If this doesn't work, try with a single short button press.
 
 
-### Troubleshooting: no occupancy, only illuminance is published
-Some routers are not able to handle the RTCGQ11LM as a child correctly. This leads to an illuminance value being published but no occupancy.
-This mostly seems to happen when the parent of the RTCGQ11LM is an OSRAM device.
-A discussion about this can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/2274). This cannot be fixed from Zigbee2MQTT, make sure the RTCGQ11LM uses another router as it's parent by positioning a non OSRAM device close.
-
-
 ### Troubleshooting: device stops sending messages/disconnects from network
 Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes happens that they disconnect from the network.
 Most of the times this happens because of the following reasons:
@@ -37,12 +31,6 @@ Most of the times this happens because of the following reasons:
 - The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, OSRAM, Sylvania, SmartThings, Securifi.
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
-
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
-* `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
-e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
 
 
 * `no_occupancy_since`: Timeout (in seconds) after which `no_occupancy_since` is sent.
@@ -71,7 +59,7 @@ is needed.
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `100`.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Occupancy (binary)
@@ -80,8 +68,8 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Illuminance (numeric)
-Raw measured illuminance.
+### Illuminance_lux (numeric)
+Measured illuminance in lux.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
@@ -90,7 +78,7 @@ The unit of this value is `lx`.
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration

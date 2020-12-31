@@ -46,7 +46,7 @@ If value equals `true` tamper is ON, if `false` OFF.
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
@@ -89,6 +89,13 @@ sensor:
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
     icon: "mdi:signal"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:update"
+    value_template: "{{ value_json['update']['state'] }}"
 
 binary_sensor:
   - platform: "mqtt"

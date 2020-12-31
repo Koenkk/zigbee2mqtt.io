@@ -91,6 +91,13 @@ function getExposeDocs(expose) {
                 lines.push(`To change the mode publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${mode.property}": VALUE}\` where \`VALUE\` can be: ${mode.values.map((e) => `\`${e}\``).join(', ')}.`);
             }
         }
+
+        if (expose.type === 'lock') {
+            const lockState = expose.features.find((e) => e.name === 'lock_state');
+            if (lockState) {
+                lines.push(`This lock exposes a lock state which can be found in the published state under the \`lock_state\` property. It's not possible to read (\`/get\`) or write (\`/set\`) this value. The possible values are: ${lockState.values.map((e) => `\`${e}\``).join(', ')}.`);
+            }
+        }
     } else if (expose.type === 'light') {
         const state = expose.features.find((e) => e.name === 'state');
         const brightness = expose.features.find((e) => e.name === 'brightness');

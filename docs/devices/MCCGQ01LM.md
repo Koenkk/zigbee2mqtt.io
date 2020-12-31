@@ -83,7 +83,7 @@ DateTime door_window_sensor_last_change "last change [%1$td.%1$tm.%1$tY %1$tH:%1
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `100`.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Contact (binary)
@@ -96,7 +96,7 @@ If value equals `false` contact is ON, if `true` OFF.
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration

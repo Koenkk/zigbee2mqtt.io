@@ -13,8 +13,6 @@ frontend:
   host: 0.0.0.0
   # Optional, enables authentication, disabled by default
   auth_token: your-secret-token
-experimental:
-  new_api: true
 ```
 
 ## Screenshot

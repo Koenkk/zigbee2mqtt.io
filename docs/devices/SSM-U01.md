@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi SSM-U01 via Zigbee2MQTT with whatever smart 
 | Model | SSM-U01  |
 | Vendor  | Xiaomi  |
 | Description | Aqara single switch module T1 (with neutral) |
-| Exposes | switch (state), energy, power, linkquality |
+| Exposes | switch (state), energy, power, device_temperature, linkquality |
 | Picture | ![Xiaomi SSM-U01](../images/devices/SSM-U01.jpg) |
 
 ## Notes
@@ -40,11 +40,17 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
 
+### Device_temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
@@ -78,6 +84,13 @@ sensor:
     unit_of_measurement: "W"
     value_template: "{{ value_json.power }}"
     icon: "mdi:flash"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.device_temperature }}"
 
 sensor:
   - platform: "mqtt"

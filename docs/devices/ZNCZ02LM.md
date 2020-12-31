@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi ZNCZ02LM via Zigbee2MQTT with whatever smart
 | Model | ZNCZ02LM  |
 | Vendor  | Xiaomi  |
 | Description | Mi power plug ZigBee |
-| Exposes | switch (state), power, energy, temperature, linkquality |
+| Exposes | switch (state), power, energy, temperature, power_outage_memory, linkquality |
 | Picture | ![Xiaomi ZNCZ02LM](../images/devices/ZNCZ02LM.jpg) |
 
 ## Notes
@@ -72,11 +72,18 @@ Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
+### Power_outage_memory (binary)
+Enable/disable the power outage memory, this recovers the on/off mode after power failure.
+Value can be found in the published state on the `power_outage_memory` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+If value equals `true` power_outage_memory is ON, if `false` OFF.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
@@ -118,6 +125,14 @@ sensor:
     unit_of_measurement: "°C"
     value_template: "{{ value_json.temperature }}"
     device_class: "temperature"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.power_outage_memory }}"
+    payload_on: true
+    payload_off: false
 
 sensor:
   - platform: "mqtt"
