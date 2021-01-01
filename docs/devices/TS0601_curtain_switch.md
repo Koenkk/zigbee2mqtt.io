@@ -26,6 +26,7 @@ description: "Integrate your TuYa TS0601_curtain_switch via Zigbee2MQTT with wha
 
 
 ## Exposes
+
 ### Cover 
 The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}` or `{"state": "CLOSE"}`.

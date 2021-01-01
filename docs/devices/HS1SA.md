@@ -39,6 +39,7 @@ The product code should end in *-M* for the Zigbee version. The label inside the
 
 
 ## Exposes
+
 ### Smoke (binary)
 Indicates whether the device detected smoke.
 Value can be found in the published state on the `smoke` property.

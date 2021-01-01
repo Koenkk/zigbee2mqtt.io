@@ -38,6 +38,7 @@ This method should work for Philips Hue bulbs, IKEA TRADFRI bulbs, GE Link bulbs
 
 
 ## Exposes
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.

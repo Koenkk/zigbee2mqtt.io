@@ -25,6 +25,7 @@ description: "Integrate your Stelpro SMT402AD via Zigbee2MQTT with whatever smar
 
 
 ## Exposes
+
 ### Local_temperature (numeric)
 Current temperature measured on the device.
 Value can be found in the published state on the `local_temperature` property.

@@ -54,6 +54,7 @@ This device supports OTA updates, for more information see [OTA updates](../info
 
 
 ## Exposes
+
 ### Light (rgb endpoint)
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_xy`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_rgb": "ON"}`, `{"state_rgb": "OFF"}` or `{"state_rgb": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_rgb": ""}`.
@@ -63,9 +64,11 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
   - `{"color": {"r": R, "g": G, "b": B}}` e.g. `{"color":{"r":46,"g":102,"b":150}}`
   - `{"color": {"rgb": "R,G,B"}}` e.g. `{"color":{"rgb":"46,102,150"}}`
   - `{"color": {"hex": HEX}}` e.g. `{"color":{"hex":"#547CFF"}}`
+
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
 Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":0.5}`.
+
 #### Moving/stepping
 Instead of setting a value (e.g. brightness) directly it is also possible to:
 - move: this will automatically move the value over time, to stop send value `stop` or `0`.
@@ -90,9 +93,11 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_white": "ON"}`, `{"state_white": "OFF"}` or `{"state_white": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_white": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_white": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_white": ""}`.
+
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
 Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":0.5}`.
+
 #### Moving/stepping
 Instead of setting a value (e.g. brightness) directly it is also possible to:
 - move: this will automatically move the value over time, to stop send value `stop` or `0`.

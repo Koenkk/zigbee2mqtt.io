@@ -57,6 +57,7 @@ e.g. `1` would add 1 to the pressure reported by the device; default `0`.
 
 
 ## Exposes
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.

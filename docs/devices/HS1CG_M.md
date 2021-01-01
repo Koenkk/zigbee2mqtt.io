@@ -21,6 +21,7 @@ None
 
 
 ## Exposes
+
 ### Gas (binary)
 Indicates whether the device detected gas.
 Value can be found in the published state on the `gas` property.

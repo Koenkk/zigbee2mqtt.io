@@ -36,6 +36,7 @@ description: "Integrate your SmartThings STS-PRS-251 via Zigbee2MQTT with whatev
 
 
 ## Exposes
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.

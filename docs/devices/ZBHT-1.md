@@ -67,6 +67,7 @@ when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1
 
 
 ## Exposes
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.

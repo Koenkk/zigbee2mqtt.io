@@ -39,6 +39,7 @@ By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can b
 
 
 ## Exposes
+
 ### Cover 
 The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}` or `{"state": "CLOSE"}`.

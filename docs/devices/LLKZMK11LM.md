@@ -34,6 +34,7 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 
 
 ## Exposes
+
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.

@@ -21,6 +21,7 @@ None
 
 
 ## Exposes
+
 ### Water_leak (binary)
 Indicates whether the device detected a water leak.
 Value can be found in the published state on the `water_leak` property.

@@ -26,6 +26,7 @@ description: "Integrate your Saswell SEA801-Zigbee/SEA802-Zigbee via Zigbee2MQTT
 
 
 ## Exposes
+
 ### Battery_low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.

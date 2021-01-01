@@ -25,6 +25,7 @@ description: "Integrate your Xiaomi ZNMS12LM via Zigbee2MQTT with whatever smart
 
 
 ## Exposes
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.

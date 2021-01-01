@@ -45,6 +45,7 @@ You may have to unpair the switch from an existing coordinator before the pairin
 
 
 ## Exposes
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.

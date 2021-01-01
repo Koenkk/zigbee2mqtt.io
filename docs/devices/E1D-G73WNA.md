@@ -24,6 +24,7 @@ This device supports OTA updates, for more information see [OTA updates](../info
 
 
 ## Exposes
+
 ### Contact (binary)
 Indicates if the contact is closed (= true) or open (= false).
 Value can be found in the published state on the `contact` property.

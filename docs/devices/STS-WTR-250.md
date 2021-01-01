@@ -30,6 +30,7 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 
 
 ## Exposes
+
 ### Water_leak (binary)
 Indicates whether the device detected a water leak.
 Value can be found in the published state on the `water_leak` property.

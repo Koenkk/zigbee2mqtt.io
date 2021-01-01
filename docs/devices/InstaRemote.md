@@ -51,6 +51,7 @@ This device supports OTA updates, for more information see [OTA updates](../info
 
 
 ## Exposes
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.

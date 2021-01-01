@@ -24,6 +24,7 @@ This device does **not** act as a router.
 
 
 ## Exposes
+
 ### Switch (top endpoint)
 The current state of this switch is in the published state under the `state_top` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_top": "ON"}`, `{"state_top": "OFF"}` or `{"state_top": "TOGGLE"}`.

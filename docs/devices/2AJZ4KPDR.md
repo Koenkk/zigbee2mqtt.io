@@ -24,6 +24,7 @@ Konke devices only work on Zigbee channel 15, 20 and 25.
 
 
 ## Exposes
+
 ### Contact (binary)
 Indicates if the contact is closed (= true) or open (= false).
 Value can be found in the published state on the `contact` property.

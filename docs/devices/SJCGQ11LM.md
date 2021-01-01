@@ -25,6 +25,7 @@ three times, release the water logo (the blue light will blink once more) and wa
 
 
 ## Exposes
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.

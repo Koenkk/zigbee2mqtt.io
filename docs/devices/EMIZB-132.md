@@ -44,6 +44,7 @@ Related issues:
 
 
 ## Exposes
+
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.

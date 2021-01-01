@@ -35,6 +35,7 @@ Press and hold the smart group button (button with two bulbs) and wait until the
 
 
 ## Exposes
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.

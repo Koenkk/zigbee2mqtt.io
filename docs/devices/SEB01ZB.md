@@ -21,6 +21,7 @@ None
 
 
 ## Exposes
+
 ### Sos (binary)
 SOS alarm.
 Value can be found in the published state on the `sos` property.

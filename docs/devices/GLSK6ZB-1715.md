@@ -21,6 +21,7 @@ None
 
 
 ## Exposes
+
 ### Switch (top_left endpoint)
 The current state of this switch is in the published state under the `state_top_left` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_top_left": "ON"}`, `{"state_top_left": "OFF"}` or `{"state_top_left": "TOGGLE"}`.

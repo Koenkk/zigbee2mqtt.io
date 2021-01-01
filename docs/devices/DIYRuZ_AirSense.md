@@ -42,6 +42,7 @@ e.g. `1` would add 1 to the pressure reported by the device; default `0`.
 
 
 ## Exposes
+
 ### Co2 (numeric)
 The measured CO2 (carbon monoxide) value.
 Value can be found in the published state on the `co2` property.

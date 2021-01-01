@@ -26,6 +26,7 @@ e.g. `95` would take 95% to the illuminance reported by the device; default `100
 
 
 ## Exposes
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.

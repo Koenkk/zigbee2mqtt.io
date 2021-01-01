@@ -21,6 +21,7 @@ None
 
 
 ## Exposes
+
 ### Carbon_monoxide (binary)
 Indicates if CO (carbon monoxide) is detected.
 Value can be found in the published state on the `carbon_monoxide` property.

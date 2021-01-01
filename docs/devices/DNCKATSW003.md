@@ -25,6 +25,7 @@ description: "Integrate your Custom devices (DiY) DNCKATSW003 via Zigbee2MQTT wi
 
 
 ## Exposes
+
 ### Switch (left endpoint)
 The current state of this switch is in the published state under the `state_left` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_left": "ON"}`, `{"state_left": "OFF"}` or `{"state_left": "TOGGLE"}`.

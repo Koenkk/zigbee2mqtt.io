@@ -50,6 +50,7 @@ If you want to automate the publishing of the outdoor temperature using Home Ass
 
 
 ## Exposes
+
 ### Local_temperature (numeric)
 Current temperature measured on the device.
 Value can be found in the published state on the `local_temperature` property.

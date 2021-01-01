@@ -47,6 +47,7 @@ Some versions of the plug provide voltage. This depends on the firmware on the d
 
 
 ## Exposes
+
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.

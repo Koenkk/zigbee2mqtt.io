@@ -43,6 +43,7 @@ e.g. `1` would add 1 to the pressure reported by the device; default `0`.
 
 
 ## Exposes
+
 ### Soil_moisture (numeric)
 Measured soil moisture value.
 Value can be found in the published state on the `soil_moisture` property.

@@ -25,6 +25,7 @@ description: "Integrate your Xiaomi ZNMS13LM via Zigbee2MQTT with whatever smart
 
 
 ## Exposes
+
 ### State (binary)
 Value can be found in the published state on the `state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

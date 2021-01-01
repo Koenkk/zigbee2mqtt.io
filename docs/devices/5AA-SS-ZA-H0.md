@@ -31,6 +31,7 @@ e.g. `95` would take 95% to the illuminance reported by the device; default `100
 
 
 ## Exposes
+
 ### Occupancy (binary)
 Indicates whether the device detected occupancy.
 Value can be found in the published state on the `occupancy` property.

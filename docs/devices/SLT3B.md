@@ -21,6 +21,7 @@ None
 
 
 ## Exposes
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.

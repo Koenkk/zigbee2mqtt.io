@@ -39,6 +39,7 @@ Konke devices only work on Zigbee channel 15, 20 and 25.
 
 
 ## Exposes
+
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.

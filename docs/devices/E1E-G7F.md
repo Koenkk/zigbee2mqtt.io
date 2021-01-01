@@ -28,6 +28,7 @@ The device will sometimes output a single push in addition to a long press. You 
 
 
 ## Exposes
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.

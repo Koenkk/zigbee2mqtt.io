@@ -21,6 +21,7 @@ None
 
 
 ## Exposes
+
 ### Smoke (binary)
 Indicates whether the device detected smoke.
 Value can be found in the published state on the `smoke` property.

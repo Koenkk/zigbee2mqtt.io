@@ -21,6 +21,7 @@ None
 
 
 ## Exposes
+
 ### Switch (button_light endpoint)
 The current state of this switch is in the published state under the `state_button_light` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_button_light": "ON"}`, `{"state_button_light": "OFF"}` or `{"state_button_light": "TOGGLE"}`.

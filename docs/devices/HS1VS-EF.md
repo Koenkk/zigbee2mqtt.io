@@ -21,6 +21,7 @@ None
 
 
 ## Exposes
+
 ### Vibration (binary)
 Indicates whether the device detected vibration.
 Value can be found in the published state on the `vibration` property.

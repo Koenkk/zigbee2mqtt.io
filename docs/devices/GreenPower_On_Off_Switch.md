@@ -57,6 +57,7 @@ This device can work on any channel, not only 15, 20, 11 or 25. For this refer t
 
 
 ## Exposes
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.

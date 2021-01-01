@@ -37,6 +37,7 @@ If the selftest is executed successfully you will hear the device beep in 30 sec
 
 
 ## Exposes
+
 ### Smoke (binary)
 Indicates whether the device detected smoke.
 Value can be found in the published state on the `smoke` property.
