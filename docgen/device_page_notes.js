@@ -2046,12 +2046,12 @@ When set to \`0\` no \`occupancy: false\` is sent.
         deviceTypeSpecificConfiguration: true,
         note: `
 * \`hold_timeout\`: The WXKG01LM only reports a button press and release.
-By default, Zigbee2mqtt publishes a \`hold\` action when there is at
+By default, Zigbee2MQTT publishes a \`hold\` action when there is at
 least 1000 ms between both events. It could be that due to
 delays in the network the release message is received late. This causes a single
 click to be identified as a \`hold\` action. If you are experiencing this you can try
 experimenting with this option (e.g. \`hold_timeout: 2000\`).
-* \`hold_timeout_expire\`: Sometimes it happens that the button does not send a release. To avoid problems Zigbee2mqtt expires the \`hold\` leading to no \`release\` being send. The default timeout is 4000 ms, you can increase it with this option.
+* \`hold_timeout_expire\`: Sometimes it happens that the button does not send a release. To avoid problems Zigbee2MQTT expires the \`hold\` leading to no \`release\` being send. The default timeout is 4000 ms, you can increase it with this option.
 `,
     },
     {
