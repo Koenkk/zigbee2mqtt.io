@@ -38,6 +38,19 @@ Most of the times this happens because of the following reasons:
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
+
+### Troubleshooting: Paring does not work
+If the pairing mentioned above does not work (anymore), try the following:
+- Stop the zigbee2mqtt service
+- Unplug the USB Dongle
+- Plugin the USB Dongle again
+- Start the zigbee2mqtt service
+
+Now repeat the steps mentioned in Pairing to start the pairing again
+
+Thanks to [@sergimola](https://github.com/sergimola) for finding this, see [issue: 839](https://github.com/Koenkk/zigbee2mqtt/issues/839#issuecomment-726853465).
+
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
