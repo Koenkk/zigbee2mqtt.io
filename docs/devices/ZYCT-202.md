@@ -18,18 +18,21 @@ description: "Integrate your Trust ZYCT-202 via Zigbee2MQTT with whatever smart 
 ## Notes
 
 
+### Binding
+This device does not support binding.
+
+
 ### Pairing
 Factory reset the remote by holding the 0 (off) button for +-20 seconds.
 To establish a connection keep the remote within 2 meters from the hub.
 Press and hold the smart group button (button with two bulbs) and wait until the lights, below the channels, flash.
 
-### Binding
-This device does not support binding.
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
+
+
 
 ## Exposes
 ### Action (enum)

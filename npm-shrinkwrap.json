@@ -1663,7 +1663,7 @@
       "dev": true
     },
     "zigbee2mqtt": {
-      "version": "git://github.com/koenkk/zigbee2mqtt.git#2d1e99f89bba3ae77b82675bd422a0a812f0b094",
+      "version": "git://github.com/koenkk/zigbee2mqtt.git#3d3f7544334d87ffddd72470131d6a3692173df3",
       "from": "git://github.com/koenkk/zigbee2mqtt.git#dev",
       "requires": {
         "ajv": "^6.12.4",
@@ -1685,8 +1685,8 @@
         "winston-syslog": "^2.4.4",
         "ws": "^7.3.1",
         "zigbee-herdsman": "0.13.46",
-        "zigbee-herdsman-converters": "14.0.1",
-        "zigbee2mqtt-frontend": "0.2.123"
+        "zigbee-herdsman-converters": "14.0.3",
+        "zigbee2mqtt-frontend": "0.2.129"
       },
       "dependencies": {
         "@babel/code-frame": {
@@ -15600,9 +15600,9 @@
           }
         },
         "zigbee-herdsman-converters": {
-          "version": "14.0.1",
-          "resolved": "https://registry.npmjs.org/zigbee-herdsman-converters/-/zigbee-herdsman-converters-14.0.1.tgz",
-          "integrity": "sha512-FGSuY/ThEtMYnPpoc9+fO/spKjWOyuLyjMAkHmTo4O2WSGVO9VBBOvORdZ0cNZ69UDzA15bwBdq9/YVGopXkDg==",
+          "version": "14.0.3",
+          "resolved": "https://registry.npmjs.org/zigbee-herdsman-converters/-/zigbee-herdsman-converters-14.0.3.tgz",
+          "integrity": "sha512-ObZqRgK81C3BIbTXaGL/QEUXP1F1tmj8vjAWVtrlGWkYjCQp4GYKxQU1FHNn342V6/3WxBo122OWrFFRxH3Xfw==",
           "requires": {
             "axios": "^0.21.1",
             "buffer-crc32": "^0.2.13",
@@ -28674,9 +28674,9 @@
           }
         },
         "zigbee2mqtt-frontend": {
-          "version": "0.2.123",
-          "resolved": "https://registry.npmjs.org/zigbee2mqtt-frontend/-/zigbee2mqtt-frontend-0.2.123.tgz",
-          "integrity": "sha512-Rs3hXPbCzDuTGGaJ2OweqrNw8Rd04++VZMsewBQkFDzRxQFRItgNQ3K0lJcW3TzPCPi+oFucaD3vHzMTQg/jOQ=="
+          "version": "0.2.129",
+          "resolved": "https://registry.npmjs.org/zigbee2mqtt-frontend/-/zigbee2mqtt-frontend-0.2.129.tgz",
+          "integrity": "sha512-gvzgYMtI7XF97HueC65MxwqB7Hcoc2HNRnyydqJuq11w0FrzFBg/VLhDpsW5Sor8oz/C8cjd8rtS1yC2jqI1Eg=="
         }
       }
     }

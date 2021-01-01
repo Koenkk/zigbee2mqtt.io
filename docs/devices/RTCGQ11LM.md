@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi RTCGQ11LM via Zigbee2MQTT with whatever smar
 | Model | RTCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara human body movement and illuminance sensor |
-| Exposes | battery, occupancy, illuminance_lux, linkquality |
+| Exposes | battery, occupancy, illuminance_lux, illuminance, linkquality |
 | Picture | ![Xiaomi RTCGQ11LM](../images/devices/RTCGQ11LM.jpg) |
 
 ## Notes
@@ -31,6 +31,12 @@ Most of the times this happens because of the following reasons:
 - The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, OSRAM, Sylvania, SmartThings, Securifi.
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
+e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
 
 
 * `no_occupancy_since`: Timeout (in seconds) after which `no_occupancy_since` is sent.
@@ -74,6 +80,12 @@ Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
+### Illuminance (numeric)
+Measured illuminance in lux.
+Value can be found in the published state on the `illuminance` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
@@ -104,6 +116,14 @@ binary_sensor:
     payload_on: true
     payload_off: false
     device_class: "motion"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "lx"
+    value_template: "{{ value_json.illuminance }}"
+    device_class: "illuminance"
 
 sensor:
   - platform: "mqtt"

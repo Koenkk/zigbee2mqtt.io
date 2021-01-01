@@ -271,6 +271,13 @@ Everytime the above message is sent, Zigbee2MQTT will calculate the current time
 `,
     },
     {
+        model: 'ZYCT-202',
+        note: `
+### Binding
+This device does not support binding.
+`,
+    },
+    {
         model: 'XDD12LM',
         note: `
 ### Pairing
