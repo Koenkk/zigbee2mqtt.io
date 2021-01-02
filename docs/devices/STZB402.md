@@ -17,6 +17,11 @@ description: "Integrate your Stelpro STZB402 via Zigbee2MQTT with whatever smart
 
 ## Notes
 
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
+
 
 ### Setting outdoor temperature
 To set _outdoor temperature_, you need to send the value to the following MQTT topic:
@@ -45,6 +50,7 @@ If you want to automate the publishing of the outdoor temperature using Home Ass
 
 
 ## Exposes
+
 ### Local_temperature (numeric)
 Current temperature measured on the device.
 Value can be found in the published state on the `local_temperature` property.
@@ -68,7 +74,7 @@ This climate device supports the following features: `occupied_heating_setpoint`
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
@@ -113,7 +119,7 @@ climate:
       - "heat"
     mode_command_topic: true
     action_topic: true
-    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan_only':'fan'} %}{{ values[value_json.running_state] }}"
+    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
     temperature_command_topic: "occupied_heating_setpoint"
     temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
     temperature_state_topic: true

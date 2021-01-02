@@ -12,13 +12,14 @@ description: "Integrate your Xiaomi ZNCZ04LM via Zigbee2MQTT with whatever smart
 | Model | ZNCZ04LM  |
 | Vendor  | Xiaomi  |
 | Description | Mi power plug ZigBee EU |
-| Exposes | switch (state), power, energy, temperature, voltage, current, linkquality |
+| Exposes | switch (state), power, energy, temperature, voltage, current, consumer_connected, consumer_overload, led_disabled_night, power_outage_memory, auto_off, linkquality |
 | Picture | ![Xiaomi ZNCZ04LM](../images/devices/ZNCZ04LM.jpg) |
 
 ## Notes
 
+
 ### Pairing
-Press and hold the button on the device until the blue light starts blinking, release it and and the device will automatically join. 
+Press and hold the button on the device until the blue light starts blinking, release it and and the device will automatically join.
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
@@ -39,6 +40,7 @@ Now toggle the plug/switch once with the button on it, from now on it will resto
 
 
 ## Exposes
+
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
@@ -78,11 +80,44 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `A`.
 
+### Consumer_connected (binary)
+Indicates whether attached device consumes power.
+Value can be found in the published state on the `consumer_connected` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` consumer_connected is ON, if `false` OFF.
+
+### Consumer_overload (numeric)
+Indicates with how many Watts the maximum possible power consumption is exceeded.
+Value can be found in the published state on the `consumer_overload` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `W`.
+
+### Led_disabled_night (binary)
+Enable/disable the LED at night.
+Value can be found in the published state on the `led_disabled_night` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
+If value equals `true` led_disabled_night is ON, if `false` OFF.
+
+### Power_outage_memory (binary)
+Enable/disable the power outage memory, this recovers the on/off mode after power failure.
+Value can be found in the published state on the `power_outage_memory` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+If value equals `true` power_outage_memory is ON, if `false` OFF.
+
+### Auto_off (binary)
+Turn the device automatically off when attached device consumes less than 2W for 20 minutes.
+Value can be found in the published state on the `auto_off` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_off": NEW_VALUE}`.
+If value equals `true` auto_off is ON, if `false` OFF.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
@@ -140,6 +175,45 @@ sensor:
     unit_of_measurement: "A"
     value_template: "{{ value_json.current }}"
     icon: "mdi:current-ac"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.consumer_connected }}"
+    payload_on: true
+    payload_off: false
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "W"
+    value_template: "{{ value_json.consumer_overload }}"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.led_disabled_night }}"
+    payload_on: true
+    payload_off: false
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.power_outage_memory }}"
+    payload_on: true
+    payload_off: false
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.auto_off }}"
+    payload_on: true
+    payload_off: false
 
 sensor:
   - platform: "mqtt"

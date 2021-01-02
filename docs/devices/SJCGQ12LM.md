@@ -11,7 +11,7 @@ description: "Integrate your Xiaomi SJCGQ12LM via Zigbee2MQTT with whatever smar
 
 | Model | SJCGQ12LM  |
 | Vendor  | Xiaomi  |
-| Description | Aqara water leak sensor |
+| Description | Aqara T1 water leak sensor |
 | Exposes | battery, water_leak, battery_low, tamper, linkquality |
 | Picture | ![Xiaomi SJCGQ12LM](../images/devices/SJCGQ12LM.jpg) |
 
@@ -25,11 +25,12 @@ three times, release the water logo (the blue light will blink once more) and wa
 
 
 ## Exposes
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `100`.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Water_leak (binary)
@@ -54,7 +55,7 @@ If value equals `true` tamper is ON, if `false` OFF.
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration

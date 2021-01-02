@@ -35,7 +35,7 @@ Adding an entry of your device to `node_modules/zigbee-herdsman-converters/devic
     meta: {
         configureKey: 1,
     },
-    configure: async (device, coordinatorEndpoint) => {
+    configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
         await bind(endpoint, coordinatorEndpoint, ['genBasic']);
     },
@@ -142,7 +142,7 @@ Now update your device in `node_modules/zigbee-herdsman-converters/devices.js` w
     meta: {
         configureKey: 1,
     },
-    configure: async (device, coordinatorEndpoint) => {
+    configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
         await bind(endpoint, coordinatorEndpoint, ['genBasic']);
     },

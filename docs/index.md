@@ -61,8 +61,7 @@ Besides running Zigbee2MQTT on [bare-metal Linux](getting_started/running_zigbee
 ### Support
 * [Bugs](https://github.com/koenkk/zigbee2mqtt/issues)
 * [Discord channel](https://discord.gg/NyseBeK)
-* [Github discussions](https://github.com/Koenkk/zigbee2mqtt/discussions)
-* [Forum](http://zigbee2mqtt.discourse.group/)
+* [Forum](https://github.com/Koenkk/zigbee2mqtt/discussions)
 * External:
   * [Tweakers (Dutch)](https://gathering.tweakers.net/forum/list_messages/1901662)
   * [Home Assistant forum (English)](https://community.home-assistant.io/t/zigbee2mqtt-getting-rid-of-your-proprietary-zigbee-bridges-xiaomi-hue-tradfri/52108)

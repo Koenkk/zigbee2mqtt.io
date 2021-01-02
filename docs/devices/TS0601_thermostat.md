@@ -44,7 +44,7 @@ After this command thermostat responds with two messages. One for calibration ch
   open -> fully opens valve and stays there
   close -> fully closes valve and stays there
   normal -> normal valve operation
-  
+
     ```json
     {
         "force": "open"
@@ -65,7 +65,7 @@ After this command thermostat responds with two messages. One for calibration ch
         ]
     }
     ```
-    
+
     ```json
     {
         "holidays":[
@@ -79,16 +79,16 @@ After this command thermostat responds with two messages. One for calibration ch
     }
     ```
 - You can set "week" schedule pattern with topic `zigbee2mqtt/FRIENDLY_NAME/set`. The payload values are:
-  5+2 -> to be used when workdays for example are monday-friday and saturday & sunday are holidays 
+  5+2 -> to be used when workdays for example are monday-friday and saturday & sunday are holidays
   6+1 -> to be used when workdays for example are monday-saturday and sunday is a holiday
-  7 -> to be used when workdays schedule will be used for the whole week 
+  7 -> to be used when workdays schedule will be used for the whole week
 
     ```json
     {
         "week": "5+2"
     }
     ```
-    
+
 - You can set "boost time" with topic `zigbee2mqtt/FRIENDLY_NAME/set`. But be aware that it rounds the values down to multiple of 100.
 
     ```json
@@ -96,25 +96,28 @@ After this command thermostat responds with two messages. One for calibration ch
         "boost_time": 200
     }
     ```
-- You can set "comfort temperature" level on the device with topic `zigbee2mqtt/FRIENDLY_NAME/set`. 
+- You can set "comfort temperature" level on the device with topic `zigbee2mqtt/FRIENDLY_NAME/set`.
 
     ```json
     {
         "comfort_temperature": 21
     }
     ```
-- You can set "eco temperature" level on the device with topic `zigbee2mqtt/FRIENDLY_NAME/set`. 
+- You can set "eco temperature" level on the device with topic `zigbee2mqtt/FRIENDLY_NAME/set`.
 
     ```json
     {
         "eco_temperature": 17
     }
-    ``` 
+    ```
+
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).   
+This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+
 
 ## Exposes
+
 ### Lock 
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
@@ -129,7 +132,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `100`.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Battery_low (binary)
@@ -153,7 +156,7 @@ The unit of this value is `%`.
 This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`, `away_mode`, `preset`.
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `auto`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `heat`, `auto`, `off`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `schedule`, `manual`, `boost`, `complex`, `comfort`, `eco`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
 - `away_mode`: Away mode. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_mode": "ON"}` or `{"away_mode": "OFF"}`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"away_mode": ""}`.
@@ -162,7 +165,7 @@ This climate device supports the following features: `current_heating_setpoint`,
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
@@ -246,10 +249,12 @@ climate:
     mode_state_topic: true
     mode_state_template: "{{ value_json.system_mode }}"
     modes: 
+      - "heat"
       - "auto"
+      - "off"
     mode_command_topic: true
     action_topic: true
-    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan_only':'fan'} %}{{ values[value_json.running_state] }}"
+    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
     temperature_command_topic: "current_heating_setpoint"
     temperature_state_template: "{{ value_json.current_heating_setpoint }}"
     temperature_state_topic: true
@@ -274,6 +279,13 @@ sensor:
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
     icon: "mdi:signal"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:update"
+    value_template: "{{ value_json['update']['state'] }}"
 
 binary_sensor:
   - platform: "mqtt"

@@ -10,6 +10,7 @@ const access = {
 function generate(definition) {
     return `
 ## Exposes
+
 ${definition.exposes.map((e) => getExposeDocs(e)).join('\n\n')}
 `;
 }
@@ -53,7 +54,7 @@ function getExposeDocs(expose) {
 
         if (expose.type === 'numeric') {
             if (expose.hasOwnProperty('value_max') && expose.hasOwnProperty('value_max')) {
-                lines.push(`The minimimal value is \`${expose.value_min}\` and the maximum value is \`${expose.value_max}\`.`);
+                lines.push(`The minimal value is \`${expose.value_min}\` and the maximum value is \`${expose.value_max}\`.`);
             }
 
             if (expose.unit) {
@@ -91,6 +92,13 @@ function getExposeDocs(expose) {
                 lines.push(`To change the mode publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${mode.property}": VALUE}\` where \`VALUE\` can be: ${mode.values.map((e) => `\`${e}\``).join(', ')}.`);
             }
         }
+
+        if (expose.type === 'lock') {
+            const lockState = expose.features.find((e) => e.name === 'lock_state');
+            if (lockState) {
+                lines.push(`This lock exposes a lock state which can be found in the published state under the \`lock_state\` property. It's not possible to read (\`/get\`) or write (\`/set\`) this value. The possible values are: ${lockState.values.map((e) => `\`${e}\``).join(', ')}.`);
+            }
+        }
     } else if (expose.type === 'light') {
         const state = expose.features.find((e) => e.name === 'state');
         const brightness = expose.features.find((e) => e.name === 'brightness');
@@ -120,10 +128,12 @@ function getExposeDocs(expose) {
             lines.push(`  - HSL space (hue, saturation, lightness)\`{"color": {"h": H, "s": S, "l": L}}\` e.g. \`{"color":{"h":360,"s":100,"l":100}}\` or \`{"color": {"hsl": "H,S,L"}}\` e.g. \`{"color":{"hsl":"360,100,100"}}\``);
         }
 
+        lines.push(``);
         lines.push(`#### Transition`);
         lines.push(`For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property \`transition\` to the payload which is the transition time in seconds.`);
         lines.push(`Examples: \`{"brightness":156,"transition":3}\`, \`{"color_temp":241,"transition":0.5}\`.`);
 
+        lines.push(``);
         lines.push(`#### Moving/stepping`);
         lines.push(`Instead of setting a value (e.g. brightness) directly it is also possible to:`);
         lines.push(`- move: this will automatically move the value over time, to stop send value \`stop\` or \`0\`.`);

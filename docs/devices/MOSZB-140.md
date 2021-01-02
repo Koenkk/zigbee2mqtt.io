@@ -30,6 +30,7 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 
 
 ## Exposes
+
 ### Occupancy (binary)
 Indicates whether the device detected occupancy.
 Value can be found in the published state on the `occupancy` property.
@@ -64,7 +65,7 @@ The unit of this value is `lx`.
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration

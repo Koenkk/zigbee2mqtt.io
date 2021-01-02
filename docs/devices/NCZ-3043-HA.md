@@ -35,6 +35,7 @@ when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1
 
 
 ## Exposes
+
 ### Occupancy (binary)
 Indicates whether the device detected occupancy.
 Value can be found in the published state on the `occupancy` property.
@@ -57,7 +58,7 @@ The unit of this value is `°C`.
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `100`.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Battery_low (binary)
@@ -76,7 +77,7 @@ If value equals `true` tamper is ON, if `false` OFF.
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration

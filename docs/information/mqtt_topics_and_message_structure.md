@@ -97,7 +97,7 @@ Example payload:
         "network_address":29159,
         "supported":true,
         "friendly_name":"my_plug",
-        "endpoints":{"1":{"bindings":[],"clusters":{"input":["genOnOff","genBasic"],"output":[]}}},
+        "endpoints":{"1":{"bindings":[],"configured_reportings":[],"clusters":{"input":["genOnOff","genBasic"],"output":[]}}},
         "definition":{
             "model":"ZNCZ02LM",
             "vendor":"Xiaomi",
@@ -105,6 +105,7 @@ Example payload:
         },
         "power_source":"Mains (single phase)",
         "date_code":"02-28-2017",
+        "model_id":"lumi.plug",
         "interviewing":false,
         "interview_completed":true
     },
@@ -114,7 +115,7 @@ Example payload:
         "network_address":57440,
         "supported":true,
         "friendly_name":"my_bulb",
-        "endpoints":{"1":{"bindings":[],"clusters":{"input":["genOnOff","genBasic","genLevelCtrl"],"output":["genOta"]}}},
+        "endpoints":{"1":{"bindings":[],"configured_reportings":[],"clusters":{"input":["genOnOff","genBasic","genLevelCtrl"],"output":["genOta"]}}},
         "definition":{
             "model":"LED1624G9",
             "vendor":"IKEA",
@@ -123,6 +124,7 @@ Example payload:
         },
         "power_source":"Mains (single phase)",
         "software_build_id":"1.3.009",
+        "model_id":"TRADFRI bulb E27 CWS opal 600lm",
         "date_code":"20180410",
         "interviewing":false,
         "interview_completed":true
@@ -136,6 +138,9 @@ Example payload:
               {"cluster":"genOnOff","target":{"type":"endpoint","endpoint":1,"ieee_address":"0x000b57fffec6a5b3"}},
               {"cluster":"genOnOff","target":{"type":"group","id":1}},
             ],
+            "configured_reportings":[
+              {"cluster":"genOnOff","attribute":"onOff","maximum_report_interval":10,"minimum_report_interval":1,"reportable_change":1}
+            ],
             "clusters":{"input":["genBasic","msIlluminanceMeasurement"],"output":["genOnOff"]}
           }
         },
@@ -145,6 +150,7 @@ Example payload:
         "definition":null,
         "power_source":"Battery",
         "date_code":"04-28-2019",
+        "model_id":null,
         "interviewing":false,
         "interview_completed":true
     },
@@ -153,11 +159,12 @@ Example payload:
         "type":"Coordinator",
         "network_address":0,
         "supported":false,
-        "endpoints":{"1":{"bindings":[],"clusters":{"input":[],"output":[]}}},
+        "endpoints":{"1":{"bindings":[],"configured_reportings":[],"clusters":{"input":[],"output":[]}}},
         "friendly_name":"Coordinator",
         "definition":null,
         "power_source":null,
         "date_code":null,
+        "model_id":null,
         "interviewing":false,
         "interview_completed":true
     },
@@ -201,7 +208,9 @@ This can be used to e.g. configure certain settings like allowing new devices to
 
 Example: when publishing `zigbee2mqtt/bridge/request/permit_join` with payload `{"value": true}` Zigbee2MQTT will respond to `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"value":true},"status":"ok"}`. In case this request failed the response will be `{"data":{}, "error": "Failed to connect to adapter","status":"error"}`.
 
-Optionally, a `transaction` property can be included in the request. This allows to easily match requests with responses. When a `transaction` property is included Zigbee2MQTT will include it in the response. Example: `zigbee2mqtt/bridge/request/permit_join` with payload `{"value": true, "transaction":23}` will be responded to on `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"value":true},"status":"ok","transaction":23}`
+Optionally, a `transaction` property can be included in the request. This allows to easily match requests with responses. When a `transaction` property is included Zigbee2MQTT will include it in the response. Example: `zigbee2mqtt/bridge/request/permit_join` with payload `{"value": true, "transaction":23}` will be responded to on `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"value":true},"status":"ok","transaction":23}`.
+
+For requests where a device is involved you can select a specific endpoint by adding `/ENDPOINT_ID` where `ENDPOINT_ID` is the endpoint number (e.g `1`, `2`) or the endpoint name (e.g. `left`, `l1`). By default the first endpoint is taken. Example of a `zigbee2mqtt/bridge/request/device/bind` payload: `{"from": "my_remote/left", "to": "my_bulb"}`.
 
 ### Possible requests
 
@@ -304,6 +313,15 @@ See [Binding](./binding.md).
 
 See [Binding](./binding.md).
 </details>
+
+<details>
+<summary>zigbee2mqtt/bridge/request/device/configure_reporting</summary>
+
+Allows to send a Zigbee configure reporting command to a device. Refer to the Configure Reporting Command in the [ZigBee Cluster Library](https://github.com/Koenkk/zigbee-herdsman/blob/master/docs/Zigbee%20Cluster%20Library%20Specification%20v7.pdf) for more information. Example payload is `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10}`. In this case the repsponse would be `{"data":{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":"10","reportable_change":10},"status":"ok"}`.
+
+To disable reporting set the `maximum_report_interval` to `65535`.
+</details>
+
 
 #### Group
 <details>
