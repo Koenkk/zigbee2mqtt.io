@@ -3,11 +3,11 @@
 # Frequently asked questions
 
 - [Why does my device not or fail to pair?](#why-does-my-device-not-or-fail-to-pair)
-- [How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?](#todo)
-- [How do I move my Zigbee2MQTT instance to a different environment?](#todo)
+- [How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?](#how-do-i-migrate-from-a-cc2531-to-a-more-powerful-coordinator-eg-zzh)
+- [How do I move my Zigbee2MQTT instance to a different environment?](#how-do-i-move-my-zigbee2mqtt-instance-to-a-different-environment)
 - [What does and does not require repairing of all devices?](#what-does-and-does-not-require-repairing-of-all-devices)
 - [Help, Zigbee2MQTT fails to start!](#help-zigbee2mqtt-fails-to-start)
-- [I read that Zigbee2MQTT has a limit of 20 devices (when using a CC2531), is this true?](#todo)
+- [I read that Zigbee2MQTT has a limit of 20 devices (when using a CC2531), is this true?](#i-read-that-zigbee2mqtt-has-a-limit-of-20-devices-when-using-a-cc2531-is-this-true)
 - [Which port should I use for CC26X2R1/CC1352P-2, /dev/ttyACM0 or /dev/ttyACM1?](#which-port-should-i-use-for-cc26x2r1cc1352p-2-devttyacm0-or-devttyacm1)
 
 ## Why does my device not or fail to pair?
