@@ -222,6 +222,7 @@ Allows to permit or disable joining of new devices. Allowed payloads are `{"valu
 
 To allow joining via a specific device set the `friendly_name` in the `device` property. E.g. `{"value": true, "device": "my_bulb"}`.
 
+To allow joining for only a specific amount of time add the `time` property (in seconds). E.g. `{"value": true, "time": 20}` (will allow joining for 20 seconds).
 
 #### zigbee2mqtt/bridge/request/health_check
 
