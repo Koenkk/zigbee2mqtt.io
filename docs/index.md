@@ -34,7 +34,7 @@ Welcome to the Zigbee2MQTT documentation! Besides the documentation, you can als
 ### Running Zigbee2MQTT on ...
 Besides running Zigbee2MQTT on [bare-metal Linux](getting_started/running_zigbee2mqtt.md) it can also run on:
 * [Docker](information/docker.md)
-* [Home Assistant (official Zigbee2MQTT add-on)](https://github.com/danielwelch/hassio-zigbee2mqtt)
+* [Home Assistant (official Zigbee2MQTT add-on)](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt)
 * [Virtual environment](information/virtual_environment.md)
 * [Windows](information/windows.md)
 
