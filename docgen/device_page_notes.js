@@ -1094,6 +1094,13 @@ Right before executing the commands make sure to wake up the device by pressing 
 `,
     },
     {
+        model: 'E1743',
+        note: `
+### Battery Replacement
+After replacing the battery, reporting of battery % may not work. If you experience this issue, remove the device and join it again.
+`,
+    },
+    {
         model: 'ZYCT-202',
         note: `
 ### Pairing
