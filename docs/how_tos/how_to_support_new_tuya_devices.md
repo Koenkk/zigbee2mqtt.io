@@ -35,7 +35,7 @@ Adding an entry of your device to `node_modules/zigbee-herdsman-converters/devic
     meta: {
         configureKey: 1,
     },
-    configure: async (device, coordinatorEndpoint) => {
+    configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
         await bind(endpoint, coordinatorEndpoint, ['genBasic']);
     },
@@ -61,9 +61,9 @@ The `commandGetData` and `commandSetDataResponse` types of the `manuSpecificTuya
 
 - `status` and `transid` are just a header information.
 - `dp` is so called "Data Point ID" which is at the core of Tuya devices. From the point of view of a device the DPIDs are the functions that the device provides.
-- `datatype` is the type of data contained in the `data` field, see `TuyaDataTypes` in `node_modules/zigbee-herdsman-converters/convertes/common.js`
+- `datatype` is the type of data contained in the `data` field, see `dataTypes` in `node_modules/zigbee-herdsman-converters/lib/tuya.js`
 
-Some data points are 'report only' (they report changes that happen within the device) others are 'issue and report' (they can report by themselves, but also respond with a report when set). The list of currently known data points can be found in `TuyaDataPoints` in `node_modules/zigbee-herdsman-converters/convertes/common.js`.
+Some data points are 'report only' (they report changes that happen within the device) others are 'issue and report' (they can report by themselves, but also respond with a report when set). The list of currently known data points can be found in `dataPoints` in `node_modules/zigbee-herdsman-converters/convertes/lib/tuya.js`.
 
 For example on Saswell thermostat data point number `103` is heating setpoint, it has `value` type and is 'issue and report', we will use that information later in examples.
 
@@ -88,7 +88,7 @@ On a linux computer/Raspberry Pi you can do `tail -f -n +0 data/tuya.dump.txt | 
 ### 5. Adding your first data point
 Let's assume we want to add the heating setpoint of the Saswell thermostat first.
 
-First add the `saswellHeatingSetpoint` data point to `TuyaDataPoints` in `node_modules/zigbee-herdsman-converters/convertes/common.js` with value `103`.
+First add the `saswellHeatingSetpoint` data point to `dataPoints` in `node_modules/zigbee-herdsman-converters/lib/tuya.js` with value `103`.
 
 Then add to `node_modules/zigbee-herdsman-converters/converters/fromZigbee.js`:
 ```js
@@ -100,7 +100,7 @@ saswell_thermostat: {
         const value = tuyaGetDataValue(msg.data.datatype, msg.data.data); // This function will take of converting the data to proper JS type
 
         switch (dp) {
-        case common.TuyaDataPoints.saswellHeatingSetpoint: // DPID that we added to common
+        case tuya.dataPoints.saswellHeatingSetpoint: // DPID that we added to common
             return {current_heating_setpoint: (value / 10).toFixed(1)}; // value is already converted to a number in JS, and we deduced that it needs to be divided by 10
         default:
             meta.logger.warn(`zigbee-herdsman-converters:SaswellThermostat: NOT RECOGNIZED DP #${
@@ -115,7 +115,7 @@ saswell_thermostat_current_heating_setpoint: {
     key: ['current_heating_setpoint'],
     convertSet: async (entity, key, value, meta) => {
         const temp = Math.round(value * 10);
-        await sendTuyaDataPointValue(entity, common.TuyaDataPoints.saswellHeatingSetpoint, temp); // sendTuyaDataPoint* functions take care of converting the data to proper format
+        await sendTuyaDataPointValue(entity, tuya.dataPoints.saswellHeatingSetpoint, temp); // sendTuyaDataPoint* functions take care of converting the data to proper format
     },
 },
 ```
@@ -129,7 +129,6 @@ Now update your device in `node_modules/zigbee-herdsman-converters/devices.js` w
     model: 'SEA802-Zigbee',
     vendor: 'Saswell',
     description: 'Thermostatic radiator valve',
-    supports: 'thermostat, temperature',
     fromZigbee: [
         fz.ignore_basic_report,
         fz.tuya_data_point_dump,
@@ -143,7 +142,7 @@ Now update your device in `node_modules/zigbee-herdsman-converters/devices.js` w
     meta: {
         configureKey: 1,
     },
-    configure: async (device, coordinatorEndpoint) => {
+    configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
         await bind(endpoint, coordinatorEndpoint, ['genBasic']);
     },

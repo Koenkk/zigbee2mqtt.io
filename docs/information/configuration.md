@@ -144,6 +144,10 @@ advanced:
   timestamp_format: 'YYYY-MM-DD HH:mm:ss'
   # Optional: configure adapter concurrency (e.g. 2 for CC2531 or 16 for CC26X2R1) (default: null, uses recommended value)
   adapter_concurrent: null
+  # Optional: disables the legacy api (default: shown below)
+  legacy_api: true
+  # Optional: use IKEA TRADFRI OTA test server, see OTA updates documentation (default: false)
+  ikea_ota_use_test_url: false
 
 # Optional: experimental options
 experimental:

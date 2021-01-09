@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi LLKZMK11LM via Zigbee2MQTT with whatever sma
 | Model | LLKZMK11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara wireless relay controller |
-| Exposes | power, energy, temperature, voltage, switch (state), linkquality |
+| Exposes | power, energy, temperature, voltage, switch (state), interlock, linkquality |
 | Picture | ![Xiaomi LLKZMK11LM](../images/devices/LLKZMK11LM.jpg) |
 
 ## Notes
@@ -34,6 +34,7 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 
 
 ## Exposes
+
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
@@ -71,11 +72,18 @@ The current state of this switch is in the published state under the `state_l2` 
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
 
+### Interlock (binary)
+Enabling prevents both relais being on at the same time.
+Value can be found in the published state on the `interlock` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interlock": NEW_VALUE}`.
+If value equals `true` interlock is ON, if `false` OFF.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
@@ -134,6 +142,14 @@ switch:
     payload_on: "ON"
     value_template: "{{ value_json.state_l2 }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/l2/set"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.interlock }}"
+    payload_on: true
+    payload_off: false
 
 sensor:
   - platform: "mqtt"

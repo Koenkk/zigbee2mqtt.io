@@ -2,6 +2,15 @@
 ---
 # Frequently asked questions
 
+- [Why does my device not or fail to pair?](#why-does-my-device-not-or-fail-to-pair)
+- [How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?](#how-do-i-migrate-from-a-cc2531-to-a-more-powerful-coordinator-eg-zzh)
+- [How do I move my Zigbee2MQTT instance to a different environment?](#how-do-i-move-my-zigbee2mqtt-instance-to-a-different-environment)
+- [What does and does not require repairing of all devices?](#what-does-and-does-not-require-repairing-of-all-devices)
+- [Help, Zigbee2MQTT fails to start!](#help-zigbee2mqtt-fails-to-start)
+- [I read that Zigbee2MQTT has a limit of 20 devices (when using a CC2531), is this true?](#i-read-that-zigbee2mqtt-has-a-limit-of-20-devices-when-using-a-cc2531-is-this-true)
+- [Which port should I use for CC26X2R1/CC1352P-2, /dev/ttyACM0 or /dev/ttyACM1?](#which-port-should-i-use-for-cc26x2r1cc1352p-2-devttyacm0-or-devttyacm1)
+- [Common error codes](#common-error-codes)
+
 ## Why does my device not or fail to pair?
 This problem can be divided in 2 categories; no logging is shown at all OR interview fails.
 
@@ -26,6 +35,22 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - If device joins with `0x000000000000000` as `ieeeAddress` (you will see: `Starting interview of '0x0000000000000000'` in the Zigbee2MQTT log) your CC253X might be broken. [See issue #2761](https://github.com/Koenkk/zigbee2mqtt/issues/2761).
 - In case the device is a bulb, try resetting it through [Touclink](./touchlink.md)
 
+## How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?
+**Important:** migrating will require you to repair all devices!
+
+First stop Zigbee2MQTT, plug out the CC2531 and plug the new stick. Next open your `configuration.yaml` and add the following:
+
+```yaml
+advanced:
+  pan_id: 0x1a63
+```
+
+**Note:** if you already had a `pan_id` in your `configuration.yaml` take the existing `pan_id` + 1.
+
+Now start Zigbee2MQTT and repair all your devices. Enjoy!
+
+## How do I move my Zigbee2MQTT instance to a different environment?
+Details about your network are stored in both the coordinator and files under the `data/` directory. To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
 
 ## What does and does not require repairing of all devices?
 ### Requires repairing
@@ -155,7 +180,7 @@ The correct revision is: **E** like shown below.
 
 All earlier version are not supported (these are development boards). Return this board to the seller immidiately.
 
-## I read that Zigbee2MQTT has a limit of 20 devices, is this true?
+## I read that Zigbee2MQTT has a limit of 20 devices (when using a CC2531), is this true?
 Definitely not! Example given: the default Zigbee2MQTT CC2531 firmware indeed supports 20 devices connected **directly** to the coordinator. However, by having routers in your network the network size can be extended. Probably all AC powered devices e.g. bulbs serve as a router, you can even use another [CC2530/CC2531 as a router](../how_tos/how_to_create_a_cc2530_router.md) (which has a limit of 21 devices).
 
 ### Example
@@ -176,3 +201,8 @@ lrwxrwxrwx 1 root root 13 Jan  6 19:07 usb-Texas_Instruments_XDS110__03.00.00.05
 lrwxrwxrwx 1 root root 13 Jan  6 19:07 usb-Texas_Instruments_XDS110__03.00.00.05__Embed_with_CMSIS-DAP_L1100BTD-if03 -> ../../ttyACM1
 ```
 The device with id ending with *if00* is for device data. Use this port in your configuration.
+
+## Common error codes
+A list of common error codes and what to do in case of them:
+- `MAC_CHANNEL_ACCESS_FAILURE`: this happens when the wireless spectrum is too occupied. Mostly happens when a microwave is on or when there are WiFi networks on the same channel. See [Reduce Wifi interference by changing the Zigbee channel](../how_tos/how_to_improve_network_range_and_stability.md#reduce-wifi-interference-by-changing-the-zigbee-channel) how to fix this.
+- `NWK_TABLE_FULL`: [reported](https://github.com/Koenkk/zigbee2mqtt/issues/4964#issuecomment-757022560) to have same root cause as the above `MAC_CHANNEL_ACCESS_FAILURE`

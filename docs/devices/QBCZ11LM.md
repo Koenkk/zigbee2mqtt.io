@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBCZ11LM via Zigbee2MQTT with whatever smart
 | Model | QBCZ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara socket Zigbee |
-| Exposes | switch (state), power, energy, temperature, voltage, linkquality |
+| Exposes | switch (state), power, energy, temperature, voltage, power_outage_memory, linkquality |
 | Picture | ![Xiaomi QBCZ11LM](../images/devices/QBCZ11LM.jpg) |
 
 ## Notes
@@ -36,6 +36,7 @@ Now toggle the plug/switch once with the button on it, from now on it will resto
 
 
 ## Exposes
+
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
@@ -68,11 +69,18 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `V`.
 
+### Power_outage_memory (binary)
+Enable/disable the power outage memory, this recovers the on/off mode after power failure.
+Value can be found in the published state on the `power_outage_memory` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+If value equals `true` power_outage_memory is ON, if `false` OFF.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
@@ -122,6 +130,14 @@ sensor:
     unit_of_measurement: "V"
     value_template: "{{ value_json.voltage }}"
     icon: "mdi:alpha-v"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.power_outage_memory }}"
+    payload_on: true
+    payload_off: false
 
 sensor:
   - platform: "mqtt"

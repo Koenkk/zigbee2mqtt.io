@@ -21,6 +21,7 @@ None
 
 
 ## Exposes
+
 ### Gas (binary)
 Indicates whether the device detected gas.
 Value can be found in the published state on the `gas` property.
@@ -28,7 +29,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` gas is ON, if `false` OFF.
 
 ### Carbon_monoxide (binary)
-Indicates if CO2 (carbon monoxide) is detected.
+Indicates if CO (carbon monoxide) is detected.
 Value can be found in the published state on the `carbon_monoxide` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` carbon_monoxide is ON, if `false` OFF.
@@ -49,7 +50,7 @@ If value equals `true` battery_low is ON, if `false` OFF.
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration

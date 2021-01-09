@@ -14,7 +14,7 @@ description: "Integrate your TuYa TS0601_curtain via Zigbee2MQTT with whatever s
 | Description | Curtain motor |
 | Exposes | cover (state, position), linkquality |
 | Picture | ![TuYa TS0601_curtain](../images/devices/TS0601_curtain.jpg) |
-| White-label | Yushun YS-MT750, Zemismart ZM79E-DT, Binthen BCM100D, Binthen CV01A, Zemismart M515EGB, Tuya DT82LEMA-1.2N |
+| White-label | Yushun YS-MT750, Zemismart ZM79E-DT, Binthen BCM100D, Binthen CV01A, Zemismart M515EGB, TuYa DT82LEMA-1.2N, Moes AM43-0.45/40-ES-EB |
 
 ## Notes
 
@@ -39,6 +39,7 @@ By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can b
 
 
 ## Exposes
+
 ### Cover 
 The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}` or `{"state": "CLOSE"}`.
@@ -49,7 +50,7 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration

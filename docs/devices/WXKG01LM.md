@@ -53,12 +53,12 @@ More detailed information about this can be found [here](https://community.hubit
 *[How to use device type specific configuration](../information/configuration.md)*
 
 * `hold_timeout`: The WXKG01LM only reports a button press and release.
-By default, Zigbee2mqtt publishes a `hold` action when there is at
+By default, Zigbee2MQTT publishes a `hold` action when there is at
 least 1000 ms between both events. It could be that due to
 delays in the network the release message is received late. This causes a single
 click to be identified as a `hold` action. If you are experiencing this you can try
 experimenting with this option (e.g. `hold_timeout: 2000`).
-* `hold_timeout_expire`: Sometimes it happens that the button does not send a release. To avoid problems Zigbee2mqtt expires the `hold` leading to no `release` being send. The default timeout is 4000 ms, you can increase it with this option.
+* `hold_timeout_expire`: Sometimes it happens that the button does not send a release. To avoid problems Zigbee2MQTT expires the `hold` leading to no `release` being send. The default timeout is 4000 ms, you can increase it with this option.
 
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
@@ -66,11 +66,12 @@ experimenting with this option (e.g. `hold_timeout: 2000`).
 
 
 ## Exposes
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `100`.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Action (enum)
@@ -83,7 +84,7 @@ The possible values are: `single`, `double`, `tripple`, `quadruple`, `hold`, `re
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimimal value is `0` and the maximum value is `255`.
+The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration

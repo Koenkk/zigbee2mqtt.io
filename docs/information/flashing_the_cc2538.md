@@ -11,7 +11,7 @@ The programmer can be found on [Aliexpress](https://www.aliexpress.com/wholesale
 ![](../images/cc2538-jtag-3.jpg)
 3. Connect JTAG programmer to CC2538 module following below diagram:
 ![](../images/cc2538-jtag-1.jpg)
-4. Download the firmware [CC2538_CC2592_MODKAMRU_V3_20200211.zip](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.0.x/bin/CC2538_CC2592_MODKAMRU_V3_20200211.zip) and extract it in a folder
+4. Download [latest firmware](https://github.com/jethome-ru/zigbee-firmware/tree/master/ti/coordinator/cc2538_cc2592)
 5. Open SEGGER J-Link Flash and select "Create a New Project"
 ![](../images/cc2538-jtag-4.jpg)
 6. Make sure you select the right module [TI CC2538SF53] and [JTAG] as Target Interface
