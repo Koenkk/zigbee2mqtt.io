@@ -310,6 +310,10 @@ Allows to send a Zigbee configure reporting command to a device. Refer to the Co
 
 To disable reporting set the `maximum_report_interval` to `65535`.
 
+Notes:
+- Not all devices support the Zigbee configure reporting command (e.g. Xiaomi WSDCGQ11LM temperature/humidity sensors don't support it)
+- If configure reporting fails for a battery powered device make sure to wake it up right before sending the command.
+
 
 ### Group
 
