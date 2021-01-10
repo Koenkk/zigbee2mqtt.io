@@ -18,6 +18,9 @@ description: "Integrate your Saswell SEA801-Zigbee/SEA802-Zigbee via Zigbee2MQTT
 
 ## Notes
 
+### Pairing
+Long hold the "AUTO/MANU" and "+" Button until the Device Screen shows "----"
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
