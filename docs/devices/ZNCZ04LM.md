@@ -81,10 +81,10 @@ It's not possible to write (`/set`) this value.
 The unit of this value is `A`.
 
 ### Consumer_connected (binary)
-Indicates whether attached device consumes power.
+Indicates whether device is physically attached. Device does not have to pull power or even be connected electrically. 
 Value can be found in the published state on the `consumer_connected` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` consumer_connected is ON, if `false` OFF.
+If value equals `true` consumer_connected is ON, if `false` OFF. Can be ON even if switch is OFF.
 
 ### Consumer_overload (numeric)
 Indicates with how many Watts the maximum possible power consumption is exceeded.
