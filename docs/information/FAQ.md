@@ -22,6 +22,7 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - If it's a battery powered device, try replacing the battery.
 - You've hit the device limit of the coordinator, especially occurs when using the CC2531 or CC2530 in combination with the source routing firmware. Try reflashing the coordinator and immidiately pair the device after starting Zigbee2MQTT.
 - Try pairing the device closer to the coordinator.
+- If it's a battery powered device, try replacing the batery with a new one.
 - CC2531/CC2530 coordinator only:
   - Stop Zigbee2MQTT, unplug the coordinator, wait 10 seconds, plug the coordinator, start Zigbee2MQTT and try to pair the device again.
   - If none of the above helps, try to reflash the coordinator (does not require repairing of already paired devices).
@@ -31,6 +32,7 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - There can be too much interference, try connecting the coordinator USB through an USB extension cable. This problem occurs a lot when used in combination with a Raspberry Pi 4.
 - If it’s a battery powered device, try replacing the battery.
 - Try repairing the device again for 2 or 3 times.
+- If it's a battery powered device, try replacing the batery with a new one.
 - This might be a Zigbee2MQTT bug, [Create a new issue](https://github.com/Koenkk/zigbee2mqtt/issues/new) with the zigbee-herdsman debug logging attached to it. [How to enable zigbee-herdsman debug logging](https://www.zigbee2mqtt.io/information/debug.html#zigbee-herdsman-debug-logging).
 - If device joins with `0x000000000000000` as `ieeeAddress` (you will see: `Starting interview of '0x0000000000000000'` in the Zigbee2MQTT log) your CC253X might be broken. [See issue #2761](https://github.com/Koenkk/zigbee2mqtt/issues/2761).
 - In case the device is a bulb, try resetting it through [Touclink](./touchlink.md)
