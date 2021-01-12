@@ -48,7 +48,7 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on`, `off`, `brightness_step_up`, `brightness_step_down`, `color_temperature_step_up`, `color_temperature_step_down`.
+The possible values are: `on_left`, `on_right`, `off_left`, `off_right`, `brightness_step_up_left`, `brightness_step_up_right`, `brightness_step_down_left`, `brightness_step_down_right`, `color_temperature_step_up_left`, `color_temperature_step_up_right`, `color_temperature_step_down_left`, `color_temperature_step_down_right`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
