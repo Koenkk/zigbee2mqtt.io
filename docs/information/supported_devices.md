@@ -97,8 +97,6 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | [AU-A1ZBDWS](../devices/AU-A1ZBDWS.md) | Aurora Lighting Magnetic door & window contact sensor (contact, battery_low, tamper, battery) | ![../images/devices/AU-A1ZBDWS.jpg](../images/devices/AU-A1ZBDWS.jpg) |
 | [AU-A1ZB2WDM](../devices/AU-A1ZB2WDM.md) | Aurora Lighting AOne 250W smart rotary dimmer module (light) | ![../images/devices/AU-A1ZB2WDM.jpg](../images/devices/AU-A1ZB2WDM.jpg) |
 | [AU-A1ZBPIA](../devices/AU-A1ZBPIA.md) | Aurora Lighting Aurora smart plug (switch, power, voltage, current, device_temperature, energy) | ![../images/devices/AU-A1ZBPIA.jpg](../images/devices/AU-A1ZBPIA.jpg) |
-| [AU-A1ZBR1GW](../devices/AU-A1ZBR1GW.md) | Aurora Lighting AOne one gang wireless battery rotary dimmer (battery, action) | ![../images/devices/AU-A1ZBR1GW.jpg](../images/devices/AU-A1ZBR1GW.jpg) |
-| [AU-A1ZBR2GW](../devices/AU-A1ZBR2GW.md) | Aurora Lighting AOne two gang wireless battery rotary dimmer (battery, action) | ![../images/devices/AU-A1ZBR2GW.jpg](../images/devices/AU-A1ZBR2GW.jpg) |
 
 ### BTicino
 
