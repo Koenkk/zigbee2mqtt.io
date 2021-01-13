@@ -1094,6 +1094,13 @@ Right before executing the commands make sure to wake up the device by pressing 
 `,
     },
     {
+        model: 'E1743',
+        note: `
+### Battery Replacement
+After replacing the battery, reporting of battery % may not work. If you experience this issue, remove the device and join it again.
+`,
+    },
+    {
         model: 'ZYCT-202',
         note: `
 ### Pairing
@@ -2402,7 +2409,7 @@ Where:
 `,
     },
     {
-        model: ['QBKG03LM', 'QBKG04LM', 'QBKG12LM', 'QBKG11LM', 'QBKG21LM', 'QBKG22LM', 'QBKG25LM', 'QBKG24LM'],
+        model: ['QBKG03LM', 'QBKG04LM', 'QBKG12LM', 'QBKG11LM', 'QBKG21LM', 'QBKG22LM', 'QBKG25LM', 'QBKG24LM', 'QBKG26LM', 'QBKG23LM'],
         note: `
 ### Decoupled mode
 Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.

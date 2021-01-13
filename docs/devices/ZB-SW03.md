@@ -1,27 +1,24 @@
 ---
-title: "Atsmart Z6 control via MQTT"
-description: "Integrate your Atsmart Z6 via Zigbee2MQTT with whatever smart home
+title: "eWeLink ZB-SW03 control via MQTT"
+description: "Integrate your eWeLink ZB-SW03 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/Z6.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZB-SW03.md)*
 
-# Atsmart Z6
+# eWeLink ZB-SW03
 
-| Model | Z6  |
-| Vendor  | Atsmart  |
-| Description | 3 gang smart wall switch (no neutral wire) |
+| Model | ZB-SW03  |
+| Vendor  | eWeLink  |
+| Description | Smart light switch - 3 gang |
 | Exposes | switch (state), linkquality |
-| Picture | ![Atsmart Z6](../images/devices/Z6.jpg) |
+| Picture | ![eWeLink ZB-SW03](../images/devices/ZB-SW03.jpg) |
 
 ## Notes
 
-### About the 4th bottom switch
-This button acts as a master switch -- toggles the full on and off of the other three switches
-This button exposes NO endpoint
-Long-press this button 2s --> pair mode (all light(s) blink 2 times), if the light(s) stay on, it means the pairing is successful
-Long-press this button 10s --> unpair mode, all light(s) will blink 4 times
+None
+
 
 ## Exposes
 
