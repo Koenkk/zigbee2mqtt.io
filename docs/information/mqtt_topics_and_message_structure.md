@@ -120,7 +120,7 @@ Example payload:
             "model":"LED1624G9",
             "vendor":"IKEA",
             "description":"TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white",
-            "exposes":{"type":"light","features":["state","brightness","color_xy"]},
+            "exposes":[{"type":"light","features":["state","brightness","color_xy"]}],
         },
         "power_source":"Mains (single phase)",
         "software_build_id":"1.3.009",
