@@ -40,7 +40,9 @@ Press and hold the smart group button (button with two bulbs) and wait until the
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on`, `off`, `brightness_stop`, `brightness_move_up`, `brightness_move_down`.
+The possible values are: 
+- when `legacy: true`: `on`, `off`, `stop`, `up-press`, `down-press`,
+- when `legacy: false`: `on`, `off`, `brightness_stop`, `brightness_move_up`, `brightness_move_down`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
