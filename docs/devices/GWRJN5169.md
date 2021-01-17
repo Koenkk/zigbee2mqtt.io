@@ -11,11 +11,12 @@ description: "Integrate your OpenLumi GWRJN5169 via Zigbee2MQTT with whatever sm
 
 | Model | GWRJN5169  |
 | Vendor  | OpenLumi  |
-| Description | [Lumi Router JN5169](https://github.com/igo-r/Lumi-Router-JN5169) |
+| Description | [Lumi Router (JN5169)](https://github.com/igo-r/Lumi-Router-JN5169) |
 | Exposes | linkquality |
 | Picture | ![OpenLumi GWRJN5169](../images/devices/GWRJN5169.jpg) |
 
 ## Notes
+Zigbee Router for Xiaomi Gateway DGNWG05LM
 
 ### Firmware
 Open source firmware can be found here: [Github](https://github.com/igo-r/Lumi-Router-JN5169)
