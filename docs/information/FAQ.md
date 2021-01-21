@@ -119,6 +119,10 @@ serial:
 
 After reboot your dedvice will have the right permissions and always the same name.
 
+### Error: `Coordinator failed to start, probably the panID is already in use, try a different panID or channel`
+- In case you are migrating from another adapter see: [How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?](#how-do-i-migrate-from-a-cc2531-to-a-more-powerful-coordinator-eg-zzh)
+- If you still get this error after increasing the panID and you are using a Raspberry Pi with other USB devices attached (e.g. SSD) try connecting the SSD or adapter through a powered USB hub.
+
 ### Error: `Resource temporarily unavailable Cannot lock port`
 This error occurs when another program is already using (and thus locking) the adapter. You can find out which via the following command: `ls -l /proc/[0-9]/fd/ |grep /dev/ttyACM0` (replace `/dev/ttyACM0` with your adapter port).
 
