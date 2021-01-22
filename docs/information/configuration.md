@@ -132,7 +132,8 @@ advanced:
   # Previously called `availability_whitelist` (which is deprecated)
   availability_passlist:
     - DEVICE_FRIENDLY_NAME or DEVICE_IEEE_ADDRESS
-  # Optional: Enables report feature (see information -> report for more details) (default: false)
+  # Optional: Enables report feature, this feature is DEPRECATED since reporting is now setup by default
+  # when binding devices. Docs can still be found here: https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/information/report.md
   report: true
   # Optional: Home Assistant discovery topic (default: shown below)
   homeassistant_discovery_topic: 'homeassistant'
