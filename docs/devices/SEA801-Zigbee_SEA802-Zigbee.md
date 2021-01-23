@@ -19,7 +19,9 @@ description: "Integrate your Saswell SEA801-Zigbee/SEA802-Zigbee via Zigbee2MQTT
 ## Notes
 
 ### Pairing
-Long hold the "AUTO/MANU" and "+" Button until the Device Screen shows "----"
+
+* SEA801-Zigbee (LCD display on the front, several buttons): Long hold the "AUTO/MANU" and "+" Button until the LCD display shows "----"
+* SEA802-Z01 (white LED display on the side, rotary plate): Turn the rotary plate to decrease the temperature until the LED dots show "OF", then long press until the display changes to "--"
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
