@@ -2581,7 +2581,7 @@ After this command thermostat responds with two messages. One for calibration ch
 `,
     },
     {
-        model: ['3400-D'],
+        model: ['3400-D', 'URC4450BC0-X-R'],
         note: `
 ### (Dis)arming
 To (dis)arm the keypad send to \`zigbee2mqtt/[DEVICE_FRIENDLY_NAME/set\` payload:
