@@ -199,7 +199,7 @@ input_number:
     max: 5
     step: 1
     mode: slider
-    
+
 # Input text to input Zigbee2MQTT friendly_name for scripts
 input_text:
   zigbee2mqtt_old_name:
@@ -263,7 +263,7 @@ switch:
   - platform: mqtt
     name: "Zigbee2MQTT Main join"
     state_topic: "zigbee2mqtt/bridge/info"
-    value_template: '{{ value_json.permit_join }}'
+    value_template: '{{ value_json.permit_join | lower }}'
     command_topic: "zigbee2mqtt/bridge/request/permit_join"
     payload_on: "true"
     payload_off: "false"
