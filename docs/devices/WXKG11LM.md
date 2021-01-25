@@ -17,6 +17,8 @@ description: "Integrate your Xiaomi WXKG11LM via Zigbee2MQTT with whatever smart
 
 ## Notes
 
+### Actions
+The `triple`, `quadruple`, `hold` and `release` is not supported by all versions of this device.
 
 ### Deprecated click event
 By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
