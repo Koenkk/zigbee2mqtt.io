@@ -12,7 +12,7 @@ description: "Integrate your Dawon DNS PM-B540-ZB via Zigbee2MQTT with whatever 
 | Model | PM-B540-ZB  |
 | Vendor  | Dawon DNS  |
 | Description | IOT smart plug 16A |
-| Exposes | switch (state), power, energy, linkquality |
+| Exposes | switch (state), power, energy, device_temperature, linkquality |
 | Picture | ![Dawon DNS PM-B540-ZB](../images/devices/PM-B540-ZB.jpg) |
 
 ## Notes
@@ -40,6 +40,12 @@ Value can be found in the published state on the `energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Device_temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `¡ÆC`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
