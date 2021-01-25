@@ -12,15 +12,13 @@ description: "Integrate your KMPCIL KMPCIL_RES005 via Zigbee2MQTT with whatever 
 | Model | KMPCIL_RES005  |
 | Vendor  | KMPCIL  |
 | Description | Environment sensor |
-| Supports | battery, temperature, humidity, pressure, illuminance, occupancy, switch |
+| Exposes | battery, temperature, humidity, pressure, illuminance, illuminance_lux, occupancy, switch (state), linkquality |
 | Picture | ![KMPCIL KMPCIL_RES005](../images/devices/KMPCIL_RES005.jpg) |
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.
 To control the precision based on the illuminance_lux value set it to e.g. `{1000: 0, 100: 1}`,
@@ -51,6 +49,63 @@ when pressure >= 1000 precision will be 0, when pressure >= 100 precision will b
 e.g. `1` would add 1 to the pressure reported by the device; default `0`.
 
 
+
+## Exposes
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Humidity (numeric)
+Measured relative humidity.
+Value can be found in the published state on the `humidity` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `%`.
+
+### Pressure (numeric)
+The measured atmospheric pressure.
+Value can be found in the published state on the `pressure` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `hPa`.
+
+### Illuminance (numeric)
+Raw measured illuminance.
+Value can be found in the published state on the `illuminance` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Illuminance_lux (numeric)
+Measured illuminance in lux.
+Value can be found in the published state on the `illuminance_lux` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
+
+### Occupancy (binary)
+Indicates whether the device detected occupancy.
+Value can be found in the published state on the `occupancy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` occupancy is ON, if `false` OFF.
+
+### Switch 
+The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
@@ -63,56 +118,56 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "%"
-    device_class: "battery"
     value_template: "{{ value_json.battery }}"
+    device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "°C"
-    device_class: "temperature"
     value_template: "{{ value_json.temperature }}"
+    device_class: "temperature"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "%"
-    device_class: "humidity"
     value_template: "{{ value_json.humidity }}"
+    device_class: "humidity"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "hPa"
-    device_class: "pressure"
     value_template: "{{ value_json.pressure }}"
+    device_class: "pressure"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "-"
-    device_class: "illuminance"
     value_template: "{{ value_json.illuminance }}"
+    device_class: "illuminance"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "lx"
-    device_class: "illuminance"
     value_template: "{{ value_json.illuminance_lux }}"
+    device_class: "illuminance"
 
 binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.occupancy }}"
     payload_on: true
     payload_off: false
-    value_template: "{{ value_json.occupancy }}"
     device_class: "motion"
 
 switch:
@@ -128,9 +183,9 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

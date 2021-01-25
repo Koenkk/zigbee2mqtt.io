@@ -11,13 +11,33 @@ description: "Integrate your Moes ZK-EU-2U via Zigbee2MQTT with whatever smart h
 
 | Model | ZK-EU-2U  |
 | Vendor  | Moes  |
-| Description | ZigBee3.0 dual USB wireless socket plug |
-| Supports | on/off |
+| Description | Zigbee 3.0 dual USB wireless socket plug |
+| Exposes | switch (state), linkquality |
 | Picture | ![Moes ZK-EU-2U](../images/devices/ZK-EU-2U.jpg) |
 
 ## Notes
 
 None
+
+
+## Exposes
+
+### Switch (l1 endpoint)
+The current state of this switch is in the published state under the `state_l1` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l1": "ON"}`, `{"state_l1": "OFF"}` or `{"state_l1": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l1": ""}`.
+
+### Switch (l2 endpoint)
+The current state of this switch is in the published state under the `state_l2` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -32,16 +52,25 @@ switch:
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
-    value_template: "{{ value_json.state }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    value_template: "{{ value_json.state_l1 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/l1/set"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state_l2 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/l2/set"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

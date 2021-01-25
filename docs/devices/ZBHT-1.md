@@ -12,7 +12,7 @@ description: "Integrate your Smartenit ZBHT-1 via Zigbee2MQTT with whatever smar
 | Model | ZBHT-1  |
 | Vendor  | Smartenit  |
 | Description | Temperature & humidity sensor  |
-| Supports | temperature and humidity |
+| Exposes | battery, temperature, humidity, linkquality |
 | Picture | ![Smartenit ZBHT-1](../images/devices/ZBHT-1.jpg) |
 
 ## Notes
@@ -49,10 +49,8 @@ If the device is asleep (which is most of the time) and you need it to be awake 
  * In theory the device LED will flash ONCE if the voltage falls below 2.4V
  * In theory the device will send a low-power report to the ZigBee network if the voltage falls below 2.4V - no other battery reporting.
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -67,6 +65,35 @@ To control the precision based on the humidity value set it to e.g. `{80: 0, 10:
 when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1.
 
 
+
+## Exposes
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Humidity (numeric)
+Measured relative humidity.
+Value can be found in the published state on the `humidity` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `%`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
@@ -78,33 +105,33 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
-    device_class: "temperature"
-    value_template: "{{ value_json.temperature }}"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "%"
-    device_class: "humidity"
-    value_template: "{{ value_json.humidity }}"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
-    device_class: "battery"
     value_template: "{{ value_json.battery }}"
+    device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.temperature }}"
+    device_class: "temperature"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    value_template: "{{ value_json.humidity }}"
+    device_class: "humidity"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

@@ -12,7 +12,7 @@ description: "Integrate your IKEA ICTC-G-1 via Zigbee2MQTT with whatever smart h
 | Model | ICTC-G-1  |
 | Vendor  | IKEA  |
 | Description | TRADFRI wireless dimmer |
-| Supports | brightness [0-255] (quick rotate for instant 0/255), action |
+| Exposes | battery, action, linkquality |
 | Picture | ![IKEA ICTC-G-1](../images/devices/ICTC-G-1.jpg) |
 
 ## Notes
@@ -72,18 +72,48 @@ To find optimal "smoothness" play with debounce time or if you need all unique r
 ```
 {% endraw %}
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
-* `transition`: Controls the transition time (in seconds) of on/off, brightness,
-color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
-Note that this value is overridden if a `transition` value is present in the MQTT command payload.
+
+* `simulated_brightness`: Set to `true` to simulate a `brightness` value (default: `false`).
+If this device provides a `brightness_move_up` or `brightness_move_down` action it is possible to specify the update
+interval and delta. This can be done by instead of specifying `true`:
+
+```yaml
+simulated_brightness:
+  delta: 20 # delta per interval, default = 20
+  interval: 200 # interval in milliseconds, default = 200
+```
 
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+
+
+## Exposes
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `brightness_move_up`, `brightness_move_down`, `brightness_stop`, `brightness_move_to_level`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -105,23 +135,30 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "%"
-    device_class: "battery"
     value_template: "{{ value_json.battery }}"
+    device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
+    icon: "mdi:gesture-double-tap"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:update"
+    value_template: "{{ value_json['update']['state'] }}"
 
 binary_sensor:
   - platform: "mqtt"

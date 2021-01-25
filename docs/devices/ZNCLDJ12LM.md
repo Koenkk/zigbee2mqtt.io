@@ -12,11 +12,10 @@ description: "Integrate your Xiaomi ZNCLDJ12LM via Zigbee2MQTT with whatever sma
 | Model | ZNCLDJ12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara B1 curtain motor  |
-| Supports | open, close, stop, position |
+| Exposes | cover (state, position), battery, linkquality |
 | Picture | ![Xiaomi ZNCLDJ12LM](../images/devices/ZNCLDJ12LM.jpg) |
 
 ## Notes
-
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
@@ -25,7 +24,7 @@ description: "Integrate your Xiaomi ZNCLDJ12LM via Zigbee2MQTT with whatever sma
 
 
 ### Configuration of device attributes
-By publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` various device attributes can be configured:
+By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can be configured:
 ```json
 {
     "options":{
@@ -45,7 +44,7 @@ You can send a subset of options, all options that won't be specified will be re
 After changing `reverse_direction` you will need to fully open and fully close the curtain so the motor will re-detect edges. `reverse_direction` will get new state only after this recalibration.
 
 ### Lost configuration on long power outage
-If motor is used without battery it may lose configuration after long power outage. In that case you need to perform end stops calibration again publishing the following command sequence with topic `zigbee2mqtt/[FRIENDLY_NAME]/set`:
+If motor is used without battery it may lose configuration after long power outage. In that case you need to perform end stops calibration again publishing the following command sequence with topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 1. `{ "options": { "reset_limits": true } }`
 2. `{ "state": "close" }`
 3. Wait here for curtain closure.
@@ -73,6 +72,29 @@ Home Assistant automation example:
 Motor leaves calibration mode automatically after it reaches the both open and close curtain position limits. Calibration is mandatory for proper position reporting and ability to set intermediate positions.
 
 
+
+## Exposes
+
+### Cover 
+The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
+To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}` or `{"state": "CLOSE"}`.
+To read the current state of this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
@@ -84,26 +106,26 @@ cover:
   - platform: "mqtt"
     availability_topic: "zigbee2mqtt/bridge/state"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
-    position_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    set_position_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
-    set_position_template: "{ \"position\": {{ position }} }"
     value_template: "{{ value_json.position }}"
+    set_position_template: "{ \"position\": {{ position }} }"
+    set_position_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    position_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "%"
-    device_class: "battery"
     value_template: "{{ value_json.battery }}"
+    device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

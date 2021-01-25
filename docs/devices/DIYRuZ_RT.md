@@ -12,7 +12,7 @@ description: "Integrate your DIYRuZ DIYRuZ_RT via Zigbee2MQTT with whatever smar
 | Model | DIYRuZ_RT  |
 | Vendor  | DIYRuZ  |
 | Description | [DiY CC2530 Zigbee 3.0 firmware](https://habr.com/ru/company/iobroker/blog/495926/) |
-| Supports | on/off, temperature |
+| Exposes | switch (state), temperature, linkquality |
 | Picture | ![DIYRuZ DIYRuZ_RT](../images/devices/DIYRuZ_RT.jpg) |
 
 ## Notes
@@ -24,10 +24,8 @@ For example the Sonoff BasicZBR3
 Firmware download: https://github.com/diyruz/diyruz_rt
 Blog about supporting Zigbee 3.0 to CC2530: https://habr.com/ru/company/iobroker/blog/495926/
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -36,6 +34,27 @@ when temperature >= 30 precision will be 0, when temperature >= 10 precision wil
 * `temperature_calibration`: Allows to manually calibrate temperature values,
 e.g. `1` would add 1 degree to the temperature reported by the device; default `0`.
 
+
+
+## Exposes
+
+### Switch 
+The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -58,16 +77,16 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "°C"
-    device_class: "temperature"
     value_template: "{{ value_json.temperature }}"
+    device_class: "temperature"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

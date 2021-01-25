@@ -12,15 +12,13 @@ description: "Integrate your Climax RS-23ZBS via Zigbee2MQTT with whatever smart
 | Model | RS-23ZBS  |
 | Vendor  | Climax  |
 | Description | Temperature & humidity sensor |
-| Supports | temperature, humidity |
+| Exposes | temperature, humidity, linkquality |
 | Picture | ![Climax RS-23ZBS](../images/devices/RS-23ZBS.jpg) |
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
-
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -35,6 +33,28 @@ To control the precision based on the humidity value set it to e.g. `{80: 0, 10:
 when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1.
 
 
+
+## Exposes
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Humidity (numeric)
+Measured relative humidity.
+Value can be found in the published state on the `humidity` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `%`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
@@ -47,24 +67,24 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "°C"
-    device_class: "temperature"
     value_template: "{{ value_json.temperature }}"
+    device_class: "temperature"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "%"
-    device_class: "humidity"
     value_template: "{{ value_json.humidity }}"
+    device_class: "humidity"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

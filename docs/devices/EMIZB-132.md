@@ -12,7 +12,7 @@ description: "Integrate your Develco EMIZB-132 via Zigbee2MQTT with whatever sma
 | Model | EMIZB-132  |
 | Vendor  | Develco  |
 | Description | Wattle AMS HAN power-meter sensor |
-| Supports | power measurements |
+| Exposes | power, energy, current, voltage, current_phase_b, voltage_phase_b, current_phase_c, voltage_phase_c, linkquality |
 | Picture | ![Develco EMIZB-132](../images/devices/EMIZB-132.jpg) |
 
 ## Notes
@@ -42,6 +42,70 @@ Related issues:
 - https://github.com/dresden-elektronik/deconz-rest-plugin/issues/2127#issuecomment-587949747
 
 
+
+## Exposes
+
+### Power (numeric)
+Instantaneous measured power.
+Value can be found in the published state on the `power` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `W`.
+
+### Energy (numeric)
+Sum of consumed energy.
+Value can be found in the published state on the `energy` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Current (numeric)
+Instantaneous measured electrical current.
+Value can be found in the published state on the `current` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `A`.
+
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `V`.
+
+### Current_phase_b (numeric)
+Instantaneous measured electrical current on phase B.
+Value can be found in the published state on the `current_phase_b` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_phase_b": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `A`.
+
+### Voltage_phase_b (numeric)
+Measured electrical potential value on phase B.
+Value can be found in the published state on the `voltage_phase_b` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
+
+### Current_phase_c (numeric)
+Instantaneous measured electrical current on phase C.
+Value can be found in the published state on the `current_phase_c` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_phase_c": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `A`.
+
+### Voltage_phase_c (numeric)
+Measured electrical potential value on phase C.
+Value can be found in the published state on the `voltage_phase_c` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
@@ -54,72 +118,72 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "W"
-    icon: "mdi:flash"
     value_template: "{{ value_json.power }}"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "V"
-    icon: "mdi:alpha-v"
-    value_template: "{{ value_json.voltage }}"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "A"
-    icon: "mdi:current-ac"
-    value_template: "{{ value_json.current }}"
+    icon: "mdi:flash"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "kWh"
-    icon: "mdi:power-plug"
     value_template: "{{ value_json.energy }}"
+    icon: "mdi:power-plug"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "A"
+    value_template: "{{ value_json.current }}"
     icon: "mdi:current-ac"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "V"
+    value_template: "{{ value_json.voltage }}"
+    icon: "mdi:alpha-v"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "A"
     value_template: "{{ value_json.current_phase_b }}"
+    icon: "mdi:current-ac"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "V"
+    value_template: "{{ value_json.voltage_phase_b }}"
+    icon: "mdi:alpha-v"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "A"
-    icon: "mdi:current-ac"
     value_template: "{{ value_json.current_phase_c }}"
+    icon: "mdi:current-ac"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "V"
-    icon: "mdi:alpha-v"
-    value_template: "{{ value_json.voltage_phase_b }}"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "V"
-    icon: "mdi:alpha-v"
     value_template: "{{ value_json.voltage_phase_c }}"
+    icon: "mdi:alpha-v"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

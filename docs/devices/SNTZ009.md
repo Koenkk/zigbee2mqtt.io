@@ -12,12 +12,28 @@ description: "Integrate your TuYa SNTZ009 via Zigbee2MQTT with whatever smart ho
 | Model | SNTZ009  |
 | Vendor  | TuYa  |
 | Description | Water leak sensor |
-| Supports | water leak |
+| Exposes | water_leak, linkquality |
 | Picture | ![TuYa SNTZ009](../images/devices/SNTZ009.jpg) |
 
 ## Notes
 
 None
+
+
+## Exposes
+
+### Water_leak (binary)
+Indicates whether the device detected a water leak.
+Value can be found in the published state on the `water_leak` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` water_leak is ON, if `false` OFF.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -30,18 +46,18 @@ binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.water_leak }}"
     payload_on: true
     payload_off: false
-    value_template: "{{ value_json.water_leak }}"
     device_class: "moisture"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

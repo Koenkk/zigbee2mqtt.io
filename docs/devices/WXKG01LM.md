@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WXKG01LM via Zigbee2MQTT with whatever smart
 | Model | WXKG01LM  |
 | Vendor  | Xiaomi  |
 | Description | MiJia wireless switch |
-| Supports | single, double, triple, quadruple, many, long, long_release click |
+| Exposes | battery, action, linkquality |
 | Picture | ![Xiaomi WXKG01LM](../images/devices/WXKG01LM.jpg) |
 
 ## Notes
@@ -49,18 +49,43 @@ Most of the times this happens because of the following reasons:
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
 * `hold_timeout`: The WXKG01LM only reports a button press and release.
-By default, Zigbee2mqtt publishes a `hold` action when there is at
+By default, Zigbee2MQTT publishes a `hold` action when there is at
 least 1000 ms between both events. It could be that due to
 delays in the network the release message is received late. This causes a single
 click to be identified as a `hold` action. If you are experiencing this you can try
 experimenting with this option (e.g. `hold_timeout: 2000`).
-* `hold_timeout_expire`: Sometimes it happens that the button does not send a release. To avoid problems Zigbee2mqtt expires the `hold` leading to no `release` being send. The default timeout is 4000 ms, you can increase it with this option.
+* `hold_timeout_expire`: Sometimes it happens that the button does not send a release. To avoid problems Zigbee2MQTT expires the `hold` leading to no `release` being send. The default timeout is 4000 ms, you can increase it with this option.
 
+
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
+
+
+
+## Exposes
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`, `triple`, `quadruple`, `hold`, `release`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -80,24 +105,24 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:gesture-double-tap"
-    value_template: "{{ value_json.action }}"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "%"
-    device_class: "battery"
     value_template: "{{ value_json.battery }}"
+    device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
+    value_template: "{{ value_json.action }}"
+    icon: "mdi:gesture-double-tap"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

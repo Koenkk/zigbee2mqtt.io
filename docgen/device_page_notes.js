@@ -1,6 +1,13 @@
 const notes = [
     {
-        model: ['WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM', 'WXKG06LM', 'WXKG02LM', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'WXKG07LM', 'QBKG21LM', 'QBKG22LM', 'E1743', 'E1766', 'ptvo.switch', 'DIYRuZ_R8_8', 'HGZB-1S', 'HGZB-02S', 'HGZB-045', 'IM6001-BTP01', 'AV2010/34', 'HS1EB', 'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'ZGRC-KEY-013', '6ARCZABZH', 'MEAZON_BIZY_PLUG', 'MEAZON_DINRAIL', '2AJZ4KPKEY', 'TERNCY-PP01', 'TERNCY-SD01'],
+        model: ['ZNCZ04LM'],
+        note: `
+### Pairing
+Press and hold the button on the device until the blue light starts blinking, release it and and the device will automatically join.
+`,
+    },
+    {
+        model: ['WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM_rev1', 'WXKG03LM_rev2', 'WXKG06LM', 'WXKG02LM_rev1', 'WXKG02LM_rev2', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'WXKG07LM', 'QBKG21LM', 'QBKG22LM', 'E1743', 'E1766', 'ptvo.switch', 'DIYRuZ_R8_8', 'HGZB-1S', 'HGZB-02S', 'HGZB-045', 'IM6001-BTP01', 'AV2010/34', 'HS1EB/HS1EB-E', 'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'ZGRC-KEY-013', '6ARCZABZH', 'MEAZON_BIZY_PLUG', 'MEAZON_DINRAIL', '2AJZ4KPKEY', 'TERNCY-PP01', 'TERNCY-SD01'],
         note: `
 ### Deprecated click event
 By default this device exposes a deprecated \`click\` event. It's recommended to use the \`action\` event instead.
@@ -13,6 +20,97 @@ devices:
     friendly_name: my_device
     legacy: false
 \`\`\`
+`,
+    },
+    {
+        model: ['81825'],
+        note: `
+### Pairing
+To pair the remote you will first need to factory reset the remote then pair it to the controller.
+
+1. Reset the remote by holding down the two middle (arrow) buttons, if reset successfully the LED on the remote should blink once.
+2. Then pair the remote to the controller by placing it in proximity to the controller whilst it is searching. Hold down the off (circle) button for 10 seconds until it blinks green 3 times. If it does, then the remote is paired to the controller.
+`,
+    },
+    {
+        model: ['HR-C99C-Z-C045'],
+        note: `
+### Pairing
+Hold small reset button pressed (located on the backside of remote) for 3
+seconds (until the front LED blicks) and device will reset and will attempt to join network.
+`,
+    },
+    {
+        model: ['L4531C'],
+        note: `
+### Pairing
+Try few times with reset for pairing.
+`,
+    },
+    {
+        model: ['HLU2909K'],
+        note: `
+### Power cut
+ZigBee 3.0, cuts power if too high temperature monitoring and if overloaded.
+
+### Pairing
+Factory reset by press & hold the power button for 12 seconds. The LED is then starting to blink 3 times RED in intervals during pairing process.
+
+### Specs
+- Rating: 220-240VAC, 16A, 50Hz
+- Standby Power: <= 0.5W
+
+### Manual
+[Supplier's manual](http://www.nonline.no/wp-content/uploads/2020/03/Apex_Smart_Plug_UserManual.pdf)
+`,
+    },
+    {
+        model: ['BHT-002-GCLZB'],
+        note: `
+### Stop message flooding
+This unit has a bug that makes it send multiple messages when updating. To stop this from flooding your MQTT Queues, please add the following to your \`configuration.yaml\` file:
+
+{% raw %}
+devices:
+  '0x12345678':
+    friendly_name: thermostat
+    debounce: 1
+{% endraw %}
+`,
+    },
+    {
+        model: ['MEG5113-0300/MEG5165-0000'],
+        note: `
+### Pairing
+To get the device into pairing mode, press the up button 3 times briefly and then hold it for a long time (almost 20s). After about 10s the LED starts blinking slowly, continue to hold until it starts blinking rapidly. Now you can release it. Pairing will take a while to complete. The LED will blink and change color during this process.
+
+### Control
+The shutter control uses a simple timer to control the duration to open/close the shutter. Unfortunately the Zigbee command to set the timer is not known yet. Even if you set the timer via Bluetooth, it will be reset to the default 2 minutes every time you bring it back to Zigbee mode.
+The consequence is, that if your shutter is faster than 2 minutes, the position information will not match with the shutter position (since the transition from 0% to 100% takes 120s).
+Example: If your shutter motor needs 20 seconds to move from open to closed, it will already be closed at 1/6 of the time, i.e. at position 85. It will still take 120s for the position information to go from 100 down to 0.
+
+If you use a shutter motor with positional switches, that stops at the Open or closed position, this will not be an issue. If you rely on the control to shut of the motor, the current implementation will keep the motor pulling until the timer has elapsed, that might not be a good idea.
+If your shutter motor needs more than 2 minutes, I suppose it will stop before reaching the final position.
+`,
+    },
+    {
+        model: ['404021'],
+        note: `
+### Pairing
+Press the reset button (or connected switch) 5 times.
+
+### External switch
+Device only supports momentary switches, not tumble switches.
+`,
+    },
+    {
+        model: ['DM A60F'],
+        note: `
+### Pairing
+Factory reset the light bulb by turning the bulb on/off seven times.
+After resetting the bulb will go into pairing mode for 20 seconds.
+
+While pairing, keep the bulb close to the adapter.
 `,
     },
     {
@@ -32,13 +130,110 @@ See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koe
         model: ['SMSZB-120'],
         note: `
 ### Triggering alarm
-This smoke alarm can be triggered manually by sending these commands to it:
+This smoke alarm can be triggered manually by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with the payloads:
 
-To start (Change duration to what you need):
+To start (Change \`duration\` in number of seconds to what you need):
 * \`{"warning": {"mode": "burglar", "level": "high", "strobe": false, "duration": 300}}\`
 
 To stop:
 * \`{"warning": {"mode": "stop", "level": "low", "strobe": false, "duration": 300}}\`
+`,
+    },
+    {
+        model: 'TH1300ZB',
+        note: `
+### Pairing
+Press the two buttons simultaneously for 3 seconds. The wireless icon will blink when searching
+for the zigbee network and stay steady when paired to it. Repeat if unsuccessfull.
+
+### Unpairing
+Press the two buttons simultaneoulsy for 10 seconds and release.
+The device will restart. The wireless icon will disapear from the display.
+
+### The following thermostats parameters can be changed trough MQTT
+
+#### Occupancy / Unoccupancy
+The thermostat can be instructed to use the occupancy or unoccupancy setpoints by
+publishing to \`zigbee2mqtt/FRIENDLY_NAME/set {"thermostat_occupancy": "OCCUPANCY"}\`
+where \`OCCUPANCY\` is one of the following values: \`occupied\`, \`unoccupied\`.
+The factory default value is \`occupied\`.
+
+#### Floor control mode
+The sensor used by the thermostat for temperature regulation can be changed by publishing
+to \`zigbee2mqtt/FRIENDLY_NAME/set {"floor_control_mode": "SENSOR"}\`
+where \`SENSOR\` is one of the following values: \`ambiant\`, \`floor\`.
+The factory default value is \`floor\`.
+
+#### Ambiant maximum heating setpoint
+The maximum ambiant temperature setpoint of the thermostat can be changed by publishing
+to \`zigbee2mqtt/FRIENDLY_NAME/set {"ambiant_max_heat_setpoint": "TEMPERATURE"}\`
+where \`TEMPERATURE\` is the desired value (between 5 and 36 Celcius).
+This feature is disabled by default.
+
+#### Floor minimum heating setpoint
+The minimum floor temperature setpoint of the thermostat can be changed by publishing
+to \`zigbee2mqtt/FRIENDLY_NAME/set {"floor_min_heat_setpoint": "TEMPERATURE"}\`
+where \`TEMPERATURE\` is the desired value (between 5 and 36 Celcius).
+This feature is disabled by default.
+
+#### Floor maximum heating setpoint
+The maximum floor temperature setpoint of the thermostat can be changed by publishing
+to \`zigbee2mqtt/FRIENDLY_NAME/set {"floor_max_heat_setpoint": "TEMPERATURE"}\`
+where \`TEMPERATURE\` is the desired value (between 5 and 36 Celcius).
+This feature is disabled by default.
+
+#### Floor temperature sensor
+The floor thermistor temperature sensor value connected to the thermostat can be changed by
+publishing to \`zigbee2mqtt/FRIENDLY_NAME/set {"temperature_sensor": "SENSOR"}\`
+where \`SENSOR\` is one of the following values: \`10k\`, \`12k\`.
+The factory default value is \`10k\`.
+
+#### Display backlight
+The thermostat display can be set to turn on only when a button is pressed or stay on and auto dim by
+publishing to \`zigbee2mqtt/FRIENDLY_NAME/set {"backlight_auto_dim": "BACKLIGHT"}\`
+where \`BACKLIGHT\` is one of the following values: \`on demand\`, \`sensing\`.
+The factory default value is \`sensing\`.
+
+#### Time to display
+The time clock value to display on the thermostat can be set by
+publishing to \`zigbee2mqtt/FRIENDLY_NAME/set {"thermostat_time": "TIME"}\`
+where \`TIME\` is the number of seconds since 2000-01-01 or empty.
+The zigbee gateway local time will be used when publishing an empty value.
+By default, the time clock is not displayed.
+
+#### Time format displayed
+The time clock format on the thermostat display can be changed by
+publishing to \`zigbee2mqtt/FRIENDLY_NAME/set {"time_format": "FORMAT"}\`
+where \`FORMAT\` is one of the following values: \`12h\`, \`24h\`.
+The factory default value is \`24h\`.
+
+#### Enable outdoor temperature display
+The display of outdoor temperature on the thermostat can be enabled / disabled by
+publishing to \`zigbee2mqtt/FRIENDLY_NAME/set {"enable_outdoor_temperature": "ENABLE"}\`
+where \`ENABLE\` is one of the following values: \`on\`, \`off\`.
+\`on\` value will set the outdoor temperature refresh timeout to 3 hours.
+\`off\` value will set the outdoor temperature refresh timeout to 30 seconds.
+When the refresh timeout is expired the thermostat setpoint temperature will be displayed.
+The outdoor temperature is not displayed by default.
+
+#### Outdoor temperature to display
+The outdoor temperature to display on the thermostat can be changed by
+publishing to \`zigbee2mqtt/FRIENDLY_NAME/set {"thermostat_outdoor_temperature": "TEMPERATURE"}\`
+where \`TEMPERATURE\` is between -100 to +100.
+
+### The following status are reported by the thermostat
+
+#### Groud fault circuit indicator status (GFCi)
+Turns \`on\` when the thermostat GFCi detects a ground fault. The status is reported
+to the device state as \`gfci_status\` every hour or when it changes.
+\`gfci_status\` has one of the following values: \`on\`, \`off\`.
+The default value is \`off\`.
+
+#### Floor limit status
+This status is \`on\` when the floor temperature exceeds the maximum floor heating setpoint.
+It is reported to the device state as \`floor_limit_status\` every hour or when it changes.
+\`floor_limit_status\` has one of the following values: \`on\`, \`off\`.
+The default value is \`off\`.
 `,
     },
     {
@@ -76,10 +271,31 @@ Everytime the above message is sent, Zigbee2MQTT will calculate the current time
 `,
     },
     {
+        model: 'ZYCT-202',
+        note: `
+### Binding
+This device does not support binding.
+`,
+    },
+    {
         model: 'XDD12LM',
         note: `
 ### Pairing
 Switch the lamp on five times until the lamp blinks several times.
+`,
+    },
+    {
+        model: ['X711A', 'X712A', 'X713A'],
+        note: `
+### Pairing
+Press and hold the button on the device for more then 10 seconds (until the led light starts blinking), release and wait.
+`,
+    },
+    {
+        model: ['ZNCLDJ11LM'],
+        note: `
+### Pairing
+Hold button for a few seconds until red light turn on.
 `,
     },
     {
@@ -126,6 +342,12 @@ Blog about supporting Zigbee 3.0 to CC2530: https://habr.com/ru/company/iobroker
 `,
     },
     {
+        model: ['TS0121_plug', 'HS2SK_nxp'],
+        deviceTypeSpecificConfiguration: true,
+        note: `
+* \`measurement_poll_interval\`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds.`,
+    },
+    {
         model: '3RSS007Z',
         note: `
 ### Pairing mode
@@ -146,17 +368,28 @@ Note: This device doesn't support Zigbee channels 25 & 26.
 `,
     },
     {
-        model: ['SNZB-01', 'SNZB-02'],
+        model: ['SNZB-01'],
+        note: `
+### Pairing
+Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode.
+The reset button can be found by removing the back cover.
+`,
+    },
+    {
+        model: ['SNZB-02'],
         note: `
 ### Pairing
 Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
+
+### Reporting intervals
+It has been reported, that the sensor reports humidity changes quite frequently (changes on 2nd digit level), but temperature changes are reported only once per hour or when temperature has changed > ~0.6°C. This results in a *staircase* development in recorded temperatures and inhibits fine-granular climate control. No resolution is known so far. See also [Homeassistant Community Forums](https://community.home-assistant.io/t/sonoff-snzb-02-temp-sensor-reporting-interval/216315/7)
 `,
     },
     {
         model: ['SNZB-03'],
         note: `
 ### Pairing
-If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the  button on the top for about 5 seconds until the light flashes several times. The device will then go into pairing mode  It should then be connected to Zigbee2MQTT. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
+If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the reset button through the small hole at the top for about 5 seconds until the light flashes several times. The device will then go into pairing mode. It should then be connected to Zigbee2MQTT. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
 `,
     },
     {
@@ -164,6 +397,17 @@ If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatical
         note: `
 ### Pairing
 Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
+`,
+    },
+    {
+        model: ['TS130F'],
+        note: `
+### Calibration
+
+* Open curtains completly
+* Send calibration command to the switch: mosquitto_pub -d -m 'on' -t 'zigbee2mqtt/Living_Room_Sunblind_Switch/set/calibration'
+* Press on close button on the switch, wait until curtains are fully closed
+* Send calibration command to the switch: mosquitto_pub -d -m 'off' -t 'zigbee2mqtt/Living_Room_Sunblind_Switch/set/calibration'
 `,
     },
     {
@@ -176,7 +420,71 @@ The connected load, and the red LED indicator behind the dimmer knob will flash 
 `,
     },
     {
-        model: ['YSR-MINI-01'],
+        model: ['HG06467'],
+        note: `
+### Pairing
+Factory reset the LED string by holding the "F" button for 5 seconds.
+When you let go of the button the LED string should blink slowly
+After resetting the LED string will automatically connect.
+
+While pairing, keep the string close to the adapter.
+
+
+### Trigger effects
+Controls the 16 build-in effects of the LED string. An effect expects 3 parameters: \`speed\`, \`colors\` and \`effect\`. To trigger an effect send a message to \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"effect": {"effect": EFFECT, "speed": SPEED, "colors": COLORS}}\`. Description:
+ * \`SPEED\` should be a number between 1 and 100.
+ * \`COLORS\` is an array of JSON objects containing \`r\`, \`g\`, \`b\`. Note: some effects support multiple colors
+ * \`EFFECT\` is a string, below is a list of possible values and the amount of colors it supports
+\`\`\`
+|     effect             |     # colors    |
+|------------------------|-----------------|
+|     steady             |     1           |
+|     snow               |     1           |
+|     rainbow            |     0           |
+|     snake              |     6           |
+|     twinkle            |     2           |
+|     firework           |     2           |
+|     horizontal_flag    |     3           |
+|     waves              |     3           |
+|     updown             |     2           |
+|     vintage            |     1           |
+|     fading             |     1           |
+|     collide            |     1           |
+|     strobe             |     5           |
+|     sparkles           |     3           |
+|     carnaval           |     6           |
+|     glow               |     6           |
+\`\`\`
+#### Example message payload
+\`\`\`json
+{
+    "effect": {
+        "effect": "snake",
+        "speed": 100,
+        "colors": [
+            {
+                "r": 255,
+                "g": 0,
+                "b": 0
+            },
+            {
+                "r": 0,
+                "g": 255,
+                "b": 0
+            },
+            {
+                "r": 0,
+                "g": 0,
+                "b": 255
+            }
+        ]
+    }
+}
+\`\`\`
+`,
+    },
+    {
+        model: ['YSR-MINI-01_rgbcct', 'YSR-MINI-01_wwcw', 'YSR-MINI-01_dimmer'],
         note: `
 ### Pairing
 1. Hold button until LED start flashing (about 6 seconds), then release.
@@ -189,16 +497,166 @@ The connected load, and the red LED indicator behind the dimmer knob will flash 
 ### General
 The ubisys C4 remote control unit seems to be primarily targeted to be directly bound to other ZigBee devices to control them. Therefore it does not emit plain "click" events or similar but can be configured to send ZigBee commands like on, off, toggle, cover up, cover down etc. from up to 6 endpoints (4 with on/off, level and scene clusters for lights and another 2 to control window covering devices).
 When used with Zigbee2MQTT all endpoints get bound to the coordinator automatically. Therefore all actions will be sent to the coordinator and forwarded to MQTT in addition to being sent directly via ZigBee to other devices that have potentially been bound manually (see [Binding](../information/binding.html) for more information).
-In it's factory reset configuration an ubisys C4 just sends a toggle command (originating from endpoints 1 to 4 respectively) for each input. Therefore basic keypresses on attached momentary switches can be processed through Zigbee2MQTT even without further input configuration.
+In its factory reset configuration an ubisys C4 just sends a toggle command (originating from endpoints 1 to 4 respectively) for each input. Therefore basic keypresses on attached momentary switches can be processed through Zigbee2MQTT even without further input configuration.
 
 
 ### Configuring Inputs
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` the following device attributes can be set to configure inputs:
+The inputs of most ubisys devices can be configured in a very flexible way to map state transitions (e.g. 'released' to
+'pressed') to Zigbee commands (e.g. 'toggle'). This even applies to the way in which these inputs control a local load (for ubisys devices other than the C4).
+
+#### Templates
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` using the JSON properties \`configure_device_setup\` and \`input_action_templates\` the inputs can be configured using templates. This allows to configure some common use cases without having to fully dive into the details of \`input_actions\` (see [Raw Configuration](#raw-configuration) below).
+
+Valid template types are:
+* \`toggle\`: Use one push button input to toggle the state of a light (or a similar actuator). A 'toggle' command will be sent on every push of the button.
+* \`toggle_switch\`: Use one stationary switch to toogle. A 'toggle' command will be sent when the switch is turned on as well as when the switch is turned off.
+* \`on_off_switch\`: Use one stationary switch to turn on and off. An 'on' command will be sent when the switch is turned on and an 'off' command when it is turned off. Helpful to ensure that lights stay synchronised when controlling a group.
+* \`on\`: Only send an 'on' command on every push of a button. Helpful to e.g. use a C4 as a more direct interface to some other physical device with a relais, e.g. to turn on all lights when the (physical) alarm system signals an intrusion.
+* \`off\`: Only send an 'off' command on every push of a button (also see \`on\`).
+* \`dimmer_single\`: Use one push button to toggle the state of a light and also to control its level. A short press will send a 'toggle' command and long presses will move the level up and down alternately.
+* \`dimmer_double\`: Use two push buttons to switch a light on and off and also to control its level. On the first input, a short press will send an 'on' command and a long press a 'move level up' command. On the second input, a short press will send an 'off' command and a long press a 'move level down' command.
+* \`cover\`: Use two push buttons to control a cover. A press on the first input will send a 'move up' command and if released within 1 second, it will send a 'stop' command. The same applies for the second input with 'move down' and 'stop' commands. This allows to use short presses to e.g. control the tilt of lift & tilt blinds whereas long presses will move up or down completely.
+* \`cover_switch\`: Use two stationary switches to control a cover. Similar to \`cover\`, but the 'stop' command will always be sent when a switch is turned off.
+* \`cover_up\`: Only send a 'move up' command on every push of a button (also see \`on\`).
+* \`cover_down\`: Only send a 'move down' command on every push of a button (also see \`on\`).
+* \`scene\`: Use a push button to select a scene (using its id). A short press will send a 'recall scene' command using \`scene_id\` and if \`scene_id_2\` is present a long press will do the same using \`scene_id_2\`.
+* \`scene_switch\`: Use a stationary switch to select a scene. Very similar to \`scene\`: turning the switch on will send \`scene_id\` and turning it off will send \`scene_id_2\` (if configured).
+
+General attributes:
+* \`input\`: Optional, selects the input(s) to use for a template. If not specified, the first template will use input 0 and then it will be incremented automatically for every further template. In case a templates uses two inputs, \`input\` and \`input+1\` will be used and following template will use \`input+2\`.
+* \`inputs\`: Optional, selects both inputs separatly for templates using two inputs. Allows to e.g. switch up and down inputs in case they are wired differently. The following template will use \`Math.max(...inputs)+1\`.
+* \`endpoint\`: Optional, selects the _outbound_ endpoint to use for sending the commands. The C4 only contains _outbound_ endpoints starting with endpoint 1 (see above). For the other ubisys devices endpoint 1 usually is an _inbound_ endpoint controlling the load, but starting at 2 or 3 they also contain _outbound_ endpoints that are per default bound to their respective load controlling endpoint but can also be changed (e.g. from switch to push button) or unbound and rebound to e.g. control a different light using the second input of a S1-R or D1. If not specified, the first template will use the first available _outbound_ endpoint on the specific device and then it will be incremented automatically for every further template. For a C4, cover templates will start at endpoint 5 (since endpoints 1-4 do not host a window covering cluster and can therefore only be used for lights etc).
+
+The input(s) and endpoint used will also be output to the Zigbee2MQTT log (flagged as warnings but only to make sure they do not get suppressed).
+
+Attributes only used with dimmer templates:
+* \`no_onoff_down\`: Optional, changes the commands sent to not automatically turn the light off when moving the level fully down. Useful to be able to dim a light down completely without turning it off.
+* \`no_onoff_up\`: Optional, changes the commands sent to not automatically turn the light on when moving the level up.
+* \`no_onoff\`: Optional, combination of \`no_onoff_up\` and \`no_onoff_down\`.
+* \`rate\`: Optional (default is 50), specifies the rate in steps per second when moving the level up or down.
+
+Attributes only used with scene templates
+* \`scene_id\`: Mandatory, specifies the scene id to send for the primary function of the template (i.e. short button press or switch turned on).
+* \`group_id\`: Specifies the group id to send the 'recall scene' to (needs to be identical to the one used in the group definition in \`configuration.yaml\` / \`groups\` and to the one used when storing the scene. Can be ommitted on subsequent scene templates.
+* \`scene_id_2\`: Optional, if present it specifies the scene id to send for the secondary function of the template (i.e. long button press or switch turned off).
+* \`group_id_2\`: Optional, specifies the group id to send with \`scene_id_2\`. Only needed if different from \`group_id\`.
+
+**On the C4, the respective _outbound_ endpoint also needs to be bound to one or more target devices (see [Binding](#binding) below) for most of the template types (besides scene control).**
+
+Please also note that there seems to be a size limit on the amount of data that can successfullly be written using \`input_action_templates\`, so not all combinations theoretically possbile will work in reality.
+
+
+#### Template Examples
+\`"//_comment"\` fields are really just comments only, will be ignored (as any other additional JSON properties) and can certainly be omitted. They are just used here since normal JavaScript comments (\`//\`) would not be considered valid JSON and therefore Zigbee2MQTT would throw an error.
+
+C4 Default Configuration
 \`\`\`json
 {
     "configure_device_setup": {
-        "inputConfigurations": [0, 0, 0, 0],
-        "inputActions": [
+        "input_action_templates": [
+            {
+                "//_comment": "will automatically use input 0 and endpoint 1",
+                "type": "toggle"
+            },
+            {
+                "//_comment": "will automatically use input 1 and endpoint 2",
+                "type": "toggle"
+            },
+            {
+                "//_comment": "will automatically use input 2 and endpoint 3",
+                "type": "toggle"
+            },
+            {
+                "//_comment": "will automatically use input 4 and endpoint 4",
+                "type": "toggle"
+            }
+        ]
+    }
+}
+\`\`\`
+
+Control a dimming light with inputs 1 (up) and 0 (down) and use input 3 to toggle a different light
+\`\`\`json
+{
+    "configure_device_setup": {
+        "input_action_templates": [
+            {
+                "//_comment": "will automatically use endpoint 1",
+                "type": "dimmer_double",
+                "inputs": [1, 0]
+            },
+            {
+                "//_comment": "will automatically use endpoint 2",
+                "type": "toggle",
+                "input": 3
+            }
+        ]
+    }
+}
+\`\`\`
+
+Use separate up and down push buttons with a D1
+\`\`\`json
+{
+    "configure_device_setup": {
+        "input_action_templates": [
+            {
+                "//_comment": "will automatically use inputs 0 and 1 and endpoint 2 (first outbound endpoint on a D1)",
+                "type": "dimmer_double"
+            }
+        ]
+    }
+}
+\`\`\`
+
+Use stationary switches instead of push buttons with a J1
+\`\`\`json
+{
+    "configure_device_setup": {
+        "input_action_templates": [
+            {
+                "//_comment": "will automatically use inputs 0 and 1 and endpoint 2 (first outbound endpoint on a J1)",
+                "type": "cover_switch"
+            }
+        ]
+    }
+}
+\`\`\`
+
+
+Control a dimming light with inputs 0 and 1 and recall scenes with 3 and 4
+\`\`\`json
+{
+    "configure_device_setup": {
+        "input_action_templates": [
+            {
+                "//_comment": "will automatically use inputs 0 and 1 and endpoint 1",
+                "type": "dimmer_double"
+            },
+            {
+                "//_comment": "will automatically use input 3 (endpoint does not really matter for scenes)",
+                "type": "scene",
+                "group_id": 1000,
+                "scene_id": 10
+            },
+            {
+                "//_comment": "will automatically use input 4 and group id 1000",
+                "type": "scene",
+                "scene_id": 11
+            }
+        ]
+    }
+}
+\`\`\`
+
+#### Raw Configuration
+
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` the following device attributes can be set to rawly configure inputs:
+\`\`\`json
+{
+    "configure_device_setup": {
+        "input_configurations": [0, 0, 0, 0],
+        "input_actions": [
             [0, 13, 1, 6, 0, 2],
             [1, 13, 2, 6, 0, 2],
             [2, 13, 3, 6, 0, 2],
@@ -209,43 +667,228 @@ By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` the following device attrib
 \`\`\`
 For further details on these attributes please take a look at the
 [ubisys C4 Technical Reference Manual](https://www.ubisys.de/wp-content/uploads/ubisys-c4-technical-reference.pdf),
-chapter "7.8.5. Device Setup Cluster (Server)" and the "ZigBee Device Physical Input Configurations Integrator's Guide" (which can be obtained directly from ubisys upon request).
-Please note that there seems to be a size limit on the amount of data that can successfullly be written to \`inputActions\`, so not all configurations theoretically possbile might work in reality.
+chapter "7.8.5. Device Setup Cluster (Server)" (or the respective ubisys reference manual of the device in use in case it's not a C4) and the "ZigBee Device Physical Input Configurations Integrator's Guide" (which can be obtained directly from ubisys upon request).
 
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/get/configure_device_setup\` the values of the configuration attributes can
+Please note that there seems to be a size limit on the amount of data that can successfullly be written to \`input_actions\`, so not all configurations theoretically possbile might work in reality.
+
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/get/configure_device_setup\` the values of the configuration attributes can
 also be read back from the device and be printed to the normal Zigbee2MQTT log.
+
+### Binding
+Most of the \`input_actions\` and \`input_action_templates\` (besides scene control) do not reference a target device directly but make use of the binding table of a specific _outbound_ endpoint (for C4 see [General](#general) above, for other ubisys devices take a look at the respective ubisys reference manual). For the C4, Zigbee2MQTT will always bind all endpoints to the coordinator automatically (so Zigbee2MQTT will be able to forward button presses to MQTT), but to control any other ZigBee device or group directly, it is necessary to bind the _outbound_ endpoints used to the target (device or group).
+
+When binding (or unbinding), it is important to explicitely specify the _outbound_ endpoint as the source, e.g. \`zigbee2mqtt/bridge/request/device/bind\` payload \`{"from": "SOURCE_DEVICE_FRIENDLY_NAME/2", "to": "TARGET"}\` (also see [Binding specific endpoint](../information/binding.html#binding-specific-endpoint)). Endpoints can be specified in numeric form and it is usually not necessary to specify an endpoint for the target device.
+
+For ubisys devices other than the C4 this also allows to use the secondary input to control a different device. Example: Use the secondary input on a D1 (uses _outbound_ endpoint 3 in the factory configuration) to control a separate ZigBee bulb:
+\`\`\`
+mosquitto_pub -t zigbee2mqtt/bridge/request/device/bind -m '{"from": "DIMMER_FRIENDLY_NAME/3", "to": "ANOTHER_BULB_FRIENDLY_NAME"}'
+\`\`\`
+
+### Decoupling
+For ubisys devices other than the C4 this even allows to completely decouple the local input from the local output. Example: Unbind the switch input from the local load and use it to instead control a group of lights without cutting the power to the bulbs (the switch output can still be controlled via ZigBee, e.g. via MQTT through Zigbee2MQTT):
+\`\`\`
+mosquitto_pub -t zigbee2mqtt/bridge/request/device/unbind -m '{"from": "SWITCH_FRIENDLY_NAME/2", "to": "SWITCH_FRIENDLY_NAME"}'
+mosquitto_pub -t zigbee2mqtt/bridge/request/device/bind -m '{"from": "SWITCH_FRIENDLY_NAME/2", "to": "GROUP_NAME"}'
+\`\`\`
+
+To restore the original behavior you unbind the group and rebind the device:
+\`\`\`
+mosquitto_pub -t zigbee2mqtt/bridge/request/device/unbind -m '{"from": "SWITCH_FRIENDLY_NAME/2", "to": "GROUP_NAME"}'
+mosquitto_pub -t zigbee2mqtt/bridge/request/device/bind -m '{"from": "SWITCH_FRIENDLY_NAME/2", "to": "SWITCH_FRIENDLY_NAME"}'
+\`\`\`
 `,
     },
     {
-        model: ['D1', 'J1'],
+        model: ['D1'],
         note: `
 ### Configuring Inputs
-In case the inputs need to be reconfigured (e.g. to use stationary switches instead of momentary ones) this can be done in the same way as [it is being done for the ubisys C4](C4.html#configuring-inputs).
+In case the inputs need to be reconfigured (e.g. to use stationary switches instead of momentary ones or vice versa) this can be done in the same way as [it is being done for the ubisys C4](C4.html#configuring-inputs).
+
+### (Re-)Binding and/or Decoupling
+Also see [the ubisys C4 documentation](C4.html#binding), example use cases:
+* Use the second input to control a different ZigBee device.
+* Completely decouple the input(s) from the local load.
+
+### Ballast Configuration
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` the dimmer's ballast configuration attributes (\`min_level\` and \`max_level\`) can be set.
+Example:
+\`\`\`json
+{
+    "ballast_config": {
+        "min_level": 3
+    }
+}
+\`\`\`
+
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/get/ballast_config\` the values of the ballast configuration attributes can
+also be read back from the device and be printed to the normal Zigbee2MQTT log (flagged as warnings but only to make sure they do not get suppressed).
+To account for errors due to missing optional attributes (since this is a general function), every cluster attribute will be queried separately and the complete process can therefore take a moment.
 `,
     },
     {
         model: ['S1', 'S2'],
         note: `
 ### Configuring Inputs
-In case the inputs need to be reconfigured (e.g. to use stationary switches instead of momentary ones) this can be done in the same way as [it is being done for the ubisys C4](C4.html#configuring-inputs).
+In case the input(s) need to be reconfigured (e.g. to use stationary switches instead of momentary ones or vice versa) this can be done in the same way as [it is being done for the ubisys C4](C4.html#configuring-inputs).
 
-### Decoupling
-You can decouple the switch input form the state, this allows you to control a group of lights using the switch without cutting the power to the bulbs.
+### (Re-)Binding and/or Decoupling
+Also see [the ubisys C4 documentation](C4.html#binding), example use cases:
+* Use the second input to control a different Zigbee device (S1-R only, S1 only has one input)
+* Completely decouple the input(s) from the local load
 
-By default the input is bound to itself, so we need to unbind it and then bind a zigbee group
+When decoupled, 'action' will be published when pressing the attached switch button.
+`,
+    },
+    {
+        model: 'InstaRemote',
+        note: `
+### Transmitters Loosing Connection in ZigBee 3 Networks
+With their factory firmware, the transmitters loose network connection after a few hours when ZigBee 3 devices are present in the network (which is a pretty much standard nowadays). For the Jung wall and handheld transmitters there is a firmware update available that fixes this problem (see [OTA updates](#ota-updates) below), but in turn decreases battery lifetime down to a few months.
 
+Unfortunately Gira seems to have dropped support for their ZigBee transmitters completely and does not offer any firmware updates at all. For the Gira handheld transmitter the Jung update seems to work (and to fix the problem), but for the Gira wall transmitter this is not the case (it only has 6 buttons instead of 8 on the Jung wall transmitter and would therefore need a different firmware). There does not seem to be real solution for this problem rendering the Gira wall transmitters pretty much useless nowadays.
+
+### Factory Reset (8-Button Devices)
+* Press and hold buttons \`3\` and \`4\` simultaneously for about 10 seconds until the green LEDs start to flash.
+* Release buttons \`3\` and \`4\` and then briefly press button \`O\` within 10 seconds.
+* The LEDs should light up green for 3 seconds and the transmitter has been reset.
+![Reset](../images/InstaRemote-reset.jpg)
+
+### Join Network (8-Button Devices)
+* Press and hold buttons \`5\` and \`I\` simultaneously until the green LEDs start to flash. Then release the buttons again.
+* After 10 more seconds the transmitter will start to search for an open network in order to join it.
+* If the transmitter was able to join a network, the LEDs will light up green for 3 seconds (otherwise the LEDs will flash red quickly for 3 seconds).
+![Join Network](../images/InstaRemote-join-network.jpg)
+
+### OTA
+For the device to ask for/accept OTA updates, it needs to be in "programming mode" (same mode as for joining a network, see above).
+In case the device does still not accept updates or seems to be stuck somehow, it may help to do a factory reset, join the network again and then again enter programming mode before starting the OTA update again.
+`,
+    },
+    {
+        model: 'HS2IRC',
+        note: `
+Device can learn up to 15 devices and up to 30 keycodes for each device.
+
+### Configuring
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` various device attributes can be configured:
+
+#### Create device
+
+Request:
+\`\`\`json
+{
+    "create": {
+        "model_type": 55,
+    }
+}
 \`\`\`
-mosquitto_pub -t zigbee2mqtt/bridge/unbind/<switch_friendly_name>/2 -m <switch_friendly_name>
-mosquitto_pub -t zigbee2mqtt/bridge/bind/<switch_friendly_name>/2 -m <group_name>
+
+- **model_type**: User-defined model ID. Used just for reference. Can be \`1..255\`.
+
+Response:
+\`\`\`json
+{
+    "action": "create",
+    "action_result": "success",
+    "action_model_type": 55,
+    "action_id": 1,
+}
 \`\`\`
 
-To restore the original behavior you unbind the group and rebind the device
+- **action_result**: (\`success\`/\`error\`). Action result.
+- **action_model_type**: User-defined model ID. \`1..255\`
+- **action_id**: Internal device slot ID. Total IR transmitter can store up to 15 devices with ID \`1..15\`
 
-\`\`\`
-mosquitto_pub -t zigbee2mqtt/bridge/unbind/<switch_friendly_name>/2 -m <group_name>
-mosquitto_pub -t zigbee2mqtt/bridge/bind/<switch_friendly_name>/2 -m <switch_friendly_name>
+NOTE: You should call \`get_list\` manually to refresh \`devices\` topic.
+
+#### Learn key
+
+Request:
+\`\`\`json
+{
+    "learn": {
+        "id": 1,
+        "key_code": 31,
+    }
+}
 \`\`\`
 
+- **id**: Internal device slot ID. \`1..15\`.
+- **key_code**: Keycode slot ID. \`1..30\` - Store/replace specific key in speicified slot ID. \`>=31\` - Create slot ID.
+
+NOTE: You should store keys one-by-one if you specified \`key_code\` by yourself.
+
+Response:
+\`\`\`json
+{
+    "action": "learn",
+    "action_result": "success",
+    "action_key_code": 1,
+    "action_id": 1,
+}
+\`\`\`
+
+- **action_result**: (\`success\`/\`error\`). Action result.
+- **action_key_code**: Internal keycode slot ID, where key was stored. \`1...30\`
+- **action_id**: Internal device slot ID. \`1..15\`
+
+NOTE: You should call \`get_list\` manually to refresh \`devices\` topic after learning key.
+
+#### Send stored key
+
+Request:
+\`\`\`json
+{
+    "send_key": {
+        "id": 1,
+        "key_code": 1,
+    }
+}
+\`\`\`
+
+- **id**: Internal device slot ID. \`1..15\`.
+- **key_code**: Keycode slot ID. \`1..30\`.
+
+#### Get list of the stored devices and keys
+
+Request:
+\`\`\`json
+{
+    "get_list": ""
+}
+\`\`\`
+
+Response:
+
+\`\`\`json
+{
+  "devices": [
+    {
+      "id": 1,
+      "key_codes": [
+        1,
+      ],
+      "model_type": 55
+    }
+  ]
+}
+\`\`\`
+
+
+#### Delete device or keycode
+
+Request:
+\`\`\`json
+{
+    "delete":{
+        "id": 1,
+        "key_code": 31
+    }
+}
+\`\`\`
+
+- **id**: \`1..15\` - Delete specific device with ID. \`>=16\` - Delete all devices.
+- **key_code**: \`1..30\` -Delete speicifc keycode. \`>=31\` - Delete all keycodes for specified device ID.
 `,
     },
     {
@@ -263,10 +906,17 @@ Reset of device is done by holding button for 20 secs until it starts to flash g
 `,
     },
     {
+        model: 'ROB_200-007-0',
+        note: `
+### Pairing
+First reset. Press and hold the upper two buttons for 5 seconds untill led lights up (contiunously blue or green). Then press the upper "0" 5 times - depending on the model, or in a pace of 2 times per second or in a pace of 5 times per second. Second pair. Press and hold the upper two buttons for 5 seconds again, untill the led turns on. Then press the "0" once. It should now enter pair mode an start blinking - if it does not get connected, just try the second step again.
+`,
+    },
+    {
         model: 'ROB_200-008-0',
         note: `
 ### Pairing
-First reset. Press and hold the upper two buttons for 5 seconds untill led turns blue. Then press the upper "0" 5 times really quickly - practise. Second pair. Press and hold the upper two buttons for 5 seconds again, untill the led turns blue. Then press the "0" once. It should now enter pair mode.
+First reset. Press and hold the upper two buttons for 5 seconds untill led lights up (contiunously blue or green). Then press the upper "0" 5 times - depending on the model, or in a pace of 2 times per second or in a pace of 5 times per second. Second pair. Press and hold the upper two buttons for 5 seconds again, untill the led turns on. Then press the "0" once. It should now enter pair mode an start blinking - if it does not get connected, just try the second step again.
 `,
     },
     {
@@ -300,6 +950,112 @@ Switch the lamp on five times until the bulb blinks several times.
 `,
     },
     {
+        model: 'F20T60A',
+        note: `
+### Force read power
+* \`power\`: Asks the device for the current active power.
+
+Example of MQTT message payload to ask for the active power. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/get\`:
+
+\`\`\`js
+{
+    "power"
+}
+\`\`\`
+
+
+### Power Alarm Configuration
+* \`power_alarm\`: enables or disables the power alarm, and sets the value: \`DISABLE\` (default) / \`integer\` (in kwh)
+
+Example of MQTT message payload to disable the power alarm. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`js
+{
+    "power_alarm": "DISABLE"
+}
+\`\`\`
+
+Example of MQTT message payload to enable the power alarm at 3.3 kwh. This should be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`js
+{
+    "power_alarm": "3300"
+}
+\`\`\`
+
+When it reaches that value, the \`power_alarm_active\` binary_sensor will change to \`true\`.
+
+
+### Identify
+Helps to identify the device using the LED.
+
+* \`identify['effect']\`:  only works for blink3 & fixed in \`effect\`. Values:
+    - \`blink3\`
+    - \`fixed\`
+    - \`blinkgreen\`
+    - \`blinkblue\`
+
+* \`identify['color']\`:  only works for blink3 & fixed in \`effect\`. Values:
+    - \`default\`
+    - \`red\`
+    - \`green\`
+    - \`blue\`
+    - \`lightblue\`
+    - \`yellow\`
+    - \`pink\`
+    - \`white\`
+
+Example of MQTT message payload to Identify the device. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`js
+{
+    "identify": {
+    "effect": "blink3",
+    "color": "white"
+    }
+}
+\`\`\`
+`,
+    },
+    {
+        model: 'HG06335',
+        note: `
+### Pairing
+Factory reset the motion detector by holding the reset button (little hole on the side) for 5 seconds.
+When you let go of the button an LED should blink.
+After resetting the motion detector will automatically connect.
+While pairing, keep the motion detector close to the adapter.
+
+
+### Tamper
+If the button on the back is pressed (i.e. the device is on the mounting plate), the value of \`tamper\` equals \`true\` otherwise it is \`false\`.
+`,
+    },
+    {
+        model: 'HG06338',
+        note: `
+### Pairing
+Factory reset the 3 gang switch by holding the power button for 5 seconds.
+When you let go of the button an LED should blink.
+After resetting the 3 gang switch will automatically connect.
+
+While pairing, keep the 3 gang switch close to the adapter.
+`,
+    },
+    {
+        model: 'HG06336',
+        note: `
+### Pairing
+Use the pin tool (or any SIM removal tool) to hold down the reset pinhole for 5 seconds.
+This is the side with a single hole (other side has 3) When you let go, the led will start flashing green.
+After setting pair mode the sensor will automatically connect.
+While pairing, keep the sensor close to the adapter.
+
+### Meaning of tamper
+The tamper is triggerd to \`true\` when a small black button underneath the battery compartment is no longer pressed down by the battery lid.
+`,
+    },
+    {
         model: 'E1525/E1745',
         note: `
 ### Pairing
@@ -309,6 +1065,10 @@ After a few seconds it turns back on and pulsate. When connected, the light turn
 
 ### Binding
 The E1745 can be bound to groups using [binding](../information/binding).
+
+## Detection cooldown (E1745 version)
+This device will pause detection of presence for approximately 1 min 37 sec after detection. In other words; with continuous detection, every 1:37 a new publish (occupancy: true) will be done.
+Cooldown of detection is 3 min. In other words; 3 min after last published detection (and trigger no longer present) occupancy will be published as false.
 `,
     },
     {
@@ -329,7 +1089,15 @@ The E1743 can be bound to groups using [binding](../information/binding).
 It can only be bound to 1 group at a time and cannot be bound to a device.
 
 By default this remote is bound to the default bind group which you first have to unbind it from.
-This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENDLY_NAME]]\` payload \`default_bind_group\`.
+This can be done by sending to \`zigbee2mqtt/bridge/request/device/unbind\` payload \`{"from": "DEVICE_FRIENDLY_NAME", "to": "default_bind_group"}\`.
+Right before executing the commands make sure to wake up the device by pressing a button on it.
+`,
+    },
+    {
+        model: 'E1743',
+        note: `
+### Battery Replacement
+After replacing the battery, reporting of battery % may not work. If you experience this issue, remove the device and join it again.
 `,
     },
     {
@@ -398,7 +1166,7 @@ will rapidly flash green.
 `,
     },
     {
-        model: '4713407',
+        model: ['4713407', '404001'],
         note: `
 ### Pairing
 1. Turn bulb on.
@@ -456,6 +1224,13 @@ If the Switch is connected hold Middle and Arrow Up Buttons for 3 Seconds to dis
         note: `
 ### Pairing
 For the OSRAM Smart+ plug (AB3257001NJ) hold the on/off button until your hear a click (+- 10 seconds).
+
+### Caveats
+Does not pass every attribute when acting as the routing parent for some end devices.
+E.g. \`occupancy\` is gobbled when routing Xiaomi [RTCGQ11LM](RTCGQ11LM.md) traffic resulting in
+motion updates not getting propagated to the network.
+
+See also [#2274](https://github.com/Koenkk/zigbee2mqtt/issues/2274).
 `,
     },
     {
@@ -467,6 +1242,13 @@ After a factory reset the bulb will automatically connect.
 Power on and off the bulb 5 times (screw/unscrew the bulb if you don't have a physical switch)
 to perform a factory reset.
 As a reset confirmation the bulb will blink 4 times.
+`,
+    },
+    {
+        model: ['LED1623G12'],
+        note: `
+### Known Issue with sending effects with brightness 1
+There is a [known issue](https://github.com/Koenkk/zigbee2mqtt/issues/5237) with the bulb brightness incorrectly returning to max after an effect is sent. This only occurs if \`brightness\` is set to 2> and off, then turned on with \`brightness: 1\`. Once the effect has finished the bulb will report as being \`brightness: 1\` however it outputs max brightness. Workarounds are to use \`brightness: 2\` and above or turn on without \`brightness\` then send the \`brightness: 1\` in another command. This behaviour is confirmed present in the IKEA TRADFRI firmware v1.2.214.
 `,
     },
     {
@@ -517,10 +1299,10 @@ the Device with a Philips LivingColors Remote Gen 2 as it should try all Zigbee 
     {
         vendor: 'Philips',
         notModel: ['324131092621'],
-        supports: ['brightness'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'light' && e.features.find((f) => f.name === 'brightness')),
         note: `
 ### Pairing
-Factory resetting a Hue bulb can be accomplished in 4 ways.
+Factory resetting a Hue bulb can be accomplished in 5 ways.
 After resetting the bulb will automatically connect.
 
 #### Touchlink factory reset
@@ -528,26 +1310,32 @@ See [Touchlink](../information/touchlink)
 
 #### Hue bridge
 When the bulb is still connected to the Hue bridge, you can simply factory reset the bulb
-by removing it from the bridge via the Hue app.
+by removing it from the bridge via the Hue app. Orphaned bulbs (configured to connect to a non-existing zigbee network) can be adopted by a Hue bridge by entering the 6 character serial number in the Philips Hue app.
 
 #### Hue dimmer switch
 [VIDEO: Factory reset a Hue bulb with Hue dimmer switch](https://www.youtube.com/watch?v=qvlEAELiJKs).
+
+#### Bluetooth (if supported by device)
+Install the Philips Hue Bluetooth app for [Android](https://play.google.com/store/apps/details?id=com.signify.hue.blue)
+or [iOS](https://apps.apple.com/us/app/philips-hue-bluetooth/id1456604186). You can use the app to trigger a factory reset on a paired light. (Note: The light will only be in bluetooth pairing (Note: The light will only be in bluetooth pairing
+mode for a couple of minutes after poweron)
 
 #### TRADFRI remote control
 This may also be possible with the
 [Tradfri Remote Control](https://www.ikea.com/us/en/images/products/tradfri-remote-control__0489469_PE623665_S4.JPG)
 by pressing and holding the reset button on the bottom of the remote (next to the battery).
-[This may not always work](https://github.com/Koenkk/zigbee2mqtt/issues/296#issuecomment-416923751).
+[This may not always work, even if the Hue bulb starts flashing](https://github.com/Koenkk/zigbee2mqtt/issues/296#issuecomment-416923751).
 `,
     },
     {
         vendor: 'Philips',
         notModel: ['324131092621'],
-        supports: ['brightness', 'on/off'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'light' || e.type === 'switch'),
         note: `
 ### Power-on behavior
-Allows to set the power-on behavior of the plug/bulb.
-Note that this requires at least November/December '18 firmware update of the device.
+This device allows you to set the power-on behavior. Note that this requires at least November/December '18 firmware update of the device.
+Send a MQTT command to [\`zigbee2mqtt/FRIENDLY_NAME/set\`](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html#zigbee2mqttfriendly_nameset) with the following payload.
+
 \`\`\`js
 {
     "hue_power_on_behavior": "on",          // default, on, off, recover
@@ -570,12 +1358,14 @@ Rules:
 - \`hue_power_on_brightness\`, \`hue_power_on_color_temperature\` and \`hue_power_on_color\` can only be provided when \`hue_power_on_behavior\` = \`on\`
 - \`hue_power_on_color_temperature\` and \`hue_power_on_color\` cannot be provided together, only one can be set
 - When setting \`hue_power_on_behavior\` = \`on\`, any not provided values will be reset to their factory defaults
+
+Note: if \`hue_power_on_behavior\` is set to \`off\`, then the only way to turn the bulb on will be through a paired smart device (see pairing above). You will NOT be able to turn the bulb on by sequentialy switching power on and off.
 `,
     },
     {
         vendor: ['OSRAM', 'Sylvania', 'LEDVANCE'],
         notModel: [],
-        supports: ['brightness'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'light' && e.features.find((f) => f.name === 'brightness')),
         note: `
 ### Set default power on/off transition
 Various Osram/Sylvania LED support setting a default transition when turning a light on and off.
@@ -645,14 +1435,14 @@ If you want to bind the dimmer to a (Hue) lamp you'll have to *[bind it to the l
 
 #### Device refuses actions
 
-If actions (e.g.  applying zigbee2mqtt/bridge/config/remove to a dimmer) result in timeouts, perform a reset (see above) and apply the action right after the device announced itself in the network.
+If actions (e.g. applying zigbee2mqtt/bridge/request/device/remove to a dimmer) result in timeouts, perform a reset (see above) and apply the action right after the device announced itself in the network.
 
 #### Device announces itself but the buttons don't work
 
 The dimmer appears to be working normally and the logs in Zigbee2MQTT look good. However, nothing happens when a button is pressed (no light, no log message in Zigbee2MQTT). In this case:
 
 - Reset the device
-- Use zigbee2mqtt/bridge/config/remove to remove the device from the network (this should result in a "left the network" log message)
+- Use zigbee2mqtt/bridge/request/device/remove to remove the device from the network (this should result in a "left the network" log message)
 - Allow joining of new devices in Zigbee2MQTT
 - Reset the device again
 - Wait for it to pair again. The device should now be operational.
@@ -682,6 +1472,22 @@ it will indicate with colors that the bulb is pairing.
 Remove the battery cover and use the cover to press the button above the batteries.
 Press and hold this button for 10-20 seconds and release the button.
 After that the remote should show up as a paired device.
+
+### Groups binding
+This remote is able to deal with 4 groups:
+group0 = All three leds lit
+group1 = first led lit
+group2 = second led lit
+group3 = third let lit
+
+you can direct bind each remote group with a different zigbee group, however there is a caveat: the four zigbee groups have to use consecutive group ids.
+The group you will bind (using the frontend or [mqtt command](../information/binding.html)) will be bound to group0 of the remote.
+The 3 consecutive groups will be bound to group1 to group3.
+
+This means that you probably should carefully [define your groups id](../information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgeconfigadd_group)  when creating them.
+
+It is possible to bind to a device instead of a group. The device will be bound to group0.
+In this case, group0 to group3 will not be usable.
 `,
     },
     {
@@ -700,7 +1506,7 @@ It may help to remove the battery for a few seconds and after that reconfigure i
         model: ['LLKZMK11LM'],
         note: `
 ### Interlock
-This option allows to inter connect the relays which will make sure that only one relay is on at a time. To do this publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"interlock": true}\` or \`{"interlock": false}\`. By default this option is \`false\`.
+This option allows to inter connect the relays which will make sure that only one relay is on at a time. To do this publish to \`zigbee2mqtt/FRIENDLY_NAME/set\` payload \`{"interlock": true}\` or \`{"interlock": false}\`. By default this option is \`false\`.
 `,
     },
     {
@@ -782,7 +1588,8 @@ To find optimal "smoothness" play with debounce time or if you need all unique r
 The remote can be bound to groups using [binding](../information/binding) since firmware 2.3.014.
 It can only be bound to 1 group at a time. Use the group name as \`TARGET_DEVICE_FRIENDLY_NAME\`.
 By default this remote is bound to the default bind group which you first have to unbind it from.
-This can be done by sending to \`zigbee2mqtt/bridge/unbind/[DEVICE_FRIENDLY_NAME]]\` payload \`default_bind_group\`.
+This can be done by sending to \`zigbee2mqtt/bridge/request/device/unbind\` payload \`{"from": "DEVICE_FRIENDLY_NAME", "to": "default_bind_group"}\`.
+Wake up the device right before sending the commands by pressing a button on it.
 
 #### Note
 This device with old firmware < 2.3.014 does not support binding (limitation of the device). A workaround is to first
@@ -801,6 +1608,9 @@ of type 'commandToggle' with data '{}' from endpoint 1 with groupID 57173\`.
     {
         model: ['WXCJKG11LM', 'WXCJKG12LM', 'WXCJKG13LM'],
         note: `
+### Pairing Instructions
+Press and hold the button on the backside of the device until the blue light starts blinking, release it and the pairing should begin.
+
 ### Binding
 By default the switch is bound to the coordinator but this device can also be used to directly control other lights and switches in the network.
 
@@ -810,7 +1620,11 @@ Now change the operation mode of the device, by default it is in \`event\` mode,
 To do this send to \`zigbee2mqtt/FRIENDLY_NAME/set\` payload \`{"operation_mode": "command"}\`, right before doing this make sure to wakeup the device.
 
 As the device is sleeping by default, you need to wake it up after sending the bind/unbind command by pressing the reset button once.
-
+`,
+    },
+    {
+        model: ['WXCJKG11LM', 'WXCJKG13LM'],
+        note: `
 When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple switch 1 band):
 - left click: turn off
 - right click: turn on
@@ -821,11 +1635,59 @@ When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple swi
 `,
     },
     {
+        model: ['WXCJKG12LM'],
+        note: `
+Note that the WXCJKG12LM can only be bound to one device at a time.
+
+When bound to a lamp, the behavior is as follows (for WXCJKG12LM Aqara Opple switch 2 band).
+- up left click: turn off
+- up right click: turn on
+- down left click: light dim down (by steps of 33%)
+- down right click: light dim up (by steps of 33%)
+- down left double click: warm white
+- down right double click: cold white
+
+`,
+    },
+    {
         model: ['E1746'],
         note: `
 ### Pairing
 Push the reset button of the device with a paperclip for 5 seconds.
 While pairing the LED is flashing/dimming slowly. Once the pairing is finished, the LED stays on.
+
+## Tips for monitoring this device
+The device send a payload exactly 1 hours after the first pairing and a payload each exactly 4 hours after.
+You can track the activity of this device by observing the lastseen value. If now () - lastseen > 4 h, then
+your equipment has lost its connectivity
+`,
+    },
+    {
+        model: ['SP 120'],
+        note: `
+### Pairing
+Factory reset by press & hold the power button for 5 seconds. The LED is then starting to blink during pairing process.
+
+### Specs
+- Rating: 220-240VAC, 10A, 50Hz
+- Standby Power: <= 0.5W
+
+### Manual
+[Supplier's manual](https://www.innr.com/wp-content/uploads/2019/12/Installation-Manual-Smart-Plug-EU-version-SP-120.pdf)
+`,
+    },
+    {
+        model: ['TS0001'],
+        note: `
+### Pairing
+Press and hold the button on the device for more then 10 seconds (until the led light starts blinking), release and wait.
+`,
+    },
+    {
+        model: ['TS0044'],
+        note: `
+### Pairing
+To enter pairing mode hold bottom left button for 10 seconds until all 4 LEDs start flashing
 `,
     },
     {
@@ -868,7 +1730,7 @@ small pin or paperclip to push the reset button once.
     },
     {
         vendor: 'IKEA',
-        supports: ['brightness'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'light' && e.features.find((f) => f.name === 'brightness')),
         notModel: ['E1524/E1810', 'ICPSHC24-10EU-IL-1', 'ICPSHC24-30EU-IL-1', 'ICTC-G-1', 'E1743'],
         note: `
 ### Pairing
@@ -877,8 +1739,8 @@ After resetting the bulb will automatically connect.
 
 While pairing, keep the bulb close to the CC2531 USB sniffer.
 
-What works is to use (very) short “on’s” and a little bit longer “off’s”.
-Start with bulb on, then off, and then 6 “on’s”, where you kill the light as soon as the bulb shows signs of turning on.
+What works is to use (very) short “on’s” and a little bit longer “off’s”, where you kill the light as soon as the bulb shows signs of turning on.
+Start with bulb on, then off, and then 6 “on’s”, wait in the 6th ON state. (If you try play safe and go for 7 "on's" the reset sometimes fails.)
 `,
     },
     {
@@ -947,10 +1809,10 @@ Now the device is ready for pairing. To initiate pairing quickly press the butto
 `,
     },
     {
-        model: ['SZ-ESW01-AU'],
+        model: ['SZ-ESW01-AU', 'SZ-ESW01'],
         note: `
 ### Pairing
-Press and hold the pairing button while plugging in the device.
+With the device unplugged (or socket switched off), press and hold the pairing button for ~4 seconds. Continue holding the pairing button while plugging in the device (or switching the socket on) and continue to hold for 2 seconds. If pairing is successful the red LED will switch off for ~2 seconds, then flash.
 `,
     },
     {
@@ -992,7 +1854,7 @@ If the device is asleep (which is most of the time) and you need it to be awake 
         model: ['TS0601_curtain', 'mcdj3aq'],
         note: `
 ### Configuration of device attributes
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` various device attributes can be configured:
 \`\`\`json
 {
     "options":{
@@ -1018,11 +1880,31 @@ After this the device will automatically join.
 ### Pairing
 - Press W-key for 3 seconds
 - Press Power On/Off Key for 5 seconds
+- Press Power On/Off again for 3 seconds
 Now the device should showup.
 
 ### Extended hue
 The device gives extended hue values. Zigbee2MQTT calculates also the normal hue and provides both via mqtt.
 - hue = extendedhue * 360 / 65536 % 360
+`,
+    },
+    {
+        model: ['902010/24'],
+        note: `
+### Activating the alert
+Activating the alert is done by sending a JSON
+
+{% raw %}
+\`\`\`json
+{"warning":{"duration":1,"mode":"burglar","strobe":false,"level":"high"}}
+\`\`\`
+{% endraw %}
+
+This gives an audible alert with the LED flashing of around 2 seconds duration.
+
+If you set strobe to true it'll not work. Level "low" does not give a sound, the other valid levels don't make a difference in loudness. There doesn't not seem to be a difference between different modes.
+
+The device seems to be a little bit picky about switching off - set both "mode":"none" and "duration":1 - but to another value than before.
 `,
     },
     {
@@ -1113,7 +1995,7 @@ The \`strength\` value, which is reported every 300 seconds after vibration is d
 `,
     },
     {
-        model: ['WXKG03LM', 'WXKG06LM', 'WXKG02LM', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'ZNCZ02LM', 'QBKG25LM', 'QBKG22LM', 'QBKG24LM'],
+        model: ['WXKG03LM_rev1', 'WXKG03LM_rev2', 'WXKG06LM', 'WXKG02LM_rev1', 'WXKG02LM_rev2', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'ZNCZ02LM', 'QBKG25LM', 'QBKG22LM', 'QBKG24LM'],
         note: `
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
@@ -1129,6 +2011,8 @@ You may have to unpair the switch from an existing coordinator before the pairin
 Press and hold the setup button on the rear of the device for +- 10 seconds (until the green light goes solid)
 to initiate pairing. Please note that the pairing indicator light is below the main sensor
 (as oppose to the obvious indicator above the main sensor).
+
+This specific device has been reported to have issues repairing to a Zigbee network after upgrading from a CC2531 to a CC2652 controller (Zigbee 1.2 to 3.0). (Re)pairing may only work after pairing the device to another network and channel first (has been tested with a Philips Hue 2.0 hub in this instance) before pairing it back to the Zigbee2MQTT network again.
 `,
     },
     {
@@ -1149,60 +2033,32 @@ More detailed information about this can be found [here](https://community.hubit
     },
     {
         vendor: 'Innr',
-        supports: ['brightness'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'light' && e.features.find((f) => f.name === 'brightness')),
         note: `
 ### Pairing
 Factory reset the light bulb ([video](https://www.youtube.com/watch?v=4zkpZSv84H4)).
 `,
     },
     {
-        model: ['RTCGQ01LM', 'RTCGQ11LM'],
-        note: `
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
-* \`no_occupancy_since\`: Timeout (in seconds) after \`no_occupancy_since\` is send.
-This indicates the time since last occupancy was detected.
-For example \`no_occupancy_since: [10, 60]\` will send a \`{"no_occupancy_since": 10}\` after 10 seconds
-and a \`{"no_occupancy_since": 60}\` after 60 seconds.
-* \`occupancy_timeout\`: Timeout (in seconds) after the \`occupancy: false\` message is sent.
-If not set, the timeout is \`90\` seconds.
-When set to \`0\` no \`occupancy: false\` is send.
-
-**IMPORTANT**: \`occupancy_timeout\` should not be set to lower than 60 seconds.
-The reason is this: after detecting a motion the sensor ignores any movements for
-exactly 60 seconds. In case there are movements after this, a new message
-(\`occupancy: true\`) will be sent and the sensor will go for one more minute sleep, and so on.
-This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/issues/270#issuecomment-414999973)).
-To work around this, a
-[hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
-is needed.
-`,
-    },
-    {
         model: ['AV2010/22'],
+        deviceTypeSpecificConfiguration: true,
         note: `
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
-* \`occupancy_timeout\`: Timeout (in seconds) after the \`occupancy: false\` message is sent.
+* \`occupancy_timeout\`: Timeout (in seconds) after which the \`occupancy: false\` message is sent.
 If not set, the timeout is \`90\` seconds.
-When set to \`0\` no \`occupancy: false\` is send.
+When set to \`0\` no \`occupancy: false\` is sent.
 `,
     },
     {
         model: ['WXKG01LM'],
+        deviceTypeSpecificConfiguration: true,
         note: `
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
 * \`hold_timeout\`: The WXKG01LM only reports a button press and release.
-By default, Zigbee2mqtt publishes a \`hold\` action when there is at
+By default, Zigbee2MQTT publishes a \`hold\` action when there is at
 least 1000 ms between both events. It could be that due to
 delays in the network the release message is received late. This causes a single
 click to be identified as a \`hold\` action. If you are experiencing this you can try
 experimenting with this option (e.g. \`hold_timeout: 2000\`).
-* \`hold_timeout_expire\`: Sometimes it happens that the button does not send a release. To avoid problems Zigbee2mqtt expires the \`hold\` leading to no \`release\` being send. The default timeout is 4000 ms, you can increase it with this option.
+* \`hold_timeout_expire\`: Sometimes it happens that the button does not send a release. To avoid problems Zigbee2MQTT expires the \`hold\` leading to no \`release\` being send. The default timeout is 4000 ms, you can increase it with this option.
 `,
     },
     {
@@ -1218,27 +2074,45 @@ This device has various limitations:
 
     // Device specific configuration
     {
-        supports: ['position'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'cover' && e.features.find((f) => f.name === 'position')),
         notModel: ['SV01', 'SV02'],
+        deviceTypeSpecificConfiguration: true,
         note: `
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
 * \`invert_cover\`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
 `,
     },
     {
-        supports: ['temperature', 'humidity', 'pressure', 'brightness', 'color temperature', 'color', 'illuminance'],
-        notDescription: ['thermostat'],
-        notModel: ['324131092621', 'ICZB-KPD18S', 'ICZB-KPD14S', 'TYZS1L'],
+        model: [
+            'WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM_rev1', 'WXKG03LM_rev2', 'WXKG06LM', 'WXKG02LM_rev1', 'WXKG02LM_rev2', 'QBKG04LM', 'QBKG11LM',
+            'QBKG03LM', 'QBKG12LM', 'WXKG07LM', 'QBKG21LM', 'QBKG22LM', 'E1743', 'E1766', 'ptvo.switch',
+            'DIYRuZ_R8_8', 'HGZB-1S', 'HGZB-02S', 'HGZB-045', 'IM6001-BTP01', 'AV2010/34', 'HS1EB/HS1EB-E',
+            'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'ZGRC-KEY-013',
+            'MEAZON_BIZY_PLUG', 'MEAZON_DINRAIL', '2AJZ4KPKEY', 'TERNCY-PP01', 'TERNCY-SD01',
+            'ICZB-KPD14S', 'ICZB-KPD18S', '067773', 'E1744', 'ICTC-G-1', 'MFKZQ01LM', '07046L', 'SWO-KEF1PA',
+            'QBKG25LM', 'TS0218', 'DNCKATSW002', 'DNCKATSW003', 'DNCKATSW004', 'AIRAM-CTR.U', '4058075816459',
+            '73743', 'AC0251100NJ/AC0251700NJ', 'WXCJKG13LM', 'WXCJKG12LM', 'WXCJKG11LM', '8718699693985', 'E1524/E1810',
+            '6735/6736/6737', 'ZNMS13LM', 'ZNMS12LM', 'ZNMS11LM', 'InstaRemote', 'LZL4BWHL01', 'MLI-404011', 'HS1RC-N', 'HS1RC-EM',
+            '81825', 'ZYCT-202', 'STS-PRS-251', 'Z3-1BRL', 'AV2010/32', 'U86KWF-ZPSJ', '1TST-EU', 'UK7004240',
+            'SLR1b', 'SLR2', 'RC-2000WH', '3157100', '014G2461', 'ST218', 'STZB402', 'SMT402', 'SMT402AD', 'TH1124ZB', 'TH1300ZB',
+            'TH1500ZB', 'Zen-01-W', 'TH1400ZB', 'TH1123ZB', 'ZK03840', 'SPZB0001', 'WV704R0A0902', 'TERNCY-SD01', 'C4', 'HT-08', 'HT-10',
+            '07703L', 'SEA801-Zigbee/SEA802-Zigbee', '6ARCZABZH', '324131092621',
+        ],
+        deviceTypeSpecificConfiguration: true,
+        note: `
+* \`legacy\`: Set to \`false\` to disable the legacy integration (highly recommended!) (default: true)
+`,
+    },
+    {
+        model: ['RTCGQ01LM'],
         note: `
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 `,
     },
     {
-        supports: ['illuminance'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'numeric' && e.name === 'illuminance'),
         notModel: ['RTCGQ11LM', 'GZCGQ01LM'],
+        deviceTypeSpecificConfiguration: true,
         note: `
 * \`illuminance_lux_precision\`: Controls the precision of \`illuminance_lux\` values, e.g. \`0\` or \`1\`; default \`1\`.
 To control the precision based on the illuminance_lux value set it to e.g. \`{1000: 0, 100: 1}\`,
@@ -1246,16 +2120,17 @@ when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 pr
 `,
     },
     {
-        supports: ['illuminance'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'numeric' && e.name === 'illuminance'),
+        deviceTypeSpecificConfiguration: true,
         note: `
 * \`illuminance_lux_calibration\`: Allows to manually calibrate illuminance values,
 e.g. \`95\` would take 95% to the illuminance reported by the device; default \`100\`.
 `,
     },
     {
-        supports: ['temperature'],
-        notSupports: ['color temperature'],
-        notDescription: ['thermostat'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'numeric' && e.name === 'temperature'),
+        deviceTypeSpecificConfiguration: true,
+        notModel: ['Zen-01-W'],
         note: `
 * \`temperature_precision\`: Controls the precision of \`temperature\` values,
 e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
@@ -1305,7 +2180,7 @@ This device can work on any channel, not only 15, 20, 11 or 25. For this refer t
 `,
     },
     {
-        supports: ['humidity'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'numeric' && e.name === 'humidity'),
         notModel: ['SMT402', 'SMT402AD'],
         note: `
 * \`humidity_precision\`: Controls the precision of \`humidity\` values, e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
@@ -1314,7 +2189,7 @@ when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1
 `,
     },
     {
-        supports: ['pressure'],
+        exposes: (exposes) => exposes.find((e) => e.type === 'numeric' && e.name === 'pressure'),
         note: `
 * \`pressure_precision\`: Controls the precision of \`pressure\` values, e.g. \`0\` or \`1\`; default \`1\`.
 To control the precision based on the pressure value set it to e.g. \`{1000: 0, 100: 1}\`,
@@ -1324,8 +2199,24 @@ e.g. \`1\` would add 1 to the pressure reported by the device; default \`0\`.
 `,
     },
     {
-        supports: ['brightness', 'color temperature', 'color'],
+        simulatedBrightness: true,
+        deviceTypeSpecificConfiguration: true,
+        note: `
+* \`simulated_brightness\`: Set to \`true\` to simulate a \`brightness\` value (default: \`false\`).
+If this device provides a \`brightness_move_up\` or \`brightness_move_down\` action it is possible to specify the update
+interval and delta. This can be done by instead of specifying \`true\`:
+
+\`\`\`yaml
+simulated_brightness:
+  delta: 20 # delta per interval, default = 20
+  interval: 200 # interval in milliseconds, default = 200
+\`\`\`
+`,
+    },
+    {
+        exposes: (exposes) => exposes.find((e) => e.type === 'light'),
         notModel: ['324131092621', 'ICZB-KPD18S', 'ICZB-KPD14S', 'TYZS1L'],
+        deviceTypeSpecificConfiguration: true,
         note: `
 * \`transition\`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to \`0\` (no transition).
@@ -1336,7 +2227,7 @@ Note that this value is overridden if a \`transition\` value is present in the M
         model: ['9GED18000-009'],
         note: `
 ### Pin code usage
-To retrieve the state, send a \`get\` message to the device topic (\`zigbee2mqtt/[DEVICE_FRIENDLY_NAME]/get\`) with the body \`{"pin_code":{"user":0}}\`. To set, sent a \`set\` message to the device topic (\`zigbee2mqtt/[DEVICE_FRIENDLY_NAME]/set\`) with the body \`{"pin_code":{"user":0,"pin_code":1234}}\`. To clear a code, call \`set\` but omit the value for \`pin_code\`.
+To retrieve the state, send a \`get\` message to the device topic (\`zigbee2mqtt/DEVICE_FRIENDLY_NAME/get\`) with the body \`{"pin_code":{"user":0}}\`. To set, sent a \`set\` message to the device topic (\`zigbee2mqtt/DEVICE_FRIENDLY_NAME/set\`) with the body \`{"pin_code":{"user":0,"pin_code":1234}}\`. To clear a code, call \`set\` but omit the value for \`pin_code\`.
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
@@ -1345,8 +2236,22 @@ To retrieve the state, send a \`get\` message to the device topic (\`zigbee2mqtt
 `,
     },
     {
-        supports: ['color'],
-        notModel: ['324131092621', 'ICZB-KPD18S', 'ICZB-KPD14S', 'TYZS1L'],
+        model: ['89665'],
+        note: `
+### Manual
+[Supplier's manual](https://www.elektroimportoren.no/docs/lib/89665-Brukerveiledning-5.pdf)
+
+### Pairing
+Factory resetting this Namron Lightsrip can be accomplished in several ways.
+Please read instructions in attached link for the User Manual.
+After resetting the bulb will automatically connect.
+
+#### Touchlink
+Please read instructions in attached link for the User Manual.
+`,
+    },
+    {
+        exposes: (exposes) => exposes.find((e) => e.type === 'light' && e.features.find((f) => f.name === 'color_hs' || f.name === 'color_xy')),
         note: `
 * \`hue_correction\`: (optional) Corrects hue values based on a correction map for matching color
 rendition to other lights. Provide a minimum of 2 data sets in the correction map. To build a map:
@@ -1376,12 +2281,12 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
         model: ['JTQJ-BF-01LM/BW', 'JTYJ-GD-01LM/BW'],
         note: `
 ### Sensitivity
-The sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
+The sensitivity can be changed by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\`
 \`{"sensitivity": "SENSITIVITY"}\` where \`SENSITIVITY\` is one of the following
 values: \`low\`, \`medium\`,  \`high\`.
 
 ### Self-test
-A self-test can be trigged by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
+A self-test can be trigged by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\`
 \`{"selftest": ""}\`.
 If the selftest is executed successfully you will hear the device beep in 30 seconds.
 `,
@@ -1390,7 +2295,7 @@ If the selftest is executed successfully you will hear the device beep in 30 sec
         model: ['DJT11LM'],
         note: `
 ### Sensitivity
-The sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
+The sensitivity can be changed by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\`
 \`{"sensitivity": "SENSITIVITY"}\` where \`SENSITIVITY\` is one of the following
 values: \`low\`, \`medium\`,  \`high\`.
 
@@ -1401,7 +2306,7 @@ After setting the sensitivity you immediately have to start pressing the reset b
         model: ['9290012607', '9290019758'],
         note: `
 ### Motion sensitivity
-The motion sensitivity can be changed by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`
+The motion sensitivity can be changed by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\`
 \`{"motion_sensitivity": "SENSITIVITY"}\` where \`SENSITIVITY\` is one of the following
 values: \`low\`,  \`medium\`,  \`high\` (default).
 
@@ -1436,6 +2341,13 @@ E.g. (devices.yaml)
 `,
     },
     {
+        model: ['170-33505'],
+        note: `
+### Pairing
+To pair the socket outlet to your network, press the button at least 3 times within 6 seconds. Then the socket outlet will be in pairing modus for 5 minutes. The led will be blinking blue.
+    `,
+    },
+    {
         model: ['CC2530.ROUTER'],
         note: `
 ### Pairing
@@ -1458,10 +2370,17 @@ every second.
     `,
     },
     {
+        model: ['SA-003-Zigbee'],
+        note: `
+### Pairing
+Reset by unplugging any devices plugged into the socket, hold the button down for 10 secs until the light flashes Green/Orange and the Socket switches on and off. pair within 60 secs
+    `,
+    },
+    {
         model: ['SJCGQ11LM', 'SJCGQ12LM'],
         note: `
 ### Pairing
-Press and hold water logo on the device for +- 10 seconds until the blue light blinks
+Press and hold water logo on the device for +- 10 seconds (you have to press quite hard) until the blue light blinks
 three times, release the water logo (the blue light will blink once more) and wait.
     `,
     },
@@ -1469,7 +2388,7 @@ three times, release the water logo (the blue light will blink once more) and wa
         model: 'HS2WD-E',
         note: `
 ### Triggering the alarm
-The alarm can be trigged by publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` message
+The alarm can be trigged by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` message
 \`{"warning": {"duration": 10, "mode": "emergency", "strobe": false}}\`.
 
 Where:
@@ -1490,14 +2409,14 @@ Where:
 `,
     },
     {
-        model: ['QBKG03LM', 'QBKG04LM', 'QBKG12LM', 'QBKG11LM', 'QBKG21LM', 'QBKG22LM', 'QBKG25LM'],
+        model: ['QBKG03LM', 'QBKG04LM', 'QBKG12LM', 'QBKG11LM', 'QBKG21LM', 'QBKG22LM', 'QBKG25LM', 'QBKG24LM', 'QBKG26LM', 'QBKG23LM'],
         note: `
 ### Decoupled mode
 Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
 This might be useful to assign some custom actions to buttons and control relay remotely.
 This command also allows to redefine which button controls which relay for the double switch (not supported for QBKG25LM).
 
-Topic \`zigbee2mqtt/[FRIENDLY_NAME]/system/set\` should be used to modify operation mode.
+Topic \`zigbee2mqtt/FRIENDLY_NAME/system/set\` should be used to modify operation mode.
 
 **NOTE:** For QBKG25LM instead of \`system\` use \`left\`, \`center\` or \`right\` and leave out the \`button\` property in the payload.
 
@@ -1518,7 +2437,7 @@ Values                | Description
 \`control_right_relay\` | Button directly controls right relay (for double switch, not supported for QBKG25LM)
 \`decoupled\`           | Button doesn't control any relay
 
-\`zigbee2mqtt/[FRIENDLY_NAME]/system/get\` to read current mode.
+\`zigbee2mqtt/FRIENDLY_NAME/system/get\` to read current mode.
 
 Payload:
 \`\`\`js
@@ -1529,7 +2448,7 @@ Payload:
 }
 \`\`\`
 
-Response will be sent to \`zigbee2mqtt/[FRIENDLY_NAME]\`, example: \`{"operation_mode_right":"control_right_relay"}\`
+Response will be sent to \`zigbee2mqtt/FRIENDLY_NAME\`, example: \`{"operation_mode_right":"control_right_relay"}\`
 `,
     },
     {
@@ -1547,7 +2466,7 @@ See [link](https://github.com/Koenkk/zigbee2mqtt/issues/2077#issuecomment-538691
         note: `
 ### Power outage memory
 This option allows the device to restore the last on/off state when it's reconnected to power.
-To set this option publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"power_outage_memory": true}\` (or \`false\`).
+To set this option publish to \`zigbee2mqtt/FRIENDLY_NAME/set\` payload \`{"power_outage_memory": true}\` (or \`false\`).
 Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
 `,
     },
@@ -1561,6 +2480,17 @@ Some versions of the plug provide voltage. This depends on the firmware on the d
     {
         model: ['TS0601_thermostat'],
         note: `
+### Pairing
+
+While pairing, keep the valve close to the coordinator.
+
+1. *Turn the display on*: Short press home (:house:).
+2. *Enter settings*: Long press home (:house:) for 3sec.
+3. *Select WiFi settings*: Press the plus button (:heavy_plus_sign:) button 4 times to see the digital **\`5\`** on the right hand side and the blinking WiFi logo.
+4. *Enter WiFi settings*: Press home (:house:) once again. Now only WiFi logo is showing without blinking.
+5. *Enable pairing mode*: Long press home (:house:). WiFi logo is now blinking.
+6. *Keep display on*: Touch home (:house:) every few seconds.
+
 ### Local temperature
 If you'd like to force device to send local_temperature you can use this mqtt command:
 * \`topic\`: zigbee2mqtt/FRIENDLY_NAME/set/local_temperature_calibration
@@ -1568,14 +2498,85 @@ If you'd like to force device to send local_temperature you can use this mqtt co
 
 YOUR_CURRENT_CALIBRATION_VALUE can be 0, but if you calibrated temperature for this device send current value.
 After this command thermostat responds with two messages. One for calibration change confirmation, and other with current local_temperature.
+
+### Controlling device specific features
+
+- If all you need is to control on and off, you can set "force" with topic \`zigbee2mqtt/FRIENDLY_NAME/set\`. The payload values are:
+  open -> fully opens valve and stays there
+  close -> fully closes valve and stays there
+  normal -> normal valve operation
+
+    \`\`\`json
+    {
+        "force": "open"
+    }
+    \`\`\`
+
+- Use topic \`zigbee2mqtt/FRIENDLY_NAME/set/schedule\` to set the schedule of the device with 6 timeslots on workdays or holidays (e.g. weekend). Example payload values are:
+
+    \`\`\`json
+    {
+        "workdays":[
+            {"hour":6,"minute":0,"temperature":19},
+            {"hour":8,"minute":0,"temperature":20},
+            {"hour":18,"minute":0,"temperature":21},
+            {"hour":20,"minute":30,"temperature":20},
+            {"hour":22,"minute":0,"temperature":19},
+            {"hour":23,"minute":30,"temperature":15}
+        ]
+    }
+    \`\`\`
+
+    \`\`\`json
+    {
+        "holidays":[
+            {"hour":6,"minute":0,"temperature":19},
+            {"hour":8,"minute":0,"temperature":20},
+            {"hour":18,"minute":0,"temperature":21},
+            {"hour":20,"minute":30,"temperature":20},
+            {"hour":22,"minute":0,"temperature":19},
+            {"hour":23,"minute":30,"temperature":15}
+        ]
+    }
+    \`\`\`
+- You can set "week" schedule pattern with topic \`zigbee2mqtt/FRIENDLY_NAME/set\`. The payload values are:
+  5+2 -> to be used when workdays for example are monday-friday and saturday & sunday are holidays
+  6+1 -> to be used when workdays for example are monday-saturday and sunday is a holiday
+  7 -> to be used when workdays schedule will be used for the whole week
+
+    \`\`\`json
+    {
+        "week": "5+2"
+    }
+    \`\`\`
+
+- You can set "boost time" with topic \`zigbee2mqtt/FRIENDLY_NAME/set\`. But be aware that it rounds the values down to multiple of 100.
+
+    \`\`\`json
+    {
+        "boost_time": 200
+    }
+    \`\`\`
+- You can set "comfort temperature" level on the device with topic \`zigbee2mqtt/FRIENDLY_NAME/set\`.
+
+    \`\`\`json
+    {
+        "comfort_temperature": 21
+    }
+    \`\`\`
+- You can set "eco temperature" level on the device with topic \`zigbee2mqtt/FRIENDLY_NAME/set\`.
+
+    \`\`\`json
+    {
+        "eco_temperature": 17
+    }
+    \`\`\`
 `,
     },
     {
         model: ['STS-PRS-251', 'STSS-PRES-001'],
+        deviceTypeSpecificConfiguration: true,
         note: `
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
 * \`presence_timeout\`: Timeout (in seconds) after which \`presence: false\` will be send when the device has not checked-in. By default 100 seconds, don't go lower then 30 seconds.
 `,
     },
@@ -1622,7 +2623,7 @@ In case you want to confirm this action (e.g. \`action_code\` value is OK), resp
         note: `
 ### Do not disturb mode
 This option allows to turn off the indicator lights between 21:00 and 09:00.
-To set this option publish to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` payload \`{"do_not_disturb": true}\` (or \`false\`).
+To set this option publish to \`zigbee2mqtt/FRIENDLY_NAME/set\` payload \`{"do_not_disturb": true}\` (or \`false\`).
 `,
     },
     {
@@ -1641,6 +2642,13 @@ The remote supports [binding](../information/binding) for toggle action.
 `,
     },
     {
+        model: ['GL-G-001P'],
+        note: `
+### Remark
+This devices is similar to GL-G-001Z, except that zigbee routing should work for this one.
+`,
+    },
+    {
         model: ['067774'],
         note: `
 ### Model numbers
@@ -1656,7 +2664,7 @@ The remote supports [binding](../information/binding) on each endpoint, so you c
         model: ['ZNCLDJ12LM', 'ZNCLDJ11LM'],
         note: `
 ### Configuration of device attributes
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` various device attributes can be configured:
 \`\`\`json
 {
     "options":{
@@ -1676,7 +2684,7 @@ You can send a subset of options, all options that won't be specified will be re
 After changing \`reverse_direction\` you will need to fully open and fully close the curtain so the motor will re-detect edges. \`reverse_direction\` will get new state only after this recalibration.
 
 ### Lost configuration on long power outage
-If motor is used without battery it may lose configuration after long power outage. In that case you need to perform end stops calibration again publishing the following command sequence with topic \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+If motor is used without battery it may lose configuration after long power outage. In that case you need to perform end stops calibration again publishing the following command sequence with topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 1. \`{ "options": { "reset_limits": true } }\`
 2. \`{ "state": "close" }\`
 3. Wait here for curtain closure.
@@ -1725,9 +2733,23 @@ Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
         note: `
 ### Pairing
 If you are having trouble pairing, reset the device.
-- hold boost, +, and - (a count from 1 to 10 will be on the display)
-- release ones 'rES' is displayed
-- hit boot once after 'Jin' is displayed
+- hold boost, +, and - (a count from 1 to 10 will be on the display, it may be required for the thermostat to de dismounted from the radiator valve for this to work)
+- release once 'rES' is displayed
+- hit boot once after 'Jin' is displayed to start pairing to the ZigBee network
+- once successfully paired 'Ins' should be displayed and the boost button should flash green. Make sure the thermostat is mounted on the radiator valve before pressing the boost button again.
+- now the display should read 'Ada' indicating the adapting process is started which should mechanically calibrate the thermostat to the valve.
+
+### Recommendation
+This device sends multiple messages in short time period with the same payload. It’s worth setting debounce option to throttle them without losing unique action payloads.
+
+E.g. (devices.yaml)
+
+
+\`\`\`yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_device
+    debounce: 0.5
+\`\`\`
 
 ### Controlling
 *Current heating setpoint*
@@ -1831,8 +2853,11 @@ Bit | Position
     {
         model: ['J1'],
         note: `
+### Configuring Inputs
+In case the inputs need to be reconfigured (e.g. to use stationary switches instead of momentary ones or vice versa) this can be done in the same way as [it is being done for the ubisys C4](C4.html#configuring-inputs).
+
 ### Configuration of device attributes
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` various device attributes can be configured:
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` various device attributes can be configured:
 \`\`\`json
 {
     "configure_j1": {
@@ -1866,11 +2891,11 @@ As an alternative to the attributes listed above, the following properties may b
 (they shall both be equal according to ubisys manual), but takes value in *milli*seconds instead of in full AC waves
 * \`steps_per_second\`: factor to be used for conversion, defaults to 50 full AC waves per second if not provided
 
-By publishing to \`zigbee2mqtt/[FRIENDLY_NAME]/get/configure_j1\` the values of the configuration attributes can
+By publishing to \`zigbee2mqtt/FRIENDLY_NAME/get/configure_j1\` the values of the configuration attributes can
 also be read back from the device and be printed to the normal Zigbee2MQTT log.
 
 ### Calibration
-By publishing \`{"configure_j1": {"calibrate": 1}}\` to \`zigbee2mqtt/[FRIENDLY_NAME]/set\` the device can also be
+By publishing \`{"configure_j1": {"calibrate": 1}}\` to \`zigbee2mqtt/FRIENDLY_NAME/set\` the device can also be
 calibrated after installation to support more advanced positioning features
 (i.e. go to lift percentage / go to tilt percentage). This can be combined with setting attributes as shown above,
 for example:
@@ -2020,7 +3045,7 @@ Values              |
 \`heat\`              |
 \`emergency heating\` |
 \`precooling\`        |
-\`fan only\`          |
+\`fan_only\`          |
 \`dry\`               |
 \`sleep\`             |
 
@@ -2104,7 +3129,7 @@ This method should work for Philips Hue bulbs, IKEA TRADFRI bulbs, GE Link bulbs
 `,
     },
     {
-        model: 'HS1SA-M',
+        model: 'HS1SA',
         note: `
 ### Pairing
 
@@ -2277,7 +3302,7 @@ Other brand names depending on the country:
 * \`permanent_led\`: enable or disable the permanent blue LED. Values: \`ON\` / \`OFF\` (default)
 * \`led_when_on\`: enables the LED when the light is on. Values: \`ON\` / \`OFF\` (default)
 
-Example of MQTT message payload to disable permanent LED and enable LED when the lights are on. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+Example of MQTT message payload to disable permanent LED and enable LED when the lights are on. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
 \`\`\`js
 {
@@ -2289,7 +3314,7 @@ Example of MQTT message payload to disable permanent LED and enable LED when the
 ### Dimmer
 * \`dimmer_enabled\`: enable or disable the dimming functions. Values: \`ON\` / \`OFF\` (default)
 
-Example of MQTT message payload to enable dimming. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+Example of MQTT message payload to enable dimming. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
 \`\`\`
 {
@@ -2316,7 +3341,7 @@ Helps to identify the switch using the LED.
     - \`pink\`
     - \`white\`
 
-Example of MQTT message payload to Identify the switch. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+Example of MQTT message payload to Identify the switch. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
 \`\`\`js
 {
@@ -2480,7 +3505,7 @@ Other brand names depending on the country:
 ### Force read power
 * \`power\`: Asks the device for the current active power.
 
-Example of MQTT message payload to ask for the active power. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/get\`:
+Example of MQTT message payload to ask for the active power. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/get\`:
 
 \`\`\`js
 {
@@ -2492,7 +3517,7 @@ Example of MQTT message payload to ask for the active power. This shouuld be sen
 ### Power Alarm Configuration
 * \`power_alarm\`: enables or disables the power alarm, and sets the value: \`DISABLE\` (default) / \`integer\` (in kwh)
 
-Example of MQTT message payload to disable the power alarm. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+Example of MQTT message payload to disable the power alarm. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
 \`\`\`js
 {
@@ -2500,7 +3525,7 @@ Example of MQTT message payload to disable the power alarm. This shouuld be sent
 }
 \`\`\`
 
-Example of MQTT message payload to enable the power alarm at 3.3 kwh. This should be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+Example of MQTT message payload to enable the power alarm at 3.3 kwh. This should be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
 \`\`\`js
 {
@@ -2530,7 +3555,7 @@ Helps to identify the device using the LED.
     - \`pink\`
     - \`white\`
 
-Example of MQTT message payload to Identify the device. This shouuld be sent to \`zigbee2mqtt/[FRIENDLY_NAME]/set\`:
+Example of MQTT message payload to Identify the device. This shouuld be sent to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
 \`\`\`js
 {
@@ -2540,6 +3565,29 @@ Example of MQTT message payload to Identify the device. This shouuld be sent to 
     }
 }
 \`\`\`
+`,
+    },
+    {
+        model: ['RTCGQ01LM', 'RTCGQ11LM'],
+        note: `
+* \`no_occupancy_since\`: Timeout (in seconds) after which \`no_occupancy_since\` is sent.
+This indicates the time since the last occupancy was detected.
+For example \`no_occupancy_since: [10, 60]\` will send a \`{"no_occupancy_since": 10}\` after 10 seconds
+and a \`{"no_occupancy_since": 60}\` after 60 seconds.
+* \`occupancy_timeout\`: Timeout (in seconds) after which the \`occupancy: false\` message is sent.
+If not set, the timeout is \`90\` seconds.
+When set to \`0\` no \`occupancy: false\` is sent.
+
+**IMPORTANT**: \`occupancy_timeout\` should not be set to lower than 60 seconds.
+The reason is this: after detecting a motion the sensor ignores any movements for
+exactly 60 seconds. In case there are movements after this 60 seconds, a new message
+(\`occupancy: true\`) will be sent and the sensor will go to sleep for another minute, and so on.
+Therefore, in order to sustain \`occupancy: true\`, you need a reasonable window after this 60s sleep
+to determine continued occupancy.
+This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/issues/270#issuecomment-414999973)).
+To work around this, a
+[hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
+is needed.
 `,
     },
 ];

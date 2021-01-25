@@ -1,7 +1,7 @@
 ---
 ---
 # Availability
-*An ongoing discussion about this feature can be found here: https://github.com/Koenkk/zigbee2mqtt/issues/775*
+*An ongoing discussion about this feature can be found here: [#775](https://github.com/Koenkk/zigbee2mqtt/issues/775)*
 
 When the availability feature is enabled, Zigbee2MQTT will ping devices to check if they are online.
 In case a devices changes it's online/offline state, Zigbee2MQTT will publish to `zigbee2mqtt/[FRIENDLY_NAME]/availability`; `online` or `offline`.
@@ -37,7 +37,8 @@ advanced:
 
 ## Non-pingable devices
 Note that not all devices can be pinged for availability (e.g. battery powered devices).
-This category of devices will be marked as `unavailable` when no message has been received from them for 25 hours.
+This category of devices will be marked as `unavailable` when no message has been received from them for 25 hours (persistent across restarts)
+This is only enabled when the availability feature is enabled.
 
 ## State retrieval
 While this feature is enabled and a bulb reconnects or announces itself on the network, Zigbee2MQTT will retrieve the new state of the device.

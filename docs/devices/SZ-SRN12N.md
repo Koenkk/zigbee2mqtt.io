@@ -12,12 +12,22 @@ description: "Integrate your SmartThings SZ-SRN12N via Zigbee2MQTT with whatever
 | Model | SZ-SRN12N  |
 | Vendor  | SmartThings  |
 | Description | Smart siren |
-| Supports | warning |
+| Exposes | linkquality |
 | Picture | ![SmartThings SZ-SRN12N](../images/devices/SZ-SRN12N.jpg) |
 
 ## Notes
 
 None
+
+
+## Exposes
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -30,9 +40,9 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

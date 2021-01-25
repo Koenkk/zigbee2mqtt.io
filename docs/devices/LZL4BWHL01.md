@@ -12,19 +12,15 @@ description: "Integrate your Lutron LZL4BWHL01 via Zigbee2MQTT with whatever sma
 | Model | LZL4BWHL01  |
 | Vendor  | Lutron  |
 | Description | Connected bulb remote control |
-| Supports | on/off, brightness |
+| Exposes | action, linkquality |
 | Picture | ![Lutron LZL4BWHL01](../images/devices/LZL4BWHL01.jpg) |
 
 ## Notes
 
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
-
-* `transition`: Controls the transition time (in seconds) of on/off, brightness,
-color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
-Note that this value is overridden if a `transition` value is present in the MQTT command payload.
+* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 
 ### Pairing
@@ -40,6 +36,22 @@ After resetting the bulb will automatically attempt to join a network.
 This method should work for Philips Hue bulbs, IKEA TRADFRI bulbs, GE Link bulbs, Connected Cree bulbs, and EcoSmart SMART bulbs.
 
 
+
+## Exposes
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `down`, `up`, `stop`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
@@ -51,16 +63,16 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:gesture-double-tap"
     value_template: "{{ value_json.action }}"
+    icon: "mdi:gesture-double-tap"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

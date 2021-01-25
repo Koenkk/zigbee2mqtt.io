@@ -12,12 +12,46 @@ description: "Integrate your Oujiabao CR701-YZ via Zigbee2MQTT with whatever sma
 | Model | CR701-YZ  |
 | Vendor  | Oujiabao  |
 | Description | Gas and carbon monoxide alarm |
-| Supports | gas and carbon monoxide |
+| Exposes | gas, carbon_monoxide, tamper, battery_low, linkquality |
 | Picture | ![Oujiabao CR701-YZ](../images/devices/CR701-YZ.jpg) |
 
 ## Notes
 
 None
+
+
+## Exposes
+
+### Gas (binary)
+Indicates whether the device detected gas.
+Value can be found in the published state on the `gas` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` gas is ON, if `false` OFF.
+
+### Carbon_monoxide (binary)
+Indicates if CO (carbon monoxide) is detected.
+Value can be found in the published state on the `carbon_monoxide` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` carbon_monoxide is ON, if `false` OFF.
+
+### Tamper (binary)
+Indicates whether the device is tampered.
+Value can be found in the published state on the `tamper` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` tamper is ON, if `false` OFF.
+
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -30,36 +64,44 @@ binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.gas }}"
     payload_on: true
     payload_off: false
-    value_template: "{{ value_json.battery_low}}"
-    device_class: "battery"
+    device_class: "gas"
 
 binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.carbon_monoxide }}"
     payload_on: true
     payload_off: false
-    value_template: "{{ value_json.carbon_monoxide }}"
     device_class: "safety"
 
 binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.tamper }}"
     payload_on: true
     payload_off: false
-    value_template: "{{ value_json.gas }}"
-    device_class: "gas"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.battery_low }}"
+    payload_on: true
+    payload_off: false
+    device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    icon: "mdi:signal"
 ```
 {% endraw %}
 

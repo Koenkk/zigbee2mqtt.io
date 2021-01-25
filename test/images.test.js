@@ -52,18 +52,9 @@ describe('Device images', () => {
         };
 
         devices.forEach((d) => {
-            let result = hasImage(d.model);
+            const result = hasImage(d.model);
             if (!result.exists) {
                 missing.push(result.path);
-            }
-
-            if (d.whiteLabel) {
-                for (const whiteLabel of d.whiteLabel) {
-                    result = hasImage(whiteLabel.model);
-                    if (!result.exists) {
-                        missing.push(result.path);
-                    }
-                }
             }
         });
 
