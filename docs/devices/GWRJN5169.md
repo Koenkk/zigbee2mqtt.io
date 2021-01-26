@@ -16,6 +16,8 @@ description: "Integrate your OpenLumi GWRJN5169 via Zigbee2MQTT with whatever sm
 | Picture | ![OpenLumi GWRJN5169](../images/devices/GWRJN5169.jpg) |
 
 ## Notes
+
+### Router
 Zigbee Router for __Xiaomi Gateway DGNWG05LM__ and __Aqara Gateway ZHWG11LM__.
 
 ### Firmware
