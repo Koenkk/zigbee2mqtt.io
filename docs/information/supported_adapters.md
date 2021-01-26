@@ -105,9 +105,9 @@ Before buying an adapter, please read the notes below!
 
 - Recommended adapters are the **Electrolama zig-a-zig-ah! (zzh!)** and **Slaesh's CC2652RB stick** because: they are very powerful, have good range (external antenna), are well tested with Zigbee2MQTT, are easy to connect (USB), can be flashed without additional hardware and are small in size.
 - The following adapters require additional hardware to flash: adapters based on the **CC2530** and **CC2531** require a CC debugger and downloader cable, adapters based on the **CC2538** require a JTAG flasher.
-- The **Electrolama zig-a-zig-ah! (zzh!)** (= based on CC2652R chip), **Slaesh's CC2652RB stick** (= based on CC2652RB chip), **Texas Instruments LAUNCHXL-CC26X2R1** (= based on CC2652R chip) and **Texas Instruments LAUNCHXL-CC1352P-2** (= based on CC1352P-2 chip) are very similar to each other since (almost) the same chip is used. The difference between the CC2652R and the CC1352P-2 is that the CC1352P-2 support sub-1 GHz frequency (which is not relevant for Zigbee since it uses 2.4 GHz) and that the CC1352P-2 has a power amplifier (which support up-to 20dBm output vs 5dBm on CC2652R(B)). The difference between the CC2652R and CC2652RB is that the CC2652RB doesn't require a crystal on the PCB, this only relevant for the manufacturing process. The ones with external antenna provide more range.
+- The **Electrolama zig-a-zig-ah! (zzh!)** (= based on CC2652R chip), **Slaesh's CC2652RB stick** (= based on CC2652RB chip), **Texas Instruments LAUNCHXL-CC26X2R1** (= based on CC2652R chip) and **Texas Instruments LAUNCHXL-CC1352P-2** (= based on CC1352P chip) are very similar to each other since (almost) the same chip is used. The difference between the CC2652R and the CC1352P is that the CC1352P support sub-1 GHz frequency (which is not relevant for Zigbee since it uses 2.4 GHz) and that the CC1352P has a power amplifier (which support up-to 20dBm output vs 5dBm on CC2652R(B)). The difference between the CC2652R and CC2652RB is that the CC2652RB doesn't require a crystal on the PCB, this only relevant for the manufacturing process. The ones with external antenna provide more range.
 - Adapters based on the **CC2530** or **CC2531** chip are not powerful and not recommended for networks larger than 20 devices.
-- Adapters that can handle large networks are; adapters using the following chips **CC2652R**, **CC2652RB**, **CC1352P-2**, **CC2538** and the **Conbee II**.
+- Adapters that can handle large networks are; adapters using the following chips **CC2652R**, **CC2652RB**, **CC1352P**, **CC2538** and the **Conbee II**.
 - Of all adapter the **Texas Instruments CC2531** has the worst range, other adapters with a PCB antenna like the **Texas Instruments LAUNCHXL-CC26X2R1** and **ConBee II** provide better range. Adapters with an external antenna have the best range.
 - When migrating to another adapter make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2MQTT won't start. Migrating to a different adapter [may require](./FAQ.md#what-does-and-does-not-require-repairing-of-all-devices) repairing all devices.
 - Support for the **Conbee II** ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/72)) and **ZiGate USB-TTL** ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/242)) is experimental
@@ -122,7 +122,7 @@ serial:
 Besides serving as a coordinator some adapters can also be used as a Zigbee router (check if there is a router firmware in the firmware column). To factory reset/pair:
 - Texas Instruments CC2531: Press the S2 button for 5 seconds.
 - Texas Instruments CC2530: Power on/power off the device three times (power on, wait 2 seconds, power off, repeat this cycle three times).
-- Adapters based on CC2652R, CC2652RB and CC1352P-2: single press (one of the) buttons on the device
+- Adapters based on CC2652R, CC2652RB and CC1352P: single press (one of the) buttons on the device
   - Slaesh's CC2652RB stick has 2 buttons where only the one furthest away from the USB connector can be used to factory reset.
 
 ### Texas Instruments LAUNCHXL-CC1352P-2 and LAUNCHXL-CC26X2R1
