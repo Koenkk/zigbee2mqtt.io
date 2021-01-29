@@ -1,4 +1,7 @@
-const zigbeeHerdsmanConverters = require('zigbee-herdsman-converters');
+const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
+const tz = require('zigbee-herdsman-converters/converters/toZigbee');
+const exposes = require('zigbee-herdsman-converters/lib/exposes');
+const e = exposes.presets;
 
 const getKey = (object, value) => {
     for (const key in object) {
@@ -11,7 +14,7 @@ const bind = async (endpoint, target, clusters) => {
     }
 };
 
-const fz = {
+const fzLocal = {
     diyruz_freepad_clicks: {
         cluster: 'genMultistateInput',
         type: ['readResponse', 'attributeReport'],
@@ -34,7 +37,7 @@ const fz = {
     },
 };
 
-const tz = {
+const tzLocal = {
     diyruz_freepad_on_off_config: {
         key: ['switch_type', 'switch_actions'],
         convertSet: async (entity, key, value, meta) => {
@@ -71,12 +74,11 @@ const device = {
     model: 'DIYRuZ_FreePad_ext',
     vendor: 'DIYRuZ',
     description: '[DiY 8/12/20 button keypad](http://modkam.ru/?p=1114)',
-    supports: 'single, double, triple, quadruple, many, hold/release',
-    fromZigbee: [fz.diyruz_freepad_clicks, zigbeeHerdsmanConverters.fromZigbeeConverters.battery],
-    toZigbee: [tz.diyruz_freepad_on_off_config, zigbeeHerdsmanConverters.toZigbeeConverters.factory_reset],
-    meta: {
-        configureKey: 1,
-    },
+    fromZigbee: [fzLocal.diyruz_freepad_clicks, fz.battery],
+    toZigbee: [tzLocal.diyruz_freepad_on_off_config, tz.factory_reset],
+    exposes: [e.battery(), e.action([
+        'button_*_hold', 'button_*_single', 'button_*_double', 'button_*_triple', 'button_*_quadruple', 'button_*_release'])],
+    meta: {configureKey: 1},
     configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
         await bind(endpoint, coordinatorEndpoint, ['genPowerCfg']);
