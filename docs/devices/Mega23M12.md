@@ -12,7 +12,7 @@ description: "Integrate your Dresden Elektronik Mega23M12 via Zigbee2MQTT with w
 | Model | Mega23M12  |
 | Vendor  | Dresden Elektronik  |
 | Description | ZigBee Light Link wireless electronic ballast |
-| Exposes | light (state, brightness, color_temp, color_xy), light (state, brightness), linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), light (state, brightness), linkquality |
 | Picture | ![Dresden Elektronik Mega23M12](../images/devices/Mega23M12.jpg) |
 
 ## Notes
@@ -56,7 +56,7 @@ This device supports OTA updates, for more information see [OTA updates](../info
 ## Exposes
 
 ### Light (rgb endpoint)
-This light supports the following features: `state`, `brightness`, `color_temp`, `color_xy`.
+This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`, `color_xy`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_rgb": "ON"}`, `{"state_rgb": "OFF"}` or `{"state_rgb": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_rgb": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_rgb": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_rgb": ""}`.
 - `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_rgb": VALUE}` where `VALUE` is a number between `150` and `500`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_rgb": ""}`.

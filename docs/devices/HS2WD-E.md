@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS2WD-E via Zigbee2MQTT with whatever smart 
 | Model | HS2WD-E  |
 | Vendor  | HEIMAN  |
 | Description | Smart siren |
-| Exposes | battery, linkquality |
+| Exposes | battery, warning, linkquality |
 | Picture | ![HEIMAN HS2WD-E](../images/devices/HS2WD-E.jpg) |
 
 ## Notes
@@ -37,6 +37,8 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Warning (composite)
 
 ### Linkquality (numeric)
 Link quality (signal strength).

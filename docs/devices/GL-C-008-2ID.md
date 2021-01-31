@@ -11,8 +11,8 @@ description: "Integrate your Gledopto GL-C-008-2ID via Zigbee2MQTT with whatever
 
 | Model | GL-C-008-2ID  |
 | Vendor  | Gledopto  |
-| Description | Zigbee LED controller RGB + CCT (2 ID) |
-| Exposes | light (state, brightness, color_xy), light (state, brightness, color_temp), linkquality |
+| Description | Zigbee LED Controller RGB+CCT (2 ID) |
+| Exposes | light (state, brightness, color_xy), light (state, brightness, color_temp, color_temp_startup), linkquality |
 | Picture | ![Gledopto GL-C-008-2ID](../images/devices/GL-C-008-2ID.jpg) |
 
 ## Notes
@@ -94,7 +94,7 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 ````
 
 ### Light (cct endpoint)
-This light supports the following features: `state`, `brightness`, `color_temp`.
+This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_cct": "ON"}`, `{"state_cct": "OFF"}` or `{"state_cct": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_cct": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_cct": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_cct": ""}`.
 - `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_cct": VALUE}` where `VALUE` is a number between `150` and `500`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_cct": ""}`.

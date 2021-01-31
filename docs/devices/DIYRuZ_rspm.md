@@ -30,15 +30,13 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
-It's not possible to write (`/set`) this value.
+It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
 ### Current (numeric)
 Instantaneous measured electrical current.
 Value can be found in the published state on the `current` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current": ""}`.
-It's not possible to write (`/set`) this value.
+It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
 
 ### Cpu_temperature (numeric)
@@ -82,7 +80,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "W"
     value_template: "{{ value_json.power }}"
-    icon: "mdi:flash"
+    device_class: "power"
 
 sensor:
   - platform: "mqtt"
@@ -90,7 +88,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "A"
     value_template: "{{ value_json.current }}"
-    icon: "mdi:current-ac"
+    device_class: "current"
 
 sensor:
   - platform: "mqtt"

@@ -12,7 +12,7 @@ description: "Integrate your Develco SMSZB-120 via Zigbee2MQTT with whatever sma
 | Model | SMSZB-120  |
 | Vendor  | Develco  |
 | Description | Smoke detector with siren |
-| Exposes | temperature, battery, smoke, battery_low, tamper, linkquality |
+| Exposes | temperature, battery, smoke, battery_low, tamper, warning, linkquality |
 | Picture | ![Develco SMSZB-120](../images/devices/SMSZB-120.jpg) |
 
 ## Notes
@@ -71,6 +71,8 @@ Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
+
+### Warning (composite)
 
 ### Linkquality (numeric)
 Link quality (signal strength).

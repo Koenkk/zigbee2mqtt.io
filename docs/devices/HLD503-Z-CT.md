@@ -12,7 +12,7 @@ description: "Integrate your Shenzhen Homa HLD503-Z-CT via Zigbee2MQTT with what
 | Model | HLD503-Z-CT  |
 | Vendor  | Shenzhen Homa  |
 | Description | Smart LED driver |
-| Exposes | light (state, brightness, color_temp), effect, linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![Shenzhen Homa HLD503-Z-CT](../images/devices/HLD503-Z-CT.jpg) |
 
 ## Notes
@@ -29,7 +29,7 @@ Note that this value is overridden if a `transition` value is present in the MQT
 ## Exposes
 
 ### Light 
-This light supports the following features: `state`, `brightness`, `color_temp`.
+This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
 - `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `150` and `500`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`.

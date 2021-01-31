@@ -188,6 +188,8 @@ function getExposeDocs(expose) {
         if (awayMode) {
             lines.push(`- \`${awayMode.name}\`: ${awayMode.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${awayMode.property}": "${awayMode.value_on}"}\` or \`{"${awayMode.property}": "${awayMode.value_off}"}\`. To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${awayMode.property}": ""}\`.`);
         }
+    } else if (expose.type === 'composite') {
+        // TODO
     } else {
         throw new Error('Not supported');
     }
