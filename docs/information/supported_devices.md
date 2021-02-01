@@ -1010,7 +1010,7 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
-| [HG06337](../devices/HG06337.md) | Lidl Silvercrest smart plug (EU, CH, FR, BS) (switch) | ![../images/devices/HG06337.jpg](../images/devices/HG06337.jpg) |
+| [HG06337](../devices/HG06337.md) | Lidl Silvercrest smart plug (EU, CH, FR, BS, DK) (switch) | ![../images/devices/HG06337.jpg](../images/devices/HG06337.jpg) |
 | [HG06668](../devices/HG06668.md) | Lidl Silvercrest smart wireless door bell (battery, action, battery_low, tamper) | ![../images/devices/HG06668.jpg](../images/devices/HG06668.jpg) |
 | [HG06335](../devices/HG06335.md) | Lidl Silvercrest smart motion sensor (occupancy, battery_low, tamper, battery) | ![../images/devices/HG06335.jpg](../images/devices/HG06335.jpg) |
 | [HG06336](../devices/HG06336.md) | Lidl Silvercrest smart window and door sensor (contact, battery_low, tamper, battery) | ![../images/devices/HG06336.jpg](../images/devices/HG06336.jpg) |

@@ -30,7 +30,7 @@ This is the easiest way to create a scene. First set the device or group in the 
 }
 ```
 
-In case a `scene_store` is called with the same `SCENE_ID` all values except the `transition` are overrided. In this way it's possible to have a transition for a scene created through `scene_store`.
+In case a `scene_store` is called with the same `SCENE_ID` all values except the `transition` are overridden. In this way it's possible to have a transition for a scene created through `scene_store`.
 
 ## Recall scene
 To recall the scene send a command to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]/set` with payload `{"scene_recall": SCENE_ID}` where `SCENE_ID` is a number (e.g. `1`).
