@@ -199,7 +199,17 @@ function getExposeDocs(expose) {
             lines.push(`- \`${awayMode.name}\`: ${awayMode.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${awayMode.property}": "${awayMode.value_on}"}\` or \`{"${awayMode.property}": "${awayMode.value_off}"}\`. To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${awayMode.property}": ""}\`.`);
         }
     } else if (expose.type === 'composite') {
-        // TODO
+        lines.push(`Can be set by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${expose.property}": {${expose.features.map((e) => `"${e.property}": VALUE`).join(', ')}}}\``);
+        for (const feature of expose.features) {
+            let ft = '';
+            if (feature.type === 'binary') {
+                ft = `Allowed values: \`${feature.value_on}\` or \`${feature.value_off}\``;
+            } else if (feature.type === 'enum') {
+                ft = `Allowed values: ${feature.values.map((v) => `\`${v}\``).join(', ')}`;
+            }
+
+            lines.push(`- \`${feature.property}\` (${feature.type}): ${feature.description}. ${ft}`);
+        }
     } else {
         throw new Error('Not supported');
     }
