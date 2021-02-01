@@ -70,7 +70,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "W"
     value_template: "{{ value_json.power }}"
-    icon: "mdi:flash"
+    device_class: "power"
 
 sensor:
   - platform: "mqtt"

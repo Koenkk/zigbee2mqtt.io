@@ -12,7 +12,7 @@ description: "Integrate your Moes MS-104BZ via Zigbee2MQTT with whatever smart h
 | Model | MS-104BZ  |
 | Vendor  | Moes  |
 | Description | Smart light switch module (2 gang) |
-| Exposes | switch (state), linkquality |
+| Exposes | switch (state), power_on_behavior, linkquality |
 | Picture | ![Moes MS-104BZ](../images/devices/MS-104BZ.jpg) |
 
 ## Notes
@@ -31,6 +31,13 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 The current state of this switch is in the published state under the `state_l2` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
+
+### Power_on_behavior (enum)
+Controls the behaviour when the device is powered on.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `on`, `off`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -63,6 +70,12 @@ switch:
     payload_on: "ON"
     value_template: "{{ value_json.state_l2 }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/l2/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.power_on_behavior }}"
 
 sensor:
   - platform: "mqtt"

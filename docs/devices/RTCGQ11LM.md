@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi RTCGQ11LM via Zigbee2MQTT with whatever smar
 | Model | RTCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara human body movement and illuminance sensor |
-| Exposes | battery, occupancy, illuminance_lux, illuminance, linkquality |
+| Exposes | battery, occupancy, temperature, illuminance_lux, illuminance, linkquality |
 | Picture | ![Xiaomi RTCGQ11LM](../images/devices/RTCGQ11LM.jpg) |
 
 ## Notes
@@ -37,6 +37,14 @@ More detailed information about this can be found [here](https://community.hubit
 
 * `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
 e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
+
+
+* `temperature_precision`: Controls the precision of `temperature` values,
+e.g. `0`, `1` or `2`; default `2`.
+To control the precision based on the temperature value set it to e.g. `{30: 0, 10: 1}`,
+when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1.
+* `temperature_calibration`: Allows to manually calibrate temperature values,
+e.g. `1` would add 1 degree to the temperature reported by the device; default `0`.
 
 
 * `no_occupancy_since`: Timeout (in seconds) after which `no_occupancy_since` is sent.
@@ -74,6 +82,12 @@ Indicates whether the device detected occupancy.
 Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
 
 ### Illuminance_lux (numeric)
 Measured illuminance in lux.
@@ -117,6 +131,14 @@ binary_sensor:
     payload_on: true
     payload_off: false
     device_class: "motion"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.temperature }}"
+    device_class: "temperature"
 
 sensor:
   - platform: "mqtt"

@@ -11,8 +11,8 @@ description: "Integrate your Gledopto GL-S-004Z via Zigbee2MQTT with whatever sm
 
 | Model | GL-S-004Z  |
 | Vendor  | Gledopto  |
-| Description | Zigbee Smart WW/CW GU10 |
-| Exposes | light (state, brightness, color_temp), effect, linkquality |
+| Description | Zigbee 4W MR16 Bulb 30deg RGB+CCT |
+| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![Gledopto GL-S-004Z](../images/devices/GL-S-004Z.jpg) |
 
 ## Notes
@@ -32,14 +32,43 @@ color temperature (if applicable) and color (if applicable) changes. Defaults to
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
 
 
+* `hue_correction`: (optional) Corrects hue values based on a correction map for matching color
+rendition to other lights. Provide a minimum of 2 data sets in the correction map. To build a map:
+    * choose one of your other lights to be the color reference
+    * send a sample color to both lights (reference and non-reference)
+    * modify hue value for non-reference light until it color matches the reference light
+    * take note of the in and out values, where
+        * `in` is the hue value you sent to your reference light
+        * `out` is the hue value you had to dial your non-reference light to
+    * repeat with a few other sample colors (4-5 should suffice)
+
+    **Example correction map:**
+    ```yaml
+    hue_correction:
+        - in: 28
+            out: 45
+        - in: 89
+            out: 109
+        - in: 184
+            out: 203
+        - in: 334
+            out: 318
+    ```
+
+
 
 ## Exposes
 
 ### Light 
-This light supports the following features: `state`, `brightness`, `color_temp`.
+This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`, `color_xy`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
-- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `150` and `500`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`.
+- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `150` and `500`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warm`, `warmest`.
+- `color_temp_statup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup": VALUE}` where `VALUE` is a number between `150` and `500`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warm`, `warmest`, `previous`.
+- `color_xy`: To control the XY color (CIE 1931 color space) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color": {"x": X_VALUE, "y": Y_VALUE}}` (e.g. `{"color":{"x":0.123,"y":0.123}}`). To read the XY color send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color":{"x":"","y":""}}`. Alternatively it is possible to set the XY color via RGB:
+  - `{"color": {"r": R, "g": G, "b": B}}` e.g. `{"color":{"r":46,"g":102,"b":150}}`
+  - `{"color": {"rgb": "R,G,B"}}` e.g. `{"color":{"rgb":"46,102,150"}}`
+  - `{"color": {"hex": HEX}}` e.g. `{"color":{"hex":"#547CFF"}}`
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
@@ -92,7 +121,7 @@ light:
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
     color_temp: true
-    xy: false
+    xy: true
     hs: false
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
