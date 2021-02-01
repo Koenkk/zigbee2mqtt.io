@@ -71,7 +71,8 @@ Example payload:
     "network":{"channel":15,"pan_id":5674,"extended_pan_id":[0,11,22]},
     "log_level":"debug",
     "permit_join":true,
-    "config": {...} // Will contain the complete Zigbee2MQTT config expect the network_key
+    "config": {...}, // Will contain the complete Zigbee2MQTT config expect the network_key
+    "config_schema": {...} // Will contain the JSON schema of the config
 }
 ```
 
@@ -222,6 +223,7 @@ Allows to permit or disable joining of new devices. Allowed payloads are `{"valu
 
 To allow joining via a specific device set the `friendly_name` in the `device` property. E.g. `{"value": true, "device": "my_bulb"}`.
 
+To allow joining for only a specific amount of time add the `time` property (in seconds). E.g. `{"value": true, "time": 20}` (will allow joining for 20 seconds).
 
 #### zigbee2mqtt/bridge/request/health_check
 

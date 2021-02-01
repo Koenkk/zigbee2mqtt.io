@@ -11,7 +11,7 @@ description: "Integrate your Gledopto GD-CZ-006 via Zigbee2MQTT with whatever sm
 
 | Model | GD-CZ-006  |
 | Vendor  | Gledopto  |
-| Description | Zigbee LED Driver |
+| Description | Zigbee LED Controller WW/CW |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Gledopto GD-CZ-006](../images/devices/GD-CZ-006.jpg) |
 
