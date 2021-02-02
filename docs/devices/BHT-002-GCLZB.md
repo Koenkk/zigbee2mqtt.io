@@ -17,6 +17,7 @@ description: "Integrate your Moes BHT-002-GCLZB via Zigbee2MQTT with whatever sm
 
 ## Notes
 
+
 ### Pairing
 Switch the thermostat off. Press and hold the temperature down button for +- 8 seconds to enable the pairing mode (display lights up and a WiFi-like icon is blinking). After successful interview turn the thermostat on again.
 

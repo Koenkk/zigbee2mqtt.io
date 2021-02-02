@@ -1,7 +1,7 @@
 ---
 ---
 # Binding
-*Ongoing discussion about this feature can be found here: <https://github.com/Koenkk/zigbee2mqtt/issues/782>*
+*An ongoing discussion about this feature can be found here: [#782](https://github.com/Koenkk/zigbee2mqtt/issues/782)*
 
 Zigbee has support for binding which makes it possible that devices can directly control each other without the intervention of Zigbee2MQTT or any home automation software.
 
@@ -42,5 +42,24 @@ To do this execute the following steps:
 ## Devices
 Not all devices support this, it basically comes down to the Zigbee implementation of the device itself. Check the device specific page for more info (can be reached via the supported devices page)
 
-## Report
-When using this feature you are probably also interested in using the report feature. This allows you to get state changes when e.g. a bulb state changes by a bound dimmer. Read more about it here [Report](./report.md).
+## State changes
+When a devices is being bound to, Zigbee2MQTT will automatically configure reporting for these devices. This will make the device report state changes when the state is changed through a bound device.
+
+In order for this feature to work, the device has to support it. As devices from the same manufacturer (mostly) have the same features the table below might help to find out if your device supports it.
+
+| Brand           | On/Off    | Brightness | Color | Color temperature |
+| :---            | :---:     | :---:      | :---: | :---:             |
+| Philips Hue     | N(1)      | N(2)       | N     | N                 |
+| Trådfri(3)      | Y         | Y          | Y     | N                 |
+| Innr            | Y         | Y          | Y     | Y                 |
+| GLEDOPTO        | N         | N          | N     | N                 |
+| OSRAM           | Y         | Y          | N     | N                 |
+| Müller Licht    | N         | N          | N     | N                 |
+
+1. Bulbs on old firmware (date 20170908 or older) do report On/Off
+2. Zigbee2MQTT will manual poll for change if a binding updates the bulb.
+3. The color/brightness of a Trådfri bulb can be changed while the state=off, it also reports back the change.
+
+If your devices do **not** support reporting put the device in a group and bind the remote to the group instead of directly to the device. This will make Zigbee2MQTT poll the device for updates when the bound remote controls the device. To minimize traffic this has not been enabled for all devices. If this does not work please create an issue for it [here](https://github.com/Koenkk/zigbee2mqtt/issues).
+
+**NOTE:** Any manual setup reportings of the clusters `genOnOff`, `genLevelCtrl` `lightingColorCtrl` and `closuresWindowCovering` will be removed if there are no binds to the device or group a device is in when unbinding. You have to setup these reportings again.

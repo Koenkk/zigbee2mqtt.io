@@ -9,8 +9,8 @@ description: "Integrate your Somgoms ZSTY-SM-11ZG-US-W via Zigbee2MQTT with what
 
 # Somgoms ZSTY-SM-11ZG-US-W
 
-| Model | ZSTY-SM-11ZG-US-W |
-| Vendor  | Somgoms |
+| Model | ZSTY-SM-11ZG-US-W  |
+| Vendor  | Somgoms  |
 | Description | 1 gang switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Somgoms ZSTY-SM-11ZG-US-W](../images/devices/ZSTY-SM-11ZG-US-W.jpg) |
