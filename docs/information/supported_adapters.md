@@ -17,7 +17,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/zzh.jpg"></td>
     <td>Electrolama zig-a-zig-ah! (zzh!) <b>(recommended)</b></td>
     <td>USB connected adapter with external antenna</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652R_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652R_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652R_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652R_router_20210128.zip">Router</a></td>
     <td><a href="https://electrolama.com/projects/zig-a-zig-ah/#flash-firmware">Flashing</a></td>
     <td><a href="https://www.tindie.com/products/electrolama/zzh-cc2652r-multiprotocol-rf-stick/#product-reviews">Tindie</a></td>
   </tr>
@@ -25,7 +25,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/slaeshs_cc2652rb_stick.jpg"></td>
     <td>Slaesh's CC2652RB stick <b>(recommended)</b></td>
     <td>USB connected adapter with external antenna</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652RB_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652RB_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652RB_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652RB_router_20210128.zip">Router</a></td>
     <td><a href="https://slae.sh/projects/cc2652/#flashing">Flashing</a></td>
     <td><a href="https://slae.sh/projects/cc2652/">Slae.sh</a></td>
   </tr>
@@ -69,7 +69,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/cc26x2r1.jpg"></td>
     <td>Texas Instruments LAUNCHXL-CC26X2R1</td>
     <td>USB connected development kit</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652R_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652R_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652R_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652R_router_20210128.zip">Router</a></td>
     <td><a href="/information/flashing_via_uniflash.html">Flashing</a></td>
     <td><a href="http://www.ti.com/tool/LAUNCHXL-CC26X2R1">Texas Instruments</a></td>
   </tr>
@@ -77,7 +77,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/cc1352p2.jpg"></td>
     <td>Texas Instruments LAUNCHXL-CC1352P-2</td>
     <td>USB connected development kit</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="/information/flashing_via_uniflash.html">Flashing</a></td>
     <td><a href="http://www.ti.com/tool/LAUNCHXL-CC1352P">Texas Instruments</a></td>
   </tr>
