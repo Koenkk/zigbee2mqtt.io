@@ -261,7 +261,7 @@ The `configuration.yaml` allows to set device specific configuration. This can a
 * `homeassistant`: Allows to override values of the Home Assistant discovery payload. See example below.
 * `debounce`: Debounces messages of this device. When setting e.g. `debounce: 1` and a message from a device is received, Zigbee2MQTT will not immediately publish this message but combine it with other messages received in that same second of that device. This is handy for e.g. the `WSDCGQ11LM` which publishes humidity, temperature and pressure at the same time but as 3 different messages.
 * `debounce_ignore` Protects unique payload values of specified payload properties from overriding within debounce time. When setting e.g. `debounce: 1` and `debounce_ignore: - action` every payload with unique `action` value will be published. This is handy for e.g. the `E1744` which publishes multiple messages in short time period after one turn and `debounce` option without `debounce_ignore` publishes only last payload with action `rotate_stop`. On the other hand `debounce: 1` with `debounce_ignore: - action` will publish all unique action messages, at least two (e.g. `action: rotate_left` and `action: rotate_stop`)
-* `retrieve_state`: Retrieves the state after setting it. Should only be enabled when the [reporting feature](../information/report.md) does not work for this device.
+* `retrieve_state`: (DEPRECATED) Retrieves the state after setting it. Should only be enabled when the [reporting feature](../information/report.md) does not work for this device.
 * `filtered_attributes`: Allows to prevent certain attributes from being published. When a device would e.g. publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will publish `{"temperature": 10}`.
 * `optimistic`: Publish optimistic state after set, e.g. when a brightness change command succeeds Zigbee2MQTT assumes the brightness of the device changed and will publish this (default `true`).
 
@@ -297,7 +297,6 @@ devices:
     debounce_ignore:
       - action
       - brightness
-    retrieve_state: false
     # Set `homeassistant: null` to skip discovery for this device
     homeassistant:
       # Applied to all discovered entities.
