@@ -1599,14 +1599,14 @@ If you want to [bind](../information/binding.md) this remote directly to a group
 `,
     },
     {
-        model: ['HG06106A', 'HG06106B', 'HG06106C'],
+        model: ['HG06106A', 'HG06106B', 'HG06106C', 'HG06492A', 'HG06492B', 'HG06492C'],
         note: `
 ### Pairing
 Factory reset the light bulb.
 After resetting the bulb will automatically connect.
 
 What works is to use (very) short “on’s” and a little bit longer “off’s”, where you kill the light as soon as the bulb shows signs of turning on.
-Start with bulb on, then off, and then 3 “on’s”, wait in the 3th ON state.
+Start with bulb on, then off, and then 3 “on’s”, wait in the 3rd ON state.
 `,
     },
     {
