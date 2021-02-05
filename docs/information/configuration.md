@@ -4,10 +4,10 @@
 The following configuration options are available in `data/configuration.yaml`.
 
 ```yaml
-# Required: Home Assistant integration (MQTT discovery) (default: false)
+# Optional: Home Assistant integration (MQTT discovery) (default: false)
 homeassistant: false
 
-# Required: allow new devices to join.
+# Optional: allow new devices to join.
 # WARNING: Disable this after all devices have been paired! (default: false)
 permit_join: true
 
