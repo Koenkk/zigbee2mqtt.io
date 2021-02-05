@@ -1,5 +1,5 @@
 ---
-title: "Livolo TI0001-switch-2gang control via MQTT"
+title: "Livolo TI0001-dimmer control via MQTT"
 description: "Integrate your Livolo TI0001-dimmer via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
@@ -7,7 +7,7 @@ description: "Integrate your Livolo TI0001-dimmer via Zigbee2MQTT with whatever 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TI0001-dimmer.md)*
 
-# Livolo TI0001-switch-2gang
+# Livolo TI0001-dimmer
 
 | Model | TI0001-dimmer  |
 | Vendor  | Livolo  |
