@@ -1570,14 +1570,14 @@ In this case, group0 to group3 will not be usable.
 `,
     },
     {
-        model: ['E1524/E1810'],
+        model: ['E1524/E1810', 'E1812'],
         note: `
 ### Pairing
 Pair the remote to Zigbee2MQTT by holding it close to the coordinator and
 pressing the inside button, next to the CR2032 battery, 4 times.
 The red light on the (front of the) remote will now flash a few times.
 
-### Toubleshooting: no battery level
+### Troubleshooting: no battery level
 It may help to remove the battery for a few seconds and after that reconfigure it via [Configure](../information/mqtt_topics_and_message_structure.md#zigbee2mqttbridgeconfigure). Right before executing the Configure make sure to wake up the device by pressing a button on it.
 `,
     },
@@ -1599,14 +1599,14 @@ If you want to [bind](../information/binding.md) this remote directly to a group
 `,
     },
     {
-        model: ['HG06106A', 'HG06106B', 'HG06106C'],
+        model: ['HG06106A', 'HG06106B', 'HG06106C', 'HG06492A', 'HG06492B', 'HG06492C'],
         note: `
 ### Pairing
 Factory reset the light bulb.
 After resetting the bulb will automatically connect.
 
 What works is to use (very) short “on’s” and a little bit longer “off’s”, where you kill the light as soon as the bulb shows signs of turning on.
-Start with bulb on, then off, and then 3 “on’s”, wait in the 3th ON state.
+Start with bulb on, then off, and then 3 “on’s”, wait in the 3rd ON state.
 `,
     },
     {
@@ -3727,6 +3727,21 @@ This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/iss
 To work around this, a
 [hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
 is needed.
+`,
+    },
+    {
+        model: ['TS0043'],
+        note: `
+### Pairing
+
+Pairing may differ per model (TS0043 also comes as white-label device such as the LoraTap SS600ZB).
+
+#### LoraTap SS600ZB:
+
+Open the shell of the remote (remove the screw at the back first).
+Press the pairing button on the PCB for 5-10 seconds until the yellow
+indicator light flashes, then release it.
+While pairing, keep the remote close to the coordinator.
 `,
     },
 ];
