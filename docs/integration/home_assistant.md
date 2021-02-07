@@ -26,17 +26,18 @@ mqtt:
   broker: [YOUR MQTT BROKER]  # Remove if you want to use builtin-in MQTT broker
   # birth_message and will_message is not required anymore for Home Assistant 0.113 >=
   birth_message:
-    topic: 'hass/status'
+    topic: 'homeassistant/status'
     payload: 'online'
   will_message:
-    topic: 'hass/status'
+    topic: 'homeassistant/status'
     payload: 'offline'
 ```
 {% endraw %}
 
 Zigbee2MQTT is expecting Home Assistant to send it's birth/will
-messages to `hass/status`. Be sure to add this to your `configuration.yaml` if you want
-Zigbee2MQTT to resend the cached values when Home Assistant restarts
+messages to `homeassistant/status`. If you are using a Home Assistant version newer than 0.113,
+this is configured by default. If you are using an older version, be sure to add this to your `configuration.yaml`
+if you want Zigbee2MQTT to resend the cached values when Home Assistant restarts
 
 ## Home Assistant device registry
 When using Home Assistant MQTT discovery, Zigbee2MQTT integrates
