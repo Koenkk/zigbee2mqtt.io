@@ -130,12 +130,13 @@ sensor:
     device_class: "pressure"
 
 sensor:
-  - platform: "mqtt"
+  - platform: mqtt
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
-    value_template: "{{ value_json.linkquality }}"
-    icon: "mdi:signal"
+    unit_of_measurement: "V"
+    device_class: "battery"
+    value_template: "{{ (value_json.voltage/1000)|round(2) }}"
+    icon: mdi:flash
 ```
 {% endraw %}
 
