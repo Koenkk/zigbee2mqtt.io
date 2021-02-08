@@ -160,17 +160,18 @@ devices:
       switch:
         type: light
         object_id: light
+      light:
         name: my_switch
+        icon: mdi:desk-lamp
       # OR if your devices has multiple endpoints (e.g. left/right)
       switch_left:
         type: light
         object_id: light_left
-        name: my_switch_left
       switch_right:
         type: light
         object_id: light_right
-        name: my_switch_right
 ```
+If you are also using device specific overrides, make sure that they are configured under the new device type rather than the original device type.
 
 ## Controlling Zigbee2MQTT via Home Assistant
 The following Home Assistant configuration allows you to control Zigbee2MQTT from Home Assistant.
