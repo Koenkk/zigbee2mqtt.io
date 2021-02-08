@@ -56,6 +56,7 @@ Besides running Zigbee2MQTT on [bare-metal Linux](getting_started/running_zigbee
 * [Mozilla IoT WebThings Gateway via Zigbee2MQTT adapter](https://github.com/kabbi/zigbee2mqtt-adapter)
 * [Zigbee2MqttAssistant](https://github.com/yllibed/Zigbee2MqttAssistant) (GUI for Zigbee2MQTT)
 * [openHAB](https://community.openhab.org/t/howto-use-zigbee2mqtt-with-openhab-removing-proprietary-bridges-gateways/48768)
+* [Homebridge plugin](https://github.com/itavero/homebridge-z2m/#readme) (Apple HomeKit)
 
 ### Support
 * [Bugs](https://github.com/koenkk/zigbee2mqtt/issues)
