@@ -46,7 +46,7 @@ Besides running Zigbee2MQTT on [bare-metal Linux](getting_started/running_zigbee
 * [How to support new devices](how_tos/how_to_support_new_devices.md)
 * [How to support new Tuya compatible devices](how_tos/how_to_support_new_tuya_devices.md)
 * [How to switch to the dev branch](how_tos/how-to-switch-to-dev-branch.md)
-* [DIYRuZ catalog of DiY zigbee devices](https://diyruz.github.io/)
+* [How to create your own (DIY) Zigbee devices](https://diyruz.github.io/)
 
 ### Integration
 * [Admin Panel for Node-Red](https://github.com/ben423423n32j14e/zigbee2mqttadminpanel) or [node-red-contrib-zigbee2mqtt ](https://flows.nodered.org/node/node-red-contrib-zigbee2mqtt)
