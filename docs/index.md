@@ -67,3 +67,4 @@ Besides running Zigbee2MQTT on [bare-metal Linux](getting_started/running_zigbee
   * [HassioHelp (Italian)](https://hassiohelp.eu/2019/04/14/indice/#ZigBee)
   * [Russian community telegram chat (Russian)](https://t.me/zigbeer)
   * [Danish guide about Zigbee2MQTT on Home Assistant (Danish)](https://robotnet.dk/2020/installer-mosquitto-mqtt-broker-og-zigbee2mqtt.html)
+  * [DIYRuZ catalog of DiY zigbee devices](https://diyruz.github.io/)
