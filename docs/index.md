@@ -33,7 +33,7 @@ Welcome to the Zigbee2MQTT documentation! Besides the documentation, you can als
 ### Running Zigbee2MQTT on ...
 Besides running Zigbee2MQTT on [bare-metal Linux](getting_started/running_zigbee2mqtt.md) it can also run on:
 * [Docker](information/docker.md)
-* [Home Assistant (official Zigbee2MQTT add-on)](https://github.com/danielwelch/hassio-zigbee2mqtt)
+* [Home Assistant (official Zigbee2MQTT add-on)](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt)
 * [Virtual environment](information/virtual_environment.md)
 * [Windows](information/windows.md)
 
@@ -46,6 +46,7 @@ Besides running Zigbee2MQTT on [bare-metal Linux](getting_started/running_zigbee
 * [How to support new devices](how_tos/how_to_support_new_devices.md)
 * [How to support new Tuya compatible devices](how_tos/how_to_support_new_tuya_devices.md)
 * [How to switch to the dev branch](how_tos/how-to-switch-to-dev-branch.md)
+* [How to create your own (DIY) Zigbee devices](https://diyruz.github.io/)
 
 ### Integration
 * [Admin Panel for Node-Red](https://github.com/ben423423n32j14e/zigbee2mqttadminpanel) or [node-red-contrib-zigbee2mqtt ](https://flows.nodered.org/node/node-red-contrib-zigbee2mqtt)
@@ -56,6 +57,7 @@ Besides running Zigbee2MQTT on [bare-metal Linux](getting_started/running_zigbee
 * [Mozilla IoT WebThings Gateway via Zigbee2MQTT adapter](https://github.com/kabbi/zigbee2mqtt-adapter)
 * [Zigbee2MqttAssistant](https://github.com/yllibed/Zigbee2MqttAssistant) (GUI for Zigbee2MQTT)
 * [openHAB](https://community.openhab.org/t/howto-use-zigbee2mqtt-with-openhab-removing-proprietary-bridges-gateways/48768)
+* [Homebridge plugin](https://github.com/itavero/homebridge-z2m/#readme) (Apple HomeKit)
 
 ### Support
 * [Bugs](https://github.com/koenkk/zigbee2mqtt/issues)
