@@ -26,17 +26,18 @@ mqtt:
   broker: [YOUR MQTT BROKER]  # Remove if you want to use builtin-in MQTT broker
   # birth_message and will_message is not required anymore for Home Assistant 0.113 >=
   birth_message:
-    topic: 'hass/status'
+    topic: 'homeassistant/status'
     payload: 'online'
   will_message:
-    topic: 'hass/status'
+    topic: 'homeassistant/status'
     payload: 'offline'
 ```
 {% endraw %}
 
 Zigbee2MQTT is expecting Home Assistant to send it's birth/will
-messages to `hass/status`. Be sure to add this to your `configuration.yaml` if you want
-Zigbee2MQTT to resend the cached values when Home Assistant restarts
+messages to `homeassistant/status`. If you are using a Home Assistant version newer than 0.113,
+this is configured by default. If you are using an older version, be sure to add this to your `configuration.yaml`
+if you want Zigbee2MQTT to resend the cached values when Home Assistant restarts
 
 ## Home Assistant device registry
 When using Home Assistant MQTT discovery, Zigbee2MQTT integrates
@@ -159,17 +160,18 @@ devices:
       switch:
         type: light
         object_id: light
+      light:
         name: my_switch
+        icon: mdi:desk-lamp
       # OR if your devices has multiple endpoints (e.g. left/right)
       switch_left:
         type: light
         object_id: light_left
-        name: my_switch_left
       switch_right:
         type: light
         object_id: light_right
-        name: my_switch_right
 ```
+If you are also using device specific overrides, make sure that they are configured under the new device type rather than the original device type.
 
 ## Controlling Zigbee2MQTT via Home Assistant
 The following Home Assistant configuration allows you to control Zigbee2MQTT from Home Assistant.
@@ -199,7 +201,7 @@ input_number:
     max: 5
     step: 1
     mode: slider
-    
+
 # Input text to input Zigbee2MQTT friendly_name for scripts
 input_text:
   zigbee2mqtt_old_name:
@@ -263,7 +265,7 @@ switch:
   - platform: mqtt
     name: "Zigbee2MQTT Main join"
     state_topic: "zigbee2mqtt/bridge/info"
-    value_template: '{{ value_json.permit_join }}'
+    value_template: '{{ value_json.permit_join | lower }}'
     command_topic: "zigbee2mqtt/bridge/request/permit_join"
     payload_on: "true"
     payload_off: "false"

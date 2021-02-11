@@ -56,8 +56,7 @@ The unit of this value is `W`.
 ### Energy (numeric)
 Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
-It's not possible to write (`/set`) this value.
+It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### Temperature (numeric)
@@ -69,19 +68,17 @@ The unit of this value is `°C`.
 ### Voltage (numeric)
 Measured electrical potential value.
 Value can be found in the published state on the `voltage` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
-It's not possible to write (`/set`) this value.
+It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
 ### Current (numeric)
 Instantaneous measured electrical current.
 Value can be found in the published state on the `current` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current": ""}`.
-It's not possible to write (`/set`) this value.
+It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
 
 ### Consumer_connected (binary)
-Indicates whether attached device consumes power.
+Indicates whether device is physically attached. Device does not have to pull power or even be connected electrically (switch can be ON even if switch is OFF)..
 Value can be found in the published state on the `consumer_connected` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` consumer_connected is ON, if `false` OFF.
@@ -142,7 +139,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "W"
     value_template: "{{ value_json.power }}"
-    icon: "mdi:flash"
+    device_class: "power"
 
 sensor:
   - platform: "mqtt"
@@ -150,7 +147,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "kWh"
     value_template: "{{ value_json.energy }}"
-    icon: "mdi:power-plug"
+    device_class: "energy"
 
 sensor:
   - platform: "mqtt"
@@ -166,7 +163,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "V"
     value_template: "{{ value_json.voltage }}"
-    icon: "mdi:alpha-v"
+    device_class: "voltage"
 
 sensor:
   - platform: "mqtt"
@@ -174,7 +171,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "A"
     value_template: "{{ value_json.current }}"
-    icon: "mdi:current-ac"
+    device_class: "current"
 
 binary_sensor:
   - platform: "mqtt"

@@ -31,11 +31,12 @@ Examples:
 - `{"type":"binary","name":"state","property":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":7}`
 
 ### Numeric
-Indicates a device exposes a numeric value. Optionally has `value_max`, `value_min`, `value_step` and `unit`.
+Indicates a device exposes a numeric value. Optionally has `value_max`, `value_min`, `value_step`, `unit` and `presets`. The `presets` defines values which have a special interpetation.
 
 Examples:
 - `{"type":"numeric","name":"brightness","property":"brightness","value_min":0,"value_max":254,"access":7}`
 - `{"type":"numeric","name":"temperature","property":"temperature","unit":"°C","access":1}`
+- `{"type":"numeric","name":"color_temp_startup","property":"color_temp_startup","unit":"mired","access":7,"presets":{"name":"previous","value":65535,"description":"Restore previous color_temp on cold power on"}}`
 
 ### Enum
 Indicates a device exposes an enum value. Always has `values` indicating all possible values.

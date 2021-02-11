@@ -22,17 +22,20 @@ This is the easiest way to create a scene. First set the device or group in the 
         // Attributes not specified will stay as-is when the scene is recalled.
         "state": "ON", // state, should be 'ON' or 'OFF'
         "brightness": 254, // brightness (0 - 254)
-        "color_temp": 0, // color temperature (0 - 500)
+        "color_temp": 0, // color temperature (0 - 500) OR
+        "color": {"hue": 0, "saturation": 100}, // color in hue/saturation (if both hue, saturation, x, and y are specifies x/y is used) OR
         "color": {"x": 0.123, "y": 0.123}, // color in x/y OR
-        "color": "#0000FF" // color in hex notation
+        "color": "#0000FF" // color in hex notation (saved as x/y)
     }
 }
 ```
 
-In case a `scene_store` is called with the same `SCENE_ID` all values except the `transition` are overrided. In this way it's possible to have a transition for a scene created through `scene_store`.
+In case a `scene_store` is called with the same `SCENE_ID` all values except the `transition` are overridden. In this way it's possible to have a transition for a scene created through `scene_store`.
 
 ## Recall scene
 To recall the scene send a command to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]/set` with payload `{"scene_recall": SCENE_ID}` where `SCENE_ID` is a number (e.g. `1`).
 
 ## Remove scene
 To remove a scene send a command to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]/set` with payload `{"scene_remove": SCENE_ID}` where `SCENE_ID` is a number (e.g. `1`).
+
+Alternatively if you want to remove all scenes send a command to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]/set` with payload `{"scene_remove_all": ""}`

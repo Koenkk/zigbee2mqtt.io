@@ -12,7 +12,7 @@ description: "Integrate your TuYa TS0601_dimmer via Zigbee2MQTT with whatever sm
 | Model | TS0601_dimmer  |
 | Vendor  | TuYa  |
 | Description | Zigbee smart dimmer |
-| Exposes | light (state, brightness), effect, linkquality |
+| Exposes | light (state, brightness), linkquality |
 | Picture | ![TuYa TS0601_dimmer](../images/devices/TS0601_dimmer.jpg) |
 | White-label | Larkkey ZSTY-SM-1DMZG-EU, Earda EDM-1ZAA-EU, Earda EDM-1ZAB-EU, Earda EDM-1ZBA-EU |
 
@@ -55,13 +55,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 }
 ````
 
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
-
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
@@ -87,14 +80,6 @@ light:
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     brightness_scale: 254
-    effect: true
-    effect_list: 
-      - "blink"
-      - "breathe"
-      - "okay"
-      - "channel_change"
-      - "finish_effect"
-      - "stop_effect"
 
 sensor:
   - platform: "mqtt"

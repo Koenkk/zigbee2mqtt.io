@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi MCCGQ11LM via Zigbee2MQTT with whatever smar
 | Model | MCCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara door & window contact sensor |
-| Exposes | battery, contact, linkquality |
+| Exposes | battery, contact, temperature, linkquality |
 | Picture | ![Xiaomi MCCGQ11LM](../images/devices/MCCGQ11LM.jpg) |
 
 ## Notes
@@ -31,6 +31,16 @@ Most of the times this happens because of the following reasons:
 - The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, OSRAM, Sylvania, SmartThings, Securifi.
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `temperature_precision`: Controls the precision of `temperature` values,
+e.g. `0`, `1` or `2`; default `2`.
+To control the precision based on the temperature value set it to e.g. `{30: 0, 10: 1}`,
+when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1.
+* `temperature_calibration`: Allows to manually calibrate temperature values,
+e.g. `1` would add 1 degree to the temperature reported by the device; default `0`.
 
 
 ### Recommendation
@@ -62,6 +72,12 @@ Indicates if the contact is closed (= true) or open (= false).
 Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -98,9 +114,26 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.temperature }}"
+    device_class: "temperature"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
     icon: "mdi:signal"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "V"
+    device_class: "battery"
+    value_template: "{{ (value_json.voltage/1000)|round(2) }}"
+    icon: mdi:flash
 ```
 {% endraw %}
 

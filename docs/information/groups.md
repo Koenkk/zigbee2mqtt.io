@@ -1,7 +1,7 @@
 ---
 ---
 # Groups
-*Ongoing discussion can be found here: https://github.com/Koenkk/zigbee2mqtt/issues/764*
+*Ongoing discussion can be found here: [#764](https://github.com/Koenkk/zigbee2mqtt/issues/764)*
 
 Zigbee2MQTT has support for Zigbee groups. By using Zigbee groups you can control multiple devices simultaneously with one command.
 
@@ -21,10 +21,10 @@ groups:
     # Optional: Change group state when one of the devices in it changes state, see 'State changes' below (default: true)
     optimistic: true
     # Optional: Devices of this group,
-    # Note: this has to be the ieeeAddr of the device, not the friendly_name! (default: empty)
+    # Note: This can be the ieeeAddr of the device or the friendly_name (default: empty)
     devices:
       - '0x00158d00018255df'
-      - '0x00269a02031469ab'
+      - 'some_device_friendly_name'
 ```
 
 The groupID (in the above example `'1'`) should be a numerical string. In case you want to use a hexadecimal groupID (e.g. `0xe24c`) you should first convert it to a numerical string (e.g. `57932`).

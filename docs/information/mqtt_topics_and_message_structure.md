@@ -71,7 +71,8 @@ Example payload:
     "network":{"channel":15,"pan_id":5674,"extended_pan_id":[0,11,22]},
     "log_level":"debug",
     "permit_join":true,
-    "config": {...} // Will contain the complete Zigbee2MQTT config expect the network_key
+    "config": {...}, // Will contain the complete Zigbee2MQTT config expect the network_key
+    "config_schema": {...} // Will contain the JSON schema of the config
 }
 ```
 
@@ -120,7 +121,7 @@ Example payload:
             "model":"LED1624G9",
             "vendor":"IKEA",
             "description":"TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white",
-            "exposes":{"type":"light","features":["state","brightness","color_xy"]},
+            "exposes":[{"type":"light","features":["state","brightness","color_xy"]}],
         },
         "power_source":"Mains (single phase)",
         "software_build_id":"1.3.009",
@@ -222,6 +223,7 @@ Allows to permit or disable joining of new devices. Allowed payloads are `{"valu
 
 To allow joining via a specific device set the `friendly_name` in the `device` property. E.g. `{"value": true, "device": "my_bulb"}`.
 
+To allow joining for only a specific amount of time add the `time` property (in seconds). E.g. `{"value": true, "time": 20}` (will allow joining for 20 seconds).
 
 #### zigbee2mqtt/bridge/request/health_check
 
@@ -309,6 +311,10 @@ See [Binding](./binding.md).
 Allows to send a Zigbee configure reporting command to a device. Refer to the Configure Reporting Command in the [ZigBee Cluster Library](https://github.com/Koenkk/zigbee-herdsman/blob/master/docs/Zigbee%20Cluster%20Library%20Specification%20v7.pdf) for more information. Example payload is `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10}`. In this case the repsponse would be `{"data":{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":"10","reportable_change":10},"status":"ok"}`.
 
 To disable reporting set the `maximum_report_interval` to `65535`.
+
+Notes:
+- Not all devices support the Zigbee configure reporting command (e.g. Xiaomi WSDCGQ11LM temperature/humidity sensors don't support it)
+- If configure reporting fails for a battery powered device make sure to wake it up right before sending the command.
 
 
 ### Group
