@@ -101,35 +101,43 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 
 ### Text (l1 endpoint)
 Value can be found in the published state on the `l1` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l1": NEW_VALUE}`.
 
 ### Text (l2 endpoint)
 Value can be found in the published state on the `l2` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l2": NEW_VALUE}`.
 
 ### Text (l3 endpoint)
 Value can be found in the published state on the `l3` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l3": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l3": NEW_VALUE}`.
 
 ### Text (l4 endpoint)
 Value can be found in the published state on the `l4` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l4": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l4": NEW_VALUE}`.
 
 ### Text (l5 endpoint)
 Value can be found in the published state on the `l5` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l5": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l5": NEW_VALUE}`.
 
 ### Text (l6 endpoint)
 Value can be found in the published state on the `l6` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l6": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l6": NEW_VALUE}`.
 
 ### Text (l7 endpoint)
 Value can be found in the published state on the `l7` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l7": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l7": NEW_VALUE}`.
 
 ### Text (l8 endpoint)
 Value can be found in the published state on the `l8` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l8": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l8": NEW_VALUE}`.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -140,8 +148,7 @@ The unit of this value is `°C`.
 ### Voltage (numeric)
 Measured electrical potential value.
 Value can be found in the published state on the `voltage` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
-It's not possible to write (`/set`) this value.
+It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
 ### Pressure (numeric)
@@ -159,8 +166,9 @@ The unit of this value is `%`.
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `triple`, `hold`.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"action": NEW_VALUE}`.
+The possible values are: `single`, `double`, `tripple`, `hold`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -317,7 +325,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "V"
     value_template: "{{ value_json.voltage }}"
-    icon: "mdi:alpha-v"
+    device_class: "voltage"
 
 sensor:
   - platform: "mqtt"

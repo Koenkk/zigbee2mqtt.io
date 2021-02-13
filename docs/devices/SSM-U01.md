@@ -30,15 +30,13 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 ### Energy (numeric)
 Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
-It's not possible to write (`/set`) this value.
+It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
-It's not possible to write (`/set`) this value.
+It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
 ### Device_temperature (numeric)
@@ -76,7 +74,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "kWh"
     value_template: "{{ value_json.energy }}"
-    icon: "mdi:power-plug"
+    device_class: "energy"
 
 sensor:
   - platform: "mqtt"
@@ -84,7 +82,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "W"
     value_template: "{{ value_json.power }}"
-    icon: "mdi:flash"
+    device_class: "power"
 
 sensor:
   - platform: "mqtt"

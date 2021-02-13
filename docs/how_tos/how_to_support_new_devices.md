@@ -126,4 +126,4 @@ Now add the volumes to the Docker container by adding the following to your `doc
 Now you can start modifying e.g. `/opt/zigbee-herdsman-converters/devices.js`. Note that after each modification you need to restart the container for the changes to take effect.
 
 ## Home Assistant Add-on: hassio-zigbee2mqtt
-To support a new custom device using `hassio-zigbee2mqtt` add-on in preparation for a Pull Request, please follow the instructions here: [https://github.com/danielwelch/hassio-zigbee2mqtt#adding-support-for-new-devices](https://github.com/danielwelch/hassio-zigbee2mqtt#adding-support-for-new-devices).
+To support a new custom device using `hassio-zigbee2mqtt` add-on in preparation for a Pull Request, please follow these [instructions](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/blob/master/zigbee2mqtt/DOCS.md#adding-support-for-new-devices).

@@ -1,7 +1,7 @@
 ---
 ---
 # Groups
-*Ongoing discussion can be found here: https://github.com/Koenkk/zigbee2mqtt/issues/764*
+*Ongoing discussion can be found here: [#764](https://github.com/Koenkk/zigbee2mqtt/issues/764)*
 
 Zigbee2MQTT has support for Zigbee groups. By using Zigbee groups you can control multiple devices simultaneously with one command.
 

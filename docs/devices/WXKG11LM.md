@@ -18,6 +18,10 @@ description: "Integrate your Xiaomi WXKG11LM via Zigbee2MQTT with whatever smart
 ## Notes
 
 
+### Actions
+The `triple`, `quadruple`, `hold` and `release` is not supported by all versions of this device.
+
+
 ### Deprecated click event
 By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
 
@@ -65,7 +69,7 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `tripple`, `quadruple`, `hold`, `release`.
+The possible values are: `single`, `double`, `triple`, `quadruple`, `hold`, `release`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
