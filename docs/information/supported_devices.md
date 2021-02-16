@@ -842,6 +842,7 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | [OFL 140 C](../devices/OFL_140_C.md) | Innr Outdoor flex light colour LED strip 4m, 1000lm, RGBW (light) | ![../images/devices/OFL-140-C.jpg](../images/devices/OFL-140-C.jpg) |
 | [OSL 130 C](../devices/OSL_130_C.md) | Innr Outdoor smart spot colour, 230lm/spot, RGBW (light) | ![../images/devices/OSL-130-C.jpg](../images/devices/OSL-130-C.jpg) |
 | [BE 220](../devices/BE_220.md) | Innr E26/E24 white bulb (light) | ![../images/devices/BE-220.jpg](../images/devices/BE-220.jpg) |
+| [RC 110](../devices/RC_110.md) | Innr RC 110 Remote Control | ![../images/devices/rc110.jpg](../images/devices/rc110.jpg) |
 
 ### Insta
 
