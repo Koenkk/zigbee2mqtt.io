@@ -177,6 +177,13 @@ map_options:
       line:
         active: '#009900'
         inactive: '#994444'
+        
+# Optional: OTA update settings
+ota:
+    # Minimum time between OTA update checks, see https://www.zigbee2mqtt.io/information/ota_updates.html for more info
+    update_check_interval: 10
+    # Disable automatic update checks, see https://www.zigbee2mqtt.io/information/ota_updates.html for more info
+    disable_automatic_update_check: false
 
 # Optional: see 'Device specific configuration' below
 device_options: {}

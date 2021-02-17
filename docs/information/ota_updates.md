@@ -15,7 +15,9 @@ Not all manufacturers make their updates available, therefore only the following
 Gira does unfortunately not seem to offer firmware updates for their wall transmitter 2430-100 (which is very similar to the Jung ZLLxx5004M) and the update file for the Jung wall transmitter does not work for Gira (probably because the Gira wall transmitter only has 6 buttons instead of 8 on the Jung).
 - Sengled devices
 
-Zigbee2MQTT automatically checks if updates are available for your devices.
+
+## Automatic checking for available updates
+Your zigbee devices can request a firmware update check. Zigbee2MQTT obliges this, and will automatically check if updates are available for your devices.
 
 The update state will be published to `zigbee2mqtt/[DEVICE_FRIENLDY_NAME]`, example payload: `{"update": {"state": "available"}}`.
 The possible states are:
@@ -23,9 +25,24 @@ The possible states are:
 - `updating`: update is in progress. During this the progress in % and remaining time in seconds is also added to the payload, example: `{"update": {"state": "updating","progress":13.37,"remaining": 219}}`.
 - `idle`: no update available/in progress
 
+To protect privacy it is possible to limit how often third party servers may be contacted. You can set the minimum time that should pass between two firmware update checks, in minutes. The default is 10 minutes. Here it is set to check at most once a day:
+
+```yaml
+ota:
+    update_check_interval: 1440
+```
+
+It is also possible to completely ignore these device-initiated requests for updates checks by modifying the configuration.yaml file. In the example below, only manual firmware update checks will be possible:
+
+```yaml
+ota:
+    disable_automatic_update_check: true
+```
+
+
 *NOTE: there is also a property `update_available` which is deprecated*.
 
-## Check if an update is available
+## Manually check if an update is available
 To check if an update is available for your device send a message to `zigbee2mqtt/bridge/request/device/ota_update/check` with payload `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_remote"}` or `my_remote`, response: `{"data":{"id": "my_remote","updateAvailable":true},"status":"ok"}`.
 
 ## Update to latest firmware
