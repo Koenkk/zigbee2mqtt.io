@@ -11,14 +11,34 @@ description: "Integrate your Livolo TI0001-socket via Zigbee2MQTT with whatever 
 
 | Model | TI0001-socket  |
 | Vendor  | Livolo  |
-| Description | New Zigbee Socket [work in progress](https://github.com/Koenkk/zigbee2mqtt/issues/3560) |
+| Description | New Zigbee Socket |
 | Exposes | switch (state), linkquality |
 | Picture | ![Livolo TI0001-socket](../images/devices/TI0001-socket.jpg) |
 
 ## Notes
+After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend 
+of zigbee2mqtt or using [MQTT message](../information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
+In case of problems it's recommended to remove device and than retry pairing and re-configuring device.
 
-None
+### Important
+These devices can only be used on channel 26.
+These devices are locked to the manufacturer's network key (ext_pan_id).
+Your configuration file [data/configuration.yaml](../information/configuration) must contain the following:
 
+```yaml
+advanced:
+  ext_pan_id: [33,117,141,25,0,75,18,0]
+  channel: 26
+```
+
+Therefore these devices may not co-existence with other Zigbee devices.
+Maybe, you need to add a dedicated coordinator and create a new network for Livolo.
+If you decided to create a new network, you should specify another 'pan_id'.
+
+```yaml
+advanced:
+  pan_id: 6756
+```
 
 ## Exposes
 

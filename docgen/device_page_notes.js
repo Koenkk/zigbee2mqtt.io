@@ -2713,7 +2713,7 @@ After this command thermostat responds with two messages. One for calibration ch
 `,
     },
     {
-        model: ['STS-PRS-251', 'STSS-PRES-001'],
+        model: ['STS-PRS-251', 'STSS-PRES-001', '3450-L'],
         deviceTypeSpecificConfiguration: true,
         note: `
 * \`presence_timeout\`: Timeout (in seconds) after which \`presence: false\` will be send when the device has not checked-in. By default 100 seconds, don't go lower then 30 seconds.
