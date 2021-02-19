@@ -160,6 +160,11 @@ experimental:
   # attribute: topic 'zigbee2mqtt/my_bulb/state' payload 'ON"
   # attribute_and_json: both json and attribute (see above)
   output: 'json'
+  # Optional: Transmit power setting (default: 5 for CC2652R and RB). 
+  # This was specifically added for devices (e.g. CC2652P and the CC1352P-2) 
+  # that have an inbuilt power amp with up to 20 dBm for longer range. 
+  # If you're using the CC253X or the CC2652R this doesn't do anything. 
+  transmit_power: '5'
 
 # Optional: networkmap options
 map_options:
@@ -180,7 +185,7 @@ map_options:
         
 # Optional: OTA update settings
 ota:
-    # Minimum time between OTA update checks, see https://www.zigbee2mqtt.io/information/ota_updates.html for more info
+    # Minimum time between OTA update checks, see https://www.zigbee2mqtt.io/information/ota_updateexs.html for more info
     update_check_interval: 10
     # Disable automatic update checks, see https://www.zigbee2mqtt.io/information/ota_updates.html for more info
     disable_automatic_update_check: false
