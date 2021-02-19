@@ -17,6 +17,8 @@ description: "Integrate your OpenLumi GWRJN5169 via Zigbee2MQTT with whatever sm
 
 ## Notes
 
+Zigbee Router for __Xiaomi DGNWG05LM__ and __Aqara ZHWG11LM__ gateways.
+
 ### Firmware
 Open source firmware can be found here: [Github](https://github.com/igo-r/Lumi-Router-JN5169)
 
