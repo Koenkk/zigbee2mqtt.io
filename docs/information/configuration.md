@@ -160,11 +160,12 @@ experimental:
   # attribute: topic 'zigbee2mqtt/my_bulb/state' payload 'ON"
   # attribute_and_json: both json and attribute (see above)
   output: 'json'
-  # Optional: Transmit power setting (default: 5 for CC2652R and RB). 
-  # This was specifically added for devices (e.g. CC2652P and the CC1352P-2) 
-  # that have an inbuilt power amp with up to 20 dBm for longer range. 
-  # If you're using the CC253X or the CC2652R this doesn't do anything. 
-  transmit_power: '5'
+  # Optional: Transmit power setting in dBm (default: 5). 
+  # This will set the transmit power for devices that bring an inbuilt amplifier.
+  # It can't go over the maximum of the respective hardware and might be limited
+  # by firmware (for example to migrate heat, or by using an unsupported firmware).
+  # For the CC2652R(B) this is 5 dBm, CC2652P/CC1352P-2 20 dBm.
+  transmit_power: 5
 
 # Optional: networkmap options
 map_options:
