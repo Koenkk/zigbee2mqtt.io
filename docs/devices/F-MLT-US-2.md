@@ -67,6 +67,21 @@ Value can be found in the published state on the `moving` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` moving is ON, if `false` OFF.
 
+### X Axis (numeric)
+Represent acceleration value in the X Axis.
+Value can be found in the published state on the `x_axis` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Y Axis (numeric)
+Represent acceleration value in the Y Axis.
+Value can be found in the published state on the `y_axis` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Z Axis (numeric)
+Represent acceleration value in the Z Axis.
+Value can be found in the published state on the `z_axis` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
