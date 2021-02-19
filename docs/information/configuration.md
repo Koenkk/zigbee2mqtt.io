@@ -185,7 +185,7 @@ map_options:
         
 # Optional: OTA update settings
 ota:
-    # Minimum time between OTA update checks, see https://www.zigbee2mqtt.io/information/ota_updateexs.html for more info
+    # Minimum time between OTA update checks, see https://www.zigbee2mqtt.io/information/ota_updates.html for more info
     update_check_interval: 10
     # Disable automatic update checks, see https://www.zigbee2mqtt.io/information/ota_updates.html for more info
     disable_automatic_update_check: false
