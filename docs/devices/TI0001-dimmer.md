@@ -1,19 +1,19 @@
 ---
-title: "Livolo TI0001-switch control via MQTT"
-description: "Integrate your Livolo TI0001-switch via Zigbee2MQTT with whatever smart home
+title: "Livolo TI0001-dimmer control via MQTT"
+description: "Integrate your Livolo TI0001-dimmer via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TI0001-switch.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TI0001-dimmer.md)*
 
-# Livolo TI0001-switch
+# Livolo TI0001-dimmer
 
-| Model | TI0001-switch  |
+| Model | TI0001-dimmer  |
 | Vendor  | Livolo  |
-| Description | New Zigbee Switch (1 gang) |
-| Exposes | switch (state), linkquality |
-| Picture | ![Livolo TI0001-switch](../images/devices/TI0001-switch.jpg) |
+| Description | New Zigbee Dimmer [work in progress](https://github.com/Koenkk/zigbee2mqtt/issues/5516)|
+| Exposes | light (state, brightness), linkquality |
+| Picture | ![Livolo TI0001-dimmer](../images/devices/TI0001-dimmer.jpg) |
 
 ## Notes
 After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend 
@@ -40,13 +40,12 @@ advanced:
   pan_id: 6756
 ```
 
-
 ## Exposes
 
-### Switch 
-The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+### Light 
+This light supports the following features: `state`, `brightness`.
+- `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+- `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `255`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -62,14 +61,17 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
-switch:
+light:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    payload_off: "OFF"
-    payload_on: "ON"
-    value_template: "{{ value_json.state }}"
+    brightness: true
+    color_temp: false
+    xy: false
+    hs: false
+    schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    brightness_scale: 255
 
 sensor:
   - platform: "mqtt"
