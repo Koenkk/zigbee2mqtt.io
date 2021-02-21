@@ -12,15 +12,24 @@ description: "Integrate your OpenLumi GWRJN5169 via Zigbee2MQTT with whatever sm
 | Model | GWRJN5169  |
 | Vendor  | OpenLumi  |
 | Description | [Lumi Router (JN5169)](https://github.com/igo-r/Lumi-Router-JN5169) |
-| Exposes | linkquality |
+| Exposes | device_temperature, linkquality |
 | Picture | ![OpenLumi GWRJN5169](../images/devices/GWRJN5169.jpg) |
 
 ## Notes
 
-None
+Zigbee Router for __Xiaomi DGNWG05LM__ and __Aqara ZHWG11LM__ gateways.
+
+### Firmware
+Open source firmware can be found here: [Github](https://github.com/igo-r/Lumi-Router-JN5169)
 
 
 ## Exposes
+
+### Device_temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -36,6 +45,13 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.device_temperature }}"
+
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
