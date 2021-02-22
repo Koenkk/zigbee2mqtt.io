@@ -173,6 +173,9 @@ Example payload:
 ]
 ```
 
+## zigbee2mqtt/bridge/extensions
+TODO
+
 ### Exposes
 A device definition will always have an `exposes` property. The format of `exposes` is documented in [Exposes](./exposes).
 
