@@ -408,3 +408,8 @@ See [Touchlink](./touchlink.md).
 #### zigbee2mqtt/bridge/request/touchlink/identify
 
 See [Touchlink](./touchlink.md).
+
+
+## zigbee2mqtt/bridge/extension/(read|save)
+
+See [User extensions](user_extensions.md)
