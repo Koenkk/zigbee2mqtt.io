@@ -1,16 +1,16 @@
 # User extensions
 
-User extensions is a way to extend zigbee2mqtt behaviour, user extensions works in same way as internal
+User extensions is a way to extend Zigbee2MQTT behaviour, user extensions works in same way as internal extensions.
 
-To get familiar with  extensions framework please read (source code)[https://github.com/Koenkk/zigbee2mqtt/tree/master/lib/extension]
+To get familiar with  extensions framework please read [source code of internal extensions](https://github.com/Koenkk/zigbee2mqtt/tree/master/lib/extension).
 
 User extensions are stored in `data/extensions` folder
 
-User extension has to export js Class or Function
+User extension have to export a JavaScript Class or Function
 
-example:
+Example:
 
-`data/extensions/my-first-extension.js`
+File: `data/extensions/my-first-extension.js`
 
 ```js
 class MyExampleExtension {
@@ -25,7 +25,7 @@ module.exports = MyExampleExtension;
 
 ## Extensions list
 
-Once zigbee2mqtt starts it publishes `zigbee2mqtt/bridge/extensions` with payload `["my-first-extension.js"]`
+Once Zigbee2MQTT starts it publishes `zigbee2mqtt/bridge/extensions` with payload `["my-first-extension.js"]`
 
 ## Read user extension
 
@@ -34,4 +34,4 @@ Response: `{"status": "ok", "data": {"name": "my-first-extension.js", "content":
 
 ## Save and load user extension
 
-To read user extension over api publish `zigbee2mqtt/bridge/extension/response/save` with payload `{"name": "my-first-extension.js", "content": <HERE COMES YOUR EXTENSION SOURCE CODE>}`
+To read user extension over api publish `zigbee2mqtt/bridge/extension/request/save` with payload `{"name": "my-first-extension.js", "content": <HERE COMES YOUR EXTENSION SOURCE CODE>}`
