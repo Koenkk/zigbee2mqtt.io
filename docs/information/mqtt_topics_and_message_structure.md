@@ -173,9 +173,6 @@ Example payload:
 ]
 ```
 
-## zigbee2mqtt/bridge/extensions
-TODO
-
 ### Exposes
 A device definition will always have an `exposes` property. The format of `exposes` is documented in [Exposes](./exposes).
 
@@ -207,6 +204,9 @@ Events will be published to this topic. Possible types are `device_joined`, `dev
 - `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"successful","ieee_address":"0x90fd9ffffe6494fc","supported":true,"definition":{"model":"LED1624G9","vendor":"IKEA","description":"TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white"}}}`
 - `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"failed","ieee_address":"0x90fd9ffffe6494fc"}}`
 - `{"type":"device_leave","data":{"ieee_address":"0x90fd9ffffe6494fc"}}`
+
+## zigbee2mqtt/bridge/extensions
+See [User extensions](./user_extensions.md).
 
 ## zigbee2mqtt/bridge/request/+
 This can be used to e.g. configure certain settings like allowing new devices to join. Zigbee2MQTT will always respond with the same topic on `zigbee2mqtt/bridge/response/+`. The response payload will at least contain a `status` and `data` property, `status` is either `ok` or `error`. If `status` is `error` it will also contain an `error` property containing a description of the error.
@@ -253,6 +253,11 @@ The graphviz map shows the devices as follows:
 Links are labelled with link quality (0..255) and active routes (listed by short 16 bit destination address). Arrow indicates direction of messaging. Coordinator and routers will typically have two lines for each connection showing bi-directional message path. Line style is:
 * To **end devices**: normal line
 * To and between **coordinator** and **routers**: heavy line for active routes or thin line for no active routes
+
+
+#### zigbee2mqtt/bridge/request/extension/save
+
+See [User extensions](./user_extensions.md).
 
 ### Device
 
@@ -411,8 +416,3 @@ See [Touchlink](./touchlink.md).
 #### zigbee2mqtt/bridge/request/touchlink/identify
 
 See [Touchlink](./touchlink.md).
-
-
-## zigbee2mqtt/bridge/extension/save
-
-See [User extensions](./user_extensions.md).
