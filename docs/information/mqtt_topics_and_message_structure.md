@@ -413,6 +413,6 @@ See [Touchlink](./touchlink.md).
 See [Touchlink](./touchlink.md).
 
 
-## zigbee2mqtt/bridge/extension/(read|save)
+## zigbee2mqtt/bridge/extension/save
 
 See [User extensions](user_extensions.md)
