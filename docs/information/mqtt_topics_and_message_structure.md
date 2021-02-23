@@ -415,4 +415,4 @@ See [Touchlink](./touchlink.md).
 
 ## zigbee2mqtt/bridge/extension/save
 
-See [User extensions](user_extensions.md)
+See [User extensions](./user_extensions.md).
