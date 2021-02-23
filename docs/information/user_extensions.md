@@ -25,13 +25,9 @@ module.exports = MyExampleExtension;
 
 ## Extensions list
 
-Once Zigbee2MQTT starts it publishes `zigbee2mqtt/bridge/extensions` with payload `["my-first-extension.js"]`
+Once Zigbee2MQTT starts it publishes `zigbee2mqtt/bridge/extensions` with payload `[{"name": "my-first-extension.js": "code": <HERE COMES YOUR EXTENSION SOURCE CODE>}]`
 
-## Read user extension
-
-To read user extension over api publish `zigbee2mqtt/bridge/extension/request/read` with payload `{"name": "my-first-extension.js"}`
-Response: `{"status": "ok", "data": {"name": "my-first-extension.js", "content": <HERE COMES YOUR EXTENSION SOURCE CODE>}}`
 
 ## Save and load user extension
 
-To read user extension over api publish `zigbee2mqtt/bridge/extension/request/save` with payload `{"name": "my-first-extension.js", "content": <HERE COMES YOUR EXTENSION SOURCE CODE>}`
+To read user extension over api publish `zigbee2mqtt/bridge/extension/request/save` with payload `{"name": "my-first-extension.js", "code": <HERE COMES YOUR EXTENSION SOURCE CODE>}`
