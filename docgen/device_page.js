@@ -78,7 +78,7 @@ function getNotes(device) {
     const note = notes
         .filter((n) => {
             if (n.simulatedBrightness) {
-                if (device.model === 'ICTC-G-1') return true;
+                if (device.model === 'ICTC-G-1' || device.model === 'E1744') return true;
                 return device.fromZigbee.find((c) => {
                     return arrayEquals(c.type, ['commandMoveToLevel', 'commandMoveToLevelWithOnOff']) ||
                         arrayEquals(c.type, ['commandMove', 'commandMoveWithOnOff']) ||
