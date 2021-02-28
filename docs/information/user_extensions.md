@@ -33,4 +33,4 @@ To save a user extension over the API publish to `zigbee2mqtt/bridge/request/ext
 
 ## Remove user extension
 
-To save a user extension over the API publish to `zigbee2mqtt/bridge/request/extension/remove` with payload `{"name": "my-first-extension.js"}`.
+To remove a user extension over the API publish to `zigbee2mqtt/bridge/request/extension/remove` with payload `{"name": "my-first-extension.js"}`.
