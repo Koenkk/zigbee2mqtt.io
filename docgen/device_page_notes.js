@@ -450,6 +450,21 @@ It has been reported, that the sensor reports humidity changes quite frequently 
 `,
     },
     {
+        model: ['TS0216'],
+        note: `
+### Pairing
+1. Power on the device
+2. Press both the volume + and volume - buttons for more than 5 seconds
+`,
+    },
+    {
+        model: ['ZL1000100-CCT-US-V1A02'],
+        note: `
+### Pairing
+Turn the bulb on and off consecutively 6 times, then on again, at which point it should blink twice.
+`,
+    },
+    {
         model: ['SNZB-03'],
         note: `
 ### Pairing
@@ -1100,7 +1115,7 @@ Example of MQTT message payload to Identify the device. This shouuld be sent to 
         model: 'HG06335',
         note: `
 ### Pairing
-Factory reset the motion detector by holding the reset button (little hole on the side) for 5 seconds.
+Factory reset the motion detector by holding the reset button (little hole on the right side, **not the button on the back**) for 5 seconds.
 When you let go of the button an LED should blink.
 After resetting the motion detector will automatically connect.
 While pairing, keep the motion detector close to the adapter.
@@ -1369,6 +1384,8 @@ the Device Light blinks and lights Orange. If connection was successful the Devi
 you can't reset the Device with the Philips LivingColors Remote Gen 3.
 The Gen 3 Remote will only try ZLL Channels to find the Device! Maybe it's possible to reset
 the Device with a Philips LivingColors Remote Gen 2 as it should try all Zigbee Channels to find the Device.
+
+With IKEA Tradfri Remote Control it can maybe resetted it this case, see [TRADFRI remote control](#tradfri-remote-control)
 
 [Philips LivingColors Bloom Manual](https://www.download.p4c.philips.com/files/7/7099760pu/7099760pu_dfu_eng.pdf)
 
@@ -1997,6 +2014,37 @@ After this the device will automatically join.
 `,
     },
     {
+        model: ['014G2461'],
+        note: `
+### Pairing
+* Install the device on the valve. Insert the batteries (and M will display).
+* Push the "o" button for 5 seconds to calibrate the valve motor.
+* Push the "o" button for briefly to enter Pairing mode (can take upto 60 seconds).
+
+To factory reset:
+* Remove one battery.
+* Press and hold "o" button.
+* Insert battery and hold button pressed for about 3 seconds (display will flash all symbols).
+`,
+    },
+    {
+        model: ['421782'],
+        note: `
+### Pairing instructions
+
+To pair this device follow these steps.
+
+1. reset it, by pressing \`Brightness up\` and \`Off\` for 10 seconds.
+2. pair it to zigbee2mqtt by pressing \`brightness down\` and \`On\` for 3 seconds.
+
+### Touchlink support
+
+Once paired to zigbee2mqtt, you can also touch link this device to some lights.
+Hold it really close (5cm) to a light and press the middle button for 3 seconds.
+Repeat for all lights you want to control.
+`,
+    },
+    {
         model: ['500.67'],
         note: `
 ### Pairing
@@ -2144,12 +2192,22 @@ You may have to unpair the switch from an existing coordinator before the pairin
 `,
     },
     {
+        model: ['GWRJN5169'],
+        note: `
+### Firmware
+Zigbee Router for __Xiaomi DGNWG05LM__ and __Aqara ZHWG11LM__ gateways.
+
+Open source firmware can be found here: [Github](https://github.com/igo-r/Lumi-Router-JN5169)
+`,
+    },
+    {
         model: ['9290012607', '9290019758'],
         note: `
 ### Pairing
-Press and hold the setup button on the rear of the device for +- 10 seconds (until the green light goes solid)
-to initiate pairing. Please note that the pairing indicator light is below the main sensor
-(as oppose to the obvious indicator above the main sensor).
+To initiate setup mode, press and hold the setup button on the rear of the device for +- 5 seconds until the setup light blinks red. Then press and hold the setup button again until the light starts blinking orange. It is now in pairing mode. When paired, the light blinks green.
+
+Please note that the setup light is below the main sensor
+(as opposed to the obvious indicator above the main sensor).
 
 This specific device has been reported to have issues repairing to a Zigbee network after upgrading from a CC2531 to a CC2652 controller (Zigbee 1.2 to 3.0). (Re)pairing may only work after pairing the device to another network and channel first (has been tested with a Philips Hue 2.0 hub in this instance) before pairing it back to the Zigbee2MQTT network again.
 `,
