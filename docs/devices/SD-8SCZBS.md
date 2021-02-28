@@ -12,7 +12,7 @@ description: "Integrate your Climax SD-8SCZBS via Zigbee2MQTT with whatever smar
 | Model | SD-8SCZBS  |
 | Vendor  | Climax  |
 | Description | Smoke detector |
-| Exposes | smoke, battery_low, tamper, battery, linkquality |
+| Exposes | smoke, battery, battery_low, tamper, warning, linkquality |
 | Picture | ![Climax SD-8SCZBS](../images/devices/SD-8SCZBS.jpg) |
 
 ## Notes
@@ -28,6 +28,13 @@ Value can be found in the published state on the `smoke` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` smoke is ON, if `false` OFF.
 
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
 ### Battery_low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
@@ -40,12 +47,12 @@ Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
-### Battery (numeric)
-Remaining battery in %.
-Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
+### Warning (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": VALUE, "level": VALUE, "strobe": VALUE, "duration": VALUE}}`
+- `mode` (enum): Mode of the warning (sound effect). Allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
+- `level` (enum): Sound level. Allowed values: `low`, `medium`, `high`, `very_high`
+- `strobe` (binary): Turn on/off the strobe (light) during warning. Allowed values: `true` or `false`
+- `duration` (numeric): Duration in seconds of the alarm. 
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -70,6 +77,14 @@ binary_sensor:
     payload_off: false
     device_class: "smoke"
 
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
+    device_class: "battery"
+
 binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
@@ -91,16 +106,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
-    value_template: "{{ value_json.battery }}"
-    device_class: "battery"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

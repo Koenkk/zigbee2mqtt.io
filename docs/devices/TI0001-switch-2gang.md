@@ -11,13 +11,15 @@ description: "Integrate your Livolo TI0001-switch-2gang via Zigbee2MQTT with wha
 
 | Model | TI0001-switch-2gang  |
 | Vendor  | Livolo  |
-| Description | New Zigbee Switch (2 gang) |
+| Description | Zigbee Switch 2 gang |
 | Exposes | switch (state), linkquality |
 | Picture | ![Livolo TI0001-switch-2gang](../images/devices/TI0001-switch-2gang.jpg) |
 
 ## Notes
-After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend 
-of zigbee2mqtt or using [MQTT message](../information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
+
+
+After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend
+of Zigbee2MQTT or using [MQTT message](../information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
 In case of problems it's recommended to remove device and than retry pairing and re-configuring device.
 
 ### Important
@@ -40,15 +42,19 @@ advanced:
   pan_id: 6756
 ```
 
+
+
 ## Exposes
 
 ### Switch (left endpoint)
 The current state of this switch is in the published state under the `state_left` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_left": "ON"}`, `{"state_left": "OFF"}` or `{"state_left": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_left": ""}`.
 
 ### Switch (right endpoint)
 The current state of this switch is in the published state under the `state_right` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -86,8 +92,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

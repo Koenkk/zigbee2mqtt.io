@@ -12,24 +12,34 @@ description: "Integrate your Climax SRAC-23B-ZBSR via Zigbee2MQTT with whatever 
 | Model | SRAC-23B-ZBSR  |
 | Vendor  | Climax  |
 | Description | Smart siren |
-| Exposes | battery, linkquality |
+| Exposes | warning, battery_low, tamper, battery, linkquality |
 | Picture | ![Climax SRAC-23B-ZBSR](../images/devices/SRAC-23B-ZBSR.jpg) |
 
 ## Notes
 
-
-### Triggering the alarm
-The alarm can be trigged by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` message
-`{"warning": {"duration": 10, "mode": "emergency", "strobe": false}}`.
-
-Where:
-- `duration`: the number of seconds the alarm will be on (max is 1800 seconds)
-- `mode`: `stop` or `emergency`
-- `strobe`: `true` or `false` will let the strobe flash once during the alarm
-        
+None
 
 
 ## Exposes
+
+### Warning (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": VALUE, "level": VALUE, "strobe": VALUE, "duration": VALUE}}`
+- `mode` (enum): Mode of the warning (sound effect). Allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
+- `level` (enum): Sound level. Allowed values: `low`, `medium`, `high`, `very_high`
+- `strobe` (binary): Turn on/off the strobe (light) during warning. Allowed values: `true` or `false`
+- `duration` (numeric): Duration in seconds of the alarm. 
+
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
+
+### Tamper (binary)
+Indicates whether the device is tampered.
+Value can be found in the published state on the `tamper` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %.
@@ -52,20 +62,37 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.battery_low }}"
+    payload_on: true
+    payload_off: false
+    device_class: "battery"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.tamper }}"
+    payload_on: true
+    payload_off: false
+
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
     device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

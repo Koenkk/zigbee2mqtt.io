@@ -7,6 +7,36 @@ Press and hold the button on the device until the blue light starts blinking, re
 `,
     },
     {
+        model: ['AV2010/29A'],
+        deviceTypeSpecificConfiguration: true,
+        note: `
+### Controlling
+Trigger the siren sound and lights, duration can be indicated in seconds. The strobe parameter must always be false
+\`\`\`json
+topic: 'zigbee2mqtt/friendly name/set'
+payload: '{"warning": {"duration": 3, "strobe": false}}'
+\`\`\`
+
+5 short beeps. If the alarm is on, it stops:
+\`\`\`json
+topic: 'zigbee2mqtt/friendly name/set'
+payload: '{"warning": {"level": "medium"}}'
+\`\`\`
+5 long beeps. If the alarm is on, it stops:
+\`\`\`json
+topic: 'zigbee2mqtt/friendly name/set'
+payload:
+'{"warning": {"level": "high"}}'
+\`\`\`
+
+1 short beeps. If the alarm is on, it stops:
+\`\`\`json
+topic: 'zigbee2mqtt/friendly name/set'
+payload: '{"warning": {"level": "very_high"}}'
+\`\`\`
+`,
+    },
+    {
         model: ['WXKG11LM'],
         note: `
 ### Actions
@@ -18,6 +48,65 @@ The \`triple\`, \`quadruple\`, \`hold\` and \`release\` is not supported by all 
         note: `
 ### Firmware
 This is a Texas Instruments CC1352P-2, CC2652RB or CC2652R flashed with the following firmware: https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_3.x.0/bin
+`,
+    },
+    {
+        model: ['L122FF63H11A5.0W', 'L122CB63H11A9.0W', 'L122AA63H11A6.5W', 'C422AC14D41H140.0W', 'C422AC11D41H140.0W'],
+        note: `
+### Pairing
+Factory reset the light.
+After resetting the light it will automatically connect.
+
+The light should be turned off for at least 10 seconds. After that, the on- and off-phases should last around 2 to 5 seconds.
+Start with light on, then off, and then 3 “on’s”, wait in the 3rd ON state.
+`,
+    },
+    {
+        model: ['F122SB62H22A4.5W'],
+        note: `
+### Pairing
+Factory reset the light bulb.
+After resetting the bulb will automatically connect.
+
+The bulb should be turned off for at least 10 seconds. After that, the on- and off-phases should last around 2 to 5 seconds.
+Start with bulb on, then off, and then 3 “on’s”, wait in the 3rd ON state.
+`,
+    },
+    {
+        model: ['RL460WHZHA69'],
+        note: `
+### Pairing
+The bulb automatically pairs after coming out of the box.
+
+To factory reset the bulb; turn on and off the power 6 times within a few seconds. After resetting the bulb will automatically connect.
+`,
+    },
+    {
+        model: ['TI0001-switch', 'TI0001-switch-2gang', 'TI0001-socket', 'TI0001-dimmer'],
+        note: `
+After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend
+of Zigbee2MQTT or using [MQTT message](../information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
+In case of problems it's recommended to remove device and than retry pairing and re-configuring device.
+
+### Important
+These devices can only be used on channel 26.
+These devices are locked to the manufacturer's network key (ext_pan_id).
+Your configuration file [data/configuration.yaml](../information/configuration) must contain the following:
+
+\`\`\`yaml
+advanced:
+  ext_pan_id: [33,117,141,25,0,75,18,0]
+  channel: 26
+\`\`\`
+
+Therefore these devices may not co-existence with other Zigbee devices.
+Maybe, you need to add a dedicated coordinator and create a new network for Livolo.
+If you decided to create a new network, you should specify another 'pan_id'.
+
+\`\`\`yaml
+advanced:
+  pan_id: 6756
+\`\`\`
 `,
     },
     {
@@ -1163,6 +1252,13 @@ The E1745 can be bound to groups using [binding](../information/binding).
 ## Detection cooldown (E1745 version)
 This device will pause detection of presence for approximately 1 min 37 sec after detection. In other words; with continuous detection, every 1:37 a new publish (occupancy: true) will be done.
 Cooldown of detection is 3 min. In other words; 3 min after last published detection (and trigger no longer present) occupancy will be published as false.
+
+The cooldown detection timeout can be overriden by using the following device config option:
+* \`occupancy_timeout\`: Timeout (in seconds) after which the \`occupancy: false\` message is sent.
+
+Please note that setting \`occupancy_timeout\` lower than the device re-trigger time (around 1m30s) means \`occupancy: true\` will only be sent again when motion is detected after the re-trigger time.
+This allows an external automation system to observe the detection cycles (detection -> idle -> detection -> idle) and implement more complex automation flows.
+For simple automations, setting \`occupancy_timeout\` greater than the re-trigger time is probably desired.
 `,
     },
     {

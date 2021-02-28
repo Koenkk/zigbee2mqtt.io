@@ -12,7 +12,7 @@ description: "Integrate your TERNCY TERNCY-DC01 via Zigbee2MQTT with whatever sm
 | Model | TERNCY-DC01  |
 | Vendor  | TERNCY  |
 | Description | Temperature & contact sensor  |
-| Exposes | temperature, contact, linkquality |
+| Exposes | temperature, contact, battery, linkquality |
 | Picture | ![TERNCY TERNCY-DC01](../images/devices/TERNCY-DC01.jpg) |
 
 ## Notes
@@ -48,6 +48,13 @@ Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
 
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
@@ -66,8 +73,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
     value_template: "{{ value_json.temperature }}"
+    unit_of_measurement: "°C"
     device_class: "temperature"
 
 binary_sensor:
@@ -83,8 +90,16 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
+    value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
+    device_class: "battery"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

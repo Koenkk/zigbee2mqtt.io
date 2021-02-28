@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi JTYJ-GD-01LM/BW via Zigbee2MQTT with whateve
 | Model | JTYJ-GD-01LM/BW  |
 | Vendor  | Xiaomi  |
 | Description | MiJia Honeywell smoke detector |
-| Exposes | smoke, battery_low, tamper, battery, sensitivity, smoke_density, selftest, linkquality |
+| Exposes | smoke, battery_low, tamper, battery, sensitivity, smoke_density, selftest, voltage, linkquality |
 | Picture | ![Xiaomi JTYJ-GD-01LM/BW](../images/devices/JTYJ-GD-01LM-BW.jpg) |
 
 ## Notes
@@ -79,6 +79,12 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"selftest": NEW_VALUE}`.
 The possible values are: ``.
 
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
@@ -123,8 +129,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
     device_class: "battery"
 
 sensor:
@@ -137,7 +143,6 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
     value_template: "{{ value_json.smoke_density }}"
     icon: "mdi:google-circles-communities"
 
@@ -145,8 +150,16 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
+    value_template: "{{ value_json.voltage }}"
+    unit_of_measurement: "V"
+    device_class: "voltage"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

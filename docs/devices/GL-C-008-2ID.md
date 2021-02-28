@@ -163,13 +163,15 @@ light:
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/cct/set"
     brightness_scale: 254
     state_topic_postfix: "cct"
+    max_mireds: 500
+    min_mireds: 150
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

@@ -35,7 +35,7 @@ It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
 
 ### Device_mode (enum)
-switch: allow on/off, auto will use wired action via C1/C2 on contactor for example with HC/HP.
+switch: allow on/off, auto will use wired action via C1/C2 on teleruptor with buttons.
 Value can be found in the published state on the `device_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_mode": NEW_VALUE}`.
@@ -68,8 +68,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "W"
     value_template: "{{ value_json.power }}"
+    unit_of_measurement: "W"
     device_class: "power"
 
 sensor:
@@ -82,8 +82,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

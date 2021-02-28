@@ -11,13 +11,15 @@ description: "Integrate your Livolo TI0001-socket via Zigbee2MQTT with whatever 
 
 | Model | TI0001-socket  |
 | Vendor  | Livolo  |
-| Description | New Zigbee Socket |
+| Description | Zigbee socket |
 | Exposes | switch (state), linkquality |
 | Picture | ![Livolo TI0001-socket](../images/devices/TI0001-socket.jpg) |
 
 ## Notes
-After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend 
-of zigbee2mqtt or using [MQTT message](../information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
+
+
+After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend
+of Zigbee2MQTT or using [MQTT message](../information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
 In case of problems it's recommended to remove device and than retry pairing and re-configuring device.
 
 ### Important
@@ -39,6 +41,8 @@ If you decided to create a new network, you should specify another 'pan_id'.
 advanced:
   pan_id: 6756
 ```
+
+
 
 ## Exposes
 
@@ -74,8 +78,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

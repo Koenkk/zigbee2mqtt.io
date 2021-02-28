@@ -12,7 +12,7 @@ description: "Integrate your Neo NAS-AB02B0 via Zigbee2MQTT with whatever smart 
 | Model | NAS-AB02B0  |
 | Vendor  | Neo  |
 | Description | Temperature & humidity sensor and alarm |
-| Exposes | temperature, humidity, humidity_alarm, temperature_alarm, alarm, melody, duration, temperature_min, temperature_max, humidity_min, humidity_max, volume, linkquality |
+| Exposes | temperature, humidity, humidity_alarm, battery_low, temperature_alarm, alarm, melody, duration, temperature_min, temperature_max, humidity_min, humidity_max, volume, power_type, linkquality |
 | Picture | ![Neo NAS-AB02B0](../images/devices/NAS-AB02B0.jpg) |
 
 ## Notes
@@ -53,6 +53,12 @@ Value can be found in the published state on the `humidity_alarm` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_alarm": NEW_VALUE}`.
 If value equals `true` humidity_alarm is ON, if `false` OFF.
+
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
 
 ### Temperature_alarm (binary)
 Value can be found in the published state on the `temperature_alarm` property.
@@ -108,6 +114,11 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
+### Power_type (enum)
+Value can be found in the published state on the `power_type` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `battery_full`, `battery_high`, `battery_medium`, `battery_low`, `usb`.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
@@ -126,16 +137,16 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
     value_template: "{{ value_json.temperature }}"
+    unit_of_measurement: "°C"
     device_class: "temperature"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.humidity }}"
+    unit_of_measurement: "%"
     device_class: "humidity"
 
 binary_sensor:
@@ -145,6 +156,15 @@ binary_sensor:
     value_template: "{{ value_json.humidity_alarm }}"
     payload_on: true
     payload_off: false
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.battery_low }}"
+    payload_on: true
+    payload_off: false
+    device_class: "battery"
 
 binary_sensor:
   - platform: "mqtt"
@@ -172,36 +192,36 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "second"
     value_template: "{{ value_json.duration }}"
+    unit_of_measurement: "second"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
     value_template: "{{ value_json.temperature_min }}"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "°C"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.temperature_max }}"
+    unit_of_measurement: "°C"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.humidity_min }}"
+    unit_of_measurement: "%"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.humidity_max }}"
+    unit_of_measurement: "%"
 
 sensor:
   - platform: "mqtt"
@@ -213,8 +233,14 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
+    value_template: "{{ value_json.power_type }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

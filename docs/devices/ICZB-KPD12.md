@@ -14,6 +14,7 @@ description: "Integrate your iCasa ICZB-KPD12 via Zigbee2MQTT with whatever smar
 | Description | Zigbee 3.0 Keypad Pulse 2 |
 | Exposes | battery, action, linkquality |
 | Picture | ![iCasa ICZB-KPD12](../images/devices/ICZB-KPD12.jpg) |
+| White-label | Sunricher SR-ZG9001K2-DIM |
 
 ## Notes
 
@@ -65,8 +66,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
     device_class: "battery"
 
 sensor:
@@ -80,8 +81,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

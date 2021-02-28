@@ -1,19 +1,19 @@
 ---
-title: "BlitzWolf BW-SS7 control via MQTT"
-description: "Integrate your BlitzWolf BW-SS7 via Zigbee2MQTT with whatever smart home
+title: "BlitzWolf BW-SS7_2gang control via MQTT"
+description: "Integrate your BlitzWolf BW-SS7_2gang via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/BW-SS7.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/BW-SS7_2gang.md)*
 
-# BlitzWolf BW-SS7
+# BlitzWolf BW-SS7_2gang
 
-| Model | BW-SS7  |
+| Model | BW-SS7_2gang  |
 | Vendor  | BlitzWolf  |
 | Description | Zigbee 3.0 smart light switch module 2 gang |
 | Exposes | switch (state), linkquality |
-| Picture | ![BlitzWolf BW-SS7](../images/devices/BW-SS7.jpg) |
+| Picture | ![BlitzWolf BW-SS7_2gang](../images/devices/BW-SS7_2gang.jpg) |
 
 ## Notes
 
@@ -68,8 +68,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

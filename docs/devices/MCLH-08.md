@@ -78,40 +78,40 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
     value_template: "{{ value_json.temperature }}"
+    unit_of_measurement: "°C"
     device_class: "temperature"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.humidity }}"
+    unit_of_measurement: "%"
     device_class: "humidity"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "ppb"
     value_template: "{{ value_json.voc }}"
+    unit_of_measurement: "ppb"
     icon: "mdi:air-filter"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "ppm"
     value_template: "{{ value_json.eco2 }}"
+    unit_of_measurement: "ppm"
     icon: "mdi:molecule-co2"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

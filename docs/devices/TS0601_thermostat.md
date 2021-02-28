@@ -290,8 +290,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.position }}"
+    unit_of_measurement: "%"
     icon: "mdi:valve"
 
 climate:
@@ -357,29 +357,28 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
     value_template: "{{ value_json.away_preset_days }}"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "s"
     value_template: "{{ value_json.boost_time }}"
+    unit_of_measurement: "s"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
     value_template: "{{ value_json.comfort_temperature }}"
+    unit_of_measurement: "°C"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
     value_template: "{{ value_json.eco_temperature }}"
+    unit_of_measurement: "°C"
 
 sensor:
   - platform: "mqtt"
@@ -391,15 +390,15 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
     value_template: "{{ value_json.max_temperature }}"
+    unit_of_measurement: "°C"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
     value_template: "{{ value_json.min_temperature }}"
+    unit_of_measurement: "°C"
 
 sensor:
   - platform: "mqtt"
@@ -411,15 +410,15 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
     value_template: "{{ value_json.away_preset_temperature }}"
+    unit_of_measurement: "°C"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 
 sensor:

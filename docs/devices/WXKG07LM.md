@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WXKG07LM via Zigbee2MQTT with whatever smart
 | Model | WXKG07LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 double key wireless wall switch |
-| Exposes | battery, action, linkquality |
+| Exposes | battery, voltage, action, linkquality |
 | Picture | ![Xiaomi WXKG07LM](../images/devices/WXKG07LM.jpg) |
 
 ## Notes
@@ -46,6 +46,12 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
@@ -70,9 +76,17 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
     device_class: "battery"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.voltage }}"
+    unit_of_measurement: "V"
+    device_class: "voltage"
 
 sensor:
   - platform: "mqtt"
@@ -85,8 +99,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

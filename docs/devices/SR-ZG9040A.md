@@ -12,7 +12,7 @@ description: "Integrate your Sunricher SR-ZG9040A via Zigbee2MQTT with whatever 
 | Model | SR-ZG9040A  |
 | Vendor  | Sunricher  |
 | Description | Zigbee micro smart dimmer |
-| Exposes | light (state, brightness), effect, linkquality |
+| Exposes | light (state, brightness), power, voltage, current, energy, linkquality |
 | Picture | ![Sunricher SR-ZG9040A](../images/devices/SR-ZG9040A.jpg) |
 
 ## Notes
@@ -54,12 +54,29 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 }
 ````
 
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
+### Power (numeric)
+Instantaneous measured power.
+Value can be found in the published state on the `power` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `W`.
+
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
+
+### Current (numeric)
+Instantaneous measured electrical current.
+Value can be found in the published state on the `current` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `A`.
+
+### Energy (numeric)
+Sum of consumed energy.
+Value can be found in the published state on the `energy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kWh`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -86,21 +103,45 @@ light:
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     brightness_scale: 254
-    effect: true
-    effect_list: 
-      - "blink"
-      - "breathe"
-      - "okay"
-      - "channel_change"
-      - "finish_effect"
-      - "stop_effect"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
+    value_template: "{{ value_json.power }}"
+    unit_of_measurement: "W"
+    device_class: "power"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.voltage }}"
+    unit_of_measurement: "V"
+    device_class: "voltage"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.current }}"
+    unit_of_measurement: "A"
+    device_class: "current"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.energy }}"
+    unit_of_measurement: "kWh"
+    device_class: "energy"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

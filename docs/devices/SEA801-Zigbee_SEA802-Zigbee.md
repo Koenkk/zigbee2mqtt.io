@@ -14,7 +14,7 @@ description: "Integrate your Saswell SEA801-Zigbee/SEA802-Zigbee via Zigbee2MQTT
 | Description | Thermostatic radiator valve |
 | Exposes | battery_low, switch (state), lock (state), climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, running_state, away_mode), linkquality |
 | Picture | ![Saswell SEA801-Zigbee/SEA802-Zigbee](../images/devices/SEA801-Zigbee-SEA802-Zigbee.jpg) |
-| White-label | HiHome WZB-TRVL |
+| White-label | HiHome WZB-TRVL, Hama 00176592 |
 
 ## Notes
 
@@ -134,8 +134,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

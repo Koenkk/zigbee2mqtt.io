@@ -1,6 +1,6 @@
 ---
-title: "Climax  WLS-15ZBS control via MQTT"
-description: "Integrate your Trust WLS-15ZBS via Zigbee2MQTT with whatever smart home
+title: "Climax WLS-15ZBS control via MQTT"
+description: "Integrate your Climax WLS-15ZBS via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
@@ -11,7 +11,7 @@ description: "Integrate your Trust WLS-15ZBS via Zigbee2MQTT with whatever smart
 
 | Model | WLS-15ZBS  |
 | Vendor  | Climax  |
-| Description | Water leakage detector |
+| Description | Water leakage sensor |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
 | Picture | ![Climax WLS-15ZBS](../images/devices/WLS-15ZBS.jpg) |
 
@@ -91,16 +91,16 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
     device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

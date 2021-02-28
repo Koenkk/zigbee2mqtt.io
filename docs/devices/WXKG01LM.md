@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WXKG01LM via Zigbee2MQTT with whatever smart
 | Model | WXKG01LM  |
 | Vendor  | Xiaomi  |
 | Description | MiJia wireless switch |
-| Exposes | battery, action, linkquality |
+| Exposes | battery, action, voltage, linkquality |
 | Picture | ![Xiaomi WXKG01LM](../images/devices/WXKG01LM.jpg) |
 
 ## Notes
@@ -78,7 +78,13 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `triple`, `quadruple`, `hold`, `release`.
+The possible values are: `single`, `double`, `triple`, `quadruple`, `hold`, `release`, `many`.
+
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -105,8 +111,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
     device_class: "battery"
 
 sensor:
@@ -120,8 +126,16 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
+    value_template: "{{ value_json.voltage }}"
+    unit_of_measurement: "V"
+    device_class: "voltage"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

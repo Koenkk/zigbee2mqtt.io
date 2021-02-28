@@ -12,7 +12,7 @@ description: "Integrate your SmartThings F-MLT-US-2 via Zigbee2MQTT with whateve
 | Model | F-MLT-US-2  |
 | Vendor  | SmartThings  |
 | Description | Multipurpose sensor (2016 model) |
-| Exposes | temperature, contact, battery_low, tamper, battery, moving, linkquality |
+| Exposes | temperature, contact, battery_low, tamper, battery, moving, x_axis, y_axis, z_axis, linkquality |
 | Picture | ![SmartThings F-MLT-US-2](../images/devices/F-MLT-US-2.jpg) |
 
 ## Notes
@@ -63,22 +63,23 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Moving (binary)
+Indicates if the device is moving.
 Value can be found in the published state on the `moving` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` moving is ON, if `false` OFF.
 
-### X Axis (numeric)
-Represent acceleration value in the X Axis.
+### X_axis (numeric)
+Accelerometer X value.
 Value can be found in the published state on the `x_axis` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Y Axis (numeric)
-Represent acceleration value in the Y Axis.
+### Y_axis (numeric)
+Accelerometer Y value.
 Value can be found in the published state on the `y_axis` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Z Axis (numeric)
-Represent acceleration value in the Z Axis.
+### Z_axis (numeric)
+Accelerometer Z value.
 Value can be found in the published state on the `z_axis` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
@@ -100,8 +101,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
     value_template: "{{ value_json.temperature }}"
+    unit_of_measurement: "°C"
     device_class: "temperature"
 
 binary_sensor:
@@ -134,8 +135,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
     device_class: "battery"
 
 binary_sensor:
@@ -150,8 +151,29 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
+    value_template: "{{ value_json.x_axis }}"
+    icon: "mdi:axis-x-arrow"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.y_axis }}"
+    icon: "mdi:axis-y-arrow"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.z_axis }}"
+    icon: "mdi:axis-z-arrow"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

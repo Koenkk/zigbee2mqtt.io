@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi RTCGQ11LM via Zigbee2MQTT with whatever smar
 | Model | RTCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara human body movement and illuminance sensor |
-| Exposes | battery, occupancy, temperature, illuminance_lux, illuminance, linkquality |
+| Exposes | battery, occupancy, temperature, voltage, illuminance_lux, illuminance, linkquality |
 | Picture | ![Xiaomi RTCGQ11LM](../images/devices/RTCGQ11LM.jpg) |
 
 ## Notes
@@ -89,6 +89,12 @@ Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
+
 ### Illuminance_lux (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance` property.
@@ -119,8 +125,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
     device_class: "battery"
 
 binary_sensor:
@@ -136,32 +142,40 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
     value_template: "{{ value_json.temperature }}"
+    unit_of_measurement: "°C"
     device_class: "temperature"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lx"
+    value_template: "{{ value_json.voltage }}"
+    unit_of_measurement: "V"
+    device_class: "voltage"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.illuminance }}"
+    unit_of_measurement: "lx"
     device_class: "illuminance"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lx"
     value_template: "{{ value_json.illuminance }}"
+    unit_of_measurement: "lx"
     device_class: "illuminance"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

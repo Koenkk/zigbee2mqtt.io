@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi WSDCGQ11LM via Zigbee2MQTT with whatever sma
 | Model | WSDCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara temperature, humidity and pressure sensor |
-| Exposes | battery, temperature, humidity, pressure, linkquality |
+| Exposes | battery, temperature, humidity, pressure, voltage, linkquality |
 | Picture | ![Xiaomi WSDCGQ11LM](../images/devices/WSDCGQ11LM.jpg) |
 
 ## Notes
@@ -83,6 +83,12 @@ Value can be found in the published state on the `pressure` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `hPa`.
 
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
@@ -101,40 +107,48 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
     device_class: "battery"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
     value_template: "{{ value_json.temperature }}"
+    unit_of_measurement: "°C"
     device_class: "temperature"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.humidity }}"
+    unit_of_measurement: "%"
     device_class: "humidity"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "hPa"
     value_template: "{{ value_json.pressure }}"
+    unit_of_measurement: "hPa"
     device_class: "pressure"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
+    value_template: "{{ value_json.voltage }}"
+    unit_of_measurement: "V"
+    device_class: "voltage"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

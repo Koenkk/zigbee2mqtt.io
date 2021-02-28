@@ -9,7 +9,7 @@ description: "Integrate your HEIMAN HM1RC-2-E via Zigbee2MQTT with whatever smar
 
 # HEIMAN HM1RC-2-E
 
-| Model | HM1RC-2-E |
+| Model | HM1RC-2-E  |
 | Vendor  | HEIMAN  |
 | Description | Smart remote controller |
 | Exposes | battery, action, linkquality |
@@ -17,11 +17,7 @@ description: "Integrate your HEIMAN HM1RC-2-E via Zigbee2MQTT with whatever smar
 
 ## Notes
 
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
-
-* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
-
+None
 
 
 ## Exposes
@@ -57,8 +53,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
     device_class: "battery"
 
 sensor:
@@ -72,8 +68,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}
