@@ -1239,9 +1239,9 @@
       "dev": true
     },
     "string-width": {
-      "version": "4.2.1",
-      "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.1.tgz",
-      "integrity": "sha512-LL0OLyN6AnfV9xqGQpDBwedT2Rt63737LxvsRxbcwpa2aIeynBApG2Sm//F3TaLHIR1aJBN52DWklc06b94o5Q==",
+      "version": "4.2.2",
+      "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.2.tgz",
+      "integrity": "sha512-XBJbT3N4JhVumXE0eoLU9DCjcaF92KLNqTmFCnG1pf8duUxFGwtP6AD6nkjw9a3IdiRtL3E2w3JDiE/xi3vOeA==",
       "dev": true,
       "requires": {
         "emoji-regex": "^8.0.0",
@@ -1514,8 +1514,8 @@
       "dev": true
     },
     "zigbee2mqtt": {
-      "version": "git://github.com/koenkk/zigbee2mqtt.git#12c34a8ed7760b3aa0467f5a9e768d45dcbd04c7",
-      "from": "git://github.com/koenkk/zigbee2mqtt.git#dev",
+      "version": "git://github.com/koenkk/zigbee2mqtt.git#3fd66193d762d6244a61b2f893ecc9717f6b0b8e",
+      "from": "git://github.com/koenkk/zigbee2mqtt.git#1.18.0",
       "requires": {
         "ajv": "^6.12.4",
         "debounce": "^1.2.0",
@@ -1538,7 +1538,7 @@
         "ws": "^7.3.1",
         "zigbee-herdsman": "0.13.72",
         "zigbee-herdsman-converters": "14.0.74",
-        "zigbee2mqtt-frontend": "0.3.75"
+        "zigbee2mqtt-frontend": "0.3.76"
       },
       "dependencies": {
         "@babel/code-frame": {
@@ -28964,9 +28964,9 @@
           }
         },
         "zigbee2mqtt-frontend": {
-          "version": "0.3.75",
-          "resolved": "https://registry.npmjs.org/zigbee2mqtt-frontend/-/zigbee2mqtt-frontend-0.3.75.tgz",
-          "integrity": "sha512-F2fKlxgHLkBkXMyYbLIT8uo2aSuecLMbFGivrzsl/koJY8Mi4994XOhe6/qpTF2y7BDzoSRw4v1+oMgUrpsUiQ=="
+          "version": "0.3.76",
+          "resolved": "https://registry.npmjs.org/zigbee2mqtt-frontend/-/zigbee2mqtt-frontend-0.3.76.tgz",
+          "integrity": "sha512-UkNggvKDqw1Z+1tLRSPJdnOe3ioEu/vw0nppCqZJOxFgJoAJOBvmYal2ByMbeSnkq82FuDKzCCyWIVHP9gmL1Q=="
         }
       }
     }
