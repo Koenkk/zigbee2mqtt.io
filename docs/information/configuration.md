@@ -160,7 +160,7 @@ experimental:
   # attribute: topic 'zigbee2mqtt/my_bulb/state' payload 'ON"
   # attribute_and_json: both json and attribute (see above)
   output: 'json'
-  # Optional: Transmit power setting in dBm (default: 5). 
+  # Optional: Transmit power setting in dBm (default: 5).
   # This will set the transmit power for devices that bring an inbuilt amplifier.
   # It can't go over the maximum of the respective hardware and might be limited
   # by firmware (for example to migrate heat, or by using an unsupported firmware).
@@ -183,11 +183,11 @@ map_options:
       line:
         active: '#009900'
         inactive: '#994444'
-        
+
 # Optional: OTA update settings
 ota:
     # Minimum time between OTA update checks, see https://www.zigbee2mqtt.io/information/ota_updates.html for more info
-    update_check_interval: 10
+    update_check_interval: 1440
     # Disable automatic update checks, see https://www.zigbee2mqtt.io/information/ota_updates.html for more info
     disable_automatic_update_check: false
 

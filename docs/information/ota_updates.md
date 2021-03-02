@@ -25,11 +25,11 @@ The possible states are:
 - `updating`: update is in progress. During this the progress in % and remaining time in seconds is also added to the payload, example: `{"update": {"state": "updating","progress":13.37,"remaining": 219}}`.
 - `idle`: no update available/in progress
 
-To protect privacy it is possible to limit how often third party servers may be contacted. You can set the minimum time that should pass between two firmware update checks, in minutes. The default is 10 minutes. Here it is set to check at most once a day:
+To protect privacy it is possible to limit how often third party servers may be contacted. You can set the minimum time that should pass between two firmware update checks, in minutes. The default is 1440 minutes (1 day). Here it is set to check at most every two days:
 
 ```yaml
 ota:
-    update_check_interval: 1440
+    update_check_interval: 2880
 ```
 
 It is also possible to completely ignore these device-initiated requests for updates checks by modifying the configuration.yaml file. In the example below, only manual firmware update checks will be possible:
