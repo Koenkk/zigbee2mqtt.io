@@ -98,7 +98,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://zigate.fr/boutique/?orderby=date_desc">ZiGate</a></td>
   </tr>
   <tr>
-    <td><img src=""></td>
+    <td><img src="../images/Silicon_Labs_Gecko_EFR32_SoCs.webp"></td>
     <td>Silicon Labs EZSP <b>(experimental)</b></td>
     <td>Various adapters based on Silabs EFR32 SoC families with EmberZNet Serial Protocol NCP 6.7.8 firmware or later </td>
     <td><a href="https://github.com/Koenkk/zigbee-herdsman/issues/319">Coordinator</a><br/></td>
