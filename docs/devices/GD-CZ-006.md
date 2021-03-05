@@ -11,7 +11,7 @@ description: "Integrate your Gledopto GD-CZ-006 via Zigbee2MQTT with whatever sm
 
 | Model | GD-CZ-006  |
 | Vendor  | Gledopto  |
-| Description | Zigbee LED Driver |
+| Description | Zigbee LED Controller WW/CW |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Gledopto GD-CZ-006](../images/devices/GD-CZ-006.jpg) |
 
@@ -106,8 +106,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

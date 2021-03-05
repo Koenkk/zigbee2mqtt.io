@@ -9,8 +9,8 @@ description: "Integrate your Somgoms ZSTY-SM-11ZG-US-W via Zigbee2MQTT with what
 
 # Somgoms ZSTY-SM-11ZG-US-W
 
-| Model | ZSTY-SM-11ZG-US-W |
-| Vendor  | Somgoms |
+| Model | ZSTY-SM-11ZG-US-W  |
+| Vendor  | Somgoms  |
 | Description | 1 gang switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Somgoms ZSTY-SM-11ZG-US-W](../images/devices/ZSTY-SM-11ZG-US-W.jpg) |
@@ -54,8 +54,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

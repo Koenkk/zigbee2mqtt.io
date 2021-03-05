@@ -17,11 +17,6 @@ description: "Integrate your Aurora Lighting AU-A1ZBR2GW via Zigbee2MQTT with wh
 
 ## Notes
 
-### Pairing
-To pair the dimmer, press and hold the knob for more than 6 seconds and release.
-The rotary dimmer will flash red to indicate pairing mode has started.
-When it has successfully paired the red indicator will stop flashing and be constant for 4 seconds.
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
@@ -34,6 +29,8 @@ simulated_brightness:
   delta: 20 # delta per interval, default = 20
   interval: 200 # interval in milliseconds, default = 200
 ```
+
+
 
 ## Exposes
 
@@ -48,8 +45,7 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on_left`, `on_right`, `off_left`, `off_right`, `brightness_step_up_left`, `brightness_step_up_right`, `brightness_step_down_left`, `brightness_step_down_right`, `color_temperature_step_up_left`, `color_temperature_step_up_right`, `color_temperature_step_down_left`, `color_temperature_step_down_right`.
-
+The possible values are: `on`, `off`, `brightness_step_up`, `brightness_step_down`, `color_temperature_step_up`, `color_temperature_step_down`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -69,8 +65,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
     device_class: "battery"
 
 sensor:
@@ -84,8 +80,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

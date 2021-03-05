@@ -17,11 +17,6 @@ description: "Integrate your Aurora Lighting AU-A1ZBR1GW via Zigbee2MQTT with wh
 
 ## Notes
 
-### Pairing
-To pair the dimmer, press and hold the knob for more than 6 seconds and release.
-The rotary dimmer will flash red to indicate pairing mode has started.
-When it has successfully paired the red indicator will stop flashing and be constant for 4 seconds.
-
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
@@ -34,6 +29,8 @@ simulated_brightness:
   delta: 20 # delta per interval, default = 20
   interval: 200 # interval in milliseconds, default = 200
 ```
+
+
 
 ## Exposes
 
@@ -68,8 +65,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
     value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
     device_class: "battery"
 
 sensor:
@@ -83,8 +80,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

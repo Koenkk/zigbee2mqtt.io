@@ -11,7 +11,7 @@ description: "Integrate your Sengled Z01-CIA19NAE26 via Zigbee2MQTT with whateve
 
 | Model | Z01-CIA19NAE26  |
 | Vendor  | Sengled  |
-| Description | Element Touch (A19) |
+| Description | Element touch (A19) |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Sengled Z01-CIA19NAE26](../images/devices/Z01-CIA19NAE26.jpg) |
 
@@ -102,8 +102,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 
 sensor:

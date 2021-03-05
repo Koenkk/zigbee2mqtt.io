@@ -11,7 +11,7 @@ description: "Integrate your Gledopto GL-C-007S via Zigbee2MQTT with whatever sm
 
 | Model | GL-C-007S  |
 | Vendor  | Gledopto  |
-| Description | Zigbee LED controller RGBW plus model |
+| Description | Zigbee LED Controller RGBW (plus) |
 | Exposes | light (state, brightness, color_xy), effect, linkquality |
 | Picture | ![Gledopto GL-C-007S](../images/devices/GL-C-007S.jpg) |
 
@@ -134,8 +134,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

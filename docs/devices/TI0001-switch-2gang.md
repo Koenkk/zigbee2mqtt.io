@@ -1,0 +1,101 @@
+---
+title: "Livolo TI0001-switch-2gang control via MQTT"
+description: "Integrate your Livolo TI0001-switch-2gang via Zigbee2MQTT with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
+
+*To contribute to this page, edit the following
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TI0001-switch-2gang.md)*
+
+# Livolo TI0001-switch-2gang
+
+| Model | TI0001-switch-2gang  |
+| Vendor  | Livolo  |
+| Description | Zigbee Switch 2 gang |
+| Exposes | switch (state), linkquality |
+| Picture | ![Livolo TI0001-switch-2gang](../images/devices/TI0001-switch-2gang.jpg) |
+
+## Notes
+
+
+After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend
+of Zigbee2MQTT or using [MQTT message](../information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
+In case of problems it's recommended to remove device and than retry pairing and re-configuring device.
+
+### Important
+These devices can only be used on channel 26.
+These devices are locked to the manufacturer's network key (ext_pan_id).
+Your configuration file [data/configuration.yaml](../information/configuration) must contain the following:
+
+```yaml
+advanced:
+  ext_pan_id: [33,117,141,25,0,75,18,0]
+  channel: 26
+```
+
+Therefore these devices may not co-existence with other Zigbee devices.
+Maybe, you need to add a dedicated coordinator and create a new network for Livolo.
+If you decided to create a new network, you should specify another 'pan_id'.
+
+```yaml
+advanced:
+  pan_id: 6756
+```
+
+
+
+## Exposes
+
+### Switch (left endpoint)
+The current state of this switch is in the published state under the `state_left` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_left": "ON"}`, `{"state_left": "OFF"}` or `{"state_left": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_left": ""}`.
+
+### Switch (right endpoint)
+The current state of this switch is in the published state under the `state_right` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
+## Manual Home Assistant configuration
+Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
+manual integration is possible with the following configuration:
+
+
+{% raw %}
+```yaml
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state_left }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/left/set"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_off: "OFF"
+    payload_on: "ON"
+    value_template: "{{ value_json.state_right }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/right/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
+    icon: "mdi:signal"
+```
+{% endraw %}
+
+

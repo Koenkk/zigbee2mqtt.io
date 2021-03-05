@@ -12,7 +12,7 @@ description: "Integrate your SmartThings SZ-SRN12N via Zigbee2MQTT with whatever
 | Model | SZ-SRN12N  |
 | Vendor  | SmartThings  |
 | Description | Smart siren |
-| Exposes | linkquality |
+| Exposes | warning, linkquality |
 | Picture | ![SmartThings SZ-SRN12N](../images/devices/SZ-SRN12N.jpg) |
 
 ## Notes
@@ -21,6 +21,13 @@ None
 
 
 ## Exposes
+
+### Warning (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": VALUE, "level": VALUE, "strobe": VALUE, "duration": VALUE}}`
+- `mode` (enum): Mode of the warning (sound effect). Allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
+- `level` (enum): Sound level. Allowed values: `low`, `medium`, `high`, `very_high`
+- `strobe` (binary): Turn on/off the strobe (light) during warning. Allowed values: `true` or `false`
+- `duration` (numeric): Duration in seconds of the alarm. 
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -40,8 +47,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

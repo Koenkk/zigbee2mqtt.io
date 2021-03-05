@@ -12,7 +12,7 @@ description: "Integrate your TuYa U86KWF-ZPSJ via Zigbee2MQTT with whatever smar
 | Model | U86KWF-ZPSJ  |
 | Vendor  | TuYa  |
 | Description | Environment controller |
-| Exposes | climate (current_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration), linkquality |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration, pi_heating_demand), linkquality |
 | Picture | ![TuYa U86KWF-ZPSJ](../images/devices/U86KWF-ZPSJ.jpg) |
 
 ## Notes
@@ -27,8 +27,8 @@ description: "Integrate your TuYa U86KWF-ZPSJ via Zigbee2MQTT with whatever smar
 ## Exposes
 
 ### Climate 
-This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`, `local_temperature_calibration`.
-- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
+This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`, `local_temperature_calibration`, `pi_heating_demand`.
+- `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`, `cool`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
@@ -65,16 +65,16 @@ climate:
     mode_command_topic: true
     action_topic: true
     action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
-    temperature_command_topic: "current_heating_setpoint"
-    temperature_state_template: "{{ value_json.current_heating_setpoint }}"
+    temperature_command_topic: "occupied_heating_setpoint"
+    temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
     temperature_state_topic: true
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

@@ -11,7 +11,7 @@ description: "Integrate your Gledopto GL-W-001Z via Zigbee2MQTT with whatever sm
 
 | Model | GL-W-001Z  |
 | Vendor  | Gledopto  |
-| Description | Zigbee ON/OFF Wall Switch |
+| Description | Zigbee On/Off Wall Switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Gledopto GL-W-001Z](../images/devices/GL-W-001Z.jpg) |
 
@@ -60,8 +60,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

@@ -72,7 +72,8 @@ Example payload:
     "log_level":"debug",
     "permit_join":true,
     "config": {...}, // Will contain the complete Zigbee2MQTT config expect the network_key
-    "config_schema": {...} // Will contain the JSON schema of the config
+    "config_schema": {...}, // Will contain the JSON schema of the config
+    "restart_required": false // Indicates wether Zigbee2MQTT needs to be restarted to apply options set through zigbee2mqtt/request/bridge/options
 }
 ```
 
@@ -204,6 +205,9 @@ Events will be published to this topic. Possible types are `device_joined`, `dev
 - `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"failed","ieee_address":"0x90fd9ffffe6494fc"}}`
 - `{"type":"device_leave","data":{"ieee_address":"0x90fd9ffffe6494fc"}}`
 
+## zigbee2mqtt/bridge/extensions
+See [User extensions](./user_extensions.md).
+
 ## zigbee2mqtt/bridge/request/+
 This can be used to e.g. configure certain settings like allowing new devices to join. Zigbee2MQTT will always respond with the same topic on `zigbee2mqtt/bridge/response/+`. The response payload will at least contain a `status` and `data` property, `status` is either `ok` or `error`. If `status` is `error` it will also contain an `error` property containing a description of the error.
 
@@ -229,6 +233,9 @@ To allow joining for only a specific amount of time add the `time` property (in 
 
 Allows to check wether Zigbee2MQTT is healthy. Payload has to be empty, example response: `{"data":{"healthy":true},"status":"ok"}`.
 
+#### zigbee2mqtt/bridge/request/restart
+
+Restarts Zigbee2MQTT. Payload has to be empty, example response: `{"data":{},"status":"ok"}`.
 
 #### zigbee2mqtt/bridge/request/networkmap
 
@@ -246,6 +253,11 @@ The graphviz map shows the devices as follows:
 Links are labelled with link quality (0..255) and active routes (listed by short 16 bit destination address). Arrow indicates direction of messaging. Coordinator and routers will typically have two lines for each connection showing bi-directional message path. Line style is:
 * To **end devices**: normal line
 * To and between **coordinator** and **routers**: heavy line for active routes or thin line for no active routes
+
+
+#### zigbee2mqtt/bridge/request/extension/save
+
+See [User extensions](./user_extensions.md).
 
 ### Device
 
@@ -357,22 +369,34 @@ See [Groups](./groups.md).
 
 ### Configuration
 
+#### zigbee2mqtt/bridge/request/options
+
+Allows to set any option. The JSON schema of this can be found [here](https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/util/settings.schema.json) (is also published to `zigbee2mqtt/bridge/info` in the `config_schema` property). Example to set `permit_join`; send to `zigbee2mqtt/bridge/request/options` payload `{"options": {"permit_join": true}}`, response: `{"data":{"restart_required": false},"status":"ok"}`. Some options may require restarting Zigbee2MQTT, in this case `restart_required` is set to `true`. Note that `restart_required` is also published to `zigbee2mqtt/bridge/info`. Use `zigbee2mqtt/bridge/request/restart` to restart Zigbee2MQTT.
+
 #### zigbee2mqtt/bridge/request/config/last_seen
+
+**Deprecated:** use `zigbee2mqtt/bridge/request/options` with payload `{"options": {"advanced": {"last_seen": VALUE}}}` instead.
 
 Sets `advanced` -> `last_seen` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":"disable"}`, response: `{"data":{"value": "disable"},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
 
 
 #### zigbee2mqtt/bridge/request/config/elapsed
 
+**Deprecated:** use `zigbee2mqtt/bridge/request/options` with payload `{"options": {"advanced": {"elapsed": VALUE}}}` instead.
+
 Sets `advanced` -> `elapsed` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":true}`, response: `{"data":{"value": true},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
 
 
 #### zigbee2mqtt/bridge/request/config/log_level
 
+**Deprecated:** use `zigbee2mqtt/bridge/request/options` with payload `{"options": {"advanced": {"log_level": VALUE}}}` instead.
+
 Sets `advanced` -> `log_level` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":"debug"}`, response: `{"data":{"value": "debug"},"status":"ok"}`. See [Configuration](../information/configuration.md) for possible values.
 
 
 #### zigbee2mqtt/bridge/request/config/homeassistant
+
+**Deprecated:** use `zigbee2mqtt/bridge/request/options` with payload `{"options": {"homeassistant": true}}` instead.
 
 Enable or disable the Home Assistant integration on the fly (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":true}`, response: `{"data":{"value": "true"},"status":"ok"}`. Possible values are `true` or `false`.
 

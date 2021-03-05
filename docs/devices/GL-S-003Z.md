@@ -11,7 +11,7 @@ description: "Integrate your Gledopto GL-S-003Z via Zigbee2MQTT with whatever sm
 
 | Model | GL-S-003Z  |
 | Vendor  | Gledopto  |
-| Description | Smart RGBW GU10  |
+| Description | Zigbee 5W GU10 Bulb RGBW |
 | Exposes | light (state, brightness, color_xy), effect, linkquality |
 | Picture | ![Gledopto GL-S-003Z](../images/devices/GL-S-003Z.jpg) |
 
@@ -134,8 +134,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

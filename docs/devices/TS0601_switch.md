@@ -14,7 +14,7 @@ description: "Integrate your TuYa TS0601_switch via Zigbee2MQTT with whatever sm
 | Description | 1, 2, 3 or 4 gang switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![TuYa TS0601_switch](../images/devices/TS0601_switch.jpg) |
-| White-label | Norklmes MKS-CM-W5, Somgoms ZSQB-SMB-ZB, Moes WS-EUB1-ZG |
+| White-label | Norklmes MKS-CM-W5, Somgoms ZSQB-SMB-ZB, Moes WS-EUB1-ZG, AVATTO ZGB-WS-EU |
 
 ## Notes
 
@@ -97,8 +97,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}
