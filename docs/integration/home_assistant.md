@@ -162,7 +162,6 @@ devices:
         object_id: light
       light:
         name: my_switch
-        icon: mdi:desk-lamp
       # OR if your devices has multiple endpoints (e.g. left/right)
       switch_left:
         type: light
