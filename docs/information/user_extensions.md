@@ -4,17 +4,26 @@ User extensions is a way to extend Zigbee2MQTT behaviour, user extensions works 
 
 To get familiar with  extensions framework please read [source code of internal extensions](https://github.com/Koenkk/zigbee2mqtt/tree/master/lib/extension).
 
-User extensions are stored in `data/extensions` folder and have to export a JavaScript Class or Function.
+User extensions are stored in `data/extension` folder and have to export a JavaScript Class or Function.
 
 Example:
 
-File: `data/extensions/my-first-extension.js`
+File: `data/extension/my-first-extension.js`
 
 ```js
-class MyExampleExtension {
+const Extension = require('../../lib/extension/extension');
+
+class MyExampleExtension extends Extension {
     constructor(zigbee, mqtt, state, publishEntityState, eventBus, settings, logger) {
+        super(zigbee, mqtt, state, publishEntityState, eventBus);
         logger.info('Loaded  MyExampleExtension');
-        mqtt.publish('example/extension', 'hello from MyExampleExtension')
+    }
+    
+    /**
+     * This method is called by the controller once connected to the MQTT server.
+     */
+    onMQTTConnected() {
+        this.mqtt.publish('example/extension', 'hello from MyExampleExtension');
     }
 }
 
