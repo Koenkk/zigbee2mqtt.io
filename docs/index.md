@@ -6,7 +6,7 @@
     </a>
 </div>
 
-Welcome to the Zigbee2MQTT documentation! Besides the documentation, you can also get support and ask questions on the [Forum](http://zigbee2mqtt.discourse.group/) and [Discord channel](https://discord.gg/NyseBeK). In case you want to donate click the 'Sponsor' button [here](https://github.com/Koenkk/zigbee2mqtt).
+Welcome to the Zigbee2MQTT documentation! Besides the documentation, you can also get support and ask questions on the [Forum](https://github.com/Koenkk/zigbee2mqtt/discussions) and [Discord channel](https://discord.gg/NyseBeK). In case you want to donate click the 'Sponsor' button [here](https://github.com/Koenkk/zigbee2mqtt).
 
 ### Getting started
 * [What do I need?](getting_started/what_do_i_need.md)
