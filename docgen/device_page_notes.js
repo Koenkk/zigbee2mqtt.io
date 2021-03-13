@@ -2905,7 +2905,7 @@ In case you want to confirm this action (e.g. \`action_code\` value is OK), resp
 {
     "arm_mode": {
     "transaction": 99, // Transaction number (take this value from the (dis)arm attempt property \`action_transaction\`)
-    "mode": "arm_all_zones" // Mode "arm_all_zones", "disarm" or "invalid_code" (take this value from the (dis)arm attempt property \`action\`)
+    "mode": "arm_all_zones" // Mode "arm_all_zones", "disarm" or "exit_delay" (take this value from the (dis)arm attempt property \`action\`)
     }
 }
 \`\`\`
