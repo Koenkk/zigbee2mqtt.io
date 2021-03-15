@@ -28,7 +28,7 @@ Welcome to the Zigbee2MQTT documentation! Besides the documentation, you can als
 * [Scenes](information/scenes.md)
 * [Supported adapters](information/supported_adapters.md)
 * [Touchlink](information/touchlink.md)
-* [User extensiions](information/user_extensions.md)
+* [User extensions](information/user_extensions.md)
 * [Zigbee network](information/zigbee_network.md)
 
 ### Running Zigbee2MQTT on ...
