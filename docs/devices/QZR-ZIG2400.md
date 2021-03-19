@@ -12,16 +12,32 @@ description: "Integrate your Qmotion QZR-ZIG2400 via Zigbee2MQTT with whatever s
 | Model | QZR-ZIG2400  |
 | Vendor  | Qmotion  |
 | Description | 5 channel remote |
-| Supports | open, close, stop, position |
+| Exposes | action, position, linkquality |
 | Picture | ![Qmotion QZR-ZIG2400](../images/devices/QZR-ZIG2400.jpg) |
 
 ## Notes
 
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+None
 
-* `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
 
+## Exposes
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `identify`.
+
+### Position (numeric)
+Value can be found in the published state on the `position` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -41,15 +57,15 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
     value_template: "{{ value_json.position }}"
+    icon: "mdi:valve"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

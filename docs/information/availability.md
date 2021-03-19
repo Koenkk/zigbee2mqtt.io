@@ -1,7 +1,7 @@
 ---
 ---
 # Availability
-*An ongoing discussion about this feature can be found here: https://github.com/Koenkk/zigbee2mqtt/issues/775*
+*An ongoing discussion about this feature can be found here: [#775](https://github.com/Koenkk/zigbee2mqtt/issues/775)*
 
 When the availability feature is enabled, Zigbee2MQTT will ping devices to check if they are online.
 In case a devices changes it's online/offline state, Zigbee2MQTT will publish to `zigbee2mqtt/[FRIENDLY_NAME]/availability`; `online` or `offline`.

@@ -2,6 +2,16 @@
 ---
 # Frequently asked questions
 
+- [Why does my device not or fail to pair?](#why-does-my-device-not-or-fail-to-pair)
+- [How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?](#how-do-i-migrate-from-a-cc2531-to-a-more-powerful-coordinator-eg-zzh)
+- [How do I move my Zigbee2MQTT instance to a different environment?](#how-do-i-move-my-zigbee2mqtt-instance-to-a-different-environment)
+- [What does and does not require repairing of all devices?](#what-does-and-does-not-require-repairing-of-all-devices)
+- [Help, Zigbee2MQTT fails to start!](#help-zigbee2mqtt-fails-to-start)
+- [I read that Zigbee2MQTT has a limit of 20 devices (when using a CC2531), is this true?](#i-read-that-zigbee2mqtt-has-a-limit-of-20-devices-when-using-a-cc2531-is-this-true)
+- [Which port should I use for CC26X2R1/CC1352P-2, /dev/ttyACM0 or /dev/ttyACM1?](#which-port-should-i-use-for-cc26x2r1cc1352p-2-devttyacm0-or-devttyacm1)
+- [Common error codes](#common-error-codes)
+- [How do I run multiple instances of Zigbee2MQTT?](#how-do-i-run-multiple-instances-of-zigbee2mqtt)
+
 ## Why does my device not or fail to pair?
 This problem can be divided in 2 categories; no logging is shown at all OR interview fails.
 
@@ -13,6 +23,7 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - If it's a battery powered device, try replacing the battery.
 - You've hit the device limit of the coordinator, especially occurs when using the CC2531 or CC2530 in combination with the source routing firmware. Try reflashing the coordinator and immidiately pair the device after starting Zigbee2MQTT.
 - Try pairing the device closer to the coordinator.
+- If it's a battery powered device, try replacing the batery with a new one.
 - CC2531/CC2530 coordinator only:
   - Stop Zigbee2MQTT, unplug the coordinator, wait 10 seconds, plug the coordinator, start Zigbee2MQTT and try to pair the device again.
   - If none of the above helps, try to reflash the coordinator (does not require repairing of already paired devices).
@@ -22,10 +33,27 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - There can be too much interference, try connecting the coordinator USB through an USB extension cable. This problem occurs a lot when used in combination with a Raspberry Pi 4.
 - If it’s a battery powered device, try replacing the battery.
 - Try repairing the device again for 2 or 3 times.
+- If it's a battery powered device, try replacing the batery with a new one.
 - This might be a Zigbee2MQTT bug, [Create a new issue](https://github.com/Koenkk/zigbee2mqtt/issues/new) with the zigbee-herdsman debug logging attached to it. [How to enable zigbee-herdsman debug logging](https://www.zigbee2mqtt.io/information/debug.html#zigbee-herdsman-debug-logging).
 - If device joins with `0x000000000000000` as `ieeeAddress` (you will see: `Starting interview of '0x0000000000000000'` in the Zigbee2MQTT log) your CC253X might be broken. [See issue #2761](https://github.com/Koenkk/zigbee2mqtt/issues/2761).
 - In case the device is a bulb, try resetting it through [Touclink](./touchlink.md)
 
+## How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?
+**Important:** migrating will require you to repair all devices!
+
+First stop Zigbee2MQTT, plug out the CC2531 and plug the new stick. Next open your `configuration.yaml` and add the following:
+
+```yaml
+advanced:
+  pan_id: 0x1a63
+```
+
+**Note:** if you already had a `pan_id` in your `configuration.yaml` take the existing `pan_id` + 1.
+
+Now start Zigbee2MQTT and repair all your devices. Enjoy!
+
+## How do I move my Zigbee2MQTT instance to a different environment?
+Details about your network are stored in both the coordinator and files under the `data/` directory. To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
 
 ## What does and does not require repairing of all devices?
 ### Requires repairing
@@ -93,6 +121,11 @@ serial:
 
 After reboot your dedvice will have the right permissions and always the same name.
 
+### Error: `Coordinator failed to start, probably the panID is already in use, try a different panID or channel`
+- In case you are migrating from another adapter see: [How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?](#how-do-i-migrate-from-a-cc2531-to-a-more-powerful-coordinator-eg-zzh)
+- If you still get this error after increasing the panID and you are using a Raspberry Pi with other USB devices attached (e.g. SSD) try connecting the SSD or adapter through a powered USB hub.
+- In case you are getting this after first starting successfully and pairing a device it might be that the firmware has been flashed incorrectly. Try flashing the stick on a different computer ([detailed info](https://github.com/Koenkk/zigbee2mqtt/issues/6302)).
+
 ### Error: `Resource temporarily unavailable Cannot lock port`
 This error occurs when another program is already using (and thus locking) the adapter. You can find out which via the following command: `ls -l /proc/[0-9]/fd/ |grep /dev/ttyACM0` (replace `/dev/ttyACM0` with your adapter port).
 
@@ -155,7 +188,7 @@ The correct revision is: **E** like shown below.
 
 All earlier version are not supported (these are development boards). Return this board to the seller immidiately.
 
-## I read that Zigbee2MQTT has a limit of 20 devices, is this true?
+## I read that Zigbee2MQTT has a limit of 20 devices (when using a CC2531), is this true?
 Definitely not! Example given: the default Zigbee2MQTT CC2531 firmware indeed supports 20 devices connected **directly** to the coordinator. However, by having routers in your network the network size can be extended. Probably all AC powered devices e.g. bulbs serve as a router, you can even use another [CC2530/CC2531 as a router](../how_tos/how_to_create_a_cc2530_router.md) (which has a limit of 21 devices).
 
 ### Example
@@ -176,3 +209,11 @@ lrwxrwxrwx 1 root root 13 Jan  6 19:07 usb-Texas_Instruments_XDS110__03.00.00.05
 lrwxrwxrwx 1 root root 13 Jan  6 19:07 usb-Texas_Instruments_XDS110__03.00.00.05__Embed_with_CMSIS-DAP_L1100BTD-if03 -> ../../ttyACM1
 ```
 The device with id ending with *if00* is for device data. Use this port in your configuration.
+
+## Common error codes
+A list of common error codes and what to do in case of them:
+- `MAC_CHANNEL_ACCESS_FAILURE`: this happens when the wireless spectrum is too occupied. Mostly happens when a microwave is on or when there are WiFi networks on the same channel. See [Reduce Wifi interference by changing the Zigbee channel](../how_tos/how_to_improve_network_range_and_stability.md#reduce-wifi-interference-by-changing-the-zigbee-channel) how to fix this.
+- `NWK_TABLE_FULL`: [reported](https://github.com/Koenkk/zigbee2mqtt/issues/4964#issuecomment-757022560) to have same root cause as the above `MAC_CHANNEL_ACCESS_FAILURE`
+
+## How do I run multiple instances of Zigbee2MQTT?
+In case you setup multiple instances of Zigbee2MQTT it's important to use a different `base_topic` and `channel`. This can be configured in the [`configuration.yaml`](./configuration.md).

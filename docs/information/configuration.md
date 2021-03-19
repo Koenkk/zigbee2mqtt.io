@@ -4,10 +4,10 @@
 The following configuration options are available in `data/configuration.yaml`.
 
 ```yaml
-# Required: Home Assistant integration (MQTT discovery) (default: false)
+# Optional: Home Assistant integration (MQTT discovery) (default: false)
 homeassistant: false
 
-# Required: allow new devices to join.
+# Optional: allow new devices to join.
 # WARNING: Disable this after all devices have been paired! (default: false)
 permit_join: true
 
@@ -37,6 +37,10 @@ mqtt:
   # Optional: MQTT protocol version (default: 4), set this to 5 if you
   # use the 'retention' device specific configuration
   version: 4
+  # Optional: Disable retain for all send messages. ONLY enable if you MQTT broker doesn't
+  # support retained message (e.g. AWS IoT core, Azure IoT Hub, Google Cloud IoT core, IBM Watson IoT Platform).
+  # Enabling will break the Home Assistant integration. (default: false)
+  force_disable_retain: false
 
 # Required: serial settings
 serial:
@@ -63,6 +67,7 @@ passlist:
 # Optional: advanced settings
 advanced:
   # Optional: ZigBee pan ID (default: shown below)
+  # Setting pan_id: GENERATE will make Zigbee2MQTT generate a new panID on next startup
   pan_id: 0x1a62
   # Optional: Zigbee extended pan ID (default: shown below)
   ext_pan_id: [0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD]
@@ -108,6 +113,7 @@ advanced:
   # Optional: soft reset ZNP after timeout (in seconds); 0 is disabled (default: 0)
   soft_reset_timeout: 0
   # Optional: network encryption key, will improve security (Note: changing requires repairing of all devices) (default: shown below)
+  # Setting network_key: GENERATE will make Zigbee2MQTT generate a new network key on next startup
   network_key: [1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]
   # Optional: Add a last_seen attribute to MQTT messages, contains date/time of last Zigbee message
   # possible values are: disable (default), ISO_8601, ISO_8601_local, epoch (default: disable)
@@ -126,7 +132,8 @@ advanced:
   # Previously called `availability_whitelist` (which is deprecated)
   availability_passlist:
     - DEVICE_FRIENDLY_NAME or DEVICE_IEEE_ADDRESS
-  # Optional: Enables report feature (see information -> report for more details) (default: false)
+  # Optional: Enables report feature, this feature is DEPRECATED since reporting is now setup by default
+  # when binding devices. Docs can still be found here: https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/information/report.md
   report: true
   # Optional: Home Assistant discovery topic (default: shown below)
   homeassistant_discovery_topic: 'homeassistant'
@@ -140,6 +147,10 @@ advanced:
   timestamp_format: 'YYYY-MM-DD HH:mm:ss'
   # Optional: configure adapter concurrency (e.g. 2 for CC2531 or 16 for CC26X2R1) (default: null, uses recommended value)
   adapter_concurrent: null
+  # Optional: disables the legacy api (default: shown below)
+  legacy_api: true
+  # Optional: use IKEA TRADFRI OTA test server, see OTA updates documentation (default: false)
+  ikea_ota_use_test_url: false
 
 # Optional: experimental options
 experimental:
@@ -149,6 +160,12 @@ experimental:
   # attribute: topic 'zigbee2mqtt/my_bulb/state' payload 'ON"
   # attribute_and_json: both json and attribute (see above)
   output: 'json'
+  # Optional: Transmit power setting in dBm (default: 5). 
+  # This will set the transmit power for devices that bring an inbuilt amplifier.
+  # It can't go over the maximum of the respective hardware and might be limited
+  # by firmware (for example to migrate heat, or by using an unsupported firmware).
+  # For the CC2652R(B) this is 5 dBm, CC2652P/CC1352P-2 20 dBm.
+  transmit_power: 5
 
 # Optional: networkmap options
 map_options:
@@ -166,6 +183,13 @@ map_options:
       line:
         active: '#009900'
         inactive: '#994444'
+        
+# Optional: OTA update settings
+ota:
+    # Minimum time between OTA update checks, see https://www.zigbee2mqtt.io/information/ota_updates.html for more info
+    update_check_interval: 10
+    # Disable automatic update checks, see https://www.zigbee2mqtt.io/information/ota_updates.html for more info
+    disable_automatic_update_check: false
 
 # Optional: see 'Device specific configuration' below
 device_options: {}
@@ -206,6 +230,19 @@ groups: groups.yaml
     friendly_name: group_1
 ```
 
+To define devices/groups in multiple files put the following in your `configuration.yaml`:
+
+```yaml
+devices:
+  - devices1.yaml
+  - devices2.yaml
+groups:
+  - groups1.yaml
+  - groups2.yaml
+```
+
+Any newly added devices will always be added to the first file (`devices1.yaml`/`groups1.yaml` in this example).
+
 ### Specifying MQTT user/password and network_key in a different file
 To specify the MQTT user/password and network_key in a different file, e.g `secret.yaml`, use the following configuration.
 
@@ -237,7 +274,7 @@ The `configuration.yaml` allows to set device specific configuration. This can a
 * `homeassistant`: Allows to override values of the Home Assistant discovery payload. See example below.
 * `debounce`: Debounces messages of this device. When setting e.g. `debounce: 1` and a message from a device is received, Zigbee2MQTT will not immediately publish this message but combine it with other messages received in that same second of that device. This is handy for e.g. the `WSDCGQ11LM` which publishes humidity, temperature and pressure at the same time but as 3 different messages.
 * `debounce_ignore` Protects unique payload values of specified payload properties from overriding within debounce time. When setting e.g. `debounce: 1` and `debounce_ignore: - action` every payload with unique `action` value will be published. This is handy for e.g. the `E1744` which publishes multiple messages in short time period after one turn and `debounce` option without `debounce_ignore` publishes only last payload with action `rotate_stop`. On the other hand `debounce: 1` with `debounce_ignore: - action` will publish all unique action messages, at least two (e.g. `action: rotate_left` and `action: rotate_stop`)
-* `retrieve_state`: Retrieves the state after setting it. Should only be enabled when the [reporting feature](../information/report.md) does not work for this device.
+* `retrieve_state`: (DEPRECATED) Retrieves the state after setting it. Should only be enabled when the [reporting feature](../information/report.md) does not work for this device.
 * `filtered_attributes`: Allows to prevent certain attributes from being published. When a device would e.g. publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will publish `{"temperature": 10}`.
 * `optimistic`: Publish optimistic state after set, e.g. when a brightness change command succeeds Zigbee2MQTT assumes the brightness of the device changed and will publish this (default `true`).
 
@@ -273,7 +310,6 @@ devices:
     debounce_ignore:
       - action
       - brightness
-    retrieve_state: false
     # Set `homeassistant: null` to skip discovery for this device
     homeassistant:
       # Applied to all discovered entities.

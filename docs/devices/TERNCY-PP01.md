@@ -12,7 +12,7 @@ description: "Integrate your TERNCY TERNCY-PP01 via Zigbee2MQTT with whatever sm
 | Model | TERNCY-PP01  |
 | Vendor  | TERNCY  |
 | Description | Awareness switch |
-| Supports | temperature, occupancy, illuminance, click, double click, triple click |
+| Exposes | temperature, occupancy, illuminance_lux, illuminance, action, linkquality |
 | Picture | ![TERNCY TERNCY-PP01](../images/devices/TERNCY-PP01.jpg) |
 
 ## Notes
@@ -53,6 +53,45 @@ when temperature >= 30 precision will be 0, when temperature >= 10 precision wil
 e.g. `1` would add 1 degree to the temperature reported by the device; default `0`.
 
 
+
+## Exposes
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Occupancy (binary)
+Indicates whether the device detected occupancy.
+Value can be found in the published state on the `occupancy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` occupancy is ON, if `false` OFF.
+
+### Illuminance_lux (numeric)
+Measured illuminance in lux.
+Value can be found in the published state on the `illuminance_lux` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
+
+### Illuminance (numeric)
+Raw measured illuminance.
+Value can be found in the published state on the `illuminance` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`, `triple`, `quadruple`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
@@ -71,8 +110,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "°C"
     value_template: "{{ value_json.temperature }}"
+    unit_of_measurement: "°C"
     device_class: "temperature"
 
 binary_sensor:
@@ -88,15 +127,14 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lx"
     value_template: "{{ value_json.illuminance_lux }}"
+    unit_of_measurement: "lx"
     device_class: "illuminance"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
     value_template: "{{ value_json.illuminance }}"
     device_class: "illuminance"
 
@@ -111,8 +149,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

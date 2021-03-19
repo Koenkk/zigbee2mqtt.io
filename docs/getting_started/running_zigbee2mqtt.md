@@ -3,7 +3,7 @@
 # Running Zigbee2MQTT
 These instructions explain how to run Zigbee2MQTT on bare-metal Linux.
 
-You can also run Zigbee2MQTT in a [Docker container](../information/docker.md), as the [Home Assistant Zigbee2MQTT add-on](https://github.com/danielwelch/hassio-zigbee2mqtt), in a [Python Virtual Enviroment](../information/virtual_environment.md) or even on [Windows](../information/windows.md).
+You can also run Zigbee2MQTT in a [Docker container](../information/docker.md), as the [Home Assistant Zigbee2MQTT add-on](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt), in a [Python Virtual Enviroment](../information/virtual_environment.md) or even on [Windows](../information/windows.md).
 
 For the sake of simplicity this guide assumes running on a Raspberry Pi 3 with Raspbian Stretch Lite, but will work on any Linux machine.
 
@@ -11,12 +11,12 @@ Before starting make sure you have an MQTT broker installed on your system.
 There are many tutorials available on how to do this, [example](https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/).
 Mosquitto is the recommended MQTT broker but others should also work fine.
 
-## 1. Determine location of CC2531 USB sniffer and checking user permissions
-We first need to determine the location of the CC2531 USB sniffer. Connect the CC2531 USB to your Raspberry Pi. Most of the times the location of the CC2531 is `/dev/ttyACM0`. This can be verified by:
+## 1. Determine location of the adapter and checking user permissions
+We first need to determine the location of the adapter. Connect the adapter to your Raspberry Pi. Most of the times the location is `/dev/ttyACM0`. This can be verified by:
 
 ```bash
 pi@raspberry:~ $ ls -l /dev/ttyACM0
-crw-rw---- 1 root dialout 166, 0 May 16 19:15 /dev/ttyACM0  # <-- CC2531 on /dev/ttyACM0
+crw-rw---- 1 root dialout 166, 0 May 16 19:15 /dev/ttyACM0  # <-- adapter (CC2531 in this case) on /dev/ttyACM0
 ```
 
 As an alternative, the device can also be mapped by an ID. This can be handy if you have multiple serial devices connected to your Raspberry Pi. In the example below the device location is: `/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00`
@@ -25,6 +25,8 @@ pi@raspberry:/ $ ls -l /dev/serial/by-id
 total 0
 lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00 -> ../../ttyACM0
 ```
+
+**NOTE:** Docker mount command does not support certain symbols like colon (Example: `/dev/serial/by-id/usb-Silicon_Labs_http:__slae.sh_cc2652_-_slaesh_s_iot_stuff_XX:XX:XX:XX:XX:XX:XX:XX-if00-port0`). Error Message: `bad format for path`. You can create a persistant device name with udev or create a symbolic link.
 
 ## 2. Installing
 ```bash
@@ -43,7 +45,7 @@ sudo apt-get install -y nodejs git make g++ gcc
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
 # version has been installed
 node --version  # Should output v12.X or v10.X
-npm --version  # Should output 6.X
+npm --version  # Should output 6.X or 7.X
 
 # Clone Zigbee2MQTT repository
 sudo git clone https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt

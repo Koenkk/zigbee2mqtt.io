@@ -12,7 +12,7 @@ description: "Integrate your GreenPower GreenPower_On_Off_Switch via Zigbee2MQTT
 | Model | GreenPower_On_Off_Switch  |
 | Vendor  | GreenPower  |
 | Description | On/off switch |
-| Supports | action |
+| Exposes | action, linkquality |
 | Picture | ![GreenPower GreenPower_On_Off_Switch](../images/devices/GreenPower_On_Off_Switch.jpg) |
 | White-label | Philips 8718696743133, Niko 91004 |
 
@@ -55,6 +55,22 @@ In case you want to pair it to a different channel you have to factory reset the
 This device can work on any channel, not only 15, 20, 11 or 25. For this refer to the [EnOcean PTM 216Z manual chapter 5.3](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/)
 
 
+
+## Exposes
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `identify`, `recall_scene_0`, `recall_scene_1`, `recall_scene_2`, `recall_scene_3`, `recall_scene_4`, `recall_scene_5`, `recall_scene_6`, `recall_scene_7`, `store_scene_0`, `store_scene_1`, `store_scene_2`, `store_scene_3`, `store_scene_4`, `store_scene_5`, `store_scene_6`, `store_scene_7`, `off`, `on`, `toggle`, `release`, `press_1_of_1`, `release_1_of_1`, `press_1_of_2`, `release_1_of_2`, `press_2_of_2`, `release_2_of_2`, `short_press_1_of_1`, `short_press_1_of_2`, `short_press_2_of_1`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
@@ -73,8 +89,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

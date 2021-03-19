@@ -3,11 +3,14 @@
  */
 const utils = require('./utils');
 const notes = require('./device_page_notes');
+const exposes = require('./device_page_exposes');
 const YAML = require('json2yaml');
 const HomeassistantExtension = require('zigbee2mqtt/lib/extension/homeassistant');
 const homeassistant = new HomeassistantExtension(null, null, null, null, {on: () => {}});
 const assert = require('assert');
 const devices = require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices;
+const path = require('path');
+const imageBase = path.join(__dirname, '..', 'docs', 'images', 'devices');
 
 function arrayEquals(a, b) {
     return Array.isArray(a) &&
@@ -35,8 +38,8 @@ function generate(device) {
         check('notModel');
     }
 
-    const image = utils.getImage(device.model);
-
+    const image = utils.getImage(device, imageBase);
+    const exposesDescription = Array.from(new Set(device.exposes.map((e) => e.hasOwnProperty('name') ? e.name : `${e.type} (${e.features.map((f) => f.name).join(', ')})`))).join(', ');
     return `---
 title: "${device.vendor} ${device.model} control via MQTT"
 description: "Integrate your ${device.vendor} ${device.model} via Zigbee2MQTT with whatever smart home
@@ -51,7 +54,7 @@ description: "Integrate your ${device.vendor} ${device.model} via Zigbee2MQTT wi
 | Model | ${device.model}  |
 | Vendor  | ${device.vendor}  |
 | Description | ${device.description} |
-| Supports | ${device.supports} |
+| Exposes | ${exposesDescription} |
 | Picture | ![${device.vendor} ${device.model}](${image}) |
 ${device.whiteLabel ? `| White-label | ${device.whiteLabel.map((d) => `${d.vendor} ${d.model}`).join(', ')} |\n` : ''}
 ## Notes
@@ -61,6 +64,7 @@ ${device.hasOwnProperty('ota') && ['AC01353010G'].includes(device.model) === fal
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 ` : ''}
+${exposes.generate(device)}
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
@@ -74,7 +78,7 @@ function getNotes(device) {
     const note = notes
         .filter((n) => {
             if (n.simulatedBrightness) {
-                if (device.model === 'ICTC-G-1') return true;
+                if (device.model === 'ICTC-G-1' || device.model === 'E1744') return true;
                 return device.fromZigbee.find((c) => {
                     return arrayEquals(c.type, ['commandMoveToLevel', 'commandMoveToLevelWithOnOff']) ||
                         arrayEquals(c.type, ['commandMove', 'commandMoveWithOnOff']) ||
@@ -82,12 +86,7 @@ function getNotes(device) {
                 });
             }
 
-            if (n.hasOwnProperty('supports') && n.supports.filter((s) => device.supports.includes(s)).length === 0) {
-                return false;
-            }
-
-            if (n.hasOwnProperty('notSupports') &&
-                n.notSupports.filter((s) => device.supports.includes(s)).length !== 0) {
+            if (n.hasOwnProperty('exposes') && !n.exposes(device.exposes)) {
                 return false;
             }
 

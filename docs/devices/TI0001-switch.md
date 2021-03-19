@@ -11,13 +11,52 @@ description: "Integrate your Livolo TI0001-switch via Zigbee2MQTT with whatever 
 
 | Model | TI0001-switch  |
 | Vendor  | Livolo  |
-| Description | New Zigbee Switch [work in progress](https://github.com/Koenkk/zigbee2mqtt/issues/3560) |
-| Supports | on/off |
+| Description | Zigbee switch 1 gang |
+| Exposes | switch (state), linkquality |
 | Picture | ![Livolo TI0001-switch](../images/devices/TI0001-switch.jpg) |
 
 ## Notes
 
-None
+
+After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend
+of Zigbee2MQTT or using [MQTT message](../information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
+In case of problems it's recommended to remove device and than retry pairing and re-configuring device.
+
+### Important
+These devices can only be used on channel 26.
+These devices are locked to the manufacturer's network key (ext_pan_id).
+Your configuration file [data/configuration.yaml](../information/configuration) must contain the following:
+
+```yaml
+advanced:
+  ext_pan_id: [33,117,141,25,0,75,18,0]
+  channel: 26
+```
+
+Therefore these devices may not co-existence with other Zigbee devices.
+Maybe, you need to add a dedicated coordinator and create a new network for Livolo.
+If you decided to create a new network, you should specify another 'pan_id'.
+
+```yaml
+advanced:
+  pan_id: 6756
+```
+
+
+
+## Exposes
+
+### Switch 
+The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -39,8 +78,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

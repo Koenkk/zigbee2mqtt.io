@@ -12,7 +12,7 @@ description: "Integrate your Airam CTR.UBX via Zigbee2MQTT with whatever smart h
 | Model | CTR.UBX  |
 | Vendor  | Airam  |
 | Description | CTR.U remote BX |
-| Supports | action |
+| Exposes | action, linkquality |
 | Picture | ![Airam CTR.UBX](../images/devices/CTR.UBX.jpg) |
 
 ## Notes
@@ -30,6 +30,22 @@ simulated_brightness:
   interval: 200 # interval in milliseconds, default = 200
 ```
 
+
+
+## Exposes
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `on`, `off`, `brightness_step_up`, `brightness_step_down`, `brightness_move_up`, `brightness_move_down`, `brightness_stop`, `recall_*`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -49,8 +65,8 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "lqi"
     value_template: "{{ value_json.linkquality }}"
+    unit_of_measurement: "lqi"
     icon: "mdi:signal"
 ```
 {% endraw %}

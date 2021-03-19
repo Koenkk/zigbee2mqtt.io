@@ -3,6 +3,8 @@
  */
 
 const devices = [...require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices];
+const path = require('path');
+const imageBase = path.join(__dirname, '..', 'docs', 'images', 'devices');
 
 for (const device of devices) {
     if (device.whiteLabel) {
@@ -68,13 +70,14 @@ const generateTable = (devices) => {
     devices = new Map(devices.map((d) => [d.model, d]));
     devices.forEach((d) => {
         const model = d.whiteLabelOf ? d.whiteLabelOf.model : d.model;
-        const image = utils.getImage(d.model);
+        const image = utils.getImage(d, imageBase);
         let description = d.description || d.whiteLabelOf.description;
         if (d.whiteLabelOf) {
             description = `${description} (white-label of ${d.whiteLabelOf.vendor} ${d.whiteLabelOf.model})`;
         }
         // eslint-disable-next-line
-        text += `| [${d.model}](../devices/${utils.normalizeModel(model)}.md) | ${d.vendor} ${description} (${d.supports}) | ![${image}](${image}) |\n`;
+        const exposes = Array.from(new Set(d.exposes.map(e => e.name ? e.name : e.type).filter(e => e !== 'linkquality' && e !== 'effect'))).join(', ');
+        text += `| [${d.model}](../devices/${utils.normalizeModel(model)}.md) | ${d.vendor} ${description} (${exposes}) | ![${image}](${image}) |\n`;
     });
 
     return text;

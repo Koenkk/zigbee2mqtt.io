@@ -6,3 +6,5 @@ plugins:
 
 github:
   repository_url: https://github.com/koenkk/zigbee2mqtt
+  
+google_analytics: G-H74W4PSJDZ
