@@ -213,6 +213,13 @@ input_text:
     name: Zigbee2MQTT Remove
     initial: ""
 
+# Input boolean to set the force remove flag for devices 
+input_boolean:
+  zigbee2mqtt_force_remove:
+    name: Zigbee2MQTT Force Remove
+    initial: false
+    icon: mdi:alert-remove
+
 # Scripts for renaming & removing devices
 script:
   zigbee2mqtt_rename:
@@ -232,7 +239,11 @@ script:
       service: mqtt.publish
       data_template:
         topic: zigbee2mqtt/bridge/request/device/remove
-        payload_template: "{{ states.input_text.zigbee2mqtt_remove.state | string }}"
+        payload_template: >-
+          { 
+            "id": "{{ states.input_text.zigbee2mqtt_remove.state | string }}", 
+            "force": {% if states.input_boolean.zigbee2mqtt_force_remove.state == "off" %}false{% else %}true{% endif %}
+          }
 
 # Timer for joining time remaining (120 sec = 2 min)
 timer:
@@ -353,6 +364,7 @@ entities:
   - entity: script.zigbee2mqtt_rename
   - type: divider
   - entity: input_text.zigbee2mqtt_remove
+  - entity: input_boolean.zigbee2mqtt_force_remove
   - entity: script.zigbee2mqtt_remove
 ```
 
