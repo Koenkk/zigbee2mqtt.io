@@ -144,7 +144,7 @@ In case you see message like below when running `dmesg -w` you are using a bad p
 When you have a SSD connected to the Pi, try connecting the adapter via a powered USB hub.
 
 ### Make sure the extension cable works
-A bad extension cable can lead to connection issues between the system and the adpater.
+A bad extension cable can lead to connection issues between the system and the adapter.
 Symptoms of this are disconnection messages in the `dmesg -w` log like below.
 
 ```
