@@ -10,7 +10,7 @@ description: "Integrate your HKGK BAC-002-ALZB via Zigbee2MQTT with whatever sma
 # HKGK BAC-002-ALZB
 
 | Model | BAC-002-ALZB  |
-| Vendor  | HKGK  |
+| Vendor  | [HKGK](https://www.aliexpress.com/item/1005001441524917.html?spm=a2g0s.9042311.0.0.27424c4dshq3Ag)  |
 | Description | HKGK BHT series Thermostat |
 | Exposes | lock (state), climate (current_cooling_setpoint, local_temperature, system_mode, running_state, preset), linkquality |
 | Picture | ![HKGK BAC-002-ALZB](../images/devices/BAC-002-ALZB.jpg) |
