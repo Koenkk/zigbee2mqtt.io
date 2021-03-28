@@ -328,6 +328,7 @@ To disable reporting set the `maximum_report_interval` to `65535`.
 Notes:
 - Not all devices support the Zigbee configure reporting command (e.g. Xiaomi WSDCGQ11LM temperature/humidity sensors don't support it)
 - If configure reporting fails for a battery powered device make sure to wake it up right before sending the command.
+- The `reportable_change` value depends on the unit of the attribute, e.g. for temperature 100 means in general 1°C of change.
 
 
 ### Group

@@ -33,6 +33,7 @@ The following additional hardware is required in order to flash the CC2531:
 Credits to [@Frans-Willem](https://github.com/frans-Willem) for majority of instructions.
 
 1. Install prerequisites for [CC-Tool](https://github.com/dashesy/cc-tool) using a package manager (e.g. [Homebrew](https://brew.sh/) for macOS)
+* Ubuntu (version >= 20.04): install cc-tool with `sudo apt install cc-tool` & go on with 3.
 * Ubuntu/Debian: libusb-1.0-0-dev, libboost-all-dev, autoconf, libtool
 * Fedora: dh-autoreconf, boost-devel, libusb1-devel, gcc-c++
 * Archlinux: dh-autoreconf, libusb, boost
