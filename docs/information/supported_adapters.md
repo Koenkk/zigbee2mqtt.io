@@ -97,6 +97,14 @@ Zigbee2MQTT officially supports the following adapters:
     <td></td>
     <td><a href="https://zigate.fr/boutique/?orderby=date_desc">ZiGate</a></td>
   </tr>
+  <tr>
+    <td><img src="../images/Silicon_Labs_Gecko_EFR32_SoCs.webp"></td>
+    <td>Silicon Labs EZSP v8 <b>(experimental)</b></td>
+    <td>Initial development started on experimental (pre-alpha stage) support for various adapters based on Silicon Labs EFR32 SoC families with EmberZNet NCP 6.7.8 firmware or later via EZSP version 8 (EmberZNet Serial Protocol) interface. This include all hardware based on SoCs/Modules from Silabs EFR32MG21/MGM210 and EFR32MG12/MGM12 series.</td>
+    <td><a href="https://github.com/Koenkk/zigbee-herdsman/issues/319">Coordinator</a><br/></td>
+    <td></td>
+    <td></td>
+  </tr>
 </table>
 </div>
 
@@ -110,7 +118,7 @@ Before buying an adapter, please read the notes below!
 - Adapters that can handle large networks are; adapters using the following chips **CC2652R**, **CC2652RB**, **CC1352P**, **CC2538** and the **Conbee II**.
 - Of all adapter the **Texas Instruments CC2531** has the worst range, other adapters with a PCB antenna like the **Texas Instruments LAUNCHXL-CC26X2R1** and **ConBee II** provide better range. Adapters with an external antenna have the best range.
 - When migrating to another adapter make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2MQTT won't start. Migrating to a different adapter [may require](./FAQ.md#what-does-and-does-not-require-repairing-of-all-devices) repairing all devices.
-- Support for the **Conbee II** ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/72)) and **ZiGate USB-TTL** ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/242)) is experimental
+- Support for the **Conbee II** ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/72)), **ZiGate USB-TTL** ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/242)), and **Silicon Labs EZSP** ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/319)) is experimental, meaning not feature complete nor recommended for a stable enviroment.
 - When using a **Conbee II** or **ZiGate USB-TTL** and you get: `Error: Failed to connect to the adapter (Error: SRSP - SYS - ping after 6000ms)` when starting Zigbee2MQTT set the following in your `configuration.yaml`.
 
 ```yaml
