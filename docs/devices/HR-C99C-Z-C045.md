@@ -20,7 +20,7 @@ description: "Integrate your ADEO HR-C99C-Z-C045 via Zigbee2MQTT with whatever s
 
 ### Pairing
 Hold small reset button pressed (located on the backside of remote) for 3
-seconds (until the front LED blicks) and device will reset and will attempt to join network.
+seconds (until the front LED blinks) and device will reset and will attempt to join network.
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*

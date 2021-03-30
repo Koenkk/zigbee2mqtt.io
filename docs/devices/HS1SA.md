@@ -23,7 +23,7 @@ description: "Integrate your HEIMAN HS1SA via Zigbee2MQTT with whatever smart ho
 Press the side button of the device with a paper clip for more than 2 seconds. The main button led will flash. Then make sure the device is awake during pairing phase or the configuration may fail. To ensure device is awake press the main button every 2 seconds until configuration is done in Zigbee2MQTT logs.
 
 ### Important
-There are 3 versions of this device: Standalone, Zigbee and Z-wave. These are visualy identical. Make sure to get the correct version that will work with Zigbee2MQTT:
+There are 3 versions of this device: Standalone, Zigbee and Z-wave. These are visually identical. Make sure to get the correct version that will work with Zigbee2MQTT:
 
 Supported:
 - **HS1SA-M : Zigbee**

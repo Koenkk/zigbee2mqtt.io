@@ -141,7 +141,7 @@ function getExposeDocs(expose) {
         lines.push(``);
         lines.push(`#### Transition`);
         lines.push(`For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property \`transition\` to the payload which is the transition time in seconds.`);
-        lines.push(`Examples: \`{"brightness":156,"transition":3}\`, \`{"color_temp":241,"transition":0.5}\`.`);
+        lines.push(`Examples: \`{"brightness":156,"transition":3}\`, \`{"color_temp":241,"transition":1}\`.`);
 
         lines.push(``);
         lines.push(`#### Moving/stepping`);

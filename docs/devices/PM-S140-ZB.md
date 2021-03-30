@@ -18,7 +18,7 @@ description: "Integrate your Dawon DNS PM-S140-ZB via Zigbee2MQTT with whatever 
 ## Notes
 
 
-### Routing functionallity
+### Routing functionality
 This device does **not** act as a router.
 
 

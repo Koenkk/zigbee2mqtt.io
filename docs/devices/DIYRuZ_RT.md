@@ -19,7 +19,7 @@ description: "Integrate your DIYRuZ DIYRuZ_RT via Zigbee2MQTT with whatever smar
 
 
 # Firmware
-This firmware can be used to flash any CC2530 device to support zigbee 3.0
+This firmware can be used to flash any CC2530 device to support Zigbee 3.0
 For example the Sonoff BasicZBR3
 Firmware download: https://github.com/diyruz/diyruz_rt
 Blog about supporting Zigbee 3.0 to CC2530: https://habr.com/ru/company/iobroker/blog/495926/
