@@ -57,7 +57,7 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
 
 
 ### Remark
-This devices is similar to GL-G-001Z, except that zigbee routing should work for this one.
+This devices is similar to GL-G-001Z, except that Zigbee routing should work for this one.
 
 
 ## OTA updates
@@ -79,7 +79,7 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
-Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":0.5}`.
+Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
 
 #### Moving/stepping
 Instead of setting a value (e.g. brightness) directly it is also possible to:

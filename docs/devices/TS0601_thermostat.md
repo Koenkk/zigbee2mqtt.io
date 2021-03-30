@@ -31,7 +31,7 @@ While pairing, keep the valve close to the coordinator.
 6. *Keep display on*: Touch home (:house:) every few seconds.
 
 ### Local temperature
-If you'd like to force device to send local_temperature you can use this mqtt command:
+If you'd like to force device to send local_temperature you can use this MQTT command:
 * `topic`: zigbee2mqtt/FRIENDLY_NAME/set/local_temperature_calibration
 * `payload`: YOUR_CURRENT_CALIBRATION_VALUE
 

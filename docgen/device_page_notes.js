@@ -1223,6 +1223,9 @@ When you let go of the button an LED should blink.
 After resetting the 3 gang switch will automatically connect.
 
 While pairing, keep the 3 gang switch close to the adapter.
+
+### Node-Red
+How to use the connector strip with Node-Red: Use the "command node" of the node-red-contrib-zigbee-package. Drop-down-lists are helping you with the configuration.
 `,
     },
     {
@@ -1561,22 +1564,28 @@ Note: if \`hue_power_on_behavior\` is set to \`off\`, then the only way to turn 
         note: `
 ### Set default power on/off transition
 Various Osram/Sylvania LED support setting a default transition when turning a light on and off.
+
+**TOPIC**: \`zigbee2mqtt/FRIENDLY_NAME/set\`
 \`\`\`js
 {
-    "set_transition": 0.1,            //time in seconds (integer or float)
+    "set_transition": 1
 }
 \`\`\`
+**INFO**: Value is time in seconds (integer, float values are not supported)
 
 ### Remember current light state
 Various Osram/Sylvania LED support remembering their current state in case of power loss, or if a light
 is manually switched off then on. Lights will remember their respective attributes
 (i.e. brightness, color, saturation, etc.).
-NOTE: This must be executed every time you make changes to a light's attributes for it to then 'remember' it.
+**NOTE**: This must be executed every time you make changes to a light's attributes for it to then 'remember' it.
+
+**TOPIC**: \`zigbee2mqtt/FRIENDLY_NAME/set\`
 \`\`\`js
 {
-    "remember_state": true,            // true, false (boolean)
+    "remember_state": true
 }
 \`\`\`
+**INFO**: Value is true, false (boolean)
 `,
     },
     {
@@ -2107,6 +2116,14 @@ By publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` various device attributes can
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the green light starts blinking).
 After this the device will automatically join.
+`,
+    },
+    {
+        model: ['4257050-RZHAC'],
+        note: `
+### Pairing
+
+To pair the outlet, you need to hold the button as you plug it in. Release the button as soon as the LED light illuminates.
 `,
     },
     {
@@ -3219,15 +3236,15 @@ for example:
 '0x001fee0000001234':
     friendly_name: cover_not_supporting_tilt'
     homeassistant:
-    tilt_command_topic: null
-    tilt_status_topic: null
+      tilt_command_topic: null
+      tilt_status_topic: null
 '0x001fee0000001234':
     friendly_name: cover_supporting_neither_lift_nor_tilt'
     homeassistant:
     set_position_topic: null
     position_topic: null
-    tilt_command_topic: null
-    tilt_status_topic: null
+      tilt_command_topic: null
+      tilt_status_topic: null
 \`\`\`
 `,
     },
@@ -3466,11 +3483,11 @@ After installing the TRV twist the cap in the **-** direction and hold for
 2 seconds until the blue LED lights up.
 
 ### Device hard reset
-If the device fails to pair/join the network (\`red:yellow:blue\` on paring mode) or you changed the network id/channel, connect to another network, bought the TRV second hand, you can perform a factory reset to start fresh.
+If the device fails to pair/join the network (\`red:yellow:blue\` on pairing mode) or you changed the network id/channel, connect to another network, bought the TRV second hand, you can perform a factory reset to start fresh.
 
 1. Make sure that the TRV is NOT in pairing mode.
 2. Twist the cap in the **-** direction and hold till blue light turns off and then center light blinks red (about 15 seconds).
-3. Release the button, you should see a \`red:gree:blue\` short flash; the valve will go into installation mode.
+3. Release the button, you should see a \`red:green:blue\` short flash; the valve will go into installation mode.
 
 ### Controlling
 

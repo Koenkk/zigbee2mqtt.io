@@ -34,7 +34,7 @@ Open source firmware can be found here: [Github](https://github.com/diyruz/freep
 ### How to use touch link
 1. Bring you remote near to TL device
 2. Hold button (2) for 5 seconds
-TL funtionality can work without connecting to network
+TL functionality can work without connecting to network
 
 
 
