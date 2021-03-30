@@ -74,10 +74,10 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Voltage (numeric)
-Measured electrical potential value.
+Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `V`.
+The unit of this value is `mV`.
 
 ### Occupancy (binary)
 Indicates whether the device detected occupancy.
@@ -127,7 +127,7 @@ The unit of this value is `°C`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `disarm`, `arm_day_zones`, `identify`, `arm_night_zones`, `arm_all_zones`, `invalid_code`, `emergency`.
+The possible values are: `disarm`, `arm_day_zones`, `identify`, `arm_night_zones`, `arm_all_zones`, `exit_delay`, `emergency`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -156,7 +156,7 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.voltage }}"
-    unit_of_measurement: "V"
+    unit_of_measurement: "mV"
     device_class: "voltage"
 
 binary_sensor:

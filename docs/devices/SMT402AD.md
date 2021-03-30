@@ -12,7 +12,7 @@ description: "Integrate your Stelpro SMT402AD via Zigbee2MQTT with whatever smar
 | Model | SMT402AD  |
 | Vendor  | Stelpro  |
 | Description | Maestro, line-voltage thermostat |
-| Exposes | local_temperature, lock (state), climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
+| Exposes | local_temperature, keypad_lockout, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![Stelpro SMT402AD](../images/devices/SMT402AD.jpg) |
 
 ## Notes
@@ -33,10 +33,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Lock 
-The current state of this lock is in the published state under the `keypad_lockout` property (value is `1` or `0`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keypad_lockout": "1"}` or `{"keypad_lockout": "0"}`.
-To read the current state of this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keypad_lockout": ""}`.
+### Keypad_lockout (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `keypad_lockout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keypad_lockout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keypad_lockout": NEW_VALUE}`.
+If value equals `lock1` keypad_lockout is ON, if `unlock` OFF.
 
 ### Climate 
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
@@ -67,15 +69,13 @@ sensor:
     unit_of_measurement: "°C"
     device_class: "temperature"
 
-lock:
+binary_sensor:
   - platform: "mqtt"
-    state_topic: true
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     value_template: "{{ value_json.keypad_lockout }}"
-    payload_lock: "1"
-    payload_unlock: "0"
-    command_topic_postfix: "keypad_lockout"
+    payload_on: "lock1"
+    payload_off: "unlock"
 
 climate:
   - platform: "mqtt"

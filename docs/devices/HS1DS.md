@@ -1,19 +1,19 @@
 ---
-title: "HEIMAN HS1-WL-E control via MQTT"
-description: "Integrate your HEIMAN HS1-WL-E via Zigbee2MQTT with whatever smart home
+title: "HEIMAN HS1DS control via MQTT"
+description: "Integrate your HEIMAN HS1DS via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1-WL-E.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1DS.md)*
 
-# HEIMAN HS1-WL-E
+# HEIMAN HS1DS
 
-| Model | HS1-WL-E  |
+| Model | HS1DS  |
 | Vendor  | HEIMAN  |
-| Description | Water leakage sensor |
-| Exposes | water_leak, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HS1-WL-E](../images/devices/HS1-WL-E.jpg) |
+| Description | Door sensor |
+| Exposes | contact, battery_low, tamper, battery, linkquality |
+| Picture | ![HEIMAN HS1DS](../images/devices/HS1DS.jpg) |
 
 ## Notes
 
@@ -22,11 +22,11 @@ None
 
 ## Exposes
 
-### Water_leak (binary)
-Indicates whether the device detected a water leak.
-Value can be found in the published state on the `water_leak` property.
+### Contact (binary)
+Indicates if the contact is closed (= true) or open (= false).
+Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` water_leak is ON, if `false` OFF.
+If value equals `false` contact is ON, if `true` OFF.
 
 ### Battery_low (binary)
 Indicates if the battery of this device is almost empty.
@@ -39,6 +39,13 @@ Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -58,10 +65,10 @@ binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.water_leak }}"
-    payload_on: true
-    payload_off: false
-    device_class: "moisture"
+    value_template: "{{ value_json.contact }}"
+    payload_on: false
+    payload_off: true
+    device_class: "door"
 
 binary_sensor:
   - platform: "mqtt"
@@ -79,6 +86,14 @@ binary_sensor:
     value_template: "{{ value_json.tamper }}"
     payload_on: true
     payload_off: false
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
+    device_class: "battery"
 
 sensor:
   - platform: "mqtt"

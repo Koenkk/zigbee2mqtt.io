@@ -1229,6 +1229,23 @@ How to use the connector strip with Node-Red: Use the "command node" of the node
 `,
     },
     {
+        model: 'BAC-002-ALZB',
+        note: `
+### Pairing
+Switch the thermostat off. Press and hold the temperature down button for +- 8 seconds to enable the pairing mode (display lights up and a WiFi-like icon is blinking). After successful interview turn the thermostat on again.
+
+### Stop message flooding
+This unit has a bug that makes it send multiple messages when updating. To stop this from flooding your MQTT Queues, please add the following to your \`configuration.yaml\` file:
+
+{% raw %}
+devices:
+  '0x12345678':
+    friendly_name: thermostat
+    debounce: 1
+{% endraw %}
+`,
+    },
+    {
         model: 'HG06336',
         note: `
 ### Pairing

@@ -12,7 +12,7 @@ description: "Integrate your SmartThings STS-IRM-250 via Zigbee2MQTT with whatev
 | Model | STS-IRM-250  |
 | Vendor  | SmartThings  |
 | Description | Motion sensor (2016 model) |
-| Exposes | temperature, occupancy, battery_low, tamper, battery, linkquality |
+| Exposes | temperature, occupancy, tamper, battery, linkquality |
 | Picture | ![SmartThings STS-IRM-250](../images/devices/STS-IRM-250.jpg) |
 
 ## Notes
@@ -42,12 +42,6 @@ Indicates whether the device detected occupancy.
 Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
-
-### Battery_low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
 
 ### Tamper (binary)
 Indicates whether the device is tampered.
@@ -92,15 +86,6 @@ binary_sensor:
     payload_on: true
     payload_off: false
     device_class: "motion"
-
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.battery_low }}"
-    payload_on: true
-    payload_off: false
-    device_class: "battery"
 
 binary_sensor:
   - platform: "mqtt"

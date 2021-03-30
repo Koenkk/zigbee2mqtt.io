@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS3DS via Zigbee2MQTT with whatever smart ho
 | Model | HS3DS  |
 | Vendor  | HEIMAN  |
 | Description | Door sensor |
-| Exposes | contact, battery_low, tamper, battery, linkquality |
+| Exposes | contact, battery, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN HS3DS](../images/devices/HS3DS.jpg) |
 
 ## Notes
@@ -28,6 +28,13 @@ Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
 
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
 ### Battery_low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
@@ -39,13 +46,6 @@ Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
-
-### Battery (numeric)
-Remaining battery in %.
-Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -70,6 +70,14 @@ binary_sensor:
     payload_off: true
     device_class: "door"
 
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
+    device_class: "battery"
+
 binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
@@ -86,14 +94,6 @@ binary_sensor:
     value_template: "{{ value_json.tamper }}"
     payload_on: true
     payload_off: false
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.battery }}"
-    unit_of_measurement: "%"
-    device_class: "battery"
 
 sensor:
   - platform: "mqtt"

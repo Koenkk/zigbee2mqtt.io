@@ -12,7 +12,7 @@ description: "Integrate your SONOFF SNZB-04 via Zigbee2MQTT with whatever smart 
 | Model | SNZB-04  |
 | Vendor  | SONOFF  |
 | Description | Contact sensor |
-| Exposes | contact, battery_low, tamper, battery, linkquality |
+| Exposes | contact, battery_low, battery, voltage, linkquality |
 | Picture | ![SONOFF SNZB-04](../images/devices/SNZB-04.jpg) |
 | White-label | eWeLink RHK06 |
 
@@ -38,18 +38,18 @@ Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery_low is ON, if `false` OFF.
 
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
-
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Voltage (numeric)
+Voltage of the battery in millivolts.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `mV`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -83,14 +83,6 @@ binary_sensor:
     payload_off: false
     device_class: "battery"
 
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.tamper }}"
-    payload_on: true
-    payload_off: false
-
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
@@ -98,6 +90,14 @@ sensor:
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
     device_class: "battery"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.voltage }}"
+    unit_of_measurement: "mV"
+    device_class: "voltage"
 
 sensor:
   - platform: "mqtt"

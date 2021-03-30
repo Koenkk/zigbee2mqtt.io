@@ -12,7 +12,7 @@ description: "Integrate your SONOFF SNZB-02 via Zigbee2MQTT with whatever smart 
 | Model | SNZB-02  |
 | Vendor  | SONOFF  |
 | Description | Temperature and humidity sensor |
-| Exposes | battery, temperature, humidity, linkquality |
+| Exposes | battery, temperature, humidity, voltage, linkquality |
 | Picture | ![SONOFF SNZB-02](../images/devices/SNZB-02.jpg) |
 | White-label | eWeLink RHK08 |
 
@@ -63,6 +63,12 @@ Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
+### Voltage (numeric)
+Voltage of the battery in millivolts.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `mV`.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
@@ -100,6 +106,14 @@ sensor:
     value_template: "{{ value_json.humidity }}"
     unit_of_measurement: "%"
     device_class: "humidity"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.voltage }}"
+    unit_of_measurement: "mV"
+    device_class: "voltage"
 
 sensor:
   - platform: "mqtt"

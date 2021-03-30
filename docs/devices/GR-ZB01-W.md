@@ -57,7 +57,7 @@ cover:
   - platform: "mqtt"
     availability_topic: "zigbee2mqtt/bridge/state"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
-    value_template: "{{ value_json.position }}"
+    position_template: "{{ value_json.position }}"
     set_position_template: "{ \"position\": {{ position }} }"
     set_position_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     position_topic: "zigbee2mqtt/<FRIENDLY_NAME>"

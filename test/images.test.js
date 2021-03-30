@@ -58,6 +58,8 @@ describe('Device images', () => {
             }
         });
 
+        missing.forEach((m) => console.log(m.replace('.jpg', '')));
+
         chai.assert.strictEqual(missing.length, 0, `Missing device images: ${missing.join(', ')}`);
     });
 
