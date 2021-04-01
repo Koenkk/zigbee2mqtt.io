@@ -200,8 +200,8 @@ to enter pairing mode. The LED will blink blue and the device will join the netw
     {
         model: ['HLU2909K'],
         note: `
-### Power cut
-ZigBee 3.0, cuts power if too high temperature monitoring and if overloaded.
+### Protection
+ZigBee 3.0, monitoring and cuts power if too high temperature or if overloaded.
 
 ### Pairing
 Factory reset by press & hold the power button for 12 seconds. The LED is then starting to blink 3 times RED in intervals during pairing process.
@@ -212,6 +212,29 @@ Factory reset by press & hold the power button for 12 seconds. The LED is then s
 
 ### Manual
 [Supplier's manual](http://www.nonline.no/wp-content/uploads/2020/03/Apex_Smart_Plug_UserManual.pdf)
+`,
+    },
+    {
+        model: ['HSE2905E'],
+        note: `
+### Pairing
+Factory reset by removing the plastic cover and press & hold the power button for 10 seconds. The LED is then
+starting to blink Red/Blue to indicate in pairing mode.
+
+### Should automatically support (only tested Kamstrup)
+- Aidon
+- Kaifa
+- Kamstrup
+
+### Configuring interface mode
+There should be no need to configure into any interface mode as the Eva HAN should autodetect the correct mode.
+
+### Not getting measurements
+In case you are not getting any measurements, it could be that your firmware is too old. If firmware are < 0.4
+either update fw via Eva Smart HUB or ask Datek for a replacement with min fw 0.4. Tested on 0.4.
+
+### Where do I find this product
+[Product page](https://shop.evasmart.no/produkt/smarthus/maleravleser#product-tabs1)
 `,
     },
     {

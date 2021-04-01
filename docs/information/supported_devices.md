@@ -336,7 +336,7 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | Model | Description | Picture |
 | ------------- | ------------- | -------------------------- |
 | [HLU2909K](../devices/HLU2909K.md) | Datek APEX smart plug 16A (power, current, voltage, switch, temperature) | ![../images/devices/HLU2909K.jpg](../images/devices/HLU2909K.jpg) |
-| [Datek_HAN](../devices/Datek_HAN.md) | Datek Eva AMS HAN power-meter sensor (power, energy, current, voltage, current_phase_b, voltage_phase_b, current_phase_c, voltage_phase_c) | ![../images/devices/Datek_HAN.jpg](../images/devices/Datek_HAN.jpg) |
+| [HSE2905E](../devices/HSE2905E.md) | Datek Datek Eva AMS HAN power-meter sensor (power, energy, current, voltage, current_phase_b, voltage_phase_b, current_phase_c, voltage_phase_c, temperature) | ![../images/devices/HSE2905E.jpg](../images/devices/HSE2905E.jpg) |
 
 ### Dawon DNS
 
