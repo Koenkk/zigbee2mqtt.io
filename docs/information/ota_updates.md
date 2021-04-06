@@ -15,6 +15,7 @@ Not all manufacturers make their updates available, therefore only the following
 - Jung ZLLxx5004M, Jung ZLLHS4 and Gira 2435-10
 Gira does unfortunately not seem to offer firmware updates for their wall transmitter 2430-100 (which is very similar to the Jung ZLLxx5004M) and the update file for the Jung wall transmitter does not work for Gira (probably because the Gira wall transmitter only has 6 buttons instead of 8 on the Jung).
 - Sengled devices
+- Some Xiaomi devices
 
 
 ## Automatic checking for available updates
