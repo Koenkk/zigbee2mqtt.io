@@ -98,9 +98,13 @@ In this example the correct `port` would be `/dev/ttyACM0`.
 ### Verify that the user you run Zigbee2MQTT as has write access to the port
 This can be tested by executing: `test -w [PORT] && echo success || echo failure` (e.g. `test -w /dev/ttyACM0 && echo success || echo failure`).
 
-If it outputs `failure`. Assign write acces by executing: `sudo chown [USER] [PORT]` (e.g. `sudo chown pi /dev/ttyACM0`).
+If it outputs `failure` it could mean your user does not have access to the port. To test assign write acces by executing: `sudo chown [USER] [PORT]` (e.g. `sudo chown pi /dev/ttyACM0`).
 
-You need to apply this on every reboot. To fix this you can use a 'udev' rule:
+if it outputs `failure`, then you need to permanently give your user permission to the device.
+
+#### Method 1: Give your user permissions on every reboot. ####
+
+You can create a 'udev' rule yo give your user permissions after every reboot:
 
 1. `udevadm info -a -n /dev/ttyACM0 | grep 'serial'`
 get the serial to your device `YOURSERIAL`
@@ -120,6 +124,19 @@ serial:
 …`
 
 After reboot your dedvice will have the right permissions and always the same name.
+ 
+#### Method 2: Add your user to specific groups ####
+
+As mentioned on https://github.com/esp8266/source-code-examples/issues/26 , depending on your linux installation, various groups could have ownership of the device.
+
+Add your user to the `uucp ` ,  `tty `  ,  `dialout `   groups:
+
+```
+sudo usermod -a -G uucp $USER
+sudo usermod -a -G tty $USER
+sudo usermod -a -G dialout $USER
+```
+Reboot your device and now your user should have access to the device.
 
 ### Error: `Coordinator failed to start, probably the panID is already in use, try a different panID or channel`
 - In case you are migrating from another adapter see: [How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?](#how-do-i-migrate-from-a-cc2531-to-a-more-powerful-coordinator-eg-zzh)
