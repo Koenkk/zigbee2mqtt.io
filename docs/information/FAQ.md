@@ -85,6 +85,11 @@ You **don't** need to re-pair your devices when:
 ## Help, Zigbee2MQTT fails to start!
 Most of the times this is caused by zigbee-herdsman not being able to communicate with your adapter (e.g. CC2531).
 
+### Error: SRSP - SYS - ping after 6000ms
+2 common reasons of this error:
+1. The port of your serial adapter changed. Check [this](../getting_started/running_zigbee2mqtt.md#1-determine-location-of-the-adapter-and-checking-user-permissions) to find out the port of your adapter.
+2. If you are using a CC2530 or CC2531; it is a common issue for this adapter to crash (due to its outdated hardware). Reflashing the firmware should fix the problem. If it happens often consider upgrading to a [more powerful adapter](../getting_started/what_do_i_need.md#supported-zigbee-adapter).
+
 ### Verify that you put the correct port in configuration.yaml
 Execute the following command to find out the correct path:
 ```bash
@@ -124,7 +129,7 @@ serial:
 …`
 
 After reboot your dedvice will have the right permissions and always the same name.
- 
+
 #### Method 2: Add your user to specific groups ####
 
 As mentioned on https://github.com/esp8266/source-code-examples/issues/26 , depending on your linux installation, various groups could have ownership of the device.
