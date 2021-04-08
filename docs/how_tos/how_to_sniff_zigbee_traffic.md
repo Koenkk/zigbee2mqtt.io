@@ -54,9 +54,11 @@ Add the Trust Center link key by going to to Edit -> Preferences -> Protocols ->
 
 Next we need to figure out the network encryption key (Transport Key). There are two ways to do this:
 
-1) By default, if you haven't changed `network_key` in your `configuration.yaml` this will be `01:03:05:07:09:0B:0D:0F:00:02:04:06:08:0A:0C:0D`. If you changed your `network_key`, then convert each number into its 2-digit hexadecimal value, and combine them all with `:` between. E.g. `[1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]` -> `01:03:05:07:09:0B:0D:0F:00:02:04:06:08:0A:0C:0D`
+1) By default, if you haven't changed `network_key` in your `configuration.yaml` this will be `01:03:05:07:09:0B:0D:0F:00:02:04:06:08:0A:0C:0D`. If you changed your `network_key`, then convert each number into its 2-digit hexadecimal value, and combine them all with `:` between. E.g. `[1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]` -> `01:03:05:07:09:0B:0D:0F:00:02:04:06:08:0A:0C:0D`.
 
 2) If you don't want to manually translate the numbers, the network encryption key is also exposed when a device joins the network. Pair a new device to the network (or re-pair an existing one) and grab the message where the Info is *Device Announcement....*. Open the message and expand *ZigBee Network Layer Data* -> *ZigBee Security Header*.
+
+3) (Experimental) You can try the code snippet `cat /your/configuration.yaml | python3 -c "import sys;print(':'.join([hex(int(entry[1]))[2:] for entry in [line.strip().split(' ') for line in sys.stdin] if len(entry)==2 and str.isdigit(entry[1])]))"` if you have python3 installed. This may not always work as it doesn't really parse the yaml, just extracts the lines 'looking like keys' and converts them.
 
 ![Wireshark network key](../images/wireshark_network_key.png)
 
