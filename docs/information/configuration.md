@@ -106,7 +106,7 @@ advanced:
     type: 5424 # The type of the syslog protocol to use (Default: BSD, also valid: 5424).
     app_name: Zigbee2MQTT # The name of the application (Default: Zigbee2MQTT).
     eol: '\n' # The end of line character to be added to the end of the message (Default: Message without modifications).
-  # Optional: Baudrate for serial port (default: 115200 for Z-Stack, 38400 for Deconz)
+  # Optional: Baud rate speed for serial port, this can be anything firmware support but default is 115200 for Z-Stack and EZSP, 38400 for Deconz, however note that some EZSP firmware need 57600.
   baudrate: 115200
   # Optional: RTS / CTS Hardware Flow Control for serial port (default: false)
   rtscts: false
