@@ -55,7 +55,7 @@ $ ls -l /dev/tty*
 $ id
 ```
 
-4. Start the docker container (note: interface, user&group ID must match the outputs above, priveleged mode is not required):
+4. Start the docker container (note: interface, user&group ID must match the outputs above):
 ```
 $ sudo docker run \
    -it \
