@@ -66,6 +66,14 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://www.tindie.com/products/GiovanniCas/zigbee-hat-with-cc2538-for-raspberry/">Tindie</a></td>
   </tr>
   <tr>
+    <td><img src="../images/cc2652p-z-bee-duo.jpg"></td>
+    <td>Gio-dot Z-Bee Duo with CC2652P</td>
+    <td>3 in 1 adapter: USB Stick, PI Zero Hat, Ser2net, with external antenna and 3D printed case</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Gio-dot/Z-Bee-Duo#how-to-flash">Flashing</a></td>
+    <td><a href="https://www.tindie.com/products/23046/">Tindie</a></td>
+  </tr>
+  <tr>
     <td><img src="../images/cc26x2r1.jpg"></td>
     <td>Texas Instruments LAUNCHXL-CC26X2R1</td>
     <td>USB connected development kit</td>
@@ -113,7 +121,7 @@ Before buying an adapter, please read the notes below!
 
 - Recommended adapters are the **Electrolama zig-a-zig-ah! (zzh!)** and **Slaesh's CC2652RB stick** because: they are very powerful, have good range (external antenna), are well tested with Zigbee2MQTT, are easy to connect (USB), can be flashed without additional hardware and are small in size.
 - The following adapters require additional hardware to flash: adapters based on the **CC2530** and **CC2531** require a CC debugger and downloader cable, adapters based on the **CC2538** require a JTAG flasher.
-- The **Electrolama zig-a-zig-ah! (zzh!)** (= based on CC2652R chip), **Slaesh's CC2652RB stick** (= based on CC2652RB chip), **Texas Instruments LAUNCHXL-CC26X2R1** (= based on CC2652R chip) and **Texas Instruments LAUNCHXL-CC1352P-2** (= based on CC1352P chip) are very similar to each other since (almost) the same chip is used. The difference between the CC2652R and the CC1352P is that the CC1352P support sub-1 GHz frequency (which is not relevant for Zigbee since it uses 2.4 GHz) and that the CC1352P has a power amplifier (which support up-to 20dBm output vs 5dBm on CC2652R(B)). The difference between the CC2652R and CC2652RB is that the CC2652RB doesn't require a crystal on the PCB, this only relevant for the manufacturing process. The ones with external antenna provide more range.
+- The **Electrolama zig-a-zig-ah! (zzh!)** (= based on CC2652R chip), **Slaesh's CC2652RB stick** (= based on CC2652RB chip), **Texas Instruments LAUNCHXL-CC26X2R1** (= based on CC2652R chip), **Texas Instruments LAUNCHXL-CC1352P-2** (= based on CC1352P chip) and **Gio-dot Z-Bee Duo with CC2652P** (= based on CC2652P chip) are very similar to each other since (almost) the same chip is used. The difference between the CC2652R and the CC1352P is that the CC1352P support sub-1 GHz frequency (which is not relevant for Zigbee since it uses 2.4 GHz) and that the CC1352P has a power amplifier (which support up-to 20dBm output vs 5dBm on CC2652R(B)). The difference between the CC2652R and CC2652RB is that the CC2652RB doesn't require a crystal on the PCB, this only relevant for the manufacturing process. The CC2652P and CC2652R are identical to each other except that the CC2652P has a power amplifier. The ones with external antenna provide more range.
 - Adapters based on the **CC2530** or **CC2531** chip are not powerful and not recommended for networks larger than 20 devices.
 - Adapters that can handle large networks are; adapters using the following chips **CC2652R**, **CC2652RB**, **CC1352P**, **CC2538** and the **Conbee II**.
 - Of all adapter the **Texas Instruments CC2531** has the worst range, other adapters with a PCB antenna like the **Texas Instruments LAUNCHXL-CC26X2R1** and **ConBee II** provide better range. Adapters with an external antenna have the best range.
