@@ -11,11 +11,17 @@ Before executing `docker run` pull the correct image with `docker pull koenkk/zi
 
 First run the container, this will create the configuration directory. Change `configuration.yaml` according to your situation and start again.
 
-## Running
+## Running as root
 Run by executing the following commmand:
 
+1. Identify your device:
 ```bash
-docker run \
+$ ls -l /dev/serial/by-id
+```
+
+2. Run docker, whereas the "--device" statement should match the previous output:
+```bash
+$ docker run \
    -it \
    -v $(pwd)/data:/app/data \
    --device=/dev/ttyACM0 \
@@ -30,12 +36,44 @@ docker run \
 * `--device=/dev/ttyACM0`: Location of adapter (e.g. CC2531)
 * `-v /run/udev:/run/udev:ro --privileged=true`: is optional, only required for autodetecting the port
 * Optional: in case your MQTT broker is running on `localhost` and is not within the same Docker network as the Zigbee2MQTT container also add `--network host \`.
+* Note: For USB auto-discovery, the container needs to be executed by root in "--privileged" mode.
+
+## Running as non-root
+
+1. Identify your device:
+```
+$ ls -l /dev/serial/by-id
+```
+
+2. Identify the group that has access to the device (in Ubuntu, e.g. it might be assigned to "dialout"):
+```
+$ ls -l /dev/tty*
+```
+
+3. Check the user&group id you want to execute the docker image with:
+```
+$ id
+```
+
+4. Start the docker container (note: interface, user&group ID must match the outputs above):
+```
+$ sudo docker run \
+   -it \
+   --name=zigbee2mqtt \
+   -v ($pwd)/data:/app/data \
+   -v /run/udev:/run/udev:ro \
+   --device=/dev/ttyACM0 \
+   --user 1001:1001 \
+   --group-add dialout \
+   -e TZ=Europe/Amsterdam \
+   koenkk/zigbee2mqtt</b>
+```
 
 ## Updating
 To update to the latest Docker image:
 ```bash
-docker rm -f [ZIGBEE2MQTT_CONTAINER_NAME]
-docker rmi -f [ZIGBEE2MQTT_IMAGE_NAME] # e.g. koenkk/zigbee2mqtt:latest
+$ docker rm -f [ZIGBEE2MQTT_CONTAINER_NAME]
+$ docker rmi -f [ZIGBEE2MQTT_IMAGE_NAME] # e.g. koenkk/zigbee2mqtt:latest
 # Now run the container again, Docker will automatically pull the latest image.
 ```
 
