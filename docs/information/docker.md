@@ -36,7 +36,7 @@ $ docker run \
 * `--device=/dev/ttyACM0`: Location of adapter (e.g. CC2531)
 * `-v /run/udev:/run/udev:ro --privileged=true`: is optional, only required for autodetecting the port
 * Optional: in case your MQTT broker is running on `localhost` and is not within the same Docker network as the Zigbee2MQTT container also add `--network host \`.
-* Note: Running in "--privileged" mode is a security risk.
+* Note: For USB auto-discovery, the container needs to be executed by root in "--privileged" mode.
 
 ## Running as non-root
 
