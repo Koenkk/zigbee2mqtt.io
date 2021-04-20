@@ -67,8 +67,8 @@ Zigbee2MQTT officially supports the following adapters:
   </tr>
   <tr>
     <td><img src="../images/cc2652p-z-bee-duo.jpg"></td>
-    <td>Gio-dot Z-Bee Duo CC2652P 3 modes</td>
-    <td>3 modes adapter: USB Stick, PI Zero Hat, Ser2net</td>
+    <td>Gio-dot Z-Bee Duo with CC2652P</td>
+    <td>3 modes adapter: USB Stick, PI Zero Hat, Ser2net, with external antenna and 3D printed case</td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20210128.zip">Router</a></td>
     <td><a href="https://github.com/Gio-dot/Z-Bee-Duo#how-to-flash">Flashing</a></td>
     <td><a href="https://www.tindie.com/products/23046/">Tindie</a></td>
