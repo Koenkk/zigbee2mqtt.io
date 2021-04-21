@@ -17,8 +17,8 @@ description: "Integrate your Xiaomi SSM-U01 via Zigbee2MQTT with whatever smart 
 
 ## Notes
 
-None
-
+### Pairing
+To reset the device and start pairing, press the button on the device for 5seconds. The led will turn on in red and then start blinking in blue while the pairing process is active.
 
 ## Exposes
 
