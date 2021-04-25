@@ -94,6 +94,8 @@ advanced:
   log_output:
     - console
     - file
+  # Create a symlink called "current" in the log directory which points to the latests log directory. (default: false)
+  log_symlink_current: false
   # Optional: syslog configuration, skip values or entirely to use defaults. Only use when 'syslog' in 'log_output' (see above)
   log_syslog:
     host: localhost # The host running syslogd, defaults to localhost.
