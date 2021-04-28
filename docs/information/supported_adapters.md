@@ -76,7 +76,7 @@ Zigbee2MQTT officially supports the following adapters:
 <tr>
     <td><img src="../images/codm-cc2652p-rpi.jpg"></td>
     <td>cod.m Zigbee CC2652P RPi Module</td>
-    <td>Raspberry Pi GPIO pHat with CC2652P with integrated power amplifier (+20dBm)</td>
+    <td>Raspberry Pi GPIO module with CC2652P and integrated power amplifier (+20dBm)</td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a></td>
     <td><a href="https://github.com/codm/cc2652-raspberry-pi-module#firmware">Flashing</a></td>
     <td><a href="https://shop.codm.de/automation/zigbee/33/zigbee-cc2652p2-raspberry-pi-module">cod.m Shop</a></td>
