@@ -1,7 +1,10 @@
 const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
 const tz = require('zigbee-herdsman-converters/converters/toZigbee');
 const exposes = require('zigbee-herdsman-converters/lib/exposes');
+const reporting = require('zigbee-herdsman-converters/lib/reporting');
+const extend = require('zigbee-herdsman-converters/lib/extend');
 const e = exposes.presets;
+const ea = exposes.access;
 
 const getKey = (object, value) => {
     for (const key in object) {
@@ -69,7 +72,7 @@ const tzLocal = {
     },
 };
 
-const device = {
+const definition = {
     zigbeeModel: ['DIYRuZ_FreePad_ext'],
     model: 'DIYRuZ_FreePad_ext',
     vendor: 'DIYRuZ',
@@ -126,4 +129,4 @@ const device = {
     },
 };
 
-module.exports = device;
+module.exports = definition;
