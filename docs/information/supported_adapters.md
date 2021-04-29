@@ -45,7 +45,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td>
       <a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_Home_1.2/bin">Router</a></td>
     <td><a href="/how_tos/how_to_create_a_cc2530_router.html#2-flashing-the-cc2530">Flashing</a> <a href="/information/connecting_cc2530.html">Connecting</a></td>
-    <td><a href="http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104041&SearchText=cc2530">AliExpress</a> <a href="http://www.gban.cn/en/product_show.asp?id=43">GBAN</a> <a href="https://www.tindie.com/products/GiovanniCas/cc2530-cc2592-zigbee-dongle/">Tindie</a></td>
+    <td><a href="http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104041&SearchText=cc2530">AliExpress</a> <a href="http://www.gban.cn/en/product_show.asp?id=43">GBAN</a> <a href="https://www.tindie.com/products/GiovanniCas/cc2530-cc2592-zigbee-dongle/">Tindie</a> <br/> <a href="https://www.aliexpress.com/item/1005001587860129.html">RF ZU USB</a></td>
   </tr>
   <tr>
     <td><img src="../images/cc2538.jpg"></td>

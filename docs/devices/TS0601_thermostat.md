@@ -23,12 +23,12 @@ description: "Integrate your TuYa TS0601_thermostat via Zigbee2MQTT with whateve
 
 While pairing, keep the valve close to the coordinator.
 
-1. *Turn the display on*: Short press home (:house:).
-2. *Enter settings*: Long press home (:house:) for 3sec.
-3. *Select WiFi settings*: Press the plus button (:heavy_plus_sign:) button 4 times to see the digital **`5`** on the right hand side and the blinking WiFi logo.
-4. *Enter WiFi settings*: Press home (:house:) once again. Now only WiFi logo is showing without blinking.
-5. *Enable pairing mode*: Long press home (:house:). WiFi logo is now blinking.
-6. *Keep display on*: Touch home (:house:) every few seconds.
+1. *Turn the display on*: Short press home (🏠).
+2. *Enter settings*: Long press home (🏠) for 3sec.
+3. *Select WiFi settings*: Press the plus button (➕) button 4 times to see the digital **`5`** on the right hand side and the blinking WiFi logo.
+4. *Enter WiFi settings*: Press home (🏠) once again. Now only WiFi logo is showing without blinking.
+5. *Enable pairing mode*: Long press home (🏠). WiFi logo is now blinking.
+6. *Keep display on*: Touch home (🏠) every few seconds.
 
 ### Local temperature
 If you'd like to force device to send local_temperature you can use this MQTT command:
