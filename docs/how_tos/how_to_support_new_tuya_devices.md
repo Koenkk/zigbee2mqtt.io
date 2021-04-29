@@ -5,19 +5,30 @@ Tuya devices use a custom `manuSpecificTuya` cluster, the instructions below wil
 
 ## Instructions
 ### 1. Standard part of the setup
-Read through basic [howto](how_to_support_new_devices.md) for instructions on how to setup `zigbee-herdsman-converters`
+Read through basic [howto](how_to_support_new_devices.md) for instructions on how to setup an external converter
 
 ### 2. Adding your device
-Adding an entry of your device to `node_modules/zigbee-herdsman-converters/devices.js` is a bit different on Tuya devices. In order to provide support for E.G. the `TS0601` model ID you would add:
+Adding support for TuYa devices is a bit different. In order to provide support for E.G. the `TS0601` model ID you would create the following external converter:
 
 ```js
-{
-    fingerprint: [ // Since a lot of Tuya devices use the same modelID, but use different data points
-                   // it's usually necessary to provide a fingerprint
+const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
+const tz = require('zigbee-herdsman-converters/converters/toZigbee');
+const exposes = require('zigbee-herdsman-converters/lib/exposes');
+const reporting = require('zigbee-herdsman-converters/lib/reporting');
+const extend = require('zigbee-herdsman-converters/lib/extend');
+const e = exposes.presets;
+const ea = exposes.access;
+
+const definition = {
+    // Since a lot of Tuya devices use the same modelID, but use different data points
+    // it's usually necessary to provide a fingerprint instead of a zigbeeModel
+    fingerprint: [
         {
-            modelID: 'TS0601', // The model ID from: Device with modelID 'TS0601' is not supported.
-                               // You may need to add \u0000 at the end of the name in some cases
-            manufacturerName: '_TZE200_c88teujp' // The manufacturer name from: Device with modelID 'TS0601' is not supported.
+            // The model ID from: Device with modelID 'TS0601' is not supported
+            // You may need to add \u0000 at the end of the name in some cases
+            modelID: 'TS0601',
+            // The manufacturer name from: Device with modelID 'TS0601' is not supported.
+            manufacturerName: '_TZE200_c88teujp'
         },
     ],
     model: 'SEA802-Zigbee',
@@ -42,7 +53,9 @@ Adding an entry of your device to `node_modules/zigbee-herdsman-converters/devic
     exposes: [
         // Here you should put all functionality that your device exposes
     ],
-},
+};
+
+module.exports = definition;
 ```
 
 Once finished, restart Zigbee2MQTT and trigger some actions on the device.
@@ -63,7 +76,7 @@ The `commandGetData` and `commandSetDataResponse` types of the `manuSpecificTuya
 - `dp` is so called "Data Point ID" which is at the core of Tuya devices. From the point of view of a device the DPIDs are the functions that the device provides.
 - `datatype` is the type of data contained in the `data` field, see `dataTypes` in `node_modules/zigbee-herdsman-converters/lib/tuya.js`
 
-Some data points are 'report only' (they report changes that happen within the device) others are 'issue and report' (they can report by themselves, but also respond with a report when set). The list of currently known data points can be found in `dataPoints` in `node_modules/zigbee-herdsman-converters/convertes/lib/tuya.js`.
+Some data points are 'report only' (they report changes that happen within the device) others are 'issue and report' (they can report by themselves, but also respond with a report when set). The list of currently known data points can be found in `dataPoints` in [node_modules/zigbee-herdsman-converters/lib/tuya.js](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/lib/tuya.js).
 
 For example on Saswell thermostat data point number `103` is heating setpoint, it has `value` type and is 'issue and report', we will use that information later in examples.
 
@@ -77,7 +90,7 @@ This converter will append a line in `data/tuya.dump.txt` file whenever it recei
 current_time device_ieee_address status transid dp datatype fn data_as_hex_octets
 ```
 
-A python script `node_modules/zigbee-herdsman-converters/scripts/read_tuya_dump.py` can be used to parse this file. It's pre filled with Saswell data points, but should be easy to modify it to work with your device.
+A python script [read_tuya_dump.py](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/scripts/read_tuya_dump.py) can be used to parse this file. It's pre filled with Saswell data points, but should be easy to modify it to work with your device.
 
 #### tz.tuya_data_point_test
 This converter will allow you to send arbitrary data point to Tuya device, you only need to publish a message in the format `datatype,dp,data` to `zigbee2mqtt/{device_friendly_name}/set/tuya_data_point_test` MQTT topic
@@ -120,9 +133,17 @@ saswell_thermostat_current_heating_setpoint: {
 },
 ```
 
-Now update your device in `node_modules/zigbee-herdsman-converters/devices.js` with the new converter.
+Now update your external converter:
 ```js
-{
+const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
+const tz = require('zigbee-herdsman-converters/converters/toZigbee');
+const exposes = require('zigbee-herdsman-converters/lib/exposes');
+const reporting = require('zigbee-herdsman-converters/lib/reporting');
+const extend = require('zigbee-herdsman-converters/lib/extend');
+const e = exposes.presets;
+const ea = exposes.access;
+
+const definition = {
     fingerprint: [
         {modelID: 'TS0601', manufacturerName: '_TZE200_c88teujp'},
     ],
@@ -149,7 +170,9 @@ Now update your device in `node_modules/zigbee-herdsman-converters/devices.js` w
     exposes: [
         // Here you should put all functionality that your device exposes
     ],
-},
+};
+
+module.exports = definition;
 ```
 
 Repeat for all data points.

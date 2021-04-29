@@ -94,6 +94,8 @@ advanced:
   log_output:
     - console
     - file
+  # Create a symlink called "current" in the log directory which points to the latests log directory. (default: false)
+  log_symlink_current: false
   # Optional: syslog configuration, skip values or entirely to use defaults. Only use when 'syslog' in 'log_output' (see above)
   log_syslog:
     host: localhost # The host running syslogd, defaults to localhost.
@@ -106,7 +108,7 @@ advanced:
     type: 5424 # The type of the syslog protocol to use (Default: BSD, also valid: 5424).
     app_name: Zigbee2MQTT # The name of the application (Default: Zigbee2MQTT).
     eol: '\n' # The end of line character to be added to the end of the message (Default: Message without modifications).
-  # Optional: Baudrate for serial port (default: 115200 for Z-Stack, 38400 for Deconz)
+  # Optional: Baud rate speed for serial port, this can be anything firmware support but default is 115200 for Z-Stack and EZSP, 38400 for Deconz, however note that some EZSP firmware need 57600.
   baudrate: 115200
   # Optional: RTS / CTS Hardware Flow Control for serial port (default: false)
   rtscts: false
@@ -282,13 +284,15 @@ The `configuration.yaml` allows to set device specific configuration. This can a
 Some devices support device type specific configuration, e.g. [RTCGQ11LM](../devices/RTCGQ11LM.md). To see if your device has device type specific configuration, visit the device page by going to [Supported devices](../information/supported_devices.md) and clicking on the model number.
 
 ### External converters configuration
-You can define external converters to e.g. add support for a DiY device. The extension can be a file with `.js` extension in the `data` directory or a NPM package. Ensure that default export from your external converter exports an array or device object (refer to `devices.js` of zigbee-herdsman-converters). Some examples can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/tree/master/docs/externalConvertersExample). For this example put the files in the `data` folder and add the following to `configuration.yaml`:
+You can define external converters to e.g. add support for a DiY device. The extension can be a file with `.js` extension in the `data` directory or a NPM package. Ensure that default export from your external converter exports an array or device object (refer to the definition in the `devices` folder of zigbee-herdsman-converters). Some examples can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/tree/master/docs/externalConvertersExample). For this example put the files in the `data` folder and add the following to `configuration.yaml`:
 
 ```yaml
 external_converters:
   - freepad_ext.js
   - one-more-converter.js
 ```
+
+See also [How to support new devices](../how_tos/how_to_support_new_devices.md).
 
 #### Changing device type specific defaults
 The default values used for the device specific configuration can be overriden via e.g.:
