@@ -18,8 +18,11 @@ description: "Integrate your TuYa TS011F_socket_module via Zigbee2MQTT with what
 
 ## Notes
 
+
 ### Pairing
 Press the black pairing button on the relay module for 5 seconds until the indicator light flashes, then release the pairing button.
+
+
 
 ## Exposes
 
