@@ -7,6 +7,81 @@ Press and hold the button on the device until the blue light starts blinking, re
 `,
     },
     {
+        model: ['ZS130000178'],
+        note: `
+### Pairing
+Pairing instructions: hold the upper right (arm home) and lower left (disarm) buttons until the green LED at the top blinks rapidly, then release. Key fob should now be in pairing mode.
+`,
+    },
+    {
+        model: ['FB20-002'],
+        note: `
+### Pairing
+
+Hold the top 2 buttons (on and off) for about 5 seconds until the LED goes from solid green to blinking, then let go.
+
+For more information, refer to the [LIDL manual](https://www.lidl-service.com/static/5027306530/334437_Zigbee_OS_DE_EN%20_FR_NL_PL_CS_SK.PDF).
+`,
+    },
+    {
+        model: ['4052899926110'],
+        note: `
+### Pairing
+Turn ON the bulb for 5 seconds.
+Turn OFF the bulb for 5 seconds.
+Repeat the step above four more times for a total of five OFF/ON cycles.
+After the fifth cycle, turn the light ON and wait for 10 seconds.
+The bulb will then blink 3 times to indicate it has been reset.
+
+Repeat the above steps if the light doesn’t blink.
+`,
+    },
+    {
+        model: ['14147206L'],
+        note: `
+### Pairing
+To factory reset the LivarnoLux Ceiling Light proceed with the following order: 10s off, 1s on, 3s off, 1s on, 3s off, on
+`,
+    },
+    {
+        model: ['6735/6736/6737'],
+        note: `
+### Pairing
+
+1. If there are blinking LEDs wait until they don’t blink anymore — the device is in some mode we don’t want it to be.
+2. Press both buttons of the top row (or sole row for Model 6735) until the LEDs gleam permanently. They will blink alternately at first but keep the buttons pressed until really both lights are constantly illuminated. Then release the buttons. The LEDs should still glow.
+3. Now press both buttons again briefly. After about 1..2 seconds they will fade-glow; and your bridge should now instantly find it.
+
+### Known issues
+
+#### Bottom row of 4-gang device not bound
+
+It may occur that the bottom row of the 4-gang device 6737 does not work like the other ones, i.e. does not emit the actions (see related discussion [#7009](https://github.com/Koenkk/zigbee2mqtt/discussions/7009)). The reason is not fully understood yet, however it can be worked around by unbinding all four endpoints and re-binding them manually one after another:
+
+| Source EP   | Destination   | Destination EP   | Clusters                                              |
+|-------------|---------------|------------------|-------------------------------------------------------|
+| \`10\`        | \`Coordinator\` | \`1\`              | 6710&nbsp;U: \`LevelCtrl\`<br>6711&nbsp;U: \`OnOff\` [^1] |
+| \`11\`        | \`Coordinator\` | \`1\`              | \`LevelCtrl\`                                           |
+| \`12\`        | \`Coordinator\` | \`1\`              | \`LevelCtrl\`                                           |
+| \`13\`        | \`Coordinator\` | \`1\`              | \`LevelCtrl\`                                           |
+
+*[EP]: Endpoint
+[^1]: Depending on whether the control panel sits on a 6710&nbsp;U (power supply) or 6711&nbsp;U (relay), \`OnOff\` respectively \`LevelCtrl\` shall be used.
+
+### Action values
+This device send the following \`action\` values in its payload:
+
+| Left buttons                | (long-hold-release) | Right buttons            |
+|-----------------------------|---------------------|--------------------------|
+| \`row_1_off\`<br>\`row_1_down\` | \`row_1_stop\`        | \`row_1_on\`<br>\`row_1_up\` |
+| \`row_2_off\`<br>\`row_2_down\` | \`row_2_stop\`        | \`row_2_on\`<br>\`row_2_up\` |
+| \`row_3_off\`<br>\`row_3_down\` | \`row_3_stop\`        | \`row_3_on\`<br>\`row_3_up\` |
+| \`row_4_off\`<br>\`row_4_down\` | \`row_4_stop\`        | \`row_4_on\`<br>\`row_4_up\` |
+
+Briefly pressing and releasing a button triggers the \`off\` resp. \`on\` actions for the given row, long-pressing triggers the \`down\`/\`up\` state respectively (after about one second). When releasing then, a \`stop\` will be issued with no distinction between the left or right button.
+`,
+    },
+    {
         model: ['AV2010/29A'],
         deviceTypeSpecificConfiguration: true,
         note: `
@@ -2028,6 +2103,20 @@ Start with bulb on, then off, and then 6 “on’s”, wait in the 6th ON state.
 `,
     },
     {
+        model: ['TS011F_socket_module'],
+        note: `
+### Pairing
+Press the black pairing button on the relay module for 5 seconds until the indicator light flashes, then release the pairing button.
+`,
+    },
+    {
+        model: ['SSM-U01'],
+        note: `
+### Pairing
+To reset the device and start pairing, press the button on the device for 8 seconds. The led will turn on in red and then start blinking in blue while the pairing process is active.
+`,
+    },
+    {
         model: ['MCCGQ01LM'],
         note: `
 ### Pairing
@@ -2035,9 +2124,18 @@ Press and hold the reset button on the device for +- 5 seconds (until the blue l
 `,
     },
     {
+        model: ['MFKZQ01LM'],
+        note: `
+### Pairing
+Remove the back plate by using the included tool or a wedge to click it off.
+Press and hold the reset button inside the device for +- 5 seconds (until the blue light starts blinking).
+After this the device will automatically join. If this doesn't work, try with a single short button press.
+`,
+    },
+    {
         model: [
             'WXKG01LM', 'WSDCGQ11LM', 'RTCGQ01LM', 'MCCGQ11LM', 'WXKG11LM', 'WXKG12LM', 'RTCGQ11LM',
-            'MFKZQ01LM', 'WSDCGQ12LM',
+            'WSDCGQ12LM',
         ],
         note: `
 ### Pairing
@@ -2834,12 +2932,12 @@ Some versions of the plug provide voltage. This depends on the firmware on the d
 
 While pairing, keep the valve close to the coordinator.
 
-1. *Turn the display on*: Short press home (:house:).
-2. *Enter settings*: Long press home (:house:) for 3sec.
-3. *Select WiFi settings*: Press the plus button (:heavy_plus_sign:) button 4 times to see the digital **\`5\`** on the right hand side and the blinking WiFi logo.
-4. *Enter WiFi settings*: Press home (:house:) once again. Now only WiFi logo is showing without blinking.
-5. *Enable pairing mode*: Long press home (:house:). WiFi logo is now blinking.
-6. *Keep display on*: Touch home (:house:) every few seconds.
+1. *Turn the display on*: Short press home (🏠).
+2. *Enter settings*: Long press home (🏠) for 3sec.
+3. *Select WiFi settings*: Press the plus button (➕) button 4 times to see the digital **\`5\`** on the right hand side and the blinking WiFi logo.
+4. *Enter WiFi settings*: Press home (🏠) once again. Now only WiFi logo is showing without blinking.
+5. *Enable pairing mode*: Long press home (🏠). WiFi logo is now blinking.
+6. *Keep display on*: Touch home (🏠) every few seconds.
 
 ### Local temperature
 If you'd like to force device to send local_temperature you can use this MQTT command:

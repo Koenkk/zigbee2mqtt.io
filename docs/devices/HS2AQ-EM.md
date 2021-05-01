@@ -65,7 +65,7 @@ The unit of this value is `µg/m³`.
 Measured Hcho value.
 Value can be found in the published state on the `hcho` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mg/m³`.
+The unit of this value is `µg/m³`.
 
 ### Voc (numeric)
 Measured VOC value.
@@ -140,7 +140,7 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.hcho }}"
-    unit_of_measurement: "mg/m³"
+    unit_of_measurement: "µg/m³"
     icon: "mdi:air-filter"
 
 sensor:
