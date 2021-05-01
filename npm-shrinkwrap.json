@@ -1514,8 +1514,8 @@
       "dev": true
     },
     "zigbee2mqtt": {
-      "version": "git://github.com/koenkk/zigbee2mqtt.git#43ff2daebe982eaefeaf338fc161b11137a2853b",
-      "from": "git://github.com/koenkk/zigbee2mqtt.git#dev",
+      "version": "git://github.com/koenkk/zigbee2mqtt.git#f2e39af12cfaf46166b053ee43b28fb862d46731",
+      "from": "git://github.com/koenkk/zigbee2mqtt.git#1.18.3",
       "requires": {
         "ajv": "^6.12.4",
         "debounce": "^1.2.0",
@@ -1537,7 +1537,7 @@
         "winston-syslog": "^2.4.4",
         "ws": "^7.3.1",
         "zigbee-herdsman": "0.13.92",
-        "zigbee-herdsman-converters": "14.0.129",
+        "zigbee-herdsman-converters": "14.0.131",
         "zigbee2mqtt-frontend": "0.4.0"
       },
       "dependencies": {
@@ -15708,15 +15708,15 @@
           }
         },
         "zigbee-herdsman-converters": {
-          "version": "14.0.129",
-          "resolved": "https://registry.npmjs.org/zigbee-herdsman-converters/-/zigbee-herdsman-converters-14.0.129.tgz",
-          "integrity": "sha512-S2O/9JA9SvIT/X1CPRd21yFeG80uA12/ApORHy3Zy5ZUlS3v6sW3hGCU72J0JzLjQb6PJEQqeQHY+dJ13xoatQ==",
+          "version": "14.0.131",
+          "resolved": "https://registry.npmjs.org/zigbee-herdsman-converters/-/zigbee-herdsman-converters-14.0.131.tgz",
+          "integrity": "sha512-lR2SHl2tbU1AhJxbKZ2GyV349YQu/zveQdCVqZguXEWICWFVzkQ2kDu/aLLd/jmxnp8015/mrQoeCOaIHC/zRA==",
           "requires": {
             "axios": "^0.21.1",
             "buffer-crc32": "^0.2.13",
             "https-proxy-agent": "^5.0.0",
             "tar-stream": "^2.2.0",
-            "zigbee-herdsman": "^0.13.91"
+            "zigbee-herdsman": "^0.13.92"
           },
           "dependencies": {
             "@babel/code-frame": {
@@ -19062,6 +19062,21 @@
               "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz",
               "integrity": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
             },
+            "lodash.clonedeep": {
+              "version": "4.5.0",
+              "resolved": "https://registry.npmjs.org/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz",
+              "integrity": "sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8="
+            },
+            "lodash.flatten": {
+              "version": "4.4.0",
+              "resolved": "https://registry.npmjs.org/lodash.flatten/-/lodash.flatten-4.4.0.tgz",
+              "integrity": "sha1-8xwiIlqWMtK7+OSt2+8kCqdlph8="
+            },
+            "lodash.truncate": {
+              "version": "4.4.2",
+              "resolved": "https://registry.npmjs.org/lodash.truncate/-/lodash.truncate-4.4.2.tgz",
+              "integrity": "sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM="
+            },
             "lru-cache": {
               "version": "6.0.0",
               "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz",
@@ -20855,9 +20870,9 @@
               }
             },
             "zigbee-herdsman": {
-              "version": "0.13.91",
-              "resolved": "https://registry.npmjs.org/zigbee-herdsman/-/zigbee-herdsman-0.13.91.tgz",
-              "integrity": "sha512-XyHBh2N8TUgPAG0bUYfqbmljbqdhk6dhWEdw4fYwi7t6ttvn9hsKPI/5KEGvfigTvqo7pRDJ1MqNJqGLaw0cPw==",
+              "version": "0.13.92",
+              "resolved": "https://registry.npmjs.org/zigbee-herdsman/-/zigbee-herdsman-0.13.92.tgz",
+              "integrity": "sha512-JqS9AORMvY6rYBGmJ7qEhG23CU1bAzzGf8e6eMpiULzG2CUD1DBOnOfRtQ6hWQr8lyA5nfHKOP/BuCwvnzKnCQ==",
               "requires": {
                 "@serialport/bindings": "9.0.4",
                 "debounce": "^1.2.0",
