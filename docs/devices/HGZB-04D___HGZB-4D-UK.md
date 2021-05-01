@@ -12,8 +12,9 @@ description: "Integrate your Nue / 3A HGZB-04D / HGZB-4D-UK via Zigbee2MQTT with
 | Model | HGZB-04D / HGZB-4D-UK  |
 | Vendor  | Nue / 3A  |
 | Description | Smart dimmer wall switch |
-| Exposes | light (state, brightness), effect, linkquality |
+| Exposes | light (state, brightness), linkquality |
 | Picture | ![Nue / 3A HGZB-04D / HGZB-4D-UK](../images/devices/HGZB-04D---HGZB-4D-UK.jpg) |
+| White-label | Sunricher SR-ZG9001K8-DIM |
 
 ## Notes
 
@@ -54,13 +55,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 }
 ````
 
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
-
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
@@ -80,20 +74,9 @@ light:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
-    color_temp: false
-    xy: false
-    hs: false
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     brightness_scale: 254
-    effect: true
-    effect_list: 
-      - "blink"
-      - "breathe"
-      - "okay"
-      - "channel_change"
-      - "finish_effect"
-      - "stop_effect"
 
 sensor:
   - platform: "mqtt"

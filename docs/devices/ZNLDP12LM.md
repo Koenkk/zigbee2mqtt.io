@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi ZNLDP12LM via Zigbee2MQTT with whatever smar
 | Model | ZNLDP12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart LED bulb |
-| Exposes | light (state, brightness, color_temp), effect, linkquality |
+| Exposes | light (state, brightness, color_temp), effect, power_outage_memory, linkquality |
 | Picture | ![Xiaomi ZNLDP12LM](../images/devices/ZNLDP12LM.jpg) |
 
 ## Notes
@@ -28,6 +28,9 @@ Switch the lamp on five times until the bulb blinks several times.
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 
 
 ## Exposes
@@ -69,6 +72,13 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
+### Power_outage_memory (binary)
+Enable/disable the power outage memory, this recovers the on/off mode after power failure.
+Value can be found in the published state on the `power_outage_memory` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+If value equals `true` power_outage_memory is ON, if `false` OFF.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
@@ -88,12 +98,12 @@ light:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
-    color_temp: true
-    xy: false
-    hs: false
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     brightness_scale: 254
+    color_mode: true
+    supported_color_modes: 
+      - "color_temp"
     max_mireds: 500
     min_mireds: 150
     effect: true
@@ -105,6 +115,14 @@ light:
       - "finish_effect"
       - "stop_effect"
 
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.power_outage_memory }}"
+    payload_on: true
+    payload_off: false
+
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
@@ -112,6 +130,21 @@ sensor:
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
     icon: "mdi:signal"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:update"
+    value_template: "{{ value_json['update']['state'] }}"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.update_available}}"
 ```
 {% endraw %}
 

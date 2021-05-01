@@ -32,6 +32,9 @@ when temperature >= 30 precision will be 0, when temperature >= 10 precision wil
 e.g. `1` would add 1 degree to the temperature reported by the device; default `0`.
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+
 
 ## Exposes
 
@@ -156,6 +159,21 @@ sensor:
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
     icon: "mdi:signal"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:update"
+    value_template: "{{ value_json['update']['state'] }}"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.update_available}}"
 ```
 {% endraw %}
 

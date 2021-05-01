@@ -12,7 +12,7 @@ description: "Integrate your Develco HESZB-120 via Zigbee2MQTT with whatever sma
 | Model | HESZB-120  |
 | Vendor  | Develco  |
 | Description | Fire detector with siren |
-| Exposes | temperature, battery, smoke, battery_low, tamper, warning, linkquality |
+| Exposes | temperature, battery, smoke, battery_low, test, warning, linkquality |
 | Picture | ![Develco HESZB-120](../images/devices/HESZB-120.jpg) |
 
 ## Notes
@@ -56,11 +56,11 @@ Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery_low is ON, if `false` OFF.
 
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
+### Test (binary)
+Indicates whether the device is being tested.
+Value can be found in the published state on the `test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
+If value equals `true` test is ON, if `false` OFF.
 
 ### Warning (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": VALUE, "level": VALUE, "strobe": VALUE, "duration": VALUE}}`
@@ -121,7 +121,7 @@ binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.tamper }}"
+    value_template: "{{ value_json.test }}"
     payload_on: true
     payload_off: false
 

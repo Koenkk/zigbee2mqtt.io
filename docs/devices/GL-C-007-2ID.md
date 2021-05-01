@@ -139,13 +139,14 @@ light:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
-    color_temp: true
-    xy: true
-    hs: false
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/rgb/set"
     brightness_scale: 254
     state_topic_postfix: "rgb"
+    color_mode: true
+    supported_color_modes: 
+      - "xy"
+      - "color_temp"
     max_mireds: 500
     min_mireds: 150
 
@@ -154,9 +155,6 @@ light:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
-    color_temp: false
-    xy: false
-    hs: false
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/white/set"
     brightness_scale: 254

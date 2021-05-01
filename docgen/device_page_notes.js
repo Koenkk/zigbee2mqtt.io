@@ -1,5 +1,24 @@
 const notes = [
     {
+        model: ['0402946'],
+        note: `
+### Pairing
+If pairing failed, try the followings:
+- PMake sure door are in open state
+- Press and hold manual lock button and wait for 3 beeps
+- Keypad in front lights up
+- Type inn the Master PIN, then *, then 2, then *, then 0
+Lock will now reset the Zigbee module and go to pairing mode
+
+### Manual
+[ID LOCK 150 user manual](https://idlock.no/wp-content/uploads/2018/03/20180123-001-IDL150-UserManual.pdf)
+[Zigbee module user manual](https://idlock.no/wp-content/uploads/2020/11/User-Manual-Zigbee-module_EN_v0.4.pdf)
+
+### Where do I find this product
+[Product page](https://shop.evasmart.no/produkt/smarthus/id-lock-dorlaspakke)
+`,
+    },
+    {
         model: ['ZNCZ04LM'],
         note: `
 ### Pairing
@@ -1179,17 +1198,17 @@ Reset of device is done by holding button for 20 secs until it starts to flash g
 `,
     },
     {
-        model: 'ROB_200-007-0',
+        model: ['ROB_200-007-0', 'ROB_200-008-0'],
         note: `
 ### Pairing
 First reset. Press and hold the upper two buttons for 5 seconds until led lights up (continuously blue or green). Then press the upper "0" 5 times - depending on the model, or in a pace of 2 times per second or in a pace of 5 times per second. Second pair. Press and hold the upper two buttons for 5 seconds again, until the led turns on. Then press the "0" once. It should now enter pair mode an start blinking - if it does not get connected, just try the second step again.
 `,
     },
     {
-        model: 'ROB_200-008-0',
+        model: ['ROB_200-009-0'],
         note: `
 ### Pairing
-First reset. Press and hold the upper two buttons for 5 seconds until led lights up (continuously blue or green). Then press the upper "0" 5 times - depending on the model, or in a pace of 2 times per second or in a pace of 5 times per second. Second pair. Press and hold the upper two buttons for 5 seconds again, until the led turns on. Then press the "0" once. It should now enter pair mode an start blinking - if it does not get connected, just try the second step again.
+First reset. Press and hold the two buttons for 5 seconds until led lights up (continuously blue or green). Then press the "0" 5 times - depending on the model, or in a pace of 2 times per second or in a pace of 5 times per second. Second pair. Press and hold the  two buttons for 5 seconds again, until the led turns on. Then press the "|" once. It should now enter pair mode an start blinking - if it does not get connected, just try the second step again.
 `,
     },
     {

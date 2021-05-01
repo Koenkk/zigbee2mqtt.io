@@ -56,7 +56,7 @@ The unit of this value is `mV`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `left`, `right`, `both`, `left_double`, `right_double`, `both_double`, `left_long`, `right_long`, `both_long`.
+The possible values are: `single_left`, `single_right`, `single_both`, `double_left`, `double_right`, `double_both`, `hold_left`, `hold_right`, `hold_both`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

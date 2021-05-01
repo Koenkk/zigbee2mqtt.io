@@ -57,7 +57,7 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_left`, `single_right`, `double_left`, `double_right`, `hold_left`, `hold_right`.
+The possible values are: `single`, `double`, `hold`.
 
 ### Voltage (numeric)
 Voltage of the battery in millivolts.

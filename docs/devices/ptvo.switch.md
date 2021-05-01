@@ -39,12 +39,10 @@ devices:
 
 ## Exposes
 
-### Action (enum)
-Triggered action (e.g. a button click).
+### Action (text)
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"action": NEW_VALUE}`.
-The possible values are: `single`, `double`, `tripple`, `hold`.
 
 ### Switch (l1 endpoint)
 The current state of this switch is in the published state under the `state_l1` property (value is `ON` or `OFF`).

@@ -12,7 +12,7 @@ description: "Integrate your Develco HMSZB-110 via Zigbee2MQTT with whatever sma
 | Model | HMSZB-110  |
 | Vendor  | Develco  |
 | Description | Temperature & humidity sensor |
-| Exposes | battery, temperature, humidity, linkquality |
+| Exposes | battery, battery_low, temperature, humidity, linkquality |
 | Picture | ![Develco HMSZB-110](../images/devices/HMSZB-110.jpg) |
 
 ## Notes
@@ -42,6 +42,12 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -75,6 +81,15 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
+    device_class: "battery"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.battery_low }}"
+    payload_on: true
+    payload_off: false
     device_class: "battery"
 
 sensor:

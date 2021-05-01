@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi SSM-U01 via Zigbee2MQTT with whatever smart 
 | Model | SSM-U01  |
 | Vendor  | Xiaomi  |
 | Description | Aqara single switch module T1 (with neutral) |
-| Exposes | switch (state), energy, power, device_temperature, linkquality |
+| Exposes | switch (state), energy, power, device_temperature, power_outage_memory, switch_type, linkquality |
 | Picture | ![Xiaomi SSM-U01](../images/devices/SSM-U01.jpg) |
 
 ## Notes
@@ -47,6 +47,20 @@ Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
+
+### Power_outage_memory (binary)
+Enable/disable the power outage memory, this recovers the on/off mode after power failure.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+If value equals `true` power_outage_memory is ON, if `false` OFF.
+
+### Switch_type (enum)
+Wall switch type.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `toggle`, `momentary`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -93,6 +107,20 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.device_temperature }}"
     unit_of_measurement: "°C"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.power_outage_memory }}"
+    payload_on: true
+    payload_off: false
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type }}"
 
 sensor:
   - platform: "mqtt"
