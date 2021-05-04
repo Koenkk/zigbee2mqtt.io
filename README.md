@@ -1,6 +1,15 @@
 # Zigbee2MQTT.io
 This repository contains the Zigbee2MQTT documentation.
 
+## Generated documentation
+
+Due to the repetitive nature of zigbee devices, lots of documentation is auto-generated from source code or by particular directives for the `exposes` and `notes` section. For local development:
+
+```bash
+npm install
+npm run docgen
+```
+
 ## Running locally
 To run locally, execute the following commands:
 
