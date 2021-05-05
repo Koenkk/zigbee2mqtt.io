@@ -33,7 +33,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/Tubes_USB_Coordinator_CC2652P2_variant.png"></td>
     <td>Tube's CC2652P2 USB Coordinator</td>
     <td>Open source hardware CC2652P based USB connected adapter with external antenna and USB extension cable</a></td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://github.com/tube0013/tube_gateways">Flashing</a></td>
     <td><a href="https://www.tubeszb.com/">Tube's ZB Store</a></td>
   </tr>
@@ -41,7 +41,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/Tubes_Zigbee_Gateways_CC2652P2_variant.jpeg"></td>
     <td>Tube's Zigbee Gateways (CC2652P2 variant)</td>
     <td>Open source hardware CC2652P and ESP32 based Zigbee to Ethernet Coordinator</a></td>
-    <td><a href="https://github.com/tube0013/tube_gateways/tree/main/tube_zb_gw_cc2652p2">Coordinator</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a></td>
     <td><a href="https://github.com/tube0013/tube_gateways">Flashing</a></td>
     <td><a href="https://www.tubeszb.com/">Tube's ZB Store</a></td>
   </tr>
