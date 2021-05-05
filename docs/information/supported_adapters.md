@@ -37,7 +37,6 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://github.com/tube0013/tube_gateways">Flashing</a></td>
     <td><a href="https://www.tubeszb.com/">Tube's ZB Store</a></td>
   </tr>
-  
   <tr>
     <td><img src="../images/Tubes_Zigbee_Gateways_CC2652P2_variant.jpeg"></td>
     <td>Tube's Zigbee Gateways (CC2652P2 variant)</td>
@@ -46,7 +45,6 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://github.com/tube0013/tube_gateways">Flashing</a></td>
     <td><a href="https://www.tubeszb.com/">Tube's ZB Store</a></td>
   </tr>
-  
   <tr>
     <td><img src="../images/cc2531.jpg"></td>
     <td>Texas Instruments CC2531</td>
