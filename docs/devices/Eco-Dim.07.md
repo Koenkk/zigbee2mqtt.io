@@ -14,6 +14,7 @@ description: "Integrate your EcoDim Eco-Dim.07 via Zigbee2MQTT with whatever sma
 | Description | Zigbee & Z-wave dimmer  |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![EcoDim Eco-Dim.07](../images/devices/Eco-Dim.07.jpg) |
+| White-label | iolloi ID-EU20FW09 |
 
 ## Notes
 
