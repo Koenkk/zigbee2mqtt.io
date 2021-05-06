@@ -81,6 +81,24 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://github.com/codm/cc2652-raspberry-pi-module#firmware">Flashing</a></td>
     <td><a href="https://shop.codm.de/automation/zigbee/33/zigbee-cc2652p2-raspberry-pi-module">cod.m Shop</a></td>
   </tr>
+  
+  <tr>
+    <td><img src="../images/Egony_v4_E72.jpg"></td>
+    <td>Egony Stick V4 (Ebyte ver.)</td>
+    <td>cc2652p Zigbee USB dongle and Raspberry Pi shield/hat</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210120.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/egony/cc2652p_E72-2G4M20S1E/wiki/Home-EN">Description</a><br><a href="https://github.com/egony/cc2652p_E72-2G4M20S1E/wiki/Flashing-EN">Flashing</a></td>
+    <td><a href="http://t.me/Egony">Contact</a></td>
+  </tr>
+  <tr>
+    <td><img src="../images/Egony_v4_RFS.jpg"></td>
+    <td>Egony Stick V4 (RFSTAR ver.)</td>
+    <td>cc2652p Zigbee USB dongle and Raspberry Pi shield/hat</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/egony/cc2652p_cc1352p_RF-STAR/wiki/Home-EN">Description</a><br><a href="https://github.com/egony/cc2652p_E72-2G4M20S1E/wiki/Flashing-EN">Flashing</a></td>
+    <td><a href="http://t.me/Egony">Contact</a></td>
+  </tr>
+  
   <tr>
     <td><img src="../images/cc26x2r1.jpg"></td>
     <td>Texas Instruments LAUNCHXL-CC26X2R1</td>
