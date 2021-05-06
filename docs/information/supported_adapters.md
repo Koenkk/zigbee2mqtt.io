@@ -33,7 +33,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/Tubes_USB_Coordinator_CC2652P2_variant.png"></td>
     <td>Tube's CC2652P2 USB Coordinator</td>
     <td>Open source hardware CC2652P based USB connected adapter with external antenna and USB extension cable</a></td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://github.com/tube0013/tube_gateways">Flashing</a></td>
     <td><a href="https://www.tubeszb.com/">Tube's ZB Store</a></td>
   </tr>
@@ -41,7 +41,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/Tubes_Zigbee_Gateways_CC2652P2_variant.jpeg"></td>
     <td>Tube's Zigbee Gateways (CC2652P2 variant)</td>
     <td>Open source hardware CC2652P and ESP32 based Zigbee to Ethernet Coordinator</a></td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a></td>
     <td><a href="https://github.com/tube0013/tube_gateways">Flashing</a></td>
     <td><a href="https://www.tubeszb.com/">Tube's ZB Store</a></td>
   </tr>
@@ -145,7 +145,7 @@ Before buying an adapter, please read the notes below!
 
 - Recommended adapters are the **Electrolama zig-a-zig-ah! (zzh!)** and **Slaesh's CC2652RB stick** because: they are very powerful, have good range (external antenna), are well tested with Zigbee2MQTT, are easy to connect (USB), can be flashed without additional hardware and are small in size.
 - The following adapters require additional hardware to flash: adapters based on the **CC2530** and **CC2531** require a CC debugger and downloader cable, adapters based on the **CC2538** require a JTAG flasher.
-- The **Electrolama zig-a-zig-ah! (zzh!)** (= based on CC2652R chip), **Slaesh's CC2652RB stick** (= based on CC2652RB chip), **Texas Instruments LAUNCHXL-CC26X2R1** (= based on CC2652R chip), **Texas Instruments LAUNCHXL-CC1352P-2** (= based on CC1352P chip), **Gio-dot Z-Bee Duo with CC2652P** (= based on CC2652P chip) and **cod.m Zigbee CC2652P RPi Module** (= based on CC2652P chip) are very similar to each other since (almost) the same chip is used. The difference between the CC2652R and the CC1352P is that the CC1352P support sub-1 GHz frequency (which is not relevant for Zigbee since it uses 2.4 GHz) and that the CC1352P has a power amplifier (which support up-to 20dBm output vs 5dBm on CC2652R(B)). The difference between the CC2652R and CC2652RB is that the CC2652RB doesn't require a crystal on the PCB, this only relevant for the manufacturing process. The CC2652P and CC2652R are identical to each other except that the CC2652P has a power amplifier. The ones with external antenna provide more range.
+- The **Electrolama zig-a-zig-ah! (zzh!)** (= based on CC2652R chip), **Slaesh's CC2652RB stick** (= based on CC2652RB chip), **Texas Instruments LAUNCHXL-CC26X2R1** (= based on CC2652R chip), **Texas Instruments LAUNCHXL-CC1352P-2** (= based on CC1352P chip), **Gio-dot Z-Bee Duo with CC2652P** (= based on CC2652P chip), **cod.m Zigbee CC2652P RPi Module** (= based on CC2652P chip) and **Tube's CC2652P2 adapters** (= based on CC2652P chip) are very similar to each other since (almost) the same chip is used. The difference between the CC2652R and the CC1352P is that the CC1352P support sub-1 GHz frequency (which is not relevant for Zigbee since it uses 2.4 GHz) and that the CC1352P has a power amplifier (which support up-to 20dBm output vs 5dBm on CC2652R(B)). The difference between the CC2652R and CC2652RB is that the CC2652RB doesn't require a crystal on the PCB, this only relevant for the manufacturing process. The CC2652P and CC2652R are identical to each other except that the CC2652P has a power amplifier. The ones with external antenna provide more range.
 - Adapters based on the **CC2530** or **CC2531** chip are not powerful and not recommended for networks larger than 20 devices.
 - Adapters that can handle large networks are; adapters using the following chips **CC2652R**, **CC2652RB**, **CC1352P**, **CC2538** and the **Conbee II**.
 - Of all adapter the **Texas Instruments CC2531** has the worst range, other adapters with a PCB antenna like the **Texas Instruments LAUNCHXL-CC26X2R1** and **ConBee II** provide better range. Adapters with an external antenna have the best range.
