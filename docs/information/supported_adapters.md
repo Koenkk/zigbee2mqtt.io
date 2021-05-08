@@ -35,7 +35,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td>Open source hardware CC2652P based,USB connected adapter with external antenna</a></td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://mercenaruss.github.io/zigbee-stick-v4/flashing">Flashing</a></td>
-    <td><a href="https://t.me/zigberu">Zigbee DYI Market</a></td>
+    <td><a href="https://t.me/zigberu">Zigbee DYI Market (Russian)</a></td>
   </tr>
   <tr>
     <td><img src="../images/Tubes_USB_Coordinator_CC2652P2_variant.png"></td>
