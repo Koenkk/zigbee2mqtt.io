@@ -141,4 +141,4 @@ This step is optional and can be skipped as the device page will automatically b
 On the next release of Zigbee2MQTT, the documentation will be updated and your device file will be linked in `docs/information/supported_devices.md` automatically.
 
 ### 5. Done!
-Now it's time to submit a pull request to [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) so this device is supported out of the box by Zigbee2MQTT. This can be done by adding the definition to the [vendor file](https://github.com/Koenkk/zigbee-herdsman-converters/devices) of your device. :smiley:
+Now it's time to submit a pull request to [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) so this device is supported out of the box by Zigbee2MQTT. This can be done by adding the definition to the [vendor file](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/devices) of your device. :smiley:
