@@ -81,7 +81,6 @@ const definition = {
     toZigbee: [tzLocal.diyruz_freepad_on_off_config, tz.factory_reset],
     exposes: [e.battery(), e.action([
         'button_*_hold', 'button_*_single', 'button_*_double', 'button_*_triple', 'button_*_quadruple', 'button_*_release'])],
-    meta: {configureKey: 1},
     configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
         await bind(endpoint, coordinatorEndpoint, ['genPowerCfg']);
