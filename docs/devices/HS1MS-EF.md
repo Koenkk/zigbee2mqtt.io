@@ -1,19 +1,19 @@
 ---
-title: "HEIMAN SMHM-I1 control via MQTT"
-description: "Integrate your HEIMAN SMHM-I1 via Zigbee2MQTT with whatever smart home
+title: "HEIMAN HS1MS-EF control via MQTT"
+description: "Integrate your HEIMAN HS1MS-EF via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SMHM-I1.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1MS-EF.md)*
 
-# HEIMAN SMHM-I1
+# HEIMAN HS1MS-EF
 
-| Model | SMHM-I1  |
+| Model | HS1MS-EF  |
 | Vendor  | HEIMAN  |
 | Description | Smart motion sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN SMHM-I1](../images/devices/SMHM-I1.jpg) |
+| Picture | ![HEIMAN HS1MS-EF](../images/devices/HS1MS-EF.jpg) |
 
 ## Notes
 
