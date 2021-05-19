@@ -32,7 +32,7 @@ Zigbee2MQTT officially supports the following adapters:
   <tr>
     <td><img src="../images/ZigStar-USB.jpg"></td>
     <td>ZigStar Stick v4</td>
-    <td>Powerfull Open source dongle with external antenna</td>
+    <td>Powerfull Open source dongle with external antenna based on CC2652P</td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://zig-star.com/projects/zigbee-stick-v4/">Description</a><br><a href="https://zig-star.com/radio-docs/flash-cc-bsl/">Flashing</a></td>
     <td><a href="https://t.me/zigberu">Zigbee DYI Market(Russian)</a></td>
@@ -40,7 +40,7 @@ Zigbee2MQTT officially supports the following adapters:
   <tr>
     <td><img src="../images/ZigStar-Shield.png"></td>
     <td>ZigStar Shield</td>
-    <td>Powerfull Open source Pi Shield</td>
+    <td>Powerfull Open source Pi Shield based on CC2652P</td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://zig-star.com/projects/zigbee-shield/">Description</a><br><a href="https://zig-star.com/radio-docs/flash-cc-bsl/">Flashing</a></td>
     <td><a href="https://t.me/zigberu">Zigbee DYI Market(Russian)</a></td>
