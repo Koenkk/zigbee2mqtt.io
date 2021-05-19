@@ -38,7 +38,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://t.me/zigberu">Zigbee DYI Market(Russian)</a></td>
   </tr>
   <tr>
-    <td><img src="../images/ZigStar-Shield.jpg"></td>
+    <td><img src="../images/ZigStar-Shield.png"></td>
     <td>ZigStar Shield</td>
     <td>Powerfull Open source Pi Shield</td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
