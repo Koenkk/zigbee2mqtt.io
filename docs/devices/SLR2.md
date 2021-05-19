@@ -17,6 +17,17 @@ description: "Integrate your Hive SLR2 via Zigbee2MQTT with whatever smart home
 
 ## Notes
 
+## Pairing 
+
+Instructions updated/adapted from https://github.com/roadsnail/Hive-SLR2-SLT2-Zigbee2MQTT-with-node-RED
+
+1. Switch off the Hive bridge (the white box connected to your home network / router).  The bridge is no longer required.
+2. Remove a battery from the thermostat (SLT2 or SLT3).
+3. Enable Zigbee2MQTT to accept new devices.
+4. On the heating controller SLR2, press and hold 'Central Heating' button for ~10 seconds until it flashes pink. Release then press and hold it again for another ~10 seconds. It will flash amber and the controller should join the Zigbee2MQTT network relatively quickly (10-15 seconds).
+5. With Zigbee2MQTT still in pairing mode, and the SLR2 still flashing Amber, replace the batteries in the thermostat (SLT2 or SLT3) while pressing 'back' and 'menu' buttons on the SLT3 OR the '+' and '-' buttons on the SLT2 to perform a reset - keep holding the buttons until the 10 second reset countdown completes. It will, reset, reboot and join the network - the thermostat will indicate "Searching..." and may take several minutes to finish - typically pairing with Zigbee2MQTT takes ~10-15 seconds, but the whole process may take 5 minutes to complete until the thermostat fully connects to the SLR2 and enters "Welcome" mode.
+
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
@@ -28,17 +39,33 @@ description: "Integrate your Hive SLR2 via Zigbee2MQTT with whatever smart home
 
 ### Climate (heat endpoint)
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`, `pi_heating_demand`.
-- `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_heat": VALUE}` where `VALUE` is the °C between `7` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_heat": ""}`.
-- `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_heat": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_heat": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_heat": ""}`.
-- `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state_heat": ""}`.
+- `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/heat/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `7` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/heat/get` with payload `{"occupied_heating_setpoint": ""}`.
+- `local_temperature`: Current temperature measured on the device (in °C). Read-only. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/heat/get` with payload `{"local_temperature": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/heat/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/heat/get` with payload `{"system_mode": ""}`.
+- `running_state`: The current running state. Read-only. Possible states are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/heat/get` with payload `{"running_state": ""}`.
 
 ### Climate (water endpoint)
-This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`, `pi_heating_demand`.
-- `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint_water": VALUE}` where `VALUE` is the °C between `7` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint_water": ""}`.
-- `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature_water": ""}`.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_water": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_water": ""}`.
-- `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state_water": ""}`.
+This climate device supports the following features: `temperature_setpoint_hold`, `temperature_setpoint_hold_duration`, `system_mode`, `running_state`, `pi_heating_demand`.
+- `temperature_setpoint_hold`: Used to hold (`false`) or release (`true`) the hotwater relay. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/water/set` with payload `{temperature_setpoint_hold": VALUE}` where `VALUE` is `true` or  `false`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/water/get` with payload `{"temperature_setpoint_hold": ""}`.
+- `temperature_setpoint_hold_duration`: Temperature setpoint hold duration (emergency_heating only) - used to determine how long the emergency heating period isrelay. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/water/set` with payload `{temperature_setpoint_hold_duration": VALUE}` where `VALUE` is number of minutes. There is no read command for this value (i.e. write-only).
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/water/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`,`emergency_heating` . To read send a message to `zigbee2mqtt/FRIENDLY_NAME/water/get` with payload `{"system_mode": ""}`.
+- `running_state`: The current running state. Read-only. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/water/get` with payload `{"running_state": ""}`.
+
+To switch water ON send the following messages / payloads:
+- `'zigbee2mqtt/FRIENDLY_NAME/water/set' / '{"system_mode": "heat"}'`
+- `'zigbee2mqtt/FRIENDLY_NAME/water/get' / '{"system_mode": ""}'`
+- `'zigbee2mqtt/FRIENDLY_NAME/water/set' / '{"temperature_setpoint_hold": true}'`
+
+To BOOST water for DURATION minutes send the following messages / payloads (note: the boost time remaining shows up on the SLT3 display):
+- `'zigbee2mqtt/FRIENDLY_NAME/water/set' / '{"system_mode": "emergency_heating"}'`
+- `'zigbee2mqtt/FRIENDLY_NAME/water/set' / '{"temperature_setpoint_hold_duration": DURATION}'`
+- `'zigbee2mqtt/FRIENDLY_NAME/water/get' / '{"system_mode": ""}'`
+- `'zigbee2mqtt/FRIENDLY_NAME/water/set' / '{"temperature_setpoint_hold": true}'`
+
+To switch water OFF send the following messages / payloads:
+- `'zigbee2mqtt/FRIENDLY_NAME/water/set' / '{"system_mode": "off"}'`
+- `'zigbee2mqtt/FRIENDLY_NAME/water/get' / '{"system_mode": ""}'`
+- `'zigbee2mqtt/FRIENDLY_NAME/water/set' / '{"temperature_setpoint_hold": false}'`
 
 ### Linkquality (numeric)
 Link quality (signal strength).
