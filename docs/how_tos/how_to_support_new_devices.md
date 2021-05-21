@@ -94,7 +94,7 @@ const definition = {
     zigbeeModel: ['lumi.sens'],
     model: 'WSDCGQ01LM',
     vendor: 'Xiaomi',
-    description: 'MiJia temperature & humidity sensor ',startup logging)
+    description: 'MiJia temperature & humidity sensor ',
     fromZigbee: [fz.temperature], // <-- added here
     toZigbee: [],
     exposes: [e.battery(), e.temperature(), e.humidity()],
