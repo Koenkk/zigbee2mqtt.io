@@ -62,6 +62,14 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://www.tubeszb.com/">Tube's ZB Store</a></td>
   </tr>
   <tr>
+    <td><img src="../images/Tubes_Zigbee_PoE_Coordinator_CC2652P2_variant.jpeg"></td>
+    <td>Tube's Zigbee Tube's Zigbee PoE Serial Coordinator (CC2652P2 variant)</td>
+    <td>Open source hardware CC2652P and ESP32 based Zigbee to Ethernet Coordinator powered via PoE (Power Over Ethernet)</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a></td>
+    <td><a href="https://github.com/tube0013/tube_gateways">Flashing</a></td>
+    <td><a href="https://www.tubeszb.com/">Tube's ZB Store</a></td>
+  </tr>
+  <tr>
     <td><img src="../images/cc2531.jpg"></td>
     <td>Texas Instruments CC2531</td>
     <td>USB connected Zigbee adapter with PCB antenna</td>
