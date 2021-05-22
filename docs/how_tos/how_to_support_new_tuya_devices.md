@@ -45,7 +45,7 @@ const definition = {
     onEvent: tuya.setTime, // Add this if you are getting no converter for 'commandSetTimeRequest'
     configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
-        await bind(endpoint, coordinatorEndpoint, ['genBasic']);
+        await reporting.bind(endpoint, coordinatorEndpoint, ['genBasic']);
     },
     exposes: [
         // Here you should put all functionality that your device exposes
