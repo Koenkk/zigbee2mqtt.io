@@ -89,6 +89,7 @@ Most of the times this is caused by zigbee-herdsman not being able to communicat
 2 common reasons of this error:
 1. The port of your serial adapter changed. Check [this](../getting_started/running_zigbee2mqtt.md#1-determine-location-of-the-adapter-and-checking-user-permissions) to find out the port of your adapter.
 2. If you are using a CC2530 or CC2531; it is a common issue for this adapter to crash (due to its outdated hardware). Reflashing the firmware should fix the problem. If it happens often consider upgrading to a [more powerful adapter](../getting_started/what_do_i_need.md#supported-zigbee-adapter).
+3. If you see this happening right after you flashed the dongle with your Pi, try inserting the dongle into a laptop, have it sit there for a few seconds to be recognized by the system, and then put it back into your Pi. Scientists are still researching the reason of why this procedure works, but it actually does. 
 
 ### Verify that you put the correct port in configuration.yaml
 Execute the following command to find out the correct path:
