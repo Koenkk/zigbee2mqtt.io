@@ -12,7 +12,7 @@ description: "Integrate your Dawon DNS SG-V100-ZB via Zigbee2MQTT with whatever 
 | Model | SG-V100-ZB  |
 | Vendor  | Dawon DNS  |
 | Description | IOT remote control smart gas lock |
-| Exposes | battery, switch (state), voltage, linkquality |
+| Exposes | battery, switch (state), linkquality |
 | Picture | ![Dawon DNS SG-V100-ZB](../images/devices/SG-V100-ZB.jpg) |
 
 ## Notes
@@ -33,12 +33,6 @@ The unit of this value is `%`.
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
-
-### Voltage (numeric)
-Measured electrical potential value.
-Value can be found in the published state on the `voltage` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `V`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -70,14 +64,6 @@ switch:
     payload_on: "ON"
     value_template: "{{ value_json.state }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.voltage }}"
-    unit_of_measurement: "V"
-    device_class: "voltage"
 
 sensor:
   - platform: "mqtt"

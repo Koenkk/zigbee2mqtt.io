@@ -21,7 +21,7 @@ description: "Integrate your Xiaomi GZCGQ01LM via Zigbee2MQTT with whatever smar
 *[How to use device type specific configuration](../information/configuration.md)*
 
 * `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
-e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
+e.g. `95` would take 95% to the illuminance reported by the device; default `100`. Calibration will take into affect with next report of device.
 
 
 

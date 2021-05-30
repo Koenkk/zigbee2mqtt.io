@@ -182,7 +182,12 @@ function getExposeDocs(expose) {
 
         const localTemperature = expose.features.find((e) => e.name === 'local_temperature');
         if (localTemperature) {
-            lines.push(`- \`${localTemperature.name}\`: ${localTemperature.description} (in ${localTemperature.unit}). To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${localTemperature.property}": ""}\`.`);
+            lines.push(`- \`${localTemperature.name}\`: ${localTemperature.description} (in ${localTemperature.unit}).`);
+            if (localTemperature.access & access.GET) {
+                lines[lines.length - 1] += ` To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${localTemperature.property}": ""}\`.`;
+            } else {
+                lines[lines.length - 1] += ` Reading (\`/get\`) this attribute is not possible.`;
+            }
         }
 
         for (const f of expose.features.filter((e) => ['system_mode', 'preset', 'mode'].includes(e.name))) {

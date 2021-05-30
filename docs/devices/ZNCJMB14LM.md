@@ -11,8 +11,8 @@ description: "Integrate your Xiaomi ZNCJMB14LM via Zigbee2MQTT with whatever sma
 
 | Model | ZNCJMB14LM  |
 | Vendor  | Xiaomi  |
-| Description | Aqara smart scene panel switch S1 |
-| Exposes | switch, settings, linkquality |
+| Description | Aqara S1 smart touch panel |
+| Exposes | switch (state), standby_enabled, theme, beep_volume, lcd_brightness, language, screen_saver_style, standby_time, font_size, lcd_auto_brightness_enabled, homepage, screen_saver_enabled, standby_lcd_brightness, available_switches, switch_1_text_icon, switch_2_text_icon, switch_3_text_icon, linkquality |
 | Picture | ![Xiaomi ZNCJMB14LM](../images/devices/ZNCJMB14LM.jpg) |
 
 ## Notes
@@ -24,7 +24,9 @@ On initial boot, the device will display a message "Waiting for accessing the ne
 If the device is already part of a network, swipe down from the top of the screen to access the Settings panel (password may be required), navigate to "Advanced", navigate to "Access New Gateway" and confirm with "Ok".
 Once confirmed, proceed as per initial boot.
 
-## Exposes (Entities)
+
+
+## Exposes
 
 ### Switch (left endpoint)
 The current state of this switch is in the published state under the `state_left` property (value is `ON` or `OFF`).
@@ -41,6 +43,115 @@ The current state of this switch is in the published state under the `state_righ
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
 
+### Standby_enabled (binary)
+Enable standby.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"standby_enabled": NEW_VALUE}`.
+If value equals `true` standby_enabled is ON, if `false` OFF.
+
+### Theme (enum)
+Display theme.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"theme": NEW_VALUE}`.
+The possible values are: `classic`, `concise`.
+
+### Beep_volume (enum)
+Beep volume.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"beep_volume": NEW_VALUE}`.
+The possible values are: `mute`, `low`, `medium`, `high`.
+
+### Lcd_brightness (numeric)
+LCD brightness (will not persist if auto-brightness is enabled).
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_brightness": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Language (enum)
+Interface language.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"language": NEW_VALUE}`.
+The possible values are: `chinese`, `english`.
+
+### Screen_saver_style (enum)
+Screen saver style.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"screen_saver_style": NEW_VALUE}`.
+The possible values are: `classic`, `analog clock`.
+
+### Standby_time (numeric)
+Display standby time.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"standby_time": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `65534`.
+The unit of this value is `s`.
+
+### Font_size (enum)
+Display font size.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"font_size": NEW_VALUE}`.
+The possible values are: `small`, `medium`, `large`.
+
+### Lcd_auto_brightness_enabled (binary)
+Enable LCD auto brightness.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_auto_brightness_enabled": NEW_VALUE}`.
+If value equals `true` lcd_auto_brightness_enabled is ON, if `false` OFF.
+
+### Homepage (enum)
+Default display homepage.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"homepage": NEW_VALUE}`.
+The possible values are: `scene`, `feel`, `thermostat`, `switch`.
+
+### Screen_saver_enabled (binary)
+Enable screen saver.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"screen_saver_enabled": NEW_VALUE}`.
+If value equals `true` screen_saver_enabled is ON, if `false` OFF.
+
+### Standby_lcd_brightness (numeric)
+Standby LCD brightness.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"standby_lcd_brightness": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Available_switches (enum)
+Control which switches are available in the switches screen (none disables switches screen).
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"available_switches": NEW_VALUE}`.
+The possible values are: `none`, `1`, `2`, `3`, `1 and 2`, `1 and 3`, `2 and 3`, `all`.
+
+### Switch_1_text_icon (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_1_text_icon": {"switch_1_icon": VALUE, "switch_1_text": VALUE}}`
+- `switch_1_icon` (enum): Icon. Allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
+- `switch_1_text` (text): Text. 
+
+### Switch_2_text_icon (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_2_text_icon": {"switch_2_icon": VALUE, "switch_2_text": VALUE}}`
+- `switch_2_icon` (enum): Icon. Allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
+- `switch_2_text` (text): Text. 
+
+### Switch_3_text_icon (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_3_text_icon": {"switch_3_icon": VALUE, "switch_3_text": VALUE}}`
+- `switch_3_icon` (enum): Icon. Allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
+- `switch_3_text` (text): Text. 
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
@@ -48,121 +159,10 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
-## Exposes (Settings)
-
-### Standby enabled (binary)
-Enables / disables the device screen standby.
-The current state of this setting is in the published state under the `standby_enabled` property (value is `True` or `False`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"standby_enabled":true}`, or `{"standby_enabled":false}`.
-
-### Theme (enum)
-Sets the device screen theme.
-The current state of this setting is in the published state under the `theme` property (value is `Classic` or `Concise`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"theme":"classic"}`, or `{"theme":"concise"}`.
-
-### Beep volume (enum)
-Sets the device beeper volume.
-The current state of this setting is in the published state under the `beep_volume` property (value is `Mute`, `Low`, `Medium` or `High`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"beep_volume":"mute"}`, `{"beep_volume":"low"}`, `{"beep_volume":"medium"}` or `{"beep_volume":"high"}`.
-
-### LCD brightness (numeric)
-Sets the device screen brightness as a percentage. *Note: if lcd_auto_brightness_enabled is true, this setting will not persist*
-The current state of this setting is in the published state under the `lcd_brightness` property (value is between `1` and `100`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_brightness":75}`.
-
-### Language (enum)
-Sets the device screen language.
-The current state of this setting is in the published state under the `language` property (value is `Chinese` or `English`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"language":"chinese"}` or `{"language":"english"}`.
-
-### Screen saver style (enum)
-Sets the device screen saver. *Note: if screen_saver_enabled is false, screen saver will not show*
-The current state of this setting is in the published state under the `screen_saver_style` property (value is `classic` or `analog clock`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"screen_saver_style":"classic"}` or `{"screen_saver_style":"analog clock"}`.
-
-### Standby time (numeric)
-Sets the device screen standby time in seconds. *Note: if standby_enabled is false, the device will not go into standby after the elapsed period*
-The current state of this setting is in the published state under the `standby_time` property (value is between `1` and `65534`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"standby_time":15}`.
-
-### Font size (enum)
-Sets the device screen font size.
-The current state of this setting is in the published state under the `beep_volume` property (value is `Small`, `Medium` or `Large`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"font_size":"small"}`, `{"font_size":"medium"}` or `{"font_size":"large"}`.
-
-### LCD auto brightness enabled (binary)
-Enables / disables the device screen automatic brightness.
-The current state of this setting is in the published state under the `lcd_auto_brightness_enabled` property (value is `True` or `False`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_auto_brightness_enabled":true}`, or `{"lcd_auto_brightness_enabled":false}`.
-
-### Homepage (enum)
-Sets the device screen homepage.
-The current state of this setting is in the published state under the `homepage` property (value is `Scene`, `Feel`, `Thermostat` or `Switch`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"homepage":"scene"}`, `{"homepage":"feel"}`, `{"homepage":"thermostat"}` or `{"homepage":"switch"}`.
-
-### Screen saver enabled (binary)
-Enables / disables the device screen saver.
-The current state of this setting is in the published state under the `screen_saver_enabled` property (value is `True` or `False`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"screen_saver_enabled":true}`, or `{"screen_saver_enabled":false}`.
-
-### Standby LCD brightness (numeric)
-Sets the device screen brightness as a percentage. *Note: if standby_enabled is false, the device will not go into standby after the elapsed period*
-The current state of this setting is in the published state under the `standby_lcd_brightness` property (value is between `1` and `100`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"standby_lcd_brightness":10}`.
-
-### Available Switches (enum)
-Sets the device switch screen available relays. *Note: if available_switches is none, the device will not show the switches screen*
-The current state of this setting is in the published state under the `available_switches` property (value is a set (lowest number first) combination between `none`, `1`, `2`, `3` or `all`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"available_switches":"none"}`, `{"available_switches":"1 and 3"}`, `{"available_switches":"1"}` or `{"available_switches":"all"}`.
-
-### Switch 1 Text and Icon (composite)
-Sets the device switch screen text and icon for the left switch endpoint.
-The current state of this setting is published under the `switch_1_text_icon` property and is a composite of the `switch_1_text` and `switch_1_icon` properties below.
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_1_text_icon":{"switch_1_icon":"1","switch_1_text":"Test"}}`.
-
-### Switch 1 Text (text)
-Sets the device switch screen text for the left switch endpoint
-The current state of this setting is in the published state under the `switch_1_icon` property.
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_1_text":"Test"}`.
-
-### Switch 1 Icon (enum)
-Sets the device switch screen icon for the left switch endpoint
-&emsp;The current state of this setting is in the published state under the `switch_1_icon` property (value is between `1` and `11`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_1_icon":"1"}` or `{"switch_1_icon":"11"}`.
-
-### Switch 2 Text and Icon (composite)
-Sets the device switch screen text and icon for the center switch endpoint.
-The current state of this setting is published under the `switch_2_text_icon` property and is a composite of the `switch_2_text` and `switch_2_icon` properties below.
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_2_text_icon":{"switch_2_icon":"1","switch_2_text":"Test"}}`.
-
-### Switch 2 Text (text)
-Sets the device switch screen text for the center switch endpoint
-The current state of this setting is in the published state under the `switch_2_icon` property.
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_2_text":"Test"}`.
-
-### Switch 2 Icon (enum)
-Sets the device switch screen icon for the center switch endpoint
-&emsp;The current state of this setting is in the published state under the `switch_2_icon` property (value is between `1` and `11`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_2_icon":"1"}` or `{"switch_1_icon":"11"}`.
-
-### Switch 3 Text and Icon (composite)
-Sets the device switch screen text and icon for the right switch endpoint.
-The current state of this setting is published under the `switch_3_text_icon` property and is a composite of the `switch_3_text` and `switch_3_icon` properties below.
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_3_text_icon":{"switch_3_icon":"1","switch_3_text":"Test"}}`.
-
-### Switch 3 Text (text)
-Sets the device switch screen text for the right switch endpoint
-The current state of this setting is in the published state under the `switch_3_icon` property.
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_3_text":"Test"}`.
-
-### Switch 3 Icon (enum)
-Sets the device switch screen icon for the right switch endpoint
-&emsp;The current state of this setting is in the published state under the `switch_3_icon` property (value is between `1` and `11`).
-To control this setting publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_3_icon":"1"}` or `{"switch_3_icon":"11"}`.
-
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
 manual integration is possible with the following configuration:
+
 
 {% raw %}
 ```yaml
@@ -192,6 +192,51 @@ switch:
     payload_on: "ON"
     value_template: "{{ value_json.state_right }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/right/set"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.standby_enabled }}"
+    payload_on: true
+    payload_off: false
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.lcd_brightness }}"
+    unit_of_measurement: "%"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.standby_time }}"
+    unit_of_measurement: "s"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.lcd_auto_brightness_enabled }}"
+    payload_on: true
+    payload_off: false
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.screen_saver_enabled }}"
+    payload_on: true
+    payload_off: false
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.standby_lcd_brightness }}"
+    unit_of_measurement: "%"
 
 sensor:
   - platform: "mqtt"

@@ -24,6 +24,12 @@ This device has various limitations:
 - On/off and color transition is not supported
 - Color can only be set via hue/saturation, example payload `{"color":{"h": 360, "s": 100}}`.
 
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
+the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)
+
 
 * `hue_correction`: (optional) Corrects hue values based on a correction map for matching color
 rendition to other lights. Provide a minimum of 2 data sets in the correction map. To build a map:

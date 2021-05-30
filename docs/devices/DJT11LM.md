@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi DJT11LM via Zigbee2MQTT with whatever smart 
 | Model | DJT11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara vibration sensor |
-| Exposes | battery, action, strength, sensitivity, voltage, linkquality |
+| Exposes | battery, action, strength, sensitivity, angle_x, angle_y, angle_z, voltage, linkquality |
 | Picture | ![Xiaomi DJT11LM](../images/devices/DJT11LM.jpg) |
 
 ## Notes
@@ -72,6 +72,21 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
+### Angle_x (numeric)
+Value can be found in the published state on the `angle_x` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `-90` and the maximum value is `90`.
+
+### Angle_y (numeric)
+Value can be found in the published state on the `angle_y` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `-90` and the maximum value is `90`.
+
+### Angle_z (numeric)
+Value can be found in the published state on the `angle_z` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `-90` and the maximum value is `90`.
+
 ### Voltage (numeric)
 Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
@@ -118,6 +133,24 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.sensitivity }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.angle_x }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.angle_y }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.angle_z }}"
 
 sensor:
   - platform: "mqtt"
