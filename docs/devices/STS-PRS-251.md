@@ -57,10 +57,11 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `beeping`.
 
 ### Beep (enum)
+Trigger beep for x seconds.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"beep": NEW_VALUE}`.
-The possible values are: ``.
+The possible values are: `2`, `5`, `10`, `15`, `30`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

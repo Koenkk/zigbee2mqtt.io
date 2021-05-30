@@ -5,9 +5,9 @@ description: "Integrate your Moes ZTS-EU_2gang via Zigbee2MQTT with whatever sma
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZTS-EU_3gang.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZTS-EU_2gang.md)*
 
-# Moes ZTS-EU_3gang
+# Moes ZTS-EU_2gang
 
 | Model | ZTS-EU_2gang  |
 | Vendor  | Moes  |

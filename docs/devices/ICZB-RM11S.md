@@ -17,6 +17,7 @@ description: "Integrate your iCasa ICZB-RM11S via Zigbee2MQTT with whatever smar
 
 ## Notes
 
+
 ### Pairing
 Press and hold the All Off and All On button on the Remote until the Status LED turns on.
 Then immediately press the All Off button.
