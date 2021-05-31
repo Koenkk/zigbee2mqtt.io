@@ -1553,11 +1553,9 @@ If the Switch is connected hold Middle and Arrow Up Buttons for 3 Seconds to dis
 For the OSRAM Smart+ plug (AB3257001NJ) hold the on/off button until your hear a click (+- 10 seconds).
 
 ### Caveats
-Does not pass every attribute when acting as the routing parent for some end devices.
-E.g. \`occupancy\` is gobbled when routing Xiaomi [RTCGQ11LM](RTCGQ11LM.md) traffic resulting in
-motion updates not getting propagated to the network.
+Does not pass every attribute when acting as the routing parent for some end devices which send messages right after each other.
 
-See also [#2274](https://github.com/Koenkk/zigbee2mqtt/issues/2274).
+See also [#2274](https://github.com/Koenkk/zigbee2mqtt/issues/2274), note that the no occupancy for the Xiaomi RTCGQ11LM has been fixed.
 `,
     },
     {
