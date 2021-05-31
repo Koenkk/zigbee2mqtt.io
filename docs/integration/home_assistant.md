@@ -142,9 +142,9 @@ light:
     state_topic: "zigbee2mqtt/[GROUP_FRIENDLY_NAME]"
 
     // Modify according to features supported by all devices in group
-    color_temp: true
     brightness: true
-    rgb: true
+    color_mode: true
+    supported_color_modes: ["color_temp", "xy"]
 ```
 
 {% endraw %}
@@ -213,7 +213,7 @@ input_text:
     name: Zigbee2MQTT Remove
     initial: ""
 
-# Input boolean to set the force remove flag for devices 
+# Input boolean to set the force remove flag for devices
 input_boolean:
   zigbee2mqtt_force_remove:
     name: Zigbee2MQTT Force Remove
@@ -240,8 +240,8 @@ script:
       data_template:
         topic: zigbee2mqtt/bridge/request/device/remove
         payload_template: >-
-          { 
-            "id": "{{ states.input_text.zigbee2mqtt_remove.state | string }}", 
+          {
+            "id": "{{ states.input_text.zigbee2mqtt_remove.state | string }}",
             "force": {% if states.input_boolean.zigbee2mqtt_force_remove.state == "off" %}false{% else %}true{% endif %}
           }
 
