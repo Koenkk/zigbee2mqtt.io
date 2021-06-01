@@ -1548,6 +1548,16 @@ Save the file and restart Zigbee2MQTT.
 `,
     },
     {
+        model: '07047L',
+        note: `
+### Pairing
+Pair the sensor to Zigbee2MQTT by pressing the pair button 3 seconds.
+
+### Detection cooldown
+Cooldown of detection is around 1 min. In other words; 1 min after last published detection (and trigger no longer present) occupancy will be published as false.
+`,
+    },
+    {
         model: 'Z809A',
         note: `
 ### Pairing
@@ -1623,6 +1633,14 @@ For the OSRAM Smart+ plug (AB3257001NJ) hold the on/off button until your hear a
 Does not pass every attribute when acting as the routing parent for some end devices which send messages right after each other.
 
 See also [#2274](https://github.com/Koenkk/zigbee2mqtt/issues/2274), note that the no occupancy for the Xiaomi RTCGQ11LM has been fixed.
+`,
+    },
+    {
+        model: 'R7060',
+        note: `
+### Pairing
+Hold the red off button pressed for 5 seconds (until the blue LED blinks).
+After this the device will reset and try to join a network.
 `,
     },
     {
