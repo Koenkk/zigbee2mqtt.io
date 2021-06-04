@@ -4,11 +4,28 @@ const notes = [
         note: `
 ### Pairing
 If pairing failed, try the followings:
-- PMake sure door are in open state
+- Make sure door are in open state
 - Press and hold manual lock button and wait for 3 beeps
 - Keypad in front lights up
 - Type inn the Master PIN, then *, then 2, then *, then 0
 Lock will now reset the Zigbee module and go to pairing mode
+
+### PIN Code Usage
+To retrieve the state, send a \`get\` message to the device topic (\`zigbee2mqtt/DEVICE_FRIENDLY_NAME/get\`) with the body \`{"pin_code":{"user":1}}\`. To set, send a \`set\` message to the device topic (\`zigbee2mqtt/DEVICE_FRIENDLY_NAME/set\`) with the body \`{"pin_code":{"user":1,"pin_code":1234}}\`. To clear a code, send a \`set\` message with the body \`{"pin_code":{"user":1}}\`
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* \`expose_pin\`: Allows to retrieve the \`pin_code\` value, rather than just user status (\`available\`/\`enabled\`), for \`pin_code\` endpoints (default: \`false\`) in \`devices.yaml\`.
+
+Example:
+{% raw %}
+\`\`\`yaml
+'0x680ae2fffe6bb522':
+  friendly_name: '0x680ae2fffe6bb522'
+  expose_pin: true
+\`\`\`
+{% endraw %}
 
 ### Manual
 [ID LOCK 150 user manual](https://idlock.no/wp-content/uploads/2018/03/20180123-001-IDL150-UserManual.pdf)
@@ -23,6 +40,56 @@ Lock will now reset the Zigbee module and go to pairing mode
         note: `
 ### Pairing
 Press and hold the button on the device until the blue light starts blinking, release it and and the device will automatically join.
+`,
+    },
+    {
+        model: ['CCTFR6400'],
+        note: `
+### Device info
+This device is a
+- thermostat UI for displaying/adjusting target set point.
+- temperature sensor
+- hygrometry sensor
+It can display the heating status of associated climate by setting \`pi_heating_demand\`
+
+It requires a Z-Stack controller (Firmware version > TBD). It is currently not working with zigate and conbee II (maybe supported in further firmware).
+`,
+    },
+    {
+        model: ['CCTFR6700'],
+        note: `
+### Device info
+This device is a thermostat to drive an electric heater.
+It supports two modes:
+- Contactor mode, that switches the heater power supply on and off
+- Pilot mode, for compatible heaters
+
+### Pairing and configuring
+After pairing the device requires:
+- the pilot mode to be configured (Contactor/Pilot)
+- an external temperature measurment, either through a bind from a sensor, or report from the coordinator trhough automation. The temperature must be refreshed at least every 10mn
+- the target thermostat set point
+`,
+    },
+    {
+        model: ['ZBMINI'],
+        note: `
+### Device stuck
+In case of switching the coordinators a device may stuck in error state which is indicated by slowly blinking light (about 1 flash per second).
+To switch a device to a pairing mode power it off for 10 sec. After power on it enters pairing mode automatically.
+`,
+    },
+    {
+        model: ['ICZB-RM11S'],
+        note: `
+### Pairing
+Press and hold the All Off and All On button on the Remote until the Status LED turns on.
+Then immediately press the All Off button.
+The Status LED will blink 5 times quickly to indicate a successful pairing.
+
+### Resetting
+Press and hold the All Off and All On button on the Remote until the Status LED turns on.
+Then immediately press 5 times the All On button.
 `,
     },
     {
@@ -569,7 +636,7 @@ Hold button for a few seconds until red light turn on.
 `,
     },
     {
-        model: 'V3-BTZB',
+        model: 'V3-BTZB/V3-BTZBE',
         note: `
 ### Pairing
 If pairing failed, try the followings:
@@ -1325,7 +1392,7 @@ Factory reset the motion detector by holding the reset button (little hole on th
 When you let go of the button an LED should blink.
 After resetting the motion detector will automatically connect.
 While pairing, keep the motion detector close to the adapter.
-
+Press the tamper button a few times while pairing to keep the sensor a wake.
 
 ### Tamper
 If the button on the back is pressed (i.e. the device is on the mounting plate), the value of \`tamper\` equals \`true\` otherwise it is \`false\`.
@@ -1481,6 +1548,16 @@ Save the file and restart Zigbee2MQTT.
 `,
     },
     {
+        model: '07047L',
+        note: `
+### Pairing
+Pair the sensor to Zigbee2MQTT by pressing the pair button 3 seconds.
+
+### Detection cooldown
+Cooldown of detection is around 1 min. In other words; 1 min after last published detection (and trigger no longer present) occupancy will be published as false.
+`,
+    },
+    {
         model: 'Z809A',
         note: `
 ### Pairing
@@ -1559,6 +1636,14 @@ See also [#2274](https://github.com/Koenkk/zigbee2mqtt/issues/2274), note that t
 `,
     },
     {
+        model: 'R7060',
+        note: `
+### Pairing
+Hold the red off button pressed for 5 seconds (until the blue LED blinks).
+After this the device will reset and try to join a network.
+`,
+    },
+    {
         model: ['ZLED-2709'],
         note: `
 ### Pairing
@@ -1625,7 +1710,7 @@ With IKEA Tradfri Remote Control it can maybe resetted it this case, see [TRADFR
     },
     {
         vendor: 'Philips',
-        notModel: ['324131092621'],
+        notModel: ['324131092621', '929002398602', '929002398602'],
         exposes: (exposes) => exposes.find((e) => e.type === 'light' && e.features.find((f) => f.name === 'brightness')),
         note: `
 ### Pairing
@@ -1641,6 +1726,7 @@ by removing it from the bridge via the Hue app. Orphaned bulbs (configured to co
 
 #### Hue dimmer switch
 With [one](324131092621) of the [two](929002398602) Hue Dimmer switches it is possible to put the bulbs into a factory reset.
+With [one](324131092621) of the [two](929002398602) Hue Dimmer switches it's possible to put the bulbs into a factory reset.
 
 1. Power-supply the bulb
 2. Bring the dimmer switch next to the bulb, as close as possible
@@ -1664,7 +1750,7 @@ by pressing and holding the reset button on the bottom of the remote (next to th
     },
     {
         vendor: 'Philips',
-        notModel: ['324131092621'],
+        notModel: ['324131092621', '929002398602'],
         exposes: (exposes) => exposes.find((e) => e.type === 'light' || e.type === 'switch'),
         note: `
 ### Power-on behavior
@@ -1743,7 +1829,7 @@ within 5 centimeters away from Airam bulb.
 `,
     },
     {
-        model: ['324131092621'],
+        model: ['324131092621', '929002398602'],
         note: `
 ### Pairing
 Factory reset the Hue dimmer switch by pressing and holding the setup button on the back for 10 seconds.
@@ -2089,13 +2175,30 @@ If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatical
 `,
     },
     {
-        model: ['E1603/E1702'],
+        model: ['RC 110'],
+        note: `
+### Pairing
+Press and hold \`PROGRAM\` and \`-\` buttons until device LED blinks
+`,
+    },
+    {
+        model: ['ZNCJMB14LM'],
+        note: `
+### Pairing
+On initial boot, the device will display a message "Waiting for accessing the network" permit join and the device will be added.
+
+If the device is already part of a network, swipe down from the top of the screen to access the Settings panel (password may be required), navigate to "Advanced", navigate to "Access New Gateway" and confirm with "Ok".
+Once confirmed, proceed as per initial boot.
+`,
+    },
+    {
+        model: ['E1603/E1702/E1708'],
         note: `
 The TRADFRI control outlet also acts as a Zigbee router.
 `,
     },
     {
-        model: ['E1603/E1702'],
+        model: ['E1603/E1702/E1708'],
         note: `
 ### Pairing
 To factory reset the TRADFRI control outlet, press and hold the reset button
@@ -2568,7 +2671,7 @@ This device has various limitations:
             '81825', 'ZYCT-202', 'STS-PRS-251', 'Z3-1BRL', 'AV2010/32', 'U86KWF-ZPSJ', '1TST-EU', 'UK7004240',
             'SLR1b', 'SLR2', 'RC-2000WH', '3157100', '014G2461', 'ST218', 'STZB402', 'SMT402', 'SMT402AD', 'TH1124ZB', 'TH1300ZB',
             'TH1500ZB', 'Zen-01-W', 'TH1400ZB', 'TH1123ZB', 'ZK03840', 'SPZB0001', 'WV704R0A0902', 'TERNCY-SD01', 'C4', 'HT-08', 'HT-10',
-            '07703L', 'SEA801-Zigbee/SEA802-Zigbee', '6ARCZABZH', '324131092621',
+            '07703L', 'SEA801-Zigbee/SEA802-Zigbee', '6ARCZABZH', '324131092621', '929002398602',
         ],
         deviceTypeSpecificConfiguration: true,
         note: `
@@ -2589,7 +2692,7 @@ This device has various limitations:
         note: `
 * \`illuminance_lux_precision\`: Controls the precision of \`illuminance_lux\` values, e.g. \`0\` or \`1\`; default \`1\`.
 To control the precision based on the illuminance_lux value set it to e.g. \`{1000: 0, 100: 1}\`,
-when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 precision will be 1.
+when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 precision will be 1. Precision will take into affect with next report of device.
 `,
     },
     {
@@ -2597,7 +2700,7 @@ when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 pr
         deviceTypeSpecificConfiguration: true,
         note: `
 * \`illuminance_lux_calibration\`: Allows to manually calibrate illuminance values,
-e.g. \`95\` would take 95% to the illuminance reported by the device; default \`100\`.
+e.g. \`95\` would take 95% to the illuminance reported by the device; default \`100\`. Calibration will take into affect with next report of device.
 `,
     },
     {
@@ -2608,9 +2711,9 @@ e.g. \`95\` would take 95% to the illuminance reported by the device; default \`
 * \`temperature_precision\`: Controls the precision of \`temperature\` values,
 e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
 To control the precision based on the temperature value set it to e.g. \`{30: 0, 10: 1}\`,
-when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1.
+when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1. Precision will take into affect with next report of device.
 * \`temperature_calibration\`: Allows to manually calibrate temperature values,
-e.g. \`1\` would add 1 degree to the temperature reported by the device; default \`0\`.
+e.g. \`1\` would add 1 degree to the temperature reported by the device; default \`0\`. Calibration will take into affect with next report of device.
 `,
     },
     {
@@ -2653,22 +2756,32 @@ This device can work on any channel, not only 15, 20, 11 or 25. For this refer t
 `,
     },
     {
+        exposes: (exposes) => exposes.find((e) => e.type === 'light' && e.features.find((ee) => ee.name.startsWith('color'))),
+        deviceTypeSpecificConfiguration: true,
+        note: `
+* \`color_sync\`: Synchronizes the color values in the state, e.g. if the state contains \`color_temp\` and \`color.xy\` and
+the \`color_temp\` is set, \`color.xy\` will be updated to match the \`color_temp\`. (default: \`true\`)
+`,
+    },
+    {
         exposes: (exposes) => exposes.find((e) => e.type === 'numeric' && e.name === 'humidity'),
         notModel: ['SMT402', 'SMT402AD'],
+        deviceTypeSpecificConfiguration: true,
         note: `
 * \`humidity_precision\`: Controls the precision of \`humidity\` values, e.g. \`0\`, \`1\` or \`2\`; default \`2\`.
 To control the precision based on the humidity value set it to e.g. \`{80: 0, 10: 1}\`,
-when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1.
+when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1. Precision will take into affect with next report of device.
 `,
     },
     {
         exposes: (exposes) => exposes.find((e) => e.type === 'numeric' && e.name === 'pressure'),
+        deviceTypeSpecificConfiguration: true,
         note: `
 * \`pressure_precision\`: Controls the precision of \`pressure\` values, e.g. \`0\` or \`1\`; default \`1\`.
 To control the precision based on the pressure value set it to e.g. \`{1000: 0, 100: 1}\`,
-when pressure >= 1000 precision will be 0, when pressure >= 100 precision will be 1.
+when pressure >= 1000 precision will be 0, when pressure >= 100 precision will be 1. Precision will take into affect with next report of device.
 * \`pressure_calibration\`: Allows to manually calibrate pressure values,
-e.g. \`1\` would add 1 to the pressure reported by the device; default \`0\`.
+e.g. \`1\` would add 1 to the pressure reported by the device; default \`0\`. Calibration will take into affect with next report of device.
 `,
     },
     {
@@ -2688,7 +2801,7 @@ simulated_brightness:
     },
     {
         exposes: (exposes) => exposes.find((e) => e.type === 'light'),
-        notModel: ['324131092621', 'ICZB-KPD18S', 'ICZB-KPD14S', 'TYZS1L'],
+        notModel: ['324131092621', '929002398602', 'ICZB-KPD18S', 'ICZB-KPD14S', 'TYZS1L'],
         deviceTypeSpecificConfiguration: true,
         note: `
 * \`transition\`: Controls the transition time (in seconds) of on/off, brightness,
@@ -3208,7 +3321,7 @@ Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
 If you are having trouble pairing, reset the device.
 - Make sure the device is on auto or heat mode (not off). Hold boost, +, and - (a count from 1 to 10 will be on the display, it may be required for the thermostat to be dismounted from the radiator valve for this to work)
 - release once 'rES' is displayed
-- hit boot once after 'Jin' is displayed to start pairing to the ZigBee network
+- hit boost once after 'Jin' is displayed to start pairing to the ZigBee network
 - once successfully paired 'Ins' should be displayed and the boost button should flash green. Make sure the thermostat is mounted on the radiator valve before pressing the boost button again.
 - now the display should read 'Ada' indicating the adapting process is started which should mechanically calibrate the thermostat to the valve.
 
@@ -3606,7 +3719,11 @@ This method should work for Philips Hue bulbs, IKEA TRADFRI bulbs, GE Link bulbs
         note: `
 ### Pairing
 
-Press the side button of the device with a paper clip for more than 2 seconds. The main button led will flash. Then make sure the device is awake during pairing phase or the configuration may fail. To ensure device is awake press the main button every 2 seconds until configuration is done in Zigbee2MQTT logs.
+Press the side button of the device with a paper clip for more than 2 seconds. The main button led will flash rapidly. Then make sure the device is awake during pairing phase or the configuration may fail. To ensure device is awake press the main button every 2 seconds until configuration is done in Zigbee2MQTT logs.
+
+### Reset
+
+If you have trouble pairing, the device can be reset by pressing the side button with a paper clip for 5 seconds. The led will flash (slower than in pairing mode) 6 times to confirm. After that you can retry the normal pairing procedure.
 
 ### Important
 There are 3 versions of this device: Standalone, Zigbee and Z-wave. These are visually identical. Make sure to get the correct version that will work with Zigbee2MQTT:
@@ -3848,7 +3965,7 @@ Spanish models are branded as Legrand Valena Next, and models for this device de
 `,
     },
     {
-        model: ['E1603/E1702'],
+        model: ['E1603/E1702/E1708'],
         note: `
 ## OpenHAB configuration
 You have to enable attribute output. Via configuration.yaml in Zigbee2MQTT.

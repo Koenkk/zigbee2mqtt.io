@@ -279,6 +279,7 @@ The `configuration.yaml` allows to set device specific configuration. This can a
 * `retrieve_state`: (DEPRECATED) Retrieves the state after setting it. Should only be enabled when the [reporting feature](../information/report.md) does not work for this device.
 * `filtered_attributes`: Allows to prevent certain attributes from being published. When a device would e.g. publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will publish `{"temperature": 10}`.
 * `optimistic`: Publish optimistic state after set, e.g. when a brightness change command succeeds Zigbee2MQTT assumes the brightness of the device changed and will publish this (default `true`).
+* `filtered_optimistic`: Same as the `filtered_attributes` option but only applies to the optimistic published attributes. Has no effect when `optimistic: false` is set. Example: `filtered_optimistic: ["color_mode", "color"]`.
 
 ### Device type specific
 Some devices support device type specific configuration, e.g. [RTCGQ11LM](../devices/RTCGQ11LM.md). To see if your device has device type specific configuration, visit the device page by going to [Supported devices](../information/supported_devices.md) and clicking on the model number.

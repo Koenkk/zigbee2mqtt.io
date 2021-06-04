@@ -1,19 +1,19 @@
 ---
-title: "Danalock V3-BTZB control via MQTT"
-description: "Integrate your Danalock V3-BTZB via Zigbee2MQTT with whatever smart home
+title: "Danalock V3-BTZB/V3-BTZBE control via MQTT"
+description: "Integrate your Danalock V3-BTZB/V3-BTZBE via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/V3-BTZB.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/V3-BTZB_V3-BTZBE.md)*
 
-# Danalock V3-BTZB
+# Danalock V3-BTZB/V3-BTZBE
 
-| Model | V3-BTZB  |
+| Model | V3-BTZB/V3-BTZBE  |
 | Vendor  | Danalock  |
 | Description | BT/ZB smartlock |
 | Exposes | lock (state, lock_state), battery, linkquality |
-| Picture | ![Danalock V3-BTZB](../images/devices/V3-BTZB.jpg) |
+| Picture | ![Danalock V3-BTZB/V3-BTZBE](../images/devices/V3-BTZB-V3-BTZBE.jpg) |
 
 ## Notes
 

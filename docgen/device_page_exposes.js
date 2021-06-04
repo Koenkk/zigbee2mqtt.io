@@ -123,7 +123,7 @@ function getExposeDocs(expose) {
         }
         if (colorTempStartup) {
             const presets = `Besides the numeric values the following values are accepected: ${colorTempStartup.presets.map((p) => `\`${p.name}\``).join(', ')}.`;
-            lines.push(`- \`color_temp_statup\`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorTempStartup.property}": VALUE}\` where \`VALUE\` is a number between \`${colorTempStartup.value_min}\` and \`${colorTempStartup.value_max}\`, the higher the warmer the color. To read the startup color temperature send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorTempStartup.property}": ""}\`. ${presets}`);
+            lines.push(`- \`color_temp_startup\`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorTempStartup.property}": VALUE}\` where \`VALUE\` is a number between \`${colorTempStartup.value_min}\` and \`${colorTempStartup.value_max}\`, the higher the warmer the color. To read the startup color temperature send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorTempStartup.property}": ""}\`. ${presets}`);
         }
         if (colorXY) {
             lines.push(`- \`color_xy\`: To control the XY color (CIE 1931 color space) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorXY.property}": {"x": X_VALUE, "y": Y_VALUE}}\` (e.g. \`{"color":{"x":0.123,"y":0.123}}\`). To read the XY color send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorXY.property}":{"x":"","y":""}}\`. Alternatively it is possible to set the XY color via RGB:`);
@@ -182,7 +182,12 @@ function getExposeDocs(expose) {
 
         const localTemperature = expose.features.find((e) => e.name === 'local_temperature');
         if (localTemperature) {
-            lines.push(`- \`${localTemperature.name}\`: ${localTemperature.description} (in ${localTemperature.unit}). To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${localTemperature.property}": ""}\`.`);
+            lines.push(`- \`${localTemperature.name}\`: ${localTemperature.description} (in ${localTemperature.unit}).`);
+            if (localTemperature.access & access.GET) {
+                lines[lines.length - 1] += ` To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${localTemperature.property}": ""}\`.`;
+            } else {
+                lines[lines.length - 1] += ` Reading (\`/get\`) this attribute is not possible.`;
+            }
         }
 
         for (const f of expose.features.filter((e) => ['system_mode', 'preset', 'mode'].includes(e.name))) {

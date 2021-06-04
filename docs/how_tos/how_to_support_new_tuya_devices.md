@@ -43,9 +43,6 @@ const definition = {
         tz.tuya_data_point_test, // Another debug converter
     ],
     onEvent: tuya.setTime, // Add this if you are getting no converter for 'commandSetTimeRequest'
-    meta: {
-        configureKey: 1,
-    },
     configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
         await reporting.bind(endpoint, coordinatorEndpoint, ['genBasic']);
@@ -160,9 +157,6 @@ const definition = {
         tz.saswell_thermostat_current_heating_setpoint,
     ],
     onEvent: tuya.setTime,
-    meta: {
-        configureKey: 1,
-    },
     configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
         await bind(endpoint, coordinatorEndpoint, ['genBasic']);
