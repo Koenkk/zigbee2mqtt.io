@@ -23,8 +23,7 @@ jobs:
     - name: Install dependencies
       if: steps.cache-node-modules.outputs.cache-hit != 'true'
       run: |
-        git config --global url."https://github.com/".insteadOf git@github.com:
-        git config --global url."https://".insteadOf git://
+        git config --global url."https://".insteadOf ssh://
         npm ci
     - name: Test
       run: npm test
