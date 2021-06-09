@@ -4195,6 +4195,13 @@ indicator light flashes, then release it.
 While pairing, keep the remote close to the coordinator.
 `,
     },
+    {
+        model: ['GR-ZB01-W'],
+        note: `
+### AC Power
+If you are using the AC wall adapter, the battery level will always stay within the range of 25-35% as it is continually drawing power from the outlet.
+The battery level indicator is only relevant to if you are using the solar panel.`,
+    },
 ];
 
 module.exports = notes;
