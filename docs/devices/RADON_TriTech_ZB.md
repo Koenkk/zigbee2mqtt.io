@@ -12,7 +12,7 @@ description: "Integrate your Bosch RADON TriTech ZB via Zigbee2MQTT with whateve
 | Model | RADON TriTech ZB  |
 | Vendor  | Bosch  |
 | Description | Wireless motion detector |
-| Exposes | temperature, battery, occupancy, battery_low, tamper, linkquality |
+| Exposes | temperature, battery, occupancy, battery_low, tamper, linkquality, illuminance, illuminance_lux |
 | Picture | ![Bosch RADON TriTech ZB](../images/devices/RADON-TriTech-ZB.jpg) |
 
 ## Notes
@@ -68,6 +68,15 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+
+### Illuminance (numeric)
+Raw measured illuminance. Value can be found in the published state on the `illuminance` property. 
+It’s not possible to read (`/get`) or write (`/set`) this value.
+
+### Illuminance_lux (numeric)
+Measured illuminance in lux. Value can be found in the published state on the `illuminance_lux` property. 
+It’s not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
 
 ## Manual Home Assistant configuration
 Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
@@ -125,6 +134,22 @@ sensor:
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
     icon: "mdi:signal"
+    
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.illuminance }}"
+    device_class: "illuminance"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.illuminance_lux }}"
+    unit_of_measurement: "lx"
+    device_class: "illuminance"
+     
 ```
 {% endraw %}
 
