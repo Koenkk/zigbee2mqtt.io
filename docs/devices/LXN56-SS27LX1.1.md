@@ -18,7 +18,8 @@ description: "Integrate your Nue / 3A LXN56-SS27LX1.1 via Zigbee2MQTT with whate
 
 ## Notes
 
-This switch was 2 distinct zigbee chips, so it's see as 2 diffirents devices.
+## 2 distinct devices
+This switch was 2 distinct Zigbee chips, so it's seen as 2 separate devices.
 
 ## Exposes
 
