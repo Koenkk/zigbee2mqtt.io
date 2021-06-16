@@ -146,6 +146,7 @@ advanced:
   # A temperature & humidity sensor will have 2 entities for the temperature and
   # humidity, with this setting enabled both entities will also have
   # an temperature and humidity attribute.
+  # Note: Disabling this option, requires a Home Assistant restart
   homeassistant_legacy_entity_attributes: true
   # Optional: Home Assistant legacy triggers (default: shown below), when enabled:
   # - Zigbee2mqt will send an empty 'action' or 'click' after one has been send
