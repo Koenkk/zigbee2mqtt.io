@@ -126,28 +126,7 @@ automation:
 {% endraw %}
 
 ## Groups
-Groups are not auto-discovered.
-With the configuration below, grouped devices in Zigbee2MQTT will be exposed as a single device in Home Assistant.
-The following example will show you how to add a group of lights to Home Assistant.
-It has to be added to the Home Assistant `configuration.yaml`.
-
-{% raw %}
-
-```
-light:
-  - platform: mqtt
-    schema: json
-    name: MY_GROUP_NAME
-    command_topic: "zigbee2mqtt/[GROUP_FRIENDLY_NAME]/set"
-    state_topic: "zigbee2mqtt/[GROUP_FRIENDLY_NAME]"
-
-    // Modify according to features supported by all devices in group
-    brightness: true
-    color_mode: true
-    supported_color_modes: ["color_temp", "xy"]
-```
-
-{% endraw %}
+Groups discovery is supported for groups of lights, switches, locks and covers. For other types you have to manually create a config in the Home Assistant `configuration.yaml`.
 
 ## Exposing switch as a light
 If your device is currently discovered as a switch and you want to discover it as a light, the following config in the Zigbee2MQTT `configuration.yaml` can be used:
