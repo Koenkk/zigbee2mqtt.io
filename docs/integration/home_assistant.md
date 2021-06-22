@@ -260,13 +260,13 @@ sensor:
   # Sensor for Showing the Zigbee2MQTT Version
   - platform: mqtt
     name: Zigbee2MQTT Version
-    state_topic: "zigbee2mqtt/bridge/config"
+    state_topic: "zigbee2mqtt/bridge/info"
     value_template: "{{ value_json.version }}"
     icon: mdi:zigbee
   # Sensor for Showing the Coordinator Version
   - platform: mqtt
     name: Coordinator Version
-    state_topic: "zigbee2mqtt/bridge/config"
+    state_topic: "zigbee2mqtt/bridge/info"
     value_template: "{{ value_json.coordinator }}"
     icon: mdi:chip
 
