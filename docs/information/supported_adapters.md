@@ -73,8 +73,8 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/circset_cc2652.jpg"></td>
     <td>CircuitSetup's CC2652P2 USB Coordinator</td>
     <td>CC2652P based USB connected adapter pre-programmed with Z-Stack</td>
-    <td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
+    <td>
     <td><a href="https://circuitsetup.us/product/usb-zigbee-stick-z-stack-coordinator/">CircuitSetup's Store</a></td>
   </tr>
   <tr>
