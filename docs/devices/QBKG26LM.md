@@ -21,17 +21,13 @@ description: "Integrate your Xiaomi QBKG26LM via Zigbee2MQTT with whatever smart
 ### Decoupled mode
 Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
 This might be useful to assign some custom actions to buttons and control relay remotely.
-This command also allows to redefine which button controls which relay for the double switch (not supported for QBKG25LM).
 
-Topic `zigbee2mqtt/FRIENDLY_NAME/system/set` should be used to modify operation mode.
-
-**NOTE:** For QBKG25LM instead of `system` use `left`, `center` or `right` and leave out the `button` property in the payload.
+Topic `zigbee2mqtt/FRIENDLY_NAME/ENDPOINT/set` should be used to modify operation mode.
 
 Payload:
 ```js
 {
   "operation_mode": {
-    "button": "single"|"left"|"right", // Always use single for a single switch
     "state": "VALUE"
   }
 }
@@ -39,9 +35,7 @@ Payload:
 
 Values                | Description
 ----------------------|---------------------------------------------------------
-`control_relay`       | Button directly controls relay (for single switch and QBKG25LM)
-`control_left_relay`  | Button directly controls left relay (for double switch, not supported for QBKG25LM)
-`control_right_relay` | Button directly controls right relay (for double switch, not supported for QBKG25LM)
+`control_relay`       | Button directly controls relay
 `decoupled`           | Button doesn't control any relay
 
 `zigbee2mqtt/FRIENDLY_NAME/system/get` to read current mode.
