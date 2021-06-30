@@ -12,12 +12,19 @@ description: "Integrate your Yale YRD226/246 TSDB via Zigbee2MQTT with whatever 
 | Model | YRD226/246 TSDB  |
 | Vendor  | Yale  |
 | Description | Assure lock |
-| Exposes | lock (state, lock_state), battery, linkquality |
+| Exposes | lock (state, lock_state), battery, linkquality, user_status, pin_code |
 | Picture | ![Yale YRD226/246 TSDB](../images/devices/YRD226-246-TSDB.jpg) |
 
 ## Notes
 
-None
+### Pin code usage
+To retrieve the state, send a `get` message to the device topic (`zigbee2mqtt/DEVICE_FRIENDLY_NAME/get`) with the body `{"pin_code":{"user":0}}`. To set, sent a `set` message to the device topic (`zigbee2mqtt/DEVICE_FRIENDLY_NAME/set`) with the body `{"pin_code":{"user":0,"pin_code":"1234"}}`. To clear a code, call `set` but omit the value for `pin_code`. The device can store up to 250 pin codes.
+
+### Device type specific configuration
+*[How to use device type specific configuration](../information/configuration.md)*
+
+* `expose_pin`: Allows to retrieve the `pin_code` value, rather than just user status (`available`/`enabled`), for `pin_code` endpoints (default: `false`)
+
 
 
 ## Exposes
@@ -27,6 +34,12 @@ The current state of this lock is in the published state under the `state` prope
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "LOCK"}` or `{"state": "UNLOCK"}`.
 To read the current state of this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 This lock exposes a lock state which can be found in the published state under the `lock_state` property. It's not possible to read (`/get`) or write (`/set`) this value. The possible values are: `not_fully_locked`, `locked`, `unlocked`.
+
+### User Status
+Each pin code is specific to a "user" which occupies a numbered slot. Each slot can exist in one of three states: `enabled`, `disabled` or `available`. These correspond to: the user being able to use their pin, the user having a pin but it not being allowed for use, and there being no pin, respectively. 
+Value can be found in the published state on the `users` property, with each user (by number) having a status, such as `{"users":{"0":{"pin_code":"1234","status":"enabled"}}}`;
+The status can be set (between `enabled` and `disabled`) by sending a message to the device topic (`zigbee2mqtt/DEVICE_FRIENDLY_NAME/set`) with the body `{"user_status":{"user":10, "status":"disable"}` (to disable user 10).
+
 
 ### Battery (numeric)
 Remaining battery in %.
