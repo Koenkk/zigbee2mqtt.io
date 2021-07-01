@@ -1,19 +1,20 @@
 ---
-title: "RGB Genie ZGRC-KEY-013 control via MQTT"
-description: "Integrate your RGB Genie ZGRC-KEY-013 via Zigbee2MQTT with whatever smart home
+title: "Sunricher ZGRC-KEY-013 control via MQTT"
+description: "Integrate your Sunricher ZGRC-KEY-013 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZGRC-KEY-013.md)*
 
-# RGB Genie ZGRC-KEY-013
+# Sunricher ZGRC-KEY-013
 
 | Model | ZGRC-KEY-013  |
-| Vendor  | RGB Genie  |
-| Description | 3 Zone remote and dimmer |
+| Vendor  | Sunricher  |
+| Description | 3 zone remote and dimmer |
 | Exposes | battery, action, linkquality |
-| Picture | ![RGB Genie ZGRC-KEY-013](../images/devices/ZGRC-KEY-013.jpg) |
+| Picture | ![Sunricher ZGRC-KEY-013](../images/devices/ZGRC-KEY-013.jpg) |
+| White-label | RGB Genie ZGRC-KEY-013 |
 
 ## Notes
 

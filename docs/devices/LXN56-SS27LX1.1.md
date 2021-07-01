@@ -1,30 +1,31 @@
 ---
-title: "Nue / 3A LXN56-SS27LX1.1 control via MQTT"
-description: "Integrate your Nue / 3A LXN56-SS27LX1.1 via Zigbee2MQTT with whatever smart home
+title: "Zemismart LXN56-SS27LX1.1 control via MQTT"
+description: "Integrate your Zemismart LXN56-SS27LX1.1 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LXN56-SS27LX1.1.md)*
 
-# Nue / 3A LXN56-SS27LX1.1
+# Zemismart LXN56-SS27LX1.1
 
 | Model | LXN56-SS27LX1.1  |
-| Vendor  | Nue / 3A  |
-| Description | Smart light relay - 2 gang |
+| Vendor  | Zemismart  |
+| Description | Smart light switch - 2 gang with neutral wire |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A LXN56-SS27LX1.1](../images/devices/LXN56-SS27LX1.1.jpg) |
-| White-label | Zemismart ZW-EU-02 |
+| Picture | ![Zemismart LXN56-SS27LX1.1](../images/devices/LXN56-SS27LX1.1.jpg) |
 
 ## Notes
+
 
 ## 2 distinct devices
 This switch was 2 distinct Zigbee chips, so it's seen as 2 separate devices.
 
+
+
 ## Exposes
 
 ### Switch 
-
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.

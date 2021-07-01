@@ -77,10 +77,17 @@ function getExposeDocs(expose) {
         }
     } else if (['switch', 'lock', 'cover', 'fan'].includes(expose.type)) {
         const state = expose.features.find((e) => e.name === 'state');
-        lines.push(`The current state of this ${expose.type} is in the published state under the \`${state.property}\` property (value is \`${state.value_on}\` or \`${state.value_off}\`).`);
-        expose.type === 'switch' ?
-            lines.push(`To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\`, \`{"${state.property}": "${state.value_off}"}\` or \`{"${state.property}": "${state.value_toggle}"}\`.`) :
+        const stateStr = expose.type === 'cover' ?
+            `(value is \`OPEN\` or \`CLOSE\`)` : `(value is \`${state.value_on}\` or \`${state.value_off}\`)`;
+        lines.push(`The current state of this ${expose.type} is in the published state under the \`${state.property}\` property ${stateStr}.`);
+        
+        if (expose.type === 'switch') {
+            lines.push(`To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\`, \`{"${state.property}": "${state.value_off}"}\` or \`{"${state.property}": "${state.value_toggle}"}\`.`);
+        } else if (state.type === 'enum') {
+            lines.push(`To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload ${state.values.map((v) => `\`{"${state.property}": "${v}"}\``).join(', ')}.`);
+        } else {
             lines.push(`To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\` or \`{"${state.property}": "${state.value_off}"}\`.`);
+        }
 
         lines.push(`To read the current state of this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${state.property}": ""}\`.`);
 

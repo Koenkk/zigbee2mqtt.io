@@ -81,7 +81,7 @@ binary_sensor:
 
 switch:
   - platform: "mqtt"
-    state_topic: true
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"

@@ -253,7 +253,7 @@ lock:
 
 switch:
   - platform: "mqtt"
-    state_topic: true
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
@@ -275,7 +275,7 @@ binary_sensor:
 
 switch:
   - platform: "mqtt"
-    state_topic: true
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
@@ -328,7 +328,7 @@ climate:
 
 switch:
   - platform: "mqtt"
-    state_topic: true
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "MANUAL"
     payload_on: "AUTO"
@@ -340,7 +340,7 @@ switch:
 
 switch:
   - platform: "mqtt"
-    state_topic: true
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"

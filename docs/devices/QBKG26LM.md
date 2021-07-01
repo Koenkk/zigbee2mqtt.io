@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG26LM via Zigbee2MQTT with whatever smart
 | Model | QBKG26LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 3 gang smart wall switch (with neutral wire) |
-| Exposes | switch (state), action, linkquality |
+| Exposes | switch (state), power, action, linkquality |
 | Picture | ![Xiaomi QBKG26LM](../images/devices/QBKG26LM.jpg) |
 
 ## Notes
@@ -76,6 +76,12 @@ The current state of this switch is in the published state under the `state_righ
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
 
+### Power (numeric)
+Instantaneous measured power.
+Value can be found in the published state on the `power` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `W`.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
@@ -122,6 +128,14 @@ switch:
     payload_on: "ON"
     value_template: "{{ value_json.state_right }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/right/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.power }}"
+    unit_of_measurement: "W"
+    device_class: "power"
 
 sensor:
   - platform: "mqtt"

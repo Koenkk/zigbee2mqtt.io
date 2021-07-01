@@ -1,5 +1,30 @@
 const notes = [
     {
+        model: ['LXN56-SS27LX1.1'],
+        note: `
+## 2 distinct devices
+This switch was 2 distinct Zigbee chips, so it's seen as 2 separate devices.
+`,
+    },
+    {
+        model: ['R7049'],
+        note: `
+### Pairing
+Hold the Test button pressed for 5 seconds (until the red LED blinks).
+After this the device will reset and try to join a network.
+`,
+    },
+    {
+        model: ['3RSS009Z'],
+        note: `
+### Pairing
+To put the device in pairing mode, hold the switch's button for 30 seconds until LED starts blinking fast (2 blinks per second)
+
+### Swap ON/OFF
+To reverse the On/Off direction of the switch, hold the button for more than 10 seconds until the LED turns on and then release
+`,
+    },
+    {
         model: ['S31ZB'],
         note: `
 ### Pairing

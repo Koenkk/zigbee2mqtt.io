@@ -12,7 +12,7 @@ description: "Integrate your HEIMAN HS1SA via Zigbee2MQTT with whatever smart ho
 | Model | HS1SA  |
 | Vendor  | HEIMAN  |
 | Description | Smoke detector |
-| Exposes | smoke, battery_low, tamper, battery, linkquality |
+| Exposes | smoke, battery_low, battery, linkquality |
 | Picture | ![HEIMAN HS1SA](../images/devices/HS1SA.jpg) |
 
 ## Notes
@@ -56,12 +56,6 @@ Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery_low is ON, if `false` OFF.
 
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
-
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
@@ -100,14 +94,6 @@ binary_sensor:
     payload_on: true
     payload_off: false
     device_class: "battery"
-
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.tamper }}"
-    payload_on: true
-    payload_off: false
 
 sensor:
   - platform: "mqtt"
