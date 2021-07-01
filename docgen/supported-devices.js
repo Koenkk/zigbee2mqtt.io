@@ -2,7 +2,7 @@
  * This script generates the supported devices page.
  */
 
-const devices = [...require('zigbee-herdsman-converters').devices];
+const devices = [...require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices];
 const path = require('path');
 const imageBase = path.join(__dirname, '..', 'docs', 'images', 'devices');
 

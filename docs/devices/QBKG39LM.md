@@ -1,19 +1,19 @@
 ---
-title: "Aqara QBKG39LM control via MQTT"
-description: "Integrate your Aqara QBKG39LM via Zigbee2MQTT with whatever smart home
+title: "Xiaomi QBKG39LM control via MQTT"
+description: "Integrate your Xiaomi QBKG39LM via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QBKG39LM.md)*
 
-# Aqara QBKG39LM
+# Xiaomi QBKG39LM
 
 | Model | QBKG39LM  |
-| Vendor  | Aqara  |
+| Vendor  | Xiaomi  |
 | Description | Aqara E1 2 gang switch (without neutral) |
 | Exposes | switch (state), operation_mode, action, power_outage_memory, linkquality |
-| Picture | ![Aqara QBKG39LM](../images/devices/QBKG39LM.jpg) |
+| Picture | ![Xiaomi QBKG39LM](../images/devices/QBKG39LM.jpg) |
 
 ## Notes
 
@@ -99,21 +99,25 @@ sensor:
     value_template: "{{ value_json.action }}"
     icon: "mdi:gesture-double-tap"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.power_outage_memory_left }}"
-    payload_on: true
-    payload_off: false
+    value_template: "{% if value_json.power_outage_memory_left %} true {% else %} false {% endif %}"
+    payload_on: "true"
+    payload_off: "false"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/left/set"
+    command_topic_postfix: "power_outage_memory_left"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.power_outage_memory_right }}"
-    payload_on: true
-    payload_off: false
+    value_template: "{% if value_json.power_outage_memory_right %} true {% else %} false {% endif %}"
+    payload_on: "true"
+    payload_off: "false"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/right/set"
+    command_topic_postfix: "power_outage_memory_right"
 
 sensor:
   - platform: "mqtt"
@@ -121,7 +125,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

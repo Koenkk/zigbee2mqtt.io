@@ -137,6 +137,7 @@ sensor:
     value_template: "{{ value_json.co2 }}"
     unit_of_measurement: "ppm"
     icon: "mdi:molecule-co2"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -145,6 +146,7 @@ sensor:
     value_template: "{{ value_json.temperature }}"
     unit_of_measurement: "°C"
     device_class: "temperature"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -153,6 +155,7 @@ sensor:
     value_template: "{{ value_json.humidity }}"
     unit_of_measurement: "%"
     device_class: "humidity"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -161,22 +164,27 @@ sensor:
     value_template: "{{ value_json.pressure }}"
     unit_of_measurement: "hPa"
     device_class: "pressure"
+    state_class: "measurement"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.led_feedback }}"
     payload_on: "ON"
     payload_off: "OFF"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "led_feedback"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.enable_abc }}"
     payload_on: "ON"
     payload_off: "OFF"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "enable_abc"
 
 sensor:
   - platform: "mqtt"
@@ -219,7 +227,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

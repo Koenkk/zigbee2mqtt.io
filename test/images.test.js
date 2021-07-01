@@ -1,4 +1,4 @@
-const devices = require('zigbee-herdsman-converters').devices;
+const devices = require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices;
 const chai = require('chai');
 const fs = require('fs');
 const path = require('path');

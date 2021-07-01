@@ -107,6 +107,8 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.illuminance }}"
     device_class: "illuminance"
+    enabled_by_default: false
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -115,6 +117,7 @@ sensor:
     value_template: "{{ value_json.illuminance_lux }}"
     unit_of_measurement: "lx"
     device_class: "illuminance"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -122,7 +125,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

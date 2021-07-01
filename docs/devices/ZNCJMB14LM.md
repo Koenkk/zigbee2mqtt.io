@@ -193,13 +193,15 @@ switch:
     value_template: "{{ value_json.state_right }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/right/set"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.standby_enabled }}"
-    payload_on: true
-    payload_off: false
+    value_template: "{% if value_json.standby_enabled %} true {% else %} false {% endif %}"
+    payload_on: "true"
+    payload_off: "false"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "standby_enabled"
 
 sensor:
   - platform: "mqtt"
@@ -215,21 +217,25 @@ sensor:
     value_template: "{{ value_json.standby_time }}"
     unit_of_measurement: "s"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.lcd_auto_brightness_enabled }}"
-    payload_on: true
-    payload_off: false
+    value_template: "{% if value_json.lcd_auto_brightness_enabled %} true {% else %} false {% endif %}"
+    payload_on: "true"
+    payload_off: "false"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "lcd_auto_brightness_enabled"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.screen_saver_enabled }}"
-    payload_on: true
-    payload_off: false
+    value_template: "{% if value_json.screen_saver_enabled %} true {% else %} false {% endif %}"
+    payload_on: "true"
+    payload_off: "false"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "screen_saver_enabled"
 
 sensor:
   - platform: "mqtt"
@@ -244,7 +250,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 
