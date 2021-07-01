@@ -37,6 +37,8 @@ when temperature >= 30 precision will be 0, when temperature >= 10 precision wil
 * `temperature_calibration`: Allows to manually calibrate temperature values,
 e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 
 
 ## Exposes
