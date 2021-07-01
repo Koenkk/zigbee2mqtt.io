@@ -1,5 +1,63 @@
 const notes = [
     {
+        model: ['S31ZB'],
+        note: `
+### Pairing
+After first power on, it should enter pairing mode. To pair to a new network, long press reset button for 5s until the Wi-Fi LED indicator changes to a cycle of two short flashes and one long flash, then release.
+`,
+    },
+    {
+        model: ['LS12128'],
+        note: `
+## Pairing/runtime calibration
+1. Open shutter completely
+1. Make sure none of the physical button of the corresponding wall switch is left pressed down
+1. Press the LUPUS relay connection button 3-10s
+1. LED will start to blink
+1. At a certain point the LS12128 will reconnect to the zigbee coordinator (you hear a "click") but it will still blink = it expects to learn closing time and opening time
+1. Press down button
+1. Just when the shutter is fully closed press "up" button (sometimes twice necessary).
+1. Just when the shutter is fully opened press "down" button (or release up button)
+1. Relay will now have learned how long it takes to travel top-bottom and vice-et-versa (youhear a "click" telling relay circuit is open)
+`,
+    },
+    {
+        model: ['EER42000', 'EER50000', 'EER51000', 'EER53000'],
+        note: `
+### Pairing
+This device by default only pairs to Wiser Gateways when the set button is pressed, to let it join normal HA gateways (like what Zigbee2MQTT uses) hold the set button down for 5 seconds, and release.
+`,
+    },
+    {
+        model: ['EER40030'],
+        note: `
+### Channels
+Due to limitations on this devices firmware, it will only join to zigbee networks on channels 11, 15, 20 and 25.
+`,
+    },
+    {
+        model: ['A6121'],
+        note: `
+### Remote unlock
+Be aware that this smart does not offer remote unlock. Users will need the special keys it provides. You can then disable access for these keys, but this requires the app. In essence Zigbee2MQTT only provides the ability to know when a key was inserted.
+`,
+    },
+    {
+        model: ['14148906L'],
+        note: `
+### Binding
+To reset the moodlight, turn it on. Then follow the following pattern:
+* off 1 sec
+* on 1 sec
+* off 1 sec
+* on 1 sec
+* off 1 sec
+* on
+
+The moodlight should now be reset and turned to pairing mode. It should start blinking to indicate this.
+`,
+    },
+    {
         model: ['0402946'],
         note: `
 ### Pairing
@@ -632,7 +690,9 @@ Press and hold the button on the device for more then 10 seconds (until the led 
         model: ['ZNCLDJ11LM'],
         note: `
 ### Pairing
-Hold button for a few seconds until red light turn on.
+Hold button for about 5 seconds until blue light turn on.
+
+If you need to reset device first, hold button longer until red light turn on.
 `,
     },
     {
@@ -1953,8 +2013,10 @@ If you want to [bind](../information/binding.md) this remote directly to a group
 Factory reset the light bulb.
 After resetting the bulb will automatically connect.
 
-What works is to use (very) short “on’s” and a little bit longer “off’s”, where you kill the light as soon as the bulb shows signs of turning on.
+One option that might work is to use (very) short “on’s” and a little bit longer “off’s”, where you kill the light as soon as the bulb shows signs of turning on.
 Start with bulb on, then off, and then 3 “on’s”, wait in the 3rd ON state.
+Alternatively, start with the bulb on, and then repeat the off on sequence as above, but wait 2-3 seconds in each state (on and off).
+When in pairing state, the bulb will flash.
 `,
     },
     {
