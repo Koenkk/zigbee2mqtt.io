@@ -51,46 +51,6 @@ when temperature >= 30 precision will be 0, when temperature >= 10 precision wil
 e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
 
 
-### Decoupled mode
-Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
-This might be useful to assign some custom actions to buttons and control relay remotely.
-This command also allows to redefine which button controls which relay for the double switch (not supported for QBKG25LM).
-
-Topic `zigbee2mqtt/FRIENDLY_NAME/system/set` should be used to modify operation mode.
-
-**NOTE:** For QBKG25LM instead of `system` use `left`, `center` or `right` and leave out the `button` property in the payload.
-
-Payload:
-```js
-{
-  "operation_mode": {
-    "button": "single"|"left"|"right", // Always use single for a single switch
-    "state": "VALUE"
-  }
-}
-```
-
-Values                | Description
-----------------------|---------------------------------------------------------
-`control_relay`       | Button directly controls relay (for single switch and QBKG25LM)
-`control_left_relay`  | Button directly controls left relay (for double switch, not supported for QBKG25LM)
-`control_right_relay` | Button directly controls right relay (for double switch, not supported for QBKG25LM)
-`decoupled`           | Button doesn't control any relay
-
-`zigbee2mqtt/FRIENDLY_NAME/system/get` to read current mode.
-
-Payload:
-```js
-{
-  "operation_mode": {
-    "button": "single"|"left"|"right" // Always use single for a single switch
-  }
-}
-```
-
-Response will be sent to `zigbee2mqtt/FRIENDLY_NAME`, example: `{"operation_mode_right":"control_right_relay"}`
-
-
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 
