@@ -180,7 +180,7 @@ Zigbee2MQTT officially supports the following adapters:
   <tr>
     <td><img src="../images/Silicon_Labs_Gecko_EFR32_SoCs.webp"></td>
     <td>Silicon Labs EZSP v8 <b>(experimental)</b></td>
-    <td>Initial development started on experimental (pre-alpha stage) support for various adapters based on Silicon Labs EFR32 SoC families with EmberZNet NCP 6.7.8 firmware or later via EZSP version 8 (EmberZNet Serial Protocol) interface. This include all hardware based on SoCs/Modules from Silabs EFR32MG21/MGM210 and EFR32MG12/MGM12 series.</td>
+    <td>Initial development started on experimental (pre-alpha stage) support for various adapters based on Silicon Labs EM35X and EFR32MG SoC families with EmberZNet NCP 6.7.8 firmware or later via EZSP version 8 (EmberZNet Serial Protocol) interface. This include all hardware based on SoCs/Modules from Silabs EFR32MG21/MGM210 and EFR32MG12/MGM12 series.</td>
     <td><a href="https://github.com/Koenkk/zigbee-herdsman/issues/319">Coordinator</a><br/></td>
     <td></td>
     <td></td>
