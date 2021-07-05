@@ -80,7 +80,7 @@ function getExposeDocs(expose) {
         const stateStr = expose.type === 'cover' ?
             `(value is \`OPEN\` or \`CLOSE\`)` : `(value is \`${state.value_on}\` or \`${state.value_off}\`)`;
         lines.push(`The current state of this ${expose.type} is in the published state under the \`${state.property}\` property ${stateStr}.`);
-        
+
         if (expose.type === 'switch') {
             lines.push(`To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\`, \`{"${state.property}": "${state.value_off}"}\` or \`{"${state.property}": "${state.value_toggle}"}\`.`);
         } else if (state.type === 'enum') {
