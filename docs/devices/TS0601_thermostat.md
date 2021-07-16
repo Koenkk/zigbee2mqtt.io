@@ -121,12 +121,12 @@ This device supports OTA updates, for more information see [OTA updates](../info
 ### Lock 
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
-To read the current state of this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Switch 
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_detection": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Battery_low (binary)
 Indicates if the battery of this device is almost empty.
@@ -137,7 +137,7 @@ If value equals `true` battery_low is ON, if `false` OFF.
 ### Switch 
 The current state of this switch is in the published state under the `valve_detection` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_detection": "ON"}`, `{"valve_detection": "OFF"}` or `{"valve_detection": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"valve_detection": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Position (numeric)
 Position.
@@ -156,12 +156,12 @@ This climate device supports the following features: `current_heating_setpoint`,
 ### Switch 
 The current state of this switch is in the published state under the `auto_lock` property (value is `AUTO` or `MANUAL`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_lock": "AUTO"}`, `{"auto_lock": "MANUAL"}` or `{"auto_lock": "undefined"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"auto_lock": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Switch 
 The current state of this switch is in the published state under the `away_mode` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_mode": "ON"}`, `{"away_mode": "OFF"}` or `{"away_mode": "undefined"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"away_mode": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Away_preset_days (numeric)
 Away preset days.
