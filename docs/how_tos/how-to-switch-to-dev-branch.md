@@ -22,6 +22,7 @@ git fetch
 git checkout dev # Change 'dev' to 'master' to switch back to the release version
 git pull
 npm ci
+npm run build
 
 # Restore configuration
 cp -R data-backup/* data

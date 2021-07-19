@@ -53,7 +53,10 @@ sudo chown -R pi:pi /opt/zigbee2mqtt
 
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
-npm ci --production
+npm ci
+
+# Build
+npm run build
 ```
 
 If everything went correctly the output of `npm ci` is similar to (the number of packages and seconds is probably different on your device):
@@ -218,6 +221,7 @@ cp -R data data-backup
 git checkout HEAD -- npm-shrinkwrap.json
 git pull
 npm ci
+npm run build
 
 # Restore configuration
 cp -R data-backup/* data

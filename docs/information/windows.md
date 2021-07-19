@@ -28,9 +28,10 @@ Before you start make sure you have [already flashed](../information/flashing_th
         git clone git@github.com:Koenkk/zigbee2mqtt.git
         ```
     * otherwise use the green `Clone or download` button to download the zip archive, then extract it
-1. Change to the newly created directory and install dependencies with Node.js' own package manager `npm`
+1. Change to the newly created directory and install dependencies with Node.js' own package manager `npm` and build Zigbee2MQTT
     ```bash
     npm ci
+    npm run build
     ```
 
 ## 3. Configuring
