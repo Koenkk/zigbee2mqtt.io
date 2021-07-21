@@ -11,7 +11,7 @@ description: "Integrate your Xiaomi VOCKJK11LM via Zigbee2MQTT with whatever sma
 
 | Model | VOCKJK11LM  |
 | Vendor  | Xiaomi  |
-| Description | Air quality sensor |
+| Description | Aqara Air quality sensor |
 | Exposes | voc, temperature, humidity, battery, linkquality |
 | Picture | ![Xiaomi VOCKJK11LM](../images/devices/VOCKJK11LM.jpg) |
 
