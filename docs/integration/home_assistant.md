@@ -141,13 +141,23 @@ devices:
         object_id: light
       light:
         name: my_switch
+        value_template: null
+        state_value_template: '{{ value_json.state }}'
       # OR if your devices has multiple endpoints (e.g. left/right)
       switch_left:
         type: light
         object_id: light_left
+      light_left:
+        name: my_switch_left
+        value_template: null
+        state_value_template: '{{ value_json.state_left }}'
       switch_right:
         type: light
         object_id: light_right
+      light_right:
+        name: my_switch_right
+        value_template: null
+        state_value_template: '{{ value_json.state_right }}'
 ```
 If you are also using device specific overrides, make sure that they are configured under the new device type rather than the original device type.
 
