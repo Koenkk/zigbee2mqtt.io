@@ -61,25 +61,19 @@ Details about your network are stored in both the coordinator and files under th
 You need to re-pair all you devices when:
 - Changing the network key (`network_key`) in `configuration.yaml`.
 - Changing the Zigbee channel (`channel`) in `configuration.yaml`.
-- Swiching between a Zigbee 1.2/3.0 coordinator firmware
-- Switching between adapter types (e.g. CC2531 -> CC26X2R1)
-  - **Except** when switching between adapters with the following chips: CC2652*, CC1352*, CC253* (only when running Zigbee 3.0 firmware)
+- Switching between adapter types requires repairing, **except when**:
+  - Switching from a CC2530/CC2531 based adapter running the 1.2 firmware to a CC2538/CC2652/CC1352 based adapter does not require repairing
+    - **Note:** the other way around (CC2538/CC2652/CC1352 to a CC2530/CC2531 running 1.2 firmware) does require repairing
+  - Switching between CC2530/CC2531 running the 3.0 firmware, CC2538, CC2652 and CC1352 based adapters does not require repairing.
 
 ### Doesn't require repairing
 You **don't** need to re-pair your devices when:
 - Updating or downgrading Zigbee2MQTT to a different version.
-- Updating the coordinator (e.g. CC2530/CC2531 stick) firmware.
-  - This is only applicable when flashing firmware version `20190215` or later. It doesn't matter from which firmware version you come from.
+- Updating the coordinator firmware.
   - If after flashing you fail to control your devices it helps to:
     - Wait a few minutes so that the Zigbee network can settle.
     - Send Zigbee commands (e.g. turn on/off) to the device.
     - Reboot the device (unplug and plug power).
-    - If all of the above doens't work, and you previously re-flashed a firmware older then `20190215` it could be that the `pan_id` has silently been changed. To fix this add to your `configuration.yaml`:
-    ```js
-    advanced:
-        pan_id: 0x1a63
-    ```
-- Switching from CC2530/CC2531 device (physically).
 - Switching the system running Zigbee2MQTT.
     - When doing this, make sure to copy over the contents of the `data` directory.
 
