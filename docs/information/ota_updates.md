@@ -21,7 +21,7 @@ Gira does unfortunately not seem to offer firmware updates for their wall transm
 ## Automatic checking for available updates
 Your zigbee devices can request a firmware update check. Zigbee2MQTT obliges this, and will automatically check if updates are available for your devices.
 
-The update state will be published to `zigbee2mqtt/[DEVICE_FRIENLDY_NAME]`, example payload: `{"update": {"state": "available"}}`.
+The update state will be published to `zigbee2mqtt/[DEVICE_FRIENDLY_NAME]`, example payload: `{"update": {"state": "available"}}`.
 The possible states are:
 - `available`: an update is available for this device
 - `updating`: update is in progress. During this the progress in % and remaining time in seconds is also added to the payload, example: `{"update": {"state": "updating","progress":13.37,"remaining": 219}}`.
