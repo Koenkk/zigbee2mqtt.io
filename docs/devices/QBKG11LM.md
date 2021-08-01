@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG11LM via Zigbee2MQTT with whatever smart
 | Model | QBKG11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara single key wired wall switch |
-| Exposes | switch (state), power, temperature, action, linkquality |
+| Exposes | switch (state), power, temperature, action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG11LM](../images/devices/QBKG11LM.jpg) |
 
 ## Notes
@@ -81,6 +81,13 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `release`, `hold`.
 
+### Operation_mode (enum)
+Decoupled mode.
+Value can be found in the published state on the `operation_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
+The possible values are: `control_relay`, `decoupled`.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
@@ -134,7 +141,29 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action }}"
+    enabled_by_default: true
     icon: "mdi:gesture-double-tap"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "operation_mode"
+    options: 
+      - "control_relay"
+      - "decoupled"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"

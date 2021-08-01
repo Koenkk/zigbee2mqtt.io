@@ -1,23 +1,23 @@
 ---
-title: "Heimdal (Wattle) HC-SLM-1 control via MQTT"
-description: "Integrate your Heimdal (Wattle) HC-SLM-1 via Zigbee2MQTT with whatever smart home
+title: "Home Control AS HC-SLM-1 control via MQTT"
+description: "Integrate your Home Control AS HC-SLM-1 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HC-SLM-1.md)*
 
-# Yale YRD226/246 TSDB
+# Home Control AS HC-SLM-1
 
 | Model | HC-SLM-1  |
-| Vendor  | Heimdal  |
-| Description | Door Pro |
+| Vendor  | Home Control AS  |
+| Description | Heimgard (Wattle) door lock pro |
 | Exposes | lock (state, lock_state), battery, linkquality |
-| Picture | ![HC-SLM-1](../images/devices/HC-SLM-1.jpg) |
+| Picture | ![Home Control AS HC-SLM-1](../images/devices/HC-SLM-1.jpg) |
 
 ## Notes
 
-Please note this lock do not report if door are closed or not, only the state of the outer door handle's state (Locked/Unlocked).
+None
 
 
 ## Exposes
@@ -65,6 +65,7 @@ sensor:
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
     device_class: "battery"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -72,7 +73,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

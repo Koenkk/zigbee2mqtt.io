@@ -1,26 +1,23 @@
 ---
-title: "LEDVANCE AC26940 control via MQTT"
-description: "Integrate your LEDVANCE AC26940 via Zigbee2MQTT with whatever smart home
+title: "Envilar ZG302-BOX-RELAY control via MQTT"
+description: "Integrate your Envilar ZG302-BOX-RELAY via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/AC26940.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZG302-BOX-RELAY.md)*
 
-# LEDVANCE AC26940
+# Envilar ZG302-BOX-RELAY
 
-| Model | AC26940  |
-| Vendor  | LEDVANCE  |
-| Description | Smart Zigbee outdoor plug |
+| Model | ZG302-BOX-RELAY  |
+| Vendor  | Envilar  |
+| Description | Zigbee AC in wall switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![LEDVANCE AC26940](../images/devices/AC26940.jpg) |
+| Picture | ![Envilar ZG302-BOX-RELAY](../images/devices/ZG302-BOX-RELAY.jpg) |
 
 ## Notes
 
 None
-
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 
 
 ## Exposes
@@ -62,23 +59,6 @@ sensor:
     enabled_by_default: false
     icon: "mdi:signal"
     state_class: "measurement"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:update"
-    value_template: "{{ value_json['update']['state'] }}"
-    enabled_by_default: false
-
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_on: true
-    payload_off: false
-    value_template: "{{ value_json.update_available}}"
-    enabled_by_default: false
 ```
 {% endraw %}
 

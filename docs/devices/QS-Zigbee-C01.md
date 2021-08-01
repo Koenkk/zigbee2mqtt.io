@@ -77,6 +77,7 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.moving }}"
+    enabled_by_default: true
 
 switch:
   - platform: "mqtt"

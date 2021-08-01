@@ -179,6 +179,7 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.battery_state }}"
+    enabled_by_default: true
 
 sensor:
   - platform: "mqtt"

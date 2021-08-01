@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG26LM via Zigbee2MQTT with whatever smart
 | Model | QBKG26LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 3 gang smart wall switch (with neutral wire) |
-| Exposes | switch (state), power, action, linkquality |
+| Exposes | switch (state), operation_mode, power, action, linkquality |
 | Picture | ![Xiaomi QBKG26LM](../images/devices/QBKG26LM.jpg) |
 
 ## Notes
@@ -36,6 +36,27 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 The current state of this switch is in the published state under the `state_right` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
+
+### Operation_mode (enum, left endpoint)
+Decoupled mode for left button.
+Value can be found in the published state on the `operation_mode_left` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_left": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_left": NEW_VALUE}`.
+The possible values are: `control_relay`, `decoupled`.
+
+### Operation_mode (enum, center endpoint)
+Decoupled mode for center button.
+Value can be found in the published state on the `operation_mode_center` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_center": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_center": NEW_VALUE}`.
+The possible values are: `control_relay`, `decoupled`.
+
+### Operation_mode (enum, right endpoint)
+Decoupled mode for right button.
+Value can be found in the published state on the `operation_mode_right` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_right": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": NEW_VALUE}`.
+The possible values are: `control_relay`, `decoupled`.
 
 ### Power (numeric)
 Instantaneous measured power.
@@ -94,6 +115,69 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode_left }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode_left }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/left/set"
+    command_topic_postfix: "operation_mode_left"
+    options: 
+      - "control_relay"
+      - "decoupled"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode_center }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode_center }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/center/set"
+    command_topic_postfix: "operation_mode_center"
+    options: 
+      - "control_relay"
+      - "decoupled"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode_right }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode_right }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/right/set"
+    command_topic_postfix: "operation_mode_right"
+    options: 
+      - "control_relay"
+      - "decoupled"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.power }}"
     unit_of_measurement: "W"
     device_class: "power"
@@ -104,6 +188,7 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action }}"
+    enabled_by_default: true
     icon: "mdi:gesture-double-tap"
 
 sensor:

@@ -62,6 +62,22 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.power_outage_memory }}"
+    enabled_by_default: false
+    icon: "mdi:power-settings"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.power_outage_memory }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "power_outage_memory"
+    options: 
+      - "on"
+      - "off"
+      - "restore"
+    enabled_by_default: false
+    icon: "mdi:power-settings"
 
 sensor:
   - platform: "mqtt"
