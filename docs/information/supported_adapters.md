@@ -17,7 +17,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/zzh.jpg"></td>
     <td>Electrolama zig-a-zig-ah! (zzh!) <b>(recommended)</b></td>
     <td>USB connected adapter with external antenna based on CC2652R chip</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652R_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652R_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652R_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652R_router_20210128.zip">Router</a></td>
     <td><a href="https://electrolama.com/radio-docs/#step-3-flash-the-firmware-on-your-stick">Flashing</a></td>
     <td><a href="https://www.tindie.com/products/electrolama/zzh-cc2652r-multiprotocol-rf-stick/#product-reviews">Tindie</a></td>
   </tr>
@@ -25,7 +25,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/slaeshs_cc2652rb_stick.jpg"></td>
     <td>Slaesh's CC2652RB stick <b>(recommended)</b></td>
     <td>USB connected adapter with external antenna, <a href="https://github.com/Koenkk/zigbee2mqtt/discussions/6702">currently long shipping times</a>. Based on CC2652RB chip</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652RB_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652RB_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652RB_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652RB_router_20210128.zip">Router</a></td>
     <td><a href="https://slae.sh/projects/cc2652/#flashing">Flashing</a></td>
     <td><a href="https://slae.sh/projects/cc2652/">Slae.sh</a></td>
   </tr>
@@ -33,7 +33,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/CC2652P_smartlight_zigbee_coordinator.png"></td>
     <td>SMARTLIGHT CC2652P Zigbee USB dongle</td>
     <td>CC2652P factory-made Zigbee USB coordinator with external 6dB antenna and worldwide delivery</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210120.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210708.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20210128.zip">Router</a></td>
     <td><a href="https://smartlight.me/smart-home-devices/zigbee-devices/zigbee-coordinator-v4-cc2652p">Description</a><br><a href="https://smartlight.me/flashing_slzb-02">Flashing</a></td>
     <td><a href="https://www.ebay.com/itm/164928826521">eBay</a><br/><a href="https://www.aliexpress.com/item/1005002684189079.html">Aliexpress</a><br/><a href="https://smartlight.me/smart-home-devices/zigbee-devices/zigbee-coordinator-v4-cc2652p">Official store</a><br/><a href="https://t.me/smartlightme">Telegram</a></td>
   </tr>
@@ -41,7 +41,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/ZigStar-USB.jpg"></td>
     <td>ZigStar Stick v4</td>
     <td>Powerfull Open source dongle with external antenna based on CC2652P</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://zig-star.com/projects/zigbee-stick-v4/">Description</a><br><a href="https://zig-star.com/radio-docs/flash-cc-bsl/">Flashing</a></td>
     <td><a href="https://t.me/zigberu">Zigbee DYI Market(Russian)</a></td>
   </tr>
@@ -49,7 +49,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/ZigStar-Shield.png"></td>
     <td>ZigStar Shield</td>
     <td>Powerfull Open source Pi Shield based on CC2652P</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://zig-star.com/projects/zigbee-shield/">Description</a><br><a href="https://zig-star.com/radio-docs/flash-cc-bsl/">Flashing</a></td>
     <td><a href="https://t.me/zigberu">Zigbee DYI Market(Russian)</a></td>
   </tr>
@@ -57,7 +57,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/Tubes_USB_Coordinator_CC2652P2_variant.png"></td>
     <td>Tube's CC2652P2 USB Coordinator</td>
     <td>Open source hardware CC2652P based USB connected adapter with external antenna and USB extension cable</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://github.com/tube0013/tube_gateways">Flashing</a></td>
     <td><a href="https://www.tubeszb.com/">Tube's ZB Store</a></td>
   </tr>
@@ -65,7 +65,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/Tubes_Zigbee_Gateways_CC2652P2_variant.jpeg"></td>
     <td>Tube's Zigbee Gateways (CC2652P2 variant)</td>
     <td>Open source hardware CC2652P and ESP32 based Zigbee to Ethernet Coordinator</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a></td>
     <td><a href="https://github.com/tube0013/tube_gateways">Flashing</a></td>
     <td><a href="https://www.tubeszb.com/">Tube's ZB Store</a></td>
   </tr>
@@ -73,7 +73,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/Tubes_Zigbee_PoE_Coordinator_CC2652P2_variant.jpeg"></td>
     <td>Tube's Zigbee Tube's Zigbee PoE Serial Coordinator (CC2652P2 variant)</td>
     <td>Open source hardware CC2652P and ESP32 based Zigbee to Ethernet Coordinator powered via PoE (Power Over Ethernet)</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a></td>
     <td><a href="https://github.com/tube0013/tube_gateways">Flashing</a></td>
     <td><a href="https://www.tubeszb.com/">Tube's ZB Store</a></td>
   </tr>
@@ -81,7 +81,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/circset_cc2652.jpg"></td>
     <td>CircuitSetup's CC2652P2 USB Coordinator</td>
     <td>CC2652P based USB connected adapter pre-programmed with Z-Stack</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://circuitsetup.us/product/usb-zigbee-stick-z-stack-coordinator/">Flashing</a></td>
     <td><a href="https://circuitsetup.us/product/usb-zigbee-stick-z-stack-coordinator/">CircuitSetup's Store</a></td>
   </tr>
@@ -125,7 +125,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/cc2652p-z-bee-duo.jpg"></td>
     <td>Gio-dot Z-Bee Duo with CC2652P</td>
     <td>3 in 1 adapter: USB Stick, PI Zero Hat, Ser2net, with external antenna and 3D printed case</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/blob/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20210128.zip">Router</a></td>
     <td><a href="https://github.com/Gio-dot/Z-Bee-Duo#how-to-flash">Flashing</a></td>
     <td><a href="https://www.tindie.com/products/23046/">Tindie</a></td>
   </tr>
@@ -133,7 +133,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/codm-cc2652p-rpi.jpg"></td>
     <td>cod.m Zigbee CC2652P RPi Module</td>
     <td>Raspberry Pi GPIO module with CC2652P and integrated power amplifier (+20dBm)</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://github.com/codm/cc2652-raspberry-pi-module#firmware">Flashing</a></td>
     <td><a href="https://shop.codm.de/automation/zigbee/33/zigbee-cc2652p2-raspberry-pi-module">cod.m Shop</a></td>
   </tr>
@@ -141,7 +141,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/Egony_v4_E72.jpg"></td>
     <td>Egony Stick V4 (Ebyte ver.)</td>
     <td>Powerful CC2652P Zigbee USB dongle and Raspberry Pi GPIO module</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210120.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210708.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20210128.zip">Router</a></td>
     <td><a href="https://github.com/egony/cc2652p_E72-2G4M20S1E/wiki/Home-EN">Description</a><br><a href="https://github.com/egony/cc2652p_E72-2G4M20S1E/wiki/Flashing-EN">Flashing</a></td>
     <td><a href="http://t.me/Egony">Contact</a></td>
   </tr>
@@ -149,7 +149,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/Egony_v4_RFS.jpg"></td>
     <td>Egony Stick V4 (RFSTAR ver.)</td>
     <td>Powerful CC2652P Zigbee USB dongle and Raspberry Pi GPIO module</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://github.com/egony/cc2652p_cc1352p_RF-STAR/wiki/Home-EN">Description</a><br><a href="https://github.com/egony/cc2652p_E72-2G4M20S1E/wiki/Flashing-EN">Flashing</a></td>
     <td><a href="http://t.me/Egony">Contact</a></td>
   </tr>
@@ -157,7 +157,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/cc26x2r1.jpg"></td>
     <td>Texas Instruments LAUNCHXL-CC26X2R1</td>
     <td>USB connected development kit, based on CC2652R chip</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652R_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652R_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652R_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652R_router_20210128.zip">Router</a></td>
     <td><a href="/information/flashing_via_uniflash.html">Flashing</a></td>
     <td><a href="http://www.ti.com/tool/LAUNCHXL-CC26X2R1">Texas Instruments</a></td>
   </tr>
@@ -165,7 +165,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><img src="../images/cc1352p2.jpg"></td>
     <td>Texas Instruments LAUNCHXL-CC1352P-2</td>
     <td>USB connected development kit, based on CC1352P chip</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210120.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="/information/flashing_via_uniflash.html">Flashing</a></td>
     <td><a href="http://www.ti.com/tool/LAUNCHXL-CC1352P">Texas Instruments</a></td>
   </tr>
