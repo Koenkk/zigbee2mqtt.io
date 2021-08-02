@@ -53,7 +53,7 @@ sudo chown -R pi:pi /opt/zigbee2mqtt
 
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
-npm ci --production
+npm ci
 ```
 
 If everything went correctly the output of `npm ci` is similar to (the number of packages and seconds is probably different on your device):
