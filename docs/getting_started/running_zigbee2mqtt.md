@@ -218,7 +218,6 @@ cp -R data data-backup
 git checkout HEAD -- npm-shrinkwrap.json
 git pull
 npm ci
-npm run build
 
 # Restore configuration
 cp -R data-backup/* data
