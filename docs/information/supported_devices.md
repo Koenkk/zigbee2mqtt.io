@@ -1926,7 +1926,6 @@ In case you own a Zigbee device which is **NOT** listed here, please see
 | [9290024406](../devices/9290024406.md) | Philips Hue P45 light bulb (light) | ![../images/devices/9290024406.jpg](../images/devices/9290024406.jpg) |
 | [3418931P6](../devices/3418931P6.md) | Philips Hue white ambiance Struana bathroom ceiling with bluetooth 2400lm (light) | ![../images/devices/3418931P6.jpg](../images/devices/3418931P6.jpg) |
 | [8718696743133](../devices/GreenPower_On_Off_Switch.md) | Philips Hue Tap (white-label of GreenPower GreenPower_On_Off_Switch) (action) | ![../images/devices/8718696743133.jpg](../images/devices/8718696743133.jpg) |
-| [9290019532](../devices/9290019532.md) | Hue White and color ambiance GU10 spot LED with Bluetooth (light) | ![../images/devices/9290019532.jpg](../images/devices/9290019532.jpg) |
 
 ### Piri
 
