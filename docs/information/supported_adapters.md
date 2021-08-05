@@ -30,6 +30,14 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://slae.sh/projects/cc2652/">Slae.sh</a></td>
   </tr>
   <tr>
+    <td><img src="../images/CC2652P_smartlight_zigbee_coordinator.png"></td>
+    <td>SMARTLIGHT CC2652P Zigbee USB dongle</td>
+    <td>CC2652P factory-made Zigbee USB coordinator with external 6dB antenna and worldwide delivery</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210708.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20210128.zip">Router</a></td>
+    <td><a href="https://smartlight.me/smart-home-devices/zigbee-devices/zigbee-coordinator-v4-cc2652p">Description</a><br><a href="https://smartlight.me/flashing_slzb-02">Flashing</a></td>
+    <td><a href="https://www.ebay.com/itm/164928826521">eBay</a><br/><a href="https://www.aliexpress.com/item/1005002684189079.html">Aliexpress</a><br/><a href="https://smartlight.me/smart-home-devices/zigbee-devices/zigbee-coordinator-v4-cc2652p">Official store</a><br/><a href="https://t.me/smartlightme">Telegram</a></td>
+  </tr>
+  <tr>
     <td><img src="../images/ZigStar-USB.png"></td>
     <td>ZigStar Stick v4</td>
     <td>Powerfull Open source dongle with external antenna based on CC2652P</td>
@@ -44,14 +52,6 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://zig-star.com/projects/zigbee-shield/">Description</a><br><a href="https://zig-star.com/radio-docs/flash-cc-bsl/">Flashing</a></td>
     <td><a href="https://zig-star.com">ZigStar Shop</a></td>
-  </tr>
-  <tr>
-    <td><img src="../images/CC2652P_smartlight_zigbee_coordinator.png"></td>
-    <td>SMARTLIGHT CC2652P Zigbee USB dongle</td>
-    <td>CC2652P factory-made Zigbee USB coordinator with external 6dB antenna and worldwide delivery</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210708.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20210128.zip">Router</a></td>
-    <td><a href="https://smartlight.me/smart-home-devices/zigbee-devices/zigbee-coordinator-v4-cc2652p">Description</a><br><a href="https://smartlight.me/flashing_slzb-02">Flashing</a></td>
-    <td><a href="https://www.ebay.com/itm/164928826521">eBay</a><br/><a href="https://www.aliexpress.com/item/1005002684189079.html">Aliexpress</a><br/><a href="https://smartlight.me/smart-home-devices/zigbee-devices/zigbee-coordinator-v4-cc2652p">Official store</a><br/><a href="https://t.me/smartlightme">Telegram</a></td>
   </tr>
   <tr>
     <td><img src="../images/Tubes_USB_Coordinator_CC2652P2_variant.png"></td>
