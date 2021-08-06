@@ -28,7 +28,7 @@ sudo gem install bundler
 bundle install
 
 # Start local server
-bundle exec jekyll serve
+bundle exec jekyll serve --incremental
 ```
 
 You can now find the local instance under: http://127.0.0.1:4000

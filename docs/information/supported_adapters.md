@@ -15,7 +15,7 @@ Zigbee2MQTT officially supports the following adapters:
   </tr>
   <tr>
     <td><img src="../images/zzh.jpg"></td>
-    <td>Electrolama zig-a-zig-ah! (zzh!) <b>(recommended)</b></td>
+    <td>Electrolama zig-a-zig-ah! (zzh!)</td>
     <td>USB connected adapter with external antenna based on CC2652R chip</td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652R_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652R_router_20210128.zip">Router</a></td>
     <td><a href="https://electrolama.com/radio-docs/#step-3-flash-the-firmware-on-your-stick">Flashing</a></td>
@@ -23,7 +23,7 @@ Zigbee2MQTT officially supports the following adapters:
   </tr>
   <tr>
     <td><img src="../images/slaeshs_cc2652rb_stick.jpg"></td>
-    <td>Slaesh's CC2652RB stick <b>(recommended)</b></td>
+    <td>Slaesh's CC2652RB stick</td>
     <td>USB connected adapter with external antenna, <a href="https://github.com/Koenkk/zigbee2mqtt/discussions/6702">currently long shipping times</a>. Based on CC2652RB chip</td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652RB_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652RB_router_20210128.zip">Router</a></td>
     <td><a href="https://slae.sh/projects/cc2652/#flashing">Flashing</a></td>
@@ -87,7 +87,7 @@ Zigbee2MQTT officially supports the following adapters:
   </tr>
   <tr>
     <td><img src="../images/cc2531.jpg"></td>
-    <td>Texas Instruments CC2531</td>
+    <td>Texas Instruments CC2531 <b>(not recommended)</b></td>
     <td>USB connected Zigbee adapter with PCB antenna</td>
     <td>
       <a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_Home_1.2/bin">Router</a></td>
@@ -96,7 +96,7 @@ Zigbee2MQTT officially supports the following adapters:
   </tr>
   <tr>
     <td><img src="../images/cc2530.jpg"></td>
-    <td>Texas Instruments CC2530</td>
+    <td>Texas Instruments CC2530 <b>(not recommended)</b></td>
     <td>Serial connected adapter with external antenna optionally with CC2591 or CC2592 RF frontend</td>
     <td>
       <a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_Home_1.2/bin">Router</a></td>
@@ -199,14 +199,14 @@ Zigbee2MQTT officially supports the following adapters:
 ## Notes
 Before buying an adapter, please read the notes below!
 
-- Recommended adapters are the **Electrolama zig-a-zig-ah! (zzh!)** and **Slaesh's CC2652RB stick** because: they are very powerful, have good range (external antenna), are well tested with Zigbee2MQTT, are easy to connect (USB), can be flashed without additional hardware and are small in size.
+- Recommended adapters are the ones with a **CC2652R**, **CC2652P**, **CC2652RB** or **CC1352P** chip (e.g. the **Electrolama zig-a-zig-ah! (zzh!)**). They are very powerful, have good range, are well tested with Zigbee2MQTT and can be flashed without additional hardware.
 - The following adapters require additional hardware to flash: adapters based on the **CC2530** and **CC2531** require a CC debugger and downloader cable, adapters based on the **CC2538** require a JTAG flasher.
 - The adapters based on the CC2652R, CC2652RB, CC2652P and CC1352P chips are very similar to each other since (almost) the same chip is used. The differences:
   - The CC2652P and and CC1352P have a power amplifier which support up-to 20dBm output vs 5dBm on CC2652R(B).
   - The CC1352P support the sub-1 GHz frequency (which is not relevant for Zigbee since it uses 2.4 GHz), the CC2652* only supports 2.4 GHz
   - The difference between the CC2652R and CC2652RB is that the CC2652RB doesn't require a crystal on the PCB, this only relevant for the manufacturing process.
 - Adapters based on the **CC2530** or **CC2531** chip are not powerful and not recommended for networks larger than 20 devices.
-- Adapters that can handle large networks are; adapters using the following chips **CC2652R**, **CC2652RB**, **CC1352P**, **CC2538** and the **Conbee II**.
+- Adapters that can handle large networks are; adapters using the following chips **CC2652R**, **CC2652P**, **CC2652RB**, **CC1352P**, **CC2538** and the **Conbee II**.
 - Of all adapter the **Texas Instruments CC2531** has the worst range, other adapters with a PCB antenna like the **Texas Instruments LAUNCHXL-CC26X2R1** and **ConBee II** provide better range. Adapters with an external antenna have the best range.
 - When migrating to another adapter make sure to modify your `pan_id` in your [configuration](configuration.md), otherwise Zigbee2MQTT won't start. Migrating to a different adapter [may require](./FAQ.md#what-does-and-does-not-require-repairing-of-all-devices) repairing all devices.
 - Support for the **Conbee II** ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/72)), **ZiGate USB-TTL** ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/242)), and **Silicon Labs EZSP** ([discussion](https://github.com/Koenkk/zigbee-herdsman/issues/319)) is experimental, meaning not feature complete nor recommended for a stable enviroment.
