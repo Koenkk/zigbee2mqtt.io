@@ -131,6 +131,7 @@ Groups discovery is supported for groups of lights, switches, locks and covers. 
 ## Exposing switch as a light
 If your device is currently discovered as a switch and you want to discover it as a light, the following config in the Zigbee2MQTT `configuration.yaml` can be used:
 
+{% raw %}
 ```yaml
 devices:
   "0x12345678":
@@ -159,6 +160,8 @@ devices:
         value_template: null
         state_value_template: '{{ value_json.state_right }}'
 ```
+{% endraw %}
+
 If you are also using device specific overrides, make sure that they are configured under the new device type rather than the original device type.
 
 ## Controlling Zigbee2MQTT via Home Assistant
