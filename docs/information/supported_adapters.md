@@ -38,19 +38,19 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://www.ebay.com/itm/164928826521">eBay</a><br/><a href="https://www.aliexpress.com/item/1005002684189079.html">Aliexpress</a><br/><a href="https://smartlight.me/smart-home-devices/zigbee-devices/zigbee-coordinator-v4-cc2652p">Official store</a><br/><a href="https://t.me/smartlightme">Telegram</a></td>
   </tr>
   <tr>
-    <td><img src="../images/ZigStar-LAN.png"></td>
+    <td><img src="../images/ZigStar-USB.png"></td>
     <td>ZigStar Stick v4</td>
     <td>Powerfull Open source dongle with external antenna based on CC2652P</td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
-    <td><a href="https://zig-star.com/projects/zigbee-gw-lan/">Description</a><br><a href="https://zig-star.com/radio-docs/flash-cc-bsl/">Flashing</a></td>
+    <td><a href="https://zig-star.com/projects/zigbee-stick-v4/">Description</a><br><a href="https://zig-star.com/radio-docs/flash-cc-bsl/">Flashing</a></td>
     <td><a href="https://zig-star.com">ZigStar Shop</a></td>
   </tr>
   <tr>
-    <td><img src="../images/ZigStar-USB.png"></td>
-    <td>ZigStar Stick v4</td>
+    <td><img src="../images/ZigStar-LAN.png"></td>
+    <td>ZigStar LAN Coordinator</td>
     <td>Powerfull Open source LAN Coordinator with external antenna on CC2652P</td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
-    <td><a href="https://zig-star.com/projects/zigbee-stick-v4/">Description</a><br><a href="https://zig-star.com/radio-docs/flash-cc-bsl/">Flashing</a></td>
+    <td><a href="https://zig-star.com/projects/zigbee-gw-lan/">Description</a><br><a href="https://zig-star.com/radio-docs/flash-cc-bsl/">Flashing</a></td>
     <td><a href="https://zig-star.com">ZigStar Shop</a></td>
   </tr>
   <tr>
