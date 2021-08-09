@@ -384,7 +384,7 @@ The workaround is based on the solution found at [Add support for devices with "
 	docker stack deploy zigbee2mqtt --compose-file docker-stack-zigbee2mqtt.yml
 	```
 	
-# Docker on Synology DSM 7.0
+## Docker on Synology DSM 7.0
 
 **Note:** This may not work with all Zigbee controllers, but has been tested with the CC2531.
 
