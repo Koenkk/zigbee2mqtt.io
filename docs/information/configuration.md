@@ -87,7 +87,7 @@ advanced:
   log_directory: data/log/%TIMESTAMP%
   # Optional: Log file name, can also contain timestamp, e.g.: zigbee2mqtt_%TIMESTAMP%.log (default: shown below)
   log_file: log.txt
-  # Optional: Log rotation (default: shown below)
+  # Optional: Rotate log every 10MB around 3 files (default: true)
   log_rotation: true
   # Optional: Output location of the log (default: shown below), leave empty to supress logging (log_output: [])
   # possible options: 'console', 'file', 'syslog'
