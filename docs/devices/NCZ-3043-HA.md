@@ -17,6 +17,12 @@ description: "Integrate your Nyce NCZ-3043-HA via Zigbee2MQTT with whatever smar
 
 ## Notes
 
+
+### Pairing
+Press the button on the bottom of the sensor 10 times to reset. 
+After this the device will automatically join.
+
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
