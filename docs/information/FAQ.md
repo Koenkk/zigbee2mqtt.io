@@ -7,6 +7,7 @@
 - [How do I move my Zigbee2MQTT instance to a different environment?](#how-do-i-move-my-zigbee2mqtt-instance-to-a-different-environment)
 - [What does and does not require repairing of all devices?](#what-does-and-does-not-require-repairing-of-all-devices)
 - [Why are some links missing from my networkmap?](#why-are-some-links-missing-from-my-networkmap)
+- [Why is the `action` property always empty?](#why-is-the-action-property-always-empty)
 - [Help, Zigbee2MQTT fails to start!](#help-zigbee2mqtt-fails-to-start)
 - [I read that Zigbee2MQTT has a limit of 20 devices (when using a CC2531), is this true?](#i-read-that-zigbee2mqtt-has-a-limit-of-20-devices-when-using-a-cc2531-is-this-true)
 - [Which port should I use for CC26X2R1/CC1352P-2, /dev/ttyACM0 or /dev/ttyACM1?](#which-port-should-i-use-for-cc26x2r1cc1352p-2-devttyacm0-or-devttyacm1)
@@ -81,6 +82,9 @@ You **don't** need to re-pair your devices when:
 ## Why are some links missing from my networkmap?
 No worrry, in case it happens with end devices (battery powered) it most of the times **does not** mean the devices aren't connected to the network map anymore.
 Some end devices (e.g. Xiaomi door sensor) sleep for a too long time which causes the parent (router child ageing) to remove it from it from its child table. This is what causes the missing link. Even while its not in the child table anymore, the end device can still communicate via the router. This does not always happen since not all routers use child ageing (this is a Zigbee 3.0 feature).
+
+## Why is the `action` property always empty?
+When the Home Assistant integration is enabled (`homeassistant: true` in your `configuration.yaml`) the `action` property of your e.g. buttons will almost always be empty. Whenever an `action` is published e.g. `{"action": "single"}` it will be immediately followed up by a `{"action": ""}`. This is to trigger a state change in the Home Assistant action sensor (so that it can be used in e.g. automations).
 
 ## Help, Zigbee2MQTT fails to start!
 Most of the times this is caused by zigbee-herdsman not being able to communicate with your adapter (e.g. CC2531).
