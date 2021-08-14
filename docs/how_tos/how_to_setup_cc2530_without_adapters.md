@@ -14,7 +14,7 @@ The CC2530 is usually flashed using a CC debugger or at least a downloader cable
 
 The second VCC pin is not necessary. Note that you do not need the debugger cable pin numbers if you do not use a debugger cable. Just connect the pins of the CC2530 directly with the Pi using Dupont cables.
 
-See also [the Raspberry Pi GPIO documentation](https://www.raspberrypi.org/documentation/usage/gpio/).
+See also [the Raspberry Pi GPIO documentation](https://www.raspberrypi.org/documentation/computers/os.html#gpio-and-the-40-pin-header).
 
 ## Flashing
 
