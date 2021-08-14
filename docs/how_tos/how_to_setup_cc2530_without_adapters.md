@@ -24,7 +24,7 @@ These instructions are mostly the same as in [the alternative flashing methods g
 
 1. Connect the pins as described above.
 2. Install [wiringPi](http://wiringpi.com/download-and-install/), if not already installed.
-3. Install the [flash_cc2531 tool](https://github.com/jmichault/flash_cc2531):
+3. Install the [flash_cc2531 tool](https://github.com/jmichault/flash_cc2531), it works fine vor the CC2530:
 ```bash
 git clone https://github.com/jmichault/flash_cc2531.git
 ```
@@ -40,6 +40,7 @@ it should return something like:
   ID = a524.
 ```
 If you see 0000 or ffff, something is wrong and you should probably check your wiring.
+
 6. Erase and flash the CC2531 :
 
 ```bash
@@ -50,4 +51,4 @@ It takes around 3 minutes.
 
 ## Connecting for usage
 
-Shutdown your Pi and disconnect the CC2530. You can now continue in [the general guide for connecting the CC2530](information/connecting_cc2530.html#to-a-raspberry-pi-zero).
+Shutdown your Pi and disconnect the CC2530. You can now continue in [the general guide for connecting the CC2530](../information/connecting_cc2530.html#to-a-raspberry-pi-zero).
