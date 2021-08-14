@@ -77,12 +77,27 @@ function getExposeDocs(expose) {
         }
     } else if (['switch', 'lock', 'cover', 'fan'].includes(expose.type)) {
         const state = expose.features.find((e) => e.name === 'state');
-        lines.push(`The current state of this ${expose.type} is in the published state under the \`${state.property}\` property (value is \`${state.value_on}\` or \`${state.value_off}\`).`);
-        expose.type === 'switch' ?
-            lines.push(`To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\`, \`{"${state.property}": "${state.value_off}"}\` or \`{"${state.property}": "${state.value_toggle}"}\`.`) :
-            lines.push(`To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\` or \`{"${state.property}": "${state.value_off}"}\`.`);
+        const stateStr = expose.type === 'cover' ?
+            `(value is \`OPEN\` or \`CLOSE\`)` : `(value is \`${state.value_on}\` or \`${state.value_off}\`)`;
+        lines.push(`The current state of this ${expose.type} is in the published state under the \`${state.property}\` property ${stateStr}.`);
 
-        lines.push(`To read the current state of this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${state.property}": ""}\`.`);
+        if (state.access & access.SET) {
+            if (expose.type === 'switch') {
+                lines.push(`To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\`, \`{"${state.property}": "${state.value_off}"}\` or \`{"${state.property}": "${state.value_toggle}"}\`.`);
+            } else if (state.type === 'enum') {
+                lines.push(`To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload ${state.values.map((v) => `\`{"${state.property}": "${v}"}\``).join(', ')}.`);
+            } else {
+                lines.push(`To control this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${state.property}": "${state.value_on}"}\` or \`{"${state.property}": "${state.value_off}"}\`.`);
+            }
+        } else {
+            lines.push(`It's not possible to write (\`/set\`) this value.`);
+        }
+
+        if (state.access & access.GET) {
+            lines.push(`To read the current state of this ${expose.type} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${state.property}": ""}\`.`);
+        } else {
+            lines.push(`It's not possible to read (\`/get\`) this value.`);
+        }
 
         if (expose.type === 'cover') {
             for (const e of expose.features.filter((e) => e.name === 'position' || e.name === 'tilt')) {
@@ -123,7 +138,7 @@ function getExposeDocs(expose) {
         }
         if (colorTempStartup) {
             const presets = `Besides the numeric values the following values are accepected: ${colorTempStartup.presets.map((p) => `\`${p.name}\``).join(', ')}.`;
-            lines.push(`- \`color_temp_statup\`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorTempStartup.property}": VALUE}\` where \`VALUE\` is a number between \`${colorTempStartup.value_min}\` and \`${colorTempStartup.value_max}\`, the higher the warmer the color. To read the startup color temperature send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorTempStartup.property}": ""}\`. ${presets}`);
+            lines.push(`- \`color_temp_startup\`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorTempStartup.property}": VALUE}\` where \`VALUE\` is a number between \`${colorTempStartup.value_min}\` and \`${colorTempStartup.value_max}\`, the higher the warmer the color. To read the startup color temperature send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorTempStartup.property}": ""}\`. ${presets}`);
         }
         if (colorXY) {
             lines.push(`- \`color_xy\`: To control the XY color (CIE 1931 color space) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorXY.property}": {"x": X_VALUE, "y": Y_VALUE}}\` (e.g. \`{"color":{"x":0.123,"y":0.123}}\`). To read the XY color send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorXY.property}":{"x":"","y":""}}\`. Alternatively it is possible to set the XY color via RGB:`);
@@ -141,7 +156,7 @@ function getExposeDocs(expose) {
         lines.push(``);
         lines.push(`#### Transition`);
         lines.push(`For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property \`transition\` to the payload which is the transition time in seconds.`);
-        lines.push(`Examples: \`{"brightness":156,"transition":3}\`, \`{"color_temp":241,"transition":0.5}\`.`);
+        lines.push(`Examples: \`{"brightness":156,"transition":3}\`, \`{"color_temp":241,"transition":1}\`.`);
 
         lines.push(``);
         lines.push(`#### Moving/stepping`);
@@ -182,7 +197,12 @@ function getExposeDocs(expose) {
 
         const localTemperature = expose.features.find((e) => e.name === 'local_temperature');
         if (localTemperature) {
-            lines.push(`- \`${localTemperature.name}\`: ${localTemperature.description} (in ${localTemperature.unit}). To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${localTemperature.property}": ""}\`.`);
+            lines.push(`- \`${localTemperature.name}\`: ${localTemperature.description} (in ${localTemperature.unit}).`);
+            if (localTemperature.access & access.GET) {
+                lines[lines.length - 1] += ` To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${localTemperature.property}": ""}\`.`;
+            } else {
+                lines[lines.length - 1] += ` Reading (\`/get\`) this attribute is not possible.`;
+            }
         }
 
         for (const f of expose.features.filter((e) => ['system_mode', 'preset', 'mode'].includes(e.name))) {

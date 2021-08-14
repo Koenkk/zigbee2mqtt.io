@@ -24,10 +24,10 @@ Various Osram/Sylvania LED support setting a default transition when turning a l
 **TOPIC**: `zigbee2mqtt/FRIENDLY_NAME/set`
 ```js
 {
-    "set_transition": 0.1
+    "set_transition": 1
 }
 ```
-**INFO**: Value is time in seconds (integer or float)
+**INFO**: Value is time in seconds (integer, float values are not supported)
 
 ### Remember current light state
 Various Osram/Sylvania LED support remembering their current state in case of power loss, or if a light
@@ -45,6 +45,10 @@ is manually switched off then on. Lights will remember their respective attribut
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
+
+* `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
+the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)
+
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
@@ -65,13 +69,13 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
     ```yaml
     hue_correction:
         - in: 28
-            out: 45
+          out: 45
         - in: 89
-            out: 109
+          out: 109
         - in: 184
-            out: 203
+          out: 203
         - in: 334
-            out: 318
+          out: 318
     ```
 
 
@@ -96,7 +100,7 @@ This light supports the following features: `state`, `brightness`, `color_xy`, `
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
-Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":0.5}`.
+Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
 
 #### Moving/stepping
 Instead of setting a value (e.g. brightness) directly it is also possible to:
@@ -145,12 +149,12 @@ light:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     brightness: true
-    color_temp: false
-    xy: true
-    hs: false
     schema: "json"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     brightness_scale: 254
+    color_mode: true
+    supported_color_modes: 
+      - "xy"
     effect: true
     effect_list: 
       - "blink"
@@ -166,7 +170,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -174,6 +180,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:update"
     value_template: "{{ value_json['update']['state'] }}"
+    enabled_by_default: false
 
 binary_sensor:
   - platform: "mqtt"
@@ -182,6 +189,7 @@ binary_sensor:
     payload_on: true
     payload_off: false
     value_template: "{{ value_json.update_available}}"
+    enabled_by_default: false
 ```
 {% endraw %}
 

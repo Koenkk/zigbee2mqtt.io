@@ -1,4 +1,4 @@
-const devices = require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices;
+const devices = require('zigbee-herdsman-converters').devices;
 const chai = require('chai');
 const fs = require('fs');
 const path = require('path');
@@ -57,6 +57,8 @@ describe('Device images', () => {
                 missing.push(result.path);
             }
         });
+
+        missing.forEach((m) => console.log(m.replace('.jpg', '')));
 
         chai.assert.strictEqual(missing.length, 0, `Missing device images: ${missing.join(', ')}`);
     });

@@ -12,9 +12,9 @@ description: "Integrate your TuYa TS0601_thermostat via Zigbee2MQTT with whateve
 | Model | TS0601_thermostat  |
 | Vendor  | TuYa  |
 | Description | Radiator valve with thermostat |
-| Exposes | lock (state), switch (state), battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration, away_mode, preset), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, week, away_preset_temperature, linkquality |
+| Exposes | lock (state), switch (state), battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, away_mode, preset), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, week, away_preset_temperature, linkquality |
 | Picture | ![TuYa TS0601_thermostat](../images/devices/TS0601_thermostat.jpg) |
-| White-label | Moes HY369RT, SHOJZJ 378RT |
+| White-label | Moes HY368, Moes HY369RT, SHOJZJ 378RT |
 
 ## Notes
 
@@ -23,15 +23,15 @@ description: "Integrate your TuYa TS0601_thermostat via Zigbee2MQTT with whateve
 
 While pairing, keep the valve close to the coordinator.
 
-1. *Turn the display on*: Short press home (:house:).
-2. *Enter settings*: Long press home (:house:) for 3sec.
-3. *Select WiFi settings*: Press the plus button (:heavy_plus_sign:) button 4 times to see the digital **`5`** on the right hand side and the blinking WiFi logo.
-4. *Enter WiFi settings*: Press home (:house:) once again. Now only WiFi logo is showing without blinking.
-5. *Enable pairing mode*: Long press home (:house:). WiFi logo is now blinking.
-6. *Keep display on*: Touch home (:house:) every few seconds.
+1. *Turn the display on*: Short press home (🏠).
+2. *Enter settings*: Long press home (🏠) for 3sec.
+3. *Select WiFi settings*: Press the plus button (➕) button 4 times to see the digital **`5`** on the right hand side and the blinking WiFi logo.
+4. *Enter WiFi settings*: Press home (🏠) once again. Now only WiFi logo is showing without blinking.
+5. *Enable pairing mode*: Long press home (🏠). WiFi logo is now blinking.
+6. *Keep display on*: Touch home (🏠) every few seconds.
 
 ### Local temperature
-If you'd like to force device to send local_temperature you can use this mqtt command:
+If you'd like to force device to send local_temperature you can use this MQTT command:
 * `topic`: zigbee2mqtt/FRIENDLY_NAME/set/local_temperature_calibration
 * `payload`: YOUR_CURRENT_CALIBRATION_VALUE
 
@@ -121,12 +121,12 @@ This device supports OTA updates, for more information see [OTA updates](../info
 ### Lock 
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
-To read the current state of this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Switch 
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_detection": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Battery_low (binary)
 Indicates if the battery of this device is almost empty.
@@ -137,7 +137,7 @@ If value equals `true` battery_low is ON, if `false` OFF.
 ### Switch 
 The current state of this switch is in the published state under the `valve_detection` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_detection": "ON"}`, `{"valve_detection": "OFF"}` or `{"valve_detection": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"valve_detection": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Position (numeric)
 Position.
@@ -146,23 +146,22 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Climate 
-This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`, `local_temperature_calibration`, `away_mode`, `preset`.
+This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `system_mode`, `local_temperature_calibration`, `away_mode`, `preset`.
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
-- `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
+- `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `heat`, `auto`, `off`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `schedule`, `manual`, `boost`, `complex`, `comfort`, `eco`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
-- `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
 - `away_mode`: Away mode. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_mode": "ON"}` or `{"away_mode": "OFF"}`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"away_mode": ""}`.
 
 ### Switch 
 The current state of this switch is in the published state under the `auto_lock` property (value is `AUTO` or `MANUAL`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_lock": "AUTO"}`, `{"auto_lock": "MANUAL"}` or `{"auto_lock": "undefined"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"auto_lock": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Switch 
 The current state of this switch is in the published state under the `away_mode` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_mode": "ON"}`, `{"away_mode": "OFF"}` or `{"away_mode": "undefined"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"away_mode": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Away_preset_days (numeric)
 Away preset days.
@@ -248,13 +247,13 @@ lock:
     value_template: "{{ value_json.child_lock }}"
     payload_lock: "LOCK"
     payload_unlock: "UNLOCK"
-    state_locked: "LOCKED"
-    state_unlocked: "UNLOCKED"
+    state_locked: "LOCK"
+    state_unlocked: "UNLOCK"
     command_topic_postfix: "child_lock"
 
 switch:
   - platform: "mqtt"
-    state_topic: true
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
@@ -276,7 +275,7 @@ binary_sensor:
 
 switch:
   - platform: "mqtt"
-    state_topic: true
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
@@ -293,6 +292,7 @@ sensor:
     value_template: "{{ value_json.position }}"
     unit_of_measurement: "%"
     icon: "mdi:valve"
+    state_class: "measurement"
 
 climate:
   - platform: "mqtt"
@@ -310,8 +310,6 @@ climate:
       - "auto"
       - "off"
     mode_command_topic: true
-    action_topic: true
-    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
     temperature_command_topic: "current_heating_setpoint"
     temperature_state_template: "{{ value_json.current_heating_setpoint }}"
     temperature_state_topic: true
@@ -331,7 +329,7 @@ climate:
 
 switch:
   - platform: "mqtt"
-    state_topic: true
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "MANUAL"
     payload_on: "AUTO"
@@ -343,7 +341,7 @@ switch:
 
 switch:
   - platform: "mqtt"
-    state_topic: true
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
@@ -385,6 +383,19 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.force }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.force }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "force"
+    options: 
+      - "normal"
+      - "open"
+      - "close"
 
 sensor:
   - platform: "mqtt"
@@ -405,6 +416,19 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.week }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.week }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "week"
+    options: 
+      - "5+2"
+      - "6+1"
+      - "7"
 
 sensor:
   - platform: "mqtt"
@@ -419,7 +443,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -427,6 +453,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:update"
     value_template: "{{ value_json['update']['state'] }}"
+    enabled_by_default: false
 
 binary_sensor:
   - platform: "mqtt"
@@ -435,6 +462,7 @@ binary_sensor:
     payload_on: true
     payload_off: false
     value_template: "{{ value_json.update_available}}"
+    enabled_by_default: false
 ```
 {% endraw %}
 
