@@ -16,6 +16,8 @@ The second VCC pin is not necessary. Note that you do not need the debugger cabl
 
 See also [the Raspberry Pi GPIO documentation](https://www.raspberrypi.org/documentation/computers/os.html#gpio-and-the-40-pin-header).
 
+![CC2530 to Pi with no adapters](../images/CC2530_Raspi.jpg)
+
 ## Flashing
 
 The antenna does not need to be connected at this point.
