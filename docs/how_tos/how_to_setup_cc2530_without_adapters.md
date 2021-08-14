@@ -51,4 +51,4 @@ It takes around 3 minutes.
 
 ## Connecting for usage
 
-Shutdown your Pi and disconnect the CC2530. You can now continue in [the general guide for connecting the CC2530](../information/connecting_cc2530.html#to-a-raspberry-pi-zero).
+Shutdown your Pi and disconnect the CC2530. You can now continue in [the general guide for connecting the CC2530](../information/connecting_cc2530.md#to-a-raspberry-pi-zero).
