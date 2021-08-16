@@ -11,25 +11,12 @@ description: "Integrate your Sunricher ZGRC-KEY-013 via Zigbee2MQTT with whateve
 
 | Model | ZGRC-KEY-013  |
 | Vendor  | Sunricher  |
-| Description | 3 zone remote and dimmer |
+| Description | 4 zone remote and dimmer |
 | Exposes | battery, action, linkquality |
 | Picture | ![Sunricher ZGRC-KEY-013](../images/devices/ZGRC-KEY-013.jpg) |
 | White-label | RGB Genie ZGRC-KEY-013 |
 
 ## Notes
-
-
-### Deprecated click event
-By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
-
-To disable the `click` event, set `legacy: false` for this device in `configuration.yaml`. Example:
-
-```yaml
-devices:
-  '0x12345678':
-    friendly_name: my_device
-    legacy: false
-```
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
