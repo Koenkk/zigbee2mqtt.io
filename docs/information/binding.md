@@ -49,14 +49,15 @@ When a devices is being bound to, Zigbee2MQTT will automatically configure repor
 
 In order for this feature to work, the device has to support it. As devices from the same manufacturer (mostly) have the same features the table below might help to find out if your device supports it.
 
-| Brand           | On/Off    | Brightness | Color | Color temperature |
-| :---            | :---:     | :---:      | :---: | :---:             |
-| Philips Hue     | N(1)      | N(2)       | N     | N                 |
-| Trådfri(3)      | Y         | Y          | Y     | N                 |
-| Innr            | Y         | Y          | Y     | Y                 |
-| GLEDOPTO        | N         | N          | N     | N                 |
-| OSRAM           | Y         | Y          | N     | N                 |
-| Müller Licht    | N         | N          | N     | N                 |
+| Brand            | On/Off    | Brightness | Color | Color temperature | Color Mode |
+| :---             | :---:     | :---:      | :---: | :---:             | :---:
+| Philips Hue      | N(1)      | N(2)       | N     | N                 | N
+| Philips Hue (BT) | Y         | Y          | Y     | Y                 | N
+| Trådfri(3)       | Y         | Y          | Y     | N                 | Y
+| Innr             | Y         | Y          | Y     | Y                 | Y
+| GLEDOPTO         | N         | N          | N     | N                 | N
+| OSRAM            | Y         | Y          | N     | N                 | Y
+| Müller Licht     | N         | N          | N     | N                 | Y
 
 1. Bulbs on old firmware (date 20170908 or older) do report On/Off
 2. Zigbee2MQTT will manual poll for change if a binding updates the bulb.
