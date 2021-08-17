@@ -17,11 +17,12 @@ description: "Integrate your Sunricher ZGRC-KEY-013 via Zigbee2MQTT with whateve
 | White-label | RGB Genie ZGRC-KEY-013 |
 
 ## Notes
+The productnumber on Sunricer productinformation is sr-zg9001k12-dim-z4 but it identifies as ZGRC-KEY-013.
 
-Pairing #
+### Pairing
 Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press the All Off button. The Status LED will blink 5 times quickly to indicate a successful pairing.
 
-Resetting #
+### Resetting
 Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press 5 times the All On button. The Status LED will blink 3 times to indicate successful reset.
 
 ### Device type specific configuration
