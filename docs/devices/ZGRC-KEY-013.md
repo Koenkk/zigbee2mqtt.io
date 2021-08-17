@@ -18,6 +18,12 @@ description: "Integrate your Sunricher ZGRC-KEY-013 via Zigbee2MQTT with whateve
 
 ## Notes
 
+Pairing #
+Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press the All Off button. The Status LED will blink 5 times quickly to indicate a successful pairing.
+
+Resetting #
+Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press 5 times the All On button. The Status LED will blink 3 times to indicate successful reset.
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
