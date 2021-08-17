@@ -23,9 +23,9 @@ description: "Integrate your Xfinity URC4450BC0-X-R via Zigbee2MQTT with whateve
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
 To control the precision based on the temperature value set it to e.g. `{30: 0, 10: 1}`,
-when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1.
+when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1. Precision will take into affect with next report of device.
 * `temperature_calibration`: Allows to manually calibrate temperature values,
-e.g. `1` would add 1 degree to the temperature reported by the device; default `0`.
+e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
 
 
 ### (Dis)arming
@@ -57,7 +57,7 @@ In case you want to confirm this action (e.g. `action_code` value is OK), respon
 {
     "arm_mode": {
     "transaction": 99, // Transaction number (take this value from the (dis)arm attempt property `action_transaction`)
-    "mode": "arm_all_zones" // Mode "arm_all_zones", "disarm" or "invalid_code" (take this value from the (dis)arm attempt property `action`)
+    "mode": "arm_all_zones" // Mode "arm_all_zones", "disarm" or "exit_delay" (take this value from the (dis)arm attempt property `action`)
     }
 }
 ```
@@ -74,10 +74,10 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Voltage (numeric)
-Measured electrical potential value.
+Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `V`.
+The unit of this value is `mV`.
 
 ### Occupancy (binary)
 Indicates whether the device detected occupancy.
@@ -127,7 +127,7 @@ The unit of this value is `°C`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `disarm`, `arm_day_zones`, `identify`, `arm_night_zones`, `arm_all_zones`, `invalid_code`, `emergency`.
+The possible values are: `disarm`, `arm_day_zones`, `identify`, `arm_night_zones`, `arm_all_zones`, `exit_delay`, `emergency`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -150,14 +150,17 @@ sensor:
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
     device_class: "battery"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.voltage }}"
-    unit_of_measurement: "V"
+    unit_of_measurement: "mV"
     device_class: "voltage"
+    enabled_by_default: false
+    state_class: "measurement"
 
 binary_sensor:
   - platform: "mqtt"
@@ -222,12 +225,14 @@ sensor:
     value_template: "{{ value_json.temperature }}"
     unit_of_measurement: "°C"
     device_class: "temperature"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action }}"
+    enabled_by_default: true
     icon: "mdi:gesture-double-tap"
 
 sensor:
@@ -236,7 +241,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

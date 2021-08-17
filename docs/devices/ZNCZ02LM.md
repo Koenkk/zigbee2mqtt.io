@@ -30,9 +30,9 @@ You may have to unpair the switch from an existing coordinator before the pairin
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
 To control the precision based on the temperature value set it to e.g. `{30: 0, 10: 1}`,
-when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1.
+when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1. Precision will take into affect with next report of device.
 * `temperature_calibration`: Allows to manually calibrate temperature values,
-e.g. `1` would add 1 degree to the temperature reported by the device; default `0`.
+e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
 
 
 ### Power outage memory
@@ -44,6 +44,9 @@ Now toggle the plug/switch once with the button on it, from now on it will resto
 ### Voltage
 Some versions of the plug provide voltage. This depends on the firmware on the device. Confirmed working are the ones with `dateCode` `02-28-2017` (can be checked in `data/database.db`). Note that Xiaomi doesn't provide firmware files, so the software cannot be downgraded/upgraded.
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 
 
 ## Exposes
@@ -75,7 +78,7 @@ The unit of this value is `°C`.
 ### Power_outage_memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.
 Value can be found in the published state on the `power_outage_memory` property.
-It's not possible to read (`/get`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 If value equals `true` power_outage_memory is ON, if `false` OFF.
 
@@ -109,6 +112,7 @@ sensor:
     value_template: "{{ value_json.power }}"
     unit_of_measurement: "W"
     device_class: "power"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -125,14 +129,17 @@ sensor:
     value_template: "{{ value_json.temperature }}"
     unit_of_measurement: "°C"
     device_class: "temperature"
+    state_class: "measurement"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.power_outage_memory }}"
-    payload_on: true
-    payload_off: false
+    value_template: "{% if value_json.power_outage_memory %} true {% else %} false {% endif %}"
+    payload_on: "true"
+    payload_off: "false"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "power_outage_memory"
 
 sensor:
   - platform: "mqtt"
@@ -140,7 +147,26 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:update"
+    value_template: "{{ value_json['update']['state'] }}"
+    enabled_by_default: false
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.update_available}}"
+    enabled_by_default: false
 ```
 {% endraw %}
 

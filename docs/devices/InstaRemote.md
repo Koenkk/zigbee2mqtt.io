@@ -56,7 +56,7 @@ This device supports OTA updates, for more information see [OTA updates](../info
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `select_*`, `on`, `off`, `down`, `up`, `stop`.
+The possible values are: `select_0`, `select_1`, `select_2`, `select_3`, `select_4`, `select_5`, `on`, `off`, `down`, `up`, `stop`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -77,6 +77,7 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action }}"
+    enabled_by_default: true
     icon: "mdi:gesture-double-tap"
 
 sensor:
@@ -85,7 +86,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -93,6 +96,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:update"
     value_template: "{{ value_json['update']['state'] }}"
+    enabled_by_default: false
 
 binary_sensor:
   - platform: "mqtt"
@@ -101,6 +105,7 @@ binary_sensor:
     payload_on: true
     payload_off: false
     value_template: "{{ value_json.update_available}}"
+    enabled_by_default: false
 ```
 {% endraw %}
 

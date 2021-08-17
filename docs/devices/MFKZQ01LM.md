@@ -12,14 +12,15 @@ description: "Integrate your Xiaomi MFKZQ01LM via Zigbee2MQTT with whatever smar
 | Model | MFKZQ01LM  |
 | Vendor  | Xiaomi  |
 | Description | Mi/Aqara smart home cube |
-| Exposes | battery, voltage, action, linkquality |
+| Exposes | battery, voltage, action_angle, action_from_side, action_side, action_to_side, action, linkquality |
 | Picture | ![Xiaomi MFKZQ01LM](../images/devices/MFKZQ01LM.jpg) |
 
 ## Notes
 
 
 ### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
+Remove the back plate by using the included tool or a wedge to click it off.
+Press and hold the reset button inside the device for +- 5 seconds (until the blue light starts blinking).
 After this the device will automatically join. If this doesn't work, try with a single short button press.
 
 
@@ -49,10 +50,33 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Voltage (numeric)
-Measured electrical potential value.
+Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `V`.
+The unit of this value is `mV`.
+
+### Action_angle (numeric)
+Value can be found in the published state on the `action_angle` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `-360` and the maximum value is `360`.
+
+### Action_from_side (numeric)
+Side of the cube.
+Value can be found in the published state on the `action_from_side` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `6`.
+
+### Action_side (numeric)
+Side of the cube.
+Value can be found in the published state on the `action_side` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `6`.
+
+### Action_to_side (numeric)
+Side of the cube.
+Value can be found in the published state on the `action_to_side` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `6`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).
@@ -81,20 +105,48 @@ sensor:
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
     device_class: "battery"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.voltage }}"
-    unit_of_measurement: "V"
+    unit_of_measurement: "mV"
     device_class: "voltage"
+    enabled_by_default: false
+    state_class: "measurement"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.action_angle }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.action_from_side }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.action_side }}"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.action_to_side }}"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action }}"
+    enabled_by_default: true
     icon: "mdi:gesture-double-tap"
 
 sensor:
@@ -103,7 +155,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

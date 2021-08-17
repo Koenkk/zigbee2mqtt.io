@@ -38,19 +38,19 @@ devices:
 
 * `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.
 To control the precision based on the illuminance_lux value set it to e.g. `{1000: 0, 100: 1}`,
-when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 precision will be 1.
+when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 precision will be 1. Precision will take into affect with next report of device.
 
 
 * `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
-e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
+e.g. `95` would take 95% to the illuminance reported by the device; default `100`. Calibration will take into affect with next report of device.
 
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
 To control the precision based on the temperature value set it to e.g. `{30: 0, 10: 1}`,
-when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1.
+when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1. Precision will take into affect with next report of device.
 * `temperature_calibration`: Allows to manually calibrate temperature values,
-e.g. `1` would add 1 degree to the temperature reported by the device; default `0`.
+e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
 
 
 
@@ -113,6 +113,7 @@ sensor:
     value_template: "{{ value_json.temperature }}"
     unit_of_measurement: "°C"
     device_class: "temperature"
+    state_class: "measurement"
 
 binary_sensor:
   - platform: "mqtt"
@@ -130,6 +131,7 @@ sensor:
     value_template: "{{ value_json.illuminance_lux }}"
     unit_of_measurement: "lx"
     device_class: "illuminance"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -137,12 +139,15 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.illuminance }}"
     device_class: "illuminance"
+    enabled_by_default: false
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action }}"
+    enabled_by_default: true
     icon: "mdi:gesture-double-tap"
 
 sensor:
@@ -151,7 +156,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

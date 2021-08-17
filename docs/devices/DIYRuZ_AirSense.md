@@ -23,28 +23,28 @@ description: "Integrate your DIYRuZ DIYRuZ_AirSense via Zigbee2MQTT with whateve
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
 To control the precision based on the temperature value set it to e.g. `{30: 0, 10: 1}`,
-when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1.
+when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1. Precision will take into affect with next report of device.
 * `temperature_calibration`: Allows to manually calibrate temperature values,
-e.g. `1` would add 1 degree to the temperature reported by the device; default `0`.
+e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
 
 
 * `humidity_precision`: Controls the precision of `humidity` values, e.g. `0`, `1` or `2`; default `2`.
 To control the precision based on the humidity value set it to e.g. `{80: 0, 10: 1}`,
-when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1.
+when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1. Precision will take into affect with next report of device.
 
 
 * `pressure_precision`: Controls the precision of `pressure` values, e.g. `0` or `1`; default `1`.
 To control the precision based on the pressure value set it to e.g. `{1000: 0, 100: 1}`,
-when pressure >= 1000 precision will be 0, when pressure >= 100 precision will be 1.
+when pressure >= 1000 precision will be 0, when pressure >= 100 precision will be 1. Precision will take into affect with next report of device.
 * `pressure_calibration`: Allows to manually calibrate pressure values,
-e.g. `1` would add 1 to the pressure reported by the device; default `0`.
+e.g. `1` would add 1 to the pressure reported by the device; default `0`. Calibration will take into affect with next report of device.
 
 
 
 ## Exposes
 
 ### Co2 (numeric)
-The measured CO2 (carbon monoxide) value.
+The measured CO2 (carbon dioxide) value.
 Value can be found in the published state on the `co2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ppm`.
@@ -137,6 +137,7 @@ sensor:
     value_template: "{{ value_json.co2 }}"
     unit_of_measurement: "ppm"
     icon: "mdi:molecule-co2"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -145,6 +146,7 @@ sensor:
     value_template: "{{ value_json.temperature }}"
     unit_of_measurement: "°C"
     device_class: "temperature"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -153,6 +155,7 @@ sensor:
     value_template: "{{ value_json.humidity }}"
     unit_of_measurement: "%"
     device_class: "humidity"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -161,22 +164,27 @@ sensor:
     value_template: "{{ value_json.pressure }}"
     unit_of_measurement: "hPa"
     device_class: "pressure"
+    state_class: "measurement"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.led_feedback }}"
     payload_on: "ON"
     payload_off: "OFF"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "led_feedback"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.enable_abc }}"
     payload_on: "ON"
     payload_off: "OFF"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "enable_abc"
 
 sensor:
   - platform: "mqtt"
@@ -219,7 +227,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

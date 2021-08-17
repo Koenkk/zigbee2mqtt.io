@@ -1,22 +1,28 @@
 ---
-title: "RGB Genie ZGRC-KEY-013 control via MQTT"
-description: "Integrate your RGB Genie ZGRC-KEY-013 via Zigbee2MQTT with whatever smart home
+title: "Sunricher ZGRC-KEY-013 control via MQTT"
+description: "Integrate your Sunricher ZGRC-KEY-013 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZGRC-KEY-013.md)*
 
-# RGB Genie ZGRC-KEY-013
+# Sunricher ZGRC-KEY-013
 
 | Model | ZGRC-KEY-013  |
-| Vendor  | RGB Genie  |
-| Description | 3 Zone remote and dimmer |
+| Vendor  | Sunricher  |
+| Description | 4 zone remote and dimmer |
 | Exposes | battery, action, linkquality |
-| Picture | ![RGB Genie ZGRC-KEY-013](../images/devices/ZGRC-KEY-013.jpg) |
+| Picture | ![Sunricher ZGRC-KEY-013](../images/devices/ZGRC-KEY-013.jpg) |
+| White-label | RGB Genie ZGRC-KEY-013 |
 
 ## Notes
 
+### Pairing
+Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press the All Off button. The Status LED will blink 5 times quickly to indicate a successful pairing.
+
+### Resetting
+Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press 5 times the All On button. The Status LED will blink 3 times to indicate successful reset.
 
 ### Deprecated click event
 By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
@@ -91,12 +97,14 @@ sensor:
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
     device_class: "battery"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action }}"
+    enabled_by_default: true
     icon: "mdi:gesture-double-tap"
 
 sensor:
@@ -105,7 +113,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

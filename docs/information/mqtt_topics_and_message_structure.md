@@ -71,6 +71,7 @@ Example payload:
     "network":{"channel":15,"pan_id":5674,"extended_pan_id":[0,11,22]},
     "log_level":"debug",
     "permit_join":true,
+    "permit_join_timeout": 10, // Time in seconds till permit join is disabled, `undefined` in case of no timeout
     "config": {...}, // Will contain the complete Zigbee2MQTT config expect the network_key
     "config_schema": {...}, // Will contain the JSON schema of the config
     "restart_required": false // Indicates wether Zigbee2MQTT needs to be restarted to apply options set through zigbee2mqtt/request/bridge/options
@@ -203,7 +204,7 @@ Events will be published to this topic. Possible types are `device_joined`, `dev
 - `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"started","ieee_address":"0x90fd9ffffe6494fc"}}`
 - `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"successful","ieee_address":"0x90fd9ffffe6494fc","supported":true,"definition":{"model":"LED1624G9","vendor":"IKEA","description":"TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white"}}}`
 - `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"failed","ieee_address":"0x90fd9ffffe6494fc"}}`
-- `{"type":"device_leave","data":{"ieee_address":"0x90fd9ffffe6494fc"}}`
+- `{"type":"device_leave","data":{"ieee_address":"0x90fd9ffffe6494fc","friendly_name":"my_bulb"}}`
 
 ## zigbee2mqtt/bridge/extensions
 See [User extensions](./user_extensions.md).
@@ -291,7 +292,7 @@ See [OTA updates](./ota_updates.md).
 
 #### zigbee2mqtt/bridge/request/device/configure
 
-Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected (e.g. not reporting certain values), not all devices can be configured (only when the defintion has a `configure` in [`devices.js`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices.js)). Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_remote"}` or `my_remote`, response: `{"data":{"id": "my_remote"},"status":"ok"}`.
+Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected (e.g. not reporting certain values), not all devices can be configured (only when the defintion has a `configure` in its [definition](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices)). Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_remote"}` or `my_remote`, response: `{"data":{"id": "my_remote"},"status":"ok"}`.
 
 
 #### zigbee2mqtt/bridge/request/device/options
@@ -327,6 +328,7 @@ To disable reporting set the `maximum_report_interval` to `65535`.
 Notes:
 - Not all devices support the Zigbee configure reporting command (e.g. Xiaomi WSDCGQ11LM temperature/humidity sensors don't support it)
 - If configure reporting fails for a battery powered device make sure to wake it up right before sending the command.
+- The `reportable_change` value depends on the unit of the attribute, e.g. for temperature 100 means in general 1°C of change.
 
 
 ### Group

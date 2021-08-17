@@ -8,18 +8,20 @@ This feature allows to update your Zigbee devices over-the-air.
 Not all manufacturers make their updates available, therefore only the following devices support it:
 - IKEA TRÅDFRI devices
 - Ubysis devices
+- Some Xiaomi devices
 - Salus SP600 Smart plug
 - Osram/Ledvance devices (not every firmware is made available by them, in case not you will see the following exception in the log `No image available for ...`)
 - Philips Hue devices (not every firmware is made available by them, in case not you will see the following exception in the log `No image available for ...`)
 - Jung ZLLxx5004M, Jung ZLLHS4 and Gira 2435-10
 Gira does unfortunately not seem to offer firmware updates for their wall transmitter 2430-100 (which is very similar to the Jung ZLLxx5004M) and the update file for the Jung wall transmitter does not work for Gira (probably because the Gira wall transmitter only has 6 buttons instead of 8 on the Jung).
 - Sengled devices
+- Some Xiaomi devices
 
 
 ## Automatic checking for available updates
 Your zigbee devices can request a firmware update check. Zigbee2MQTT obliges this, and will automatically check if updates are available for your devices.
 
-The update state will be published to `zigbee2mqtt/[DEVICE_FRIENLDY_NAME]`, example payload: `{"update": {"state": "available"}}`.
+The update state will be published to `zigbee2mqtt/[DEVICE_FRIENDLY_NAME]`, example payload: `{"update": {"state": "available"}}`.
 The possible states are:
 - `available`: an update is available for this device
 - `updating`: update is in progress. During this the progress in % and remaining time in seconds is also added to the payload, example: `{"update": {"state": "updating","progress":13.37,"remaining": 219}}`.

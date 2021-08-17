@@ -12,14 +12,14 @@ description: "Integrate your Xiaomi SJCGQ11LM via Zigbee2MQTT with whatever smar
 | Model | SJCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara water leak sensor |
-| Exposes | battery, water_leak, battery_low, tamper, voltage, linkquality |
+| Exposes | battery, water_leak, battery_low, voltage, linkquality |
 | Picture | ![Xiaomi SJCGQ11LM](../images/devices/SJCGQ11LM.jpg) |
 
 ## Notes
 
 
 ### Pairing
-Press and hold water logo on the device for +- 10 seconds (you have to press quite hard) until the blue light blinks
+Press and hold water logo on the device for +- 5 seconds (you have to press quite hard) until the blue light blinks
 three times, release the water logo (the blue light will blink once more) and wait.
     
 
@@ -45,17 +45,11 @@ Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery_low is ON, if `false` OFF.
 
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
-
 ### Voltage (numeric)
-Measured electrical potential value.
+Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `V`.
+The unit of this value is `mV`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -78,6 +72,7 @@ sensor:
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
     device_class: "battery"
+    state_class: "measurement"
 
 binary_sensor:
   - platform: "mqtt"
@@ -97,21 +92,15 @@ binary_sensor:
     payload_off: false
     device_class: "battery"
 
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.tamper }}"
-    payload_on: true
-    payload_off: false
-
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.voltage }}"
-    unit_of_measurement: "V"
+    unit_of_measurement: "mV"
     device_class: "voltage"
+    enabled_by_default: false
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -119,7 +108,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

@@ -11,11 +11,17 @@ Before executing `docker run` pull the correct image with `docker pull koenkk/zi
 
 First run the container, this will create the configuration directory. Change `configuration.yaml` according to your situation and start again.
 
-## Running
+## Running as root
 Run by executing the following commmand:
 
+1. Identify your device:
 ```bash
-docker run \
+$ ls -l /dev/serial/by-id
+```
+
+2. Run docker, whereas the "--device" statement should match the previous output:
+```bash
+$ docker run \
    -it \
    -v $(pwd)/data:/app/data \
    --device=/dev/ttyACM0 \
@@ -30,12 +36,44 @@ docker run \
 * `--device=/dev/ttyACM0`: Location of adapter (e.g. CC2531)
 * `-v /run/udev:/run/udev:ro --privileged=true`: is optional, only required for autodetecting the port
 * Optional: in case your MQTT broker is running on `localhost` and is not within the same Docker network as the Zigbee2MQTT container also add `--network host \`.
+* Note: For USB auto-discovery, the container needs to be executed by root in "--privileged" mode.
+
+## Running as non-root
+
+1. Identify your device:
+```
+$ ls -l /dev/serial/by-id
+```
+
+2. Identify the group that has access to the device (in Ubuntu, e.g. it might be assigned to "dialout"):
+```
+$ ls -l /dev/tty*
+```
+
+3. Check the user&group id you want to execute the docker image with:
+```
+$ id
+```
+
+4. Start the docker container (note: interface, user&group ID must match the outputs above):
+```
+$ sudo docker run \
+   -it \
+   --name=zigbee2mqtt \
+   -v ($pwd)/data:/app/data \
+   -v /run/udev:/run/udev:ro \
+   --device=/dev/ttyACM0 \
+   --user 1001:1001 \
+   --group-add dialout \
+   -e TZ=Europe/Amsterdam \
+   koenkk/zigbee2mqtt</b>
+```
 
 ## Updating
 To update to the latest Docker image:
 ```bash
-docker rm -f [ZIGBEE2MQTT_CONTAINER_NAME]
-docker rmi -f [ZIGBEE2MQTT_IMAGE_NAME] # e.g. koenkk/zigbee2mqtt:latest
+$ docker rm -f [ZIGBEE2MQTT_CONTAINER_NAME]
+$ docker rmi -f [ZIGBEE2MQTT_IMAGE_NAME] # e.g. koenkk/zigbee2mqtt:latest
 # Now run the container again, Docker will automatically pull the latest image.
 ```
 
@@ -345,3 +383,20 @@ The workaround is based on the solution found at [Add support for devices with "
 	```shell
 	docker stack deploy zigbee2mqtt --compose-file docker-stack-zigbee2mqtt.yml
 	```
+	
+## Docker on Synology DSM 7.0
+
+**Note:** This may not work with all Zigbee controllers, but has been tested with the CC2531.
+
+As of Disk Station Manager version 7, Synology removed the built-in support for USB-devices like a Zigbee controller.
+The USB support can be installed to the Linux kernel by issuing the following commands as *root*.
+````
+modprobe usbserial
+modprobe ftdi_sio
+modprobe cdc-acm
+````
+After issuing the commands, the Zigbee controller may need to be unplugged and re-inserted to the USB port.
+
+It is possible to create a start-up task that issues the above commands:
+1. Create an executable script file that contains the three modprobe commands.
+1. Using DSM's *Control Panel* -> *Task Scheduler* -> *Create* -> *Triggered Task* -> *User-defined script* with the settings: **User:** root, **Event:** Boot-up, and a `bash` command executing the executable file under *Task Settings*.

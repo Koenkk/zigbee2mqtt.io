@@ -57,10 +57,11 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `beeping`.
 
 ### Beep (enum)
+Trigger beep for x seconds.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"beep": NEW_VALUE}`.
-The possible values are: ``.
+The possible values are: `2`, `5`, `10`, `15`, `30`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -83,6 +84,7 @@ sensor:
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
     device_class: "battery"
+    state_class: "measurement"
 
 binary_sensor:
   - platform: "mqtt"
@@ -98,6 +100,7 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action }}"
+    enabled_by_default: true
     icon: "mdi:gesture-double-tap"
 
 sensor:
@@ -106,7 +109,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

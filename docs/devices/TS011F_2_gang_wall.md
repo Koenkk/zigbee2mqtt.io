@@ -14,6 +14,7 @@ description: "Integrate your TuYa TS011F_2_gang_wall via Zigbee2MQTT with whatev
 | Description | 2 gang wall outlet |
 | Exposes | switch (state), linkquality |
 | Picture | ![TuYa TS011F_2_gang_wall](../images/devices/TS011F_2_gang_wall.jpg) |
+| White-label | ClickSmart+ CMA30036 |
 
 ## Notes
 
@@ -70,7 +71,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

@@ -3,7 +3,7 @@ This how-to explains how to run Zigbee2MQTT with an adapter on a remote location
 We will use ser2net for this which allows to connect to a serial port over TCP.
 In this way you can e.g. setup a Raspberry Pi Zero with the adapter connected while running Zigbee2MQTT on a different system. The instructions below have to be executed on the system where the adapter is connected to.
 
-DeCONZ Conbee II is not supported over tcp connections using this or any other configuration at this time. 
+WiFi-based Serial-to-IP bridges are not recommended for Silicon Labs EZSP adapters as the serial protocol does not have enough fault-tolerance to handle packet loss or latency delays that can normally occur over WiFi connections.
 
 ## 1. Install ser2net
 ```bash
@@ -37,6 +37,16 @@ Add the following entry, replace `/dev/ttyACM0` with the correct path to your ad
 connection: &con01
   accepter: tcp,20108
   connector: serialdev,/dev/ttyACM0,115200n81,local
+  options:
+    kickolduser: true
+```
+
+For a Slaesh coordinator, use the following configuration:
+
+```
+connection: &con01
+  accepter: tcp,20108
+  connector: serialdev,/dev/ttyACM0,115200n81,local,dtr=off,rts=off
   options:
     kickolduser: true
 ```

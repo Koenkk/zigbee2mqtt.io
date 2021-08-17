@@ -33,16 +33,16 @@ More detailed information about this can be found [here](https://community.hubit
 
 
 ## OpenHAB integration and configuration
-In OpenHAB you need the MQTT Binding to be installed. It is possible to add this sensor as a generic mqtt thing, but here it is described how to add the sensor manually via an editor.
+In OpenHAB you need the MQTT Binding to be installed. It is possible to add this sensor as a generic MQTT thing, but here it is described how to add the sensor manually via an editor.
 
-To make the following configuration work it is neccessary to enable the experimental attribute output in the configuration.yaml.
+To make the following configuration work it is necessary to enable the experimental attribute output in the configuration.yaml.
 ```yaml
 experimental:
     output: attribute
 ```
 
 ### Thing
-To add this Xiaomi MCCGQ01LM MiJia door & window contact sensor as Thing it is necessary to embed the Thing into a bridge definition of a mqtt broker. Please concider that for the door window sensor OPEN is false (no contact) and CLOSED is true (contact). So make sure that on(OPEN) = "false" and off(CLOSED) = "true".
+To add this Xiaomi MCCGQ01LM MiJia door & window contact sensor as Thing it is necessary to embed the Thing into a bridge definition of a MQTT broker. Please consider that for the door window sensor OPEN is false (no contact) and CLOSED is true (contact). So make sure that on(OPEN) = "false" and off(CLOSED) = "true".
 
 ```yaml
 Bridge mqtt:broker:zigbeeBroker [ host="YourHostname", secure=false, username="your_username", password="your_password" ]
@@ -55,7 +55,7 @@ Bridge mqtt:broker:zigbeeBroker [ host="YourHostname", secure=false, username="y
             Type number   : battery     "battery"     [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/battery" ]
             Type number   : linkquality "linkquality" [ stateTopic = "zigbee2mqtt/<FRIENDLY_NAME>/linkquality" ]
             /****************************************************************************************************
-            If you want to know when the sensor has been last changed you cann add to your configuration.yaml:
+            If you want to know when the sensor has been last changed you can add to your configuration.yaml:
             advanced:
                 last_seen: ISO_8601_local
 
@@ -94,10 +94,10 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
 
 ### Voltage (numeric)
-Measured electrical potential value.
+Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `V`.
+The unit of this value is `mV`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -120,6 +120,7 @@ sensor:
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
     device_class: "battery"
+    state_class: "measurement"
 
 binary_sensor:
   - platform: "mqtt"
@@ -135,8 +136,10 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.voltage }}"
-    unit_of_measurement: "V"
+    unit_of_measurement: "mV"
     device_class: "voltage"
+    enabled_by_default: false
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -144,7 +147,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

@@ -29,7 +29,7 @@ Request:
 ```json
 {
     "create": {
-        "model_type": 55,
+        "model_type": 55
     }
 }
 ```
@@ -42,7 +42,7 @@ Response:
     "action": "create",
     "action_result": "success",
     "action_model_type": 55,
-    "action_id": 1,
+    "action_id": 1
 }
 ```
 
@@ -59,13 +59,13 @@ Request:
 {
     "learn": {
         "id": 1,
-        "key_code": 31,
+        "key_code": 31
     }
 }
 ```
 
 - **id**: Internal device slot ID. `1..15`.
-- **key_code**: Keycode slot ID. `1..30` - Store/replace specific key in speicified slot ID. `>=31` - Create slot ID.
+- **key_code**: Keycode slot ID. `1..30` - Store/replace specific key in specified slot ID. `>=31` - Create slot ID.
 
 NOTE: You should store keys one-by-one if you specified `key_code` by yourself.
 
@@ -75,7 +75,7 @@ Response:
     "action": "learn",
     "action_result": "success",
     "action_key_code": 1,
-    "action_id": 1,
+    "action_id": 1
 }
 ```
 
@@ -92,7 +92,7 @@ Request:
 {
     "send_key": {
         "id": 1,
-        "key_code": 1,
+        "key_code": 1
     }
 }
 ```
@@ -139,7 +139,7 @@ Request:
 ```
 
 - **id**: `1..15` - Delete specific device with ID. `>=16` - Delete all devices.
-- **key_code**: `1..30` -Delete speicifc keycode. `>=31` - Delete all keycodes for specified device ID.
+- **key_code**: `1..30` -Delete specific keycode. `>=31` - Delete all keycodes for specified device ID.
 
 
 
@@ -173,6 +173,7 @@ sensor:
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
     device_class: "battery"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -180,7 +181,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

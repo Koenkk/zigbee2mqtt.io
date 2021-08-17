@@ -12,7 +12,7 @@ description: "Integrate your Yale YRD426NRSC via Zigbee2MQTT with whatever smart
 | Model | YRD426NRSC  |
 | Vendor  | Yale  |
 | Description | Assure lock |
-| Exposes | lock (state, lock_state), battery, linkquality |
+| Exposes | lock (state, lock_state), battery, pin_code, linkquality |
 | Picture | ![Yale YRD426NRSC](../images/devices/YRD426NRSC.jpg) |
 
 ## Notes
@@ -34,6 +34,13 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Pin_code (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "user_type": VALUE, "user_enabled": VALUE, "pin_code": VALUE}}`
+- `user` (numeric): User ID to set or clear the pincode for. 
+- `user_type` (enum): Type of user, unrestrictied: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock. Allowed values: `unrestricted`, `year_day_schedule`, `week_day_schedule`, `master`, `non_access`
+- `user_enabled` (binary): Whether the user is enabled/disabled. Allowed values: `true` or `false`
+- `pin_code` (numeric): Pincode to set, set pincode to null to clear. 
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -65,6 +72,7 @@ sensor:
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
     device_class: "battery"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -72,7 +80,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

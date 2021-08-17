@@ -12,9 +12,9 @@ description: "Integrate your Saswell SEA801-Zigbee/SEA802-Zigbee via Zigbee2MQTT
 | Model | SEA801-Zigbee/SEA802-Zigbee  |
 | Vendor  | Saswell  |
 | Description | Thermostatic radiator valve |
-| Exposes | battery_low, switch (state), lock (state), climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, running_state, away_mode), linkquality |
+| Exposes | battery_low, switch (state), lock (state), climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, away_mode), linkquality |
 | Picture | ![Saswell SEA801-Zigbee/SEA802-Zigbee](../images/devices/SEA801-Zigbee-SEA802-Zigbee.jpg) |
-| White-label | HiHome WZB-TRVL, Hama 00176592 |
+| White-label | HiHome WZB-TRVL, Hama 00176592, RTX ZB-RT1 |
 
 ## Notes
 
@@ -42,19 +42,18 @@ If value equals `true` battery_low is ON, if `false` OFF.
 ### Switch 
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_detection": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Lock 
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
-To read the current state of this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Climate 
-This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `system_mode`, `local_temperature_calibration`, `running_state`, `away_mode`.
+This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `system_mode`, `local_temperature_calibration`, `away_mode`.
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
-- `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
+- `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`, `auto`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
-- `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
 - `away_mode`: Away mode. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_mode": "ON"}` or `{"away_mode": "OFF"}`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"away_mode": ""}`.
 
 ### Linkquality (numeric)
@@ -82,7 +81,7 @@ binary_sensor:
 
 switch:
   - platform: "mqtt"
-    state_topic: true
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     payload_off: "OFF"
     payload_on: "ON"
@@ -101,8 +100,8 @@ lock:
     value_template: "{{ value_json.child_lock }}"
     payload_lock: "LOCK"
     payload_unlock: "UNLOCK"
-    state_locked: "LOCKED"
-    state_unlocked: "UNLOCKED"
+    state_locked: "LOCK"
+    state_unlocked: "UNLOCK"
     command_topic_postfix: "child_lock"
 
 climate:
@@ -121,8 +120,6 @@ climate:
       - "heat"
       - "auto"
     mode_command_topic: true
-    action_topic: true
-    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
     temperature_command_topic: "current_heating_setpoint"
     temperature_state_template: "{{ value_json.current_heating_setpoint }}"
     temperature_state_topic: true
@@ -136,7 +133,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

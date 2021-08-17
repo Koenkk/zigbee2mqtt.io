@@ -2,7 +2,7 @@
 ---
 # Running Zigbee2MQTT
 These instructions explain how to run Zigbee2MQTT on bare-metal Linux.
- 
+
 You can also run Zigbee2MQTT in a [Docker container](../information/docker.md), as the [Home Assistant Zigbee2MQTT add-on](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt), in a [Python Virtual Enviroment](../information/virtual_environment.md) or even on [Windows](../information/windows.md).
 
 For the sake of simplicity this guide assumes running on a Raspberry Pi 3 with Raspbian Stretch Lite, but will work on any Linux machine.
@@ -26,24 +26,26 @@ total 0
 lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00 -> ../../ttyACM0
 ```
 
+**NOTE:** Docker mount command does not support certain symbols like colon (Example: `/dev/serial/by-id/usb-Silicon_Labs_http:__slae.sh_cc2652_-_slaesh_s_iot_stuff_XX:XX:XX:XX:XX:XX:XX:XX-if00-port0`). Error Message: `bad format for path`. You can create a persistent device name with udev or create a symbolic link.
+
 ## 2. Installing
 ```bash
 # Setup Node.js repository
-sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 # NOTE 1: If you see the message below please follow: https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb.
 # ## You appear to be running on ARMv6 hardware. Unfortunately this is not currently supported by the NodeSource Linux distributions. Please use the 'linux-armv6l' binary tarballs available directly from nodejs.org for Node.js 4 and later.
 # IMPORTANT: In this case instead of the apt-get install mentioned below; do: sudo apt-get install -y git make g++ gcc
 
-# NOTE 2: On x86, Node.js 10 may not work. It's recommended to install an unofficial Node.js 12 build which can be found here: https://unofficial-builds.nodejs.org/download/release/ (e.g. v12.16.3)
+# NOTE 2: On x86, Node.js 10 may not work. It's recommended to install an unofficial Node.js 14 build which can be found here: https://unofficial-builds.nodejs.org/download/release/ (e.g. v14.16.0)
 
 # Install Node.js;
 sudo apt-get install -y nodejs git make g++ gcc
 
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
 # version has been installed
-node --version  # Should output v12.X or v10.X
-npm --version  # Should output 6.X
+node --version  # Should output v10.X, v12.X, v14.X or v15.X
+npm --version  # Should output 6.X or 7.X
 
 # Clone Zigbee2MQTT repository
 sudo git clone https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
@@ -51,7 +53,7 @@ sudo chown -R pi:pi /opt/zigbee2mqtt
 
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
-npm ci --production
+npm ci
 ```
 
 If everything went correctly the output of `npm ci` is similar to (the number of packages and seconds is probably different on your device):
@@ -141,6 +143,7 @@ After=network.target
 ExecStart=/usr/bin/npm start
 WorkingDirectory=/opt/zigbee2mqtt
 StandardOutput=inherit
+# Or use StandardOutput=null if you don't want Zigbee2MQTT messages filling syslog, for more options see systemd.exec(5)
 StandardError=inherit
 Restart=always
 User=pi

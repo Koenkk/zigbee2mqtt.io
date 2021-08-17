@@ -21,7 +21,7 @@ description: "Integrate your ORVIBO SM10ZW via Zigbee2MQTT with whatever smart h
 ### Interview fails
 Interview fails for `modelId: 75a4bfe8ef9c4350830a25d13e3ab068` because
 `ssIasZone:iasCieAddr` can not be read or written, all messages go to the coordinator
-even without proper enrollment. Device correctly reports open or closed status.
+even without proper enrolment. Device correctly reports open or closed status.
 
 
 
@@ -99,6 +99,7 @@ sensor:
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
     device_class: "battery"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -106,7 +107,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

@@ -15,6 +15,8 @@ Binding can be configured by using either `zigbee2mqtt/bridge/request/device/bin
 
 By default all supported clusters are bound. To restrict which clusters are being bound/unbound add `clusters` to the request payload e.g. `{"from": "my_remote", "to": "my_bulb", "clusters": ["genOnOff"]}`. Possible clusters are: `genScenes`, `genOnOff`, `genLevelCtrl`, `lightingColorCtrl` and `closuresWindowCovering`.
 
+When binding reporting is setup on the target device. This makes the target device update their state when it is changed by the source of the bind. When unbinding this reporting is removed again, if you want to skip this use `skip_disable_reporting` (e.g. `{"from": "my_remote", "to": "my_bulb", "skip_disable_reporting": true}`).
+
 When binding/unbinding of a battery powered device fails, this is most of the time caused becuase the device is sleeping. This can be fixed by waking it up right before sending the MQTT message. To wake it up press a button on the remote.
 
 In the above example, the TRADFRI wireless dimmer would be the `SOURCE` device and the bulb the `TARGET` device. When using a group as target, using the group's friendly name is mandatory, group ID will not work.
@@ -47,14 +49,15 @@ When a devices is being bound to, Zigbee2MQTT will automatically configure repor
 
 In order for this feature to work, the device has to support it. As devices from the same manufacturer (mostly) have the same features the table below might help to find out if your device supports it.
 
-| Brand           | On/Off    | Brightness | Color | Color temperature |
-| :---            | :---:     | :---:      | :---: | :---:             |
-| Philips Hue     | N(1)      | N(2)       | N     | N                 |
-| Trådfri(3)      | Y         | Y          | Y     | N                 |
-| Innr            | Y         | Y          | Y     | Y                 |
-| GLEDOPTO        | N         | N          | N     | N                 |
-| OSRAM           | Y         | Y          | N     | N                 |
-| Müller Licht    | N         | N          | N     | N                 |
+| Brand            | On/Off    | Brightness | Color | Color temperature | Color Mode |
+| :---             | :---:     | :---:      | :---: | :---:             | :---:
+| Philips Hue      | N(1)      | N(2)       | N     | N                 | N
+| Philips Hue (BT) | Y         | Y          | Y     | Y                 | N
+| Trådfri(3)       | Y         | Y          | Y     | N                 | Y
+| Innr             | Y         | Y          | Y     | Y                 | Y
+| GLEDOPTO         | N         | N          | N     | N                 | N
+| OSRAM            | Y         | Y          | N     | N                 | Y
+| Müller Licht     | N         | N          | N     | N                 | Y
 
 1. Bulbs on old firmware (date 20170908 or older) do report On/Off
 2. Zigbee2MQTT will manual poll for change if a binding updates the bulb.

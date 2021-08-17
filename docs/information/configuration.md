@@ -87,13 +87,15 @@ advanced:
   log_directory: data/log/%TIMESTAMP%
   # Optional: Log file name, can also contain timestamp, e.g.: zigbee2mqtt_%TIMESTAMP%.log (default: shown below)
   log_file: log.txt
-  # Optional: Log rotation (default: shown below)
+  # Optional: Rotate log every 10MB around 3 files (default: true)
   log_rotation: true
   # Optional: Output location of the log (default: shown below), leave empty to supress logging (log_output: [])
   # possible options: 'console', 'file', 'syslog'
   log_output:
     - console
     - file
+  # Create a symlink called "current" in the log directory which points to the latests log directory. (default: false)
+  log_symlink_current: false
   # Optional: syslog configuration, skip values or entirely to use defaults. Only use when 'syslog' in 'log_output' (see above)
   log_syslog:
     host: localhost # The host running syslogd, defaults to localhost.
@@ -106,7 +108,7 @@ advanced:
     type: 5424 # The type of the syslog protocol to use (Default: BSD, also valid: 5424).
     app_name: Zigbee2MQTT # The name of the application (Default: Zigbee2MQTT).
     eol: '\n' # The end of line character to be added to the end of the message (Default: Message without modifications).
-  # Optional: Baudrate for serial port (default: 115200 for Z-Stack, 38400 for Deconz)
+  # Optional: Baud rate speed for serial port, this can be anything firmware support but default is 115200 for Z-Stack and EZSP, 38400 for Deconz, however note that some EZSP firmware need 57600.
   baudrate: 115200
   # Optional: RTS / CTS Hardware Flow Control for serial port (default: false)
   rtscts: false
@@ -139,6 +141,13 @@ advanced:
   homeassistant_discovery_topic: 'homeassistant'
   # Optional: Home Assistant status topic (default: shown below)
   homeassistant_status_topic: 'homeassistant/status'
+  # Optional: Home Assistant legacy entity attributes, (default: shown below), when enabled:
+  # Zigbee2MQTT will send additional states as attributes with each entity. For example,
+  # A temperature & humidity sensor will have 2 entities for the temperature and
+  # humidity, with this setting enabled both entities will also have
+  # an temperature and humidity attribute.
+  # Note: Disabling this option, requires a Home Assistant restart
+  homeassistant_legacy_entity_attributes: true
   # Optional: Home Assistant legacy triggers (default: shown below), when enabled:
   # - Zigbee2mqt will send an empty 'action' or 'click' after one has been send
   # - A 'sensor_action' and 'sensor_click' will be discoverd
@@ -277,18 +286,21 @@ The `configuration.yaml` allows to set device specific configuration. This can a
 * `retrieve_state`: (DEPRECATED) Retrieves the state after setting it. Should only be enabled when the [reporting feature](../information/report.md) does not work for this device.
 * `filtered_attributes`: Allows to prevent certain attributes from being published. When a device would e.g. publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will publish `{"temperature": 10}`.
 * `optimistic`: Publish optimistic state after set, e.g. when a brightness change command succeeds Zigbee2MQTT assumes the brightness of the device changed and will publish this (default `true`).
+* `filtered_optimistic`: Same as the `filtered_attributes` option but only applies to the optimistic published attributes. Has no effect when `optimistic: false` is set. Example: `filtered_optimistic: ["color_mode", "color"]`.
 
 ### Device type specific
 Some devices support device type specific configuration, e.g. [RTCGQ11LM](../devices/RTCGQ11LM.md). To see if your device has device type specific configuration, visit the device page by going to [Supported devices](../information/supported_devices.md) and clicking on the model number.
 
 ### External converters configuration
-You can define external converters to e.g. add support for a DiY device. The extension can be a file with `.js` extension in the `data` directory or a NPM package. Ensure that default export from your external converter exports an array or device object (refer to `devices.js` of zigbee-herdsman-converters). Some examples can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/tree/master/docs/externalConvertersExample). For this example put the files in the `data` folder and add the following to `configuration.yaml`:
+You can define external converters to e.g. add support for a DiY device. The extension can be a file with `.js` extension in the `data` directory or a NPM package. Ensure that default export from your external converter exports an array or device object (refer to the definition in the `devices` folder of zigbee-herdsman-converters). Some examples can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/tree/master/docs/externalConvertersExample). For this example put the files in the `data` folder and add the following to `configuration.yaml`:
 
 ```yaml
 external_converters:
   - freepad_ext.js
   - one-more-converter.js
 ```
+
+See also [How to support new devices](../how_tos/how_to_support_new_devices.md).
 
 #### Changing device type specific defaults
 The default values used for the device specific configuration can be overriden via e.g.:
