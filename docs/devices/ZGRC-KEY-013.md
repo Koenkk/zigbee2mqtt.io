@@ -11,13 +11,18 @@ description: "Integrate your Sunricher ZGRC-KEY-013 via Zigbee2MQTT with whateve
 
 | Model | ZGRC-KEY-013  |
 | Vendor  | Sunricher  |
-| Description | 3 zone remote and dimmer |
+| Description | 4 zone remote and dimmer |
 | Exposes | battery, action, linkquality |
 | Picture | ![Sunricher ZGRC-KEY-013](../images/devices/ZGRC-KEY-013.jpg) |
 | White-label | RGB Genie ZGRC-KEY-013 |
 
 ## Notes
 
+### Pairing
+Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press the All Off button. The Status LED will blink 5 times quickly to indicate a successful pairing.
+
+### Resetting
+Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press 5 times the All On button. The Status LED will blink 3 times to indicate successful reset.
 
 ### Deprecated click event
 By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
