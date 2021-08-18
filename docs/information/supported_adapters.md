@@ -24,7 +24,7 @@ Zigbee2MQTT officially supports the following adapters:
   <tr>
     <td><img src="../images/slaeshs_cc2652rb_stick.jpg"></td>
     <td>Slaesh's CC2652RB stick</td>
-    <td>USB connected adapter with external antenna, <a href="https://github.com/Koenkk/zigbee2mqtt/discussions/6702">currently long shipping times</a>. Based on CC2652RB chip</td>
+    <td>USB connected adapter with external antenna. Based on CC2652RB chip</td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652RB_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652RB_router_20210128.zip">Router</a></td>
     <td><a href="https://slae.sh/projects/cc2652/#flashing">Flashing</a></td>
     <td><a href="https://slae.sh/projects/cc2652/">Slae.sh</a></td>
