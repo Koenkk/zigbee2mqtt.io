@@ -167,7 +167,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td>An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs less than 60 CNY in China.</td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://github.com/cyijun/OpenZ3Gateway">Description</a></td>
-    <td><a href="mailto:cyjason2000@163.com">Contact</td>
+    <td><a href="mailto:cyjason2000@163.com">Contact</a></td>
   </tr>
   <tr>
     <td><img src="../images/cc26x2r1.jpg"></td>
