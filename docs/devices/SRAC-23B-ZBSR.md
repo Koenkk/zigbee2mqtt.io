@@ -12,22 +12,55 @@ description: "Integrate your Climax SRAC-23B-ZBSR via Zigbee2MQTT with whatever 
 | Model | SRAC-23B-ZBSR  |
 | Vendor  | Climax  |
 | Description | Smart siren |
-| Exposes | warning, battery_low, tamper, battery, linkquality |
+| Exposes | warning, max_duration, alarm, battery_low, tamper, battery, linkquality |
 | Picture | ![Climax SRAC-23B-ZBSR](../images/devices/SRAC-23B-ZBSR.jpg) |
 
 ## Notes
 
-None
+### Warning usage
+Warning only support a single mode, `burglar`
+
+Duration of using `warning` can be shorter than `max_duration` but not longer. If `max_duration` are set to 60 seconds, and you try to set `warning` with `duration` of 90 seconds, the warning will only apply for 60 seconds. Default value of `max_duration` are 300 seconds
+
+This device do not support the `strobe_duty_cycle` functionality
+
+
+### Triggering alarm, Advanced
+This siren can be triggered manually by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with the payloads:
+
+To start :
+* `{"warning":{"duration":60,"level":"low","mode":"burglar","strobe":false,"strobe_duty_cycle":0}}`
+Where:
+- `duration`: the number of seconds the alarm will be on
+- `level`: `low`, `medium`, `high`, `very_high`
+- `mode`: `stop`, `burglar`
+- `strobe`: `true`, `false`
+- `strobe_duty_cycle`: not supported
+
+To stop:
+* `{"warning":{"duration":60,"level":"low","mode":"stop","strobe":false,"strobe_duty_cycle":0}}`
+
+### Triggering alarm, Simple
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": "START"}` and `{"alarm": "OFF"}`
+Set `max_duration` from the Zigbee2MQTT UI or by publishing `{"max_duration": NEW_VALUE}`
+This alarm are preset to highest volume
 
 
 ## Exposes
 
 ### Warning (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": VALUE, "level": VALUE, "strobe": VALUE, "duration": VALUE}}`
-- `mode` (enum): Mode of the warning (sound effect). Allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
+- `mode` (enum): Mode of the warning (sound effect). Allowed values: `stop` and `burglar`
 - `level` (enum): Sound level. Allowed values: `low`, `medium`, `high`, `very_high`
 - `strobe` (binary): Turn on/off the strobe (light) during warning. Allowed values: `true` or `false`
 - `duration` (numeric): Duration in seconds of the alarm. 
+
+### Alarm (binary)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": "START"}` and `{"alarm": "OFF"}`
+Set `max_duration` from the Zigbee2MQTT UI
+
+### Max_duration (numeric)
+Set the maximum duration of the siren. Cannot be overridden by `duration` in `warning`
 
 ### Battery_low (binary)
 Indicates if the battery of this device is almost empty.
