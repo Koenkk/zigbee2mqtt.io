@@ -170,7 +170,6 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="mailto:cyjason2000@163.com">Contact</a></td>
   </tr>
   <tr>
-   <tr>
     <td><img src="../images/CC2652P-Z2M.jpg"></td>
     <td>XGG 52PZ2MGateway</td>
     <td>An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs less than 60 CNY in China.</td>
