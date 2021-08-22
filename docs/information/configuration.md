@@ -52,6 +52,10 @@ serial:
   # Optional: adapter type, not needed unless you are experiencing problems (default: shown below, options: zstack, deconz)
   adapter: null
 
+# Optional: availability feature (default: false)
+# See https://www.zigbee2mqtt.io/information/availability.html for more info
+availability: false
+
 # Optional: Block devices from the network (by ieeeAddr) (default: empty)
 # Previously called `ban` (which is deprecated)
 blocklist:
@@ -120,18 +124,6 @@ advanced:
   last_seen: 'disable'
   # Optional: Add an elapsed attribute to MQTT messages, contains milliseconds since the previous msg (default: false)
   elapsed: false
-  # Optional: Availability timeout in seconds, disabled by default (0).
-  # When enabled, devices will be checked if they are still online.
-  # Only AC powered routers are checked for availability. (default: 0)
-  availability_timeout: 0
-  # Optional: Prevent devices from being checked for availability (default: empty)
-  # Previously called `availability_blacklist` (which is deprecated)
-  availability_blocklist:
-    - DEVICE_FRIENDLY_NAME or DEVICE_IEEE_ADDRESS
-  # Optional: Only enable availability check for certain devices (default: empty)
-  # Previously called `availability_whitelist` (which is deprecated)
-  availability_passlist:
-    - DEVICE_FRIENDLY_NAME or DEVICE_IEEE_ADDRESS
   # Optional: Enables report feature, this feature is DEPRECATED since reporting is now setup by default
   # when binding devices. Docs can still be found here: https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/information/report.md
   report: true
