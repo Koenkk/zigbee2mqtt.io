@@ -17,8 +17,6 @@ description: "Integrate your Develco SMSZB-120 via Zigbee2MQTT with whatever sma
 
 ## Notes
 
-This device support `iasZone` and `iasWd`
-
 Warning only support a single mode, `burglar`
 
 Duration of using `warning` can be shorter than `max_duration` but not longer. If `max_duration` are set to 60 seconds, and you try to set `warning` with `duration` of 90 seconds, the warning will only apply for 60 seconds. Default value of `max_duration` are 240 seconds
