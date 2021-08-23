@@ -174,8 +174,24 @@ Zigbee2MQTT officially supports the following adapters:
     <td>XGG 52PZ2MGateway</td>
     <td>An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs less than 60 CNY in China.</td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
-    <td><a href="https://m.toutiao.com/is/eEmtc8y/">Description</a></td>
-    <td><a href="mailto:yzg011@qq.com">Contact</a></td>
+    <td><a href="https://z2m.wiki/">Description</a></td>
+    <td><a href="https://z2m.wiki/">Contact</a></td>
+  </tr> 
+   <tr>
+    <td><img src="../images/CC2652P-Z2M.jpg"></td>
+    <td>XGG 38PZ2MGateway</td>
+    <td>An open source zigbee gateway powered by ESP8266 and CC2538+CC2592PA modules. One costs less than 50 CNY in China.</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin">Router</a></td>
+    <td><a href="https://z2m.wiki/">Description</a></td>
+    <td><a href="https://z2m.wiki/">Contact</a></td>
+    </tr>  
+    <tr>
+    <td><img src="../images/CC2652P-Z2M.jpg"></td>
+    <td>XGG 30Z2MGateway</td>
+    <td>An open source zigbee gateway powered by ESP8266 and CC2530 modules. One costs less than 40 CNY in China.</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin">Router</a></td>
+    <td><a href="https://z2m.wiki/">Description</a></td>
+    <td><a href="https://z2m.wiki/">Contact</a></td>
   </tr>
   <tr>
     <td><img src="../images/cc26x2r1.jpg"></td>
