@@ -1,25 +1,23 @@
 ---
-title: "GreenPower GreenPower_7 control via MQTT"
-description: "Integrate your GreenPower GreenPower_7 via Zigbee2MQTT with whatever smart home
+title: "EnOcean PTM 215ZE control via MQTT"
+description: "Integrate your EnOcean PTM 215ZE via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GreenPower_7.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PTM_215ZE.md)*
 
-# GreenPower GreenPower_7
+# EnOcean PTM 215ZE
 
-| Model | GreenPower_7  |
-| Vendor  | GreenPower  |
-| Description | device 7 |
+| Model | PTM 215ZE  |
+| Vendor  | EnOcean  |
+| Description | On/off switch |
 | Exposes | action, linkquality |
-| Picture | ![GreenPower GreenPower_7](../images/devices/GreenPower_7.jpg) |
-| White-label | EnOcean EWSxZG |
+| Picture | ![EnOcean PTM 215ZE](../images/devices/PTM_215ZE.jpg) |
+| White-label | Easyfit by EnOcean EWSxZ, Trio2sys 20020002, Philips Hue Tap |
 
 ## Notes
 
-### Deprecation notice
-This generic device is deprecated. If your actual devices rely on it, you will need to force remove and repair them.
 
 ### Green Power
 This is a Zigbee Green Power device which allows it to be very energy efficient.
@@ -27,6 +25,32 @@ Messages from Green Power devices cannot be "understood" by normal Zigbee device
 Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
 
 Green Power devices don't support binding and are not included in network scans.
+
+### Pairing PTM 215ZE
+This device has 4 buttons:
+
+| Number | Button | Position |
+|-|-|-|
+| 1 | A0 | top left |
+| 2 | A1 | bottom left |
+| 3 | B0 | top right |
+| 4 | B1 | bottom right |
+
+In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
+
+To pair it, start by shortly (less than 7 seconds) pressing two different buttons one after another. Any button of the device (A0, A1, B0, B1) can be used.
+
+Next, select one button of the device (A0, A1, B0, or B1) and execute the following long-short-long sequence:
+
+1. Press and hold the selected button for more than 7 seconds before releasing it
+2. Press the selected button quickly (hold for less than 2 seconds)
+3. Press and hold the selected button again for more than 7 seconds before releasing it
+
+Then, press the selected button contact shortly (< 7s) to select radio channel 11. Continue pressing the selected button shortly (< 7s) to increment radio channel. If channel 26 has been reached, then channel 11 will be used next.
+
+Once the device is paired you need to confirm the channel. To do this, press any button other than the one used previously.
+
+For more informations, please refer to the [EnOcean PTM 215ZE manual chapter 5.1](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/).
 
 ### Pairing Philips Hue Tap
 This device requires your Zigbee network to run on channel 11, 15, 20 or 25. In order to pair it hold the corresponding button for that channel 10 seconds.
@@ -38,24 +62,6 @@ This device requires your Zigbee network to run on channel 11, 15, 20 or 25. In 
 | 3 | 20 |
 | 4 | 25 |
 
-### Pairing Friends of Hue switches (EnOcean PTM 216Z module based)
-This device has 4 buttons: A0 (left-top), A1 (left-bottom), B0 (right-top), B1 (right-bottom). In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
-
-To pair it hold the corresponding button for that channel for 7 seconds or more.
-
-| Button | Channel |
-|-|-|
-| A0 | 15 |
-| A1 | 20 |
-| B0 | 11 |
-| B1 | 25 |
-
-Once the device is paired you need to confirm the channel. To do this press A1 and B0 together. Important: don't press any other buttons between this and the pairing.
-
-In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds.
-
-This device can work on any channel, not only 15, 20, 11 or 25. For this refer to the [EnOcean PTM 216Z manual chapter 5.3](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/)
-
 
 
 ## Exposes
@@ -64,7 +70,7 @@ This device can work on any channel, not only 15, 20, 11 or 25. For this refer t
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `*`.
+The possible values are: `press_1`, `release_1`, `press_2`, `release_2`, `press_3`, `release_3`, `press_4`, `release_4`, `press_1_and_2`, `release_1_and_2`, `press_1_and_3`, `release_1_and_3`, `press_1_and_4`, `release_1_and_4`, `press_2_and_3`, `release_2_and_3`, `press_2_and_4`, `release_2_and_4`, `press_3_and_4`, `release_3_and_4`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

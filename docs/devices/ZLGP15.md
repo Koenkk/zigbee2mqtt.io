@@ -1,25 +1,22 @@
 ---
-title: "GreenPower GreenPower_7 control via MQTT"
-description: "Integrate your GreenPower GreenPower_7 via Zigbee2MQTT with whatever smart home
+title: "Legrand ZLGP15 control via MQTT"
+description: "Integrate your Legrand ZLGP15 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GreenPower_7.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZLGP15.md)*
 
-# GreenPower GreenPower_7
+# Legrand ZLGP15
 
-| Model | GreenPower_7  |
-| Vendor  | GreenPower  |
-| Description | device 7 |
+| Model | ZLGP15  |
+| Vendor  | Legrand  |
+| Description | On/off switch |
 | Exposes | action, linkquality |
-| Picture | ![GreenPower GreenPower_7](../images/devices/GreenPower_7.jpg) |
-| White-label | EnOcean EWSxZG |
+| Picture | ![Legrand ZLGP15](../images/devices/ZLGP15.jpg) |
 
 ## Notes
 
-### Deprecation notice
-This generic device is deprecated. If your actual devices rely on it, you will need to force remove and repair them.
 
 ### Green Power
 This is a Zigbee Green Power device which allows it to be very energy efficient.
@@ -28,33 +25,10 @@ Not all Zigbee devices can do this translation, currently the only devices known
 
 Green Power devices don't support binding and are not included in network scans.
 
-### Pairing Philips Hue Tap
-This device requires your Zigbee network to run on channel 11, 15, 20 or 25. In order to pair it hold the corresponding button for that channel 10 seconds.
+### Pairing
+To pair this device on channel 11, hold the configuration button (on the back of the device) and press any of the 4 buttons.
 
-| Button (dots) | Channel |
-|-|-|
-| 1 | 11 |
-| 2 | 15 |
-| 3 | 20 |
-| 4 | 25 |
-
-### Pairing Friends of Hue switches (EnOcean PTM 216Z module based)
-This device has 4 buttons: A0 (left-top), A1 (left-bottom), B0 (right-top), B1 (right-bottom). In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
-
-To pair it hold the corresponding button for that channel for 7 seconds or more.
-
-| Button | Channel |
-|-|-|
-| A0 | 15 |
-| A1 | 20 |
-| B0 | 11 |
-| B1 | 25 |
-
-Once the device is paired you need to confirm the channel. To do this press A1 and B0 together. Important: don't press any other buttons between this and the pairing.
-
-In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds.
-
-This device can work on any channel, not only 15, 20, 11 or 25. For this refer to the [EnOcean PTM 216Z manual chapter 5.3](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/)
+This device can work on any channel, not only 11. For this, please refer to the [Legrand ZLGP15 manual chapter 6.2](https://www.admin.legrandoc.com/files/documents/S000113321EN-00.pdf).
 
 
 
@@ -64,7 +38,7 @@ This device can work on any channel, not only 15, 20, 11 or 25. For this refer t
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `*`.
+The possible values are: `press_1`, `press_2`, `press_3`, `press_4`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
