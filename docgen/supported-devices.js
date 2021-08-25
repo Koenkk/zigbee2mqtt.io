@@ -77,7 +77,7 @@ const generateTable = (devices) => {
         }
         // eslint-disable-next-line
         const exposes = Array.from(new Set(d.exposes.map(e => e.name ? e.name : e.type).filter(e => e !== 'linkquality' && e !== 'effect'))).join(', ');
-        text += `| [${d.model}](../devices/${utils.normalizeModel(model)}.md) | ${d.vendor} ${description} (${exposes}) | ![${image}](${image}) |\n`;
+        text += `| [${d.model}](../devices/${utils.normalizeModel(model)}.md) | ${d.vendor} ${description} (${exposes}) | <img src="${image}" loading="lazy"> |\n`;
     });
 
     return text;
