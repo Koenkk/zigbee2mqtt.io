@@ -17,6 +17,9 @@ description: "Integrate your Xiaomi GZCGQ01LM via Zigbee2MQTT with whatever smar
 
 ## Notes
 
+### Paring
+Press and hold the button on the device until the blue light starts blinking, release it and the pairing should begin.
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
