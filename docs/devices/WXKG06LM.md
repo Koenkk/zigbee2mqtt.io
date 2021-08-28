@@ -35,7 +35,7 @@ devices:
 Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
 
-You may have to unpair the switch from an existing coordinator before the pairing process will start.
+You may have to unpair the switch from an existing coordinator before the pairing process will start. If you can't do this, try to remove battery, push the button (to completely discharge device), place the battery back and try pairing again.
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
