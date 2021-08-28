@@ -30,6 +30,9 @@ availability:
     # minutes (default = 1500 minutes aka 25 hours)
     timeout: 1500
 
+experimental:
+  availability_new: true
+
 devices:
   '0x12345678':
     friendly_name: 'my_bulb'
@@ -53,7 +56,7 @@ devices:
 ```
 
 ## State retrieval
-When this feature is enabled and a device reconnects or announces itself on the network, Zigbee2MQTT will retrieve the state of the device. This is e.g. handy when a bulb turns itself on after being reconnected to mains power.
+When this feature is enabled and a device reconnects or announces itself on the network, Zigbee2MQTT will retrieve the state of the device. This is e.g. handy when a bulb turns itself on after being reconnected to mains power. The following attributes will be read: `state`, `brightness`, `color_temp` and `color`.
 
 ## Performance considerations
 - The pinging can be heavy on the coordinator, especially if you are using a CC2530 or CC2531 adapter.
