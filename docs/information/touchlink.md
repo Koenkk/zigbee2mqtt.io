@@ -21,4 +21,4 @@ Zigbee2MQTT will now start scanning, this can take up to 1 minute and during thi
 
 Now that your device has been factory reset, it will automatically join Zigbee2MQTT (make sure that joining is enabled through `permit_join: true`). If it doesn't, try powering the bulb off and on 1 time.
 
-In case you want to factory reset a specific device (which can be found through a scan, see above) request the factory reset with the following payload: `{ieee_address: '0x12345678', channel: 12}`.
+In case you want to factory reset a specific device (which can be found through a scan, see above) request the factory reset with the following payload: `{"ieee_address": "0x12345678", "channel": 12}`.
