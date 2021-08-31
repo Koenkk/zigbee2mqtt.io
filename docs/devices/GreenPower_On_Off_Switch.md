@@ -18,8 +18,6 @@ description: "Integrate your GreenPower GreenPower_On_Off_Switch via Zigbee2MQTT
 
 ## Notes
 
-### Deprecation notice
-This generic device is deprecated. If your actual devices rely on it, you will need to force remove and repair them.
 
 ### Green Power
 This is a Zigbee Green Power device which allows it to be very energy efficient.
