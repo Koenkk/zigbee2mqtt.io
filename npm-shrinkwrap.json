@@ -8,7 +8,7 @@
       "dependencies": {
         "image-size": "*",
         "json2yaml": "*",
-        "zigbee2mqtt": "https://github.com/koenkk/zigbee2mqtt#dev"
+        "zigbee2mqtt": "https://github.com/koenkk/zigbee2mqtt#1.21.1"
       },
       "devDependencies": {
         "chai": "*",
@@ -23447,8 +23447,8 @@
       }
     },
     "node_modules/zigbee2mqtt": {
-      "version": "1.21.0-dev",
-      "resolved": "git+ssh://git@github.com/koenkk/zigbee2mqtt.git#15685cacf8d921b776ff7e4bd3f6b0ffb7f417d6",
+      "version": "1.21.1",
+      "resolved": "git+ssh://git@github.com/koenkk/zigbee2mqtt.git#eb5750d968bbea8b61e50fc07e62e345c61aee3e",
       "license": "GPL-3.0",
       "dependencies": {
         "ajv": "^8.6.2",
@@ -46615,8 +46615,8 @@
       }
     },
     "zigbee2mqtt": {
-      "version": "git+ssh://git@github.com/koenkk/zigbee2mqtt.git#15685cacf8d921b776ff7e4bd3f6b0ffb7f417d6",
-      "from": "zigbee2mqtt@https://github.com/koenkk/zigbee2mqtt#dev",
+      "version": "git+ssh://git@github.com/koenkk/zigbee2mqtt.git#eb5750d968bbea8b61e50fc07e62e345c61aee3e",
+      "from": "zigbee2mqtt@https://github.com/koenkk/zigbee2mqtt#1.21.1",
       "requires": {
         "ajv": "^8.6.2",
         "debounce": "^1.2.1",
