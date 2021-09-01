@@ -1,19 +1,19 @@
 ---
-title: "Xfinity URC4450BC0-X-R control via MQTT"
-description: "Integrate your Xfinity URC4450BC0-X-R via Zigbee2MQTT with whatever smart home
+title: "Universal Electronics Inc XHK1-UE control via MQTT"
+description: "Integrate your Universal Electronics Inc XHK1-UE via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/URC4450BC0-X-R.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/XHK1-UE.md)*
 
-# Xfinity URC4450BC0-X-R
+# Universal Electronics Inc XHK1-UE
 
-| Model | URC4450BC0-X-R  |
-| Vendor  | Xfinity  |
-| Description | Alarm security keypad |
-| Exposes | battery, voltage, occupancy, battery_low, tamper, presence, contact, action_code, action_zone, temperature, action, linkquality |
-| Picture | ![Xfinity URC4450BC0-X-R](../images/devices/URC4450BC0-X-R.jpg) |
+| Model | XHK1-UE  |
+| Vendor  | Universal Electronics Inc  |
+| Description | Xfinity security keypad |
+| Exposes | battery, voltage, occupancy, battery_low, tamper, presence, contact, temperature, action_code, action_transaction, action_zone, action, linkquality |
+| Picture | ![Universal Electronics Inc XHK1-UE](../images/devices/XHK1-UE.jpg) |
 
 ## Notes
 
@@ -109,19 +109,26 @@ Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
 
-### Action_code (numeric)
-Value can be found in the published state on the `action_code` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Action_zone (text)
-Value can be found in the published state on the `action_zone` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
+
+### Action_code (numeric)
+Pin code introduced..
+Value can be found in the published state on the `action_code` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Action_transaction (numeric)
+Last action transaction number..
+Value can be found in the published state on the `action_transaction` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Action_zone (text)
+Alarm zone. Default value 0.
+Value can be found in the published state on the `action_zone` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Action (enum)
 Triggered action (e.g. a button click).
@@ -210,22 +217,28 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.temperature }}"
+    unit_of_measurement: "°C"
+    device_class: "temperature"
+    state_class: "measurement"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action_code }}"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.action_zone }}"
+    value_template: "{{ value_json.action_transaction }}"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.temperature }}"
-    unit_of_measurement: "°C"
-    device_class: "temperature"
-    state_class: "measurement"
+    value_template: "{{ value_json.action_zone }}"
 
 sensor:
   - platform: "mqtt"

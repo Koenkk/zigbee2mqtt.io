@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi ZNCZ15LM via Zigbee2MQTT with whatever smart
 | Model | ZNCZ15LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 power plug ZigBee |
-| Exposes | switch (state), power, energy, temperature, voltage, current, consumer_connected, power_outage_memory, led_disabled_night, linkquality |
+| Exposes | switch (state), power, energy, temperature, voltage, current, consumer_connected, power_outage_memory, led_disabled_night, button_lock, overload_protection, linkquality |
 | Picture | ![Xiaomi ZNCZ15LM](../images/devices/ZNCZ15LM.jpg) |
 
 ## Notes
@@ -82,9 +82,24 @@ If value equals `true` power_outage_memory is ON, if `false` OFF.
 ### Led_disabled_night (binary)
 Enable/disable the LED at night.
 Value can be found in the published state on the `led_disabled_night` property.
-It's not possible to read (`/get`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
 If value equals `true` led_disabled_night is ON, if `false` OFF.
+
+### Button_lock (binary)
+Disables the physical switch button.
+Value can be found in the published state on the `button_lock` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"button_lock": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_lock": NEW_VALUE}`.
+If value equals `ON` button_lock is ON, if `OFF` OFF.
+
+### Overload_protection (numeric)
+Maximum allowed load, turns off if exceeded.
+Value can be found in the published state on the `overload_protection` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"overload_protection": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"overload_protection": NEW_VALUE}`.
+The minimal value is `100` and the maximum value is `2500`.
+The unit of this value is `W`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -125,6 +140,9 @@ sensor:
     value_template: "{{ value_json.energy }}"
     unit_of_measurement: "kWh"
     device_class: "energy"
+    state_class: "measurement"
+    last_reset_topic: true
+    last_reset_value_template: "1970-01-01T00:00:00+00:00"
 
 sensor:
   - platform: "mqtt"
@@ -181,6 +199,23 @@ switch:
     payload_off: "false"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     command_topic_postfix: "led_disabled_night"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.button_lock }}"
+    payload_on: "ON"
+    payload_off: "OFF"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "button_lock"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.overload_protection }}"
+    unit_of_measurement: "W"
 
 sensor:
   - platform: "mqtt"

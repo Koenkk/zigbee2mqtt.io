@@ -17,6 +17,7 @@ description: "Integrate your Develco SMSZB-120 via Zigbee2MQTT with whatever sma
 
 ## Notes
 
+
 ### Warning usage
 Warning only support a single mode, `burglar`
 
@@ -44,7 +45,6 @@ To stop:
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": "START"}` and `{"alarm": "OFF"}`
 Set `max_duration` from the Zigbee2MQTT UI or by publishing `{"max_duration": NEW_VALUE}`
 This alarm are preset to highest volume
-
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*

@@ -1,28 +1,30 @@
 ---
-title: "Sunricher ZGRC-KEY-013 control via MQTT"
-description: "Integrate your Sunricher ZGRC-KEY-013 via Zigbee2MQTT with whatever smart home
+title: "Sunricher SR-ZG9001K12-DIM-Z4 control via MQTT"
+description: "Integrate your Sunricher SR-ZG9001K12-DIM-Z4 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZGRC-KEY-013.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SR-ZG9001K12-DIM-Z4.md)*
 
-# Sunricher ZGRC-KEY-013
+# Sunricher SR-ZG9001K12-DIM-Z4
 
-| Model | ZGRC-KEY-013  |
+| Model | SR-ZG9001K12-DIM-Z4  |
 | Vendor  | Sunricher  |
 | Description | 4 zone remote and dimmer |
 | Exposes | battery, action, linkquality |
-| Picture | ![Sunricher ZGRC-KEY-013](../images/devices/ZGRC-KEY-013.jpg) |
+| Picture | ![Sunricher SR-ZG9001K12-DIM-Z4](../images/devices/SR-ZG9001K12-DIM-Z4.jpg) |
 | White-label | RGB Genie ZGRC-KEY-013 |
 
 ## Notes
+
 
 ### Pairing
 Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press the All Off button. The Status LED will blink 5 times quickly to indicate a successful pairing.
 
 ### Resetting
 Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press 5 times the All On button. The Status LED will blink 3 times to indicate successful reset.
+
 
 ### Deprecated click event
 By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
@@ -83,13 +85,6 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:toggle-switch"
-    value_template: "{{ value_json.click }}"
-
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"

@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi MCCGQ12LM via Zigbee2MQTT with whatever smar
 | Model | MCCGQ12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 door & window contact sensor |
-| Exposes | battery, contact, voltage, linkquality |
+| Exposes | contact, battery, voltage, linkquality |
 | Picture | ![Xiaomi MCCGQ12LM](../images/devices/MCCGQ12LM.jpg) |
 
 ## Notes
@@ -40,18 +40,18 @@ E.g. (devices.yaml)
 
 ## Exposes
 
+### Contact (binary)
+Indicates if the contact is closed (= true) or open (= false).
+Value can be found in the published state on the `contact` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `false` contact is ON, if `true` OFF.
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Contact (binary)
-Indicates if the contact is closed (= true) or open (= false).
-Value can be found in the published state on the `contact` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `false` contact is ON, if `true` OFF.
 
 ### Voltage (numeric)
 Voltage of the battery in millivolts.
@@ -73,15 +73,6 @@ manual integration is possible with the following configuration:
 
 {% raw %}
 ```yaml
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.battery }}"
-    unit_of_measurement: "%"
-    device_class: "battery"
-    state_class: "measurement"
-
 binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
@@ -90,6 +81,15 @@ binary_sensor:
     payload_on: false
     payload_off: true
     device_class: "door"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.battery }}"
+    unit_of_measurement: "%"
+    device_class: "battery"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"

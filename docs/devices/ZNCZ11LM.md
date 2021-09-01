@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi ZNCZ11LM via Zigbee2MQTT with whatever smart
 | Model | ZNCZ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara power plug ZigBee |
-| Exposes | switch (state), power, energy, temperature, power_outage_memory, voltage, led_disabled_night, auto_off, linkquality |
+| Exposes | switch (state), power, energy, temperature, voltage, power_outage_memory, led_disabled_night, auto_off, linkquality |
 | Picture | ![Xiaomi ZNCZ11LM](../images/devices/ZNCZ11LM.jpg) |
 
 ## Notes
@@ -55,6 +55,12 @@ Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
+
 ### Power_outage_memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.
 Value can be found in the published state on the `power_outage_memory` property.
@@ -62,20 +68,15 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 If value equals `true` power_outage_memory is ON, if `false` OFF.
 
-### Voltage (numeric)
-Measured electrical potential value.
-Value can be found in the published state on the `voltage` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `V`.
-
 ### Led_disabled_night (binary)
 Enable/disable the LED at night.
 Value can be found in the published state on the `led_disabled_night` property.
-It's not possible to read (`/get`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
 If value equals `true` led_disabled_night is ON, if `false` OFF.
 
 ### Auto_off (binary)
+If the power is constantly lower than 2W within half an hour, the plug will be automatically turned off.
 Value can be found in the published state on the `auto_off` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_off": NEW_VALUE}`.
@@ -120,6 +121,9 @@ sensor:
     value_template: "{{ value_json.energy }}"
     unit_of_measurement: "kWh"
     device_class: "energy"
+    state_class: "measurement"
+    last_reset_topic: true
+    last_reset_value_template: "1970-01-01T00:00:00+00:00"
 
 sensor:
   - platform: "mqtt"
@@ -128,6 +132,16 @@ sensor:
     value_template: "{{ value_json.temperature }}"
     unit_of_measurement: "°C"
     device_class: "temperature"
+    state_class: "measurement"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.voltage }}"
+    unit_of_measurement: "V"
+    device_class: "voltage"
+    enabled_by_default: false
     state_class: "measurement"
 
 switch:
@@ -139,16 +153,6 @@ switch:
     payload_off: "false"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     command_topic_postfix: "power_outage_memory"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.voltage }}"
-    unit_of_measurement: "V"
-    device_class: "voltage"
-    enabled_by_default: false
-    state_class: "measurement"
 
 switch:
   - platform: "mqtt"
