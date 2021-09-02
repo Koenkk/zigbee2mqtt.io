@@ -17,7 +17,50 @@ description: "Integrate your Hive SLR1 via Zigbee2MQTT with whatever smart home
 
 ## Notes
 
-None
+
+### How to start/edit native boost
+The receiver has support for native Boost, which will allow to display the remaining time on a compatible remote.
+
+To start one, or modify an already active one, send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+
+```js
+{
+   "system_mode":"emergency_heating",
+   "temperature_setpoint_hold_duration":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold":"1",
+   "occupied_heating_setpoint":"18"  // Replace with desired temperature. Between 5 and 32 C
+}
+```
+Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
+
+Also, the native boost can be used as a method to pause the heating too. To do so, set the temperature to a low value.
+
+### Set heating mode to ON
+Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+```js
+{
+   "system_mode":"heat",
+   "temperature_setpoint_hold":"1",
+   "occupied_heating_setpoint":"20" // Replace with desired temperature. Between 5 and 32 C
+}
+```
+Note: You will also notice that `temperature_setpoint_hold_duration` automatically changes to `65535` which means `undefined` (indefinite).
+
+This will also stop any native boosts that are currently active.
+
+
+### Set heating mode to OFF
+Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+```js
+{
+   "system_mode":"off",
+   "temperature_setpoint_hold":"0"
+}
+```
+Note: You will also notice that `temperature_setpoint_hold_duration` automatically changes to `0` which means `not set`. `occupied_heating_setpoint` automatically changes to `1` degree C.
+
+This will also stop any native boosts that are currently active.
+
 
 
 ## Exposes

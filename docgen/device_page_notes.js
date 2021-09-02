@@ -3023,7 +3023,7 @@ This device has various limitations:
             '73743', 'AC0251100NJ/AC0251600NJ/AC0251700NJ', 'WXCJKG13LM', 'WXCJKG12LM', 'WXCJKG11LM', '8718699693985', 'E1524/E1810',
             '6735/6736/6737', 'ZNMS13LM', 'ZNMS12LM', 'ZNMS11LM', 'InstaRemote', 'LZL4BWHL01', 'MLI-404011', 'HS1RC-N', 'HS1RC-EM',
             '81825', 'ZYCT-202', 'STS-PRS-251', 'Z3-1BRL', 'AV2010/32', 'U86KWF-ZPSJ', '1TST-EU', 'UK7004240',
-            'SLR1b', 'SLR2', 'RC-2000WH', '3157100', '014G2461', 'ST218', 'STZB402', 'SMT402', 'SMT402AD', 'TH1124ZB', 'TH1300ZB',
+            'RC-2000WH', '3157100', '014G2461', 'ST218', 'STZB402', 'SMT402', 'SMT402AD', 'TH1124ZB', 'TH1300ZB',
             'TH1500ZB', 'Zen-01-W', 'TH1400ZB', 'TH1123ZB', 'ZK03840', 'SPZB0001', 'WV704R0A0902', 'TERNCY-SD01', 'C4', 'HT-08', 'HT-10',
             '07703L', 'SEA801-Zigbee/SEA802-Zigbee', '6ARCZABZH', '324131092621', '929002398602',
         ],
@@ -3478,41 +3478,89 @@ After this command thermostat responds with two messages. One for calibration ch
 `,
     },
     {
-        model: ['3400-D', 'XHK1-UE'],
+        model: ['3400-D', 'XHK1-UE', 'XHK1-TC'],
         note: `
-### (Dis)arming
-To (dis)arm the keypad send to \`zigbee2mqtt/[DEVICE_FRIENDLY_NAME/set\` payload:
+### Arming/Disarming from the server
+To set arming mode publish the following payload to \`zigbee2mqtt/FRIENDLY_NAME/set\` topic:
 
 \`\`\`js
 {
     "arm_mode": {
-    "mode": "arm_all_zones" // Mode "arm_all_zones" or "disarm"
+        "mode": "arm_all_zones"
     }
 }
 \`\`\`
-
-### (Dis)arming from the keypad
-When an attempt for (dis)arm is done on the keypad, Zigbee2MQTT will publish the following payload to topic \`zigbee2mqtt/[DEVICE_FRIENDLY_NAME\`:
+Valid \`mode\` values are \`'disarm', 'arm_day_zones', 'arm_night_zones', 'arm_all_zones', 'exit_delay'\`
+### Arming/Disarming from the keypad
+When an attempt to set arm mode is done on the keypad, Zigbee2MQTT will publish the following payload to topic \`zigbee2mqtt/FRIENDLY_NAME\`:
 
 \`\`\`js
 {
-    "action": "arm_all_zones", // OR "disarm" when being disarmed
+    "action": "arm_all_zones", // This is the example
     "action_code": "123", // The code being entered
     "action_zone": 0, // The zone being (dis)armed (always 0)
     "action_transaction": 99 // The transaction number
 }
 \`\`\`
 
-In case you want to confirm this action (e.g. \`action_code\` value is OK), respond to it by sending to \`zigbee2mqtt/[DEVICE_FRIENDLY_NAME/set\` payload:
+The automation server must validate the request and send a notification to the keypad, confirming or denying the request.
+
+Do so by sending the following payload to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
 \`\`\`js
 {
     "arm_mode": {
-    "transaction": 99, // Transaction number (take this value from the (dis)arm attempt property \`action_transaction\`)
-    "mode": "arm_all_zones" // Mode "arm_all_zones", "disarm" or "exit_delay" (take this value from the (dis)arm attempt property \`action\`)
+        "transaction": 99, // Transaction number (this must be the same as the keypad request \`action_transaction\`)
+        "mode": "arm_all_zones" // Mode (this must be the same as the keypad request \`action\`)
     }
 }
 \`\`\`
+Valid \`mode\` values are \`disarm\`, \`arm_day_zones\`, \`arm_night_zones\`, \`arm_all_zones\`, \`invalid_code\`, \`not_ready\`, \`already_disarmed\`
+
+The automation server must follow the notification with an actual change to the correct arm mode. For the example above, the server should respond with \`exit_delay\`, count the elapsed time (e.g 30 secs), then change mode again to \`arm_all_zones\` (see "Arming/Disarming from the server" section above)
+`,
+    },
+    {
+        model: ['KEYPAD001'],
+        note: `
+### Arming/Disarming from the server
+To set arming mode publish the following payload to \`zigbee2mqtt/FRIENDLY_NAME/set\` topic:
+
+\`\`\`js
+{
+    "arm_mode": {
+        "mode": "arm_all_zones"
+    }
+}
+\`\`\`
+Valid \`mode\` values are \`'disarm', 'arm_day_zones', 'arm_all_zones', 'exit_delay'\`
+### Arming/Disarming from the keypad
+When an attempt to set arm mode is done on the keypad, Zigbee2MQTT will publish the following payload to topic \`zigbee2mqtt/FRIENDLY_NAME\`:
+
+\`\`\`js
+{
+    "action": "arm_all_zones", // This is the example
+    "action_code": "123", // The code being entered
+    "action_zone": 0, // The zone being (dis)armed (always 0)
+    "action_transaction": 99 // The transaction number
+}
+\`\`\`
+
+The automation server must validate the request and send a notification to the keypad, confirming or denying the request.
+
+Do so by sending the following payload to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`js
+{
+    "arm_mode": {
+        "transaction": 99, // Transaction number (this must be the same as the keypad request \`action_transaction\`)
+        "mode": "arm_all_zones" // Mode (this must be the same as the keypad request \`action\`)
+    }
+}
+\`\`\`
+Valid \`mode\` values are \`disarm\`, \`arm_day_zones\`, \`arm_all_zones\`, \`invalid_code\`, \`not_ready\`, \`already_disarmed\`
+
+The automation server must follow the notification with an actual change to the correct arm mode. For the example above, the server should respond with \`exit_delay\`, count the elapsed time (e.g 30 secs), then change mode again to \`arm_all_zones\` (see "Arming/Disarming from the server" section above)
 `,
     },
     {
@@ -4515,7 +4563,163 @@ While pairing, keep the remote close to the coordinator.
         note: `
 ### AC Power
 If you are using the AC wall adapter, the battery level will always stay within the range of 25-35% as it is continually drawing power from the outlet.
-The battery level indicator is only relevant to if you are using the solar panel.`,
+The battery level indicator is only relevant to if you are using the solar panel.
+`,
+    },
+    {
+        model: ['SLR1', 'SLR1b'],
+        note: `
+### How to start/edit native boost
+The receiver has support for native Boost, which will allow to display the remaining time on a compatible remote.
+
+To start one, or modify an already active one, send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`js
+{
+   "system_mode":"emergency_heating",
+   "temperature_setpoint_hold_duration":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold":"1",
+   "occupied_heating_setpoint":"18"  // Replace with desired temperature. Between 5 and 32 C
+}
+\`\`\`
+Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
+
+Also, the native boost can be used as a method to pause the heating too. To do so, set the temperature to a low value.
+
+### Set heating mode to ON
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`js
+{
+   "system_mode":"heat",
+   "temperature_setpoint_hold":"1",
+   "occupied_heating_setpoint":"20" // Replace with desired temperature. Between 5 and 32 C
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration\` automatically changes to \`65535\` which means \`undefined\` (indefinite).
+
+This will also stop any native boosts that are currently active.
+
+
+### Set heating mode to OFF
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`js
+{
+   "system_mode":"off",
+   "temperature_setpoint_hold":"0"
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration\` automatically changes to \`0\` which means \`not set\`. \`occupied_heating_setpoint\` automatically changes to \`1\` degree C.
+
+This will also stop any native boosts that are currently active.
+`,
+    },
+    {
+        model: ['SLR2', 'SLR2b'],
+        note: `
+### Sending payloads on dual channel receivers
+As the receiver makes use of two endpoints, \`water\` and \`heat\` there are two methods of sending payloads, both equally valid. For example, the \`heat\` endpoint:
+
+Topic \`zigbee2mqtt/FRIENDLY_NAME/set\`
+\`\`\`js
+{
+    "system_mode_heat":"heat"
+}
+\`\`\`
+
+Topic \`zigbee2mqtt/FRIENDLY_NAME/heat/set\`
+\`\`\`json
+{
+    "system_mode":"heat"
+}
+\`\`\`
+
+Notice that \`heat\` must be part of either the topic or the attribute. With that in mind, adjust the commands in this documentation based on your preferred style.
+
+### How to start/edit native boost (heat endpoint)
+The receiver has support for native Boost, which will allow to display the remaining time on a compatible remote.
+
+To start one, or modify an already active one, send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`js
+{
+   "system_mode_heat":"emergency_heating",
+   "temperature_setpoint_hold_duration_heat":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold_heat":"1",
+   "occupied_heating_setpoint_heat":"18"  // Replace with desired temperature. Between 5 and 32 C
+}
+\`\`\`
+Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
+
+Also, the native boost can be used as a method to pause the heating too. To do so, set the temperature to a low value.
+
+### Set heating mode to ON (heat endpoint)
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`js
+{
+   "system_mode_heat":"heat",
+   "temperature_setpoint_hold_heat":"1",
+   "occupied_heating_setpoint_heat":"20" // Replace with desired temperature. Between 5 and 32 C
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration_heat\` automatically changes to \`65535\` which means \`undefined\` (indefinite).
+
+This will also stop any native boosts that are currently active.
+
+
+### Set heating mode to OFF (heat endpoint)
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`js
+{
+   "system_mode_heat":"off",
+   "temperature_setpoint_hold_heat":"0"
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration_heat\` automatically changes to \`0\` which means \`not set\`. \`occupied_heating_setpoint_heat\` automatically changes to \`1\` degree C.
+
+This will also stop any native boosts that are currently active.
+
+### How to start/edit native boost (water endpoint)
+The receiver has support for native Boost, which will allow to display the remaining time on a compatible remote.
+
+To start one, or modify an already active one, send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`js
+{
+   "system_mode_water":"emergency_heating",
+   "temperature_setpoint_hold_duration_water":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold_water":"1"
+}
+\`\`\`
+Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
+
+### Set heating mode to ON (water endpoint)
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`js
+{
+   "system_mode_water":"heat",
+   "temperature_setpoint_hold_water":"1"
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration_heat\` automatically changes to \`65535\` which means \`undefined\` (indefinite).
+
+This will also stop any native boosts that are currently active.
+
+
+### Set heating mode to OFF (water endpoint)
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`js
+{
+   "system_mode_water":"off",
+   "temperature_setpoint_hold_water":"0"
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration_heat\` automatically changes to \`0\` which means \`not set\`.
+
+This will also stop any native boosts that are currently active.
+
+### Local and occupied temperature (water endpoint)
+The water endpoint functions as what could be considered an on/off switch based on \`system_mode_water\`. Because of that, the device uses fixed values for temperature. \`local_temperature_water\` is always 21 and \`occupied_heating_setpoint_water\` is always 22.
+`,
     },
 ];
 
