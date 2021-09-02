@@ -4560,7 +4560,7 @@ Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
    "temperature_setpoint_hold":"0"
 }
 \`\`\`
-Note: You will also notice that \`temperature_setpoint_hold_duration\` automatically changes to \`0\` which means \`not set\`.
+Note: You will also notice that \`temperature_setpoint_hold_duration\` automatically changes to \`0\` which means \`not set\`. \`occupied_heating_setpoint\` automatically changes to \`1\` degree C.
 
 This will also stop any native boosts that are currently active.
 `,
@@ -4626,7 +4626,7 @@ Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
    "temperature_setpoint_hold_heat":"0"
 }
 \`\`\`
-Note: You will also notice that \`temperature_setpoint_hold_duration_heat\` automatically changes to \`0\` which means \`not set\`.
+Note: You will also notice that \`temperature_setpoint_hold_duration_heat\` automatically changes to \`0\` which means \`not set\`. \`occupied_heating_setpoint_heat\` automatically changes to \`1\` degree C.
 
 This will also stop any native boosts that are currently active.
 
