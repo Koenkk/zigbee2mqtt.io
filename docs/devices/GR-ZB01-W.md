@@ -28,6 +28,7 @@ If you are using the AC wall adapter, the battery level will always stay within 
 The battery level indicator is only relevant to if you are using the solar panel.
 
 
+
 ## Exposes
 
 ### Cover 

@@ -1,66 +1,61 @@
 ---
-title: "Xfinity URC4450BC0-X-R control via MQTT"
-description: "Integrate your Xfinity URC4450BC0-X-R via Zigbee2MQTT with whatever smart home
+title: "Hive KEYPAD001 control via MQTT"
+description: "Integrate your Hive KEYPAD001 via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/URC4450BC0-X-R.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/KEYPAD001.md)*
 
-# Xfinity URC4450BC0-X-R
+# Hive KEYPAD001
 
-| Model | URC4450BC0-X-R  |
-| Vendor  | Xfinity  |
+| Model | KEYPAD001  |
+| Vendor  | Hive  |
 | Description | Alarm security keypad |
-| Exposes | battery, voltage, occupancy, battery_low, tamper, presence, contact, action_code, action_zone, temperature, action, linkquality |
-| Picture | ![Xfinity URC4450BC0-X-R](../images/devices/URC4450BC0-X-R.jpg) |
+| Exposes | battery, voltage, battery_low, occupancy, tamper, contact, action_code, action_transaction, action_zone, action, linkquality |
+| Picture | ![Hive KEYPAD001](../images/devices/KEYPAD001.jpg) |
 
 ## Notes
 
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
 
-* `temperature_precision`: Controls the precision of `temperature` values,
-e.g. `0`, `1` or `2`; default `2`.
-To control the precision based on the temperature value set it to e.g. `{30: 0, 10: 1}`,
-when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1. Precision will take into affect with next report of device.
-* `temperature_calibration`: Allows to manually calibrate temperature values,
-e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
-
-
-### (Dis)arming
-To (dis)arm the keypad send to `zigbee2mqtt/[DEVICE_FRIENDLY_NAME/set` payload:
+### Arming/Disarming from the server
+To set arming mode publish the following payload to `zigbee2mqtt/FRIENDLY_NAME/set` topic:
 
 ```js
 {
     "arm_mode": {
-    "mode": "arm_all_zones" // Mode "arm_all_zones" or "disarm"
+        "mode": "arm_all_zones"
     }
 }
 ```
-
-### (Dis)arming from the keypad
-When an attempt for (dis)arm is done on the keypad, Zigbee2MQTT will publish the following payload to topic `zigbee2mqtt/[DEVICE_FRIENDLY_NAME`:
+Valid `mode` values are `'disarm', 'arm_day_zones', 'arm_all_zones', 'exit_delay'`
+### Arming/Disarming from the keypad
+When an attempt to set arm mode is done on the keypad, Zigbee2MQTT will publish the following payload to topic `zigbee2mqtt/FRIENDLY_NAME`:
 
 ```js
 {
-    "action": "arm_all_zones", // OR "disarm" when being disarmed
+    "action": "arm_all_zones", // This is the example
     "action_code": "123", // The code being entered
     "action_zone": 0, // The zone being (dis)armed (always 0)
     "action_transaction": 99 // The transaction number
 }
 ```
 
-In case you want to confirm this action (e.g. `action_code` value is OK), respond to it by sending to `zigbee2mqtt/[DEVICE_FRIENDLY_NAME/set` payload:
+The automation server must validate the request and send a notification to the keypad, confirming or denying the request.
+
+Do so by sending the following payload to `zigbee2mqtt/FRIENDLY_NAME/set`:
 
 ```js
 {
     "arm_mode": {
-    "transaction": 99, // Transaction number (take this value from the (dis)arm attempt property `action_transaction`)
-    "mode": "arm_all_zones" // Mode "arm_all_zones", "disarm" or "exit_delay" (take this value from the (dis)arm attempt property `action`)
+        "transaction": 99, // Transaction number (this must be the same as the keypad request `action_transaction`)
+        "mode": "arm_all_zones" // Mode (this must be the same as the keypad request `action`)
     }
 }
 ```
+Valid `mode` values are `disarm`, `arm_day_zones`, `arm_all_zones`, `invalid_code`, `not_ready`, `already_disarmed`
+
+The automation server must follow the notification with an actual change to the correct arm mode. For the example above, the server should respond with `exit_delay`, count the elapsed time (e.g 30 secs), then change mode again to `arm_all_zones` (see "Arming/Disarming from the server" section above)
 
 
 
@@ -79,29 +74,23 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Occupancy (binary)
-Indicates whether the device detected occupancy.
-Value can be found in the published state on the `occupancy` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` occupancy is ON, if `false` OFF.
-
 ### Battery_low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery_low is ON, if `false` OFF.
 
+### Occupancy (binary)
+Indicates whether the device detected occupancy.
+Value can be found in the published state on the `occupancy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` occupancy is ON, if `false` OFF.
+
 ### Tamper (binary)
 Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
-
-### Presence (binary)
-Indicates whether the device detected presence.
-Value can be found in the published state on the `presence` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` presence is ON, if `false` OFF.
 
 ### Contact (binary)
 Indicates if the contact is closed (= true) or open (= false).
@@ -110,24 +99,25 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
 
 ### Action_code (numeric)
+Pin code introduced..
 Value can be found in the published state on the `action_code` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Action_zone (text)
-Value can be found in the published state on the `action_zone` property.
+### Action_transaction (numeric)
+Last action transaction number..
+Value can be found in the published state on the `action_transaction` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
+### Action_zone (text)
+Alarm zone. Default value 23.
+Value can be found in the published state on the `action_zone` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `disarm`, `arm_day_zones`, `identify`, `arm_night_zones`, `arm_all_zones`, `exit_delay`, `emergency`.
+The possible values are: `panic`, `disarm`, `arm_day_zones`, `arm_all_zones`, `exit_delay`, `entry_delay`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -166,15 +156,6 @@ binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.occupancy }}"
-    payload_on: true
-    payload_off: false
-    device_class: "motion"
-
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.battery_low }}"
     payload_on: true
     payload_off: false
@@ -184,18 +165,18 @@ binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.tamper }}"
+    value_template: "{{ value_json.occupancy }}"
     payload_on: true
     payload_off: false
+    device_class: "motion"
 
 binary_sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.presence }}"
+    value_template: "{{ value_json.tamper }}"
     payload_on: true
     payload_off: false
-    device_class: "presence"
 
 binary_sensor:
   - platform: "mqtt"
@@ -216,16 +197,13 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.action_zone }}"
+    value_template: "{{ value_json.action_transaction }}"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.temperature }}"
-    unit_of_measurement: "°C"
-    device_class: "temperature"
-    state_class: "measurement"
+    value_template: "{{ value_json.action_zone }}"
 
 sensor:
   - platform: "mqtt"
