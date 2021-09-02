@@ -4529,7 +4529,7 @@ To start one, or modify an already active one, send the following payload to the
 \`\`\`json
 {
    "system_mode":"emergency_heating",
-   "temperature_setpoint_hold_duration":"30",  // Replace with desired duration in minutes. Max 360
+   "temperature_setpoint_hold_duration":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
    "temperature_setpoint_hold":"1",
    "occupied_heating_setpoint":"18"  // Replace with desired temperature. Between 5 and 32 C
 }
