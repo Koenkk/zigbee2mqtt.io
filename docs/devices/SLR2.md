@@ -29,7 +29,7 @@ Topic `zigbee2mqtt/FRIENDLY_NAME/set`
 ```
 
 Topic `zigbee2mqtt/FRIENDLY_NAME/heat/set`
-```js
+```json
 {
     "system_mode":"heat"
 }
