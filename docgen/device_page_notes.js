@@ -4574,7 +4574,7 @@ The receiver has support for native Boost, which will allow to display the remai
 
 To start one, or modify an already active one, send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
-\`\`\`json
+\`\`\`js
 {
    "system_mode":"emergency_heating",
    "temperature_setpoint_hold_duration":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
@@ -4588,7 +4588,7 @@ Also, the native boost can be used as a method to pause the heating too. To do s
 
 ### Set heating mode to ON
 Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
-\`\`\`json
+\`\`\`js
 {
    "system_mode":"heat",
    "temperature_setpoint_hold":"1",
@@ -4602,7 +4602,7 @@ This will also stop any native boosts that are currently active.
 
 ### Set heating mode to OFF
 Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
-\`\`\`json
+\`\`\`js
 {
    "system_mode":"off",
    "temperature_setpoint_hold":"0"
@@ -4620,7 +4620,7 @@ This will also stop any native boosts that are currently active.
 As the receiver makes use of two endpoints, \`water\` and \`heat\` there are two methods of sending payloads, both equally valid. For example, the \`heat\` endpoint:
 
 Topic \`zigbee2mqtt/FRIENDLY_NAME/set\`
-\`\`\`json
+\`\`\`js
 {
     "system_mode_heat":"heat"
 }
@@ -4640,7 +4640,7 @@ The receiver has support for native Boost, which will allow to display the remai
 
 To start one, or modify an already active one, send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
-\`\`\`json
+\`\`\`js
 {
    "system_mode_heat":"emergency_heating",
    "temperature_setpoint_hold_duration_heat":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
@@ -4654,7 +4654,7 @@ Also, the native boost can be used as a method to pause the heating too. To do s
 
 ### Set heating mode to ON (heat endpoint)
 Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
-\`\`\`json
+\`\`\`js
 {
    "system_mode_heat":"heat",
    "temperature_setpoint_hold_heat":"1",
@@ -4668,7 +4668,7 @@ This will also stop any native boosts that are currently active.
 
 ### Set heating mode to OFF (heat endpoint)
 Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
-\`\`\`json
+\`\`\`js
 {
    "system_mode_heat":"off",
    "temperature_setpoint_hold_heat":"0"
@@ -4683,7 +4683,7 @@ The receiver has support for native Boost, which will allow to display the remai
 
 To start one, or modify an already active one, send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
-\`\`\`json
+\`\`\`js
 {
    "system_mode_water":"emergency_heating",
    "temperature_setpoint_hold_duration_water":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
@@ -4694,7 +4694,7 @@ Note: For device timing reasons, the payload needs to be sent as one single comm
 
 ### Set heating mode to ON (water endpoint)
 Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
-\`\`\`json
+\`\`\`js
 {
    "system_mode_water":"heat",
    "temperature_setpoint_hold_water":"1"
@@ -4707,7 +4707,7 @@ This will also stop any native boosts that are currently active.
 
 ### Set heating mode to OFF (water endpoint)
 Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
-\`\`\`json
+\`\`\`js
 {
    "system_mode_water":"off",
    "temperature_setpoint_hold_water":"0"
