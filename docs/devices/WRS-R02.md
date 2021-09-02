@@ -70,6 +70,7 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action }}"
+    enabled_by_default: true
     icon: "mdi:gesture-double-tap"
 
 sensor:
@@ -77,6 +78,21 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.operation_mode }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "operation_mode"
+    options: 
+      - "command"
+      - "event"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"

@@ -107,6 +107,9 @@ sensor:
     value_template: "{{ value_json.energy }}"
     unit_of_measurement: "kWh"
     device_class: "energy"
+    state_class: "measurement"
+    last_reset_topic: true
+    last_reset_value_template: "1970-01-01T00:00:00+00:00"
 
 sensor:
   - platform: "mqtt"

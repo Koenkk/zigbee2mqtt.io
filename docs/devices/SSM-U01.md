@@ -92,6 +92,9 @@ sensor:
     value_template: "{{ value_json.energy }}"
     unit_of_measurement: "kWh"
     device_class: "energy"
+    state_class: "measurement"
+    last_reset_topic: true
+    last_reset_value_template: "1970-01-01T00:00:00+00:00"
 
 sensor:
   - platform: "mqtt"
@@ -124,6 +127,21 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "switch_type"
+    options: 
+      - "toggle"
+      - "momentary"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"

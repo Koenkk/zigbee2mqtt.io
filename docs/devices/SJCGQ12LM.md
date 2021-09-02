@@ -19,7 +19,7 @@ description: "Integrate your Xiaomi SJCGQ12LM via Zigbee2MQTT with whatever smar
 
 
 ### Pairing
-Press and hold water logo on the device for +- 10 seconds (you have to press quite hard) until the blue light blinks
+Press and hold water logo on the device for +- 5 seconds (you have to press quite hard) until the blue light blinks
 three times, release the water logo (the blue light will blink once more) and wait.
     
 

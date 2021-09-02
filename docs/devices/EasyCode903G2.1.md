@@ -92,12 +92,26 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.sound_volume }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.sound_volume }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "sound_volume"
+    options: 
+      - "silent_mode"
+      - "low_volume"
+      - "high_volume"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action }}"
+    enabled_by_default: true
     icon: "mdi:gesture-double-tap"
 
 switch:

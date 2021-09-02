@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi JTYJ-GD-01LM/BW via Zigbee2MQTT with whateve
 | Model | JTYJ-GD-01LM/BW  |
 | Vendor  | Xiaomi  |
 | Description | MiJia Honeywell smoke detector |
-| Exposes | smoke, battery_low, tamper, battery, sensitivity, smoke_density, selftest, voltage, linkquality |
+| Exposes | smoke, battery_low, tamper, battery, sensitivity, smoke_density, selftest, voltage, test, linkquality |
 | Picture | ![Xiaomi JTYJ-GD-01LM/BW](../images/devices/JTYJ-GD-01LM-BW.jpg) |
 
 ## Notes
@@ -85,6 +85,12 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
+### Test (binary)
+Test mode activated.
+Value can be found in the published state on the `test` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` test is ON, if `false` OFF.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
@@ -139,6 +145,22 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.sensitivity }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.sensitivity }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "sensitivity"
+    options: 
+      - "low"
+      - "medium"
+      - "high"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
@@ -157,6 +179,14 @@ sensor:
     device_class: "voltage"
     enabled_by_default: false
     state_class: "measurement"
+
+binary_sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.test }}"
+    payload_on: true
+    payload_off: false
 
 sensor:
   - platform: "mqtt"

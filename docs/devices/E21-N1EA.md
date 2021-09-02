@@ -11,7 +11,7 @@ description: "Integrate your Sengled E21-N1EA via Zigbee2MQTT with whatever smar
 
 | Model | E21-N1EA  |
 | Vendor  | Sengled  |
-| Description | Sengled smart LED multicolor A19 bulb |
+| Description | Smart LED multicolor A19 bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![Sengled E21-N1EA](../images/devices/E21-N1EA.jpg) |
 

@@ -14,6 +14,7 @@ description: "Integrate your TuYa TS011F_plug via Zigbee2MQTT with whatever smar
 | Description | Smart plug (with power monitoring) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
 | Picture | ![TuYa TS011F_plug](../images/devices/TS011F_plug.jpg) |
+| White-label | LELLKI TS011F_plug |
 
 ## Notes
 
@@ -116,12 +117,31 @@ sensor:
     value_template: "{{ value_json.energy }}"
     unit_of_measurement: "kWh"
     device_class: "energy"
+    state_class: "measurement"
+    last_reset_topic: true
+    last_reset_value_template: "1970-01-01T00:00:00+00:00"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.power_outage_memory }}"
+    enabled_by_default: false
+    icon: "mdi:power-settings"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.power_outage_memory }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "power_outage_memory"
+    options: 
+      - "on"
+      - "off"
+      - "restore"
+    enabled_by_default: false
+    icon: "mdi:power-settings"
 
 sensor:
   - platform: "mqtt"

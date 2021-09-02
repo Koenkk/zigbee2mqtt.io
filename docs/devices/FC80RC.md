@@ -78,6 +78,21 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.device_mode }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.device_mode }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "device_mode"
+    options: 
+      - "switch"
+      - "auto"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"

@@ -89,12 +89,27 @@ sensor:
     value_template: "{{ value_json.energy }}"
     unit_of_measurement: "kWh"
     device_class: "energy"
+    state_class: "measurement"
+    last_reset_topic: true
+    last_reset_value_template: "1970-01-01T00:00:00+00:00"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.schneider_pilot_mode }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.schneider_pilot_mode }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "schneider_pilot_mode"
+    options: 
+      - "contactor"
+      - "pilot"
 
 climate:
   - platform: "mqtt"

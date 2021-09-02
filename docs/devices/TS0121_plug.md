@@ -18,6 +18,10 @@ description: "Integrate your TuYa TS0121_plug via Zigbee2MQTT with whatever smar
 
 ## Notes
 
+
+### Pairing
+Pair this device with a long press on the on/off button. The button will flash to indicate it's in pairing mode. When the flashing stops it should be paired.
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
@@ -120,12 +124,31 @@ sensor:
     value_template: "{{ value_json.energy }}"
     unit_of_measurement: "kWh"
     device_class: "energy"
+    state_class: "measurement"
+    last_reset_topic: true
+    last_reset_value_template: "1970-01-01T00:00:00+00:00"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.power_outage_memory }}"
+    enabled_by_default: false
+    icon: "mdi:power-settings"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.power_outage_memory }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "power_outage_memory"
+    options: 
+      - "on"
+      - "off"
+      - "restore"
+    enabled_by_default: false
+    icon: "mdi:power-settings"
 
 sensor:
   - platform: "mqtt"

@@ -23,6 +23,7 @@ Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
 
 You may have to unpair the switch from an existing coordinator before the pairing process will start.
+If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
@@ -121,6 +122,9 @@ sensor:
     value_template: "{{ value_json.energy }}"
     unit_of_measurement: "kWh"
     device_class: "energy"
+    state_class: "measurement"
+    last_reset_topic: true
+    last_reset_value_template: "1970-01-01T00:00:00+00:00"
 
 sensor:
   - platform: "mqtt"
