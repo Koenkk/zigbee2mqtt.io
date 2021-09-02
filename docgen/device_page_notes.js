@@ -4557,7 +4557,7 @@ Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 \`\`\`json
 {
    "system_mode":"off",
-   "temperature_setpoint_hold":"0",
+   "temperature_setpoint_hold":"0"
 }
 \`\`\`
 Note: You will also notice that \`temperature_setpoint_hold_duration\` automatically changes to \`0\` which means \`not set\`.
