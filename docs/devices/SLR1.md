@@ -23,7 +23,7 @@ The receiver has support for native Boost, which will allow to display the remai
 
 To start one, or modify an already active one, send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 
-```json
+```js
 {
    "system_mode":"emergency_heating",
    "temperature_setpoint_hold_duration":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
@@ -37,7 +37,7 @@ Also, the native boost can be used as a method to pause the heating too. To do s
 
 ### Set heating mode to ON
 Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
-```json
+```js
 {
    "system_mode":"heat",
    "temperature_setpoint_hold":"1",
@@ -51,7 +51,7 @@ This will also stop any native boosts that are currently active.
 
 ### Set heating mode to OFF
 Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
-```json
+```js
 {
    "system_mode":"off",
    "temperature_setpoint_hold":"0"
