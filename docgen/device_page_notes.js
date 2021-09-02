@@ -3023,7 +3023,7 @@ This device has various limitations:
             '73743', 'AC0251100NJ/AC0251600NJ/AC0251700NJ', 'WXCJKG13LM', 'WXCJKG12LM', 'WXCJKG11LM', '8718699693985', 'E1524/E1810',
             '6735/6736/6737', 'ZNMS13LM', 'ZNMS12LM', 'ZNMS11LM', 'InstaRemote', 'LZL4BWHL01', 'MLI-404011', 'HS1RC-N', 'HS1RC-EM',
             '81825', 'ZYCT-202', 'STS-PRS-251', 'Z3-1BRL', 'AV2010/32', 'U86KWF-ZPSJ', '1TST-EU', 'UK7004240',
-            'SLR1b', 'SLR2', 'RC-2000WH', '3157100', '014G2461', 'ST218', 'STZB402', 'SMT402', 'SMT402AD', 'TH1124ZB', 'TH1300ZB',
+            'RC-2000WH', '3157100', '014G2461', 'ST218', 'STZB402', 'SMT402', 'SMT402AD', 'TH1124ZB', 'TH1300ZB',
             'TH1500ZB', 'Zen-01-W', 'TH1400ZB', 'TH1123ZB', 'ZK03840', 'SPZB0001', 'WV704R0A0902', 'TERNCY-SD01', 'C4', 'HT-08', 'HT-10',
             '07703L', 'SEA801-Zigbee/SEA802-Zigbee', '6ARCZABZH', '324131092621', '929002398602',
         ],
@@ -4563,7 +4563,163 @@ While pairing, keep the remote close to the coordinator.
         note: `
 ### AC Power
 If you are using the AC wall adapter, the battery level will always stay within the range of 25-35% as it is continually drawing power from the outlet.
-The battery level indicator is only relevant to if you are using the solar panel.`,
+The battery level indicator is only relevant to if you are using the solar panel.
+`,
+    },
+    {
+        model: ['SLR1', 'SLR1b'],
+        note: `
+### How to start/edit native boost
+The receiver has support for native Boost, which will allow to display the remaining time on a compatible remote.
+
+To start one, or modify an already active one, send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`json
+{
+   "system_mode":"emergency_heating",
+   "temperature_setpoint_hold_duration":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold":"1",
+   "occupied_heating_setpoint":"18"  // Replace with desired temperature. Between 5 and 32 C
+}
+\`\`\`
+Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
+
+Also, the native boost can be used as a method to pause the heating too. To do so, set the temperature to a low value.
+
+### Set heating mode to ON
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`json
+{
+   "system_mode":"heat",
+   "temperature_setpoint_hold":"1",
+   "occupied_heating_setpoint":"20" // Replace with desired temperature. Between 5 and 32 C
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration\` automatically changes to \`65535\` which means \`undefined\` (indefinite).
+
+This will also stop any native boosts that are currently active.
+
+
+### Set heating mode to OFF
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`json
+{
+   "system_mode":"off",
+   "temperature_setpoint_hold":"0"
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration\` automatically changes to \`0\` which means \`not set\`. \`occupied_heating_setpoint\` automatically changes to \`1\` degree C.
+
+This will also stop any native boosts that are currently active.
+`,
+    },
+    {
+        model: ['SLR2', 'SLR2b'],
+        note: `
+### Sending payloads on dual channel receivers
+As the receiver makes use of two endpoints, \`water\` and \`heat\` there are two methods of sending payloads, both equally valid. For example, the \`heat\` endpoint:
+
+Topic \`zigbee2mqtt/FRIENDLY_NAME/set\`
+\`\`\`json
+{
+    "system_mode_heat":"heat"
+}
+\`\`\`
+
+Topic \`zigbee2mqtt/FRIENDLY_NAME/heat/set\`
+\`\`\`json
+{
+    "system_mode":"heat"
+}
+\`\`\`
+
+Notice that \`heat\` must be part of either the topic or the attribute. With that in mind, adjust the commands in this documentation based on your preferred style.
+
+### How to start/edit native boost (heat endpoint)
+The receiver has support for native Boost, which will allow to display the remaining time on a compatible remote.
+
+To start one, or modify an already active one, send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`json
+{
+   "system_mode_heat":"emergency_heating",
+   "temperature_setpoint_hold_duration_heat":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold_heat":"1",
+   "occupied_heating_setpoint_heat":"18"  // Replace with desired temperature. Between 5 and 32 C
+}
+\`\`\`
+Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
+
+Also, the native boost can be used as a method to pause the heating too. To do so, set the temperature to a low value.
+
+### Set heating mode to ON (heat endpoint)
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`json
+{
+   "system_mode_heat":"heat",
+   "temperature_setpoint_hold_heat":"1",
+   "occupied_heating_setpoint_heat":"20" // Replace with desired temperature. Between 5 and 32 C
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration_heat\` automatically changes to \`65535\` which means \`undefined\` (indefinite).
+
+This will also stop any native boosts that are currently active.
+
+
+### Set heating mode to OFF (heat endpoint)
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`json
+{
+   "system_mode_heat":"off",
+   "temperature_setpoint_hold_heat":"0"
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration_heat\` automatically changes to \`0\` which means \`not set\`. \`occupied_heating_setpoint_heat\` automatically changes to \`1\` degree C.
+
+This will also stop any native boosts that are currently active.
+
+### How to start/edit native boost (water endpoint)
+The receiver has support for native Boost, which will allow to display the remaining time on a compatible remote.
+
+To start one, or modify an already active one, send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`json
+{
+   "system_mode_water":"emergency_heating",
+   "temperature_setpoint_hold_duration_water":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold_water":"1"
+}
+\`\`\`
+Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
+
+### Set heating mode to ON (water endpoint)
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`json
+{
+   "system_mode_water":"heat",
+   "temperature_setpoint_hold_water":"1"
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration_heat\` automatically changes to \`65535\` which means \`undefined\` (indefinite).
+
+This will also stop any native boosts that are currently active.
+
+
+### Set heating mode to OFF (water endpoint)
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`json
+{
+   "system_mode_water":"off",
+   "temperature_setpoint_hold_water":"0"
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration_heat\` automatically changes to \`0\` which means \`not set\`.
+
+This will also stop any native boosts that are currently active.
+
+### Local and occupied temperature (water endpoint)
+The water endpoint functions as what could be considered an on/off switch based on \`system_mode_water\`. Because of that, the device uses fixed values for temperature. \`local_temperature_water\` is always 21 and \`occupied_heating_setpoint_water\` is always 22.
+`,
     },
 ];
 
