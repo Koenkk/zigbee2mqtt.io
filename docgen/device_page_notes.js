@@ -2577,7 +2577,7 @@ NB: you HAVE to put the device VERY close to the zigbee device, otherwise it won
 Factory reset the light bulb ([video](https://www.youtube.com/watch?v=npxOrPxVfe0)).
 After resetting the bulb will automatically connect.
 
-While pairing, keep the bulb close to the CC2531 USB sniffer.
+While pairing, keep the bulb close to the coordinator (adapter).
 
 What works is to use (very) short “on’s” and a little bit longer “off’s”, where you kill the light as soon as the bulb shows signs of turning on.
 Start with bulb on, then off, and then 6 “on’s”, wait in the 6th ON state. (If you try play safe and go for 7 "on's" the reset sometimes fails.)
