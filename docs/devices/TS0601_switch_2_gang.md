@@ -17,8 +17,10 @@ description: "Integrate your TuYa TS0601_switch_2_gang via Zigbee2MQTT with what
 
 ## Notes
 
+
 ### Pairing
 To pair press any button 5 times and on the 6th time hold it untill you hear beep, then release button and wait for pairing process.
+
 
 
 ## Exposes

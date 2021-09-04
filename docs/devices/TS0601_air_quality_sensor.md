@@ -103,7 +103,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.co2 }}"
     unit_of_measurement: "ppm"
-    icon: "mdi:molecule-co2"
+    device_class: "carbon_dioxide"
     state_class: "measurement"
 
 sensor:

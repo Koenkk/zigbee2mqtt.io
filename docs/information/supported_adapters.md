@@ -24,7 +24,7 @@ Zigbee2MQTT officially supports the following adapters:
   <tr>
     <td><img src="../images/slaeshs_cc2652rb_stick.jpg"></td>
     <td>Slaesh's CC2652RB stick</td>
-    <td>USB connected adapter with external antenna, <a href="https://github.com/Koenkk/zigbee2mqtt/discussions/6702">currently long shipping times</a>. Based on CC2652RB chip</td>
+    <td>USB connected adapter with external antenna. Based on CC2652RB chip</td>
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652RB_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652RB_router_20210128.zip">Router</a></td>
     <td><a href="https://slae.sh/projects/cc2652/#flashing">Flashing</a></td>
     <td><a href="https://slae.sh/projects/cc2652/">Slae.sh</a></td>
@@ -160,6 +160,38 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://github.com/egony/cc2652p_cc1352p_RF-STAR/wiki/Home-EN">Description</a><br><a href="https://github.com/egony/cc2652p_E72-2G4M20S1E/wiki/Flashing-EN">Flashing</a></td>
     <td><a href="http://t.me/Egony">Contact</a></td>
+  </tr>
+  <tr>
+    <td><img src="../images/openz3gateway.jpg"></td>
+    <td>cyijun OpenZ3Gateway</td>
+    <td>An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs less than 60 CNY in China.</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
+    <td><a href="https://github.com/cyijun/OpenZ3Gateway">Description</a></td>
+    <td><a href="mailto:cyjason2000@163.com">Contact</a></td>
+  </tr>
+  <tr>
+    <td><img src="../images/CC2652P-Z2M.jpg"></td>
+    <td>XGG 52PZ2MGateway</td>
+    <td>An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs less than 60 CNY in China.</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
+    <td><a href="https://z2m.wiki/">Description</a></td>
+    <td><a href="https://z2m.wiki/">Contact</a></td>
+  </tr> 
+   <tr>
+    <td><img src="../images/CC2652P-Z2M.jpg"></td>
+    <td>XGG 38PZ2MGateway</td>
+    <td>An open source zigbee gateway powered by ESP8266 and CC2538+CC2592PA modules. One costs less than 50 CNY in China.</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin">Router</a></td>
+    <td><a href="https://z2m.wiki/">Description</a></td>
+    <td><a href="https://z2m.wiki/">Contact</a></td>
+    </tr>  
+    <tr>
+    <td><img src="../images/CC2652P-Z2M.jpg"></td>
+    <td>XGG 30Z2MGateway</td>
+    <td>An open source zigbee gateway powered by ESP8266 and CC2530 modules. One costs less than 40 CNY in China.</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin">Router</a></td>
+    <td><a href="https://z2m.wiki/">Description</a></td>
+    <td><a href="https://z2m.wiki/">Contact</a></td>
   </tr>
   <tr>
     <td><img src="../images/cc26x2r1.jpg"></td>

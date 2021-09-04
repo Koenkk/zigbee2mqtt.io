@@ -22,7 +22,7 @@ description: "Integrate your IKEA ICPSHC24-30-IL44-1 via Zigbee2MQTT with whatev
 Factory reset the light bulb ([video](https://www.youtube.com/watch?v=npxOrPxVfe0)).
 After resetting the bulb will automatically connect.
 
-While pairing, keep the bulb close to the CC2531 USB sniffer.
+While pairing, keep the bulb close to the coordinator (adapter).
 
 What works is to use (very) short “on’s” and a little bit longer “off’s”, where you kill the light as soon as the bulb shows signs of turning on.
 Start with bulb on, then off, and then 6 “on’s”, wait in the 6th ON state. (If you try play safe and go for 7 "on's" the reset sometimes fails.)
@@ -41,7 +41,7 @@ This device supports OTA updates, for more information see [OTA updates](../info
 
 ## Exposes
 
-### Light 
+### Light
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
@@ -97,7 +97,7 @@ light:
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
     brightness_scale: 254
     effect: true
-    effect_list: 
+    effect_list:
       - "blink"
       - "breathe"
       - "okay"

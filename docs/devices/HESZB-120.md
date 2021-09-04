@@ -12,7 +12,7 @@ description: "Integrate your Develco HESZB-120 via Zigbee2MQTT with whatever sma
 | Model | HESZB-120  |
 | Vendor  | Develco  |
 | Description | Fire detector with siren |
-| Exposes | temperature, battery, smoke, battery_low, test, warning, linkquality |
+| Exposes | temperature, battery, smoke, battery_low, test, max_duration, alarm, linkquality |
 | Picture | ![Develco HESZB-120](../images/devices/HESZB-120.jpg) |
 
 ## Notes
@@ -62,12 +62,20 @@ Value can be found in the published state on the `test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
 
-### Warning (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": VALUE, "level": VALUE, "strobe": VALUE, "duration": VALUE}}`
-- `mode` (enum): Mode of the warning (sound effect). Allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
-- `level` (enum): Sound level. Allowed values: `low`, `medium`, `high`, `very_high`
-- `strobe` (binary): Turn on/off the strobe (light) during warning. Allowed values: `true` or `false`
-- `duration` (numeric): Duration in seconds of the alarm. 
+### Max_duration (numeric)
+Duration of Siren.
+Value can be found in the published state on the `max_duration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_duration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `600`.
+The unit of this value is `s`.
+
+### Alarm (binary)
+Manual Start of Siren.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
+If value equals `START` alarm is ON, if `OFF` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -126,6 +134,23 @@ binary_sensor:
     value_template: "{{ value_json.test }}"
     payload_on: true
     payload_off: false
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.max_duration }}"
+    unit_of_measurement: "s"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.alarm }}"
+    payload_on: "START"
+    payload_off: "OFF"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "alarm"
 
 sensor:
   - platform: "mqtt"

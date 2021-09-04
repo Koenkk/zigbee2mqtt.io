@@ -136,7 +136,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.pm25 }}"
     unit_of_measurement: "µg/m³"
-    icon: "mdi:air-filter"
+    device_class: "pm25"
     state_class: "measurement"
 
 sensor:
@@ -162,7 +162,7 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.aqi }}"
-    icon: "mdi:air-filter"
+    device_class: "aqi"
     state_class: "measurement"
 
 sensor:
@@ -171,7 +171,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.pm10 }}"
     unit_of_measurement: "µg/m³"
-    icon: "mdi:air-filter"
+    device_class: "pm10"
     state_class: "measurement"
 
 sensor:
