@@ -38,7 +38,7 @@ To set arming mode publish the following payload to `zigbee2mqtt/FRIENDLY_NAME/s
     }
 }
 ```
-Valid `mode` values are `'disarm', 'arm_day_zones', 'arm_night_zones', 'arm_all_zones', 'exit_delay'`
+Valid `mode` values as per ZCL specifications are `disarm`, `arm_day_zones`, `arm_night_zones`, `arm_all_zones`, `exit_delay`, `entry_delay`, `not_ready`, `in_alarm`, `arming_stay`, `arming_night`, `arming_away`.
 ### Arming/Disarming from the keypad
 When an attempt to set arm mode is done on the keypad, Zigbee2MQTT will publish the following payload to topic `zigbee2mqtt/FRIENDLY_NAME`:
 
@@ -46,7 +46,7 @@ When an attempt to set arm mode is done on the keypad, Zigbee2MQTT will publish 
 {
     "action": "arm_all_zones", // This is the example
     "action_code": "123", // The code being entered
-    "action_zone": 0, // The zone being (dis)armed (always 0)
+    "action_zone": 0, // The zone being armed (always 0)
     "action_transaction": 99 // The transaction number
 }
 ```
