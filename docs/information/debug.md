@@ -31,5 +31,13 @@ To enable debug logging in the Zigbee2MQTT Docker container add `-e DEBUG=zigbee
 
 Herdsman debug logs should now sow up on the `Logs` tab for the addon.
 
+To grab all the logs, log in via SSH and execute:
+
+```
+docker logs CONTAINER_ID > log.txt 2>&1
+```
+
+To determine the `CONTAINER_ID` execute `docker ps`.
+
 ## Change log level during runtime
 See [MQTT topics and message structure](../information/mqtt_topics_and_message_structure.md)
