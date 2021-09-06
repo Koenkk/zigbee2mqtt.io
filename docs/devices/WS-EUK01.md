@@ -17,8 +17,9 @@ description: "Integrate your Xiaomi WS-EUK01 via Zigbee2MQTT with whatever smart
 
 ## Notes
 
-None
-
+### Pairing
+Press and hold the button on the device for +- 10 seconds
+(until the blue light starts blinking and stops blinking), release and wait.
 
 ## Exposes
 
