@@ -21,7 +21,10 @@ description: "Integrate your Xiaomi MFKZQ01LM via Zigbee2MQTT with whatever smar
 ### Pairing
 Remove the back plate by using the included tool or a wedge to click it off.
 Press and hold the reset button inside the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join. If this doesn't work, try with a single short button press.
+After this the device will automatically join, but the interview process may not finish.
+If that happens, keep doing short presses to the reset button to keep the light flashing, until the interview process finishes successfully.
+
+
 
 
 ### Troubleshooting: device stops sending messages/disconnects from network
