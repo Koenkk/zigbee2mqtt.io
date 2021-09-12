@@ -18,6 +18,7 @@ const reporting = require('zigbee-herdsman-converters/lib/reporting');
 const extend = require('zigbee-herdsman-converters/lib/extend');
 const e = exposes.presets;
 const ea = exposes.access;
+const tuya = require("zigbee-herdsman-converters/lib/tuya");
 
 const definition = {
     // Since a lot of Tuya devices use the same modelID, but use different data points
@@ -107,7 +108,7 @@ saswell_thermostat: {
     type: ['commandGetData', 'commandSetDataResponse'],
     convert: (model, msg, publish, options, meta) => {
         const dp = msg.data.dp; // First we get the data point ID
-        const value = tuyaGetDataValue(msg.data.datatype, msg.data.data); // This function will take of converting the data to proper JS type
+        const value = tuyaGetDataValue(msg.data.datatype, msg.data.data); // This function will take care of converting the data to proper JS type
 
         switch (dp) {
         case tuya.dataPoints.saswellHeatingSetpoint: // DPID that we added to common
