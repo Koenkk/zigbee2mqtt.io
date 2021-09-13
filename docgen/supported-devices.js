@@ -2,7 +2,7 @@
  * This script generates the supported devices page.
  */
 
-const devices = [...require('zigbee-herdsman-converters').devices];
+const devices = [...require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices];
 const path = require('path');
 const imageBase = path.join(__dirname, '..', 'docs', 'images', 'devices');
 
@@ -77,7 +77,7 @@ const generateTable = (devices) => {
         }
         // eslint-disable-next-line
         const exposes = Array.from(new Set(d.exposes.map(e => e.name ? e.name : e.type).filter(e => e !== 'linkquality' && e !== 'effect'))).join(', ');
-        text += `| [${d.model}](../devices/${utils.normalizeModel(model)}.md) | ${d.vendor} ${description} (${exposes}) | ![${image}](${image}) |\n`;
+        text += `| [${d.model}](../devices/${utils.normalizeModel(model)}.md) | ${d.vendor} ${description} (${exposes}) | <img src="${image}" loading="lazy"> |\n`;
     });
 
     return text;

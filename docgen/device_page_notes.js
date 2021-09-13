@@ -1,5 +1,169 @@
 const notes = [
     {
+        model: ['SMSZB-120'],
+        note: `
+### Warning usage
+Warning only support a single mode, \`burglar\`
+
+Duration of using \`warning\` can be shorter than \`max_duration\` but not longer. If \`max_duration\` are set to 60 seconds, and you try to set \`warning\` with \`duration\` of 90 seconds, the warning will only apply for 60 seconds. Default value of \`max_duration\` are 240 seconds
+
+This device do not support the \`strobe\` and \`strobe_duty_cycle\` functionality
+
+
+### Triggering alarm (using old style \`warning\`)
+This smoke alarm can be triggered manually by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with the payloads:
+
+To start :
+* \`{"warning":{"duration":60,"level":"low","mode":"burglar","strobe":false,"strobe_duty_cycle":0}}\`
+Where:
+- \`duration\`: the number of seconds the alarm will be on
+- \`level\`: \`low\`, \`medium\`, \`high\`, \`very_high\`
+- \`mode\`: \`stop\`, \`burglar\`
+- \`strobe\`: not supported
+- \`strobe_duty_cycle\`: not supported
+
+To stop:
+* \`{"warning":{"duration":60,"level":"low","mode":"stop","strobe":false,"strobe_duty_cycle":0}}\`
+
+### Triggering alarm, Simple
+Can be set by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"alarm": "START"}\` and \`{"alarm": "OFF"}\`
+Set \`max_duration\` from the Zigbee2MQTT UI or by publishing \`{"max_duration": NEW_VALUE}\`
+This alarm are preset to highest volume
+`,
+    },
+    {
+        model: ['SRAC-23B-ZBSR'],
+        note: `
+### Warning usage
+Warning only support a single mode, \`burglar\`
+
+Duration of using \`warning\` can be shorter than \`max_duration\` but not longer. If \`max_duration\` are set to 60 seconds, and you try to set \`warning\` with \`duration\` of 90 seconds, the warning will only apply for 60 seconds. Default value of \`max_duration\` are 300 seconds
+
+This device do not support the \`strobe_duty_cycle\` functionality
+
+
+### Triggering alarm, Advanced
+This siren can be triggered manually by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with the payloads:
+
+To start :
+* \`{"warning":{"duration":60,"level":"low","mode":"burglar","strobe":false,"strobe_duty_cycle":0}}\`
+Where:
+- \`duration\`: the number of seconds the alarm will be on
+- \`level\`: \`low\`, \`medium\`, \`high\`, \`very_high\`
+- \`mode\`: \`stop\`, \`burglar\`
+- \`strobe\`: \`true\`, \`false\`
+- \`strobe_duty_cycle\`: not supported
+
+To stop:
+* \`{"warning":{"duration":60,"level":"low","mode":"stop","strobe":false,"strobe_duty_cycle":0}}\`
+
+### Triggering alarm, Simple
+Can be set by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"alarm": "START"}\` and \`{"alarm": "OFF"}\`
+Set \`max_duration\` from the Zigbee2MQTT UI or by publishing \`{"max_duration": NEW_VALUE}\`
+This alarm are preset to highest volume
+`,
+    },
+    {
+        model: ['SIRZB-110'],
+        note: `
+### Warning usage
+
+Duration of using \`warning\` can be shorter than \`max_duration\` but not longer. If \`max_duration\` are set to 60 seconds, and you try to set \`warning\` with \`duration\` of 90 seconds, the warning will only apply for 60 seconds. Default value of \`max_duration\` are 900 seconds
+
+This device do not support the \`strobe\` and \`strobe_duty_cycle\` functionality
+
+
+### Triggering the alarm, Advanced
+This siren can be triggered manually by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with the payloads:
+
+To start :
+* \`{"warning":{"duration":60,"level":"low","mode":"burglar","strobe":false,"strobe_duty_cycle":0}}\`
+Where:
+- \`duration\`: the number of seconds the alarm will be on
+- \`level\`: \`low\`, \`medium\`, \`high\`, \`very_high\`
+- \`mode\`: \`stop\`, \`burglar\`, \`fire\`, \`emergency\`, \`police_panic\`, \`fire_panic\`, \`emergency_panic\`
+- \`strobe\`: not supported
+- \`strobe_duty_cycle\`: not supported
+
+To stop:
+* \`{"warning":{"duration":60,"level":"low","mode":"stop","strobe":false,"strobe_duty_cycle":0}}\`
+
+
+### Triggering alarm, Simple
+Can be set by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"alarm": "START"}\` and \`{"alarm": "OFF"}\`
+Set \`max_duration\` from the Zigbee2MQTT UI or by publishing \`{"max_duration": NEW_VALUE}\`
+This alarm are preset to highest volume and using the mode \`police_panic\`
+
+### Squawk
+Squawk are normally used to indicate activation and deactivation of an alarm system
+
+Examples:
+\`{"squawk":{"level":"low","mode":"system_is_sarmed","strobe":false}}\`
+\`{"squawk":{"level":"low","mode":"system_is_disarmed","strobe":false}}\`
+`,
+    },
+    {
+        model: ['ROB_200-017-0'],
+        note: `
+### Pairing
+Factory reset by press & hold the power button for 3 seconds. The LED is then starting to blink during pairing process.
+`,
+    },
+    {
+        model: ['MCCGQ12LM'],
+        note: `
+### Pairing
+Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
+After this the device will automatically join. If this doesn't work, try with a single short button press.
+
+
+### Recommendation
+If the contact is being made via a horizontal slide (e.g. the sensor is placed at the top of a sliding door), the sensor may provide three or more messages with conflicting states. To get around this issue, consider using the \`debounce\` option in your device specific configuration.
+
+E.g. (devices.yaml)
+
+{% raw %}
+\`\`\`yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_sensor
+    debounce: 1
+\`\`\`
+{% endraw %}
+`,
+    },
+    {
+        model: ['NCZ-3043-HA'],
+        note: `
+### Pairing
+Press the button on the bottom of the sensor 10 times to reset.
+After this the device will automatically join.
+`,
+    },
+    {
+        model: ['TS0121_plug'],
+        note: `
+### Pairing
+Pair this device with a long press on the on/off button. The button will flash to indicate it's in pairing mode. When the flashing stops it should be paired.
+`,
+    },
+    {
+        model: ['TS0601_switch_2_gang'],
+        note: `
+### Pairing
+To pair press any button 5 times and on the 6th time hold it untill you hear beep, then release button and wait for pairing process.
+`,
+    },
+    {
+        model: ['SR-ZG9001K12-DIM-Z4'],
+        note: `
+### Pairing
+Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press the All Off button. The Status LED will blink 5 times quickly to indicate a successful pairing.
+
+### Resetting
+Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press 5 times the All On button. The Status LED will blink 3 times to indicate successful reset.
+`,
+    },
+    {
         model: ['VOCKQJK11LM'],
         note: `
 ### Pairing
@@ -57,7 +221,7 @@ Long press the button on the device for about 5 seconds, wait few seconds until 
         note: `
 ### Pairing
 
-Pair the switch to Zigbee2MQTT by pressing the pair button (found under the back cover next to the battery) 4 times in a row. The red light on the side should flash a few times and then turn off. After a few seconds it turns back on and pulsate. When connected, the light turns off.
+Pair the switch to Zigbee2MQTT by pressing the pair button (found under the back cover next to the battery) 4 times in a row within 5 seconds. The red light on the side should flash a few times and then turn off. After a few seconds it turns back on and pulsate. When connected, the light turns off.
 `,
     },
     {
@@ -478,7 +642,7 @@ Long-press this button 10s --> unpair mode, all light(s) will blink 4 times
 `,
     },
     {
-        model: ['WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM_rev1', 'WXKG03LM_rev2', 'WXKG06LM', 'WXKG02LM_rev1', 'WXKG02LM_rev2', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'WXKG07LM', 'QBKG21LM', 'QBKG22LM', 'E1743', 'E1766', 'ptvo.switch', 'DIYRuZ_R8_8', 'HGZB-1S', 'HGZB-02S', 'HGZB-045', 'IM6001-BTP01', 'AV2010/34', 'HS1EB/HS1EB-E', 'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'ZGRC-KEY-013', '6ARCZABZH', 'MEAZON_BIZY_PLUG', 'MEAZON_DINRAIL', '2AJZ4KPKEY', 'TERNCY-PP01', 'TERNCY-SD01'],
+        model: ['WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM_rev1', 'WXKG03LM_rev2', 'WXKG06LM', 'WXKG02LM_rev1', 'WXKG02LM_rev2', 'QBKG04LM', 'QBKG11LM', 'QBKG03LM', 'QBKG12LM', 'WXKG07LM', 'QBKG21LM', 'QBKG22LM', 'E1743', 'E1766', 'ptvo.switch', 'DIYRuZ_R8_8', 'HGZB-1S', 'HGZB-02S', 'HGZB-045', 'IM6001-BTP01', 'AV2010/34', 'HS1EB/HS1EB-E', 'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'SR-ZG9001K12-DIM-Z4', '6ARCZABZH', 'MEAZON_BIZY_PLUG', 'MEAZON_DINRAIL', '2AJZ4KPKEY', 'TERNCY-PP01', 'TERNCY-SD01'],
         note: `
 ### Deprecated click event
 By default this device exposes a deprecated \`click\` event. It's recommended to use the \`action\` event instead.
@@ -658,19 +822,6 @@ like you are trying to control your lights. It will prevent the device
 from going to sleep and ensure successful pairing. In case the dimmer was
 recognized but no actions seems to be detected, try to restart Zigbee2MQTT.
 See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koenkk/zigbee2mqtt/issues/620).
-`,
-    },
-    {
-        model: ['SMSZB-120'],
-        note: `
-### Triggering alarm
-This smoke alarm can be triggered manually by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with the payloads:
-
-To start (Change \`duration\` in number of seconds to what you need):
-* \`{"warning": {"mode": "burglar", "level": "high", "strobe": false, "duration": 300}}\`
-
-To stop:
-* \`{"warning": {"mode": "stop", "level": "low", "strobe": false, "duration": 300}}\`
 `,
     },
     {
@@ -1815,10 +1966,10 @@ Factory reset the plug (hold the switch button for >10sec). After resetting the 
 `,
     },
     {
-        model: 'AC0251100NJ/AC0251700NJ',
+        model: 'AC0251100NJ/AC0251600NJ/AC0251700NJ',
         note: `
 ### Pairing
-For the OSRAM Smart+ Switch Mini (AC0251100NJ/AC0251700NJ) hold the Middle and Arrow Down Buttons for 10 Seconds
+For the OSRAM Smart+ Switch Mini (AC0251100NJ/AC0251600NJ/AC0251700NJ) hold the Middle and Arrow Down Buttons for 10 Seconds
 to Reset the Device. Hold the Middle and Arrow Up Buttons for 3 Seconds to connect.
 If the Switch is connected hold Middle and Arrow Up Buttons for 3 Seconds to disconnect.
 `,
@@ -1937,7 +2088,7 @@ See also the [VIDEO: Factory reset a Hue bulb with Hue dimmer switch](https://ww
 
 #### Bluetooth (if supported by device)
 Install the Philips Hue Bluetooth app for [Android](https://play.google.com/store/apps/details?id=com.signify.hue.blue)
-or [iOS](https://apps.apple.com/us/app/philips-hue-bluetooth/id1456604186). You can use the app to trigger a factory reset on a paired light. (Note: The light will only be in bluetooth pairing (Note: The light will only be in bluetooth pairing
+or [iOS](https://apps.apple.com/us/app/philips-hue-bluetooth/id1456604186). You can use the app to trigger a factory reset on a paired light. (Note: The light will only be in bluetooth pairing
 mode for a couple of minutes after power-on)
 
 #### TRADFRI remote control
@@ -2100,17 +2251,17 @@ Press and hold this button for 10-20 seconds and release the button.
 After that the remote should show up as a paired device.
 
 ### Groups binding
-This remote is able to deal with 4 groups:
-group0 = All three leds lit
-group1 = first led lit
-group2 = second led lit
-group3 = third let lit
 
-you can direct bind each remote group with a different Zigbee group, however there is a caveat: the four Zigbee groups have to use consecutive group ids.
-The group you will bind (using the frontend or [MQTT command](../information/binding.html)) will be bound to group0 of the remote.
-The 3 consecutive groups will be bound to group1 to group3.
+This remote is able to deal with 4 ZigBee groups:
 
-This means that you probably should carefully [define your groups id](../information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgeconfigadd_group)  when creating them.
+* group0 = All three leds lit (no support for \`on\`/\`off\` actions and scene activation)
+* group1 = first led lit
+* group2 = second led lit
+* group3 = third let lit
+
+You can direct bind each remote group with a different Zigbee group, however there is a caveat: the four Zigbee groups have to use **consecutive group ids**. When setting up the binding you will only need to bind group0 to the remote (using the frontend or [MQTT command](../information/binding.html)). The 3 consecutive groups will be bound to group1 to group3 automagically. Only the binding for group0 will be listed for the device within Zigbee2MQTT (\`genLevelCtrl\` and \`lightingColorCtrl\` clusters).
+
+This means that you probably should carefully [define your groups id](../information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgeconfigadd_group)  when creating them. When creating the binding you need to wake up the device. The most reliable way is to pull the battery, press any button to drain remaining power and insert it back right when sending the binding request to the remote. You do not need to bother with the default tint action groups (16388/16389/16390), they will be overwritten as soon as the binding was successful.
 
 It is possible to bind to a device instead of a group. The device will be bound to group0.
 In this case, group0 to group3 will not be usable.
@@ -2414,6 +2565,7 @@ few more seconds, then release. After this, the outlet will automatically connec
 ### Pairing
 To factory reset the TRADFRI drivers use a
 small pin or paperclip to push the reset button once.
+NB: you HAVE to put the device VERY close to the zigbee device, otherwise it won't be able to detect.
 `,
     },
     {
@@ -2425,7 +2577,7 @@ small pin or paperclip to push the reset button once.
 Factory reset the light bulb ([video](https://www.youtube.com/watch?v=npxOrPxVfe0)).
 After resetting the bulb will automatically connect.
 
-While pairing, keep the bulb close to the CC2531 USB sniffer.
+While pairing, keep the bulb close to the coordinator (adapter).
 
 What works is to use (very) short “on’s” and a little bit longer “off’s”, where you kill the light as soon as the bulb shows signs of turning on.
 Start with bulb on, then off, and then 6 “on’s”, wait in the 6th ON state. (If you try play safe and go for 7 "on's" the reset sometimes fails.)
@@ -2769,6 +2921,7 @@ Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
 
 You may have to unpair the switch from an existing coordinator before the pairing process will start.
+If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
 `,
     },
     {
@@ -2863,14 +3016,14 @@ This device has various limitations:
             'WXKG01LM', 'WXKG11LM', 'WXKG12LM', 'WXKG03LM_rev1', 'WXKG03LM_rev2', 'WXKG06LM', 'WXKG02LM_rev1', 'WXKG02LM_rev2', 'QBKG04LM', 'QBKG11LM',
             'QBKG03LM', 'QBKG12LM', 'WXKG07LM', 'QBKG21LM', 'QBKG22LM', 'E1743', 'E1766', 'ptvo.switch',
             'DIYRuZ_R8_8', 'HGZB-1S', 'HGZB-02S', 'HGZB-045', 'IM6001-BTP01', 'AV2010/34', 'HS1EB/HS1EB-E',
-            'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'ZGRC-KEY-013',
+            'AIRAM-CTR.U', 'ICZB-KPD14S', 'ICZB-KPD18S', 'N2G-SP', 'SR-ZG9001K12-DIM-Z4',
             'MEAZON_BIZY_PLUG', 'MEAZON_DINRAIL', '2AJZ4KPKEY', 'TERNCY-PP01', 'TERNCY-SD01',
             'ICZB-KPD14S', 'ICZB-KPD18S', '067773', 'E1744', 'ICTC-G-1', 'MFKZQ01LM', '07046L', 'SWO-KEF1PA',
             'QBKG25LM', 'TS0218', 'DNCKATSW002', 'DNCKATSW003', 'DNCKATSW004', 'AIRAM-CTR.U', '4058075816459',
-            '73743', 'AC0251100NJ/AC0251700NJ', 'WXCJKG13LM', 'WXCJKG12LM', 'WXCJKG11LM', '8718699693985', 'E1524/E1810',
+            '73743', 'AC0251100NJ/AC0251600NJ/AC0251700NJ', 'WXCJKG13LM', 'WXCJKG12LM', 'WXCJKG11LM', '8718699693985', 'E1524/E1810',
             '6735/6736/6737', 'ZNMS13LM', 'ZNMS12LM', 'ZNMS11LM', 'InstaRemote', 'LZL4BWHL01', 'MLI-404011', 'HS1RC-N', 'HS1RC-EM',
             '81825', 'ZYCT-202', 'STS-PRS-251', 'Z3-1BRL', 'AV2010/32', 'U86KWF-ZPSJ', '1TST-EU', 'UK7004240',
-            'SLR1b', 'SLR2', 'RC-2000WH', '3157100', '014G2461', 'ST218', 'STZB402', 'SMT402', 'SMT402AD', 'TH1124ZB', 'TH1300ZB',
+            'RC-2000WH', '3157100', '014G2461', 'ST218', 'STZB402', 'SMT402', 'SMT402AD', 'TH1124ZB', 'TH1300ZB',
             'TH1500ZB', 'Zen-01-W', 'TH1400ZB', 'TH1123ZB', 'ZK03840', 'SPZB0001', 'WV704R0A0902', 'TERNCY-SD01', 'C4', 'HT-08', 'HT-10',
             '07703L', 'SEA801-Zigbee/SEA802-Zigbee', '6ARCZABZH', '324131092621', '929002398602',
         ],
@@ -3325,41 +3478,89 @@ After this command thermostat responds with two messages. One for calibration ch
 `,
     },
     {
-        model: ['3400-D', 'URC4450BC0-X-R'],
+        model: ['3400-D', 'XHK1-UE', 'XHK1-TC'],
         note: `
-### (Dis)arming
-To (dis)arm the keypad send to \`zigbee2mqtt/[DEVICE_FRIENDLY_NAME/set\` payload:
+### Arming/Disarming from the server
+To set arming mode publish the following payload to \`zigbee2mqtt/FRIENDLY_NAME/set\` topic:
 
 \`\`\`js
 {
     "arm_mode": {
-    "mode": "arm_all_zones" // Mode "arm_all_zones" or "disarm"
+        "mode": "arm_all_zones"
     }
 }
 \`\`\`
-
-### (Dis)arming from the keypad
-When an attempt for (dis)arm is done on the keypad, Zigbee2MQTT will publish the following payload to topic \`zigbee2mqtt/[DEVICE_FRIENDLY_NAME\`:
+Valid \`mode\` values as per ZCL specifications are \`disarm\`, \`arm_day_zones\`, \`arm_night_zones\`, \`arm_all_zones\`, \`exit_delay\`, \`entry_delay\`, \`not_ready\`, \`in_alarm\`, \`arming_stay\`, \`arming_night\`, \`arming_away\`.
+### Arming/Disarming from the keypad
+When an attempt to set arm mode is done on the keypad, Zigbee2MQTT will publish the following payload to topic \`zigbee2mqtt/FRIENDLY_NAME\`:
 
 \`\`\`js
 {
-    "action": "arm_all_zones", // OR "disarm" when being disarmed
+    "action": "arm_all_zones", // This is the example
     "action_code": "123", // The code being entered
-    "action_zone": 0, // The zone being (dis)armed (always 0)
+    "action_zone": 0, // The zone being armed (always 0)
     "action_transaction": 99 // The transaction number
 }
 \`\`\`
 
-In case you want to confirm this action (e.g. \`action_code\` value is OK), respond to it by sending to \`zigbee2mqtt/[DEVICE_FRIENDLY_NAME/set\` payload:
+The automation server must validate the request and send a notification to the keypad, confirming or denying the request.
+
+Do so by sending the following payload to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
 
 \`\`\`js
 {
     "arm_mode": {
-    "transaction": 99, // Transaction number (take this value from the (dis)arm attempt property \`action_transaction\`)
-    "mode": "arm_all_zones" // Mode "arm_all_zones", "disarm" or "exit_delay" (take this value from the (dis)arm attempt property \`action\`)
+        "transaction": 99, // Transaction number (this must be the same as the keypad request \`action_transaction\`)
+        "mode": "arm_all_zones" // Mode (this must be the same as the keypad request \`action\`)
     }
 }
 \`\`\`
+Valid \`mode\` values are \`disarm\`, \`arm_day_zones\`, \`arm_night_zones\`, \`arm_all_zones\`, \`invalid_code\`, \`not_ready\`, \`already_disarmed\`
+
+The automation server must follow the notification with an actual change to the correct arm mode. For the example above, the server should respond with \`exit_delay\`, count the elapsed time (e.g 30 secs), then change mode again to \`arm_all_zones\` (see "Arming/Disarming from the server" section above)
+`,
+    },
+    {
+        model: ['KEYPAD001'],
+        note: `
+### Arming/Disarming from the server
+To set arming mode publish the following payload to \`zigbee2mqtt/FRIENDLY_NAME/set\` topic:
+
+\`\`\`js
+{
+    "arm_mode": {
+        "mode": "arm_all_zones"
+    }
+}
+\`\`\`
+Valid \`mode\` values as per ZCL specifications are \`disarm\`, \`arm_day_zones\`, \`arm_night_zones\`, \`arm_all_zones\`, \`exit_delay\`, \`entry_delay\`, \`not_ready\`, \`in_alarm\`, \`arming_stay\`, \`arming_night\`, \`arming_away\`.
+### Arming/Disarming from the keypad
+When an attempt to set arm mode is done on the keypad, Zigbee2MQTT will publish the following payload to topic \`zigbee2mqtt/FRIENDLY_NAME\`:
+
+\`\`\`js
+{
+    "action": "arm_all_zones", // This is the example
+    "action_code": "123", // The code being entered
+    "action_zone": 0, // The zone being armed (always 0)
+    "action_transaction": 99 // The transaction number
+}
+\`\`\`
+
+The automation server must validate the request and send a notification to the keypad, confirming or denying the request.
+
+Do so by sending the following payload to \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`js
+{
+    "arm_mode": {
+        "transaction": 99, // Transaction number (this must be the same as the keypad request \`action_transaction\`)
+        "mode": "arm_all_zones" // Mode (this must be the same as the keypad request \`action\`)
+    }
+}
+\`\`\`
+Valid \`mode\` values are \`disarm\`, \`arm_day_zones\`, \`arm_all_zones\`, \`invalid_code\`, \`not_ready\`, \`already_disarmed\`
+
+The automation server must follow the notification with an actual change to the correct arm mode. For the example above, the server should respond with \`exit_delay\`, count the elapsed time (e.g 30 secs), then change mode again to \`arm_all_zones\` (see "Arming/Disarming from the server" section above)
 `,
     },
     {
@@ -4362,7 +4563,163 @@ While pairing, keep the remote close to the coordinator.
         note: `
 ### AC Power
 If you are using the AC wall adapter, the battery level will always stay within the range of 25-35% as it is continually drawing power from the outlet.
-The battery level indicator is only relevant to if you are using the solar panel.`,
+The battery level indicator is only relevant to if you are using the solar panel.
+`,
+    },
+    {
+        model: ['SLR1', 'SLR1b'],
+        note: `
+### How to start/edit native boost
+The receiver has support for native Boost, which will allow to display the remaining time on a compatible remote.
+
+To start one, or modify an already active one, send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`js
+{
+   "system_mode":"emergency_heating",
+   "temperature_setpoint_hold_duration":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold":"1",
+   "occupied_heating_setpoint":"18"  // Replace with desired temperature. Between 5 and 32 C
+}
+\`\`\`
+Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
+
+Also, the native boost can be used as a method to pause the heating too. To do so, set the temperature to a low value.
+
+### Set heating mode to ON
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`js
+{
+   "system_mode":"heat",
+   "temperature_setpoint_hold":"1",
+   "occupied_heating_setpoint":"20" // Replace with desired temperature. Between 5 and 32 C
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration\` automatically changes to \`65535\` which means \`undefined\` (indefinite).
+
+This will also stop any native boosts that are currently active.
+
+
+### Set heating mode to OFF
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`js
+{
+   "system_mode":"off",
+   "temperature_setpoint_hold":"0"
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration\` automatically changes to \`0\` which means \`not set\`. \`occupied_heating_setpoint\` automatically changes to \`1\` degree C.
+
+This will also stop any native boosts that are currently active.
+`,
+    },
+    {
+        model: ['SLR2', 'SLR2b'],
+        note: `
+### Sending payloads on dual channel receivers
+As the receiver makes use of two endpoints, \`water\` and \`heat\` there are two methods of sending payloads, both equally valid. For example, the \`heat\` endpoint:
+
+Topic \`zigbee2mqtt/FRIENDLY_NAME/set\`
+\`\`\`js
+{
+    "system_mode_heat":"heat"
+}
+\`\`\`
+
+Topic \`zigbee2mqtt/FRIENDLY_NAME/heat/set\`
+\`\`\`json
+{
+    "system_mode":"heat"
+}
+\`\`\`
+
+Notice that \`heat\` must be part of either the topic or the attribute. With that in mind, adjust the commands in this documentation based on your preferred style.
+
+### How to start/edit native boost (heat endpoint)
+The receiver has support for native Boost, which will allow to display the remaining time on a compatible remote.
+
+To start one, or modify an already active one, send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`js
+{
+   "system_mode_heat":"emergency_heating",
+   "temperature_setpoint_hold_duration_heat":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold_heat":"1",
+   "occupied_heating_setpoint_heat":"18"  // Replace with desired temperature. Between 5 and 32 C
+}
+\`\`\`
+Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
+
+Also, the native boost can be used as a method to pause the heating too. To do so, set the temperature to a low value.
+
+### Set heating mode to ON (heat endpoint)
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`js
+{
+   "system_mode_heat":"heat",
+   "temperature_setpoint_hold_heat":"1",
+   "occupied_heating_setpoint_heat":"20" // Replace with desired temperature. Between 5 and 32 C
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration_heat\` automatically changes to \`65535\` which means \`undefined\` (indefinite).
+
+This will also stop any native boosts that are currently active.
+
+
+### Set heating mode to OFF (heat endpoint)
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`js
+{
+   "system_mode_heat":"off",
+   "temperature_setpoint_hold_heat":"0"
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration_heat\` automatically changes to \`0\` which means \`not set\`. \`occupied_heating_setpoint_heat\` automatically changes to \`1\` degree C.
+
+This will also stop any native boosts that are currently active.
+
+### How to start/edit native boost (water endpoint)
+The receiver has support for native Boost, which will allow to display the remaining time on a compatible remote.
+
+To start one, or modify an already active one, send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+
+\`\`\`js
+{
+   "system_mode_water":"emergency_heating",
+   "temperature_setpoint_hold_duration_water":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold_water":"1"
+}
+\`\`\`
+Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
+
+### Set heating mode to ON (water endpoint)
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`js
+{
+   "system_mode_water":"heat",
+   "temperature_setpoint_hold_water":"1"
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration_heat\` automatically changes to \`65535\` which means \`undefined\` (indefinite).
+
+This will also stop any native boosts that are currently active.
+
+
+### Set heating mode to OFF (water endpoint)
+Send the following payload to the topic \`zigbee2mqtt/FRIENDLY_NAME/set\`:
+\`\`\`js
+{
+   "system_mode_water":"off",
+   "temperature_setpoint_hold_water":"0"
+}
+\`\`\`
+Note: You will also notice that \`temperature_setpoint_hold_duration_heat\` automatically changes to \`0\` which means \`not set\`.
+
+This will also stop any native boosts that are currently active.
+
+### Local and occupied temperature (water endpoint)
+The water endpoint functions as what could be considered an on/off switch based on \`system_mode_water\`. Because of that, the device uses fixed values for temperature. \`local_temperature_water\` is always 21 and \`occupied_heating_setpoint_water\` is always 22.
+`,
     },
 ];
 

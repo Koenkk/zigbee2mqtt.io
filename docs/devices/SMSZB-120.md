@@ -18,14 +18,33 @@ description: "Integrate your Develco SMSZB-120 via Zigbee2MQTT with whatever sma
 ## Notes
 
 
-### Triggering alarm
+### Warning usage
+Warning only support a single mode, `burglar`
+
+Duration of using `warning` can be shorter than `max_duration` but not longer. If `max_duration` are set to 60 seconds, and you try to set `warning` with `duration` of 90 seconds, the warning will only apply for 60 seconds. Default value of `max_duration` are 240 seconds
+
+This device do not support the `strobe` and `strobe_duty_cycle` functionality
+
+
+### Triggering alarm (using old style `warning`)
 This smoke alarm can be triggered manually by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with the payloads:
 
-To start (Change `duration` in number of seconds to what you need):
-* `{"warning": {"mode": "burglar", "level": "high", "strobe": false, "duration": 300}}`
+To start :
+* `{"warning":{"duration":60,"level":"low","mode":"burglar","strobe":false,"strobe_duty_cycle":0}}`
+Where:
+- `duration`: the number of seconds the alarm will be on
+- `level`: `low`, `medium`, `high`, `very_high`
+- `mode`: `stop`, `burglar`
+- `strobe`: not supported
+- `strobe_duty_cycle`: not supported
 
 To stop:
-* `{"warning": {"mode": "stop", "level": "low", "strobe": false, "duration": 300}}`
+* `{"warning":{"duration":60,"level":"low","mode":"stop","strobe":false,"strobe_duty_cycle":0}}`
+
+### Triggering alarm, Simple
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": "START"}` and `{"alarm": "OFF"}`
+Set `max_duration` from the Zigbee2MQTT UI or by publishing `{"max_duration": NEW_VALUE}`
+This alarm are preset to highest volume
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*

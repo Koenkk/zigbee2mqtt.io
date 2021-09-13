@@ -8,7 +8,7 @@ const YAML = require('json2yaml');
 const HomeassistantExtension = require('zigbee2mqtt/dist/extension/homeassistant');
 const homeassistant = new HomeassistantExtension(null, null, null, null, {on: () => {}});
 const assert = require('assert');
-const devices = require('zigbee-herdsman-converters').devices;
+const devices = require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices;
 const path = require('path');
 const imageBase = path.join(__dirname, '..', 'docs', 'images', 'devices');
 

@@ -1,19 +1,19 @@
 ---
-title: "Xfinity XHK1-TC control via MQTT"
-description: "Integrate your Xfinity XHK1-TC via Zigbee2MQTT with whatever smart home
+title: "Technicolor XHK1-TC control via MQTT"
+description: "Integrate your Technicolor XHK1-TC via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/XHK1-TC.md)*
 
-# Xfinity XHK1-TC
+# Technicolor XHK1-TC
 
 | Model | XHK1-TC  |
-| Vendor  | Xfinity  |
-| Description | Alarm security keypad |
-| Exposes | battery, voltage, occupancy, battery_low, tamper, presence, contact, action_code, action_zone, temperature, action, linkquality |
-| Picture | ![Xfinity XHK1-TC](../images/devices/XHK1-TC.jpg) |
+| Vendor  | Technicolor  |
+| Description | Xfinity security keypad |
+| Exposes | battery, voltage, occupancy, battery_low, tamper, presence, contact, temperature, action_code, action_transaction, action_zone, action, linkquality |
+| Picture | ![Technicolor XHK1-TC](../images/devices/XHK1-TC.jpg) |
 
 ## Notes
 
@@ -26,6 +26,46 @@ To control the precision based on the temperature value set it to e.g. `{30: 0, 
 when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1. Precision will take into affect with next report of device.
 * `temperature_calibration`: Allows to manually calibrate temperature values,
 e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
+
+
+### Arming/Disarming from the server
+To set arming mode publish the following payload to `zigbee2mqtt/FRIENDLY_NAME/set` topic:
+
+```js
+{
+    "arm_mode": {
+        "mode": "arm_all_zones"
+    }
+}
+```
+Valid `mode` values as per ZCL specifications are `disarm`, `arm_day_zones`, `arm_night_zones`, `arm_all_zones`, `exit_delay`, `entry_delay`, `not_ready`, `in_alarm`, `arming_stay`, `arming_night`, `arming_away`.
+### Arming/Disarming from the keypad
+When an attempt to set arm mode is done on the keypad, Zigbee2MQTT will publish the following payload to topic `zigbee2mqtt/FRIENDLY_NAME`:
+
+```js
+{
+    "action": "arm_all_zones", // This is the example
+    "action_code": "123", // The code being entered
+    "action_zone": 0, // The zone being armed (always 0)
+    "action_transaction": 99 // The transaction number
+}
+```
+
+The automation server must validate the request and send a notification to the keypad, confirming or denying the request.
+
+Do so by sending the following payload to `zigbee2mqtt/FRIENDLY_NAME/set`:
+
+```js
+{
+    "arm_mode": {
+        "transaction": 99, // Transaction number (this must be the same as the keypad request `action_transaction`)
+        "mode": "arm_all_zones" // Mode (this must be the same as the keypad request `action`)
+    }
+}
+```
+Valid `mode` values are `disarm`, `arm_day_zones`, `arm_night_zones`, `arm_all_zones`, `invalid_code`, `not_ready`, `already_disarmed`
+
+The automation server must follow the notification with an actual change to the correct arm mode. For the example above, the server should respond with `exit_delay`, count the elapsed time (e.g 30 secs), then change mode again to `arm_all_zones` (see "Arming/Disarming from the server" section above)
 
 
 
@@ -74,19 +114,26 @@ Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
 
-### Action_code (numeric)
-Value can be found in the published state on the `action_code` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Action_zone (text)
-Value can be found in the published state on the `action_zone` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
+
+### Action_code (numeric)
+Pin code introduced..
+Value can be found in the published state on the `action_code` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Action_transaction (numeric)
+Last action transaction number..
+Value can be found in the published state on the `action_transaction` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Action_zone (text)
+Alarm zone. Default value 0.
+Value can be found in the published state on the `action_zone` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Action (enum)
 Triggered action (e.g. a button click).
@@ -175,22 +222,28 @@ sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.temperature }}"
+    unit_of_measurement: "°C"
+    device_class: "temperature"
+    state_class: "measurement"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action_code }}"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.action_zone }}"
+    value_template: "{{ value_json.action_transaction }}"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.temperature }}"
-    unit_of_measurement: "°C"
-    device_class: "temperature"
-    state_class: "measurement"
+    value_template: "{{ value_json.action_zone }}"
 
 sensor:
   - platform: "mqtt"
