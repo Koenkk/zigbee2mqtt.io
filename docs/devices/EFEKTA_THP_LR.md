@@ -16,6 +16,9 @@ description: "DIY outdoor long-range sensor for temperature, humidity and atmosp
 
 ## Notes
 
+### Build guide
+Instructions on how to build this device can be found [here](https://github.com/smartboxchannel/Outdoor-long-range-sensor-for-temperature-humidity-and-atmospheric-pressure-Zigbee)
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
