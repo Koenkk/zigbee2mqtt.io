@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG25LM via Zigbee2MQTT with whatever smart
 | Model | QBKG25LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 3 gang smart wall switch (no neutral wire) |
-| Exposes | switch (state), power_outage_memory, action, linkquality |
+| Exposes | switch (state), power_outage_memory, operation_mode, action, linkquality |
 | Picture | ![Xiaomi QBKG25LM](../images/devices/QBKG25LM.jpg) |
 
 ## Notes
@@ -23,51 +23,12 @@ Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
 
 You may have to unpair the switch from an existing coordinator before the pairing process will start.
+If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
-
-
-### Decoupled mode
-Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
-This might be useful to assign some custom actions to buttons and control relay remotely.
-This command also allows to redefine which button controls which relay for the double switch (not supported for QBKG25LM).
-
-Topic `zigbee2mqtt/FRIENDLY_NAME/system/set` should be used to modify operation mode.
-
-**NOTE:** For QBKG25LM instead of `system` use `left`, `center` or `right` and leave out the `button` property in the payload.
-
-Payload:
-```js
-{
-  "operation_mode": {
-    "button": "single"|"left"|"right", // Always use single for a single switch
-    "state": "VALUE"
-  }
-}
-```
-
-Values                | Description
-----------------------|---------------------------------------------------------
-`control_relay`       | Button directly controls relay (for single switch and QBKG25LM)
-`control_left_relay`  | Button directly controls left relay (for double switch, not supported for QBKG25LM)
-`control_right_relay` | Button directly controls right relay (for double switch, not supported for QBKG25LM)
-`decoupled`           | Button doesn't control any relay
-
-`zigbee2mqtt/FRIENDLY_NAME/system/get` to read current mode.
-
-Payload:
-```js
-{
-  "operation_mode": {
-    "button": "single"|"left"|"right" // Always use single for a single switch
-  }
-}
-```
-
-Response will be sent to `zigbee2mqtt/FRIENDLY_NAME`, example: `{"operation_mode_right":"control_right_relay"}`
 
 
 ### Power outage memory
@@ -104,6 +65,27 @@ The current state of this switch is in the published state under the `state_cent
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_center": "ON"}`, `{"state_center": "OFF"}` or `{"state_center": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_center": ""}`.
 
+### Operation_mode (enum, left endpoint)
+Decoupled mode for left button.
+Value can be found in the published state on the `operation_mode_left` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_left": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_left": NEW_VALUE}`.
+The possible values are: `control_relay`, `decoupled`.
+
+### Operation_mode (enum, center endpoint)
+Decoupled mode for center button.
+Value can be found in the published state on the `operation_mode_center` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_center": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_center": NEW_VALUE}`.
+The possible values are: `control_relay`, `decoupled`.
+
+### Operation_mode (enum, right endpoint)
+Decoupled mode for right button.
+Value can be found in the published state on the `operation_mode_right` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_right": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": NEW_VALUE}`.
+The possible values are: `control_relay`, `decoupled`.
+
 ### Switch (right endpoint)
 The current state of this switch is in the published state under the `state_right` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
@@ -138,13 +120,15 @@ switch:
     value_template: "{{ value_json.state_left }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/left/set"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.power_outage_memory }}"
-    payload_on: true
-    payload_off: false
+    value_template: "{% if value_json.power_outage_memory %} true {% else %} false {% endif %}"
+    payload_on: "true"
+    payload_off: "false"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "power_outage_memory"
 
 switch:
   - platform: "mqtt"
@@ -154,6 +138,69 @@ switch:
     payload_on: "ON"
     value_template: "{{ value_json.state_center }}"
     command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/center/set"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode_left }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode_left }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/left/set"
+    command_topic_postfix: "operation_mode_left"
+    options: 
+      - "control_relay"
+      - "decoupled"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode_center }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode_center }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/center/set"
+    command_topic_postfix: "operation_mode_center"
+    options: 
+      - "control_relay"
+      - "decoupled"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode_right }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode_right }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/right/set"
+    command_topic_postfix: "operation_mode_right"
+    options: 
+      - "control_relay"
+      - "decoupled"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 switch:
   - platform: "mqtt"
@@ -169,6 +216,7 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action }}"
+    enabled_by_default: true
     icon: "mdi:gesture-double-tap"
 
 sensor:
@@ -177,7 +225,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -185,6 +235,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:update"
     value_template: "{{ value_json['update']['state'] }}"
+    enabled_by_default: false
 
 binary_sensor:
   - platform: "mqtt"
@@ -193,6 +244,7 @@ binary_sensor:
     payload_on: true
     payload_off: false
     value_template: "{{ value_json.update_available}}"
+    enabled_by_default: false
 ```
 {% endraw %}
 

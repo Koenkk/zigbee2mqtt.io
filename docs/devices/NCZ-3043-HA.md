@@ -17,6 +17,11 @@ description: "Integrate your Nyce NCZ-3043-HA via Zigbee2MQTT with whatever smar
 
 ## Notes
 
+
+### Pairing
+Press the button on the bottom of the sensor 10 times to reset.
+After this the device will automatically join.
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
@@ -103,6 +108,7 @@ sensor:
     value_template: "{{ value_json.humidity }}"
     unit_of_measurement: "%"
     device_class: "humidity"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -111,6 +117,7 @@ sensor:
     value_template: "{{ value_json.temperature }}"
     unit_of_measurement: "°C"
     device_class: "temperature"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -119,6 +126,7 @@ sensor:
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
     device_class: "battery"
+    state_class: "measurement"
 
 binary_sensor:
   - platform: "mqtt"
@@ -143,7 +151,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

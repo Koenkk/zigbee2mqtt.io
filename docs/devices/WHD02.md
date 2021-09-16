@@ -62,6 +62,22 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.power_on_behavior }}"
+    enabled_by_default: false
+    icon: "mdi:power-settings"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.power_on_behavior }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "power_on_behavior"
+    options: 
+      - "off"
+      - "previous"
+      - "on"
+    enabled_by_default: false
+    icon: "mdi:power-settings"
 
 sensor:
   - platform: "mqtt"
@@ -69,7 +85,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

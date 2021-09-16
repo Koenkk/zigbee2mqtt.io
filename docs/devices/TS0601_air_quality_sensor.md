@@ -49,7 +49,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Co2 (numeric)
-The measured CO2 (carbon monoxide) value.
+The measured CO2 (carbon dioxide) value.
 Value can be found in the published state on the `co2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ppm`.
@@ -86,6 +86,7 @@ sensor:
     value_template: "{{ value_json.temperature }}"
     unit_of_measurement: "°C"
     device_class: "temperature"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -94,6 +95,7 @@ sensor:
     value_template: "{{ value_json.humidity }}"
     unit_of_measurement: "%"
     device_class: "humidity"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -101,7 +103,8 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.co2 }}"
     unit_of_measurement: "ppm"
-    icon: "mdi:molecule-co2"
+    device_class: "carbon_dioxide"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -110,6 +113,7 @@ sensor:
     value_template: "{{ value_json.voc }}"
     unit_of_measurement: "ppb"
     icon: "mdi:air-filter"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -123,7 +127,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

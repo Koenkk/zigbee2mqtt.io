@@ -17,8 +17,10 @@ description: "Integrate your SONOFF S31ZB via Zigbee2MQTT with whatever smart ho
 
 ## Notes
 
+
 ### Pairing
 After first power on, it should enter pairing mode. To pair to a new network, long press reset button for 5s until the Wi-Fi LED indicator changes to a cycle of two short flashes and one long flash, then release.
+
 
 
 ## Exposes
@@ -57,7 +59,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

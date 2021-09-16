@@ -47,6 +47,7 @@ Besides running Zigbee2MQTT on [bare-metal Linux](getting_started/running_zigbee
 * [How to support new devices](how_tos/how_to_support_new_devices.md)
 * [How to support new Tuya compatible devices](how_tos/how_to_support_new_tuya_devices.md)
 * [How to switch to the dev branch](how_tos/how-to-switch-to-dev-branch.md)
+* [How to develop in the Home Assistant addon](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/blob/master/CONTRIBUTING.md)
 * [How to create your own (DIY) Zigbee devices](https://diyruz.github.io/)
 
 ### Integration

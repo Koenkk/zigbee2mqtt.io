@@ -21,6 +21,7 @@ description: "Integrate your IKEA ICPSHC24-30EU-IL-1 via Zigbee2MQTT with whatev
 ### Pairing
 To factory reset the TRADFRI drivers use a
 small pin or paperclip to push the reset button once.
+NB: you HAVE to put the device VERY close to the zigbee device, otherwise it won't be able to detect.
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
@@ -106,7 +107,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -114,6 +117,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:update"
     value_template: "{{ value_json['update']['state'] }}"
+    enabled_by_default: false
 
 binary_sensor:
   - platform: "mqtt"
@@ -122,6 +126,7 @@ binary_sensor:
     payload_on: true
     payload_off: false
     value_template: "{{ value_json.update_available}}"
+    enabled_by_default: false
 ```
 {% endraw %}
 

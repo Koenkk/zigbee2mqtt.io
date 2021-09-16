@@ -6,6 +6,8 @@
 - [How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?](#how-do-i-migrate-from-a-cc2531-to-a-more-powerful-coordinator-eg-zzh)
 - [How do I move my Zigbee2MQTT instance to a different environment?](#how-do-i-move-my-zigbee2mqtt-instance-to-a-different-environment)
 - [What does and does not require repairing of all devices?](#what-does-and-does-not-require-repairing-of-all-devices)
+- [Why are some links missing from my networkmap?](#why-are-some-links-missing-from-my-networkmap)
+- [Why is the `action` property always empty?](#why-is-the-action-property-always-empty)
 - [Help, Zigbee2MQTT fails to start!](#help-zigbee2mqtt-fails-to-start)
 - [I read that Zigbee2MQTT has a limit of 20 devices (when using a CC2531), is this true?](#i-read-that-zigbee2mqtt-has-a-limit-of-20-devices-when-using-a-cc2531-is-this-true)
 - [Which port should I use for CC26X2R1/CC1352P-2, /dev/ttyACM0 or /dev/ttyACM1?](#which-port-should-i-use-for-cc26x2r1cc1352p-2-devttyacm0-or-devttyacm1)
@@ -31,26 +33,16 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 ### Interview fails
 - Try pairing the device closer to the coordinator.
 - There can be too much interference, try connecting the coordinator USB through an USB extension cable. This problem occurs a lot when used in combination with a Raspberry Pi 4.
-- If it’s a battery powered device, try replacing the battery.
+- If it’s a battery powered device, try replacing the battery. Try to keep the device awake by pressing the button of the device (if any) every 3 seconds.
 - Try repairing the device again for 2 or 3 times.
-- If it's a battery powered device, try replacing the batery with a new one.
 - This might be a Zigbee2MQTT bug, [Create a new issue](https://github.com/Koenkk/zigbee2mqtt/issues/new) with the zigbee-herdsman debug logging attached to it. [How to enable zigbee-herdsman debug logging](https://www.zigbee2mqtt.io/information/debug.html#zigbee-herdsman-debug-logging).
 - If device joins with `0x000000000000000` as `ieeeAddress` (you will see: `Starting interview of '0x0000000000000000'` in the Zigbee2MQTT log) your CC253X might be broken. [See issue #2761](https://github.com/Koenkk/zigbee2mqtt/issues/2761).
 - In case the device is a bulb, try resetting it through [Touclink](./touchlink.md)
+- Try pairing close to a bulb (light) router instead of the coordinator.
 
 ## How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?
-**Important:** migrating will require you to repair all devices!
-
-First stop Zigbee2MQTT, plug out the CC2531 and plug the new stick. Next open your `configuration.yaml` and add the following:
-
-```yaml
-advanced:
-  pan_id: 0x1a63
-```
-
-**Note:** if you already had a `pan_id` in your `configuration.yaml` take the existing `pan_id` + 1.
-
-Now start Zigbee2MQTT and repair all your devices. Enjoy!
+Since Zigbee2MQTT 1.21.0 this can be done without having to repair all devices.
+Stop Zigbee2MQTT, plug in the new coordinator and update the `serial` -> `port`  in your `configuration.yaml`, next start Zigbee2MQTT.
 
 ## How do I move my Zigbee2MQTT instance to a different environment?
 Details about your network are stored in both the coordinator and files under the `data/` directory. To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
@@ -58,29 +50,29 @@ Details about your network are stored in both the coordinator and files under th
 ## What does and does not require repairing of all devices?
 ### Requires repairing
 You need to re-pair all you devices when:
-- Changing the network key (`network_key`) in `configuration.yaml`.
-- Changing the Zigbee channel (`channel`) in `configuration.yaml`.
-- Swiching between a Zigbee 1.2/3.0 coordinator firmware
-- Switching between adapter types (e.g. CC2531 -> CC26X2R1)
-  - **Except** when switching between adapters with the following chips: CC2652*, CC1352*, CC253* (only when running Zigbee 3.0 firmware)
+- Changing the network key (`network_key`), Zigbee channel (`channel`) or panID (`pan_id`)  in `configuration.yaml`.
+- Switching between adapter types requires repairing, **except when**:
+  - Switching from a CC2530/CC2531 based adapter running the 1.2 firmware to a CC2538/CC2652/CC1352 based adapter does not require repairing
+    - **Note:** the other way around (CC2538/CC2652/CC1352 to a CC2530/CC2531 running 1.2 firmware) does require repairing
+  - Switching between CC2530/CC2531 running the 3.0 firmware, CC2538, CC2652 and CC1352 based adapters does not require repairing.
 
 ### Doesn't require repairing
 You **don't** need to re-pair your devices when:
 - Updating or downgrading Zigbee2MQTT to a different version.
-- Updating the coordinator (e.g. CC2530/CC2531 stick) firmware.
-  - This is only applicable when flashing firmware version `20190215` or later. It doesn't matter from which firmware version you come from.
+- Updating the coordinator firmware.
   - If after flashing you fail to control your devices it helps to:
     - Wait a few minutes so that the Zigbee network can settle.
     - Send Zigbee commands (e.g. turn on/off) to the device.
     - Reboot the device (unplug and plug power).
-    - If all of the above doens't work, and you previously re-flashed a firmware older then `20190215` it could be that the `pan_id` has silently been changed. To fix this add to your `configuration.yaml`:
-    ```js
-    advanced:
-        pan_id: 0x1a63
-    ```
-- Switching from CC2530/CC2531 device (physically).
 - Switching the system running Zigbee2MQTT.
     - When doing this, make sure to copy over the contents of the `data` directory.
+
+## Why are some links missing from my networkmap?
+No worrry, in case it happens with end devices (battery powered) it most of the times **does not** mean the devices aren't connected to the network map anymore.
+Some end devices (e.g. Xiaomi door sensor) sleep for a too long time which causes the parent (router child ageing) to remove it from it from its child table. This is what causes the missing link. Even while its not in the child table anymore, the end device can still communicate via the router. This does not always happen since not all routers use child ageing (this is a Zigbee 3.0 feature).
+
+## Why is the `action` property always empty?
+When the Home Assistant integration is enabled (`homeassistant: true` in your `configuration.yaml`) the `action` property of your e.g. buttons will almost always be empty. Whenever an `action` is published e.g. `{"action": "single"}` it will be immediately followed up by a `{"action": ""}`. This is to trigger a state change in the Home Assistant action sensor (so that it can be used in e.g. automations).
 
 ## Help, Zigbee2MQTT fails to start!
 Most of the times this is caused by zigbee-herdsman not being able to communicate with your adapter (e.g. CC2531).

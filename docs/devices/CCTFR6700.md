@@ -12,7 +12,7 @@ description: "Integrate your Schneider Electric CCTFR6700 via Zigbee2MQTT with w
 | Model | CCTFR6700  |
 | Vendor  | Schneider Electric  |
 | Description | Heating thermostat |
-| Exposes | power, energy, schneider_pilot_mode, temperature_measured_value, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state, pi_heating_demand), linkquality |
+| Exposes | power, energy, schneider_pilot_mode, climate (occupied_heating_setpoint, local_temperature, system_mode, pi_heating_demand), linkquality |
 | Picture | ![Schneider Electric CCTFR6700](../images/devices/CCTFR6700.jpg) |
 
 ## Notes
@@ -53,17 +53,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schneider_pilot_mode": NEW_VALUE}`.
 The possible values are: `contactor`, `pilot`.
 
-### Temperature_measured_value (numeric)
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_measured_value": NEW_VALUE}`.
-
 ### Climate 
-This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`, `pi_heating_demand`.
+This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `pi_heating_demand`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `4` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
-- `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -86,6 +80,7 @@ sensor:
     value_template: "{{ value_json.power }}"
     unit_of_measurement: "W"
     device_class: "power"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -94,18 +89,27 @@ sensor:
     value_template: "{{ value_json.energy }}"
     unit_of_measurement: "kWh"
     device_class: "energy"
+    state_class: "measurement"
+    last_reset_topic: true
+    last_reset_value_template: "1970-01-01T00:00:00+00:00"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.schneider_pilot_mode }}"
+    enabled_by_default: false
 
-sensor:
+select:
   - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    state_topic: true
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.temperature_measured_value }}"
+    value_template: "{{ value_json.schneider_pilot_mode }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "schneider_pilot_mode"
+    options: 
+      - "contactor"
+      - "pilot"
 
 climate:
   - platform: "mqtt"
@@ -123,8 +127,6 @@ climate:
       - "auto"
       - "heat"
     mode_command_topic: true
-    action_topic: true
-    action_template: "{% set values = {'idle':'off','heat':'heating','cool':'cooling','fan only':'fan'} %}{{ values[value_json.running_state] }}"
     temperature_command_topic: "occupied_heating_setpoint"
     temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
     temperature_state_topic: true
@@ -135,7 +137,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

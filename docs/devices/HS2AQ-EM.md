@@ -110,6 +110,7 @@ sensor:
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
     device_class: "battery"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -118,6 +119,7 @@ sensor:
     value_template: "{{ value_json.temperature }}"
     unit_of_measurement: "°C"
     device_class: "temperature"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -126,6 +128,7 @@ sensor:
     value_template: "{{ value_json.humidity }}"
     unit_of_measurement: "%"
     device_class: "humidity"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -133,7 +136,8 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.pm25 }}"
     unit_of_measurement: "µg/m³"
-    icon: "mdi:air-filter"
+    device_class: "pm25"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -142,6 +146,7 @@ sensor:
     value_template: "{{ value_json.hcho }}"
     unit_of_measurement: "mg/m³"
     icon: "mdi:air-filter"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -150,13 +155,15 @@ sensor:
     value_template: "{{ value_json.voc }}"
     unit_of_measurement: "ppb"
     icon: "mdi:air-filter"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.aqi }}"
-    icon: "mdi:air-filter"
+    device_class: "aqi"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -164,13 +171,15 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.pm10 }}"
     unit_of_measurement: "µg/m³"
-    icon: "mdi:air-filter"
+    device_class: "pm10"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.battery_state }}"
+    enabled_by_default: true
 
 sensor:
   - platform: "mqtt"
@@ -178,7 +187,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

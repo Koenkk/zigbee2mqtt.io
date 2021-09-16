@@ -12,7 +12,7 @@ description: "Integrate your Lonsonho QS-Zigbee-C01 via Zigbee2MQTT with whateve
 | Model | QS-Zigbee-C01  |
 | Vendor  | Lonsonho  |
 | Description | Curtain/blind motor controller |
-| Exposes | cover (state, position), moving, calibration, motor_reversal, linkquality |
+| Exposes | cover (state, position), moving, calibration, motor_reversal, calibration_time, linkquality |
 | Picture | ![Lonsonho QS-Zigbee-C01](../images/devices/QS-Zigbee-C01.jpg) |
 
 ## Notes
@@ -28,8 +28,8 @@ description: "Integrate your Lonsonho QS-Zigbee-C01 via Zigbee2MQTT with whateve
 
 ### Cover 
 The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
-To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}` or `{"state": "CLOSE"}`.
-To read the current state of this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
+It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Moving (enum)
@@ -48,6 +48,12 @@ Value can be found in the published state on the `motor_reversal` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_reversal": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": NEW_VALUE}`.
 If value equals `ON` motor_reversal is ON, if `OFF` OFF.
+
+### Calibration_time (numeric)
+Calibration time.
+Value can be found in the published state on the `calibration_time` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `S`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -77,22 +83,34 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.moving }}"
+    enabled_by_default: true
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.calibration }}"
     payload_on: "ON"
     payload_off: "OFF"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "calibration"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.motor_reversal }}"
     payload_on: "ON"
     payload_off: "OFF"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "motor_reversal"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.calibration_time }}"
+    unit_of_measurement: "S"
 
 sensor:
   - platform: "mqtt"
@@ -100,7 +118,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

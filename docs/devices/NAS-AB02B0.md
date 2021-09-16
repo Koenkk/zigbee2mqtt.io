@@ -140,6 +140,7 @@ sensor:
     value_template: "{{ value_json.temperature }}"
     unit_of_measurement: "°C"
     device_class: "temperature"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -148,14 +149,17 @@ sensor:
     value_template: "{{ value_json.humidity }}"
     unit_of_measurement: "%"
     device_class: "humidity"
+    state_class: "measurement"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.humidity_alarm }}"
-    payload_on: true
-    payload_off: false
+    value_template: "{% if value_json.humidity_alarm %} true {% else %} false {% endif %}"
+    payload_on: "true"
+    payload_off: "false"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "humidity_alarm"
 
 binary_sensor:
   - platform: "mqtt"
@@ -166,27 +170,61 @@ binary_sensor:
     payload_off: false
     device_class: "battery"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.temperature_alarm }}"
-    payload_on: true
-    payload_off: false
+    value_template: "{% if value_json.temperature_alarm %} true {% else %} false {% endif %}"
+    payload_on: "true"
+    payload_off: "false"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "temperature_alarm"
 
-binary_sensor:
+switch:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.alarm }}"
-    payload_on: true
-    payload_off: false
+    value_template: "{% if value_json.alarm %} true {% else %} false {% endif %}"
+    payload_on: "true"
+    payload_off: "false"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "alarm"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.melody }}"
+    enabled_by_default: false
+    icon: "mdi:music-note"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.melody }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "melody"
+    options: 
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+    icon: "mdi:music-note"
 
 sensor:
   - platform: "mqtt"
@@ -228,12 +266,28 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.volume }}"
+    enabled_by_default: false
+    icon: "mdi: volume-high"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.volume }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "volume"
+    options: 
+      - "low"
+      - "medium"
+      - "high"
+    icon: "mdi: volume-high"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.power_type }}"
+    enabled_by_default: true
 
 sensor:
   - platform: "mqtt"
@@ -241,7 +295,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

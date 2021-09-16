@@ -26,7 +26,7 @@ total 0
 lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00 -> ../../ttyACM0
 ```
 
-**NOTE:** Docker mount command does not support certain symbols like colon (Example: `/dev/serial/by-id/usb-Silicon_Labs_http:__slae.sh_cc2652_-_slaesh_s_iot_stuff_XX:XX:XX:XX:XX:XX:XX:XX-if00-port0`). Error Message: `bad format for path`. You can create a persistant device name with udev or create a symbolic link.
+**NOTE:** Docker mount command does not support certain symbols like colon (Example: `/dev/serial/by-id/usb-Silicon_Labs_http:__slae.sh_cc2652_-_slaesh_s_iot_stuff_XX:XX:XX:XX:XX:XX:XX:XX-if00-port0`). Error Message: `bad format for path`. You can create a persistent device name with udev or create a symbolic link.
 
 ## 2. Installing
 ```bash
@@ -53,7 +53,7 @@ sudo chown -R pi:pi /opt/zigbee2mqtt
 
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
-npm ci --production
+npm ci
 ```
 
 If everything went correctly the output of `npm ci` is similar to (the number of packages and seconds is probably different on your device):

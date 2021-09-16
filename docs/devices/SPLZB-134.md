@@ -87,6 +87,7 @@ sensor:
     value_template: "{{ value_json.power }}"
     unit_of_measurement: "W"
     device_class: "power"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -95,6 +96,7 @@ sensor:
     value_template: "{{ value_json.current }}"
     unit_of_measurement: "A"
     device_class: "current"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -103,6 +105,8 @@ sensor:
     value_template: "{{ value_json.voltage }}"
     unit_of_measurement: "V"
     device_class: "voltage"
+    enabled_by_default: false
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -111,6 +115,9 @@ sensor:
     value_template: "{{ value_json.energy }}"
     unit_of_measurement: "kWh"
     device_class: "energy"
+    state_class: "measurement"
+    last_reset_topic: true
+    last_reset_value_template: "1970-01-01T00:00:00+00:00"
 
 sensor:
   - platform: "mqtt"
@@ -125,7 +132,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

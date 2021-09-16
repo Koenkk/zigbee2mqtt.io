@@ -1,19 +1,19 @@
 ---
-title: "Paul Neuhaus NLG-RGBW light control via MQTT"
-description: "Integrate your Paul Neuhaus NLG-RGBW light via Zigbee2MQTT with whatever smart home
+title: "Paul Neuhaus NLG-RGBW_light control via MQTT"
+description: "Integrate your Paul Neuhaus NLG-RGBW_light via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/NLG-RGBW_light.md)*
 
-# Paul Neuhaus NLG-RGBW light
+# Paul Neuhaus NLG-RGBW_light
 
-| Model | NLG-RGBW light  |
+| Model | NLG-RGBW_light  |
 | Vendor  | Paul Neuhaus  |
-| Description | Various RGBW lights (e.g. 100.111.57) |
+| Description | Various RGBW lights (e.g. 100.110.39) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Paul Neuhaus NLG-RGBW light](../images/devices/NLG-RGBW-light.jpg) |
+| Picture | ![Paul Neuhaus NLG-RGBW_light](../images/devices/NLG-RGBW_light.jpg) |
 
 ## Notes
 
@@ -141,7 +141,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

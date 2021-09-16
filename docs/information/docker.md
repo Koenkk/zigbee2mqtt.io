@@ -383,3 +383,20 @@ The workaround is based on the solution found at [Add support for devices with "
 	```shell
 	docker stack deploy zigbee2mqtt --compose-file docker-stack-zigbee2mqtt.yml
 	```
+	
+## Docker on Synology DSM 7.0
+
+**Note:** This may not work with all Zigbee controllers, but has been tested with the CC2531.
+
+As of Disk Station Manager version 7, Synology removed the built-in support for USB-devices like a Zigbee controller.
+The USB support can be installed to the Linux kernel by issuing the following commands as *root*.
+````
+modprobe usbserial
+modprobe ftdi_sio
+modprobe cdc-acm
+````
+After issuing the commands, the Zigbee controller may need to be unplugged and re-inserted to the USB port.
+
+It is possible to create a start-up task that issues the above commands:
+1. Create an executable script file that contains the three modprobe commands.
+1. Using DSM's *Control Panel* -> *Task Scheduler* -> *Create* -> *Triggered Task* -> *User-defined script* with the settings: **User:** root, **Event:** Boot-up, and a `bash` command executing the executable file under *Task Settings*.

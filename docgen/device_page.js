@@ -5,10 +5,10 @@ const utils = require('./utils');
 const notes = require('./device_page_notes');
 const exposes = require('./device_page_exposes');
 const YAML = require('json2yaml');
-const HomeassistantExtension = require('zigbee2mqtt/lib/extension/homeassistant');
+const HomeassistantExtension = require('zigbee2mqtt/dist/extension/homeassistant');
 const homeassistant = new HomeassistantExtension(null, null, null, null, {on: () => {}});
 const assert = require('assert');
-const devices = require('zigbee-herdsman-converters').devices;
+const devices = require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices;
 const path = require('path');
 const imageBase = path.join(__dirname, '..', 'docs', 'images', 'devices');
 
@@ -128,7 +128,7 @@ function getHomeAssistantConfig(device) {
 {% raw %}
 \`\`\`yaml
 `;
-    const configurations = homeassistant.getConfigs({definition: device, settings: {}});
+    const configurations = homeassistant.getConfigs({definition: device, settings: {}, type: 'device'});
 
     if (configurations) {
         configurations.forEach((d, i) => {

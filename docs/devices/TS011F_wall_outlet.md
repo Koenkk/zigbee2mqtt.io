@@ -14,7 +14,7 @@ description: "Integrate your TuYa TS011F_wall_outlet via Zigbee2MQTT with whatev
 | Description | In-wall outlet |
 | Exposes | switch (state), linkquality |
 | Picture | ![TuYa TS011F_wall_outlet](../images/devices/TS011F_wall_outlet.jpg) |
-| White-label | Teekar SWP86-01OG |
+| White-label | Teekar SWP86-01OG, ClickSmart+ CMA30035 |
 
 ## Notes
 
@@ -57,7 +57,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

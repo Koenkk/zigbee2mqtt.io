@@ -314,12 +314,14 @@ sensor:
     value_template: "{{ value_json.battery }}"
     unit_of_measurement: "%"
     device_class: "battery"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action }}"
+    enabled_by_default: true
     icon: "mdi:gesture-double-tap"
 
 sensor:
@@ -327,240 +329,820 @@ sensor:
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_1 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_1 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_1/set"
+    command_topic_postfix: "switch_type_button_1"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_1 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_1 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_1/set"
+    command_topic_postfix: "switch_actions_button_1"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_2 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_2 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_2/set"
+    command_topic_postfix: "switch_type_button_2"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_2 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_2 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_2/set"
+    command_topic_postfix: "switch_actions_button_2"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_3 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_3 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_3/set"
+    command_topic_postfix: "switch_type_button_3"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_3 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_3 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_3/set"
+    command_topic_postfix: "switch_actions_button_3"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_4 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_4 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_4/set"
+    command_topic_postfix: "switch_type_button_4"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_4 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_4 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_4/set"
+    command_topic_postfix: "switch_actions_button_4"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_5 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_5 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_5/set"
+    command_topic_postfix: "switch_type_button_5"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_5 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_5 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_5/set"
+    command_topic_postfix: "switch_actions_button_5"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_6 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_6 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_6/set"
+    command_topic_postfix: "switch_type_button_6"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_6 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_6 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_6/set"
+    command_topic_postfix: "switch_actions_button_6"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_7 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_7 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_7/set"
+    command_topic_postfix: "switch_type_button_7"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_7 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_7 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_7/set"
+    command_topic_postfix: "switch_actions_button_7"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_8 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_8 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_8/set"
+    command_topic_postfix: "switch_type_button_8"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_8 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_8 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_8/set"
+    command_topic_postfix: "switch_actions_button_8"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_9 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_9 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_9/set"
+    command_topic_postfix: "switch_type_button_9"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_9 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_9 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_9/set"
+    command_topic_postfix: "switch_actions_button_9"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_10 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_10 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_10/set"
+    command_topic_postfix: "switch_type_button_10"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_10 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_10 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_10/set"
+    command_topic_postfix: "switch_actions_button_10"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_11 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_11 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_11/set"
+    command_topic_postfix: "switch_type_button_11"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_11 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_11 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_11/set"
+    command_topic_postfix: "switch_actions_button_11"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_12 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_12 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_12/set"
+    command_topic_postfix: "switch_type_button_12"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_12 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_12 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_12/set"
+    command_topic_postfix: "switch_actions_button_12"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_13 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_13 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_13/set"
+    command_topic_postfix: "switch_type_button_13"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_13 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_13 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_13/set"
+    command_topic_postfix: "switch_actions_button_13"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_14 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_14 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_14/set"
+    command_topic_postfix: "switch_type_button_14"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_14 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_14 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_14/set"
+    command_topic_postfix: "switch_actions_button_14"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_15 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_15 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_15/set"
+    command_topic_postfix: "switch_type_button_15"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_15 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_15 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_15/set"
+    command_topic_postfix: "switch_actions_button_15"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_16 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_16 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_16/set"
+    command_topic_postfix: "switch_type_button_16"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_16 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_16 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_16/set"
+    command_topic_postfix: "switch_actions_button_16"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_17 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_17 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_17/set"
+    command_topic_postfix: "switch_type_button_17"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_17 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_17 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_17/set"
+    command_topic_postfix: "switch_actions_button_17"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_18 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_18 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_18/set"
+    command_topic_postfix: "switch_type_button_18"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_18 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_18 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_18/set"
+    command_topic_postfix: "switch_actions_button_18"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_19 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_19 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_19/set"
+    command_topic_postfix: "switch_type_button_19"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_19 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_19 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_19/set"
+    command_topic_postfix: "switch_actions_button_19"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_type_button_20 }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_type_button_20 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_20/set"
+    command_topic_postfix: "switch_type_button_20"
+    options: 
+      - "toggle"
+      - "momentary"
+      - "multifunction"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.switch_actions_button_20 }}"
+    enabled_by_default: false
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.switch_actions_button_20 }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/button_20/set"
+    command_topic_postfix: "switch_actions_button_20"
+    options: 
+      - "on"
+      - "off"
+      - "toggle"
 
 sensor:
   - platform: "mqtt"
@@ -568,7 +1150,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

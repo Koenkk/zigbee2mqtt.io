@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG23LM via Zigbee2MQTT with whatever smart
 | Model | QBKG23LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 1 gang smart wall switch (with neutral wire) |
-| Exposes | switch (state), power, energy, temperature, voltage, action, linkquality |
+| Exposes | switch (state), power, energy, temperature, voltage, action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG23LM](../images/devices/QBKG23LM.jpg) |
 
 ## Notes
@@ -26,46 +26,6 @@ To control the precision based on the temperature value set it to e.g. `{30: 0, 
 when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1. Precision will take into affect with next report of device.
 * `temperature_calibration`: Allows to manually calibrate temperature values,
 e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
-
-
-### Decoupled mode
-Decoupled mode allows to turn wired switch into wireless button with separately controlled relay.
-This might be useful to assign some custom actions to buttons and control relay remotely.
-This command also allows to redefine which button controls which relay for the double switch (not supported for QBKG25LM).
-
-Topic `zigbee2mqtt/FRIENDLY_NAME/system/set` should be used to modify operation mode.
-
-**NOTE:** For QBKG25LM instead of `system` use `left`, `center` or `right` and leave out the `button` property in the payload.
-
-Payload:
-```js
-{
-  "operation_mode": {
-    "button": "single"|"left"|"right", // Always use single for a single switch
-    "state": "VALUE"
-  }
-}
-```
-
-Values                | Description
-----------------------|---------------------------------------------------------
-`control_relay`       | Button directly controls relay (for single switch and QBKG25LM)
-`control_left_relay`  | Button directly controls left relay (for double switch, not supported for QBKG25LM)
-`control_right_relay` | Button directly controls right relay (for double switch, not supported for QBKG25LM)
-`decoupled`           | Button doesn't control any relay
-
-`zigbee2mqtt/FRIENDLY_NAME/system/get` to read current mode.
-
-Payload:
-```js
-{
-  "operation_mode": {
-    "button": "single"|"left"|"right" // Always use single for a single switch
-  }
-}
-```
-
-Response will be sent to `zigbee2mqtt/FRIENDLY_NAME`, example: `{"operation_mode_right":"control_right_relay"}`
 
 
 ### Pairing
@@ -112,6 +72,13 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `release`.
 
+### Operation_mode (enum)
+Decoupled mode.
+Value can be found in the published state on the `operation_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
+The possible values are: `control_relay`, `decoupled`.
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
@@ -142,6 +109,7 @@ sensor:
     value_template: "{{ value_json.power }}"
     unit_of_measurement: "W"
     device_class: "power"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -150,6 +118,9 @@ sensor:
     value_template: "{{ value_json.energy }}"
     unit_of_measurement: "kWh"
     device_class: "energy"
+    state_class: "measurement"
+    last_reset_topic: true
+    last_reset_value_template: "1970-01-01T00:00:00+00:00"
 
 sensor:
   - platform: "mqtt"
@@ -158,6 +129,7 @@ sensor:
     value_template: "{{ value_json.temperature }}"
     unit_of_measurement: "°C"
     device_class: "temperature"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -166,13 +138,37 @@ sensor:
     value_template: "{{ value_json.voltage }}"
     unit_of_measurement: "V"
     device_class: "voltage"
+    enabled_by_default: false
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.action }}"
+    enabled_by_default: true
     icon: "mdi:gesture-double-tap"
+
+sensor:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode }}"
+    enabled_by_default: false
+    icon: "mdi:tune"
+
+select:
+  - platform: "mqtt"
+    state_topic: true
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{{ value_json.operation_mode }}"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "operation_mode"
+    options: 
+      - "control_relay"
+      - "decoupled"
+    enabled_by_default: false
+    icon: "mdi:tune"
 
 sensor:
   - platform: "mqtt"
@@ -180,7 +176,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 ```
 {% endraw %}
 

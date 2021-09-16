@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi ZNCZ04LM via Zigbee2MQTT with whatever smart
 | Model | ZNCZ04LM  |
 | Vendor  | Xiaomi  |
 | Description | Mi power plug ZigBee EU |
-| Exposes | switch (state), power, energy, temperature, voltage, current, consumer_connected, consumer_overload, led_disabled_night, power_outage_memory, auto_off, linkquality |
+| Exposes | switch (state), power, energy, temperature, voltage, current, consumer_connected, led_disabled_night, power_outage_memory, auto_off, overload_protection, linkquality |
 | Picture | ![Xiaomi ZNCZ04LM](../images/devices/ZNCZ04LM.jpg) |
 
 ## Notes
@@ -86,16 +86,10 @@ Value can be found in the published state on the `consumer_connected` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` consumer_connected is ON, if `false` OFF.
 
-### Consumer_overload (numeric)
-Indicates with how many Watts the maximum possible power consumption is exceeded.
-Value can be found in the published state on the `consumer_overload` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `W`.
-
 ### Led_disabled_night (binary)
 Enable/disable the LED at night.
 Value can be found in the published state on the `led_disabled_night` property.
-It's not possible to read (`/get`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
 If value equals `true` led_disabled_night is ON, if `false` OFF.
 
@@ -112,6 +106,14 @@ Value can be found in the published state on the `auto_off` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_off": NEW_VALUE}`.
 If value equals `true` auto_off is ON, if `false` OFF.
+
+### Overload_protection (numeric)
+Maximum allowed load, turns off if exceeded.
+Value can be found in the published state on the `overload_protection` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"overload_protection": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"overload_protection": NEW_VALUE}`.
+The minimal value is `100` and the maximum value is `2200`.
+The unit of this value is `W`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -143,6 +145,7 @@ sensor:
     value_template: "{{ value_json.power }}"
     unit_of_measurement: "W"
     device_class: "power"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -151,6 +154,9 @@ sensor:
     value_template: "{{ value_json.energy }}"
     unit_of_measurement: "kWh"
     device_class: "energy"
+    state_class: "measurement"
+    last_reset_topic: true
+    last_reset_value_template: "1970-01-01T00:00:00+00:00"
 
 sensor:
   - platform: "mqtt"
@@ -159,6 +165,7 @@ sensor:
     value_template: "{{ value_json.temperature }}"
     unit_of_measurement: "°C"
     device_class: "temperature"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -167,6 +174,8 @@ sensor:
     value_template: "{{ value_json.voltage }}"
     unit_of_measurement: "V"
     device_class: "voltage"
+    enabled_by_default: false
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -175,6 +184,7 @@ sensor:
     value_template: "{{ value_json.current }}"
     unit_of_measurement: "A"
     device_class: "current"
+    state_class: "measurement"
 
 binary_sensor:
   - platform: "mqtt"
@@ -184,36 +194,42 @@ binary_sensor:
     payload_on: true
     payload_off: false
 
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{% if value_json.led_disabled_night %} true {% else %} false {% endif %}"
+    payload_on: "true"
+    payload_off: "false"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "led_disabled_night"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{% if value_json.power_outage_memory %} true {% else %} false {% endif %}"
+    payload_on: "true"
+    payload_off: "false"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "power_outage_memory"
+
+switch:
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    value_template: "{% if value_json.auto_off %} true {% else %} false {% endif %}"
+    payload_on: "true"
+    payload_off: "false"
+    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
+    command_topic_postfix: "auto_off"
+
 sensor:
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
     availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.consumer_overload }}"
+    value_template: "{{ value_json.overload_protection }}"
     unit_of_measurement: "W"
-
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.led_disabled_night }}"
-    payload_on: true
-    payload_off: false
-
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.power_outage_memory }}"
-    payload_on: true
-    payload_off: false
-
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.auto_off }}"
-    payload_on: true
-    payload_off: false
 
 sensor:
   - platform: "mqtt"
@@ -221,7 +237,9 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     value_template: "{{ value_json.linkquality }}"
     unit_of_measurement: "lqi"
+    enabled_by_default: false
     icon: "mdi:signal"
+    state_class: "measurement"
 
 sensor:
   - platform: "mqtt"
@@ -229,6 +247,7 @@ sensor:
     availability_topic: "zigbee2mqtt/bridge/state"
     icon: "mdi:update"
     value_template: "{{ value_json['update']['state'] }}"
+    enabled_by_default: false
 
 binary_sensor:
   - platform: "mqtt"
@@ -237,6 +256,7 @@ binary_sensor:
     payload_on: true
     payload_off: false
     value_template: "{{ value_json.update_available}}"
+    enabled_by_default: false
 ```
 {% endraw %}
 
