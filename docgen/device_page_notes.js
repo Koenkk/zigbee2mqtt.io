@@ -3521,7 +3521,7 @@ The automation server must follow the notification with an actual change to the 
 `,
     },
     {
-        model: ['KEYPAD001'],
+        model: ['KEYPAD001', 'ZS130000078'],
         note: `
 ### Arming/Disarming from the server
 To set arming mode publish the following payload to \`zigbee2mqtt/FRIENDLY_NAME/set\` topic:
