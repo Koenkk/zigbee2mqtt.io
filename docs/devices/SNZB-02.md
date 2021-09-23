@@ -15,6 +15,7 @@ description: "Integrate your SONOFF SNZB-02 via Zigbee2MQTT with whatever smart 
 | Exposes | battery, temperature, humidity, voltage, linkquality |
 | Picture | ![SONOFF SNZB-02](../images/devices/SNZB-02.jpg) |
 | White-label | eWeLink RHK08 |
+| Battery type | CR2450 |
 
 ## Notes
 
