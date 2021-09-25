@@ -18,6 +18,9 @@ description: "Integrate your SONOFF SNZB-02 via Zigbee2MQTT with whatever smart 
 
 ## Notes
 
+### Battery
+Uses a CR2450 battery
+
 
 ### Pairing
 Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
@@ -50,7 +53,6 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-Battery type is CR2450
 
 ### Temperature (numeric)
 Measured temperature value.
