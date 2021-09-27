@@ -212,7 +212,7 @@ Zigbee2MQTT officially supports the following adapters:
   <tr>
     <td><img src="../images/conbee.jpg"></td>
     <td>ConBee II <b>(experimental)</b></td>
-    <td>USB connected adapter</td>
+    <td>USB connected adapter. See notes below for required entry in <kbd>configuration.yaml</kbd></td>
     <td><a href="https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually">Coordinator</a><br/></td>
     <td><a href="https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually">Flashing</a></td>
     <td><a href="https://phoscon.de/en/conbee2?buy=1#buy">Phoscon</a></td>
