@@ -32,6 +32,7 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+Battery type is CR2032.
 
 ### Water_leak (binary)
 Indicates whether the device detected a water leak.
