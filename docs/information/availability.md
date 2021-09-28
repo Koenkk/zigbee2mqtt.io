@@ -30,9 +30,6 @@ availability:
     # minutes (default = 1500 minutes aka 25 hours)
     timeout: 1500
 
-experimental:
-  availability_new: true
-
 devices:
   '0x12345678':
     friendly_name: 'my_bulb'
