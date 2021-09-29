@@ -22,7 +22,8 @@ description: "Integrate your Xiaomi SJCGQ11LM via Zigbee2MQTT with whatever smar
 Press and hold water logo on the device for +- 5 seconds (you have to press quite hard) until the blue light blinks
 three times, release the water logo (the blue light will blink once more) and wait.
     
-
+### Battery
+Uses a CR2032 battery
 
 ## Exposes
 
@@ -32,7 +33,6 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-Battery type is CR2032.
 
 ### Water_leak (binary)
 Indicates whether the device detected a water leak.
