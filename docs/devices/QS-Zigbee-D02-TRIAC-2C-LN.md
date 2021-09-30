@@ -17,6 +17,7 @@ description: "Integrate your Lonsonho QS-Zigbee-D02-TRIAC-2C-LN via Zigbee2MQTT 
 
 ## Notes
 
+
 ### Pairing
 Turn off the lights and then turn them on by holding the button for 10 seconds until the lights start flashing.
 

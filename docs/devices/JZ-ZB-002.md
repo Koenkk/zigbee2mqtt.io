@@ -17,11 +17,10 @@ description: "Integrate your LELLKI JZ-ZB-002 via Zigbee2MQTT with whatever smar
 
 ## Notes
 
-None
 
 ## Pairing
-
 Push and hold left button for about 10-15 seconds until it will start blinking.
+
 
 
 ## Exposes

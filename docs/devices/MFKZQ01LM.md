@@ -25,8 +25,6 @@ After this the device will automatically join, but the interview process may not
 If that happens, keep doing short presses to the reset button to keep the light flashing, until the interview process finishes successfully.
 
 
-
-
 ### Troubleshooting: device stops sending messages/disconnects from network
 Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes happens that they disconnect from the network.
 Most of the times this happens because of the following reasons:

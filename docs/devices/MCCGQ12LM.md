@@ -20,8 +20,8 @@ description: "Integrate your Xiaomi MCCGQ12LM via Zigbee2MQTT with whatever smar
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join. If this doesn't work, try with a single short button press.
-
+After this the device will automatically join, but the interview process may not finish.
+If that happens, keep doing short presses to the reset button to keep the light flashing, until the interview process finishes successfully.
 
 ### Recommendation
 If the contact is being made via a horizontal slide (e.g. the sensor is placed at the top of a sliding door), the sensor may provide three or more messages with conflicting states. To get around this issue, consider using the `debounce` option in your device specific configuration.

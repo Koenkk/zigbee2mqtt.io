@@ -1,5 +1,72 @@
 const notes = [
     {
+        model: ['4523430'],
+        note: `
+### Pairing
+* Press "arrow up" and "M" simultaneously until "joining" and "pairing" is shown on the ELKO Super TR RF display.
+`,
+    },
+    {
+        model: ['4512726'],
+        note: `
+### Pairing
+This will factory reset the device, after resetting the switch will be set into network pairing mode automatically.
+1. Short press the knob 5 times continuously and quickly.
+2. Within 2 seconds after step 1, press and hold the knob for over 3 seconds, indicator will flash 3 times for successful reset.
+
+### Select a Color Mode (depends on the color type of the light devices the switch paired to)
+1. Press and hold the knob for over 3 seconds, LED indicator turns on and stays solid on, release the knob.
+2. Keep short pressing the knob within 5 seconds to get different color modes one by one, LED indicator status will be different for each short press to indicate different color modes. The indicator status for different color modes are as follows:
+* **Mono color mode**: indicator keeps blinking with the frequency of twice per second, only Dim command will be sent when rotate the knob.
+* **CCT color mode**: Indicator keeps blinking with the frequency as follows: blinks for 1 second (twice per second) and stops blinking for 1 second, then blinks for 1 second (twice per second) and stops blinking for 1 second again. Color temperature command will be sent when rotate the knob.
+* **RGB color mode**: indicator keeps blinking with the frequency as follows: blinks for 1.5 seconds (3 times per 1.5 seconds) and stops blinking for 1 second, then blinks for 1.5 seconds (3 times per 1.5 seconds) and stops blinking for 1 second again. RGB color control command will be sent when rotate the knob.
+* **RGB+CCT color mode**: indicator keeps blinking with the frequency as follows: blinks for 2 seconds (4 times per 2 seconds) and stops blinking for 1 second, then blinks for 2 seconds (4 times per 2 seconds) and stops blinking for 1 second again. RGB+CCT color control command will be sent when rotate the knob.
+
+### Mono Color Mode
+**Rotate the knob clockwise**:
+1. Increase light intensity from 1% to 100%.
+
+**Rotate the knob counterclockwise**:
+1. Decrease light intensity from 100% to 1%.
+
+### CCT Color Mode
+**Double click the knob**: switch between CCT command and brightness command. Each time when switched on, the switch will send brightness command when knob rotated by default.
+**Rotate the knob clockwise**:
+1. Increase light intensity from 1% to 100% (brightness command).
+2. Adjust color temperature from CW to WW (CCT command)
+**Rotate the knob counterclockwise**:
+1. Decrease light intensity from 100% to 1% (brightness command).
+2. Adjust color temperature from WW to CW (CCT command)
+
+### RGB Color Mode
+**Double click the knob**: switch between RGB command and brightness command. Each time when switched on, the switch will send brightness command when knob rotated by default.
+**Rotate the knob clockwise**:
+1. Increase light intensity from 1% to 100% (brightness command).
+2. Increase hue absolute value of RGB color(RGB command)
+
+**Rotate the knob counterclockwise**:
+1. Decrease light intensity from 100% to 1% (brightness command).
+2. Decrease hue absolute value of RGB color(RGB command)
+
+### RGB+CCT Color Mode
+**Double click the knob**: switch between RGB+CCT command and brightness command. Each time when switched on, the switch will send brightness command when knob rotated by default.
+**Rotate the knob clockwise**:
+1. Increase light intensity from 1% to 100% (brightness command).
+2. Increase hue absolute value of RGB color (1st circle) and then adjust CCT from CW to WW (2nd circle) (RGB+CCT command)
+**Rotate the knob counterclockwise**:
+1. Decrease light intensity fram 100% to 1% (brightness command).
+2. Decrease hue absolute value of RGB color (1st circle) and then adjust CCT from WW to CW (2nd circle) (RGB+CCT command)
+`,
+    },
+    {
+        model: ['WS-EUK01'],
+        note: `
+### Pairing
+Press and hold the button on the device for +- 10 seconds
+(until the blue light starts blinking and stops blinking), release and wait.
+`,
+    },
+    {
         model: ['SMSZB-120'],
         note: `
 ### Warning usage
@@ -110,12 +177,19 @@ Factory reset by press & hold the power button for 3 seconds. The LED is then st
 `,
     },
     {
+        model: ['QS-Zigbee-D02-TRIAC-2C-LN'],
+        note: `
+### Pairing
+Turn off the lights and then turn them on by holding the button for 10 seconds until the lights start flashing.
+`,
+    },
+    {
         model: ['MCCGQ12LM'],
         note: `
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join. If this doesn't work, try with a single short button press.
-
+After this the device will automatically join, but the interview process may not finish.
+If that happens, keep doing short presses to the reset button to keep the light flashing, until the interview process finishes successfully.
 
 ### Recommendation
 If the contact is being made via a horizontal slide (e.g. the sensor is placed at the top of a sliding door), the sensor may provide three or more messages with conflicting states. To get around this issue, consider using the \`debounce\` option in your device specific configuration.
@@ -143,7 +217,7 @@ After this the device will automatically join.
         model: ['TS0121_plug'],
         note: `
 ### Pairing
-Pair this device with a long press on the on/off button. The button will flash to indicate it's in pairing mode. When the flashing stops it should be paired.
+Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
 `,
     },
     {
@@ -1615,10 +1689,80 @@ Reset of device is done by holding button for 20 secs until it starts to flash g
 `,
     },
     {
+        model: ['TH1400ZB'],
+        note: `
+### Setting outdoor temperature
+To set the *outdoor temperature* (value below the Out label on the thermostat display), you need to send the value to the following MQTT
+topic:
+
+\`\`\`
+zigbee2mqtt/<FRIENDLY_NAME>/set/thermostat_outdoor_temperature
+\`\`\`
+
+If you want to automate the publishing of the outdoor temperature using Home Assistant, you may create an automation like this:
+
+\`\`\` yaml
+- id: 'Auto_Publish_Outdoor_Temprature'
+  alias: 'Publish outside temperature'
+  description: 'Automatically Publish the outdoor temperature to thermostats'
+  mode: single
+  trigger:
+  - platform: state
+    entity_id: sensor.<OUTDOOR_TEMPERATURE_SENSOR_NAME>
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: zigbee2mqtt/<FRIENDLY_NAME>/set/thermostat_outdoor_temperature
+      payload_template: "{{ states('sensor.<OUTDOOR_TEMPERATURE_SENSOR_NAME>') }}"
+\`\`\`
+
+### Setting outdoor temperature
+To enable time you need to send a blank message to the following MQTT topic:
+
+\`\`\`
+zigbee2mqtt/<FRIENDLY_NAME>/set/thermostat_time
+\`\`\`
+
+*Every time the above message is sent, Zigbee2MQTT will calculate the current time and send it to the thermostat.*
+
+If the thermostat loses power, you need to do this again. For Home Assistant users: if you want to avoid remembering to do this, you can
+add the following \`action\` to your \`Auto_Publish_Outdoor_Temperature\` automation (noted above).
+
+\`\`\` yaml
+  - service: mqtt.publish
+    data:
+      topic: zigbee2mqtt/<FRIENDLY_NAME>/set/thermostat_time
+      payload: ''
+\`\`\`
+`,
+    },
+    {
+        model: ['JZ-ZB-002'],
+        note: `
+## Pairing
+Push and hold left button for about 10-15 seconds until it will start blinking.
+`,
+    },
+    {
+        model: ['SNZB-02'],
+        note: `
+### Battery
+Uses a CR2450 battery
+`,
+    },
+    {
+        model: ['SJCGQ11LM'],
+        note: `
+### Battery
+Uses a CR2032 battery
+`,
+    },
+    {
         model: ['ROB_200-007-0', 'ROB_200-008-0'],
         note: `
 ### Pairing
-First reset. Press and hold the upper two buttons for 5 seconds until led lights up (continuously blue or green). Then press the upper "0" 5 times - depending on the model, or in a pace of 2 times per second or in a pace of 5 times per second. Second pair. Press and hold the upper two buttons for 5 seconds again, until the led turns on. Then press the "0" once. It should now enter pair mode an start blinking - if it does not get connected, just try the second step again.
+First reset. Press and hold the upper two buttons for 5 seconds until led lights up (continuously blue or green). Immediately short press 1,  5 times continuously, indicator flashes 3 times quickly to indicate successful reset. - depending on the model, or in a pace of 2 times per second or in a pace of 5 times per second. Second pair. Press and hold the upper two buttons for 5 seconds again, until the led turns on. Then press the "0" once. It should now enter pair mode an start blinking - if it does not get connected, just try the second step again.
 `,
     },
     {
@@ -2112,8 +2256,7 @@ Send a MQTT command to [\`zigbee2mqtt/FRIENDLY_NAME/set\`](https://www.zigbee2mq
     "hue_power_on_behavior": "on",          // default, on, off, recover
     "hue_power_on_brightness": 125,         // same values as brightness
     "hue_power_on_color_temperature": 280,  // same values as color_temp
-    "hue_power_on_color": "#0000FF",        // color in hex notation, e.g. #0000FF = blue
-
+    "hue_power_on_color": "#0000FF"         // color in hex notation, e.g. #0000FF = blue
 }
 \`\`\`
 
@@ -2610,7 +2753,8 @@ Press and hold the reset button on the device for +- 5 seconds (until the blue l
 ### Pairing
 Remove the back plate by using the included tool or a wedge to click it off.
 Press and hold the reset button inside the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join. If this doesn't work, try with a single short button press.
+After this the device will automatically join, but the interview process may not finish.
+If that happens, keep doing short presses to the reset button to keep the light flashing, until the interview process finishes successfully.
 `,
     },
     {
