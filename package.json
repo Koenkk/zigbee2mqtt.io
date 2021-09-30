@@ -20,7 +20,6 @@
   "scripts": {
     "docgen": "node docgen/docgen.js",
     "test": "mocha --recursive",
-    "postinstall" : "cd node_modules && git clone https://github.com/Koenkk/zigbee2mqtt.git && cd zigbee2mqtt && npm ci && npm run build",
     "eslint": "node_modules/.bin/eslint ."
   },
   "author": "Koen Kanters",
@@ -31,7 +30,7 @@
   "homepage": "https://www.zigbee2mqtt.io",
   "dependencies": {
     "image-size": "*",
-    "json2yaml": "*"
+    "zigbee-herdsman-converters": "14.0.238"
   },
   "devDependencies": {
     "chai": "*",
