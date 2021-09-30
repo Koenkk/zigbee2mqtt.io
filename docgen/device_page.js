@@ -4,11 +4,8 @@
 const utils = require('./utils');
 const notes = require('./device_page_notes');
 const exposes = require('./device_page_exposes');
-const YAML = require('json2yaml');
-const HomeassistantExtension = require('zigbee2mqtt/dist/extension/homeassistant');
-const homeassistant = new HomeassistantExtension(null, null, null, null, {on: () => {}});
 const assert = require('assert');
-const devices = require('zigbee2mqtt/node_modules/zigbee-herdsman-converters').devices;
+const devices = require('zigbee-herdsman-converters').devices;
 const path = require('path');
 const imageBase = path.join(__dirname, '..', 'docs', 'images', 'devices');
 
@@ -65,11 +62,6 @@ ${device.hasOwnProperty('ota') && ['AC01353010G'].includes(device.model) === fal
 This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 ` : ''}
 ${exposes.generate(device)}
-## Manual Home Assistant configuration
-Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
-manual integration is possible with the following configuration:
-
-${getHomeAssistantConfig(device)}
 `;
 }
 
@@ -121,64 +113,6 @@ ${n.note}`;
         })
         .join('\n');
     return note === '' ? 'None' : note;
-}
-
-function getHomeAssistantConfig(device) {
-    let configuration = `
-{% raw %}
-\`\`\`yaml
-`;
-    const configurations = homeassistant.getConfigs({definition: device, settings: {}, type: 'device'});
-
-    if (configurations) {
-        configurations.forEach((d, i) => {
-            configuration += getHomeassistantConfigForConfiguration(d);
-            if (configurations.length > 1 && i < configurations.length - 1) {
-                configuration += '\n';
-            }
-        });
-
-        configuration += '```\n';
-        configuration += '{% endraw %}\n\n';
-    }
-
-    return configuration;
-}
-
-function getHomeassistantConfigForConfiguration(device) {
-    const payload = {
-        platform: 'mqtt',
-        state_topic: 'zigbee2mqtt/<FRIENDLY_NAME>',
-        availability_topic: 'zigbee2mqtt/bridge/state',
-        ...device.discovery_payload,
-    };
-
-    if (payload.command_topic) {
-        if (payload.command_topic_prefix) {
-            payload.command_topic = `zigbee2mqtt/<FRIENDLY_NAME>/${payload.command_topic_prefix}/set`;
-        } else {
-            payload.command_topic = `zigbee2mqtt/<FRIENDLY_NAME>/set`;
-        }
-    }
-
-    delete payload.command_topic_prefix;
-
-    if (!payload.state_topic) {
-        delete payload.state_topic;
-    }
-
-    if (payload.position_topic) {
-        payload.position_topic = 'zigbee2mqtt/<FRIENDLY_NAME>';
-    }
-
-    if (payload.set_position_topic) {
-        payload.set_position_topic = 'zigbee2mqtt/<FRIENDLY_NAME>/set';
-    }
-
-    let yml = YAML.stringify([payload]);
-    yml = yml.replace(/(-) \n {4}/g, '- ');
-    yml = yml.replace('---', `${device.type}:`);
-    return yml;
 }
 
 module.exports = {
