@@ -38,12 +38,12 @@ when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1
 
 ## Exposes
 
-### Keypad_lockout (binary)
+### Keypad_lockout (enum)
 Enables/disables physical input on the device.
 Value can be found in the published state on the `keypad_lockout` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keypad_lockout": NEW_VALUE}`.
-If value equals `lock1` keypad_lockout is ON, if `unlock` OFF.
+The possible values are: `unlock`, `lock1`, `lock2`.
 
 ### Humidity (numeric)
 Measured relative humidity.

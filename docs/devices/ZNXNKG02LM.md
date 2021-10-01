@@ -1,0 +1,87 @@
+---
+title: "Xiaomi ZNXNKG02LM control via MQTT"
+description: "Integrate your Xiaomi ZNXNKG02LM via Zigbee2MQTT with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
+---
+
+*To contribute to this page, edit the following
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZNXNKG02LM.md)*
+
+# Xiaomi ZNXNKG02LM
+
+| Model | ZNXNKG02LM  |
+| Vendor  | Xiaomi  |
+| Description | Aqara knob H1 (wireless) |
+| Exposes | battery, voltage, action, operation_mode, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, linkquality |
+| Picture | ![Xiaomi ZNXNKG02LM](../images/devices/ZNXNKG02LM.jpg) |
+
+## Notes
+
+None
+
+
+## Exposes
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Voltage (numeric)
+Voltage of the battery in millivolts.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `mV`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`, `hold`, `release`, `start_rotating`, `rotation`, `stop_rotating`.
+
+### Operation_mode (enum)
+Button mode.
+Value can be found in the published state on the `operation_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
+The possible values are: `event`, `command`.
+
+### Action_rotation_angle (numeric)
+Rotation angle.
+Value can be found in the published state on the `action_rotation_angle` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `*`.
+
+### Action_rotation_angle_speed (numeric)
+Rotation angle speed.
+Value can be found in the published state on the `action_rotation_angle_speed` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `*`.
+
+### Action_rotation_percent (numeric)
+Rotation percent.
+Value can be found in the published state on the `action_rotation_percent` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `%`.
+
+### Action_rotation_percent_speed (numeric)
+Rotation percent speed.
+Value can be found in the published state on the `action_rotation_percent_speed` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `%`.
+
+### Action_rotation_time (numeric)
+Rotation time.
+Value can be found in the published state on the `action_rotation_time` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `ms`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+

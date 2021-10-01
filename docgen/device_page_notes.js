@@ -1,5 +1,258 @@
 const notes = [
     {
+        model: ['AV2010/37'],
+        note: `
+## Pairing
+Press and hold the function key for about 10 seconds until you hear a short beep.
+During the search, the LED lights up red once every 10 seconds. When the LED flashes 2 times, the device has successfully registered.
+`,
+    },
+    {
+        model: ['AV2010/33'],
+        note: `
+## Pairing
+Press and hold the function button on the side of the sensor with a pointed object for about 10 seconds until the red LED on the front lights up once briefly.
+During the search, the LED lights up red once every 10 seconds. When the LED flashes 2 times, the device has successfully registered.
+`,
+    },
+    {
+        model: ['AV2010/32'],
+        note: `
+## Pairing
+If the device is not part of a ZigBee network (device not joined), press any of the buttons for at least 1 second to start the join process.
+If no open ZigBee network is found, the termostat will return to the unjoined state (“no NET” message on the LCD-display).
+Please read the user manual for additional information.
+`,
+    },
+    {
+        model: ['AV2010/25', 'AV2010/26', 'AV2010/28'],
+        note: `
+## Pairing
+Press and hold the function key for about 10 seconds. During these 10 seconds, the function key will light up red several times.
+During the search, the LED lights up red once every 10 seconds. When the LED flashes twice, the unit has successfully registered.
+`,
+    },
+    {
+        model: ['AV2010/21A', 'AV2010/21B', 'AV2010/21C', 'AV2010/22A', 'AV2010/22B', 'AV2010/34'],
+        note: `
+### Pairing
+Press and hold the function key on the top of the sensor for about 10 seconds until the red LED briefly lights up once.
+During the search, the LED lights up red once every 10 seconds. When the LED flashes 2 times, the device has successfully registered.
+`,
+    },
+    {
+        model: ['AV2010/29A'],
+        note: `
+## Pairing
+Press and hold the function button for 10 seconds until the LEDs on the left light up briefly.
+During the search, the LED will light red once every 10 seconds. If the LED flashes 2 times, the device has successfully logged on to your Smart Home system.
+`,
+    },
+    {
+        model: ['AV2010/16', 'AV2010/18'],
+        note: `
+### Pairing
+Press and hold the function key for about 10 seconds. During these 10 seconds, the function key will light up red several times.
+During the search, the LED lights up red once every 10 seconds. When the LED flashes twice, the unit has successfully registered.
+`,
+    },
+    {
+        model: ['AV2010/14'],
+        note: `
+### Pairing
+Pair the SMaBiT AV2010/14 sensor to Zigbee2MQTT by holding it close to the coordinator and pressing the indicator light/button at the front for about 10 seconds. The indicator light/button will flash red once to indicate it is in pairing mode. The SMaBiT AV2010/22 sensor should now be visible in the Zigbee2MQTT Devices overview.
+`,
+    },
+    {
+        model: ['8718696743133'],
+        note: `
+### Green Power
+This is a Zigbee Green Power device which allows it to be very energy efficient.
+Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
+Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
+
+Green Power devices don't support binding and are not included in network scans.
+
+### Pairing
+This device requires your Zigbee network to run on channel 11, 15, 20 or 25. In order to pair it hold the corresponding button for that channel 10 seconds.
+
+| Button (dots) | Channel |
+|-|-|
+| 1 | 11 |
+| 2 | 15 |
+| 3 | 20 |
+| 4 | 25 |
+`,
+    },
+    {
+        model: ['EFEKTA_PWS'],
+        note: `
+### Build guide
+Instructions on how to build this device can be found [here](https://github.com/smartboxchannel/Plant-Watering-Sensor-Zigbee)
+`,
+    },
+    {
+        model: ['EFEKTA_THP_LR'],
+        note: `
+### Build guide
+Instructions on how to build this device can be found [here](https://github.com/smartboxchannel/Outdoor-long-range-sensor-for-temperature-humidity-and-atmospheric-pressure-Zigbee)
+`,
+    },
+    {
+        model: ['PTM 215Z'],
+        note: `
+### Green Power
+This is a Zigbee Green Power device which allows it to be very energy efficient.
+Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
+Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
+
+Green Power devices don't support binding and are not included in network scans.
+
+### Pairing
+This device has 4 buttons:
+
+| Number | Button | Position |
+|-|-|-|
+| 1 | A0 | top left |
+| 2 | A1 | bottom left |
+| 3 | B0 | top right |
+| 4 | B1 | bottom right |
+
+In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
+
+To pair it, hold the corresponding button for that channel for 7 seconds or more.
+
+| Button | Channel |
+|-|-|
+| A0 | 15 |
+| A1 | 20 |
+| B0 | 11 |
+| B1 | 25 |
+`,
+    },
+    {
+        model: ['PTM 215ZE'],
+        note: `
+### Green Power
+This is a Zigbee Green Power device which allows it to be very energy efficient.
+Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
+Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
+
+Green Power devices don't support binding and are not included in network scans.
+
+### Pairing
+This device has 4 buttons:
+
+| Number | Button | Position |
+|-|-|-|
+| 1 | A0 | top left |
+| 2 | A1 | bottom left |
+| 3 | B0 | top right |
+| 4 | B1 | bottom right |
+
+In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
+
+To pair it, start by shortly (less than 7 seconds) pressing two different buttons one after another. Any button of the device (A0, A1, B0, B1) can be used.
+
+Next, select one button of the device (A0, A1, B0, or B1) and execute the following long-short-long sequence:
+
+1. Press and hold the selected button for more than 7 seconds before releasing it
+2. Press the selected button quickly (hold for less than 2 seconds)
+3. Press and hold the selected button again for more than 7 seconds before releasing it
+
+Then, press the selected button contact shortly (< 7s) to select radio channel 11. Continue pressing the selected button shortly (< 7s) to increment radio channel. If channel 26 has been reached, then channel 11 will be used next.
+
+Once the device is paired you need to confirm the channel. To do this, press any button other than the one used previously.
+
+For more informations, please refer to the [EnOcean PTM 215ZE manual chapter 5.1](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/).
+`,
+    },
+    {
+        model: ['PTM 216Z'],
+        note: `
+### Green Power
+This is a Zigbee Green Power device which allows it to be very energy efficient.
+Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
+Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
+
+Green Power devices don't support binding and are not included in network scans.
+
+### Pairing
+This device has 4 buttons:
+
+| Number | Button | Position |
+|-|-|-|
+| 1 | A0 | top left |
+| 2 | A1 | bottom left |
+| 3 | B0 | top right |
+| 4 | B1 | bottom right |
+
+In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
+
+To pair it hold the corresponding button for that channel for 7 seconds or more.
+
+| Button | Channel |
+|-|-|
+| A0 | 15 |
+| A1 | 20 |
+| B0 | 11 |
+| B1 | 25 |
+
+Once the device is paired you need to confirm the channel. To do this press A1 and B0 together. Important: don't press any other buttons between this and the pairing.
+
+In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds.
+
+This device can work on any channel, not only 11, 15, 20 or 25. For this, please refer to the [EnOcean PTM 216Z manual chapter 5.3](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/).
+`,
+    },
+    {
+        model: ['ZLGP15'],
+        note: `
+### Green Power
+This is a Zigbee Green Power device which allows it to be very energy efficient.
+Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
+Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
+
+Green Power devices don't support binding and are not included in network scans.
+
+### Pairing
+To pair this device on channel 11, hold the configuration button (on the back of the device) and press any of the 4 buttons.
+
+This device can work on any channel, not only 11. For this, please refer to the [Legrand ZLGP15 manual chapter 6.2](https://www.admin.legrandoc.com/files/documents/S000113321EN-00.pdf).
+`,
+    },
+    {
+        model: ['ZLGP17/ZLGP18'],
+        note: `
+### Green Power
+This is a Zigbee Green Power device which allows it to be very energy efficient.
+Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
+Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
+
+Green Power devices don't support binding and are not included in network scans.
+
+### Pairing ZLGP17
+To pair this device on channel 11, hold the configuration button (on the back of the device) and press the main button (up or down).
+
+This device can work on any channel, not only 11. For this, please refer to the [Legrand ZLGP17 manual chapter 6.2](https://www.admin.legrandoc.com/files/documents/S000111963EN-00.pdf).
+
+### Pairing ZLGP18
+To pair this device on channel 11, hold the configuration button (on the back of the device) and press the button (up or down) on the first side, then do the same for the second side.
+
+Note: each side of the device is treated as a single ZLGP17.
+
+This device can work on any channel, not only 11. For this, please refer to the [Legrand ZLGP18 manual chapter 6.2](https://www.admin.legrandoc.com/files/documents/S000112516EN-00.pdf).
+`,
+    },
+    {
+        model: ['ZNDDMK11LM'],
+        note: `
+### Device mode
+
+The device itself supports two modes: \`RGBW mode\` and \`Dual color temperature mode\`. When the device works under \`Dual color temperature mode\`, it can control two color temperature lightstrips individually at the same time, and this is the only mode being supported by Zigbee2MQTT currently. More details can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/8510).
+`,
+    },
+    {
         model: ['4523430'],
         note: `
 ### Pairing
@@ -263,7 +516,7 @@ When in pairing state, the bulb will flash.
         model: ['AV2010/22'],
         note: `
 ## Pairing
-Pair the Bitron AV2010/22 sensor to Zigbee2MQTT by holding it close to the coordinator and pressing the indicator light/button at the front for about 10 seconds. The indicator light/button will flash red once to indicate it is in pairing mode. The Bitron AV2010/22 sensor should now be visible in the Zigbee2MQTT Devices overview.
+Pair the SMaBiT AV2010/22 sensor to Zigbee2MQTT by holding it close to the coordinator and pressing the indicator light/button at the front for about 10 seconds. The indicator light/button will flash red once to indicate it is in pairing mode. The SMaBiT AV2010/22 sensor should now be visible in the Zigbee2MQTT Devices overview.
 `,
     },
     {
@@ -318,24 +571,26 @@ Hold down power button (side of the switch) about 10 seconds, release once it bl
 `,
     },
     {
-        model: ['902010/128'],
+        model: ['AV2010/24A'],
         note: `
 ## Pairing
-Pair the Bitron 902010/128 Smart Plug to Zigbee2MQTT by plugging it into a power outlet close to the coordinator and pressing the indicator light/button at the front for about 10 seconds. The indicator light/button will flash red once to indicate it is in pairing mode. The Bitron 902010/128 Smart Plug now be visible in the Zigbee2MQTT Devices overview.
+Press and hold the function key on the top of the sensor for about 10 seconds until the red LED briefly lights up once.\n\nDuring the search, the LED lights up red once every 10 seconds. When the LED flashes 2 times, the device has successfully registered.
+
+Disclaimer: Do not rely solely on zigbee2mqtt under any circumstances, as zigbee2mqtt may cease to function as expected in the event of a fire.
 `,
     },
     {
-        model: ['902010/24'],
+        model: ['AV2010/24'],
         note: `
 ## Pairing
-Pair the Bitron 902010/24 Smoke Detector to Zigbee2MQTT by holding it close to the coordinator and pressing the button for about 10 seconds. The indicator light will flash red once and/or the alarm will beep twice to indicate it is in pairing mode. The Bitron 902010/24 Smoke Detector should now be visible in the Zigbee2MQTT Devices overview.
+Pair the SMaBiT AV2010/24 Smoke Detector to Zigbee2MQTT by holding it close to the coordinator and pressing the button for about 10 seconds. The indicator light will flash red once and/or the alarm will beep twice to indicate it is in pairing mode. The SMaBiT AV2010/24 Smoke Detector should now be visible in the Zigbee2MQTT Devices overview.
 `,
     },
     {
-        model: ['902010/23'],
+        model: ['AV2010/23'],
         note: `
 ## Pairing
-Pair the Bitron 902010/23 control to Zigbee2MQTT by holding it close to the coordinator and pressing the third button (calculated from the key chain hole) for about 10 seconds. The indicator light will flash red once to indicate it is in pairing mode. The Bitron 902010/23 control should now be visible in the Zigbee2MQTT Devices overview.
+Pair the SMaBiT AV2010/23 control to Zigbee2MQTT by holding it close to the coordinator and pressing the third button (calculated from the key chain hole) for about 10 seconds. The indicator light will flash red once to indicate it is in pairing mode. The SMaBiT AV2010/23 control should now be visible in the Zigbee2MQTT Devices overview.
 `,
     },
     {
@@ -2935,7 +3190,7 @@ The device gives extended hue values. Zigbee2MQTT calculates also the normal hue
 `,
     },
     {
-        model: ['902010/24'],
+        model: ['AV2010/24'],
         note: `
 ### Activating the alert
 Activating the alert is done by sending a JSON
@@ -3212,45 +3467,6 @@ To control the precision based on the temperature value set it to e.g. \`{30: 0,
 when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1. Precision will take into affect with next report of device.
 * \`temperature_calibration\`: Allows to manually calibrate temperature values,
 e.g. \`1\` would add 1 degree to the temperature reported by the device; default \`0\`. Calibration will take into affect with next report of device.
-`,
-    },
-    {
-        model: ['GreenPower_On_Off_Switch', 'GreenPower_7'],
-        note: `
-### Green Power
-This is a Zigbee Green Power device which allows it to be very energy efficient.
-Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
-Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
-
-Green Power devices don't support binding and are not included in network scans.
-
-### Pairing Philips Hue Tap
-This device requires your Zigbee network to run on channel 11, 15, 20 or 25. In order to pair it hold the corresponding button for that channel 10 seconds.
-
-| Button (dots) | Channel |
-|-|-|
-| 1 | 11 |
-| 2 | 15 |
-| 3 | 20 |
-| 4 | 25 |
-
-### Pairing Friends of Hue switches (EnOcean PTM 216Z module based)
-This device has 4 buttons: A0 (left-top), A1 (left-bottom), B0 (right-top), B1 (right-bottom). In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
-
-To pair it hold the corresponding button for that channel for 7 seconds or more.
-
-| Button | Channel |
-|-|-|
-| A0 | 15 |
-| A1 | 20 |
-| B0 | 11 |
-| B1 | 25 |
-
-Once the device is paired you need to confirm the channel. To do this press A1 and B0 together. Important: don't press any other buttons between this and the pairing.
-
-In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds.
-
-This device can work on any channel, not only 15, 20, 11 or 25. For this refer to the [EnOcean PTM 216Z manual chapter 5.3](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/)
 `,
     },
     {

@@ -1,19 +1,20 @@
 ---
-title: "CR Smart Home TS0207 control via MQTT"
-description: "Integrate your CR Smart Home TS0207 via Zigbee2MQTT with whatever smart home
+title: "TuYa TS0207_water_leak_detector control via MQTT"
+description: "Integrate your TuYa TS0207_water_leak_detector via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0207.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0207_water_leak_detector.md)*
 
-# CR Smart Home TS0207
+# TuYa TS0207_water_leak_detector
 
-| Model | TS0207  |
-| Vendor  | CR Smart Home  |
+| Model | TS0207_water_leak_detector  |
+| Vendor  | TuYa  |
 | Description | Water leak detector |
-| Exposes | water_leak, battery_low, tamper, battery, linkquality |
-| Picture | ![CR Smart Home TS0207](../images/devices/TS0207.jpg) |
+| Exposes | water_leak, battery_low, battery, linkquality |
+| Picture | ![TuYa TS0207_water_leak_detector](../images/devices/TS0207_water_leak_detector.jpg) |
+| White-label | CR Smart Home TS0207 |
 
 ## Notes
 
@@ -33,12 +34,6 @@ Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery_low is ON, if `false` OFF.
-
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %.

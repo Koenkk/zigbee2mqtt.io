@@ -12,7 +12,7 @@ description: "Integrate your Develco SMSZB-120 via Zigbee2MQTT with whatever sma
 | Model | SMSZB-120  |
 | Vendor  | Develco  |
 | Description | Smoke detector with siren |
-| Exposes | temperature, battery, smoke, battery_low, test, max_duration, alarm, linkquality |
+| Exposes | temperature, battery, smoke, battery_low, test, max_duration, alarm, reliability, fault, linkquality |
 | Picture | ![Develco SMSZB-120](../images/devices/SMSZB-120.jpg) |
 
 ## Notes
@@ -108,6 +108,18 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
 If value equals `START` alarm is ON, if `OFF` OFF.
+
+### Reliability (enum)
+Indicates reason if any fault.
+Value can be found in the published state on the `reliability` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `no_fault_detected`, `unreliable_other`, `process_error`.
+
+### Fault (binary)
+Indicates whether the device are in fault state.
+Value can be found in the published state on the `fault` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` fault is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

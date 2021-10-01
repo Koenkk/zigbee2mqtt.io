@@ -14,6 +14,7 @@ description: "Integrate your Zemismart ZM-L03E-Z via Zigbee2MQTT with whatever s
 | Description | Smart light switch - 3 gang with neutral wire |
 | Exposes | switch (state), linkquality |
 | Picture | ![Zemismart ZM-L03E-Z](../images/devices/ZM-L03E-Z.jpg) |
+| White-label | BSEED TS0003 |
 
 ## Notes
 

@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi SP-EUC01 via Zigbee2MQTT with whatever smart
 | Model | SP-EUC01  |
 | Vendor  | Xiaomi  |
 | Description | Aqara EU smart plug |
-| Exposes | switch (state), power, energy, linkquality |
+| Exposes | switch (state), power, energy, device_temperature, linkquality |
 | Picture | ![Xiaomi SP-EUC01](../images/devices/SP-EUC01.jpg) |
 
 ## Notes
@@ -41,6 +41,12 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Device_temperature (numeric)
+Device temperature (polled every 30 min).
+Value can be found in the published state on the `device_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

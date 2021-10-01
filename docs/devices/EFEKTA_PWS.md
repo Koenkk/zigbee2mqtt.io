@@ -11,11 +11,15 @@ description: "Integrate your Custom devices (DiY) EFEKTA_PWS via Zigbee2MQTT wit
 
 | Model | EFEKTA_PWS  |
 | Vendor  | Custom devices (DiY)  |
-| Description | [Plant Wattering Sensor](https://github.com/smartboxchannel/Plant-Watering-Sensor-Zigbee) |
+| Description | [Plant Wattering Sensor] |
 | Exposes | soil_moisture, battery, temperature, linkquality |
 | Picture | ![Custom devices (DiY) EFEKTA_PWS](../images/devices/EFEKTA_PWS.jpg) |
 
 ## Notes
+
+
+### Build guide
+Instructions on how to build this device can be found [here](https://github.com/smartboxchannel/Plant-Watering-Sensor-Zigbee)
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*

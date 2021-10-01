@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi SSM-U02 via Zigbee2MQTT with whatever smart 
 | Model | SSM-U02  |
 | Vendor  | Xiaomi  |
 | Description | Aqara single switch module T1 (without neutral). Doesn't work as a router and doesn't support power meter |
-| Exposes | switch (state), linkquality |
+| Exposes | switch (state), power_outage_memory, switch_type, linkquality |
 | Picture | ![Xiaomi SSM-U02](../images/devices/SSM-U02.jpg) |
 
 ## Notes
@@ -26,6 +26,20 @@ None
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+
+### Power_outage_memory (binary)
+Enable/disable the power outage memory, this recovers the on/off mode after power failure.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+If value equals `true` power_outage_memory is ON, if `false` OFF.
+
+### Switch_type (enum)
+Wall switch type.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `toggle`, `momentary`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

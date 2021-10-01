@@ -11,9 +11,9 @@ description: "Integrate your EnOcean PTM 216Z via Zigbee2MQTT with whatever smar
 
 | Model | PTM 216Z  |
 | Vendor  | EnOcean  |
-| Description | On/off switch |
+| Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
-| Picture | ![EnOcean PTM 216Z](../images/devices/PTM_216Z.jpg) |
+| Picture | ![EnOcean PTM 216Z](../images/devices/PTM-216Z.jpg) |
 
 ## Notes
 

@@ -12,7 +12,7 @@ description: "Integrate your Third Reality 3RWS18BZ via Zigbee2MQTT with whateve
 | Model | 3RWS18BZ  |
 | Vendor  | Third Reality  |
 | Description | Water sensor |
-| Exposes | water_leak, battery_low, battery, linkquality |
+| Exposes | water_leak, battery_low, battery, voltage, linkquality |
 | Picture | ![Third Reality 3RWS18BZ](../images/devices/3RWS18BZ.jpg) |
 
 ## Notes
@@ -40,6 +40,12 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Voltage (numeric)
+Voltage of the battery in millivolts.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `mV`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
