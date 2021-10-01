@@ -17,6 +17,18 @@ description: "Integrate your Moes ZSS-ZK-THL via Zigbee2MQTT with whatever smart
 
 ## Notes
 
+### Pairing
+Press the Orange button on the side until 3 dots appear on the screen.
+
+### Compatibility issue
+
+This device freeze after a while when not connected with a Tuya Hub. See [#7535](https://github.com/Koenkk/zigbee2mqtt/issues/7535). Some users report that
+this device work fine when connected to any hub through a relay device.
+
+### Usage limitation
+
+The device reports illuminance variations instantly. Therefore temperature is reported each hour making this device useless for building a thermostat.
+
 ### Device type specific configuration
 *[How to use device type specific configuration](../information/configuration.md)*
 
