@@ -1,48 +1,60 @@
 ---
 ---
 # Availability
-*An ongoing discussion about this feature can be found here: [#775](https://github.com/Koenkk/zigbee2mqtt/issues/775)*
+The availability feature checks wether your devices are online. The availability state of a device is published to `zigbee2mqtt/[FRIENDLY_NAME]/availability` with the payload being `online` or `offline`.
 
-When the availability feature is enabled, Zigbee2MQTT will ping devices to check if they are online.
-In case a devices changes it's online/offline state, Zigbee2MQTT will publish to `zigbee2mqtt/[FRIENDLY_NAME]/availability`; `online` or `offline`.
-
-This feature integrates well with Home Assistant as devices are marked as `unavailable` when offline.
-
-To enable availabilty, add the following to your `configuration.yaml`:
+To enable the availability feature add the following to your `configuration.yaml`.
 
 ```yaml
-advanced:
-  availability_timeout: 60
+availability: true
 ```
 
-The `availability_timeout` defines the interval in seconds at which devices are pinged.
-Note that only non-battery powered devices are checked for availability.
-By default `availability_timeout: 0` is set, which means that this feature is disabled.
+The availability feature works differently for active and passive devices.
+- Active devices (routers or mains powered end devices): by default they have to check-in every 10 minutes. If they don't, they will be pinged, if that fails the device will be marked as `offline`.
+- Passive devices (everything that is not an active device, mostly battery powered devices): these devices need to check-in every 25 hours, they cannot be pinged so if they don't they will be marked as `offline`.
 
-In order to exclude devices from this feature use `availability_blocklist`, example:
+Note that this timeout is persisted between Zigbee2MQTT restarts. So if you e.g. stop Zigbee2MQTT for longer than 10 minutes, all yours active devices will be marked as `offline` initially.
+
+## Advanced configuration
+Instead of setting `availability: true` in your `configuration.yaml` you can provide a more advanced configuration:
 
 ```yaml
-advanced:
-  availability_timeout: 60
-  availability_blocklist: ['my_bulb','0x000b57fffec6a5b2'] # = list of friendly names or IEEE addresses
+# Note: all options are optional
+availability:
+  active:
+    # Time after which an active device will be marked as offline in
+    # minutes (default = 10 minutes)
+    timeout: 10
+  passive:
+    # Time after which a passive device will be marked as offline in
+    # minutes (default = 1500 minutes aka 25 hours)
+    timeout: 1500
+
+devices:
+  '0x12345678':
+    friendly_name: 'my_bulb'
+    # Set availablility: false to disable the availability feature for a specific device
+    availability: false
+  '0x87654321':
+    friendly_name: 'my_switch'
+    # Change availibity timeout to 3 minutes for this device only
+    availability:
+      timeout: 3
 ```
 
-In order to set availability check for certain devices only from this feature use `availability_passlist`, example:
+If you want to enable the availability feature for only certain devices, don't add `availability: true` in your `configuration.yaml` but specify it for that device only, e.g.
 
 ```yaml
-advanced:
-  availability_timeout: 60
-  availability_passlist: ['my_bulb','my_other_bulb','0x000b57fffec6a5b2'] # = list of friendly names or IEEE addresses
+devices:
+  '0x87654321':
+    friendly_name: 'my_switch'
+    # Enable avaiability for just 'my_switch'
+    availability: true
 ```
-
-## Non-pingable devices
-Note that not all devices can be pinged for availability (e.g. battery powered devices).
-This category of devices will be marked as `unavailable` when no message has been received from them for 25 hours (persistent across restarts)
-This is only enabled when the availability feature is enabled.
 
 ## State retrieval
-While this feature is enabled and a bulb reconnects or announces itself on the network, Zigbee2MQTT will retrieve the new state of the device.
-This will make sure that e.g. a bulb is powered off and on again the state (on/off, brightness, color temperature or color) is correct.
+When this feature is enabled and a device reconnects or announces itself on the network, Zigbee2MQTT will retrieve the state of the device. This is e.g. handy when a bulb turns itself on after being reconnected to mains power. The following attributes will be read: `state`, `brightness`, `color_temp` and `color`.
 
-## Note for CC2530/CC2531 users
-As this feature increases the amount of messages on the Zigbee network, it could cause stability issues when you are using a CC2531 or CC2530 as adapter.
+## Performance considerations
+- The pinging can be heavy on the coordinator, especially if you are using a CC2530 or CC2531 adapter.
+- Higher `timeout` for active devices results in less pinging so less stress on the coordinator.
