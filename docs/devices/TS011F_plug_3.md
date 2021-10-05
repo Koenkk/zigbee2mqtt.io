@@ -13,7 +13,7 @@ description: "Integrate your TuYa TS011F_plug_3 via Zigbee2MQTT with whatever sm
 | Vendor  | TuYa  |
 | Description | Smart plug (without power monitoring) |
 | Exposes | switch (state), power_outage_memory, linkquality |
-| Picture | ![TuYa TS011F_plug_3](../images/devices/TS011F_plug_3.jpg) |
+| Picture | ![TuYa TS011F_plug_3](../images/devices/TS011F_plug_2.jpg) |
 
 ## Notes
 
