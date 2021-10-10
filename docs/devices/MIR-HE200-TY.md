@@ -4,7 +4,7 @@ description: "Integrate your Tuya Human radar motion and presence sensor into zi
 ---
 
 *To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/3216131P6.md)*
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MIR-HE200-TY.md)*
 
 # Tuya MIR-HE200-TY
 
@@ -12,7 +12,7 @@ description: "Integrate your Tuya Human radar motion and presence sensor into zi
 | Vendor  | TuYa  |
 | Description | TuYa Human radar motion/presence sensor |
 | Exposes | Presence, motion, motion_direction, motion_speed, illuminance,  sensivity, scene |
-| Picture |  (zigbee2mqtt.io/docs/images/devices/MIR-HE200-TY.png)MIR-HE200-TY |
+| Picture |  (zigbee2mqtt.io/docs/images/devices/MIR-HE200-TY.jpg)MIR-HE200-TY |
 
 ## Notes
 
@@ -50,3 +50,5 @@ scalable sensivity of detection (Range 0-9). This expose can be controlled via p
 the sensor has 6 predefined scenes regarding sensivity of motion and presence. These are: default, area, toilet, bedroom, parlour, office, hotel. Changing is possible via:
 `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"scene": "default or area or toilet, etc"}`
 
+
+![MIR-HE200-TY](https://user-images.githubusercontent.com/20765982/136711332-47023263-a623-4010-bd66-3eca80e06588.jpg)
