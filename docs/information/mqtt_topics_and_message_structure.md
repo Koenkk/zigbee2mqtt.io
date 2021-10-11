@@ -269,7 +269,7 @@ Removes a device from the network. Allowed payloads are `{"id": "deviceID"}` or 
 Note that in Zigbee the coordinator can only **request** a device to remove itself from the network.
 Which means that in case a device refuses to respond to this request it is not removed from the network.
 This can happen for e.g. battery powered devices which are sleeping and thus not receiving this request.
-In case removal fails the reponse will be e.g. `{"data":{"id": "my_bulb","block":false,"force":false},"status":"error","error":"Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)"}`.
+In case removal fails the response will be e.g. `{"data":{"id": "my_bulb","block":false,"force":false},"status":"error","error":"Failed to remove dimmer (Error: AREQ - ZDO - mgmtLeaveRsp after 10000ms)"}`.
 
 An alternative way to remove the device is by factory resetting it, this probably won't work for all devices as it depends on the device itself.
 In case the device did remove itself from the network, you will get a `device_leave` event on `zigbee2mqtt/bridge/event`.
@@ -277,7 +277,7 @@ In case the device did remove itself from the network, you will get a `device_le
 In case all of the above fails, you can force remove a device. Note that a force remove will **only** remove the device from the database. Until this device is factory reset, it will still hold the network encryption key and thus is still able to communicate over the network!
 To force remove a device add the optional `force` property (default `false`) to the payload, example: `{"id":"my_bulb","force":true}`.
 
-In case you also want to block the device the optional `block` property (default `false`) can be added, example: `{"id":"my_bulb","block":true}`. Note that Zigbee doesn't have a block functionallity, therefore when a device is blocked, Zigbee2MQTT will immediately request the device to remove itself from the network when it joins.
+In case you also want to block the device the optional `block` property (default `false`) can be added, example: `{"id":"my_bulb","block":true}`. Note that Zigbee doesn't have a block functionality, therefore when a device is blocked, Zigbee2MQTT will immediately request the device to remove itself from the network when it joins.
 
 
 #### zigbee2mqtt/bridge/request/device/ota_update/check
@@ -292,7 +292,7 @@ See [OTA updates](./ota_updates.md).
 
 #### zigbee2mqtt/bridge/request/device/configure
 
-Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected (e.g. not reporting certain values), not all devices can be configured (only when the defintion has a `configure` in its [definition](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices)). Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_remote"}` or `my_remote`, response: `{"data":{"id": "my_remote"},"status":"ok"}`.
+Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected (e.g. not reporting certain values), not all devices can be configured (only when the definition has a `configure` in its [definition](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices)). Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_remote"}` or `my_remote`, response: `{"data":{"id": "my_remote"},"status":"ok"}`.
 
 
 #### zigbee2mqtt/bridge/request/device/options
@@ -321,7 +321,7 @@ See [Binding](./binding.md).
 
 #### zigbee2mqtt/bridge/request/device/configure_reporting
 
-Allows to send a Zigbee configure reporting command to a device. Refer to the Configure Reporting Command in the [ZigBee Cluster Library](https://github.com/Koenkk/zigbee-herdsman/blob/master/docs/Zigbee%20Cluster%20Library%20Specification%20v7.pdf) for more information. Example payload is `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10}`. In this case the repsponse would be `{"data":{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":"10","reportable_change":10},"status":"ok"}`.
+Allows to send a Zigbee configure reporting command to a device. Refer to the Configure Reporting Command in the [ZigBee Cluster Library](https://github.com/Koenkk/zigbee-herdsman/blob/master/docs/Zigbee%20Cluster%20Library%20Specification%20v7.pdf) for more information. Example payload is `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10}`. In this case the response would be `{"data":{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":"10","reportable_change":10},"status":"ok"}`.
 
 To disable reporting set the `maximum_report_interval` to `65535`.
 

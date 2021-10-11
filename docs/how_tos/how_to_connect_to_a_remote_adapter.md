@@ -58,7 +58,7 @@ reboot
 
 
 ## 3. Configure
-Now edit the Zigbee2MQTT `configuration.yaml` accordingly, replace `192.168.2.13` with the IP or hostname of your system where the adapter is connectd to.
+Now edit the Zigbee2MQTT `configuration.yaml` accordingly, replace `192.168.2.13` with the IP or hostname of your system where the adapter is connected to.
 
 ```yaml
 serial:
