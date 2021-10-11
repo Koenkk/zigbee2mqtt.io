@@ -18,7 +18,7 @@ To run locally, execute the following commands:
 git clone https://github.com/Koenkk/zigbee2mqtt.io.git
 cd zigbee2mqtt.io/docs
 
-# Make sure that you have atleast Ruby 2.1.0 installed, if this fails, install atleast Ruby 2.1.0
+# Make sure that you have at least Ruby 2.1.0 installed, if this fails, install at least Ruby 2.1.0
 ruby --version
 
 # Install bundler

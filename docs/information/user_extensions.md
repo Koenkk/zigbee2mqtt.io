@@ -1,6 +1,6 @@
 # User extensions
 
-User extensions is a way to extend Zigbee2MQTT behaviour, user extensions works in same way as internal extensions.
+User extensions is a way to extend Zigbee2MQTT behavior, user extensions works in same way as internal extensions.
 
 To get familiar with  extensions framework please read [source code of internal extensions](https://github.com/Koenkk/zigbee2mqtt/tree/master/lib/extension).
 
