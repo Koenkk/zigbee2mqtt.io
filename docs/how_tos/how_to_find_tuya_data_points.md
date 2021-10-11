@@ -54,7 +54,7 @@ Once confirmed, you should be taken to your new Tuya project. Click on `Link Tuy
 This should bring up a QR code. Go in to the Tuya app on your mobile device, click on `[+]` (as id you are adding a new device). At the top of the screen, you will see a scan barcode button `[-]`. Click the `[-]` button and give permissions to use the camera (if prompted). Scan the QR code with your mobile device, and your account should appear in the App Account List in the Tuya IoT Platform.
 
 ### 8. Find your devices
-Click on the `All Devices` and find the device in-which you wish to find the Data Points. Click on `Debug Device`
+Click on the `All Devices` and find the device in-which you wish to find the Data Points. Click on `Debug Device`. If you do not find your device in the list, or the list is empty, plese check your project's region.
 
 ![08_devices](../images/how_tos/tuya_dp/08_devices.png)
 
