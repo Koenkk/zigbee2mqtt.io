@@ -78,6 +78,8 @@ Some data points are 'report only' (they report changes that happen within the d
 
 For example on Saswell thermostat data point number `103` is heating setpoint, it has `value` type and is 'issue and report', we will use that information later in examples.
 
+If you have a Tuya gateway, you can find what the function is of data point number [here](https://www.zigbee2mqtt.io/how_tos/how_to_find_tuya_data_points.html)
+
 ### 4. Deciphering the data points
 By adding the two debug converters mentioned earlier, we have the tools to decipher Tuya data points.
 
