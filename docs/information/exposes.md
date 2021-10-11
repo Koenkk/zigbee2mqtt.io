@@ -163,7 +163,7 @@ Example:
 ```
 
 ### Climate
-Indicates this device exposes climate functionallity.
+Indicates this device exposes climate functionality.
 - Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `occupied_cooling_setpoint`, `local_temperature`, `system_mode`, `running_state`, `fan_mode`, `preset` and `away_mode`.
 - Never has both `occupied_heating_setpoint` and `current_heating_setpoint`.
 - Possible values for `system_mode` are `off`, `heat`, `cool`, `auto`, `dry` and `fan_only`.

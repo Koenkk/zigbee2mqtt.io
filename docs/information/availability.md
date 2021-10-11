@@ -8,7 +8,7 @@ In case a devices changes it's online/offline state, Zigbee2MQTT will publish to
 
 This feature integrates well with Home Assistant as devices are marked as `unavailable` when offline.
 
-To enable availabilty, add the following to your `configuration.yaml`:
+To enable availability, add the following to your `configuration.yaml`:
 
 ```yaml
 advanced:

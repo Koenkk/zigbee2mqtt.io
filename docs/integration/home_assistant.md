@@ -67,7 +67,7 @@ To respond to button clicks (e.g. WXKG01LM) you can use one of the following thr
 
 ### Via MQTT device trigger (recommended)
 [MQTT device trigger](https://www.home-assistant.io/integrations/device_trigger.mqtt/) is the recommended way to respond to button clicks.
-Note that it atleast requires Home Assistant 0.106.0.
+Note that it at least requires Home Assistant 0.106.0.
 
 The MQTT device triggers are discovered by Zigbee2MQTT once the event is triggered on the device once.
 
@@ -313,7 +313,7 @@ automation:
           entity_id: timer.zigbee_permit_join
       - service: switch.turn_off
         entity_id: switch.zigbee2mqtt_main_join
-  - id: "zigbee2mqtt_create_notification_on_successfull_interview"
+  - id: "zigbee2mqtt_create_notification_on_successful_interview"
     alias: Zigbee Device Joined Notification
     trigger:
       platform: mqtt

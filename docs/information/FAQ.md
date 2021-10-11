@@ -37,7 +37,7 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - Try repairing the device again for 2 or 3 times.
 - This might be a Zigbee2MQTT bug, [Create a new issue](https://github.com/Koenkk/zigbee2mqtt/issues/new) with the zigbee-herdsman debug logging attached to it. [How to enable zigbee-herdsman debug logging](https://www.zigbee2mqtt.io/information/debug.html#zigbee-herdsman-debug-logging).
 - If device joins with `0x000000000000000` as `ieeeAddress` (you will see: `Starting interview of '0x0000000000000000'` in the Zigbee2MQTT log) your CC253X might be broken. [See issue #2761](https://github.com/Koenkk/zigbee2mqtt/issues/2761).
-- In case the device is a bulb, try resetting it through [Touclink](./touchlink.md)
+- In case the device is a bulb, try resetting it through [Touchlink](./touchlink.md)
 - Try pairing close to a bulb (light) router instead of the coordinator.
 
 ## How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?
@@ -200,7 +200,7 @@ The correct revision is: **E** like shown below.
 
 ![cc26xr1_revision](../images/cc26xr1_revision.png)
 
-All earlier version are not supported (these are development boards). Return this board to the seller immidiately.
+All earlier version are not supported (these are development boards). Return this board to the seller immediately.
 
 ## I read that Zigbee2MQTT has a limit of 20 devices (when using a CC2531), is this true?
 Definitely not! Example given: the default Zigbee2MQTT CC2531 firmware indeed supports 20 devices connected **directly** to the coordinator. However, by having routers in your network the network size can be extended. Probably all AC powered devices e.g. bulbs serve as a router, you can even use another [CC2530/CC2531 as a router](../how_tos/how_to_create_a_cc2530_router.md) (which has a limit of 21 devices).
