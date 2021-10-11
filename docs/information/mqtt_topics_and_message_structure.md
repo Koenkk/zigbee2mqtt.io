@@ -104,7 +104,9 @@ Example payload:
         "definition":{
             "model":"ZNCZ02LM",
             "vendor":"Xiaomi",
-            "description":"Mi power plug ZigBee"
+            "description":"Mi power plug ZigBee",
+            "options": [...], // see exposes/options below
+            "exposes": [...]  // see exposes/options below
         },
         "power_source":"Mains (single phase)",
         "date_code":"02-28-2017",
@@ -124,7 +126,8 @@ Example payload:
             "model":"LED1624G9",
             "vendor":"IKEA",
             "description":"TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white",
-            "exposes":[{"type":"light","features":["state","brightness","color_xy"]}],
+            "options": [...], // see exposes/options below
+            "exposes": [...]  // see exposes/options below
         },
         "power_source":"Mains (single phase)",
         "software_build_id":"1.3.009",
@@ -178,8 +181,11 @@ Example payload:
 ]
 ```
 
-### Exposes
-A device definition will always have an `exposes` property. The format of `exposes` is documented in [Exposes](./exposes).
+### Exposes/options
+A device definition will always have an `exposes` and `options` property which are a lists containing expose objects. The expose format is documented in [Exposes](./exposes).
+- `exposes` This contains all the device capabilities (e.g. switch, light, occupancy)
+- `options` Contains all the device options (e.g. `temperature_precision`) which can be set through `zigbee2mqtt/bridge/request/device/options`
+
 
 ## zigbee2mqtt/bridge/groups
 Contains the groups.
