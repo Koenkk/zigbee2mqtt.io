@@ -34,6 +34,5 @@ async function generateDevices() {
     await Promise.all([
         generateDevices(),
         generatePage(supportDevices, path.join(baseDir, 'information', 'supported_devices.md')),
-        generatePage(supportDevicesTable, path.join(baseDir, 'information', 'supported_devices_table.md')),
     ]);
 })();
