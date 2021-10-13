@@ -12,7 +12,7 @@ Before executing `docker run` pull the correct image with `docker pull koenkk/zi
 First run the container, this will create the configuration directory. Change `configuration.yaml` according to your situation and start again.
 
 ## Running as root
-Run by executing the following commmand:
+Run by executing the following command:
 
 1. Identify your device:
 ```bash

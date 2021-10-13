@@ -1,7 +1,7 @@
 ---
 ---
 # How to secure your Zigbee network
-By default your Zigbee network isn't as secured as possible. The following settings are recommeded to apply to your configuration.
+By default your Zigbee network isn't as secured as possible. The following settings are recommended to apply to your configuration.
 
 ## Disable joining
 To disable joining it's important that `permit_join: false` is set in your `configuration.yaml`. Otherwise rogue devices are able to join allowing them to send and receive Zigbee traffic.

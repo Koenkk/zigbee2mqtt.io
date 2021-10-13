@@ -23,9 +23,9 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - If you are using a Raspberry Pi, try disconnecting any other USB devices. If after that pairing works, try connecting the USB devices via a powered USB hub.
 - Make sure that any other Zigbee networks/hubs are powered down. When you e.g. want to pair an IKEA bulb which was first paired to the IKEA gateway make sure to power down the IKEA gateway. If that doesn't help also try powering down all devices that are connected to the IKEA hub.
 - If it's a battery powered device, try replacing the battery.
-- You've hit the device limit of the coordinator, especially occurs when using the CC2531 or CC2530 in combination with the source routing firmware. Try reflashing the coordinator and immidiately pair the device after starting Zigbee2MQTT.
+- You've hit the device limit of the coordinator, especially occurs when using the CC2531 or CC2530 in combination with the source routing firmware. Try reflashing the coordinator and immediately pair the device after starting Zigbee2MQTT.
 - Try pairing the device closer to the coordinator.
-- If it's a battery powered device, try replacing the batery with a new one.
+- If it's a battery powered device, try replacing the battery with a new one.
 - CC2531/CC2530 coordinator only:
   - Stop Zigbee2MQTT, unplug the coordinator, wait 10 seconds, plug the coordinator, start Zigbee2MQTT and try to pair the device again.
   - If none of the above helps, try to reflash the coordinator (does not require repairing of already paired devices).
@@ -37,7 +37,7 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - Try repairing the device again for 2 or 3 times.
 - This might be a Zigbee2MQTT bug, [Create a new issue](https://github.com/Koenkk/zigbee2mqtt/issues/new) with the zigbee-herdsman debug logging attached to it. [How to enable zigbee-herdsman debug logging](https://www.zigbee2mqtt.io/information/debug.html#zigbee-herdsman-debug-logging).
 - If device joins with `0x000000000000000` as `ieeeAddress` (you will see: `Starting interview of '0x0000000000000000'` in the Zigbee2MQTT log) your CC253X might be broken. [See issue #2761](https://github.com/Koenkk/zigbee2mqtt/issues/2761).
-- In case the device is a bulb, try resetting it through [Touclink](./touchlink.md)
+- In case the device is a bulb, try resetting it through [Touchlink](./touchlink.md)
 - Try pairing close to a bulb (light) router instead of the coordinator.
 
 ## How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?
@@ -68,7 +68,7 @@ You **don't** need to re-pair your devices when:
     - When doing this, make sure to copy over the contents of the `data` directory.
 
 ## Why are some links missing from my networkmap?
-No worrry, in case it happens with end devices (battery powered) it most of the times **does not** mean the devices aren't connected to the network map anymore.
+No worry, in case it happens with end devices (battery powered) it most of the times **does not** mean the devices aren't connected to the network map anymore.
 Some end devices (e.g. Xiaomi door sensor) sleep for a too long time which causes the parent (router child ageing) to remove it from it from its child table. This is what causes the missing link. Even while its not in the child table anymore, the end device can still communicate via the router. This does not always happen since not all routers use child ageing (this is a Zigbee 3.0 feature).
 
 ## Why is the `action` property always empty?
@@ -95,7 +95,7 @@ In this example the correct `port` would be `/dev/ttyACM0`.
 ### Verify that the user you run Zigbee2MQTT as has write access to the port
 This can be tested by executing: `test -w [PORT] && echo success || echo failure` (e.g. `test -w /dev/ttyACM0 && echo success || echo failure`).
 
-If it outputs `failure` it could mean your user does not have access to the port. To test assign write acces by executing: `sudo chown [USER] [PORT]` (e.g. `sudo chown pi /dev/ttyACM0`).
+If it outputs `failure` it could mean your user does not have access to the port. To test assign write access by executing: `sudo chown [USER] [PORT]` (e.g. `sudo chown pi /dev/ttyACM0`).
 
 if it outputs `failure`, then you need to permanently give your user permission to the device.
 
@@ -120,7 +120,7 @@ serial:
   port: /dev/ttyUSB.CC2531-01
 …`
 
-After reboot your dedvice will have the right permissions and always the same name.
+After reboot your device will have the right permissions and always the same name.
 
 #### Method 2: Add your user to specific groups ####
 
@@ -200,7 +200,7 @@ The correct revision is: **E** like shown below.
 
 ![cc26xr1_revision](../images/cc26xr1_revision.png)
 
-All earlier version are not supported (these are development boards). Return this board to the seller immidiately.
+All earlier version are not supported (these are development boards). Return this board to the seller immediately.
 
 ## I read that Zigbee2MQTT has a limit of 20 devices (when using a CC2531), is this true?
 Definitely not! Example given: the default Zigbee2MQTT CC2531 firmware indeed supports 20 devices connected **directly** to the coordinator. However, by having routers in your network the network size can be extended. Probably all AC powered devices e.g. bulbs serve as a router, you can even use another [CC2530/CC2531 as a router](../how_tos/how_to_create_a_cc2530_router.md) (which has a limit of 21 devices).

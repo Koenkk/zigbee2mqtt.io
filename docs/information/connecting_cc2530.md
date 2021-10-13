@@ -31,7 +31,7 @@ The required coordinator firmware can be found here: [Zigbee 1.2](https://github
 ### Connecting
 Connect to CC2530 to the USB to serial adapter using the following mapping:
 
-| USB-Serial Adaper  | CC2530  |
+| USB-Serial Adapter  | CC2530  |
 | :------------: |:---------------:|
 | 3V3 | VCC |
 | GND | GND |

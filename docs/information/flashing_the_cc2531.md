@@ -5,7 +5,7 @@ The firmware can be flashed with multiple devices. The easiest but most expensiv
 
 **NOTE 1**: In case you are already running a Zigbee network: reflashing does not require repairing of all devices, see [What does and does not require repairing of all devices?](../information/FAQ.html#what-does-and-does-not-require-repairing-of-all-devices)
 
-**NOTE 2**: In this tutorial we will flash the default firmware. For larger network (20+) or when experiencing stability problems the [source routing firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/source_routing) is recommended. This firmware has a limiation of 5 direct children so make sure to have enough routers in your network.
+**NOTE 2**: In this tutorial we will flash the default firmware. For larger network (20+) or when experiencing stability problems the [source routing firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/source_routing) is recommended. This firmware has a limitation of 5 direct children so make sure to have enough routers in your network.
 
 **NOTE 3**: The CC2531 USB dongle can be flashed also with the [CC2530 firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/default) to be operated via the P0.2/P0.3 serial pins (which are the first one and the second one of the IO expansion port). Be careful when using the CC2531 in association with an ESP8266 (as if it were the [CC2530](https://www.zigbee2mqtt.io/information/connecting_cc2530.html#via-an-esp8266)): the onboard USB power supply may not be able to power an additional ESP8266 without overheating/failing.
 

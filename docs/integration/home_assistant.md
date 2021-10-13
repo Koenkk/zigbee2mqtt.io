@@ -50,7 +50,7 @@ without having to restart Home Assistant. It also makes it possible to show whic
 ![Device registry](../images/home_assistant_device_registry.png)
 
 ## Customizing discovery
-The device specifc configuration allows you to modify the discovery payload. Here you can also prevent a device from being discovered. See [Device specific configuration](../information/configuration.md) for the available options.
+The device specific configuration allows you to modify the discovery payload. Here you can also prevent a device from being discovered. See [Device specific configuration](../information/configuration.md) for the available options.
 
 ## I'm confused about the different device IDs, names and friendly names
 - Home Assistant `device_id`: determined on first discovery of the device, can only be changed
@@ -67,7 +67,7 @@ To respond to button clicks (e.g. WXKG01LM) you can use one of the following thr
 
 ### Via MQTT device trigger (recommended)
 [MQTT device trigger](https://www.home-assistant.io/integrations/device_trigger.mqtt/) is the recommended way to respond to button clicks.
-Note that it atleast requires Home Assistant 0.106.0.
+Note that it at least requires Home Assistant 0.106.0.
 
 The MQTT device triggers are discovered by Zigbee2MQTT once the event is triggered on the device once.
 
@@ -313,7 +313,7 @@ automation:
           entity_id: timer.zigbee_permit_join
       - service: switch.turn_off
         entity_id: switch.zigbee2mqtt_main_join
-  - id: "zigbee2mqtt_create_notification_on_successfull_interview"
+  - id: "zigbee2mqtt_create_notification_on_successful_interview"
     alias: Zigbee Device Joined Notification
     trigger:
       platform: mqtt
