@@ -26,7 +26,7 @@ export function useFilter(filters, devicesFiltered) {
     }
 
     const res = devices.filter(dev => {
-      if (exposes && !exposes.some(exp => dev.exposes.includes(exp))) {
+      if (exposes && !exposes.every(exp => dev.exposes.includes(exp))) {
         return false;
       }
       if (vendors && !vendors.includes(dev.vendor)) {
