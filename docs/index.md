@@ -12,7 +12,7 @@ Welcome to the Zigbee2MQTT documentation! Besides the documentation, you can als
 * [What do I need?](getting_started/what_do_i_need.md)
 * [Running Zigbee2MQTT](getting_started/running_zigbee2mqtt.md)
 * [Pairing devices](getting_started/pairing_devices.md)
-* [Supported devices](information/supported_devices.md)
+* [Supported devices](information/supported_devices.md) ([table view](information/supported_devices_table.md))
 
 ### Information
 * [3D cases](information/3d_cases.md)
