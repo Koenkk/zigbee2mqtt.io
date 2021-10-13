@@ -26,6 +26,7 @@ module.exports = async function() {
                     model: whiteLabel.model,
                     vendor: whiteLabel.vendor,
                     description: whiteLabel.description,
+                    isWhiteLabel: true,
                     whiteLabelOf: device,
                 };
 
@@ -37,10 +38,10 @@ module.exports = async function() {
     }
 
     devices = devices.map((d) => {
-        const model = d.whiteLabelOf ? d.whiteLabelOf.model : d.model;
+        const model = d.model;
         const image = utils.getImage(d, '');
-        const description = d.description || d.whiteLabelOf.description;
-        const link = `../devices/${ utils.normalizeModel(model) }.html`;
+        const description = d.description;
+        const link = `../devices/${ utils.normalizeModel(d.whiteLabelOf ? d.whiteLabelOf.model : d.model) }.html`;
         const exposes = Array.from(new Set(
             d.exposes
                 .map((e) => e.name ? e.name : e.type)
@@ -56,7 +57,7 @@ module.exports = async function() {
             image,
             link,
             exposes,
-            isWhiteLabel: !!d.whiteLabelOf
+            isWhiteLabel: d.isWhiteLabel,
         };
     });
 
