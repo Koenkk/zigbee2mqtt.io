@@ -7,7 +7,6 @@ const baseDir = path.join(__dirname, '..', 'docs');
 const devicesDir = path.join(baseDir, 'devices');
 
 const supportDevices = require('./supported-devices');
-const supportDevicesTable = require('./supported-devices-table');
 const devicePage = require('./device_page');
 
 async function generatePage(content, target) {
