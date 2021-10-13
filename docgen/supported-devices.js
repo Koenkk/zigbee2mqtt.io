@@ -40,7 +40,7 @@ module.exports = async function() {
     devices = devices.map((d) => {
         const model = d.model;
         const image = utils.getImage(d, '');
-        const description = d.description;
+        const description = d.description || d.whiteLabelOf.description;
         const link = `../devices/${ utils.normalizeModel(d.whiteLabelOf ? d.whiteLabelOf.model : d.model) }.html`;
         const exposes = Array.from(new Set(
             d.exposes
@@ -57,7 +57,7 @@ module.exports = async function() {
             image,
             link,
             exposes,
-            isWhiteLabel: d.isWhiteLabel,
+            isWhiteLabel: d.isWhiteLabel || d.whiteLabel,
         };
     });
 
