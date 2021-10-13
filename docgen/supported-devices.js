@@ -69,7 +69,7 @@ module.exports = async function() {
     // exec git log - 50 in parallel
     await Promise.all(devices.map(throat(20, addAddedAt)));
 
-    devices.sort((a, b) => new Date(b.addedAt) - new Date(a.addedAt));
+    devices.sort((a, b) => (b.addedAt < a.addedAt) ? -1 : ((b.addedAt > a.addedAt) ? 1 : 0));
 
     return `---
 ---
