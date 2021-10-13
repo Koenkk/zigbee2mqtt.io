@@ -128,11 +128,14 @@ export default {
   @import '~quasar/src/css/core/typography.sass';
   @import '~quasar/src/css/core/visibility.sass';
 
-  width: 345px;
+  width: auto;
   margin: 0 auto 2rem auto;
   color: #606c71;
   font-size: 1rem;
 
+  @media screen and (min-width: 380px) {
+    width: 345px;
+  }
   @media screen and (min-width: 720px) {
     width: 705px;
     justify-content: center;
