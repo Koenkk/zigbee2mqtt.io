@@ -1,23 +1,40 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
 const devices = require('zigbee-herdsman-converters').devices;
 const utils = require('./utils');
 
-const base = path.join(__dirname, '..', 'docs');
+const baseDir = path.join(__dirname, '..', 'docs');
+const devicesDir = path.join(baseDir, 'devices');
 
 const supportDevices = require('./supported-devices');
 const supportDevicesTable = require('./supported-devices-table');
 const devicePage = require('./device_page');
 
-fs.writeFileSync(path.join(base, 'information', 'supported_devices.md'), supportDevices);
-fs.writeFileSync(path.join(base, 'information', 'supported_devices_table.md'), supportDevicesTable);
-
-// Clean devices directory
-for (const file of fs.readdirSync(path.join(base, 'devices'))) {
-    fs.unlinkSync(path.join(base, 'devices', file));
+async function generatePage(content, target) {
+    if (typeof content === 'function') {
+        content = await content();
+    }
+    return fs.writeFile(target, content);
 }
 
-devices.forEach((device) => {
-    const file = path.join(base, 'devices', `${utils.normalizeModel(device.model)}.md`);
-    fs.writeFileSync(file, devicePage.generate(device));
-});
+// Clean devices directory
+async function cleanDevices() {
+    const files = await fs.readdir(devicesDir);
+    return Promise.all(files.map((file) => fs.unlink(path.join(devicesDir, file))));
+}
+
+async function generateDevices() {
+    return Promise.all(devices.map((device) => {
+        const file = path.join(devicesDir, `${ utils.normalizeModel(device.model) }.md`);
+        return fs.writeFile(file, devicePage.generate(device));
+    }));
+}
+
+(async function() {
+    await cleanDevices();
+    await Promise.all([
+        generateDevices(),
+        generatePage(supportDevices, path.join(baseDir, 'information', 'supported_devices.md')),
+        generatePage(supportDevicesTable, path.join(baseDir, 'information', 'supported_devices_table.md')),
+    ]);
+})();

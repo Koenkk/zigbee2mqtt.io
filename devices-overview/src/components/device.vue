@@ -3,6 +3,7 @@
   a.title(:href="baseUri + device.link") {{ device.description }}
   .thumb
     .vendor {{ device.vendor }}
+    .is-new(v-if="isNew" :title="'Added at ' + new Date(device.addedAt).toLocaleString()") new
     a.device-img(
       :href="baseUri + device.link"
       :style="{ backgroundImage: 'url(' + baseUri + device.image + ')' }"
@@ -11,17 +12,25 @@
 </template>
 
 <script>
+import { ref, watch } from "vue";
+
 export default {
   name: 'Device',
   props: ['device'],
 
-  setup() {
+  setup(props) {
     let baseUri = './';
     if(process.env.NODE_ENV !== 'production') {
       baseUri = 'https://www.zigbee2mqtt.io/';
     }
 
+    const isNew = ref(false);
+    watch(props.device, device => {
+      isNew.value = new Date(device.addedAt) > Date.now() - 30 * 24 * 3600 * 1000;
+    }, { immediate: true });
+
     return {
+      isNew,
       baseUri
     }
   }
@@ -84,7 +93,7 @@ $bgColor: #F2F2F2;
       background-position: center center;
     }
 
-    .vendor {
+    .vendor, .is-new {
       position: absolute;
       right: 0;
       top: 0;
@@ -96,6 +105,15 @@ $bgColor: #F2F2F2;
       border-bottom-left-radius: 6px;
       font-size: 14px;
       font-weight: bold;
+    }
+
+    .is-new {
+      right: auto;
+      left: 0;
+      font-size: 16px;
+      font-weight: bold;
+      border-bottom-right-radius: 6px;
+      color: #165d93;
     }
 
   }
