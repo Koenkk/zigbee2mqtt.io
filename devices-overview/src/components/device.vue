@@ -16,10 +16,13 @@ export default {
   props: ['device'],
 
   setup() {
+    let baseUri = './';
+    if(process.env.NODE_ENV !== 'production') {
+      baseUri = 'https://www.zigbee2mqtt.io/';
+    }
 
     return {
-      // TODO: Make relative on prod build
-      baseUri: 'https://www.zigbee2mqtt.io/'
+      baseUri
     }
   }
 }
