@@ -16,11 +16,13 @@ export function useFilter(filters, devicesFiltered) {
     } = filters.value;
     // const sStr = search && search.toLowerCase();
     let searchRxp = false;
-    try {
-      searchRxp = new RegExp(search, 'i');
-    }
-    // eslint-disable-next-line
-    catch (e) {
+    if(search) {
+      try {
+        searchRxp = new RegExp(search, 'i');
+      }
+        // eslint-disable-next-line
+      catch (e) {
+      }
     }
 
     const res = devices.filter(dev => {
