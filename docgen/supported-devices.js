@@ -4,10 +4,10 @@ const throat = require('throat');
 const utils = require('./utils');
 
 const exec = (...args) => new Promise((resolve, reject) => {
-   childProcess.exec.apply(this, [
-       ...args,
-       (err, stdout) => err && reject(err) || resolve(stdout)
-   ]);
+    childProcess.exec.apply(this, [
+        ...args,
+        (err, stdout) => err && reject(err) || resolve(stdout),
+    ]);
 });
 
 /**
@@ -56,10 +56,11 @@ module.exports = async function() {
             image,
             link,
             exposes,
+            isWhiteLabel: !!d.whiteLabelOf
         };
     });
 
-    const addAddedAt = async device => {
+    const addAddedAt = async (device) => {
         const file = path.resolve(__dirname, '../docs/devices', `${ utils.normalizeModel(device.model) }.md`);
         device.addedAt = (await exec(`git log --date=iso8601-strict --format=%ad --diff-filter=A -- ${ file }`)).trim();
     };

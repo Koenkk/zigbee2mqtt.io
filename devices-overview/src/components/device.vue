@@ -3,7 +3,10 @@
   a.title(:href="baseUri + device.link") {{ device.description }}
   .thumb
     .vendor {{ device.vendor }}
-    .is-new(v-if="isNew" :title="'Added at ' + new Date(device.addedAt).toLocaleString()") new
+      q-icon(name="more" v-if="device.isWhiteLabel")
+        q-tooltip(self="center end") White-Label Device
+    .is-new(v-if="isNew") new
+      q-tooltip(self="center start") Added at {{ new Date(device.addedAt).toLocaleString() }}
     a.device-img(
       :href="baseUri + device.link"
       :style="{ backgroundImage: 'url(' + baseUri + device.image + ')' }"
@@ -38,6 +41,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 $borderColor: #939b9d;
 $accentColor: #1E6BB8;
 $bgColor: #F2F2F2;
@@ -105,6 +109,12 @@ $bgColor: #F2F2F2;
       border-bottom-left-radius: 6px;
       font-size: 14px;
       font-weight: bold;
+
+      .q-icon {
+        font-size: 20px;
+        vertical-align: middle;
+        margin-left: 5px;
+      }
     }
 
     .is-new {
