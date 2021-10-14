@@ -4,3 +4,4 @@ _site/
 .idea
 .DS_Store
 .idea/
+docs/.jekyll-metadata

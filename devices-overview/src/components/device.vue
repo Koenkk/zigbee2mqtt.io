@@ -2,16 +2,20 @@
 .device
   a.title(:href="baseUri + device.link") {{ device.description }}
   .thumb
-    .vendor {{ device.vendor }}
-      q-icon(name="more" v-if="device.isWhiteLabel")
-        q-tooltip(self="center end") White-Label Device
+    .top-right
+      div
+        .vendor {{ device.vendor }}
+          q-icon(name="more" v-if="device.isWhiteLabel")
+            q-tooltip(self="center end") White-Label Device
     .is-new(v-if="isNew") new
       q-tooltip(self="center start") Added at {{ new Date(device.addedAt).toLocaleString() }}
     a.device-img(
       :href="baseUri + device.link"
       :style="{ backgroundImage: 'url(' + baseUri + device.image + ')' }"
     )
-  .desc {{ device.exposes.join(', ') }}
+  .desc
+    .model [{{ device.model }}]
+    | {{ device.exposes.join(', ') }}
 </template>
 
 <script>
@@ -82,6 +86,12 @@ $bgColor: #F2F2F2;
     font-size: 12px;
   }
 
+  .model {
+    padding-right: 5px;
+    display: inline-block;
+    color: #159957;
+  }
+
   .thumb {
     font-size: 0;
     position: relative;
@@ -97,18 +107,20 @@ $bgColor: #F2F2F2;
       background-position: center center;
     }
 
-    .vendor, .is-new {
+    .top-right {
       position: absolute;
       right: 0;
       top: 0;
-      padding: 0.2rem 0.5rem;
-      background: $bgColor;
-      color: #159957;
-      display: flex;
-      flex-wrap: wrap;
-      border-bottom-left-radius: 6px;
-      font-size: 14px;
-      font-weight: bold;
+      text-align: right;
+      .vendor {
+        display: inline-block;
+        padding: 0.2rem 0.5rem;
+        background: $bgColor;
+        color: #159957;
+        font-size: 14px;
+        font-weight: bold;
+        border-bottom-left-radius: 6px;
+      }
 
       .q-icon {
         font-size: 20px;
@@ -118,8 +130,12 @@ $bgColor: #F2F2F2;
     }
 
     .is-new {
-      right: auto;
+      position: absolute;
       left: 0;
+      top: 0;
+      padding: 0.2rem 0.5rem;
+      background: $bgColor;
+      border-bottom-left-radius: 6px;
       font-size: 16px;
       font-weight: bold;
       border-bottom-right-radius: 6px;

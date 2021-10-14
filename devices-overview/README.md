@@ -1,4 +1,4 @@
-# devices-overview
+# devices-overview vue-app
 
 ## Project setup
 ```
@@ -14,6 +14,8 @@ npm run serve
 ```
 npm run build
 ```
+
+**Note:** `public/index.html` is used only for development. You would probably update the `window.ZIGBEE2MQTT_SUPPORTED_DEVICES` list from `../docs/information/supported_devices.md`.
 
 ### Lints and fixes files
 ```
