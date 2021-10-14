@@ -4,6 +4,7 @@ const throat = require('throat');
 const utils = require('./utils');
 
 const exec = (...args) => new Promise((resolve, reject) => {
+    // eslint-disable-next-line
     childProcess.exec.apply(this, [
         ...args,
         (err, stdout) => err && reject(err) || resolve(stdout),
