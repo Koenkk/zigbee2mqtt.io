@@ -20,7 +20,7 @@
   "scripts": {
     "docgen": "node docgen/docgen.js",
     "test": "mocha --recursive",
-    "eslint": "node_modules/.bin/eslint ."
+    "eslint": "node_modules/.bin/eslint docgen"
   },
   "author": "Koen Kanters",
   "license": "GPL-3.0",
@@ -30,6 +30,7 @@
   "homepage": "https://www.zigbee2mqtt.io",
   "dependencies": {
     "image-size": "*",
+    "throat": "^6.0.1",
     "zigbee-herdsman-converters": "14.0.261"
   },
   "devDependencies": {
