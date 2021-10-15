@@ -92,6 +92,22 @@ export default {
 
 <style lang="scss">
 /* Quasar Core */
+@import '~quasar/src/css/helpers/string.sass';
+@import '~quasar/src/css/helpers/math.sass';
+@import '~quasar/src/css/variables.sass';
+@import '~quasar/src/css/normalize.sass';
+@import '~quasar/src/css/core/animations.sass';
+@import '~quasar/src/css/core/colors.sass';
+@import '~quasar/src/css/core/elevation.sass';
+@import '~quasar/src/css/core/flex.sass';
+@import '~quasar/src/css/core/helpers.sass';
+@import '~quasar/src/css/core/mouse.sass';
+@import '~quasar/src/css/core/orientation.sass';
+@import '~quasar/src/css/core/positioning.sass';
+@import '~quasar/src/css/core/size.sass';
+@import '~quasar/src/css/core/touch.sass';
+@import '~quasar/src/css/core/transitions.sass';
+@import '~quasar/src/css/core/visibility.sass';
 @import '~@quasar/extras/material-icons/material-icons.css';
 
 // Jekyll theme overwrite
@@ -110,23 +126,7 @@ export default {
 }
 
 .supported-devices {
-  @import '~quasar/src/css/helpers/string.sass';
-  @import '~quasar/src/css/helpers/math.sass';
-  @import '~quasar/src/css/variables.sass';
-  @import '~quasar/src/css/normalize.sass';
-  @import '~quasar/src/css/core/animations.sass';
-  @import '~quasar/src/css/core/colors.sass';
-  @import '~quasar/src/css/core/elevation.sass';
-  @import '~quasar/src/css/core/flex.sass';
-  @import '~quasar/src/css/core/helpers.sass';
-  @import '~quasar/src/css/core/mouse.sass';
-  @import '~quasar/src/css/core/orientation.sass';
-  @import '~quasar/src/css/core/positioning.sass';
-  @import '~quasar/src/css/core/size.sass';
-  @import '~quasar/src/css/core/touch.sass';
-  @import '~quasar/src/css/core/transitions.sass';
   @import '~quasar/src/css/core/typography.sass';
-  @import '~quasar/src/css/core/visibility.sass';
 
   width: auto;
   margin: 0 auto 2rem auto;
