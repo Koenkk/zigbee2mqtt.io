@@ -14,8 +14,8 @@
       :style="{ backgroundImage: 'url(' + baseUri + device.image + ')' }"
     )
   .desc
-    .model [{{ device.model }}]
-    | {{ device.exposes.join(', ') }}
+    .model {{ device.model }}
+    | - {{ device.exposes.join(', ') }}
 </template>
 
 <script>
@@ -90,6 +90,7 @@ $bgColor: #F2F2F2;
     padding-right: 5px;
     display: inline-block;
     color: #159957;
+    font-weight: bold;
   }
 
   .thumb {
