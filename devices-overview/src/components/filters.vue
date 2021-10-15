@@ -47,6 +47,7 @@ export default defineComponent({
   components: {
     MultiSelect
   },
+  props: ['modelValue'],
 
   setup(props, { emit }) {
     const filtersFromHash = hashStore.parseHash();
@@ -60,6 +61,14 @@ export default defineComponent({
         ref.value = null;
       }
     };
+
+    watch(() => props.modelValue, modelValue => {
+      if(!modelValue) return;
+      const { exposes, vendors, search } = modelValue;
+      if(exposes) exposesFilter.value = exposes;
+      if(vendors) vendorsFilter.value = vendors;
+      if(search) searchFilter.value = search;
+    });
 
     const emitFilters = () => {
       hashStore.updateHash({
