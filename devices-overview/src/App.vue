@@ -10,11 +10,14 @@
         :key="device.vendor + device.model"
         :device="device"
         @click="storePosition"
+        @vendor-click="onVendorClick"
       )
       p(v-if="devicesToShow.length === 0" :key="'no-results'") No devices found.
+  back-to-top
 </template>
 
 <script>
+import BackToTop from "@/components/back-to-top";
 import Device from "@/components/device";
 import Filters from '@/components/filters.vue'
 import InfiniteScroll from "@/components/infinite-scroll";
@@ -27,6 +30,7 @@ export default {
   name: 'SupportedDevices',
 
   components: {
+    BackToTop,
     InfiniteScroll,
     Filters,
     Device
@@ -67,24 +71,37 @@ export default {
       });
     }
 
+    const onVendorClick = vendor => {
+      if (!currentFilters.value) {
+        currentFilters.value = { vendors: [vendor] };
+      } else if (!currentFilters.value.vendors) {
+        currentFilters.value.vendors = [vendor];
+      } else if (!currentFilters.value.vendors.includes(vendor)) {
+        currentFilters.value.vendors.push(vendor);
+      }
+    }
+
     // Restore loadIndex and scroll position for nice browser-back behaviour
     onMounted(() => {
-      const sessionData = SessionStorage.getItem('zigbee2mqtt-devices-overview') || {};
-      if (sessionData.loadIndex) {
-        loadIndex.value = sessionData.loadIndex;
+        const sessionData = SessionStorage.getItem('zigbee2mqtt-devices-overview') || {};
+        if (sessionData.loadIndex) {
+          loadIndex.value = sessionData.loadIndex;
+        }
+        if (sessionData.scrollTop) {
+          setTimeout(() => {
+            window.scrollTo(null, sessionData.scrollTop);
+          });
+        }
       }
-      if (sessionData.scrollTop) {
-        setTimeout(() => {
-          window.scrollTo(null, sessionData.scrollTop);
-        });
-      }
-    });
+    )
+    ;
 
     return {
       currentFilters,
       devicesToShow,
       loadItemsByScroll,
       storePosition,
+      onVendorClick,
     }
   }
 }
@@ -114,6 +131,7 @@ export default {
 .material-icons {
   font-family: "Material Icons" !important;
 }
+
 .main-content {
   padding: 2rem 0 !important;
   @media screen and (max-width: 1080px) {

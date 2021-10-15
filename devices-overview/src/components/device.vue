@@ -4,7 +4,7 @@
   .thumb
     .top-right
       div
-        .vendor {{ device.vendor }}
+        .vendor(@click.self="$emit('vendor-click', device.vendor)") {{ device.vendor }}
           q-icon(name="more" v-if="device.isWhiteLabel")
             q-tooltip(self="center end") White-Label Device
     .is-new(v-if="isNew") new
@@ -24,6 +24,7 @@ import { ref, watch } from "vue";
 export default {
   name: 'Device',
   props: ['device'],
+  emits: ['vendor-click'],
 
   setup(props) {
     let baseUri = './';
@@ -114,6 +115,7 @@ $bgColor: #F2F2F2;
       top: 0;
       text-align: right;
       .vendor {
+        cursor: pointer;
         display: inline-block;
         padding: 0.2rem 0.5rem;
         background: $bgColor;
@@ -124,6 +126,7 @@ $bgColor: #F2F2F2;
       }
 
       .q-icon {
+        cursor: initial;
         font-size: 20px;
         vertical-align: middle;
         margin-left: 5px;
