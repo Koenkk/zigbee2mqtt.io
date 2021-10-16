@@ -66,6 +66,27 @@ Example:
 }
 ```
 
+**WIP**:
+
+*Variant 1*
+```json
+{
+    "type":"composite",
+    "name":"temperature_precision",
+    "property":"temperature_precision",
+    "features": [
+        {"type":"dynamic","name":"\\d+","value":"\\d+","access":7},
+    ]
+}
+```
+
+
+### List
+Indicates a device exposes a list of values. Currently the only possible `item_type` is `number`.
+
+Examples:
+- `{"type":"list","name":"no_occupancy_since","property":"no_occupancy_since","access":1,"item_type":"number"}`
+
 ## Specific
 
 ### Light
