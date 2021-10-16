@@ -4,9 +4,11 @@
   .thumb
     .top-right
       div
-        .vendor(@click.self="$emit('vendor-click', device.vendor)") {{ device.vendor }}
+        .vendor(@click="$emit('vendor-click', device.vendor)") {{ device.vendor }}
+          q-tooltip(self="center end" )
+            span(v-if="device.isWhiteLabel") White-Label Device -
+            |  Filter by {{ device.vendor }}
           q-icon(name="more" v-if="device.isWhiteLabel")
-            q-tooltip(self="center end") White-Label Device
     .is-new(v-if="isNew") new
       q-tooltip(self="center start") Added at {{ new Date(device.addedAt).toLocaleString() }}
     a.device-img(
@@ -123,10 +125,12 @@ $bgColor: #F2F2F2;
         font-size: 14px;
         font-weight: bold;
         border-bottom-left-radius: 6px;
+        &:hover {
+          color: #1E6BB8;
+        }
       }
 
       .q-icon {
-        cursor: initial;
         font-size: 20px;
         vertical-align: middle;
         margin-left: 5px;
