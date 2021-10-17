@@ -80,6 +80,18 @@ Example:
 }
 ```
 
+*Variant 2*
+```json
+{
+    "type":"composite",
+    "name":"temperature_precision",
+    "property":"temperature_precision",
+    "features": [
+        {"type":"numeric","name":"Value","property":{},"access":7},
+    ]
+}
+```
+
 
 ### List
 Indicates a device exposes a list of values. Currently the only possible `item_type` is `number`.
