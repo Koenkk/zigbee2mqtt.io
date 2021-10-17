@@ -93,6 +93,34 @@ Example:
 ```
 
 
+*Variant 3*
+```json
+{
+    "type":"composite",
+    "name":"temperature_precision",
+    "property":"temperature_precision",
+    "features": [
+        {
+            "type":"dynamic",
+            "property":{"type":"numeric","property":"???"},
+            "value":{"type":"numeric","property":"??"},
+            "access":7,
+        },
+    ]
+}
+```
+
+*Variant 4*
+```json
+{
+    "type":"key_value",
+    "name":"temperature_precision",
+    "property":"temperature_precision",
+    "key_type": {"type":"numeric"},
+    "value_type": {"type":"numeric"},
+}
+```
+
 ### List
 Indicates a device exposes a list of values. Currently the only possible `item_type` is `number`.
 
