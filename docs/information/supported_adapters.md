@@ -94,6 +94,14 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://circuitsetup.us/product/usb-zigbee-stick-z-stack-coordinator/">CircuitSetup's Store</a></td>
   </tr>
   <tr>
+    <td><img src="../images/sonoff_plus_dongle.png"></td>
+    <td>SONOFF Zigbee 3.0 USB Dongle Plus</td>
+    <td>CC2652P based USB connected adapter pre-programmed and with enclosure</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
+    <td><a href="https://sonoff.tech/wp-content/uploads/2021/09/Zigbee-3.0-USB-dongle-plus-firmware-flashing-1-1.docx">Flashing</a></td>
+    <td><a href="https://itead.cc/product/sonoff-zigbee-3-0-usb-dongle-plus/">ITEAD.cc</a></td>
+  </tr>
+  <tr>
     <td><img src="../images/cc2531.jpg"></td>
     <td>Texas Instruments CC2531 <b>(not recommended)</b></td>
     <td>USB connected Zigbee adapter with PCB antenna</td>
@@ -176,7 +184,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
     <td><a href="https://z2m.wiki/">Description</a></td>
     <td><a href="https://z2m.wiki/">Contact</a></td>
-  </tr> 
+  </tr>
    <tr>
     <td><img src="../images/CC2652P-Z2M.jpg"></td>
     <td>XGG 38PZ2MGateway</td>
@@ -184,7 +192,7 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin">Router</a></td>
     <td><a href="https://z2m.wiki/">Description</a></td>
     <td><a href="https://z2m.wiki/">Contact</a></td>
-    </tr>  
+    </tr>
     <tr>
     <td><img src="../images/CC2652P-Z2M.jpg"></td>
     <td>XGG 30Z2MGateway</td>
