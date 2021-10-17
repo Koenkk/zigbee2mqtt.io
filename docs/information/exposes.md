@@ -87,7 +87,7 @@ Example:
     "name":"temperature_precision",
     "property":"temperature_precision",
     "features": [
-        {"type":"numeric","name":"Value","property":{},"access":7},
+        {"type":"numeric","name":"Value","property":{"type":"numeric"},"access":7},
     ]
 }
 ```
