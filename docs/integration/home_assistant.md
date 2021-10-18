@@ -39,6 +39,10 @@ messages to `homeassistant/status`. If you are using a Home Assistant version ne
 this is configured by default. If you are using an older version, be sure to add this to your `configuration.yaml`
 if you want Zigbee2MQTT to resend the cached values when Home Assistant restarts
 
+## Device/group page
+Since Home Assistant 2021.11 the device/group page in Home Assistant can directly link to the frontend (*Visit device* button).
+To enable this set the `url` in the [frontend](../information/frontend) configuration.
+
 ## Home Assistant device registry
 When using Home Assistant MQTT discovery, Zigbee2MQTT integrates
 with the [Home Assistant device registry](https://developers.home-assistant.io/docs/en/device_registry_index.html).

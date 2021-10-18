@@ -52,6 +52,11 @@ serial:
   # Optional: adapter type, not needed unless you are experiencing problems (default: shown below, options: zstack, deconz)
   adapter: null
 
+# Optional: frontend feature (leave out to disable, disabled by default)
+# See https://www.zigbee2mqtt.io/information/frontend.html for more info
+frontend:
+  port: 8080
+
 # Optional: availability feature (default: false)
 # See https://www.zigbee2mqtt.io/information/availability.html for more info
 availability: false
