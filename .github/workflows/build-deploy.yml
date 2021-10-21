@@ -29,9 +29,6 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
 
-#      - name: Generate Device-Pages 📚
-#        run: npm run docgen
-
       - name: Build ⚙
         run: npm run build
 

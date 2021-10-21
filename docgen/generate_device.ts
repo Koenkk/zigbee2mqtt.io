@@ -57,7 +57,7 @@ ${ device.whiteLabel ? `| White-label | ${ device.whiteLabel.map((d) => `${ d.ve
 
 ${ notes }
 
-${ device.hasOwnProperty('ota') && ['AC01353010G'].includes(device.model) === false ? `
+${ device.hasOwnProperty('ota') ? `
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 ` : '' }
