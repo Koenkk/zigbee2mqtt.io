@@ -4,7 +4,11 @@ next: ../installation/
 
 # Supported Adapters
 
-Zigbee2MQTT officially supports the following adapters:
+::: tip
+Check the [Notes](#notes) to read some recommendations.
+:::
+
+Zigbee2MQTT officially supports the following adapters. They have to be flashed with a Coordinator firmware but there are plenty dealers out there who sell pre-flashed and ready to use Zigbee Adapters.
 
 | **Picture** | **Name** | **Description** | **Firmware** | **Guides** | **Buy** |
 | --- | --- | --- | --- | --- | --- |
