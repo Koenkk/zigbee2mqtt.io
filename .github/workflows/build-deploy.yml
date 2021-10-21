@@ -1,0 +1,47 @@
+name: Build ⚙ and Deploy 🚀
+on: push
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🏷
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js ⚗
+        uses: actions/setup-node@v2.4.1
+        with:
+          node-version: '16'
+
+      - name: Determine node version №
+        id: node-version
+        run: |
+          echo "::set-output name=version::$(node -v)"
+
+      - name: Restore Cache 📦
+        uses: actions/cache@v2.1.6
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ steps.node-version.outputs.version }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Install dependencies 🌐
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+#      - name: Generate Device-Pages 📚
+#        run: npm run docgen
+
+      - name: Build ⚙
+        run: npm run build
+
+      - name: Run tests 🔍
+        run: npm run test
+
+      - name: Deploy 🚀
+        if: github.ref == 'refs/heads/master'
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: dist # The folder the action should deploy.
+          single-commit: true

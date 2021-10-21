@@ -1,0 +1,78 @@
+@import "palette";
+
+:root {
+  --content-width: 940px;
+}
+
+.theme-default-content:not(.custom) {
+  @media (max-width: $MQMobile) {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
+
+.no-sidebar .theme-default-content:not(.custom) {
+  max-width: 1065px;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.page-meta .meta-item .meta-item-label {
+  color: var(--c-text-accent);
+}
+
+
+.page {
+  code, kbd, pre, samp {
+    font-size: 14px;
+  }
+
+  a {
+    position: relative;
+  }
+
+  &:not(.custom) a:hover {
+    text-decoration: none;
+  }
+
+  /* Link hover fade-in */
+  a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: var(--c-text-accent);
+    opacity: 0;
+    transition: opacity 250ms, transform 250ms;
+  }
+
+  a:hover::after,
+  a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+  }
+}
+
+.home {
+  .actions > a {
+    margin: 0.5rem 0.5rem 0 0.5rem !important;
+    font-weight: bold;
+  }
+}
+
+.sidebar {
+  .sidebar-links {
+    > ul {
+      overflow: hidden;
+      height: 0;
+    }
+    .active+ul {
+      height: auto;
+    }
+    > ul:only-of-type {
+      height: auto;
+    }
+  }
+}
