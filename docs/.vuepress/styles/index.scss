@@ -8,6 +8,20 @@
   @media (max-width: $MQMobile) {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
+
+    // Disable line-numbers on small devices
+    div[class*=language-] {
+      margin: 0;
+      &:after {
+        display: none;
+      }
+      .line-numbers {
+        display: none;
+      }
+      > pre {
+        margin-left: 0;
+      }
+    }
   }
 }
 
@@ -23,10 +37,6 @@
 
 
 .page {
-  code, kbd, pre, samp {
-    font-size: 14px;
-  }
-
   a {
     position: relative;
   }
