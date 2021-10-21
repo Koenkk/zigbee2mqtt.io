@@ -63,7 +63,7 @@ export default {
   ],
 
   themeConfig: {
-    repo: 'psi-4ward/zigbee2mqtt-docs',
+    repo: 'psi-4ward/zigbee2mqtt.io',
     docsBranch: 'master',
     editLinkText: '✏ Help to make the docu better and edit this page on Github ✌',
     logo: '/logo.png',

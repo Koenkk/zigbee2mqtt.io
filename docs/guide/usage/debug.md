@@ -42,4 +42,4 @@ docker logs CONTAINER_ID > log.txt 2>&1
 To determine the `CONTAINER_ID` execute `docker ps`.
 
 ## Change log level during runtime
-See [MQTT topics and message structure](./mqtt_topics_and_message_structure.md)
+See [MQTT topics and message structure](./mqtt_topics_and_messages.md)

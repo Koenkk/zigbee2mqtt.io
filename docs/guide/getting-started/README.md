@@ -3,7 +3,7 @@ sidebarDepth: 1
 next: ../usage/
 ---
 
-# Quickstart
+# Getting started
 
 ## Prerequisites
 
@@ -11,8 +11,7 @@ In order to use Zigbee2MQTT we need the following hardware:
 
 1. **A Zigbee Adapter** which is the interface between the Computer (or Server) where you run Zigbee2MQTT and the Zigbee radio
 communication. Zigbee2MQTT supports a variety of adapters with different kind of connections like USB, GPIO or remote via WIFI or Ethernet. 
-  Recommended adapters have a CC2652R, CC2652P, CC2652RB or CC1352P chip.    
-  See [Supported Adapters](../adapters/README.md).  
+  Recommended adapters have a CC2652R, CC2652P, CC2652RB or CC1352P chip. See [supported Adapters](../adapters/README.md).  
   ![ZZH](../../images/zzh.jpg)
 
 
@@ -20,22 +19,22 @@ communication. Zigbee2MQTT supports a variety of adapters with different kind of
   ![Raspberry Pi](../../images/pi.jpg)
 
 
-3. One or more **Zigbee Devices** which we will pair with Zigbee2MQTT.  
+3. One or more **Zigbee Devices** which will be paired with Zigbee2MQTT.  
    ![Zigbee devices](../../images/xiaomi_sensors.jpg)
 
 
 ## Installation
 
-You can run Zigbee2MQTT in different ways, see [Installation](../installation/). We will
-use [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) to
-set up Zigbee2MQTT here.
+You can run Zigbee2MQTT in different ways, see [Installation](../installation/). In this example 
+[Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) is used to
+set up and run Zigbee2MQTT.
 
 ### 1.) Find the Zigbee-Adapter
 
-After you plug the adapter in see the `dmesg` output to find the mapped device:
+After you plug the adapter in see the `dmesg` output to find the device location:
 
 ```bash
-sudo dmesg
+$ sudo dmesg
 
 ...
 usbcore: registered new interface driver ch341
@@ -44,7 +43,7 @@ ch341 3-1:1.0: ch341-uart converter detected
 usb 3-1: ch341-uart converter now attached to ttyUSB0
 ```
 
-As we can see our adapter was bound to `ttyUSB`.
+As we can see the adapter was indentified and mounted on `ttyUSB0`.
 
 ```bash
 $ ls -l /dev/ttyUSB0
@@ -55,7 +54,7 @@ Here we can see that the adapter is owned by `root` and accessible from all user
 
 ### 2.) Setup and start Zigbee2MQTT
 
-It's assumed, that you've a recent version of Docker and Docker-Compose.
+It's assumed, that you've a recent version of Docker and Docker-Compose is installed.
 
 First, we create the `docker-compose.yml` file which defines how Docker would run our containers. The following file consists of two services, one for the MQTT-Server and one for Zigbee2MQTT itself. Be sure to adjust the file to your needs and match the devices-mount in the case your adapter was not mounted on `/dev/ttyUSB0`.
 
@@ -89,7 +88,7 @@ services:
       - /dev/ttyUSB0:/dev/ttyUSB0
 ```
 
-In the next step we'll create a simple Zigbee2MQTT config file in `zigbee2mqtt-data/configuration.yml`.
+In the next step we'll create a simple [Zigbee2MQTT config file](../configuration/) in `zigbee2mqtt-data/configuration.yml`.
 
 ```yaml
 # Let new devices join our zigbee network
@@ -114,14 +113,14 @@ $ find
 ./zigbee2mqtt-data/configuration.yaml
 
 # First start
-docker-compose up -d
+$ docker-compose up -d
 
 # Check the logs
-docker-compose logs -f
+$ docker-compose logs -f
 ```
 
 After some short time you should see some log messages that Mosquitto and Zigbee2MQTT is running now. 
-You can access the WebUI under [http://localhost:8080](http://localhost:8080).
+You can open the WebUI using [http://localhost:8080](http://localhost:8080) (or the hostname of your remote server).
 
 We can now go on and pair our first device.
 
@@ -132,13 +131,13 @@ Search the [supported devices](../../supported-devices/) for your device and fol
 
 If no instructions are available, the device can probably be paired by factory resetting it.
 
-Once you see something similar to below in the log your device is paired.
+Once you see something similar to below in the log your device is paired and you can start controlling it using the WebUI and MQTT messages.
 
 ```
 Zigbee2MQTT:info  2019-11-09T12:19:56: Successfully interviewed '0x00158d0001dc126a', device has successfully been paired
 ```
 
-::: warning 
+::: warning attention
 It's important that `permit_join` is set to `false` in your `configuration.yaml` after initial setup is
 done to keep your Zigbee network safe and to avoid accidental joining of other Zigbee devices.
 :::

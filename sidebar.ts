@@ -3,7 +3,7 @@ import { getFiles } from "./navbar";
 
 export const sidebar: SidebarConfig = {
   '/guide/': [
-    '/guide/quickstart/',
+    '/guide/getting-started/',
     {
       text: 'Supported Hardware',
       link: '/guide/supported-hardware.md',
@@ -40,7 +40,7 @@ export const sidebar: SidebarConfig = {
         '/guide/usage/binding.md',
         '/guide/usage/groups.md',
         '/guide/usage/ota_updates.md',
-        '/guide/usage/mqtt_topics_and_message_structure.md',
+        '/guide/usage/mqtt_topics_and_messages.md',
         '/guide/usage/integrations.md',
         '/guide/usage/FAQ.md',
         '/guide/usage/debug.md',

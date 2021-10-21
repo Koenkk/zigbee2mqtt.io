@@ -5,7 +5,7 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🏷
+      - name: Checkout 🚚
         uses: actions/checkout@v2
 
       - name: Setup Node.js ⚗
@@ -29,10 +29,10 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
 
-      - name: Build ⚙
+      - name: Build 🛠
         run: npm run build
 
-      - name: Run tests 🔍
+      - name: Run tests 🩺
         run: npm run test
 
       - name: Deploy 🚀

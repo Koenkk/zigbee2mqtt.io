@@ -3,7 +3,7 @@ sidebarDepth: 1
 ---
 
 # Exposes
-Zigbee2MQTT exposes the device capabilities through the `exposes` property in [`zigbee2mqtt/bridge/devices`](./mqtt_topics_and_message_structure.md). The possible `exposes` are documented here.
+Zigbee2MQTT exposes the device capabilities through the `exposes` property in [`zigbee2mqtt/bridge/devices`](./mqtt_topics_and_messages.md). The possible `exposes` are documented here.
 
 There are two types of exposes:
 - Generic: types like `numeric` and `binary`

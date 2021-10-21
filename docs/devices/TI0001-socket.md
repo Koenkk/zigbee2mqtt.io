@@ -24,7 +24,7 @@ addedAt: 2020-06-10T16:45:59Z
 
 
 After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend
-of Zigbee2MQTT or using [MQTT message](../../guide/usage/mqtt_topics_and_message_structure.md#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
+of Zigbee2MQTT or using [MQTT message](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
 In case of problems it's recommended to remove device and than retry pairing and re-configuring device.
 
 ### Important

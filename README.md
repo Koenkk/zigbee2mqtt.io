@@ -26,7 +26,7 @@ The docgen-scripts helps to generate and update the individual device-pages (`/d
 
 The `## Notes` section of each page is writte by hand and does not come from `zigbee-herdsman-converters`. This section gets preserved and can be edited.
 
-Docgen is written in Typescript so you need a recent version of Node.js and NPM.
+Docgen is written in Typescript, so you need a recent version of Node.js and NPM.
 
 ```bash
 # Install dependencies
@@ -69,8 +69,8 @@ The build-artifact gets written to `dist` directory.
 npm run dev
 ```
 
-The `dev`-Mode includes the huge amount device-pages wich slows down the process drastically.
-If you are not interested in the device-pages you could exclude them by using `npm run dev:no-pages` run script.  
+The `dev`-Mode **excludes** the huge amount device-pages which slows down the build process drastically.
+If you are interested in the device-pages you could include them by using the `npm run dev:devices` npm-run script.  
 
 
 ## Docker
@@ -81,5 +81,5 @@ You can also just use a docker-image include Node.js.
 $ docker run --rm -v $PWD:/app -u $UID -ti node:16 bash
 node@87e1438ef553:/$ cd /app
 node@87e1438ef553:/app$ npm ci
-node@87e1438ef553:/app$ npm run dev:no-devices
+node@87e1438ef553:/app$ npm run dev
 ```
