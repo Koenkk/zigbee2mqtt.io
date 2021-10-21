@@ -32,7 +32,7 @@ set up Zigbee2MQTT here.
 
 ### 1.) Find the Zigbee-Adapter
 
-After you plug the adapter see the `dmesg` output to find the mapped device:
+After you plug the adapter in see the `dmesg` output to find the mapped device:
 
 ```bash
 sudo dmesg
