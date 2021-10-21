@@ -61,19 +61,20 @@ services:
     image: eclipse-mosquitto:2.0
     restart: unless-stopped
     volumes:
-      - "./data:/mosquitto"
+      - "./mosquitto-data:/mosquitto"
     ports:
       - "1883:1883"
       - "9001:9001"
+    command: "mosquitto -c /mosquitto-no-auth.conf"
 
   zigbee2mqtt:
     container_name: zigbee2mqtt
     restart: unless-stopped
     image: koenkk/zigbee2mqtt
     volumes:
-      - ./_data:/app/data
+      - ./zigbee2mqtt-data:/app/data
     ports:
-      - 8087:8080
+      - 8080:8080
     environment:
       - TZ=Europe/Berlin
     group_add:
@@ -83,8 +84,44 @@ services:
 ```
 
 ```bash
-docker-compose up 
+# First, start the MQTT-Server
+docker-compose up -d mqtt
 ```
+
+```bash 
+# Second, start Zigbee2MQTT to let it generate the config-files
+docker-compose up zigbee2mqtt
+```
+
+It likely will fail cause of wrong configuration but is has generated `zigbee2mqtt-data/configuration.yaml` for us.
+In our example the device is `ttyUSB0` so let's adopt it in the config:
+
+```yaml
+# Home Assistant integration (MQTT discovery)
+homeassistant: false
+
+# allow new devices to join
+permit_join: true
+
+# MQTT settings
+mqtt:
+  # MQTT base topic for zigbee2mqtt MQTT messages
+  base_topic: zigbee2mqtt
+  # MQTT server URL
+  server: 'mqtt://mqtt'
+
+# Serial settings
+serial:
+  # Location of Zigbee Adapter
+  port: /dev/ttyUSB0
+
+# Enable frontend on port 8080
+frontend:
+  port: 8080
+```
+
+Also see that the `mqtt.server` was set to `mqtt`. The docker networking makes the server available using this hostname.
+
 
 
 ## Connect a device
