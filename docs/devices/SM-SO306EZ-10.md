@@ -1,23 +1,28 @@
 ---
 title: "UseeLink SM-SO306EZ-10 control via MQTT"
-description: "Integrate your UseeLink SM-SO306EZ-10 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your UseeLink SM-SO306EZ-10 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SM-SO306EZ-10.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # UseeLink SM-SO306EZ-10
 
+|     |     |
+|-----|-----|
 | Model | SM-SO306EZ-10  |
 | Vendor  | UseeLink  |
 | Description | 4 gang switch, with USB |
 | Exposes | switch (state), linkquality |
-| Picture | ![UseeLink SM-SO306EZ-10](../images/devices/SM-SO306EZ-10.jpg) |
+| Picture | ![UseeLink SM-SO306EZ-10](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SM-SO306EZ-10.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

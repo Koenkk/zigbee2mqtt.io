@@ -1,23 +1,28 @@
 ---
 title: "Yale YRD256HA20BP control via MQTT"
-description: "Integrate your Yale YRD256HA20BP via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Yale YRD256HA20BP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YRD256HA20BP.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Yale YRD256HA20BP
 
+|     |     |
+|-----|-----|
 | Model | YRD256HA20BP  |
 | Vendor  | Yale  |
 | Description | Assure lock SL |
 | Exposes | lock (state, lock_state), battery, pin_code, linkquality |
-| Picture | ![Yale YRD256HA20BP](../images/devices/YRD256HA20BP.jpg) |
+| Picture | ![Yale YRD256HA20BP](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/YRD256HA20BP.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

@@ -1,19 +1,23 @@
 ---
 title: "Securifi PP-WHT-US control via MQTT"
-description: "Integrate your Securifi PP-WHT-US via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Securifi PP-WHT-US via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PP-WHT-US.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Securifi PP-WHT-US
 
+|     |     |
+|-----|-----|
 | Model | PP-WHT-US  |
 | Vendor  | Securifi  |
 | Description | Peanut Smart Plug |
 | Exposes | switch (state), power, current, voltage, linkquality |
-| Picture | ![Securifi PP-WHT-US](../images/devices/PP-WHT-US.jpg) |
+| Picture | ![Securifi PP-WHT-US](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PP-WHT-US.jpg) |
+
 
 ## Notes
 
@@ -47,7 +51,7 @@ Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
 
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

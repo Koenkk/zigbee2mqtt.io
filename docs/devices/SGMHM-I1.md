@@ -1,23 +1,28 @@
 ---
 title: "HEIMAN SGMHM-I1 control via MQTT"
-description: "Integrate your HEIMAN SGMHM-I1 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN SGMHM-I1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SGMHM-I1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN SGMHM-I1
 
+|     |     |
+|-----|-----|
 | Model | SGMHM-I1  |
 | Vendor  | HEIMAN  |
 | Description | Combustible gas sensor |
 | Exposes | gas, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN SGMHM-I1](../images/devices/SGMHM-I1.jpg) |
+| Picture | ![HEIMAN SGMHM-I1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SGMHM-I1.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

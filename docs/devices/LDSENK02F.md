@@ -1,23 +1,28 @@
 ---
 title: "ADEO LDSENK02F control via MQTT"
-description: "Integrate your ADEO LDSENK02F via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your ADEO LDSENK02F via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LDSENK02F.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # ADEO LDSENK02F
 
+|     |     |
+|-----|-----|
 | Model | LDSENK02F  |
 | Vendor  | ADEO  |
 | Description | 10A/16A EU smart plug |
 | Exposes | power, switch (state), energy, linkquality |
-| Picture | ![ADEO LDSENK02F](../images/devices/LDSENK02F.jpg) |
+| Picture | ![ADEO LDSENK02F](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LDSENK02F.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

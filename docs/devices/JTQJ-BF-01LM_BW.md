@@ -1,19 +1,23 @@
 ---
 title: "Xiaomi JTQJ-BF-01LM/BW control via MQTT"
-description: "Integrate your Xiaomi JTQJ-BF-01LM/BW via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi JTQJ-BF-01LM/BW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/JTQJ-BF-01LM_BW.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi JTQJ-BF-01LM/BW
 
+|     |     |
+|-----|-----|
 | Model | JTQJ-BF-01LM/BW  |
 | Vendor  | Xiaomi  |
 | Description | MiJia gas leak detector  |
 | Exposes | gas, battery_low, tamper, sensitivity, gas_density, selftest, linkquality |
-| Picture | ![Xiaomi JTQJ-BF-01LM/BW](../images/devices/JTQJ-BF-01LM-BW.jpg) |
+| Picture | ![Xiaomi JTQJ-BF-01LM/BW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JTQJ-BF-01LM-BW.jpg) |
+
 
 ## Notes
 

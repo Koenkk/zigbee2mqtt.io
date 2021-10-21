@@ -1,24 +1,28 @@
 ---
 title: "Leedarson 5AA-SS-ZA-H0 control via MQTT"
-description: "Integrate your Leedarson 5AA-SS-ZA-H0 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Leedarson 5AA-SS-ZA-H0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/5AA-SS-ZA-H0.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Leedarson 5AA-SS-ZA-H0
 
+|     |     |
+|-----|-----|
 | Model | 5AA-SS-ZA-H0  |
 | Vendor  | Leedarson  |
 | Description | Motion sensor |
 | Exposes | occupancy, illuminance, illuminance_lux, linkquality |
-| Picture | ![Leedarson 5AA-SS-ZA-H0](../images/devices/5AA-SS-ZA-H0.jpg) |
+| Picture | ![Leedarson 5AA-SS-ZA-H0](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/5AA-SS-ZA-H0.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.
 To control the precision based on the illuminance_lux value set it to e.g. `{1000: 0, 100: 1}`,

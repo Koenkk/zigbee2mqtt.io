@@ -1,24 +1,28 @@
 ---
 title: "Develco MOSZB-140 control via MQTT"
-description: "Integrate your Develco MOSZB-140 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Develco MOSZB-140 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MOSZB-140.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Develco MOSZB-140
 
+|     |     |
+|-----|-----|
 | Model | MOSZB-140  |
 | Vendor  | Develco  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, temperature, illuminance_lux, linkquality |
-| Picture | ![Develco MOSZB-140](../images/devices/MOSZB-140.jpg) |
+| Picture | ![Develco MOSZB-140](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MOSZB-140.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

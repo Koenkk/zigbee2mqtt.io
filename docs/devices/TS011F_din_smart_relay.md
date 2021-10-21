@@ -1,24 +1,29 @@
 ---
 title: "TuYa TS011F_din_smart_relay control via MQTT"
-description: "Integrate your TuYa TS011F_din_smart_relay via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS011F_din_smart_relay via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS011F_din_smart_relay.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS011F_din_smart_relay
 
+|     |     |
+|-----|-----|
 | Model | TS011F_din_smart_relay  |
 | Vendor  | TuYa  |
 | Description | Din smart relay (with power monitoring) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
-| Picture | ![TuYa TS011F_din_smart_relay](../images/devices/TS011F_din_smart_relay.jpg) |
+| Picture | ![TuYa TS011F_din_smart_relay](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS011F_din_smart_relay.jpg) |
 | White-label | MatSee Plus ATMS1602Z |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

@@ -1,24 +1,28 @@
 ---
 title: "Lonsonho QS-Zigbee-D02-TRIAC-L control via MQTT"
-description: "Integrate your Lonsonho QS-Zigbee-D02-TRIAC-L via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Lonsonho QS-Zigbee-D02-TRIAC-L via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QS-Zigbee-D02-TRIAC-L.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Lonsonho QS-Zigbee-D02-TRIAC-L
 
+|     |     |
+|-----|-----|
 | Model | QS-Zigbee-D02-TRIAC-L  |
 | Vendor  | Lonsonho  |
 | Description | 1 gang smart dimmer switch module without neutral |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-L](../images/devices/QS-Zigbee-D02-TRIAC-L.jpg) |
+| Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-L](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QS-Zigbee-D02-TRIAC-L.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

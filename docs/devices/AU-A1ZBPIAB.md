@@ -1,23 +1,28 @@
 ---
 title: "Aurora Lighting AU-A1ZBPIAB control via MQTT"
-description: "Integrate your Aurora Lighting AU-A1ZBPIAB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Aurora Lighting AU-A1ZBPIAB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/AU-A1ZBPIAB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Aurora Lighting AU-A1ZBPIAB
 
+|     |     |
+|-----|-----|
 | Model | AU-A1ZBPIAB  |
 | Vendor  | Aurora Lighting  |
 | Description | Power plug Zigbee EU |
 | Exposes | switch (state), power, voltage, current, linkquality |
-| Picture | ![Aurora Lighting AU-A1ZBPIAB](../images/devices/AU-A1ZBPIAB.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZBPIAB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AU-A1ZBPIAB.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

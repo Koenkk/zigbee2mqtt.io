@@ -1,19 +1,23 @@
 ---
 title: "Xiaomi SSM-U01 control via MQTT"
-description: "Integrate your Xiaomi SSM-U01 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi SSM-U01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SSM-U01.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi SSM-U01
 
+|     |     |
+|-----|-----|
 | Model | SSM-U01  |
 | Vendor  | Xiaomi  |
 | Description | Aqara single switch module T1 (with neutral) |
 | Exposes | switch (state), energy, power, device_temperature, power_outage_memory, switch_type, linkquality |
-| Picture | ![Xiaomi SSM-U01](../images/devices/SSM-U01.jpg) |
+| Picture | ![Xiaomi SSM-U01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SSM-U01.jpg) |
+
 
 ## Notes
 

@@ -1,23 +1,28 @@
 ---
 title: "Third Reality 3RMS16BZ control via MQTT"
-description: "Integrate your Third Reality 3RMS16BZ via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Third Reality 3RMS16BZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/3RMS16BZ.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Third Reality 3RMS16BZ
 
+|     |     |
+|-----|-----|
 | Model | 3RMS16BZ  |
 | Vendor  | Third Reality  |
 | Description | Wireless motion sensor |
 | Exposes | occupancy, battery_low, battery, voltage, linkquality |
-| Picture | ![Third Reality 3RMS16BZ](../images/devices/3RMS16BZ.jpg) |
+| Picture | ![Third Reality 3RMS16BZ](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/3RMS16BZ.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

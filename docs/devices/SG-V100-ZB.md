@@ -1,23 +1,28 @@
 ---
 title: "Dawon DNS SG-V100-ZB control via MQTT"
-description: "Integrate your Dawon DNS SG-V100-ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Dawon DNS SG-V100-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SG-V100-ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Dawon DNS SG-V100-ZB
 
+|     |     |
+|-----|-----|
 | Model | SG-V100-ZB  |
 | Vendor  | Dawon DNS  |
 | Description | IOT remote control smart gas lock |
 | Exposes | battery, switch (state), linkquality |
-| Picture | ![Dawon DNS SG-V100-ZB](../images/devices/SG-V100-ZB.jpg) |
+| Picture | ![Dawon DNS SG-V100-ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SG-V100-ZB.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

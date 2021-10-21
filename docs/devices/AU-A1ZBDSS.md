@@ -1,23 +1,28 @@
 ---
 title: "Aurora Lighting AU-A1ZBDSS control via MQTT"
-description: "Integrate your Aurora Lighting AU-A1ZBDSS via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Aurora Lighting AU-A1ZBDSS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/AU-A1ZBDSS.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Aurora Lighting AU-A1ZBDSS
 
+|     |     |
+|-----|-----|
 | Model | AU-A1ZBDSS  |
 | Vendor  | Aurora Lighting  |
 | Description | Double smart socket UK |
 | Exposes | switch (state), power, linkquality |
-| Picture | ![Aurora Lighting AU-A1ZBDSS](../images/devices/AU-A1ZBDSS.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZBDSS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AU-A1ZBDSS.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

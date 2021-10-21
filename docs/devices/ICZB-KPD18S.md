@@ -1,19 +1,23 @@
 ---
 title: "iCasa ICZB-KPD18S control via MQTT"
-description: "Integrate your iCasa ICZB-KPD18S via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your iCasa ICZB-KPD18S via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ICZB-KPD18S.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # iCasa ICZB-KPD18S
 
+|     |     |
+|-----|-----|
 | Model | ICZB-KPD18S  |
 | Vendor  | iCasa  |
 | Description | Zigbee 3.0 Keypad Pulse 8S |
 | Exposes | battery, action, linkquality |
-| Picture | ![iCasa ICZB-KPD18S](../images/devices/ICZB-KPD18S.jpg) |
+| Picture | ![iCasa ICZB-KPD18S](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ICZB-KPD18S.jpg) |
+
 
 ## Notes
 
@@ -45,7 +49,7 @@ To disable the legacy integration add the following to your `configuration.yaml`
 {% endraw %}
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 

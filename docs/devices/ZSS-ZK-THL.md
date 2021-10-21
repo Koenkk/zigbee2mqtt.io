@@ -1,19 +1,23 @@
 ---
 title: "Moes ZSS-ZK-THL control via MQTT"
-description: "Integrate your Moes ZSS-ZK-THL via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Moes ZSS-ZK-THL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZSS-ZK-THL.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Moes ZSS-ZK-THL
 
+|     |     |
+|-----|-----|
 | Model | ZSS-ZK-THL  |
 | Vendor  | Moes  |
 | Description | Smart temperature and humidity meter with display |
 | Exposes | battery, illuminance, illuminance_lux, humidity, temperature, linkquality |
-| Picture | ![Moes ZSS-ZK-THL](../images/devices/ZSS-ZK-THL.jpg) |
+| Picture | ![Moes ZSS-ZK-THL](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZSS-ZK-THL.jpg) |
+
 
 ## Notes
 
@@ -30,7 +34,7 @@ this device work fine when connected to any hub through a relay device.
 The device reports illuminance variations instantly. Therefore temperature is reported each hour making this device useless for building a thermostat.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.
 To control the precision based on the illuminance_lux value set it to e.g. `{1000: 0, 100: 1}`,

@@ -1,23 +1,28 @@
 ---
 title: "Envilar ZG302-BOX-RELAY control via MQTT"
-description: "Integrate your Envilar ZG302-BOX-RELAY via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Envilar ZG302-BOX-RELAY via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZG302-BOX-RELAY.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Envilar ZG302-BOX-RELAY
 
+|     |     |
+|-----|-----|
 | Model | ZG302-BOX-RELAY  |
 | Vendor  | Envilar  |
 | Description | Zigbee AC in wall switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Envilar ZG302-BOX-RELAY](../images/devices/ZG302-BOX-RELAY.jpg) |
+| Picture | ![Envilar ZG302-BOX-RELAY](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZG302-BOX-RELAY.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

@@ -1,24 +1,29 @@
 ---
 title: "TuYa TS0215A_remote control via MQTT"
-description: "Integrate your TuYa TS0215A_remote via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS0215A_remote via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0215A_remote.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS0215A_remote
 
+|     |     |
+|-----|-----|
 | Model | TS0215A_remote  |
 | Vendor  | TuYa  |
 | Description | Security remote control |
 | Exposes | battery, action, linkquality |
-| Picture | ![TuYa TS0215A_remote](../images/devices/TS0215A_remote.jpg) |
+| Picture | ![TuYa TS0215A_remote](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0215A_remote.jpg) |
 | White-label | Woox R7054, Nedis ZBRC10WT |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

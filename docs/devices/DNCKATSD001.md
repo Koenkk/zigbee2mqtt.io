@@ -1,24 +1,28 @@
 ---
 title: "Custom devices (DiY) DNCKATSD001 control via MQTT"
-description: "Integrate your Custom devices (DiY) DNCKATSD001 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Custom devices (DiY) DNCKATSD001 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DNCKATSD001.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Custom devices (DiY) DNCKATSD001
 
+|     |     |
+|-----|-----|
 | Model | DNCKATSD001  |
 | Vendor  | Custom devices (DiY)  |
 | Description | [DNCKAT single key wired wall dimmable light switch](https://github.com/dzungpv/dnckatsw00x/) |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Custom devices (DiY) DNCKATSD001](../images/devices/DNCKATSD001.jpg) |
+| Picture | ![Custom devices (DiY) DNCKATSD001](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DNCKATSD001.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

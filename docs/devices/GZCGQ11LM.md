@@ -1,24 +1,28 @@
 ---
 title: "Xiaomi GZCGQ11LM control via MQTT"
-description: "Integrate your Xiaomi GZCGQ11LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi GZCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GZCGQ11LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi GZCGQ11LM
 
+|     |     |
+|-----|-----|
 | Model | GZCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 light intensity sensor |
 | Exposes | battery, voltage, illuminance, illuminance_lux, detection_period, linkquality |
-| Picture | ![Xiaomi GZCGQ11LM](../images/devices/GZCGQ11LM.jpg) |
+| Picture | ![Xiaomi GZCGQ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GZCGQ11LM.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.
 To control the precision based on the illuminance_lux value set it to e.g. `{1000: 0, 100: 1}`,

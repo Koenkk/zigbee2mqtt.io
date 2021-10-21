@@ -1,24 +1,29 @@
 ---
 title: "TuYa TS011F_wall_outlet control via MQTT"
-description: "Integrate your TuYa TS011F_wall_outlet via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS011F_wall_outlet via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS011F_wall_outlet.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS011F_wall_outlet
 
+|     |     |
+|-----|-----|
 | Model | TS011F_wall_outlet  |
 | Vendor  | TuYa  |
 | Description | In-wall outlet |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS011F_wall_outlet](../images/devices/TS011F_wall_outlet.jpg) |
+| Picture | ![TuYa TS011F_wall_outlet](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS011F_wall_outlet.jpg) |
 | White-label | Teekar SWP86-01OG, ClickSmart+ CMA30035 |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

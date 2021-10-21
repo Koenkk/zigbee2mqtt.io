@@ -1,23 +1,28 @@
 ---
 title: "ORVIBO RL804QZB control via MQTT"
-description: "Integrate your ORVIBO RL804QZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your ORVIBO RL804QZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/RL804QZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # ORVIBO RL804QZB
 
+|     |     |
+|-----|-----|
 | Model | RL804QZB  |
 | Vendor  | ORVIBO  |
 | Description | Multi-functional 3 gang relay |
 | Exposes | switch (state), linkquality |
-| Picture | ![ORVIBO RL804QZB](../images/devices/RL804QZB.jpg) |
+| Picture | ![ORVIBO RL804QZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/RL804QZB.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

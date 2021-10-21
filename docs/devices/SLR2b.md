@@ -1,19 +1,23 @@
 ---
 title: "Hive SLR2b control via MQTT"
-description: "Integrate your Hive SLR2b via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Hive SLR2b via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SLR2b.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Hive SLR2b
 
+|     |     |
+|-----|-----|
 | Model | SLR2b  |
 | Vendor  | Hive  |
 | Description | Dual channel heating and hot water thermostat |
 | Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration, linkquality |
-| Picture | ![Hive SLR2b](../images/devices/SLR2b.jpg) |
+| Picture | ![Hive SLR2b](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SLR2b.jpg) |
+
 
 ## Notes
 

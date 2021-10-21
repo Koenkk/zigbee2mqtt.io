@@ -1,23 +1,28 @@
 ---
 title: "Climax WLS-15ZBS control via MQTT"
-description: "Integrate your Climax WLS-15ZBS via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Climax WLS-15ZBS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/WLS-15ZBS.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Climax WLS-15ZBS
 
+|     |     |
+|-----|-----|
 | Model | WLS-15ZBS  |
 | Vendor  | Climax  |
 | Description | Water leakage sensor |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
-| Picture | ![Climax WLS-15ZBS](../images/devices/WLS-15ZBS.jpg) |
+| Picture | ![Climax WLS-15ZBS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WLS-15ZBS.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

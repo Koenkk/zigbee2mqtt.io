@@ -1,24 +1,29 @@
 ---
 title: "TuYa TS0601_water_sensor control via MQTT"
-description: "Integrate your TuYa TS0601_water_sensor via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS0601_water_sensor via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0601_water_sensor.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS0601_water_sensor
 
+|     |     |
+|-----|-----|
 | Model | TS0601_water_sensor  |
 | Vendor  | TuYa  |
 | Description | Water leak sensor |
 | Exposes | water_leak, linkquality |
-| Picture | ![TuYa TS0601_water_sensor](../images/devices/TS0601_water_sensor.jpg) |
+| Picture | ![TuYa TS0601_water_sensor](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0601_water_sensor.jpg) |
 | White-label | Neo NAS-WS02B0 |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

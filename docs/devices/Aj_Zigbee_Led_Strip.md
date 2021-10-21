@@ -1,24 +1,28 @@
 ---
 title: "Ajax Online Aj_Zigbee_Led_Strip control via MQTT"
-description: "Integrate your Ajax Online Aj_Zigbee_Led_Strip via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Ajax Online Aj_Zigbee_Led_Strip via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/Aj_Zigbee_Led_Strip.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Ajax Online Aj_Zigbee_Led_Strip
 
+|     |     |
+|-----|-----|
 | Model | Aj_Zigbee_Led_Strip  |
 | Vendor  | Ajax Online  |
 | Description | LED Strip |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Ajax Online Aj_Zigbee_Led_Strip](../images/devices/Aj_Zigbee_Led_Strip.jpg) |
+| Picture | ![Ajax Online Aj_Zigbee_Led_Strip](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/Aj_Zigbee_Led_Strip.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

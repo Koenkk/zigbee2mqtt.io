@@ -1,24 +1,28 @@
 ---
 title: "Sunricher ZG2819S-CCT control via MQTT"
-description: "Integrate your Sunricher ZG2819S-CCT via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Sunricher ZG2819S-CCT via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZG2819S-CCT.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Sunricher ZG2819S-CCT
 
+|     |     |
+|-----|-----|
 | Model | ZG2819S-CCT  |
 | Vendor  | Sunricher  |
 | Description | Zigbee handheld remote CCT 4 channels |
 | Exposes | battery, action, linkquality |
-| Picture | ![Sunricher ZG2819S-CCT](../images/devices/ZG2819S-CCT.jpg) |
+| Picture | ![Sunricher ZG2819S-CCT](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZG2819S-CCT.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `simulated_brightness`: Set to `true` to simulate a `brightness` value (default: `false`).
 If this device provides a `brightness_move_up` or `brightness_move_down` action it is possible to specify the update

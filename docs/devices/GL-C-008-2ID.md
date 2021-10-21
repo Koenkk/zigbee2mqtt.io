@@ -1,19 +1,23 @@
 ---
 title: "Gledopto GL-C-008-2ID control via MQTT"
-description: "Integrate your Gledopto GL-C-008-2ID via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Gledopto GL-C-008-2ID via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GL-C-008-2ID.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Gledopto GL-C-008-2ID
 
+|     |     |
+|-----|-----|
 | Model | GL-C-008-2ID  |
 | Vendor  | Gledopto  |
 | Description | Zigbee LED Controller RGB+CCT (2 ID) |
 | Exposes | light (state, brightness, color_xy), light (state, brightness, color_temp, color_temp_startup), linkquality |
-| Picture | ![Gledopto GL-C-008-2ID](../images/devices/GL-C-008-2ID.jpg) |
+| Picture | ![Gledopto GL-C-008-2ID](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-C-008-2ID.jpg) |
+
 
 ## Notes
 
@@ -26,10 +30,10 @@ description: "Integrate your Gledopto GL-C-008-2ID via Zigbee2MQTT with whatever
 
 
 ### 2ID handling
-This device exposes the two specific endpoints `rgb` and `cct`. The command topics are `zigbee2mqtt/<FRIENDLY_NAME>/rgb/set`, and `zigbee2mqtt/<FRIENDLY_NAME>/cct/set`. Both [specific endpoints can be added to a group](../information/groups.md#adding-a-specific-endpoint). These endpoints are `<FRIENDLY_NAME>/rgb`, and `<FRIENDLY_NAME>/cct`.
+This device exposes the two specific endpoints `rgb` and `cct`. The command topics are `zigbee2mqtt/<FRIENDLY_NAME>/rgb/set`, and `zigbee2mqtt/<FRIENDLY_NAME>/cct/set`. Both [specific endpoints can be added to a group](../../guide/usage/groups.md#adding-a-specific-endpoint). These endpoints are `<FRIENDLY_NAME>/rgb`, and `<FRIENDLY_NAME>/cct`.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

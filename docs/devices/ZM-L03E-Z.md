@@ -1,24 +1,29 @@
 ---
 title: "Zemismart ZM-L03E-Z control via MQTT"
-description: "Integrate your Zemismart ZM-L03E-Z via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Zemismart ZM-L03E-Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZM-L03E-Z.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Zemismart ZM-L03E-Z
 
+|     |     |
+|-----|-----|
 | Model | ZM-L03E-Z  |
 | Vendor  | Zemismart  |
 | Description | Smart light switch - 3 gang with neutral wire |
 | Exposes | switch (state), linkquality |
-| Picture | ![Zemismart ZM-L03E-Z](../images/devices/ZM-L03E-Z.jpg) |
+| Picture | ![Zemismart ZM-L03E-Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZM-L03E-Z.jpg) |
 | White-label | BSEED TS0003 |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

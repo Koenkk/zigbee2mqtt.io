@@ -1,23 +1,28 @@
 ---
 title: "Qmotion QZR-ZIG2400 control via MQTT"
-description: "Integrate your Qmotion QZR-ZIG2400 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Qmotion QZR-ZIG2400 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QZR-ZIG2400.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Qmotion QZR-ZIG2400
 
+|     |     |
+|-----|-----|
 | Model | QZR-ZIG2400  |
 | Vendor  | Qmotion  |
 | Description | 5 channel remote |
 | Exposes | action, position, linkquality |
-| Picture | ![Qmotion QZR-ZIG2400](../images/devices/QZR-ZIG2400.jpg) |
+| Picture | ![Qmotion QZR-ZIG2400](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QZR-ZIG2400.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

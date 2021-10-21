@@ -1,23 +1,28 @@
 ---
 title: "LeTV LeTV.8KEY control via MQTT"
-description: "Integrate your LeTV LeTV.8KEY via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LeTV LeTV.8KEY via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LeTV.8KEY.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # LeTV LeTV.8KEY
 
+|     |     |
+|-----|-----|
 | Model | LeTV.8KEY  |
 | Vendor  | LeTV  |
 | Description | 8key switch |
 | Exposes | action, linkquality |
-| Picture | ![LeTV LeTV.8KEY](../images/devices/LeTV.8KEY.jpg) |
+| Picture | ![LeTV LeTV.8KEY](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LeTV.8KEY.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

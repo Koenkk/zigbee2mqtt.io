@@ -76,15 +76,15 @@ export default async function generate_supportedDevices() {
     };
   }));
 
-  const addAddedAt = async (device) => {
-    const normalizedModel = `${ normalizeModel(device.model) }.md`;
+  const addAddedAt = async (d) => {
+    const normalizedModel = `${ normalizeModel(d.whiteLabelOf ? d.whiteLabelOf.model : d.model) }.md`;
     if(addedAtCache[normalizedModel]) {
-      device.addedAt = addedAtCache[normalizedModel];
+      d.addedAt = addedAtCache[normalizedModel];
       return;
     }
     const file = path.resolve(__dirname, '../docs/devices', normalizedModel);
-    device.addedAt = (await exec(`git log --date=iso8601-strict --format=%ad --diff-filter=A -- ${ file }`) as string).trim();
-    addedAtCache[normalizedModel] = device.addedAt;
+    d.addedAt = (await exec(`git log --date=iso8601-strict --format=%ad --diff-filter=A -- ${ file }`) as string).trim();
+    addedAtCache[normalizedModel] = d.addedAt;
   };
 
   // exec git log - 50 in parallel

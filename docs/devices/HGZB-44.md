@@ -1,23 +1,28 @@
 ---
 title: "Nue / 3A HGZB-44 control via MQTT"
-description: "Integrate your Nue / 3A HGZB-44 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Nue / 3A HGZB-44 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-44.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Nue / 3A HGZB-44
 
+|     |     |
+|-----|-----|
 | Model | HGZB-44  |
 | Vendor  | Nue / 3A  |
 | Description | Smart light switch - 4 gang v2.0 |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A HGZB-44](../images/devices/HGZB-44.jpg) |
+| Picture | ![Nue / 3A HGZB-44](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-44.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

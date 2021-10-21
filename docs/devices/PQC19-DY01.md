@@ -1,24 +1,28 @@
 ---
 title: "GE PQC19-DY01 control via MQTT"
-description: "Integrate your GE PQC19-DY01 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your GE PQC19-DY01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PQC19-DY01.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # GE PQC19-DY01
 
+|     |     |
+|-----|-----|
 | Model | PQC19-DY01  |
 | Vendor  | GE  |
 | Description | Link smart LED light bulb, A19/BR30 cold white (5000K) |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![GE PQC19-DY01](../images/devices/PQC19-DY01.jpg) |
+| Picture | ![GE PQC19-DY01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PQC19-DY01.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

@@ -1,23 +1,28 @@
 ---
 title: "SmartThings GP-WOU019BBDWG control via MQTT"
-description: "Integrate your SmartThings GP-WOU019BBDWG via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your SmartThings GP-WOU019BBDWG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GP-WOU019BBDWG.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # SmartThings GP-WOU019BBDWG
 
+|     |     |
+|-----|-----|
 | Model | GP-WOU019BBDWG  |
 | Vendor  | SmartThings  |
 | Description | Outlet with power meter |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![SmartThings GP-WOU019BBDWG](../images/devices/GP-WOU019BBDWG.jpg) |
+| Picture | ![SmartThings GP-WOU019BBDWG](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GP-WOU019BBDWG.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

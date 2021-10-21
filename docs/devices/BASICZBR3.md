@@ -1,19 +1,23 @@
 ---
 title: "SONOFF BASICZBR3 control via MQTT"
-description: "Integrate your SONOFF BASICZBR3 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your SONOFF BASICZBR3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/BASICZBR3.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # SONOFF BASICZBR3
 
+|     |     |
+|-----|-----|
 | Model | BASICZBR3  |
 | Vendor  | SONOFF  |
 | Description | Zigbee smart switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![SONOFF BASICZBR3](../images/devices/BASICZBR3.jpg) |
+| Picture | ![SONOFF BASICZBR3](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BASICZBR3.jpg) |
+
 
 ## Notes
 

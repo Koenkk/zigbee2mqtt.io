@@ -1,23 +1,28 @@
 ---
 title: "FireAngel W2-Module control via MQTT"
-description: "Integrate your FireAngel W2-Module via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your FireAngel W2-Module via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/W2-Module.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # FireAngel W2-Module
 
+|     |     |
+|-----|-----|
 | Model | W2-Module  |
 | Vendor  | FireAngel  |
 | Description | Carbon monoxide sensor |
 | Exposes | carbon_monoxide, battery, linkquality |
-| Picture | ![FireAngel W2-Module](../images/devices/W2-Module.jpg) |
+| Picture | ![FireAngel W2-Module](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/W2-Module.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

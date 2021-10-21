@@ -1,23 +1,28 @@
 ---
 title: "Hive WPT1 control via MQTT"
-description: "Integrate your Hive WPT1 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Hive WPT1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/WPT1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Hive WPT1
 
+|     |     |
+|-----|-----|
 | Model | WPT1  |
 | Vendor  | Hive  |
 | Description | Heating thermostat remote control |
 | Exposes | battery, linkquality |
-| Picture | ![Hive WPT1](../images/devices/WPT1.jpg) |
+| Picture | ![Hive WPT1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WPT1.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

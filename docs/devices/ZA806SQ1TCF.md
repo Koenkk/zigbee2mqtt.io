@@ -1,24 +1,28 @@
 ---
 title: "Leedarson ZA806SQ1TCF control via MQTT"
-description: "Integrate your Leedarson ZA806SQ1TCF via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Leedarson ZA806SQ1TCF via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZA806SQ1TCF.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Leedarson ZA806SQ1TCF
 
+|     |     |
+|-----|-----|
 | Model | ZA806SQ1TCF  |
 | Vendor  | Leedarson  |
 | Description | LED E27 tunable white |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Leedarson ZA806SQ1TCF](../images/devices/ZA806SQ1TCF.jpg) |
+| Picture | ![Leedarson ZA806SQ1TCF](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZA806SQ1TCF.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

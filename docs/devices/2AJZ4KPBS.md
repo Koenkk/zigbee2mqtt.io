@@ -1,19 +1,23 @@
 ---
 title: "Konke 2AJZ4KPBS control via MQTT"
-description: "Integrate your Konke 2AJZ4KPBS via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Konke 2AJZ4KPBS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/2AJZ4KPBS.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Konke 2AJZ4KPBS
 
+|     |     |
+|-----|-----|
 | Model | 2AJZ4KPBS  |
 | Vendor  | Konke  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, battery, linkquality |
-| Picture | ![Konke 2AJZ4KPBS](../images/devices/2AJZ4KPBS.jpg) |
+| Picture | ![Konke 2AJZ4KPBS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/2AJZ4KPBS.jpg) |
+
 
 ## Notes
 

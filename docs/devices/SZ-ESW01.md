@@ -1,19 +1,23 @@
 ---
 title: "Sercomm SZ-ESW01 control via MQTT"
-description: "Integrate your Sercomm SZ-ESW01 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Sercomm SZ-ESW01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SZ-ESW01.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Sercomm SZ-ESW01
 
+|     |     |
+|-----|-----|
 | Model | SZ-ESW01  |
 | Vendor  | Sercomm  |
 | Description | Telstra smart plug |
 | Exposes | switch (state), power, linkquality |
-| Picture | ![Sercomm SZ-ESW01](../images/devices/SZ-ESW01.jpg) |
+| Picture | ![Sercomm SZ-ESW01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SZ-ESW01.jpg) |
+
 
 ## Notes
 

@@ -1,23 +1,28 @@
 ---
 title: "TuYa S-LUX-ZB control via MQTT"
-description: "Integrate your TuYa S-LUX-ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa S-LUX-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/S-LUX-ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa S-LUX-ZB
 
+|     |     |
+|-----|-----|
 | Model | S-LUX-ZB  |
 | Vendor  | TuYa  |
 | Description | Light sensor |
 | Exposes | battery, illuminance_lux, battery_low, linkquality |
-| Picture | ![TuYa S-LUX-ZB](../images/devices/S-LUX-ZB.jpg) |
+| Picture | ![TuYa S-LUX-ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/S-LUX-ZB.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

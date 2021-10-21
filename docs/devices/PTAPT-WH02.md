@@ -1,23 +1,28 @@
 ---
 title: "GE PTAPT-WH02 control via MQTT"
-description: "Integrate your GE PTAPT-WH02 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your GE PTAPT-WH02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PTAPT-WH02.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # GE PTAPT-WH02
 
+|     |     |
+|-----|-----|
 | Model | PTAPT-WH02  |
 | Vendor  | GE  |
 | Description | Quirky smart switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![GE PTAPT-WH02](../images/devices/PTAPT-WH02.jpg) |
+| Picture | ![GE PTAPT-WH02](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PTAPT-WH02.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

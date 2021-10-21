@@ -1,25 +1,29 @@
 ---
 title: "Nue / 3A HGZB-04D / HGZB-4D-UK control via MQTT"
-description: "Integrate your Nue / 3A HGZB-04D / HGZB-4D-UK via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Nue / 3A HGZB-04D / HGZB-4D-UK via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-04D___HGZB-4D-UK.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Nue / 3A HGZB-04D / HGZB-4D-UK
 
+|     |     |
+|-----|-----|
 | Model | HGZB-04D / HGZB-4D-UK  |
 | Vendor  | Nue / 3A  |
 | Description | Smart dimmer wall switch |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![Nue / 3A HGZB-04D / HGZB-4D-UK](../images/devices/HGZB-04D---HGZB-4D-UK.jpg) |
+| Picture | ![Nue / 3A HGZB-04D / HGZB-4D-UK](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-04D---HGZB-4D-UK.jpg) |
 | White-label | Sunricher SR-ZG9001K8-DIM |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

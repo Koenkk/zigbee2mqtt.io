@@ -1,23 +1,28 @@
 ---
 title: "Climax PSS-23ZBS control via MQTT"
-description: "Integrate your Climax PSS-23ZBS via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Climax PSS-23ZBS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PSS-23ZBS.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Climax PSS-23ZBS
 
+|     |     |
+|-----|-----|
 | Model | PSS-23ZBS  |
 | Vendor  | Climax  |
 | Description | Power plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![Climax PSS-23ZBS](../images/devices/PSS-23ZBS.jpg) |
+| Picture | ![Climax PSS-23ZBS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PSS-23ZBS.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

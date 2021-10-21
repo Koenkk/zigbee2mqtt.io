@@ -1,23 +1,28 @@
 ---
 title: "HEIMAN HS2ESK-E control via MQTT"
-description: "Integrate your HEIMAN HS2ESK-E via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HS2ESK-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS2ESK-E.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HS2ESK-E
 
+|     |     |
+|-----|-----|
 | Model | HS2ESK-E  |
 | Vendor  | HEIMAN  |
 | Description | Smart in wall plug |
 | Exposes | switch (state), power, current, voltage, linkquality |
-| Picture | ![HEIMAN HS2ESK-E](../images/devices/HS2ESK-E.jpg) |
+| Picture | ![HEIMAN HS2ESK-E](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS2ESK-E.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

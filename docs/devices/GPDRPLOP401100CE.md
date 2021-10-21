@@ -1,19 +1,23 @@
 ---
 title: "LEDVANCE GPDRPLOP401100CE control via MQTT"
-description: "Integrate your LEDVANCE GPDRPLOP401100CE via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LEDVANCE GPDRPLOP401100CE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GPDRPLOP401100CE.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # LEDVANCE GPDRPLOP401100CE
 
+|     |     |
+|-----|-----|
 | Model | GPDRPLOP401100CE  |
 | Vendor  | LEDVANCE  |
 | Description | Panel TW LED 625 UGR19 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![LEDVANCE GPDRPLOP401100CE](../images/devices/GPDRPLOP401100CE.jpg) |
+| Picture | ![LEDVANCE GPDRPLOP401100CE](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GPDRPLOP401100CE.jpg) |
+
 
 ## Notes
 
@@ -44,7 +48,7 @@ is manually switched off then on. Lights will remember their respective attribut
 **INFO**: Value is true, false (boolean)
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)
@@ -80,7 +84,7 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
 
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

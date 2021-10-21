@@ -1,19 +1,23 @@
 ---
 title: "TERNCY TERNCY-SD01 control via MQTT"
-description: "Integrate your TERNCY TERNCY-SD01 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TERNCY TERNCY-SD01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TERNCY-SD01.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TERNCY TERNCY-SD01
 
+|     |     |
+|-----|-----|
 | Model | TERNCY-SD01  |
 | Vendor  | TERNCY  |
 | Description | Knob smart dimmer |
 | Exposes | battery, action, direction, linkquality |
-| Picture | ![TERNCY TERNCY-SD01](../images/devices/TERNCY-SD01.jpg) |
+| Picture | ![TERNCY TERNCY-SD01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TERNCY-SD01.jpg) |
+
 
 ## Notes
 
@@ -31,13 +35,13 @@ devices:
 ```
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

@@ -1,24 +1,28 @@
 ---
 title: "Xiaomi JWDL001A control via MQTT"
-description: "Integrate your Xiaomi JWDL001A via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi JWDL001A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/JWDL001A.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi JWDL001A
 
+|     |     |
+|-----|-----|
 | Model | JWDL001A  |
 | Vendor  | Xiaomi  |
 | Description | Aqara embedded spot led light |
 | Exposes | light (state, brightness, color_temp), effect, linkquality |
-| Picture | ![Xiaomi JWDL001A](../images/devices/JWDL001A.jpg) |
+| Picture | ![Xiaomi JWDL001A](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JWDL001A.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

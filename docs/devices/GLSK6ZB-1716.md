@@ -1,23 +1,28 @@
 ---
 title: "Hej GLSK6ZB-1716 control via MQTT"
-description: "Integrate your Hej GLSK6ZB-1716 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Hej GLSK6ZB-1716 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GLSK6ZB-1716.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Hej GLSK6ZB-1716
 
+|     |     |
+|-----|-----|
 | Model | GLSK6ZB-1716  |
 | Vendor  | Hej  |
 | Description | Goqual 6 gang Switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Hej GLSK6ZB-1716](../images/devices/GLSK6ZB-1716.jpg) |
+| Picture | ![Hej GLSK6ZB-1716](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GLSK6ZB-1716.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

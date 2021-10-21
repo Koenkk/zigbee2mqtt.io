@@ -1,24 +1,28 @@
 ---
 title: "Universal Electronics Inc XHK1-UE control via MQTT"
-description: "Integrate your Universal Electronics Inc XHK1-UE via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Universal Electronics Inc XHK1-UE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/XHK1-UE.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Universal Electronics Inc XHK1-UE
 
+|     |     |
+|-----|-----|
 | Model | XHK1-UE  |
 | Vendor  | Universal Electronics Inc  |
 | Description | Xfinity security keypad |
 | Exposes | battery, voltage, occupancy, battery_low, tamper, presence, contact, temperature, action_code, action_transaction, action_zone, action, linkquality |
-| Picture | ![Universal Electronics Inc XHK1-UE](../images/devices/XHK1-UE.jpg) |
+| Picture | ![Universal Electronics Inc XHK1-UE](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/XHK1-UE.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

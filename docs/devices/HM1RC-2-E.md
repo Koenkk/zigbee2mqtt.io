@@ -1,23 +1,28 @@
 ---
 title: "HEIMAN HM1RC-2-E control via MQTT"
-description: "Integrate your HEIMAN HM1RC-2-E via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HM1RC-2-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HM1RC-2-E.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HM1RC-2-E
 
+|     |     |
+|-----|-----|
 | Model | HM1RC-2-E  |
 | Vendor  | HEIMAN  |
 | Description | Smart remote controller |
 | Exposes | battery, action, linkquality |
-| Picture | ![HEIMAN HM1RC-2-E](../images/devices/HM1RC-2-E.jpg) |
+| Picture | ![HEIMAN HM1RC-2-E](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HM1RC-2-E.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

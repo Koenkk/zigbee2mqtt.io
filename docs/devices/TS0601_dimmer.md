@@ -1,25 +1,29 @@
 ---
 title: "TuYa TS0601_dimmer control via MQTT"
-description: "Integrate your TuYa TS0601_dimmer via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS0601_dimmer via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0601_dimmer.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS0601_dimmer
 
+|     |     |
+|-----|-----|
 | Model | TS0601_dimmer  |
 | Vendor  | TuYa  |
 | Description | Zigbee smart dimmer |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![TuYa TS0601_dimmer](../images/devices/TS0601_dimmer.jpg) |
+| Picture | ![TuYa TS0601_dimmer](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0601_dimmer.jpg) |
 | White-label | Larkkey ZSTY-SM-1DMZG-EU, Earda EDM-1ZAA-EU, Earda EDM-1ZAB-EU, Earda EDM-1ZBA-EU, Mercator ikuü SSWD01 |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

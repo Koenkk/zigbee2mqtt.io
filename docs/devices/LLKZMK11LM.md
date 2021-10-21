@@ -1,19 +1,23 @@
 ---
 title: "Xiaomi LLKZMK11LM control via MQTT"
-description: "Integrate your Xiaomi LLKZMK11LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi LLKZMK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LLKZMK11LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi LLKZMK11LM
 
+|     |     |
+|-----|-----|
 | Model | LLKZMK11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara wireless relay controller |
 | Exposes | power, energy, temperature, voltage, switch (state), interlock, linkquality |
-| Picture | ![Xiaomi LLKZMK11LM](../images/devices/LLKZMK11LM.jpg) |
+| Picture | ![Xiaomi LLKZMK11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LLKZMK11LM.jpg) |
+
 
 ## Notes
 
@@ -22,7 +26,7 @@ description: "Integrate your Xiaomi LLKZMK11LM via Zigbee2MQTT with whatever sma
 This option allows to inter connect the relays which will make sure that only one relay is on at a time. To do this publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"interlock": true}` or `{"interlock": false}`. By default this option is `false`.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

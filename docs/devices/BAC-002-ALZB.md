@@ -1,19 +1,23 @@
 ---
 title: "HKGK BAC-002-ALZB control via MQTT"
-description: "Integrate your HKGK BAC-002-ALZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HKGK BAC-002-ALZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/BAC-002-ALZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HKGK BAC-002-ALZB
 
+|     |     |
+|-----|-----|
 | Model | BAC-002-ALZB  |
 | Vendor  | HKGK  |
 | Description | BAC series thermostat |
 | Exposes | lock (state), deadzone_temperature, max_temperature_limit, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, preset, sensor), linkquality |
-| Picture | ![HKGK BAC-002-ALZB](../images/devices/BAC-002-ALZB.jpg) |
+| Picture | ![HKGK BAC-002-ALZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BAC-002-ALZB.jpg) |
+
 
 ## Notes
 

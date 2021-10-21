@@ -1,23 +1,28 @@
 ---
 title: "Xiaomi QBKG41LM control via MQTT"
-description: "Integrate your Xiaomi QBKG41LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi QBKG41LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QBKG41LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi QBKG41LM
 
+|     |     |
+|-----|-----|
 | Model | QBKG41LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara E1 2 gang switch (with neutral) |
 | Exposes | switch (state), operation_mode, action, power_outage_memory, linkquality |
-| Picture | ![Xiaomi QBKG41LM](../images/devices/QBKG41LM.jpg) |
+| Picture | ![Xiaomi QBKG41LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG41LM.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

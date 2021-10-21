@@ -1,23 +1,28 @@
 ---
 title: "DIYRuZ DIYRuZ_Geiger control via MQTT"
-description: "Integrate your DIYRuZ DIYRuZ_Geiger via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your DIYRuZ DIYRuZ_Geiger via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DIYRuZ_Geiger.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # DIYRuZ DIYRuZ_Geiger
 
+|     |     |
+|-----|-----|
 | Model | DIYRuZ_Geiger  |
 | Vendor  | DIYRuZ  |
 | Description | [DiY Geiger counter](https://modkam.ru/?p=1591) |
 | Exposes | action, radioactive_events_per_minute, radiation_dose_per_hour, led_feedback, buzzer_feedback, alert_threshold, sensors_type, sensors_count, sensitivity, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_Geiger](../images/devices/DIYRuZ_Geiger.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_Geiger](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DIYRuZ_Geiger.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

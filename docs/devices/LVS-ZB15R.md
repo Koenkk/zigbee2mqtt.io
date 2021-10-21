@@ -1,23 +1,28 @@
 ---
 title: "LivingWise LVS-ZB15R control via MQTT"
-description: "Integrate your LivingWise LVS-ZB15R via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LivingWise LVS-ZB15R via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LVS-ZB15R.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # LivingWise LVS-ZB15R
 
+|     |     |
+|-----|-----|
 | Model | LVS-ZB15R  |
 | Vendor  | LivingWise  |
 | Description | Zigbee smart outlet |
 | Exposes | switch (state), linkquality |
-| Picture | ![LivingWise LVS-ZB15R](../images/devices/LVS-ZB15R.jpg) |
+| Picture | ![LivingWise LVS-ZB15R](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LVS-ZB15R.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

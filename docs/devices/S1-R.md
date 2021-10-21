@@ -1,24 +1,28 @@
 ---
 title: "Ubisys S1-R control via MQTT"
-description: "Integrate your Ubisys S1-R via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Ubisys S1-R via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/S1-R.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Ubisys S1-R
 
+|     |     |
+|-----|-----|
 | Model | S1-R  |
 | Vendor  | Ubisys  |
 | Description | Power switch S1-R |
 | Exposes | switch (state), power, action, linkquality |
-| Picture | ![Ubisys S1-R](../images/devices/S1-R.jpg) |
+| Picture | ![Ubisys S1-R](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/S1-R.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `simulated_brightness`: Set to `true` to simulate a `brightness` value (default: `false`).
 If this device provides a `brightness_move_up` or `brightness_move_down` action it is possible to specify the update
@@ -32,7 +36,7 @@ simulated_brightness:
 
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

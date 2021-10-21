@@ -1,19 +1,23 @@
 ---
 title: "Xiaomi DJT11LM control via MQTT"
-description: "Integrate your Xiaomi DJT11LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi DJT11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DJT11LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi DJT11LM
 
+|     |     |
+|-----|-----|
 | Model | DJT11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara vibration sensor |
 | Exposes | battery, action, strength, sensitivity, angle_x, angle_y, angle_z, voltage, linkquality |
-| Picture | ![Xiaomi DJT11LM](../images/devices/DJT11LM.jpg) |
+| Picture | ![Xiaomi DJT11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DJT11LM.jpg) |
+
 
 ## Notes
 

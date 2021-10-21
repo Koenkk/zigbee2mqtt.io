@@ -1,24 +1,28 @@
 ---
 title: "Custom devices (DiY) ZeeFlora control via MQTT"
-description: "Integrate your Custom devices (DiY) ZeeFlora via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Custom devices (DiY) ZeeFlora via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZeeFlora.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Custom devices (DiY) ZeeFlora
 
+|     |     |
+|-----|-----|
 | Model | ZeeFlora  |
 | Vendor  | Custom devices (DiY)  |
 | Description | Flower sensor with rechargeable battery |
 | Exposes | soil_moisture, battery, illuminance, temperature, linkquality |
-| Picture | ![Custom devices (DiY) ZeeFlora](../images/devices/ZeeFlora.jpg) |
+| Picture | ![Custom devices (DiY) ZeeFlora](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZeeFlora.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.
 To control the precision based on the illuminance_lux value set it to e.g. `{1000: 0, 100: 1}`,

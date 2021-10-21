@@ -1,24 +1,28 @@
 ---
 title: "Visonic MCT-340 SMA control via MQTT"
-description: "Integrate your Visonic MCT-340 SMA via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Visonic MCT-340 SMA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MCT-340_SMA.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Visonic MCT-340 SMA
 
+|     |     |
+|-----|-----|
 | Model | MCT-340 SMA  |
 | Vendor  | Visonic  |
 | Description | Magnetic door & window contact sensor |
 | Exposes | contact, battery_low, tamper, temperature, battery, linkquality |
-| Picture | ![Visonic MCT-340 SMA](../images/devices/MCT-340-SMA.jpg) |
+| Picture | ![Visonic MCT-340 SMA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MCT-340-SMA.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

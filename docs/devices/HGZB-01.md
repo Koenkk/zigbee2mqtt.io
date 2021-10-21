@@ -1,24 +1,29 @@
 ---
 title: "Nue / 3A HGZB-01 control via MQTT"
-description: "Integrate your Nue / 3A HGZB-01 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Nue / 3A HGZB-01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-01.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Nue / 3A HGZB-01
 
+|     |     |
+|-----|-----|
 | Model | HGZB-01  |
 | Vendor  | Nue / 3A  |
 | Description | Smart Zigbee 3.0 light controller |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A HGZB-01](../images/devices/HGZB-01.jpg) |
+| Picture | ![Nue / 3A HGZB-01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-01.jpg) |
 | White-label | Zemismart ZW-EU-01, Moes ZK-CH-2U |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

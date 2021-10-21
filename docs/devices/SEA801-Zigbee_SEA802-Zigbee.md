@@ -1,20 +1,24 @@
 ---
 title: "Saswell SEA801-Zigbee/SEA802-Zigbee control via MQTT"
-description: "Integrate your Saswell SEA801-Zigbee/SEA802-Zigbee via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Saswell SEA801-Zigbee/SEA802-Zigbee via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SEA801-Zigbee_SEA802-Zigbee.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Saswell SEA801-Zigbee/SEA802-Zigbee
 
+|     |     |
+|-----|-----|
 | Model | SEA801-Zigbee/SEA802-Zigbee  |
 | Vendor  | Saswell  |
 | Description | Thermostatic radiator valve |
 | Exposes | battery_low, switch (state), lock (state), climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, away_mode), linkquality |
-| Picture | ![Saswell SEA801-Zigbee/SEA802-Zigbee](../images/devices/SEA801-Zigbee-SEA802-Zigbee.jpg) |
+| Picture | ![Saswell SEA801-Zigbee/SEA802-Zigbee](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SEA801-Zigbee-SEA802-Zigbee.jpg) |
 | White-label | HiHome WZB-TRVL, Hama 00176592, RTX ZB-RT1 |
+
 
 ## Notes
 
@@ -25,7 +29,7 @@ description: "Integrate your Saswell SEA801-Zigbee/SEA802-Zigbee via Zigbee2MQTT
 * SEA802-Z01 (white LED display on the side, rotary plate): Turn the rotary plate to decrease the temperature until the LED dots show "OF", then long press until the display changes to "--"
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 

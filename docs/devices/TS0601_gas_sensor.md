@@ -1,23 +1,28 @@
 ---
 title: "TuYa TS0601_gas_sensor control via MQTT"
-description: "Integrate your TuYa TS0601_gas_sensor via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS0601_gas_sensor via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0601_gas_sensor.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS0601_gas_sensor
 
+|     |     |
+|-----|-----|
 | Model | TS0601_gas_sensor  |
 | Vendor  | TuYa  |
 | Description | gas sensor |
 | Exposes | gas, linkquality |
-| Picture | ![TuYa TS0601_gas_sensor](../images/devices/TS0601_gas_sensor.jpg) |
+| Picture | ![TuYa TS0601_gas_sensor](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0601_gas_sensor.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

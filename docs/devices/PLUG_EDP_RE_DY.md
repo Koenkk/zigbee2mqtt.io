@@ -1,19 +1,23 @@
 ---
 title: "EDP PLUG EDP RE:DY control via MQTT"
-description: "Integrate your EDP PLUG EDP RE:DY via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your EDP PLUG EDP RE:DY via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PLUG_EDP_RE_DY.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # EDP PLUG EDP RE:DY
 
+|     |     |
+|-----|-----|
 | Model | PLUG EDP RE:DY  |
 | Vendor  | EDP  |
 | Description | re:dy plug |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![EDP PLUG EDP RE:DY](../images/devices/PLUG-EDP-RE-DY.jpg) |
+| Picture | ![EDP PLUG EDP RE:DY](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PLUG-EDP-RE-DY.jpg) |
+
 
 ## Notes
 

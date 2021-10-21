@@ -1,23 +1,28 @@
 ---
 title: "Sunricher ZG9101SAC-HP-Switch control via MQTT"
-description: "Integrate your Sunricher ZG9101SAC-HP-Switch via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Sunricher ZG9101SAC-HP-Switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZG9101SAC-HP-Switch.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Sunricher ZG9101SAC-HP-Switch
 
+|     |     |
+|-----|-----|
 | Model | ZG9101SAC-HP-Switch  |
 | Vendor  | Sunricher  |
 | Description | Zigbee AC in wall switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Sunricher ZG9101SAC-HP-Switch](../images/devices/ZG9101SAC-HP-Switch.jpg) |
+| Picture | ![Sunricher ZG9101SAC-HP-Switch](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZG9101SAC-HP-Switch.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

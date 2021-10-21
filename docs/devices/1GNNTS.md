@@ -1,23 +1,28 @@
 ---
 title: "WETEN 1GNNTS control via MQTT"
-description: "Integrate your WETEN 1GNNTS via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your WETEN 1GNNTS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/1GNNTS.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # WETEN 1GNNTS
 
+|     |     |
+|-----|-----|
 | Model | 1GNNTS  |
 | Vendor  | WETEN  |
 | Description | 1 gang no neutral touch wall switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![WETEN 1GNNTS](../images/devices/1GNNTS.jpg) |
+| Picture | ![WETEN 1GNNTS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/1GNNTS.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

@@ -1,19 +1,23 @@
 ---
 title: "Swann SWO-MOS1PA control via MQTT"
-description: "Integrate your Swann SWO-MOS1PA via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Swann SWO-MOS1PA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SWO-MOS1PA.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Swann SWO-MOS1PA
 
+|     |     |
+|-----|-----|
 | Model | SWO-MOS1PA  |
 | Vendor  | Swann  |
 | Description | Motion and temperature sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![Swann SWO-MOS1PA](../images/devices/SWO-MOS1PA.jpg) |
+| Picture | ![Swann SWO-MOS1PA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SWO-MOS1PA.jpg) |
+
 
 ## Notes
 

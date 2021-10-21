@@ -1,19 +1,23 @@
 ---
 title: "Konke TW-S1 control via MQTT"
-description: "Integrate your Konke TW-S1 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Konke TW-S1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TW-S1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Konke TW-S1
 
+|     |     |
+|-----|-----|
 | Model | TW-S1  |
 | Vendor  | Konke  |
 | Description | Photoelectric smoke detector |
 | Exposes | smoke, battery_low, linkquality |
-| Picture | ![Konke TW-S1](../images/devices/TW-S1.jpg) |
+| Picture | ![Konke TW-S1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TW-S1.jpg) |
+
 
 ## Notes
 

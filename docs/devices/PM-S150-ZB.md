@@ -1,23 +1,28 @@
 ---
 title: "Dawon DNS PM-S150-ZB control via MQTT"
-description: "Integrate your Dawon DNS PM-S150-ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Dawon DNS PM-S150-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PM-S150-ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Dawon DNS PM-S150-ZB
 
+|     |     |
+|-----|-----|
 | Model | PM-S150-ZB  |
 | Vendor  | Dawon DNS  |
 | Description | IOT smart switch 1 gang router without neutral wire |
 | Exposes | switch (state), linkquality |
-| Picture | ![Dawon DNS PM-S150-ZB](../images/devices/PM-S150-ZB.jpg) |
+| Picture | ![Dawon DNS PM-S150-ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PM-S150-ZB.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

@@ -1,23 +1,28 @@
 ---
 title: "SmartThings STS-OUT-US-2 control via MQTT"
-description: "Integrate your SmartThings STS-OUT-US-2 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your SmartThings STS-OUT-US-2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/STS-OUT-US-2.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # SmartThings STS-OUT-US-2
 
+|     |     |
+|-----|-----|
 | Model | STS-OUT-US-2  |
 | Vendor  | SmartThings  |
 | Description | Zigbee smart plug with power meter |
 | Exposes | switch (state), power, current, voltage, linkquality |
-| Picture | ![SmartThings STS-OUT-US-2](../images/devices/STS-OUT-US-2.jpg) |
+| Picture | ![SmartThings STS-OUT-US-2](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/STS-OUT-US-2.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

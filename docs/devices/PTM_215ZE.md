@@ -1,20 +1,24 @@
 ---
 title: "EnOcean PTM 215ZE control via MQTT"
-description: "Integrate your EnOcean PTM 215ZE via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your EnOcean PTM 215ZE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PTM_215ZE.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # EnOcean PTM 215ZE
 
+|     |     |
+|-----|-----|
 | Model | PTM 215ZE  |
 | Vendor  | EnOcean  |
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
-| Picture | ![EnOcean PTM 215ZE](../images/devices/PTM-215ZE.jpg) |
+| Picture | ![EnOcean PTM 215ZE](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PTM-215ZE.jpg) |
 | White-label | Easyfit by EnOcean EWSxZ, Trio2sys 20020002 |
+
 
 ## Notes
 

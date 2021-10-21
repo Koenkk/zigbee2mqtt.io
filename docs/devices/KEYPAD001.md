@@ -1,19 +1,23 @@
 ---
 title: "Hive KEYPAD001 control via MQTT"
-description: "Integrate your Hive KEYPAD001 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Hive KEYPAD001 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/KEYPAD001.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Hive KEYPAD001
 
+|     |     |
+|-----|-----|
 | Model | KEYPAD001  |
 | Vendor  | Hive  |
 | Description | Alarm security keypad |
 | Exposes | battery, voltage, battery_low, occupancy, tamper, contact, action_code, action_transaction, action_zone, action, linkquality |
-| Picture | ![Hive KEYPAD001](../images/devices/KEYPAD001.jpg) |
+| Picture | ![Hive KEYPAD001](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/KEYPAD001.jpg) |
+
 
 ## Notes
 

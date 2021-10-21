@@ -1,23 +1,28 @@
 ---
 title: "J.XUAN SPZ01 control via MQTT"
-description: "Integrate your J.XUAN SPZ01 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your J.XUAN SPZ01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SPZ01.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # J.XUAN SPZ01
 
+|     |     |
+|-----|-----|
 | Model | SPZ01  |
 | Vendor  | J.XUAN  |
 | Description | plug |
 | Exposes | switch (state), power, power_outage_memory, linkquality |
-| Picture | ![J.XUAN SPZ01](../images/devices/SPZ01.jpg) |
+| Picture | ![J.XUAN SPZ01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SPZ01.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

@@ -1,19 +1,23 @@
 ---
 title: "Climax SRAC-23B-ZBSR control via MQTT"
-description: "Integrate your Climax SRAC-23B-ZBSR via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Climax SRAC-23B-ZBSR via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SRAC-23B-ZBSR.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Climax SRAC-23B-ZBSR
 
+|     |     |
+|-----|-----|
 | Model | SRAC-23B-ZBSR  |
 | Vendor  | Climax  |
 | Description | Smart siren |
 | Exposes | battery_low, tamper, warning, max_duration, alarm, linkquality |
-| Picture | ![Climax SRAC-23B-ZBSR](../images/devices/SRAC-23B-ZBSR.jpg) |
+| Picture | ![Climax SRAC-23B-ZBSR](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SRAC-23B-ZBSR.jpg) |
+
 
 ## Notes
 

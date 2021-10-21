@@ -1,19 +1,23 @@
 ---
 title: "Nue / 3A HGZB-045 control via MQTT"
-description: "Integrate your Nue / 3A HGZB-045 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Nue / 3A HGZB-045 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-045.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Nue / 3A HGZB-045
 
+|     |     |
+|-----|-----|
 | Model | HGZB-045  |
 | Vendor  | Nue / 3A  |
 | Description | Smart 4 key scene wall switch |
 | Exposes | action, switch (state), linkquality |
-| Picture | ![Nue / 3A HGZB-045](../images/devices/HGZB-045.jpg) |
+| Picture | ![Nue / 3A HGZB-045](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-045.jpg) |
+
 
 ## Notes
 
@@ -31,7 +35,7 @@ devices:
 ```
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 

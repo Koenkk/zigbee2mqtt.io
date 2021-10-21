@@ -1,24 +1,28 @@
 ---
 title: "Climax RS-23ZBS control via MQTT"
-description: "Integrate your Climax RS-23ZBS via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Climax RS-23ZBS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/RS-23ZBS.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Climax RS-23ZBS
 
+|     |     |
+|-----|-----|
 | Model | RS-23ZBS  |
 | Vendor  | Climax  |
 | Description | Temperature & humidity sensor |
 | Exposes | temperature, humidity, linkquality |
-| Picture | ![Climax RS-23ZBS](../images/devices/RS-23ZBS.jpg) |
+| Picture | ![Climax RS-23ZBS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/RS-23ZBS.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

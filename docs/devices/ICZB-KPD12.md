@@ -1,25 +1,29 @@
 ---
 title: "iCasa ICZB-KPD12 control via MQTT"
-description: "Integrate your iCasa ICZB-KPD12 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your iCasa ICZB-KPD12 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ICZB-KPD12.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # iCasa ICZB-KPD12
 
+|     |     |
+|-----|-----|
 | Model | ICZB-KPD12  |
 | Vendor  | iCasa  |
 | Description | Zigbee 3.0 Keypad Pulse 2 |
 | Exposes | battery, action, linkquality |
-| Picture | ![iCasa ICZB-KPD12](../images/devices/ICZB-KPD12.jpg) |
+| Picture | ![iCasa ICZB-KPD12](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ICZB-KPD12.jpg) |
 | White-label | Sunricher SR-ZG9001K2-DIM |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `simulated_brightness`: Set to `true` to simulate a `brightness` value (default: `false`).
 If this device provides a `brightness_move_up` or `brightness_move_down` action it is possible to specify the update

@@ -1,23 +1,28 @@
 ---
 title: "Third Reality 3RDS17BZ control via MQTT"
-description: "Integrate your Third Reality 3RDS17BZ via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Third Reality 3RDS17BZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/3RDS17BZ.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Third Reality 3RDS17BZ
 
+|     |     |
+|-----|-----|
 | Model | 3RDS17BZ  |
 | Vendor  | Third Reality  |
 | Description | Door sensor |
 | Exposes | contact, battery_low, battery, voltage, linkquality |
-| Picture | ![Third Reality 3RDS17BZ](../images/devices/3RDS17BZ.jpg) |
+| Picture | ![Third Reality 3RDS17BZ](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/3RDS17BZ.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

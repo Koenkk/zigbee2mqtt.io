@@ -1,23 +1,28 @@
 ---
 title: "Nue / 3A HGZB-42-UK / HGZB-41 / HGZB-41-UK control via MQTT"
-description: "Integrate your Nue / 3A HGZB-42-UK / HGZB-41 / HGZB-41-UK via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Nue / 3A HGZB-42-UK / HGZB-41 / HGZB-41-UK via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-42-UK___HGZB-41___HGZB-41-UK.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Nue / 3A HGZB-42-UK / HGZB-41 / HGZB-41-UK
 
+|     |     |
+|-----|-----|
 | Model | HGZB-42-UK / HGZB-41 / HGZB-41-UK  |
 | Vendor  | Nue / 3A  |
 | Description | Smart switch 1 or 2 gang |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A HGZB-42-UK / HGZB-41 / HGZB-41-UK](../images/devices/HGZB-42-UK---HGZB-41---HGZB-41-UK.jpg) |
+| Picture | ![Nue / 3A HGZB-42-UK / HGZB-41 / HGZB-41-UK](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-42-UK---HGZB-41---HGZB-41-UK.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

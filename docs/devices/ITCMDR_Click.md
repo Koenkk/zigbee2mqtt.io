@@ -1,23 +1,28 @@
 ---
 title: "IT Commander ITCMDR_Click control via MQTT"
-description: "Integrate your IT Commander ITCMDR_Click via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your IT Commander ITCMDR_Click via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ITCMDR_Click.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # IT Commander ITCMDR_Click
 
+|     |     |
+|-----|-----|
 | Model | ITCMDR_Click  |
 | Vendor  | IT Commander  |
 | Description | Button |
 | Exposes | action, battery, voltage, linkquality |
-| Picture | ![IT Commander ITCMDR_Click](../images/devices/ITCMDR_Click.jpg) |
+| Picture | ![IT Commander ITCMDR_Click](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ITCMDR_Click.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

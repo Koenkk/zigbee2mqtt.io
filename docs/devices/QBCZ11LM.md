@@ -1,24 +1,28 @@
 ---
 title: "Xiaomi QBCZ11LM control via MQTT"
-description: "Integrate your Xiaomi QBCZ11LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi QBCZ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QBCZ11LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi QBCZ11LM
 
+|     |     |
+|-----|-----|
 | Model | QBCZ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara socket Zigbee |
 | Exposes | switch (state), power, energy, temperature, voltage, power_outage_memory, linkquality |
-| Picture | ![Xiaomi QBCZ11LM](../images/devices/QBCZ11LM.jpg) |
+| Picture | ![Xiaomi QBCZ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBCZ11LM.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -35,7 +39,7 @@ Now toggle the plug/switch once with the button on it, from now on it will resto
 
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

@@ -1,23 +1,28 @@
 ---
 title: "Moes MS-104BZ control via MQTT"
-description: "Integrate your Moes MS-104BZ via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Moes MS-104BZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MS-104BZ.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Moes MS-104BZ
 
+|     |     |
+|-----|-----|
 | Model | MS-104BZ  |
 | Vendor  | Moes  |
 | Description | Smart light switch module (2 gang) |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Moes MS-104BZ](../images/devices/MS-104BZ.jpg) |
+| Picture | ![Moes MS-104BZ](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MS-104BZ.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

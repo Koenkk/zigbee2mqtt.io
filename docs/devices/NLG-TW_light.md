@@ -1,24 +1,28 @@
 ---
 title: "Paul Neuhaus NLG-TW light control via MQTT"
-description: "Integrate your Paul Neuhaus NLG-TW light via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Paul Neuhaus NLG-TW light via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/NLG-TW_light.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Paul Neuhaus NLG-TW light
 
+|     |     |
+|-----|-----|
 | Model | NLG-TW light  |
 | Vendor  | Paul Neuhaus  |
 | Description | Various tunable white lights (e.g. 8195-55) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Paul Neuhaus NLG-TW light](../images/devices/NLG-TW-light.jpg) |
+| Picture | ![Paul Neuhaus NLG-TW light](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/NLG-TW-light.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

@@ -1,20 +1,24 @@
 ---
 title: "TuYa TS0121_plug control via MQTT"
-description: "Integrate your TuYa TS0121_plug via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS0121_plug via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0121_plug.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS0121_plug
 
+|     |     |
+|-----|-----|
 | Model | TS0121_plug  |
 | Vendor  | TuYa  |
 | Description | 10A UK or 16A EU smart plug |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
-| Picture | ![TuYa TS0121_plug](../images/devices/TS0121_plug.jpg) |
+| Picture | ![TuYa TS0121_plug](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0121_plug.jpg) |
 | White-label | BlitzWolf BW-SHP13 |
+
 
 ## Notes
 
@@ -23,9 +27,10 @@ description: "Integrate your TuYa TS0121_plug via Zigbee2MQTT with whatever smar
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds.
+
 
 
 ## Exposes

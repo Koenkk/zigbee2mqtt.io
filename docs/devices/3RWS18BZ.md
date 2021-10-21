@@ -1,23 +1,28 @@
 ---
 title: "Third Reality 3RWS18BZ control via MQTT"
-description: "Integrate your Third Reality 3RWS18BZ via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Third Reality 3RWS18BZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/3RWS18BZ.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Third Reality 3RWS18BZ
 
+|     |     |
+|-----|-----|
 | Model | 3RWS18BZ  |
 | Vendor  | Third Reality  |
 | Description | Water sensor |
 | Exposes | water_leak, battery_low, battery, voltage, linkquality |
-| Picture | ![Third Reality 3RWS18BZ](../images/devices/3RWS18BZ.jpg) |
+| Picture | ![Third Reality 3RWS18BZ](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/3RWS18BZ.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

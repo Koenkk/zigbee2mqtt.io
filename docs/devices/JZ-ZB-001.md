@@ -1,23 +1,28 @@
 ---
 title: "LELLKI JZ-ZB-001 control via MQTT"
-description: "Integrate your LELLKI JZ-ZB-001 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LELLKI JZ-ZB-001 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/JZ-ZB-001.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # LELLKI JZ-ZB-001
 
+|     |     |
+|-----|-----|
 | Model | JZ-ZB-001  |
 | Vendor  | LELLKI  |
 | Description | Smart plug (without power monitoring) |
 | Exposes | switch (state), power_outage_memory, linkquality |
-| Picture | ![LELLKI JZ-ZB-001](../images/devices/JZ-ZB-001.jpg) |
+| Picture | ![LELLKI JZ-ZB-001](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JZ-ZB-001.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

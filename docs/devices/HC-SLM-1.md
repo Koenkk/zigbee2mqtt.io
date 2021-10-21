@@ -1,23 +1,28 @@
 ---
 title: "Home Control AS HC-SLM-1 control via MQTT"
-description: "Integrate your Home Control AS HC-SLM-1 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Home Control AS HC-SLM-1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HC-SLM-1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Home Control AS HC-SLM-1
 
+|     |     |
+|-----|-----|
 | Model | HC-SLM-1  |
 | Vendor  | Home Control AS  |
 | Description | Heimgard (Wattle) door lock pro |
 | Exposes | lock (state, lock_state), battery, linkquality |
-| Picture | ![Home Control AS HC-SLM-1](../images/devices/HC-SLM-1.jpg) |
+| Picture | ![Home Control AS HC-SLM-1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HC-SLM-1.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

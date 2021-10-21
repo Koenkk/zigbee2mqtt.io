@@ -1,23 +1,28 @@
 ---
 title: "LifeControl MCLH-04 control via MQTT"
-description: "Integrate your LifeControl MCLH-04 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LifeControl MCLH-04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MCLH-04.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # LifeControl MCLH-04
 
+|     |     |
+|-----|-----|
 | Model | MCLH-04  |
 | Vendor  | LifeControl  |
 | Description | Door sensor |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
-| Picture | ![LifeControl MCLH-04](../images/devices/MCLH-04.jpg) |
+| Picture | ![LifeControl MCLH-04](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MCLH-04.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

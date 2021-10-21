@@ -1,23 +1,28 @@
 ---
 title: "Develco SMRZB-332 control via MQTT"
-description: "Integrate your Develco SMRZB-332 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Develco SMRZB-332 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SMRZB-332.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Develco SMRZB-332
 
+|     |     |
+|-----|-----|
 | Model | SMRZB-332  |
 | Vendor  | Develco  |
 | Description | Smart relay DIN |
 | Exposes | power, energy, switch (state), linkquality |
-| Picture | ![Develco SMRZB-332](../images/devices/SMRZB-332.jpg) |
+| Picture | ![Develco SMRZB-332](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SMRZB-332.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

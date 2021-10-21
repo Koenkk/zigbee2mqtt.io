@@ -1,23 +1,28 @@
 ---
 title: "SmartThings F-APP-UK-V2 control via MQTT"
-description: "Integrate your SmartThings F-APP-UK-V2 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your SmartThings F-APP-UK-V2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/F-APP-UK-V2.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # SmartThings F-APP-UK-V2
 
+|     |     |
+|-----|-----|
 | Model | F-APP-UK-V2  |
 | Vendor  | SmartThings  |
 | Description | Zigbee Outlet UK with power meter |
 | Exposes | switch (state), power, current, voltage, linkquality |
-| Picture | ![SmartThings F-APP-UK-V2](../images/devices/F-APP-UK-V2.jpg) |
+| Picture | ![SmartThings F-APP-UK-V2](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/F-APP-UK-V2.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

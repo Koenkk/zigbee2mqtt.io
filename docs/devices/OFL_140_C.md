@@ -1,19 +1,23 @@
 ---
 title: "Innr OFL 140 C control via MQTT"
-description: "Integrate your Innr OFL 140 C via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Innr OFL 140 C via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/OFL_140_C.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Innr OFL 140 C
 
+|     |     |
+|-----|-----|
 | Model | OFL 140 C  |
 | Vendor  | Innr  |
 | Description | Outdoor flex light colour LED strip 4m, 1000lm, RGBW |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Innr OFL 140 C](../images/devices/OFL-140-C.jpg) |
+| Picture | ![Innr OFL 140 C](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/OFL-140-C.jpg) |
+
 
 ## Notes
 
@@ -22,7 +26,7 @@ description: "Integrate your Innr OFL 140 C via Zigbee2MQTT with whatever smart 
 Factory reset the light bulb ([video](https://www.youtube.com/watch?v=4zkpZSv84H4)).
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

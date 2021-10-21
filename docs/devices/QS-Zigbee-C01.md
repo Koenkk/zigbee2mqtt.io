@@ -1,24 +1,28 @@
 ---
 title: "Lonsonho QS-Zigbee-C01 control via MQTT"
-description: "Integrate your Lonsonho QS-Zigbee-C01 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Lonsonho QS-Zigbee-C01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QS-Zigbee-C01.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Lonsonho QS-Zigbee-C01
 
+|     |     |
+|-----|-----|
 | Model | QS-Zigbee-C01  |
 | Vendor  | Lonsonho  |
 | Description | Curtain/blind motor controller |
 | Exposes | cover (state, position), moving, calibration, motor_reversal, calibration_time, linkquality |
-| Picture | ![Lonsonho QS-Zigbee-C01](../images/devices/QS-Zigbee-C01.jpg) |
+| Picture | ![Lonsonho QS-Zigbee-C01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QS-Zigbee-C01.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
 

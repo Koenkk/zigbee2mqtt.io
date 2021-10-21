@@ -1,23 +1,28 @@
 ---
 title: "RTX ZVG1 control via MQTT"
-description: "Integrate your RTX ZVG1 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your RTX ZVG1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZVG1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # RTX ZVG1
 
+|     |     |
+|-----|-----|
 | Model | ZVG1  |
 | Vendor  | RTX  |
 | Description | Zigbee smart water valve |
 | Exposes | switch (state), battery, timer_state, timer, timer_time_left, last_valve_open_duration, water_consumed, linkquality |
-| Picture | ![RTX ZVG1](../images/devices/ZVG1.jpg) |
+| Picture | ![RTX ZVG1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZVG1.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

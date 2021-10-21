@@ -14,5 +14,7 @@ import { checkDeviceImageSize } from "./check-device-image-size";
 
   if(res.length) {
     process.exit(1);
+  } else {
+    console.log('All tests passed.');
   }
 })()

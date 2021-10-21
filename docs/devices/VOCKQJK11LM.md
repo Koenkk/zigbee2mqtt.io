@@ -1,20 +1,24 @@
 ---
 title: "Xiaomi VOCKQJK11LM control via MQTT"
-description: "Integrate your Xiaomi VOCKQJK11LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi VOCKQJK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/VOCKQJK11LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi VOCKQJK11LM
 
+|     |     |
+|-----|-----|
 | Model | VOCKQJK11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara TVOC air quality monitor |
 | Exposes | battery, temperature, humidity, voc, linkquality |
-| Picture | ![Xiaomi VOCKQJK11LM](../images/devices/VOCKQJK11LM.jpg) |
+| Picture | ![Xiaomi VOCKQJK11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/VOCKQJK11LM.jpg) |
 | White-label | Xiaomi AAQS-S01 |
+
 
 ## Notes
 
@@ -23,7 +27,7 @@ description: "Integrate your Xiaomi VOCKQJK11LM via Zigbee2MQTT with whatever sm
 Press and hold button on top of device until connection symbol appears
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

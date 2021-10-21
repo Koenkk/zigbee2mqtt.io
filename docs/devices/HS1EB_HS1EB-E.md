@@ -1,19 +1,23 @@
 ---
 title: "HEIMAN HS1EB/HS1EB-E control via MQTT"
-description: "Integrate your HEIMAN HS1EB/HS1EB-E via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HS1EB/HS1EB-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1EB_HS1EB-E.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HS1EB/HS1EB-E
 
+|     |     |
+|-----|-----|
 | Model | HS1EB/HS1EB-E  |
 | Vendor  | HEIMAN  |
 | Description | Smart emergency button |
 | Exposes | battery, action, linkquality |
-| Picture | ![HEIMAN HS1EB/HS1EB-E](../images/devices/HS1EB-HS1EB-E.jpg) |
+| Picture | ![HEIMAN HS1EB/HS1EB-E](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS1EB-HS1EB-E.jpg) |
+
 
 ## Notes
 
@@ -31,7 +35,7 @@ devices:
 ```
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 

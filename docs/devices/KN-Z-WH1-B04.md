@@ -1,23 +1,28 @@
 ---
 title: "LUX KN-Z-WH1-B04 control via MQTT"
-description: "Integrate your LUX KN-Z-WH1-B04 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LUX KN-Z-WH1-B04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/KN-Z-WH1-B04.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # LUX KN-Z-WH1-B04
 
+|     |     |
+|-----|-----|
 | Model | KN-Z-WH1-B04  |
 | Vendor  | LUX  |
 | Description | KONOz thermostat |
 | Exposes | climate (occupied_heating_setpoint, occupied_cooling_setpoint, local_temperature, system_mode, running_state, fan_mode), linkquality |
-| Picture | ![LUX KN-Z-WH1-B04](../images/devices/KN-Z-WH1-B04.jpg) |
+| Picture | ![LUX KN-Z-WH1-B04](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/KN-Z-WH1-B04.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

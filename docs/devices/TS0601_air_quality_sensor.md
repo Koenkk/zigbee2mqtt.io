@@ -1,24 +1,28 @@
 ---
 title: "Tuya TS0601_air_quality_sensor control via MQTT"
-description: "Integrate your Tuya TS0601_air_quality_sensor via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Tuya TS0601_air_quality_sensor via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0601_air_quality_sensor.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Tuya TS0601_air_quality_sensor
 
+|     |     |
+|-----|-----|
 | Model | TS0601_air_quality_sensor  |
 | Vendor  | Tuya  |
 | Description | Air quality sensor |
 | Exposes | temperature, humidity, co2, voc, formaldehyd, linkquality |
-| Picture | ![Tuya TS0601_air_quality_sensor](../images/devices/TS0601_air_quality_sensor.jpg) |
+| Picture | ![Tuya TS0601_air_quality_sensor](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0601_air_quality_sensor.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

@@ -1,24 +1,28 @@
 ---
 title: "Xiaomi QBCZ14LM control via MQTT"
-description: "Integrate your Xiaomi QBCZ14LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi QBCZ14LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QBCZ14LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi QBCZ14LM
 
+|     |     |
+|-----|-----|
 | Model | QBCZ14LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall outlet T1 |
 | Exposes | switch (state), power, energy, temperature, voltage, current, power_outage_memory, led_disabled_night, button_lock, overload_protection, linkquality |
-| Picture | ![Xiaomi QBCZ14LM](../images/devices/QBCZ14LM.jpg) |
+| Picture | ![Xiaomi QBCZ14LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBCZ14LM.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

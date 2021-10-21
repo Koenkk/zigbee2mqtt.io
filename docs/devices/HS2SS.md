@@ -1,23 +1,28 @@
 ---
 title: "HEIMAN HS2SS control via MQTT"
-description: "Integrate your HEIMAN HS2SS via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HS2SS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS2SS.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HS2SS
 
+|     |     |
+|-----|-----|
 | Model | HS2SS  |
 | Vendor  | HEIMAN  |
 | Description | Smart scene switch |
 | Exposes | battery, action, linkquality |
-| Picture | ![HEIMAN HS2SS](../images/devices/HS2SS.jpg) |
+| Picture | ![HEIMAN HS2SS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS2SS.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

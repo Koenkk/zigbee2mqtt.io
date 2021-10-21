@@ -1,24 +1,28 @@
 ---
 title: "Smart Home Pty HGZB-07A control via MQTT"
-description: "Integrate your Smart Home Pty HGZB-07A via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Smart Home Pty HGZB-07A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-07A.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Smart Home Pty HGZB-07A
 
+|     |     |
+|-----|-----|
 | Model | HGZB-07A  |
 | Vendor  | Smart Home Pty  |
 | Description | RGBW Downlight |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Smart Home Pty HGZB-07A](../images/devices/HGZB-07A.jpg) |
+| Picture | ![Smart Home Pty HGZB-07A](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-07A.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

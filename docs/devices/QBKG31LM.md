@@ -1,26 +1,31 @@
 ---
 title: "Xiaomi QBKG31LM control via MQTT"
-description: "Integrate your Xiaomi QBKG31LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi QBKG31LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QBKG31LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi QBKG31LM
 
+|     |     |
+|-----|-----|
 | Model | QBKG31LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall switch H1 Pro (with neutral, double rocker) |
 | Exposes | power_outage_memory, action, switch (state), power, operation_mode, linkquality |
-| Picture | ![Xiaomi QBKG31LM](../images/devices/QBKG31LM.jpg) |
+| Picture | ![Xiaomi QBKG31LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG31LM.jpg) |
+
 
 ## Notes
 
 None
 
+
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

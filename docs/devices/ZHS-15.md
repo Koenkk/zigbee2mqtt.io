@@ -1,23 +1,28 @@
 ---
 title: "Schwaiger ZHS-15 control via MQTT"
-description: "Integrate your Schwaiger ZHS-15 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Schwaiger ZHS-15 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZHS-15.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Schwaiger ZHS-15
 
+|     |     |
+|-----|-----|
 | Model | ZHS-15  |
 | Vendor  | Schwaiger  |
 | Description | Power socket on/off with power consumption monitoring |
 | Exposes | switch (state), power, current, voltage, linkquality |
-| Picture | ![Schwaiger ZHS-15](../images/devices/ZHS-15.jpg) |
+| Picture | ![Schwaiger ZHS-15](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZHS-15.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

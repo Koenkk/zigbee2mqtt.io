@@ -1,23 +1,28 @@
 ---
 title: "Xiaomi WS-USC04 control via MQTT"
-description: "Integrate your Xiaomi WS-USC04 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi WS-USC04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/WS-USC04.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi WS-USC04
 
+|     |     |
+|-----|-----|
 | Model | WS-USC04  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall switch (neutral, double rocker) |
 | Exposes | switch (state), linkquality |
-| Picture | ![Xiaomi WS-USC04](../images/devices/WS-USC04.jpg) |
+| Picture | ![Xiaomi WS-USC04](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WS-USC04.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

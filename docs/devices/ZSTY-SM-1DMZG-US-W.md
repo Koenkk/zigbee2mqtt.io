@@ -1,24 +1,28 @@
 ---
 title: "Somgoms ZSTY-SM-1DMZG-US-W control via MQTT"
-description: "Integrate your Somgoms ZSTY-SM-1DMZG-US-W via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Somgoms ZSTY-SM-1DMZG-US-W via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZSTY-SM-1DMZG-US-W.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Somgoms ZSTY-SM-1DMZG-US-W
 
+|     |     |
+|-----|-----|
 | Model | ZSTY-SM-1DMZG-US-W  |
 | Vendor  | Somgoms  |
 | Description | Dimmer switch |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![Somgoms ZSTY-SM-1DMZG-US-W](../images/devices/ZSTY-SM-1DMZG-US-W.jpg) |
+| Picture | ![Somgoms ZSTY-SM-1DMZG-US-W](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZSTY-SM-1DMZG-US-W.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

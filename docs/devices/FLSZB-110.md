@@ -1,24 +1,28 @@
 ---
 title: "Develco FLSZB-110 control via MQTT"
-description: "Integrate your Develco FLSZB-110 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Develco FLSZB-110 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/FLSZB-110.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Develco FLSZB-110
 
+|     |     |
+|-----|-----|
 | Model | FLSZB-110  |
 | Vendor  | Develco  |
 | Description | Flood alarm device  |
 | Exposes | battery_low, tamper, water_leak, temperature, voltage, linkquality |
-| Picture | ![Develco FLSZB-110](../images/devices/FLSZB-110.jpg) |
+| Picture | ![Develco FLSZB-110](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/FLSZB-110.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

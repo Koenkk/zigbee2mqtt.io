@@ -1,23 +1,28 @@
 ---
 title: "Moes ZK-EU-2U control via MQTT"
-description: "Integrate your Moes ZK-EU-2U via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Moes ZK-EU-2U via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZK-EU-2U.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Moes ZK-EU-2U
 
+|     |     |
+|-----|-----|
 | Model | ZK-EU-2U  |
 | Vendor  | Moes  |
 | Description | Zigbee 3.0 dual USB wireless socket plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![Moes ZK-EU-2U](../images/devices/ZK-EU-2U.jpg) |
+| Picture | ![Moes ZK-EU-2U](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZK-EU-2U.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

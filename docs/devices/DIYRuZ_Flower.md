@@ -1,24 +1,28 @@
 ---
 title: "DIYRuZ DIYRuZ_Flower control via MQTT"
-description: "Integrate your DIYRuZ DIYRuZ_Flower via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your DIYRuZ DIYRuZ_Flower via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DIYRuZ_Flower.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # DIYRuZ DIYRuZ_Flower
 
+|     |     |
+|-----|-----|
 | Model | DIYRuZ_Flower  |
 | Vendor  | DIYRuZ  |
 | Description | [Flower sensor](http://modkam.ru/?p=1700) |
 | Exposes | soil_moisture, battery, illuminance, humidity, pressure, temperature, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_Flower](../images/devices/DIYRuZ_Flower.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_Flower](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DIYRuZ_Flower.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.
 To control the precision based on the illuminance_lux value set it to e.g. `{1000: 0, 100: 1}`,

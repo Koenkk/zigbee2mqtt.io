@@ -1,23 +1,28 @@
 ---
 title: "Lidl PSBZS A1 control via MQTT"
-description: "Integrate your Lidl PSBZS A1 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Lidl PSBZS A1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PSBZS_A1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Lidl PSBZS A1
 
+|     |     |
+|-----|-----|
 | Model | PSBZS A1  |
 | Vendor  | Lidl  |
 | Description | Parkside smart watering timer |
 | Exposes | switch (state), timer, linkquality |
-| Picture | ![Lidl PSBZS A1](../images/devices/PSBZS-A1.jpg) |
+| Picture | ![Lidl PSBZS A1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PSBZS-A1.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

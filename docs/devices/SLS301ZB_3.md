@@ -1,23 +1,28 @@
 ---
 title: "Feibit SLS301ZB_3 control via MQTT"
-description: "Integrate your Feibit SLS301ZB_3 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Feibit SLS301ZB_3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SLS301ZB_3.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Feibit SLS301ZB_3
 
+|     |     |
+|-----|-----|
 | Model | SLS301ZB_3  |
 | Vendor  | Feibit  |
 | Description | Smart light switch - 3 gang |
 | Exposes | switch (state), linkquality |
-| Picture | ![Feibit SLS301ZB_3](../images/devices/SLS301ZB_3.jpg) |
+| Picture | ![Feibit SLS301ZB_3](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SLS301ZB_3.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

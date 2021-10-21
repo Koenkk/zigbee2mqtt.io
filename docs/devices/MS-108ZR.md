@@ -1,24 +1,28 @@
 ---
 title: "Moes MS-108ZR control via MQTT"
-description: "Integrate your Moes MS-108ZR via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Moes MS-108ZR via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MS-108ZR.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Moes MS-108ZR
 
+|     |     |
+|-----|-----|
 | Model | MS-108ZR  |
 | Vendor  | Moes  |
 | Description | Zigbee + RF curtain switch module |
 | Exposes | cover (state, position), calibration_time, moving, motor_reversal, linkquality |
-| Picture | ![Moes MS-108ZR](../images/devices/MS-108ZR.jpg) |
+| Picture | ![Moes MS-108ZR](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MS-108ZR.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
 

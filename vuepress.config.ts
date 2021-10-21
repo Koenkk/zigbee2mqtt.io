@@ -4,7 +4,7 @@ import * as path from "path";
 import { DefinePlugin, IgnorePlugin } from 'webpack';
 
 export const domain = 'https://psi-4ward.github.io';
-export const base = '/zigbee2mqtt-docs/';
+export const base = '/zigbee2mqtt.io/';
 const pagePatterns = ['**/*.md', '!.vuepress', '!node_modules'];
 
 // Ability to exclude device-page rendering to save time while in dev
@@ -29,28 +29,28 @@ export default {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      href: `${ base }/favicon-16x16.png`,
+      href: `${ base }favicon-16x16.png`,
     }],
     ['link', {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      href: `${ base }/favicon-32x32.png`,
+      href: `${ base }favicon-32x32.png`,
     }],
     ['link', {
       rel: 'apple-touch-icon',
       type: 'image/png',
       sizes: '180x180',
-      href: `${ base }/apple-touch-icon.png`,
+      href: `${ base }apple-touch-icon.png`,
     }],
     ['link', {
       rel: 'manifest',
-      href: `${ base }/site.webmanifest`,
+      href: `${ base }site.webmanifest`,
     }],
     ['link', {
       rel: 'mask-icon',
       color: '#ffc135',
-      href: `${ base }/safari-pinned-tab.svg`,
+      href: `${ base }safari-pinned-tab.svg`,
     }],
     ['meta', {
       name: 'msapplication-TileColor',

@@ -1,19 +1,23 @@
 ---
 title: "Trust ZYCT-202 control via MQTT"
-description: "Integrate your Trust ZYCT-202 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Trust ZYCT-202 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZYCT-202.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Trust ZYCT-202
 
+|     |     |
+|-----|-----|
 | Model | ZYCT-202  |
 | Vendor  | Trust  |
 | Description | Remote control |
 | Exposes | action, linkquality |
-| Picture | ![Trust ZYCT-202](../images/devices/ZYCT-202.jpg) |
+| Picture | ![Trust ZYCT-202](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZYCT-202.jpg) |
+
 
 ## Notes
 
@@ -28,7 +32,7 @@ To establish a connection keep the remote within 2 meters from the hub.
 Press and hold the smart group button (button with two bulbs) and wait until the lights, below the channels, flash.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 

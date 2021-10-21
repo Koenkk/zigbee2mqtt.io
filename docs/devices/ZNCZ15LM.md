@@ -1,24 +1,28 @@
 ---
 title: "Xiaomi ZNCZ15LM control via MQTT"
-description: "Integrate your Xiaomi ZNCZ15LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi ZNCZ15LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZNCZ15LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi ZNCZ15LM
 
+|     |     |
+|-----|-----|
 | Model | ZNCZ15LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 power plug ZigBee |
 | Exposes | switch (state), power, energy, temperature, voltage, current, consumer_connected, power_outage_memory, led_disabled_night, button_lock, overload_protection, linkquality |
-| Picture | ![Xiaomi ZNCZ15LM](../images/devices/ZNCZ15LM.jpg) |
+| Picture | ![Xiaomi ZNCZ15LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNCZ15LM.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

@@ -1,23 +1,28 @@
 ---
 title: "Develco SPLZB-134 control via MQTT"
-description: "Integrate your Develco SPLZB-134 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Develco SPLZB-134 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SPLZB-134.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Develco SPLZB-134
 
+|     |     |
+|-----|-----|
 | Model | SPLZB-134  |
 | Vendor  | Develco  |
 | Description | Power plug (type G) |
 | Exposes | switch (state), power, current, voltage, energy, device_temperature, linkquality |
-| Picture | ![Develco SPLZB-134](../images/devices/SPLZB-134.jpg) |
+| Picture | ![Develco SPLZB-134](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SPLZB-134.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

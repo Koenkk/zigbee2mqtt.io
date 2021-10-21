@@ -1,19 +1,23 @@
 ---
 title: "Schneider Electric CCTFR6400 control via MQTT"
-description: "Integrate your Schneider Electric CCTFR6400 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Schneider Electric CCTFR6400 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/CCTFR6400.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Schneider Electric CCTFR6400
 
+|     |     |
+|-----|-----|
 | Model | CCTFR6400  |
 | Vendor  | Schneider Electric  |
 | Description | Temperature/Humidity measurement with thermostat interface |
 | Exposes | keypad_lockout, humidity, battery, voltage, action, climate (occupied_heating_setpoint, local_temperature, pi_heating_demand), linkquality |
-| Picture | ![Schneider Electric CCTFR6400](../images/devices/CCTFR6400.jpg) |
+| Picture | ![Schneider Electric CCTFR6400](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/CCTFR6400.jpg) |
+
 
 ## Notes
 
@@ -28,7 +32,7 @@ It can display the heating status of associated climate by setting `pi_heating_d
 It requires a Z-Stack controller (Firmware version > TBD). It is currently not working with zigate and conbee II (maybe supported in further firmware).
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `humidity_precision`: Controls the precision of `humidity` values, e.g. `0`, `1` or `2`; default `2`.
 To control the precision based on the humidity value set it to e.g. `{80: 0, 10: 1}`,

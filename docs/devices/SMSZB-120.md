@@ -1,19 +1,23 @@
 ---
 title: "Develco SMSZB-120 control via MQTT"
-description: "Integrate your Develco SMSZB-120 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Develco SMSZB-120 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SMSZB-120.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Develco SMSZB-120
 
+|     |     |
+|-----|-----|
 | Model | SMSZB-120  |
 | Vendor  | Develco  |
 | Description | Smoke detector with siren |
 | Exposes | temperature, battery, smoke, battery_low, test, max_duration, alarm, reliability, fault, linkquality |
-| Picture | ![Develco SMSZB-120](../images/devices/SMSZB-120.jpg) |
+| Picture | ![Develco SMSZB-120](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SMSZB-120.jpg) |
+
 
 ## Notes
 
@@ -47,7 +51,7 @@ Set `max_duration` from the Zigbee2MQTT UI or by publishing `{"max_duration": NE
 This alarm are preset to highest volume
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -58,7 +62,7 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

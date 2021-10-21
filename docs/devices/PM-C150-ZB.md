@@ -1,23 +1,28 @@
 ---
 title: "Dawon DNS PM-C150-ZB control via MQTT"
-description: "Integrate your Dawon DNS PM-C150-ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Dawon DNS PM-C150-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PM-C150-ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Dawon DNS PM-C150-ZB
 
+|     |     |
+|-----|-----|
 | Model | PM-C150-ZB  |
 | Vendor  | Dawon DNS  |
 | Description | IOT remote control smart buried-type 16A outlet |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![Dawon DNS PM-C150-ZB](../images/devices/PM-C150-ZB.jpg) |
+| Picture | ![Dawon DNS PM-C150-ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PM-C150-ZB.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

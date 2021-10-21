@@ -1,31 +1,35 @@
 ---
 title: "Livolo TI0001-switch-2gang control via MQTT"
-description: "Integrate your Livolo TI0001-switch-2gang via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Livolo TI0001-switch-2gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TI0001-switch-2gang.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Livolo TI0001-switch-2gang
 
+|     |     |
+|-----|-----|
 | Model | TI0001-switch-2gang  |
 | Vendor  | Livolo  |
 | Description | Zigbee Switch 2 gang |
 | Exposes | switch (state), linkquality |
-| Picture | ![Livolo TI0001-switch-2gang](../images/devices/TI0001-switch-2gang.jpg) |
+| Picture | ![Livolo TI0001-switch-2gang](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TI0001-switch-2gang.jpg) |
+
 
 ## Notes
 
 
 After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend
-of Zigbee2MQTT or using [MQTT message](../information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
+of Zigbee2MQTT or using [MQTT message](../../guide/usage/mqtt_topics_and_message_structure.md#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
 In case of problems it's recommended to remove device and than retry pairing and re-configuring device.
 
 ### Important
 These devices can only be used on channel 26.
 These devices are locked to the manufacturer's network key (ext_pan_id).
-Your configuration file [data/configuration.yaml](../information/configuration) must contain the following:
+Your configuration file [data/configuration.yaml](../../guide/configuration/) must contain the following:
 
 ```yaml
 advanced:

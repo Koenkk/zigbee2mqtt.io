@@ -1,23 +1,28 @@
 ---
 title: "Nue / 3A MG-AUWS01 control via MQTT"
-description: "Integrate your Nue / 3A MG-AUWS01 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Nue / 3A MG-AUWS01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MG-AUWS01.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Nue / 3A MG-AUWS01
 
+|     |     |
+|-----|-----|
 | Model | MG-AUWS01  |
 | Vendor  | Nue / 3A  |
 | Description | Smart Double GPO |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A MG-AUWS01](../images/devices/MG-AUWS01.jpg) |
+| Picture | ![Nue / 3A MG-AUWS01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MG-AUWS01.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

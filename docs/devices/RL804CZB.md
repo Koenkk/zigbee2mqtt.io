@@ -1,24 +1,28 @@
 ---
 title: "Orvibo RL804CZB control via MQTT"
-description: "Integrate your Orvibo RL804CZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Orvibo RL804CZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/RL804CZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Orvibo RL804CZB
 
+|     |     |
+|-----|-----|
 | Model | RL804CZB  |
 | Vendor  | Orvibo  |
 | Description | Zigbee LED controller RGB + CCT or RGBW |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Orvibo RL804CZB](../images/devices/RL804CZB.jpg) |
+| Picture | ![Orvibo RL804CZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/RL804CZB.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

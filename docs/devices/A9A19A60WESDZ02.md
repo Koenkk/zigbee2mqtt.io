@@ -1,24 +1,28 @@
 ---
 title: "EcoSmart A9A19A60WESDZ02 control via MQTT"
-description: "Integrate your EcoSmart A9A19A60WESDZ02 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your EcoSmart A9A19A60WESDZ02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/A9A19A60WESDZ02.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # EcoSmart A9A19A60WESDZ02
 
+|     |     |
+|-----|-----|
 | Model | A9A19A60WESDZ02  |
 | Vendor  | EcoSmart  |
 | Description | Tuneable white (A19) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![EcoSmart A9A19A60WESDZ02](../images/devices/A9A19A60WESDZ02.jpg) |
+| Picture | ![EcoSmart A9A19A60WESDZ02](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/A9A19A60WESDZ02.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

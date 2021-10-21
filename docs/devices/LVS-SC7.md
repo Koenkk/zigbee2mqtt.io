@@ -1,23 +1,28 @@
 ---
 title: "LivingWise LVS-SC7 control via MQTT"
-description: "Integrate your LivingWise LVS-SC7 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LivingWise LVS-SC7 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LVS-SC7.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # LivingWise LVS-SC7
 
+|     |     |
+|-----|-----|
 | Model | LVS-SC7  |
 | Vendor  | LivingWise  |
 | Description | Scene controller  |
 | Exposes | action, linkquality |
-| Picture | ![LivingWise LVS-SC7](../images/devices/LVS-SC7.jpg) |
+| Picture | ![LivingWise LVS-SC7](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LVS-SC7.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

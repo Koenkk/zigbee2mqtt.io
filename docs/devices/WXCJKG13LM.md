@@ -1,19 +1,23 @@
 ---
 title: "Xiaomi WXCJKG13LM control via MQTT"
-description: "Integrate your Xiaomi WXCJKG13LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi WXCJKG13LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/WXCJKG13LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi WXCJKG13LM
 
+|     |     |
+|-----|-----|
 | Model | WXCJKG13LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara Opple switch 3 bands |
 | Exposes | battery, action, operation_mode, linkquality |
-| Picture | ![Xiaomi WXCJKG13LM](../images/devices/WXCJKG13LM.jpg) |
+| Picture | ![Xiaomi WXCJKG13LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WXCJKG13LM.jpg) |
+
 
 ## Notes
 
@@ -24,7 +28,7 @@ Press and hold the button on the backside of the device until the blue light sta
 ### Binding
 By default the switch is bound to the coordinator but this device can also be used to directly control other lights and switches in the network.
 
-First unbind it from the coordinator, then you can bind it to any other device or group. (see https://www.zigbee2mqtt.io/information/binding.html )
+First unbind it from the coordinator, then you can bind it to any other device or group. (see ../guide/usage/binding.md )
 
 Now change the operation mode of the device, by default it is in `event` mode, but when binding we need to change it to `command` mode.
 To do this send to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"operation_mode": "command"}`, right before doing this make sure to wakeup the device.
@@ -41,7 +45,7 @@ When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple swi
 - long right click: cold white
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 

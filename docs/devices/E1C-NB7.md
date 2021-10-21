@@ -1,23 +1,28 @@
 ---
 title: "Sengled E1C-NB7 control via MQTT"
-description: "Integrate your Sengled E1C-NB7 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Sengled E1C-NB7 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/E1C-NB7.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Sengled E1C-NB7
 
+|     |     |
+|-----|-----|
 | Model | E1C-NB7  |
 | Vendor  | Sengled  |
 | Description | Smart plug with energy tracker |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![Sengled E1C-NB7](../images/devices/E1C-NB7.jpg) |
+| Picture | ![Sengled E1C-NB7](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/E1C-NB7.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

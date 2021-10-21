@@ -1,23 +1,28 @@
 ---
 title: "Visonic MCT-350 SMA control via MQTT"
-description: "Integrate your Visonic MCT-350 SMA via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Visonic MCT-350 SMA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MCT-350_SMA.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Visonic MCT-350 SMA
 
+|     |     |
+|-----|-----|
 | Model | MCT-350 SMA  |
 | Vendor  | Visonic  |
 | Description | Magnetic door & window contact sensor |
 | Exposes | contact, battery_low, tamper, linkquality |
-| Picture | ![Visonic MCT-350 SMA](../images/devices/MCT-350-SMA.jpg) |
+| Picture | ![Visonic MCT-350 SMA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MCT-350-SMA.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

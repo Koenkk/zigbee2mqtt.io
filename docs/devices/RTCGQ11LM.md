@@ -1,19 +1,23 @@
 ---
 title: "Xiaomi RTCGQ11LM control via MQTT"
-description: "Integrate your Xiaomi RTCGQ11LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi RTCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/RTCGQ11LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi RTCGQ11LM
 
+|     |     |
+|-----|-----|
 | Model | RTCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara human body movement and illuminance sensor |
 | Exposes | battery, occupancy, temperature, voltage, illuminance_lux, illuminance, linkquality |
-| Picture | ![Xiaomi RTCGQ11LM](../images/devices/RTCGQ11LM.jpg) |
+| Picture | ![Xiaomi RTCGQ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/RTCGQ11LM.jpg) |
+
 
 ## Notes
 
@@ -33,7 +37,7 @@ Most of the times this happens because of the following reasons:
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
 e.g. `95` would take 95% to the illuminance reported by the device; default `100`. Calibration will take into affect with next report of device.

@@ -1,19 +1,23 @@
 ---
 title: "Schneider Electric CCTFR6700 control via MQTT"
-description: "Integrate your Schneider Electric CCTFR6700 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Schneider Electric CCTFR6700 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/CCTFR6700.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Schneider Electric CCTFR6700
 
+|     |     |
+|-----|-----|
 | Model | CCTFR6700  |
 | Vendor  | Schneider Electric  |
 | Description | Heating thermostat |
 | Exposes | power, energy, schneider_pilot_mode, climate (occupied_heating_setpoint, local_temperature, system_mode, pi_heating_demand), linkquality |
-| Picture | ![Schneider Electric CCTFR6700](../images/devices/CCTFR6700.jpg) |
+| Picture | ![Schneider Electric CCTFR6700](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/CCTFR6700.jpg) |
+
 
 ## Notes
 

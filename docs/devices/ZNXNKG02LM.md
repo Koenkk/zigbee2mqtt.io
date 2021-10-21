@@ -1,23 +1,28 @@
 ---
 title: "Xiaomi ZNXNKG02LM control via MQTT"
-description: "Integrate your Xiaomi ZNXNKG02LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi ZNXNKG02LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZNXNKG02LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi ZNXNKG02LM
 
+|     |     |
+|-----|-----|
 | Model | ZNXNKG02LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara knob H1 (wireless) |
 | Exposes | battery, voltage, action, operation_mode, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, linkquality |
-| Picture | ![Xiaomi ZNXNKG02LM](../images/devices/ZNXNKG02LM.jpg) |
+| Picture | ![Xiaomi ZNXNKG02LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNXNKG02LM.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

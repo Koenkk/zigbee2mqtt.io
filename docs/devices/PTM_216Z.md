@@ -1,19 +1,23 @@
 ---
 title: "EnOcean PTM 216Z control via MQTT"
-description: "Integrate your EnOcean PTM 216Z via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your EnOcean PTM 216Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PTM_216Z.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # EnOcean PTM 216Z
 
+|     |     |
+|-----|-----|
 | Model | PTM 216Z  |
 | Vendor  | EnOcean  |
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
-| Picture | ![EnOcean PTM 216Z](../images/devices/PTM-216Z.jpg) |
+| Picture | ![EnOcean PTM 216Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PTM-216Z.jpg) |
+
 
 ## Notes
 

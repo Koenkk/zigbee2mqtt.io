@@ -1,24 +1,29 @@
 ---
 title: "TuYa E220-KR4N0Z0-HA control via MQTT"
-description: "Integrate your TuYa E220-KR4N0Z0-HA via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa E220-KR4N0Z0-HA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/E220-KR4N0Z0-HA.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa E220-KR4N0Z0-HA
 
+|     |     |
+|-----|-----|
 | Model | E220-KR4N0Z0-HA  |
 | Vendor  | TuYa  |
 | Description | Multiprise with 4 AC outlets and 2 USB super charging ports (16A) |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa E220-KR4N0Z0-HA](../images/devices/E220-KR4N0Z0-HA.jpg) |
+| Picture | ![TuYa E220-KR4N0Z0-HA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/E220-KR4N0Z0-HA.jpg) |
 | White-label | LEELKI WP33-EU |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

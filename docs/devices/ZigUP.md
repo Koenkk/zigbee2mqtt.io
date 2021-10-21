@@ -1,23 +1,28 @@
 ---
 title: "Custom devices (DiY) ZigUP control via MQTT"
-description: "Integrate your Custom devices (DiY) ZigUP via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Custom devices (DiY) ZigUP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZigUP.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Custom devices (DiY) ZigUP
 
+|     |     |
+|-----|-----|
 | Model | ZigUP  |
 | Vendor  | Custom devices (DiY)  |
 | Description | [CC2530 based ZigBee relais, switch, sensor and router](https://github.com/formtapez/ZigUP/) |
 | Exposes | switch (state), linkquality |
-| Picture | ![Custom devices (DiY) ZigUP](../images/devices/ZigUP.jpg) |
+| Picture | ![Custom devices (DiY) ZigUP](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZigUP.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

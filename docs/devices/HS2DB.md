@@ -1,23 +1,28 @@
 ---
 title: "HEIMAN HS2DB control via MQTT"
-description: "Integrate your HEIMAN HS2DB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HS2DB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS2DB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HS2DB
 
+|     |     |
+|-----|-----|
 | Model | HS2DB  |
 | Vendor  | HEIMAN  |
 | Description | Smart doorbell button |
 | Exposes | battery, action, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HS2DB](../images/devices/HS2DB.jpg) |
+| Picture | ![HEIMAN HS2DB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS2DB.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

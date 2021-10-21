@@ -1,23 +1,28 @@
 ---
 title: "TuYa SNTZ009 control via MQTT"
-description: "Integrate your TuYa SNTZ009 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa SNTZ009 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SNTZ009.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa SNTZ009
 
+|     |     |
+|-----|-----|
 | Model | SNTZ009  |
 | Vendor  | TuYa  |
 | Description | Water leak sensor |
 | Exposes | water_leak, linkquality |
-| Picture | ![TuYa SNTZ009](../images/devices/SNTZ009.jpg) |
+| Picture | ![TuYa SNTZ009](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SNTZ009.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

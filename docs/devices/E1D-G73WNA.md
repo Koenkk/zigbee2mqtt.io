@@ -1,26 +1,31 @@
 ---
 title: "Sengled E1D-G73WNA control via MQTT"
-description: "Integrate your Sengled E1D-G73WNA via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Sengled E1D-G73WNA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/E1D-G73WNA.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Sengled E1D-G73WNA
 
+|     |     |
+|-----|-----|
 | Model | E1D-G73WNA  |
 | Vendor  | Sengled  |
 | Description | Smart window and door sensor |
 | Exposes | contact, battery_low, tamper, linkquality |
-| Picture | ![Sengled E1D-G73WNA](../images/devices/E1D-G73WNA.jpg) |
+| Picture | ![Sengled E1D-G73WNA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/E1D-G73WNA.jpg) |
+
 
 ## Notes
 
 None
 
+
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

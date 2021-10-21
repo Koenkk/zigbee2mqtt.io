@@ -1,23 +1,28 @@
 ---
 title: "Smart9 S9ZGBRC01 control via MQTT"
-description: "Integrate your Smart9 S9ZGBRC01 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Smart9 S9ZGBRC01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/S9ZGBRC01.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Smart9 S9ZGBRC01
 
+|     |     |
+|-----|-----|
 | Model | S9ZGBRC01  |
 | Vendor  | Smart9  |
 | Description | Smart remote controller |
 | Exposes | battery, action, linkquality |
-| Picture | ![Smart9 S9ZGBRC01](../images/devices/S9ZGBRC01.jpg) |
+| Picture | ![Smart9 S9ZGBRC01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/S9ZGBRC01.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

@@ -1,24 +1,29 @@
 ---
 title: "TuYa TS011F_plug control via MQTT"
-description: "Integrate your TuYa TS011F_plug via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS011F_plug via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS011F_plug.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS011F_plug
 
+|     |     |
+|-----|-----|
 | Model | TS011F_plug  |
 | Vendor  | TuYa  |
 | Description | Smart plug (with power monitoring) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
-| Picture | ![TuYa TS011F_plug](../images/devices/TS011F_plug.jpg) |
+| Picture | ![TuYa TS011F_plug](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS011F_plug.jpg) |
 | White-label | LELLKI TS011F_plug |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

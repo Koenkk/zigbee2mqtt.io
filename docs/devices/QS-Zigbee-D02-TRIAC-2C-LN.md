@@ -1,19 +1,23 @@
 ---
 title: "Lonsonho QS-Zigbee-D02-TRIAC-2C-LN control via MQTT"
-description: "Integrate your Lonsonho QS-Zigbee-D02-TRIAC-2C-LN via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Lonsonho QS-Zigbee-D02-TRIAC-2C-LN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QS-Zigbee-D02-TRIAC-2C-LN.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Lonsonho QS-Zigbee-D02-TRIAC-2C-LN
 
+|     |     |
+|-----|-----|
 | Model | QS-Zigbee-D02-TRIAC-2C-LN  |
 | Vendor  | Lonsonho  |
 | Description | 2 gang smart dimmer switch module with neutral |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-2C-LN](../images/devices/QS-Zigbee-D02-TRIAC-2C-LN.jpg) |
+| Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-2C-LN](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QS-Zigbee-D02-TRIAC-2C-LN.jpg) |
+
 
 ## Notes
 
@@ -22,7 +26,7 @@ description: "Integrate your Lonsonho QS-Zigbee-D02-TRIAC-2C-LN via Zigbee2MQTT 
 Turn off the lights and then turn them on by holding the button for 10 seconds until the lights start flashing.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

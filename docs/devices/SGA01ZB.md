@@ -1,23 +1,28 @@
 ---
 title: "Feibit SGA01ZB control via MQTT"
-description: "Integrate your Feibit SGA01ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Feibit SGA01ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SGA01ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Feibit SGA01ZB
 
+|     |     |
+|-----|-----|
 | Model | SGA01ZB  |
 | Vendor  | Feibit  |
 | Description | Combustible gas sensor |
 | Exposes | gas, battery_low, tamper, linkquality |
-| Picture | ![Feibit SGA01ZB](../images/devices/SGA01ZB.jpg) |
+| Picture | ![Feibit SGA01ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SGA01ZB.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

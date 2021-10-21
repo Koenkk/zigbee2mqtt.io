@@ -1,23 +1,28 @@
 ---
 title: "Custom devices (DiY) ZWallRemote0 control via MQTT"
-description: "Integrate your Custom devices (DiY) ZWallRemote0 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Custom devices (DiY) ZWallRemote0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZWallRemote0.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Custom devices (DiY) ZWallRemote0
 
+|     |     |
+|-----|-----|
 | Model | ZWallRemote0  |
 | Vendor  | Custom devices (DiY)  |
 | Description | [Matts Wall Switch Remote](https://github.com/mattlokes/ZWallRemote) |
 | Exposes | action, linkquality |
-| Picture | ![Custom devices (DiY) ZWallRemote0](../images/devices/ZWallRemote0.jpg) |
+| Picture | ![Custom devices (DiY) ZWallRemote0](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZWallRemote0.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

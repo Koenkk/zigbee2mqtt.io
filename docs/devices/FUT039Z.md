@@ -1,24 +1,28 @@
 ---
 title: "Miboxer FUT039Z control via MQTT"
-description: "Integrate your Miboxer FUT039Z via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Miboxer FUT039Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/FUT039Z.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Miboxer FUT039Z
 
+|     |     |
+|-----|-----|
 | Model | FUT039Z  |
 | Vendor  | Miboxer  |
 | Description | RGB+CCT LED controller |
 | Exposes | light (state, brightness, color_temp, color_hs), do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![Miboxer FUT039Z](../images/devices/FUT039Z.jpg) |
+| Picture | ![Miboxer FUT039Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/FUT039Z.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

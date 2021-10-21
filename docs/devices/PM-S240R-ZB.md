@@ -1,23 +1,28 @@
 ---
 title: "Dawon DNS PM-S240R-ZB control via MQTT"
-description: "Integrate your Dawon DNS PM-S240R-ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Dawon DNS PM-S240R-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PM-S240R-ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Dawon DNS PM-S240R-ZB
 
+|     |     |
+|-----|-----|
 | Model | PM-S240R-ZB  |
 | Vendor  | Dawon DNS  |
 | Description | IOT smart switch 2 gang without neutral wire |
 | Exposes | switch (state), linkquality |
-| Picture | ![Dawon DNS PM-S240R-ZB](../images/devices/PM-S240R-ZB.jpg) |
+| Picture | ![Dawon DNS PM-S240R-ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PM-S240R-ZB.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

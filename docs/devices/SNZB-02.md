@@ -1,20 +1,24 @@
 ---
 title: "SONOFF SNZB-02 control via MQTT"
-description: "Integrate your SONOFF SNZB-02 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your SONOFF SNZB-02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SNZB-02.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # SONOFF SNZB-02
 
+|     |     |
+|-----|-----|
 | Model | SNZB-02  |
 | Vendor  | SONOFF  |
 | Description | Temperature and humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
-| Picture | ![SONOFF SNZB-02](../images/devices/SNZB-02.jpg) |
+| Picture | ![SONOFF SNZB-02](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SNZB-02.jpg) |
 | White-label | eWeLink RHK08 |
+
 
 ## Notes
 
@@ -30,7 +34,7 @@ It has been reported, that the sensor reports humidity changes quite frequently 
 Uses a CR2450 battery
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

@@ -1,25 +1,25 @@
 ---
 title: "LELLKI JZ-ZB-002 control via MQTT"
-description: "Integrate your LELLKI JZ-ZB-002 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LELLKI JZ-ZB-002 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/JZ-ZB-002.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # LELLKI JZ-ZB-002
 
+|     |     |
+|-----|-----|
 | Model | JZ-ZB-002  |
 | Vendor  | LELLKI  |
 | Description | 2 gang touch switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![LELLKI JZ-ZB-002](../images/devices/JZ-ZB-002.jpg) |
+| Picture | ![LELLKI JZ-ZB-002](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JZ-ZB-002.jpg) |
+
 
 ## Notes
-
-
-## Pairing
-Push and hold left button for about 10-15 seconds until it will start blinking.
 
 
 

@@ -1,19 +1,23 @@
 ---
 title: "YSRSAI YSR-MINI-01_dimmer control via MQTT"
-description: "Integrate your YSRSAI YSR-MINI-01_dimmer via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your YSRSAI YSR-MINI-01_dimmer via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YSR-MINI-01_dimmer.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # YSRSAI YSR-MINI-01_dimmer
 
+|     |     |
+|-----|-----|
 | Model | YSR-MINI-01_dimmer  |
 | Vendor  | YSRSAI  |
 | Description | Zigbee LED controller (Dimmer) |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![YSRSAI YSR-MINI-01_dimmer](../images/devices/YSR-MINI-01_dimmer.jpg) |
+| Picture | ![YSRSAI YSR-MINI-01_dimmer](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/YSR-MINI-01_dimmer.jpg) |
+
 
 ## Notes
 
@@ -23,7 +27,7 @@ description: "Integrate your YSRSAI YSR-MINI-01_dimmer via Zigbee2MQTT with what
 2. Pairing is done when LED stop flashing.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

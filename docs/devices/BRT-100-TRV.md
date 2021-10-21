@@ -1,26 +1,31 @@
 ---
 title: "Moes BRT-100-TRV control via MQTT"
-description: "Integrate your Moes BRT-100-TRV via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Moes BRT-100-TRV via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/BRT-100-TRV.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Moes BRT-100-TRV
 
+|     |     |
+|-----|-----|
 | Model | BRT-100-TRV  |
 | Vendor  | Moes  |
 | Description | Thermostatic radiator valve |
 | Exposes | battery, lock (state), eco_mode, eco_temperature, max_temperature, min_temperature, position, switch (state), window, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset), programming_mode, boost_heating, boost_heating_countdown, boost_heating_countdown_time_set, linkquality |
-| Picture | ![Moes BRT-100-TRV](../images/devices/BRT-100-TRV.jpg) |
+| Picture | ![Moes BRT-100-TRV](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BRT-100-TRV.jpg) |
+
 
 ## Notes
 
 None
 
+
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

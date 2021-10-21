@@ -1,24 +1,28 @@
 ---
 title: "Sengled E21-N1EA control via MQTT"
-description: "Integrate your Sengled E21-N1EA via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Sengled E21-N1EA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/E21-N1EA.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Sengled E21-N1EA
 
+|     |     |
+|-----|-----|
 | Model | E21-N1EA  |
 | Vendor  | Sengled  |
 | Description | Smart LED multicolor A19 bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Sengled E21-N1EA](../images/devices/E21-N1EA.jpg) |
+| Picture | ![Sengled E21-N1EA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/E21-N1EA.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

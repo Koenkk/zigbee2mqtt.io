@@ -1,23 +1,28 @@
 ---
 title: "HEIMAN HS1MS-EF control via MQTT"
-description: "Integrate your HEIMAN HS1MS-EF via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HS1MS-EF via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1MS-EF.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HS1MS-EF
 
+|     |     |
+|-----|-----|
 | Model | HS1MS-EF  |
 | Vendor  | HEIMAN  |
 | Description | Smart motion sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HS1MS-EF](../images/devices/HS1MS-EF.jpg) |
+| Picture | ![HEIMAN HS1MS-EF](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS1MS-EF.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

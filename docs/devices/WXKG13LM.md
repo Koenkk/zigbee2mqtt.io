@@ -1,23 +1,28 @@
 ---
 title: "Xiaomi WXKG13LM control via MQTT"
-description: "Integrate your Xiaomi WXKG13LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi WXKG13LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/WXKG13LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi WXKG13LM
 
+|     |     |
+|-----|-----|
 | Model | WXKG13LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 wireless mini switch |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![Xiaomi WXKG13LM](../images/devices/WXKG13LM.jpg) |
+| Picture | ![Xiaomi WXKG13LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WXKG13LM.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

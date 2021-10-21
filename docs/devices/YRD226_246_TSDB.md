@@ -1,23 +1,28 @@
 ---
 title: "Yale YRD226/246 TSDB control via MQTT"
-description: "Integrate your Yale YRD226/246 TSDB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Yale YRD226/246 TSDB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YRD226_246_TSDB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Yale YRD226/246 TSDB
 
+|     |     |
+|-----|-----|
 | Model | YRD226/246 TSDB  |
 | Vendor  | Yale  |
 | Description | Assure lock |
 | Exposes | lock (state, lock_state), battery, pin_code, linkquality |
-| Picture | ![Yale YRD226/246 TSDB](../images/devices/YRD226-246-TSDB.jpg) |
+| Picture | ![Yale YRD226/246 TSDB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/YRD226-246-TSDB.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

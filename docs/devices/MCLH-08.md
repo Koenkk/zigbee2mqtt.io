@@ -1,24 +1,28 @@
 ---
 title: "LifeControl MCLH-08 control via MQTT"
-description: "Integrate your LifeControl MCLH-08 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LifeControl MCLH-08 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MCLH-08.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # LifeControl MCLH-08
 
+|     |     |
+|-----|-----|
 | Model | MCLH-08  |
 | Vendor  | LifeControl  |
 | Description | Air sensor |
 | Exposes | temperature, humidity, voc, eco2, linkquality |
-| Picture | ![LifeControl MCLH-08](../images/devices/MCLH-08.jpg) |
+| Picture | ![LifeControl MCLH-08](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MCLH-08.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

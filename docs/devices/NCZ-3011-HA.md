@@ -1,23 +1,28 @@
 ---
 title: "Nyce NCZ-3011-HA control via MQTT"
-description: "Integrate your Nyce NCZ-3011-HA via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Nyce NCZ-3011-HA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/NCZ-3011-HA.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Nyce NCZ-3011-HA
 
+|     |     |
+|-----|-----|
 | Model | NCZ-3011-HA  |
 | Vendor  | Nyce  |
 | Description | Door/window sensor |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
-| Picture | ![Nyce NCZ-3011-HA](../images/devices/NCZ-3011-HA.jpg) |
+| Picture | ![Nyce NCZ-3011-HA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/NCZ-3011-HA.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

@@ -1,20 +1,24 @@
 ---
 title: "SONOFF SNZB-03 control via MQTT"
-description: "Integrate your SONOFF SNZB-03 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your SONOFF SNZB-03 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SNZB-03.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # SONOFF SNZB-03
 
+|     |     |
+|-----|-----|
 | Model | SNZB-03  |
 | Vendor  | SONOFF  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, battery, linkquality |
-| Picture | ![SONOFF SNZB-03](../images/devices/SNZB-03.jpg) |
+| Picture | ![SONOFF SNZB-03](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SNZB-03.jpg) |
 | White-label | eWeLink RHK09 |
+
 
 ## Notes
 

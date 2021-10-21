@@ -1,23 +1,28 @@
 ---
 title: "DIYRuZ DIYRuZ_Zintercom control via MQTT"
-description: "Integrate your DIYRuZ DIYRuZ_Zintercom via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your DIYRuZ DIYRuZ_Zintercom via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DIYRuZ_Zintercom.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # DIYRuZ DIYRuZ_Zintercom
 
+|     |     |
+|-----|-----|
 | Model | DIYRuZ_Zintercom  |
 | Vendor  | DIYRuZ  |
 | Description | [Matrix intercom auto opener](https://diyruz.github.io/posts/zintercom/) |
 | Exposes | state, mode, sound, time_ring, time_talk, time_open, time_bell, time_report, battery, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_Zintercom](../images/devices/DIYRuZ_Zintercom.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_Zintercom](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DIYRuZ_Zintercom.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

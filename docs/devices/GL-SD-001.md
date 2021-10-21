@@ -1,19 +1,23 @@
 ---
 title: "Gledopto GL-SD-001 control via MQTT"
-description: "Integrate your Gledopto GL-SD-001 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Gledopto GL-SD-001 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GL-SD-001.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Gledopto GL-SD-001
 
+|     |     |
+|-----|-----|
 | Model | GL-SD-001  |
 | Vendor  | Gledopto  |
 | Description | Zigbee triac AC dimmer |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Gledopto GL-SD-001](../images/devices/GL-SD-001.jpg) |
+| Picture | ![Gledopto GL-SD-001](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-SD-001.jpg) |
+
 
 ## Notes
 
@@ -25,7 +29,7 @@ description: "Integrate your Gledopto GL-SD-001 via Zigbee2MQTT with whatever sm
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

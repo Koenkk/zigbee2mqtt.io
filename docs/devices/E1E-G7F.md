@@ -1,19 +1,23 @@
 ---
 title: "Sengled E1E-G7F control via MQTT"
-description: "Integrate your Sengled E1E-G7F via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Sengled E1E-G7F via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/E1E-G7F.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Sengled E1E-G7F
 
+|     |     |
+|-----|-----|
 | Model | E1E-G7F  |
 | Vendor  | Sengled  |
 | Description | Smart switch  |
 | Exposes | action, linkquality |
-| Picture | ![Sengled E1E-G7F](../images/devices/E1E-G7F.jpg) |
+| Picture | ![Sengled E1E-G7F](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/E1E-G7F.jpg) |
+
 
 ## Notes
 
@@ -24,7 +28,7 @@ Factory reset the switch by pressing and holding the on and off buttons at the s
 If device won't go in to pairing mode, try installing a fresh battery.
 
 ### Long press action
-The device will sometimes output a single push in addition to a long press. You can mitigate this by using the Debounce device configuration. Refer to *[How to use device type specific configuration](../information/configuration.md)*.
+The device will sometimes output a single push in addition to a long press. You can mitigate this by using the Debounce device configuration. Refer to *[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*.
 
 
 

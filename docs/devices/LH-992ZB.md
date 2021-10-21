@@ -1,23 +1,28 @@
 ---
 title: "iHORN LH-992ZB control via MQTT"
-description: "Integrate your iHORN LH-992ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your iHORN LH-992ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LH-992ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # iHORN LH-992ZB
 
+|     |     |
+|-----|-----|
 | Model | LH-992ZB  |
 | Vendor  | iHORN  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![iHORN LH-992ZB](../images/devices/LH-992ZB.jpg) |
+| Picture | ![iHORN LH-992ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LH-992ZB.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

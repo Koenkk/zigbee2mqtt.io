@@ -1,23 +1,28 @@
 ---
 title: "Leviton DG15S-1BW control via MQTT"
-description: "Integrate your Leviton DG15S-1BW via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Leviton DG15S-1BW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DG15S-1BW.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Leviton DG15S-1BW
 
+|     |     |
+|-----|-----|
 | Model | DG15S-1BW  |
 | Vendor  | Leviton  |
 | Description | Decora smart Zigbee 3.0 certified 15A switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Leviton DG15S-1BW](../images/devices/DG15S-1BW.jpg) |
+| Picture | ![Leviton DG15S-1BW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DG15S-1BW.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

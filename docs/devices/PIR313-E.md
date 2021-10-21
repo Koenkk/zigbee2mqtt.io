@@ -1,24 +1,28 @@
 ---
 title: "OWON PIR313-E control via MQTT"
-description: "Integrate your OWON PIR313-E via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your OWON PIR313-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PIR313-E.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # OWON PIR313-E
 
+|     |     |
+|-----|-----|
 | Model | PIR313-E  |
 | Vendor  | OWON  |
 | Description | Motion sensor |
 | Exposes | occupancy, tamper, battery_low, illuminance, illuminance_lux, temperature, humidity, linkquality |
-| Picture | ![OWON PIR313-E](../images/devices/PIR313-E.jpg) |
+| Picture | ![OWON PIR313-E](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PIR313-E.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.
 To control the precision based on the illuminance_lux value set it to e.g. `{1000: 0, 100: 1}`,

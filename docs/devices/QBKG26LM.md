@@ -1,23 +1,28 @@
 ---
 title: "Xiaomi QBKG26LM control via MQTT"
-description: "Integrate your Xiaomi QBKG26LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi QBKG26LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QBKG26LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi QBKG26LM
 
+|     |     |
+|-----|-----|
 | Model | QBKG26LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 3 gang smart wall switch (with neutral wire) |
 | Exposes | switch (state), operation_mode, power, action, linkquality |
-| Picture | ![Xiaomi QBKG26LM](../images/devices/QBKG26LM.jpg) |
+| Picture | ![Xiaomi QBKG26LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG26LM.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

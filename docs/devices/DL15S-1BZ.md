@@ -1,19 +1,23 @@
 ---
 title: "Leviton DL15S-1BZ control via MQTT"
-description: "Integrate your Leviton DL15S-1BZ via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Leviton DL15S-1BZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DL15S-1BZ.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Leviton DL15S-1BZ
 
+|     |     |
+|-----|-----|
 | Model | DL15S-1BZ  |
 | Vendor  | Leviton  |
 | Description | Lumina RF 15A switch, 120/277V |
 | Exposes | switch (state), linkquality |
-| Picture | ![Leviton DL15S-1BZ](../images/devices/DL15S-1BZ.jpg) |
+| Picture | ![Leviton DL15S-1BZ](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DL15S-1BZ.jpg) |
+
 
 ## Notes
 

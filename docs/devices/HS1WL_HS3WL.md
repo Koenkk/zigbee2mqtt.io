@@ -1,23 +1,28 @@
 ---
 title: "HEIMAN HS1WL/HS3WL control via MQTT"
-description: "Integrate your HEIMAN HS1WL/HS3WL via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HS1WL/HS3WL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1WL_HS3WL.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HS1WL/HS3WL
 
+|     |     |
+|-----|-----|
 | Model | HS1WL/HS3WL  |
 | Vendor  | HEIMAN  |
 | Description | Water leakage sensor |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
-| Picture | ![HEIMAN HS1WL/HS3WL](../images/devices/HS1WL-HS3WL.jpg) |
+| Picture | ![HEIMAN HS1WL/HS3WL](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS1WL-HS3WL.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

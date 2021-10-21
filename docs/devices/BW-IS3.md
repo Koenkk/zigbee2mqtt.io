@@ -1,23 +1,28 @@
 ---
 title: "BlitzWolf BW-IS3 control via MQTT"
-description: "Integrate your BlitzWolf BW-IS3 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your BlitzWolf BW-IS3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/BW-IS3.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # BlitzWolf BW-IS3
 
+|     |     |
+|-----|-----|
 | Model | BW-IS3  |
 | Vendor  | BlitzWolf  |
 | Description | Rechargeable Zigbee PIR motion sensor |
 | Exposes | occupancy, linkquality |
-| Picture | ![BlitzWolf BW-IS3](../images/devices/BW-IS3.jpg) |
+| Picture | ![BlitzWolf BW-IS3](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BW-IS3.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

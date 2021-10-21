@@ -1,24 +1,29 @@
 ---
 title: "TuYa TS011F_2_gang_wall control via MQTT"
-description: "Integrate your TuYa TS011F_2_gang_wall via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS011F_2_gang_wall via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS011F_2_gang_wall.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS011F_2_gang_wall
 
+|     |     |
+|-----|-----|
 | Model | TS011F_2_gang_wall  |
 | Vendor  | TuYa  |
 | Description | 2 gang wall outlet |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS011F_2_gang_wall](../images/devices/TS011F_2_gang_wall.jpg) |
+| Picture | ![TuYa TS011F_2_gang_wall](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS011F_2_gang_wall.jpg) |
 | White-label | ClickSmart+ CMA30036 |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

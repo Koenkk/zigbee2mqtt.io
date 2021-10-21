@@ -1,23 +1,28 @@
 ---
 title: "TuYa TS0215A_sos control via MQTT"
-description: "Integrate your TuYa TS0215A_sos via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS0215A_sos via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0215A_sos.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS0215A_sos
 
+|     |     |
+|-----|-----|
 | Model | TS0215A_sos  |
 | Vendor  | TuYa  |
 | Description | SOS button |
 | Exposes | battery, action, linkquality |
-| Picture | ![TuYa TS0215A_sos](../images/devices/TS0215A_sos.jpg) |
+| Picture | ![TuYa TS0215A_sos](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0215A_sos.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

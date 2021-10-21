@@ -1,19 +1,23 @@
 ---
 title: "HEIMAN HS1SA control via MQTT"
-description: "Integrate your HEIMAN HS1SA via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HS1SA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1SA.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HS1SA
 
+|     |     |
+|-----|-----|
 | Model | HS1SA  |
 | Vendor  | HEIMAN  |
 | Description | Smoke detector |
 | Exposes | smoke, battery_low, battery, linkquality |
-| Picture | ![HEIMAN HS1SA](../images/devices/HS1SA.jpg) |
+| Picture | ![HEIMAN HS1SA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS1SA.jpg) |
+
 
 ## Notes
 

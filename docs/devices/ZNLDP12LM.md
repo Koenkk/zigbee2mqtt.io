@@ -1,19 +1,23 @@
 ---
 title: "Xiaomi ZNLDP12LM control via MQTT"
-description: "Integrate your Xiaomi ZNLDP12LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi ZNLDP12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZNLDP12LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi ZNLDP12LM
 
+|     |     |
+|-----|-----|
 | Model | ZNLDP12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart LED bulb |
 | Exposes | light (state, brightness, color_temp), effect, power_outage_memory, linkquality |
-| Picture | ![Xiaomi ZNLDP12LM](../images/devices/ZNLDP12LM.jpg) |
+| Picture | ![Xiaomi ZNLDP12LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNLDP12LM.jpg) |
+
 
 ## Notes
 
@@ -22,7 +26,7 @@ description: "Integrate your Xiaomi ZNLDP12LM via Zigbee2MQTT with whatever smar
 Switch the lamp on five times until the bulb blinks several times.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)
@@ -34,7 +38,7 @@ Note that this value is overridden if a `transition` value is present in the MQT
 
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

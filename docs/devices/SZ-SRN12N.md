@@ -1,23 +1,28 @@
 ---
 title: "SmartThings SZ-SRN12N control via MQTT"
-description: "Integrate your SmartThings SZ-SRN12N via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your SmartThings SZ-SRN12N via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SZ-SRN12N.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # SmartThings SZ-SRN12N
 
+|     |     |
+|-----|-----|
 | Model | SZ-SRN12N  |
 | Vendor  | SmartThings  |
 | Description | Smart siren |
 | Exposes | warning, linkquality |
-| Picture | ![SmartThings SZ-SRN12N](../images/devices/SZ-SRN12N.jpg) |
+| Picture | ![SmartThings SZ-SRN12N](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SZ-SRN12N.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

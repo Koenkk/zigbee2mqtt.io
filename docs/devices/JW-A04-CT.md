@@ -1,24 +1,28 @@
 ---
 title: "JIAWEN JW-A04-CT control via MQTT"
-description: "Integrate your JIAWEN JW-A04-CT via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your JIAWEN JW-A04-CT via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/JW-A04-CT.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # JIAWEN JW-A04-CT
 
+|     |     |
+|-----|-----|
 | Model | JW-A04-CT  |
 | Vendor  | JIAWEN  |
 | Description | LED strip light controller |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![JIAWEN JW-A04-CT](../images/devices/JW-A04-CT.jpg) |
+| Picture | ![JIAWEN JW-A04-CT](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JW-A04-CT.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

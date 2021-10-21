@@ -1,19 +1,23 @@
 ---
 title: "Gledopto GL-S-004ZS control via MQTT"
-description: "Integrate your Gledopto GL-S-004ZS via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Gledopto GL-S-004ZS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GL-S-004ZS.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Gledopto GL-S-004ZS
 
+|     |     |
+|-----|-----|
 | Model | GL-S-004ZS  |
 | Vendor  | Gledopto  |
 | Description | Zigbee 4W MR16 Bulb RGB+CCT (plus) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-S-004ZS](../images/devices/GL-S-004ZS.jpg) |
+| Picture | ![Gledopto GL-S-004ZS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-S-004ZS.jpg) |
+
 
 ## Notes
 
@@ -25,7 +29,7 @@ description: "Integrate your Gledopto GL-S-004ZS via Zigbee2MQTT with whatever s
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

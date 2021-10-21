@@ -1,24 +1,28 @@
 ---
 title: "Zemismart HGZB-DLC4-N15B control via MQTT"
-description: "Integrate your Zemismart HGZB-DLC4-N15B via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Zemismart HGZB-DLC4-N15B via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-DLC4-N15B.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Zemismart HGZB-DLC4-N15B
 
+|     |     |
+|-----|-----|
 | Model | HGZB-DLC4-N15B  |
 | Vendor  | Zemismart  |
 | Description | RGB LED downlight |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Zemismart HGZB-DLC4-N15B](../images/devices/HGZB-DLC4-N15B.jpg) |
+| Picture | ![Zemismart HGZB-DLC4-N15B](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-DLC4-N15B.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

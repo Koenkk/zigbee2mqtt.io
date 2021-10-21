@@ -1,19 +1,23 @@
 ---
 title: "Xiaomi SJCGQ12LM control via MQTT"
-description: "Integrate your Xiaomi SJCGQ12LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi SJCGQ12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SJCGQ12LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi SJCGQ12LM
 
+|     |     |
+|-----|-----|
 | Model | SJCGQ12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 water leak sensor |
 | Exposes | battery, water_leak, battery_low, tamper, voltage, linkquality |
-| Picture | ![Xiaomi SJCGQ12LM](../images/devices/SJCGQ12LM.jpg) |
+| Picture | ![Xiaomi SJCGQ12LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SJCGQ12LM.jpg) |
+
 
 ## Notes
 
@@ -21,10 +25,10 @@ description: "Integrate your Xiaomi SJCGQ12LM via Zigbee2MQTT with whatever smar
 ### Pairing
 Press and hold water logo on the device for +- 5 seconds (you have to press quite hard) until the blue light blinks
 three times, release the water logo (the blue light will blink once more) and wait.
-    
+
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

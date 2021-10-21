@@ -1,19 +1,23 @@
 ---
 title: "Gledopto GL-D-004P control via MQTT"
-description: "Integrate your Gledopto GL-D-004P via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Gledopto GL-D-004P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GL-D-004P.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Gledopto GL-D-004P
 
+|     |     |
+|-----|-----|
 | Model | GL-D-004P  |
 | Vendor  | Gledopto  |
 | Description | Zigbee 9W Downlight RGB+CCT (pro) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-D-004P](../images/devices/GL-D-004P.jpg) |
+| Picture | ![Gledopto GL-D-004P](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-D-004P.jpg) |
+
 
 ## Notes
 
@@ -25,7 +29,7 @@ description: "Integrate your Gledopto GL-D-004P via Zigbee2MQTT with whatever sm
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)
@@ -61,7 +65,7 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
 
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

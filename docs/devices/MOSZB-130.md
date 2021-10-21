@@ -1,23 +1,28 @@
 ---
 title: "Develco MOSZB-130 control via MQTT"
-description: "Integrate your Develco MOSZB-130 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Develco MOSZB-130 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MOSZB-130.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Develco MOSZB-130
 
+|     |     |
+|-----|-----|
 | Model | MOSZB-130  |
 | Vendor  | Develco  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![Develco MOSZB-130](../images/devices/MOSZB-130.jpg) |
+| Picture | ![Develco MOSZB-130](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MOSZB-130.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

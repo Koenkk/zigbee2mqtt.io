@@ -1,23 +1,28 @@
 ---
 title: "eWeLink ZB-SW04 control via MQTT"
-description: "Integrate your eWeLink ZB-SW04 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your eWeLink ZB-SW04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZB-SW04.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # eWeLink ZB-SW04
 
+|     |     |
+|-----|-----|
 | Model | ZB-SW04  |
 | Vendor  | eWeLink  |
 | Description | Smart light switch - 4 gang |
 | Exposes | switch (state), linkquality |
-| Picture | ![eWeLink ZB-SW04](../images/devices/ZB-SW04.jpg) |
+| Picture | ![eWeLink ZB-SW04](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZB-SW04.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

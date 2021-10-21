@@ -1,24 +1,28 @@
 ---
 title: "Nue / 3A HGZB-DLC4-N12B control via MQTT"
-description: "Integrate your Nue / 3A HGZB-DLC4-N12B via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Nue / 3A HGZB-DLC4-N12B via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-DLC4-N12B.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Nue / 3A HGZB-DLC4-N12B
 
+|     |     |
+|-----|-----|
 | Model | HGZB-DLC4-N12B  |
 | Vendor  | Nue / 3A  |
 | Description | RGB LED downlight |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Nue / 3A HGZB-DLC4-N12B](../images/devices/HGZB-DLC4-N12B.jpg) |
+| Picture | ![Nue / 3A HGZB-DLC4-N12B](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-DLC4-N12B.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

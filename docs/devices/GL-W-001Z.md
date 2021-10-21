@@ -1,19 +1,23 @@
 ---
 title: "Gledopto GL-W-001Z control via MQTT"
-description: "Integrate your Gledopto GL-W-001Z via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Gledopto GL-W-001Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GL-W-001Z.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Gledopto GL-W-001Z
 
+|     |     |
+|-----|-----|
 | Model | GL-W-001Z  |
 | Vendor  | Gledopto  |
 | Description | Zigbee On/Off Wall Switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Gledopto GL-W-001Z](../images/devices/GL-W-001Z.jpg) |
+| Picture | ![Gledopto GL-W-001Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-W-001Z.jpg) |
+
 
 ## Notes
 

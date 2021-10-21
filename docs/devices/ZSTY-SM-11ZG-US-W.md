@@ -1,23 +1,28 @@
 ---
 title: "Somgoms ZSTY-SM-11ZG-US-W control via MQTT"
-description: "Integrate your Somgoms ZSTY-SM-11ZG-US-W via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Somgoms ZSTY-SM-11ZG-US-W via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZSTY-SM-11ZG-US-W.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Somgoms ZSTY-SM-11ZG-US-W
 
+|     |     |
+|-----|-----|
 | Model | ZSTY-SM-11ZG-US-W  |
 | Vendor  | Somgoms  |
 | Description | 1 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Somgoms ZSTY-SM-11ZG-US-W](../images/devices/ZSTY-SM-11ZG-US-W.jpg) |
+| Picture | ![Somgoms ZSTY-SM-11ZG-US-W](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZSTY-SM-11ZG-US-W.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

@@ -1,24 +1,28 @@
 ---
 title: "Xiaomi GZCGQ01LM control via MQTT"
-description: "Integrate your Xiaomi GZCGQ01LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi GZCGQ01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GZCGQ01LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi GZCGQ01LM
 
+|     |     |
+|-----|-----|
 | Model | GZCGQ01LM  |
 | Vendor  | Xiaomi  |
 | Description | MiJia light intensity sensor |
 | Exposes | battery, illuminance, illuminance_lux, linkquality |
-| Picture | ![Xiaomi GZCGQ01LM](../images/devices/GZCGQ01LM.jpg) |
+| Picture | ![Xiaomi GZCGQ01LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GZCGQ01LM.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
 e.g. `95` would take 95% to the illuminance reported by the device; default `100`. Calibration will take into affect with next report of device.

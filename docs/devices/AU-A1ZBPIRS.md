@@ -1,24 +1,28 @@
 ---
 title: "Aurora Lighting AU-A1ZBPIRS control via MQTT"
-description: "Integrate your Aurora Lighting AU-A1ZBPIRS via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Aurora Lighting AU-A1ZBPIRS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/AU-A1ZBPIRS.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Aurora Lighting AU-A1ZBPIRS
 
+|     |     |
+|-----|-----|
 | Model | AU-A1ZBPIRS  |
 | Vendor  | Aurora Lighting  |
 | Description | AOne PIR sensor |
 | Exposes | occupancy, battery_low, tamper, illuminance, illuminance_lux, linkquality |
-| Picture | ![Aurora Lighting AU-A1ZBPIRS](../images/devices/AU-A1ZBPIRS.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZBPIRS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AU-A1ZBPIRS.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.
 To control the precision based on the illuminance_lux value set it to e.g. `{1000: 0, 100: 1}`,

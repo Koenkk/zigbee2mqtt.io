@@ -1,19 +1,23 @@
 ---
 title: "Custom devices (DiY) ti.router control via MQTT"
-description: "Integrate your Custom devices (DiY) ti.router via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Custom devices (DiY) ti.router via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ti.router.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Custom devices (DiY) ti.router
 
+|     |     |
+|-----|-----|
 | Model | ti.router  |
 | Vendor  | Custom devices (DiY)  |
 | Description | Texas Instruments router |
 | Exposes | linkquality |
-| Picture | ![Custom devices (DiY) ti.router](../images/devices/ti.router.jpg) |
+| Picture | ![Custom devices (DiY) ti.router](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ti.router.jpg) |
+
 
 ## Notes
 

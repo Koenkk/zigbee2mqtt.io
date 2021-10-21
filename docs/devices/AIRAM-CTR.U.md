@@ -1,19 +1,23 @@
 ---
 title: "Airam AIRAM-CTR.U control via MQTT"
-description: "Integrate your Airam AIRAM-CTR.U via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Airam AIRAM-CTR.U via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/AIRAM-CTR.U.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Airam AIRAM-CTR.U
 
+|     |     |
+|-----|-----|
 | Model | AIRAM-CTR.U  |
 | Vendor  | Airam  |
 | Description | CTR.U remote |
 | Exposes | action, linkquality |
-| Picture | ![Airam AIRAM-CTR.U](../images/devices/AIRAM-CTR.U.jpg) |
+| Picture | ![Airam AIRAM-CTR.U](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AIRAM-CTR.U.jpg) |
+
 
 ## Notes
 
@@ -42,7 +46,7 @@ Device seems to join network also when it is paired directly to Airam bulb (whic
 within 5 centimeters away from Airam bulb.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 

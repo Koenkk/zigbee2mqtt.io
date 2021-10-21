@@ -1,24 +1,28 @@
 ---
 title: "Moes ZLD-RCW control via MQTT"
-description: "Integrate your Moes ZLD-RCW via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Moes ZLD-RCW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZLD-RCW.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Moes ZLD-RCW
 
+|     |     |
+|-----|-----|
 | Model | ZLD-RCW  |
 | Vendor  | Moes  |
 | Description | RGB+CCT Zigbee LED Controller |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![Moes ZLD-RCW](../images/devices/ZLD-RCW.jpg) |
+| Picture | ![Moes ZLD-RCW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZLD-RCW.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

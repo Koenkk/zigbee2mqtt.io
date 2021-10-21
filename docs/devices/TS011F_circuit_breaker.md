@@ -1,24 +1,29 @@
 ---
 title: "TuYa TS011F_circuit_breaker control via MQTT"
-description: "Integrate your TuYa TS011F_circuit_breaker via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS011F_circuit_breaker via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS011F_circuit_breaker.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS011F_circuit_breaker
 
+|     |     |
+|-----|-----|
 | Model | TS011F_circuit_breaker  |
 | Vendor  | TuYa  |
 | Description | Circuit breaker |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS011F_circuit_breaker](../images/devices/TS011F_circuit_breaker.jpg) |
+| Picture | ![TuYa TS011F_circuit_breaker](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS011F_circuit_breaker.jpg) |
 | White-label | Mumubiz ZJSB9-80Z |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

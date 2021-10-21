@@ -1,24 +1,28 @@
 ---
 title: "SmartThings STS-PRS-251 control via MQTT"
-description: "Integrate your SmartThings STS-PRS-251 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your SmartThings STS-PRS-251 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/STS-PRS-251.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # SmartThings STS-PRS-251
 
+|     |     |
+|-----|-----|
 | Model | STS-PRS-251  |
 | Vendor  | SmartThings  |
 | Description | Arrival sensor |
 | Exposes | battery, presence, action, beep, linkquality |
-| Picture | ![SmartThings STS-PRS-251](../images/devices/STS-PRS-251.jpg) |
+| Picture | ![SmartThings STS-PRS-251](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/STS-PRS-251.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 

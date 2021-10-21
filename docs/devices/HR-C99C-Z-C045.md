@@ -1,19 +1,23 @@
 ---
 title: "ADEO HR-C99C-Z-C045 control via MQTT"
-description: "Integrate your ADEO HR-C99C-Z-C045 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your ADEO HR-C99C-Z-C045 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HR-C99C-Z-C045.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # ADEO HR-C99C-Z-C045
 
+|     |     |
+|-----|-----|
 | Model | HR-C99C-Z-C045  |
 | Vendor  | ADEO  |
 | Description | RGB CTT LEXMAN ENKI remote control |
 | Exposes | battery, action, linkquality |
-| Picture | ![ADEO HR-C99C-Z-C045](../images/devices/HR-C99C-Z-C045.jpg) |
+| Picture | ![ADEO HR-C99C-Z-C045](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HR-C99C-Z-C045.jpg) |
+
 
 ## Notes
 
@@ -23,7 +27,7 @@ Hold small reset button pressed (located on the backside of remote) for 3
 seconds (until the front LED blinks) and device will reset and will attempt to join network.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `simulated_brightness`: Set to `true` to simulate a `brightness` value (default: `false`).
 If this device provides a `brightness_move_up` or `brightness_move_down` action it is possible to specify the update

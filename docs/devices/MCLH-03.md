@@ -1,23 +1,28 @@
 ---
 title: "LifeControl MCLH-03 control via MQTT"
-description: "Integrate your LifeControl MCLH-03 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LifeControl MCLH-03 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MCLH-03.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # LifeControl MCLH-03
 
+|     |     |
+|-----|-----|
 | Model | MCLH-03  |
 | Vendor  | LifeControl  |
 | Description | Power plug |
 | Exposes | switch (state), power, current, voltage, linkquality |
-| Picture | ![LifeControl MCLH-03](../images/devices/MCLH-03.jpg) |
+| Picture | ![LifeControl MCLH-03](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MCLH-03.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

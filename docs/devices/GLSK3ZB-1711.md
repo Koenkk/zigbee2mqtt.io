@@ -1,23 +1,28 @@
 ---
 title: "Hej GLSK3ZB-1711 control via MQTT"
-description: "Integrate your Hej GLSK3ZB-1711 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Hej GLSK3ZB-1711 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GLSK3ZB-1711.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Hej GLSK3ZB-1711
 
+|     |     |
+|-----|-----|
 | Model | GLSK3ZB-1711  |
 | Vendor  | Hej  |
 | Description | Goqual 1 gang Switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Hej GLSK3ZB-1711](../images/devices/GLSK3ZB-1711.jpg) |
+| Picture | ![Hej GLSK3ZB-1711](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GLSK3ZB-1711.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

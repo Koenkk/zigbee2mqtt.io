@@ -1,19 +1,23 @@
 ---
 title: "Xiaomi QBKG03LM control via MQTT"
-description: "Integrate your Xiaomi QBKG03LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi QBKG03LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QBKG03LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi QBKG03LM
 
+|     |     |
+|-----|-----|
 | Model | QBKG03LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara double key wired wall switch without neutral wire. Doesn't work as a router and doesn't support power meter |
 | Exposes | switch (state), temperature, action, operation_mode, linkquality |
-| Picture | ![Xiaomi QBKG03LM](../images/devices/QBKG03LM.jpg) |
+| Picture | ![Xiaomi QBKG03LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG03LM.jpg) |
+
 
 ## Notes
 
@@ -39,7 +43,7 @@ You may have to unpair the switch from an existing coordinator before the pairin
 If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
@@ -53,7 +57,7 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

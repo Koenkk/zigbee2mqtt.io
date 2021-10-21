@@ -1,23 +1,28 @@
 ---
 title: "Ksentry Electronics KS-SM001 control via MQTT"
-description: "Integrate your Ksentry Electronics KS-SM001 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Ksentry Electronics KS-SM001 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/KS-SM001.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Ksentry Electronics KS-SM001
 
+|     |     |
+|-----|-----|
 | Model | KS-SM001  |
 | Vendor  | Ksentry Electronics  |
 | Description | [Zigbee OnOff Controller](http://ksentry.manufacturer.globalsources.com/si/6008837134660/pdtl/ZigBee-module/1162731630/zigbee-on-off-controller-modules.htm) |
 | Exposes | switch (state), linkquality |
-| Picture | ![Ksentry Electronics KS-SM001](../images/devices/KS-SM001.jpg) |
+| Picture | ![Ksentry Electronics KS-SM001](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/KS-SM001.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

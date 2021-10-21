@@ -1,19 +1,23 @@
 ---
 title: "OpenLumi GWRJN5169 control via MQTT"
-description: "Integrate your OpenLumi GWRJN5169 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your OpenLumi GWRJN5169 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GWRJN5169.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # OpenLumi GWRJN5169
 
+|     |     |
+|-----|-----|
 | Model | GWRJN5169  |
 | Vendor  | OpenLumi  |
 | Description | [Lumi Router (JN5169)](https://github.com/igo-r/Lumi-Router-JN5169) |
 | Exposes | device_temperature, linkquality |
-| Picture | ![OpenLumi GWRJN5169](../images/devices/GWRJN5169.jpg) |
+| Picture | ![OpenLumi GWRJN5169](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GWRJN5169.jpg) |
+
 
 ## Notes
 

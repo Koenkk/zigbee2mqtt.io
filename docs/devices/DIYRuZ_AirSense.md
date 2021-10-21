@@ -1,24 +1,28 @@
 ---
 title: "DIYRuZ DIYRuZ_AirSense control via MQTT"
-description: "Integrate your DIYRuZ DIYRuZ_AirSense via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your DIYRuZ DIYRuZ_AirSense via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DIYRuZ_AirSense.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # DIYRuZ DIYRuZ_AirSense
 
+|     |     |
+|-----|-----|
 | Model | DIYRuZ_AirSense  |
 | Vendor  | DIYRuZ  |
 | Description | [Air quality sensor](https://modkam.ru/?p=1715) |
 | Exposes | co2, temperature, humidity, pressure, led_feedback, enable_abc, threshold1, threshold2, temperature_offset, humidity_offset, pressure_offset, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_AirSense](../images/devices/DIYRuZ_AirSense.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_AirSense](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DIYRuZ_AirSense.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

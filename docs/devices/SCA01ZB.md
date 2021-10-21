@@ -1,23 +1,28 @@
 ---
 title: "Feibit SCA01ZB control via MQTT"
-description: "Integrate your Feibit SCA01ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Feibit SCA01ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SCA01ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Feibit SCA01ZB
 
+|     |     |
+|-----|-----|
 | Model | SCA01ZB  |
 | Vendor  | Feibit  |
 | Description | Smart carbon monoxide sensor |
 | Exposes | carbon_monoxide, battery_low, tamper, battery, linkquality |
-| Picture | ![Feibit SCA01ZB](../images/devices/SCA01ZB.jpg) |
+| Picture | ![Feibit SCA01ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SCA01ZB.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

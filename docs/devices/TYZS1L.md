@@ -1,19 +1,23 @@
 ---
 title: "TuYa TYZS1L control via MQTT"
-description: "Integrate your TuYa TYZS1L via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TYZS1L via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TYZS1L.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TYZS1L
 
+|     |     |
+|-----|-----|
 | Model | TYZS1L  |
 | Vendor  | TuYa  |
 | Description | Led strip controller HSB |
 | Exposes | light (state, color_hs), linkquality |
-| Picture | ![TuYa TYZS1L](../images/devices/TYZS1L.jpg) |
+| Picture | ![TuYa TYZS1L](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TYZS1L.jpg) |
+
 
 ## Notes
 
@@ -25,7 +29,7 @@ This device has various limitations:
 - Color can only be set via hue/saturation, example payload `{"color":{"h": 360, "s": 100}}`.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

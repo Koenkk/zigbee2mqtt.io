@@ -1,19 +1,23 @@
 ---
 title: "Legrand ZLGP17/ZLGP18 control via MQTT"
-description: "Integrate your Legrand ZLGP17/ZLGP18 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Legrand ZLGP17/ZLGP18 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZLGP17_ZLGP18.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Legrand ZLGP17/ZLGP18
 
+|     |     |
+|-----|-----|
 | Model | ZLGP17/ZLGP18  |
 | Vendor  | Legrand  |
 | Description | Wireless and batteryless (double) lighting control |
 | Exposes | action, linkquality |
-| Picture | ![Legrand ZLGP17/ZLGP18](../images/devices/ZLGP17-ZLGP18.jpg) |
+| Picture | ![Legrand ZLGP17/ZLGP18](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZLGP17-ZLGP18.jpg) |
+
 
 ## Notes
 
