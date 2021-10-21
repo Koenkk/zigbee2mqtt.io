@@ -4,6 +4,10 @@
   --content-width: 940px;
 }
 
+.body--dark .q-menu {
+  background: #333538;
+}
+
 .theme-default-content:not(.custom) {
   @media (max-width: $MQMobile) {
     padding-left: 0.8rem;
@@ -31,8 +35,8 @@
   padding-right: 0.8rem;
 }
 
-.page-meta .meta-item .meta-item-label {
-  color: var(--c-text-accent);
+footer a {
+  color: var(--c-text-accent) !important;
 }
 
 

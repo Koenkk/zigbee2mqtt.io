@@ -137,7 +137,7 @@ Once you see something similar to below in the log your device is paired and you
 Zigbee2MQTT:info  2019-11-09T12:19:56: Successfully interviewed '0x00158d0001dc126a', device has successfully been paired
 ```
 
-::: warning attention
+::: warning ATTENTION
 It's important that `permit_join` is set to `false` in your `configuration.yaml` after initial setup is
 done to keep your Zigbee network safe and to avoid accidental joining of other Zigbee devices.
 :::

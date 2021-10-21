@@ -72,7 +72,7 @@ export default {
     sidebar,
     sidebarDepth: 2,
     themePlugins: {
-      git: false
+      git: true
     }
   },
 

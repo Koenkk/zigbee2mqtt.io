@@ -14,8 +14,8 @@ $MQMobileNarrow: 419px;
   --c-bg: #ffffff;
   --c-bg-light: #f3f4f5;
   --c-bg-lighter: #eeeeee;
-  --c-bg-navbar: var(--c-bg);
-  --c-bg-sidebar: var(--c-bg);
+  --c-bg-navbar: #f9f9f9;
+  --c-bg-sidebar: #f9f9f9;
   --c-bg-arrow: #cccccc;
 
   // text colors
@@ -70,6 +70,8 @@ html.dark {
   --c-bg: #232629;
   --c-bg-light: #31363B;
   --c-bg-lighter: #262c34;
+  --c-bg-sidebar: #2A2E32;
+  --c-bg-navbar: #2A2E32;
 
   // text colors
   --c-text: #cecece;
@@ -86,7 +88,7 @@ html.dark {
   --c-warning: #ceab00;
   --c-warning-bg: #7e755b;
   --c-warning-title: #ceac03;
-  --c-warning-text: #362e00;
+  --c-warning-text: #eeeeee;
   --c-danger: #940000;
   --c-danger-bg: #806161;
   --c-danger-title: #610000;
