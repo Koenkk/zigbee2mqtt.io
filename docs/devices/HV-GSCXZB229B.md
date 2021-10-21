@@ -1,6 +1,7 @@
 ---
 title: "Hive HV-GSCXZB229B control via MQTT"
 description: "Integrate your Hive HV-GSCXZB229B via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-11-01T12:47:02Z
 ---
 
 <!-- !!!! -->

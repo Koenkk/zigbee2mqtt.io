@@ -1,6 +1,7 @@
 ---
 title: "Legrand FC80RC control via MQTT"
 description: "Integrate your Legrand FC80RC via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-02-27T16:03:55Z
 ---
 
 <!-- !!!! -->

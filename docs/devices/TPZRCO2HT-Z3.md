@@ -1,6 +1,7 @@
 ---
 title: "Titan Products TPZRCO2HT-Z3 control via MQTT"
 description: "Integrate your Titan Products TPZRCO2HT-Z3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-09-01T19:56:51Z
 ---
 
 <!-- !!!! -->

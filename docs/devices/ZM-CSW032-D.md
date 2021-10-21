@@ -1,6 +1,7 @@
 ---
 title: "Zemismart ZM-CSW032-D control via MQTT"
 description: "Integrate your Zemismart ZM-CSW032-D via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-11-09T18:37:38Z
 ---
 
 <!-- !!!! -->

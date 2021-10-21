@@ -1,33 +1,20 @@
 /**
  * This script generates the supported devices page.
  */
-import * as childProcess from 'child_process';
 import { devices } from 'zigbee-herdsman-converters';
 import throat from "throat";
 import * as path from "path";
 import { promises as fsp } from "fs";
-import { generatePage, getImage, normalizeModel } from "./utils";
+import { generatePage, getAddedAt, getImage, normalizeModel } from "./utils";
 import { imageBaseDir } from "./constants";
+import { resolveDeviceFile } from "./generate_device";
 
-const exec = (...args) => new Promise((resolve, reject) => {
-  childProcess.exec.apply(this, [
-    ...args,
-    // @ts-ignore
-    (err, stdout) => err && reject(err) || resolve(stdout),
-  ]);
-});
-
-const cacheDir = path.resolve(__dirname, '..', 'node_modules', '.cache');
-const addedAtCacheFile = path.resolve(cacheDir, 'addedAtCache.json');
 const vendors = new Set();
 
 export default async function generate_supportedDevices() {
   console.log(`Generating supported-devices`);
-  let addedAtCache = {};
 
   try {
-    addedAtCache = JSON.parse(await fsp.readFile(addedAtCacheFile, 'utf-8'));
-    console.log(`Use ${addedAtCacheFile} cache file`);
   } catch(e) {
   }
 
@@ -54,20 +41,30 @@ export default async function generate_supportedDevices() {
 
   devicesMapped = await Promise.all(devicesMapped.map(async (d) => {
     const model = d.model;
+    const baseModel = d.whiteLabelOf ? d.whiteLabelOf.model : d.model;
     const image = await getImage(d, imageBaseDir, '../images/devices');
     const description = d.description || d.whiteLabelOf.description;
-    const link = `../devices/${ normalizeModel(d.whiteLabelOf ? d.whiteLabelOf.model : d.model) }.html`;
+    const link = `../devices/${ normalizeModel(baseModel) }.html`;
     const exposes = Array.from(new Set(
       d.exposes
         .map((e) => e.name ? e.name : e.type)
         .filter((e) => e !== 'linkquality' && e !== 'effect'),
     ));
 
+    let addedAt = '';
+    try {
+      const deviceContent = await fsp.readFile(resolveDeviceFile(baseModel), 'utf-8');
+      addedAt = getAddedAt(deviceContent);
+    } catch (e) {
+      console.warn(`Could not read addedAt from ${ baseModel }`, e.message);
+    }
+
     vendors.add(d.vendor);
 
     return {
       model,
       vendor: d.vendor,
+      addedAt,
       description,
       image,
       link,
@@ -76,29 +73,6 @@ export default async function generate_supportedDevices() {
     };
   }));
 
-  const addAddedAt = async (d) => {
-    const normalizedModel = `${ normalizeModel(d.whiteLabelOf ? d.whiteLabelOf.model : d.model) }.md`;
-    if(addedAtCache[normalizedModel]) {
-      d.addedAt = addedAtCache[normalizedModel];
-      return;
-    }
-    const file = path.resolve(__dirname, '../docs/devices', normalizedModel);
-    d.addedAt = (await exec(`git log --date=iso8601-strict --format=%ad --diff-filter=A -- ${ file }`) as string).trim();
-    addedAtCache[normalizedModel] = d.addedAt;
-  };
-
-  // exec git log - 50 in parallel
-  await Promise.all(devicesMapped.map(throat(20, addAddedAt)));
-
-  // Persist cache
-  try {
-    await fsp.mkdir(cacheDir);
-  } catch (err) {
-    if (err.code != 'EEXIST') {
-      console.error(err);
-    }
-  }
-  await fsp.writeFile(addedAtCacheFile, JSON.stringify(addedAtCache));
 
   devicesMapped = devicesMapped.sort((a, b) => (b.addedAt < a.addedAt) ? -1 : ((b.addedAt > a.addedAt) ? 1 : 0));
 

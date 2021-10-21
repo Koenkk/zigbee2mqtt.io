@@ -45,3 +45,11 @@ export async function getImage(definition, imageBaseDir, imageBaseUrl) {
 
   return imageBaseUrl + '/' + result;
 }
+
+export function getAddedAt(deviceContent: string) {
+  const addedAtMatch = deviceContent.match(/^addedAt: (20[\dT:Z-]+)/m);
+  if (addedAtMatch) {
+    return addedAtMatch[1];
+  }
+  return new Date().toISOString();
+}

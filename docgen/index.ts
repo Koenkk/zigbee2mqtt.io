@@ -13,8 +13,8 @@ async function generateDevices() {
 ( async function () {
   await removeObsoleteDevices(devices);
   await Promise.all([
-    generate_supportedDevices(),
     generateDevices(),
+    generate_supportedDevices(),
   ]);
   console.log('Done');
 } )();

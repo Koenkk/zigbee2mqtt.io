@@ -1,6 +1,7 @@
 ---
 title: "Gledopto GL-W-001Z control via MQTT"
 description: "Integrate your Gledopto GL-W-001Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-11-09T18:37:38Z
 ---
 
 <!-- !!!! -->
