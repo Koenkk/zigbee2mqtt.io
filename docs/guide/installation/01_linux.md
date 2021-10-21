@@ -1,5 +1,4 @@
 ---
-prev: ../what-do-i-need/
 next: ../configuration/
 ---
 

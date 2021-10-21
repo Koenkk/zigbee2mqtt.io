@@ -303,7 +303,7 @@ external_converters:
   - one-more-converter.js
 ```
 
-See also [How to support new devices](../../how-to/support_new_devices.md).
+See also [How to support new devices](../../advanced/support-new-devices/01_support_new_devices.md).
 
 #### Changing device type specific defaults
 The default values used for the device specific configuration can be overriden via e.g.:

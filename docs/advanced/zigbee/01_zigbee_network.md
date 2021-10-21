@@ -1,5 +1,6 @@
 ---
 ---
+
 # Zigbee network
 
 ## Device types

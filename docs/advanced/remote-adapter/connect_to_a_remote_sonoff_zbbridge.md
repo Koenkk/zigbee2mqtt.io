@@ -1,5 +1,3 @@
-
-
 # Connect to a remote Sonoff ZBBridge
 
 This how-to explains how to run Zigbee2MQTT with a comercial Sonoff ZBBridge Gateway.

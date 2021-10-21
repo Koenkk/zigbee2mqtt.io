@@ -1,5 +1,8 @@
 ---
+sidebar: auto
 ---
+
+
 # 3D cases
 
 ## CC1352P1, CC1352P-2 and CC2652R LaunchXL

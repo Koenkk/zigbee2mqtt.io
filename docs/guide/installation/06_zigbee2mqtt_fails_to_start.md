@@ -1,5 +1,7 @@
 ---
+next: ../configuration/
 ---
+
 # Zigbee2MQTT fails to start
 Most of the times this is caused by zigbee-herdsman not being able to communicate with your CC2530 or CC2531.
 

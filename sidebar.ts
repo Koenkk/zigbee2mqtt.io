@@ -3,7 +3,7 @@ import { getFiles } from "./navbar";
 
 export const sidebar: SidebarConfig = {
   '/guide/': [
-    '/guide/what-do-i-need/',
+    '/guide/quickstart/',
     {
       text: 'Supported Hardware',
       link: '/guide/supported-hardware.md',
@@ -11,7 +11,6 @@ export const sidebar: SidebarConfig = {
         { text: 'Adapters', link: '/guide/adapters/' },
         { text: 'Devices', link: '/supported-devices/' },
       ]
-      // children: getFiles('guide/adapters')
     },
     {
       text: 'Installation',
@@ -35,14 +34,14 @@ export const sidebar: SidebarConfig = {
       children: [
         '/guide/usage/pairing_devices.md',
         '/guide/usage/touchlink.md',
-        '/guide/usage/mqtt_topics_and_message_structure.md',
         '/guide/usage/exposes.md',
         '/guide/usage/scenes.md',
         '/guide/usage/availability.md',
         '/guide/usage/binding.md',
         '/guide/usage/groups.md',
         '/guide/usage/ota_updates.md',
-        '/guide/usage/zigbee_network.md',
+        '/guide/usage/mqtt_topics_and_message_structure.md',
+        '/guide/usage/integrations.md',
         '/guide/usage/FAQ.md',
         '/guide/usage/debug.md',
       ]
@@ -53,4 +52,8 @@ export const sidebar: SidebarConfig = {
       children: getFiles('guide/development')
     },
   ],
+
+  '/advanced/zigbee/': getFiles('advanced/zigbee'),
+  '/advanced/remote-adapter/': getFiles('advanced/remote-adapter'),
+  '/advanced/support-new-devices/': getFiles('advanced/support-new-devices'),
 };

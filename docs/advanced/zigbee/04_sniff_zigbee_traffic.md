@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 ---
 
 # Sniff Zigbee traffic
@@ -13,7 +12,7 @@ Sniffing Zigbee traffic can be handy sometimes. E.g. when you want to analyze th
 * CC2531 stick
 
 #### 1. Flashing the CC2531 stick
-The CC2531 needs to be flashed with a sniffer firmware. Flash the firmware using the instructions from [Flashing the CC2531](../guide/adapters/flashing/flashing_the_cc2531.md).
+The CC2531 needs to be flashed with a sniffer firmware. Flash the firmware using the instructions from [Flashing the CC2531](../../guide/adapters/flashing/flashing_the_cc2531.md).
 
 ##### Linux
 The firmware is included with [PACKET-SNIFFER](http://www.ti.com/tool/PACKET-SNIFFER) (not **PACKET-SNIFFER-2!**). Download PACKET-SNIFFER. As the sniffer firmware is only available in the windows installer we need to extract the hex file. This would require 7zip (p7zip-full or p7zip-plugins package depending on distro)
@@ -52,7 +51,7 @@ Add the Trust Center link key by going to to Edit -> Preferences -> Protocols ->
 
 *NOTE: The Hue bridge uses a [different Trust Center link key](https://peeveeone.com/?p=166)*
 
-![Wireshark Trust Center link key](../images/wireshark_tclink_key.png)
+![Wireshark Trust Center link key](../../images/wireshark_tclink_key.png)
 
 Next we need to figure out the network encryption key (Transport Key). There are two ways to do this:
 
@@ -62,13 +61,13 @@ Next we need to figure out the network encryption key (Transport Key). There are
 
 3) (Experimental) You can try the code snippet `cat /your/configuration.yaml | python3 -c "import sys;print(':'.join([hex(int(entry[1]))[2:] for entry in [line.strip().split(' ') for line in sys.stdin] if len(entry)==2 and str.isdigit(entry[1])]))"` if you have python3 installed. This may not always work as it doesn't really parse the yaml, just extracts the lines 'looking like keys' and converts them.
 
-![Wireshark network key](../images/wireshark_network_key.png)
+![Wireshark network key](../../images/wireshark_network_key.png)
 
 Copy the key value, as shown above and go to Edit -> Preferences -> Protocols -> ZigBee -> Edit and add the key with Byte Order Normal.
 
 Now Wireshark is able to decrypt the messages. When e.g. turning on a light you will see a message similar to:
 
-![Wireshark packet](../images/wireshark_packet.png)
+![Wireshark packet](../../images/wireshark_packet.png)
 
 ##### Troubleshooting
 * If you get `couldn't run /usr/bin/dumpcap in child process: permission denied` when running whsniff, check if /usr/bin/dumpcap is executable for everyone. Or `chmod 755 /usr/bin/dumpcap`.
@@ -82,7 +81,7 @@ If you happen to have a spare HUSBZB-1 stick, you can also use this to sniff tra
   * Ubuntu machine (tested with 18.10)
   * Windows machine (tested with Windows 10)
 * HUSBZB-1 stick
-* Wireshark (for instructions on how to install, see the [other docs](./sniff_zigbee_traffic.md)
+* Wireshark
 * Java
 
 ### 1. Install drivers

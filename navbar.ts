@@ -13,7 +13,7 @@ export const navbar: NavbarConfig = [
   {
     text: 'Guide',
     children: [
-      '/guide/what-do-i-need/',
+      '/guide/quickstart/',
       '/guide/adapters/',
       {
         text: 'Supported Devices',
@@ -33,14 +33,12 @@ export const navbar: NavbarConfig = [
     link: '/supported-devices/'
   },
   {
-    text: 'How-to',
-    children: getFiles('how-to'),
-  },
-  {
-    text: 'Resources',
+    text: 'Advanced',
     children: [
-      '/resources/integrations/',
-      '/resources/3d_cases.md'
+      { text: 'Zigbee', children: getFiles('advanced/zigbee') },
+      { text: 'Support new devices', children: getFiles('advanced/support-new-devices') },
+      { text: 'Remote Adapter', children: getFiles('advanced/remote-adapter') },
+      { text: 'More', children: getFiles('advanced/more') },
     ]
   },
   {

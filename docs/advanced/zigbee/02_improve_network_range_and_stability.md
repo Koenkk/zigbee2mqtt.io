@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 ---
 
 # Improve network range and stability
@@ -21,7 +20,7 @@ RF connection between the adapter and other devices also depends on the way it i
 
 As Wi-Fi and Zigbee both operate on the same frequency space (2.4 GHz), they can interfere with each other. By using the correct Zigbee channel, interference with Wi-Fi can (partly) be avoided. A good article explaining this is [Zigbee and Wi-Fi Coexistence](https://www.metageek.com/training/resources/zigbee-wifi-coexistence.html).
 
-To change the Zigbee channel Zigbee2MQTT uses you have to set the [`channel` in `configuration.yaml`](../guide/configuration/README.md).
+To change the Zigbee channel Zigbee2MQTT uses you have to set the [`channel` in `configuration.yaml`](../../guide/configuration/README.md).
 
 ## Adding more routers to your network
-In a Zigbee network, each router will extend the range of the network ([read more about this](../guide/usage/zigbee_network.md)). Almost all AC powered devices will serve as a router. In case you are searching for a powerful router, [the CC2530 is recommended](./create_a_cc2530_router.md).
+In a Zigbee network, each router will extend the range of the network ([read more about this](./01_zigbee_network.md)). Almost all AC powered devices will serve as a router. In case you are searching for a powerful router, [the CC2530 is recommended](./05_create_a_cc2530_router.md).

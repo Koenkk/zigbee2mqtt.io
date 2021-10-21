@@ -9,7 +9,7 @@ pageClass: supported-devices-page
 <!-- !!!! -->
 
 Currently **1711** devices are supported from **247** different vendors.  
-In case you own a Zigbee device which is NOT listed here, please see [How to support new devices](../how-to/support_new_devices.html).
+In case you own a Zigbee device which is NOT listed here, please see [How to support new devices](../advanced/support-new-devices/01_support_new_devices.md).
 
 <script>
 if (!__VUEPRESS_SSR__) {

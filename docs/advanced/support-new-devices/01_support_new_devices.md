@@ -1,7 +1,3 @@
----
-sidebar: auto
----
-
 # Support new devices
 Zigbee2MQTT uses [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) to parse messages to and from devices.
 
@@ -48,7 +44,7 @@ const definition = {
 module.exports = definition;
 ```
 
-If your device is advertised as "Tuya compatible" and/or requires Tuya gateway/app to operate look [h-re](support_new_tuya_devices.md) for additional info
+If your device is advertised as "Tuya compatible" and/or requires Tuya gateway/app to operate look [here](./02_support_new_tuya_devices.md) for additional info
 
 Now set the Zigbee2MQTT `log_level` to `debug` and enable the external converter by adding the following to your Zigbee2MQTT `configuration.yaml`.
 
@@ -66,7 +62,7 @@ Zigbee2MQTT:debug  2019-11-09T12:24:22: No converter available for 'WSDCGQ01LM' 
 
 In case your device is not reporting anything, it could be that this device requires additional configuration. This can be done by adding a `configure:` section. It may help to look at similar [devices](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices).
 
-If your device reports anything with 'manuSpecificTuya' then it's a "Tuya compatible" device and additional instructions for adding those are [h-re](support_new_tuya_devices.md).
+If your device reports anything with 'manuSpecificTuya' then it's a "Tuya compatible" device and additional instructions for adding those are [here](./02_support_new_tuya_devices.md).
 
 Some basic external converter examples:
 - [Bulb (light)](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/light.js)

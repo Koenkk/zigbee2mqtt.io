@@ -1,13 +1,9 @@
----
-sidebar: auto
----
-
 # Support new Tuya devices
 Tuya devices use a custom `manuSpecificTuya` cluster, the instructions below will help you understand it better and provide some tools to ease discovery of their functions
 
 ## Instructions
 ### 1. Standard part of the setup
-Read through basic [howto](support_new_devices.md) for instructions on how to setup an external converter
+Read through basic [howto](./01_support_new_devices.md) for instructions on how to setup an external converter
 
 ### 2. Adding your device
 Adding support for TuYa devices is a bit different. In order to provide support for E.G. the `TS0601` model ID you would create the following external converter:
@@ -80,7 +76,7 @@ Some data points are 'report only' (they report changes that happen within the d
 
 For example on Saswell thermostat data point number `103` is heating setpoint, it has `value` type and is 'issue and report', we will use that information later in examples.
 
-If you have a Tuya gateway, you can find what the function is of data point number by following [this how-to guide](find_tuya_data_points.html)
+If you have a Tuya gateway, you can find what the function is of data point number by following [this how-to guide](./03_find_tuya_data_points.md)
 
 ### 4. Deciphering the data points
 By adding the two debug converters mentioned earlier, we have the tools to decipher Tuya data points.

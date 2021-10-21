@@ -1,5 +1,4 @@
 ---
-prev: ../what-do-i-need/
 next: ../configuration/
 ---
 
@@ -87,7 +86,7 @@ The following tags are available:
 - Specific release version, e.g: `1.7.0`
 
 ## Support new devices
-See [How to support new devices](../../how-to/support_new_devices.md)
+See [How to support new devices](../../advanced/support-new-devices/01_support_new_devices.md)
 
 ## Docker Stack device mapping
 *This is only relevant when using Docker Stack*

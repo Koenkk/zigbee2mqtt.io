@@ -1,7 +1,3 @@
----
-sidebar: auto
----
-
 # Connect to a remote adapter
 This how-to explains how to run Zigbee2MQTT with an adapter on a remote location.
 We will use ser2net for this which allows to connect to a serial port over TCP.

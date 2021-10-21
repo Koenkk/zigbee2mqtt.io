@@ -1,5 +1,7 @@
 ---
+sidebarDepth: 1
 ---
+
 # Binding
 *An ongoing discussion about this feature can be found here: [#782](https://github.com/Koenkk/zigbee2mqtt/issues/782)*
 

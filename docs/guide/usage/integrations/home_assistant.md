@@ -47,12 +47,12 @@ with the [Home Assistant device registry](https://developers.home-assistant.io/d
 This allows you to change the Home Assistant `device_id` and `friendly_name` from the web interface
 without having to restart Home Assistant. It also makes it possible to show which entities belong to which device.
 
-![Changing name and device ID via web interface](../../images/home_assistant_change_name.png)
+![Changing name and device ID via web interface](../../../images/home_assistant_change_name.png)
 
-![Device registry](../../images/home_assistant_device_registry.png)
+![Device registry](../../../images/home_assistant_device_registry.png)
 
 ## Customizing discovery
-The device specific configuration allows you to modify the discovery payload. Here you can also prevent a device from being discovered. See [Device specific configuration](../../guide/configuration/) for the available options.
+The device specific configuration allows you to modify the discovery payload. Here you can also prevent a device from being discovered. See [Device specific configuration](../../configuration/) for the available options.
 
 ## I'm confused about the different device IDs, names and friendly names
 - Home Assistant `device_id`: determined on first discovery of the device, can only be changed
@@ -90,7 +90,7 @@ automation:
 ```
 {% endraw %}
 
-If you only plan to use this and want to disable the *Via Home Assistant entity* integration below, set `homeassistant_legacy_triggers: false` (see [Configuration](../../guide/configuration/) for more info).
+If you only plan to use this and want to disable the *Via Home Assistant entity* integration below, set `homeassistant_legacy_triggers: false` (see [Configuration](../../configuration/) for more info).
 
 ### Via Home Assistant entity
 

@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 ---
 
 # Secure your Zigbee network
