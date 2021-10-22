@@ -71,6 +71,7 @@ export default {
     navbar,
     sidebar,
     sidebarDepth: 2,
+    contributors: false,
     themePlugins: {
       git: true
     }
