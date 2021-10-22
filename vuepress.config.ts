@@ -95,6 +95,7 @@ export default {
     [
       '@vuepress/register-components',
       {
+        componentsDir: path.resolve(__dirname, 'docs/.vuepress/components'),
         components: {
           SupportedDevices: path.resolve(__dirname, 'supported-devices-component/SupportedDevices.vue'),
         },

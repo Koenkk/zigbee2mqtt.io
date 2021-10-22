@@ -4,17 +4,17 @@
 # Sniff Zigbee traffic
 Sniffing Zigbee traffic can be handy sometimes. E.g. when you want to analyze the commands used by a device.
 
-### With CC2531
-#### Prerequisites
+## With CC2531
+### Prerequisites
 * Computer
   * Ubuntu / Debian machine (tested with Ubuntu 18.04 / 18.10 and Debian 10)
   * Windows machine (tested with Windows 10)
 * CC2531 stick
 
-#### 1. Flashing the CC2531 stick
+### 1. Flashing the CC2531 stick
 The CC2531 needs to be flashed with a sniffer firmware. Flash the firmware using the instructions from [Flashing the CC2531](../../guide/adapters/flashing/flashing_the_cc2531.md).
 
-##### Linux
+#### Linux
 The firmware is included with [PACKET-SNIFFER](http://www.ti.com/tool/PACKET-SNIFFER) (not **PACKET-SNIFFER-2!**). Download PACKET-SNIFFER. As the sniffer firmware is only available in the windows installer we need to extract the hex file. This would require 7zip (p7zip-full or p7zip-plugins package depending on distro)
 ```bash
 unzip swrc045z.zip -d PACKET-SNIFFER
@@ -22,12 +22,12 @@ unzip swrc045z.zip -d PACKET-SNIFFER
 sudo <path-to>/cc-tool -e -w <path-to>/sniffer_fw_cc2531.hex
 ```
 
-##### Windows (and possibly Ubuntu)
+#### Windows (and possibly Ubuntu)
 For Windows this firmware is included with [ZBOSS](http://zboss.dsr-wireless.com/downloads/index/zboss). Register an account and download *ZBOSS Sniffer for Windows 64-bit*. Included in the ZIP file is the firmware in subfolder `hw\CC2531 USB dongle\zboss_sniffer.hex`. Please note that ZBOSS is also available for Ubuntu 64-bit.
 
-#### 2. Installing required tools
+### 2. Installing required tools
 
-##### Ubuntu / Debian
+#### Ubuntu / Debian
 ```bash
 cd /opt
 sudo apt-get install -y libusb-1.0-0-dev wireshark
@@ -37,10 +37,10 @@ make
 sudo make install
 ```
 
-##### Windows
+#### Windows
 Download and install the latest version of [Wireshark](https://www.wireshark.org/download.html). ZBOSS itself is portable and won't need to be installed.
 
-#### 3. Sniffing traffic
+### 3. Sniffing traffic
 On Ubuntu / Debian start wireshark with `sudo whsniff -c ZIGBEE_CHANNEL_NUMBER | wireshark -k -i -`. *Note: Depending on your distro and installed packages, this may result in a broken pipe after some time. You will notice that Wireshark has stopped capturing, and attmpeting to resume by clicking the shark fin icon will present you with an error `end of file on pipe magic during open`, if this happens you may need to start with `wireshark -k -i <( path/to/whsniff -c channel_number )` instead. Alternative uses are detailed on the [whsniff project page](https://github.com/homewsn/whsniff#how-to-use-locally).*
 
 For Windows run the ZBOSS executable in `gui\zboss_sniffer.exe`, enter the path to your Wireshark executable and click on the `Start` button. For ZBOSS make sure the correct Zigbee channel is set, by default it will sniff on channel `0x0C (12)` but the default Zigbee2MQTT channel is 11 (`0x0B (11)`).
@@ -57,9 +57,10 @@ Next we need to figure out the network encryption key (Transport Key). There are
 
 1) By default, if you haven't changed `network_key` in your `configuration.yaml` this will be `01:03:05:07:09:0B:0D:0F:00:02:04:06:08:0A:0C:0D`. If you changed your `network_key`, then convert each number into its 2-digit hexadecimal value, and combine them all with `:` between. E.g. `[1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]` -> `01:03:05:07:09:0B:0D:0F:00:02:04:06:08:0A:0C:0D`.
 
-2) If you don't want to manually translate the numbers, the network encryption key is also exposed when a device joins the network. Pair a new device to the network (or re-pair an existing one) and grab the message where the Info is *Device Announcement....*. Open the message and expand *ZigBee Network Layer Data* -> *ZigBee Security Header*.
+    You can paste your network_key below to convert it. PS: Of course it gets not sent anywhere, just a local in-browser converter.
+    <NetworkKeyConverter/>
 
-3) (Experimental) You can try the code snippet `cat /your/configuration.yaml | python3 -c "import sys;print(':'.join([hex(int(entry[1]))[2:] for entry in [line.strip().split(' ') for line in sys.stdin] if len(entry)==2 and str.isdigit(entry[1])]))"` if you have python3 installed. This may not always work as it doesn't really parse the yaml, just extracts the lines 'looking like keys' and converts them.
+2) If you don't want to translate the numbers, the network encryption key is also exposed when a device joins the network. Pair a new device to the network (or re-pair an existing one) and grab the message where the Info is *Device Announcement....*. Open the message and expand *ZigBee Network Layer Data* -> *ZigBee Security Header*.
 
 ![Wireshark network key](../../images/wireshark_network_key.png)
 
@@ -69,7 +70,7 @@ Now Wireshark is able to decrypt the messages. When e.g. turning on a light you 
 
 ![Wireshark packet](../../images/wireshark_packet.png)
 
-##### Troubleshooting
+#### Troubleshooting
 * If you get `couldn't run /usr/bin/dumpcap in child process: permission denied` when running whsniff, check if /usr/bin/dumpcap is executable for everyone. Or `chmod 755 /usr/bin/dumpcap`.
 * You may need to remove `modemmanager` as this has been known to cause issues. [Howto](https://www.zigbee2mqtt.io/information/FAQ.html#modemmanager-is-installed)
 
