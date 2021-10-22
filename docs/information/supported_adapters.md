@@ -241,6 +241,31 @@ Zigbee2MQTT officially supports the following adapters:
     <td></td>
     <td></td>
   </tr>
+  
+  <tr>
+    <td><img src="../images/cc26x2r1_dongle.jpg"></td>
+    <td>Vision CC2652R1 Dongle(VS201)</td>
+    <td>Adapter or small development board based on CC2652R chip</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652R_coordinator_20210708.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652R_router_20210128.zip">Router</a></td>
+    <td><a href="https://www.aliexpress.com/item/1005002823262979.html?spm=a2g0o.productlist.0.0.1a1640b82yeViq&algo_pvid=e01b1872-ca85-4814-971f-ce9b058855b8&algo_exp_id=e01b1872-ca85-4814-971f-ce9b058855b8-0&pdp_ext_f=%7B%22sku_id%22%3A%2212000022351543786%22%7D">Flashing</a></td>
+    <td><a href="https://www.aliexpress.com/item/1005002823262979.html?spm=a2g0o.productlist.0.0.1a1640b82yeViq&algo_pvid=e01b1872-ca85-4814-971f-ce9b058855b8&algo_exp_id=e01b1872-ca85-4814-971f-ce9b058855b8-0&pdp_ext_f=%7B%22sku_id%22%3A%2212000022351543786%22%7D">Aliexpress</a></td>
+  </tr>
+  <tr>
+    <td><img src="../images/cc2652p2_dongle.jpg"></td>
+    <td>Vision CC2652P Dongle(VS202)</td>
+    <td>Adapter or small development board based on CC2652P chip</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip">Coordinator</a><br/><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip">Router</a></td>
+    <td><a href="https://www.aliexpress.com/item/1005003393047763.html?spm=a2g0o.productlist.0.0.5e6f107dvPTg3a&algo_pvid=c932a9d4-2522-4b73-a001-02609564422e&algo_exp_id=c932a9d4-2522-4b73-a001-02609564422e-1&pdp_ext_f=%7B%22sku_id%22%3A%2212000025577120008%22%7D">Flashing</a></td>
+    <td><a href="https://www.aliexpress.com/item/1005003393047763.html?spm=a2g0o.productlist.0.0.5e6f107dvPTg3a&algo_pvid=c932a9d4-2522-4b73-a001-02609564422e&algo_exp_id=c932a9d4-2522-4b73-a001-02609564422e-1&pdp_ext_f=%7B%22sku_id%22%3A%2212000025577120008%22%7D">Aliexpress</a></td>
+  </tr>
+  <tr>
+    <td><img src="../images/cc2538_cc2592_dongle.jpg"></td>
+    <td>Vision CC2538+CC2592 Dongle(VS203)</td>
+    <td>Adapter or small development board based on CC2538 and CC2592 chip</td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin">Coordinator</a><br/></td>
+    <td><a href="https://www.aliexpress.com/item/1005002809329614.html?spm=a2g0o.store_pc_allProduct.8148356.2.4d7f1012TTc3uX">Flashing</a></td>
+    <td><a href="https://www.aliexpress.com/item/1005002809329614.html?spm=a2g0o.store_pc_allProduct.8148356.2.4d7f1012TTc3uX">Aliexpress</a></td>
+  </tr>
 </table>
 </div>
 
