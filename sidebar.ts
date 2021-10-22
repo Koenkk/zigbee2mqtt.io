@@ -15,7 +15,10 @@ export const sidebar: SidebarConfig = {
     {
       text: 'Installation',
       link: '/guide/installation/',
-      children: getFiles('guide/installation')
+      children: [
+        ...getFiles('guide/installation'),
+        { text: 'Zigbee2MQTT fails to start', link: '/guide/usage/FAQ.md#help-zigbee2mqtt-fails-to-start' },
+      ]
     },
     {
       text: 'Configuration',
@@ -42,7 +45,6 @@ export const sidebar: SidebarConfig = {
         '/guide/usage/ota_updates.md',
         '/guide/usage/mqtt_topics_and_messages.md',
         '/guide/usage/integrations.md',
-        '/guide/usage/FAQ.md',
         '/guide/usage/debug.md',
       ]
     },

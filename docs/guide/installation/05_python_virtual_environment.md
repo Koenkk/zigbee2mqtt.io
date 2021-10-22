@@ -7,7 +7,7 @@ It is possible to run Zigbee2MQTT in a virtual environment, this has been tested
 
 This guide is similar to the [Running Zigbee2MQTT on Linux guide](./01_linux.md), follow the steps from there by replacing the steps with the ones from below.
 
-## 2. Installing
+## Installing
 ```bash
 # Clone Zigbee2MQTT repository
 sudo git clone https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
@@ -43,7 +43,7 @@ npm ci
 deactivate
 ```
 
-## 4. Starting Zigbee2MQTT
+## Starting Zigbee2MQTT
 ```bash
 # Enter folder
 cd /opt/zigbee2mqtt
@@ -60,7 +60,7 @@ npm start
 deactivate
 ```
 
-## 5. (Optional) Running as a daemon with systemctl
+## (Optional) Running as a daemon with systemctl
 To run Zigbee2MQTT as daemon (in background) and start it automatically on boot we will run Zigbee2MQTT with systemctl.
 ```bash
 # Create a systemctl configuration file for Zigbee2MQTT
@@ -88,7 +88,7 @@ WantedBy=multi-user.target
 
 Now continue with *Verify that the configuration works:* from the *Running Zigbee2MQTT guide*.
 
-## 6. (For later) Update Zigbee2MQTT to the latest version
+## (For later) Update Zigbee2MQTT to the latest version
 To update Zigbee2MQTT to the latest version, execute:
 
 ```sh

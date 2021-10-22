@@ -11,17 +11,22 @@ Since Zigbee2MQTT images are manifest listed, Docker will auto-detect the archit
 Note for Raspberry Pi 1 and zero users: there is a bug in Docker which selects the wrong image architecture.
 Before executing `docker run` pull the correct image with `docker pull koenkk/zigbee2mqtt --platform linux/arm/v6`.
 
-First run the container, this will create the configuration directory. Change `configuration.yaml` according to your situation and start again.
+Start by figuring out the location of your adapter as explained [here](./01_linux.md#determine-location-of-the-adapter-and-checking-user-permissions).
 
-## Running as root
-Run by executing the following command:
+## Creating the initial configuration
+Navigate to the directory where you whish to store the Zigbee2MQTT data and execute:
 
-1. Identify your device:
 ```bash
-$ ls -l /dev/serial/by-id
+wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.yaml -P data
 ```
 
-2. Run docker, whereas the "--device" statement should match the previous output:
+Now configure the MQTT server and adapter location as explained [here](./01_linux.md#configuring).
+
+## Running the container
+
+### Running as root
+Execute the following command, update the `--device` parameter to match the location of your adapter.
+
 ```bash
 $ docker run \
    -it \
@@ -33,31 +38,26 @@ $ docker run \
    koenkk/zigbee2mqtt
 ```
 
-### Parameters explanation
+#### Parameters explanation
 * `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration
 * `--device=/dev/ttyACM0`: Location of adapter (e.g. CC2531)
 * `-v /run/udev:/run/udev:ro --privileged=true`: is optional, only required for autodetecting the port
 * Optional: in case your MQTT broker is running on `localhost` and is not within the same Docker network as the Zigbee2MQTT container also add `--network host \`.
 * Note: For USB auto-discovery, the container needs to be executed by root in "--privileged" mode.
 
-## Running as non-root
+### Running as non-root
 
-1. Identify your device:
-```
-$ ls -l /dev/serial/by-id
-```
-
-2. Identify the group that has access to the device (in Ubuntu, e.g. it might be assigned to "dialout"):
+1. Identify the group that has access to the adapter (in Ubuntu, e.g. it might be assigned to `dialout`):
 ```
 $ ls -l /dev/tty*
 ```
 
-3. Check the user&group id you want to execute the docker image with:
+2. Check the user&group id you want to execute the docker image with:
 ```
 $ id
 ```
 
-4. Start the docker container (note: interface, user&group ID must match the outputs above):
+3. Start the docker container (note: interface, user&group ID must match the outputs above):
 ```
 $ sudo docker run \
    -it \
@@ -74,9 +74,9 @@ $ sudo docker run \
 ## Updating
 To update to the latest Docker image:
 ```bash
-$ docker rm -f [ZIGBEE2MQTT_CONTAINER_NAME]
-$ docker rmi -f [ZIGBEE2MQTT_IMAGE_NAME] # e.g. koenkk/zigbee2mqtt:latest
-# Now run the container again, Docker will automatically pull the latest image.
+docker pull koenkk/zigbee2mqtt:latest
+docker rm -f zigbee2mqtt
+# Now run the container again with the instructions above
 ```
 
 ## Tags
@@ -85,8 +85,31 @@ The following tags are available:
 - Latest dev version (based on [`dev`](https://github.com/Koenkk/zigbee2mqtt/tree/dev) branch): `latest-dev`
 - Specific release version, e.g: `1.7.0`
 
-## Support new devices
-See [How to support new devices](../../advanced/support-new-devices/01_support_new_devices.md)
+## Docker Compose
+
+Example of a Docker Compose file:
+
+```yaml
+version: '3.5'
+services:
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    image: koenkk/zigbee2mqtt
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+      - /run/udev:/run/udev:ro
+    ports:
+      # Frontend port
+      - 8080:8080
+    environment:
+      - TZ=Europe/Berlin
+    group_add:
+      - dialout
+    devices:
+      # Make sure this matched your adapter location
+      - /dev/ttyUSB0:/dev/ttyACM0
+```
 
 ## Docker Stack device mapping
 *This is only relevant when using Docker Stack*
@@ -95,8 +118,8 @@ Docker stack doesn't support device mappings with option `--devices` when deploy
 
 The workaround is based on the solution found at [Add support for devices with "service create"](https://github.com/docker/swarmkit/issues/1244#issuecomment-285935430), all credits goes this him.
 
-1. Identify cc2531 device
-	Identify the cc2531 device using the following command:
+1. Identify serial adapter
+	Identify the serial adapter using the following command:
 
 	```shell
 	sudo lsusb -v
@@ -196,10 +219,10 @@ The workaround is based on the solution found at [Add support for devices with "
 
 2. UDEV Rules
 
-	Create a new udev rule for cc2531, `idVendor` and `idProduct` must be equal to values from `lsusb` command. The rule below creates device `/dev/cc2531`:
+	Create a new udev rule for serial adpater, `idVendor` and `idProduct` must be equal to values from `lsusb` command. The rule below creates device `/dev/zigbee-serial`:
 
 	```shell
-	echo "SUBSYSTEM==\"tty\", ATTRS{idVendor}==\"0451\", ATTRS{idProduct}==\"16a8\", SYMLINK+=\"cc2531\",  RUN+=\"/usr/local/bin/docker-setup-cc2531.sh\"" | sudo tee /etc/udev/rules.d/99-cc2531.rules
+	echo "SUBSYSTEM==\"tty\", ATTRS{idVendor}==\"0451\", ATTRS{idProduct}==\"16a8\", SYMLINK+=\"zigbee-serial\",  RUN+=\"/usr/local/bin/docker-setup-zigbee-serial.sh\"" | sudo tee /etc/udev/rules.d/99-zigbee-serial.rules
 	```
 
 	Reload newly created rule using the following command:
@@ -208,17 +231,17 @@ The workaround is based on the solution found at [Add support for devices with "
 	sudo udevadm control --reload-rules
 	```
 
-3. Create docker-setup-cc2531.sh
+3. Create docker-setup-zigbee-serial.sh
 
 	```shell
-	sudo nano /usr/local/bin/docker-setup-cc2531.sh
+	sudo nano /usr/local/bin/docker-setup-zigbee-serial.sh
 	```
 
 	Copy the following content:
 
 	```shell
 	#!/bin/bash
-	USBDEV=`readlink -f /dev/cc2531`
+	USBDEV=`readlink -f /dev/zigbee-serial`
 	read minor major < <(stat -c '%T %t' $USBDEV)
 	if [[ -z $minor || -z $major ]]; then
 		echo 'Device not found'
@@ -238,7 +261,7 @@ The workaround is based on the solution found at [Add support for devices with "
 	Set permissions:
 
 	```shell
-	sudo chmod 744 /usr/local/bin/docker-setup-cc2531.sh
+	sudo chmod 744 /usr/local/bin/docker-setup-zigbee-serial.sh
 	```
 
 4. Create docker-event-listener.sh
@@ -253,7 +276,7 @@ The workaround is based on the solution found at [Add support for devices with "
 	#!/bin/bash
 	docker events --filter 'event=start'| \
 	while read line; do
-		/usr/local/bin/docker-setup-cc2531.sh
+		/usr/local/bin/docker-setup-zigbee-serial.sh
 	done
 	```
 	Set permissions:
@@ -272,7 +295,7 @@ The workaround is based on the solution found at [Add support for devices with "
 
 	```shell
 	[Unit]
-	Description=Docker Event Listener for TI CC2531 device
+	Description=Docker Event Listener for Zigbee serial adapter
 	After=network.target
 	StartLimitIntervalSec=0
 	[Service]
@@ -318,14 +341,14 @@ The workaround is based on the solution found at [Add support for devices with "
 
 6. Verify and deploy Zigbee2MQTT stack
 
-	Now reconnect the cc2531. Verify using the following command:
+	Now reconnect the serial adapter. Verify using the following command:
 
 	```shell
-	ls -al /dev/cc2531
+	ls -al /dev/zigbee-serial
 	```
 
 	```shell
-	lrwxrwxrwx 1 root root 7 Sep 28 21:14 /dev/cc2531 -> ttyACM0
+	lrwxrwxrwx 1 root root 7 Sep 28 21:14 /dev/zigbee-serial -> ttyACM0
 	```
 
 	Below an example of a `docker-stack-zigbee2mqtt.yml`:
@@ -338,7 +361,7 @@ The workaround is based on the solution found at [Add support for devices with "
 		  - TZ=Europe/Amsterdam
 		volumes:
 		  - /mnt/docker-cluster/zigbee2mqtt/data:/app/data
-		  - /dev/cc2531:/dev/cc2531
+		  - /dev/zigbee-serial:/dev/zigbee-serial
 		networks:
 		  - proxy_traefik-net
 		deploy:
@@ -350,14 +373,14 @@ The workaround is based on the solution found at [Add support for devices with "
 	  proxy_traefik-net:
 		external: true
 	```
-	In the above example, `proxy_traefik-net` is the network to connect to the mqtt broker. The constraint makes sure Docker deploys only to this (`rpi-3`) node, where the cc2531 is connected to. The volume binding `/mnt/docker-cluster/zigbee2mqtt/data` is the zigbee2mqtt persistent directory, where `configuration.yaml` is saved.
+	In the above example, `proxy_traefik-net` is the network to connect to the mqtt broker. The constraint makes sure Docker deploys only to this (`rpi-3`) node, where the serial adapter is connected to. The volume binding `/mnt/docker-cluster/zigbee2mqtt/data` is the zigbee2mqtt persistent directory, where `configuration.yaml` is saved.
 
-	The zigbee2Zigbee2MQTTmqtt `configuration.yaml` should point to `/dev/cc2531`:
+	The zigbee2Zigbee2MQTTmqtt `configuration.yaml` should point to `/dev/zigbee-serial`:
 
 	```yaml
 	[...]
 	serial:
-	  port: /dev/cc2531
+	  port: /dev/zigbee-serial
 	[...]
 	```
 
@@ -366,7 +389,7 @@ The workaround is based on the solution found at [Add support for devices with "
 	```shell
 	docker stack deploy zigbee2mqtt --compose-file docker-stack-zigbee2mqtt.yml
 	```
-	
+
 ## Docker on Synology DSM 7.0
 
 **Note:** This may not work with all Zigbee controllers, but has been tested with the CC2531.

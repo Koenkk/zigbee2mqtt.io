@@ -33,6 +33,10 @@ export const navbar: NavbarConfig = [
     link: '/supported-devices/'
   },
   {
+    text: 'FAQ',
+    link: '/guide/usage/FAQ.md',
+  },
+  {
     text: 'Advanced',
     children: [
       { text: 'Zigbee', children: getFiles('advanced/zigbee') },

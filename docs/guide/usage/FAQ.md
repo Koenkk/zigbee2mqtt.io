@@ -1,5 +1,4 @@
 ---
-sidebarDepth: 1
 ---
 
 # FAQ
