@@ -103,6 +103,9 @@ serial:
 # Enable the Zigbee2MQTT WebUI
 frontend:
   port: 8080
+# Let Zigbee2MQTT generate a new network key on first start
+advanced:
+  network_key: GENERATE
 ```
 
 We should now have two files in our directory and can start the stack:
