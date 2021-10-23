@@ -17,7 +17,6 @@ export const sidebar: SidebarConfig = {
       link: '/guide/installation/',
       children: [
         ...getFiles('guide/installation'),
-        { text: 'Zigbee2MQTT fails to start', link: '/guide/faq/#help-zigbee2mqtt-fails-to-start' },
       ]
     },
     {
