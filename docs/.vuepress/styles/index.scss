@@ -8,6 +8,11 @@
   background: #333538;
 }
 
+// Hide @vuepress/theme-default repo link in navbar
+.navbar .navbar-links .navbar-links-item:last-child {
+  display: none;
+}
+
 .theme-default-content:not(.custom) {
   @media (max-width: $MQMobile) {
     padding-left: 0.8rem;
