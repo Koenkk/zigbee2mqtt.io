@@ -25,6 +25,8 @@ export default {
   pagePatterns,
 
   head: [
+    ['script', {}, `if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) { window.document.querySelector('html').classList.add('dark');} `
+    ],
     ['link', {
       rel: 'icon',
       type: 'image/png',
