@@ -17,7 +17,8 @@ description: "Integrate your Xiaomi SP-EUC01 via Zigbee2MQTT with whatever smart
 
 ## Notes
 
-None
+### Pairing
+Press and hold the button on the device for +- 5 seconds, until the blue light starts blinking.
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
