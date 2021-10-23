@@ -79,7 +79,7 @@ export default {
     }
   },
 
-  debug: true,
+  debug: false,
 
   bundler: '@vuepress/bundler-webpack',
   bundlerConfig: {
