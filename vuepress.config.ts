@@ -79,6 +79,8 @@ export default {
     }
   },
 
+  debug: true,
+
   bundler: '@vuepress/bundler-webpack',
   bundlerConfig: {
     chainWebpack: (chain) => {
