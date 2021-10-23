@@ -136,7 +136,7 @@ This step is optional and can be skipped as the device page will automatically b
 3. Add a picture (`.jpg`, 150x150) to `docs/images/devices` and link it in file of the previous step.
 4. Create a Pull Request to [zigbee2mqtt.io](https://github.com/Koenkk/zigbee2mqtt.io).
 
-On the next release of Zigbee2MQTT, the documentation will be updated and your device file will be linked in `docs/information/supported_devices.md` automatically.
+On the next release of Zigbee2MQTT, the documentation will be updated and your device file will be linked in `../../supported-devices.md` automatically.
 
 ### 5. Done!
 Now it's time to submit a pull request to [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) so this device is supported out of the box by Zigbee2MQTT. This can be done by adding the definition to the [vendor file](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/devices) of your device. :smiley:

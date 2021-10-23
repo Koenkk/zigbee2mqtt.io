@@ -11,4 +11,4 @@ Zigbee2MQTT was written in Node.js and runs almost on every platform with afford
 * [Windows](./04_windows.md)
 * [Python virtual-environment](./05_python_virtual_environment.md)
 
-If you've trouble take a look at [Zigbee2MQTT fails to start](/guide/usage/FAQ.md#help-zigbee2mqtt-fails-to-start).
+If you've trouble take a look at [Zigbee2MQTT fails to start](../faq/README.md#help-zigbee2mqtt-fails-to-start).

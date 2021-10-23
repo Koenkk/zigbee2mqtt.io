@@ -72,7 +72,7 @@ Now Wireshark is able to decrypt the messages. When e.g. turning on a light you 
 
 #### Troubleshooting
 * If you get `couldn't run /usr/bin/dumpcap in child process: permission denied` when running whsniff, check if /usr/bin/dumpcap is executable for everyone. Or `chmod 755 /usr/bin/dumpcap`.
-* You may need to remove `modemmanager` as this has been known to cause issues. [Howto](https://www.zigbee2mqtt.io/information/FAQ.html#modemmanager-is-installed)
+* You may need to remove `modemmanager` as this has been known to cause issues. [Howto](../../guide/faq/README.md#modemmanager-is-installed)
 
 ## With HUSBZB-1 stick
 If you happen to have a spare HUSBZB-1 stick, you can also use this to sniff traffic.

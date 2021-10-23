@@ -25,16 +25,13 @@ export const navbar: NavbarConfig = [
         text: 'Usage',
         link: '/guide/usage/pairing_devices.md',
       },
+      '/guide/faq/',
       '/guide/development/',
     ]
   },
   {
     text: 'Devices',
     link: '/supported-devices/'
-  },
-  {
-    text: 'FAQ',
-    link: '/guide/usage/FAQ.md',
   },
   {
     text: 'Advanced',
