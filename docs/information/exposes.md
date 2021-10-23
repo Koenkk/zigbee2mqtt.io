@@ -66,22 +66,6 @@ Example:
 }
 ```
 
-### Map
-Indicates a device exposes a map (key/value). The `key_type` and `value_type` are one of the following expose types: binary, numeric, enum or text with the `property`, `name` and `access` removed.
-
-Example:
-```json
-{
-    "type":"map",
-    "name":"temperature_precision",
-    "description": "Control precision of the temperature value at a given temperature",
-    "property":"temperature_precision",
-    "access": 7,
-    "key_type": {"type":"numeric","unit":"°C","description":"Temperature"},
-    "value_type": {"type":"numeric","description":"Number of digits behind decimal separator","value_min":0},
-}
-```
-
 ### List
 Indicates a device exposes a list of values. Currently the only possible `item_type` is `number`.
 
