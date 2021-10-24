@@ -4,7 +4,13 @@ import * as path from "path";
 import { DefinePlugin } from 'webpack';
 
 export const domain = 'https://psi-4ward.github.io';
-export const base = '/zigbee2mqtt.io/';
+const isDevelop = !!process.env.DEVELOP_BRANCH;
+
+export function getBase() {
+  let base = '/zigbee2mqtt.io/';
+  if (isDevelop) base += 'develop/';
+  return base;
+}
 const pagePatterns = ['**/*.md', '!.vuepress', '!node_modules'];
 
 // Ability to exclude device-page rendering to save time while in dev
@@ -12,9 +18,9 @@ if (process.env.EXCLUDE_DEVICES) {
   pagePatterns.push('!devices');
 }
 
-export default {
-  base,
-  title: 'Zigbee2MQTT',
+const conf = {
+  base: getBase(),
+  title: 'Zigbee2MQTT' + ( isDevelop ? ' develop' : '' ),
   description: 'Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges',
 
   dest: 'dist',
@@ -31,28 +37,28 @@ export default {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      href: `${ base }favicon-16x16.png`,
+      href: `${ getBase() }favicon-16x16.png`,
     }],
     ['link', {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      href: `${ base }favicon-32x32.png`,
+      href: `${ getBase() }favicon-32x32.png`,
     }],
     ['link', {
       rel: 'apple-touch-icon',
       type: 'image/png',
       sizes: '180x180',
-      href: `${ base }apple-touch-icon.png`,
+      href: `${ getBase() }apple-touch-icon.png`,
     }],
     ['link', {
       rel: 'manifest',
-      href: `${ base }site.webmanifest`,
+      href: `${ getBase() }site.webmanifest`,
     }],
     ['link', {
       rel: 'mask-icon',
       color: '#ffc135',
-      href: `${ base }safari-pinned-tab.svg`,
+      href: `${ getBase() }safari-pinned-tab.svg`,
     }],
     ['meta', {
       name: 'msapplication-TileColor',
@@ -107,3 +113,9 @@ export default {
     ],
   ],
 }
+
+if(isDevelop) {
+  conf.head.push(['meta', { name: 'robots', content: 'noindex' }]);
+}
+
+export default conf;

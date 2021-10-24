@@ -2,7 +2,7 @@ import { promises as fsp } from "fs";
 import { promisify } from 'util';
 import * as path from "path";
 import * as glob from 'glob';
-import { base } from "../../vuepress.config";
+import { getBase } from "../../vuepress.config";
 
 const distDir = path.resolve(__dirname, '..', '..', 'dist');
 
@@ -22,7 +22,7 @@ async function checkFile(file: string, availableFiles: string[]) {
     .map(x => [x, x])
     .map(([org, resolved]) => {
       if(!resolved.startsWith('/')) { // resolve relative links
-        return [org, path.join(base, path.dirname(file).substr(distDir.length), resolved)];
+        return [org, path.join(getBase(), path.dirname(file).substr(distDir.length), resolved)];
       } else {
         return [org, resolved];
       }
@@ -31,7 +31,7 @@ async function checkFile(file: string, availableFiles: string[]) {
       org,
       resolved.endsWith('/') ? `${ resolved }index.html` : resolved
     ]) // add index.html for links pointing to a directory
-    .map(([org, resolved]) => [org, resolved.substr(base.length)]);
+    .map(([org, resolved]) => [org, resolved.substr(getBase().length)]);
 
   const broken = linkToFiles
     .filter(([org, resolved]) => !availableFiles.includes(resolved))
