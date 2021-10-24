@@ -92,7 +92,7 @@ export default {
           __QUASAR_SSR_CLIENT__: false,
           __QUASAR_SSR_PWA__: false
         }]);
-      chain.cache({ 'type': 'filesystem' });
+    //  chain.cache({ 'type': 'filesystem' });
     },
   },
 
