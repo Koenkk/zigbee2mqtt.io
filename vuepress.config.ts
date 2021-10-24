@@ -1,7 +1,7 @@
 import { navbar } from "./navbar";
 import { sidebar } from "./sidebar";
 import * as path from "path";
-import { DefinePlugin, IgnorePlugin } from 'webpack';
+import { DefinePlugin } from 'webpack';
 
 export const domain = 'https://psi-4ward.github.io';
 export const base = '/zigbee2mqtt.io/';
@@ -92,7 +92,6 @@ export default {
           __QUASAR_SSR_CLIENT__: false,
           __QUASAR_SSR_PWA__: false
         }]);
-    //  chain.cache({ 'type': 'filesystem' });
     },
   },
 
