@@ -4,11 +4,11 @@ sidebarDepth: 0
 
 # Zigbee2MQTT fails to start
 
-Most of the time this is caused by zigbee-herdsman not being able to communicate with your adapter (e.g. CC2531).
+Most of the time this is caused by Zigbee2MQTT not being able to communicate with your Zigbee adapter.
 
 [[toc]]
 
-## Error: SRSP - SYS - ping after 6000ms
+## Error: `SRSP - SYS - ping after 6000ms`
 
 2 common reasons of this error:
 
@@ -16,7 +16,7 @@ Most of the time this is caused by zigbee-herdsman not being able to communicate
    Check [this](../installation/01_linux.md#1-determine-location-of-the-adapter-and-checking-user-permissions) to find
    out the port of your adapter.
 2. If you are using a CC2530 or CC2531; it is a common issue for this adapter to crash (due to its outdated hardware).
-   Reflashing the firmware should fix the problem. If it happens often consider upgrading to
+   Reflashing the firmware should fix the problem. If it happens often consider flashing the [source routing firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/source_routing) or upgrade to
    a [more powerful adapter](../adapters/README.md).
 
 ## Verify that you put the correct port in configuration.yaml
@@ -31,9 +31,9 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 
 In this example the correct `port` would be `/dev/ttyACM0`.
 
-### Which port should I use for CC26X2R1/CC1352P-2, /dev/ttyACM0 or /dev/ttyACM1?
+### Which port should I use for Texas Instruments LAUNCHXL-CC26X2R1/CC1352P-2, /dev/ttyACM0 or /dev/ttyACM1?
 
-The CC26X2R1 has a build in debugger. This debugger also registers a port next to the device data port. Of course this
+The Texas Instruments launchpad has a build in debugger. This debugger also registers a port next to the device data port. Of course this
 is not necessarily number 0 and 1. But normally the lowest number is the device data port and the other the debugger.
 
 To find the correct port, execute:
@@ -96,13 +96,11 @@ Reboot your device and now your user should have access to the device.
 
 ## Error: `Coordinator failed to start, probably the panID is already in use, try a different panID or channel`
 
-- In case you are migrating from another adapter
-  see: [How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?](#how-do-i-migrate-from-a-cc2531-to-a-more-powerful-coordinator-eg-zzh)
 - If you still get this error after increasing the panID and you are using a Raspberry Pi with other USB devices
   attached (e.g. SSD) try connecting the SSD or adapter through a powered USB hub.
 - In case you are getting this after first starting successfully and pairing a device it might be that the firmware has
   been flashed incorrectly. Try flashing the stick on a different
-  computer ([detailed info](https://github.com/Koenkk/zigbee2mqtt/issues/6302)).
+  computer ([detailed info](https://github.com/Koenkk/zigbee2mqtt/issues/6302)). This issue mainly occurs in combination with a Slaesh's CC2652RB stick.
 
 ## Error: `Resource temporarily unavailable Cannot lock port`
 
@@ -158,13 +156,12 @@ ModemManager through `sudo apt-get purge modemmanager`.
 
 hciuart can be disabled by executing: `sudo systemctl disable hciuart`.
 
-## CC1352P-2/CC26X2R1 launchpad coordinators only: press the reset button on the device
+## Texas Instruments LAUNCHXL-CC1352P-2/CC26X2R1 only: press the reset button on the device
 
-If Zigbee2MQTT fails to start with a CC1352P-2 with `Error: SRSP - SYS - version after 6000ms`, you most probably have
-connected your device to a system that requires pressing the reset button (the one next to the USB connector)
+If Zigbee2MQTT fails to start with a Texas Instruments LAUNCHXL-CC1352P-2/CC26X2R1 with `Error: SRSP - SYS - version after 6000ms`, you most probably have connected your device to a system that requires pressing the reset button (the one next to the USB connector)
 momentarily/shortly after connecting the USB cable. This issue has primarily been observed on x86 architectures only (
 e.g., Intel NUC, HPE Microserver, i7 laptop), see also [#2162](https://github.com/Koenkk/zigbee2mqtt/issues/2162). The
-procedure has to be repeated every time the CC1352P-2 is re-connected and it's not clear yet, whether this can be fixed
+procedure has to be repeated every time the adapter is re-connected and it's not clear yet, whether this can be fixed
 at all. It does not seem to occur on ARM based boards (Raspberry Pi, ODROID XU4).
 
 Something that can also solve the issue is to replug the USB cable.
@@ -175,7 +172,7 @@ When you plug the CC2531 in your computer, the green LED should go on. By pressi
 green LED should go off. The CC2531 has 2 buttons on it, the reset button is the one which is closest to the USB port.
 Now try starting Zigbee2MQTT again.
 
-## CC26XR1 LaunchPad coordinators only: verify that you have the correct revision
+## Texas Instruments LAUNCHXL-CC26X2R1 coordinator only: verify that you have the correct revision
 
 The revision of your board can be seen in UniFlash by clicking *more info* in the top, now press *Read device info*.
 
