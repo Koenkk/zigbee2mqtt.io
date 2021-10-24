@@ -11,6 +11,7 @@ Scenes can be created in two ways, by storing the current state (`scene_store`) 
 
 ### `scene_store`
 This is the easiest way to create a scene. First set the device or group in the desired state. Next store the current state as a scene by sending a command to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]/set` with payload `{"scene_store": SCENE_ID}` where `SCENE_ID` is a number (e.g. `1`).
+To also provide a name for the scene (shown in e.g. the frontend) send e.g. `{"scene_store": {"ID": 1, "name": "My scene"}}`.
 
 ### `scene_add`
 `scene_add` provides two benefits over `scene_store`: you can control which attributes will be stored in the scene (e.g. only brightness) and it's possible to set a transition time. You can execute a `scene_add` by sending to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]/set` with payload:
@@ -19,6 +20,7 @@ This is the easiest way to create a scene. First set the device or group in the 
 {
     "scene_add": {
         "ID": 3, // the SCENE_ID
+        "name": "Chill scene", // optional: scene name, shown in e.g. the frontend
         "transition": 3, // optional: transition time of the scene in seconds (default = 0 seconds)
         // Properties below are all optional, note that it's not possible to use both 'color_temp' and 'color'
         // Attributes not specified will stay as-is when the scene is recalled.

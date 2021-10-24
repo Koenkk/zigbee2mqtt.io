@@ -25,39 +25,24 @@ class MyExampleExtension {
     }
 
     /**
-     * This method is called by the controller once Zigbee has been started.
+     * This method is called by the controller once Zigbee2MQTT has been started.
      */
-    // onZigbeeStarted() {}
-
-    /**
-     * This method is called by the controller once connected to the MQTT server.
-     */
-    onMQTTConnected() {
+    start() {
         this.mqtt.publish('example/extension', 'hello from MyExampleExtension');
+
+        // All possible events can be seen here: https://github.com/Koenkk/zigbee2mqtt/blob/dev/lib/eventBus.ts
+
+        // Subscribe to MQTT messages
+        this.eventBus.onMQTTMessage(this, (data) => {
+            console.log(`Received MQTT message on topic '${data.topic}' with message '${data.message}'`);
+        });
     }
-
-    /**
-     * Is called when a Zigbee message from a device is received.
-     * @param {string} type Type of the message
-     * @param {Object} data Data of the message
-     * @param {Object?} resolvedEntity Resolved entity returned from this.zigbee.resolveEntity()
-     * @param {Object?} settingsDevice Device settings
-     */
-    // onZigbeeEvent(type, data, resolvedEntity) {}
-
-    /**
-     * Is called when a MQTT message is received
-     * @param {string} topic Topic on which the message was received
-     * @param {Object} message The received message
-     * @return {boolean} if the message was handled
-     */
-    // onMQTTMessage(topic, message) {}
 
     /**
      * Is called once the extension has to stop
      */
     stop() {
-        this.eventBus.removeListenersExtension(this.constructor.name);
+        this.eventBus.removeListenersExtension(this);
     }
 }
 

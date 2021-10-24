@@ -106,11 +106,14 @@ Example payload:
         "definition":{
             "model":"ZNCZ02LM",
             "vendor":"Xiaomi",
-            "description":"Mi power plug ZigBee"
+            "description":"Mi power plug ZigBee",
+            "options": [...], // see exposes/options below
+            "exposes": [...]  // see exposes/options below
         },
         "power_source":"Mains (single phase)",
         "date_code":"02-28-2017",
         "model_id":"lumi.plug",
+        "scenes": [{"id": 3, "name": "Chill scene"}],
         "interviewing":false,
         "interview_completed":true
     },
@@ -125,11 +128,13 @@ Example payload:
             "model":"LED1624G9",
             "vendor":"IKEA",
             "description":"TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white",
-            "exposes":[{"type":"light","features":["state","brightness","color_xy"]}],
+            "options": [...], // see exposes/options below
+            "exposes": [...]  // see exposes/options below
         },
         "power_source":"Mains (single phase)",
         "software_build_id":"1.3.009",
         "model_id":"TRADFRI bulb E27 CWS opal 600lm",
+        "scenes": [],
         "date_code":"20180410",
         "interviewing":false,
         "interview_completed":true
@@ -156,6 +161,7 @@ Example payload:
         "power_source":"Battery",
         "date_code":"04-28-2019",
         "model_id":null,
+        "scenes": [],
         "interviewing":false,
         "interview_completed":true
     },
@@ -169,6 +175,7 @@ Example payload:
         "definition":null,
         "power_source":null,
         "date_code":null,
+        "scenes": [],
         "model_id":null,
         "interviewing":false,
         "interview_completed":true
@@ -176,8 +183,11 @@ Example payload:
 ]
 ```
 
-### Exposes
-A device definition will always have an `exposes` property. The format of `exposes` is documented in [Exposes](./exposes.md).
+### Exposes/options
+A device definition will always have an `exposes` and `options` property which are a lists containing expose objects. The expose format is documented in [Exposes](./exposes.md).
+- `exposes` This contains all the device capabilities (e.g. switch, light, occupancy)
+- `options` Contains all the device options (e.g. `temperature_precision`) which can be set through `zigbee2mqtt/bridge/request/device/options`
+
 
 ## zigbee2mqtt/bridge/groups
 Contains the groups.
@@ -189,6 +199,7 @@ Example payload:
     {
         "id":1,
         "friendly_name":"my_group",
+        "scenes": [{"id": 1, "name": "Scene 1"}],
         "members":[
             {
                 "ieee_address":"0x90fd9ffffe6494fc",
