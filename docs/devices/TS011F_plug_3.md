@@ -13,7 +13,7 @@ description: "Integrate your TuYa TS011F_plug_3 via Zigbee2MQTT with whatever sm
 | Vendor  | TuYa  |
 | Description | Smart plug (without power monitoring) |
 | Exposes | switch (state), power_outage_memory, linkquality |
-| Picture | ![TuYa TS011F_plug_3](../images/devices/TS011F_plug_2.jpg) |
+| Picture | ![TuYa TS011F_plug_3](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS011F_plug_2.jpg) |
 
 ## Notes
 
@@ -22,7 +22,7 @@ description: "Integrate your TuYa TS011F_plug_3 via Zigbee2MQTT with whatever sm
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/)*
 
 * `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds.
 
