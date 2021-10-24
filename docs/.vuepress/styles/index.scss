@@ -8,6 +8,16 @@
   background: #333538;
 }
 
+@media (max-width: 959px) {
+  .back-to-top {
+    display: block !important;
+  }
+}
+
+.page {
+  padding-bottom: 3rem;
+}
+
 // Hide @vuepress/theme-default repo link in navbar
 .navbar .navbar-links .navbar-links-item:last-child {
   display: none;
