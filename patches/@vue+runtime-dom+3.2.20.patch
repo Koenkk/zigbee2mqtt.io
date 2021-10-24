@@ -1,0 +1,35 @@
+diff --git a/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-browser.js b/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-browser.js
+index d9953f3..29311b6 100644
+--- a/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-browser.js
++++ b/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-browser.js
+@@ -4647,7 +4647,11 @@ function createHydrationFunctions(rendererInternals) {
+         const domType = node.nodeType;
+         vnode.el = node;
+         let nextNode = null;
+-        switch (type) {
++      if (vnode.patchFlag === PatchFlags.BAIL) {
++        vnode.dynamicChildren = null
++      }
++
++      switch (type) {
+             case Text:
+                 if (domType !== 3 /* TEXT */) {
+                     nextNode = onMismatch();
+diff --git a/node_modules/@vue/runtime-dom/dist/runtime-dom.global.js b/node_modules/@vue/runtime-dom/dist/runtime-dom.global.js
+index 10fa1ba..da34c5c 100644
+--- a/node_modules/@vue/runtime-dom/dist/runtime-dom.global.js
++++ b/node_modules/@vue/runtime-dom/dist/runtime-dom.global.js
+@@ -4648,7 +4648,12 @@ var VueRuntimeDOM = (function (exports) {
+           const { type, ref, shapeFlag } = vnode;
+           const domType = node.nodeType;
+           vnode.el = node;
+-          let nextNode = null;
++
++        if (vnode.patchFlag === PatchFlags.BAIL) {
++          vnode.dynamicChildren = null
++        }
++
++        let nextNode = null;
+           switch (type) {
+               case Text:
+                   if (domType !== 3 /* TEXT */) {
