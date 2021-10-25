@@ -42,7 +42,7 @@ ch341 3-1:1.0: ch341-uart converter detected
 usb 3-1: ch341-uart converter now attached to ttyUSB0
 ```
 
-As we can see the adapter was indentified and mounted on `ttyUSB0`.
+As we can see the adapter was identified and mounted on `ttyUSB0`.
 
 ```bash
 $ ls -l /dev/ttyUSB0
