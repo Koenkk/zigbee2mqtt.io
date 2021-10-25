@@ -9,19 +9,18 @@ next: ../usage/
 
 In order to use Zigbee2MQTT we need the following hardware:
 
-1. **A Zigbee Adapter** which is the interface between the Computer (or Server) where you run Zigbee2MQTT and the Zigbee radio
+1. <img src="../../images/zzh.jpg" title="ZZH" class="float-left" /> **A Zigbee Adapter** which is the interface between the Computer (or Server) where you run Zigbee2MQTT and the Zigbee radio
 communication. Zigbee2MQTT supports a variety of adapters with different kind of connections like USB, GPIO or remote via WIFI or Ethernet. 
-  Recommended adapters have a CC2652R, CC2652P, CC2652RB or CC1352P chip. See [supported Adapters](../adapters/README.md).  
-  ![ZZH](../../images/zzh.jpg)
+  Recommended adapters have a CC2652R, CC2652P, CC2652RB or CC1352P chip. See [supported Adapters](../adapters/README.md). <br class="clear" />
 
+2. <img src="../../images/pi.jpg" title="Raspberry Pi" class="float-left" /> **A Server** where you would run Zigbee2MQTT. Most Raspberry-Pi models are known to work but you can run it on many computers and platforms including Linux, Windows an MacOS. <br class="clear" />  
 
-2. **A Server** where you would run Zigbee2MQTT. Most Raspberry-Pi models are known to work but you can run it on many computers and platforms including Linux, Windows an MacOS.  
-  ![Raspberry Pi](../../images/pi.jpg)
+3. <img src="../../images/xiaomi_sensors.jpg" title="Zigbee devices" class="float-left" /> One or more **Zigbee Devices** which will be paired with Zigbee2MQTT. <br class="clear" />
 
-
-3. One or more **Zigbee Devices** which will be paired with Zigbee2MQTT.  
-   ![Zigbee devices](../../images/xiaomi_sensors.jpg)
-
+::: tip TIP 
+<img alt="USB Cable" src="../../images/usb_extension_cable.jpg" class="float-left" /> To improve network range and stability use a USB extension cable.  
+See [Improve network range and stability](../../advanced/zigbee/02_improve_network_range_and_stability.md). <br class="clear" />
+:::
 
 ## Installation
 
