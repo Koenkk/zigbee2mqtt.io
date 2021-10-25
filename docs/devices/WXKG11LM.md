@@ -55,7 +55,7 @@ Most of the times this happens because of the following reasons:
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 

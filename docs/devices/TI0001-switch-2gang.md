@@ -24,13 +24,13 @@ addedAt: 2021-02-05T19:15:16Z
 
 
 After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend
-of Zigbee2MQTT or using [MQTT message](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
+of Zigbee2MQTT or using [MQTT message](../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
 In case of problems it's recommended to remove device and than retry pairing and re-configuring device.
 
 ### Important
 These devices can only be used on channel 26.
 These devices are locked to the manufacturer's network key (ext_pan_id).
-Your configuration file [data/configuration.yaml](../../guide/configuration/) must contain the following:
+Your configuration file [data/configuration.yaml](../guide/configuration/) must contain the following:
 
 ```yaml
 advanced:

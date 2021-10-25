@@ -35,7 +35,7 @@ It has been reported, that the sensor reports humidity changes quite frequently 
 Uses a CR2450 battery
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

@@ -23,7 +23,7 @@ addedAt: 2020-06-29T17:33:31Z
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
 
 * `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.
 To control the precision based on the illuminance_lux value set it to e.g. `{1000: 0, 100: 1}`,

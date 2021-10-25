@@ -28,7 +28,7 @@ Press and hold the reset button on the device for +- 5 seconds (until the green 
 After this the device will automatically join.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

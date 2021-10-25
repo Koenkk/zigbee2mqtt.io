@@ -33,7 +33,7 @@ What works is to use (very) short “on’s” and a little bit longer “off’
 Start with bulb on, then off, and then 6 “on’s”, wait in the 6th ON state. (If you try play safe and go for 7 "on's" the reset sometimes fails.)
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

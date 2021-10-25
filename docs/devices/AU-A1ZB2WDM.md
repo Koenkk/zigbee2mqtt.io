@@ -29,7 +29,7 @@ The connected load, and the red LED indicator behind the dimmer knob will flash 
 The connected load, and the red LED indicator behind the dimmer knob will flash a third time to indicate that it has paired successfully.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

@@ -55,7 +55,7 @@ If the device is asleep (which is most of the time) and you need it to be awake 
  * In theory the device will send a low-power report to the ZigBee network if the voltage falls below 2.4V - no other battery reporting.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
