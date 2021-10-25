@@ -11,8 +11,8 @@ sidebarDepth: 0
 This problem can be divided in 2 categories; no logging is shown at all OR interview fails.
 
 ### No logging is shown at all
-- Make sure joining is enabled by setting `permit_join: true` in the [configuration](../configuration/).
-- There can be too much interference, try connecting the coordinator USB through an USB extension cable. This problem occurs a lot when used in combination with a Raspberry Pi 4.
+- Make sure [joining is enabled](../usage/pairing_devices.md).
+- There can be too much interference, try connecting the coordinator USB through an USB extension cable. This problem occurs a lot when used in combination with a Raspberry Pi 3 and 4.
 - If you are using a Raspberry Pi, try disconnecting any other USB devices. If after that pairing works, try connecting the USB devices via a powered USB hub.
 - Make sure that any other Zigbee networks/hubs are powered down. When you e.g. want to pair an IKEA bulb which was first paired to the IKEA gateway make sure to power down the IKEA gateway. If that doesn't help also try powering down all devices that are connected to the IKEA hub.
 - If it's a battery powered device, try replacing the battery.
@@ -32,7 +32,7 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - In case the device is a bulb, try resetting it through [Touchlink](../usage/touchlink.md)
 - Try pairing close to a bulb (light) router instead of the coordinator.
 
-## How do I migrate from a CC2531 to a more powerful coordinator (e.g. ZZH)?
+## How do I migrate from a CC2530/CC2531 to a more powerful coordinator (e.g. ZZH)?
 Since Zigbee2MQTT 1.21.0 this can be done without having to repair all devices.
 Stop Zigbee2MQTT, plug in the new coordinator and update the `serial` -> `port`  in your `configuration.yaml`, next start Zigbee2MQTT.
 
@@ -45,7 +45,7 @@ You need to re-pair all you devices when:
 - Changing the network key (`network_key`), Zigbee channel (`channel`) or panID (`pan_id`)  in `configuration.yaml`.
 - Switching between adapter types requires repairing, **except when**:
   - Switching from a CC2530/CC2531 based adapter running the 1.2 firmware to a CC2538/CC2652/CC1352 based adapter does not require repairing
-    - **Note:** the other way around (CC2538/CC2652/CC1352 to a CC2530/CC2531 running 1.2 firmware) does require repairing
+    - **Important:** the other way around (CC2538/CC2652/CC1352 to a CC2530/CC2531 running 1.2 firmware) does require repairing
   - Switching between CC2530/CC2531 running the 3.0 firmware, CC2538, CC2652 and CC1352 based adapters does not require repairing.
 
 ### Doesn't require repairing
@@ -66,7 +66,7 @@ Some end devices (e.g. Xiaomi door sensor) sleep for a too long time which cause
 ## Why is the `action` property always empty?
 When the Home Assistant integration is enabled (`homeassistant: true` in your `configuration.yaml`) the `action` property of your e.g. buttons will almost always be empty. Whenever an `action` is published e.g. `{"action": "single"}` it will be immediately followed up by a `{"action": ""}`. This is to trigger a state change in the Home Assistant action sensor (so that it can be used in e.g. automations).
 
-## I read that Zigbee2MQTT has a limit of 20 devices (when using a CC2531), is this true?
+## I read that Zigbee2MQTT has a limit of 20 devices (when using a CC2530/CC2531 adapter), is this true?
 Definitely not! Example given: the default Zigbee2MQTT CC2531 firmware indeed supports 20 devices connected **directly** to the coordinator. However, by having routers in your network the network size can be extended. Probably all AC powered devices e.g. bulbs serve as a router, you can even use another [CC2530/CC2531 as a router](../../advanced/zigbee/05_create_a_cc2530_router.md) (which has a limit of 21 devices).
 
 ### Example

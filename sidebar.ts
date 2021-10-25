@@ -35,15 +35,15 @@ export const sidebar: SidebarConfig = {
       link: '/guide/usage/',
       children: [
         '/guide/usage/pairing_devices.md',
+        '/guide/usage/integrations.md',
         '/guide/usage/touchlink.md',
-        '/guide/usage/exposes.md',
         '/guide/usage/scenes.md',
         '/guide/usage/availability.md',
         '/guide/usage/binding.md',
         '/guide/usage/groups.md',
         '/guide/usage/ota_updates.md',
         '/guide/usage/mqtt_topics_and_messages.md',
-        '/guide/usage/integrations.md',
+        '/guide/usage/exposes.md',
         '/guide/usage/debug.md',
       ]
     },

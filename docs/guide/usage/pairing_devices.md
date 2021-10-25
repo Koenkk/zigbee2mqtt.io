@@ -1,11 +1,19 @@
 ---
 ---
 # Allowing devices to join
-Before you start, make sure that `permit_join: true` is set in your `configuration.yaml`. Otherwise new devices cannot join the network!
+To allow devices to join the network joining has to be permitted. There are various ways to do this:
 
-It's equally important that `permit_join: false` is set in your `configuration.yaml` after initial setup is done to keep your Zigbee network safe and to avoid accidental joining of other Zigbee devices.
+### Frontend (recommended)
+Enabling joining via the frontend ensures that joining is disabled automatically after 255 seconds.
+The joining button can be found in the right top.
 
-# Pairing
+### MQTT (recommended)
+The `zigbee2mqtt/bridge/request/permit_join` MQTT topic can be used to enable joining. It is recommended to provide a value for `time` to ensure joining is automatically disabled. See [MQTT topic and messages](./mqtt_topics_and_messages.md#zigbee2mqtt-bridge-request-permit-join) for more information.
+
+### Configuration.yaml (not recommended)
+By setting `permit_join: true` in your `configuration.yaml` the joining will automatically be enabled when starting Zigbee2MQTT. Joining is **not** automatically disabled.
+
+## Pairing
 First check if the device page ([Supported devices](../../supported-devices/), click on the model number) contains instructions on how to pair your device.
 
 If no instructions are available, the device can probably be paired by factory resetting it.

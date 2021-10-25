@@ -1,9 +1,9 @@
 ---
 ---
 # Groups
-*Ongoing discussion can be found here: [#764](https://github.com/Koenkk/zigbee2mqtt/issues/764)*
-
 Zigbee2MQTT has support for Zigbee groups. By using Zigbee groups you can control multiple devices simultaneously with one command.
+
+> **_TIP:_** Groups can also be managed via the frontend *Groups* tab.
 
 ## Configuration
 Add the following to your `configuration.yaml`.
@@ -56,7 +56,7 @@ By default when one of the devices in a group changes its state, the group state
 ## How do groups work?
 By using the above `add` command above, a device will be added to a group. The device itself is responsible for storing to which groups it belongs. Others, e.g. the coordinator, do not have knowledge to which device a groups belongs.
 
-When using the `set` command, e.g. to turn on all devices in a group, a broadcast request is send to **all* devices in the network. The device itself then determines if it belongs to that group and if it should execute the command.
+When using the `set` command, e.g. to turn on all devices in a group, a broadcast request is send to **all** devices in the network. The device itself then determines if it belongs to that group and if it should execute the command.
 
 ## Adding a specific endpoint
 In case you want to add a device to a group with multiple endpoints, e.g. a QBKG03LM with 2 buttons you can specify it by adding the endpoint name to the `DEVICE` in the request payload in the format of `DEVICE/ENDPOINT`. Example request payload `{"group":"my_group","device":"my_switch/right"}`.

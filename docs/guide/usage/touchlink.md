@@ -1,9 +1,12 @@
 # Touchlink
-*NOTE: Touchlink is not supported for Deconz adapters (e.g. Conbee II)*
+
+**Important:** Touchlink **only** works for adapters based on a Texas Instruments chip (chips starting with CC, e.g. CC2652).
 
 Touchlink is a feature of Zigbee which allows devices physically close to each other to communicate with each other **without** being in the same network.
 
 Note that not all Zigbee devices support Touchlink, but most bulbs of common brands like Philips and IKEA support this.
+
+> **_TIP:_**  All commands below can also be executed via the frontend *Touchlink* tab.
 
 ## Scan
 This allows to scan for Touchlink enabled devices. The outcome of this scan can be used later to determine what device to factory reset. To scan send a MQTT message to `zigbee2mqtt/bridge/request/touchlink/scan` with an empty payload.

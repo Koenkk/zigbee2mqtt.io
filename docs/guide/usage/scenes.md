@@ -5,6 +5,7 @@ sidebarDepth: 1
 # Scenes
 Scenes allow to quickly set certain states for a device or group.
 Most of the time this is used for bulbs or a group of bulbs as it allows to set a certain color and brightness with a single command.
+All of the actions below can also be done via the frontend.
 
 ## Creating a scene
 Scenes can be created in two ways, by storing the current state (`scene_store`) or by adding a scene (`scene_add`). Note that `scene_store` and `scene_add` will override each other if the same `SCENE_ID` is used.
