@@ -51,11 +51,6 @@ export const sidebar: SidebarConfig = {
       text: 'FAQ',
       link: '/guide/faq/',
     },
-    {
-      text: 'Development',
-      link: '/guide/development/',
-      children: getFiles('guide/development')
-    },
   ],
 
   '/advanced/zigbee/': getFiles('advanced/zigbee'),
