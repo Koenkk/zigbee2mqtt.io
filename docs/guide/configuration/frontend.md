@@ -1,5 +1,7 @@
 ---
+sidebarDepth: 1
 ---
+
 # Frontend
 *Ongoing discussion can be found here: https://github.com/Koenkk/zigbee2mqtt/issues/4266*
 

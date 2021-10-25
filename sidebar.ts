@@ -23,11 +23,12 @@ export const sidebar: SidebarConfig = {
       text: 'Configuration',
       link: '/guide/configuration/',
       children: [
-        {
-          text: 'Zigbee2MQTT',
-          link: '/guide/configuration/'
-        },
-        '/guide/configuration/frontend.md'
+        ...getFiles('guide/configuration'),
+      //   {
+      //     text: 'Zigbee2MQTT',
+      //     link: '/guide/configuration/'
+      //   },
+      //   '/guide/configuration/frontend.md'
       ]
     },
     {
@@ -38,7 +39,6 @@ export const sidebar: SidebarConfig = {
         '/guide/usage/integrations.md',
         '/guide/usage/touchlink.md',
         '/guide/usage/scenes.md',
-        '/guide/usage/availability.md',
         '/guide/usage/binding.md',
         '/guide/usage/groups.md',
         '/guide/usage/ota_updates.md',
