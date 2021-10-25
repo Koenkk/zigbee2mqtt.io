@@ -23,12 +23,17 @@ export const sidebar: SidebarConfig = {
       text: 'Configuration',
       link: '/guide/configuration/',
       children: [
-        ...getFiles('guide/configuration'),
-      //   {
-      //     text: 'Zigbee2MQTT',
-      //     link: '/guide/configuration/'
-      //   },
-      //   '/guide/configuration/frontend.md'
+        '/guide/configuration/adapter-settings.md',
+        '/guide/configuration/mqtt.md',
+        '/guide/configuration/zigbee-network.md',
+        '/guide/configuration/webui.md',
+        '/guide/configuration/devices-groups.md',
+        '/guide/configuration/logging.md',
+        '/guide/configuration/block-pass-list.md',
+        '/guide/configuration/ota-device-updates.md',
+        '/guide/configuration/device-availability.md',
+        '/guide/configuration/homeassistant.md',
+        '/guide/configuration/more-config-options.md',
       ]
     },
     {

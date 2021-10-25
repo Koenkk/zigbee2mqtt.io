@@ -2,8 +2,8 @@
 sidebarDepth: 1
 ---
 
-# Frontend
-*Ongoing discussion can be found here: https://github.com/Koenkk/zigbee2mqtt/issues/4266*
+# WebUI
+*Ongoing discussion can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/4266)*
 
 Zigbee2MQTT has a built-in webbased frontend. To enable the frontend add the following to your `configuration.yaml`:
 

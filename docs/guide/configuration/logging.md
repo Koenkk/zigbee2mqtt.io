@@ -4,6 +4,10 @@ sidebarDepth: 1
 
 # Logging
 
+Zigbee2MQTT can output logs to the console, a logfile or a (remote) Syslog server.
+
+The log-level can be adjusted at runtime, see [MQTT Topics and Messages](../usage/mqtt_topics_and_messages.md#zigbee2mqtt-bridge-request) for details.
+
 ```yaml
 advanced:
   # Optional: Logging level, options: debug, info, warn, error (default: info)

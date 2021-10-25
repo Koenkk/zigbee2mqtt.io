@@ -2,7 +2,9 @@
 sidebarDepth: 1
 ---
 
-# MQTT connection
+# MQTT
+
+## Server connection
 
 Zigbee2MQTT requires a MQTT-Server connection to operate.
 
@@ -39,9 +41,9 @@ mqtt:
   force_disable_retain: false
 ```
 
-## Specifying MQTT user/password and network_key in a different file
+### Specifying MQTT user/password and network_key in a different file
 
-To specify the MQTT user/password and network_key in a different file, e.g `secret.yaml`, use the following
+To specify the MQTT user/password in a different file, e.g `secret.yaml`, use the following
 configuration.
 
 **configuration.yaml**
@@ -51,8 +53,6 @@ configuration.
 mqtt:
   user: '!secret user'
   password: '!secret password'
-advanced:
-  network_key: '!secret network_key'
 ```
 
 **secret.yaml**
@@ -60,7 +60,6 @@ advanced:
 ```yaml
 user: mqtt_user
 password: mqtt_password
-network_key: [1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]
 ```
 
 ## MQTT behaviour

@@ -1,6 +1,6 @@
-# OTA device update
+# OTA device firmware update
 
-Also see the `OTA updates guide`(../usage/ota_updates.md).
+Also see the [OTA firmware update usage guide](../usage/ota_updates.md).
 
 ```yaml
 # Optional: OTA update settings

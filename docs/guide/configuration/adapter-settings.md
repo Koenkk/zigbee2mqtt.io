@@ -4,7 +4,8 @@ sidebarDepth: 1
 
 # Adapter settings
 
-Configuration of the Zigbee-Adapter.
+Configuration of the Zigbee USB-Adapter.  
+You can use `dmesg` command on Linux hosts to find the mounted device.
 
 ```yaml
 # Required: serial settings
@@ -18,6 +19,7 @@ serial:
   adapter: null
 ```
 
+<!-- TODO: some notes about rtscts? Is it useful, which adapter supports it? -->
 ```yaml
 advanced:
   # Optional: Baud rate speed for serial port, this can be anything firmware support but default is 115200 for Z-Stack and EZSP, 38400 for Deconz, however note that some EZSP firmware need 57600.
@@ -30,6 +32,11 @@ advanced:
   adapter_concurrent: null
 ```
 
+::: tip 
+It's also possible to connect Adapters over TCP. See how to connect a [remote adapter](../../advanced/remote-adapter/connect_to_a_remote_adapter.md).
+:::
+
+
 ## Transmitter power
 
 ```yaml
@@ -41,3 +48,5 @@ experimental:
   # For the CC2652R(B) this is 5 dBm, CC2652P/CC1352P-2 20 dBm.
   transmit_power: 5
 ```
+
+
