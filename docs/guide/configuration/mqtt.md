@@ -85,7 +85,7 @@ advanced:
   legacy_api: true
 ```
 
-## JSON MQTT payload
+## MQTT payload format
 
 ```yaml
 experimental:

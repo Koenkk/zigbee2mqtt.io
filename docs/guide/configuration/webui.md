@@ -3,7 +3,9 @@ sidebarDepth: 1
 ---
 
 # WebUI
-*Ongoing discussion can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/4266)*
+::: tip
+Ongoing discussion about the frontend can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/4266)
+:::
 
 Zigbee2MQTT has a built-in webbased frontend. 
 
