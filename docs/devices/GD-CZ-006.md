@@ -30,7 +30,7 @@ addedAt: 2019-07-22T20:08:17Z
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

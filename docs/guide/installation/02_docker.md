@@ -43,7 +43,7 @@ $ docker run \
 * `--device=/dev/ttyACM0`: Location of adapter (e.g. CC2531)
 * `-v /run/udev:/run/udev:ro --privileged=true`: is optional, only required for autodetecting the port
 * Optional: in case your MQTT broker is running on `localhost` and is not within the same Docker network as the Zigbee2MQTT container also add `--network host \`.
-* Note: For USB auto-discovery, the container needs to be executed by root in "--privileged" mode.
+* For USB auto-discovery, the container needs to be executed by root in "--privileged" mode.
 
 ### Running as non-root
 
@@ -392,7 +392,7 @@ The workaround is based on the solution found at [Add support for devices with "
 
 ## Docker on Synology DSM 7.0
 
-**Note:** This may not work with all Zigbee controllers, but has been tested with the CC2531.
+> **_NOTE:_** This may not work with all Zigbee controllers, but has been tested with the CC2531.
 
 As of Disk Station Manager version 7, Synology removed the built-in support for USB-devices like a Zigbee controller.
 The USB support can be installed to the Linux kernel by issuing the following commands as *root*.

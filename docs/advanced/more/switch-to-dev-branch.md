@@ -7,9 +7,11 @@ sidebar: auto
 The Zigbee2MQTT dev branch contains the latest features, improvements and supported devices.
 In case you want to try this, you can checkout the dev branch.
 
-*NOTE: This branch is a development branch! It could be less stable than the release version!*
+::: warning
+This branch is a development branch! It could be less stable than the release version!
+:::
 
-## Bare-metal
+## Linux
 ```bash
 # Stop Zigbee2MQTT and go to directory
 sudo systemctl stop zigbee2mqtt
@@ -34,7 +36,7 @@ sudo systemctl start zigbee2mqtt
 ```
 
 ## Docker
-Use Docker images postfixed with the `-dev` tag.
+Use the Docker image with the `latest-dev` tag.
 
-## Hass.io addon
+## Home Assistant addon
 Use the `edge` version.

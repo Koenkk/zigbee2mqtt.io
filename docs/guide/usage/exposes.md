@@ -77,7 +77,7 @@ Examples:
 ## Specific
 
 ### Light
-Indicates a device exposes a light, possible features are `state`, `brightness`, `color_temp`, `color_xy` and `color_hs`.
+Indicates a device exposes a light, possible features are `state`, `brightness`, `color_temp`, `color_xy`, `color_hs`, `min_brightness`, `level_config` and `color_temp_startup`.
 
 Example:
 
@@ -172,7 +172,7 @@ Example:
 
 ### Climate
 Indicates this device exposes climate functionality.
-- Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `occupied_cooling_setpoint`, `local_temperature`, `system_mode`, `running_state`, `fan_mode`, `preset` and `away_mode`.
+- Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `occupied_cooling_setpoint`, `local_temperature`, `system_mode`, `running_state`, `fan_mode`, `preset`, `away_mode`, `local_temperature_calibration`, `sensor`, `away_mode` and `pi_heating_demand`.
 - Never has both `occupied_heating_setpoint` and `current_heating_setpoint`.
 - Possible values for `system_mode` are `off`, `heat`, `cool`, `auto`, `dry` and `fan_only`.
 - Possible values for `running_state` are `idle`, `heat`, `cool`.

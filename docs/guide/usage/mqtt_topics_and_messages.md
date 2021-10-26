@@ -41,7 +41,7 @@ Where `FRIENDLY_NAME` is e.g. `0x00158d0001b79111`. Message published to this to
 ```
 
 ## zigbee2mqtt/FRIENDLY_NAME/set
-Publishing messages to this topic allows you to control your Zigbee devices via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH). How to control a specific device can be found in the "Exposes" section on the device page which can be accessed via ["Supported devices"](../../supported-devices/).
+Publishing messages to this topic allows you to control your Zigbee devices via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH). How to control a specific device can be found in the *Exposes* section on the device page which can be accessed via ["Supported devices"](../../supported-devices/).
 
 ```js
 {
@@ -54,8 +54,8 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
 ### Without JSON
 In case you don't want to use JSON, publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set/state` with payload `ON` is the same as publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"state": "ON"}`.
 
-## zigbee2mqtt/[FRIENDLY_NAME]/get
-This is the counterpart of the `set` command. It allows you to read a value from a device. To read e.g. the state of a device send the payload `{"state": ""}`. What you can `/get` is specified on the device page under the "Exposes" section.
+## zigbee2mqtt/FRIENDLY_NAME/get
+This is the counterpart of the `set` command. It allows you to read a value from a device. To read e.g. the state of a device send the payload `{"state": ""}`. What you can `/get` is specified on the device page under the *Exposes* section.
 
 ## zigbee2mqtt/bridge/info
 Contains information of the bridge.
@@ -220,7 +220,7 @@ Events will be published to this topic. Possible types are `device_joined`, `dev
 - `{"type":"device_leave","data":{"ieee_address":"0x90fd9ffffe6494fc","friendly_name":"my_bulb"}}`
 
 ## zigbee2mqtt/bridge/extensions
-See [User extensions](../development/user_extensions.md).
+See [User extensions](../../advanced/more/user_extensions.md).
 
 ## zigbee2mqtt/bridge/request/+
 This can be used to e.g. configure certain settings like allowing new devices to join. Zigbee2MQTT will always respond with the same topic on `zigbee2mqtt/bridge/response/+`. The response payload will at least contain a `status` and `data` property, `status` is either `ok` or `error`. If `status` is `error` it will also contain an `error` property containing a description of the error.
@@ -271,7 +271,7 @@ Links are labelled with link quality (0..255) and active routes (listed by short
 
 #### zigbee2mqtt/bridge/request/extension/save
 
-See [User extensions](../development/user_extensions.md).
+See [User extensions](../../advanced/more/user_extensions.md).
 
 ### Device
 

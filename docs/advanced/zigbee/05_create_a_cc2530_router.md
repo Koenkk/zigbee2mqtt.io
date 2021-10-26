@@ -8,7 +8,7 @@ The CC2530 is highly suitable for serving as a router. It has an external antenn
 
 ![CC2530 in an enclosure](../../images/cc2530_router_enclosure.jpg)
 
-## 1. What do I need?
+## What do I need?
 
 | Name | Price | Picture |
 | ------------- | ------------- | ------------- |
@@ -19,7 +19,7 @@ The CC2530 is highly suitable for serving as a router. It has an external antenn
 | CC debugger | - | ![CC debugger](../../images/cc_debugger.jpg) |
 | 8 female to female jumper wires | - | ![Jumper wires](../../images/female_to_female_jumper_wires.jpg) |
 
-# 2. Flashing the CC2530
+## Flashing the CC2530
 The CC2530 has to be flashed with a router firmware which has to be done with a CC debugger using 6 female to female jumper wires. Pins have to connected as follows:
 
 ### CC debugger pin layout
@@ -49,7 +49,7 @@ Now the CC2530 can be flashed using the same instructions as [Flashing the CC253
 
 ![CC debugger connected to CC2530](../../images/ccdebugger_cc2530.jpg)
 
-# 3. Putting it in an enclosure
+## Putting it in an enclosure
 The following steps have to be followed:
 - Drill 2 holes in the enclosure; one for the antenna, one for the power cable
 - Lay a knot in the power cable; this serves as strain relief
@@ -69,5 +69,5 @@ The following steps have to be followed:
 
 ![CC2530 in an enclosure](../../images/cc2530_router_enclosure.jpg)
 
-# 4. Done!
+## Done!
 Now plug the CC2530 into a power outlet where it will automatically join your Zigbee network. (don't forget to set `permit_join: true` to enable joining of new devices). Enjoy your extended Zigbee network range! :smile:

@@ -27,7 +27,7 @@ addedAt: 2019-07-22T20:08:17Z
 This option allows to inter connect the relays which will make sure that only one relay is on at a time. To do this publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"interlock": true}` or `{"interlock": false}`. By default this option is `false`.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

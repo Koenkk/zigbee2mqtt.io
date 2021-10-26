@@ -26,7 +26,6 @@ export const navbar: NavbarConfig = [
         link: '/guide/usage/pairing_devices.md',
       },
       '/guide/faq/',
-      '/guide/development/',
     ]
   },
   {

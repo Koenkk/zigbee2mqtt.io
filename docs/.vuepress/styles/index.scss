@@ -33,6 +33,22 @@ img.float-left {
   display: none;
 }
 
+code {
+  padding-left: .3rem;
+  padding-right: .3rem;
+  margin-left: .2rem !important;;
+  margin-right: .2rem !important;
+}
+.theme-default-content pre code, .theme-default-content pre[class*=language-] code {
+  margin-left: 0 !important;;
+  margin-right: 0 !important;
+
+}
+
+.dark .custom-container.tip code {
+  background: #292C34;
+}
+
 .theme-default-content:not(.custom) {
   @media (max-width: $MQMobile) {
     padding-left: 0.8rem;

@@ -1,9 +1,17 @@
 ---
+sidebarDepth: 1
 ---
-# Frontend
-*Ongoing discussion can be found here: https://github.com/Koenkk/zigbee2mqtt/issues/4266*
 
-Zigbee2MQTT has a built-in webbased frontend. To enable the frontend add the following to your `configuration.yaml`:
+# WebUI
+::: tip
+Ongoing discussion about the frontend can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/4266)
+:::
+
+Zigbee2MQTT has a built-in webbased frontend. 
+
+![Frontend](../../images/frontend.png)
+
+To enable the frontend add the following to your `configuration.yaml`:
 
 ```yaml
 frontend:
@@ -18,9 +26,6 @@ frontend:
 ```
 
 To specify the `auth_token` in a different file set e.g. `auth_token: '!secret auth_token'`, create a file called `secret.yaml` next to `configuration.yaml` with content `auth_token: super-secret-token`.
-
-## Screenshot
-![Frontend](../../images/frontend.png)
 
 ## Nginx proxy configuration
 In case you want to run the frontend behind a proxy you can use the following config as an example.

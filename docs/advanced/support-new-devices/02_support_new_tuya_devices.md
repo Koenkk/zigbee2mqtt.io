@@ -175,5 +175,5 @@ Repeat for all data points.
 ### 6. BONUS: Contacting the manufacturer
 When contacting a manufacturer of Tuya compatible device DO NOT ask for Zigbee protocol of the device, they usually have no idea how the Tuya radio that they bought communicates over Zigbee. Instead ask for the UART protocol for their device, this should give you a better cooperation. You can also ask them about DPIDs and data formats for their functions.
 
-### 7. BONUS2: Further reading
+### 7. BONUS 2: Further reading
 You can read more about how the device communicates with Tuya Zigbee radio module [here](https://developer.tuya.com/en/docs/iot/device-development/access-mode-mcu/zigbee-general-solution/tuya-zigbee-module-uart-communication-protocol/tuya-zigbee-module-uart-communication-protocol?id=K9ear5khsqoty)

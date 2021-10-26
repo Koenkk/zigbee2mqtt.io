@@ -4,7 +4,13 @@ This how-to explains how to run Zigbee2MQTT with a comercial Sonoff ZBBridge Gat
 We will use a Sonoff ZBBridge Gateway with custom firmware to connect to a serial port over TCP.
 In this way you can use a simple premade Hub/Gateway flash it with custom firmware and then use it as your coordinator.
 
-WiFi-based Serial-to-IP bridges are **not recommended** for Silicon Labs EZSP adapters as the serial protocol does not have enough fault-tolerance to handle packet loss or latency delays that can normally occur over WiFi connections. Keep in mind that the EZSP support is currently **experimental**.
+::: warning
+Keep in mind that the EZSP support is currently **experimental**.
+:::
+
+::: warning
+WiFi-based Serial-to-IP bridges are **not recommended** as the serial protocol does not have enough fault-tolerance to handle packet loss or latency delays that can normally occur over WiFi connections.
+:::
 
 ## 1. Flash Tasmota ZBBridge
 In order for the gateway to be usefull for us we want it flashed with custom firmware ([tasmota-zbbridge](https://tasmota.github.io/docs/Zigbee/)) so we can free ourselves from the cloud.

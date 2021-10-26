@@ -3,8 +3,6 @@ sidebarDepth: 1
 ---
 
 # Binding
-*An ongoing discussion about this feature can be found here: [#782](https://github.com/Koenkk/zigbee2mqtt/issues/782)*
-
 Zigbee has support for binding which makes it possible that devices can directly control each other without the intervention of Zigbee2MQTT or any home automation software.
 
 ## When to use this
@@ -13,6 +11,8 @@ A use case for this is e.g. the TRADFRI wireless dimmer. Binding the dimmer dire
 - It will work even when home automation software, Zigbee2MQTT or the coordinator is down.
 
 ## Commands
+> **_TIP:_**  All commands below can also be executed via the frontend, click on your device and go to the *Bind* tab.
+
 Binding can be configured by using either `zigbee2mqtt/bridge/request/device/bind` to bind and `zigbee2mqtt/bridge/request/device/unbind` to unbind. The payload should be `{"from": SOURCE, "to": TARGET}` where `SOURCE` and `TARGET` can be the `friendly_name` of a group or device. Example request payload: `{"from": "my_remote", "to": "my_bulb"}`, example response payload: `{"data":{"from":"my_remote","to":"my_bulb","clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`. The `clusters` in the response indicate the bound/unbound clusters, `failed` indicates any failed to bind/unbind clusters. In case all clusters fail to bind the `status` is set to `error`.
 
 By default all supported clusters are bound. To restrict which clusters are being bound/unbound add `clusters` to the request payload e.g. `{"from": "my_remote", "to": "my_bulb", "clusters": ["genOnOff"]}`. Possible clusters are: `genScenes`, `genOnOff`, `genLevelCtrl`, `lightingColorCtrl` and `closuresWindowCovering`.
@@ -67,4 +67,4 @@ In order for this feature to work, the device has to support it. As devices from
 
 If your devices do **not** support reporting put the device in a group and bind the remote to the group instead of directly to the device. This will make Zigbee2MQTT poll the device for updates when the bound remote controls the device. To minimize traffic this has not been enabled for all devices. If this does not work please create an issue for it [here](https://github.com/Koenkk/zigbee2mqtt/issues).
 
-**NOTE:** Any manual setup reportings of the clusters `genOnOff`, `genLevelCtrl` `lightingColorCtrl` and `closuresWindowCovering` will be removed if there are no binds to the device or group a device is in when unbinding. You have to setup these reportings again.
+Any manual setup reportings of the clusters `genOnOff`, `genLevelCtrl` `lightingColorCtrl` and `closuresWindowCovering` will be removed if there are no binds to the device or group a device is in when unbinding. You have to setup these reportings again.

@@ -23,11 +23,17 @@ export const sidebar: SidebarConfig = {
       text: 'Configuration',
       link: '/guide/configuration/',
       children: [
-        {
-          text: 'Zigbee2MQTT',
-          link: '/guide/configuration/'
-        },
-        '/guide/configuration/frontend.md'
+        '/guide/configuration/adapter-settings.md',
+        '/guide/configuration/mqtt.md',
+        '/guide/configuration/zigbee-network.md',
+        '/guide/configuration/webui.md',
+        '/guide/configuration/devices-groups.md',
+        '/guide/configuration/logging.md',
+        '/guide/configuration/block-pass-list.md',
+        '/guide/configuration/ota-device-updates.md',
+        '/guide/configuration/device-availability.md',
+        '/guide/configuration/homeassistant.md',
+        '/guide/configuration/more-config-options.md',
       ]
     },
     {
@@ -35,26 +41,20 @@ export const sidebar: SidebarConfig = {
       link: '/guide/usage/',
       children: [
         '/guide/usage/pairing_devices.md',
+        '/guide/usage/integrations.md',
         '/guide/usage/touchlink.md',
-        '/guide/usage/exposes.md',
         '/guide/usage/scenes.md',
-        '/guide/usage/availability.md',
         '/guide/usage/binding.md',
         '/guide/usage/groups.md',
         '/guide/usage/ota_updates.md',
         '/guide/usage/mqtt_topics_and_messages.md',
-        '/guide/usage/integrations.md',
+        '/guide/usage/exposes.md',
         '/guide/usage/debug.md',
       ]
     },
     {
       text: 'FAQ',
       link: '/guide/faq/',
-    },
-    {
-      text: 'Development',
-      link: '/guide/development/',
-      children: getFiles('guide/development')
     },
   ],
 
