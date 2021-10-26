@@ -52,7 +52,7 @@ Set `max_duration` from the Zigbee2MQTT UI or by publishing `{"max_duration": NE
 This alarm are preset to highest volume
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

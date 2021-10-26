@@ -23,7 +23,7 @@ addedAt: 2021-01-31T22:24:43Z
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
 

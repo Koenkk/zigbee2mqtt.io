@@ -30,7 +30,7 @@ addedAt: 2020-12-30T11:31:00Z
 * SEA802-Z01 (white LED display on the side, rotary plate): Turn the rotary plate to decrease the temperature until the LED dots show "OF", then long press until the display changes to "--"
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 

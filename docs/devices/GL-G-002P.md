@@ -30,7 +30,7 @@ addedAt: 2021-10-01T17:18:02Z
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)

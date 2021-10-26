@@ -29,7 +29,7 @@ Hold button for about 5 seconds until blue light turn on.
 If you need to reset device first, hold button longer until red light turn on.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
 

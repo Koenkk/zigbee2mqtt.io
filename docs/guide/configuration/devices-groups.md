@@ -117,11 +117,21 @@ You can define groups of devices which are applied to the Zigbee network. Also s
 groups:
   '1':
     friendly_name: Kitchen lights
+    # Optional: Retain messages (true/false) (default: false)
+    retain: false
+    # Optional: Default transition to be used when e.g. changing brightness (in seconds) (default: 0)
+    transition: 2
+    # Optional: Change group state when one of the devices in it changes state, see 'State changes' below (default: true)
+    optimistic: true
+    # Optional: Devices of this group,
+    # Note: This can be the ieeeAddr of the device or the friendly_name (default: empty)
     devices:
-      - 0x84fd27fffe4082ca/1
-      - 0x000b3cfffef8ed66/1
+      - 0x84fd27fffe4082ca
+      - 0x000b3cfffef8ed66
+      # Only add specific endpoint to the group
       - 0x000d6ffffee405eb/1
-      - 0x001788010818fc75/11
+      - 0x001788010818fc75
+      - some_device_friendly_name
 ```
 
 ::: warning

@@ -49,7 +49,7 @@ When bound to a lamp, the behavior is as follows (for WXCJKG12LM Aqara Opple swi
 
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 

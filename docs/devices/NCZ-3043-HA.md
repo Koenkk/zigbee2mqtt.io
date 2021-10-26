@@ -28,7 +28,7 @@ Press the button on the bottom of the sensor 10 times to reset.
 After this the device will automatically join.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.

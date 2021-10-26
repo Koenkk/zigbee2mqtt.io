@@ -33,7 +33,7 @@ Press and hold the All Off and All On button on the Remote until the Status LED 
 Then immediately press 5 times the All On button.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `simulated_brightness`: Set to `true` to simulate a `brightness` value (default: `false`).
 If this device provides a `brightness_move_up` or `brightness_move_down` action it is possible to specify the update

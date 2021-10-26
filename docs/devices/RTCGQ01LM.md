@@ -39,7 +39,7 @@ More detailed information about this can be found [here](https://community.hubit
 
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 
 * `no_occupancy_since`: Timeout (in seconds) after which `no_occupancy_since` is sent.

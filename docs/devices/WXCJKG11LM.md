@@ -46,7 +46,7 @@ When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple swi
 - long right click: cold white
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/#device-specific-configuration)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
