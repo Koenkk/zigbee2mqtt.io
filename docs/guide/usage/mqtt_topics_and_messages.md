@@ -220,7 +220,7 @@ Events will be published to this topic. Possible types are `device_joined`, `dev
 - `{"type":"device_leave","data":{"ieee_address":"0x90fd9ffffe6494fc","friendly_name":"my_bulb"}}`
 
 ## zigbee2mqtt/bridge/extensions
-See [User extensions](../development/user_extensions.md).
+See [User extensions](../../advanced/more/user_extensions.md).
 
 ## zigbee2mqtt/bridge/request/+
 This can be used to e.g. configure certain settings like allowing new devices to join. Zigbee2MQTT will always respond with the same topic on `zigbee2mqtt/bridge/response/+`. The response payload will at least contain a `status` and `data` property, `status` is either `ok` or `error`. If `status` is `error` it will also contain an `error` property containing a description of the error.
@@ -271,7 +271,7 @@ Links are labelled with link quality (0..255) and active routes (listed by short
 
 #### zigbee2mqtt/bridge/request/extension/save
 
-See [User extensions](../development/user_extensions.md).
+See [User extensions](../../advanced/more/user_extensions.md).
 
 ### Device
 
