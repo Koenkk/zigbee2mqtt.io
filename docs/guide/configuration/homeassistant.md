@@ -4,6 +4,8 @@ sidebarDepth: 1
 
 # Home Assistant integration
 
+See: [Home Assistant integration guide](../usage/integrations/home_assistant.md).
+
 ```yaml
 # Optional: Home Assistant integration (MQTT discovery) (default: false)
 homeassistant: false
