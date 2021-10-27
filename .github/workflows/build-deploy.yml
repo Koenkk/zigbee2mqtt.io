@@ -40,6 +40,12 @@ jobs:
       - name: Run tests 🩺
         run: npm run test
 
+      - name: Add build.txt 🗓
+        run: |
+          git log --pretty=format:'%h' -n 1 > dist/build.txt
+          echo >> dist/build.txt
+          date +%F_%T >> dist/build.txt
+
       - name: Deploy 🚀
         if: github.ref == 'refs/heads/master'
         uses: JamesIves/github-pages-deploy-action@4.1.5
