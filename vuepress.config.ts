@@ -103,6 +103,10 @@ const conf = {
 
   plugins: [
     [
+      'vuepress-plugin-sitemap2',
+      { hostname: domain }
+    ],
+    [
       '@vuepress/register-components',
       {
         componentsDir: path.resolve(__dirname, 'docs/.vuepress/components'),
