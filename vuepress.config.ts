@@ -107,6 +107,19 @@ const conf = {
       { hostname: domain }
     ],
     [
+      '@vuepress/docsearch',
+      {
+        apiKey: 'ec30f4bfbe1cd6f87736dc40a21690d9',
+        indexName: 'test',
+        appId: 'OTZVGS02CK',
+        locales: {
+          '/': {
+            placeholder: 'Search',
+          },
+        },
+      },
+    ],
+    [
       '@vuepress/register-components',
       {
         componentsDir: path.resolve(__dirname, 'docs/.vuepress/components'),
