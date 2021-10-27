@@ -22,14 +22,6 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://www.tindie.com/products/electrolama/zzh-cc2652r-multiprotocol-rf-stick/#product-reviews">Tindie</a></td>
   </tr>
   <tr>
-    <td><img src="../images/slaeshs_cc2652rb_stick.jpg"></td>
-    <td>Slaesh's CC2652RB stick</td>
-    <td>USB connected adapter with external antenna. Based on CC2652RB chip</td>
-    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652RB_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652RB_router_20210128.zip">Router</a></td>
-    <td><a href="https://slae.sh/projects/cc2652/#flashing">Flashing</a></td>
-    <td><a href="https://slae.sh/projects/cc2652/">Slae.sh</a></td>
-  </tr>
-  <tr>
     <td><img src="../images/CC2652P_smartlight_zigbee_coordinator.png"></td>
     <td>SMARTLIGHT CC2652P Zigbee USB dongle</td>
     <td>CC2652P factory-made Zigbee USB coordinator with external 6dB antenna and worldwide delivery</td>
@@ -265,6 +257,14 @@ Zigbee2MQTT officially supports the following adapters:
     <td><a href="https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin">Coordinator</a><br/></td>
     <td><a href="https://www.aliexpress.com/item/1005002809329614.html?spm=a2g0o.store_pc_allProduct.8148356.2.4d7f1012TTc3uX">Flashing</a></td>
     <td><a href="https://www.aliexpress.com/item/1005002809329614.html?spm=a2g0o.store_pc_allProduct.8148356.2.4d7f1012TTc3uX">Aliexpress</a></td>
+  </tr>
+  <tr>
+    <td><img src="../images/slaeshs_cc2652rb_stick.jpg"></td>
+    <td>Slaesh's CC2652RB stick</td>
+    <td>USB connected adapter with external antenna. Based on CC2652RB chip. <b>WARNING: <a href="https://github.com/Koenkk/zigbee2mqtt/discussions/6702">delivery issues reported</a></b></td>
+    <td><a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652RB_coordinator_20210708.zip">Coordinator</a><br/> <a href="https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652RB_router_20210128.zip">Router</a></td>
+    <td><a href="https://slae.sh/projects/cc2652/#flashing">Flashing</a></td>
+    <td><a href="https://slae.sh/projects/cc2652/">Slae.sh</a></td>
   </tr>
 </table>
 </div>
