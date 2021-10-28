@@ -31,7 +31,7 @@ jobs:
         run: |
           cat << EOF > algolia.json
           {
-            "index_name": "test",
+            "index_name": "zigbee2mqtt.io",
             "sitemap_urls": ["https://psi-4ward.github.io/zigbee2mqtt.io/sitemap.xml"],
             "stop_urls": [],
             "selectors": {
@@ -41,7 +41,7 @@ jobs:
                 "default_value": "Miscellaneous"
               },
               "lvl1": ".theme-default-content h1",
-              "lvl2": ".theme-default-content h2, .device-page h1 + *",
+              "lvl2": ".theme-default-content h2, .device-page h1 + table tbody tr:nth-child(3) td:nth-child(2)",
               "lvl3": ".theme-default-content h3",
               "lvl4": ".theme-default-content h4",
               "lvl5": ".theme-default-content h5",
@@ -63,6 +63,6 @@ jobs:
       - name: Update algolia docsearch
         uses: darrenjennings/algolia-docsearch-action@master
         with:
-          algolia_application_id: OTZVGS02CK
-          algolia_api_key: ${{ secrets.ALGOLIA }}
+          algolia_application_id: K1BM3QYQ34
+          algolia_api_key: ${{ secrets.ALGOLIA_INDEX_APIKEY }}
           file: 'algolia.json'
