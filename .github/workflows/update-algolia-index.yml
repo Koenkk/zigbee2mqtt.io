@@ -11,10 +11,12 @@ jobs:
   update-algolia-index:
     runs-on: ubuntu-latest
     steps:
+        # Try to workaround time gap between newly gh-pages deployment is available (cache cleared?)
       - name: Wait for deployment is published
         run: |
           CNT=1
           echo Waiting for deployment ${GITHUB_SHA:0:7} is published
+          sleep 60
           while ! curl -sS https://psi-4ward.github.io/zigbee2mqtt.io/build.txt | grep -qF ${GITHUB_SHA:0:7} ; do
             CNT=$((CNT+1))
             sleep 1
