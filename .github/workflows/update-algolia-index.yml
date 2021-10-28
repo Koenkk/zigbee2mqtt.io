@@ -36,9 +36,9 @@ jobs:
             "stop_urls": [],
             "selectors": {
               "lvl0": {
-                "selector": ".navbar-links-item > .router-link-active, .sidebar-heading.active",
+                "selector": "header .router-link-active",
                 "global": true,
-                "default_value": "Documentation"
+                "default_value": "Miscellaneous"
               },
               "lvl1": ".theme-default-content h1",
               "lvl2": ".theme-default-content h2, .device-page h1 + *",

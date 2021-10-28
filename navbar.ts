@@ -14,7 +14,11 @@ export const navbar: NavbarConfig = [
     text: 'Guide',
     children: [
       '/guide/getting-started/',
-      '/guide/adapters/',
+      {
+        link: '/guide/adapters/',
+        text: 'Supported Adapters',
+        activeMatch: '(/guide/adapters/|/guide/supported-hardware)'
+      },
       {
         text: 'Supported Devices',
         link: '/supported-devices/',
@@ -24,6 +28,7 @@ export const navbar: NavbarConfig = [
       {
         text: 'Usage',
         link: '/guide/usage/pairing_devices.md',
+        activeMatch: '/guide/usage/',
       },
       '/guide/faq/',
     ]
