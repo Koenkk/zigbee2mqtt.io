@@ -1,6 +1,6 @@
 name: Update Algolia-Search index
 
-# Only trigger, when the build workflow succeeded
+# Only trigger, when the build workflow succeeded on branch master
 on:
   workflow_run:
     workflows: [ "Build ⚙ and Deploy 🚀" ]
@@ -55,7 +55,8 @@ jobs:
             }
           }
           EOF
-      - run: curl https://psi-4ward.github.io/zigbee2mqtt.io/build.txt
+
+      - run: curl -sSL https://psi-4ward.github.io/zigbee2mqtt.io/build.txt
 
       - name: Update algolia docsearch
         uses: darrenjennings/algolia-docsearch-action@master
