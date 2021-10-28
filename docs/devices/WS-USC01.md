@@ -2,6 +2,7 @@
 title: "Xiaomi WS-USC01 control via MQTT"
 description: "Integrate your Xiaomi WS-USC01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-06-10T16:45:59Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

@@ -2,6 +2,7 @@
 title: "ORVIBO SN10ZW control via MQTT"
 description: "Integrate your ORVIBO SN10ZW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-06-10T16:45:59Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

@@ -2,6 +2,7 @@
 title: "IOTPerfect PF-PM02D-TYZ control via MQTT"
 description: "Integrate your IOTPerfect PF-PM02D-TYZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-08-17T16:57:14Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

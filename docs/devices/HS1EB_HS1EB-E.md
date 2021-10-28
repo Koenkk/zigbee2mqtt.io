@@ -2,6 +2,7 @@
 title: "HEIMAN HS1EB/HS1EB-E control via MQTT"
 description: "Integrate your HEIMAN HS1EB/HS1EB-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-09-30T20:52:56Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

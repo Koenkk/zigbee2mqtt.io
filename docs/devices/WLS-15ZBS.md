@@ -2,6 +2,7 @@
 title: "Climax WLS-15ZBS control via MQTT"
 description: "Integrate your Climax WLS-15ZBS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-02-13T14:40:13Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

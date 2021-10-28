@@ -2,6 +2,7 @@
 title: "Gledopto GL-S-004ZS control via MQTT"
 description: "Integrate your Gledopto GL-S-004ZS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-04-08T17:49:06Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

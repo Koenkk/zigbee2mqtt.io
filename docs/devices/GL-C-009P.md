@@ -2,6 +2,7 @@
 title: "Gledopto GL-C-009P control via MQTT"
 description: "Integrate your Gledopto GL-C-009P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-03-30T20:29:35Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

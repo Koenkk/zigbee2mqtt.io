@@ -2,6 +2,7 @@
 title: "iCasa ICZB-KPD14S control via MQTT"
 description: "Integrate your iCasa ICZB-KPD14S via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-02-26T17:45:15Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

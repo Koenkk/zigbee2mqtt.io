@@ -2,6 +2,7 @@
 title: "GS BDHM8E27W70-I1 control via MQTT"
 description: "Integrate your GS BDHM8E27W70-I1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-02-04T20:38:05Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

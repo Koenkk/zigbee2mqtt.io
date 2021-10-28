@@ -2,6 +2,7 @@
 title: "Nue / 3A HGZB-01 control via MQTT"
 description: "Integrate your Nue / 3A HGZB-01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-12-30T11:31:00Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

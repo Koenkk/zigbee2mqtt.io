@@ -2,6 +2,7 @@
 title: "CY-LIGHTING DM A60F control via MQTT"
 description: "Integrate your CY-LIGHTING DM A60F via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-09-27T17:28:43Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

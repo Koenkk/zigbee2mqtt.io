@@ -2,6 +2,7 @@
 title: "DIYRuZ DIYRuZ_RT control via MQTT"
 description: "Integrate your DIYRuZ DIYRuZ_RT via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-06-27T13:26:08Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

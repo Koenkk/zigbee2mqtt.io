@@ -2,6 +2,7 @@
 title: "HEIMAN HS2ESK-E control via MQTT"
 description: "Integrate your HEIMAN HS2ESK-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-02-04T20:38:05Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

@@ -2,6 +2,7 @@
 title: "Climax SD-8SCZBS control via MQTT"
 description: "Integrate your Climax SD-8SCZBS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-01-23T21:30:08Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

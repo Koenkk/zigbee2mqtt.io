@@ -2,6 +2,7 @@
 title: "Aurora Lighting AU-A1ZBR1GW control via MQTT"
 description: "Integrate your Aurora Lighting AU-A1ZBR1GW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-01-08T23:43:25Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

@@ -2,6 +2,7 @@
 title: "TuYa TS0601_switch control via MQTT"
 description: "Integrate your TuYa TS0601_switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-09-30T20:52:56Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

@@ -2,6 +2,7 @@
 title: "Sunricher SR-ZG9001T4-DIM-EU control via MQTT"
 description: "Integrate your Sunricher SR-ZG9001T4-DIM-EU via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-09-01T19:56:51Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

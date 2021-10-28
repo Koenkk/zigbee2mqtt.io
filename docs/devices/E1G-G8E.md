@@ -2,6 +2,7 @@
 title: "Sengled E1G-G8E control via MQTT"
 description: "Integrate your Sengled E1G-G8E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-02-28T13:58:01Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

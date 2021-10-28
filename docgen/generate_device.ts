@@ -45,6 +45,7 @@ export default async function generateDevice(device) {
 title: "${ device.vendor } ${ device.model } control via MQTT"
 description: "Integrate your ${ device.vendor } ${ device.model } via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: ${ addedAt }
+pageClass: device-page
 ---
 
 <!-- !!!! -->

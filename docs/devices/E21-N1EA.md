@@ -2,6 +2,7 @@
 title: "Sengled E21-N1EA control via MQTT"
 description: "Integrate your Sengled E21-N1EA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-07-01T18:17:29Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

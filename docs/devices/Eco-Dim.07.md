@@ -2,6 +2,7 @@
 title: "EcoDim Eco-Dim.07 control via MQTT"
 description: "Integrate your EcoDim Eco-Dim.07 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-05-03T19:47:00Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

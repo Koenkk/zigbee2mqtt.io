@@ -2,6 +2,7 @@
 title: "Climax SCM-5ZBS control via MQTT"
 description: "Integrate your Climax SCM-5ZBS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

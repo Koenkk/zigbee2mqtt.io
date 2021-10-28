@@ -2,6 +2,7 @@
 title: "Dawon DNS PM-B530-ZB control via MQTT"
 description: "Integrate your Dawon DNS PM-B530-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-01-14T19:34:25Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

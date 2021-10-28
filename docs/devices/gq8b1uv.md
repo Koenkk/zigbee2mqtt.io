@@ -2,6 +2,7 @@
 title: "TuYa gq8b1uv control via MQTT"
 description: "Integrate your TuYa gq8b1uv via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-01-14T19:34:25Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

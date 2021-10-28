@@ -2,6 +2,7 @@
 title: "Leviton DG15A-1BW control via MQTT"
 description: "Integrate your Leviton DG15A-1BW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-08-01T20:41:55Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

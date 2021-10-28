@@ -2,6 +2,7 @@
 title: "SmartThings STS-IRM-251 control via MQTT"
 description: "Integrate your SmartThings STS-IRM-251 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-06-10T16:45:59Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

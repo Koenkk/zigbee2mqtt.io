@@ -2,6 +2,7 @@
 title: "OpenLumi GWRJN5169 control via MQTT"
 description: "Integrate your OpenLumi GWRJN5169 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-01-26T20:08:21Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

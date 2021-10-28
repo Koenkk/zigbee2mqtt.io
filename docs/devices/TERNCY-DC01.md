@@ -2,6 +2,7 @@
 title: "TERNCY TERNCY-DC01 control via MQTT"
 description: "Integrate your TERNCY TERNCY-DC01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-05-04T11:36:48Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

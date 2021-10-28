@@ -2,6 +2,7 @@
 title: "Dawon DNS SG-V100-ZB control via MQTT"
 description: "Integrate your Dawon DNS SG-V100-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-03-09T19:58:46Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

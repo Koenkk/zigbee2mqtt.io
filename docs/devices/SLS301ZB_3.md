@@ -2,6 +2,7 @@
 title: "Feibit SLS301ZB_3 control via MQTT"
 description: "Integrate your Feibit SLS301ZB_3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-04-08T17:49:06Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

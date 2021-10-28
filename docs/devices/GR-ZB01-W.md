@@ -2,6 +2,7 @@
 title: "AXIS GR-ZB01-W control via MQTT"
 description: "Integrate your AXIS GR-ZB01-W via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

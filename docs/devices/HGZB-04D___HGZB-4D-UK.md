@@ -2,6 +2,7 @@
 title: "Nue / 3A HGZB-04D / HGZB-4D-UK control via MQTT"
 description: "Integrate your Nue / 3A HGZB-04D / HGZB-4D-UK via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2019-11-09T18:37:38Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

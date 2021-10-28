@@ -2,6 +2,7 @@
 title: "HKGK BAC-002-ALZB control via MQTT"
 description: "Integrate your HKGK BAC-002-ALZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-03-28T13:25:07Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

@@ -2,6 +2,7 @@
 title: "Mycket MS-SP-LE27WRGB control via MQTT"
 description: "Integrate your Mycket MS-SP-LE27WRGB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-01-01T12:27:22Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

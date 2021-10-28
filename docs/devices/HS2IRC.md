@@ -2,6 +2,7 @@
 title: "HEIMAN HS2IRC control via MQTT"
 description: "Integrate your HEIMAN HS2IRC via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-09-30T20:52:56Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

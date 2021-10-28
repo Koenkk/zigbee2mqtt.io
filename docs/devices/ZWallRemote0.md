@@ -2,6 +2,7 @@
 title: "Custom devices (DiY) ZWallRemote0 control via MQTT"
 description: "Integrate your Custom devices (DiY) ZWallRemote0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2019-11-09T18:37:38Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

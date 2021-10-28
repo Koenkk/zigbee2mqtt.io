@@ -2,6 +2,7 @@
 title: "Innr OFL 120 C control via MQTT"
 description: "Integrate your Innr OFL 120 C via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-06-29T17:33:31Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

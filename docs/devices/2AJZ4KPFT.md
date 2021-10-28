@@ -2,6 +2,7 @@
 title: "Konke 2AJZ4KPFT control via MQTT"
 description: "Integrate your Konke 2AJZ4KPFT via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2019-09-08T21:16:00Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

@@ -2,6 +2,7 @@
 title: "EnOcean PTM 215ZE control via MQTT"
 description: "Integrate your EnOcean PTM 215ZE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-09-02T18:14:38Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

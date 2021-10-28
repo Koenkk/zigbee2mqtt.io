@@ -2,6 +2,7 @@
 title: "SmartThings STSS-IRM-001 control via MQTT"
 description: "Integrate your SmartThings STSS-IRM-001 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-11-01T12:47:02Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

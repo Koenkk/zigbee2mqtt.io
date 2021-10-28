@@ -2,6 +2,7 @@
 title: "ROOME HSC1-WD-0 control via MQTT"
 description: "Integrate your ROOME HSC1-WD-0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-05-30T19:17:03Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

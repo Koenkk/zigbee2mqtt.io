@@ -2,6 +2,7 @@
 title: "Visonic MCT-340 E control via MQTT"
 description: "Integrate your Visonic MCT-340 E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

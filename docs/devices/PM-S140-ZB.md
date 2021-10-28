@@ -2,6 +2,7 @@
 title: "Dawon DNS PM-S140-ZB control via MQTT"
 description: "Integrate your Dawon DNS PM-S140-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-03-15T15:15:58Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

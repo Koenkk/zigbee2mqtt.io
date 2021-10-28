@@ -2,6 +2,7 @@
 title: "SmartThings STS-OUT-US-2 control via MQTT"
 description: "Integrate your SmartThings STS-OUT-US-2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2019-11-12T18:58:33Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

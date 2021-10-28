@@ -2,6 +2,7 @@
 title: "Xiaomi GZCGQ11LM control via MQTT"
 description: "Integrate your Xiaomi GZCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-09-01T18:11:17Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

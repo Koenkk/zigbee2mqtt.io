@@ -2,6 +2,7 @@
 title: "iCasa ICZB-B1FC60/B3FC64/B2FC95/B2FC125 control via MQTT"
 description: "Integrate your iCasa ICZB-B1FC60/B3FC64/B2FC95/B2FC125 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2019-12-15T17:27:48Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

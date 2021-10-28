@@ -2,6 +2,7 @@
 title: "Hommyn WS-20-Z control via MQTT"
 description: "Integrate your Hommyn WS-20-Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-01-31T22:24:43Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

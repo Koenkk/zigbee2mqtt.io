@@ -2,6 +2,7 @@
 title: "ORVIBO W40CZ control via MQTT"
 description: "Integrate your ORVIBO W40CZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-05-19T20:48:40Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

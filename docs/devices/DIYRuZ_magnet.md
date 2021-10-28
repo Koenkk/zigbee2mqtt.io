@@ -2,6 +2,7 @@
 title: "DIYRuZ DIYRuZ_magnet control via MQTT"
 description: "Integrate your DIYRuZ DIYRuZ_magnet via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2019-11-09T18:37:38Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

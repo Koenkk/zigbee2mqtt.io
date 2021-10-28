@@ -2,6 +2,7 @@
 title: "Livolo TI0001-switch-2gang control via MQTT"
 description: "Integrate your Livolo TI0001-switch-2gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-02-05T19:15:16Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

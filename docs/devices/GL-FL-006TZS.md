@@ -2,6 +2,7 @@
 title: "Gledopto GL-FL-006TZS control via MQTT"
 description: "Integrate your Gledopto GL-FL-006TZS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-09-01T19:56:51Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

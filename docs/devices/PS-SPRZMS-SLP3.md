@@ -2,6 +2,7 @@
 title: "PLAID SYSTEMS PS-SPRZMS-SLP3 control via MQTT"
 description: "Integrate your PLAID SYSTEMS PS-SPRZMS-SLP3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-10-01T17:18:02Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

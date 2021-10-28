@@ -31,6 +31,12 @@ jobs:
           {
             "index_name": "test",
             "sitemap_urls": ["https://psi-4ward.github.io/zigbee2mqtt.io/sitemap.xml"],
+            "start_urls": [
+              {
+                "url": "https://psi-4ward.github.io/zigbee2mqtt.io/devices/",
+                "tags": ["device"]
+              }
+            ],
             "stop_urls": [],
             "selectors": {
               "lvl0": {
@@ -39,7 +45,7 @@ jobs:
                 "default_value": "Documentation"
               },
               "lvl1": ".theme-default-content h1",
-              "lvl2": ".theme-default-content h2",
+              "lvl2": ".theme-default-content h2, .device-page h1 + *",
               "lvl3": ".theme-default-content h3",
               "lvl4": ".theme-default-content h4",
               "lvl5": ".theme-default-content h5",

@@ -2,6 +2,7 @@
 title: "Custom devices (DiY) EFEKTA_THP_LR control via MQTT"
 description: "Integrate your Custom devices (DiY) EFEKTA_THP_LR via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-09-16T00:31:40Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

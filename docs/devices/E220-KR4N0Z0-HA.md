@@ -2,6 +2,7 @@
 title: "TuYa E220-KR4N0Z0-HA control via MQTT"
 description: "Integrate your TuYa E220-KR4N0Z0-HA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-09-30T20:52:56Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

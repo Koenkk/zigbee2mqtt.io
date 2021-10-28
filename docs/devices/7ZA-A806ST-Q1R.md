@@ -2,6 +2,7 @@
 title: "SmartThings 7ZA-A806ST-Q1R control via MQTT"
 description: "Integrate your SmartThings 7ZA-A806ST-Q1R via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-02-28T13:58:01Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

@@ -2,6 +2,7 @@
 title: "Xiaomi RTCGQ13LM control via MQTT"
 description: "Integrate your Xiaomi RTCGQ13LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-02-28T13:58:01Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

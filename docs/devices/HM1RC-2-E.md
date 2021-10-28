@@ -2,6 +2,7 @@
 title: "HEIMAN HM1RC-2-E control via MQTT"
 description: "Integrate your HEIMAN HM1RC-2-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-02-03T17:47:43Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

@@ -2,6 +2,7 @@
 title: "Hej GLSK6ZB-1714 control via MQTT"
 description: "Integrate your Hej GLSK6ZB-1714 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2019-09-08T21:16:00Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

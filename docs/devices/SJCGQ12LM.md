@@ -2,6 +2,7 @@
 title: "Xiaomi SJCGQ12LM control via MQTT"
 description: "Integrate your Xiaomi SJCGQ12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-06-10T16:45:59Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

@@ -2,6 +2,7 @@
 title: "SmartThings STS-PRS-251 control via MQTT"
 description: "Integrate your SmartThings STS-PRS-251 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

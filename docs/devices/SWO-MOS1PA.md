@@ -2,6 +2,7 @@
 title: "Swann SWO-MOS1PA control via MQTT"
 description: "Integrate your Swann SWO-MOS1PA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-06-08T17:35:15Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

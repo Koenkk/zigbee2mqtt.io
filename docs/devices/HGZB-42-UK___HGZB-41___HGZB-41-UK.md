@@ -2,6 +2,7 @@
 title: "Nue / 3A HGZB-42-UK / HGZB-41 / HGZB-41-UK control via MQTT"
 description: "Integrate your Nue / 3A HGZB-42-UK / HGZB-41 / HGZB-41-UK via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2019-12-15T17:27:48Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

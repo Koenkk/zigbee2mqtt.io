@@ -2,6 +2,7 @@
 title: "SmartThings STS-WTR-250 control via MQTT"
 description: "Integrate your SmartThings STS-WTR-250 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-01-26T19:26:34Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

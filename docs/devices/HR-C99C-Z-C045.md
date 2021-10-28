@@ -2,6 +2,7 @@
 title: "ADEO HR-C99C-Z-C045 control via MQTT"
 description: "Integrate your ADEO HR-C99C-Z-C045 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-12-06T20:18:53Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

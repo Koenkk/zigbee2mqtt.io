@@ -2,6 +2,7 @@
 title: "TuYa SNTZ007 control via MQTT"
 description: "Integrate your TuYa SNTZ007 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-10-15T16:42:50Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

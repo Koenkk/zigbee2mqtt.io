@@ -2,6 +2,7 @@
 title: "Schneider Electric U201SRY2KWZB control via MQTT"
 description: "Integrate your Schneider Electric U201SRY2KWZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-03-16T20:41:09Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

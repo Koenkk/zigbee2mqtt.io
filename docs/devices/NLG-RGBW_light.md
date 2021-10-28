@@ -2,6 +2,7 @@
 title: "Paul Neuhaus NLG-RGBW_light control via MQTT"
 description: "Integrate your Paul Neuhaus NLG-RGBW_light via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-08-11T22:17:44Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

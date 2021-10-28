@@ -2,6 +2,7 @@
 title: "Lonsonho QS-Zigbee-D02-TRIAC-2C-LN control via MQTT"
 description: "Integrate your Lonsonho QS-Zigbee-D02-TRIAC-2C-LN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-08-20T20:24:49Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

@@ -2,6 +2,7 @@
 title: "Xiaomi XDD11LM control via MQTT"
 description: "Integrate your Xiaomi XDD11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-06-01T18:05:08Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

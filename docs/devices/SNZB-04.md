@@ -2,6 +2,7 @@
 title: "SONOFF SNZB-04 control via MQTT"
 description: "Integrate your SONOFF SNZB-04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-07-10T21:02:48Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

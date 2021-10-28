@@ -2,6 +2,7 @@
 title: "DIYRuZ FreePad_LeTV_8 control via MQTT"
 description: "Integrate your DIYRuZ FreePad_LeTV_8 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-12-01T19:02:25Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

@@ -2,6 +2,7 @@
 title: "Develco Products A/S SIRZB-110 control via MQTT"
 description: "Integrate your Develco Products A/S SIRZB-110 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-08-22T21:01:09Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

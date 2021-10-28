@@ -2,6 +2,7 @@
 title: "LED Trading HK-LN-DIM-A control via MQTT"
 description: "Integrate your LED Trading HK-LN-DIM-A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-10-20T20:02:02Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

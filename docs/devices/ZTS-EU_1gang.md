@@ -2,6 +2,7 @@
 title: "Moes ZTS-EU_1gang control via MQTT"
 description: "Integrate your Moes ZTS-EU_1gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-03-30T20:29:35Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

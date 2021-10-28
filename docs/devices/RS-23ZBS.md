@@ -2,6 +2,7 @@
 title: "Climax RS-23ZBS control via MQTT"
 description: "Integrate your Climax RS-23ZBS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-06-12T22:33:07Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

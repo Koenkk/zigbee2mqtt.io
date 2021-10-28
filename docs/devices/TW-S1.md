@@ -2,6 +2,7 @@
 title: "Konke TW-S1 control via MQTT"
 description: "Integrate your Konke TW-S1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-01-31T22:24:43Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

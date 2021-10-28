@@ -2,6 +2,7 @@
 title: "Climax SRAC-23B-ZBSR control via MQTT"
 description: "Integrate your Climax SRAC-23B-ZBSR via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-02-13T14:40:13Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

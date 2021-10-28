@@ -2,6 +2,7 @@
 title: "Sengled E11-N1EA control via MQTT"
 description: "Integrate your Sengled E11-N1EA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

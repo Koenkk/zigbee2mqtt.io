@@ -2,6 +2,7 @@
 title: "eWeLink ZB-SW03 control via MQTT"
 description: "Integrate your eWeLink ZB-SW03 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-01-12T20:55:21Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

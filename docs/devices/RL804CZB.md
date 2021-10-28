@@ -2,6 +2,7 @@
 title: "Orvibo RL804CZB control via MQTT"
 description: "Integrate your Orvibo RL804CZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-04-08T17:49:06Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

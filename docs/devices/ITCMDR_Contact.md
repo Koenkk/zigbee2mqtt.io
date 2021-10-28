@@ -2,6 +2,7 @@
 title: "IT Commander ITCMDR_Contact control via MQTT"
 description: "Integrate your IT Commander ITCMDR_Contact via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-06-10T18:52:13Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->

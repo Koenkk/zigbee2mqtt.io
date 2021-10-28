@@ -2,6 +2,7 @@
 title: "Gledopto GL-S-005Z control via MQTT"
 description: "Integrate your Gledopto GL-S-005Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2019-12-15T17:27:48Z
+pageClass: device-page
 ---
 
 <!-- !!!! -->
