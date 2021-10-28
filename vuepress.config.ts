@@ -109,9 +109,9 @@ const conf = {
     [
       '@vuepress/docsearch',
       {
-        apiKey: '662e98933c5c5513d7488c30a98770f1',
-        indexName: 'zigbee2mqtt.io',
-        appId: 'K1BM3QYQ34',
+        apiKey: 'ec30f4bfbe1cd6f87736dc40a21690d9',
+        indexName: 'test',
+        appId: 'OTZVGS02CK',
         locales: {
           '/': {
             placeholder: 'Search',

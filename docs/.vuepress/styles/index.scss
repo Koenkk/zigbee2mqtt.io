@@ -4,8 +4,10 @@
   --content-width: 940px;
 }
 
-.body--dark .q-menu {
-  background: #333538;
+.body--dark {
+  .q-menu, .q-select__dialog {
+    background: #333538;
+  }
 }
 
 @media (max-width: 959px) {
@@ -39,6 +41,7 @@ code {
   margin-left: .2rem !important;;
   margin-right: .2rem !important;
 }
+
 .theme-default-content pre code, .theme-default-content pre[class*=language-] code {
   margin-left: 0 !important;;
   margin-right: 0 !important;
@@ -123,7 +126,7 @@ footer a {
       overflow: hidden;
       height: 0;
     }
-    .active+ul {
+    .active + ul {
       height: auto;
     }
     > ul:only-of-type {
