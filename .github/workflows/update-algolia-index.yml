@@ -33,12 +33,6 @@ jobs:
           {
             "index_name": "test",
             "sitemap_urls": ["https://psi-4ward.github.io/zigbee2mqtt.io/sitemap.xml"],
-            "start_urls": [
-              {
-                "url": "https://psi-4ward.github.io/zigbee2mqtt.io/devices/",
-                "tags": ["device"]
-              }
-            ],
             "stop_urls": [],
             "selectors": {
               "lvl0": {
