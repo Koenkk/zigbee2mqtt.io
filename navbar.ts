@@ -30,7 +30,8 @@ export const navbar: NavbarConfig = [
   },
   {
     text: 'Devices',
-    link: '/supported-devices/'
+    link: '/supported-devices/',
+    activeMatch: '^/(supported-)?devices/',
   },
   {
     text: 'Advanced',

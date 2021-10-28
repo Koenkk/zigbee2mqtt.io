@@ -36,7 +36,7 @@ jobs:
             "stop_urls": [],
             "selectors": {
               "lvl0": {
-                "selector": ".sidebar-heading.active",
+                "selector": ".navbar-links-item > .router-link-active, .sidebar-heading.active",
                 "global": true,
                 "default_value": "Documentation"
               },
@@ -45,7 +45,7 @@ jobs:
               "lvl3": ".theme-default-content h3",
               "lvl4": ".theme-default-content h4",
               "lvl5": ".theme-default-content h5",
-              "text": ".theme-default-content p, .theme-default-content li",
+              "text": ".theme-default-content p, .theme-default-content li, .theme-default-content code, .theme-default-content td",
               "lang": {
                 "selector": "/html/@lang",
                 "type": "xpath",
