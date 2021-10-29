@@ -63,7 +63,7 @@ devices:
 
 ## State retrieval
 
-When this feature is enabled and a device reconnects or announces itself on the network, Zigbee2MQTT will retrieve the
+When the availability feature is enabled and a device reconnects or announces itself on the network, Zigbee2MQTT will retrieve the
 state of the device. This is e.g. handy when a bulb turns itself on after being reconnected to mains power. The
 following attributes will be read: `state`, `brightness`, `color_temp` and `color`.
 
