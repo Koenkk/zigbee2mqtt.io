@@ -12,7 +12,7 @@ description: "Integrate your Xiaomi QBKG38LM via Zigbee2MQTT with whatever smart
 | Model | QBKG38LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara E1 1 gang switch (without neutral) |
-| Exposes | switch (state), power_outage_memory, action, operation_mode, linkquality |
+| Exposes | switch (state), power_outage_memory, action, operation_mode, mode_switch, linkquality |
 | Picture | ![Xiaomi QBKG38LM](../images/devices/QBKG38LM.jpg) |
 
 ## Notes
@@ -46,6 +46,13 @@ Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
+
+### Mode_switch (enum)
+Anti flicker mode can be used to solve blinking issues of some lights.Quick mode makes the device respond faster..
+Value can be found in the published state on the `mode_switch` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode_switch": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_switch": NEW_VALUE}`.
+The possible values are: `anti_flicker_mode`, `quick_mode`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

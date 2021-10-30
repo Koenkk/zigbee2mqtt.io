@@ -12,7 +12,7 @@ description: "Integrate your Neo NAS-PD07 via Zigbee2MQTT with whatever smart ho
 | Model | NAS-PD07  |
 | Vendor  | Neo  |
 | Description | Motion, temperature & humidity sensor |
-| Exposes | occupancy, humidity, temperature, tamper, power_type, linkquality |
+| Exposes | occupancy, humidity, temperature, tamper, battery_low, power_type, linkquality |
 | Picture | ![Neo NAS-PD07](../images/devices/NAS-PD07.jpg) |
 
 ## Notes
@@ -59,6 +59,12 @@ Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
+
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
 
 ### Power_type (enum)
 Value can be found in the published state on the `power_type` property.

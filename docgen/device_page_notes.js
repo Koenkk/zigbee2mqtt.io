@@ -1,5 +1,99 @@
 const notes = [
     {
+        model: ['ZSS-ZK-THL'],
+        note: `
+### Pairing
+Press the Orange button on the side until 3 dots appear on the screen.
+
+### Compatibility issue
+
+This device freeze after a while when not connected with a Tuya Hub. See [#7535](https://github.com/Koenkk/zigbee2mqtt/issues/7535). Some users report that
+this device work fine when connected to any hub through a relay device.
+
+### Usage limitation
+
+The device reports illuminance variations instantly. Therefore temperature is reported each hour making this device useless for building a thermostat.
+`,
+    },
+    {
+        model: ['TS0205'],
+        note: `
+### Pairing
+Press the button about 5 seconds untill the light changes from red to green. Release the button (it should biep twice now). Green light starts flashing. Press again one time.
+`,
+    },
+    {
+        model: ['TS0204'],
+        note: `
+### Pairing
+Press the button about 5 seconds untill the light changes from red to green. Release the button (it should biep twice now). Green light starts flashing. Press again one time.
+`,
+    },
+    {
+        model: ['TS011F_plug_3', 'TS011F_plug_2', 'TS011F_plug_1'],
+        note: `
+### Pairing
+Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
+`,
+    },
+    {
+        model: ['SP-EUC01'],
+        note: `
+### Pairing
+Press and hold the button on the device for +- 5 seconds, until the blue light starts blinking.
+`,
+    },
+    {
+        model: ['SLT3', 'SLT3B'],
+        note: `
+### Pairing
+To pair the thermostat controller to both Zigbee2MQTT and the thermostat, a factory reset will need to be performed. To begin a factory reset, press and hold both the menu and back buttons together. Allow the countdown to finish before releasing to factory reset the device. After the device has reset and a language has been selected, Zigbee2MQTT should find the device. The device should be able to control the boiler whilst still reporting to Zigbee2MQTT.
+`,
+    },
+    {
+        model: ['SLR1', 'SLR1b', 'SLR2', 'SLR2b'],
+        note: `
+### Pairing
+
+To pair the thermostat with Zigbee2MQTT, follow these steps:
+
+1. Temporarily disconnect any thermostat controllers connected to the thermostat by remove a battery from them.
+2. Turn the thermostat and boiler off, then on again to ensure it is not trying to connect to any thermostat controllers.
+3. Once the thermostat and boiler are on, hold down the Central heating button on the device until the Central heating'light turns white/ pink, then release the button. This will enable stand-alone mode on the thermostat.
+4. Hold down the central heating button again until the Central heating light begins to flash amber. The device is now in pairing mode and should be found by Zigbee2MQTT.
+5. You can now re-insert the battery back into any thermostat controllers disconnected in step 1 and pair them to the boiler (and optionally Zigbee2MQTT). For information on pairing the thermostat controllers see the pairing instructions for the [Hive SLT3B](./SLT3.md). Note that the thermostat's Central heating light will remain amber until a controller is paired with the thermostat, however the thermostat will still function correctly.
+`,
+    },
+    {
+        model: ['SCCV2401-1'],
+        note: `
+### Reset instruction
+Execute this on/off sequence: ON>5sec -> 5x(OFF>3sec + ON<2sec)
+After reset it will blink for 10 seconds and is ready for join.
+`,
+    },
+    {
+        model: ['MS-104Z'],
+        note: `
+### Pairing
+Press switch to turn ON/OFF cycle for 5 times (keep time interval not too short) until the beep sounds continuously and rapidly for enter in pairing mode.
+`,
+    },
+    {
+        model: ['F20T60A'],
+        note: `
+### Pairing
+This device ONLY works on channel 11. Once configured on channel 11, put your network in join mode and the device (steady red light) will auto join it.
+`,
+    },
+    {
+        model: ['E1836'],
+        note: `
+## Pairing
+To factory reset the device push the pin into the pinhole on top of the ASKVADER On/Off switch for at least 5 seconds.
+`,
+    },
+    {
         model: ['AV2010/37'],
         note: `
 ## Pairing
@@ -639,6 +733,13 @@ After first power on, it should enter pairing mode. To pair to a new network, lo
 `,
     },
     {
+        model: ['MIR-HE200-TY'],
+        note: `
+### Pairing
+Factory resetting by pushing the "Reset-Button" longer than 5 seconds or by using Touchlink factory reset.
+`,
+    },
+    {
         model: ['LS12128'],
         note: `
 ## Pairing/runtime calibration
@@ -651,6 +752,7 @@ After first power on, it should enter pairing mode. To pair to a new network, lo
 1. Just when the shutter is fully closed press "up" button (sometimes twice necessary).
 1. Just when the shutter is fully opened press "down" button (or release up button)
 1. Relay will now have learned how long it takes to travel top-bottom and vice-et-versa (youhear a "click" telling relay circuit is open)
+Note: device only connect to channels 11, 15, 20 or 25
 `,
     },
     {

@@ -17,6 +17,7 @@ description: "Integrate your Moes ZSS-ZK-THL via Zigbee2MQTT with whatever smart
 
 ## Notes
 
+
 ### Pairing
 Press the Orange button on the side until 3 dots appear on the screen.
 

@@ -1,19 +1,19 @@
 ---
-title: "Tuya TS0601_temperature_humidity_sensor control via MQTT"
-description: "Integrate your Tuya TS0601_temperature_humidity_sensor via Zigbee2MQTT with whatever smart home
+title: "TuYa TS0601_temperature_humidity_sensor control via MQTT"
+description: "Integrate your TuYa TS0601_temperature_humidity_sensor via Zigbee2MQTT with whatever smart home
  infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0601_temperature_humidity_sensor.md)*
 
-# Tuya TS0601_temperature_humidity_sensor
+# TuYa TS0601_temperature_humidity_sensor
 
 | Model | TS0601_temperature_humidity_sensor  |
-| Vendor  | Tuya  |
+| Vendor  | TuYa  |
 | Description | Temperature & humidity sensor |
 | Exposes | temperature, humidity, battery, linkquality |
-| Picture | ![Tuya TS0601_temperature_humidity_sensor](../images/devices/TS0601_temperature_humidity_sensor.jpg) |
+| Picture | ![TuYa TS0601_temperature_humidity_sensor](../images/devices/TS0601_temperature_humidity_sensor.jpg) |
 
 ## Notes
 
