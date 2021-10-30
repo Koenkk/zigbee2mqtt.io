@@ -22,13 +22,11 @@ pageClass: device-page
 | Picture | ![Climax CO-8ZBS](https://www.zigbee2mqtt.io/images/devices/CO-8ZBS.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
-## Notes
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
-None
+
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -23,7 +23,7 @@ pageClass: device-page
 | White-label | Moes HY368, Moes HY369RT, SHOJZJ 378RT, Silvercrest TVR01 |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -120,7 +120,6 @@ After this command thermostat responds with two messages. One for calibration ch
     ```
 
 <!-- Notes END: Do not edit below this line -->
-
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

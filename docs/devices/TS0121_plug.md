@@ -23,7 +23,7 @@ pageClass: device-page
 | White-label | BlitzWolf BW-SHP13 |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -36,7 +36,6 @@ Pair this device with a long press (5 seconds) on the on/off button. The button 
 * `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

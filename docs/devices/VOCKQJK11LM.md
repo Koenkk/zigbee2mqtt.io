@@ -23,7 +23,7 @@ pageClass: device-page
 | White-label | Xiaomi AAQS-S01 |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -46,7 +46,6 @@ To control the precision based on the humidity value set it to e.g. `{80: 0, 10:
 when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1. Precision will take into affect with next report of device.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

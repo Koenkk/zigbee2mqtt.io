@@ -23,7 +23,7 @@ pageClass: device-page
 | White-label | eWeLink RHK07 |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -32,7 +32,6 @@ Long press reset button for 5s until the LED indicator flashes three times, whic
 The reset button can be found by removing the back cover.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

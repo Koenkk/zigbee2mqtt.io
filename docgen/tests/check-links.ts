@@ -1,16 +1,9 @@
 import { promises as fsp } from "fs";
-import { promisify } from 'util';
-import * as path from "path";
-import * as glob from 'glob';
 import { getBase } from "../../vuepress.config";
-
-const distDir = path.resolve(__dirname, '..', '..', 'dist');
+import { distDir, findFiles } from "./utils";
+import * as path from "path";
 
 const hrefRgxp = /<a[^>]+href ?= ?"([^#?]+?)["#?]/ig;
-
-async function findFiles(dir: string, type = 'html') {
-  return promisify(glob)(`${ dir }/**/*.${ type }`);
-}
 
 async function checkFile(file: string, availableFiles: string[]) {
   const content = await fsp.readFile(file, 'utf-8');
@@ -43,6 +36,7 @@ async function checkFile(file: string, availableFiles: string[]) {
 }
 
 export async function checkLinks() {
+  console.log('* Test for internal broken links...');
   const files = await findFiles(distDir);
   const filesNormalized = files.map(f => f.substr(distDir.length + 1));
   let erg = await Promise.all(files.map(file => checkFile(file, filesNormalized)));

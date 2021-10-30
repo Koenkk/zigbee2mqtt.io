@@ -23,7 +23,7 @@ pageClass: device-page
 | White-label | Niko 91004, NodOn CWS-4-1-01_HUE, Vimar 03906 |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -56,7 +56,6 @@ To pair it, hold the corresponding button for that channel for 7 seconds or more
 | B1 | 25 |
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

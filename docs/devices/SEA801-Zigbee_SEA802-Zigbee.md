@@ -23,7 +23,7 @@ pageClass: device-page
 | White-label | HiHome WZB-TRVL, Hama 00176592, RTX ZB-RT1 |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -38,7 +38,6 @@ pageClass: device-page
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes
