@@ -29,7 +29,6 @@ Pair this device with a long press (5 seconds) on the on/off button. The button 
 
 
 
-
 ## Exposes
 
 ### Switch 

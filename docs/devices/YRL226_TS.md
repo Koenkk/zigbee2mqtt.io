@@ -1,23 +1,30 @@
 ---
 title: "Yale YRL226 TS control via MQTT"
-description: "Integrate your Yale YRL226 TS via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Yale YRL226 TS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YRL226_TS.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Yale YRL226 TS
 
+|     |     |
+|-----|-----|
 | Model | YRL226 TS  |
 | Vendor  | Yale  |
 | Description | Assure lock SL |
 | Exposes | lock (state, lock_state), battery, pin_code, linkquality |
-| Picture | ![Yale YRL226 TS](../images/devices/YRL226-TS.jpg) |
+| Picture | ![Yale YRL226 TS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/YRL226-TS.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

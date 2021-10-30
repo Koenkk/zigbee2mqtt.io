@@ -1,23 +1,30 @@
 ---
 title: "Moes TV01-ZB control via MQTT"
-description: "Integrate your Moes TV01-ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Moes TV01-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TV01-ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Moes TV01-ZB
 
+|     |     |
+|-----|-----|
 | Model | TV01-ZB  |
 | Vendor  | Moes  |
 | Description | Thermostat radiator valve |
 | Exposes | battery, lock (state), switch (state), frost_detection, heating_stop, holiday_temperature, comfort_temperature, eco_temperature, open_window_temperature, boost_heating_countdown, error_status, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, preset), linkquality |
-| Picture | ![Moes TV01-ZB](../images/devices/TV01-ZB.jpg) |
+| Picture | ![Moes TV01-ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TV01-ZB.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

@@ -1,19 +1,25 @@
 ---
 title: "Xiaomi ZNCZ04LM control via MQTT"
-description: "Integrate your Xiaomi ZNCZ04LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi ZNCZ04LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZNCZ04LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi ZNCZ04LM
 
+|     |     |
+|-----|-----|
 | Model | ZNCZ04LM  |
 | Vendor  | Xiaomi  |
 | Description | Mi power plug ZigBee EU |
 | Exposes | switch (state), power, energy, temperature, voltage, current, consumer_connected, led_disabled_night, power_outage_memory, auto_off, overload_protection, linkquality |
-| Picture | ![Xiaomi ZNCZ04LM](../images/devices/ZNCZ04LM.jpg) |
+| Picture | ![Xiaomi ZNCZ04LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNCZ04LM.jpg) |
+
 
 ## Notes
 
@@ -22,7 +28,7 @@ description: "Integrate your Xiaomi ZNCZ04LM via Zigbee2MQTT with whatever smart
 Press and hold the button on the device until the blue light starts blinking, release it and and the device will automatically join.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -39,7 +45,7 @@ Now toggle the plug/switch once with the button on it, from now on it will resto
 
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

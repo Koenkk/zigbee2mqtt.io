@@ -1,19 +1,25 @@
 ---
 title: "TuYa MIR-HE200-TY control via MQTT"
-description: "Integrate your TuYa MIR-HE200-TY via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa MIR-HE200-TY via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MIR-HE200-TY.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa MIR-HE200-TY
 
+|     |     |
+|-----|-----|
 | Model | MIR-HE200-TY  |
 | Vendor  | TuYa  |
 | Description | Human presence sensor |
 | Exposes | illuminance_lux, presence, motion, motion_speed, motion_direction, radar_sensitivity, radar_scene, linkquality |
-| Picture | ![TuYa MIR-HE200-TY](../images/devices/MIR-HE200-TY.jpg) |
+| Picture | ![TuYa MIR-HE200-TY](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MIR-HE200-TY.jpg) |
+
 
 ## Notes
 

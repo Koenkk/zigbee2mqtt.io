@@ -1,24 +1,30 @@
 ---
 title: "Candeo HK-DIM-A control via MQTT"
-description: "Integrate your Candeo HK-DIM-A via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Candeo HK-DIM-A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HK-DIM-A.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Candeo HK-DIM-A
 
+|     |     |
+|-----|-----|
 | Model | HK-DIM-A  |
 | Vendor  | Candeo  |
 | Description | Zigbee LED dimmer smart switch |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![Candeo HK-DIM-A](../images/devices/HK-DIM-A.jpg) |
+| Picture | ![Candeo HK-DIM-A](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HK-DIM-A.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

@@ -1,23 +1,30 @@
 ---
 title: "TuYa TS0601_motion_sensor control via MQTT"
-description: "Integrate your TuYa TS0601_motion_sensor via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS0601_motion_sensor via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0601_motion_sensor.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS0601_motion_sensor
 
+|     |     |
+|-----|-----|
 | Model | TS0601_motion_sensor  |
 | Vendor  | TuYa  |
 | Description | Human presence sensor AIR |
 | Exposes | occupancy, o_sensitivity, v_sensitivity, led_status, vacancy_delay, light_on_luminance_prefer, light_off_luminance_prefer, mode, luminance_level, reference_luminance, vacant_confirm_time, linkquality |
-| Picture | ![TuYa TS0601_motion_sensor](../images/devices/TS0601_motion_sensor.jpg) |
+| Picture | ![TuYa TS0601_motion_sensor](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0601_motion_sensor.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

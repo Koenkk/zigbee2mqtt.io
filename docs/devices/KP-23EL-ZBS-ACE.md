@@ -1,23 +1,30 @@
 ---
 title: "Climax KP-23EL-ZBS-ACE control via MQTT"
-description: "Integrate your Climax KP-23EL-ZBS-ACE via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Climax KP-23EL-ZBS-ACE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/KP-23EL-ZBS-ACE.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Climax KP-23EL-ZBS-ACE
 
+|     |     |
+|-----|-----|
 | Model | KP-23EL-ZBS-ACE  |
 | Vendor  | Climax  |
 | Description | Remote Keypad |
 | Exposes | battery_low, tamper, action, linkquality |
-| Picture | ![Climax KP-23EL-ZBS-ACE](../images/devices/KP-23EL-ZBS-ACE.jpg) |
+| Picture | ![Climax KP-23EL-ZBS-ACE](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/KP-23EL-ZBS-ACE.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

@@ -1,24 +1,30 @@
 ---
 title: "TuYa YSR-MINI-Z control via MQTT"
-description: "Integrate your TuYa YSR-MINI-Z via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa YSR-MINI-Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YSR-MINI-Z.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa YSR-MINI-Z
 
+|     |     |
+|-----|-----|
 | Model | YSR-MINI-Z  |
 | Vendor  | TuYa  |
 | Description | 2 in 1 dimming remote control and scene control |
 | Exposes | battery, action, operation_mode, linkquality |
-| Picture | ![TuYa YSR-MINI-Z](../images/devices/YSR-MINI-Z.jpg) |
+| Picture | ![TuYa YSR-MINI-Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/YSR-MINI-Z.jpg) |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md)*
 
 * `simulated_brightness`: Set to `true` to simulate a `brightness` value (default: `false`).
 If this device provides a `brightness_move_up` or `brightness_move_down` action it is possible to specify the update

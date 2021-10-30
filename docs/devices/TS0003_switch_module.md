@@ -1,24 +1,31 @@
 ---
 title: "TuYa TS0003_switch_module control via MQTT"
-description: "Integrate your TuYa TS0003_switch_module via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS0003_switch_module via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0003_switch_module.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS0003_switch_module
 
+|     |     |
+|-----|-----|
 | Model | TS0003_switch_module  |
 | Vendor  | TuYa  |
 | Description | 3 gang switch module |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
-| Picture | ![TuYa TS0003_switch_module](../images/devices/TS0003_switch_module.jpg) |
+| Picture | ![TuYa TS0003_switch_module](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0003_switch_module.jpg) |
 | White-label | OXT SWTZ23 |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

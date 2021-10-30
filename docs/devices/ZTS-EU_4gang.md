@@ -1,23 +1,30 @@
 ---
 title: "Moes ZTS-EU_4gang control via MQTT"
-description: "Integrate your Moes ZTS-EU_4gang via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Moes ZTS-EU_4gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZTS-EU_4gang.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Moes ZTS-EU_4gang
 
+|     |     |
+|-----|-----|
 | Model | ZTS-EU_4gang  |
 | Vendor  | Moes  |
 | Description | Wall touch light switch (4 gang) |
 | Exposes | switch (state), linkquality |
-| Picture | ![Moes ZTS-EU_4gang](../images/devices/ZTS-EU_4gang.jpg) |
+| Picture | ![Moes ZTS-EU_4gang](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZTS-EU_4gang.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

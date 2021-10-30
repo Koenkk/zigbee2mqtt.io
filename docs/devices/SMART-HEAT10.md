@@ -1,23 +1,30 @@
 ---
 title: "Alecto SMART-HEAT10 control via MQTT"
-description: "Integrate your Alecto SMART-HEAT10 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Alecto SMART-HEAT10 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SMART-HEAT10.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Alecto SMART-HEAT10
 
+|     |     |
+|-----|-----|
 | Model | SMART-HEAT10  |
 | Vendor  | Alecto  |
 | Description | Radiator valve with thermostat |
 | Exposes | lock (state), switch (state), battery, climate (current_heating_setpoint, local_temperature, system_mode), linkquality |
-| Picture | ![Alecto SMART-HEAT10](../images/devices/SMART-HEAT10.jpg) |
+| Picture | ![Alecto SMART-HEAT10](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SMART-HEAT10.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

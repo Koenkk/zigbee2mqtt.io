@@ -1,19 +1,25 @@
 ---
 title: "Xiaomi SJCGQ11LM control via MQTT"
-description: "Integrate your Xiaomi SJCGQ11LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi SJCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SJCGQ11LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi SJCGQ11LM
 
+|     |     |
+|-----|-----|
 | Model | SJCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara water leak sensor |
 | Exposes | battery, water_leak, battery_low, voltage, temperature, linkquality |
-| Picture | ![Xiaomi SJCGQ11LM](../images/devices/SJCGQ11LM.jpg) |
+| Picture | ![Xiaomi SJCGQ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SJCGQ11LM.jpg) |
+
 
 ## Notes
 
@@ -22,7 +28,7 @@ description: "Integrate your Xiaomi SJCGQ11LM via Zigbee2MQTT with whatever smar
 Uses a CR2032 battery
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -35,7 +41,7 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 ### Pairing
 Press and hold water logo on the device for +- 5 seconds (you have to press quite hard) until the blue light blinks
 three times, release the water logo (the blue light will blink once more) and wait.
-    
+
 
 
 ## Exposes

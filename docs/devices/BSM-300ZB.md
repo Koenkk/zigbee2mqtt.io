@@ -1,23 +1,30 @@
 ---
 title: "ShinaSystem BSM-300ZB control via MQTT"
-description: "Integrate your ShinaSystem BSM-300ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your ShinaSystem BSM-300ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/BSM-300ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # ShinaSystem BSM-300ZB
 
+|     |     |
+|-----|-----|
 | Model | BSM-300ZB  |
 | Vendor  | ShinaSystem  |
 | Description | SiHAS remote control |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![ShinaSystem BSM-300ZB](../images/devices/BSM-300ZB.jpg) |
+| Picture | ![ShinaSystem BSM-300ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BSM-300ZB.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

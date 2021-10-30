@@ -1,23 +1,30 @@
 ---
 title: "ShinaSystem SBM300ZB2 control via MQTT"
-description: "Integrate your ShinaSystem SBM300ZB2 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your ShinaSystem SBM300ZB2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SBM300ZB2.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # ShinaSystem SBM300ZB2
 
+|     |     |
+|-----|-----|
 | Model | SBM300ZB2  |
 | Vendor  | ShinaSystem  |
 | Description | SiHAS remote control 2 button |
 | Exposes | action, battery, voltage, linkquality |
-| Picture | ![ShinaSystem SBM300ZB2](../images/devices/SBM300ZB2.jpg) |
+| Picture | ![ShinaSystem SBM300ZB2](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SBM300ZB2.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

@@ -1,23 +1,30 @@
 ---
 title: "TuYa TS0111_valve control via MQTT"
-description: "Integrate your TuYa TS0111_valve via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS0111_valve via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0111_valve.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS0111_valve
 
+|     |     |
+|-----|-----|
 | Model | TS0111_valve  |
 | Vendor  | TuYa  |
 | Description | Smart water/gas valve |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS0111_valve](../images/devices/TS0111_valve.jpg) |
+| Picture | ![TuYa TS0111_valve](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0111_valve.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

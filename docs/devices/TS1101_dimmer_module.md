@@ -1,25 +1,31 @@
 ---
 title: "TuYa TS1101_dimmer_module control via MQTT"
-description: "Integrate your TuYa TS1101_dimmer_module via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS1101_dimmer_module via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS1101_dimmer_module.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS1101_dimmer_module
 
+|     |     |
+|-----|-----|
 | Model | TS1101_dimmer_module  |
 | Vendor  | TuYa  |
 | Description | 2CH Zigbee dimmer module |
 | Exposes | light (state, brightness, min_brightness), linkquality |
-| Picture | ![TuYa TS1101_dimmer_module](../images/devices/TS1101_dimmer_module.jpg) |
+| Picture | ![TuYa TS1101_dimmer_module](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS1101_dimmer_module.jpg) |
 | White-label | OXT SWTZ25 |
+
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).

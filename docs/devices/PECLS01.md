@@ -1,23 +1,30 @@
 ---
 title: "Perenio PECLS01 control via MQTT"
-description: "Integrate your Perenio PECLS01 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Perenio PECLS01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PECLS01.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Perenio PECLS01
 
+|     |     |
+|-----|-----|
 | Model | PECLS01  |
 | Vendor  | Perenio  |
 | Description | Flood alarm device |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
-| Picture | ![Perenio PECLS01](../images/devices/PECLS01.jpg) |
+| Picture | ![Perenio PECLS01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PECLS01.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes

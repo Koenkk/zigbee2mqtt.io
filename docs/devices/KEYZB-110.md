@@ -1,27 +1,34 @@
 ---
 title: "Develco KEYZB-110 control via MQTT"
-description: "Integrate your Develco KEYZB-110 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Develco KEYZB-110 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/KEYZB-110.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Develco KEYZB-110
 
+|     |     |
+|-----|-----|
 | Model | KEYZB-110  |
 | Vendor  | Develco  |
 | Description | Keypad |
 | Exposes | battery, battery_low, voltage, tamper, action_code, action_transaction, action_zone, action, linkquality |
-| Picture | ![Develco KEYZB-110](../images/devices/KEYZB-110.jpg) |
+| Picture | ![Develco KEYZB-110](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/KEYZB-110.jpg) |
 | White-label | Frient KEPZB-110 |
+
 
 ## Notes
 
 None
 
+
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

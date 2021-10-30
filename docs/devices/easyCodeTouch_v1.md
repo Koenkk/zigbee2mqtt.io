@@ -1,23 +1,30 @@
 ---
 title: "Onesti Products AS easyCodeTouch_v1 control via MQTT"
-description: "Integrate your Onesti Products AS easyCodeTouch_v1 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Onesti Products AS easyCodeTouch_v1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/easyCodeTouch_v1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Onesti Products AS easyCodeTouch_v1
 
+|     |     |
+|-----|-----|
 | Model | easyCodeTouch_v1  |
 | Vendor  | Onesti Products AS  |
 | Description | Zigbee module for EasyAccess code touch series |
 | Exposes | lock (state, lock_state), battery, sound_volume, action, auto_relock, pin_code, linkquality |
-| Picture | ![Onesti Products AS easyCodeTouch_v1](../images/devices/easyCodeTouch_v1.jpg) |
+| Picture | ![Onesti Products AS easyCodeTouch_v1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/easyCodeTouch_v1.jpg) |
+
 
 ## Notes
 
 None
+
 
 
 ## Exposes
