@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Securifi PP-WHT-US
@@ -52,7 +52,6 @@ Save the file and restart Zigbee2MQTT.
 This device only support power measurements with an up-to-date firmware on the plug which can only be done
 via the original hub. In case of an older firmware you will only see 0 values in the measurements.
 Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
-
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates

@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Legrand ZLGP15
@@ -37,7 +37,6 @@ Green Power devices don't support binding and are not included in network scans.
 To pair this device on channel 11, hold the configuration button (on the back of the device) and press any of the 4 buttons.
 
 This device can work on any channel, not only 11. For this, please refer to the [Legrand ZLGP15 manual chapter 6.2](https://www.admin.legrandoc.com/files/documents/S000113321EN-00.pdf).
-
 <!-- Notes END: Do not edit below this line -->
 
 

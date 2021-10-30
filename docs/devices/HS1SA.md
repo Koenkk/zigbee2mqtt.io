@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # HEIMAN HS1SA
@@ -47,7 +47,6 @@ Unsupported:
 - HS1SA-Z : Z-wave
 
 The product code should end in *-M* for the Zigbee version. The label inside the battery compartment should also show the Zigbee logo.
-
 <!-- Notes END: Do not edit below this line -->
 
 

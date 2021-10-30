@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Develco EMIZB-132
@@ -48,7 +48,6 @@ In case you are not getting any measurements, it could be that your firmware is 
 Related issues:
 - https://github.com/Koenkk/zigbee-herdsman-converters/issues/974#issuecomment-590450035
 - https://github.com/dresden-elektronik/deconz-rest-plugin/issues/2127#issuecomment-587949747
-
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates

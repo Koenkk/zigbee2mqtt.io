@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Develco Products A/S SIRZB-110
@@ -60,7 +60,6 @@ Squawk are normally used to indicate activation and deactivation of an alarm sys
 Examples:
 `{"squawk":{"level":"low","mode":"system_is_sarmed","strobe":false}}`
 `{"squawk":{"level":"low","mode":"system_is_disarmed","strobe":false}}`
-
 <!-- Notes END: Do not edit below this line -->
 
 

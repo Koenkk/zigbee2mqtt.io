@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Hive KEYPAD001
@@ -64,7 +64,6 @@ Do so by sending the following payload to `zigbee2mqtt/FRIENDLY_NAME/set`:
 Valid `mode` values are `disarm`, `arm_day_zones`, `arm_all_zones`, `invalid_code`, `not_ready`, `already_disarmed`
 
 The automation server must follow the notification with an actual change to the correct arm mode. For the example above, the server should respond with `exit_delay`, count the elapsed time (e.g 30 secs), then change mode again to `arm_all_zones` (see "Arming/Disarming from the server" section above)
-
 <!-- Notes END: Do not edit below this line -->
 
 

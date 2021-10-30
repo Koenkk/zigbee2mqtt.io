@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # KMPCIL KMPCIL_RES005
@@ -55,7 +55,6 @@ To control the precision based on the pressure value set it to e.g. `{1000: 0, 1
 when pressure >= 1000 precision will be 0, when pressure >= 100 precision will be 1. Precision will take into affect with next report of device.
 * `pressure_calibration`: Allows to manually calibrate pressure values,
 e.g. `1` would add 1 to the pressure reported by the device; default `0`. Calibration will take into affect with next report of device.
-
 <!-- Notes END: Do not edit below this line -->
 
 
