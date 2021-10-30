@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Legrand ZLGP15](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZLGP15.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -39,7 +39,6 @@ To pair this device on channel 11, hold the configuration button (on the back of
 This device can work on any channel, not only 11. For this, please refer to the [Legrand ZLGP15 manual chapter 6.2](https://www.admin.legrandoc.com/files/documents/S000113321EN-00.pdf).
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

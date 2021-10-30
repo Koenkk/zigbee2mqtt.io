@@ -23,13 +23,11 @@ pageClass: device-page
 | White-label | BlitzWolf BW-IS2 |
 
 
-<!-- Notes BEGIN: You can edit here -->
-## Notes
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
-None
+
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -23,7 +23,7 @@ pageClass: device-page
 | White-label | eWeLink RHK06 |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -31,7 +31,6 @@ pageClass: device-page
 Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![YSRSAI YSR-MINI-01_rgbcct](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/YSR-MINI-01_rgbcct.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -66,7 +66,6 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
     ```
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

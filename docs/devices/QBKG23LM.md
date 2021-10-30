@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi QBKG23LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG23LM.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -41,7 +41,6 @@ Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

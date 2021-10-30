@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![eWeLink SA-003-Zigbee](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SA-003-Zigbee.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -30,7 +30,6 @@ pageClass: device-page
 Reset by unplugging any devices plugged into the socket, hold the button down for 10 secs until the light flashes Green/Orange and the Socket switches on and off. pair within 60 secs
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

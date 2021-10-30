@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Gledopto GL-G-001P](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-G-001P.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -72,7 +72,6 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
 This devices is similar to GL-G-001Z, except that Zigbee routing should work for this one.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

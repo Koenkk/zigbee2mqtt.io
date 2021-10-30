@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Leviton DL15S-1BZ](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DL15S-1BZ.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -32,7 +32,6 @@ To pair this device, hold the ON for few seconds until the red light is blinking
 Note: This device doesn't support Zigbee channels 25 & 26.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

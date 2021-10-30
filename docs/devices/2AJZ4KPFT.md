@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Konke 2AJZ4KPFT](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/2AJZ4KPFT.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -45,7 +45,6 @@ when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1
 Konke devices only work on Zigbee channel 15, 20 and 25.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

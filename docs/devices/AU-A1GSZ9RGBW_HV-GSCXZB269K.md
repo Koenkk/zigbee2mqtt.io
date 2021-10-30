@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Aurora Lighting AU-A1GSZ9RGBW_HV-GSCXZB269K](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AU-A1GSZ9RGBW_HV-GSCXZB269K.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -61,7 +61,6 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
     ```
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

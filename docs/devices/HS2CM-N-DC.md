@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![HEIMAN HS2CM-N-DC](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS2CM-N-DC.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -31,7 +31,6 @@ pageClass: device-page
 * `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

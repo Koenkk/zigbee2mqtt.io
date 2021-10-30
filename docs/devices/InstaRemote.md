@@ -23,7 +23,7 @@ pageClass: device-page
 | White-label | Gira 2430-100, Gira 2435-10, Jung ZLLCD5004M, Jung ZLLLS5004M, Jung ZLLA5004M, Jung ZLLHS4 |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -54,7 +54,6 @@ In case the device does still not accept updates or seems to be stuck somehow, i
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 <!-- Notes END: Do not edit below this line -->
-
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

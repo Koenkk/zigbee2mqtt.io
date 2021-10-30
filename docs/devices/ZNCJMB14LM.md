@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi ZNCJMB14LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNCJMB14LM.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -33,7 +33,6 @@ If the device is already part of a network, swipe down from the top of the scree
 Once confirmed, proceed as per initial boot.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

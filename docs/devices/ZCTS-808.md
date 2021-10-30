@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Trust ZCTS-808](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZCTS-808.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -32,7 +32,6 @@ keep opening and closing the sensor (pull/insert the sensor parts next to each o
 otherwise device will fall asleep before it gets fully configured and will not send state changes.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![ADEO HR-C99C-Z-C045](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HR-C99C-Z-C045.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -44,7 +44,6 @@ simulated_brightness:
 ```
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![TuYa TS011F_plug_3](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS011F_plug_3.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -30,7 +30,6 @@ pageClass: device-page
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -23,7 +23,7 @@ pageClass: device-page
 | White-label | LoraTap RR400ZB |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -31,7 +31,6 @@ pageClass: device-page
 Press the black pairing button on the relay module for 5 seconds until the indicator light flashes, then release the pairing button.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

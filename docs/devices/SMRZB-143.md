@@ -22,13 +22,11 @@ pageClass: device-page
 | Picture | ![Develco SMRZB-143](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SMRZB-143.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
-## Notes
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
-None
+
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

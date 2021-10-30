@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![IKEA ICTC-G-1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ICTC-G-1.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -97,7 +97,6 @@ simulated_brightness:
 ```
 
 <!-- Notes END: Do not edit below this line -->
-
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

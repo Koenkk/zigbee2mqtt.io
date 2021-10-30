@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![TuYa TS0601_switch_2_gang](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0601_switch_2_gang.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -30,7 +30,6 @@ pageClass: device-page
 To pair press any button 5 times and on the 6th time hold it untill you hear beep, then release button and wait for pairing process.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![HEIMAN HS2IRC](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS2IRC.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -150,7 +150,6 @@ Request:
 - **key_code**: `1..30` -Delete specific keycode. `>=31` - Delete all keycodes for specified device ID.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

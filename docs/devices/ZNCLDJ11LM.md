@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi ZNCLDJ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNCLDJ11LM.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -86,7 +86,6 @@ Home Assistant automation example:
 Motor leaves calibration mode automatically after it reaches the both open and close curtain position limits. Calibration is mandatory for proper position reporting and ability to set intermediate positions.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

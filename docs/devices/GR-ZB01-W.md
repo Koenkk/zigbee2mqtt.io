@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![AXIS GR-ZB01-W](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GR-ZB01-W.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -36,7 +36,6 @@ If you are using the AC wall adapter, the battery level will always stay within 
 The battery level indicator is only relevant to if you are using the solar panel.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

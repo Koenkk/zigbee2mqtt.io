@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![EDP PLUG EDP RE:DY](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PLUG-EDP-RE-DY.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -30,7 +30,6 @@ pageClass: device-page
 Factory reset the plug (hold the switch button for >10sec). After resetting the switch will automatically connect.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Custom devices (DiY) ZeeFlora](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZeeFlora.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -45,7 +45,6 @@ when temperature >= 30 precision will be 0, when temperature >= 10 precision wil
 e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

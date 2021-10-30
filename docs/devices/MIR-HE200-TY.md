@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![TuYa MIR-HE200-TY](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MIR-HE200-TY.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -30,7 +30,6 @@ pageClass: device-page
 Factory resetting by pushing the "Reset-Button" longer than 5 seconds or by using Touchlink factory reset.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

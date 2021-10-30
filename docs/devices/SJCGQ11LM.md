@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi SJCGQ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SJCGQ11LM.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -45,7 +45,6 @@ Press and hold water logo on the device for +- 5 seconds (you have to press quit
 three times, release the water logo (the blue light will blink once more) and wait.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -22,11 +22,10 @@ pageClass: device-page
 | Picture | ![Zemismart LXN56-SS27LX1.1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LXN56-SS27LX1.1.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

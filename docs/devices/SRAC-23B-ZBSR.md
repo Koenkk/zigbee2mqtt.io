@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Climax SRAC-23B-ZBSR](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SRAC-23B-ZBSR.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -55,7 +55,6 @@ Set `max_duration` from the Zigbee2MQTT UI or by publishing `{"max_duration": NE
 This alarm are preset to highest volume
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -4,6 +4,7 @@ import { imageBaseDir } from "../constants";
 import * as path from "path";
 
 export async function checkDeviceImages() {
+  console.log('* Test if all device images exists...');
   const missing = [];
   await Promise.all(devices.map(async device => {
     const image = path.join(imageBaseDir, await getImage(device, imageBaseDir, ''));

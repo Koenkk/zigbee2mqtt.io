@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi JTYJ-GD-01LM/BW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JTYJ-GD-01LM-BW.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -43,7 +43,6 @@ A self-test can be trigged by publishing to `zigbee2mqtt/FRIENDLY_NAME/set`
 If the selftest is executed successfully you will hear the device beep in 30 seconds.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

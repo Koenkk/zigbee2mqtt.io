@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi SSM-U01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SSM-U01.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -30,7 +30,6 @@ pageClass: device-page
 To reset the device and start pairing, press the button on the device for 8 seconds. The led will turn on in red and then start blinking in blue while the pairing process is active.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

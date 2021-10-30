@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi MCCGQ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MCCGQ11LM.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -65,7 +65,6 @@ E.g. (devices.yaml)
 {% endraw %}
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

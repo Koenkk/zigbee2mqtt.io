@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi WXKG03LM_rev2](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WXKG03LM_rev2.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -52,7 +52,6 @@ If you can't do this, try to remove battery (if it has one), push the button (to
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

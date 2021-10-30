@@ -22,14 +22,13 @@ export default async function generateDevice(device) {
     const existingContent = await fsp.readFile(deviceFile, 'utf-8');
     addedAt = getAddedAt(existingContent);
     const lines = existingContent.split(/\n\r?/);
-    // Read existing notes from "## Notes" until next h1 or h2 appears
+    // Read existing notes between ## Notes and <!-- Notes END
     let isInNotes = false;
     for (let line of lines) {
-      if (!isInNotes && line.startsWith('## Notes')) {
+      if (!isInNotes && line.startsWith('<!-- Notes BEGIN')) {
         isInNotes = true;
-        notes += line + "\n";
       } else if (isInNotes) {
-        if (line.match(/^##? .*/) || line.startsWith('<!-- Notes END')) {
+        if (line.startsWith('<!-- Notes END')) {
           break;
         } else {
           notes += line + "\n";
@@ -65,11 +64,9 @@ pageClass: device-page
 | Picture | ![${ device.vendor } ${ device.model }](${ image }) |
 ${ device.whiteLabel ? `| White-label | ${ device.whiteLabel.map((d) => `${ d.vendor } ${ d.model }`).join(', ') } |\n` : '' }
 
-<!-- Notes BEGIN: You can edit here -->
-${ notes }
-
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+${ notes || "\n"}
 <!-- Notes END: Do not edit below this line -->
-
 ${ device.hasOwnProperty('ota') ? `
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

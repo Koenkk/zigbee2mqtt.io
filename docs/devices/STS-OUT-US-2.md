@@ -22,13 +22,11 @@ pageClass: device-page
 | Picture | ![SmartThings STS-OUT-US-2](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/STS-OUT-US-2.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
-## Notes
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
-None
+
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

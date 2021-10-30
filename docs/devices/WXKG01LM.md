@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi WXKG01LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WXKG01LM.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -72,7 +72,6 @@ experimenting with this option (e.g. `hold_timeout: 2000`).
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

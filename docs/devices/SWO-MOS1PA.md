@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Swann SWO-MOS1PA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SWO-MOS1PA.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -30,7 +30,6 @@ pageClass: device-page
 Device is listed as having temperature detection. This feature is still being investigated.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

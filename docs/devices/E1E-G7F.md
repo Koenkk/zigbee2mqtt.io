@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Sengled E1E-G7F](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/E1E-G7F.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -35,7 +35,6 @@ If device won't go in to pairing mode, try installing a fresh battery.
 The device will sometimes output a single push in addition to a long press. You can mitigate this by using the Debounce device configuration. Refer to *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

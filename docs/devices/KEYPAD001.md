@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Hive KEYPAD001](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/KEYPAD001.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -66,7 +66,6 @@ Valid `mode` values are `disarm`, `arm_day_zones`, `arm_all_zones`, `invalid_cod
 The automation server must follow the notification with an actual change to the correct arm mode. For the example above, the server should respond with `exit_delay`, count the elapsed time (e.g 30 secs), then change mode again to `arm_all_zones` (see "Arming/Disarming from the server" section above)
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![HEIMAN HS2WD-E](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS2WD-E.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -36,7 +36,6 @@ Where:
 - `strobe`: `true` or `false` will let the strobe flash once during the alarm
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![iCasa ICZB-KPD14S](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ICZB-KPD14S.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -58,7 +58,6 @@ To disable the legacy integration add the following to your `configuration.yaml`
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

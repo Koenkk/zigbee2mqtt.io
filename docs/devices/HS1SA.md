@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![HEIMAN HS1SA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS1SA.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -49,7 +49,6 @@ Unsupported:
 The product code should end in *-M* for the Zigbee version. The label inside the battery compartment should also show the Zigbee logo.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Aurora Lighting AU-A1ZB2WDM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AU-A1ZB2WDM.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -39,7 +39,6 @@ color temperature (if applicable) and color (if applicable) changes. Defaults to
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

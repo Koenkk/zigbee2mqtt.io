@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Nue / 3A HGZB-41](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-41.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -30,7 +30,6 @@ pageClass: device-page
 Reset of device is done by holding button for 20 secs until it starts to flash green. It will now automatically pair.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

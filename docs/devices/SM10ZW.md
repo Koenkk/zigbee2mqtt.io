@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![ORVIBO SM10ZW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SM10ZW.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -32,7 +32,6 @@ Interview fails for `modelId: 75a4bfe8ef9c4350830a25d13e3ab068` because
 even without proper enrolment. Device correctly reports open or closed status.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

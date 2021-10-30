@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Hive SLR1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SLR1.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -81,7 +81,6 @@ Note: You will also notice that `temperature_setpoint_hold_duration` automatical
 This will also stop any native boosts that are currently active.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

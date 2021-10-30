@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![EnOcean PTM 216Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PTM-216Z.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -61,7 +61,6 @@ In case you want to pair it to a different channel you have to factory reset the
 This device can work on any channel, not only 11, 15, 20 or 25. For this, please refer to the [EnOcean PTM 216Z manual chapter 5.3](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/).
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

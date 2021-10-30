@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Gledopto GL-FL-006TZ](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-FL-006TZ.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -68,7 +68,6 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
     ```
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

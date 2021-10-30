@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Legrand ZLGP17/ZLGP18](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZLGP17-ZLGP18.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -46,7 +46,6 @@ Note: each side of the device is treated as a single ZLGP17.
 This device can work on any channel, not only 11. For this, please refer to the [Legrand ZLGP18 manual chapter 6.2](https://www.admin.legrandoc.com/files/documents/S000112516EN-00.pdf).
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

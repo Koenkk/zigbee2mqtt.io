@@ -22,13 +22,11 @@ pageClass: device-page
 | Picture | ![TuYa TS0215A_sos](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0215A_sos.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
-## Notes
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
-None
+
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

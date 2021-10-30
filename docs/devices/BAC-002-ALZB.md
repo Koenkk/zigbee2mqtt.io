@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![HKGK BAC-002-ALZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BAC-002-ALZB.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -40,7 +40,6 @@ devices:
 {% endraw %}
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi MCCGQ01LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MCCGQ01LM.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -40,7 +40,6 @@ Most of the times this happens because of the following reasons:
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

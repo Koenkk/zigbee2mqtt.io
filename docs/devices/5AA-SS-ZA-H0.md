@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Leedarson 5AA-SS-ZA-H0](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/5AA-SS-ZA-H0.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -37,7 +37,6 @@ when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 pr
 e.g. `95` would take 95% to the illuminance reported by the device; default `100`. Calibration will take into affect with next report of device.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

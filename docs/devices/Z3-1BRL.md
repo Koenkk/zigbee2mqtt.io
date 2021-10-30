@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Lutron Z3-1BRL](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/Z3-1BRL.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -31,7 +31,6 @@ pageClass: device-page
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 <!-- Notes END: Do not edit below this line -->
-
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

@@ -22,13 +22,11 @@ pageClass: device-page
 | Picture | ![Sengled E1D-G73WNA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/E1D-G73WNA.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
-## Notes
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
-None
+
 
 <!-- Notes END: Do not edit below this line -->
-
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

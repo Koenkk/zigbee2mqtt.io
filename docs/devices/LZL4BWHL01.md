@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Lutron LZL4BWHL01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LZL4BWHL01.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -44,7 +44,6 @@ After resetting the bulb will automatically attempt to join a network.
 This method should work for Philips Hue bulbs, IKEA TRADFRI bulbs, GE Link bulbs, Connected Cree bulbs, and EcoSmart SMART bulbs.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

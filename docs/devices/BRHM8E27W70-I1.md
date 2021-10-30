@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![GS BRHM8E27W70-I1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BRHM8E27W70-I1.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -61,7 +61,6 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
     ```
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

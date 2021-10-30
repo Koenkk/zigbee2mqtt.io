@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Dawon DNS PM-S340-ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PM-S340-ZB.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -30,7 +30,6 @@ pageClass: device-page
 This device does **not** act as a router.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

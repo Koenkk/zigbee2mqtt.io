@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![HEIMAN HS2SK_nxp](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS2SK_nxp.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -31,7 +31,6 @@ pageClass: device-page
 * `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

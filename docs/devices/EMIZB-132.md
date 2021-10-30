@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Develco EMIZB-132](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/EMIZB-132.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -50,7 +50,6 @@ Related issues:
 - https://github.com/dresden-elektronik/deconz-rest-plugin/issues/2127#issuecomment-587949747
 
 <!-- Notes END: Do not edit below this line -->
-
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

@@ -22,13 +22,11 @@ pageClass: device-page
 | Picture | ![Nue / 3A NUE-ZBFLB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/NUE-ZBFLB.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
-## Notes
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
-None
+
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

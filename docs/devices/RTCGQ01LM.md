@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi RTCGQ01LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/RTCGQ01LM.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -65,7 +65,6 @@ To work around this, a
 is needed.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

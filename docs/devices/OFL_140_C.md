@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Innr OFL 140 C](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/OFL-140-C.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -65,7 +65,6 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
     ```
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

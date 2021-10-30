@@ -22,13 +22,11 @@ pageClass: device-page
 | Picture | ![Somgoms ZSTY-SM-11ZG-US-W](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZSTY-SM-11ZG-US-W.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
-## Notes
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
-None
+
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi SP-EUC01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SP-EUC01.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -30,7 +30,6 @@ pageClass: device-page
 Press and hold the button on the device for +- 5 seconds, until the blue light starts blinking.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

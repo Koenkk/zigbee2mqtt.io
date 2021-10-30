@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Custom devices (DiY) EFEKTA_THP_LR](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/EFEKTA_THP_LR.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -52,7 +52,6 @@ when pressure >= 1000 precision will be 0, when pressure >= 100 precision will b
 e.g. `1` would add 1 to the pressure reported by the device; default `0`. Calibration will take into affect with next report of device.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

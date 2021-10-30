@@ -7,6 +7,7 @@ import * as path from "path";
 const sizeOfP = promisify(sizeOf);
 
 export async function checkDeviceImageSize() {
+  console.log('* Test if device images has 150x150px dimensions...');
   const invalid = [];
   const images = await fsp.readdir(imageBaseDir);
   await Promise.all(images.map(async img => {

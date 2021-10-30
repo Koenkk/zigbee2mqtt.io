@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Aurora Lighting AU-A1ZBR1GW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AU-A1ZBR1GW.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -39,7 +39,6 @@ simulated_brightness:
 ```
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

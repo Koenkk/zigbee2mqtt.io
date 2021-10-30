@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Hive SLR2](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SLR2.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -142,7 +142,6 @@ This will also stop any native boosts that are currently active.
 The water endpoint functions as what could be considered an on/off switch based on `system_mode_water`. Because of that, the device uses fixed values for temperature. `local_temperature_water` is always 21 and `occupied_heating_setpoint_water` is always 22.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

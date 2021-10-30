@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Livolo TI0001-switch-2gang](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TI0001-switch-2gang.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -51,7 +51,6 @@ advanced:
 ```
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

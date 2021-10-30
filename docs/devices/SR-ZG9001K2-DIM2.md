@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Sunricher SR-ZG9001K2-DIM2](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SR-ZG9001K2-DIM2.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -39,7 +39,6 @@ simulated_brightness:
 ```
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

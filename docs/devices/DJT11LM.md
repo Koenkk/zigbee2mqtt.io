@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi DJT11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DJT11LM.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -54,7 +54,6 @@ values: `low`, `medium`,  `high`.
 After setting the sensitivity you immediately have to start pressing the reset button with an interval of 1 second until you see Zigbee2MQTT publishing the new sensitivity to MQTT.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

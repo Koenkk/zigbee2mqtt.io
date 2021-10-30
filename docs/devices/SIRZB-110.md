@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Develco Products A/S SIRZB-110](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SIRZB-110.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -62,7 +62,6 @@ Examples:
 `{"squawk":{"level":"low","mode":"system_is_disarmed","strobe":false}}`
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

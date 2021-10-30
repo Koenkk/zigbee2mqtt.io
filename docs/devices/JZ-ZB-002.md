@@ -22,11 +22,10 @@ pageClass: device-page
 | Picture | ![LELLKI JZ-ZB-002](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JZ-ZB-002.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

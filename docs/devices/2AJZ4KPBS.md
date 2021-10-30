@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Konke 2AJZ4KPBS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/2AJZ4KPBS.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -30,7 +30,6 @@ pageClass: device-page
 Konke devices only work on Zigbee channel 15, 20 and 25.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

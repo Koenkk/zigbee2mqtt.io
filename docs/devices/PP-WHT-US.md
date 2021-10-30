@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Securifi PP-WHT-US](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PP-WHT-US.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -54,7 +54,6 @@ via the original hub. In case of an older firmware you will only see 0 values in
 Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
 
 <!-- Notes END: Do not edit below this line -->
-
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

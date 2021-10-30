@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi ZNCZ02LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNCZ02LM.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -54,7 +54,6 @@ Now toggle the plug/switch once with the button on it, from now on it will resto
 Some versions of the plug provide voltage. This depends on the firmware on the device. Confirmed working are the ones with `dateCode` `02-28-2017` (can be checked in `data/database.db`). Note that Xiaomi doesn't provide firmware files, so the software cannot be downgraded/upgraded.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

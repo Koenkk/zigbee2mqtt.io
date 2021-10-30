@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![eCozy 1TST-EU](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/1TST-EU.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -195,7 +195,6 @@ tz.thermostat_relay_status_log_rsp
 -->
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

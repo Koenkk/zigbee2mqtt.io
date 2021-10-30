@@ -23,7 +23,7 @@ pageClass: device-page
 | White-label | RGB Genie ZGRC-KEY-013 |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -63,7 +63,6 @@ simulated_brightness:
 ```
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

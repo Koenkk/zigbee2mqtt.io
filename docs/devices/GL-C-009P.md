@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Gledopto GL-C-009P](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-C-009P.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -40,7 +40,6 @@ color temperature (if applicable) and color (if applicable) changes. Defaults to
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

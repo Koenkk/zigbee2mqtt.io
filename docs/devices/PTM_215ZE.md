@@ -23,7 +23,7 @@ pageClass: device-page
 | White-label | Easyfit by EnOcean EWSxZ, Trio2sys 20020002 |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -61,7 +61,6 @@ Once the device is paired you need to confirm the channel. To do this, press any
 For more informations, please refer to the [EnOcean PTM 215ZE manual chapter 5.1](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/).
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

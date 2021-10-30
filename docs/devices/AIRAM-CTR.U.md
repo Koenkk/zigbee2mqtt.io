@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Airam AIRAM-CTR.U](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AIRAM-CTR.U.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -55,7 +55,6 @@ within 5 centimeters away from Airam bulb.
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

@@ -22,11 +22,10 @@ pageClass: device-page
 | Picture | ![DIYRuZ DIYRuZ_RT](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DIYRuZ_RT.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes

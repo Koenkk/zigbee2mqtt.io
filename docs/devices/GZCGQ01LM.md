@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi GZCGQ01LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GZCGQ01LM.jpg) |
 
 
-<!-- Notes BEGIN: You can edit here -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
@@ -32,7 +32,6 @@ pageClass: device-page
 e.g. `95` would take 95% to the illuminance reported by the device; default `100`. Calibration will take into affect with next report of device.
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Exposes
