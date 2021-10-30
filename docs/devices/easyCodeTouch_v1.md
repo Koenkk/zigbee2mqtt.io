@@ -1,30 +1,23 @@
 ---
 title: "Onesti Products AS easyCodeTouch_v1 control via MQTT"
-description: "Integrate your Onesti Products AS easyCodeTouch_v1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2021-08-01T20:41:55Z
-pageClass: device-page
+description: "Integrate your Onesti Products AS easyCodeTouch_v1 via Zigbee2MQTT with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
 ---
 
-<!-- !!!! -->
-<!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
-<!-- !!!! -->
+*To contribute to this page, edit the following
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/easyCodeTouch_v1.md)*
 
 # Onesti Products AS easyCodeTouch_v1
 
-|     |     |
-|-----|-----|
 | Model | easyCodeTouch_v1  |
 | Vendor  | Onesti Products AS  |
 | Description | Zigbee module for EasyAccess code touch series |
-| Exposes | lock (state, lock_state), battery, sound_volume, linkquality |
-| Picture | ![Onesti Products AS easyCodeTouch_v1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/easyCodeTouch_v1.jpg) |
-
+| Exposes | lock (state, lock_state), battery, sound_volume, action, auto_relock, pin_code, linkquality |
+| Picture | ![Onesti Products AS easyCodeTouch_v1](../images/devices/easyCodeTouch_v1.jpg) |
 
 ## Notes
 
 None
-
 
 
 ## Exposes
@@ -48,6 +41,26 @@ Value can be found in the published state on the `sound_volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sound_volume": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": NEW_VALUE}`.
 The possible values are: `silent_mode`, `low_volume`, `high_volume`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `keypad_lock`, `keypad_unlock`, `keypad_unlock`, `manual_lock`, `manual_unlock`, `key_lock`, `key_unlock`, `fingerprint_lock`, `fingerprint_unlock`, `rfid_lock`, `rfid_unlock`, `lock`, `zigbee_unlock`.
+
+### Auto_relock (binary)
+Auto relock after 7 seconds..
+Value can be found in the published state on the `auto_relock` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_relock": NEW_VALUE}`.
+If value equals `true` auto_relock is ON, if `false` OFF.
+
+### Pin_code (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "user_type": VALUE, "user_enabled": VALUE, "pin_code": VALUE}}`
+- `user` (numeric): User ID to set or clear the pincode for. 
+- `user_type` (enum): Type of user, unrestrictied: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock. Allowed values: `unrestricted`, `year_day_schedule`, `week_day_schedule`, `master`, `non_access`
+- `user_enabled` (binary): Whether the user is enabled/disabled. Allowed values: `true` or `false`
+- `pin_code` (numeric): Pincode to set, set pincode to null to clear. 
 
 ### Linkquality (numeric)
 Link quality (signal strength).

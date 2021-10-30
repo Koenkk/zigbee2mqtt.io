@@ -23,6 +23,7 @@ pageClass: device-page
 
 ## Notes
 
+
 ### Pairing
 Press the Orange button on the side until 3 dots appear on the screen.
 

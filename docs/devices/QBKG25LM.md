@@ -1,25 +1,19 @@
 ---
 title: "Xiaomi QBKG25LM control via MQTT"
-description: "Integrate your Xiaomi QBKG25LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2020-06-10T16:45:59Z
-pageClass: device-page
+description: "Integrate your Xiaomi QBKG25LM via Zigbee2MQTT with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
 ---
 
-<!-- !!!! -->
-<!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
-<!-- !!!! -->
+*To contribute to this page, edit the following
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QBKG25LM.md)*
 
 # Xiaomi QBKG25LM
 
-|     |     |
-|-----|-----|
 | Model | QBKG25LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 3 gang smart wall switch (no neutral wire) |
-| Exposes | switch (state), operation_mode, power_outage_memory, led_disabled_night, temperature, action, linkquality |
-| Picture | ![Xiaomi QBKG25LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG25LM.jpg) |
-
+| Exposes | switch (state), operation_mode, mode_switch, power_outage_memory, led_disabled_night, temperature, action, linkquality |
+| Picture | ![Xiaomi QBKG25LM](../images/devices/QBKG25LM.jpg) |
 
 ## Notes
 
@@ -32,7 +26,7 @@ You may have to unpair the switch from an existing coordinator before the pairin
 If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+*[How to use device type specific configuration](../information/configuration.md)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
@@ -57,7 +51,7 @@ To set this option publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"do_not_
 
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 
 
 ## Exposes
@@ -97,6 +91,13 @@ Value can be found in the published state on the `operation_mode_right` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_right": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
+
+### Mode_switch (enum)
+Anti flicker mode can be used to solve blinking issues of some lights.Quick mode makes the device respond faster..
+Value can be found in the published state on the `mode_switch` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode_switch": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_switch": NEW_VALUE}`.
+The possible values are: `anti_flicker_mode`, `quick_mode`.
 
 ### Power_outage_memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.

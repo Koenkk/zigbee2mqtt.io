@@ -1,30 +1,24 @@
 ---
 title: "Neo NAS-PD07 control via MQTT"
-description: "Integrate your Neo NAS-PD07 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2021-10-01T17:18:02Z
-pageClass: device-page
+description: "Integrate your Neo NAS-PD07 via Zigbee2MQTT with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
 ---
 
-<!-- !!!! -->
-<!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
-<!-- !!!! -->
+*To contribute to this page, edit the following
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/NAS-PD07.md)*
 
 # Neo NAS-PD07
 
-|     |     |
-|-----|-----|
 | Model | NAS-PD07  |
 | Vendor  | Neo  |
 | Description | Motion, temperature & humidity sensor |
-| Exposes | occupancy, humidity, temperature, tamper, power_type, linkquality |
-| Picture | ![Neo NAS-PD07](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/NAS-PD07.jpg) |
-
+| Exposes | occupancy, humidity, temperature, tamper, battery_low, power_type, linkquality |
+| Picture | ![Neo NAS-PD07](../images/devices/NAS-PD07.jpg) |
 
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+*[How to use device type specific configuration](../information/configuration.md)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -65,6 +59,12 @@ Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
+
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
 
 ### Power_type (enum)
 Value can be found in the published state on the `power_type` property.

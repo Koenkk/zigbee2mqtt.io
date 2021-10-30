@@ -23,11 +23,12 @@ pageClass: device-page
 
 ## Notes
 
+
 ### Pairing
 
-To pair the thermostat with Zigbee2Mqtt, follow these steps:
+To pair the thermostat with Zigbee2MQTT, follow these steps:
 
-1. Temporarily disconnect any thermostat controllers connected to the thermostat by remove a battery from them. 
+1. Temporarily disconnect any thermostat controllers connected to the thermostat by remove a battery from them.
 2. Turn the thermostat and boiler off, then on again to ensure it is not trying to connect to any thermostat controllers.
 3. Once the thermostat and boiler are on, hold down the Central heating button on the device until the Central heating'light turns white/ pink, then release the button. This will enable stand-alone mode on the thermostat.
 4. Hold down the central heating button again until the Central heating light begins to flash amber. The device is now in pairing mode and should be found by Zigbee2MQTT.

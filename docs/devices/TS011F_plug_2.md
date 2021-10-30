@@ -23,7 +23,10 @@ pageClass: device-page
 
 ## Notes
 
-None
+
+### Pairing
+Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
+
 
 
 

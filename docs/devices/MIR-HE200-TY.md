@@ -1,54 +1,77 @@
 ---
-title: "TuYa Human radar motion/presence sensor"
-description: "Integrate your Tuya Human radar motion and presence sensor into zigbee2mqtt."
+title: "TuYa MIR-HE200-TY control via MQTT"
+description: "Integrate your TuYa MIR-HE200-TY via Zigbee2MQTT with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
 ---
 
 *To contribute to this page, edit the following
 [file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MIR-HE200-TY.md)*
 
-# Tuya MIR-HE200-TY
+# TuYa MIR-HE200-TY
 
-| Model | Tuya MIR-HE200-TY  |
+| Model | MIR-HE200-TY  |
 | Vendor  | TuYa  |
-| Description | TuYa Human radar motion/presence sensor |
-| Exposes | Presence, motion, motion_direction, motion_speed, illuminance,  sensivity, scene |
-| Picture |  (zigbee2mqtt.io/docs/images/devices/MIR-HE200-TY.jpg)MIR-HE200-TY |
+| Description | Human presence sensor |
+| Exposes | illuminance_lux, presence, motion, motion_speed, motion_direction, radar_sensitivity, radar_scene, linkquality |
+| Picture | ![TuYa MIR-HE200-TY](../images/devices/MIR-HE200-TY.jpg) |
 
 ## Notes
 
 
 ### Pairing
-Factory resetting by pushing the "Reset-Button" longer than 5 seconfs.
-#### Touchlink factory reset
-See [Touchlink](../guide/usage/touchlink.md)
+Factory resetting by pushing the "Reset-Button" longer than 5 seconds or by using Touchlink factory reset.
 
-
-
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes
 
-### illuminanceLux
-This device shows the illuminance in lux.
+### Illuminance_lux (numeric)
+Measured illuminance in lux.
+Value can be found in the published state on the `illuminance_lux` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
 
-### presence 
-This device recognizes presence by radar, NOT by IR.
+### Presence (binary)
+Indicates whether the device detected presence.
+Value can be found in the published state on the `presence` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` presence is ON, if `false` OFF.
 
-### motion
-Recognize, if only presence or the recognized body is moving.
+### Motion (enum)
+moving inside the range of the sensor.
+Value can be found in the published state on the `motion` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `true`, `false`.
 
-### motion_speed
-Shows the speed of movement. At the moment not shure about the meaturing-methode and the scale of results. Comming up in an update.
+### Motion_speed (numeric)
+Speed of movement.
+Value can be found in the published state on the `motion_speed` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
-### motion_direction
-Shows wether the body is moved towards or backwards from the sensor. Also it shows, if the body is standing still.
+### Motion_direction (enum)
+direction of movement from the point of view of the radar.
+Value can be found in the published state on the `motion_direction` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `standing still`, `moving forward`, `moving backward`.
 
-### radar_sensitivity
-Scalable sensitivity of detection (Range 0-10). This expose can be controlled via publish a message to:
-`zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": "0-10"}`
+### Radar_sensitivity (numeric)
+sensitivity of the radar.
+Value can be found in the published state on the `radar_sensitivity` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10`.
 
-### radar_scene
-The sensor has 6 predefined scenes regarding sensivity of motion and presence. These are: default, area, toilet, bedroom, parlour, office, hotel. Changing is possible via:
-`zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_scene": "default | area | toilet | bedroom | parlour | office | hotel"}`
+### Radar_scene (enum)
+presets for sensivity for presence and movement.
+Value can be found in the published state on the `radar_scene` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_scene": NEW_VALUE}`.
+The possible values are: `default`, `area`, `toilet`, `bedroom`, `parlour`, `office`, `hotel`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+

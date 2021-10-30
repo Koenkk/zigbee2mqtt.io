@@ -1,26 +1,20 @@
 ---
 title: "TuYa TS0601_thermostat control via MQTT"
-description: "Integrate your TuYa TS0601_thermostat via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2020-07-20T23:08:11Z
-pageClass: device-page
+description: "Integrate your TuYa TS0601_thermostat via Zigbee2MQTT with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
 ---
 
-<!-- !!!! -->
-<!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
-<!-- !!!! -->
+*To contribute to this page, edit the following
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0601_thermostat.md)*
 
 # TuYa TS0601_thermostat
 
-|     |     |
-|-----|-----|
 | Model | TS0601_thermostat  |
 | Vendor  | TuYa  |
 | Description | Radiator valve with thermostat |
 | Exposes | lock (state), switch (state), battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, away_mode, preset), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, week, away_preset_temperature, linkquality |
-| Picture | ![TuYa TS0601_thermostat](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0601_thermostat.jpg) |
-| White-label | Moes HY368, Moes HY369RT, SHOJZJ 378RT |
-
+| Picture | ![TuYa TS0601_thermostat](../images/devices/TS0601_thermostat.jpg) |
+| White-label | Moes HY368, Moes HY369RT, SHOJZJ 378RT, Silvercrest TVR01 |
 
 ## Notes
 
@@ -119,7 +113,7 @@ After this command thermostat responds with two messages. One for calibration ch
 
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
 
 
 ## Exposes

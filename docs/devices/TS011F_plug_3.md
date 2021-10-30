@@ -11,9 +11,9 @@ description: "Integrate your TuYa TS011F_plug_3 via Zigbee2MQTT with whatever sm
 
 | Model | TS011F_plug_3  |
 | Vendor  | TuYa  |
-| Description | Smart plug (without power monitoring) |
-| Exposes | switch (state), power_outage_memory, linkquality |
-| Picture | ![TuYa TS011F_plug_3](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS011F_plug_2.jpg) |
+| Description | Smart plug (with power monitoring by polling) |
+| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
+| Picture | ![TuYa TS011F_plug_3](../images/devices/TS011F_plug_3.jpg) |
 
 ## Notes
 
@@ -21,10 +21,6 @@ description: "Integrate your TuYa TS011F_plug_3 via Zigbee2MQTT with whatever sm
 ### Pairing
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/)*
-
-* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds.
 
 
 ## Exposes
@@ -71,3 +67,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+

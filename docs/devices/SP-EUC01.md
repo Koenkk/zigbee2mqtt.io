@@ -23,6 +23,7 @@ pageClass: device-page
 
 ## Notes
 
+
 ### Pairing
 Press and hold the button on the device for +- 5 seconds, until the blue light starts blinking.
 

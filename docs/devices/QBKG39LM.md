@@ -1,30 +1,23 @@
 ---
 title: "Xiaomi QBKG39LM control via MQTT"
-description: "Integrate your Xiaomi QBKG39LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2021-07-01T18:17:29Z
-pageClass: device-page
+description: "Integrate your Xiaomi QBKG39LM via Zigbee2MQTT with whatever smart home
+ infrastructure you are using without the vendors bridge or gateway."
 ---
 
-<!-- !!!! -->
-<!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
-<!-- !!!! -->
+*To contribute to this page, edit the following
+[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QBKG39LM.md)*
 
 # Xiaomi QBKG39LM
 
-|     |     |
-|-----|-----|
 | Model | QBKG39LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara E1 2 gang switch (without neutral) |
-| Exposes | switch (state), operation_mode, action, power_outage_memory, linkquality |
-| Picture | ![Xiaomi QBKG39LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG39LM.jpg) |
-
+| Exposes | switch (state), operation_mode, mode_switch, action, power_outage_memory, linkquality |
+| Picture | ![Xiaomi QBKG39LM](../images/devices/QBKG39LM.jpg) |
 
 ## Notes
 
 None
-
 
 
 ## Exposes
@@ -52,6 +45,13 @@ Value can be found in the published state on the `operation_mode_right` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_right": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
+
+### Mode_switch (enum)
+Anti flicker mode can be used to solve blinking issues of some lights.Quick mode makes the device respond faster..
+Value can be found in the published state on the `mode_switch` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode_switch": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_switch": NEW_VALUE}`.
+The possible values are: `anti_flicker_mode`, `quick_mode`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).
