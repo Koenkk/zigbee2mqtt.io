@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Xiaomi RTCGQ11LM
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi RTCGQ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/RTCGQ11LM.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -71,6 +73,8 @@ This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/iss
 To work around this, a
 [hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
 is needed.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

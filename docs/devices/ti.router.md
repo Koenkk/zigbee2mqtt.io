@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Custom devices (DiY) ti.router
@@ -21,11 +22,14 @@ pageClass: device-page
 | Picture | ![Custom devices (DiY) ti.router](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ti.router.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
 ### Firmware
 This is a Texas Instruments CC1352P-2, CC2652RB or CC2652R flashed with the following firmware: https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_3.x.0/bin
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

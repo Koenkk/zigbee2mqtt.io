@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Xiaomi ZNCJMB14LM
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi ZNCJMB14LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNCJMB14LM.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -29,6 +31,8 @@ On initial boot, the device will display a message "Waiting for accessing the ne
 
 If the device is already part of a network, swipe down from the top of the screen to access the Settings panel (password may be required), navigate to "Advanced", navigate to "Access New Gateway" and confirm with "Ok".
 Once confirmed, proceed as per initial boot.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

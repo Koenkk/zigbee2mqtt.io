@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Nue / 3A LXZB-02A
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Nue / 3A LXZB-02A](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LXZB-02A.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 ### Device type specific configuration
@@ -29,6 +31,8 @@ pageClass: device-page
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

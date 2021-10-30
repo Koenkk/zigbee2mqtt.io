@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Konke TW-S1
@@ -21,11 +22,14 @@ pageClass: device-page
 | Picture | ![Konke TW-S1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TW-S1.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
 ### Important
 Konke devices only work on Zigbee channel 15, 20 and 25.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

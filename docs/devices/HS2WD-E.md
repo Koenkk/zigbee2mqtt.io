@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # HEIMAN HS2WD-E
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![HEIMAN HS2WD-E](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS2WD-E.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -32,6 +34,8 @@ Where:
 - `duration`: the number of seconds the alarm will be on (max is 1800 seconds)
 - `mode`: `stop` or `emergency`
 - `strobe`: `true` or `false` will let the strobe flash once during the alarm
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

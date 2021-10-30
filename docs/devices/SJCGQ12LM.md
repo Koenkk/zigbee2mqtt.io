@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Xiaomi SJCGQ12LM
@@ -21,12 +22,15 @@ pageClass: device-page
 | Picture | ![Xiaomi SJCGQ12LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SJCGQ12LM.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
 ### Pairing
 Press and hold water logo on the device for +- 5 seconds (you have to press quite hard) until the blue light blinks
 three times, release the water logo (the blue light will blink once more) and wait.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 ## OTA updates

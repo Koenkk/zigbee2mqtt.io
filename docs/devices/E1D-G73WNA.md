@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Sengled E1D-G73WNA
@@ -21,9 +22,12 @@ pageClass: device-page
 | Picture | ![Sengled E1D-G73WNA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/E1D-G73WNA.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 None
+
+<!-- Notes END: Do not edit below this line -->
 
 
 ## OTA updates

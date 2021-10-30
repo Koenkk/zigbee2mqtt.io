@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # SONOFF S31ZB
@@ -21,11 +22,14 @@ pageClass: device-page
 | Picture | ![SONOFF S31ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/S31ZB.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
 ### Pairing
 After first power on, it should enter pairing mode. To pair to a new network, long press reset button for 5s until the Wi-Fi LED indicator changes to a cycle of two short flashes and one long flash, then release.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

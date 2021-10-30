@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Smartenit ZBHT-1
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Smartenit ZBHT-1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZBHT-1.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -69,6 +71,8 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 * `humidity_precision`: Controls the precision of `humidity` values, e.g. `0`, `1` or `2`; default `2`.
 To control the precision based on the humidity value set it to e.g. `{80: 0, 10: 1}`,
 when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1. Precision will take into affect with next report of device.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

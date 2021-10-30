@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Stelpro STZB402
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Stelpro STZB402](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/STZB402.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 ### Device type specific configuration
@@ -52,6 +54,8 @@ If you want to automate the publishing of the outdoor temperature using Home Ass
 ```
 
 **IMPORTANT**: The outdoor temperature need to be refreshed at least each 4 hours, or the `EXT` display will be cleared on the thermostat.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

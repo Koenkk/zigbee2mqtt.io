@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Xiaomi QBCZ11LM
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi QBCZ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBCZ11LM.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 ### Device type specific configuration
@@ -38,6 +40,8 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 This option allows the device to restore the last on/off state when it's reconnected to power.
 To set this option publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"power_outage_memory": true}` (or `false`).
 Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 ## OTA updates

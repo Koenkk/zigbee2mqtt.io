@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # HEIMAN HS2IRC
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![HEIMAN HS2IRC](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS2IRC.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -146,6 +148,8 @@ Request:
 
 - **id**: `1..15` - Delete specific device with ID. `>=16` - Delete all devices.
 - **key_code**: `1..30` -Delete specific keycode. `>=31` - Delete all keycodes for specified device ID.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

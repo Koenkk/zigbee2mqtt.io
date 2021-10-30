@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Xiaomi WXKG03LM_rev1
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi WXKG03LM_rev1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WXKG03LM_rev1.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -48,6 +50,8 @@ If you can't do this, try to remove battery (if it has one), push the button (to
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

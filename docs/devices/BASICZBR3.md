@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # SONOFF BASICZBR3
@@ -21,11 +22,14 @@ pageClass: device-page
 | Picture | ![SONOFF BASICZBR3](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BASICZBR3.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
 ### Pairing
 If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the (relay) button on the top for about 5 seconds until the relay clicks and the red LED flashes several times. The device will then go into pairing mode and the blue LED will begin to flash. When connected, the blue LED will turn on solid. It should then be connected to Zigbee2MQTT. Pressing the button should activate the relay on/off as normal, and the red LED will be on/off.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

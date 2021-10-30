@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Xiaomi QBKG24LM
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi QBKG24LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG24LM.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -30,6 +32,8 @@ Press and hold the button on the device for +- 10 seconds
 
 You may have to unpair the switch from an existing coordinator before the pairing process will start.
 If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 ## OTA updates

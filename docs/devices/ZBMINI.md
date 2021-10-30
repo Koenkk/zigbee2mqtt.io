@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # SONOFF ZBMINI
@@ -21,12 +22,15 @@ pageClass: device-page
 | Picture | ![SONOFF ZBMINI](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZBMINI.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
 ### Device stuck
 In case of switching the coordinators a device may stuck in error state which is indicated by slowly blinking light (about 1 flash per second).
 To switch a device to a pairing mode power it off for 10 sec. After power on it enters pairing mode automatically.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

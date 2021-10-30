@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # IKEA ICPSHC24-10EU-IL-1
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![IKEA ICPSHC24-10EU-IL-1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ICPSHC24-10EU-IL-1.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -35,6 +37,8 @@ NB: you HAVE to put the device VERY close to the zigbee device, otherwise it won
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 ## OTA updates

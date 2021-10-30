@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Custom devices (DiY) EFEKTA_THP_LR
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Custom devices (DiY) EFEKTA_THP_LR](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/EFEKTA_THP_LR.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -48,6 +50,8 @@ To control the precision based on the pressure value set it to e.g. `{1000: 0, 1
 when pressure >= 1000 precision will be 0, when pressure >= 100 precision will be 1. Precision will take into affect with next report of device.
 * `pressure_calibration`: Allows to manually calibrate pressure values,
 e.g. `1` would add 1 to the pressure reported by the device; default `0`. Calibration will take into affect with next report of device.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

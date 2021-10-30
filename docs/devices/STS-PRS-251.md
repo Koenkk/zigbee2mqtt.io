@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # SmartThings STS-PRS-251
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![SmartThings STS-PRS-251](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/STS-PRS-251.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 ### Device type specific configuration
@@ -38,6 +40,8 @@ pageClass: device-page
 
 
 * `presence_timeout`: Timeout (in seconds) after which `presence: false` will be send when the device has not checked-in. By default 100 seconds, don't go lower then 30 seconds.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

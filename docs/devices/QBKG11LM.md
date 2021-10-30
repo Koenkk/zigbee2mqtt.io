@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Xiaomi QBKG11LM
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi QBKG11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG11LM.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -56,6 +58,8 @@ To control the precision based on the temperature value set it to e.g. `{30: 0, 
 when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1. Precision will take into affect with next report of device.
 * `temperature_calibration`: Allows to manually calibrate temperature values,
 e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 ## OTA updates

@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Feibit SWA01ZB
@@ -21,9 +22,12 @@ pageClass: device-page
 | Picture | ![Feibit SWA01ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SWA01ZB.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 None
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

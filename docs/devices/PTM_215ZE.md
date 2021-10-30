@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # EnOcean PTM 215ZE
@@ -22,6 +23,7 @@ pageClass: device-page
 | White-label | Easyfit by EnOcean EWSxZ, Trio2sys 20020002 |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -57,6 +59,8 @@ Then, press the selected button contact shortly (< 7s) to select radio channel 1
 Once the device is paired you need to confirm the channel. To do this, press any button other than the one used previously.
 
 For more informations, please refer to the [EnOcean PTM 215ZE manual chapter 5.1](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/).
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

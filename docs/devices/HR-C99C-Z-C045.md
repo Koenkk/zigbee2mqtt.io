@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # ADEO HR-C99C-Z-C045
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![ADEO HR-C99C-Z-C045](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HR-C99C-Z-C045.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -40,6 +42,8 @@ simulated_brightness:
   delta: 20 # delta per interval, default = 20
   interval: 200 # interval in milliseconds, default = 200
 ```
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

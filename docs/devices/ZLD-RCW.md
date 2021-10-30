@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Moes ZLD-RCW
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Moes ZLD-RCW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZLD-RCW.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 ### Device type specific configuration
@@ -57,6 +59,8 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
         - in: 334
           out: 318
     ```
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

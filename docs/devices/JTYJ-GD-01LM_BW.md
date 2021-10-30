@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Xiaomi JTYJ-GD-01LM/BW
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi JTYJ-GD-01LM/BW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JTYJ-GD-01LM-BW.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -39,6 +41,8 @@ values: `low`, `medium`,  `high`.
 A self-test can be trigged by publishing to `zigbee2mqtt/FRIENDLY_NAME/set`
 `{"selftest": ""}`.
 If the selftest is executed successfully you will hear the device beep in 30 seconds.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

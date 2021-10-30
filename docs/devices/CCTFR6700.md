@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Schneider Electric CCTFR6700
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Schneider Electric CCTFR6700](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/CCTFR6700.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -35,6 +37,8 @@ After pairing the device requires:
 - the pilot mode to be configured (Contactor/Pilot)
 - an external temperature measurment, either through a bind from a sensor, or report from the coordinator trhough automation. The temperature must be refreshed at least every 10mn
 - the target thermostat set point
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

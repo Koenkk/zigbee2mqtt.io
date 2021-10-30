@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # TuYa TS0601_thermostat
@@ -22,6 +23,7 @@ pageClass: device-page
 | White-label | Moes HY368, Moes HY369RT, SHOJZJ 378RT, Silvercrest TVR01 |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -116,6 +118,8 @@ After this command thermostat responds with two messages. One for calibration ch
         "eco_temperature": 17
     }
     ```
+
+<!-- Notes END: Do not edit below this line -->
 
 
 ## OTA updates

@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Develco Products A/S SIRZB-110
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Develco Products A/S SIRZB-110](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SIRZB-110.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -58,6 +60,8 @@ Squawk are normally used to indicate activation and deactivation of an alarm sys
 Examples:
 `{"squawk":{"level":"low","mode":"system_is_sarmed","strobe":false}}`
 `{"squawk":{"level":"low","mode":"system_is_disarmed","strobe":false}}`
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Xiaomi WXKG12LM
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Xiaomi WXKG12LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WXKG12LM.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -55,6 +57,8 @@ More detailed information about this can be found [here](https://community.hubit
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

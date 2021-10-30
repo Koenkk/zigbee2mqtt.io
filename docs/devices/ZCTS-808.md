@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Trust ZCTS-808
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Trust ZCTS-808](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZCTS-808.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -28,6 +30,8 @@ pageClass: device-page
 When pairing the sensor with Zigbee2MQTT,
 keep opening and closing the sensor (pull/insert the sensor parts next to each other) for 10 seconds,
 otherwise device will fall asleep before it gets fully configured and will not send state changes.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

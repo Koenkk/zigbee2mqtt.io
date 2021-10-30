@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # LELLKI JZ-ZB-002
@@ -21,7 +22,10 @@ pageClass: device-page
 | Picture | ![LELLKI JZ-ZB-002](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JZ-ZB-002.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

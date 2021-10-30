@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # EnOcean PTM 215Z
@@ -22,6 +23,7 @@ pageClass: device-page
 | White-label | Niko 91004, NodOn CWS-4-1-01_HUE, Vimar 03906 |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -52,6 +54,8 @@ To pair it, hold the corresponding button for that channel for 7 seconds or more
 | A1 | 20 |
 | B0 | 11 |
 | B1 | 25 |
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

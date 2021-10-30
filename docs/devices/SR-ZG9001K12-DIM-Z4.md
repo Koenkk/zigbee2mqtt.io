@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Sunricher SR-ZG9001K12-DIM-Z4
@@ -22,6 +23,7 @@ pageClass: device-page
 | White-label | RGB Genie ZGRC-KEY-013 |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -59,6 +61,8 @@ simulated_brightness:
   delta: 20 # delta per interval, default = 20
   interval: 200 # interval in milliseconds, default = 200
 ```
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

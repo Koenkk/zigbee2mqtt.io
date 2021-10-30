@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # EnOcean PTM 216Z
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![EnOcean PTM 216Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PTM-216Z.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -57,6 +59,8 @@ Once the device is paired you need to confirm the channel. To do this press A1 a
 In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds.
 
 This device can work on any channel, not only 11, 15, 20 or 25. For this, please refer to the [EnOcean PTM 216Z manual chapter 5.3](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/).
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

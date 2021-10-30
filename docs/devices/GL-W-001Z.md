@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Gledopto GL-W-001Z
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Gledopto GL-W-001Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-W-001Z.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -29,6 +31,8 @@ pageClass: device-page
 2. Now switch off and on within 2 seconds.
 3. Repeat off/on four times.
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

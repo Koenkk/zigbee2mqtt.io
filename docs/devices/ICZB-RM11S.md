@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # iCasa ICZB-RM11S
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![iCasa ICZB-RM11S](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ICZB-RM11S.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -45,6 +47,8 @@ simulated_brightness:
   delta: 20 # delta per interval, default = 20
   interval: 200 # interval in milliseconds, default = 200
 ```
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

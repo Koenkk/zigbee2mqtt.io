@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # OpenLumi GWRJN5169
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![OpenLumi GWRJN5169](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GWRJN5169.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -28,6 +30,8 @@ pageClass: device-page
 Zigbee Router for __Xiaomi DGNWG05LM__ and __Aqara ZHWG11LM__ gateways.
 
 Open source firmware can be found here: [Github](https://github.com/igo-r/Lumi-Router-JN5169)
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

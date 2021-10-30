@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # eCozy 1TST-EU
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![eCozy 1TST-EU](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/1TST-EU.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 ### Device type specific configuration
@@ -191,6 +193,8 @@ tz.thermostat_relay_status_log
 Get relay status log response
 tz.thermostat_relay_status_log_rsp
 -->
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

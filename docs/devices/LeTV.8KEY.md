@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # LeTV LeTV.8KEY
@@ -21,9 +22,12 @@ pageClass: device-page
 | Picture | ![LeTV LeTV.8KEY](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LeTV.8KEY.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 None
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

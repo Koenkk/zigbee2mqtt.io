@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Danalock V3-BTZB/V3-BTZBE
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![Danalock V3-BTZB/V3-BTZBE](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/V3-BTZB-V3-BTZBE.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -32,6 +34,8 @@ If pairing failed, try the followings:
 
 ### App
 This device also come with an iOS app (Android as well but not tested). It is recommended to do the setups via the app for better control of the lock.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 

@@ -8,11 +8,12 @@ export async function checkDeviceImages() {
   await Promise.all(devices.map(async device => {
     const image = path.join(imageBaseDir, await getImage(device, imageBaseDir, ''));
     if (!await checkFileExists(image)) {
+      device.image = image;
       missing.push(device);
     }
   }));
 
   if(missing.length) {
-    throw missing.reduce((res, d) => res += `Missing image for Model ${ d.model }\n`, "");
+    throw missing.reduce((res, d) => res += `Missing image for Model ${ d.model }: ${ d.image }\n`, "");
   }
 }

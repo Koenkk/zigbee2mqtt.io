@@ -7,7 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section. -->
+<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
+<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # ORVIBO SM10ZW
@@ -21,6 +22,7 @@ pageClass: device-page
 | Picture | ![ORVIBO SM10ZW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SM10ZW.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here -->
 ## Notes
 
 
@@ -28,6 +30,8 @@ pageClass: device-page
 Interview fails for `modelId: 75a4bfe8ef9c4350830a25d13e3ab068` because
 `ssIasZone:iasCieAddr` can not be read or written, all messages go to the coordinator
 even without proper enrolment. Device correctly reports open or closed status.
+
+<!-- Notes END: Do not edit below this line -->
 
 
 
