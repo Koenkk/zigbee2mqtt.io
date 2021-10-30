@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Hive SLR2b
@@ -140,7 +140,6 @@ This will also stop any native boosts that are currently active.
 
 ### Local and occupied temperature (water endpoint)
 The water endpoint functions as what could be considered an on/off switch based on `system_mode_water`. Because of that, the device uses fixed values for temperature. `local_temperature_water` is always 21 and `occupied_heating_setpoint_water` is always 22.
-
 <!-- Notes END: Do not edit below this line -->
 
 

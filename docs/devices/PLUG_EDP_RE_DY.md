@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # EDP PLUG EDP RE:DY
@@ -28,7 +28,6 @@ pageClass: device-page
 
 ### Pairing
 Factory reset the plug (hold the switch button for >10sec). After resetting the switch will automatically connect.
-
 <!-- Notes END: Do not edit below this line -->
 
 

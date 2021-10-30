@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Leedarson 5AA-SS-ZA-H0
@@ -35,7 +35,6 @@ when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 pr
 
 * `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
 e.g. `95` would take 95% to the illuminance reported by the device; default `100`. Calibration will take into affect with next report of device.
-
 <!-- Notes END: Do not edit below this line -->
 
 

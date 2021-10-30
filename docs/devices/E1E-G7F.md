@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Sengled E1E-G7F
@@ -33,7 +33,6 @@ If device won't go in to pairing mode, try installing a fresh battery.
 
 ### Long press action
 The device will sometimes output a single push in addition to a long press. You can mitigate this by using the Debounce device configuration. Refer to *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*.
-
 <!-- Notes END: Do not edit below this line -->
 
 

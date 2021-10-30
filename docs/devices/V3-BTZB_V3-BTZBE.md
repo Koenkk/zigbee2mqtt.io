@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Danalock V3-BTZB/V3-BTZBE
@@ -34,7 +34,6 @@ If pairing failed, try the followings:
 
 ### App
 This device also come with an iOS app (Android as well but not tested). It is recommended to do the setups via the app for better control of the lock.
-
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Hive SLR1b
@@ -79,7 +79,6 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 Note: You will also notice that `temperature_setpoint_hold_duration` automatically changes to `0` which means `not set`. `occupied_heating_setpoint` automatically changes to `1` degree C.
 
 This will also stop any native boosts that are currently active.
-
 <!-- Notes END: Do not edit below this line -->
 
 

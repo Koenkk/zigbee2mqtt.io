@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Xiaomi ZNCZ02LM
@@ -52,7 +52,6 @@ Now toggle the plug/switch once with the button on it, from now on it will resto
 
 ### Voltage
 Some versions of the plug provide voltage. This depends on the firmware on the device. Confirmed working are the ones with `dateCode` `02-28-2017` (can be checked in `data/database.db`). Note that Xiaomi doesn't provide firmware files, so the software cannot be downgraded/upgraded.
-
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates

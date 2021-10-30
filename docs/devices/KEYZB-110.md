@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Develco KEYZB-110
@@ -19,12 +19,11 @@ pageClass: device-page
 | Vendor  | Develco  |
 | Description | Keypad |
 | Exposes | battery, battery_low, voltage, tamper, action_code, action_transaction, action_zone, action, linkquality |
-| Picture | ![Develco KEYZB-110](https://www.zigbee2mqtt.io/images/devices/KEYZB-110.jpg) |
+| Picture | ![Develco KEYZB-110](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/KEYZB-110.jpg) |
 | White-label | Frient KEPZB-110 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 
 
 <!-- Notes END: Do not edit below this line -->

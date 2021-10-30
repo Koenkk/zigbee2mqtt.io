@@ -7,8 +7,8 @@ pageClass: device-page
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
-<!-- You can only edit the "## Notes"-Section till next h1 (#) or h2 heading (##). -->
-<!-- Do NOT use h1 or h2 heading within "## Notes"-Section. -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
 # Moes BRT-100-TRV
@@ -19,11 +19,10 @@ pageClass: device-page
 | Vendor  | Moes  |
 | Description | Thermostatic radiator valve |
 | Exposes | battery, lock (state), eco_mode, eco_temperature, max_temperature, min_temperature, position, switch (state), window, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset), programming_mode, boost_heating, boost_heating_countdown, boost_heating_countdown_time_set, linkquality |
-| Picture | ![Moes BRT-100-TRV](https://www.zigbee2mqtt.io/images/devices/BRT-100-TRV.jpg) |
+| Picture | ![Moes BRT-100-TRV](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BRT-100-TRV.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 
 
 <!-- Notes END: Do not edit below this line -->
