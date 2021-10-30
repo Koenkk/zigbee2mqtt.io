@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | ROOME  |
 | Description | Door or window contact switch |
 | Exposes | contact, battery_low, tamper, linkquality |
-| Picture | ![ROOME HSC1-WD-0](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HSC1-WD-0.jpg) |
+| Picture | ![ROOME HSC1-WD-0](https://www.zigbee2mqtt.io/images/devices/HSC1-WD-0.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

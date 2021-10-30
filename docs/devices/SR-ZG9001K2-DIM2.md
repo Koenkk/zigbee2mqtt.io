@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Sunricher  |
 | Description | Zigbee 2 button wall switch |
 | Exposes | battery, action, linkquality |
-| Picture | ![Sunricher SR-ZG9001K2-DIM2](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SR-ZG9001K2-DIM2.jpg) |
+| Picture | ![Sunricher SR-ZG9001K2-DIM2](https://www.zigbee2mqtt.io/images/devices/SR-ZG9001K2-DIM2.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

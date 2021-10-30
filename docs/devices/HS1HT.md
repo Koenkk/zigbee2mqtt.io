@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | HEIMAN  |
 | Description | Smart temperature & humidity Sensor |
 | Exposes | battery, temperature, humidity, linkquality |
-| Picture | ![HEIMAN HS1HT](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS1HT.jpg) |
+| Picture | ![HEIMAN HS1HT](https://www.zigbee2mqtt.io/images/devices/HS1HT.jpg) |
 | White-label | Ferguson TH-T_V14 |
 
 

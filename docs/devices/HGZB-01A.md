@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nue / 3A  |
 | Description | Smart in-wall switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A HGZB-01A](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-01A.jpg) |
+| Picture | ![Nue / 3A HGZB-01A](https://www.zigbee2mqtt.io/images/devices/HGZB-01A.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

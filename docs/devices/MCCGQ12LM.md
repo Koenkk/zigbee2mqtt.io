@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 door & window contact sensor |
 | Exposes | contact, battery, voltage, linkquality |
-| Picture | ![Xiaomi MCCGQ12LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MCCGQ12LM.jpg) |
+| Picture | ![Xiaomi MCCGQ12LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ12LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

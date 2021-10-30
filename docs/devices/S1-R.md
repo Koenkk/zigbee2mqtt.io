@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Ubisys  |
 | Description | Power switch S1-R |
 | Exposes | switch (state), power, action, linkquality |
-| Picture | ![Ubisys S1-R](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/S1-R.jpg) |
+| Picture | ![Ubisys S1-R](https://www.zigbee2mqtt.io/images/devices/S1-R.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

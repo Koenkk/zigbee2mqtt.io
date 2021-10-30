@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | LEDVANCE  |
 | Description | Panel TW LED 625 UGR19 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![LEDVANCE GPDRPLOP401100CE](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GPDRPLOP401100CE.jpg) |
+| Picture | ![LEDVANCE GPDRPLOP401100CE](https://www.zigbee2mqtt.io/images/devices/GPDRPLOP401100CE.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

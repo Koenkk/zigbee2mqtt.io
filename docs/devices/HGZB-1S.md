@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nue / 3A  |
 | Description | Smart 1 key scene wall switch |
 | Exposes | action, switch (state), linkquality |
-| Picture | ![Nue / 3A HGZB-1S](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-1S.jpg) |
+| Picture | ![Nue / 3A HGZB-1S](https://www.zigbee2mqtt.io/images/devices/HGZB-1S.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara embedded spot led light |
 | Exposes | light (state, brightness, color_temp), effect, linkquality |
-| Picture | ![Xiaomi JWDL001A](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JWDL001A.jpg) |
+| Picture | ![Xiaomi JWDL001A](https://www.zigbee2mqtt.io/images/devices/JWDL001A.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Yale  |
 | Description | Assure lock |
 | Exposes | lock (state, lock_state), battery, pin_code, linkquality |
-| Picture | ![Yale YRD426NRSC](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/YRD426NRSC.jpg) |
+| Picture | ![Yale YRD426NRSC](https://www.zigbee2mqtt.io/images/devices/YRD426NRSC.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

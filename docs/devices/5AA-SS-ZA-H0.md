@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Leedarson  |
 | Description | Motion sensor |
 | Exposes | occupancy, illuminance, illuminance_lux, linkquality |
-| Picture | ![Leedarson 5AA-SS-ZA-H0](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/5AA-SS-ZA-H0.jpg) |
+| Picture | ![Leedarson 5AA-SS-ZA-H0](https://www.zigbee2mqtt.io/images/devices/5AA-SS-ZA-H0.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

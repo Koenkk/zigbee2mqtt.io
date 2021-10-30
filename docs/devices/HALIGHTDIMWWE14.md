@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Hive  |
 | Description | Active smart bulb white LED (E14) |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Hive HALIGHTDIMWWE14](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HALIGHTDIMWWE14.jpg) |
+| Picture | ![Hive HALIGHTDIMWWE14](https://www.zigbee2mqtt.io/images/devices/HALIGHTDIMWWE14.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

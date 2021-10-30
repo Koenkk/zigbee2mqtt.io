@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Climax  |
 | Description | Smart siren |
 | Exposes | battery_low, tamper, warning, max_duration, alarm, linkquality |
-| Picture | ![Climax SRAC-23B-ZBSR](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SRAC-23B-ZBSR.jpg) |
+| Picture | ![Climax SRAC-23B-ZBSR](https://www.zigbee2mqtt.io/images/devices/SRAC-23B-ZBSR.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

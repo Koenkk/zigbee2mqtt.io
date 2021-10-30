@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | LivingWise  |
 | Description | ZigBee smart dimmer switch |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![LivingWise LVS-ZB500D](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LVS-ZB500D.jpg) |
+| Picture | ![LivingWise LVS-ZB500D](https://www.zigbee2mqtt.io/images/devices/LVS-ZB500D.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

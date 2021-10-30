@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Perenio  |
 | Description | Flood alarm device |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
-| Picture | ![Perenio PECLS01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PECLS01.jpg) |
+| Picture | ![Perenio PECLS01](https://www.zigbee2mqtt.io/images/devices/PECLS01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

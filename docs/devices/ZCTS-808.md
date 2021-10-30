@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Trust  |
 | Description | Wireless contact sensor |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
-| Picture | ![Trust ZCTS-808](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZCTS-808.jpg) |
+| Picture | ![Trust ZCTS-808](https://www.zigbee2mqtt.io/images/devices/ZCTS-808.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

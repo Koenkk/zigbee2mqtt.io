@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SmartThings  |
 | Description | Multipurpose sensor |
 | Exposes | contact, battery_low, tamper, linkquality |
-| Picture | ![SmartThings STSS-MULT-001](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/STSS-MULT-001.jpg) |
+| Picture | ![SmartThings STSS-MULT-001](https://www.zigbee2mqtt.io/images/devices/STSS-MULT-001.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

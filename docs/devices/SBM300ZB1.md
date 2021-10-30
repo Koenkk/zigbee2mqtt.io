@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | ShinaSystem  |
 | Description | SiHAS remote control |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![ShinaSystem SBM300ZB1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SBM300ZB1.jpg) |
+| Picture | ![ShinaSystem SBM300ZB1](https://www.zigbee2mqtt.io/images/devices/SBM300ZB1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Sengled  |
 | Description | Element touch (A19) |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Sengled Z01-CIA19NAE26](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/Z01-CIA19NAE26.jpg) |
+| Picture | ![Sengled Z01-CIA19NAE26](https://www.zigbee2mqtt.io/images/devices/Z01-CIA19NAE26.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

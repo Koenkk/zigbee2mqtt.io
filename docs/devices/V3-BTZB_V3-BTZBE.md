@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Danalock  |
 | Description | BT/ZB smartlock |
 | Exposes | lock (state, lock_state), battery, linkquality |
-| Picture | ![Danalock V3-BTZB/V3-BTZBE](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/V3-BTZB-V3-BTZBE.jpg) |
+| Picture | ![Danalock V3-BTZB/V3-BTZBE](https://www.zigbee2mqtt.io/images/devices/V3-BTZB-V3-BTZBE.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

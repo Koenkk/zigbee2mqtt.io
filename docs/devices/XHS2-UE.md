@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Universal Electronics Inc  |
 | Description | Magnetic door & window contact sensor |
 | Exposes | contact, battery_low, tamper, temperature, battery, linkquality |
-| Picture | ![Universal Electronics Inc XHS2-UE](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/XHS2-UE.jpg) |
+| Picture | ![Universal Electronics Inc XHS2-UE](https://www.zigbee2mqtt.io/images/devices/XHS2-UE.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

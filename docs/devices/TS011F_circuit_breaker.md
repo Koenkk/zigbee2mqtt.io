@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Circuit breaker |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS011F_circuit_breaker](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS011F_circuit_breaker.jpg) |
+| Picture | ![TuYa TS011F_circuit_breaker](https://www.zigbee2mqtt.io/images/devices/TS011F_circuit_breaker.jpg) |
 | White-label | Mumubiz ZJSB9-80Z |
 
 

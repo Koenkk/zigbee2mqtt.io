@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SONOFF  |
 | Description | Zigbee smart plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![SONOFF S26R2ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/S26R2ZB.jpg) |
+| Picture | ![SONOFF S26R2ZB](https://www.zigbee2mqtt.io/images/devices/S26R2ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

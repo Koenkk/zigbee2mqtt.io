@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara double key wired wall switch |
 | Exposes | switch (state), temperature, power, action, operation_mode, linkquality |
-| Picture | ![Xiaomi QBKG12LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG12LM.jpg) |
+| Picture | ![Xiaomi QBKG12LM](https://www.zigbee2mqtt.io/images/devices/QBKG12LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

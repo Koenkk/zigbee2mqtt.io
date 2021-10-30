@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | iCasa  |
 | Description | Zigbee 3.0 AC switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![iCasa ICZB-IW11SW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ICZB-IW11SW.jpg) |
+| Picture | ![iCasa ICZB-IW11SW](https://www.zigbee2mqtt.io/images/devices/ICZB-IW11SW.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara Opple MX650 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Xiaomi XDD12LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/XDD12LM.jpg) |
+| Picture | ![Xiaomi XDD12LM](https://www.zigbee2mqtt.io/images/devices/XDD12LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

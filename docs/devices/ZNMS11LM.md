@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Xiaomi Aqara smart lock |
 | Exposes | state, reverse, action, linkquality |
-| Picture | ![Xiaomi ZNMS11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNMS11LM.jpg) |
+| Picture | ![Xiaomi ZNMS11LM](https://www.zigbee2mqtt.io/images/devices/ZNMS11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

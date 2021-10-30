@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | DIYRuZ  |
 | Description | [LeTV 8key FreePad mod](https://modkam.ru/?p=1791) |
 | Exposes | battery, action, switch_type, switch_actions, linkquality |
-| Picture | ![DIYRuZ FreePad_LeTV_8](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/FreePad_LeTV_8.jpg) |
+| Picture | ![DIYRuZ FreePad_LeTV_8](https://www.zigbee2mqtt.io/images/devices/FreePad_LeTV_8.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

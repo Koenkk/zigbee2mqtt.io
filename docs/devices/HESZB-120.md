@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Develco  |
 | Description | Fire detector with siren |
 | Exposes | temperature, battery, smoke, battery_low, test, max_duration, alarm, reliability, fault, linkquality |
-| Picture | ![Develco HESZB-120](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HESZB-120.jpg) |
+| Picture | ![Develco HESZB-120](https://www.zigbee2mqtt.io/images/devices/HESZB-120.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

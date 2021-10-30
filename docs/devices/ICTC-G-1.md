@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | IKEA  |
 | Description | TRADFRI wireless dimmer |
 | Exposes | battery, action, linkquality |
-| Picture | ![IKEA ICTC-G-1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ICTC-G-1.jpg) |
+| Picture | ![IKEA ICTC-G-1](https://www.zigbee2mqtt.io/images/devices/ICTC-G-1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

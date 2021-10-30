@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Custom devices (DiY)  |
 | Description | [DNCKAT single key wired wall dimmable light switch](https://github.com/dzungpv/dnckatsw00x/) |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Custom devices (DiY) DNCKATSD001](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DNCKATSD001.jpg) |
+| Picture | ![Custom devices (DiY) DNCKATSD001](https://www.zigbee2mqtt.io/images/devices/DNCKATSD001.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

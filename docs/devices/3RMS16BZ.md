@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Third Reality  |
 | Description | Wireless motion sensor |
 | Exposes | occupancy, battery_low, battery, voltage, linkquality |
-| Picture | ![Third Reality 3RMS16BZ](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/3RMS16BZ.jpg) |
+| Picture | ![Third Reality 3RMS16BZ](https://www.zigbee2mqtt.io/images/devices/3RMS16BZ.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

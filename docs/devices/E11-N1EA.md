@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Sengled  |
 | Description | Element plus color (A19) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Sengled E11-N1EA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/E11-N1EA.jpg) |
+| Picture | ![Sengled E11-N1EA](https://www.zigbee2mqtt.io/images/devices/E11-N1EA.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

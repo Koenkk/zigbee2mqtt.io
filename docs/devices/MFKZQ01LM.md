@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Mi/Aqara smart home cube |
 | Exposes | battery, voltage, action_angle, action_from_side, action_side, action_to_side, action, linkquality |
-| Picture | ![Xiaomi MFKZQ01LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MFKZQ01LM.jpg) |
+| Picture | ![Xiaomi MFKZQ01LM](https://www.zigbee2mqtt.io/images/devices/MFKZQ01LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

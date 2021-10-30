@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SONOFF  |
 | Description | Zigbee smart switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![SONOFF BASICZBR3](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BASICZBR3.jpg) |
+| Picture | ![SONOFF BASICZBR3](https://www.zigbee2mqtt.io/images/devices/BASICZBR3.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

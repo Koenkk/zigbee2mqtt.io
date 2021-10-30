@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Gledopto  |
 | Description | Zigbee 5W PAR16 Bulb RGB+CCT |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-S-008Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-S-008Z.jpg) |
+| Picture | ![Gledopto GL-S-008Z](https://www.zigbee2mqtt.io/images/devices/GL-S-008Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

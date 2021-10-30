@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Sunricher  |
 | Description | 4 zone remote and dimmer |
 | Exposes | battery, action, linkquality |
-| Picture | ![Sunricher SR-ZG9001K12-DIM-Z4](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SR-ZG9001K12-DIM-Z4.jpg) |
+| Picture | ![Sunricher SR-ZG9001K12-DIM-Z4](https://www.zigbee2mqtt.io/images/devices/SR-ZG9001K12-DIM-Z4.jpg) |
 | White-label | RGB Genie ZGRC-KEY-013 |
 
 

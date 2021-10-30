@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Feibit  |
 | Description | Water leakage sensor |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
-| Picture | ![Feibit SWA01ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SWA01ZB.jpg) |
+| Picture | ![Feibit SWA01ZB](https://www.zigbee2mqtt.io/images/devices/SWA01ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

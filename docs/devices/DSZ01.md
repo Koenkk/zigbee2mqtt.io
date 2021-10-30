@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | J.XUAN  |
 | Description | Door or window contact switch |
 | Exposes | contact, battery_low, linkquality |
-| Picture | ![J.XUAN DSZ01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DSZ01.jpg) |
+| Picture | ![J.XUAN DSZ01](https://www.zigbee2mqtt.io/images/devices/DSZ01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

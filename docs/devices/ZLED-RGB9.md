@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Trust  |
 | Description | Smart RGB LED bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Trust ZLED-RGB9](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZLED-RGB9.jpg) |
+| Picture | ![Trust ZLED-RGB9](https://www.zigbee2mqtt.io/images/devices/ZLED-RGB9.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

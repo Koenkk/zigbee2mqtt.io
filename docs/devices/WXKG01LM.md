@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | MiJia wireless switch |
 | Exposes | battery, action, voltage, linkquality |
-| Picture | ![Xiaomi WXKG01LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WXKG01LM.jpg) |
+| Picture | ![Xiaomi WXKG01LM](https://www.zigbee2mqtt.io/images/devices/WXKG01LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

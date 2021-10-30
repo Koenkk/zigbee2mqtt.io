@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SONOFF  |
 | Description | Contact sensor |
 | Exposes | contact, battery_low, battery, voltage, linkquality |
-| Picture | ![SONOFF SNZB-04](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SNZB-04.jpg) |
+| Picture | ![SONOFF SNZB-04](https://www.zigbee2mqtt.io/images/devices/SNZB-04.jpg) |
 | White-label | eWeLink RHK06 |
 
 

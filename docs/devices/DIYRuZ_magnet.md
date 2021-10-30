@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | DIYRuZ  |
 | Description | [DIYRuZ contact sensor](https://modkam.ru/?p=1220) |
 | Exposes | battery, contact, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_magnet](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DIYRuZ_magnet.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_magnet](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_magnet.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

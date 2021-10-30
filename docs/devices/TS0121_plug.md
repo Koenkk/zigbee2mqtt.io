@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | 10A UK or 16A EU smart plug |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
-| Picture | ![TuYa TS0121_plug](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0121_plug.jpg) |
+| Picture | ![TuYa TS0121_plug](https://www.zigbee2mqtt.io/images/devices/TS0121_plug.jpg) |
 | White-label | BlitzWolf BW-SHP13 |
 
 

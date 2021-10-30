@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Gledopto  |
 | Description | Zigbee LED Controller RGBW (2 ID) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), light (state, brightness), linkquality |
-| Picture | ![Gledopto GL-C-007-2ID](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-C-007-2ID.jpg) |
+| Picture | ![Gledopto GL-C-007-2ID](https://www.zigbee2mqtt.io/images/devices/GL-C-007-2ID.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

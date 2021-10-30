@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Swann  |
 | Description | Motion and temperature sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![Swann SWO-MOS1PA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SWO-MOS1PA.jpg) |
+| Picture | ![Swann SWO-MOS1PA](https://www.zigbee2mqtt.io/images/devices/SWO-MOS1PA.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

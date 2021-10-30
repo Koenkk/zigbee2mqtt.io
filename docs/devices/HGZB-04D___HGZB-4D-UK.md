@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nue / 3A  |
 | Description | Smart dimmer wall switch |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![Nue / 3A HGZB-04D / HGZB-4D-UK](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-04D---HGZB-4D-UK.jpg) |
+| Picture | ![Nue / 3A HGZB-04D / HGZB-4D-UK](https://www.zigbee2mqtt.io/images/devices/HGZB-04D---HGZB-4D-UK.jpg) |
 | White-label | Sunricher SR-ZG9001K8-DIM |
 
 

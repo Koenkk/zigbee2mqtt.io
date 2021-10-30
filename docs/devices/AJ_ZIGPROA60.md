@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Ajax Online  |
 | Description | Smart Zigbee pro 12W A60 bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Ajax Online AJ_ZIGPROA60](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AJ_ZIGPROA60.jpg) |
+| Picture | ![Ajax Online AJ_ZIGPROA60](https://www.zigbee2mqtt.io/images/devices/AJ_ZIGPROA60.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

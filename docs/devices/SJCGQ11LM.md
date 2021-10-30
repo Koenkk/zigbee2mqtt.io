@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara water leak sensor |
 | Exposes | battery, water_leak, battery_low, voltage, temperature, linkquality |
-| Picture | ![Xiaomi SJCGQ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SJCGQ11LM.jpg) |
+| Picture | ![Xiaomi SJCGQ11LM](https://www.zigbee2mqtt.io/images/devices/SJCGQ11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

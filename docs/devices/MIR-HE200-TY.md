@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Human presence sensor |
 | Exposes | illuminance_lux, presence, motion, motion_speed, motion_direction, radar_sensitivity, radar_scene, linkquality |
-| Picture | ![TuYa MIR-HE200-TY](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MIR-HE200-TY.jpg) |
+| Picture | ![TuYa MIR-HE200-TY](https://www.zigbee2mqtt.io/images/devices/MIR-HE200-TY.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

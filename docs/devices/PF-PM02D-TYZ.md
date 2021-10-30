@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | IOTPerfect  |
 | Description | Smart water/gas valve |
 | Exposes | switch (state), linkquality |
-| Picture | ![IOTPerfect PF-PM02D-TYZ](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PF-PM02D-TYZ.jpg) |
+| Picture | ![IOTPerfect PF-PM02D-TYZ](https://www.zigbee2mqtt.io/images/devices/PF-PM02D-TYZ.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

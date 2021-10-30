@@ -1,6 +1,6 @@
 # Zigbee2MQTT.io
 
-[![Build ⚙ and Deploy 🚀 ](https://github.com/psi-4ward/zigbee2mqtt-docs/actions/workflows/build-deploy.yml/badge.svg)](https://github.com/psi-4ward/zigbee2mqtt-docs/actions/workflows/build-deploy.yml)
+[![Build ⚙ and Deploy 🚀 ](https://github.com/Koenkk/zigbee2mqtt.io/actions/workflows/build-deploy.yml/badge.svg)](https://github.com/Koenkk/zigbee2mqtt.io/actions/workflows/build-deploy.yml)
 
 This repository contains the [Zigbee2MQTT](https://zigbee2mqtt.io) documentation.
 

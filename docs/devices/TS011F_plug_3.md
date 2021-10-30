@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Smart plug (with power monitoring by polling) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
-| Picture | ![TuYa TS011F_plug_3](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS011F_plug_3.jpg) |
+| Picture | ![TuYa TS011F_plug_3](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_3.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

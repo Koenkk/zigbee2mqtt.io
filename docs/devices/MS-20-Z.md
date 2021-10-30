@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Hommyn  |
 | Description | Occupancy sensor |
 | Exposes | battery, occupancy, battery_low, tamper, linkquality |
-| Picture | ![Hommyn MS-20-Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MS-20-Z.jpg) |
+| Picture | ![Hommyn MS-20-Z](https://www.zigbee2mqtt.io/images/devices/MS-20-Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

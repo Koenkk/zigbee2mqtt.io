@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara roller shade motor |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Xiaomi SRSC-M01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SRSC-M01.jpg) |
+| Picture | ![Xiaomi SRSC-M01](https://www.zigbee2mqtt.io/images/devices/SRSC-M01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

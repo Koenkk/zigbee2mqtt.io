@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Moes  |
 | Description | RGB+CCT Zigbee LED Controller |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![Moes ZLD-RCW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZLD-RCW.jpg) |
+| Picture | ![Moes ZLD-RCW](https://www.zigbee2mqtt.io/images/devices/ZLD-RCW.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Trust  |
 | Description | Water leakage detector |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
-| Picture | ![Trust ZWLD-100](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZWLD-100.jpg) |
+| Picture | ![Trust ZWLD-100](https://www.zigbee2mqtt.io/images/devices/ZWLD-100.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

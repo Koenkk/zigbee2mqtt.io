@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Envilar  |
 | Description | Zigbee AC in wall switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Envilar ZG302-BOX-RELAY](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZG302-BOX-RELAY.jpg) |
+| Picture | ![Envilar ZG302-BOX-RELAY](https://www.zigbee2mqtt.io/images/devices/ZG302-BOX-RELAY.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

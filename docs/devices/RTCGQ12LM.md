@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 human body movement and illuminance sensor (illuminance not supported for now) |
 | Exposes | occupancy, battery, occupancy_timeout, linkquality |
-| Picture | ![Xiaomi RTCGQ12LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/RTCGQ12LM.jpg) |
+| Picture | ![Xiaomi RTCGQ12LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ12LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

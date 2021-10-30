@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Zemismart  |
 | Description | Smart light switch - 3 gang with neutral wire |
 | Exposes | switch (state), linkquality |
-| Picture | ![Zemismart ZM-L03E-Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZM-L03E-Z.jpg) |
+| Picture | ![Zemismart ZM-L03E-Z](https://www.zigbee2mqtt.io/images/devices/ZM-L03E-Z.jpg) |
 | White-label | BSEED TS0003 |
 
 

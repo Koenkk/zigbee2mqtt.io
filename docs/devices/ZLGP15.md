@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Legrand  |
 | Description | Wireless and batteryless 4 scenes control |
 | Exposes | action, linkquality |
-| Picture | ![Legrand ZLGP15](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZLGP15.jpg) |
+| Picture | ![Legrand ZLGP15](https://www.zigbee2mqtt.io/images/devices/ZLGP15.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

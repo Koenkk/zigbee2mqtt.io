@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Hive  |
 | Description | Dual channel heating and hot water thermostat |
 | Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration, linkquality |
-| Picture | ![Hive SLR2b](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SLR2b.jpg) |
+| Picture | ![Hive SLR2b](https://www.zigbee2mqtt.io/images/devices/SLR2b.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

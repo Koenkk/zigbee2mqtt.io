@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | RTX  |
 | Description | Zigbee smart water valve |
 | Exposes | switch (state), battery, timer_state, timer, timer_time_left, last_valve_open_duration, water_consumed, linkquality |
-| Picture | ![RTX ZVG1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZVG1.jpg) |
+| Picture | ![RTX ZVG1](https://www.zigbee2mqtt.io/images/devices/ZVG1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

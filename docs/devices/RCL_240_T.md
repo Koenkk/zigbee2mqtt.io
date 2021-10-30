@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Innr  |
 | Description | Smart round ceiling lamp comfort |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Innr RCL 240 T](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/RCL-240-T.jpg) |
+| Picture | ![Innr RCL 240 T](https://www.zigbee2mqtt.io/images/devices/RCL-240-T.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | LivingWise  |
 | Description | Zigbee smart outlet |
 | Exposes | switch (state), linkquality |
-| Picture | ![LivingWise LVS-ZB15R](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LVS-ZB15R.jpg) |
+| Picture | ![LivingWise LVS-ZB15R](https://www.zigbee2mqtt.io/images/devices/LVS-ZB15R.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

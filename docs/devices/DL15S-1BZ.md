@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Leviton  |
 | Description | Lumina RF 15A switch, 120/277V |
 | Exposes | switch (state), linkquality |
-| Picture | ![Leviton DL15S-1BZ](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DL15S-1BZ.jpg) |
+| Picture | ![Leviton DL15S-1BZ](https://www.zigbee2mqtt.io/images/devices/DL15S-1BZ.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

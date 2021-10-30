@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | MiJia Honeywell smoke detector |
 | Exposes | smoke, battery_low, tamper, battery, sensitivity, smoke_density, selftest, voltage, test, linkquality |
-| Picture | ![Xiaomi JTYJ-GD-01LM/BW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JTYJ-GD-01LM-BW.jpg) |
+| Picture | ![Xiaomi JTYJ-GD-01LM/BW](https://www.zigbee2mqtt.io/images/devices/JTYJ-GD-01LM-BW.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

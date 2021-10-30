@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | GS  |
 | Description | Smart dimmable, RGB + white (E27 & B22) |
 | Exposes | light (state, brightness, color_xy), effect, linkquality |
-| Picture | ![GS BRHM8E27W70-I1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BRHM8E27W70-I1.jpg) |
+| Picture | ![GS BRHM8E27W70-I1](https://www.zigbee2mqtt.io/images/devices/BRHM8E27W70-I1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

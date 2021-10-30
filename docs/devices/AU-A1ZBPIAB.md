@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Aurora Lighting  |
 | Description | Power plug Zigbee EU |
 | Exposes | switch (state), power, voltage, current, linkquality |
-| Picture | ![Aurora Lighting AU-A1ZBPIAB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AU-A1ZBPIAB.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZBPIAB](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBPIAB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | MiJia gas leak detector  |
 | Exposes | gas, battery_low, tamper, sensitivity, gas_density, selftest, linkquality |
-| Picture | ![Xiaomi JTQJ-BF-01LM/BW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JTQJ-BF-01LM-BW.jpg) |
+| Picture | ![Xiaomi JTQJ-BF-01LM/BW](https://www.zigbee2mqtt.io/images/devices/JTQJ-BF-01LM-BW.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

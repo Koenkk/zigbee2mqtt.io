@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Mi power plug ZigBee US |
 | Exposes | switch (state), power, energy, temperature, voltage, linkquality |
-| Picture | ![Xiaomi ZNCZ12LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNCZ12LM.jpg) |
+| Picture | ![Xiaomi ZNCZ12LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ12LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

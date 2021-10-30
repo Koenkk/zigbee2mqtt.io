@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Air quality sensor |
 | Exposes | temperature, humidity, co2, voc, formaldehyd, linkquality |
-| Picture | ![TuYa TS0601_air_quality_sensor](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0601_air_quality_sensor.jpg) |
+| Picture | ![TuYa TS0601_air_quality_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_air_quality_sensor.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

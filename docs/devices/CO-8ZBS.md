@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Climax  |
 | Description | Smart carbon monoxide sensor |
 | Exposes | carbon_monoxide, battery_low, tamper, battery, linkquality |
-| Picture | ![Climax CO-8ZBS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/CO-8ZBS.jpg) |
+| Picture | ![Climax CO-8ZBS](https://www.zigbee2mqtt.io/images/devices/CO-8ZBS.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

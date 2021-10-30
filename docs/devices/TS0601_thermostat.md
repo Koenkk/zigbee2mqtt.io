@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Radiator valve with thermostat |
 | Exposes | lock (state), switch (state), battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, away_mode, preset), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, week, away_preset_temperature, linkquality |
-| Picture | ![TuYa TS0601_thermostat](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0601_thermostat.jpg) |
+| Picture | ![TuYa TS0601_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat.jpg) |
 | White-label | Moes HY368, Moes HY369RT, SHOJZJ 378RT, Silvercrest TVR01 |
 
 

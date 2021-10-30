@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Hive  |
 | Description | Heating thermostat remote control |
 | Exposes | battery, linkquality |
-| Picture | ![Hive SLT3B](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SLT3B.jpg) |
+| Picture | ![Hive SLT3B](https://www.zigbee2mqtt.io/images/devices/SLT3B.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

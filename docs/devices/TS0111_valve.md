@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Smart water/gas valve |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS0111_valve](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0111_valve.jpg) |
+| Picture | ![TuYa TS0111_valve](https://www.zigbee2mqtt.io/images/devices/TS0111_valve.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

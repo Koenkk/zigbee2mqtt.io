@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | GE  |
 | Description | Quirky smart switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![GE PTAPT-WH02](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PTAPT-WH02.jpg) |
+| Picture | ![GE PTAPT-WH02](https://www.zigbee2mqtt.io/images/devices/PTAPT-WH02.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

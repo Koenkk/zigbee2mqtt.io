@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | LivingWise  |
 | Description | Occupancy sensor |
 | Exposes | battery, occupancy, battery_low, tamper, linkquality |
-| Picture | ![LivingWise LVS-SN10ZW_SN11](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LVS-SN10ZW_SN11.jpg) |
+| Picture | ![LivingWise LVS-SN10ZW_SN11](https://www.zigbee2mqtt.io/images/devices/LVS-SN10ZW_SN11.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

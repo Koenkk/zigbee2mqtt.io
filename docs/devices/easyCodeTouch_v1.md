@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Onesti Products AS  |
 | Description | Zigbee module for EasyAccess code touch series |
 | Exposes | lock (state, lock_state), battery, sound_volume, action, auto_relock, pin_code, linkquality |
-| Picture | ![Onesti Products AS easyCodeTouch_v1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/easyCodeTouch_v1.jpg) |
+| Picture | ![Onesti Products AS easyCodeTouch_v1](https://www.zigbee2mqtt.io/images/devices/easyCodeTouch_v1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

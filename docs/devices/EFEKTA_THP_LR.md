@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Custom devices (DiY)  |
 | Description | DIY outdoor long-range sensor for temperature, humidity and atmospheric pressure |
 | Exposes | battery, temperature, humidity, pressure, linkquality |
-| Picture | ![Custom devices (DiY) EFEKTA_THP_LR](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/EFEKTA_THP_LR.jpg) |
+| Picture | ![Custom devices (DiY) EFEKTA_THP_LR](https://www.zigbee2mqtt.io/images/devices/EFEKTA_THP_LR.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

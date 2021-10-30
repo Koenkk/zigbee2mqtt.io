@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Moes  |
 | Description | Zigbee + RF curtain switch module |
 | Exposes | cover (state, position), calibration_time, moving, motor_reversal, linkquality |
-| Picture | ![Moes MS-108ZR](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MS-108ZR.jpg) |
+| Picture | ![Moes MS-108ZR](https://www.zigbee2mqtt.io/images/devices/MS-108ZR.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

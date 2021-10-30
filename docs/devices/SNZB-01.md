@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SONOFF  |
 | Description | Wireless button |
 | Exposes | battery, action, linkquality |
-| Picture | ![SONOFF SNZB-01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SNZB-01.jpg) |
+| Picture | ![SONOFF SNZB-01](https://www.zigbee2mqtt.io/images/devices/SNZB-01.jpg) |
 | White-label | eWeLink RHK07 |
 
 

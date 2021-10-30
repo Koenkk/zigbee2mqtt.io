@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Meazon  |
 | Description | Bizy plug meter |
 | Exposes | switch (state), power, voltage, current, linkquality |
-| Picture | ![Meazon MEAZON_BIZY_PLUG](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MEAZON_BIZY_PLUG.jpg) |
+| Picture | ![Meazon MEAZON_BIZY_PLUG](https://www.zigbee2mqtt.io/images/devices/MEAZON_BIZY_PLUG.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

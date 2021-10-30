@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Gledopto  |
 | Description | Zigbee LED Controller W (pro) |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Gledopto GL-C-009P](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-C-009P.jpg) |
+| Picture | ![Gledopto GL-C-009P](https://www.zigbee2mqtt.io/images/devices/GL-C-009P.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

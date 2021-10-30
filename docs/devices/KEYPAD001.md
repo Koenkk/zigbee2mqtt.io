@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Hive  |
 | Description | Alarm security keypad |
 | Exposes | battery, voltage, battery_low, occupancy, tamper, contact, action_code, action_transaction, action_zone, action, linkquality |
-| Picture | ![Hive KEYPAD001](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/KEYPAD001.jpg) |
+| Picture | ![Hive KEYPAD001](https://www.zigbee2mqtt.io/images/devices/KEYPAD001.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

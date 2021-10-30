@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Feibit  |
 | Description | SOS button |
 | Exposes | sos, battery_low, tamper, battery, linkquality |
-| Picture | ![Feibit SEB01ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SEB01ZB.jpg) |
+| Picture | ![Feibit SEB01ZB](https://www.zigbee2mqtt.io/images/devices/SEB01ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

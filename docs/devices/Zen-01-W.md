@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Zen  |
 | Description | Thermostat |
 | Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration, pi_heating_demand), linkquality |
-| Picture | ![Zen Zen-01-W](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/Zen-01-W.jpg) |
+| Picture | ![Zen Zen-01-W](https://www.zigbee2mqtt.io/images/devices/Zen-01-W.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

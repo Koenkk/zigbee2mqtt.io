@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Neo  |
 | Description | Temperature & humidity sensor and alarm |
 | Exposes | temperature, humidity, humidity_alarm, battery_low, temperature_alarm, alarm, melody, duration, temperature_min, temperature_max, humidity_min, humidity_max, volume, power_type, linkquality |
-| Picture | ![Neo NAS-AB02B0](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/NAS-AB02B0.jpg) |
+| Picture | ![Neo NAS-AB02B0](https://www.zigbee2mqtt.io/images/devices/NAS-AB02B0.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

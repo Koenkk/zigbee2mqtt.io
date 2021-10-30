@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Yale  |
 | Description | Real living lock / Intelligent biometric digital lock |
 | Exposes | lock (state, lock_state), battery, pin_code, linkquality |
-| Picture | ![Yale YDF40](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/YDF40.jpg) |
+| Picture | ![Yale YDF40](https://www.zigbee2mqtt.io/images/devices/YDF40.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

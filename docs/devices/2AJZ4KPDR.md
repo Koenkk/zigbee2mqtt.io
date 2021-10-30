@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Konke  |
 | Description | Contact sensor |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
-| Picture | ![Konke 2AJZ4KPDR](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/2AJZ4KPDR.jpg) |
+| Picture | ![Konke 2AJZ4KPDR](https://www.zigbee2mqtt.io/images/devices/2AJZ4KPDR.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

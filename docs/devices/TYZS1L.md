@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Led strip controller HSB |
 | Exposes | light (state, color_hs), linkquality |
-| Picture | ![TuYa TYZS1L](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TYZS1L.jpg) |
+| Picture | ![TuYa TYZS1L](https://www.zigbee2mqtt.io/images/devices/TYZS1L.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

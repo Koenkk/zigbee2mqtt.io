@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall switch H1 EU (with neutral, double rocker) |
 | Exposes | switch (state), power, energy, operation_mode, action, temperature, power_outage_memory, linkquality |
-| Picture | ![Xiaomi WS-EUK04](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WS-EUK04.jpg) |
+| Picture | ![Xiaomi WS-EUK04](https://www.zigbee2mqtt.io/images/devices/WS-EUK04.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

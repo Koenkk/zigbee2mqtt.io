@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Din smart relay (with power monitoring) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
-| Picture | ![TuYa TS011F_din_smart_relay](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS011F_din_smart_relay.jpg) |
+| Picture | ![TuYa TS011F_din_smart_relay](https://www.zigbee2mqtt.io/images/devices/TS011F_din_smart_relay.jpg) |
 | White-label | MatSee Plus ATMS1602Z |
 
 

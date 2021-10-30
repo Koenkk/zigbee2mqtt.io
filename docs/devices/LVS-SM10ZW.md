@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | LivingWise  |
 | Description | Door or window contact switch |
 | Exposes | contact, battery_low, tamper, linkquality |
-| Picture | ![LivingWise LVS-SM10ZW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LVS-SM10ZW.jpg) |
+| Picture | ![LivingWise LVS-SM10ZW](https://www.zigbee2mqtt.io/images/devices/LVS-SM10ZW.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

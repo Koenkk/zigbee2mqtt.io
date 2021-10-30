@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Qmotion  |
 | Description | 5 channel remote |
 | Exposes | action, position, linkquality |
-| Picture | ![Qmotion QZR-ZIG2400](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QZR-ZIG2400.jpg) |
+| Picture | ![Qmotion QZR-ZIG2400](https://www.zigbee2mqtt.io/images/devices/QZR-ZIG2400.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Smart Home Pty  |
 | Description | Power plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![Smart Home Pty HGZB-20-DE](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-20-DE.jpg) |
+| Picture | ![Smart Home Pty HGZB-20-DE](https://www.zigbee2mqtt.io/images/devices/HGZB-20-DE.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

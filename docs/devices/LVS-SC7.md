@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | LivingWise  |
 | Description | Scene controller  |
 | Exposes | action, linkquality |
-| Picture | ![LivingWise LVS-SC7](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LVS-SC7.jpg) |
+| Picture | ![LivingWise LVS-SC7](https://www.zigbee2mqtt.io/images/devices/LVS-SC7.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

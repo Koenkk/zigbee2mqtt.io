@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Neo  |
 | Description | Motion, temperature & humidity sensor |
 | Exposes | occupancy, humidity, temperature, tamper, battery_low, power_type, linkquality |
-| Picture | ![Neo NAS-PD07](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/NAS-PD07.jpg) |
+| Picture | ![Neo NAS-PD07](https://www.zigbee2mqtt.io/images/devices/NAS-PD07.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

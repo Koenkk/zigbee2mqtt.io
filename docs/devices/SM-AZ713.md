@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | UseeLink  |
 | Description | Smart water/gas valve |
 | Exposes | switch (state), linkquality |
-| Picture | ![UseeLink SM-AZ713](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SM-AZ713.jpg) |
+| Picture | ![UseeLink SM-AZ713](https://www.zigbee2mqtt.io/images/devices/SM-AZ713.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

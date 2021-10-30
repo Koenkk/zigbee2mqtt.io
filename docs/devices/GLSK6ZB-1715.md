@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Hej  |
 | Description | Goqual 5 gang Switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Hej GLSK6ZB-1715](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GLSK6ZB-1715.jpg) |
+| Picture | ![Hej GLSK6ZB-1715](https://www.zigbee2mqtt.io/images/devices/GLSK6ZB-1715.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

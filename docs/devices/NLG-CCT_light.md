@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Paul Neuhaus  |
 | Description | Various color temperature lights (e.g. 100.424.11) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Paul Neuhaus NLG-CCT light](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/NLG-CCT-light.jpg) |
+| Picture | ![Paul Neuhaus NLG-CCT light](https://www.zigbee2mqtt.io/images/devices/NLG-CCT-light.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

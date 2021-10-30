@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | YSRSAI  |
 | Description | Zigbee LED controller (RGB+CCT) |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
-| Picture | ![YSRSAI YSR-MINI-01_rgbcct](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/YSR-MINI-01_rgbcct.jpg) |
+| Picture | ![YSRSAI YSR-MINI-01_rgbcct](https://www.zigbee2mqtt.io/images/devices/YSR-MINI-01_rgbcct.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara Opple switch 2 bands |
 | Exposes | battery, action, operation_mode, linkquality |
-| Picture | ![Xiaomi WXCJKG12LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WXCJKG12LM.jpg) |
+| Picture | ![Xiaomi WXCJKG12LM](https://www.zigbee2mqtt.io/images/devices/WXCJKG12LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

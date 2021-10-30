@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | MiJia door & window contact sensor |
 | Exposes | battery, contact, voltage, linkquality |
-| Picture | ![Xiaomi MCCGQ01LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MCCGQ01LM.jpg) |
+| Picture | ![Xiaomi MCCGQ01LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ01LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nue / 3A  |
 | Description | Power plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A HGZB-20-UK](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-20-UK.jpg) |
+| Picture | ![Nue / 3A HGZB-20-UK](https://www.zigbee2mqtt.io/images/devices/HGZB-20-UK.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

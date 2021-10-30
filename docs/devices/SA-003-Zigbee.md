@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | eWeLink  |
 | Description | Zigbee smart plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![eWeLink SA-003-Zigbee](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SA-003-Zigbee.jpg) |
+| Picture | ![eWeLink SA-003-Zigbee](https://www.zigbee2mqtt.io/images/devices/SA-003-Zigbee.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

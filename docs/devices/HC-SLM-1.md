@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Home Control AS  |
 | Description | Heimgard (Wattle) door lock pro |
 | Exposes | lock (state, lock_state), battery, linkquality |
-| Picture | ![Home Control AS HC-SLM-1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HC-SLM-1.jpg) |
+| Picture | ![Home Control AS HC-SLM-1](https://www.zigbee2mqtt.io/images/devices/HC-SLM-1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

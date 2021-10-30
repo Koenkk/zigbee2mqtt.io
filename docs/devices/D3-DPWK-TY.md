@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | HVAC controller |
 | Exposes | climate (current_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
-| Picture | ![TuYa D3-DPWK-TY](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/D3-DPWK-TY.jpg) |
+| Picture | ![TuYa D3-DPWK-TY](https://www.zigbee2mqtt.io/images/devices/D3-DPWK-TY.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

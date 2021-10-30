@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Saswell  |
 | Description | Thermostatic radiator valve |
 | Exposes | battery_low, switch (state), lock (state), climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, away_mode), linkquality |
-| Picture | ![Saswell SEA801-Zigbee/SEA802-Zigbee](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SEA801-Zigbee-SEA802-Zigbee.jpg) |
+| Picture | ![Saswell SEA801-Zigbee/SEA802-Zigbee](https://www.zigbee2mqtt.io/images/devices/SEA801-Zigbee-SEA802-Zigbee.jpg) |
 | White-label | HiHome WZB-TRVL, Hama 00176592, RTX ZB-RT1 |
 
 

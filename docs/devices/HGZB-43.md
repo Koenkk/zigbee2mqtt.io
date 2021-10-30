@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nue / 3A  |
 | Description | Smart light switch - 3 gang v2.0 |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A HGZB-43](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-43.jpg) |
+| Picture | ![Nue / 3A HGZB-43](https://www.zigbee2mqtt.io/images/devices/HGZB-43.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

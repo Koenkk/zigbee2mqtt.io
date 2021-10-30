@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SmartThings  |
 | Description | Zigbee Outlet UK with power meter |
 | Exposes | switch (state), power, current, voltage, linkquality |
-| Picture | ![SmartThings F-APP-UK-V2](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/F-APP-UK-V2.jpg) |
+| Picture | ![SmartThings F-APP-UK-V2](https://www.zigbee2mqtt.io/images/devices/F-APP-UK-V2.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

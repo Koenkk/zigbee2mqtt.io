@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Hive  |
 | Description | Heating thermostat |
 | Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration, linkquality |
-| Picture | ![Hive SLR1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SLR1.jpg) |
+| Picture | ![Hive SLR1](https://www.zigbee2mqtt.io/images/devices/SLR1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

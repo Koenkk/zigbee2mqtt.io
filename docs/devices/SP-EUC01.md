@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara EU smart plug |
 | Exposes | switch (state), power, energy, device_temperature, linkquality |
-| Picture | ![Xiaomi SP-EUC01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SP-EUC01.jpg) |
+| Picture | ![Xiaomi SP-EUC01](https://www.zigbee2mqtt.io/images/devices/SP-EUC01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

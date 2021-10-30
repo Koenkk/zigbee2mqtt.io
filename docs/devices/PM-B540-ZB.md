@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Dawon DNS  |
 | Description | IOT smart plug 16A |
 | Exposes | device_temperature, switch (state), power, energy, linkquality |
-| Picture | ![Dawon DNS PM-B540-ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PM-B540-ZB.jpg) |
+| Picture | ![Dawon DNS PM-B540-ZB](https://www.zigbee2mqtt.io/images/devices/PM-B540-ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

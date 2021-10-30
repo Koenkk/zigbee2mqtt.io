@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | EcoDim  |
 | Description | LED dimmer duo 2x 0-100W |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![EcoDim Eco-Dim.05](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/Eco-Dim.05.jpg) |
+| Picture | ![EcoDim Eco-Dim.05](https://www.zigbee2mqtt.io/images/devices/Eco-Dim.05.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

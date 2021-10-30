@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Schneider Electric  |
 | Description | Temperature/Humidity measurement with thermostat interface |
 | Exposes | keypad_lockout, humidity, battery, voltage, action, climate (occupied_heating_setpoint, local_temperature, pi_heating_demand), linkquality |
-| Picture | ![Schneider Electric CCTFR6400](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/CCTFR6400.jpg) |
+| Picture | ![Schneider Electric CCTFR6400](https://www.zigbee2mqtt.io/images/devices/CCTFR6400.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

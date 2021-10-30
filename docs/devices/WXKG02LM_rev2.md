@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara double key wireless wall switch (2018 model) |
 | Exposes | battery, action, voltage, linkquality |
-| Picture | ![Xiaomi WXKG02LM_rev2](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WXKG02LM_rev2.jpg) |
+| Picture | ![Xiaomi WXKG02LM_rev2](https://www.zigbee2mqtt.io/images/devices/WXKG02LM_rev2.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Titan Products  |
 | Description | Room CO2, humidity & temperature sensor |
 | Exposes | battery, humidity, temperature, co2, linkquality |
-| Picture | ![Titan Products TPZRCO2HT-Z3](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TPZRCO2HT-Z3.jpg) |
+| Picture | ![Titan Products TPZRCO2HT-Z3](https://www.zigbee2mqtt.io/images/devices/TPZRCO2HT-Z3.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

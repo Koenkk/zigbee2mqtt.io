@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Innr  |
 | Description | Outdoor flex light colour LED strip 2m, 550lm, RGBW |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Innr OFL 120 C](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/OFL-120-C.jpg) |
+| Picture | ![Innr OFL 120 C](https://www.zigbee2mqtt.io/images/devices/OFL-120-C.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

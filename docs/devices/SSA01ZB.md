@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Feibit  |
 | Description | Smoke detector |
 | Exposes | smoke, battery_low, tamper, battery, linkquality |
-| Picture | ![Feibit SSA01ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SSA01ZB.jpg) |
+| Picture | ![Feibit SSA01ZB](https://www.zigbee2mqtt.io/images/devices/SSA01ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

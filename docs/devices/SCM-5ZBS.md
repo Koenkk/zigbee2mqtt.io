@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Climax  |
 | Description | Roller shutter |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Climax SCM-5ZBS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SCM-5ZBS.jpg) |
+| Picture | ![Climax SCM-5ZBS](https://www.zigbee2mqtt.io/images/devices/SCM-5ZBS.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara single key wired wall switch |
 | Exposes | switch (state), power, temperature, action, operation_mode, linkquality |
-| Picture | ![Xiaomi QBKG11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG11LM.jpg) |
+| Picture | ![Xiaomi QBKG11LM](https://www.zigbee2mqtt.io/images/devices/QBKG11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

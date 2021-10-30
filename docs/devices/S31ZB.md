@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SONOFF  |
 | Description | Zigbee smart plug (US version) |
 | Exposes | switch (state), linkquality |
-| Picture | ![SONOFF S31ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/S31ZB.jpg) |
+| Picture | ![SONOFF S31ZB](https://www.zigbee2mqtt.io/images/devices/S31ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

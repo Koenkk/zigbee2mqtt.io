@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Develco  |
 | Description | Smart relay DIN |
 | Exposes | power, energy, switch (state), linkquality |
-| Picture | ![Develco SMRZB-332](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SMRZB-332.jpg) |
+| Picture | ![Develco SMRZB-332](https://www.zigbee2mqtt.io/images/devices/SMRZB-332.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

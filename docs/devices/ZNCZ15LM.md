@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 power plug ZigBee |
 | Exposes | switch (state), power, energy, temperature, voltage, current, consumer_connected, power_outage_memory, led_disabled_night, button_lock, overload_protection, linkquality |
-| Picture | ![Xiaomi ZNCZ15LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNCZ15LM.jpg) |
+| Picture | ![Xiaomi ZNCZ15LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ15LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

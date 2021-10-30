@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | 1 gang switch module |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
-| Picture | ![TuYa TS0001_switch_module](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0001_switch_module.jpg) |
+| Picture | ![TuYa TS0001_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0001_switch_module.jpg) |
 | White-label | OXT SWTZ21 |
 
 

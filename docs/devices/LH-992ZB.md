@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | iHORN  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![iHORN LH-992ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LH-992ZB.jpg) |
+| Picture | ![iHORN LH-992ZB](https://www.zigbee2mqtt.io/images/devices/LH-992ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Innr  |
 | Description | Outdoor smart pedestal light colour |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Innr OPL 130 C](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/OPL-130-C.jpg) |
+| Picture | ![Innr OPL 130 C](https://www.zigbee2mqtt.io/images/devices/OPL-130-C.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

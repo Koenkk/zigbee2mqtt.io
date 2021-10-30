@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall outlet H1 usb |
 | Exposes | switch (state), power, energy, temperature, voltage, current, power_outage_memory, led_disabled_night, button_lock, button_switch_mode, overload_protection, linkquality |
-| Picture | ![Xiaomi QBCZ15LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBCZ15LM.jpg) |
+| Picture | ![Xiaomi QBCZ15LM](https://www.zigbee2mqtt.io/images/devices/QBCZ15LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

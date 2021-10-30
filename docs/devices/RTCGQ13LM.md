@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara high precision motion sensor |
 | Exposes | occupancy, motion_sensitivity, occupancy_timeout, battery, linkquality |
-| Picture | ![Xiaomi RTCGQ13LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/RTCGQ13LM.jpg) |
+| Picture | ![Xiaomi RTCGQ13LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ13LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

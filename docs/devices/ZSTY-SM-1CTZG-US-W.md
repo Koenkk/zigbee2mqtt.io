@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Somgoms  |
 | Description | Curtain switch |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Somgoms ZSTY-SM-1CTZG-US-W](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZSTY-SM-1CTZG-US-W.jpg) |
+| Picture | ![Somgoms ZSTY-SM-1CTZG-US-W](https://www.zigbee2mqtt.io/images/devices/ZSTY-SM-1CTZG-US-W.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

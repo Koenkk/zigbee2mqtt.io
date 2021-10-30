@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nyce  |
 | Description | Door/window sensor |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
-| Picture | ![Nyce NCZ-3011-HA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/NCZ-3011-HA.jpg) |
+| Picture | ![Nyce NCZ-3011-HA](https://www.zigbee2mqtt.io/images/devices/NCZ-3011-HA.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

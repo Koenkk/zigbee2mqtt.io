@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | ADEO  |
 | Description | LEXMAN motion sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![ADEO LDSENK10](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LDSENK10.jpg) |
+| Picture | ![ADEO LDSENK10](https://www.zigbee2mqtt.io/images/devices/LDSENK10.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

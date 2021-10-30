@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | EnOcean  |
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
-| Picture | ![EnOcean PTM 215Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PTM-215Z.jpg) |
+| Picture | ![EnOcean PTM 215Z](https://www.zigbee2mqtt.io/images/devices/PTM-215Z.jpg) |
 | White-label | Niko 91004, NodOn CWS-4-1-01_HUE, Vimar 03906 |
 
 

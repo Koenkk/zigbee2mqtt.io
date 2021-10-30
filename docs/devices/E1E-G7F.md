@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Sengled  |
 | Description | Smart switch  |
 | Exposes | action, linkquality |
-| Picture | ![Sengled E1E-G7F](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/E1E-G7F.jpg) |
+| Picture | ![Sengled E1E-G7F](https://www.zigbee2mqtt.io/images/devices/E1E-G7F.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

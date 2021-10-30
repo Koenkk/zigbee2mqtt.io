@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nue / 3A  |
 | Description | Smart light controller |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Nue / 3A HGZB-02A](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-02A.jpg) |
+| Picture | ![Nue / 3A HGZB-02A](https://www.zigbee2mqtt.io/images/devices/HGZB-02A.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

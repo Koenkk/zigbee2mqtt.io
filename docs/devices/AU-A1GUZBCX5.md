@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Aurora Lighting  |
 | Description | AOne 5.4W smart tuneable GU10 lamp |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Aurora Lighting AU-A1GUZBCX5](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AU-A1GUZBCX5.jpg) |
+| Picture | ![Aurora Lighting AU-A1GUZBCX5](https://www.zigbee2mqtt.io/images/devices/AU-A1GUZBCX5.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

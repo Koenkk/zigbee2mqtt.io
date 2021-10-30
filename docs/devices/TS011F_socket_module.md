@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Socket module |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS011F_socket_module](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS011F_socket_module.jpg) |
+| Picture | ![TuYa TS011F_socket_module](https://www.zigbee2mqtt.io/images/devices/TS011F_socket_module.jpg) |
 | White-label | LoraTap RR400ZB |
 
 

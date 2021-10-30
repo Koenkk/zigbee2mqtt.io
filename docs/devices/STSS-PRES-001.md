@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SmartThings  |
 | Description | Presence sensor |
 | Exposes | battery, presence, linkquality |
-| Picture | ![SmartThings STSS-PRES-001](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/STSS-PRES-001.jpg) |
+| Picture | ![SmartThings STSS-PRES-001](https://www.zigbee2mqtt.io/images/devices/STSS-PRES-001.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

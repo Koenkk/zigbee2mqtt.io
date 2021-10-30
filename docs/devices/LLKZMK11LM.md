@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara wireless relay controller |
 | Exposes | power, energy, temperature, voltage, switch (state), interlock, linkquality |
-| Picture | ![Xiaomi LLKZMK11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LLKZMK11LM.jpg) |
+| Picture | ![Xiaomi LLKZMK11LM](https://www.zigbee2mqtt.io/images/devices/LLKZMK11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

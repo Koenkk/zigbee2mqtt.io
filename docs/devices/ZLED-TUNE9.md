@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Trust  |
 | Description | Smart tunable LED bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Trust ZLED-TUNE9](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZLED-TUNE9.jpg) |
+| Picture | ![Trust ZLED-TUNE9](https://www.zigbee2mqtt.io/images/devices/ZLED-TUNE9.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

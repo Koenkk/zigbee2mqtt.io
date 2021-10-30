@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | HEIMAN  |
 | Description | Smart remote controller |
 | Exposes | battery, action, linkquality |
-| Picture | ![HEIMAN HM1RC-2-E](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HM1RC-2-E.jpg) |
+| Picture | ![HEIMAN HM1RC-2-E](https://www.zigbee2mqtt.io/images/devices/HM1RC-2-E.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

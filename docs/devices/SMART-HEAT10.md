@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Alecto  |
 | Description | Radiator valve with thermostat |
 | Exposes | lock (state), switch (state), battery, climate (current_heating_setpoint, local_temperature, system_mode), linkquality |
-| Picture | ![Alecto SMART-HEAT10](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SMART-HEAT10.jpg) |
+| Picture | ![Alecto SMART-HEAT10](https://www.zigbee2mqtt.io/images/devices/SMART-HEAT10.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

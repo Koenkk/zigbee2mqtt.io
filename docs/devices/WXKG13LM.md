@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 wireless mini switch |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![Xiaomi WXKG13LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WXKG13LM.jpg) |
+| Picture | ![Xiaomi WXKG13LM](https://www.zigbee2mqtt.io/images/devices/WXKG13LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

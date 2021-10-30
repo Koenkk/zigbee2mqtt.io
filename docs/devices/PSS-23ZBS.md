@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Climax  |
 | Description | Power plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![Climax PSS-23ZBS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PSS-23ZBS.jpg) |
+| Picture | ![Climax PSS-23ZBS](https://www.zigbee2mqtt.io/images/devices/PSS-23ZBS.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

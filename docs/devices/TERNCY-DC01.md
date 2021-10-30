@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TERNCY  |
 | Description | Temperature & contact sensor  |
 | Exposes | temperature, contact, battery, linkquality |
-| Picture | ![TERNCY TERNCY-DC01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TERNCY-DC01.jpg) |
+| Picture | ![TERNCY TERNCY-DC01](https://www.zigbee2mqtt.io/images/devices/TERNCY-DC01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

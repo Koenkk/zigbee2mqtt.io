@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Feibit  |
 | Description | Door or window contact switch |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
-| Picture | ![Feibit SDM01ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SDM01ZB.jpg) |
+| Picture | ![Feibit SDM01ZB](https://www.zigbee2mqtt.io/images/devices/SDM01ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

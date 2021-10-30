@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Mycket  |
 | Description | E27 RGBW bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Mycket MS-SP-LE27WRGB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MS-SP-LE27WRGB.jpg) |
+| Picture | ![Mycket MS-SP-LE27WRGB](https://www.zigbee2mqtt.io/images/devices/MS-SP-LE27WRGB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

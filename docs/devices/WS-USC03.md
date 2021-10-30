@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall switch (neutral, single rocker) |
 | Exposes | switch (state), linkquality |
-| Picture | ![Xiaomi WS-USC03](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WS-USC03.jpg) |
+| Picture | ![Xiaomi WS-USC03](https://www.zigbee2mqtt.io/images/devices/WS-USC03.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Bosch  |
 | Description | Wireless motion detector |
 | Exposes | temperature, battery, occupancy, battery_low, tamper, illuminance, illuminance_lux, linkquality |
-| Picture | ![Bosch RADON TriTech ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/RADON-TriTech-ZB.jpg) |
+| Picture | ![Bosch RADON TriTech ZB](https://www.zigbee2mqtt.io/images/devices/RADON-TriTech-ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

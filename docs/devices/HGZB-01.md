@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nue / 3A  |
 | Description | Smart Zigbee 3.0 light controller |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A HGZB-01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-01.jpg) |
+| Picture | ![Nue / 3A HGZB-01](https://www.zigbee2mqtt.io/images/devices/HGZB-01.jpg) |
 | White-label | Zemismart ZW-EU-01, Moes ZK-CH-2U |
 
 

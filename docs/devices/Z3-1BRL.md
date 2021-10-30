@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Lutron  |
 | Description | Aurora smart bulb dimmer |
 | Exposes | action, brightness, linkquality |
-| Picture | ![Lutron Z3-1BRL](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/Z3-1BRL.jpg) |
+| Picture | ![Lutron Z3-1BRL](https://www.zigbee2mqtt.io/images/devices/Z3-1BRL.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

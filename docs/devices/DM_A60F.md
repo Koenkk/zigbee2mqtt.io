@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | CY-LIGHTING  |
 | Description | 6W smart dimmable E27 lamp 2700K |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![CY-LIGHTING DM A60F](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DM-A60F.jpg) |
+| Picture | ![CY-LIGHTING DM A60F](https://www.zigbee2mqtt.io/images/devices/DM-A60F.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Dawon DNS  |
 | Description | IOT remote control smart buried-type outlet |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![Dawon DNS PM-C140-ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PM-C140-ZB.jpg) |
+| Picture | ![Dawon DNS PM-C140-ZB](https://www.zigbee2mqtt.io/images/devices/PM-C140-ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

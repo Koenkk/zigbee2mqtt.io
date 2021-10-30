@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | HEIMAN  |
 | Description | Door contact sensor |
 | Exposes | contact, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN SOHM-I1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SOHM-I1.jpg) |
+| Picture | ![HEIMAN SOHM-I1](https://www.zigbee2mqtt.io/images/devices/SOHM-I1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

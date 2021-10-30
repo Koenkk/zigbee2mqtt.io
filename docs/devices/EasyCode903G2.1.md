@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | EasyAccess  |
 | Description | EasyFinger V2 |
 | Exposes | lock (state, lock_state), battery, sound_volume, action, auto_relock, linkquality |
-| Picture | ![EasyAccess EasyCode903G2.1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/EasyCode903G2.1.jpg) |
+| Picture | ![EasyAccess EasyCode903G2.1](https://www.zigbee2mqtt.io/images/devices/EasyCode903G2.1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

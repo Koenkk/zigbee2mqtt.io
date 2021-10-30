@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | DIYRuZ  |
 | Description | [Flower sensor](http://modkam.ru/?p=1700) |
 | Exposes | soil_moisture, battery, illuminance, humidity, pressure, temperature, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_Flower](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DIYRuZ_Flower.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_Flower](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_Flower.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

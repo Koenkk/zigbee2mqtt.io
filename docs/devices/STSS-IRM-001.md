@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SmartThings  |
 | Description | Motion sensor (2013 model) |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![SmartThings STSS-IRM-001](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/STSS-IRM-001.jpg) |
+| Picture | ![SmartThings STSS-IRM-001](https://www.zigbee2mqtt.io/images/devices/STSS-IRM-001.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

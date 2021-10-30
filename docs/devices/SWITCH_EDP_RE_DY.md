@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | EDP  |
 | Description | re:dy switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![EDP SWITCH EDP RE:DY](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SWITCH-EDP-RE-DY.jpg) |
+| Picture | ![EDP SWITCH EDP RE:DY](https://www.zigbee2mqtt.io/images/devices/SWITCH-EDP-RE-DY.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

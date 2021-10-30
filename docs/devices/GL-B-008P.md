@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Gledopto  |
 | Description | Zigbee 12W E26/E27 Bulb RGB+CCT (pro) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-B-008P](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-B-008P.jpg) |
+| Picture | ![Gledopto GL-B-008P](https://www.zigbee2mqtt.io/images/devices/GL-B-008P.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

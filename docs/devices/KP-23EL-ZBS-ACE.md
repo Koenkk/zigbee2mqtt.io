@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Climax  |
 | Description | Remote Keypad |
 | Exposes | battery_low, tamper, action, linkquality |
-| Picture | ![Climax KP-23EL-ZBS-ACE](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/KP-23EL-ZBS-ACE.jpg) |
+| Picture | ![Climax KP-23EL-ZBS-ACE](https://www.zigbee2mqtt.io/images/devices/KP-23EL-ZBS-ACE.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

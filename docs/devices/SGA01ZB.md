@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Feibit  |
 | Description | Combustible gas sensor |
 | Exposes | gas, battery_low, tamper, linkquality |
-| Picture | ![Feibit SGA01ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SGA01ZB.jpg) |
+| Picture | ![Feibit SGA01ZB](https://www.zigbee2mqtt.io/images/devices/SGA01ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

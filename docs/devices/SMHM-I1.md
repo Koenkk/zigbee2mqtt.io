@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | HEIMAN  |
 | Description | Smart motion sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN SMHM-I1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SMHM-I1.jpg) |
+| Picture | ![HEIMAN SMHM-I1](https://www.zigbee2mqtt.io/images/devices/SMHM-I1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Aurora Lighting  |
 | Description | AOne PIR sensor |
 | Exposes | occupancy, battery_low, tamper, illuminance, illuminance_lux, linkquality |
-| Picture | ![Aurora Lighting AU-A1ZBPIRS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AU-A1ZBPIRS.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZBPIRS](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBPIRS.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

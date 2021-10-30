@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Legrand  |
 | Description | Legrand (or Bticino) DIN smart relay for light control (note: Legrand 412170 may be similar to Bticino FC80RC) |
 | Exposes | switch (state), power, device_mode, linkquality |
-| Picture | ![Legrand FC80RC](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/FC80RC.jpg) |
+| Picture | ![Legrand FC80RC](https://www.zigbee2mqtt.io/images/devices/FC80RC.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

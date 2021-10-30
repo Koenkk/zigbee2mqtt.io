@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | BlitzWolf  |
 | Description | Rechargeable Zigbee PIR motion sensor |
 | Exposes | occupancy, linkquality |
-| Picture | ![BlitzWolf BW-IS3](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BW-IS3.jpg) |
+| Picture | ![BlitzWolf BW-IS3](https://www.zigbee2mqtt.io/images/devices/BW-IS3.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

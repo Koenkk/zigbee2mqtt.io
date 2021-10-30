@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | J.XUAN  |
 | Description | plug |
 | Exposes | switch (state), power, power_outage_memory, linkquality |
-| Picture | ![J.XUAN SPZ01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SPZ01.jpg) |
+| Picture | ![J.XUAN SPZ01](https://www.zigbee2mqtt.io/images/devices/SPZ01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

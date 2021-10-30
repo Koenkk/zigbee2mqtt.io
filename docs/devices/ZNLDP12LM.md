@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara smart LED bulb |
 | Exposes | light (state, brightness, color_temp), effect, power_outage_memory, linkquality |
-| Picture | ![Xiaomi ZNLDP12LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNLDP12LM.jpg) |
+| Picture | ![Xiaomi ZNLDP12LM](https://www.zigbee2mqtt.io/images/devices/ZNLDP12LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

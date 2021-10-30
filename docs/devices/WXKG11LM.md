@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara wireless switch |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![Xiaomi WXKG11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WXKG11LM.jpg) |
+| Picture | ![Xiaomi WXKG11LM](https://www.zigbee2mqtt.io/images/devices/WXKG11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

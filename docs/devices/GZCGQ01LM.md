@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | MiJia light intensity sensor |
 | Exposes | battery, illuminance, illuminance_lux, linkquality |
-| Picture | ![Xiaomi GZCGQ01LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GZCGQ01LM.jpg) |
+| Picture | ![Xiaomi GZCGQ01LM](https://www.zigbee2mqtt.io/images/devices/GZCGQ01LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

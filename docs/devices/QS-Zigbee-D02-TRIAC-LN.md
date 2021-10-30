@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Lonsonho  |
 | Description | 1 gang smart dimmer switch module with neutral |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-LN](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QS-Zigbee-D02-TRIAC-LN.jpg) |
+| Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-LN](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-D02-TRIAC-LN.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

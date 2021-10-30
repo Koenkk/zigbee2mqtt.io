@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Aurora Lighting  |
 | Description | Double smart socket UK |
 | Exposes | switch (state), power, linkquality |
-| Picture | ![Aurora Lighting AU-A1ZBDSS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AU-A1ZBDSS.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZBDSS](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBDSS.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

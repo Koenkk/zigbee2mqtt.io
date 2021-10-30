@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Lidl  |
 | Description | Parkside smart watering timer |
 | Exposes | switch (state), timer, linkquality |
-| Picture | ![Lidl PSBZS A1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PSBZS-A1.jpg) |
+| Picture | ![Lidl PSBZS A1](https://www.zigbee2mqtt.io/images/devices/PSBZS-A1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

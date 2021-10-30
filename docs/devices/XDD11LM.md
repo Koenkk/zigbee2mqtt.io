@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara Opple MX960 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Xiaomi XDD11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/XDD11LM.jpg) |
+| Picture | ![Xiaomi XDD11LM](https://www.zigbee2mqtt.io/images/devices/XDD11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

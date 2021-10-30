@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Sunricher  |
 | Description | ZigBee AC phase-cut dimmer |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Sunricher ZG9101SAC-HP](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZG9101SAC-HP.jpg) |
+| Picture | ![Sunricher ZG9101SAC-HP](https://www.zigbee2mqtt.io/images/devices/ZG9101SAC-HP.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

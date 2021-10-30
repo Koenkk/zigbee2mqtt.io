@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Sercomm  |
 | Description | PIR motion sensor |
 | Exposes | occupancy, battery_low, tamper, battery, linkquality |
-| Picture | ![Sercomm AL-PIR02](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AL-PIR02.jpg) |
+| Picture | ![Sercomm AL-PIR02](https://www.zigbee2mqtt.io/images/devices/AL-PIR02.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

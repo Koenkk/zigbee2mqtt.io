@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Develco  |
 | Description | Smoke detector with siren |
 | Exposes | temperature, battery, smoke, battery_low, test, max_duration, alarm, reliability, fault, linkquality |
-| Picture | ![Develco SMSZB-120](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SMSZB-120.jpg) |
+| Picture | ![Develco SMSZB-120](https://www.zigbee2mqtt.io/images/devices/SMSZB-120.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

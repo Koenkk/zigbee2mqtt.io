@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Moes  |
 | Description | Wall touch light switch (4 gang) |
 | Exposes | switch (state), linkquality |
-| Picture | ![Moes ZTS-EU_4gang](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZTS-EU_4gang.jpg) |
+| Picture | ![Moes ZTS-EU_4gang](https://www.zigbee2mqtt.io/images/devices/ZTS-EU_4gang.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Aurora Lighting  |
 | Description | AOne smart remote |
 | Exposes | battery, action, linkquality |
-| Picture | ![Aurora Lighting AU-A1ZBRC](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AU-A1ZBRC.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZBRC](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBRC.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Zemismart  |
 | Description | Curtain/roller blind switch |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Zemismart ZM-CSW032-D](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZM-CSW032-D.jpg) |
+| Picture | ![Zemismart ZM-CSW032-D](https://www.zigbee2mqtt.io/images/devices/ZM-CSW032-D.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

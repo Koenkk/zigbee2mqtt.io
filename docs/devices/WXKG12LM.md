@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara wireless switch (with gyroscope) |
 | Exposes | battery, action, voltage, linkquality |
-| Picture | ![Xiaomi WXKG12LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WXKG12LM.jpg) |
+| Picture | ![Xiaomi WXKG12LM](https://www.zigbee2mqtt.io/images/devices/WXKG12LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

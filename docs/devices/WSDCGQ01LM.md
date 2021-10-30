@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | MiJia temperature & humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
-| Picture | ![Xiaomi WSDCGQ01LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WSDCGQ01LM.jpg) |
+| Picture | ![Xiaomi WSDCGQ01LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ01LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

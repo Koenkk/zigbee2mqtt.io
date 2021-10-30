@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Yale  |
 | Description | Assure lock SL |
 | Exposes | lock (state, lock_state), battery, pin_code, linkquality |
-| Picture | ![Yale YRD256HA20BP](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/YRD256HA20BP.jpg) |
+| Picture | ![Yale YRD256HA20BP](https://www.zigbee2mqtt.io/images/devices/YRD256HA20BP.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

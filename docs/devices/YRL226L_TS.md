@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Yale  |
 | Description | Assure lock SL |
 | Exposes | lock (state, lock_state), battery, pin_code, linkquality |
-| Picture | ![Yale YRL226L TS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/YRL226L-TS.jpg) |
+| Picture | ![Yale YRL226L TS](https://www.zigbee2mqtt.io/images/devices/YRL226L-TS.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

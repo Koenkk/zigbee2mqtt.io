@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SmartThings  |
 | Description | ADT water leak detector |
 | Exposes | temperature, water_leak, battery_low, battery, linkquality |
-| Picture | ![SmartThings F-ADT-WTR-1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/F-ADT-WTR-1.jpg) |
+| Picture | ![SmartThings F-ADT-WTR-1](https://www.zigbee2mqtt.io/images/devices/F-ADT-WTR-1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

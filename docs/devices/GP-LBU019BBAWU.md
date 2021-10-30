@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SmartThings  |
 | Description | Smart bulb |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![SmartThings GP-LBU019BBAWU](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GP-LBU019BBAWU.jpg) |
+| Picture | ![SmartThings GP-LBU019BBAWU](https://www.zigbee2mqtt.io/images/devices/GP-LBU019BBAWU.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara temperature, humidity and pressure sensor |
 | Exposes | battery, temperature, humidity, pressure, voltage, linkquality |
-| Picture | ![Xiaomi WSDCGQ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WSDCGQ11LM.jpg) |
+| Picture | ![Xiaomi WSDCGQ11LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

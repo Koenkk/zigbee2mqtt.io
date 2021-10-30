@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Develco  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, linkquality |
-| Picture | ![Develco MOSZB-141](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MOSZB-141.jpg) |
+| Picture | ![Develco MOSZB-141](https://www.zigbee2mqtt.io/images/devices/MOSZB-141.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

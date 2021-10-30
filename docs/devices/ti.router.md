@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Custom devices (DiY)  |
 | Description | Texas Instruments router |
 | Exposes | linkquality |
-| Picture | ![Custom devices (DiY) ti.router](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ti.router.jpg) |
+| Picture | ![Custom devices (DiY) ti.router](https://www.zigbee2mqtt.io/images/devices/ti.router.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

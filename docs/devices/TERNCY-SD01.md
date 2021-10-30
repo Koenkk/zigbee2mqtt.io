@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TERNCY  |
 | Description | Knob smart dimmer |
 | Exposes | battery, action, direction, linkquality |
-| Picture | ![TERNCY TERNCY-SD01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TERNCY-SD01.jpg) |
+| Picture | ![TERNCY TERNCY-SD01](https://www.zigbee2mqtt.io/images/devices/TERNCY-SD01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

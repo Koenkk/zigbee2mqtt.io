@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Sylvania  |
 | Description | LIGHTIFY LED gardenspot mini RGB |
 | Exposes | light (state, brightness, color_xy, color_hs), effect, linkquality |
-| Picture | ![Sylvania LTFY004](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LTFY004.jpg) |
+| Picture | ![Sylvania LTFY004](https://www.zigbee2mqtt.io/images/devices/LTFY004.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

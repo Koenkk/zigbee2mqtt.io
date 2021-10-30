@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Thermostatic radiator valve |
 | Exposes | battery, lock (state), max_temperature, min_temperature, position, switch (state), window, heating, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset), programming_mode, boost_heating, boost_heating_countdown, linkquality |
-| Picture | ![TuYa TS0601_thermostat_1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0601_thermostat_1.jpg) |
+| Picture | ![TuYa TS0601_thermostat_1](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat_1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

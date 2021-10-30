@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | iCasa  |
 | Description | Zigbee AC dimmer |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![iCasa ICZB-R12D](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ICZB-R12D.jpg) |
+| Picture | ![iCasa ICZB-R12D](https://www.zigbee2mqtt.io/images/devices/ICZB-R12D.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

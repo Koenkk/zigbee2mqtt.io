@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nue / 3A  |
 | Description | 9W RGB LED downlight |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Nue / 3A WL-SD001-9W](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WL-SD001-9W.jpg) |
+| Picture | ![Nue / 3A WL-SD001-9W](https://www.zigbee2mqtt.io/images/devices/WL-SD001-9W.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

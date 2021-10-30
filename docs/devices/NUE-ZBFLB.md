@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nue / 3A  |
 | Description | Smart fan light switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A NUE-ZBFLB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/NUE-ZBFLB.jpg) |
+| Picture | ![Nue / 3A NUE-ZBFLB](https://www.zigbee2mqtt.io/images/devices/NUE-ZBFLB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

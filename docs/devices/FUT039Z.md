@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Miboxer  |
 | Description | RGB+CCT LED controller |
 | Exposes | light (state, brightness, color_temp, color_hs), do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![Miboxer FUT039Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/FUT039Z.jpg) |
+| Picture | ![Miboxer FUT039Z](https://www.zigbee2mqtt.io/images/devices/FUT039Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

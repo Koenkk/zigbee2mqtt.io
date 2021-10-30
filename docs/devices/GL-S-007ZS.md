@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Gledopto  |
 | Description | Zigbee 4W GU10 Bulb RGB+CCT (plus) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-S-007ZS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-S-007ZS.jpg) |
+| Picture | ![Gledopto GL-S-007ZS](https://www.zigbee2mqtt.io/images/devices/GL-S-007ZS.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

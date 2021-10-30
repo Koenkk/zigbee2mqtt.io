@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | EDP  |
 | Description | re:dy plug |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![EDP PLUG EDP RE:DY](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PLUG-EDP-RE-DY.jpg) |
+| Picture | ![EDP PLUG EDP RE:DY](https://www.zigbee2mqtt.io/images/devices/PLUG-EDP-RE-DY.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

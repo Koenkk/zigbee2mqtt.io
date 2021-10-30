@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | ShinaSystem  |
 | Description | SiHAS remote control 2 button |
 | Exposes | action, battery, voltage, linkquality |
-| Picture | ![ShinaSystem SBM300ZB2](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SBM300ZB2.jpg) |
+| Picture | ![ShinaSystem SBM300ZB2](https://www.zigbee2mqtt.io/images/devices/SBM300ZB2.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

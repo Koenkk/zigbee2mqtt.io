@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Develco Products A/S  |
 | Description | Customizable siren |
 | Exposes | battery, battery_low, test, warning, squawk, max_duration, alarm, linkquality |
-| Picture | ![Develco Products A/S SIRZB-110](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SIRZB-110.jpg) |
+| Picture | ![Develco Products A/S SIRZB-110](https://www.zigbee2mqtt.io/images/devices/SIRZB-110.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

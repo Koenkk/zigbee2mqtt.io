@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Leviton  |
 | Description | Decora smart Zigbee 3.0 certified 15A switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Leviton DG15S-1BW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DG15S-1BW.jpg) |
+| Picture | ![Leviton DG15S-1BW](https://www.zigbee2mqtt.io/images/devices/DG15S-1BW.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

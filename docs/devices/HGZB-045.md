@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nue / 3A  |
 | Description | Smart 4 key scene wall switch |
 | Exposes | action, switch (state), linkquality |
-| Picture | ![Nue / 3A HGZB-045](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-045.jpg) |
+| Picture | ![Nue / 3A HGZB-045](https://www.zigbee2mqtt.io/images/devices/HGZB-045.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

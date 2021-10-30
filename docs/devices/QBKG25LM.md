@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 3 gang smart wall switch (no neutral wire) |
 | Exposes | switch (state), operation_mode, mode_switch, power_outage_memory, led_disabled_night, temperature, action, linkquality |
-| Picture | ![Xiaomi QBKG25LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG25LM.jpg) |
+| Picture | ![Xiaomi QBKG25LM](https://www.zigbee2mqtt.io/images/devices/QBKG25LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

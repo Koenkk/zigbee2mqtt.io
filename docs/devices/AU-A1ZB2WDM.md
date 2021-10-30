@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Aurora Lighting  |
 | Description | AOne 250W smart rotary dimmer module |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Aurora Lighting AU-A1ZB2WDM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AU-A1ZB2WDM.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZB2WDM](https://www.zigbee2mqtt.io/images/devices/AU-A1ZB2WDM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

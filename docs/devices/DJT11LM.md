@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara vibration sensor |
 | Exposes | battery, action, strength, sensitivity, angle_x, angle_y, angle_z, voltage, linkquality |
-| Picture | ![Xiaomi DJT11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DJT11LM.jpg) |
+| Picture | ![Xiaomi DJT11LM](https://www.zigbee2mqtt.io/images/devices/DJT11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

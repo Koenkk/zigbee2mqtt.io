@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | PLAID SYSTEMS  |
 | Description | Spruce temperature and moisture sensor |
 | Exposes | humidity, temperature, linkquality |
-| Picture | ![PLAID SYSTEMS PS-SPRZMS-SLP3](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PS-SPRZMS-SLP3.jpg) |
+| Picture | ![PLAID SYSTEMS PS-SPRZMS-SLP3](https://www.zigbee2mqtt.io/images/devices/PS-SPRZMS-SLP3.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

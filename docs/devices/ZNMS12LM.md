@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara S2 lock |
 | Exposes | battery, voltage, battery_low, state, reverse, action, linkquality |
-| Picture | ![Xiaomi ZNMS12LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNMS12LM.jpg) |
+| Picture | ![Xiaomi ZNMS12LM](https://www.zigbee2mqtt.io/images/devices/ZNMS12LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

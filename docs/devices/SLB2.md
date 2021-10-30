@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Hive  |
 | Description | Signal booster |
 | Exposes | linkquality |
-| Picture | ![Hive SLB2](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SLB2.jpg) |
+| Picture | ![Hive SLB2](https://www.zigbee2mqtt.io/images/devices/SLB2.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

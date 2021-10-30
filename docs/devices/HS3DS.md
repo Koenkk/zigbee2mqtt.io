@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | HEIMAN  |
 | Description | Door sensor |
 | Exposes | contact, battery, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HS3DS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS3DS.jpg) |
+| Picture | ![HEIMAN HS3DS](https://www.zigbee2mqtt.io/images/devices/HS3DS.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

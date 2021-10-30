@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nue / 3A  |
 | Description | Smart light relay - 2 gang |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A LXN59-2S7LX1.0](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LXN59-2S7LX1.0.jpg) |
+| Picture | ![Nue / 3A LXN59-2S7LX1.0](https://www.zigbee2mqtt.io/images/devices/LXN59-2S7LX1.0.jpg) |
 | White-label | Zemismart ZW-EU-02 |
 
 

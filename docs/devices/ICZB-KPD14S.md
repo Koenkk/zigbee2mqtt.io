@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | iCasa  |
 | Description | Zigbee 3.0 Keypad Pulse 4S |
 | Exposes | battery, action, linkquality |
-| Picture | ![iCasa ICZB-KPD14S](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ICZB-KPD14S.jpg) |
+| Picture | ![iCasa ICZB-KPD14S](https://www.zigbee2mqtt.io/images/devices/ICZB-KPD14S.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

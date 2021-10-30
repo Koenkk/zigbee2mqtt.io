@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Lonsonho  |
 | Description | 1 gang switch module with neutral wire |
 | Exposes | switch (state), linkquality |
-| Picture | ![Lonsonho QS-Zigbee-S05-LN](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QS-Zigbee-S05-LN.jpg) |
+| Picture | ![Lonsonho QS-Zigbee-S05-LN](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-S05-LN.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

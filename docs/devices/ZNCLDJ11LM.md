@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara curtain motor |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Xiaomi ZNCLDJ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNCLDJ11LM.jpg) |
+| Picture | ![Xiaomi ZNCLDJ11LM](https://www.zigbee2mqtt.io/images/devices/ZNCLDJ11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

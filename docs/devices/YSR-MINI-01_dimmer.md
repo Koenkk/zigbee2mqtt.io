@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | YSRSAI  |
 | Description | Zigbee LED controller (Dimmer) |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![YSRSAI YSR-MINI-01_dimmer](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/YSR-MINI-01_dimmer.jpg) |
+| Picture | ![YSRSAI YSR-MINI-01_dimmer](https://www.zigbee2mqtt.io/images/devices/YSR-MINI-01_dimmer.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

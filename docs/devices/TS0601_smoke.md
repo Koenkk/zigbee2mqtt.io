@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Smoke sensor |
 | Exposes | smoke, battery_low, linkquality |
-| Picture | ![TuYa TS0601_smoke](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0601_smoke.jpg) |
+| Picture | ![TuYa TS0601_smoke](https://www.zigbee2mqtt.io/images/devices/TS0601_smoke.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

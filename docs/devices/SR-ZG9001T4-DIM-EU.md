@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Sunricher  |
 | Description | Zigbee wireless touch dimmer switch |
 | Exposes | action, linkquality |
-| Picture | ![Sunricher SR-ZG9001T4-DIM-EU](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SR-ZG9001T4-DIM-EU.jpg) |
+| Picture | ![Sunricher SR-ZG9001T4-DIM-EU](https://www.zigbee2mqtt.io/images/devices/SR-ZG9001T4-DIM-EU.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

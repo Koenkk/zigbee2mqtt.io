@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara wireless remote switch H1 (double rocker) |
 | Exposes | battery, action, operation_mode, linkquality |
-| Picture | ![Xiaomi WRS-R02](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WRS-R02.jpg) |
+| Picture | ![Xiaomi WRS-R02](https://www.zigbee2mqtt.io/images/devices/WRS-R02.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

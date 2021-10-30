@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Sengled  |
 | Description | Smart LED multicolor A19 bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Sengled E21-N1EA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/E21-N1EA.jpg) |
+| Picture | ![Sengled E21-N1EA](https://www.zigbee2mqtt.io/images/devices/E21-N1EA.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

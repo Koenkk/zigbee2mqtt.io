@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Develco  |
 | Description | Wattle AMS HAN power-meter sensor |
 | Exposes | power, energy, current, voltage, current_phase_b, voltage_phase_b, current_phase_c, voltage_phase_c, linkquality |
-| Picture | ![Develco EMIZB-132](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/EMIZB-132.jpg) |
+| Picture | ![Develco EMIZB-132](https://www.zigbee2mqtt.io/images/devices/EMIZB-132.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

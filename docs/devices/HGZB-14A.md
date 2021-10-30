@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nue / 3A  |
 | Description | Water leakage sensor |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
-| Picture | ![Nue / 3A HGZB-14A](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-14A.jpg) |
+| Picture | ![Nue / 3A HGZB-14A](https://www.zigbee2mqtt.io/images/devices/HGZB-14A.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | gas sensor |
 | Exposes | gas, linkquality |
-| Picture | ![TuYa TS0601_gas_sensor](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0601_gas_sensor.jpg) |
+| Picture | ![TuYa TS0601_gas_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_gas_sensor.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | DIN mount RCBO with smart energy metering |
 | Exposes | meter_number, state, alarm, trip, child_lock, power_on_behaviour, countdown_timer, voltage, voltage_rms, current, current_average, power, energy_consumed, temperature, clear_device_data, linkquality |
-| Picture | ![TuYa TS0601_rcbo](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0601_rcbo.jpg) |
+| Picture | ![TuYa TS0601_rcbo](https://www.zigbee2mqtt.io/images/devices/TS0601_rcbo.jpg) |
 | White-label | HOCH ZJSBL7-100Z, WDYK ZJSBL7-100Z |
 
 

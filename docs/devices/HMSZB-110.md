@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Develco  |
 | Description | Temperature & humidity sensor |
 | Exposes | battery, battery_low, temperature, humidity, linkquality |
-| Picture | ![Develco HMSZB-110](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HMSZB-110.jpg) |
+| Picture | ![Develco HMSZB-110](https://www.zigbee2mqtt.io/images/devices/HMSZB-110.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

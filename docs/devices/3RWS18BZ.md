@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Third Reality  |
 | Description | Water sensor |
 | Exposes | water_leak, battery_low, battery, voltage, linkquality |
-| Picture | ![Third Reality 3RWS18BZ](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/3RWS18BZ.jpg) |
+| Picture | ![Third Reality 3RWS18BZ](https://www.zigbee2mqtt.io/images/devices/3RWS18BZ.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

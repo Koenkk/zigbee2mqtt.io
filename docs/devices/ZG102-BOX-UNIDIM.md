@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Envilar  |
 | Description | ZigBee AC phase-cut dimmer |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Envilar ZG102-BOX-UNIDIM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZG102-BOX-UNIDIM.jpg) |
+| Picture | ![Envilar ZG102-BOX-UNIDIM](https://www.zigbee2mqtt.io/images/devices/ZG102-BOX-UNIDIM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

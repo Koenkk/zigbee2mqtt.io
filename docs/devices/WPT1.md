@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Hive  |
 | Description | Heating thermostat remote control |
 | Exposes | battery, linkquality |
-| Picture | ![Hive WPT1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WPT1.jpg) |
+| Picture | ![Hive WPT1](https://www.zigbee2mqtt.io/images/devices/WPT1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

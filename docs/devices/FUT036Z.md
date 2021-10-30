@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Miboxer  |
 | Description | Single color LED controller |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Miboxer FUT036Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/FUT036Z.jpg) |
+| Picture | ![Miboxer FUT036Z](https://www.zigbee2mqtt.io/images/devices/FUT036Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

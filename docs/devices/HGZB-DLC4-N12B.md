@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nue / 3A  |
 | Description | RGB LED downlight |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Nue / 3A HGZB-DLC4-N12B](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HGZB-DLC4-N12B.jpg) |
+| Picture | ![Nue / 3A HGZB-DLC4-N12B](https://www.zigbee2mqtt.io/images/devices/HGZB-DLC4-N12B.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

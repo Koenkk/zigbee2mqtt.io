@@ -3,11 +3,11 @@ import { sidebar } from "./sidebar";
 import * as path from "path";
 import { DefinePlugin } from 'webpack';
 
-export const domain = 'https://psi-4ward.github.io';
+export const domain = 'https://www.zigbee2mqtt.io';
 const isDevelop = !!process.env.DEVELOP_BRANCH;
 
 export function getBase() {
-  let base = '/zigbee2mqtt.io/';
+  let base = '/';
   if (isDevelop) base += 'develop/';
   return base;
 }
@@ -71,7 +71,7 @@ const conf = {
   ],
 
   themeConfig: {
-    repo: 'psi-4ward/zigbee2mqtt.io',
+    repo: 'Koenkk/zigbee2mqtt.io',
     docsBranch: isDevelop ? 'develop' : 'master',
     editLinkText: '✏ Help to make the docu better and edit this page on Github ✌',
     logo: '/logo.png',

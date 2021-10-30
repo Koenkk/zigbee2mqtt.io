@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | HEIMAN  |
 | Description | Smart doorbell button |
 | Exposes | battery, action, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HS2DB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS2DB.jpg) |
+| Picture | ![HEIMAN HS2DB](https://www.zigbee2mqtt.io/images/devices/HS2DB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

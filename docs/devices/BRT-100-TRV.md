@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Moes  |
 | Description | Thermostatic radiator valve |
 | Exposes | battery, lock (state), eco_mode, eco_temperature, max_temperature, min_temperature, position, switch (state), window, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset), programming_mode, boost_heating, boost_heating_countdown, boost_heating_countdown_time_set, linkquality |
-| Picture | ![Moes BRT-100-TRV](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BRT-100-TRV.jpg) |
+| Picture | ![Moes BRT-100-TRV](https://www.zigbee2mqtt.io/images/devices/BRT-100-TRV.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Climax  |
 | Description | Smoke detector |
 | Exposes | smoke, battery, battery_low, tamper, warning, linkquality |
-| Picture | ![Climax SD-8SCZBS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SD-8SCZBS.jpg) |
+| Picture | ![Climax SD-8SCZBS](https://www.zigbee2mqtt.io/images/devices/SD-8SCZBS.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

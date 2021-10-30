@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Ksentry Electronics  |
 | Description | [Zigbee OnOff Controller](http://ksentry.manufacturer.globalsources.com/si/6008837134660/pdtl/ZigBee-module/1162731630/zigbee-on-off-controller-modules.htm) |
 | Exposes | switch (state), linkquality |
-| Picture | ![Ksentry Electronics KS-SM001](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/KS-SM001.jpg) |
+| Picture | ![Ksentry Electronics KS-SM001](https://www.zigbee2mqtt.io/images/devices/KS-SM001.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

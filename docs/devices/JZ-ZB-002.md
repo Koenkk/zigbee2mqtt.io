@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | LELLKI  |
 | Description | 2 gang touch switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![LELLKI JZ-ZB-002](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JZ-ZB-002.jpg) |
+| Picture | ![LELLKI JZ-ZB-002](https://www.zigbee2mqtt.io/images/devices/JZ-ZB-002.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

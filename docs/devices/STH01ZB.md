@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Feibit  |
 | Description | Smart temperature & humidity Sensor |
 | Exposes | temperature, humidity, battery, linkquality |
-| Picture | ![Feibit STH01ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/STH01ZB.jpg) |
+| Picture | ![Feibit STH01ZB](https://www.zigbee2mqtt.io/images/devices/STH01ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

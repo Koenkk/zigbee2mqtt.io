@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | MiJia human body movement sensor |
 | Exposes | battery, occupancy, voltage, linkquality |
-| Picture | ![Xiaomi RTCGQ01LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/RTCGQ01LM.jpg) |
+| Picture | ![Xiaomi RTCGQ01LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ01LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

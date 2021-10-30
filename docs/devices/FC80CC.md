@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Legrand  |
 | Description | Legrand (or Bticino) DIN contactor module (note: Legrand 412171 may be similar to Bticino FC80CC) |
 | Exposes | switch (state), power, device_mode, linkquality |
-| Picture | ![Legrand FC80CC](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/FC80CC.jpg) |
+| Picture | ![Legrand FC80CC](https://www.zigbee2mqtt.io/images/devices/FC80CC.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

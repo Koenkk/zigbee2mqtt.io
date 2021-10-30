@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Gledopto  |
 | Description | Zigbee 9W Downlight RGB+CCT |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-D-004Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-D-004Z.jpg) |
+| Picture | ![Gledopto GL-D-004Z](https://www.zigbee2mqtt.io/images/devices/GL-D-004Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

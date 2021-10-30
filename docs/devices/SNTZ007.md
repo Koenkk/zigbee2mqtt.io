@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Rechargeable Zigbee contact sensor |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
-| Picture | ![TuYa SNTZ007](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SNTZ007.jpg) |
+| Picture | ![TuYa SNTZ007](https://www.zigbee2mqtt.io/images/devices/SNTZ007.jpg) |
 | White-label | BlitzWolf BW-IS2 |
 
 

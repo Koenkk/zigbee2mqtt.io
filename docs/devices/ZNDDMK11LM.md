@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara smart lightstrip driver |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), linkquality |
-| Picture | ![Xiaomi ZNDDMK11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNDDMK11LM.jpg) |
+| Picture | ![Xiaomi ZNDDMK11LM](https://www.zigbee2mqtt.io/images/devices/ZNDDMK11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

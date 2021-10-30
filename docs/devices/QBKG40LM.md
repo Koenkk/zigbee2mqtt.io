@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara E1 1 gang switch (with neutral) |
 | Exposes | switch (state), action, power_outage_memory, operation_mode, linkquality |
-| Picture | ![Xiaomi QBKG40LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG40LM.jpg) |
+| Picture | ![Xiaomi QBKG40LM](https://www.zigbee2mqtt.io/images/devices/QBKG40LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

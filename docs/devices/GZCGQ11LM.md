@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 light intensity sensor |
 | Exposes | battery, voltage, illuminance, illuminance_lux, detection_period, linkquality |
-| Picture | ![Xiaomi GZCGQ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GZCGQ11LM.jpg) |
+| Picture | ![Xiaomi GZCGQ11LM](https://www.zigbee2mqtt.io/images/devices/GZCGQ11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Gledopto  |
 | Description | Zigbee 30W Floodlight RGB+CCT (plus) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-FL-005TZS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-FL-005TZS.jpg) |
+| Picture | ![Gledopto GL-FL-005TZS](https://www.zigbee2mqtt.io/images/devices/GL-FL-005TZS.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | KMPCIL  |
 | Description | Environment sensor |
 | Exposes | battery, temperature, humidity, pressure, illuminance, illuminance_lux, occupancy, switch (state), linkquality |
-| Picture | ![KMPCIL KMPCIL_RES005](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/KMPCIL_RES005.jpg) |
+| Picture | ![KMPCIL KMPCIL_RES005](https://www.zigbee2mqtt.io/images/devices/KMPCIL_RES005.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

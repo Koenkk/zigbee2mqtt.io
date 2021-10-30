@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Moes  |
 | Description | Thermostat radiator valve |
 | Exposes | battery, lock (state), switch (state), frost_detection, heating_stop, holiday_temperature, comfort_temperature, eco_temperature, open_window_temperature, boost_heating_countdown, error_status, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, preset), linkquality |
-| Picture | ![Moes TV01-ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TV01-ZB.jpg) |
+| Picture | ![Moes TV01-ZB](https://www.zigbee2mqtt.io/images/devices/TV01-ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

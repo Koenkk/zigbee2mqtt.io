@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | AXIS  |
 | Description | Gear window shade motor |
 | Exposes | cover (state, position), battery, linkquality |
-| Picture | ![AXIS GR-ZB01-W](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GR-ZB01-W.jpg) |
+| Picture | ![AXIS GR-ZB01-W](https://www.zigbee2mqtt.io/images/devices/GR-ZB01-W.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

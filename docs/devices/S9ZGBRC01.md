@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Smart9  |
 | Description | Smart remote controller |
 | Exposes | battery, action, linkquality |
-| Picture | ![Smart9 S9ZGBRC01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/S9ZGBRC01.jpg) |
+| Picture | ![Smart9 S9ZGBRC01](https://www.zigbee2mqtt.io/images/devices/S9ZGBRC01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

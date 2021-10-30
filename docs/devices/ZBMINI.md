@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SONOFF  |
 | Description | Zigbee two way smart switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![SONOFF ZBMINI](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZBMINI.jpg) |
+| Picture | ![SONOFF ZBMINI](https://www.zigbee2mqtt.io/images/devices/ZBMINI.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

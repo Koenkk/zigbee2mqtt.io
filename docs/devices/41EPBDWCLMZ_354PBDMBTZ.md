@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Schneider Electric  |
 | Description | Wiser 40/300-Series Module Dimmer |
 | Exposes | light (state, brightness), ballast_minimum_level, ballast_maximum_level, linkquality |
-| Picture | ![Schneider Electric 41EPBDWCLMZ/354PBDMBTZ](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/41EPBDWCLMZ-354PBDMBTZ.jpg) |
+| Picture | ![Schneider Electric 41EPBDWCLMZ/354PBDMBTZ](https://www.zigbee2mqtt.io/images/devices/41EPBDWCLMZ-354PBDMBTZ.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

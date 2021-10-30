@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | LELLKI  |
 | Description | Multiprise with 4 AC outlets and 2 USB super charging ports (16A) |
 | Exposes | switch (state), linkquality |
-| Picture | ![LELLKI WP33-EU](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WP33-EU.jpg) |
+| Picture | ![LELLKI WP33-EU](https://www.zigbee2mqtt.io/images/devices/WP33-EU.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

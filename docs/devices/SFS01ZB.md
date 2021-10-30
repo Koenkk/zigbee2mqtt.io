@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Feibit  |
 | Description | Power plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![Feibit SFS01ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SFS01ZB.jpg) |
+| Picture | ![Feibit SFS01ZB](https://www.zigbee2mqtt.io/images/devices/SFS01ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

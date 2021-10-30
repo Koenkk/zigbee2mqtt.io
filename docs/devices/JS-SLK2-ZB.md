@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | JAVIS  |
 | Description | Intelligent biometric digital lock |
 | Exposes | battery, action, linkquality |
-| Picture | ![JAVIS JS-SLK2-ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JS-SLK2-ZB.jpg) |
+| Picture | ![JAVIS JS-SLK2-ZB](https://www.zigbee2mqtt.io/images/devices/JS-SLK2-ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

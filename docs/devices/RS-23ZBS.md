@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Climax  |
 | Description | Temperature & humidity sensor |
 | Exposes | temperature, humidity, linkquality |
-| Picture | ![Climax RS-23ZBS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/RS-23ZBS.jpg) |
+| Picture | ![Climax RS-23ZBS](https://www.zigbee2mqtt.io/images/devices/RS-23ZBS.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

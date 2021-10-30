@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | EcoDim  |
 | Description | Zigbee & Z-wave dimmer |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![EcoDim Eco-Dim.07](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/Eco-Dim.07.jpg) |
+| Picture | ![EcoDim Eco-Dim.07](https://www.zigbee2mqtt.io/images/devices/Eco-Dim.07.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

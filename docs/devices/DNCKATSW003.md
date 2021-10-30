@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Custom devices (DiY)  |
 | Description | [DNCKAT triple key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) |
 | Exposes | switch (state), action, linkquality |
-| Picture | ![Custom devices (DiY) DNCKATSW003](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DNCKATSW003.jpg) |
+| Picture | ![Custom devices (DiY) DNCKATSW003](https://www.zigbee2mqtt.io/images/devices/DNCKATSW003.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

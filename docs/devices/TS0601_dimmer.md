@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Zigbee smart dimmer |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![TuYa TS0601_dimmer](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0601_dimmer.jpg) |
+| Picture | ![TuYa TS0601_dimmer](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer.jpg) |
 | White-label | Larkkey ZSTY-SM-1DMZG-EU, Earda EDM-1ZAA-EU, Earda EDM-1ZAB-EU, Earda EDM-1ZBA-EU, Mercator ikuü SSWD01 |
 
 

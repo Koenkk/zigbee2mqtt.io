@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Leedarson  |
 | Description | 4-Key Remote Controller |
 | Exposes | battery, action, linkquality |
-| Picture | ![Leedarson 6ARCZABZH](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/6ARCZABZH.jpg) |
+| Picture | ![Leedarson 6ARCZABZH](https://www.zigbee2mqtt.io/images/devices/6ARCZABZH.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

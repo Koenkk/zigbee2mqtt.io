@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | HKGK  |
 | Description | BAC series thermostat |
 | Exposes | lock (state), deadzone_temperature, max_temperature_limit, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, preset, sensor), linkquality |
-| Picture | ![HKGK BAC-002-ALZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BAC-002-ALZB.jpg) |
+| Picture | ![HKGK BAC-002-ALZB](https://www.zigbee2mqtt.io/images/devices/BAC-002-ALZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

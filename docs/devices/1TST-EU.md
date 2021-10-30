@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | eCozy  |
 | Description | Smart heating thermostat |
 | Exposes | battery, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration, pi_heating_demand), linkquality |
-| Picture | ![eCozy 1TST-EU](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/1TST-EU.jpg) |
+| Picture | ![eCozy 1TST-EU](https://www.zigbee2mqtt.io/images/devices/1TST-EU.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

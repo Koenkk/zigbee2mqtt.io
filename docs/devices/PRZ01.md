@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | J.XUAN  |
 | Description | Human body movement sensor |
 | Exposes | occupancy, battery_low, battery, linkquality |
-| Picture | ![J.XUAN PRZ01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PRZ01.jpg) |
+| Picture | ![J.XUAN PRZ01](https://www.zigbee2mqtt.io/images/devices/PRZ01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

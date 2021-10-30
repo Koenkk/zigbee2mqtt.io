@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Visonic  |
 | Description | Magnetic door & window contact sensor |
 | Exposes | contact, battery_low, tamper, linkquality |
-| Picture | ![Visonic MCT-350 SMA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MCT-350-SMA.jpg) |
+| Picture | ![Visonic MCT-350 SMA](https://www.zigbee2mqtt.io/images/devices/MCT-350-SMA.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

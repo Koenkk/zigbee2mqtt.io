@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | iCasa  |
 | Description | Zigbee 3.0 remote control |
 | Exposes | battery, action, linkquality |
-| Picture | ![iCasa ICZB-RM11S](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ICZB-RM11S.jpg) |
+| Picture | ![iCasa ICZB-RM11S](https://www.zigbee2mqtt.io/images/devices/ICZB-RM11S.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

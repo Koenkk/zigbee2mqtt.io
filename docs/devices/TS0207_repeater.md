@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Repeater |
 | Exposes | linkquality |
-| Picture | ![TuYa TS0207_repeater](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0207_repeater.jpg) |
+| Picture | ![TuYa TS0207_repeater](https://www.zigbee2mqtt.io/images/devices/TS0207_repeater.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

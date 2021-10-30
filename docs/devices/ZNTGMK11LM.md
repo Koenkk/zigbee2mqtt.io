@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara smart RGBW light controller |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Xiaomi ZNTGMK11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNTGMK11LM.jpg) |
+| Picture | ![Xiaomi ZNTGMK11LM](https://www.zigbee2mqtt.io/images/devices/ZNTGMK11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

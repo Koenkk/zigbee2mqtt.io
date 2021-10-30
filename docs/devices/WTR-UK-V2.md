@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SmartThings  |
 | Description | Water leak sensor (2015 model) |
 | Exposes | temperature, water_leak, battery_low, tamper, battery, linkquality |
-| Picture | ![SmartThings WTR-UK-V2](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WTR-UK-V2.jpg) |
+| Picture | ![SmartThings WTR-UK-V2](https://www.zigbee2mqtt.io/images/devices/WTR-UK-V2.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

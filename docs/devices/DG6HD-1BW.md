@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Leviton  |
 | Description | Zigbee in-wall smart dimmer |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![Leviton DG6HD-1BW](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DG6HD-1BW.jpg) |
+| Picture | ![Leviton DG6HD-1BW](https://www.zigbee2mqtt.io/images/devices/DG6HD-1BW.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

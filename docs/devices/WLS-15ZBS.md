@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Climax  |
 | Description | Water leakage sensor |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
-| Picture | ![Climax WLS-15ZBS](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WLS-15ZBS.jpg) |
+| Picture | ![Climax WLS-15ZBS](https://www.zigbee2mqtt.io/images/devices/WLS-15ZBS.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

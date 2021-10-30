@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Nue / 3A  |
 | Description | Smart Double GPO |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A MG-AUWS01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/MG-AUWS01.jpg) |
+| Picture | ![Nue / 3A MG-AUWS01](https://www.zigbee2mqtt.io/images/devices/MG-AUWS01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

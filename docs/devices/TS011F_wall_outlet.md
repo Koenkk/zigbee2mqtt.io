@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | In-wall outlet |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS011F_wall_outlet](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS011F_wall_outlet.jpg) |
+| Picture | ![TuYa TS011F_wall_outlet](https://www.zigbee2mqtt.io/images/devices/TS011F_wall_outlet.jpg) |
 | White-label | Teekar SWP86-01OG, ClickSmart+ CMA30035 |
 
 

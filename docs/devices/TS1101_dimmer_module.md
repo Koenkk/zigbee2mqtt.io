@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | 2CH Zigbee dimmer module |
 | Exposes | light (state, brightness, min_brightness), linkquality |
-| Picture | ![TuYa TS1101_dimmer_module](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS1101_dimmer_module.jpg) |
+| Picture | ![TuYa TS1101_dimmer_module](https://www.zigbee2mqtt.io/images/devices/TS1101_dimmer_module.jpg) |
 | White-label | OXT SWTZ25 |
 
 

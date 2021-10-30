@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Insta  |
 | Description | ZigBee Light Link wall/handheld transmitter |
 | Exposes | action, linkquality |
-| Picture | ![Insta InstaRemote](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/InstaRemote.jpg) |
+| Picture | ![Insta InstaRemote](https://www.zigbee2mqtt.io/images/devices/InstaRemote.jpg) |
 | White-label | Gira 2430-100, Gira 2435-10, Jung ZLLCD5004M, Jung ZLLLS5004M, Jung ZLLA5004M, Jung ZLLHS4 |
 
 

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Hive  |
 | Description | Active light, warm to cool white (E27 & B22) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Hive HV-GSCXZB229B](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HV-GSCXZB229B.jpg) |
+| Picture | ![Hive HV-GSCXZB229B](https://www.zigbee2mqtt.io/images/devices/HV-GSCXZB229B.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

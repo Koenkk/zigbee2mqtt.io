@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Wall switch module |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![TuYa WHD02](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WHD02.jpg) |
+| Picture | ![TuYa WHD02](https://www.zigbee2mqtt.io/images/devices/WHD02.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

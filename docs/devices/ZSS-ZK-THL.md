@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Moes  |
 | Description | Smart temperature and humidity meter with display |
 | Exposes | battery, illuminance, illuminance_lux, humidity, temperature, linkquality |
-| Picture | ![Moes ZSS-ZK-THL](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZSS-ZK-THL.jpg) |
+| Picture | ![Moes ZSS-ZK-THL](https://www.zigbee2mqtt.io/images/devices/ZSS-ZK-THL.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | EnOcean  |
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
-| Picture | ![EnOcean PTM 216Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/PTM-216Z.jpg) |
+| Picture | ![EnOcean PTM 216Z](https://www.zigbee2mqtt.io/images/devices/PTM-216Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

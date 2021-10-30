@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Feibit  |
 | Description | Smart light switch - 3 gang |
 | Exposes | switch (state), linkquality |
-| Picture | ![Feibit SLS301ZB_3](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SLS301ZB_3.jpg) |
+| Picture | ![Feibit SLS301ZB_3](https://www.zigbee2mqtt.io/images/devices/SLS301ZB_3.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

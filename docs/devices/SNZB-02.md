@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SONOFF  |
 | Description | Temperature and humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
-| Picture | ![SONOFF SNZB-02](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SNZB-02.jpg) |
+| Picture | ![SONOFF SNZB-02](https://www.zigbee2mqtt.io/images/devices/SNZB-02.jpg) |
 | White-label | eWeLink RHK08 |
 
 

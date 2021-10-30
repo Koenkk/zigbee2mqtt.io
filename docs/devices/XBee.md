@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Digi  |
 | Description | Router |
 | Exposes | linkquality |
-| Picture | ![Digi XBee](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/XBee.jpg) |
+| Picture | ![Digi XBee](https://www.zigbee2mqtt.io/images/devices/XBee.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | HEIMAN  |
 | Description | Smart metering plug |
 | Exposes | switch (state), power, current, voltage, linkquality |
-| Picture | ![HEIMAN SKHMP30-I1](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SKHMP30-I1.jpg) |
+| Picture | ![HEIMAN SKHMP30-I1](https://www.zigbee2mqtt.io/images/devices/SKHMP30-I1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

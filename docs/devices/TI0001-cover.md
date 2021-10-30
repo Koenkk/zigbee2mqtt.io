@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Livolo  |
 | Description | Zigbee roller blind motor |
 | Exposes | cover (state, position), options, moving, linkquality |
-| Picture | ![Livolo TI0001-cover](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TI0001-cover.jpg) |
+| Picture | ![Livolo TI0001-cover](https://www.zigbee2mqtt.io/images/devices/TI0001-cover.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

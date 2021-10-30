@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | Zigbee smart dimmer |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![TuYa gq8b1uv](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/gq8b1uv.jpg) |
+| Picture | ![TuYa gq8b1uv](https://www.zigbee2mqtt.io/images/devices/gq8b1uv.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

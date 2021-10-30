@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara TVOC air quality monitor |
 | Exposes | battery, temperature, humidity, voc, linkquality |
-| Picture | ![Xiaomi VOCKQJK11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/VOCKQJK11LM.jpg) |
+| Picture | ![Xiaomi VOCKQJK11LM](https://www.zigbee2mqtt.io/images/devices/VOCKQJK11LM.jpg) |
 | White-label | Xiaomi AAQS-S01 |
 
 

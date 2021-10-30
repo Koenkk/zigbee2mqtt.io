@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | IT Commander  |
 | Description | Button |
 | Exposes | action, battery, voltage, linkquality |
-| Picture | ![IT Commander ITCMDR_Click](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ITCMDR_Click.jpg) |
+| Picture | ![IT Commander ITCMDR_Click](https://www.zigbee2mqtt.io/images/devices/ITCMDR_Click.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

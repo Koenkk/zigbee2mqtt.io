@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Leedarson  |
 | Description | PAR16 tunable white |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Leedarson 6xy-M350ST-W1Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/6xy-M350ST-W1Z.jpg) |
+| Picture | ![Leedarson 6xy-M350ST-W1Z](https://www.zigbee2mqtt.io/images/devices/6xy-M350ST-W1Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

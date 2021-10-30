@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Ajax Online  |
 | Description | Smart Zigbee pro GU10 spotlight bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), linkquality |
-| Picture | ![Ajax Online AJ_ZB_GU10](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/AJ_ZB_GU10.jpg) |
+| Picture | ![Ajax Online AJ_ZB_GU10](https://www.zigbee2mqtt.io/images/devices/AJ_ZB_GU10.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

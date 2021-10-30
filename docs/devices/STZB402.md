@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Stelpro  |
 | Description | Ki, line-voltage thermostat |
 | Exposes | local_temperature, keypad_lockout, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
-| Picture | ![Stelpro STZB402](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/STZB402.jpg) |
+| Picture | ![Stelpro STZB402](https://www.zigbee2mqtt.io/images/devices/STZB402.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

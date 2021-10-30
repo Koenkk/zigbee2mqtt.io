@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | AduroSmart  |
 | Description | ERIA smart plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![AduroSmart BPU3](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/BPU3.jpg) |
+| Picture | ![AduroSmart BPU3](https://www.zigbee2mqtt.io/images/devices/BPU3.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

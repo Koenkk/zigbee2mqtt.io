@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Yale  |
 | Description | Assure lock key free deadbolt with Zigbee |
 | Exposes | lock (state, lock_state), battery, pin_code, linkquality |
-| Picture | ![Yale YRD246HA20BP](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/YRD246HA20BP.jpg) |
+| Picture | ![Yale YRD246HA20BP](https://www.zigbee2mqtt.io/images/devices/YRD246HA20BP.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

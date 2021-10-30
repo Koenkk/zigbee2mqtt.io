@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Mi power plug ZigBee EU |
 | Exposes | switch (state), power, energy, temperature, voltage, current, consumer_connected, led_disabled_night, power_outage_memory, auto_off, overload_protection, linkquality |
-| Picture | ![Xiaomi ZNCZ04LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNCZ04LM.jpg) |
+| Picture | ![Xiaomi ZNCZ04LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ04LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

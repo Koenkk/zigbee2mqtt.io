@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara socket Zigbee |
 | Exposes | switch (state), power, energy, temperature, voltage, power_outage_memory, linkquality |
-| Picture | ![Xiaomi QBCZ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBCZ11LM.jpg) |
+| Picture | ![Xiaomi QBCZ11LM](https://www.zigbee2mqtt.io/images/devices/QBCZ11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

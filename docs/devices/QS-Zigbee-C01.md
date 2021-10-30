@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Lonsonho  |
 | Description | Curtain/blind motor controller |
 | Exposes | cover (state, position), moving, calibration, motor_reversal, calibration_time, linkquality |
-| Picture | ![Lonsonho QS-Zigbee-C01](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QS-Zigbee-C01.jpg) |
+| Picture | ![Lonsonho QS-Zigbee-C01](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-C01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

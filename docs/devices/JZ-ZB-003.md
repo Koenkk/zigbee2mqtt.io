@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | LELLKI  |
 | Description | 3 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![LELLKI JZ-ZB-003](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/JZ-ZB-003.jpg) |
+| Picture | ![LELLKI JZ-ZB-003](https://www.zigbee2mqtt.io/images/devices/JZ-ZB-003.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

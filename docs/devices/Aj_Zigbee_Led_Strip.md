@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Ajax Online  |
 | Description | LED Strip |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Ajax Online Aj_Zigbee_Led_Strip](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/Aj_Zigbee_Led_Strip.jpg) |
+| Picture | ![Ajax Online Aj_Zigbee_Led_Strip](https://www.zigbee2mqtt.io/images/devices/Aj_Zigbee_Led_Strip.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

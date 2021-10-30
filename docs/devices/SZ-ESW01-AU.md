@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Sercomm  |
 | Description | Telstra smart plug |
 | Exposes | switch (state), power, linkquality |
-| Picture | ![Sercomm SZ-ESW01-AU](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SZ-ESW01-AU.jpg) |
+| Picture | ![Sercomm SZ-ESW01-AU](https://www.zigbee2mqtt.io/images/devices/SZ-ESW01-AU.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

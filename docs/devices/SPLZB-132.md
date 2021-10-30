@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Develco  |
 | Description | Power plug |
 | Exposes | switch (state), power, current, voltage, energy, device_temperature, linkquality |
-| Picture | ![Develco SPLZB-132](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SPLZB-132.jpg) |
+| Picture | ![Develco SPLZB-132](https://www.zigbee2mqtt.io/images/devices/SPLZB-132.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

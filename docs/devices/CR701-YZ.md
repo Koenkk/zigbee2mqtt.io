@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Oujiabao  |
 | Description | Gas and carbon monoxide alarm |
 | Exposes | gas, carbon_monoxide, tamper, battery_low, linkquality |
-| Picture | ![Oujiabao CR701-YZ](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/CR701-YZ.jpg) |
+| Picture | ![Oujiabao CR701-YZ](https://www.zigbee2mqtt.io/images/devices/CR701-YZ.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

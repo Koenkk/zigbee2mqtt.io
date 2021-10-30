@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | HEIMAN  |
 | Description | Smart in wall plug |
 | Exposes | switch (state), power, current, voltage, linkquality |
-| Picture | ![HEIMAN HS2ESK-E](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS2ESK-E.jpg) |
+| Picture | ![HEIMAN HS2ESK-E](https://www.zigbee2mqtt.io/images/devices/HS2ESK-E.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

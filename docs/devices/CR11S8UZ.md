@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | ORVIBO  |
 | Description | Smart sticker switch |
 | Exposes | action, linkquality |
-| Picture | ![ORVIBO CR11S8UZ](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/CR11S8UZ.jpg) |
+| Picture | ![ORVIBO CR11S8UZ](https://www.zigbee2mqtt.io/images/devices/CR11S8UZ.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

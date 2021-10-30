@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | TuYa  |
 | Description | SOS button |
 | Exposes | battery, action, linkquality |
-| Picture | ![TuYa TS0215A_sos](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TS0215A_sos.jpg) |
+| Picture | ![TuYa TS0215A_sos](https://www.zigbee2mqtt.io/images/devices/TS0215A_sos.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

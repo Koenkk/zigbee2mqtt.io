@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | HEIMAN  |
 | Description | Air quality monitor |
 | Exposes | battery, temperature, humidity, pm25, hcho, voc, aqi, pm10, battery_state, linkquality |
-| Picture | ![HEIMAN HS2AQ-EM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/HS2AQ-EM.jpg) |
+| Picture | ![HEIMAN HS2AQ-EM](https://www.zigbee2mqtt.io/images/devices/HS2AQ-EM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

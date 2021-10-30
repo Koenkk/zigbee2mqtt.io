@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | LeTV  |
 | Description | 8key switch |
 | Exposes | action, linkquality |
-| Picture | ![LeTV LeTV.8KEY](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/LeTV.8KEY.jpg) |
+| Picture | ![LeTV LeTV.8KEY](https://www.zigbee2mqtt.io/images/devices/LeTV.8KEY.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

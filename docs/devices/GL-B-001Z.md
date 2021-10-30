@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Gledopto  |
 | Description | Zigbee 4W E12/E14 Bulb RGB+CCT |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-B-001Z](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GL-B-001Z.jpg) |
+| Picture | ![Gledopto GL-B-001Z](https://www.zigbee2mqtt.io/images/devices/GL-B-001Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

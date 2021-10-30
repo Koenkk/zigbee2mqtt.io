@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara human body movement and illuminance sensor |
 | Exposes | battery, occupancy, temperature, voltage, illuminance_lux, illuminance, linkquality |
-| Picture | ![Xiaomi RTCGQ11LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/RTCGQ11LM.jpg) |
+| Picture | ![Xiaomi RTCGQ11LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

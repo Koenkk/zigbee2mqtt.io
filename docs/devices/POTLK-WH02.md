@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | GE  |
 | Description | Outlink smart remote outlet |
 | Exposes | switch (state), linkquality |
-| Picture | ![GE POTLK-WH02](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/POTLK-WH02.jpg) |
+| Picture | ![GE POTLK-WH02](https://www.zigbee2mqtt.io/images/devices/POTLK-WH02.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

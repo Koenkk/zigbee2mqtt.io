@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Livolo  |
 | Description | Zigbee socket |
 | Exposes | switch (state), linkquality |
-| Picture | ![Livolo TI0001-socket](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TI0001-socket.jpg) |
+| Picture | ![Livolo TI0001-socket](https://www.zigbee2mqtt.io/images/devices/TI0001-socket.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

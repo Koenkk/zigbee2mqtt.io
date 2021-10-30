@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 double key wireless wall switch |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![Xiaomi WXKG07LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/WXKG07LM.jpg) |
+| Picture | ![Xiaomi WXKG07LM](https://www.zigbee2mqtt.io/images/devices/WXKG07LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

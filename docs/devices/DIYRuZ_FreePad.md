@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | DIYRuZ  |
 | Description | [DiY 8/12/20 button keypad](http://modkam.ru/?p=1114) |
 | Exposes | battery, action, switch_type, switch_actions, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_FreePad](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/DIYRuZ_FreePad.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_FreePad](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_FreePad.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

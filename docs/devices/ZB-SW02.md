@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | eWeLink  |
 | Description | Smart light switch - 2 gang |
 | Exposes | switch (state), linkquality |
-| Picture | ![eWeLink ZB-SW02](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZB-SW02.jpg) |
+| Picture | ![eWeLink ZB-SW02](https://www.zigbee2mqtt.io/images/devices/ZB-SW02.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

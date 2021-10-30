@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara roller shade companion E1 |
 | Exposes | cover (state, position), battery, linkquality |
-| Picture | ![Xiaomi ZNJLBL01LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNJLBL01LM.jpg) |
+| Picture | ![Xiaomi ZNJLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNJLBL01LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

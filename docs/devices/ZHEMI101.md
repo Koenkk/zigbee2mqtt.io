@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Develco  |
 | Description | Energy meter |
 | Exposes | power, energy, linkquality |
-| Picture | ![Develco ZHEMI101](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZHEMI101.jpg) |
+| Picture | ![Develco ZHEMI101](https://www.zigbee2mqtt.io/images/devices/ZHEMI101.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

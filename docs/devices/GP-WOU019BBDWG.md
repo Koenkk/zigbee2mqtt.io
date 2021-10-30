@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | SmartThings  |
 | Description | Outlet with power meter |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![SmartThings GP-WOU019BBDWG](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/GP-WOU019BBDWG.jpg) |
+| Picture | ![SmartThings GP-WOU019BBDWG](https://www.zigbee2mqtt.io/images/devices/GP-WOU019BBDWG.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

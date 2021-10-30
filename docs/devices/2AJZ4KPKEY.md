@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Konke  |
 | Description | Multi-function button |
 | Exposes | battery, action, linkquality |
-| Picture | ![Konke 2AJZ4KPKEY](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/2AJZ4KPKEY.jpg) |
+| Picture | ![Konke 2AJZ4KPKEY](https://www.zigbee2mqtt.io/images/devices/2AJZ4KPKEY.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

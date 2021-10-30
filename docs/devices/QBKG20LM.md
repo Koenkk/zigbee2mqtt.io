@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall switch T1 (with neutral, double rocker) |
 | Exposes | switch (state), power, energy, voltage, power_outage_memory, led_disabled_night, temperature, action, operation_mode, linkquality |
-| Picture | ![Xiaomi QBKG20LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG20LM.jpg) |
+| Picture | ![Xiaomi QBKG20LM](https://www.zigbee2mqtt.io/images/devices/QBKG20LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

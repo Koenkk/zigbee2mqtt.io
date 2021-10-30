@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Keen Home  |
 | Description | Temperature Sensor |
 | Exposes | battery, temperature, humidity, pressure, voltage, linkquality |
-| Picture | ![Keen Home RS-THP-MP-1.0](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/RS-THP-MP-1.0.jpg) |
+| Picture | ![Keen Home RS-THP-MP-1.0](https://www.zigbee2mqtt.io/images/devices/RS-THP-MP-1.0.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

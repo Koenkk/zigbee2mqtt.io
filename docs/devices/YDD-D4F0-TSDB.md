@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Yale  |
 | Description | Lockwood T-Lock |
 | Exposes | lock (state, lock_state), battery, pin_code, linkquality |
-| Picture | ![Yale YDD-D4F0-TSDB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/YDD-D4F0-TSDB.jpg) |
+| Picture | ![Yale YDD-D4F0-TSDB](https://www.zigbee2mqtt.io/images/devices/YDD-D4F0-TSDB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | ShinaSystem  |
 | Description | SiHAS temperature/humidity sensor |
 | Exposes | temperature, humidity, battery, voltage, linkquality |
-| Picture | ![ShinaSystem TSM-300ZB](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/TSM-300ZB.jpg) |
+| Picture | ![ShinaSystem TSM-300ZB](https://www.zigbee2mqtt.io/images/devices/TSM-300ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

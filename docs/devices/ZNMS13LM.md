@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara S2 lock pro |
 | Exposes | state, reverse, action, linkquality |
-| Picture | ![Xiaomi ZNMS13LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/ZNMS13LM.jpg) |
+| Picture | ![Xiaomi ZNMS13LM](https://www.zigbee2mqtt.io/images/devices/ZNMS13LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Swann  |
 | Description | Key fob remote |
 | Exposes | action, linkquality |
-| Picture | ![Swann SWO-KEF1PA](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/SWO-KEF1PA.jpg) |
+| Picture | ![Swann SWO-KEF1PA](https://www.zigbee2mqtt.io/images/devices/SWO-KEF1PA.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here -->
