@@ -63,6 +63,6 @@ jobs:
       - name: Update algolia docsearch
         uses: darrenjennings/algolia-docsearch-action@master
         with:
-          algolia_application_id: K1BM3QYQ34
-          algolia_api_key: ${{ secrets.ALGOLIA_INDEX_APIKEY }}
+          algolia_application_id: OTZVGS02CK
+          algolia_api_key: ${{ secrets.ALGOLIA_INDEX_APIKEY_PSI }}
           file: 'algolia.json'
