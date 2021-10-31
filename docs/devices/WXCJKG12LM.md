@@ -1,20 +1,28 @@
 ---
 title: "Xiaomi WXCJKG12LM control via MQTT"
-description: "Integrate your Xiaomi WXCJKG12LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi WXCJKG12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-12-15T17:27:48Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/WXCJKG12LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi WXCJKG12LM
 
+|     |     |
+|-----|-----|
 | Model | WXCJKG12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara Opple switch 2 bands |
 | Exposes | battery, action, operation_mode, linkquality |
-| Picture | ![Xiaomi WXCJKG12LM](../images/devices/WXCJKG12LM.jpg) |
+| Picture | ![Xiaomi WXCJKG12LM](https://www.zigbee2mqtt.io/images/devices/WXCJKG12LM.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -24,7 +32,7 @@ Press and hold the button on the backside of the device until the blue light sta
 ### Binding
 By default the switch is bound to the coordinator but this device can also be used to directly control other lights and switches in the network.
 
-First unbind it from the coordinator, then you can bind it to any other device or group. (see https://www.zigbee2mqtt.io/information/binding.html )
+First unbind it from the coordinator, then you can bind it to any other device or group. (see ../guide/usage/binding.md )
 
 Now change the operation mode of the device, by default it is in `event` mode, but when binding we need to change it to `command` mode.
 To do this send to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"operation_mode": "command"}`, right before doing this make sure to wakeup the device.
@@ -44,10 +52,10 @@ When bound to a lamp, the behavior is as follows (for WXCJKG12LM Aqara Opple swi
 
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

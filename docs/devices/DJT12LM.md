@@ -1,24 +1,32 @@
 ---
 title: "Xiaomi DJT12LM control via MQTT"
-description: "Integrate your Xiaomi DJT12LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi DJT12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-06-10T16:45:59Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DJT12LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi DJT12LM
 
+|     |     |
+|-----|-----|
 | Model | DJT12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 vibration sensor |
 | Exposes | action, linkquality |
-| Picture | ![Xiaomi DJT12LM](../images/devices/DJT12LM.jpg) |
+| Picture | ![Xiaomi DJT12LM](https://www.zigbee2mqtt.io/images/devices/DJT12LM.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

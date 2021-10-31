@@ -1,24 +1,32 @@
 ---
 title: "Legrand FC80RC control via MQTT"
-description: "Integrate your Legrand FC80RC via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Legrand FC80RC via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-02-27T16:03:55Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/FC80RC.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Legrand FC80RC
 
+|     |     |
+|-----|-----|
 | Model | FC80RC  |
 | Vendor  | Legrand  |
 | Description | Legrand (or Bticino) DIN smart relay for light control (note: Legrand 412170 may be similar to Bticino FC80RC) |
 | Exposes | switch (state), power, device_mode, linkquality |
-| Picture | ![Legrand FC80RC](../images/devices/FC80RC.jpg) |
+| Picture | ![Legrand FC80RC](https://www.zigbee2mqtt.io/images/devices/FC80RC.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

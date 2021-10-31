@@ -1,20 +1,28 @@
 ---
 title: "Trust ZCTS-808 control via MQTT"
-description: "Integrate your Trust ZCTS-808 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Trust ZCTS-808 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZCTS-808.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Trust ZCTS-808
 
+|     |     |
+|-----|-----|
 | Model | ZCTS-808  |
 | Vendor  | Trust  |
 | Description | Wireless contact sensor |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
-| Picture | ![Trust ZCTS-808](../images/devices/ZCTS-808.jpg) |
+| Picture | ![Trust ZCTS-808](https://www.zigbee2mqtt.io/images/devices/ZCTS-808.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -22,7 +30,7 @@ description: "Integrate your Trust ZCTS-808 via Zigbee2MQTT with whatever smart 
 When pairing the sensor with Zigbee2MQTT,
 keep opening and closing the sensor (pull/insert the sensor parts next to each other) for 10 seconds,
 otherwise device will fall asleep before it gets fully configured and will not send state changes.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

@@ -1,26 +1,34 @@
 ---
 title: "Sercomm SZ-ESW01-AU control via MQTT"
-description: "Integrate your Sercomm SZ-ESW01-AU via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Sercomm SZ-ESW01-AU via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SZ-ESW01-AU.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Sercomm SZ-ESW01-AU
 
+|     |     |
+|-----|-----|
 | Model | SZ-ESW01-AU  |
 | Vendor  | Sercomm  |
 | Description | Telstra smart plug |
 | Exposes | switch (state), power, linkquality |
-| Picture | ![Sercomm SZ-ESW01-AU](../images/devices/SZ-ESW01-AU.jpg) |
+| Picture | ![Sercomm SZ-ESW01-AU](https://www.zigbee2mqtt.io/images/devices/SZ-ESW01-AU.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
 ### Pairing
 With the device unplugged (or socket switched off), press and hold the pairing button for ~4 seconds. Continue holding the pairing button while plugging in the device (or switching the socket on) and continue to hold for 2 seconds. If pairing is successful the red LED will switch off for ~2 seconds, then flash.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

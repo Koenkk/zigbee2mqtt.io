@@ -1,27 +1,35 @@
 ---
 title: "Moes MS-108ZR control via MQTT"
-description: "Integrate your Moes MS-108ZR via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Moes MS-108ZR via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-01T17:18:02Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MS-108ZR.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Moes MS-108ZR
 
+|     |     |
+|-----|-----|
 | Model | MS-108ZR  |
 | Vendor  | Moes  |
 | Description | Zigbee + RF curtain switch module |
 | Exposes | cover (state, position), calibration_time, moving, motor_reversal, linkquality |
-| Picture | ![Moes MS-108ZR](../images/devices/MS-108ZR.jpg) |
+| Picture | ![Moes MS-108ZR](https://www.zigbee2mqtt.io/images/devices/MS-108ZR.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

@@ -1,24 +1,32 @@
 ---
 title: "Xiaomi ZNXNKG02LM control via MQTT"
-description: "Integrate your Xiaomi ZNXNKG02LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi ZNXNKG02LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-01T17:18:02Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZNXNKG02LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi ZNXNKG02LM
 
+|     |     |
+|-----|-----|
 | Model | ZNXNKG02LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara knob H1 (wireless) |
 | Exposes | battery, voltage, action, operation_mode, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, linkquality |
-| Picture | ![Xiaomi ZNXNKG02LM](../images/devices/ZNXNKG02LM.jpg) |
+| Picture | ![Xiaomi ZNXNKG02LM](https://www.zigbee2mqtt.io/images/devices/ZNXNKG02LM.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

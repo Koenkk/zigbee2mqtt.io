@@ -1,24 +1,32 @@
 ---
 title: "Xiaomi ZNCLDJ12LM control via MQTT"
-description: "Integrate your Xiaomi ZNCLDJ12LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi ZNCLDJ12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-11-09T18:37:38Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZNCLDJ12LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi ZNCLDJ12LM
 
+|     |     |
+|-----|-----|
 | Model | ZNCLDJ12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara B1 curtain motor  |
 | Exposes | cover (state, position), battery, linkquality |
-| Picture | ![Xiaomi ZNCLDJ12LM](../images/devices/ZNCLDJ12LM.jpg) |
+| Picture | ![Xiaomi ZNCLDJ12LM](https://www.zigbee2mqtt.io/images/devices/ZNCLDJ12LM.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
 
@@ -70,10 +78,10 @@ Home Assistant automation example:
 ```
 
 Motor leaves calibration mode automatically after it reaches the both open and close curtain position limits. Calibration is mandatory for proper position reporting and ability to set intermediate positions.
-
+<!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

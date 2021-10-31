@@ -1,24 +1,32 @@
 ---
 title: "Yale YDF40 control via MQTT"
-description: "Integrate your Yale YDF40 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Yale YDF40 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-01T17:18:02Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YDF40.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Yale YDF40
 
+|     |     |
+|-----|-----|
 | Model | YDF40  |
 | Vendor  | Yale  |
 | Description | Real living lock / Intelligent biometric digital lock |
 | Exposes | lock (state, lock_state), battery, pin_code, linkquality |
-| Picture | ![Yale YDF40](../images/devices/YDF40.jpg) |
+| Picture | ![Yale YDF40](https://www.zigbee2mqtt.io/images/devices/YDF40.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

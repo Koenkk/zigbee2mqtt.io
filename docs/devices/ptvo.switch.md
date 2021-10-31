@@ -1,20 +1,28 @@
 ---
 title: "Custom devices (DiY) ptvo.switch control via MQTT"
-description: "Integrate your Custom devices (DiY) ptvo.switch via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Custom devices (DiY) ptvo.switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-09-08T21:16:00Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ptvo.switch.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Custom devices (DiY) ptvo.switch
 
+|     |     |
+|-----|-----|
 | Model | ptvo.switch  |
 | Vendor  | Custom devices (DiY)  |
 | Description | [Multi-channel relay switch](https://ptvo.info/zigbee-switch-configurable-firmware-router-199/) |
 | Exposes | action, switch (state), l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13, l14, l15, l16, linkquality |
-| Picture | ![Custom devices (DiY) ptvo.switch](../images/devices/ptvo.switch.jpg) |
+| Picture | ![Custom devices (DiY) ptvo.switch](https://www.zigbee2mqtt.io/images/devices/ptvo.switch.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -31,10 +39,10 @@ devices:
 ```
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

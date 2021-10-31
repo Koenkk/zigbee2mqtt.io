@@ -1,24 +1,32 @@
 ---
 title: "EasyAccess EasyCode903G2.1 control via MQTT"
-description: "Integrate your EasyAccess EasyCode903G2.1 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your EasyAccess EasyCode903G2.1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-05-01T14:47:09Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/EasyCode903G2.1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # EasyAccess EasyCode903G2.1
 
+|     |     |
+|-----|-----|
 | Model | EasyCode903G2.1  |
 | Vendor  | EasyAccess  |
 | Description | EasyFinger V2 |
 | Exposes | lock (state, lock_state), battery, sound_volume, action, auto_relock, linkquality |
-| Picture | ![EasyAccess EasyCode903G2.1](../images/devices/EasyCode903G2.1.jpg) |
+| Picture | ![EasyAccess EasyCode903G2.1](https://www.zigbee2mqtt.io/images/devices/EasyCode903G2.1.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

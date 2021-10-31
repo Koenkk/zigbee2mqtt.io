@@ -1,24 +1,32 @@
 ---
 title: "LifeControl MCLH-05 control via MQTT"
-description: "Integrate your LifeControl MCLH-05 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LifeControl MCLH-05 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-04-29T17:11:59Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MCLH-05.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # LifeControl MCLH-05
 
+|     |     |
+|-----|-----|
 | Model | MCLH-05  |
 | Vendor  | LifeControl  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, battery, linkquality |
-| Picture | ![LifeControl MCLH-05](../images/devices/MCLH-05.jpg) |
+| Picture | ![LifeControl MCLH-05](https://www.zigbee2mqtt.io/images/devices/MCLH-05.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

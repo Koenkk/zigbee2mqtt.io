@@ -1,20 +1,28 @@
 ---
 title: "CY-LIGHTING DM A60F control via MQTT"
-description: "Integrate your CY-LIGHTING DM A60F via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your CY-LIGHTING DM A60F via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-09-27T17:28:43Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DM_A60F.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # CY-LIGHTING DM A60F
 
+|     |     |
+|-----|-----|
 | Model | DM A60F  |
 | Vendor  | CY-LIGHTING  |
 | Description | 6W smart dimmable E27 lamp 2700K |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![CY-LIGHTING DM A60F](../images/devices/DM-A60F.jpg) |
+| Picture | ![CY-LIGHTING DM A60F](https://www.zigbee2mqtt.io/images/devices/DM-A60F.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -25,12 +33,12 @@ After resetting the bulb will go into pairing mode for 20 seconds.
 While pairing, keep the bulb close to the adapter.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

@@ -1,24 +1,32 @@
 ---
 title: "Xiaomi WS-EUK02 control via MQTT"
-description: "Integrate your Xiaomi WS-EUK02 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi WS-EUK02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-08-01T20:41:55Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/WS-EUK02.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi WS-EUK02
 
+|     |     |
+|-----|-----|
 | Model | WS-EUK02  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall switch H1 EU (no neutral, double rocker) |
 | Exposes | switch (state), power_outage_memory, operation_mode, action, linkquality |
-| Picture | ![Xiaomi WS-EUK02](../images/devices/WS-EUK02.jpg) |
+| Picture | ![Xiaomi WS-EUK02](https://www.zigbee2mqtt.io/images/devices/WS-EUK02.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

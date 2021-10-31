@@ -1,24 +1,32 @@
 ---
 title: "HEIMAN HS2SW1A/HS2SW1A-N control via MQTT"
-description: "Integrate your HEIMAN HS2SW1A/HS2SW1A-N via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HS2SW1A/HS2SW1A-N via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-09-30T20:52:56Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS2SW1A_HS2SW1A-N.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HS2SW1A/HS2SW1A-N
 
+|     |     |
+|-----|-----|
 | Model | HS2SW1A/HS2SW1A-N  |
 | Vendor  | HEIMAN  |
 | Description | Smart switch - 1 gang with neutral wire |
 | Exposes | switch (state), device_temperature, linkquality |
-| Picture | ![HEIMAN HS2SW1A/HS2SW1A-N](../images/devices/HS2SW1A-HS2SW1A-N.jpg) |
+| Picture | ![HEIMAN HS2SW1A/HS2SW1A-N](https://www.zigbee2mqtt.io/images/devices/HS2SW1A-HS2SW1A-N.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

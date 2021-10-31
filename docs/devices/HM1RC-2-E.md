@@ -1,24 +1,32 @@
 ---
 title: "HEIMAN HM1RC-2-E control via MQTT"
-description: "Integrate your HEIMAN HM1RC-2-E via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HM1RC-2-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-02-03T17:47:43Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HM1RC-2-E.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HM1RC-2-E
 
+|     |     |
+|-----|-----|
 | Model | HM1RC-2-E  |
 | Vendor  | HEIMAN  |
 | Description | Smart remote controller |
 | Exposes | battery, action, linkquality |
-| Picture | ![HEIMAN HM1RC-2-E](../images/devices/HM1RC-2-E.jpg) |
+| Picture | ![HEIMAN HM1RC-2-E](https://www.zigbee2mqtt.io/images/devices/HM1RC-2-E.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

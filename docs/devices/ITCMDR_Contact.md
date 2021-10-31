@@ -1,24 +1,32 @@
 ---
 title: "IT Commander ITCMDR_Contact control via MQTT"
-description: "Integrate your IT Commander ITCMDR_Contact via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your IT Commander ITCMDR_Contact via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-06-10T18:52:13Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ITCMDR_Contact.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # IT Commander ITCMDR_Contact
 
+|     |     |
+|-----|-----|
 | Model | ITCMDR_Contact  |
 | Vendor  | IT Commander  |
 | Description | Contact Sensor |
 | Exposes | contact, battery, voltage, linkquality |
-| Picture | ![IT Commander ITCMDR_Contact](../images/devices/ITCMDR_Contact.jpg) |
+| Picture | ![IT Commander ITCMDR_Contact](https://www.zigbee2mqtt.io/images/devices/ITCMDR_Contact.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

@@ -1,24 +1,32 @@
 ---
 title: "Swann SWO-WDS1PA control via MQTT"
-description: "Integrate your Swann SWO-WDS1PA via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Swann SWO-WDS1PA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SWO-WDS1PA.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Swann SWO-WDS1PA
 
+|     |     |
+|-----|-----|
 | Model | SWO-WDS1PA  |
 | Vendor  | Swann  |
 | Description | Window/door sensor |
 | Exposes | contact, battery_low, tamper, linkquality |
-| Picture | ![Swann SWO-WDS1PA](../images/devices/SWO-WDS1PA.jpg) |
+| Picture | ![Swann SWO-WDS1PA](https://www.zigbee2mqtt.io/images/devices/SWO-WDS1PA.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

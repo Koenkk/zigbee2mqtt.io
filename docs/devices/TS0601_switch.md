@@ -1,25 +1,33 @@
 ---
 title: "TuYa TS0601_switch control via MQTT"
-description: "Integrate your TuYa TS0601_switch via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS0601_switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-09-30T20:52:56Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0601_switch.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS0601_switch
 
+|     |     |
+|-----|-----|
 | Model | TS0601_switch  |
 | Vendor  | TuYa  |
 | Description | 1, 2, 3 or 4 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS0601_switch](../images/devices/TS0601_switch.jpg) |
+| Picture | ![TuYa TS0601_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_switch.jpg) |
 | White-label | Norklmes MKS-CM-W5, Somgoms ZSQB-SMB-ZB, Moes WS-EUB1-ZG, AVATTO ZGB-WS-EU |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

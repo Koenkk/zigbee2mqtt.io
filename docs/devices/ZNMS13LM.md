@@ -1,27 +1,35 @@
 ---
 title: "Xiaomi ZNMS13LM control via MQTT"
-description: "Integrate your Xiaomi ZNMS13LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi ZNMS13LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-09-08T21:16:00Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZNMS13LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi ZNMS13LM
 
+|     |     |
+|-----|-----|
 | Model | ZNMS13LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara S2 lock pro |
 | Exposes | state, reverse, action, linkquality |
-| Picture | ![Xiaomi ZNMS13LM](../images/devices/ZNMS13LM.jpg) |
+| Picture | ![Xiaomi ZNMS13LM](https://www.zigbee2mqtt.io/images/devices/ZNMS13LM.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

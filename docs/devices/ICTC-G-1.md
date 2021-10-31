@@ -1,20 +1,28 @@
 ---
 title: "IKEA ICTC-G-1 control via MQTT"
-description: "Integrate your IKEA ICTC-G-1 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your IKEA ICTC-G-1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ICTC-G-1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # IKEA ICTC-G-1
 
+|     |     |
+|-----|-----|
 | Model | ICTC-G-1  |
 | Vendor  | IKEA  |
 | Description | TRADFRI wireless dimmer |
 | Exposes | battery, action, linkquality |
-| Picture | ![IKEA ICTC-G-1](../images/devices/ICTC-G-1.jpg) |
+| Picture | ![IKEA ICTC-G-1](https://www.zigbee2mqtt.io/images/devices/ICTC-G-1.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -73,7 +81,7 @@ To find optimal "smoothness" play with debounce time or if you need all unique r
 {% endraw %}
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
@@ -87,10 +95,10 @@ simulated_brightness:
   delta: 20 # delta per interval, default = 20
   interval: 200 # interval in milliseconds, default = 200
 ```
-
+<!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

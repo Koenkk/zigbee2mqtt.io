@@ -1,24 +1,32 @@
 ---
 title: "AXIS GR-ZB01-W control via MQTT"
-description: "Integrate your AXIS GR-ZB01-W via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your AXIS GR-ZB01-W via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GR-ZB01-W.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # AXIS GR-ZB01-W
 
+|     |     |
+|-----|-----|
 | Model | GR-ZB01-W  |
 | Vendor  | AXIS  |
 | Description | Gear window shade motor |
 | Exposes | cover (state, position), battery, linkquality |
-| Picture | ![AXIS GR-ZB01-W](../images/devices/GR-ZB01-W.jpg) |
+| Picture | ![AXIS GR-ZB01-W](https://www.zigbee2mqtt.io/images/devices/GR-ZB01-W.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
 
@@ -26,7 +34,7 @@ description: "Integrate your AXIS GR-ZB01-W via Zigbee2MQTT with whatever smart 
 ### AC Power
 If you are using the AC wall adapter, the battery level will always stay within the range of 25-35% as it is continually drawing power from the outlet.
 The battery level indicator is only relevant to if you are using the solar panel.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

@@ -1,20 +1,28 @@
 ---
 title: "Xiaomi WSDCGQ01LM control via MQTT"
-description: "Integrate your Xiaomi WSDCGQ01LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi WSDCGQ01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/WSDCGQ01LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi WSDCGQ01LM
 
+|     |     |
+|-----|-----|
 | Model | WSDCGQ01LM  |
 | Vendor  | Xiaomi  |
 | Description | MiJia temperature & humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
-| Picture | ![Xiaomi WSDCGQ01LM](../images/devices/WSDCGQ01LM.jpg) |
+| Picture | ![Xiaomi WSDCGQ01LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ01LM.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -32,7 +40,7 @@ Most of the times this happens because of the following reasons:
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -45,7 +53,7 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 * `humidity_precision`: Controls the precision of `humidity` values, e.g. `0`, `1` or `2`; default `2`.
 To control the precision based on the humidity value set it to e.g. `{80: 0, 10: 1}`,
 when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1. Precision will take into affect with next report of device.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

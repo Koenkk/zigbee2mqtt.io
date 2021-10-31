@@ -1,20 +1,28 @@
 ---
 title: "Xiaomi JTYJ-GD-01LM/BW control via MQTT"
-description: "Integrate your Xiaomi JTYJ-GD-01LM/BW via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi JTYJ-GD-01LM/BW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/JTYJ-GD-01LM_BW.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi JTYJ-GD-01LM/BW
 
+|     |     |
+|-----|-----|
 | Model | JTYJ-GD-01LM/BW  |
 | Vendor  | Xiaomi  |
 | Description | MiJia Honeywell smoke detector |
 | Exposes | smoke, battery_low, tamper, battery, sensitivity, smoke_density, selftest, voltage, test, linkquality |
-| Picture | ![Xiaomi JTYJ-GD-01LM/BW](../images/devices/JTYJ-GD-01LM-BW.jpg) |
+| Picture | ![Xiaomi JTYJ-GD-01LM/BW](https://www.zigbee2mqtt.io/images/devices/JTYJ-GD-01LM-BW.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -33,7 +41,7 @@ values: `low`, `medium`,  `high`.
 A self-test can be trigged by publishing to `zigbee2mqtt/FRIENDLY_NAME/set`
 `{"selftest": ""}`.
 If the selftest is executed successfully you will hear the device beep in 30 seconds.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

@@ -1,20 +1,28 @@
 ---
 title: "DIYRuZ DIYRuZ_FreePad control via MQTT"
-description: "Integrate your DIYRuZ DIYRuZ_FreePad via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your DIYRuZ DIYRuZ_FreePad via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-05-19T20:48:40Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DIYRuZ_FreePad.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # DIYRuZ DIYRuZ_FreePad
 
+|     |     |
+|-----|-----|
 | Model | DIYRuZ_FreePad  |
 | Vendor  | DIYRuZ  |
 | Description | [DiY 8/12/20 button keypad](http://modkam.ru/?p=1114) |
 | Exposes | battery, action, switch_type, switch_actions, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_FreePad](../images/devices/DIYRuZ_FreePad.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_FreePad](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_FreePad.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -35,7 +43,7 @@ Open source firmware can be found here: [Github](https://github.com/diyruz/freep
 1. Bring you remote near to TL device
 2. Hold button (2) for 5 seconds
 TL functionality can work without connecting to network
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

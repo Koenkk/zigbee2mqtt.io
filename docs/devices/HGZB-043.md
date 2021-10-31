@@ -1,24 +1,32 @@
 ---
 title: "Nue / 3A HGZB-043 control via MQTT"
-description: "Integrate your Nue / 3A HGZB-043 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Nue / 3A HGZB-043 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HGZB-043.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Nue / 3A HGZB-043
 
+|     |     |
+|-----|-----|
 | Model | HGZB-043  |
 | Vendor  | Nue / 3A  |
 | Description | Smart light switch - 3 gang |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A HGZB-043](../images/devices/HGZB-043.jpg) |
+| Picture | ![Nue / 3A HGZB-043](https://www.zigbee2mqtt.io/images/devices/HGZB-043.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

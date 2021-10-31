@@ -1,20 +1,28 @@
 ---
 title: "Gledopto GL-B-007P control via MQTT"
-description: "Integrate your Gledopto GL-B-007P via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Gledopto GL-B-007P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-12-01T19:02:25Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GL-B-007P.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Gledopto GL-B-007P
 
+|     |     |
+|-----|-----|
 | Model | GL-B-007P  |
 | Vendor  | Gledopto  |
 | Description | Zigbee 6W E26/E27 Bulb RGB+CCT (pro) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-B-007P](../images/devices/GL-B-007P.jpg) |
+| Picture | ![Gledopto GL-B-007P](https://www.zigbee2mqtt.io/images/devices/GL-B-007P.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -25,7 +33,7 @@ description: "Integrate your Gledopto GL-B-007P via Zigbee2MQTT with whatever sm
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)
@@ -58,10 +66,10 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
         - in: 334
           out: 318
     ```
-
+<!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

@@ -1,24 +1,32 @@
 ---
 title: "Dawon DNS PM-C140-ZB control via MQTT"
-description: "Integrate your Dawon DNS PM-C140-ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Dawon DNS PM-C140-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-09-08T21:16:00Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PM-C140-ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Dawon DNS PM-C140-ZB
 
+|     |     |
+|-----|-----|
 | Model | PM-C140-ZB  |
 | Vendor  | Dawon DNS  |
 | Description | IOT remote control smart buried-type outlet |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![Dawon DNS PM-C140-ZB](../images/devices/PM-C140-ZB.jpg) |
+| Picture | ![Dawon DNS PM-C140-ZB](https://www.zigbee2mqtt.io/images/devices/PM-C140-ZB.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

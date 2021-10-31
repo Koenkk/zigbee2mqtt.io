@@ -1,24 +1,32 @@
 ---
 title: "Yale YRD426NRSC control via MQTT"
-description: "Integrate your Yale YRD426NRSC via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Yale YRD426NRSC via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YRD426NRSC.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Yale YRD426NRSC
 
+|     |     |
+|-----|-----|
 | Model | YRD426NRSC  |
 | Vendor  | Yale  |
 | Description | Assure lock |
 | Exposes | lock (state, lock_state), battery, pin_code, linkquality |
-| Picture | ![Yale YRD426NRSC](../images/devices/YRD426NRSC.jpg) |
+| Picture | ![Yale YRD426NRSC](https://www.zigbee2mqtt.io/images/devices/YRD426NRSC.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

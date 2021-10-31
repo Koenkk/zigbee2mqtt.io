@@ -1,24 +1,32 @@
 ---
 title: "LifeControl MCLH-07 control via MQTT"
-description: "Integrate your LifeControl MCLH-07 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LifeControl MCLH-07 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-04-29T17:11:59Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MCLH-07.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # LifeControl MCLH-07
 
+|     |     |
+|-----|-----|
 | Model | MCLH-07  |
 | Vendor  | LifeControl  |
 | Description | Water leak switch |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
-| Picture | ![LifeControl MCLH-07](../images/devices/MCLH-07.jpg) |
+| Picture | ![LifeControl MCLH-07](https://www.zigbee2mqtt.io/images/devices/MCLH-07.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

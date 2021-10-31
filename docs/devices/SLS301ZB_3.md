@@ -1,24 +1,32 @@
 ---
 title: "Feibit SLS301ZB_3 control via MQTT"
-description: "Integrate your Feibit SLS301ZB_3 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Feibit SLS301ZB_3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-04-08T17:49:06Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SLS301ZB_3.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Feibit SLS301ZB_3
 
+|     |     |
+|-----|-----|
 | Model | SLS301ZB_3  |
 | Vendor  | Feibit  |
 | Description | Smart light switch - 3 gang |
 | Exposes | switch (state), linkquality |
-| Picture | ![Feibit SLS301ZB_3](../images/devices/SLS301ZB_3.jpg) |
+| Picture | ![Feibit SLS301ZB_3](https://www.zigbee2mqtt.io/images/devices/SLS301ZB_3.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

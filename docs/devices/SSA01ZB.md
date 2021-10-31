@@ -1,24 +1,32 @@
 ---
 title: "Feibit SSA01ZB control via MQTT"
-description: "Integrate your Feibit SSA01ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Feibit SSA01ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-04-08T17:49:06Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SSA01ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Feibit SSA01ZB
 
+|     |     |
+|-----|-----|
 | Model | SSA01ZB  |
 | Vendor  | Feibit  |
 | Description | Smoke detector |
 | Exposes | smoke, battery_low, tamper, battery, linkquality |
-| Picture | ![Feibit SSA01ZB](../images/devices/SSA01ZB.jpg) |
+| Picture | ![Feibit SSA01ZB](https://www.zigbee2mqtt.io/images/devices/SSA01ZB.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

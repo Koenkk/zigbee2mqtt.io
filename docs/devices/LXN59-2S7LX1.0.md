@@ -1,25 +1,33 @@
 ---
 title: "Nue / 3A LXN59-2S7LX1.0 control via MQTT"
-description: "Integrate your Nue / 3A LXN59-2S7LX1.0 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Nue / 3A LXN59-2S7LX1.0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-07-20T23:08:11Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LXN59-2S7LX1.0.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Nue / 3A LXN59-2S7LX1.0
 
+|     |     |
+|-----|-----|
 | Model | LXN59-2S7LX1.0  |
 | Vendor  | Nue / 3A  |
 | Description | Smart light relay - 2 gang |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A LXN59-2S7LX1.0](../images/devices/LXN59-2S7LX1.0.jpg) |
+| Picture | ![Nue / 3A LXN59-2S7LX1.0](https://www.zigbee2mqtt.io/images/devices/LXN59-2S7LX1.0.jpg) |
 | White-label | Zemismart ZW-EU-02 |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

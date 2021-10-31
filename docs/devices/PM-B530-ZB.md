@@ -1,24 +1,32 @@
 ---
 title: "Dawon DNS PM-B530-ZB control via MQTT"
-description: "Integrate your Dawon DNS PM-B530-ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Dawon DNS PM-B530-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-01-14T19:34:25Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PM-B530-ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Dawon DNS PM-B530-ZB
 
+|     |     |
+|-----|-----|
 | Model | PM-B530-ZB  |
 | Vendor  | Dawon DNS  |
 | Description | IOT smart plug 16A |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![Dawon DNS PM-B530-ZB](../images/devices/PM-B530-ZB.jpg) |
+| Picture | ![Dawon DNS PM-B530-ZB](https://www.zigbee2mqtt.io/images/devices/PM-B530-ZB.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

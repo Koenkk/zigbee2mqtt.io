@@ -1,27 +1,35 @@
 ---
 title: "Custom devices (DiY) DNCKATSW003 control via MQTT"
-description: "Integrate your Custom devices (DiY) DNCKATSW003 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Custom devices (DiY) DNCKATSW003 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DNCKATSW003.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Custom devices (DiY) DNCKATSW003
 
+|     |     |
+|-----|-----|
 | Model | DNCKATSW003  |
 | Vendor  | Custom devices (DiY)  |
 | Description | [DNCKAT triple key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) |
 | Exposes | switch (state), action, linkquality |
-| Picture | ![Custom devices (DiY) DNCKATSW003](../images/devices/DNCKATSW003.jpg) |
+| Picture | ![Custom devices (DiY) DNCKATSW003](https://www.zigbee2mqtt.io/images/devices/DNCKATSW003.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

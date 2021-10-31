@@ -1,24 +1,32 @@
 ---
 title: "Xiaomi QBCZ11LM control via MQTT"
-description: "Integrate your Xiaomi QBCZ11LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi QBCZ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QBCZ11LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi QBCZ11LM
 
+|     |     |
+|-----|-----|
 | Model | QBCZ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara socket Zigbee |
 | Exposes | switch (state), power, energy, temperature, voltage, power_outage_memory, linkquality |
-| Picture | ![Xiaomi QBCZ11LM](../images/devices/QBCZ11LM.jpg) |
+| Picture | ![Xiaomi QBCZ11LM](https://www.zigbee2mqtt.io/images/devices/QBCZ11LM.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -32,10 +40,10 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 This option allows the device to restore the last on/off state when it's reconnected to power.
 To set this option publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"power_outage_memory": true}` (or `false`).
 Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
-
+<!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

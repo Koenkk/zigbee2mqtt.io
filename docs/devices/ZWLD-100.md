@@ -1,24 +1,32 @@
 ---
 title: "Trust ZWLD-100 control via MQTT"
-description: "Integrate your Trust ZWLD-100 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Trust ZWLD-100 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-11-09T18:37:38Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZWLD-100.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Trust ZWLD-100
 
+|     |     |
+|-----|-----|
 | Model | ZWLD-100  |
 | Vendor  | Trust  |
 | Description | Water leakage detector |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
-| Picture | ![Trust ZWLD-100](../images/devices/ZWLD-100.jpg) |
+| Picture | ![Trust ZWLD-100](https://www.zigbee2mqtt.io/images/devices/ZWLD-100.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

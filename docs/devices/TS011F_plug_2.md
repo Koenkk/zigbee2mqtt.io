@@ -1,23 +1,34 @@
 ---
 title: "TuYa TS011F_plug_2 control via MQTT"
-description: "Integrate your TuYa TS011F_plug_2 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS011F_plug_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-07-01T18:17:29Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS011F_plug_2.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS011F_plug_2
 
+|     |     |
+|-----|-----|
 | Model | TS011F_plug_2  |
 | Vendor  | TuYa  |
 | Description | Smart plug (without power monitoring) |
 | Exposes | switch (state), power_outage_memory, linkquality |
-| Picture | ![TuYa TS011F_plug_2](../images/devices/TS011F_plug_2.jpg) |
+| Picture | ![TuYa TS011F_plug_2](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_2.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-None
+
+### Pairing
+Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

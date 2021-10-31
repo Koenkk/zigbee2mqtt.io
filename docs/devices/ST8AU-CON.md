@@ -1,20 +1,28 @@
 ---
 title: "OSRAM ST8AU-CON control via MQTT"
-description: "Integrate your OSRAM ST8AU-CON via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your OSRAM ST8AU-CON via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ST8AU-CON.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # OSRAM ST8AU-CON
 
+|     |     |
+|-----|-----|
 | Model | ST8AU-CON  |
 | Vendor  | OSRAM  |
 | Description | OSRAM SubstiTUBE T8 Advanced UO Connected |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![OSRAM ST8AU-CON](../images/devices/ST8AU-CON.jpg) |
+| Picture | ![OSRAM ST8AU-CON](https://www.zigbee2mqtt.io/images/devices/ST8AU-CON.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -44,15 +52,15 @@ is manually switched off then on. Lights will remember their respective attribut
 **INFO**: Value is true, false (boolean)
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
-
+<!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

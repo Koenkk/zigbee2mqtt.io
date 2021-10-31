@@ -1,24 +1,32 @@
 ---
 title: "Yale YDD-D4F0-TSDB control via MQTT"
-description: "Integrate your Yale YDD-D4F0-TSDB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Yale YDD-D4F0-TSDB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-01T17:18:02Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/YDD-D4F0-TSDB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Yale YDD-D4F0-TSDB
 
+|     |     |
+|-----|-----|
 | Model | YDD-D4F0-TSDB  |
 | Vendor  | Yale  |
 | Description | Lockwood T-Lock |
 | Exposes | lock (state, lock_state), battery, pin_code, linkquality |
-| Picture | ![Yale YDD-D4F0-TSDB](../images/devices/YDD-D4F0-TSDB.jpg) |
+| Picture | ![Yale YDD-D4F0-TSDB](https://www.zigbee2mqtt.io/images/devices/YDD-D4F0-TSDB.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

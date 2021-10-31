@@ -1,20 +1,28 @@
 ---
 title: "HEIMAN HS1SA control via MQTT"
-description: "Integrate your HEIMAN HS1SA via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HS1SA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-11-01T12:47:02Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1SA.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HS1SA
 
+|     |     |
+|-----|-----|
 | Model | HS1SA  |
 | Vendor  | HEIMAN  |
 | Description | Smoke detector |
 | Exposes | smoke, battery_low, battery, linkquality |
-| Picture | ![HEIMAN HS1SA](../images/devices/HS1SA.jpg) |
+| Picture | ![HEIMAN HS1SA](https://www.zigbee2mqtt.io/images/devices/HS1SA.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -39,7 +47,7 @@ Unsupported:
 - HS1SA-Z : Z-wave
 
 The product code should end in *-M* for the Zigbee version. The label inside the battery compartment should also show the Zigbee logo.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

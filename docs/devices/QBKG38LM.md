@@ -1,24 +1,32 @@
 ---
 title: "Xiaomi QBKG38LM control via MQTT"
-description: "Integrate your Xiaomi QBKG38LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi QBKG38LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QBKG38LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi QBKG38LM
 
+|     |     |
+|-----|-----|
 | Model | QBKG38LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara E1 1 gang switch (without neutral) |
-| Exposes | switch (state), power_outage_memory, action, operation_mode, linkquality |
-| Picture | ![Xiaomi QBKG38LM](../images/devices/QBKG38LM.jpg) |
+| Exposes | switch (state), power_outage_memory, action, operation_mode, mode_switch, linkquality |
+| Picture | ![Xiaomi QBKG38LM](https://www.zigbee2mqtt.io/images/devices/QBKG38LM.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 
@@ -46,6 +54,13 @@ Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
+
+### Mode_switch (enum)
+Anti flicker mode can be used to solve blinking issues of some lights.Quick mode makes the device respond faster..
+Value can be found in the published state on the `mode_switch` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode_switch": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_switch": NEW_VALUE}`.
+The possible values are: `anti_flicker_mode`, `quick_mode`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

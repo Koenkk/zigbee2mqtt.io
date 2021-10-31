@@ -1,24 +1,32 @@
 ---
 title: "HEIMAN HS1CA-M control via MQTT"
-description: "Integrate your HEIMAN HS1CA-M via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HS1CA-M via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1CA-M.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HS1CA-M
 
+|     |     |
+|-----|-----|
 | Model | HS1CA-M  |
 | Vendor  | HEIMAN  |
 | Description | Smart carbon monoxide sensor |
 | Exposes | carbon_monoxide, battery_low, battery, linkquality |
-| Picture | ![HEIMAN HS1CA-M](../images/devices/HS1CA-M.jpg) |
+| Picture | ![HEIMAN HS1CA-M](https://www.zigbee2mqtt.io/images/devices/HS1CA-M.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

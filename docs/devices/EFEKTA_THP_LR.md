@@ -1,20 +1,28 @@
 ---
 title: "Custom devices (DiY) EFEKTA_THP_LR control via MQTT"
-description: "Integrate your Custom devices (DiY) EFEKTA_THP_LR via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Custom devices (DiY) EFEKTA_THP_LR via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-09-16T00:31:40Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/EFEKTA_THP_LR.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Custom devices (DiY) EFEKTA_THP_LR
 
+|     |     |
+|-----|-----|
 | Model | EFEKTA_THP_LR  |
 | Vendor  | Custom devices (DiY)  |
 | Description | DIY outdoor long-range sensor for temperature, humidity and atmospheric pressure |
 | Exposes | battery, temperature, humidity, pressure, linkquality |
-| Picture | ![Custom devices (DiY) EFEKTA_THP_LR](../images/devices/EFEKTA_THP_LR.jpg) |
+| Picture | ![Custom devices (DiY) EFEKTA_THP_LR](https://www.zigbee2mqtt.io/images/devices/EFEKTA_THP_LR.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -22,7 +30,7 @@ description: "Integrate your Custom devices (DiY) EFEKTA_THP_LR via Zigbee2MQTT 
 Instructions on how to build this device can be found [here](https://github.com/smartboxchannel/Outdoor-long-range-sensor-for-temperature-humidity-and-atmospheric-pressure-Zigbee)
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -42,7 +50,7 @@ To control the precision based on the pressure value set it to e.g. `{1000: 0, 1
 when pressure >= 1000 precision will be 0, when pressure >= 100 precision will be 1. Precision will take into affect with next report of device.
 * `pressure_calibration`: Allows to manually calibrate pressure values,
 e.g. `1` would add 1 to the pressure reported by the device; default `0`. Calibration will take into affect with next report of device.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

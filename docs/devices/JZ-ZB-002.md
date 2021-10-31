@@ -1,26 +1,30 @@
 ---
 title: "LELLKI JZ-ZB-002 control via MQTT"
-description: "Integrate your LELLKI JZ-ZB-002 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LELLKI JZ-ZB-002 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-08-01T20:41:55Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/JZ-ZB-002.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # LELLKI JZ-ZB-002
 
+|     |     |
+|-----|-----|
 | Model | JZ-ZB-002  |
 | Vendor  | LELLKI  |
 | Description | 2 gang touch switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![LELLKI JZ-ZB-002](../images/devices/JZ-ZB-002.jpg) |
+| Picture | ![LELLKI JZ-ZB-002](https://www.zigbee2mqtt.io/images/devices/JZ-ZB-002.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-
-
-## Pairing
-Push and hold left button for about 10-15 seconds until it will start blinking.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

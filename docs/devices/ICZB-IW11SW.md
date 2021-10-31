@@ -1,24 +1,32 @@
 ---
 title: "iCasa ICZB-IW11SW control via MQTT"
-description: "Integrate your iCasa ICZB-IW11SW via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your iCasa ICZB-IW11SW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-11-09T18:37:38Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ICZB-IW11SW.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # iCasa ICZB-IW11SW
 
+|     |     |
+|-----|-----|
 | Model | ICZB-IW11SW  |
 | Vendor  | iCasa  |
 | Description | Zigbee 3.0 AC switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![iCasa ICZB-IW11SW](../images/devices/ICZB-IW11SW.jpg) |
+| Picture | ![iCasa ICZB-IW11SW](https://www.zigbee2mqtt.io/images/devices/ICZB-IW11SW.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

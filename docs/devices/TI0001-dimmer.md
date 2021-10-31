@@ -1,31 +1,39 @@
 ---
 title: "Livolo TI0001-dimmer control via MQTT"
-description: "Integrate your Livolo TI0001-dimmer via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Livolo TI0001-dimmer via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-02-05T19:15:16Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TI0001-dimmer.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Livolo TI0001-dimmer
 
+|     |     |
+|-----|-----|
 | Model | TI0001-dimmer  |
 | Vendor  | Livolo  |
 | Description | Zigbee dimmer |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![Livolo TI0001-dimmer](../images/devices/TI0001-dimmer.jpg) |
+| Picture | ![Livolo TI0001-dimmer](https://www.zigbee2mqtt.io/images/devices/TI0001-dimmer.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
 After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend
-of Zigbee2MQTT or using [MQTT message](../information/mqtt_topics_and_message_structure.html#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
+of Zigbee2MQTT or using [MQTT message](../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestdeviceconfigure) right after pairing.
 In case of problems it's recommended to remove device and than retry pairing and re-configuring device.
 
 ### Important
 These devices can only be used on channel 26.
 These devices are locked to the manufacturer's network key (ext_pan_id).
-Your configuration file [data/configuration.yaml](../information/configuration) must contain the following:
+Your configuration file [data/configuration.yaml](../guide/configuration/) must contain the following:
 
 ```yaml
 advanced:
@@ -43,12 +51,12 @@ advanced:
 ```
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

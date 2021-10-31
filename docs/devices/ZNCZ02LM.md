@@ -1,20 +1,28 @@
 ---
 title: "Xiaomi ZNCZ02LM control via MQTT"
-description: "Integrate your Xiaomi ZNCZ02LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi ZNCZ02LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZNCZ02LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi ZNCZ02LM
 
+|     |     |
+|-----|-----|
 | Model | ZNCZ02LM  |
 | Vendor  | Xiaomi  |
 | Description | Mi power plug ZigBee |
 | Exposes | switch (state), power, energy, temperature, power_outage_memory, linkquality |
-| Picture | ![Xiaomi ZNCZ02LM](../images/devices/ZNCZ02LM.jpg) |
+| Picture | ![Xiaomi ZNCZ02LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ02LM.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -26,7 +34,7 @@ You may have to unpair the switch from an existing coordinator before the pairin
 If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -44,10 +52,10 @@ Now toggle the plug/switch once with the button on it, from now on it will resto
 
 ### Voltage
 Some versions of the plug provide voltage. This depends on the firmware on the device. Confirmed working are the ones with `dateCode` `02-28-2017` (can be checked in `data/database.db`). Note that Xiaomi doesn't provide firmware files, so the software cannot be downgraded/upgraded.
-
+<!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

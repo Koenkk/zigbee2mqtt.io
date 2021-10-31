@@ -1,25 +1,33 @@
 ---
 title: "TuYa TS0207_water_leak_detector control via MQTT"
-description: "Integrate your TuYa TS0207_water_leak_detector via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS0207_water_leak_detector via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-01T17:18:02Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0207_water_leak_detector.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS0207_water_leak_detector
 
+|     |     |
+|-----|-----|
 | Model | TS0207_water_leak_detector  |
 | Vendor  | TuYa  |
 | Description | Water leak detector |
 | Exposes | water_leak, battery_low, battery, linkquality |
-| Picture | ![TuYa TS0207_water_leak_detector](../images/devices/TS0207_water_leak_detector.jpg) |
+| Picture | ![TuYa TS0207_water_leak_detector](https://www.zigbee2mqtt.io/images/devices/TS0207_water_leak_detector.jpg) |
 | White-label | CR Smart Home TS0207 |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

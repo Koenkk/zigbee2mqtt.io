@@ -1,24 +1,32 @@
 ---
 title: "Xiaomi SSM-U02 control via MQTT"
-description: "Integrate your Xiaomi SSM-U02 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi SSM-U02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-12-30T11:31:00Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SSM-U02.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi SSM-U02
 
+|     |     |
+|-----|-----|
 | Model | SSM-U02  |
 | Vendor  | Xiaomi  |
 | Description | Aqara single switch module T1 (without neutral). Doesn't work as a router and doesn't support power meter |
 | Exposes | switch (state), power_outage_memory, switch_type, linkquality |
-| Picture | ![Xiaomi SSM-U02](../images/devices/SSM-U02.jpg) |
+| Picture | ![Xiaomi SSM-U02](https://www.zigbee2mqtt.io/images/devices/SSM-U02.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

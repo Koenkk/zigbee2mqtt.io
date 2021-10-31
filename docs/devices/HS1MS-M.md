@@ -1,24 +1,32 @@
 ---
 title: "HEIMAN HS1MS-M control via MQTT"
-description: "Integrate your HEIMAN HS1MS-M via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HS1MS-M via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-05-30T19:17:03Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1MS-M.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HS1MS-M
 
+|     |     |
+|-----|-----|
 | Model | HS1MS-M  |
 | Vendor  | HEIMAN  |
 | Description | Smart motion sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HS1MS-M](../images/devices/HS1MS-M.jpg) |
+| Picture | ![HEIMAN HS1MS-M](https://www.zigbee2mqtt.io/images/devices/HS1MS-M.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

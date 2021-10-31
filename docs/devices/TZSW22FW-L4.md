@@ -1,24 +1,32 @@
 ---
 title: "Feibit TZSW22FW-L4 control via MQTT"
-description: "Integrate your Feibit TZSW22FW-L4 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Feibit TZSW22FW-L4 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-12-15T17:27:48Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TZSW22FW-L4.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Feibit TZSW22FW-L4
 
+|     |     |
+|-----|-----|
 | Model | TZSW22FW-L4  |
 | Vendor  | Feibit  |
 | Description | Smart light switch - 2 gang |
 | Exposes | switch (state), linkquality |
-| Picture | ![Feibit TZSW22FW-L4](../images/devices/TZSW22FW-L4.jpg) |
+| Picture | ![Feibit TZSW22FW-L4](https://www.zigbee2mqtt.io/images/devices/TZSW22FW-L4.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

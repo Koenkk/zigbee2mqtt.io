@@ -1,20 +1,28 @@
 ---
 title: "Gledopto GL-C-006P control via MQTT"
-description: "Integrate your Gledopto GL-C-006P via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Gledopto GL-C-006P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-12-30T11:31:00Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GL-C-006P.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Gledopto GL-C-006P
 
+|     |     |
+|-----|-----|
 | Model | GL-C-006P  |
 | Vendor  | Gledopto  |
 | Description | Zigbee LED Controller WW/CW (pro) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Gledopto GL-C-006P](../images/devices/GL-C-006P.jpg) |
+| Picture | ![Gledopto GL-C-006P](https://www.zigbee2mqtt.io/images/devices/GL-C-006P.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -25,7 +33,7 @@ description: "Integrate your Gledopto GL-C-006P via Zigbee2MQTT with whatever sm
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)
@@ -34,10 +42,10 @@ the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
-
+<!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

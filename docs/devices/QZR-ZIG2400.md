@@ -1,24 +1,32 @@
 ---
 title: "Qmotion QZR-ZIG2400 control via MQTT"
-description: "Integrate your Qmotion QZR-ZIG2400 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Qmotion QZR-ZIG2400 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-09-30T20:52:56Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/QZR-ZIG2400.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Qmotion QZR-ZIG2400
 
+|     |     |
+|-----|-----|
 | Model | QZR-ZIG2400  |
 | Vendor  | Qmotion  |
 | Description | 5 channel remote |
 | Exposes | action, position, linkquality |
-| Picture | ![Qmotion QZR-ZIG2400](../images/devices/QZR-ZIG2400.jpg) |
+| Picture | ![Qmotion QZR-ZIG2400](https://www.zigbee2mqtt.io/images/devices/QZR-ZIG2400.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

@@ -1,27 +1,35 @@
 ---
 title: "SmartThings STSS-PRES-001 control via MQTT"
-description: "Integrate your SmartThings STSS-PRES-001 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your SmartThings STSS-PRES-001 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-09-01T19:56:51Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/STSS-PRES-001.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # SmartThings STSS-PRES-001
 
+|     |     |
+|-----|-----|
 | Model | STSS-PRES-001  |
 | Vendor  | SmartThings  |
 | Description | Presence sensor |
 | Exposes | battery, presence, linkquality |
-| Picture | ![SmartThings STSS-PRES-001](../images/devices/STSS-PRES-001.jpg) |
+| Picture | ![SmartThings STSS-PRES-001](https://www.zigbee2mqtt.io/images/devices/STSS-PRES-001.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `presence_timeout`: Timeout (in seconds) after which `presence: false` will be send when the device has not checked-in. By default 100 seconds, don't go lower then 30 seconds.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes
