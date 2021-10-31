@@ -1,24 +1,32 @@
 ---
 title: "Aurora Lighting AU-A1ZBR1GW control via MQTT"
-description: "Integrate your Aurora Lighting AU-A1ZBR1GW via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Aurora Lighting AU-A1ZBR1GW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-01-08T23:43:25Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/AU-A1ZBR1GW.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Aurora Lighting AU-A1ZBR1GW
 
+|     |     |
+|-----|-----|
 | Model | AU-A1ZBR1GW  |
 | Vendor  | Aurora Lighting  |
 | Description | AOne one gang wireless battery rotary dimmer |
 | Exposes | battery, action, linkquality |
-| Picture | ![Aurora Lighting AU-A1ZBR1GW](../images/devices/AU-A1ZBR1GW.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZBR1GW](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBR1GW.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `simulated_brightness`: Set to `true` to simulate a `brightness` value (default: `false`).
 If this device provides a `brightness_move_up` or `brightness_move_down` action it is possible to specify the update
@@ -29,7 +37,7 @@ simulated_brightness:
   delta: 20 # delta per interval, default = 20
   interval: 200 # interval in milliseconds, default = 200
 ```
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

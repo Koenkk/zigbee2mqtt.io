@@ -1,20 +1,28 @@
 ---
 title: "Xiaomi MCCGQ12LM control via MQTT"
-description: "Integrate your Xiaomi MCCGQ12LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi MCCGQ12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-08-17T18:57:09Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/MCCGQ12LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi MCCGQ12LM
 
+|     |     |
+|-----|-----|
 | Model | MCCGQ12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 door & window contact sensor |
 | Exposes | contact, battery, voltage, linkquality |
-| Picture | ![Xiaomi MCCGQ12LM](../images/devices/MCCGQ12LM.jpg) |
+| Picture | ![Xiaomi MCCGQ12LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ12LM.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -35,7 +43,7 @@ E.g. (devices.yaml)
     debounce: 1
 ```
 {% endraw %}
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

@@ -1,20 +1,28 @@
 ---
 title: "Gledopto GL-C-008-2ID control via MQTT"
-description: "Integrate your Gledopto GL-C-008-2ID via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Gledopto GL-C-008-2ID via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-05-19T20:48:40Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GL-C-008-2ID.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Gledopto GL-C-008-2ID
 
+|     |     |
+|-----|-----|
 | Model | GL-C-008-2ID  |
 | Vendor  | Gledopto  |
 | Description | Zigbee LED Controller RGB+CCT (2 ID) |
 | Exposes | light (state, brightness, color_xy), light (state, brightness, color_temp, color_temp_startup), linkquality |
-| Picture | ![Gledopto GL-C-008-2ID](../images/devices/GL-C-008-2ID.jpg) |
+| Picture | ![Gledopto GL-C-008-2ID](https://www.zigbee2mqtt.io/images/devices/GL-C-008-2ID.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -26,10 +34,10 @@ description: "Integrate your Gledopto GL-C-008-2ID via Zigbee2MQTT with whatever
 
 
 ### 2ID handling
-This device exposes the two specific endpoints `rgb` and `cct`. The command topics are `zigbee2mqtt/<FRIENDLY_NAME>/rgb/set`, and `zigbee2mqtt/<FRIENDLY_NAME>/cct/set`. Both [specific endpoints can be added to a group](../information/groups.md#adding-a-specific-endpoint). These endpoints are `<FRIENDLY_NAME>/rgb`, and `<FRIENDLY_NAME>/cct`.
+This device exposes the two specific endpoints `rgb` and `cct`. The command topics are `zigbee2mqtt/<FRIENDLY_NAME>/rgb/set`, and `zigbee2mqtt/<FRIENDLY_NAME>/cct/set`. Both [specific endpoints can be added to a group](../guide/usage/groups.md#adding-a-specific-endpoint). These endpoints are `<FRIENDLY_NAME>/rgb`, and `<FRIENDLY_NAME>/cct`.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)
@@ -62,7 +70,7 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
         - in: 334
           out: 318
     ```
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

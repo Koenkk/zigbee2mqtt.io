@@ -1,27 +1,37 @@
 ---
 title: "Xiaomi SP-EUC01 control via MQTT"
-description: "Integrate your Xiaomi SP-EUC01 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi SP-EUC01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-12-15T17:27:48Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SP-EUC01.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi SP-EUC01
 
+|     |     |
+|-----|-----|
 | Model | SP-EUC01  |
 | Vendor  | Xiaomi  |
 | Description | Aqara EU smart plug |
 | Exposes | switch (state), power, energy, device_temperature, linkquality |
-| Picture | ![Xiaomi SP-EUC01](../images/devices/SP-EUC01.jpg) |
+| Picture | ![Xiaomi SP-EUC01](https://www.zigbee2mqtt.io/images/devices/SP-EUC01.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+
 
 ### Pairing
 Press and hold the button on the device for +- 5 seconds, until the blue light starts blinking.
+<!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

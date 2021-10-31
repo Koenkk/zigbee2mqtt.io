@@ -1,24 +1,32 @@
 ---
 title: "Develco AQSZB-110 control via MQTT"
-description: "Integrate your Develco AQSZB-110 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Develco AQSZB-110 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-05-30T19:17:03Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/AQSZB-110.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Develco AQSZB-110
 
+|     |     |
+|-----|-----|
 | Model | AQSZB-110  |
 | Vendor  | Develco  |
 | Description | Air quality sensor |
 | Exposes | voc, temperature, humidity, battery, battery_low, air_quality, linkquality |
-| Picture | ![Develco AQSZB-110](../images/devices/AQSZB-110.jpg) |
+| Picture | ![Develco AQSZB-110](https://www.zigbee2mqtt.io/images/devices/AQSZB-110.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -31,7 +39,7 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 * `humidity_precision`: Controls the precision of `humidity` values, e.g. `0`, `1` or `2`; default `2`.
 To control the precision based on the humidity value set it to e.g. `{80: 0, 10: 1}`,
 when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1. Precision will take into affect with next report of device.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

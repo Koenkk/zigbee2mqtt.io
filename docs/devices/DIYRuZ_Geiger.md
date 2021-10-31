@@ -1,24 +1,32 @@
 ---
 title: "DIYRuZ DIYRuZ_Geiger control via MQTT"
-description: "Integrate your DIYRuZ DIYRuZ_Geiger via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your DIYRuZ DIYRuZ_Geiger via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-06-10T16:45:59Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DIYRuZ_Geiger.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # DIYRuZ DIYRuZ_Geiger
 
+|     |     |
+|-----|-----|
 | Model | DIYRuZ_Geiger  |
 | Vendor  | DIYRuZ  |
 | Description | [DiY Geiger counter](https://modkam.ru/?p=1591) |
 | Exposes | action, radioactive_events_per_minute, radiation_dose_per_hour, led_feedback, buzzer_feedback, alert_threshold, sensors_type, sensors_count, sensitivity, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_Geiger](../images/devices/DIYRuZ_Geiger.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_Geiger](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_Geiger.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

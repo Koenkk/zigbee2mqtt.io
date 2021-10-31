@@ -1,27 +1,35 @@
 ---
 title: "Stelpro SMT402AD control via MQTT"
-description: "Integrate your Stelpro SMT402AD via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Stelpro SMT402AD via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-04-29T17:11:59Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SMT402AD.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Stelpro SMT402AD
 
+|     |     |
+|-----|-----|
 | Model | SMT402AD  |
 | Vendor  | Stelpro  |
 | Description | Maestro, line-voltage thermostat |
 | Exposes | local_temperature, keypad_lockout, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
-| Picture | ![Stelpro SMT402AD](../images/devices/SMT402AD.jpg) |
+| Picture | ![Stelpro SMT402AD](https://www.zigbee2mqtt.io/images/devices/SMT402AD.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

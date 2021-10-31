@@ -1,24 +1,32 @@
 ---
 title: "Feibit SFS01ZB control via MQTT"
-description: "Integrate your Feibit SFS01ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Feibit SFS01ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-04-08T17:49:06Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SFS01ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Feibit SFS01ZB
 
+|     |     |
+|-----|-----|
 | Model | SFS01ZB  |
 | Vendor  | Feibit  |
 | Description | Power plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![Feibit SFS01ZB](../images/devices/SFS01ZB.jpg) |
+| Picture | ![Feibit SFS01ZB](https://www.zigbee2mqtt.io/images/devices/SFS01ZB.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

@@ -1,20 +1,28 @@
 ---
 title: "Xiaomi LLKZMK11LM control via MQTT"
-description: "Integrate your Xiaomi LLKZMK11LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi LLKZMK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LLKZMK11LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi LLKZMK11LM
 
+|     |     |
+|-----|-----|
 | Model | LLKZMK11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara wireless relay controller |
 | Exposes | power, energy, temperature, voltage, switch (state), interlock, linkquality |
-| Picture | ![Xiaomi LLKZMK11LM](../images/devices/LLKZMK11LM.jpg) |
+| Picture | ![Xiaomi LLKZMK11LM](https://www.zigbee2mqtt.io/images/devices/LLKZMK11LM.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -22,7 +30,7 @@ description: "Integrate your Xiaomi LLKZMK11LM via Zigbee2MQTT with whatever sma
 This option allows to inter connect the relays which will make sure that only one relay is on at a time. To do this publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"interlock": true}` or `{"interlock": false}`. By default this option is `false`.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -30,7 +38,7 @@ To control the precision based on the temperature value set it to e.g. `{30: 0, 
 when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1. Precision will take into affect with next report of device.
 * `temperature_calibration`: Allows to manually calibrate temperature values,
 e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

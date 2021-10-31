@@ -1,24 +1,32 @@
 ---
 title: "Xiaomi DLKZMK11LM control via MQTT"
-description: "Integrate your Xiaomi DLKZMK11LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi DLKZMK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-01T17:18:02Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DLKZMK11LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi DLKZMK11LM
 
+|     |     |
+|-----|-----|
 | Model | DLKZMK11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara single switch module T1 (with neutral) |
 | Exposes | switch (state), energy, power, device_temperature, power_outage_memory, switch_type, linkquality |
-| Picture | ![Xiaomi DLKZMK11LM](../images/devices/DLKZMK11LM.jpg) |
+| Picture | ![Xiaomi DLKZMK11LM](https://www.zigbee2mqtt.io/images/devices/DLKZMK11LM.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

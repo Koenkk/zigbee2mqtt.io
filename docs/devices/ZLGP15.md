@@ -1,20 +1,28 @@
 ---
 title: "Legrand ZLGP15 control via MQTT"
-description: "Integrate your Legrand ZLGP15 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Legrand ZLGP15 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-09-02T18:14:38Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZLGP15.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Legrand ZLGP15
 
+|     |     |
+|-----|-----|
 | Model | ZLGP15  |
 | Vendor  | Legrand  |
 | Description | Wireless and batteryless 4 scenes control |
 | Exposes | action, linkquality |
-| Picture | ![Legrand ZLGP15](../images/devices/ZLGP15.jpg) |
+| Picture | ![Legrand ZLGP15](https://www.zigbee2mqtt.io/images/devices/ZLGP15.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -29,7 +37,7 @@ Green Power devices don't support binding and are not included in network scans.
 To pair this device on channel 11, hold the configuration button (on the back of the device) and press any of the 4 buttons.
 
 This device can work on any channel, not only 11. For this, please refer to the [Legrand ZLGP15 manual chapter 6.2](https://www.admin.legrandoc.com/files/documents/S000113321EN-00.pdf).
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

@@ -1,20 +1,28 @@
 ---
 title: "ORVIBO SM10ZW control via MQTT"
-description: "Integrate your ORVIBO SM10ZW via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your ORVIBO SM10ZW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-03-16T20:41:09Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SM10ZW.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # ORVIBO SM10ZW
 
+|     |     |
+|-----|-----|
 | Model | SM10ZW  |
 | Vendor  | ORVIBO  |
 | Description | Door or window contact switch |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
-| Picture | ![ORVIBO SM10ZW](../images/devices/SM10ZW.jpg) |
+| Picture | ![ORVIBO SM10ZW](https://www.zigbee2mqtt.io/images/devices/SM10ZW.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -22,7 +30,7 @@ description: "Integrate your ORVIBO SM10ZW via Zigbee2MQTT with whatever smart h
 Interview fails for `modelId: 75a4bfe8ef9c4350830a25d13e3ab068` because
 `ssIasZone:iasCieAddr` can not be read or written, all messages go to the coordinator
 even without proper enrolment. Device correctly reports open or closed status.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

@@ -1,20 +1,28 @@
 ---
 title: "Smartenit ZBHT-1 control via MQTT"
-description: "Integrate your Smartenit ZBHT-1 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Smartenit ZBHT-1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-05-11T17:09:57Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZBHT-1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Smartenit ZBHT-1
 
+|     |     |
+|-----|-----|
 | Model | ZBHT-1  |
 | Vendor  | Smartenit  |
 | Description | Temperature & humidity sensor  |
 | Exposes | battery, temperature, humidity, linkquality |
-| Picture | ![Smartenit ZBHT-1](../images/devices/ZBHT-1.jpg) |
+| Picture | ![Smartenit ZBHT-1](https://www.zigbee2mqtt.io/images/devices/ZBHT-1.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -50,7 +58,7 @@ If the device is asleep (which is most of the time) and you need it to be awake 
  * In theory the device will send a low-power report to the ZigBee network if the voltage falls below 2.4V - no other battery reporting.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -63,7 +71,7 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 * `humidity_precision`: Controls the precision of `humidity` values, e.g. `0`, `1` or `2`; default `2`.
 To control the precision based on the humidity value set it to e.g. `{80: 0, 10: 1}`,
 when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1. Precision will take into affect with next report of device.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

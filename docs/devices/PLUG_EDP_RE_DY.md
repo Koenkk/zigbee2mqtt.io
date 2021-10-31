@@ -1,26 +1,34 @@
 ---
 title: "EDP PLUG EDP RE:DY control via MQTT"
-description: "Integrate your EDP PLUG EDP RE:DY via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your EDP PLUG EDP RE:DY via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PLUG_EDP_RE_DY.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # EDP PLUG EDP RE:DY
 
+|     |     |
+|-----|-----|
 | Model | PLUG EDP RE:DY  |
 | Vendor  | EDP  |
 | Description | re:dy plug |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![EDP PLUG EDP RE:DY](../images/devices/PLUG-EDP-RE-DY.jpg) |
+| Picture | ![EDP PLUG EDP RE:DY](https://www.zigbee2mqtt.io/images/devices/PLUG-EDP-RE-DY.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
 ### Pairing
 Factory reset the plug (hold the switch button for >10sec). After resetting the switch will automatically connect.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

@@ -1,24 +1,32 @@
 ---
 title: "FrankEver FK_V02 control via MQTT"
-description: "Integrate your FrankEver FK_V02 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your FrankEver FK_V02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-05-01T14:47:09Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/FK_V02.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # FrankEver FK_V02
 
+|     |     |
+|-----|-----|
 | Model | FK_V02  |
 | Vendor  | FrankEver  |
 | Description | Zigbee smart water valve |
 | Exposes | switch (state), threshold, timer, linkquality |
-| Picture | ![FrankEver FK_V02](../images/devices/FK_V02.jpg) |
+| Picture | ![FrankEver FK_V02](https://www.zigbee2mqtt.io/images/devices/FK_V02.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

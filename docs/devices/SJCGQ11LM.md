@@ -1,31 +1,49 @@
 ---
 title: "Xiaomi SJCGQ11LM control via MQTT"
-description: "Integrate your Xiaomi SJCGQ11LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi SJCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SJCGQ11LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi SJCGQ11LM
 
+|     |     |
+|-----|-----|
 | Model | SJCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara water leak sensor |
-| Exposes | battery, water_leak, battery_low, voltage, linkquality |
-| Picture | ![Xiaomi SJCGQ11LM](../images/devices/SJCGQ11LM.jpg) |
+| Exposes | battery, water_leak, battery_low, voltage, temperature, linkquality |
+| Picture | ![Xiaomi SJCGQ11LM](https://www.zigbee2mqtt.io/images/devices/SJCGQ11LM.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
 ### Battery
 Uses a CR2032 battery
 
+### Device type specific configuration
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md)*
+
+* `temperature_precision`: Controls the precision of `temperature` values,
+e.g. `0`, `1` or `2`; default `2`.
+To control the precision based on the temperature value set it to e.g. `{30: 0, 10: 1}`,
+when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1. Precision will take into affect with next report of device.
+* `temperature_calibration`: Allows to manually calibrate temperature values,
+e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
+
 
 ### Pairing
 Press and hold water logo on the device for +- 5 seconds (you have to press quite hard) until the blue light blinks
 three times, release the water logo (the blue light will blink once more) and wait.
-    
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes
@@ -54,6 +72,12 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

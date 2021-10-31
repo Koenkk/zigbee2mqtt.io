@@ -1,27 +1,35 @@
 ---
 title: "ORVIBO W40CZ control via MQTT"
-description: "Integrate your ORVIBO W40CZ via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your ORVIBO W40CZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-05-19T20:48:40Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/W40CZ.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # ORVIBO W40CZ
 
+|     |     |
+|-----|-----|
 | Model | W40CZ  |
 | Vendor  | ORVIBO  |
 | Description | Smart curtain motor  |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![ORVIBO W40CZ](../images/devices/W40CZ.jpg) |
+| Picture | ![ORVIBO W40CZ](https://www.zigbee2mqtt.io/images/devices/W40CZ.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

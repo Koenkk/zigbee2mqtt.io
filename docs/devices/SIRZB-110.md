@@ -1,20 +1,28 @@
 ---
 title: "Develco Products A/S SIRZB-110 control via MQTT"
-description: "Integrate your Develco Products A/S SIRZB-110 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Develco Products A/S SIRZB-110 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-08-22T21:01:09Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SIRZB-110.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Develco Products A/S SIRZB-110
 
+|     |     |
+|-----|-----|
 | Model | SIRZB-110  |
 | Vendor  | Develco Products A/S  |
 | Description | Customizable siren |
 | Exposes | battery, battery_low, test, warning, squawk, max_duration, alarm, linkquality |
-| Picture | ![Develco Products A/S SIRZB-110](../images/devices/SIRZB-110.jpg) |
+| Picture | ![Develco Products A/S SIRZB-110](https://www.zigbee2mqtt.io/images/devices/SIRZB-110.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -52,7 +60,7 @@ Squawk are normally used to indicate activation and deactivation of an alarm sys
 Examples:
 `{"squawk":{"level":"low","mode":"system_is_sarmed","strobe":false}}`
 `{"squawk":{"level":"low","mode":"system_is_disarmed","strobe":false}}`
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

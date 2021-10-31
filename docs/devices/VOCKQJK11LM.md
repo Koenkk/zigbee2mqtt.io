@@ -1,21 +1,29 @@
 ---
 title: "Xiaomi VOCKQJK11LM control via MQTT"
-description: "Integrate your Xiaomi VOCKQJK11LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi VOCKQJK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-08-01T20:41:55Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/VOCKQJK11LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi VOCKQJK11LM
 
+|     |     |
+|-----|-----|
 | Model | VOCKQJK11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara TVOC air quality monitor |
 | Exposes | battery, temperature, humidity, voc, linkquality |
-| Picture | ![Xiaomi VOCKQJK11LM](../images/devices/VOCKQJK11LM.jpg) |
+| Picture | ![Xiaomi VOCKQJK11LM](https://www.zigbee2mqtt.io/images/devices/VOCKQJK11LM.jpg) |
 | White-label | Xiaomi AAQS-S01 |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -23,7 +31,7 @@ description: "Integrate your Xiaomi VOCKQJK11LM via Zigbee2MQTT with whatever sm
 Press and hold button on top of device until connection symbol appears
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `temperature_precision`: Controls the precision of `temperature` values,
 e.g. `0`, `1` or `2`; default `2`.
@@ -36,7 +44,7 @@ e.g. `1` would add 1 degree to the temperature reported by the device; default `
 * `humidity_precision`: Controls the precision of `humidity` values, e.g. `0`, `1` or `2`; default `2`.
 To control the precision based on the humidity value set it to e.g. `{80: 0, 10: 1}`,
 when humidity >= 80 precision will be 0, when humidity >= 10 precision will be 1. Precision will take into affect with next report of device.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

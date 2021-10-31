@@ -1,20 +1,28 @@
 ---
 title: "Climax SRAC-23B-ZBSR control via MQTT"
-description: "Integrate your Climax SRAC-23B-ZBSR via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Climax SRAC-23B-ZBSR via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-02-13T14:40:13Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SRAC-23B-ZBSR.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Climax SRAC-23B-ZBSR
 
+|     |     |
+|-----|-----|
 | Model | SRAC-23B-ZBSR  |
 | Vendor  | Climax  |
 | Description | Smart siren |
 | Exposes | battery_low, tamper, warning, max_duration, alarm, linkquality |
-| Picture | ![Climax SRAC-23B-ZBSR](../images/devices/SRAC-23B-ZBSR.jpg) |
+| Picture | ![Climax SRAC-23B-ZBSR](https://www.zigbee2mqtt.io/images/devices/SRAC-23B-ZBSR.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -45,7 +53,7 @@ To stop:
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": "START"}` and `{"alarm": "OFF"}`
 Set `max_duration` from the Zigbee2MQTT UI or by publishing `{"max_duration": NEW_VALUE}`
 This alarm are preset to highest volume
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

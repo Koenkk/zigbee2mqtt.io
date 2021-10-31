@@ -1,29 +1,37 @@
 ---
 title: "EcoDim Eco-Dim.07 control via MQTT"
-description: "Integrate your EcoDim Eco-Dim.07 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your EcoDim Eco-Dim.07 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-05-03T19:47:00Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/Eco-Dim.07.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # EcoDim Eco-Dim.07
 
+|     |     |
+|-----|-----|
 | Model | Eco-Dim.07  |
 | Vendor  | EcoDim  |
 | Description | Zigbee & Z-wave dimmer |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![EcoDim Eco-Dim.07](../images/devices/Eco-Dim.07.jpg) |
+| Picture | ![EcoDim Eco-Dim.07](https://www.zigbee2mqtt.io/images/devices/Eco-Dim.07.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

@@ -1,24 +1,32 @@
 ---
 title: "Develco WISZB-121 control via MQTT"
-description: "Integrate your Develco WISZB-121 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Develco WISZB-121 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-01-31T22:24:43Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/WISZB-121.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Develco WISZB-121
 
+|     |     |
+|-----|-----|
 | Model | WISZB-121  |
 | Vendor  | Develco  |
 | Description | Window sensor |
 | Exposes | contact, battery_low, linkquality |
-| Picture | ![Develco WISZB-121](../images/devices/WISZB-121.jpg) |
+| Picture | ![Develco WISZB-121](https://www.zigbee2mqtt.io/images/devices/WISZB-121.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

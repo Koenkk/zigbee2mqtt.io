@@ -1,20 +1,28 @@
 ---
 title: "Xiaomi XDD12LM control via MQTT"
-description: "Integrate your Xiaomi XDD12LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi XDD12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-05-21T14:56:15Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/XDD12LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi XDD12LM
 
+|     |     |
+|-----|-----|
 | Model | XDD12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara Opple MX650 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Xiaomi XDD12LM](../images/devices/XDD12LM.jpg) |
+| Picture | ![Xiaomi XDD12LM](https://www.zigbee2mqtt.io/images/devices/XDD12LM.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -22,7 +30,7 @@ description: "Integrate your Xiaomi XDD12LM via Zigbee2MQTT with whatever smart 
 Switch the lamp on five times until the lamp blinks several times.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)
@@ -31,10 +39,10 @@ the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
-
+<!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

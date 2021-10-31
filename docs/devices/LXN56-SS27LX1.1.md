@@ -1,26 +1,30 @@
 ---
 title: "Zemismart LXN56-SS27LX1.1 control via MQTT"
-description: "Integrate your Zemismart LXN56-SS27LX1.1 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Zemismart LXN56-SS27LX1.1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-06-12T19:37:13Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LXN56-SS27LX1.1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Zemismart LXN56-SS27LX1.1
 
+|     |     |
+|-----|-----|
 | Model | LXN56-SS27LX1.1  |
 | Vendor  | Zemismart  |
 | Description | Smart light switch - 2 gang with neutral wire |
 | Exposes | switch (state), linkquality |
-| Picture | ![Zemismart LXN56-SS27LX1.1](../images/devices/LXN56-SS27LX1.1.jpg) |
+| Picture | ![Zemismart LXN56-SS27LX1.1](https://www.zigbee2mqtt.io/images/devices/LXN56-SS27LX1.1.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-
-
-## 2 distinct devices
-This switch was 2 distinct Zigbee chips, so it's seen as 2 separate devices.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

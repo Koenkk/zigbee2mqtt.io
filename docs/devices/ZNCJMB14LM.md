@@ -1,20 +1,28 @@
 ---
 title: "Xiaomi ZNCJMB14LM control via MQTT"
-description: "Integrate your Xiaomi ZNCJMB14LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi ZNCJMB14LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-05-11T20:10:12Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZNCJMB14LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi ZNCJMB14LM
 
+|     |     |
+|-----|-----|
 | Model | ZNCJMB14LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara S1 smart touch panel |
 | Exposes | switch (state), standby_enabled, theme, beep_volume, lcd_brightness, language, screen_saver_style, standby_time, font_size, lcd_auto_brightness_enabled, homepage, screen_saver_enabled, standby_lcd_brightness, available_switches, switch_1_text_icon, switch_2_text_icon, switch_3_text_icon, linkquality |
-| Picture | ![Xiaomi ZNCJMB14LM](../images/devices/ZNCJMB14LM.jpg) |
+| Picture | ![Xiaomi ZNCJMB14LM](https://www.zigbee2mqtt.io/images/devices/ZNCJMB14LM.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -23,7 +31,7 @@ On initial boot, the device will display a message "Waiting for accessing the ne
 
 If the device is already part of a network, swipe down from the top of the screen to access the Settings panel (password may be required), navigate to "Advanced", navigate to "Access New Gateway" and confirm with "Ok".
 Once confirmed, proceed as per initial boot.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

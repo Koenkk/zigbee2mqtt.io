@@ -1,24 +1,32 @@
 ---
 title: "GS SSHM-I1 control via MQTT"
-description: "Integrate your GS SSHM-I1 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your GS SSHM-I1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-12-30T11:31:00Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SSHM-I1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # GS SSHM-I1
 
+|     |     |
+|-----|-----|
 | Model | SSHM-I1  |
 | Vendor  | GS  |
 | Description | Smoke detector |
 | Exposes | smoke, battery_low, tamper, battery, linkquality |
-| Picture | ![GS SSHM-I1](../images/devices/SSHM-I1.jpg) |
+| Picture | ![GS SSHM-I1](https://www.zigbee2mqtt.io/images/devices/SSHM-I1.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

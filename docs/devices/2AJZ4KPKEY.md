@@ -1,20 +1,28 @@
 ---
 title: "Konke 2AJZ4KPKEY control via MQTT"
-description: "Integrate your Konke 2AJZ4KPKEY via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Konke 2AJZ4KPKEY via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-09-08T21:16:00Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/2AJZ4KPKEY.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Konke 2AJZ4KPKEY
 
+|     |     |
+|-----|-----|
 | Model | 2AJZ4KPKEY  |
 | Vendor  | Konke  |
 | Description | Multi-function button |
 | Exposes | battery, action, linkquality |
-| Picture | ![Konke 2AJZ4KPKEY](../images/devices/2AJZ4KPKEY.jpg) |
+| Picture | ![Konke 2AJZ4KPKEY](https://www.zigbee2mqtt.io/images/devices/2AJZ4KPKEY.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -36,14 +44,14 @@ Press and hold the reset button in the side of the device for +- 5 seconds (unti
 You will need a needle or a pin to do it. After this the device will automatically join.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 
 
 ### Important
 Konke devices only work on Zigbee channel 15, 20 and 25.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

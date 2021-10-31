@@ -1,24 +1,32 @@
 ---
 title: "Brimate FZB8708HD-S1 control via MQTT"
-description: "Integrate your Brimate FZB8708HD-S1 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Brimate FZB8708HD-S1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-02-28T13:58:01Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/FZB8708HD-S1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Brimate FZB8708HD-S1
 
+|     |     |
+|-----|-----|
 | Model | FZB8708HD-S1  |
 | Vendor  | Brimate  |
 | Description | Smart motion sensor |
 | Exposes | occupancy, battery_low, linkquality |
-| Picture | ![Brimate FZB8708HD-S1](../images/devices/FZB8708HD-S1.jpg) |
+| Picture | ![Brimate FZB8708HD-S1](https://www.zigbee2mqtt.io/images/devices/FZB8708HD-S1.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

@@ -1,20 +1,28 @@
 ---
 title: "Gledopto GL-S-005Z control via MQTT"
-description: "Integrate your Gledopto GL-S-005Z via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Gledopto GL-S-005Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-12-15T17:27:48Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GL-S-005Z.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Gledopto GL-S-005Z
 
+|     |     |
+|-----|-----|
 | Model | GL-S-005Z  |
 | Vendor  | Gledopto  |
 | Description | Zigbee 4W MR16 Bulb 120deg RGB+CCT |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-S-005Z](../images/devices/GL-S-005Z.jpg) |
+| Picture | ![Gledopto GL-S-005Z](https://www.zigbee2mqtt.io/images/devices/GL-S-005Z.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -25,7 +33,7 @@ description: "Integrate your Gledopto GL-S-005Z via Zigbee2MQTT with whatever sm
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)
@@ -58,7 +66,7 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
         - in: 334
           out: 318
     ```
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

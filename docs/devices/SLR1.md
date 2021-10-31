@@ -1,27 +1,36 @@
 ---
 title: "Hive SLR1 control via MQTT"
-description: "Integrate your Hive SLR1 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Hive SLR1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-09-01T18:11:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SLR1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Hive SLR1
 
+|     |     |
+|-----|-----|
 | Model | SLR1  |
 | Vendor  | Hive  |
 | Description | Heating thermostat |
 | Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration, linkquality |
-| Picture | ![Hive SLR1](../images/devices/SLR1.jpg) |
+| Picture | ![Hive SLR1](https://www.zigbee2mqtt.io/images/devices/SLR1.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+
 
 ### Pairing
 
-To pair the thermostat with Zigbee2Mqtt, follow these steps:
+To pair the thermostat with Zigbee2MQTT, follow these steps:
 
-1. Temporarily disconnect any thermostat controllers connected to the thermostat by remove a battery from them. 
+1. Temporarily disconnect any thermostat controllers connected to the thermostat by remove a battery from them.
 2. Turn the thermostat and boiler off, then on again to ensure it is not trying to connect to any thermostat controllers.
 3. Once the thermostat and boiler are on, hold down the Central heating button on the device until the Central heating'light turns white/ pink, then release the button. This will enable stand-alone mode on the thermostat.
 4. Hold down the central heating button again until the Central heating light begins to flash amber. The device is now in pairing mode and should be found by Zigbee2MQTT.
@@ -70,7 +79,7 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 Note: You will also notice that `temperature_setpoint_hold_duration` automatically changes to `0` which means `not set`. `occupied_heating_setpoint` automatically changes to `1` degree C.
 
 This will also stop any native boosts that are currently active.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

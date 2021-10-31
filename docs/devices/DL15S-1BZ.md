@@ -1,20 +1,28 @@
 ---
 title: "Leviton DL15S-1BZ control via MQTT"
-description: "Integrate your Leviton DL15S-1BZ via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Leviton DL15S-1BZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-01-07T14:09:21Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DL15S-1BZ.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Leviton DL15S-1BZ
 
+|     |     |
+|-----|-----|
 | Model | DL15S-1BZ  |
 | Vendor  | Leviton  |
 | Description | Lumina RF 15A switch, 120/277V |
 | Exposes | switch (state), linkquality |
-| Picture | ![Leviton DL15S-1BZ](../images/devices/DL15S-1BZ.jpg) |
+| Picture | ![Leviton DL15S-1BZ](https://www.zigbee2mqtt.io/images/devices/DL15S-1BZ.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -22,7 +30,7 @@ description: "Integrate your Leviton DL15S-1BZ via Zigbee2MQTT with whatever sma
 To pair this device, hold the ON for few seconds until the red light is blinking. After that, simple tap once on the ON again to start the pairing process.
 
 Note: This device doesn't support Zigbee channels 25 & 26.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

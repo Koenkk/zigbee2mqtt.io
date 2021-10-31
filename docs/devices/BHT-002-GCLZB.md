@@ -1,20 +1,28 @@
 ---
 title: "Moes BHT-002-GCLZB control via MQTT"
-description: "Integrate your Moes BHT-002-GCLZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Moes BHT-002-GCLZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-09-30T20:52:56Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/BHT-002-GCLZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Moes BHT-002-GCLZB
 
+|     |     |
+|-----|-----|
 | Model | BHT-002-GCLZB  |
 | Vendor  | Moes  |
 | Description | Moes BHT series Thermostat |
 | Exposes | lock (state), deadzone_temperature, max_temperature_limit, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, preset, sensor), linkquality |
-| Picture | ![Moes BHT-002-GCLZB](../images/devices/BHT-002-GCLZB.jpg) |
+| Picture | ![Moes BHT-002-GCLZB](https://www.zigbee2mqtt.io/images/devices/BHT-002-GCLZB.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -30,7 +38,7 @@ devices:
     friendly_name: thermostat
     debounce: 1
 {% endraw %}
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

@@ -1,27 +1,35 @@
 ---
 title: "TuYa TS011F_socket_module control via MQTT"
-description: "Integrate your TuYa TS011F_socket_module via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS011F_socket_module via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-12-01T19:02:25Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS011F_socket_module.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS011F_socket_module
 
+|     |     |
+|-----|-----|
 | Model | TS011F_socket_module  |
 | Vendor  | TuYa  |
 | Description | Socket module |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS011F_socket_module](../images/devices/TS011F_socket_module.jpg) |
+| Picture | ![TuYa TS011F_socket_module](https://www.zigbee2mqtt.io/images/devices/TS011F_socket_module.jpg) |
 | White-label | LoraTap RR400ZB |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
 ### Pairing
 Press the black pairing button on the relay module for 5 seconds until the indicator light flashes, then release the pairing button.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

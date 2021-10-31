@@ -1,24 +1,32 @@
 ---
 title: "Schneider Electric U201SRY2KWZB control via MQTT"
-description: "Integrate your Schneider Electric U201SRY2KWZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Schneider Electric U201SRY2KWZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-03-16T20:41:09Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/U201SRY2KWZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Schneider Electric U201SRY2KWZB
 
+|     |     |
+|-----|-----|
 | Model | U201SRY2KWZB  |
 | Vendor  | Schneider Electric  |
 | Description | Ulti 240V 9.1 A 1 gang relay switch impress switch module, amber LED |
 | Exposes | switch (state), linkquality |
-| Picture | ![Schneider Electric U201SRY2KWZB](../images/devices/U201SRY2KWZB.jpg) |
+| Picture | ![Schneider Electric U201SRY2KWZB](https://www.zigbee2mqtt.io/images/devices/U201SRY2KWZB.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

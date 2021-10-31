@@ -1,20 +1,28 @@
 ---
 title: "Xiaomi WXKG07LM control via MQTT"
-description: "Integrate your Xiaomi WXKG07LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi WXKG07LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-04-29T17:11:59Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/WXKG07LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi WXKG07LM
 
+|     |     |
+|-----|-----|
 | Model | WXKG07LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 double key wireless wall switch |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![Xiaomi WXKG07LM](../images/devices/WXKG07LM.jpg) |
+| Picture | ![Xiaomi WXKG07LM](https://www.zigbee2mqtt.io/images/devices/WXKG07LM.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -31,10 +39,10 @@ devices:
 ```
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

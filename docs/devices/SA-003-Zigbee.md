@@ -1,26 +1,34 @@
 ---
 title: "eWeLink SA-003-Zigbee control via MQTT"
-description: "Integrate your eWeLink SA-003-Zigbee via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your eWeLink SA-003-Zigbee via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-12-15T17:27:48Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SA-003-Zigbee.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # eWeLink SA-003-Zigbee
 
+|     |     |
+|-----|-----|
 | Model | SA-003-Zigbee  |
 | Vendor  | eWeLink  |
 | Description | Zigbee smart plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![eWeLink SA-003-Zigbee](../images/devices/SA-003-Zigbee.jpg) |
+| Picture | ![eWeLink SA-003-Zigbee](https://www.zigbee2mqtt.io/images/devices/SA-003-Zigbee.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
 ### Pairing
 Reset by unplugging any devices plugged into the socket, hold the button down for 10 secs until the light flashes Green/Orange and the Socket switches on and off. pair within 60 secs
-    
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

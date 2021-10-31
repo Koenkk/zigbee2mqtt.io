@@ -1,27 +1,35 @@
 ---
 title: "Sunricher SR-ZG9080A control via MQTT"
-description: "Integrate your Sunricher SR-ZG9080A via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Sunricher SR-ZG9080A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-05-01T14:47:09Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SR-ZG9080A.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Sunricher SR-ZG9080A
 
+|     |     |
+|-----|-----|
 | Model | SR-ZG9080A  |
 | Vendor  | Sunricher  |
 | Description | Curtain motor controller |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Sunricher SR-ZG9080A](../images/devices/SR-ZG9080A.jpg) |
+| Picture | ![Sunricher SR-ZG9080A](https://www.zigbee2mqtt.io/images/devices/SR-ZG9080A.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

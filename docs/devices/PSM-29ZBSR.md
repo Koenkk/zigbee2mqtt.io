@@ -1,25 +1,33 @@
 ---
 title: "Climax PSM-29ZBSR control via MQTT"
-description: "Integrate your Climax PSM-29ZBSR via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Climax PSM-29ZBSR via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PSM-29ZBSR.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Climax PSM-29ZBSR
 
+|     |     |
+|-----|-----|
 | Model | PSM-29ZBSR  |
 | Vendor  | Climax  |
 | Description | Power plug |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![Climax PSM-29ZBSR](../images/devices/PSM-29ZBSR.jpg) |
+| Picture | ![Climax PSM-29ZBSR](https://www.zigbee2mqtt.io/images/devices/PSM-29ZBSR.jpg) |
 | White-label | Blaupunkt PSM-S1 |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

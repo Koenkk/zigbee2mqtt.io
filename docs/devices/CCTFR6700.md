@@ -1,20 +1,28 @@
 ---
 title: "Schneider Electric CCTFR6700 control via MQTT"
-description: "Integrate your Schneider Electric CCTFR6700 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Schneider Electric CCTFR6700 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-05-25T17:59:46Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/CCTFR6700.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Schneider Electric CCTFR6700
 
+|     |     |
+|-----|-----|
 | Model | CCTFR6700  |
 | Vendor  | Schneider Electric  |
 | Description | Heating thermostat |
 | Exposes | power, energy, schneider_pilot_mode, climate (occupied_heating_setpoint, local_temperature, system_mode, pi_heating_demand), linkquality |
-| Picture | ![Schneider Electric CCTFR6700](../images/devices/CCTFR6700.jpg) |
+| Picture | ![Schneider Electric CCTFR6700](https://www.zigbee2mqtt.io/images/devices/CCTFR6700.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -29,7 +37,7 @@ After pairing the device requires:
 - the pilot mode to be configured (Contactor/Pilot)
 - an external temperature measurment, either through a bind from a sensor, or report from the coordinator trhough automation. The temperature must be refreshed at least every 10mn
 - the target thermostat set point
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

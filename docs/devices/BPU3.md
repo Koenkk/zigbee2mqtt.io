@@ -1,24 +1,32 @@
 ---
 title: "AduroSmart BPU3 control via MQTT"
-description: "Integrate your AduroSmart BPU3 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your AduroSmart BPU3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-03-30T20:29:35Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/BPU3.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # AduroSmart BPU3
 
+|     |     |
+|-----|-----|
 | Model | BPU3  |
 | Vendor  | AduroSmart  |
 | Description | ERIA smart plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![AduroSmart BPU3](../images/devices/BPU3.jpg) |
+| Picture | ![AduroSmart BPU3](https://www.zigbee2mqtt.io/images/devices/BPU3.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

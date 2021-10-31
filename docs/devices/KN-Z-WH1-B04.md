@@ -1,24 +1,32 @@
 ---
 title: "LUX KN-Z-WH1-B04 control via MQTT"
-description: "Integrate your LUX KN-Z-WH1-B04 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LUX KN-Z-WH1-B04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-09-01T18:11:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/KN-Z-WH1-B04.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # LUX KN-Z-WH1-B04
 
+|     |     |
+|-----|-----|
 | Model | KN-Z-WH1-B04  |
 | Vendor  | LUX  |
 | Description | KONOz thermostat |
 | Exposes | climate (occupied_heating_setpoint, occupied_cooling_setpoint, local_temperature, system_mode, running_state, fan_mode), linkquality |
-| Picture | ![LUX KN-Z-WH1-B04](../images/devices/KN-Z-WH1-B04.jpg) |
+| Picture | ![LUX KN-Z-WH1-B04](https://www.zigbee2mqtt.io/images/devices/KN-Z-WH1-B04.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

@@ -1,26 +1,34 @@
 ---
 title: "Dawon DNS PM-S240-ZB control via MQTT"
-description: "Integrate your Dawon DNS PM-S240-ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Dawon DNS PM-S240-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-03-15T15:15:58Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/PM-S240-ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Dawon DNS PM-S240-ZB
 
+|     |     |
+|-----|-----|
 | Model | PM-S240-ZB  |
 | Vendor  | Dawon DNS  |
 | Description | IOT smart switch 2 gang without neutral wire |
 | Exposes | switch (state), linkquality |
-| Picture | ![Dawon DNS PM-S240-ZB](../images/devices/PM-S240-ZB.jpg) |
+| Picture | ![Dawon DNS PM-S240-ZB](https://www.zigbee2mqtt.io/images/devices/PM-S240-ZB.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
 ### Routing functionality
 This device does **not** act as a router.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

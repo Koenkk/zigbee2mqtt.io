@@ -1,24 +1,32 @@
 ---
 title: "Xiaomi RTCGQ13LM control via MQTT"
-description: "Integrate your Xiaomi RTCGQ13LM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi RTCGQ13LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-02-28T13:58:01Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/RTCGQ13LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi RTCGQ13LM
 
+|     |     |
+|-----|-----|
 | Model | RTCGQ13LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara high precision motion sensor |
 | Exposes | occupancy, motion_sensitivity, occupancy_timeout, battery, linkquality |
-| Picture | ![Xiaomi RTCGQ13LM](../images/devices/RTCGQ13LM.jpg) |
+| Picture | ![Xiaomi RTCGQ13LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ13LM.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

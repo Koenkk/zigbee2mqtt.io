@@ -1,27 +1,35 @@
 ---
 title: "TuYa U86KWF-ZPSJ control via MQTT"
-description: "Integrate your TuYa U86KWF-ZPSJ via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa U86KWF-ZPSJ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-08-11T22:17:44Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/U86KWF-ZPSJ.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa U86KWF-ZPSJ
 
+|     |     |
+|-----|-----|
 | Model | U86KWF-ZPSJ  |
 | Vendor  | TuYa  |
 | Description | Environment controller |
 | Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration, pi_heating_demand), linkquality |
-| Picture | ![TuYa U86KWF-ZPSJ](../images/devices/U86KWF-ZPSJ.jpg) |
+| Picture | ![TuYa U86KWF-ZPSJ](https://www.zigbee2mqtt.io/images/devices/U86KWF-ZPSJ.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

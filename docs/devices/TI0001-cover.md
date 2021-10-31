@@ -1,27 +1,35 @@
 ---
 title: "Livolo TI0001-cover control via MQTT"
-description: "Integrate your Livolo TI0001-cover via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Livolo TI0001-cover via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-03-30T20:29:35Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TI0001-cover.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Livolo TI0001-cover
 
+|     |     |
+|-----|-----|
 | Model | TI0001-cover  |
 | Vendor  | Livolo  |
 | Description | Zigbee roller blind motor |
 | Exposes | cover (state, position), options, moving, linkquality |
-| Picture | ![Livolo TI0001-cover](../images/devices/TI0001-cover.jpg) |
+| Picture | ![Livolo TI0001-cover](https://www.zigbee2mqtt.io/images/devices/TI0001-cover.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: By default the position/tilt values mean: open = 100, closed = 0. This can be inverted by setting this option to true (so open = 0, close = 100).
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

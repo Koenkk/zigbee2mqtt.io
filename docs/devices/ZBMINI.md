@@ -1,27 +1,35 @@
 ---
 title: "SONOFF ZBMINI control via MQTT"
-description: "Integrate your SONOFF ZBMINI via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your SONOFF ZBMINI via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-12-01T19:02:25Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZBMINI.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # SONOFF ZBMINI
 
+|     |     |
+|-----|-----|
 | Model | ZBMINI  |
 | Vendor  | SONOFF  |
 | Description | Zigbee two way smart switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![SONOFF ZBMINI](../images/devices/ZBMINI.jpg) |
+| Picture | ![SONOFF ZBMINI](https://www.zigbee2mqtt.io/images/devices/ZBMINI.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
 ### Device stuck
 In case of switching the coordinators a device may stuck in error state which is indicated by slowly blinking light (about 1 flash per second).
 To switch a device to a pairing mode power it off for 10 sec. After power on it enters pairing mode automatically.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

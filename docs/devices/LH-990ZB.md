@@ -1,24 +1,32 @@
 ---
 title: "iHORN LH-990ZB control via MQTT"
-description: "Integrate your iHORN LH-990ZB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your iHORN LH-990ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-05-19T20:48:40Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/LH-990ZB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # iHORN LH-990ZB
 
+|     |     |
+|-----|-----|
 | Model | LH-990ZB  |
 | Vendor  | iHORN  |
 | Description | PIR motion sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![iHORN LH-990ZB](../images/devices/LH-990ZB.jpg) |
+| Picture | ![iHORN LH-990ZB](https://www.zigbee2mqtt.io/images/devices/LH-990ZB.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

@@ -1,20 +1,28 @@
 ---
 title: "Aurora Lighting AU-A1ZB2WDM control via MQTT"
-description: "Integrate your Aurora Lighting AU-A1ZB2WDM via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Aurora Lighting AU-A1ZB2WDM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-07-20T09:36:00Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/AU-A1ZB2WDM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Aurora Lighting AU-A1ZB2WDM
 
+|     |     |
+|-----|-----|
 | Model | AU-A1ZB2WDM  |
 | Vendor  | Aurora Lighting  |
 | Description | AOne 250W smart rotary dimmer module |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Aurora Lighting AU-A1ZB2WDM](../images/devices/AU-A1ZB2WDM.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZB2WDM](https://www.zigbee2mqtt.io/images/devices/AU-A1ZB2WDM.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -24,12 +32,12 @@ The connected load, and the red LED indicator behind the dimmer knob will flash 
 The connected load, and the red LED indicator behind the dimmer knob will flash a third time to indicate that it has paired successfully.
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness,
 color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
 Note that this value is overridden if a `transition` value is present in the MQTT command payload.
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

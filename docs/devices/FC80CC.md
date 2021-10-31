@@ -1,24 +1,32 @@
 ---
 title: "Legrand FC80CC control via MQTT"
-description: "Integrate your Legrand FC80CC via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Legrand FC80CC via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-12-30T11:31:00Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/FC80CC.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Legrand FC80CC
 
+|     |     |
+|-----|-----|
 | Model | FC80CC  |
 | Vendor  | Legrand  |
 | Description | Legrand (or Bticino) DIN contactor module (note: Legrand 412171 may be similar to Bticino FC80CC) |
 | Exposes | switch (state), power, device_mode, linkquality |
-| Picture | ![Legrand FC80CC](../images/devices/FC80CC.jpg) |
+| Picture | ![Legrand FC80CC](https://www.zigbee2mqtt.io/images/devices/FC80CC.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

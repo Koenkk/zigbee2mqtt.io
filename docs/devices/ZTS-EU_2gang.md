@@ -1,24 +1,32 @@
 ---
 title: "Moes ZTS-EU_2gang control via MQTT"
-description: "Integrate your Moes ZTS-EU_2gang via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Moes ZTS-EU_2gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-05-10T17:58:08Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ZTS-EU_2gang.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Moes ZTS-EU_2gang
 
+|     |     |
+|-----|-----|
 | Model | ZTS-EU_2gang  |
 | Vendor  | Moes  |
 | Description | Wall touch light switch (2 gang) |
 | Exposes | switch (state), linkquality |
-| Picture | ![Moes ZTS-EU_2gang](../images/devices/ZTS-EU_2gang.jpg) |
+| Picture | ![Moes ZTS-EU_2gang](https://www.zigbee2mqtt.io/images/devices/ZTS-EU_2gang.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

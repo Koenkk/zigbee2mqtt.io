@@ -1,24 +1,32 @@
 ---
 title: "Nue / 3A NUE-ZBFLB control via MQTT"
-description: "Integrate your Nue / 3A NUE-ZBFLB via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Nue / 3A NUE-ZBFLB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-09-30T20:52:56Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/NUE-ZBFLB.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Nue / 3A NUE-ZBFLB
 
+|     |     |
+|-----|-----|
 | Model | NUE-ZBFLB  |
 | Vendor  | Nue / 3A  |
 | Description | Smart fan light switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Nue / 3A NUE-ZBFLB](../images/devices/NUE-ZBFLB.jpg) |
+| Picture | ![Nue / 3A NUE-ZBFLB](https://www.zigbee2mqtt.io/images/devices/NUE-ZBFLB.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

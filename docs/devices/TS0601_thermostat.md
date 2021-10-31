@@ -1,21 +1,29 @@
 ---
 title: "TuYa TS0601_thermostat control via MQTT"
-description: "Integrate your TuYa TS0601_thermostat via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS0601_thermostat via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-10-30T12:58:50
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/TS0601_thermostat.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # TuYa TS0601_thermostat
 
+|     |     |
+|-----|-----|
 | Model | TS0601_thermostat  |
 | Vendor  | TuYa  |
 | Description | Radiator valve with thermostat |
 | Exposes | lock (state), switch (state), battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, away_mode, preset), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, week, away_preset_temperature, linkquality |
-| Picture | ![TuYa TS0601_thermostat](../images/devices/TS0601_thermostat.jpg) |
-| White-label | Moes HY368, Moes HY369RT, SHOJZJ 378RT |
+| Picture | ![TuYa TS0601_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat.jpg) |
+| White-label | Moes HY368, Moes HY369RT, SHOJZJ 378RT, Silvercrest TVR01 |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -110,10 +118,10 @@ After this command thermostat responds with two messages. One for calibration ch
         "eco_temperature": 17
     }
     ```
-
+<!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Exposes

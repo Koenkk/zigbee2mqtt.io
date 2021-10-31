@@ -1,20 +1,28 @@
 ---
 title: "Gledopto GL-W-001Z control via MQTT"
-description: "Integrate your Gledopto GL-W-001Z via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Gledopto GL-W-001Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-11-09T18:37:38Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/GL-W-001Z.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Gledopto GL-W-001Z
 
+|     |     |
+|-----|-----|
 | Model | GL-W-001Z  |
 | Vendor  | Gledopto  |
 | Description | Zigbee On/Off Wall Switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Gledopto GL-W-001Z](../images/devices/GL-W-001Z.jpg) |
+| Picture | ![Gledopto GL-W-001Z](https://www.zigbee2mqtt.io/images/devices/GL-W-001Z.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -23,7 +31,7 @@ description: "Integrate your Gledopto GL-W-001Z via Zigbee2MQTT with whatever sm
 2. Now switch off and on within 2 seconds.
 3. Repeat off/on four times.
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

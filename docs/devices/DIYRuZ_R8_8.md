@@ -1,20 +1,28 @@
 ---
 title: "DIYRuZ DIYRuZ_R8_8 control via MQTT"
-description: "Integrate your DIYRuZ DIYRuZ_R8_8 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your DIYRuZ DIYRuZ_R8_8 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2020-06-29T17:33:31Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/DIYRuZ_R8_8.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # DIYRuZ DIYRuZ_R8_8
 
+|     |     |
+|-----|-----|
 | Model | DIYRuZ_R8_8  |
 | Vendor  | DIYRuZ  |
 | Description | [DiY 8 Relays + 8 switches](https://modkam.ru/?p=1638) |
 | Exposes | switch (state), linkquality |
-| Picture | ![DIYRuZ DIYRuZ_R8_8](../images/devices/DIYRuZ_R8_8.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_R8_8](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_R8_8.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -31,10 +39,10 @@ devices:
 ```
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

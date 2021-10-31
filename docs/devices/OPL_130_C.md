@@ -1,20 +1,28 @@
 ---
 title: "Innr OPL 130 C control via MQTT"
-description: "Integrate your Innr OPL 130 C via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Innr OPL 130 C via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-05-30T19:17:03Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/OPL_130_C.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Innr OPL 130 C
 
+|     |     |
+|-----|-----|
 | Model | OPL 130 C  |
 | Vendor  | Innr  |
 | Description | Outdoor smart pedestal light colour |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Innr OPL 130 C](../images/devices/OPL-130-C.jpg) |
+| Picture | ![Innr OPL 130 C](https://www.zigbee2mqtt.io/images/devices/OPL-130-C.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -22,7 +30,7 @@ description: "Integrate your Innr OPL 130 C via Zigbee2MQTT with whatever smart 
 Factory reset the light bulb ([video](https://www.youtube.com/watch?v=4zkpZSv84H4)).
 
 ### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
 the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)
@@ -55,7 +63,7 @@ rendition to other lights. Provide a minimum of 2 data sets in the correction ma
         - in: 334
           out: 318
     ```
-
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes

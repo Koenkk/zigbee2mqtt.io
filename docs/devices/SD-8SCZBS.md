@@ -1,24 +1,32 @@
 ---
 title: "Climax SD-8SCZBS control via MQTT"
-description: "Integrate your Climax SD-8SCZBS via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Climax SD-8SCZBS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-01-23T21:30:08Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/SD-8SCZBS.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Climax SD-8SCZBS
 
+|     |     |
+|-----|-----|
 | Model | SD-8SCZBS  |
 | Vendor  | Climax  |
 | Description | Smoke detector |
 | Exposes | smoke, battery, battery_low, tamper, warning, linkquality |
-| Picture | ![Climax SD-8SCZBS](../images/devices/SD-8SCZBS.jpg) |
+| Picture | ![Climax SD-8SCZBS](https://www.zigbee2mqtt.io/images/devices/SD-8SCZBS.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 

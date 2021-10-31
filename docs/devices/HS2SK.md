@@ -1,24 +1,32 @@
 ---
 title: "HEIMAN HS2SK control via MQTT"
-description: "Integrate your HEIMAN HS2SK via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HS2SK via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS2SK.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HS2SK
 
+|     |     |
+|-----|-----|
 | Model | HS2SK  |
 | Vendor  | HEIMAN  |
 | Description | Smart metering plug |
 | Exposes | switch (state), power, current, voltage, linkquality |
-| Picture | ![HEIMAN HS2SK](../images/devices/HS2SK.jpg) |
+| Picture | ![HEIMAN HS2SK](https://www.zigbee2mqtt.io/images/devices/HS2SK.jpg) |
 
-## Notes
 
-None
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 
