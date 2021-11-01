@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Sengled  |
 | Description | Smart plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![Sengled E1C-NB6](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/E1C-NB6.jpg) |
+| Picture | ![Sengled E1C-NB6](https://www.zigbee2mqtt.io/images/devices/E1C-NB6.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
