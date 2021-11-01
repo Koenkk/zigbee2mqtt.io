@@ -7,7 +7,15 @@ sidebarDepth: 1
 This page describes which MQTT topics are used by Zigbee2MQTT. Note that the base topic (by default `zigbee2mqtt`) is configurable in the [Zigbee2MQTT `configuration.yaml`](../../guide/configuration/). In Zigbee2MQTT 1.17.0 a new API was introduced, the documentation of the legacy api can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/ead922ee141546ccce079430a7acce67c982c99b/docs/information/mqtt_topics_and_messages.md).
 
 ## zigbee2mqtt/FRIENDLY_NAME
-Where `FRIENDLY_NAME` is e.g. `0x00158d0001b79111`. Message published to this topic are **always** in a JSON format. Each device produces a different JSON message. To see what your device publishes check the "Exposes" section on the device page which can be accessed via ["Supported devices"](../../supported-devices/). Some examples:
+
+The `FRIENDLY_NAME` is the IEEE-address or, if defined, the _friendly-name_ for a device and used as MQTT topic. 
+
+::: tip You can use the `/` separator in `friendly_name` to _group_ devices.  
+For example, using a friendly-name like `Kitchen/Floor Light` would result in a corresponding MQTT structure
+with `Kitchen` as folder containing `Floor Light`.  
+:::
+
+Published messages are **always** in a JSON format. Each device produces a different JSON message. To see what your device publishes check the "Exposes" section on the device page which can be accessed via ["Supported devices"](../../supported-devices/). Some examples:
 
 **Xiaomi MiJia temperature & humidity sensor (WSDCGQ01LM)**
 ```json

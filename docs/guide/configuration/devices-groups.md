@@ -43,6 +43,11 @@ Every Zigbee Device supports the following list of options.
 **`friendly_name`**  
 Used in the MQTT topic of a device. By default, this is the device ID (e.g. `0x00128d0001d9e1d2`).
 
+::: tip
+You can use the `/` separator in `friendly_name` to _group_ devices.  
+For example, using a friendly-name like `Kitchen/Floor Light` would result in a corresponding MQTT structure with `Kitchen` as folder containing `Floor Light`.  
+:::
+
 **`retain`**  
 Retain MQTT messages of this device (default `false`).
 
