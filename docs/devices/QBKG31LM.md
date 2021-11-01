@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall switch H1 Pro (with neutral, double rocker) |
 | Exposes | power_outage_memory, action, switch (state), power, operation_mode, linkquality |
-| Picture | ![Xiaomi QBKG31LM](https://psi-4ward.github.io/zigbee2mqtt.io/images/devices/QBKG31LM.jpg) |
+| Picture | ![Xiaomi QBKG31LM](https://www.zigbee2mqtt.io/images/devices/QBKG31LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

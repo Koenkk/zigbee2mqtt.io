@@ -1,7 +1,7 @@
 ---
-title: "Hive WPT1 control via MQTT"
-description: "Integrate your Hive WPT1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2020-02-04T20:38:05Z
+title: "Perenio PECWS01 control via MQTT"
+description: "Integrate your Perenio PECWS01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Hive WPT1
+# Perenio PECWS01
 
 |     |     |
 |-----|-----|
-| Model | WPT1  |
-| Vendor  | Hive  |
-| Description | Heating thermostat remote control |
-| Exposes | battery, linkquality |
-| Picture | ![Hive WPT1](https://www.zigbee2mqtt.io/images/devices/WPT1.jpg) |
+| Model | PECWS01  |
+| Vendor  | Perenio  |
+| Description | Door sensor |
+| Exposes | contact, battery, linkquality |
+| Picture | ![Perenio PECWS01](https://www.zigbee2mqtt.io/images/devices/PECWS01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,6 +29,12 @@ pageClass: device-page
 
 
 ## Exposes
+
+### Contact (binary)
+Indicates if the contact is closed (= true) or open (= false).
+Value can be found in the published state on the `contact` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `false` contact is ON, if `true` OFF.
 
 ### Battery (numeric)
 Remaining battery in %.
