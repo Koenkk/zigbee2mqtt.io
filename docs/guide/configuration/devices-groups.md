@@ -45,8 +45,14 @@ Used in the MQTT topic of a device. By default, this is the device ID (e.g. `0x0
 
 ::: tip
 You can use the `/` separator in `friendly_name` to _group_ devices.  
-For example, using a friendly-name like `Kitchen/Floor Light` would result in a corresponding MQTT structure with `Kitchen` as folder containing `Floor Light`.  
+For example, using a friendly-name like `Kitchen/Floor Light` would result in a corresponding MQTT structure with `Kitchen` as folder containing `Floor Light`.
 :::
+
+::: warning
+Note that a `friendly_name` is **NOT** allowed to end with `/` or use one of the
+possible [endpoint names](https://github.com/Koenkk/zigbee2mqtt/blob/cf68507ec3a11826ad794035208b83f4b37ee8d7/lib/util/utils.ts#L30).
+:::
+
 
 **`retain`**  
 Retain MQTT messages of this device (default `false`).
