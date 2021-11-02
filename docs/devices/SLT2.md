@@ -23,8 +23,19 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
 
+To pair the thermostat controller to both Zigbee2MQTT and the thermostat receiver, a factory reset will need to be performed. To begin a factory reset:
+
+1. remove a battery
+2. press and hold both the "+" and "-" buttons together
+3. reinsert the battery (with the buttons remained pressed)
+4. wait until the word "FIND" appears on screen (around 10 seconds)
+5. once paired, the word "FIND" disappears and the temperature will be displayed
+
+Zigbee2MQTT should have found the thermostat. If the word "REJOIN" appears on screen, the buttons were released too early and the process must be repeated. The controller should be able to control the boiler whilst still reporting to Zigbee2MQTT.
 <!-- Notes END: Do not edit below this line -->
 
 
