@@ -10,21 +10,21 @@ next: ../usage/
 In order to use Zigbee2MQTT we need the following hardware:
 
 1. <img src="../../images/zzh.jpg" title="ZZH" class="float-left" /> **A Zigbee Adapter** which is the interface between the Computer (or Server) where you run Zigbee2MQTT and the Zigbee radio
-communication. Zigbee2MQTT supports a variety of adapters with different kind of connections like USB, GPIO or remote via WIFI or Ethernet. 
-  Recommended adapters have a CC2652R, CC2652P, CC2652RB or CC1352P chip. See [supported Adapters](../adapters/README.md). <br class="clear" />
+communication. Zigbee2MQTT supports a variety of adapters with different kind of connections like USB, GPIO or remote via WIFI or Ethernet.
+  Recommended adapters have a chip starting with CC2652 or CC1352. See [supported Adapters](../adapters/README.md). <br class="clear" />
 
-2. <img src="../../images/pi.jpg" title="Raspberry Pi" class="float-left" /> **A Server** where you would run Zigbee2MQTT. Most Raspberry-Pi models are known to work but you can run it on many computers and platforms including Linux, Windows an MacOS. <br class="clear" />  
+2. <img src="../../images/pi.jpg" title="Raspberry Pi" class="float-left" /> **A Server** where you would run Zigbee2MQTT. Most Raspberry-Pi models are known to work but you can run it on many computers and platforms including Linux, Windows an MacOS. <br class="clear" />
 
 3. <img src="../../images/xiaomi_sensors.jpg" title="Zigbee devices" class="float-left" /> One or more **Zigbee Devices** which will be paired with Zigbee2MQTT. <br class="clear" />
 
-::: tip TIP 
-<img alt="USB Cable" src="../../images/usb_extension_cable.jpg" class="float-left" /> To improve network range and stability use a USB extension cable.  
+::: tip TIP
+<img alt="USB Cable" src="../../images/usb_extension_cable.jpg" class="float-left" /> To improve network range and stability use a USB extension cable.
 See [Improve network range and stability](../../advanced/zigbee/02_improve_network_range_and_stability.md). <br class="clear" />
 :::
 
 ## Installation
 
-You can run Zigbee2MQTT in different ways, see [Installation](../installation/). In this example 
+You can run Zigbee2MQTT in different ways, see [Installation](../installation/). In this example
 [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) is used to
 set up and run Zigbee2MQTT.
 
@@ -121,7 +121,7 @@ $ docker-compose up -d
 $ docker-compose logs -f
 ```
 
-After some short time you should see some log messages that Mosquitto and Zigbee2MQTT is running now. 
+After some short time you should see some log messages that Mosquitto and Zigbee2MQTT is running now.
 You can open the WebUI using [http://localhost:8080](http://localhost:8080) (or the hostname of your remote server).
 
 We can now go on and pair our first device.
