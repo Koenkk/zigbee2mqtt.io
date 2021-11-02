@@ -1,5 +1,5 @@
 name: Build ⚙ and Deploy 🚀
-on: push
+on: [push, pull_request]
 
 jobs:
   build_and_deploy:
