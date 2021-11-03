@@ -4,9 +4,9 @@ sidebarDepth: 1
 
 # Devices and Groups
 
-Zigbee2MQTT also stores the definitions of Devices and Groups in the `configuration.yml`.
+Zigbee2MQTT also stores the definitions of Devices and Groups in the `configuration.yml`. 
 
-Most options are optional, only the IEEE address (or MAC) as the `key` and a `friendly_name` are required.
+Most options are optional, only the IEEE address (or MAC) as the `key` and a `friendly_name` are required. 
 
 ``` yaml
 devices:
@@ -40,7 +40,7 @@ devices:
 
 Every Zigbee Device supports the following list of options.
 
-**`friendly_name`**
+**`friendly_name`**  
 Used in the MQTT topic of a device. By default, this is the device ID (e.g. `0x00128d0001d9e1d2`).
 
 ::: tip
@@ -52,27 +52,27 @@ For example, using a `friendly_name` like `kitchen/floor_light` would result in 
 Note that a `friendly_name` is **NOT** allowed to end with `/`, `/` + one of the possible [endpoint names](https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/util/utils.ts#L30) (e.g. `/left`) or `/` + a number (e.g. `/4`).
 :::
 
-**`retain`**
+**`retain`**  
 Retain MQTT messages of this device (default `false`).
 
 
-**`retention`**
+**`retention`**  
 Sets the MQTT Message Expiry in seconds e.g. `retention: 900` = 15 minutes (default: not enabled). Make
   sure to set `mqtt.version` to `5` (see `mqtt` configuration above)
 
-**`qos`**
+**`qos`**  
 QoS level for MQTT messages of this device. [What is QoS?](https://www.npmjs.com/package/mqtt#about-qos)
 
-**`homeassistant`**
+**`homeassistant`**  
 Allows overriding the values of the Home Assistant discovery payload. See example below.
 
-**`debounce`**
+**`debounce`**  
 Debounces messages of this device. When setting e.g. `debounce: 1` and a message from a device is
   received, Zigbee2MQTT will not immediately publish this message but combine it with other messages received in that
   same second of that device. This is handy for e.g. the `WSDCGQ11LM` which publishes humidity, temperature and pressure
   at the same time but as 3 different messages.
 
-**`debounce_ignore`**
+**`debounce_ignore`**  
 Protects unique payload values of specified payload properties from overriding within debounce time.
   When setting e.g. `debounce: 1` and `debounce_ignore: - action` every payload with unique `action` value will be
   published. This is handy for e.g. the `E1744` which publishes multiple messages in short time period after one turn
@@ -80,20 +80,20 @@ Protects unique payload values of specified payload properties from overriding w
   hand `debounce: 1` with `debounce_ignore: - action` will publish all unique action messages, at least two (
   e.g. `action: rotate_left` and `action: rotate_stop`)
 
-**`retrieve_state`**
+**`retrieve_state`**  
 (DEPRECATED) Retrieves the state after setting it. Should only be enabled when the reporting feature
   does not work for this device.
 
-**`filtered_attributes`**
+**`filtered_attributes`**  
 Allows preventing certain attributes from being published. When a device would e.g.
   publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will
   publish `{"temperature": 10}`.
 
-**`optimistic`**
+**`optimistic`**  
 Publish optimistic state after set, e.g. when a brightness change command succeeds Zigbee2MQTT assumes
   the brightness of the device changed and will publish this (default `true`).
 
-**`filtered_optimistic`**
+**`filtered_optimistic`**  
 Same as the `filtered_attributes` option but only applies to the optimistic published
   attributes. Has no effect when `optimistic: false` is set. Example: `filtered_optimistic: ["color_mode", "color"]`.
 
@@ -154,13 +154,13 @@ Usually `devices` and `groups` are specified as objects within the `configuratio
 is also possible to extract the configuration into separate files.
 
 ```yaml
-# Define the files which contains the configs
+# Define the files which contains the configs 
 devices: devices.yaml
 groups: groups.yaml
 ```
 
 ```yaml
-# devices.yaml
+# devices.yaml 
 '0x00158d0001d82999':
   friendly_name: 'my_occupancy_sensor'
 ```
