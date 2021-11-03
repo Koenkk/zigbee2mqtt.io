@@ -8,11 +8,11 @@ This page describes which MQTT topics are used by Zigbee2MQTT. Note that the bas
 
 ## zigbee2mqtt/FRIENDLY_NAME
 
-The `FRIENDLY_NAME` is the IEEE-address or, if defined, the _friendly-name_ for a device and used as MQTT topic. 
+The `FRIENDLY_NAME` is the IEEE-address or, if defined, the `friendly_name` of a device.
 
-::: tip You can use the `/` separator in `friendly_name` to _group_ devices.  
-For example, using a friendly-name like `Kitchen/Floor Light` would result in a corresponding MQTT structure
-with `Kitchen` as folder containing `Floor Light`.  
+::: tip
+You can use the `/` separator in `friendly_name` to structure devices.
+For example, using a `friendly_name` like `kitchen/floor_light` would result in a corresponding MQTT structure with `kitchen` as folder containing `floor_light` in MQTT Explorer.
 :::
 
 Published messages are **always** in a JSON format. Each device produces a different JSON message. To see what your device publishes check the "Exposes" section on the device page which can be accessed via ["Supported devices"](../../supported-devices/). Some examples:
