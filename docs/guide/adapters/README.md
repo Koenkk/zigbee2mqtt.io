@@ -245,7 +245,7 @@ _(in order of first appearance)_
     ![](../../images/cc26x2r1.jpg)
     </details>
 
-* Other
+### Other
   * <details>
     <summary>ConBee II</summary>
   
