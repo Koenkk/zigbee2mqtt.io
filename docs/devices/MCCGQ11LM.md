@@ -56,13 +56,13 @@ If the contact is being made via a horizontal slide (e.g. the sensor is placed a
 
 E.g. (devices.yaml)
 
-{% raw %}
+
 ```yaml
 '0xabc457fffe679xyz':
     friendly_name: my_sensor
     debounce: 1
 ```
-{% endraw %}
+
 <!-- Notes END: Do not edit below this line -->
 
 

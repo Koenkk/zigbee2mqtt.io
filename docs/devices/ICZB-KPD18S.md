@@ -44,13 +44,13 @@ By default (for backwards compatibility purposes) the legacy integration is enab
 For new users it is recommended to **disable** this as it has several fundamental problems.
 To disable the legacy integration add the following to your `configuration.yaml`:
 
-{% raw %}
+
 ```yaml
 '0xabc457fffe679xyz':
     friendly_name: my_remote
     legacy: false
 ```
-{% endraw %}
+
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
