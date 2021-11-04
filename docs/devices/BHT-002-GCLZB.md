@@ -32,13 +32,13 @@ Switch the thermostat off. Press and hold the temperature down button for +- 8 s
 ### Stop message flooding
 This unit has a bug that makes it send multiple messages when updating. To stop this from flooding your MQTT Queues, please add the following to your `configuration.yaml` file:
 
-{% raw %}
+
 devices:
   '0x12345678':
     friendly_name: thermostat
     debounce: 1
-{% endraw %}
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

@@ -39,6 +39,7 @@ Zigbee2MQTT should have found the thermostat. If the word "REJOIN" appears on sc
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Battery (numeric)

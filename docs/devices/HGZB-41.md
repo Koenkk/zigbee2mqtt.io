@@ -31,6 +31,7 @@ Reset of device is done by holding button for 20 secs until it starts to flash g
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Switch 
