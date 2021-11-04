@@ -18,10 +18,8 @@
       filled
       :debounce="500"
       type='search'
-      :placeholder="searchPlaceholder"
-      :label="searchFilter || searchPlaceholder === 'type to search' ? 'Search' : 'Press / to search'"
-      @focus="searchPlaceholder = 'type to search'"
-      @blur="searchPlaceholder = 'Press / to search'"
+      placeholder="Search"
+      label="Search"
       clearable
     )
       template(v-slot:append)
@@ -34,12 +32,12 @@
 
 
 <script>
+import QIcon from "quasar/src/components/icon/QIcon";
 import QInput from "quasar/src/components/input/QInput";
 import QTooltip from "quasar/src/components/tooltip/QTooltip";
-import QIcon from "quasar/src/components/icon/QIcon";
+import { defineComponent, ref, watch } from "vue";
 import MultiSelect from '../components/multi-select';
 import { exposes, vendors } from "../devices";
-import { defineComponent, onBeforeUnmount, onMounted, ref, watch } from "vue";
 import hashStore from '../hash-store';
 
 hashStore.arrayKeys.push('v');
@@ -101,23 +99,23 @@ export default defineComponent({
     watch(vendorsFilter, emitFilters);
     watch(searchFilter, emitFilters);
 
-    const searchKeyHandler = (ev) => {
-      if (ev.key === '/' && ev.target.tagName !== 'INPUT') {
-        ev.preventDefault();
-        document.querySelector('.search-filter input').focus();
-      }
-    };
-
-    onMounted(() => {
-      document.body.addEventListener('keypress', searchKeyHandler);
-    });
-
-    onBeforeUnmount(() => {
-      document.removeEventListener('keypress', searchKeyHandler);
-    })
+    // const searchKeyHandler = (ev) => {
+    //   if (ev.key === '/' && ev.target.tagName !== 'INPUT') {
+    //     ev.preventDefault();
+    //     document.querySelector('.search-filter input').focus();
+    //   }
+    // };
+    //
+    // onMounted(() => {
+    //   document.body.addEventListener('keypress', searchKeyHandler);
+    // });
+    //
+    // onBeforeUnmount(() => {
+    //   document.removeEventListener('keypress', searchKeyHandler);
+    // })
 
     return {
-      searchPlaceholder: ref('Press / to search'),
+      // searchPlaceholder: ref('Press / to search'),
       exposes,
       vendors,
       exposesFilter,
