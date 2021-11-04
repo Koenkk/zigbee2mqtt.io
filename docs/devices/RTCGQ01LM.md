@@ -40,20 +40,8 @@ Most of the times this happens because of the following reasons:
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
-
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-
-* `no_occupancy_since`: Timeout (in seconds) after which `no_occupancy_since` is sent.
-This indicates the time since the last occupancy was detected.
-For example `no_occupancy_since: [10, 60]` will send a `{"no_occupancy_since": 10}` after 10 seconds
-and a `{"no_occupancy_since": 60}` after 60 seconds.
-* `occupancy_timeout`: Timeout (in seconds) after which the `occupancy: false` message is sent.
-If not set, the timeout is `90` seconds.
-When set to `0` no `occupancy: false` is sent.
-
-**IMPORTANT**: `occupancy_timeout` should not be set to lower than 60 seconds.
+### Note about `occupancy_timeout` option
+`occupancy_timeout` should not be set to lower than 60 seconds.
 The reason is this: after detecting a motion the sensor ignores any movements for
 exactly 60 seconds. In case there are movements after this 60 seconds, a new message
 (`occupancy: true`) will be sent and the sensor will go to sleep for another minute, and so on.
@@ -64,6 +52,14 @@ To work around this, a
 [hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
 is needed.
 <!-- Notes END: Do not edit below this line -->
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `occupancy_timeout`: Time in seconds after which occupancy is cleared after detecting it (default 90 seconds). The value must be a number with a minimum value of `0`
+
+* `no_occupancy_since`: Sends a message the last time occupancy was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of number.
 
 
 ## Exposes

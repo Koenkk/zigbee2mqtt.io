@@ -32,6 +32,7 @@ To switch a device to a pairing mode power it off for 10 sec. After power on it 
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Switch 

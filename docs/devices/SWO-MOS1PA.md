@@ -31,6 +31,7 @@ Device is listed as having temperature detection. This feature is still being in
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Occupancy (binary)

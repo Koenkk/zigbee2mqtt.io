@@ -31,6 +31,7 @@ This is a Texas Instruments CC1352P-2, CC2652RB or CC2652R flashed with the foll
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Linkquality (numeric)

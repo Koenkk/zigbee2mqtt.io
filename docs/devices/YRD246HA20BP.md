@@ -28,6 +28,12 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `expose_pin`: Expose pin of this lock in the published payload (default false). The value must be `true` or `false`
+
+
 ## Exposes
 
 ### Lock 
