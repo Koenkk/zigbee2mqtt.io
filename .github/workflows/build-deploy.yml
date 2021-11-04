@@ -1,5 +1,9 @@
 name: Build ⚙ and Deploy 🚀
+
 on: [push, pull_request]
+
+concurrency:
+  group: ${{ github.ref }}
 
 jobs:
   build_and_deploy:
