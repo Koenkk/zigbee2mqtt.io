@@ -41,13 +41,13 @@ By default (for backwards compatibility purposes) the legacy integration is enab
 For new users it is recommended to **disable** this as it has several fundamental problems.
 To disable the legacy integration add the following to your `configuration.yaml`:
 
-{% raw %}
+
 ```yaml
 '0xabc457fffe679xyz':
     friendly_name: my_remote
     legacy: false
 ```
-{% endraw %}
+
 
 
 The information below only applies to the legacy integration.
@@ -57,7 +57,7 @@ This device sends multiple messages in short time period with the same payload. 
 
 E.g. (devices.yaml)
 
-{% raw %}
+
 ```yaml
 '0xabc457fffe679xyz':
     friendly_name: my_remote
@@ -65,11 +65,11 @@ E.g. (devices.yaml)
     debounce_ignore:
     - action
 ```
-{% endraw %}
+
 
 To find optimal "smoothness" play with debounce time or if you need all unique rotation steps consider adding `brightness` to `debounce_ignore` option
 
-{% raw %}
+
 ```yaml
 '0xabc457fffe679xyz':
     friendly_name: my_remote
@@ -78,7 +78,7 @@ To find optimal "smoothness" play with debounce time or if you need all unique r
     - action
     - brightness
 ```
-{% endraw %}
+
 
 ### Device type specific configuration
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
