@@ -7,6 +7,10 @@ on:
     branches: [ master ]
     types: [ completed ]
 
+concurrency:
+  group: algolia-update
+  cancel-in-progress: true
+
 jobs:
   update-algolia-index:
     runs-on: ubuntu-latest
