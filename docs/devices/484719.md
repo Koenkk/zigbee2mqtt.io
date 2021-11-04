@@ -50,12 +50,16 @@ is manually switched off then on. Lights will remember their respective attribut
 }
 ```
 **INFO**: Value is true, false (boolean)
-
-
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
 
 ## Exposes

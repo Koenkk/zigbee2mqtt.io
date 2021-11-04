@@ -28,8 +28,8 @@ pageClass: device-page
 
 ### Pairing
 Reset by unplugging any devices plugged into the socket, hold the button down for 10 secs until the light flashes Green/Orange and the Socket switches on and off. pair within 60 secs
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

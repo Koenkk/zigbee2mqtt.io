@@ -37,8 +37,13 @@ After pairing the device requires:
 - the pilot mode to be configured (Contactor/Pilot)
 - an external temperature measurment, either through a bind from a sensor, or report from the coordinator trhough automation. The temperature must be refreshed at least every 10mn
 - the target thermostat set point
-
 <!-- Notes END: Do not edit below this line -->
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `thermostat_unit`: Controls the temperature unit of the themrostat (default celsius). The value must be one of `celsius`, `fahrenheit`
 
 
 ## Exposes

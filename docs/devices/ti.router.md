@@ -28,8 +28,8 @@ pageClass: device-page
 
 ### Firmware
 This is a Texas Instruments CC1352P-2, CC2652RB or CC2652R flashed with the following firmware: https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_3.x.0/bin
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

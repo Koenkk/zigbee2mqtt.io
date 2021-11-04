@@ -30,8 +30,8 @@ pageClass: device-page
 To pair this device, hold the ON for few seconds until the red light is blinking. After that, simple tap once on the ON again to start the pairing process.
 
 Note: This device doesn't support Zigbee channels 25 & 26.
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

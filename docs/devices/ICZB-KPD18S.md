@@ -50,10 +50,13 @@ To disable the legacy integration add the following to your `configuration.yaml`
     friendly_name: my_remote
     legacy: false
 ```
-
-
-
 <!-- Notes END: Do not edit below this line -->
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
 
 
 ## Exposes

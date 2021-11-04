@@ -43,8 +43,8 @@ Open source firmware can be found here: [Github](https://github.com/diyruz/freep
 1. Bring you remote near to TL device
 2. Hold button (2) for 5 seconds
 TL functionality can work without connecting to network
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

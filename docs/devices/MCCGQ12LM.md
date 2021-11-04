@@ -42,8 +42,8 @@ E.g. (devices.yaml)
     friendly_name: my_sensor
     debounce: 1
 ```
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

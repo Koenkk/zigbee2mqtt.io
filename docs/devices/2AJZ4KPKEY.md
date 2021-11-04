@@ -45,8 +45,13 @@ You will need a needle or a pin to do it. After this the device will automatical
 
 ### Important
 Konke devices only work on Zigbee channel 15, 20 and 25.
-
 <!-- Notes END: Do not edit below this line -->
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
 
 
 ## Exposes

@@ -79,8 +79,13 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 Note: You will also notice that `temperature_setpoint_hold_duration` automatically changes to `0` which means `not set`. `occupied_heating_setpoint` automatically changes to `1` degree C.
 
 This will also stop any native boosts that are currently active.
-
 <!-- Notes END: Do not edit below this line -->
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `thermostat_unit`: Controls the temperature unit of the themrostat (default celsius). The value must be one of `celsius`, `fahrenheit`
 
 
 ## Exposes

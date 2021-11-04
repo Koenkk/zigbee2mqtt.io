@@ -28,8 +28,8 @@ pageClass: device-page
 
 ### Important
 Konke devices only work on Zigbee channel 15, 20 and 25.
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

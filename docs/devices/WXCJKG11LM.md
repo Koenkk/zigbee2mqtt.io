@@ -47,9 +47,8 @@ When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple swi
 - right double click: light dim up (by steps of 33%)
 - long left click: warm white
 - long right click: cold white
-
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

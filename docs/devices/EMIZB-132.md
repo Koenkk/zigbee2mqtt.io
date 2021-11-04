@@ -48,11 +48,11 @@ In case you are not getting any measurements, it could be that your firmware is 
 Related issues:
 - https://github.com/Koenkk/zigbee-herdsman-converters/issues/974#issuecomment-590450035
 - https://github.com/dresden-elektronik/deconz-rest-plugin/issues/2127#issuecomment-587949747
-
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 
 ## Exposes

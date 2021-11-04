@@ -29,8 +29,8 @@ pageClass: device-page
 
 ### Pairing
 Press the black pairing button on the relay module for 5 seconds until the indicator light flashes, then release the pairing button.
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

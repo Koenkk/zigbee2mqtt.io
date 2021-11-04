@@ -28,8 +28,8 @@ pageClass: device-page
 
 ### Pairing
 To reset the device and start pairing, press the button on the device for 8 seconds. The led will turn on in red and then start blinking in blue while the pairing process is active.
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

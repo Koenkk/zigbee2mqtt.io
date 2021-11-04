@@ -47,8 +47,8 @@ Unsupported:
 - HS1SA-Z : Z-wave
 
 The product code should end in *-M* for the Zigbee version. The label inside the battery compartment should also show the Zigbee logo.
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

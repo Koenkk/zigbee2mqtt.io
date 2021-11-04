@@ -48,9 +48,13 @@ You should be clicking every two seconds until pairing is complete.
 Device seems to join network also when it is paired directly to Airam bulb (which is joined to network already)
 (https://www.zigbee2mqtt.io/devices/4713407.html) by keeping ON and DIM buttons pressed while holding remote
 within 5 centimeters away from Airam bulb.
-
-
 <!-- Notes END: Do not edit below this line -->
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
 
 
 ## Exposes

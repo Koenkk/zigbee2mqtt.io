@@ -34,8 +34,8 @@ If pairing failed, try the followings:
 
 ### App
 This device also come with an iOS app (Android as well but not tested). It is recommended to do the setups via the app for better control of the lock.
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

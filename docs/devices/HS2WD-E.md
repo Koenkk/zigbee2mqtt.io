@@ -34,8 +34,8 @@ Where:
 - `duration`: the number of seconds the alarm will be on (max is 1800 seconds)
 - `mode`: `stop` or `emergency`
 - `strobe`: `true` or `false` will let the strobe flash once during the alarm
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

@@ -30,8 +30,8 @@ pageClass: device-page
 Interview fails for `modelId: 75a4bfe8ef9c4350830a25d13e3ab068` because
 `ssIasZone:iasCieAddr` can not be read or written, all messages go to the coordinator
 even without proper enrolment. Device correctly reports open or closed status.
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

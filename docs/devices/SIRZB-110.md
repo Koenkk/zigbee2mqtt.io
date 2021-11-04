@@ -60,8 +60,15 @@ Squawk are normally used to indicate activation and deactivation of an alarm sys
 Examples:
 `{"squawk":{"level":"low","mode":"system_is_sarmed","strobe":false}}`
 `{"squawk":{"level":"low","mode":"system_is_disarmed","strobe":false}}`
-
 <!-- Notes END: Do not edit below this line -->
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

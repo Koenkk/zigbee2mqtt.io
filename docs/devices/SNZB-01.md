@@ -30,8 +30,8 @@ pageClass: device-page
 ### Pairing
 Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode.
 The reset button can be found by removing the back cover.
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

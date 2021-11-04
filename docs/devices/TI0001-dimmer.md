@@ -49,9 +49,8 @@ If you decided to create a new network, you should specify another 'pan_id'.
 advanced:
   pan_id: 6756
 ```
-
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

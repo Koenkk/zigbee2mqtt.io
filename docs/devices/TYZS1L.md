@@ -31,9 +31,13 @@ This device has various limitations:
 - Changing brightness is not supported
 - On/off and color transition is not supported
 - Color can only be set via hue/saturation, example payload `{"color":{"h": 360, "s": 100}}`.
-
-
 <!-- Notes END: Do not edit below this line -->
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
 
 
 ## Exposes

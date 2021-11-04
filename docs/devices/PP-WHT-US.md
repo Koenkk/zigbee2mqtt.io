@@ -52,11 +52,11 @@ Save the file and restart Zigbee2MQTT.
 This device only support power measurements with an up-to-date firmware on the plug which can only be done
 via the original hub. In case of an older firmware you will only see 0 values in the measurements.
 Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
-
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 
 ## Exposes

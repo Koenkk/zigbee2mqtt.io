@@ -53,8 +53,8 @@ To stop:
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": "START"}` and `{"alarm": "OFF"}`
 Set `max_duration` from the Zigbee2MQTT UI or by publishing `{"max_duration": NEW_VALUE}`
 This alarm are preset to highest volume
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

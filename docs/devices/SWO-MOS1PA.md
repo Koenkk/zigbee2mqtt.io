@@ -28,8 +28,8 @@ pageClass: device-page
 
 ### Temperature not supported
 Device is listed as having temperature detection. This feature is still being investigated.
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes

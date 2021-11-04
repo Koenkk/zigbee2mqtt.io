@@ -30,8 +30,8 @@ pageClass: device-page
 Zigbee Router for __Xiaomi DGNWG05LM__ and __Aqara ZHWG11LM__ gateways.
 
 Open source firmware can be found here: [Github](https://github.com/igo-r/Lumi-Router-JN5169)
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes
