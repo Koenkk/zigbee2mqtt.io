@@ -39,6 +39,18 @@ Most of the times this happens because of the following reasons:
 - The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, OSRAM, Sylvania, SmartThings, Securifi.
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
+
+### Note about `occupancy_timeout` option
+`occupancy_timeout` should not be set to lower than 60 seconds.
+The reason is this: after detecting a motion the sensor ignores any movements for
+exactly 60 seconds. In case there are movements after this 60 seconds, a new message
+(`occupancy: true`) will be sent and the sensor will go to sleep for another minute, and so on.
+Therefore, in order to sustain `occupancy: true`, you need a reasonable window after this 60s sleep
+to determine continued occupancy.
+This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/issues/270#issuecomment-414999973)).
+To work around this, a
+[hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
+is needed.
 <!-- Notes END: Do not edit below this line -->
 
 
