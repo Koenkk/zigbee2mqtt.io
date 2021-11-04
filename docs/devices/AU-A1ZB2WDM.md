@@ -31,12 +31,7 @@ To pair the dimmer, press and hold the knob for 6 seconds.
 The connected load, and the red LED indicator behind the dimmer knob will flash twice to indicate it has entered pairing mode.
 The connected load, and the red LED indicator behind the dimmer knob will flash a third time to indicate that it has paired successfully.
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `transition`: Controls the transition time (in seconds) of on/off, brightness,
-color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
-Note that this value is overridden if a `transition` value is present in the MQTT command payload.
 <!-- Notes END: Do not edit below this line -->
 
 

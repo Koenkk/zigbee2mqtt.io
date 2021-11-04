@@ -30,15 +30,7 @@ pageClass: device-page
 Press and hold the reset button on the device for +- 5 seconds (until the green light starts blinking).
 After this the device will automatically join.
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `temperature_precision`: Controls the precision of `temperature` values,
-e.g. `0`, `1` or `2`; default `2`.
-To control the precision based on the temperature value set it to e.g. `{30: 0, 10: 1}`,
-when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1. Precision will take into affect with next report of device.
-* `temperature_calibration`: Allows to manually calibrate temperature values,
-e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
 <!-- Notes END: Do not edit below this line -->
 
 

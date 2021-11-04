@@ -29,6 +29,7 @@ pageClass: device-page
 ### Pairing
 Press and hold water logo on the device for +- 5 seconds (you have to press quite hard) until the blue light blinks
 three times, release the water logo (the blue light will blink once more) and wait.
+
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates

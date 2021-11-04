@@ -25,12 +25,6 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
-
-
 ### Setting outdoor temperature
 To set _outdoor temperature_, you need to send the value to the following MQTT topic:
 ```
@@ -54,6 +48,7 @@ If you want to automate the publishing of the outdoor temperature using Home Ass
 ```
 
 **IMPORTANT**: The outdoor temperature need to be refreshed at least each 4 hours, or the `EXT` display will be cleared on the thermostat.
+
 <!-- Notes END: Do not edit below this line -->
 
 

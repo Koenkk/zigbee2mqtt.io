@@ -54,6 +54,7 @@ To pair it, hold the corresponding button for that channel for 7 seconds or more
 | A1 | 20 |
 | B0 | 11 |
 | B1 | 25 |
+
 <!-- Notes END: Do not edit below this line -->
 
 

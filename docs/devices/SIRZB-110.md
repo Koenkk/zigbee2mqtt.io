@@ -60,6 +60,7 @@ Squawk are normally used to indicate activation and deactivation of an alarm sys
 Examples:
 `{"squawk":{"level":"low","mode":"system_is_sarmed","strobe":false}}`
 `{"squawk":{"level":"low","mode":"system_is_disarmed","strobe":false}}`
+
 <!-- Notes END: Do not edit below this line -->
 
 

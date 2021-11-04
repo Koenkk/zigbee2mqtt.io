@@ -23,18 +23,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
-
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `illuminance_lux_precision`: Controls the precision of `illuminance_lux` values, e.g. `0` or `1`; default `1`.
-To control the precision based on the illuminance_lux value set it to e.g. `{1000: 0, 100: 1}`,
-when illuminance_lux >= 1000 precision will be 0, when illuminance_lux >= 100 precision will be 1. Precision will take into affect with next report of device.
 
 
-* `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
-e.g. `95` would take 95% to the illuminance reported by the device; default `100`. Calibration will take into affect with next report of device.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -44,6 +44,7 @@ To pair this device on channel 11, hold the configuration button (on the back of
 Note: each side of the device is treated as a single ZLGP17.
 
 This device can work on any channel, not only 11. For this, please refer to the [Legrand ZLGP18 manual chapter 6.2](https://www.admin.legrandoc.com/files/documents/S000112516EN-00.pdf).
+
 <!-- Notes END: Do not edit below this line -->
 
 

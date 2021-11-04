@@ -52,6 +52,7 @@ The sensitivity can be changed by publishing to `zigbee2mqtt/FRIENDLY_NAME/set`
 values: `low`, `medium`,  `high`.
 
 After setting the sensitivity you immediately have to start pressing the reset button with an interval of 1 second until you see Zigbee2MQTT publishing the new sensitivity to MQTT.
+
 <!-- Notes END: Do not edit below this line -->
 
 

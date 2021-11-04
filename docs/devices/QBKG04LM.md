@@ -46,10 +46,7 @@ Press and hold the button on the device for +- 10 seconds
 You may have to unpair the switch from an existing coordinator before the pairing process will start.
 If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates

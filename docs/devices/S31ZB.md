@@ -28,6 +28,7 @@ pageClass: device-page
 
 ### Pairing
 After first power on, it should enter pairing mode. To pair to a new network, long press reset button for 5s until the Wi-Fi LED indicator changes to a cycle of two short flashes and one long flash, then release.
+
 <!-- Notes END: Do not edit below this line -->
 
 

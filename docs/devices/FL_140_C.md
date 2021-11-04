@@ -29,40 +29,7 @@ pageClass: device-page
 ### Pairing
 Factory reset the light bulb ([video](https://www.youtube.com/watch?v=4zkpZSv84H4)).
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
-the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)
-
-
-* `transition`: Controls the transition time (in seconds) of on/off, brightness,
-color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
-Note that this value is overridden if a `transition` value is present in the MQTT command payload.
-
-
-* `hue_correction`: (optional) Corrects hue values based on a correction map for matching color
-rendition to other lights. Provide a minimum of 2 data sets in the correction map. To build a map:
-    * choose one of your other lights to be the color reference
-    * send a sample color to both lights (reference and non-reference)
-    * modify hue value for non-reference light until it color matches the reference light
-    * take note of the in and out values, where
-        * `in` is the hue value you sent to your reference light
-        * `out` is the hue value you had to dial your non-reference light to
-    * repeat with a few other sample colors (4-5 should suffice)
-
-    **Example correction map:**
-    ```yaml
-    hue_correction:
-        - in: 28
-          out: 45
-        - in: 89
-          out: 109
-        - in: 184
-          out: 203
-        - in: 334
-          out: 318
-    ```
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -32,12 +32,7 @@ pageClass: device-page
 3. Repeat off/on four times.
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `transition`: Controls the transition time (in seconds) of on/off, brightness,
-color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
-Note that this value is overridden if a `transition` value is present in the MQTT command payload.
 <!-- Notes END: Do not edit below this line -->
 
 

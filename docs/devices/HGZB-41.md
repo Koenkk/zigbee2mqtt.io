@@ -28,6 +28,7 @@ pageClass: device-page
 
 ### Pairing
 Reset of device is done by holding button for 20 secs until it starts to flash green. It will now automatically pair.
+
 <!-- Notes END: Do not edit below this line -->
 
 

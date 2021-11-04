@@ -25,12 +25,6 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
-
-
 ### Controlling
 Get local temperature in degrees Celsius (in the range 0x954d to 0x7fff, i.e. -273.15°C to 327.67 ºC)
 ```json
@@ -193,6 +187,7 @@ tz.thermostat_relay_status_log
 Get relay status log response
 tz.thermostat_relay_status_log_rsp
 -->
+
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -35,18 +35,7 @@ The Status LED will blink 5 times quickly to indicate a successful pairing.
 Press and hold the All Off and All On button on the Remote until the Status LED turns on.
 Then immediately press 5 times the All On button.
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `simulated_brightness`: Set to `true` to simulate a `brightness` value (default: `false`).
-If this device provides a `brightness_move_up` or `brightness_move_down` action it is possible to specify the update
-interval and delta. This can be done by instead of specifying `true`:
-
-```yaml
-simulated_brightness:
-  delta: 20 # delta per interval, default = 20
-  interval: 200 # interval in milliseconds, default = 200
-```
 <!-- Notes END: Do not edit below this line -->
 
 

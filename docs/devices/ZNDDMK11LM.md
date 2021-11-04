@@ -30,16 +30,7 @@ pageClass: device-page
 
 The device itself supports two modes: `RGBW mode` and `Dual color temperature mode`. When the device works under `Dual color temperature mode`, it can control two color temperature lightstrips individually at the same time, and this is the only mode being supported by Zigbee2MQTT currently. More details can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/8510).
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `color_sync`: Synchronizes the color values in the state, e.g. if the state contains `color_temp` and `color.xy` and
-the `color_temp` is set, `color.xy` will be updated to match the `color_temp`. (default: `true`)
-
-
-* `transition`: Controls the transition time (in seconds) of on/off, brightness,
-color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
-Note that this value is overridden if a `transition` value is present in the MQTT command payload.
 <!-- Notes END: Do not edit below this line -->
 
 

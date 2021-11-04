@@ -36,6 +36,7 @@ To pair the thermostat controller to both Zigbee2MQTT and the thermostat receive
 5. once paired, the word "FIND" disappears and the temperature will be displayed
 
 Zigbee2MQTT should have found the thermostat. If the word "REJOIN" appears on screen, the buttons were released too early and the process must be repeated. The controller should be able to control the boiler whilst still reporting to Zigbee2MQTT.
+
 <!-- Notes END: Do not edit below this line -->
 
 

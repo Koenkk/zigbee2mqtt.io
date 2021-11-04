@@ -118,6 +118,7 @@ After this command thermostat responds with two messages. One for calibration ch
         "eco_temperature": 17
     }
     ```
+
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates

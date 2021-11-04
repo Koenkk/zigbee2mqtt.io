@@ -48,10 +48,7 @@ Unfortunately Gira seems to have dropped support for their ZigBee transmitters c
 For the device to ask for/accept OTA updates, it needs to be in "programming mode" (same mode as for joining a network, see above).
 In case the device does still not accept updates or seems to be stuck somehow, it may help to do a factory reset, join the network again and then again enter programming mode before starting the OTA update again.
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates

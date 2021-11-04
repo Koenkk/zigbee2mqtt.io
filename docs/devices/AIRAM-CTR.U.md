@@ -49,10 +49,7 @@ Device seems to join network also when it is paired directly to Airam bulb (whic
 (https://www.zigbee2mqtt.io/devices/4713407.html) by keeping ON and DIM buttons pressed while holding remote
 within 5 centimeters away from Airam bulb.
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 <!-- Notes END: Do not edit below this line -->
 
 

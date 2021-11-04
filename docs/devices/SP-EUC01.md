@@ -28,6 +28,7 @@ pageClass: device-page
 
 ### Pairing
 Press and hold the button on the device for +- 5 seconds, until the blue light starts blinking.
+
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates

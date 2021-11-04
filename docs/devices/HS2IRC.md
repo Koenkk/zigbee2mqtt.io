@@ -148,6 +148,7 @@ Request:
 
 - **id**: `1..15` - Delete specific device with ID. `>=16` - Delete all devices.
 - **key_code**: `1..30` -Delete specific keycode. `>=31` - Delete all keycodes for specified device ID.
+
 <!-- Notes END: Do not edit below this line -->
 
 

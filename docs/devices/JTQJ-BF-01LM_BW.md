@@ -41,6 +41,7 @@ values: `low`, `medium`,  `high`.
 A self-test can be trigged by publishing to `zigbee2mqtt/FRIENDLY_NAME/set`
 `{"selftest": ""}`.
 If the selftest is executed successfully you will hear the device beep in 30 seconds.
+
 <!-- Notes END: Do not edit below this line -->
 
 

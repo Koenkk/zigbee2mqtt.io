@@ -28,6 +28,7 @@ pageClass: device-page
 
 ### Pairing
 Factory resetting by pushing the "Reset-Button" longer than 5 seconds or by using Touchlink factory reset.
+
 <!-- Notes END: Do not edit below this line -->
 
 

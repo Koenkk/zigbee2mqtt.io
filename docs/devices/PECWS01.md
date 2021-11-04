@@ -1,7 +1,7 @@
 ---
 title: "Perenio PECWS01 control via MQTT"
 description: "Integrate your Perenio PECWS01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2021-11-04T17:22:41.043Z
+addedAt: 2021-11-04T17:22:41
 pageClass: device-page
 ---
 

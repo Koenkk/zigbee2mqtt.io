@@ -35,10 +35,7 @@ Factory reset the remote by holding the 0 (off) button for +-20 seconds.
 To establish a connection keep the remote within 2 meters from the hub.
 Press and hold the smart group button (button with two bulbs) and wait until the lights, below the channels, flash.
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 <!-- Notes END: Do not edit below this line -->
 
 

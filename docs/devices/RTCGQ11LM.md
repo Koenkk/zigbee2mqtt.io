@@ -40,39 +40,7 @@ Most of the times this happens because of the following reasons:
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `illuminance_lux_calibration`: Allows to manually calibrate illuminance values,
-e.g. `95` would take 95% to the illuminance reported by the device; default `100`. Calibration will take into affect with next report of device.
-
-
-* `temperature_precision`: Controls the precision of `temperature` values,
-e.g. `0`, `1` or `2`; default `2`.
-To control the precision based on the temperature value set it to e.g. `{30: 0, 10: 1}`,
-when temperature >= 30 precision will be 0, when temperature >= 10 precision will be 1. Precision will take into affect with next report of device.
-* `temperature_calibration`: Allows to manually calibrate temperature values,
-e.g. `1` would add 1 degree to the temperature reported by the device; default `0`. Calibration will take into affect with next report of device.
-
-
-* `no_occupancy_since`: Timeout (in seconds) after which `no_occupancy_since` is sent.
-This indicates the time since the last occupancy was detected.
-For example `no_occupancy_since: [10, 60]` will send a `{"no_occupancy_since": 10}` after 10 seconds
-and a `{"no_occupancy_since": 60}` after 60 seconds.
-* `occupancy_timeout`: Timeout (in seconds) after which the `occupancy: false` message is sent.
-If not set, the timeout is `90` seconds.
-When set to `0` no `occupancy: false` is sent.
-
-**IMPORTANT**: `occupancy_timeout` should not be set to lower than 60 seconds.
-The reason is this: after detecting a motion the sensor ignores any movements for
-exactly 60 seconds. In case there are movements after this 60 seconds, a new message
-(`occupancy: true`) will be sent and the sensor will go to sleep for another minute, and so on.
-Therefore, in order to sustain `occupancy: true`, you need a reasonable window after this 60s sleep
-to determine continued occupancy.
-This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/issues/270#issuecomment-414999973)).
-To work around this, a
-[hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
-is needed.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -37,6 +37,7 @@ devices:
   '0x12345678':
     friendly_name: thermostat
     debounce: 1
+
 <!-- Notes END: Do not edit below this line -->
 
 

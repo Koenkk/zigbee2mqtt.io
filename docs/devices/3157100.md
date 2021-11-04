@@ -23,12 +23,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
 <!-- Notes END: Do not edit below this line -->
 
 

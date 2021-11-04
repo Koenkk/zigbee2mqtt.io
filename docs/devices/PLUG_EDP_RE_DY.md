@@ -28,6 +28,7 @@ pageClass: device-page
 
 ### Pairing
 Factory reset the plug (hold the switch button for >10sec). After resetting the switch will automatically connect.
+
 <!-- Notes END: Do not edit below this line -->
 
 
