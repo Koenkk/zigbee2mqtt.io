@@ -41,6 +41,23 @@ export default async function generateDevice(device) {
     console.log(`New Device ${ device.vendor } ${ device.model }`);
   }
 
+  // TEMP START: removes device specific configuration
+  const lines = notes.split('\n');
+  notes = "";
+  let skip = false;
+  for (const line of lines) {
+    if (line.startsWith("### Device type specific configuration")) {
+      skip = true;
+    } else if (line.startsWith('#')) {
+      skip = false;
+    }
+
+    if (!skip) {
+      notes += line + '\n';
+    }
+  }
+  // TEMP STOP
+
   const content = `---
 title: "${ device.vendor } ${ device.model } control via MQTT"
 description: "Integrate your ${ device.vendor } ${ device.model } via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
@@ -72,9 +89,10 @@ ${ device.hasOwnProperty('ota') ? `
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 ` : '' }
-${ generateOptions(device) }
 ${ generateExpose(device) }
 `;
+
+// ${ generateOptions(device) }
 
   return generatePage(content, deviceFile);
 }
