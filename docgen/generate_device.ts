@@ -56,6 +56,8 @@ export default async function generateDevice(device) {
       notes += line + '\n';
     }
   }
+
+  if (notes.trim() == '## Notes') notes = '';
   // TEMP STOP
 
   const content = `---
