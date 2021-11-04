@@ -33,6 +33,7 @@ Note: This device doesn't support Zigbee channels 25 & 26.
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Switch 

@@ -41,6 +41,7 @@ More detailed information about this can be found [here](https://community.hubit
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Battery (numeric)

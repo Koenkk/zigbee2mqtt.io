@@ -23,13 +23,15 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
 
-### Device type specific configuration
+
+<!-- Notes END: Do not edit below this line -->
+
+
+## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `presence_timeout`: Timeout (in seconds) after which `presence: false` will be send when the device has not checked-in. By default 100 seconds, don't go lower then 30 seconds.
-<!-- Notes END: Do not edit below this line -->
+* `presence_timeout`: Time in seconds after which presence is cleared after detecting it (default 100 seconds). The value must be a number with a minimum value of `0`
 
 
 ## Exposes

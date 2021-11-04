@@ -25,12 +25,6 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Device type specific configuration
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
-
-
 ### Setting outdoor temperature
 To set _outdoor temperature_, you need to send the value to the following MQTT topic:
 ```
@@ -55,6 +49,18 @@ If you want to automate the publishing of the outdoor temperature using Home Ass
 
 **IMPORTANT**: The outdoor temperature need to be refreshed at least each 4 hours, or the `EXT` display will be cleared on the thermostat.
 <!-- Notes END: Do not edit below this line -->
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `thermostat_unit`: Controls the temperature unit of the themrostat (default celsius). The value must be one of `celsius`, `fahrenheit`
+
+* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
+
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

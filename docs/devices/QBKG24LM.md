@@ -38,6 +38,7 @@ If you can't do this, try to remove battery (if it has one), push the button (to
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
+
 ## Exposes
 
 ### Switch (left endpoint)
