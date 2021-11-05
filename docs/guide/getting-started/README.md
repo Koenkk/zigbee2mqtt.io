@@ -82,8 +82,6 @@ services:
       - 8080:8080
     environment:
       - TZ=Europe/Berlin
-    group_add:
-      - dialout
     devices:
       - /dev/ttyUSB0:/dev/ttyUSB0
 ```
