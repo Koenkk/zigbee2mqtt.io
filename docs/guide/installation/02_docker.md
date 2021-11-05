@@ -66,7 +66,7 @@ uid=1001(pi) gid=1001(pi) Groups=...
 ```
 $ sudo docker run \
    --name=zigbee2mqtt \
-   -v ($pwd)/data:/app/data \
+   -v $(pwd)/data:/app/data \
    -v /run/udev:/run/udev:ro \
    --device=/dev/ttyACM0 \
    --user 1001:1001 \
