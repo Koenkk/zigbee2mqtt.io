@@ -2,7 +2,7 @@
 sidebarDepth: 1
 ---
 
-# WebUI
+# Frontend
 ::: tip
 Ongoing discussion about the frontend can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/4266)
 :::
