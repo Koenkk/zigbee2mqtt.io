@@ -100,7 +100,7 @@ mqtt:
 # Zigbee Adapter path
 serial:
   port: /dev/ttyUSB0
-# Enable the Zigbee2MQTT WebUI
+# Enable the Zigbee2MQTT frontend
 frontend:
   port: 8080
 # Let Zigbee2MQTT generate a new network key on first start
@@ -123,7 +123,7 @@ $ docker-compose logs -f
 ```
 
 After some short time you should see some log messages that Mosquitto and Zigbee2MQTT is running now.
-You can open the WebUI using [http://localhost:8080](http://localhost:8080) (or the hostname of your remote server).
+You can open the frontend using [http://localhost:8080](http://localhost:8080) (or the hostname of your remote server).
 
 We can now go on and pair our first device.
 
@@ -134,7 +134,7 @@ Search the [supported devices](../../supported-devices/) for your device and fol
 
 If no instructions are available, the device can probably be paired by factory resetting it.
 
-Once you see something similar to below in the log your device is paired and you can start controlling it using the WebUI and MQTT messages.
+Once you see something similar to below in the log your device is paired and you can start controlling it using the frontend and MQTT messages.
 
 ```
 Zigbee2MQTT:info  2019-11-09T12:19:56: Successfully interviewed '0x00158d0001dc126a', device has successfully been paired
