@@ -173,7 +173,7 @@ _(in order of first appearance)_
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip)  
     * [Description](https://github.com/cyijun/OpenZ3Gateway)  
-    * [Contact](mailto:cyjason2000@163.com)  
+    * [Tindie](https://www.tindie.com/products/cyijun/openz3gateway/)  
   
     ![](../../images/openz3gateway.jpg)
     </details>
