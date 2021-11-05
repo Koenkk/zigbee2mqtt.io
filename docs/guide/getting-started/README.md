@@ -59,7 +59,7 @@ First, we create the `docker-compose.yml` file which defines how Docker would ru
 
 
 ```yaml
-version: '3.8'
+version: '3.5'
 services:
   mqtt:
     image: eclipse-mosquitto:2.0
@@ -82,8 +82,6 @@ services:
       - 8080:8080
     environment:
       - TZ=Europe/Berlin
-    group_add:
-      - dialout
     devices:
       - /dev/ttyUSB0:/dev/ttyUSB0
 ```
