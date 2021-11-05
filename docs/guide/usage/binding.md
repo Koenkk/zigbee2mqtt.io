@@ -11,7 +11,9 @@ A use case for this is e.g. the TRADFRI wireless dimmer. Binding the dimmer dire
 - It will work even when home automation software, Zigbee2MQTT or the coordinator is down.
 
 ## Commands
-> **_TIP:_**  All commands below can also be executed via the frontend, click on your device and go to the *Bind* tab.
+::: tip
+All commands below can also be executed via the frontend, click on your device and go to the *Bind* tab.
+:::
 
 Binding can be configured by using either `zigbee2mqtt/bridge/request/device/bind` to bind and `zigbee2mqtt/bridge/request/device/unbind` to unbind. The payload should be `{"from": SOURCE, "to": TARGET}` where `SOURCE` and `TARGET` can be the `friendly_name` of a group or device. Example request payload: `{"from": "my_remote", "to": "my_bulb"}`, example response payload: `{"data":{"from":"my_remote","to":"my_bulb","clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`. The `clusters` in the response indicate the bound/unbound clusters, `failed` indicates any failed to bind/unbind clusters. In case all clusters fail to bind the `status` is set to `error`.
 

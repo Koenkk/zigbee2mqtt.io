@@ -6,7 +6,9 @@ Touchlink is a feature of Zigbee which allows devices physically close to each o
 
 Note that not all Zigbee devices support Touchlink, but most bulbs of common brands like Philips and IKEA support this.
 
-> **_TIP:_**  All commands below can also be executed via the frontend *Touchlink* tab.
+::: tip 
+All commands below can also be executed via the frontend *Touchlink* tab.
+:::
 
 ## Scan
 This allows to scan for Touchlink enabled devices. The outcome of this scan can be used later to determine what device to factory reset. To scan send a MQTT message to `zigbee2mqtt/bridge/request/touchlink/scan` with an empty payload.
