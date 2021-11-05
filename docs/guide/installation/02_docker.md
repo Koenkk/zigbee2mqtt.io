@@ -100,7 +100,7 @@ services:
       - ./data:/app/data
       - /run/udev:/run/udev:ro
     ports:
-      # Frontend port
+      # WebUI port
       - 8080:8080
     environment:
       - TZ=Europe/Berlin

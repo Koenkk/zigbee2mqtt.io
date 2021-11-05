@@ -3,8 +3,8 @@
 # Allowing devices to join
 To allow devices to join the network joining has to be permitted. There are various ways to do this:
 
-### Frontend (recommended)
-Enabling joining via the frontend ensures that joining is disabled automatically after 255 seconds.
+### WebUI (recommended)
+Enabling joining via the WebUI ensures that joining is disabled automatically after 255 seconds.
 The joining button can be found in the right top.
 
 ### MQTT (recommended)

@@ -50,7 +50,7 @@ To start one, or modify an already active one, send the following payload to the
    "occupied_heating_setpoint":"18"  // Replace with desired temperature. Between 5 and 32 C
 }
 ```
-Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
+Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the WebUI will not work.
 
 Also, the native boost can be used as a method to pause the heating too. To do so, set the temperature to a low value.
 

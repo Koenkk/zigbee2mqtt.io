@@ -14,7 +14,7 @@ To achieve the best possible integration (including MQTT discovery):
 - Enable the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/) in Home Assistant
 
 ## Device/group page
-Since Home Assistant 2021.11 the device/group page in Home Assistant can directly link to the frontend (*Visit device* button).
+Since Home Assistant 2021.11 the device/group page in Home Assistant can directly link to the WebUI (*Visit device* button).
 To enable this set the `url` in the [WebUI](../../configuration/webui.md) configuration.
 
 ## Home Assistant device registry

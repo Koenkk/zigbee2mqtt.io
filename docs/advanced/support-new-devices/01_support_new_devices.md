@@ -40,7 +40,7 @@ const definition = {
     description: 'MiJia temperature & humidity sensor', // Description of the device, copy from vendor site. (only used for documentation and startup logging)
     fromZigbee: [], // We will add this later
     toZigbee: [], // Should be empty, unless device can be controlled (e.g. lights, switches).
-    exposes: [e.battery(), e.temperature(), e.humidity()], // Defines what this device exposes, used for e.g. Home Assistant discovery and in the frontend
+    exposes: [e.battery(), e.temperature(), e.humidity()], // Defines what this device exposes, used for e.g. Home Assistant discovery and in the WebUI
 };
 
 module.exports = definition;
@@ -132,7 +132,7 @@ const definition = {
 In case none of the existing converters fit you can add custom ones, external converter example for this can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.js).
 
 ### 4. Add device picture to zigbee2mqtt.io documentation
-To make sure a picture is available for this device on the supported devices page and in the frontend:
+To make sure a picture is available for this device on the supported devices page and in the WebUI:
 
 1. Clone [zigbee2mqtt.io](https://github.com/Koenkk/zigbee2mqtt.io)
 2. Optional: Add a markdown file for your device to `docs/devices`, use the `model` property of your definition as the filename.
