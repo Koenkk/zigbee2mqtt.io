@@ -24,43 +24,47 @@ Now configure the MQTT server and adapter location as explained [here](./01_linu
 
 ## Running the container
 
-### Running as root
 Execute the following command, update the `--device` parameter to match the location of your adapter.
 
 ```bash
 $ docker run \
-   -it \
-   -v $(pwd)/data:/app/data \
    --device=/dev/ttyACM0 \
-   -e TZ=Europe/Amsterdam \
+   -v $(pwd)/data:/app/data \
    -v /run/udev:/run/udev:ro \
-   --privileged=true \
+   -e TZ=Europe/Amsterdam \
    koenkk/zigbee2mqtt
 ```
 
-#### Parameters explanation
-* `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration
+**Parameters explanation:**  
 * `--device=/dev/ttyACM0`: Location of adapter (e.g. CC2531)
-* `-v /run/udev:/run/udev:ro --privileged=true`: is optional, only required for autodetecting the port
-* Optional: in case your MQTT broker is running on `localhost` and is not within the same Docker network as the Zigbee2MQTT container also add `--network host \`.
-* For USB auto-discovery, the container needs to be executed by root in "--privileged" mode.
+* `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration (pwd maps to the current working directory)
+* `-v /run/udev:/run/udev:ro`: only required for auto-detecting the port and some adapters like ConBee
+* `-e TZ=Europe/Amsterdam`: Configure the timezone
 
-### Running as non-root
+::: tip
+If you run the MQTT-Server on the same host (localhost) you could use the IP
+of the `docker0` bridge to establish the connection: `server: mqtt://172.17.0.1`.
+:::
 
-1. Identify the group that has access to the adapter (in Ubuntu, e.g. it might be assigned to `dialout`):
+### Rootless container
+
+To improve the security of the deployment you may want to run Zigbee2MQTT as a _non-root_ user.
+
+1. Identify the group that has access to the adapter (in Ubuntu, e.g. it might be assigned to `dialout`). Update `ttyACM0` to match your adapter location.
 ```
-$ ls -l /dev/tty*
+$ ls -l /dev/ttyACM0
+crw-rw---- 1 root dialout 166, 0 Nov 5 16:31 /dev/ttyACM0
 ```
 
-2. Check the user&group id you want to execute the docker image with:
+2. If you want to run Zigbee2MQTT using your current user find the `uid` (UserID) and `gid` (GroupID): 
 ```
 $ id
+uid=1001(pi) gid=1001(pi) Groups=...
 ```
 
-3. Start the docker container (note: interface, user&group ID must match the outputs above):
+3. Start the docker container after updating  `device`, `user` (uid:gid) and `group-add`:
 ```
 $ sudo docker run \
-   -it \
    --name=zigbee2mqtt \
    -v ($pwd)/data:/app/data \
    -v /run/udev:/run/udev:ro \
@@ -68,8 +72,13 @@ $ sudo docker run \
    --user 1001:1001 \
    --group-add dialout \
    -e TZ=Europe/Amsterdam \
-   koenkk/zigbee2mqtt</b>
+   koenkk/zigbee2mqtt
 ```
+
+**Parameters explanation:**  
+* `--user 1001:1001`: Run the Zigbee2MQTT process within the container using the provided UserID and GroupID
+* `--group-add dialout`: Assign the `dialout` group to the user to be able to access the device 
+
 
 ## Updating
 To update to the latest Docker image:
@@ -85,12 +94,13 @@ The following tags are available:
 - Latest dev version (based on [`dev`](https://github.com/Koenkk/zigbee2mqtt/tree/dev) branch): `latest-dev`
 - Specific release version, e.g: `1.7.0`
 
+
 ## Docker Compose
 
 Example of a Docker Compose file:
 
 ```yaml
-version: '3.5'
+version: '3.8'
 services:
   zigbee2mqtt:
     container_name: zigbee2mqtt
@@ -104,11 +114,17 @@ services:
       - 8080:8080
     environment:
       - TZ=Europe/Berlin
-    group_add:
-      - dialout
     devices:
       # Make sure this matched your adapter location
       - /dev/ttyUSB0:/dev/ttyACM0
+```
+
+You can also run a rootless container with docker-compose by adding the required attributes to the `zigbee2mqtt` service block in your `docker-compose-yml`:
+
+```yaml
+    group_add:
+      - dialout
+    user: 1000:1000
 ```
 
 ## Docker Stack device mapping
