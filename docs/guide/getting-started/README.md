@@ -59,7 +59,7 @@ First, we create the `docker-compose.yml` file which defines how Docker would ru
 
 
 ```yaml
-version: '3.5'
+version: '3.8'
 services:
   mqtt:
     image: eclipse-mosquitto:2.0
@@ -77,6 +77,7 @@ services:
     image: koenkk/zigbee2mqtt
     volumes:
       - ./zigbee2mqtt-data:/app/data
+      - /run/udev:/run/udev:ro
     ports:
       - 8080:8080
     environment:
