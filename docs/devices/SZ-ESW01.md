@@ -31,6 +31,7 @@ With the device unplugged (or socket switched off), press and hold the pairing b
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Switch 

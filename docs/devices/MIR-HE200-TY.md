@@ -31,6 +31,7 @@ Factory resetting by pushing the "Reset-Button" longer than 5 seconds or by usin
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Illuminance_lux (numeric)

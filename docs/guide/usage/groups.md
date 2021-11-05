@@ -3,7 +3,9 @@
 # Groups
 Zigbee2MQTT has support for Zigbee groups. By using Zigbee groups you can control multiple devices simultaneously with one command.
 
-> **_TIP:_** Groups can also be managed via the frontend *Groups* tab.
+::: tip
+Groups can also be managed via the frontend *Groups* tab.
+:::
 
 ## Configuration
 Add the following to your `configuration.yaml`.

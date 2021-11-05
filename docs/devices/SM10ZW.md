@@ -33,6 +33,7 @@ even without proper enrolment. Device correctly reports open or closed status.
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Contact (binary)

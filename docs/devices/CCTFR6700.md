@@ -40,6 +40,12 @@ After pairing the device requires:
 <!-- Notes END: Do not edit below this line -->
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `thermostat_unit`: Controls the temperature unit of the themrostat (default celsius). The value must be one of `celsius`, `fahrenheit`
+
+
 ## Exposes
 
 ### Power (numeric)

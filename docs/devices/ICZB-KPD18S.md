@@ -44,19 +44,19 @@ By default (for backwards compatibility purposes) the legacy integration is enab
 For new users it is recommended to **disable** this as it has several fundamental problems.
 To disable the legacy integration add the following to your `configuration.yaml`:
 
-{% raw %}
+
 ```yaml
 '0xabc457fffe679xyz':
     friendly_name: my_remote
     legacy: false
 ```
-{% endraw %}
+<!-- Notes END: Do not edit below this line -->
 
-### Device type specific configuration
+
+## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `legacy`: Set to `false` to disable the legacy integration (highly recommended!) (default: true)
-<!-- Notes END: Do not edit below this line -->
+* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
 
 
 ## Exposes

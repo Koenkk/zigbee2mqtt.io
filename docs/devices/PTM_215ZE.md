@@ -62,6 +62,7 @@ For more informations, please refer to the [EnOcean PTM 215ZE manual chapter 5.1
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Action (enum)

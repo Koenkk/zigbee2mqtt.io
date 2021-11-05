@@ -67,6 +67,12 @@ The automation server must follow the notification with an actual change to the 
 <!-- Notes END: Do not edit below this line -->
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `occupancy_timeout`: Time in seconds after which occupancy is cleared after detecting it (default 90 seconds). The value must be a number with a minimum value of `0`
+
+
 ## Exposes
 
 ### Battery (numeric)

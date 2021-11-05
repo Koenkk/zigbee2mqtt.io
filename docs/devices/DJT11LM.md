@@ -55,6 +55,7 @@ After setting the sensitivity you immediately have to start pressing the reset b
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Battery (numeric)
