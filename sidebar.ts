@@ -26,7 +26,7 @@ export const sidebar: SidebarConfig = {
         '/guide/configuration/adapter-settings.md',
         '/guide/configuration/mqtt.md',
         '/guide/configuration/zigbee-network.md',
-        '/guide/configuration/webui.md',
+        '/guide/configuration/frontend.md',
         '/guide/configuration/devices-groups.md',
         '/guide/configuration/logging.md',
         '/guide/configuration/block-pass-list.md',
