@@ -31,6 +31,12 @@ Pair this device with a long press (5 seconds) on the on/off button. The button 
 <!-- Notes END: Do not edit below this line -->
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds. The value must be a number with a minimum value of `0`
+
+
 ## Exposes
 
 ### Switch 

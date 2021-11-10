@@ -31,6 +31,7 @@ To reset the device and start pairing, press the button on the device for 8 seco
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Switch 

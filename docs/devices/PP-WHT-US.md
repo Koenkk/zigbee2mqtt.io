@@ -58,6 +58,7 @@ Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
+
 ## Exposes
 
 ### Switch 

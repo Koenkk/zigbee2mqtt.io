@@ -33,6 +33,7 @@ Open source firmware can be found here: [Github](https://github.com/igo-r/Lumi-R
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Device_temperature (numeric)

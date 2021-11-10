@@ -5,6 +5,7 @@ import * as path from "path";
 import { promises as fsp } from "fs";
 import { generatePage, getAddedAt, getImage, normalizeModel } from "./utils";
 import { generateExpose } from "./device_page_exposes";
+import { generateOptions } from "./device_page_options";
 import { devicesBaseDir, imageBaseDir, imageBaseUrl } from "./constants";
 
 export function resolveDeviceFile(model) {
@@ -71,6 +72,7 @@ ${ device.hasOwnProperty('ota') ? `
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 ` : '' }
+${ generateOptions(device) }
 ${ generateExpose(device) }
 `;
 

@@ -35,6 +35,7 @@ three times, release the water logo (the blue light will blink once more) and wa
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
+
 ## Exposes
 
 ### Battery (numeric)

@@ -29,14 +29,13 @@ pageClass: device-page
 ### Pairing
 1. Hold button until LED start flashing (about 6 seconds), then release.
 2. Pairing is done when LED stop flashing.
+<!-- Notes END: Do not edit below this line -->
 
-### Device type specific configuration
+
+## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `transition`: Controls the transition time (in seconds) of on/off, brightness,
-color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
-Note that this value is overridden if a `transition` value is present in the MQTT command payload.
-<!-- Notes END: Do not edit below this line -->
+* `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
 
 ## Exposes

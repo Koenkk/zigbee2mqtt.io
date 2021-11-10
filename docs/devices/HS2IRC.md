@@ -151,6 +151,7 @@ Request:
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Exposes
 
 ### Battery (numeric)
