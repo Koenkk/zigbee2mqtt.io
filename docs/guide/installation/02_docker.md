@@ -126,6 +126,22 @@ You can also run a rootless container with docker-compose by adding the required
       - dialout
     user: 1000:1000
 ```
+### Starting the container
+To start the Docker container:
+```bash
+docker-compose up -d zigbee2mqtt
+```
+
+You can optionally skip `zigbee2mqtt` and it will start all containers listed in the compose file.
+
+### Updating
+To update to the latest Docker image:
+```bash
+docker-compose pull zigbee2mqtt
+docker-compose up -d zigbee2mqtt
+```
+
+You can optionally skip `zigbee2mqtt` and it will pull any new images for all containers in the compose file, and then restart those that were updated.
 
 ## Docker Stack device mapping
 *This is only relevant when using Docker Stack*
