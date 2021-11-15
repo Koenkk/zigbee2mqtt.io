@@ -86,7 +86,7 @@ services:
       - /dev/ttyUSB0:/dev/ttyUSB0
 ```
 
-In the next step we'll create a simple [Zigbee2MQTT config file](../configuration/) in `zigbee2mqtt-data/configuration.yml`.
+In the next step we'll create a simple [Zigbee2MQTT config file](../configuration/) in `zigbee2mqtt-data/configuration.yaml`.
 
 ```yaml
 # Let new devices join our zigbee network
