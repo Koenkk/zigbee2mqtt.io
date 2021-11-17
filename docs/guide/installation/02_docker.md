@@ -435,6 +435,13 @@ modprobe cdc-acm
 ````
 After issuing the commands, the Zigbee controller may need to be unplugged and re-inserted to the USB port.
 
+You may also need additional drivers based on your USB Zigbee controlller setup, e.g. CH341 module is not included by default. You can download precompiled modules from jadahl.com pages - select module directory based on NAS CPU architecture (DS218+ -> INTEL Celeron J3355 -> Apollo Lake).
+````
+cd /lib/modules
+wget http://www.jadahl.com/iperf-arp-scan/DSM_7.0/apollolake/ch341.ko
+insmod /lib/modules/ch341.ko
+````
+
 It is possible to create a start-up task that issues the above commands:
 1. Create an executable script file that contains the three modprobe commands.
 1. Using DSM's *Control Panel* -> *Task Scheduler* -> *Create* -> *Triggered Task* -> *User-defined script* with the settings: **User:** root, **Event:** Boot-up, and a `bash` command executing the executable file under *Task Settings*.
