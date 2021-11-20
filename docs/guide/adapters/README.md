@@ -400,6 +400,8 @@ Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the b
 - [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) (multi platform Python based command line tool)
 - Texas Instrumens [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only)
 
+Migrating from a different adapter? Make sure to [copy the ieee address](../faq/README.md#how-do-i-migrate-from-a-cc2530-cc2531-to-a-more-powerful-coordinator-e-g-zzh).
+
 ### Router
 Besides serving as a coordinator some adapters can also be used as a Zigbee router (check if there is a router firmware by clicking on your adapter). To factory reset/pair:
 - Texas Instruments CC2531: press the S2 button for 5 seconds.
