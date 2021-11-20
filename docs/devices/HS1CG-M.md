@@ -1,48 +1,58 @@
 ---
 title: "HEIMAN HS1CG-M control via MQTT"
-description: "Integrate your HEIMAN HS1CG-M via Zigbee2mqtt with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HS1CG-M via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-09-08T21:16:00Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/HS1CG-M.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # HEIMAN HS1CG-M
 
+|     |     |
+|-----|-----|
 | Model | HS1CG-M  |
 | Vendor  | HEIMAN  |
 | Description | Combustible gas sensor |
-| Supports | gas |
-| Picture | ![HEIMAN HS1CG-M](../images/devices/HS1CG-M.jpg) |
-
-## Notes
-
-None
-
-## Manual Home Assistant configuration
-Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
-manual integration is possible with the following configuration:
+| Exposes | gas, battery_low, tamper, linkquality |
+| Picture | ![HEIMAN HS1CG-M](https://www.zigbee2mqtt.io/images/devices/HS1CG-M.jpg) |
 
 
-{% raw %}
-```yaml
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_on: true
-    payload_off: false
-    value_template: "{{ value_json.gas }}"
-    device_class: "gas"
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
-    unit_of_measurement: "lqi"
-    value_template: "{{ value_json.linkquality }}"
-```
-{% endraw %}
 
+<!-- Notes END: Do not edit below this line -->
+
+
+
+## Exposes
+
+### Gas (binary)
+Indicates whether the device detected gas.
+Value can be found in the published state on the `gas` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` gas is ON, if `false` OFF.
+
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
+
+### Tamper (binary)
+Indicates whether the device is tampered.
+Value can be found in the published state on the `tamper` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` tamper is ON, if `false` OFF.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 

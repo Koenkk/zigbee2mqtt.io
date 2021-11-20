@@ -1,0 +1,72 @@
+name: Update Algolia-Search index
+
+# Only trigger, when the build workflow succeeded on branch master
+on:
+  workflow_run:
+    workflows: [ "Build ⚙ and Deploy 🚀" ]
+    branches: [ master ]
+    types: [ completed ]
+
+concurrency:
+  group: algolia-update
+  cancel-in-progress: true
+
+jobs:
+  update-algolia-index:
+    runs-on: ubuntu-latest
+    steps:
+        # Try to workaround time gap between newly gh-pages deployment is available (cache cleared?)
+      - name: Wait for deployment is published
+        run: |
+          CNT=1
+          echo Waiting for deployment ${GITHUB_SHA:0:7} is published
+          sleep 60
+          while ! curl -sS https://www.zigbee2mqtt.io/build.txt | grep -qF ${GITHUB_SHA:0:7} ; do
+            CNT=$((CNT+1))
+            sleep 1
+            if [ $CNT -gt 300 ]; then
+              >&2 echo "build.txt does not match current commit"
+              >&2 curl -sS https://www.zigbee2mqtt.io/build.txt
+              exit 1
+            fi
+          done
+
+      - name: Create algolia scraper config
+        run: |
+          cat << EOF > algolia.json
+          {
+            "index_name": "zigbee2mqtt.io",
+            "sitemap_urls": ["https://www.zigbee2mqtt.io/sitemap.xml"],
+            "stop_urls": [],
+            "selectors": {
+              "lvl0": {
+                "selector": "header .router-link-active",
+                "global": true,
+                "default_value": "Miscellaneous"
+              },
+              "lvl1": ".theme-default-content h1",
+              "lvl2": ".theme-default-content h2, .device-page h1 + table tbody tr:nth-child(3) td:nth-child(2)",
+              "lvl3": ".theme-default-content h3",
+              "lvl4": ".theme-default-content h4",
+              "lvl5": ".theme-default-content h5",
+              "text": ".theme-default-content p, .theme-default-content li, .theme-default-content code, .theme-default-content td",
+              "lang": {
+                "selector": "/html/@lang",
+                "type": "xpath",
+                "global": true
+              }
+            },
+            "custom_settings": {
+              "attributesForFaceting": ["lang"]
+            }
+          }
+          EOF
+
+      - run: curl -sSL https://www.zigbee2mqtt.io/build.txt
+
+      - name: Update algolia docsearch
+        uses: darrenjennings/algolia-docsearch-action@master
+        with:
+          algolia_application_id: K1BM3QYQ34
+          algolia_api_key: ${{ secrets.ALGOLIA_INDEX_APIKEY }}
+          file: 'algolia.json'

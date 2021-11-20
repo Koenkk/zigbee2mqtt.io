@@ -1,97 +1,122 @@
 ---
 title: "Xiaomi RTCGQ11LM control via MQTT"
-description: "Integrate your Xiaomi RTCGQ11LM via Zigbee2mqtt with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi RTCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/RTCGQ11LM.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi RTCGQ11LM
 
+|     |     |
+|-----|-----|
 | Model | RTCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara human body movement and illuminance sensor |
-| Supports | occupancy and illuminance |
-| Picture | ![Xiaomi RTCGQ11LM](../images/devices/RTCGQ11LM.jpg) |
+| Exposes | battery, occupancy, temperature, voltage, illuminance_lux, illuminance, linkquality |
+| Picture | ![Xiaomi RTCGQ11LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ11LM.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join.
+After this the device will automatically join. If this doesn't work, try with a single short button press.
 
 
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+### Troubleshooting: device stops sending messages/disconnects from network
+Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes happens that they disconnect from the network.
+Most of the times this happens because of the following reasons:
+- Device has a weak signal, you can see the signal quality in the published messages as `linkquality`. A linkquality < 20 is considered weak.
+- Low battery voltage, this can even happen when the battery still appears full. Try a different battery.
+- The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, OSRAM, Sylvania, SmartThings, Securifi.
 
-* `no_occupancy_since`: Timeout (in seconds) after `no_occupancy_since` is send.
-This indicates the time since last occupancy was detected.
-For example `no_occupancy_since: [10, 60]` will send a `{"no_occupancy_since": 10}` after 10 seconds
-and a `{"no_occupancy_since": 60}` after 60 seconds.
-* `occupancy_timeout`: Timeout (in seconds) after the `occupancy: false` message is sent.
-If not set, the timeout is `90` seconds.
-When set to `0` no `occupancy: false` is send.
+More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
-**IMPORTANT**: `occupancy_timeout` should not be set to lower than 60 seconds.
+### Note about `occupancy_timeout` option
+`occupancy_timeout` should not be set to lower than 60 seconds.
 The reason is this: after detecting a motion the sensor ignores any movements for
-exactly 60 seconds. In case there are movements after this, a new message
-(`occupancy: true`) will be sent and the sensor will go for one more minute sleep, and so on.
+exactly 60 seconds. In case there are movements after this 60 seconds, a new message
+(`occupancy: true`) will be sent and the sensor will go to sleep for another minute, and so on.
+Therefore, in order to sustain `occupancy: true`, you need a reasonable window after this 60s sleep
+to determine continued occupancy.
 This is expected behaviour (see [#270](https://github.com/Koenkk/zigbee2mqtt/issues/270#issuecomment-414999973)).
 To work around this, a
 [hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
 is needed.
+<!-- Notes END: Do not edit below this line -->
 
 
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `occupancy_timeout`: Time in seconds after which occupancy is cleared after detecting it (default 90 seconds). The value must be a number with a minimum value of `0`
+
+* `no_occupancy_since`: Sends a message the last time occupancy was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of number.
+
+* `illuminance_precision`: Number of digits after decimal point for illuminance, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `illuminance_lux_precision`: Number of digits after decimal point for illuminance_lux, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
-* `illuminance_calibration`: Allows to manually calibrate illuminance values,
-e.g. `95` would take 95% to the illuminance reported by the device; default `100`.
+## Exposes
 
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
-## Manual Home Assistant configuration
-Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
-manual integration is possible with the following configuration:
+### Occupancy (binary)
+Indicates whether the device detected occupancy.
+Value can be found in the published state on the `occupancy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` occupancy is ON, if `false` OFF.
 
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
 
-{% raw %}
-```yaml
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_on: true
-    payload_off: false
-    value_template: "{{ value_json.occupancy }}"
-    device_class: "motion"
+### Voltage (numeric)
+Voltage of the battery in millivolts.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `mV`.
 
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "-"
-    device_class: "illuminance"
-    value_template: "{{ value_json.illuminance }}"
+### Illuminance_lux (numeric)
+Measured illuminance in lux.
+Value can be found in the published state on the `illuminance` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
 
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
-    device_class: "battery"
-    value_template: "{{ value_json.battery }}"
+### Illuminance (numeric)
+Measured illuminance in lux.
+Value can be found in the published state on the `illuminance` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
 
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
-    unit_of_measurement: "lqi"
-    value_template: "{{ value_json.linkquality }}"
-```
-{% endraw %}
-
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 

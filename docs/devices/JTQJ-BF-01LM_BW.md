@@ -1,20 +1,28 @@
 ---
 title: "Xiaomi JTQJ-BF-01LM/BW control via MQTT"
-description: "Integrate your Xiaomi JTQJ-BF-01LM/BW via Zigbee2mqtt with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi JTQJ-BF-01LM/BW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/JTQJ-BF-01LM_BW.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Xiaomi JTQJ-BF-01LM/BW
 
+|     |     |
+|-----|-----|
 | Model | JTQJ-BF-01LM/BW  |
 | Vendor  | Xiaomi  |
 | Description | MiJia gas leak detector  |
-| Supports | gas |
-| Picture | ![Xiaomi JTQJ-BF-01LM/BW](../images/devices/JTQJ-BF-01LM-BW.jpg) |
+| Exposes | gas, battery_low, tamper, sensitivity, gas_density, selftest, linkquality |
+| Picture | ![Xiaomi JTQJ-BF-01LM/BW](https://www.zigbee2mqtt.io/images/devices/JTQJ-BF-01LM-BW.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -25,54 +33,58 @@ Now the device is ready for pairing. To initiate pairing quickly press the butto
 
 
 ### Sensitivity
-The sensitivity can be changed by publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set`
+The sensitivity can be changed by publishing to `zigbee2mqtt/FRIENDLY_NAME/set`
 `{"sensitivity": "SENSITIVITY"}` where `SENSITIVITY` is one of the following
 values: `low`, `medium`,  `high`.
 
 ### Self-test
-A self-test can be trigged by publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set`
+A self-test can be trigged by publishing to `zigbee2mqtt/FRIENDLY_NAME/set`
 `{"selftest": ""}`.
 If the selftest is executed successfully you will hear the device beep in 30 seconds.
+<!-- Notes END: Do not edit below this line -->
 
 
-## Manual Home Assistant configuration
-Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
-manual integration is possible with the following configuration:
 
+## Exposes
 
-{% raw %}
-```yaml
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_on: true
-    payload_off: false
-    value_template: "{{ value_json.gas }}"
-    device_class: "gas"
+### Gas (binary)
+Indicates whether the device detected gas.
+Value can be found in the published state on the `gas` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` gas is ON, if `false` OFF.
 
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.gas_density }}"
-    icon: "mdi:google-circles-communities"
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
 
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.sensitivity }}"
-    icon: "mdi:filter-variant"
+### Tamper (binary)
+Indicates whether the device is tampered.
+Value can be found in the published state on the `tamper` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` tamper is ON, if `false` OFF.
 
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
-    unit_of_measurement: "lqi"
-    value_template: "{{ value_json.linkquality }}"
-```
-{% endraw %}
+### Sensitivity (enum)
+Value can be found in the published state on the `sensitivity` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+The possible values are: `low`, `medium`, `high`.
 
+### Gas_density (numeric)
+Value can be found in the published state on the `gas_density` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Selftest (enum)
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"selftest": NEW_VALUE}`.
+The possible values are: ``.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 

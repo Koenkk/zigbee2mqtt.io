@@ -1,0 +1,80 @@
+---
+title: "EnOcean PTM 216Z control via MQTT"
+description: "Integrate your EnOcean PTM 216Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-09-02T18:14:38Z
+pageClass: device-page
+---
+
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
+# EnOcean PTM 216Z
+
+|     |     |
+|-----|-----|
+| Model | PTM 216Z  |
+| Vendor  | EnOcean  |
+| Description | Pushbutton transmitter module |
+| Exposes | action, linkquality |
+| Picture | ![EnOcean PTM 216Z](https://www.zigbee2mqtt.io/images/devices/PTM-216Z.jpg) |
+
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+
+
+### Green Power
+This is a Zigbee Green Power device which allows it to be very energy efficient.
+Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
+Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
+
+Green Power devices don't support binding and are not included in network scans.
+
+### Pairing
+This device has 4 buttons:
+
+| Number | Button | Position |
+|-|-|-|
+| 1 | A0 | top left |
+| 2 | A1 | bottom left |
+| 3 | B0 | top right |
+| 4 | B1 | bottom right |
+
+In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
+
+To pair it hold the corresponding button for that channel for 7 seconds or more.
+
+| Button | Channel |
+|-|-|
+| A0 | 15 |
+| A1 | 20 |
+| B0 | 11 |
+| B1 | 25 |
+
+Once the device is paired you need to confirm the channel. To do this press A1 and B0 together. Important: don't press any other buttons between this and the pairing.
+
+In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds.
+
+This device can work on any channel, not only 11, 15, 20 or 25. For this, please refer to the [EnOcean PTM 216Z manual chapter 5.3](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/).
+<!-- Notes END: Do not edit below this line -->
+
+
+
+## Exposes
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `press_1`, `press_2`, `press_1_and_2`, `press_3`, `press_1_and_3`, `press_3_and_4`, `press_1_and_2_and_3`, `press_4`, `press_1_and_4`, `press_2_and_4`, `press_1_and_2_and_4`, `press_3_and_4`, `press_1_and_3_and_4`, `press_2_and_3_and_4`, `press_all`, `press_energy_bar`, `release`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+

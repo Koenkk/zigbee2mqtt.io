@@ -1,50 +1,29 @@
 ---
 title: "IKEA ICTC-G-1 control via MQTT"
-description: "Integrate your IKEA ICTC-G-1 via Zigbee2mqtt with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your IKEA ICTC-G-1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2019-07-22T20:08:17Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/ICTC-G-1.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # IKEA ICTC-G-1
 
+|     |     |
+|-----|-----|
 | Model | ICTC-G-1  |
 | Vendor  | IKEA  |
 | Description | TRADFRI wireless dimmer |
-| Supports | brightness [0-255] (quick rotate for instant 0/255), action |
-| Picture | ![IKEA ICTC-G-1](../images/devices/ICTC-G-1.jpg) |
+| Exposes | battery, action, linkquality |
+| Picture | ![IKEA ICTC-G-1](https://www.zigbee2mqtt.io/images/devices/ICTC-G-1.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-
-
-### Recommendation
-This device sends multiple messages in short time period with the same payload. It's worth setting `debounce` option with `debounce_ignore: - action` to throttle them without losing unique action payloads.
-
-E.g. (devices.yaml)
-
-{% raw %}
-```yaml
-'0xabc457fffe679xyz':
-    friendly_name: my_remote
-    debounce: 0.5
-    debounce_ignore:
-    - action
-```
-{% endraw %}
-
-To find optimal "smoothness" play with debounce time or if you need all unique rotation steps consider adding `brightness` to `debounce_ignore` option
-
-{% raw %}
-```yaml
-'0xabc457fffe679xyz':
-    friendly_name: my_remote
-    debounce: 0.1
-    debounce_ignore:
-    - action
-    - brightness
-```
-{% endraw %}
 
 
 ### Pairing
@@ -53,68 +32,83 @@ To factory reset the TRADFRI wireless dimmer (ICTC-G-1) press the button
 After the blinks you might be willing to rotate the dimmer
 like you are trying to control your lights. It will prevent the device
 from going to sleep and ensure successful pairing. In case the dimmer was
-recognized but no actions seems to be detected, try to restart the zigbee2mqtt.
+recognized but no actions seems to be detected, try to restart Zigbee2MQTT.
 See [IKEA TRADFRI wireless dimmer (ICTC-G-1) not pairing](https://github.com/Koenkk/zigbee2mqtt/issues/620).
 
 
-### Device type specific configuration
-*[How to use device type specific configuration](../information/configuration.md)*
+### Legacy integration
+By default (for backwards compatibility purposes) the legacy integration is enabled.
+For new users it is recommended to **disable** this as it has several fundamental problems.
+To disable the legacy integration add the following to your `configuration.yaml`:
 
 
-* `transition`: Controls the transition time (in seconds) of on/off, brightness,
-color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).
-Note that this value is overridden if a `transition` value is present in the MQTT command payload.
+```yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_remote
+    legacy: false
+```
 
+
+
+The information below only applies to the legacy integration.
+
+### Recommendation
+This device sends multiple messages in short time period with the same payload. It's worth setting `debounce` option with `debounce_ignore: - action` to throttle them without losing unique action payloads.
+
+E.g. (devices.yaml)
+
+
+```yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_remote
+    debounce: 0.5
+    debounce_ignore:
+    - action
+```
+
+
+To find optimal "smoothness" play with debounce time or if you need all unique rotation steps consider adding `brightness` to `debounce_ignore` option
+
+
+```yaml
+'0xabc457fffe679xyz':
+    friendly_name: my_remote
+    debounce: 0.1
+    debounce_ignore:
+    - action
+    - brightness
+```
+<!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../information/ota_updates.md).
-
-## Manual Home Assistant configuration
-Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
-manual integration is possible with the following configuration:
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
-{% raw %}
-```yaml
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "brightness"
-    icon: "mdi:brightness-5"
-    value_template: "{{ value_json.brightness }}"
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    unit_of_measurement: "%"
-    device_class: "battery"
-    value_template: "{{ value_json.battery }}"
+* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
 
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:gesture-double-tap"
-    value_template: "{{ value_json.action }}"
 
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    icon: "mdi:signal"
-    unit_of_measurement: "lqi"
-    value_template: "{{ value_json.linkquality }}"
+## Exposes
 
-binary_sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    payload_on: true
-    payload_off: false
-    value_template: "{{ value_json.update_available}}"
-```
-{% endraw %}
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `brightness_move_up`, `brightness_move_down`, `brightness_stop`, `brightness_move_to_level`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 
