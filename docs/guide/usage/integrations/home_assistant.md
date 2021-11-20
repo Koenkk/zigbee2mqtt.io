@@ -15,7 +15,7 @@ To achieve the best possible integration (including MQTT discovery):
 
 ## Device/group page
 Since Home Assistant 2021.11 the device/group page in Home Assistant can directly link to the frontend (*Visit device* button).
-To enable this set the `url` in the [WebUI](../../configuration/webui.md) configuration.
+To enable this set the `url` in the [frontend](../../configuration/frontend.md) configuration.
 
 ## Home Assistant device registry
 When using Home Assistant MQTT discovery, Zigbee2MQTT integrates
