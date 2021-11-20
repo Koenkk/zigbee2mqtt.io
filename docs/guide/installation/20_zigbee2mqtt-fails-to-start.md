@@ -60,7 +60,7 @@ if it outputs `failure`, then you need to permanently give your user permission 
 
 ### Method 1: Give your user permissions on every reboot. ####
 
-You can create a 'udev' rule yo give your user permissions after every reboot:
+You can create a 'udev' rule to give your user permissions after every reboot:
 
 1. `udevadm info -a -n /dev/ttyACM0 | grep 'serial'`
    get the serial to your device `YOURSERIAL`
