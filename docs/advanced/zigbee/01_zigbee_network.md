@@ -33,7 +33,7 @@ Zigbee2MQTT logs the device type of your devices on startup, e.g.:
 
 ## Zigbee networking
 
-This section is an overview of how the zigbee protocol stack divides into layers (See [Wikipedia - IP layers](https://en.wikipedia.org/wiki/Internet_protocol_suite#Layer_names_and_number_of_layers_in_the_literature) ).  The number of layers in this type of description often varies; this discussion uses 4:
+This section is an overview of how the Zigbee protocol stack divides into layers (See [Wikipedia - IP layers](https://en.wikipedia.org/wiki/Internet_protocol_suite#Layer_names_and_number_of_layers_in_the_literature) ).  The number of layers in this type of description often varies; this discussion uses 4:
 
 1. the physical and MAC layers, 
 2. the network and transport layer,
@@ -48,7 +48,7 @@ The Physical and MAC layers of the Zigbee protocol are defined by [IEEE 802.15.4
 
 ### The Network and Transport layers
 
-The Network and Transport layers are where the routing, security and transport between the various nodes in a Zigbee network are defined.  This includes things like the network encryption model.  This is also where the difference between the controller, routers and end-nodes is defined in the Zigbee network - see [device types](#device-types).  There is one other Zigbee concept that I’ll put at the transport layer; the concept of Endpoints.  Similar to ports in TCP/IP, Endpoints allow each physical device to have multiple virtual devices on the network.  For example, a 3-gang zigbee switch might have a single radio, and hence only one MAC address and only one zigbee network address, but have three endpoints - one for each switch.  Each endpoint can then run a single ‘switch’ interface.
+The Network and Transport layers are where the routing, security and transport between the various nodes in a Zigbee network are defined.  This includes things like the network encryption model.  This is also where the difference between the controller, routers and end-nodes is defined in the Zigbee network - see [device types](#device-types).  There is one other Zigbee concept that I’ll put at the transport layer; the concept of Endpoints.  Similar to ports in TCP/IP, Endpoints allow each physical device to have multiple virtual devices on the network.  For example, a 3-gang Zigbee switch might have a single radio, and hence only one MAC address and only one Zigbee network address, but have three endpoints - one for each switch.  Each endpoint can then run a single ‘switch’ interface.
 
 ### The application layer
 
@@ -56,7 +56,7 @@ Zigbee is more than just a networking technology; it defines a bunch of standard
 
 As noted above, each cluster comes in two flavours; client and server.  Generally the server is the endpoint that is running more frequently, and the client chooses to connect to the server.  In many cases this isn’t clear-cut when considering the cluster functionality, so the spec decides pretty much arbitrarily.
 
-The zigbee controller can ‘bind’ the clusters for two endpoints together.  It will connect one endpoint that implements the client variant of a cluster to another endpoint that implements the server variant of the same cluster.
+The Zigbee controller can ‘bind’ the clusters for two endpoints together.  It will connect one endpoint that implements the client variant of a cluster to another endpoint that implements the server variant of the same cluster.
 
 There are also some special clusters.  The ‘group’ cluster allows the definition of ‘groups’ - each defined by a small integer.  If an endpoint implements the group cluster then it can be configured to be part of some number of groups.  The device remembers which groups it is a member of.  A group can then be treated like a virtual endpoint.  Messages sent to a particular group ID are broadcast over the network and all devices that are part of that group will respond to the message.  Similarly, a client can be bound to a group rather than another endpoint, so that, for example, a single switch can control a whole group of lights.
 
@@ -72,8 +72,8 @@ If more flexibility is required than comes in the pre-defined Zigbee clusters, f
 
 When a device is added to the network with a Zigbee-Herdsman controller, the controller uses the low-level configuration clusters to interview the device and find out what the device is, what endpoints it has, and what clusters each of those endpoints implements.  The Zigbee-Herdsman-Converters then record, for each model of device, which clusters the controller should bind to, and how the conversion to MQTT should be handled.  Most devices in Zigbee-Herdsman-Converters use generic converters that bind to each Zigbee cluster and provide a standard MQTT interface for that cluster.
 
-With this setup, when a switch is activated, it sends a message to the Zigbee2MQTT controller.  The controller then sends out an MQTT message.  The MQTT controller (which is different to the zigbee controller.  e.g. the Home Assistant package) then decides what to do based on that message.  It might, for example, decide to turn on a particular light, so it would send an MQTT message requesting the light to turn on.  Zigbee2MQTT would receive that message, then send a zigbee message to the light’s endpoint using the appropriate zigbee cluster.
+With this setup, when a switch is activated, it sends a message to the Zigbee2MQTT controller.  The controller then sends out an MQTT message.  The MQTT controller (which is different to the Zigbee controller.  e.g. the Home Assistant package) then decides what to do based on that message.  It might, for example, decide to turn on a particular light, so it would send an MQTT message requesting the light to turn on.  Zigbee2MQTT would receive that message, then send a Zigbee message to the light’s endpoint using the appropriate Zigbee cluster.
 
-This system is significantly more flexible than the base Zigbee system.  But it also has higher latency (it takes longer for the system to react to a switch being toggled) and it has more points of failure.  With the base Zigbee setup, not even the controller is involved once setup is complete.  With the Zigbee2MQTT setup there are two zigbee messages, two MQTT messages, and three extra processing steps (the main controller deciding what to do, and MQTT processing the messages in each direction).
+This system is significantly more flexible than the base Zigbee system.  But it also has higher latency (it takes longer for the system to react to a switch being toggled) and it has more points of failure.  With the base Zigbee setup, not even the controller is involved once setup is complete.  With the Zigbee2MQTT setup there are two Zigbee messages, two MQTT messages, and three extra processing steps (the main controller deciding what to do, and MQTT processing the messages in each direction).
 
-Note that in some commercial Zigbee systems, such as Phillips Hue, the controller node in the zigbee network is also the automation controller that can add additional smarts on top of the base Zigbee setup.  Zigbee2MQTT inserts MQTT between the two, allowing them to be decoupled.
+Note that in some commercial Zigbee systems, such as Phillips Hue, the controller node in the Zigbee network is also the automation controller that can add additional smarts on top of the base Zigbee setup.  Zigbee2MQTT inserts MQTT between the two, allowing them to be decoupled.
