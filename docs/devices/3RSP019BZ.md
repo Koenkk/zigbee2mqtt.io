@@ -1,7 +1,7 @@
 ---
 title: "Third Reality 3RSP019BZ control via MQTT"
 description: "Integrate your Third Reality 3RSP019BZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2020-03-09T19:04:35Z
+addedAt: 2020-11-20T23:20:00Z
 pageClass: device-page
 ---
 
@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | 3RSP019BZ  |
 | Vendor  | Third Reality  |
-| Description | Smart plug  |
+| Description | 'ZigBee / BLE Smart Plug  |
 | Exposes | switch (state), linkquality |
 | Picture | ![Third Reality 3RSP019BZ](https://www.zigbee2mqtt.io/images/devices/3RSP019BZ.jpg) |
 
