@@ -23,7 +23,19 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+1. Remove the device from a previous Zigbee network. If it has already been added to one otherwise pairing will fail (light blinks fast).
+2. Press reset button twice. The indicator will start blinking blue (slow) and stays solid for 10s when it succeeds.
+
+### Remove from Zigbee network
+There are two methods to remove the device from the Zigbee Network:
+Method 1. From your Zigbee hub interface, choose to delete or reset the device as instructed.
+Method 2. Press the reset button 3 times, the indicator starts blinking purple and will stay solid for 10s when removing the dimmer from the network is finished. Timeout 3 mins.
+
+### Factory reset
+Press and hold the reset button for at least 5 seconds, the indicator will stay red for 10s when the reset is complete. Please note that all configuration parameters will be reset after the device is reset or removed from the network.
 
 <!-- Notes END: Do not edit below this line -->
 
