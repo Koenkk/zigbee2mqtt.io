@@ -398,6 +398,7 @@ Before buying an adapter, please read the notes below!
 Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the bootloader. See your adapter manual on how to do this. After you have done this one of the following tools can be used to flash it.
 - [ZigStar GW Multi tool](https://github.com/xyzroe/ZigStarGW-MT) (multi platform GUI tool)
 - [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) (multi platform Python based command line tool)
+- [llama-bsl](https://github.com/electrolama/llama-bsl) (multi platform Python based command line tool, a fork of cc2538-bsl with added features)
 - Texas Instrumens [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only)
 
 Migrating from a different adapter? Make sure to [copy the ieee address](../faq/README.md#how-do-i-migrate-from-a-cc2530-cc2531-to-a-more-powerful-coordinator-e-g-zzh).
