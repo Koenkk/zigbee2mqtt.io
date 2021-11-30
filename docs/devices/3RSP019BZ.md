@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | 3RSP019BZ  |
 | Vendor  | Third Reality  |
-| Description | 'ZigBee / BLE Smart Plug  |
+| Description | Zigbee / BLE smart plug |
 | Exposes | switch (state), linkquality |
 | Picture | ![Third Reality 3RSP019BZ](https://www.zigbee2mqtt.io/images/devices/3RSP019BZ.jpg) |
 
@@ -45,14 +45,13 @@ green and red, indicating that your Smart Plug is in BLE mode now.
 After your Smart Plug is powered on, press and hold the button for more than 10 seconds
 until the LED light flashes indicating that your Smart Plug is in pairing mode. (The mode won’t
 be change while factory reset your Smart Plug.)
-
 <!-- Notes END: Do not edit below this line -->
 
 
 
 ## Exposes
 
-### Switch
+### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.

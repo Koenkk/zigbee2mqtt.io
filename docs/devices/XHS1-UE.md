@@ -1,7 +1,7 @@
 ---
 title: "Universal Electronics Inc XHS1-UE control via MQTT"
 description: "Integrate your Universal Electronics Inc XHS1-UE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2021-11-02T05:14:39.733Z
+addedAt: 2021-11-02T05:14:39
 pageClass: device-page
 ---
 
@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | XHS1-UE  |
 | Vendor  | Universal Electronics Inc  |
-| Description | Wireless Digital Pet Resistant PIR Detector |
+| Description | Wireless digital pet resistant PIR detector |
 | Exposes | occupancy, battery_low, tamper, temperature, battery, linkquality |
 | Picture | ![Universal Electronics Inc XHS1-UE](https://www.zigbee2mqtt.io/images/devices/XHS1-UE.jpg) |
 
@@ -26,6 +26,14 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

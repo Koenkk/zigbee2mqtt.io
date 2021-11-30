@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Smart plug (with power monitoring by polling) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
 | Picture | ![TuYa TS011F_plug_3](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_3.jpg) |
+| White-label | VIKEFON TS011F |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
