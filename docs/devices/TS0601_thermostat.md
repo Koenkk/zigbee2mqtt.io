@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_thermostat  |
 | Vendor  | TuYa  |
 | Description | Radiator valve with thermostat |
-| Exposes | lock (state), switch (state), battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, away_mode, preset), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, week, away_preset_temperature, linkquality |
+| Exposes | lock (state), switch (state), battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, away_mode, preset), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, away_preset_temperature, programming_mode, linkquality |
 | Picture | ![TuYa TS0601_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat.jpg) |
 | White-label | Moes HY368, Moes HY369RT, SHOJZJ 378RT, Silvercrest TVR01 |
 
@@ -183,6 +183,7 @@ Boost time.
 Value can be found in the published state on the `boost_time` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_time": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `s`.
 
 ### Comfort_temperature (numeric)
@@ -220,19 +221,18 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_temperature": NEW_VALUE}`.
 The unit of this value is `°C`.
 
-### Week (enum)
-Week format user for schedule.
-Value can be found in the published state on the `week` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"week": NEW_VALUE}`.
-The possible values are: `5+2`, `6+1`, `7`.
-
 ### Away_preset_temperature (numeric)
 Away preset temperature.
 Value can be found in the published state on the `away_preset_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_preset_temperature": NEW_VALUE}`.
 The unit of this value is `°C`.
+
+### Programming_mode (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"undefined": {"week": VALUE, "workdays_schedule": VALUE, "holidays_schedule": VALUE}}`
+- `week` (enum): Week format user for schedule. Allowed values: `5+2`, `6+1`, `7`
+- `workdays_schedule` (text): undefined. 
+- `holidays_schedule` (text): undefined. 
 
 ### Linkquality (numeric)
 Link quality (signal strength).

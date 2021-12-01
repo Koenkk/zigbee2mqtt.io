@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | DJT11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara vibration sensor |
-| Exposes | battery, action, strength, sensitivity, angle_x, angle_y, angle_z, voltage, linkquality |
+| Exposes | battery, vibration, action, strength, sensitivity, angle_x, angle_y, angle_z, voltage, linkquality |
 | Picture | ![Xiaomi DJT11LM](https://www.zigbee2mqtt.io/images/devices/DJT11LM.jpg) |
 
 
@@ -55,6 +55,11 @@ After setting the sensitivity you immediately have to start pressing the reset b
 <!-- Notes END: Do not edit below this line -->
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `vibration_timeout`: Time in seconds after which vibration is cleared after detecting it (default 90 seconds). The value must be a number with a minimum value of `0`
+
 
 ## Exposes
 
@@ -64,6 +69,12 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Vibration (binary)
+Indicates whether the device detected vibration.
+Value can be found in the published state on the `vibration` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` vibration is ON, if `false` OFF.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

@@ -65,8 +65,8 @@ Alternatively, you should be able to reset the switch with the following pattern
 3. press top right (B0) and bottom left (A1) at the same time 
 4. press top left (A0)
 Note: Please make sure the module is positioned the right way up.
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes
