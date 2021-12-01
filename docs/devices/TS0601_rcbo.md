@@ -84,12 +84,12 @@ The unit of this value is `V`.
 ### Current (numeric)
 Value can be found in the published state on the `current` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mA`.
+The unit of this value is `A`.
 
 ### Current_average (numeric)
 Value can be found in the published state on the `current_average` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mA`.
+The unit of this value is `A`.
 
 ### Power (numeric)
 Value can be found in the published state on the `power` property.

@@ -18,14 +18,13 @@ pageClass: device-page
 | Model | GZCGQ01LM  |
 | Vendor  | Xiaomi  |
 | Description | MiJia light intensity sensor |
-| Exposes | battery, illuminance, illuminance_lux, linkquality |
+| Exposes | battery, voltage, illuminance, illuminance_lux, linkquality |
 | Picture | ![Xiaomi GZCGQ01LM](https://www.zigbee2mqtt.io/images/devices/GZCGQ01LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 Press and hold the button on the device until the blue light starts blinking, release it and the pairing should begin. If pair was not succsesfull, try to click button untill pairing process compleated.
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -49,6 +48,12 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Voltage (numeric)
+Voltage of the battery in millivolts.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `mV`.
 
 ### Illuminance (numeric)
 Raw measured illuminance.

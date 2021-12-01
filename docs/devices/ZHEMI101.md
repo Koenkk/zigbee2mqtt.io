@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZHEMI101  |
 | Vendor  | Develco  |
 | Description | Energy meter |
-| Exposes | power, energy, linkquality |
+| Exposes | power, energy, battery_low, pulse_configuration, interface_mode, current_summation, check_meter, linkquality |
 | Picture | ![Develco ZHEMI101](https://www.zigbee2mqtt.io/images/devices/ZHEMI101.jpg) |
 
 
@@ -42,6 +42,38 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
+
+### Pulse_configuration (numeric)
+Pulses per kwh. Default 1000 imp/kWh. Range 0 to 65535.
+Value can be found in the published state on the `pulse_configuration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pulse_configuration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pulse_configuration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `65535`.
+
+### Interface_mode (enum)
+Operating mode/probe.
+Value can be found in the published state on the `interface_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"interface_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interface_mode": NEW_VALUE}`.
+The possible values are: `electricity`, `gas`, `water`, `kamstrup-kmp`, `linky`, `IEC62056-21`, `DSMR-2.3`, `DSMR-4.0`.
+
+### Current_summation (numeric)
+Current summation value sent to the display. e.g. 570 = 0,570 kWh.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_summation": NEW_VALUE}`.
+
+### Check_meter (binary)
+Is true if communication problem with meter is experienced.
+Value can be found in the published state on the `check_meter` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` check_meter is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -28,6 +28,9 @@ pageClass: device-page
 ### Pairing
 Pair this device with a long press (~5 seconds) of the button which is located under the small hole on the upper right edge on the front of the device. The device will beep in short periods. Once paired the device will do one long beep.
 <!-- Notes END: Do not edit below this line -->
+
+
+
 ## Exposes
 
 ### Switch (l1 endpoint)
