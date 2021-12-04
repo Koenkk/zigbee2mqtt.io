@@ -28,6 +28,13 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
@@ -77,7 +84,7 @@ The unit of this value is `W`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `hold_left`, `single_left`, `double_left`, `triple_left`, `release_left`, `hold_center`, `single_center`, `double_center`, `triple_center`, `release_center`, `hold_right`, `single_right`, `double_right`, `triple_right`, `release_right`.
+The possible values are: `hold_left`, `single_left`, `double_left`, `triple_left`, `release_left`, `hold_center`, `single_center`, `double_center`, `triple_center`, `release_center`, `hold_right`, `single_right`, `double_right`, `triple_right`, `release_right`, `single_left_center`, `double_left_center`, `single_left_right`, `double_left_right`, `single_center_right`, `double_center_right`, `single_all`, `double_all`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

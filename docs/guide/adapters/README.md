@@ -30,7 +30,6 @@ _(in order of first appearance)_
     <summary>Slaesh's CC2652RB stick</summary>
   
     USB connected adapter with external antenna based on CC2652RB chip  
-    **WARNING: [delivery issues reported](https://github.com/Koenkk/zigbee2mqtt/discussions/6702)**  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652RB_coordinator_20210708.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652RB_router_20210128.zip)  
     * [Flashing instructions](https://slae.sh/projects/cc2652/#flashing)  
@@ -398,8 +397,11 @@ Before buying an adapter, please read the notes below!
 ### Flashing CC1352/CC2652/CC2538 based adapters
 Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the bootloader. See your adapter manual on how to do this. After you have done this one of the following tools can be used to flash it.
 - [ZigStar GW Multi tool](https://github.com/xyzroe/ZigStarGW-MT) (multi platform GUI tool)
-- [CC2538-BSL](https://www.ti.com/tool/FLASH-PROGRAMMER) (multi platform Python based command line tool)
+- [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) (multi platform Python based command line tool)
+- [llama-bsl](https://github.com/electrolama/llama-bsl) (multi platform Python based command line tool, a fork of cc2538-bsl with added features)
 - Texas Instrumens [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only)
+
+Migrating from a different adapter? Make sure to [copy the ieee address](../faq/README.md#how-do-i-migrate-from-a-cc2530-cc2531-to-a-more-powerful-coordinator-e-g-zzh).
 
 ### Router
 Besides serving as a coordinator some adapters can also be used as a Zigbee router (check if there is a router firmware by clicking on your adapter). To factory reset/pair:

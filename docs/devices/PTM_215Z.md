@@ -54,6 +54,17 @@ To pair it, hold the corresponding button for that channel for 7 seconds or more
 | A1 | 20 |
 | B0 | 11 |
 | B1 | 25 |
+
+Once the device is paired you need to confirm the channel. To do this press A1 and B0 together. Important: don't press any other buttons between this and the pairing.
+
+In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds.
+
+Alternatively, you should be able to reset the switch with the following pattern:
+1. Press top left (A0)
+2. Press and hold top right (B0) for about 10 seconds 
+3. press top right (B0) and bottom left (A1) at the same time 
+4. press top left (A0)
+Note: Please make sure the module is positioned the right way up.
 <!-- Notes END: Do not edit below this line -->
 
 

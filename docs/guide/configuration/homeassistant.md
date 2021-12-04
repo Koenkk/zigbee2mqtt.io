@@ -8,7 +8,7 @@ See: [Home Assistant integration guide](../usage/integrations/home_assistant.md)
 
 ```yaml
 # Optional: Home Assistant integration (MQTT discovery) (default: false)
-homeassistant: false
+homeassistant: true
 
 advanced:
   # Optional: Home Assistant discovery topic (default: shown below)

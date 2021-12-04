@@ -5,7 +5,7 @@ sidebarDepth: 1
 # Adapter settings
 
 Configuration of the Zigbee USB-Adapter.  
-You can use `dmesg` command on Linux hosts to find the mounted device.
+You can use `dmesg` command on Linux hosts to find the mounted device. Where possible you should use the `/dev/serial/by-id/` path of the stick, instead of `/dev/tty*`. This is because the `/dev/tty*` path can change - for example `/dev/ttyACM0` may become `/dev/ttyACM1` and then later back to `/dev/ttyACM0`. The `/dev/serial/by-id/` path won't change.
 
 ```yaml
 # Required: serial settings

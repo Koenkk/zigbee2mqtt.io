@@ -23,8 +23,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+Long press the button for 6s until the LED indicator flashes in blue, which means the device has entered pairing mode.
 <!-- Notes END: Do not edit below this line -->
 
 
