@@ -24,9 +24,7 @@ The CC2530 has to be flashed with a router firmware which has to be done with a 
 
 ### CC debugger pin layout
 
-<div style="float: right;">
-  ![CC-Debugger Pins](../../images/ccdebugger_pins.png)
-</div>
+![CC-Debugger Pins](../../images/ccdebugger_pins.png)
 
 | CC debugger | CC2530 |
 | ----------- | ------ |

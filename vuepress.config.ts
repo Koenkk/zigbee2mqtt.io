@@ -103,6 +103,12 @@ const conf = {
 
   plugins: [
     [
+      '@vuepress/plugin-google-analytics',
+      {
+        id: 'G-H74W4PSJDZ',
+      },
+    ],
+    [
       'vuepress-plugin-sitemap2',
       { hostname: domain }
     ],
