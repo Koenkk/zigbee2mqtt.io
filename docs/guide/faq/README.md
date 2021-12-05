@@ -88,3 +88,16 @@ A list of common error codes and what to do in case of them:
 
 ## How do I run multiple instances of Zigbee2MQTT?
 In case you setup multiple instances of Zigbee2MQTT it's important to use a different `base_topic` and `channel`. This can be configured in the [`configuration.yaml`](../configuration/README.md).
+
+## Zigbee2MQTT crashes after some time
+If after some uptime Zigbee2MQTT crashes with errors like: `SRSP - AF - dataRequest after 6000ms` or `SRSP - ZDO - mgmtPermitJoinReq after 6000ms` it means the adapter has crashed.
+- Normally this can be fixed by replugging the adapter and restarting Zigbee2MQTT
+- If you are using a CC2530 or CC2531 adapter consider upgrading to one of the [recommended adapters](../adapters/README.md). The CC2530/CC2531 is considered legacy hardware and runs into memory corruption easily.
+- Make sure you are using the latest firmware on your adapter, see the [adapter page](../adapters/README.md) for a link to the latest firmware.
+- If using a Raspberry Pi; this problem can occur if you are using a bad power supply or when other USB devices are connected direclty to the Pi (especially occurs with external SSD), try connecting other USB devices through a powered USB hub.
+- Disable the USB autosuspend feature, if `cat /sys/module/usbcore/parameters/autosuspend` returns `1` or `2` it is enabled; to disable execute:
+```bash
+sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/&usbcore.autosuspend=-1 /' /etc/default/grub
+update-grub
+systemctl reboot
+```
