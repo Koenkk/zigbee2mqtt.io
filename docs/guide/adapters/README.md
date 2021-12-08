@@ -188,7 +188,7 @@ _(in order of first appearance)_
     ![](../../images/CC2652P-Z2M.jpg)
     </details>
   * <details>
-    <summary>SMARTLIGHT CC2652P ZigBee LAN Adapter SLZB-05</summary>
+    <summary>SMARTLIGHT ZigBee LAN Adapter CC2652P Model SLZB-05</summary>
   
     Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6dB antenna, worldwide delivery, Zigbee firmware can be manually updated via USB in 5 easy steps, customer/tech support, fast order processing.  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210708.zip)  
