@@ -89,7 +89,7 @@ _(in order of first appearance)_
     </details>
 
   * <details>
-    <summary>SMARTLIGHT CC2652P Zigbee USB dongle</summary>
+    <summary>SMARTLIGHT CC2652P Zigbee USB Adapter SLZB-02</summary>
   
     CC2652P factory-made Zigbee USB coordinator with external 6dB antenna and worldwide delivery  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210708.zip)  
@@ -187,6 +187,19 @@ _(in order of first appearance)_
   
     ![](../../images/CC2652P-Z2M.jpg)
     </details>
+  * <details>
+    <summary>SMARTLIGHT ZigBee LAN CC2652P Adapter SLZB-05</summary>
+  
+    Pre-flashed ready-to-use plug&play Zigbee LAN CC2652P Adapter SMARTLIGHT SLZB-05, factory made, metal case, 6dB antenna, available external PoE additional solution, worldwide delivery, Zibee firmware can be updated via USB in 5 steps, customer support, fast order porcessing.  
+    * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210708.zip)  
+    * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20210708.zip)  
+    * [Flashing instructions](https://smartlight.me/flashing_slzb-02)  
+    * [Description](https://smartlight.me/smart-home-devices/zigbee-devices/smlight-zigbee-lan-adapter-slzb-05en)  
+    * Buy: [eBay](https://www.ebay.com/itm/165178757770) [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/smlight-zigbee-lan-adapter-slzb-05en) [Telegram](https://t.me/smartlightme)
+
+    ![](https://smartlight.me/ebay/images/slzb_05/smartlight-zigbee-lan-slzb-05.jpg)
+    </details>
+
 
 * Raspberry Pi hat
   * <details>
