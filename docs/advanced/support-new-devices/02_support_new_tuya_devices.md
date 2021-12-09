@@ -60,15 +60,14 @@ Once finished, restart Zigbee2MQTT and trigger some actions on the device.
 The `commandDataResponse` and `commandDataReport` types of the `manuSpecificTuya` cluster have it's own format:
 
 ```js
-    {name: 'status', type: DataType.uint8},
-    {name: 'transid', type: DataType.uint8},
+    {name: 'seq', type: DataType.uint16},
     {name: 'dp', type: DataType.uint8},
     {name: 'datatype', type: DataType.uint8},
     {name: 'fn', type: DataType.uint8},
     {name: 'data', type: DataType.octetStr},
 ```
 
-- `status` and `transid` are just a header information.
+- `seq` is transaction number.
 - `dp` is so called "Data Point ID" which is at the core of Tuya devices. From the point of view of a device the DPIDs are the functions that the device provides.
 - `datatype` is the type of data contained in the `data` field, see `dataTypes` in `node_modules/zigbee-herdsman-converters/lib/tuya.js`
 
@@ -85,7 +84,7 @@ By adding the two debug converters mentioned earlier, we have the tools to decip
 This converter will append a line in `data/tuya.dump.txt` file whenever it receives a Tuya specific message from the device, format of the file is:
 
 ```txt
-current_time device_ieee_address status transid dp datatype fn data_as_hex_octets
+current_time device_ieee_address seq dp datatype fn data_as_hex_octets
 ```
 
 A python script [read_tuya_dump.py](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/scripts/read_tuya_dump.py) can be used to parse this file. It's pre filled with Saswell data points, but should be easy to modify it to work with your device.
