@@ -57,7 +57,7 @@ module.exports = definition;
 Once finished, restart Zigbee2MQTT and trigger some actions on the device.
 
 ### 3. Understanding Tuya data points
-The `commandGetData` and `commandDataReport` types of the `manuSpecificTuya` cluster have it's own format:
+The `commandDataResponse` and `commandDataReport` types of the `manuSpecificTuya` cluster have it's own format:
 
 ```js
     {name: 'status', type: DataType.uint8},
@@ -105,7 +105,7 @@ Then add to `node_modules/zigbee-herdsman-converters/converters/fromZigbee.js`:
 ```js
 saswell_thermostat: {
     cluster: 'manuSpecificTuya',
-    type: ['commandGetData', 'commandDataReport'],
+    type: ['commandDataResponse', 'commandDataReport'],
     convert: (model, msg, publish, options, meta) => {
         const dp = msg.data.dp; // First we get the data point ID
         const value = tuyaGetDataValue(msg.data.datatype, msg.data.data); // This function will take care of converting the data to proper JS type
