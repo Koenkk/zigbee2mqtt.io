@@ -107,6 +107,16 @@ Value can be found in the published state on the `angle_z` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-90` and the maximum value is `90`.
 
+### Angle_x_absolut (numeric)
+Value can be found in the published state on the `angle_x_absolut` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `180`.
+
+### Angle_y_absolut (numeric)
+Value can be found in the published state on the `angle_y_absolut` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `180`.
+
 ### Voltage (numeric)
 Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
