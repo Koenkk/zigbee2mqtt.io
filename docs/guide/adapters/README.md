@@ -89,7 +89,7 @@ _(in order of first appearance)_
     </details>
 
   * <details>
-    <summary>SMARTLIGHT CC2652P Zigbee USB dongle</summary>
+    <summary>SMARTLIGHT CC2652P Zigbee USB Adapter SLZB-02</summary>
   
     CC2652P factory-made Zigbee USB coordinator with external 6dB antenna and worldwide delivery  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210708.zip)  
@@ -179,13 +179,24 @@ _(in order of first appearance)_
   * <details>
     <summary>XGG 52PZ2MGateway</summary>
   
-    AAn open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs less than 60 CNY in China.  
+    An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs less than 60 CNY in China.  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20210708.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip)  
     * [Description](https://z2m.wiki/)  
     * [Buy](https://z2m.wiki/)  
   
     ![](../../images/CC2652P-Z2M.jpg)
+    </details>
+  * <details>
+    <summary>SMARTLIGHT Zigbee LAN Adapter CC2652P Model SLZB-05</summary>
+  
+    Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6dB antenna, worldwide delivery, Zigbee firmware can be manually updated via USB in 5 easy steps, customer/tech support, fast order processing.  
+    * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20210708.zip)  
+    * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20210708.zip)  
+    * [Description](https://smartlight.me/smart-home-devices/zigbee-devices/smlight-zigbee-lan-adapter-slzb-05en)  
+    * Buy: [eBay](https://www.ebay.com/itm/165178757770) [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/smlight-zigbee-lan-adapter-slzb-05en) [Telegram](https://t.me/smartlightme)
+
+    ![](https://smartlight.me/ebay/images/slzb_05/smartlight-zigbee-lan-slzb-05.jpg)
     </details>
 
 * Raspberry Pi hat
@@ -397,8 +408,11 @@ Before buying an adapter, please read the notes below!
 ### Flashing CC1352/CC2652/CC2538 based adapters
 Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the bootloader. See your adapter manual on how to do this. After you have done this one of the following tools can be used to flash it.
 - [ZigStar GW Multi tool](https://github.com/xyzroe/ZigStarGW-MT) (multi platform GUI tool)
-- [CC2538-BSL](https://www.ti.com/tool/FLASH-PROGRAMMER) (multi platform Python based command line tool)
+- [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) (multi platform Python based command line tool)
+- [llama-bsl](https://github.com/electrolama/llama-bsl) (multi platform Python based command line tool, a fork of cc2538-bsl with added features)
 - Texas Instrumens [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only)
+
+Migrating from a different adapter? Make sure to [copy the ieee address](../faq/README.md#how-do-i-migrate-from-a-cc2530-cc2531-to-a-more-powerful-coordinator-e-g-zzh).
 
 ### Router
 Besides serving as a coordinator some adapters can also be used as a Zigbee router (check if there is a router firmware by clicking on your adapter). To factory reset/pair:

@@ -172,7 +172,7 @@ Example:
 
 ### Climate
 Indicates this device exposes climate functionality.
-- Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `occupied_cooling_setpoint`, `local_temperature`, `system_mode`, `running_state`, `fan_mode`, `preset`, `away_mode`, `local_temperature_calibration`, `sensor`, `away_mode` and `pi_heating_demand`.
+- Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `occupied_cooling_setpoint`, `local_temperature`, `system_mode`, `running_state`, `fan_mode`, `preset`, `away_mode`, `local_temperature_calibration`, `sensor`, `away_mode`, `pi_heating_demand` and `ac_louver_position`.
 - Never has both `occupied_heating_setpoint` and `current_heating_setpoint`.
 - Possible values for `system_mode` are `off`, `heat`, `cool`, `auto`, `dry` and `fan_only`.
 - Possible values for `running_state` are `idle`, `heat`, `cool`.

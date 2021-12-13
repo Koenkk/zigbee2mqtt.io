@@ -2,13 +2,13 @@
 ---
 
 # Secure your Zigbee network
-To make sure your Zigbee network is a secure as possible, consider the following:
+To make sure your Zigbee network is as secure as possible, consider the following:
 
 ## Disable joining
 To disable joining it's important that `permit_join: false` is set in your `configuration.yaml`. Otherwise rogue devices are able to join allowing them to send and receive Zigbee traffic.
 
 ## Change Zigbee network encryption key
-**Changing the network key requires repairing of all devices!**
+**Changing the network key requires re-pairing of all devices!**
 
 Zigbee2MQTT uses a known default encryption key (Zigbee Transport Key). Therefore it is recommended to use a different one. To use a different encryption key add the following to your `configuration.yaml`:
 
@@ -27,3 +27,5 @@ To let Zigbee2MQTT generate a new network key on next startup, add the following
 advanced:
   network_key: GENERATE
 ```
+Generating a new network key by changing the key to "GENERATE" is not supported when using the HomeAssistant add-on. 
+

@@ -36,6 +36,11 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 Since Zigbee2MQTT 1.21.0 this can be done without having to repair all devices.
 Stop Zigbee2MQTT, plug in the new coordinator and update the `serial` -> `port`  in your `configuration.yaml`, next start Zigbee2MQTT.
 
+It is recommended to use the same ieee address on your new coordinator. To do this:
+- Figure out the ieee address of your CC2530/CC2531 coordinator (open `data/database.db` and look for the `ieeeAddr`)
+- Using the flashing tool, write the ieee address of your old coordinator to the new coordinator
+- Reflash the firmware on your new coordinator (this is important, otherwise the coordinator will stick to its old ieee address)
+
 ## How do I move my Zigbee2MQTT instance to a different environment?
 Details about your network are stored in both the coordinator and files under the `data/` directory. To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
 
@@ -83,3 +88,16 @@ A list of common error codes and what to do in case of them:
 
 ## How do I run multiple instances of Zigbee2MQTT?
 In case you setup multiple instances of Zigbee2MQTT it's important to use a different `base_topic` and `channel`. This can be configured in the [`configuration.yaml`](../configuration/README.md).
+
+## Zigbee2MQTT crashes after some time
+If after some uptime Zigbee2MQTT crashes with errors like: `SRSP - AF - dataRequest after 6000ms` or `SRSP - ZDO - mgmtPermitJoinReq after 6000ms` it means the adapter has crashed.
+- Normally this can be fixed by replugging the adapter and restarting Zigbee2MQTT
+- If you are using a CC2530 or CC2531 adapter consider upgrading to one of the [recommended adapters](../adapters/README.md). The CC2530/CC2531 is considered legacy hardware and runs into memory corruption easily.
+- Make sure you are using the latest firmware on your adapter, see the [adapter page](../adapters/README.md) for a link to the latest firmware.
+- If using a Raspberry Pi; this problem can occur if you are using a bad power supply or when other USB devices are connected direclty to the Pi (especially occurs with external SSD), try connecting other USB devices through a powered USB hub.
+- Disable the USB autosuspend feature, if `cat /sys/module/usbcore/parameters/autosuspend` returns `1` or `2` it is enabled; to disable execute:
+```bash
+sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/&usbcore.autosuspend=-1 /' /etc/default/grub
+update-grub
+systemctl reboot
+```

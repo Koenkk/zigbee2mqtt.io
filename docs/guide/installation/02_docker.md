@@ -126,6 +126,22 @@ You can also run a rootless container with docker-compose by adding the required
       - dialout
     user: 1000:1000
 ```
+### Starting the container
+To start the Docker container:
+```bash
+docker-compose up -d zigbee2mqtt
+```
+
+You can optionally skip `zigbee2mqtt` and it will start all containers listed in the compose file.
+
+### Updating
+To update to the latest Docker image:
+```bash
+docker-compose pull zigbee2mqtt
+docker-compose up -d zigbee2mqtt
+```
+
+You can optionally skip `zigbee2mqtt` and it will pull any new images for all containers in the compose file, and then restart those that were updated.
 
 ## Docker Stack device mapping
 *This is only relevant when using Docker Stack*
@@ -418,6 +434,13 @@ modprobe ftdi_sio
 modprobe cdc-acm
 ````
 After issuing the commands, the Zigbee controller may need to be unplugged and re-inserted to the USB port.
+
+You may also need additional drivers based on your USB Zigbee controlller setup, e.g. CH341 module is not included by default. You can download precompiled modules from jadahl.com pages - select module directory based on NAS CPU architecture (DS218+ -> INTEL Celeron J3355 -> Apollo Lake).
+````
+cd /lib/modules
+wget http://www.jadahl.com/iperf-arp-scan/DSM_7.0/apollolake/ch341.ko
+insmod /lib/modules/ch341.ko
+````
 
 It is possible to create a start-up task that issues the above commands:
 1. Create an executable script file that contains the three modprobe commands.
