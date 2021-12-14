@@ -25,9 +25,7 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-
 ### Pairing
-## Pairing instructions Zigbee2Mqtt
 1. Remove the thermostat (SLT) from the wall and remove a battery to turn it off.
 2. Turn boiler off at the mains in order to turn off the hive receiver (SLR).
 3. Turn the boiler on and receiver.
