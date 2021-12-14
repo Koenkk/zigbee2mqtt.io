@@ -26,6 +26,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+## Pairing
+Press down and set simultanious until LED flashes blue.
 
 ### Configuration of device attributes
 By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can be configured:
@@ -45,9 +47,6 @@ By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can b
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
-
-## Pairing
-Press down and set simultanious until LED flashes blue.
 
 ## Exposes
 
