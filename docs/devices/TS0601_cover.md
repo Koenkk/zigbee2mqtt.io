@@ -48,6 +48,7 @@ By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can b
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
+
 ## Exposes
 
 ### Cover 
