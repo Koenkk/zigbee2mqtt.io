@@ -6,7 +6,7 @@ pageClass: device-page
 ---
 
 
-# Perenio PECMS01
+# Wiren Board WB-MSW-ZIGBEE v.3 (WBMSW3)
 
 |     |     |
 |-----|-----|
