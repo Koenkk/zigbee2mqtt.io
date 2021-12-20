@@ -46,7 +46,7 @@ Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
-### Motion (enum)
+### Motion (binary)
 moving inside the range of the sensor.
 Value can be found in the published state on the `motion` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
