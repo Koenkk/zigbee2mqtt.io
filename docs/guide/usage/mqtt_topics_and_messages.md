@@ -75,6 +75,7 @@ Example payload:
     "version":"1.13.0-dev",
     "commit":"772f6c0",
     "coordinator":{
+        "ieee_address": "0x12345678",
         "type":"zStack30x",
         "meta":{"revision":20190425, "transportrev":2, "product":2, "majorrel":2, "minorrel":7, "maintrel":2}
     },
