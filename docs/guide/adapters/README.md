@@ -7,6 +7,10 @@ next: ../installation/
 
 All officially supported adapters are listed on this page. Note that before an adapter can be used with Zigbee2MQTT it has to be flashed with a coordinator firmware (some adapters come preflashed).
 
+::: tip TIP
+Want to migrate to a different adapter? Read [this](../faq/README.md#how-do-i-migrate-from-one-adapter-to-another)
+:::
+
 ## Recommended
 The adapters below are recommended because they use powerful chips, can handle large networks and are well-supported.
 
@@ -411,8 +415,6 @@ Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the b
 - [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) (multi platform Python based command line tool)
 - [llama-bsl](https://github.com/electrolama/llama-bsl) (multi platform Python based command line tool, a fork of cc2538-bsl with added features)
 - Texas Instrumens [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only)
-
-Migrating from a different adapter? Make sure to [copy the ieee address](./flashing/copy_ieeaddr.html).
 
 ### Router
 Besides serving as a coordinator some adapters can also be used as a Zigbee router (check if there is a router firmware by clicking on your adapter). To factory reset/pair:

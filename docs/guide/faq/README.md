@@ -32,11 +32,18 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - In case the device is a bulb, try resetting it through [Touchlink](../usage/touchlink.md)
 - Try pairing close to a bulb (light) router instead of the coordinator.
 
-## How do I migrate from a CC2530/CC2531 to a more powerful coordinator (e.g. ZZH)?
-Since Zigbee2MQTT 1.21.0 this can be done without having to repair all devices.
-Stop Zigbee2MQTT, plug in the new coordinator and update the `serial` -> `port`  in your `configuration.yaml`, next start Zigbee2MQTT.
-
-It is recommended to use the same ieee address on your new coordinator, see [copying the ieee address of an adapter](../adapters/flashing/copy_ieeaddr.html)
+## How do I migrate from one adapter to another?
+Want to migrate from e.g. a CC2531 to a more powerful adapter (e.g. ZZH)? Then follow these instructions:
+1. First make sure you are running the latest version of Zigbee2MQTT
+1. Stop Zigbee2MQTT
+1. Determine wether migrating [requires repairing of your devices](#what-does-and-does-not-require-repairing-of-all-devices)
+    - If repairing is required: remove `data/coordinator_backup.json` (if it exists) and `data/database.db`
+    - If repairing is **not** required: [copy the ieee address of the old adpter into the new one](../adapters/flashing/copy_ieeaddr.html)
+1. Update the `serial` -> `port`  in your `configuration.yaml`
+1. Start Zigbee2MQTT
+1. If repairing was required:
+    1. Disconnect power of all mains powered devices
+    1. Start repairing devices 1 by 1
 
 ## How do I move my Zigbee2MQTT instance to a different environment?
 Details about your network are stored in both the coordinator and files under the `data/` directory. To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
@@ -45,10 +52,10 @@ Details about your network are stored in both the coordinator and files under th
 ### Requires repairing
 You need to re-pair all you devices when:
 - Changing the network key (`network_key`), Zigbee channel (`channel`) or panID (`pan_id`)  in `configuration.yaml`.
-- Switching between adapter types requires repairing, **except when**:
-  - Switching from a CC2530/CC2531 based adapter running the 1.2 firmware to a CC2538/CC2652/CC1352 based adapter does not require repairing
-    - **Important:** the other way around (CC2538/CC2652/CC1352 to a CC2530/CC2531 running 1.2 firmware) does require repairing
-  - Switching between CC2530/CC2531 running the 3.0 firmware, CC2538, CC2652 and CC1352 based adapters does not require repairing.
+- Switching between adapters requires repairing, **except when**:
+  - When adapters are the same repairing is **not** required (e.g. CC2531 -> CC2531)
+  - Switching from a CC2530 or CC2531 based adapter to a CC2538/CC2652/CC1352 based adapter does **not** require repairing (e.g. CC2531 -> CC2652)
+  - Switching between CC2538, CC2652 and CC1352 based adapters does **not** require repairing (e.g. CC2538 -> CC2652)
 
 ### Doesn't require repairing
 You **don't** need to re-pair your devices when:
