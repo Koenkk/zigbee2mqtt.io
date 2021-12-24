@@ -36,10 +36,7 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 Since Zigbee2MQTT 1.21.0 this can be done without having to repair all devices.
 Stop Zigbee2MQTT, plug in the new coordinator and update the `serial` -> `port`  in your `configuration.yaml`, next start Zigbee2MQTT.
 
-It is recommended to use the same ieee address on your new coordinator. To do this:
-- Figure out the ieee address of your CC2530/CC2531 coordinator (open `data/database.db` and look for the `ieeeAddr`)
-- Using the flashing tool, write the ieee address of your old coordinator to the new coordinator
-- Reflash the firmware on your new coordinator (this is important, otherwise the coordinator will stick to its old ieee address)
+It is recommended to use the same ieee address on your new coordinator, see [copying the ieee address of an adapter](../adapters/flashing/copy_ieeaddr.html)
 
 ## How do I move my Zigbee2MQTT instance to a different environment?
 Details about your network are stored in both the coordinator and files under the `data/` directory. To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
