@@ -41,7 +41,7 @@ const definition = {
     toZigbee: [
         tz.tuya_data_point_test, // Another debug converter
     ],
-    onEvent: tuya.setTime, // Add this if you are getting no converter for 'commandSetTimeRequest'
+    onEvent: tuya.onEventSetTime, // Add this if you are getting no converter for 'commandSetTimeRequest'
     configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
         await reporting.bind(endpoint, coordinatorEndpoint, ['genBasic']);
@@ -157,7 +157,7 @@ const definition = {
         tz.tuya_data_point_test,
         tz.saswell_thermostat_current_heating_setpoint,
     ],
-    onEvent: tuya.setTime,
+    onEvent: tuya.onEventSetTime,
     configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
         await bind(endpoint, coordinatorEndpoint, ['genBasic']);
