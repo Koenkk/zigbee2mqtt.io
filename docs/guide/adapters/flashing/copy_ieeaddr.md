@@ -3,7 +3,8 @@
 # Copying the ieee address of an adapter
 When migrating from one stick to another it is important that the new stick uses the same ieee address as the old stick. Some devices lookup the coordinator by its ieee address, this fails when the ieee address of the coordinator changes. There are various tools which can do this.
 
-First you have to determine the ieee address of your old stick, to do this:
+First you have to determine the ieee address of your old stick, there are 2 ways to do this:
+1. Open the frontend, go to "Settings" -> "About" -> "Coordinator IEEE Address"
 1. Open the `data/database.db`; on the first line you will find the coordinator ieee address:
 ```json
 {"id":1,"type":"Coordinator","ieeeAddr":"0x00124b000e89686d","nwkAddr":0...
