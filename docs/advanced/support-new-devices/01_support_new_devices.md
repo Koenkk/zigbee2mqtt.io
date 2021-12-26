@@ -106,18 +106,22 @@ module.exports = definition;
 
 Repeat until your device does not produce any more log messages like: `2018-5-1 18:19:41 WARN No converter available for 'WSDCGQ01LM' with....`
 
-In case you need to add custom converters you can find an external converter example [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.js).
+In case you need to add custom converters you can find an external converter example [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.js). In case none of the existing converters fit you can add custom ones, external converter example for this can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.js).
 
 #### 3.1 Retrieving color temperature range (only required for lights which support color temperature)
-If your device is a light and supports color temperature you need to define the color temperature range. This range indicates the minimum and maximum color temperature value the light supports. This can be retrieved from the light by sending to `zigbee2mqtt/DEVICE_FRIENDLY_NAME/set` with payload `{"read": {"cluster": "lightingColorCtrl", "attributes": ["colorTempPhysicalMin", "colorTempPhysicalMax"]}}`
+If your device is a light and supports color temperature you need to define the color temperature range. This range indicates the minimum and maximum color temperature value the light supports. This can be retrieved by clicking on your device in the frontend, go to "Dev console". For cluster select `LColorCtrl`, for attribute `colorTempPhysicalMin` and `colorTempPhysicalMax`, after that click on "Read". Now the min/max color temperature will be read as marked below
+
+![colortemp_min_max](../../images/colortemp_min_max.png)
+
+Alternatively this can be retrieved from the light by sending to `zigbee2mqtt/DEVICE_FRIENDLY_NAME/set` with payload `{"read": {"cluster": "lightingColorCtrl", "attributes": ["colorTempPhysicalMin", "colorTempPhysicalMax"]}}`
 
 The result will be logged to the Zigbee2MQTT log, e.g.
 
 ```
-Zigbee2MQTT:info  2021-03-21 21:10:40: Read result of 'lightingColorCtrl': {"colorTempPhysicalMin":153,"colorTempPhysicalMax":500}
+Zigbee2MQTT:info  2021-03-21 21:10:40: Read result of 'lightingColorCtrl': {"colorTempPhysicalMin":153,"colorTempPhysicalMax":454}
 ```
 
-In the above example set `colorTempRange` to `{colorTempRange: [153, 500]}`, e.g.:
+In the above example set `colorTempRange` to `{colorTempRange: [153, 454]}`, e.g.:
 
 ```js
 const definition = {
@@ -125,11 +129,9 @@ const definition = {
     model: 'myModel',
     vendor: 'myVendor',
     description: 'Super bulb',
-    extend: extend.light_onoff_brightness_colortemp({colorTempRange: [153, 500]}), // <---
+    extend: extend.light_onoff_brightness_colortemp({colorTempRange: [153, 454]}), // <---
 },
 ```
-
-In case none of the existing converters fit you can add custom ones, external converter example for this can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.js).
 
 ### 4. Add device picture to zigbee2mqtt.io documentation
 To make sure a picture is available for this device on the supported devices page and in the frontend:
