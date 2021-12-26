@@ -41,9 +41,10 @@ Want to migrate from e.g. a CC2531 to a more powerful adapter (e.g. ZZH)? Then f
     - If repairing is **not** required: [copy the ieee address of the old adpter into the new one](../adapters/flashing/copy_ieeaddr.html)
 1. Update the `serial` -> `port`  in your `configuration.yaml`
 1. Start Zigbee2MQTT
-1. If repairing was required:
-    1. Disconnect power of all mains powered devices
-    1. Start repairing devices 1 by 1
+  - If repairing was required:
+      1. Disconnect power of all mains powered devices
+      1. Start repairing devices 1 by 1
+  - If repairing was **not** required and your devices do not respond; restart some routers by removing them from the mains power for a few seconds.
 
 ## How do I move my Zigbee2MQTT instance to a different environment?
 Details about your network are stored in both the coordinator and files under the `data/` directory. To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
