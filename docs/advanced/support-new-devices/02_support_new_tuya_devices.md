@@ -41,7 +41,7 @@ const definition = {
     toZigbee: [
         tz.tuya_data_point_test, // Another debug converter
     ],
-    onEvent: tuya.onEventSetTime, // Add this if you are getting no converter for 'commandSetTimeRequest'
+    onEvent: tuya.onEventSetTime, // Add this if you are getting no converter for 'commandMcuSyncTime'
     configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
         await reporting.bind(endpoint, coordinatorEndpoint, ['genBasic']);
