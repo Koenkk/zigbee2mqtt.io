@@ -1,20 +1,28 @@
 ---
 title: "Schneider Electric CCTFR6700 control via MQTT"
-description: "Integrate your Schneider Electric CCTFR6700 via Zigbee2MQTT with whatever smart home
- infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Schneider Electric CCTFR6700 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2021-05-25T17:59:46Z
+pageClass: device-page
 ---
 
-*To contribute to this page, edit the following
-[file](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/devices/CCTFR6700.md)*
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
 
 # Schneider Electric CCTFR6700
 
+|     |     |
+|-----|-----|
 | Model | CCTFR6700  |
 | Vendor  | Schneider Electric  |
 | Description | Heating thermostat |
 | Exposes | power, energy, schneider_pilot_mode, climate (occupied_heating_setpoint, local_temperature, system_mode, pi_heating_demand), linkquality |
-| Picture | ![Schneider Electric CCTFR6700](../images/devices/CCTFR6700.jpg) |
+| Picture | ![Schneider Electric CCTFR6700](https://www.zigbee2mqtt.io/images/devices/CCTFR6700.jpg) |
 
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 
@@ -29,7 +37,13 @@ After pairing the device requires:
 - the pilot mode to be configured (Contactor/Pilot)
 - an external temperature measurment, either through a bind from a sensor, or report from the coordinator trhough automation. The temperature must be refreshed at least every 10mn
 - the target thermostat set point
+<!-- Notes END: Do not edit below this line -->
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `thermostat_unit`: Controls the temperature unit of the themrostat (default celsius). The value must be one of `celsius`, `fahrenheit`
 
 
 ## Exposes
@@ -65,82 +79,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
-
-## Manual Home Assistant configuration
-Although Home Assistant integration through [MQTT discovery](../integration/home_assistant) is preferred,
-manual integration is possible with the following configuration:
-
-
-{% raw %}
-```yaml
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.power }}"
-    unit_of_measurement: "W"
-    device_class: "power"
-    state_class: "measurement"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.energy }}"
-    unit_of_measurement: "kWh"
-    device_class: "energy"
-    state_class: "measurement"
-    last_reset_topic: true
-    last_reset_value_template: "1970-01-01T00:00:00+00:00"
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.schneider_pilot_mode }}"
-    enabled_by_default: false
-
-select:
-  - platform: "mqtt"
-    state_topic: true
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.schneider_pilot_mode }}"
-    command_topic: "zigbee2mqtt/<FRIENDLY_NAME>/set"
-    command_topic_postfix: "schneider_pilot_mode"
-    options: 
-      - "contactor"
-      - "pilot"
-
-climate:
-  - platform: "mqtt"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    temperature_unit: "C"
-    temp_step: 0.5
-    min_temp: "4"
-    max_temp: "30"
-    current_temperature_topic: true
-    current_temperature_template: "{{ value_json.local_temperature }}"
-    mode_state_topic: true
-    mode_state_template: "{{ value_json.system_mode }}"
-    modes: 
-      - "off"
-      - "auto"
-      - "heat"
-    mode_command_topic: true
-    temperature_command_topic: "occupied_heating_setpoint"
-    temperature_state_template: "{{ value_json.occupied_heating_setpoint }}"
-    temperature_state_topic: true
-
-sensor:
-  - platform: "mqtt"
-    state_topic: "zigbee2mqtt/<FRIENDLY_NAME>"
-    availability_topic: "zigbee2mqtt/bridge/state"
-    value_template: "{{ value_json.linkquality }}"
-    unit_of_measurement: "lqi"
-    enabled_by_default: false
-    icon: "mdi:signal"
-    state_class: "measurement"
-```
-{% endraw %}
-
 

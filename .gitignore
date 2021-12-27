@@ -1,6 +1,6 @@
-node_modules/
-_site/
-.sass-cache/
+node_modules
+.temp
+.cache
+dist
 .idea
 .DS_Store
-.idea/

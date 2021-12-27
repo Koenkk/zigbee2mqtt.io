@@ -1,43 +1,37 @@
 {
-  "name": "zigbee2mqtt.io",
-  "description": "Zigbee2MQTT documentation",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Koenkk/zigbee2mqtt.io.git"
-  },
-  "engines": {
-    "node": "10"
-  },
-  "keywords": [
-    "xiaomi",
-    "tradfri",
-    "hue",
-    "bridge",
-    "zigbee",
-    "mqtt",
-    "cc2531"
-  ],
+  "name": "vp",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
   "scripts": {
-    "docgen": "node docgen/docgen.js",
-    "test": "mocha --recursive",
-    "eslint": "node_modules/.bin/eslint ."
+    "dev:devices": "cross-env NODE_OPTIONS=--max_old_space_size=8000 vuepress dev docs",
+    "dev": "cross-env EXCLUDE_DEVICES=yes vuepress dev docs",
+    "build": "cross-env NODE_OPTIONS=--max_old_space_size=8000 vuepress build docs",
+    "docgen": "ts-node docgen",
+    "test": "ts-node docgen/tests"
   },
-  "author": "Koen Kanters",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/Koenkk/zigbee2mqtt.io/issues"
-  },
-  "homepage": "https://www.zigbee2mqtt.io",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "image-size": "*",
-    "json2yaml": "*",
-    "zigbee2mqtt": "https://github.com/koenkk/zigbee2mqtt#1.21.1"
+    "@quasar/extras": "^1.11.2",
+    "core-js": "^3.18.3",
+    "quasar": "^2.2.0"
   },
   "devDependencies": {
-    "chai": "*",
-    "eslint": "*",
-    "eslint-config-google": "*",
-    "eslint-plugin-mocha": "*",
-    "mocha": "*"
+    "@types/glob": "^7.2.0",
+    "@vuepress/plugin-docsearch": "^2.0.0-beta.26",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.27",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.26",
+    "cross-env": "^7.0.3",
+    "glob": "^7.2.0",
+    "image-size": "^1.0.0",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "throat": "^6.0.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4",
+    "vuepress": "^2.0.0-beta.26",
+    "vuepress-plugin-sitemap2": "^2.0.0-alpha.0",
+    "zigbee-herdsman-converters": "14.0.336"
   }
 }
