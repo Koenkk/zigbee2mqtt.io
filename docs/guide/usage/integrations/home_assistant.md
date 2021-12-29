@@ -52,7 +52,7 @@ automation:
       service: light.toggle
 ```
 
-If you only plan to use this and want to disable the *Via Home Assistant entity* integration below, set `homeassistant_legacy_triggers: false` (see [Configuration](../../configuration/) for more info).
+If you only plan to use this and want to disable the *Via Home Assistant entity* integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
 
 ### Via Home Assistant entity
 This method work by responding to the state change event of a sensor.
