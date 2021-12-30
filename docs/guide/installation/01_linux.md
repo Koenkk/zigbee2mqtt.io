@@ -28,17 +28,10 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 
 ## Installing
 ```bash
-# Setup Node.js repository
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-
-# NOTE 1: If you see the message below please follow: https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb.
-# ## You appear to be running on ARMv6 hardware. Unfortunately this is not currently supported by the NodeSource Linux distributions. Please use the 'linux-armv6l' binary tarballs available directly from nodejs.org for Node.js 4 and later.
-# IMPORTANT: In this case instead of the apt-get install mentioned below; do: sudo apt-get install -y git make g++ gcc
-
-# NOTE 2: On x86, Node.js 10 may not work. It's recommended to install an unofficial Node.js 14 build which can be found here: https://unofficial-builds.nodejs.org/download/release/ (e.g. v14.16.0)
-
-# Install Node.js
-sudo apt-get install -y nodejs git make g++ gcc
+# Install Node.js and required dependencies
+# In Debian/Raspbian bullseye and up (11 and up), NodeJS v12.X is packaged, this is the safest method of installing NodeJS (from official repositories) for Zigbee2MQTT.
+# Check https://github.com/nodesource/distributions/blob/master/README.md if you want to install a specific version from NodeJS repositories instead.
+sudo apt-get install -y nodejs npm git make g++ gcc
 
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
 # version has been installed
