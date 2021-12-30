@@ -29,7 +29,7 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 ## Installing
 ```bash
 # Setup Node.js repository
-sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 # NOTE 1: If you see the message below please follow: https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb.
 # ## You appear to be running on ARMv6 hardware. Unfortunately this is not currently supported by the NodeSource Linux distributions. Please use the 'linux-armv6l' binary tarballs available directly from nodejs.org for Node.js 4 and later.
@@ -46,8 +46,8 @@ node --version  # Should output v10.X, v12.X, v14.X, v15.X or V16.X
 npm --version  # Should output 6.X or 7.X
 
 # Clone Zigbee2MQTT repository
-sudo git clone https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
-sudo chown -R pi:pi /opt/zigbee2mqtt
+git clone https://github.com/Koenkk/zigbee2mqtt.git
+sudo mv zigbee2mqtt /opt/zigbee2mqtt
 
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
