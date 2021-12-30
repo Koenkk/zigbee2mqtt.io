@@ -11,10 +11,10 @@ Zigbee2MQTT requires a MQTT-Server connection to operate.
 ```yaml
 # Required: MQTT settings
 mqtt:
-  # Required: MQTT base topic for Zigbee2MQTT MQTT messages
-  base_topic: zigbee2mqtt
   # Required: MQTT server URL (use mqtts:// for SSL/TLS connection)
   server: 'mqtt://localhost:1883'
+  # Optional: MQTT base topic for Zigbee2MQTT MQTT messages (default: zigbee2mqtt)
+  base_topic: zigbee2mqtt
   # Optional: absolute path to SSL/TLS certificate of CA used to sign server and client certificates (default: nothing)
   ca: '/etc/ssl/mqtt-ca.crt'
   # Optional: absolute paths to SSL/TLS key and certificate for client-authentication (default: nothing)
