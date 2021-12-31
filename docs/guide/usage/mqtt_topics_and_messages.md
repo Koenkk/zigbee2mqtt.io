@@ -6,14 +6,6 @@ sidebarDepth: 1
 
 This page describes which MQTT topics are used by Zigbee2MQTT. Note that the base topic (by default `zigbee2mqtt`) is configurable in the [Zigbee2MQTT `configuration.yaml`](../../guide/configuration/). In Zigbee2MQTT 1.17.0 a new API was introduced, the documentation of the legacy api can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/ead922ee141546ccce079430a7acce67c982c99b/docs/information/mqtt_topics_and_messages.md).
 
-## Publihing messages
-
-Publishing messages depends on the MQTT client you use. For example to publish a message using the command line with mosquitto you can use the command
-
-```bash
- mosquitto_pub -t 'zigbee2mqtt/0x0fffffffffffffff/set' -m '{ "temperature": 27.34 }'
-```
-
 ## zigbee2mqtt/FRIENDLY_NAME
 
 The `FRIENDLY_NAME` is the IEEE-address or, if defined, the `friendly_name` of a device.
@@ -69,6 +61,14 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
 
 ### Without JSON
 In case you don't want to use JSON, publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set/state` with payload `ON` is the same as publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"state": "ON"}`.
+
+### Publihing messages
+
+Publishing messages depends on the MQTT client you use. For example to publish a message using the command line with mosquitto you can use the command
+
+```bash
+ mosquitto_pub -t 'zigbee2mqtt/0x0fffffffffffffff/set' -m '{ "temperature": 27.34 }'
+```
 
 ## zigbee2mqtt/FRIENDLY_NAME/get
 This is the counterpart of the `set` command. It allows you to read a value from a device. To read e.g. the state of a device send the payload `{"state": ""}`. What you can `/get` is specified on the device page under the *Exposes* section.
