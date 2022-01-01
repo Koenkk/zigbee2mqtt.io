@@ -50,7 +50,7 @@ If value equals `true` presence is ON, if `false` OFF.
 moving inside the range of the sensor.
 Value can be found in the published state on the `motion` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `true`, `false`.
+If value equals `true,false` motion is ON, if `undefined` OFF.
 
 ### Motion_speed (numeric)
 Speed of movement.
@@ -61,7 +61,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 direction of movement from the point of view of the radar.
 Value can be found in the published state on the `motion_direction` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `standing still`, `moving forward`, `moving backward`.
+The possible values are: `standing_still`, `moving_forward`, `moving_backward`.
 
 ### Radar_sensitivity (numeric)
 sensitivity of the radar.

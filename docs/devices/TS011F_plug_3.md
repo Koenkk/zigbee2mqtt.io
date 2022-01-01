@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Smart plug (with power monitoring by polling) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
 | Picture | ![TuYa TS011F_plug_3](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_3.jpg) |
-| White-label | VIKEFON TS011F |
+| White-label | VIKEFON TS011F, BlitzWolf BW-SHP15 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -35,7 +35,7 @@ Pair this device with a long press (5 seconds) on the on/off button. The button 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds. The value must be a number with a minimum value of `0`
+* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds, set to -1 to disable. The value must be a number with a minimum value of `-1`
 
 
 ## Exposes

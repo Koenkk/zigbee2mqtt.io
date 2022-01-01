@@ -68,6 +68,7 @@ Critical radiation level.
 Value can be found in the published state on the `alert_threshold` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alert_threshold": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alert_threshold": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10000`.
 The unit of this value is `μR/h`.
 
 ### Sensors_type (enum)
@@ -82,12 +83,14 @@ Count of installed tubes.
 Value can be found in the published state on the `sensors_count` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensors_count": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensors_count": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `50`.
 
 ### Sensitivity (numeric)
 This is applicable if tubes type is set to other.
 Value can be found in the published state on the `sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

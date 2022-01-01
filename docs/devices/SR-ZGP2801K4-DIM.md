@@ -1,19 +1,25 @@
 ---
-title: "Sunricher SR-ZGP2801K2-DIM control via MQTT"
-description: "Integrate your Sunricher SR-ZGP2801K2-DIM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+title: "Sunricher SR-ZGP2801K4-DIM control via MQTT"
+description: "Integrate your Sunricher SR-ZGP2801K4-DIM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-12-03T18:14:38Z
 pageClass: device-page
 ---
 
-# Sunricher SR-ZGP2801K2-DIM
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
+# Sunricher SR-ZGP2801K4-DIM
 
 |     |     |
 |-----|-----|
-| Model | SR-ZGP2801K2-DIM  |
+| Model | SR-ZGP2801K4-DIM  |
 | Vendor  | Sunricher  |
-| Description | 2 button switch |
+| Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
-| Picture | ![Sunricher SR-ZGP2801K2-DIM](https://www.zigbee2mqtt.io/images/devices/SR-ZGP2801K2-DIM.jpg) |
+| Picture | ![Sunricher SR-ZGP2801K4-DIM](https://www.zigbee2mqtt.io/images/devices/SR-ZGP2801K4-DIM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -70,7 +76,7 @@ indication, it might because the switch has not entered learning mode yet since 
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `press_on`, `press_off`, `hold_on`, `hold_off`,`release`.
+The possible values are: `press_on`, `press_off`, `press_high`, `press_low`, `hold_high`, `hold_low`, `release`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

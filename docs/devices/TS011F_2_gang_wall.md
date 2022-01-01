@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS011F_2_gang_wall  |
 | Vendor  | TuYa  |
 | Description | 2 gang wall outlet |
-| Exposes | switch (state), linkquality |
+| Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
 | Picture | ![TuYa TS011F_2_gang_wall](https://www.zigbee2mqtt.io/images/devices/TS011F_2_gang_wall.jpg) |
 | White-label | ClickSmart+ CMA30036 |
 
@@ -41,6 +41,18 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 The current state of this switch is in the published state under the `state_l2` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
+
+### Power_on_behavior (enum)
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `on`, `off`, `previous`.
+
+### Backlight_mode (enum)
+Value can be found in the published state on the `backlight_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+The possible values are: `LOW`, `MEDIUM`, `HIGH`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

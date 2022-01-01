@@ -29,18 +29,17 @@ pageClass: device-page
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
 After this the device will automatically join.
-
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes
 
 ### Card (binary)
-Indicates if the card is inserted (= true) or open (= false).
+Indicates if the card is inserted (= true) or not (= false).
 Value can be found in the published state on the `card` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` card is inserted, if `false` not.
+If value equals `true` card is ON, if `false` OFF.
 
 ### Battery_low (binary)
 Indicates if the battery of this device is almost empty.

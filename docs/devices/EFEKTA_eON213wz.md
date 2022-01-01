@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_eON213wz  |
 | Vendor  | Custom devices (DiY)  |
-| Description | Mini weather station, digital barometer, weather forecast, 24-hour charts, indoor temperature and humidity, e-ink2.13 |
+| Description | [Mini weather station, digital barometer, forecast, charts, temperature, humidity](http://efektalab.com/eON213wz) |
 | Exposes | battery, temperature, humidity, pressure, linkquality |
 | Picture | ![Custom devices (DiY) EFEKTA_eON213wz](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eON213wz.jpg) |
 
