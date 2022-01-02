@@ -57,23 +57,27 @@ module.exports = definition;
 Once finished, restart Zigbee2MQTT and trigger some actions on the device.
 
 ### 3. Understanding Tuya data points
-The `commandDataResponse` and `commandDataReport` types of the `manuSpecificTuya` cluster have it's own format:
+The `dataReport`and `dataResponse` types of the `manuSpecificTuya` cluster have their own format:
 
 ```js
     {name: 'seq', type: DataType.uint16},
-    {name: 'dp', type: DataType.uint8},
-    {name: 'datatype', type: DataType.uint8},
-    {name: 'fn', type: DataType.uint8},
-    {name: 'data', type: DataType.octetStr},
+    {name: 'dpValues', type: BuffaloZclDataType.LIST_TUYA_DATAPOINT_VALUES},
 ```
 
-- `seq` is transaction number.
+`seq` is the transaction number of the payload. `dpValues` is an array of "Data Points" (type: `TuyaDataPointValue`). Such a data point value consists of:
+
+```js
+    dp: DataType.uint8;
+    datatype: DataType.uint8;
+    data: Buffer;
+```
+
 - `dp` is so called "Data Point ID" which is at the core of Tuya devices. From the point of view of a device the DPIDs are the functions that the device provides.
 - `datatype` is the type of data contained in the `data` field, see `dataTypes` in `node_modules/zigbee-herdsman-converters/lib/tuya.js`
 
-Some data points are 'report only' (they report changes that happen within the device) others are 'issue and report' (they can report by themselves, but also respond with a report when set). The list of currently known data points can be found in `dataPoints` in [node_modules/zigbee-herdsman-converters/lib/tuya.js](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/lib/tuya.js).
+Some data points are 'report only' (they report changes that happen within the device) others are 'issue and report' (they can report by themselves, but also respond with a report when set). The list of currently known data points can be found in `dataPoints` in [node_modules/zigbee-herdsman-converters/lib/tuya.js](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/lib/tuya.js). Data point IDs may be device dependent, they are not unified across all Tuya devices.
 
-For example on Saswell thermostat data point number `103` is heating setpoint, it has `value` type and is 'issue and report', we will use that information later in examples.
+For example on Saswell thermostat data point number `103` is heating setpoint, it has `value` (i.e. integer) type and is 'issue and report', we will use that information later in examples.
 
 If you have a Tuya gateway, you can find what the function is of data point number by following [this how-to guide](./03_find_tuya_data_points.md)
 
@@ -81,11 +85,13 @@ If you have a Tuya gateway, you can find what the function is of data point numb
 By adding the two debug converters mentioned earlier, we have the tools to decipher Tuya data points.
 
 #### fz.tuya_data_point_dump
-This converter will append a line in `data/tuya.dump.txt` file whenever it receives a Tuya specific message from the device, format of the file is:
+This converter will append a line in `data/tuya.dump.txt` file for each data point value received in a Tuya specific message from the device, format of the file is:
 
 ```txt
-current_time device_ieee_address seq dp datatype fn data_as_hex_octets
+current_time device_ieee_address seq dpv_number dp datatype data_as_hex_octets
 ```
+
+A `commandDataReport` (corresponding to the `dataReport` type) and `commandDataResponse` (corresponding to `dataResponse`) message may contain multiple data point values. `dpv_number` is the index of the data point value in the payload (0 being the first).
 
 A python script [read_tuya_dump.py](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/scripts/read_tuya_dump.py) can be used to parse this file. It's pre filled with Saswell data points, but should be easy to modify it to work with your device.
 
@@ -106,15 +112,20 @@ saswell_thermostat: {
     cluster: 'manuSpecificTuya',
     type: ['commandDataResponse', 'commandDataReport'],
     convert: (model, msg, publish, options, meta) => {
-        const dp = msg.data.dp; // First we get the data point ID
-        const value = tuyaGetDataValue(msg.data.datatype, msg.data.data); // This function will take care of converting the data to proper JS type
-
-        switch (dp) {
-        case tuya.dataPoints.saswellHeatingSetpoint: // DPID that we added to common
-            return {current_heating_setpoint: (value / 10).toFixed(1)}; // value is already converted to a number in JS, and we deduced that it needs to be divided by 10
-        default:
-            meta.logger.warn(`zigbee-herdsman-converters:SaswellThermostat: NOT RECOGNIZED DP #${
-                dp} with data ${JSON.stringify(msg.data)}`); // This will cause zigbee2mqtt to print similar data to what is dumped in tuya.dump.txt
+        const result = {};
+        for (const dpValue of msg.data.dpValues) {
+            const dp = dpValue.dp; // First we get the data point ID
+            const value = tuya.getDataValue(dpValue); // This function will take care of converting the data to proper JS type
+            switch (dp) {
+            case tuya.dataPoints.saswellHeatingSetpoint: // DPID that we added to common
+                result.current_heating_setpoint = (value / 10).toFixed(1); // value is already converted to a number in JS, and we deduced that it needs to be divided by 10
+                break;
+            default:
+                meta.logger.warn(`zigbee-herdsman-converters:SaswellThermostat: NOT RECOGNIZED DP #${
+                    dp} with data ${JSON.stringify(dpValue)}`); // This will cause zigbee2mqtt to print similar data to what is dumped in tuya.dump.txt
+            }
+        }
+        return result;
     },
 },
 ```
@@ -125,9 +136,23 @@ saswell_thermostat_current_heating_setpoint: {
     key: ['current_heating_setpoint'],
     convertSet: async (entity, key, value, meta) => {
         const temp = Math.round(value * 10);
-        await sendTuyaDataPointValue(entity, tuya.dataPoints.saswellHeatingSetpoint, temp); // sendTuyaDataPoint* functions take care of converting the data to proper format
+        await tuya.sendDataPointValue(entity, tuya.dataPoints.saswellHeatingSetpoint, temp); // tuya.sendDataPoint* functions take care of converting the data to proper format
     },
 },
+```
+
+The `tuya.sendDataPoint*` functions send a single data point value. In case you
+want to send multiple data points at once, you can use the `tuya.sendDataPoints`
+function like this:
+
+```
+        await tuya.sendDataPoints(
+            entity,
+            [
+                tuya.dpValueFromBool(first_dp_id, first_dp_value),
+                tuya.dpValueFromEnum(second_dp_id, second_dp_value),
+            ],
+        );
 ```
 
 Now update your external converter:
