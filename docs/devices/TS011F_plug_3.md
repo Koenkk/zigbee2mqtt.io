@@ -26,6 +26,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Broken attribute reporting functionality
+
+Starting with firmware version 1.0.5 (which comes pre-flashed on plugs produced since Q4 2021) core functionality on this plug is broken. TuYa has moved attribute reporting of the current plug state (on/off) and energy measurement away from the official Zigbee Cluster Library Specification into a private API. Efforts to implement this private API to restore functionality have not succeeded until now.
+
+A workaround for the energy consumption monitoring has been implemented, by polling the power consumption explicitly instead of receiving updates from the plug. To this date it is impossible to retrieve the current state of the plug (on/off).
+
+<!-- cfr: https://github.com/Koenkk/zigbee2mqtt/issues/9057 -->
 
 ### Pairing
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
