@@ -20,11 +20,20 @@ pageClass: device-page
 | Description | Smart plug (with power monitoring) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
 | Picture | ![TuYa TS011F_plug_1](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_1.jpg) |
-| White-label | LELLKI TS011F_plug, NEO NAS-WR01B |
+| White-label | LELLKI TS011F_plug, NEO NAS-WR01B, BlitzWolf BW-SHP15 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+
+
+### Broken attribute reporting functionality
+
+Starting with firmware version 1.0.5 (which comes pre-flashed on plugs produced since Q4 2021) core functionality on this plug is broken. TuYa has moved attribute reporting of the current plug state (on/off) and energy measurement away from the official Zigbee Cluster Library Specification into a private API. Efforts to implement this private API to restore functionality have not succeeded until now.
+
+If your plug is affected, it will be detected as [TS011F_plug_3](TS011F_plug_3.md) instead of `TS011F_plug_1`. This implementation contains a workaround for the energy consumption monitoring that polls the power consumption explicitly instead of receiving updates from the plug. To this date it is impossible to retrieve the current state of the plug (on/off). 
+
+<!-- cfr: https://github.com/Koenkk/zigbee2mqtt/issues/9057 -->
 
 
 ### Pairing

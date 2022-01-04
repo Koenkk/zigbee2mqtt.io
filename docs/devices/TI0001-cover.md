@@ -23,8 +23,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+Press the buttons "down" and "settings" together for 3 seconds and it blinks red and blue in pairing mode.
 <!-- Notes END: Do not edit below this line -->
 
 

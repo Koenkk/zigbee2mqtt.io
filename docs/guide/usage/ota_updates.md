@@ -54,7 +54,7 @@ Once an update is available you can update it by sending to `zigbee2mqtt/bridge/
 An update typically takes +- 10 minutes. While a device is updating a lot of traffic is generated on the network, therefore it is not recommend to execute multiple updates at the same time.
 
 ## Using the IKEA TRADFRI test server
-The current published firmwares (as of 2020-12-09) by IKEA are corrupted which makes the devices reject the update. The firmwares published on the IKEA **test** server are not corrupted. You can instruct Zigbee2MQTT to use the test server by adding the following to your `configuration.yaml`.
+If IKEA TRADFRI devices are rejecting OTA updates, it is possible the OTA server is providing a corrupt file. The firmwares published on the IKEA **test** server can be used. In most cases, this is not needed and will result in slower / no OTA updates as the test server is not kept up to date. You can instruct Zigbee2MQTT to use the test server by adding the following to your `configuration.yaml`.
 
 **WARNING: Use at your own risk!**
 
