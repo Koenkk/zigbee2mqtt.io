@@ -30,7 +30,7 @@ pageClass: device-page
 
 Starting with firmware version 1.0.5 (which comes pre-flashed on plugs produced since Q4 2021) core functionality on this plug is broken. TuYa has moved attribute reporting of the current plug state (on/off) and energy measurement away from the official Zigbee Cluster Library Specification into a private API. Efforts to implement this private API to restore functionality have not succeeded until now.
 
-A workaround for the energy consumption monitoring has been implemented, by polling the power consumption explicitly instead of receiving updates from the plug. To this date it is impossible to retrieve the current state of the plug (on/off).
+A workaround for the energy consumption monitoring and state (on/off) has been implemented, by polling those explicitly instead of receiving updates from the plug. The poll interval can be controlled through the `measurement_poll_interval` option.
 
 <!-- cfr: https://github.com/Koenkk/zigbee2mqtt/issues/9057 -->
 
