@@ -2,51 +2,51 @@
 ---
 # Flashing the firmware via cc2538-bsl
 
-TI CC13xx/CC2538/CC26xx Serial Boot Loader  
+[TI CC13xx/CC2538/CC26xx Serial Boot Loader](https://github.com/JelmerT/cc2538-bsl)  
 
-CC2538-bsl is a python script that communicates with the boot loader of the Texas Instruments CC2538, CC26xx and CC13xx SoCs (System on Chips).  
+CC2538-bsl is a python script by [Jelmer Tiete](https://github.com/JelmerT) that communicates with the boot loader of the Texas Instruments CC2538, CC26xx and CC13xx SoCs (System on Chips).  
 
 In this case we use a Sonoff Zigbee 3.0 USB Dongle Plus and flash the firmware without opening the case to press the "Boot" button.
 
 ## Prepare your system (debian based)
 
-1. install python
+1. Install python and python-pip.  
+```bash 
+sudo apt update && sudo apt install python3 python3-pip 
 ```
-sudo apt update && sudo apt-get install python3-pip 
-```
-2. install needed python packages
-```
+2. Install needed python packages.  
+```bash
 sudo pip3 install pyserial intelhex
 ```
 ## Download cc2538-bsl
-3. we need the ITead_Sonoff_Zigbee-delay feature
-```
+3. We need the ITead_Sonoff_Zigbee-delay "bootloader" feature.  
+```bash
 mkdir z2m_fw-upgrade
 cd z2m_fw-upgrade
 wget https://github.com/JelmerT/cc2538-bsl/archive/refs/heads/feature/ITead_Sonoff_Zigbee-delay.zip
 unzip ITead_Sonoff_Zigbee-delay.zip
 ```  
 
-At the moment this function is only available in this feature branch. It is possible that it will soon go to the master.  
+Actually this function is only available in this feature branch. It's possible that it will go to the master, soon.  
 
 ## Download the Firmware  
 Coordinator: https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin  
 Router: https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_3.x.0/bin  
 
-4. we flash as coordinator and download the required firmware  
-In this case CC1352P2_CC2652P_launchpad_coordinator_***.zip
-```
+4. We flash as coordinator and download the required firmware.  
+In this case `CC1352P2_CC2652P_launchpad_coordinator_***.zip`.
+```bash
 wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20211217.zip
 unzip CC1352P2_CC2652P_launchpad_coordinator_20211217.zip
 
 cd ./cc2538-bsl-feature-ITead_Sonoff_Zigbee-delay/
-sudo python3 cc2538-bsl.py -ewv --bootloader-sonoff-usb -p /dev/ttyUSB0 ../CC1352P2_CC2652P_launchpad_coordinator_20211217.hex
+sudo python3 cc2538-bsl.py -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb ../CC1352P2_CC2652P_launchpad_coordinator_20211217.hex
 ```
-``-ewv`` means Mass **e**rease, **w**rite, **v**erify  
-``--bootloader-sonoff-usb`` means that the bootloader is started by the script  
-``-p`` is the port on which your device is running, in this case **/dev/ttyUSB0**  
-
-If the flash process was successful, you will see something like this:
+`-ewv` means Mass **e**rease, **w**rite, **v**erify  
+`-p` is the port on which your device is running, in this case `/dev/ttyUSB0`  
+`--bootloader-sonoff-usb` means that the bootloader is activated by the script, by toggeling RTS and DTR in the correct pattern for Sonoff USB dongle  
+  
+If the flash process was successfully done, an output like this appears:
 ```
 sonoff
 Opening port /dev/ttyUSB0, baud 500000
@@ -63,5 +63,11 @@ Write 104 bytes at 0x00057F988
     Write done
 Verifying by comparing CRC32 calculations.
     Verified (match: 0xe0c256fd)
-
 ```
+## How-to check the installed firmware version
+Zigbee2MQTT will output the installed firmware version to the Zigbee2MQTT log on startup:
+```
+Zigbee2MQTT:info  2022-01-05 22:36:34: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20211217,"transportrev":2},"type":"zStack3x0"}''
+```
+
+In the above example the version is `20211217`.
