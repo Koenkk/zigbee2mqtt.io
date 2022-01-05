@@ -112,6 +112,7 @@ _(in order of first appearance)_
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20211217.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip)  
     * [Flashing instructions](https://sonoff.tech/wp-content/uploads/2021/09/Zigbee-3.0-USB-dongle-plus-firmware-flashing-1-1.docx)  
+    * [Flashing instructions via cc2438-bsl](./flashing/flashing_via_cc2538-bsl.md)  
     * [Buy](https://itead.cc/product/sonoff-zigbee-3-0-usb-dongle-plus/)
   
     ![](../../images/sonoff_plus_dongle.png)
