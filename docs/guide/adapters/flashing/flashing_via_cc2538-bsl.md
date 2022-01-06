@@ -21,8 +21,8 @@ sudo pip3 install pyserial intelhex
 ## Download cc2538-bsl
 3. We need the ITead_Sonoff_Zigbee-delay "bootloader" feature.  
 ```bash
-mkdir z2m_fw-upgrade
-cd z2m_fw-upgrade
+mkdir cc2538-bsl
+cd cc2538-bsl
 wget https://github.com/JelmerT/cc2538-bsl/archive/refs/heads/feature/ITead_Sonoff_Zigbee-delay.zip
 unzip ITead_Sonoff_Zigbee-delay.zip
 ```  
