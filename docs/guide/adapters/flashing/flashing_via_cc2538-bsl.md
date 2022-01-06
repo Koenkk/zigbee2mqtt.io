@@ -30,11 +30,9 @@ unzip ITead_Sonoff_Zigbee-delay.zip
 Actually this function is only available in this feature branch. It's possible that it will go to the master, soon.  
 
 ## Download the Firmware  
-Coordinator: https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin  
-Router: https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_3.x.0/bin  
+Download the firmware for your adapter from the [Supported adapter page](../README.md) and unzip it in the `c2538-bsl-feature-ITead_Sonoff_Zigbee-delay` directory.
 
-4. We flash as coordinator and download the required firmware.  
-In this case `CC1352P2_CC2652P_launchpad_coordinator_***.zip`.
+4. In this case we will flash `CC1352P2_CC2652P_launchpad_coordinator_***.zip`.
 ```bash
 wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20211217.zip
 unzip CC1352P2_CC2652P_launchpad_coordinator_20211217.zip
@@ -44,7 +42,7 @@ sudo python3 cc2538-bsl.py -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb ../CC135
 ```
 `-ewv` means Mass **e**rease, **w**rite, **v**erify  
 `-p` is the port on which your device is running, in this case `/dev/ttyUSB0`  
-`--bootloader-sonoff-usb` means that the bootloader is activated by the script, by toggeling RTS and DTR in the correct pattern for Sonoff USB dongle  
+`--bootloader-sonoff-usb` means that the bootloader is activated by the script, by toggeling RTS and DTR in the correct pattern for Sonoff USB dongle (remove this if your device is not a Sonoff dongle).
   
 If the flash process was successfully done, an output like this appears:
 ```
