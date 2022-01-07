@@ -112,16 +112,20 @@ saswell_thermostat: {
     cluster: 'manuSpecificTuya',
     type: ['commandDataResponse', 'commandDataReport'],
     convert: (model, msg, publish, options, meta) => {
-        const dp = msg.data.dp; // First we get the data point ID
-        const value = tuyaGetDataValue(msg.data.datatype, msg.data.data); // This function will take care of converting the data to proper JS type
-
-        switch (dp) {
-        case tuya.dataPoints.saswellHeatingSetpoint: // DPID that we added to common
-            return {current_heating_setpoint: (value / 10).toFixed(1)}; // value is already converted to a number in JS, and we deduced that it needs to be divided by 10
-        default:
-            meta.logger.warn(`zigbee-herdsman-converters:SaswellThermostat: NOT RECOGNIZED DP #${
-                dp} with data ${JSON.stringify(msg.data)}`); // This will cause zigbee2mqtt to print similar data to what is dumped in tuya.dump.txt
+        const result = {};
+        for (const dpValue of msg.data.dpValues) {
+            const dp = dpValue.dp; // First we get the data point ID
+            const value = tuya.getDataValue(dpValue); // This function will take care of converting the data to proper JS type
+            switch (dp) {
+            case tuya.dataPoints.saswellHeatingSetpoint: // DPID that we added to common
+                result.current_heating_setpoint = (value / 10).toFixed(1); // value is already converted to a number in JS, and we deduced that it needs to be divided by 10
+                break;
+            default:
+                meta.logger.warn(`zigbee-herdsman-converters:SaswellThermostat: NOT RECOGNIZED DP #${
+                    dp} with data ${JSON.stringify(dpValue)}`); // This will cause zigbee2mqtt to print similar data to what is dumped in tuya.dump.txt
+            }
         }
+        return result;
     },
 },
 ```
