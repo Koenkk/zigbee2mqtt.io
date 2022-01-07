@@ -115,6 +115,7 @@ saswell_thermostat: {
         default:
             meta.logger.warn(`zigbee-herdsman-converters:SaswellThermostat: NOT RECOGNIZED DP #${
                 dp} with data ${JSON.stringify(msg.data)}`); // This will cause zigbee2mqtt to print similar data to what is dumped in tuya.dump.txt
+        }        
     },
 },
 ```
