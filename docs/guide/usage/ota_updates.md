@@ -59,7 +59,7 @@ If IKEA TRADFRI devices are rejecting OTA updates, it is possible the OTA server
 **WARNING: Use at your own risk!**
 
 ```yaml
-advanced:
+ota:
   ikea_ota_use_test_url: true
 ```
 
