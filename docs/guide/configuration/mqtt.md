@@ -83,12 +83,6 @@ advanced:
   report: true
   # Optional: disables the legacy api (default: shown below)
   legacy_api: true
-```
-
-## MQTT payload format
-
-```yaml
-experimental:
   # Optional: MQTT output type: json, attribute or attribute_and_json (default: shown below)
   # Examples when 'state' of a device is published
   # json: topic: 'zigbee2mqtt/my_bulb' payload '{"state": "ON"}'
