@@ -58,6 +58,7 @@ Eco temperature.
 Value can be found in the published state on the `eco_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eco_temperature": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `35`.
 The unit of this value is `°C`.
 
 ### Max_temperature (numeric)
@@ -65,6 +66,7 @@ Maximum temperature.
 Value can be found in the published state on the `max_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_temperature": NEW_VALUE}`.
+The minimal value is `15` and the maximum value is `35`.
 The unit of this value is `°C`.
 
 ### Min_temperature (numeric)
@@ -72,6 +74,7 @@ Minimum temperature.
 Value can be found in the published state on the `min_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_temperature": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `15`.
 The unit of this value is `°C`.
 
 ### Position (numeric)
@@ -96,6 +99,7 @@ This climate device supports the following features: `local_temperature`, `curre
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `preset`: MANUAL MODE ☝ - In this mode, the device executes manual temperature setting. When the set temperature is lower than the "minimum temperature", the valve is closed (forced closed). PROGRAMMING MODE ⏱ - In this mode, the device executes a preset week programming temperature time and temperature. HOLIDAY MODE ⛱ - In this mode, for example, the vacation mode is set for 10 days and the temperature is setto 15 degrees Celsius. After 10 days, the device will automatically switch to programming mode. TEMPORARY MANUAL MODE - In this mode, ☝ icon will flash. At this time, the device executes the manually set temperature and returns to the weekly programming mode in the next time period. . To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `programming`, `manual`, `temporary_manual`, `holiday`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
+- `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`
 
 ### Programming_mode (text)
 PROGRAMMING MODE ⏱ - In this mode, the device executes a preset week programming temperature time and temperature. You can set up to 4 stages of temperature every for WEEKDAY ➀➁➂➃➄,  SATURDAY ➅ and SUNDAY ➆..
@@ -113,15 +117,16 @@ If value equals `ON` boost_heating is ON, if `OFF` OFF.
 ### Boost_heating_countdown (numeric)
 Countdown in minutes.
 Value can be found in the published state on the `boost_heating_countdown` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_heating_countdown": NEW_VALUE}`.
-The unit of this value is `min`.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `15`.
+The unit of this value is `Min`.
 
 ### Boost_heating_countdown_time_set (numeric)
 Boost Time Setting 100 sec - 900 sec, (default = 300 sec).
 Value can be found in the published state on the `boost_heating_countdown_time_set` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_heating_countdown_time_set": NEW_VALUE}`.
+The minimal value is `100` and the maximum value is `900`.
 The unit of this value is `second`.
 
 ### Linkquality (numeric)

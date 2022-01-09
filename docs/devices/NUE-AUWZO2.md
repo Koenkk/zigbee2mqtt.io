@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | NUE-AUWZO2  |
 | Vendor  | Nue / 3A  |
-| Description | Smart Zigbee Double Power Point |
+| Description | Smart Zigbee double power point |
 | Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A NUE-AUWZO2](https://www.zigbee2mqtt.io/images/devices/NUE-AUWZO2.jpg) |
 

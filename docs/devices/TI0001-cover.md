@@ -27,7 +27,6 @@ pageClass: device-page
 
 ### Pairing
 Press the buttons "down" and "settings" together for 3 seconds and it blinks red and blue in pairing mode.
-
 <!-- Notes END: Do not edit below this line -->
 
 

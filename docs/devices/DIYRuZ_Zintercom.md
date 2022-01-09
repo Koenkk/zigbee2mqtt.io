@@ -56,6 +56,7 @@ Time to ring before answer.
 Value can be found in the published state on the `time_ring` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"time_ring": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"time_ring": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `sec`.
 
 ### Time_talk (numeric)
@@ -63,6 +64,7 @@ Time to hold before open.
 Value can be found in the published state on the `time_talk` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"time_talk": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"time_talk": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `sec`.
 
 ### Time_open (numeric)
@@ -70,6 +72,7 @@ Time to open before end.
 Value can be found in the published state on the `time_open` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"time_open": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"time_open": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `sec`.
 
 ### Time_bell (numeric)
@@ -77,6 +80,7 @@ Time after last bell to finish ring.
 Value can be found in the published state on the `time_bell` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"time_bell": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"time_bell": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `sec`.
 
 ### Time_report (numeric)
@@ -84,6 +88,7 @@ Reporting interval.
 Value can be found in the published state on the `time_report` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"time_report": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"time_report": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `1440`.
 The unit of this value is `min`.
 
 ### Battery (numeric)

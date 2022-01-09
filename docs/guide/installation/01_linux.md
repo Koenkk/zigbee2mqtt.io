@@ -28,17 +28,10 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 
 ## Installing
 ```bash
-# Setup Node.js repository
-sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-
-# NOTE 1: If you see the message below please follow: https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb.
-# ## You appear to be running on ARMv6 hardware. Unfortunately this is not currently supported by the NodeSource Linux distributions. Please use the 'linux-armv6l' binary tarballs available directly from nodejs.org for Node.js 4 and later.
-# IMPORTANT: In this case instead of the apt-get install mentioned below; do: sudo apt-get install -y git make g++ gcc
-
-# NOTE 2: On x86, Node.js 10 may not work. It's recommended to install an unofficial Node.js 14 build which can be found here: https://unofficial-builds.nodejs.org/download/release/ (e.g. v14.16.0)
-
-# Install Node.js
-sudo apt-get install -y nodejs git make g++ gcc
+# Install Node.js and required dependencies
+# In Debian/Raspbian bullseye and up (11 and up), NodeJS v12.X is packaged, this is the safest method of installing NodeJS (from official repositories) for Zigbee2MQTT.
+# Check https://github.com/nodesource/distributions/blob/master/README.md if you want to install a specific version from NodeJS repositories instead.
+sudo apt-get install -y nodejs npm git make g++ gcc
 
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
 # version has been installed
@@ -46,8 +39,8 @@ node --version  # Should output v10.X, v12.X, v14.X, v15.X or V16.X
 npm --version  # Should output 6.X or 7.X
 
 # Clone Zigbee2MQTT repository
-sudo git clone https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
-sudo chown -R pi:pi /opt/zigbee2mqtt
+git clone https://github.com/Koenkk/zigbee2mqtt.git
+sudo mv zigbee2mqtt /opt/zigbee2mqtt
 
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
@@ -152,6 +145,8 @@ WantedBy=multi-user.target
 ```
 
 > If you are using a Raspberry Pi 1 or Zero AND if you followed this [guide](https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb), replace `ExecStart=/usr/bin/npm start` with `ExecStart=/usr/local/bin/npm start`.
+
+> If you are using a Raspberry Pi or a system running from a SD card, you will likely want to minimize the amount of log files written to disk. Systemd service with `StandardOutput=inherit` will result in logging everything twice: once in `journalctl` through the systemd unit and once from Zigbee2MQTT default logging to files under `data/log`. You will likely want to keep only one of them: either use `StandardOutput=null` in the systemd unit and keep only the logs under `data/log` **or** setting [`advanced.log_output = ['console']`](https://www.zigbee2mqtt.io/guide/configuration/logging.html) in Zigbee2MQTT configuration to keep only the `journalctl` logging.
 
 Save the file and exit.
 

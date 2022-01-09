@@ -1,5 +1,5 @@
 ---
-title: "Custom devices (DiY) EFEKTA_PWS control via MQTT"
+title: "Custom devices (DiY) EFEKTA_miniPWS control via MQTT"
 description: "Integrate your Custom devices (DiY) EFEKTA_miniPWS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2021-08-01T20:41:55Z
 pageClass: device-page
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Custom devices (DiY) EFEKTA_PWS
+# Custom devices (DiY) EFEKTA_miniPWS
 
 |     |     |
 |-----|-----|
 | Model | EFEKTA_miniPWS  |
 | Vendor  | Custom devices (DiY)  |
-| Description | [Mini plant Wattering Sensor](http://efektalab.com/miniPWS) |
+| Description | [Mini plant wattering sensor](http://efektalab.com/miniPWS) |
 | Exposes | soil_moisture, battery, linkquality |
-| Picture | ![Custom devices (DiY) EFEKTA_PWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_miniPWS.jpg) |
+| Picture | ![Custom devices (DiY) EFEKTA_miniPWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_miniPWS.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

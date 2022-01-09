@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_eON213z  |
 | Vendor  | Custom devices (DiY)  |
-| Description | DIY temperature and humidity sensor with e-paper display |
+| Description | [Temperature and humidity sensor with e-ink2.13](http://efektalab.com/eON213z) |
 | Exposes | battery, temperature, humidity, linkquality |
 | Picture | ![Custom devices (DiY) EFEKTA_eON213z](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eON213z.jpg) |
 
@@ -43,7 +43,6 @@ Instructions on how to build this device can be found [here](https://github.com/
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
-
 ## Exposes
 
 ### Battery (numeric)
@@ -64,7 +63,6 @@ Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
-
 
 ### Linkquality (numeric)
 Link quality (signal strength).

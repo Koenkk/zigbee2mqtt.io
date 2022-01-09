@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG26LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 3 gang smart wall switch (with neutral wire) |
-| Exposes | switch (state), operation_mode, power, action, linkquality |
+| Exposes | switch (state), operation_mode, power, power_outage_memory, led_disabled_night, temperature, action, linkquality |
 | Picture | ![Xiaomi QBKG26LM](https://www.zigbee2mqtt.io/images/devices/QBKG26LM.jpg) |
 
 
@@ -80,11 +80,31 @@ Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
+### Power_outage_memory (binary)
+Enable/disable the power outage memory, this recovers the on/off mode after power failure.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+If value equals `true` power_outage_memory is ON, if `false` OFF.
+
+### Led_disabled_night (binary)
+Enable/disable the LED at night.
+Value can be found in the published state on the `led_disabled_night` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
+If value equals `true` led_disabled_night is ON, if `false` OFF.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `hold_left`, `single_left`, `double_left`, `triple_left`, `release_left`, `hold_center`, `single_center`, `double_center`, `triple_center`, `release_center`, `hold_right`, `single_right`, `double_right`, `triple_right`, `release_right`, `single_left_center`, `double_left_center`, `single_left_right`, `double_left_right`, `single_center_right`, `double_center_right`, `single_all`, `double_all`.
+The possible values are: `single_left`, `double_left`, `single_center`, `double_center`, `single_right`, `double_right`, `single_left_center`, `double_left_center`, `single_left_right`, `double_left_right`, `single_center_right`, `double_center_right`, `single_all`, `double_all`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

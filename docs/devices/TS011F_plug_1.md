@@ -27,6 +27,15 @@ pageClass: device-page
 ## Notes
 
 
+### Broken attribute reporting functionality
+
+Starting with firmware version 1.0.5 (which comes pre-flashed on plugs produced since Q4 2021) core functionality on this plug is broken. TuYa has disabled the automatic reporting of power, voltage and current values meaning they need to be polled instead. The poll interval can be controlled through the `measurement_poll_interval` option.
+
+If your plug is affected, it will be detected as [TS011F_plug_3](TS011F_plug_3.md) instead of `TS011F_plug_1`.
+
+<!-- cfr: https://github.com/Koenkk/zigbee2mqtt/issues/9057 -->
+
+
 ### Pairing
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
 <!-- Notes END: Do not edit below this line -->

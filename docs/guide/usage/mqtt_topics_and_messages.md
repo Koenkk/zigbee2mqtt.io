@@ -62,6 +62,14 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
 ### Without JSON
 In case you don't want to use JSON, publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set/state` with payload `ON` is the same as publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"state": "ON"}`.
 
+### Publishing messages
+
+Publishing messages depends on the MQTT client you use. For example to publish a message using the command line with mosquitto you can use the command
+
+```bash
+ mosquitto_pub -t 'zigbee2mqtt/0x0fffffffffffffff/set' -m '{ "state": "ON" }'
+```
+
 ## zigbee2mqtt/FRIENDLY_NAME/get
 This is the counterpart of the `set` command. It allows you to read a value from a device. To read e.g. the state of a device send the payload `{"state": ""}`. What you can `/get` is specified on the device page under the *Exposes* section.
 
@@ -343,7 +351,7 @@ See [Binding](./binding.md).
 
 #### zigbee2mqtt/bridge/request/device/configure_reporting
 
-Allows to send a Zigbee configure reporting command to a device. Refer to the Configure Reporting Command in the [ZigBee Cluster Library](https://github.com/Koenkk/zigbee-herdsman/blob/master/docs/Zigbee%20Cluster%20Library%20Specification%20v7.pdf) for more information. Example payload is `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10}`. In this case the response would be `{"data":{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":"10","reportable_change":10},"status":"ok"}`.
+Allows to send a Zigbee configure reporting command to a device. Refer to the Configure Reporting Command in the [ZigBee Cluster Library](https://github.com/Koenkk/zigbee-herdsman/blob/master/docs/07-5123-08-Zigbee-Cluster-Library.pdf) for more information. Example payload is `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10}`. In this case the response would be `{"data":{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":"10","reportable_change":10},"status":"ok"}`.
 
 To disable reporting set the `maximum_report_interval` to `65535`.
 
@@ -371,6 +379,7 @@ Adds a group. Allowed payloads are `{"friendly_name": NAME, "id": NUMBER}` or `N
 
 Allows you to change the `friendly_name` of a group on the fly. Payload format is `{"from": groupID, "to": groupID}` where groupID can be the `groupID` or `friendly_name` of the group, example: `{"from": "my_group", "to": "my_group_new_name"}`. Response will be `{"data":{"from":"my_group","to":"my_group_new_name"},"status":"ok"}`.
 
+In case you are using Home Assistant discovery and also want to update the entity ID according to this new name, send e.g. `{"from": "my_group", "to": "my_group_new_name","homeassistant_rename":true}`.
 
 #### zigbee2mqtt/bridge/request/group/options
 

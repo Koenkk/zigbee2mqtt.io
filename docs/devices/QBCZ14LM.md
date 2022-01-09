@@ -27,6 +27,9 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -99,7 +102,7 @@ Maximum allowed load, turns off if exceeded.
 Value can be found in the published state on the `overload_protection` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"overload_protection": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"overload_protection": NEW_VALUE}`.
-The minimal value is `100` and the maximum value is `2200`.
+The minimal value is `100` and the maximum value is `2500`.
 The unit of this value is `W`.
 
 ### Linkquality (numeric)

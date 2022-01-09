@@ -214,6 +214,16 @@ function getExposeDocs(expose) {
       lines.push(`- \`${runningState.name}\`: ${runningState.description}. Possible values are: ${runningState.values.map((v) => `\`${v}\``).join(', ')}. To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${runningState.property}": ""}\`.`);
     }
 
+    const localTemperatureCalibration = expose.features.find((e) => e.name === 'local_temperature_calibration');
+    if (localTemperatureCalibration) {
+      let line = `- \`${localTemperatureCalibration.name}\`: ${localTemperatureCalibration.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${localTemperatureCalibration.property}": VALUE}.\``
+      if (localTemperature.access & access.GET) {
+        line += `To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${localTemperature.property}": ""}\`.`
+      }
+      
+      lines.push(line);
+    }
+
     const awayMode = expose.features.find((e) => e.name === 'away_mode');
     if (awayMode) {
       lines.push(`- \`${awayMode.name}\`: ${awayMode.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${awayMode.property}": "${awayMode.value_on}"}\` or \`{"${awayMode.property}": "${awayMode.value_off}"}\`. To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${awayMode.property}": ""}\`.`);
