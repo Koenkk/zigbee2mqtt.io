@@ -100,7 +100,7 @@ Normally Zigbee2MQTT compares current device firmware with available images vers
         "manufacturerCode": 4151,
         "imageType": 1,
         "url": "HelloZigbee.ota",
-        "force": "true"
+        "force": true
     }
 ]
 ```
