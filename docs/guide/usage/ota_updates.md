@@ -91,6 +91,21 @@ Firmware files can be located either on a web server, or on the local file syste
 ]
 ```
 
+Normally Zigbee2MQTT compares current device firmware with available images version, and allows flashing only firmwares with `fileVersion` that is higher than current. To force Zigbee2MQTT to use arbitrary version a `force` field can be used:
+
+```json
+[
+    {
+        "fileVersion": 2,
+        "manufacturerCode": 4151,
+        "imageType": 1,
+        "url": "HelloZigbee.ota",
+        "force": true
+    }
+]
+```
+
+
 ## Troubleshooting
 - `Device didn't respond to OTA request` or `Update failed with reason: 'aborted by device'`: try restarting the device by disconnecting the power/battery for a few seconds and try again.
 - For battery powered devices make sure that the battery is 70%+ as OTA updating is very power consuming.
