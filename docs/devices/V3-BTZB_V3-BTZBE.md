@@ -33,7 +33,15 @@ If pairing failed, try the followings:
 - Replacing the batteries of the danalock.
 
 ### App
-This device also come with an iOS app (Android as well but not tested). It is recommended to do the setups via the app for better control of the lock.
+This device also come with an iOS/Android app. It is recommended to do the setups first via the app for better control of the lock.
+
+If you have a Danapad, you can create/update/remove 20 pin code.
+To create or update code, you have to send MQTT /set request : {"pin_code":{"user":0,"pin_code":123456,"user_type":"unrestricted","user_enabled":true},"user_status":{"user":0,"status":"enabled"}}
+Apparently "user_type":"unrestricted","user_enabled":true is not used by the Danalock.
+The user value can take 0 to 19 (pin 0 to pin 19)
+For the pin code to work, you must also send user_status and set it to enabled.
+To remove a pin code, just send MQTT /set request : {"pin_code":{"user":0}} (user take value 0 to 19)
+
 <!-- Notes END: Do not edit below this line -->
 
 
