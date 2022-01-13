@@ -76,16 +76,13 @@ ota:
 
 Local index file is searched in the configuration directory (next to `configuration.yaml`). The file name could be also a full path to the file, taking into account that host file system may not be available when running Zigbee2MQTT inside a docker container. Alternatively, Zigbee2MQTT supports index files located on a remote HTTP(s) server. In this case `zigbee_ota_override_index_location` key should be an URL of the index file.
 
-The override OTA index file shall have the same structure as the [main index file](https://github.com/Koenkk/zigbee-OTA/blob/master/index.json). To create the index file it is possible to use add.js script (follow instructions [here](https://github.com/Koenkk/zigbee-OTA)). Correct image location and image URL as necessary.
+The override OTA index file shall have the same structure as the [main index file](https://github.com/Koenkk/zigbee-OTA/blob/master/index.json). To create the index file it is possible to use [add.js](https://github.com/Koenkk/zigbee-OTA/blob/master/scripts/add.js) script (follow instructions [here](https://github.com/Koenkk/zigbee-OTA)). Correct image location and image URL as necessary.
 
-Firmware files can be located either on a web server, or on the local file system. In this case `url` field in the index file entry shall be either a full path to the image file, or relative to the Zigbee2MQTT configuration directory. In case of local image file, index entry can be simplified and look like this
+Firmware files can be located either on a web server, or on the local file system. In this case `url` field in the index file entry shall be either a full path to the image file, or relative to the Zigbee2MQTT configuration directory. In case of local image file, index entry can be simplified to only 'url' field. Other fields are still allowed, but if omitted corresponding information (firmware version, image type, manufacturer ID, etc) is read from the image file.
 
 ```json
 [
     {
-        "fileVersion": 2,
-        "manufacturerCode": 4151,
-        "imageType": 1,
         "url": "HelloZigbee.ota"
     }
 ]
@@ -96,15 +93,13 @@ Normally Zigbee2MQTT compares current device firmware with available images vers
 ```json
 [
     {
-        "fileVersion": 2,
-        "manufacturerCode": 4151,
-        "imageType": 1,
         "url": "HelloZigbee.ota",
         "force": true
     }
 ]
 ```
 
+Please note, even though Zigbee specification basically allows firmware version downgrade, some of the devices may reject older firmwares. This cannot be forced from Zigbee2MQTT side.
 
 ## Troubleshooting
 - `Device didn't respond to OTA request` or `Update failed with reason: 'aborted by device'`: try restarting the device by disconnecting the power/battery for a few seconds and try again.
