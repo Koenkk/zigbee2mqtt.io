@@ -85,7 +85,15 @@ If you have a Tuya gateway, you can find what the function is of data point numb
 By adding the two debug converters mentioned earlier, we have the tools to decipher Tuya data points.
 
 #### fz.tuya_data_point_dump
-This converter will append a line in `data/tuya.dump.txt` file for each data point value received in a Tuya specific message from the device, format of the file is:
+This converter will log a message for each data point value received in a Tuya specific message from the device. For the "heating setpoint" example with data point number `103`, this could look like:
+
+```
+zigbee-herdsman-converters:tuya_data_point_dump: Received DP #103 from 0x123456789abcdef with raw data '{"dp":103,"datatype":2,"data":[0,0,0,215]}': type='commandDataResponse', datatype='value', value='215', known DP# usage: ["maxTemp","moesSboostHeatingCountdownTimeSet","neoDuration","hyExternalTemp","trsIlluminanceLux","msVacancyDelay","hochActivePower"]
+```
+
+The log message contains the data point number, the raw and the decoded data, and the list of symbolic names which are already known for this data point number (from the `dataPoints` definition in `node_modules/zigbee-herdsman-converters/lib/tuya.js`).
+
+In addition to the log entry, the converter will append a line to the file `data/tuya.dump.txt` (which can be used for test scripts). For each data point value received format of line is:
 
 ```txt
 current_time device_ieee_address seq dpv_number dp datatype data_as_hex_octets
@@ -93,18 +101,15 @@ current_time device_ieee_address seq dpv_number dp datatype data_as_hex_octets
 
 A `commandDataReport` (corresponding to the `dataReport` type) and `commandDataResponse` (corresponding to `dataResponse`) message may contain multiple data point values. `dpv_number` is the index of the data point value in the payload (0 being the first).
 
-A python script [read_tuya_dump.py](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/scripts/read_tuya_dump.py) can be used to parse this file. It's pre filled with Saswell data points, but should be easy to modify it to work with your device.
+The example python script [read_tuya_dump.py](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/scripts/read_tuya_dump.py) is able to parse this file. It's pre-filled with Saswell data points, but should be easy to modify it to work with your device if needed. On a linux computer/Raspberry Pi you can do `tail -f -n +0 data/tuya.dump.txt | read_tuya_dump.py` to get real time view of what your device is sending.
 
 #### tz.tuya_data_point_test
 This converter will allow you to send arbitrary data point to Tuya device, you only need to publish a message in the format `datatype,dp,data` to `zigbee2mqtt/{device_friendly_name}/set/tuya_data_point_test` MQTT topic
 
-#### Usage
-On a linux computer/Raspberry Pi you can do `tail -f -n +0 data/tuya.dump.txt | read_tuya_dump.py` to get real time view of what your device is sending.
-
 ### 5. Adding your first data point
 Let's assume we want to add the heating setpoint of the Saswell thermostat first.
 
-First add the `saswellHeatingSetpoint` data point to `dataPoints` in `node_modules/zigbee-herdsman-converters/lib/tuya.js` with value `103`.
+As the log message for the data point did not contain a suitable existing definition, first add the `saswellHeatingSetpoint` data point to `dataPoints` in `node_modules/zigbee-herdsman-converters/lib/tuya.js` with value `103`.
 
 Then add to `node_modules/zigbee-herdsman-converters/converters/fromZigbee.js`:
 ```js
