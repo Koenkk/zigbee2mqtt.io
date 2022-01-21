@@ -98,7 +98,7 @@ Example payload:
 ```
 
 ## zigbee2mqtt/bridge/state
-Contains the state of the bridge, payloads are:
+Contains the state of the bridge, this message is published as retained. Payloads are:
 * `online`: published when the bridge is running (on startup)
 * `offline`: published right before the bridge stops
 
@@ -106,7 +106,7 @@ Contains the state of the bridge, payloads are:
 All Zigbee2MQTT logging is published to this topic in the form of `{"level": LEVEL, "message": MESSAGE}`, example: `{"level": "info", "message": "Zigbee: allowing new devices to join."}`.
 
 ## zigbee2mqtt/bridge/devices
-Contains the devices connected to the bridge.
+Contains the devices connected to the bridge, this message is published as retained.
 Whenever a devices joins or leaves this is republished.
 In case `supported` is `false`, `definition` will be `null`.
 Example payload:
@@ -207,7 +207,7 @@ A device definition will always have an `exposes` and `options` property which a
 
 
 ## zigbee2mqtt/bridge/groups
-Contains the groups.
+Contains the groups, this message is published as retained.
 Whenever a group is added/removed or when devices are added/removed from a group this is republished.
 Example payload:
 
