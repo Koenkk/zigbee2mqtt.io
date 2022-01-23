@@ -68,7 +68,8 @@ Home Assistant automation example:
   - service: mqtt.publish
     data:
       topic: zigbee2mqtt/<FRIENDLY_NAME>/set
-      payload: "{ 'options': { 'reset_limits': true } }"
+      payload: "{ \"options\": { \"reset_limits\": true } }"
+      # note "" are escaped with \ else will not work if you want to send payload as json
   - service: cover.close_cover
     entity_id: cover.<COVER_ID>
   - delay:
