@@ -26,7 +26,47 @@ pageClass: device-page
 ## Notes
 
 ### Description
-Wiren Board WB-MSW3 v.3 — hybrid digital sensor of temperature, humidity, illumination, noise, CO2 and VOC level. It is equipped with the IR blaster (and the receiver for learning). Designed for climate control in residential and office premises.
+Wiren Board WB-MSW v.3 — hybrid digital sensor of temperature, humidity, illumination, noise, CO2 and VOC level. It is equipped with the IR blaster (and the receiver for learning). Designed for climate control in residential and office premises.
+
+### Configuring IR
+The sensor contains 32 banks for storing IR commands. Training takes place through the built-in IR receiver.
+
+By publishing to `zigbee2mqtt/FRIENDLY_NAME/1/set` various device attributes can be configured.
+
+#### Start learn to ROM
+Request:
+
+```json
+{
+    "learn_start": {
+        "rom":0
+    }
+}
+```
+* `rom`: Memory cell number (from 0 to 31)
+
+#### Stop learn to ROM
+Request:
+```json
+{
+    "learn_stop": {
+        "rom":0
+    }
+}
+```
+* `rom`: Memory cell number (from 0 to 31)
+
+#### Play from ROM
+Request:
+```json
+{
+    "play_store": {
+        "rom":0
+    }
+}
+```
+* `rom`: Memory cell number (from 0 to 31)
+
 <!-- Notes END: Do not edit below this line -->
 
 
