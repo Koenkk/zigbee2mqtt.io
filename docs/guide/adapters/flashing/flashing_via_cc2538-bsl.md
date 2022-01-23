@@ -19,26 +19,24 @@ sudo apt update && sudo apt install python3 python3-pip
 sudo pip3 install pyserial intelhex
 ```
 ## Download cc2538-bsl
-3. We need the ITead_Sonoff_Zigbee-delay "bootloader" feature.  
+3. Create a directory named "cc2538-bsl", download the last master of cc2538-bsl as tarball and extract in same folder.  
 ```bash
 mkdir cc2538-bsl
 cd cc2538-bsl
-wget https://github.com/JelmerT/cc2538-bsl/archive/refs/heads/feature/ITead_Sonoff_Zigbee-delay.zip
-unzip ITead_Sonoff_Zigbee-delay.zip
+curl -sSL https://github.com/JelmerT/cc2538-bsl/archive/refs/heads/master.tar.gz | tar xz --strip 1
 ```  
 
-Actually this function is only available in this feature branch. It's possible that it will go to the master, soon.  
+The sonoff feature is in the master since 20.01.2022.  
 
 ## Download the Firmware  
-Download the firmware for your adapter from the [Supported adapter page](../README.md) and unzip it in the `c2538-bsl-feature-ITead_Sonoff_Zigbee-delay` directory.
+Download the firmware for your adapter from the [Supported adapter page](../README.md) and unzip it in the `c2538-bsl` directory. So everything needed is in one folder.  
 
 4. In this case we will flash `CC1352P2_CC2652P_launchpad_coordinator_***.zip`.
 ```bash
 wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20211217.zip
 unzip CC1352P2_CC2652P_launchpad_coordinator_20211217.zip
 
-cd ./cc2538-bsl-feature-ITead_Sonoff_Zigbee-delay/
-sudo python3 cc2538-bsl.py -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb ../CC1352P2_CC2652P_launchpad_coordinator_20211217.hex
+sudo python3 cc2538-bsl.py -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb ./CC1352P2_CC2652P_launchpad_coordinator_20211217.hex
 ```
 `-ewv` means Mass **e**rease, **w**rite, **v**erify  
 `-p` is the port on which your device is running, in this case `/dev/ttyUSB0`  
