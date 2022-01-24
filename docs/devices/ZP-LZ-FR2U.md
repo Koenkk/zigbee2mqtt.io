@@ -16,6 +16,12 @@ pageClass: device-page
 | Picture | ![Moes ZP-LZ-FR2U](https://www.zigbee2mqtt.io/images/devices/ZP-LZ-FR2U.jpg) |
 
 
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+
+
+<!-- Notes END: Do not edit below this line -->
+
+
 ## Exposes
 
 ### Switch (l1 endpoint)
