@@ -17,10 +17,10 @@ description: "Integrate your Schneider Electric 41E2PBSWMZ/356PB2MBTZ via Zigbee
 | Picture | ![Schneider Electric 41E2PBSWMZ/356PB2MBTZ](https://www.zigbee2mqtt.io/images/devices/41E2PBSWMZ_356PB2MBTZ.jpg) |
 
 
-## Notes
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
-None
 
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 
