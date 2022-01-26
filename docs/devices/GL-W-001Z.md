@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | GL-W-001Z  |
 | Vendor  | Gledopto  |
-| Description | Zigbee On/Off Wall Switch |
+| Description | Zigbee on/off wall switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Gledopto GL-W-001Z](https://www.zigbee2mqtt.io/images/devices/GL-W-001Z.jpg) |
 

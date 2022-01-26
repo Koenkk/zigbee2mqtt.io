@@ -23,8 +23,12 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
 
+### Pairing
+
+The range extender is in pairing mode straight out of the box - allow new devices and the device will join the network. To re-pair the device, unplug and re-plug the device three times, the LED light will blink constantly when ready for pairing.
 <!-- Notes END: Do not edit below this line -->
 
 

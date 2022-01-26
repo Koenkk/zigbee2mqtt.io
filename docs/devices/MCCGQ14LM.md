@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MCCGQ14LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara E1 door & window contact sensor |
-| Exposes | contact, battery, voltage, linkquality |
+| Exposes | contact, battery, temperature, voltage, linkquality |
 | Picture | ![Xiaomi MCCGQ14LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ14LM.jpg) |
 
 
@@ -57,6 +57,12 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
 
 ### Voltage (numeric)
 Voltage of the battery in millivolts.

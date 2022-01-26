@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Thermostat radiator valve |
 | Exposes | battery_low, lock (state), open_window, open_window_temperature, holiday_temperature, comfort_temperature, eco_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint), boost_timeset_countdown, frost_protection, heating_stop, online, holiday_mode_date, programming, error_status, linkquality |
 | Picture | ![TuYa TV02-Zigbee](https://www.zigbee2mqtt.io/images/devices/TV02-Zigbee.jpg) |
+| White-label | Moes TV01-ZB, Tesla Smart TSL-TRV-TV01ZG, Unknown/id3.pl GTZ08 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -57,6 +58,7 @@ Open window temperature.
 Value can be found in the published state on the `open_window_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"open_window_temperature": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `30`.
 The unit of this value is `°C`.
 
 ### Holiday_temperature (numeric)
@@ -64,6 +66,7 @@ Holiday temperature.
 Value can be found in the published state on the `holiday_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"holiday_temperature": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `30`.
 The unit of this value is `°C`.
 
 ### Comfort_temperature (numeric)
@@ -71,6 +74,7 @@ Comfort temperature.
 Value can be found in the published state on the `comfort_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `30`.
 The unit of this value is `°C`.
 
 ### Eco_temperature (numeric)
@@ -78,6 +82,7 @@ Eco temperature.
 Value can be found in the published state on the `eco_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eco_temperature": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `30`.
 The unit of this value is `°C`.
 
 ### Climate 
@@ -85,12 +90,14 @@ This climate device supports the following features: `preset`, `local_temperatur
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `0` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `auto`, `manual`, `holiday`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
+- `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`
 
 ### Boost_timeset_countdown (numeric)
 Setting minimum 0 - maximum 465 seconds boost time. The boost (♨) function is activated. The remaining time for the function will be counted down in seconds ( 465 to 0 )..
 Value can be found in the published state on the `boost_timeset_countdown` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_timeset_countdown": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `465`.
 The unit of this value is `second`.
 
 ### Frost_protection (binary)
@@ -114,7 +121,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"online": NEW_VALUE}`.
 If value equals `ON` online is ON, if `OFF` OFF.
 
-### Holiday_mode_date (numeric)
+### Holiday_mode_date (text)
 The holiday mode( ⛱ ) will automatically start at the set time starting point and run the holiday temperature..
 Value can be found in the published state on the `holiday_mode_date` property.
 It's not possible to read (`/get`) this value.

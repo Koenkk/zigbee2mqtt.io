@@ -41,6 +41,7 @@ Auto off after specific time..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `10000`.
 The unit of this value is `min`.
 
 ### Linkquality (numeric)

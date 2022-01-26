@@ -5,13 +5,19 @@ addedAt: 2021-12-03T18:14:38Z
 pageClass: device-page
 ---
 
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
 # Sunricher SR-ZGP2801K2-DIM
 
 |     |     |
 |-----|-----|
 | Model | SR-ZGP2801K2-DIM  |
 | Vendor  | Sunricher  |
-| Description | 2 button switch |
+| Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
 | Picture | ![Sunricher SR-ZGP2801K2-DIM](https://www.zigbee2mqtt.io/images/devices/SR-ZGP2801K2-DIM.jpg) |
 
@@ -70,7 +76,7 @@ indication, it might because the switch has not entered learning mode yet since 
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `press_on`, `press_off`, `hold_on`, `hold_off`,`release`.
+The possible values are: `press_on`, `press_off`, `hold_on`, `hold_off`, `release`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

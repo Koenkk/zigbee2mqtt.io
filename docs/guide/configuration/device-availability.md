@@ -5,7 +5,7 @@ sidebarDepth: 1
 # Device-Availability
 
 The availability feature checks whether your devices are online. The availability state of a device is published
-to `zigbee2mqtt/[FRIENDLY_NAME]/availability` with the payload being `online` or `offline`.
+to `zigbee2mqtt/[FRIENDLY_NAME]/availability` with the payload being `online` or `offline` (this message is a retained MQTT message).
 
 ```yaml
 # Optional: Enable the availability feature (default = false)

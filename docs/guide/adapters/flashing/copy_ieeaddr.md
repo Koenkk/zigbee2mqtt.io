@@ -35,4 +35,4 @@ Supports: CC2652, CC1352, CC2538
 1. Select your adapter, go to "MAC address"
 1. Fill the old coordinator ieee address into "Secondary Address" -> "IEEE 802.15.4 MAC address" (first `0x` can be skipped)
 1. Press "Write"
-1. Reflash the firmware on your stick (this is important, otherwise the coordinator will not use the new ieee address)
+1. Reflash the firmware on your stick - in the right corner under Secondary MAC check "Retain secondary IEEE" (this is important, otherwise the coordinator will not use the new ieee address)
