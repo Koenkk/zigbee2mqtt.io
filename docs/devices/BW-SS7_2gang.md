@@ -26,7 +26,7 @@ pageClass: device-page
 ## Notes
 
 ### Pairing
-Pair this device with a long press (~5 seconds) of the button which is located under the small hole on the upper right edge on the front of the device. The device will beep in short periods. Once paired the device will do one long beep.
+Connect a switch between L and S1 or S2 according to user manual. Once device is powered shortly switch ON and OFF the switch for at least five times to start pairing. Once paired the device will do one long beep.
 <!-- Notes END: Do not edit below this line -->
 
 
