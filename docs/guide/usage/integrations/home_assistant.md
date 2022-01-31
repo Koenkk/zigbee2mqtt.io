@@ -123,6 +123,17 @@ devices:
 
 If you are also using device specific overrides, make sure that they are configured under the new device type rather than the original device type.
 
+## Using a custom name for the device and entities
+In order to get a more readable name for the device and entities in Home Assistant, a specific name for Home Assistant can be set in the device configuration. If set, this name will be used instead of `friendly_name`.
+
+```yaml
+devices:
+  "0x12345678":
+    friendly_name: living_room/temperature_sensor
+    homeassistant:
+      name: Living Room Temperature Sensor
+```
+
 ## Controlling Zigbee2MQTT via Home Assistant
 The following Home Assistant configuration allows you to control Zigbee2MQTT from Home Assistant.
 
