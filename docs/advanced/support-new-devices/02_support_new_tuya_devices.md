@@ -33,7 +33,6 @@ const definition = {
     model: 'SEA802-Zigbee',
     vendor: 'Saswell',
     description: 'Thermostatic radiator valve',
-    supports: 'thermostat, temperature',
     fromZigbee: [
         fz.ignore_basic_report, // Add this if you are getting no converter for 'genBasic'
         fz.tuya_data_point_dump, // This is a debug converter, it will be described in the next part
