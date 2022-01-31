@@ -48,6 +48,9 @@ Published messages are **always** in a JSON format. Each device produces a diffe
 }
 ```
 
+## zigbee2mqtt/FRIENDLY_NAME/availabilty
+If ["Device-Availability"](../configuration/device-availability.md) is configured the online/offline status will be published when it changes.
+
 ## zigbee2mqtt/FRIENDLY_NAME/set
 Publishing messages to this topic allows you to control your Zigbee devices via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH). How to control a specific device can be found in the *Exposes* section on the device page which can be accessed via ["Supported devices"](../../supported-devices/).
 
