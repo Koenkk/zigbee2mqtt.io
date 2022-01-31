@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | FC80CC  |
 | Vendor  | Legrand  |
-| Description | Legrand (or Bticino) DIN contactor module (note: Legrand 412171 may be similar to Bticino FC80CC) |
+| Description | Legrand (or Bticino) DIN contactor module |
 | Exposes | switch (state), power, device_mode, linkquality |
 | Picture | ![Legrand FC80CC](https://www.zigbee2mqtt.io/images/devices/FC80CC.jpg) |
 
@@ -27,6 +27,15 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

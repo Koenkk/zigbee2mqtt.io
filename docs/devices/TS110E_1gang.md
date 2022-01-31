@@ -1,7 +1,7 @@
 ---
-title: "Aldi L122CB63H11A9.0W control via MQTT"
-description: "Integrate your Aldi L122CB63H11A9.0W via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2021-02-19T19:18:28Z
+title: "Lonsonho TS110E_1gang control via MQTT"
+description: "Integrate your Lonsonho TS110E_1gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2022-01-31T17:42:44.798Z
 pageClass: device-page
 ---
 
@@ -11,27 +11,20 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Aldi L122CB63H11A9.0W
+# Lonsonho TS110E_1gang
 
 |     |     |
 |-----|-----|
-| Model | L122CB63H11A9.0W  |
-| Vendor  | Aldi  |
-| Description | LIGHTWAY smart home LED-lamp - bulb |
-| Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
-| Picture | ![Aldi L122CB63H11A9.0W](https://www.zigbee2mqtt.io/images/devices/L122CB63H11A9.0W.jpg) |
+| Model | TS110E_1gang  |
+| Vendor  | Lonsonho  |
+| Description | Zigbee smart dimmer module 1 gang with neutral |
+| Exposes | light (state, brightness), effect, linkquality |
+| Picture | ![Lonsonho TS110E_1gang](https://www.zigbee2mqtt.io/images/devices/TS110E_1gang.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
 
 
-### Pairing
-Factory reset the light.
-After resetting the light it will automatically connect.
-
-The light should be turned off for at least 10 seconds. After that, the on- and off-phases should last around 2 to 5 seconds.
-Start with light on, then off, and then 3 “on’s”, wait in the 3rd ON state.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -40,20 +33,13 @@ Start with light on, then off, and then 3 “on’s”, wait in the 3rd ON state
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
-* `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
-
 
 ## Exposes
 
 ### Light 
-This light supports the following features: `state`, `brightness`, `color_temp`, `color_xy`.
+This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
-- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `150` and `500`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warm`, `warmest`.
-- `color_xy`: To control the XY color (CIE 1931 color space) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color": {"x": X_VALUE, "y": Y_VALUE}}` (e.g. `{"color":{"x":0.123,"y":0.123}}`). To read the XY color send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color":{"x":"","y":""}}`. Alternatively it is possible to set the XY color via RGB:
-  - `{"color": {"r": R, "g": G, "b": B}}` e.g. `{"color":{"r":46,"g":102,"b":150}}`
-  - `{"color": {"rgb": "R,G,B"}}` e.g. `{"color":{"rgb":"46,102,150"}}`
-  - `{"color": {"hex": HEX}}` e.g. `{"color":{"hex":"#547CFF"}}`
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
@@ -73,9 +59,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
   "brightness_step": 40 // Increases brightness by 40
-  "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
-  "color_temp_move": "stop", // Stop moving color temperature
-  "color_temp_step": 99, // Increase color temperature by 99
 }
 ````
 

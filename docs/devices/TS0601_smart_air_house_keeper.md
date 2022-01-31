@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | TS0601_smart_air_house_keeper  |
 | Vendor  | TuYa  |
-| Description | Air quality sensor |
-| Exposes | temperature, humidity, co2, voc, formaldehyd, linkquality |
+| Description | Smart air house keeper |
+| Exposes | temperature, humidity, co2, voc, formaldehyd, pm25, linkquality |
 | Picture | ![TuYa TS0601_smart_air_house_keeper](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_air_house_keeper.jpg) |
 
 
@@ -51,6 +51,10 @@ pageClass: device-page
 
 * `formaldehyd_calibration`: Calibrates the formaldehyd value (absolute offset), takes into effect on next report of device. The value must be a number.
 
+* `pm25_precision`: Number of digits after decimal point for pm25, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `pm25_calibration`: Calibrates the pm25 value (absolute offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
@@ -82,6 +86,12 @@ The unit of this value is `ppb`.
 The measured formaldehyd value.
 Value can be found in the published state on the `formaldehyd` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Pm25 (numeric)
+Measured PM2.5 (particulate matter) concentration.
+Value can be found in the published state on the `pm25` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `µg/m³`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

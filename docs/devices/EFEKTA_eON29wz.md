@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_eON29wz  |
 | Vendor  | Custom devices (DiY)  |
-| Description | [Mini weather station, e-ink display 2.9, digital barometer, forecast, charts, temperature, humidity, illumination](http://efektalab.com/eON290wz) |
-| Exposes | battery, temperature, humidity, pressure, illuminance, linkquality |
-| Picture | ![Custom devices (DiY) EFEKTA_eON29wz](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eON213wz.jpg) |
+| Description | [Mini weather station, barometer, forecast, charts, temperature, humidity, light](http://efektalab.com/eON290wz) |
+| Exposes | battery, illuminance, temperature, humidity, pressure, linkquality |
+| Picture | ![Custom devices (DiY) EFEKTA_eON29wz](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eON29wz.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -93,3 +93,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+

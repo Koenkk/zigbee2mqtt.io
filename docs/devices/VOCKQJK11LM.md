@@ -31,6 +31,9 @@ pageClass: device-page
 Press and hold button on top of device until connection symbol appears
 <!-- Notes END: Do not edit below this line -->
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*

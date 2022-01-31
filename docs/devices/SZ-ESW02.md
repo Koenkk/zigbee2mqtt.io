@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | SZ-ESW02  |
 | Vendor  | Sercomm  |
-| Description | Telstra smart plug |
+| Description | Telstra smart plug 2 |
 | Exposes | switch (state), power, linkquality |
 | Picture | ![Sercomm SZ-ESW02](https://www.zigbee2mqtt.io/images/devices/SZ-ESW02.jpg) |
 

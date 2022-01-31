@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNJLBL01LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara roller shade companion E1 |
-| Exposes | cover (state, position), battery, linkquality |
+| Exposes | cover (state, position), battery, motor_state, running, linkquality |
 | Picture | ![Xiaomi ZNJLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNJLBL01LM.jpg) |
 
 
@@ -43,6 +43,14 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `illuminance_precision`: Number of digits after decimal point for illuminance, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
@@ -58,6 +66,19 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Motor_state (enum)
+The current state of the motor..
+Value can be found in the published state on the `motor_state` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_state": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `declining`, `rising`, `pause`, `blocked`.
+
+### Running (binary)
+Whether the motor is moving or not..
+Value can be found in the published state on the `running` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` running is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

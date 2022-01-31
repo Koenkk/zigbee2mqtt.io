@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | RTCGQ12LM  |
 | Vendor  | Xiaomi  |
-| Description | Aqara T1 human body movement and illuminance sensor (illuminance not supported for now) |
-| Exposes | occupancy, battery, occupancy_timeout, linkquality |
+| Description | Aqara T1 human body movement and illuminance sensor |
+| Exposes | occupancy, illuminance, detection_interval, battery, linkquality |
 | Picture | ![Xiaomi RTCGQ12LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ12LM.jpg) |
 
 
@@ -34,6 +34,20 @@ In order for this device to work (fully), at least the following firmware is req
 Note that if you have already paired the device you will need to repair it after upgrading your adapter firmware.
 <!-- Notes END: Do not edit below this line -->
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_precision`: Number of digits after decimal point for illuminance, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -44,20 +58,26 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
+### Illuminance (numeric)
+Measured illuminance in lux.
+Value can be found in the published state on the `illuminance` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
+
+### Detection_interval (numeric)
+Time interval for detecting actions.
+Value can be found in the published state on the `detection_interval` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_interval": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_interval": NEW_VALUE}`.
+The minimal value is `2` and the maximum value is `65535`.
+The unit of this value is `s`.
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Occupancy_timeout (numeric)
-Time in seconds till occupancy goes to false.
-Value can be found in the published state on the `occupancy_timeout` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `65535`.
-The unit of this value is `s`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

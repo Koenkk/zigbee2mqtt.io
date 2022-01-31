@@ -1,7 +1,7 @@
 ---
 title: "TuYa ZM-35H-Q control via MQTT"
 description: "Integrate your TuYa ZM-35H-Q via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt:
+addedAt: 2022-01-31T17:02:38
 pageClass: device-page
 ---
 
@@ -36,7 +36,6 @@ As a low power device, the motion sensor isn't reachable most of the time, but
 only when active (e.g. because it detected motion). Therefore, requests to read
 or set values (i.e. `sensitivity` or `keep_time`) won't be processed right away,
 typically. Instead, they will be queued and sent on the next occasion.
-
 <!-- Notes END: Do not edit below this line -->
 
 

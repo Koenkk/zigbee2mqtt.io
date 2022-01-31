@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RTCGQ13LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara high precision motion sensor |
-| Exposes | occupancy, motion_sensitivity, occupancy_timeout, battery, linkquality |
+| Exposes | occupancy, motion_sensitivity, detection_interval, battery, linkquality |
 | Picture | ![Xiaomi RTCGQ13LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ13LM.jpg) |
 
 
@@ -34,6 +34,9 @@ In order for this device to work (fully), at least the following firmware is req
 Note that if you have already paired the device you will need to repair it after upgrading your adapter firmware.
 <!-- Notes END: Do not edit below this line -->
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -41,6 +44,10 @@ Note that if you have already paired the device you will need to repair it after
 * `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `illuminance_precision`: Number of digits after decimal point for illuminance, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -57,12 +64,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensitivity": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
-### Occupancy_timeout (numeric)
-Time in seconds till occupancy goes to false.
-Value can be found in the published state on the `occupancy_timeout` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `65535`.
+### Detection_interval (numeric)
+Time interval for detecting actions.
+Value can be found in the published state on the `detection_interval` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_interval": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_interval": NEW_VALUE}`.
+The minimal value is `2` and the maximum value is `65535`.
 The unit of this value is `s`.
 
 ### Battery (numeric)

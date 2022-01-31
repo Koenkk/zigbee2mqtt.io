@@ -58,6 +58,15 @@ Discussion: https://github.com/Koenkk/zigbee2mqtt/issues/809
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 

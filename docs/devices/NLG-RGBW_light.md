@@ -1,6 +1,6 @@
 ---
-title: "Paul Neuhaus NLG-RGBW light control via MQTT"
-description: "Integrate your Paul Neuhaus NLG-RGBW light via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+title: "Paul Neuhaus NLG-RGBW_light control via MQTT"
+description: "Integrate your Paul Neuhaus NLG-RGBW_light via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
 addedAt: 2020-08-11T22:17:44Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Paul Neuhaus NLG-RGBW light
+# Paul Neuhaus NLG-RGBW_light
 
 |     |     |
 |-----|-----|
-| Model | NLG-RGBW light  |
+| Model | NLG-RGBW_light  |
 | Vendor  | Paul Neuhaus  |
-| Description | Various RGBW lights (e.g. 100.111.57) |
+| Description | Various RGBW lights (e.g. 100.110.39) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Paul Neuhaus NLG-RGBW light](https://www.zigbee2mqtt.io/images/devices/NLG-RGBW-light.jpg) |
+| Picture | ![Paul Neuhaus NLG-RGBW_light](https://www.zigbee2mqtt.io/images/devices/NLG-RGBW_light.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
