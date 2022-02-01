@@ -1,7 +1,7 @@
 ---
 title: "NodOn SIN-4-RS-20 control via MQTT"
 description: "Integrate your NodOn SIN-4-RS-20 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2022-01-31T17:42:44.790Z
+addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
 

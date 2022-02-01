@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG38LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara E1 1 gang switch (without neutral) |
-| Exposes | switch (state), power_outage_memory, action, operation_mode, mode_switch, linkquality |
+| Exposes | switch (state), power_outage_memory, action, temperature, flip_indicator_light, operation_mode, mode_switch, linkquality |
 | Picture | ![Xiaomi QBKG38LM](https://www.zigbee2mqtt.io/images/devices/QBKG38LM.jpg) |
 
 
@@ -66,6 +66,19 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Flip_indicator_light (binary)
+After turn on, the indicator light turns on while switch is off, and vice versa.
+Value can be found in the published state on the `flip_indicator_light` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"flip_indicator_light": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
+If value equals `ON` flip_indicator_light is ON, if `OFF` OFF.
 
 ### Operation_mode (enum)
 Decoupled mode for button.

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG19LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall switch T1 (with neutral, single rocker) |
-| Exposes | switch (state), action, power, energy, voltage, temperature, power_outage_memory, led_disabled_night, operation_mode, linkquality |
+| Exposes | switch (state), action, power, energy, voltage, temperature, power_outage_memory, led_disabled_night, flip_indicator_light, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG19LM](https://www.zigbee2mqtt.io/images/devices/QBKG19LM.jpg) |
 
 
@@ -93,6 +93,13 @@ Value can be found in the published state on the `led_disabled_night` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
 If value equals `true` led_disabled_night is ON, if `false` OFF.
+
+### Flip_indicator_light (binary)
+After turn on, the indicator light turns on while switch is off, and vice versa.
+Value can be found in the published state on the `flip_indicator_light` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"flip_indicator_light": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
+If value equals `ON` flip_indicator_light is ON, if `OFF` OFF.
 
 ### Operation_mode (enum)
 Decoupled mode for left button.

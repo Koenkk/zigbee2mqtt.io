@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG25LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 3 gang smart wall switch (no neutral wire) |
-| Exposes | switch (state), operation_mode, mode_switch, power_outage_memory, led_disabled_night, temperature, action, linkquality |
+| Exposes | switch (state), operation_mode, mode_switch, power_outage_memory, led_disabled_night, temperature, flip_indicator_light, action, linkquality |
 | Picture | ![Xiaomi QBKG25LM](https://www.zigbee2mqtt.io/images/devices/QBKG25LM.jpg) |
 
 
@@ -124,6 +124,13 @@ Measured temperature value.
 Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
+
+### Flip_indicator_light (binary)
+After turn on, the indicator light turns on while switch is off, and vice versa.
+Value can be found in the published state on the `flip_indicator_light` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"flip_indicator_light": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
+If value equals `ON` flip_indicator_light is ON, if `OFF` OFF.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

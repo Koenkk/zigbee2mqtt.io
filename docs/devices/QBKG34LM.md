@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG34LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall switch T1 (with neutral, three rocker) |
-| Exposes | switch (state), power, energy, voltage, power_outage_memory, led_disabled_night, temperature, action, operation_mode, linkquality |
+| Exposes | switch (state), power, energy, voltage, flip_indicator_light, power_outage_memory, led_disabled_night, temperature, action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG34LM](https://www.zigbee2mqtt.io/images/devices/QBKG34LM.jpg) |
 
 
@@ -77,6 +77,13 @@ Measured electrical potential value.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
+
+### Flip_indicator_light (binary)
+After turn on, the indicator light turns on while switch is off, and vice versa.
+Value can be found in the published state on the `flip_indicator_light` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"flip_indicator_light": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
+If value equals `ON` flip_indicator_light is ON, if `OFF` OFF.
 
 ### Power_outage_memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.

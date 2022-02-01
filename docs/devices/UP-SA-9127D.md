@@ -1,7 +1,7 @@
 ---
 title: "Sunricher UP-SA-9127D control via MQTT"
 description: "Integrate your Sunricher UP-SA-9127D via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2022-01-31T17:42:44.652Z
+addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
 

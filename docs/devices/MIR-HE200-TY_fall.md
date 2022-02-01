@@ -1,7 +1,7 @@
 ---
 title: "TuYa MIR-HE200-TY_fall control via MQTT"
 description: "Integrate your TuYa MIR-HE200-TY_fall via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2022-01-31T17:42:44.615Z
+addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
 

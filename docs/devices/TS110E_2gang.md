@@ -1,7 +1,7 @@
 ---
 title: "Lonsonho TS110E_2gang control via MQTT"
 description: "Integrate your Lonsonho TS110E_2gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2022-01-31T17:42:44.798Z
+addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
 

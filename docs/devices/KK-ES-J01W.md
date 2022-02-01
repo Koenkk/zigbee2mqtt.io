@@ -1,7 +1,7 @@
 ---
 title: "Konke KK-ES-J01W control via MQTT"
 description: "Integrate your Konke KK-ES-J01W via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2022-01-31T17:42:44.815Z
+addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
 

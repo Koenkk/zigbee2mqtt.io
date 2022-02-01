@@ -1,7 +1,7 @@
 ---
 title: "CASAIA CSLC601-D-E control via MQTT"
 description: "Integrate your CASAIA CSLC601-D-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2022-01-31T17:42:44.879Z
+addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
 

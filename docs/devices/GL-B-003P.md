@@ -1,7 +1,7 @@
 ---
 title: "Gledopto GL-B-003P control via MQTT"
 description: "Integrate your Gledopto GL-B-003P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2022-01-31T17:42:44.848Z
+addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
 
