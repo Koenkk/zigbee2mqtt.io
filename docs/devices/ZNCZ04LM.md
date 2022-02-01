@@ -46,6 +46,10 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
+* `illuminance_precision`: Number of digits after decimal point for illuminance, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
@@ -117,7 +121,7 @@ Maximum allowed load, turns off if exceeded.
 Value can be found in the published state on the `overload_protection` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"overload_protection": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"overload_protection": NEW_VALUE}`.
-The minimal value is `100` and the maximum value is `2200`.
+The minimal value is `100` and the maximum value is `2300`.
 The unit of this value is `W`.
 
 ### Linkquality (numeric)

@@ -59,9 +59,47 @@ If IKEA TRADFRI devices are rejecting OTA updates, it is possible the OTA server
 **WARNING: Use at your own risk!**
 
 ```yaml
-advanced:
+ota:
   ikea_ota_use_test_url: true
 ```
+
+## Local OTA index and firmware files
+
+OTA Index file is a list of firmware images available on a particular server. When checking if an update is available, Zigbee2MQTT determines current hardware and firmware version for a particular device, and then searches for a suitable upgrade image in the index file. Some vendors (such as IKEA Tradfri, Ledvance, Salus, Ubisys) use their proprietary index files, but the most of the devices use [Zigbee-OTA](https://github.com/Koenkk/zigbee-OTA) firmware repository with a [main index file](https://github.com/Koenkk/zigbee-OTA/blob/master/index.json).
+
+Sometimes it is necessary to add a firmware image that is not on the main index. This could be helpful when developing a DIY device, or install a test/alternate image for a mass-produced device. In this case user can supply Zigbee2MQTT with an alternate index file, located locally or on a web server. This index file will point Zigbee2MQTT to the firmware image files. Records in the override OTA index file will override corresponding records in the main index, so that it is possible to alter the image for a particular device type.
+
+```yaml
+ota:
+    zigbee_ota_override_index_location: my_index.json
+```
+
+Local index file is searched in the configuration directory (next to `configuration.yaml`). The file name could be also a full path to the file, taking into account that host file system may not be available when running Zigbee2MQTT inside a docker container. Alternatively, Zigbee2MQTT supports index files located on a remote HTTP(s) server. In this case `zigbee_ota_override_index_location` key should be an URL of the index file.
+
+The override OTA index file shall have the same structure as the [main index file](https://github.com/Koenkk/zigbee-OTA/blob/master/index.json). To create the index file it is possible to use [add.js](https://github.com/Koenkk/zigbee-OTA/blob/master/scripts/add.js) script (follow instructions [here](https://github.com/Koenkk/zigbee-OTA)). Correct image location and image URL as necessary.
+
+Firmware files can be located either on a web server, or on the local file system. In this case `url` field in the index file entry shall be either a full path to the image file, or relative to the Zigbee2MQTT configuration directory. In case of local image file, index entry can be simplified to only 'url' field. Other fields are still allowed, but if omitted corresponding information (firmware version, image type, manufacturer ID, etc) is read from the image file.
+
+```json
+[
+    {
+        "url": "HelloZigbee.ota"
+    }
+]
+```
+
+Normally Zigbee2MQTT compares current device firmware with available images version, and allows flashing only firmwares with `fileVersion` that is higher than current. To force Zigbee2MQTT to use arbitrary version a `force` field can be used:
+
+```json
+[
+    {
+        "url": "HelloZigbee.ota",
+        "force": true
+    }
+]
+```
+
+Please note, even though Zigbee specification basically allows firmware version downgrade, some of the devices may reject older firmwares. This cannot be forced from Zigbee2MQTT side.
 
 ## Troubleshooting
 - `Device didn't respond to OTA request` or `Update failed with reason: 'aborted by device'`: try restarting the device by disconnecting the power/battery for a few seconds and try again.

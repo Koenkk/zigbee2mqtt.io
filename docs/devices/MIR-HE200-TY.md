@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MIR-HE200-TY  |
 | Vendor  | TuYa  |
 | Description | Human presence sensor |
-| Exposes | illuminance_lux, presence, motion, motion_speed, motion_direction, radar_sensitivity, radar_scene, linkquality |
+| Exposes | illuminance_lux, presence, occupancy, motion_speed, motion_direction, radar_sensitivity, radar_scene, linkquality |
 | Picture | ![TuYa MIR-HE200-TY](https://www.zigbee2mqtt.io/images/devices/MIR-HE200-TY.jpg) |
 
 
@@ -46,11 +46,11 @@ Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
-### Motion (binary)
-moving inside the range of the sensor.
-Value can be found in the published state on the `motion` property.
+### Occupancy (binary)
+Indicates whether the device detected occupancy.
+Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true,false` motion is ON, if `undefined` OFF.
+If value equals `true` occupancy is ON, if `false` OFF.
 
 ### Motion_speed (numeric)
 Speed of movement.
@@ -71,7 +71,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `10`.
 
 ### Radar_scene (enum)
-presets for sensivity for presence and movement.
+presets for sensitivity for presence and movement.
 Value can be found in the published state on the `radar_scene` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_scene": NEW_VALUE}`.

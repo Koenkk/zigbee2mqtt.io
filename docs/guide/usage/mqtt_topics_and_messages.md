@@ -48,6 +48,9 @@ Published messages are **always** in a JSON format. Each device produces a diffe
 }
 ```
 
+## zigbee2mqtt/FRIENDLY_NAME/availabilty
+If ["Device-Availability"](../configuration/device-availability.md) is configured the online/offline status will be published when it changes.
+
 ## zigbee2mqtt/FRIENDLY_NAME/set
 Publishing messages to this topic allows you to control your Zigbee devices via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH). How to control a specific device can be found in the *Exposes* section on the device page which can be accessed via ["Supported devices"](../../supported-devices/).
 
@@ -379,6 +382,7 @@ Adds a group. Allowed payloads are `{"friendly_name": NAME, "id": NUMBER}` or `N
 
 Allows you to change the `friendly_name` of a group on the fly. Payload format is `{"from": groupID, "to": groupID}` where groupID can be the `groupID` or `friendly_name` of the group, example: `{"from": "my_group", "to": "my_group_new_name"}`. Response will be `{"data":{"from":"my_group","to":"my_group_new_name"},"status":"ok"}`.
 
+In case you are using Home Assistant discovery and also want to update the entity ID according to this new name, send e.g. `{"from": "my_group", "to": "my_group_new_name","homeassistant_rename":true}`.
 
 #### zigbee2mqtt/bridge/request/group/options
 

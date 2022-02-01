@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | In-wall outlet |
 | Exposes | switch (state), linkquality |
 | Picture | ![TuYa TS011F_wall_outlet](https://www.zigbee2mqtt.io/images/devices/TS011F_wall_outlet.jpg) |
-| White-label | Teekar SWP86-01OG, ClickSmart+ CMA30035 |
+| White-label | Teekar SWP86-01OG, ClickSmart+ CMA30035, BSEED Zigbee Socket |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

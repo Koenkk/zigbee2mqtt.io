@@ -42,6 +42,10 @@ Note that if you have already paired the device you will need to repair it after
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
+* `illuminance_precision`: Number of digits after decimal point for illuminance, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
@@ -66,8 +70,8 @@ The possible values are: `single`, `double`, `hold`.
 
 ### Click_mode (enum)
 Click mode, fast: only supports single click which will be send immediately after clicking.multi: supports more events like double and hold.
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
+Value can be found in the published state on the `click_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"click_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_mode": NEW_VALUE}`.
 The possible values are: `fast`, `multi`.
 

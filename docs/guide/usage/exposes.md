@@ -110,6 +110,8 @@ Example:
 }
 ```
 
+Note that some bulbs are known to not correctly represent XY colors, so it is preferred to set colors via HS. In this case `color_hs` will appear before `color_xy` in the `features` list.
+
 ### Switch
 Indicates a device exposes a switch.
 

@@ -31,6 +31,20 @@ pageClass: device-page
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
 <!-- Notes END: Do not edit below this line -->
 
+### Device type specific configuration
+How to use device type specific configuration -> https://www.zigbee2mqtt.io/information/configuration.html
+
+- measurement_poll_interval
+This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds.
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

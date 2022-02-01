@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TV02-Zigbee  |
 | Vendor  | TuYa  |
 | Description | Thermostat radiator valve |
-| Exposes | battery_low, lock (state), open_window, open_window_temperature, holiday_temperature, comfort_temperature, eco_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint), boost_timeset_countdown, frost_protection, heating_stop, online, holiday_mode_date, programming, error_status, linkquality |
+| Exposes | battery_low, lock (state), open_window, open_window_temperature, comfort_temperature, eco_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint), boost_timeset_countdown, frost_protection, heating_stop, holiday_temperature, holiday_mode_date, schedule, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, online, error_status, linkquality |
 | Picture | ![TuYa TV02-Zigbee](https://www.zigbee2mqtt.io/images/devices/TV02-Zigbee.jpg) |
 | White-label | Moes TV01-ZB, Tesla Smart TSL-TRV-TV01ZG, Unknown/id3.pl GTZ08 |
 
@@ -61,14 +61,6 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `30`.
 The unit of this value is `°C`.
 
-### Holiday_temperature (numeric)
-Holiday temperature.
-Value can be found in the published state on the `holiday_temperature` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"holiday_temperature": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `30`.
-The unit of this value is `°C`.
-
 ### Comfort_temperature (numeric)
 Comfort temperature.
 Value can be found in the published state on the `comfort_temperature` property.
@@ -101,18 +93,61 @@ The minimal value is `0` and the maximum value is `465`.
 The unit of this value is `second`.
 
 ### Frost_protection (binary)
-When Anti-Freezing function is activated, the temperature in the house is kept at 8 °C ‚the device display "AF".press the pair button to cancel..
+When Anti-Freezing function is activated, the temperature in the house is kept at 8 °C, the device display "AF".press the pair button to cancel..
 Value can be found in the published state on the `frost_protection` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"frost_protection": NEW_VALUE}`.
 If value equals `ON` frost_protection is ON, if `OFF` OFF.
 
 ### Heating_stop (binary)
-Battery life can be prolonged by switching the heating off. To achieve this, the valve is closed fully. To activate the heating stop, the device display "HS" ‚press the pair button to cancel..
+Battery life can be prolonged by switching the heating off. To achieve this, the valve is closed fully. To activate the heating stop, the device display "HS", press the pair button to cancel..
 Value can be found in the published state on the `heating_stop` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"heating_stop": NEW_VALUE}`.
 If value equals `ON` heating_stop is ON, if `OFF` OFF.
+
+### Holiday_temperature (numeric)
+Holiday temperature.
+Value can be found in the published state on the `holiday_temperature` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"holiday_temperature": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `30`.
+The unit of this value is `°C`.
+
+### Holiday_mode_date (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"undefined": {"holiday_start_stop": VALUE}}`
+- `holiday_start_stop` (text): undefined. 
+
+### Schedule (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"undefined": {}}`
+
+### Schedule_monday (text)
+Value can be found in the published state on the `schedule_monday` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Schedule_tuesday (text)
+Value can be found in the published state on the `schedule_tuesday` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Schedule_wednesday (text)
+Value can be found in the published state on the `schedule_wednesday` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Schedule_thursday (text)
+Value can be found in the published state on the `schedule_thursday` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Schedule_friday (text)
+Value can be found in the published state on the `schedule_friday` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Schedule_saturday (text)
+Value can be found in the published state on the `schedule_saturday` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Schedule_sunday (text)
+Value can be found in the published state on the `schedule_sunday` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Online (binary)
 Is the device online.
@@ -120,22 +155,6 @@ Value can be found in the published state on the `online` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"online": NEW_VALUE}`.
 If value equals `ON` online is ON, if `OFF` OFF.
-
-### Holiday_mode_date (text)
-The holiday mode( ⛱ ) will automatically start at the set time starting point and run the holiday temperature..
-Value can be found in the published state on the `holiday_mode_date` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"holiday_mode_date": NEW_VALUE}`.
-
-### Programming (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"undefined": {"schedule_monday": VALUE, "schedule_tuesday": VALUE, "schedule_wednesday": VALUE, "schedule_thursday": VALUE, "schedule_friday": VALUE, "schedule_saturday": VALUE, "schedule_sunday": VALUE}}`
-- `schedule_monday` (text): undefined. 
-- `schedule_tuesday` (text): undefined. 
-- `schedule_wednesday` (text): undefined. 
-- `schedule_thursday` (text): undefined. 
-- `schedule_friday` (text): undefined. 
-- `schedule_saturday` (text): undefined. 
-- `schedule_sunday` (text): undefined. 
 
 ### Error_status (numeric)
 Error status.
