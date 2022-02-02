@@ -48,7 +48,7 @@ Published messages are **always** in a JSON format. Each device produces a diffe
 }
 ```
 
-## zigbee2mqtt/FRIENDLY_NAME/availabilty
+## zigbee2mqtt/FRIENDLY_NAME/availability
 If ["Device-Availability"](../configuration/device-availability.md) is configured the online/offline status will be published when it changes.
 
 ## zigbee2mqtt/FRIENDLY_NAME/set
@@ -104,6 +104,8 @@ Example payload:
 Contains the state of the bridge, this message is published as retained. Payloads are:
 * `online`: published when the bridge is running (on startup)
 * `offline`: published right before the bridge stops
+
+If `advanced.legacy_availability_payload` is set to `false` the payload will be a JSON object (`{"state":"online"}`/`{"state":"offline"}`).
 
 ## zigbee2mqtt/bridge/logging
 All Zigbee2MQTT logging is published to this topic in the form of `{"level": LEVEL, "message": MESSAGE}`, example: `{"level": "info", "message": "Zigbee: allowing new devices to join."}`.
