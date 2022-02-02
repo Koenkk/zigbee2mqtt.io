@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZM-RM02  |
 | Vendor  | Zemismart  |
 | Description | Smart 6 key scene switch |
-| Exposes | action, linkquality |
+| Exposes | battery, action, linkquality |
 | Picture | ![Zemismart ZM-RM02](https://www.zigbee2mqtt.io/images/devices/ZM-RM02.jpg) |
 
 
@@ -30,6 +30,13 @@ pageClass: device-page
 
 
 ## Exposes
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

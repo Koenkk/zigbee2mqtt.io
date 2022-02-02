@@ -28,9 +28,9 @@ pageClass: device-page
 
 ### Broken attribute reporting functionality
 
-Starting with firmware version 1.0.5 (which comes pre-flashed on plugs produced since Q4 2021) core functionality on this plug is broken. TuYa has moved attribute reporting of the current plug state (on/off) and energy measurement away from the official Zigbee Cluster Library Specification into a private API. Efforts to implement this private API to restore functionality have not succeeded until now.
+Starting with firmware version 1.0.5 (which comes pre-flashed on plugs produced since Q4 2021) core functionality on this plug is broken. TuYa has disabled the automatic reporting of power, voltage and current values meaning they need to be polled instead. The poll interval can be controlled through the `measurement_poll_interval` option.
 
-A workaround for the energy consumption monitoring has been implemented, by polling the power consumption explicitly instead of receiving updates from the plug. To this date it is impossible to retrieve the current state of the plug (on/off).
+If your plug is affected, it will be detected as [TS011F_plug_3](TS011F_plug_3.md) instead of `TS011F_plug_1`.
 
 <!-- cfr: https://github.com/Koenkk/zigbee2mqtt/issues/9057 -->
 
@@ -43,6 +43,12 @@ Pair this device with a long press (5 seconds) on the on/off button. The button 
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds, set to -1 to disable. The value must be a number with a minimum value of `-1`
+
+* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

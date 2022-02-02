@@ -11,7 +11,7 @@ The file have to be located in the `data` directory within your installation. Th
 # Minimal configuration.yml example
 permit_join: true
 mqtt:
-  base_topic: zigbee2mqtt
+  server: mqtt://localhost:1883
 serial:
   port: /dev/ttyUSB0
 frontend:

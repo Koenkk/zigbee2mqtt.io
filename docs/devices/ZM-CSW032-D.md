@@ -33,6 +33,10 @@ pageClass: device-page
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
+* `time_close`: Set the full closing time of the roller shutter (e.g. set it to 20) (value is in s). The value must be a number.
+
+* `time_open`: Set the full opening time of the roller shutter (e.g. set it to 21) (value is in s). The value must be a number.
+
 
 ## Exposes
 
