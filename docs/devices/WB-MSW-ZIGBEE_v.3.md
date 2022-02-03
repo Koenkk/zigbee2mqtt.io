@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WB-MSW-ZIGBEE v.3  |
 | Vendor  | Sprut.device  |
 | Description | Wall-mounted Zigbee sensor |
-| Exposes | temperature, illuminance, illuminance_lux, humidity, occupancy, occupancy_level, co2, voc, noise, noise_detected, switch (state), linkquality |
+| Exposes | temperature, illuminance, illuminance_lux, humidity, occupancy, occupancy_level, co2, voc, noise, noise_detected, switch (state), noise_timeout, occupancy_timeout, linkquality |
 | Picture | ![Sprut.device WB-MSW-ZIGBEE v.3](https://www.zigbee2mqtt.io/images/devices/WB-MSW-ZIGBEE-v.3.jpg) |
 
 
@@ -26,8 +26,50 @@ pageClass: device-page
 ## Notes
 
 ### Description
-Wiren Board WB-MSW3 v.3 — hybrid digital sensor of temperature, humidity, illumination, noise, CO2 and VOC level. It is equipped with the IR blaster (and the receiver for learning). Designed for climate control in residential and office premises.
+Wiren Board WB-MSW v.3 — hybrid digital sensor of temperature, humidity, illumination, noise, CO2 and VOC level. It is equipped with the IR blaster (and the receiver for learning). Designed for climate control in residential and office premises.
+
+### Configuring IR
+The sensor contains 32 banks for storing IR commands. Training takes place through the built-in IR receiver.
+
+By publishing to `zigbee2mqtt/FRIENDLY_NAME/1/set` various device attributes can be configured.
+
+#### Start learn to ROM
+Request:
+
+```json
+{
+    "learn_start": {
+        "rom":0
+    }
+}
+```
+* `rom`: Memory cell number (from 0 to 31)
+
+#### Stop learn to ROM
+Request:
+```json
+{
+    "learn_stop": {
+        "rom":0
+    }
+}
+```
+* `rom`: Memory cell number (from 0 to 31)
+
+#### Play from ROM
+Request:
+```json
+{
+    "play_store": {
+        "rom":0
+    }
+}
+```
+* `rom`: Memory cell number (from 0 to 31)
 <!-- Notes END: Do not edit below this line -->
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -124,6 +166,22 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 The current state of this switch is in the published state under the `state_default` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_default": "ON"}`, `{"state_default": "OFF"}` or `{"state_default": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_default": ""}`.
+
+### Noise_timeout (numeric)
+Time in seconds after which noise is cleared after detecting it (default: 30).
+Value can be found in the published state on the `noise_timeout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"noise_timeout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_timeout": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `2000`.
+The unit of this value is `s`.
+
+### Occupancy_timeout (numeric)
+Time in seconds after which occupancy is cleared after detecting it (default: 30).
+Value can be found in the published state on the `occupancy_timeout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `2000`.
+The unit of this value is `s`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

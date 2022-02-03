@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MCCGQ14LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara E1 door & window contact sensor |
-| Exposes | contact, battery, temperature, voltage, linkquality |
+| Exposes | contact, battery, voltage, linkquality |
 | Picture | ![Xiaomi MCCGQ14LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ14LM.jpg) |
 
 
@@ -42,6 +42,10 @@ Note that if you have already paired the device you will need to repair it after
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
+* `illuminance_precision`: Number of digits after decimal point for illuminance, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
@@ -57,12 +61,6 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
 
 ### Voltage (numeric)
 Voltage of the battery in millivolts.

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BRT-100-TRV  |
 | Vendor  | Moes  |
 | Description | Thermostatic radiator valve |
-| Exposes | battery, lock (state), eco_mode, eco_temperature, max_temperature, min_temperature, position, switch (state), window, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset), programming_mode, boost_heating, boost_heating_countdown, boost_heating_countdown_time_set, linkquality |
+| Exposes | battery, lock (state), eco_mode, eco_temperature, max_temperature, min_temperature, valve_state, position, switch (state), window, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset), programming_mode, boost_heating, boost_heating_countdown, boost_heating_countdown_time_set, linkquality |
 | Picture | ![Moes BRT-100-TRV](https://www.zigbee2mqtt.io/images/devices/BRT-100-TRV.jpg) |
 
 
@@ -74,8 +74,14 @@ Minimum temperature.
 Value can be found in the published state on the `min_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_temperature": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `15`.
+The minimal value is `1` and the maximum value is `15`.
 The unit of this value is `°C`.
+
+### Valve_state (binary)
+Valve state if open or closed.
+Value can be found in the published state on the `valve_state` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `OPEN` valve_state is ON, if `CLOSED` OFF.
 
 ### Position (numeric)
 Position.

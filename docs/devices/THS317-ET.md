@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | THS317-ET  |
 | Vendor  | OWON  |
-| Description | Temperature and humidity sensor |
-| Exposes | battery, temperature, humidity, linkquality |
+| Description | Temperature sensor |
+| Exposes | battery, temperature, linkquality |
 | Picture | ![OWON THS317-ET](https://www.zigbee2mqtt.io/images/devices/THS317-ET.jpg) |
 
 
@@ -35,10 +35,6 @@ pageClass: device-page
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
-
 
 ## Exposes
 
@@ -54,12 +50,6 @@ Measured temperature value.
 Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
-
-### Humidity (numeric)
-Measured relative humidity.
-Value can be found in the published state on the `humidity` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `%`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
