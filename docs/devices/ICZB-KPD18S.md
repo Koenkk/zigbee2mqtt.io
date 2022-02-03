@@ -26,6 +26,18 @@ pageClass: device-page
 ## Notes
 
 
+### Pairing
+
+To Reset the iCasa ICZB-KPD18S do the following:
+1) Press and hold down both OFF button and the ON button until the LED indicator on the remote turns on.
+2) Than immediately click OFF button 5 times. 3) The LED status indicator flashes 3 times to indicate successful reset.
+
+Pairing mode:
+1) Press and hold down OFF and ON button simultaneously until the status LED indicator on the remote turns on,
+then immediately click ON button.
+2) The status LED indicator on the remote will blink fast.
+3) When the pairing is successful the status LED indicator on the remote will blink 6 times.
+
 ### Deprecated click event
 By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
 
