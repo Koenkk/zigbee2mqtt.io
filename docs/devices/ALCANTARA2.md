@@ -23,7 +23,17 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+
+- Press and hold the `Mode` button to enter configuration mode
+- If already paired with the Enki box, press and hold the `-` (minus) button until `Off` is displayed (you'll probably also have to first remove the heater from the Enki box using the dedicated app)
+- Press and hold the `+` (plus) button until a code appears on the screen (this is a pairing code used with the Enki box app we don't use here)
+- Turn on pairing mode in zigbee2mqtt
+- Press (and sometimes hold) the `+` button until a "progress bar" appears on the screen 
+- Wait for pairing. The device should show up in zigbee2mqtt in a few seconds and the screen should now display `On`
+- Press and hold the `Mode` button to leave configuration mode (or wait for ~ 30 sec to 1 minute). The device should now display "Box" on the top right corner of the screen and the temperature setpoint
 
 <!-- Notes END: Do not edit below this line -->
 
