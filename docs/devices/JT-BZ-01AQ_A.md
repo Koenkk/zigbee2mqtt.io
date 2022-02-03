@@ -23,8 +23,21 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Adapter firmware
+In order for this device to work, at least the following firmware is required on your adapter:
+- CC2530/CC2531: [`20211115`](https://github.com/Koenkk/Z-Stack-firmware/tree/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin)
+- CC1352/CC2652: [`20211114`](https://github.com/Koenkk/Z-Stack-firmware/tree/7c5a6da0c41855d42b5e6506e5e3b496be097ba3/coordinator/Z-Stack_3.x.0/bin)
+- Conbee II: [`0x26720700`]( http://deconz.dresden-elektronik.de/deconz-firmware/deCONZ_ConBeeII_0x26720700.bin.GCF)
 
+*Note that if you have already paired the device you will need to repair it after upgrading your adapter firmware.*
+
+### Pairing
+Quickly press the button three times in a row.
+After this the device will automatically join.
+
+![JT-BZ-01AQ/A pairing](../images/pairing/JT-BZ-01AQ_A_pairing.jpg)
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
