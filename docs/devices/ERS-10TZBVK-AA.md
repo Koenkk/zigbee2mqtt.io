@@ -24,6 +24,10 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+### Pairing
+To pair, press the reset button on the back until the green LED flashes.
+> When you release the reset button and the green LED should keep flashing untill the device is paired. If it only flashes twice, your battery level is too low (<3v) and you need to replace the battery.
+
 
 <!-- Notes END: Do not edit below this line -->
 
