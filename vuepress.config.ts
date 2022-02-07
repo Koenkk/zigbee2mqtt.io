@@ -134,6 +134,9 @@ const conf = {
         },
       },
     ],
+    [
+      path.resolve(__dirname, './docs/.vuepress/defaultPageClassPlugin.ts'),
+    ],
   ],
 }
 
