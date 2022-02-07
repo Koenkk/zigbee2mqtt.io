@@ -44,12 +44,12 @@ jobs:
                 "global": true,
                 "default_value": "Miscellaneous"
               },
-              "lvl1": ".theme-default-content h1",
-              "lvl2": ".theme-default-content h2:not(.device-page *), .device-page h1 + table tbody tr:nth-child(3) td:nth-child(2)",
-              "lvl3": ".theme-default-content h3:not(.device-page *)",
-              "lvl4": ".theme-default-content h4:not(.device-page *)",
-              "lvl5": ".theme-default-content h5:not(.device-page *)",
-              "text": ".theme-default-content p:not(.device-page *), .theme-default-content li:not(.device-page *), .theme-default-content code:not(.device-page *), .theme-default-content td:not(.device-page *)",
+              "lvl1": ".content-page h1, .device-page h1",
+              "lvl2": ".content-page h2, .device-page h1 + table tbody tr:nth-child(3) td:nth-child(2)",
+              "lvl3": ".content-page h3",
+              "lvl4": ".content-page h4",
+              "lvl5": ".content-page h5",
+              "text": ".content-page p, .content-page li, .content-page code, .content-page td",
               "lang": {
                 "selector": "/html/@lang",
                 "type": "xpath",
