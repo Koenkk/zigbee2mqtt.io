@@ -23,7 +23,7 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
+With this stick you can use RF-Cover motors and remotes.
 
 <!-- Notes END: Do not edit below this line -->
 
