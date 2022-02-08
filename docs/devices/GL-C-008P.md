@@ -31,6 +31,16 @@ pageClass: device-page
 2. Now switch off and on within 2 seconds.
 3. Repeat off/on four times.
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
+
+### GL-C-001P
+The Gledopto GL-C-001P is a 5 in 1 LED controller which can identify itself as 5 different Gledopto controllers:
+- RGBCCT: GL-C-008P
+- RGBC: GL-C-007P
+- RGB: GL-C-003P
+- CCT: GL-C-006P
+- Dimmer: GL-C-009P
+
+You can switch between the modes using the button on the device. After switching modes Zigbee2MQTT will automatically detect the new mode.
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
