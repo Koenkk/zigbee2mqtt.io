@@ -134,10 +134,11 @@ _(in order of first appearance)_
   * <details>
     <summary>Gio-dot Z-Bee Duo with CC2652P</summary>
   
-    4 in 1 adapter: USB Stick, Ser2net, LAN, PI Zero Hat, with external antenna and 3D printed case.  
+    4 in 1 zigbee adapter: USB Stick, WiFi, LAN, PI Zero Hat, with external antenna and 3D printed case. 
+    * [Description](https://gio-dot.github.io/Z-Bee-Duo/)  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20211217.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20210128.zip)  
-    * [Flashing instructions](https://github.com/Gio-dot/Z-Bee-Duo#how-to-flash) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+    * [Flashing instructions](https://gio-dot.github.io/Z-Bee-Duo/Firmware-upgrade) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
     * [Buy](https://www.tindie.com/products/23046/)
   
     ![](../../images/Z-Bee_Duo-ico.jpg)
