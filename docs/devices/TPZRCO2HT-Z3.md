@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TPZRCO2HT-Z3  |
 | Vendor  | Titan Products  |
 | Description | Room CO2, humidity & temperature sensor |
-| Exposes | battery, humidity, temperature, co2, linkquality |
+| Exposes | voltage, humidity, temperature, co2, linkquality |
 | Picture | ![Titan Products TPZRCO2HT-Z3](https://www.zigbee2mqtt.io/images/devices/TPZRCO2HT-Z3.jpg) |
 
 
@@ -42,12 +42,11 @@ pageClass: device-page
 
 ## Exposes
 
-### Battery (numeric)
-Remaining battery in %.
-Value can be found in the published state on the `battery` property.
+### Voltage (numeric)
+Voltage of the battery in millivolts.
+Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
+The unit of this value is `mV`.
 
 ### Humidity (numeric)
 Measured relative humidity.
