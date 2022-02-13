@@ -27,7 +27,8 @@ pageClass: device-page
 ## Notes
 
 ## Pairing
-Press down and set simultanious until LED flashes blue.
+On 2-button units; press down and set simultaneously until LED flashes blue.
+On 1-button units; press the set key 3 times in 5 seconds until the LED flashes blue.
 
 ### Configuration of device attributes
 By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can be configured:
