@@ -28,7 +28,7 @@ Start Android Studio and create a new empty project:
 1. Make sure the TuYa bridge + the device you want to get the OTA of is already coupled to your account, this cannot be done from the emulator so use your phone for this. Make sure to use the same app on your phone, otherwise the device will not show up (e.g. for iOS use [this](https://apps.apple.com/nl/app/smart-life-smart-living/id1115101477), [**not this**](https://apps.apple.com/nl/app/tuya-smart/id1034649547)).
 1. Click on the device -> edit (pencil icon right top). Click "Check for Firmware Upgrade".
 1. If an firmware upgarde is available, quickly go back to the output of mitm (step 1), click on the latest request (yes you can click in the console window). This will show your the OTA url (see red box below).
-    - Tip: to go back to the overview of requests click use the `Q` key on your keyboard.
+    - Tip: to go back to the overview of requests press the `Q` key on your keyboard.
 
 ![](../../images/tuya_ota.png)
 
