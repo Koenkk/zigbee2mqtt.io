@@ -152,9 +152,22 @@ _(in order of first appearance)_
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip)  
     * [Description](https://zig-star.com/projects/zigbee-gw-lan/)  
     * [Flashing instructions](https://zig-star.com/radio-docs/flash-cc-bsl/) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
-    * [Buy](https://zig-star.com)
+    * [Buy](https://zig-star.com) {Tindie}(https://www.tindie.com/products/zigstar/zigstar-lan-gateway/)
   
     ![](../../images/ZigStar-LAN.png)
+    </details>
+	
+  * <details>
+    <summary>ZigStar PoE Coordinator</summary>
+  
+    Open source PoE af Coordinator with external antenna on CC2652P  
+    * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20211217.zip)  
+    * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20210128.zip)  
+    * [Description](https://zig-star.com/projects/zigstar-lilyzig/)  
+    * [Flashing instructions](https://zig-star.com/radio-docs/zigstar-multi-tool/) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+    * [Buy](https://zig-star.com) [Tindie](https://www.tindie.com/products/zigstar/zigstar-lilyzig-poe/) 
+  
+    ![](../../images/ZigStar-PoE.png)
     </details>
 
 * Network
