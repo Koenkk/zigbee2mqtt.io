@@ -33,10 +33,13 @@ Start Android Studio and create a new empty project:
 ![](../../images/tuya_ota.png)
 
 ## Step 3b: get the Xiaomi OTA url
-NOTE: This only works for Xiaomi gateways (e.g. ZNDMWG03LM works, DGNWG02LM doesn't work) which can be connected to the Aqara home app (not the Xiaomi home app!)
+NOTE: This only works for native Aqara gateways which can be connected to the Aqara Home app (not the Xiaomi home app!)
+- Works: ZHWG16LM/HE1-G0, ZHWG15LM, ZHWG12LM
+- Doesn't work: ZNDMWG03LM, DGNWG02LM
+
 1. Download the Aqara home app apk from [this link](https://apkpure.com/nl/aqara-home/com.lumiunited.aqarahome), tested with version 2.2.5. Drag the downloaded apk on the emulator (which will install it).
 1. Open the Aqara home app in the emulator, log in with your account
-1. Make sure the Xiaomi gateway + the device you want to get the OTA of is already coupled to your account, this cannot be done from the emulator so use your phone for this.
+1. Make sure the Aqara gateway + the device you want to get the OTA of is already coupled to your account, this cannot be done from the emulator so use your phone for this.
 1. Click on your device and check for a firmware upgrade.
 1. If an firmware upgarde is available, quickly go back to the output of mitm (step 1), click on the latest request (yes you can click in the console window). This will show your the OTA url (see screenshot of step 3a).
 
