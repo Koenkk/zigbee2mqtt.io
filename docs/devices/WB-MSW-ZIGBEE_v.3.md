@@ -31,7 +31,7 @@ Wiren Board WB-MSW v.3 — hybrid digital sensor of temperature, humidity, illum
 ### Configuring IR
 The sensor contains 32 banks for storing IR commands. Training takes place through the built-in IR receiver.
 
-By publishing to `zigbee2mqtt/FRIENDLY_NAME/1/set` various device attributes can be configured.
+By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can be configured.
 
 #### Start learn to ROM
 Request:
@@ -66,6 +66,42 @@ Request:
 }
 ```
 * `rom`: Memory cell number (from 0 to 31)
+
+#### Clear all ROM's
+Request:
+
+```json
+{
+    "clear_store": {}
+}
+```
+
+#### Start learn to RAM
+Request:
+
+```json
+{
+    "learn_start": {
+        "rom":0
+    }
+}
+```
+
+#### Stop learn to RAM
+Request:
+```json
+{
+    "learn_ram_stop": {}
+}
+```
+
+#### Play from RAM
+Request:
+```json
+{
+    "play_ram": {}
+}
+```
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
