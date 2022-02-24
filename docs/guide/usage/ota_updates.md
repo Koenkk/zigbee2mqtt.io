@@ -102,5 +102,5 @@ Normally Zigbee2MQTT compares current device firmware with available images vers
 Please note, even though Zigbee specification basically allows firmware version downgrade, some of the devices may reject older firmwares. This cannot be forced from Zigbee2MQTT side.
 
 ## Troubleshooting
-- `Device didn't respond to OTA request` or `Update failed with reason: 'aborted by device'`: try restarting the device by disconnecting the power/battery for a few seconds and try again.
+- `Device didn't respond to OTA request` or `Update failed with reason: 'aborted by device'`: try restarting the device by disconnecting the power/battery for a few seconds and try again, make sure to activate the device by pressing a button on it right before sending the update request.
 - For battery powered devices make sure that the battery is 70%+ as OTA updating is very power consuming.
