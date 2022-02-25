@@ -38,6 +38,8 @@ devices:
     legacy: false
 ```
 
+### Debounce
+It is recommended to not use the `debounce` option for this device since this will prevent the `single` and `hold_release` actions from being sent.
 
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
