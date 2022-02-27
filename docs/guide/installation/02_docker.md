@@ -29,6 +29,7 @@ Execute the following command, update the `--device` parameter to match the loca
 ```bash
 $ docker run \
    --device=/dev/ttyACM0 \
+   -p 8080:8080 \
    -v $(pwd)/data:/app/data \
    -v /run/udev:/run/udev:ro \
    -e TZ=Europe/Amsterdam \
@@ -40,6 +41,7 @@ $ docker run \
 * `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration (pwd maps to the current working directory)
 * `-v /run/udev:/run/udev:ro`: only required for auto-detecting the port and some adapters like ConBee
 * `-e TZ=Europe/Amsterdam`: Configure the timezone
+* `-p 8080:8080`: port forwarding from inside docker container to host so as to allow use of webui
 
 ::: tip
 If you run the MQTT-Server on the same host (localhost) you could use the IP
@@ -66,6 +68,7 @@ uid=1001(pi) gid=1001(pi) Groups=...
 ```
 $ sudo docker run \
    --name=zigbee2mqtt \
+   -p 8080:8080 \
    -v $(pwd)/data:/app/data \
    -v /run/udev:/run/udev:ro \
    --device=/dev/ttyACM0 \
@@ -74,6 +77,7 @@ $ sudo docker run \
    -e TZ=Europe/Amsterdam \
    koenkk/zigbee2mqtt
 ```
+3.1
 
 **Parameters explanation:**  
 * `--user 1001:1001`: Run the Zigbee2MQTT process within the container using the provided UserID and GroupID
