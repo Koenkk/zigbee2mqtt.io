@@ -41,7 +41,7 @@ $ docker run \
 * `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration (pwd maps to the current working directory)
 * `-v /run/udev:/run/udev:ro`: only required for auto-detecting the port and some adapters like ConBee
 * `-e TZ=Europe/Amsterdam`: Configure the timezone
-* `-p 8080:8080`: port forwarding from inside docker container to host so as to allow use of webui
+* `-p 8080:8080`: port forwarding from inside Docker container to host (for the frontend)
 
 ::: tip
 If you run the MQTT-Server on the same host (localhost) you could use the IP
