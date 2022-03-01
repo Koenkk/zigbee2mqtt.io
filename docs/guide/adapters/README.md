@@ -278,7 +278,7 @@ _(in order of first appearance)_
 
 ### Other
   * <details>
-    <summary>ConBee II</summary>
+    <summary>ConBee II / RaspBee II</summary>
   
     USB connected adapter    
     If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
