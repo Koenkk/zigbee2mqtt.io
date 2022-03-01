@@ -15,7 +15,8 @@ export function resolveDeviceFile(model) {
 export default async function generateDevice(device) {
   const deviceFile = resolveDeviceFile(device.model);
   const image = await getImage(device, imageBaseDir, imageBaseUrl);
-  const exposesDescription = Array.from(new Set(device.exposes.map((e) => e.hasOwnProperty('name') ? e.name : `${ e.type } (${ e.features.map((f) => f.name).join(', ') })`))).join(', ');
+  const exposes = (typeof device.exposes === 'function' ? device.exposes() : device.exposes);
+  const exposesDescription = Array.from(new Set(exposes.map((e) => e.hasOwnProperty('name') ? e.name : `${ e.type } (${ e.features.map((f) => f.name).join(', ') })`))).join(', ');
 
   let addedAt = "";
   let notes = "";

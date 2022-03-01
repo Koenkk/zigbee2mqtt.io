@@ -146,7 +146,7 @@ The water endpoint functions as what could be considered an on/off switch based 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `thermostat_unit`: Controls the temperature unit of the themrostat (default celsius). The value must be one of `celsius`, `fahrenheit`
+* `thermostat_unit`: Controls the temperature unit of the thermostat (default celsius). The value must be one of `celsius`, `fahrenheit`
 
 
 ## Exposes

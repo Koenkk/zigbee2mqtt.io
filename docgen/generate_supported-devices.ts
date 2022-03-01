@@ -46,7 +46,7 @@ export default async function generate_supportedDevices() {
     const description = d.description || d.whiteLabelOf.description;
     const link = `../devices/${ normalizeModel(baseModel) }.html`;
     const exposes = Array.from(new Set(
-      d.exposes
+      (typeof d.exposes === 'function' ? d.exposes() : d.exposes)
         .map((e) => e.name ? e.name : e.type)
         .filter((e) => e !== 'linkquality' && e !== 'effect'),
     ));

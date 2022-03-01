@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_eTH102  |
 | Vendor  | Custom devices (DiY)  |
-| Description | [Mini Digital Thermometer & Hygrometer with e-ink1.02](http://efektalab.com/eTH102) |
+| Description | [Mini digital thermometer & hygrometer with e-ink1.02](http://efektalab.com/eTH102) |
 | Exposes | battery, temperature, humidity, linkquality |
 | Picture | ![Custom devices (DiY) EFEKTA_eTH102](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eTH102.jpg) |
 

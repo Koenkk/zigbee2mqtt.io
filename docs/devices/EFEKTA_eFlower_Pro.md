@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_eFlower_Pro  |
 | Vendor  | Custom devices (DiY)  |
-| Description | [Plant watering sensor EFEKTA_eFlower_Pro,  long battery life](http://efektalab.com/eFlowerPro) |
+| Description | [Plant Wattering Sensor with e-ink display 2.13](https://efektalab.com/eFlowerPro) |
 | Exposes | soil_moisture, battery, illuminance, temperature, humidity, linkquality |
-| Picture | ![Custom devices (DiY) EFEKTA_PWS_MaxPro](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eFlower_Pro) |
+| Picture | ![Custom devices (DiY) EFEKTA_eFlower_Pro](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eFlower_Pro.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

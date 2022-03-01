@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | JT-BZ-01AQ/A  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart natural gas detector |
-| Exposes | gas, gas_density, gas_sensitivity, selftest, test, mute_buzzer, mute, switch (state), state, power_outage_count, linkquality |
+| Exposes | gas, gas_density, gas_sensitivity, selftest, test, mute_buzzer, mute, linkage_alarm, state, power_outage_count, linkquality |
 | Picture | ![Xiaomi JT-BZ-01AQ/A](https://www.zigbee2mqtt.io/images/devices/JT-BZ-01AQ-A.jpg) |
 
 
@@ -43,17 +43,6 @@ After this the device will automatically join.
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
-
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
-
-* `illuminance_precision`: Number of digits after decimal point for illuminance, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -106,10 +95,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 If value equals `true` mute is ON, if `false` OFF.
 
-### Switch 
-The current state of this switch is in the published state under the `linkage_alarm` property (value is `true` or `false`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linkage_alarm": "true"}`, `{"linkage_alarm": "false"}` or `{"linkage_alarm": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"linkage_alarm": ""}`.
+### Linkage_alarm (binary)
+When this option is enabled and a gas leak is detected, other detectors with this option enabled will also sound the alarm buzzer.
+Value can be found in the published state on the `linkage_alarm` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"linkage_alarm": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linkage_alarm": NEW_VALUE}`.
+If value equals `true` linkage_alarm is ON, if `false` OFF.
 
 ### State (binary)
 "Preparation" or "work" (measurement of the gas concentration value and triggering of an alarm are only performed in the "work" state).

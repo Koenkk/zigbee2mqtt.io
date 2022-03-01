@@ -29,17 +29,6 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
-
-* `illuminance_precision`: Number of digits after decimal point for illuminance, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
-
 
 ## Exposes
 
@@ -60,7 +49,7 @@ The unit of this value is `mV`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_left`, `single_right`, `single_both`, `double_left`, `double_right`, `double_both`, `triple_left`, `triple_right`, `triple_both`.
+The possible values are: `single_left`, `single_right`, `single_both`, `double_left`, `double_right`, `double_both`, `triple_left`, `triple_right`, `triple_both`, `hold_left`, `hold_right`, `hold_both`.
 
 ### Click_mode (enum)
 Click mode, fast: only supports single click which will be send immediately after clicking.multi: supports more events like double and hold.

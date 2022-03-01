@@ -59,7 +59,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `hold`, `release`.
+The possible values are: `release`, `hold`, `double`, `single`, `hold_release`.
 
 ### Operation_mode (enum)
 Decoupled mode.

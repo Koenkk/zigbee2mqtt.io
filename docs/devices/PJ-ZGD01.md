@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PJ-ZGD01  |
 | Vendor  | TuYa  |
 | Description | Garage door opener |
-| Exposes | trigger, action, garage_door_contact, linkquality |
+| Exposes | trigger, garage_door_contact, linkquality |
 | Picture | ![TuYa PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.jpg) |
 | White-label | MatSee Plus PJ-ZGD01 |
 
@@ -38,12 +38,6 @@ Value can be found in the published state on the `trigger` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger": NEW_VALUE}`.
 If value equals `true` trigger is ON, if `false` OFF.
-
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `trigger`.
 
 ### Garage_door_contact (binary)
 Value can be found in the published state on the `garage_door_contact` property.

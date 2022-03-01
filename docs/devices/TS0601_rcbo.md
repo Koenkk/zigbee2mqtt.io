@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_rcbo  |
 | Vendor  | TuYa  |
 | Description | DIN mount RCBO with smart energy metering |
-| Exposes | meter_number, state, alarm, trip, child_lock, power_on_behaviour, countdown_timer, voltage, voltage_rms, current, current_average, power, energy_consumed, temperature, clear_device_data, linkquality |
+| Exposes | meter_number, state, alarm, trip, child_lock, power_on_behavior, countdown_timer, voltage_rms, current, current_average, power, voltage, energy, temperature, energy_consumed, clear_device_data, linkquality |
 | Picture | ![TuYa TS0601_rcbo](https://www.zigbee2mqtt.io/images/devices/TS0601_rcbo.jpg) |
 | White-label | HOCH ZJSBL7-100Z, WDYK ZJSBL7-100Z |
 
@@ -58,10 +58,10 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
 If value equals `ON` child_lock is ON, if `OFF` OFF.
 
-### Power_on_behaviour (enum)
-Value can be found in the published state on the `power_on_behaviour` property.
+### Power_on_behavior (enum)
+Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behaviour": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `previous`.
 
 ### Countdown_timer (numeric)
@@ -70,11 +70,6 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_timer": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `86400`.
 The unit of this value is `s`.
-
-### Voltage (numeric)
-Value can be found in the published state on the `voltage` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `V`.
 
 ### Voltage_rms (numeric)
 Value can be found in the published state on the `voltage_rms` property.
@@ -92,19 +87,33 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
 
 ### Power (numeric)
+Instantaneous measured power.
 Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
+
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
+
+### Energy (numeric)
+Sum of consumed energy.
+Value can be found in the published state on the `energy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
 
 ### Energy_consumed (numeric)
 Value can be found in the published state on the `energy_consumed` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Temperature (numeric)
-Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
 
 ### Clear_device_data (enum)
 Value will **not** be published in the state.

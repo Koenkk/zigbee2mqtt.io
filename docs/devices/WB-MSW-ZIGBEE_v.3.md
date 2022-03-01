@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WB-MSW-ZIGBEE v.3  |
 | Vendor  | Sprut.device  |
 | Description | Wall-mounted Zigbee sensor |
-| Exposes | temperature, illuminance, illuminance_lux, humidity, occupancy, occupancy_level, co2, voc, noise, noise_detected, switch (state), noise_timeout, occupancy_timeout, linkquality |
+| Exposes | temperature, illuminance, illuminance_lux, humidity, occupancy, occupancy_level, co2, voc, noise, noise_detected, switch (state), noise_timeout, occupancy_timeout, temperature_offset, occupancy_sensitivity, noise_detect_level, co2_autocalibration, co2_manual_calibration, th_heater, linkquality |
 | Picture | ![Sprut.device WB-MSW-ZIGBEE v.3](https://www.zigbee2mqtt.io/images/devices/WB-MSW-ZIGBEE-v.3.jpg) |
 
 
@@ -127,6 +127,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
+* `no_occupancy_since`: Sends a message the last time occupancy was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of number.
+
 
 ## Exposes
 
@@ -198,13 +200,13 @@ The current state of this switch is in the published state under the `state_l2` 
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
 
-### Switch (default endpoint)
-The current state of this switch is in the published state under the `state_default` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_default": "ON"}`, `{"state_default": "OFF"}` or `{"state_default": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_default": ""}`.
+### Switch (l3 endpoint)
+The current state of this switch is in the published state under the `state_l3` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l3": "ON"}`, `{"state_l3": "OFF"}` or `{"state_l3": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l3": ""}`.
 
 ### Noise_timeout (numeric)
-Time in seconds after which noise is cleared after detecting it (default: 30).
+Time in seconds after which noise is cleared after detecting it (default: 60).
 Value can be found in the published state on the `noise_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"noise_timeout": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_timeout": NEW_VALUE}`.
@@ -212,12 +214,56 @@ The minimal value is `0` and the maximum value is `2000`.
 The unit of this value is `s`.
 
 ### Occupancy_timeout (numeric)
-Time in seconds after which occupancy is cleared after detecting it (default: 30).
+Time in seconds after which occupancy is cleared after detecting it (default: 60).
 Value can be found in the published state on the `occupancy_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `2000`.
 The unit of this value is `s`.
+
+### Temperature_offset (numeric)
+Self-heating compensation. The compensation value is subtracted from the measured temperature.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+The minimal value is `-10` and the maximum value is `10`.
+The unit of this value is `°C`.
+
+### Occupancy_sensitivity (numeric)
+If the sensor is triggered by the slightest movement, reduce the sensitivity, otherwise increase it (default: 50).
+Value can be found in the published state on the `occupancy_sensitivity` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_sensitivity": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_sensitivity": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `2000`.
+
+### Noise_detect_level (numeric)
+The minimum noise level at which the detector will work (default: 50).
+Value can be found in the published state on the `noise_detect_level` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"noise_detect_level": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_detect_level": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `150`.
+The unit of this value is `dBA`.
+
+### Co2_autocalibration (enum)
+Automatic calibration of the CO2 sensor. If ON, the CO2 sensor will automatically calibrate every 7 days..
+Value can be found in the published state on the `co2_autocalibration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"co2_autocalibration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_autocalibration": NEW_VALUE}`.
+The possible values are: `OFF`, `ON`.
+
+### Co2_manual_calibration (enum)
+Ventilate the room for 20 minutes, turn on manual calibration, and turn it off after one second. After about 5 minutes the CO2 sensor will show 400ppm. Calibration completed.
+Value can be found in the published state on the `co2_manual_calibration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"co2_manual_calibration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"co2_manual_calibration": NEW_VALUE}`.
+The possible values are: `OFF`, `ON`.
+
+### Th_heater (enum)
+Turn on when working in conditions of high humidity (more than 70 %, RH) or condensation, if the sensor shows 0 or 100 %..
+Value can be found in the published state on the `th_heater` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"th_heater": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"th_heater": NEW_VALUE}`.
+The possible values are: `OFF`, `ON`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

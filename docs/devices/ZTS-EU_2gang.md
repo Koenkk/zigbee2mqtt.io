@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZTS-EU_2gang  |
 | Vendor  | Moes  |
 | Description | Wall touch light switch (2 gang) |
-| Exposes | switch (state), linkquality |
+| Exposes | switch (state), indicate_light, power_on_behavior, linkquality |
 | Picture | ![Moes ZTS-EU_2gang](https://www.zigbee2mqtt.io/images/devices/ZTS-EU_2gang.jpg) |
 
 
@@ -40,6 +40,20 @@ It's not possible to read (`/get`) this value.
 The current state of this switch is in the published state under the `state_l2` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
+
+### Indicate_light (enum)
+Indicator light status.
+Value can be found in the published state on the `indicate_light` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicate_light": NEW_VALUE}`.
+The possible values are: `off`, `switch`, `position`, `freeze`.
+
+### Power_on_behavior (enum)
+Controls the behavior when the device is powered on.
+Value can be found in the published state on the `power_on_behavior` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

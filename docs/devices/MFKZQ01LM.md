@@ -69,6 +69,7 @@ The unit of this value is `mV`.
 Value can be found in the published state on the `action_angle` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-360` and the maximum value is `360`.
+The unit of this value is `°`.
 
 ### Action_from_side (numeric)
 Side of the cube.

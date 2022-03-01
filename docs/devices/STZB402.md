@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | STZB402  |
 | Vendor  | Stelpro  |
 | Description | Ki, line-voltage thermostat |
-| Exposes | local_temperature, keypad_lockout, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
+| Exposes | local_temperature, keypad_lockout, humidity, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![Stelpro STZB402](https://www.zigbee2mqtt.io/images/devices/STZB402.jpg) |
 
 
@@ -54,7 +54,7 @@ If you want to automate the publishing of the outdoor temperature using Home Ass
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `thermostat_unit`: Controls the temperature unit of the themrostat (default celsius). The value must be one of `celsius`, `fahrenheit`
+* `thermostat_unit`: Controls the temperature unit of the thermostat (default celsius). The value must be one of `celsius`, `fahrenheit`
 
 * `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
 
@@ -78,6 +78,12 @@ Value can be found in the published state on the `keypad_lockout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keypad_lockout": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keypad_lockout": NEW_VALUE}`.
 The possible values are: `unlock`, `lock1`, `lock2`.
+
+### Humidity (numeric)
+Measured relative humidity.
+Value can be found in the published state on the `humidity` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `%`.
 
 ### Climate 
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.

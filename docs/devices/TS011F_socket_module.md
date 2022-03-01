@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Socket module |
 | Exposes | switch (state), linkquality |
 | Picture | ![TuYa TS011F_socket_module](https://www.zigbee2mqtt.io/images/devices/TS011F_socket_module.jpg) |
-| White-label | LoraTap RR400ZB |
+| White-label | LoraTap RR400ZB, LoraTap SP400ZB |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

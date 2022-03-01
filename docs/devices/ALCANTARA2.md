@@ -1,7 +1,7 @@
 ---
 title: "Acova ALCANTARA2 control via MQTT"
 description: "Integrate your Acova ALCANTARA2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2022-02-01T18:08:24.054Z
+addedAt: 2022-02-01T18:08:24
 pageClass: device-page
 ---
 
@@ -34,7 +34,6 @@ pageClass: device-page
 - Press (and sometimes hold) the `+` button until a "progress bar" appears on the screen 
 - Wait for pairing. The device should show up in zigbee2mqtt in a few seconds and the screen should now display `On`
 - Press and hold the `Mode` button to leave configuration mode (or wait for ~ 30 sec to 1 minute). The device should now display "Box" on the top right corner of the screen and the temperature setpoint
-
 <!-- Notes END: Do not edit below this line -->
 
 

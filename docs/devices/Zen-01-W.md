@@ -31,7 +31,7 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `thermostat_unit`: Controls the temperature unit of the themrostat (default celsius). The value must be one of `celsius`, `fahrenheit`
+* `thermostat_unit`: Controls the temperature unit of the thermostat (default celsius). The value must be one of `celsius`, `fahrenheit`
 
 * `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
 
