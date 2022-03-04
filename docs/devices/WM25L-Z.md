@@ -1,0 +1,61 @@
+---
+title: "Smartwings WM25/L-Z control via MQTT"
+description: "Integrate your Smartwings WM25/L-Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+addedAt: 2022-03-03T21:28:38Z
+pageClass: device-page
+---
+
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
+# Smartwings WM25/L-Z
+
+|     |     |
+|-----|-----|
+| Model | WM25/L-Z  |
+| Vendor  | Smartwings  |
+| Description | Smartwings roller blind |
+| Exposes | cover (state, position), battery, linkquality |
+| Picture | ![Smartwings WM25/L-Z](https://www.zigbee2mqtt.io/images/devices/WM25L-Z.jpg) |
+
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+
+
+### Pairing
+It's recommend to first pair the included TRADFRI signal repeater in the room where you want to put the blinds.
+Now press both buttons on the blind (next to battery lid) for 5 seconds until a white light between both buttons is turned on.
+The device is now awake and ready to pair for 2 minutes.
+After that pair the blind by holding the blind battery lid very close to the TRADFRI signal repeater until the white light is turned off (this should mean the pairing is successful).
+
+### End Position
+The roller blind maximum extension can be set by moving the blind to the desired position and then double pressing the up or down button.
+To reset the end position so you can define a newer more extended end position, open the blind fully. Then double press the up or down button. You can now set the blind extension again.
+<!-- Notes END: Do not edit below this line -->
+
+## Exposes
+
+### Cover 
+The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
+To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
+It's not possible to read (`/get`) this value.
+To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
