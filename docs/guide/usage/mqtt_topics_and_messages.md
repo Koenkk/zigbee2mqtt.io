@@ -124,7 +124,7 @@ Example payload:
         "network_address":29159,
         "supported":true,
         "friendly_name":"my_plug",
-        "description":"this is plug is in the kitchen",
+        "description":"this plug is in the kitchen",
         "endpoints":{"1":{"bindings":[],"configured_reportings":[],"clusters":{"input":["genOnOff","genBasic"],"output":[]}}},
         "definition":{
             "model":"ZNCZ02LM",
