@@ -1,6 +1,6 @@
 ---
 title: "SmartThings GP-WOU019BBDWG control via MQTT"
-description: "Integrate your SmartThings GP-WOU019BBDWG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your SmartThings GP-WOU019BBDWG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-02-04T20:38:05Z
 pageClass: device-page
 ---

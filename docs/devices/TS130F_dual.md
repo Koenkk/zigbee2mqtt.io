@@ -1,6 +1,6 @@
 ---
 title: "Lonsonho TS130F_dual control via MQTT"
-description: "Integrate your Lonsonho TS130F_dual via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Lonsonho TS130F_dual via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-25-01T12:47:02Z
 pageClass: device-page
 ---

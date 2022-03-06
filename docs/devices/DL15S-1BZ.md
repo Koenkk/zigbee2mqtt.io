@@ -1,6 +1,6 @@
 ---
 title: "Leviton DL15S-1BZ control via MQTT"
-description: "Integrate your Leviton DL15S-1BZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Leviton DL15S-1BZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-01-07T14:09:21Z
 pageClass: device-page
 ---

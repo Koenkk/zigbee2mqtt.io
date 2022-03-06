@@ -1,6 +1,6 @@
 ---
 title: "Sunricher ZG2835RAC control via MQTT"
-description: "Integrate your Sunricher ZG2835RAC via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Sunricher ZG2835RAC via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-02-04T20:38:05Z
 pageClass: device-page
 ---

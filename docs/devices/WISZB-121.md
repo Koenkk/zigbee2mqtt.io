@@ -1,6 +1,6 @@
 ---
 title: "Develco WISZB-121 control via MQTT"
-description: "Integrate your Develco WISZB-121 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Develco WISZB-121 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-01-31T22:24:43Z
 pageClass: device-page
 ---

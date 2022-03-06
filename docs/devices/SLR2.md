@@ -1,6 +1,6 @@
 ---
 title: "Hive SLR2 control via MQTT"
-description: "Integrate your Hive SLR2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Hive SLR2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-11-01T12:47:02Z
 pageClass: device-page
 ---

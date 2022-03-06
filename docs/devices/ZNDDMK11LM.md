@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi ZNDDMK11LM control via MQTT"
-description: "Integrate your Xiaomi ZNDDMK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi ZNDDMK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-09-30T16:40:20Z
 pageClass: device-page
 ---
