@@ -1,6 +1,6 @@
 ---
 title: "Moes ZSS-ZK-THL control via MQTT"
-description: "Integrate your Moes ZSS-ZK-THL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Moes ZSS-ZK-THL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-05-30T19:17:03Z
 pageClass: device-page
 ---

@@ -1,6 +1,6 @@
 ---
 title: "TuYa S-LUX-ZB control via MQTT"
-description: "Integrate your TuYa S-LUX-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa S-LUX-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-08-01T20:41:55Z
 pageClass: device-page
 ---

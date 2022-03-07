@@ -1,6 +1,6 @@
 ---
 title: "Schneider Electric 41E2PBSWMZ/356PB2MBTZ control via MQTT"
-description: "Integrate your Schneider Electric 41E2PBSWMZ/356PB2MBTZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Schneider Electric 41E2PBSWMZ/356PB2MBTZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:02:38
 pageClass: device-page
 ---

@@ -1,6 +1,6 @@
 ---
 title: "LivingWise LVS-SM10ZW control via MQTT"
-description: "Integrate your LivingWise LVS-SM10ZW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LivingWise LVS-SM10ZW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---

@@ -1,6 +1,6 @@
 ---
 title: "ADEO LDSENK01F control via MQTT"
-description: "Integrate your ADEO LDSENK01F via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your ADEO LDSENK01F via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---

@@ -1,6 +1,6 @@
 ---
 title: "LifeControl MCLH-04 control via MQTT"
-description: "Integrate your LifeControl MCLH-04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LifeControl MCLH-04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-04-29T17:11:59Z
 pageClass: device-page
 ---

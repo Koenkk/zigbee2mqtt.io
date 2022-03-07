@@ -1,6 +1,6 @@
 ---
 title: "Custom devices (DiY) EFEKTA_miniPWS control via MQTT"
-description: "Integrate your Custom devices (DiY) EFEKTA_miniPWS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Custom devices (DiY) EFEKTA_miniPWS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-08-01T20:41:55Z
 pageClass: device-page
 ---

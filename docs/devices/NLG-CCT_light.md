@@ -1,6 +1,6 @@
 ---
 title: "Paul Neuhaus NLG-CCT light control via MQTT"
-description: "Integrate your Paul Neuhaus NLG-CCT light via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Paul Neuhaus NLG-CCT light via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-08-11T22:17:44Z
 pageClass: device-page
 ---

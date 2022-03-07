@@ -1,6 +1,6 @@
 ---
 title: "Dawon DNS KB-B540R-ZB control via MQTT"
-description: "Integrate your Dawon DNS KB-B540R-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Dawon DNS KB-B540R-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-12-27T12:27:11Z
 pageClass: device-page
 ---

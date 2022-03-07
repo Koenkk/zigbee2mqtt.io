@@ -1,6 +1,6 @@
 ---
 title: "Stelpro SORB control via MQTT"
-description: "Integrate your Stelpro SORB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Stelpro SORB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-02-02T12:39:40Z
 pageClass: device-page
 ---

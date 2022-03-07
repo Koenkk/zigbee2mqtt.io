@@ -1,6 +1,6 @@
 ---
 title: "Gledopto GL-D-004ZS control via MQTT"
-description: "Integrate your Gledopto GL-D-004ZS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Gledopto GL-D-004ZS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-12-15T17:27:48Z
 pageClass: device-page
 ---

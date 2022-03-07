@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi XDD13LM control via MQTT"
-description: "Integrate your Xiaomi XDD13LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi XDD13LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-09-01T19:56:51Z
 pageClass: device-page
 ---

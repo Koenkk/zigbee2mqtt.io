@@ -1,6 +1,6 @@
 ---
 title: "TuYa ZM-35H-Q control via MQTT"
-description: "Integrate your TuYa ZM-35H-Q via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa ZM-35H-Q via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:02:38
 pageClass: device-page
 ---

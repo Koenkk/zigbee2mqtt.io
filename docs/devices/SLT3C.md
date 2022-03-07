@@ -1,6 +1,6 @@
 ---
 title: "Hive SLT3C control via MQTT"
-description: "Integrate your Hive SLT3C via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Hive SLT3C via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-12-10T12:47:02Z
 pageClass: device-page
 ---
