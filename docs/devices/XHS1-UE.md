@@ -1,6 +1,6 @@
 ---
 title: "Universal Electronics Inc XHS1-UE control via MQTT"
-description: "Integrate your Universal Electronics Inc XHS1-UE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Universal Electronics Inc XHS1-UE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-11-02T05:14:39
 pageClass: device-page
 ---

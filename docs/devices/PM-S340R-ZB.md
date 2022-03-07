@@ -1,6 +1,6 @@
 ---
 title: "Dawon DNS PM-S340R-ZB control via MQTT"
-description: "Integrate your Dawon DNS PM-S340R-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Dawon DNS PM-S340R-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-05-19T19:51:21Z
 pageClass: device-page
 ---

@@ -1,6 +1,6 @@
 ---
 title: "GE PQC19-DY01 control via MQTT"
-description: "Integrate your GE PQC19-DY01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your GE PQC19-DY01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-05-19T20:48:40Z
 pageClass: device-page
 ---

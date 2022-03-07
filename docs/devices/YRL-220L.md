@@ -1,6 +1,6 @@
 ---
 title: "Yale YRL-220L control via MQTT"
-description: "Integrate your Yale YRL-220L via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Yale YRL-220L via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-07-03T21:36:16Z
 pageClass: device-page
 ---

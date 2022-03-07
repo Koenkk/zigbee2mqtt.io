@@ -1,6 +1,6 @@
 ---
 title: "LeTV LeTV.8KEY control via MQTT"
-description: "Integrate your LeTV LeTV.8KEY via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LeTV LeTV.8KEY via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-09-30T20:52:56Z
 pageClass: device-page
 ---

@@ -1,6 +1,6 @@
 ---
 title: "TubesZB tubeszb.router control via MQTT"
-description: "Integrate your TubesZB tubeszb.router via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TubesZB tubeszb.router via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---

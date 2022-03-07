@@ -1,6 +1,6 @@
 ---
 title: "KMPCIL KMPCIL_RES005 control via MQTT"
-description: "Integrate your KMPCIL KMPCIL_RES005 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your KMPCIL KMPCIL_RES005 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-06-29T17:33:31Z
 pageClass: device-page
 ---

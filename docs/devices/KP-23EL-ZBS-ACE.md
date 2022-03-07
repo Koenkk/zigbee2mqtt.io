@@ -1,6 +1,6 @@
 ---
 title: "Climax KP-23EL-ZBS-ACE control via MQTT"
-description: "Integrate your Climax KP-23EL-ZBS-ACE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Climax KP-23EL-ZBS-ACE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---

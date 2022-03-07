@@ -1,6 +1,6 @@
 ---
 title: "Acova ALCANTARA2 control via MQTT"
-description: "Integrate your Acova ALCANTARA2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Acova ALCANTARA2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-02-01T18:08:24
 pageClass: device-page
 ---
