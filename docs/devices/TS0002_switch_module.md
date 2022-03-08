@@ -24,8 +24,17 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Binding
 
+No sensible [binding](../guide/usage/binding.md) functionallity available. 
+
+Only the genOta and genTime clusters can be bound.
+
+### OTA
+
+No over the air firmware update support.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -62,13 +71,3 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
-
-## Binding
-
-No sensible [binding](../guide/usage/binding.md) functionallity available. 
-
-Only the genOta and genTime clusters can be bound.
-
-## OTA
-
-No over the air firmware update support.
