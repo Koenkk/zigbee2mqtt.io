@@ -1,6 +1,6 @@
 ---
 title: "Vrey VR-X701U control via MQTT"
-description: "Integrate your Vrey VR-X701U via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Vrey VR-X701U via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-02-22T19:41:48Z
 pageClass: device-page
 ---

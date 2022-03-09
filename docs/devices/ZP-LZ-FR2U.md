@@ -1,6 +1,6 @@
 ---
 title: "Moes ZP-LZ-FR2U control via MQTT"
-description: "Integrate your Moes ZP-LZ-FR2U via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Moes ZP-LZ-FR2U via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:02:38
 pageClass: device-page
 ---

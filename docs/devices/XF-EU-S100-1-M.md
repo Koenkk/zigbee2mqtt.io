@@ -1,6 +1,6 @@
 ---
 title: "LELLKI XF-EU-S100-1-M control via MQTT"
-description: "Integrate your LELLKI XF-EU-S100-1-M via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LELLKI XF-EU-S100-1-M via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-12-31T16:51:16
 pageClass: device-page
 ---

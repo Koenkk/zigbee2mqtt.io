@@ -1,6 +1,6 @@
 ---
 title: "TERNCY TERNCY-LS01 control via MQTT"
-description: "Integrate your TERNCY TERNCY-LS01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TERNCY TERNCY-LS01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-12-01T19:02:25Z
 pageClass: device-page
 ---

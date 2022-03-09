@@ -1,6 +1,6 @@
 ---
 title: "Sunricher SR-ZGP2801K2-DIM control via MQTT"
-description: "Integrate your Sunricher SR-ZGP2801K2-DIM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Sunricher SR-ZGP2801K2-DIM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-12-03T18:14:38Z
 pageClass: device-page
 ---

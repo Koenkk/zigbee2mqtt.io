@@ -1,6 +1,6 @@
 ---
 title: "EcoSmart A9BR3065WESDZ02 control via MQTT"
-description: "Integrate your EcoSmart A9BR3065WESDZ02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your EcoSmart A9BR3065WESDZ02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-06-16T17:06:00Z
 pageClass: device-page
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi QBKG23LM control via MQTT"
-description: "Integrate your Xiaomi QBKG23LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi QBKG23LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-07-16T08:38:09Z
 pageClass: device-page
 ---

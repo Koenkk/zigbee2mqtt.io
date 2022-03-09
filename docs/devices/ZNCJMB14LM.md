@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi ZNCJMB14LM control via MQTT"
-description: "Integrate your Xiaomi ZNCJMB14LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi ZNCJMB14LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-05-11T20:10:12Z
 pageClass: device-page
 ---

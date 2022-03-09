@@ -1,6 +1,6 @@
 ---
 title: "ADEO IG-CDZOTAAG014RA-MAN control via MQTT"
-description: "Integrate your ADEO IG-CDZOTAAG014RA-MAN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your ADEO IG-CDZOTAAG014RA-MAN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-03-01T08:48:44
 pageClass: device-page
 ---
