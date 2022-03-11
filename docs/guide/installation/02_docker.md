@@ -8,10 +8,9 @@ It is possible to run Zigbee2MQTT in a Docker container using the official [Zigb
 This image support the following architectures: `386`, `amd64`, `arm/v6`, `arm/v7`, `arm64`.
 Since Zigbee2MQTT images are manifest listed, Docker will auto-detect the architecture and pull the right image.
 
-Note for Raspberry Pi 1 and zero users: there is a bug in Docker which selects the wrong image architecture.
-Before executing `docker run` pull the correct image with `docker pull koenkk/zigbee2mqtt --platform linux/arm/v6`.
-
 Start by figuring out the location of your adapter as explained [here](./01_linux.md#determine-location-of-the-adapter-and-checking-user-permissions).
+
+**IMPORTANT**: Using a Raspberry Pi? Make sure to check [Notes for Raspberry Pi users](#notes-for-raspberry-pi-users).
 
 ## Creating the initial configuration
 Navigate to the directory where you whish to store the Zigbee2MQTT data and execute:
@@ -146,6 +145,29 @@ docker-compose up -d zigbee2mqtt
 ```
 
 You can optionally skip `zigbee2mqtt` and it will pull any new images for all containers in the compose file, and then restart those that were updated.
+
+## Notes for Raspberry Pi users
+- If you are running Raspbian Buster (not Bullseye!) (find out by executing `grep "PRETTY_NAME" /etc/os-release`) you need to install `libseccomp2`, this can be done by executing the following commands:
+```bash
+sudo apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv-keys 04EE7237B7D453EC 648ACFD622F3D138
+echo "deb http://httpredir.debian.org/debian buster-backports main contrib non-free" | sudo tee -a "/etc/apt/sources.list.d/debian-backports.list"
+sudo apt update
+sudo apt install libseccomp2 -t buster-backports
+```
+If you do not do this you will get the following error when starting the Zigbee2MQTT container:
+
+```bash
+#
+# Fatal error in , line 0
+# unreachable code
+#
+#
+#
+#FailureMessage Object: 0x7eace25c
+```
+
+- For Raspberry Pi 1 and zero users: there is a bug in Docker which selects the wrong image architecture.
+Before executing `docker run` pull the correct image with `docker pull koenkk/zigbee2mqtt --platform linux/arm/v6`.
 
 ## Docker Stack device mapping
 *This is only relevant when using Docker Stack*
