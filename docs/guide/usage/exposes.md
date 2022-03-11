@@ -142,7 +142,7 @@ Example:
 ```
 
 ### Cover
-Indicates a device exposes a cover. Possible features are `state`, `position`, `tilt` and `running`.
+Indicates a device exposes a cover. Possible features are `state`, `position` and `tilt`.
 
 Example:
 
@@ -152,8 +152,7 @@ Example:
     "features": [
         {"type":"binary","name":"state","property":"state","value_on":"OPEN","value_off":"CLOSE","access":7},
         {"type":"numeric","name":"position","property":"position","value_min":0,"value_max":100,"access":7},
-        {"type":"numeric","name":"tilt","property":"tilt","value_min":0,"value_max":100,"access":7},
-        {"type":"binary","name":"running","property":"running","value_on":true,"value_off":false,"access":7}
+        {"type":"numeric","name":"tilt","property":"tilt","value_min":0,"value_max":100,"access":7}
     ]
 }
 ```
