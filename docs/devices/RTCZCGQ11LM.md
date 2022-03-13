@@ -26,7 +26,7 @@ pageClass: device-page
 ## Notes
 
 ### Channel
-This sensor [does not work](https://github.com/Koenkk/zigbee2mqtt/issues/11019#issuecomment-1064063808) on Zigbee channel 22.
+This sensor [does not work](https://github.com/Koenkk/zigbee2mqtt/issues/11019#issuecomment-1064063808) on Zigbee channel 21-24.
 
 ### Adapter firmware
 In order for this device to work, at least the following firmware is required on your adapter:
