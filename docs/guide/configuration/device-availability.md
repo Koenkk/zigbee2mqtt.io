@@ -82,3 +82,6 @@ advanced:
   # false = {"state":"online"} / {"state":"offline"}
   legacy_availability_payload: true
 ```
+
+## Groups
+When enabling device availability, availability will also be enabled for groups. A group is marked as available when at least one device in it is available.
