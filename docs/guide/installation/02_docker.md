@@ -123,7 +123,7 @@ services:
       - /dev/ttyUSB0:/dev/ttyACM0
 ```
 
-You can also run a rootless container with docker-compose by adding the required attributes to the `zigbee2mqtt` service block in your `docker-compose-yml`:
+You can also run a rootless container with docker-compose by adding the required attributes to the `zigbee2mqtt` service block in your `docker-compose.yml`:
 
 ```yaml
     group_add:
