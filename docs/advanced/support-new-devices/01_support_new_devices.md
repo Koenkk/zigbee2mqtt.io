@@ -99,7 +99,7 @@ const definition = {
     description: 'MiJia temperature & humidity sensor',
     fromZigbee: [fz.temperature], // <-- added here all clusters reported from zigbee
     toZigbee: [], // <-- add here all clusters to send commands to zigbee
-    exposes: [e.battery(), e.temperature(), e.humidity()], // <-- this will define all fields published to MQTT on the device's topic
+    exposes: [e.battery(), e.temperature(), e.humidity()], // <-- this will define which fields will be exposed in the definition message to configure a front end (e.g. the z2m frontend, Home Assistant, Domoticz)
 };
 
 module.exports = definition;
