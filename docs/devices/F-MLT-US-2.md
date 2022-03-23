@@ -1,6 +1,6 @@
 ---
 title: "SmartThings F-MLT-US-2 control via MQTT"
-description: "Integrate your SmartThings F-MLT-US-2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your SmartThings F-MLT-US-2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -24,6 +24,10 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Notes
+
+### Pairing
+When pairing, make sure to keep the sensor awake for 20 seconds by opening and closing the contact every second.
 
 <!-- Notes END: Do not edit below this line -->
 

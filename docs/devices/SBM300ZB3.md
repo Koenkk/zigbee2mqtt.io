@@ -1,6 +1,6 @@
 ---
 title: "ShinaSystem SBM300ZB3 control via MQTT"
-description: "Integrate your ShinaSystem SBM300ZB3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your ShinaSystem SBM300ZB3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---

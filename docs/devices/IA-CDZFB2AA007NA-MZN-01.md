@@ -1,7 +1,7 @@
 ---
-title: "EcoDim Eco-Dim.07 control via MQTT"
-description: "Integrate your EcoDim Eco-Dim.07 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
-addedAt: 2021-05-03T19:47:00Z
+title: "ADEO IA-CDZFB2AA007NA-MZN-01 control via MQTT"
+description: "Integrate your ADEO IA-CDZFB2AA007NA-MZN-01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-03-01T09:06:16
 pageClass: device-page
 ---
 
@@ -11,31 +11,20 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# EcoDim Eco-Dim.07
+# ADEO IA-CDZFB2AA007NA-MZN-01
 
 |     |     |
 |-----|-----|
-| Model | Eco-Dim.07  |
-| Vendor  | EcoDim  |
-| Description | Zigbee & Z-wave dimmer |
-| Exposes | light (state, brightness), linkquality |
-| Picture | ![EcoDim Eco-Dim.07](https://www.zigbee2mqtt.io/images/devices/Eco-Dim.07.jpg) |
+| Model | IA-CDZFB2AA007NA-MZN-01  |
+| Vendor  | ADEO  |
+| Description | ENKI LEXMAN E27 LED white |
+| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
+| Picture | ![ADEO IA-CDZFB2AA007NA-MZN-01](https://www.zigbee2mqtt.io/images/devices/IA-CDZFB2AA007NA-MZN-01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
 
-### Pairing
-1. Remove the device from a previous Zigbee network. If it has already been added to one otherwise pairing will fail (light blinks fast).
-2. Press reset button twice. The indicator will start blinking blue (slow) and stays solid for 10s when it succeeds.
 
-### Remove from Zigbee network
-There are two methods to remove the device from the Zigbee Network:
-Method 1. From your Zigbee hub interface, choose to delete or reset the device as instructed.
-Method 2. Press the reset button 3 times, the indicator starts blinking purple and will stay solid for 10s when removing the dimmer from the network is finished. Timeout 3 mins.
-
-### Factory reset
-Press and hold the reset button for at least 5 seconds, the indicator will stay red for 10s when the reset is complete. Please note that all configuration parameters will be reset after the device is reset or removed from the network.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -44,13 +33,17 @@ Press and hold the reset button for at least 5 seconds, the indicator will stay 
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
+* `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
+
 
 ## Exposes
 
 ### Light 
-This light supports the following features: `state`, `brightness`.
+This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `454`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warm`, `warmest`.
+- `color_temp_startup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup": VALUE}` where `VALUE` is a number between `153` and `454`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warm`, `warmest`, `previous`.
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
@@ -70,8 +63,18 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
   "brightness_step": 40 // Increases brightness by 40
+  "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
+  "color_temp_move": "stop", // Stop moving color temperature
+  "color_temp_step": 99, // Increase color temperature by 99
 }
 ````
+
+### Effect (enum)
+Triggers an effect on the light (e.g. make light blink for a few seconds).
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
+The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

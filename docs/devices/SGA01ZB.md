@@ -1,6 +1,6 @@
 ---
 title: "Feibit SGA01ZB control via MQTT"
-description: "Integrate your Feibit SGA01ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Feibit SGA01ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-04-08T17:49:06Z
 pageClass: device-page
 ---

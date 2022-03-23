@@ -1,6 +1,6 @@
 ---
 title: "Gledopto GL-C-009P control via MQTT"
-description: "Integrate your Gledopto GL-C-009P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Gledopto GL-C-009P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-03-30T20:29:35Z
 pageClass: device-page
 ---
@@ -31,6 +31,9 @@ pageClass: device-page
 2. Now switch off and on within 2 seconds.
 3. Repeat off/on four times.
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
+
+### GL-C-001P
+See [GL-C-008P](./GL-C-008P.md#GL-C-001P).
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates

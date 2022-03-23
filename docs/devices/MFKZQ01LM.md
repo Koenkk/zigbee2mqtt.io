@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi MFKZQ01LM control via MQTT"
-description: "Integrate your Xiaomi MFKZQ01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi MFKZQ01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -69,6 +69,7 @@ The unit of this value is `mV`.
 Value can be found in the published state on the `action_angle` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-360` and the maximum value is `360`.
+The unit of this value is `°`.
 
 ### Action_from_side (numeric)
 Side of the cube.

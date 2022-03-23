@@ -1,6 +1,6 @@
 ---
 title: "Third Reality 3RSP019BZ control via MQTT"
-description: "Integrate your Third Reality 3RSP019BZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Third Reality 3RSP019BZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-11-20T23:20:00Z
 pageClass: device-page
 ---

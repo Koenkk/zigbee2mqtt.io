@@ -1,6 +1,6 @@
 ---
 title: "Nue / 3A LXN59-2S7LX1.0 control via MQTT"
-description: "Integrate your Nue / 3A LXN59-2S7LX1.0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Nue / 3A LXN59-2S7LX1.0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-07-20T23:08:11Z
 pageClass: device-page
 ---

@@ -48,7 +48,7 @@ Published messages are **always** in a JSON format. Each device produces a diffe
 }
 ```
 
-## zigbee2mqtt/FRIENDLY_NAME/availabilty
+## zigbee2mqtt/FRIENDLY_NAME/availability
 If ["Device-Availability"](../configuration/device-availability.md) is configured the online/offline status will be published when it changes.
 
 ## zigbee2mqtt/FRIENDLY_NAME/set
@@ -105,6 +105,8 @@ Contains the state of the bridge, this message is published as retained. Payload
 * `online`: published when the bridge is running (on startup)
 * `offline`: published right before the bridge stops
 
+If `advanced.legacy_availability_payload` is set to `false` the payload will be a JSON object (`{"state":"online"}`/`{"state":"offline"}`).
+
 ## zigbee2mqtt/bridge/logging
 All Zigbee2MQTT logging is published to this topic in the form of `{"level": LEVEL, "message": MESSAGE}`, example: `{"level": "info", "message": "Zigbee: allowing new devices to join."}`.
 
@@ -122,6 +124,7 @@ Example payload:
         "network_address":29159,
         "supported":true,
         "friendly_name":"my_plug",
+        "description":"this plug is in the kitchen",
         "endpoints":{"1":{"bindings":[],"configured_reportings":[],"clusters":{"input":["genOnOff","genBasic"],"output":[]}}},
         "definition":{
             "model":"ZNCZ02LM",
@@ -362,7 +365,7 @@ Notes:
 - Not all devices support the Zigbee configure reporting command (e.g. Xiaomi WSDCGQ11LM temperature/humidity sensors don't support it)
 - If configure reporting fails for a battery powered device make sure to wake it up right before sending the command.
 - The `reportable_change` value depends on the unit of the attribute, e.g. for temperature 100 means in general 1°C of change.
-
+- To specify options, e.g. the manufactuerCode use e.g. `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10,"options":{"manufacturerCode":1234}}`
 
 ### Group
 

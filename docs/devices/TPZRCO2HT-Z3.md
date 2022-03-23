@@ -1,6 +1,6 @@
 ---
 title: "Titan Products TPZRCO2HT-Z3 control via MQTT"
-description: "Integrate your Titan Products TPZRCO2HT-Z3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Titan Products TPZRCO2HT-Z3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-09-01T19:56:51Z
 pageClass: device-page
 ---
@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TPZRCO2HT-Z3  |
 | Vendor  | Titan Products  |
 | Description | Room CO2, humidity & temperature sensor |
-| Exposes | battery, humidity, temperature, co2, linkquality |
+| Exposes | voltage, battery_low, humidity, temperature, co2, linkquality |
 | Picture | ![Titan Products TPZRCO2HT-Z3](https://www.zigbee2mqtt.io/images/devices/TPZRCO2HT-Z3.jpg) |
 
 
@@ -42,12 +42,17 @@ pageClass: device-page
 
 ## Exposes
 
-### Battery (numeric)
-Remaining battery in %.
-Value can be found in the published state on the `battery` property.
+### Voltage (numeric)
+Voltage of the battery in millivolts.
+Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
+The unit of this value is `mV`.
+
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
 
 ### Humidity (numeric)
 Measured relative humidity.

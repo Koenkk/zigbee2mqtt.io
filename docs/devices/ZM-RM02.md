@@ -1,6 +1,6 @@
 ---
 title: "Zemismart ZM-RM02 control via MQTT"
-description: "Integrate your Zemismart ZM-RM02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Zemismart ZM-RM02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-12-24T21:49:06Z
 pageClass: device-page
 ---

@@ -11,7 +11,7 @@ export function generateExpose(definition) {
   return `
 ## Exposes
 
-${definition.exposes.map((e) => getExposeDocs(e)).join('\n\n')}
+${(typeof definition.exposes === 'function' ? definition.exposes() : definition.exposes).map((e) => getExposeDocs(e)).join('\n\n')}
 `;
 }
 

@@ -1,6 +1,6 @@
 ---
 title: "iCasa ICZB-DC11 control via MQTT"
-description: "Integrate your iCasa ICZB-DC11 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your iCasa ICZB-DC11 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-01-31T22:24:43Z
 pageClass: device-page
 ---

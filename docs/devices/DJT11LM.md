@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi DJT11LM control via MQTT"
-description: "Integrate your Xiaomi DJT11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi DJT11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -96,16 +96,19 @@ The possible values are: `low`, `medium`, `high`.
 Value can be found in the published state on the `angle_x` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-90` and the maximum value is `90`.
+The unit of this value is `°`.
 
 ### Angle_y (numeric)
 Value can be found in the published state on the `angle_y` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-90` and the maximum value is `90`.
+The unit of this value is `°`.
 
 ### Angle_z (numeric)
 Value can be found in the published state on the `angle_z` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-90` and the maximum value is `90`.
+The unit of this value is `°`.
 
 ### Voltage (numeric)
 Voltage of the battery in millivolts.

@@ -52,6 +52,9 @@ For example, using a `friendly_name` like `kitchen/floor_light` would result in 
 Note that a `friendly_name` is **NOT** allowed to end with `/`, `/` + one of the possible [endpoint names](https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/util/utils.ts#L30) (e.g. `/left`) or `/` + a number (e.g. `/4`).
 :::
 
+**`description`**  
+Description of this device, e.g. `This device is in the kitchen`, will be shown in the frontend.
+
 **`retain`**  
 Retain MQTT messages of this device (default `false`).
 

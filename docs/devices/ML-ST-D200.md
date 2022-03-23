@@ -1,6 +1,6 @@
 ---
 title: "M-ELEC ML-ST-D200 control via MQTT"
-description: "Integrate your M-ELEC ML-ST-D200 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your M-ELEC ML-ST-D200 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-01-14T19:34:25Z
 pageClass: device-page
 ---

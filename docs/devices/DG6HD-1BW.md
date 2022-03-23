@@ -1,6 +1,6 @@
 ---
 title: "Leviton DG6HD-1BW control via MQTT"
-description: "Integrate your Leviton DG6HD-1BW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Leviton DG6HD-1BW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-03-30T20:29:35Z
 pageClass: device-page
 ---

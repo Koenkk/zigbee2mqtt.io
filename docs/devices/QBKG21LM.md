@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi QBKG21LM control via MQTT"
-description: "Integrate your Xiaomi QBKG21LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi QBKG21LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-06-29T17:33:31Z
 pageClass: device-page
 ---
@@ -25,6 +25,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Debounce
+It is recommended to not use the `debounce` option for this device since this will prevent the `single` and `hold_release` actions from being sent.
 
 ### Deprecated click event
 By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
@@ -57,7 +59,7 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `hold`, `release`.
+The possible values are: `release`, `hold`, `double`, `single`, `hold_release`.
 
 ### Operation_mode (enum)
 Decoupled mode.

@@ -1,6 +1,6 @@
 ---
 title: "Develco EMIZB-132 control via MQTT"
-description: "Integrate your Develco EMIZB-132 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Develco EMIZB-132 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-03-20T17:24:57Z
 pageClass: device-page
 ---

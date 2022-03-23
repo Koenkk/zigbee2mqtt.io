@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi QBKG03LM control via MQTT"
-description: "Integrate your Xiaomi QBKG03LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi QBKG03LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -38,6 +38,8 @@ devices:
     legacy: false
 ```
 
+### Debounce
+It is recommended to not use the `debounce` option for this device since this will prevent the `single` and `hold_release` actions from being sent.
 
 ### Pairing
 Press and hold the button on the device for +- 10 seconds
@@ -83,19 +85,19 @@ The unit of this value is `°C`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_left`, `single_right`, `single_both`.
+The possible values are: `release_left`, `release_right`, `release_both`, `double_left`, `double_right`, `single_left`, `single_right`, `hold_release_left`, `hold_release_left`.
 
 ### Operation_mode (enum, left endpoint)
 Operation mode for left button.
 Value can be found in the published state on the `operation_mode_left` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_left": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_left": NEW_VALUE}`.
 The possible values are: `control_left_relay`, `control_right_relay`, `decoupled`.
 
 ### Operation_mode (enum, right endpoint)
 Operation mode for right button.
 Value can be found in the published state on the `operation_mode_right` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_right": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": NEW_VALUE}`.
 The possible values are: `control_left_relay`, `control_right_relay`, `decoupled`.
 

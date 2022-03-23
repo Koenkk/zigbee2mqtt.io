@@ -1,6 +1,6 @@
 ---
 title: "UR Lighting TH008L10RGBCCT control via MQTT"
-description: "Integrate your UR Lighting TH008L10RGBCCT via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your UR Lighting TH008L10RGBCCT via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-18T05:56:31Z
 pageClass: device-page
 ---

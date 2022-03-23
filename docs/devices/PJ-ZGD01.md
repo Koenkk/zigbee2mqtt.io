@@ -1,6 +1,6 @@
 ---
 title: "TuYa PJ-ZGD01 control via MQTT"
-description: "Integrate your TuYa PJ-ZGD01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa PJ-ZGD01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PJ-ZGD01  |
 | Vendor  | TuYa  |
 | Description | Garage door opener |
-| Exposes | trigger, action, garage_door_contact, linkquality |
+| Exposes | trigger, garage_door_contact, linkquality |
 | Picture | ![TuYa PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.jpg) |
 | White-label | MatSee Plus PJ-ZGD01 |
 
@@ -38,12 +38,6 @@ Value can be found in the published state on the `trigger` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger": NEW_VALUE}`.
 If value equals `true` trigger is ON, if `false` OFF.
-
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `trigger`.
 
 ### Garage_door_contact (binary)
 Value can be found in the published state on the `garage_door_contact` property.

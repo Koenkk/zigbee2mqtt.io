@@ -1,6 +1,6 @@
 ---
 title: "iCasa ICZB-RM11S control via MQTT"
-description: "Integrate your iCasa ICZB-RM11S via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your iCasa ICZB-RM11S via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-11-01T12:47:02Z
 pageClass: device-page
 ---
@@ -27,12 +27,12 @@ pageClass: device-page
 
 
 ### Pairing
-Press and hold the All Off and All On button on the Remote until the Status LED turns on.
+Press and hold All On button on the Remote until the Status LED turns on.
 Then immediately press the All Off button.
 The Status LED will blink 5 times quickly to indicate a successful pairing.
 
 ### Resetting
-Press and hold the All Off and All On button on the Remote until the Status LED turns on.
+Press and hold the All On button on the Remote until the Status LED turns on.
 Then immediately press 5 times the All On button.
 <!-- Notes END: Do not edit below this line -->
 
