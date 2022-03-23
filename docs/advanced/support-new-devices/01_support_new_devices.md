@@ -66,7 +66,7 @@ In case your device is not reporting anything, it could be that this device requ
 If your device is advertised as TuYa compatible or reports anything with `manuSpecificTuya` additional instructions for adding your device can be found [here](./02_support_new_tuya_devices.md).
 :::
 
-In case your device does not report anything out of the blue, the Clusters page at Zigbee2Mqtt's front end (found under the device in the dashboard) also exposes the clusters.
+In case your device does not report anything out of the blue, the Clusters page at Zigbee2MQTT's frontend (found under the device in the dashboard) also exposes the clusters.
 
 Some basic external converter examples:
 - [Bulb (light)](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/light.js)
