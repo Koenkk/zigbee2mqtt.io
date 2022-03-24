@@ -23,8 +23,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Group commands
+This device [does not support](https://github.com/Koenkk/zigbee2mqtt/issues/11934) group commands.
 <!-- Notes END: Do not edit below this line -->
 
 
