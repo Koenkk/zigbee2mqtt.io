@@ -20,12 +20,11 @@ pageClass: device-page
 | Description | Smart plug (with power monitoring) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, lock (state), linkquality |
 | Picture | ![TuYa TS011F_plug_1](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_1.jpg) |
-| White-label | LELLKI TS011F_plug, NEO NAS-WR01B, BlitzWolf BW-SHP15 |
+| White-label | LELLKI TS011F_plug, NEO NAS-WR01B, BlitzWolf BW-SHP15, BlitzWolf BW-SHP13 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-
 
 ### Broken attribute reporting functionality
 
@@ -35,6 +34,11 @@ If your plug is affected, it will be detected as [TS011F_plug_3](TS011F_plug_3.m
 
 <!-- cfr: https://github.com/Koenkk/zigbee2mqtt/issues/9057 -->
 
+### Broken attribute reporting functionality in devices sold as BW-SHP13
+
+In 2022, BlitzWolf started to sell BW-SHP13 that identify as ```_TZ3000_amdymr7l```. Those devices report power, current and voltage unreliably: Changes in any of those metrics sometimes take a few minutes before being reported and constant loads are reported as 0 for a few minutes just to return to their expected values a few minutes later. There is no know workaround for that behaviour.
+
+<!-- cfr: https://github.com/Koenkk/zigbee2mqtt/issues/11800 -->
 
 ### Pairing
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
