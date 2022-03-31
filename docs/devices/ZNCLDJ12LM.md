@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | ZNCLDJ12LM  |
 | Vendor  | Xiaomi  |
-| Description | Aqara B1 curtain motor  |
-| Exposes | cover (state, position), battery, linkquality |
+| Description | Aqara B1 curtain motor |
+| Exposes | cover (state, position), battery, running, linkquality |
 | Picture | ![Xiaomi ZNCLDJ12LM](https://www.zigbee2mqtt.io/images/devices/ZNCLDJ12LM.jpg) |
 
 
@@ -98,6 +98,12 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Running (binary)
+Whether the motor is moving or not.
+Value can be found in the published state on the `running` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` running is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

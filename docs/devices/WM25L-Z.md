@@ -1,6 +1,6 @@
 ---
-title: "Smartwings WM25/L-Z control via MQTT"
-description: "Integrate your Smartwings WM25/L-Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+title: "Smartwings WM25L-Z control via MQTT"
+description: "Integrate your Smartwings WM25L-Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-03-03T21:28:38Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Smartwings WM25/L-Z
+# Smartwings WM25L-Z
 
 |     |     |
 |-----|-----|
-| Model | WM25/L-Z  |
+| Model | WM25L-Z  |
 | Vendor  | Smartwings  |
-| Description | Smartwings roller blind |
+| Description | Roller shade |
 | Exposes | cover (state, position), battery, linkquality |
-| Picture | ![Smartwings WM25/L-Z](https://www.zigbee2mqtt.io/images/devices/WM25L-Z.jpg) |
+| Picture | ![Smartwings WM25L-Z](https://www.zigbee2mqtt.io/images/devices/WM25L-Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -36,6 +36,13 @@ After that pair the blind by holding the blind battery lid very close to the TRA
 The roller blind maximum extension can be set by moving the blind to the desired position and then double pressing the up or down button.
 To reset the end position so you can define a newer more extended end position, open the blind fully. Then double press the up or down button. You can now set the blind extension again.
 <!-- Notes END: Do not edit below this line -->
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
 
 ## Exposes
 

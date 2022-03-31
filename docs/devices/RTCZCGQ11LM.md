@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | RTCZCGQ11LM  |
 | Vendor  | Xiaomi  |
-| Description | Aqara Presence Detector FP1 (regions not supported for now) |
-| Exposes | presence, presence_event, monitoring_mode, approach_distance, power_outage_count, linkquality |
+| Description | Aqara presence detector FP1 (regions not supported for now) |
+| Exposes | presence, power_outage_count, temperature, presence_event, monitoring_mode, approach_distance, motion_sensitivity, reset_nopresence_status, linkquality |
 | Picture | ![Xiaomi RTCZCGQ11LM](https://www.zigbee2mqtt.io/images/devices/RTCZCGQ11LM.jpg) |
 
 
@@ -47,6 +47,13 @@ After this the device will automatically join. If this doesn't work, try with a 
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
@@ -56,6 +63,17 @@ Value can be found in the published state on the `presence` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"presence": ""}`.
 It's not possible to write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
+
+### Power_outage_count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
 
 ### Presence_event (enum)
 Presence events: "enter", "leave", "left_enter", "right_leave", "right_enter", "left_leave", "approach", "away".
@@ -77,10 +95,19 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"approach_distance": NEW_VALUE}`.
 The possible values are: `far`, `medium`, `near`.
 
-### Power_outage_count (numeric)
-Number of power outages (since last pairing).
-Value can be found in the published state on the `power_outage_count` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+### Motion_sensitivity (enum)
+Different sensitivities means different static human body recognition rate and response speed of occupied.
+Value can be found in the published state on the `motion_sensitivity` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motion_sensitivity": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensitivity": NEW_VALUE}`.
+The possible values are: `low`, `medium`, `high`.
+
+### Reset_nopresence_status (enum)
+Reset the status of no presence.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_nopresence_status": NEW_VALUE}`.
+The possible values are: `Reset`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
