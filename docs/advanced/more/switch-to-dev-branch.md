@@ -21,7 +21,7 @@ cd /opt/zigbee2mqtt
 cp -R data data-backup
 
 # Update
-git checkout HEAD -- npm-shrinkwrap.json
+git checkout HEAD -- package-lock.json
 git fetch
 git checkout dev # Change 'dev' to 'master' to switch back to the release version
 git pull

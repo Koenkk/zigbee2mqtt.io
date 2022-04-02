@@ -103,7 +103,7 @@ source /opt/zigbee2mqtt/bin/activate
 cp -R data data-backup
 
 # Update
-git checkout HEAD -- npm-shrinkwrap.json
+git checkout HEAD -- package-lock.json
 git pull
 npm ci
 
