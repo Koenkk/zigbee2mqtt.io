@@ -51,8 +51,8 @@ Now set the Zigbee2MQTT `log_level` to `debug` and enable the external converter
 ```yaml
 advanced:
   log_level: debug
-external_converters:
-  - WSDCGQ01LM.js
+  external_converters:
+    - WSDCGQ01LM.js
 ```
 
 Once finished, restart Zigbee2MQTT and trigger some actions on the device. You will see messages like:
