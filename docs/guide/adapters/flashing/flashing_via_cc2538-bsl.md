@@ -33,10 +33,10 @@ Download the firmware for your adapter from the [Supported adapter page](../READ
 
 4. In this case we will flash `CC1352P2_CC2652P_launchpad_coordinator_***.zip`.
 ```bash
-wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20211217.zip
-unzip CC1352P2_CC2652P_launchpad_coordinator_20211217.zip
+wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20220219.zip
+unzip CC1352P2_CC2652P_launchpad_coordinator_20220219.zip
 
-sudo python3 cc2538-bsl.py -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb ./CC1352P2_CC2652P_launchpad_coordinator_20211217.hex
+sudo python3 cc2538-bsl.py -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb ./CC1352P2_CC2652P_launchpad_coordinator_20220219.hex
 ```
 `-ewv` means Mass **e**rease, **w**rite, **v**erify  
 `-p` is the port on which your device is running, in this case `/dev/ttyUSB0`  
@@ -46,7 +46,7 @@ If the flash process was successfully done, an output like this appears:
 ```
 sonoff
 Opening port /dev/ttyUSB0, baud 500000
-Reading data from ../CC1352P2_CC2652P_launchpad_coordinator_20211217.hex
+Reading data from ../CC1352P2_CC2652P_launchpad_coordinator_20220219.hex
 Your firmware looks like an Intel Hex file
 Connecting to target...
 CC1350 PG2.0 (7x7mm): 352KB Flash, 20KB SRAM, CCFG.BL_CONFIG at 0x00057FD8
@@ -63,7 +63,7 @@ Verifying by comparing CRC32 calculations.
 ## How-to check the installed firmware version
 Zigbee2MQTT will output the installed firmware version to the Zigbee2MQTT log on startup:
 ```
-Zigbee2MQTT:info  2022-01-05 22:36:34: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20211217,"transportrev":2},"type":"zStack3x0"}''
+Zigbee2MQTT:info  2022-01-05 22:36:34: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20220219,"transportrev":2},"type":"zStack3x0"}''
 ```
 
-In the above example the version is `20211217`.
+In the above example the version is `20220219`.
