@@ -27,10 +27,7 @@ pageClass: device-page
 
 
 ### Pairing
-It's recommend to first pair the included TRADFRI signal repeater in the room where you want to put the blinds.
-Now press both buttons on the blind (next to battery lid) for 5 seconds until a white light between both buttons is turned on.
-The device is now awake and ready to pair for 2 minutes.
-After that pair the blind by holding the blind battery lid very close to the TRADFRI signal repeater until the white light is turned off (this should mean the pairing is successful).
+Press and hold the button on the motor head for 6 seconds until the motor feedback twice then release the button. The red led light on indicate to enter the pairing mode.
 
 ### End Position
 The roller blind maximum extension can be set by moving the blind to the desired position and then double pressing the up or down button.
