@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_thermostat  |
 | Vendor  | TuYa  |
 | Description | Radiator valve with thermostat |
-| Exposes | lock (state), switch (state), battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, away_mode, preset, running_state), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, away_preset_temperature, programming_mode, linkquality |
+| Exposes | lock (state), switch (state), window_open, battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, away_mode, preset, running_state), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, away_preset_temperature, programming_mode, linkquality |
 | Picture | ![TuYa TS0601_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat.jpg) |
 | White-label | Moes HY368, Moes HY369RT, SHOJZJ 378RT, Silvercrest TVR01 |
 
@@ -136,6 +136,12 @@ It's not possible to read (`/get`) this value.
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
+
+### Window_open (binary)
+Window open?.
+Value can be found in the published state on the `window_open` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `undefined` window_open is ON, if `undefined` OFF.
 
 ### Battery_low (binary)
 Indicates if the battery of this device is almost empty.

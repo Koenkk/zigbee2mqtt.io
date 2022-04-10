@@ -29,6 +29,8 @@ function getOptionDocs(option) {
     extra = `The value must be one of ${option.values.map(v => `\`${v}\``).join(', ')}`;
   } else if (option.type === 'list') {
     extra = `The value must be a list of ${option.item_type}`;
+  } else if (option.type === 'text') {
+    extra = `The value must be textual`;
   } else if (option.type === 'composite' && option.property === 'simulated_brightness') {
     extra = `Example:
 \`\`\`yaml

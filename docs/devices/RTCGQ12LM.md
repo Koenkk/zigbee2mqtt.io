@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RTCGQ12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 human body movement and illuminance sensor |
-| Exposes | occupancy, illuminance, detection_interval, battery, linkquality |
+| Exposes | occupancy, illuminance, detection_interval, temperature, battery, linkquality |
 | Picture | ![Xiaomi RTCGQ12LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ12LM.jpg) |
 
 
@@ -49,9 +49,17 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `occupancy_timeout`: Time in seconds after which occupancy is cleared after detecting it (default is "detection_interval" + 2 seconds). The value must be equal to or greater than "detection_interval", and it can also be a fraction. The value must be a number with a minimum value of `0`
+
+* `no_occupancy_since`: Sends a message the last time occupancy (occupancy: true) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of number.
+
 * `illuminance_precision`: Number of digits after decimal point for illuminance, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -75,6 +83,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_interval": NEW_VALUE}`.
 The minimal value is `2` and the maximum value is `65535`.
 The unit of this value is `s`.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
 
 ### Battery (numeric)
 Remaining battery in %.

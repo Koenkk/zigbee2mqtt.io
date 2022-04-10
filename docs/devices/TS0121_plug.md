@@ -26,6 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### BW-SHP13 sold since 2022
+
+Since early 2022, BlitzWolf changed firmware of the BW-SHP13. Those new devices identify as [TS011F_plug_1](TS011F_plug_1.md).
 
 ### Pairing
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
