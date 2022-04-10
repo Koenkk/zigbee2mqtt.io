@@ -63,7 +63,7 @@ Open the configuration file:
 nano /opt/zigbee2mqtt/data/configuration.yaml
 ```
 
-For a basic configuration, the default settings are probably good. The only thing we need to change is the MQTT server url/authentication and the serial port. This can be done by changing the section below in your `configuration.yaml`.
+For a basic configuration, the default settings are probably good. The only thing we need to change is the MQTT server url/authentication and the serial port (in some cases, your adapter might need additional configuration parameters, see [supported Adapters](../adapters/README.md)). This can be done by changing the section below in your `configuration.yaml`.
 
 ```yaml
 # MQTT settings
