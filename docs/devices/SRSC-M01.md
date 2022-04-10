@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SRSC-M01  |
 | Vendor  | Xiaomi  |
 | Description | Aqara roller shade motor |
-| Exposes | cover (state, position), linkquality |
+| Exposes | cover (state, position), running, linkquality |
 | Picture | ![Xiaomi SRSC-M01](https://www.zigbee2mqtt.io/images/devices/SRSC-M01.jpg) |
 
 
@@ -44,6 +44,12 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 To read the current state of this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
+
+### Running (binary)
+Whether the motor is moving or not.
+Value can be found in the published state on the `running` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` running is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

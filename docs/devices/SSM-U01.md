@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SSM-U01  |
 | Vendor  | Xiaomi  |
 | Description | Aqara single switch module T1 (with neutral) |
-| Exposes | switch (state), energy, power, device_temperature, power_outage_memory, switch_type, voltage, temperature, current, linkquality |
+| Exposes | switch (state), energy, power, device_temperature, power_outage_memory, power_outage_count, switch_type, voltage, temperature, current, linkquality |
 | Picture | ![Xiaomi SSM-U01](https://www.zigbee2mqtt.io/images/devices/SSM-U01.jpg) |
 
 
@@ -70,6 +70,11 @@ Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 If value equals `true` power_outage_memory is ON, if `false` OFF.
+
+### Power_outage_count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Switch_type (enum)
 Wall switch type.

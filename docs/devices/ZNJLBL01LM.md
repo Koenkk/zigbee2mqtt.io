@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNJLBL01LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara roller shade companion E1 |
-| Exposes | cover (state, position), battery, motor_state, running, linkquality |
+| Exposes | cover (state, position), battery, charging_status, motor_state, running, linkquality |
 | Picture | ![Xiaomi ZNJLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNJLBL01LM.jpg) |
 
 
@@ -55,9 +55,17 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Charging_status (binary)
+The current charging status..
+Value can be found in the published state on the `charging_status` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"charging_status": ""}`.
+It's not possible to write (`/set`) this value.
+If value equals `true` charging_status is ON, if `false` OFF.
 
 ### Motor_state (enum)
 The current state of the motor..
@@ -66,7 +74,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `declining`, `rising`, `pause`, `blocked`.
 
 ### Running (binary)
-Whether the motor is moving or not..
+Whether the motor is moving or not.
 Value can be found in the published state on the `running` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` running is ON, if `false` OFF.
