@@ -33,6 +33,9 @@ Not all Zigbee devices can do this translation, currently the only devices known
 
 Green Power devices don't support binding and are not included in network scans.
 
+Binding may work between this module and the actuator, depending if the actuator supports the Zigbee Green Power standard & if the actuators user interface supports "Finding & binding" or "EZ-mode". For more information, contact the supplier of the actuator.
+
+
 ### Pairing
 This device has 4 buttons:
 
