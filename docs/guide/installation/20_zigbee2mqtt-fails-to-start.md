@@ -123,7 +123,7 @@ In case you see message like below when running `dmesg -w` you are using a bad p
 When you have a SSD connected to the Pi, try connecting the adapter via a powered USB hub.
 
 ## Error: JavaScript heap out of memory
-On memory constrained deviced it might be necessary to run 
+On memory constrained devices it might be necessary to run 
 ```bash
 export NODE_OPTIONS=--max_old_space_size=256
 ```
