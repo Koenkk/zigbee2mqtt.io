@@ -19,7 +19,7 @@ pi@raspberry:~ $ ls -l /dev/ttyACM0
 crw-rw---- 1 root dialout 166, 0 May 16 19:15 /dev/ttyACM0  # <-- adapter (CC2531 in this case) on /dev/ttyACM0
 ```
 
-As an alternative, the device can also be mapped by an ID. This can be handy if you have multiple serial devices connected to your Raspberry Pi. In the example below the device location is: `/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00`
+However, it is **recommended** to use "by ID" mapping of the device (see [Adapter settings](../configuration/adapter-settings.md)). This kind of device path mapping is more stable, but can also be handy if you have multiple serial devices connected to your Raspberry Pi. In the example below the device location is: `/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00`
 ```bash
 pi@raspberry:/ $ ls -l /dev/serial/by-id
 total 0
@@ -63,7 +63,7 @@ Open the configuration file:
 nano /opt/zigbee2mqtt/data/configuration.yaml
 ```
 
-For a basic configuration, the default settings are probably good. The only thing we need to change is the MQTT server url/authentication and the serial port. This can be done by changing the section below in your `configuration.yaml`.
+For a basic configuration, the default settings are probably good. The only thing we need to change is the MQTT server url/authentication and the serial port (in some cases, your adapter might need additional configuration parameters, see [supported Adapters](../adapters/README.md)). This can be done by changing the section below in your `configuration.yaml`.
 
 ```yaml
 # MQTT settings
