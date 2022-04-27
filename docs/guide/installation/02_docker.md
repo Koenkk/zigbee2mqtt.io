@@ -27,6 +27,8 @@ Execute the following command, update the `--device` parameter to match the loca
 
 ```bash
 $ docker run \
+   --name zigbee2mqtt \
+   --restart=unless-stopped \
    --device=/dev/ttyACM0 \
    -p 8080:8080 \
    -v $(pwd)/data:/app/data \
@@ -36,6 +38,8 @@ $ docker run \
 ```
 
 **Parameters explanation:**  
+* `--name zigbee2mqtt`: Name of container
+* `--restart=unless-stopped`: Automatically start on boot and restart after a crash
 * `--device=/dev/ttyACM0`: Location of adapter (e.g. CC2531)
 * `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration (pwd maps to the current working directory)
 * `-v /run/udev:/run/udev:ro`: only required for auto-detecting the port and some adapters like ConBee
@@ -67,6 +71,7 @@ uid=1001(pi) gid=1001(pi) Groups=...
 ```
 $ sudo docker run \
    --name=zigbee2mqtt \
+   --restart=unless-stopped \
    -p 8080:8080 \
    -v $(pwd)/data:/app/data \
    -v /run/udev:/run/udev:ro \
