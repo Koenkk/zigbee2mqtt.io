@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | JT-BZ-01AQ/A  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart natural gas detector |
-| Exposes | gas, power_outage_count, gas_density, gas_sensitivity, selftest, test, mute_buzzer, mute, linkage_alarm, state, linkquality |
+| Exposes | gas, gas_density, gas_sensitivity, selftest, test, mute_buzzer, mute, linkage_alarm, state, power_outage_count, linkquality |
 | Picture | ![Xiaomi JT-BZ-01AQ/A](https://www.zigbee2mqtt.io/images/devices/JT-BZ-01AQ-A.jpg) |
 
 
@@ -53,12 +53,6 @@ Value can be found in the published state on the `gas` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"gas": ""}`.
 It's not possible to write (`/set`) this value.
 If value equals `true` gas is ON, if `false` OFF.
-
-### Power_outage_count (numeric)
-Number of power outages (since last pairing).
-Value can be found in the published state on the `power_outage_count` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_count": ""}`.
-It's not possible to write (`/set`) this value.
 
 ### Gas_density (numeric)
 Value of gas concentration.
@@ -114,6 +108,12 @@ Value can be found in the published state on the `state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 It's not possible to write (`/set`) this value.
 If value equals `preparation` state is ON, if `work` OFF.
+
+### Power_outage_count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_count": ""}`.
+It's not possible to write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

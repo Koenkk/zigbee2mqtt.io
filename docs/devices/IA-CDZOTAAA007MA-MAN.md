@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | IA-CDZOTAAA007MA-MAN  |
 | Vendor  | ADEO  |
- Description | ENKI Lexman E27 7.2W to 60W LED RGBW |
+| Description | ENKI LEXMAN E27 7.2 to 60W LED RGBW |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![ADEO IA-CDZOTAAA007MA-MAN](https://www.zigbee2mqtt.io/images/devices/IA-CDZOTAAA007MA-MAN.jpg) |
 

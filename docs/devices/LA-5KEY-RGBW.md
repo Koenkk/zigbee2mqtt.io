@@ -1,7 +1,7 @@
 ---
-title: "Prolight PROLIGHT_REMOTE_CONTROL control via MQTT"
-description: "Integrate your Prolight PROLIGHT_REMOTE_CONTROL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-03-01T09:06:16
+title: "Ynoa LA-5KEY-RGBW control via MQTT"
+description: "Integrate your Ynoa LA-5KEY-RGBW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-04-30T08:00:58
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Prolight PROLIGHT_REMOTE_CONTROL
+# Ynoa LA-5KEY-RGBW
 
 |     |     |
 |-----|-----|
-| Model | PROLIGHT_REMOTE_CONTROL  |
-| Vendor  | Prolight  |
-| Description | Remote control |
-| Exposes | action, linkquality |
-| Picture | ![Prolight PROLIGHT_REMOTE_CONTROL](https://www.zigbee2mqtt.io/images/devices/PROLIGHT_REMOTE_CONTROL.jpg) |
+| Model | LA-5KEY-RGBW  |
+| Vendor  | Ynoa  |
+| Description | 5 key control for RGBW light |
+| Exposes | battery, battery_low, action, linkquality |
+| Picture | ![Ynoa LA-5KEY-RGBW](https://www.zigbee2mqtt.io/images/devices/LA-5KEY-RGBW.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -41,11 +41,24 @@ simulated_brightness:
 
 ## Exposes
 
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on`, `off`, `brightness_move_up`, `brightness_move_down`.
+The possible values are: `on`, `off`, `brightness_move_to_level`, `color_temperature_move`, `color_move`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

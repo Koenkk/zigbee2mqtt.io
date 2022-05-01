@@ -1,7 +1,7 @@
 ---
-title: "ADEO IM-CDZDGAAA0005KA8MAN control via MQTT"
-description: "Integrate your ADEO IM-CDZDGAAA0005KA8MAN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-03-31T18:55:00
+title: "ADEO IM-CDZDGAAA0005KA_MAN control via MQTT"
+description: "Integrate your ADEO IM-CDZDGAAA0005KA_MAN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-04-30T08:00:58
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# ADEO IM-CDZDGAAA0005KA8MAN
+# ADEO IM-CDZDGAAA0005KA_MAN
 
 |     |     |
 |-----|-----|
-| Model | IM-CDZDGAAA0005KA8MAN  |
+| Model | IM-CDZDGAAA0005KA_MAN  |
 | Vendor  | ADEO  |
 | Description | ENKI LEXMAN RGBTW GU10 Bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![ADEO IM-CDZDGAAA0005KA8MAN](https://www.zigbee2mqtt.io/images/devices/IM-CDZDGAAA0005KA8MAN.jpg) |
+| Picture | ![ADEO IM-CDZDGAAA0005KA_MAN](https://www.zigbee2mqtt.io/images/devices/IM-CDZDGAAA0005KA_MAN.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

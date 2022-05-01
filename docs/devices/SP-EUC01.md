@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SP-EUC01  |
 | Vendor  | Xiaomi  |
 | Description | Aqara EU smart plug |
-| Exposes | switch (state), power, energy, power_outage_memory, device_temperature, linkquality |
+| Exposes | switch (state), power, energy, power_outage_memory, voltage, current, device_temperature, linkquality |
 | Picture | ![Xiaomi SP-EUC01](https://www.zigbee2mqtt.io/images/devices/SP-EUC01.jpg) |
 
 
@@ -69,6 +69,18 @@ Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 If value equals `true` power_outage_memory is ON, if `false` OFF.
+
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
+
+### Current (numeric)
+Instantaneous measured electrical current.
+Value can be found in the published state on the `current` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `A`.
 
 ### Device_temperature (numeric)
 Device temperature (polled every 30 min).
