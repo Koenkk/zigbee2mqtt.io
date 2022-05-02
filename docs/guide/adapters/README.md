@@ -280,7 +280,7 @@ _(in order of first appearance)_
   * <details>
     <summary>ConBee / ConBee II / RaspBee / RaspBee II</summary>
   
-    USB connected (ConBee and ConBee II) and Raspberry Pi GPIO module (RaspBee and RaspBee II) adapters.
+    USB connected adapters (ConBee and ConBee II) and Raspberry Pi GPIO modules (RaspBee and RaspBee II).
     If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
     ```yaml
     serial:
