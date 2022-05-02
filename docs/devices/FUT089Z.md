@@ -23,7 +23,23 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+To pair the device, press the ON and OFF buttons simultaneously until the central red LED flashes quickly.
+
+### Working principle
+The remote has 7 zone switches plus an eighth zone being controlled by the ON and OFF buttons. Each zone sends commands to a ZigBee group which is currently hardcoded. Zone 1 is mapped to ZigBee group 101, Zone 2 to 102 and so forth. This means that currently each remote controls the same ZigBee groups. To control a light, first create a ZigBee group with the correct ID (10X), then add the device you intend to control to that group. Do NOT add the remote itself.
+
+There is no support for sending events instead of commands.
+
+### Quirks
+The remote does not seem to respond to any ZigBee commands sent after initial configuration without taking out the battery and putting it back in. To send any command to it (like a Leave or configure command), take out the battery, send the command and quickly put it back in.
+
+It does also not support binding its light output clusters or manually joining it to a group.
+
+### Touchlink
+The remote supports Touchlink. It is unclear how the Touchlink configuration interacts with the regular group configuration so if you intend to use Touchlink it would probably best not to pair it to a network.
 
 <!-- Notes END: Do not edit below this line -->
 
