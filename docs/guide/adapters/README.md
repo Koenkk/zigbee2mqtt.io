@@ -278,18 +278,19 @@ _(in order of first appearance)_
 
 ### Other
   * <details>
-    <summary>ConBee II / RaspBee II</summary>
+    <summary>ConBee / ConBee II / RaspBee / RaspBee II</summary>
   
-    USB connected adapter    
+    USB connected (ConBee and ConBee II) and Raspberry Pi GPIO module (RaspBee and RaspBee II) adapters.
     If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
     ```yaml
     serial:
       adapter: deconz
     ```
   
-    * [Coordinator firmware](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually)  
-    * [Flashing](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually)  
-    * [Buy](https://phoscon.de/en/conbee2?buy=1#buy)
+    * [Coordinator firmware](https://deconz.dresden-elektronik.de/deconz-firmware/)
+    * [Flashing](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually)
+    * [Buy](https://phoscon.de/en/conbee2?#buy) (ConBee II)
+    * [Buy](https://phoscon.de/en/raspbee2#buy) (RaspBee II)
   
     ![](../../images/conbee.jpg)
     </details>
