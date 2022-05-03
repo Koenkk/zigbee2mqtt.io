@@ -39,6 +39,8 @@ After this the device will automatically join. If this doesn't work, try with a 
 
 ![WSDCGQ12LM pairing](../images/pairing/WSDCGQ11LM_pairing.jpg)
 
+*Note: When you fail to pair a device, try replacing the battery, this could solve the problem.*
+
 ### Troubleshooting: device stops sending messages/disconnects from network
 Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes happens that they disconnect from the network.
 Most of the times this happens because of the following reasons:
