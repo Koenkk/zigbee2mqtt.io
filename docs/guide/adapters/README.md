@@ -384,9 +384,9 @@ The adapters below are well-supported but use outdated chips.
 The adapters below are experimental, don't use these if you want a stable setup.
 
 * <details>
-  <summary>ZiGate USB-TTL</summary>
+  <summary>ZiGate</summary>
   
-  USB connected adapter based on NXP JN516x (JN5168/JN5169), 3.1d firmware or later required    
+  Initial development started on experimental (alpha stage) support for various ZigGate adapters (based on NXP Zigbee chips like JN5168 and JN5169). This include all ZiGate compatible hardware adapters with ZigGate 3.1d firmware or later.   
   If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
     ```yaml
     serial:
@@ -403,7 +403,7 @@ The adapters below are experimental, don't use these if you want a stable setup.
 * <details>
   <summary>Silicon Labs EZSP v8</summary>
   
-  Initial development started on experimental (pre-alpha stage) support for various adapters based on Silicon Labs EM35X and EFR32MG SoC families with EmberZNet NCP 6.7.8 firmware or later via EZSP version 8 (EmberZNet Serial Protocol) interface. This include all hardware based on SoCs/Modules from Silabs EFR32MG21/MGM210 and EFR32MG12/MGM12 series    
+  Initial development started on experimental (alpha stage) support for various adapters based on Silicon Labs EM35X and EFR32MG SoC families with EmberZNet NCP 6.7.8 firmware or later via EZSP version 8 (EmberZNet Serial Protocol) interface. This include all hardware based on SoCs/Modules from Silabs EFR32MG21/MGM210 and EFR32MG12/MGM12 series    
   If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
   ```yaml
   serial:
