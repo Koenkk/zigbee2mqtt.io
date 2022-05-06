@@ -219,7 +219,17 @@ _(in order of first appearance)_
 
     ![](https://smartlight.me/ebay/images/slzb_05/smartlight-zigbee-lan-slzb-05.jpg)
     </details>
+  * <details>
+    <summary>cod.m ZigBee CC2652P2 TCP Coordinator</summary>
 
+    CC2652P2 ZigBee Ethernet Coordinator, ethernet part based on [USR-K6](https://www.pusr.com/products/low-cost-ttl-to-ethernet-modules-usr-k6.html) module. POE possible with external splitter. Comes complete with 3d printed case and antenna.
+    * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20220219.zip)
+    * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20220125.zip)
+    * [Flashing instructions](https://github.com/codm/cc2652p2-tcp-zigbee#update)
+    * [Buy](https://shop.codm.de/automation/zigbee/40/zigbee-cc2652p2-tcp-ethernet-coordinator)
+
+    ![](../../images/codm-cc2652p-tcp-zigbee-coordinator-case.jpg) ![](../../images/codm-cc2652p-tcp-zigbee-coordinator.jpg)
+    </details>
 * Raspberry Pi hat
   * <details>
     <summary>cod.m Zigbee CC2652P RPi Module</summary>
