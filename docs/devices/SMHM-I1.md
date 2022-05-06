@@ -23,8 +23,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Tamper
+Not all versions of this device have the required hardware for deteting tamper. ([link](https://github.com/Koenkk/zigbee2mqtt/issues/12375))
 <!-- Notes END: Do not edit below this line -->
 
 
