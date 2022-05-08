@@ -160,6 +160,7 @@ Now add the following to the Zigbee2MQTT `configuration.yaml`:
 ```yaml
 serial:
     port: 'tcp://192.168.2.13:20108'
+    adapter: zstack
 ```
 
 Note to change the IP address and port.
