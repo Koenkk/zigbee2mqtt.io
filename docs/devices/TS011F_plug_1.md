@@ -26,6 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Issues with device turning off
+It's been reported by several people that this plug randomly turns off. See https://github.com/Koenkk/zigbee2mqtt/issues/11648
+
 ### Broken attribute reporting functionality
 
 Starting with firmware version 1.0.5 (which comes pre-flashed on plugs produced since Q4 2021) core functionality on this plug is broken. TuYa has disabled the automatic reporting of power, voltage and current values meaning they need to be polled instead. The poll interval can be controlled through the `measurement_poll_interval` option.
