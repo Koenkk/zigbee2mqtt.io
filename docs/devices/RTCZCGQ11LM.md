@@ -41,6 +41,9 @@ Press and hold the reset button on the device for +- 5 seconds (until the blue l
 After this the device will automatically join. If this doesn't work, try with a single short button press.
 
 ![RTCZCGQ11LM pairing](../images/pairing/RTCZCGQ11LM_pairing.jpg)
+
+### Feature support
+`Regions` [not supported](https://github.com/Koenkk/zigbee2mqtt/issues/11019#issuecomment-1026012894) for now.
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
