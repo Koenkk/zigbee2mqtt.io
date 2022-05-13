@@ -35,7 +35,7 @@ It supports two modes:
 ### Pairing and configuring
 After pairing the device requires:
 - the pilot mode to be configured (Contactor/Pilot)
-- an external temperature measurment, either through a bind from a sensor, or report from the coordinator trhough automation. The temperature must be refreshed at least every 10mn
+- an external temperature measurement, either through a bind from a sensor, or report from the coordinator trhough automation. The temperature must be refreshed at least every 10mn
 - the target thermostat set point
 <!-- Notes END: Do not edit below this line -->
 
@@ -70,7 +70,7 @@ The possible values are: `contactor`, `pilot`.
 ### Climate 
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `pi_heating_demand`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `4` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
-- `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
+- `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`. In order to provide external temperature measurement from the coordinator trhough automation, can be set by publishing a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_measured_value": VALUE}` where `VALUE` is the temperature eg: `18`.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 
 ### Linkquality (numeric)
