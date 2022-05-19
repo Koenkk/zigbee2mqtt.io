@@ -24,5 +24,8 @@ As Wi-Fi and Zigbee both operate on the same frequency space (2.4 GHz), they can
 
 To change the Zigbee channel Zigbee2MQTT uses you have to set the [`channel` in `configuration.yaml`](../../guide/configuration/zigbee-network.md).
 
+## Interference from other 2.4 GHz devices
+Any device using the open 2.4 GHz spectrum could interfere with Zigbee such as Bluetooth or gaming devices like Logitech “Unifying” or “Lightspeed” or Razer “Hyperspeed Wireless”.
+
 ## Adding more routers to your network
 In a Zigbee network, each router will extend the range of the network ([read more about this](./01_zigbee_network.md)). Almost all AC powered devices will serve as a router.
