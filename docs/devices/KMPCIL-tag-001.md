@@ -9,4 +9,8 @@ The Arrival Sensor will be in pairing mode when it is first powered up.  You can
 4.release the button. At this point, the module is in pairing mode.
 
 Once the Arrival Sensor is in pairing mode,  please follow the standard Zigbee2Mqtt pairing process for a new device. 
+
+Notes:
+please visit https://community.home-assistant.io/t/zigbee-arrival-sensor-for-car/382529/7
+
 <!-- Notes END: Do not edit below this line -->
