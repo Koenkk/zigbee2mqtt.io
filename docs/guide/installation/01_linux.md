@@ -28,15 +28,15 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 
 ## Installing
 ```bash
-# Install Node.js and required dependencies
-# In Debian/Raspbian bullseye and up (11 and up), NodeJS v12.X is packaged, this is the safest method of installing NodeJS (from official repositories) for Zigbee2MQTT. Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v12.16.3/ e.g. Version 12.16.3 should work.
-# Check https://github.com/nodesource/distributions/blob/master/README.md if you want to install a specific version from NodeJS repositories instead.
+# Install Node.js and required dependencies:
+# - It is recommended to install Node 16 from the official Node repository. Check https://github.com/nodesource/distributions/blob/master/README.md on how to do this.
+# - Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v16.15.0/ e.g. Version 16.15.0 should work.
 sudo apt-get install -y nodejs npm git make g++ gcc
 
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
 # version has been installed
-node --version  # Should output v10.X, v12.X, v14.X, v15.X or V16.X
-npm --version  # Should output 6.X or 7.X
+node --version  # Should output v14.X, V16.x, V17.x or V18.X
+npm --version  # Should output 6.X, 7.X or 8.X
 
 # Clone Zigbee2MQTT repository
 git clone https://github.com/Koenkk/zigbee2mqtt.git
