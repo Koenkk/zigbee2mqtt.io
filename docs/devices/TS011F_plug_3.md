@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Smart plug (with power monitoring by polling) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, lock (state), linkquality |
 | Picture | ![TuYa TS011F_plug_3](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_3.jpg) |
-| White-label | VIKEFON TS011F, BlitzWolf BW-SHP15, Avatto MIUCOT10Z |
+| White-label | VIKEFON TS011F, BlitzWolf BW-SHP15, Avatto MIUCOT10Z, Power Plug NAS-WR01B |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
