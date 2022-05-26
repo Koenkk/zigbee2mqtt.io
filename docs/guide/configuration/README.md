@@ -14,8 +14,8 @@ mqtt:
   server: mqtt://localhost:1883
 serial:
   port: /dev/ttyUSB0
-frontend:
-  port: 8080
+# Will run frontend on port 8080
+frontend: true 
 ```
 
 ::: tip CONVENTION
