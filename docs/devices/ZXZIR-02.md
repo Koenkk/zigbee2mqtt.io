@@ -50,6 +50,7 @@ Request:
     "IRCodeToSend": "<previously learned IR code>"
 }
 ```
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 
