@@ -41,9 +41,6 @@ After this the device will automatically join. If this doesn't work, try with a 
 ![RTCGQ14LM pairing](../images/pairing/RTCGQ14LM_pairing.jpg)
 
 *Note: When you fail to pair a device, try replacing the battery, this could solve the problem.*
-
-### Feature support
-`Trigger indicator` [not supported](https://github.com/Koenkk/zigbee2mqtt/issues/11990#issuecomment-1120312192) for now.
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
