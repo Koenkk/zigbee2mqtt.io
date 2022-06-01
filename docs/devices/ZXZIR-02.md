@@ -36,27 +36,27 @@ By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can c
 Request:
 ```json
 {
-    "learnIRCode":"ON"
+    "learn_ir_code":"ON"
 }
 ```
 
-The command activates the orange light on the device. You have several seconds to take source IR remote, move it closer to the device and press a button. The learned IR code will be exposed as "learnedIRCode".
+The command activates the orange light on the device. You have several seconds to take source IR remote, move it closer to the device and press a button. The learned IR code will be exposed as `learned_ir_code`.
 
 #### Send already learned IR code
 
 Request:
 ```json
 {
-    "IRCodeToSend": "<previously learned IR code>"
+    "ir_code_to_send": "<previously learned IR code>"
 }
 ```
 <!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 
-### LearnedIRCode (text)
+### Learned_ir_code (text)
 The IR code learned by device.
-Value can be found in the published state on the `learnedIRCode` property.
+Value can be found in the published state on the `learned_ir_code` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
