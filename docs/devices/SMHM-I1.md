@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SMHM-I1  |
 | Vendor  | HEIMAN  |
 | Description | Smart motion sensor |
-| Exposes | occupancy, battery_low, battery, voltage, linkquality |
+| Exposes | occupancy, battery_low, battery, voltage, tamper, linkquality |
 | Picture | ![HEIMAN SMHM-I1](https://www.zigbee2mqtt.io/images/devices/SMHM-I1.jpg) |
 
 
@@ -57,6 +57,12 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Tamper (binary)
+Indicates whether the device is tampered.
+Value can be found in the published state on the `tamper` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` tamper is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

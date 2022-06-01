@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ZM-35H-Q  |
 | Vendor  | TuYa  |
-| Description | Motion Sensor |
+| Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, battery, sensitivity, keep_time, linkquality |
 | Picture | ![TuYa ZM-35H-Q](https://www.zigbee2mqtt.io/images/devices/ZM-35H-Q.jpg) |
 
@@ -79,7 +79,7 @@ PIR keep time in seconds.
 Value can be found in the published state on the `keep_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keep_time": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keep_time": NEW_VALUE}`.
-The possible values are: 30, 60, 120.
+The possible values are: `30`, `60`, `120`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

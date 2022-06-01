@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG34LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall switch T1 (with neutral, three rocker) |
-| Exposes | switch (state), power, energy, voltage, flip_indicator_light, power_outage_memory, led_disabled_night, temperature, action, operation_mode, linkquality |
+| Exposes | switch (state), power, energy, voltage, flip_indicator_light, power_outage_memory, led_disabled_night, device_temperature, action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG34LM](https://www.zigbee2mqtt.io/images/devices/QBKG34LM.jpg) |
 
 
@@ -34,9 +34,9 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `device_temperature_precision`: Number of digits after decimal point for device_temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -95,9 +95,9 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
 If value equals `true` led_disabled_night is ON, if `false` OFF.
 
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
+### Device_temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 

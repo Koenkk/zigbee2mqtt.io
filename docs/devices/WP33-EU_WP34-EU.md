@@ -1,7 +1,7 @@
 ---
-title: "LELLKI WP33-EU control via MQTT"
-description: "Integrate your LELLKI WP33-EU via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2021-08-01T20:41:55Z
+title: "LELLKI WP33-EU/WP34-EU control via MQTT"
+description: "Integrate your LELLKI WP33-EU/WP34-EU via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-06-01T15:08:55
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# LELLKI WP33-EU
+# LELLKI WP33-EU/WP34-EU
 
 |     |     |
 |-----|-----|
-| Model | WP33-EU  |
+| Model | WP33-EU/WP34-EU  |
 | Vendor  | LELLKI  |
 | Description | Multiprise with 4 AC outlets and 2 USB super charging ports (16A) |
 | Exposes | switch (state), linkquality |
-| Picture | ![LELLKI WP33-EU](https://www.zigbee2mqtt.io/images/devices/WP33-EU.jpg) |
+| Picture | ![LELLKI WP33-EU/WP34-EU](https://www.zigbee2mqtt.io/images/devices/WP33-EU-WP34-EU.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

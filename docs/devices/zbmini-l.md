@@ -1,7 +1,7 @@
 ---
 title: "SONOFF ZBMINI-L control via MQTT"
 description: "Integrate your SONOFF ZBMINI-L via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-05-01T17:49:13
+addedAt: 2022-06-01T15:08:55
 pageClass: device-page
 ---
 
@@ -23,11 +23,12 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
 
-### Group commands
-This device [does not support](https://github.com/Koenkk/zigbee2mqtt/issues/11934) group commands.
+
 <!-- Notes END: Do not edit below this line -->
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 

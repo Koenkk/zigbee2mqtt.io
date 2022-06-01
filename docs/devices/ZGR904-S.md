@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ZGR904-S  |
 | Vendor  | Envilar  |
-| Description | Envilar touchlink remote |
+| Description | Touchlink remote |
 | Exposes | battery, action, linkquality |
 | Picture | ![Envilar ZGR904-S](https://www.zigbee2mqtt.io/images/devices/ZGR904-S.jpg) |
 

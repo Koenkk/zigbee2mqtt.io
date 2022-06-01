@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNCLDJ12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara B1 curtain motor |
-| Exposes | cover (state, position), battery, running, linkquality |
+| Exposes | cover (state, position), battery, running, motor_state, power_outage_count, linkquality |
 | Picture | ![Xiaomi ZNCLDJ12LM](https://www.zigbee2mqtt.io/images/devices/ZNCLDJ12LM.jpg) |
 
 
@@ -112,6 +112,17 @@ Whether the motor is moving or not.
 Value can be found in the published state on the `running` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` running is ON, if `false` OFF.
+
+### Motor_state (enum)
+The current state of the motor..
+Value can be found in the published state on the `motor_state` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `closing`, `opening`, `stop`.
+
+### Power_outage_count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

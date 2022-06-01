@@ -40,7 +40,6 @@ It does also not support binding its light output clusters or manually joining i
 
 ### Touchlink
 The remote supports Touchlink. It is unclear how the Touchlink configuration interacts with the regular group configuration so if you intend to use Touchlink it would probably best not to pair it to a network.
-
 <!-- Notes END: Do not edit below this line -->
 
 
