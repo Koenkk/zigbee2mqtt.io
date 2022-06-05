@@ -301,8 +301,8 @@ _(in order of first appearance)_
   
     * [Coordinator firmware](https://deconz.dresden-elektronik.de/deconz-firmware/)
     * [Flashing](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually)
-    * [Buy](https://phoscon.de/en/conbee2?#buy) (ConBee II)
-    * [Buy](https://phoscon.de/en/raspbee2#buy) (RaspBee II)
+    * [Buy](https://phoscon.de/conbee2#buy) (ConBee II)
+    * [Buy](https://phoscon.de/raspbee2#buy) (RaspBee II)
   
     ![](../../images/conbee.jpg)
     </details>
