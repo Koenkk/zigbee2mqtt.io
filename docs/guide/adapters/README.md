@@ -154,7 +154,7 @@ _(in order of first appearance)_
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20220125.zip)  
     * [Description](https://zig-star.com/projects/zigbee-gw-lan/)  
     * [Flashing instructions](https://zig-star.com/radio-docs/flash-cc-bsl/) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
-    * [Buy](https://zig-star.com) {Tindie}(https://www.tindie.com/products/zigstar/zigstar-lan-gateway/)
+    * [Buy](https://zig-star.com) [Tindie](https://www.tindie.com/products/zigstar/zigstar-lan-gateway/)
   
     ![](../../images/ZigStar-LAN.png)
     </details>
