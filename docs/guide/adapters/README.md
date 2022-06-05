@@ -361,7 +361,7 @@ The adapters below are well-supported but use outdated chips.
     Serial connected adapter with CC2592 RF Amplifier  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)  
     * [Flashing](./flashing/flashing_the_cc2538.md)  
-    * Buy: [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2538) [Tindie](https://www.tindie.com/products/GiovanniCas/cc2538-cc2592-zigbee-dongle-new-zb30/)
+    * Buy: [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2538)
   
     ![](../../images/cc2538.jpg)
     </details>
