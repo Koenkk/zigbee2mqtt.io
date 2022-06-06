@@ -212,34 +212,38 @@ timer:
     name: Time remaining
     duration: 120
 
-sensor:
-  # Sensor for monitoring the bridge state
-  - platform: mqtt
-    name: Zigbee2MQTT Bridge state
-    state_topic: "zigbee2mqtt/bridge/state"
-    icon: mdi:router-wireless
-  # Sensor for Showing the Zigbee2MQTT Version
-  - platform: mqtt
-    name: Zigbee2MQTT Version
-    state_topic: "zigbee2mqtt/bridge/info"
-    value_template: "{{ value_json.version }}"
-    icon: mdi:zigbee
-  # Sensor for Showing the Coordinator Version
-  - platform: mqtt
-    name: Coordinator Version
-    state_topic: "zigbee2mqtt/bridge/info"
-    value_template: "{{ value_json.coordinator }}"
-    icon: mdi:chip
-
-# Switch for enabling joining
-switch:
-  - platform: mqtt
-    name: "Zigbee2MQTT Main join"
-    state_topic: "zigbee2mqtt/bridge/info"
-    value_template: '{{ value_json.permit_join | lower }}'
-    command_topic: "zigbee2mqtt/bridge/request/permit_join"
-    payload_on: "true"
-    payload_off: "false"
+mqtt:
+  sensor:
+    # Sensor for monitoring the bridge state
+    - name: Zigbee2MQTT Bridge state
+      state_topic: "zigbee2mqtt/bridge/state"
+      icon: mdi:router-wireless
+    # Sensor for Showing the Zigbee2MQTT Version
+    - name: Zigbee2MQTT Version
+      state_topic: "zigbee2mqtt/bridge/config"
+      value_template: "{{ value_json.version }}"
+      icon: mdi:zigbee
+    # Sensor for Showing the Coordinator Version
+    - name: Coordinator Version
+      state_topic: "zigbee2mqtt/bridge/config"
+      value_template: "{{ value_json.coordinator }}"
+      icon: mdi:chip
+    - name: Zigbee2mqtt Networkmap
+      # if you change base_topic of Zigbee2mqtt, change state_topic accordingly
+      state_topic: zigbee2mqtt/bridge/networkmap/raw
+      value_template: >-
+        {{ now().strftime('%Y-%m-%d %H:%M:%S') }}
+      # again, if you change base_topic of Zigbee2mqtt, change json_attributes_topic accordingly
+      json_attributes_topic: zigbee2mqtt/bridge/networkmap/raw
+    
+  # Switch for enabling joining
+  switch:
+    - name: "Zigbee2MQTT Main join"
+      state_topic: "zigbee2mqtt/bridge/info"
+      value_template: '{{ value_json.permit_join | lower }}'
+      command_topic: "zigbee2mqtt/bridge/request/permit_join"
+      payload_on: "true"
+      payload_off: "false"
 
 automation:
   # Automation for sending MQTT message on input select change
