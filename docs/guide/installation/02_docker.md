@@ -453,6 +453,20 @@ The workaround is based on the solution found at [Add support for devices with "
 	docker stack deploy zigbee2mqtt --compose-file docker-stack-zigbee2mqtt.yml
 	```
 
+### Troubleshooting
+
+It could happen that even after the above the container is not starting correctly and bringing a "Operation not permitted" message in the log of the service for the device:
+```
+Error: Error while opening serialport 'Error: Error: Operation not permitted, cannot open /dev/zigbee-serial'
+```
+
+This is due to the usage of cgroupv2 instead of cgroupv1 which is not fully supported by docker/containerd.
+To switch from cgroupv2 to cgroupv1 you have to add `systemd.unified_cgroup_hierarchy=false` to the grub cmdline.
+E.g. on an Raspberry Pi 4 with Raspian Bullseye you can add it to the end of the line in the /boot/cmdline.txt file:
+```
+[...] rootfstype=ext4 fsck.repair=yes rootwait cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1 systemd.unified_cgroup_hierarchy=false
+```
+
 ## Docker on Synology DSM 7.0
 
 > **_NOTE:_** This may not work with all Zigbee controllers, but has been tested with the CC2531.
