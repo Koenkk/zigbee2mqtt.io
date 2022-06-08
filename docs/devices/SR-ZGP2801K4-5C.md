@@ -76,7 +76,7 @@ indication, it might because the switch has not entered learning mode yet since 
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `press_on`, `press_off`, `press_high`, `press_low`, `hold_high`, `hold_low`, `high/low_release`, `CW/WW_release`,`CW_dec/WW_inc`,`WW_inc/CW_dec`,`R>G>B`,`B<G<R`,`RGB_release`.
+The possible values are: `press_on`, `press_off`, `press_high`, `press_low`, `hold_high`, `hold_low`, `high/low_release`, `cw/ww_release`,`cw_dec/ww_inc`,`ww_inc/cw_dec`,`r_g_b`,`b_g_r`,`rgb_release`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
