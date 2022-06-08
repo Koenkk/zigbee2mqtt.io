@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Sunricher SR-ZGP2801K4-DIM
+# Sunricher SR-ZGP2801K4-5C
 
 |     |     |
 |-----|-----|
-| Model | SR-ZGP2801K4-C5  |
+| Model | SR-ZGP2801K4-5C  |
 | Vendor  | Sunricher  |
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
-| Picture | ![Sunricher SR-ZGP2801K4-C5](https://www.zigbee2mqtt.io/images/devices/SR-ZGP2801K4-C5.jpg) |
+| Picture | ![Sunricher SR-ZGP2801K4-5C](https://www.zigbee2mqtt.io/images/devices/SR-ZGP2801K4-5C.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
