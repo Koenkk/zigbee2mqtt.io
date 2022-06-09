@@ -10,7 +10,7 @@ This guide is similar to the [Running Zigbee2MQTT on Linux guide](./01_linux.md)
 ## Installing
 ```bash
 # Clone Zigbee2MQTT repository
-sudo git clone https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
+sudo git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 sudo chown -R pi:pi /opt/zigbee2mqtt
 
 # Enter folder
