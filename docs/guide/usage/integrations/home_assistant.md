@@ -334,8 +334,3 @@ entities:
 
 ## Zigbee Network Map (Custom Card)
 [Zigbee Network Map Home Assistant Custom Card](https://github.com/azuwis/zigbee2mqtt-networkmap/).
-
-## Zigbee Network Map (Custom Component)
-[Zigbee Network Map Home Assistant addon](https://github.com/rgruebel/ha_zigbee2mqtt_networkmap).
-
-**NOTE:** This addon is not password protected (if you have provided external access to your Home Assistant instance **EVERYONE** can access your Network Map).
