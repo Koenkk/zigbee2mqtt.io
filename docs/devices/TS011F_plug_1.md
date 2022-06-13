@@ -46,12 +46,16 @@ In 2022, BlitzWolf started to sell BW-SHP13 that identify as ```_TZ3000_amdymr7l
 ### Reset energy
 
 To reset "Sum of consumed energy", use the Dev console and execute:
-Endpoint: 1
-Cluster: 0x00
-Command: 0
-Payload: (don't change this)
+Endpoint: 1  
+Cluster: 0x00  
+Command: 0  
+Payload: (don't change this)  
 
 Next time the plug gets polled, "Sum of consumed energy" will start from zero again.
+
+### Reset lock
+
+To reset "Child Lock" without Z2M, quickly press the physical button 4 times
 
 ### Pairing
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
