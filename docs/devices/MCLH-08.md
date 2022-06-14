@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MCLH-08  |
 | Vendor  | LifeControl  |
 | Description | Air sensor |
-| Exposes | temperature, humidity, voc, eco2, linkquality |
+| Exposes | temperature, humidity, voc, eco2, battery, linkquality |
 | Picture | ![LifeControl MCLH-08](https://www.zigbee2mqtt.io/images/devices/MCLH-08.jpg) |
 
 
@@ -65,6 +65,13 @@ Measured eCO2 value.
 Value can be found in the published state on the `eco2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ppm`.
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

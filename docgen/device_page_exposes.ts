@@ -62,7 +62,7 @@ function getExposeDocs(expose) {
       }
 
       if (expose.presets) {
-        throw new Error('Not supported');
+        lines.push(`Besides the numeric values the following values are accepected: ${expose.presets.map((p) => `\`${p.name}\``).join(', ')}.`)
       }
     }
 

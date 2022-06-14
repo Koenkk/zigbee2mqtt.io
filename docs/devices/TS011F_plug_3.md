@@ -20,11 +20,14 @@ pageClass: device-page
 | Description | Smart plug (with power monitoring by polling) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, lock (state), linkquality |
 | Picture | ![TuYa TS011F_plug_3](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_3.jpg) |
-| White-label | VIKEFON TS011F, BlitzWolf BW-SHP15 |
+| White-label | VIKEFON TS011F, BlitzWolf BW-SHP15, Avatto MIUCOT10Z, Neo NAS-WR01B |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+
+### Issues with device turning off
+It's been reported by several people that this plug randomly turns off. See https://github.com/Koenkk/zigbee2mqtt/issues/11648
 
 ### Broken attribute reporting functionality
 

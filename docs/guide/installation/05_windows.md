@@ -16,7 +16,7 @@ next: ../configuration/
 
 ## Installing
 
-1. Download and install Node.js 14 LTS from [their website](https://nodejs.org/en/)
+1. Download and install Node.js 16 LTS from [their website](https://nodejs.org/en/)
 1. Open up a `Command prompt` or `Powershell` from the Start menu (Powershell has prettier colors)
 1. Verify Node.js was successfully installed
     ```bash
@@ -25,7 +25,7 @@ next: ../configuration/
 1. Choose a suitable directory for Zigbee2MQTT and copy all the files from the [Zigbee2MQTT repository](https://github.com/koenkk/zigbee2mqtt)
     * if you prefer to use git (which you should), just clone the whole repository
         ```bash
-        git clone git@github.com:Koenkk/zigbee2mqtt.git
+        git clone --depth 1 git@github.com:Koenkk/zigbee2mqtt.git
         ```
     * otherwise use the green `Clone or download` button to download the zip archive, then extract it
 1. Change to the newly created directory and install dependencies with Node.js own package manager `npm`

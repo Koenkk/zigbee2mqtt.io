@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara double key wired wall switch |
-| Exposes | switch (state), temperature, power, action, operation_mode, linkquality |
+| Exposes | switch (state), device_temperature, power, action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG12LM](https://www.zigbee2mqtt.io/images/devices/QBKG12LM.jpg) |
 
 
@@ -56,9 +56,9 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `device_temperature_precision`: Number of digits after decimal point for device_temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -73,9 +73,9 @@ The current state of this switch is in the published state under the `state_righ
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
 
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
+### Device_temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 

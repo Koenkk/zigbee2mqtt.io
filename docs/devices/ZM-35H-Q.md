@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ZM-35H-Q  |
 | Vendor  | TuYa  |
-| Description | Motion Sensor |
+| Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, battery, sensitivity, keep_time, linkquality |
 | Picture | ![TuYa ZM-35H-Q](https://www.zigbee2mqtt.io/images/devices/ZM-35H-Q.jpg) |
 

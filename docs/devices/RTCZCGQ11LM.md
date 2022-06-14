@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RTCZCGQ11LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara presence detector FP1 (regions not supported for now) |
-| Exposes | presence, power_outage_count, temperature, presence_event, monitoring_mode, approach_distance, motion_sensitivity, reset_nopresence_status, linkquality |
+| Exposes | presence, presence_event, monitoring_mode, approach_distance, motion_sensitivity, reset_nopresence_status, device_temperature, power_outage_count, linkquality |
 | Picture | ![Xiaomi RTCZCGQ11LM](https://www.zigbee2mqtt.io/images/devices/RTCZCGQ11LM.jpg) |
 
 
@@ -41,6 +41,9 @@ Press and hold the reset button on the device for +- 5 seconds (until the blue l
 After this the device will automatically join. If this doesn't work, try with a single short button press.
 
 ![RTCZCGQ11LM pairing](../images/pairing/RTCZCGQ11LM_pairing.jpg)
+
+### Feature support
+`Regions` [not supported](https://github.com/Koenkk/zigbee2mqtt/issues/11019#issuecomment-1026012894) for now.
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
@@ -50,9 +53,9 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `device_temperature_precision`: Number of digits after decimal point for device_temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -63,17 +66,6 @@ Value can be found in the published state on the `presence` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"presence": ""}`.
 It's not possible to write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
-
-### Power_outage_count (numeric)
-Number of power outages (since last pairing).
-Value can be found in the published state on the `power_outage_count` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
 
 ### Presence_event (enum)
 Presence events: "enter", "leave", "left_enter", "right_leave", "right_enter", "left_leave", "approach", "away".
@@ -108,6 +100,17 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_nopresence_status": NEW_VALUE}`.
 The possible values are: `Reset`.
+
+### Device_temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Power_outage_count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

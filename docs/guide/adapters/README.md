@@ -32,6 +32,8 @@ _(in order of first appearance)_
 
   * <details>
     <summary>Slaesh's CC2652RB stick</summary>
+
+    **WARNING:** Problems with customer support have been [reported](https://github.com/Koenkk/zigbee2mqtt/discussions/6702).
   
     USB connected adapter with external antenna based on CC2652RB chip  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652RB_coordinator_20220219.zip)  
@@ -100,7 +102,7 @@ _(in order of first appearance)_
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20220125.zip)  
     * [Description](https://smartlight.me/smart-home-devices/zigbee-devices/zigbee-coordinator-v4-cc2652p)  
     * [Flashing instructions](https://smartlight.me/flashing_slzb-02) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
-    * Buy: [eBay](https://www.ebay.com/itm/164928826521) [Aliexpress](https://www.aliexpress.com/item/1005002684189079.html) [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/zigbee-coordinator-v4-cc2652p) [Telegram](https://t.me/smartlightme)
+    * Buy: [eBay](https://www.ebay.com/itm/164928826521) [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/zigbee-coordinator-v4-cc2652p) [Telegram](https://t.me/smartlightme)
   
     ![](../../images/CC2652P_smartlight_zigbee_coordinator.png)
     </details>
@@ -124,7 +126,7 @@ _(in order of first appearance)_
     Coordinator firmware: [VS201](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652R_coordinator_20220219.zip) [VS202](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20220219.zip)  
     Router firmware: [VS201](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652R_router_20220125.zip) [VS202](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20220125.zip)  
     * [Flashing instructions](https://www.aliexpress.com/item/1005002823262979.html?spm=a2g0o.productlist.0.0.1a1640b82yeViq&algo_pvid=e01b1872-ca85-4814-971f-ce9b058855b8&algo_exp_id=e01b1872-ca85-4814-971f-ce9b058855b8-0&pdp_ext_f=%7B%22sku_id%22%3A%2212000022351543786%22%7D) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
-    * Buy: [VS201](https://www.aliexpress.com/item/1005002823262979.html?spm=a2g0o.productlist.0.0.1a1640b82yeViq&algo_pvid=e01b1872-ca85-4814-971f-ce9b058855b8&algo_exp_id=e01b1872-ca85-4814-971f-ce9b058855b8-0&pdp_ext_f=%7B%22sku_id%22%3A%2212000022351543786%22%7D) [VS202](https://www.aliexpress.com/item/1005003393047763.html?spm=a2g0o.productlist.0.0.5e6f107dvPTg3a&algo_pvid=c932a9d4-2522-4b73-a001-02609564422e&algo_exp_id=c932a9d4-2522-4b73-a001-02609564422e-1&pdp_ext_f=%7B%22sku_id%22%3A%2212000025577120008%22%7D)
+    * Buy: [VS201](https://www.aliexpress.com/item/1005002809329614.html) [VS202](https://www.aliexpress.com/item/1005003393047763.html)
   
     ![](../../images/cc26x2r1_dongle.jpg)
     </details>
@@ -139,7 +141,7 @@ _(in order of first appearance)_
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20220219.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20220125.zip)  
     * [Flashing instructions](https://gio-dot.github.io/Z-Bee-Duo/Firmware-upgrade) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
-    * [Buy](https://www.tindie.com/products/23046/)
+    * [Buy](https://www.tindie.com/products/gio_dot/z-bee-duo-modular-cc2652p-zigbee-30-adapter/)
   
     ![](../../images/Z-Bee_Duo-ico.jpg)
     </details>
@@ -152,7 +154,7 @@ _(in order of first appearance)_
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20220125.zip)  
     * [Description](https://zig-star.com/projects/zigbee-gw-lan/)  
     * [Flashing instructions](https://zig-star.com/radio-docs/flash-cc-bsl/) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
-    * [Buy](https://zig-star.com) {Tindie}(https://www.tindie.com/products/zigstar/zigstar-lan-gateway/)
+    * [Buy](https://zig-star.com) [Tindie](https://www.tindie.com/products/zigstar/zigstar-lan-gateway/)
   
     ![](../../images/ZigStar-LAN.png)
     </details>
@@ -219,7 +221,17 @@ _(in order of first appearance)_
 
     ![](https://smartlight.me/ebay/images/slzb_05/smartlight-zigbee-lan-slzb-05.jpg)
     </details>
+  * <details>
+    <summary>cod.m ZigBee CC2652P2 TCP Coordinator</summary>
 
+    CC2652P2 ZigBee Ethernet Coordinator, ethernet part based on [USR-K6](https://www.pusr.com/products/low-cost-ttl-to-ethernet-modules-usr-k6.html) module. POE possible with external splitter. Comes complete with 3d printed case and antenna.
+    * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20220219.zip)
+    * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20220125.zip)
+    * [Flashing instructions](https://github.com/codm/cc2652p2-tcp-zigbee#update)
+    * [Buy](https://shop.codm.de/automation/zigbee/40/zigbee-cc2652p2-tcp-ethernet-coordinator)
+
+    ![](../../images/codm-cc2652p-tcp-zigbee-coordinator-case.jpg) ![](../../images/codm-cc2652p-tcp-zigbee-coordinator.jpg)
+    </details>
 * Raspberry Pi hat
   * <details>
     <summary>cod.m Zigbee CC2652P RPi Module</summary>
@@ -278,18 +290,19 @@ _(in order of first appearance)_
 
 ### Other
   * <details>
-    <summary>ConBee II / RaspBee II</summary>
+    <summary>ConBee / ConBee II / RaspBee / RaspBee II</summary>
   
-    USB connected adapter    
+    USB connected adapters (ConBee and ConBee II) and Raspberry Pi GPIO modules (RaspBee and RaspBee II).
     If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
     ```yaml
     serial:
       adapter: deconz
     ```
   
-    * [Coordinator firmware](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually)  
-    * [Flashing](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually)  
-    * [Buy](https://phoscon.de/en/conbee2?buy=1#buy)
+    * [Coordinator firmware](https://deconz.dresden-elektronik.de/deconz-firmware/)
+    * [Flashing](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually)
+    * [Buy](https://phoscon.de/conbee2#buy) (ConBee II)
+    * [Buy](https://phoscon.de/raspbee2#buy) (RaspBee II)
   
     ![](../../images/conbee.jpg)
     </details>
@@ -338,7 +351,7 @@ The adapters below are well-supported but use outdated chips.
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_Home_1.2/bin)  
     * [Flashing instructions](../../advanced/zigbee/05_create_a_cc2530_router.md#2-flashing-the-cc2530)  
     * [Connecting](./flashing/connecting_cc2530.md)  
-    * Buy: [AliExpress](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104041&SearchText=cc2530) [GBAN](http://www.gban.cn/en/product_show.asp?id=43) [Tindie](https://www.tindie.com/products/GiovanniCas/cc2530-cc2592-zigbee-dongle/) [RF ZU USB](https://www.aliexpress.com/item/1005001587860129.html)
+    * Buy: [AliExpress](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104041&SearchText=cc2530) [GBAN](http://www.gban.cn/en/product_show.asp?id=43) [Tindie](https://www.tindie.com/products/GiovanniCas/cc2530-cc2592-zigbee-dongle/)
   
     ![](../../images/cc2530.jpg)
     </details>
@@ -348,7 +361,7 @@ The adapters below are well-supported but use outdated chips.
     Serial connected adapter with CC2592 RF Amplifier  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)  
     * [Flashing](./flashing/flashing_the_cc2538.md)  
-    * Buy: [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2538) [Tindie](https://www.tindie.com/products/GiovanniCas/cc2538-cc2592-zigbee-dongle-new-zb30/)
+    * Buy: [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2538)
   
     ![](../../images/cc2538.jpg)
     </details>
@@ -383,9 +396,9 @@ The adapters below are well-supported but use outdated chips.
 The adapters below are experimental, don't use these if you want a stable setup.
 
 * <details>
-  <summary>ZiGate USB-TTL</summary>
+  <summary>ZiGate</summary>
   
-  USB connected adapter based on NXP JN516x (JN5168/JN5169), 3.1d firmware or later required    
+  Initial development started on experimental (alpha stage) support for various ZigGate adapters (based on NXP Zigbee chips like JN5168 and JN5169). This include all ZiGate compatible hardware adapters with ZigGate 3.1d firmware or later.   
   If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
     ```yaml
     serial:
@@ -402,7 +415,7 @@ The adapters below are experimental, don't use these if you want a stable setup.
 * <details>
   <summary>Silicon Labs EZSP v8</summary>
   
-  Initial development started on experimental (pre-alpha stage) support for various adapters based on Silicon Labs EM35X and EFR32MG SoC families with EmberZNet NCP 6.7.8 firmware or later via EZSP version 8 (EmberZNet Serial Protocol) interface. This include all hardware based on SoCs/Modules from Silabs EFR32MG21/MGM210 and EFR32MG12/MGM12 series    
+  Initial development started on experimental (alpha stage) support for various adapters based on Silicon Labs EM35X and EFR32MG SoC families with EmberZNet NCP 6.7.8 firmware or later via EZSP version 8 (EmberZNet Serial Protocol) interface. This include all hardware based on SoCs/Modules from Silabs EFR32MG21/MGM210 and EFR32MG12/MGM12 series    
   If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
   ```yaml
   serial:
@@ -432,6 +445,9 @@ Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the b
 - [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) (multi platform Python based command line tool) ([instructions](./flashing/flashing_via_cc2538-bsl.md))
 - [llama-bsl](https://github.com/electrolama/llama-bsl) (multi platform Python based command line tool, a fork of cc2538-bsl with added features)
 - Texas Instrumens [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only)
+
+#### Flashing an existing adapter
+The above flashing tools can be used to upgrade the firmware on an existing adapter without needing to repair devices. See the [FAQ](https://www.zigbee2mqtt.io/guide/faq/#what-does-and-does-not-require-repairing-of-all-devices) for information on what does and does not require repairing of devices.
 
 ### Router
 Besides serving as a coordinator some adapters can also be used as a Zigbee router (check if there is a router firmware by clicking on your adapter). To factory reset/pair:

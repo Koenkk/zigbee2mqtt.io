@@ -18,12 +18,20 @@ pageClass: device-page
 | Model | ZNCLDJ12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara B1 curtain motor |
-| Exposes | cover (state, position), battery, running, linkquality |
+| Exposes | cover (state, position), battery, running, motor_state, power_outage_count, linkquality |
 | Picture | ![Xiaomi ZNCLDJ12LM](https://www.zigbee2mqtt.io/images/devices/ZNCLDJ12LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+
+### Adapter firmware
+In order for this device to work (fully), at least the following firmware is required on your adapter:
+- CC2530/CC2531: [`20211115`](https://github.com/Koenkk/Z-Stack-firmware/tree/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin)
+- CC1352/CC2652: [`20211114`](https://github.com/Koenkk/Z-Stack-firmware/tree/7c5a6da0c41855d42b5e6506e5e3b496be097ba3/coordinator/Z-Stack_3.x.0/bin)
+- Conbee II: [`0x26720700`]( http://deconz.dresden-elektronik.de/deconz-firmware/deCONZ_ConBeeII_0x26720700.bin.GCF)
+
+*Note that if you have already paired the device you will need to repair it after upgrading your adapter firmware.*
 
 ### Configuration of device attributes
 By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can be configured:
@@ -104,6 +112,17 @@ Whether the motor is moving or not.
 Value can be found in the published state on the `running` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` running is ON, if `false` OFF.
+
+### Motor_state (enum)
+The current state of the motor..
+Value can be found in the published state on the `motor_state` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `closing`, `opening`, `stop`.
+
+### Power_outage_count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
