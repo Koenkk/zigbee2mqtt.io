@@ -25,6 +25,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Pairing
+Press the test button 3 times (until the red LED stays on).
+After this the device will reset and try to join a network.
+<!-- Notes END: Do not edit below this line -->
+
 ## Exposes
 
 ### Smoke State (text)
