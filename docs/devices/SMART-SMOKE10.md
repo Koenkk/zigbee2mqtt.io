@@ -1,7 +1,7 @@
 ---
 title: "Alecto SMART-SMOKE10 control via MQTT"
-description: "Integrate your Alecto SMART-SMOKE10  via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-04-29T22:06:16
+description: "Integrate your Alecto SMART-SMOKE10 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-06-14T22:06:16
 pageClass: device-page
 ---
 
@@ -37,7 +37,7 @@ Indicates the battery level. Reported in 'low', 'middle', 'high'.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Checking result (text)
-Indicates the state of the self_checking mode. Reported in 'checking', 'check success', 'check fialure', 'others'.
+Indicates the state of the self_checking mode. Reported in 'checking', 'check_success', 'check_failure', 'others'.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Smoke value (text)
@@ -51,11 +51,11 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Indicates if the smoke detector is still in it's lifecycle. If value equals `true` it is within the lifecycle , if `false` it should be replaced.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Self Checking (enum)
+### Self Checking (binary)
 Allows to test the smoke detector. The value can be (`/set`) to 'true' which will trigger the test modus. This will be reported in the checking_result and the alarm will sound for 5 seconds. 
 
-### Silence (enum)
-This value should enable the tamper function to temporary disable the alarm, but it doesn't appear to work. The value can be ('/set') to 'true' but will not have an effect. 
+### Silence (binary)
+This value should enable the tamper function to temporary disable the alarm, but it doesn't appear to work. The value can be ('/set') to 'true' but this will not have an effect. 
 
 ### Linkquality (numeric)
 Link quality (signal strength).
