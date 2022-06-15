@@ -206,11 +206,11 @@ script:
             "force": {% if states.input_boolean.zigbee2mqtt_force_remove.state == "off" %}false{% else %}true{% endif %}
           }
 
-# Timer for joining time remaining (120 sec = 2 min)
+# Timer for joining time remaining (254 sec)
 timer:
   zigbee_permit_join:
     name: Time remaining
-    duration: 120
+    duration: 254
 
 mqtt:
   sensor:
