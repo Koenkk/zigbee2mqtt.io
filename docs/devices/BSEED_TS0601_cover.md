@@ -24,6 +24,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+
+<!-- Notes END: Do not edit below this line -->
 ## Notes
 
 ## Pairing
@@ -52,4 +54,4 @@ Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+The unit of this value is `lqi`.git 
