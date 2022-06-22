@@ -44,7 +44,7 @@ channel](../../advanced/zigbee/02_improve_network_range_and_stability.html#reduc
 
 ### Specifying network_key in a different file
 
-To specify the network_key in a different file, e.g `secret.yaml`, use the following configuration.
+To specify the network_key, pan_id or ext_pan_id in a different file, e.g `secret.yaml`, use the following configuration.
 
 **configuration.yaml**
 
@@ -52,10 +52,14 @@ To specify the network_key in a different file, e.g `secret.yaml`, use the follo
 # IMPORTANT: Don't forget the quotes!
 advanced:
   network_key: '!secret network_key'
+  pan_id: '!secret pan_id'
+  ext_pan_id: '!secret ext_pan_id'
 ```
 
 **secret.yaml**
 
 ```yaml
 network_key: [1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]
+pan_id: 12345
+ext_pan_id: [1, 2, 3, 4, 5, 6, 7, 8]
 ```
