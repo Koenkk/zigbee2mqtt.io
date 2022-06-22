@@ -7,12 +7,12 @@ These instructions explain how to run Zigbee2MQTT on Linux.
 
 For the sake of simplicity this guide assumes running on a Raspberry Pi 4 with Raspbian Stretch Lite, but it should work on any Linux machine.
 
+Therefore the user `pi` is used the following examples, but the user may differ between distributions e.g. `openhabian` should be used on Openhabian.
+
 Before starting make sure you have an MQTT broker installed on your system.
 There are many tutorials available on how to do this, [example](https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/).
 Mosquitto is the recommended MQTT broker but others should also work fine.
 
-## Executing user 
-The user `pi` is used the following examples, but the user may differ between dists. e.g. `openhabian` should be used on Openhabian. 
 
 ## Determine location of the adapter and checking user permissions
 We first need to determine the location of the adapter. Connect the adapter to your Raspberry Pi. Most of the times the location is `/dev/ttyACM0`. This can be verified by:
