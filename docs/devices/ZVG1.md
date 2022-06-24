@@ -28,6 +28,9 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+### Pairing
+Press and hold the button on the device for 3 seconds.
+After this the device will automatically join.
 
 ## Exposes
 
