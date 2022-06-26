@@ -23,14 +23,13 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
-<!-- Notes END: Do not edit below this line -->
-
+## Notes
 
 ### Pairing
 Press and hold the button on the device for 3 seconds.
 After this the device will automatically join.
+
+<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 
