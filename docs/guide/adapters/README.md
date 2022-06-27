@@ -38,7 +38,7 @@ _(in order of first appearance)_
     USB connected adapter with external antenna based on CC2652RB chip  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652RB_coordinator_20220219.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC2652RB_router_20220125.zip)  
-    * [Flashing instructions](https://slae.sh/projects/cc2652/#flashing) ([PDF copy in this repository](docs/guide/adapters/flashing/zigbee-3.0-usb-dongle-plus-firmware_flashing-1-1.pdf) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+    * [Flashing instructions](https://slae.sh/projects/cc2652/#flashing) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
     * [Buy](https://slae.sh/projects/cc2652/)
   
     ![](../../images/slaeshs_cc2652rb_stick.jpg)
