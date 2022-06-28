@@ -23,7 +23,7 @@ sudo <path-to>/cc-tool -e -w <path-to>/sniffer_fw_cc2531.hex
 ```
 
 #### Windows (and possibly Ubuntu)
-For Windows this firmware is included with [ZBOSS](http://zboss.dsr-wireless.com/downloads/index/zboss). Register an account and download *ZBOSS Sniffer for Windows 64-bit*. Included in the ZIP file is the firmware in subfolder `hw\CC2531 USB dongle\zboss_sniffer.hex`. Please note that ZBOSS is also available for Ubuntu 64-bit.
+For Windows this firmware is included with [ZBOSS](https://dsr-iot.com/downloads). Register an account and download *Zigbee sniffer package rev. 2.0*. Included in the ZIP file is the firmware in subfolder `zb_sniffer_bin\zb_sniffer_target\CC2531 USB dongle\zboss_sniffer.hex`. Please note that ZBOSS is also available for Ubuntu 64-bit.
 
 ### 2. Installing required tools
 
