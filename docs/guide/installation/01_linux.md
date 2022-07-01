@@ -42,7 +42,7 @@ node --version  # Should output v14.X, V16.x, V17.x or V18.X
 npm --version  # Should output 6.X, 7.X or 8.X
 
 # Clone Zigbee2MQTT repository
-git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
+sudo git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
 npm ci
