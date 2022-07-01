@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | ZG50CC-CCT-DRIVER  |
 | Vendor  | Envilar  |
-| Description | Zigbee LED driver |
-| Exposes | light (state, brightness), effect, linkquality |
+| Description | Zigbee CCT LED driver |
+| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![Envilar ZG50CC-CCT-DRIVER](https://www.zigbee2mqtt.io/images/devices/ZG50CC-CCT-DRIVER.jpg) |
 
 
@@ -33,13 +33,17 @@ pageClass: device-page
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
+* `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
+
 
 ## Exposes
 
 ### Light 
-This light supports the following features: `state`, `brightness`.
+This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `160` and `450`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warmest`.
+- `color_temp_startup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup": VALUE}` where `VALUE` is a number between `160` and `450`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warmest`, `previous`.
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
@@ -59,6 +63,9 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
   "brightness_step": 40 // Increases brightness by 40
+  "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
+  "color_temp_move": "stop", // Stop moving color temperature
+  "color_temp_step": 99, // Increase color temperature by 99
 }
 ````
 

@@ -296,6 +296,10 @@ Links are labelled with link quality (0..255) and active routes (listed by short
 
 See [User extensions](../../advanced/more/user_extensions.md).
 
+#### zigbee2mqtt/bridge/request/backup
+
+Creates a backup of the `data` folder (without the `data/log` directory). Payload has to be empty, example response: `{"data":{"zip":"WklHQkVFMk1RVFQuUk9DS1M="},"status":"ok"}`. The `zip` property represents a zip file encoded via Base64.
+
 ### Device
 
 #### zigbee2mqtt/bridge/request/device/remove

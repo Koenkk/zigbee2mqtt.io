@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WSDCGQ12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 temperature, humidity and pressure sensor |
-| Exposes | temperature, humidity, pressure, device_temperature, battery, voltage, linkquality |
+| Exposes | temperature, humidity, pressure, device_temperature, battery, voltage, power_outage_count, linkquality |
 | Picture | ![Xiaomi WSDCGQ12LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ12LM.jpg) |
 
 
@@ -114,6 +114,11 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Power_outage_count (numeric)
+Number of power outages.
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

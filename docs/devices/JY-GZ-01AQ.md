@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | JY-GZ-01AQ  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart smoke detector |
-| Exposes | smoke, smoke_density, smoke_density_dbm, selftest, test, mute_buzzer, mute, heartbeat_indicator, linkage_alarm, device_temperature, battery, voltage, linkquality |
+| Exposes | smoke, smoke_density, smoke_density_dbm, selftest, test, mute_buzzer, mute, heartbeat_indicator, linkage_alarm, device_temperature, battery, voltage, power_outage_count, linkquality |
 | Picture | ![Xiaomi JY-GZ-01AQ](https://www.zigbee2mqtt.io/images/devices/JY-GZ-01AQ.jpg) |
 
 
@@ -135,6 +135,11 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Power_outage_count (numeric)
+Number of power outages.
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

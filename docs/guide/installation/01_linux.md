@@ -211,7 +211,6 @@ cd /opt/zigbee2mqtt
 cp -R data data-backup
 
 # Update
-git checkout HEAD -- npm-shrinkwrap.json
 git pull
 npm ci
 

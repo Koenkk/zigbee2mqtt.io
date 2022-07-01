@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Aqara roller shade companion E1 |
 | Exposes | cover (state, position), battery, device_temperature, charging_status, motor_state, running, linkquality |
 | Picture | ![Xiaomi ZNJLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNJLBL01LM.jpg) |
+| White-label | Xiaomi RSD-M01 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

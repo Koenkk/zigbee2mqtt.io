@@ -77,7 +77,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Power_outage_count (numeric)
-Number of power outages (since last pairing).
+Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 

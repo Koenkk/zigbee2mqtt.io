@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WS-EUK01  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall switch H1 EU (no neutral, single rocker) |
-| Exposes | switch (state), action, power_outage_memory, flip_indicator_light, operation_mode, linkquality |
+| Exposes | switch (state), action, power_outage_memory, flip_indicator_light, led_disabled_night, power_outage_count, device_temperature, operation_mode, mode_switch, linkquality |
 | Picture | ![Xiaomi WS-EUK01](https://www.zigbee2mqtt.io/images/devices/WS-EUK01.jpg) |
 
 
@@ -31,6 +31,13 @@ Press and hold the button on the device for +- 10 seconds
 (until the blue light starts blinking and stops blinking), release and wait.
 <!-- Notes END: Do not edit below this line -->
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `device_temperature_precision`: Number of digits after decimal point for device_temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -60,12 +67,37 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
 If value equals `ON` flip_indicator_light is ON, if `OFF` OFF.
 
+### Led_disabled_night (binary)
+Enable/disable the LED at night.
+Value can be found in the published state on the `led_disabled_night` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
+If value equals `true` led_disabled_night is ON, if `false` OFF.
+
+### Power_outage_count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Device_temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
 ### Operation_mode (enum)
 Decoupled mode.
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
+
+### Mode_switch (enum)
+Anti flicker mode can be used to solve blinking issues of some lights.Quick mode makes the device respond faster..
+Value can be found in the published state on the `mode_switch` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode_switch": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_switch": NEW_VALUE}`.
+The possible values are: `anti_flicker_mode`, `quick_mode`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

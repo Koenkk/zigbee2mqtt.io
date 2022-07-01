@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WXKG02LM_rev1  |
 | Vendor  | Xiaomi  |
 | Description | Aqara double key wireless wall switch (2016 model) |
-| Exposes | battery, action, voltage, linkquality |
+| Exposes | battery, action, voltage, power_outage_count, linkquality |
 | Picture | ![Xiaomi WXKG02LM_rev1](https://www.zigbee2mqtt.io/images/devices/WXKG02LM_rev1.jpg) |
 
 
@@ -74,6 +74,11 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Power_outage_count (numeric)
+Number of power outages.
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

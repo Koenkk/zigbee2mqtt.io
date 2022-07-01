@@ -23,10 +23,16 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Pairing
+## Notes
+
+### Pairing
 To pair, press the reset button on the back until the green LED flashes.
 
 > Note: When you release the reset button, the green LED should keep flashing until the device is paired. If it only flashes a few times and then stops, your battery level is most likely too low (<3v) and you need to replace the battery.
+
+### The `toggle` action switches on/off an unexpected zigbee device
+The source of the problem is that manufactures of the knob and another device placed them into group 0 by default. To bypass it, you should manually create a group in Z2M with different ID (ID=1, for example) and add your knob inside.
+For more details take a look at [the issue](https://github.com/Koenkk/zigbee2mqtt/issues/12397).
 <!-- Notes END: Do not edit below this line -->
 
 

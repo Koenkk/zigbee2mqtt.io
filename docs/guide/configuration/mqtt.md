@@ -41,9 +41,9 @@ mqtt:
   force_disable_retain: false
 ```
 
-### Specifying MQTT user/password and network_key in a different file
+### Specifying MQTT server/user/password and network_key in a different file
 
-To specify the MQTT user/password in a different file, e.g `secret.yaml`, use the following
+To specify the MQTT server/user/password in a different file, e.g `secret.yaml`, use the following
 configuration.
 
 **configuration.yaml**
@@ -51,6 +51,7 @@ configuration.
 ```yaml
 # IMPORTANT: Don't forget the quotes!
 mqtt:
+  server: '!secret server'
   user: '!secret user'
   password: '!secret password'
 ```
@@ -58,6 +59,7 @@ mqtt:
 **secret.yaml**
 
 ```yaml
+server: 'mqtt://localhost:1883'
 user: mqtt_user
 password: mqtt_password
 ```
