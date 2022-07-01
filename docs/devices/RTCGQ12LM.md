@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RTCGQ12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 human body movement and illuminance sensor |
-| Exposes | occupancy, illuminance_lux, illuminance, detection_interval, device_temperature, battery, voltage, linkquality |
+| Exposes | occupancy, illuminance_lux, illuminance, detection_interval, device_temperature, battery, voltage, power_outage_count, linkquality |
 | Picture | ![Xiaomi RTCGQ12LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ12LM.jpg) |
 
 
@@ -109,6 +109,11 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Power_outage_count (numeric)
+Number of power outages.
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | UFO-R11  |
 | Vendor  | Moes  |
-| Description | Universal Smart IR Remote Control |
-| Exposes | linkquality |
+| Description | Universal smart IR remote control |
+| Exposes | switch (state), learned_ir_code, ir_code_to_send, battery, voltage, linkquality |
 | Picture | ![Moes UFO-R11](https://www.zigbee2mqtt.io/images/devices/UFO-R11.jpg) |
 
 
@@ -50,15 +50,27 @@ Request:
     "ir_code_to_send": "<previously learned IR code>"
 }
 ```
-
 <!-- Notes END: Do not edit below this line -->
 
+
+
 ## Exposes
+
+### Switch 
+The current state of this switch is in the published state under the `learn_ir_code` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learn_ir_code": "ON"}`, `{"learn_ir_code": "OFF"}` or `{"learn_ir_code": "undefined"}`.
+It's not possible to read (`/get`) this value.
 
 ### Learned_ir_code (text)
 The IR code learned by device.
 Value can be found in the published state on the `learned_ir_code` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Ir_code_to_send (text)
+The IR code to send by device.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ir_code_to_send": NEW_VALUE}`.
 
 ### Battery (numeric)
 Remaining battery in %.
@@ -79,3 +91,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+

@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | MiJia temperature & humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
 | Picture | ![Xiaomi WSDCGQ01LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ01LM.jpg) |
+| White-label | Xiaomi YTC4042GL, Xiaomi YTC4007CN, Xiaomi YTC4018CN |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

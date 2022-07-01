@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MFKZQ01LM  |
 | Vendor  | Xiaomi  |
 | Description | Mi/Aqara smart home cube |
-| Exposes | battery, voltage, action_angle, device_temperature, power_outage_count, action_from_side, action_side, action_to_side, action, linkquality |
+| Exposes | battery, voltage, action_angle, device_temperature, power_outage_count, action_from_side, action_side, action_to_side, side, action, linkquality |
 | Picture | ![Xiaomi MFKZQ01LM](https://www.zigbee2mqtt.io/images/devices/MFKZQ01LM.jpg) |
 
 
@@ -82,7 +82,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Power_outage_count (numeric)
-Number of power outages (since last pairing).
+Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
@@ -101,6 +101,12 @@ The minimal value is `0` and the maximum value is `6`.
 ### Action_to_side (numeric)
 Side of the cube.
 Value can be found in the published state on the `action_to_side` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `6`.
+
+### Side (numeric)
+Side of the cube.
+Value can be found in the published state on the `side` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `6`.
 

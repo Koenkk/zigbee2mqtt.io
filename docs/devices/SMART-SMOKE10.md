@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | SMART-SMOKE10  |
 | Vendor  | Alecto  |
-| Description | Smart smoke detector |
+| Description | Smoke detector |
 | Exposes | smoke_state, battery_state, checking_result, smoke_value, battery, lifecycle, self_checking, silence, linkquality |
-| Picture | ![SMART-SMOKE10](https://www.zigbee2mqtt.io/images/devices/SMART-SMOKE10.jpg) |
+| Picture | ![Alecto SMART-SMOKE10](https://www.zigbee2mqtt.io/images/devices/SMART-SMOKE10.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -30,37 +30,46 @@ Press the test button 3 times (until the red LED stays on).
 After this the device will reset and try to join a network.
 <!-- Notes END: Do not edit below this line -->
 
+
+
 ## Exposes
 
-### Smoke State (text)
-Indicates whether the device detected smoke.
+### Smoke_state (text)
 Value can be found in the published state on the `smoke_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Battery state (text)
-Indicates the battery level. Reported in 'low', 'middle', 'high'. 
+### Battery_state (text)
+Value can be found in the published state on the `battery_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Checking result (text)
-Indicates the state of the self_checking mode. Reported in 'checking', 'check_success', 'check_failure', 'others'.
+### Checking_result (text)
+Value can be found in the published state on the `checking_result` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Smoke value (text)
-This function doesn't seem to work. Altough it is also shown in the original app with the hub, there is never a value reported. 
+### Smoke_value (numeric)
+Value can be found in the published state on the `smoke_value` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Battery (numeric)
-Indicates the battery level. Reported in percentage. 
+Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Lifecycle (binary)
-Indicates if the smoke detector is still in it's lifecycle. If value equals `true` it is within the lifecycle , if `false` it should be replaced.
+Value can be found in the published state on the `lifecycle` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` lifecycle is ON, if `false` OFF.
 
-### Self Checking (binary)
-Allows to test the smoke detector. The value can be (`/set`) to 'true' which will trigger the test modus. This will be reported in the checking_result and the alarm will sound for 5 seconds. 
+### Self_checking (binary)
+Value can be found in the published state on the `self_checking` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"self_checking": NEW_VALUE}`.
+If value equals `true` self_checking is ON, if `false` OFF.
 
 ### Silence (binary)
-This value should enable the tamper function to temporary disable the alarm, but it doesn't appear to work. The value can be ('/set') to 'true' but this will not have an effect. 
+Value can be found in the published state on the `silence` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence": NEW_VALUE}`.
+If value equals `true` silence is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -68,3 +77,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+

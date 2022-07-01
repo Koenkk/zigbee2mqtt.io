@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG12LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara double key wired wall switch |
-| Exposes | switch (state), device_temperature, power, action, operation_mode, linkquality |
+| Exposes | switch (state), device_temperature, energy, power, action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG12LM](https://www.zigbee2mqtt.io/images/devices/QBKG12LM.jpg) |
 
 
@@ -78,6 +78,12 @@ Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
+
+### Energy (numeric)
+Sum of consumed energy.
+Value can be found in the published state on the `energy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kWh`.
 
 ### Power (numeric)
 Instantaneous measured power.

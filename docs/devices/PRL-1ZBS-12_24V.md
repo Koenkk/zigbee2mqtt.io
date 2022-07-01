@@ -32,7 +32,6 @@ pageClass: device-page
 4. Activate the "Open" external local switch the moment the shutter is fully closed. The Shutter controll will record to time it took between step 3 and 4 as the new "close time"
 5. The Shutter control will roll toward open direction after step 4
 6. Activate the "Close" external local switch the moment the shutter is fully opended. The Shutter controll will record to time it took between step 5 and 6 as the new "open time"
-
 <!-- Notes END: Do not edit below this line -->
 
 

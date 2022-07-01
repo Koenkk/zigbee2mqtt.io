@@ -1,7 +1,7 @@
 ---
-title: "Xiaomi WRS-R02 control via MQTT"
-description: "Integrate your Xiaomi WRS-R02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2021-05-30T19:17:03Z
+title: "Xiaomi WXKG15LM control via MQTT"
+description: "Integrate your Xiaomi WXKG15LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-07-01T08:15:09
 pageClass: device-page
 ---
 
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi WRS-R02
+# Xiaomi WXKG15LM
 
 |     |     |
 |-----|-----|
-| Model | WRS-R02  |
+| Model | WXKG15LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara wireless remote switch H1 (double rocker) |
 | Exposes | battery, voltage, action, click_mode, operation_mode, linkquality |
-| Picture | ![Xiaomi WRS-R02](https://www.zigbee2mqtt.io/images/devices/WRS-R02.jpg) |
-| White-label | Xiaomi WXKG15LM |
+| Picture | ![Xiaomi WXKG15LM](https://www.zigbee2mqtt.io/images/devices/WXKG15LM.jpg) |
+| White-label | Xiaomi WRS-R02 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

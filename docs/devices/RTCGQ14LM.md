@@ -85,13 +85,14 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
 ### Motion_sensitivity (enum)
+. Press pairing button right before changing this otherwise it will fail..
 Value can be found in the published state on the `motion_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motion_sensitivity": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensitivity": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Detection_interval (numeric)
-Time interval for detecting actions.
+Time interval for detecting actions. Press pairing button right before changing this otherwise it will fail..
 Value can be found in the published state on the `detection_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_interval": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_interval": NEW_VALUE}`.
@@ -99,7 +100,7 @@ The minimal value is `2` and the maximum value is `65535`.
 The unit of this value is `s`.
 
 ### Trigger_indicator (binary)
-When this option is enabled then blue LED will blink once when motion is detected.
+When this option is enabled then blue LED will blink once when motion is detected. Press pairing button right before changing this otherwise it will fail..
 Value can be found in the published state on the `trigger_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"trigger_indicator": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_indicator": NEW_VALUE}`.

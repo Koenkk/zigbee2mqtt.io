@@ -1,7 +1,7 @@
 ---
 title: "Xiaomi ZNCLBL01LM control via MQTT"
 description: "Integrate your Xiaomi ZNCLBL01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2022-07-01T08:14:12
 pageClass: device-page
 ---
 
@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Aqara curtain driver E1 |
 | Exposes | cover (state, position), battery, voltage, device_temperature, action, motor_state, running, hooks_state, target_position, power_source, charging, linkquality |
 | Picture | ![Xiaomi ZNCLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNCLBL01LM.jpg) |
+| White-label | Xiaomi CM-M01 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

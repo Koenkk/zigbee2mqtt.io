@@ -1,7 +1,7 @@
 ---
-title: "Sunricher SR-ZGP2801K4-5C control via MQTT"
-description: "Integrate your Sunricher SR-ZGP2801K4-5C via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-05-08T18:00:00Z
+title: "Sunricher SR-ZGP2801K-5C control via MQTT"
+description: "Integrate your Sunricher SR-ZGP2801K-5C via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-07-01T08:15:09
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Sunricher SR-ZGP2801K4-5C
+# Sunricher SR-ZGP2801K-5C
 
 |     |     |
 |-----|-----|
-| Model | SR-ZGP2801K4-5C  |
+| Model | SR-ZGP2801K-5C  |
 | Vendor  | Sunricher  |
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
-| Picture | ![Sunricher SR-ZGP2801K4-5C](https://www.zigbee2mqtt.io/images/devices/SR-ZGP2801K4-5C.jpg) |
+| Picture | ![Sunricher SR-ZGP2801K-5C](https://www.zigbee2mqtt.io/images/devices/SR-ZGP2801K-5C.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -76,7 +76,7 @@ indication, it might because the switch has not entered learning mode yet since 
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `press_on`, `press_off`, `press_high`, `press_low`, `hold_high`, `hold_low`, `high/low_release`, `cw/ww_release`,`cw_dec/ww_inc`,`ww_inc/cw_dec`,`r_g_b`,`b_g_r`,`rgb_release`.
+The possible values are: `press_on`, `press_off`, `press_high`, `press_low`, `hold_high`, `hold_low`, `high_low_release`, `cw_ww_release`, `cw_dec_ww_inc`, `ww_inc_cw_dec`, `r_g_b`, `b_g_r`, `rgb_release`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

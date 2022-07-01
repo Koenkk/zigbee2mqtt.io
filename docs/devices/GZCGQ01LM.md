@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | GZCGQ01LM  |
 | Vendor  | Xiaomi  |
 | Description | MiJia light intensity sensor |
-| Exposes | battery, voltage, illuminance, illuminance_lux, linkquality |
+| Exposes | battery, voltage, illuminance, illuminance_lux, power_outage_count, linkquality |
 | Picture | ![Xiaomi GZCGQ01LM](https://www.zigbee2mqtt.io/images/devices/GZCGQ01LM.jpg) |
+| White-label | Xiaomi YTC4043GL |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -39,7 +40,6 @@ Press and hold the reset button on the device for +- 5 seconds (until the blue l
 After this the device will automatically join. If this doesn't work, try with a single short button press.
 
 ![GZCGQ01LM pairing](../images/pairing/GZCGQ01LM_pairing.jpg)
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -80,6 +80,11 @@ Measured illuminance in lux.
 Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
+
+### Power_outage_count (numeric)
+Number of power outages.
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

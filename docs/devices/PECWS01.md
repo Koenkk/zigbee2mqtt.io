@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PECWS01  |
 | Vendor  | Perenio  |
 | Description | Door sensor |
-| Exposes | contact, battery, linkquality |
+| Exposes | contact, battery, voltage, linkquality |
 | Picture | ![Perenio PECWS01](https://www.zigbee2mqtt.io/images/devices/PECWS01.jpg) |
 
 
@@ -43,6 +43,12 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Voltage (numeric)
+Voltage of the battery in millivolts.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `mV`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

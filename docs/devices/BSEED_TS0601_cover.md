@@ -11,7 +11,7 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa BSEED_TS0601_cover
+# BSEED BSEED_TS0601_cover
 
 |     |     |
 |-----|-----|
@@ -22,17 +22,16 @@ pageClass: device-page
 | Picture | ![BSEED BSEED_TS0601_cover](https://www.zigbee2mqtt.io/images/devices/BSEED_TS0601_cover.jpg) |
 
 
-
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-<!-- Notes END: Do not edit below this line -->
 ## Notes
 
-## Pairing
+### Pairing
 Press down and set simultaneously until LED flashes red.
-
-## Calibration
+ 
+### Calibration
 Calibration can be done manualy by pressing and holding pause button until it start blinking then press open and wait the time needed then press open again.
+<!-- Notes END: Do not edit below this line -->
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -46,12 +45,12 @@ Calibration can be done manualy by pressing and holding pause button until it st
 The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 It's not possible to read (`/get`) this value.
-
-
+To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.git 
+The unit of this value is `lqi`.
+

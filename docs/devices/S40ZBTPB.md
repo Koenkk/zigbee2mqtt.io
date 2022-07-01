@@ -1,7 +1,7 @@
 ---
 title: "SONOFF S40ZBTPB control via MQTT"
 description: "Integrate your SONOFF S40ZBTPB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-06-02T17:27:48Z
+addedAt: 2022-07-01T08:15:09
 pageClass: device-page
 ---
 
@@ -17,14 +17,13 @@ pageClass: device-page
 |-----|-----|
 | Model | S40ZBTPB  |
 | Vendor  | SONOFF  |
-| Description | 15A Zigbee Smart Plug |
+| Description | 15A Zigbee smart plug |
 | Exposes | switch (state), linkquality |
 | Picture | ![SONOFF S40ZBTPB](https://www.zigbee2mqtt.io/images/devices/S40ZBTPB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-
 
 ### Pairing
 After first power on, it should enter pairing mode. To pair to a new network, long press reset button for 5s until the Wi-Fi LED indicator changes to a cycle of two short flashes and one long flash, then release.

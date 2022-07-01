@@ -1,6 +1,6 @@
 ---
-title: "Evvr SRB01/SRB01A control via MQTT"
-description: "Integrate your Evvr SRB01/SRB01A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Evvr SRB01 control via MQTT"
+description: "Integrate your Evvr SRB01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-06-30T15:05:00
 pageClass: device-page
 ---
@@ -15,9 +15,9 @@ pageClass: device-page
 
 |     |     |
 |-----|-----|
-| Model | SRB01/SRB01A |
-| Vendor  | Evvr |
-| Description | In-Wall Relay Switch |
+| Model | SRB01  |
+| Vendor  | Evvr  |
+| Description | In-wall relay switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Evvr SRB01](https://www.zigbee2mqtt.io/images/devices/SRB01.jpg) |
 
@@ -27,10 +27,7 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
-### Pairing
-Short press the RESET button.
-The load light must be on, at the same time the indicator light will slowly flash blue, wait until pairing is successful or until 30 seconds timeout.
-If the In-Wall Relay Switch is successfully paired, the indicator will show BLUE when the load light is on.
+
 
 ## Exposes
 
