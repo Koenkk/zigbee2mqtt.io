@@ -87,18 +87,21 @@ Protects unique payload values of specified payload properties from overriding w
 (DEPRECATED) Retrieves the state after setting it. Should only be enabled when the reporting feature
   does not work for this device.
 
-**`filtered_attributes`**  
-Allows preventing certain attributes from being published. When a device would e.g.
-  publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will
-  publish `{"temperature": 10}`.
-
 **`optimistic`**  
 Publish optimistic state after set, e.g. when a brightness change command succeeds Zigbee2MQTT assumes
   the brightness of the device changed and will publish this (default `true`).
 
+**`filtered_attributes`**  
+Allows preventing certain attributes from being published. When a device would e.g.
+  publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will
+  publish `{"temperature": 10}`.
+  
 **`filtered_optimistic`**  
 Same as the `filtered_attributes` option but only applies to the optimistic published
   attributes. Has no effect when `optimistic: false` is set. Example: `filtered_optimistic: ["color_mode", "color"]`.
+
+**`filtered_cache`**  
+Allows preventing certain attributes from being cached, this prevents the attribute from being in the published payload when the value didn't change.
 
 
 ## Specific device options
