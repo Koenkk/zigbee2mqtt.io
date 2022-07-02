@@ -92,6 +92,10 @@ Allows preventing certain attributes from being published. When a device would e
   publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will
   publish `{"temperature": 10}`.
 
+**`filtered_cache`**
+Allows preventing certain attributes from ending up in the cache. 
+This prevents attributes from being published when the value did not change.
+
 **`optimistic`**  
 Publish optimistic state after set, e.g. when a brightness change command succeeds Zigbee2MQTT assumes
   the brightness of the device changed and will publish this (default `true`).
