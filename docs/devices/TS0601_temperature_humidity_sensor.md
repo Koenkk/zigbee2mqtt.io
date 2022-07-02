@@ -23,8 +23,14 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
 
+### Pairing
+Press and hold the pairing button on top for 5 seconds. When the signal icon flashes fast, release the button. It will search 20 seconds for network. 
+The signal icon will stay once connected to indicate successful connection
+
+Pressing more than 10 secons cancels the pairing.
 <!-- Notes END: Do not edit below this line -->
 
 
