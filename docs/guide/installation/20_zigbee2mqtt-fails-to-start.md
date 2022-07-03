@@ -10,7 +10,7 @@ Most of the time this is caused by Zigbee2MQTT not being able to communicate wit
 
 ## Error: `SRSP - SYS - ping after 6000ms`
 
-3 common reasons of this error:
+4 common reasons of this error:
 
 1. The port of your serial adapter changed.
    Check [this](../installation/01_linux.md#1-determine-location-of-the-adapter-and-checking-user-permissions) to find
@@ -19,6 +19,7 @@ Most of the time this is caused by Zigbee2MQTT not being able to communicate wit
    Reflashing the firmware should fix the problem. If it happens often consider flashing the [source routing firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/source_routing) or upgrade to
    a [more powerful adapter](../adapters/README.md).
 3. Your adapter requires additional configuration parameters. Check [supported Adapters](../adapters/README.md) section to find out if your adapter requires extra parameters (eg. ConBee II / RaspBee II).
+4. Home Assistant's "Zigbee Home Automation" (ZHA) integration is enabled. Try to disable the ZHA integration and restart the Zigbee2MQTT add-on.
 
 ## Verify that you put the correct port in configuration.yaml
 
