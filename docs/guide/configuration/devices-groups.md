@@ -89,11 +89,13 @@ Protects unique payload values of specified payload properties from overriding w
 
 **`filtered_attributes`**  
 Allows preventing certain attributes from being published. When a device would e.g.
-  publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will
-  publish `{"temperature": 10}`.
+  publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["^battery$"]` it will
+  publish `{"temperature": 10}`. The entries are regex, make sure to anchor them with `^` and `$` if
+  you need a 100% absolute match. When not using anchor `action` will match both `input_action` and
+  `action` attributes.
 
 **`filtered_cache`**
-Allows preventing certain attributes from ending up in the cache. 
+Same as the `filtered_attributes` but prevents certain attributes from ending up in the cache. 
 This prevents attributes from being published when the value did not change.
 
 **`optimistic`**  
@@ -102,7 +104,7 @@ Publish optimistic state after set, e.g. when a brightness change command succee
 
 **`filtered_optimistic`**  
 Same as the `filtered_attributes` option but only applies to the optimistic published
-  attributes. Has no effect when `optimistic: false` is set. Example: `filtered_optimistic: ["color_mode", "color"]`.
+  attributes. Has no effect when `optimistic: false` is set.
 
 
 ## Specific device options
