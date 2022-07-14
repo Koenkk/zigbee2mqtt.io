@@ -40,9 +40,9 @@ sudo apt-get install -y nodejs git make g++ gcc
 node --version  # Should output v14.X, V16.x, V17.x or V18.X
 npm --version  # Should output 6.X, 7.X or 8.X
 
-# Create a directory for zigbee2mqtt and set your user as owner of it. Supplement "pi" for your own in case it differs
+# Create a directory for zigbee2mqtt and set your user as owner of it
 sudo mkdir /opt/zigbee2mqtt
-sudo chown -R pi: /opt/zigbee2mqtt
+sudo chown -R ${USER}: /opt/zigbee2mqtt
 
 # Clone Zigbee2MQTT repository
 git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
