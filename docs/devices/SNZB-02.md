@@ -26,6 +26,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Troubleshoot
+In case the sensor got stucked and will not send data anymore, try the following steps to restore it.
+1. Force remove the device via the frontend
+2. Restart Zigbee2MQTT
+3. Re-pair the device
 
 ### Pairing
 Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
