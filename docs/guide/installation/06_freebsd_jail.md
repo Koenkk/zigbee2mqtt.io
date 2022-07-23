@@ -115,7 +115,7 @@ Add the following to this file:
 name="zigbee2mqtt"
 rcvar=zigbee2mqtt_enable
 
-: ${fzigbee2mqtt_enable:="NO"}
+: ${zigbee2mqtt_enable:="NO"}
 
 # daemon
 pidfile="/var/run/${name}.pid"
