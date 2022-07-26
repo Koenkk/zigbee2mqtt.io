@@ -22,6 +22,22 @@ serial:
   # Optional: RTS / CTS Hardware Flow Control for serial port (default: false)
   rtscts: false
 ```
+# Specifying some adapter settings in a different file
+
+To specify adapter serial port in different file e.g. `secret.yml`, use the following configuration.
+
+**configuration.yaml**
+
+```yaml
+# IMPORTANT: Don't forget the quotes
+serial:
+  port: '!secret serial_port'
+```
+
+**secret.yaml**
+```yaml
+serial_port: 'tcp://serial.port.host:6622'
+```
 
 <!-- TODO: some notes about rtscts? Is it useful, which adapter supports it? -->
 ```yaml
