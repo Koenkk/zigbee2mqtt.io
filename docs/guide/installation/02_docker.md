@@ -19,7 +19,7 @@ Navigate to the directory where you whish to store the Zigbee2MQTT data and exec
 wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.yaml -P data
 ```
 
-Now configure the MQTT server and adapter location as explained [here](./01_linux.md#configuring).
+Now configure the MQTT server, adapter location, network key and frontend as explained [here](./01_linux.md#configuring).
 
 ## Running the container
 

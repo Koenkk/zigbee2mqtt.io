@@ -94,6 +94,12 @@ advanced:
     network_key: GENERATE
 ```
 
+To enable the frontend add the following (see the [Frontend](../configuration/frontend.md) page for more settings):
+
+```yaml
+frontend: true
+```
+
 Save the file and exit.
 
 ## Starting Zigbee2MQTT
