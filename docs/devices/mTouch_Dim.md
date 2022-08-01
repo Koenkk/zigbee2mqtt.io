@@ -1,7 +1,7 @@
 ---
-title: "BTicino L441C/N4411C/NT4411C control via MQTT"
-description: "Integrate your BTicino L441C/N4411C/NT4411C via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2020-12-30T11:31:00Z
+title: "CTM Lyng mTouch_Dim control via MQTT"
+description: "Integrate your CTM Lyng mTouch_Dim via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-08-01T15:06:58
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# BTicino L441C/N4411C/NT4411C
+# CTM Lyng mTouch_Dim
 
 |     |     |
 |-----|-----|
-| Model | L441C/N4411C/NT4411C  |
-| Vendor  | BTicino  |
-| Description | Dimmer switch with neutral |
-| Exposes | light (state, brightness), ballast_minimum_level, ballast_maximum_level, device_mode, led_when_off, led_when_on, linkquality |
-| Picture | ![BTicino L441C/N4411C/NT4411C](https://www.zigbee2mqtt.io/images/devices/L441C-N4411C-NT4411C.jpg) |
+| Model | mTouch_Dim  |
+| Vendor  | CTM Lyng  |
+| Description | mTouch Dim OP, touch dimmer |
+| Exposes | light (state, brightness), ballast_minimum_level, ballast_maximum_level, ballast_power_on_level, linkquality |
+| Picture | ![CTM Lyng mTouch_Dim](https://www.zigbee2mqtt.io/images/devices/mTouch_Dim.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -67,35 +67,21 @@ Specifies the minimum brightness value.
 Value can be found in the published state on the `ballast_minimum_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_minimum_level": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_minimum_level": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `254`.
+The minimal value is `1` and the maximum value is `99`.
 
 ### Ballast_maximum_level (numeric)
 Specifies the maximum brightness value.
 Value can be found in the published state on the `ballast_maximum_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_maximum_level": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_maximum_level": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `254`.
+The minimal value is `1` and the maximum value is `99`.
 
-### Device_mode (binary)
-Allow the device to change brightness.
-Value can be found in the published state on the `device_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_mode": NEW_VALUE}`.
-If value equals `dimmer_on` device_mode is ON, if `dimmer_off` OFF.
-
-### Led_when_off (binary)
-Enables the LED when the light is off.
-Value can be found in the published state on the `led_when_off` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_when_off": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_when_off": NEW_VALUE}`.
-If value equals `ON` led_when_off is ON, if `OFF` OFF.
-
-### Led_when_on (binary)
-Enables the LED when the light is on.
-Value can be found in the published state on the `led_when_on` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_when_on": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_when_on": NEW_VALUE}`.
-If value equals `ON` led_when_on is ON, if `OFF` OFF.
+### Ballast_power_on_level (numeric)
+Specifies the initialisation light level. Can not be set lower than "ballast_minimum_level".
+Value can be found in the published state on the `ballast_power_on_level` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_power_on_level": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_power_on_level": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `99`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

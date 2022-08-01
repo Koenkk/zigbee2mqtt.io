@@ -66,7 +66,7 @@ Maximum temperature.
 Value can be found in the published state on the `max_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_temperature": NEW_VALUE}`.
-The minimal value is `15` and the maximum value is `35`.
+The minimal value is `15` and the maximum value is `45`.
 The unit of this value is `°C`.
 
 ### Min_temperature (numeric)

@@ -1,3 +1,27 @@
+---
+title: "Acova TAFFETAS2 control via MQTT"
+description: "Integrate your Acova TAFFETAS2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-08-01T15:05:01
+pageClass: device-page
+---
+
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
+# Acova TAFFETAS2
+
+|     |     |
+|-----|-----|
+| Model | TAFFETAS2  |
+| Vendor  | Acova  |
+| Description | Taffetas 2 heater |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
+| Picture | ![Acova TAFFETAS2](https://www.zigbee2mqtt.io/images/devices/TAFFETAS2.jpg) |
+
+
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
@@ -34,3 +58,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+

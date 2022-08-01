@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Wall switch module |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
 | Picture | ![TuYa WHD02](https://www.zigbee2mqtt.io/images/devices/WHD02.jpg) |
+| White-label | TuYa iHSW02 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
