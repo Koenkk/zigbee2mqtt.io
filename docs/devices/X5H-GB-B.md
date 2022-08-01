@@ -42,6 +42,11 @@ This climate device supports the following features: `current_heating_setpoint`,
 - `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`
 
 ### Schedule (text)
+There are 8 periods in the schedule in total. 6 for workdays and 2 for holidays. It should be set in the following format for each of the periods:
+`hours:minutes/temperature`
+All periods should be set at once and delimited by the space symbol. For example:
+`06:00/20.5 08:00/15 11:30/15 13:30/15 17:00/22 22:00/15 06:00/20 22:00/15`
+The thermostat doesn't report the schedule by itself even if you change it manually from device.
 Value can be found in the published state on the `schedule` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule": NEW_VALUE}`.
