@@ -23,6 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+
+### Calibration
 Calibration procedure:
 1. Turn calibration on
 2. Move cover completely up (open)
