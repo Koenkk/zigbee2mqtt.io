@@ -395,10 +395,89 @@ The adapters below are well-supported but use outdated chips.
 ## Experimental
 The adapters below are experimental, don't use these if you want a stable setup.
 
-* <details>
-  <summary>ZiGate</summary>
+### Based on Silicon Labs EFR32MG2x/MGM21x and EFR32MG1x/MGM1x series:
+
+Initial development started on experimental (beta stage) support for Silicon Labs based Zigbee adapters. This includes all EM35X, EFR32MG12, EFR32MG13, EFR32MG21, EFR32MG24 SoCs/Modules families with Silabs EmberZNet NCP 6.7.8 firmware or later via EZSP version 8 (EmberZNet Serial Protocol) interface. 
+
+<details>
+  <summary>Silicon Labs EZSP adapter implementation development in zigbee-herdsman</summary>
   
-  Initial development started on experimental (alpha stage) support for various ZigGate adapters (based on NXP Zigbee chips like JN5168 and JN5169). This include all ZiGate compatible hardware adapters with ZigGate 3.1d firmware or later.   
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+  ```yaml
+  serial:
+    adapter: ezsp
+  ```
+  
+  * [Coordinator firmware](https://github.com/Koenkk/zigbee-herdsman/issues/319)  
+  * [Discussion](https://github.com/Koenkk/zigbee-herdsman/issues/319)  
+  
+  ![](../../images/Silicon_Labs_Gecko_EFR32_SoCs.jpg)
+  </details>
+
+* USB connected
+
+* <details>
+    <summary>ITead Sonoff Zigbee 3.0 USB Dongle Plus model “ZBDongle-E”</summary>
+  
+    USB connected adapters (ITead Sonoff Zigbee 3.0 USB Dongle Plus model “ZBDongle-E).
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+    ```
+  
+    * [Coordinator firmware](https://sonoff.tech/product-review/sonoff-zigbee-3-0-usb-dongle-plus-tutorials/)
+    * [Flashing](https://sonoff.tech/wp-content/uploads/2022/08/SONOFF-Zigbee-3.0-USB-dongle-plus-firmware-flashing-.pdf)
+    * [Buy](https://itead.cc/product/zigbee-3-0-usb-dongle/) (ITead Sonoff Zigbee 3.0 USB Dongle Plus model “ZBDongle-E” based on Silabs EFR32MG21)
+  
+    ![](../../images/)
+    </details>
+
+* <details>
+    <summary>Elelabs ELU013 and Popp ZB-STICK</summary>
+  
+    USB connected adapters (Elelabs ELU013 and Popp ZB-STICK 701554).
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+    ```
+  
+    * [Coordinator firmware](https://github.com/Elelabs/elelabs-zigbee-ezsp-utility)
+    * [Flashing](https://github.com/Elelabs/elelabs-zigbee-ezsp-utility)
+    * [Buy](https://elelabs.com/products/elelabs-usb-adapter.html) (Elelabs Zigbee USB Adapter Model ELU013 based on Silabs EFR32MG13P)
+    * [Buy](https://popp.eu/zb-stick) (Popp ZB-STICK white-label rebranded version of Elelabs 701554 based on Silabs EFR32MG13P)
+  
+    ![](../../images/)
+    </details>
+    
+* Raspberry Pi hat
+
+* <details>
+    <summary>Elelabs ELU013 and Popp ZB-STICK</summary>
+  
+    USB connected adapters (Elelabs ELR023 and Popp ZB-SHIELD 701561).
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+    ```
+  
+    * [Coordinator firmware](https://github.com/Elelabs/elelabs-zigbee-ezsp-utility)
+    * [Flashing](https://github.com/Elelabs/elelabs-zigbee-ezsp-utility)
+    * [Buy](https://elelabs.com/products/elelabs-zigbee-shield.html) (Elelabs Zigbee Raspberry Pi Shield Model ELR023 based on Silabs EFR32MG13P)
+    * [Buy](https://popp.eu/zb-shield/) (Popp ZB-SHIELD 701561 is a white-label rebranded version of Elelabs ELR023 based on Silabs EFR32MG13P)
+  
+    ![](../../images/)
+    </details>
+  
+### Based on ZiGate:
+  
+Initial development started on experimental (alpha stage) support for various ZigGate adapters.  This includes all ZiGate compatible hardware adapters which are currently based on NXP Zigbee MCU chips like JN5168 and JN5169  with ZigGate 3.1d firmware or later.
+  
+<details>
+  <summary>ZiGate adapter implementation development in zigbee-herdsman</summary>
+
   If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
     ```yaml
     serial:
@@ -410,22 +489,6 @@ The adapters below are experimental, don't use these if you want a stable setup.
   * [Buy](https://zigate.fr/boutique/?orderby=date_desc)
   
   ![](../../images/zigate_usb_ttl.png)
-  </details>
-
-* <details>
-  <summary>Silicon Labs EZSP v8</summary>
-  
-  Initial development started on experimental (alpha stage) support for various adapters based on Silicon Labs EM35X and EFR32MG SoC families with EmberZNet NCP 6.7.8 firmware or later via EZSP version 8 (EmberZNet Serial Protocol) interface. This include all hardware based on SoCs/Modules from Silabs EFR32MG21/MGM210 and EFR32MG12/MGM12 series    
-  If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
-  ```yaml
-  serial:
-    adapter: ezsp
-  ```
-  
-  * [Coordinator firmware](https://github.com/Koenkk/zigbee-herdsman/issues/319)  
-  * [Discussion](https://github.com/Koenkk/zigbee-herdsman/issues/319)  
-  
-  ![](../../images/Silicon_Labs_Gecko_EFR32_SoCs.jpg)
   </details>
 
 
