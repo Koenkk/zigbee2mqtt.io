@@ -420,6 +420,9 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     <summary>ITead Sonoff Zigbee 3.0 USB Dongle Plus model “ZBDongle-E”</summary>
   
     USB connected adapters (ITead Sonoff Zigbee 3.0 USB Dongle Plus model “ZBDongle-E).
+  
+    Note before buying that ITead slightly confusingly now sell this Silicon Labs based “ZBDongle-E” adapter ((e.g. a "P" series presumably as in **E**FR32 as a replacement of their [old ITead’s previous barebone Silabs EFR32MG21 adapter which used the same EFR32MG21 radio chip](https://www.facebook.com/watch/?v=262086502015726) as well as their Texas Instruments based “ZBDongle-P”  adapter (e.g. a "P" series presumably as in CC2652**P**) side-by-side an as two alternative Zigbee USB dongles with the same Sonoff-branding. These offer option of different radio chips for compatibility with different Zigbee applications, and probably offer them as a manufacturer better supply chain coverage in case of chip shortages.
+  
     If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
     ```yaml
     serial:
@@ -451,6 +454,30 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     ![](../../images/)
     </details>
     
+* <details>
+    <summary>CoolKit ZB-GW04 USB dongle (a.k.a. easyiot stick)</summary>
+  
+    USB connected adapter (CoolKit ZB-GW04 USB dongle, also known as "easyiot stick") widly available online from China.
+
+    USB dongle is originally a DIY design from [Modkam (Russian speaking Zigbee DIY community)](https://modkam.ru/2021/02/28/proshivka-stikov-efr32/) and it using pre-flashed ["SM-011 V1.0" (ZYZBP008) radio module from CoolKit-Technologies](https://github.com/CoolKit-Technologies/DevDocs/tree/master/Zigbee) (which has a Silabs EFR32MG21 Zigbee SoC chip on it). 
+
+    Warning! Before buying understand that the "SM-011 V1.0" module/board used in this is missing electromagnetic interference shielding and have relativly low-quality circuit board antenna with less than optimal hardware tuning so it has been reported signal reception with these is very sensitive to all types of interference unless connect it via a very long USB extension cable that is properly shielded to get it away from any sources of EMF/EMI/RMI.
+
+    Note that the same USB dongle is also sold pre-flashed with Zigbee Router firmware as a lower price and it is reported to act much better as a Zigbee Router than what it does as a Zigbee Coordinator.
+
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+    ```
+  
+    * [Coordinator firmware](https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle/EZSP)
+    * [Flashing](https://github.com/Elelabs/elelabs-zigbee-ezsp-utility)
+    * [Buy](https://www.aliexpress.com/item/1005002791666029.html) (Elelabs Zigbee USB Adapter Model ELU013 based on Silabs EFR32MG13P)
+
+    ![](../../images/)
+    </details>
+    
 * Raspberry Pi hat
 
 * <details>
@@ -467,6 +494,26 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     * [Flashing](https://github.com/Elelabs/elelabs-zigbee-ezsp-utility)
     * [Buy](https://elelabs.com/products/elelabs-zigbee-shield.html) (Elelabs Zigbee Raspberry Pi Shield Model ELR023 based on Silabs EFR32MG13P)
     * [Buy](https://popp.eu/zb-shield/) (Popp ZB-SHIELD 701561 is a white-label rebranded version of Elelabs ELR023 based on Silabs EFR32MG13P)
+  
+    ![](../../images/)
+    </details>
+    
+* Hybrid (network + USB)
+
+* <details>
+    <summary>TubesZB Zigbee EFR32 Pro Ethernet/USB Serial Coordinator</summary>
+  
+    TubesZB early models works only over (wired LAN) while his later models can be set to work either over Ethernet or USB (USB-to-Serial Bridge).
+
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+    ```
+  
+    * [Coordinator firmware](https://github.com/grobasoz/zigbee-firmware)
+    * [Flashing](https://github.com/tube0013/tube_gateways)
+    * [Buy](https://www.tubeszb.com/shop/2) (TubesZB Zigbee variants including Silabs EFR32 MGM12/MGM210P module based models)
   
     ![](../../images/)
     </details>
