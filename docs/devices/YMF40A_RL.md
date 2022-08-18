@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | YMF40A RL  |
 | Vendor  | Yale  |
 | Description | Real living lock / Intelligent biometric digital lock |
-| Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_source_user, linkquality |
+| Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, linkquality |
 | Picture | ![Yale YMF40A RL](https://www.zigbee2mqtt.io/images/devices/YMF40A-RL.jpg) |
 
 
@@ -68,9 +68,9 @@ Value can be found in the published state on the `action_source_name` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `keypad`, `rfid`, `manual`, `rf`.
 
-### Action_source_user (numeric)
+### Action_user (numeric)
 ID of user that triggered the action on the lock.
-Value can be found in the published state on the `action_source_user` property.
+Value can be found in the published state on the `action_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)

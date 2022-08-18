@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WS-EUK03  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart wall switch H1 EU (with neutral, single rocker) |
-| Exposes | switch (state), action, power, energy, flip_indicator_light, power_outage_memory, device_temperature, operation_mode, linkquality |
+| Exposes | switch (state), action, power, energy, flip_indicator_light, power_outage_memory, device_temperature, led_disabled_night, power_outage_count, operation_mode, linkquality |
 | Picture | ![Xiaomi WS-EUK03](https://www.zigbee2mqtt.io/images/devices/WS-EUK03.jpg) |
 
 
@@ -81,6 +81,18 @@ Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
+
+### Led_disabled_night (binary)
+Enable/disable the LED at night.
+Value can be found in the published state on the `led_disabled_night` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
+If value equals `true` led_disabled_night is ON, if `false` OFF.
+
+### Power_outage_count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Operation_mode (enum)
 Decoupled mode.

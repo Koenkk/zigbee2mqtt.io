@@ -14,7 +14,7 @@ Want to migrate to a different adapter? Read [this](../faq/README.md#how-do-i-mi
 ## Recommended
 The adapters below are recommended because they use powerful chips, can handle large networks and are well-supported.
 
-### Based on Texas Instruments CC2652/CC1352 chip:
+### Based on Texas Instruments CC2652/CC1352 chip
 _(in order of first appearance)_
 
 * USB connected (easiest)
@@ -108,9 +108,13 @@ _(in order of first appearance)_
     </details>
 
   * <details>
-    <summary>SONOFF Zigbee 3.0 USB Dongle Plus</summary>
+    <summary>SONOFF Zigbee 3.0 USB Dongle Plus ZBDongle-P</summary>
   
-    CC2652P based USB connected adapter pre-programmed and with enclosure  
+    CC2652P based USB connected adapter pre-programmed and with enclosure.
+
+    Note before buying that ITead slightly confusingly now sells both the "ZBDongle-E" (based on EFR32MG21) and "ZBDongle-P" (based on CC2652P).
+    This section is about the "ZBDongle-P", for "ZBDongle-E" see below.
+
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20220219.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20220125.zip)  
     * [Flashing instructions](https://sonoff.tech/wp-content/uploads/2021/09/Zigbee-3.0-USB-dongle-plus-firmware-flashing-1-1.docx) ([PDF version](https://github.com/Koenkk/zigbee2mqtt.io/raw/master/docs/guide/adapters/flashing/zigbee-3.0-usb-dongle-plus-firmware_flashing-1-1.pdf)) or see "Flashing CC1352/CC2652/CC2538 based adapters" below  
@@ -214,7 +218,7 @@ _(in order of first appearance)_
   
     Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6dB antenna, worldwide delivery, Zigbee firmware can be manually updated via USB in 5 easy steps, customer/tech support, fast order processing.  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20220219.zip)  
-    * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20220219.zip)  
+    * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20220125.zip)  
     * [Description](https://smartlight.me/smart-home-devices/zigbee-devices/smlight-zigbee-lan-adapter-slzb-05en)  
     * Flashing instructions; see "Flashing CC1352/CC2652/CC2538 based adapters" below
     * Buy: [eBay](https://www.ebay.com/itm/165178757770) [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/smlight-zigbee-lan-adapter-slzb-05en) [Telegram](https://t.me/smartlightme)
@@ -395,37 +399,135 @@ The adapters below are well-supported but use outdated chips.
 ## Experimental
 The adapters below are experimental, don't use these if you want a stable setup.
 
-* <details>
-  <summary>ZiGate</summary>
+### Based on Silicon Labs EFR32MG2x/MGM21x and EFR32MG1x/MGM1x series
+
+Initial development started on experimental (beta stage) support for Silicon Labs based Zigbee adapters. This includes all EM35X, EFR32MG12, EFR32MG13, EFR32MG21, EFR32MG24 SoCs/Modules families with Silabs EmberZNet NCP 6.7.8 firmware or later via EZSP version 8 (EmberZNet Serial Protocol) interface. 
+
+* USB connected
+  * <details>
+    <summary>ITead Sonoff Zigbee 3.0 USB Dongle Plus model ZBDongle-E</summary>
   
-  Initial development started on experimental (alpha stage) support for various ZigGate adapters (based on NXP Zigbee chips like JN5168 and JN5169). This include all ZiGate compatible hardware adapters with ZigGate 3.1d firmware or later.   
-  If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    USB connected adapter with external antenna.
+
+    Note before buying that ITead slightly confusingly now sells both the "ZBDongle-E" (based on EFR32MG21) and "ZBDongle-P" (based on CC2652P).
+    This section is about the "ZBDongle-E", for "ZBDongle-P" see above.
+
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
     ```yaml
     serial:
-    adapter: zigate
+      adapter: ezsp
     ```
+   
+    * [Coordinator firmware](https://sonoff.tech/product-review/sonoff-zigbee-3-0-usb-dongle-plus-tutorials/)
+    * [Flashing](https://sonoff.tech/wp-content/uploads/2022/08/SONOFF-Zigbee-3.0-USB-dongle-plus-firmware-flashing-.pdf)
+    * [Buy](https://itead.cc/product/zigbee-3-0-usb-dongle/)
+  
+    ![](../../images/dongle-e.jpg)
+    </details>
+
+  * <details>
+    <summary>Elelabs ELU013 and Popp ZB-STICK</summary>
+  
+    USB connected adapters (Elelabs ELU013 and Popp ZB-STICK 701554).
+
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+    ```
+   
+    * [Coordinator firmware](https://github.com/Elelabs/elelabs-zigbee-ezsp-utility)
+    * [Flashing](https://github.com/Elelabs/elelabs-zigbee-ezsp-utility)
+    * [Buy](https://elelabs.com/products/elelabs-usb-adapter.html) (Elelabs Zigbee USB Adapter Model ELU013 based on Silabs EFR32MG13P)
+    * [Buy](https://popp.eu/zb-stick) (Popp ZB-STICK white-label rebranded version of Elelabs 701554 based on Silabs EFR32MG13P)
+  
+    ![](../../images/ELU013.jpg)
+    </details>
+
+  * <details>
+    <summary>CoolKit ZB-GW04 USB dongle (a.k.a. easyiot stick)</summary>
+  
+    USB connected adapter (CoolKit ZB-GW04 USB dongle, also known as "easyiot stick") widly available online from China.
+
+    USB dongle is originally a DIY design from [Modkam (Russian speaking Zigbee DIY community)](https://modkam.ru/2021/02/28/proshivka-stikov-efr32/) and it using pre-flashed ["SM-011 V1.0" (ZYZBP008) radio module from CoolKit-Technologies](https://github.com/CoolKit-Technologies/DevDocs/tree/master/Zigbee) (which has a Silabs EFR32MG21 Zigbee SoC chip on it). 
+
+    Warning! Before buying understand that the "SM-011 V1.0" module/board used in this is missing electromagnetic interference shielding and have relativly low-quality circuit board antenna with less than optimal hardware tuning so it has been reported signal reception with these is very sensitive to all types of interference unless connect it via a very long USB extension cable that is properly shielded to get it away from any sources of EMF/EMI/RMI.
+
+    Note that the same USB dongle is also sold pre-flashed with Zigbee Router firmware as a lower price and it is reported to act much better as a Zigbee Router than what it does as a Zigbee Coordinator.
+
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+    ```
+  
+    * [Coordinator firmware](https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle/EZSP)
+    * [Flashing](https://github.com/Elelabs/elelabs-zigbee-ezsp-utility)
+    * [Buy](https://www.aliexpress.com/item/1005002791666029.html)
+  
+    ![](../../images/ZB-GW04.jpg)
+    </details>
+
+* Raspberry Pi
+
+  * <details>
+    <summary>Elelabs Zigbee Raspberry Pi Shield/Popp ZB-Shield</summary>
+  
+    Hat for Raspberry Pi (Elelabs ELR023 and Popp ZB-SHIELD 701561).
+
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+    ```
+   
+    * [Coordinator firmware](https://github.com/Elelabs/elelabs-zigbee-ezsp-utility)
+    * [Flashing](https://github.com/Elelabs/elelabs-zigbee-ezsp-utility)
+    * [Buy](https://elelabs.com/products/elelabs-zigbee-shield.html) (Elelabs Zigbee Raspberry Pi Shield Model ELR023 based on Silabs EFR32MG13P)
+    * [Buy](https://popp.eu/zb-shield/) (Popp ZB-SHIELD 701561 is a white-label rebranded version of Elelabs ELR023 based on Silabs EFR32MG13P)
+  
+    ![](../../images/POPE701561.jpg)
+    </details>
+
+* Hybrid (network + USB)
+
+  * <details>
+    <summary>TubesZB Zigbee EFR32 pro ethernet/USB serial coordinator</summary>
+  
+    TubesZB early models works only over (wired LAN) while his later models can be set to work either over Ethernet or USB (USB-to-Serial Bridge).
+
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+    ```
+   
+    * [Coordinator firmware](https://github.com/grobasoz/zigbee-firmware)
+    * [Flashing](https://github.com/tube0013/tube_gateways)
+    * [Buy](https://www.tubeszb.com/shop/2) (TubesZB Zigbee variants including Silabs EFR32 MGM12/MGM210P module based models)
+  
+    ![](../../images/TubesZB_efr32.jpg)
+    </details>
+
+### Based on ZiGate
+  
+Initial development started on experimental (alpha stage) support for various ZigGate adapters.  This includes all ZiGate compatible hardware adapters which are currently based on NXP Zigbee MCU chips like JN5168 and JN5169  with ZigGate 3.1d firmware or later.
+  
+<details>
+  <summary>ZiGate adapter</summary>
+
+  If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+  
+  ```yaml
+  serial:
+    adapter: zigate
+  ```
   
   * [Coordinator firmware](https://zigate.fr/tag/firmware/)  
   * [Discussion](https://github.com/Koenkk/zigbee-herdsman/issues/242)  
   * [Buy](https://zigate.fr/boutique/?orderby=date_desc)
   
   ![](../../images/zigate_usb_ttl.png)
-  </details>
-
-* <details>
-  <summary>Silicon Labs EZSP v8</summary>
-  
-  Initial development started on experimental (alpha stage) support for various adapters based on Silicon Labs EM35X and EFR32MG SoC families with EmberZNet NCP 6.7.8 firmware or later via EZSP version 8 (EmberZNet Serial Protocol) interface. This include all hardware based on SoCs/Modules from Silabs EFR32MG21/MGM210 and EFR32MG12/MGM12 series    
-  If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
-  ```yaml
-  serial:
-    adapter: ezsp
-  ```
-  
-  * [Coordinator firmware](https://github.com/Koenkk/zigbee-herdsman/issues/319)  
-  * [Discussion](https://github.com/Koenkk/zigbee-herdsman/issues/319)  
-  
-  ![](../../images/Silicon_Labs_Gecko_EFR32_SoCs.jpg)
   </details>
 
 

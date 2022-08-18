@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | V3-BTZB/V3-BTZBE  |
 | Vendor  | Danalock  |
 | Description | BT/ZB smartlock |
-| Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_source_user, linkquality |
+| Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, linkquality |
 | Picture | ![Danalock V3-BTZB/V3-BTZBE](https://www.zigbee2mqtt.io/images/devices/V3-BTZB-V3-BTZBE.jpg) |
 
 
@@ -84,9 +84,9 @@ Value can be found in the published state on the `action_source_name` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `keypad`, `rfid`, `manual`, `rf`.
 
-### Action_source_user (numeric)
+### Action_user (numeric)
 ID of user that triggered the action on the lock.
-Value can be found in the published state on the `action_source_user` property.
+Value can be found in the published state on the `action_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)

@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | IG-CDZOTAAG014RA-MAN  |
 | Vendor  | ADEO  |
-| Description | ENKI Lexman E27 14W to 100W LED RGBW v2 |
+| Description | ENKI LEXMAN E27 14W to 100W LED RGBW v2 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![ADEO IG-CDZOTAAG014RA-MAN](https://www.zigbee2mqtt.io/images/devices/IG-CDZOTAAG014RA-MAN.jpg) |
 

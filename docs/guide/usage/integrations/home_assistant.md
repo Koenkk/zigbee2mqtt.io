@@ -216,19 +216,23 @@ mqtt:
   sensor:
     # Sensor for monitoring the bridge state
     - name: Zigbee2MQTT Bridge state
+      unique_id: zigbee2mqtt_bridge_state_sensor
       state_topic: "zigbee2mqtt/bridge/state"
       icon: mdi:router-wireless
     # Sensor for Showing the Zigbee2MQTT Version
     - name: Zigbee2MQTT Version
-      state_topic: "zigbee2mqtt/bridge/config"
+      unique_id: zigbee2mqtt_version_sensor
+      state_topic: "zigbee2mqtt/bridge/info"
       value_template: "{{ value_json.version }}"
       icon: mdi:zigbee
     # Sensor for Showing the Coordinator Version
-    - name: Coordinator Version
-      state_topic: "zigbee2mqtt/bridge/config"
-      value_template: "{{ value_json.coordinator }}"
+    - name: Zigbee2MQTT Coordinator Version
+      unique_id: zigbee2mqtt_coordinator_version_sensor
+      state_topic: "zigbee2mqtt/bridge/info"
+      value_template: "{{ value_json.coordinator.meta.revision }}"
       icon: mdi:chip
     - name: Zigbee2mqtt Networkmap
+      unique_id: zigbee2mqtt_networkmap_sensor
       # if you change base_topic of Zigbee2mqtt, change state_topic accordingly
       state_topic: zigbee2mqtt/bridge/networkmap/raw
       value_template: >-
@@ -239,6 +243,7 @@ mqtt:
   # Switch for enabling joining
   switch:
     - name: "Zigbee2MQTT Main join"
+      unique_id: zigbee2mqtt_main_join_switch
       state_topic: "zigbee2mqtt/bridge/info"
       value_template: '{{ value_json.permit_join | lower }}'
       command_topic: "zigbee2mqtt/bridge/request/permit_join"
@@ -315,7 +320,7 @@ show_header_toggle: false
 entities:
   - entity: sensor.zigbee2mqtt_bridge_state
   - entity: sensor.zigbee2mqtt_version
-  - entity: sensor.coordinator_version
+  - entity: sensor.zigbee2mqtt_coordinator_version
   - entity: input_select.zigbee2mqtt_log_level
   - type: divider
   - entity: switch.zigbee2mqtt_main_join

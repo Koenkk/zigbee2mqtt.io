@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | DLM-300Z  |
 | Vendor  | ShinaSystem  |
 | Description | Sihas door lock |
-| Exposes | battery, lock (state, lock_state), door_state, action, action_source_name, action_source_user, pin_code, linkquality |
+| Exposes | battery, lock (state, lock_state), door_state, action, action_source_name, action_user, pin_code, linkquality |
 | Picture | ![ShinaSystem DLM-300Z](https://www.zigbee2mqtt.io/images/devices/DLM-300Z.jpg) |
 
 
@@ -70,9 +70,9 @@ Value can be found in the published state on the `action_source_name` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `keypad`, `rfid`, `manual`, `rf`.
 
-### Action_source_user (numeric)
+### Action_user (numeric)
 ID of user that triggered the action on the lock.
-Value can be found in the published state on the `action_source_user` property.
+Value can be found in the published state on the `action_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Pin_code (composite)
