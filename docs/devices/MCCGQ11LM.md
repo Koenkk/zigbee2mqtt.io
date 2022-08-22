@@ -25,10 +25,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Battery
+Uses a CR1632 battery
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join. If this doesn't work, try with a single short button press.
+After this the device will automatically join.  
+If this doesn't work, after starting the pairing process with the long press, keep short pressing the button aprroximately once a second until the interview process is finished.
 
 
 ### Troubleshooting: device stops sending messages/disconnects from network
