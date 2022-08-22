@@ -19,13 +19,14 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara door & window contact sensor |
 | Exposes | battery, contact, device_temperature, voltage, power_outage_count, linkquality |
-| Battery type | CR1632 |
 | Picture | ![Xiaomi MCCGQ11LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Battery
+Uses a CR1632 battery
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
