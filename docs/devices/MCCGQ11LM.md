@@ -29,7 +29,8 @@ pageClass: device-page
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join. If this doesn't work, after starting the pairing process with the long press, keep short pressing the button aprroximately onece a second until the interview process is finished.
+After this the device will automatically join.  
+If this doesn't work, after starting the pairing process with the long press, keep short pressing the button aprroximately once a second until the interview process is finished.
 
 
 ### Troubleshooting: device stops sending messages/disconnects from network
