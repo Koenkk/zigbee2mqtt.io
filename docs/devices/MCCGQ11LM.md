@@ -19,6 +19,7 @@ pageClass: device-page
 | Vendor  | Xiaomi  |
 | Description | Aqara door & window contact sensor |
 | Exposes | battery, contact, device_temperature, voltage, power_outage_count, linkquality |
+| Battery type | CR1632 |
 | Picture | ![Xiaomi MCCGQ11LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ11LM.jpg) |
 
 
