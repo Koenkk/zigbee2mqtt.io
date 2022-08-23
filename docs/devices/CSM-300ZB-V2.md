@@ -56,7 +56,7 @@ People count.
 Value can be found in the published state on the `people` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"people": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"people": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `50`.
+The minimal value is `0` and the maximum value is `100`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
