@@ -67,3 +67,8 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
+## Pairing
+In order to enter pairing mode, hold the button until you see "--Init-" on the screen.
+
+## Manual Toggle
+In order to toggle the relay manually do a triple press on the button.
