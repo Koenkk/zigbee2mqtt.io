@@ -23,8 +23,11 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Pairing
+In order to enter pairing mode, hold the button until you see "--Init-" on the screen.
 
-
+## Manual toggle
+In order to toggle the relay manually do a triple press on the button.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -66,4 +69,3 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
-
