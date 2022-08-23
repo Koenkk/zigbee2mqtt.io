@@ -1,7 +1,7 @@
 ---
-title: "ShinaSystem CSM-300ZB_V2 control via MQTT"
-description: "Integrate your ShinaSystem CSM-300ZB_V2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-08-19T08:58:50
+title: "ShinaSystem DMS-300ZB control via MQTT"
+description: "Integrate your ShinaSystem DMS-300ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# ShinaSystem CSM-300ZB_V2
+# ShinaSystem DMS-300ZB
 
 |     |     |
 |-----|-----|
-| Model | CSM-300ZB_V2 |
+| Model | DMS-300ZB  |
 | Vendor  | ShinaSystem  |
-| Description | SiHAS multipurpose ToF sensor |
-| Exposes | battery, voltage, status, people, linkquality |
-| Picture | ![ShinaSystem CSM-300ZB_V2](https://www.zigbee2mqtt.io/images/devices/CSM-300ZB_V2.jpg) |
+| Description | SiHAS Dual Motion Sensor |
+| Exposes | battery, voltage, occupancy, linkquality |
+| Picture | ![ShinaSystem DMS-300ZB](https://www.zigbee2mqtt.io/images/devices/DMS-300ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,7 +27,10 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `occupancy_timeout`: Time in seconds after which occupancy is cleared after detecting it (default 5 seconds). The value must be a number with a minimum value of `0`
 
 ## Exposes
 
@@ -41,22 +44,14 @@ The unit of this value is `%`.
 ### Voltage (numeric)
 Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
-It's 1,000mV lower then actual voltage.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Status (enum)
-Currently status.
-Value can be found in the published state on the `status` property.
+### Occupancy (binary)
+Indicates whether the device detected occupancy.
+Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `idle`, `in`, `out`.
-
-### People (numeric)
-People count.
-Value can be found in the published state on the `people` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"people": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"people": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `100`.
+If value equals `true` occupancy is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
