@@ -26,7 +26,7 @@ pageClass: device-page
 ## Pairing
 In order to enter pairing mode, hold the button until you see "--Init-" on the screen.
 
-## Manual Toggle
+## Manual toggle
 In order to toggle the relay manually do a triple press on the button.
 <!-- Notes END: Do not edit below this line -->
 
