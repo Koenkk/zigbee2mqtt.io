@@ -28,9 +28,12 @@ In order to enter pairing mode, hold the button until you see "--Init-" on the s
 
 ## Manual toggle
 In order to toggle the relay manually do a triple press on the button.
+
+### State updates
+As it is mentioned below in the "Exposes" section there is no way to read (`/get`) exposed values. The device broadcasts them itself at a fixed rate, once every 30 seconds. And the value sent is exactly the number at the moment of sending. Therefore sometimes it may lead to unreliable readings of the values like Current. E.g. in case the load connected to the relay is consuming current for 15 seconds and then sits idle (no power consumption) for another 15 seconds, then it is possible that the relay will be sending Current value as zero.
+
+The only value that is reliable enough is Energy since it is calculated and stored incrementally.
 <!-- Notes END: Do not edit below this line -->
-
-
 
 ## Exposes
 
