@@ -23,6 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## new version _TZE200_bkkmqmyo
+There is a new version _TZE200_bkkmqmyo. On the outside, there are no differences. This version is not recognised by zigbee2mqtt; apparently it uses another format.
+
 ## Pairing
 In order to enter pairing mode, hold the button until you see "--Init-" on the screen.
 
