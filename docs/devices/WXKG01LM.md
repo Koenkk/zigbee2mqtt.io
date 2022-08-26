@@ -42,8 +42,9 @@ devices:
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join. If this doesn't work, try with a single short button press.
+After this the device will automatically join. 
 
+If that doesn't work press the link button for a few seconds and the LED will flash. After this first phase, you have to make quick clicks on the button (normal clicks on the device, not on the link button) until the LED flashes again. After this second flashing phase the device will be paired.
 
 ### Binding
 This device does **not** support binding.
