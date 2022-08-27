@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS110E_2gang  |
 | Vendor  | Lonsonho  |
 | Description | Zigbee smart dimmer module 2 gang with neutral |
-| Exposes | light (state, brightness), linkquality |
+| Exposes | light (state, brightness), power_outage_memory, switch_type, linkquality |
 | Picture | ![Lonsonho TS110E_2gang](https://www.zigbee2mqtt.io/images/devices/TS110E_2gang.jpg) |
 
 
@@ -87,6 +87,27 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_step": 40 // Increases brightness by 40
 }
 ````
+
+### Power_outage_memory (enum, l1 endpoint)
+Recover state after power outage.
+Value can be found in the published state on the `power_outage_memory_l1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory_l1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory_l1": NEW_VALUE}`.
+The possible values are: `on`, `off`, `restore`.
+
+### Switch_type (enum, l1 endpoint)
+Switch type settings.
+Value can be found in the published state on the `switch_type_l1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l1": NEW_VALUE}`.
+The possible values are: `toggle`, `state`, `momentary`.
+
+### Switch_type (enum, l2 endpoint)
+Switch type settings.
+Value can be found in the published state on the `switch_type_l2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_l2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_l2": NEW_VALUE}`.
+The possible values are: `toggle`, `state`, `momentary`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

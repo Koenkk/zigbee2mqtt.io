@@ -42,10 +42,10 @@ pageClass: device-page
 
 ## Exposes
 
-### Switch (l1 endpoint)
-The current state of this switch is in the published state under the `state_l1` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l1": "ON"}`, `{"state_l1": "OFF"}` or `{"state_l1": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l1": ""}`.
+### Switch 
+The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
 ### Power (numeric)
 Instantaneous measured power.
@@ -74,7 +74,7 @@ The unit of this value is `kWh`.
 ### Power_outage_memory (enum)
 Recover state after power outage.
 Value can be found in the published state on the `power_outage_memory` property.
-It's not possible to read (`/get`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 The possible values are: `on`, `off`, `restore`.
 

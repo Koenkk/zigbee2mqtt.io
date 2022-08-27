@@ -18,13 +18,19 @@ pageClass: device-page
 | Model | TS0601_temperature_humidity_sensor  |
 | Vendor  | TuYa  |
 | Description | Temperature & humidity sensor |
-| Exposes | temperature, humidity, battery, linkquality |
+| Exposes | temperature, humidity, battery, battery_low, battery_level, linkquality |
 | Picture | ![TuYa TS0601_temperature_humidity_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_temperature_humidity_sensor.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
 
+### Pairing
+Press and hold the pairing button on top for 5 seconds. When the signal icon flashes fast, release the button. It will search 20 seconds for network. 
+The signal icon will stay once connected to indicate successful connection
+
+Pressing more than 10 secons cancels the pairing.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -60,6 +66,18 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
+
+### Battery_level (enum)
+Battery level state.
+Value can be found in the published state on the `battery_level` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `low`, `middle`, `high`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

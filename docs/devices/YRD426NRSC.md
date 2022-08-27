@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | YRD426NRSC  |
 | Vendor  | Yale  |
 | Description | Assure lock |
-| Exposes | lock (state, lock_state), battery, pin_code, linkquality |
+| Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, linkquality |
 | Picture | ![Yale YRD426NRSC](https://www.zigbee2mqtt.io/images/devices/YRD426NRSC.jpg) |
 
 
@@ -55,6 +55,23 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_
 - `user_type` (enum): Type of user, unrestricted: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock. Allowed values: `unrestricted`, `year_day_schedule`, `week_day_schedule`, `master`, `non_access`
 - `user_enabled` (binary): Whether the user is enabled/disabled. Allowed values: `true` or `false`
 - `pin_code` (numeric): Pincode to set, set pincode to null to clear. 
+
+### Action (enum)
+Triggered action on the lock.
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `unknown`, `lock`, `unlock`, `lock_failure_invalid_pin_or_id`, `lock_failure_invalid_schedule`, `unlock_failure_invalid_pin_or_id`, `unlock_failure_invalid_schedule`, `one_touch_lock`, `key_lock`, `key_unlock`, `auto_lock`, `schedule_lock`, `schedule_unlock`, `manual_lock`, `manual_unlock`, `non_access_user_operational_event`.
+
+### Action_source_name (enum)
+Source of the triggered action on the lock.
+Value can be found in the published state on the `action_source_name` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `keypad`, `rfid`, `manual`, `rf`.
+
+### Action_user (numeric)
+ID of user that triggered the action on the lock.
+Value can be found in the published state on the `action_user` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

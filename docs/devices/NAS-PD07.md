@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | NAS-PD07  |
 | Vendor  | Neo  |
 | Description | Motion, temperature & humidity sensor |
-| Exposes | occupancy, humidity, temperature, tamper, battery_low, power_type, linkquality |
+| Exposes | occupancy, humidity, temperature, tamper, battery_low, power_type, alarm, temperature_min, temperature_max, temperature_scale, humidity_min, humidity_max, linkquality |
 | Picture | ![Neo NAS-PD07](https://www.zigbee2mqtt.io/images/devices/NAS-PD07.jpg) |
 
 
@@ -76,6 +76,47 @@ If value equals `true` battery_low is ON, if `false` OFF.
 Value can be found in the published state on the `power_type` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `battery_full`, `battery_high`, `battery_medium`, `battery_low`, `usb`.
+
+### Alarm (enum)
+Temperature/humidity alarm status.
+Value can be found in the published state on the `alarm` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `over_temperature`, `over_humidity`, `below_min_temperature`, `below_min_humdity`, `off`.
+
+### Temperature_min (numeric)
+Value can be found in the published state on the `temperature_min` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_min": NEW_VALUE}`.
+The minimal value is `-20` and the maximum value is `80`.
+The unit of this value is `°C`.
+
+### Temperature_max (numeric)
+Value can be found in the published state on the `temperature_max` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_max": NEW_VALUE}`.
+The minimal value is `-20` and the maximum value is `80`.
+The unit of this value is `°C`.
+
+### Temperature_scale (binary)
+Temperature scale (°F/°C).
+Value can be found in the published state on the `temperature_scale` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_scale": NEW_VALUE}`.
+If value equals `°C` temperature_scale is ON, if `°F` OFF.
+
+### Humidity_min (numeric)
+Value can be found in the published state on the `humidity_min` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_min": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Humidity_max (numeric)
+Value can be found in the published state on the `humidity_max` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_max": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

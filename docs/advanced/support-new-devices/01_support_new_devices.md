@@ -66,6 +66,7 @@ In case your device is not reporting anything, it could be that this device requ
 If your device is advertised as TuYa compatible or reports anything with `manuSpecificTuya` additional instructions for adding your device can be found [here](./02_support_new_tuya_devices.md).
 :::
 
+In case your device does not report anything out of the blue, the Clusters page at Zigbee2MQTT's frontend (found under the device in the dashboard) also exposes the clusters.
 
 Some basic external converter examples:
 - [Bulb (light)](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/light.js)
@@ -96,9 +97,9 @@ const definition = {
     model: 'WSDCGQ01LM',
     vendor: 'Xiaomi',
     description: 'MiJia temperature & humidity sensor',
-    fromZigbee: [fz.temperature], // <-- added here
-    toZigbee: [],
-    exposes: [e.battery(), e.temperature(), e.humidity()],
+    fromZigbee: [fz.temperature], // <-- added here all clusters reported from zigbee
+    toZigbee: [], // <-- add here all clusters to send commands to zigbee
+    exposes: [e.battery(), e.temperature(), e.humidity()], // <-- this will define which fields will be exposed in the definition message to configure a front end (e.g. the z2m frontend, Home Assistant, Domoticz)
 };
 
 module.exports = definition;

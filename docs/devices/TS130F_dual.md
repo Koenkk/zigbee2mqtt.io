@@ -47,8 +47,13 @@ Press on pair button for 10 seconds to enter pairing mode
 
 ## Exposes
 
-### Moving (enum)
-Value can be found in the published state on the `moving` property.
+### Moving (enum, left endpoint)
+Value can be found in the published state on the `moving_left` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `UP`, `STOP`, `DOWN`.
+
+### Moving (enum, right endpoint)
+Value can be found in the published state on the `moving_right` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `UP`, `STOP`, `DOWN`.
 

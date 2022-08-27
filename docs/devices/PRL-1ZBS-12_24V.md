@@ -23,8 +23,15 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Calibration
+1. Befor calibration, the external local switches must be connected to the Shutter Control.
+2. Press and hold the Function button for 3~10 seconds and release to enter Calubration mode. The Shutter Controller will roll toward the "Open" direction for 4 minutes upon entering Calibration mode.
+3. Wait for 4 minutes for Shutter Control to stop rolling to "Open" direction, then activate the connected external local "Close" switch to close the shutter.
+4. Activate the "Open" external local switch the moment the shutter is fully closed. The Shutter controll will record to time it took between step 3 and 4 as the new "close time"
+5. The Shutter control will roll toward open direction after step 4
+6. Activate the "Close" external local switch the moment the shutter is fully opended. The Shutter controll will record to time it took between step 5 and 6 as the new "open time"
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0121_plug  |
 | Vendor  | TuYa  |
 | Description | 10A UK or 16A EU smart plug |
-| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
+| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, linkquality |
 | Picture | ![TuYa TS0121_plug](https://www.zigbee2mqtt.io/images/devices/TS0121_plug.jpg) |
 | White-label | BlitzWolf BW-SHP13 |
 
@@ -26,6 +26,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### BW-SHP13 sold since 2022
+
+Since early 2022, BlitzWolf changed firmware of the BW-SHP13. Those new devices identify as [TS011F_plug_1](TS011F_plug_1.md).
 
 ### Pairing
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
@@ -78,9 +81,16 @@ The unit of this value is `kWh`.
 ### Power_outage_memory (enum)
 Recover state after power outage.
 Value can be found in the published state on the `power_outage_memory` property.
-It's not possible to read (`/get`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 The possible values are: `on`, `off`, `restore`.
+
+### Indicator_mode (enum)
+LED indicator mode.
+Value can be found in the published state on the `indicator_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `off`, `off/on`, `on/off`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

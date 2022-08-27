@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | RTCGQ01LM  |
 | Vendor  | Xiaomi  |
 | Description | MiJia human body movement sensor |
-| Exposes | battery, occupancy, voltage, linkquality |
+| Exposes | battery, occupancy, voltage, power_outage_count, linkquality |
 | Picture | ![Xiaomi RTCGQ01LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ01LM.jpg) |
+| White-label | Xiaomi YTC4041GL, Xiaomi YTC4004CN, Xiaomi YTC4016CN, Xiaomi ZHTZ02LM |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -36,7 +37,7 @@ Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes ha
 Most of the times this happens because of the following reasons:
 - Device has a weak signal, you can see the signal quality in the published messages as `linkquality`. A linkquality < 20 is considered weak.
 - Low battery voltage, this can even happen when the battery still appears full. Try a different battery.
-- The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, OSRAM, Sylvania, SmartThings, Securifi.
+- The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, Legrand, OSRAM, Sylvania, SmartThings, Securifi. A possible solution is to connect the device directly to the central coordinator by pushing the reset button while being physically close to it.
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
@@ -59,7 +60,7 @@ is needed.
 
 * `occupancy_timeout`: Time in seconds after which occupancy is cleared after detecting it (default 90 seconds). The value must be a number with a minimum value of `0`
 
-* `no_occupancy_since`: Sends a message the last time occupancy was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of number.
+* `no_occupancy_since`: Sends a message the last time occupancy (occupancy: true) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of number.
 
 
 ## Exposes
@@ -82,6 +83,11 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Power_outage_count (numeric)
+Number of power outages.
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -20,12 +20,15 @@ pageClass: device-page
 | Description | Smart plug (with power monitoring) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, lock (state), linkquality |
 | Picture | ![TuYa TS011F_plug_1](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_1.jpg) |
-| White-label | LELLKI TS011F_plug, NEO NAS-WR01B, BlitzWolf BW-SHP15 |
+| White-label | LELLKI TS011F_plug, NEO NAS-WR01B, BlitzWolf BW-SHP15, Nous A1Z, BlitzWolf BW-SHP13, MatSee Plus PJ-ZSW01 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Issues with device turning off
+[It's been reported by several people that this plug turns off randomly](https://github.com/Koenkk/zigbee2mqtt/issues/11648).  
+If you're affected by this, try if it can be solved by [installing an OTA update](../guide/usage/ota_updates.md).
 
 ### Broken attribute reporting functionality
 
@@ -35,6 +38,25 @@ If your plug is affected, it will be detected as [TS011F_plug_3](TS011F_plug_3.m
 
 <!-- cfr: https://github.com/Koenkk/zigbee2mqtt/issues/9057 -->
 
+### Broken attribute reporting functionality in devices sold as BW-SHP13
+
+In 2022, BlitzWolf started to sell BW-SHP13 that identify as ```_TZ3000_amdymr7l```. Those devices report power, current and voltage unreliably: Changes in any of those metrics sometimes take a few minutes before being reported and constant loads are reported as 0 for a few minutes just to return to their expected values a few minutes later. There is no known workaround for that behaviour.
+
+<!-- cfr: https://github.com/Koenkk/zigbee2mqtt/issues/11800 -->
+
+### Reset energy
+
+To reset `Sum of consumed energy`, use the Dev console and execute:  
+`Endpoint`: `1`   
+`Cluster`: `0x00`  
+`Command`: `0`  
+`Payload`: (don't change this)  
+
+Next time the plug gets polled, `Sum of consumed energy` will start from zero again.
+
+### Reset lock
+
+To reset `Child Lock` without Z2M, quickly press the physical button 4 times
 
 ### Pairing
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
@@ -88,7 +110,7 @@ The unit of this value is `kWh`.
 ### Power_outage_memory (enum)
 Recover state after power outage.
 Value can be found in the published state on the `power_outage_memory` property.
-It's not possible to read (`/get`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 The possible values are: `on`, `off`, `restore`.
 

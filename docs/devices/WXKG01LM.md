@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | WXKG01LM  |
 | Vendor  | Xiaomi  |
 | Description | MiJia wireless switch |
-| Exposes | battery, action, voltage, linkquality |
+| Exposes | battery, action, voltage, power_outage_count, linkquality |
 | Picture | ![Xiaomi WXKG01LM](https://www.zigbee2mqtt.io/images/devices/WXKG01LM.jpg) |
+| White-label | Xiaomi YTC4040GL, Xiaomi YTC4006CN, Xiaomi YTC4017CN, Xiaomi ZHTZ02LM |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -41,8 +42,9 @@ devices:
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join. If this doesn't work, try with a single short button press.
+After this the device will automatically join. 
 
+If that doesn't work press the link button for a few seconds and the LED will flash. After this first phase, you have to make quick clicks on the button (normal clicks on the device, not on the link button) until the LED flashes again. After this second flashing phase the device will be paired.
 
 ### Binding
 This device does **not** support binding.
@@ -53,7 +55,7 @@ Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes ha
 Most of the times this happens because of the following reasons:
 - Device has a weak signal, you can see the signal quality in the published messages as `linkquality`. A linkquality < 20 is considered weak.
 - Low battery voltage, this can even happen when the battery still appears full. Try a different battery.
-- The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, OSRAM, Sylvania, SmartThings, Securifi.
+- The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, Legrand, OSRAM, Sylvania, SmartThings, Securifi. A possible solution is to connect the device directly to the central coordinator by pushing the reset button while being physically close to it.
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 <!-- Notes END: Do not edit below this line -->
@@ -89,6 +91,11 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Power_outage_count (numeric)
+Number of power outages.
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

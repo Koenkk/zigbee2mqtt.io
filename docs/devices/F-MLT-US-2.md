@@ -23,8 +23,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+When pairing, make sure to keep the sensor awake for 20 seconds by opening and closing the contact every second.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | TS0111_valve  |
 | Vendor  | TuYa  |
 | Description | Smart water/gas valve |
-| Exposes | switch (state), linkquality |
+| Exposes | switch (state), power_on_behavior, indicator_mode, linkquality |
 | Picture | ![TuYa TS0111_valve](https://www.zigbee2mqtt.io/images/devices/TS0111_valve.jpg) |
+| White-label | TuYa SM-AW713Z |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -35,6 +36,20 @@ pageClass: device-page
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+
+### Power_on_behavior (enum)
+Controls the behavior when the device is powered on.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `previous`, `on`.
+
+### Indicator_mode (enum)
+LED indicator mode.
+Value can be found in the published state on the `indicator_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `off`, `off/on`, `on/off`, `on`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

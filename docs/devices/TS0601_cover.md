@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Curtain motor/roller blind motor/window pusher/tubular motor |
 | Exposes | cover (state, position), options, linkquality |
 | Picture | ![TuYa TS0601_cover](https://www.zigbee2mqtt.io/images/devices/TS0601_cover.jpg) |
-| White-label | Yushun YS-MT750, Zemismart ZM79E-DT, Binthen BCM100D, Binthen CV01A, Zemismart M515EGB, TuYa M515EGZT, TuYa DT82LEMA-1.2N, TuYa ZD82TN, Moes AM43-0.45/40-ES-EB, Larkkey ZSTY-SM-1SRZG-EU, Zemismart ZM25TQ, Zemismart AM43, Zemismart M2805EGBZTN, Zemismart BCM500DS-TYZ, A-OK AM25, Alutech AM/R-Sm |
+| White-label | Yushun YS-MT750, Zemismart ZM79E-DT, Binthen BCM100D, Binthen CV01A, Zemismart M515EGB, TuYa M515EGZT, TuYa DT82LEMA-1.2N, TuYa ZD82TN, Moes AM43-0.45/40-ES-EB, Larkkey ZSTY-SM-1SRZG-EU, Zemismart ZM85EL-2Z, Zemismart AM43, Zemismart M2805EGBZTN, Zemismart BCM500DS-TYZ, A-OK AM25, Alutech AM/R-Sm |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

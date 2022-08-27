@@ -27,7 +27,7 @@ Start Android Studio and create a new empty project:
 1. Open the TuYa Smart Life app in the emulator, log in with your account
 1. Make sure the TuYa bridge + the device you want to get the OTA of is already coupled to your account, this cannot be done from the emulator so use your phone for this. Make sure to use the same app on your phone, otherwise the device will not show up (e.g. for iOS use [this](https://apps.apple.com/nl/app/smart-life-smart-living/id1115101477), [**not this**](https://apps.apple.com/nl/app/tuya-smart/id1034649547)).
 1. Click on the device -> edit (pencil icon right top). Click "Check for Firmware Upgrade".
-1. If an firmware upgarde is available, quickly go back to the output of mitm (step 1), click on the latest request (yes you can click in the console window). This will show your the OTA url (see red box below).
+1. If an firmware upgrade is available, quickly go back to the output of mitm (step 1), click on the latest request (yes you can click in the console window). This will show your the OTA url (see red box below).
     - Tip: to go back to the overview of requests press the `Q` key on your keyboard.
 
 ![](../../images/tuya_ota.png)
@@ -41,7 +41,7 @@ NOTE: This only works for native Aqara gateways which can be connected to the Aq
 1. Open the Aqara home app in the emulator, log in with your account
 1. Make sure the Aqara gateway + the device you want to get the OTA of is already coupled to your account, this cannot be done from the emulator so use your phone for this.
 1. Click on your device and check for a firmware upgrade.
-1. If an firmware upgarde is available, quickly go back to the output of mitm (step 1), click on the latest request (yes you can click in the console window). This will show your the OTA url (see screenshot of step 3a).
+1. If an firmware upgrade is available, quickly go back to the output of mitm (step 1), click on the latest request (yes you can click in the console window). This will show your the OTA url (see screenshot of step 3a).
 
 ## Step 4: add OTA to zigbee-ota
 1. Follow [this guide](https://github.com/koenkk/zigbee-ota#adding-new-and-updating-existing-ota-files) to add the OTA to the [zigbee-OTA](https://github.com/koenkk/zigbee-ota) repository. 

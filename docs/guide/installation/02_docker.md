@@ -8,10 +8,9 @@ It is possible to run Zigbee2MQTT in a Docker container using the official [Zigb
 This image support the following architectures: `386`, `amd64`, `arm/v6`, `arm/v7`, `arm64`.
 Since Zigbee2MQTT images are manifest listed, Docker will auto-detect the architecture and pull the right image.
 
-Note for Raspberry Pi 1 and zero users: there is a bug in Docker which selects the wrong image architecture.
-Before executing `docker run` pull the correct image with `docker pull koenkk/zigbee2mqtt --platform linux/arm/v6`.
-
 Start by figuring out the location of your adapter as explained [here](./01_linux.md#determine-location-of-the-adapter-and-checking-user-permissions).
+
+**IMPORTANT**: Using a Raspberry Pi? Make sure to check [Notes for Raspberry Pi users](#notes-for-raspberry-pi-users).
 
 ## Creating the initial configuration
 Navigate to the directory where you whish to store the Zigbee2MQTT data and execute:
@@ -20,7 +19,7 @@ Navigate to the directory where you whish to store the Zigbee2MQTT data and exec
 wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.yaml -P data
 ```
 
-Now configure the MQTT server and adapter location as explained [here](./01_linux.md#configuring).
+Now configure the MQTT server, adapter location, network key and frontend as explained [here](./01_linux.md#configuring).
 
 ## Running the container
 
@@ -28,6 +27,8 @@ Execute the following command, update the `--device` parameter to match the loca
 
 ```bash
 $ docker run \
+   --name zigbee2mqtt \
+   --restart=unless-stopped \
    --device=/dev/ttyACM0 \
    -p 8080:8080 \
    -v $(pwd)/data:/app/data \
@@ -37,6 +38,8 @@ $ docker run \
 ```
 
 **Parameters explanation:**  
+* `--name zigbee2mqtt`: Name of container
+* `--restart=unless-stopped`: Automatically start on boot and restart after a crash
 * `--device=/dev/ttyACM0`: Location of adapter (e.g. CC2531)
 * `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration (pwd maps to the current working directory)
 * `-v /run/udev:/run/udev:ro`: only required for auto-detecting the port and some adapters like ConBee
@@ -68,6 +71,7 @@ uid=1001(pi) gid=1001(pi) Groups=...
 ```
 $ sudo docker run \
    --name=zigbee2mqtt \
+   --restart=unless-stopped \
    -p 8080:8080 \
    -v $(pwd)/data:/app/data \
    -v /run/udev:/run/udev:ro \
@@ -123,7 +127,7 @@ services:
       - /dev/ttyUSB0:/dev/ttyACM0
 ```
 
-You can also run a rootless container with docker-compose by adding the required attributes to the `zigbee2mqtt` service block in your `docker-compose-yml`:
+You can also run a rootless container with docker-compose by adding the required attributes to the `zigbee2mqtt` service block in your `docker-compose.yml`:
 
 ```yaml
     group_add:
@@ -146,6 +150,29 @@ docker-compose up -d zigbee2mqtt
 ```
 
 You can optionally skip `zigbee2mqtt` and it will pull any new images for all containers in the compose file, and then restart those that were updated.
+
+## Notes for Raspberry Pi users
+- If you are running Raspbian Buster (not Bullseye!) (find out by executing `grep "PRETTY_NAME" /etc/os-release`) you need to install `libseccomp2`, this can be done by executing the following commands:
+```bash
+sudo apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv-keys 04EE7237B7D453EC 648ACFD622F3D138
+echo "deb http://httpredir.debian.org/debian buster-backports main contrib non-free" | sudo tee -a "/etc/apt/sources.list.d/debian-backports.list"
+sudo apt update
+sudo apt install libseccomp2 -t buster-backports
+```
+If you do not do this you will get the following error when starting the Zigbee2MQTT container:
+
+```bash
+#
+# Fatal error in , line 0
+# unreachable code
+#
+#
+#
+#FailureMessage Object: 0x7eace25c
+```
+
+- For Raspberry Pi 1 and zero users: there is a bug in Docker which selects the wrong image architecture.
+Before executing `docker run` pull the correct image with `docker pull koenkk/zigbee2mqtt --platform linux/arm/v6`.
 
 ## Docker Stack device mapping
 *This is only relevant when using Docker Stack*
@@ -425,6 +452,20 @@ The workaround is based on the solution found at [Add support for devices with "
 	```shell
 	docker stack deploy zigbee2mqtt --compose-file docker-stack-zigbee2mqtt.yml
 	```
+
+### Troubleshooting
+
+It could happen that even after the above the container is not starting correctly and bringing a "Operation not permitted" message in the log of the service for the device:
+```
+Error: Error while opening serialport 'Error: Error: Operation not permitted, cannot open /dev/zigbee-serial'
+```
+
+This is due to the usage of cgroupv2 instead of cgroupv1 which is not fully supported by docker/containerd.
+To switch from cgroupv2 to cgroupv1 you have to add `systemd.unified_cgroup_hierarchy=false` to the grub cmdline.
+E.g. on an Raspberry Pi 4 with Raspian Bullseye you can add it to the end of the line in the /boot/cmdline.txt file:
+```
+[...] rootfstype=ext4 fsck.repair=yes rootwait cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1 systemd.unified_cgroup_hierarchy=false
+```
 
 ## Docker on Synology DSM 7.0
 

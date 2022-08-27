@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | AU-A1ZBDSS  |
 | Vendor  | Aurora Lighting  |
 | Description | Double smart socket UK |
-| Exposes | switch (state), power, linkquality |
+| Exposes | switch (state), power, brightness, linkquality |
 | Picture | ![Aurora Lighting AU-A1ZBDSS](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBDSS.jpg) |
 
 
@@ -30,6 +30,8 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -61,6 +63,13 @@ Instantaneous measured power.
 Value can be found in the published state on the `power_right` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
+
+### Brightness (numeric)
+Brightness of this backlight LED.
+Value can be found in the published state on the `brightness` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `254`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

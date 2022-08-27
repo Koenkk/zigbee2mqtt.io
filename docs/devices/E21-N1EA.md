@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | E21-N1EA  |
 | Vendor  | Sengled  |
 | Description | Smart LED multicolor A19 bulb |
-| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power, energy, linkquality |
 | Picture | ![Sengled E21-N1EA](https://www.zigbee2mqtt.io/images/devices/E21-N1EA.jpg) |
 
 
@@ -26,6 +26,9 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -79,6 +82,18 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
+
+### Power (numeric)
+Instantaneous measured power.
+Value can be found in the published state on the `power` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `W`.
+
+### Energy (numeric)
+Sum of consumed energy.
+Value can be found in the published state on the `energy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kWh`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

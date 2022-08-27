@@ -174,7 +174,7 @@ Example:
 
 ### Climate
 Indicates this device exposes climate functionality.
-- Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `occupied_cooling_setpoint`, `local_temperature`, `system_mode`, `running_state`, `fan_mode`, `preset`, `away_mode`, `local_temperature_calibration`, `sensor`, `away_mode`, `pi_heating_demand` and `ac_louver_position`.
+- Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `occupied_cooling_setpoint`, `unoccupied_heating_setpoint`, `unoccupied_cooling_setpoint`, `local_temperature`, `system_mode`, `running_state`, `fan_mode`, `preset`, `local_temperature_calibration`, `sensor`, `pi_heating_demand`, `running_mode` and `ac_louver_position`.
 - Never has both `occupied_heating_setpoint` and `current_heating_setpoint`.
 - Possible values for `system_mode` are `off`, `heat`, `cool`, `auto`, `dry` and `fan_only`.
 - Possible values for `running_state` are `idle`, `heat`, `cool`.
@@ -192,7 +192,6 @@ Example:
         {"type":"enum","name":"preset","property":"preset","values":["hold", "program"],"access":7},
         {"type":"enum","name":"running_state","property":"running_state","values":["idle", "heat", "cool"],"access":3},
         {"type":"enum","name":"mode","property":"fan_mode","values":["off", "low", "medium", "high", "on", "auto", "smart"],"access":7},
-        {"type":"binary","name":"away_mode","property":"away_mode","value_on":"ON","value_off":"OFF","access":7},
     ]
 }
 ```

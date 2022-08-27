@@ -23,7 +23,7 @@ sudo <path-to>/cc-tool -e -w <path-to>/sniffer_fw_cc2531.hex
 ```
 
 #### Windows (and possibly Ubuntu)
-For Windows this firmware is included with [ZBOSS](http://zboss.dsr-wireless.com/downloads/index/zboss). Register an account and download *ZBOSS Sniffer for Windows 64-bit*. Included in the ZIP file is the firmware in subfolder `hw\CC2531 USB dongle\zboss_sniffer.hex`. Please note that ZBOSS is also available for Ubuntu 64-bit.
+For Windows this firmware is included with [ZBOSS](https://dsr-iot.com/downloads). Register an account and download *Zigbee sniffer package rev. 2.0*. Included in the ZIP file is the firmware in subfolder `zb_sniffer_bin\zb_sniffer_target\CC2531 USB dongle\zboss_sniffer.hex`. Please note that ZBOSS is also available for Ubuntu 64-bit.
 
 ### 2. Installing required tools
 
@@ -74,20 +74,20 @@ Now Wireshark is able to decrypt the messages. When e.g. turning on a light you 
 * If you get `couldn't run /usr/bin/dumpcap in child process: permission denied` when running whsniff, check if /usr/bin/dumpcap is executable for everyone. Or `chmod 755 /usr/bin/dumpcap`.
 * You may need to remove `modemmanager` as this has been known to cause issues. [Howto](../../guide/faq/README.md#modemmanager-is-installed)
 
-## With HUSBZB-1 stick
-If you happen to have a spare HUSBZB-1 stick, you can also use this to sniff traffic.
+## With HUSBZB-1 and EZSP USB sticks
+If you happen to have a spare HUSBZB-1 or EZSP stick, you can also use this to sniff traffic.
 
 ### Prerequisites
 * Computer
   * Ubuntu machine (tested with 18.10)
   * Windows machine (tested with Windows 10)
-* HUSBZB-1 stick
+* HUSBZB-1 or EZSP stick
 * Wireshark
 * Java
 
 ### 1. Install drivers
 #### Ubuntu
-On linux systems, the HUSBZB-1 stick should work out of the box with no modifications.
+On linux systems, the HUSBZB-1 or EZSP stick should work out of the box with no modifications.
 
 #### Windows
 Found on https://www.amazon.com/gp/customer-reviews/RSPH6UCG0N3WK/
@@ -106,7 +106,7 @@ Found on https://www.amazon.com/gp/customer-reviews/RSPH6UCG0N3WK/
   1. You can find this by going to "Ports (COM & LPT)" in the device manager
 
 ### 2. Installing required tools
-Both Windows and Ubuntu use the same program for sniffing, found https://github.com/zsmartsystems/com.zsmartsystems.zigbee.sniffer. Scroll down to the bottom to download a precompiled jar file.
+Both Windows and Ubuntu use the same program for sniffing. Scroll down to the bottom of the README of https://github.com/zsmartsystems/com.zsmartsystems.zigbee.sniffer to find how a precompiled jar file can be downloaded.
 
 #### Ubuntu
 No extra software besides `ZigbeeSniffer.jar` and Wireshark is needed
@@ -123,6 +123,6 @@ Once you have the application running, you should see it connect to and start sn
 
 After that, open up Wireshark and start capturing on the loopback adapter.
 
-Then, apply a filter `udp.port=17754` in order to filter down to only Zigbee traffic.
+Then, apply a filter `udp.port == 17754` in order to filter down to only Zigbee traffic.
 
 Lastly, follow the steps of the CC2531 instructions above to set up your encryption keys the same.

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZP-LZ-FR2U  |
 | Vendor  | Moes  |
 | Description | Zigbee 3.0 dual USB wireless socket plug |
-| Exposes | switch (state), power_outage_memory, linkquality |
+| Exposes | switch (state), power_outage_memory, lock (state), linkquality |
 | Picture | ![Moes ZP-LZ-FR2U](https://www.zigbee2mqtt.io/images/devices/ZP-LZ-FR2U.jpg) |
 
 
@@ -44,9 +44,14 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 ### Power_outage_memory (enum)
 Recover state after power outage.
 Value can be found in the published state on the `power_outage_memory` property.
-It's not possible to read (`/get`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 The possible values are: `on`, `off`, `restore`.
+
+### Lock 
+The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
+To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+It's not possible to read (`/get`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

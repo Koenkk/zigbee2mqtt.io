@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | easyCodeTouch_v1  |
 | Vendor  | Onesti Products AS  |
 | Description | Zigbee module for EasyAccess code touch series |
-| Exposes | lock (state, lock_state), battery, sound_volume, action, auto_relock, pin_code, linkquality |
+| Exposes | lock (state, lock_state), battery, sound_volume, action_source_name, action_user, action, auto_relock, pin_code, linkquality |
 | Picture | ![Onesti Products AS easyCodeTouch_v1](https://www.zigbee2mqtt.io/images/devices/easyCodeTouch_v1.jpg) |
 
 
@@ -50,6 +50,17 @@ Value can be found in the published state on the `sound_volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sound_volume": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": NEW_VALUE}`.
 The possible values are: `silent_mode`, `low_volume`, `high_volume`.
+
+### Action_source_name (enum)
+Source of the triggered action on the lock.
+Value can be found in the published state on the `action_source_name` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `keypad`, `rfid`, `manual`, `rf`.
+
+### Action_user (numeric)
+ID of user that triggered the action on the lock.
+Value can be found in the published state on the `action_user` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

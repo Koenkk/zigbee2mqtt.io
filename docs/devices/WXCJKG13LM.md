@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WXCJKG13LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara Opple switch 3 bands |
-| Exposes | battery, action, operation_mode, linkquality |
+| Exposes | battery, voltage, action, operation_mode, power_outage_count, linkquality |
 | Picture | ![Xiaomi WXCJKG13LM](https://www.zigbee2mqtt.io/images/devices/WXCJKG13LM.jpg) |
 
 
@@ -65,6 +65,12 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
+### Voltage (numeric)
+Voltage of the battery in millivolts.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `mV`.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
@@ -77,6 +83,11 @@ Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `command`, `event`.
+
+### Power_outage_count (numeric)
+Number of power outages.
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

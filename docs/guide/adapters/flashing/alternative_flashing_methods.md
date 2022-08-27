@@ -4,7 +4,7 @@
 
 ### With Raspberry Pi (~3min)
 
-1. Install [wiringPi](http://wiringpi.com/download-and-install/), if not already installed.
+1. Install [wiringPi](https://github.com/WiringPi/WiringPi/releases), if not already installed.
 
 2. Install [flash_cc2531](https://github.com/jmichault/flash_cc2531) :
 ```bash

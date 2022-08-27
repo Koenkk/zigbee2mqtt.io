@@ -24,8 +24,17 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Binding
 
+No sensible [binding](../guide/usage/binding.md) functionallity available. 
+
+Only the genOta and genTime clusters can be bound.
+
+### OTA
+
+No over the air firmware update support.
 <!-- Notes END: Do not edit below this line -->
 
 

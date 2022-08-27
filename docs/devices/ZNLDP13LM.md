@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNLDP13LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara T1 smart LED bulb |
-| Exposes | light (state, brightness, color_temp, color_temp_startup), linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup), power_outage_memory, device_temperature, power_outage_count, linkquality |
 | Picture | ![Xiaomi ZNLDP13LM](https://www.zigbee2mqtt.io/images/devices/ZNLDP13LM.jpg) |
 
 
@@ -37,6 +37,10 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
 * `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
+
+* `device_temperature_precision`: Number of digits after decimal point for device_temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -71,6 +75,24 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "color_temp_step": 99, // Increase color temperature by 99
 }
 ````
+
+### Power_outage_memory (binary)
+Enable/disable the power outage memory, this recovers the on/off mode after power failure.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+If value equals `true` power_outage_memory is ON, if `false` OFF.
+
+### Device_temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Power_outage_count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

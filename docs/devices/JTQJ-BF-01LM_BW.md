@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | MiJia gas leak detector  |
 | Exposes | gas, battery_low, tamper, sensitivity, gas_density, selftest, linkquality |
 | Picture | ![Xiaomi JTQJ-BF-01LM/BW](https://www.zigbee2mqtt.io/images/devices/JTQJ-BF-01LM-BW.jpg) |
+| White-label | Xiaomi YTC4019RT |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

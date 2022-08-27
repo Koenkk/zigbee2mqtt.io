@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_miniPWS  |
 | Vendor  | Custom devices (DiY)  |
 | Description | [Mini plant wattering sensor](http://efektalab.com/miniPWS) |
-| Exposes | soil_moisture, battery, linkquality |
+| Exposes | soil_moisture, battery, report_delay, linkquality |
 | Picture | ![Custom devices (DiY) EFEKTA_miniPWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_miniPWS.jpg) |
 
 
@@ -53,6 +53,14 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Report_delay (numeric)
+Adjust Report Delay, by default 60 minutes.
+Value can be found in the published state on the `report_delay` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `180`.
+The unit of this value is `min`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

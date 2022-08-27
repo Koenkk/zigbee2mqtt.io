@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS011F_din_smart_relay  |
 | Vendor  | TuYa  |
 | Description | Din smart relay (with power monitoring) |
-| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
+| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, linkquality |
 | Picture | ![TuYa TS011F_din_smart_relay](https://www.zigbee2mqtt.io/images/devices/TS011F_din_smart_relay.jpg) |
 | White-label | MatSee Plus ATMS1602Z |
 
@@ -27,6 +27,9 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -73,9 +76,16 @@ The unit of this value is `kWh`.
 ### Power_outage_memory (enum)
 Recover state after power outage.
 Value can be found in the published state on the `power_outage_memory` property.
-It's not possible to read (`/get`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 The possible values are: `on`, `off`, `restore`.
+
+### Indicator_mode (enum)
+Relay LED indicator mode.
+Value can be found in the published state on the `indicator_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `off`, `on_off`, `off_on`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
