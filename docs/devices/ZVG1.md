@@ -36,7 +36,7 @@ After this the device will automatically join.
 
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `ON`, `OFF` or `TOGGLE`.
 It's not possible to read (`/get`) this value.
 
 ### Battery (numeric)
@@ -49,14 +49,14 @@ The unit of this value is `%`.
 ### Timer_state (enum)
 Value can be found in the published state on the `timer_state` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer_state": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set/timer_state` with payload `NEW_VALUE`.
 The possible values are: `disabled`, `active`, `enabled`.
 
 ### Timer (numeric)
 Auto off after specific time.
 Value can be found in the published state on the `timer` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer": NEW_VALUE}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set/timer` with payload `NEW_VALUE`.
 The minimal value is `0` and the maximum value is `240`.
 The unit of this value is `min`.
 
