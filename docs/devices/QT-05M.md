@@ -12,27 +12,27 @@
  | Model | QT-05M  |
  | Vendor  | QOTO  |
  | Description | Solar power garden waterering timer |
- | Exposes | state, used, remaining, manual, timer, automatic, battery, linkquality |
+ | Exposes | water_flow, last_watering_time, remaining_watering_time, valve_state, shutdown_timer, valve_state_auto_shutdown, battery, linkquality |
  | Picture | ![QOTO QT-05M ](https://www.zigbee2mqtt.io/images/devices/QT-05M.jpg) |
 
 
  ## Exposes
 
- ### State
+ ### Water Flow
  Current water flow (Opening of the valve in %). 
 
- ### Used (numeric)
+ ### Last Watering Time (numeric)
  Duration of the last watering (in seconds).
 
- ### Remaining (numeric)
- How long more will the valve remain open (during auto shutdown). Updates every minute, and every 10s in the last minute.
+ ### Remaining Watering Time (numeric)
+ Remaning watering time (for auto shutdown). Updates every minute, and every 10s in the last minute.
 
- ### Manual (numeric)
+ ### Valve State (numeric)
  Set valve to %. Will stay open until manually set back to 0.
 
- ### Timer (numeric)
+ ### Shutdown Timer (numeric)
  Set duration of the automatic shutdown (in seconds).
 
- ### automatic (numeric)
- Set valve to %. Will automatically shutdown based on the value set for "Timer".
+ ### Valve State Auto Shutdown (numeric)
+ Set valve to %. Will automatically shutdown based on the value set for "Shutdown Timer".
 
