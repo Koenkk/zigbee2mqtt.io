@@ -101,7 +101,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report": NEW_VALUE}`.
-The possible values are: `REPORT`.
+The possible values are: ``.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

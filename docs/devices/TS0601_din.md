@@ -35,6 +35,8 @@ As it is mentioned below in the "Exposes" section there is no way to read (`/get
 The only value that is reliable enough is Energy since it is calculated and stored incrementally.
 <!-- Notes END: Do not edit below this line -->
 
+
+
 ## Exposes
 
 ### Switch 
@@ -72,3 +74,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+

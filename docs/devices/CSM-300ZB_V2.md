@@ -1,7 +1,7 @@
 ---
 title: "ShinaSystem CSM-300ZB_V2 control via MQTT"
 description: "Integrate your ShinaSystem CSM-300ZB_V2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-08-19T08:58:50
+addedAt: 2022-08-31T11:26:27
 pageClass: device-page
 ---
 
@@ -15,7 +15,7 @@ pageClass: device-page
 
 |     |     |
 |-----|-----|
-| Model | CSM-300ZB_V2 |
+| Model | CSM-300ZB_V2  |
 | Vendor  | ShinaSystem  |
 | Description | SiHAS multipurpose ToF sensor |
 | Exposes | battery, voltage, status, people, linkquality |
@@ -26,6 +26,9 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 
@@ -41,7 +44,6 @@ The unit of this value is `%`.
 ### Voltage (numeric)
 Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
-It's 1,000mV lower then actual voltage.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
