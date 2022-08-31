@@ -26,7 +26,7 @@ pageClass: device-page
 ## Notes
 
 ### Battery Type
-CR2032
+Uses a CR2032 battery
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
