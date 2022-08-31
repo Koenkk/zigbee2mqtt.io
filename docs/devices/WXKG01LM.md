@@ -27,7 +27,7 @@ pageClass: device-page
 ## Notes
 
 ### Battery Type
-CR2032
+Uses a CR2032 battery
 
 ### Deprecated click event
 By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
