@@ -93,7 +93,7 @@ Manual start of siren.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
-If value equals `ON` alarm is ON, if `OFF` OFF.
+If value equals `START` alarm is ON, if `OFF` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

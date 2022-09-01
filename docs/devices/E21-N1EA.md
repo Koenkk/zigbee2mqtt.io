@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | E21-N1EA  |
 | Vendor  | Sengled  |
 | Description | Smart LED multicolor A19 bulb |
-| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power, energy, linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), power, energy, linkquality |
 | Picture | ![Sengled E21-N1EA](https://www.zigbee2mqtt.io/images/devices/E21-N1EA.jpg) |
 
 
@@ -75,13 +75,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "color_temp_step": 99, // Increase color temperature by 99
 }
 ````
-
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
 ### Power (numeric)
 Instantaneous measured power.
