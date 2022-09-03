@@ -66,7 +66,8 @@ The unit of this value is `A`.
 Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `kWh`.
+The unit of this value is `kWh`. 
+This value shows "null" until meter measures some about 0.2 ammount of kWh consumed.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
