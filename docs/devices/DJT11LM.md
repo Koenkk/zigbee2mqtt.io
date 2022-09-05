@@ -25,6 +25,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Battery
+Uses a CR2032 battery
 
 ### Pairing
 Press the reset button for about 5 seconds. The LED lights up 3 times.
