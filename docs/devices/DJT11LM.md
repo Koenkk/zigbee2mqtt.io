@@ -25,6 +25,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Battery
+Uses a CR2032 battery
 
 ### Pairing
 Press the reset button for about 5 seconds. The LED lights up 3 times.
@@ -57,8 +59,6 @@ After setting the sensitivity you immediately have to start pressing the reset b
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `device_temperature_precision`: Number of digits after decimal point for device_temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 

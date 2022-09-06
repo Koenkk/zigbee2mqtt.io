@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | JY-GZ-01AQ  |
 | Vendor  | Xiaomi  |
 | Description | Aqara smart smoke detector |
-| Exposes | smoke, smoke_density, smoke_density_dbm, selftest, test, mute_buzzer, mute, heartbeat_indicator, linkage_alarm, battery, voltage, power_outage_count, linkquality |
+| Exposes | smoke, smoke_density, smoke_density_dbm, selftest, test, buzzer, buzzer_manual_alarm, buzzer_manual_mute, heartbeat_indicator, linkage_alarm, linkage_alarm_state, battery, voltage, power_outage_count, linkquality |
 | Picture | ![Xiaomi JY-GZ-01AQ](https://www.zigbee2mqtt.io/images/devices/JY-GZ-01AQ.jpg) |
 
 
@@ -66,7 +66,8 @@ It's not possible to write (`/set`) this value.
 ### Smoke_density_dbm (numeric)
 Value of smoke concentration in dB/m.
 Value can be found in the published state on the `smoke_density_dbm` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"smoke_density_dbm": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `dB/m`.
 
 ### Selftest (enum)
@@ -74,7 +75,7 @@ Starts the self-test process (checking the indicator light and buzzer work prope
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"selftest": NEW_VALUE}`.
-The possible values are: `Test`.
+The possible values are: ``.
 
 ### Test (binary)
 Self-test in progress.
@@ -82,19 +83,26 @@ Value can be found in the published state on the `test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
 
-### Mute_buzzer (enum)
-Mute the buzzer for 80 seconds (buzzer cannot be pre-muted, because this function only works when the alarm is triggered).
+### Buzzer (enum)
+The buzzer can be muted and alarmed manually. During a smoke alarm, the buzzer can be manually muted for 80 seconds ("mute") and unmuted ("alarm"). The buzzer cannot be pre-muted, as this function only works during a smoke alarm. During the absence of a smoke alarm, the buzzer can be manually alarmed ("alarm") and disalarmed ("mute").
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mute_buzzer": NEW_VALUE}`.
-The possible values are: `Mute`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"buzzer": NEW_VALUE}`.
+The possible values are: `mute`, `alarm`.
 
-### Mute (binary)
-Buzzer muted.
-Value can be found in the published state on the `mute` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mute": ""}`.
+### Buzzer_manual_alarm (binary)
+Buzzer alarmed (manually).
+Value can be found in the published state on the `buzzer_manual_alarm` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"buzzer_manual_alarm": ""}`.
 It's not possible to write (`/set`) this value.
-If value equals `true` mute is ON, if `false` OFF.
+If value equals `true` buzzer_manual_alarm is ON, if `false` OFF.
+
+### Buzzer_manual_mute (binary)
+Buzzer muted (manually).
+Value can be found in the published state on the `buzzer_manual_mute` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"buzzer_manual_mute": ""}`.
+It's not possible to write (`/set`) this value.
+If value equals `true` buzzer_manual_mute is ON, if `false` OFF.
 
 ### Heartbeat_indicator (binary)
 When this option is enabled then in the normal monitoring state, the green indicator light flashes every 60 seconds.
@@ -104,11 +112,17 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `true` heartbeat_indicator is ON, if `false` OFF.
 
 ### Linkage_alarm (binary)
-When this option is enabled and a smoke is detected, other detectors with this option enabled will also sound the alarm buzzer.
+When this option is enabled and a smoke alarm has occurred, then "linkage_alarm_state"=true, and when the smoke alarm has ended or the buzzer has been manually muted, then "linkage_alarm_state"=false.
 Value can be found in the published state on the `linkage_alarm` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"linkage_alarm": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linkage_alarm": NEW_VALUE}`.
 If value equals `true` linkage_alarm is ON, if `false` OFF.
+
+### Linkage_alarm_state (binary)
+"linkage_alarm" is triggered.
+Value can be found in the published state on the `linkage_alarm_state` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` linkage_alarm_state is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %.

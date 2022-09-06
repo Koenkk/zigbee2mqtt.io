@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | E1G-G8E  |
 | Vendor  | Sengled  |
 | Description | Multicolor light strip (2M) |
-| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), linkquality |
 | Picture | ![Sengled E1G-G8E](https://www.zigbee2mqtt.io/images/devices/E1G-G8E.jpg) |
 
 
@@ -75,13 +75,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "color_temp_step": 99, // Increase color temperature by 99
 }
 ````
-
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
