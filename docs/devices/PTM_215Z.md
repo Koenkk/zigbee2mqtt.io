@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
 | Picture | ![EnOcean PTM 215Z](https://www.zigbee2mqtt.io/images/devices/PTM-215Z.jpg) |
-| White-label | Niko 91004, NodOn CWS-4-1-01_HUE, Vimar 03906, Sunricher SR-ZGP2801K4-FOH-E, LED Trading 9125 |
+| White-label | Niko 91004, NodOn CWS-4-1-01_HUE, Vimar 03906, Sunricher SR-ZGP2801K4-FOH-E, LED Trading 9125, Feller Smart Light Control for Philips Hue |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
