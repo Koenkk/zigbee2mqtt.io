@@ -1,6 +1,6 @@
 # Touchlink
 
-**Important:** Touchlink **only** works for adapters based on a Texas Instruments chip (chips starting with CC, e.g. CC2652).
+**Important:** Only works with Zigbee Coordinator that has Touchlink enabled in firmware and support for touchlinking in [zigbee-herdsman adapter code](https://github.com/Koenkk/zigbee-herdsman).
 
 Touchlink is a feature of Zigbee which allows devices physically close to each other to communicate with each other **without** being in the same network.
 
@@ -20,7 +20,7 @@ This allows to identify (e.g. bulb blinking) a device via Touchlink. To identify
 ## Factory reset device
 Zigbee2MQTT allows to factory reset devices through Touchlink. This is especially handy for e.g. Philips Hue bulbs as they cannot be factory reset by turning them on/off 5 times. Demo: [video](https://www.youtube.com/watch?v=kcRj77YGyKk)
 
-To factory reset a device through Touchlink bring the device close (< 10 cm) to your coordinator (e.g. CC2531 adapter). After this send a MQTT message to `zigbee2mqtt/bridge/request/touchlink/factory_reset` with an empty payload.
+To factory reset a device through Touchlink bring the device close (< 10 cm) to your Zigbee Coordinator (e.g. Zigbee USB adapter). After this send a MQTT message to `zigbee2mqtt/bridge/request/touchlink/factory_reset` with an empty payload.
 
 Zigbee2MQTT will now start scanning, this can take up to 1 minute and during this scan **your network cannot be used**. After some time the device will identify itself (e.g. a bulb will start to blink).
 
