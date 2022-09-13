@@ -1,6 +1,6 @@
 # Touchlink
 
-**Important:** Only works with Zigbee Coordinator that has Touchlink enabled in firmware and support for touchlinking in [zigbee-herdsman adapter code](https://github.com/Koenkk/zigbee-herdsman).
+**Important:** The touchlinking function **only** works with Zigbee Coordinator adapters based on a Texas Instruments ZNP adapters (TI chips starting with "CC", e.g. CC2652) and Silicon Labs EZSP adapters (Silabs chips starting with "EFR32", e.g. EFR32MG21) with touchlink enabled in the Zigbee Coordinator firmware.
 
 Touchlink is a feature of Zigbee which allows devices physically close to each other to communicate with each other **without** being in the same network.
 
