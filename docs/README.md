@@ -13,7 +13,7 @@ features:
   - title: Compatible
     details: Zigbee2MQTT supports various Zigbee adapters and a big bunch of devices.
   - title: Integrations
-    details: Zigbee2MQTT integrates well with most home automation solution because it uses MQTT.
+    details: Zigbee2MQTT integrates well with most home automation solutions because it uses MQTT.
   - title: Open Source
     details: Zigbee2MQTT is licenced under the free GNU General Public License 3.
 footer: zigbee2mqtt.io is maintained by @Koenkk.
