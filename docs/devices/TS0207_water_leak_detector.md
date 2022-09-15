@@ -24,7 +24,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
+## Notes
+Device drops from zigbee network after a short period of time and doesn't rejoin.  Appears to be a known issue without any resolution.
 
 <!-- Notes END: Do not edit below this line -->
 
