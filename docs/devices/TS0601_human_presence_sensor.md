@@ -41,13 +41,13 @@ If value equals `true` presence is ON, if `false` OFF.
 Shows the presence duration in minutes.
 Value can be found in the published state on the `duration_of_attendance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `minutes`.
+The unit of this value is `minutes`. 60 minutes max then stop at 60. 
 
 ### Duration_of_absence (numeric)
 Shows the duration of the absence in minutes.
 Value can be found in the published state on the `duration_of_absence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `minutes`.
+The unit of this value is `minutes`. 60 minutes max than stop at 60.
 
 ### Led_state (binary)
 Turns the onboard LED on or off.
