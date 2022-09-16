@@ -24,7 +24,9 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-
+### Issues with inadvertent state toggling by control switches
+It's been reported by several people that this plug can be turned on or off by control switches (e.g. IKEA E1812 or E1743) when routed through this plug. The problem only affects firmware version v42 according to current knowledge.
+A temporary solution is currently to install an older firmware version (v32) with a modified file version header to bypass the downgrade restriction. See [issue #13903](https://github.com/Koenkk/zigbee2mqtt/issues/13903#issuecomment-1244720072) for a tutorial and further information.
 
 ### Pairing
 Press and hold the button on the device for +- 5 seconds, until the blue light starts blinking.
