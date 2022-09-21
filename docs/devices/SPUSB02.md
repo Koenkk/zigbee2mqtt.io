@@ -1,7 +1,7 @@
 ---
-title: "Mercator SPP04G control via MQTT"
-description: "Integrate your Mercator SPP04G via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-08-01T15:06:58
+title: "Mercator SPUSB02 control via MQTT"
+description: "Integrate your Mercator SPUSB02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-09-21T11:55:17
 pageClass: device-page
 ---
 
@@ -11,22 +11,21 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SPP04G
+# Mercator SPUSB02
 
 |     |     |
 |-----|-----|
-| Model | SPP04G  |
+| Model | SPUSB02  |
 | Vendor  | Mercator  |
-| Description | Ikuü Quad Power Point |
+| Description | Ikuü Double Power Point with USB |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
-| Picture | ![Mercator SPP04G](https://www.zigbee2mqtt.io/images/devices/SPP04G.jpg) |
+| Picture | ![Mercator SPUSB02](https://www.zigbee2mqtt.io/images/devices/SPUSB02.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
-
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -36,7 +35,6 @@ pageClass: device-page
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
-
 
 ## Exposes
 
@@ -73,13 +71,6 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Power_outage_memory (enum)
-Recover state after power outage.
-Value can be found in the published state on the `power_outage_memory` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-The possible values are: `on`, `off`, `restore`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
