@@ -1,3 +1,9 @@
+---
+title: "TuYa 40ZH-O control via MQTT"
+description: "Integrate your TuYa 40ZH-O via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 
+pageClass: device-page
+---
 
 <!-- !!!! -->
 <!-- ATTENTION: This file is auto-generated through docgen! -->
