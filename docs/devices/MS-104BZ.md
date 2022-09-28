@@ -27,7 +27,18 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+## Notes
 
+Manual in the box with device may have wrong instruction for pairing [see](https://github.com/Koenkk/zigbee2mqtt/discussions/7634).
+
+Working instriction below.
+
+### Pairing
+
+1. Short push and release -> 1 beep
+2. Push and hold -> 2 beeps
+3. Don't release, keep pushing -> continuous beeping
+4. Release, device is in pairing mode
 
 ## Exposes
 
