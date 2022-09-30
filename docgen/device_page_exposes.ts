@@ -191,7 +191,7 @@ function getExposeDocs(expose) {
     lines.push(`\`\`\`\``);
   } else if (expose.type === 'climate') {
     lines.push(`This climate device supports the following features: ${expose.features.map((e) => `\`${e.name}\``).join(', ')}.`);
-    for (const f of expose.features.filter((e) => ['occupied_heating_setpoint', 'occupied_cooling_setpoint', 'current_heating_setpoint'].includes(e.name))) {
+    for (const f of expose.features.filter((e) => ['occupied_heating_setpoint', 'occupied_cooling_setpoint', 'current_heating_setpoint', 'pi_heating_demand'].includes(e.name))) {
       lines.push(`- \`${f.name}\`: ${f.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is the ${f.unit} between \`${f.value_min}\` and \`${f.value_max}\`. To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${f.property}": ""}\`.`);
     }
 

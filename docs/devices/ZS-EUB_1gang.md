@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | Moes  |
 | Description | Wall light switch (1 gang) |
 | Exposes | switch (state), power_on_behavior, switch_type, backlight_mode, linkquality |
-| Picture | ![Moes ZS-EUB_1gang](https://www.zigbee2mqtt.io/images/devices/TS0011.png) |
+| Picture | ![Moes ZS-EUB_1gang](https://www.zigbee2mqtt.io/images/devices/ZS-EUB_1gang.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -41,7 +41,7 @@ Controls the behavior when the device is powered on.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `previous`.
+The possible values are: `off`, `previous`, `on`.
 
 ### Switch_type (enum)
 Switch type settings.

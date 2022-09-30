@@ -133,7 +133,7 @@ Setting High CO2 Gas Border.
 Value can be found in the published state on the `high_gas` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_gas": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `99`.
+The minimal value is `400` and the maximum value is `2000`.
 The unit of this value is `ppm`.
 
 ### Low_gas (numeric)
@@ -141,7 +141,7 @@ Setting Low CO2 Gas Border.
 Value can be found in the published state on the `low_gas` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_gas": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `99`.
+The minimal value is `400` and the maximum value is `2000`.
 The unit of this value is `ppm`.
 
 ### Enable_temperature (binary)

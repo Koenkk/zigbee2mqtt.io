@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MOSZB-140  |
 | Vendor  | Develco  |
 | Description | Motion sensor |
-| Exposes | occupancy, battery_low, tamper, temperature, illuminance_lux, linkquality |
+| Exposes | occupancy, battery, battery_low, tamper, temperature, illuminance_lux, led_control, occupancy_timeout, linkquality |
 | Picture | ![Develco MOSZB-140](https://www.zigbee2mqtt.io/images/devices/MOSZB-140.jpg) |
 
 
@@ -48,6 +48,13 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
 ### Battery_low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
@@ -71,6 +78,20 @@ Measured illuminance in lux.
 Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
+
+### Led_control (enum)
+Control LED indicator usage..
+Value can be found in the published state on the `led_control` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_control": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_control": NEW_VALUE}`.
+The possible values are: `off`, `fault_only`, `motion_only`, `both`.
+
+### Occupancy_timeout (numeric)
+Value can be found in the published state on the `occupancy_timeout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
+The minimal value is `20` and the maximum value is `65535`.
+The unit of this value is `second`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -1,5 +1,5 @@
 ---
-title: "HEIMAN HS2SS control via MQTT"
+title: "HEIMAN HS2WDSC-E control via MQTT"
 description: "Integrate your HEIMAN HS2WDSC-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-09-30T20:52:56Z
 pageClass: device-page
@@ -28,6 +28,16 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. Example:
+```yaml
+simulated_brightness:
+  delta: 20 # delta per interval, default = 20
+  interval: 200 # interval in milliseconds, default = 200
+```
+
 
 ## Exposes
 
@@ -42,7 +52,7 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on`, `off`, `color_temperature_move`, `brightness_move_up`, `brightness_move_down`, `brightness_stop`.
+The possible values are: `on`, `off`, `move`, `stop`, `color_move`, `color_temperature_move`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -50,3 +60,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+

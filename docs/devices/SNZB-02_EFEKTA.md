@@ -1,6 +1,6 @@
 ---
-title: "Custom devices (DiY) SONOFF SNZB-02_EFEKTA control via MQTT"
-description: "Integrate your Custom devices (DiY) SONOFF SNZB-02_EFEKTA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Custom devices (DiY) SNZB-02_EFEKTA control via MQTT"
+description: "Integrate your Custom devices (DiY) SNZB-02_EFEKTA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-09-06T00:31:40Z
 pageClass: device-page
 ---
@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | SNZB-02_EFEKTA  |
 | Vendor  | Custom devices (DiY)  |
-| Description | [An alternative look at the SONOFF SNZB-TH02 temperature and humidity sensor, DIY](http://efektalab.com/SNZB-TH02) |
-| Exposes | battery, temperature, humidity, pressure, linkquality |
+| Description | Alternative firmware for the SONOFF SNZB-02 sensor from EfektaLab, DIY |
+| Exposes | battery, temperature, humidity, report_delay, enable_temperature, high_temperature, low_temperature, enable_humidity, high_humidity, low_humidity, linkquality |
 | Picture | ![Custom devices (DiY) SNZB-02_EFEKTA](https://www.zigbee2mqtt.io/images/devices/SNZB-02_EFEKTA.jpg) |
 
 
@@ -28,7 +28,6 @@ pageClass: device-page
 binding to clusters of temperature, air humidity, OnOff,
 direct control of external relays by data on temperature and humidity,
 direct sending of data on temperature and humidity to other devices.
-
 
 ### Build guide
 Instructions on how to build this device can be found [here](https://github.com/smartboxchannel/SONOFF-SNZB-02-Temperature-and-humidity-sensor)
@@ -47,7 +46,6 @@ Instructions on how to build this device can be found [here](https://github.com/
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
-
 ## Exposes
 
 ### Battery (numeric)
@@ -56,13 +54,6 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Report delay (numeric)
-Adjust Report Delay. Setting the time in minutes, by default 5 minutes.
-The default value presented by the device can be found in the `report_delay` property.
-It's possible  write (`/set`) this value.
-The minimal value is `1` and the maximum value is `60`.
-The unit of this value is `minutes`.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -76,51 +67,59 @@ Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Enable Temperature (binary)
-Enable Temperature (Activating the thermostat function).
-Value can be found in the published state on the `enable_temperature` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_temperature": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_temperature": NEW_VALUE}`. 
-If value equals ON enable_temperature is ON, if OFF OFF.
+### Report_delay (numeric)
+Adjust Report Delay. Setting the time in minutes, by default 5 minutes.
+Value can be found in the published state on the `report_delay` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `60`.
+The unit of this value is `Minutes`.
 
-### High temperature (numeric)
-Upper temperature threshold for the thermostat. 
+### Enable_temperature (binary)
+Enable Temperature Control.
+Value can be found in the published state on the `enable_temperature` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_temperature": NEW_VALUE}`.
+If value equals `ON` enable_temperature is ON, if `OFF` OFF.
+
+### High_temperature (numeric)
+Setting High Temperature Border.
 Value can be found in the published state on the `high_temperature` property.
-TTo read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"high_temperature": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature": NEW_VALUE}`.
 The minimal value is `-5` and the maximum value is `50`.
-The unit of this value is `°C`.
+The unit of this value is `C`.
 
-### Low temperature (numeric)
-Lower temperature threshold for the thermostat
+### Low_temperature (numeric)
+Setting Low Temperature Border.
 Value can be found in the published state on the `low_temperature` property.
-TTo read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"low_temperature": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_temperature": NEW_VALUE}`.
 The minimal value is `-5` and the maximum value is `50`.
-The unit of this value is `°C`.
+The unit of this value is `C`.
 
-### Enable Humidity (binary)
-Enable Humidity (Activating the hygrostat function).
+### Enable_humidity (binary)
+Enable Humidity Control.
 Value can be found in the published state on the `enable_humidity` property.
-To read (/get) the value publish a message to topic zigbee2mqtt/FRIENDLY_NAME/get with payload {"enable_humidity": ""}.
-To write (/set) a value publish a message to topic zigbee2mqtt/FRIENDLY_NAME/set with payload {"enable_humidity": NEW_VALUE}. 
-If value equals ON enable_temperature is ON, if OFF OFF.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_humidity": NEW_VALUE}`.
+If value equals `ON` enable_humidity is ON, if `OFF` OFF.
 
-### High humidity (numeric)
-Upper humidity threshold for the hygrostat. 
+### High_humidity (numeric)
+Setting High Humidity Border.
 Value can be found in the published state on the `high_humidity` property.
-TTo read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"high_humidity": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_humidity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `99`.
-The unit of this value is `%`.
+The unit of this value is `C`.
 
-### Low humidity (numeric)
-Lower humidity threshold for the hygrostat
+### Low_humidity (numeric)
+Setting Low Humidity Border.
 Value can be found in the published state on the `low_humidity` property.
-TTo read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"low_humidity": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_humidity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `99`.
-The unit of this value is `%`.
+The unit of this value is `C`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
@@ -128,3 +127,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+

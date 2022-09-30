@@ -93,7 +93,7 @@ The possible values are: `manual_open`, `manual_close`.
 Motor state.
 Value can be found in the published state on the `motor_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `stopped`, `opening`, `closing`.
+The possible values are: `stopped`, `opening`, `closing`, `pause`.
 
 ### Running (binary)
 Whether the motor is moving or not.

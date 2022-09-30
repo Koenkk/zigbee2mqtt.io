@@ -1,6 +1,6 @@
 ---
 title: "Mercator SSWF01G control via MQTT"
-description: "Integrate your Mercator Ikuu SSWF01G via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+description: "Integrate your Mercator SSWF01G via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-09-02T12:41:00
 pageClass: device-page
 ---
@@ -17,27 +17,30 @@ pageClass: device-page
 |-----|-----|
 | Model | SSWF01G  |
 | Vendor  | Mercator  |
-| Description | Ikuü AC Fan Controller |
-| Exposes | switch (state), fan (fan_state,fan_mode), linkquality |
-| Picture | ![Mercator SPP04G](https://www.zigbee2mqtt.io/images/devices/SSWF01G.jpg) |
+| Description | AC fan controller |
+| Exposes | switch (state), fan (state, mode), linkquality |
+| Picture | ![Mercator SSWF01G](https://www.zigbee2mqtt.io/images/devices/SSWF01G.jpg) |
+
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
 ## Exposes
 
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_left": "ON"}`, `{"state_left": "OFF"}` or `{"state_left": "TOGGLE"}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
-### Fan
-The current state of this fan is in the published state under the fan_state property (value is ON or OFF). 
-To control this fan publish a message to topic zigbee2mqtt/FRIENDLY_NAME/set with payload {"fan_state": "ON"} or {"fan_state": "OFF"}. 
-To read the current state of this fan publish a message to topic zigbee2mqtt/FRIENDLY_NAME/get with payload {"fan_state": ""}. 
-To change the mode publish a message to topic zigbee2mqtt/FRIENDLY_NAME/set with payload {"fan_mode": VALUE} where VALUE can be: off, low, medium, high, on
+### Fan 
+The current state of this fan is in the published state under the `fan_state` property (value is `ON` or `OFF`).
+To control this fan publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_state": "ON"}` or `{"fan_state": "OFF"}`.
+To read the current state of this fan publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fan_state": ""}`.
+To change the mode publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_mode": VALUE}` where `VALUE` can be: `off`, `low`, `medium`, `high`, `on`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

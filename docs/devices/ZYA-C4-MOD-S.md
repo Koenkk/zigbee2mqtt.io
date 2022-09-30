@@ -1,6 +1,6 @@
 ---
 title: "Yale ZYA-C4-MOD-S control via MQTT"
-description: "Integrate your Yale ZYA-C4-MOD-S module via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+description: "Integrate your Yale ZYA-C4-MOD-S via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-09-17T10:00:00Z
 pageClass: device-page
 ---
@@ -30,8 +30,9 @@ To pair the device; permit joining in Zigbee2MQTT, ensure that the ZYA-C4-MOD-S 
 
 ### Removing
 To remove the device, please do not use the delete device facility in Zigbee2MQTT - this will likely fail. Instead, click the button next to the module 3 times a chime should sound, followed shortly by another. You should then see in Zigbee2MQTT that the device has successfully left the network and should be available for re-pairing.
-
 <!-- Notes END: Do not edit below this line -->
+
+
 
 ## Exposes
 
