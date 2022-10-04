@@ -46,3 +46,29 @@ To recall the scene send a command to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAM
 To remove a scene send a command to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]/set` with payload `{"scene_remove": SCENE_ID}` where `SCENE_ID` is a number (e.g. `1`).
 
 Alternatively if you want to remove all scenes send a command to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]/set` with payload `{"scene_remove_all": ""}`
+
+## Using transitions in scenes
+Scene transition times can only be set with the `scene_add` command. To make use of the `scene_store` command and use transitions, first create a new scene using the `scene_add` command:
+
+```
+{
+    "scene_add": {
+        "ID": 0,
+        "name": "Scene Name",
+        "transition": 5
+    }
+}
+```
+
+That will create an empty scene. You can then set the values of your devices and call the `scene_store` command, using the same `ID` provided in the `scene_add` command:
+
+```
+{
+    "scene_store": {
+        "ID": 0,
+        "name": "Scene Name"
+    }
+}
+```
+
+The `scene_store` command overrites all values _except_ the `transition` value.
