@@ -29,7 +29,7 @@ Execute the following command, update the `--device` parameter to match the loca
 $ docker run \
    --name zigbee2mqtt \
    --restart=unless-stopped \
-   --device=/dev/ttyACM0 \
+   --device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0 \
    -p 8080:8080 \
    -v $(pwd)/data:/app/data \
    -v /run/udev:/run/udev:ro \
@@ -40,7 +40,7 @@ $ docker run \
 **Parameters explanation:**  
 * `--name zigbee2mqtt`: Name of container
 * `--restart=unless-stopped`: Automatically start on boot and restart after a crash
-* `--device=/dev/ttyACM0`: Location of adapter (e.g. CC2531)
+* `--device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0`: Location of adapter (e.g. CC2531). The path before the `:` is the path on the host, the path after it is the path that is mapped to inside the container. You should always use the `/dev/serial/by-id/` path on the host.
 * `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration (pwd maps to the current working directory)
 * `-v /run/udev:/run/udev:ro`: only required for auto-detecting the port and some adapters like ConBee
 * `-e TZ=Europe/Amsterdam`: Configure the timezone
@@ -75,7 +75,7 @@ $ sudo docker run \
    -p 8080:8080 \
    -v $(pwd)/data:/app/data \
    -v /run/udev:/run/udev:ro \
-   --device=/dev/ttyACM0 \
+   --device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0 \
    --user 1001:1001 \
    --group-add dialout \
    -e TZ=Europe/Amsterdam \
@@ -124,7 +124,7 @@ services:
       - TZ=Europe/Berlin
     devices:
       # Make sure this matched your adapter location
-      - /dev/ttyUSB0:/dev/ttyACM0
+      - /dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0
 ```
 
 You can also run a rootless container with docker-compose by adding the required attributes to the `zigbee2mqtt` service block in your `docker-compose.yml`:
