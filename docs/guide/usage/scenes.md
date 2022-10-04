@@ -47,7 +47,7 @@ To remove a scene send a command to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]
 
 Alternatively if you want to remove all scenes send a command to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]/set` with payload `{"scene_remove_all": ""}`
 
-## Scene Transitions
+## Using transitions in scenes
 Scene transition times can only be set with the `scene_add` command. To make use of the `scene_store` command and use transitions, first create a new scene using the `scene_add` command:
 
 ```
