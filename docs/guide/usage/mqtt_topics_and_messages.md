@@ -96,7 +96,7 @@ Example payload:
     "permit_join_timeout": 10, // Time in seconds till permit join is disabled, `undefined` in case of no timeout
     "config": {...}, // Will contain the complete Zigbee2MQTT config expect the network_key
     "config_schema": {...}, // Will contain the JSON schema of the config
-    "restart_required": false // Indicates wether Zigbee2MQTT needs to be restarted to apply options set through zigbee2mqtt/request/bridge/options
+    "restart_required": false // Indicates whether Zigbee2MQTT needs to be restarted to apply options set through zigbee2mqtt/request/bridge/options
 }
 ```
 
@@ -268,7 +268,7 @@ To allow joining for only a specific amount of time add the `time` property (in 
 
 #### zigbee2mqtt/bridge/request/health_check
 
-Allows to check wether Zigbee2MQTT is healthy. Payload has to be empty, example response: `{"data":{"healthy":true},"status":"ok"}`.
+Allows to check whether Zigbee2MQTT is healthy. Payload has to be empty, example response: `{"data":{"healthy":true},"status":"ok"}`.
 
 #### zigbee2mqtt/bridge/request/restart
 
