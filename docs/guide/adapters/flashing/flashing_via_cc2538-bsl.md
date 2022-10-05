@@ -38,7 +38,7 @@ unzip CC1352P2_CC2652P_launchpad_coordinator_20220219.zip
 
 sudo python3 cc2538-bsl.py -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb ./CC1352P2_CC2652P_launchpad_coordinator_20220219.hex
 ```
-`-ewv` means Mass **e**rease, **w**rite, **v**erify  
+`-ewv` means Mass **e**rase, **w**rite, **v**erify  
 `-p` is the port on which your device is running, in this case `/dev/ttyUSB0`  
 `--bootloader-sonoff-usb` means that the bootloader is activated by the script, by toggeling RTS and DTR in the correct pattern for Sonoff USB dongle (remove this if your device is not a Sonoff dongle).
   

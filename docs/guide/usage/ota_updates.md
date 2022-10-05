@@ -17,7 +17,7 @@ Not all manufacturers make their updates available, below is a (not-complete) li
 Gira does unfortunately not seem to offer firmware updates for their wall transmitter 2430-100 (which is very similar to the Jung ZLLxx5004M) and the update file for the Jung wall transmitter does not work for Gira (probably because the Gira wall transmitter only has 6 buttons instead of 8 on the Jung).
 - Sengled devices
 
-To check wether your specific device supports OTA updates via Zigbee2MQTT, go to the supported devices page, click on your device and look for the *OTA updates* section.
+To check whether your specific device supports OTA updates via Zigbee2MQTT, go to the supported devices page, click on your device and look for the *OTA updates* section.
 
 ## Automatic checking for available updates
 Your zigbee devices can request a firmware update check. Zigbee2MQTT obliges this, and will automatically check if updates are available for your devices.
