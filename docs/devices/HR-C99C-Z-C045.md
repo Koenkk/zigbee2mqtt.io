@@ -58,6 +58,12 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `scene_1`, `scene_2`, `scene_3`, `scene_4`, `color_saturation_step_up`, `color_saturation_step_down`, `color_stop`, `color_hue_step_up`, `color_hue_step_down`, `color_temperature_step_up`, `color_temperature_step_down`, `brightness_step_up`, `brightness_step_down`, `brightness_stop`.
 
+It is important to know that click on the center round boutton is the way to switch between
+color_saturation_step_down and color_temperature_step_up (bottom of the cicrcular button) 
+color_saturation_step_up and  color_temperature_step_down (top of the cicrcular button) 
+color_hue_step_down and nothing (left of the cicrcular button)
+color_hue_step_up and nothing (right of the cicrcular button)
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
