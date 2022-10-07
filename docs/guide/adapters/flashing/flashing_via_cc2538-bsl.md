@@ -8,14 +8,15 @@ CC2538-bsl is a python script by [Jelmer Tiete](https://github.com/JelmerT) that
 
 In this case we use a Sonoff Zigbee 3.0 USB Dongle Plus and flash the firmware without opening the case to press the "Boot" button.
 
-## Method with Docker on linux
+## Method with Docker (Linux only)
 ```bash
 docker run --rm \
     --device /dev/ttyUSB0:/dev/ttyUSB0 \
     -e FIRMWARE_URL=https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20220219.zip \
     ckware/ti-cc-tool -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb
 ```
-you can find details on the docker command [here](https://github.com/git-developer/ti-cc-tool)
+
+You can find details on the Docker command [here](https://github.com/git-developer/ti-cc-tool)
 
 ## Method without Docker
 
