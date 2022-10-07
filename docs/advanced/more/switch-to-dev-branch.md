@@ -21,7 +21,7 @@ cd /opt/zigbee2mqtt
 cp -R data data-backup
 
 # Update
-git fetch
+git fetch origin dev
 git checkout dev # Change 'dev' to 'master' to switch back to the release version
 git pull
 npm ci
