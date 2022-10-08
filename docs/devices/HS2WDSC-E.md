@@ -1,7 +1,7 @@
 ---
-title: "Müller Licht 404022 control via MQTT"
-description: "Integrate your Müller Licht 404022 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2021-01-31T22:24:43Z
+title: "HEIMAN HS2WDSC-E control via MQTT"
+description: "Integrate your HEIMAN HS2WDSC-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-09-30T20:52:56Z
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Müller Licht 404022
+# HEIMAN HS2WDSC-E
 
 |     |     |
 |-----|-----|
-| Model | 404022  |
-| Vendor  | Müller Licht  |
-| Description | Tint dim remote control |
-| Exposes | action, linkquality |
-| Picture | ![Müller Licht 404022](https://www.zigbee2mqtt.io/images/devices/404022.jpg) |
+| Model | HS2WDSC-E  |
+| Vendor  | HEIMAN  |
+| Description | Remote dimmer and temperature control |
+| Exposes | battery, action, linkquality |
+| Picture | ![HEIMAN HS2WDSC-E](https://www.zigbee2mqtt.io/images/devices/HS2WDSC-E.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -41,11 +41,18 @@ simulated_brightness:
 
 ## Exposes
 
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on`, `off`, `brightness_step_up`, `brightness_step_down`, `brightness_move_up`, `brightness_move_down`, `brightness_stop`, `color_temperature_move`.
+The possible values are: `on`, `off`, `move`, `stop`, `color_move`, `color_temperature_move`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

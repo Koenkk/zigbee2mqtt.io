@@ -96,7 +96,7 @@ Example payload:
     "permit_join_timeout": 10, // Time in seconds till permit join is disabled, `undefined` in case of no timeout
     "config": {...}, // Will contain the complete Zigbee2MQTT config expect the network_key
     "config_schema": {...}, // Will contain the JSON schema of the config
-    "restart_required": false // Indicates wether Zigbee2MQTT needs to be restarted to apply options set through zigbee2mqtt/request/bridge/options
+    "restart_required": false // Indicates whether Zigbee2MQTT needs to be restarted to apply options set through zigbee2mqtt/request/bridge/options
 }
 ```
 
@@ -268,7 +268,7 @@ To allow joining for only a specific amount of time add the `time` property (in 
 
 #### zigbee2mqtt/bridge/request/health_check
 
-Allows to check wether Zigbee2MQTT is healthy. Payload has to be empty, example response: `{"data":{"healthy":true},"status":"ok"}`.
+Allows to check whether Zigbee2MQTT is healthy. Payload has to be empty, example response: `{"data":{"healthy":true},"status":"ok"}`.
 
 #### zigbee2mqtt/bridge/request/restart
 
@@ -299,6 +299,10 @@ See [User extensions](../../advanced/more/user_extensions.md).
 #### zigbee2mqtt/bridge/request/backup
 
 Creates a backup of the `data` folder (without the `data/log` directory). Payload has to be empty, example response: `{"data":{"zip":"WklHQkVFMk1RVFQuUk9DS1M="},"status":"ok"}`. The `zip` property represents a zip file encoded via Base64.
+
+#### zigbee2mqtt/bridge/request/install_code/add
+
+Allows to add an install code to the coordinator. Use this when you want to pair a Zigbee 3.0 devices which can only be paired with an install code. These devices typicaly have a QR code on it. When scanning this QR code you will get a code, e.g. `ZB10SG0D831018234800400000000000000000009035EAFFFE424793DLKAE3B287281CF11F550733A0CFC38AA31E802`. Publish this code to `zigbee2mqtt/bridge/request/install_code/add` with payload `{"value":"THE_CODE"}`. Example response: `{"data":{"value":"THE_CODE"},"status":"ok"}`.
 
 ### Device
 

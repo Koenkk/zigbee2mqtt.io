@@ -62,7 +62,7 @@ The unit of this value is `W`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_left`, `double_left`, `single_right`, `double_right`, `single_both`, `double_both`.
+The possible values are: `hold_left`, `single_left`, `double_left`, `single_right`, `double_right`, `single_both`, `double_both`.
 
 ### Operation_mode (enum, left endpoint)
 Decoupled mode for left button.
