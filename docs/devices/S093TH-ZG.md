@@ -1,7 +1,7 @@
 ---
 title: "HZC Electric S093TH-ZG control via MQTT"
 description: "Integrate your HZC Electric S093TH-ZG Temperature and Humidity Sensor via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2021-05-01T14:47:09Z
+addedAt: 2022-10-10T21:00:00Z
 pageClass: device-page
 ---
 
