@@ -91,14 +91,27 @@ This climate device supports the following features: `local_temperature`, `curre
 - `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`
 
 ### Programming_mode (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"undefined": {"monday_schedule": VALUE, "tuesday_schedule": VALUE, "wednesday_schedule": VALUE, "thursday_schedule": VALUE, "friday_schedule": VALUE, "saturday_schedule": VALUE, "sunday_schedule": VALUE}}`
-- `monday_schedule` (text): undefined. 
-- `tuesday_schedule` (text): undefined. 
-- `wednesday_schedule` (text): undefined. 
-- `thursday_schedule` (text): undefined. 
-- `friday_schedule` (text): undefined. 
-- `saturday_schedule` (text): undefined. 
-- `sunday_schedule` (text): undefined. 
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload: 
+
+```
+{
+  "programming_mode": {
+    "monday_schedule": "6h:0m 18°C, 12h:30m 21°C, 19h:45m 22°C, 22h:0m 15°C",
+    "tuesday_schedule": "6h:0m 18°C, 12h:30m 21°C, 19h:45m 22°C, 22h:0m 15°C",
+    "wednesday_schedule": "6h:0m 18°C, 12h:30m 21°C, 19h:45m 22°C, 22h:0m 15°C",
+    "thursday_schedule": "6h:0m 18°C, 12h:30m 21°C, 19h:45m 22°C, 22h:0m 15°C",
+    "friday_schedule": "6h:0m 18°C, 12h:30m 21°C, 19h:45m 22°C, 22h:0m 15°C",
+    "saturday_schedule": "6h:0m 18°C, 12h:30m 21°C, 19h:45m 22°C, 22h:0m 15°C",
+    "sunday_schedule": "6h:0m 18°C, 12h:30m 21°C, 19h:45m 22°C, 22h:0m 15°C",
+   }
+}`
+```
+
+Or you may set only single day by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload:
+
+```
+{ "wednesday_schedule": "6h:0m 18°C, 12h:30m 21°C, 19h:45m 22°C, 22h:0m 15°C" }
+```
 
 ### Boost_heating (binary)
 Boost Heating: press and hold "+" for 3 seconds, the device will enter the boost heating mode, and the ▷╵◁ will flash. The countdown will be displayed in the APP.
