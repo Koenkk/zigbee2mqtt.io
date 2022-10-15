@@ -52,6 +52,8 @@ Both came with the firmware `1.2.245` -> I don't know if it gets easier with new
 
 Wifi from your Notebook might interfere with the pairing.
 
+You might also want to take a look at the bug: https://github.com/Koenkk/zigbee2mqtt/issues/611
+
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
