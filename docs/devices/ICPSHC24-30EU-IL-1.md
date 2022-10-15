@@ -27,18 +27,30 @@ pageClass: device-page
 
 
 ### Pairing
-To factory reset the TRADFRI drivers use a
-small pin or paperclip to push the reset button once.
+To factory reset the TRADFRI drivers use a small pin or paperclip to push the reset button once.
+There are two differend modes, long push will reset the device (blinking lights), short presses (no blinking lights) will help pairing the device.
+
 NB: you HAVE to put the device VERY close to the zigbee device, otherwise it won't be able to detect.
 
 If you struggle to pair this device, the following procedure should help getting it paired:
 
-1. Have the driver disconnected from power
-2. Enable join in your zigbee2mqtt server
-3. Connect the driver to the power, pairing begins immediately
-4. Keep short-pressing (LEDs can't blink, blinking means that the driver has been reset to factory state) the reset on the device until it is successfully configured
+If you have troubles pairing this device, note that you should always start with a freshly powered on device. Even when you reset the device you should switch the power off afterwards. And retry powering on the device.
 
-If you failed to pair it before, unplug it, plug it back, long press the reset on the driver so that the LEDs blink. Proceed with above procedure. 
+Timing is key, I'd advice you to disable zigbee2mqtt auto join and wait a few seconds before each try.
+
+The device is only able to pair for a short period of time after powering it on.
+After powering on the device you should immediately keep short-pressing (LEDs can't blink, blinking means that the driver has been reset to factory state) the reset on the device until it is successfully configured / you see a green pairing notification in your zigbee2mqtt server.
+
+I'd guess that depending on your zigbee hardware you need to enable zigbees autojoin mode between -3 to 3 seconds to the point you power on the device.
+I used a conbee II usb stick and had to enable autojoin -1 to 0 seconds before powering on the device, and I immediately started short pressing (put the pin inside the hole before powering on)
+Maybe you need to play around with the timing.
+
+If you didn't see any connection / pairing notifications within 5 to 10 seconds you can try again. I always powered off, powered on, reset with long push, powered off, and restartet the process.
+
+I've tried this procedure with models in plastic packaging from around 2020 and newer models in paper packaging from 2022.
+Both came with the firmware `1.2.245` -> I don't know if it gets easier with newer firmware versions
+
+Wifi from your Notebook might interfere with the pairing.
 
 <!-- Notes END: Do not edit below this line -->
 
