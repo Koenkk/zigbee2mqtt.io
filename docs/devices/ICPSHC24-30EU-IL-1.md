@@ -30,6 +30,16 @@ pageClass: device-page
 To factory reset the TRADFRI drivers use a
 small pin or paperclip to push the reset button once.
 NB: you HAVE to put the device VERY close to the zigbee device, otherwise it won't be able to detect.
+
+If you struggle to pair this device, the following procedure should help getting it paired:
+
+1. Have the driver disconnected from power
+2. Enable join in your zigbee2mqtt server
+3. Connect the driver to the power, pairing begins immediately
+4. Keep short-pressing (LEDs can't blink, blinking means that the driver has been reset to factory state) the reset on the device until it is successfully configured
+
+If you failed to pair it before, unplug it, plug it back, long press the reset on the driver so that the LEDs blink. Proceed with above procedure. 
+
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
