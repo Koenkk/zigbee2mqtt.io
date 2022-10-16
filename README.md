@@ -24,7 +24,7 @@ It is based on [VuePress v2](https://v2.vuepress.vuejs.org/).
 The docgen-scripts helps to generate and update the individual device-pages (`/docs/devices/*.md`).
 [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) exposes a list with supported devices which is used for generation. It also updates the Devices-List used by the _Supported-Devices_ overview page.
 
-The `## Notes` section of each page is writte by hand and does not come from `zigbee-herdsman-converters`. This section gets preserved and can be edited.
+The `## Notes` section of each page is written by hand and does not come from `zigbee-herdsman-converters`. This section gets preserved and can be edited.
 
 Docgen is written in Typescript, so you need a recent version of Node.js and NPM.
 
