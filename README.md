@@ -48,6 +48,8 @@ Docgen includes some scripts to help testing the page.
 
 ## VuePress
 
+Use Node.js 16 for building VuePress. Node.js 18 is not supported.
+
 ```bash
 # Install dependencies
 npm ci
