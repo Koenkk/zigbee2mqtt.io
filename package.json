@@ -15,7 +15,8 @@
   "dependencies": {
     "@quasar/extras": "^1.11.2",
     "core-js": "^3.18.3",
-    "quasar": "^2.2.0"
+    "quasar": "^2.2.0",
+    "webpack": "^5.74.0"
   },
   "devDependencies": {
     "@types/glob": "^7.2.0",

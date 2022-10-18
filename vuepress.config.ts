@@ -1,7 +1,8 @@
 import { navbar } from "./navbar";
 import { sidebar } from "./sidebar";
 import * as path from "path";
-import { DefinePlugin } from 'webpack';
+import pkg from 'webpack';
+const { DefinePlugin } = pkg;
 
 export const domain = 'https://www.zigbee2mqtt.io';
 const isDevelop = !!process.env.DEVELOP_BRANCH;
