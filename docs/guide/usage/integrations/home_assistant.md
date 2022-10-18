@@ -93,7 +93,7 @@ Groups discovery is supported for groups of lights, switches, locks and covers. 
 Any Home Assistant MQTT discovery property can be overridden on a device. Two examples are shown below. For a full and current list of discovery properties, see [the Home Assistant MQTT Discovery integration](https://www.home-assistant.io/docs/mqtt/discovery/) and [the Home Assistant extension](https://github.com/Koenkk/zigbee2mqtt/blob/03ba647dc6b5f299f8f3ab441712999fcb3a253e/lib/extension/homeassistant.ts) in the Zigbee2MQTT source code.
 
 ### Changing `supported_color_modes`
-This is useful for switching light bulbs from reporting values from X/Y (which is mandatory in the ZCL specification) to reporting in hue / saturation (which is what Philips Hue bulbs report color in).
+This is useful for switching light bulbs from reporting values from X/Y (which is mandatory in the ZCL specification) to reporting in hue / saturation (which is what Philips Hue bulbs report color in when changing via hue or saturation, such as with the `move_hue` and `move_sat` commands).
 
 This example changes a [light's `supported_color_modes` discovery property](https://www.home-assistant.io/integrations/light.mqtt/#supported_color_modes) to hue / saturation and color temperature:
 
