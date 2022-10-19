@@ -89,7 +89,24 @@ automation:
 ## Groups
 Groups discovery is supported for groups of lights, switches, locks and covers. For other types you have to manually create a config in the Home Assistant `configuration.yaml`.
 
-## Exposing switch as a light
+## Overriding discovery properties
+Any Home Assistant MQTT discovery property can be overridden on a device. Two examples are shown below. For a full and current list of discovery properties, see [the Home Assistant MQTT Discovery integration](https://www.home-assistant.io/docs/mqtt/discovery/) and [the Home Assistant extension](https://github.com/Koenkk/zigbee2mqtt/blob/03ba647dc6b5f299f8f3ab441712999fcb3a253e/lib/extension/homeassistant.ts) in the Zigbee2MQTT source code.
+
+### Changing `supported_color_modes`
+This is useful for switching light bulbs from reporting values from X/Y (which is the default) to reporting in hue / saturation (which is what bulbs report color in when changing via hue or saturation, such as with the `hue_move` and `saturation_move` commands).
+
+This example changes a [light's `supported_color_modes` discovery property](https://www.home-assistant.io/integrations/light.mqtt/#supported_color_modes) to hue / saturation and color temperature:
+
+```yaml
+devices:
+  "0x12345678":
+    friendly_name: my_light
+    homeassistant:
+      light:
+        supported_color_modes: ['hs','color_temp']
+```
+
+### Exposing switch as a light
 If your device is currently discovered as a switch and you want to discover it as a light, the following config in the Zigbee2MQTT `configuration.yaml` can be used:
 
 ```yaml
@@ -120,8 +137,6 @@ devices:
         value_template: null
         state_value_template: '{{ value_json.state_right }}'
 ```
-
-If you are also using device specific overrides, make sure that they are configured under the new device type rather than the original device type.
 
 ## Using a custom name for the device and entities
 In order to get a more readable name for the device and entities in Home Assistant, a specific name for Home Assistant can be set in the device configuration. If set, this name will be used instead of `friendly_name`.
