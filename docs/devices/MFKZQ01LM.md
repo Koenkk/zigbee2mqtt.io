@@ -24,8 +24,8 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-Battery
 
+### Battery
 Uses a CR2450 battery
 
 ### Pairing
