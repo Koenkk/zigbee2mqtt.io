@@ -24,7 +24,18 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+
+1. Pull the cover in the direction out from the radiator
+2. Insert 2x AA batteries. Manual says alkaline ones should last for 1,5years. When replacing old batteries, it os recommended to wait approx 1 minute before inserting new ones.
+3. Ins will appear on the display - motor is travelling back - to allow easy installation (Ins + rotating n is shown). After few seconds Ada is shown.
+4. Install the thermostat on radiator valve - display whould be on top side.
+5. Insert the cover back to thermostat - Push and Pull symbols should match.
+6. Shortly press the big round button - adaptation to the valve will start (Ada + rotating n is shown).
+7. To pair - long-press the main big rotating button. Make sure the thermostat has a good signal from ZigBee coordinator.
+8. There is a hidden reset button under the cover, in case of repairing or other issues press it for 5 seconds.
 
 <!-- Notes END: Do not edit below this line -->
 
