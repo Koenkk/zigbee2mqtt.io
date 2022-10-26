@@ -27,6 +27,20 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+## Notes
+
+### Enter pairing mode
+Enter pairing mode by quickly double tapping the dimmer button.
+
+### Factory reset
+If the dimmer was previously paired to another hub, you will need to factory reset it using the following procedure:
+
+1. Quickly tap the dimmer button 3x
+2. On the third tap, continue holding until the LED begins to blink
+3. Quickly tap the dimmer button 3 more times
+
+See this [configuration guide](https://www.lutron.com/TechnicalDocumentLibrary/0301916_Aurora_Advanced_Install_Guide.pdf#page=7) for more information.
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -35,7 +49,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
-
 
 ## Exposes
 
