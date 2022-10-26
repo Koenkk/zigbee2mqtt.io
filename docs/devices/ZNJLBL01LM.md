@@ -26,6 +26,23 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Pairing
+Hold the reset button, on the bottom of the device, for 5 seconds.
+
+_Pairing the device with a new bridge will **not** reset the fully open/closed position._
+
+### Fully open and fully closed positions
+The rotation range (fully open and fully closed) can be reset by holding the both the up and down buttons for 3 seconds until the light turns blue.
+
+#### Fully open position
+The fully open position can be set by setting the shade to the desired position and then pressing the up button 5 times in succession. If successful the light turns blue and flashes 3 times.
+
+#### Fully closed position
+The fully closed position can be set by setting the shade to the desired position and then pressing the down button 5 times in succession. If successful the light turns blue and flashes 3 times.
+
+### Change button directions
+If the up and down buttons are working in the oppsite direction of how your blinds opreate, they can be swapped by pressing the reset button 3 times. If successful the light turns solid blue for 1 second.
+
 ### Adapter firmware
 In order for this device to work (fully), at least the following firmware is required on your adapter:
 - CC2530/CC2531: [`20211115`](https://github.com/Koenkk/Z-Stack-firmware/tree/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin)
