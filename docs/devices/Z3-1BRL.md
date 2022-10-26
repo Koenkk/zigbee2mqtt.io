@@ -32,7 +32,7 @@ pageClass: device-page
 ### Enter pairing mode
 Enter pairing mode by quickly double tapping the dimmer button.
 
-### Factory Reset
+### Factory reset
 If the dimmer was previously paired to another hub, you will need to factory reset it using the following procedure:
 
 1. Quickly tap the dimmer button 3x
