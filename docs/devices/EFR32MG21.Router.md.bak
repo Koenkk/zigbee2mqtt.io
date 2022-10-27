@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFR32MG21.Router  |
 | Vendor  | Custom devices (DiY)  |
-| Description | EFR32MG21 Router |
+| Description | EFR32MG21 router |
 | Exposes | linkquality |
 | Picture | ![Custom devices (DiY) EFR32MG21.Router](https://www.zigbee2mqtt.io/images/devices/EFR32MG21.Router.jpg) |
 
@@ -27,20 +27,18 @@ pageClass: device-page
 
 ### LED status
 
-RED LED off = No network
-RED LED blink = Connecting to the network
+RED LED off = NO Netwrok
+RED LED blink = steering network
 RED LED on = Joined to the network
 
 ### Pairing
 
-1) Power on
+1) power on
 2) Press BOOT for 5 seconds until the RED LED flashes.
-3) Coordinator allows access to the network.
-4) If the RED LED is always on, then the router has joined the network successfully.
+3) Gateway allows access to the network.
+4) If the RED LED is always on, then join the network successfully.
 
 ### Firmware
-
-Firmware can be used with ITead Zigbee 3.0 USB Dongle and easyiot zigbee 3.0 USB Dongle.
 
 https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle-NoSigned/RouterForDongle
 
