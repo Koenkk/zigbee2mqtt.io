@@ -177,9 +177,9 @@ _(in order of first appearance)_
     </details>
     
   * <details>
-    <summary>SMLIGHT SLZB-06 ZIGBEE ETHERNET USB POE WIFI LAN ADAPTER</summary>
+    <summary>SMLIGHT SLZB-06 Zigbee ethernet USB POE WiFi LAN adapter</summary>
   
-    Powerfull, tiny modern design, developed for zigbee2mqtt, PoE supported, pre-flashed and ready to use Zigbee adapter. Supports Zigbee 3.0, Ethernet, LAN, USB and WiFi connections. Rich packing that includes SLZB-06 adapter, +5dB antenna, screws, adhesive tapes, scredriver, microUSB-typeC adapter, screw-fix-helper and QR-manual. Distant update, modern UI open-source firmware. Optoelectronic isolation for Ethernet, LEDs and physical button for interacting with user. Fits Home and Business use.
+    Powerfull, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed and ready to use Zigbee adapter. Supports Zigbee 3.0, Ethernet, LAN, USB and WiFi connections. Rich packing that includes SLZB-06 adapter, +5dB antenna, screws, adhesive tapes, scredriver, microUSB-typeC adapter, screw-fix-helper and QR-manual. Distant update, modern UI open-source firmware. Optoelectronic isolation for Ethernet, LEDs and physical button for interacting with user. Fits home and business use.
     * [Zigbee CC2652P firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin)  
     * [ESP32 firmware](https://github.com/smlight-dev/slzb-06-firmware/)  
     * [Description](https://smlight.tech/product/slzb-06/)
