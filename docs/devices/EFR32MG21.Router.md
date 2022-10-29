@@ -40,9 +40,9 @@ RED LED on = Joined to the network
 
 ### Firmware
 
-Firmware can be used with ITead Zigbee 3.0 USB Dongle and easyiot zigbee 3.0 USB Dongle.
+Firmware can be used with Sonoff Zigbee 3.0 USB Dongle Plus–ZBDongle-E and easyiot Zigbee 3.0 USB dongle.
 
-https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle-NoSigned/RouterForDongle
+Link: https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle-NoSigned/RouterForDongle
 
 <!-- Notes END: Do not edit below this line -->
 
