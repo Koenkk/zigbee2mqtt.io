@@ -112,7 +112,7 @@ _(in order of first appearance)_
   
     CC2652P based USB connected adapter pre-programmed and with enclosure.
 
-    Note before buying that ITead slightly confusingly now sells both the "ZBDongle-E" (based on EFR32MG21) and "ZBDongle-P" (based on CC2652P).
+    Note before buying that ITead slightly confusingly now sells both the Dongle Plus "ZBDongle-P" (based on CC2652P), and the Dongle Plus V2 "ZBDongle-E" (based on EFR32MG21).
     This section is about the "ZBDongle-P", for "ZBDongle-E" see below.
 
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20220219.zip)  
@@ -419,7 +419,7 @@ Initial development started on experimental (beta stage) support for Silicon Lab
 
 * USB connected
   * <details>
-    <summary>ITead Sonoff Zigbee 3.0 USB Dongle Plus model ZBDongle-E</summary>
+    <summary>ITead Sonoff Zigbee 3.0 USB Dongle Plus V2 model "ZBDongle-E"</summary>
   
     USB connected adapter with external antenna.
 
