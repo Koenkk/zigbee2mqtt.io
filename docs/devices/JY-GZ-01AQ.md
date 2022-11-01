@@ -75,7 +75,7 @@ Starts the self-test process (checking the indicator light and buzzer work prope
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"selftest": NEW_VALUE}`.
-The possible values are: ``.
+The possible values are: `selftest`.
 
 ### Test (binary)
 Self-test in progress.

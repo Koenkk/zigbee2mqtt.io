@@ -1,6 +1,6 @@
 ---
-title: "Develco Products A/S SIRZB-110 control via MQTT"
-description: "Integrate your Develco Products A/S SIRZB-110 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Develco SIRZB-110 control via MQTT"
+description: "Integrate your Develco SIRZB-110 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-08-22T21:01:09Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Develco Products A/S SIRZB-110
+# Develco SIRZB-110
 
 |     |     |
 |-----|-----|
 | Model | SIRZB-110  |
-| Vendor  | Develco Products A/S  |
+| Vendor  | Develco  |
 | Description | Customizable siren |
 | Exposes | battery, battery_low, test, warning, squawk, max_duration, alarm, linkquality |
-| Picture | ![Develco Products A/S SIRZB-110](https://www.zigbee2mqtt.io/images/devices/SIRZB-110.jpg) |
+| Picture | ![Develco SIRZB-110](https://www.zigbee2mqtt.io/images/devices/SIRZB-110.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

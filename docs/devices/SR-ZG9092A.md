@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SR-ZG9092A  |
 | Vendor  | Sunricher  |
 | Description | Touch thermostat |
-| Exposes | local_temperature, outdoor_temperature, climate (occupied_heating_setpoint, unoccupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), away_mode, power, current, voltage, energy, button_vibration_level, floor_sensor_type, sensor, powerup_status, floor_sensor_calibration, dry_time, mode_after_dry, temperature_display, window_open_check, hysterersis, alarm_airtemp_overvalue, linkquality |
+| Exposes | outdoor_temperature, climate (occupied_heating_setpoint, unoccupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), away_mode, child_lock, power, current, voltage, energy, lcd_brightness, button_vibration_level, floor_sensor_type, sensor, powerup_status, floor_sensor_calibration, dry_time, mode_after_dry, temperature_display, window_open_check, hysterersis, display_auto_off_enabled, alarm_airtemp_overvalue, linkquality |
 | Picture | ![Sunricher SR-ZG9092A](https://www.zigbee2mqtt.io/images/devices/SR-ZG9092A.jpg) |
 
 
@@ -42,13 +42,6 @@ pageClass: device-page
 
 ## Exposes
 
-### Local_temperature (numeric)
-Current temperature measured on the device.
-Value can be found in the published state on the `local_temperature` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `°C`.
-
 ### Outdoor_temperature (numeric)
 Current temperature measured from the floor sensor.
 Value can be found in the published state on the `outdoor_temperature` property.
@@ -70,6 +63,13 @@ Value can be found in the published state on the `away_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"away_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_mode": NEW_VALUE}`.
 If value equals `ON` away_mode is ON, if `OFF` OFF.
+
+### Child_lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `UNLOCK` child_lock is ON, if `LOCK` OFF.
 
 ### Power (numeric)
 Instantaneous measured power.
@@ -94,6 +94,13 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Lcd_brightness (enum)
+OLED brightness when operating the buttons.  Default: Medium..
+Value can be found in the published state on the `lcd_brightness` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lcd_brightness": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_brightness": NEW_VALUE}`.
+The possible values are: `low`, `mid`, `high`.
 
 ### Button_vibration_level (enum)
 Key beep volume and vibration level.  Default: Low..
@@ -168,6 +175,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hysterersis": NEW_VALUE}`.
 The minimal value is `0.5` and the maximum value is `2`.
 The unit of this value is `°C`.
+
+### Display_auto_off_enabled (enum)
+Value can be found in the published state on the `display_auto_off_enabled` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_auto_off_enabled": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_auto_off_enabled": NEW_VALUE}`.
+The possible values are: `disabled`, `enabled`.
 
 ### Alarm_airtemp_overvalue (numeric)
 Room temperature alarm threshold, between 20 and 60 in °C.  0 means disabled.  Default: 45..

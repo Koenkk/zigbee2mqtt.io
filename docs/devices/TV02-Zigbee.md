@@ -18,9 +18,9 @@ pageClass: device-page
 | Model | TV02-Zigbee  |
 | Vendor  | TuYa  |
 | Description | Thermostat radiator valve |
-| Exposes | battery_low, lock (state), open_window, open_window_temperature, comfort_temperature, eco_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint), boost_timeset_countdown, frost_protection, heating_stop, holiday_temperature, holiday_start_stop, schedule, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, online, error_status, linkquality |
+| Exposes | battery_low, lock (state), open_window, open_window_temperature, comfort_temperature, eco_temperature, climate (system_mode, preset, local_temperature_calibration, local_temperature, current_heating_setpoint), boost_timeset_countdown, frost_protection, heating_stop, holiday_temperature, holiday_start_stop, working_day, schedule, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, online, error_status, linkquality |
 | Picture | ![TuYa TV02-Zigbee](https://www.zigbee2mqtt.io/images/devices/TV02-Zigbee.jpg) |
-| White-label | Moes TV01-ZB, Tesla Smart TSL-TRV-TV01ZG, Unknown/id3.pl GTZ08 |
+| White-label | Moes TV01-ZB, AVATTO TRV06, Tesla Smart TSL-TRV-TV01ZG, Unknown/id3.pl GTZ08 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -36,7 +36,6 @@ pageClass: device-page
 6. Shortly press the big round button - adaptation to the valve will start (Ada + rotating n is shown).
 7. To pair - long-press the main big rotating button. Make sure the thermostat has a good signal from ZigBee coordinator.
 8. There is a hidden reset button under the cover, in case of repairing or other issues press it for 5 seconds.
-
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
@@ -69,7 +68,7 @@ Open window temperature.
 Value can be found in the published state on the `open_window_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"open_window_temperature": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `30`.
+The minimal value is `5` and the maximum value is `30`.
 The unit of this value is `°C`.
 
 ### Comfort_temperature (numeric)
@@ -77,7 +76,7 @@ Comfort temperature.
 Value can be found in the published state on the `comfort_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_temperature": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `30`.
+The minimal value is `5` and the maximum value is `30`.
 The unit of this value is `°C`.
 
 ### Eco_temperature (numeric)
@@ -85,14 +84,15 @@ Eco temperature.
 Value can be found in the published state on the `eco_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eco_temperature": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `30`.
+The minimal value is `5` and the maximum value is `30`.
 The unit of this value is `°C`.
 
 ### Climate 
-This climate device supports the following features: `preset`, `local_temperature_calibration`, `local_temperature`, `current_heating_setpoint`.
-- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `0` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
+This climate device supports the following features: `system_mode`, `preset`, `local_temperature_calibration`, `local_temperature`, `current_heating_setpoint`.
+- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
-- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `auto`, `manual`, `holiday`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
+- `system_mode`: When switched to the "off" mode, the device will display "HS" and the valve will be fully closed. Press the pair button to cancel or switch back to "heat" mode. Battery life can be prolonged by switching the heating off. After switching to `heat` mode, `preset` will be reset to `auto` and after changing `preset` to `manual` temperature setpoint will be 20 degrees.. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
+- `preset`: `auto` uses schedule properties, check them. `manual` allows you to control the device, `holiday` uses `holiday_start_stop` and `holiday_temperature` properties.. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `auto`, `manual`, `holiday`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
 - `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`
 
 ### Boost_timeset_countdown (numeric)
@@ -111,7 +111,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `ON` frost_protection is ON, if `OFF` OFF.
 
 ### Heating_stop (binary)
-Battery life can be prolonged by switching the heating off. To achieve this, the valve is closed fully. To activate the heating stop, the device display "HS", press the pair button to cancel..
+Same as `system_mode`. Left for compatibility..
 Value can be found in the published state on the `heating_stop` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"heating_stop": NEW_VALUE}`.
@@ -122,17 +122,26 @@ Holiday temperature.
 Value can be found in the published state on the `holiday_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"holiday_temperature": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `30`.
+The minimal value is `5` and the maximum value is `30`.
 The unit of this value is `°C`.
 
 ### Holiday_start_stop (text)
-The holiday mode( ⛱ ) will automatically start at the set time starting point and run the holiday temperature..
+The holiday mode will automatically start at the set time starting point and run the holiday temperature. Can be defined in the following format: `startYear/startMonth/startDay startHours:startMinutes | endYear/endMonth/endDay endHours:endMinutes`. For example: `2022/10/01 16:30 | 2022/10/21 18:10`. After the end of holiday mode, it switches to "auto" mode and uses schedule..
 Value can be found in the published state on the `holiday_start_stop` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"holiday_start_stop": NEW_VALUE}`.
 
+### Working_day (enum)
+`mon_sun` - schedule for Monday used for each day (define it only for Monday). `mon_fri+sat+sun` - schedule for workdays used from Monday (define it only for Monday), Saturday and Sunday are defined separately. `separate` - schedule for each day is defined separately..
+Value can be found in the published state on the `working_day` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"working_day": NEW_VALUE}`.
+The possible values are: `mon_sun`, `mon_fri+sat+sun`, `separate`.
+
 ### Schedule (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"undefined": {}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule": {"week_day": VALUE, "schedule": VALUE}}`
+- `week_day` (enum): undefined. Allowed values: `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`, `sunday`
+- `schedule` (text): undefined. 
 
 ### Schedule_monday (text)
 Value can be found in the published state on the `schedule_monday` property.
@@ -163,7 +172,7 @@ Value can be found in the published state on the `schedule_sunday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Online (binary)
-Is the device online.
+Turn on this property to poll current data from the device. It can be used to periodically fetch a new local temperature since the device doesn't update itself. Setting this property doesn't turn on the display..
 Value can be found in the published state on the `online` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"online": NEW_VALUE}`.

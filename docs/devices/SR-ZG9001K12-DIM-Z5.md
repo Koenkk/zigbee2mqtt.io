@@ -31,7 +31,6 @@ Press and hold the All On button on the Remote until the Status LED turns on. Th
 
 ### Resetting
 Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press 5 times the All On button. The Status LED will blink 3 times to indicate successful reset.
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -44,8 +43,6 @@ simulated_brightness:
   delta: 20 # delta per interval, default = 20
   interval: 200 # interval in milliseconds, default = 200
 ```
-
-* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
 
 
 ## Exposes
@@ -61,7 +58,7 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `brightness_move_up`, `brightness_move_down`, `brightness_stop`, `on`, `off`, `recall_*`.
+The possible values are: `on_1`, `off_1`, `brightness_move_up_1`, `brightness_move_down_1`, `brightness_stop_1`, `on_2`, `off_2`, `brightness_move_up_2`, `brightness_move_down_2`, `brightness_stop_2`, `on_3`, `off_3`, `brightness_move_up_3`, `brightness_move_down_3`, `brightness_stop_3`, `on_4`, `off_4`, `brightness_move_up_4`, `brightness_move_down_4`, `brightness_stop_4`, `on_5`, `off_5`, `brightness_move_up_5`, `brightness_move_down_5`, `brightness_stop_5`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

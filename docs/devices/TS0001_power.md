@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0001_power  |
 | Vendor  | TuYa  |
 | Description | Switch with power monitoring |
-| Exposes | switch (state), power, current, voltage, linkquality |
+| Exposes | switch (state), power, current, voltage, energy, linkquality |
 | Picture | ![TuYa TS0001_power](https://www.zigbee2mqtt.io/images/devices/TS0001_power.jpg) |
 
 
@@ -62,6 +62,12 @@ Measured electrical potential value.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
+
+### Energy (numeric)
+Sum of consumed energy.
+Value can be found in the published state on the `energy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kWh`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

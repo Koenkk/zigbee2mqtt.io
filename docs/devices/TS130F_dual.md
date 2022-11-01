@@ -57,9 +57,15 @@ Value can be found in the published state on the `moving_right` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `UP`, `STOP`, `DOWN`.
 
-### Calibration_time (numeric)
+### Calibration_time (numeric, left endpoint)
 Calibration time.
-Value can be found in the published state on the `calibration_time` property.
+Value can be found in the published state on the `calibration_time_left` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `S`.
+
+### Calibration_time (numeric, right endpoint)
+Calibration time.
+Value can be found in the published state on the `calibration_time_right` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `S`.
 

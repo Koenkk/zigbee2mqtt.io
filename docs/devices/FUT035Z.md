@@ -29,7 +29,6 @@ pageClass: device-page
 The device will enter pairing mode when turned on, if it has not been paired previously. Pairing mode can be forced by pressing the SET button 3 times in succession.
 
 The lights connected to the controller will fade in and out when the controlled is in pairing mode.
-
 <!-- Notes END: Do not edit below this line -->
 
 

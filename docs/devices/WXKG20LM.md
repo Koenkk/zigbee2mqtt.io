@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WXKG20LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara E1 wireless mini switch |
-| Exposes | battery, voltage, action, linkquality |
+| Exposes | battery, voltage, action, device_temperature, power_outage_count, linkquality |
 | Picture | ![Xiaomi WXKG20LM](https://www.zigbee2mqtt.io/images/devices/WXKG20LM.jpg) |
 
 
@@ -27,6 +27,11 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -49,6 +54,17 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `hold`, `release`.
+
+### Device_temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Power_outage_count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

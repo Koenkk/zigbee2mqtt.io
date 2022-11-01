@@ -1,7 +1,7 @@
 ---
-title: "Moes ZS-EUD control via MQTT"
-description: "Integrate your Moes ZS-EUD via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-08-31T11:26:27
+title: "TuYa TS0601_dimmer_2 control via MQTT"
+description: "Integrate your TuYa TS0601_dimmer_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-11-01T16:06:49
 pageClass: device-page
 ---
 
@@ -11,21 +11,21 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Moes ZS-EUD
+# TuYa TS0601_dimmer_2
 
 |     |     |
 |-----|-----|
-| Model | ZS-EUD  |
-| Vendor  | Moes  |
-| Description | 2 gang light dimmer switch |
+| Model | TS0601_dimmer_2  |
+| Vendor  | TuYa  |
+| Description | 2 gang smart dimmer |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![Moes ZS-EUD](https://www.zigbee2mqtt.io/images/devices/ZS-EUD.jpg) |
+| Picture | ![TuYa TS0601_dimmer_2](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_2.jpg) |
+| White-label | Moes ZS-EUD_2gang |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
-### Pairing
-Turn off the light switches (no blue light). Press one of the switch buttons for 6 times, and hold on the 6th time for a few seconds. Release when the blue indicators are flashing fast. The device is in pairing mode.
+
+
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -1,7 +1,7 @@
 ---
-title: "Mercator SPUSB02 control via MQTT"
-description: "Integrate your Mercator SPUSB02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-09-21T11:55:17
+title: "Mercator SPPUSB02 control via MQTT"
+description: "Integrate your Mercator SPPUSB02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-11-01T16:06:49
 pageClass: device-page
 ---
 
@@ -11,21 +11,22 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SPUSB02
+# Mercator SPPUSB02
 
 |     |     |
 |-----|-----|
-| Model | SPUSB02  |
+| Model | SPPUSB02  |
 | Vendor  | Mercator  |
-| Description | Ikuü Double Power Point with USB |
-| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
-| Picture | ![Mercator SPUSB02](https://www.zigbee2mqtt.io/images/devices/SPUSB02.jpg) |
+| Description | Ikuü double power point with USB |
+| Exposes | switch (state), power, current, voltage, energy, linkquality |
+| Picture | ![Mercator SPPUSB02](https://www.zigbee2mqtt.io/images/devices/SPPUSB02.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -35,6 +36,7 @@ pageClass: device-page
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
@@ -78,3 +80,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+

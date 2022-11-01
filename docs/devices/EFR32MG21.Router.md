@@ -11,13 +11,13 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Custom devices (DiY) CC2530.ROUTER
+# Custom devices (DiY) EFR32MG21.Router
 
 |     |     |
 |-----|-----|
 | Model | EFR32MG21.Router  |
 | Vendor  | Custom devices (DiY)  |
-| Description | EFR32MG21 Router |
+| Description | EFR32MG21 router |
 | Exposes | linkquality |
 | Picture | ![Custom devices (DiY) EFR32MG21.Router](https://www.zigbee2mqtt.io/images/devices/EFR32MG21.Router.jpg) |
 
@@ -43,7 +43,6 @@ RED LED on = Joined to the network
 Firmware can be used with Sonoff Zigbee 3.0 USB Dongle Plus–ZBDongle-E and easyiot Zigbee 3.0 USB dongle.
 
 Link: https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle-NoSigned/RouterForDongle
-
 <!-- Notes END: Do not edit below this line -->
 
 
