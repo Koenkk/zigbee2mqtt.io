@@ -98,8 +98,7 @@ Reboot your device and now your user should have access to the device.
 
 ## Error: `Coordinator failed to start, probably the panID is already in use, try a different panID or channel`
 
-- If you still get this error after increasing the panID and you are using a Raspberry Pi with other USB devices
-  attached (e.g. SSD) try connecting the SSD or adapter through a powered USB hub.
+- If you still get this error after increasing the panID (as explained [here](../configuration/zigbee-network.md#network-config)) and you are using a Raspberry Pi with other USB devices
 - In case you are getting this after first starting successfully and pairing a device it might be that the firmware has
   been flashed incorrectly. Try flashing the stick on a different
   computer ([detailed info](https://github.com/Koenkk/zigbee2mqtt/issues/6302)). This issue mainly occurs in combination with a Slaesh's CC2652RB stick.
