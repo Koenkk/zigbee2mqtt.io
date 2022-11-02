@@ -143,6 +143,7 @@ Description=zigbee2mqtt
 After=network.target
 
 [Service]
+Environment=NODE_ENV=production
 ExecStart=/usr/bin/npm start
 WorkingDirectory=/opt/zigbee2mqtt
 StandardOutput=inherit
@@ -159,6 +160,8 @@ WantedBy=multi-user.target
 > If you are using a Raspberry Pi 1 or Zero AND if you followed this [guide](https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb), replace `ExecStart=/usr/bin/npm start` with `ExecStart=/usr/local/bin/npm start`.
 
 > If you are using a Raspberry Pi or a system running from a SD card, you will likely want to minimize the amount of log files written to disk. Systemd service with `StandardOutput=inherit` will result in logging everything twice: once in `journalctl` through the systemd unit and once from Zigbee2MQTT default logging to files under `data/log`. You will likely want to keep only one of them: either use `StandardOutput=null` in the systemd unit and keep only the logs under `data/log` **or** setting [`advanced.log_output = ['console']`](https://www.zigbee2mqtt.io/guide/configuration/logging.html) in Zigbee2MQTT configuration to keep only the `journalctl` logging.
+
+> If you want to use another directory to place all Zigbee2MQTT data, add `Environment=ZIGBEE2MQTT_DATA=/path/to/data` below `[Service]`
 
 Save the file and exit.
 
