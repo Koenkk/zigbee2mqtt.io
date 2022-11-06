@@ -11,7 +11,7 @@ export function generateExpose(definition) {
   return `
 ## Exposes
 
-${(typeof definition.exposes === 'function' ? definition.exposes() : definition.exposes).map((e) => getExposeDocs(e)).join('\n\n')}
+${(typeof definition.exposes === 'function' ? definition.exposes() : definition.exposes).map((e) => getExposeDocs(e, definition)).join('\n\n')}
 `;
 }
 
@@ -19,7 +19,7 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function getExposeDocs(expose) {
+function getExposeDocs(expose, definition) {
   const lines = [];
   const title = [];
   if (expose.name) title.push(expose.type);
@@ -153,10 +153,12 @@ function getExposeDocs(expose) {
       lines.push(`  - HSL space (hue, saturation, lightness)\`{"color": {"h": H, "s": S, "l": L}}\` e.g. \`{"color":{"h":360,"s":100,"l":100}}\` or \`{"color": {"hsl": "H,S,L"}}\` e.g. \`{"color":{"hsl":"360,100,100"}}\``);
     }
 
-    lines.push(``);
-    lines.push(`#### Transition`);
-    lines.push(`For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property \`transition\` to the payload which is the transition time in seconds.`);
-    lines.push(`Examples: \`{"brightness":156,"transition":3}\`, \`{"color_temp":241,"transition":1}\`.`);
+    if (definition.options?.find((o) => o.name === 'transition')) {
+      lines.push(``);
+      lines.push(`#### Transition`);
+      lines.push(`For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property \`transition\` to the payload which is the transition time in seconds.`);
+      lines.push(`Examples: \`{"brightness":156,"transition":3}\`, \`{"color_temp":241,"transition":1}\`.`);
+    }
 
     lines.push(``);
     lines.push(`#### Moving/stepping`);
