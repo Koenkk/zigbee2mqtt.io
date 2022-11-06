@@ -23,13 +23,13 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 
 ### Pairing
 Push the reset button of the device with a paperclip for 5 seconds close to the coordinator. While pairing the LED on the front is flashing green. Once the pairing is finished, the LED stays off.
-
 <!-- Notes END: Do not edit below this line -->
+
+
 
 ## Exposes
 
