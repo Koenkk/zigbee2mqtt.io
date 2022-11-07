@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | DMS-300ZB  |
 | Vendor  | ShinaSystem  |
 | Description | SiHAS dual motion sensor |
-| Exposes | battery, voltage, occupancy_in, occupancy_out, occupancy, occupancy_timeout, linkquality |
+| Exposes | battery, voltage, occupancy_in, occupancy_out, occupancy_or, occupancy_and, occupancy_timeout, linkquality |
 | Picture | ![ShinaSystem DMS-300ZB](https://www.zigbee2mqtt.io/images/devices/DMS-300ZB.jpg) |
 
 
@@ -64,11 +64,17 @@ Value can be found in the published state on the `occupancy_out` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy_out is ON, if `false` OFF.
 
-### Occupancy (binary)
+### Occupancy_or (binary)
 Indicates whether "IN or OUT" Sensor of the device detected occupancy.
-Value can be found in the published state on the `occupancy` property.
+Value can be found in the published state on the `occupancy_or` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` occupancy is ON, if `false` OFF.
+If value equals `true` occupancy_or is ON, if `false` OFF.
+
+### Occupancy_and (binary)
+Indicates whether "IN and OUT" Sensor of the device detected occupancy.
+Value can be found in the published state on the `occupancy_and` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` occupancy_and is ON, if `false` OFF.
 
 ### Occupancy_timeout (numeric)
 Value can be found in the published state on the `occupancy_timeout` property.

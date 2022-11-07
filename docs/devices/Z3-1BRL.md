@@ -23,8 +23,19 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Enter pairing mode
+Enter pairing mode by quickly double tapping the dimmer button.
 
+### Factory reset
+If the dimmer was previously paired to another hub, you will need to factory reset it using the following procedure:
+
+1. Quickly tap the dimmer button 3x
+2. On the third tap, continue holding until the LED begins to blink
+3. Quickly tap the dimmer button 3 more times
+
+See this [configuration guide](https://www.lutron.com/TechnicalDocumentLibrary/0301916_Aurora_Advanced_Install_Guide.pdf#page=7) for more information.
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates

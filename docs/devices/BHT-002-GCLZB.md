@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BHT-002-GCLZB  |
 | Vendor  | Moes  |
 | Description | Moes BHT series Thermostat |
-| Exposes | lock (state), deadzone_temperature, max_temperature_limit, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, preset, sensor), linkquality |
+| Exposes | lock (state), deadzone_temperature, max_temperature_limit, min_temperature_limit, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, preset), sensor, program, linkquality |
 | Picture | ![Moes BHT-002-GCLZB](https://www.zigbee2mqtt.io/images/devices/BHT-002-GCLZB.jpg) |
 
 
@@ -57,21 +57,75 @@ The minimal value is `0` and the maximum value is `5`.
 The unit of this value is `°C`.
 
 ### Max_temperature_limit (numeric)
-Maximum temperature limit.
+Maximum temperature limit. Cuts the thermostat out regardless of air temperature if the external floor sensor exceeds this temperature. Only used by the thermostat when in AL sensor mode..
 Value can be found in the published state on the `max_temperature_limit` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_temperature_limit": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `35`.
+The minimal value is `20` and the maximum value is `70`.
+The unit of this value is `°C`.
+
+### Min_temperature_limit (numeric)
+Minimum temperature limit for frost protection. Turns the thermostat on regardless of setpoint if the tempreature drops below this..
+Value can be found in the published state on the `min_temperature_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_temperature_limit": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `5`.
 The unit of this value is `°C`.
 
 ### Climate 
-This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `local_temperature_calibration`, `system_mode`, `running_state`, `preset`, `sensor`.
+This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `local_temperature_calibration`, `system_mode`, `running_state`, `preset`.
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `hold`, `program`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`, `cool`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
 - `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`
+
+### Sensor (enum)
+Select temperature sensor to use.
+Value can be found in the published state on the `sensor` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
+The possible values are: `IN`, `AL`, `OU`.
+
+### Program (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"program": {"weekdays_p1_hour": VALUE, "weekdays_p1_minute": VALUE, "weekdays_p1_temperature": VALUE, "weekdays_p2_hour": VALUE, "weekdays_p2_minute": VALUE, "weekdays_p2_temperature": VALUE, "weekdays_p3_hour": VALUE, "weekdays_p3_minute": VALUE, "weekdays_p3_temperature": VALUE, "weekdays_p4_hour": VALUE, "weekdays_p4_minute": VALUE, "weekdays_p4_temperature": VALUE, "saturday_p1_hour": VALUE, "saturday_p1_minute": VALUE, "saturday_p1_temperature": VALUE, "saturday_p2_hour": VALUE, "saturday_p2_minute": VALUE, "saturday_p2_temperature": VALUE, "saturday_p3_hour": VALUE, "saturday_p3_minute": VALUE, "saturday_p3_temperature": VALUE, "saturday_p4_hour": VALUE, "saturday_p4_minute": VALUE, "saturday_p4_temperature": VALUE, "sunday_p1_hour": VALUE, "sunday_p1_minute": VALUE, "sunday_p1_temperature": VALUE, "sunday_p2_hour": VALUE, "sunday_p2_minute": VALUE, "sunday_p2_temperature": VALUE, "sunday_p3_hour": VALUE, "sunday_p3_minute": VALUE, "sunday_p3_temperature": VALUE, "sunday_p4_hour": VALUE, "sunday_p4_minute": VALUE, "sunday_p4_temperature": VALUE}}`
+- `weekdays_p1_hour` (numeric): undefined. 
+- `weekdays_p1_minute` (numeric): undefined. 
+- `weekdays_p1_temperature` (numeric): undefined. 
+- `weekdays_p2_hour` (numeric): undefined. 
+- `weekdays_p2_minute` (numeric): undefined. 
+- `weekdays_p2_temperature` (numeric): undefined. 
+- `weekdays_p3_hour` (numeric): undefined. 
+- `weekdays_p3_minute` (numeric): undefined. 
+- `weekdays_p3_temperature` (numeric): undefined. 
+- `weekdays_p4_hour` (numeric): undefined. 
+- `weekdays_p4_minute` (numeric): undefined. 
+- `weekdays_p4_temperature` (numeric): undefined. 
+- `saturday_p1_hour` (numeric): undefined. 
+- `saturday_p1_minute` (numeric): undefined. 
+- `saturday_p1_temperature` (numeric): undefined. 
+- `saturday_p2_hour` (numeric): undefined. 
+- `saturday_p2_minute` (numeric): undefined. 
+- `saturday_p2_temperature` (numeric): undefined. 
+- `saturday_p3_hour` (numeric): undefined. 
+- `saturday_p3_minute` (numeric): undefined. 
+- `saturday_p3_temperature` (numeric): undefined. 
+- `saturday_p4_hour` (numeric): undefined. 
+- `saturday_p4_minute` (numeric): undefined. 
+- `saturday_p4_temperature` (numeric): undefined. 
+- `sunday_p1_hour` (numeric): undefined. 
+- `sunday_p1_minute` (numeric): undefined. 
+- `sunday_p1_temperature` (numeric): undefined. 
+- `sunday_p2_hour` (numeric): undefined. 
+- `sunday_p2_minute` (numeric): undefined. 
+- `sunday_p2_temperature` (numeric): undefined. 
+- `sunday_p3_hour` (numeric): undefined. 
+- `sunday_p3_minute` (numeric): undefined. 
+- `sunday_p3_temperature` (numeric): undefined. 
+- `sunday_p4_hour` (numeric): undefined. 
+- `sunday_p4_minute` (numeric): undefined. 
+- `sunday_p4_temperature` (numeric): undefined. 
 
 ### Linkquality (numeric)
 Link quality (signal strength).

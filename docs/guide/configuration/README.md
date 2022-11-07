@@ -23,6 +23,10 @@ The _dot-notation_ of a config-key like `mqtt.server` means `server` property wi
 section. All _dot-notation_ references are absolute.
 :::
 
+::: warning ATTENTION
+Be aware of the implications using `permit_join: true` and read the details in the [Permit join](zigbee-network.md#permit-join) documentation.
+:::
+
 ## Environment variables
 
 It is possible to override the values in `configuration.yaml` via environment variables. The name of the environment

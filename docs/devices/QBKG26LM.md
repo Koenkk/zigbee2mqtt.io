@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG26LM  |
 | Vendor  | Xiaomi  |
 | Description | Aqara D1 3 gang smart wall switch (with neutral wire) |
-| Exposes | switch (state), operation_mode, power, power_outage_memory, led_disabled_night, device_temperature, flip_indicator_light, action, linkquality |
+| Exposes | switch (state), operation_mode, power, power_outage_memory, led_disabled_night, voltage, device_temperature, flip_indicator_light, action, linkquality |
 | Picture | ![Xiaomi QBKG26LM](https://www.zigbee2mqtt.io/images/devices/QBKG26LM.jpg) |
 
 
@@ -94,6 +94,12 @@ Value can be found in the published state on the `led_disabled_night` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
 If value equals `true` led_disabled_night is ON, if `false` OFF.
+
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
 
 ### Device_temperature (numeric)
 Temperature of the device.

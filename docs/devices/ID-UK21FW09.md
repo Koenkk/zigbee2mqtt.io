@@ -24,8 +24,11 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Re-pairing
+Re-pairing requires the device is removed from any existing network first, this requires a factory reset if the dimmer cannot be gracefully removed from the previous network. Unfortunately the user manual does not cover this procedure, but it is quite simple:
+To perform a factory reset. Turn on the light, press the knob for 5 times amd long press the fifth time for 3 seconds. Once reset successfully, the lamp will flicker for 5 times.
 <!-- Notes END: Do not edit below this line -->
 
 
