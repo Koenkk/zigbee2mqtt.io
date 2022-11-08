@@ -27,14 +27,7 @@ pageClass: device-page
 
 
 ### Pairing
-Factory reset the light bulb ([video](https://www.youtube.com/watch?v=npxOrPxVfe0)).
-After resetting the bulb will automatically connect.
-
-While pairing, keep the bulb close to the coordinator (adapter).
-
-What works is to use (very) short “on’s” and a little bit longer “off’s”, where you kill the light as soon as the bulb shows signs of turning on.
-Start with bulb on, then off, and then 6 “on’s”, wait in the 6th ON state. (If you try play safe and go for 7 "on's" the reset sometimes fails.)
-<!-- Notes END: Do not edit below this line -->
+Factory reset the drivers by holding the dedicated reset button for few seconds, connected ligts will start pulsing after factory reset.
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
