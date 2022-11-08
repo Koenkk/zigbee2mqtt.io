@@ -22,7 +22,7 @@ pageClass: device-page
 | Picture | ![M-ELEC ML-ST-BP-DIM](https://www.zigbee2mqtt.io/images/devices/ML-ST-BP-DIM.jpg) |
 
 
-<!-- Notes BEG//IN: You can edit here. Add "## Notes" headline if not already present. -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
