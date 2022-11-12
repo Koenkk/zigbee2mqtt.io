@@ -140,9 +140,9 @@ To make sure a picture is available for this device on the supported devices pag
 1. Clone [zigbee2mqtt.io](https://github.com/Koenkk/zigbee2mqtt.io)
 2. Add a device picture (`.jpg`, 150x150) to `public/images/devices`.
 3. ***Optional:*** Add a markdown file for your device to `docs/devices`, use the `model` property of your definition as the filename.  Most of the contents of this file will be auto-generated through docgen but you can add your own notes in a notes section. Do not use h1 or h2 heading within "## Notes"-Section.
->> \<!-- Notes BEGIN -->
->> \## Notes
->> ...
+>> \<!-- Notes BEGIN --><br>
+>> \## Notes<br>
+>> ...<br>
 >> \<!-- Notes END -->
 4. Create a Pull Request to [zigbee2mqtt.io](https://github.com/Koenkk/zigbee2mqtt.io).
 
