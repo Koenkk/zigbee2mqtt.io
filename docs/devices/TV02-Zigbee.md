@@ -39,7 +39,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+This device supports OTA updates, but only using vendor Zigbee gateway (see issue [#104](https://github.com/Koenkk/zigbee-OTA/issues/104)), for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 
