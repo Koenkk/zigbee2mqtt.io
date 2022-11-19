@@ -316,7 +316,7 @@ _(in order of first appearance)_
     serial:
       adapter: deconz
     ```
-  
+    **Warning:** Conbee 2 firmware versions newer than 0x26580700 will result in an unstable network with devices dropping randomly, see [Issue 9554](https://github.com/Koenkk/zigbee2mqtt/issues/9554)
     * [Coordinator firmware](https://deconz.dresden-elektronik.de/deconz-firmware/)
     * [Flashing](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually)
     * [Buy](https://phoscon.de/conbee2#buy) (ConBee II)
