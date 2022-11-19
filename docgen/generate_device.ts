@@ -60,7 +60,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ${ device.model }  |
-| Vendor  | ${ device.vendor }  |
+| Vendor  | [${ device.vendor }](/supported-devices/#v=${ encodeURIComponent(device.vendor) })  |
 | Description | ${ device.description } |
 | Exposes | ${ exposesDescription } |
 | Picture | ![${ device.vendor } ${ device.model }](${ image }) |

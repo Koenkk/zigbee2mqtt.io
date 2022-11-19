@@ -20,9 +20,9 @@ import { darkModeSymbol } from "@vuepress/theme-default/lib/client/composables/u
 import Dark from "quasar/src/plugins/Dark";
 import SessionStorage from "quasar/src/plugins/SessionStorage";
 import { inject, onMounted, ref, watch } from 'vue'
-import Device from "./components/device";
+import Device from "./components/device.vue";
 import Filters from './components/filters.vue'
-import InfiniteScroll from "./components/infinite-scroll";
+import InfiniteScroll from "./components/infinite-scroll.vue";
 import { useFilter } from "./useFilter";
 
 export default {
@@ -106,26 +106,26 @@ export default {
 
 <style lang="scss">
 /* Quasar Core */
-@import '~quasar/src/css/helpers/string.sass';
-@import '~quasar/src/css/helpers/math.sass';
-@import '~quasar/src/css/variables.sass';
-@import '~quasar/src/css/normalize.sass';
-@import '~quasar/src/css/core/animations.sass';
-@import '~quasar/src/css/core/colors.sass';
-@import '~quasar/src/css/core/elevation.sass';
-@import '~quasar/src/css/core/flex.sass';
-@import '~quasar/src/css/core/helpers.sass';
-@import '~quasar/src/css/core/mouse.sass';
-@import '~quasar/src/css/core/orientation.sass';
-@import '~quasar/src/css/core/positioning.sass';
-@import '~quasar/src/css/core/size.sass';
-@import '~quasar/src/css/core/touch.sass';
-@import '~quasar/src/css/core/transitions.sass';
-@import '~quasar/src/css/core/visibility.sass';
-@import '~@quasar/extras/material-icons/material-icons.css';
+@import 'quasar/src/css/helpers/string.sass';
+@import 'quasar/src/css/helpers/math.sass';
+@import 'quasar/src/css/variables.sass';
+@import 'quasar/src/css/normalize.sass';
+@import 'quasar/src/css/core/animations.sass';
+@import 'quasar/src/css/core/colors.sass';
+@import 'quasar/src/css/core/elevation.sass';
+@import 'quasar/src/css/core/flex.sass';
+@import 'quasar/src/css/core/helpers.sass';
+@import 'quasar/src/css/core/mouse.sass';
+@import 'quasar/src/css/core/orientation.sass';
+@import 'quasar/src/css/core/positioning.sass';
+@import 'quasar/src/css/core/size.sass';
+@import 'quasar/src/css/core/touch.sass';
+@import 'quasar/src/css/core/transitions.sass';
+@import 'quasar/src/css/core/visibility.sass';
+@import '@quasar/extras/material-icons/material-icons.css';
 
 .supported-devices {
-  @import '~quasar/src/css/core/typography.sass';
+  @import 'quasar/src/css/core/typography.sass';
 
   width: 345px;
   margin-bottom: 2rem;

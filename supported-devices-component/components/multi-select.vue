@@ -70,12 +70,12 @@ export default defineComponent({
 
 
 <style lang="scss">
-@import '~quasar/src/css/variables.sass';
+@import 'quasar/src/css/variables.sass';
 
-@import '~quasar/src/components/field/QField.sass';
-@import '~quasar/src/components/item/QItem.sass';
-@import "~quasar/src/components/select/QSelect.sass";
-@import '~quasar/src/components/menu/QMenu.sass';
-@import '~quasar/src/components/chip/QChip.sass';
-@import '~quasar/src/components/dialog/QDialog.sass';
+@import 'quasar/src/components/field/QField.sass';
+@import 'quasar/src/components/item/QItem.sass';
+@import "quasar/src/components/select/QSelect.sass";
+@import 'quasar/src/components/menu/QMenu.sass';
+@import 'quasar/src/components/chip/QChip.sass';
+@import 'quasar/src/components/dialog/QDialog.sass';
 </style>
