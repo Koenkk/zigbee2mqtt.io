@@ -4,9 +4,9 @@
   "description": "",
   "private": true,
   "scripts": {
-    "dev:devices": "vuepress dev docs",
+    "dev:devices": "cross-env NODE_OPTIONS=--max_old_space_size=8000 vuepress dev docs",
     "dev": "cross-env EXCLUDE_DEVICES=yes vuepress dev docs",
-    "build": "vuepress build docs",
+    "build": "cross-env NODE_OPTIONS=--max_old_space_size=8000 vuepress build docs",
     "docgen": "ts-node docgen",
     "test": "ts-node docgen/tests"
   },
