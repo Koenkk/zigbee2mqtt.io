@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | IC-CDZFB2AC004HA-MZN  |
-| Vendor  | ADEO  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN E14 LED white |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![ADEO IC-CDZFB2AC004HA-MZN](https://www.zigbee2mqtt.io/images/devices/IC-CDZFB2AC004HA-MZN.jpg) |

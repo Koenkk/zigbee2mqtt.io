@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZNLDP12LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart LED bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_outage_memory, linkquality |
 | Picture | ![Xiaomi ZNLDP12LM](https://www.zigbee2mqtt.io/images/devices/ZNLDP12LM.jpg) |

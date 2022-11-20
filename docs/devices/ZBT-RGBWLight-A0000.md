@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZBT-RGBWLight-A0000  |
-| Vendor  | LDS  |
+| Vendor  | [LDS](/supported-devices/#v=LDS)  |
 | Description | Ynoa smart LED E27 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![LDS ZBT-RGBWLight-A0000](https://www.zigbee2mqtt.io/images/devices/ZBT-RGBWLight-A0000.jpg) |

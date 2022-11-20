@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | XHK1-TC  |
-| Vendor  | Technicolor  |
+| Vendor  | [Technicolor](/supported-devices/#v=Technicolor)  |
 | Description | Xfinity security keypad |
 | Exposes | battery, voltage, occupancy, battery_low, tamper, presence, contact, temperature, action_code, action_transaction, action_zone, action, linkquality |
 | Picture | ![Technicolor XHK1-TC](https://www.zigbee2mqtt.io/images/devices/XHK1-TC.jpg) |

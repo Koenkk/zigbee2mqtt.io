@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZHS-15  |
-| Vendor  | Schwaiger  |
+| Vendor  | [Schwaiger](/supported-devices/#v=Schwaiger)  |
 | Description | Power socket on/off with power consumption monitoring |
 | Exposes | switch (state), power, current, voltage, linkquality |
 | Picture | ![Schwaiger ZHS-15](https://www.zigbee2mqtt.io/images/devices/ZHS-15.jpg) |

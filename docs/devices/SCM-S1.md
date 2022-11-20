@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SCM-S1  |
-| Vendor  | Blaupunkt  |
+| Vendor  | [Blaupunkt](/supported-devices/#v=Blaupunkt)  |
 | Description | Roller shutter |
 | Exposes | cover (state, position), linkquality |
 | Picture | ![Blaupunkt SCM-S1](https://www.zigbee2mqtt.io/images/devices/SCM-S1.jpg) |

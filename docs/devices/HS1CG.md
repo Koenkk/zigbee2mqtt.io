@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS1CG  |
-| Vendor  | Heiman  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart combustible gas sensor |
 | Exposes | gas, battery_low, tamper, linkquality |
 | Picture | ![Heiman HS1CG](https://www.zigbee2mqtt.io/images/devices/HS1CG.jpg) |

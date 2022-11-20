@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SSWF01G  |
-| Vendor  | Mercator  |
+| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
 | Description | AC fan controller |
 | Exposes | switch (state), fan (state, mode), linkquality |
 | Picture | ![Mercator SSWF01G](https://www.zigbee2mqtt.io/images/devices/SSWF01G.jpg) |

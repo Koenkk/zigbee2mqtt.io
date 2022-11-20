@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SM-AZ713  |
-| Vendor  | UseeLink  |
+| Vendor  | [UseeLink](/supported-devices/#v=UseeLink)  |
 | Description | Smart water/gas valve |
 | Exposes | switch (state), linkquality |
 | Picture | ![UseeLink SM-AZ713](https://www.zigbee2mqtt.io/images/devices/SM-AZ713.jpg) |

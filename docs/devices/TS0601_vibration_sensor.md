@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_vibration_sensor  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart vibration sensor |
 | Exposes | contact, battery, vibration, linkquality |
 | Picture | ![TuYa TS0601_vibration_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_vibration_sensor.jpg) |

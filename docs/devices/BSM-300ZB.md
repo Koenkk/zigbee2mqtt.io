@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | BSM-300ZB  |
-| Vendor  | ShinaSystem  |
+| Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS remote control |
 | Exposes | battery, voltage, action, linkquality |
 | Picture | ![ShinaSystem BSM-300ZB](https://www.zigbee2mqtt.io/images/devices/BSM-300ZB.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZBHS4RGBW  |
-| Vendor  | EVN  |
+| Vendor  | [EVN](/supported-devices/#v=EVN)  |
 | Description | Zigbee 4 channel RGBW remote control |
 | Exposes | battery, action, linkquality |
 | Picture | ![EVN ZBHS4RGBW](https://www.zigbee2mqtt.io/images/devices/ZBHS4RGBW.jpg) |

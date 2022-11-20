@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | InstaRemote  |
-| Vendor  | Insta  |
+| Vendor  | [Insta](/supported-devices/#v=Insta)  |
 | Description | ZigBee Light Link wall/handheld transmitter |
 | Exposes | action, linkquality |
 | Picture | ![Insta InstaRemote](https://www.zigbee2mqtt.io/images/devices/InstaRemote.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0207_water_leak_detector  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Water leak detector |
 | Exposes | water_leak, battery_low, battery, linkquality |
 | Picture | ![TuYa TS0207_water_leak_detector](https://www.zigbee2mqtt.io/images/devices/TS0207_water_leak_detector.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | mTouch_Air_Sensor  |
-| Vendor  | CTM Lyng  |
+| Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | Air Sensor, temperature & humidity sensor |
 | Exposes | battery, temperature, humidity, linkquality |
 | Picture | ![CTM Lyng mTouch_Air_Sensor](https://www.zigbee2mqtt.io/images/devices/mTouch_Air_Sensor.jpg) |

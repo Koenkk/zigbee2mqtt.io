@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_human_presence_sensor  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Human presence sensor Zigbee |
 | Exposes | presence, duration_of_attendance, duration_of_absence, led_state, linkquality |
 | Picture | ![TuYa TS0601_human_presence_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_human_presence_sensor.jpg) |

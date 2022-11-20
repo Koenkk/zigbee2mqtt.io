@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | GL-SD-002  |
-| Vendor  | Gledopto  |
+| Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee 3.0 smart home switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Gledopto GL-SD-002](https://www.zigbee2mqtt.io/images/devices/GL-SD-002.jpg) |

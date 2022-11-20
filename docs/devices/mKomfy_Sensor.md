@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | mKomfy_Sensor  |
-| Vendor  | CTM Lyng  |
+| Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | mKomfy, stove guard |
 | Exposes | battery, battery_low, temperature, alarm_status, active, linkquality |
 | Picture | ![CTM Lyng mKomfy_Sensor](https://www.zigbee2mqtt.io/images/devices/mKomfy_Sensor.jpg) |

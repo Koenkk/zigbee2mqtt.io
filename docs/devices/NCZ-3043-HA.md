@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | NCZ-3043-HA  |
-| Vendor  | Nyce  |
+| Vendor  | [Nyce](/supported-devices/#v=Nyce)  |
 | Description | Ceiling motion sensor |
 | Exposes | occupancy, humidity, temperature, battery, battery_low, tamper, linkquality |
 | Picture | ![Nyce NCZ-3043-HA](https://www.zigbee2mqtt.io/images/devices/NCZ-3043-HA.jpg) |

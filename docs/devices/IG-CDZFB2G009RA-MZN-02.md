@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | IG-CDZFB2G009RA-MZN-02  |
-| Vendor  | ADEO  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN E27 LED white filament 1055 lumen |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![ADEO IG-CDZFB2G009RA-MZN-02](https://www.zigbee2mqtt.io/images/devices/IG-CDZFB2G009RA-MZN-02.jpg) |

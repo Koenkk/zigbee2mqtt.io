@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | IP-CDZOTAAP005JA-MAN  |
-| Vendor  | ADEO  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN E14 LED RGBW |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![ADEO IP-CDZOTAAP005JA-MAN](https://www.zigbee2mqtt.io/images/devices/IP-CDZOTAAP005JA-MAN.jpg) |

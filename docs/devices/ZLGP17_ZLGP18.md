@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZLGP17/ZLGP18  |
-| Vendor  | Legrand  |
+| Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Wireless and batteryless (double) lighting control |
 | Exposes | action, linkquality |
 | Picture | ![Legrand ZLGP17/ZLGP18](https://www.zigbee2mqtt.io/images/devices/ZLGP17-ZLGP18.jpg) |

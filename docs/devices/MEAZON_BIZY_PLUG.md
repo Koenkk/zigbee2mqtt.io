@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | MEAZON_BIZY_PLUG  |
-| Vendor  | Meazon  |
+| Vendor  | [Meazon](/supported-devices/#v=Meazon)  |
 | Description | Bizy plug meter |
 | Exposes | switch (state), power, voltage, current, energy, linkquality |
 | Picture | ![Meazon MEAZON_BIZY_PLUG](https://www.zigbee2mqtt.io/images/devices/MEAZON_BIZY_PLUG.jpg) |

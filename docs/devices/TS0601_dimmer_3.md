@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_dimmer_3  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 3 gang smart dimmer |
 | Exposes | light (state, brightness), linkquality |
 | Picture | ![TuYa TS0601_dimmer_3](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_3.jpg) |

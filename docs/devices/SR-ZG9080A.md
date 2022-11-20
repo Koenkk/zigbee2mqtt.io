@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SR-ZG9080A  |
-| Vendor  | Sunricher  |
+| Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Curtain motor controller |
 | Exposes | cover (state, position), linkquality |
 | Picture | ![Sunricher SR-ZG9080A](https://www.zigbee2mqtt.io/images/devices/SR-ZG9080A.jpg) |

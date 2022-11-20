@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | GW003-AS-IN-TE-FC  |
-| Vendor  | Atlantic Group  |
+| Vendor  | [Atlantic Group](/supported-devices/#v=Atlantic%20Group)  |
 | Description | Interface Naviclim for Takao air conditioners |
 | Exposes | programming_operation_mode, climate (local_temperature, occupied_cooling_setpoint, occupied_heating_setpoint, system_mode, preset, fan_mode, swing_mode), quiet_fan, ac_louver_position, linkquality |
 | Picture | ![Atlantic Group GW003-AS-IN-TE-FC](https://www.zigbee2mqtt.io/images/devices/GW003-AS-IN-TE-FC.jpg) |

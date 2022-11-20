@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZNXDD01LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara ceiling light L1-350 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), linkquality |
 | Picture | ![Xiaomi ZNXDD01LM](https://www.zigbee2mqtt.io/images/devices/ZNXDD01LM.jpg) |

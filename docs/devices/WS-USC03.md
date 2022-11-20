@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WS-USC03  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart wall switch (neutral, single rocker) |
 | Exposes | switch (state), linkquality |
 | Picture | ![Xiaomi WS-USC03](https://www.zigbee2mqtt.io/images/devices/WS-USC03.jpg) |

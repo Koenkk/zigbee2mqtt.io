@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS011F_relay_switch  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Dry contact relay switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![TuYa TS011F_relay_switch](https://www.zigbee2mqtt.io/images/devices/TS011F_relay_switch.jpg) |

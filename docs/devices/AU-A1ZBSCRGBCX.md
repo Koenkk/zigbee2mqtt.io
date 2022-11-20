@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | AU-A1ZBSCRGBCX  |
-| Vendor  | Aurora  |
+| Vendor  | [Aurora](/supported-devices/#v=Aurora)  |
 | Description | RGBW LED strip controller |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![Aurora AU-A1ZBSCRGBCX](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBSCRGBCX.jpg) |

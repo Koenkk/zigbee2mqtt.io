@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | YSR-MINI-01_rgbcct  |
-| Vendor  | YSRSAI  |
+| Vendor  | [YSRSAI](/supported-devices/#v=YSRSAI)  |
 | Description | Zigbee LED controller (RGB+CCT) |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![YSRSAI YSR-MINI-01_rgbcct](https://www.zigbee2mqtt.io/images/devices/YSR-MINI-01_rgbcct.jpg) |

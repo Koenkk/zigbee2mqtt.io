@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | STS-IRM-250  |
-| Vendor  | SmartThings  |
+| Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Motion sensor (2016 model) |
 | Exposes | temperature, occupancy, tamper, battery, linkquality |
 | Picture | ![SmartThings STS-IRM-250](https://www.zigbee2mqtt.io/images/devices/STS-IRM-250.jpg) |

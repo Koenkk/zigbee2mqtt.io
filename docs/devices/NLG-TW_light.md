@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | NLG-TW light  |
-| Vendor  | Paul Neuhaus  |
+| Vendor  | [Paul Neuhaus](/supported-devices/#v=Paul%20Neuhaus)  |
 | Description | Various tunable white lights (e.g. 8195-55) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![Paul Neuhaus NLG-TW light](https://www.zigbee2mqtt.io/images/devices/NLG-TW-light.jpg) |

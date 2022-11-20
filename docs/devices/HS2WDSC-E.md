@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS2WDSC-E  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Remote dimmer and temperature control |
 | Exposes | battery, action, linkquality |
 | Picture | ![HEIMAN HS2WDSC-E](https://www.zigbee2mqtt.io/images/devices/HS2WDSC-E.jpg) |

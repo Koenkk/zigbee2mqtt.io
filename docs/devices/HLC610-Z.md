@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HLC610-Z  |
-| Vendor  | Shenzhen Homa  |
+| Vendor  | [Shenzhen Homa](/supported-devices/#v=Shenzhen%20Homa)  |
 | Description | Wireless dimmable controller |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Shenzhen Homa HLC610-Z](https://www.zigbee2mqtt.io/images/devices/HLC610-Z.jpg) |

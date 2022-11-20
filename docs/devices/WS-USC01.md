@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WS-USC01  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart wall switch (no neutral, single rocker) |
 | Exposes | switch (state), action, flip_indicator_light, operation_mode, mode_switch, linkquality |
 | Picture | ![Xiaomi WS-USC01](https://www.zigbee2mqtt.io/images/devices/WS-USC01.jpg) |

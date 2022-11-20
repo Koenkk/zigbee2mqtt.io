@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | Touch4  |
-| Vendor  | databyte.ch  |
+| Vendor  | [databyte.ch](/supported-devices/#v=databyte.ch)  |
 | Description | Wall touchsensor with 4 keys |
 | Exposes | battery, linkquality, key_1, key_2, key_3, key_4 |
 | Picture | ![databyte.ch Touch4](https://www.zigbee2mqtt.io/images/devices/Touch4.jpg) |

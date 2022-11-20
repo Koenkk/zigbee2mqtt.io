@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SWO-KEF1PA  |
-| Vendor  | Swann  |
+| Vendor  | [Swann](/supported-devices/#v=Swann)  |
 | Description | Key fob remote |
 | Exposes | action, linkquality |
 | Picture | ![Swann SWO-KEF1PA](https://www.zigbee2mqtt.io/images/devices/SWO-KEF1PA.jpg) |

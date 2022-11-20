@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZLED-TUNE9  |
-| Vendor  | Trust  |
+| Vendor  | [Trust](/supported-devices/#v=Trust)  |
 | Description | Smart tunable LED bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![Trust ZLED-TUNE9](https://www.zigbee2mqtt.io/images/devices/ZLED-TUNE9.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZNMS11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Xiaomi Aqara smart lock |
 | Exposes | state, reverse, action, linkquality |
 | Picture | ![Xiaomi ZNMS11LM](https://www.zigbee2mqtt.io/images/devices/ZNMS11LM.jpg) |

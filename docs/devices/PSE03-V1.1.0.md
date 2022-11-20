@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PSE03-V1.1.0  |
-| Vendor  | EVOLOGY  |
+| Vendor  | [EVOLOGY](/supported-devices/#v=EVOLOGY)  |
 | Description | Sound and flash siren |
 | Exposes | warning, linkquality |
 | Picture | ![EVOLOGY PSE03-V1.1.0](https://www.zigbee2mqtt.io/images/devices/PSE03-V1.1.0.jpg) |

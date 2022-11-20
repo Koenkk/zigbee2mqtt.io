@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PS-ZIGBEE-SMART-CONTROLER-1CH-DIMMABLE  |
-| Vendor  | Niviss  |
+| Vendor  | [Niviss](/supported-devices/#v=Niviss)  |
 | Description | Zigbee smart controller |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Niviss PS-ZIGBEE-SMART-CONTROLER-1CH-DIMMABLE](https://www.zigbee2mqtt.io/images/devices/PS-ZIGBEE-SMART-CONTROLER-1CH-DIMMABLE.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_illuminance_temperature_humidity_sensor  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Illuminance, temperature & humidity sensor |
 | Exposes | temperature, humidity, illuminance_lux, battery, linkquality |
 | Picture | ![TuYa TS0601_illuminance_temperature_humidity_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_illuminance_temperature_humidity_sensor.jpg) |

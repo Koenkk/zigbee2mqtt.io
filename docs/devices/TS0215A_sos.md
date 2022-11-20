@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0215A_sos  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | SOS button |
 | Exposes | battery, action, linkquality |
 | Picture | ![TuYa TS0215A_sos](https://www.zigbee2mqtt.io/images/devices/TS0215A_sos.jpg) |

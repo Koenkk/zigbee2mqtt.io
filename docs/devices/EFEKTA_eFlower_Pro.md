@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | EFEKTA_eFlower_Pro  |
-| Vendor  | Custom devices (DiY)  |
+| Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | [Plant Wattering Sensor with e-ink display 2.13](https://efektalab.com/eFlowerPro) |
 | Exposes | soil_moisture, battery, illuminance, temperature, humidity, linkquality |
 | Picture | ![Custom devices (DiY) EFEKTA_eFlower_Pro](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eFlower_Pro.jpg) |

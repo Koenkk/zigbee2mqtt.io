@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TERNCY-DC01  |
-| Vendor  | TERNCY  |
+| Vendor  | [TERNCY](/supported-devices/#v=TERNCY)  |
 | Description | Temperature & contact sensor  |
 | Exposes | temperature, contact, battery, linkquality |
 | Picture | ![TERNCY TERNCY-DC01](https://www.zigbee2mqtt.io/images/devices/TERNCY-DC01.jpg) |

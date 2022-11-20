@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | OSL 130 C  |
-| Vendor  | Innr  |
+| Vendor  | [Innr](/supported-devices/#v=Innr)  |
 | Description | Outdoor smart spot colour, 230lm/spot, RGBW |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
 | Picture | ![Innr OSL 130 C](https://www.zigbee2mqtt.io/images/devices/OSL-130-C.jpg) |

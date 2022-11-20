@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZK-EU-2U  |
-| Vendor  | Moes  |
+| Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Zigbee 3.0 dual USB wireless socket plug |
 | Exposes | switch (state), linkquality |
 | Picture | ![Moes ZK-EU-2U](https://www.zigbee2mqtt.io/images/devices/ZK-EU-2U.jpg) |

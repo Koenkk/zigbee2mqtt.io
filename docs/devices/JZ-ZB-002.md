@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | JZ-ZB-002  |
-| Vendor  | LELLKI  |
+| Vendor  | [LELLKI](/supported-devices/#v=LELLKI)  |
 | Description | 2 gang touch switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![LELLKI JZ-ZB-002](https://www.zigbee2mqtt.io/images/devices/JZ-ZB-002.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SPP02GIP  |
-| Vendor  | Mercator  |
+| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
 | Description | Ikuü double outdoors power point |
 | Exposes | switch (state), power, current, voltage, energy, linkquality |
 | Picture | ![Mercator SPP02GIP](https://www.zigbee2mqtt.io/images/devices/SPP02GIP.jpg) |

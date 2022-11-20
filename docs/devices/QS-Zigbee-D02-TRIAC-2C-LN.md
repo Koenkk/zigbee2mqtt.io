@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QS-Zigbee-D02-TRIAC-2C-LN  |
-| Vendor  | Lonsonho  |
+| Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | 2 gang smart dimmer switch module with neutral |
 | Exposes | light (state, brightness, min_brightness), linkquality |
 | Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-2C-LN](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-D02-TRIAC-2C-LN.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | FWGU10Bulb02UK  |
-| Vendor  | Hive  |
+| Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | GU10 warm white |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Hive FWGU10Bulb02UK](https://www.zigbee2mqtt.io/images/devices/FWGU10Bulb02UK.jpg) |

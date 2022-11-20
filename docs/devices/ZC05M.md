@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZC05M  |
-| Vendor  | GIDEALED  |
+| Vendor  | [GIDEALED](/supported-devices/#v=GIDEALED)  |
 | Description | Smart Zigbee RGB LED strip controller |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
 | Picture | ![GIDEALED ZC05M](https://www.zigbee2mqtt.io/images/devices/ZC05M.jpg) |

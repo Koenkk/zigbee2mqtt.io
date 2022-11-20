@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | 40ZH-O  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, battery, sensitivity, keep_time, linkquality |
 | Picture | ![TuYa 40ZH-O](https://www.zigbee2mqtt.io/images/devices/40ZH-O.jpg) |

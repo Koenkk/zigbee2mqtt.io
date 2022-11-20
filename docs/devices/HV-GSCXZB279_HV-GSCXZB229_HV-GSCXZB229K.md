@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HV-GSCXZB279_HV-GSCXZB229_HV-GSCXZB229K  |
-| Vendor  | Hive  |
+| Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | Active light, warm to cool white (E27 & B22) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![Hive HV-GSCXZB279_HV-GSCXZB229_HV-GSCXZB229K](https://www.zigbee2mqtt.io/images/devices/HV-GSCXZB279_HV-GSCXZB229_HV-GSCXZB229K.jpg) |

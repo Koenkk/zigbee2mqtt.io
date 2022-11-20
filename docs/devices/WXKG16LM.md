@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WXKG16LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara wireless remote switch E1 (single rocker) |
 | Exposes | battery, voltage, action, click_mode, linkquality |
 | Picture | ![Xiaomi WXKG16LM](https://www.zigbee2mqtt.io/images/devices/WXKG16LM.jpg) |

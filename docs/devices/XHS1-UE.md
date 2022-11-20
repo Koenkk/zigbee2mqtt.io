@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | XHS1-UE  |
-| Vendor  | Universal Electronics Inc  |
+| Vendor  | [Universal Electronics Inc](/supported-devices/#v=Universal%20Electronics%20Inc)  |
 | Description | Wireless digital pet resistant PIR detector |
 | Exposes | occupancy, battery_low, tamper, temperature, battery, linkquality |
 | Picture | ![Universal Electronics Inc XHS1-UE](https://www.zigbee2mqtt.io/images/devices/XHS1-UE.jpg) |
