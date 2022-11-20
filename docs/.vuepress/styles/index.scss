@@ -113,6 +113,16 @@ footer a {
     transform: translate3d(0, 0.2em, 0);
   }
 
+  .page-nav .next a:after, .page-nav .prev a:before {
+    content: ' ';
+  }
+  .page-nav .next:after {
+    content: '→';
+  }
+  .page-nav .prev:before {
+    content: '←';
+  }
+
   summary {
     color: var(--c-text-accent);
     cursor: pointer;
