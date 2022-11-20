@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PM-C150-ZB  |
-| Vendor  | Dawon DNS  |
+| Vendor  | [Dawon DNS](/supported-devices/#v=Dawon%20DNS)  |
 | Description | IOT remote control smart buried-type 16A outlet |
 | Exposes | switch (state), power, energy, linkquality |
 | Picture | ![Dawon DNS PM-C150-ZB](https://www.zigbee2mqtt.io/images/devices/PM-C150-ZB.jpg) |

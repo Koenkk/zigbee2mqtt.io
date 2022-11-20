@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SWITCH-ZR02  |
-| Vendor  | eWeLink  |
+| Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
 | Description | Zigbee smart switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![eWeLink SWITCH-ZR02](https://www.zigbee2mqtt.io/images/devices/SWITCH-ZR02.jpg) |

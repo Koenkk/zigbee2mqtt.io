@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | DG6HD-1BW  |
-| Vendor  | Leviton  |
+| Vendor  | [Leviton](/supported-devices/#v=Leviton)  |
 | Description | Zigbee in-wall smart dimmer |
 | Exposes | light (state, brightness), linkquality |
 | Picture | ![Leviton DG6HD-1BW](https://www.zigbee2mqtt.io/images/devices/DG6HD-1BW.jpg) |

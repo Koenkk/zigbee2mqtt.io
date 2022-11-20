@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SZ-T04  |
-| Vendor  | Nous  |
+| Vendor  | [Nous](/supported-devices/#v=Nous)  |
 | Description | Temperature and humidity sensor with clock |
 | Exposes | temperature, humidity, battery, temperature_report_interval, humidity_report_interval, temperature_unit_convert, temperature_alarm, max_temperature, min_temperature, temperature_sensitivity, humidity_alarm, max_humidity, min_humidity, humidity_sensitivity, linkquality |
 | Picture | ![Nous SZ-T04](https://www.zigbee2mqtt.io/images/devices/SZ-T04.jpg) |

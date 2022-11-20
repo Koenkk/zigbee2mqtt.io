@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | EFEKTA_PWS  |
-| Vendor  | Custom devices (DiY)  |
+| Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | [Plant Wattering Sensor, CR2450, CR2477 batteries, temperature ] |
 | Exposes | soil_moisture, battery, temperature, report_delay, linkquality |
 | Picture | ![Custom devices (DiY) EFEKTA_PWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PWS.jpg) |

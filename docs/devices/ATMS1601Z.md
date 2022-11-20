@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ATMS1601Z  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Din smart relay (without power monitoring) |
 | Exposes | switch (state), power_outage_memory, indicator_mode, linkquality |
 | Picture | ![TuYa ATMS1601Z](https://www.zigbee2mqtt.io/images/devices/ATMS1601Z.jpg) |

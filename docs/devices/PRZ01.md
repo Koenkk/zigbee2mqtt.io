@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PRZ01  |
-| Vendor  | J.XUAN  |
+| Vendor  | [J.XUAN](/supported-devices/#v=J.XUAN)  |
 | Description | Human body movement sensor |
 | Exposes | occupancy, battery_low, battery, linkquality |
 | Picture | ![J.XUAN PRZ01](https://www.zigbee2mqtt.io/images/devices/PRZ01.jpg) |

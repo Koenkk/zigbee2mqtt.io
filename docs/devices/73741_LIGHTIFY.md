@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | 73741_LIGHTIFY  |
-| Vendor  | OSRAM  |
+| Vendor  | [OSRAM](/supported-devices/#v=OSRAM)  |
 | Description | LIGHTIFY RT5/6 LED |
 | Exposes | light (state, brightness, color_temp, color_xy, color_hs), effect, linkquality |
 | Picture | ![OSRAM 73741_LIGHTIFY](https://www.zigbee2mqtt.io/images/devices/73741_LIGHTIFY.jpg) |

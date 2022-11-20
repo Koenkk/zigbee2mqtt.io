@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | THS317-ET  |
-| Vendor  | OWON  |
+| Vendor  | [OWON](/supported-devices/#v=OWON)  |
 | Description | Temperature sensor |
 | Exposes | battery, temperature, linkquality |
 | Picture | ![OWON THS317-ET](https://www.zigbee2mqtt.io/images/devices/THS317-ET.jpg) |

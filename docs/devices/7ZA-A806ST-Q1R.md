@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | 7ZA-A806ST-Q1R  |
-| Vendor  | SmartThings  |
+| Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Smart bulb |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![SmartThings 7ZA-A806ST-Q1R](https://www.zigbee2mqtt.io/images/devices/7ZA-A806ST-Q1R.jpg) |

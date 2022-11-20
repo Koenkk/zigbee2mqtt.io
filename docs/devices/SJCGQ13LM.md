@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SJCGQ13LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara E1 water leak sensor |
 | Exposes | water_leak, battery, battery_low, voltage, device_temperature, power_outage_count, linkquality |
 | Picture | ![Xiaomi SJCGQ13LM](https://www.zigbee2mqtt.io/images/devices/SJCGQ13LM.jpg) |

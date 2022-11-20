@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HGZB-20-DE  |
-| Vendor  | Smart Home Pty  |
+| Vendor  | [Smart Home Pty](/supported-devices/#v=Smart%20Home%20Pty)  |
 | Description | Power plug |
 | Exposes | switch (state), linkquality |
 | Picture | ![Smart Home Pty HGZB-20-DE](https://www.zigbee2mqtt.io/images/devices/HGZB-20-DE.jpg) |

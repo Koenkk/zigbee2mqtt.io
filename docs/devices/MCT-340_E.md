@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | MCT-340 E  |
-| Vendor  | Visonic  |
+| Vendor  | [Visonic](/supported-devices/#v=Visonic)  |
 | Description | Magnetic door & window contact sensor |
 | Exposes | contact, battery_low, tamper, temperature, battery, linkquality |
 | Picture | ![Visonic MCT-340 E](https://www.zigbee2mqtt.io/images/devices/MCT-340-E.jpg) |

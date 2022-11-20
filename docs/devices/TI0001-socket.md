@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TI0001-socket  |
-| Vendor  | Livolo  |
+| Vendor  | [Livolo](/supported-devices/#v=Livolo)  |
 | Description | Zigbee socket |
 | Exposes | switch (state), linkquality |
 | Picture | ![Livolo TI0001-socket](https://www.zigbee2mqtt.io/images/devices/TI0001-socket.jpg) |

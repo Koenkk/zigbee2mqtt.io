@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PM-B430-ZB  |
-| Vendor  | Dawon DNS  |
+| Vendor  | [Dawon DNS](/supported-devices/#v=Dawon%20DNS)  |
 | Description | IOT smart plug 10A |
 | Exposes | switch (state), power, energy, linkquality |
 | Picture | ![Dawon DNS PM-B430-ZB](https://www.zigbee2mqtt.io/images/devices/PM-B430-ZB.jpg) |

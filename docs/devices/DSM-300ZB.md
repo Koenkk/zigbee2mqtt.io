@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | DSM-300ZB  |
-| Vendor  | ShinaSystem  |
+| Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS contact sensor |
 | Exposes | contact, battery, voltage, linkquality |
 | Picture | ![ShinaSystem DSM-300ZB](https://www.zigbee2mqtt.io/images/devices/DSM-300ZB.jpg) |

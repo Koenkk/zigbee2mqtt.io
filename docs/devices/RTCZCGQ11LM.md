@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | RTCZCGQ11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara presence detector FP1 (regions not supported for now) |
 | Exposes | presence, presence_event, monitoring_mode, approach_distance, motion_sensitivity, reset_nopresence_status, device_temperature, power_outage_count, linkquality |
 | Picture | ![Xiaomi RTCZCGQ11LM](https://www.zigbee2mqtt.io/images/devices/RTCZCGQ11LM.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZB_A60_RGBCW  |
-| Vendor  | Ajax Online  |
+| Vendor  | [Ajax Online](/supported-devices/#v=Ajax%20Online)  |
 | Description | Smart Zigbee pro 12W A60 RGBCW bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![Ajax Online ZB_A60_RGBCW](https://www.zigbee2mqtt.io/images/devices/ZB_A60_RGBCW.jpg) |

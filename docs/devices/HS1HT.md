@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS1HT  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart temperature & humidity Sensor |
 | Exposes | battery, temperature, humidity, linkquality |
 | Picture | ![HEIMAN HS1HT](https://www.zigbee2mqtt.io/images/devices/HS1HT.jpg) |

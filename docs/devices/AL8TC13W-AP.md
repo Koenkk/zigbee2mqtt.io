@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | AL8TC13W-AP  |
-| Vendor  | Alchemy  |
+| Vendor  | [Alchemy](/supported-devices/#v=Alchemy)  |
 | Description | Downlight with tuneable white |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![Alchemy AL8TC13W-AP](https://www.zigbee2mqtt.io/images/devices/AL8TC13W-AP.jpg) |

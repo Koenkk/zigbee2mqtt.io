@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | BRHM8E27W70-I1  |
-| Vendor  | GS  |
+| Vendor  | [GS](/supported-devices/#v=GS)  |
 | Description | Smart dimmable, RGB + white (E27 & B22) |
 | Exposes | light (state, brightness, color_xy), effect, linkquality |
 | Picture | ![GS BRHM8E27W70-I1](https://www.zigbee2mqtt.io/images/devices/BRHM8E27W70-I1.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | UP-SA-9127D  |
-| Vendor  | Sunricher  |
+| Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | LED-trading 2 channel AC switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Sunricher UP-SA-9127D](https://www.zigbee2mqtt.io/images/devices/UP-SA-9127D.jpg) |

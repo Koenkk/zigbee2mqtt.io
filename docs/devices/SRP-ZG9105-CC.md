@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SRP-ZG9105-CC  |
-| Vendor  | Sunricher  |
+| Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Constant Current Zigbee LED dimmable driver |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Sunricher SRP-ZG9105-CC](https://www.zigbee2mqtt.io/images/devices/SRP-ZG9105-CC.jpg) |

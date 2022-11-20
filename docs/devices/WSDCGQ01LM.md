@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WSDCGQ01LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | MiJia temperature & humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
 | Picture | ![Xiaomi WSDCGQ01LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ01LM.jpg) |

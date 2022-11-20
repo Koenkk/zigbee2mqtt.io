@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SRTS-A01  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara Smart Radiator Thermostat E1 |
 | Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, preset), sensor, calibrated, lock (state), switch (state), window_open, away_preset_temperature, voltage, battery, linkquality |
 | Picture | ![Xiaomi SRTS-A01](https://www.zigbee2mqtt.io/images/devices/SRTS-A01.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TAFFETAS2  |
-| Vendor  | Acova  |
+| Vendor  | [Acova](/supported-devices/#v=Acova)  |
 | Description | Taffetas 2 heater |
 | Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![Acova TAFFETAS2](https://www.zigbee2mqtt.io/images/devices/TAFFETAS2.jpg) |

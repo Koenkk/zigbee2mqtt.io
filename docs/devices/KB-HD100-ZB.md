@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | KB-HD100-ZB  |
-| Vendor  | Dawon DNS  |
+| Vendor  | [Dawon DNS](/supported-devices/#v=Dawon%20DNS)  |
 | Description | IOT Card holder |
 | Exposes | card, battery_low, linkquality |
 | Picture | ![Dawon DNS KB-HD100-ZB](https://www.zigbee2mqtt.io/images/devices/KB-HD100-ZB.jpg) |

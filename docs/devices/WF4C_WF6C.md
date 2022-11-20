@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WF4C_WF6C  |
-| Vendor  | Acuity Brands Lighting (ABL)  |
+| Vendor  | [Acuity Brands Lighting (ABL)](/supported-devices/#v=Acuity%20Brands%20Lighting%20(ABL))  |
 | Description | Juno 4" and 6" LED smart wafer downlight |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![Acuity Brands Lighting (ABL) WF4C_WF6C](https://www.zigbee2mqtt.io/images/devices/WF4C_WF6C.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZNMS13LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara S2 lock pro |
 | Exposes | state, reverse, action, linkquality |
 | Picture | ![Xiaomi ZNMS13LM](https://www.zigbee2mqtt.io/images/devices/ZNMS13LM.jpg) |

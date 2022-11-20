@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0011_switch_module  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 1 gang switch module - (without neutral) |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
 | Picture | ![TuYa TS0011_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0011_switch_module.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS1RC-EM  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart remote controller |
 | Exposes | battery, action, linkquality |
 | Picture | ![HEIMAN HS1RC-EM](https://www.zigbee2mqtt.io/images/devices/HS1RC-EM.jpg) |

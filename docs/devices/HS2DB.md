@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS2DB  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart doorbell button |
 | Exposes | battery, action, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN HS2DB](https://www.zigbee2mqtt.io/images/devices/HS2DB.jpg) |

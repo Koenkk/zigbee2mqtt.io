@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SBM300ZB1  |
-| Vendor  | ShinaSystem  |
+| Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS remote control |
 | Exposes | battery, voltage, action, linkquality |
 | Picture | ![ShinaSystem SBM300ZB1](https://www.zigbee2mqtt.io/images/devices/SBM300ZB1.jpg) |

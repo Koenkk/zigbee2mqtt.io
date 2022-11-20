@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZNXNKG02LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara knob H1 (wireless) |
 | Exposes | battery, voltage, action, operation_mode, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, linkquality |
 | Picture | ![Xiaomi ZNXNKG02LM](https://www.zigbee2mqtt.io/images/devices/ZNXNKG02LM.jpg) |

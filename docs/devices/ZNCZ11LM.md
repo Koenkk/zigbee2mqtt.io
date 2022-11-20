@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZNCZ11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara power plug ZigBee |
 | Exposes | switch (state), power, energy, device_temperature, voltage, power_outage_memory, led_disabled_night, auto_off, linkquality |
 | Picture | ![Xiaomi ZNCZ11LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ11LM.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | IG-CDZB2AG009RA-MZN-01  |
-| Vendor  | ADEO  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN E27 Led white bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![ADEO IG-CDZB2AG009RA-MZN-01](https://www.zigbee2mqtt.io/images/devices/IG-CDZB2AG009RA-MZN-01.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | OGL 130 C  |
-| Vendor  | Innr  |
+| Vendor  | [Innr](/supported-devices/#v=Innr)  |
 | Description | Outdoor smart globe lights |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
 | Picture | ![Innr OGL 130 C](https://www.zigbee2mqtt.io/images/devices/OGL-130-C.jpg) |

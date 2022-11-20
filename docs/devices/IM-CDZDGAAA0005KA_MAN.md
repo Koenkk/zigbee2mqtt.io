@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | IM-CDZDGAAA0005KA_MAN  |
-| Vendor  | ADEO  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN RGBTW GU10 Bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![ADEO IM-CDZDGAAA0005KA_MAN](https://www.zigbee2mqtt.io/images/devices/IM-CDZDGAAA0005KA_MAN.jpg) |

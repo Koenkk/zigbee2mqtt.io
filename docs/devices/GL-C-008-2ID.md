@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | GL-C-008-2ID  |
-| Vendor  | Gledopto  |
+| Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee LED Controller RGB+CCT (2 ID) |
 | Exposes | light (state, brightness, color_xy), light (state, brightness, color_temp, color_temp_startup), linkquality |
 | Picture | ![Gledopto GL-C-008-2ID](https://www.zigbee2mqtt.io/images/devices/GL-C-008-2ID.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | VOCKQJK11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara TVOC air quality monitor |
 | Exposes | temperature, humidity, voc, device_temperature, battery, voltage, display_unit, linkquality |
 | Picture | ![Xiaomi VOCKQJK11LM](https://www.zigbee2mqtt.io/images/devices/VOCKQJK11LM.jpg) |

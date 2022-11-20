@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ICZB-R12D  |
-| Vendor  | iCasa  |
+| Vendor  | [iCasa](/supported-devices/#v=iCasa)  |
 | Description | Zigbee AC dimmer |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![iCasa ICZB-R12D](https://www.zigbee2mqtt.io/images/devices/ICZB-R12D.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SMRZB-143  |
-| Vendor  | Develco  |
+| Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Smart cable |
 | Exposes | switch (state), power, current, voltage, energy, device_temperature, linkquality |
 | Picture | ![Develco SMRZB-143](https://www.zigbee2mqtt.io/images/devices/SMRZB-143.jpg) |

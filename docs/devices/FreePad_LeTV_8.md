@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | FreePad_LeTV_8  |
-| Vendor  | DIYRuZ  |
+| Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
 | Description | [LeTV 8key FreePad mod](https://modkam.ru/?p=1791) |
 | Exposes | battery, action, switch_type, switch_actions, linkquality |
 | Picture | ![DIYRuZ FreePad_LeTV_8](https://www.zigbee2mqtt.io/images/devices/FreePad_LeTV_8.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZG_LED_DRIVER42CC  |
-| Vendor  | ENVILAR  |
+| Vendor  | [ENVILAR](/supported-devices/#v=ENVILAR)  |
 | Description | Zigbee LED driver |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![ENVILAR ZG_LED_DRIVER42CC](https://www.zigbee2mqtt.io/images/devices/ZG_LED_DRIVER42CC.jpg) |

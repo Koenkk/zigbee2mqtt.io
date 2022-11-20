@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PSS-23ZBS  |
-| Vendor  | Climax  |
+| Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Power plug |
 | Exposes | switch (state), linkquality |
 | Picture | ![Climax PSS-23ZBS](https://www.zigbee2mqtt.io/images/devices/PSS-23ZBS.jpg) |

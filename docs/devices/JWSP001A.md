@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | JWSP001A  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Jiawen LED Driver & Dimmer |
 | Exposes | light (state, brightness, color_temp), linkquality |
 | Picture | ![Xiaomi JWSP001A](https://www.zigbee2mqtt.io/images/devices/JWSP001A.jpg) |

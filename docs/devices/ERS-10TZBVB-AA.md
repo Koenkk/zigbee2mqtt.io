@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ERS-10TZBVB-AA  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart button |
 | Exposes | action, battery, operation_mode, linkquality |
 | Picture | ![TuYa ERS-10TZBVB-AA](https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVB-AA.jpg) |

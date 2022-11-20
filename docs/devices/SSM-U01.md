@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SSM-U01  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara single switch module T1 (with neutral) |
 | Exposes | switch (state), energy, power, device_temperature, power_outage_memory, power_outage_count, switch_type, voltage, current, linkquality |
 | Picture | ![Xiaomi SSM-U01](https://www.zigbee2mqtt.io/images/devices/SSM-U01.jpg) |

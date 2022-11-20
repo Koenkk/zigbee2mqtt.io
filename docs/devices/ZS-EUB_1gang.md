@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZS-EUB_1gang  |
-| Vendor  | Moes  |
+| Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Wall light switch (1 gang) |
 | Exposes | switch (state), power_on_behavior, switch_type, backlight_mode, linkquality |
 | Picture | ![Moes ZS-EUB_1gang](https://www.zigbee2mqtt.io/images/devices/ZS-EUB_1gang.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TH008L10RGBCCT  |
-| Vendor  | UR Lighting  |
+| Vendor  | [UR Lighting](/supported-devices/#v=UR%20Lighting)  |
 | Description | 10W RGB+CCT downlight |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![UR Lighting TH008L10RGBCCT](https://www.zigbee2mqtt.io/images/devices/TH008L10RGBCCT.jpg) |

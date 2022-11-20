@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HK-DIM-A  |
-| Vendor  | Candeo  |
+| Vendor  | [Candeo](/supported-devices/#v=Candeo)  |
 | Description | Zigbee LED dimmer smart switch |
 | Exposes | light (state, brightness), linkquality |
 | Picture | ![Candeo HK-DIM-A](https://www.zigbee2mqtt.io/images/devices/HK-DIM-A.jpg) |

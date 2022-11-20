@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | DJT12LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara T1 vibration sensor |
 | Exposes | action, linkquality |
 | Picture | ![Xiaomi DJT12LM](https://www.zigbee2mqtt.io/images/devices/DJT12LM.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZM-L03E-Z  |
-| Vendor  | Zemismart  |
+| Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Smart light switch - 3 gang with neutral wire |
 | Exposes | switch (state), linkquality |
 | Picture | ![Zemismart ZM-L03E-Z](https://www.zigbee2mqtt.io/images/devices/ZM-L03E-Z.jpg) |

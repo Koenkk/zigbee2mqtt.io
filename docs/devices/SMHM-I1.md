@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SMHM-I1  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart motion sensor |
 | Exposes | occupancy, battery_low, battery, voltage, tamper, linkquality |
 | Picture | ![HEIMAN SMHM-I1](https://www.zigbee2mqtt.io/images/devices/SMHM-I1.jpg) |

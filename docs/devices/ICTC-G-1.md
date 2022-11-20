@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ICTC-G-1  |
-| Vendor  | IKEA  |
+| Vendor  | [IKEA](/supported-devices/#v=IKEA)  |
 | Description | TRADFRI wireless dimmer |
 | Exposes | battery, action, linkquality |
 | Picture | ![IKEA ICTC-G-1](https://www.zigbee2mqtt.io/images/devices/ICTC-G-1.jpg) |

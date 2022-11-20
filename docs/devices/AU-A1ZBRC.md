@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | AU-A1ZBRC  |
-| Vendor  | Aurora Lighting  |
+| Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
 | Description | AOne smart remote |
 | Exposes | battery, action, linkquality |
 | Picture | ![Aurora Lighting AU-A1ZBRC](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBRC.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HC-SLM-1  |
-| Vendor  | Home Control AS  |
+| Vendor  | [Home Control AS](/supported-devices/#v=Home%20Control%20AS)  |
 | Description | Heimgard (Wattle) door lock pro |
 | Exposes | lock (state, lock_state), battery, auto_relock_time, sound_volume, linkquality |
 | Picture | ![Home Control AS HC-SLM-1](https://www.zigbee2mqtt.io/images/devices/HC-SLM-1.jpg) |

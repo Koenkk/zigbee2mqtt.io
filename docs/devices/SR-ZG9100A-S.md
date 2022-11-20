@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SR-ZG9100A-S  |
-| Vendor  | Sunricher  |
+| Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee AC in wall switch single-line |
 | Exposes | switch (state), linkquality |
 | Picture | ![Sunricher SR-ZG9100A-S](https://www.zigbee2mqtt.io/images/devices/SR-ZG9100A-S.jpg) |

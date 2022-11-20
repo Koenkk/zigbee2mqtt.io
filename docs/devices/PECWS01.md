@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PECWS01  |
-| Vendor  | Perenio  |
+| Vendor  | [Perenio](/supported-devices/#v=Perenio)  |
 | Description | Door sensor |
 | Exposes | contact, battery, voltage, linkquality |
 | Picture | ![Perenio PECWS01](https://www.zigbee2mqtt.io/images/devices/PECWS01.jpg) |

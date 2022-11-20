@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_dimmer  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee smart dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), linkquality |
 | Picture | ![TuYa TS0601_dimmer](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer.jpg) |

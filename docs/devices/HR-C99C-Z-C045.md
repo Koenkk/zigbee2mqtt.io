@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HR-C99C-Z-C045  |
-| Vendor  | ADEO  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | RGB CTT LEXMAN ENKI remote control |
 | Exposes | battery, action, linkquality |
 | Picture | ![ADEO HR-C99C-Z-C045](https://www.zigbee2mqtt.io/images/devices/HR-C99C-Z-C045.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_temperature_humidity_sensor  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature & humidity sensor |
 | Exposes | temperature, humidity, battery, battery_low, battery_level, linkquality |
 | Picture | ![TuYa TS0601_temperature_humidity_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_temperature_humidity_sensor.jpg) |
