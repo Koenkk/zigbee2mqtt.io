@@ -31,6 +31,7 @@ This device is a
 - thermostat UI for displaying/adjusting target set point.
 - temperature sensor
 - hygrometry sensor
+
 It can display the heating status of associated climate by setting `pi_heating_demand`
 
 It requires a Z-Stack controller (Firmware version > TBD). It is currently not working with zigate and conbee II (maybe supported in further firmware).
