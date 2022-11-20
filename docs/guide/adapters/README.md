@@ -169,9 +169,9 @@ _(in order of first appearance)_
     Open source PoE af Coordinator with external antenna on CC2652P  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20220219.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20220125.zip)  
-    * [Description](https://zig-star.com/projects/zigstar-lilyzig/)  
+    * [Description](https://zig-star.com/projects/zigstar-olizig/)  
     * [Flashing instructions](https://zig-star.com/radio-docs/zigstar-multi-tool/) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
-    * [Buy](https://zig-star.com) [Tindie](https://www.tindie.com/products/zigstar/zigstar-lilyzig-poe/) 
+    * [Buy](https://zig-star.com) [Tindie](https://www.tindie.com/products/zigstar/zigstar-olizig-poe/) 
   
     ![](../../images/ZigStar-PoE.png)
     </details>
@@ -263,16 +263,16 @@ _(in order of first appearance)_
     ![](../../images/codm-cc2652p-rpi.jpg)
     </details>
   * <details>
-    <summary>ZigStar Shield</summary>
+    <summary>ZigStar ZigiHAT PoE </summary>
   
-    Powerfull Open source Pi Shield based on CC2652P  
+    Powerfull Open source Pi HAT based on CC2652P with PoE,RTC onboard
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20220219.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20220125.zip)  
-    * [Description](https://zig-star.com/projects/zigbee-shield/)  
-    * [Flashing instructions](https://zig-star.com/radio-docs/flash-cc-bsl/) or see "Flashing CC1352/CC2652/CC2538 based adapters" below  
+    * [Description](https://zig-star.com/projects/zigbee-zigihat/)  
+    * [Flashing instructions](https://zig-star.com/projects/zigbee-zigihat/#flashing) or see "Flashing CC1352/CC2652/CC2538 based adapters" below  
     * [Buy](https://zig-star.com)
   
-    ![](../../images/ZigStar-Shield.png)
+    ![](../../images/ZigiHAT.png)
     </details>
 
 * Development board
