@@ -53,6 +53,16 @@ connection: &con01
     kickolduser: true
 ```
 
+For ConBee II / RaspBee II, use the following configuration:
+
+```
+connection: &con01
+  accepter: tcp,20108
+  connector: serialdev,/dev/ttyACM0,115200n81,nobreak,local
+  options:
+    kickolduser: true
+```
+
 After this reboot the system.
 ```bash
 reboot
