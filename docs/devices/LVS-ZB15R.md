@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LVS-ZB15R  |
-| Vendor  | LivingWise  |
+| Vendor  | [LivingWise](/supported-devices/#v=LivingWise)  |
 | Description | Zigbee smart outlet |
 | Exposes | switch (state), linkquality |
 | Picture | ![LivingWise LVS-ZB15R](https://www.zigbee2mqtt.io/images/devices/LVS-ZB15R.jpg) |

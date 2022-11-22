@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZB-RGBCW  |
-| Vendor  | Lonsonho  |
+| Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | Zigbee 3.0 LED-bulb, RGBW LED |
 | Exposes | light (state, brightness, color_temp, color_xy), linkquality |
 | Picture | ![Lonsonho ZB-RGBCW](https://www.zigbee2mqtt.io/images/devices/ZB-RGBCW.jpg) |

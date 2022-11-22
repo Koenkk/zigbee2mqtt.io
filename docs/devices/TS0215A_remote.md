@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0215A_remote  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Security remote control |
 | Exposes | battery, action, linkquality |
 | Picture | ![TuYa TS0215A_remote](https://www.zigbee2mqtt.io/images/devices/TS0215A_remote.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | DLKZMK11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara single switch module T1 (with neutral) |
 | Exposes | switch (state), power, energy, device_temperature, voltage, power_outage_memory, led_disabled_night, switch_type, linkquality |
 | Picture | ![Xiaomi DLKZMK11LM](https://www.zigbee2mqtt.io/images/devices/DLKZMK11LM.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QBKG03LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara double key wired wall switch without neutral wire. Doesn't work as a router and doesn't support power meter |
 | Exposes | switch (state), device_temperature, action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG03LM](https://www.zigbee2mqtt.io/images/devices/QBKG03LM.jpg) |

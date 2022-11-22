@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ML-ST-D200  |
-| Vendor  | M-ELEC  |
+| Vendor  | [M-ELEC](/supported-devices/#v=M-ELEC)  |
 | Description | Stitchy Dim switchable wall module |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![M-ELEC ML-ST-D200](https://www.zigbee2mqtt.io/images/devices/ML-ST-D200.jpg) |

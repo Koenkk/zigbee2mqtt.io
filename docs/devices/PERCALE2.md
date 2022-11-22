@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PERCALE2  |
-| Vendor  | Acova  |
+| Vendor  | [Acova](/supported-devices/#v=Acova)  |
 | Description | Percale 2 heater |
 | Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![Acova PERCALE2](https://www.zigbee2mqtt.io/images/devices/PERCALE2.jpg) |

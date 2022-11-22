@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | CTR.UBX  |
-| Vendor  | Airam  |
+| Vendor  | [Airam](/supported-devices/#v=Airam)  |
 | Description | CTR.U remote BX |
 | Exposes | action, linkquality |
 | Picture | ![Airam CTR.UBX](https://www.zigbee2mqtt.io/images/devices/CTR.UBX.jpg) |

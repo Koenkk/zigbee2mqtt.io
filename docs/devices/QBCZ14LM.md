@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QBCZ14LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart wall outlet T1 |
 | Exposes | switch (state), power, energy, device_temperature, voltage, current, power_outage_memory, led_disabled_night, button_lock, overload_protection, linkquality |
 | Picture | ![Xiaomi QBCZ14LM](https://www.zigbee2mqtt.io/images/devices/QBCZ14LM.jpg) |

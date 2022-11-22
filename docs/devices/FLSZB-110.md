@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | FLSZB-110  |
-| Vendor  | Develco  |
+| Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Flood alarm device  |
 | Exposes | battery_low, tamper, water_leak, temperature, voltage, linkquality |
 | Picture | ![Develco FLSZB-110](https://www.zigbee2mqtt.io/images/devices/FLSZB-110.jpg) |

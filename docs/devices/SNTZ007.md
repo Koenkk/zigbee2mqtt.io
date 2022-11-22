@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SNTZ007  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Rechargeable Zigbee contact sensor |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![TuYa SNTZ007](https://www.zigbee2mqtt.io/images/devices/SNTZ007.jpg) |

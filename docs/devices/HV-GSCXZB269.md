@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HV-GSCXZB269  |
-| Vendor  | Hive  |
+| Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | Active light cool to warm white (E26)  |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![Hive HV-GSCXZB269](https://www.zigbee2mqtt.io/images/devices/HV-GSCXZB269.jpg) |

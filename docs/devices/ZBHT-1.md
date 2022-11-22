@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZBHT-1  |
-| Vendor  | Smartenit  |
+| Vendor  | [Smartenit](/supported-devices/#v=Smartenit)  |
 | Description | Temperature & humidity sensor  |
 | Exposes | battery, temperature, humidity, linkquality |
 | Picture | ![Smartenit ZBHT-1](https://www.zigbee2mqtt.io/images/devices/ZBHT-1.jpg) |

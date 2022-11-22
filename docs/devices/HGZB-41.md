@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HGZB-41  |
-| Vendor  | Nue / 3A  |
+| Vendor  | [Nue / 3A](/supported-devices/#v=Nue%20%2F%203A)  |
 | Description | Smart one gang wall switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A HGZB-41](https://www.zigbee2mqtt.io/images/devices/HGZB-41.jpg) |

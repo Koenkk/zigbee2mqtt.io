@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | E1F-N9G  |
-| Vendor  | Sengled  |
+| Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Smart LED filament candle (E12) |
 | Exposes | light (state, brightness), linkquality |
 | Picture | ![Sengled E1F-N9G](https://www.zigbee2mqtt.io/images/devices/E1F-N9G.jpg) |

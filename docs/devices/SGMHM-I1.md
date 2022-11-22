@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SGMHM-I1  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Combustible gas sensor |
 | Exposes | gas, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN SGMHM-I1](https://www.zigbee2mqtt.io/images/devices/SGMHM-I1.jpg) |

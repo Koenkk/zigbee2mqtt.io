@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | XDD11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara Opple MX960 |
 | Exposes | light (state, brightness, color_temp), linkquality |
 | Picture | ![Xiaomi XDD11LM](https://www.zigbee2mqtt.io/images/devices/XDD11LM.jpg) |

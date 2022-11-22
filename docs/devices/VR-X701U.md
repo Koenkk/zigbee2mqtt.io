@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | VR-X701U  |
-| Vendor  | Vrey  |
+| Vendor  | [Vrey](/supported-devices/#v=Vrey)  |
 | Description | 1 gang switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Vrey VR-X701U](https://www.zigbee2mqtt.io/images/devices/VR-X701U.jpg) |

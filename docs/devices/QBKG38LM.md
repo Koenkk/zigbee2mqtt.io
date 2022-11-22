@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QBKG38LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara E1 1 gang switch (without neutral) |
 | Exposes | switch (state), power_outage_memory, action, device_temperature, flip_indicator_light, operation_mode, mode_switch, linkquality |
 | Picture | ![Xiaomi QBKG38LM](https://www.zigbee2mqtt.io/images/devices/QBKG38LM.jpg) |

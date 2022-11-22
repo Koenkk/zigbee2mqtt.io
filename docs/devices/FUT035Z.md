@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | FUT035Z  |
-| Vendor  | Miboxer  |
+| Vendor  | [Miboxer](/supported-devices/#v=Miboxer)  |
 | Description | Dual white LED controller |
 | Exposes | light (state, brightness, color_temp), effect, linkquality |
 | Picture | ![Miboxer FUT035Z](https://www.zigbee2mqtt.io/images/devices/FUT035Z.jpg) |

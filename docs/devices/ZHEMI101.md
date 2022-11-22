@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZHEMI101  |
-| Vendor  | Develco  |
+| Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Energy meter |
 | Exposes | power, energy, battery_low, pulse_configuration, interface_mode, current_summation, check_meter, linkquality |
 | Picture | ![Develco ZHEMI101](https://www.zigbee2mqtt.io/images/devices/ZHEMI101.jpg) |

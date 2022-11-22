@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | AU-A1GSZ9RGBW_HV-GSCXZB269K  |
-| Vendor  | Aurora Lighting  |
+| Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
 | Description | AOne 9.5W smart RGBW GLS E27/B22 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![Aurora Lighting AU-A1GSZ9RGBW_HV-GSCXZB269K](https://www.zigbee2mqtt.io/images/devices/AU-A1GSZ9RGBW_HV-GSCXZB269K.jpg) |

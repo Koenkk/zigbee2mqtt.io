@@ -1,5 +1,5 @@
 import { promises as fsp } from "fs";
-import { getBase } from "../../vuepress.config";
+import { getBase } from "../../getBase";
 import { distDir, findFiles } from "./utils";
 import * as path from "path";
 

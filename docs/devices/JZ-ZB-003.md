@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | JZ-ZB-003  |
-| Vendor  | LELLKI  |
+| Vendor  | [LELLKI](/supported-devices/#v=LELLKI)  |
 | Description | 3 gang switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![LELLKI JZ-ZB-003](https://www.zigbee2mqtt.io/images/devices/JZ-ZB-003.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WXKG03LM_rev2  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara single key wireless wall switch (2018 model) |
 | Exposes | battery, action, voltage, linkquality |
 | Picture | ![Xiaomi WXKG03LM_rev2](https://www.zigbee2mqtt.io/images/devices/WXKG03LM_rev2.jpg) |

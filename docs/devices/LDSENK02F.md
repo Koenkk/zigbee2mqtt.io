@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LDSENK02F  |
-| Vendor  | ADEO  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | 10A/16A EU smart plug |
 | Exposes | power, switch (state), energy, linkquality |
 | Picture | ![ADEO LDSENK02F](https://www.zigbee2mqtt.io/images/devices/LDSENK02F.jpg) |

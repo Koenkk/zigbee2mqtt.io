@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | CSM-300ZB  |
-| Vendor  | ShinaSystem  |
+| Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS multipurpose sensor |
 | Exposes | battery, voltage, status, people, linkquality |
 | Picture | ![ShinaSystem CSM-300ZB](https://www.zigbee2mqtt.io/images/devices/CSM-300ZB.jpg) |

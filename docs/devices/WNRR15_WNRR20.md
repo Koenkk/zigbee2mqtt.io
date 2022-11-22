@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WNRR15/WNRR20  |
-| Vendor  | Legrand  |
+| Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Outlet with power consumption monitoring |
 | Exposes | switch (state), action, power, linkquality |
 | Picture | ![Legrand WNRR15/WNRR20](https://www.zigbee2mqtt.io/images/devices/WNRR15-WNRR20.jpg) |

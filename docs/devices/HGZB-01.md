@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HGZB-01  |
-| Vendor  | Nue / 3A  |
+| Vendor  | [Nue / 3A](/supported-devices/#v=Nue%20%2F%203A)  |
 | Description | Smart Zigbee 3.0 light controller |
 | Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A HGZB-01](https://www.zigbee2mqtt.io/images/devices/HGZB-01.jpg) |

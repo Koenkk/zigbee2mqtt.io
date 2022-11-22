@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0505A_led  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | RGB+CCT LED |
 | Exposes | light (state, brightness, color_temp, color_hs), linkquality |
 | Picture | ![TuYa TS0505A_led](https://www.zigbee2mqtt.io/images/devices/TS0505A_led.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TERNCY-LS01  |
-| Vendor  | TERNCY  |
+| Vendor  | [TERNCY](/supported-devices/#v=TERNCY)  |
 | Description | Smart light socket |
 | Exposes | switch (state), action, linkquality |
 | Picture | ![TERNCY TERNCY-LS01](https://www.zigbee2mqtt.io/images/devices/TERNCY-LS01.jpg) |

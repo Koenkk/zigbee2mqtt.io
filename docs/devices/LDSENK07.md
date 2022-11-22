@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LDSENK07  |
-| Vendor  | ADEO  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN wireless smart outdoor siren |
 | Exposes | warning, battery, battery_low, tamper, linkquality |
 | Picture | ![ADEO LDSENK07](https://www.zigbee2mqtt.io/images/devices/LDSENK07.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS1RC-N  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart remote controller |
 | Exposes | battery, action, linkquality |
 | Picture | ![HEIMAN HS1RC-N](https://www.zigbee2mqtt.io/images/devices/HS1RC-N.jpg) |

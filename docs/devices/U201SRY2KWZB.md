@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | U201SRY2KWZB  |
-| Vendor  | Schneider Electric  |
+| Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Ulti 240V 9.1 A 1 gang relay switch impress switch module, amber LED |
 | Exposes | switch (state), linkquality |
 | Picture | ![Schneider Electric U201SRY2KWZB](https://www.zigbee2mqtt.io/images/devices/U201SRY2KWZB.jpg) |

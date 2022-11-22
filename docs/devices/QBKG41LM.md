@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QBKG41LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara E1 2 gang switch (with neutral) |
 | Exposes | switch (state), operation_mode, action, power_outage_memory, device_temperature, flip_indicator_light, linkquality |
 | Picture | ![Xiaomi QBKG41LM](https://www.zigbee2mqtt.io/images/devices/QBKG41LM.jpg) |

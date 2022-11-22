@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZP-LZ-FR2U  |
-| Vendor  | Moes  |
+| Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Zigbee 3.0 dual USB wireless socket plug |
 | Exposes | switch (state), power_outage_memory, indicator_mode, lock (state), linkquality |
 | Picture | ![Moes ZP-LZ-FR2U](https://www.zigbee2mqtt.io/images/devices/ZP-LZ-FR2U.jpg) |

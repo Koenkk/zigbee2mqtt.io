@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS1WL/HS3WL  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Water leakage sensor |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
 | Picture | ![HEIMAN HS1WL/HS3WL](https://www.zigbee2mqtt.io/images/devices/HS1WL-HS3WL.jpg) |

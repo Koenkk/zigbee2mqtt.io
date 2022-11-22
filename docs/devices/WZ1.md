@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WZ1  |
-| Vendor  | Skydance  |
+| Vendor  | [Skydance](/supported-devices/#v=Skydance)  |
 | Description | Zigbee & RF 2 channel LED controller |
 | Exposes | light (state, brightness), linkquality |
 | Picture | ![Skydance WZ1](https://www.zigbee2mqtt.io/images/devices/WZ1.jpg) |

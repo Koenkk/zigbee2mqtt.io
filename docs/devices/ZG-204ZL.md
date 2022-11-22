@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZG-204ZL  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Luminance motion sensor |
 | Exposes | occupancy, illuminance, battery, sensitivity, keep_time, linkquality |
 | Picture | ![TuYa ZG-204ZL](https://www.zigbee2mqtt.io/images/devices/ZG-204ZL.jpg) |

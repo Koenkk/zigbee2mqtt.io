@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | YRD226/246 TSDB  |
-| Vendor  | Yale  |
+| Vendor  | [Yale](/supported-devices/#v=Yale)  |
 | Description | Assure lock |
 | Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, linkquality |
 | Picture | ![Yale YRD226/246 TSDB](https://www.zigbee2mqtt.io/images/devices/YRD226-246-TSDB.jpg) |

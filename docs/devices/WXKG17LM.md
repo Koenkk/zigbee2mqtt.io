@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WXKG17LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara E1 double key wireless switch |
 | Exposes | battery, voltage, action, click_mode, linkquality |
 | Picture | ![Xiaomi WXKG17LM](https://www.zigbee2mqtt.io/images/devices/WXKG17LM.jpg) |

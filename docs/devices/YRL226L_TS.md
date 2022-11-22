@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | YRL226L TS  |
-| Vendor  | Yale  |
+| Vendor  | [Yale](/supported-devices/#v=Yale)  |
 | Description | Assure lock SL |
 | Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, linkquality |
 | Picture | ![Yale YRL226L TS](https://www.zigbee2mqtt.io/images/devices/YRL226L-TS.jpg) |

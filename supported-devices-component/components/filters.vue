@@ -36,7 +36,7 @@ import QIcon from "quasar/src/components/icon/QIcon";
 import QInput from "quasar/src/components/input/QInput";
 import QTooltip from "quasar/src/components/tooltip/QTooltip";
 import { defineComponent, ref, watch } from "vue";
-import MultiSelect from '../components/multi-select';
+import MultiSelect from '../components/multi-select.vue';
 import { exposes, vendors } from "../devices";
 import hashStore from '../hash-store';
 
@@ -128,8 +128,8 @@ export default defineComponent({
 
 
 <style lang="scss">
-@import '~quasar/src/css/variables.sass';
-@import "~quasar/src/components/tooltip/QTooltip";
+@import 'quasar/src/css/variables.sass';
+@import "quasar/src/components/tooltip/QTooltip";
 
 .device-filters {
   display: flex;

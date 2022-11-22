@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SWITCH EDP RE:DY  |
-| Vendor  | EDP  |
+| Vendor  | [EDP](/supported-devices/#v=EDP)  |
 | Description | re:dy switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![EDP SWITCH EDP RE:DY](https://www.zigbee2mqtt.io/images/devices/SWITCH-EDP-RE-DY.jpg) |

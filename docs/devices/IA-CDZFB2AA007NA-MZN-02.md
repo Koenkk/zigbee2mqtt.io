@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | IA-CDZFB2AA007NA-MZN-02  |
-| Vendor  | ADEO  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN E27 LED white |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![ADEO IA-CDZFB2AA007NA-MZN-02](https://www.zigbee2mqtt.io/images/devices/IA-CDZFB2AA007NA-MZN-02.jpg) |

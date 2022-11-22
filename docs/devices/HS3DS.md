@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS3DS  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Door sensor |
 | Exposes | contact, battery, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN HS3DS](https://www.zigbee2mqtt.io/images/devices/HS3DS.jpg) |

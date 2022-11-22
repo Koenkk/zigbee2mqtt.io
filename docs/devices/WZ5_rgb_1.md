@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WZ5_rgb_1  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee & RF 5 in 1 LED controller (RGB mode) |
 | Exposes | light (state, brightness, color_hs, color_xy), linkquality |
 | Picture | ![TuYa WZ5_rgb_1](https://www.zigbee2mqtt.io/images/devices/WZ5_rgb_1.jpg) |

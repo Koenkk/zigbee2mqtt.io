@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WXCJKG11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara Opple switch 1 band |
 | Exposes | battery, voltage, action, operation_mode, linkquality |
 | Picture | ![Xiaomi WXCJKG11LM](https://www.zigbee2mqtt.io/images/devices/WXCJKG11LM.jpg) |

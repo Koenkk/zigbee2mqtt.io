@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS011F_circuit_breaker  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Circuit breaker |
 | Exposes | switch (state), linkquality |
 | Picture | ![TuYa TS011F_circuit_breaker](https://www.zigbee2mqtt.io/images/devices/TS011F_circuit_breaker.jpg) |

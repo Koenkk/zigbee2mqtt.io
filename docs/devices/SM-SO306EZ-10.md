@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SM-SO306EZ-10  |
-| Vendor  | UseeLink  |
+| Vendor  | [UseeLink](/supported-devices/#v=UseeLink)  |
 | Description | 4 gang switch, with USB |
 | Exposes | switch (state), linkquality |
 | Picture | ![UseeLink SM-SO306EZ-10](https://www.zigbee2mqtt.io/images/devices/SM-SO306EZ-10.jpg) |

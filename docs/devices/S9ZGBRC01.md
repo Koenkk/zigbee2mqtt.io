@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | S9ZGBRC01  |
-| Vendor  | Smart9  |
+| Vendor  | [Smart9](/supported-devices/#v=Smart9)  |
 | Description | Smart remote controller |
 | Exposes | battery, action, linkquality |
 | Picture | ![Smart9 S9ZGBRC01](https://www.zigbee2mqtt.io/images/devices/S9ZGBRC01.jpg) |

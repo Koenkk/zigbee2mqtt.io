@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZNCZ15LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart plug T1 (china standard) |
 | Exposes | switch (state), power, energy, device_temperature, voltage, current, consumer_connected, power_outage_memory, led_disabled_night, button_lock, overload_protection, linkquality |
 | Picture | ![Xiaomi ZNCZ15LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ15LM.jpg) |

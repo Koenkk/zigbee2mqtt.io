@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_gas_sensor  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | gas sensor |
 | Exposes | gas, self_test, self_test_result, fault_alarm, silence, linkquality |
 | Picture | ![TuYa TS0601_gas_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_gas_sensor.jpg) |

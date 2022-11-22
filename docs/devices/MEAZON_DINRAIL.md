@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | MEAZON_DINRAIL  |
-| Vendor  | Meazon  |
+| Vendor  | [Meazon](/supported-devices/#v=Meazon)  |
 | Description | DinRail 1-phase meter |
 | Exposes | switch (state), power, voltage, current, linkquality |
 | Picture | ![Meazon MEAZON_DINRAIL](https://www.zigbee2mqtt.io/images/devices/MEAZON_DINRAIL.jpg) |

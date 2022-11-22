@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | YSR-MINI-01_dimmer  |
-| Vendor  | YSRSAI  |
+| Vendor  | [YSRSAI](/supported-devices/#v=YSRSAI)  |
 | Description | Zigbee LED controller (Dimmer) |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![YSRSAI YSR-MINI-01_dimmer](https://www.zigbee2mqtt.io/images/devices/YSR-MINI-01_dimmer.jpg) |

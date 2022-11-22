@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS011F_din_smart_relay  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Din smart relay (with power monitoring) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, linkquality |
 | Picture | ![TuYa TS011F_din_smart_relay](https://www.zigbee2mqtt.io/images/devices/TS011F_din_smart_relay.jpg) |

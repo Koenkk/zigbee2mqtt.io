@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LH-32ZB  |
-| Vendor  | iHORN  |
+| Vendor  | [iHORN](/supported-devices/#v=iHORN)  |
 | Description | Temperature & humidity sensor |
 | Exposes | humidity, temperature, battery, linkquality |
 | Picture | ![iHORN LH-32ZB](https://www.zigbee2mqtt.io/images/devices/LH-32ZB.jpg) |

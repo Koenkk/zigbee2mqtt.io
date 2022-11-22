@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZNDDMK11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart lightstrip driver |
 | Exposes | power, energy, voltage, device_temperature, power_outage_memory, light (state, brightness, color_temp, color_xy), light (state, brightness, color_temp), dimmer_mode, linkquality |
 | Picture | ![Xiaomi ZNDDMK11LM](https://www.zigbee2mqtt.io/images/devices/ZNDDMK11LM.jpg) |

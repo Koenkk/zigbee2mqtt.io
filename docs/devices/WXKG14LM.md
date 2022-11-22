@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WXKG14LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara wireless remote switch H1 (single rocker) |
 | Exposes | battery, voltage, action, click_mode, operation_mode, linkquality |
 | Picture | ![Xiaomi WXKG14LM](https://www.zigbee2mqtt.io/images/devices/WXKG14LM.jpg) |

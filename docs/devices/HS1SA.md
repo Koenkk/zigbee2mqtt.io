@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS1SA  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smoke detector |
 | Exposes | smoke, battery_low, battery, linkquality |
 | Picture | ![HEIMAN HS1SA](https://www.zigbee2mqtt.io/images/devices/HS1SA.jpg) |

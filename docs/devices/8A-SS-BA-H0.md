@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | 8A-SS-BA-H0  |
-| Vendor  | Leedarson  |
+| Vendor  | [Leedarson](/supported-devices/#v=Leedarson)  |
 | Description | Motion Sensor |
 | Exposes | battery, occupancy, linkquality |
 | Picture | ![Leedarson 8A-SS-BA-H0](https://www.zigbee2mqtt.io/images/devices/8A-SS-BA-H0.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | STS-OUT-US-2  |
-| Vendor  | SmartThings  |
+| Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Zigbee smart plug with power meter |
 | Exposes | switch (state), power, current, voltage, linkquality |
 | Picture | ![SmartThings STS-OUT-US-2](https://www.zigbee2mqtt.io/images/devices/STS-OUT-US-2.jpg) |

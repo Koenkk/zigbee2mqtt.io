@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | MG-AUZG01  |
-| Vendor  | Makegood  |
+| Vendor  | [Makegood](/supported-devices/#v=Makegood)  |
 | Description | Double Zigbee power point |
 | Exposes | switch (state), power, current, voltage, energy, linkquality |
 | Picture | ![Makegood MG-AUZG01](https://www.zigbee2mqtt.io/images/devices/MG-AUZG01.jpg) |

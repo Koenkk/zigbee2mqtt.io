@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | E1D-G73WNA  |
-| Vendor  | Sengled  |
+| Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Smart window and door sensor |
 | Exposes | contact, battery_low, battery, voltage, tamper, linkquality |
 | Picture | ![Sengled E1D-G73WNA](https://www.zigbee2mqtt.io/images/devices/E1D-G73WNA.jpg) |

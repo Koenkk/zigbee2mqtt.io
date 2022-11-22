@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | 316GLEDRF  |
-| Vendor  | ELKO  |
+| Vendor  | [ELKO](/supported-devices/#v=ELKO)  |
 | Description | ZigBee in-wall smart dimmer |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![ELKO 316GLEDRF](https://www.zigbee2mqtt.io/images/devices/316GLEDRF.jpg) |

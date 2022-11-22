@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | CTHS-317-ET  |
-| Vendor  | CASAIA  |
+| Vendor  | [CASAIA](/supported-devices/#v=CASAIA)  |
 | Description | Remote temperature probe on cable |
 | Exposes | temperature, battery_low, battery, linkquality |
 | Picture | ![CASAIA CTHS-317-ET](https://www.zigbee2mqtt.io/images/devices/CTHS-317-ET.jpg) |

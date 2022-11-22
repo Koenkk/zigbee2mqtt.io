@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HALIGHTDIMWWB22  |
-| Vendor  | Hive  |
+| Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | Active smart bulb white LED (B22) |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Hive HALIGHTDIMWWB22](https://www.zigbee2mqtt.io/images/devices/HALIGHTDIMWWB22.jpg) |

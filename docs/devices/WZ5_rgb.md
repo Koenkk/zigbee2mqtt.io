@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WZ5_rgb  |
-| Vendor  | Skydance  |
+| Vendor  | [Skydance](/supported-devices/#v=Skydance)  |
 | Description | Zigbee & RF 5 in 1 LED controller (RGB mode) |
 | Exposes | light (state, brightness, color_hs), linkquality |
 | Picture | ![Skydance WZ5_rgb](https://www.zigbee2mqtt.io/images/devices/WZ5_rgb.jpg) |

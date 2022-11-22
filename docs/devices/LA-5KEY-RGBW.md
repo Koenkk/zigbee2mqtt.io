@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LA-5KEY-RGBW  |
-| Vendor  | Ynoa  |
+| Vendor  | [Ynoa](/supported-devices/#v=Ynoa)  |
 | Description | 5 key control for RGBW light |
 | Exposes | battery, battery_low, action, linkquality |
 | Picture | ![Ynoa LA-5KEY-RGBW](https://www.zigbee2mqtt.io/images/devices/LA-5KEY-RGBW.jpg) |

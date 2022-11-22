@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | AU-A1ZBDWS  |
-| Vendor  | Aurora Lighting  |
+| Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
 | Description | Magnetic door & window contact sensor |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![Aurora Lighting AU-A1ZBDWS](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBDWS.jpg) |

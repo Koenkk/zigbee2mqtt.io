@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | GPDRPLOP401100CE  |
-| Vendor  | LEDVANCE  |
+| Vendor  | [LEDVANCE](/supported-devices/#v=LEDVANCE)  |
 | Description | Panel TW LED 625 UGR19 |
 | Exposes | light (state, brightness, color_temp, color_xy, color_hs), effect, linkquality |
 | Picture | ![LEDVANCE GPDRPLOP401100CE](https://www.zigbee2mqtt.io/images/devices/GPDRPLOP401100CE.jpg) |

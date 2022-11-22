@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PTAPT-WH02  |
-| Vendor  | GE  |
+| Vendor  | [GE](/supported-devices/#v=GE)  |
 | Description | Quirky smart switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![GE PTAPT-WH02](https://www.zigbee2mqtt.io/images/devices/PTAPT-WH02.jpg) |

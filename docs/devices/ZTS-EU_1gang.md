@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZTS-EU_1gang  |
-| Vendor  | Moes  |
+| Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Wall touch light switch (1 gang) |
 | Exposes | switch (state), indicate_light, power_on_behavior, linkquality |
 | Picture | ![Moes ZTS-EU_1gang](https://www.zigbee2mqtt.io/images/devices/ZTS-EU_1gang.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LVS-ZB15S  |
-| Vendor  | LivingWise  |
+| Vendor  | [LivingWise](/supported-devices/#v=LivingWise)  |
 | Description | ZigBee smart in-wall switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![LivingWise LVS-ZB15S](https://www.zigbee2mqtt.io/images/devices/LVS-ZB15S.jpg) |

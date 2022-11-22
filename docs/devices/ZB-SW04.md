@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZB-SW04  |
-| Vendor  | eWeLink  |
+| Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
 | Description | Smart light switch - 4 gang |
 | Exposes | switch (state), linkquality |
 | Picture | ![eWeLink ZB-SW04](https://www.zigbee2mqtt.io/images/devices/ZB-SW04.jpg) |

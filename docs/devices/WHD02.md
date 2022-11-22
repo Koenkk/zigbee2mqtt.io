@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WHD02  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Wall switch module |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
 | Picture | ![TuYa WHD02](https://www.zigbee2mqtt.io/images/devices/WHD02.jpg) |

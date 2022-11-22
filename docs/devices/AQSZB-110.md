@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | AQSZB-110  |
-| Vendor  | Develco  |
+| Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Air quality sensor |
 | Exposes | voc, temperature, humidity, battery, battery_low, air_quality, linkquality |
 | Picture | ![Develco AQSZB-110](https://www.zigbee2mqtt.io/images/devices/AQSZB-110.jpg) |

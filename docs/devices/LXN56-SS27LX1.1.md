@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LXN56-SS27LX1.1  |
-| Vendor  | Zemismart  |
+| Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Smart light switch - 2 gang with neutral wire |
 | Exposes | switch (state), linkquality |
 | Picture | ![Zemismart LXN56-SS27LX1.1](https://www.zigbee2mqtt.io/images/devices/LXN56-SS27LX1.1.jpg) |

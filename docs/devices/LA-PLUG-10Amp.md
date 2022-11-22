@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LA-PLUG-10Amp  |
-| Vendor  | Ynoa  |
+| Vendor  | [Ynoa](/supported-devices/#v=Ynoa)  |
 | Description | Smart plug Zigbee 3.0 |
 | Exposes | switch (state), power, linkquality |
 | Picture | ![Ynoa LA-PLUG-10Amp](https://www.zigbee2mqtt.io/images/devices/LA-PLUG-10Amp.jpg) |

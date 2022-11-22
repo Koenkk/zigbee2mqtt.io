@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | RTCGQ14LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara P1 human body movement and illuminance sensor |
 | Exposes | occupancy, illuminance_lux, illuminance, motion_sensitivity, detection_interval, trigger_indicator, device_temperature, battery, voltage, linkquality |
 | Picture | ![Xiaomi RTCGQ14LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ14LM.jpg) |

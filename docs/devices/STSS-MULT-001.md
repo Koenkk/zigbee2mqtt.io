@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | STSS-MULT-001  |
-| Vendor  | SmartThings  |
+| Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Multipurpose sensor |
 | Exposes | contact, battery_low, tamper, linkquality |
 | Picture | ![SmartThings STSS-MULT-001](https://www.zigbee2mqtt.io/images/devices/STSS-MULT-001.jpg) |

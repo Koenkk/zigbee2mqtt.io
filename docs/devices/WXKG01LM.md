@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WXKG01LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | MiJia wireless switch |
 | Exposes | battery, action, voltage, power_outage_count, linkquality |
 | Picture | ![Xiaomi WXKG01LM](https://www.zigbee2mqtt.io/images/devices/WXKG01LM.jpg) |
