@@ -27,7 +27,7 @@ pageClass: device-page
 
 
 ### Issues
-- It's been reported that this plug automatically turns off by itself if it looses the connection to the coordinator (e.g.: weak signal). So, a loop task that sends a turn on cmd would be a possible workaround.
+- It's been reported that this plug automatically turns off by itself if it looses the connection to the coordinator (e.g.: weak signal). So, a loop task that sends a turn on command would be a possible workaround.
 
 ### Pairing
 Press and hold the button on the device until the blue light starts blinking, release it and and the device will automatically join.
