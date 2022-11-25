@@ -24,6 +24,10 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Notes
+
+### Pairing
+Press and hold the center ring for 10 seconds until the blue network indicator flashes.
 
 <!-- Notes END: Do not edit below this line -->
 
