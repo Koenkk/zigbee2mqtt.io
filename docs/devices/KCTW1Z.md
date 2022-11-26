@@ -39,6 +39,8 @@ pageClass: device-page
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
+## Pairing
+Press the button on top of the device for at least 5seconds but not more than 10seconds (which will cancel the network configuration). The signal strength icon will begin to flash an keep on doing so until it stays solid (network config successful) or disappears (networkconfig failed).
 
 ## Exposes
 
