@@ -44,7 +44,6 @@ pageClass: device-page
 As a low power device, the sensor isn't reachable most of the time, but
 only when active (e.g. because it Update temperature and humidity). Therefore, requests to read
 or set values (i.e. `Unit of temperature` or `Calibration of temperature`) will only work when the sensor.
-<!-- Notes END: Do not edit below this line -->
 
 ## Exposes
 
