@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ICPSHC24-10EU-IL-1  |
-| Vendor  | IKEA  |
+| Vendor  | [IKEA](/supported-devices/#v=IKEA)  |
 | Description | TRADFRI driver for wireless control (10 watt) |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
 | Picture | ![IKEA ICPSHC24-10EU-IL-1](https://www.zigbee2mqtt.io/images/devices/ICPSHC24-10EU-IL-1.jpg) |

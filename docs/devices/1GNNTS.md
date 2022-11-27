@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | 1GNNTS  |
-| Vendor  | WETEN  |
+| Vendor  | [WETEN](/supported-devices/#v=WETEN)  |
 | Description | 1 gang no neutral touch wall switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![WETEN 1GNNTS](https://www.zigbee2mqtt.io/images/devices/1GNNTS.jpg) |

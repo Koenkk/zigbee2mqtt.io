@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | S31ZB  |
-| Vendor  | SONOFF  |
+| Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart plug (US version) |
 | Exposes | switch (state), linkquality |
 | Picture | ![SONOFF S31ZB](https://www.zigbee2mqtt.io/images/devices/S31ZB.jpg) |

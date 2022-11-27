@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZB-SW03  |
-| Vendor  | eWeLink  |
+| Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
 | Description | Smart light switch - 3 gang |
 | Exposes | switch (state), linkquality |
 | Picture | ![eWeLink ZB-SW03](https://www.zigbee2mqtt.io/images/devices/ZB-SW03.jpg) |

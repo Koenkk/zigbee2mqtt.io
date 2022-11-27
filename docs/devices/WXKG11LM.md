@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WXKG11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara wireless switch |
 | Exposes | battery, voltage, action, device_temperature, power_outage_count, linkquality |
 | Picture | ![Xiaomi WXKG11LM](https://www.zigbee2mqtt.io/images/devices/WXKG11LM.jpg) |

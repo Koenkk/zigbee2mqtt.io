@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SSHM-I1  |
-| Vendor  | GS  |
+| Vendor  | [GS](/supported-devices/#v=GS)  |
 | Description | Smoke detector |
 | Exposes | smoke, battery_low, tamper, battery, linkquality |
 | Picture | ![GS SSHM-I1](https://www.zigbee2mqtt.io/images/devices/SSHM-I1.jpg) |

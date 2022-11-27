@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | E1F-N5E  |
-| Vendor  | Sengled  |
+| Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Element color plus E12 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), power, energy, linkquality |
 | Picture | ![Sengled E1F-N5E](https://www.zigbee2mqtt.io/images/devices/E1F-N5E.jpg) |

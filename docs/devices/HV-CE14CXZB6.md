@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HV-CE14CXZB6  |
-| Vendor  | Hive  |
+| Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | Active light, warm to cool white (E14) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![Hive HV-CE14CXZB6](https://www.zigbee2mqtt.io/images/devices/HV-CE14CXZB6.jpg) |

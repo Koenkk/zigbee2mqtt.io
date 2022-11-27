@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | 2CH-ZG-BOX-RELAY  |
-| Vendor  | Envilar  |
+| Vendor  | [Envilar](/supported-devices/#v=Envilar)  |
 | Description | 2 channel box relay |
 | Exposes | switch (state), linkquality |
 | Picture | ![Envilar 2CH-ZG-BOX-RELAY](https://www.zigbee2mqtt.io/images/devices/2CH-ZG-BOX-RELAY.jpg) |

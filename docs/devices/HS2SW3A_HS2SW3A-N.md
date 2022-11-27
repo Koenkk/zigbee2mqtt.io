@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS2SW3A/HS2SW3A-N  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart switch - 3 gang with neutral wire |
 | Exposes | switch (state), device_temperature, linkquality |
 | Picture | ![HEIMAN HS2SW3A/HS2SW3A-N](https://www.zigbee2mqtt.io/images/devices/HS2SW3A-HS2SW3A-N.jpg) |

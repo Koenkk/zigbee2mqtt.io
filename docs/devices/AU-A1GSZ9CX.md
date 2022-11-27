@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | AU-A1GSZ9CX  |
-| Vendor  | Aurora  |
+| Vendor  | [Aurora](/supported-devices/#v=Aurora)  |
 | Description | AOne GLS lamp 9w tunable dimmable 2200-5000K |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![Aurora AU-A1GSZ9CX](https://www.zigbee2mqtt.io/images/devices/AU-A1GSZ9CX.jpg) |

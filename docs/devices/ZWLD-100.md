@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZWLD-100  |
-| Vendor  | Trust  |
+| Vendor  | [Trust](/supported-devices/#v=Trust)  |
 | Description | Water leakage detector |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
 | Picture | ![Trust ZWLD-100](https://www.zigbee2mqtt.io/images/devices/ZWLD-100.jpg) |

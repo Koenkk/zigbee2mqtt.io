@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SZ-SRN12N  |
-| Vendor  | SmartThings  |
+| Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Smart siren |
 | Exposes | warning, linkquality |
 | Picture | ![SmartThings SZ-SRN12N](https://www.zigbee2mqtt.io/images/devices/SZ-SRN12N.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | RL804CZB  |
-| Vendor  | Orvibo  |
+| Vendor  | [Orvibo](/supported-devices/#v=Orvibo)  |
 | Description | Zigbee LED controller RGB + CCT or RGBW |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![Orvibo RL804CZB](https://www.zigbee2mqtt.io/images/devices/RL804CZB.jpg) |

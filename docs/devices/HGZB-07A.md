@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HGZB-07A  |
-| Vendor  | Smart Home Pty  |
+| Vendor  | [Smart Home Pty](/supported-devices/#v=Smart%20Home%20Pty)  |
 | Description | RGBW Downlight |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![Smart Home Pty HGZB-07A](https://www.zigbee2mqtt.io/images/devices/HGZB-07A.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ST8AU-CON  |
-| Vendor  | OSRAM  |
+| Vendor  | [OSRAM](/supported-devices/#v=OSRAM)  |
 | Description | OSRAM SubstiTUBE T8 Advanced UO Connected |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![OSRAM ST8AU-CON](https://www.zigbee2mqtt.io/images/devices/ST8AU-CON.jpg) |

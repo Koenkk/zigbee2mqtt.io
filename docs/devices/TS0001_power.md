@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0001_power  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Switch with power monitoring |
 | Exposes | switch (state), power, current, voltage, energy, linkquality |
 | Picture | ![TuYa TS0001_power](https://www.zigbee2mqtt.io/images/devices/TS0001_power.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LXN59-2S7LX1.0  |
-| Vendor  | Nue / 3A  |
+| Vendor  | [Nue / 3A](/supported-devices/#v=Nue%20%2F%203A)  |
 | Description | Smart light relay - 2 gang |
 | Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A LXN59-2S7LX1.0](https://www.zigbee2mqtt.io/images/devices/LXN59-2S7LX1.0.jpg) |

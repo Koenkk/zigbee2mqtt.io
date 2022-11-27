@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | AJ_RGBCCT_CTRL  |
-| Vendor  | Ajax Online  |
+| Vendor  | [Ajax Online](/supported-devices/#v=Ajax%20Online)  |
 | Description | Smart Zigbee LED strip RGB+CCT |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Ajax Online AJ_RGBCCT_CTRL](https://www.zigbee2mqtt.io/images/devices/AJ_RGBCCT_CTRL.jpg) |

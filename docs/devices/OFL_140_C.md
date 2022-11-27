@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | OFL 140 C  |
-| Vendor  | Innr  |
+| Vendor  | [Innr](/supported-devices/#v=Innr)  |
 | Description | Outdoor flex light colour LED strip 4m, 1000lm, RGBW |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
 | Picture | ![Innr OFL 140 C](https://www.zigbee2mqtt.io/images/devices/OFL-140-C.jpg) |

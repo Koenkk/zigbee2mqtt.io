@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | BDHM8E27W70-I1  |
-| Vendor  | GS  |
+| Vendor  | [GS](/supported-devices/#v=GS)  |
 | Description | Active light, warm to cool white (E27 & B22) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![GS BDHM8E27W70-I1](https://www.zigbee2mqtt.io/images/devices/BDHM8E27W70-I1.jpg) |

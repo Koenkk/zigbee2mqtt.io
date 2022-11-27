@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QBKG34LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart wall switch T1 (with neutral, three rocker) |
 | Exposes | switch (state), power, energy, voltage, flip_indicator_light, power_outage_memory, led_disabled_night, device_temperature, action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG34LM](https://www.zigbee2mqtt.io/images/devices/QBKG34LM.jpg) |

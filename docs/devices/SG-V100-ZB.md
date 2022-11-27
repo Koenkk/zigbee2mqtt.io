@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SG-V100-ZB  |
-| Vendor  | Dawon DNS  |
+| Vendor  | [Dawon DNS](/supported-devices/#v=Dawon%20DNS)  |
 | Description | IOT remote control smart gas lock |
 | Exposes | battery, switch (state), linkquality |
 | Picture | ![Dawon DNS SG-V100-ZB](https://www.zigbee2mqtt.io/images/devices/SG-V100-ZB.jpg) |

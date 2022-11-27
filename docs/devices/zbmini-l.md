@@ -1,7 +1,7 @@
 ---
 title: "SONOFF ZBMINI-L control via MQTT"
 description: "Integrate your SONOFF ZBMINI-L via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2022-11-20T18:02:24
 pageClass: device-page
 ---
 
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZBMINI-L  |
-| Vendor  | SONOFF  |
+| Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart switch (no neutral) |
 | Exposes | switch (state), power_on_behavior, linkquality |
 | Picture | ![SONOFF ZBMINI-L](https://www.zigbee2mqtt.io/images/devices/ZBMINI-L.jpg) |

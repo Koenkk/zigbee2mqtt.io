@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | KB-B540R-ZB  |
-| Vendor  | Dawon DNS  |
+| Vendor  | [Dawon DNS](/supported-devices/#v=Dawon%20DNS)  |
 | Description | IOT smart plug 16A |
 | Exposes | switch (state), power, energy, linkquality |
 | Picture | ![Dawon DNS KB-B540R-ZB](https://www.zigbee2mqtt.io/images/devices/KB-B540R-ZB.jpg) |

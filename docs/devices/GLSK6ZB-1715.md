@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | GLSK6ZB-1715  |
-| Vendor  | Hej  |
+| Vendor  | [Hej](/supported-devices/#v=Hej)  |
 | Description | Goqual 5 gang Switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Hej GLSK6ZB-1715](https://www.zigbee2mqtt.io/images/devices/GLSK6ZB-1715.jpg) |

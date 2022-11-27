@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | FUT038Z  |
-| Vendor  | Miboxer  |
+| Vendor  | [Miboxer](/supported-devices/#v=Miboxer)  |
 | Description | RGBW LED controller |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, linkquality |
 | Picture | ![Miboxer FUT038Z](https://www.zigbee2mqtt.io/images/devices/FUT038Z.jpg) |

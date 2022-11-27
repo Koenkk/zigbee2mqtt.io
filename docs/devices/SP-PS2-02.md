@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SP-PS2-02  |
-| Vendor  | Spotmau  |
+| Vendor  | [Spotmau](/supported-devices/#v=Spotmau)  |
 | Description | Smart wall switch - 2 gang |
 | Exposes | switch (state), linkquality |
 | Picture | ![Spotmau SP-PS2-02](https://www.zigbee2mqtt.io/images/devices/SP-PS2-02.jpg) |

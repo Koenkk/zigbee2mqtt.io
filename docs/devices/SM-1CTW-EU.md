@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SM-1CTW-EU  |
-| Vendor  | Somgoms  |
+| Vendor  | [Somgoms](/supported-devices/#v=Somgoms)  |
 | Description | Curtain switch |
 | Exposes | cover (state, position), linkquality |
 | Picture | ![Somgoms SM-1CTW-EU](https://www.zigbee2mqtt.io/images/devices/SM-1CTW-EU.jpg) |

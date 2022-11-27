@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SP-PS1-02  |
-| Vendor  | Spotmau  |
+| Vendor  | [Spotmau](/supported-devices/#v=Spotmau)  |
 | Description | Smart wall switch - 1 gang |
 | Exposes | switch (state), linkquality |
 | Picture | ![Spotmau SP-PS1-02](https://www.zigbee2mqtt.io/images/devices/SP-PS1-02.jpg) |

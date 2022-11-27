@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | DLKZMK12LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara single switch module T1 (without neutral). Doesn't work as a router and doesn't support power meter |
 | Exposes | switch (state), power_outage_memory, switch_type, linkquality |
 | Picture | ![Xiaomi DLKZMK12LM](https://www.zigbee2mqtt.io/images/devices/DLKZMK12LM.jpg) |

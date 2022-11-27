@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | STSS-PRES-001  |
-| Vendor  | SmartThings  |
+| Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Presence sensor |
 | Exposes | battery, presence, linkquality |
 | Picture | ![SmartThings STSS-PRES-001](https://www.zigbee2mqtt.io/images/devices/STSS-PRES-001.jpg) |

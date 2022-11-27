@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WXKG06LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara D1 single key wireless wall switch |
 | Exposes | battery, action, voltage, linkquality |
 | Picture | ![Xiaomi WXKG06LM](https://www.zigbee2mqtt.io/images/devices/WXKG06LM.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WZ5_dim  |
-| Vendor  | Skydance  |
+| Vendor  | [Skydance](/supported-devices/#v=Skydance)  |
 | Description | Zigbee & RF 5 in 1 LED controller (DIM mode) |
 | Exposes | light (state, brightness), linkquality |
 | Picture | ![Skydance WZ5_dim](https://www.zigbee2mqtt.io/images/devices/WZ5_dim.jpg) |

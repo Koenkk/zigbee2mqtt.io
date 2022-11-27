@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HLD812-Z-SC  |
-| Vendor  | Shenzhen Homa  |
+| Vendor  | [Shenzhen Homa](/supported-devices/#v=Shenzhen%20Homa)  |
 | Description | Smart LED driver |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Shenzhen Homa HLD812-Z-SC](https://www.zigbee2mqtt.io/images/devices/HLD812-Z-SC.jpg) |

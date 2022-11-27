@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LA-GU10-RGBW  |
-| Vendor  | Ynoa  |
+| Vendor  | [Ynoa](/supported-devices/#v=Ynoa)  |
 | Description | Smart LED GU10 RGB CCT |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
 | Picture | ![Ynoa LA-GU10-RGBW](https://www.zigbee2mqtt.io/images/devices/LA-GU10-RGBW.jpg) |

@@ -153,44 +153,49 @@ function getExposeDocs(expose, definition) {
       lines.push(`  - HSL space (hue, saturation, lightness)\`{"color": {"h": H, "s": S, "l": L}}\` e.g. \`{"color":{"h":360,"s":100,"l":100}}\` or \`{"color": {"hsl": "H,S,L"}}\` e.g. \`{"color":{"hsl":"360,100,100"}}\``);
     }
 
-    if (definition.options?.find((o) => o.name === 'transition')) {
+    const transition = definition.toZigbee.find((t) => t.key.includes('transition'));
+    if (transition) {
       lines.push(``);
       lines.push(`#### Transition`);
       lines.push(`For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property \`transition\` to the payload which is the transition time in seconds.`);
       lines.push(`Examples: \`{"brightness":156,"transition":3}\`, \`{"color_temp":241,"transition":1}\`.`);
     }
 
-    lines.push(``);
-    lines.push(`#### Moving/stepping`);
-    lines.push(`Instead of setting a value (e.g. brightness) directly it is also possible to:`);
-    lines.push(`- move: this will automatically move the value over time, to stop send value \`stop\` or \`0\`.`);
-    lines.push(`- step: this will increment/decrement the current value by the given one.`);
-    lines.push(`\nThe direction of move and step can be either up or down, provide a negative value to move/step down, a positive value to move/step up.`);
-    lines.push(`To do this send a payload like below to \`zigbee2mqtt/FRIENDLY_NAME/set\``);
-    if (brightness) {
-      lines.push(`\n**NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use \`brightness_move_onoff\`/\`brightness_step_onoff\``);
-    }
-    lines.push(`\`\`\`\`js`);
-    lines.push(`{`);
-    if (brightness) {
-      lines.push(`  "brightness_move": -40, // Starts moving brightness down at 40 units per second`);
-      lines.push(`  "brightness_move": 0, // Stop moving brightness`);
-      lines.push(`  "brightness_step": 40 // Increases brightness by 40`);
-    }
-    if (colorTemp) {
-      lines.push(`  "color_temp_move": 60, // Starts moving color temperature up at 60 units per second`);
-      lines.push(`  "color_temp_move": "stop", // Stop moving color temperature`);
-      lines.push(`  "color_temp_step": 99, // Increase color temperature by 99`);
-    }
-    if (colorHS) {
-      lines.push(`  "hue_move": 40, // Starts moving hue up at 40 units per second, will endlessly loop (allowed value range: -255 till 255)`);
-      lines.push(`  "hue_step": -90, // Decrease hue by 90 (allowed value range: -255 till 255)`);
-      lines.push(`  "saturation_move": -55, // Starts moving saturation down at -55 units per second (allowed value range: -255 till 255)`);
-      lines.push(`  "saturation_step": 66, // Increase saturation by 66 (allowed value range: -255 till 255)`);
-    }
+    const brightnessMove = definition.toZigbee.find((t) => t.key.includes('brightness_move'));
+    const brightnessStep = definition.toZigbee.find((t) => t.key.includes('brightness_step'));
+    if (brightnessMove && brightnessStep) {
+      lines.push(``);
+      lines.push(`#### Moving/stepping`);
+      lines.push(`Instead of setting a value (e.g. brightness) directly it is also possible to:`);
+      lines.push(`- move: this will automatically move the value over time, to stop send value \`stop\` or \`0\`.`);
+      lines.push(`- step: this will increment/decrement the current value by the given one.`);
+      lines.push(`\nThe direction of move and step can be either up or down, provide a negative value to move/step down, a positive value to move/step up.`);
+      lines.push(`To do this send a payload like below to \`zigbee2mqtt/FRIENDLY_NAME/set\``);
+      if (brightness) {
+        lines.push(`\n**NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use \`brightness_move_onoff\`/\`brightness_step_onoff\``);
+      }
+      lines.push(`\`\`\`\`js`);
+      lines.push(`{`);
+      if (brightness) {
+        lines.push(`  "brightness_move": -40, // Starts moving brightness down at 40 units per second`);
+        lines.push(`  "brightness_move": 0, // Stop moving brightness`);
+        lines.push(`  "brightness_step": 40 // Increases brightness by 40`);
+      }
+      if (colorTemp) {
+        lines.push(`  "color_temp_move": 60, // Starts moving color temperature up at 60 units per second`);
+        lines.push(`  "color_temp_move": "stop", // Stop moving color temperature`);
+        lines.push(`  "color_temp_step": 99, // Increase color temperature by 99`);
+      }
+      if (colorHS) {
+        lines.push(`  "hue_move": 40, // Starts moving hue up at 40 units per second, will endlessly loop (allowed value range: -255 till 255)`);
+        lines.push(`  "hue_step": -90, // Decrease hue by 90 (allowed value range: -255 till 255)`);
+        lines.push(`  "saturation_move": -55, // Starts moving saturation down at -55 units per second (allowed value range: -255 till 255)`);
+        lines.push(`  "saturation_step": 66, // Increase saturation by 66 (allowed value range: -255 till 255)`);
+      }
 
-    lines.push(`}`);
-    lines.push(`\`\`\`\``);
+      lines.push(`}`);
+      lines.push(`\`\`\`\``);
+    }
   } else if (expose.type === 'climate') {
     lines.push(`This climate device supports the following features: ${expose.features.map((e) => `\`${e.name}\``).join(', ')}.`);
     for (const f of expose.features.filter((e) => ['occupied_heating_setpoint', 'occupied_cooling_setpoint', 'current_heating_setpoint', 'pi_heating_demand'].includes(e.name))) {

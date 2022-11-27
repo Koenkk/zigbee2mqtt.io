@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | NSAV061  |
-| Vendor  | Profalux  |
+| Vendor  | [Profalux](/supported-devices/#v=Profalux)  |
 | Description | Cover |
 | Exposes | cover (state, position), linkquality |
 | Picture | ![Profalux NSAV061](https://www.zigbee2mqtt.io/images/devices/NSAV061.jpg) |

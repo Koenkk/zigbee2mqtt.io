@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SFS01ZB  |
-| Vendor  | Feibit  |
+| Vendor  | [Feibit](/supported-devices/#v=Feibit)  |
 | Description | Power plug |
 | Exposes | switch (state), linkquality |
 | Picture | ![Feibit SFS01ZB](https://www.zigbee2mqtt.io/images/devices/SFS01ZB.jpg) |

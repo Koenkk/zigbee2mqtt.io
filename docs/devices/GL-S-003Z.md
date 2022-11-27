@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | GL-S-003Z  |
-| Vendor  | Gledopto  |
+| Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee 5W GU10 Bulb RGBW |
 | Exposes | light (state, brightness, color_xy, color_hs), effect, linkquality |
 | Picture | ![Gledopto GL-S-003Z](https://www.zigbee2mqtt.io/images/devices/GL-S-003Z.jpg) |

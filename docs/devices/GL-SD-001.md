@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | GL-SD-001  |
-| Vendor  | Gledopto  |
+| Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee triac AC dimmer |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Gledopto GL-SD-001](https://www.zigbee2mqtt.io/images/devices/GL-SD-001.jpg) |

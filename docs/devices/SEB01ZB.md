@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SEB01ZB  |
-| Vendor  | Feibit  |
+| Vendor  | [Feibit](/supported-devices/#v=Feibit)  |
 | Description | SOS button |
 | Exposes | sos, battery_low, tamper, battery, linkquality |
 | Picture | ![Feibit SEB01ZB](https://www.zigbee2mqtt.io/images/devices/SEB01ZB.jpg) |

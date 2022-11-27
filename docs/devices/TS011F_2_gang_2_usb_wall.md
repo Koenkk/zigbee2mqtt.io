@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS011F_2_gang_2_usb_wall  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2 gang 2 usb wall outlet |
 | Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
 | Picture | ![TuYa TS011F_2_gang_2_usb_wall](https://www.zigbee2mqtt.io/images/devices/TS011F_2_gang_2_usb_wall.jpg) |

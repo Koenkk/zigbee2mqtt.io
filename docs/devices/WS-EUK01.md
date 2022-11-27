@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WS-EUK01  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart wall switch H1 EU (no neutral, single rocker) |
 | Exposes | switch (state), action, power_outage_memory, flip_indicator_light, led_disabled_night, power_outage_count, device_temperature, operation_mode, mode_switch, linkquality |
 | Picture | ![Xiaomi WS-EUK01](https://www.zigbee2mqtt.io/images/devices/WS-EUK01.jpg) |

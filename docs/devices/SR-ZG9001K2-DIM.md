@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SR-ZG9001K2-DIM  |
-| Vendor  | Sunricher  |
+| Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee wall remote control for single color, 1 zone |
 | Exposes | battery, action, linkquality |
 | Picture | ![Sunricher SR-ZG9001K2-DIM](https://www.zigbee2mqtt.io/images/devices/SR-ZG9001K2-DIM.jpg) |
