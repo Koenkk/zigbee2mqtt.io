@@ -29,6 +29,7 @@ pageClass: device-page
 To start pairing, press the button (pinhole on the side of the device) using a
 pin/paperclip for approx. 5 seconds. The led will turn on, then start blinking while the
 pairing process is in progress.
+<!-- Notes END: Do not edit below this line -->
 
 
 
