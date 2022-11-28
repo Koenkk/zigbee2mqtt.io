@@ -106,3 +106,11 @@ sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/&usbcore.autosuspend=-1 /' /etc/default/g
 update-grub
 systemctl reboot
 ```
+
+## Strange timeouts and desyncs from the network
+If you have experienced strange timeouts, unable to add new devices, or just strange unexplicable behaiviours, the problem maybe limitation of hardware.
+- Such as running too much in the single computer
+- Raspberry pi model 3+ as a homeassistant addon
+- Too little memory
+
+Try to run in another computer while in docker and see if the router works, check if a device connects. If so, maybe you have to upgrade the host.
