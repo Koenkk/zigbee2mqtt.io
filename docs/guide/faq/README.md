@@ -6,6 +6,11 @@ sidebarDepth: 0
 
 [[toc]]
 
+## Unstable networks
+If you experience timeouts, crashes, unable to add new devices or poor performance this mostly caused by:
+- Using a [non-recommended adapter](../adapters/README.md)
+- [Wifi or Bluetooth interference](../../advanced/zigbee/02_improve_network_range_and_stability.md#reduce-wifi-interference-by-changing-the-zigbee-channel)
+- Poor host hardware (e.g. running too much in the single computer, Raspberry Pi model 3 running Home Assistant addon, too little memory)
 
 ## Why does my device not or fail to pair?
 This problem can be divided in 2 categories; no logging is shown at all OR interview fails.
@@ -106,11 +111,3 @@ sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/&usbcore.autosuspend=-1 /' /etc/default/g
 update-grub
 systemctl reboot
 ```
-
-## Strange timeouts and desyncs from the network
-If you have experienced strange timeouts, unable to add new devices, or just strange unexplicable behaiviours, the problem maybe limitation of hardware.
-- Such as running too much in the single computer
-- Raspberry pi model 3+ as a homeassistant addon
-- Too little memory
-
-Try to run in another computer while in docker and see if the router works, check if a device connects. If so, maybe you have to upgrade the host.
