@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZG-227ZL  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature & humidity LCD sensor |
-| Exposes | temperature, humidity, battery, linkquality |
+| Exposes | temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, linkquality |
 | Picture | ![TuYa ZG-227ZL](https://www.zigbee2mqtt.io/images/devices/ZG-227ZL.jpg) |
 
 
@@ -28,22 +28,6 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
-
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
-
-### Reading and Setting Values
-
-As a low power device, the sensor isn't reachable most of the time, but
-only when active (e.g. because it Update temperature and humidity). Therefore, requests to read
-or set values (i.e. `Unit of temperature` or `Calibration of temperature`) will only work when the sensor.
 
 ## Exposes
 
@@ -59,25 +43,28 @@ Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Unit of temperature (enum)
-A unit of temperature.
+### Temperature_unit (enum)
+Temperature unit.
 Value can be found in the published state on the `temperature_unit` property.
-It's possible to read (`/get`) or write (`/set`) this value.
-Enum 'Celsius':0 or 'Fahrenheit':1.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": NEW_VALUE}`.
+The possible values are: `celsius`, `fahrenheit`.
 
-### Calibration of temperature (numeric)
-Calibration of temperature
-Value can be found in the published state on the `temp_calibration` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `-2.0` and the maximum value is `+2.0`.
-The unit of this value is `℃`.
+### Temperature_calibration (numeric)
+Temperature calibration.
+Value can be found in the published state on the `temperature_calibration` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+The minimal value is `-2` and the maximum value is `2`.
+The unit of this value is `°C`.
 
-### Calibration of humidity (numeric)
-Calibration of humidity
-Value can be found in the published state on the `hum_calibration` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `-30%` and the maximum value is `+30%`.
-The unit of this value is `℃`.
+### Humidity_calibration (numeric)
+Humidity calibration.
+Value can be found in the published state on the `humidity_calibration` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
+The minimal value is `-30` and the maximum value is `30`.
+The unit of this value is `%`.
 
 ### Battery (numeric)
 Remaining battery in %.

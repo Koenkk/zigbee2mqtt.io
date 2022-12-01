@@ -150,19 +150,22 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `none`, `1`, `2`, `3`, `1 and 2`, `1 and 3`, `2 and 3`, `all`.
 
 ### Switch_1_text_icon (composite)
+Switch 1 text and icon.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_1_text_icon": {"switch_1_icon": VALUE, "switch_1_text": VALUE}}`
-- `switch_1_icon` (enum): Icon. Allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
-- `switch_1_text` (text): Text. 
+- `switch_1_icon` (enum): Icon allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
+- `switch_1_text` (text): Text 
 
 ### Switch_2_text_icon (composite)
+Switch 2 text and icon.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_2_text_icon": {"switch_2_icon": VALUE, "switch_2_text": VALUE}}`
-- `switch_2_icon` (enum): Icon. Allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
-- `switch_2_text` (text): Text. 
+- `switch_2_icon` (enum): Icon allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
+- `switch_2_text` (text): Text 
 
 ### Switch_3_text_icon (composite)
+Switch 3 text and icon.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_3_text_icon": {"switch_3_icon": VALUE, "switch_3_text": VALUE}}`
-- `switch_3_icon` (enum): Icon. Allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
-- `switch_3_text` (text): Text. 
+- `switch_3_icon` (enum): Icon allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
+- `switch_3_text` (text): Text 
 
 ### Linkquality (numeric)
 Link quality (signal strength).

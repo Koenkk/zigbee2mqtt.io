@@ -1,7 +1,7 @@
 ---
-title: "TuYa CX-0726 control via MQTT"
-description: "Integrate your TuYa CX-0726 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-05-17T11:35:00Z
+title: "OWON PIR323-PTH control via MQTT"
+description: "Integrate your OWON PIR323-PTH via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-12-01T15:07:19
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa CX-0726
+# OWON PIR323-PTH
 
 |     |     |
 |-----|-----|
-| Model | CX-0726  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | Temperature & humidity LCD sensor |
-| Exposes | temperature, humidity, battery, linkquality |
-| Picture | ![TuYa CX-0726](https://www.zigbee2mqtt.io/images/devices/CX-0726.jpg) |
+| Model | PIR323-PTH  |
+| Vendor  | [OWON](/supported-devices/#v=OWON)  |
+| Description | Multi-sensor |
+| Exposes | occupancy, battery_low, temperature, humidity, linkquality |
+| Picture | ![OWON PIR323-PTH](https://www.zigbee2mqtt.io/images/devices/PIR323-PTH.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -42,6 +42,18 @@ pageClass: device-page
 
 ## Exposes
 
+### Occupancy (binary)
+Indicates whether the device detected occupancy.
+Value can be found in the published state on the `occupancy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` occupancy is ON, if `false` OFF.
+
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
+
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
@@ -52,13 +64,6 @@ The unit of this value is `°C`.
 Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `%`.
-
-### Battery (numeric)
-Remaining battery in %.
-Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Linkquality (numeric)

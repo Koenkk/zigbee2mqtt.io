@@ -92,14 +92,15 @@ This climate device supports the following features: `local_temperature`, `curre
 - `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`
 
 ### Programming_mode (composite)
+Auto MODE ⏱ - In this mode, the device executes a preset week programming temperature time and temperature. .
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"undefined": {"monday_schedule": VALUE, "tuesday_schedule": VALUE, "wednesday_schedule": VALUE, "thursday_schedule": VALUE, "friday_schedule": VALUE, "saturday_schedule": VALUE, "sunday_schedule": VALUE}}`
-- `monday_schedule` (text): undefined. 
-- `tuesday_schedule` (text): undefined. 
-- `wednesday_schedule` (text): undefined. 
-- `thursday_schedule` (text): undefined. 
-- `friday_schedule` (text): undefined. 
-- `saturday_schedule` (text): undefined. 
-- `sunday_schedule` (text): undefined. 
+- `monday_schedule` (text) 
+- `tuesday_schedule` (text) 
+- `wednesday_schedule` (text) 
+- `thursday_schedule` (text) 
+- `friday_schedule` (text) 
+- `saturday_schedule` (text) 
+- `sunday_schedule` (text) 
 
 ### Boost_heating (binary)
 Boost Heating: press and hold "+" for 3 seconds, the device will enter the boost heating mode, and the ▷╵◁ will flash. The countdown will be displayed in the APP.

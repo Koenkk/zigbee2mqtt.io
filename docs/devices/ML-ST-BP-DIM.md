@@ -16,8 +16,8 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ML-ST-BP-DIM  |
-| Vendor  | M-ELEC  |
-| Description | Stitchy Dim Mechanism |
+| Vendor  | [M-ELEC](/supported-devices/#v=M-ELEC)  |
+| Description | Stitchy dim mechanism |
 | Exposes | light (state, brightness), linkquality |
 | Picture | ![M-ELEC ML-ST-BP-DIM](https://www.zigbee2mqtt.io/images/devices/ML-ST-BP-DIM.jpg) |
 
@@ -61,6 +61,7 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_step": 40 // Increases brightness by 40
 }
 ````
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.

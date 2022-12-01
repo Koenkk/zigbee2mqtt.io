@@ -19,6 +19,33 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+function compositeDocs(composite) {
+  const value = `{${composite.features.map((e) => `"${e.property}": VALUE`).join(', ')}}`;
+
+  let note = [];
+  for (const feature of composite.features) {
+    let ft = '';
+    if (feature.type === 'binary') {
+      ft = `allowed values: \`${feature.value_on}\` or \`${feature.value_off}\``;
+    } else if (feature.type === 'enum') {
+      ft = `allowed values: ${feature.values.map((v) => `\`${v}\``).join(', ')}`;
+    } else if (feature.type === 'numeric') {
+      ft = [
+        feature.value_min ? `min value is ${feature.value_min}` : null,
+        feature.value_max ? `max value is ${feature.value_max}` : null,
+        feature.unit ? `unit is ${feature.unit}` : null,
+      ].filter((e) => e).join(', ')
+    } else if (feature.type === 'text') {
+      // do nothing on purpose
+    } else {
+      throw new Error(`Unsupported composite feature: ${feature.type}`);
+    }
+
+    note.push(`- \`${feature.name}\` (${feature.type})${feature.description ? ': ' + feature.description + '' : ''} ${ft}`);
+  }
+  return {value, note};
+}
+
 function getExposeDocs(expose, definition) {
   const lines = [];
   const title = [];
@@ -231,17 +258,24 @@ function getExposeDocs(expose, definition) {
       lines.push(line);
     }
   } else if (expose.type === 'composite') {
-    lines.push(`Can be set by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${expose.property}": {${expose.features.map((e) => `"${e.property}": VALUE`).join(', ')}}}\``);
-    for (const feature of expose.features) {
-      let ft = '';
-      if (feature.type === 'binary') {
-        ft = `Allowed values: \`${feature.value_on}\` or \`${feature.value_off}\``;
-      } else if (feature.type === 'enum') {
-        ft = `Allowed values: ${feature.values.map((v) => `\`${v}\``).join(', ')}`;
-      }
-
-      lines.push(`- \`${feature.property}\` (${feature.type}): ${feature.description}. ${ft}`);
+    if (expose.description) {
+      lines.push(expose.description + '.');
     }
+    const txt = compositeDocs(expose);
+    lines.push(`Can be set by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${expose.property}": ${txt.value}}\``);
+    lines.push(...txt.note);
+  } else if (expose.type === 'list') {
+    if (expose.description) {
+      lines.push(expose.description + '.');
+    }
+    let txt = {value: '', note: []};
+    if (expose.item_type.type === 'composite') {
+      txt = compositeDocs(expose.item_type);
+    } else {
+      throw new Error(`Unsupported list item_type: ${expose.item_type.type}`);
+    }
+    lines.push(`Can be set by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${expose.property}": [${txt.value}]}\``);
+    lines.push(...txt.note);
   } else {
     throw new Error('Not supported');
   }

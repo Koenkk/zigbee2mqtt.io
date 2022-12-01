@@ -41,6 +41,7 @@ Press the button on top of the device for at least 5 seconds but not more than 1
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
+
 ## Exposes
 
 ### Temperature (numeric)

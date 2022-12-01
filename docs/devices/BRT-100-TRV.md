@@ -30,8 +30,7 @@ pageClass: device-page
 While pairing, keep the valve close to the coordinator.
 
 1. *Turn the display on*: Short press home (🏠).
-2. *Enable pairing mode*: Long press - (minus) for 3 seconds. WiFi logo is now blinking. 
-
+2. *Enable pairing mode*: Long press - (minus) for 3 seconds. WiFi logo is now blinking.
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates

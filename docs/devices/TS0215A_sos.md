@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0215A_sos  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | SOS button |
-| Exposes | battery, action, linkquality |
+| Exposes | battery, voltage, action, linkquality |
 | Picture | ![TuYa TS0215A_sos](https://www.zigbee2mqtt.io/images/devices/TS0215A_sos.jpg) |
 
 
@@ -37,6 +37,12 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Voltage (numeric)
+Voltage of the battery in millivolts.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `mV`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

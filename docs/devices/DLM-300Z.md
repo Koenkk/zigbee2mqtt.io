@@ -77,8 +77,8 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Pin_code (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "pin_code": VALUE}}`
-- `user` (numeric): User ID can only number 1. 
-- `pin_code` (numeric): Pincode to set, set pincode(4 digit) to null to clear. 
+- `user` (numeric): User ID can only number 1 
+- `pin_code` (numeric): Pincode to set, set pincode(4 digit) to null to clear 
 
 ### Linkquality (numeric)
 Link quality (signal strength).

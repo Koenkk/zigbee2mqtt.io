@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WK34-EU  |
 | Vendor  | [LELLKI](/supported-devices/#v=LELLKI)  |
 | Description | Power socket EU (with power monitoring) |
-| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
+| Exposes | switch (state), power_outage_memory, power, current, voltage, energy, linkquality |
 | Picture | ![LELLKI WK34-EU](https://www.zigbee2mqtt.io/images/devices/WK34-EU.jpg) |
 
 
@@ -47,6 +47,13 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
+### Power_outage_memory (enum)
+Recover state after power outage.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+The possible values are: `on`, `off`, `restore`.
+
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
@@ -70,13 +77,6 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Power_outage_memory (enum)
-Recover state after power outage.
-Value can be found in the published state on the `power_outage_memory` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-The possible values are: `on`, `off`, `restore`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

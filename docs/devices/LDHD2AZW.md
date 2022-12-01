@@ -13,16 +13,16 @@ pageClass: device-page
 
 # Leedarson LDHD2AZW
 
-|             |                                                                               |
-| ----------- | ----------------------------------------------------------------------------- |
-| Model       | LDHD2AZW                                                                      |
-| Vendor      | Leedarson                                                                     |
-| Description | Magnetic door & window contact sensor                                         |
-| Exposes     | contact, battery_low, tamper, temperature, battery, linkquality               |
-| Picture     | ![Leedarson LDHD2AZW](https://www.zigbee2mqtt.io/images/devices/LDHD2AZW.jpg) |
+|     |     |
+|-----|-----|
+| Model | LDHD2AZW  |
+| Vendor  | [Leedarson](/supported-devices/#v=Leedarson)  |
+| Description | Magnetic door & window contact sensor |
+| Exposes | contact, battery_low, tamper, temperature, battery, linkquality |
+| Picture | ![Leedarson LDHD2AZW](https://www.zigbee2mqtt.io/images/devices/LDHD2AZW.jpg) |
+
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 
 ### Pairing
@@ -66,46 +66,42 @@ If the device was communicating with the home controller or security system but 
 1. Trigger a tamper by opening and closing the battery cover, if the LED is blinking RED it’s an indication that your sensor can no longer communicate with the home controller or security system due to changes in your RF environment. Install a repeater so the system’s range can reach the desired location for the sensor.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-_[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)_
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-- `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-- `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 ## Exposes
 
 ### Contact (binary)
-
 Indicates if the contact is closed (= true) or open (= false).
 Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
 
 ### Battery_low (binary)
-
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery_low is ON, if `false` OFF.
 
 ### Tamper (binary)
-
 Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
 ### Temperature (numeric)
-
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Battery (numeric)
-
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -113,9 +109,9 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Linkquality (numeric)
-
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+

@@ -1,7 +1,7 @@
 ---
-title: "Lidl HG08673 control via MQTT"
-description: "Integrate your Lidl HG08673 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-09-30T20:52:51
+title: "TuYa TS000F_power control via MQTT"
+description: "Integrate your TuYa TS000F_power via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2022-12-01T15:07:19
 pageClass: device-page
 ---
 
@@ -11,24 +11,22 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Lidl HG08673
+# TuYa TS000F_power
 
 |     |     |
 |-----|-----|
-| Model | HG08673  |
-| Vendor  | [Lidl](/supported-devices/#v=Lidl)  |
-| Description | Silvercrest smart plug with power monitoring (EU, FR) |
-| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, lock (state), linkquality |
-| Picture | ![Lidl HG08673](https://www.zigbee2mqtt.io/images/devices/HG08673.jpg) |
+| Model | TS000F_power  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Description | Switch with power monitoring |
+| Exposes | switch (state), power, voltage, energy, power_on_behavior, switch_type, linkquality |
+| Picture | ![TuYa TS000F_power](https://www.zigbee2mqtt.io/images/devices/TS000F_power.jpg) |
+| White-label | Aubess WDH02 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
-
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -54,12 +52,6 @@ Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Current (numeric)
-Instantaneous measured electrical current.
-Value can be found in the published state on the `current` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `A`.
-
 ### Voltage (numeric)
 Measured electrical potential value.
 Value can be found in the published state on the `voltage` property.
@@ -72,24 +64,19 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Power_outage_memory (enum)
-Recover state after power outage.
-Value can be found in the published state on the `power_outage_memory` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-The possible values are: `on`, `off`, `restore`.
+### Power_on_behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `previous`, `on`.
 
-### Indicator_mode (enum)
-Plug LED indicator mode.
-Value can be found in the published state on the `indicator_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
-The possible values are: `off`, `off/on`, `on/off`, `on`.
-
-### Lock 
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
-It's not possible to read (`/get`) this value.
+### Switch_type (enum)
+Switch type settings.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `toggle`, `state`, `momentary`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
