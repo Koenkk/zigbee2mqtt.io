@@ -37,23 +37,16 @@ Green Power devices don't support binding and are not included in network scans.
 ### Pairing
 This device has 4 buttons:
 
-| Number | Button | Position |
-|-|-|-|
-| 1 | A0 | top left |
-| 2 | A1 | bottom left |
-| 3 | B0 | top right |
-| 4 | B1 | bottom right |
+| Number | Button | Position | Channel |
+|-|-|-|-|
+| 1 | A0 | Top left     | 15 |
+| 2 | A1 | Bottom left  | 20 |
+| 3 | B0 | Top right    | 11 |
+| 4 | B1 | Bottom right | 25 |
 
 In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
 
 To pair it, hold the corresponding button for that channel for 7 seconds or more.
-
-| Button | Channel |
-|-|-|
-| A0 | 15 |
-| A1 | 20 |
-| B0 | 11 |
-| B1 | 25 |
 
 Once the device is paired you need to confirm the channel. To do this press A1 and B0 together. Important: don't press any other buttons between this and the pairing.
 
