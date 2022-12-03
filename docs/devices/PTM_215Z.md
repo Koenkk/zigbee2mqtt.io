@@ -48,12 +48,12 @@ In case the module is integrated in a single rocker switch, you need to remove t
 
 To pair it, hold the corresponding button for that channel for 7 seconds or more.
 
-| Button | Channel |
-|-|-|
-| A0 | 15 |
-| A1 | 20 |
-| B0 | 11 |
-| B1 | 25 |
+| Button | Channel | Position |
+|-|-|-|
+| A0 | 15 | top left |
+| A1 | 20 | bottom left |
+| B0 | 11 | top right |
+| B1 | 25 | bottom right |
 
 Once the device is paired you need to confirm the channel. To do this press A1 and B0 together. Important: don't press any other buttons between this and the pairing.
 
