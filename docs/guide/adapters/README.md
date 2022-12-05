@@ -222,8 +222,8 @@ _(in order of first appearance)_
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20220219.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20220125.zip)  
     * Flashing instructions; see "Flashing CC1352/CC2652/CC2538 based adapters" below
-    * [Description](https://z2m.wiki/)  
-    * [Buy](https://z2m.wiki/)  
+    * [Description](https://z2m.store/)  
+    * [Buy](https://z2m.store/)  
   
     ![](../../images/CC2652P-Z2M.jpg)
     </details>
@@ -404,7 +404,7 @@ The adapters below are well-supported but use outdated chips.
   
     An open source zigbee gateway powered by ESP8266 and CC2538+CC2592PA (XGG 38PZ2MGateway) or CC2530 (XGG 30Z2MGateway)  
     Coordinator firmware: [XGG 38PZ2MGateway](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin) [XGG 30Z2MGateway](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin)  
-    * [Contact](https://z2m.wiki/)
+    * [Contact](https://z2m.store/)
   
     ![](../../images/CC2652P-Z2M.jpg)
     </details>
