@@ -33,8 +33,8 @@ const definition = {
     model: 'TS0601_new',
     vendor: 'TuYa',
     description: 'Fill in a description of the device here',
-    fromZigbee: [tuya.fz.datapoints],
-    toZigbee: [tuya.tz.datapoints],
+    fromZigbee: [tuya.fzDataPoints],
+    toZigbee: [tuya.tzDataPoints],
     onEvent: tuya.onEventSetTime, // Add this if you are getting no converter for 'commandMcuSyncTime'
     configure: tuya.configureMagicPacket,
     exposes: [
