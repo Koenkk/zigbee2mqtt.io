@@ -298,7 +298,7 @@ See [User extensions](../../advanced/more/user_extensions.md).
 
 #### zigbee2mqtt/bridge/request/backup
 
-Creates a backup of the `data` folder (without the `data/log` directory). Payload has to be empty, example response: `{"data":{"zip":"WklHQkVFMk1RVFQuUk9DS1M="},"status":"ok"}`. The `zip` property represents a zip file encoded via Base64.
+Creates a backup of the `data` folder (without the `data/log` directory). Payload has to be empty, example response: `{"data":{"zip":"WklHQkVFMk1RVFQuUk9DS1M="},"status":"ok"}`. The `zip` property represents a zip file encoded via Base64. Note that only adapters based on a Texas Instruments chip (CC2530/CC2531/CC2538/CC2652/CC1352) support a coordinator backup (`coordinator_backup.json`).
 
 #### zigbee2mqtt/bridge/request/install_code/add
 
