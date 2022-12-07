@@ -70,6 +70,7 @@ Example:
 
 ### List
 Indicates a device exposes a list of values. The `item_type` can be any other exposes where the `property` is omitted.
+Optionally a `length_min` and `length_max` property can be added which defines the min/max number of entries in the list.
 
 Examples:
 ```json
@@ -88,6 +89,8 @@ Examples:
     "name": "schedule",
     "property": "schedule",
     "access": 3,
+    "length_min": 1,
+    "length_max": 10,
     "item_type": {
         "type": "composite",
         "name": "day_time",
