@@ -23,10 +23,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-**Pairing**
-
-[Scan the QR code at the back of the lid of your device](https://www.zigbee2mqtt.io/guide/usage/mqtt_topics_and_messages.html#zigbee2mqtt-bridge-request). Copy the code you get into your clipboard. In Zigbee2MQTT got to **Settings > Tools > Add Install Code**. Past the install code into the input box. Next, (re-)enter the batteries into your device ans press the button. The display will indicate that the device is in pairing mode. Now you can add the device to Zigbee2MQTT by permitting the device to join. 
+### Pairing
+[Scan the QR code at the back of the lid of your device](https://www.zigbee2mqtt.io/guide/usage/mqtt_topics_and_messages.html#zigbee2mqtt-bridge-request). Copy the code you get into your clipboard. In Zigbee2MQTT got to **Settings > Tools > Add Install Code**. Paste the install code into the input box. Next, (re-)enter the batteries into your device and press the button. The display will indicate that the device is in pairing mode. Now you can add the device to Zigbee2MQTT by permitting the device to join. 
 
 <!-- Notes END: Do not edit below this line -->
 
