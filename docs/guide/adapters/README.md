@@ -222,8 +222,8 @@ _(in order of first appearance)_
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20220219.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20220125.zip)  
     * Flashing instructions; see "Flashing CC1352/CC2652/CC2538 based adapters" below
-    * [Description](https://z2m.store/)  
-    * [Buy](https://z2m.store/)  
+    * [Description](https://shop68536829.taobao.com/)  
+    * [Buy](https://shop68536829.taobao.com/)  
   
     ![](../../images/CC2652P-Z2M.jpg)
     </details>
