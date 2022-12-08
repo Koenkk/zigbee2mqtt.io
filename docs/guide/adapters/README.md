@@ -404,7 +404,7 @@ The adapters below are well-supported but use outdated chips.
   
     An open source zigbee gateway powered by ESP8266 and CC2538+CC2592PA (XGG 38PZ2MGateway) or CC2530 (XGG 30Z2MGateway)  
     Coordinator firmware: [XGG 38PZ2MGateway](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin) [XGG 30Z2MGateway](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin)  
-    * [Contact](https://z2m.store/)
+    * [Contact](https://shop68536829.taobao.com/)
   
     ![](../../images/CC2652P-Z2M.jpg)
     </details>
