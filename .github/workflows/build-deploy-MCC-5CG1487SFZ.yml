@@ -1,0 +1,72 @@
+name: Build ⚙ and Deploy 🚀
+
+on: [push, pull_request]
+
+concurrency:
+  group: ${{ github.ref }}
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🚚
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js ⚗
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Determine node version №
+        id: node-version
+        run: |
+          echo "::set-output name=version::$(node -v)"
+
+      - name: Restore Cache 📦
+        uses: actions/cache@v3
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ steps.node-version.outputs.version }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Install dependencies 🌐
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+#      - name: Set DEVELOP_BRANCH env var
+#        if: github.ref == 'refs/heads/develop'
+#        run: |
+#          echo "DEVELOP_BRANCH=yes" >> $GITHUB_ENV
+
+      - name: Build 🛠
+        run: npm run build
+
+      - name: Run tests 🩺
+        run: npm run test
+
+      - name: Add build.txt 🗓
+        run: |
+          git log --pretty=format:'%h' -n 1 > dist/build.txt
+          echo >> dist/build.txt
+          date +%F_%T >> dist/build.txt
+
+      - name: Deploy 🚀
+        if: github.ref == 'refs/heads/master'
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: dist # The folder the action should deploy.
+          single-commit: true
+          clean: true
+#          clean-exclude: |
+#            develop
+
+#      - name: Deploy to /develop 🚀
+#        if: github.ref == 'refs/heads/develop'
+#        uses: JamesIves/github-pages-deploy-action@v4.4.1
+#        with:
+#          branch: gh-pages
+#          folder: dist
+#          target-folder: develop
+#          single-commit: true
+#          clean: true
