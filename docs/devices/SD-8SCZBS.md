@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SD-8SCZBS  |
-| Vendor  | Climax  |
+| Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Smoke detector |
 | Exposes | smoke, battery, battery_low, tamper, warning, linkquality |
 | Picture | ![Climax SD-8SCZBS](https://www.zigbee2mqtt.io/images/devices/SD-8SCZBS.jpg) |

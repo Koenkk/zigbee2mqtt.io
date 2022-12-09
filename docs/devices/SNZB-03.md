@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SNZB-03  |
-| Vendor  | SONOFF  |
+| Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, battery, voltage, linkquality |
 | Picture | ![SONOFF SNZB-03](https://www.zigbee2mqtt.io/images/devices/SNZB-03.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZBT-CCTLight-GLS0904  |
-| Vendor  | Leedarson  |
+| Vendor  | [Leedarson](/supported-devices/#v=Leedarson)  |
 | Description | LED E27 tunable white |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![Leedarson ZBT-CCTLight-GLS0904](https://www.zigbee2mqtt.io/images/devices/ZBT-CCTLight-GLS0904.jpg) |

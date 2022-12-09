@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WM25L-Z  |
-| Vendor  | Smartwings  |
+| Vendor  | [Smartwings](/supported-devices/#v=Smartwings)  |
 | Description | Roller shade |
 | Exposes | cover (state, position), battery, linkquality |
 | Picture | ![Smartwings WM25L-Z](https://www.zigbee2mqtt.io/images/devices/WM25L-Z.jpg) |

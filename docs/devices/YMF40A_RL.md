@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | YMF40A RL  |
-| Vendor  | Yale  |
+| Vendor  | [Yale](/supported-devices/#v=Yale)  |
 | Description | Real living lock / Intelligent biometric digital lock |
 | Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, linkquality |
 | Picture | ![Yale YMF40A RL](https://www.zigbee2mqtt.io/images/devices/YMF40A-RL.jpg) |

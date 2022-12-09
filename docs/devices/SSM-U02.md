@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SSM-U02  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara single switch module T1 (without neutral). Doesn't work as a router and doesn't support power meter |
 | Exposes | switch (state), power_outage_memory, switch_type, power_outage_count, device_temperature, linkquality |
 | Picture | ![Xiaomi SSM-U02](https://www.zigbee2mqtt.io/images/devices/SSM-U02.jpg) |

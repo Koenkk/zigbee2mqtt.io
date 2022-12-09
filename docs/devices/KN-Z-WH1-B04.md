@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | KN-Z-WH1-B04  |
-| Vendor  | LUX  |
+| Vendor  | [LUX](/supported-devices/#v=LUX)  |
 | Description | KONOz thermostat |
 | Exposes | climate (occupied_heating_setpoint, occupied_cooling_setpoint, local_temperature, system_mode, running_state, fan_mode), linkquality |
 | Picture | ![LUX KN-Z-WH1-B04](https://www.zigbee2mqtt.io/images/devices/KN-Z-WH1-B04.jpg) |

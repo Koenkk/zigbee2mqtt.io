@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SRB01  |
-| Vendor  | Evvr  |
+| Vendor  | [Evvr](/supported-devices/#v=Evvr)  |
 | Description | In-wall relay switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Evvr SRB01](https://www.zigbee2mqtt.io/images/devices/SRB01.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZNLDP13LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara T1 smart LED bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), power_outage_memory, device_temperature, power_outage_count, linkquality |
 | Picture | ![Xiaomi ZNLDP13LM](https://www.zigbee2mqtt.io/images/devices/ZNLDP13LM.jpg) |

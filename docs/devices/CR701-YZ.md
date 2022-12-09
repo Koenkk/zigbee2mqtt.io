@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | CR701-YZ  |
-| Vendor  | Oujiabao  |
+| Vendor  | [Oujiabao](/supported-devices/#v=Oujiabao)  |
 | Description | Gas and carbon monoxide alarm |
 | Exposes | gas, carbon_monoxide, tamper, battery_low, linkquality |
 | Picture | ![Oujiabao CR701-YZ](https://www.zigbee2mqtt.io/images/devices/CR701-YZ.jpg) |

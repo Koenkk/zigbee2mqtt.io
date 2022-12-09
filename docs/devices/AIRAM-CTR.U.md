@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | AIRAM-CTR.U  |
-| Vendor  | Airam  |
+| Vendor  | [Airam](/supported-devices/#v=Airam)  |
 | Description | CTR.U remote |
 | Exposes | action, linkquality |
 | Picture | ![Airam AIRAM-CTR.U](https://www.zigbee2mqtt.io/images/devices/AIRAM-CTR.U.jpg) |

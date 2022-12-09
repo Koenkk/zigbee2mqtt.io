@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_din  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee smart energy meter DDS238-2 Zigbee |
 | Exposes | switch (state), voltage, power, current, energy, linkquality |
 | Picture | ![TuYa TS0601_din](https://www.zigbee2mqtt.io/images/devices/TS0601_din.jpg) |

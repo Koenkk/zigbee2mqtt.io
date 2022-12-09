@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | UFO-R11  |
-| Vendor  | Moes  |
+| Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Universal smart IR remote control |
 | Exposes | switch (state), learned_ir_code, ir_code_to_send, battery, voltage, linkquality |
 | Picture | ![Moes UFO-R11](https://www.zigbee2mqtt.io/images/devices/UFO-R11.jpg) |

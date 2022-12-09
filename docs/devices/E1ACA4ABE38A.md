@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | E1ACA4ABE38A  |
-| Vendor  | Sengled  |
+| Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Element downlight smart LED bulb |
 | Exposes | light (state, brightness), linkquality |
 | Picture | ![Sengled E1ACA4ABE38A](https://www.zigbee2mqtt.io/images/devices/E1ACA4ABE38A.jpg) |

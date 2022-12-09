@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | STS-WTR-250  |
-| Vendor  | SmartThings  |
+| Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Water leak sensor (2016 model) |
 | Exposes | water_leak, battery_low, tamper, battery, temperature, linkquality |
 | Picture | ![SmartThings STS-WTR-250](https://www.zigbee2mqtt.io/images/devices/STS-WTR-250.jpg) |

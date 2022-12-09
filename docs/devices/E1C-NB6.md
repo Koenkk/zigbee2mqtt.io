@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | E1C-NB6  |
-| Vendor  | Sengled  |
+| Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Smart plug |
 | Exposes | switch (state), linkquality |
 | Picture | ![Sengled E1C-NB6](https://www.zigbee2mqtt.io/images/devices/E1C-NB6.jpg) |

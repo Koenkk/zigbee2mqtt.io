@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | 9CZA-P470T-A1A  |
-| Vendor  | ADEO  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN E14 LED RGBW |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![ADEO 9CZA-P470T-A1A](https://www.zigbee2mqtt.io/images/devices/9CZA-P470T-A1A.jpg) |

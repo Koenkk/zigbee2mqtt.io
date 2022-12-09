@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HLQDQ01LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara zigbee LED-controller  |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Xiaomi HLQDQ01LM](https://www.zigbee2mqtt.io/images/devices/HLQDQ01LM.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LH-992ZB  |
-| Vendor  | iHORN  |
+| Vendor  | [iHORN](/supported-devices/#v=iHORN)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
 | Picture | ![iHORN LH-992ZB](https://www.zigbee2mqtt.io/images/devices/LH-992ZB.jpg) |

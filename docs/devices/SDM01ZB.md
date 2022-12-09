@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SDM01ZB  |
-| Vendor  | Feibit  |
+| Vendor  | [Feibit](/supported-devices/#v=Feibit)  |
 | Description | Door or window contact switch |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![Feibit SDM01ZB](https://www.zigbee2mqtt.io/images/devices/SDM01ZB.jpg) |

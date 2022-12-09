@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | S-LUX-ZB  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Light sensor |
 | Exposes | battery, illuminance_lux, linkquality, brightness_level |
 | Picture | ![TuYa S-LUX-ZB](https://www.zigbee2mqtt.io/images/devices/S-LUX-ZB.jpg) |

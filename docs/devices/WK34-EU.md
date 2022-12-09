@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WK34-EU  |
-| Vendor  | LELLKI  |
+| Vendor  | [LELLKI](/supported-devices/#v=LELLKI)  |
 | Description | Power socket EU (with power monitoring) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
 | Picture | ![LELLKI WK34-EU](https://www.zigbee2mqtt.io/images/devices/WK34-EU.jpg) |

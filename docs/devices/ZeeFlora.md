@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZeeFlora  |
-| Vendor  | Custom devices (DiY)  |
+| Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | Flower sensor with rechargeable battery |
 | Exposes | soil_moisture, battery, illuminance, temperature, linkquality |
 | Picture | ![Custom devices (DiY) ZeeFlora](https://www.zigbee2mqtt.io/images/devices/ZeeFlora.jpg) |

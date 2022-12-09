@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SR-ZG9001K2-DIM2  |
-| Vendor  | Sunricher  |
+| Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee 2 button wall switch |
 | Exposes | battery, action, linkquality |
 | Picture | ![Sunricher SR-ZG9001K2-DIM2](https://www.zigbee2mqtt.io/images/devices/SR-ZG9001K2-DIM2.jpg) |

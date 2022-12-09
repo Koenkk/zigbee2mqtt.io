@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_switch_4_gang  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 4 gang switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![TuYa TS0601_switch_4_gang](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_4_gang.jpg) |

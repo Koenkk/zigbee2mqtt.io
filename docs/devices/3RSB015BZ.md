@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | 3RSB015BZ  |
-| Vendor  | Third Reality  |
+| Vendor  | [Third Reality](/supported-devices/#v=Third%20Reality)  |
 | Description | Roller shade |
 | Exposes | cover (state, position), battery, linkquality |
 | Picture | ![Third Reality 3RSB015BZ](https://www.zigbee2mqtt.io/images/devices/3RSB015BZ.jpg) |

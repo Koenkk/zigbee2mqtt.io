@@ -16,14 +16,21 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | BRT-100-TRV  |
-| Vendor  | Moes  |
+| Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Thermostatic radiator valve |
 | Exposes | battery, lock (state), eco_mode, eco_temperature, max_temperature, min_temperature, valve_state, position, switch (state), window, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, system_mode, running_state, preset), programming_mode, boost_heating, boost_heating_countdown, boost_heating_countdown_time_set, linkquality |
 | Picture | ![Moes BRT-100-TRV](https://www.zigbee2mqtt.io/images/devices/BRT-100-TRV.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+
+While pairing, keep the valve close to the coordinator.
+
+1. *Turn the display on*: Short press home (🏠).
+2. *Enable pairing mode*: Long press - (minus) for 3 seconds. WiFi logo is now blinking. 
 
 <!-- Notes END: Do not edit below this line -->
 

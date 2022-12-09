@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PM-S340R-ZB  |
-| Vendor  | Dawon DNS  |
+| Vendor  | [Dawon DNS](/supported-devices/#v=Dawon%20DNS)  |
 | Description | IOT smart switch 3 gang without neutral wire |
 | Exposes | switch (state), linkquality |
 | Picture | ![Dawon DNS PM-S340R-ZB](https://www.zigbee2mqtt.io/images/devices/PM-S340R-ZB.jpg) |

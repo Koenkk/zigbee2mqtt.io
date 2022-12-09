@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ID-UK21FW09  |
-| Vendor  | Iolloi  |
+| Vendor  | [Iolloi](/supported-devices/#v=Iolloi)  |
 | Description | Zigbee LED smart dimmer switch |
 | Exposes | light (state, brightness), linkquality |
 | Picture | ![Iolloi ID-UK21FW09](https://www.zigbee2mqtt.io/images/devices/ID-UK21FW09.jpg) |
@@ -28,7 +28,8 @@ pageClass: device-page
 
 ### Re-pairing
 Re-pairing requires the device is removed from any existing network first, this requires a factory reset if the dimmer cannot be gracefully removed from the previous network. Unfortunately the user manual does not cover this procedure, but it is quite simple:
-To perform a factory reset. Turn on the light, press the knob for 5 times amd long press the fifth time for 3 seconds. Once reset successfully, the lamp will flicker for 5 times.
+To perform a factory reset. Turn on the light, press the knob for 5 times and long press the 5th time for 3 seconds. Once reset successfully, the lamp will flicker for 5 times.
+To start paring, turn on the light, press the knob for 2 times and long press the 2nd time for 3 seconds. Once pairing starts, the lamp will flicker for 2 times. When pairing is complete, the lamp will flash once more.
 <!-- Notes END: Do not edit below this line -->
 
 

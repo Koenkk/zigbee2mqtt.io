@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | XBee  |
-| Vendor  | Digi  |
+| Vendor  | [Digi](/supported-devices/#v=Digi)  |
 | Description | Router |
 | Exposes | linkquality |
 | Picture | ![Digi XBee](https://www.zigbee2mqtt.io/images/devices/XBee.jpg) |

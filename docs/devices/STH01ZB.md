@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | STH01ZB  |
-| Vendor  | Feibit  |
+| Vendor  | [Feibit](/supported-devices/#v=Feibit)  |
 | Description | Smart temperature & humidity Sensor |
 | Exposes | temperature, humidity, battery, linkquality |
 | Picture | ![Feibit STH01ZB](https://www.zigbee2mqtt.io/images/devices/STH01ZB.jpg) |

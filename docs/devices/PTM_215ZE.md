@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PTM 215ZE  |
-| Vendor  | EnOcean  |
+| Vendor  | [EnOcean](/supported-devices/#v=EnOcean)  |
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
 | Picture | ![EnOcean PTM 215ZE](https://www.zigbee2mqtt.io/images/devices/PTM-215ZE.jpg) |

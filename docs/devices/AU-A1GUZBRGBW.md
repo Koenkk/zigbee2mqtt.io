@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | AU-A1GUZBRGBW  |
-| Vendor  | Aurora Lighting  |
+| Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
 | Description | AOne 5.6w smart RGBW tuneable GU10 lamp |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![Aurora Lighting AU-A1GUZBRGBW](https://www.zigbee2mqtt.io/images/devices/AU-A1GUZBRGBW.jpg) |

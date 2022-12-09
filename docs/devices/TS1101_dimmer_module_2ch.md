@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS1101_dimmer_module_2ch  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee dimmer module 2 channel |
 | Exposes | light (state, brightness, min_brightness), linkquality |
 | Picture | ![TuYa TS1101_dimmer_module_2ch](https://www.zigbee2mqtt.io/images/devices/TS1101_dimmer_module_2ch.jpg) |

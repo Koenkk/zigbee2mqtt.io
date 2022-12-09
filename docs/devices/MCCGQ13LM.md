@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | MCCGQ13LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara P1 door & window contact sensor |
 | Exposes | contact, battery, voltage, linkquality |
 | Picture | ![Xiaomi MCCGQ13LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ13LM.jpg) |

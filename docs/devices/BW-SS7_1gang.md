@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | BW-SS7_1gang  |
-| Vendor  | BlitzWolf  |
+| Vendor  | [BlitzWolf](/supported-devices/#v=BlitzWolf)  |
 | Description | Zigbee 3.0 smart light switch module 1 gang |
 | Exposes | switch (state), linkquality |
 | Picture | ![BlitzWolf BW-SS7_1gang](https://www.zigbee2mqtt.io/images/devices/BW-SS7_1gang.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HK-LN-DIM-A  |
-| Vendor  | LED Trading  |
+| Vendor  | [LED Trading](/supported-devices/#v=LED%20Trading)  |
 | Description | ZigBee AC phase-cut dimmer |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![LED Trading HK-LN-DIM-A](https://www.zigbee2mqtt.io/images/devices/HK-LN-DIM-A.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SJCGQ12LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara T1 water leak sensor |
 | Exposes | battery, water_leak, battery_low, tamper, voltage, linkquality |
 | Picture | ![Xiaomi SJCGQ12LM](https://www.zigbee2mqtt.io/images/devices/SJCGQ12LM.jpg) |

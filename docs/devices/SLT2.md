@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SLT2  |
-| Vendor  | Hive  |
+| Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | Heating thermostat remote control |
 | Exposes | battery, linkquality |
 | Picture | ![Hive SLT2](https://www.zigbee2mqtt.io/images/devices/SLT2.jpg) |

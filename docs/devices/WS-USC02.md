@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WS-USC02  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart wall switch (no neutral, double rocker) |
 | Exposes | switch (state), linkquality |
 | Picture | ![Xiaomi WS-USC02](https://www.zigbee2mqtt.io/images/devices/WS-USC02.jpg) |

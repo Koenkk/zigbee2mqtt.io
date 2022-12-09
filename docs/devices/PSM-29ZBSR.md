@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PSM-29ZBSR  |
-| Vendor  | Climax  |
+| Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Power plug |
 | Exposes | switch (state), power, energy, linkquality |
 | Picture | ![Climax PSM-29ZBSR](https://www.zigbee2mqtt.io/images/devices/PSM-29ZBSR.jpg) |

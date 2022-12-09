@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | 41E10PBSWMZ-VW  |
-| Vendor  | Schneider Electric  |
+| Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Wiser 40/300-Series module switch 10A with ControlLink |
 | Exposes | switch (state), linkquality |
 | Picture | ![Schneider Electric 41E10PBSWMZ-VW](https://www.zigbee2mqtt.io/images/devices/41E10PBSWMZ-VW.jpg) |

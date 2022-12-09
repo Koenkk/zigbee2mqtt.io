@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LDSENK08  |
-| Vendor  | ADEO  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN wireless smart door window sensor with vibration |
 | Exposes | battery_low, contact, vibration, tamper, battery, linkquality |
 | Picture | ![ADEO LDSENK08](https://www.zigbee2mqtt.io/images/devices/LDSENK08.jpg) |

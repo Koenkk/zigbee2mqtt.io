@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | XDD13LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara Opple MX480 |
 | Exposes | light (state, brightness, color_temp), linkquality |
 | Picture | ![Xiaomi XDD13LM](https://www.zigbee2mqtt.io/images/devices/XDD13LM.jpg) |

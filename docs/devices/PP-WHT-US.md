@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PP-WHT-US  |
-| Vendor  | Securifi  |
+| Vendor  | [Securifi](/supported-devices/#v=Securifi)  |
 | Description | Peanut Smart Plug |
 | Exposes | switch (state), power, current, voltage, linkquality |
 | Picture | ![Securifi PP-WHT-US](https://www.zigbee2mqtt.io/images/devices/PP-WHT-US.jpg) |

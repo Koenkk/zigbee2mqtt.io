@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | gq8b1uv  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee smart dimmer |
 | Exposes | light (state, brightness), linkquality |
 | Picture | ![TuYa gq8b1uv](https://www.zigbee2mqtt.io/images/devices/gq8b1uv.jpg) |

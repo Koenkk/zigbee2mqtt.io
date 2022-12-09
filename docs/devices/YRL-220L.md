@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | YRL-220L  |
-| Vendor  | Yale  |
+| Vendor  | [Yale](/supported-devices/#v=Yale)  |
 | Description | Real living keyless leveler lock |
 | Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, linkquality |
 | Picture | ![Yale YRL-220L](https://www.zigbee2mqtt.io/images/devices/YRL-220L.jpg) |

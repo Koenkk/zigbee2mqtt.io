@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WPT1  |
-| Vendor  | Hive  |
+| Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | Heating thermostat remote control |
 | Exposes | battery, linkquality |
 | Picture | ![Hive WPT1](https://www.zigbee2mqtt.io/images/devices/WPT1.jpg) |

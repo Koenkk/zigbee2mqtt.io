@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZNGZDJ11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara roller shade motor |
 | Exposes | cover (state, position), running, linkquality |
 | Picture | ![Xiaomi ZNGZDJ11LM](https://www.zigbee2mqtt.io/images/devices/ZNGZDJ11LM.jpg) |

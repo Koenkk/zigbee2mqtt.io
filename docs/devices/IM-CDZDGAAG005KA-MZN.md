@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | IM-CDZDGAAG005KA-MZN  |
-| Vendor  | ADEO  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN GU-10 LED white |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![ADEO IM-CDZDGAAG005KA-MZN](https://www.zigbee2mqtt.io/images/devices/IM-CDZDGAAG005KA-MZN.jpg) |

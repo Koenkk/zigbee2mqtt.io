@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | MCCGQ11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara door & window contact sensor |
 | Exposes | battery, contact, device_temperature, voltage, power_outage_count, linkquality |
 | Picture | ![Xiaomi MCCGQ11LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ11LM.jpg) |

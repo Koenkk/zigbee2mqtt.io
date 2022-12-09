@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | 2AJZ4KPBS  |
-| Vendor  | Konke  |
+| Vendor  | [Konke](/supported-devices/#v=Konke)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, battery, linkquality |
 | Picture | ![Konke 2AJZ4KPBS](https://www.zigbee2mqtt.io/images/devices/2AJZ4KPBS.jpg) |

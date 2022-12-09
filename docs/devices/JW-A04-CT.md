@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | JW-A04-CT  |
-| Vendor  | JIAWEN  |
+| Vendor  | [JIAWEN](/supported-devices/#v=JIAWEN)  |
 | Description | LED strip light controller |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![JIAWEN JW-A04-CT](https://www.zigbee2mqtt.io/images/devices/JW-A04-CT.jpg) |

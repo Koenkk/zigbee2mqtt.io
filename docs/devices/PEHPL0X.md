@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PEHPL0X  |
-| Vendor  | Perenio  |
+| Vendor  | [Perenio](/supported-devices/#v=Perenio)  |
 | Description | Power link |
 | Exposes | switch (state), default_on_off_state, rms_voltage, active_power, consumed_energy, alarm_voltage_min, alarm_voltage_max, alarm_power_max, alarm_consumed_energy, voltage_min, voltage_max, power_max, consumed_energy_limit, rssi, linkquality |
 | Picture | ![Perenio PEHPL0X](https://www.zigbee2mqtt.io/images/devices/PEHPL0X.jpg) |

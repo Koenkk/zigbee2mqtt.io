@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HLD503-Z-CT  |
-| Vendor  | Shenzhen Homa  |
+| Vendor  | [Shenzhen Homa](/supported-devices/#v=Shenzhen%20Homa)  |
 | Description | Smart LED driver |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![Shenzhen Homa HLD503-Z-CT](https://www.zigbee2mqtt.io/images/devices/HLD503-Z-CT.jpg) |

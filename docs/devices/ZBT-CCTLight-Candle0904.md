@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZBT-CCTLight-Candle0904  |
-| Vendor  | Leedarson  |
+| Vendor  | [Leedarson](/supported-devices/#v=Leedarson)  |
 | Description | LED E14 tunable white |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![Leedarson ZBT-CCTLight-Candle0904](https://www.zigbee2mqtt.io/images/devices/ZBT-CCTLight-Candle0904.jpg) |

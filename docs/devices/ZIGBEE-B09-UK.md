@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZIGBEE-B09-UK  |
-| Vendor  | Zemismart  |
+| Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Zigbee smart outlet universal socket with USB port |
 | Exposes | switch (state), power_outage_memory, linkquality |
 | Picture | ![Zemismart ZIGBEE-B09-UK](https://www.zigbee2mqtt.io/images/devices/ZIGBEE-B09-UK.jpg) |

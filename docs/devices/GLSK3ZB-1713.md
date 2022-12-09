@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | GLSK3ZB-1713  |
-| Vendor  | Hej  |
+| Vendor  | [Hej](/supported-devices/#v=Hej)  |
 | Description | Goqual 3 gang Switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Hej GLSK3ZB-1713](https://www.zigbee2mqtt.io/images/devices/GLSK3ZB-1713.jpg) |

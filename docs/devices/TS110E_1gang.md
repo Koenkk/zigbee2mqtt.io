@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS110E_1gang  |
-| Vendor  | Lonsonho  |
+| Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | Zigbee smart dimmer module 1 gang with neutral |
 | Exposes | light (state, brightness), effect, linkquality |
 | Picture | ![Lonsonho TS110E_1gang](https://www.zigbee2mqtt.io/images/devices/TS110E_1gang.jpg) |

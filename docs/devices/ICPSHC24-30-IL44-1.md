@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ICPSHC24-30-IL44-1  |
-| Vendor  | IKEA  |
+| Vendor  | [IKEA](/supported-devices/#v=IKEA)  |
 | Description | SILVERGLANS IP44 LED driver for wireless control (30 watt) |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
 | Picture | ![IKEA ICPSHC24-30-IL44-1](https://www.zigbee2mqtt.io/images/devices/ICPSHC24-30-IL44-1.jpg) |
@@ -27,13 +27,7 @@ pageClass: device-page
 
 
 ### Pairing
-Factory reset the light bulb ([video](https://www.youtube.com/watch?v=npxOrPxVfe0)).
-After resetting the bulb will automatically connect.
-
-While pairing, keep the bulb close to the coordinator (adapter).
-
-What works is to use (very) short “on’s” and a little bit longer “off’s”, where you kill the light as soon as the bulb shows signs of turning on.
-Start with bulb on, then off, and then 6 “on’s”, wait in the 6th ON state. (If you try play safe and go for 7 "on's" the reset sometimes fails.)
+Factory reset the drivers by holding the dedicated reset button for few seconds, connected ligts will start pulsing after factory reset.
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates

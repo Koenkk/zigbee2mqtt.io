@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SCA01ZB  |
-| Vendor  | Feibit  |
+| Vendor  | [Feibit](/supported-devices/#v=Feibit)  |
 | Description | Smart carbon monoxide sensor |
 | Exposes | carbon_monoxide, battery_low, tamper, battery, linkquality |
 | Picture | ![Feibit SCA01ZB](https://www.zigbee2mqtt.io/images/devices/SCA01ZB.jpg) |

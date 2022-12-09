@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | KMPCIL-tag-001  |
-| Vendor  | KMPCIL  |
+| Vendor  | [KMPCIL](/supported-devices/#v=KMPCIL)  |
 | Description | Arrival sensor |
 | Exposes | battery, presence, power_state, occupancy, vibration, temperature, linkquality |
 | Picture | ![KMPCIL KMPCIL-tag-001](https://www.zigbee2mqtt.io/images/devices/KMPCIL-tag-001.jpg) |

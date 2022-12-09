@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | EFEKTA_eON213wz  |
-| Vendor  | Custom devices (DiY)  |
+| Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | [Mini weather station, digital barometer, forecast, charts, temperature, humidity](http://efektalab.com/eON213wz) |
 | Exposes | battery, temperature, humidity, pressure, linkquality |
 | Picture | ![Custom devices (DiY) EFEKTA_eON213wz](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eON213wz.jpg) |

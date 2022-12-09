@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SPP04G  |
-| Vendor  | Mercator  |
+| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
 | Description | Ikuü Quad Power Point |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
 | Picture | ![Mercator SPP04G](https://www.zigbee2mqtt.io/images/devices/SPP04G.jpg) |

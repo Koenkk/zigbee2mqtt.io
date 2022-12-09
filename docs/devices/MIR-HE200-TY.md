@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | MIR-HE200-TY  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Human presence sensor with fall function |
 | Exposes | illuminance_lux, presence, occupancy, motion_speed, motion_direction, radar_sensitivity, radar_scene, tumble_switch, fall_sensitivity, tumble_alarm_time, fall_down_status, static_dwell_alarm, linkquality |
 | Picture | ![TuYa MIR-HE200-TY](https://www.zigbee2mqtt.io/images/devices/MIR-HE200-TY.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | RCL 240 T  |
-| Vendor  | Innr  |
+| Vendor  | [Innr](/supported-devices/#v=Innr)  |
 | Description | Smart round ceiling lamp comfort |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![Innr RCL 240 T](https://www.zigbee2mqtt.io/images/devices/RCL-240-T.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZNCLBL01LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara curtain driver E1 |
 | Exposes | cover (state, position), battery, voltage, device_temperature, action, motor_state, running, hooks_state, target_position, power_source, charging, linkquality |
 | Picture | ![Xiaomi ZNCLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNCLBL01LM.jpg) |

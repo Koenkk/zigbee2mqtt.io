@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | K2RGBW01  |
-| Vendor  | JIAWEN  |
+| Vendor  | [JIAWEN](/supported-devices/#v=JIAWEN)  |
 | Description | Wireless Bulb E27 9W RGBW |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
 | Picture | ![JIAWEN K2RGBW01](https://www.zigbee2mqtt.io/images/devices/K2RGBW01.jpg) |

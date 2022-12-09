@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | B07KG5KF5R  |
-| Vendor  | GMY Smart Bulb  |
+| Vendor  | [GMY Smart Bulb](/supported-devices/#v=GMY%20Smart%20Bulb)  |
 | Description | GMY Smart bulb, 470lm, vintage dimmable, 2700-6500k, E27 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
 | Picture | ![GMY Smart Bulb B07KG5KF5R](https://www.zigbee2mqtt.io/images/devices/B07KG5KF5R.jpg) |

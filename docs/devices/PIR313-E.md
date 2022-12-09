@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PIR313-E  |
-| Vendor  | OWON  |
+| Vendor  | [OWON](/supported-devices/#v=OWON)  |
 | Description | Motion sensor |
 | Exposes | occupancy, tamper, battery_low, illuminance, illuminance_lux, temperature, humidity, linkquality |
 | Picture | ![OWON PIR313-E](https://www.zigbee2mqtt.io/images/devices/PIR313-E.jpg) |

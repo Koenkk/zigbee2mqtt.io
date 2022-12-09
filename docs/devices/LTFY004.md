@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LTFY004  |
-| Vendor  | Sylvania  |
+| Vendor  | [Sylvania](/supported-devices/#v=Sylvania)  |
 | Description | LIGHTIFY LED gardenspot mini RGB |
 | Exposes | light (state, brightness, color_xy, color_hs), effect, linkquality |
 | Picture | ![Sylvania LTFY004](https://www.zigbee2mqtt.io/images/devices/LTFY004.jpg) |

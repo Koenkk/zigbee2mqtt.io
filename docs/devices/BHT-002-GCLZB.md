@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | BHT-002-GCLZB  |
-| Vendor  | Moes  |
+| Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Moes BHT series Thermostat |
 | Exposes | lock (state), deadzone_temperature, max_temperature_limit, min_temperature_limit, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, preset), sensor, program, linkquality |
 | Picture | ![Moes BHT-002-GCLZB](https://www.zigbee2mqtt.io/images/devices/BHT-002-GCLZB.jpg) |

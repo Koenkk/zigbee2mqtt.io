@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | E1C-NB7  |
-| Vendor  | Sengled  |
+| Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Smart plug with energy tracker |
 | Exposes | switch (state), power, energy, linkquality |
 | Picture | ![Sengled E1C-NB7](https://www.zigbee2mqtt.io/images/devices/E1C-NB7.jpg) |

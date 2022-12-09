@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | V3-BTZB/V3-BTZBE  |
-| Vendor  | Danalock  |
+| Vendor  | [Danalock](/supported-devices/#v=Danalock)  |
 | Description | BT/ZB smartlock |
 | Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, linkquality |
 | Picture | ![Danalock V3-BTZB/V3-BTZBE](https://www.zigbee2mqtt.io/images/devices/V3-BTZB-V3-BTZBE.jpg) |

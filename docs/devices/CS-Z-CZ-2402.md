@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | CS-Z-CZ-2402  |
-| Vendor  | DNAKE  |
+| Vendor  | [DNAKE](/supported-devices/#v=DNAKE)  |
 | Description | Smart socket |
 | Exposes | switch (state), linkquality |
 | Picture | ![DNAKE CS-Z-CZ-2402](https://www.zigbee2mqtt.io/images/devices/CS-Z-CZ-2402.jpg) |

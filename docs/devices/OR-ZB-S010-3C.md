@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | OR-ZB-S010-3C  |
-| Vendor  | ORVIBO  |
+| Vendor  | [ORVIBO](/supported-devices/#v=ORVIBO)  |
 | Description | Smart socket |
 | Exposes | switch (state), linkquality |
 | Picture | ![ORVIBO OR-ZB-S010-3C](https://www.zigbee2mqtt.io/images/devices/OR-ZB-S010-3C.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | AX_Water_Sensor  |
-| Vendor  | CTM Lyng  |
+| Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | AX Water Sensor, water leakage detector |
 | Exposes | battery, battery_low, water_leak, active_water_leak, linkquality |
 | Picture | ![CTM Lyng AX_Water_Sensor](https://www.zigbee2mqtt.io/images/devices/AX_Water_Sensor.jpg) |

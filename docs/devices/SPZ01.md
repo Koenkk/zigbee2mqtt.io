@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SPZ01  |
-| Vendor  | J.XUAN  |
+| Vendor  | [J.XUAN](/supported-devices/#v=J.XUAN)  |
 | Description | plug |
 | Exposes | switch (state), power, power_outage_memory, linkquality |
 | Picture | ![J.XUAN SPZ01](https://www.zigbee2mqtt.io/images/devices/SPZ01.jpg) |

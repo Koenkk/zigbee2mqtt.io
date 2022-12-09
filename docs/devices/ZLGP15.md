@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZLGP15  |
-| Vendor  | Legrand  |
+| Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Wireless and batteryless 4 scenes control |
 | Exposes | action, linkquality |
 | Picture | ![Legrand ZLGP15](https://www.zigbee2mqtt.io/images/devices/ZLGP15.jpg) |

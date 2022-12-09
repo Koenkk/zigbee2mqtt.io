@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HGZB-042  |
-| Vendor  | Nue / 3A  |
+| Vendor  | [Nue / 3A](/supported-devices/#v=Nue%20%2F%203A)  |
 | Description | Smart light switch - 2 gang |
 | Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A HGZB-042](https://www.zigbee2mqtt.io/images/devices/HGZB-042.jpg) |

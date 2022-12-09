@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HLC614-ZLL  |
-| Vendor  | Shenzhen Homa  |
+| Vendor  | [Shenzhen Homa](/supported-devices/#v=Shenzhen%20Homa)  |
 | Description | 3 channel relay module |
 | Exposes | switch (state), linkquality |
 | Picture | ![Shenzhen Homa HLC614-ZLL](https://www.zigbee2mqtt.io/images/devices/HLC614-ZLL.jpg) |

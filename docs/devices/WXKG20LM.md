@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WXKG20LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara E1 wireless mini switch |
 | Exposes | battery, voltage, action, device_temperature, power_outage_count, linkquality |
 | Picture | ![Xiaomi WXKG20LM](https://www.zigbee2mqtt.io/images/devices/WXKG20LM.jpg) |
