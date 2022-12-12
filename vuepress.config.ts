@@ -76,6 +76,7 @@ const conf = defineUserConfig({
 
   theme: defaultTheme({
     repo: 'Koenkk/zigbee2mqtt.io',
+    repoLabel: 'GitHub (docs)',
     docsBranch: isDevelop ? 'develop' : 'master',
     editLinkText: '✏ Help to make the docu better and edit this page on Github ✌',
     logo: '/logo.png',
