@@ -24,8 +24,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-## Pairing
+## Notes
+### Pairing
 
 Press any button 5 times, after this, click the button one more and hold the button.
 
