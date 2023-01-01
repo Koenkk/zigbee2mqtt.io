@@ -23,9 +23,6 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
-<!-- Notes END: Do not edit below this line -->
 ## Notes
 
 ### Pairing
@@ -33,6 +30,7 @@ If the device is already associated with another zigbee network, you will need t
 
 If the blue signal indicator flashes rapidly, the relay has not joined the zigbee network.
 If the blue signal indicator flashes once every 2 seconds, the relay is searching the zigbee network.
+<!-- Notes END: Do not edit below this line -->
 
 
 ## Exposes
