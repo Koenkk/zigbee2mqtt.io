@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNCLBL01LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara curtain driver E1 |
-| Exposes | cover (state, position), battery, voltage, device_temperature, action, motor_state, running, hooks_state, target_position, power_source, charging, linkquality |
+| Exposes | cover (state, position), hand_open, limits_calibration, battery, voltage, device_temperature, action, motor_state, running, hooks_lock, hooks_state, target_position, power_source, charging, linkquality |
 | Picture | ![Xiaomi ZNCLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNCLBL01LM.jpg) |
 | White-label | Xiaomi CM-M01 |
 
@@ -51,6 +51,10 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
@@ -61,6 +65,20 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 To read the current state of this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
+
+### Hand_open (binary)
+Pulling curtains by hand starts the motor.
+Value can be found in the published state on the `hand_open` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"hand_open": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hand_open": NEW_VALUE}`.
+If value equals `true` hand_open is ON, if `false` OFF.
+
+### Limits_calibration (enum)
+Calibrate the position limits.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"limits_calibration": NEW_VALUE}`.
+The possible values are: `start`, `end`, `reset`.
 
 ### Battery (numeric)
 Remaining battery in %.
@@ -100,6 +118,13 @@ Whether the motor is moving or not.
 Value can be found in the published state on the `running` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` running is ON, if `false` OFF.
+
+### Hooks_lock (enum)
+Lock the curtain driver hooks.
+Value can be found in the published state on the `hooks_lock` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hooks_lock": NEW_VALUE}`.
+The possible values are: `LOCK`, `UNLOCK`.
 
 ### Hooks_state (enum)
 Hooks state.

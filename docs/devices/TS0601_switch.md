@@ -28,7 +28,6 @@ pageClass: device-page
 ### Pairing
 
 Press any button 5 times, after this, click the button one more and hold the button.
-
 <!-- Notes END: Do not edit below this line -->
 
 

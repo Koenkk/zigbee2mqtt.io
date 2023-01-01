@@ -1,7 +1,7 @@
 ---
-title: "Immax 07005B control via MQTT"
-description: "Integrate your Immax 07005B via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2020-01-14T19:34:25Z
+title: "Quotra B07CVL9SZF control via MQTT"
+description: "Integrate your Quotra B07CVL9SZF via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-01-01T08:59:10
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Immax 07005B
+# Quotra B07CVL9SZF
 
 |     |     |
 |-----|-----|
-| Model | 07005B  |
-| Vendor  | [Immax](/supported-devices/#v=Immax)  |
-| Description | Neo SMART LED E14 5W warm white, dimmable, Zigbee 3.0 |
-| Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Immax 07005B](https://www.zigbee2mqtt.io/images/devices/07005B.jpg) |
+| Model | B07CVL9SZF  |
+| Vendor  | [Quotra](/supported-devices/#v=Quotra)  |
+| Description | Dimmer |
+| Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
+| Picture | ![Quotra B07CVL9SZF](https://www.zigbee2mqtt.io/images/devices/B07CVL9SZF.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -68,6 +68,13 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
+
+### Power_on_behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

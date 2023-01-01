@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WF4C_WF6C  |
 | Vendor  | [Acuity Brands Lighting (ABL)](/supported-devices/#v=Acuity%20Brands%20Lighting%20(ABL))  |
 | Description | Juno 4" and 6" LED smart wafer downlight |
-| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
 | Picture | ![Acuity Brands Lighting (ABL) WF4C_WF6C](https://www.zigbee2mqtt.io/images/devices/WF4C_WF6C.jpg) |
 
 
@@ -75,6 +75,13 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
+
+### Power_on_behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

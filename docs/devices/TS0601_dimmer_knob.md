@@ -1,7 +1,7 @@
 ---
-title: "TuYa TS110E control via MQTT"
-description: "Integrate your TuYa TS110E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-12-01T15:07:19
+title: "TuYa TS0601_dimmer_knob control via MQTT"
+description: "Integrate your TuYa TS0601_dimmer_knob via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-01-01T08:59:10
 pageClass: device-page
 ---
 
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS110E
+# TuYa TS0601_dimmer_knob
 
 |     |     |
 |-----|-----|
-| Model | TS110E  |
+| Model | TS0601_dimmer_knob  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | 1 channel dimmer |
-| Exposes | light (state, brightness, min_brightness, max_brightness), light_type, power_on_behavior, linkquality |
-| Picture | ![TuYa TS110E](https://www.zigbee2mqtt.io/images/devices/TS110E.jpg) |
-| White-label | RTX QS-Zigbee-D02-TRIAC-LN |
+| Description | Zigbee smart knob dimmer |
+| Exposes | light (state, brightness, min_brightness), light_type, indicator_mode, linkquality |
+| Picture | ![TuYa TS0601_dimmer_knob](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_knob.jpg) |
+| White-label | Moes WS-SY-EURD, Moes WS-SY-EURD-WH-MS |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,23 +33,23 @@ pageClass: device-page
 ## Exposes
 
 ### Light 
-This light supports the following features: `state`, `brightness`, `min_brightness`, `max_brightness`.
+This light supports the following features: `state`, `brightness`, `min_brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
 
 ### Light_type (enum)
 Type of light attached to the device.
 Value can be found in the published state on the `light_type` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"light_type": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_type": NEW_VALUE}`.
 The possible values are: `led`, `incandescent`, `halogen`.
 
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `previous`.
+### Indicator_mode (enum)
+Mode of the indicator light.
+Value can be found in the published state on the `indicator_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `none`, `relay`, `pos`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

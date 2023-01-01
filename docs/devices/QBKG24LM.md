@@ -38,6 +38,13 @@ If you can't do this, try to remove battery (if it has one), push the button (to
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
 
 ## Exposes
 

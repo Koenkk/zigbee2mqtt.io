@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WZ5_rgb_1  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee & RF 5 in 1 LED controller (RGB mode) |
-| Exposes | light (state, brightness, color_hs, color_xy), linkquality |
+| Exposes | light (state, brightness, color_hs, color_xy), power_on_behavior, linkquality |
 | Picture | ![TuYa WZ5_rgb_1](https://www.zigbee2mqtt.io/images/devices/WZ5_rgb_1.jpg) |
 
 
@@ -75,6 +75,13 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "saturation_step": 66, // Increase saturation by 66 (allowed value range: -255 till 255)
 }
 ````
+
+### Power_on_behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

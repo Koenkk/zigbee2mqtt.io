@@ -271,6 +271,8 @@ function getExposeDocs(expose, definition) {
     let txt = {value: '', note: []};
     if (expose.item_type.type === 'composite') {
       txt = compositeDocs(expose.item_type);
+    } else if (expose.item_type.type === 'text') {
+      // Empty on purpose
     } else {
       throw new Error(`Unsupported list item_type: ${expose.item_type.type}`);
     }

@@ -70,7 +70,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`.
 
 ### Group_id (numeric)
-The device sends commands with this group ID. Put dvices in this group to control them..
+The device sends commands with this group ID. Put devices in this group to control them..
 Value can be found in the published state on the `group_id` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
