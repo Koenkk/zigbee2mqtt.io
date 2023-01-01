@@ -51,10 +51,6 @@ pageClass: device-page
 
 * `formaldehyd_calibration`: Calibrates the formaldehyd value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `pm25_precision`: Number of digits after decimal point for pm25, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `pm25_calibration`: Calibrates the pm25 value (absolute offset), takes into effect on next report of device. The value must be a number.
-
 
 ## Exposes
 

@@ -44,7 +44,7 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 
 ### Options (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"options": {"motor_speed": VALUE}}`
-- `motor_speed` (numeric): Motor speed. 
+- `motor_speed` (numeric): Motor speed max value is 255
 
 ### Motor_working_mode (enum)
 Value can be found in the published state on the `motor_working_mode` property.

@@ -68,7 +68,7 @@ Current summation value sent to the display. e.g. 570 = 0,570 kWh.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_summation": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `10000`.
+The minimal value is `0` and the maximum value is `268435455`.
 
 ### Check_meter (binary)
 Is true if communication problem with meter is experienced.

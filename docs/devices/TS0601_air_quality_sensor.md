@@ -51,6 +51,7 @@ pageClass: device-page
 
 * `formaldehyd_calibration`: Calibrates the formaldehyd value (absolute offset), takes into effect on next report of device. The value must be a number.
 
+
 ## Exposes
 
 ### Temperature (numeric)

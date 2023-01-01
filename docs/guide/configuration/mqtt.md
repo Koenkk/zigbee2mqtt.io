@@ -51,9 +51,9 @@ configuration.
 ```yaml
 # IMPORTANT: Don't forget the quotes!
 mqtt:
-  server: '!secret server'
-  user: '!secret user'
-  password: '!secret password'
+  server: '!secret.yaml server'
+  user: '!secret.yaml user'
+  password: '!secret.yaml password'
 ```
 
 **secret.yaml**

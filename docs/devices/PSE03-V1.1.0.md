@@ -33,9 +33,9 @@ pageClass: device-page
 
 ### Warning (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": VALUE, "level": VALUE, "duration": VALUE}}`
-- `mode` (enum): Mode of the warning (sound effect). Allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
-- `level` (enum): Sound level. Allowed values: `low`, `medium`, `high`, `very_high`
-- `duration` (numeric): Duration in seconds of the alarm. 
+- `mode` (enum): Mode of the warning (sound effect) allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
+- `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
+- `duration` (numeric): Duration in seconds of the alarm unit is s
 
 ### Linkquality (numeric)
 Link quality (signal strength).

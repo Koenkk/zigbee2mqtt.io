@@ -184,7 +184,7 @@ _(in order of first appearance)_
     * [ESP32 firmware](https://github.com/smlight-dev/slzb-06-firmware/)  
     * [Manual](https://smlight.tech/manual/slzb-06/)
     * [Product site](https://smlight.tech/product/slzb-06/)
-    * Buy: [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/smlight-slzb-06en), [Tindie](https://www.tindie.com/products/smartlightme/smlight-slzb-06-zigbee-ethernet-poe-usb-wifi-adapt/) 
+    * Buy: [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/smlight-slzb-06en), [Aliexpress](https://www.aliexpress.com/item/1005004942648430.html), [Tindie](https://www.tindie.com/products/smartlightme/smlight-slzb-06-zigbee-ethernet-poe-usb-wifi-adapt/) 
 
     ![](https://smartlight.me/ebay/images/slzb-06/slzb06logo.jpg)
     </details>
@@ -222,8 +222,8 @@ _(in order of first appearance)_
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20220219.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20220125.zip)  
     * Flashing instructions; see "Flashing CC1352/CC2652/CC2538 based adapters" below
-    * [Description](https://z2m.wiki/)  
-    * [Buy](https://z2m.wiki/)  
+    * [Description](https://shop68536829.taobao.com/)  
+    * [Buy](https://shop68536829.taobao.com/)  
   
     ![](../../images/CC2652P-Z2M.jpg)
     </details>
@@ -404,7 +404,7 @@ The adapters below are well-supported but use outdated chips.
   
     An open source zigbee gateway powered by ESP8266 and CC2538+CC2592PA (XGG 38PZ2MGateway) or CC2530 (XGG 30Z2MGateway)  
     Coordinator firmware: [XGG 38PZ2MGateway](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin) [XGG 30Z2MGateway](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin)  
-    * [Contact](https://z2m.wiki/)
+    * [Contact](https://shop68536829.taobao.com/)
   
     ![](../../images/CC2652P-Z2M.jpg)
     </details>
@@ -554,6 +554,9 @@ Before buying an adapter, please read the notes below!
   - Chips ending with `P` have a power amplifier which support up-to 20dBm vs 5dBm on adapters ending with `R`/`RB`.
   - Chips starting with `CC1352` support the sub-1 GHz frequency (which is not relevant for Zigbee since it uses 2.4 GHz), `CC2652` only supports 2.4 GHz. So for Zigbee2MQTT purposes there is no difference between `CC1352` and `CC2652`.
   - Chips ending with `RB` don't require a crystal on the PCB, this only makes a difference for the manufacturing process.
+
+### Coordinator backups
+Note that only adapters based on a Texas Instruments chip (CC2530/CC2531/CC2538/CC2652/CC1352) support a coordinator backup (`coordinator_backup.json`).
 
 ### Flashing CC1352/CC2652/CC2538 based adapters
 Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the bootloader. See your adapter manual on how to do this. After you have done this one of the following tools can be used to flash it.
