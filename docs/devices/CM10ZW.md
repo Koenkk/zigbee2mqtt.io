@@ -26,8 +26,9 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+## Notes
 
-## Pairing
+### Pairing
 If the device is already associated with another zigbee network, you will need to set in "off-network" : Press the reset buttons 5 times and hold it until the blue signal indicator flashes rapidly, which means it has been off the zigbee network. Power it on again to rejoin the zigbee network.
 
 If the blue signal indicator flashes rapidly, the relay has not joined the zigbee network.
