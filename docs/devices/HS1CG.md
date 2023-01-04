@@ -1,6 +1,6 @@
 ---
-title: "Heiman HS1CG control via MQTT"
-description: "Integrate your Heiman HS1CG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HEIMAN HS1CG control via MQTT"
+description: "Integrate your HEIMAN HS1CG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-07-01T08:15:09
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS1CG  |
-| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart combustible gas sensor |
 | Exposes | gas, battery_low, tamper, linkquality |
 | Picture | ![Heiman HS1CG](https://www.zigbee2mqtt.io/images/devices/HS1CG.jpg) |
