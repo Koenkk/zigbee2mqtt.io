@@ -37,15 +37,23 @@ Credits to [@Frans-Willem](https://github.com/frans-Willem) for majority of inst
 * Ubuntu/Debian: libusb-1.0-0-dev, libboost-all-dev, autoconf, libtool
 * Fedora: dh-autoreconf, boost-devel, libusb1-devel, gcc-c++
 * Archlinux: dh-autoreconf, libusb, boost
-* macOS: brew install autoconf automake libusb boost pkgconfig libtool
+* macOS: `brew install autoconf automake libusb boost@1.76 pkgconfig libtool`
 * Raspbian: dh-autoreconf, libusb-1.0-0-dev, libboost-all-dev
 
 2. Build cc-tool
 ```bash
 git clone https://github.com/dashesy/cc-tool.git
 cd cc-tool
-./bootstrap
-./configure
+CPPFLAGS=-I/usr/local/include \
+LDFLAGS=-I/usr/local/include \
+ ./bootstrap
+
+CPPFLAGS="-I/usr/local/opt/boost@1.76/include" \
+CXXFLAGS="-std=c++0x" \
+LDFLAGS="-L/usr/local/opt/boost@1.76/lib" \
+LIBUSB_CFLAGS=-I/usr/local/include/libusb-1.0 \
+ ./configure
+
 make
 ```
 3. Connect `CC debugger --> Downloader cable CC2531 --> CC2531 USB sniffer`.
