@@ -6,6 +6,12 @@
 
 This feature allows to update your Zigbee devices over-the-air.
 
+::: tip TIP
+Always check if the firmware update will bring you advantages. firmware updates are NOT made for zigbee2mqtt, but for working with apps and hubs from the brand.
+In some cases the firmware update can cause that your device will react different then zigbee2mqtt expects, making that you can't use it the way you want, at least untill zigbee2mqtt is changed to react to those changes.
+If you get annoyed by the notifications that there are updates available, then turn the automatic check off.
+:::
+
 Not all manufacturers make their updates available, below is a (not-complete) list of manufacturer/devices that support it:
 - IKEA TRÅDFRI devices
 - Ubisys devices
