@@ -21,6 +21,8 @@ pi@raspberry:~ $ ls -l /dev/ttyACM0
 crw-rw---- 1 root dialout 166, 0 May 16 19:15 /dev/ttyACM0  # <-- adapter (CC2531 in this case) on /dev/ttyACM0
 ```
 
+Alternately, if you are using an ethernet connected adapter, follow the instructions given for your specific device.
+
 However, it is **recommended** to use "by ID" mapping of the device (see [Adapter settings](../configuration/adapter-settings.md)). This kind of device path mapping is more stable, but can also be handy if you have multiple serial devices connected to your Raspberry Pi. In the example below the device location is: `/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00`
 ```bash
 pi@raspberry:/ $ ls -l /dev/serial/by-id
@@ -29,16 +31,33 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 ```
 
 ## Installing
+
+Procedure using curl and apt-get:
 ```bash
 # Set up Node.js repository and install Node.js + required dependencies
 # NOTE: Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v16.15.0/ e.g. Version 16.15.0 should work.
 sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs git make g++ gcc
+```
 
+Alternate procedure using snap store:
+```bash
+# Install latest nodejs from snap store
+# The --classic argument is required here as Node.js needs full access to your system in order to be useful.
+# You can also use the --channel=XX argument to install a legacy version where XX is the version you want to install (we need 14+).
+sudo snap install node --classic
+```
+
+Continue installation in both cases
+```bash
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
 # version has been installed
 node --version  # Should output v14.X, V16.x, V17.x or V18.X
 npm --version  # Should output 6.X, 7.X or 8.X
+
+# If you encounter an error at this stage and used the snap store instructions, adjust the BIN path as follows:
+## PATH=$PATH:/snap/node/current/bin
+# then re-verify nodejs and npm versions as above
 
 # Create a directory for zigbee2mqtt and set your user as owner of it
 sudo mkdir /opt/zigbee2mqtt
