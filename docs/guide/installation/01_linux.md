@@ -40,7 +40,8 @@ sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs git make g++ gcc
 ```
 
-Alternate procedure using snap store:
+Note: the above doesn't work on ubuntu.
+Alternate procedure using snap store for ubuntu or similar:
 ```bash
 # Install latest nodejs from snap store
 # The --classic argument is required here as Node.js needs full access to your system in order to be useful.
