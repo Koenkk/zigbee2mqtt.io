@@ -14,6 +14,7 @@ devices:
   '0x00158d0001d82999':
     friendly_name: 'my_occupancy_sensor'
     retain: true
+    disabled: false
     qos: 1
     debounce: 0.5
     debounce_ignore:
@@ -58,6 +59,13 @@ Description of this device, e.g. `This device is in the kitchen`, will be shown 
 **`retain`**  
 Retain MQTT messages of this device (default `false`).
 
+**`disabled`**  
+Disables the device. This **does not** prevent the device from communicating in the Zigbee network. E.g. when messages are received from this device, Zigbee2MQTT will still publish them. This feature is useful for devices which will be disconnected from the Zigbee network for a longer time (like Christmas lights). Disabling a device does the following:
+- The availability feature will not try to ping it
+- The device is always marked as `unavailable` in Home Assistant
+- It will not be configured on Zigbee2MQTT startup (required for some devices in order to start working)
+- It will be excluded from network scans (network map)
+- It will be excluded from optimistic group state updates
 
 **`retention`**  
 Sets the MQTT Message Expiry in seconds e.g. `retention: 900` = 15 minutes (default: not enabled). Make

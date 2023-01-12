@@ -30,6 +30,8 @@ pageClass: device-page
 To factory reset the TRADFRI drivers use a
 small pin or paperclip to push the reset button once.
 NB: you HAVE to put the device VERY close to the zigbee device, otherwise it won't be able to detect.
+
+If this doesn't work, try holding the button for 5 seconds.
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
@@ -78,11 +80,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
 ### Power_on_behavior (enum)
-Controls the behavior when the device is powered on.
+Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `previous`, `on`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

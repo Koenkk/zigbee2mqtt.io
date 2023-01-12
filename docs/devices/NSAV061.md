@@ -1,7 +1,7 @@
 ---
 title: "Profalux NSAV061 control via MQTT"
 description: "Integrate your Profalux NSAV061 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-03-01T09:06:16
+addedAt: 2023-01-01T08:59:10
 pageClass: device-page
 ---
 

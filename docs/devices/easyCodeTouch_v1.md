@@ -77,10 +77,10 @@ If value equals `true` auto_relock is ON, if `false` OFF.
 
 ### Pin_code (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "user_type": VALUE, "user_enabled": VALUE, "pin_code": VALUE}}`
-- `user` (numeric): User ID to set or clear the pincode for. 
-- `user_type` (enum): Type of user, unrestricted: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock. Allowed values: `unrestricted`, `year_day_schedule`, `week_day_schedule`, `master`, `non_access`
-- `user_enabled` (binary): Whether the user is enabled/disabled. Allowed values: `true` or `false`
-- `pin_code` (numeric): Pincode to set, set pincode to null to clear. 
+- `user` (numeric): User ID to set or clear the pincode for 
+- `user_type` (enum): Type of user, unrestricted: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock allowed values: `unrestricted`, `year_day_schedule`, `week_day_schedule`, `master`, `non_access`
+- `user_enabled` (binary): Whether the user is enabled/disabled allowed values: `true` or `false`
+- `pin_code` (numeric): Pincode to set, set pincode to null to clear 
 
 ### Linkquality (numeric)
 Link quality (signal strength).

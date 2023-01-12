@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | Eco-Dim.07/Eco-Dim.10  |
 | Vendor  | [EcoDim](/supported-devices/#v=EcoDim)  |
 | Description | Zigbee & Z-wave dimmer |
-| Exposes | light (state, brightness), linkquality |
+| Exposes | light (state, brightness), power_on_behavior, linkquality |
 | Picture | ![EcoDim Eco-Dim.07/Eco-Dim.10](https://www.zigbee2mqtt.io/images/devices/Eco-Dim.07-Eco-Dim.10.jpg) |
 
 
@@ -37,6 +37,9 @@ Method 2. Press the reset button 3 times, the indicator starts blinking purple a
 ### Factory reset
 Press and hold the reset button for at least 5 seconds, the indicator will stay red for 10s when the reset is complete. Please note that all configuration parameters will be reset after the device is reset or removed from the network.
 <!-- Notes END: Do not edit below this line -->
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -72,6 +75,13 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_step": 40 // Increases brightness by 40
 }
 ````
+
+### Power_on_behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

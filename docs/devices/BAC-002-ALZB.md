@@ -64,10 +64,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `IN`, `AL`, `OU`.
 
 ### Programming_mode (composite)
+Schedule MODE ⏱ - In this mode, the device executes a preset week programming temperature time and temperature..
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"undefined": {"week": VALUE, "workdays_schedule": VALUE, "holidays_schedule": VALUE}}`
-- `week` (enum): Week format user for schedule. Allowed values: `5+2`, `6+1`, `7`
-- `workdays_schedule` (text): undefined. 
-- `holidays_schedule` (text): undefined. 
+- `week` (enum): Week format user for schedule allowed values: `5+2`, `6+1`, `7`
+- `workdays_schedule` (text) 
+- `holidays_schedule` (text) 
 
 ### Linkquality (numeric)
 Link quality (signal strength).

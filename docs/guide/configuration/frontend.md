@@ -29,9 +29,13 @@ frontend:
   auth_token: your-secret-token
   # Optional, url on which the frontend can be reached, currently only used for the Home Assistant device configuration page
   url: 'https://zigbee2mqtt.myhouse.org'
+  # Optional, certificate file path for exposing HTTPS. The sibling property 'ssl_key' must be set for HTTPS to be activated
+  ssl_cert: /config/etc/letsencrypt/live/mydomain.com/fullchain.pem
+  # Optional, private key file path for exposing HTTPS. The sibling property 'ssl_cert' must be set for HTTPS to be activated
+  ssl_key: /config/etc/letsencrypt/live/mydomain.com/privkey.pem
 ```
 
-To specify the `auth_token` in a different file set e.g. `auth_token: '!secret auth_token'`, create a file called `secret.yaml` next to `configuration.yaml` with content `auth_token: super-secret-token`.
+To specify the `auth_token` in a different file set e.g. `auth_token: '!secret.yaml auth_token'`, create a file called `secret.yaml` next to `configuration.yaml` with content `auth_token: super-secret-token`.
 
 
 **NOTE:** If you are running Zigbee2MQTT via the Home Assistant addon you cannot change the port. The addon will force the frontend to run on port 8099 as Home Assistant Ingress requires this.

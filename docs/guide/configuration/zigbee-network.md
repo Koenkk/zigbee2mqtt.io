@@ -51,7 +51,7 @@ To specify the network_key in a different file, e.g `secret.yaml`, use the follo
 ```yaml
 # IMPORTANT: Don't forget the quotes!
 advanced:
-  network_key: '!secret network_key'
+  network_key: '!secret.yaml network_key'
 ```
 
 **secret.yaml**

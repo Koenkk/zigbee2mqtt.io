@@ -69,10 +69,39 @@ Example:
 ```
 
 ### List
-Indicates a device exposes a list of values. Currently the only possible `item_type` is `number`.
+Indicates a device exposes a list of values. The `item_type` can be any other exposes where the `property` is omitted.
+Optionally a `length_min` and `length_max` property can be added which defines the min/max number of entries in the list.
 
 Examples:
-- `{"type":"list","name":"no_occupancy_since","property":"no_occupancy_since","access":1,"item_type":"number"}`
+```json
+{
+    "type":"list",
+    "name":"no_occupancy_since",
+    "property":"no_occupancy_since",
+    "access":1,
+    "item_type":{"access": 3, "name": "temperature", "type": "numeric"}
+}
+```
+
+```json
+{
+    "type": "list",
+    "name": "schedule",
+    "property": "schedule",
+    "access": 3,
+    "length_min": 1,
+    "length_max": 10,
+    "item_type": {
+        "type": "composite",
+        "name": "day_time",
+        "features": [
+            {"access": 3, "name": "day", "property": "day", "type": "enum","values": ["monday", "tuesday", "wednesday"]},
+            {"access": 3, "name": "hour", "property": "hour", "type": "numeric",},
+            {"access": 3, "name": "minute", "property": "minute", "type": "numeric"},
+        ]
+    }
+}
+```
 
 ## Specific
 

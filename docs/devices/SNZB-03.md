@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SNZB-03  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Motion sensor |
-| Exposes | occupancy, battery_low, tamper, battery, voltage, linkquality |
+| Exposes | occupancy, battery_low, battery, voltage, linkquality |
 | Picture | ![SONOFF SNZB-03](https://www.zigbee2mqtt.io/images/devices/SNZB-03.jpg) |
 | White-label | eWeLink RHK09 |
 
@@ -46,12 +46,6 @@ Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery_low is ON, if `false` OFF.
-
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %.

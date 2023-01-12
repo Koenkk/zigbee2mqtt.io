@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TAFFETAS2  |
 | Vendor  | [Acova](/supported-devices/#v=Acova)  |
 | Description | Taffetas 2 heater |
-| Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
+| Exposes | climate (occupied_heating_setpoint, unoccupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![Acova TAFFETAS2](https://www.zigbee2mqtt.io/images/devices/TAFFETAS2.jpg) |
 
 
@@ -46,7 +46,7 @@ pageClass: device-page
 ## Exposes
 
 ### Climate 
-This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
+This climate device supports the following features: `occupied_heating_setpoint`, `unoccupied_heating_setpoint`, `local_temperature`, `system_mode`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `7` and `28`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`, `auto`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
