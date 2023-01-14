@@ -53,13 +53,14 @@ Examples:
 - `{"type":"text","name":"inserted","property":"inserted","access":1}`
 
 ### Composite
-Composite combines the above generic types in the `features` array. Unlike other generic types, it does not have the `access` property since the `access` is defined per feature.
+Composite combines the above generic types in the `features` array.
 
 Example:
 ```json
 {
     "type":"composite",
     "name":"color_xy",
+    "access":2,
     "property":"color",
     "features": [
         {"type":"numeric","name":"x","property":"x","access":7},
