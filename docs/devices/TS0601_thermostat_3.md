@@ -32,6 +32,9 @@ pageClass: device-page
 
 ## Exposes
 
+### Pairing
+To enter pairing set temperature to OF and press the knob for 5 seconds till the wifi icon will flash
+
 ### Lock 
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
