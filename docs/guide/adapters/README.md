@@ -184,7 +184,7 @@ _(in order of first appearance)_
     * [ESP32 firmware](https://github.com/smlight-dev/slzb-06-firmware/)  
     * [Manual](https://smlight.tech/manual/slzb-06/)
     * [Product site](https://smlight.tech/product/slzb-06/)
-    * Buy: [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/smlight-slzb-06en), [Aliexpress](https://www.aliexpress.com/item/1005004942648430.html), [Tindie](https://www.tindie.com/products/smartlightme/smlight-slzb-06-zigbee-ethernet-poe-usb-wifi-adapt/) 
+    * Buy: [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/smlight-slzb-06en), [Aliexpress](https://www.aliexpress.com/item/1005004942648430.html), [Amazon US](https://www.amazon.com/SMLIGHT-SLZB-06-Ethernet-Zigbee2MQTT-Assistant/dp/B0BL6DQSB3), [Tindie](https://www.tindie.com/products/smartlightme/smlight-slzb-06-zigbee-ethernet-poe-usb-wifi-adapt/)
 
     ![](https://smartlight.me/ebay/images/slzb-06/slzb06logo.jpg)
     </details>
