@@ -21,6 +21,7 @@ pageClass: device-page
 | Exposes | battery, voltage, illuminance, illuminance_lux, power_outage_count, linkquality |
 | Picture | ![Xiaomi GZCGQ01LM](https://www.zigbee2mqtt.io/images/devices/GZCGQ01LM.jpg) |
 | White-label | Xiaomi YTC4043GL |
+| Battery | CR2450 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
