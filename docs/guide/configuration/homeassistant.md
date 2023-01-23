@@ -11,6 +11,8 @@ See: [Home Assistant integration guide](../usage/integrations/home_assistant.md)
 homeassistant: true
 ```
 
+Note: If your Zigbee2MQTT server is not using the Home Assistant Addon, then you will also need to update your Zigbee2MQTT MQTT server settings to direct to the Home Assisant IP address, username and password.
+
 ## Advanced configuration
 ```yaml
 homeassistant:
