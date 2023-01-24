@@ -22,7 +22,6 @@ pageClass: device-page
 | Picture | ![Xiaomi GZCGQ01LM](https://www.zigbee2mqtt.io/images/devices/GZCGQ01LM.jpg) |
 | White-label | Xiaomi YTC4043GL |
 
-
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
@@ -40,6 +39,9 @@ Press and hold the reset button on the device for +- 5 seconds (until the blue l
 After this the device will automatically join. If this doesn't work, try with a single short button press.
 
 ![GZCGQ01LM pairing](../images/pairing/GZCGQ01LM_pairing.jpg)
+
+### Battery
+This device uses a CR2450 battery.
 <!-- Notes END: Do not edit below this line -->
 
 
