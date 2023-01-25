@@ -91,6 +91,18 @@ npx cross-env INCLUDE_DEVICE=<DEVICE_FILE_NAME> npm run dev
 npx cross-env INCLUDE_DEVICE=TS011F_plug_1 npm run dev
 ```
 
+#### Change development port
+
+You can change development server port when the default one (8080) is taken on your system.  
+
+```bash
+# Run vuepress in dev mode on specified port
+npx cross-env DEV_PORT=<PORT_NUMBER> npm run dev
+
+# Example for port no 15080
+npx cross-env DEV_PORT=15080 npm run dev
+```
+
 ## Docker
 
 You can also just use a docker-image include Node.js.

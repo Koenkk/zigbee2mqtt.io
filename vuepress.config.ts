@@ -22,7 +22,10 @@ if (process.env.INCLUDE_DEVICE) {
   pagePatterns.push(`devices/${process.env.INCLUDE_DEVICE}.md`);
 }
 
+const devServerPort = (process.env.DEV_PORT ? parseInt(process.env.DEV_PORT, 10) : undefined);
+
 const conf = defineUserConfig({
+  port: devServerPort,
   base: getBase(),
   title: 'Zigbee2MQTT' + ( isDevelop ? ' develop' : '' ),
   description: 'Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges',
