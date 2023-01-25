@@ -44,7 +44,30 @@ After this the device will automatically join. If this doesn't work, try with a 
 ![RTCZCGQ11LM pairing](../images/pairing/RTCZCGQ11LM_pairing.jpg)
 
 ### Feature support
-`Regions` [not supported](https://github.com/Koenkk/zigbee2mqtt/issues/11019#issuecomment-1026012894) for now.
+
+#### Detection regions (configuration)
+
+Device allows to add up to `10` detection regions, each composed of any number of zones in a `4x7` detection grid, visualized below:  
+![RTCZCGQ11LM pairing](../images/device_specific/RTCZCGQ11LM_detection_regions.jpg)
+
+Each zone can be added to any region, for example you can add zone `X1 Y1` to `Region 1` & `Region 2`.
+
+#### Detection regions (events)
+
+Once the device detects an event in any of created regions, it exposes this event in `action` expose.  
+The events follow the schema of `region_<REGION_ID>_<EVENT_NAME>`, where:
+- `<REGION_ID>` is a region identifier, as specified by the user, from `1` to `10`.
+- `<EVENT_NAME>` is one of:
+  - `enter` - triggered on region enter, quick to trigger
+  - `leave` - triggered on region leave, quick to trigger
+  - `occupied` - triggered when device is sure about region occupancy, slow to trigger
+  - `unoccupied` - triggered when device is sure about region no longer being occupied, slow to trigger
+
+Eg. `region_1_enter` is triggered when a person enters `Region 1`.
+
+#### Other regions
+
+`Other regions` (exits, entrances, interference sources, edges) currently not supported. Reverse engineering efforts documented [here](https://github.com/dresden-elektronik/deconz-rest-plugin/issues/5928#issuecomment-1166545226).
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
