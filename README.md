@@ -48,10 +48,10 @@ Docgen includes some scripts to help testing the page.
 
 ## VuePress
 
-Use Node.js 16 for building VuePress (other versions like Node.js 18 are not supported)
+Use Node.js 18 for building VuePress (other versions are not officially supported).
 
 ```bash
-# Switch to node 16 (for nvm or nvm-compatible tool users)
+# Switch to node 18 (for nvm or nvm-compatible tool users)
 nvm use
 
 # Install dependencies
@@ -108,7 +108,7 @@ npx cross-env DEV_PORT=15080 npm run dev
 You can also just use a docker-image include Node.js.
 
 ```bash
-$ docker run --rm -v $PWD:/app -u $UID -ti node:16 bash
+$ docker run --rm -v $PWD:/app -u $UID -ti node:18-slim bash
 node@87e1438ef553:/$ cd /app
 node@87e1438ef553:/app$ npm ci
 node@87e1438ef553:/app$ npm run dev
