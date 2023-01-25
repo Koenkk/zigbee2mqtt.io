@@ -18,6 +18,9 @@ const pagePatterns = ['**/*.md', '!.vuepress', '!node_modules'];
 if (process.env.EXCLUDE_DEVICES) {
   pagePatterns.push('!devices');
 }
+if (process.env.INCLUDE_DEVICE) {
+  pagePatterns.push(`devices/${process.env.INCLUDE_DEVICE}.md`);
+}
 
 const conf = defineUserConfig({
   base: getBase(),

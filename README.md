@@ -77,6 +77,19 @@ npm run dev
 The `dev`-Mode **excludes** the huge amount device-pages which slows down the build process drastically.
 If you are interested in the device-pages you could include them by using the `npm run dev:devices` npm-run script.  
 
+#### Include specific device
+
+When running in `dev`-Mode, you can also specify a device (but this device only) which you would like to include in the build process.
+Useful when working on improving notes of just one device.  
+`INCLUDE_DEVICE` variable should be supplied with device's filename (see [`/docs/devices`](/docs/devices/) folder), without the `.md.` extension.  
+
+```bash
+# Run vuepress in dev mode with specific device included
+npx cross-env INCLUDE_DEVICE=<DEVICE_FILE_NAME> npm run dev
+
+# Example for TS011F_plug_1
+npx cross-env INCLUDE_DEVICE=TS011F_plug_1 npm run dev
+```
 
 ## Docker
 
