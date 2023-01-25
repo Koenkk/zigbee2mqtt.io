@@ -50,7 +50,7 @@ After this the device will automatically join. If this doesn't work, try with a 
 Device allows to add up to `10` detection regions, each composed of any number of zones in a `4x7` detection grid, visualized below:  
 ![RTCZCGQ11LM pairing](../images/device_specific/RTCZCGQ11LM_detection_regions.jpg)
 
-Each zone can be added to any region, for example you can add zone `X1 Y1` to `Region 1` & `Region 2`.
+Each zone can be added to any region, for example you can add zone `X1 Y1` to both `Region 1` & `Region 2` at the same time.
 
 #### Detection regions (events)
 
