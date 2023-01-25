@@ -77,7 +77,7 @@ By default the published availability payload is in legacy mode (`online`/`offli
 
 ```yaml
 advanced:
-  # Wether to use legacy mode for the availability message payload (default: true)
+  # Whether to use legacy mode for the availability message payload (default: true)
   # true = online/offline
   # false = {"state":"online"} / {"state":"offline"}
   legacy_availability_payload: true
