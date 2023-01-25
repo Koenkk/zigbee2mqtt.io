@@ -23,11 +23,26 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### How to create a SONOFF ZBDongle-E Router
+You can create a powerful Zigbee router from an ordinary Sonoff Zigbee 3.0 USB Dongle Plus (Model "ZBDongle-E" with EFR32MG21 chip) by flashing a router firmware onto the device. You can find the official guide for flashing the device here: [SONOFF Zigbee 3.0 USB dongle plus firmware flashing](https://sonoff.tech/wp-content/uploads/2022/11/SONOFF-Zigbee-3.0-USB-dongle-plus-firmware-flashing-.pdf). The guide also contains the link to the official [SONOFF Router Firmware for the ZBDongle-E](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E/Router).
+### Hints
+The guide from SONOFF is not very detailed. Here are some additional hints:
+* First, you have to disassemble the device and pull the logic board out of its housing. You need a **J00 Phillips screwdriver** for this.
+  <img src="https://www.zigbee2mqtt.io/images/dongle-e-screws.jpg" width="130" height="129"/>
+  <img src="https://www.zigbee2mqtt.io/images/dongle-e-board-in-housing.jpg" width="130" height="117"/>
+* Second, you need a **software supporting the [XMODEM file transfer protocol](https://en.wikipedia.org/wiki/XMODEM)** for sending the firmware image to the device.
+* Third, you must operate on the naked logic board while it is plugged in. This is a lot easier if you use a **USB extension cable**.
+* Forth, to enter the Bootloader Mode, you have to
+  * Plug the device in
+  * Connect to the device with the serial software (for serial connection parameters, see guide)
+  * Press and hold the "BOOT" button (upper button in the lower right corner next to the USB plug in the photo below)
+  * and then press the "RST." button (lower button in the lower right corner next to the USB plug in the photo below) to restart the device 
+  <img src="https://www.zigbee2mqtt.io/images/dongle-e-naked.jpg" width="648" height="242"/>
+* Then follow the steps in the guide to load and install the firmware.
 
 <!-- Notes END: Do not edit below this line -->
-
-
 
 ## Exposes
 
