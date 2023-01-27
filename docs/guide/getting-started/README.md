@@ -53,8 +53,12 @@ Here we can see that the adapter is owned by `root` and accessible from all user
 
 ### 2.) Setup and start Zigbee2MQTT
 
-It's assumed, that you've a recent version of Docker and Docker-Compose is installed.
+It's assumed, that you've a recent version of Docker and Docker Compose is installed.
 
+::: tip
+`docker-compose` (v1) is deprecated and you should use the docker compose **plugin** instead (`docker compose` without the dash).
+If your system relays on the old Python-based `docker-compose` you've to add the dash to the docker compose command.
+:::
 
 First, we create a folder where we want the project to reside `mkdir folder-name`. In the folder, we create we save the `docker-compose.yml` file which defines how Docker would run our containers. The following file consists of two services, one for the MQTT-Server and one for Zigbee2MQTT itself. Be sure to adjust the file to your needs and match the devices-mount in the case your adapter was not mounted on `/dev/ttyUSB0`.
 
@@ -92,7 +96,7 @@ In the next step we'll create a simple [Zigbee2MQTT config file](../configuratio
 ```yaml
 # Let new devices join our zigbee network
 permit_join: true
-# Docker-Compose makes the MQTT-Server available using "mqtt" hostname
+# Docker compose makes the MQTT-Server available using "mqtt" hostname
 mqtt:
   base_topic: zigbee2mqtt
   server: mqtt://mqtt
@@ -115,10 +119,10 @@ $ find
 ./zigbee2mqtt-data/configuration.yaml
 
 # First start
-$ docker-compose up -d
+$ docker compose up -d
 
 # Check the logs
-$ docker-compose logs -f
+$ docker compose logs -f
 ```
 
 After some short time you should see some log messages that Mosquitto and Zigbee2MQTT is running now.
