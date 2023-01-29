@@ -176,7 +176,7 @@ function getExposeDocs(expose, definition) {
     if (colorHS) {
       lines.push(`- \`color_hs\`: To control the hue/saturation (color) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorHS.property}": {"hue": HUE, "saturation": SATURATION}}\` (e.g. \`{"color":{"hue":360,"saturation":100}}\`). To read the hue/saturation send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorHS.property}":{"hue":"","saturation":""}}\`. Alternatively it is possible to set the hue/saturation via:`);
       lines.push(`  - HSB space (hue, saturation, brightness): \`{"color": {"h": H, "s": S, "b": B}}\` e.g. \`{"color":{"h":360,"s":100,"b":100}}\` or \`{"color": {"hsb": "H,S,B"}}\` e.g. \`{"color":{"hsb":"360,100,100"}}\``);
-      lines.push(`  - HSV space (hue, saturation, brightness):\`{"color": {"h": H, "s": S, "v": V}}\` e.g. \`{"color":{"h":360,"s":100,"v":100}}\` or \`{"color": {"hsv": "H,S,V"}}\` e.g. \`{"color":{"hsv":"360,100,100"}}\``);
+      lines.push(`  - HSV space (hue, saturation, value):\`{"color": {"h": H, "s": S, "v": V}}\` e.g. \`{"color":{"h":360,"s":100,"v":100}}\` or \`{"color": {"hsv": "H,S,V"}}\` e.g. \`{"color":{"hsv":"360,100,100"}}\``);
       lines.push(`  - HSL space (hue, saturation, lightness)\`{"color": {"h": H, "s": S, "l": L}}\` e.g. \`{"color":{"h":360,"s":100,"l":100}}\` or \`{"color": {"hsl": "H,S,L"}}\` e.g. \`{"color":{"hsl":"360,100,100"}}\``);
     }
 
