@@ -36,7 +36,7 @@ Any device using the open 2.4 GHz spectrum could interfere with Zigbee such as B
 ## Adding routers to your network
 "Zigbee is a low-power wireless mesh network standard targeted at battery-powered devices" (see https://en.wikipedia.org/wiki/Zigbee). Yet, low transmission power can be the cause of an unstable or unreliable network:
 
-![The signal could be to weak fpr the message to reach its target.](https://www.zigbee2mqtt.io/images/routing1.jpg)
+![The signal could be too weak for the message to reach its target.](https://www.zigbee2mqtt.io/images/routing1.jpg)
 
 Zigbee2MQTT enables the user to [increase the transmission power](https://www.zigbee2mqtt.io/guide/configuration/adapter-settings.html) for some coordinator models. However, this simple measure might yield to a network with weird behavior, if messages to an end device reach their goal, but responses (or messages) from that end device do not reliably reach the coordinator:
 
