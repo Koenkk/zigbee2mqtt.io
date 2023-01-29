@@ -36,15 +36,15 @@ Any device using the open 2.4 GHz spectrum could interfere with Zigbee such as B
 ## Adding routers to your network
 "Zigbee is a low-power wireless mesh network standard targeted at battery-powered devices" (see https://en.wikipedia.org/wiki/Zigbee). Yet, low transmission power can be the cause of an unstable or unreliable network:
 
-![The signal could be to weak fpr the message to reach its target.](../../images/routing1.jpg)
+![The signal could be to weak fpr the message to reach its target.](https://www.zigbee2mqtt.io/images/routing1.jpg)
 
 Zigbee2MQTT enables the user to [increase the transmission power](https://www.zigbee2mqtt.io/guide/configuration/adapter-settings.html) for some coordinator models. However, this simple measure might yield to a network with weird behavior, if messages to an end device reach their goal, but responses (or messages) from that end device do not reliably reach the coordinator:
 
-![More transmission power on the sender side might not be sufficient for a complete message roundtrip.](../../images/routing2.jpg)
+![More transmission power on the sender side might not be sufficient for a complete message roundtrip.](https://www.zigbee2mqtt.io/images/routing2.jpg)
 
 Introducing a router ([read more about this](./01_zigbee_network.md)) can improve the forward path as well as the return path:
 
-![Routers can stabilize the complete message roundtrip.](../../images/routing3.jpg)
+![Routers can stabilize the complete message roundtrip.](https://www.zigbee2mqtt.io/images/routing3.jpg)
 
 You might choose a dedicated router (for example, a [SONOFF ZBDongle-E based router](https://www.zigbee2mqtt.io/devices/ZBDongle-E.html)) or a mains-powered Zigbee device (for example, a [Hue lamp](https://www.zigbee2mqtt.io/devices/8719514301481.html#philips-8719514301481)) to stabilize your network. Almost all AC powered devices will serve as a router.
 
