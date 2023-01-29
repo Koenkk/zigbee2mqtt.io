@@ -17,7 +17,6 @@ Routers are responsible for routing traffic between different nodes. Routers may
 *Examples: LED1545G12, 7146060PH, ZNCZ02LM, [CC2531 USB sniffer flashed with the  router firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_Home_1.2/bin), [SONOFF ZBDongle-E-based router](https://www.zigbee2mqtt.io/devices/ZBDongle-E.html)*
 
 *Note: Some devices advertising router functionality in a Zigbee network perform poorly and can thus effectively lower the stability of your Zigbee network.*  
-*Note: Xiaomi Wall Switches (without neutral line - QBKG03LM and QBKG04LM) are not working as routers in the Zigbee network.*
 
 
 ### Coordinator
