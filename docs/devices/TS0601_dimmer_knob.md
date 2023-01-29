@@ -22,13 +22,15 @@ pageClass: device-page
 | Picture | ![TuYa TS0601_dimmer_knob](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_knob.jpg) |
 | White-label | Moes WS-SY-EURD, Moes WS-SY-EURD-WH-MS |
 
+<!-- Notes BEGIN -->
+## Notes
 
-<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+### Min/max brightness
+Only 'min_brightness', but not 'max_brightness' is provided.
 
-
-<!-- Notes END: Do not edit below this line -->
-
-
+### Pairing
+To pair the device, the knob must be pressed for 5 sec. Sometimes, the pairing mode works only, if the light is on. Additionally, it seems the device can only be paired directly to the coordinator, but not to routers.
+<!-- Notes END -->
 
 ## Exposes
 
