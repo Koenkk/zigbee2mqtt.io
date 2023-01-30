@@ -14,9 +14,9 @@ End devices do not route traffic. They may also sleep, which makes end devices a
 ### Router
 Routers are responsible for routing traffic between different nodes. Routers may not sleep. As such, routers are not a suitable choice for battery operated devices. Routers are also responsible for receiving and storing messages intended for their children. In addition to this, routers are the gate keepers to the network. They are responsible for allowing new nodes to join the network.
 
-*Examples: LED1545G12, 7146060PH, ZNCZ02LM, [CC2531 USB sniffer flashed with the  router firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_Home_1.2/bin)*
+*Examples: LED1545G12, 7146060PH, ZNCZ02LM, [CC2531 USB sniffer flashed with the  router firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_Home_1.2/bin), [SONOFF ZBDongle-E-based router](https://www.zigbee2mqtt.io/devices/ZBDongle-E.html)*
 
-*Note: Xiaomi Wall Switches (without neutral line - QBKG03LM and QBKG04LM) are not working as routers in the Zigbee network.*
+*Note: Some devices advertising router functionality in a Zigbee network perform poorly and can thus effectively lower the stability of your Zigbee network.*  
 
 
 ### Coordinator

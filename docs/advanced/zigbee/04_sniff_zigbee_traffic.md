@@ -43,6 +43,11 @@ Download and install the latest version of [Wireshark](https://www.wireshark.org
 ### 3. Sniffing traffic
 On Ubuntu / Debian start wireshark with `sudo whsniff -c ZIGBEE_CHANNEL_NUMBER | wireshark -k -i -`. *Note: Depending on your distro and installed packages, this may result in a broken pipe after some time. You will notice that Wireshark has stopped capturing, and attmpeting to resume by clicking the shark fin icon will present you with an error `end of file on pipe magic during open`, if this happens you may need to start with `wireshark -k -i <( path/to/whsniff -c channel_number )` instead. Alternative uses are detailed on the [whsniff project page](https://github.com/homewsn/whsniff#how-to-use-locally).*
 
+If you just want to save the sniffed data for later analysis you can run this command (compression with gzip is optional):
+```bash
+sudo whsniff -c ZIGBEE_CHANNEL_NUMBER | ( gzip -c > "zigbee_sniff_$(date +"%FT%H%M%S").pcap".gz & )
+```
+
 For Windows run the ZBOSS executable in `gui\zboss_sniffer.exe`, enter the path to your Wireshark executable and click on the `Start` button. For ZBOSS make sure the correct Zigbee channel is set, by default it will sniff on channel `0x0C (12)` but the default Zigbee2MQTT channel is 11 (`0x0B (11)`).
 
 Wireshark will start and log the Zigbee messages. As these messages are encrypted we need to add 2 encryption keys. The first one is the Trust Center link key, which is the same for (almost) every Zigbee network. The second one is the network encryption key (Transport Key).
