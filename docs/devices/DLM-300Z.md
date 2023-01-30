@@ -40,7 +40,7 @@ To retrieve the state, send a `get` message to the device topic (`zigbee2mqtt/DE
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -77,6 +77,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Pin_code (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "pin_code": VALUE}}`
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pin_code": ""}`.
 - `user` (numeric): User ID can only number 1 
 - `pin_code` (numeric): Pincode to set, set pincode(4 digit) to null to clear 
 

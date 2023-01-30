@@ -35,7 +35,7 @@ function compositeDocs(composite) {
         feature.value_max ? `max value is ${feature.value_max}` : null,
         feature.unit ? `unit is ${feature.unit}` : null,
       ].filter((e) => e).join(', ')
-    } else if (feature.type === 'text') {
+    } else if (feature.type === 'text' || feature.type === 'list') {
       // do nothing on purpose
     } else {
       throw new Error(`Unsupported composite feature: ${feature.type}`);
@@ -80,7 +80,7 @@ function getExposeDocs(expose, definition) {
     }
 
     if (expose.type === 'numeric') {
-      if (expose.hasOwnProperty('value_max') && expose.hasOwnProperty('value_max')) {
+      if (expose.hasOwnProperty('value_min') && expose.hasOwnProperty('value_max')) {
         lines.push(`The minimal value is \`${expose.value_min}\` and the maximum value is \`${expose.value_max}\`.`);
       }
 
@@ -176,7 +176,7 @@ function getExposeDocs(expose, definition) {
     if (colorHS) {
       lines.push(`- \`color_hs\`: To control the hue/saturation (color) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorHS.property}": {"hue": HUE, "saturation": SATURATION}}\` (e.g. \`{"color":{"hue":360,"saturation":100}}\`). To read the hue/saturation send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorHS.property}":{"hue":"","saturation":""}}\`. Alternatively it is possible to set the hue/saturation via:`);
       lines.push(`  - HSB space (hue, saturation, brightness): \`{"color": {"h": H, "s": S, "b": B}}\` e.g. \`{"color":{"h":360,"s":100,"b":100}}\` or \`{"color": {"hsb": "H,S,B"}}\` e.g. \`{"color":{"hsb":"360,100,100"}}\``);
-      lines.push(`  - HSV space (hue, saturation, brightness):\`{"color": {"h": H, "s": S, "v": V}}\` e.g. \`{"color":{"h":360,"s":100,"v":100}}\` or \`{"color": {"hsv": "H,S,V"}}\` e.g. \`{"color":{"hsv":"360,100,100"}}\``);
+      lines.push(`  - HSV space (hue, saturation, value):\`{"color": {"h": H, "s": S, "v": V}}\` e.g. \`{"color":{"h":360,"s":100,"v":100}}\` or \`{"color": {"hsv": "H,S,V"}}\` e.g. \`{"color":{"hsv":"360,100,100"}}\``);
       lines.push(`  - HSL space (hue, saturation, lightness)\`{"color": {"h": H, "s": S, "l": L}}\` e.g. \`{"color":{"h":360,"s":100,"l":100}}\` or \`{"color": {"hsl": "H,S,L"}}\` e.g. \`{"color":{"hsl":"360,100,100"}}\``);
     }
 
@@ -254,6 +254,9 @@ function getExposeDocs(expose, definition) {
       if (localTemperature.access & access.GET) {
         line += `To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${localTemperature.property}": ""}\`.`
       }
+      if (localTemperatureCalibration.hasOwnProperty('value_min')) {
+        line += `The minimal value is \`${localTemperatureCalibration.value_min}\` and the maximum value is \`${localTemperatureCalibration.value_max}\` with a step size of \`${localTemperatureCalibration.value_step}\`.`;
+      }
       
       lines.push(line);
     }
@@ -262,7 +265,13 @@ function getExposeDocs(expose, definition) {
       lines.push(expose.description + '.');
     }
     const txt = compositeDocs(expose);
-    lines.push(`Can be set by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${expose.property}": ${txt.value}}\``);
+    if (expose.access & access.SET) {
+      lines.push(`Can be set by publishing to \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${expose.property}": ${txt.value}}\``);
+    }
+    if (expose.access & access.GET) {
+      lines.push(`To read (\`/get\`) the value publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${expose.property}": ""}\`.`);
+    }
+    
     lines.push(...txt.note);
   } else if (expose.type === 'list') {
     if (expose.description) {

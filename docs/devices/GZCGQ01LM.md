@@ -40,6 +40,9 @@ Press and hold the reset button on the device for +- 5 seconds (until the blue l
 After this the device will automatically join. If this doesn't work, try with a single short button press.
 
 ![GZCGQ01LM pairing](../images/pairing/GZCGQ01LM_pairing.jpg)
+
+### Battery
+This device uses a CR2450 battery.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -54,7 +57,7 @@ After this the device will automatically join. If this doesn't work, try with a 
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
