@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZS-EUB_1gang  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Wall light switch (1 gang) |
-| Exposes | switch (state), power_on_behavior, switch_type, backlight_mode, linkquality |
+| Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
 | Picture | ![Moes ZS-EUB_1gang](https://www.zigbee2mqtt.io/images/devices/ZS-EUB_1gang.jpg) |
 
 
@@ -27,6 +27,11 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -43,19 +48,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
 
-### Switch_type (enum)
-Type of the switch.
-Value can be found in the published state on the `switch_type` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
-The possible values are: `toggle`, `state`, `momentary`.
-
 ### Backlight_mode (enum)
-Intensity of the backlight.
+Mode of the backlight.
 Value can be found in the published state on the `backlight_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
-The possible values are: `low`, `medium`, `high`.
+The possible values are: `off`, `normal`, `inverted`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

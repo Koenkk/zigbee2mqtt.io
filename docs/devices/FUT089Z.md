@@ -56,7 +56,6 @@ It does also not support binding its light output clusters or manually joining i
 
 ### Touchlink
 The remote supports Touchlink. It is unclear how the Touchlink configuration interacts with the regular group configuration so if you intend to use Touchlink it would probably best not to pair it to a network.
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -64,7 +63,7 @@ The remote supports Touchlink. It is unclear how the Touchlink configuration int
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -28,8 +28,8 @@ pageClass: device-page
 
 ### Pairing
 Long press left button (Auto/Manual Mode) AND right button (Comfort/Energy Saving Mode) until "Zigbee connection status"-light (the wifi icon) flashes
-
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Exposes
@@ -70,7 +70,7 @@ This climate device supports the following features: `system_mode`, `preset`, `l
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `manual`, `holiday`, `program`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
-- `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`
+- `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-5` and the maximum value is `5` with a step size of `0.1`.
 
 ### Schedule_monday (text)
 Schedule for monday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".

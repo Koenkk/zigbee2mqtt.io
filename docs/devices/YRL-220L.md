@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | YRL-220L  |
 | Vendor  | [Yale](/supported-devices/#v=Yale)  |
 | Description | Real living keyless leveler lock |
-| Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, linkquality |
+| Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, auto_relock_time, sound_volume, battery_low, linkquality |
 | Picture | ![Yale YRL-220L](https://www.zigbee2mqtt.io/images/devices/YRL-220L.jpg) |
 
 
@@ -43,7 +43,7 @@ To read the current state of this lock publish a message to topic `zigbee2mqtt/F
 This lock exposes a lock state which can be found in the published state under the `lock_state` property. It's not possible to read (`/get`) or write (`/set`) this value. The possible values are: `not_fully_locked`, `locked`, `unlocked`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -51,6 +51,7 @@ The unit of this value is `%`.
 
 ### Pin_code (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "user_type": VALUE, "user_enabled": VALUE, "pin_code": VALUE}}`
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pin_code": ""}`.
 - `user` (numeric): User ID to set or clear the pincode for 
 - `user_type` (enum): Type of user, unrestricted: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock allowed values: `unrestricted`, `year_day_schedule`, `week_day_schedule`, `master`, `non_access`
 - `user_enabled` (binary): Whether the user is enabled/disabled allowed values: `true` or `false`
@@ -72,6 +73,27 @@ The possible values are: `keypad`, `rfid`, `manual`, `rf`.
 ID of user that triggered the action on the lock.
 Value can be found in the published state on the `action_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Auto_relock_time (numeric)
+The number of seconds to wait after unlocking a lock before it automatically locks again. 0=disabled.
+Value can be found in the published state on the `auto_relock_time` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"auto_relock_time": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_relock_time": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `3600`.
+The unit of this value is `s`.
+
+### Sound_volume (enum)
+Sound volume of the lock.
+Value can be found in the published state on the `sound_volume` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sound_volume": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": NEW_VALUE}`.
+The possible values are: `silent_mode`, `low_volume`, `high_volume`.
+
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

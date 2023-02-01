@@ -33,7 +33,6 @@ If you have issues changing the click_mode with Zigbee2MQTT you can switch betwe
 
 ### Binding
 Please note, that currently you will only get one endpoint for binding even though there are two rockers (see https://github.com/Koenkk/zigbee-herdsman-converters/blob/eed5fde987891f996c428339569dbff1893e62a1/devices/xiaomi.js#L2370). You will always receive the `toggle_1` event no matter whick rocker you use.
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -41,7 +40,7 @@ Please note, that currently you will only get one endpoint for binding even thou
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
