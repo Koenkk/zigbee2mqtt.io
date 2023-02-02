@@ -34,11 +34,11 @@ To change the Zigbee channel Zigbee2MQTT uses you have to set the [`channel` in 
 Any device using the open 2.4 GHz spectrum could interfere with Zigbee such as Bluetooth or gaming devices like Logitech “Unifying” or “Lightspeed” or Razer “Hyperspeed Wireless”.
 
 ## Adding routers to your network
-"Zigbee is a low-power wireless mesh network standard targeted at battery-powered devices" (see https://en.wikipedia.org/wiki/Zigbee). Yet, low transmission power can be the cause of an unstable or unreliable network:
+"Zigbee is a low-power wireless mesh network standard targeted at battery-powered devices" (see [Wikipedia](https://en.wikipedia.org/wiki/Zigbee)). Yet, low transmission power can be the cause of an unstable or unreliable network:
 
 ![The signal could be too weak for the message to reach its target.](https://www.zigbee2mqtt.io/images/routing1.jpg)
 
-Zigbee2MQTT enables the user to [increase the transmission power](https://www.zigbee2mqtt.io/guide/configuration/adapter-settings.html) for some coordinator models. However, this simple measure might yield to a network with weird behavior, if messages to an end device reach their goal, but responses (or messages) from that end device do not reliably reach the coordinator:
+Zigbee2MQTT enables the user to [increase the transmission power](https://www.zigbee2mqtt.io/guide/configuration/adapter-settings.html) for some coordinator models. However, this simple measure might yield to a network with weird behavior, if messages to an end device reach their target, but responses (or messages) from that end device do not reliably reach the coordinator:
 
 ![More transmission power on the sender side might not be sufficient for a complete message roundtrip.](https://www.zigbee2mqtt.io/images/routing2.jpg)
 
@@ -50,7 +50,9 @@ You might choose a dedicated router (for example, a [SONOFF ZBDongle-E based rou
 
 Please note that there are routers of mediocre quality that might not harmonize well with your network (for example, some versions of the [SONOFF Smart Plug S26R2ZB](https://www.zigbee2mqtt.io/devices/S26R2ZB.html) are [known to be limited](https://github.com/Koenkk/zigbee2mqtt/issues/10282)). This may yield in message routing errors. In case you have such devices in your network, it might help to add additional routers of better quality and bind your devices to these routers (re-pairing devices with “Permit join” restricted to the new/better router) to improve the overall network performance.
 
-If you assume to have routing problems, try [sending an MQTT request to the bridge](https://www.zigbee2mqtt.io/guide/usage/mqtt_topics_and_messages.html#zigbee2mqtt-bridge-request) to the topic zigbee2mqtt/bridge/request/networkmap to retrieve a map of your Zigbee network including routes.
+If you assume to have routing problems, try [sending an MQTT request to the bridge](https://www.zigbee2mqtt.io/guide/usage/mqtt_topics_and_messages.html#zigbee2mqtt-bridge-request) to the topic `zigbee2mqtt/bridge/request/networkmap` to retrieve a map of your Zigbee network including routes.
+
+For more technical details on Zigbee routing, see the ["5. Routing" in the TI Z-Stack User Guide](https://software-dl.ti.com/simplelink/esd/plugins/simplelink_zigbee_sdk_plugin/1.60.01.09/exports/docs/zigbee_user_guide/html/zigbee/developing_zigbee_applications/z_stack_developers_guide/z-stack-overview.html#routing), for example.
 
 ## Hardware
 Although Zigbee2MQTT does not require many resources, the hardware you are running Zigbee2MQTT on can impact the performance. This is especially true when using low-power hardware like the Raspbery Pi 3. Make sure that enough resources (CPU/memory) is free. For example, running Home Assistant + Zigbee2MQTT Home Assistant addon on the Raspberry Pi 3 may give bad performance.
