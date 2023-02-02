@@ -44,7 +44,7 @@ There are two ways to toggle between scene mode and action mode:
 
     Toggle `operation_mode` in the Exposes tab of the device in Zigbee2MQTT frontend. 
     Change won't happen right away, the device only responds to mode switch once an hour. 
-    But you can shake the device really really HARD, this will force the device to respond. 
+    But you can give the device a throw (a forceful shake action without backward motion), which, when done right, will force the device to respond. 
     Otherwise you can open lid and click LINK button to have it respond immediately. 
 
 ### Supported Actions
@@ -59,6 +59,7 @@ There are two ways to toggle between scene mode and action mode:
   | throw            | -                                |
   | hold             | -                                |
   | side_up          | side                             |
+  | flip_to_side     | side                             |
   | 1_min_inactivity | -                                |
 
 - Action mode: 
