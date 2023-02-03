@@ -23,7 +23,16 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Battery
+Uses a CR2450 battery
+
+### Pairing
+Long press the pairing button for five seconds. The signal indicator on the display will begin to blink when in pairing mode.
+
+### Temperature display
+Double click the pairing button to toggle the Display between Celsius and Fahrenheit.  This does not change the value of the Measured temperature value. 
 
 <!-- Notes END: Do not edit below this line -->
 
