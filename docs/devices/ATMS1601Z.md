@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ATMS1601Z  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Din smart relay (without power monitoring) |
 | Exposes | switch (state), power_outage_memory, indicator_mode, linkquality |
 | Picture | ![TuYa ATMS1601Z](https://www.zigbee2mqtt.io/images/devices/ATMS1601Z.jpg) |
@@ -27,6 +27,11 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

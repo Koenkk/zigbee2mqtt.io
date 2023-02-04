@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | BSEED_TS0601_cover  |
-| Vendor  | BSEED  |
+| Vendor  | [BSEED](/supported-devices/#v=BSEED)  |
 | Description | Zigbee curtain switch |
 | Exposes | cover (state, position), linkquality |
 | Picture | ![BSEED BSEED_TS0601_cover](https://www.zigbee2mqtt.io/images/devices/BSEED_TS0601_cover.jpg) |

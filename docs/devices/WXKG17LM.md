@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WXKG17LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara E1 double key wireless switch |
 | Exposes | battery, voltage, action, click_mode, linkquality |
 | Picture | ![Xiaomi WXKG17LM](https://www.zigbee2mqtt.io/images/devices/WXKG17LM.jpg) |
@@ -40,7 +40,7 @@ In order for this device to work (fully), at least the following firmware is req
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

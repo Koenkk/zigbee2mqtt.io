@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ICTC-G-1  |
-| Vendor  | IKEA  |
+| Vendor  | [IKEA](/supported-devices/#v=IKEA)  |
 | Description | TRADFRI wireless dimmer |
 | Exposes | battery, action, linkquality |
 | Picture | ![IKEA ICTC-G-1](https://www.zigbee2mqtt.io/images/devices/ICTC-G-1.jpg) |
@@ -89,7 +89,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
 
-* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. Note: will only work when legacy: false is set. Example:
+* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval.  Note: will only work when legacy: false is set. Example:
 ```yaml
 simulated_brightness:
   delta: 20 # delta per interval, default = 20
@@ -100,7 +100,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

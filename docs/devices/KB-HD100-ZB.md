@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | KB-HD100-ZB  |
-| Vendor  | Dawon DNS  |
+| Vendor  | [Dawon DNS](/supported-devices/#v=Dawon%20DNS)  |
 | Description | IOT Card holder |
 | Exposes | card, battery_low, linkquality |
 | Picture | ![Dawon DNS KB-HD100-ZB](https://www.zigbee2mqtt.io/images/devices/KB-HD100-ZB.jpg) |
@@ -38,7 +38,8 @@ After this the device will automatically join.
 ### Card (binary)
 Indicates if the card is inserted (= true) or not (= false).
 Value can be found in the published state on the `card` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"card": ""}`.
+It's not possible to write (`/set`) this value.
 If value equals `true` card is ON, if `false` OFF.
 
 ### Battery_low (binary)

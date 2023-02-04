@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SJCGQ13LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara E1 water leak sensor |
 | Exposes | water_leak, battery, battery_low, voltage, device_temperature, power_outage_count, linkquality |
 | Picture | ![Xiaomi SJCGQ13LM](https://www.zigbee2mqtt.io/images/devices/SJCGQ13LM.jpg) |
@@ -46,7 +46,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` water_leak is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

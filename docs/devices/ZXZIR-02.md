@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZXZIR-02  |
-| Vendor  | AUBESS  |
+| Vendor  | [AUBESS](/supported-devices/#v=AUBESS)  |
 | Description | Universal smart IR remote control |
 | Exposes | switch (state), learned_ir_code, ir_code_to_send, linkquality |
 | Picture | ![AUBESS ZXZIR-02](https://www.zigbee2mqtt.io/images/devices/ZXZIR-02.jpg) |

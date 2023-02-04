@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SMART-SMOKE10  |
-| Vendor  | Alecto  |
+| Vendor  | [Alecto](/supported-devices/#v=Alecto)  |
 | Description | Smoke detector |
 | Exposes | smoke_state, battery_state, checking_result, smoke_value, battery, lifecycle, self_checking, silence, linkquality |
 | Picture | ![Alecto SMART-SMOKE10](https://www.zigbee2mqtt.io/images/devices/SMART-SMOKE10.jpg) |

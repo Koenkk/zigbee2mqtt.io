@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | Icon  |
-| Vendor  | Danfoss  |
+| Vendor  | [Danfoss](/supported-devices/#v=Danfoss)  |
 | Description | Icon floor heating (regulator, Zigbee module & thermostats) |
 | Exposes | battery, climate (occupied_heating_setpoint, local_temperature, running_state, system_mode), abs_min_heat_setpoint_limit, abs_max_heat_setpoint_limit, min_heat_setpoint_limit, max_heat_setpoint_limit, setpoint_change_source, output_status, room_status_code, system_status_code, system_status_water, multimaster_role, linkquality |
 | Picture | ![Danfoss Icon](https://www.zigbee2mqtt.io/images/devices/Icon.jpg) |
@@ -37,7 +37,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric, l1 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l1` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -98,7 +98,7 @@ It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_rt`, `rt_touch_error`, `floor_sensor_short_circuit`, `floor_sensor_disconnected`.
 
 ### Battery (numeric, l2 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -159,7 +159,7 @@ It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_rt`, `rt_touch_error`, `floor_sensor_short_circuit`, `floor_sensor_disconnected`.
 
 ### Battery (numeric, l3 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l3` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -220,7 +220,7 @@ It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_rt`, `rt_touch_error`, `floor_sensor_short_circuit`, `floor_sensor_disconnected`.
 
 ### Battery (numeric, l4 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l4` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -281,7 +281,7 @@ It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_rt`, `rt_touch_error`, `floor_sensor_short_circuit`, `floor_sensor_disconnected`.
 
 ### Battery (numeric, l5 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l5` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -342,7 +342,7 @@ It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_rt`, `rt_touch_error`, `floor_sensor_short_circuit`, `floor_sensor_disconnected`.
 
 ### Battery (numeric, l6 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l6` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -403,7 +403,7 @@ It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_rt`, `rt_touch_error`, `floor_sensor_short_circuit`, `floor_sensor_disconnected`.
 
 ### Battery (numeric, l7 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l7` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -464,7 +464,7 @@ It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_rt`, `rt_touch_error`, `floor_sensor_short_circuit`, `floor_sensor_disconnected`.
 
 ### Battery (numeric, l8 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l8` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -525,7 +525,7 @@ It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_rt`, `rt_touch_error`, `floor_sensor_short_circuit`, `floor_sensor_disconnected`.
 
 ### Battery (numeric, l9 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l9` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -586,7 +586,7 @@ It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_rt`, `rt_touch_error`, `floor_sensor_short_circuit`, `floor_sensor_disconnected`.
 
 ### Battery (numeric, l10 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l10` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -647,7 +647,7 @@ It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_rt`, `rt_touch_error`, `floor_sensor_short_circuit`, `floor_sensor_disconnected`.
 
 ### Battery (numeric, l11 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l11` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -708,7 +708,7 @@ It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_rt`, `rt_touch_error`, `floor_sensor_short_circuit`, `floor_sensor_disconnected`.
 
 ### Battery (numeric, l12 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l12` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -769,7 +769,7 @@ It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_rt`, `rt_touch_error`, `floor_sensor_short_circuit`, `floor_sensor_disconnected`.
 
 ### Battery (numeric, l13 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l13` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -830,7 +830,7 @@ It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_rt`, `rt_touch_error`, `floor_sensor_short_circuit`, `floor_sensor_disconnected`.
 
 ### Battery (numeric, l14 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l14` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -891,7 +891,7 @@ It's not possible to write (`/set`) this value.
 The possible values are: `no_error`, `missing_rt`, `rt_touch_error`, `floor_sensor_short_circuit`, `floor_sensor_disconnected`.
 
 ### Battery (numeric, l15 endpoint)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery_l15` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

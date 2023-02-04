@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | EFEKTA_PWS_Max  |
-| Vendor  | Custom devices (DiY)  |
+| Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | [Plant watering sensor EFEKTA PWS max](http://efektalab.com/PWS_Max) |
 | Exposes | soil_moisture, battery, illuminance, temperature, humidity, linkquality |
 | Picture | ![Custom devices (DiY) EFEKTA_PWS_Max](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PWS_Max.jpg) |
@@ -57,7 +57,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

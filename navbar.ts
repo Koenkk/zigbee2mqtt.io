@@ -69,7 +69,7 @@ export const navbar: NavbarConfig = [
     ],
   },
   {
-    text: 'Github',
+    text: 'GitHub',
     link: 'https://github.com/Koenkk/zigbee2mqtt'
   }
 ]

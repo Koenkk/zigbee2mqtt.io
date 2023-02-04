@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | AX_Water_Sensor  |
-| Vendor  | CTM Lyng  |
+| Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | AX Water Sensor, water leakage detector |
 | Exposes | battery, battery_low, water_leak, active_water_leak, linkquality |
 | Picture | ![CTM Lyng AX_Water_Sensor](https://www.zigbee2mqtt.io/images/devices/AX_Water_Sensor.jpg) |
@@ -32,7 +32,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

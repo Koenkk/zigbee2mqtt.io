@@ -1,24 +1,31 @@
 import { navbar } from "./navbar";
 import { sidebar } from "./sidebar";
 import * as path from "path";
-import { DefinePlugin } from 'webpack';
+import { PageOptions } from "@vuepress/core";
+import defaultTheme from '@vuepress/theme-default';
+import webpackBundler from "@vuepress/bundler-webpack";
+import * as DefinePlugin from "webpack/lib/DefinePlugin.js";
+import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
+import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
+import { defineUserConfig } from "vuepress";
+import { domain, getBase, isDevelop } from "./getBase";
 
-export const domain = 'https://www.zigbee2mqtt.io';
-const isDevelop = !!process.env.DEVELOP_BRANCH;
-
-export function getBase() {
-  let base = '/';
-  if (isDevelop) base += 'develop/';
-  return base;
-}
 const pagePatterns = ['**/*.md', '!.vuepress', '!node_modules'];
 
 // Ability to exclude device-page rendering to save time while in dev
 if (process.env.EXCLUDE_DEVICES) {
   pagePatterns.push('!devices');
 }
+if (process.env.INCLUDE_DEVICE) {
+  pagePatterns.push(`devices/${process.env.INCLUDE_DEVICE}.md`);
+}
 
-const conf = {
+const devServerPort = (process.env.DEV_PORT ? parseInt(process.env.DEV_PORT, 10) : undefined);
+
+const conf = defineUserConfig({
+  port: devServerPort,
   base: getBase(),
   title: 'Zigbee2MQTT' + ( isDevelop ? ' develop' : '' ),
   description: 'Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges',
@@ -27,6 +34,9 @@ const conf = {
   public: 'public',
   temp: '.temp',
   cache: '.cache',
+
+  // Docu is way too large to prefetch
+  shouldPrefetch: false,
 
   pagePatterns,
 
@@ -37,28 +47,28 @@ const conf = {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      href: `${ getBase() }favicon-16x16.png`,
+      href: `${getBase()}favicon-16x16.png`,
     }],
     ['link', {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      href: `${ getBase() }favicon-32x32.png`,
+      href: `${getBase()}favicon-32x32.png`,
     }],
     ['link', {
       rel: 'apple-touch-icon',
       type: 'image/png',
       sizes: '180x180',
-      href: `${ getBase() }apple-touch-icon.png`,
+      href: `${getBase()}apple-touch-icon.png`,
     }],
     ['link', {
       rel: 'manifest',
-      href: `${ getBase() }site.webmanifest`,
+      href: `${getBase()}site.webmanifest`,
     }],
     ['link', {
       rel: 'mask-icon',
       color: '#ffc135',
-      href: `${ getBase() }safari-pinned-tab.svg`,
+      href: `${getBase()}safari-pinned-tab.svg`,
     }],
     ['meta', {
       name: 'msapplication-TileColor',
@@ -70,8 +80,9 @@ const conf = {
     }],
   ],
 
-  themeConfig: {
+  theme: defaultTheme({
     repo: 'Koenkk/zigbee2mqtt.io',
+    repoLabel: 'GitHub (docs)',
     docsBranch: isDevelop ? 'develop' : 'master',
     editLinkText: '✏ Help to make the docu better and edit this page on Github ✌',
     logo: '/logo.png',
@@ -83,15 +94,20 @@ const conf = {
     themePlugins: {
       git: true
     }
-  },
+  }),
 
   debug: false,
 
-  bundler: '@vuepress/bundler-webpack',
-  bundlerConfig: {
+  bundler: webpackBundler({
+    scss: {
+      sassOptions: {
+        // ignore sass deprecation errors
+        quietDeps: true
+      }
+    },
     chainWebpack: (chain) => {
       chain.plugin('define-quasar')
-        .use(DefinePlugin, [{
+        .use(DefinePlugin.default, [{
           __QUASAR_VERSION__: `'dev'`,
           __QUASAR_SSR__: false,
           __QUASAR_SSR_SERVER__: false,
@@ -99,48 +115,46 @@ const conf = {
           __QUASAR_SSR_PWA__: false
         }]);
     },
-  },
+  }),
 
   plugins: [
-    [
-      '@vuepress/plugin-google-analytics',
-      {
-        id: 'G-H74W4PSJDZ',
-      },
-    ],
-    [
-      'vuepress-plugin-sitemap2',
+    googleAnalyticsPlugin({
+      id: 'G-H74W4PSJDZ',
+    }),
+    sitemapPlugin(
       { hostname: domain }
-    ],
-    [
-      '@vuepress/docsearch',
-      {
-        apiKey: '662e98933c5c5513d7488c30a98770f1',
-        indexName: 'zigbee2mqtt.io',
-        appId: 'K1BM3QYQ34',
-        locales: {
-          '/': {
-            placeholder: 'Search',
-          },
+    ),
+    docsearchPlugin({
+      apiKey: '662e98933c5c5513d7488c30a98770f1',
+      indexName: 'zigbee2mqtt.io',
+      appId: 'K1BM3QYQ34',
+      locales: {
+        '/': {
+          placeholder: 'Search',
         },
       },
-    ],
-    [
-      '@vuepress/register-components',
-      {
-        componentsDir: path.resolve(__dirname, 'docs/.vuepress/components'),
-        components: {
-          SupportedDevices: path.resolve(__dirname, 'supported-devices-component/SupportedDevices.vue'),
-        },
-      },
-    ],
-    [
-      path.resolve(__dirname, './docs/.vuepress/defaultPageClassPlugin.ts'),
-    ],
+    }),
+    registerComponentsPlugin({
+      componentsDir: path.resolve(__dirname, 'docs/.vuepress/components'),
+      components: {
+        SupportedDevices: path.resolve(__dirname, 'supported-devices-component/SupportedDevices.vue'),
+      }
+    }),
+    {
+      name: 'extendsPageOptions',
+      extendsPageOptions: (pageOpts: PageOptions) => {
+        pageOpts.frontmatter = pageOpts.frontmatter ?? {}
+        const frontmatter = pageOpts.frontmatter;
+        // Add content-page css class
+        if (!frontmatter.pageClass) {
+          frontmatter.pageClass = 'content-page';
+        }
+      }
+    },
   ],
-}
+});
 
-if(isDevelop) {
+if (isDevelop) {
   conf.head.push(['meta', { name: 'robots', content: 'noindex' }]);
 }
 

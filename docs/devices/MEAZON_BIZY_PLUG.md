@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | MEAZON_BIZY_PLUG  |
-| Vendor  | Meazon  |
+| Vendor  | [Meazon](/supported-devices/#v=Meazon)  |
 | Description | Bizy plug meter |
 | Exposes | switch (state), power, voltage, current, energy, linkquality |
 | Picture | ![Meazon MEAZON_BIZY_PLUG](https://www.zigbee2mqtt.io/images/devices/MEAZON_BIZY_PLUG.jpg) |
@@ -44,6 +44,8 @@ devices:
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

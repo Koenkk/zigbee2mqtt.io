@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | GWRJN5169  |
-| Vendor  | OpenLumi  |
+| Vendor  | [OpenLumi](/supported-devices/#v=OpenLumi)  |
 | Description | [Lumi Router (JN5169)](https://github.com/igo-r/Lumi-Router-JN5169) |
 | Exposes | device_temperature, linkquality |
 | Picture | ![OpenLumi GWRJN5169](https://www.zigbee2mqtt.io/images/devices/GWRJN5169.jpg) |
@@ -32,6 +32,11 @@ Zigbee Router for __Xiaomi DGNWG05LM__ and __Aqara ZHWG11LM__ gateways.
 Open source firmware can be found here: [Github](https://github.com/igo-r/Lumi-Router-JN5169)
 <!-- Notes END: Do not edit below this line -->
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

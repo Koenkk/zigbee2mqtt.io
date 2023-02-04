@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | Touch4  |
-| Vendor  | databyte.ch  |
+| Vendor  | [databyte.ch](/supported-devices/#v=databyte.ch)  |
 | Description | Wall touchsensor with 4 keys |
 | Exposes | battery, linkquality, key_1, key_2, key_3, key_4 |
 | Picture | ![databyte.ch Touch4](https://www.zigbee2mqtt.io/images/devices/Touch4.jpg) |
@@ -34,7 +34,7 @@ More information about this devices can be found here: https://databyte.ch/proje
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

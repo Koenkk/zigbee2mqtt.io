@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | Z3-1BRL  |
-| Vendor  | Lutron  |
+| Vendor  | [Lutron](/supported-devices/#v=Lutron)  |
 | Description | Aurora smart bulb dimmer |
 | Exposes | action, brightness, linkquality |
 | Picture | ![Lutron Z3-1BRL](https://www.zigbee2mqtt.io/images/devices/Z3-1BRL.jpg) |

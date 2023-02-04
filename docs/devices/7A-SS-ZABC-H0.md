@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | 7A-SS-ZABC-H0  |
-| Vendor  | Leedarson  |
+| Vendor  | [Leedarson](/supported-devices/#v=Leedarson)  |
 | Description | 4-in-1-Sensor |
 | Exposes | battery, occupancy, temperature, illuminance, illuminance_lux, humidity, linkquality |
 | Picture | ![Leedarson 7A-SS-ZABC-H0](https://www.zigbee2mqtt.io/images/devices/7A-SS-ZABC-H0.jpg) |
@@ -47,7 +47,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

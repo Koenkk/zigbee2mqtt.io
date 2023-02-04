@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_smart_air_house_keeper  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart air house keeper |
 | Exposes | temperature, humidity, co2, voc, formaldehyd, pm25, linkquality |
 | Picture | ![TuYa TS0601_smart_air_house_keeper](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_air_house_keeper.jpg) |
@@ -80,13 +80,13 @@ The unit of this value is `ppm`.
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppb`.
+The unit of this value is `ppm`.
 
 ### Formaldehyd (numeric)
 The measured formaldehyd value.
 Value can be found in the published state on the `formaldehyd` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppm`.
+The unit of this value is `µg/m³`.
 
 ### Pm25 (numeric)
 Measured PM2.5 (particulate matter) concentration.

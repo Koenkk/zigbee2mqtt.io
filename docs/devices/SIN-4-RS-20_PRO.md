@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SIN-4-RS-20_PRO  |
-| Vendor  | NodOn  |
+| Vendor  | [NodOn](/supported-devices/#v=NodOn)  |
 | Description | Roller shutter controller |
 | Exposes | cover (state, position), linkquality |
 | Picture | ![NodOn SIN-4-RS-20_PRO](https://www.zigbee2mqtt.io/images/devices/SIN-4-RS-20_PRO.jpg) |

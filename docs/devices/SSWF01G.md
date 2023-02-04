@@ -16,8 +16,8 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SSWF01G  |
-| Vendor  | Mercator  |
-| Description | AC fan controller |
+| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
+| Description | Ikuü AC fan controller |
 | Exposes | switch (state), fan (state, mode), linkquality |
 | Picture | ![Mercator SSWF01G](https://www.zigbee2mqtt.io/images/devices/SSWF01G.jpg) |
 
@@ -27,6 +27,11 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

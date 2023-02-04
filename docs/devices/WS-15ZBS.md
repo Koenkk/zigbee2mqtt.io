@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WS-15ZBS  |
-| Vendor  | Climax  |
+| Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Water leak sensor |
 | Exposes | water_leak, battery_low, tamper, linkquality |
 | Picture | ![Climax WS-15ZBS](https://www.zigbee2mqtt.io/images/devices/WS-15ZBS.jpg) |

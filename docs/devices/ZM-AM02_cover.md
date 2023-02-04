@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZM-AM02_cover  |
-| Vendor  | Zemismart  |
+| Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Zigbee/RF curtain converter |
 | Exposes | cover (state, position), options, motor_working_mode, percent_state, mode, motor_direction, border, linkquality |
 | Picture | ![Zemismart ZM-AM02_cover](https://www.zigbee2mqtt.io/images/devices/ZM-AM02_cover.jpg) |
@@ -43,8 +43,7 @@ It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Options (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"options": {"motor_speed": VALUE}}`
-- `motor_speed` (numeric): Motor speed. 
+- `motor_speed` (numeric): Motor speed max value is 255
 
 ### Motor_working_mode (enum)
 Value can be found in the published state on the `motor_working_mode` property.

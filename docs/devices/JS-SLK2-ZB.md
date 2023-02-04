@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | JS-SLK2-ZB  |
-| Vendor  | JAVIS  |
+| Vendor  | [JAVIS](/supported-devices/#v=JAVIS)  |
 | Description | Intelligent biometric digital lock |
 | Exposes | battery, action, linkquality |
 | Picture | ![JAVIS JS-SLK2-ZB](https://www.zigbee2mqtt.io/images/devices/JS-SLK2-ZB.jpg) |
@@ -32,7 +32,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

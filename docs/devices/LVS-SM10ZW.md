@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LVS-SM10ZW  |
-| Vendor  | LivingWise  |
+| Vendor  | [LivingWise](/supported-devices/#v=LivingWise)  |
 | Description | Door or window contact switch |
 | Exposes | contact, battery_low, tamper, linkquality |
 | Picture | ![LivingWise LVS-SM10ZW](https://www.zigbee2mqtt.io/images/devices/LVS-SM10ZW.jpg) |

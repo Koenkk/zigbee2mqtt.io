@@ -48,9 +48,12 @@ Docgen includes some scripts to help testing the page.
 
 ## VuePress
 
-Use Node.js 16 for building VuePress (other versions like Node.js 18 are not supported)
+Use Node.js 18 for building VuePress (other versions are not officially supported).
 
 ```bash
+# Switch to node 18 (for nvm or nvm-compatible tool users)
+nvm use
+
 # Install dependencies
 npm ci
 ```
@@ -74,13 +77,38 @@ npm run dev
 The `dev`-Mode **excludes** the huge amount device-pages which slows down the build process drastically.
 If you are interested in the device-pages you could include them by using the `npm run dev:devices` npm-run script.  
 
+#### Include specific device
+
+When running in `dev`-Mode, you can also specify a device (but this device only) which you would like to include in the build process.
+Useful when working on improving notes of just one device.  
+`INCLUDE_DEVICE` variable should be supplied with device's filename (see [`/docs/devices`](/docs/devices/) folder), without the `.md.` extension.  
+
+```bash
+# Run vuepress in dev mode with specific device included
+npx cross-env INCLUDE_DEVICE=<DEVICE_FILE_NAME> npm run dev
+
+# Example for TS011F_plug_1
+npx cross-env INCLUDE_DEVICE=TS011F_plug_1 npm run dev
+```
+
+#### Change development port
+
+You can change development server port when the default one (8080) is taken on your system.  
+
+```bash
+# Run vuepress in dev mode on specified port
+npx cross-env DEV_PORT=<PORT_NUMBER> npm run dev
+
+# Example for port no 15080
+npx cross-env DEV_PORT=15080 npm run dev
+```
 
 ## Docker
 
 You can also just use a docker-image include Node.js.
 
 ```bash
-$ docker run --rm -v $PWD:/app -u $UID -ti node:16 bash
+$ docker run --rm -v $PWD:/app -u $UID -ti node:18-slim bash
 node@87e1438ef553:/$ cd /app
 node@87e1438ef553:/app$ npm ci
 node@87e1438ef553:/app$ npm run dev

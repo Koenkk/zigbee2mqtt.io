@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | FZB8708HD-S1  |
-| Vendor  | Brimate  |
+| Vendor  | [Brimate](/supported-devices/#v=Brimate)  |
 | Description | Smart motion sensor |
 | Exposes | occupancy, battery_low, linkquality |
 | Picture | ![Brimate FZB8708HD-S1](https://www.zigbee2mqtt.io/images/devices/FZB8708HD-S1.jpg) |

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QBKG04LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara single key wired wall switch without neutral wire. Doesn't work as a router and doesn't support power meter |
 | Exposes | switch (state), action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG04LM](https://www.zigbee2mqtt.io/images/devices/QBKG04LM.jpg) |
@@ -24,6 +24,9 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+
+### Router functionallity
+This device **does not** work as a Zigbee router.
 
 ### Debounce
 It is recommended to not use the `debounce` option for this device since this will prevent the `single` and `hold_release` actions from being sent.
