@@ -30,6 +30,8 @@ pageClass: device-page
 To factory reset the TRADFRI drivers use a
 small pin or paperclip to push the reset button once.
 NB: you HAVE to put the device VERY close to the zigbee device, otherwise it won't be able to detect.
+
+If this doesn't work, try holding the button for 5 seconds.
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
