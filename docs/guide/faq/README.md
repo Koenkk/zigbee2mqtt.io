@@ -35,7 +35,11 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - Try pairing close to a bulb (light) router instead of the coordinator.
 
 ## How do I migrate from one adapter to another?
-Want to migrate from e.g. a CC2531 to a more powerful adapter (e.g. ZZH)? Then follow these instructions:
+
+Want to migrate from e.g. a CC2530/CC2531 to a more powerful adapter (e.g. CC2652/CC1352)? Then follow these instructions below:
+
+Note! Migration requires backup and restore support which is so far only implemented for zstack adapter and deconz adapter. [ezsp adapter](https://github.com/Koenkk/zigbee-herdsman/issues/319) and [zigate adapter](https://github.com/Koenkk/zigbee-herdsman/issues/242) support is experimental so backup and restore has not yet been implemented.
+
 1. First make sure you are running the latest version of Zigbee2MQTT
 1. Stop Zigbee2MQTT
 1. Determine whether migrating [requires re-pairing of your devices](#what-does-and-does-not-require-repairing-of-all-devices)
