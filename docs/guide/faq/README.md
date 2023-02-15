@@ -38,7 +38,7 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 
 Want to migrate from e.g. a CC2530/CC2531 to a more powerful adapter (e.g. CC2652/CC1352)? Then follow these instructions below:
 
-Note! Migration requires backup and restore support which is so far only implemented for zstack adapter and deconz adapter. [ezsp adapter](https://github.com/Koenkk/zigbee-herdsman/issues/319) and [zigate adapter](https://github.com/Koenkk/zigbee-herdsman/issues/242) support is experimental so backup and restore has not yet been implemented.
+Note! Migration from one adapter to another requires backup and restore support which is so far only implemented for the zstack adapter (e.i. Texas Instruments based adapters). The code implementations in the zigbee-herdsman library Zigbee2MQTT depends on does not yet feature Zigbee Coordinator / Zigbee network backup and restore for [deconz adapter](https://github.com/Koenkk/zigbee-herdsman/issues/665) (e.i. ConBee/RaspBee adapters from dresden elektronik), [ezsp adapter](https://github.com/Koenkk/zigbee-herdsman/issues/319) (e.i. Silicon Labs based adapters), or [zigate adapter](https://github.com/Koenkk/zigbee-herdsman/issues/242) (e.i. ZiGate from fairecasoimeme).
 
 1. First make sure you are running the latest version of Zigbee2MQTT
 1. Stop Zigbee2MQTT
