@@ -23,7 +23,23 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Tuya Endpoint IDs
+Might be helpful for reference, I grabbed these IDs using this method: https://www.zigbee2mqtt.io/advanced/support-new-devices/03_find_tuya_data_points.html
 
+switch1: 1
+switch 2: 2
+点动 jog/step?: 101
+switch all: 102
+countdown 1: 9
+countdown 2: 10
+total electricity (counting up):  17
+current: 18
+power: 19
+voltage: 20
+test bit: 21
+voltage coe: 22
+electric coe: 23
+power coe: 24
 
 <!-- Notes END: Do not edit below this line -->
 
