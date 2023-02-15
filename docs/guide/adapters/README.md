@@ -440,6 +440,26 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     </details>
 
   * <details>
+    <summary>Home Assistant SkyConnect (by Nabu Casa)</summary>
+  
+    USB connected adapter with integrated antenna.
+
+    Note! This dongle/stick ships with standard Silicon Labs EmberZNet Zigbee NCP firmware so it works like other ezsp adapters out-of-the-box as long as you do not change firmware from NCP (Network Co-Processor) to RPC (Radio Co-Processor) firmware architecture for the EmberZNet Zigbee protocol stack. If you plan on using it only with Zigbee2MQTT then it is therefore currently not recommended to flash/upgrade to an RPC Multi-PAN firmware for it as that enables multiprotocol support for the radio which adds an extra prerequisite of running a service called "Zigbeed" (Zigbee daemon) on the same computer as the RCP Multi-PAN design offloads the Silicon Labs EmberZNet Zigbee protocol stack from the radio adapter, and that required Zigbee daemon for Silicon Labs EmberZNet is not yet included as a dependency with Zigbee2MQTT/zigbee-herdsman, meaning that you need to install and maintain that dependency yourself.
+
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+    ```
+   
+    * [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
+    * [Flashing](https://skyconnect.home-assistant.io/)
+    * [Buy](https://www.home-assistant.io/skyconnect)
+  
+    ![](../../images/skyconnect_isometric.png)
+    </details>
+
+  * <details>
     <summary>Elelabs ELU013 and Popp ZB-STICK</summary>
   
     USB connected adapters (Elelabs ELU013 and Popp ZB-STICK 701554).
