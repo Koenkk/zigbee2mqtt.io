@@ -48,9 +48,11 @@ After this command thermostat responds with two messages. One for calibration ch
 
 ### Controlling device specific features
 
-- If all you need is to control on and off, you can set "force" with topic `zigbee2mqtt/FRIENDLY_NAME/set`. The payload values are:
-  open -> fully opens valve and stays there
-  close -> fully closes valve and stays there
+- If all you need is to control on and off, you can set "force" with topic `zigbee2mqtt/FRIENDLY_NAME/set`.
+  
+  The payload values are:\
+  open -> fully opens valve and stays there\
+  close -> fully closes valve and stays there\
   normal -> normal valve operation
 
     ```json
