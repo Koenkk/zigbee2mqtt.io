@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Smart plug (with power monitoring) |
 | Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
 | Picture | ![TuYa TS011F_plug_1](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_1.jpg) |
-| White-label | LELLKI TS011F_plug, NEO NAS-WR01B, BlitzWolf BW-SHP15, Nous A1Z, BlitzWolf BW-SHP13, MatSee Plus PJ-ZSW01, MODEMIX MOD037, MODEMIX MOD048, Coswall CS-AJ-DE2U-ZG-11 |
+| White-label | LELLKI TS011F_plug, NEO NAS-WR01B, BlitzWolf BW-SHP15, Nous A1Z, BlitzWolf BW-SHP13, MatSee Plus PJ-ZSW01, MODEMIX MOD037, MODEMIX MOD048, Coswall CS-AJ-DE2U-ZG-11, Aubess Smart Socket |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
