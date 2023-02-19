@@ -216,7 +216,7 @@ Example:
     "type": "climate",
     "features": [
         {"type":"numeric","name":"occupied_heating_setpoint","property":"occupied_heating_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":7,"unit":"°C"},
-        {"type":"numeric","name":"occupied_cooling_setpoint","property":"occupied_heating_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":7,"unit":"°C"},
+        {"type":"numeric","name":"occupied_cooling_setpoint","property":"occupied_cooling_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":7,"unit":"°C"},
         {"type":"numeric","name":"local_temperature","property":"local_temperature","access":3,"unit":"°C"},
         {"type":"enum","name":"system_mode","property":"system_mode","values":["off", "auto", "heat", "cool"],"access":7},
         {"type":"enum","name":"preset","property":"preset","values":["hold", "program"],"access":7},
