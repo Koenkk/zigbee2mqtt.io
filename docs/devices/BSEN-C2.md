@@ -25,7 +25,7 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Indoor / Outdoor use
+### Indoor / outdoor use
 The sensor has a waterproof level IP45 and therefore is suitable for both indoor and outdoor use. (according manufacturer specification) 
 
 ### Pairing
