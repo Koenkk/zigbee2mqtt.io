@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | 1 gang switch module - (without neutral) |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
 | Picture | ![TuYa TS0011_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0011_switch_module.jpg) |
-| White-label | AVATTO 1gang N-ZLWSM01, SMATRUL TMZ02L-16A-W |
+| White-label | AVATTO 1gang N-ZLWSM01, SMATRUL TMZ02L-16A-W, Aubess TMZ02L-16A-B |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
