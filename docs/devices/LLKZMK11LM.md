@@ -28,13 +28,13 @@ pageClass: device-page
 
 ### Interlock
 This option allows to inter connect the relays which will make sure that only one relay is on at a time. To do this publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"interlock": true}` or `{"interlock": false}`. By default this option is `false`.
+
+### Binding
+The device allows zigbee [binding](../guide/usage/binding.html) for each individual channel.
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
-
-## Binding
-The device allows zigbee [binding](../guide/usage/binding.html) for each individual channel.
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
