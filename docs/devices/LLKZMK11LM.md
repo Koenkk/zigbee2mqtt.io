@@ -33,6 +33,8 @@ This option allows to inter connect the relays which will make sure that only on
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
+## Binding
+The device allows zigbee [binding](../guide/usage/binding.html) for each individual channel.
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
