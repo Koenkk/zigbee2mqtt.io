@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Smart plug (with power monitoring) |
 | Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
 | Picture | ![TuYa TS011F_plug_1](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_1.jpg) |
-| White-label | LELLKI TS011F_plug, NEO NAS-WR01B, BlitzWolf BW-SHP15, Nous A1Z, BlitzWolf BW-SHP13, MatSee Plus PJ-ZSW01, MODEMIX MOD037, MODEMIX MOD048, Coswall CS-AJ-DE2U-ZG-11 |
+| White-label | LELLKI TS011F_plug, NEO NAS-WR01B, BlitzWolf BW-SHP15, Nous A1Z, BlitzWolf BW-SHP13, MatSee Plus PJ-ZSW01, MODEMIX MOD037, MODEMIX MOD048, Coswall CS-AJ-DE2U-ZG-11, Aubess Smart Socket |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -68,6 +68,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 

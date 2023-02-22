@@ -127,7 +127,7 @@ services:
       - /dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0
 ```
 
-You can also run a rootless container with docker-compose by adding the required attributes to the `zigbee2mqtt` service block in your `docker-compose.yml`:
+You can also run a rootless container with Docker Compose by adding the required attributes to the `zigbee2mqtt` service block in your `docker-compose.yml`:
 
 ```yaml
     group_add:
@@ -137,7 +137,7 @@ You can also run a rootless container with docker-compose by adding the required
 ### Starting the container
 To start the Docker container:
 ```bash
-docker-compose up -d zigbee2mqtt
+docker compose up -d zigbee2mqtt
 ```
 
 You can optionally skip `zigbee2mqtt` and it will start all containers listed in the compose file.
@@ -145,8 +145,8 @@ You can optionally skip `zigbee2mqtt` and it will start all containers listed in
 ### Updating
 To update to the latest Docker image:
 ```bash
-docker-compose pull zigbee2mqtt
-docker-compose up -d zigbee2mqtt
+docker compose pull zigbee2mqtt
+docker compose up -d zigbee2mqtt
 ```
 
 You can optionally skip `zigbee2mqtt` and it will pull any new images for all containers in the compose file, and then restart those that were updated.

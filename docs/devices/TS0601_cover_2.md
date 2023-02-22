@@ -1,7 +1,7 @@
 ---
-title: "Legrand 067776_001a control via MQTT"
-description: "Integrate your Legrand 067776_001a via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-01-01T09:10:19
+title: "TuYa TS0601_cover_2 control via MQTT"
+description: "Integrate your TuYa TS0601_cover_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
 
@@ -11,20 +11,24 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Legrand 067776_001a
+# TuYa TS0601_cover_2
 
 |     |     |
 |-----|-----|
-| Model | 067776_001a  |
-| Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
-| Description | Netatmo wired shutter switch |
+| Model | TS0601_cover_2  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Description | Curtain motor fixed speed |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Legrand 067776_001a](https://www.zigbee2mqtt.io/images/devices/067776_001a.jpg) |
+| Picture | ![TuYa TS0601_cover_2](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_2.jpg) |
+| White-label | Zemismart BCM100DB |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+## Pairing
+On 2-button units; press down and set simultaneously until LED flashes blue.
+On 1-button units; press the set key 3 times in 5 seconds until the LED flashes blue.
 <!-- Notes END: Do not edit below this line -->
 
 

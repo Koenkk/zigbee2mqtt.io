@@ -37,6 +37,11 @@ Once confirmed, proceed as per initial boot.
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
 
 ## Exposes
 

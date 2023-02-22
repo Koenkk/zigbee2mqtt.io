@@ -41,8 +41,9 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
   * and then press the "RST." button (lower button in the lower right corner next to the USB plug in the photo below) to restart the device 
   <img src="https://www.zigbee2mqtt.io/images/guides/SONOFF-DongleE-Router/dongle-e-naked.jpg" width="648" height="242"/>
 * Then follow the steps in the guide to load and install the firmware.
-
 <!-- Notes END: Do not edit below this line -->
+
+
 
 ## Exposes
 

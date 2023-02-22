@@ -53,13 +53,14 @@ Examples:
 - `{"type":"text","name":"inserted","property":"inserted","access":1}`
 
 ### Composite
-Composite combines the above generic types in the `features` array. Unlike other generic types, it does not have the `access` property since the `access` is defined per feature.
+Composite combines the above generic types in the `features` array.
 
 Example:
 ```json
 {
     "type":"composite",
     "name":"color_xy",
+    "access":2,
     "property":"color",
     "features": [
         {"type":"numeric","name":"x","property":"x","access":7},
@@ -215,7 +216,7 @@ Example:
     "type": "climate",
     "features": [
         {"type":"numeric","name":"occupied_heating_setpoint","property":"occupied_heating_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":7,"unit":"°C"},
-        {"type":"numeric","name":"occupied_cooling_setpoint","property":"occupied_heating_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":7,"unit":"°C"},
+        {"type":"numeric","name":"occupied_cooling_setpoint","property":"occupied_cooling_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":7,"unit":"°C"},
         {"type":"numeric","name":"local_temperature","property":"local_temperature","access":3,"unit":"°C"},
         {"type":"enum","name":"system_mode","property":"system_mode","values":["off", "auto", "heat", "cool"],"access":7},
         {"type":"enum","name":"preset","property":"preset","values":["hold", "program"],"access":7},

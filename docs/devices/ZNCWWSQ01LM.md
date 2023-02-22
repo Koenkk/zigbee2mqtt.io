@@ -39,7 +39,7 @@ Start feeding.
 Value can be found in the published state on the `feed` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"feed": NEW_VALUE}`.
-The possible values are: `START`.
+The possible values are: ``, `START`.
 
 ### Feeding_source (enum)
 Feeding source.

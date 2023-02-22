@@ -18,12 +18,21 @@ pageClass: device-page
 | Model | SNZB-02D  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Temperature and humidity sensor with screen |
-| Exposes | battery, temperature, humidity, voltage, linkquality |
+| Exposes | battery, temperature, humidity, linkquality |
 | Picture | ![SONOFF SNZB-02D](https://www.zigbee2mqtt.io/images/devices/SNZB-02D.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Battery
+Uses a CR2450 battery
+
+### Pairing
+Long press the pairing button for five seconds. The signal indicator on the display will begin to blink when in pairing mode.
+
+### Temperature display
+Double click the pairing button to toggle the display between Celsius and Fahrenheit. This does not change the unit of the measured temperature value. 
 
 <!-- Notes END: Do not edit below this line -->
 
@@ -43,7 +52,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -60,12 +69,6 @@ Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
-
-### Voltage (numeric)
-Voltage of the battery in millivolts.
-Value can be found in the published state on the `voltage` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mV`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

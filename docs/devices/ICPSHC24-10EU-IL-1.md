@@ -30,6 +30,8 @@ pageClass: device-page
 To factory reset the TRADFRI drivers use a
 small pin or paperclip to push the reset button once.
 NB: you HAVE to put the device VERY close to the zigbee device, otherwise it won't be able to detect.
+
+If this doesn't work, try holding the button for 5 seconds.
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
@@ -40,6 +42,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

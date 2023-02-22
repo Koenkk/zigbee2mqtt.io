@@ -1,7 +1,7 @@
 ---
 title: "Xiaomi SJCGQ12LM control via MQTT"
 description: "Integrate your Xiaomi SJCGQ12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2020-06-10T16:45:59Z
+addedAt: 2023-02-01T14:45:54
 pageClass: device-page
 ---
 
@@ -23,12 +23,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
 
 
-### Pairing
-Press and hold water logo on the device for +- 5 seconds (you have to press quite hard) until the blue light blinks
-three times, release the water logo (the blue light will blink once more) and wait.
 <!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
@@ -39,7 +35,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

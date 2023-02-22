@@ -30,8 +30,8 @@ advanced:
   # Optional: syslog configuration, skip values or entirely to use defaults. Only use when 'syslog' in 'log_output' (see above)
   log_syslog:
     host: localhost # The host running syslogd, defaults to localhost.
-    port: 123 # The port on the host that syslog is running on, defaults to syslogd's default port.
-    protocol: tcp4 # The network protocol to log over (e.g. tcp4, udp4, tls4, unix, unix-connect, etc).
+    port: 514 # The port on the host that syslog is running on, defaults to syslogd's default port.
+    protocol: udp4 # The network protocol to log over (e.g. tcp4, udp4, tls4, unix, unix-connect, etc).
     path: /dev/log # The path to the syslog dgram socket (i.e. /dev/log or /var/run/syslog for OS X).
     pid: process.pid # PID of the process that log messages are coming from (Default process.pid).
     facility: local0 # Syslog facility to use (Default: local0).

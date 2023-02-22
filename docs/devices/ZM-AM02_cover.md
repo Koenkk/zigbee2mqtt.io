@@ -43,7 +43,6 @@ It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Options (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"options": {"motor_speed": VALUE}}`
 - `motor_speed` (numeric): Motor speed max value is 255
 
 ### Motor_working_mode (enum)

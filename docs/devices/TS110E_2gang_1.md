@@ -1,7 +1,7 @@
 ---
-title: "TuYa TS110E_2gang control via MQTT"
-description: "Integrate your TuYa TS110E_2gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-01-31T17:42:44
+title: "TuYa TS110E_2gang_1 control via MQTT"
+description: "Integrate your TuYa TS110E_2gang_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS110E_2gang
+# TuYa TS110E_2gang_1
 
 |     |     |
 |-----|-----|
-| Model | TS110E_2gang  |
+| Model | TS110E_2gang_1  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2 channel dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), power_on_behavior, switch_type, linkquality |
-| Picture | ![TuYa TS110E_2gang](https://www.zigbee2mqtt.io/images/devices/TS110E_2gang.jpg) |
+| Picture | ![TuYa TS110E_2gang_1](https://www.zigbee2mqtt.io/images/devices/TS110E_2gang_1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,6 +32,8 @@ pageClass: device-page
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

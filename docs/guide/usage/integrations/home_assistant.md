@@ -28,7 +28,7 @@ without having to restart Home Assistant. It also makes it possible to show whic
 ![Device registry](../../../images/home_assistant_device_registry.png)
 
 ## Customizing discovery
-The device specific configuration allows you to modify the discovery payload. Here you can also prevent a device from being discovered. See [Device specific configuration](../../configuration/) for the available options.
+The device specific configuration allows you to modify the discovery payload. Here you can also prevent a device from being discovered. See [Device specific configuration](../../configuration/devices-groups.html#specific-device-options) for the available options.
 
 ## Responding to button clicks
 To respond to button clicks (e.g. WXKG01LM) you can use one of the following three Home Assistant configurations.

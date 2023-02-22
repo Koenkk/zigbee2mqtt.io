@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | GP-WOU019BBDWG  |
 | Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Outlet with power meter |
-| Exposes | switch (state), power, energy, linkquality |
+| Exposes | switch (state), power, energy, power_on_behavior, linkquality |
 | Picture | ![SmartThings GP-WOU019BBDWG](https://www.zigbee2mqtt.io/images/devices/GP-WOU019BBDWG.jpg) |
 
 
@@ -30,6 +30,8 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -66,6 +68,13 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Power_on_behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

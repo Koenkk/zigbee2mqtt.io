@@ -1,7 +1,7 @@
 ---
-title: "TuYa TS0601_cover control via MQTT"
-description: "Integrate your TuYa TS0601_cover via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2021-10-30T12:58:50
+title: "TuYa TS0601_cover_1 control via MQTT"
+description: "Integrate your TuYa TS0601_cover_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_cover
+# TuYa TS0601_cover_1
 
 |     |     |
 |-----|-----|
-| Model | TS0601_cover  |
+| Model | TS0601_cover_1  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Curtain motor/roller blind motor/window pusher/tubular motor |
 | Exposes | cover (state, position), options, linkquality |
-| Picture | ![TuYa TS0601_cover](https://www.zigbee2mqtt.io/images/devices/TS0601_cover.jpg) |
+| Picture | ![TuYa TS0601_cover_1](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_1.jpg) |
 | White-label | Yushun YS-MT750, Zemismart ZM79E-DT, Binthen BCM100D, Binthen CV01A, Zemismart M515EGB, OZ Smart Things ZM85EL-1Z, TuYa M515EGZT, TuYa DT82LEMA-1.2N, TuYa ZD82TN, Moes AM43-0.45/40-ES-EB, Larkkey ZSTY-SM-1SRZG-EU, Zemismart ZM85EL-2Z, Zemismart AM43, Zemismart M2805EGBZTN, Zemismart BCM500DS-TYZ, A-OK AM25, Alutech AM/R-Sm |
 
 
