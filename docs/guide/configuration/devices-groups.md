@@ -79,9 +79,15 @@ Allows overriding the values of the Home Assistant discovery payload. See exampl
 
 **`debounce`**  
 Debounces messages of this device. When setting e.g. `debounce: 1` and a message from a device is
-  received, Zigbee2MQTT will not immediately publish this message but combine it with other messages received in that
-  same second of that device. This is handy for e.g. the `WSDCGQ11LM` which publishes humidity, temperature and pressure
+  received, Zigbee2MQTT will not immediately publish this message. But it will combine it with other messages that are received max 1
+  seconds apart from each other. So there needs to be "N second of silence" from the device before the combined message is sent out.
+  
+  For example `debounce: 5` means that there needs to be "5 seconds of silence" from the device, before combined messages is sent out.
+    
+  This is handy for e.g. the `WSDCGQ11LM` which publishes humidity, temperature and pressure
   at the same time but as 3 different messages.
+  
+  Don't configure debounce to be higher that sensors update interval as that would cause all the messages to be debouncer and messages won't be sent out at all.
 
 **`debounce_ignore`**  
 Protects unique payload values of specified payload properties from overriding within debounce time.
