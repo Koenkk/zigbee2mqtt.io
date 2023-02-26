@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WISZB-138  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Window sensor |
-| Exposes | contact, temperature battery |Develco
+| Exposes | contact, temperature, battery |Develco
 | Picture | ![Develco WISZB-138](https://www.zigbee2mqtt.io/images/devices/WISZB-138.jpg) |
 
 
