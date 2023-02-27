@@ -82,3 +82,42 @@ server {
     }
 }
 ```
+
+## Apache2 proxy configuration
+Credit: Florian Metzger-Noel https://stackoverflow.com/a/60506715
+
+Enable these modules using 
+```a2enmod proxy proxy_wstunnel proxy_http rewrite```
+
+```                                                                                                             
+<VirtualHost *:80>
+   ServerName example.com
+   ServerAdmin info@example.com
+
+
+    ProxyRequests off 
+    ProxyVia on      
+    RewriteEngine On 
+
+    RewriteEngine On
+    RewriteCond %{HTTP:Connection} Upgrade [NC]
+    RewriteCond %{HTTP:Upgrade} websocket [NC]
+    RewriteRule /(.*) ws://localhost:8080/$1 [P,L]
+
+    ProxyPass               / http://localhost:8080/           
+    ProxyPassReverse        / http://localhost:8080/
+
+
+   <Proxy *>
+   Order deny,allow
+   Allow from all
+   </Proxy>
+
+   ErrorLog ${APACHE_LOG_DIR}/company2-error.log
+   CustomLog ${APACHE_LOG_DIR}/company2-access.log combined
+
+</VirtualHost>
+
+
+```
+
