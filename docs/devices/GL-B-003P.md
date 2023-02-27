@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee 7W E26/E27 Bulb RGB+CCT (pro) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![Gledopto GL-B-003P](https://www.zigbee2mqtt.io/images/devices/GL-B-003P.jpg) |
+| Picture | ![Gledopto GL-B-003P]() |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
