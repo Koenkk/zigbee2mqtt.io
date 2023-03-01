@@ -33,8 +33,7 @@ To pair this device you have to install the device via its installation code whi
 
 
 ### Factory resetting
-To factory reset the device remove the batteries. While pressing and holding the device's main button, insert the battery back. As soon as the device's LED is starting to blink orange (approx 3sec), release the device's main button and press and hold it again until the device's LED is lighting up green. 
-
+To factory reset the device remove the batteries. While pressing and holding the device's main button, insert the battery back. As soon as the device's LED is starting to blink orange (approx 3sec), release the device's main button and press and hold it again until the device's LED is lighting up green.
 <!-- Notes END: Do not edit below this line -->
 
 

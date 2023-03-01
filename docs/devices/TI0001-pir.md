@@ -15,11 +15,11 @@ pageClass: device-page
 
 |     |     |
 |-----|-----|
-| Model | TI0001-pir |
+| Model | TI0001-pir  |
 | Vendor  | [Livolo](/supported-devices/#v=Livolo)  |
-| Description | Zigbee motion sensor |
-| Exposes | occupancy, linkquality|
-| Picture | ![Livolo TI0001](https://www.zigbee2mqtt.io/images/devices/TI0001-pir.jpg) |
+| Description | Zigbee motion Sensor |
+| Exposes | occupancy, linkquality |
+| Picture | ![Livolo TI0001-pir](https://www.zigbee2mqtt.io/images/devices/TI0001-pir.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

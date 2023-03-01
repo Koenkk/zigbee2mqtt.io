@@ -27,7 +27,6 @@ pageClass: device-page
 ## Notes
 ### Pairing
 You can pair this device by setting device to manual mode by short press rotary button (until clock symbol is not displayed), setting temperature to "OF" by rotating left, then press and hold rotary button. Network symbol will start to blink.
-
 <!-- Notes END: Do not edit below this line -->
 
 

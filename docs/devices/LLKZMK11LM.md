@@ -36,6 +36,7 @@ The device allows zigbee [binding](../guide/usage/binding.html) for each individ
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

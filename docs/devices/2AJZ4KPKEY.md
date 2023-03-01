@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | 2AJZ4KPKEY  |
 | Vendor  | [Konke](/supported-devices/#v=Konke)  |
 | Description | Multi-function button |
-| Exposes | battery, action, linkquality |
+| Exposes | battery_low, battery, action, linkquality |
 | Picture | ![Konke 2AJZ4KPKEY](https://www.zigbee2mqtt.io/images/devices/2AJZ4KPKEY.jpg) |
 
 
@@ -55,6 +55,12 @@ Konke devices only work on Zigbee channel 15, 20 and 25.
 
 
 ## Exposes
+
+### Battery_low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery_low is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported..

@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | CTP-R01  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara magic cube T1 Pro |
-| Exposes | battery, voltage, device_temperature, power_outage_count, operation_mode, side, action, action_from_side, action_angle, linkquality |
+| Exposes | battery, voltage, power_outage_count, operation_mode, side, action, action_from_side, action_angle, linkquality |
 | Picture | ![Xiaomi CTP-R01](https://www.zigbee2mqtt.io/images/devices/CTP-R01.jpg) |
+| White-label | Xiaomi MFCZQ12LM |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -81,11 +82,6 @@ There are two ways to toggle between scene mode and action mode:
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
-
 
 ## Exposes
 
@@ -101,12 +97,6 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Device_temperature (numeric)
-Temperature of the device.
-Value can be found in the published state on the `device_temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
 
 ### Power_outage_count (numeric)
 Number of power outages.

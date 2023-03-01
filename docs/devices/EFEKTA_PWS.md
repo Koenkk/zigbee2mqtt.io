@@ -78,7 +78,7 @@ Value can be found in the published state on the `report_delay` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `240`.
-The unit of this value is `Minutes`.
+The unit of this value is `min`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

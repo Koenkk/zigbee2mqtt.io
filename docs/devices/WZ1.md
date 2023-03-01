@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WZ1  |
 | Vendor  | [Skydance](/supported-devices/#v=Skydance)  |
 | Description | Zigbee & RF 2 channel LED controller |
-| Exposes | light (state, brightness), power_on_behavior, linkquality |
+| Exposes | light (state, brightness), linkquality |
 | Picture | ![Skydance WZ1](https://www.zigbee2mqtt.io/images/devices/WZ1.jpg) |
 
 
@@ -63,13 +63,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_step": 40 // Increases brightness by 40
 }
 ````
-
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

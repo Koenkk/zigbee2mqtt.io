@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_co2_sensor  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | NDIR co2 sensor |
-| Exposes | co2, linkquality |
+| Exposes | temperature, humidity, co2, linkquality |
 | Picture | ![TuYa TS0601_co2_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_co2_sensor.jpg) |
 
 
@@ -53,6 +53,18 @@ pageClass: device-page
 
 
 ## Exposes
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Humidity (numeric)
+Measured relative humidity.
+Value can be found in the published state on the `humidity` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `%`.
 
 ### Co2 (numeric)
 The measured CO2 (carbon dioxide) value.
