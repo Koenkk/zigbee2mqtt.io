@@ -28,6 +28,14 @@ Supports: CC2652, CC1352, CC2538
     - `/dev/tty.usbserial-10` with the path to your adapter
     - `./fw.hex` with the path to your adapters firmware.
 
+## cc2538-bsl via Docker
+Supports: CC2652, CC1352, CC2538
+1. Run `sudo docker run --rm --device /dev/ttyUSB0:/dev/ttyUSB0 -e FIRMWARE_URL=https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20221226.zip ckware/ti-cc-tool -ewv -p /dev/ttyUSB0 -evw --ieee-address 00:12:4b:aa:bb:cc:dd:ee`, replace:
+    - `00:12:4b:aa:bb:cc:dd:ee` with your coordinator ieee address (first `0x` can be skipped)
+    - the *first* `/dev/ttyUSB0` with the path to your adapter
+    - the URL in `FIRMWARE_URL=https:...` with the path to the zip file of your adapters firmware.
+    - add `--bootloader-sonoff-usb` at the end if you use a sonoff stick to switch it into bootloader mode (in 02/2023 not working with ZigStar Multi Tool).
+
 ## FLASH-PROGRAMMER-2
 Supports: CC2652, CC1352, CC2538
 1. [Download](https://www.ti.com/tool/FLASH-PROGRAMMER) the tool
@@ -36,3 +44,6 @@ Supports: CC2652, CC1352, CC2538
 1. Fill the old coordinator ieee address into "Secondary Address" -> "IEEE 802.15.4 MAC address" (first `0x` can be skipped)
 1. Press "Write"
 1. Reflash the firmware on your stick - in the right corner under Secondary MAC check "Retain secondary IEEE" (this is important, otherwise the coordinator will not use the new ieee address)
+
+    - `./fw.hex` with the path to your adapters firmware.
+
