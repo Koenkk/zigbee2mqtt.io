@@ -114,3 +114,4 @@ sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/&usbcore.autosuspend=-1 /' /etc/default/g
 update-grub
 systemctl reboot
 ```
+On a Raspberry Pi, you will need to instead edit `/boot/cmdline.txt` and add `usbcore.autosuspend=-1` to the end of the line.
