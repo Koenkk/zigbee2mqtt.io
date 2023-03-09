@@ -19,10 +19,10 @@ homeassistant:
   # Optional: Home Assistant status topic (default: shown below)
   # Note: in addition to the `status_topic`, 'homeassistant/status' will also be used
   status_topic: 'hass/status'
-  # Optional: Home Assistant legacy triggers (default: shown below), when enabled:
+  # Optional: Home Assistant legacy triggers (default: shown below), however when enabled:
   # - Zigbee2mqt will send an empty 'action' or 'click' after one has been send
   # - A 'sensor_action' and 'sensor_click' will be discoverd
-  legacy_triggers: true
+  legacy_triggers: false
 
 advanced:
   # Optional: Home Assistant legacy entity attributes, (default: shown below), when enabled:
