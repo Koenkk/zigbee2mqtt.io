@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Universal Electronics Inc](/supported-devices/#v=Universal%20Electronics%20Inc)  |
 | Description | Xfinity security keypad |
 | Exposes | battery, voltage, occupancy, battery_low, tamper, presence, contact, temperature, action_code, action_transaction, action_zone, action, linkquality |
-| Picture | ![Universal Electronics Inc UEHK2AZ0](https://www.zigbee2mqtt.io/images/devices/XHK1-UE.jpg) |
+| Picture | ![Universal Electronics Inc UEHK2AZ0](https://www.zigbee2mqtt.io/images/devices/UEHK2AZ0.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
