@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | E11-N1EA  |
 | Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Element plus color (A19) |
-| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), power_on_behavior, power, energy, linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), power, energy, linkquality |
 | Picture | ![Sengled E11-N1EA](https://www.zigbee2mqtt.io/images/devices/E11-N1EA.jpg) |
 
 
@@ -85,13 +85,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "color_temp_step": 99, // Increase color temperature by 99
 }
 ````
-
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Power (numeric)
 Instantaneous measured power.

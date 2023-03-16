@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SRTS-A01  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara Smart Radiator Thermostat E1 |
-| Exposes | setup, climate (occupied_heating_setpoint, local_temperature, system_mode, preset), sensor, calibrated, lock (state), switch (state), window_open, valve_alarm, away_preset_temperature, voltage, battery, power_outage_count, device_temperature, linkquality |
+| Exposes | setup, climate (occupied_heating_setpoint, local_temperature, system_mode, preset), sensor, calibrated, lock (state), switch (state), window_open, valve_alarm, away_preset_temperature, voltage, battery, power_outage_count, device_temperature, schedule_settings, linkquality |
 | Picture | ![Xiaomi SRTS-A01](https://www.zigbee2mqtt.io/images/devices/SRTS-A01.jpg) |
 
 
@@ -124,6 +124,17 @@ Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
+
+### Switch 
+The current state of this switch is in the published state under the `schedule` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule": "ON"}`, `{"schedule": "OFF"}` or `{"schedule": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule": ""}`.
+
+### Schedule_settings (text)
+Smart schedule configuration (default: mon,tue,wed,thu,fri|8:00,24.0|18:00,17.0|23:00,22.0|8:00,22.0).
+Value can be found in the published state on the `schedule_settings` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_settings": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_settings": NEW_VALUE}`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

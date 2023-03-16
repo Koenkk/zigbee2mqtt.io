@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS110E_1gang_1  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 1 channel dimmer |
-| Exposes | light (state, brightness), power_on_behavior, switch_type, linkquality |
+| Exposes | light (state, brightness, min_brightness, max_brightness), power_on_behavior, switch_type, linkquality |
 | Picture | ![TuYa TS110E_1gang_1](https://www.zigbee2mqtt.io/images/devices/TS110E_1gang_1.jpg) |
 
 
@@ -39,7 +39,7 @@ pageClass: device-page
 ## Exposes
 
 ### Light 
-This light supports the following features: `state`, `brightness`.
+This light supports the following features: `state`, `brightness`, `min_brightness`, `max_brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
 

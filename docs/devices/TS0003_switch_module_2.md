@@ -1,7 +1,7 @@
 ---
-title: "TuYa TS0003_switch_module control via MQTT"
-description: "Integrate your TuYa TS0003_switch_module via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2021-10-30T12:58:50
+title: "TuYa TS0003_switch_module_2 control via MQTT"
+description: "Integrate your TuYa TS0003_switch_module_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-03-01T15:36:38
 pageClass: device-page
 ---
 
@@ -11,16 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0003_switch_module
+# TuYa TS0003_switch_module_2
 
 |     |     |
 |-----|-----|
-| Model | TS0003_switch_module  |
+| Model | TS0003_switch_module_2  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 3 gang switch module |
-| Exposes | switch (state), power_on_behavior, switch_type, linkquality |
-| Picture | ![TuYa TS0003_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0003_switch_module.jpg) |
-| White-label | OXT SWTZ23 |
+| Exposes | switch (state), power_on_behavior, linkquality |
+| Picture | ![TuYa TS0003_switch_module_2](https://www.zigbee2mqtt.io/images/devices/TS0003_switch_module_2.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -58,13 +57,6 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
-
-### Switch_type (enum)
-Type of the switch.
-Value can be found in the published state on the `switch_type` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
-The possible values are: `toggle`, `state`, `momentary`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -133,7 +133,7 @@ Countdown in minutes.
 Value can be found in the published state on the `boost_heating_countdown` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `15`.
-The unit of this value is `minutes`.
+The unit of this value is `min`.
 
 ### Boost_heating_countdown_time_set (numeric)
 Boost Time Setting 100 sec - 900 sec, (default = 300 sec).
@@ -141,7 +141,7 @@ Value can be found in the published state on the `boost_heating_countdown_time_s
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_heating_countdown_time_set": NEW_VALUE}`.
 The minimal value is `100` and the maximum value is `900`.
-The unit of this value is `seconds`.
+The unit of this value is `s`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

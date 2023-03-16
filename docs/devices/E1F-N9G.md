@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | E1F-N9G  |
 | Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Smart LED filament candle (E12) |
-| Exposes | light (state, brightness), power_on_behavior, linkquality |
+| Exposes | light (state, brightness), linkquality |
 | Picture | ![Sengled E1F-N9G](https://www.zigbee2mqtt.io/images/devices/E1F-N9G.jpg) |
 
 
@@ -66,13 +66,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_step": 40 // Increases brightness by 40
 }
 ````
-
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

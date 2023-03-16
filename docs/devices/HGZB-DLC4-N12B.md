@@ -23,7 +23,33 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+
+### Pairing
+Factory resetting this Nue / 3A light can be accomplished with the following methods.
+After resetting the bulb will automatically connect.
+
+#### Reset button
+Press and hold the reset button on the adaptor for 10 seconds.
+
+Also see the [VIDEO: Demo on Pairing Nue ZigBee Downlight with Philips Hue Bridge](https://www.youtube.com/watch?v=Z2U6mJSmA34).
+
+#### Power cycling the device
+Turn on and off the for 9 times. The light will blink twice on the 9th time.
+
+Similar to [VIDEO: How to reset a TRÅDFRI light bulb](https://www.youtube.com/watch?v=npxOrPxVfe0)
+
+#### Hue dimmer switch
+With [one](./324131092621.md) of the [two](./929002398602.md) Hue Dimmer switches it is possible to put the bulbs into a factory reset.
+
+1. Power-supply the bulb
+2. Bring the dimmer switch next to the bulb, as close as possible
+3. Hold the I/On and 0/Off button pressed simultaneously for 10 to 12 seconds until…
+4. The bulb flashes a couple of times. Don't release the buttons until the last flash + a safety second
+5. Switch the bulb off and on again: it can now be paired again.
+
+See also the [VIDEO: Factory reset a Hue bulb with Hue dimmer switch](https://www.youtube.com/watch?v=qvlEAELiJKs).
 
 <!-- Notes END: Do not edit below this line -->
 

@@ -91,13 +91,13 @@ For this device we know that datapoint `106` is the humidity, we can now update 
     ],
     meta: {
         tuyaDatapoints: [
-            [8, 'humidity', tuya.valueConverter.raw], // <- mapped the datapoint
+            [106, 'humidity', tuya.valueConverter.raw], // <- mapped the datapoint
         ],
     },
 ```
 
 The values in the mapped datapoint are as follows:
-1. The datapoint (`8` in this example)
+1. The datapoint (`106` in this example)
 2. The key under which this value should be published in the state (`humidity` in this example)
 3. The value converter, this converts the received value before publishing it (`tuya.valueConverter.raw` in this example). There are more value converters available, examples:
     - If the value needs to be divided by 10 you can use `tuya.valueConverter.divideBy10`
