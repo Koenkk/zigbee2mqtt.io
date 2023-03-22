@@ -13,7 +13,7 @@ Start by figuring out the location of your adapter as explained [here](./01_linu
 **IMPORTANT**: Using a Raspberry Pi? Make sure to check [Notes for Raspberry Pi users](#notes-for-raspberry-pi-users).
 
 ## Creating the initial configuration
-Navigate to the directory where you whish to store the Zigbee2MQTT data and execute:
+Navigate to the directory where you will store the Zigbee2MQTT data and execute the following command:
 
 ```bash
 wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.yaml -P data
