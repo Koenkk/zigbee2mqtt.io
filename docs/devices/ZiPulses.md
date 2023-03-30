@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | ZiPulses  |
 | Vendor  | [LiXee](/supported-devices/#v=LiXee)  |
 | Description | Lixee ZiPulses |
-| Exposes | voltage, temperature, energy, divisor, multiplier, unitOfMeasure |
-| Picture | ![LiXee ZiPulses](https://www.zigbee2mqtt.io/images/devices/ZLinky_TIC.jpg) |
+| Exposes | voltage, temperature, multiplier, divisor, unitOfMeasure, energy, linkquality |
+| Picture | ![LiXee ZiPulses](https://www.zigbee2mqtt.io/images/devices/ZiPulses.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,43 +27,62 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
-<!-- ## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
- -->
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
-
-### Energy (numeric)
-Sum of consumed energy.
-Value can be found in the published state on the `energy` property.
-It's not possible to read (`/get`)
-
-
-### divisor (numeric)
-Impulse division factor for the calculation of the energy consumed
-Value can be found in the published state on the `divisor` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-
-### multiplier (numeric)
-Impulse multiplier factor for the calculation of the energy consumed
-Value can be found in the published state on the `multiplier` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-## unitOfMeasure (enum)
-Unit of the energy consumed
-Value can be found in the published state on the `unitOfMeasure` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`)
-The unit of this value is `°C`.
 
 ### Voltage (numeric)
 Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Multiplier (numeric)
+It is necessary to press the link button to update.
+Value can be found in the published state on the `multiplier` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"multiplier": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `1000`.
+
+### Divisor (numeric)
+It is necessary to press the link button to update.
+Value can be found in the published state on the `divisor` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"divisor": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `1000`.
+
+### UnitOfMeasure (enum)
+It is necessary to press the link button to update.
+Value can be found in the published state on the `unitOfMeasure` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"unitOfMeasure": NEW_VALUE}`.
+The possible values are: `kWh`, `m3`, `ft3`, `ccf`, `US gl`, `IMP gl`, `BTUs`, `L (litre)`, `kPA (jauge)`, `kPA (absolu)`, `kPA (absolu)`, `sans unité`, `MJ`, `kVar`.
+
+### Energy (numeric)
+Value can be found in the published state on the `energy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+

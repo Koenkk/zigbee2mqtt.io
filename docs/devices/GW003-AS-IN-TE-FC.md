@@ -37,11 +37,11 @@ pageClass: device-page
 ## Exposes
 
 ### Programming_operation_mode (enum)
-Controls how programming affects the thermostat. Possible values: setpoint (only use specified setpoint), schedule (follow programmed setpoint schedule). Changing this value does not clear programmed schedules..
+Controls how programming affects the thermostat. Possible values: setpoint (only use specified setpoint), schedule (follow programmed setpoint schedule), schedule_with_preheat (follow programmed setpoint schedule with pre-heating). Changing this value does not clear programmed schedules..
 Value can be found in the published state on the `programming_operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"programming_operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"programming_operation_mode": NEW_VALUE}`.
-The possible values are: `setpoint`, `schedule`, `eco`.
+The possible values are: `setpoint`, `schedule`, `schedule_with_preheat`, `eco`.
 
 ### Climate 
 This climate device supports the following features: `local_temperature`, `occupied_cooling_setpoint`, `occupied_heating_setpoint`, `system_mode`, `preset`, `fan_mode`, `swing_mode`.

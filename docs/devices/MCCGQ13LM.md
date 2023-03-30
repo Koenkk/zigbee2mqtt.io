@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MCCGQ13LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara P1 door & window contact sensor |
-| Exposes | contact, battery, voltage, linkquality |
+| Exposes | contact, battery, voltage, battery_cover, linkquality |
 | Picture | ![Xiaomi MCCGQ13LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ13LM.jpg) |
 
 
@@ -49,6 +49,11 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Battery_cover (binary)
+Value can be found in the published state on the `battery_cover` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `OPEN` battery_cover is ON, if `CLOSE` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

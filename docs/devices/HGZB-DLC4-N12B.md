@@ -50,7 +50,6 @@ With [one](./324131092621.md) of the [two](./929002398602.md) Hue Dimmer switche
 5. Switch the bulb off and on again: it can now be paired again.
 
 See also the [VIDEO: Factory reset a Hue bulb with Hue dimmer switch](https://www.youtube.com/watch?v=qvlEAELiJKs).
-
 <!-- Notes END: Do not edit below this line -->
 
 
