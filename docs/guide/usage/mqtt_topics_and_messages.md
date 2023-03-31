@@ -8,10 +8,10 @@ This page describes which MQTT topics are used by Zigbee2MQTT. Note that the bas
 
 ## zigbee2mqtt/FRIENDLY_NAME
 
-The `FRIENDLY_NAME` is the IEEE-address or, if defined, the `friendly_name` of a device.
+The `FRIENDLY_NAME` is the IEEE-address or, if defined, the `friendly_name` of a device or group.
 
 ::: tip
-You can use the `/` separator in `friendly_name` to structure devices.
+You can use the `/` separator in `friendly_name` to structure devices and groups.
 For example, using a `friendly_name` like `kitchen/floor_light` would result in a corresponding MQTT structure with `kitchen` as folder containing `floor_light` in MQTT Explorer.
 :::
 
@@ -52,7 +52,7 @@ Published messages are **always** in a JSON format. Each device produces a diffe
 If ["Device-Availability"](../configuration/device-availability.md) is configured the online/offline status will be published when it changes.
 
 ## zigbee2mqtt/FRIENDLY_NAME/set
-Publishing messages to this topic allows you to control your Zigbee devices via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH). How to control a specific device can be found in the *Exposes* section on the device page which can be accessed via ["Supported devices"](../../supported-devices/).
+Publishing messages to this topic allows you to control your Zigbee devices or groups via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH). How to control a specific device can be found in the *Exposes* section on the device page which can be accessed via ["Supported devices"](../../supported-devices/).
 
 ```js
 {
@@ -61,6 +61,8 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
   "color": {"x": 0.123, "y": 0.123} // Color in XY
 }
 ```
+
+If FRIENDLY_NAME refers to a group, it will set the state for all devices in that group.
 
 ### Without JSON
 In case you don't want to use JSON, publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set/state` with payload `ON` is the same as publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"state": "ON"}`.

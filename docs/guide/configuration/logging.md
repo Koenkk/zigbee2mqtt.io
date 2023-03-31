@@ -36,7 +36,7 @@ advanced:
     pid: process.pid # PID of the process that log messages are coming from (Default process.pid).
     facility: local0 # Syslog facility to use (Default: local0).
     localhost: localhost # Host to indicate that log messages are coming from (Default: localhost).
-    type: 5424 # The type of the syslog protocol to use (Default: BSD, also valid: 5424).
+    type: "5424" # The type of the syslog protocol to use (Default: BSD, also valid: 5424).
     app_name: Zigbee2MQTT # The name of the application (Default: Zigbee2MQTT).
     eol: '\n' # The end of line character to be added to the end of the message (Default: Message without modifications).
 
