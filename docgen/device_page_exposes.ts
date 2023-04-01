@@ -224,28 +224,31 @@ function getExposeDocs(expose, definition) {
       lines.push(`\`\`\`\``);
     }
   } else if (expose.type === 'climate') {
+    const readGet = (expose) => {
+      if (expose.access & access.GET) {
+        return `To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${expose.property}": ""}\`.`;
+      } else {
+        return `Reading (\`/get\`) this attribute is not possible.`;
+      }
+    }
+
     lines.push(`This climate device supports the following features: ${expose.features.map((e) => `\`${e.name}\``).join(', ')}.`);
     for (const f of expose.features.filter((e) => ['occupied_heating_setpoint', 'occupied_cooling_setpoint', 'current_heating_setpoint', 'pi_heating_demand'].includes(e.name))) {
-      lines.push(`- \`${f.name}\`: ${f.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is the ${f.unit} between \`${f.value_min}\` and \`${f.value_max}\`. To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${f.property}": ""}\`.`);
+      lines.push(`- \`${f.name}\`: ${f.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is the ${f.unit} between \`${f.value_min}\` and \`${f.value_max}\`. ${readGet(f)}`);
     }
 
     const localTemperature = expose.features.find((e) => e.name === 'local_temperature');
     if (localTemperature) {
-      lines.push(`- \`${localTemperature.name}\`: ${localTemperature.description} (in ${localTemperature.unit}).`);
-      if (localTemperature.access & access.GET) {
-        lines[lines.length - 1] += ` To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${localTemperature.property}": ""}\`.`;
-      } else {
-        lines[lines.length - 1] += ` Reading (\`/get\`) this attribute is not possible.`;
-      }
+      lines.push(`- \`${localTemperature.name}\`: ${localTemperature.description} (in ${localTemperature.unit}). ${readGet(localTemperature)}`);
     }
 
     for (const f of expose.features.filter((e) => ['system_mode', 'preset', 'mode'].includes(e.name))) {
-      lines.push(`- \`${f.name}\`: ${f.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is one of: ${f.values.map((v) => `\`${v}\``).join(', ')}. To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${f.property}": ""}\`.`);
+      lines.push(`- \`${f.name}\`: ${f.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is one of: ${f.values.map((v) => `\`${v}\``).join(', ')}. ${readGet(f)}`);
     }
 
     const runningState = expose.features.find((e) => e.name === 'running_state');
     if (runningState) {
-      lines.push(`- \`${runningState.name}\`: ${runningState.description}. Possible values are: ${runningState.values.map((v) => `\`${v}\``).join(', ')}. To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${runningState.property}": ""}\`.`);
+      lines.push(`- \`${runningState.name}\`: ${runningState.description}. Possible values are: ${runningState.values.map((v) => `\`${v}\``).join(', ')}. ${readGet(runningState)}`);
     }
 
     const localTemperatureCalibration = expose.features.find((e) => e.name === 'local_temperature_calibration');
