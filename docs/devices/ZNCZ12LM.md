@@ -116,7 +116,7 @@ If value equals `true` power_outage_memory is ON, if `false` OFF.
 ### Auto_off (binary)
 Turn the device automatically off when attached device consumes less than 2W for 20 minutes.
 Value can be found in the published state on the `auto_off` property.
-It's not possible to read (`/get`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"auto_off": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_off": NEW_VALUE}`.
 If value equals `true` auto_off is ON, if `false` OFF.
 

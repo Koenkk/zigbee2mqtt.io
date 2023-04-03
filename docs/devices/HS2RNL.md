@@ -1,7 +1,7 @@
 ---
-title: "Woolley SA-029 control via MQTT"
-description: "Integrate your Woolley SA-029 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-08-31T11:26:27
+title: "HEIMAN HS2RNL control via MQTT"
+description: "Integrate your HEIMAN HS2RNL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-03-30T17:14:36
 pageClass: device-page
 ---
 
@@ -11,20 +11,22 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Woolley SA-029
+# HEIMAN HS2RNL
 
 |     |     |
 |-----|-----|
-| Model | SA-029  |
-| Vendor  | [Woolley](/supported-devices/#v=Woolley)  |
-| Description | Smart Plug |
-| Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Woolley SA-029](https://www.zigbee2mqtt.io/images/devices/SA-029.jpg) |
+| Model | HS2RNL  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Description | Smart repeater & night light |
+| Exposes | switch (state), battery, linkquality |
+| Picture | ![HEIMAN HS2RNL](https://www.zigbee2mqtt.io/images/devices/HS2RNL.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+This device contains an internal backup battery which is used in case of a power outage.
+The manufacturer states that it can last up to 7 hours.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -41,12 +43,12 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `toggle`, `previous`.
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported..
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

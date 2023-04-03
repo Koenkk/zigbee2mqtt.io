@@ -33,6 +33,7 @@ To pair this device you have to install the device via its installation code whi
 To factory reset the device unplug it from the mains. While pressing and holding the device's main button on the top, plug it in again. As soon as the device's LED is starting to blink orange, release the main button and press and hold it again until the device's LED is lighting up green. The device will then restart and look for a Zigbee network to join. In case something went wrong, the device's LED will start to blink red. The process has then to be start all over again.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
