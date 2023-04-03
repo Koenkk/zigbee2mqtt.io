@@ -24,6 +24,11 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Notes
+### Pairing
+- Before starting the pairing process the device's install code needs to be added to Zigbee2MQTT. Note down the install code e.g. by scanning the QR code with the camera of your mobile phone and copy the received value
+- The install code can be found inside the device before attaching it to the mounting plate
+- Add this install code under Settings -> Tools -> Add install code
 
 <!-- Notes END: Do not edit below this line -->
 
