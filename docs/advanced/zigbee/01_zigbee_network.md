@@ -31,6 +31,17 @@ Zigbee2MQTT logs the device type of your devices on startup, e.g.:
 2018-5-28 20:39:46 INFO 0x00158d0001b79111 (0x00158d0001b79111): WSDCGQ01LM - Xiaomi MiJia temperature & humidity sensor (EndDevice)
 ```
 
+### Green Power devices
+Zigbee Green Power devices are special end devices that are designed to be very energy efficient. Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first by a Green Power "proxy". This means the Green Power device must be in range of a regular Zigbee device that supports the Green Power proxy role. Examples are Philips Hue and (at least some) Ikea Tradfri bulbs.
+
+Green Power devices don't support binding and are not included in network scans.
+
+When pairing a Green Power device, you must choose whether translated messages should be re-transmitted by unicast or broadcast. Only [enable join](../../guide/usage/pairing_devices.md) on a specific device to use unicast for this Green Power device. Enable join on all devices to use broadcast. Do note that each proxy will generate a unique broadcast for each Green Power event, and a single keypress may generate more than one event (e.g. "key down" then "key up"). If there are multiple proxies paired with a Green Power device, this may generate *a lot* of traffic.
+
+*Example Green Power devices: PTM 215Z, SR-ZGP2801K-5C, SR-ZGP2801K2-DIM, SR-ZGP2801K4-DIM*
+
+*Note: Heavy use of broadcasts can negatively impact performance of your network (See [Broadcasts](./02_improve_network_range_and_stability.md)).*
+
 ## Zigbee networking
 
 This section is an overview of how the Zigbee protocol stack divides into layers (See [Wikipedia - IP layers](https://en.wikipedia.org/wiki/Internet_protocol_suite#Layer_names_and_number_of_layers_in_the_literature) ).  The number of layers in this type of description often varies; this discussion uses 4:
