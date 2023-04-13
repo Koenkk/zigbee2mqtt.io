@@ -84,7 +84,7 @@ server {
 ```
 
 ## Apache2 proxy configuration
-Credit: Florian Metzger-Noel https://stackoverflow.com/a/60506715
+Credit: [Florian Metzger-Noel](https://stackoverflow.com/questions/38838567/proxy-websocket-wss-to-ws-apache/60506715#60506715)
 
 Enable these modules using 
 ```a2enmod proxy proxy_wstunnel proxy_http rewrite```
