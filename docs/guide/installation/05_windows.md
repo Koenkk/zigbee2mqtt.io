@@ -22,7 +22,7 @@ In order to be able to communicate with your USB device over a virtual COM port,
 
 ## Installing
 
-1. Download and install Node.js 16 LTS from [their website](https://nodejs.org/en/)
+1. Download and install Node.js 16 LTS from [their website](https://nodejs.org/)
 1. Open up a `Command prompt` or `Powershell` from the Start menu (Powershell has prettier colors)
 1. Verify Node.js was successfully installed
     ```bash
