@@ -54,7 +54,7 @@ Wireshark will start and log the Zigbee messages. As these messages are encrypte
 
 Add the Trust Center link key by going to to Edit -> Preferences -> Protocols -> ZigBee. Set Security Level to *AES-128 Encryption, 32-bit Integrity Protection* and click on *Edit*. Click on *+* and add `5A:69:67:42:65:65:41:6C:6C:69:61:6E:63:65:30:39` with Byte Order Normal.
 
-*NOTE: The Hue bridge uses a [different Trust Center link key](https://peeveeone.com/?p=166)*
+*NOTE: The Hue bridge uses a [different Trust Center link key](https://peeveeone.com/2016/11/breakout-breakthrough/)*
 
 ![Wireshark Trust Center link key](../../images/wireshark_tclink_key.png)
 
@@ -95,8 +95,8 @@ If you happen to have a spare HUSBZB-1 or EZSP stick, you can also use this to s
 On linux systems, the HUSBZB-1 or EZSP stick should work out of the box with no modifications.
 
 #### Windows
-Found on https://www.amazon.com/gp/customer-reviews/RSPH6UCG0N3WK/
-1. Download Silicon Labs CP210x drivers (Amazon won't let me link this, but it should be easy to Google)
+Found on [https://www.amazon.com/gp/customer-reviews/RSPH6UCG0N3WK/](https://www.amazon.com/gp/customer-reviews/RSPH6UCG0N3WK/)
+1. Download Silicon Labs [CP210x drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
 2. Extract drivers to a folder (I'll use C:\CP210x_Windows_Drivers as an example)
 3. Open Windows Device Manager (Win+X, M)
 4. Right-click on "Other Devices > HubZ ZigBee Com Port" (NOT Z-Wave) and select "Update driver"
