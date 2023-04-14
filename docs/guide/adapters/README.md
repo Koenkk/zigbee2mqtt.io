@@ -432,7 +432,7 @@ Initial development started on experimental (beta stage) support for Silicon Lab
       adapter: ezsp
     ```
    
-    * [Coordinator firmware](https://sonoff.tech/product-review/sonoff-zigbee-3-0-usb-dongle-plus-tutorials/)
+    * [Coordinator firmware](https://sonoff.tech/product-review/how-to-use-sonoff-dongle-plus-on-home-assistant-how-to-flash-firmware/)
     * [Flashing](https://sonoff.tech/wp-content/uploads/2022/08/SONOFF-Zigbee-3.0-USB-dongle-plus-firmware-flashing-.pdf)
     * [Buy](https://itead.cc/product/zigbee-3-0-usb-dongle/)
   
@@ -495,7 +495,7 @@ Initial development started on experimental (beta stage) support for Silicon Lab
       adapter: ezsp
     ```
   
-    * [Coordinator firmware](https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle/EZSP)
+    * [Coordinator firmware](https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle-NoSigned/EZSP)
     * [Flashing](https://github.com/Elelabs/elelabs-zigbee-ezsp-utility)
     * [Buy](https://www.aliexpress.com/item/1005002791666029.html)
   
@@ -538,7 +538,7 @@ Initial development started on experimental (beta stage) support for Silicon Lab
    
     * [Coordinator firmware](https://github.com/grobasoz/zigbee-firmware)
     * [Flashing](https://github.com/tube0013/tube_gateways)
-    * [Buy](https://www.tubeszb.com/shop/2) (TubesZB Zigbee variants including Silabs EFR32 MGM12/MGM210P module based models)
+    * [Buy](https://tubeszb.com/product/efr32-mgm21-ethernetusb-serial-coordinator/) (TubesZB Zigbee variants including Silabs EFR32 MGM12/MGM210P module based models)
   
     ![](../../images/TubesZB_efr32.jpg)
     </details>
