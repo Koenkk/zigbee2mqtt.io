@@ -27,7 +27,7 @@ pageClass: device-page
 ## Notes
 
 ### Issues with device turning off
-It's been reported by several people that this plug randomly turns off. See https://github.com/Koenkk/zigbee2mqtt/issues/11648
+It's been reported by several people that this plug randomly turns off. See [github issue](https://github.com/Koenkk/zigbee2mqtt/issues/11648).
 
 ### Broken attribute reporting functionality
 
