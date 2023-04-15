@@ -46,13 +46,13 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
   * Connect to the device with the serial software (for serial connection parameters, see guide)
       
       `putty -serial -sercfg 115200,8,n,1 /dev/ttyACM0`  
-      <img src="https://user-images.githubusercontent.com/15908175/224636713-b46d1322-7ecc-4ace-ba4b-5dd1f5469301.png" width="350" height="250"/>
+      <img src="../../docs/images/putty-bootloader-1.png" width="350" height="250"/>
 
   * Press and hold the "BOOT" button (upper button in the lower right corner next to the USB plug in the photo below)
   * and then press the "RST." button (lower button in the lower right corner next to the USB plug in the photo below) to restart the device 
   <img src="https://www.zigbee2mqtt.io/images/guides/SONOFF-DongleE-Router/dongle-e-naked.jpg" width="648" height="242"/>
 * Fifth, to upload the file, in the bootloader terminal press '1' to initiate the upload  
-  <img src="https://user-images.githubusercontent.com/15908175/224637421-2dec2c47-62e2-4b9d-9070-372d9f1c652e.png" width="350" height="250"/>
+  <img src="../../docs/images/putty-bootloader-2.png" width="350" height="250"/>
   * Open another terminal on the host system to send the file through XMODEM    
 
       `sx Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl < /dev/ttyACM0 > /dev/ttyACM0`
