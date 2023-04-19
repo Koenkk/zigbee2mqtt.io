@@ -29,7 +29,7 @@ pageClass: device-page
 ### Pairing
 
 1. Pull the cover in the direction out from the radiator
-2. Insert 2x AA batteries. Manual says alkaline ones should last for 1,5years. When replacing old batteries, it os recommended to wait approx 1 minute before inserting new ones.
+2. Insert 2x AA batteries. Manual says alkaline ones should last for 1,5years. When replacing old batteries, it is recommended to wait approx 1 minute before inserting new ones.
 3. Ins will appear on the display - motor is travelling back - to allow easy installation (Ins + rotating n is shown). After few seconds Ada is shown.
 4. Install the thermostat on radiator valve - display whould be on top side.
 5. Insert the cover back to thermostat - Push and Pull symbols should match.
