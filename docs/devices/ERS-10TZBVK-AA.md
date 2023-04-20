@@ -46,15 +46,7 @@ simulated_brightness:
   interval: 200 # interval in milliseconds, default = 200
 ```
 
-
-## Exposes
-
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `toggle`, `brightness_step_up`, `brightness_step_down`, `color_temperature_step_up`, `color_temperature_step_down`, `saturation_move`, `hue_move`, `hue_stop`, `single`, `double`, `hold`, `rotate_left`, `rotate_right`.
-
+## Device Operation
 Device can be set in two modes : COMMAND and EVENT (Current Mode is published on the operation_mode property). A triple click seems firmware dependend (no action shown) and will toggle between COMMAND and EVENT mode.
 
 - `COMMAND` mode
@@ -82,6 +74,14 @@ Action_Rate = Keeps "No value" all the time
 | Hold | hold |
 
 action_step_size, action_transition_time, action_rate are still present but show "no value"
+
+## Exposes
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `toggle`, `brightness_step_up`, `brightness_step_down`, `color_temperature_step_up`, `color_temperature_step_down`, `saturation_move`, `hue_move`, `hue_stop`, `single`, `double`, `hold`, `rotate_left`, `rotate_right`.
 
 ### Action_step_size (numeric)
 Value can be found in the published state on the `action_step_size` property.
