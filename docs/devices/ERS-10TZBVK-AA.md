@@ -33,20 +33,8 @@ To pair, press the reset button on the back until the green LED flashes.
 ### The `toggle` action switches on/off an unexpected zigbee device
 The source of the problem is that manufactures of the knob and another device placed them into group 0 by default. To bypass it, you should manually create a group in Z2M with different ID (ID=1, for example) and add your knob inside.
 For more details take a look at [the issue](https://github.com/Koenkk/zigbee2mqtt/issues/12397).
-<!-- Notes END: Do not edit below this line -->
 
-
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval. Example:
-```yaml
-simulated_brightness:
-  delta: 20 # delta per interval, default = 20
-  interval: 200 # interval in milliseconds, default = 200
-```
-
-## Device Operation
+### Device operation
 Device can be set in two modes : COMMAND and EVENT (Current Mode is published on the operation_mode property). A triple click seems firmware dependend (no action shown) and will toggle between COMMAND and EVENT mode.
 
 - `COMMAND` mode
@@ -74,6 +62,18 @@ Action_Rate = Keeps "No value" all the time
 | Hold | hold |
 
 action_step_size, action_transition_time, action_rate are still present but show "no value"
+<!-- Notes END: Do not edit below this line -->
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval. Example:
+```yaml
+simulated_brightness:
+  delta: 20 # delta per interval, default = 20
+  interval: 200 # interval in milliseconds, default = 200
+```
 
 ## Exposes
 
