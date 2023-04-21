@@ -33,6 +33,35 @@ To pair, press the reset button on the back until the green LED flashes.
 ### The `toggle` action switches on/off an unexpected zigbee device
 The source of the problem is that manufactures of the knob and another device placed them into group 0 by default. To bypass it, you should manually create a group in Z2M with different ID (ID=1, for example) and add your knob inside.
 For more details take a look at [the issue](https://github.com/Koenkk/zigbee2mqtt/issues/12397).
+
+### Device operation
+Device can be set in two modes : COMMAND and EVENT (Current Mode is published on the operation_mode property). A triple click seems firmware dependend (no action shown) and will toggle between COMMAND and EVENT mode.
+
+- `COMMAND` mode
+
+| User Action  | `action` property |
+| ------------- | ------------- |
+| Rotate Left | Brightness_Step_Up|
+| Rotate Right | Brightness_Step_Down|
+| Single Click | Toggle|
+| HOLD more than 3s | Hue_Move|
+| UnHold button | Hue_Stop|
+| Push+Hold and Rotate Left | color_temperature_step_up|
+| Push+Hold and Rotate Left | color_temperature_step_down|
+
+Action_Step_Size = %Numeric_Value (0_255)
+Action_Rate = Keeps "No value" all the time
+- `EVENT` mode
+
+| User Action  | `action` property |
+| ------------- | ------------- |
+| Rotate Left | rotate_left |
+| Rotate Left | rotate_right |
+| Single Click | single |
+| Double Click | double |
+| Hold | hold |
+
+action_step_size, action_transition_time, action_rate are still present but show "no value"
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -45,7 +74,6 @@ simulated_brightness:
   delta: 20 # delta per interval, default = 20
   interval: 200 # interval in milliseconds, default = 200
 ```
-
 
 ## Exposes
 
@@ -90,4 +118,3 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
-

@@ -6,7 +6,7 @@ sidebar: auto
 
 ## MQTT discovery
 The easiest way to integrate Zigbee2MQTT with Home Assistant is by
-using [MQTT discovery](https://www.home-assistant.io/docs/mqtt/discovery/).
+using [MQTT discovery](https://www.home-assistant.io/integrations/mqtt#mqtt-discovery).
 This allows Zigbee2MQTT to automatically add devices to Home Assistant.
 
 To achieve the best possible integration (including MQTT discovery):

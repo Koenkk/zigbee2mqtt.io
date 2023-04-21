@@ -10,6 +10,8 @@ First you have to determine the ieee address of your old stick, there are 2 ways
 {"id":1,"type":"Coordinator","ieeeAddr":"0x00124b000e89686d","nwkAddr":0...
 ```
 
+Note that the *primary* ieee address will remain the same and these instructions only change the *secondary* ieee address.  The tools below generally only show the primary ieee address, so it can appear that the changes aren't taking effect.  Setting the secondary ieee address via the instructions below is sufficient to avoid the problem mentioned above.
+
 ## ZigStar Multi Tool
 Supports: CC2652, CC1352, CC2538
 1. [Download](https://github.com/xyzroe/ZigStarGW-MT/releases) and run the tool
