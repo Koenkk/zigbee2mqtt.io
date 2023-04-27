@@ -1,7 +1,7 @@
 ---
-title: "TuYa TS0601_smoke control via MQTT"
-description: "Integrate your TuYa TS0601_smoke via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2021-07-01T18:17:29Z
+title: "ShinaSystem SBM300ZC1 control via MQTT"
+description: "Integrate your ShinaSystem SBM300ZC1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-04-27T17:39:26
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_smoke
+# ShinaSystem SBM300ZC1
 
 |     |     |
 |-----|-----|
-| Model | TS0601_smoke  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | Smoke sensor |
-| Exposes | smoke, battery, battery_state, linkquality |
-| Picture | ![TuYa TS0601_smoke](https://www.zigbee2mqtt.io/images/devices/TS0601_smoke.jpg) |
+| Model | SBM300ZC1  |
+| Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
+| Description | SiHAS remote control |
+| Exposes | battery, voltage, action, linkquality |
+| Picture | ![ShinaSystem SBM300ZC1](https://www.zigbee2mqtt.io/images/devices/SBM300ZC1.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -31,12 +31,6 @@ pageClass: device-page
 
 ## Exposes
 
-### Smoke (binary)
-Indicates whether the device detected smoke.
-Value can be found in the published state on the `smoke` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` smoke is ON, if `false` OFF.
-
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
@@ -44,11 +38,17 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Battery_state (enum)
-State of the battery.
-Value can be found in the published state on the `battery_state` property.
+### Voltage (numeric)
+Voltage of the battery in millivolts.
+Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `low`, `medium`, `high`.
+The unit of this value is `mV`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`, `long`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

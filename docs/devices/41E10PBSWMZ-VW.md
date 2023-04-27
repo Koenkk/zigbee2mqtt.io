@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | 41E10PBSWMZ-VW  |
 | Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Wiser 40/300-Series module switch 10A with ControlLink |
-| Exposes | switch (state), power_on_behavior, linkquality |
+| Exposes | switch (state), indicator_mode, power_on_behavior, linkquality |
 | Picture | ![Schneider Electric 41E10PBSWMZ-VW](https://www.zigbee2mqtt.io/images/devices/41E10PBSWMZ-VW.jpg) |
 
 
@@ -40,6 +40,13 @@ pageClass: device-page
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+
+### Indicator_mode (enum)
+Led Indicator Mode.
+Value can be found in the published state on the `indicator_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `consistent_with_load`, `reverse_with_load`, `always_off`, `always_on`.
 
 ### Power_on_behavior (enum)
 Controls the behavior when the device is powered on after power loss.

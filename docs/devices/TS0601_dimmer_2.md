@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | 2 gang smart dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), countdown, linkquality |
 | Picture | ![TuYa TS0601_dimmer_2](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_2.jpg) |
-| White-label | Moes ZS-EUD_2gang |
+| White-label | Moes ZS-EUD_2gang, Moes MS-105B |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

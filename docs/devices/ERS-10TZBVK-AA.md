@@ -75,6 +75,7 @@ simulated_brightness:
   interval: 200 # interval in milliseconds, default = 200
 ```
 
+
 ## Exposes
 
 ### Action (enum)
@@ -118,3 +119,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+

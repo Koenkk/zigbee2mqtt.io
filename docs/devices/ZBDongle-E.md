@@ -58,7 +58,6 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
       `sx Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl < /dev/ttyACM0 > /dev/ttyACM0`
   * Wait for 'Serial upload complete', then press '2' in the Bootloader Terminal to restart the dongle.
 * Finally, the dongle LED blinks green, inidicating it is in paring mode. Pair as usual with Z2M.
-
 <!-- Notes END: Do not edit below this line -->
 
 

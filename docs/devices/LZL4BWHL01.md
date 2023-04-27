@@ -51,7 +51,7 @@ This method should work for Philips Hue bulbs, IKEA TRADFRI bulbs, GE Link bulbs
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `down`, `up`, `stop`.
+The possible values are: `brightness_step_down`, `brightness_step_up`, `brightness_stop`, `brightness_move_to_level`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
