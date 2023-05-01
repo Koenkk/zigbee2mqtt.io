@@ -28,6 +28,10 @@ pageClass: device-page
 The device can operate either as a two-channel light switch or as roller shutter/window blind. The operation mode is set after the initial pairing. Currently, the light switch operation mode is configured as a default. Roller shutter operation mode is not supported yet.
 <!-- Notes END: Do not edit below this line -->
 
+### Pairing
+
+To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the inside of the battery cover with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK" which will get zigbee2mqtt into pairing mode automatically. Wait for your device to be joined.
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
