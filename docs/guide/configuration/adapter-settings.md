@@ -4,7 +4,7 @@ sidebarDepth: 1
 
 # Adapter settings
 
-# Configuration of the Zigbee USB-Adapter.  
+## Configuration of the Zigbee USB-Adapter.  
 You can use `dmesg` command on Linux hosts to find the mounted device. Where possible you should use the `/dev/serial/by-id/` path of the stick, instead of `/dev/tty*`. This is because the `/dev/tty*` path can change - for example `/dev/ttyACM0` may become `/dev/ttyACM1` and then later back to `/dev/ttyACM0`. The `/dev/serial/by-id/` path won't change.
 ```yaml
 # Required: serial settings
@@ -23,8 +23,8 @@ serial:
   rtscts: false
 ```
 
-# Configuration of the Zigbee Ethernet-Adapter. 
-Find IP address of your Ethernet Zigbee-Adapter through your router/switch web-interface.
+## Configuration of the Zigbee-Network(Ethernet/Wi-Fi) Adapter. 
+Find IP address of your  Zigbee-Network Adapter through your router/switch web-interface.
 ```yaml
 # Required: serial settings
 serial:
@@ -41,16 +41,17 @@ serial:
   rtscts: false
 ```
 
-# Automatic discovery of Zigbee Ethernet-Adapter via MDNS Zeroconf.
-Your adapter must support discovery via MDNS Zeroconf!\
-There should be no other devices on your network with the same MDNS service type.\
-When using this autodetection, the following parameters in `configuration.yaml` will be ignored: `adapter, baudrate`\
-Consult the user manual or the manufacturer of the device to find out what type of MDNS service it uses.
+## MDNS Zeroconf discovery.
+Zigbee2MQTT supports automatic discovery of Zigbee-Network Adapters. In order to use this feature, your Adapter must support discovery via MDNS Zeroconf.
+
+If you have a more than 1 device with the same MDNS service type (name), Zigbee2MQTT with Autodiscover option will connect to the random one. So for proper use we recommend to have only one physically connected network adapter with the same MDNS service type (name). Otherwise, please set-up a settings over IP address and port, as described int he passage above.
+
+When using this autodetection, the following parameters in `configuration.yaml` will be ignored: `adapter`, `baudrate`
 
 List of tested devices supporting Zeroconf autodiscovery
-| Device  | MDNS type |
-| :---    | :---:     |
-| SLZB-06 | slzb-06   |
+| Device  | MDNS service type |
+| :---    | :---:             |
+| SLZB-06 | slzb-06           |
 
 ```yaml
 # Required: serial settings
@@ -63,7 +64,7 @@ serial:
 ```
 
 <!-- TODO: some notes about rtscts? Is it useful, which adapter supports it? -->
-# Advanced configuration.
+## Advanced configuration.
 ```yaml
 advanced:
   # Optional: configure adapter concurrency (e.g. 2 for CC2531 or 16 for CC26X2R1) (default: null, uses recommended value)
