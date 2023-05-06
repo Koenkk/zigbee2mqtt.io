@@ -29,7 +29,7 @@ You can run Zigbee2MQTT in different ways, see [Installation](../installation/).
 set up and run Zigbee2MQTT.
 
 ### 1.) Find the Zigbee-Adapter
-
+#### 1.1) USB Zigbee-Adapter
 After you plug the adapter in see the `dmesg` output to find the device location:
 
 ```bash
@@ -50,13 +50,20 @@ crw-rw---- 1 root dialout 188, May 16 19:15 /dev/ttyUSB0
 ```
 
 Here we can see that the adapter is owned by `root` and accessible from all users in the `dialout` group.
+#### 1.2) Ethernet Zigbee-Adapter
+Zigbee2MQTT supports mdns autodiscovery feature for Ethernet Zigbee-Adapters starting from the version. If your Ethernet Zigbee-Adapter supports mdns, you do not need to know the IP address of your Etherneе Zigbee-Adapter, Zigbee2MQTT will detect it and configure. Otherwise, you need to know the Ethernet Zigbee-Adapter's IP address:
+- Connect your adapter to your LAN network either over Ethernet or Wi-Fi, depending on your adapter. 
+- Go to your Router/Switch setting and find the list of connected device.
+- Find the IP address and of your Ethernet Zigbee adapter.
+- You also need to know the communication port of your Ethernet Zigbee-Adapter. In most cases (TubeZB, SLZB-06) the default port is `6638`. You can check the port at your Adapter's user manual.
+
 
 ### 2.) Setup and start Zigbee2MQTT
 
 It's assumed, that you have a recent version of Docker and Docker Compose installed.
 
 
-First, we create a folder where we want the project to reside `mkdir folder-name`. In the folder, we create we save the `docker-compose.yml` file which defines how Docker would run our containers. The following file consists of two services, one for the MQTT-Server and one for Zigbee2MQTT itself. Be sure to adjust the file to your needs and match the devices-mount in the case your adapter was not mounted on `/dev/ttyUSB0`.
+First, we create a folder where we want the project to reside `mkdir folder-name`. In the folder, we create we save the `docker-compose.yml` file which defines how Docker would run our containers. The following file consists of two services, one for the MQTT-Server and one for Zigbee2MQTT itself. Be sure to adjust the file to your needs and match the devices-mount in the case your adapter was not mounted on `/dev/ttyUSB0` or you use not USB but Ethernet Zigbee adapter.
 
 
 ```yaml
@@ -88,7 +95,6 @@ services:
 ```
 
 In the next step we'll create a simple [Zigbee2MQTT config file](../configuration/) in `zigbee2mqtt-data/configuration.yaml`.
-
 ```yaml
 # Let new devices join our zigbee network
 permit_join: true
@@ -105,7 +111,21 @@ frontend:
 # Let Zigbee2MQTT generate a new network key on first start
 advanced:
   network_key: GENERATE
-```
+```  
+for Ethernet based adapters, `serial` settings should looks like:
+```yaml
+serial:
+  port: tcp://192.168.1.12:6638
+``` 
+
+where `192.168.1.112` is an IP address of your Ethernet Zigbee adapter, and `6638` is a port.
+
+For the MDNS supported devices you can omit direct IP address and use the following configuration:
+ ```yaml
+serial:
+  port: mdns://slzb-06
+```  
+where `slzb-06` is a mdns name of your Ethernet Zigbee adapter.    
 
 We should now have two files in our directory and can start the stack:
 
