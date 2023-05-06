@@ -584,9 +584,8 @@ Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the b
 - [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) (multi platform Python based command line tool) ([instructions](./flashing/flashing_via_cc2538-bsl.md))
 - [llama-bsl](https://github.com/electrolama/llama-bsl) (multi platform Python based command line tool, a fork of cc2538-bsl with added features)
 - Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)  
-- Some Ethernet adapters support flashing Zigbee firmware over their own web-interface.
-<img src="../../images/flashing/web-interface-ota-flashing.jpg" title="SLZB-06 WEB OTA Zigbee Flashing" class="float-left" />
-In this case you do not need any external software and hardware. Just go to the web-interface and press "Update Zigbee firmware". Please refer to the manual of each particular Zigbee adapter for this functionality.
+- Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
+<img src="../../images/flashing/web-interface-ota-flashing.jpg" title="SLZB-06 WEB OTA Zigbee Flashing" class="float-left" height=300 />
 
 
 #### Flashing an existing adapter

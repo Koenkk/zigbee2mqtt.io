@@ -4,12 +4,12 @@ sidebarDepth: 1
 
 # Adapter settings
 
-## Configuration of the Zigbee Adapter.
-For Zigbee-USB Adapters you can use `dmesg` command on Linux hosts to find the mounted device. Where possible you should use the `/dev/serial/by-id/` path of the stick, instead of `/dev/tty*`. This is because the `/dev/tty*` path can change - for example `/dev/ttyACM0` may become `/dev/ttyACM1` and then later back to `/dev/ttyACM0`. The `/dev/serial/by-id/` path won't change.
+## Configuration of the Zigbee adapter
+For USB apdaters you can use `dmesg` command on Linux hosts to find the mounted device. Where possible you should use the `/dev/serial/by-id/` path of the stick, instead of `/dev/tty*`. This is because the `/dev/tty*` path can change - for example `/dev/ttyACM0` may become `/dev/ttyACM1` and then later back to `/dev/ttyACM0`. The `/dev/serial/by-id/` path won't change.
 
-For Zigbee-Network Adapters you need to find IP address of your Adapter through router/switch web-interface.\
+For Zigbee network adapters you need to find IP address of your adapter through router/switch web-interface.\
 ::: warning ATTENTION
-IP address of the Zigbee-Network Adapter can change if it has not been set to `static` in your router/switch
+IP address of the Zigbee network adapter can change if it has not been assigned a static IP address
 :::
 
 ```yaml
@@ -30,25 +30,22 @@ serial:
   rtscts: false
 ```
 
-## MDNS Zeroconf discovery.
-Zigbee2MQTT supports automatic discovery of Zigbee-Network Adapters. In order to use this feature, your Adapter must support discovery via MDNS Zeroconf.
+## mDNS Zeroconf discovery.
+Zigbee2MQTT supports automatic discovery of Zigbee network Adapters. In order to use this feature, your adapter must support discovery via mDNS Zeroconf.
 
-If you have a more than 1 device with the same MDNS service type (name), Zigbee2MQTT with Autodiscover option will connect to the random one. So for proper use we recommend to have only one physically connected network adapter with the same MDNS service type (name). Otherwise, please set-up a settings over IP address and port, as described int he passage above.
+If you have a more than 1 device with the same mDNS service type (name), Zigbee2MQTT with autodiscover option will connect to the random one. So for proper use we recommend to have only one physically connected network adapter with the same mDNS service type (name). Otherwise, please set-up a settings over IP address and port, as described on the passage above.
 
 ::: warning ATTENTION
 When using this autodetection, the following parameters in `configuration.yaml` will be ignored: `adapter`, `baudrate`
 :::
 
-List of tested devices supporting Zeroconf autodiscovery:
+List of tested devices supporting mDNS Zeroconf autodiscovery:
 | Device  | MDNS service type |
 | :---    | :---:             |
 | SLZB-06 | slzb-06           |
 
 ```yaml
-# Required: serial settings
 serial:
-  # Required: location of the adapter (e.g. CC2531).
-  # For MDNS autodiscovery use format "port: mdns://device_service_type".
   port: mdns://slzb-06
   # Optional: disable LED of the adapter if supported (default: false)
   disable_led: false

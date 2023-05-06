@@ -11,9 +11,9 @@ The file have to be located in the `data` directory within your installation. Th
 # Minimal configuration.yml example
 permit_join: true
 mqtt:
-  server: mqtt://localhost:1883 
+  server: mqtt://localhost:1883
 serial:
-  # Could be either USB port (/dev/ttyUSB0) or Ethernet port for Ethernet Zigbee adapters (tcp://192.168.1.1:6638).
+  # Could be either USB port (/dev/ttyUSB0), network Zigbee adapters (tcp://192.168.1.1:6638) or mDNS adapter (mdns://my-adapter).
   port: /dev/ttyUSB0
 # Will run frontend on port 8080
 frontend: true 
