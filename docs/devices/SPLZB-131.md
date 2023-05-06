@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SPLZB-131  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Power plug |
-| Exposes | switch (state), power, current, voltage, energy, ac_frequency, linkquality |
+| Exposes | switch (state), power, power_reactive, current, voltage, energy, ac_frequency, linkquality |
 | Picture | ![Develco SPLZB-131](https://www.zigbee2mqtt.io/images/devices/SPLZB-131.jpg) |
 
 
@@ -62,6 +62,15 @@ Instantaneous measured power.
 Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
+
+### Reactive Power (numeric)
+Instantaneous measured reactive power.
+Reactive Power exists due to difference in phase between Voltage and Current.
+This value depends of Capacitive/Inductive load attached and it's something that energy suppliers don't want it to exist because it's a "waste" and usually not billed to their consumers.
+Negative values are perfectly normal.
+Value can be found in the published state on the `power` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `VAR`.
 
 ### Current (numeric)
 Instantaneous measured electrical current.
