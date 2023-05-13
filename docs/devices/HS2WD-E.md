@@ -25,6 +25,9 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Pairing 
+
+Push the included pin in the small hole on the case of the device and hold for ~5 seconds until the LED starts flashing.
 
 ### Triggering the alarm
 The alarm can be trigged by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` message
