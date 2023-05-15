@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Water leak detector |
 | Exposes | water_leak, battery_low, battery, linkquality |
 | Picture | ![TuYa TS0207_water_leak_detector](https://www.zigbee2mqtt.io/images/devices/TS0207_water_leak_detector.jpg) |
-| White-label | CR Smart Home TS0207 |
+| White-label | CR Smart Home TS0207, 898ZT |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
