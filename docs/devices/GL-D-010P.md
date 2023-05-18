@@ -11,7 +11,7 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Gledopto GL-D-007P
+# Gledopto GL-D-010P
 
 |     |     |
 |-----|-----|
