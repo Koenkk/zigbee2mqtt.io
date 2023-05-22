@@ -25,7 +25,7 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-This device does not act as a Zigbee router, even when the optional Neutral is connected. In addition the vendor does not provide a firmware update to enable the functionality.
+This device does not act as a Zigbee router, even when the optional neutral connection is used. In addition the vendor does not provide a firmware update to enable the router functionality.
 <!-- Notes END: Do not edit below this line -->
 
 
