@@ -7,6 +7,9 @@ In case you are experiencing an unstable or bad network range you can do the fol
 ## Adapter
 Use a [recommended](../../guide/adapters/README.md) adapter, especially the CC2530 and CC2531 are known to perform poorly.
 
+## Avoid devices from AwoX
+It is known that AwoX devices cause network issues. In case you are having issues, remove them from your network.
+
 ## USB based adapter
 The range of these adapters can greatly be improved when connecting them with an USB extension
 cable instead of directly plugging it into the computer (e.g. Raspberry Pi). When plugged directly into the computer, the antenna suffers from interference of radio signals and electrical components of the computer. Also be sure not to position the adapter too close
