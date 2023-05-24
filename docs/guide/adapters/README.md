@@ -32,8 +32,6 @@ _(in order of first appearance)_
 
   * <details>
     <summary>Slaesh's CC2652RB stick</summary>
-
-    **WARNING:** Problems with customer support have been [reported](https://github.com/Koenkk/zigbee2mqtt/discussions/6702).
   
     USB connected adapter with external antenna based on CC2652RB chip  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC2652RB_coordinator_20221226.zip)  
