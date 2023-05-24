@@ -32,6 +32,7 @@ The lights connected to the controller will fade in and out when the controlled 
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

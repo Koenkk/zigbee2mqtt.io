@@ -53,6 +53,7 @@ When bound to a lamp, the behavior is as follows (for WXCJKG12LM Aqara Opple swi
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)

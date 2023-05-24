@@ -33,6 +33,7 @@ pageClass: device-page
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

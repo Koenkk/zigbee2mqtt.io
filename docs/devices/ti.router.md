@@ -32,6 +32,7 @@ This is a Texas Instruments CC1352P-2, CC2652RB or CC2652R flashed with the foll
 
 
 
+
 ## Exposes
 
 ### Transmit_power (numeric)

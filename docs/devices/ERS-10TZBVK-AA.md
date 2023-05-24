@@ -65,6 +65,7 @@ action_step_size, action_transition_time, action_rate are still present but show
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

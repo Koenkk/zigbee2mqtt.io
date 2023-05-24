@@ -40,6 +40,7 @@ pageClass: device-page
 1. Reset finalized on the fifth power on, when the device is fully light and flashes four times
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

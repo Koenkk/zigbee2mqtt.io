@@ -29,6 +29,7 @@ pageClass: device-page
 Press and hold the center ring for 10 seconds until the blue network indicator flashes.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

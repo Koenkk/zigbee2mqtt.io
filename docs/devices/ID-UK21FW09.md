@@ -33,6 +33,7 @@ To start paring, turn on the light, press the knob for 2 times and long press th
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

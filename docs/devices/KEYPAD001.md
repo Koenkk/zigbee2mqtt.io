@@ -67,6 +67,7 @@ The automation server must follow the notification with an actual change to the 
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

@@ -38,6 +38,7 @@ To factory reset the device remove the batteries. While pressing and holding the
 
 
 
+
 ## Exposes
 
 ### Battery_low (binary)

@@ -36,6 +36,7 @@ Double click the pairing button to toggle the display between Celsius and Fahren
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

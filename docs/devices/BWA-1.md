@@ -31,6 +31,7 @@ To pair this device you have to install the device via its installation code. Th
 
 
 
+
 ## Exposes
 
 ### Water_leak (binary)

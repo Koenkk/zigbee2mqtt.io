@@ -30,6 +30,7 @@ Long press the button for 6s until the LED indicator flashes in blue, which mean
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

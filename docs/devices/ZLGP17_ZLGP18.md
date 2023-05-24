@@ -48,6 +48,7 @@ This device can work on any channel, not only 11. For this, please refer to the 
 
 
 
+
 ## Exposes
 
 ### Action (enum)

@@ -33,6 +33,7 @@ Press and hold the reset button by pressing hard on the top of the device (water
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

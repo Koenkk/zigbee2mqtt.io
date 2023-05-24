@@ -55,6 +55,7 @@ Set `max_duration` from the Zigbee2MQTT UI or by publishing `{"max_duration": NE
 This alarm are preset to highest volume
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

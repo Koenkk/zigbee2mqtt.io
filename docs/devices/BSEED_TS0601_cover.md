@@ -33,6 +33,7 @@ Calibration can be done manualy by pressing and holding pause button until it st
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

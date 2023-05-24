@@ -42,6 +42,7 @@ After this the device will automatically join. If this doesn't work, try with a 
 ![ZNCLBL01LM pairing](../images/pairing/ZNCLBL01LM_pairing.jpg)
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

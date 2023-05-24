@@ -41,6 +41,7 @@ After this the device will automatically join.
 ![JT-BZ-01AQ/A pairing](../images/pairing/JT-BZ-01AQ_A_pairing.jpg)
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

@@ -37,6 +37,7 @@ In order for this device to work (fully), at least the following firmware is req
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)

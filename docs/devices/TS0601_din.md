@@ -42,6 +42,7 @@ This value shows `null` until meter measures some about 0.2 amount of kWh consum
 
 
 
+
 ## Exposes
 
 ### Switch 

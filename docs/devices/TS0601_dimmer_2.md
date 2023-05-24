@@ -31,6 +31,7 @@ Turn off the light switches (no blue light). Press one of the switch buttons for
 
 
 
+
 ## Exposes
 
 ### Light (l1 endpoint)

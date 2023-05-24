@@ -30,6 +30,7 @@ When pairing, make sure to keep the sensor awake for 20 seconds by opening and c
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
