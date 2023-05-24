@@ -34,6 +34,7 @@ To factory reset the device unplug it from the mains. While pressing and holding
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

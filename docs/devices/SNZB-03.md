@@ -33,6 +33,7 @@ If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatical
 
 
 
+
 ## Exposes
 
 ### Occupancy (binary)

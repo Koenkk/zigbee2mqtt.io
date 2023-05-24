@@ -39,6 +39,7 @@ In order for this device to work (fully), at least the following firmware is req
 Press and hold button on top of device until connection symbol appears
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

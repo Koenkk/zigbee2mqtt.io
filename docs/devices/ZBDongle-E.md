@@ -62,6 +62,7 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
 
 
 
+
 ## Exposes
 
 ### Light_indicator_level (numeric)

@@ -31,6 +31,7 @@ If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatical
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

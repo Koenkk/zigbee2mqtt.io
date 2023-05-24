@@ -31,6 +31,7 @@ pageClass: device-page
 The device itself supports two modes: `RGBW mode` and `Dual color temperature mode`. When the device works under `Dual color temperature mode`, it can control two color temperature lightstrips individually at the same time, and this is the only mode being supported by Zigbee2MQTT currently. More details can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/8510).
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

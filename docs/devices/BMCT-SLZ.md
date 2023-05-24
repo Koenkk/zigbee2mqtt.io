@@ -29,6 +29,7 @@ The device can operate either as a two-channel light switch or as roller shutter
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

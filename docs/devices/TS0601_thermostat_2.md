@@ -32,6 +32,7 @@ Long press left button (Auto/Manual Mode) AND right button (Comfort/Energy Savin
 
 
 
+
 ## Exposes
 
 ### Battery_low (binary)

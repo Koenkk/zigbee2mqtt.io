@@ -33,6 +33,7 @@ Note: This device doesn't support Zigbee channels 25 & 26.
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

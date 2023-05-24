@@ -34,6 +34,7 @@ NB: you HAVE to put the device VERY close to the zigbee device, otherwise it won
 If this doesn't work, try holding the button for 5 seconds.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

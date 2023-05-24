@@ -32,6 +32,7 @@ A temporary solution is currently to install an older firmware version (v32) wit
 Press and hold the button on the device for +- 5 seconds, until the blue light starts blinking.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

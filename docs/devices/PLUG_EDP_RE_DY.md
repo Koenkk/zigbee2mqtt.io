@@ -31,6 +31,7 @@ Factory reset the plug (hold the switch button for >10sec). After resetting the 
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

@@ -60,6 +60,7 @@ The remote supports Touchlink. It is unclear how the Touchlink configuration int
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)

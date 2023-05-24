@@ -34,6 +34,7 @@ If battery value is not showing in Zigbee2MQTT briefly pressing reset button AFT
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

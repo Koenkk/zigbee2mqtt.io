@@ -34,6 +34,7 @@ Instructions on how to build this device can be found [here](https://github.com/
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

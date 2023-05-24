@@ -143,6 +143,7 @@ The water endpoint functions as what could be considered an on/off switch based 
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

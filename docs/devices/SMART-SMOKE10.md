@@ -32,6 +32,7 @@ After this the device will reset and try to join a network.
 
 
 
+
 ## Exposes
 
 ### Smoke_state (text)

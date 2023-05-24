@@ -38,6 +38,7 @@ pageClass: device-page
 8. There is a hidden reset button under the cover, in case of repairing or other issues press it for 5 seconds.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

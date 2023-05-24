@@ -33,6 +33,7 @@ Long press reset button for 5s until the LED indicator flashes three times, whic
 
 
 
+
 ## Exposes
 
 ### Contact (binary)

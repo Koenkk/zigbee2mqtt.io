@@ -37,6 +37,7 @@ Please note, that currently you will only get one endpoint for binding even thou
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)

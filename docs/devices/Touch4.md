@@ -31,6 +31,7 @@ More information about this devices can be found here: https://databyte.ch/proje
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)

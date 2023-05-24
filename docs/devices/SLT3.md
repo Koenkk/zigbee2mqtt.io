@@ -32,6 +32,7 @@ To pair the thermostat controller to both Zigbee2MQTT and the thermostat, a fact
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)
