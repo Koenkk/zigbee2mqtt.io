@@ -5,7 +5,7 @@ This page will guide you through the process of adding support for new devices t
 
 In case you require any help feel free to create an [issue](https://github.com/Koenkk/zigbee2mqtt/issues).
 
-**Before** starting, first check if your device is not already supported in the Zigbee2MQTT dev branch! This can be done by searching on your Zigbee model (see step 1 below) in any of the files [here](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices).
+**Before** starting, first check if your device is not already supported in the Zigbee2MQTT dev branch! This can be done by searching on your Zigbee model (see step 1 below) in any of the files [here](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices).
 
 ## Instructions
 ### 1. Pairing the device with Zigbee2MQTT
