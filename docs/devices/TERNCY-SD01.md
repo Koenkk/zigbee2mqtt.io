@@ -25,6 +25,11 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Channel
+This device [does not work](https://github.com/Koenkk/zigbee2mqtt/discussions/7259#discussioncomment-6012304) on Zigbee channel 20-24.
+
+### Pairing
+Press and hold the knob on the device for 8 seconds (until the indicator blinks blue light 3 times) the indicator will continue blinking blue light if pairing is successful otherwise it will blink red light.
 
 ### Deprecated click event
 By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
