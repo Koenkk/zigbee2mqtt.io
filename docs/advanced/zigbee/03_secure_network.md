@@ -27,5 +27,4 @@ To let Zigbee2MQTT generate a new network key on next startup, add the following
 advanced:
   network_key: GENERATE
 ```
-Generating a new network key by changing the key to "GENERATE" is not supported when using the HomeAssistant add-on. 
 
