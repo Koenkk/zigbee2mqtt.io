@@ -500,6 +500,28 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     ![](../../images/ZB-GW04.jpg)
     </details>
 
+  * <details>
+    <summary>Z-Wave.Me Z-Station dual Zigbee & Z-Wave </summary>
+
+    USB connected adapter with external antenna and USB extension cable.
+    Supports Zigbee and Z-Wave.
+
+    Z-Station is a Z-Wave and Zigbee USB adapter. A controller software compatible to the Silicon Labs Z-Wave Serial API (for example Z-Way) and Zigbee NCP is required to use the functions of the device.
+
+    Based on Silabs EFR32MG21P and ZGM130S.
+
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+      baudrate: 115200
+    ```
+
+    * [Buy](https://z-wave.me/products/z-station/)
+
+    ![](../../images/z-station.jpg)
+    </details>
+
 * Raspberry Pi
 
   * <details>
