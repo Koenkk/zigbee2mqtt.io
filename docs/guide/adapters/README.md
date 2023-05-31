@@ -541,6 +541,29 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     ![](../../images/TubesZB_efr32.jpg)
     </details>
 
+* mPCIe adaptor
+  * <details>
+    <summary>Z-Wave.Me dual Zigbee & Z-Wave mPCIe adaptor</summary>
+
+    USB connected adapter with external antenna and mPCIe USB adaptor.
+    Supports Zigbee and Z-Wave.
+
+    The Z-Wave.Me Z-Wave and Zigbee mPCIe adapter is a controller board for embedded application. It fits in the mPCIe slot with full- or half-size holder. A controller software compatible to the Silicon Labs Z-Wave Serial API (for example Z-Way) and Zigbee NCP is required to use the functions of the device.
+
+    The Z-Wave and Zigbee mPCIe adapter supports Z-Wave and Zigbee / Thread / Bluetooth Low Energy (on your choice, selected by firmware update). Based on Silabs EFR32MG21P and ZGM130S.
+
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+      baudrate: 115200
+    ```
+
+    * [Buy](https://z-wave.me/products/mpcie/)
+
+    ![](../../images/z-wave_me_mpcie_adaptor.jpg)
+    </details>
+
 ### Based on ZiGate
   
 Initial development started on experimental (alpha stage) support for various ZigGate adapters.  This includes all ZiGate compatible hardware adapters which are currently based on NXP Zigbee MCU chips like JN5168 and JN5169  with ZigGate 3.1d firmware or later.
