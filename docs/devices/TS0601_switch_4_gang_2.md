@@ -18,12 +18,17 @@ pageClass: device-page
 | Model | TS0601_switch_4_gang_2  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 4-Gang switch with backlight |
-| Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
-| Picture | ![TuYa TS0601_switch_4_gang_2](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_4_gang.jpg) |
+| Exposes | switch (state), backlight_mode, linkquality |
+| Picture | ![TuYa TS0601_switch_4_gang_2](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_4_gang_2.jpg) |
+
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+
 <!-- Notes END: Do not edit below this line -->
+
+
+
 
 ## Exposes
 
@@ -47,10 +52,12 @@ The current state of this switch is in the published state under the `state_l4` 
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l4": "ON"}`, `{"state_l4": "OFF"}` or `{"state_l4": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
 
-### Backlight Mode
-The current state of this switch is in the published state under the `backlight_mode` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": "ON"}`or  `{"backlight_mode": "OFF"}`.
-It's not possible to read (`/get`) this value.
+### Backlight_mode (binary)
+Mode of the backlight.
+Value can be found in the published state on the `backlight_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+If value equals `ON` backlight_mode is ON, if `OFF` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

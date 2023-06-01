@@ -111,7 +111,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `ON` frost_protection is ON, if `OFF` OFF.
 
 ### Boost_timeset_countdown (numeric)
-Setting minimum 0 - maximum 465 seconds boost time. The boost (♨) function is activated. The remaining time for the function will be counted down in seconds ( 465 to 0 )..
+Setting minimum 0 - maximum 465 seconds boost time. The boost (â¨) function is activated. The remaining time for the function will be counted down in seconds ( 465 to 0 )..
 Value can be found in the published state on the `boost_timeset_countdown` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_timeset_countdown": NEW_VALUE}`.

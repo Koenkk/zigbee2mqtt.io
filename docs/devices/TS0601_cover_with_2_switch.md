@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | TS0601_cover_with_2_switch  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | Curtain / Blind switch with 2 Gang switch |
-| Exposes | cover (state, position), switch, accurate_calibration, backlight_switch, motor_steering, child_lock, linkquality |
+| Description | Curtain/blind switch with 2 Gang switch |
+| Exposes | cover (state, position), switch (state), calibration, backlight_mode, motor_steering, child_lock, linkquality |
 | Picture | ![TuYa TS0601_cover_with_2_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_with_2_switch.jpg) |
 
 
@@ -28,6 +28,7 @@ pageClass: device-page
 ## Pairing
 press down and set simultaneously until LED flashes blue.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -44,13 +45,6 @@ To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set`
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
-
 ### Switch (l1 endpoint)
 The current state of this switch is in the published state under the `state_l1` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l1": "ON"}`, `{"state_l1": "OFF"}` or `{"state_l1": "TOGGLE"}`.
@@ -58,27 +52,41 @@ It's not possible to read (`/get`) this value.
 
 ### Switch (l2 endpoint)
 The current state of this switch is in the published state under the `state_l2` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"switch_2
-": "TOGGLE"}`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
 
-### Backlight mode
-The current state of this switch is in the published state under the `backlight_mode` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": "ON"}`, `{"backlight_mode": "OFF"}` or `{"backlight_mode": "TOGGLE"}`.
+### Calibration (enum)
+Calibration.
+Value can be found in the published state on the `calibration` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": NEW_VALUE}`.
+The possible values are: `START`, `END`.
 
-### Child Lock
-The current state of this switch is in the published state under the `child_lock` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "ON"}`, `{"child_lock": "OFF"}` or `{"child_lock": "TOGGLE"}`.
+### Backlight_mode (binary)
+Backlight.
+Value can be found in the published state on the `backlight_mode` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+If value equals `ON` backlight_mode is ON, if `OFF` OFF.
 
-### Calibration
-The current state of this switch is in the published state under the `calibration` property (value is `start` or `end`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": "start"}` or `{"calibration": "end"}`.
+### Motor_steering (enum)
+Motor Steering.
+Value can be found in the published state on the `motor_steering` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_steering": NEW_VALUE}`.
+The possible values are: `FORWARD`, `BACKWARD`.
 
-### Motor steering
-The current state of this switch is in the published state under the `motor_steering` property (value is `forward` or `back`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_steering": "forward"}` or `{"motor_steering": "back"}`.
+### Child_lock (binary)
+Child Lock.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `ON` child_lock is ON, if `OFF` OFF.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 

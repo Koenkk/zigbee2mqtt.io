@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MCCGQ13LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara P1 door & window contact sensor |
-| Exposes | contact, battery, voltage, battery_cover, linkquality |
+| Exposes | contact, battery, voltage, battery_cover, detection_distance, linkquality |
 | Picture | ![Xiaomi MCCGQ13LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ13LM.jpg) |
 
 
@@ -55,6 +55,13 @@ The unit of this value is `mV`.
 Value can be found in the published state on the `battery_cover` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `OPEN` battery_cover is ON, if `CLOSE` OFF.
+
+### Detection_distance (enum)
+The sensor will be considered "off" within the set distance. Please press the device button before setting.
+Value can be found in the published state on the `detection_distance` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_distance": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance": NEW_VALUE}`.
+The possible values are: `10mm`, `20mm`, `30mm`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

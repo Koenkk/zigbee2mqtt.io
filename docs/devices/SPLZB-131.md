@@ -64,12 +64,9 @@ Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Reactive Power (numeric)
+### Power_reactive (numeric)
 Instantaneous measured reactive power.
-Reactive Power exists due to difference in phase between Voltage and Current.
-This value depends of Capacitive/Inductive load attached and it's something that energy suppliers don't want it to exist because it's a "waste" and usually not billed to their consumers.
-Negative values are perfectly normal.
-Value can be found in the published state on the `power` property.
+Value can be found in the published state on the `power_reactive` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `VAR`.
 

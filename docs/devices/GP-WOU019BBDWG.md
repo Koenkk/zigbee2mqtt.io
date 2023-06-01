@@ -27,7 +27,6 @@ pageClass: device-page
 
 ### No current and voltage
 This plug does not support voltage and current reporting, see [this issue](https://github.com/Koenkk/zigbee2mqtt/issues/5198) for more information.
-
 <!-- Notes END: Do not edit below this line -->
 
 

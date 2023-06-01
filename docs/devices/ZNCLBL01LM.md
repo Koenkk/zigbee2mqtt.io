@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNCLBL01LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara curtain driver E1 |
-| Exposes | cover (state, position), hand_open, limits_calibration, battery, voltage, device_temperature, action, motor_state, running, hooks_lock, hooks_state, target_position, power_source, charging, linkquality |
+| Exposes | cover (state, position), hand_open, limits_calibration, battery, voltage, device_temperature, illuminance_lux, action, motor_state, running, hooks_lock, hooks_state, target_position, power_source, charging, linkquality |
 | Picture | ![Xiaomi ZNCLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNCLBL01LM.jpg) |
 | White-label | Xiaomi CM-M01 |
 
@@ -57,6 +57,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 * `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -101,6 +103,12 @@ Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
+
+### Illuminance_lux (numeric)
+Measured illuminance in lux.
+Value can be found in the published state on the `illuminance_lux` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | BMCT-SLZ  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
-| Description | Bosch Light/shutter control unit II |
+| Description | Light/shutter control unit II |
 | Exposes | device_type, switch_type, switch (state), power_on_behavior, child_lock, cover (state, position), motor_state, calibration_closing_time, calibration_opening_time, linkquality |
 | Picture | ![Bosch BMCT-SLZ](https://www.zigbee2mqtt.io/images/devices/BMCT-SLZ.jpg) |
 

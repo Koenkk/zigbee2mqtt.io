@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | QS-Zigbee-SEC02-U  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | 2 gang switch module with neutral wire |
+| Description | Zigbee 3.0 smart light switch module 2 gang |
 | Exposes | switch (state), linkquality |
 | Picture | ![TuYa QS-Zigbee-SEC02-U](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-SEC02-U.jpg) |
 
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

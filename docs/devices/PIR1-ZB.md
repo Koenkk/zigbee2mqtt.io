@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | PIR1-ZB  |
 | Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
-| Description | PIR Sensor |
+| Description | PIR sensor |
 | Exposes | occupancy, battery_low, tamper, battery, voltage, linkquality |
 | Picture | ![MiBoxer PIR1-ZB](https://www.zigbee2mqtt.io/images/devices/PIR1-ZB.jpg) |
 

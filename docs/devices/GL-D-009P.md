@@ -17,16 +17,19 @@ pageClass: device-page
 |-----|-----|
 | Model | GL-D-009P  |
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
-| Description | Zigbee 12W anti-glare downlight RGB+CCT (pro) |
+| Description | Zigbee 12W Downlight RGB+CCT (pro) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
 | Picture | ![Gledopto GL-D-009P](https://www.zigbee2mqtt.io/images/devices/GL-D-009P.jpg) |
-
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -97,3 +100,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+
