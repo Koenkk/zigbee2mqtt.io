@@ -586,6 +586,21 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     ![](../../images/z-wave_me_mpcie_adaptor.jpg)
     </details>
 
+* Wiren Board
+  * <details>
+    <summary> Wiren Board 7 </summary>
+
+    Wiren Board 7 with Zigbee module with external antenna.
+
+    The Z-Wave.Me Wiren Board 7 is a professional multiprotocol controller for home and commercial automation. It is a DIN-rail ready Debian-based computer with Z-Way software and a lot of other open-source software including MQTT broker, device configurators, port configurators. 
+
+    Based on Silabs MGM210PA32JIA.
+
+    * [Buy](https://z-wave.me/products/wirenboard-7/)
+
+    ![](../../images/wiren-board-7.jpg)
+    </details>
+
 ### Based on ZiGate
   
 Initial development started on experimental (alpha stage) support for various ZigGate adapters.  This includes all ZiGate compatible hardware adapters which are currently based on NXP Zigbee MCU chips like JN5168 and JN5169  with ZigGate 3.1d firmware or later.
