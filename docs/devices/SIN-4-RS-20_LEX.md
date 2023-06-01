@@ -27,7 +27,10 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
-
+<!-- Notes BEGIN -->
+## Notes
+In many cases it is needed to restart the zigbee2mqtt service before being able to send commands after the initial pairing. 
+<!-- Notes END -->
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
