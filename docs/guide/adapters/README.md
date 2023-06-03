@@ -500,6 +500,28 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     ![](../../images/ZB-GW04.jpg)
     </details>
 
+  * <details>
+    <summary>Z-Wave.Me Z-Station dual Zigbee & Z-Wave </summary>
+
+    USB connected adapter with external antenna and USB extension cable.
+    Supports Zigbee and Z-Wave.
+
+    Z-Station is a Z-Wave and Zigbee USB adapter. A controller software compatible to the Silicon Labs Z-Wave Serial API (for example Z-Way) and Zigbee NCP is required to use the functions of the device.
+
+    Based on Silabs EFR32MG21P and ZGM130S.
+
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+      baudrate: 115200
+    ```
+
+    * [Buy](https://z-wave.me/products/z-station/)
+
+    ![](../../images/z-station.jpg)
+    </details>
+
 * Raspberry Pi
 
   * <details>
@@ -539,6 +561,44 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     * [Buy](https://tubeszb.com/product/efr32-mgm21-ethernetusb-serial-coordinator/) (TubesZB Zigbee variants including Silabs EFR32 MGM12/MGM210P module based models)
   
     ![](../../images/TubesZB_efr32.jpg)
+    </details>
+
+* mPCIe adapter
+  * <details>
+    <summary>Z-Wave.Me dual Zigbee & Z-Wave mPCIe adapter</summary>
+
+    USB connected adapter with external antenna and mPCIe USB adapter.
+    Supports Zigbee and Z-Wave.
+
+    The Z-Wave.Me Z-Wave and Zigbee mPCIe adapter is a controller board for embedded application. It fits in the mPCIe slot with full- or half-size holder. A controller software compatible to the Silicon Labs Z-Wave Serial API (for example Z-Way) and Zigbee NCP is required to use the functions of the device.
+
+    The Z-Wave and Zigbee mPCIe adapter supports Z-Wave and Zigbee / Thread / Bluetooth Low Energy (on your choice, selected by firmware update). Based on Silabs EFR32MG21P and ZGM130S.
+
+    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+      baudrate: 115200
+    ```
+
+    * [Buy](https://z-wave.me/products/mpcie/)
+
+    ![](../../images/z-wave_me_mpcie_adaptor.jpg)
+    </details>
+
+* Wiren Board
+  * <details>
+    <summary> Wiren Board 7 </summary>
+
+    Wiren Board 7 with Zigbee module with external antenna.
+
+    The Z-Wave.Me Wiren Board 7 is a professional multiprotocol controller for home and commercial automation. It is a DIN-rail ready Debian-based computer with Z-Way software and a lot of other open-source software including MQTT broker, device configurators, port configurators. 
+
+    Based on Silabs MGM210PA32JIA.
+
+    * [Buy](https://z-wave.me/products/wirenboard-7/)
+
+    ![](../../images/wiren-board-7.jpg)
     </details>
 
 ### Based on ZiGate
