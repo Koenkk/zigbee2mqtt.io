@@ -304,6 +304,32 @@ _(in order of first appearance)_
     ![](../../images/cc26x2r1.jpg)
     </details>
 
+  * <details>
+    <summary>Texas Instruments LP-CC2652R7</summary>
+  
+    USB connected development kit, based on CC2652R7 chip  
+    These devices have two serial devices built in. Make sure you put the right serial device in the [configuration](../configuration/) or use auto detect (completely remove the `serial` section from `configuration.yaml`) if you only have one Texas Instruments CC device connected to your system.
+  
+    * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC2652R7_coordinator_20230507.zip)  
+    * [Flashing instructions](./flashing/flashing_via_uniflash.md) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+    * [Buy](http://www.ti.com/tool/LP-CC2652R7)
+  
+    ![](../../images/CC2652R7.png)
+    </details>
+
+  * <details>
+    <summary>Texas Instruments LP-CC1352P7</summary>
+  
+    USB connected development kit, based on CC1352P7 chip  
+    These devices have two serial devices built in. Make sure you put the right serial device in the [configuration](../configuration/) or use auto detect (completely remove the `serial` section from `configuration.yaml`) if you only have one Texas Instruments CC device connected to your system.
+  
+    * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P7_coordinator_20230507.zip)  
+    * [Flashing instructions](./flashing/flashing_via_uniflash.md) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+    * [Buy](https://www.ti.com/tool/LP-CC1352P7)
+  
+    ![](../../images/LP-CC1352P7.jpg)
+    </details>
+
 ### Other
   * <details>
     <summary>ConBee / ConBee II / RaspBee / RaspBee II</summary>
