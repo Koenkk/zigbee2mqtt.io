@@ -246,7 +246,6 @@ mqtt:
     - name: Zigbee2MQTT Bridge state
       unique_id: zigbee2mqtt_bridge_state_sensor
       state_topic: "zigbee2mqtt/bridge/state"
-      value_template: "{{ value_json.state }}"
       icon: mdi:router-wireless
     # Sensor for Showing the Zigbee2MQTT Version
     - name: Zigbee2MQTT Version
