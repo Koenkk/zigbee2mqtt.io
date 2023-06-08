@@ -12,7 +12,7 @@ In this case we use a Sonoff Zigbee 3.0 USB Dongle Plus and flash the firmware w
 ```bash
 docker run --rm \
     --device /dev/ttyUSB0:/dev/ttyUSB0 \
-    -e FIRMWARE_URL=https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20221226.zip \
+    -e FIRMWARE_URL=https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20221226/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20221226.zip \
     ckware/ti-cc-tool -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb
 ```
 
@@ -45,7 +45,7 @@ Download the firmware for your adapter from the [Supported adapter page](../READ
 
 4. In this case we will flash `CC1352P2_CC2652P_launchpad_coordinator_***.zip`.
 ```bash
-wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20221226.zip
+wget https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20221226/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20221226.zip
 unzip CC1352P2_CC2652P_launchpad_coordinator_20221226.zip
 
 sudo python3 cc2538-bsl.py -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb ./CC1352P2_CC2652P_launchpad_coordinator_20221226.hex
