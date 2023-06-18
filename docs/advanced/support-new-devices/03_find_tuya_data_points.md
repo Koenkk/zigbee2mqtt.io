@@ -54,7 +54,11 @@ Click on the `Device Logs` tab, and you will see a list of all events that the d
 
 #### **Automatic**
 
-Once on the `Device Logs` tab, open up Dev Tools by pressing `ctrl` + `shift` + `i` (Windows) or `cmd` + `alt` + `i` (macOS) on your keyboard, or going to the `3-dot menu` at the top-right of the Chrome window->`More Tools`->`Dev Tools`. When Dev Tools is open, click on the `Console` Tab, then paste the code below in to the console and press `Enter` on your keyboard. Next, open the `DP ID` drop-down list and hover over each item. The running code will automatically fetch the data point ID for each item. Once you have finished, run `export_codes()` in the console. This will output the data point ID-Name correspondences.
+Once on the `Device Logs` tab, open up Dev Tools by pressing `ctrl` + `shift` + `i` (Windows) or `cmd` + `alt` + `i` (macOS) on your keyboard, or going to the `3-dot menu` at the top-right of the Chrome window->`More Tools`->`Dev Tools`. When Dev Tools is open, click on the `Console` Tab, then paste the [code below](#automatic-script) in to the console and press `Enter` on your keyboard. Next, open the `DP ID` drop-down list and hover over each item. The running code will automatically fetch the data point ID for each item. Once you have finished, run `export_codes()` in the console. This will output the data point ID-Name correspondences.
+
+![11_automatic_data_points_fetch](../../images/how_tos/tuya_dp/11_automatic_data_points_fetch.gif)
+
+##### *Automatic script*
 
 > WARNING: Never run code that you do not understand. It is your responsibility to ensure that you understand what the code is doing before running it.
 
