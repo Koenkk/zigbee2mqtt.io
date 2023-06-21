@@ -87,6 +87,19 @@ $ sudo docker run \
 * `--user 1001:1001`: Run the Zigbee2MQTT process within the container using the provided UserID and GroupID
 * `--group-add dialout`: Assign the `dialout` group to the user to be able to access the device 
 
+### Rootless with Podman (>3.2)
+```
+$ podman run \
+   --name=zigbee2mqtt \
+   --restart=unless-stopped \
+   -p 8080:8080 \
+   -v $(pwd)/data:/app/data \
+   -v /run/udev:/run/udev:ro \
+   --device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0 \
+   --group-add keep-groups \
+   -e TZ=Europe/Amsterdam \
+   koenkk/zigbee2mqtt
+```
 
 ## Updating
 To update to the latest Docker image:
