@@ -1,7 +1,7 @@
 ---
-title: "TuYa TS0601_smart_human_presence_sensor_2 control via MQTT"
-description: "Integrate your TuYa TS0601_smart_human_presence_sensor_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-06-01T08:16:21
+title: "TuYa ZY-M100-L control via MQTT"
+description: "Integrate your TuYa ZY-M100-L via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-06-27T19:46:17
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_smart_human_presence_sensor_2
+# TuYa ZY-M100-L
 
 |     |     |
 |-----|-----|
-| Model | TS0601_smart_human_presence_sensor_2  |
+| Model | ZY-M100-L  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | Smart Human presence sensor |
-| Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, linkquality |
-| Picture | ![TuYa TS0601_smart_human_presence_sensor_2](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_human_presence_sensor_2.jpg) |
+| Description | Ceiling human breathe sensor |
+| Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, self_test, linkquality |
+| Picture | ![TuYa ZY-M100-L](https://www.zigbee2mqtt.io/images/devices/ZY-M100-L.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -86,8 +86,14 @@ Fading time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
-The minimal value is `0.5` and the maximum value is `1500`.
+The minimal value is `0` and the maximum value is `1500`.
 The unit of this value is `s`.
+
+### Self_test (enum)
+Self_test, possible resuts: checking, check_success, check_failure, others, comm_fault, radar_fault..
+Value can be found in the published state on the `self_test` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `checking`, `check_success`, `check_failure`, `others`, `comm_fault`, `radar_fault`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

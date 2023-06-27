@@ -144,7 +144,7 @@ It's not possible to read (`/get`) this value.
 Window open?.
 Value can be found in the published state on the `window_open` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `undefined` window_open is ON, if `undefined` OFF.
+If value equals `true` window_open is ON, if `false` OFF.
 
 ### Battery_low (binary)
 Indicates if the battery of this device is almost empty.
@@ -245,7 +245,7 @@ The minimal value is `-10` and the maximum value is `35`.
 The unit of this value is `°C`.
 
 ### Programming_mode (composite)
-Schedule MODE â± - In this mode, the device executes a preset week programming temperature time and temperature..
+Schedule MODE ⏱ - In this mode, the device executes a preset week programming temperature time and temperature..
 - `week` (enum): Week format user for schedule allowed values: `5+2`, `6+1`, `7`
 - `workdays_schedule` (text) 
 - `holidays_schedule` (text) 

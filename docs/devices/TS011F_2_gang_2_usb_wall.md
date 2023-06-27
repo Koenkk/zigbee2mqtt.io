@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS011F_2_gang_2_usb_wall  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2 gang 2 usb wall outlet |
-| Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
+| Exposes | switch (state), power_on_behavior, backlight_mode, lock (state), linkquality |
 | Picture | ![TuYa TS011F_2_gang_2_usb_wall](https://www.zigbee2mqtt.io/images/devices/TS011F_2_gang_2_usb_wall.jpg) |
 
 
@@ -70,6 +70,11 @@ Value can be found in the published state on the `backlight_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
+
+### Lock 
+The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
+To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+It's not possible to read (`/get`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
