@@ -36,6 +36,7 @@ pageClass: device-page
 See [GL-C-008P](./GL-C-008P.md#GL-C-001P).
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

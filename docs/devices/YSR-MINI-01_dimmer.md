@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | YSR-MINI-01_dimmer  |
 | Vendor  | [YSRSAI](/supported-devices/#v=YSRSAI)  |
 | Description | Zigbee LED controller (Dimmer) |
-| Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
+| Exposes | light (state, brightness), linkquality |
 | Picture | ![YSRSAI YSR-MINI-01_dimmer](https://www.zigbee2mqtt.io/images/devices/YSR-MINI-01_dimmer.jpg) |
 
 
@@ -30,6 +30,7 @@ pageClass: device-page
 1. Hold button until LED start flashing (about 6 seconds), then release.
 2. Pairing is done when LED stop flashing.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -67,20 +68,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_step": 40 // Increases brightness by 40
 }
 ````
-
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
-
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

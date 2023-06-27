@@ -48,6 +48,7 @@ If you can't do this, try to remove battery (if it has one), push the button (to
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

@@ -18,14 +18,21 @@ pageClass: device-page
 | Model | BTH-RA  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Radiator thermostat II |
-| Exposes | climate (local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode, pi_heating_demand), boost, window_open, display_orientation, display_ontime, display_brightness, lock (state), battery, linkquality |
+| Exposes | climate (local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode, pi_heating_demand, running_state), boost, window_open, display_orientation, remote_temperature, display_ontime, display_brightness, displayed_temperature, lock (state), battery, linkquality |
 | Picture | ![Bosch BTH-RA](https://www.zigbee2mqtt.io/images/devices/BTH-RA.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+
+### Pairing
+To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the inside of the battery cover with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK" which will get zigbee2mqtt into pairing mode automatically. Wait for your device to be joined.
 
 
+### Factory resetting
+To factory reset the device remove one of the batteries. While pressing and holding the device's main button on the front, insert the battery back. As soon as the device's LED is starting to blink orange while showing "RES", release the main button and press and hold it again until the device's LED is lighting up green. The device will then restart into the calibration process and look for a Zigbee network to join. In case something went wrong, the device's LED will start to blink red. The process has then to be start all over again.
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -40,11 +47,12 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Climate 
-This climate device supports the following features: `local_temperature`, `occupied_heating_setpoint`, `local_temperature_calibration`, `system_mode`, `pi_heating_demand`.
+This climate device supports the following features: `local_temperature`, `occupied_heating_setpoint`, `local_temperature_calibration`, `system_mode`, `pi_heating_demand`, `running_state`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `pi_heating_demand`: Position of the valve (= demanded heat) where 0% is fully closed and 100% is fully open. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pi_heating_demand": VALUE}` where `VALUE` is the % between `0` and `100`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pi_heating_demand": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`, `auto`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
+- `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 - `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-5` and the maximum value is `5` with a step size of `0.1`.
 
 ### Boost (binary)
@@ -68,6 +76,14 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_orientation": NEW_VALUE}`.
 The possible values are: `normal`, `flipped`.
 
+### Remote_temperature (numeric)
+Input for remote temperature sensor. Setting this will disable the internal temperature sensor until batteries are removed!.
+Value can be found in the published state on the `remote_temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"remote_temperature": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"remote_temperature": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `30`.
+The unit of this value is `°C`.
+
 ### Display_ontime (numeric)
 Specifies the diplay On-time.
 Value can be found in the published state on the `display_ontime` property.
@@ -81,6 +97,13 @@ Value can be found in the published state on the `display_brightness` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_brightness": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_brightness": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
+
+### Displayed_temperature (enum)
+Temperature displayed on the thermostat.
+Value can be found in the published state on the `displayed_temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"displayed_temperature": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"displayed_temperature": NEW_VALUE}`.
+The possible values are: `target`, `measured`.
 
 ### Lock 
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).

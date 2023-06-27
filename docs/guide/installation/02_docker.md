@@ -13,7 +13,7 @@ Start by figuring out the location of your adapter as explained [here](./01_linu
 **IMPORTANT**: Using a Raspberry Pi? Make sure to check [Notes for Raspberry Pi users](#notes-for-raspberry-pi-users).
 
 ## Creating the initial configuration
-Navigate to the directory where you whish to store the Zigbee2MQTT data and execute:
+Navigate to the directory where you will store the Zigbee2MQTT data and execute the following command:
 
 ```bash
 wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.yaml -P data
@@ -87,6 +87,19 @@ $ sudo docker run \
 * `--user 1001:1001`: Run the Zigbee2MQTT process within the container using the provided UserID and GroupID
 * `--group-add dialout`: Assign the `dialout` group to the user to be able to access the device 
 
+### Rootless with Podman (>3.2)
+```
+$ podman run \
+   --name=zigbee2mqtt \
+   --restart=unless-stopped \
+   -p 8080:8080 \
+   -v $(pwd)/data:/app/data \
+   -v /run/udev:/run/udev:ro \
+   --device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0 \
+   --group-add keep-groups \
+   -e TZ=Europe/Amsterdam \
+   koenkk/zigbee2mqtt
+```
 
 ## Updating
 To update to the latest Docker image:
@@ -177,7 +190,7 @@ Before executing `docker run` pull the correct image with `docker pull koenkk/zi
 ## Docker Stack device mapping
 *This is only relevant when using Docker Stack*
 
-Docker stack doesn't support device mappings with option `--devices` when deploying a stack in Swam mode. A workaround is to bind the device as volume binding and set the right permissions.
+Docker stack doesn't support device mappings with option `--devices` when deploying a stack in swarm mode. A workaround is to bind the device as a volume binding and set the right permissions.
 
 The workaround is based on the solution found at [Add support for devices with "service create"](https://github.com/docker/swarmkit/issues/1244#issuecomment-285935430), all credits goes this him.
 

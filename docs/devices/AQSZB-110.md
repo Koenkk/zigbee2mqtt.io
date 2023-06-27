@@ -27,6 +27,7 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -53,7 +54,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppb`.
+The unit of this value is `µg/m³`.
 
 ### Temperature (numeric)
 Measured temperature value.

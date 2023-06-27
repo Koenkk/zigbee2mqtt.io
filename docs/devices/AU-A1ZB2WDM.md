@@ -33,6 +33,7 @@ The connected load, and the red LED indicator behind the dimmer knob will flash 
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

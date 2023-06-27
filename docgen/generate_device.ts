@@ -7,6 +7,7 @@ import { generatePage, getAddedAt, getImage, normalizeModel } from "./utils";
 import { generateExpose } from "./device_page_exposes";
 import { generateOptions } from "./device_page_options";
 import { devicesBaseDir, imageBaseDir, imageBaseUrl } from "./constants";
+import { getNotes } from "./device_page_notes";
 
 export function resolveDeviceFile(model) {
   return path.resolve(devicesBaseDir, `${ normalizeModel(model) }.md`);
@@ -69,6 +70,7 @@ ${ device.whiteLabel ? `| White-label | ${ device.whiteLabel.map((d) => `${ d.ve
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ${ notes || "\n"}
 <!-- Notes END: Do not edit below this line -->
+${ getNotes(device) }
 ${ device.hasOwnProperty('ota') ? `
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

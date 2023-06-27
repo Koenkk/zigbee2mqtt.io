@@ -51,6 +51,7 @@ The product code should end in *-M* for the Zigbee version. The label inside the
 
 
 
+
 ## Exposes
 
 ### Smoke (binary)

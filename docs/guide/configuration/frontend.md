@@ -23,7 +23,7 @@ frontend: true
 frontend:
   # Optional, default 8080
   port: 8080
-  # Optional, default 0.0.0.0
+  # Optional, default 0.0.0.0. Opens a unix socket when given a path instead of an address (e.g. '/run/zigbee2mqtt/zigbee2mqtt.sock')
   host: 0.0.0.0
   # Optional, enables authentication, disabled by default
   auth_token: your-secret-token
@@ -84,7 +84,7 @@ server {
 ```
 
 ## Apache2 proxy configuration
-Credit: Florian Metzger-Noel https://stackoverflow.com/a/60506715
+Credit: [Florian Metzger-Noel](https://stackoverflow.com/questions/38838567/proxy-websocket-wss-to-ws-apache/60506715#60506715)
 
 Enable these modules using 
 ```a2enmod proxy proxy_wstunnel proxy_http rewrite```

@@ -51,6 +51,7 @@ If you want to automate the publishing of the outdoor temperature using Home Ass
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

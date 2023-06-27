@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Curtain motor/roller blind motor/window pusher/tubular motor |
 | Exposes | cover (state, position), options, linkquality |
 | Picture | ![TuYa TS0601_cover_1](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_1.jpg) |
-| White-label | Yushun YS-MT750, Zemismart ZM79E-DT, Binthen BCM100D, Binthen CV01A, Zemismart M515EGB, OZ Smart Things ZM85EL-1Z, TuYa M515EGZT, TuYa DT82LEMA-1.2N, TuYa ZD82TN, Moes AM43-0.45/40-ES-EB, Larkkey ZSTY-SM-1SRZG-EU, Zemismart ZM85EL-2Z, Zemismart AM43, Zemismart M2805EGBZTN, Zemismart BCM500DS-TYZ, A-OK AM25, Alutech AM/R-Sm |
+| White-label | Yushun YS-MT750, Zemismart ZM79E-DT, Binthen BCM100D, Binthen CV01A, Zemismart M515EGB, OZ Smart Things ZM85EL-1Z, TuYa M515EGZT, TuYa DT82LEMA-1.2N, TuYa ZD82TN, Larkkey ZSTY-SM-1SRZG-EU, Zemismart AM43, Zemismart M2805EGBZTN, Zemismart BCM500DS-TYZ, A-OK AM25, Alutech AM/R-Sm |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -44,6 +44,7 @@ By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can b
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -59,8 +60,9 @@ It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Options (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"options": {"motor_speed": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"options": {"motor_speed": VALUE, "reverse_direction": VALUE}}`
 - `motor_speed` (numeric): Motor speed max value is 255
+- `reverse_direction` (binary): Reverse the motor direction allowed values: `true` or `false`
 
 ### Linkquality (numeric)
 Link quality (signal strength).

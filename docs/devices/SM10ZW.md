@@ -34,6 +34,7 @@ even without proper enrolment. Device correctly reports open or closed status.
 
 
 
+
 ## Exposes
 
 ### Contact (binary)

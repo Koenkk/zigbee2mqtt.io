@@ -24,7 +24,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-
+The technical manual from Develco states that SMSZB-120 scans Zigbee channels 11-24 when searching for a network to join.
 
 ### Warning usage
 Warning only support a single mode, `burglar`
@@ -54,6 +54,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alar
 Set `max_duration` from the Zigbee2MQTT UI or by publishing `{"max_duration": NEW_VALUE}`
 This alarm are preset to highest volume
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

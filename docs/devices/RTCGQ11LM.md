@@ -25,6 +25,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Battery
+Uses a CR2450 battery.
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
@@ -54,6 +56,7 @@ To work around this, a
 [hardware modification](https://community.smartthings.com/t/making-xiaomi-motion-sensor-a-super-motion-sensor/139806)
 is needed.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

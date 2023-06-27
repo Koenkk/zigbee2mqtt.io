@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Smart plug (with power monitoring) |
 | Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
 | Picture | ![TuYa TS011F_plug_1](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_1.jpg) |
-| White-label | LELLKI TS011F_plug, NEO NAS-WR01B, BlitzWolf BW-SHP15, Nous A1Z, BlitzWolf BW-SHP13, MatSee Plus PJ-ZSW01, MODEMIX MOD037, MODEMIX MOD048, Coswall CS-AJ-DE2U-ZG-11, Aubess TS011F_plug_1 |
+| White-label | LELLKI TS011F_plug, NEO NAS-WR01B, BlitzWolf BW-SHP15, Nous A1Z, BlitzWolf BW-SHP13, MatSee Plus PJ-ZSW01, MODEMIX MOD037, MODEMIX MOD048, Coswall CS-AJ-DE2U-ZG-11, Aubess TS011F_plug_1, Immax 07752L |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -61,6 +61,7 @@ To reset `Child Lock` without Z2M, quickly press the physical button 4 times
 ### Pairing
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
