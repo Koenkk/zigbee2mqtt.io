@@ -70,6 +70,7 @@ Eg. `region_1_enter` is triggered when a person enters `Region 1`.
 `Other regions` (exits, entrances, interference sources, edges) currently not supported. Reverse engineering efforts documented [here](https://github.com/dresden-elektronik/deconz-rest-plugin/issues/5928#issuecomment-1166545226).
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

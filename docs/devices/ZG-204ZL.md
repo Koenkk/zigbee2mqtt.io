@@ -39,6 +39,7 @@ or set values (i.e. `sensitivity` or `keep_time`) will only work when the sensor
 
 
 
+
 ## Exposes
 
 ### Occupancy (binary)

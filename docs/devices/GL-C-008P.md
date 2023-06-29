@@ -45,6 +45,7 @@ The Gledopto GL-C-001P is a 5 in 1 smart LED controller which can identify itsel
 You can switch between the modes using the `Opt` button on the device. After switching modes Zigbee2MQTT will automatically detect the new mode. Note that during the pairing process the log message `identified as: Gledopto Zigbee LED Controller XXX`  might state  model that differs from currently selected one. You should wait for the log message `Detected Gledopto device mode change` that should follow shortly afterwards meaning that Zigbee2MQTT has recognized the currently selected mode.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

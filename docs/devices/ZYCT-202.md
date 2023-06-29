@@ -37,6 +37,7 @@ Press and hold the smart group button (button with two bulbs) and wait until the
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

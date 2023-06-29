@@ -31,6 +31,7 @@ Pair this device with a long press (5 seconds) on the on/off button. The button 
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

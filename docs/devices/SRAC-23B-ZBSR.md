@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SRAC-23B-ZBSR  |
 | Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Smart siren |
-| Exposes | battery_low, tamper, warning, max_duration, alarm, linkquality |
+| Exposes | battery_low, tamper, warning, squawk, max_duration, alarm, linkquality |
 | Picture | ![Climax SRAC-23B-ZBSR](https://www.zigbee2mqtt.io/images/devices/SRAC-23B-ZBSR.jpg) |
 
 
@@ -57,6 +57,7 @@ This alarm are preset to highest volume
 
 
 
+
 ## Exposes
 
 ### Battery_low (binary)
@@ -79,6 +80,12 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warn
 - `strobe` (binary): Turn on/off the strobe (light) during warning allowed values: `true` or `false`
 - `strobe_duty_cycle` (numeric): Length of the flash cycle max value is 10
 - `duration` (numeric): Duration in seconds of the alarm unit is s
+
+### Squawk (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"squawk": {"state": VALUE, "level": VALUE, "strobe": VALUE}}`
+- `state` (enum): Set Squawk state allowed values: `system_is_armed`, `system_is_disarmed`
+- `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
+- `strobe` (binary): Turn on/off the strobe (light) for Squawk allowed values: `true` or `false`
 
 ### Max_duration (numeric)
 Duration of Siren.

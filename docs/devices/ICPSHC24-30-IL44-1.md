@@ -30,6 +30,7 @@ pageClass: device-page
 Factory reset the drivers by holding the dedicated reset button for few seconds, connected ligts will start pulsing after factory reset.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

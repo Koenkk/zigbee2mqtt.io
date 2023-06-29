@@ -53,6 +53,7 @@ See also the [VIDEO: Factory reset a Hue bulb with Hue dimmer switch](https://ww
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

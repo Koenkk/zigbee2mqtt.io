@@ -32,6 +32,7 @@ To pair press any button 5 times and on the 6th time hold it untill you hear bee
 
 
 
+
 ## Exposes
 
 ### Switch (l1 endpoint)

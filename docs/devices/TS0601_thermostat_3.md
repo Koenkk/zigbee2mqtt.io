@@ -31,6 +31,7 @@ You can pair this device by setting device to manual mode by short press rotary 
 
 
 
+
 ## Exposes
 
 ### Lock 

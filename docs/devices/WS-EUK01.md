@@ -32,6 +32,7 @@ Press and hold the button on the device for +- 10 seconds
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

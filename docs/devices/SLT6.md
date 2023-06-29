@@ -44,6 +44,7 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)

@@ -28,6 +28,7 @@ In order to pair the device to your zigbee coordinator, first press the "Permit 
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

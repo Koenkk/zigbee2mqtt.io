@@ -35,6 +35,7 @@ To pair the device, the knob must be pressed for 5 sec. Sometimes, the pairing m
 
 
 
+
 ## Exposes
 
 ### Light 

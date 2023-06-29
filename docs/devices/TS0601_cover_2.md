@@ -32,6 +32,7 @@ On 1-button units; press the set key 3 times in 5 seconds until the LED flashes 
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

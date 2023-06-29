@@ -51,6 +51,7 @@ Press the buttons "down" and "settings" together for 3 seconds and it blinks red
 
 
 
+
 ## Exposes
 
 ### Cover 

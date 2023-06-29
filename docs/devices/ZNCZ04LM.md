@@ -38,6 +38,7 @@ To set this option publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"power_o
 Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

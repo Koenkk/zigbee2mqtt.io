@@ -36,6 +36,7 @@ pageClass: device-page
 This devices is similar to GL-G-001Z, except that Zigbee routing should work for this one.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZB-RGBCW  |
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | Zigbee 3.0 LED-bulb, RGBW LED |
-| Exposes | light (state, brightness, color_temp, color_xy), power_on_behavior, linkquality |
+| Exposes | light (state, brightness, color_temp, color_xy), linkquality |
 | Picture | ![Lonsonho ZB-RGBCW](https://www.zigbee2mqtt.io/images/devices/ZB-RGBCW.jpg) |
 
 
@@ -31,6 +31,7 @@ pageClass: device-page
 3. Repeat off/on four more times.
 4. Reset is done when the device is switched on the fifth time and the light starts pulsing.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -78,13 +79,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "color_temp_step": 99, // Increase color temperature by 99
 }
 ````
-
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
