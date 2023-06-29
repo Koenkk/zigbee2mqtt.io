@@ -1,7 +1,7 @@
 ---
-title: "Adaprox TS0001_1 control via MQTT"
-description: "Integrate your Adaprox TS0001_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-06-01T08:16:21
+title: "AVATTO ZWSM16-1-Zigbee control via MQTT"
+description: "Integrate your AVATTO ZWSM16-1-Zigbee via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-06-27T19:46:17
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Adaprox TS0001_1
+# AVATTO ZWSM16-1-Zigbee
 
 |     |     |
 |-----|-----|
-| Model | TS0001_1  |
-| Vendor  | [Adaprox](/supported-devices/#v=Adaprox)  |
-| Description | White Zigbee fingbot plus |
-| Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Adaprox TS0001_1](https://www.zigbee2mqtt.io/images/devices/TS0001_1.jpg) |
+| Model | ZWSM16-1-Zigbee  |
+| Vendor  | [AVATTO](/supported-devices/#v=AVATTO)  |
+| Description | 1 gang switch module |
+| Exposes | switch (state), power_on_behavior, switch_type, linkquality |
+| Picture | ![AVATTO ZWSM16-1-Zigbee](https://www.zigbee2mqtt.io/images/devices/ZWSM16-1-Zigbee.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -48,6 +48,13 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
+
+### Switch_type (enum)
+Type of the switch.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `toggle`, `state`, `momentary`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

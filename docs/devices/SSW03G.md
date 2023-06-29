@@ -1,6 +1,6 @@
 ---
-title: "Mercator SSW03G control via MQTT"
-description: "Integrate your Mercator SSW03G via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Mercator Ikuü SSW03G control via MQTT"
+description: "Integrate your Mercator Ikuü SSW03G via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SSW03G
+# Mercator Ikuü SSW03G
 
 |     |     |
 |-----|-----|
 | Model | SSW03G  |
-| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
-| Description | Ikuü triple switch |
+| Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
+| Description | Triple switch |
 | Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
-| Picture | ![Mercator SSW03G](https://www.zigbee2mqtt.io/images/devices/SSW03G.jpg) |
+| Picture | ![Mercator Ikuü SSW03G](https://www.zigbee2mqtt.io/images/devices/SSW03G.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
