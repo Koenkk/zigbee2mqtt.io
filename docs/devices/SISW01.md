@@ -1,6 +1,6 @@
 ---
-title: "Mercator SISW01 control via MQTT"
-description: "Integrate your Mercator SISW01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Mercator Ikuü SISW01 control via MQTT"
+description: "Integrate your Mercator Ikuü SISW01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-01T08:16:21
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SISW01
+# Mercator Ikuü SISW01
 
 |     |     |
 |-----|-----|
 | Model | SISW01  |
-| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
-| Description | Ikuü inline switch |
+| Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
+| Description | Inline Switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Mercator SISW01](https://www.zigbee2mqtt.io/images/devices/SISW01.jpg) |
+| Picture | ![Mercator Ikuü SISW01](https://www.zigbee2mqtt.io/images/devices/SISW01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

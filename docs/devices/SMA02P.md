@@ -1,6 +1,6 @@
 ---
-title: "Mercator SMA02P control via MQTT"
-description: "Integrate your Mercator SMA02P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Mercator Ikuü SMA02P control via MQTT"
+description: "Integrate your Mercator Ikuü SMA02P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SMA02P
+# Mercator Ikuü SMA02P
 
 |     |     |
 |-----|-----|
 | Model | SMA02P  |
-| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
-| Description | Ikuü battery motion sensor |
+| Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
+| Description | Motion detector |
 | Exposes | occupancy, battery_low, tamper, battery, voltage, linkquality |
-| Picture | ![Mercator SMA02P](https://www.zigbee2mqtt.io/images/devices/SMA02P.jpg) |
+| Picture | ![Mercator Ikuü SMA02P](https://www.zigbee2mqtt.io/images/devices/SMA02P.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

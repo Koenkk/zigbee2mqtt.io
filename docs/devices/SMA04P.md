@@ -1,6 +1,6 @@
 ---
-title: "Mercator SMA04P control via MQTT"
-description: "Integrate your Mercator SMA04P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Mercator Ikuü SMA04P control via MQTT"
+description: "Integrate your Mercator Ikuü SMA04P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SMA04P
+# Mercator Ikuü SMA04P
 
 |     |     |
 |-----|-----|
 | Model | SMA04P  |
-| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
-| Description | Ikuü battery contact sensor |
+| Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
+| Description | Contact sensor |
 | Exposes | contact, battery_low, tamper, battery, voltage, linkquality |
-| Picture | ![Mercator SMA04P](https://www.zigbee2mqtt.io/images/devices/SMA04P.jpg) |
+| Picture | ![Mercator Ikuü SMA04P](https://www.zigbee2mqtt.io/images/devices/SMA04P.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

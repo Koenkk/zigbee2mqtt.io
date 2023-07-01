@@ -1,6 +1,6 @@
 ---
-title: "Mercator SMD4109W-RGB-ZB control via MQTT"
-description: "Integrate your Mercator SMD4109W-RGB-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Mercator Ikuü SMD4109W-RGB-ZB control via MQTT"
+description: "Integrate your Mercator Ikuü SMD4109W-RGB-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SMD4109W-RGB-ZB
+# Mercator Ikuü SMD4109W-RGB-ZB
 
 |     |     |
 |-----|-----|
 | Model | SMD4109W-RGB-ZB  |
-| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
-| Description | Ikuü Walter downlight RGB + CCT |
+| Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
+| Description | 92mm Walter downlight RGB + CCT |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![Mercator SMD4109W-RGB-ZB](https://www.zigbee2mqtt.io/images/devices/SMD4109W-RGB-ZB.jpg) |
+| Picture | ![Mercator Ikuü SMD4109W-RGB-ZB](https://www.zigbee2mqtt.io/images/devices/SMD4109W-RGB-ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

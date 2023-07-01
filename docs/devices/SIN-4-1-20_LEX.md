@@ -1,6 +1,6 @@
 ---
-title: "ENKI LEXMAN SIN-4-1-20_LEX control via MQTT"
-description: "Integrate your ENKI LEXMAN SIN-4-1-20_LEX via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "ADEO SIN-4-1-20_LEX control via MQTT"
+description: "Integrate your ADEO SIN-4-1-20_LEX via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-01T17:18:02Z
 pageClass: device-page
 ---
@@ -11,7 +11,7 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# NodOn SIN-4-1-20
+# ADEO SIN-4-1-20_LEX
 
 |     |     |
 |-----|-----|
@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN 3680W single output relay |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![ENKI LEXMAN SIN-4-1-20_LEX](https://www.zigbee2mqtt.io/images/devices/SIN-4-1-20_LEX.jpg) |
+| Picture | ![ADEO SIN-4-1-20_LEX](https://www.zigbee2mqtt.io/images/devices/SIN-4-1-20_LEX.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

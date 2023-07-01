@@ -87,7 +87,7 @@ The unit of this value is `ppm`.
 The measured formaldehyd value.
 Value can be found in the published state on the `formaldehyd` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `Âµg/mÂ³`.
+The unit of this value is `µg/m³`.
 
 ### Pm25 (numeric)
 Measured PM2.5 (particulate matter) concentration.

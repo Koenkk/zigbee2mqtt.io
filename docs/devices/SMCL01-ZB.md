@@ -1,6 +1,6 @@
 ---
-title: "Mercator SMCL01-ZB control via MQTT"
-description: "Integrate your Mercator SMCL01-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Mercator Ikuü SMCL01-ZB control via MQTT"
+description: "Integrate your Mercator Ikuü SMCL01-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SMCL01-ZB
+# Mercator Ikuü SMCL01-ZB
 
 |     |     |
 |-----|-----|
 | Model | SMCL01-ZB  |
-| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
-| Description | Ikuü Ikon ceiling light CCT |
+| Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
+| Description | Ikon ceiling light |
 | Exposes | light (state, brightness, color_temp), effect, do_not_disturb, linkquality |
-| Picture | ![Mercator SMCL01-ZB](https://www.zigbee2mqtt.io/images/devices/SMCL01-ZB.jpg) |
+| Picture | ![Mercator Ikuü SMCL01-ZB](https://www.zigbee2mqtt.io/images/devices/SMCL01-ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
