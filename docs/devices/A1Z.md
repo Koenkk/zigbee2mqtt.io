@@ -1,6 +1,6 @@
 ---
-title: "NOUS A1Z control via MQTT"
-description: "Integrate your NOUS A1Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Nous A1Z control via MQTT"
+description: "Integrate your Nous A1Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-01T08:16:21
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# NOUS A1Z
+# Nous A1Z
 
 |     |     |
 |-----|-----|
 | Model | A1Z  |
-| Vendor  | [NOUS](/supported-devices/#v=NOUS)  |
+| Vendor  | [Nous](/supported-devices/#v=Nous)  |
 | Description | Smart plug (with power monitoring) |
 | Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
-| Picture | ![NOUS A1Z](https://www.zigbee2mqtt.io/images/devices/A1Z.jpg) |
+| Picture | ![Nous A1Z](https://www.zigbee2mqtt.io/images/devices/A1Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

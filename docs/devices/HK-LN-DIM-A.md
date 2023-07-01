@@ -1,6 +1,6 @@
 ---
-title: "LED Trading HK-LN-DIM-A control via MQTT"
-description: "Integrate your LED Trading HK-LN-DIM-A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "LED-Trading HK-LN-DIM-A control via MQTT"
+description: "Integrate your LED-Trading HK-LN-DIM-A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-10-20T20:02:02Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# LED Trading HK-LN-DIM-A
+# LED-Trading HK-LN-DIM-A
 
 |     |     |
 |-----|-----|
 | Model | HK-LN-DIM-A  |
-| Vendor  | [LED Trading](/supported-devices/#v=LED%20Trading)  |
+| Vendor  | [LED-Trading](/supported-devices/#v=LED-Trading)  |
 | Description | ZigBee AC phase-cut dimmer |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![LED Trading HK-LN-DIM-A](https://www.zigbee2mqtt.io/images/devices/HK-LN-DIM-A.jpg) |
+| Picture | ![LED-Trading HK-LN-DIM-A](https://www.zigbee2mqtt.io/images/devices/HK-LN-DIM-A.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
