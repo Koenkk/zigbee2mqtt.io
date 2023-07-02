@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNQBKG24LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart wall switch H1M (with neutral, single rocker) |
-| Exposes | switch (state), power, energy, voltage, device_temperature, action,operation_mode, power_outage_memory, led_disabled_night, flip_indicator_light, linkquality |
+| Exposes | switch (state), power, energy, voltage, device_temperature, action, operation_mode, power_outage_memory, led_disabled_night, flip_indicator_light, linkquality |
 | Picture | ![Xiaomi ZNQBKG24LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG24LM.jpg) |
 
 
@@ -37,16 +37,24 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
-* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
-
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
+* `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
-### Switch
+### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
@@ -81,8 +89,8 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`.
 
-### Operation_mode (enum, right endpoint)
-Decoupled mode for button.
+### Operation_mode (enum)
+Decoupled mode.
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.

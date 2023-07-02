@@ -35,17 +35,20 @@ After this the device will reset and try to join a network.
 
 ## Exposes
 
-### Smoke_state (text)
+### Smoke_state (enum)
 Value can be found in the published state on the `smoke_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `alarm`, `normal`.
 
-### Battery_state (text)
+### Battery_state (enum)
 Value can be found in the published state on the `battery_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `low`, `middle`, `high`.
 
-### Checking_result (text)
+### Checking_result (enum)
 Value can be found in the published state on the `checking_result` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `checking`, `check_success`, `check_failure`, `others`.
 
 ### Smoke_value (numeric)
 Value can be found in the published state on the `smoke_value` property.

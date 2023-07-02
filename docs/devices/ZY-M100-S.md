@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | ZY-M100-S  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | Human presence sensor |
-| Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, self_test, linkquality |
+| Description | Mini Human Breathe Sensor |
+| Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, linkquality |
 | Picture | ![TuYa ZY-M100-S](https://www.zigbee2mqtt.io/images/devices/ZY-M100-S.jpg) |
 
 
@@ -86,14 +86,8 @@ Fading time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `1500`.
+The minimal value is `0.5` and the maximum value is `1500`.
 The unit of this value is `s`.
-
-### Self_test (enum)
-Self_test, possible resuts: checking, check_success, check_failure, others, comm_fault, radar_fault..
-Value can be found in the published state on the `self_test` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `checking`, `check_success`, `check_failure`, `others`, `comm_fault`, `radar_fault`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

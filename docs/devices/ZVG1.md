@@ -82,7 +82,7 @@ The unit of this value is `min`.
 Liters of water consumed.
 Value can be found in the published state on the `water_consumed` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `l`.
+The unit of this value is `L`.
 
 ### Cycle_timer_1 (text)
 Format 08:00 / 20:00 / 15 / 60 / MoTuWeThFrSaSu / 1 (08:00 = start time 20:00 = end time 15 = irrigation duration in minutes 60 = pause duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).
