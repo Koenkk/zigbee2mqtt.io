@@ -33,6 +33,7 @@ While pairing, keep the valve close to the coordinator.
 2. *Enable pairing mode*: Long press - (minus) for 3 seconds. WiFi logo is now blinking.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

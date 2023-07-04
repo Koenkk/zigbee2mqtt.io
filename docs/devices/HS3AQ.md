@@ -29,6 +29,7 @@ The base HS3AQ model does not have Zigbee, the Zigbee versions of this device ar
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

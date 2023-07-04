@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | 41EPBDWCLMZ/354PBDMBTZ  |
 | Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Wiser 40/300-Series Module Dimmer |
-| Exposes | light (state, brightness), ballast_minimum_level, ballast_maximum_level, linkquality |
+| Exposes | light (state, brightness), ballast_minimum_level, ballast_maximum_level, indicator_mode, linkquality |
 | Picture | ![Schneider Electric 41EPBDWCLMZ/354PBDMBTZ](https://www.zigbee2mqtt.io/images/devices/41EPBDWCLMZ-354PBDMBTZ.jpg) |
 
 
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -56,6 +57,13 @@ Value can be found in the published state on the `ballast_maximum_level` propert
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_maximum_level": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_maximum_level": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `254`.
+
+### Indicator_mode (enum)
+Led Indicator Mode.
+Value can be found in the published state on the `indicator_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `consistent_with_load`, `reverse_with_load`, `always_off`, `always_on`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

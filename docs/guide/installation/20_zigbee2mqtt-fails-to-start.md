@@ -21,6 +21,7 @@ Most of the time this is caused by Zigbee2MQTT not being able to communicate wit
 3. Your adapter requires additional configuration parameters. Check [supported Adapters](../adapters/README.md) section to find out if your adapter requires extra parameters (eg. ConBee II / RaspBee II).
 4. Home Assistant's "Zigbee Home Automation" (ZHA) integration is enabled. Try to disable the ZHA integration and restart the Zigbee2MQTT add-on.
 5. Your hardware adapter is flashed with the router firmware and not with the coordinator firmware.
+6. Your network Zigbee adapter is not accessible over the LAN network.
 
 ## Verify that you put the correct port in configuration.yaml
 
@@ -103,6 +104,7 @@ Reboot your device and now your user should have access to the device.
 - In case you are getting this after first starting successfully and pairing a device it might be that the firmware has
   been flashed incorrectly. Try flashing the stick on a different
   computer ([detailed info](https://github.com/Koenkk/zigbee2mqtt/issues/6302)). This issue mainly occurs in combination with a Slaesh's CC2652RB stick.
+- If you had your Zigbee network before and such an error appears with the new Zigbee adapter, try to switch off the Zigbee routers that were connected to your previous Zigbee network and restart Zigbee2MQTT.
 
 ## Error: `Resource temporarily unavailable Cannot lock port`
 

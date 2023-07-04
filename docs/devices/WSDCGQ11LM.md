@@ -47,6 +47,7 @@ More detailed information about this can be found [here](https://community.hubit
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

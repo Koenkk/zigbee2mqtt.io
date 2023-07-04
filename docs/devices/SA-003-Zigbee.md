@@ -31,6 +31,7 @@ Reset by unplugging any devices plugged into the socket, hold the button down fo
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

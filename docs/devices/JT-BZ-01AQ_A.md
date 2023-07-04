@@ -41,6 +41,7 @@ After this the device will automatically join.
 ![JT-BZ-01AQ/A pairing](../images/pairing/JT-BZ-01AQ_A_pairing.jpg)
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -83,7 +84,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
 
 ### Buzzer (enum)
-The buzzer can be muted and alarmed manually. During a gas alarm, the buzzer can be manually muted for 10 minutes ("mute"), but cannot be unmuted manually before this timeout expires. The buzzer cannot be pre-muted, as this function only works during a gas alarm. During the absence of a gas alarm, the buzzer can be manually alarmed ("alarm") and disalarmed ("mute").
+The buzzer can be muted and alarmed manually. During a gas alarm, the buzzer can be manually muted for 10 minutes ("mute"), but cannot be unmuted manually before this timeout expires. The buzzer cannot be pre-muted, as this function only works during a gas alarm. During the absence of a gas alarm, the buzzer can be manually alarmed ("alarm") and disalarmed ("mute"), but for this "linkage_alarm" option must be enabled.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"buzzer": NEW_VALUE}`.

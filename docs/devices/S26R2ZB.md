@@ -31,6 +31,7 @@ If brand new, the device will enter the pairing mode during the first use and th
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

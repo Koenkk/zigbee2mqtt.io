@@ -122,6 +122,7 @@ After this command thermostat responds with two messages. One for calibration ch
     ```
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -244,7 +245,7 @@ The minimal value is `-10` and the maximum value is `35`.
 The unit of this value is `°C`.
 
 ### Programming_mode (composite)
-Schedule MODE ⏱ - In this mode, the device executes a preset week programming temperature time and temperature..
+Schedule MODE â± - In this mode, the device executes a preset week programming temperature time and temperature..
 - `week` (enum): Week format user for schedule allowed values: `5+2`, `6+1`, `7`
 - `workdays_schedule` (text) 
 - `holidays_schedule` (text) 

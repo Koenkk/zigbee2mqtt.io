@@ -32,6 +32,7 @@ Konke devices only work on Zigbee channel 15, 20 and 25.
 
 
 
+
 ## Exposes
 
 ### Contact (binary)

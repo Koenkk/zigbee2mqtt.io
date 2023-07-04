@@ -59,6 +59,7 @@ If the device is asleep (which is most of the time) and you need it to be awake 
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

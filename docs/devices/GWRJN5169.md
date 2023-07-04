@@ -33,6 +33,7 @@ Open source firmware can be found here: [Github](https://github.com/igo-r/Lumi-R
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

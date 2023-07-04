@@ -31,6 +31,7 @@ Not all versions of this device have the required hardware for deteting tamper. 
 
 
 
+
 ## Exposes
 
 ### Occupancy (binary)

@@ -31,6 +31,7 @@ Turn off the lights and then turn them on by holding the button for 10 seconds u
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

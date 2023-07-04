@@ -30,6 +30,7 @@ Press and hold the on (`1`) and off (`0`) buttons for approimately 10 seconds un
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

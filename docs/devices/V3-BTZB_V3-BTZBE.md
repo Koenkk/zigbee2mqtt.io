@@ -43,6 +43,7 @@ For the pin code to work, you must also send user_status and set it to enabled.
 To remove a pin code, just send MQTT /set request : {"pin_code":{"user":0}} (user take value 0 to 19)
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

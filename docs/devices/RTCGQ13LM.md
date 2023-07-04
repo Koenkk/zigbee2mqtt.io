@@ -43,6 +43,7 @@ After this the device will automatically join. If this doesn't work, try with a 
 *Note: When you fail to pair a device, try replacing the battery, this could solve the problem.*
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

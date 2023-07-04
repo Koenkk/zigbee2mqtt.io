@@ -78,6 +78,7 @@ There are two ways to toggle between scene mode and action mode:
   | 1_min_inactivity | -                                |
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 

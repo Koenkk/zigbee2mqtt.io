@@ -32,6 +32,7 @@ Device is listed as having temperature detection. This feature is still being in
 
 
 
+
 ## Exposes
 
 ### Occupancy (binary)
