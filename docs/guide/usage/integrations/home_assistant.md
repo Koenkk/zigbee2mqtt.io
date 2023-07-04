@@ -253,7 +253,7 @@ mqtt:
         identifiers: zigbee2mqtt
         name: "Zigbee2MQTT"
         model: "Zigbee2MQTT"
-        manufacturer: "Koenkk"  
+        manufacturer: "Zigbee2MQTT"  
     # Sensor for Showing the Zigbee2MQTT Version
     - name: Zigbee2MQTT Version
       unique_id: zigbee2mqtt_version_sensor
@@ -265,7 +265,7 @@ mqtt:
         identifiers: zigbee2mqtt
         name: "Zigbee2MQTT"
         model: "Zigbee2MQTT"
-        manufacturer: "Koenkk"  
+        manufacturer: "Zigbee2MQTT"  
     # Sensor for Showing the Coordinator Version
     - name: Zigbee2MQTT Coordinator Version
       unique_id: zigbee2mqtt_coordinator_version_sensor
@@ -277,7 +277,7 @@ mqtt:
         identifiers: zigbee2mqtt
         name: "Zigbee2MQTT"
         model: "Zigbee2MQTT"
-        manufacturer: "Koenkk"  
+        manufacturer: "Zigbee2MQTT"  
     - name: Zigbee2mqtt Networkmap
       unique_id: zigbee2mqtt_networkmap_sensor
       # if you change base_topic of Zigbee2mqtt, change state_topic accordingly
@@ -291,7 +291,7 @@ mqtt:
         identifiers: zigbee2mqtt
         name: "Zigbee2MQTT"
         model: "Zigbee2MQTT"
-        manufacturer: "Koenkk"
+        manufacturer: "Zigbee2MQTT"
 
   # Switch for enabling joining
   switch:
@@ -306,7 +306,7 @@ mqtt:
         identifiers: zigbee2mqtt
         name: "Zigbee2MQTT"
         model: "Zigbee2MQTT"
-        manufacturer: "Koenkk"
+        manufacturer: "Zigbee2MQTT"
 
 automation:
   # Automation for sending MQTT message on input select change
