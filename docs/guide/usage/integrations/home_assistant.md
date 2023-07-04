@@ -248,18 +248,36 @@ mqtt:
       state_topic: "zigbee2mqtt/bridge/state"
       value_template: "{{ value_json.state }}"
       icon: mdi:router-wireless
+      entity_category: diagnostic
+      device:
+        identifiers: zigbee2mqtt
+        name: "Zigbee2MQTT"
+        model: "Zigbee2MQTT"
+        manufacturer: "Zigbee2MQTT"  
     # Sensor for Showing the Zigbee2MQTT Version
     - name: Zigbee2MQTT Version
       unique_id: zigbee2mqtt_version_sensor
       state_topic: "zigbee2mqtt/bridge/info"
       value_template: "{{ value_json.version }}"
       icon: mdi:zigbee
+      entity_category: diagnostic
+      device:
+        identifiers: zigbee2mqtt
+        name: "Zigbee2MQTT"
+        model: "Zigbee2MQTT"
+        manufacturer: "Zigbee2MQTT"  
     # Sensor for Showing the Coordinator Version
     - name: Zigbee2MQTT Coordinator Version
       unique_id: zigbee2mqtt_coordinator_version_sensor
       state_topic: "zigbee2mqtt/bridge/info"
       value_template: "{{ value_json.coordinator.meta.revision }}"
       icon: mdi:chip
+      entity_category: diagnostic
+      device:
+        identifiers: zigbee2mqtt
+        name: "Zigbee2MQTT"
+        model: "Zigbee2MQTT"
+        manufacturer: "Zigbee2MQTT"  
     - name: Zigbee2mqtt Networkmap
       unique_id: zigbee2mqtt_networkmap_sensor
       # if you change base_topic of Zigbee2mqtt, change state_topic accordingly
@@ -268,7 +286,13 @@ mqtt:
         {{ now().strftime('%Y-%m-%d %H:%M:%S') }}
       # again, if you change base_topic of Zigbee2mqtt, change json_attributes_topic accordingly
       json_attributes_topic: zigbee2mqtt/bridge/networkmap/raw
-    
+      entity_category: diagnostic
+      device:
+        identifiers: zigbee2mqtt
+        name: "Zigbee2MQTT"
+        model: "Zigbee2MQTT"
+        manufacturer: "Zigbee2MQTT"
+
   # Switch for enabling joining
   switch:
     - name: "Zigbee2MQTT Main join"
@@ -278,6 +302,11 @@ mqtt:
       command_topic: "zigbee2mqtt/bridge/request/permit_join"
       payload_on: "true"
       payload_off: "false"
+      device:
+        identifiers: zigbee2mqtt
+        name: "Zigbee2MQTT"
+        model: "Zigbee2MQTT"
+        manufacturer: "Zigbee2MQTT"
 
 automation:
   # Automation for sending MQTT message on input select change
