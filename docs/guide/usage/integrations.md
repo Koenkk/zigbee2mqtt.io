@@ -1,6 +1,7 @@
 # Integrations
 
 * [Home Assistant](./integrations/home_assistant.md)
+* [Homey](https://community.homey.app/t/83214)
 * [node-red-contrib-zigbee2mqtt](https://flows.nodered.org/node/node-red-contrib-zigbee2mqtt)
 * [Domoticz](https://github.com/stas-demydiuk/domoticz-zigbee2mqtt-plugin)
 * [Majordomo](https://github.com/directman66/majordomo-zigbee2mqtt/) (Russian)
