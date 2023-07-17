@@ -50,7 +50,7 @@ The product code should end in *-M* for the Zigbee version. The label inside the
 
 ### Issue with regular (false) alarm notifications
 
-If your smoke detector is regularily signalling an alarm over ZigBee (every 1-2 days), without actually making any alarm sound, it is probably affected by a firmware bug. This can be worked around as follows:
+If your smoke detector is regularily signalling an alarm over Zigbee (every 1-2 days), without actually making any alarm sound, it is probably affected by a firmware bug. This can be worked around as follows:
 
 1. Open the device in the Z2M web interface
 2. Navigate to the Dev console
