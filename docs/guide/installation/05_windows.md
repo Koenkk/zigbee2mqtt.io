@@ -41,6 +41,7 @@ In order to be able to communicate with your USB device over a virtual COM port,
 
 ## Configuring
 
+1. Copy `data\configuration.example.yaml` to `data\configuration.yaml`
 1. Open `data\configuration.yaml` in a text editor
 1. Change the serial port configuration to match your setup
     ```yaml
