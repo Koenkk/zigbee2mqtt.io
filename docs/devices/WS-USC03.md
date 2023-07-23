@@ -25,6 +25,12 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
+## Notes
+
+### Pairing
+Hold the top button for 5 seconds, until the LED flashes.
+
+
 <!-- Notes END: Do not edit below this line -->
 
 
