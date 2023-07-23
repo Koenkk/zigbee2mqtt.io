@@ -28,7 +28,7 @@ pageClass: device-page
 ## Notes
 
 ### Pairing
-Hold the top button for 5 seconds, until the LED flashes.
+Hold the top button for 5 seconds, until the LED turns red.
 
 
 <!-- Notes END: Do not edit below this line -->
