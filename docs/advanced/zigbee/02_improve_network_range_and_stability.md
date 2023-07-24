@@ -9,6 +9,7 @@ Use a [recommended](../../guide/adapters/README.md) adapter, especially the CC25
 
 ## Avoid devices from AwoX
 It is known that AwoX devices cause network issues. In case you are having issues, remove them from your network.
+It [may help](https://github.com/Koenkk/zigbee2mqtt/discussions/18366) to OTA update your device via the "AwoX HomeControl" app over Bluetooth.
 
 ## USB based adapter
 The range of these adapters can greatly be improved when connecting them with an USB extension
