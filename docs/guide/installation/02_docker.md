@@ -190,9 +190,47 @@ Before executing `docker run` pull the correct image with `docker pull koenkk/zi
 ## Docker Stack device mapping
 *This is only relevant when using Docker Stack*
 
-Docker stack doesn't support device mappings with option `--devices` when deploying a stack in swarm mode. A workaround is to bind the device as a volume binding and set the right permissions.
+Docker stack doesn't support device mappings with option `--devices` when deploying a stack in swarm mode. There are two solutions to this. Both of these solutions start with binding the devices as volumes.
 
-The workaround is based on the solution found at [Add support for devices with "service create"](https://github.com/docker/swarmkit/issues/1244#issuecomment-285935430), all credits goes this him.
+### Automatic device mapping for cgroup v1 and v2
+
+The easiest solution for enabling devices on Docker Stacks is the [allfro device-mapping-manager docker image](https://github.com/allfro/device-mapping-manager). This container has a tiny program that reads all of the volume mounts on its own host, identifies devices, and then modifies the permissions on the host to allow the container to use them. Unlike other solutions, this works for both versions of cgroups.
+
+This container has to be deployed directly to docker, not through a stack. It's possible to work around this by creating a stack with a privileged service that acts as a proxy to launch the actual device mapper container.
+
+```yaml
+version: "3.8"
+
+services:
+  dmm:
+    image: docker
+    entrypoint: docker
+    restart: unless-stopped
+    privileged: true
+    command: |
+      run
+      -i
+      --rm
+      --privileged
+      --cgroupns=host
+      --pid=host
+      --userns=host
+      -v /sys:/host/sys
+      -v /var/run/docker.sock:/var/run/docker.sock
+      -v /dev:/dev
+      ghcr.io/allfro/allfro/device-mapping-manager:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      mode: global
+
+```
+
+### Manual cgroup v1
+
+A workaround is to manually set the right permissions. The workaround is based on the solution found at [Add support for devices with "service create"](https://github.com/docker/swarmkit/issues/1244#issuecomment-285935430), all credits goes this him.
+
+This workaround only works with cgroup v1, which is not enabled on many newer distro releases.
 
 1. Identify serial adapter
 	Identify the serial adapter using the following command:
@@ -455,7 +493,6 @@ The workaround is based on the solution found at [Add support for devices with "
 
 	```yaml
 	[...]
-	serial:
 	  port: /dev/zigbee-serial
 	[...]
 	```
