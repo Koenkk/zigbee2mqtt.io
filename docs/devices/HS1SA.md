@@ -60,7 +60,6 @@ If your smoke detector is regularily signalling an alarm over Zigbee (every 1-2 
 5. Wake the device immediately after pressing the *Read* button by pressing it's main button (test alarm button).
 
 Timing is important here so you might need a fews tries. Once you have read these attributes successfully the false alarm messages should be gone. ([Source](https://github.com/dresden-elektronik/deconz-rest-plugin/issues/5824#issuecomment-1092089211))
-
 <!-- Notes END: Do not edit below this line -->
 
 
