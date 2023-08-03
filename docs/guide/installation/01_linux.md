@@ -81,10 +81,11 @@ node --version
 :::
 
 ## Configuring
-Before we can start Zigbee2MQTT we need to edit the `configuration.yaml` file. This file contains the configuration which will be used by Zigbee2MQTT.
+Before we can start Zigbee2MQTT we need to copy and edit the `configuration.yaml` file. This file contains the configuration which will be used by Zigbee2MQTT.
 
-Open the configuration file:
+Copy and open the configuration file:
 ```bash
+cp /opt/zigbee2mqtt/data/configuration.example.yaml /opt/zigbee2mqtt/data/configuration.yaml
 nano /opt/zigbee2mqtt/data/configuration.yaml
 ```
 
@@ -105,19 +106,6 @@ mqtt:
 serial:
   # Location of the adapter (see first step of this guide)
   port: /dev/ttyACM0
-```
-
-It is recommended to use a custom network key. This can be done by adding the following to your `configuration.yaml`. With this Zigbee2MQTT will generate a network key on next startup.
-
-```yaml
-advanced:
-    network_key: GENERATE
-```
-
-To enable the frontend add the following (see the [Frontend](../configuration/frontend.md) page for more settings):
-
-```yaml
-frontend: true
 ```
 
 Save the file and exit.
