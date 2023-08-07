@@ -46,7 +46,7 @@ class MyExampleExtension {
      * Is called once the extension has to stop
      */
     stop() {
-        this.eventBus.removeListenersExtension(this);
+        this.eventBus.removeListeners(this);
     }
 }
 

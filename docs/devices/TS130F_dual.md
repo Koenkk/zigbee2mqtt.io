@@ -24,6 +24,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+The output is only driven once the input signal is released, hence making this device difficult to work with non-momentary switches.
 
 ### Pairing
 Press on pair button for 10 seconds to enter pairing mode

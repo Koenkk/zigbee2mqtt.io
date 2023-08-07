@@ -23,8 +23,12 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
 
+Press and hold the button on the device until the blue light starts blinking, release it and the pairing should begin.
+If you're having problems pairing, try keeping the device alive (press the button every second) after pairing started, until pairing completed
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -20,7 +20,6 @@ pageClass: device-page
 | Description | 2 gang wall outlet |
 | Exposes | switch (state), power_on_behavior, backlight_mode, lock (state), linkquality |
 | Picture | ![TuYa TS011F_2_gang_wall](https://www.zigbee2mqtt.io/images/devices/TS011F_2_gang_wall.jpg) |
-| White-label | ClickSmart+ CMA30036 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
