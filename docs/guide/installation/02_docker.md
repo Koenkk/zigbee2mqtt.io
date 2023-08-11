@@ -13,13 +13,13 @@ Start by figuring out the location of your adapter as explained [here](./01_linu
 **IMPORTANT**: Using a Raspberry Pi? Make sure to check [Notes for Raspberry Pi users](#notes-for-raspberry-pi-users).
 
 ## Creating the initial configuration
-Navigate to the directory where you whish to store the Zigbee2MQTT data and execute:
+Navigate to the directory where you will store the Zigbee2MQTT data and execute the following command:
 
 ```bash
 wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.yaml -P data
 ```
 
-Now configure the MQTT server and adapter location as explained [here](./01_linux.md#configuring).
+Now configure the MQTT server, adapter location, network key and frontend as explained [here](./01_linux.md#configuring).
 
 ## Running the container
 
@@ -29,7 +29,7 @@ Execute the following command, update the `--device` parameter to match the loca
 $ docker run \
    --name zigbee2mqtt \
    --restart=unless-stopped \
-   --device=/dev/ttyACM0 \
+   --device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0 \
    -p 8080:8080 \
    -v $(pwd)/data:/app/data \
    -v /run/udev:/run/udev:ro \
@@ -40,7 +40,7 @@ $ docker run \
 **Parameters explanation:**  
 * `--name zigbee2mqtt`: Name of container
 * `--restart=unless-stopped`: Automatically start on boot and restart after a crash
-* `--device=/dev/ttyACM0`: Location of adapter (e.g. CC2531)
+* `--device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0`: Location of adapter (e.g. CC2531). The path before the `:` is the path on the host, the path after it is the path that is mapped to inside the container. You should always use the `/dev/serial/by-id/` path on the host.
 * `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration (pwd maps to the current working directory)
 * `-v /run/udev:/run/udev:ro`: only required for auto-detecting the port and some adapters like ConBee
 * `-e TZ=Europe/Amsterdam`: Configure the timezone
@@ -75,7 +75,7 @@ $ sudo docker run \
    -p 8080:8080 \
    -v $(pwd)/data:/app/data \
    -v /run/udev:/run/udev:ro \
-   --device=/dev/ttyACM0 \
+   --device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0 \
    --user 1001:1001 \
    --group-add dialout \
    -e TZ=Europe/Amsterdam \
@@ -87,6 +87,19 @@ $ sudo docker run \
 * `--user 1001:1001`: Run the Zigbee2MQTT process within the container using the provided UserID and GroupID
 * `--group-add dialout`: Assign the `dialout` group to the user to be able to access the device 
 
+### Rootless with Podman (>3.2)
+```
+$ podman run \
+   --name=zigbee2mqtt \
+   --restart=unless-stopped \
+   -p 8080:8080 \
+   -v $(pwd)/data:/app/data \
+   -v /run/udev:/run/udev:ro \
+   --device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0 \
+   --group-add keep-groups \
+   -e TZ=Europe/Amsterdam \
+   koenkk/zigbee2mqtt
+```
 
 ## Updating
 To update to the latest Docker image:
@@ -124,10 +137,10 @@ services:
       - TZ=Europe/Berlin
     devices:
       # Make sure this matched your adapter location
-      - /dev/ttyUSB0:/dev/ttyACM0
+      - /dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0
 ```
 
-You can also run a rootless container with docker-compose by adding the required attributes to the `zigbee2mqtt` service block in your `docker-compose.yml`:
+You can also run a rootless container with Docker Compose by adding the required attributes to the `zigbee2mqtt` service block in your `docker-compose.yml`:
 
 ```yaml
     group_add:
@@ -137,7 +150,7 @@ You can also run a rootless container with docker-compose by adding the required
 ### Starting the container
 To start the Docker container:
 ```bash
-docker-compose up -d zigbee2mqtt
+docker compose up -d zigbee2mqtt
 ```
 
 You can optionally skip `zigbee2mqtt` and it will start all containers listed in the compose file.
@@ -145,8 +158,8 @@ You can optionally skip `zigbee2mqtt` and it will start all containers listed in
 ### Updating
 To update to the latest Docker image:
 ```bash
-docker-compose pull zigbee2mqtt
-docker-compose up -d zigbee2mqtt
+docker compose pull zigbee2mqtt
+docker compose up -d zigbee2mqtt
 ```
 
 You can optionally skip `zigbee2mqtt` and it will pull any new images for all containers in the compose file, and then restart those that were updated.
@@ -177,9 +190,47 @@ Before executing `docker run` pull the correct image with `docker pull koenkk/zi
 ## Docker Stack device mapping
 *This is only relevant when using Docker Stack*
 
-Docker stack doesn't support device mappings with option `--devices` when deploying a stack in Swam mode. A workaround is to bind the device as volume binding and set the right permissions.
+Docker stack doesn't support device mappings with option `--devices` when deploying a stack in swarm mode. There are two solutions to this. Both of these solutions start with binding the devices as volumes.
 
-The workaround is based on the solution found at [Add support for devices with "service create"](https://github.com/docker/swarmkit/issues/1244#issuecomment-285935430), all credits goes this him.
+### Automatic device mapping for cgroup v1 and v2
+
+The easiest solution for enabling devices on Docker Stacks is the [allfro device-mapping-manager docker image](https://github.com/allfro/device-mapping-manager). This container has a tiny program that reads all of the volume mounts on its own host, identifies devices, and then modifies the permissions on the host to allow the container to use them. Unlike other solutions, this works for both versions of cgroups.
+
+This container has to be deployed directly to docker, not through a stack. It's possible to work around this by creating a stack with a privileged service that acts as a proxy to launch the actual device mapper container.
+
+```yaml
+version: "3.8"
+
+services:
+  dmm:
+    image: docker
+    entrypoint: docker
+    restart: unless-stopped
+    privileged: true
+    command: |
+      run
+      -i
+      --rm
+      --privileged
+      --cgroupns=host
+      --pid=host
+      --userns=host
+      -v /sys:/host/sys
+      -v /var/run/docker.sock:/var/run/docker.sock
+      -v /dev:/dev
+      ghcr.io/allfro/allfro/device-mapping-manager:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      mode: global
+
+```
+
+### Manual cgroup v1
+
+A workaround is to manually set the right permissions. The workaround is based on the solution found at [Add support for devices with "service create"](https://github.com/docker/swarmkit/issues/1244#issuecomment-285935430), all credits goes this him.
+
+This workaround only works with cgroup v1, which is not enabled on many newer distro releases.
 
 1. Identify serial adapter
 	Identify the serial adapter using the following command:
@@ -442,7 +493,6 @@ The workaround is based on the solution found at [Add support for devices with "
 
 	```yaml
 	[...]
-	serial:
 	  port: /dev/zigbee-serial
 	[...]
 	```

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QBKG39LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara E1 2 gang switch (without neutral) |
 | Exposes | switch (state), device_temperature, operation_mode, mode_switch, action, power_outage_memory, flip_indicator_light, linkquality |
 | Picture | ![Xiaomi QBKG39LM](https://www.zigbee2mqtt.io/images/devices/QBKG39LM.jpg) |
@@ -36,10 +36,14 @@ In order for this device to work (fully), at least the following firmware is req
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `device_temperature_precision`: Number of digits after decimal point for device_temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 

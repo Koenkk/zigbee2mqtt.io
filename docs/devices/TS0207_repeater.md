@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0207_repeater  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Repeater |
 | Exposes | linkquality |
 | Picture | ![TuYa TS0207_repeater](https://www.zigbee2mqtt.io/images/devices/TS0207_repeater.jpg) |
@@ -30,6 +30,7 @@ pageClass: device-page
 
 The range extender is in pairing mode straight out of the box - allow new devices and the device will join the network. To re-pair the device, unplug and re-plug the device three times, the LED light will blink constantly when ready for pairing.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

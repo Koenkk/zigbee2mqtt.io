@@ -14,6 +14,7 @@ devices:
   '0x00158d0001d82999':
     friendly_name: 'my_occupancy_sensor'
     retain: true
+    disabled: false
     qos: 1
     debounce: 0.5
     debounce_ignore:
@@ -58,6 +59,13 @@ Description of this device, e.g. `This device is in the kitchen`, will be shown 
 **`retain`**  
 Retain MQTT messages of this device (default `false`).
 
+**`disabled`**  
+Disables the device. This **does not** prevent the device from communicating in the Zigbee network. E.g. when messages are received from this device, Zigbee2MQTT will still publish them. This feature is useful for devices which will be disconnected from the Zigbee network for a longer time (like Christmas lights). Disabling a device does the following:
+- The availability feature will not try to ping it
+- The device is always marked as `unavailable` in Home Assistant
+- It will not be configured on Zigbee2MQTT startup (required for some devices in order to start working)
+- It will be excluded from network scans (network map)
+- It will be excluded from optimistic group state updates
 
 **`retention`**  
 Sets the MQTT Message Expiry in seconds e.g. `retention: 900` = 15 minutes (default: not enabled). Make
@@ -71,9 +79,15 @@ Allows overriding the values of the Home Assistant discovery payload. See exampl
 
 **`debounce`**  
 Debounces messages of this device. When setting e.g. `debounce: 1` and a message from a device is
-  received, Zigbee2MQTT will not immediately publish this message but combine it with other messages received in that
-  same second of that device. This is handy for e.g. the `WSDCGQ11LM` which publishes humidity, temperature and pressure
+  received, Zigbee2MQTT will not immediately publish this message. But it will combine it with other messages that are received max 1
+  seconds apart from each other. So there needs to be "N second of silence" from the device before the combined message is sent out.
+  
+  For example `debounce: 5` means that there needs to be "5 seconds of silence" from the device, before combined messages is sent out.
+    
+  This is handy for e.g. the `WSDCGQ11LM` which publishes humidity, temperature and pressure
   at the same time but as 3 different messages.
+  
+  Don't configure debounce to be higher that sensors update interval as that would cause all the messages to be debouncer and messages won't be sent out at all.
 
 **`debounce_ignore`**  
 Protects unique payload values of specified payload properties from overriding within debounce time.
@@ -91,6 +105,10 @@ Protects unique payload values of specified payload properties from overriding w
 Allows preventing certain attributes from being published. When a device would e.g.
   publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will
   publish `{"temperature": 10}`.
+
+**`filtered_cache`**
+Allows preventing certain attributes from ending up in the cache. 
+This prevents attributes from being published when the value did not change.
 
 **`optimistic`**  
 Publish optimistic state after set, e.g. when a brightness change command succeeds Zigbee2MQTT assumes

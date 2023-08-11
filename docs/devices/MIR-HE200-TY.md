@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | MIR-HE200-TY  |
-| Vendor  | TuYa  |
-| Description | Human presence sensor |
-| Exposes | illuminance_lux, presence, occupancy, motion_speed, motion_direction, radar_sensitivity, radar_scene, linkquality |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Description | Human presence sensor with fall function |
+| Exposes | illuminance_lux, presence, occupancy, motion_speed, motion_direction, radar_sensitivity, radar_scene, tumble_switch, fall_sensitivity, tumble_alarm_time, fall_down_status, static_dwell_alarm, linkquality |
 | Picture | ![TuYa MIR-HE200-TY](https://www.zigbee2mqtt.io/images/devices/MIR-HE200-TY.jpg) |
 
 
@@ -29,6 +29,7 @@ pageClass: device-page
 ### Pairing
 Factory resetting by pushing the "Reset-Button" longer than 5 seconds or by using Touchlink factory reset.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -64,18 +65,51 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `standing_still`, `moving_forward`, `moving_backward`.
 
 ### Radar_sensitivity (numeric)
-sensitivity of the radar.
+Sensitivity of the radar.
 Value can be found in the published state on the `radar_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 
 ### Radar_scene (enum)
-presets for sensitivity for presence and movement.
+Presets for sensitivity for presence and movement.
 Value can be found in the published state on the `radar_scene` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_scene": NEW_VALUE}`.
 The possible values are: `default`, `area`, `toilet`, `bedroom`, `parlour`, `office`, `hotel`.
+
+### Tumble_switch (enum)
+Tumble status switch.
+Value can be found in the published state on the `tumble_switch` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tumble_switch": NEW_VALUE}`.
+The possible values are: `ON`, `OFF`.
+
+### Fall_sensitivity (numeric)
+Fall sensitivity of the radar.
+Value can be found in the published state on the `fall_sensitivity` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fall_sensitivity": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `10`.
+
+### Tumble_alarm_time (numeric)
+Tumble alarm time.
+Value can be found in the published state on the `tumble_alarm_time` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tumble_alarm_time": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `5`.
+The unit of this value is `min`.
+
+### Fall_down_status (enum)
+Fall down status.
+Value can be found in the published state on the `fall_down_status` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `none`, `maybe_fall`, `fall`.
+
+### Static_dwell_alarm (text)
+Static dwell alarm.
+Value can be found in the published state on the `static_dwell_alarm` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

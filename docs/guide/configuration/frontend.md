@@ -23,15 +23,19 @@ frontend: true
 frontend:
   # Optional, default 8080
   port: 8080
-  # Optional, default 0.0.0.0
+  # Optional, default 0.0.0.0. Opens a unix socket when given a path instead of an address (e.g. '/run/zigbee2mqtt/zigbee2mqtt.sock')
   host: 0.0.0.0
   # Optional, enables authentication, disabled by default
   auth_token: your-secret-token
   # Optional, url on which the frontend can be reached, currently only used for the Home Assistant device configuration page
   url: 'https://zigbee2mqtt.myhouse.org'
+  # Optional, certificate file path for exposing HTTPS. The sibling property 'ssl_key' must be set for HTTPS to be activated
+  ssl_cert: /config/etc/letsencrypt/live/mydomain.com/fullchain.pem
+  # Optional, private key file path for exposing HTTPS. The sibling property 'ssl_cert' must be set for HTTPS to be activated
+  ssl_key: /config/etc/letsencrypt/live/mydomain.com/privkey.pem
 ```
 
-To specify the `auth_token` in a different file set e.g. `auth_token: '!secret auth_token'`, create a file called `secret.yaml` next to `configuration.yaml` with content `auth_token: super-secret-token`.
+To specify the `auth_token` in a different file set e.g. `auth_token: '!secret.yaml auth_token'`, create a file called `secret.yaml` next to `configuration.yaml` with content `auth_token: super-secret-token`.
 
 
 **NOTE:** If you are running Zigbee2MQTT via the Home Assistant addon you cannot change the port. The addon will force the frontend to run on port 8099 as Home Assistant Ingress requires this.
@@ -78,3 +82,42 @@ server {
     }
 }
 ```
+
+## Apache2 proxy configuration
+Credit: [Florian Metzger-Noel](https://stackoverflow.com/questions/38838567/proxy-websocket-wss-to-ws-apache/60506715#60506715)
+
+Enable these modules using 
+```a2enmod proxy proxy_wstunnel proxy_http rewrite```
+
+```                                                                                                             
+<VirtualHost *:80>
+   ServerName example.com
+   ServerAdmin info@example.com
+
+
+    ProxyRequests off 
+    ProxyVia on      
+    RewriteEngine On 
+
+    RewriteEngine On
+    RewriteCond %{HTTP:Connection} Upgrade [NC]
+    RewriteCond %{HTTP:Upgrade} websocket [NC]
+    RewriteRule /(.*) ws://localhost:8080/$1 [P,L]
+
+    ProxyPass               / http://localhost:8080/           
+    ProxyPassReverse        / http://localhost:8080/
+
+
+   <Proxy *>
+   Order deny,allow
+   Allow from all
+   </Proxy>
+
+   ErrorLog ${APACHE_LOG_DIR}/company2-error.log
+   CustomLog ${APACHE_LOG_DIR}/company2-access.log combined
+
+</VirtualHost>
+
+
+```
+

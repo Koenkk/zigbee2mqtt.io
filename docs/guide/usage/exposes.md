@@ -53,13 +53,14 @@ Examples:
 - `{"type":"text","name":"inserted","property":"inserted","access":1}`
 
 ### Composite
-Composite combines the above generic types in the `features` array. Unlike other generic types, it does not have the `access` property since the `access` is defined per feature.
+Composite combines the above generic types in the `features` array.
 
 Example:
 ```json
 {
     "type":"composite",
     "name":"color_xy",
+    "access":2,
     "property":"color",
     "features": [
         {"type":"numeric","name":"x","property":"x","access":7},
@@ -69,10 +70,39 @@ Example:
 ```
 
 ### List
-Indicates a device exposes a list of values. Currently the only possible `item_type` is `number`.
+Indicates a device exposes a list of values. The `item_type` can be any other exposes where the `property` is omitted.
+Optionally a `length_min` and `length_max` property can be added which defines the min/max number of entries in the list.
 
 Examples:
-- `{"type":"list","name":"no_occupancy_since","property":"no_occupancy_since","access":1,"item_type":"number"}`
+```json
+{
+    "type":"list",
+    "name":"no_occupancy_since",
+    "property":"no_occupancy_since",
+    "access":1,
+    "item_type":{"access": 3, "name": "temperature", "type": "numeric"}
+}
+```
+
+```json
+{
+    "type": "list",
+    "name": "schedule",
+    "property": "schedule",
+    "access": 3,
+    "length_min": 1,
+    "length_max": 10,
+    "item_type": {
+        "type": "composite",
+        "name": "day_time",
+        "features": [
+            {"access": 3, "name": "day", "property": "day", "type": "enum","values": ["monday", "tuesday", "wednesday"]},
+            {"access": 3, "name": "hour", "property": "hour", "type": "numeric",},
+            {"access": 3, "name": "minute", "property": "minute", "type": "numeric"},
+        ]
+    }
+}
+```
 
 ## Specific
 
@@ -174,7 +204,7 @@ Example:
 
 ### Climate
 Indicates this device exposes climate functionality.
-- Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `occupied_cooling_setpoint`, `local_temperature`, `system_mode`, `running_state`, `fan_mode`, `preset`, `local_temperature_calibration`, `sensor`, `pi_heating_demand` and `ac_louver_position`.
+- Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `occupied_cooling_setpoint`, `unoccupied_heating_setpoint`, `unoccupied_cooling_setpoint`, `local_temperature`, `system_mode`, `running_state`, `fan_mode`, `preset`, `local_temperature_calibration`, `pi_heating_demand`, `running_mode`, `ac_louver_position`, `control_sequence_of_operation` and `swing_mode`.
 - Never has both `occupied_heating_setpoint` and `current_heating_setpoint`.
 - Possible values for `system_mode` are `off`, `heat`, `cool`, `auto`, `dry` and `fan_only`.
 - Possible values for `running_state` are `idle`, `heat`, `cool`.
@@ -186,7 +216,7 @@ Example:
     "type": "climate",
     "features": [
         {"type":"numeric","name":"occupied_heating_setpoint","property":"occupied_heating_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":7,"unit":"°C"},
-        {"type":"numeric","name":"occupied_cooling_setpoint","property":"occupied_heating_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":7,"unit":"°C"},
+        {"type":"numeric","name":"occupied_cooling_setpoint","property":"occupied_cooling_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":7,"unit":"°C"},
         {"type":"numeric","name":"local_temperature","property":"local_temperature","access":3,"unit":"°C"},
         {"type":"enum","name":"system_mode","property":"system_mode","values":["off", "auto", "heat", "cool"],"access":7},
         {"type":"enum","name":"preset","property":"preset","values":["hold", "program"],"access":7},

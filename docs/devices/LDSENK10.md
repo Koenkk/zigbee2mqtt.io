@@ -16,8 +16,8 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LDSENK10  |
-| Vendor  | ADEO  |
-| Description | LEXMAN motion sensor |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
+| Description | ENKI LEXMAN motion sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
 | Picture | ![ADEO LDSENK10](https://www.zigbee2mqtt.io/images/devices/LDSENK10.jpg) |
 
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

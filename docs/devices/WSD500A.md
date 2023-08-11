@@ -16,16 +16,23 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WSD500A  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature & humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
 | Picture | ![TuYa WSD500A](https://www.zigbee2mqtt.io/images/devices/WSD500A.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
 
+Press button for 5 seconds.
+
+### Battery
+If battery value is not showing in Zigbee2MQTT briefly pressing reset button AFTER device is fully paired usually resolves the issue.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -43,7 +50,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

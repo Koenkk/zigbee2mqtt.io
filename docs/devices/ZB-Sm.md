@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZB-Sm  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Tubular motor |
 | Exposes | cover (state, position), goto_positon, motor_state, active_power, cycle_count, cycle_time, top_limit, bottom_limit, favorite_position, reverse_direction, motor_type, report, linkquality |
 | Picture | ![TuYa ZB-Sm](https://www.zigbee2mqtt.io/images/devices/ZB-Sm.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -101,7 +102,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report": NEW_VALUE}`.
-The possible values are: `REPORT`.
+The possible values are: ``.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

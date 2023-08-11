@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | BHT-002-GCLZB  |
-| Vendor  | Moes  |
+| Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Moes BHT series Thermostat |
-| Exposes | lock (state), deadzone_temperature, max_temperature_limit, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, preset, sensor), linkquality |
+| Exposes | lock (state), deadzone_temperature, max_temperature_limit, min_temperature_limit, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, preset), sensor, program, linkquality |
 | Picture | ![Moes BHT-002-GCLZB](https://www.zigbee2mqtt.io/images/devices/BHT-002-GCLZB.jpg) |
 
 
@@ -32,12 +32,14 @@ Switch the thermostat off. Press and hold the temperature down button for +- 8 s
 ### Stop message flooding
 This unit has a bug that makes it send multiple messages when updating. To stop this from flooding your MQTT Queues, please add the following to your `configuration.yaml` file:
 
-
+```yaml
 devices:
   '0x12345678':
     friendly_name: thermostat
     debounce: 1
+```
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -57,21 +59,76 @@ The minimal value is `0` and the maximum value is `5`.
 The unit of this value is `°C`.
 
 ### Max_temperature_limit (numeric)
-Maximum temperature limit.
+Maximum temperature limit. Cuts the thermostat out regardless of air temperature if the external floor sensor exceeds this temperature. Only used by the thermostat when in AL sensor mode..
 Value can be found in the published state on the `max_temperature_limit` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_temperature_limit": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `35`.
 The unit of this value is `°C`.
 
+### Min_temperature_limit (numeric)
+Minimum temperature limit for frost protection. Turns the thermostat on regardless of setpoint if the tempreature drops below this..
+Value can be found in the published state on the `min_temperature_limit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_temperature_limit": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `5`.
+The unit of this value is `°C`.
+
 ### Climate 
-This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `local_temperature_calibration`, `system_mode`, `running_state`, `preset`, `sensor`.
-- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
+This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `local_temperature_calibration`, `system_mode`, `running_state`, `preset`.
+- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
-- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `hold`, `program`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
-- `running_state`: The current running state. Possible values are: `idle`, `heat`, `cool`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
-- `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. Reading (`/get`) this attribute is not possible.
+- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `hold`, `program`. Reading (`/get`) this attribute is not possible.
+- `running_state`: The current running state. Possible values are: `idle`, `heat`, `cool`. Reading (`/get`) this attribute is not possible.
+- `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-30` and the maximum value is `30` with a step size of `0.1`.
+
+### Sensor (enum)
+Select temperature sensor to use.
+Value can be found in the published state on the `sensor` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
+The possible values are: `IN`, `AL`, `OU`.
+
+### Program (composite)
+Time of day and setpoint to use when in program mode.
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"program": {"weekdays_p1_hour": VALUE, "weekdays_p1_minute": VALUE, "weekdays_p1_temperature": VALUE, "weekdays_p2_hour": VALUE, "weekdays_p2_minute": VALUE, "weekdays_p2_temperature": VALUE, "weekdays_p3_hour": VALUE, "weekdays_p3_minute": VALUE, "weekdays_p3_temperature": VALUE, "weekdays_p4_hour": VALUE, "weekdays_p4_minute": VALUE, "weekdays_p4_temperature": VALUE, "saturday_p1_hour": VALUE, "saturday_p1_minute": VALUE, "saturday_p1_temperature": VALUE, "saturday_p2_hour": VALUE, "saturday_p2_minute": VALUE, "saturday_p2_temperature": VALUE, "saturday_p3_hour": VALUE, "saturday_p3_minute": VALUE, "saturday_p3_temperature": VALUE, "saturday_p4_hour": VALUE, "saturday_p4_minute": VALUE, "saturday_p4_temperature": VALUE, "sunday_p1_hour": VALUE, "sunday_p1_minute": VALUE, "sunday_p1_temperature": VALUE, "sunday_p2_hour": VALUE, "sunday_p2_minute": VALUE, "sunday_p2_temperature": VALUE, "sunday_p3_hour": VALUE, "sunday_p3_minute": VALUE, "sunday_p3_temperature": VALUE, "sunday_p4_hour": VALUE, "sunday_p4_minute": VALUE, "sunday_p4_temperature": VALUE}}`
+- `weekdays_p1_hour` (numeric) max value is 23, unit is h
+- `weekdays_p1_minute` (numeric) max value is 59, unit is m
+- `weekdays_p1_temperature` (numeric) min value is 5, max value is 35, unit is °C
+- `weekdays_p2_hour` (numeric) max value is 23, unit is h
+- `weekdays_p2_minute` (numeric) max value is 59, unit is m
+- `weekdays_p2_temperature` (numeric) min value is 5, max value is 35, unit is °C
+- `weekdays_p3_hour` (numeric) max value is 23, unit is h
+- `weekdays_p3_minute` (numeric) max value is 59, unit is m
+- `weekdays_p3_temperature` (numeric) min value is 5, max value is 35, unit is °C
+- `weekdays_p4_hour` (numeric) max value is 23, unit is h
+- `weekdays_p4_minute` (numeric) max value is 59, unit is m
+- `weekdays_p4_temperature` (numeric) min value is 5, max value is 35, unit is °C
+- `saturday_p1_hour` (numeric) max value is 23, unit is h
+- `saturday_p1_minute` (numeric) max value is 59, unit is m
+- `saturday_p1_temperature` (numeric) min value is 5, max value is 35, unit is °C
+- `saturday_p2_hour` (numeric) max value is 23, unit is h
+- `saturday_p2_minute` (numeric) max value is 59, unit is m
+- `saturday_p2_temperature` (numeric) min value is 5, max value is 35, unit is °C
+- `saturday_p3_hour` (numeric) max value is 23, unit is h
+- `saturday_p3_minute` (numeric) max value is 59, unit is m
+- `saturday_p3_temperature` (numeric) min value is 5, max value is 35, unit is °C
+- `saturday_p4_hour` (numeric) max value is 23, unit is h
+- `saturday_p4_minute` (numeric) max value is 59, unit is m
+- `saturday_p4_temperature` (numeric) min value is 5, max value is 35, unit is °C
+- `sunday_p1_hour` (numeric) max value is 23, unit is h
+- `sunday_p1_minute` (numeric) max value is 59, unit is m
+- `sunday_p1_temperature` (numeric) min value is 5, max value is 35, unit is °C
+- `sunday_p2_hour` (numeric) max value is 23, unit is h
+- `sunday_p2_minute` (numeric) max value is 59, unit is m
+- `sunday_p2_temperature` (numeric) min value is 5, max value is 35, unit is °C
+- `sunday_p3_hour` (numeric) max value is 23, unit is h
+- `sunday_p3_minute` (numeric) max value is 59, unit is m
+- `sunday_p3_temperature` (numeric) min value is 5, max value is 35, unit is °C
+- `sunday_p4_hour` (numeric) max value is 23, unit is h
+- `sunday_p4_minute` (numeric) max value is 59, unit is m
+- `sunday_p4_temperature` (numeric) min value is 5, max value is 35, unit is °C
 
 ### Linkquality (numeric)
 Link quality (signal strength).

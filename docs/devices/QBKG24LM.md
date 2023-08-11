@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QBKG24LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara D1 2 gang smart wall switch (with neutral wire) |
 | Exposes | switch (state), power, action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG24LM](https://www.zigbee2mqtt.io/images/devices/QBKG24LM.jpg) |
@@ -34,9 +34,19 @@ You may have to unpair the switch from an existing coordinator before the pairin
 If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
+* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes
@@ -62,7 +72,7 @@ The unit of this value is `W`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `hold_left`, `single_left`, `double_left`, `release_left`, `hold_right`, `single_right`, `double_right`, `release_right`, `hold_both`, `single_both`, `double_both`, `release_both`.
+The possible values are: `hold_left`, `single_left`, `double_left`, `single_right`, `double_right`, `single_both`, `double_both`.
 
 ### Operation_mode (enum, left endpoint)
 Decoupled mode for left button.

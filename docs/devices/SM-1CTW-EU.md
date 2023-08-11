@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SM-1CTW-EU  |
-| Vendor  | Somgoms  |
+| Vendor  | [Somgoms](/supported-devices/#v=Somgoms)  |
 | Description | Curtain switch |
 | Exposes | cover (state, position), linkquality |
 | Picture | ![Somgoms SM-1CTW-EU](https://www.zigbee2mqtt.io/images/devices/SM-1CTW-EU.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 ## Pairing
 Press and release the middle (stop) button 5 times and hold for a 6th time until you hear a beep and see the light flashing.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

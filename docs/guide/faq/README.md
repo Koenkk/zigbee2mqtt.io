@@ -6,6 +6,8 @@ sidebarDepth: 0
 
 [[toc]]
 
+## My network is unstable and/or performs poorly, what can I do?
+Read [Improve network range and stability](../../advanced/zigbee/02_improve_network_range_and_stability.md)
 
 ## Why does my device not or fail to pair?
 This problem can be divided in 2 categories; no logging is shown at all OR interview fails.
@@ -20,31 +22,37 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - Try pairing the device closer to the coordinator.
 - CC2531/CC2530 coordinator only:
   - Stop Zigbee2MQTT, unplug the coordinator, wait 10 seconds, plug the coordinator, start Zigbee2MQTT and try to pair the device again.
-  - If none of the above helps, try to reflash the coordinator (does not require repairing of already paired devices).
+  - If none of the above helps, try to reflash the coordinator (does not require re-pairing of already paired devices).
 
 ### Interview fails
 - Try pairing the device closer to the coordinator.
 - There can be too much interference, try connecting the coordinator USB through an USB extension cable. This problem occurs a lot when used in combination with a Raspberry Pi 4.
 - If it’s a battery powered device, try replacing the battery. Try to keep the device awake by pressing the button of the device (if any) every 3 seconds.
-- Try repairing the device again for 2 or 3 times.
+- Try re-pairing the device again for 2 or 3 times.
 - This might be a Zigbee2MQTT bug, [Create a new issue](https://github.com/Koenkk/zigbee2mqtt/issues/new) with the zigbee-herdsman debug logging attached to it. [How to enable zigbee-herdsman debug logging](../usage/debug.md#zigbee-herdsman-debug-logging).
 - If device joins with `0x000000000000000` as `ieeeAddress` (you will see: `Starting interview of '0x0000000000000000'` in the Zigbee2MQTT log) your CC253X might be broken. [See issue #2761](https://github.com/Koenkk/zigbee2mqtt/issues/2761).
 - In case the device is a bulb, try resetting it through [Touchlink](../usage/touchlink.md)
 - Try pairing close to a bulb (light) router instead of the coordinator.
 
 ## How do I migrate from one adapter to another?
-Want to migrate from e.g. a CC2531 to a more powerful adapter (e.g. ZZH)? Then follow these instructions:
+
+Want to migrate from e.g. a CC2530/CC2531 to a more powerful adapter (e.g. CC2652/CC1352)? Then follow these instructions below:
+
+::: warning
+Migration from one adapter to another requires backup and restore support which is so far only implemented for the Zstack adapter (Texas Instruments adapters). Backup and restore is **not supported** for any other adapters (ConBee/Raspbee, EZSP and Zigate).
+:::
+
 1. First make sure you are running the latest version of Zigbee2MQTT
 1. Stop Zigbee2MQTT
-1. Determine wether migrating [requires repairing of your devices](#what-does-and-does-not-require-repairing-of-all-devices)
-    - If repairing is required: remove `data/coordinator_backup.json` (if it exists) and `data/database.db`
-    - If repairing is **not** required: [copy the ieee address of the old adpter into the new one](../adapters/flashing/copy_ieeaddr.html)
+1. Determine whether migrating [requires re-pairing of your devices](#what-does-and-does-not-require-repairing-of-all-devices)
+    - If re-pairing is required: remove `data/coordinator_backup.json` (if it exists) and `data/database.db`
+    - If re-pairing is **not** required: [copy the ieee address of the old adpter into the new one](../adapters/flashing/copy_ieeaddr.html)
 1. Update the `serial` -> `port`  in your `configuration.yaml`
 1. Start Zigbee2MQTT
-  - If repairing was required:
+  - If re-pairing was required:
       1. Disconnect power of all mains powered devices
-      1. Start repairing devices 1 by 1
-  - If repairing was **not** required and your devices do not respond; restart some routers by removing them from the mains power for a few seconds.
+      1. Start re-pairing devices 1 by 1
+  - If re-pairing was **not** required and your devices do not respond; restart some routers by removing them from the mains power for a few seconds.
 
 ## How do I move my Zigbee2MQTT instance to a different environment?
 Details about your network are stored in both the coordinator and files under the `data/` directory. To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
@@ -101,8 +109,9 @@ If after some uptime Zigbee2MQTT crashes with errors like: `SRSP - AF - dataRequ
 - Make sure you are using the latest firmware on your adapter, see the [adapter page](../adapters/README.md) for a link to the latest firmware.
 - If using a Raspberry Pi; this problem can occur if you are using a bad power supply or when other USB devices are connected direclty to the Pi (especially occurs with external SSD), try connecting other USB devices through a powered USB hub.
 - Disable the USB autosuspend feature, if `cat /sys/module/usbcore/parameters/autosuspend` returns `1` or `2` it is enabled; to disable execute:
-```bash
-sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/&usbcore.autosuspend=-1 /' /etc/default/grub
-update-grub
-systemctl reboot
-```
+  ```bash
+  sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/&usbcore.autosuspend=-1 /' /etc/default/grub
+  update-grub
+  systemctl reboot
+  ``` 
+  - On a Raspberry Pi, you will need to instead edit `/boot/cmdline.txt` and add `usbcore.autosuspend=-1` to the end of the line.

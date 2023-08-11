@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_switch_2_gang  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2 gang switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![TuYa TS0601_switch_2_gang](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_2_gang.jpg) |
@@ -29,6 +29,7 @@ pageClass: device-page
 ### Pairing
 To pair press any button 5 times and on the 6th time hold it untill you hear beep, then release button and wait for pairing process.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

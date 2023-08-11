@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WSZ01  |
-| Vendor  | J.XUAN  |
+| Vendor  | [J.XUAN](/supported-devices/#v=J.XUAN)  |
 | Description | Wireless switch |
 | Exposes | action, battery, linkquality |
 | Picture | ![J.XUAN WSZ01](https://www.zigbee2mqtt.io/images/devices/WSZ01.jpg) |
@@ -29,6 +29,7 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
 ### Action (enum)
@@ -38,7 +39,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `release`, `single`, `double`, `hold`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

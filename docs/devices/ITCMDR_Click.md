@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ITCMDR_Click  |
-| Vendor  | IT Commander  |
+| Vendor  | [IT Commander](/supported-devices/#v=IT%20Commander)  |
 | Description | Button |
 | Exposes | action, battery, voltage, linkquality |
 | Picture | ![IT Commander ITCMDR_Click](https://www.zigbee2mqtt.io/images/devices/ITCMDR_Click.jpg) |
@@ -29,6 +29,7 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
 ### Action (enum)
@@ -38,7 +39,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `triple`, `hold`, `release`, `many`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

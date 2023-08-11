@@ -16,16 +16,25 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZTS-EUR-C  |
-| Vendor  | Moes  |
+| Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Zigbee + RF curtain switch |
 | Exposes | cover (state, position), backlight, calibration, motor_reversal, linkquality |
 | Picture | ![Moes ZTS-EUR-C](https://www.zigbee2mqtt.io/images/devices/ZTS-EUR-C.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Calibration
+Calibration procedure:
+1. Turn calibration on
+2. Move cover completely up (open)
+3. Press stop
+4. Close cover
+5. Press stop when closed
+6. Turn calibration off
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

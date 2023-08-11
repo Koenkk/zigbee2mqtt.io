@@ -16,22 +16,29 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | FUT036Z  |
-| Vendor  | Miboxer  |
+| Vendor  | [Miboxer](/supported-devices/#v=Miboxer)  |
 | Description | Single color LED controller |
-| Exposes | light (state, brightness), effect, linkquality |
+| Exposes | light (state, brightness), effect, do_not_disturb, linkquality |
 | Picture | ![Miboxer FUT036Z](https://www.zigbee2mqtt.io/images/devices/FUT036Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+The device will enter pairing mode when turned on, if it has not been paired previously. Pairing mode can be forced by pressing the SET button, or power cycling the controller, 3 times in succession.
 
+The lights connected to the controller will fade in and out when the controlled is in pairing mode.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -68,6 +75,13 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
+
+### Do_not_disturb (binary)
+Do not disturb mode, when enabled this function will keep the light OFF after a power outage.
+Value can be found in the published state on the `do_not_disturb` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_not_disturb": NEW_VALUE}`.
+If value equals `true` do_not_disturb is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

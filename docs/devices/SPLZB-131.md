@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SPLZB-131  |
-| Vendor  | Develco  |
+| Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Power plug |
-| Exposes | switch (state), power, current, voltage, energy, linkquality |
+| Exposes | switch (state), power, power_reactive, current, voltage, energy, ac_frequency, linkquality |
 | Picture | ![Develco SPLZB-131](https://www.zigbee2mqtt.io/images/devices/SPLZB-131.jpg) |
 
 
@@ -28,14 +28,27 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
 * `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -50,6 +63,12 @@ Instantaneous measured power.
 Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
+
+### Power_reactive (numeric)
+Instantaneous measured reactive power.
+Value can be found in the published state on the `power_reactive` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `VAR`.
 
 ### Current (numeric)
 Instantaneous measured electrical current.
@@ -68,6 +87,12 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Ac_frequency (numeric)
+Measured electrical AC frequency.
+Value can be found in the published state on the `ac_frequency` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `Hz`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

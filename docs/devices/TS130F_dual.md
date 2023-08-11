@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS130F_dual  |
-| Vendor  | Lonsonho  |
+| Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | Dual curtain/blind module |
 | Exposes | moving, calibration_time, cover (state, position), calibration, motor_reversal, linkquality |
 | Picture | ![Lonsonho TS130F_dual](https://www.zigbee2mqtt.io/images/devices/TS130F_dual.jpg) |
@@ -24,6 +24,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+The output is only driven once the input signal is released, hence making this device difficult to work with non-momentary switches.
 
 ### Pairing
 Press on pair button for 10 seconds to enter pairing mode
@@ -39,6 +40,7 @@ Press on pair button for 10 seconds to enter pairing mode
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -47,14 +49,25 @@ Press on pair button for 10 seconds to enter pairing mode
 
 ## Exposes
 
-### Moving (enum)
-Value can be found in the published state on the `moving` property.
+### Moving (enum, left endpoint)
+Value can be found in the published state on the `moving_left` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `UP`, `STOP`, `DOWN`.
 
-### Calibration_time (numeric)
+### Moving (enum, right endpoint)
+Value can be found in the published state on the `moving_right` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `UP`, `STOP`, `DOWN`.
+
+### Calibration_time (numeric, left endpoint)
 Calibration time.
-Value can be found in the published state on the `calibration_time` property.
+Value can be found in the published state on the `calibration_time_left` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `S`.
+
+### Calibration_time (numeric, right endpoint)
+Calibration time.
+Value can be found in the published state on the `calibration_time_right` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `S`.
 

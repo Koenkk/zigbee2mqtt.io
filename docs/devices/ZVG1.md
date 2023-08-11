@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZVG1  |
-| Vendor  | RTX  |
+| Vendor  | [RTX](/supported-devices/#v=RTX)  |
 | Description | Zigbee smart water valve |
-| Exposes | switch (state), battery, timer_state, timer, timer_time_left, last_valve_open_duration, water_consumed, linkquality |
+| Exposes | switch (state), battery, weather_delay, timer_state, timer, timer_time_left, last_valve_open_duration, water_consumed, cycle_timer_1, cycle_timer_2, cycle_timer_3, cycle_timer_4, normal_schedule_timer_1, normal_schedule_timer_2, normal_schedule_timer_3, normal_schedule_timer_4, linkquality |
 | Picture | ![RTX ZVG1](https://www.zigbee2mqtt.io/images/devices/ZVG1.jpg) |
 
 
@@ -32,6 +32,7 @@ After this the device will automatically join.
 
 
 
+
 ## Exposes
 
 ### Switch 
@@ -40,16 +41,21 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 It's not possible to read (`/get`) this value.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
+### Weather_delay (enum)
+Value can be found in the published state on the `weather_delay` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"weather_delay": NEW_VALUE}`.
+The possible values are: `disabled`, `24h`, `48h`, `72h`.
+
 ### Timer_state (enum)
 Value can be found in the published state on the `timer_state` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer_state": NEW_VALUE}`.
+It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `disabled`, `active`, `enabled`.
 
 ### Timer (numeric)
@@ -57,7 +63,7 @@ Auto off after specific time.
 Value can be found in the published state on the `timer` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `240`.
+The minimal value is `0` and the maximum value is `60`.
 The unit of this value is `min`.
 
 ### Timer_time_left (numeric)
@@ -76,7 +82,55 @@ The unit of this value is `min`.
 Liters of water consumed.
 Value can be found in the published state on the `water_consumed` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `l`.
+The unit of this value is `L`.
+
+### Cycle_timer_1 (text)
+Format 08:00 / 20:00 / 15 / 60 / MoTuWeThFrSaSu / 1 (08:00 = start time 20:00 = end time 15 = irrigation duration in minutes 60 = pause duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).
+Value can be found in the published state on the `cycle_timer_1` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cycle_timer_1": NEW_VALUE}`.
+
+### Cycle_timer_2 (text)
+Format 08:00 / 20:00 / 15 / 60 / MoTuWeThFrSaSu / 1 (08:00 = start time 20:00 = end time 15 = irrigation duration in minutes 60 = pause duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).
+Value can be found in the published state on the `cycle_timer_2` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cycle_timer_2": NEW_VALUE}`.
+
+### Cycle_timer_3 (text)
+Format 08:00 / 20:00 / 15 / 60 / MoTuWeThFrSaSu / 1 (08:00 = start time 20:00 = end time 15 = irrigation duration in minutes 60 = pause duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).
+Value can be found in the published state on the `cycle_timer_3` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cycle_timer_3": NEW_VALUE}`.
+
+### Cycle_timer_4 (text)
+Format 08:00 / 20:00 / 15 / 60 / MoTuWeThFrSaSu / 1 (08:00 = start time 20:00 = end time 15 = irrigation duration in minutes 60 = pause duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).
+Value can be found in the published state on the `cycle_timer_4` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cycle_timer_4": NEW_VALUE}`.
+
+### Normal_schedule_timer_1 (text)
+Format 08:00 / 15 / MoTuWeThFrSaSu / 1 (08:00 = start time 15 = duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).
+Value can be found in the published state on the `normal_schedule_timer_1` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"normal_schedule_timer_1": NEW_VALUE}`.
+
+### Normal_schedule_timer_2 (text)
+Format 08:00 / 15 / MoTuWeThFrSaSu / 1 (08:00 = start time 15 = duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).
+Value can be found in the published state on the `normal_schedule_timer_2` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"normal_schedule_timer_2": NEW_VALUE}`.
+
+### Normal_schedule_timer_3 (text)
+Format 08:00 / 15 / MoTuWeThFrSaSu / 1 (08:00 = start time 15 = duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).
+Value can be found in the published state on the `normal_schedule_timer_3` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"normal_schedule_timer_3": NEW_VALUE}`.
+
+### Normal_schedule_timer_4 (text)
+Format 08:00 / 15 / MoTuWeThFrSaSu / 1 (08:00 = start time 15 = duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).
+Value can be found in the published state on the `normal_schedule_timer_4` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"normal_schedule_timer_4": NEW_VALUE}`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

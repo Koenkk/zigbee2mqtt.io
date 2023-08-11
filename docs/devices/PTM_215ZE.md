@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PTM 215ZE  |
-| Vendor  | EnOcean  |
+| Vendor  | [EnOcean](/supported-devices/#v=EnOcean)  |
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
 | Picture | ![EnOcean PTM 215ZE](https://www.zigbee2mqtt.io/images/devices/PTM-215ZE.jpg) |
@@ -60,6 +60,7 @@ Once the device is paired you need to confirm the channel. To do this, press any
 
 For more informations, please refer to the [EnOcean PTM 215ZE manual chapter 5.1](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/).
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

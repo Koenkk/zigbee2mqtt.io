@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QBKG22LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara D1 2 gang smart wall switch (no neutral wire) |
 | Exposes | switch (state), action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG22LM](https://www.zigbee2mqtt.io/images/devices/QBKG22LM.jpg) |
@@ -48,6 +48,7 @@ Press and hold the button on the device for +- 10 seconds
 You may have to unpair the switch from an existing coordinator before the pairing process will start.
 If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | DLM-300Z  |
-| Vendor  | ShinaSystem  |
+| Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | Sihas door lock |
-| Exposes | battery, lock (state, lock_state), door_state, action, action_source_name, action_source_user, pin_code, linkquality |
+| Exposes | battery, lock (state, lock_state), door_state, action, action_source_name, action_user, pin_code, linkquality |
 | Picture | ![ShinaSystem DLM-300Z](https://www.zigbee2mqtt.io/images/devices/DLM-300Z.jpg) |
 
 
@@ -31,6 +31,7 @@ To retrieve the state, send a `get` message to the device topic (`zigbee2mqtt/DE
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -40,7 +41,7 @@ To retrieve the state, send a `get` message to the device topic (`zigbee2mqtt/DE
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -70,15 +71,16 @@ Value can be found in the published state on the `action_source_name` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `keypad`, `rfid`, `manual`, `rf`.
 
-### Action_source_user (numeric)
+### Action_user (numeric)
 ID of user that triggered the action on the lock.
-Value can be found in the published state on the `action_source_user` property.
+Value can be found in the published state on the `action_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Pin_code (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "pin_code": VALUE}}`
-- `user` (numeric): User ID can only number 1. 
-- `pin_code` (numeric): Pincode to set, set pincode(4 digit) to null to clear. 
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pin_code": ""}`.
+- `user` (numeric): User ID can only number 1 
+- `pin_code` (numeric): Pincode to set, set pincode(4 digit) to null to clear 
 
 ### Linkquality (numeric)
 Link quality (signal strength).

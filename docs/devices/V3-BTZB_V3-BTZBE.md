@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | V3-BTZB/V3-BTZBE  |
-| Vendor  | Danalock  |
+| Vendor  | [Danalock](/supported-devices/#v=Danalock)  |
 | Description | BT/ZB smartlock |
-| Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_source_user, linkquality |
+| Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, linkquality |
 | Picture | ![Danalock V3-BTZB/V3-BTZBE](https://www.zigbee2mqtt.io/images/devices/V3-BTZB-V3-BTZBE.jpg) |
 
 
@@ -44,6 +44,10 @@ To remove a pin code, just send MQTT /set request : {"pin_code":{"user":0}} (use
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -59,7 +63,7 @@ To read the current state of this lock publish a message to topic `zigbee2mqtt/F
 This lock exposes a lock state which can be found in the published state under the `lock_state` property. It's not possible to read (`/get`) or write (`/set`) this value. The possible values are: `not_fully_locked`, `locked`, `unlocked`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -67,10 +71,11 @@ The unit of this value is `%`.
 
 ### Pin_code (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "user_type": VALUE, "user_enabled": VALUE, "pin_code": VALUE}}`
-- `user` (numeric): User ID to set or clear the pincode for. 
-- `user_type` (enum): Type of user, unrestricted: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock. Allowed values: `unrestricted`, `year_day_schedule`, `week_day_schedule`, `master`, `non_access`
-- `user_enabled` (binary): Whether the user is enabled/disabled. Allowed values: `true` or `false`
-- `pin_code` (numeric): Pincode to set, set pincode to null to clear. 
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pin_code": ""}`.
+- `user` (numeric): User ID to set or clear the pincode for 
+- `user_type` (enum): Type of user, unrestricted: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock allowed values: `unrestricted`, `year_day_schedule`, `week_day_schedule`, `master`, `non_access`
+- `user_enabled` (binary): Whether the user is enabled/disabled allowed values: `true` or `false`
+- `pin_code` (numeric): Pincode to set, set pincode to null to clear 
 
 ### Action (enum)
 Triggered action on the lock.
@@ -84,9 +89,9 @@ Value can be found in the published state on the `action_source_name` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `keypad`, `rfid`, `manual`, `rf`.
 
-### Action_source_user (numeric)
+### Action_user (numeric)
 ID of user that triggered the action on the lock.
-Value can be found in the published state on the `action_source_user` property.
+Value can be found in the published state on the `action_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)

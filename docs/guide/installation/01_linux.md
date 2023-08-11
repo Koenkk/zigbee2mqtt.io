@@ -21,6 +21,8 @@ pi@raspberry:~ $ ls -l /dev/ttyACM0
 crw-rw---- 1 root dialout 166, 0 May 16 19:15 /dev/ttyACM0  # <-- adapter (CC2531 in this case) on /dev/ttyACM0
 ```
 
+Alternately, if you are using an ethernet connected adapter, follow the instructions given for your specific device.
+
 However, it is **recommended** to use "by ID" mapping of the device (see [Adapter settings](../configuration/adapter-settings.md)). This kind of device path mapping is more stable, but can also be handy if you have multiple serial devices connected to your Raspberry Pi. In the example below the device location is: `/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00`
 ```bash
 pi@raspberry:/ $ ls -l /dev/serial/by-id
@@ -31,7 +33,8 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 ## Installing
 ```bash
 # Set up Node.js repository and install Node.js + required dependencies
-# NOTE: Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v16.15.0/ e.g. Version 16.15.0 should work.
+# NOTE 1: Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v16.15.0/ e.g. Version 16.15.0 should work.
+# NOTE 2: For Ubuntu see tip below
 sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs git make g++ gcc
 
@@ -59,6 +62,23 @@ added 383 packages in 111.613s
 ```
 
 Note that the `npm ci` produces some `warning` which can be ignored.
+
+::: tip TIP
+On Ubuntu, Node.js can be installed through Snap
+
+```bash
+# Install latest nodejs from snap store
+# The --classic argument is required here as Node.js needs full access to your system in order to be useful.
+# You can also use the --channel=XX argument to install a legacy version where XX is the version you want to install (we need 14+).
+sudo snap install node --classic
+
+# Verify node has been installed
+# If you encounter an error at this stage and used the snap store instructions, adjust the BIN path as follows:
+## PATH=$PATH:/snap/node/current/bin
+# then re-verify nodejs and npm versions as above
+node --version
+```
+:::
 
 ## Configuring
 Before we can start Zigbee2MQTT we need to edit the `configuration.yaml` file. This file contains the configuration which will be used by Zigbee2MQTT.
@@ -92,6 +112,12 @@ It is recommended to use a custom network key. This can be done by adding the fo
 ```yaml
 advanced:
     network_key: GENERATE
+```
+
+To enable the frontend add the following (see the [Frontend](../configuration/frontend.md) page for more settings):
+
+```yaml
+frontend: true
 ```
 
 Save the file and exit.
@@ -137,6 +163,7 @@ Description=zigbee2mqtt
 After=network.target
 
 [Service]
+Environment=NODE_ENV=production
 ExecStart=/usr/bin/npm start
 WorkingDirectory=/opt/zigbee2mqtt
 StandardOutput=inherit
@@ -152,7 +179,12 @@ WantedBy=multi-user.target
 
 > If you are using a Raspberry Pi 1 or Zero AND if you followed this [guide](https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb), replace `ExecStart=/usr/bin/npm start` with `ExecStart=/usr/local/bin/npm start`.
 
-> If you are using a Raspberry Pi or a system running from a SD card, you will likely want to minimize the amount of log files written to disk. Systemd service with `StandardOutput=inherit` will result in logging everything twice: once in `journalctl` through the systemd unit and once from Zigbee2MQTT default logging to files under `data/log`. You will likely want to keep only one of them: either use `StandardOutput=null` in the systemd unit and keep only the logs under `data/log` **or** setting [`advanced.log_output = ['console']`](https://www.zigbee2mqtt.io/guide/configuration/logging.html) in Zigbee2MQTT configuration to keep only the `journalctl` logging.
+> If you are using a Raspberry Pi or a system running from a SD card, you will likely want to minimize the amount of log files written to disk. Systemd service with `StandardOutput=inherit` will result in logging everything twice: once in `journalctl` through the systemd unit and once from Zigbee2MQTT default logging to files under `data/log`. You will likely want to keep only one of them: 
+> > Keep only the logs under `data/log` --> use `StandardOutput=null` in the systemd unit.  **or** 
+> > 
+> > Keep only the `journalctl` logging --> set [`advanced.log_output = ['console']`](https://www.zigbee2mqtt.io/guide/configuration/logging.html) in Zigbee2MQTT configuration.
+
+> If you want to use another directory to place all Zigbee2MQTT data, add `Environment=ZIGBEE2MQTT_DATA=/path/to/data` below `[Service]`
 
 Save the file and exit.
 

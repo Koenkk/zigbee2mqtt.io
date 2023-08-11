@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_smart_CO_air_box  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart air box (carbon monoxide) |
 | Exposes | carbon_monoxide, co, linkquality |
 | Picture | ![TuYa TS0601_smart_CO_air_box](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_CO_air_box.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

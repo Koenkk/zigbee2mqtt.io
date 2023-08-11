@@ -10,7 +10,7 @@ Most of the time this is caused by Zigbee2MQTT not being able to communicate wit
 
 ## Error: `SRSP - SYS - ping after 6000ms`
 
-4 common reasons of this error:
+5 common reasons of this error:
 
 1. The port of your serial adapter changed.
    Check [this](../installation/01_linux.md#1-determine-location-of-the-adapter-and-checking-user-permissions) to find
@@ -20,6 +20,8 @@ Most of the time this is caused by Zigbee2MQTT not being able to communicate wit
    a [more powerful adapter](../adapters/README.md).
 3. Your adapter requires additional configuration parameters. Check [supported Adapters](../adapters/README.md) section to find out if your adapter requires extra parameters (eg. ConBee II / RaspBee II).
 4. Home Assistant's "Zigbee Home Automation" (ZHA) integration is enabled. Try to disable the ZHA integration and restart the Zigbee2MQTT add-on.
+5. Your hardware adapter is flashed with the router firmware and not with the coordinator firmware.
+6. Your network Zigbee adapter is not accessible over the LAN network.
 
 ## Verify that you put the correct port in configuration.yaml
 
@@ -98,11 +100,12 @@ Reboot your device and now your user should have access to the device.
 
 ## Error: `Coordinator failed to start, probably the panID is already in use, try a different panID or channel`
 
-- If you still get this error after increasing the panID and you are using a Raspberry Pi with other USB devices
-  attached (e.g. SSD) try connecting the SSD or adapter through a powered USB hub.
+- If you still get this error after increasing the panID (as explained [here](../configuration/zigbee-network.md#network-config)) 
+  and you are using a Raspberry Pi with other USB devices attached (e.g. SSD) try connecting the SSD or adapter through a powered USB hub.
 - In case you are getting this after first starting successfully and pairing a device it might be that the firmware has
   been flashed incorrectly. Try flashing the stick on a different
   computer ([detailed info](https://github.com/Koenkk/zigbee2mqtt/issues/6302)). This issue mainly occurs in combination with a Slaesh's CC2652RB stick.
+- If you had your Zigbee network before and such an error appears with the new Zigbee adapter, try to switch off the Zigbee routers that were connected to your previous Zigbee network and restart Zigbee2MQTT.
 
 ## Error: `Resource temporarily unavailable Cannot lock port`
 

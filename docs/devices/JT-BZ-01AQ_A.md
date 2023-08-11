@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | JT-BZ-01AQ/A  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart natural gas detector |
-| Exposes | gas, gas_density, gas_sensitivity, selftest, test, mute_buzzer, mute, linkage_alarm, state, power_outage_count, linkquality |
+| Exposes | gas, gas_density, gas_sensitivity, selftest, test, buzzer, buzzer_manual_alarm, buzzer_manual_mute, linkage_alarm, linkage_alarm_state, state, power_outage_count, linkquality |
 | Picture | ![Xiaomi JT-BZ-01AQ/A](https://www.zigbee2mqtt.io/images/devices/JT-BZ-01AQ-A.jpg) |
 
 
@@ -40,6 +40,7 @@ After this the device will automatically join.
 
 ![JT-BZ-01AQ/A pairing](../images/pairing/JT-BZ-01AQ_A_pairing.jpg)
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -74,7 +75,7 @@ Starts the self-test process (checking the indicator light and buzzer work prope
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"selftest": NEW_VALUE}`.
-The possible values are: `Test`.
+The possible values are: `selftest`.
 
 ### Test (binary)
 Self-test in progress.
@@ -82,26 +83,39 @@ Value can be found in the published state on the `test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
 
-### Mute_buzzer (enum)
-Mute the buzzer for 10 minutes (buzzer cannot be pre-muted, because this function only works when the alarm is triggered).
+### Buzzer (enum)
+The buzzer can be muted and alarmed manually. During a gas alarm, the buzzer can be manually muted for 10 minutes ("mute"), but cannot be unmuted manually before this timeout expires. The buzzer cannot be pre-muted, as this function only works during a gas alarm. During the absence of a gas alarm, the buzzer can be manually alarmed ("alarm") and disalarmed ("mute"), but for this "linkage_alarm" option must be enabled.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mute_buzzer": NEW_VALUE}`.
-The possible values are: `Mute`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"buzzer": NEW_VALUE}`.
+The possible values are: `mute`, `alarm`.
 
-### Mute (binary)
-Buzzer muted.
-Value can be found in the published state on the `mute` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mute": ""}`.
+### Buzzer_manual_alarm (binary)
+Buzzer alarmed (manually).
+Value can be found in the published state on the `buzzer_manual_alarm` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"buzzer_manual_alarm": ""}`.
 It's not possible to write (`/set`) this value.
-If value equals `true` mute is ON, if `false` OFF.
+If value equals `true` buzzer_manual_alarm is ON, if `false` OFF.
+
+### Buzzer_manual_mute (binary)
+Buzzer muted (manually).
+Value can be found in the published state on the `buzzer_manual_mute` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"buzzer_manual_mute": ""}`.
+It's not possible to write (`/set`) this value.
+If value equals `true` buzzer_manual_mute is ON, if `false` OFF.
 
 ### Linkage_alarm (binary)
-When this option is enabled and a gas leak is detected, other detectors with this option enabled will also sound the alarm buzzer.
+When this option is enabled and a gas alarm has occurred, then "linkage_alarm_state"=true, and when the gas alarm has ended or the buzzer has been manually muted, then "linkage_alarm_state"=false.
 Value can be found in the published state on the `linkage_alarm` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"linkage_alarm": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linkage_alarm": NEW_VALUE}`.
 If value equals `true` linkage_alarm is ON, if `false` OFF.
+
+### Linkage_alarm_state (binary)
+"linkage_alarm" is triggered.
+Value can be found in the published state on the `linkage_alarm_state` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` linkage_alarm_state is ON, if `false` OFF.
 
 ### State (binary)
 "Preparation" or "work" (measurement of the gas concentration value and triggering of an alarm are only performed in the "work" state).
