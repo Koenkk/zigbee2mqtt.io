@@ -276,6 +276,18 @@ To allow joining for only a specific amount of time add the `time` property (in 
 
 Allows to check whether Zigbee2MQTT is healthy. Payload has to be empty, example response: `{"data":{"healthy":true},"status":"ok"}`.
 
+#### zigbee2mqtt/bridge/request/coordinator_check
+
+Allows to check to execute a coordinator check. Payload has to be empty, example response: `{"data":{"missing_routers":[{"friendly_name":"bulb","ieee_address":"0x000b57fffec6a5b2"}]},"status":"ok"}`.
+
+This check is only supported for Texas Instruments based adapters (e.g. CC2652/CC1352). It checks whether any routers are missing from the coordinator memory. In case routers are missing, you may experience one of the following problems:
+- Unable to pair devices to your network, pairing might fail for any device that tries to joins the network via this missing router.
+- Devices falling of the network. Sometimes devices that are in the network re-join it, if they try to re-join via this missing router, re-joining will fail.
+
+The solution is to re-pair the missing routers. There are 2 known reasons for routers to go missing:
+- Migration from a Zigbee 1.2 coordinator to 3.0 (e.g. CC2530/CC2531 -> CC2652/CC1352) without re-pairing any devices. This is because Zigbee 1.2 has less strict security requirements.
+- Upgrading of the firmware, this seems to occur because of a bug in the Texas Instruments SDK.
+
 #### zigbee2mqtt/bridge/request/restart
 
 Restarts Zigbee2MQTT. Payload has to be empty, example response: `{"data":{},"status":"ok"}`.
