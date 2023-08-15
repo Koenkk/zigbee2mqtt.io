@@ -9,7 +9,7 @@ There are two types of exposes:
 - Generic: types like `numeric` and `binary`
 - Specific: represents a specific capability of a device like a `light` or `switch`.
 
-Both types will always have a `type` property. The generic types (except composite) will always have an `access` property and an optional `description` property. All generic types will always have a `name` property indicating the context. All generic types will always have a `property` type indicating where the value is exposed on, usually this is equal to the name but in case when the `endpoint` is defined it is `name_endpoint`. The specific and the generic composite type will always have a `features` property, this is an array containing the generic exposes types. Optionally both types can have a property `endpoint`, indicating the device exposes this capability on a specific endpoint.
+Both types will always have a `type` property. The generic types (except composite) will always have an `access` property and an optional `description` property. All generic types will always have a `name` property indicating the context and `label` property containing the name of the capability in the correct case and without using the underscore separator (e.g. `Device temperature`, `VOC`, `Power outage count`). All generic types will always have a `property` type indicating where the value is exposed on, usually this is equal to the name but in case when the `endpoint` is defined it is `name_endpoint`. The specific and the generic composite type will always have a `features` property, this is an array containing the generic exposes types. Optionally both types can have a property `endpoint`, indicating the device exposes this capability on a specific endpoint.
 
 ### Access
 The `access` property is a 3-bit bitmask.
@@ -29,28 +29,102 @@ Examples:
 Indicates a device exposes a binary value. Always has `value_on` and `value_off` which indicates how to interpet the value. Optionally has a `value_toggle` which can be send to toggle the value.
 
 Examples:
-- `{"type":"binary","name":"occupancy","property":"occupancy","value_on":true,"value_off":false,"access":1}`
-- `{"type":"binary","name":"state","property":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":7}`
+```json
+{
+    "type": "binary",
+    "name": "occupancy",
+    "label": "Occupancy",
+    "property": "occupancy",
+    "value_on": true,
+    "value_off": false,
+    "access": 1
+}
+```
+
+```json
+{
+    "type": "binary",
+    "name": "state",
+    "label": "State",
+    "property": "state",
+    "value_on": "ON",
+    "value_off": "OFF",
+    "value_toggle": "TOGGLE",
+    "access": 7
+}
+```
 
 ### Numeric
 Indicates a device exposes a numeric value. Optionally has `value_max`, `value_min`, `value_step`, `unit` and `presets`. The `presets` defines values which have a special interpetation.
 
 Examples:
-- `{"type":"numeric","name":"brightness","property":"brightness","value_min":0,"value_max":254,"access":7}`
-- `{"type":"numeric","name":"temperature","property":"temperature","unit":"°C","access":1}`
-- `{"type":"numeric","name":"color_temp_startup","property":"color_temp_startup","unit":"mired","access":7,"presets":{"name":"previous","value":65535,"description":"Restore previous color_temp on cold power on"}}`
+```json
+{
+    "type": "numeric",
+    "name": "brightness",
+    "label": "Brightness",
+    "property": "brightness",
+    "value_min": 0,
+    "value_max": 254,
+    "access": 7
+}
+```
+
+```json
+{
+    "type": "numeric",
+    "name": "temperature",
+    "label": "Temperature",
+    "property": "temperature",
+    "unit": "°C",
+    "access": 1
+}
+```
+
+```json
+{
+    "type": "numeric",
+    "name": "color_temp_startup",
+    "label": "Color temp startup",
+    "property": "color_temp_startup",
+    "unit": "mired",
+    "access": 7,
+    "presets": {
+        "name": "previous",
+        "value": 65535,
+        "description": "Restore previous color_temp on cold power on"
+    }
+}
+```
 
 ### Enum
 Indicates a device exposes an enum value. Always has `values` indicating all possible values.
 
-Examples:
-- `{"type":"enum","name":"identify","property":"identify","values":["blink","okay"],"access":2}`
+Example:
+```json
+{
+    "type": "enum",
+    "name": "identify",
+    "label": "Identify",
+    "property": "identify",
+    "values": ["blink", "okay"],
+    "access": 2
+}
+```
 
 ### Text
 Indicates a device exposes a textual value.
 
-Examples:
-- `{"type":"text","name":"inserted","property":"inserted","access":1}`
+Example:
+```json
+{
+    "type": "text",
+    "name": "inserted",
+    "label": "Inserted",
+    "property": "inserted",
+    "access": 1
+}
+```
 
 ### Composite
 Composite combines the above generic types in the `features` array.
@@ -58,13 +132,26 @@ Composite combines the above generic types in the `features` array.
 Example:
 ```json
 {
-    "type":"composite",
-    "name":"color_xy",
-    "access":2,
-    "property":"color",
+    "type": "composite",
+    "name": "color_xy",
+    "label": "Color xy",
+    "access": 2,
+    "property": "color",
     "features": [
-        {"type":"numeric","name":"x","property":"x","access":7},
-        {"type":"numeric","name":"y","property":"y","access":7},
+        {
+            "type": "numeric",
+            "name": "x",
+            "label": "X",
+            "property": "x",
+            "access": 7
+        },
+        {
+            "type": "numeric",
+            "name": "y",
+            "label": "Y",
+            "property": "y",
+            "access": 7
+        }
     ]
 }
 ```
@@ -76,11 +163,17 @@ Optionally a `length_min` and `length_max` property can be added which defines t
 Examples:
 ```json
 {
-    "type":"list",
-    "name":"no_occupancy_since",
-    "property":"no_occupancy_since",
-    "access":1,
-    "item_type":{"access": 3, "name": "temperature", "type": "numeric"}
+    "type": "list",
+    "name": "no_occupancy_since",
+    "label": "No occupancy since",
+    "property": "no_occupancy_since",
+    "access": 1,
+    "item_type": {
+        "access": 3,
+        "name": "temperature",
+        "label": "Temperature",
+        "type": "numeric"
+    }
 }
 ```
 
@@ -88,6 +181,7 @@ Examples:
 {
     "type": "list",
     "name": "schedule",
+    "label": "Schedule",
     "property": "schedule",
     "access": 3,
     "length_min": 1,
@@ -95,10 +189,30 @@ Examples:
     "item_type": {
         "type": "composite",
         "name": "day_time",
+        "label": "Day time",
         "features": [
-            {"access": 3, "name": "day", "property": "day", "type": "enum","values": ["monday", "tuesday", "wednesday"]},
-            {"access": 3, "name": "hour", "property": "hour", "type": "numeric",},
-            {"access": 3, "name": "minute", "property": "minute", "type": "numeric"},
+            {
+                "access": 3,
+                "name": "day",
+                "label": "Day",
+                "property": "day",
+                "type": "enum",
+                "values": ["monday", "tuesday", "wednesday"]
+            },
+            {
+                "access": 3,
+                "name": "hour",
+                "label": "Hour",
+                "property": "hour",
+                "type": "numeric"
+            },
+            {
+                "access": 3,
+                "name": "minute",
+                "label": "Minute",
+                "property": "minute",
+                "type": "numeric"
+            }
         ]
     }
 }
@@ -115,25 +229,74 @@ Example:
 {
     "type": "light",
     "features": [
-        {"type":"binary","name":"state","property":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":7},
-        {"type":"numeric","name":"brightness","property":"brightness","value_min":0,"value_max":254,"access":7},
-        {"type":"numeric","name":"color_temp","property":"color_temp","access":7},
         {
-            "type":"composite",
-            "name":"color_xy",
-            "property":"color",
+            "type": "binary",
+            "name": "state",
+            "label": "State",
+            "property": "state",
+            "value_on": "ON",
+            "value_off": "OFF",
+            "value_toggle": "TOGGLE",
+            "access": 7
+        },
+        {
+            "type": "numeric",
+            "name": "brightness",
+            "label": "Brightness",
+            "property": "brightness",
+            "value_min": 0,
+            "value_max": 254,
+            "access": 7
+        },
+        {
+            "type": "numeric",
+            "name": "color_temp",
+            "label": "Color temp",
+            "property": "color_temp",
+            "access": 7
+        },
+        {
+            "type": "composite",
+            "name": "color_xy",
+            "label": "Color xy",
+            "property": "color",
             "features": [
-                {"type":"numeric","name":"x","property":"x","access":7},
-                {"type":"numeric","name":"y","property":"y","access":7}
+                {
+                    "type": "numeric",
+                    "name": "x",
+                    "label": "X",
+                    "property": "x",
+                    "access": 7
+                },
+                {
+                    "type": "numeric",
+                    "name": "y",
+                    "label": "Y",
+                    "property": "y",
+                    "access": 7
+                }
             ]
         },
         {
-            "type":"composite",
-            "name":"color_hs",
-            "property":"color",
+            "type": "composite",
+            "name": "color_hs",
+            "label": "Color hs",
+            "property": "color",
             "features": [
-                {"type":"numeric","name":"hue","property":"hue","access":7},
-                {"type":"numeric","name":"saturation","propertsaturation":"saturation","access":7}
+                {
+                    "type": "numeric",
+                    "name": "hue",
+                    "label": "Hue",
+                    "property": "hue",
+                    "access": 7
+                },
+                {
+                    "type": "numeric",
+                    "name": "saturation",
+                    "label": "Saturation",
+                    "property": "saturation",
+                    "access": 7
+                }
             ]
         }
     ]
@@ -151,7 +314,16 @@ Example:
 {
     "type": "switch",
     "features": [
-        {"type":"binary","name":"state","property":"state","value_on":"ON","value_off":"OFF","value_toggle":"TOGGLE","access":7}
+        {
+            "type": "binary",
+            "name": "state",
+            "label": "State",
+            "property": "state",
+            "value_on": "ON",
+            "value_off": "OFF",
+            "value_toggle": "TOGGLE",
+            "access": 7
+        }
     ]
 }
 ```
@@ -165,8 +337,23 @@ Example:
 {
     "type": "fan",
     "features": [
-        {"type":"binary","name":"state","property":"fan_state","value_on":"ON","value_off":"OFF","access":7},
-        {"type":"enum","name":"mode","property":"fan_mode","values":["off", "low", "medium", "high", "on", "auto", "smart"],"access":7}
+        {
+            "type": "binary",
+            "name": "state",
+            "label": "State",
+            "property": "fan_state",
+            "value_on": "ON",
+            "value_off": "OFF",
+            "access": 7
+        },
+        {
+            "type": "enum",
+            "name": "mode",
+            "label": "Mode",
+            "property": "fan_mode",
+            "values": ["off", "low", "medium", "high", "on", "auto", "smart"],
+            "access": 7
+        }
     ]
 }
 ```
@@ -180,9 +367,33 @@ Example:
 {
     "type": "cover",
     "features": [
-        {"type":"binary","name":"state","property":"state","value_on":"OPEN","value_off":"CLOSE","access":7},
-        {"type":"numeric","name":"position","property":"position","value_min":0,"value_max":100,"access":7},
-        {"type":"numeric","name":"tilt","property":"tilt","value_min":0,"value_max":100,"access":7}
+        {
+            "type": "binary",
+            "name": "state",
+            "label": "State",
+            "property": "state",
+            "value_on": "OPEN",
+            "value_off": "CLOSE",
+            "access": 7
+        },
+        {
+            "type": "numeric",
+            "name": "position",
+            "label": "Position",
+            "property": "position",
+            "value_min": 0,
+            "value_max": 100,
+            "access": 7
+        },
+        {
+            "type": "numeric",
+            "name": "tilt",
+            "label": "Tilt",
+            "property": "tilt",
+            "value_min": 0,
+            "value_max": 100,
+            "access": 7
+        }
     ]
 }
 ```
@@ -196,8 +407,23 @@ Example:
 {
     "type": "lock",
     "features": [
-        {"type":"binary","name":"state","property":"state","value_on":"LOCK","value_off":"UNLOCK","access":7}
-        {"type":"enum","name":"lock_state","property":"lock_state","values":["not_fully_locked","locked","unlocked"],"access":1}
+        {
+            "type": "binary",
+            "name": "state",
+            "label": "State",
+            "property": "state",
+            "value_on": "LOCK",
+            "value_off": "UNLOCK",
+            "access": 7
+        },
+        {
+            "type": "enum",
+            "name": "lock_state",
+            "label": "Lock state",
+            "property": "lock_state",
+            "values": ["not_fully_locked", "locked", "unlocked"],
+            "access": 1
+        }
     ]
 }
 ```
@@ -215,13 +441,68 @@ Example:
 {
     "type": "climate",
     "features": [
-        {"type":"numeric","name":"occupied_heating_setpoint","property":"occupied_heating_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":7,"unit":"°C"},
-        {"type":"numeric","name":"occupied_cooling_setpoint","property":"occupied_cooling_setpoint","value_min":7,"value_max":30,"value_step": 0.5,"access":7,"unit":"°C"},
-        {"type":"numeric","name":"local_temperature","property":"local_temperature","access":3,"unit":"°C"},
-        {"type":"enum","name":"system_mode","property":"system_mode","values":["off", "auto", "heat", "cool"],"access":7},
-        {"type":"enum","name":"preset","property":"preset","values":["hold", "program"],"access":7},
-        {"type":"enum","name":"running_state","property":"running_state","values":["idle", "heat", "cool"],"access":3},
-        {"type":"enum","name":"mode","property":"fan_mode","values":["off", "low", "medium", "high", "on", "auto", "smart"],"access":7},
+        {
+            "type": "numeric",
+            "name": "occupied_heating_setpoint",
+            "label": "Occupied heating setpoint",
+            "property": "occupied_heating_setpoint",
+            "value_min": 7,
+            "value_max": 30,
+            "value_step": 0.5,
+            "access": 7,
+            "unit": "°C"
+        },
+        {
+            "type": "numeric",
+            "name": "occupied_cooling_setpoint",
+            "label": "Occupied cooling setpoint",
+            "property": "occupied_cooling_setpoint",
+            "value_min": 7,
+            "value_max": 30,
+            "value_step": 0.5,
+            "access": 7,
+            "unit": "°C"
+        },
+        {
+            "type": "numeric",
+            "name": "local_temperature",
+            "label": "Local temperature",
+            "property": "local_temperature",
+            "access": 3,
+            "unit": "°C"
+        },
+        {
+            "type": "enum",
+            "name": "system_mode",
+            "label": "System mode",
+            "property": "system_mode",
+            "values": ["off", "auto", "heat", "cool"],
+            "access": 7
+        },
+        {
+            "type": "enum",
+            "name": "preset",
+            "label": "Preset",
+            "property": "preset",
+            "values": ["hold", "program"],
+            "access": 7
+        },
+        {
+            "type": "enum",
+            "name": "running_state",
+            "label": "Running state",
+            "property": "running_state",
+            "values": ["idle", "heat", "cool"],
+            "access": 3
+        },
+        {
+            "type": "enum",
+            "name": "mode",
+            "label": "Mode",
+            "property": "fan_mode",
+            "values": ["off", "low", "medium", "high", "on", "auto", "smart"],
+            "access": 7
+        }
     ]
 }
 ```
