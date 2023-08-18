@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QBCZ11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara socket Zigbee |
 | Exposes | switch (state), power, energy, device_temperature, voltage, power_outage_memory, linkquality |
 | Picture | ![Xiaomi QBCZ11LM](https://www.zigbee2mqtt.io/images/devices/QBCZ11LM.jpg) |
@@ -31,6 +31,7 @@ To set this option publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"power_o
 Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -38,7 +39,21 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
+* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes

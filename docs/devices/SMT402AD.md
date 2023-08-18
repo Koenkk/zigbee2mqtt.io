@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SMT402AD  |
-| Vendor  | Stelpro  |
+| Vendor  | [Stelpro](/supported-devices/#v=Stelpro)  |
 | Description | Maestro, line-voltage thermostat |
 | Exposes | local_temperature, keypad_lockout, humidity, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![Stelpro SMT402AD](https://www.zigbee2mqtt.io/images/devices/SMT402AD.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

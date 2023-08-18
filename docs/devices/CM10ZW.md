@@ -16,17 +16,28 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | CM10ZW  |
-| Vendor  | ORVIBO  |
+| Vendor  | [ORVIBO](/supported-devices/#v=ORVIBO)  |
 | Description | Multi-functional 3 gang relay |
 | Exposes | switch (state), linkquality |
 | Picture | ![ORVIBO CM10ZW](https://www.zigbee2mqtt.io/images/devices/CM10ZW.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+If the device is already associated with another zigbee network, you will need to set in "off-network" : Press the reset buttons 5 times and hold it until the blue signal indicator flashes rapidly, which means it has been off the zigbee network. Power it on again to rejoin the zigbee network.
 
+If the blue signal indicator flashes rapidly, the relay has not joined the zigbee network.
+If the blue signal indicator flashes once every 2 seconds, the relay is searching the zigbee network.
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

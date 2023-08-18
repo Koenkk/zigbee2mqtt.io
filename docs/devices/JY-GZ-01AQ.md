@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | JY-GZ-01AQ  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart smoke detector |
 | Exposes | smoke, smoke_density, smoke_density_dbm, selftest, test, buzzer, buzzer_manual_alarm, buzzer_manual_mute, heartbeat_indicator, linkage_alarm, linkage_alarm_state, battery, voltage, power_outage_count, linkquality |
 | Picture | ![Xiaomi JY-GZ-01AQ](https://www.zigbee2mqtt.io/images/devices/JY-GZ-01AQ.jpg) |
@@ -42,6 +42,7 @@ After this the device will automatically join.
 
 *Note: When you fail to pair a device, try replacing the battery, this could solve the problem.*
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -84,7 +85,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
 
 ### Buzzer (enum)
-The buzzer can be muted and alarmed manually. During a smoke alarm, the buzzer can be manually muted for 80 seconds ("mute") and unmuted ("alarm"). The buzzer cannot be pre-muted, as this function only works during a smoke alarm. During the absence of a smoke alarm, the buzzer can be manually alarmed ("alarm") and disalarmed ("mute").
+The buzzer can be muted and alarmed manually. During a smoke alarm, the buzzer can be manually muted for 80 seconds ("mute") and unmuted ("alarm"). The buzzer cannot be pre-muted, as this function only works during a smoke alarm. During the absence of a smoke alarm, the buzzer can be manually alarmed ("alarm") and disalarmed ("mute"), but for this "linkage_alarm" option must be enabled.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"buzzer": NEW_VALUE}`.
@@ -125,7 +126,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` linkage_alarm_state is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

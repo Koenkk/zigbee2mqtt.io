@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WS-USC01  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart wall switch (no neutral, single rocker) |
-| Exposes | switch (state), action, flip_indicator_light, operation_mode, mode_switch, linkquality |
+| Exposes | switch (state), action, flip_indicator_light, operation_mode, mode_switch, power_outage_count, device_temperature, linkquality |
 | Picture | ![Xiaomi WS-USC01](https://www.zigbee2mqtt.io/images/devices/WS-USC01.jpg) |
 
 
@@ -27,9 +27,17 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -65,6 +73,17 @@ Value can be found in the published state on the `mode_switch` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode_switch": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_switch": NEW_VALUE}`.
 The possible values are: `anti_flicker_mode`, `quick_mode`.
+
+### Power_outage_count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Device_temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HGZB-043  |
-| Vendor  | Nue / 3A  |
+| Vendor  | [Nue / 3A](/supported-devices/#v=Nue%20%2F%203A)  |
 | Description | Smart light switch - 3 gang |
 | Exposes | switch (state), linkquality |
 | Picture | ![Nue / 3A HGZB-043](https://www.zigbee2mqtt.io/images/devices/HGZB-043.jpg) |
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

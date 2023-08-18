@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HGZB-1S  |
-| Vendor  | Nue / 3A  |
+| Vendor  | [Nue / 3A](/supported-devices/#v=Nue%20%2F%203A)  |
 | Description | Smart 1 key scene wall switch |
 | Exposes | action, switch (state), linkquality |
 | Picture | ![Nue / 3A HGZB-1S](https://www.zigbee2mqtt.io/images/devices/HGZB-1S.jpg) |
@@ -38,6 +38,7 @@ devices:
     legacy: false
 ```
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

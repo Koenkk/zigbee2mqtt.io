@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | DNCKATSW002  |
-| Vendor  | Custom devices (DiY)  |
+| Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | [DNCKAT double key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) |
 | Exposes | switch (state), action, linkquality |
 | Picture | ![Custom devices (DiY) DNCKATSW002](https://www.zigbee2mqtt.io/images/devices/DNCKATSW002.jpg) |
@@ -28,8 +28,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 * `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
 

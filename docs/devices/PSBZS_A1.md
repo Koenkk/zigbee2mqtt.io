@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PSBZS A1  |
-| Vendor  | Lidl  |
+| Vendor  | [Lidl](/supported-devices/#v=Lidl)  |
 | Description | Parkside smart watering timer |
-| Exposes | switch (state), timer, linkquality |
+| Exposes | battery, switch (state), timer, time_left, frost_lock, reset_frost_lock, schedule_mode, schedule_periodic, schedule_weekday, schedule_slot_1, schedule_slot_2, schedule_slot_3, schedule_slot_4, schedule_slot_5, schedule_slot_6, linkquality |
 | Picture | ![Lidl PSBZS A1](https://www.zigbee2mqtt.io/images/devices/PSBZS-A1.jpg) |
 
 
@@ -29,20 +29,132 @@ pageClass: device-page
 
 
 
+
 ## Exposes
+
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported..
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+It's not possible to read (`/get`) this value.
 
 ### Timer (numeric)
-Auto off after specific time..
-Value will **not** be published in the state.
+Auto off after specific time for manual watering..
+Value can be found in the published state on the `timer` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"timer": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `10000`.
+The minimal value is `1` and the maximum value is `599`.
 The unit of this value is `min`.
+
+### Time_left (numeric)
+Remaining time until the watering turns off..
+Value can be found in the published state on the `time_left` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `min`.
+
+### Frost_lock (binary)
+Indicates if the frost guard is currently active. If the temperature drops below 5° C, device activates frost guard and disables irrigation. You need to reset the frost guard to activate irrigation again. Note: There is no way to enable frost guard manually..
+Value can be found in the published state on the `frost_lock` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `ON` frost_lock is ON, if `OFF` OFF.
+
+### Reset_frost_lock (enum)
+Resets frost lock to make the device workable again..
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_frost_lock": NEW_VALUE}`.
+The possible values are: `RESET`.
+
+### Schedule_mode (enum)
+Scheduling mode that is currently in use..
+Value can be found in the published state on the `schedule_mode` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `OFF`, `WEEKDAY`, `PERIODIC`.
+
+### Schedule_periodic (numeric)
+Watering by periodic interval: Irrigate every n days.
+Value can be found in the published state on the `schedule_periodic` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_periodic": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `7`.
+The unit of this value is `day`.
+
+### Schedule_weekday (composite)
+Watering by weekday: Irrigate individually for each day..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_weekday": {"monday": VALUE, "tuesday": VALUE, "wednesday": VALUE, "thursday": VALUE, "friday": VALUE, "saturday": VALUE, "sunday": VALUE}}`
+- `monday` (binary) allowed values: `ON` or `OFF`
+- `tuesday` (binary) allowed values: `ON` or `OFF`
+- `wednesday` (binary) allowed values: `ON` or `OFF`
+- `thursday` (binary) allowed values: `ON` or `OFF`
+- `friday` (binary) allowed values: `ON` or `OFF`
+- `saturday` (binary) allowed values: `ON` or `OFF`
+- `sunday` (binary) allowed values: `ON` or `OFF`
+
+### Schedule_slot_1 (composite)
+Watering time slot 1.
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_1": {"state": VALUE, "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
+- `state` (binary): On/off state of the time slot allowed values: `ON` or `OFF`
+- `start_hour` (numeric): Starting time (hour) max value is 23, unit is h
+- `start_minute` (numeric): Starting time (minute) max value is 59, unit is min
+- `timer` (numeric): Auto off after specific time for scheduled watering. min value is 1, max value is 599, unit is min
+- `pause` (numeric): Pause after each iteration. max value is 599, unit is min
+- `iterations` (numeric): Number of watering iterations. Works only if there is a pause. min value is 1, max value is 9
+
+### Schedule_slot_2 (composite)
+Watering time slot 2.
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_2": {"state": VALUE, "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
+- `state` (binary): On/off state of the time slot allowed values: `ON` or `OFF`
+- `start_hour` (numeric): Starting time (hour) max value is 23, unit is h
+- `start_minute` (numeric): Starting time (minute) max value is 59, unit is min
+- `timer` (numeric): Auto off after specific time for scheduled watering. min value is 1, max value is 599, unit is min
+- `pause` (numeric): Pause after each iteration. max value is 599, unit is min
+- `iterations` (numeric): Number of watering iterations. Works only if there is a pause. min value is 1, max value is 9
+
+### Schedule_slot_3 (composite)
+Watering time slot 3.
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_3": {"state": VALUE, "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
+- `state` (binary): On/off state of the time slot allowed values: `ON` or `OFF`
+- `start_hour` (numeric): Starting time (hour) max value is 23, unit is h
+- `start_minute` (numeric): Starting time (minute) max value is 59, unit is min
+- `timer` (numeric): Auto off after specific time for scheduled watering. min value is 1, max value is 599, unit is min
+- `pause` (numeric): Pause after each iteration. max value is 599, unit is min
+- `iterations` (numeric): Number of watering iterations. Works only if there is a pause. min value is 1, max value is 9
+
+### Schedule_slot_4 (composite)
+Watering time slot 4.
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_4": {"state": VALUE, "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
+- `state` (binary): On/off state of the time slot allowed values: `ON` or `OFF`
+- `start_hour` (numeric): Starting time (hour) max value is 23, unit is h
+- `start_minute` (numeric): Starting time (minute) max value is 59, unit is min
+- `timer` (numeric): Auto off after specific time for scheduled watering. min value is 1, max value is 599, unit is min
+- `pause` (numeric): Pause after each iteration. max value is 599, unit is min
+- `iterations` (numeric): Number of watering iterations. Works only if there is a pause. min value is 1, max value is 9
+
+### Schedule_slot_5 (composite)
+Watering time slot 5.
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_5": {"state": VALUE, "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
+- `state` (binary): On/off state of the time slot allowed values: `ON` or `OFF`
+- `start_hour` (numeric): Starting time (hour) max value is 23, unit is h
+- `start_minute` (numeric): Starting time (minute) max value is 59, unit is min
+- `timer` (numeric): Auto off after specific time for scheduled watering. min value is 1, max value is 599, unit is min
+- `pause` (numeric): Pause after each iteration. max value is 599, unit is min
+- `iterations` (numeric): Number of watering iterations. Works only if there is a pause. min value is 1, max value is 9
+
+### Schedule_slot_6 (composite)
+Watering time slot 6.
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_slot_6": {"state": VALUE, "start_hour": VALUE, "start_minute": VALUE, "timer": VALUE, "pause": VALUE, "iterations": VALUE}}`
+- `state` (binary): On/off state of the time slot allowed values: `ON` or `OFF`
+- `start_hour` (numeric): Starting time (hour) max value is 23, unit is h
+- `start_minute` (numeric): Starting time (minute) max value is 59, unit is min
+- `timer` (numeric): Auto off after specific time for scheduled watering. min value is 1, max value is 599, unit is min
+- `pause` (numeric): Pause after each iteration. max value is 599, unit is min
+- `iterations` (numeric): Number of watering iterations. Works only if there is a pause. min value is 1, max value is 9
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | VZM31-SN  |
-| Vendor  | Inovelli  |
+| Vendor  | [Inovelli](/supported-devices/#v=Inovelli)  |
 | Description | Inovelli 2-in-1 switch + dimmer |
-| Exposes | light (state, brightness), power, energy, led_effect, individual_led_effect, dimmingSpeedUpRemote, dimmingSpeedUpLocal, rampRateOffToOnRemote, rampRateOffToOnLocal, dimmingSpeedDownRemote, dimmingSpeedDownLocal, rampRateOnToOffRemote, rampRateOnToOffLocal, minimumLevel, maximumLevel, invertSwitch, autoTimerOff, defaultLevelLocal, defaultLevelRemote, stateAfterPowerRestored, loadLevelIndicatorTimeout, activePowerReports, periodicPowerAndEnergyReports, activeEnergyReports, powerType, switchType, buttonDelay, smartBulbMode, ledColorWhenOn, ledColorWhenOff, ledIntensityWhenOn, ledIntensityWhenOff, localProtection, remoteProtection, outputMode, onOffLedMode, firmwareUpdateInProgressIndicator, defaultLed1ColorWhenOn, defaultLed1ColorWhenOff, defaultLed1IntensityWhenOn, defaultLed1IntensityWhenOff, defaultLed2ColorWhenOn, defaultLed2ColorWhenOff, defaultLed2IntensityWhenOn, defaultLed2IntensityWhenOff, defaultLed3ColorWhenOn, defaultLed3ColorWhenOff, defaultLed3IntensityWhenOn, defaultLed3IntensityWhenOff, defaultLed4ColorWhenOn, defaultLed4ColorWhenOff, defaultLed4IntensityWhenOn, defaultLed4IntensityWhenOff, defaultLed5ColorWhenOn, defaultLed5ColorWhenOff, defaultLed5IntensityWhenOn, defaultLed5IntensityWhenOff, defaultLed6ColorWhenOn, defaultLed6ColorWhenOff, defaultLed6IntensityWhenOn, defaultLed6IntensityWhenOff, defaultLed7ColorWhenOn, defaultLed7ColorWhenOff, defaultLed7IntensityWhenOn, defaultLed7IntensityWhenOff, doubleTapUpForFullBrightness, relayClick, action, linkquality |
+| Exposes | light (state, brightness), power, energy, led_effect, individual_led_effect, dimmingSpeedUpRemote, dimmingSpeedUpLocal, rampRateOffToOnRemote, rampRateOffToOnLocal, dimmingSpeedDownRemote, dimmingSpeedDownLocal, rampRateOnToOffRemote, rampRateOnToOffLocal, minimumLevel, maximumLevel, invertSwitch, autoTimerOff, defaultLevelLocal, defaultLevelRemote, stateAfterPowerRestored, loadLevelIndicatorTimeout, activePowerReports, periodicPowerAndEnergyReports, activeEnergyReports, powerType, switchType, higherOutputInNonNeutral, buttonDelay, smartBulbMode, doubleTapUpToParam55, doubleTapDownToParam56, brightnessLevelForDoubleTapUp, brightnessLevelForDoubleTapDown, ledColorWhenOn, ledColorWhenOff, ledIntensityWhenOn, ledIntensityWhenOff, ledBarScaling, auxSwitchUniqueScenes, bindingOffToOnSyncLevel, localProtection, remoteProtection, outputMode, onOffLedMode, firmwareUpdateInProgressIndicator, defaultLed1ColorWhenOn, defaultLed1ColorWhenOff, defaultLed1IntensityWhenOn, defaultLed1IntensityWhenOff, defaultLed2ColorWhenOn, defaultLed2ColorWhenOff, defaultLed2IntensityWhenOn, defaultLed2IntensityWhenOff, defaultLed3ColorWhenOn, defaultLed3ColorWhenOff, defaultLed3IntensityWhenOn, defaultLed3IntensityWhenOff, defaultLed4ColorWhenOn, defaultLed4ColorWhenOff, defaultLed4IntensityWhenOn, defaultLed4IntensityWhenOff, defaultLed5ColorWhenOn, defaultLed5ColorWhenOff, defaultLed5IntensityWhenOn, defaultLed5IntensityWhenOff, defaultLed6ColorWhenOn, defaultLed6ColorWhenOff, defaultLed6IntensityWhenOn, defaultLed6IntensityWhenOff, defaultLed7ColorWhenOn, defaultLed7ColorWhenOff, defaultLed7IntensityWhenOn, defaultLed7IntensityWhenOff, relayClick, doubleTapClearNotifications, action, linkquality |
 | Picture | ![Inovelli VZM31-SN](https://www.zigbee2mqtt.io/images/devices/VZM31-SN.jpg) |
 
 
@@ -27,6 +27,7 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -34,11 +35,23 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
 * `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -47,23 +60,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
-
-#### Moving/stepping
-Instead of setting a value (e.g. brightness) directly it is also possible to:
-- move: this will automatically move the value over time, to stop send value `stop` or `0`.
-- step: this will increment/decrement the current value by the given one.
-
-The direction of move and step can be either up or down, provide a negative value to move/step down, a positive value to move/step up.
-To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
-
-**NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
-{
-  "brightness_move": -40, // Starts moving brightness down at 40 units per second
-  "brightness_move": 0, // Stop moving brightness
-  "brightness_step": 40 // Increases brightness by 40
-}
-````
 
 ### Power (numeric)
 Instantaneous measured power.
@@ -79,18 +75,18 @@ The unit of this value is `kWh`.
 
 ### Led_effect (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_effect": {"effect": VALUE, "color": VALUE, "level": VALUE, "duration": VALUE}}`
-- `effect` (enum): Animation Effect to use for the LEDs. Allowed values: `off`, `solid`, `chase`, `fast_blink`, `slow_blink`, `pulse`, `open_close`, `small_to_big`, `clear_effect`
-- `color` (numeric): Calculated by using a hue color circle(value/255*360) If color = 255 display white. 
-- `level` (numeric): Brightness of the LEDs. 
-- `duration` (numeric): 1-60 is in seconds calculated 61-120 is in minutes calculated by(value-60) Example a value of 65 would be 65-60 = 5 minutes - 120-254 Is in hours calculated by(value-120) Example a value of 132 would be 132-120 would be 12 hours. - 255 Indefinitely. 
+- `effect` (enum): Animation Effect to use for the LEDs allowed values: `off`, `solid`, `fast_blink`, `slow_blink`, `pulse`, `chase`, `open_close`, `small_to_big`, `aurora`, `slow_falling`, `medium_falling`, `fast_falling`, `slow_rising`, `medium_rising`, `fast_rising`, `medium_blink`, `slow_chase`, `fast_chase`, `fast_siren`, `slow_siren`, `clear_effect`
+- `color` (numeric): Calculated by using a hue color circle(value/255*360) If color = 255 display white max value is 255
+- `level` (numeric): Brightness of the LEDs max value is 100
+- `duration` (numeric): 1-60 is in seconds calculated 61-120 is in minutes calculated by(value-60) Example a value of 65 would be 65-60 = 5 minutes - 120-254 Is in hours calculated by(value-120) Example a value of 132 would be 132-120 would be 12 hours. - 255 Indefinitely max value is 255
 
 ### Individual_led_effect (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"individual_led_effect": {"led": VALUE, "effect": VALUE, "color": VALUE, "level": VALUE, "duration": VALUE}}`
-- `led` (enum): Individual LED to target.. Allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`
-- `effect` (enum): Animation Effect to use for the LED. Allowed values: `off`, `solid`, `fast_blink`, `slow_blink`, `pulse`, `chase`, `clear_effect`
-- `color` (numeric): Calculated by using a hue color circle(value/255*360) If color = 255 display white. 
-- `level` (numeric): Brightness of the LED. 
-- `duration` (numeric): 1-60 is in seconds calculated 61-120 is in minutes calculated by(value-60) Example a value of 65 would be 65-60 = 5 minutes - 120-254 Is in hours calculated by(value-120)  Example a value of 132 would be 132-120 would be 12 hours. - 255 Indefinitely. 
+- `led` (enum): Individual LED to target. allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`
+- `effect` (enum): Animation Effect to use for the LED allowed values: `off`, `solid`, `fast_blink`, `slow_blink`, `pulse`, `chase`, `falling`, `rising`, `aurora`, `clear_effect`
+- `color` (numeric): Calculated by using a hue color circle(value/255*360) If color = 255 display white max value is 255
+- `level` (numeric): Brightness of the LED max value is 100
+- `duration` (numeric): 1-60 is in seconds calculated 61-120 is in minutes calculated by(value-60) Example a value of 65 would be 65-60 = 5 minutes - 120-254 Is in hours calculated by(value-120)  Example a value of 132 would be 132-120 would be 12 hours. - 255 Indefinitely max value is 255
 
 ### DimmingSpeedUpRemote (numeric)
 This changes the speed that the light dims up when controlled from the hub. A setting of 0 turns the light immediately on. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 25 (2.5s).
@@ -239,7 +235,14 @@ Set the switch configuration..
 Value can be found in the published state on the `switchType` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switchType": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switchType": NEW_VALUE}`.
-The possible values are: `Single Pole`, `3-Way Dumb Switch`, `3-Way Aux Switch`.
+The possible values are: `Single Pole`, `3-Way Dumb Switch`, `3-Way Aux Switch`, `Single-Pole Full Sine Wave`.
+
+### HigherOutputInNonNeutral (enum)
+Increase level in non-neutral mode.
+Value can be found in the published state on the `higherOutputInNonNeutral` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"higherOutputInNonNeutral": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"higherOutputInNonNeutral": NEW_VALUE}`.
+The possible values are: `Disabled (default)`, `Enabled`.
 
 ### ButtonDelay (enum)
 This will set the button press delay. 0 = no delay (Disables Button Press Events),Default = 500ms..
@@ -254,6 +257,34 @@ Value can be found in the published state on the `smartBulbMode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"smartBulbMode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smartBulbMode": NEW_VALUE}`.
 The possible values are: `Disabled`, `Smart Bulb Mode`.
+
+### DoubleTapUpToParam55 (enum)
+Enable or Disable setting brightness to parameter 55 on double-tap UP..
+Value can be found in the published state on the `doubleTapUpToParam55` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"doubleTapUpToParam55": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"doubleTapUpToParam55": NEW_VALUE}`.
+The possible values are: `Disabled`, `Enabled`.
+
+### DoubleTapDownToParam56 (enum)
+Enable or Disable setting brightness to parameter 56 on double-tap DOWN..
+Value can be found in the published state on the `doubleTapDownToParam56` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"doubleTapDownToParam56": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"doubleTapDownToParam56": NEW_VALUE}`.
+The possible values are: `Disabled`, `Enabled`.
+
+### BrightnessLevelForDoubleTapUp (numeric)
+Set this level on double-tap UP (if enabled by P53)..
+Value can be found in the published state on the `brightnessLevelForDoubleTapUp` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightnessLevelForDoubleTapUp": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightnessLevelForDoubleTapUp": NEW_VALUE}`.
+The minimal value is `2` and the maximum value is `254`.
+
+### BrightnessLevelForDoubleTapDown (numeric)
+Set this level on double-tap DOWN (if enabled by P54)..
+Value can be found in the published state on the `brightnessLevelForDoubleTapDown` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightnessLevelForDoubleTapDown": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightnessLevelForDoubleTapDown": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `254`.
 
 ### LedColorWhenOn (numeric)
 Set the color of the LED Indicator when the load is on..
@@ -284,6 +315,27 @@ Value can be found in the published state on the `ledIntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ledIntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ledIntensityWhenOff": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
+
+### LedBarScaling (enum)
+Method used for scaling..
+Value can be found in the published state on the `ledBarScaling` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ledBarScaling": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ledBarScaling": NEW_VALUE}`.
+The possible values are: `Gen3 method (VZM-style)`, `Gen2 method (LZW-style)`.
+
+### AuxSwitchUniqueScenes (enum)
+Have unique scene numbers for scenes activated with the aux switch..
+Value can be found in the published state on the `auxSwitchUniqueScenes` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"auxSwitchUniqueScenes": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auxSwitchUniqueScenes": NEW_VALUE}`.
+The possible values are: `Disabled`, `Enabled`.
+
+### BindingOffToOnSyncLevel (enum)
+Send Move_To_Level using Default Level with Off/On to bound devices..
+Value can be found in the published state on the `bindingOffToOnSyncLevel` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"bindingOffToOnSyncLevel": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bindingOffToOnSyncLevel": NEW_VALUE}`.
+The possible values are: `Disabled`, `Enabled`.
 
 ### LocalProtection (enum)
 Ability to control switch from the wall..
@@ -516,18 +568,18 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed7IntensityWhenOff": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
-### DoubleTapUpForFullBrightness (enum)
-Result of a double tap on the up button..
-Value can be found in the published state on the `doubleTapUpForFullBrightness` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"doubleTapUpForFullBrightness": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"doubleTapUpForFullBrightness": NEW_VALUE}`.
-The possible values are: `Button Press Event Only`, `Button Press Event + Set Load to 100%`.
-
 ### RelayClick (enum)
-Audible Click in On/Off mode..
+In neutral on/off setups, the default is to have a clicking sound to notify you that the relay is open or closed. You may disable this sound by creating a, “simulated” on/off where the switch only will turn onto 100 or off to 0..
 Value can be found in the published state on the `relayClick` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"relayClick": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relayClick": NEW_VALUE}`.
+The possible values are: `Disabled (Click Sound On)`, `Enabled (Click Sound Off)`.
+
+### DoubleTapClearNotifications (enum)
+Double-Tap the Config button to clear notifications..
+Value can be found in the published state on the `doubleTapClearNotifications` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"doubleTapClearNotifications": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"doubleTapClearNotifications": NEW_VALUE}`.
 The possible values are: `Enabled (Default)`, `Disabled`.
 
 ### Action (enum)

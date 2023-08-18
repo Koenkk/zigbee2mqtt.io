@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZNDDMK11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart lightstrip driver |
 | Exposes | power, energy, voltage, device_temperature, power_outage_memory, light (state, brightness, color_temp, color_xy), light (state, brightness, color_temp), dimmer_mode, linkquality |
 | Picture | ![Xiaomi ZNDDMK11LM](https://www.zigbee2mqtt.io/images/devices/ZNDDMK11LM.jpg) |
@@ -31,6 +31,7 @@ pageClass: device-page
 The device itself supports two modes: `RGBW mode` and `Dual color temperature mode`. When the device works under `Dual color temperature mode`, it can control two color temperature lightstrips individually at the same time, and this is the only mode being supported by Zigbee2MQTT currently. More details can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/8510).
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -41,6 +42,20 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
 * `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
+* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 

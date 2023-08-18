@@ -16,11 +16,11 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PTM 215Z  |
-| Vendor  | EnOcean  |
+| Vendor  | [EnOcean](/supported-devices/#v=EnOcean)  |
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
 | Picture | ![EnOcean PTM 215Z](https://www.zigbee2mqtt.io/images/devices/PTM-215Z.jpg) |
-| White-label | Niko 91004, NodOn CWS-4-1-01_HUE, Vimar 03906, Sunricher SR-ZGP2801K4-FOH-E, LED Trading 9125, Feller 4120.2.S.FMI.61 |
+| White-label | Niko 91004, NodOn CWS-4-1-01_HUE, Vimar 03906, Sunricher SR-ZGP2801K4-FOH-E, LED-Trading 9125, Feller 4120.2.S.FMI.61 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -37,23 +37,16 @@ Green Power devices don't support binding and are not included in network scans.
 ### Pairing
 This device has 4 buttons:
 
-| Number | Button | Position |
-|-|-|-|
-| 1 | A0 | top left |
-| 2 | A1 | bottom left |
-| 3 | B0 | top right |
-| 4 | B1 | bottom right |
+| Number | Button | Position | Channel |
+|-|-|-|-|
+| 1 | A0 | Top left     | 15 |
+| 2 | A1 | Bottom left  | 20 |
+| 3 | B0 | Top right    | 11 |
+| 4 | B1 | Bottom right | 25 |
 
 In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
 
 To pair it, hold the corresponding button for that channel for 7 seconds or more.
-
-| Button | Channel |
-|-|-|
-| A0 | 15 |
-| A1 | 20 |
-| B0 | 11 |
-| B1 | 25 |
 
 Once the device is paired you need to confirm the channel. To do this press A1 and B0 together. Important: don't press any other buttons between this and the pairing.
 
@@ -66,6 +59,7 @@ Alternatively, you should be able to reset the switch with the following pattern
 4. press top left (A0)
 Note: Please make sure the module is positioned the right way up.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

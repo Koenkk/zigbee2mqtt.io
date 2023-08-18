@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QBKG25LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara D1 3 gang smart wall switch (no neutral wire) |
 | Exposes | switch (state), operation_mode, mode_switch, power_outage_memory, led_disabled_night, device_temperature, flip_indicator_light, action, power_outage_count, linkquality |
 | Picture | ![Xiaomi QBKG25LM](https://www.zigbee2mqtt.io/images/devices/QBKG25LM.jpg) |
@@ -44,12 +44,15 @@ This option allows to turn off the indicator lights between 21:00 and 09:00.
 To set this option publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"do_not_disturb": true}` (or `false`).
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 

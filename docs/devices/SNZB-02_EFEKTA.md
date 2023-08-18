@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SNZB-02_EFEKTA  |
-| Vendor  | Custom devices (DiY)  |
+| Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | Alternative firmware for the SONOFF SNZB-02 sensor from EfektaLab, DIY |
 | Exposes | battery, temperature, humidity, report_delay, enable_temperature, high_temperature, low_temperature, enable_humidity, high_humidity, low_humidity, linkquality |
 | Picture | ![Custom devices (DiY) SNZB-02_EFEKTA](https://www.zigbee2mqtt.io/images/devices/SNZB-02_EFEKTA.jpg) |
@@ -34,6 +34,7 @@ Instructions on how to build this device can be found [here](https://github.com/
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -49,7 +50,7 @@ Instructions on how to build this device can be found [here](https://github.com/
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -73,7 +74,7 @@ Value can be found in the published state on the `report_delay` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `60`.
-The unit of this value is `Minutes`.
+The unit of this value is `min`.
 
 ### Enable_temperature (binary)
 Enable Temperature Control.

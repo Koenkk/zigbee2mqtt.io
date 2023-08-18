@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZYA-C4-MOD-S  |
-| Vendor  | Yale  |
+| Vendor  | [Yale](/supported-devices/#v=Yale)  |
 | Description | Control4 module for Yale KeyFree/Keyless/Doorman/Assure/nexTouch locks |
 | Exposes | lock (state, lock_state), action, linkquality |
 | Picture | ![Yale ZYA-C4-MOD-S](https://www.zigbee2mqtt.io/images/devices/ZYA-C4-MOD-S.jpg) |
@@ -31,6 +31,7 @@ To pair the device; permit joining in Zigbee2MQTT, ensure that the ZYA-C4-MOD-S 
 ### Removing
 To remove the device, please do not use the delete device facility in Zigbee2MQTT - this will likely fail. Instead, click the button next to the module 3 times a chime should sound, followed shortly by another. You should then see in Zigbee2MQTT that the device has successfully left the network and should be available for re-pairing.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

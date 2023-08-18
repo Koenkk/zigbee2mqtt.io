@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZW-EU-4C  |
-| Vendor  | Nue / 3A  |
+| Vendor  | [Nue / 3A](/supported-devices/#v=Nue%20%2F%203A)  |
 | Description | Zigbee smart curtain switch |
 | Exposes | cover (state, position), moving, linkquality |
 | Picture | ![Nue / 3A ZW-EU-4C](https://www.zigbee2mqtt.io/images/devices/ZW-EU-4C.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

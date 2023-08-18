@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PJ-ZGD01  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Garage door opener |
 | Exposes | trigger, garage_door_contact, linkquality |
 | Picture | ![TuYa PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.jpg) |
@@ -27,6 +27,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

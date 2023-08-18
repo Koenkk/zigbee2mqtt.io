@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QBKG04LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara single key wired wall switch without neutral wire. Doesn't work as a router and doesn't support power meter |
 | Exposes | switch (state), action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG04LM](https://www.zigbee2mqtt.io/images/devices/QBKG04LM.jpg) |
@@ -24,6 +24,9 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+
+### Router functionallity
+This device **does not** work as a Zigbee router.
 
 ### Debounce
 It is recommended to not use the `debounce` option for this device since this will prevent the `single` and `hold_release` actions from being sent.
@@ -48,6 +51,7 @@ Press and hold the button on the device for +- 10 seconds
 You may have to unpair the switch from an existing coordinator before the pairing process will start.
 If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QBKG11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara single key wired wall switch |
 | Exposes | switch (state), power, device_temperature, energy, action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG11LM](https://www.zigbee2mqtt.io/images/devices/QBKG11LM.jpg) |
@@ -47,6 +47,7 @@ You may have to unpair the switch from an existing coordinator before the pairin
 If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -56,7 +57,15 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
 
+* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes

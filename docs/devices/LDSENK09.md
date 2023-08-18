@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LDSENK09  |
-| Vendor  | ADEO  |
+| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | Security system key fob |
 | Exposes | action, linkquality |
 | Picture | ![ADEO LDSENK09](https://www.zigbee2mqtt.io/images/devices/LDSENK09.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

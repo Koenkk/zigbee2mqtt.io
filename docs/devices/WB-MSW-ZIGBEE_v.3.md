@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WB-MSW-ZIGBEE v.3  |
-| Vendor  | Sprut.device  |
+| Vendor  | [Sprut.device](/supported-devices/#v=Sprut.device)  |
 | Description | Wall-mounted Zigbee sensor |
 | Exposes | temperature, illuminance, illuminance_lux, humidity, occupancy, occupancy_level, co2, voc, noise, noise_detected, switch (state), noise_timeout, occupancy_timeout, temperature_offset, occupancy_sensitivity, noise_detect_level, co2_autocalibration, co2_manual_calibration, th_heater, linkquality |
 | Picture | ![Sprut.device WB-MSW-ZIGBEE v.3](https://www.zigbee2mqtt.io/images/devices/WB-MSW-ZIGBEE-v.3.jpg) |
@@ -104,6 +104,7 @@ Request:
 ```
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -123,7 +124,9 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of number.
+* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -172,7 +175,7 @@ The unit of this value is `ppm`.
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppb`.
+The unit of this value is `µg/m³`.
 
 ### Noise (numeric)
 The measured noise value.

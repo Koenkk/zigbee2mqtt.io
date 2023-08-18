@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SNZB-04  |
-| Vendor  | SONOFF  |
+| Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Contact sensor |
 | Exposes | contact, battery_low, battery, voltage, linkquality |
 | Picture | ![SONOFF SNZB-04](https://www.zigbee2mqtt.io/images/devices/SNZB-04.jpg) |
@@ -30,6 +30,7 @@ pageClass: device-page
 ### Pairing
 Long press reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -48,7 +49,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery_low is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

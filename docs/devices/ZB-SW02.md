@@ -16,8 +16,8 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZB-SW02  |
-| Vendor  | eWeLink  |
-| Description | Smart light switch - 2 gang |
+| Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
+| Description | Smart light switch/2 gang relay |
 | Exposes | switch (state), linkquality |
 | Picture | ![eWeLink ZB-SW02](https://www.zigbee2mqtt.io/images/devices/ZB-SW02.jpg) |
 
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

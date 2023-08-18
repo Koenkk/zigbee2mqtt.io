@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | S-LUX-ZB  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Light sensor |
 | Exposes | battery, illuminance_lux, linkquality, brightness_level |
 | Picture | ![TuYa S-LUX-ZB](https://www.zigbee2mqtt.io/images/devices/S-LUX-ZB.jpg) |
@@ -29,10 +29,11 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

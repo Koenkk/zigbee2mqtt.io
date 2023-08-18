@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_din  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee smart energy meter DDS238-2 Zigbee |
 | Exposes | switch (state), voltage, power, current, energy, linkquality |
 | Picture | ![TuYa TS0601_din](https://www.zigbee2mqtt.io/images/devices/TS0601_din.jpg) |
@@ -39,6 +39,7 @@ The only value that is reliable enough is Energy since it is calculated and stor
 ### Energy value
 This value shows `null` until meter measures some about 0.2 amount of kWh consumed.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

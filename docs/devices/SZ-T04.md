@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SZ-T04  |
-| Vendor  | Nous  |
+| Vendor  | [Nous](/supported-devices/#v=Nous)  |
 | Description | Temperature and humidity sensor with clock |
 | Exposes | temperature, humidity, battery, temperature_report_interval, humidity_report_interval, temperature_unit_convert, temperature_alarm, max_temperature, min_temperature, temperature_sensitivity, humidity_alarm, max_humidity, min_humidity, humidity_sensitivity, linkquality |
 | Picture | ![Nous SZ-T04](https://www.zigbee2mqtt.io/images/devices/SZ-T04.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -55,7 +56,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

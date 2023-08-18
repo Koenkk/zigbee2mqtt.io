@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS3CG  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Combustible gas sensor |
 | Exposes | gas, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN HS3CG](https://www.zigbee2mqtt.io/images/devices/HS3CG.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

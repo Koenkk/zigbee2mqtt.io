@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | GDC311ZBQ1  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | LoraTap garage door opener with wireless sensor |
 | Exposes | trigger, garage_door_contact, linkquality |
 | Picture | ![TuYa GDC311ZBQ1](https://www.zigbee2mqtt.io/images/devices/GDC311ZBQ1.jpg) |
@@ -27,6 +27,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

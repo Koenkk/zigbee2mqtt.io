@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | AX_Valve_Controller  |
-| Vendor  | CTM Lyng  |
+| Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | AX Valve Controller, water shutoff valve controller |
 | Exposes | switch (state), water_leak, active_water_leak, linkquality |
 | Picture | ![CTM Lyng AX_Valve_Controller](https://www.zigbee2mqtt.io/images/devices/AX_Valve_Controller.jpg) |
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

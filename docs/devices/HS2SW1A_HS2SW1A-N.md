@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS2SW1A/HS2SW1A-N  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart switch - 1 gang with neutral wire |
 | Exposes | switch (state), device_temperature, linkquality |
 | Picture | ![HEIMAN HS2SW1A/HS2SW1A-N](https://www.zigbee2mqtt.io/images/devices/HS2SW1A-HS2SW1A-N.jpg) |
@@ -27,6 +27,14 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

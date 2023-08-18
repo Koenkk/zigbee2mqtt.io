@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | KEYPAD001  |
-| Vendor  | Hive  |
+| Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | Alarm security keypad |
 | Exposes | battery, voltage, battery_low, occupancy, tamper, contact, action_code, action_transaction, action_zone, action, linkquality |
 | Picture | ![Hive KEYPAD001](https://www.zigbee2mqtt.io/images/devices/KEYPAD001.jpg) |
@@ -67,6 +67,7 @@ The automation server must follow the notification with an actual change to the 
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -76,7 +77,7 @@ The automation server must follow the notification with an actual change to the 
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

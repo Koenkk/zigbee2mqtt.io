@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PM-S240-ZB  |
-| Vendor  | Dawon DNS  |
+| Vendor  | [Dawon DNS](/supported-devices/#v=Dawon%20DNS)  |
 | Description | IOT smart switch 2 gang without neutral wire |
 | Exposes | switch (state), linkquality |
 | Picture | ![Dawon DNS PM-S240-ZB](https://www.zigbee2mqtt.io/images/devices/PM-S240-ZB.jpg) |
@@ -30,6 +30,12 @@ pageClass: device-page
 This device does **not** act as a router.
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

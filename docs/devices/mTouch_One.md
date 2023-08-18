@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | mTouch_One  |
-| Vendor  | CTM Lyng  |
+| Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | mTouch One OP, touch thermostat |
 | Exposes | lock (state), climate (occupied_heating_setpoint, local_temperature, system_mode, preset), load, display_text, regulator_mode, mean_power, floor_temp, frost_guard, regulator_setpoint, air_temp, linkquality |
 | Picture | ![CTM Lyng mTouch_One](https://www.zigbee2mqtt.io/images/devices/mTouch_One.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -46,7 +47,7 @@ This climate device supports the following features: `occupied_heating_setpoint`
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `40`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
-- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `off`, `away`, `sleep`, `home`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
+- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `off`, `away`, `sleep`, `home`. Reading (`/get`) this attribute is not possible.
 
 ### Load (numeric)
 Load in W when heating is on (between 0-3600 W). The thermostat uses the value as input to the mean_power calculation..

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | DIYRuZ_RT  |
-| Vendor  | DIYRuZ  |
+| Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
 | Description | [DiY CC2530 Zigbee 3.0 firmware](https://habr.com/ru/company/iobroker/blog/495926/) |
 | Exposes | switch (state), temperature, linkquality |
 | Picture | ![DIYRuZ DIYRuZ_RT](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_RT.jpg) |
@@ -28,8 +28,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 * `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 

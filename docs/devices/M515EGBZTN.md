@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | M515EGBZTN  |
-| Vendor  | Zemismart  |
+| Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Roller shade driver |
 | Exposes | cover (state, position), motor_direction, border, linkquality |
 | Picture | ![Zemismart M515EGBZTN](https://www.zigbee2mqtt.io/images/devices/M515EGBZTN.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

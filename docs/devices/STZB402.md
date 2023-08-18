@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | STZB402  |
-| Vendor  | Stelpro  |
+| Vendor  | [Stelpro](/supported-devices/#v=Stelpro)  |
 | Description | Ki, line-voltage thermostat |
 | Exposes | local_temperature, keypad_lockout, humidity, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
 | Picture | ![Stelpro STZB402](https://www.zigbee2mqtt.io/images/devices/STZB402.jpg) |
@@ -49,6 +49,7 @@ If you want to automate the publishing of the outdoor temperature using Home Ass
 
 **IMPORTANT**: The outdoor temperature need to be refreshed at least each 4 hours, or the `EXT` display will be cleared on the thermostat.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

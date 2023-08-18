@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS130F_dual  |
-| Vendor  | Lonsonho  |
+| Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | Dual curtain/blind module |
 | Exposes | moving, calibration_time, cover (state, position), calibration, motor_reversal, linkquality |
 | Picture | ![Lonsonho TS130F_dual](https://www.zigbee2mqtt.io/images/devices/TS130F_dual.jpg) |
@@ -24,6 +24,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+The output is only driven once the input signal is released, hence making this device difficult to work with non-momentary switches.
 
 ### Pairing
 Press on pair button for 10 seconds to enter pairing mode
@@ -37,6 +38,7 @@ Press on pair button for 10 seconds to enter pairing mode
 * Press the same button on the switch.
 * Disable the calibration mode, see [below](#calibration-binary).
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

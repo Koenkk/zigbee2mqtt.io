@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | mSwitch_Mic  |
-| Vendor  | CTM Lyng  |
+| Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | Mikrofon, alarm detection microphone |
 | Exposes | temperature, battery, battery_low, smoke, action, group_id, linkquality |
 | Picture | ![CTM Lyng mSwitch_Mic](https://www.zigbee2mqtt.io/images/devices/mSwitch_Mic.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -45,7 +46,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -70,7 +71,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`.
 
 ### Group_id (numeric)
-The device sends commands with this group ID. Put dvices in this group to control them..
+The device sends commands with this group ID. Put devices in this group to control them..
 Value can be found in the published state on the `group_id` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZNCJMB14LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara S1 smart touch panel |
 | Exposes | switch (state), standby_enabled, theme, beep_volume, lcd_brightness, language, screen_saver_style, standby_time, font_size, lcd_auto_brightness_enabled, homepage, screen_saver_enabled, standby_lcd_brightness, available_switches, switch_1_text_icon, switch_2_text_icon, switch_3_text_icon, linkquality |
 | Picture | ![Xiaomi ZNCJMB14LM](https://www.zigbee2mqtt.io/images/devices/ZNCJMB14LM.jpg) |
@@ -33,9 +33,15 @@ If the device is already part of a network, swipe down from the top of the scree
 Once confirmed, proceed as per initial boot.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -150,19 +156,22 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `none`, `1`, `2`, `3`, `1 and 2`, `1 and 3`, `2 and 3`, `all`.
 
 ### Switch_1_text_icon (composite)
+Switch 1 text and icon.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_1_text_icon": {"switch_1_icon": VALUE, "switch_1_text": VALUE}}`
-- `switch_1_icon` (enum): Icon. Allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
-- `switch_1_text` (text): Text. 
+- `switch_1_icon` (enum): Icon allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
+- `switch_1_text` (text): Text 
 
 ### Switch_2_text_icon (composite)
+Switch 2 text and icon.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_2_text_icon": {"switch_2_icon": VALUE, "switch_2_text": VALUE}}`
-- `switch_2_icon` (enum): Icon. Allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
-- `switch_2_text` (text): Text. 
+- `switch_2_icon` (enum): Icon allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
+- `switch_2_text` (text): Text 
 
 ### Switch_3_text_icon (composite)
+Switch 3 text and icon.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_3_text_icon": {"switch_3_icon": VALUE, "switch_3_text": VALUE}}`
-- `switch_3_icon` (enum): Icon. Allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
-- `switch_3_text` (text): Text. 
+- `switch_3_icon` (enum): Icon allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
+- `switch_3_text` (text): Text 
 
 ### Linkquality (numeric)
 Link quality (signal strength).

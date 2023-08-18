@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | NAS-AB02B2  |
-| Vendor  | Neo  |
+| Vendor  | [Neo](/supported-devices/#v=Neo)  |
 | Description | Alarm |
 | Exposes | battery_low, alarm, melody, duration, volume, battpercentage, linkquality |
 | Picture | ![Neo NAS-AB02B2](https://www.zigbee2mqtt.io/images/devices/NAS-AB02B2.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -54,7 +55,7 @@ Value can be found in the published state on the `duration` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"duration": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `1800`.
-The unit of this value is `second`.
+The unit of this value is `s`.
 
 ### Volume (enum)
 Value can be found in the published state on the `volume` property.

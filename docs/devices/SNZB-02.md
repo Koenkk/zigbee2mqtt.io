@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SNZB-02  |
-| Vendor  | SONOFF  |
+| Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Temperature and humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
 | Picture | ![SONOFF SNZB-02](https://www.zigbee2mqtt.io/images/devices/SNZB-02.jpg) |
@@ -40,6 +40,7 @@ Uses a CR2450 battery
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -55,7 +56,7 @@ Uses a CR2450 battery
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | mTouch_Astro  |
-| Vendor  | CTM Lyng  |
+| Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | mTouch Astro OP, astro clock |
 | Exposes | switch (state), action, device_mode, device_enabled, child_lock, group_id, linkquality |
 | Picture | ![CTM Lyng mTouch_Astro](https://www.zigbee2mqtt.io/images/devices/mTouch_Astro.jpg) |
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -62,7 +68,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `locked` child_lock is ON, if `unlocked` OFF.
 
 ### Group_id (numeric)
-The device sends commands with this group ID. Put dvices in this group to control them..
+The device sends commands with this group ID. Put devices in this group to control them..
 Value can be found in the published state on the `group_id` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 

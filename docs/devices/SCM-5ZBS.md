@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SCM-5ZBS  |
-| Vendor  | Climax  |
+| Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Roller shutter |
 | Exposes | cover (state, position), linkquality |
 | Picture | ![Climax SCM-5ZBS](https://www.zigbee2mqtt.io/images/devices/SCM-5ZBS.jpg) |
@@ -33,6 +33,7 @@ pageClass: device-page
 5. The Shutter control will roll toward open direction after step 4
 6. Activate the "Close" external local switch the moment the shutter is fully opended. The Shutter controll will record to time it took between step 5 and 6 as the new "open time"
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_switch_3_gang  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 3 gang switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![TuYa TS0601_switch_3_gang](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_3_gang.jpg) |
@@ -27,6 +27,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

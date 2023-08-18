@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZYCT-202  |
-| Vendor  | Trust  |
+| Vendor  | [Trust](/supported-devices/#v=Trust)  |
 | Description | Remote control |
 | Exposes | action, action_group, linkquality |
 | Picture | ![Trust ZYCT-202](https://www.zigbee2mqtt.io/images/devices/ZYCT-202.jpg) |
@@ -35,6 +35,7 @@ Factory reset the remote by holding the 0 (off) button for +-20 seconds.
 To establish a connection keep the remote within 2 meters from the hub.
 Press and hold the smart group button (button with two bulbs) and wait until the lights, below the channels, flash.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

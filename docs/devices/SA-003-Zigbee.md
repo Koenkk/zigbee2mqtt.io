@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SA-003-Zigbee  |
-| Vendor  | eWeLink  |
+| Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
 | Description | Zigbee smart plug |
 | Exposes | switch (state), linkquality |
 | Picture | ![eWeLink SA-003-Zigbee](https://www.zigbee2mqtt.io/images/devices/SA-003-Zigbee.jpg) |
@@ -30,6 +30,12 @@ pageClass: device-page
 Reset by unplugging any devices plugged into the socket, hold the button down for 10 secs until the light flashes Green/Orange and the Socket switches on and off. pair within 60 secs
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

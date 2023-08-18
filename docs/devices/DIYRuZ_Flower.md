@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | DIYRuZ_Flower  |
-| Vendor  | DIYRuZ  |
+| Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
 | Description | [Flower sensor](http://modkam.ru/?p=1700) |
 | Exposes | soil_moisture, battery, illuminance, humidity, pressure, temperature, linkquality |
 | Picture | ![DIYRuZ DIYRuZ_Flower](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_Flower.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -61,7 +62,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

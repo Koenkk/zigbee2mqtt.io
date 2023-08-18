@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WXCJKG13LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara Opple switch 3 bands |
 | Exposes | battery, voltage, action, operation_mode, power_outage_count, linkquality |
 | Picture | ![Xiaomi WXCJKG13LM](https://www.zigbee2mqtt.io/images/devices/WXCJKG13LM.jpg) |
@@ -50,6 +50,7 @@ When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple swi
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -59,7 +60,7 @@ When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple swi
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_human_presence_sensor  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Human presence sensor Zigbee |
 | Exposes | presence, duration_of_attendance, duration_of_absence, led_state, linkquality |
 | Picture | ![TuYa TS0601_human_presence_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_human_presence_sensor.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -41,13 +42,13 @@ If value equals `true` presence is ON, if `false` OFF.
 Shows the presence duration in minutes.
 Value can be found in the published state on the `duration_of_attendance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `minutes`.
+The unit of this value is `min`.
 
 ### Duration_of_absence (numeric)
 Shows the duration of the absence in minutes.
 Value can be found in the published state on the `duration_of_absence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `minutes`.
+The unit of this value is `min`.
 
 ### Led_state (binary)
 Turns the onboard LED on or off.

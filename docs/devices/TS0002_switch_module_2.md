@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0002_switch_module_2  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2 gang switch module |
 | Exposes | switch (state), power_on_behavior, linkquality |
 | Picture | ![TuYa TS0002_switch_module_2](https://www.zigbee2mqtt.io/images/devices/TS0002_switch_module_2.jpg) |
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -42,7 +48,7 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
 
 ### Power_on_behavior (enum)
-Controls the behavior when the device is powered on.
+Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | DSZ01  |
-| Vendor  | J.XUAN  |
+| Vendor  | [J.XUAN](/supported-devices/#v=J.XUAN)  |
 | Description | Door or window contact switch |
 | Exposes | contact, battery_low, linkquality |
 | Picture | ![J.XUAN DSZ01](https://www.zigbee2mqtt.io/images/devices/DSZ01.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

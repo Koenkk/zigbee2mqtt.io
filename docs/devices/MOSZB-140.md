@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | MOSZB-140  |
-| Vendor  | Develco  |
+| Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Motion sensor |
 | Exposes | occupancy, temperature, illuminance_lux, tamper, battery_low, battery, linkquality |
 | Picture | ![Develco MOSZB-140](https://www.zigbee2mqtt.io/images/devices/MOSZB-140.jpg) |
@@ -26,6 +26,10 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -73,7 +77,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery_low is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

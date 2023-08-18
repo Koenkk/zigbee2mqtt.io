@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LH-990ZB  |
-| Vendor  | iHORN  |
+| Vendor  | [iHORN](/supported-devices/#v=iHORN)  |
 | Description | PIR motion sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
 | Picture | ![iHORN LH-990ZB](https://www.zigbee2mqtt.io/images/devices/LH-990ZB.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

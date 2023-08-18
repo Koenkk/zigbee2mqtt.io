@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | JTYJ-GD-01LM/BW  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | MiJia Honeywell smoke detector |
 | Exposes | smoke, battery_low, tamper, battery, sensitivity, smoke_density, selftest, voltage, test, device_temperature, power_outage_count, linkquality |
 | Picture | ![Xiaomi JTYJ-GD-01LM/BW](https://www.zigbee2mqtt.io/images/devices/JTYJ-GD-01LM-BW.jpg) |
@@ -43,6 +43,7 @@ A self-test can be trigged by publishing to `zigbee2mqtt/FRIENDLY_NAME/set`
 `{"selftest": ""}`.
 If the selftest is executed successfully you will hear the device beep in 30 seconds.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -72,7 +73,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

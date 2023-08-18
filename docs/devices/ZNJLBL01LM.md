@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZNJLBL01LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara roller shade companion E1 |
 | Exposes | cover (state, position), battery, device_temperature, charging_status, motor_state, running, linkquality |
 | Picture | ![Xiaomi ZNJLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNJLBL01LM.jpg) |
@@ -53,6 +53,7 @@ In order for this device to work (fully), at least the following firmware is req
 *Note that if you have already paired the device you will need to repair it after upgrading your adapter firmware.*
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -74,7 +75,7 @@ To read the current state of this cover publish a message to topic `zigbee2mqtt/
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
 It's not possible to write (`/set`) this value.

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | GL-SD-002  |
-| Vendor  | Gledopto  |
+| Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee 3.0 smart home switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Gledopto GL-SD-002](https://www.zigbee2mqtt.io/images/devices/GL-SD-002.jpg) |
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

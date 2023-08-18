@@ -1,6 +1,6 @@
 ---
-title: "Mercator SSWF01G control via MQTT"
-description: "Integrate your Mercator SSWF01G via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Mercator Ikuü SSWF01G control via MQTT"
+description: "Integrate your Mercator Ikuü SSWF01G via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-09-02T12:41:00
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SSWF01G
+# Mercator Ikuü SSWF01G
 
 |     |     |
 |-----|-----|
 | Model | SSWF01G  |
-| Vendor  | Mercator  |
+| Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | AC fan controller |
 | Exposes | switch (state), fan (state, mode), linkquality |
-| Picture | ![Mercator SSWF01G](https://www.zigbee2mqtt.io/images/devices/SSWF01G.jpg) |
+| Picture | ![Mercator Ikuü SSWF01G](https://www.zigbee2mqtt.io/images/devices/SSWF01G.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

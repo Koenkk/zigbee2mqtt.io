@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZCTS-808  |
-| Vendor  | Trust  |
+| Vendor  | [Trust](/supported-devices/#v=Trust)  |
 | Description | Wireless contact sensor |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
 | Picture | ![Trust ZCTS-808](https://www.zigbee2mqtt.io/images/devices/ZCTS-808.jpg) |
@@ -31,6 +31,7 @@ When pairing the sensor with Zigbee2MQTT,
 keep opening and closing the sensor (pull/insert the sensor parts next to each other) for 10 seconds,
 otherwise device will fall asleep before it gets fully configured and will not send state changes.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -55,7 +56,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

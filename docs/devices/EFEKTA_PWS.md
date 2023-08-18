@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | EFEKTA_PWS  |
-| Vendor  | Custom devices (DiY)  |
+| Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | [Plant Wattering Sensor, CR2450, CR2477 batteries, temperature ] |
 | Exposes | soil_moisture, battery, temperature, report_delay, linkquality |
 | Picture | ![Custom devices (DiY) EFEKTA_PWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PWS.jpg) |
@@ -29,6 +29,7 @@ pageClass: device-page
 ### Build guide
 Instructions on how to build this device can be found [here](https://github.com/smartboxchannel/Plant-Watering-Sensor-Zigbee)
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -60,7 +61,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -78,7 +79,7 @@ Value can be found in the published state on the `report_delay` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `240`.
-The unit of this value is `Minutes`.
+The unit of this value is `min`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

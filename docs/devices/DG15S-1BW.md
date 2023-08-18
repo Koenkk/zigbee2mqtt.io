@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | DG15S-1BW  |
-| Vendor  | Leviton  |
+| Vendor  | [Leviton](/supported-devices/#v=Leviton)  |
 | Description | Decora smart Zigbee 3.0 certified 15A switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Leviton DG15S-1BW](https://www.zigbee2mqtt.io/images/devices/DG15S-1BW.jpg) |
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

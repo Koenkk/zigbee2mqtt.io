@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | InstaRemote  |
-| Vendor  | Insta  |
+| Vendor  | [Insta](/supported-devices/#v=Insta)  |
 | Description | ZigBee Light Link wall/handheld transmitter |
 | Exposes | action, linkquality |
 | Picture | ![Insta InstaRemote](https://www.zigbee2mqtt.io/images/devices/InstaRemote.jpg) |
@@ -48,6 +48,7 @@ Unfortunately Gira seems to have dropped support for their ZigBee transmitters c
 For the device to ask for/accept OTA updates, it needs to be in "programming mode" (same mode as for joining a network, see above).
 In case the device does still not accept updates or seems to be stuck somehow, it may help to do a factory reset, join the network again and then again enter programming mode before starting the OTA update again.
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

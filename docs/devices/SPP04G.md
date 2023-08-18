@@ -1,6 +1,6 @@
 ---
-title: "Mercator SPP04G control via MQTT"
-description: "Integrate your Mercator SPP04G via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Mercator Ikuü SPP04G control via MQTT"
+description: "Integrate your Mercator Ikuü SPP04G via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-08-01T15:06:58
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SPP04G
+# Mercator Ikuü SPP04G
 
 |     |     |
 |-----|-----|
 | Model | SPP04G  |
-| Vendor  | Mercator  |
-| Description | Ikuü Quad Power Point |
+| Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
+| Description | Quad power point |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
-| Picture | ![Mercator SPP04G](https://www.zigbee2mqtt.io/images/devices/SPP04G.jpg) |
+| Picture | ![Mercator Ikuü SPP04G](https://www.zigbee2mqtt.io/images/devices/SPP04G.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,14 +28,27 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
 * `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

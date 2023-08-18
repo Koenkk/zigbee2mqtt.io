@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | Z3-1BRL  |
-| Vendor  | Lutron  |
+| Vendor  | [Lutron](/supported-devices/#v=Lutron)  |
 | Description | Aurora smart bulb dimmer |
 | Exposes | action, brightness, linkquality |
 | Picture | ![Lutron Z3-1BRL](https://www.zigbee2mqtt.io/images/devices/Z3-1BRL.jpg) |
@@ -37,6 +37,7 @@ If the dimmer was previously paired to another hub, you will need to factory res
 
 See this [configuration guide](https://www.lutron.com/TechnicalDocumentLibrary/0301916_Aurora_Advanced_Install_Guide.pdf#page=7) for more information.
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

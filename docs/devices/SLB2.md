@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SLB2  |
-| Vendor  | Hive  |
+| Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | Signal booster |
 | Exposes | linkquality |
 | Picture | ![Hive SLB2](https://www.zigbee2mqtt.io/images/devices/SLB2.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

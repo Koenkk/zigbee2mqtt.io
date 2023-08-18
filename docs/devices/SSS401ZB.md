@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SSS401ZB  |
-| Vendor  | Feibit  |
+| Vendor  | [Feibit](/supported-devices/#v=Feibit)  |
 | Description | Smart 4 key scene wall switch |
 | Exposes | action, switch (state), linkquality |
 | Picture | ![Feibit SSS401ZB](https://www.zigbee2mqtt.io/images/devices/SSS401ZB.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

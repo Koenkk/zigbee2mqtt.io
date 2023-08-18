@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | KMPCIL_RES005  |
-| Vendor  | KMPCIL  |
+| Vendor  | [KMPCIL](/supported-devices/#v=KMPCIL)  |
 | Description | Environment sensor |
 | Exposes | battery, temperature, humidity, pressure, illuminance, illuminance_lux, occupancy, switch (state), linkquality |
 | Picture | ![KMPCIL KMPCIL_RES005](https://www.zigbee2mqtt.io/images/devices/KMPCIL_RES005.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -51,7 +52,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

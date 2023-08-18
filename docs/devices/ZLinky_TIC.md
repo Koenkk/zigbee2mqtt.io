@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZLinky_TIC  |
-| Vendor  | LiXee  |
+| Vendor  | [LiXee](/supported-devices/#v=LiXee)  |
 | Description | Lixee ZLinky |
-| Exposes | ADCO, BASE, OPTARIF, ISOUSC, HCHC, HCHP, BBRHCJW, BBRHPJW, BBRHCJR, BBRHPJR, IINST, IINST2, IINST3, IMAX, IMAX2, IMAX3, PMAX, PAPP, PTEC, DEMAIN, HHPHC, PPOT, PEJP, ADPS, ADIR1, ADIR2, ADIR3, LTARF, NTARF, VTIC, DATE, EASF07, EASF08, EASF09, EASF10, EASD01, EASD02, EASD03, EASD04, EAIT, ERQ1, ERQ2, ERQ3, ERQ4, URMS1, URMS2, URMS3, STGE, PCOUP, SINSTI, SMAXIN, SMAXIN-1, CCASN, CCASN-1, CCAIN, CCAIN-1, UMOY1, UMOY2, UMOY3, SINSTS2, SINSTS3, SMAXN2, SMAXN3, SMAXN-1, SMAXN2-1, SMAXN3-1, MSG1, MSG2, PRM, DPM1, FPM1, DPM2, FPM2, DPM3, FPM3, RELAIS, NJOURF, NJOURF+1, PJOURF+1, PPOINTE1, linkquality |
+| Exposes | ADCO, BASE, OPTARIF, ISOUSC, HCHC, HCHP, BBRHCJW, BBRHPJW, BBRHCJR, BBRHPJR, IINST, IINST2, IINST3, IMAX, IMAX2, IMAX3, PMAX, PAPP, PTEC, DEMAIN, HHPHC, PPOT, PEJP, ADPS, ADIR1, ADIR2, ADIR3, LTARF, NTARF, VTIC, DATE, EASF07, EASF08, EASF09, EASF10, EASD01, EASD02, EASD03, EASD04, EAIT, ERQ1, ERQ2, ERQ3, ERQ4, URMS1, URMS2, URMS3, STGE, PCOUP, SINSTI, SMAXIN, SMAXIN-1, CCASN, CCASN-1, CCAIN, CCAIN-1, UMOY1, UMOY2, UMOY3, SINSTS2, SINSTS3, SMAXN2, SMAXN3, SMAXN-1, SMAXN2-1, SMAXN3-1, MSG1, MSG2, PRM, DPM1, FPM1, DPM2, FPM2, DPM3, FPM3, RELAIS, NJOURF, NJOURF+1, PJOURF+1, PPOINTE1, MOTDETAT, linkquality |
 | Picture | ![LiXee ZLinky_TIC](https://www.zigbee2mqtt.io/images/devices/ZLinky_TIC.jpg) |
 
 
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -42,7 +43,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `production`: If you produce energy back to the grid (works ONLY when linky_mode: standard, default: auto). The value must be one of `auto`, `true`, `false`
 
-* `tarif`: Overrides the automatic current tarif. This option will exclude unnecesary attributes. Open a issue to support more of them. Default: auto. The value must be one of `Historique - BASE`, `Historique - HCHP`, `Historique - EJP`, `Historique - BBR`, `Standard - Sem WE Mercredi`, `Standard - BASE`, `Standard - Heure Pleine Heure Creuse`, `auto`
+* `tarif`: Overrides the automatic current tarif. This option will exclude unnecesary attributes. Open a issue to support more of them. Default: auto. The value must be one of `Historique - BASE`, `Historique - HCHP`, `Historique - EJP`, `Historique - BBR`, `Standard - Sem WE Lundi`, `Standard - Sem WE Mercredi`, `Standard - Sem WE Vendredi`, `Standard - BASE`, `Standard - Heure Pleine Heure Creuse`, `Standard - TEMPO`, `auto`
 
 * `kWh_precision`: Number of digits after decimal point for kWh, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
@@ -505,6 +506,11 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 ### PPOINTE1 (text)
 Profile of the next check-in day.
 Value can be found in the published state on the `days_profile_next_calendar` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### MOTDETAT (text)
+Meter Status Word.
+Value can be found in the published state on the `MOTDETAT` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)

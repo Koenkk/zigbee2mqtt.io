@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | JZ-ZB-002  |
-| Vendor  | LELLKI  |
+| Vendor  | [LELLKI](/supported-devices/#v=LELLKI)  |
 | Description | 2 gang touch switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![LELLKI JZ-ZB-002](https://www.zigbee2mqtt.io/images/devices/JZ-ZB-002.jpg) |
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

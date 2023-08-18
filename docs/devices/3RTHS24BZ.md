@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | 3RTHS24BZ  |
-| Vendor  | Third Reality  |
+| Vendor  | [Third Reality](/supported-devices/#v=Third%20Reality)  |
 | Description | Temperature and humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
 | Picture | ![Third Reality 3RTHS24BZ](https://www.zigbee2mqtt.io/images/devices/3RTHS24BZ.jpg) |
@@ -26,6 +26,10 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -43,7 +47,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

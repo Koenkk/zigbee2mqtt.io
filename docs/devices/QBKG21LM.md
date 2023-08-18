@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QBKG21LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara D1 single gang smart wall switch (no neutral wire) |
 | Exposes | switch (state), action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG21LM](https://www.zigbee2mqtt.io/images/devices/QBKG21LM.jpg) |
@@ -40,6 +40,7 @@ devices:
     legacy: false
 ```
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

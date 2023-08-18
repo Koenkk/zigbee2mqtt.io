@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | AIRAM-CTR.U  |
-| Vendor  | Airam  |
+| Vendor  | [Airam](/supported-devices/#v=Airam)  |
 | Description | CTR.U remote |
 | Exposes | action, linkquality |
 | Picture | ![Airam AIRAM-CTR.U](https://www.zigbee2mqtt.io/images/devices/AIRAM-CTR.U.jpg) |
@@ -49,6 +49,7 @@ Device seems to join network also when it is paired directly to Airam bulb (whic
 (https://www.zigbee2mqtt.io/devices/4713407.html) by keeping ON and DIM buttons pressed while holding remote
 within 5 centimeters away from Airam bulb.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

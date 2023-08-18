@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS2AQ-EM  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Air quality monitor |
 | Exposes | battery, temperature, humidity, pm25, hcho, voc, aqi, pm10, battery_state, linkquality |
 | Picture | ![HEIMAN HS2AQ-EM](https://www.zigbee2mqtt.io/images/devices/HS2AQ-EM.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -43,7 +44,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -77,7 +78,7 @@ The unit of this value is `mg/m³`.
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppb`.
+The unit of this value is `µg/m³`.
 
 ### Aqi (numeric)
 Air quality index.

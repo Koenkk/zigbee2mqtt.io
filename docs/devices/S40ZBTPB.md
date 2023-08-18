@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | S40ZBTPB  |
-| Vendor  | SONOFF  |
+| Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | 15A Zigbee smart plug |
 | Exposes | switch (state), linkquality |
 | Picture | ![SONOFF S40ZBTPB](https://www.zigbee2mqtt.io/images/devices/S40ZBTPB.jpg) |
@@ -29,6 +29,15 @@ pageClass: device-page
 After first power on, it should enter pairing mode. To pair to a new network, long press reset button for 5s until the Wi-Fi LED indicator changes to a cycle of two short flashes and one long flash, then release.
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

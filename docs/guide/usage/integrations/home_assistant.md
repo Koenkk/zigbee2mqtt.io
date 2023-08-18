@@ -6,7 +6,7 @@ sidebar: auto
 
 ## MQTT discovery
 The easiest way to integrate Zigbee2MQTT with Home Assistant is by
-using [MQTT discovery](https://www.home-assistant.io/docs/mqtt/discovery/).
+using [MQTT discovery](https://www.home-assistant.io/integrations/mqtt#mqtt-discovery).
 This allows Zigbee2MQTT to automatically add devices to Home Assistant.
 
 To achieve the best possible integration (including MQTT discovery):
@@ -28,7 +28,7 @@ without having to restart Home Assistant. It also makes it possible to show whic
 ![Device registry](../../../images/home_assistant_device_registry.png)
 
 ## Customizing discovery
-The device specific configuration allows you to modify the discovery payload. Here you can also prevent a device from being discovered. See [Device specific configuration](../../configuration/) for the available options.
+The device specific configuration allows you to modify the discovery payload. Here you can also prevent a device from being discovered. See [Device specific configuration](../../configuration/devices-groups.html#specific-device-options) for the available options.
 
 ## Responding to button clicks
 To respond to button clicks (e.g. WXKG01LM) you can use one of the following three Home Assistant configurations.
@@ -90,7 +90,7 @@ automation:
 Groups discovery is supported for groups of lights, switches, locks and covers. For other types you have to manually create a config in the Home Assistant `configuration.yaml`.
 
 ## Overriding discovery properties
-Any Home Assistant MQTT discovery property can be overridden on a device. Two examples are shown below. For a full and current list of discovery properties, see [the Home Assistant MQTT Discovery integration](https://www.home-assistant.io/docs/mqtt/discovery/) and [the Home Assistant extension](https://github.com/Koenkk/zigbee2mqtt/blob/03ba647dc6b5f299f8f3ab441712999fcb3a253e/lib/extension/homeassistant.ts) in the Zigbee2MQTT source code.
+Any Home Assistant MQTT discovery property can be overridden on a device. Two examples are shown below. For a full and current list of discovery properties, see [the Home Assistant MQTT Discovery integration](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery) and [the Home Assistant extension](https://github.com/Koenkk/zigbee2mqtt/blob/03ba647dc6b5f299f8f3ab441712999fcb3a253e/lib/extension/homeassistant.ts) in the Zigbee2MQTT source code.
 
 ### Changing `supported_color_modes`
 This is useful for switching light bulbs from reporting values from X/Y (which is the default) to reporting in hue / saturation (which is what bulbs report color in when changing via hue or saturation, such as with the `hue_move` and `saturation_move` commands).
@@ -136,6 +136,19 @@ devices:
         name: my_switch_right
         value_template: null
         state_value_template: '{{ value_json.state_right }}'
+```
+### Changing device properties
+As an advanced example to show changing any MQTT property can be overriden, the following configuration changes the `suggested_area` property of the `device`. The example shows that you can just copy the given MQTT discovery hierarchy underneath the `homeassistant` property (given that `suggested_area` is underneath the `device` property). Please note, that other `device` properties are possibly set by Zigbee2MQTT (e.g. `manufacturer`).
+
+This example changes the [light's device's `suggested area` discovery property](https://www.home-assistant.io/integrations/light.mqtt/#device) to "Living Room":
+
+```yaml
+devices:
+  "0x12345678":
+    friendly_name: my_light
+    homeassistant:
+      device:
+        suggested_area: 'Living Room'
 ```
 
 ## Using a custom name for the device and entities
@@ -230,40 +243,71 @@ timer:
 mqtt:
   sensor:
     # Sensor for monitoring the bridge state
-    - name: Zigbee2MQTT Bridge state
+    - name: Bridge state
       unique_id: zigbee2mqtt_bridge_state_sensor
       state_topic: "zigbee2mqtt/bridge/state"
+      value_template: "{{ value_json.state }}"
       icon: mdi:router-wireless
+      entity_category: diagnostic
+      device:
+        identifiers: zigbee2mqtt
+        name: "Zigbee2MQTT"
+        model: "Zigbee2MQTT"
+        manufacturer: "Zigbee2MQTT"  
     # Sensor for Showing the Zigbee2MQTT Version
-    - name: Zigbee2MQTT Version
+    - name: Version
       unique_id: zigbee2mqtt_version_sensor
       state_topic: "zigbee2mqtt/bridge/info"
       value_template: "{{ value_json.version }}"
       icon: mdi:zigbee
+      entity_category: diagnostic
+      device:
+        identifiers: zigbee2mqtt
+        name: "Zigbee2MQTT"
+        model: "Zigbee2MQTT"
+        manufacturer: "Zigbee2MQTT"  
     # Sensor for Showing the Coordinator Version
-    - name: Zigbee2MQTT Coordinator Version
+    - name: Coordinator Version
       unique_id: zigbee2mqtt_coordinator_version_sensor
       state_topic: "zigbee2mqtt/bridge/info"
       value_template: "{{ value_json.coordinator.meta.revision }}"
       icon: mdi:chip
-    - name: Zigbee2mqtt Networkmap
+      entity_category: diagnostic
+      device:
+        identifiers: zigbee2mqtt
+        name: "Zigbee2MQTT"
+        model: "Zigbee2MQTT"
+        manufacturer: "Zigbee2MQTT"  
+    - name: Networkmap
       unique_id: zigbee2mqtt_networkmap_sensor
       # if you change base_topic of Zigbee2mqtt, change state_topic accordingly
-      state_topic: zigbee2mqtt/bridge/networkmap/raw
+      state_topic: zigbee2mqtt/bridge/response/networkmap
       value_template: >-
         {{ now().strftime('%Y-%m-%d %H:%M:%S') }}
       # again, if you change base_topic of Zigbee2mqtt, change json_attributes_topic accordingly
-      json_attributes_topic: zigbee2mqtt/bridge/networkmap/raw
-    
+      json_attributes_topic: zigbee2mqtt/bridge/response/networkmap
+      json_attributes_template: "{{ value_json.data.value | tojson }}"
+      entity_category: diagnostic
+      device:
+        identifiers: zigbee2mqtt
+        name: "Zigbee2MQTT"
+        model: "Zigbee2MQTT"
+        manufacturer: "Zigbee2MQTT"
+
   # Switch for enabling joining
   switch:
-    - name: "Zigbee2MQTT Main join"
+    - name: "Main join"
       unique_id: zigbee2mqtt_main_join_switch
       state_topic: "zigbee2mqtt/bridge/info"
       value_template: '{{ value_json.permit_join | lower }}'
       command_topic: "zigbee2mqtt/bridge/request/permit_join"
       payload_on: "true"
       payload_off: "false"
+      device:
+        identifiers: zigbee2mqtt
+        name: "Zigbee2MQTT"
+        model: "Zigbee2MQTT"
+        manufacturer: "Zigbee2MQTT"
 
 automation:
   # Automation for sending MQTT message on input select change

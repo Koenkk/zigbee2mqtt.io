@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_water_sensor  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Water leak sensor |
 | Exposes | water_leak, linkquality |
 | Picture | ![TuYa TS0601_water_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_water_sensor.jpg) |
@@ -27,6 +27,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

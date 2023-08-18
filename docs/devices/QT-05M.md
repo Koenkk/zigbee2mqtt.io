@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | QT-05M  |
-| Vendor  | QOTO  |
+| Vendor  | [QOTO](/supported-devices/#v=QOTO)  |
 | Description | Solar powered garden watering timer |
 | Exposes | water_flow, last_watering_duration, remaining_watering_time, valve_state, shutdown_timer, valve_state_auto_shutdown, battery, linkquality |
 | Picture | ![QOTO QT-05M](https://www.zigbee2mqtt.io/images/devices/QT-05M.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -74,7 +75,7 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

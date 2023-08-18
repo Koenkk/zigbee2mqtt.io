@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_smoke_1  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smoke sensor |
 | Exposes | smoke, tamper, battery_low, linkquality |
 | Picture | ![TuYa TS0601_smoke_1](https://www.zigbee2mqtt.io/images/devices/TS0601_smoke_1.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

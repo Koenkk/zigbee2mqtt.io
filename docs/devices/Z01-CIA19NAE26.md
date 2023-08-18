@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | Z01-CIA19NAE26  |
-| Vendor  | Sengled  |
+| Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Element touch (A19) |
 | Exposes | light (state, brightness), linkquality |
 | Picture | ![Sengled Z01-CIA19NAE26](https://www.zigbee2mqtt.io/images/devices/Z01-CIA19NAE26.jpg) |
@@ -27,6 +27,10 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+## Device Type
+Sengled bulbs are Zigbee [end devices](/advanced/zigbee/01_zigbee_network.html#end-device), not [routers](/advanced/zigbee/01_zigbee_network.html#router), and therefore will not extend the reach of your Zigbee network. For more information see the [Sengled FAQ](https://support.sengled.com/hc/en-us/articles/115010871308-Do-any-Sengled-Zigbee-devices-act-as-Zigbee-repeaters-).
+
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -35,6 +39,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

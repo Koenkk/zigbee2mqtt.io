@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | GLSK6ZB-1716  |
-| Vendor  | Hej  |
+| Vendor  | [Hej](/supported-devices/#v=Hej)  |
 | Description | Goqual 6 gang Switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![Hej GLSK6ZB-1716](https://www.zigbee2mqtt.io/images/devices/GLSK6ZB-1716.jpg) |
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

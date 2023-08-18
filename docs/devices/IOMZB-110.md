@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | IOMZB-110  |
-| Vendor  | Develco  |
+| Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | IO module |
 | Exposes | input, switch (state), linkquality |
 | Picture | ![Develco IOMZB-110](https://www.zigbee2mqtt.io/images/devices/IOMZB-110.jpg) |
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | MEAZON_DINRAIL  |
-| Vendor  | Meazon  |
+| Vendor  | [Meazon](/supported-devices/#v=Meazon)  |
 | Description | DinRail 1-phase meter |
 | Exposes | switch (state), power, voltage, current, linkquality |
 | Picture | ![Meazon MEAZON_DINRAIL](https://www.zigbee2mqtt.io/images/devices/MEAZON_DINRAIL.jpg) |
@@ -40,10 +40,13 @@ devices:
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

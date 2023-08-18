@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SZ-ESW02  |
-| Vendor  | Sercomm  |
+| Vendor  | [Sercomm](/supported-devices/#v=Sercomm)  |
 | Description | Telstra smart plug 2 |
 | Exposes | switch (state), power, linkquality |
 | Picture | ![Sercomm SZ-ESW02](https://www.zigbee2mqtt.io/images/devices/SZ-ESW02.jpg) |
@@ -30,6 +30,16 @@ pageClass: device-page
 With the device unplugged (or socket switched off), press and hold the pairing button for ~4 seconds. Continue holding the pairing button while plugging in the device (or switching the socket on) and continue to hold while the LED has been illuminated (in 4 seconds). The sensor shall the wipe any knowledge of the previous network and other configuration parameters and begin searching for a new network (Auto Joining State).
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

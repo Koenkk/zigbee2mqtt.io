@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WZ1  |
-| Vendor  | Skydance  |
+| Vendor  | [Skydance](/supported-devices/#v=Skydance)  |
 | Description | Zigbee & RF 2 channel LED controller |
-| Exposes | light (state, brightness), linkquality |
+| Exposes | light (state, brightness), effect, do_not_disturb, linkquality |
 | Picture | ![Skydance WZ1](https://www.zigbee2mqtt.io/images/devices/WZ1.jpg) |
 
 
@@ -28,10 +28,13 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -61,6 +64,20 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_step": 40 // Increases brightness by 40
 }
 ````
+
+### Effect (enum)
+Triggers an effect on the light (e.g. make light blink for a few seconds).
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
+The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
+
+### Do_not_disturb (binary)
+Do not disturb mode, when enabled this function will keep the light OFF after a power outage.
+Value can be found in the published state on the `do_not_disturb` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_not_disturb": NEW_VALUE}`.
+If value equals `true` do_not_disturb is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

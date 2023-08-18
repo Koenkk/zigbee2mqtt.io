@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | GW003-AS-IN-TE-FC  |
-| Vendor  | Atlantic Group  |
+| Vendor  | [Atlantic Group](/supported-devices/#v=Atlantic%20Group)  |
 | Description | Interface Naviclim for Takao air conditioners |
 | Exposes | programming_operation_mode, climate (local_temperature, occupied_cooling_setpoint, occupied_heating_setpoint, system_mode, preset, fan_mode, swing_mode), quiet_fan, ac_louver_position, linkquality |
 | Picture | ![Atlantic Group GW003-AS-IN-TE-FC](https://www.zigbee2mqtt.io/images/devices/GW003-AS-IN-TE-FC.jpg) |
@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -37,11 +38,11 @@ pageClass: device-page
 ## Exposes
 
 ### Programming_operation_mode (enum)
-Controls how programming affects the thermostat. Possible values: setpoint (only use specified setpoint), schedule (follow programmed setpoint schedule). Changing this value does not clear programmed schedules..
+Controls how programming affects the thermostat. Possible values: setpoint (only use specified setpoint), schedule (follow programmed setpoint schedule), schedule_with_preheat (follow programmed setpoint schedule with pre-heating). Changing this value does not clear programmed schedules..
 Value can be found in the published state on the `programming_operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"programming_operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"programming_operation_mode": NEW_VALUE}`.
-The possible values are: `setpoint`, `schedule`, `eco`.
+The possible values are: `setpoint`, `schedule`, `schedule_with_preheat`, `eco`.
 
 ### Climate 
 This climate device supports the following features: `local_temperature`, `occupied_cooling_setpoint`, `occupied_heating_setpoint`, `system_mode`, `preset`, `fan_mode`, `swing_mode`.
@@ -49,7 +50,7 @@ This climate device supports the following features: `local_temperature`, `occup
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `16` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`, `cool`, `auto`, `dry`, `fan_only`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
-- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `activity`, `boost`, `eco`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
+- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `activity`, `boost`, `eco`. Reading (`/get`) this attribute is not possible.
 
 ### Quiet_fan (binary)
 Fan quiet mode.

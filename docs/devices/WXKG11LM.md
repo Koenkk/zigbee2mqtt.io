@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WXKG11LM  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara wireless switch |
 | Exposes | battery, voltage, action, device_temperature, power_outage_count, linkquality |
 | Picture | ![Xiaomi WXKG11LM](https://www.zigbee2mqtt.io/images/devices/WXKG11LM.jpg) |
@@ -59,6 +59,7 @@ More detailed information about this can be found [here](https://community.hubit
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -70,7 +71,7 @@ More detailed information about this can be found [here](https://community.hubit
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
