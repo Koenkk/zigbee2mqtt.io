@@ -187,6 +187,23 @@ _(in order of first appearance)_
     ![](https://smartlight.me/ebay/images/slzb-06/slzb06logo.jpg)
     </details>
 
+  * <details>
+    <summary>ZigStar UZG-01 - Universal ZigBee Gateway</summary>
+  
+    Open source PoE af Coordinator with external antenna on CC2652P
+    * [ESP32 Firmware](https://github.com/mercenaruss/uzg-firmware) Repository with latest firmware
+    * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/)  
+    * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/)  
+    * [Official site](https://uzg.zig-star.com) with documentation
+    * [Flashing instructions](https://uzg.zig-star.com/flashing-and-updating/) or see [Flashing CC1352/CC2652/CC2538 based adapters](#flashing-cc1352-cc2652-cc2538-based-adapters)
+    * Buy: [Official Store](https://uzg.zig-star.com) or [Tindie](https://www.tindie.com/stores/zigstar/)
+
+    |           ZigStar UZG-01              |                  Dimensions           | 
+    | :-----------------------------------: | :-----------------------------------: | 
+    | ![](../../images/Zigstar-UZG01-1.png) | ![](../../images/Zigstar-UZG01-2.png) |
+
+    </details>
+
 
 * Network
   * <details>
