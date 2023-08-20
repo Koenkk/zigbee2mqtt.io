@@ -72,3 +72,6 @@ That will create an empty scene. You can then set the values of your devices and
 ```
 
 The `scene_store` command overrites all values _except_ the `transition` value.
+
+## Rename scene
+In order to change (or set) the name for an existing scene, a command can be sent to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]/set` with payload `{"scene_rename": {"ID": SCENE_ID, "name": SCENE_NAME}}` where `SCENE_ID` is a number and `SCENE_NAME` is a string representing the new name. For example: `{"scene_rename": {"ID": 1, "name": "My new scene name"}}`.
