@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZG-205Z
+# TuYa ZG-205Z/A
 
 |     |     |
 |-----|-----|
-| Model | ZG-205Z  |
+| Model | ZG-205Z/A  |
 | Vendor  | TuYa  |
-| Description | Luminance door sensor |
-| Exposes | contact, illuminance, battery, linkquality |
-| Picture | ![TuYa ZG-205Z](https://www.zigbee2mqtt.io/images/devices/ZG-205Z.jpg) |
+| Description | Mini 24Ghz human presence sensor |
+| Exposes | Presence, illuminance, Motion state, Large motion detection distance,Large motion detection sensitivity, Small motion detection distance,Small motion detection sensitivity,Static detection distance,Static detection sensitivity,Fading_time,indicator,linkquality |
+| Picture | ![TuYa ZG-205Z/A](https://www.zigbee2mqtt.io/images/devices/ZG-205Z-A.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -94,9 +94,9 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `3600`.
 The unit of this value is `s`.
 
-### Light mode (binary)
+### Indicator (binary)
 You can turn the indicator on or off
-Value can be found in the published state on the `light_mode` property.
+Value can be found in the published state on the `indicator` property.
 It's possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 

@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | ZG-205ZL  |
 | Vendor  | TuYa  |
-| Description | Luminance door sensor |
-| Exposes | contact, illuminance, battery, linkquality |
+| Description |24Ghz human presence sensor |
+| Exposes | Presence, illuminance, Motion state, Large motion detection distance,Large motion detection sensitivity, Small motion detection distance,Small motion detection sensitivity,Static detection distance,Static detection sensitivity,Fading_time,indicator,linkquality |
 | Picture | ![TuYa ZG-205ZL](https://www.zigbee2mqtt.io/images/devices/ZG-205ZL.jpg) |
 
 
