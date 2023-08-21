@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZG-102ZL  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | TuYa  |
 | Description | Luminance door sensor |
 | Exposes | contact, illuminance, battery, linkquality |
 | Picture | ![TuYa ZG-102ZL](https://www.zigbee2mqtt.io/images/devices/ZG-102ZL.jpg) |
@@ -33,14 +33,13 @@ pairing process is in progress.
 
 
 
-
 ## Exposes
 
 ### Contact (binary)
-Indicates if the contact is closed (= true) or open (= false).
+Indicates whether the device detected occupancy.
 Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `false` contact is ON, if `true` OFF.
+If value equals `true` occupancy is ON, if `false` OFF.
 
 ### Illuminance (numeric)
 Raw measured illuminance.
@@ -49,7 +48,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
