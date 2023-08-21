@@ -43,10 +43,12 @@ List of tested devices supporting mDNS Zeroconf autodiscovery:
 | Device  | MDNS service type |
 | :---    | :---:             |
 | SLZB-06 | slzb-06           |
+| UZG-01  | uzg-01            |
 
 ```yaml
 serial:
   port: mdns://slzb-06
+  # port: mdns://uzg-01
   # Optional: disable LED of the adapter if supported (default: false)
   disable_led: false
 ```
