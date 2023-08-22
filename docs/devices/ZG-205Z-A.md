@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZG-205ZL control via MQTT"
-description: "Integrate your TuYa ZG-205ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "TuYa ZG-205Z control via MQTT"
+description: "Integrate your TuYa ZG-205Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-08-19T9:25:00
 pageClass: device-page
 ---
@@ -11,17 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZG-205ZL
+# TuYa ZG-205Z/A
 
 |     |     |
 |-----|-----|
-| Model | ZG-205ZL  |
+| Model | ZG-205Z/A  |
 | Vendor  | TuYa  |
-| Description | Luminance door sensor |
-| Exposes | contact, illuminance, battery, linkquality |
-| Description |24Ghz human presence sensor |
+| Description | Mini 24Ghz human presence sensor |
 | Exposes | Presence, illuminance, Motion state, Large motion detection distance,Large motion detection sensitivity, Small motion detection distance,Small motion detection sensitivity,Static detection distance,Static detection sensitivity,Fading_time,indicator,linkquality |
-| Picture | ![TuYa ZG-205ZL](https://www.zigbee2mqtt.io/images/devices/ZG-205ZL.jpg) |
+| Picture | ![TuYa ZG-205Z/A](https://www.zigbee2mqtt.io/images/devices/ZG-205Z-A.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -96,26 +94,9 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `3600`.
 The unit of this value is `s`.
 
-### Working mode (enum)
-Indicates the working mode by the device (arm, off, alarm,doorbell).
-Value can be found in the published state on the `Working mode` property.
-It's possible to read (`/get`) or write (`/set`) this value.
-If value equals 0:'arm', 1:'off', 2:'alarm', 3:'doorbell'
-
-
-### Alarm Volume (enum)
-Value can be found in the published state on the `alarm_volume` property.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_volume": NEW_VALUE}`.
-value equals 0:'low', 1:'medium', 2:'high', 3:'mute'
-
-### Alarm time (enum)
-Value can be found in the published state on the `alarm_time` property.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_time": NEW_VALUE}`.
-The unit of this value is `minute`.
-
-### Light mode (binary)
+### Indicator (binary)
 You can turn the indicator on or off
-Value can be found in the published state on the `light_mode` property.
+Value can be found in the published state on the `indicator` property.
 It's possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
