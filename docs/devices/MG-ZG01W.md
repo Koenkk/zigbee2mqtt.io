@@ -1,7 +1,7 @@
 ---
-title: "TuYa MG-ZG01W  control via MQTT"
-description: "Integrate your TuYa MG-ZG01W  via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-08-01T15:13:29
+title: "TuYa MG-ZG01W control via MQTT"
+description: "Integrate your TuYa MG-ZG01W via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-08-26T06:45:18
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa MG-ZG01W 
+# TuYa MG-ZG01W
 
 |     |     |
 |-----|-----|
-| Model | MG-ZG01W   |
+| Model | MG-ZG01W  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 1 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa MG-ZG01W ](https://www.zigbee2mqtt.io/images/devices/MG-ZG01W-.jpg) |
+| Picture | ![TuYa MG-ZG01W](https://www.zigbee2mqtt.io/images/devices/MG-ZG01W.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

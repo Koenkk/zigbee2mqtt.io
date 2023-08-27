@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZG-102ZL  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Luminance door sensor |
-| Exposes | contact, illuminance, battery, linkquality |
+| Exposes | contact, illuminance, battery, illuminance_interval, linkquality |
 | Picture | ![TuYa ZG-102ZL](https://www.zigbee2mqtt.io/images/devices/ZG-102ZL.jpg) |
 
 
@@ -33,13 +33,14 @@ pairing process is in progress.
 
 
 
+
 ## Exposes
 
 ### Contact (binary)
-Indicates whether the device detected occupancy.
+Indicates if the contact is closed (= true) or open (= false).
 Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` occupancy is ON, if `false` OFF.
+If value equals `false` contact is ON, if `true` OFF.
 
 ### Illuminance (numeric)
 Raw measured illuminance.
@@ -48,11 +49,19 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Illuminance_interval (numeric)
+Brightness acquisition interval (refresh and update only while active).
+Value can be found in the published state on the `illuminance_interval` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `720`.
+The unit of this value is `minutes`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

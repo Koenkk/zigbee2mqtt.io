@@ -69,7 +69,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `µg/m³`.
 
 ### Hcho (numeric)
-Measured Hcho value.
+Measured HCHO value.
 Value can be found in the published state on the `hcho` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mg/m³`.

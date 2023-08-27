@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZM-35H-Q  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Motion sensor |
-| Exposes | occupancy, battery_low, tamper, battery, sensitivity, keep_time, linkquality |
+| Exposes | occupancy, battery_low, battery, sensitivity, keep_time, linkquality |
 | Picture | ![TuYa ZM-35H-Q](https://www.zigbee2mqtt.io/images/devices/ZM-35H-Q.jpg) |
 
 
@@ -54,12 +54,6 @@ Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery_low is ON, if `false` OFF.
-
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported..

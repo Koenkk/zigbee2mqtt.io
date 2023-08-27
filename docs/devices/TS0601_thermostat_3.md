@@ -18,9 +18,8 @@ pageClass: device-page
 | Model | TS0601_thermostat_3  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Thermostatic radiator valve |
-| Exposes | lock (state), battery_low, climate (current_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration), scale_protection, frost_protection, error, linkquality |
+| Exposes | lock (state), battery_low, climate (current_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, scale_protection, frost_protection, error, linkquality |
 | Picture | ![TuYa TS0601_thermostat_3](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat_3.jpg) |
-| White-label | Avatto ME167 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -52,6 +51,48 @@ This climate device supports the following features: `current_heating_setpoint`,
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `auto`, `heat`, `off`. Reading (`/get`) this attribute is not possible.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 - `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-3` and the maximum value is `3` with a step size of `1`.
+
+### Schedule_monday (text)
+Schedule for monday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Value can be found in the published state on the `schedule_monday` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_monday": NEW_VALUE}`.
+
+### Schedule_tuesday (text)
+Schedule for tuesday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Value can be found in the published state on the `schedule_tuesday` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_tuesday": NEW_VALUE}`.
+
+### Schedule_wednesday (text)
+Schedule for wednesday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Value can be found in the published state on the `schedule_wednesday` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_wednesday": NEW_VALUE}`.
+
+### Schedule_thursday (text)
+Schedule for thursday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Value can be found in the published state on the `schedule_thursday` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_thursday": NEW_VALUE}`.
+
+### Schedule_friday (text)
+Schedule for friday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Value can be found in the published state on the `schedule_friday` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_friday": NEW_VALUE}`.
+
+### Schedule_saturday (text)
+Schedule for saturday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Value can be found in the published state on the `schedule_saturday` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_saturday": NEW_VALUE}`.
+
+### Schedule_sunday (text)
+Schedule for sunday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Value can be found in the published state on the `schedule_sunday` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_sunday": NEW_VALUE}`.
 
 ### Scale_protection (binary)
 If the heat sink is not fully opened within two weeks or is not used for a long time, the valve will be blocked due to silting up and the heat sink will not be able to be used. To ensure normal use of the heat sink, the controller will automatically open the valve fully every two weeks. It will run for 30 seconds per time with the screen displaying "Ad", then return to its normal working state again..

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ORBIS Water Sensor  |
 | Vendor  | [Niceboy](/supported-devices/#v=Niceboy)  |
 | Description | Water leak sensor |
-| Exposes | water_leak, battery_low, battery, linkquality |
+| Exposes | water_leak, tamper, battery_low, battery, linkquality |
 | Picture | ![Niceboy ORBIS Water Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Water-Sensor.jpg) |
 
 
@@ -37,6 +37,12 @@ Indicates whether the device detected a water leak.
 Value can be found in the published state on the `water_leak` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` water_leak is ON, if `false` OFF.
+
+### Tamper (binary)
+Indicates whether the device is tampered.
+Value can be found in the published state on the `tamper` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery_low (binary)
 Indicates if the battery of this device is almost empty.

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0003_switch_module_2  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 3 gang switch module |
-| Exposes | switch (state), power_on_behavior, linkquality |
+| Exposes | switch (state), power_on_behavior, switch_type, linkquality |
 | Picture | ![TuYa TS0003_switch_module_2](https://www.zigbee2mqtt.io/images/devices/TS0003_switch_module_2.jpg) |
 
 
@@ -58,6 +58,13 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
+
+### Switch_type (enum)
+Type of the switch.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `toggle`, `state`, `momentary`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

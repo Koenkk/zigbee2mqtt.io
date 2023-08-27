@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ptvo.switch  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
-| Description | [Multi-channel relay switch](https://ptvo.info/zigbee-switch-configurable-firmware-router-199/) |
+| Description | [Multi-functional device](https://ptvo.info/zigbee-configurable-firmware-features/) |
 | Exposes | l1, switch (state), l2, l3, l4, l5, l6, l7, l8, linkquality |
 | Picture | ![Custom devices (DiY) ptvo.switch](https://www.zigbee2mqtt.io/images/devices/ptvo.switch.jpg) |
 

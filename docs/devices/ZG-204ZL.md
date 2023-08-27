@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-204ZL  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Luminance motion sensor |
-| Exposes | occupancy, illuminance, battery, sensitivity, keep_time, linkquality |
+| Exposes | occupancy, illuminance, battery, sensitivity, keep_time, illuminance_interval, linkquality |
 | Picture | ![TuYa ZG-204ZL](https://www.zigbee2mqtt.io/images/devices/ZG-204ZL.jpg) |
 
 
@@ -64,16 +64,24 @@ The unit of this value is `%`.
 ### Sensitivity (enum)
 PIR sensor sensitivity (refresh and update only while active).
 Value can be found in the published state on the `sensitivity` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Keep_time (enum)
 PIR keep time in seconds (refresh and update only while active).
 Value can be found in the published state on the `keep_time` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keep_time": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keep_time": NEW_VALUE}`.
 The possible values are: `10`, `30`, `60`, `120`.
+
+### Illuminance_interval (numeric)
+Brightness acquisition interval (refresh and update only while active).
+Value can be found in the published state on the `illuminance_interval` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `720`.
+The unit of this value is `minutes`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
