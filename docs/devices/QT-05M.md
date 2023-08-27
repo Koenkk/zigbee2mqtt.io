@@ -65,7 +65,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"shutdown_timer": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `14400`.
 The unit of this value is `sec`.
-This must be set after setting the Valve_state_auto_shutdown value below. Otherwise, the [valve will get stuck on with 10 seconds remaining](https://github.com/Koenkk/zigbee2mqtt/discussions/17904).
+This must be set after setting the `Valve_state_auto_shutdown` value below. Otherwise, the [valve will get stuck on with 10 seconds remaining](https://github.com/Koenkk/zigbee2mqtt/discussions/17904).
 
 ### Valve_state_auto_shutdown (numeric)
 Set valve to % with auto shutdown..
@@ -74,7 +74,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_state_auto_shutdown": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-This must be set before setting the Shutdown_timer value above. Otherwise, the [valve will get stuck on with 10 seconds remaining](https://github.com/Koenkk/zigbee2mqtt/discussions/17904).
+This must be set before setting the `Shutdown_timer` value above. Otherwise, the [valve will get stuck on with 10 seconds remaining](https://github.com/Koenkk/zigbee2mqtt/discussions/17904).
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported..
