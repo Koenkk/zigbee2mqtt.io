@@ -54,13 +54,13 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": NEW_VALUE}`.
 If value equals `ON` calibration is ON, if `OFF` OFF.
 
-### Motor_reversal (binary)
+### Motor reversal (binary)
 Value can be found in the published state on the `motor_reversal` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_reversal": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": NEW_VALUE}`.
-If value equals `ON` motor_reversal is ON, if `OFF` OFF.
+If value equals `ON` motor reversal is ON, if `OFF` OFF.
 
-### Calibration_time (numeric)
+### Calibration time (numeric)
 Calibration time.
 Value can be found in the published state on the `calibration_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

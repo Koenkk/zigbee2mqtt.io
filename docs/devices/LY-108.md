@@ -32,7 +32,7 @@ pageClass: device-page
 
 ## Exposes
 
-### Work_state (text)
+### Work state (text)
 Value can be found in the published state on the `work_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
@@ -49,28 +49,28 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Opening_mode (enum)
+### Opening mode (enum)
 Opening mode.
 Value can be found in the published state on the `opening_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"opening_mode": NEW_VALUE}`.
 The possible values are: `tilt`, `lift`.
 
-### Motor_direction (enum)
+### Motor direction (enum)
 Motor side.
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.
 The possible values are: `left`, `right`.
 
-### Set_upper_limit (enum)
+### Set upper limit (enum)
 Learning.
 Value can be found in the published state on the `set_upper_limit` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_upper_limit": NEW_VALUE}`.
 The possible values are: `start`, `stop`.
 
-### Factory_reset (enum)
+### Factory reset (enum)
 Remove limits.
 Value can be found in the published state on the `factory_reset` property.
 It's not possible to read (`/get`) this value.

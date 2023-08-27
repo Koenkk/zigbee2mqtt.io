@@ -33,7 +33,7 @@ pageClass: device-page
 
 ## Exposes
 
-### Meter_number (text)
+### Meter number (text)
 Meter number.
 Value can be found in the published state on the `meter_number` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -57,21 +57,21 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trip": NEW_VALUE}`.
 If value equals `trip` trip is ON, if `clear` OFF.
 
-### Child_lock (binary)
+### Child lock (binary)
 Child lock.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
-If value equals `ON` child_lock is ON, if `OFF` OFF.
+If value equals `ON` child lock is ON, if `OFF` OFF.
 
-### Power_on_behavior (enum)
+### Power on behavior (enum)
 Power on behavior.
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `previous`.
 
-### Countdown_timer (numeric)
+### Countdown timer (numeric)
 Countdown timer.
 Value can be found in the published state on the `countdown_timer` property.
 It's not possible to read (`/get`) this value.
@@ -79,7 +79,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `86400`.
 The unit of this value is `s`.
 
-### Voltage_rms (numeric)
+### Voltage rms (numeric)
 Voltage RMS.
 Value can be found in the published state on the `voltage_rms` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -91,7 +91,7 @@ Value can be found in the published state on the `current` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
 
-### Current_average (numeric)
+### Current average (numeric)
 Current average.
 Value can be found in the published state on the `current_average` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -121,31 +121,31 @@ Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Power_l1 (numeric)
+### Power l1 (numeric)
 Instantaneous measured power on phase 1.
 Value can be found in the published state on the `power_l1` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Power_l2 (numeric)
+### Power l2 (numeric)
 Instantaneous measured power on phase 2.
 Value can be found in the published state on the `power_l2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Power_l3 (numeric)
+### Power l3 (numeric)
 Instantaneous measured power on phase 3.
 Value can be found in the published state on the `power_l3` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Energy_consumed (numeric)
+### Energy consumed (numeric)
 Consumed energy.
 Value can be found in the published state on the `energy_consumed` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Clear_device_data (enum)
+### Clear device data (enum)
 Clear device data.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.

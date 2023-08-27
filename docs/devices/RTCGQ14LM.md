@@ -71,7 +71,7 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -83,14 +83,14 @@ Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
-### Motion_sensitivity (enum)
+### Motion sensitivity (enum)
 . Press pairing button right before changing this otherwise it will fail..
 Value can be found in the published state on the `motion_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motion_sensitivity": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensitivity": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
-### Detection_interval (numeric)
+### Detection interval (numeric)
 Time interval for detecting actions. Press pairing button right before changing this otherwise it will fail..
 Value can be found in the published state on the `detection_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_interval": ""}`.
@@ -98,14 +98,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `2` and the maximum value is `65535`.
 The unit of this value is `s`.
 
-### Trigger_indicator (binary)
+### Trigger indicator (binary)
 When this option is enabled then blue LED will blink once when motion is detected. Press pairing button right before changing this otherwise it will fail..
 Value can be found in the published state on the `trigger_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"trigger_indicator": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger_indicator": NEW_VALUE}`.
-If value equals `true` trigger_indicator is ON, if `false` OFF.
+If value equals `true` trigger indicator is ON, if `false` OFF.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

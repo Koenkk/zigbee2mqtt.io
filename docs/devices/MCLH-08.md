@@ -55,13 +55,13 @@ Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Voc (numeric)
+### VOC (numeric)
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ppb`.
 
-### Eco2 (numeric)
+### PPM (numeric)
 Measured eCO2 value.
 Value can be found in the published state on the `eco2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

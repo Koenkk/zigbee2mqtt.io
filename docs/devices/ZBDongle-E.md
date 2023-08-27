@@ -65,7 +65,7 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
 
 ## Exposes
 
-### Light_indicator_level (numeric)
+### Light indicator level (numeric)
 Brightness of the indicator light.
 Value can be found in the published state on the `light_indicator_level` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

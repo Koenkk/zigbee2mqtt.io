@@ -90,45 +90,45 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages (since last pairing).
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Presence_event (enum)
+### Presence event (enum)
 Presence events: "enter", "leave", "left_enter", "right_leave", "right_enter", "left_leave", "approach", "away".
 Value can be found in the published state on the `presence_event` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `enter`, `leave`, `left_enter`, `right_leave`, `right_enter`, `left_leave`, `approach`, `away`.
 
-### Monitoring_mode (enum)
+### Monitoring mode (enum)
 Monitoring mode with or without considering right and left sides.
 Value can be found in the published state on the `monitoring_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"monitoring_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"monitoring_mode": NEW_VALUE}`.
 The possible values are: `undirected`, `left_right`.
 
-### Approach_distance (enum)
+### Approach distance (enum)
 The distance at which the sensor detects approaching.
 Value can be found in the published state on the `approach_distance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"approach_distance": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"approach_distance": NEW_VALUE}`.
 The possible values are: `far`, `medium`, `near`.
 
-### Motion_sensitivity (enum)
+### Motion sensitivity (enum)
 Different sensitivities means different static human body recognition rate and response speed of occupied.
 Value can be found in the published state on the `motion_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motion_sensitivity": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensitivity": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
-### Reset_nopresence_status (enum)
+### Reset nopresence status (enum)
 Reset the status of no presence.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
@@ -141,13 +141,13 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `region_*_enter`, `region_*_leave`, `region_*_occupied`, `region_*_unoccupied`.
 
-### Region_upsert (composite)
+### Region upsert (composite)
 Definition of a new region to be added (or replace existing one). Creating or modifying a region requires you to define which zones of a 7x4 detection grid should be active for that zone. Regions can overlap, meaning that a zone can be defined in more than one region (eg. "zone x = 1 & y = 1" can be added to region 1 & 2). "Zone x = 1 & y = 1" is the nearest zone on the right (from sensor's perspective, along the detection path)..
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"region_upsert": {"region_id": VALUE, "zones": VALUE}}`
 - `region_id` (numeric) min value is 1, max value is 10
 - `zones` (list): list of dictionaries in the format {"x": 1, "y": 1}, {"x": 2, "y": 1} 
 
-### Region_delete (composite)
+### Region delete (composite)
 Region definition to be deleted from the device..
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"region_delete": {"region_id": VALUE}}`
 - `region_id` (numeric) min value is 1, max value is 10

@@ -47,7 +47,7 @@ pageClass: device-page
 
 ## Exposes
 
-### Co2 (numeric)
+### CO2 (numeric)
 The measured CO2 (carbon dioxide) value.
 Value can be found in the published state on the `co2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -70,21 +70,21 @@ Raw measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Auto_brightness (binary)
+### Auto brightness (binary)
 Enable or Disable Auto Brightness of the Display.
 Value can be found in the published state on the `auto_brightness` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_brightness": NEW_VALUE}`.
-If value equals `ON` auto_brightness is ON, if `OFF` OFF.
+If value equals `ON` auto brightness is ON, if `OFF` OFF.
 
-### Long_chart_period (binary)
+### Long chart period (binary)
 The period of plotting the CO2 level(OFF - 1H | ON - 24H).
 Value can be found in the published state on the `long_chart_period` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"long_chart_period": NEW_VALUE}`.
-If value equals `ON` long_chart_period is ON, if `OFF` OFF.
+If value equals `ON` long chart period is ON, if `OFF` OFF.
 
-### Set_altitude (numeric)
+### Set altitude (numeric)
 Setting the altitude above sea level (for high accuracy of the CO2 sensor).
 Value can be found in the published state on the `set_altitude` property.
 It's not possible to read (`/get`) this value.
@@ -92,14 +92,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `3000`.
 The unit of this value is `meters`.
 
-### Local_time (enum)
+### Local time (enum)
 Set date and time.
 Value can be found in the published state on the `local_time` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_time": NEW_VALUE}`.
 The possible values are: `set`.
 
-### Temperature_offset (numeric)
+### Temperature offset (numeric)
 Adjust temperature.
 Value can be found in the published state on the `temperature_offset` property.
 It's not possible to read (`/get`) this value.
@@ -107,7 +107,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-30` and the maximum value is `60`.
 The unit of this value is `°C`.
 
-### Humidity_offset (numeric)
+### Humidity offset (numeric)
 Adjust humidity.
 Value can be found in the published state on the `humidity_offset` property.
 It's not possible to read (`/get`) this value.
@@ -115,21 +115,21 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `99`.
 The unit of this value is `%`.
 
-### Forced_recalibration (binary)
+### Forced recalibration (binary)
 Start FRC (Perform Forced Recalibration of the CO2 Sensor).
 Value can be found in the published state on the `forced_recalibration` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"forced_recalibration": NEW_VALUE}`.
-If value equals `ON` forced_recalibration is ON, if `OFF` OFF.
+If value equals `ON` forced recalibration is ON, if `OFF` OFF.
 
-### Factory_reset_co2 (binary)
+### Factory reset co2 (binary)
 Factory Reset CO2 sensor.
 Value can be found in the published state on the `factory_reset_co2` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset_co2": NEW_VALUE}`.
-If value equals `ON` factory_reset_co2 is ON, if `OFF` OFF.
+If value equals `ON` factory reset co2 is ON, if `OFF` OFF.
 
-### Manual_forced_recalibration (numeric)
+### Manual forced recalibration (numeric)
 Start Manual FRC (Perform Forced Recalibration of the CO2 Sensor).
 Value can be found in the published state on the `manual_forced_recalibration` property.
 It's not possible to read (`/get`) this value.

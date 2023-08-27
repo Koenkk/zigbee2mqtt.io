@@ -72,119 +72,119 @@ The current state of this switch is in the published state under the `state_l8` 
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l8": "ON"}`, `{"state_l8": "OFF"}` or `{"state_l8": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
 
-### Power_on_behavior (enum, l1 endpoint)
+### Power-on behavior (enum, l1 endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_l1` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l1": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
 
-### Power_on_behavior (enum, l2 endpoint)
+### Power-on behavior (enum, l2 endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_l2` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l2": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
 
-### Power_on_behavior (enum, l3 endpoint)
+### Power-on behavior (enum, l3 endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_l3` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l3": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
 
-### Power_on_behavior (enum, l4 endpoint)
+### Power-on behavior (enum, l4 endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_l4` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l4": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
 
-### Power_on_behavior (enum, l5 endpoint)
+### Power-on behavior (enum, l5 endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_l5` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l5": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
 
-### Power_on_behavior (enum, l6 endpoint)
+### Power-on behavior (enum, l6 endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_l6` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l6": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
 
-### Power_on_behavior (enum, l7 endpoint)
+### Power-on behavior (enum, l7 endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_l7` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l7": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
 
-### Power_on_behavior (enum, l8 endpoint)
+### Power-on behavior (enum, l8 endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_l8` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l8": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
 
-### Switch_mode (enum, l1 endpoint)
+### Switch mode (enum, l1 endpoint)
 Sets the mode of the switch to act as a switch or as a scene.
 Value can be found in the published state on the `switch_mode_l1` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l1": NEW_VALUE}`.
 The possible values are: `switch`, `scene`.
 
-### Switch_mode (enum, l2 endpoint)
+### Switch mode (enum, l2 endpoint)
 Sets the mode of the switch to act as a switch or as a scene.
 Value can be found in the published state on the `switch_mode_l2` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l2": NEW_VALUE}`.
 The possible values are: `switch`, `scene`.
 
-### Switch_mode (enum, l3 endpoint)
+### Switch mode (enum, l3 endpoint)
 Sets the mode of the switch to act as a switch or as a scene.
 Value can be found in the published state on the `switch_mode_l3` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l3": NEW_VALUE}`.
 The possible values are: `switch`, `scene`.
 
-### Switch_mode (enum, l4 endpoint)
+### Switch mode (enum, l4 endpoint)
 Sets the mode of the switch to act as a switch or as a scene.
 Value can be found in the published state on the `switch_mode_l4` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l4": NEW_VALUE}`.
 The possible values are: `switch`, `scene`.
 
-### Switch_mode (enum, l5 endpoint)
+### Switch mode (enum, l5 endpoint)
 Sets the mode of the switch to act as a switch or as a scene.
 Value can be found in the published state on the `switch_mode_l5` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l5": NEW_VALUE}`.
 The possible values are: `switch`, `scene`.
 
-### Switch_mode (enum, l6 endpoint)
+### Switch mode (enum, l6 endpoint)
 Sets the mode of the switch to act as a switch or as a scene.
 Value can be found in the published state on the `switch_mode_l6` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l6": NEW_VALUE}`.
 The possible values are: `switch`, `scene`.
 
-### Switch_mode (enum, l7 endpoint)
+### Switch mode (enum, l7 endpoint)
 Sets the mode of the switch to act as a switch or as a scene.
 Value can be found in the published state on the `switch_mode_l7` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l7": NEW_VALUE}`.
 The possible values are: `switch`, `scene`.
 
-### Switch_mode (enum, l8 endpoint)
+### Switch mode (enum, l8 endpoint)
 Sets the mode of the switch to act as a switch or as a scene.
 Value can be found in the published state on the `switch_mode_l8` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l8": NEW_VALUE}`.
 The possible values are: `switch`, `scene`.
 
-### Light_mode (enum, l1 endpoint)
+### Light mode (enum, l1 endpoint)
 'Sets the indicator mode of l1.
         Normal: Orange while off and white while on.
         On: Always white. Off: Always orange.
@@ -195,7 +195,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode_l1": NEW_VALUE}`.
 The possible values are: `normal`, `on`, `off`, `flash`.
 
-### Light_mode (enum, l2 endpoint)
+### Light mode (enum, l2 endpoint)
 'Sets the indicator mode of l1.
         Normal: Orange while off and white while on.
         On: Always white. Off: Always orange.
@@ -206,7 +206,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode_l2": NEW_VALUE}`.
 The possible values are: `normal`, `on`, `off`, `flash`.
 
-### Light_mode (enum, l3 endpoint)
+### Light mode (enum, l3 endpoint)
 'Sets the indicator mode of l1.
         Normal: Orange while off and white while on.
         On: Always white. Off: Always orange.
@@ -217,7 +217,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode_l3": NEW_VALUE}`.
 The possible values are: `normal`, `on`, `off`, `flash`.
 
-### Light_mode (enum, l4 endpoint)
+### Light mode (enum, l4 endpoint)
 'Sets the indicator mode of l1.
         Normal: Orange while off and white while on.
         On: Always white. Off: Always orange.
@@ -228,7 +228,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode_l4": NEW_VALUE}`.
 The possible values are: `normal`, `on`, `off`, `flash`.
 
-### Light_mode (enum, l5 endpoint)
+### Light mode (enum, l5 endpoint)
 'Sets the indicator mode of l1.
         Normal: Orange while off and white while on.
         On: Always white. Off: Always orange.
@@ -239,7 +239,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode_l5": NEW_VALUE}`.
 The possible values are: `normal`, `on`, `off`, `flash`.
 
-### Light_mode (enum, l6 endpoint)
+### Light mode (enum, l6 endpoint)
 'Sets the indicator mode of l1.
         Normal: Orange while off and white while on.
         On: Always white. Off: Always orange.
@@ -250,7 +250,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode_l6": NEW_VALUE}`.
 The possible values are: `normal`, `on`, `off`, `flash`.
 
-### Light_mode (enum, l7 endpoint)
+### Light mode (enum, l7 endpoint)
 'Sets the indicator mode of l1.
         Normal: Orange while off and white while on.
         On: Always white. Off: Always orange.
@@ -261,7 +261,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode_l7": NEW_VALUE}`.
 The possible values are: `normal`, `on`, `off`, `flash`.
 
-### Light_mode (enum, l8 endpoint)
+### Light mode (enum, l8 endpoint)
 'Sets the indicator mode of l1.
         Normal: Orange while off and white while on.
         On: Always white. Off: Always orange.
@@ -272,12 +272,12 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_mode_l8": NEW_VALUE}`.
 The possible values are: `normal`, `on`, `off`, `flash`.
 
-### Backlight_mode (binary)
+### Backlight mode (binary)
 Mode of the backlight.
 Value can be found in the published state on the `backlight_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
-If value equals `ON` backlight_mode is ON, if `OFF` OFF.
+If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

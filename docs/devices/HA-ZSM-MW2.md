@@ -42,7 +42,7 @@ simulated_brightness:
 
 ## Exposes
 
-### Action_group (numeric)
+### Action group (numeric)
 Group where the action was triggered on.
 Value can be found in the published state on the `action_group` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

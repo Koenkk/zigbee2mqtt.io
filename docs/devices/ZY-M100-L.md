@@ -32,7 +32,7 @@ pageClass: device-page
 
 ## Exposes
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -44,20 +44,20 @@ Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
-### Target_distance (numeric)
+### Target distance (numeric)
 Distance to target.
 Value can be found in the published state on the `target_distance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `m`.
 
-### Radar_sensitivity (numeric)
+### Radar sensitivity (numeric)
 sensitivity of the radar.
 Value can be found in the published state on the `radar_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `9`.
 
-### Minimum_range (numeric)
+### Minimum range (numeric)
 Minimum range.
 Value can be found in the published state on the `minimum_range` property.
 It's not possible to read (`/get`) this value.
@@ -65,7 +65,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `9.5`.
 The unit of this value is `m`.
 
-### Maximum_range (numeric)
+### Maximum range (numeric)
 Maximum range.
 Value can be found in the published state on the `maximum_range` property.
 It's not possible to read (`/get`) this value.
@@ -73,7 +73,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `9.5`.
 The unit of this value is `m`.
 
-### Detection_delay (numeric)
+### Detection delay (numeric)
 Detection delay.
 Value can be found in the published state on the `detection_delay` property.
 It's not possible to read (`/get`) this value.
@@ -81,7 +81,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `s`.
 
-### Fading_time (numeric)
+### Fading time (numeric)
 Fading time.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
@@ -89,7 +89,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `1500`.
 The unit of this value is `s`.
 
-### Self_test (enum)
+### Self test (enum)
 Self_test, possible resuts: checking, check_success, check_failure, others, comm_fault, radar_fault..
 Value can be found in the published state on the `self_test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

@@ -75,7 +75,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -103,19 +103,19 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
-### Angle_x (numeric)
+### Angle x (numeric)
 Value can be found in the published state on the `angle_x` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-90` and the maximum value is `90`.
 The unit of this value is `°`.
 
-### Angle_y (numeric)
+### Angle y (numeric)
 Value can be found in the published state on the `angle_y` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-90` and the maximum value is `90`.
 The unit of this value is `°`.
 
-### Angle_z (numeric)
+### Angle z (numeric)
 Value can be found in the published state on the `angle_z` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-90` and the maximum value is `90`.
@@ -127,7 +127,7 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

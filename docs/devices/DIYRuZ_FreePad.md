@@ -63,241 +63,241 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `*_single`, `*_double`, `*_triple`, `*_quadruple`, `*_release`, `*_hold`.
 
-### Switch_type (enum, button_1 endpoint)
+### Switch type (enum, button_1 endpoint)
 Value can be found in the published state on the `switch_type_button_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_1": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_1 endpoint)
+### Switch actions (enum, button_1 endpoint)
 Value can be found in the published state on the `switch_actions_button_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_1": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_2 endpoint)
+### Switch type (enum, button_2 endpoint)
 Value can be found in the published state on the `switch_type_button_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_2": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_2 endpoint)
+### Switch actions (enum, button_2 endpoint)
 Value can be found in the published state on the `switch_actions_button_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_2": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_3 endpoint)
+### Switch type (enum, button_3 endpoint)
 Value can be found in the published state on the `switch_type_button_3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_3": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_3": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_3 endpoint)
+### Switch actions (enum, button_3 endpoint)
 Value can be found in the published state on the `switch_actions_button_3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_3": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_3": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_4 endpoint)
+### Switch type (enum, button_4 endpoint)
 Value can be found in the published state on the `switch_type_button_4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_4": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_4": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_4 endpoint)
+### Switch actions (enum, button_4 endpoint)
 Value can be found in the published state on the `switch_actions_button_4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_4": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_4": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_5 endpoint)
+### Switch type (enum, button_5 endpoint)
 Value can be found in the published state on the `switch_type_button_5` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_5": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_5": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_5 endpoint)
+### Switch actions (enum, button_5 endpoint)
 Value can be found in the published state on the `switch_actions_button_5` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_5": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_5": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_6 endpoint)
+### Switch type (enum, button_6 endpoint)
 Value can be found in the published state on the `switch_type_button_6` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_6": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_6": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_6 endpoint)
+### Switch actions (enum, button_6 endpoint)
 Value can be found in the published state on the `switch_actions_button_6` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_6": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_6": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_7 endpoint)
+### Switch type (enum, button_7 endpoint)
 Value can be found in the published state on the `switch_type_button_7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_7": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_7": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_7 endpoint)
+### Switch actions (enum, button_7 endpoint)
 Value can be found in the published state on the `switch_actions_button_7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_7": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_7": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_8 endpoint)
+### Switch type (enum, button_8 endpoint)
 Value can be found in the published state on the `switch_type_button_8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_8": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_8": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_8 endpoint)
+### Switch actions (enum, button_8 endpoint)
 Value can be found in the published state on the `switch_actions_button_8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_8": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_8": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_9 endpoint)
+### Switch type (enum, button_9 endpoint)
 Value can be found in the published state on the `switch_type_button_9` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_9": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_9": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_9 endpoint)
+### Switch actions (enum, button_9 endpoint)
 Value can be found in the published state on the `switch_actions_button_9` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_9": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_9": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_10 endpoint)
+### Switch type (enum, button_10 endpoint)
 Value can be found in the published state on the `switch_type_button_10` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_10": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_10": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_10 endpoint)
+### Switch actions (enum, button_10 endpoint)
 Value can be found in the published state on the `switch_actions_button_10` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_10": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_10": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_11 endpoint)
+### Switch type (enum, button_11 endpoint)
 Value can be found in the published state on the `switch_type_button_11` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_11": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_11": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_11 endpoint)
+### Switch actions (enum, button_11 endpoint)
 Value can be found in the published state on the `switch_actions_button_11` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_11": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_11": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_12 endpoint)
+### Switch type (enum, button_12 endpoint)
 Value can be found in the published state on the `switch_type_button_12` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_12": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_12": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_12 endpoint)
+### Switch actions (enum, button_12 endpoint)
 Value can be found in the published state on the `switch_actions_button_12` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_12": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_12": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_13 endpoint)
+### Switch type (enum, button_13 endpoint)
 Value can be found in the published state on the `switch_type_button_13` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_13": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_13": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_13 endpoint)
+### Switch actions (enum, button_13 endpoint)
 Value can be found in the published state on the `switch_actions_button_13` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_13": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_13": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_14 endpoint)
+### Switch type (enum, button_14 endpoint)
 Value can be found in the published state on the `switch_type_button_14` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_14": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_14": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_14 endpoint)
+### Switch actions (enum, button_14 endpoint)
 Value can be found in the published state on the `switch_actions_button_14` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_14": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_14": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_15 endpoint)
+### Switch type (enum, button_15 endpoint)
 Value can be found in the published state on the `switch_type_button_15` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_15": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_15": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_15 endpoint)
+### Switch actions (enum, button_15 endpoint)
 Value can be found in the published state on the `switch_actions_button_15` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_15": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_15": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_16 endpoint)
+### Switch type (enum, button_16 endpoint)
 Value can be found in the published state on the `switch_type_button_16` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_16": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_16": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_16 endpoint)
+### Switch actions (enum, button_16 endpoint)
 Value can be found in the published state on the `switch_actions_button_16` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_16": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_16": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_17 endpoint)
+### Switch type (enum, button_17 endpoint)
 Value can be found in the published state on the `switch_type_button_17` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_17": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_17": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_17 endpoint)
+### Switch actions (enum, button_17 endpoint)
 Value can be found in the published state on the `switch_actions_button_17` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_17": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_17": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_18 endpoint)
+### Switch type (enum, button_18 endpoint)
 Value can be found in the published state on the `switch_type_button_18` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_18": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_18": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_18 endpoint)
+### Switch actions (enum, button_18 endpoint)
 Value can be found in the published state on the `switch_actions_button_18` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_18": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_18": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_19 endpoint)
+### Switch type (enum, button_19 endpoint)
 Value can be found in the published state on the `switch_type_button_19` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_19": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_19": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_19 endpoint)
+### Switch actions (enum, button_19 endpoint)
 Value can be found in the published state on the `switch_actions_button_19` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_19": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_19": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
 
-### Switch_type (enum, button_20 endpoint)
+### Switch type (enum, button_20 endpoint)
 Value can be found in the published state on the `switch_type_button_20` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_button_20": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_button_20": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`, `multifunction`.
 
-### Switch_actions (enum, button_20 endpoint)
+### Switch actions (enum, button_20 endpoint)
 Value can be found in the published state on the `switch_actions_button_20` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_20": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_20": NEW_VALUE}`.

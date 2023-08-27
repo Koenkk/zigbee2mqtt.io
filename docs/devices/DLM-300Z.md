@@ -53,7 +53,7 @@ To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` 
 To read the current state of this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 This lock exposes a lock state which can be found in the published state under the `lock_state` property. It's not possible to read (`/get`) or write (`/set`) this value. The possible values are: `not_fully_locked`, `locked`, `unlocked`.
 
-### Door_state (enum)
+### Door state (enum)
 Door status.
 Value can be found in the published state on the `door_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -65,18 +65,18 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `unknown`, `lock`, `unlock`, `lock_failure_invalid_pin_or_id`, `lock_failure_invalid_schedule`, `unlock_failure_invalid_pin_or_id`, `unlock_failure_invalid_schedule`, `one_touch_lock`, `key_lock`, `key_unlock`, `auto_lock`, `schedule_lock`, `schedule_unlock`, `manual_lock`, `manual_unlock`, `non_access_user_operational_event`.
 
-### Action_source_name (enum)
+### Action source name (enum)
 Source of the triggered action on the lock.
 Value can be found in the published state on the `action_source_name` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `keypad`, `rfid`, `manual`, `rf`.
 
-### Action_user (numeric)
+### Action user (numeric)
 ID of user that triggered the action on the lock.
 Value can be found in the published state on the `action_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Pin_code (composite)
+### Pin code (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "pin_code": VALUE}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pin_code": ""}`.
 - `user` (numeric): User ID can only number 1 

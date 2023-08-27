@@ -61,12 +61,12 @@ The current state of this switch is in the published state under the `state_righ
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
 
-### Standby_enabled (binary)
+### Standby enabled (binary)
 Enable standby.
 Value can be found in the published state on the `standby_enabled` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"standby_enabled": NEW_VALUE}`.
-If value equals `true` standby_enabled is ON, if `false` OFF.
+If value equals `true` standby enabled is ON, if `false` OFF.
 
 ### Theme (enum)
 Display theme.
@@ -75,14 +75,14 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"theme": NEW_VALUE}`.
 The possible values are: `classic`, `concise`.
 
-### Beep_volume (enum)
+### Beep volume (enum)
 Beep volume.
 Value can be found in the published state on the `beep_volume` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"beep_volume": NEW_VALUE}`.
 The possible values are: `mute`, `low`, `medium`, `high`.
 
-### Lcd_brightness (numeric)
+### Lcd brightness (numeric)
 LCD brightness (will not persist if auto-brightness is enabled).
 Value can be found in the published state on the `lcd_brightness` property.
 It's not possible to read (`/get`) this value.
@@ -97,14 +97,14 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"language": NEW_VALUE}`.
 The possible values are: `chinese`, `english`.
 
-### Screen_saver_style (enum)
+### Screen saver style (enum)
 Screen saver style.
 Value can be found in the published state on the `screen_saver_style` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"screen_saver_style": NEW_VALUE}`.
 The possible values are: `classic`, `analog clock`.
 
-### Standby_time (numeric)
+### Standby time (numeric)
 Display standby time.
 Value can be found in the published state on the `standby_time` property.
 It's not possible to read (`/get`) this value.
@@ -112,19 +112,19 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `65534`.
 The unit of this value is `s`.
 
-### Font_size (enum)
+### Font size (enum)
 Display font size.
 Value can be found in the published state on the `font_size` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"font_size": NEW_VALUE}`.
 The possible values are: `small`, `medium`, `large`.
 
-### Lcd_auto_brightness_enabled (binary)
+### Lcd auto brightness enabled (binary)
 Enable LCD auto brightness.
 Value can be found in the published state on the `lcd_auto_brightness_enabled` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_auto_brightness_enabled": NEW_VALUE}`.
-If value equals `true` lcd_auto_brightness_enabled is ON, if `false` OFF.
+If value equals `true` lcd auto brightness enabled is ON, if `false` OFF.
 
 ### Homepage (enum)
 Default display homepage.
@@ -133,14 +133,14 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"homepage": NEW_VALUE}`.
 The possible values are: `scene`, `feel`, `thermostat`, `switch`.
 
-### Screen_saver_enabled (binary)
+### Screen saver enabled (binary)
 Enable screen saver.
 Value can be found in the published state on the `screen_saver_enabled` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"screen_saver_enabled": NEW_VALUE}`.
-If value equals `true` screen_saver_enabled is ON, if `false` OFF.
+If value equals `true` screen saver enabled is ON, if `false` OFF.
 
-### Standby_lcd_brightness (numeric)
+### Standby lcd brightness (numeric)
 Standby LCD brightness.
 Value can be found in the published state on the `standby_lcd_brightness` property.
 It's not possible to read (`/get`) this value.
@@ -148,26 +148,26 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Available_switches (enum)
+### Available switches (enum)
 Control which switches are available in the switches screen (none disables switches screen).
 Value can be found in the published state on the `available_switches` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"available_switches": NEW_VALUE}`.
 The possible values are: `none`, `1`, `2`, `3`, `1 and 2`, `1 and 3`, `2 and 3`, `all`.
 
-### Switch_1_text_icon (composite)
+### Switch 1 text icon (composite)
 Switch 1 text and icon.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_1_text_icon": {"switch_1_icon": VALUE, "switch_1_text": VALUE}}`
 - `switch_1_icon` (enum): Icon allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
 - `switch_1_text` (text): Text 
 
-### Switch_2_text_icon (composite)
+### Switch 2 text icon (composite)
 Switch 2 text and icon.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_2_text_icon": {"switch_2_icon": VALUE, "switch_2_text": VALUE}}`
 - `switch_2_icon` (enum): Icon allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
 - `switch_2_text` (text): Text 
 
-### Switch_3_text_icon (composite)
+### Switch 3 text icon (composite)
 Switch 3 text and icon.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_3_text_icon": {"switch_3_icon": VALUE, "switch_3_text": VALUE}}`
 - `switch_3_icon` (enum): Icon allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`

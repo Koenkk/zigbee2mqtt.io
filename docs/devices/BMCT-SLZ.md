@@ -43,14 +43,14 @@ To pair this device you have to install the device via its installation code. Th
 
 ## Exposes
 
-### Device_type (enum)
+### Device type (enum)
 Device type: .
 Value can be found in the published state on the `device_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_type": NEW_VALUE}`.
 The possible values are: `light`, `shutter`.
 
-### Switch_type (enum)
+### Switch type (enum)
 Module controlled by a rocker switch or a button.
 Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
@@ -67,33 +67,33 @@ The current state of this switch is in the published state under the `state_righ
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
 
-### Power_on_behavior (enum, right endpoint)
+### Power-on behavior (enum, right endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_right` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_right": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_right": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
 
-### Power_on_behavior (enum, left endpoint)
+### Power-on behavior (enum, left endpoint)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior_left` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_left": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_left": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
 
-### Child_lock (binary, left endpoint)
+### Child lock (binary, left endpoint)
 Enable/Disable child lock.
 Value can be found in the published state on the `child_lock_left` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock_left": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock_left": NEW_VALUE}`.
-If value equals `ON` child_lock is ON, if `OFF` OFF.
+If value equals `ON` child lock is ON, if `OFF` OFF.
 
-### Child_lock (binary, right endpoint)
+### Child lock (binary, right endpoint)
 Enable/Disable child lock.
 Value can be found in the published state on the `child_lock_right` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock_right": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock_right": NEW_VALUE}`.
-If value equals `ON` child_lock is ON, if `OFF` OFF.
+If value equals `ON` child lock is ON, if `OFF` OFF.
 
 ### Cover 
 The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
@@ -101,20 +101,20 @@ To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set`
 To read the current state of this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
-### Motor_state (enum)
+### Motor state (enum)
 Shutter motor actual state .
 Value can be found in the published state on the `motor_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `idle`, `opening`, `closing`.
 
-### Child_lock (binary)
+### Child lock (binary)
 Enable/Disable child lock.
 Value can be found in the published state on the `child_lock` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
-If value equals `ON` child_lock is ON, if `OFF` OFF.
+If value equals `ON` child lock is ON, if `OFF` OFF.
 
-### Calibration_closing_time (numeric)
+### Calibration closing time (numeric)
 Calibration opening time.
 Value can be found in the published state on the `calibration_closing_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_closing_time": ""}`.
@@ -122,7 +122,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `90`.
 The unit of this value is `S`.
 
-### Calibration_opening_time (numeric)
+### Calibration opening time (numeric)
 Calibration closing time.
 Value can be found in the published state on the `calibration_opening_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_opening_time": ""}`.

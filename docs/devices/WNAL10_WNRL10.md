@@ -42,19 +42,19 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
-### Led_in_dark (binary)
+### Led in dark (binary)
 Enables the LED when the light is turned off, allowing to see the switch in the dark.
 Value can be found in the published state on the `led_in_dark` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_in_dark": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_in_dark": NEW_VALUE}`.
-If value equals `ON` led_in_dark is ON, if `OFF` OFF.
+If value equals `ON` led in dark is ON, if `OFF` OFF.
 
-### Led_if_on (binary)
+### Led if on (binary)
 Enables the LED when the light is turned on.
 Value can be found in the published state on the `led_if_on` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_if_on": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_if_on": NEW_VALUE}`.
-If value equals `ON` led_if_on is ON, if `OFF` OFF.
+If value equals `ON` led if on is ON, if `OFF` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

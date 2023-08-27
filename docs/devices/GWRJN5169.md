@@ -42,7 +42,7 @@ Open source firmware can be found here: [Github](https://github.com/igo-r/Lumi-R
 
 ## Exposes
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

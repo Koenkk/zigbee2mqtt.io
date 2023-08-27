@@ -58,13 +58,13 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 If value equals `true` smoke is ON, if `false` OFF.
 
-### Smoke_density (numeric)
+### Smoke density (numeric)
 Value of smoke concentration.
 Value can be found in the published state on the `smoke_density` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"smoke_density": ""}`.
 It's not possible to write (`/set`) this value.
 
-### Smoke_density_dbm (numeric)
+### Smoke density dbm (numeric)
 Value of smoke concentration in dB/m.
 Value can be found in the published state on the `smoke_density_dbm` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"smoke_density_dbm": ""}`.
@@ -91,39 +91,39 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"buzzer": NEW_VALUE}`.
 The possible values are: `mute`, `alarm`.
 
-### Buzzer_manual_alarm (binary)
+### Buzzer manual alarm (binary)
 Buzzer alarmed (manually).
 Value can be found in the published state on the `buzzer_manual_alarm` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"buzzer_manual_alarm": ""}`.
 It's not possible to write (`/set`) this value.
-If value equals `true` buzzer_manual_alarm is ON, if `false` OFF.
+If value equals `true` buzzer manual alarm is ON, if `false` OFF.
 
-### Buzzer_manual_mute (binary)
+### Buzzer manual mute (binary)
 Buzzer muted (manually).
 Value can be found in the published state on the `buzzer_manual_mute` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"buzzer_manual_mute": ""}`.
 It's not possible to write (`/set`) this value.
-If value equals `true` buzzer_manual_mute is ON, if `false` OFF.
+If value equals `true` buzzer manual mute is ON, if `false` OFF.
 
-### Heartbeat_indicator (binary)
+### Heartbeat indicator (binary)
 When this option is enabled then in the normal monitoring state, the green indicator light flashes every 60 seconds.
 Value can be found in the published state on the `heartbeat_indicator` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"heartbeat_indicator": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"heartbeat_indicator": NEW_VALUE}`.
-If value equals `true` heartbeat_indicator is ON, if `false` OFF.
+If value equals `true` heartbeat indicator is ON, if `false` OFF.
 
-### Linkage_alarm (binary)
+### Linkage alarm (binary)
 When this option is enabled and a smoke alarm has occurred, then "linkage_alarm_state"=true, and when the smoke alarm has ended or the buzzer has been manually muted, then "linkage_alarm_state"=false.
 Value can be found in the published state on the `linkage_alarm` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"linkage_alarm": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"linkage_alarm": NEW_VALUE}`.
-If value equals `true` linkage_alarm is ON, if `false` OFF.
+If value equals `true` linkage alarm is ON, if `false` OFF.
 
-### Linkage_alarm_state (binary)
+### Linkage alarm state (binary)
 "linkage_alarm" is triggered.
 Value can be found in the published state on the `linkage_alarm_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` linkage_alarm_state is ON, if `false` OFF.
+If value equals `true` linkage alarm state is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported..
@@ -138,7 +138,7 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

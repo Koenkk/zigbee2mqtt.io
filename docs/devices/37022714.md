@@ -52,12 +52,12 @@ The current state of this switch is in the published state under the `state_l4` 
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l4": "ON"}`, `{"state_l4": "OFF"}` or `{"state_l4": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
 
-### Backlight_mode (binary)
+### Backlight mode (binary)
 Mode of the backlight.
 Value can be found in the published state on the `backlight_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
-If value equals `ON` backlight_mode is ON, if `OFF` OFF.
+If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

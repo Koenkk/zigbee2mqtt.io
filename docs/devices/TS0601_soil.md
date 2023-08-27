@@ -45,13 +45,13 @@ Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Soil_moisture (numeric)
+### Soil moisture (numeric)
 Measured soil moisture value.
 Value can be found in the published state on the `soil_moisture` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Temperature_unit (enum)
+### Temperature unit (enum)
 Temperature unit.
 Value can be found in the published state on the `temperature_unit` property.
 It's not possible to read (`/get`) this value.
@@ -65,7 +65,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Battery_state (enum)
+### Battery state (enum)
 State of the battery.
 Value can be found in the published state on the `battery_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

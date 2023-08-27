@@ -51,12 +51,12 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Battery_cover (binary)
+### Battery cover (binary)
 Value can be found in the published state on the `battery_cover` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `OPEN` battery_cover is ON, if `CLOSE` OFF.
+If value equals `OPEN` battery cover is ON, if `CLOSE` OFF.
 
-### Detection_distance (enum)
+### Detection distance (enum)
 The sensor will be considered "off" within the set distance. Please press the device button before setting.
 Value can be found in the published state on the `detection_distance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_distance": ""}`.

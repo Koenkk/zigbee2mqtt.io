@@ -53,14 +53,14 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Sound_volume (enum)
+### Sound volume (enum)
 Sound volume of the lock.
 Value can be found in the published state on the `sound_volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sound_volume": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": NEW_VALUE}`.
 The possible values are: `silent_mode`, `low_volume`, `high_volume`.
 
-### Auto_relock_time (numeric)
+### Auto relock time (numeric)
 The number of seconds to wait after unlocking a lock before it automatically locks again. 0=disabled.
 Value can be found in the published state on the `auto_relock_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"auto_relock_time": ""}`.
@@ -68,18 +68,18 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `3600`.
 The unit of this value is `s`.
 
-### Action_user (numeric)
+### Action user (numeric)
 ID of user that triggered the action on the lock.
 Value can be found in the published state on the `action_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Action_source_name (enum)
+### Action source name (enum)
 Source of the triggered action on the lock.
 Value can be found in the published state on the `action_source_name` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `keypad`, `rfid`, `manual`, `rf`.
 
-### Pin_code (composite)
+### Pin code (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "user_type": VALUE, "user_enabled": VALUE, "pin_code": VALUE}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pin_code": ""}`.
 - `user` (numeric): User ID to set or clear the pincode for 

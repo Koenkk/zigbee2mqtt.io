@@ -72,7 +72,7 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Schneider_pilot_mode (enum)
+### Schneider pilot mode (enum)
 Controls piloting mode.
 Value can be found in the published state on the `schneider_pilot_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schneider_pilot_mode": ""}`.

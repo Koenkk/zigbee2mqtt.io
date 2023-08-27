@@ -51,7 +51,7 @@ To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set`
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
-### Reverse_direction (enum)
+### Reverse direction (enum)
 Reverse the motor direction.
 Value can be found in the published state on the `reverse_direction` property.
 It's not possible to read (`/get`) this value.
@@ -64,17 +64,17 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"border": NEW_VALUE}`.
 The possible values are: `up`, `down`, `up_delete`, `down_delete`, `remove_top_bottom`.
 
-### Click_control (enum)
+### Click control (enum)
 Single motor steps.
 Value can be found in the published state on the `click_control` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_control": NEW_VALUE}`.
 The possible values are: `up`, `down`.
 
-### Motor_fault (binary)
+### Motor fault (binary)
 Value can be found in the published state on the `motor_fault` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` motor_fault is ON, if `false` OFF.
+If value equals `true` motor fault is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

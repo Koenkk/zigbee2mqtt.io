@@ -45,7 +45,7 @@ Value can be found in the published state on the `smoke` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` smoke is ON, if `false` OFF.
 
-### Battery_level (enum)
+### Battery level (enum)
 Battery level state.
 Value can be found in the published state on the `battery_level` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -58,12 +58,12 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
 If value equals `true` alarm is ON, if `false` OFF.
 
-### Silence_siren (binary)
+### Silence siren (binary)
 Silence the siren.
 Value can be found in the published state on the `silence_siren` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence_siren": NEW_VALUE}`.
-If value equals `true` silence_siren is ON, if `false` OFF.
+If value equals `true` silence siren is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

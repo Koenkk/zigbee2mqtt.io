@@ -55,23 +55,23 @@ Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Humidity_alarm (binary)
+### Humidity alarm (binary)
 Value can be found in the published state on the `humidity_alarm` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_alarm": NEW_VALUE}`.
-If value equals `true` humidity_alarm is ON, if `false` OFF.
+If value equals `true` humidity alarm is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
-### Temperature_alarm (binary)
+### Temperature alarm (binary)
 Value can be found in the published state on the `temperature_alarm` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_alarm": NEW_VALUE}`.
-If value equals `true` temperature_alarm is ON, if `false` OFF.
+If value equals `true` temperature alarm is ON, if `false` OFF.
 
 ### Alarm (binary)
 Value can be found in the published state on the `alarm` property.
@@ -92,28 +92,28 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `1800`.
 The unit of this value is `s`.
 
-### Temperature_min (numeric)
+### Temperature min (numeric)
 Value can be found in the published state on the `temperature_min` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_min": NEW_VALUE}`.
 The minimal value is `-20` and the maximum value is `80`.
 The unit of this value is `°C`.
 
-### Temperature_max (numeric)
+### Temperature max (numeric)
 Value can be found in the published state on the `temperature_max` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_max": NEW_VALUE}`.
 The minimal value is `-20` and the maximum value is `80`.
 The unit of this value is `°C`.
 
-### Humidity_min (numeric)
+### Humidity min (numeric)
 Value can be found in the published state on the `humidity_min` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_min": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Humidity_max (numeric)
+### Humidity max (numeric)
 Value can be found in the published state on the `humidity_max` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_max": NEW_VALUE}`.
@@ -126,7 +126,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
-### Power_type (enum)
+### Power type (enum)
 Value can be found in the published state on the `power_type` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `battery_full`, `battery_high`, `battery_medium`, `battery_low`, `usb`.

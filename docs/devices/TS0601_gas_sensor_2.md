@@ -38,20 +38,20 @@ Value can be found in the published state on the `gas` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` gas is ON, if `false` OFF.
 
-### Gas_value (numeric)
+### Gas value (numeric)
 Measured gas concentration.
 Value can be found in the published state on the `gas_value` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `LEL`.
 
-### Self_test (binary)
+### Self test (binary)
 Indicates whether the device is being self-tested.
 Value can be found in the published state on the `self_test` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"self_test": NEW_VALUE}`.
-If value equals `true` self_test is ON, if `false` OFF.
+If value equals `true` self test is ON, if `false` OFF.
 
-### Self_test_result (enum)
+### Self test result (enum)
 Result of the self-test.
 Value can be found in the published state on the `self_test_result` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -64,14 +64,14 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence": NEW_VALUE}`.
 If value equals `true` silence is ON, if `false` OFF.
 
-### Alarm_ringtone (enum)
+### Alarm ringtone (enum)
 Ringtone of the alarm.
 Value can be found in the published state on the `alarm_ringtone` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_ringtone": NEW_VALUE}`.
 The possible values are: `1`, `2`, `3`, `4`, `5`.
 
-### Alarm_time (numeric)
+### Alarm time (numeric)
 Alarm time.
 Value can be found in the published state on the `alarm_time` property.
 It's not possible to read (`/get`) this value.

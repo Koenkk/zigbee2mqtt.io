@@ -39,7 +39,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -52,7 +52,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
-### Brightness_level (enum)
+### Brightness level (enum)
 Value can be found in the published state on the `brightness_level` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `LOW`, `MEDIUM`, `HIGH`.

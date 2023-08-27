@@ -59,25 +59,25 @@ Since the device is battery powered, it will not switch mode until it's awake. M
 
 ## Exposes
 
-### Switch_type_1 (enum, button_1 endpoint)
+### Switch type 1 (enum, button_1 endpoint)
 Value can be found in the published state on the `switch_type_1_button_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_1_button_1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_1_button_1": NEW_VALUE}`.
 The possible values are: `switch`, `multi-click`.
 
-### Switch_type_2 (enum, button_2 endpoint)
+### Switch type 2 (enum, button_2 endpoint)
 Value can be found in the published state on the `switch_type_2_button_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_2_button_2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_2_button_2": NEW_VALUE}`.
 The possible values are: `switch`, `multi-click`.
 
-### Switch_type_3 (enum, button_3 endpoint)
+### Switch type 3 (enum, button_3 endpoint)
 Value can be found in the published state on the `switch_type_3_button_3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_3_button_3": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_3_button_3": NEW_VALUE}`.
 The possible values are: `switch`, `multi-click`.
 
-### Switch_type_4 (enum, button_4 endpoint)
+### Switch type 4 (enum, button_4 endpoint)
 Value can be found in the published state on the `switch_type_4_button_4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_4_button_4": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_4_button_4": NEW_VALUE}`.

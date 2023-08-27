@@ -62,19 +62,19 @@ Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Pm25 (numeric)
+### PM25 (numeric)
 Measured PM2.5 (particulate matter) concentration.
 Value can be found in the published state on the `pm25` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `µg/m³`.
 
-### Hcho (numeric)
+### HCHO (numeric)
 Measured HCHO value.
 Value can be found in the published state on the `hcho` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mg/m³`.
 
-### Voc (numeric)
+### VOC (numeric)
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -85,13 +85,13 @@ Air quality index.
 Value can be found in the published state on the `aqi` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Pm10 (numeric)
+### PM10 (numeric)
 Measured PM10 (particulate matter) concentration.
 Value can be found in the published state on the `pm10` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `µg/m³`.
 
-### Battery_state (enum)
+### Battery state (enum)
 Value can be found in the published state on the `battery_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `not_charging`, `charging`, `charged`.

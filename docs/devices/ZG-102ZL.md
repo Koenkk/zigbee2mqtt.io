@@ -55,7 +55,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Illuminance_interval (numeric)
+### Illuminance interval (numeric)
 Brightness acquisition interval (refresh and update only while active).
 Value can be found in the published state on the `illuminance_interval` property.
 It's not possible to read (`/get`) this value.

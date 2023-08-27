@@ -58,13 +58,13 @@ Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Pm25 (numeric)
+### PM25 (numeric)
 Measured PM2.5 (particulate matter) concentration.
 Value can be found in the published state on the `pm25` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `µg/m³`.
 
-### Co2 (numeric)
+### CO2 (numeric)
 The measured CO2 (carbon dioxide) value.
 Value can be found in the published state on the `co2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

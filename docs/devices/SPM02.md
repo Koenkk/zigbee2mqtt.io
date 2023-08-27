@@ -39,55 +39,55 @@ pageClass: device-page
 
 ## Exposes
 
-### Voltage_X (numeric)
+### Voltage X (numeric)
 Measured electrical potential value (phase X).
 Value can be found in the published state on the `voltage_X` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Voltage_Y (numeric)
+### Voltage Y (numeric)
 Measured electrical potential value (phase Y).
 Value can be found in the published state on the `voltage_Y` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Voltage_Z (numeric)
+### Voltage Z (numeric)
 Measured electrical potential value (phase Z).
 Value can be found in the published state on the `voltage_Z` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Power_X (numeric)
+### Power X (numeric)
 Instantaneous measured power (phase X).
 Value can be found in the published state on the `power_X` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Power_Y (numeric)
+### Power Y (numeric)
 Instantaneous measured power (phase Y).
 Value can be found in the published state on the `power_Y` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Power_Z (numeric)
+### Power Z (numeric)
 Instantaneous measured power (phase Z).
 Value can be found in the published state on the `power_Z` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Current_X (numeric)
+### Current X (numeric)
 Instantaneous measured electrical current (phase X).
 Value can be found in the published state on the `current_X` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
 
-### Current_Y (numeric)
+### Current Y (numeric)
 Instantaneous measured electrical current (phase Y).
 Value can be found in the published state on the `current_Y` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
 
-### Current_Z (numeric)
+### Current Z (numeric)
 Instantaneous measured electrical current (phase Z).
 Value can be found in the published state on the `current_Z` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -99,7 +99,7 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Produced_energy (numeric)
+### Produced energy (numeric)
 Total reverse active energy.
 Value can be found in the published state on the `produced_energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

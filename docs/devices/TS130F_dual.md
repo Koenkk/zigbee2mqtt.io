@@ -59,13 +59,13 @@ Value can be found in the published state on the `moving_right` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `UP`, `STOP`, `DOWN`.
 
-### Calibration_time (numeric, left endpoint)
+### Calibration time (numeric, left endpoint)
 Calibration time.
 Value can be found in the published state on the `calibration_time_left` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `S`.
 
-### Calibration_time (numeric, right endpoint)
+### Calibration time (numeric, right endpoint)
 Calibration time.
 Value can be found in the published state on the `calibration_time_right` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -83,11 +83,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_left": NEW_VALUE}`.
 If value equals `ON` calibration is ON, if `OFF` OFF.
 
-### Motor_reversal (binary, left endpoint)
+### Motor reversal (binary, left endpoint)
 Value can be found in the published state on the `motor_reversal_left` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_reversal_left": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal_left": NEW_VALUE}`.
-If value equals `ON` motor_reversal is ON, if `OFF` OFF.
+If value equals `ON` motor reversal is ON, if `OFF` OFF.
 
 ### Cover (right endpoint)
 The current state of this cover is in the published state under the `state_right` property (value is `OPEN` or `CLOSE`).
@@ -101,11 +101,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_right": NEW_VALUE}`.
 If value equals `ON` calibration is ON, if `OFF` OFF.
 
-### Motor_reversal (binary, right endpoint)
+### Motor reversal (binary, right endpoint)
 Value can be found in the published state on the `motor_reversal_right` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_reversal_right": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal_right": NEW_VALUE}`.
-If value equals `ON` motor_reversal is ON, if `OFF` OFF.
+If value equals `ON` motor reversal is ON, if `OFF` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -51,11 +51,11 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Fault_alarm (binary)
+### Fault alarm (binary)
 Indicates whether a fault was detected.
 Value can be found in the published state on the `fault_alarm` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` fault_alarm is ON, if `false` OFF.
+If value equals `true` fault alarm is ON, if `false` OFF.
 
 ### Silence (binary)
 Silence the alarm.

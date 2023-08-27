@@ -82,20 +82,20 @@ It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Charging_status (binary)
+### Charging status (binary)
 The current charging status..
 Value can be found in the published state on the `charging_status` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"charging_status": ""}`.
 It's not possible to write (`/set`) this value.
-If value equals `true` charging_status is ON, if `false` OFF.
+If value equals `true` charging status is ON, if `false` OFF.
 
-### Motor_state (enum)
+### Motor state (enum)
 The current state of the motor..
 Value can be found in the published state on the `motor_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

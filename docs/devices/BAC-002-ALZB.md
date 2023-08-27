@@ -44,7 +44,7 @@ devices:
 
 ## Exposes
 
-### Lock 
+### Child lock (lock)
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
 It's not possible to read (`/get`) this value.
@@ -64,7 +64,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
 The possible values are: `IN`, `AL`, `OU`.
 
-### Programming_mode (composite)
+### Programming mode (composite)
 Schedule MODE ⏱ - In this mode, the device executes a preset week programming temperature time and temperature..
 - `week` (enum): Week format user for schedule allowed values: `5+2`, `6+1`, `7`
 - `workdays_schedule` (text) 

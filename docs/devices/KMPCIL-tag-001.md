@@ -68,10 +68,10 @@ Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
-### Power_state (binary)
+### Power state (binary)
 Value can be found in the published state on the `power_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` power_state is ON, if `false` OFF.
+If value equals `true` power state is ON, if `false` OFF.
 
 ### Occupancy (binary)
 Indicates whether the device detected occupancy.

@@ -53,31 +53,31 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Occupancy_in (binary)
+### Occupancy in (binary)
 Indicates whether "IN" Sensor of the device detected occupancy.
 Value can be found in the published state on the `occupancy_in` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` occupancy_in is ON, if `false` OFF.
+If value equals `true` occupancy in is ON, if `false` OFF.
 
-### Occupancy_out (binary)
+### Occupancy out (binary)
 Indicates whether "OUT" Sensor of the device detected occupancy.
 Value can be found in the published state on the `occupancy_out` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` occupancy_out is ON, if `false` OFF.
+If value equals `true` occupancy out is ON, if `false` OFF.
 
-### Occupancy_or (binary)
+### Occupancy or (binary)
 Indicates whether "IN or OUT" Sensor of the device detected occupancy.
 Value can be found in the published state on the `occupancy_or` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` occupancy_or is ON, if `false` OFF.
+If value equals `true` occupancy or is ON, if `false` OFF.
 
-### Occupancy_and (binary)
+### Occupancy and (binary)
 Indicates whether "IN and OUT" Sensor of the device detected occupancy.
 Value can be found in the published state on the `occupancy_and` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` occupancy_and is ON, if `false` OFF.
+If value equals `true` occupancy and is ON, if `false` OFF.
 
-### Occupancy_timeout (numeric)
+### Occupancy timeout (numeric)
 Value can be found in the published state on the `occupancy_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.

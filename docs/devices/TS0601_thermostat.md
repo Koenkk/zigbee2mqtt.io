@@ -130,29 +130,29 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Exposes
 
-### Lock 
+### Child lock (lock)
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
 It's not possible to read (`/get`) this value.
 
-### Switch 
+### Window detection (switch)
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
 
-### Window_open (binary)
+### Window open (binary)
 Window open?.
 Value can be found in the published state on the `window_open` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` window_open is ON, if `false` OFF.
+If value equals `true` window open is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
-### Switch 
+### Valve detection (switch)
 The current state of this switch is in the published state under the `valve_detection` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_detection": "ON"}`, `{"valve_detection": "OFF"}` or `{"valve_detection": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
@@ -172,24 +172,24 @@ This climate device supports the following features: `current_heating_setpoint`,
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 - `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-9` and the maximum value is `9` with a step size of `0.5`.
 
-### Switch 
+### Auto lock (switch)
 The current state of this switch is in the published state under the `auto_lock` property (value is `AUTO` or `MANUAL`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_lock": "AUTO"}`, `{"auto_lock": "MANUAL"}` or `{"auto_lock": "undefined"}`.
 It's not possible to read (`/get`) this value.
 
-### Switch 
+### Away mode (switch)
 The current state of this switch is in the published state under the `away_mode` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_mode": "ON"}`, `{"away_mode": "OFF"}` or `{"away_mode": "undefined"}`.
 It's not possible to read (`/get`) this value.
 
-### Away_preset_days (numeric)
+### Away preset days (numeric)
 Away preset days.
 Value can be found in the published state on the `away_preset_days` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_preset_days": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
-### Boost_time (numeric)
+### Boost time (numeric)
 Boost time.
 Value can be found in the published state on the `boost_time` property.
 It's not possible to read (`/get`) this value.
@@ -197,7 +197,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `900`.
 The unit of this value is `s`.
 
-### Comfort_temperature (numeric)
+### Comfort temperature (numeric)
 Comfort temperature.
 Value can be found in the published state on the `comfort_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -205,7 +205,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `30`.
 The unit of this value is `°C`.
 
-### Eco_temperature (numeric)
+### Eco temperature (numeric)
 Eco temperature.
 Value can be found in the published state on the `eco_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -220,7 +220,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"force": NEW_VALUE}`.
 The possible values are: `normal`, `open`, `close`.
 
-### Max_temperature (numeric)
+### Max temperature (numeric)
 Maximum temperature.
 Value can be found in the published state on the `max_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -228,7 +228,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `16` and the maximum value is `70`.
 The unit of this value is `°C`.
 
-### Min_temperature (numeric)
+### Min temperature (numeric)
 Minimum temperature.
 Value can be found in the published state on the `min_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -236,7 +236,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `15`.
 The unit of this value is `°C`.
 
-### Away_preset_temperature (numeric)
+### Away preset temperature (numeric)
 Away preset temperature.
 Value can be found in the published state on the `away_preset_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -244,7 +244,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-10` and the maximum value is `35`.
 The unit of this value is `°C`.
 
-### Programming_mode (composite)
+### Programming mode (composite)
 Schedule MODE ⏱ - In this mode, the device executes a preset week programming temperature time and temperature..
 - `week` (enum): Week format user for schedule allowed values: `5+2`, `6+1`, `7`
 - `workdays_schedule` (text) 

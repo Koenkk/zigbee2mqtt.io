@@ -34,11 +34,11 @@ To pair this device you have to install the device via its installation code. Th
 
 ## Exposes
 
-### Water_leak (binary)
+### Water leak (binary)
 Indicates whether the device detected a water leak.
 Value can be found in the published state on the `water_leak` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` water_leak is ON, if `false` OFF.
+If value equals `true` water leak is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported..
@@ -53,12 +53,12 @@ Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
-### Alarm_on_motion (binary)
+### Alarm on motion (binary)
 Enable/Disable sound alarm on motion.
 Value can be found in the published state on the `alarm_on_motion` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_on_motion": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_on_motion": NEW_VALUE}`.
-If value equals `ON` alarm_on_motion is ON, if `OFF` OFF.
+If value equals `ON` alarm on motion is ON, if `OFF` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

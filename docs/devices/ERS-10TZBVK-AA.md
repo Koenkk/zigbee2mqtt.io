@@ -85,17 +85,17 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `toggle`, `brightness_step_up`, `brightness_step_down`, `color_temperature_step_up`, `color_temperature_step_down`, `saturation_move`, `hue_move`, `hue_stop`, `single`, `double`, `hold`, `rotate_left`, `rotate_right`.
 
-### Action_step_size (numeric)
+### Action step size (numeric)
 Value can be found in the published state on the `action_step_size` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 
-### Action_transition_time (numeric)
+### Action transition time (numeric)
 Value can be found in the published state on the `action_transition_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `s`.
 
-### Action_rate (numeric)
+### Action rate (numeric)
 Value can be found in the published state on the `action_rate` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
@@ -107,7 +107,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Operation_mode (enum)
+### Operation mode (enum)
 Operation mode: "command" - for group control, "event" - for clicks.
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.

@@ -65,14 +65,14 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
-### Power_outage_memory (enum)
+### Power outage memory (enum)
 Recover state after power outage.
 Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 The possible values are: `on`, `off`, `restore`.
 
-### Indicator_mode (enum)
+### Indicator mode (enum)
 LED indicator mode.
 Value can be found in the published state on the `indicator_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
@@ -109,7 +109,7 @@ Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Temperature_threshold (numeric)
+### Temperature threshold (numeric)
 High temperature threshold.
 Value can be found in the published state on the `temperature_threshold` property.
 It's not possible to read (`/get`) this value.
@@ -117,14 +117,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `40` and the maximum value is `100`.
 The unit of this value is `*C`.
 
-### Temperature_breaker (binary)
+### Temperature breaker (binary)
 High temperature breaker.
 Value can be found in the published state on the `temperature_breaker` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_breaker": NEW_VALUE}`.
-If value equals `ON` temperature_breaker is ON, if `OFF` OFF.
+If value equals `ON` temperature breaker is ON, if `OFF` OFF.
 
-### Power_threshold (numeric)
+### Power threshold (numeric)
 High power threshold.
 Value can be found in the published state on the `power_threshold` property.
 It's not possible to read (`/get`) this value.
@@ -132,14 +132,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `26`.
 The unit of this value is `kW`.
 
-### Power_breaker (binary)
+### Power breaker (binary)
 High power breaker.
 Value can be found in the published state on the `power_breaker` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_breaker": NEW_VALUE}`.
-If value equals `ON` power_breaker is ON, if `OFF` OFF.
+If value equals `ON` power breaker is ON, if `OFF` OFF.
 
-### Over_current_threshold (numeric)
+### Over current threshold (numeric)
 Over-current threshold.
 Value can be found in the published state on the `over_current_threshold` property.
 It's not possible to read (`/get`) this value.
@@ -147,14 +147,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `64`.
 The unit of this value is `A`.
 
-### Over_current_breaker (binary)
+### Over current breaker (binary)
 Over-current breaker.
 Value can be found in the published state on the `over_current_breaker` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_current_breaker": NEW_VALUE}`.
-If value equals `ON` over_current_breaker is ON, if `OFF` OFF.
+If value equals `ON` over current breaker is ON, if `OFF` OFF.
 
-### Over_voltage_threshold (numeric)
+### Over voltage threshold (numeric)
 Over-voltage threshold.
 Value can be found in the published state on the `over_voltage_threshold` property.
 It's not possible to read (`/get`) this value.
@@ -162,14 +162,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `220` and the maximum value is `260`.
 The unit of this value is `V`.
 
-### Over_voltage_breaker (binary)
+### Over voltage breaker (binary)
 Over-voltage breaker.
 Value can be found in the published state on the `over_voltage_breaker` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_breaker": NEW_VALUE}`.
-If value equals `ON` over_voltage_breaker is ON, if `OFF` OFF.
+If value equals `ON` over voltage breaker is ON, if `OFF` OFF.
 
-### Under_voltage_threshold (numeric)
+### Under voltage threshold (numeric)
 Under-voltage threshold.
 Value can be found in the published state on the `under_voltage_threshold` property.
 It's not possible to read (`/get`) this value.
@@ -177,12 +177,12 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `76` and the maximum value is `240`.
 The unit of this value is `V`.
 
-### Under_voltage_breaker (binary)
+### Under voltage breaker (binary)
 Under-voltage breaker.
 Value can be found in the published state on the `under_voltage_breaker` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"under_voltage_breaker": NEW_VALUE}`.
-If value equals `ON` under_voltage_breaker is ON, if `OFF` OFF.
+If value equals `ON` under voltage breaker is ON, if `OFF` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

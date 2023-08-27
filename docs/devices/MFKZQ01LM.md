@@ -52,36 +52,36 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Action_angle (numeric)
+### Action angle (numeric)
 Value can be found in the published state on the `action_angle` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-360` and the maximum value is `360`.
 The unit of this value is `°`.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Action_from_side (numeric)
+### Action from side (numeric)
 Side of the cube.
 Value can be found in the published state on the `action_from_side` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `6`.
 
-### Action_side (numeric)
+### Action side (numeric)
 Side of the cube.
 Value can be found in the published state on the `action_side` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `6`.
 
-### Action_to_side (numeric)
+### Action to side (numeric)
 Side of the cube.
 Value can be found in the published state on the `action_to_side` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

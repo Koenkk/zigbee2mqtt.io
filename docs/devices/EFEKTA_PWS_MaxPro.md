@@ -51,7 +51,7 @@ pageClass: device-page
 
 ## Exposes
 
-### Soil_moisture (numeric)
+### Soil moisture (numeric)
 Measured soil moisture value.
 Value can be found in the published state on the `soil_moisture` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

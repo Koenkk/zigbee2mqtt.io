@@ -53,7 +53,7 @@ It requires a Z-Stack controller (Firmware version > TBD). It is currently not w
 
 ## Exposes
 
-### Keypad_lockout (enum)
+### Keypad lockout (enum)
 Enables/disables physical input on the device.
 Value can be found in the published state on the `keypad_lockout` property.
 It's not possible to read (`/get`) this value.

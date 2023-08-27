@@ -45,48 +45,48 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Sound_volume (enum)
+### Sound volume (enum)
 Sound volume of the lock.
 Value can be found in the published state on the `sound_volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sound_volume": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": NEW_VALUE}`.
 The possible values are: `silent_mode`, `low_volume`, `high_volume`.
 
-### Last_unlock_source (enum)
+### Last unlock source (enum)
 Last unlock source.
 Value can be found in the published state on the `last_unlock_source` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `zigbee`, `keypad`, `fingerprintsensor`, `rfid`, `self`, `unknown`.
 
-### Last_unlock_user (text)
+### Last unlock user (text)
 Last unlock user.
 Value can be found in the published state on the `last_unlock_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Last_lock_source (enum)
+### Last lock source (enum)
 Last lock source.
 Value can be found in the published state on the `last_lock_source` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `zigbee`, `keypad`, `fingerprintsensor`, `rfid`, `self`, `unknown`.
 
-### Last_lock_user (text)
+### Last lock user (text)
 Last lock user.
 Value can be found in the published state on the `last_lock_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Last_used_pin_code (text)
+### Last used pin code (text)
 Last used pin code.
 Value can be found in the published state on the `last_used_pin_code` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Auto_relock (binary)
+### Auto relock (binary)
 Auto relock after 7 seconds..
 Value can be found in the published state on the `auto_relock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_relock": NEW_VALUE}`.
-If value equals `true` auto_relock is ON, if `false` OFF.
+If value equals `true` auto relock is ON, if `false` OFF.
 
-### Pin_code (composite)
+### Pin code (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "user_type": VALUE, "user_enabled": VALUE, "pin_code": VALUE}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pin_code": ""}`.
 - `user` (numeric): User ID to set or clear the pincode for 

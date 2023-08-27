@@ -59,7 +59,7 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single_left`, `single_right`, `single_both`, `double_left`, `double_right`, `hold_left`, `hold_right`.
 
-### Click_mode (enum)
+### Click mode (enum)
 Click mode, fast: only supports single click which will be send immediately after clicking, multi: supports more events like double and hold.
 Value can be found in the published state on the `click_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"click_mode": ""}`.

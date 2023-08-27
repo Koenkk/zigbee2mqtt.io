@@ -50,7 +50,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Exposes
 
-### Voc (numeric)
+### VOC (numeric)
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -75,13 +75,13 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
-### Air_quality (enum)
+### Air quality (enum)
 Measured air quality.
 Value can be found in the published state on the `air_quality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

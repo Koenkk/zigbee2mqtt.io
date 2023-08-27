@@ -54,7 +54,7 @@ Instructions on how to build this device can be found [here](https://github.com/
 
 ## Exposes
 
-### Soil_moisture (numeric)
+### Soil moisture (numeric)
 Measured soil moisture value.
 Value can be found in the published state on the `soil_moisture` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -73,7 +73,7 @@ Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Report_delay (numeric)
+### Report delay (numeric)
 Adjust Report Delay. Setting the time in minutes, by default 15 minutes.
 Value can be found in the published state on the `report_delay` property.
 It's not possible to read (`/get`) this value.

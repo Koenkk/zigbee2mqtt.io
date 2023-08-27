@@ -48,7 +48,7 @@ Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
-### Large_motion_detection_sensitivity (numeric)
+### Large motion detection sensitivity (numeric)
 Motion detection sensitivity.
 Value can be found in the published state on the `large_motion_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
@@ -56,7 +56,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `x`.
 
-### Large_motion_detection_distance (numeric)
+### Large motion detection distance (numeric)
 Motion detection distance.
 Value can be found in the published state on the `large_motion_detection_distance` property.
 It's not possible to read (`/get`) this value.
@@ -64,13 +64,13 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `m`.
 
-### Motion_state (enum)
+### Motion state (enum)
 State of the motion.
 Value can be found in the published state on the `motion_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `none`, `small`, `medium`, `large`.
 
-### Fading_time (numeric)
+### Fading time (numeric)
 For how much time presence should stay true after detecting it.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
@@ -78,7 +78,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `28800`.
 The unit of this value is `s`.
 
-### Medium_motion_detection_distance (numeric)
+### Medium motion detection distance (numeric)
 Medium motion detection distance.
 Value can be found in the published state on the `medium_motion_detection_distance` property.
 It's not possible to read (`/get`) this value.
@@ -86,7 +86,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `6`.
 The unit of this value is `m`.
 
-### Medium_motion_detection_sensitivity (numeric)
+### Medium motion detection sensitivity (numeric)
 Medium motion detection sensitivity.
 Value can be found in the published state on the `medium_motion_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.
@@ -101,7 +101,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
 If value equals `ON` indicator is ON, if `OFF` OFF.
 
-### Small_detection_distance (numeric)
+### Small detection distance (numeric)
 Small detection distance.
 Value can be found in the published state on the `small_detection_distance` property.
 It's not possible to read (`/get`) this value.
@@ -109,7 +109,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `6`.
 The unit of this value is `m`.
 
-### Small_detection_sensitivity (numeric)
+### Small detection sensitivity (numeric)
 Small detection sensitivity.
 Value can be found in the published state on the `small_detection_sensitivity` property.
 It's not possible to read (`/get`) this value.

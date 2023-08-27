@@ -38,20 +38,20 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
-### Led_enable (binary)
+### Led enable (binary)
 Enabled LED.
 Value can be found in the published state on the `led_enable` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_enable": NEW_VALUE}`.
-If value equals `true` led_enable is ON, if `false` OFF.
+If value equals `true` led enable is ON, if `false` OFF.
 
-### Keep_time (enum)
+### Keep time (enum)
 PIR keep time 0:5s|1:30s|2:60s|3:180s|4:300s|5:600s|6:1200s|7:1800s.
 Value can be found in the published state on the `keep_time` property.
 It's not possible to read (`/get`) this value.
@@ -64,7 +64,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
 The possible values are: `25`, `50`, `75`, `100`.
 
-### Illuminance_calibration (numeric)
+### Illuminance calibration (numeric)
 Illuminance calibration.
 Value can be found in the published state on the `illuminance_calibration` property.
 It's not possible to read (`/get`) this value.

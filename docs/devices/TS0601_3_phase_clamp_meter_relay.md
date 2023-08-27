@@ -61,61 +61,61 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Produced_energy (numeric)
+### Produced energy (numeric)
 Sum of produced energy.
 Value can be found in the published state on the `produced_energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Voltage_a (numeric)
+### Voltage a (numeric)
 Measured electrical potential value (phase A).
 Value can be found in the published state on the `voltage_a` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Voltage_b (numeric)
+### Voltage b (numeric)
 Measured electrical potential value (phase B).
 Value can be found in the published state on the `voltage_b` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Voltage_c (numeric)
+### Voltage c (numeric)
 Measured electrical potential value (phase C).
 Value can be found in the published state on the `voltage_c` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Power_a (numeric)
+### Power a (numeric)
 Instantaneous measured power (phase A).
 Value can be found in the published state on the `power_a` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Power_b (numeric)
+### Power b (numeric)
 Instantaneous measured power (phase B).
 Value can be found in the published state on the `power_b` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Power_c (numeric)
+### Power c (numeric)
 Instantaneous measured power (phase C).
 Value can be found in the published state on the `power_c` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Current_a (numeric)
+### Current a (numeric)
 Instantaneous measured electrical current (phase A).
 Value can be found in the published state on the `current_a` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
 
-### Current_b (numeric)
+### Current b (numeric)
 Instantaneous measured electrical current (phase B).
 Value can be found in the published state on the `current_b` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
 
-### Current_c (numeric)
+### Current c (numeric)
 Instantaneous measured electrical current (phase C).
 Value can be found in the published state on the `current_c` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

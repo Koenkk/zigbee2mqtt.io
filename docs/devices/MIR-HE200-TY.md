@@ -35,7 +35,7 @@ Factory resetting by pushing the "Reset-Button" longer than 5 seconds or by usin
 
 ## Exposes
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -53,46 +53,46 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Motion_speed (numeric)
+### Motion speed (numeric)
 Speed of movement.
 Value can be found in the published state on the `motion_speed` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Motion_direction (enum)
+### Motion direction (enum)
 direction of movement from the point of view of the radar.
 Value can be found in the published state on the `motion_direction` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `standing_still`, `moving_forward`, `moving_backward`.
 
-### Radar_sensitivity (numeric)
+### Radar sensitivity (numeric)
 Sensitivity of the radar.
 Value can be found in the published state on the `radar_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 
-### Radar_scene (enum)
+### Radar scene (enum)
 Presets for sensitivity for presence and movement.
 Value can be found in the published state on the `radar_scene` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_scene": NEW_VALUE}`.
 The possible values are: `default`, `area`, `toilet`, `bedroom`, `parlour`, `office`, `hotel`.
 
-### Tumble_switch (enum)
+### Tumble switch (enum)
 Tumble status switch.
 Value can be found in the published state on the `tumble_switch` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tumble_switch": NEW_VALUE}`.
 The possible values are: `ON`, `OFF`.
 
-### Fall_sensitivity (numeric)
+### Fall sensitivity (numeric)
 Fall sensitivity of the radar.
 Value can be found in the published state on the `fall_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fall_sensitivity": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `10`.
 
-### Tumble_alarm_time (numeric)
+### Tumble alarm time (numeric)
 Tumble alarm time.
 Value can be found in the published state on the `tumble_alarm_time` property.
 It's not possible to read (`/get`) this value.
@@ -100,13 +100,13 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `5`.
 The unit of this value is `min`.
 
-### Fall_down_status (enum)
+### Fall down status (enum)
 Fall down status.
 Value can be found in the published state on the `fall_down_status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `none`, `maybe_fall`, `fall`.
 
-### Static_dwell_alarm (text)
+### Static dwell alarm (text)
 Static dwell alarm.
 Value can be found in the published state on the `static_dwell_alarm` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

@@ -51,17 +51,17 @@ Value can be found in the published state on the `test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
 
-### Smoke_concentration (numeric)
+### Smoke concentration (numeric)
 Parts per million of smoke detected.
 Value can be found in the published state on the `smoke_concentration` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ppm`.
 
-### Device_fault (binary)
+### Device fault (binary)
 Indicates a fault with the device.
 Value can be found in the published state on the `device_fault` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` device_fault is ON, if `false` OFF.
+If value equals `true` device fault is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

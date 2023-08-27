@@ -19,6 +19,10 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+function uncapitalizeFirstLetter(string) {
+  return string.charAt(0).toLowerCase() + string.slice(1);
+}
+
 function compositeDocs(composite) {
   const value = `{${composite.features.map((e) => `"${e.property}": VALUE`).join(', ')}}`;
 
@@ -49,9 +53,9 @@ function compositeDocs(composite) {
 function getExposeDocs(expose, definition) {
   const lines = [];
   const title = [];
-  if (expose.name) title.push(expose.type);
+  if (expose.label) title.push(expose.type);
   if (expose.endpoint) title.push(`${expose.endpoint} endpoint`);
-  lines.push(`### ${capitalizeFirstLetter(expose.name ? expose.name : expose.type)} ${title.length > 0 ? `(${title.join(', ')})` : ''}`);
+  lines.push(`### ${capitalizeFirstLetter(expose.label ? expose.label : expose.type)} ${title.length > 0 ? `(${title.join(', ')})` : ''}`);
 
   if (['numeric', 'binary', 'text', 'enum'].includes(expose.type)) {
     if (expose.description) {
@@ -89,13 +93,13 @@ function getExposeDocs(expose, definition) {
       }
 
       if (expose.presets) {
-        lines.push(`Besides the numeric values the following values are accepected: ${expose.presets.map((p) => `\`${p.name}\``).join(', ')}.`)
+        lines.push(`Besides the numeric values the following values are accepted: ${expose.presets.map((p) => `\`${p.name}\``).join(', ')}.`)
       }
     }
 
     if (expose.type === 'binary') {
       if (expose.hasOwnProperty('value_on') && expose.hasOwnProperty('value_off')) {
-        lines.push(`If value equals \`${expose.value_on}\` ${expose.name} is ON, if \`${expose.value_off}\` OFF.`);
+        lines.push(`If value equals \`${expose.value_on}\` ${uncapitalizeFirstLetter(expose.label)} is ON, if \`${expose.value_off}\` OFF.`);
       }
     }
 
@@ -128,7 +132,7 @@ function getExposeDocs(expose, definition) {
 
     if (expose.type === 'cover') {
       for (const e of expose.features.filter((e) => e.name === 'position' || e.name === 'tilt')) {
-        lines.push(`To change the ${e.name} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${e.property}": VALUE}\` where \`VALUE\` is a number between \`${e.value_min}\` and \`${e.value_max}\`.`);
+        lines.push(`To change the ${uncapitalizeFirstLetter(e.label)} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${e.property}": VALUE}\` where \`VALUE\` is a number between \`${e.value_min}\` and \`${e.value_max}\`.`);
       }
     }
 

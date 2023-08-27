@@ -38,33 +38,33 @@ Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
-### Target_distance (numeric)
+### Target distance (numeric)
 Distance to target.
 Value can be found in the published state on the `target_distance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `m`.
 
-### Radar_sensitivity (numeric)
+### Radar sensitivity (numeric)
 Sensitivity of the radar.
 Value can be found in the published state on the `radar_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `9`.
 
-### Entry_sensitivity (numeric)
+### Entry sensitivity (numeric)
 Entry sensitivity.
 Value can be found in the published state on the `entry_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"entry_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `9`.
 
-### Illuminance_threshold (numeric)
+### Illuminance threshold (numeric)
 Illumination threshold for switching on.
 Value can be found in the published state on the `illuminance_threshold` property.
 It's not possible to read (`/get`) this value.
@@ -72,7 +72,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `420`.
 The unit of this value is `lx`.
 
-### Detection_range (numeric)
+### Detection range (numeric)
 Detection range.
 Value can be found in the published state on the `detection_range` property.
 It's not possible to read (`/get`) this value.
@@ -80,7 +80,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `8`.
 The unit of this value is `m`.
 
-### Shield_range (numeric)
+### Shield range (numeric)
 Shield range of the radar.
 Value can be found in the published state on the `shield_range` property.
 It's not possible to read (`/get`) this value.
@@ -88,7 +88,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `8`.
 The unit of this value is `m`.
 
-### Entry_distance_indentation (numeric)
+### Entry distance indentation (numeric)
 Entry distance indentation.
 Value can be found in the published state on the `entry_distance_indentation` property.
 It's not possible to read (`/get`) this value.
@@ -96,7 +96,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `8`.
 The unit of this value is `m`.
 
-### Entry_filter_time (numeric)
+### Entry filter time (numeric)
 Entry filter time.
 Value can be found in the published state on the `entry_filter_time` property.
 It's not possible to read (`/get`) this value.
@@ -104,7 +104,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `s`.
 
-### Departure_delay (numeric)
+### Departure delay (numeric)
 Turn off delay.
 Value can be found in the published state on the `departure_delay` property.
 It's not possible to read (`/get`) this value.
@@ -112,7 +112,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `s`.
 
-### Block_time (numeric)
+### Block time (numeric)
 Block time.
 Value can be found in the published state on the `block_time` property.
 It's not possible to read (`/get`) this value.
@@ -120,21 +120,21 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `s`.
 
-### Breaker_status (binary)
+### Breaker status (binary)
 Breaker status changes with breaker_mode->standard.
 Value can be found in the published state on the `breaker_status` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breaker_status": NEW_VALUE}`.
-If value equals `ON` breaker_status is ON, if `OFF` OFF.
+If value equals `ON` breaker status is ON, if `OFF` OFF.
 
-### Breaker_mode (enum)
+### Breaker mode (enum)
 Status breaker mode: standard is external, local is auto.
 Value can be found in the published state on the `breaker_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breaker_mode": NEW_VALUE}`.
 The possible values are: `standard`, `local`.
 
-### Status_indication (enum)
+### Status indication (enum)
 Led backlight when triggered.
 Value can be found in the published state on the `status_indication` property.
 It's not possible to read (`/get`) this value.

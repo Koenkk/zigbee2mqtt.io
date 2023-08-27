@@ -40,12 +40,12 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Lock 
+### Child lock (lock)
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
 It's not possible to read (`/get`) this value.
 
-### Max_temperature (numeric)
+### Max temperature (numeric)
 Maximum temperature.
 Value can be found in the published state on the `max_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -53,7 +53,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `15` and the maximum value is `35`.
 The unit of this value is `°C`.
 
-### Min_temperature (numeric)
+### Min temperature (numeric)
 Minimum temperature.
 Value can be found in the published state on the `min_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -67,7 +67,7 @@ Value can be found in the published state on the `position` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Switch 
+### Window detection (switch)
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
@@ -78,11 +78,11 @@ Value can be found in the published state on the `window` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `CLOSED` window is ON, if `OPEN` OFF.
 
-### Alarm_switch (binary)
+### Alarm switch (binary)
 Thermostat in error state.
 Value can be found in the published state on the `alarm_switch` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `ON` alarm_switch is ON, if `OFF` OFF.
+If value equals `ON` alarm switch is ON, if `OFF` OFF.
 
 ### Climate 
 This climate device supports the following features: `local_temperature`, `current_heating_setpoint`, `local_temperature_calibration`, `preset`, `system_mode`, `running_state`.
@@ -93,56 +93,56 @@ This climate device supports the following features: `local_temperature`, `curre
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 - `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-30` and the maximum value is `30` with a step size of `0.1`.
 
-### Schedule_monday (text)
+### Schedule monday (text)
 Schedule for monday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_monday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_monday": NEW_VALUE}`.
 
-### Schedule_tuesday (text)
+### Schedule tuesday (text)
 Schedule for tuesday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_tuesday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_tuesday": NEW_VALUE}`.
 
-### Schedule_wednesday (text)
+### Schedule wednesday (text)
 Schedule for wednesday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_wednesday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_wednesday": NEW_VALUE}`.
 
-### Schedule_thursday (text)
+### Schedule thursday (text)
 Schedule for thursday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_thursday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_thursday": NEW_VALUE}`.
 
-### Schedule_friday (text)
+### Schedule friday (text)
 Schedule for friday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_friday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_friday": NEW_VALUE}`.
 
-### Schedule_saturday (text)
+### Schedule saturday (text)
 Schedule for saturday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_saturday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_saturday": NEW_VALUE}`.
 
-### Schedule_sunday (text)
+### Schedule sunday (text)
 Schedule for sunday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_sunday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_sunday": NEW_VALUE}`.
 
-### Boost_heating (binary)
+### Boost heating (binary)
 Boost Heating: press and hold "+" for 3 seconds, the device will enter the boost heating mode, and the ▷╵◁ will flash. The countdown will be displayed in the APP.
 Value can be found in the published state on the `boost_heating` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_heating": NEW_VALUE}`.
-If value equals `ON` boost_heating is ON, if `OFF` OFF.
+If value equals `ON` boost heating is ON, if `OFF` OFF.
 
-### Boost_time (numeric)
+### Boost time (numeric)
 Countdown in minutes.
 Value can be found in the published state on the `boost_time` property.
 It's not possible to read (`/get`) this value.

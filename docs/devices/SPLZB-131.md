@@ -64,7 +64,7 @@ Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Power_reactive (numeric)
+### Power reactive (numeric)
 Instantaneous measured reactive power.
 Value can be found in the published state on the `power_reactive` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -88,7 +88,7 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Ac_frequency (numeric)
+### AC frequency (numeric)
 Measured electrical AC frequency.
 Value can be found in the published state on the `ac_frequency` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
