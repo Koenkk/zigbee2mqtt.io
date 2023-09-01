@@ -40,11 +40,11 @@ Any device using the open 2.4 GHz spectrum could interfere with Zigbee such as B
 This includes devices that you may not realize _are_ 2.4 GHz. Check anything that is wireless including wireless audio transmitters. 
 [JL Audio JL Link TRX](https://www.crutchfield.com/S-kjc9jL5lfL6/p_136TRX/JL-Audio-JLINK-TRX-High-Fidelity-Audio-Transmitter-Receiver-Kit.html)  is known specifically to cause issues.
 
-Utility companies are known to use zigbee with their "smart meters" but may not advertise them as zigbee. 
+Utility companies are known to use Zigbee with their "smart meters" but may not advertise them as Zigbee. 
 
-Other devices that broadcast zigbee, or modified versions of zigbee are known to cause issues. 
+Other devices that broadcast Zigbee, or modified versions of Zigbee are known to cause issues. 
 
-for example If you are still using a Philips Hue Hub it is suggested to add the bulbs to your Zigbee2Mqtt network.
+For example If you are still using a Philips Hue Hub it is suggested to add the bulbs to your Zigbee2Mqtt network.
 
 ## Adding routers to your network
 "Zigbee is a low-power wireless mesh network standard targeted at battery-powered devices" (see [Wikipedia](https://en.wikipedia.org/wiki/Zigbee)). Yet, low transmission power can be the cause of an unstable or unreliable network:
