@@ -51,7 +51,7 @@ Volume of the alarm.
 Value can be found in the published state on the `volume` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": NEW_VALUE}`.
-The possible values are: `mute`, `low`, `medium`, `high`.
+The possible values are: `mute`, `low`, `middle`, `high`.
 
 ### Ringtone (enum)
 Ringtone of the alarm.

@@ -1,7 +1,7 @@
 ---
-title: "Xiaomi RLS-K01D control via MQTT"
-description: "Integrate your Xiaomi RLS-K01D via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-08-26T06:45:18
+title: "Xiaomi LGYCDD01LM control via MQTT"
+description: "Integrate your Xiaomi LGYCDD01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-09-01T13:40:11
 pageClass: device-page
 ---
 
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi RLS-K01D
+# Xiaomi LGYCDD01LM
 
 |     |     |
 |-----|-----|
-| Model | RLS-K01D  |
+| Model | LGYCDD01LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara Zigbee 3.0 LED strip T1 |
 | Exposes | light (state, brightness, color_temp, color_xy), linkquality |
-| Picture | ![Xiaomi RLS-K01D](https://www.zigbee2mqtt.io/images/devices/RLS-K01D.jpg) |
+| Picture | ![Xiaomi LGYCDD01LM](https://www.zigbee2mqtt.io/images/devices/LGYCDD01LM.jpg) |
+| White-label | Xiaomi RLS-K01D |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
