@@ -37,6 +37,12 @@ To change the Zigbee channel Zigbee2MQTT uses you have to set the [`channel` in 
 ## Interference from other 2.4 GHz devices
 Any device using the open 2.4 GHz spectrum could interfere with Zigbee such as Bluetooth or gaming devices like Logitech “Unifying” or “Lightspeed” or Razer “Hyperspeed Wireless”.
 
+This includes devices that you may not realize _are_ 2.4 GHz. Check anything that is wireless including wireless audio transmitters. 
+[JL Audio JL Link TRX](https://www.crutchfield.com/S-kjc9jL5lfL6/p_136TRX/JL-Audio-JLINK-TRX-High-Fidelity-Audio-Transmitter-Receiver-Kit.html)  is known specifically to cause issues.
+Utility companies are known to use Zigbee with their "smart meters" but may not advertise them as Zigbee. 
+Other devices that broadcast Zigbee, or modified versions of Zigbee are known to cause issues. 
+For example If you are still using a Philips Hue Hub it is suggested to add the bulbs to your Zigbee2MQTT network or make sure they are on different channels.
+
 ## Adding routers to your network
 "Zigbee is a low-power wireless mesh network standard targeted at battery-powered devices" (see [Wikipedia](https://en.wikipedia.org/wiki/Zigbee)). Yet, low transmission power can be the cause of an unstable or unreliable network:
 
