@@ -118,7 +118,7 @@ devices:
         type: light
         object_id: light
       light:
-        name: my_switch
+        name: null
         value_template: null
         state_value_template: '{{ value_json.state }}'
       # OR if your devices has multiple endpoints (e.g. left/right)
