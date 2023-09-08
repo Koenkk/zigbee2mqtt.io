@@ -53,6 +53,9 @@ git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
 npm ci
+
+# Build the app
+npm run build
 ```
 
 If everything went correctly the output of `npm ci` is similar to (the number of packages and seconds is probably different on your device):
@@ -237,6 +240,7 @@ cp -R data data-backup
 # Update
 git pull
 npm ci
+npm run build
 
 # Restore configuration
 cp -R data-backup/* data
