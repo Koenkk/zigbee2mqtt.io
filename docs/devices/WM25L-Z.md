@@ -32,9 +32,14 @@ Press and hold the button on the motor head for 6 seconds until the motor feedba
 ### End Position
 The roller blind maximum extension can be set by moving the blind to the desired position and then double pressing the up or down button.
 To reset the end position so you can define a newer more extended end position, open the blind fully. Then double press the up or down button. You can now set the blind extension again.
+
+### Open/Close Behavior
+If the unit is shipped with the open and close actions swapped (where OPEN causes the shade to lengthen instead of shorten?), it can be reversed with the included remote. To reverse the open/close behavior:
+
+1. open the back of the remote and press the P (program buttom) once - the motor will activate once briefly
+2. press and hold the UP and DOWN arrow buttons on the remote briefly until you hear the motor activate once briefly
+3. the open/close behavior should now be reversed
 <!-- Notes END: Do not edit below this line -->
-
-
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
