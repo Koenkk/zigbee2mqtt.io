@@ -692,6 +692,7 @@ Note that only adapters based on a Texas Instruments chip (CC2530/CC2531/CC2538/
 ### Flashing CC1352/CC2652/CC2538 based adapters
 Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the bootloader. See your adapter manual on how to do this. After you have done this one of the following tools can be used to flash it.
 - [ZigStar GW Multi tool](https://github.com/xyzroe/ZigStarGW-MT) (multi platform GUI tool)
+- [ZigStar TI CC2652 FW Flasher](https://github.com/mercenaruss/zigstar_addons) (Home Assistant Addon for onsite flashing)
 - [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) (multi platform Python based command line tool) ([instructions](./flashing/flashing_via_cc2538-bsl.md))
 - [llama-bsl](https://github.com/electrolama/llama-bsl) (multi platform Python based command line tool, a fork of cc2538-bsl with added features)
 - Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)  
