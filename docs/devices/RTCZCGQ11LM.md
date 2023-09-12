@@ -143,9 +143,12 @@ The possible values are: `region_*_enter`, `region_*_leave`, `region_*_occupied`
 
 ### Region upsert (composite)
 Definition of a new region to be added (or replace existing one). Creating or modifying a region requires you to define which zones of a 7x4 detection grid should be active for that zone. Regions can overlap, meaning that a zone can be defined in more than one region (eg. "zone x = 1 & y = 1" can be added to region 1 & 2). "Zone x = 1 & y = 1" is the nearest zone on the right (from sensor's perspective, along the detection path)..
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"region_upsert": {"region_id": VALUE, "zones": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"region_upsert": {"region_id": VALUE, "zones": [VALUE]}}`
 - `region_id` (numeric) min value is 1, max value is 10
-- `zones` (list): list of dictionaries in the format {"x": 1, "y": 1}, {"x": 2, "y": 1} 
+- `zones` (list): list of dictionaries in the format {"x": 1, "y": 1}, {"x": 2, "y": 1}
+
+Example: `{ "region_upsert": { "region_id": 1, "zones": [{"x": 1, "y": 1},{"x": 1, "y": 2},{"x": 1, "y": 3}]}}`
+
 
 ### Region delete (composite)
 Region definition to be deleted from the device..
