@@ -52,6 +52,11 @@ Device allows to add up to `10` detection regions, each composed of any number o
 
 Each zone can be added to any region, for example you can add zone `X1 Y1` to both `Region 1` & `Region 2` at the same time.
 
+Region 1 with X1 and Y[1,2,3] can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{ "region_upsert": { "region_id": 1, "zones": [{"x": 1, "y": 1},{"x": 1, "y": 2},{"x": 1, "y": 3}]}}`
+
+**Note**: multiple zones are in `[]`
+
+
 #### Detection regions (events)
 
 Once the device detects an event in any of created regions, it exposes this event in `action` expose.  
