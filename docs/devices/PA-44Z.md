@@ -23,7 +23,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+Press test button for 10 seconds.
 
 <!-- Notes END: Do not edit below this line -->
 
