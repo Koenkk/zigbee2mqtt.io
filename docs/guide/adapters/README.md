@@ -196,7 +196,7 @@ _(in order of first appearance)_
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/)  
     * [Official site](https://uzg.zig-star.com) with documentation
     * [Flashing instructions](https://uzg.zig-star.com/flashing-and-updating/) or see [Flashing CC1352/CC2652/CC2538 based adapters](#flashing-cc1352-cc2652-cc2538-based-adapters)
-    * Buy: [Official Store](https://uzg.zig-star.com) or [Tindie](https://www.tindie.com/stores/zigstar/)
+    * Buy: [Official Store](https://uzg.zig-star.com),[Tindie](https://www.tindie.com/stores/zigstar/),[Elecrow](https://www.elecrow.com/zigstar-uzg-01-universal-zigbee-gateway.html)
 
     |           ZigStar UZG-01              |                  Dimensions           | 
     | :-----------------------------------: | :-----------------------------------: | 
