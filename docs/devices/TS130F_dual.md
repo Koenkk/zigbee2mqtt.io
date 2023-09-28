@@ -63,13 +63,13 @@ The possible values are: `UP`, `STOP`, `DOWN`.
 Calibration time.
 Value can be found in the published state on the `calibration_time_left` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `S`.
+The unit of this value is `s`.
 
 ### Calibration time (numeric, right endpoint)
 Calibration time.
 Value can be found in the published state on the `calibration_time_right` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `S`.
+The unit of this value is `s`.
 
 ### Cover (left endpoint)
 The current state of this cover is in the published state under the `state_left` property (value is `OPEN` or `CLOSE`).

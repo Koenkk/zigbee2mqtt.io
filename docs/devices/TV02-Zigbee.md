@@ -116,7 +116,7 @@ Value can be found in the published state on the `boost_timeset_countdown` prope
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_timeset_countdown": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `465`.
-The unit of this value is `second`.
+The unit of this value is `s`.
 
 ### Holiday temperature (numeric)
 Holiday temperature.

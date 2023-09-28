@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ORBIS Motion Sensor  |
 | Vendor  | [Niceboy](/supported-devices/#v=Niceboy)  |
 | Description | Motion sensor |
-| Exposes | occupancy, battery_low, battery, voltage, linkquality |
+| Exposes | occupancy, battery_low, tamper, battery, voltage, linkquality |
 | Picture | ![Niceboy ORBIS Motion Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Motion-Sensor.jpg) |
 
 
@@ -43,6 +43,12 @@ Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
+
+### Tamper (binary)
+Indicates whether the device is tampered.
+Value can be found in the published state on the `tamper` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported..

@@ -27,7 +27,6 @@ pageClass: device-page
 
 ### Pairing
 Press test button for 10 seconds.
-
 <!-- Notes END: Do not edit below this line -->
 
 

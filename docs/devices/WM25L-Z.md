@@ -41,6 +41,8 @@ If the unit is shipped with the open and close actions swapped (where OPEN cause
 3. the open/close behavior should now be reversed
 <!-- Notes END: Do not edit below this line -->
 
+
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
