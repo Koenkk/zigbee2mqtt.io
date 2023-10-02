@@ -55,7 +55,7 @@ export function getAddedAt(deviceContent: string) {
   return new Date().toISOString();
 }
 
-// For this site: all defintions are the definitions + whitelabels with fingerprint
+// For this site: all definitions are the definitions + whitelabels with fingerprint
 // Whitelabels that have a fingerprint will get a separate page and will not 
 // appear as a whitelabel on the original device page
 const allDefinitionsTemp = [...definitions];
