@@ -52,7 +52,7 @@ sudo python3 cc2538-bsl.py -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb ./CC1352
 ```
 `-ewv` means Mass **e**rase, **w**rite, **v**erify  
 `-p` is the port on which your device is running, in this case `/dev/ttyUSB0`  
-`--bootloader-sonoff-usb` means that the bootloader is activated by the script, by toggeling RTS and DTR in the correct pattern for Sonoff USB dongle (remove this if your device is not a Sonoff dongle).
+`--bootloader-sonoff-usb` means that the bootloader is activated by the script, by toggling RTS and DTR in the correct pattern for Sonoff USB dongle (remove this if your device is not a Sonoff dongle).
   
 If the flash process was successfully done, an output like this appears:
 ```

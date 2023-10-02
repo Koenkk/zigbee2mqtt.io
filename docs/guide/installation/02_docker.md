@@ -333,7 +333,7 @@ This workaround only works with cgroup v1, which is not enabled on many newer di
 
 2. UDEV Rules
 
-	Create a new udev rule for serial adpater, `idVendor` and `idProduct` must be equal to values from `lsusb` command. The rule below creates device `/dev/zigbee-serial`:
+	Create a new udev rule for serial adapter, `idVendor` and `idProduct` must be equal to values from `lsusb` command. The rule below creates device `/dev/zigbee-serial`:
 
 	```shell
 	echo "SUBSYSTEM==\"tty\", ATTRS{idVendor}==\"0451\", ATTRS{idProduct}==\"16a8\", SYMLINK+=\"zigbee-serial\",  RUN+=\"/usr/local/bin/docker-setup-zigbee-serial.sh\"" | sudo tee /etc/udev/rules.d/99-zigbee-serial.rules
@@ -530,7 +530,7 @@ modprobe cdc-acm
 ````
 After issuing the commands, the Zigbee controller may need to be unplugged and re-inserted to the USB port.
 
-You may also need additional drivers based on your USB Zigbee controlller setup, e.g. CH341 module is not included by default. You can download precompiled modules from jadahl.com pages - select module directory based on NAS CPU architecture (DS218+ -> INTEL Celeron J3355 -> Apollo Lake).
+You may also need additional drivers based on your USB Zigbee controller setup, e.g. CH341 module is not included by default. You can download precompiled modules from jadahl.com pages - select module directory based on NAS CPU architecture (DS218+ -> INTEL Celeron J3355 -> Apollo Lake).
 ````
 cd /lib/modules
 wget http://www.jadahl.com/iperf-arp-scan/DSM_7.0/apollolake/ch341.ko
