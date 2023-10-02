@@ -215,7 +215,7 @@ _(in order of first appearance)_
     * [Flashing instructions](https://github.com/tube0013/tube_gateways) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
     * [Buy](https://www.tubeszb.com/)
   
-    ![](../../images/Tubes_Zigbee_Gateways_CC2652P2_variant.jpeg) ![](../../images/Tubes_Zigbee_PoE_Coordinator_CC2652P2_variant.jpeg)
+    ![](../../images/Tubes_Zigbee_Gateways_CC2652P2_variant.jpg) ![](../../images/Tubes_Zigbee_PoE_Coordinator_CC2652P2_variant.jpg)
     </details>
 
   * <details>
