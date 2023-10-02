@@ -20,7 +20,7 @@ advanced:
   log_file: log.txt
   # Optional: Rotate log every 10MB around 3 files (default: true)
   log_rotation: true
-  # Optional: Output location of the log (default: shown below), leave empty to supress logging (log_output: [])
+  # Optional: Output location of the log (default: shown below), leave empty to suppress logging (log_output: [])
   # possible options: 'console', 'file', 'syslog'
   log_output:
     - console

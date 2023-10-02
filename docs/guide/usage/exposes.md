@@ -26,7 +26,7 @@ Examples:
 ## Generic
 
 ### Binary
-Indicates a device exposes a binary value. Always has `value_on` and `value_off` which indicates how to interpet the value. Optionally has a `value_toggle` which can be send to toggle the value.
+Indicates a device exposes a binary value. Always has `value_on` and `value_off` which indicates how to interpret the value. Optionally has a `value_toggle` which can be send to toggle the value.
 
 Examples:
 ```json
@@ -55,7 +55,7 @@ Examples:
 ```
 
 ### Numeric
-Indicates a device exposes a numeric value. Optionally has `value_max`, `value_min`, `value_step`, `unit` and `presets`. The `presets` defines values which have a special interpetation.
+Indicates a device exposes a numeric value. Optionally has `value_max`, `value_min`, `value_step`, `unit` and `presets`. The `presets` defines values which have a special interpretation.
 
 Examples:
 ```json
