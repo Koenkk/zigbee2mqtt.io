@@ -7,7 +7,7 @@ sidebarDepth: 1
 Ongoing discussion about the frontend can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/4266)
 :::
 
-Zigbee2MQTT has a built-in webbased frontend. 
+Zigbee2MQTT has a built-in web-based frontend. 
 
 ![Frontend](../../images/frontend.png)
 

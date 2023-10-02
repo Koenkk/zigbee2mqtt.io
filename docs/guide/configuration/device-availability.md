@@ -41,11 +41,11 @@ availability:
 devices:
   '0x12345678':
     friendly_name: 'my_bulb'
-    # Set availablility: false to disable the availability feature for a specific device
+    # Set availability: false to disable the availability feature for a specific device
     availability: false
   '0x87654321':
     friendly_name: 'my_switch'
-    # Change availibity timeout to 3 minutes for this device only
+    # Change availability timeout to 3 minutes for this device only
     availability:
       timeout: 3
 ```

@@ -47,7 +47,7 @@ Migration from one adapter to another requires backup and restore support which 
 1. Stop Zigbee2MQTT
 1. Determine whether migrating [requires re-pairing of your devices](#what-does-and-does-not-require-repairing-of-all-devices)
     - If re-pairing is required: remove `data/coordinator_backup.json` (if it exists) and `data/database.db`
-    - If re-pairing is **not** required: [copy the ieee address of the old adpter into the new one](../adapters/flashing/copy_ieeaddr.html)
+    - If re-pairing is **not** required: [copy the ieee address of the old adapter into the new one](../adapters/flashing/copy_ieeaddr.html)
 1. Update the `serial` -> `port`  in your `configuration.yaml`
 1. Start Zigbee2MQTT
   - If re-pairing was required:
@@ -108,7 +108,7 @@ If after some uptime Zigbee2MQTT crashes with errors like: `SRSP - AF - dataRequ
 - Normally this can be fixed by replugging the adapter and restarting Zigbee2MQTT
 - If you are using a CC2530 or CC2531 adapter consider upgrading to one of the [recommended adapters](../adapters/README.md). The CC2530/CC2531 is considered legacy hardware and runs into memory corruption easily.
 - Make sure you are using the latest firmware on your adapter, see the [adapter page](../adapters/README.md) for a link to the latest firmware.
-- If using a Raspberry Pi; this problem can occur if you are using a bad power supply or when other USB devices are connected direclty to the Pi (especially occurs with external SSD), try connecting other USB devices through a powered USB hub.
+- If using a Raspberry Pi; this problem can occur if you are using a bad power supply or when other USB devices are connected directly to the Pi (especially occurs with external SSD), try connecting other USB devices through a powered USB hub.
 - Disable the USB autosuspend feature, if `cat /sys/module/usbcore/parameters/autosuspend` returns `1` or `2` it is enabled; to disable execute:
   ```bash
   sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/&usbcore.autosuspend=-1 /' /etc/default/grub
