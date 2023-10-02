@@ -164,11 +164,11 @@ function getExposeDocs(expose, definition) {
       lines.push(`- \`brightness\`: To control the brightness publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${brightness.property}": VALUE}\` where \`VALUE\` is a number between \`${brightness.value_min}\` and \`${brightness.value_max}\`. To read the brightness send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${brightness.property}": ""}\`.`);
     }
     if (colorTemp) {
-      const presets = `Besides the numeric values the following values are accepected: ${colorTemp.presets.map((p) => `\`${p.name}\``).join(', ')}.`;
+      const presets = `Besides the numeric values the following values are accepted: ${colorTemp.presets.map((p) => `\`${p.name}\``).join(', ')}.`;
       lines.push(`- \`color_temp\`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorTemp.property}": VALUE}\` where \`VALUE\` is a number between \`${colorTemp.value_min}\` and \`${colorTemp.value_max}\`, the higher the warmer the color. To read the color temperature send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorTemp.property}": ""}\`. ${presets}`);
     }
     if (colorTempStartup) {
-      const presets = `Besides the numeric values the following values are accepected: ${colorTempStartup.presets.map((p) => `\`${p.name}\``).join(', ')}.`;
+      const presets = `Besides the numeric values the following values are accepted: ${colorTempStartup.presets.map((p) => `\`${p.name}\``).join(', ')}.`;
       lines.push(`- \`color_temp_startup\`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorTempStartup.property}": VALUE}\` where \`VALUE\` is a number between \`${colorTempStartup.value_min}\` and \`${colorTempStartup.value_max}\`, the higher the warmer the color. To read the startup color temperature send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorTempStartup.property}": ""}\`. ${presets}`);
     }
     if (colorXY) {
