@@ -8,7 +8,7 @@ This feature allows to update your Zigbee devices over-the-air.
 
 ::: tip TIP
 Always check if the firmware update will bring you advantages. Firmware updates are NOT made for Zigbee2MQTT, but for working with apps and hubs from the brand.
-In some cases the firmware update can cause that your device will react different then Zigbee2MQTT expects, making that you can't use it the way you want, at least untill Zigbee2MQTT is changed to react to those changes.
+In some cases the firmware update can cause that your device will react different then Zigbee2MQTT expects, making that you can't use it the way you want, at least until Zigbee2MQTT is changed to react to those changes.
 If you get annoyed by the notifications that there are updates available, then turn the automatic check off.
 :::
 

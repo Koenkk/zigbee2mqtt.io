@@ -70,7 +70,7 @@ _(in order of first appearance)_
   * <details>
     <summary>ZigStar Stick v4</summary>
   
-    Powerfull Open source dongle with external antenna based on CC2652P  
+    Powerful Open source dongle with external antenna based on CC2652P  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)  
     * [Description](https://zig-star.com/projects/zigbee-stick-v4/)  
@@ -151,7 +151,7 @@ _(in order of first appearance)_
   * <details>
     <summary>ZigStar LAN Coordinator</summary>
   
-    Powerfull Open source LAN Coordinator with external antenna on CC2652P  
+    Powerful Open source LAN Coordinator with external antenna on CC2652P  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)  
     * [Description](https://zig-star.com/projects/zigbee-gw-lan/)  
@@ -177,7 +177,7 @@ _(in order of first appearance)_
   * <details>
     <summary>SMLIGHT SLZB-06 Zigbee Ethernet USB POE WiFi LAN adapter</summary>
   
-    Powerfull, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed and ready to use Zigbee adapter. Supports Zigbee 3.0, Ethernet, LAN, USB and WiFi connections. Rich packing that includes SLZB-06 adapter, +5dB antenna, screws, adhesive tapes, screwdriver, microUSB-typeC adapter, screw-fix-helper and QR-manual. Distant update, modern UI open-source firmware. Optoelectronic isolation for Ethernet, LEDs and physical button for interacting with user. Fits home and business use.
+    Powerful, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed and ready to use Zigbee adapter. Supports Zigbee 3.0, Ethernet, LAN, USB and WiFi connections. Rich packing that includes SLZB-06 adapter, +5dB antenna, screws, adhesive tapes, screwdriver, microUSB-typeC adapter, screw-fix-helper and QR-manual. Distant update, modern UI open-source firmware. Optoelectronic isolation for Ethernet, LEDs and physical button for interacting with user. Fits home and business use.
     * [Coordinator firmware (CC2652P)](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20230507.zip)  
     * [ESP32 firmware](https://github.com/smlight-dev/slzb-06-firmware/)  
     * [Manual](https://smlight.tech/manual/slzb-06/)
@@ -196,7 +196,7 @@ _(in order of first appearance)_
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/)  
     * [Official site](https://uzg.zig-star.com) with documentation
     * [Flashing instructions](https://uzg.zig-star.com/flashing-and-updating/) or see [Flashing CC1352/CC2652/CC2538 based adapters](#flashing-cc1352-cc2652-cc2538-based-adapters)
-    * Buy: [Official Store](https://uzg.zig-star.com) or [Tindie](https://www.tindie.com/stores/zigstar/)
+    * Buy: [Official Store](https://uzg.zig-star.com),[Tindie](https://www.tindie.com/stores/zigstar/),[Elecrow](https://www.elecrow.com/zigstar-uzg-01-universal-zigbee-gateway.html)
 
     |           ZigStar UZG-01              |                  Dimensions           | 
     | :-----------------------------------: | :-----------------------------------: | 
@@ -215,7 +215,7 @@ _(in order of first appearance)_
     * [Flashing instructions](https://github.com/tube0013/tube_gateways) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
     * [Buy](https://www.tubeszb.com/)
   
-    ![](../../images/Tubes_Zigbee_Gateways_CC2652P2_variant.jpeg) ![](../../images/Tubes_Zigbee_PoE_Coordinator_CC2652P2_variant.jpeg)
+    ![](../../images/Tubes_Zigbee_Gateways_CC2652P2_variant.jpg) ![](../../images/Tubes_Zigbee_PoE_Coordinator_CC2652P2_variant.jpg)
     </details>
 
   * <details>
@@ -280,7 +280,7 @@ _(in order of first appearance)_
   * <details>
     <summary>ZigStar ZigiHAT PoE </summary>
   
-    Powerfull Open source Pi HAT based on CC2652P with PoE,RTC onboard
+    Powerful Open source Pi HAT based on CC2652P with PoE,RTC onboard
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)  
     * [Description](https://zig-star.com/projects/zigbee-zigihat/)  
@@ -526,7 +526,7 @@ Initial development started on experimental (beta stage) support for Silicon Lab
 
     USB dongle is originally a DIY design from [Modkam (Russian speaking Zigbee DIY community)](https://modkam.ru/2021/02/28/proshivka-stikov-efr32/) and it using pre-flashed ["SM-011 V1.0" (ZYZBP008) radio module from CoolKit-Technologies](https://github.com/CoolKit-Technologies/DevDocs/tree/master/Zigbee) (which has a Silabs EFR32MG21 Zigbee SoC chip on it). 
 
-    Warning! Before buying understand that the "SM-011 V1.0" module/board used in this is missing electromagnetic interference shielding and have relativly low-quality circuit board antenna with less than optimal hardware tuning so it has been reported signal reception with these is very sensitive to all types of interference unless connect it via a very long USB extension cable that is properly shielded to get it away from any sources of EMF/EMI/RMI.
+    Warning! Before buying understand that the "SM-011 V1.0" module/board used in this is missing electromagnetic interference shielding and have relatively low-quality circuit board antenna with less than optimal hardware tuning so it has been reported signal reception with these is very sensitive to all types of interference unless connect it via a very long USB extension cable that is properly shielded to get it away from any sources of EMF/EMI/RMI.
 
     Note that the same USB dongle is also sold pre-flashed with Zigbee Router firmware as a lower price and it is reported to act much better as a Zigbee Router than what it does as a Zigbee Coordinator.
 
@@ -691,12 +691,18 @@ Note that only adapters based on a Texas Instruments chip (CC2530/CC2531/CC2538/
 
 ### Flashing CC1352/CC2652/CC2538 based adapters
 Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the bootloader. See your adapter manual on how to do this. After you have done this one of the following tools can be used to flash it.
-- [ZigStar GW Multi tool](https://github.com/xyzroe/ZigStarGW-MT) (multi platform GUI tool)
-- [ZigStar TI CC2652 FW Flasher](https://github.com/mercenaruss/zigstar_addons) (Home Assistant Addon for onsite flashing)
-- [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) (multi platform Python based command line tool) ([instructions](./flashing/flashing_via_cc2538-bsl.md))
-- [llama-bsl](https://github.com/electrolama/llama-bsl) (multi platform Python based command line tool, a fork of cc2538-bsl with added features)
-- Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)  
+- UI tools
+  - Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)  
+  - [ZigStar GW Multi tool](https://github.com/xyzroe/ZigStarGW-MT) (multi platform GUI tool)
+- CLI tools (multi platform Python based command line tools)
+  - [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) ([instructions](./flashing/flashing_via_cc2538-bsl.md))
+  - [llama-bsl](https://github.com/electrolama/llama-bsl) (fork of cc2538-bsl with added features)
+- Home Assistant addon
+  - [TubesZB TI CC2652 FW Flasher](https://github.com/tube0013/tubeszb_addons)
+  - [ZigStar TI CC2652 FW Flasher](https://github.com/mercenaruss/zigstar_addons) (fork of TubesZB with added features)
+
 - Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
+
 <img src="../../images/flashing/web-interface-ota-flashing.jpg" title="SLZB-06 WEB OTA Zigbee Flashing" class="float-left" height=300 />
 
 

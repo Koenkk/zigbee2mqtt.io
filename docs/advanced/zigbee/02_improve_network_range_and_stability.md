@@ -20,7 +20,7 @@ A **USB extension cable** of 50 cm is already enough to reduce the interference.
 
 **Do not underestimate this!** Placing your adapter close to an USB port can kill the radio signal entirely as demonstrated in [this article](https://www.unit3compliance.co.uk/2-4ghz-intra-system-or-self-platform-interference-demonstration/).
 
-Aditionally, it may help to plug the adapter to a USB 2 instead of USB 3 port.
+Additionally, it may help to plug the adapter to a USB 2 instead of USB 3 port.
 
 ### Try different orientations of the adapter
 RF connection between the adapter and other devices also depends on the way it is oriented in space. You might be having very poor `linkquality` reports and intermittent ping failures but once the adapter is rotated a little it all can change greatly without re-locating the coordinator far away. Try to experiment with positioning and orienting the adapter in space while monitoring the `linkquality` values reported. You might find it useful to buy a small rotating USB connector like this:
@@ -65,7 +65,7 @@ If you assume to have routing problems, try [sending an MQTT request to the brid
 For more technical details on Zigbee routing, see the ["5. Routing" in the TI Z-Stack User Guide](https://software-dl.ti.com/simplelink/esd/plugins/simplelink_zigbee_sdk_plugin/1.60.01.09/exports/docs/zigbee_user_guide/html/zigbee/developing_zigbee_applications/z_stack_developers_guide/z-stack-overview.html#routing), for example.
 
 ## Hardware
-Although Zigbee2MQTT does not require many resources, the hardware you are running Zigbee2MQTT on can impact the performance. This is especially true when using low-power hardware like the Raspbery Pi 3. Make sure that enough resources (CPU/memory) is free. For example, running Home Assistant + Zigbee2MQTT Home Assistant addon on the Raspberry Pi 3 may give bad performance.
+Although Zigbee2MQTT does not require many resources, the hardware you are running Zigbee2MQTT on can impact the performance. This is especially true when using low-power hardware like the Raspberry Pi 3. Make sure that enough resources (CPU/memory) is free. For example, running Home Assistant + Zigbee2MQTT Home Assistant addon on the Raspberry Pi 3 may give bad performance.
 
 ## Broadcasts
 Zigbee traffic can be categorized as either *Unicast* or *Broadcast*:
