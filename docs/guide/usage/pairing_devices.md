@@ -20,7 +20,6 @@ By setting `permit_join: true` in your `configuration.yaml` the joining will aut
 ## Pairing
 First check if the device page ([Supported devices](../../supported-devices/), click on the model number) contains instructions on how to pair your device.
 
-
 If no instructions are available, the device can probably be paired by factory resetting it.
 
 Once you see something similar to below in the log your device is paired.
