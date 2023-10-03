@@ -120,7 +120,7 @@ Value can be found in the published state on the `calibration_closing_time` prop
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_closing_time": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_closing_time": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `90`.
-The unit of this value is `S`.
+The unit of this value is `s`.
 
 ### Calibration opening time (numeric)
 Calibration closing time.
@@ -128,7 +128,7 @@ Value can be found in the published state on the `calibration_opening_time` prop
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_opening_time": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_opening_time": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `90`.
-The unit of this value is `S`.
+The unit of this value is `s`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

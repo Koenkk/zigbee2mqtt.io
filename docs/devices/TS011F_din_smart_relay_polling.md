@@ -20,7 +20,6 @@ pageClass: device-page
 | Description | Din smart relay (with power monitoring via polling) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, linkquality |
 | Picture | ![TuYa TS011F_din_smart_relay_polling](https://www.zigbee2mqtt.io/images/devices/TS011F_din_smart_relay_polling.jpg) |
-| White-label | MatSee Plus ATMS1602Z, Tongou TO-Q-SY1-JZT |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

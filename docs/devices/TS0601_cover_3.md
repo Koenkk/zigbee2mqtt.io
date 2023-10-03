@@ -20,7 +20,6 @@ pageClass: device-page
 | Description | Cover motor |
 | Exposes | battery, cover (state, position), reverse_direction, border, click_control, motor_fault, linkquality |
 | Picture | ![TuYa TS0601_cover_3](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_3.jpg) |
-| White-label | Zemismart ZM16EL-03/33 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

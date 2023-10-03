@@ -1,6 +1,6 @@
 ---
-title: "ZYXH TS0601_switch_8 control via MQTT"
-description: "Integrate your ZYXH TS0601_switch_8 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "TuYa TS0601_switch_8 control via MQTT"
+description: "Integrate your TuYa TS0601_switch_8 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-01T08:09:29
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# ZYXH TS0601_switch_8
+# TuYa TS0601_switch_8
 
 |     |     |
 |-----|-----|
 | Model | TS0601_switch_8  |
-| Vendor  | [ZYXH](/supported-devices/#v=ZYXH)  |
-| Description | 8 Gang switch |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Description | ZYXH 8 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![ZYXH TS0601_switch_8](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_8.jpg) |
+| Picture | ![TuYa TS0601_switch_8](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_8.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

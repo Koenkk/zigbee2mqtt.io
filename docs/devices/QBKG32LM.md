@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | QBKG32LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart wall switch H1 Pro (with neutral, tripple rocker) |
+| Description | Aqara smart wall switch H1 Pro (with neutral, triple rocker) |
 | Exposes | switch (state), power, energy, voltage, device_temperature, power_outage_memory, led_disabled_night, flip_indicator_light, action, operation_mode, linkquality |
 | Picture | ![Xiaomi QBKG32LM](https://www.zigbee2mqtt.io/images/devices/QBKG32LM.jpg) |
 

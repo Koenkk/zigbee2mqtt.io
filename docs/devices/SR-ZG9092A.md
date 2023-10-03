@@ -142,7 +142,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `default`, `last_status`.
 
 ### Floor sensor calibration (numeric)
-The tempearatue calibration for the exernal floor sensor, between -3 and 3 in 0.1°C.  Default: 0..
+The tempearatue calibration for the external floor sensor, between -3 and 3 in 0.1°C.  Default: 0..
 Value can be found in the published state on the `floor_sensor_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_sensor_calibration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_sensor_calibration": NEW_VALUE}`.

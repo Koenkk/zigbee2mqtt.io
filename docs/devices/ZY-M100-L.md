@@ -90,7 +90,7 @@ The minimal value is `0` and the maximum value is `1500`.
 The unit of this value is `s`.
 
 ### Self test (enum)
-Self_test, possible resuts: checking, check_success, check_failure, others, comm_fault, radar_fault..
+Self_test, possible results: checking, check_success, check_failure, others, comm_fault, radar_fault..
 Value can be found in the published state on the `self_test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `checking`, `check_success`, `check_failure`, `others`, `comm_fault`, `radar_fault`.
