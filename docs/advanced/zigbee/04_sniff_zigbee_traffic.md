@@ -111,18 +111,18 @@ Found on [https://www.amazon.com/gp/customer-reviews/RSPH6UCG0N3WK/](https://www
   1. You can find this by going to "Ports (COM & LPT)" in the device manager
 
 ### 2. Installing required tools
-Both Windows and Ubuntu use the same program for sniffing. Scroll down to the bottom of the README of https://github.com/zsmartsystems/com.zsmartsystems.zigbee.sniffer to find how a precompiled jar file can be downloaded.
+Both Windows and Ubuntu use the same program for sniffing. You can fetch a precompiled jar file from the release section of the [ZSmart Systems sniffer](https://github.com/zsmartsystems/com.zsmartsystems.zigbee.sniffer).
 
 #### Ubuntu
-No extra software besides `ZigbeeSniffer.jar` and Wireshark is needed
+No extra software besides `ZigbeeSniffer.jar` and Wireshark is needed. Some EZSP keys use the exact same USB identifiers as a brltty udev-registered device, so if your EZSP USB dongle is not recognized by Linux, just disable the rule of brltty for idVendor=1a86, idProduct=7523 (same as the CH340 serial converter used in the EZSP key). Edit /`usr/lib/udev/rules.d/85-brltty.rules` and comment `# ENV{PRODUCT}=="1a86/7523/*", ENV{BRLTTY_BRAILLE_DRIVER}="bm", GOTO="brltty_usb_run"`. Unplug and replug the EZSP key.
 
 #### Windows
 Download and install https://nmap.org/npcap/ and make sure you select to install the "Npcap Loopback Adapter" when installing. It shouldn't matter whether or not you use Winpcap compatibility mode.
 
 ### 3. Sniffing traffic
-In a terminal or command line, run `java -jar ZigbeeSniffer.jar -baud 57600 -flow hardware -port {PORT}`.
+In a terminal or command line, run `java -jar ZigbeeSniffer.jar -baud 115200 -flow hardware -port {PORT} -c {CHANNEL}`.
 On Windows, `PORT` should be replaced by `COM5` or whatever you wrote down in step 1.
-On linux, `PORT` will be something like `/dev/ttyUSB3` or wherever you plugged in your HUSBZB-1 device.
+On linux, `PORT` will be something like `/dev/ttyUSB0` or wherever you plugged in your HUSBZB-1 device.
 
 Once you have the application running, you should see it connect to and start sniffing traffic on the network.
 
