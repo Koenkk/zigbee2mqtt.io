@@ -1,7 +1,7 @@
 ---
-title: "Profalux MAI-ZTP20F control via MQTT"
-description: "Integrate your Profalux MAI-ZTP20F via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-01-01T08:59:10
+title: "Profalux MAI-ZTP20 control via MQTT"
+description: "Integrate your Profalux MAI-ZTP20 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-10-03T08:44:52
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Profalux MAI-ZTP20F
+# Profalux MAI-ZTP20
 
 |     |     |
 |-----|-----|
-| Model | MAI-ZTP20F  |
+| Model | MAI-ZTP20  |
 | Vendor  | [Profalux](/supported-devices/#v=Profalux)  |
 | Description | Cover remote |
 | Exposes | linkquality |
-| Picture | ![Profalux MAI-ZTP20F](https://www.zigbee2mqtt.io/images/devices/MAI-ZTP20F.jpg) |
+| Picture | ![Profalux MAI-ZTP20](https://www.zigbee2mqtt.io/images/devices/MAI-ZTP20.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

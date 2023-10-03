@@ -67,7 +67,7 @@ The minimal value is `0` and the maximum value is `35`.
 The unit of this value is `°C`.
 
 ### Min temperature limit (numeric)
-Minimum temperature limit for frost protection. Turns the thermostat on regardless of setpoint if the tempreature drops below this..
+Minimum temperature limit for frost protection. Turns the thermostat on regardless of setpoint if the temperature drops below this..
 Value can be found in the published state on the `min_temperature_limit` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_temperature_limit": NEW_VALUE}`.
