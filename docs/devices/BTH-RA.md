@@ -85,7 +85,7 @@ The minimal value is `0` and the maximum value is `30`.
 The unit of this value is `°C`.
 
 ### Display ontime (numeric)
-Specifies the diplay On-time.
+Specifies the display On-time.
 Value can be found in the published state on the `display_ontime` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_ontime": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_ontime": NEW_VALUE}`.

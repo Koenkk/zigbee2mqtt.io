@@ -68,7 +68,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `g`.
 
 ### Error (binary)
-Indicates wether there is an error with the feeder.
+Indicates whether there is an error with the feeder.
 Value can be found in the published state on the `error` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` error is ON, if `false` OFF.
