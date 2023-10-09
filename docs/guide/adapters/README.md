@@ -565,6 +565,25 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     ![](../../images/z-station.jpg)
     </details>
 
+  * <details>
+    
+    <summary>SMLIGHT SLZB-07 Zigbee USB adapter with +3dB antenna</summary>
+  
+    Zigbee USB adapter with +3dB external antenna and Thread/Matter-over-Thread ready.
+
+    Zigbee USB adapter based on EFR32 and CP2102 Silicon Labs SoCs. External +3dB antenna secures a strong LQI signal all around your place. Pre-flashed, tested and and ready-to-use with both Zigbee2MQTT and ZHA Home Assistant. Supports Thread/Matter-over-Thread firmware architecture for the EmberZNet Zigbee protocol stack.
+
+    Zigbee2MQTT settings in `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+    ```
+    * [Product page](https://smlight.tech/product/slzb-07/)
+    * [Buy](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-07-zigbee-usb-adapter-en)
+  
+    ![](https://smartlight.me/files/pics/2023/SLZB-07-Zigbee2MQTT.png)
+    </details>
+
 * Raspberry Pi
 
   * <details>
