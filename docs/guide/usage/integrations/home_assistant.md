@@ -195,12 +195,15 @@ input_text:
   zigbee2mqtt_old_name:
     name: Zigbee2MQTT Old Name
     initial: ""
+    icon: "mdi:moon-full"
   zigbee2mqtt_new_name:
     name: Zigbee2MQTT New Name
     initial: ""
+    icon: "mdi:moon-new"
   zigbee2mqtt_remove:
     name: Zigbee2MQTT Remove
     initial: ""
+    icon: "mdi:trash-can"
 
 # Input boolean to set the force remove flag for devices
 input_boolean:
@@ -213,6 +216,7 @@ input_boolean:
 script:
   zigbee2mqtt_rename:
     alias: Zigbee2MQTT Rename
+    icon: "mdi:pencil"
     sequence:
       service: mqtt.publish
       data_template:
@@ -224,6 +228,7 @@ script:
           }
   zigbee2mqtt_remove:
     alias: Zigbee2MQTT Remove
+    icon: "mdi:trash-can"
     sequence:
       service: mqtt.publish
       data_template:
@@ -297,6 +302,7 @@ mqtt:
   # Switch for enabling joining
   switch:
     - name: "Main join"
+      icon: "mdi:human-greeting-proximity"
       unique_id: zigbee2mqtt_main_join_switch
       state_topic: "zigbee2mqtt/bridge/info"
       value_template: '{{ value_json.permit_join | lower }}'
