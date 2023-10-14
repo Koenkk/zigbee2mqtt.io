@@ -30,21 +30,105 @@ To pair the device:
 - Allow Zigbee2MQTT pairing
 - Press the Master ON and OFF buttons simultaneously until the central red LED flashes quickly.
 
-### Working principle
+### Exposing the controls
+By default, the controls of the remote are not exposed. This is due to the non-standard way the remote communicates.
 
-The remote has 7 zone switches plus an eighth zone being controlled by the ON and OFF buttons + 1 Master zone ON and OFF buttons.
-Each zone sends commands to a ZigBee group which is currently hardcoded. Zone 1 is mapped to ZigBee group 101, Zone 2 to 102 and so forth. This means that currently each remote controls the same ZigBee groups. To control lights or smartplugs, first create a ZigBee group with the correct ID (10X), name it like you wish then add the devices you intend to control to that group (pay attention to use the right termination point).
+In order to expose the controls, you need to:
+- Open `Zigbee2MQTT` (the web interafce)
+- Go to the `Extensions` tab
+- Click the `+`-button to add a new extension file
+- Enter a name for the extension file, e.g.: `miboxer-fut089z-controls-exposer.js`
+- Copy the contents of this file [controls-exposer.js](https://github.com/Koenkk/zigbee2mqtt-user-extensions/blob/main/stable/miboxer-fut089z/controls-exposer.js) (if it doesn't exist use this one instead: [controls-exposer.js](https://github.com/Koenkk/zigbee2mqtt-user-extensions/blob/main/unstable/miboxer-fut089z/controls-exposer.js)) and paste it into the extension file you just created
+- Click the `Save` button
 
-Very important : do NOT add the remote itself to the group.
+The controls of all your MiBoxer FUT089Z remotes are now properly exposed via MQTT and automatically show up in Home Assistant. (If you don't use Home Assistant, you probably have to subscribe to the appropriate MQTT topics. You'll find them in the extension code.)
 
-ON and OFF Master Button on top of the remote will command an extra zone with Group ID 108. 
-You can for instance use it as a master switch or just as an add on zone.
+Each MiBoxer FUT089Z remote shows up as a separate device in Home Assistant.  
+By default they will report 3 sensors 
+- `Battery` (%)
+- `Voltage` (mV)
+- `Linkquality` (lqi)
 
-Obviously you can only have 1 FUT089Z remote per Zigbee network as it always command groups with 101 to 108 ID
+The extension adds 3 more sensors:
+- `Brightness` (%)
+- `Color Temperature` (mireds)
+- `Color` (not implmented yet)
 
-There is no support for sending events instead of commands. Which means that there is no other automation you can build out of the group assignement described above.
+As well as on trigger for each button:
+- button_group_1_on
+- button_group_1_off
+- ...
+- button_group_8_on
+- button_group_8_off
 
-Beauty is that after you pair remote and define up to 8 zones, the command will work even with Zigbee2MQTT down, ... even better without any alive Zigbee controller.
+Example automation using a button:
+
+``` YAML
+alias: MiBoxerRemote1_Button_Group_8_On
+description: ""
+trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 37c0de12e46bb817b3ed5dcae834feee
+    type: button_short_press
+    subtype: button_group_8_on
+    discovery_id: 0x003c84fffeb6a253_zone_8_button_on
+condition: []
+action:
+  - service: light.turn_on
+    data: {}
+    target:
+      device_id: 0887f3aa92fa71265fcb5f1d7021c2a7
+mode: restart
+```
+(You can easily create them automatically by going to the Device in Home Assistant and adding an Automation from there.)
+
+Example automation using the brightness slider:  
+(If you ccreate such an Automation automatically thorugh the Device's page in Home Assistant, it will create a buggy `platform: device` automation, please use `platform: state` instead as shown blow.)
+``` YAML
+alias: MiBoxerRemote1_BrightnessSlider
+description: ""
+trigger:
+  - platform: state
+    entity_id:
+      - sensor.none_brightness
+condition: []
+action:
+  - service: light.turn_on
+    data:
+      brightness_pct: "{{ trigger.to_state.state }}"
+      transition: 0.2
+    target:
+      device_id: 8984f2bd0c64baa8badb3fe895f7dd95
+    enabled: true
+mode: restart
+```
+
+
+
+Bugs:
+- The Color Wheel control is currently not supported. (Problem is that the remote sends the last brightness value instead of the selected color value. Fixing probably requires reverse engineering th proprietary protocol. )
+- The R, G, B and W buttons have the exact same issue as the color wheel.
+- The Color Temperature Slider control doesn't work reliably. Sometimes it just sends the last brightness value (those messages are filtered out by the extension to avoid complications) and sometimes it just works. 
+
+If you think you can help fixing the buggy controls, your best bet is probably to start [in this issue](https://github.com/Koenkk/zigbee2mqtt/issues/10708) where the initial reverse engineering efforts have been documented.
+
+### Directly controlling ZigBee devices
+Alternatively, or in addition to the approach mentioned above, you can also directly control ZigBee lights etc. with this remote.
+The remote has 7 groups of on/off buttons, each button group controlling a different zone. In addition to that, the remote has an eighth button group consisting of the upper dedicated `ON` and `OFF` buttons corresponding to another zone.
+Each zone is mapped to a different ZigBee group, which are currently hardcoded: Zone 1 is mapped to ZigBee group 101, Zone 2 to 102 and so forth...
+This means that if you have multiple MiBoxer FUT089T remotes, they all control the same ZigBee groups (101-108). 
+
+To directly control lights or smartplugs without going through MQTT (and Home Assistant or whatever), 
+- first create a ZigBee group with the correct ID (10X), 
+- name it like you wish,
+- then add the devices you intend to control to that group (pay attention to use the right termination point).
+  Very important : do NOT add the remote itself to the group.
+
+The `ON` and `OFF` Master Buttons on top of the remote control an extra zone with Group ID 108. 
+You can for instance use it as a master switch or for just another light/smartplug etc...
+
+The beauty of this approach is that the remote will work even with Zigbee2MQTT down, ... even better without any alive Zigbee controller.  
 It looks like a perfect emergency backup.
 
 
