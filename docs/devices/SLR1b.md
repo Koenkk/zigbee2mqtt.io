@@ -54,7 +54,7 @@ Note: For device timing reasons, the payload needs to be sent as one single comm
 
 Also, the native boost can be used as a method to pause the heating too. To do so, set the temperature to a low value.
 
-### Set heating mode to ON
+### Set heating mode to MANUAL
 Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 ```js
 {
