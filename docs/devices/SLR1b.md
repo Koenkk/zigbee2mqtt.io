@@ -79,6 +79,18 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 Note: You will also notice that `temperature_setpoint_hold_duration` automatically changes to `0` which means `not set`. `occupied_heating_setpoint` automatically changes to `1` degree C.
 
 This will also stop any native boosts that are currently active.
+
+### Set heating mode to SCHEDULE
+Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
+```js
+{
+   "system_mode":"heat",
+   "temperature_setpoint_hold":"0"
+}
+```
+Note: This will revert any deviation of ```occupied_heating_setpoint``` previously set to what is defined in the schedule of the thermostat.
+
+This will also stop any native boosts that are currently active.
 <!-- Notes END: Do not edit below this line -->
 
 
