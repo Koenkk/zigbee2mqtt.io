@@ -65,8 +65,10 @@ The possible values are: `internal`, `external`.
 ### Calibrated (binary)
 Is the valve calibrated.
 Value can be found in the published state on the `calibrated` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+It's not possible to read (`/get`) this value.
 If value equals `true` calibrated is ON, if `false` OFF.
+
+To start a new calibration, publish a message to `zigbee2mqtt/FRIENDLY_NAME/set/calibrate` with no payload.
 
 ### Child lock (lock)
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
