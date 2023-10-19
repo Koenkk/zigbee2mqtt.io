@@ -70,6 +70,37 @@ Value can be found in the published state on the `heating` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `ON` heating is ON, if `OFF` OFF.
 
+### Weekly Schedule
+
+It's not possible to read (`/get`) or write (`/set`) this value.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload
+
+``` json
+{
+  "weekly_schedule": {
+    "1": {
+      "dayofweek": 1,
+      "numoftrans": 2,
+      "mode": 1,
+      "transitions": [
+        {
+          "transitionTime": 360,
+          "heatSetpoint": 23
+        },
+        {
+          "transitionTime": 570,
+          "heatSetpoint": 2200
+        }
+      ]
+    }
+  }
+}
+```
+
+`dayofweek` 1-7, 1=sunday
+`transitionTime` Minutes after midnight
+`numoftrans` It seems that the maximum number of transitions is 4
+
 ### Climate 
 This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `system_mode`, `local_temperature_calibration`.
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. Reading (`/get`) this attribute is not possible.
