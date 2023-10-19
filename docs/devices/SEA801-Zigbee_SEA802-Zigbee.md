@@ -72,7 +72,7 @@ If value equals `ON` heating is ON, if `OFF` OFF.
 
 ### Weekly Schedule
 
-It's not possible to read (`/get`) or write (`/set`) this value.
+It's not possible to read (`/get`) this value.
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload
 
 ``` json
