@@ -40,7 +40,7 @@ sudo apt-get install -y nodejs git make g++ gcc
 
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
 # version has been installed
-node --version  # Should output v14.X, V16.x, V17.x or V18.X
+node --version  # Should output V16.x, V17.x, V18.X or V20.X
 npm --version  # Should output 6.X, 7.X or 8.X
 
 # Create a directory for zigbee2mqtt and set your user as owner of it
