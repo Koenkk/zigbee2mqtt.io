@@ -92,6 +92,8 @@ Example payload:
         "type":"zStack30x",
         "meta":{"revision":20190425, "transportrev":2, "product":2, "majorrel":2, "minorrel":7, "maintrel":2}
     },
+    "zigbee_herdsman_converters":{"version":"15.98.0"},
+    "zigbee_herdsman":{"version":"0.20.0"},
     "network":{"channel":15,"pan_id":5674,"extended_pan_id":[0,11,22]},
     "log_level":"debug",
     "permit_join":true,
