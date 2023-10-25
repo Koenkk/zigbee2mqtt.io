@@ -485,7 +485,9 @@ Initial development started on experimental (beta stage) support for Silicon Lab
   
     USB connected adapter with integrated antenna.
 
-    This dongle/stick ships with standard Silicon Labs EmberZNet Zigbee NCP firmware so it works like other ezsp adapters out-of-the-box as long as you do not change firmware from NCP (Network Co-Processor) to RPC (Radio Co-Processor) firmware architecture for the EmberZNet Zigbee protocol stack. If you plan on using it only with Zigbee2MQTT then it is therefore currently not recommended to flash/upgrade to an RPC Multi-PAN firmware for it as that enables multiprotocol support for the radio which adds an extra prerequisite of running a service called "Zigbeed" (Zigbee daemon) on the same computer as the RCP Multi-PAN design offloads the Silicon Labs EmberZNet Zigbee protocol stack from the radio adapter, and that required Zigbee daemon for Silicon Labs EmberZNet is not yet included as a dependency with Zigbee2MQTT/zigbee-herdsman, meaning that you need to install and maintain that dependency yourself.
+    This dongle/stick ships with standard Silicon Labs EmberZNet Zigbee NCP (Network Co-Processor, Zigbee only) firmware as opposed to the RCP (Radio Co-Processor, multi-protocol) firmware. It is recommended you remain on an NCP firmware which will allow it to work out-of-the-box like any other EZSP adapter.
+
+    While the RCP firmware allows you to utilize the adapter with other protocols such as Thread, it requires offloading large parts of the application onto the host computer using an additional service, Zigbeed (Zigbee daemon) instead. This service is not currently included with Zigbee2MQTT/zigbee-herdsman and you will be required to install and maintain the dependency yourself. More discussion can be found [here](https://github.com/zigpy/zigpy/discussions/894).
 
     If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
     ```yaml
