@@ -25,6 +25,16 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Firmware updates
+
+In the past there have been at least 2 revisions of this device where Zigbee2MQTT detected new firmwares that were incompatible with the device. See :
+* [BRT-100-TRV OTA broken / flash ZT5](https://github.com/Koenkk/zigbee2mqtt/issues/19173)
+* [Moes BRT-100-TRV not reporting after OTA update](https://github.com/Koenkk/zigbee2mqtt/issues/7941)
+
+In this situation a firmware update made the device unable to connect to the Zigbee network. As of 2023/10/28 Zigbee2MQTT has been updated to support the first revision with this problem but the last one will only be correctly supported in the next release.
+
+Don't update unless you verified that your current revision is correctly supported by your current Zigbee2MQTT version.
+
 ### Pairing
 
 While pairing, keep the valve close to the coordinator.
