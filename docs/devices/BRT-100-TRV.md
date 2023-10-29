@@ -31,6 +31,16 @@ While pairing, keep the valve close to the coordinator.
 
 1. *Turn the display on*: Short press home (🏠).
 2. *Enable pairing mode*: Long press - (minus) for 3 seconds. WiFi logo is now blinking.
+
+### Broken OTA updates
+
+In the past there have been at least 2 revisions of this device where Zigbee2MQTT detected new firmwares that were incompatible with the device. See :
+* [BRT-100-TRV OTA broken / flash ZT5](https://github.com/Koenkk/zigbee2mqtt/issues/19173)
+* [Moes BRT-100-TRV not reporting after OTA update](https://github.com/Koenkk/zigbee2mqtt/issues/7941)
+
+In this situation a firmware update made the device unable to connect to the Zigbee network. As of 2023/10/28 Zigbee2MQTT had been updated to disable OTA updates for the first revision with this problem but the last revision could still be updated with an incompatible firmware until the next release.
+
+As OTA updates are not under the control of Zigbee2MQTT which can only disable updates when problems occur. You should check that there isn't a faulty OTA update for your current device revision and avoid updating if there isn't a specific need for it.
 <!-- Notes END: Do not edit below this line -->
 
 
