@@ -25,10 +25,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Pairing
-If the device did not automatically start in pairing mode (LED blinking), you can start it manually by powering on and off the device five times, keeping it on the 5th time.
+If the device did not automatically start in pairing mode (LED blinking), you can start it manually by powering on and off the device four times, keeping it on the 4th time.
 
-- Plug in battery and wait one second
-- Pull out battery
 - Plug in battery and wait one second
 - Pull out battery
 - Plug in battery and wait one second
@@ -38,6 +36,8 @@ If the device did not automatically start in pairing mode (LED blinking), you ca
 - Plug in battery
 
 The LED should now be blinking with 5-10 second interval.
+
+Video guide: [https://www.youtube.com/watch?v=LkbnLPhi5Ts](https://www.youtube.com/watch?v=LkbnLPhi5Ts)
 
 ### Switch type
 MULTI-ZIG-SW has two modes for the four inputs: Switch and multi-click.
