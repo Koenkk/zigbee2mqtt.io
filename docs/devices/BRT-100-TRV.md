@@ -38,9 +38,7 @@ In the past there have been at least 2 revisions of this device where Zigbee2MQT
 * [BRT-100-TRV OTA broken / flash ZT5](https://github.com/Koenkk/zigbee2mqtt/issues/19173)
 * [Moes BRT-100-TRV not reporting after OTA update](https://github.com/Koenkk/zigbee2mqtt/issues/7941)
 
-In this situation a firmware update made the device unable to connect to the Zigbee network. As of Zigbee2MQTT 1.33.3 had been updated to disable OTA updates for the first revision with this problem but the last revision could still be updated with an incompatible firmware until the next release.
-
-As OTA updates are not under the control of Zigbee2MQTT which can only disable updates when problems occur. You should check that there isn't a faulty OTA update for your current device revision and avoid updating if there isn't a specific need for it.
+In this situation a firmware update made the device unable to connect to the Zigbee network. As of Zigbee2MQTT 1.33.3 all OTA updates for this device have been disabled, if you are running an older Zigbee2MQTT version it is recommended to not do any OTA updates.
 <!-- Notes END: Do not edit below this line -->
 
 
