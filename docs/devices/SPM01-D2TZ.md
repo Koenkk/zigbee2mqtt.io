@@ -1,7 +1,7 @@
 ---
-title: "TuYa SPM01 control via MQTT"
-description: "Integrate your TuYa SPM01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-06-01T08:16:21
+title: "Yagusmart SPM01-D2TZ control via MQTT"
+description: "Integrate your Yagusmart SPM01-D2TZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-11-01T18:54:40
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa SPM01
+# Yagusmart SPM01-D2TZ
 
 |     |     |
 |-----|-----|
-| Model | SPM01  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Model | SPM01-D2TZ  |
+| Vendor  | [Yagusmart](/supported-devices/#v=Yagusmart)  |
 | Description | Smart energy monitor for 1P+N system |
 | Exposes | voltage, power, current, energy, produced_energy, linkquality |
-| Picture | ![TuYa SPM01](https://www.zigbee2mqtt.io/images/devices/SPM01.jpg) |
+| Picture | ![Yagusmart SPM01-D2TZ](https://www.zigbee2mqtt.io/images/devices/SPM01-D2TZ.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

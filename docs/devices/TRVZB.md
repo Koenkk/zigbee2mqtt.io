@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | TRVZB  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
-| Description | Zigbee thermostat |
-| Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), battery, battery_low, linkquality |
+| Description | Zigbee thermostatic radiator valve |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), battery, battery_low, lock (state), linkquality |
 | Picture | ![SONOFF TRVZB](https://www.zigbee2mqtt.io/images/devices/TRVZB.jpg) |
 
 
@@ -56,6 +56,11 @@ Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
+
+### Child lock (lock)
+The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
+It's not possible to write (`/set`) this value.
+To read the current state of this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

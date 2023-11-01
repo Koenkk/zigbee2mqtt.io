@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0207_water_leak_detector_3  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee water leak sensor |
-| Exposes | water_leak, tamper, battery_low, battery, linkquality |
+| Exposes | water_leak, battery_low, battery, tamper, linkquality |
 | Picture | ![TuYa TS0207_water_leak_detector_3](https://www.zigbee2mqtt.io/images/devices/TS0207_water_leak_detector_3.jpg) |
 
 
@@ -38,12 +38,6 @@ Value can be found in the published state on the `water_leak` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` water leak is ON, if `false` OFF.
 
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
-
 ### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
@@ -56,6 +50,12 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Tamper (binary)
+Indicates whether the device is tampered.
+Value can be found in the published state on the `tamper` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` tamper is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

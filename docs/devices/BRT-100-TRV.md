@@ -42,9 +42,6 @@ In this situation a firmware update made the device unable to connect to the Zig
 <!-- Notes END: Do not edit below this line -->
 
 
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
-
 
 
 ## Exposes

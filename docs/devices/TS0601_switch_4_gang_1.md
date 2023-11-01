@@ -1,7 +1,7 @@
 ---
-title: "TuYa TS0601_switch_4_gang control via MQTT"
-description: "Integrate your TuYa TS0601_switch_4_gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2021-01-31T22:24:43Z
+title: "TuYa TS0601_switch_4_gang_1 control via MQTT"
+description: "Integrate your TuYa TS0601_switch_4_gang_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-11-01T18:54:40
 pageClass: device-page
 ---
 
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_switch_4_gang
+# TuYa TS0601_switch_4_gang_1
 
 |     |     |
 |-----|-----|
-| Model | TS0601_switch_4_gang  |
+| Model | TS0601_switch_4_gang_1  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 4 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS0601_switch_4_gang](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_4_gang.jpg) |
+| Picture | ![TuYa TS0601_switch_4_gang_1](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_4_gang_1.jpg) |
+| White-label | Norklmes MKS-CM-W5, Somgoms ZSQB-SMB-ZB, Moes WS-EUB1-ZG, AVATTO ZGB-WS-EU |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

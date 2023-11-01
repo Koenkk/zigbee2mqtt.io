@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | BSEN-CV  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
-| Description | Door/window contact II |
-| Exposes | battery_low, contact, action, linkquality |
+| Description | Door/window contact II plus |
+| Exposes | battery_low, contact, vibration, action, linkquality |
 | Picture | ![Bosch BSEN-CV](https://www.zigbee2mqtt.io/images/devices/BSEN-CV.jpg) |
 
 
@@ -43,6 +43,12 @@ Indicates if the contact is closed (= true) or open (= false).
 Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
+
+### Vibration (binary)
+Indicates whether the device detected vibration.
+Value can be found in the published state on the `vibration` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` vibration is ON, if `false` OFF.
 
 ### Action (enum)
 Triggered action (e.g. a button click).
