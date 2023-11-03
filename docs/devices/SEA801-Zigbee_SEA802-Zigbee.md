@@ -31,6 +31,38 @@ pageClass: device-page
 
 * SEA801-Zigbee (LCD display on the front, several buttons): Long hold the "AUTO/MANU" and "+" Button until the LCD display shows "----"
 * SEA802-Z01 (white LED display on the side, rotary plate): Turn the rotary plate to decrease the temperature until the LED dots show "OF", then long press until the display changes to "--"
+
+### Weekly Schedule
+
+It's not possible to read (`/get`) this value.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload
+
+`dayofweek` 1-7, 1=sunday
+`transitionTime` Minutes after midnight
+`numoftrans` It seems that the maximum number of transitions is 4 
+
+``` json
+{
+  "weekly_schedule": {
+    "1": {
+      "dayofweek": 1,
+      "numoftrans": 2,
+      "mode": 1,
+      "transitions": [
+        {
+          "transitionTime": 360,
+          "heatSetpoint": 23
+        },
+        {
+          "transitionTime": 570,
+          "heatSetpoint": 2200
+        }
+      ]
+    }
+  }
+}
+```
+
 <!-- Notes END: Do not edit below this line -->
 
 
