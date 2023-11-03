@@ -75,6 +75,10 @@ If value equals `ON` heating is ON, if `OFF` OFF.
 It's not possible to read (`/get`) this value.
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload
 
+`dayofweek` 1-7, 1=sunday
+`transitionTime` Minutes after midnight
+`numoftrans` It seems that the maximum number of transitions is 4 
+
 ``` json
 {
   "weekly_schedule": {
@@ -96,10 +100,6 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
   }
 }
 ```
-
-`dayofweek` 1-7, 1=sunday
-`transitionTime` Minutes after midnight
-`numoftrans` It seems that the maximum number of transitions is 4
 
 ### Climate 
 This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `system_mode`, `local_temperature_calibration`.
