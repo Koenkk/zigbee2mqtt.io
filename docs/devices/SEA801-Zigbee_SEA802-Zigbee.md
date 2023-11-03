@@ -102,7 +102,6 @@ Value can be found in the published state on the `heating` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `ON` heating is ON, if `OFF` OFF.
 
-
 ### Climate 
 This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `system_mode`, `local_temperature_calibration`.
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. Reading (`/get`) this attribute is not possible.
