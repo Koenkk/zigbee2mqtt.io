@@ -34,7 +34,7 @@ To pair the device:
 By default, the controls of the remote are not exposed. This is due to the non-standard way the remote communicates.
 
 In order to expose the controls, you need to:
-- Open `Zigbee2MQTT` (the web interafce)
+- Open `Zigbee2MQTT` (the web interface)
 - Go to the `Extensions` tab
 - Click the `+`-button to add a new extension file
 - Enter a name for the extension file, e.g.: `miboxer-fut089z-controls-exposer.js`
@@ -52,7 +52,7 @@ By default they will report 3 sensors
 The extension adds 3 more sensors:
 - `Brightness` (%)
 - `Color Temperature` (mireds)
-- `Color` (not implmented yet)
+- `Color` (not implemented yet)
 
 As well as on trigger for each button:
 - button_group_1_on
@@ -84,7 +84,7 @@ mode: restart
 (You can easily create them automatically by going to the Device in Home Assistant and adding an Automation from there.)
 
 Example automation using the brightness slider:  
-(If you ccreate such an Automation automatically thorugh the Device's page in Home Assistant, it will create a buggy `platform: device` automation, please use `platform: state` instead as shown blow.)
+(If you create such an Automation automatically through the Device's page in Home Assistant, it will create a buggy `platform: device` automation, please use `platform: state` instead as shown blow.)
 ``` YAML
 alias: MiBoxerRemote1_BrightnessSlider
 description: ""
@@ -123,7 +123,7 @@ To directly control lights or smartplugs without going through MQTT (and Home As
 - first create a ZigBee group with the correct ID (10X), 
 - name it like you wish,
 - then add the devices you intend to control to that group (pay attention to use the right termination point).
-  Very important : do NOT add the remote itself to the group.
+  Very important: do NOT add the remote itself to the group.
 
 The `ON` and `OFF` Master Buttons on top of the remote control an extra zone with Group ID 108. 
 You can for instance use it as a master switch or for just another light/smartplug etc...

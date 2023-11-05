@@ -28,7 +28,7 @@ pageClass: device-page
 
 ### Binding
 
-No sensible [binding](../guide/usage/binding.md) functionallity available. 
+No sensible [binding](../guide/usage/binding.md) functionality available. 
 
 Only the genOta and genTime clusters can be bound.
 
