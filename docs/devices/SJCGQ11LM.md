@@ -26,7 +26,7 @@ pageClass: device-page
 ## Notes
 
 ### Battery
-Usees CR2032 battery.
+Uses CR2032 battery.
 
 ### Pairing
 Press and hold the reset button by pressing hard on the top of the device (water drop logo) for +- 5 seconds (until the blue light inside the device, under the water drop starts blinking). After this the device will automatically join.
