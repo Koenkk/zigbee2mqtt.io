@@ -53,6 +53,7 @@ git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
 npm ci
+# If this command fails and returns an ERR_SOCKET_TIMEOUT error, run this command instead: npm ci  --maxsockets 1
 
 # Build the app
 npm run build
