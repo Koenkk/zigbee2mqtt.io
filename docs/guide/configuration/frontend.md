@@ -23,7 +23,7 @@ frontend: true
 frontend:
   # Optional, default 8080
   port: 8080
-  # Optional, default 0.0.0.0. Opens a unix socket when given a path instead of an address (e.g. '/run/zigbee2mqtt/zigbee2mqtt.sock')
+  # Optional, empty by default to listen on both IPv4 and IPv6. Opens a unix socket when given a path instead of an address (e.g. '/run/zigbee2mqtt/zigbee2mqtt.sock')
   host: 0.0.0.0
   # Optional, enables authentication, disabled by default
   auth_token: your-secret-token
