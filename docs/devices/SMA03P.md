@@ -1,6 +1,6 @@
 ---
-title: "Mercator SMA03P control via MQTT"
-description: "Integrate your Mercator SMA03P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Mercator Ikuü SMA03P control via MQTT"
+description: "Integrate your Mercator Ikuü SMA03P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
@@ -11,21 +11,22 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SMA03P
+# Mercator Ikuü SMA03P
 
 |     |     |
 |-----|-----|
 | Model | SMA03P  |
-| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
-| Description | Ikuü temperature & humidity sensor |
+| Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
+| Description | Environmental sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
-| Picture | ![Mercator SMA03P](https://www.zigbee2mqtt.io/images/devices/SMA03P.jpg) |
+| Picture | ![Mercator Ikuü SMA03P](https://www.zigbee2mqtt.io/images/devices/SMA03P.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

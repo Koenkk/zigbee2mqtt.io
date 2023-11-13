@@ -29,27 +29,28 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
-### Water_flow (numeric)
+### Water flow (numeric)
 Current water flow in %..
 Value can be found in the published state on the `water_flow` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Last_watering_duration (numeric)
+### Last watering duration (numeric)
 Last watering duration in seconds..
 Value can be found in the published state on the `last_watering_duration` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `sec`.
 
-### Remaining_watering_time (numeric)
+### Remaining watering time (numeric)
 Remaning watering time (for auto shutdown). Updates every minute, and every 10s in the last minute..
 Value can be found in the published state on the `remaining_watering_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `sec`.
 
-### Valve_state (numeric)
+### Valve state (numeric)
 Set valve to %..
 Value can be found in the published state on the `valve_state` property.
 It's not possible to read (`/get`) this value.
@@ -57,7 +58,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Shutdown_timer (numeric)
+### Shutdown timer (numeric)
 Auto shutdown in seconds..
 Value can be found in the published state on the `shutdown_timer` property.
 It's not possible to read (`/get`) this value.
@@ -65,7 +66,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `14400`.
 The unit of this value is `sec`.
 
-### Valve_state_auto_shutdown (numeric)
+### Valve state auto shutdown (numeric)
 Set valve to % with auto shutdown..
 Value can be found in the published state on the `valve_state_auto_shutdown` property.
 It's not possible to read (`/get`) this value.

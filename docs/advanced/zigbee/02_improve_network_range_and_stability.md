@@ -7,16 +7,20 @@ In case you are experiencing an unstable or bad network range you can do the fol
 ## Adapter
 Use a [recommended](../../guide/adapters/README.md) adapter, especially the CC2530 and CC2531 are known to perform poorly.
 
+## Avoid devices from AwoX
+It is known that AwoX devices cause network issues. In case you are having issues, remove them from your network.
+It [may help](https://github.com/Koenkk/zigbee2mqtt/discussions/18366) to OTA update your device via the "AwoX HomeControl" app over Bluetooth.
+
 ## USB based adapter
 The range of these adapters can greatly be improved when connecting them with an USB extension
 cable instead of directly plugging it into the computer (e.g. Raspberry Pi). When plugged directly into the computer, the antenna suffers from interference of radio signals and electrical components of the computer. Also be sure not to position the adapter too close
 to any other radio transmitting devices (e.g. a Wi-Fi router) or an SSD. 
 
-A **USB extension cable** of 50 cm is already enough to reduce the interference. Preferably get one with shielding as this may give better results ([source](https://www.reddit.com/r/homeassistant/comments/10ebkis/psareminder_about_zigbee_interference/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)).
+A **USB extension cable** of 50 cm is already enough to reduce the interference. Preferably get one with shielding as this may give better results ([source](https://www.reddit.com/r/homeassistant/comments/10ebkis/psareminder_about_zigbee_interference/)).
 
 **Do not underestimate this!** Placing your adapter close to an USB port can kill the radio signal entirely as demonstrated in [this article](https://www.unit3compliance.co.uk/2-4ghz-intra-system-or-self-platform-interference-demonstration/).
 
-Aditionally, it may help to plug the adapter to a USB 2 instead of USB 3 port.
+Additionally, it may help to plug the adapter to a USB 2 instead of USB 3 port.
 
 ### Try different orientations of the adapter
 RF connection between the adapter and other devices also depends on the way it is oriented in space. You might be having very poor `linkquality` reports and intermittent ping failures but once the adapter is rotated a little it all can change greatly without re-locating the coordinator far away. Try to experiment with positioning and orienting the adapter in space while monitoring the `linkquality` values reported. You might find it useful to buy a small rotating USB connector like this:
@@ -26,12 +30,20 @@ RF connection between the adapter and other devices also depends on the way it i
 ## Reduce Wi-Fi interference by changing the Zigbee channel
 **Changing the Zigbee channel requires repairing of all your devices!**
 
-As Wi-Fi and Zigbee both operate on the same frequency space (2.4 GHz), they can interfere with each other. By using the correct Zigbee channel, interference with Wi-Fi can (partly) be avoided. A good article explaining this is [Zigbee and Wi-Fi Coexistence](https://www.metageek.com/training/resources/zigbee-wifi-coexistence.html).
+As Wi-Fi and Zigbee both operate on the same frequency space (2.4 GHz), they can interfere with each other. By using the correct Zigbee channel, interference with Wi-Fi can (partly) be avoided. A good article explaining this is [Zigbee and Wi-Fi Coexistence](https://www.metageek.com/training/resources/zigbee-wifi-coexistence/).
 
 To change the Zigbee channel Zigbee2MQTT uses you have to set the [`channel` in `configuration.yaml`](../../guide/configuration/zigbee-network.md).
 
 ## Interference from other 2.4 GHz devices
 Any device using the open 2.4 GHz spectrum could interfere with Zigbee such as Bluetooth or gaming devices like Logitech “Unifying” or “Lightspeed” or Razer “Hyperspeed Wireless”.
+
+This includes devices that you may not realize _are_ 2.4 GHz. Check anything that is wireless including wireless audio transmitters such as:
+- [JL Audio JL Link TRX](https://www.crutchfield.com/S-kjc9jL5lfL6/p_136TRX/JL-Audio-JLINK-TRX-High-Fidelity-Audio-Transmitter-Receiver-Kit.html)
+- [SVS Soundpath (gen 1)](https://www.svsound.com/products/soundpath-wireless-audio-adapter)
+
+Utility companies are known to use Zigbee with their "smart meters" but may not advertise them as Zigbee. 
+Other devices that broadcast Zigbee, or modified versions of Zigbee are known to cause issues. 
+For example If you are still using a Philips Hue Hub it is suggested to add the bulbs to your Zigbee2MQTT network or make sure they are on different channels.
 
 ## Adding routers to your network
 "Zigbee is a low-power wireless mesh network standard targeted at battery-powered devices" (see [Wikipedia](https://en.wikipedia.org/wiki/Zigbee)). Yet, low transmission power can be the cause of an unstable or unreliable network:
@@ -55,4 +67,16 @@ If you assume to have routing problems, try [sending an MQTT request to the brid
 For more technical details on Zigbee routing, see the ["5. Routing" in the TI Z-Stack User Guide](https://software-dl.ti.com/simplelink/esd/plugins/simplelink_zigbee_sdk_plugin/1.60.01.09/exports/docs/zigbee_user_guide/html/zigbee/developing_zigbee_applications/z_stack_developers_guide/z-stack-overview.html#routing), for example.
 
 ## Hardware
-Although Zigbee2MQTT does not require many resources, the hardware you are running Zigbee2MQTT on can impact the performance. This is especially true when using low-power hardware like the Raspbery Pi 3. Make sure that enough resources (CPU/memory) is free. For example, running Home Assistant + Zigbee2MQTT Home Assistant addon on the Raspberry Pi 3 may give bad performance.
+Although Zigbee2MQTT does not require many resources, the hardware you are running Zigbee2MQTT on can impact the performance. This is especially true when using low-power hardware like the Raspberry Pi 3. Make sure that enough resources (CPU/memory) is free. For example, running Home Assistant + Zigbee2MQTT Home Assistant addon on the Raspberry Pi 3 may give bad performance.
+
+## Broadcasts
+Zigbee traffic can be categorized as either *Unicast* or *Broadcast*:
+
+- *Unicast* is an addressed message, usually between a Zigbee device and the coordinator, possibly through some intermediate devices
+- *Broadcast* is a special type of message that is designed to reach **all** devices in the network
+
+When a device receives a broadcast message for the first time, it will re-transmit it at least once. The device keeps track of broadcasts that have recently been re-transmitted to prevent repeating messages forever. For large networks, broadcasts can generate a lot of traffic, and it takes time for the message to propagate to all devices. 
+
+Zigbee can only sustain an average rate of 1 broadcast per second, and multiple broadcasts within a short timespan increases latency. For more information, [see this application note by Silicon Labs](https://www.silabs.com/documents/login/application-notes/an1138-zigbee-mesh-network-performance.pdf). 
+
+Broadcasts are mostly used for network management tasks such as finding routes to devices, but also by [Zigbee Groups](../../guide/usage/groups.md) and [Green Power devices](./01_zigbee_network.md). It is generally recommended to use broadcasts sparingly.

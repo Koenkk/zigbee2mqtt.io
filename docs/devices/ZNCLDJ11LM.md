@@ -81,6 +81,7 @@ Home Assistant automation example:
 Motor leaves calibration mode automatically after it reaches the both open and close curtain position limits. Calibration is mandatory for proper position reporting and ability to set intermediate positions.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -105,7 +106,7 @@ Value can be found in the published state on the `running` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` running is ON, if `false` OFF.
 
-### Motor_state (enum)
+### Motor state (enum)
 Motor state.
 Value can be found in the published state on the `motor_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

@@ -25,7 +25,7 @@ The following additional hardware is required in order to flash the CC2531:
 3. Connect **BOTH** the `CC2531 USB sniffer` and the `CC debugger` to your PC using USB.
 3. If the light on the CC debugger is RED press set reset button on the CC debugger. The light on the CC debugger should now turn GREEN. If not use [CC debugger user guide](http://www.ti.com/lit/ug/swru197h/swru197h.pdf) to troubleshoot your problem.
 ![How to connect](../../../images/connected.jpg)
-4. Download the firmware [CC2531_DEFAULT_20211115.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip)
+4. Download the firmware [CC2531_DEFAULT_20211115.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip)
 5. Start SmartRF Flash Programmer, setup as shown below and press `Perform actions`. Make sure to select the `.hex` file, not the `.bin` file!
 ![SmartRF Flash Programmer](../../../images/smartrf.png)
 
@@ -37,30 +37,53 @@ Credits to [@Frans-Willem](https://github.com/frans-Willem) for majority of inst
 * Ubuntu/Debian: libusb-1.0-0-dev, libboost-all-dev, autoconf, libtool
 * Fedora: dh-autoreconf, boost-devel, libusb1-devel, gcc-c++
 * Archlinux: dh-autoreconf, libusb, boost
-* macOS: `brew install autoconf automake libusb boost@1.76 pkgconfig libtool`
+* macOS: `brew install autoconf automake libusb boost pkgconfig libtool`
 * Raspbian: dh-autoreconf, libusb-1.0-0-dev, libboost-all-dev
 
 2. Build cc-tool
+
+* Linux:
 ```bash
+
 git clone https://github.com/dashesy/cc-tool.git
 cd cc-tool
-CPPFLAGS=-I/usr/local/include \
-LDFLAGS=-I/usr/local/include \
+
+CPPFLAGS="-I/usr/local/include" \
+LDFLAGS="-I/usr/local/include" \
  ./bootstrap
 
 CPPFLAGS="-I/usr/local/opt/boost@1.76/include" \
 CXXFLAGS="-std=c++0x" \
 LDFLAGS="-L/usr/local/opt/boost@1.76/lib" \
-LIBUSB_CFLAGS=-I/usr/local/include/libusb-1.0 \
+LIBUSB_CFLAGS="-I/usr/local/include/libusb-1.0" \
  ./configure
 
 make
 ```
+* macOS:
+```bash
+
+git clone https://github.com/dashesy/cc-tool.git
+cd cc-tool
+
+CPPFLAGS="-I/opt/homebrew/include" \
+LDFLAGS="-I/opt/homebrew/include" \
+ ./bootstrap
+
+CPPFLAGS="-I/opt/homebrew/include" \
+CXXFLAGS="-std=c++0x" \
+LDFLAGS="-L/opt/homebrew/lib" \
+LIBUSB_CFLAGS="-I/opt/homebrew/include" \
+ ./configure
+
+make
+```
+
 3. Connect `CC debugger --> Downloader cable CC2531 --> CC2531 USB sniffer`.
 4. Connect **BOTH** the `CC2531 USB sniffer` and the `CC debugger` to your PC using USB.
 5. If the light on the CC debugger is RED, press the Reset button on the CC debugger. The light on the CC debugger should now turn GREEN. If not, try to reboot and retry or follow the [CC debugger user guide](http://www.ti.com/lit/ug/swru197h/swru197h.pdf) to troubleshoot your problem.
 ![How to connect](../../../images/connected.jpg)
-6. Download the firmware [CC2531_DEFAULT_20211115.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip).
+6. Download the firmware [CC2531_DEFAULT_20211115.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip).
 7. Flash your firmware:
 ```
 sudo ./cc-tool -e -w CC2531ZNP-Prod.hex

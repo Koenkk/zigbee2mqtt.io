@@ -47,7 +47,21 @@ Unsupported:
 - HS1SA-Z : Z-wave
 
 The product code should end in *-M* for the Zigbee version. The label inside the battery compartment should also show the Zigbee logo.
+
+### Issue with regular (false) alarm notifications
+
+If your smoke detector is regularily signalling an alarm over Zigbee (every 1-2 days), without actually making any alarm sound, it is probably affected by a firmware bug. This can be worked around as follows:
+
+1. Open the device in the Z2M web interface
+2. Navigate to the Dev console
+3. Select the cluster `ssIasZone` from the dropdown list
+4. Select the attributes `zoneState`, `zoneType`, `zoneStatus` and `zoneId`
+5. Click the *Read* button
+5. Wake the device immediately after pressing the *Read* button by pressing it's main button (test alarm button).
+
+Timing is important here so you might need a fews tries. Once you have read these attributes successfully the false alarm messages should be gone. ([Source](https://github.com/dresden-elektronik/deconz-rest-plugin/issues/5824#issuecomment-1092089211))
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -59,11 +73,11 @@ Value can be found in the published state on the `smoke` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` smoke is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported..

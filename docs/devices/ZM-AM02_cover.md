@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -45,13 +46,13 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 ### Options (composite)
 - `motor_speed` (numeric): Motor speed max value is 255
 
-### Motor_working_mode (enum)
+### Motor working mode (enum)
 Value can be found in the published state on the `motor_working_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_working_mode": NEW_VALUE}`.
 The possible values are: `continuous`, `intermittently`.
 
-### Percent_state (numeric)
+### Percent state (numeric)
 Value can be found in the published state on the `percent_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -63,7 +64,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
 The possible values are: `morning`, `night`.
 
-### Motor_direction (enum)
+### Motor direction (enum)
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.

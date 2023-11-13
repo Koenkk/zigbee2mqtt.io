@@ -1,6 +1,6 @@
 ---
-title: "Mercator SPP04G control via MQTT"
-description: "Integrate your Mercator SPP04G via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Mercator Ikuü SPP04G control via MQTT"
+description: "Integrate your Mercator Ikuü SPP04G via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-08-01T15:06:58
 pageClass: device-page
 ---
@@ -11,21 +11,22 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SPP04G
+# Mercator Ikuü SPP04G
 
 |     |     |
 |-----|-----|
 | Model | SPP04G  |
-| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
-| Description | Ikuü Quad Power Point |
+| Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
+| Description | Quad power point |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
-| Picture | ![Mercator SPP04G](https://www.zigbee2mqtt.io/images/devices/SPP04G.jpg) |
+| Picture | ![Mercator Ikuü SPP04G](https://www.zigbee2mqtt.io/images/devices/SPP04G.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -86,7 +87,7 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Power_outage_memory (enum)
+### Power outage memory (enum)
 Recover state after power outage.
 Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.

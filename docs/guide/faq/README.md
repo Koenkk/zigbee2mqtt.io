@@ -15,6 +15,7 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 ### No logging is shown at all
 - Make sure [joining is enabled](../usage/pairing_devices.md).
 - There can be too much interference, try connecting the coordinator USB through an USB extension cable. This problem occurs a lot when used in combination with a Raspberry Pi 3 and 4.
+- If you are using a Texas Instruments CC2652 or CC1352 based adapter, routers might be missing from the coordinator memory. Do a [coordinator check](../usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestcoordinator_check) and re-pair the missing routers.
 - If you are using a Raspberry Pi, try disconnecting any other USB devices. If after that pairing works, try connecting the USB devices via a powered USB hub.
 - Make sure that any other Zigbee networks/hubs are powered down. When you e.g. want to pair an IKEA bulb which was first paired to the IKEA gateway make sure to power down the IKEA gateway. If that doesn't help also try powering down all devices that are connected to the IKEA hub.
 - If it's a battery powered device, try replacing the battery.
@@ -35,12 +36,18 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - Try pairing close to a bulb (light) router instead of the coordinator.
 
 ## How do I migrate from one adapter to another?
-Want to migrate from e.g. a CC2531 to a more powerful adapter (e.g. ZZH)? Then follow these instructions:
+
+Want to migrate from e.g. a CC2530/CC2531 to a more powerful adapter (e.g. CC2652/CC1352)? Then follow these instructions below:
+
+::: warning
+Migration from one adapter to another requires backup and restore support which is so far only implemented for the Zstack adapter (Texas Instruments adapters). Backup and restore is **not supported** for any other adapters (ConBee/Raspbee, EZSP and Zigate).
+:::
+
 1. First make sure you are running the latest version of Zigbee2MQTT
 1. Stop Zigbee2MQTT
 1. Determine whether migrating [requires re-pairing of your devices](#what-does-and-does-not-require-repairing-of-all-devices)
     - If re-pairing is required: remove `data/coordinator_backup.json` (if it exists) and `data/database.db`
-    - If re-pairing is **not** required: [copy the ieee address of the old adpter into the new one](../adapters/flashing/copy_ieeaddr.html)
+    - If re-pairing is **not** required: [copy the ieee address of the old adapter into the new one](../adapters/flashing/copy_ieeaddr.html)
 1. Update the `serial` -> `port`  in your `configuration.yaml`
 1. Start Zigbee2MQTT
   - If re-pairing was required:
@@ -101,10 +108,11 @@ If after some uptime Zigbee2MQTT crashes with errors like: `SRSP - AF - dataRequ
 - Normally this can be fixed by replugging the adapter and restarting Zigbee2MQTT
 - If you are using a CC2530 or CC2531 adapter consider upgrading to one of the [recommended adapters](../adapters/README.md). The CC2530/CC2531 is considered legacy hardware and runs into memory corruption easily.
 - Make sure you are using the latest firmware on your adapter, see the [adapter page](../adapters/README.md) for a link to the latest firmware.
-- If using a Raspberry Pi; this problem can occur if you are using a bad power supply or when other USB devices are connected direclty to the Pi (especially occurs with external SSD), try connecting other USB devices through a powered USB hub.
+- If using a Raspberry Pi; this problem can occur if you are using a bad power supply or when other USB devices are connected directly to the Pi (especially occurs with external SSD), try connecting other USB devices through a powered USB hub.
 - Disable the USB autosuspend feature, if `cat /sys/module/usbcore/parameters/autosuspend` returns `1` or `2` it is enabled; to disable execute:
-```bash
-sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/&usbcore.autosuspend=-1 /' /etc/default/grub
-update-grub
-systemctl reboot
-```
+  ```bash
+  sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/&usbcore.autosuspend=-1 /' /etc/default/grub
+  update-grub
+  systemctl reboot
+  ``` 
+  - On a Raspberry Pi, you will need to instead edit `/boot/cmdline.txt` and add `usbcore.autosuspend=-1` to the end of the line.

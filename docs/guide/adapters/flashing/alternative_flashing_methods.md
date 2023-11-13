@@ -41,11 +41,11 @@ it should return :
 ```
 If you see 0000 or ffff, something is wrong and you should probably check your wiring.
 
-5. Download and extract the latest firmware [CC2531_DEFAULT_20211115.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip).
+5. Download and extract the latest firmware [CC2531_DEFAULT_20211115.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip).
 
 ```bash
 cd ~/flash_cc2531       #assuming you git-cloned the program to your home directory
-wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip
+wget https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip
 unzip CC2531_DEFAULT_20211115.zip  
 ```
 
@@ -115,7 +115,7 @@ int LED = 2; //GPIO2=D4 and the Blue LED on the WeMos D1 Mini and the ESP-12E mo
 
    ![](https://www.waveshare.com/img/devkit/CC-Debugger/CC-Debugger-JTAG-Header.jpg)
 
-   If you have a 3.3V Arduino you can optionaly connect `3.3V -> Target Voltage Sense (Pin 2)` and program the CC2531 without connecting the CC2531 to USB (in the next step).
+   If you have a 3.3V Arduino you can optionally connect `3.3V -> Target Voltage Sense (Pin 2)` and program the CC2531 without connecting the CC2531 to USB (in the next step).
 
    Connect the ESP8266 pins as described below to the debug header of the CC device
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_dimmer_1  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 1 gang smart dimmer |
-| Exposes | light (state, brightness, min_brightness, max_brightness), power_on_behavior, countdown, light_type, linkquality |
+| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, light_type, power_on_behavior, backlight_mode, linkquality |
 | Picture | ![TuYa TS0601_dimmer_1](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_1.jpg) |
 | White-label | Moes MS-105Z, Lerlink X706U, Moes ZS-EUD_1gang |
 
@@ -30,19 +30,13 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
 ### Light 
 This light supports the following features: `state`, `brightness`, `min_brightness`, `max_brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
-
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `previous`, `on`.
 
 ### Countdown (numeric)
 Countdown to turn device off after a certain time.
@@ -52,12 +46,26 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
-### Light_type (enum)
+### Light type (enum)
 Type of light attached to the device.
 Value can be found in the published state on the `light_type` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_type": NEW_VALUE}`.
 The possible values are: `led`, `incandescent`, `halogen`.
+
+### Power-on behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `previous`, `on`.
+
+### Backlight mode (enum)
+Mode of the backlight.
+Value can be found in the published state on the `backlight_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+The possible values are: `off`, `normal`, `inverted`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

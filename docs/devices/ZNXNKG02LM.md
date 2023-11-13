@@ -23,9 +23,14 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
 
+Press and hold the button on the device until the blue light starts blinking, release it and the pairing should begin.
+If you're having problems pairing, try keeping the device alive (press the button every second) after pairing started, until pairing completed
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -55,38 +60,38 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `hold`, `release`, `start_rotating`, `rotation`, `stop_rotating`.
 
-### Operation_mode (enum)
+### Operation mode (enum)
 Button mode.
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `event`, `command`.
 
-### Action_rotation_angle (numeric)
+### Action rotation angle (numeric)
 Rotation angle.
 Value can be found in the published state on the `action_rotation_angle` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `*`.
 
-### Action_rotation_angle_speed (numeric)
+### Action rotation angle speed (numeric)
 Rotation angle speed.
 Value can be found in the published state on the `action_rotation_angle_speed` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `*`.
 
-### Action_rotation_percent (numeric)
+### Action rotation percent (numeric)
 Rotation percent.
 Value can be found in the published state on the `action_rotation_percent` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Action_rotation_percent_speed (numeric)
+### Action rotation percent speed (numeric)
 Rotation percent speed.
 Value can be found in the published state on the `action_rotation_percent_speed` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Action_rotation_time (numeric)
+### Action rotation time (numeric)
 Rotation time.
 Value can be found in the published state on the `action_rotation_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

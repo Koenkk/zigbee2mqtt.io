@@ -1,6 +1,6 @@
 ---
-title: "ENVILAR ZG_LED_DRIVER42CC control via MQTT"
-description: "Integrate your ENVILAR ZG_LED_DRIVER42CC via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Envilar ZG_LED_DRIVER42CC control via MQTT"
+description: "Integrate your Envilar ZG_LED_DRIVER42CC via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-08-01T15:06:58
 pageClass: device-page
 ---
@@ -11,21 +11,22 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# ENVILAR ZG_LED_DRIVER42CC
+# Envilar ZG_LED_DRIVER42CC
 
 |     |     |
 |-----|-----|
 | Model | ZG_LED_DRIVER42CC  |
-| Vendor  | [ENVILAR](/supported-devices/#v=ENVILAR)  |
+| Vendor  | [Envilar](/supported-devices/#v=Envilar)  |
 | Description | Zigbee LED driver |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![ENVILAR ZG_LED_DRIVER42CC](https://www.zigbee2mqtt.io/images/devices/ZG_LED_DRIVER42CC.jpg) |
+| Picture | ![Envilar ZG_LED_DRIVER42CC](https://www.zigbee2mqtt.io/images/devices/ZG_LED_DRIVER42CC.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -71,7 +72,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
-### Power_on_behavior (enum)
+### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.

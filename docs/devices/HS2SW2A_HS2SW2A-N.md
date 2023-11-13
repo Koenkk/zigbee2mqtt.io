@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -48,7 +49,7 @@ The current state of this switch is in the published state under the `state_righ
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

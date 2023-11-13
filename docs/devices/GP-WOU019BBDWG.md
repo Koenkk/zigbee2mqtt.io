@@ -23,9 +23,12 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### No current and voltage
+This plug does not support voltage and current reporting, see [this issue](https://github.com/Koenkk/zigbee2mqtt/issues/5198) for more information.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -69,7 +72,7 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Power_on_behavior (enum)
+### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.

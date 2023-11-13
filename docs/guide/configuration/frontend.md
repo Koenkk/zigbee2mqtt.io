@@ -7,7 +7,7 @@ sidebarDepth: 1
 Ongoing discussion about the frontend can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/4266)
 :::
 
-Zigbee2MQTT has a built-in webbased frontend. 
+Zigbee2MQTT has a built-in web-based frontend. 
 
 ![Frontend](../../images/frontend.png)
 
@@ -23,7 +23,7 @@ frontend: true
 frontend:
   # Optional, default 8080
   port: 8080
-  # Optional, default 0.0.0.0
+  # Optional, default 0.0.0.0. Opens a unix socket when given a path instead of an address (e.g. '/run/zigbee2mqtt/zigbee2mqtt.sock')
   host: 0.0.0.0
   # Optional, enables authentication, disabled by default
   auth_token: your-secret-token
@@ -82,3 +82,42 @@ server {
     }
 }
 ```
+
+## Apache2 proxy configuration
+Credit: [Florian Metzger-Noel](https://stackoverflow.com/questions/38838567/proxy-websocket-wss-to-ws-apache/60506715#60506715)
+
+Enable these modules using 
+```a2enmod proxy proxy_wstunnel proxy_http rewrite```
+
+```                                                                                                             
+<VirtualHost *:80>
+   ServerName example.com
+   ServerAdmin info@example.com
+
+
+    ProxyRequests off 
+    ProxyVia on      
+    RewriteEngine On 
+
+    RewriteEngine On
+    RewriteCond %{HTTP:Connection} Upgrade [NC]
+    RewriteCond %{HTTP:Upgrade} websocket [NC]
+    RewriteRule /(.*) ws://localhost:8080/$1 [P,L]
+
+    ProxyPass               / http://localhost:8080/           
+    ProxyPassReverse        / http://localhost:8080/
+
+
+   <Proxy *>
+   Order deny,allow
+   Allow from all
+   </Proxy>
+
+   ErrorLog ${APACHE_LOG_DIR}/company2-error.log
+   CustomLog ${APACHE_LOG_DIR}/company2-access.log combined
+
+</VirtualHost>
+
+
+```
+

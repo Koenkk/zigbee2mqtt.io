@@ -45,6 +45,7 @@ More detailed information about this can be found [here](https://community.hubit
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)
@@ -66,7 +67,7 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

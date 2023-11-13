@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | DLKZMK11LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara single switch module T1 (with neutral) |
-| Exposes | switch (state), power, energy, device_temperature, voltage, power_outage_memory, led_disabled_night, switch_type, linkquality |
+| Exposes | switch (state), power, energy, device_temperature, voltage, current, power_outage_memory, led_disabled_night, switch_type, linkquality |
 | Picture | ![Xiaomi DLKZMK11LM](https://www.zigbee2mqtt.io/images/devices/DLKZMK11LM.jpg) |
 
 
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -50,6 +51,10 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
+* `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
 
 ## Exposes
 
@@ -71,7 +76,7 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -83,21 +88,27 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Power_outage_memory (binary)
+### Current (numeric)
+Instantaneous measured electrical current.
+Value can be found in the published state on the `current` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `A`.
+
+### Power outage memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.
 Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-If value equals `true` power_outage_memory is ON, if `false` OFF.
+If value equals `true` power outage memory is ON, if `false` OFF.
 
-### Led_disabled_night (binary)
+### LED disabled night (binary)
 Enable/disable the LED at night.
 Value can be found in the published state on the `led_disabled_night` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
-If value equals `true` led_disabled_night is ON, if `false` OFF.
+If value equals `true` lED disabled night is ON, if `false` OFF.
 
-### Switch_type (enum)
+### Switch type (enum)
 Wall switch type.
 Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.

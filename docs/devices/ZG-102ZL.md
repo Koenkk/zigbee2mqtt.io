@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-102ZL  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Luminance door sensor |
-| Exposes | contact, illuminance, battery, linkquality |
+| Exposes | contact, illuminance, battery, illuminance_interval, linkquality |
 | Picture | ![TuYa ZG-102ZL](https://www.zigbee2mqtt.io/images/devices/ZG-102ZL.jpg) |
 
 
@@ -30,6 +30,7 @@ To start pairing, press the button (pinhole on the side of the device) using a
 pin/paperclip for approx. 5 seconds. The led will turn on, then start blinking while the
 pairing process is in progress.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -53,6 +54,14 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Illuminance interval (numeric)
+Brightness acquisition interval (refresh and update only while active).
+Value can be found in the published state on the `illuminance_interval` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `720`.
+The unit of this value is `minutes`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | GL-C-008P  |
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee LED Controller RGB+CCT (pro) |
-| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, power_on_behavior, linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
 | Picture | ![Gledopto GL-C-008P](https://www.zigbee2mqtt.io/images/devices/GL-C-008P.jpg) |
 | White-label | Gledopto GL-C-001P, Gledopto GL-C-002P |
 
@@ -45,6 +45,7 @@ The Gledopto GL-C-001P is a 5 in 1 smart LED controller which can identify itsel
 You can switch between the modes using the `Opt` button on the device. After switching modes Zigbee2MQTT will automatically detect the new mode. Note that during the pairing process the log message `identified as: Gledopto Zigbee LED Controller XXX`  might state  model that differs from currently selected one. You should wait for the log message `Detected Gledopto device mode change` that should follow shortly afterwards meaning that Zigbee2MQTT has recognized the currently selected mode.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -65,8 +66,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`, `color_xy`, `color_hs`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
-- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `158` and `495`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warm`, `warmest`.
-- `color_temp_startup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup": VALUE}` where `VALUE` is a number between `158` and `495`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warm`, `warmest`, `previous`.
+- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `158` and `495`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warm`, `warmest`.
+- `color_temp_startup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup": VALUE}` where `VALUE` is a number between `158` and `495`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warm`, `warmest`, `previous`.
 - `color_xy`: To control the XY color (CIE 1931 color space) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color": {"x": X_VALUE, "y": Y_VALUE}}` (e.g. `{"color":{"x":0.123,"y":0.123}}`). To read the XY color send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color":{"x":"","y":""}}`. Alternatively it is possible to set the XY color via RGB:
   - `{"color": {"r": R, "g": G, "b": B}}` e.g. `{"color":{"r":46,"g":102,"b":150}}`
   - `{"color": {"rgb": "R,G,B"}}` e.g. `{"color":{"rgb":"46,102,150"}}`
@@ -110,13 +111,6 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
-
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

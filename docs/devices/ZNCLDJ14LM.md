@@ -27,6 +27,7 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -51,13 +52,13 @@ Value can be found in the published state on the `running` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` running is ON, if `false` OFF.
 
-### Motor_state (enum)
+### Motor state (enum)
 The current state of the motor..
 Value can be found in the published state on the `motor_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `closing`, `opening`, `stop`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages (since last pairing).
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

@@ -1,6 +1,6 @@
 ---
-title: "Miboxer FUT035Z control via MQTT"
-description: "Integrate your Miboxer FUT035Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "MiBoxer FUT035Z control via MQTT"
+description: "Integrate your MiBoxer FUT035Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-09-01T18:11:17Z
 pageClass: device-page
 ---
@@ -11,25 +11,26 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Miboxer FUT035Z
+# MiBoxer FUT035Z
 
 |     |     |
 |-----|-----|
 | Model | FUT035Z  |
-| Vendor  | [Miboxer](/supported-devices/#v=Miboxer)  |
+| Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
 | Description | Dual white LED controller |
-| Exposes | light (state, brightness, color_temp), effect, power_on_behavior, linkquality |
-| Picture | ![Miboxer FUT035Z](https://www.zigbee2mqtt.io/images/devices/FUT035Z.jpg) |
+| Exposes | light (state, brightness, color_temp), effect, do_not_disturb, linkquality |
+| Picture | ![MiBoxer FUT035Z](https://www.zigbee2mqtt.io/images/devices/FUT035Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Pairing
-The device will enter pairing mode when turned on, if it has not been paired previously. Pairing mode can be forced by pressing the SET button 3 times in succession.
+The device will enter pairing mode when turned on, if it has not been paired previously. Pairing mode can be forced by pressing the SET button, or power cycling the controller, 3 times in succession.
 
 The lights connected to the controller will fade in and out when the controlled is in pairing mode.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -48,7 +49,7 @@ The lights connected to the controller will fade in and out when the controlled 
 This light supports the following features: `state`, `brightness`, `color_temp`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
-- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `500`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warm`, `warmest`.
+- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `500`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warm`, `warmest`.
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
@@ -81,12 +82,12 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `toggle`, `previous`.
+### Do not disturb (binary)
+Do not disturb mode, when enabled this function will keep the light OFF after a power outage.
+Value can be found in the published state on the `do_not_disturb` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_not_disturb": NEW_VALUE}`.
+If value equals `true` do not disturb is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

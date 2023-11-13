@@ -50,6 +50,7 @@ If you can't do this, try to remove battery (if it has one), push the button (to
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -74,14 +75,14 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `release_left`, `release_right`, `release_both`, `double_left`, `double_right`, `single_left`, `single_right`, `hold_release_left`, `hold_release_left`.
 
-### Operation_mode (enum, left endpoint)
+### Operation mode (enum, left endpoint)
 Operation mode for left button.
 Value can be found in the published state on the `operation_mode_left` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_left": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_left": NEW_VALUE}`.
 The possible values are: `control_left_relay`, `control_right_relay`, `decoupled`.
 
-### Operation_mode (enum, right endpoint)
+### Operation mode (enum, right endpoint)
 Operation mode for right button.
 Value can be found in the published state on the `operation_mode_right` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_right": ""}`.

@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
 | Picture | ![EnOcean PTM 215Z](https://www.zigbee2mqtt.io/images/devices/PTM-215Z.jpg) |
-| White-label | Niko 91004, NodOn CWS-4-1-01_HUE, Vimar 03906, Sunricher SR-ZGP2801K4-FOH-E, LED Trading 9125, Feller 4120.2.S.FMI.61 |
+| White-label | Niko 91004, NodOn CWS-4-1-01_HUE, Vimar 03906, Sunricher SR-ZGP2801K4-FOH-E, LED-Trading 9125, Feller 4120.2.S.FMI.61 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -59,6 +59,7 @@ Alternatively, you should be able to reset the switch with the following pattern
 4. press top left (A0)
 Note: Please make sure the module is positioned the right way up.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

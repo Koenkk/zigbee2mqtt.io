@@ -30,6 +30,7 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
 ### Trigger (binary)
@@ -39,11 +40,11 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger": NEW_VALUE}`.
 If value equals `true` trigger is ON, if `false` OFF.
 
-### Garage_door_contact (binary)
+### Garage door contact (binary)
 Indicates if the garage door contact is closed (= true) or open (= false).
 Value can be found in the published state on the `garage_door_contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `false` garage_door_contact is ON, if `true` OFF.
+If value equals `false` garage door contact is ON, if `true` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

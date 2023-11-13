@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -38,13 +39,13 @@ pageClass: device-page
 
 ## Exposes
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
-### Brightness_state (enum)
+### Brightness state (enum)
 Brightness state.
 Value can be found in the published state on the `brightness_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

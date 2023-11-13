@@ -24,7 +24,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-
+The technical manual from Develco states that SMSZB-120 scans Zigbee channels 11-24 when searching for a network to join.
 
 ### Warning usage
 Warning only support a single mode, `burglar`
@@ -54,6 +54,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alar
 Set `max_duration` from the Zigbee2MQTT UI or by publishing `{"max_duration": NEW_VALUE}`
 This alarm are preset to highest volume
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -88,11 +89,11 @@ Value can be found in the published state on the `smoke` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` smoke is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Test (binary)
 Indicates whether the device is being tested.
@@ -100,7 +101,7 @@ Value can be found in the published state on the `test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
 
-### Max_duration (numeric)
+### Max duration (numeric)
 Duration of Siren.
 Value can be found in the published state on the `max_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | easyCodeTouch_v1  |
 | Vendor  | [Onesti Products AS](/supported-devices/#v=Onesti%20Products%20AS)  |
 | Description | Zigbee module for EasyAccess code touch series |
-| Exposes | lock (state, lock_state), battery, sound_volume, action_source_name, action_user, action, auto_relock, pin_code, linkquality |
+| Exposes | lock (state, lock_state), battery, sound_volume, last_unlock_source, last_unlock_user, last_lock_source, last_lock_user, last_used_pin_code, auto_relock, pin_code, linkquality |
 | Picture | ![Onesti Products AS easyCodeTouch_v1](https://www.zigbee2mqtt.io/images/devices/easyCodeTouch_v1.jpg) |
 
 
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -44,38 +45,48 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Sound_volume (enum)
+### Sound volume (enum)
 Sound volume of the lock.
 Value can be found in the published state on the `sound_volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sound_volume": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": NEW_VALUE}`.
 The possible values are: `silent_mode`, `low_volume`, `high_volume`.
 
-### Action_source_name (enum)
-Source of the triggered action on the lock.
-Value can be found in the published state on the `action_source_name` property.
+### Last unlock source (enum)
+Last unlock source.
+Value can be found in the published state on the `last_unlock_source` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `keypad`, `rfid`, `manual`, `rf`.
+The possible values are: `zigbee`, `keypad`, `fingerprintsensor`, `rfid`, `self`, `unknown`.
 
-### Action_user (numeric)
-ID of user that triggered the action on the lock.
-Value can be found in the published state on the `action_user` property.
+### Last unlock user (text)
+Last unlock user.
+Value can be found in the published state on the `last_unlock_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
+### Last lock source (enum)
+Last lock source.
+Value can be found in the published state on the `last_lock_source` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `keypad_lock`, `keypad_unlock`, `keypad_unlock`, `manual_lock`, `manual_unlock`, `key_lock`, `key_unlock`, `fingerprint_lock`, `fingerprint_unlock`, `rfid_lock`, `rfid_unlock`, `lock`, `zigbee_unlock`.
+The possible values are: `zigbee`, `keypad`, `fingerprintsensor`, `rfid`, `self`, `unknown`.
 
-### Auto_relock (binary)
+### Last lock user (text)
+Last lock user.
+Value can be found in the published state on the `last_lock_user` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Last used pin code (text)
+Last used pin code.
+Value can be found in the published state on the `last_used_pin_code` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Auto relock (binary)
 Auto relock after 7 seconds..
 Value can be found in the published state on the `auto_relock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_relock": NEW_VALUE}`.
-If value equals `true` auto_relock is ON, if `false` OFF.
+If value equals `true` auto relock is ON, if `false` OFF.
 
-### Pin_code (composite)
+### Pin code (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "user_type": VALUE, "user_enabled": VALUE, "pin_code": VALUE}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pin_code": ""}`.
 - `user` (numeric): User ID to set or clear the pincode for 

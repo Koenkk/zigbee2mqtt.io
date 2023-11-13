@@ -27,6 +27,7 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -57,7 +58,7 @@ Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -69,11 +70,11 @@ Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported..

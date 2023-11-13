@@ -23,9 +23,19 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+
+### Pairing
+To pair this device you have to install the device via its installation code which you can get by scanning the QR-code sticker on the physical device with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK" which will get zigbee2mqtt into pairing mode automatically. Wait for your device to be joined.
 
 
+### Factory resetting
+To factory reset the device unplug it from the mains. While pressing and holding the device's main button on the top, plug it in again. As soon as the device's LED is starting to blink orange, release the main button and press and hold it again until the device's LED is lighting up green. The device will then restart and look for a Zigbee network to join. In case something went wrong, the device's LED will start to blink red. The process has then to be start all over again.
 <!-- Notes END: Do not edit below this line -->
+
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -57,7 +67,7 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
-### Power_on_behavior (enum)
+### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.

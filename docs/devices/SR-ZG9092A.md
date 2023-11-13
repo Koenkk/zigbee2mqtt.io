@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -52,7 +53,7 @@ pageClass: device-page
 
 ## Exposes
 
-### Outdoor_temperature (numeric)
+### Outdoor temperature (numeric)
 Current temperature measured from the floor sensor.
 Value can be found in the published state on the `outdoor_temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"outdoor_temperature": ""}`.
@@ -67,19 +68,19 @@ This climate device supports the following features: `occupied_heating_setpoint`
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
 - `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-3` and the maximum value is `3` with a step size of `0.1`.
 
-### Away_mode (binary)
+### Away mode (binary)
 Enable/disable away mode.
 Value can be found in the published state on the `away_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"away_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_mode": NEW_VALUE}`.
-If value equals `ON` away_mode is ON, if `OFF` OFF.
+If value equals `ON` away mode is ON, if `OFF` OFF.
 
-### Child_lock (binary)
+### Child lock (binary)
 Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
-If value equals `UNLOCK` child_lock is ON, if `LOCK` OFF.
+If value equals `UNLOCK` child lock is ON, if `LOCK` OFF.
 
 ### Power (numeric)
 Instantaneous measured power.
@@ -105,21 +106,21 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Lcd_brightness (enum)
+### Lcd brightness (enum)
 OLED brightness when operating the buttons.  Default: Medium..
 Value can be found in the published state on the `lcd_brightness` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lcd_brightness": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lcd_brightness": NEW_VALUE}`.
 The possible values are: `low`, `mid`, `high`.
 
-### Button_vibration_level (enum)
+### Button vibration level (enum)
 Key beep volume and vibration level.  Default: Low..
 Value can be found in the published state on the `button_vibration_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"button_vibration_level": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_vibration_level": NEW_VALUE}`.
 The possible values are: `off`, `low`, `high`.
 
-### Floor_sensor_type (enum)
+### Floor sensor type (enum)
 Type of the external floor sensor.  Default: NTC 10K/25..
 Value can be found in the published state on the `floor_sensor_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_sensor_type": ""}`.
@@ -133,22 +134,22 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
 The possible values are: `air`, `floor`, `both`.
 
-### Powerup_status (enum)
+### Powerup status (enum)
 The mode after a power reset.  Default: Previous Mode..
 Value can be found in the published state on the `powerup_status` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"powerup_status": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"powerup_status": NEW_VALUE}`.
 The possible values are: `default`, `last_status`.
 
-### Floor_sensor_calibration (numeric)
-The tempearatue calibration for the exernal floor sensor, between -3 and 3 in 0.1°C.  Default: 0..
+### Floor sensor calibration (numeric)
+The tempearatue calibration for the external floor sensor, between -3 and 3 in 0.1°C.  Default: 0..
 Value can be found in the published state on the `floor_sensor_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"floor_sensor_calibration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"floor_sensor_calibration": NEW_VALUE}`.
 The minimal value is `-3` and the maximum value is `3`.
 The unit of this value is `°C`.
 
-### Dry_time (numeric)
+### Dry time (numeric)
 The duration of Dry Mode, between 5 and 100 minutes.  Default: 5..
 Value can be found in the published state on the `dry_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dry_time": ""}`.
@@ -156,21 +157,21 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `5` and the maximum value is `100`.
 The unit of this value is `min`.
 
-### Mode_after_dry (enum)
+### Mode after dry (enum)
 The mode after Dry Mode.  Default: Auto..
 Value can be found in the published state on the `mode_after_dry` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode_after_dry": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_after_dry": NEW_VALUE}`.
 The possible values are: `off`, `manual`, `auto`, `away`.
 
-### Temperature_display (enum)
+### Temperature display (enum)
 The temperature on the display.  Default: Room Temperature..
 Value can be found in the published state on the `temperature_display` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_display": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_display": NEW_VALUE}`.
 The possible values are: `room`, `floor`.
 
-### Window_open_check (numeric)
+### Window open check (numeric)
 The threshold to detect window open, between 0.0 and 8.0 in 0.5 °C.  Default: 0 (disabled)..
 Value can be found in the published state on the `window_open_check` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_open_check": ""}`.
@@ -186,13 +187,13 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0.5` and the maximum value is `2`.
 The unit of this value is `°C`.
 
-### Display_auto_off_enabled (enum)
+### Display auto off enabled (enum)
 Value can be found in the published state on the `display_auto_off_enabled` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_auto_off_enabled": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display_auto_off_enabled": NEW_VALUE}`.
 The possible values are: `disabled`, `enabled`.
 
-### Alarm_airtemp_overvalue (numeric)
+### Alarm airtemp overvalue (numeric)
 Room temperature alarm threshold, between 20 and 60 in °C.  0 means disabled.  Default: 45..
 Value can be found in the published state on the `alarm_airtemp_overvalue` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_airtemp_overvalue": ""}`.

@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -66,13 +67,13 @@ Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Co2 (numeric)
+### CO2 (numeric)
 The measured CO2 (carbon dioxide) value.
 Value can be found in the published state on the `co2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ppm`.
 
-### Voc (numeric)
+### VOC (numeric)
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

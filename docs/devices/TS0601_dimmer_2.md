@@ -18,15 +18,17 @@ pageClass: device-page
 | Model | TS0601_dimmer_2  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2 gang smart dimmer |
-| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, linkquality |
+| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, power_on_behavior, backlight_mode, linkquality |
 | Picture | ![TuYa TS0601_dimmer_2](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_2.jpg) |
-| White-label | Moes ZS-EUD_2gang |
+| White-label | Moes ZS-EUD_2gang, Moes MS-105B |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Notes
+### Pairing
+Turn off the light switches (no blue light). Press one of the switch buttons for 6 times, and hold on the 6th time for a few seconds. Release when the blue indicators are flashing fast. The device is in pairing mode.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -57,6 +59,20 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_l2": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
+
+### Power-on behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `previous`, `on`.
+
+### Backlight mode (enum)
+Mode of the backlight.
+Value can be found in the published state on the `backlight_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+The possible values are: `off`, `normal`, `inverted`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

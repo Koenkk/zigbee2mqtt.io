@@ -28,6 +28,7 @@ Press and release the middle (stop) button 5 times and hold for a 6th time until
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

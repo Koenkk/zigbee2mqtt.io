@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | S26R2ZB  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart plug |
-| Exposes | switch (state), power_on_behavior, linkquality |
+| Exposes | switch (state), linkquality |
 | Picture | ![SONOFF S26R2ZB](https://www.zigbee2mqtt.io/images/devices/S26R2ZB.jpg) |
 
 
@@ -29,6 +29,7 @@ pageClass: device-page
 
 If brand new, the device will enter the pairing mode during the first use and the LED signal indicator flashes. If not (or if has been paired before and needs to be re-paired) - press and hold the pairing/power button for about 5 seconds until the LED signal indicator flashes and release, then the device enters pairing mode.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -43,13 +44,6 @@ If brand new, the device will enter the pairing mode during the first use and th
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
-
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

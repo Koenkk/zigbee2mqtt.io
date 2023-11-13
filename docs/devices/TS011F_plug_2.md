@@ -31,6 +31,7 @@ Pair this device with a long press (5 seconds) on the on/off button. The button 
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -44,21 +45,21 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
-### Power_outage_memory (enum)
+### Power outage memory (enum)
 Recover state after power outage.
 Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 The possible values are: `on`, `off`, `restore`.
 
-### Indicator_mode (enum)
+### Indicator mode (enum)
 LED indicator mode.
 Value can be found in the published state on the `indicator_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
 The possible values are: `off`, `off/on`, `on/off`, `on`.
 
-### Lock 
+### Child lock (lock)
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
 It's not possible to read (`/get`) this value.

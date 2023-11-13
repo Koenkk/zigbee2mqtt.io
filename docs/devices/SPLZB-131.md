@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SPLZB-131  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Power plug |
-| Exposes | switch (state), power, current, voltage, energy, linkquality |
+| Exposes | switch (state), power, power_reactive, current, voltage, energy, ac_frequency, linkquality |
 | Picture | ![Develco SPLZB-131](https://www.zigbee2mqtt.io/images/devices/SPLZB-131.jpg) |
 
 
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -63,6 +64,12 @@ Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
+### Power reactive (numeric)
+Instantaneous measured reactive power.
+Value can be found in the published state on the `power_reactive` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `VAR`.
+
 ### Current (numeric)
 Instantaneous measured electrical current.
 Value can be found in the published state on the `current` property.
@@ -80,6 +87,12 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### AC frequency (numeric)
+Measured electrical AC frequency.
+Value can be found in the published state on the `ac_frequency` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `Hz`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

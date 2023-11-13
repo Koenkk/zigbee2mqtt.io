@@ -25,9 +25,14 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Pairing
+
+Press button for 5 seconds.
+
 ### Battery
 If battery value is not showing in Zigbee2MQTT briefly pressing reset button AFTER device is fully paired usually resolves the issue.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

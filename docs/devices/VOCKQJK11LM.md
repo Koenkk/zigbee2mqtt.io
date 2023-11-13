@@ -39,6 +39,7 @@ In order for this device to work (fully), at least the following firmware is req
 Press and hold button on top of device until connection symbol appears
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -71,13 +72,13 @@ Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Voc (numeric)
+### VOC (numeric)
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ppb`.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -96,7 +97,7 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Display_unit (enum)
+### Display unit (enum)
 Units to show on the display.
 Value can be found in the published state on the `display_unit` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display_unit": ""}`.

@@ -31,6 +31,7 @@ To set this option publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"power_o
 Now toggle the plug/switch once with the button on it, from now on it will restore its state when reconnecting to power.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -75,7 +76,7 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -87,12 +88,12 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Power_outage_memory (binary)
+### Power outage memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.
 Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-If value equals `true` power_outage_memory is ON, if `false` OFF.
+If value equals `true` power outage memory is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

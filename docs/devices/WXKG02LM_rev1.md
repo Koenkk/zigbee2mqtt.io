@@ -48,6 +48,7 @@ If you can't do this, try to remove battery (if it has one), push the button (to
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -75,7 +76,7 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

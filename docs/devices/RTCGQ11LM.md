@@ -25,6 +25,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Battery
+Uses a CR2450 battery.
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
@@ -56,6 +58,7 @@ is needed.
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -85,7 +88,7 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -97,7 +100,7 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -109,7 +112,7 @@ Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

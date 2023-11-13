@@ -29,6 +29,7 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
 ### Switch 
@@ -48,7 +49,7 @@ Value can be found in the published state on the `current` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
 
-### Cpu_temperature (numeric)
+### CPU temperature (numeric)
 Temperature of the CPU.
 Value can be found in the published state on the `cpu_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

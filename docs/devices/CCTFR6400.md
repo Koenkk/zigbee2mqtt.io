@@ -38,6 +38,7 @@ It requires a Z-Stack controller (Firmware version > TBD). It is currently not w
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -52,7 +53,7 @@ It requires a Z-Stack controller (Firmware version > TBD). It is currently not w
 
 ## Exposes
 
-### Keypad_lockout (enum)
+### Keypad lockout (enum)
 Enables/disables physical input on the device.
 Value can be found in the published state on the `keypad_lockout` property.
 It's not possible to read (`/get`) this value.
@@ -86,8 +87,8 @@ The possible values are: `screen_sleep`, `screen_wake`, `button_press_plus_down`
 
 ### Climate 
 This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`, `pi_heating_demand`.
-- `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `4` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
-- `pi_heating_demand`: Position of the valve (= demanded heat) where 0% is fully closed and 100% is fully open. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pi_heating_demand": VALUE}` where `VALUE` is the % between `0` and `100`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pi_heating_demand": ""}`.
+- `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `4` and `30`. Reading (`/get`) this attribute is not possible.
+- `pi_heating_demand`: Position of the valve (= demanded heat) where 0% is fully closed and 100% is fully open. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pi_heating_demand": VALUE}` where `VALUE` is the % between `0` and `100`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 
 ### Linkquality (numeric)

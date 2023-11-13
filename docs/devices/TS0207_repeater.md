@@ -33,6 +33,7 @@ The range extender is in pairing mode straight out of the box - allow new device
 
 
 
+
 ## Exposes
 
 ### Linkquality (numeric)

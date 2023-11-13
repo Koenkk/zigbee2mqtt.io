@@ -1,6 +1,6 @@
 ---
-title: "Mercator SMCL01-ZB control via MQTT"
-description: "Integrate your Mercator SMCL01-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Mercator Ikuü SMCL01-ZB control via MQTT"
+description: "Integrate your Mercator Ikuü SMCL01-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
@@ -11,21 +11,22 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SMCL01-ZB
+# Mercator Ikuü SMCL01-ZB
 
 |     |     |
 |-----|-----|
 | Model | SMCL01-ZB  |
-| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
-| Description | Ikuü Ikon ceiling light CCT |
-| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Mercator SMCL01-ZB](https://www.zigbee2mqtt.io/images/devices/SMCL01-ZB.jpg) |
+| Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
+| Description | Ikon ceiling light |
+| Exposes | light (state, brightness, color_temp), effect, do_not_disturb, linkquality |
+| Picture | ![Mercator Ikuü SMCL01-ZB](https://www.zigbee2mqtt.io/images/devices/SMCL01-ZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -41,11 +42,10 @@ pageClass: device-page
 ## Exposes
 
 ### Light 
-This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`.
+This light supports the following features: `state`, `brightness`, `color_temp`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
-- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `500`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warm`, `warmest`.
-- `color_temp_startup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup": VALUE}` where `VALUE` is a number between `153` and `500`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warm`, `warmest`, `previous`.
+- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `500`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warm`, `warmest`.
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
@@ -77,6 +77,13 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
+
+### Do not disturb (binary)
+Do not disturb mode, when enabled this function will keep the light OFF after a power outage.
+Value can be found in the published state on the `do_not_disturb` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_not_disturb": NEW_VALUE}`.
+If value equals `true` do not disturb is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

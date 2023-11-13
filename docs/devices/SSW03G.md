@@ -1,6 +1,6 @@
 ---
-title: "Mercator SSW03G control via MQTT"
-description: "Integrate your Mercator SSW03G via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Mercator Ikuü SSW03G control via MQTT"
+description: "Integrate your Mercator Ikuü SSW03G via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
@@ -11,21 +11,22 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SSW03G
+# Mercator Ikuü SSW03G
 
 |     |     |
 |-----|-----|
 | Model | SSW03G  |
-| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
-| Description | Ikuü triple switch |
+| Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
+| Description | Triple switch |
 | Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
-| Picture | ![Mercator SSW03G](https://www.zigbee2mqtt.io/images/devices/SSW03G.jpg) |
+| Picture | ![Mercator Ikuü SSW03G](https://www.zigbee2mqtt.io/images/devices/SSW03G.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -51,14 +52,14 @@ The current state of this switch is in the published state under the `state_righ
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
 
-### Power_on_behavior (enum)
+### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
 
-### Backlight_mode (enum)
+### Backlight mode (enum)
 Intensity of the backlight.
 Value can be found in the published state on the `backlight_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.

@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -38,13 +39,13 @@ pageClass: device-page
 
 ## Exposes
 
-### Carbon_monoxide (binary)
+### Carbon monoxide (binary)
 Indicates if CO (carbon monoxide) is detected.
 Value can be found in the published state on the `carbon_monoxide` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` carbon_monoxide is ON, if `false` OFF.
+If value equals `true` carbon monoxide is ON, if `false` OFF.
 
-### Co (numeric)
+### CO (numeric)
 The measured CO (carbon monoxide) value.
 Value can be found in the published state on the `co` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

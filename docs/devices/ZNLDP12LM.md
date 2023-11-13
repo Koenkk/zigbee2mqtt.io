@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNLDP12LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara smart LED bulb |
-| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, power_outage_memory, linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_outage_memory, linkquality |
 | Picture | ![Xiaomi ZNLDP12LM](https://www.zigbee2mqtt.io/images/devices/ZNLDP12LM.jpg) |
 
 
@@ -29,6 +29,7 @@ pageClass: device-page
 ### Pairing
 Switch the lamp on five times until the bulb blinks several times.
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -50,8 +51,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
-- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warmest`.
-- `color_temp_startup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warmest`, `previous`.
+- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
+- `color_temp_startup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`, `previous`.
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
@@ -84,19 +85,12 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `toggle`, `previous`.
-
-### Power_outage_memory (binary)
+### Power outage memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.
 Value can be found in the published state on the `power_outage_memory` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-If value equals `true` power_outage_memory is ON, if `false` OFF.
+If value equals `true` power outage memory is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

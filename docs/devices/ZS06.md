@@ -54,6 +54,7 @@ Request:
 
 
 
+
 ## Exposes
 
 ### Switch 
@@ -61,12 +62,12 @@ The current state of this switch is in the published state under the `learn_ir_c
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learn_ir_code": "ON"}`, `{"learn_ir_code": "OFF"}` or `{"learn_ir_code": "undefined"}`.
 It's not possible to read (`/get`) this value.
 
-### Learned_ir_code (text)
+### Learned ir code (text)
 The IR code learned by device.
 Value can be found in the published state on the `learned_ir_code` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Ir_code_to_send (text)
+### Ir code to send (text)
 The IR code to send by device.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.

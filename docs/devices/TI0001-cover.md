@@ -51,6 +51,7 @@ Press the buttons "down" and "settings" together for 3 seconds and it blinks red
 
 
 
+
 ## Exposes
 
 ### Cover 
@@ -69,7 +70,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"opti
 Motor is moving.
 Value can be found in the published state on the `moving` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `undefined` moving is ON, if `undefined` OFF.
+If value equals `true` moving is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

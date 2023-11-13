@@ -40,7 +40,7 @@ sudo apt-get install -y nodejs git make g++ gcc
 
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
 # version has been installed
-node --version  # Should output v14.X, V16.x, V17.x or V18.X
+node --version  # Should output V16.x, V17.x, V18.X or V20.X
 npm --version  # Should output 6.X, 7.X or 8.X
 
 # Create a directory for zigbee2mqtt and set your user as owner of it
@@ -53,6 +53,10 @@ git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
 npm ci
+# If this command fails and returns an ERR_SOCKET_TIMEOUT error, run this command instead: npm ci  --maxsockets 1
+
+# Build the app
+npm run build
 ```
 
 If everything went correctly the output of `npm ci` is similar to (the number of packages and seconds is probably different on your device):
@@ -81,10 +85,11 @@ node --version
 :::
 
 ## Configuring
-Before we can start Zigbee2MQTT we need to edit the `configuration.yaml` file. This file contains the configuration which will be used by Zigbee2MQTT.
+Before we can start Zigbee2MQTT we need to copy and edit the `configuration.yaml` file. This file contains the configuration which will be used by Zigbee2MQTT.
 
-Open the configuration file:
+Copy and open the configuration file:
 ```bash
+cp /opt/zigbee2mqtt/data/configuration.example.yaml /opt/zigbee2mqtt/data/configuration.yaml
 nano /opt/zigbee2mqtt/data/configuration.yaml
 ```
 
@@ -105,19 +110,6 @@ mqtt:
 serial:
   # Location of the adapter (see first step of this guide)
   port: /dev/ttyACM0
-```
-
-It is recommended to use a custom network key. This can be done by adding the following to your `configuration.yaml`. With this Zigbee2MQTT will generate a network key on next startup.
-
-```yaml
-advanced:
-    network_key: GENERATE
-```
-
-To enable the frontend add the following (see the [Frontend](../configuration/frontend.md) page for more settings):
-
-```yaml
-frontend: true
 ```
 
 Save the file and exit.
@@ -179,7 +171,10 @@ WantedBy=multi-user.target
 
 > If you are using a Raspberry Pi 1 or Zero AND if you followed this [guide](https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb), replace `ExecStart=/usr/bin/npm start` with `ExecStart=/usr/local/bin/npm start`.
 
-> If you are using a Raspberry Pi or a system running from a SD card, you will likely want to minimize the amount of log files written to disk. Systemd service with `StandardOutput=inherit` will result in logging everything twice: once in `journalctl` through the systemd unit and once from Zigbee2MQTT default logging to files under `data/log`. You will likely want to keep only one of them: either use `StandardOutput=null` in the systemd unit and keep only the logs under `data/log` **or** setting [`advanced.log_output = ['console']`](https://www.zigbee2mqtt.io/guide/configuration/logging.html) in Zigbee2MQTT configuration to keep only the `journalctl` logging.
+> If you are using a Raspberry Pi or a system running from a SD card, you will likely want to minimize the amount of log files written to disk. Systemd service with `StandardOutput=inherit` will result in logging everything twice: once in `journalctl` through the systemd unit and once from Zigbee2MQTT default logging to files under `data/log`. You will likely want to keep only one of them: 
+> > Keep only the logs under `data/log` --> use `StandardOutput=null` in the systemd unit.  **or** 
+> > 
+> > Keep only the `journalctl` logging --> set [`advanced.log_output = ['console']`](https://www.zigbee2mqtt.io/guide/configuration/logging.html) in Zigbee2MQTT configuration.
 
 > If you want to use another directory to place all Zigbee2MQTT data, add `Environment=ZIGBEE2MQTT_DATA=/path/to/data` below `[Service]`
 
@@ -246,6 +241,7 @@ cp -R data data-backup
 # Update
 git pull
 npm ci
+npm run build
 
 # Restore configuration
 cp -R data-backup/* data

@@ -58,8 +58,9 @@ Then, press the selected button contact shortly (< 7s) to select radio channel 1
 
 Once the device is paired you need to confirm the channel. To do this, press any button other than the one used previously.
 
-For more informations, please refer to the [EnOcean PTM 215ZE manual chapter 5.1](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/).
+For more informations, please refer to the [EnOcean PTM 215ZE manual chapter 3.6](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/PTM-215ZE-User-Manual.pdf).
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: "Mercator SMA02P control via MQTT"
-description: "Integrate your Mercator SMA02P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Mercator Ikuü SMA02P control via MQTT"
+description: "Integrate your Mercator Ikuü SMA02P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
@@ -11,21 +11,22 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Mercator SMA02P
+# Mercator Ikuü SMA02P
 
 |     |     |
 |-----|-----|
 | Model | SMA02P  |
-| Vendor  | [Mercator](/supported-devices/#v=Mercator)  |
-| Description | Ikuü battery motion sensor |
+| Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
+| Description | Motion detector |
 | Exposes | occupancy, battery_low, tamper, battery, voltage, linkquality |
-| Picture | ![Mercator SMA02P](https://www.zigbee2mqtt.io/images/devices/SMA02P.jpg) |
+| Picture | ![Mercator Ikuü SMA02P](https://www.zigbee2mqtt.io/images/devices/SMA02P.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -37,11 +38,11 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Tamper (binary)
 Indicates whether the device is tampered.

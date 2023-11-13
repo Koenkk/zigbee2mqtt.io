@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ZB-SW02  |
 | Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
-| Description | Smart light switch - 2 gang |
+| Description | Smart light switch/2 gang relay |
 | Exposes | switch (state), linkquality |
 | Picture | ![eWeLink ZB-SW02](https://www.zigbee2mqtt.io/images/devices/ZB-SW02.jpg) |
 
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

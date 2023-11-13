@@ -1,6 +1,6 @@
 ---
-title: "AUBESS ZXZIR-02 control via MQTT"
-description: "Integrate your AUBESS ZXZIR-02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aubess ZXZIR-02 control via MQTT"
+description: "Integrate your Aubess ZXZIR-02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-05-28T16:23:11Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# AUBESS ZXZIR-02
+# Aubess ZXZIR-02
 
 |     |     |
 |-----|-----|
 | Model | ZXZIR-02  |
-| Vendor  | [AUBESS](/supported-devices/#v=AUBESS)  |
+| Vendor  | [Aubess](/supported-devices/#v=Aubess)  |
 | Description | Universal smart IR remote control |
 | Exposes | switch (state), learned_ir_code, ir_code_to_send, linkquality |
-| Picture | ![AUBESS ZXZIR-02](https://www.zigbee2mqtt.io/images/devices/ZXZIR-02.jpg) |
+| Picture | ![Aubess ZXZIR-02](https://www.zigbee2mqtt.io/images/devices/ZXZIR-02.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -54,6 +54,7 @@ Request:
 
 
 
+
 ## Exposes
 
 ### Switch 
@@ -61,12 +62,12 @@ The current state of this switch is in the published state under the `learn_ir_c
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learn_ir_code": "ON"}`, `{"learn_ir_code": "OFF"}` or `{"learn_ir_code": "undefined"}`.
 It's not possible to read (`/get`) this value.
 
-### Learned_ir_code (text)
+### Learned ir code (text)
 The IR code learned by device.
 Value can be found in the published state on the `learned_ir_code` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Ir_code_to_send (text)
+### Ir code to send (text)
 The IR code to send by device.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.

@@ -55,6 +55,7 @@ If the battery is below 10 % the LED will blink orange once a minute.
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

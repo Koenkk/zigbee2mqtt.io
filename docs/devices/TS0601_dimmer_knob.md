@@ -35,6 +35,7 @@ To pair the device, the knob must be pressed for 5 sec. Sometimes, the pairing m
 
 
 
+
 ## Exposes
 
 ### Light 
@@ -42,14 +43,14 @@ This light supports the following features: `state`, `brightness`, `min_brightne
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
 
-### Light_type (enum)
+### Light type (enum)
 Type of light attached to the device.
 Value can be found in the published state on the `light_type` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_type": NEW_VALUE}`.
 The possible values are: `led`, `incandescent`, `halogen`.
 
-### Indicator_mode (enum)
+### Indicator mode (enum)
 Mode of the indicator light.
 Value can be found in the published state on the `indicator_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.

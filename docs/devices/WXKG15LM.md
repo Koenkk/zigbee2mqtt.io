@@ -37,6 +37,7 @@ Please note, that currently you will only get one endpoint for binding even thou
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)
@@ -58,14 +59,14 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single_left`, `single_right`, `single_both`, `double_left`, `double_right`, `double_both`, `triple_left`, `triple_right`, `triple_both`, `hold_left`, `hold_right`, `hold_both`.
 
-### Click_mode (enum)
+### Click mode (enum)
 Click mode, fast: only supports single click which will be send immediately after clicking.multi: supports more events like double and hold.
 Value can be found in the published state on the `click_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"click_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_mode": NEW_VALUE}`.
 The possible values are: `fast`, `multi`.
 
-### Operation_mode (enum)
+### Operation mode (enum)
 Operation mode, select "command" to enable bindings (wake up the device before changing modes!).
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.

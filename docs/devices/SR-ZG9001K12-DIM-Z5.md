@@ -34,6 +34,7 @@ Press and hold the All On button on the Remote until the Status LED turns on. Th
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

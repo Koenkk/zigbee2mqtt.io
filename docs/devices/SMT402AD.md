@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -42,14 +43,14 @@ pageClass: device-page
 
 ## Exposes
 
-### Local_temperature (numeric)
+### Local temperature (numeric)
 Current temperature measured on the device.
 Value can be found in the published state on the `local_temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Keypad_lockout (enum)
+### Keypad lockout (enum)
 Enables/disables physical input on the device.
 Value can be found in the published state on the `keypad_lockout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keypad_lockout": ""}`.

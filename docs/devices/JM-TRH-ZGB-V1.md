@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -61,7 +62,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Temperature_report_interval (numeric)
+### Temperature report interval (numeric)
 Temperature Report interval.
 Value can be found in the published state on the `temperature_report_interval` property.
 It's not possible to read (`/get`) this value.
@@ -69,20 +70,20 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `5` and the maximum value is `60`.
 The unit of this value is `min`.
 
-### Temperature_unit_convert (enum)
+### Temperature unit convert (enum)
 Current display unit.
 Value can be found in the published state on the `temperature_unit_convert` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit_convert": NEW_VALUE}`.
 The possible values are: `celsius`, `fahrenheit`.
 
-### Temperature_alarm (enum)
+### Temperature alarm (enum)
 Temperature alarm status.
 Value can be found in the published state on the `temperature_alarm` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `canceled`, `lower_alarm`, `upper_alarm`.
 
-### Max_temperature (numeric)
+### Max temperature (numeric)
 Alarm temperature max.
 Value can be found in the published state on the `max_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -90,7 +91,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-20` and the maximum value is `60`.
 The unit of this value is `°C`.
 
-### Min_temperature (numeric)
+### Min temperature (numeric)
 Alarm temperature min.
 Value can be found in the published state on the `min_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -98,13 +99,13 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-20` and the maximum value is `60`.
 The unit of this value is `°C`.
 
-### Humidity_alarm (enum)
+### Humidity alarm (enum)
 Humidity alarm status.
 Value can be found in the published state on the `humidity_alarm` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `canceled`, `lower_alarm`, `upper_alarm`.
 
-### Max_humidity (numeric)
+### Max humidity (numeric)
 Alarm humidity max.
 Value can be found in the published state on the `max_humidity` property.
 It's not possible to read (`/get`) this value.
@@ -112,7 +113,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Min_humidity (numeric)
+### Min humidity (numeric)
 Alarm humidity min.
 Value can be found in the published state on the `min_humidity` property.
 It's not possible to read (`/get`) this value.

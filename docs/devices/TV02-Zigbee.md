@@ -29,7 +29,7 @@ pageClass: device-page
 ### Pairing
 
 1. Pull the cover in the direction out from the radiator
-2. Insert 2x AA batteries. Manual says alkaline ones should last for 1,5years. When replacing old batteries, it os recommended to wait approx 1 minute before inserting new ones.
+2. Insert 2x AA batteries. Manual says alkaline ones should last for 1,5years. When replacing old batteries, it is recommended to wait approx 1 minute before inserting new ones.
 3. Ins will appear on the display - motor is travelling back - to allow easy installation (Ins + rotating n is shown). After few seconds Ada is shown.
 4. Install the thermostat on radiator valve - display whould be on top side.
 5. Insert the cover back to thermostat - Push and Pull symbols should match.
@@ -38,6 +38,7 @@ pageClass: device-page
 8. There is a hidden reset button under the cover, in case of repairing or other issues press it for 5 seconds.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -45,25 +46,25 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Exposes
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
-### Lock 
+### Child lock (lock)
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
 It's not possible to read (`/get`) this value.
 
-### Open_window (binary)
+### Open window (binary)
 Enables/disables the status on the device.
 Value can be found in the published state on the `open_window` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"open_window": NEW_VALUE}`.
-If value equals `ON` open_window is ON, if `OFF` OFF.
+If value equals `ON` open window is ON, if `OFF` OFF.
 
-### Open_window_temperature (numeric)
+### Open window temperature (numeric)
 Open window temperature.
 Value can be found in the published state on the `open_window_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -71,7 +72,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `5` and the maximum value is `30`.
 The unit of this value is `°C`.
 
-### Comfort_temperature (numeric)
+### Comfort temperature (numeric)
 Comfort temperature.
 Value can be found in the published state on the `comfort_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -79,7 +80,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `5` and the maximum value is `30`.
 The unit of this value is `°C`.
 
-### Eco_temperature (numeric)
+### Eco temperature (numeric)
 Eco temperature.
 Value can be found in the published state on the `eco_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -89,35 +90,35 @@ The unit of this value is `°C`.
 
 ### Climate 
 This climate device supports the following features: `preset`, `local_temperature_calibration`, `local_temperature`, `current_heating_setpoint`, `system_mode`.
-- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
+- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
-- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `auto`, `manual`, `holiday`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
-- `system_mode`: Only for Homeassistant. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
+- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `auto`, `manual`, `holiday`. Reading (`/get`) this attribute is not possible.
+- `system_mode`: Only for Homeassistant. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. Reading (`/get`) this attribute is not possible.
 - `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-5` and the maximum value is `5` with a step size of `0.1`.
 
-### Heating_stop (binary)
+### Heating stop (binary)
 Battery life can be prolonged by switching the heating off. To achieve this, the valve is closed fully. To activate the heating stop, the device display "HS", press the pair button to cancel..
 Value can be found in the published state on the `heating_stop` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"heating_stop": NEW_VALUE}`.
-If value equals `ON` heating_stop is ON, if `OFF` OFF.
+If value equals `ON` heating stop is ON, if `OFF` OFF.
 
-### Frost_protection (binary)
+### Frost protection (binary)
 When Anti-Freezing function is activated, the temperature in the house is kept at 8 °C.When Anti-Freezing function is activated, the temperature in the house is kept at 8 °C, the device display "AF".press the pair button to cancel..
 Value can be found in the published state on the `frost_protection` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"frost_protection": NEW_VALUE}`.
-If value equals `ON` frost_protection is ON, if `OFF` OFF.
+If value equals `ON` frost protection is ON, if `OFF` OFF.
 
-### Boost_timeset_countdown (numeric)
-Setting minimum 0 - maximum 465 seconds boost time. The boost (♨) function is activated. The remaining time for the function will be counted down in seconds ( 465 to 0 )..
+### Boost timeset countdown (numeric)
+Setting minimum 0 - maximum 465 seconds boost time. The boost (â¨) function is activated. The remaining time for the function will be counted down in seconds ( 465 to 0 )..
 Value can be found in the published state on the `boost_timeset_countdown` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_timeset_countdown": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `465`.
-The unit of this value is `second`.
+The unit of this value is `s`.
 
-### Holiday_temperature (numeric)
+### Holiday temperature (numeric)
 Holiday temperature.
 Value can be found in the published state on the `holiday_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -125,13 +126,13 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `5` and the maximum value is `30`.
 The unit of this value is `°C`.
 
-### Holiday_start_stop (text)
+### Holiday start stop (text)
 The holiday mode will automatically start at the set time starting point and run the holiday temperature. Can be defined in the following format: `startYear/startMonth/startDay startHours:startMinutes | endYear/endMonth/endDay endHours:endMinutes`. For example: `2022/10/01 16:30 | 2022/10/21 18:10`. After the end of holiday mode, it switches to "auto" mode and uses schedule..
 Value can be found in the published state on the `holiday_start_stop` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"holiday_start_stop": NEW_VALUE}`.
 
-### Working_day (enum)
+### Working day (enum)
 `mon_sun` - schedule for Monday used for each day (define it only for Monday). `mon_fri+sat+sun` - schedule for workdays used from Monday (define it only for Monday), Saturday and Sunday are defined separately. `separate` - schedule for each day is defined separately..
 Value can be found in the published state on the `working_day` property.
 It's not possible to read (`/get`) this value.
@@ -144,37 +145,37 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sche
 - `week_day` (enum) allowed values: `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`, `sunday`
 - `schedule` (text) 
 
-### Schedule_monday (text)
+### Schedule monday (text)
 Schedule for monday, format: "HH:MM/C".
 Value can be found in the published state on the `schedule_monday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Schedule_tuesday (text)
+### Schedule tuesday (text)
 Schedule for tuesday, format: "HH:MM/C".
 Value can be found in the published state on the `schedule_tuesday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Schedule_wednesday (text)
+### Schedule wednesday (text)
 Schedule for wednesday, format: "HH:MM/C".
 Value can be found in the published state on the `schedule_wednesday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Schedule_thursday (text)
+### Schedule thursday (text)
 Schedule for thursday, format: "HH:MM/C".
 Value can be found in the published state on the `schedule_thursday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Schedule_friday (text)
+### Schedule friday (text)
 Schedule for friday, format: "HH:MM/C".
 Value can be found in the published state on the `schedule_friday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Schedule_saturday (text)
+### Schedule saturday (text)
 Schedule for saturday, format: "HH:MM/C".
 Value can be found in the published state on the `schedule_saturday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Schedule_sunday (text)
+### Schedule sunday (text)
 Schedule for sunday, format: "HH:MM/C".
 Value can be found in the published state on the `schedule_sunday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -186,7 +187,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"online": NEW_VALUE}`.
 If value equals `ON` online is ON, if `OFF` OFF.
 
-### Error_status (numeric)
+### Error status (numeric)
 Error status.
 Value can be found in the published state on the `error_status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

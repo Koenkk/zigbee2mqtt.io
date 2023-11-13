@@ -38,6 +38,7 @@ Method 2. Press the reset button 3 times, the indicator starts blinking purple a
 Press and hold the reset button for at least 5 seconds, the indicator will stay red for 10s when the reset is complete. Please note that all configuration parameters will be reset after the device is reset or removed from the network.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -78,7 +79,7 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 }
 ````
 
-### Power_on_behavior (enum)
+### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.

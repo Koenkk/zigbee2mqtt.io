@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -42,7 +43,7 @@ To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set`
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
-### Motor_direction (enum)
+### Motor direction (enum)
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.

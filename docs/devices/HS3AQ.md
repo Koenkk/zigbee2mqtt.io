@@ -23,9 +23,11 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+The base HS3AQ model does not have Zigbee, the Zigbee versions of this device are HS3AQ-TY(ZTU) and HS3AQ-EFA
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -42,7 +44,7 @@ pageClass: device-page
 
 ## Exposes
 
-### Co2 (numeric)
+### CO2 (numeric)
 The measured CO2 (carbon dioxide) value.
 Value can be found in the published state on the `co2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

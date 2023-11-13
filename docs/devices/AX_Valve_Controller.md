@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -41,17 +42,17 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
-### Water_leak (binary)
+### Water leak (binary)
 Indicates whether the device detected a water leak.
 Value can be found in the published state on the `water_leak` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` water_leak is ON, if `false` OFF.
+If value equals `true` water leak is ON, if `false` OFF.
 
-### Active_water_leak (binary)
+### Active water leak (binary)
 Indicates whether there is an active water leak.
 Value can be found in the published state on the `active_water_leak` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` active_water_leak is ON, if `false` OFF.
+If value equals `true` active water leak is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

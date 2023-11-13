@@ -18,8 +18,9 @@ pageClass: device-page
 | Model | CTP-R01  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara magic cube T1 Pro |
-| Exposes | battery, voltage, device_temperature, power_outage_count, operation_mode, side, action, action_from_side, action_angle, linkquality |
+| Exposes | battery, voltage, power_outage_count, operation_mode, side, action, action_from_side, action_angle, linkquality |
 | Picture | ![Xiaomi CTP-R01](https://www.zigbee2mqtt.io/images/devices/CTP-R01.jpg) |
+| White-label | Xiaomi MFCZQ12LM |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -77,14 +78,10 @@ There are two ways to toggle between scene mode and action mode:
   | 1_min_inactivity | -                                |
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
-
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -102,18 +99,12 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Device_temperature (numeric)
-Temperature of the device.
-Value can be found in the published state on the `device_temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
-
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Operation_mode (enum)
+### Operation mode (enum)
 [Soft Switch]: There is a configuration window, opens once an hour on itself, only during which the cube will respond to mode switch. Mode switch will be scheduled to take effect when the window becomes available. You can also give it a throw action (no backward motion) to force a respond! Otherwise, you may open lid and click LINK once to make the cube respond immediately. [Hard Switch]: Open lid and click LINK button 5 times..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
@@ -132,13 +123,13 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `shake`, `throw`, `tap`, `slide`, `flip180`, `flip90`, `hold`, `side_up`, `rotate_left`, `rotate_right`, `1_min_inactivity`, `flip_to_side`.
 
-### Action_from_side (numeric)
+### Action from side (numeric)
 Side of the cube.
 Value can be found in the published state on the `action_from_side` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `6`.
 
-### Action_angle (numeric)
+### Action angle (numeric)
 Value can be found in the published state on the `action_angle` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-360` and the maximum value is `360`.

@@ -23,9 +23,15 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Battery
+Usees CR2032 battery.
 
+### Pairing
+Press and hold the reset button by pressing hard on the top of the device (water drop logo) for +- 5 seconds (until the blue light inside the device, under the water drop starts blinking). After this the device will automatically join.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -43,17 +49,17 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Water_leak (binary)
+### Water leak (binary)
 Indicates whether the device detected a water leak.
 Value can be found in the published state on the `water_leak` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` water_leak is ON, if `false` OFF.
+If value equals `true` water leak is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Voltage (numeric)
 Voltage of the battery in millivolts.
@@ -61,13 +67,13 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

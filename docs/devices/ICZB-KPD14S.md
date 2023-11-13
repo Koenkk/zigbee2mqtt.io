@@ -53,6 +53,7 @@ To disable the legacy integration add the following to your `configuration.yaml`
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -79,7 +80,7 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `recall_*`, `on`, `off`, `brightness_move_up`, `brightenss_move_down`, `brightness_stop`.
+The possible values are: `on`, `off`, `brightness_stop`, `brightness_move_up`, `brightness_move_down`, `recall_1`, `recall_2`, `recall_3`, `recall_4`, `store_1`, `store_2`, `store_3`, `store_4`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

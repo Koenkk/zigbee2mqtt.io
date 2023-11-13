@@ -42,6 +42,7 @@ devices:
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -61,7 +62,7 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `release`, `hold`, `double`, `single`, `hold_release`.
 
-### Operation_mode (enum)
+### Operation mode (enum)
 Decoupled mode.
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.

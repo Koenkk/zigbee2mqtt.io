@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -45,11 +46,11 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -57,7 +58,7 @@ Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Alarm_status (enum)
+### Alarm status (enum)
 Alarm status..
 Value can be found in the published state on the `alarm_status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

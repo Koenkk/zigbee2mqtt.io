@@ -8,10 +8,10 @@ This page describes which MQTT topics are used by Zigbee2MQTT. Note that the bas
 
 ## zigbee2mqtt/FRIENDLY_NAME
 
-The `FRIENDLY_NAME` is the IEEE-address or, if defined, the `friendly_name` of a device.
+The `FRIENDLY_NAME` is the IEEE-address or, if defined, the `friendly_name` of a device or group.
 
 ::: tip
-You can use the `/` separator in `friendly_name` to structure devices.
+You can use the `/` separator in `friendly_name` to structure devices and groups.
 For example, using a `friendly_name` like `kitchen/floor_light` would result in a corresponding MQTT structure with `kitchen` as folder containing `floor_light` in MQTT Explorer.
 :::
 
@@ -52,7 +52,7 @@ Published messages are **always** in a JSON format. Each device produces a diffe
 If ["Device-Availability"](../configuration/device-availability.md) is configured the online/offline status will be published when it changes.
 
 ## zigbee2mqtt/FRIENDLY_NAME/set
-Publishing messages to this topic allows you to control your Zigbee devices via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH). How to control a specific device can be found in the *Exposes* section on the device page which can be accessed via ["Supported devices"](../../supported-devices/).
+Publishing messages to this topic allows you to control your Zigbee devices or groups via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH). How to control a specific device can be found in the *Exposes* section on the device page which can be accessed via ["Supported devices"](../../supported-devices/).
 
 ```js
 {
@@ -61,6 +61,8 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
   "color": {"x": 0.123, "y": 0.123} // Color in XY
 }
 ```
+
+If FRIENDLY_NAME refers to a group, it will set the state for all devices in that group.
 
 ### Without JSON
 In case you don't want to use JSON, publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set/state` with payload `ON` is the same as publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"state": "ON"}`.
@@ -90,6 +92,8 @@ Example payload:
         "type":"zStack30x",
         "meta":{"revision":20190425, "transportrev":2, "product":2, "majorrel":2, "minorrel":7, "maintrel":2}
     },
+    "zigbee_herdsman_converters":{"version":"15.98.0"},
+    "zigbee_herdsman":{"version":"0.20.0"},
     "network":{"channel":15,"pan_id":5674,"extended_pan_id":[0,11,22]},
     "log_level":"debug",
     "permit_join":true,
@@ -274,6 +278,18 @@ To allow joining for only a specific amount of time add the `time` property (in 
 
 Allows to check whether Zigbee2MQTT is healthy. Payload has to be empty, example response: `{"data":{"healthy":true},"status":"ok"}`.
 
+#### zigbee2mqtt/bridge/request/coordinator_check
+
+Allows to check to execute a coordinator check. Payload has to be empty, example response: `{"data":{"missing_routers":[{"friendly_name":"bulb","ieee_address":"0x000b57fffec6a5b2"}]},"status":"ok"}`.
+
+This check is only supported for Texas Instruments based adapters (e.g. CC2652/CC1352). It checks whether any routers are missing from the coordinator memory. In case routers are missing, you may experience one of the following problems:
+- Unable to pair devices to your network, pairing might fail for any device that tries to joins the network via this missing router.
+- Devices falling of the network. Sometimes devices that are in the network re-join it, if they try to re-join via this missing router, re-joining will fail.
+
+The solution is to re-pair the missing routers. There are 2 known reasons for routers to go missing:
+- Migration from a Zigbee 1.2 coordinator to 3.0 (e.g. CC2530/CC2531 -> CC2652/CC1352) without re-pairing any devices. This is because Zigbee 1.2 has less strict security requirements.
+- Upgrading of the firmware, this seems to occur because of a bug in the Texas Instruments SDK.
+
 #### zigbee2mqtt/bridge/request/restart
 
 Restarts Zigbee2MQTT. Payload has to be empty, example response: `{"data":{},"status":"ok"}`.
@@ -306,7 +322,7 @@ Creates a backup of the `data` folder (without the `data/log` directory). Payloa
 
 #### zigbee2mqtt/bridge/request/install_code/add
 
-Allows to add an install code to the coordinator. Use this when you want to pair a Zigbee 3.0 devices which can only be paired with an install code. These devices typicaly have a QR code on it. When scanning this QR code you will get a code, e.g. `ZB10SG0D831018234800400000000000000000009035EAFFFE424793DLKAE3B287281CF11F550733A0CFC38AA31E802`. Publish this code to `zigbee2mqtt/bridge/request/install_code/add` with payload `{"value":"THE_CODE"}`. Example response: `{"data":{"value":"THE_CODE"},"status":"ok"}`.
+Allows to add an install code to the coordinator. Use this when you want to pair a Zigbee 3.0 devices which can only be paired with an install code. These devices typically have a QR code on it. When scanning this QR code you will get a code, e.g. `ZB10SG0D831018234800400000000000000000009035EAFFFE424793DLKAE3B287281CF11F550733A0CFC38AA31E802`. Publish this code to `zigbee2mqtt/bridge/request/install_code/add` with payload `{"value":"THE_CODE"}`. Example response: `{"data":{"value":"THE_CODE"},"status":"ok"}`.
 
 ### Device
 

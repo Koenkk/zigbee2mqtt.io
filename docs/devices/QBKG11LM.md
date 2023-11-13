@@ -47,6 +47,7 @@ You may have to unpair the switch from an existing coordinator before the pairin
 If you can't do this, try to remove battery (if it has one), push the button (to completely discharge device), place the battery back and try pairing again.
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -81,7 +82,7 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -99,7 +100,7 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `release`, `hold`.
 
-### Operation_mode (enum)
+### Operation mode (enum)
 Decoupled mode.
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.

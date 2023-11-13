@@ -39,6 +39,7 @@ It is important to know that click on the center round boutton is the way to swi
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 

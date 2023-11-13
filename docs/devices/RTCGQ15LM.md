@@ -27,6 +27,7 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -53,7 +54,7 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -65,7 +66,7 @@ Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
-### Detection_interval (numeric)
+### Detection interval (numeric)
 Time interval for detecting actions.
 Value can be found in the published state on the `detection_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_interval": ""}`.
@@ -73,7 +74,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `2` and the maximum value is `65535`.
 The unit of this value is `s`.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -92,7 +93,7 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

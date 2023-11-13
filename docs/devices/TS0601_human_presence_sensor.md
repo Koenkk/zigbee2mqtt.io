@@ -29,6 +29,7 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
 ### Presence (binary)
@@ -37,24 +38,24 @@ Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
-### Duration_of_attendance (numeric)
+### Duration of attendance (numeric)
 Shows the presence duration in minutes.
 Value can be found in the published state on the `duration_of_attendance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `minutes`.
+The unit of this value is `min`.
 
-### Duration_of_absence (numeric)
+### Duration of absence (numeric)
 Shows the duration of the absence in minutes.
 Value can be found in the published state on the `duration_of_absence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `minutes`.
+The unit of this value is `min`.
 
-### Led_state (binary)
+### Led state (binary)
 Turns the onboard LED on or off.
 Value can be found in the published state on the `led_state` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_state": NEW_VALUE}`.
-If value equals `true` led_state is ON, if `false` OFF.
+If value equals `true` led state is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

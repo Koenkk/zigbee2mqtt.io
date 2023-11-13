@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | VZM31-SN  |
 | Vendor  | [Inovelli](/supported-devices/#v=Inovelli)  |
 | Description | Inovelli 2-in-1 switch + dimmer |
-| Exposes | light (state, brightness), power, energy, led_effect, individual_led_effect, dimmingSpeedUpRemote, dimmingSpeedUpLocal, rampRateOffToOnRemote, rampRateOffToOnLocal, dimmingSpeedDownRemote, dimmingSpeedDownLocal, rampRateOnToOffRemote, rampRateOnToOffLocal, minimumLevel, maximumLevel, invertSwitch, autoTimerOff, defaultLevelLocal, defaultLevelRemote, stateAfterPowerRestored, loadLevelIndicatorTimeout, activePowerReports, periodicPowerAndEnergyReports, activeEnergyReports, powerType, switchType, buttonDelay, smartBulbMode, ledColorWhenOn, ledColorWhenOff, ledIntensityWhenOn, ledIntensityWhenOff, localProtection, remoteProtection, outputMode, onOffLedMode, firmwareUpdateInProgressIndicator, defaultLed1ColorWhenOn, defaultLed1ColorWhenOff, defaultLed1IntensityWhenOn, defaultLed1IntensityWhenOff, defaultLed2ColorWhenOn, defaultLed2ColorWhenOff, defaultLed2IntensityWhenOn, defaultLed2IntensityWhenOff, defaultLed3ColorWhenOn, defaultLed3ColorWhenOff, defaultLed3IntensityWhenOn, defaultLed3IntensityWhenOff, defaultLed4ColorWhenOn, defaultLed4ColorWhenOff, defaultLed4IntensityWhenOn, defaultLed4IntensityWhenOff, defaultLed5ColorWhenOn, defaultLed5ColorWhenOff, defaultLed5IntensityWhenOn, defaultLed5IntensityWhenOff, defaultLed6ColorWhenOn, defaultLed6ColorWhenOff, defaultLed6IntensityWhenOn, defaultLed6IntensityWhenOff, defaultLed7ColorWhenOn, defaultLed7ColorWhenOff, defaultLed7IntensityWhenOn, defaultLed7IntensityWhenOff, doubleTapUpForFullBrightness, relayClick, doubleTapClearNotifications, action, linkquality |
+| Exposes | light (state, brightness), power, energy, led_effect, individual_led_effect, dimmingSpeedUpRemote, dimmingSpeedUpLocal, rampRateOffToOnRemote, rampRateOffToOnLocal, dimmingSpeedDownRemote, dimmingSpeedDownLocal, rampRateOnToOffRemote, rampRateOnToOffLocal, minimumLevel, maximumLevel, invertSwitch, autoTimerOff, defaultLevelLocal, defaultLevelRemote, stateAfterPowerRestored, loadLevelIndicatorTimeout, powerType, switchType, higherOutputInNonNeutral, internalTemperature, overheat, buttonDelay, deviceBindNumber, smartBulbMode, doubleTapUpToParam55, doubleTapDownToParam56, brightnessLevelForDoubleTapUp, brightnessLevelForDoubleTapDown, ledColorWhenOn, ledColorWhenOff, ledIntensityWhenOn, ledIntensityWhenOff, auxSwitchUniqueScenes, bindingOffToOnSyncLevel, localProtection, remoteProtection, outputMode, onOffLedMode, firmwareUpdateInProgressIndicator, defaultLed1ColorWhenOn, defaultLed1ColorWhenOff, defaultLed1IntensityWhenOn, defaultLed1IntensityWhenOff, defaultLed2ColorWhenOn, defaultLed2ColorWhenOff, defaultLed2IntensityWhenOn, defaultLed2IntensityWhenOff, defaultLed3ColorWhenOn, defaultLed3ColorWhenOff, defaultLed3IntensityWhenOn, defaultLed3IntensityWhenOff, defaultLed4ColorWhenOn, defaultLed4ColorWhenOff, defaultLed4IntensityWhenOn, defaultLed4IntensityWhenOff, defaultLed5ColorWhenOn, defaultLed5ColorWhenOff, defaultLed5IntensityWhenOn, defaultLed5IntensityWhenOff, defaultLed6ColorWhenOn, defaultLed6ColorWhenOff, defaultLed6IntensityWhenOn, defaultLed6IntensityWhenOff, defaultLed7ColorWhenOn, defaultLed7ColorWhenOff, defaultLed7IntensityWhenOn, defaultLed7IntensityWhenOff, doubleTapClearNotifications, activePowerReports, periodicPowerAndEnergyReports, activeEnergyReports, ledBarScaling, relayClick, action, linkquality |
 | Picture | ![Inovelli VZM31-SN](https://www.zigbee2mqtt.io/images/devices/VZM31-SN.jpg) |
 
 
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -72,14 +73,14 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Led_effect (composite)
+### Led effect (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_effect": {"effect": VALUE, "color": VALUE, "level": VALUE, "duration": VALUE}}`
 - `effect` (enum): Animation Effect to use for the LEDs allowed values: `off`, `solid`, `fast_blink`, `slow_blink`, `pulse`, `chase`, `open_close`, `small_to_big`, `aurora`, `slow_falling`, `medium_falling`, `fast_falling`, `slow_rising`, `medium_rising`, `fast_rising`, `medium_blink`, `slow_chase`, `fast_chase`, `fast_siren`, `slow_siren`, `clear_effect`
 - `color` (numeric): Calculated by using a hue color circle(value/255*360) If color = 255 display white max value is 255
 - `level` (numeric): Brightness of the LEDs max value is 100
 - `duration` (numeric): 1-60 is in seconds calculated 61-120 is in minutes calculated by(value-60) Example a value of 65 would be 65-60 = 5 minutes - 120-254 Is in hours calculated by(value-120) Example a value of 132 would be 132-120 would be 12 hours. - 255 Indefinitely max value is 255
 
-### Individual_led_effect (composite)
+### Individual led effect (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"individual_led_effect": {"led": VALUE, "effect": VALUE, "color": VALUE, "level": VALUE, "duration": VALUE}}`
 - `led` (enum): Individual LED to target. allowed values: `1`, `2`, `3`, `4`, `5`, `6`, `7`
 - `effect` (enum): Animation Effect to use for the LED allowed values: `off`, `solid`, `fast_blink`, `slow_blink`, `pulse`, `chase`, `falling`, `rising`, `aurora`, `clear_effect`
@@ -171,7 +172,7 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"autoTimerOff": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `32767`.
 The unit of this value is `seconds`.
-Besides the numeric values the following values are accepected: `Disabled`.
+Besides the numeric values the following values are accepted: `Disabled`.
 
 ### DefaultLevelLocal (numeric)
 Default level for the dimmer when it is turned on at the switch. A setting of 255 means that the switch will return to the level that it was on before it was turned off..
@@ -201,27 +202,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"loadLevelIndicatorTimeout": NEW_VALUE}`.
 The possible values are: `Stay Off`, `1 Second`, `2 Seconds`, `3 Seconds`, `4 Seconds`, `5 Seconds`, `6 Seconds`, `7 Seconds`, `8 Seconds`, `9 Seconds`, `10 Seconds`, `Stay On`.
 
-### ActivePowerReports (numeric)
-Percent power level change that will result in a new power report being sent. 0 = Disabled.
-Value can be found in the published state on the `activePowerReports` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"activePowerReports": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"activePowerReports": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `100`.
-
-### PeriodicPowerAndEnergyReports (numeric)
-Time period between consecutive power & energy reports being sent (in seconds). The timer is reset after each report is sent..
-Value can be found in the published state on the `periodicPowerAndEnergyReports` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"periodicPowerAndEnergyReports": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"periodicPowerAndEnergyReports": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `32767`.
-
-### ActiveEnergyReports (numeric)
-Energy reports Energy level change which will result in sending a new energy report.0 = disabled, 1-32767 = 0.01kWh-327.67kWh. Default setting: 10 (0.1 kWh).
-Value can be found in the published state on the `activeEnergyReports` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"activeEnergyReports": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"activeEnergyReports": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `32767`.
-
 ### PowerType (enum)
 Set the power type for the device..
 Value can be found in the published state on the `powerType` property.
@@ -234,7 +214,28 @@ Set the switch configuration..
 Value can be found in the published state on the `switchType` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switchType": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switchType": NEW_VALUE}`.
-The possible values are: `Single Pole`, `3-Way Dumb Switch`, `3-Way Aux Switch`.
+The possible values are: `Single Pole`, `3-Way Dumb Switch`, `3-Way Aux Switch`, `Single-Pole Full Sine Wave`.
+
+### HigherOutputInNonNeutral (enum)
+Increase level in non-neutral mode.
+Value can be found in the published state on the `higherOutputInNonNeutral` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"higherOutputInNonNeutral": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"higherOutputInNonNeutral": NEW_VALUE}`.
+The possible values are: `Disabled (default)`, `Enabled`.
+
+### InternalTemperature (numeric)
+The temperature measured by the temperature sensor inside the chip, in degrees Celsius.
+Value can be found in the published state on the `internalTemperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"internalTemperature": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `127`.
+
+### Overheat (enum)
+Indicates if the internal chipset is currently in an overheated state..
+Value can be found in the published state on the `overheat` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"overheat": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `No Alert`, `Overheated`.
 
 ### ButtonDelay (enum)
 This will set the button press delay. 0 = no delay (Disables Button Press Events),Default = 500ms..
@@ -243,6 +244,13 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"buttonDelay": NEW_VALUE}`.
 The possible values are: `0ms`, `100ms`, `200ms`, `300ms`, `400ms`, `500ms`, `600ms`, `700ms`, `800ms`, `900ms`.
 
+### DeviceBindNumber (numeric)
+The number of devices currently bound (excluding gateways) and counts one group as two devices.
+Value can be found in the published state on the `deviceBindNumber` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"deviceBindNumber": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `undefined` and the maximum value is `undefined`.
+
 ### SmartBulbMode (enum)
 For use with Smart Bulbs that need constant power and are controlled via commands rather than power..
 Value can be found in the published state on the `smartBulbMode` property.
@@ -250,13 +258,41 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smartBulbMode": NEW_VALUE}`.
 The possible values are: `Disabled`, `Smart Bulb Mode`.
 
+### DoubleTapUpToParam55 (enum)
+Enable or Disable setting brightness to parameter 55 on double-tap UP..
+Value can be found in the published state on the `doubleTapUpToParam55` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"doubleTapUpToParam55": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"doubleTapUpToParam55": NEW_VALUE}`.
+The possible values are: `Disabled`, `Enabled`.
+
+### DoubleTapDownToParam56 (enum)
+Enable or Disable setting brightness to parameter 56 on double-tap DOWN..
+Value can be found in the published state on the `doubleTapDownToParam56` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"doubleTapDownToParam56": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"doubleTapDownToParam56": NEW_VALUE}`.
+The possible values are: `Disabled`, `Enabled`.
+
+### BrightnessLevelForDoubleTapUp (numeric)
+Set this level on double-tap UP (if enabled by P53)..
+Value can be found in the published state on the `brightnessLevelForDoubleTapUp` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightnessLevelForDoubleTapUp": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightnessLevelForDoubleTapUp": NEW_VALUE}`.
+The minimal value is `2` and the maximum value is `254`.
+
+### BrightnessLevelForDoubleTapDown (numeric)
+Set this level on double-tap DOWN (if enabled by P54)..
+Value can be found in the published state on the `brightnessLevelForDoubleTapDown` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightnessLevelForDoubleTapDown": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightnessLevelForDoubleTapDown": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `254`.
+
 ### LedColorWhenOn (numeric)
 Set the color of the LED Indicator when the load is on..
 Value can be found in the published state on the `ledColorWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ledColorWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ledColorWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
-Besides the numeric values the following values are accepected: `Red`, `Orange`, `Yellow`, `Green`, `Cyan`, `Blue`, `Violet`, `Pink`, `White`.
+Besides the numeric values the following values are accepted: `Red`, `Orange`, `Yellow`, `Green`, `Cyan`, `Blue`, `Violet`, `Pink`, `White`.
 
 ### LedColorWhenOff (numeric)
 Set the color of the LED Indicator when the load is off..
@@ -264,7 +300,7 @@ Value can be found in the published state on the `ledColorWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ledColorWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ledColorWhenOff": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
-Besides the numeric values the following values are accepected: `Red`, `Orange`, `Yellow`, `Green`, `Cyan`, `Blue`, `Violet`, `Pink`, `White`.
+Besides the numeric values the following values are accepted: `Red`, `Orange`, `Yellow`, `Green`, `Cyan`, `Blue`, `Violet`, `Pink`, `White`.
 
 ### LedIntensityWhenOn (numeric)
 Set the intensity of the LED Indicator when the load is on..
@@ -279,6 +315,20 @@ Value can be found in the published state on the `ledIntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ledIntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ledIntensityWhenOff": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
+
+### AuxSwitchUniqueScenes (enum)
+Have unique scene numbers for scenes activated with the aux switch..
+Value can be found in the published state on the `auxSwitchUniqueScenes` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"auxSwitchUniqueScenes": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auxSwitchUniqueScenes": NEW_VALUE}`.
+The possible values are: `Disabled`, `Enabled`.
+
+### BindingOffToOnSyncLevel (enum)
+Send Move_To_Level using Default Level with Off/On to bound devices..
+Value can be found in the published state on the `bindingOffToOnSyncLevel` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"bindingOffToOnSyncLevel": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"bindingOffToOnSyncLevel": NEW_VALUE}`.
+The possible values are: `Disabled`, `Enabled`.
 
 ### LocalProtection (enum)
 Ability to control switch from the wall..
@@ -330,14 +380,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLed1IntensityWhenOn (numeric)
-Intesity of LED strip when on. 101 = Syncronized with default all LED strip intensity parameter..
+Intesity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed1IntensityWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed1IntensityWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed1IntensityWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
 ### DefaultLed1IntensityWhenOff (numeric)
-Intesity of LED strip when off. 101 = Syncronized with default all LED strip intensity parameter..
+Intesity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed1IntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed1IntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed1IntensityWhenOff": NEW_VALUE}`.
@@ -358,14 +408,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLed2IntensityWhenOn (numeric)
-Intesity of LED strip when on. 101 = Syncronized with default all LED strip intensity parameter..
+Intesity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed2IntensityWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed2IntensityWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed2IntensityWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
 ### DefaultLed2IntensityWhenOff (numeric)
-Intesity of LED strip when off. 101 = Syncronized with default all LED strip intensity parameter..
+Intesity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed2IntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed2IntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed2IntensityWhenOff": NEW_VALUE}`.
@@ -386,14 +436,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLed3IntensityWhenOn (numeric)
-Intesity of LED strip when on. 101 = Syncronized with default all LED strip intensity parameter..
+Intesity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed3IntensityWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed3IntensityWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed3IntensityWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
 ### DefaultLed3IntensityWhenOff (numeric)
-Intesity of LED strip when off. 101 = Syncronized with default all LED strip intensity parameter..
+Intesity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed3IntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed3IntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed3IntensityWhenOff": NEW_VALUE}`.
@@ -414,14 +464,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLed4IntensityWhenOn (numeric)
-Intesity of LED strip when on. 101 = Syncronized with default all LED strip intensity parameter..
+Intesity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed4IntensityWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed4IntensityWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed4IntensityWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
 ### DefaultLed4IntensityWhenOff (numeric)
-Intesity of LED strip when off. 101 = Syncronized with default all LED strip intensity parameter..
+Intesity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed4IntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed4IntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed4IntensityWhenOff": NEW_VALUE}`.
@@ -442,14 +492,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLed5IntensityWhenOn (numeric)
-Intesity of LED strip when on. 101 = Syncronized with default all LED strip intensity parameter..
+Intesity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed5IntensityWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed5IntensityWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed5IntensityWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
 ### DefaultLed5IntensityWhenOff (numeric)
-Intesity of LED strip when off. 101 = Syncronized with default all LED strip intensity parameter..
+Intesity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed5IntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed5IntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed5IntensityWhenOff": NEW_VALUE}`.
@@ -470,14 +520,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLed6IntensityWhenOn (numeric)
-Intesity of LED strip when on. 101 = Syncronized with default all LED strip intensity parameter..
+Intesity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed6IntensityWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed6IntensityWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed6IntensityWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
 ### DefaultLed6IntensityWhenOff (numeric)
-Intesity of LED strip when off. 101 = Syncronized with default all LED strip intensity parameter..
+Intesity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed6IntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed6IntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed6IntensityWhenOff": NEW_VALUE}`.
@@ -498,32 +548,18 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLed7IntensityWhenOn (numeric)
-Intesity of LED strip when on. 101 = Syncronized with default all LED strip intensity parameter..
+Intesity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed7IntensityWhenOn` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed7IntensityWhenOn": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed7IntensityWhenOn": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
 ### DefaultLed7IntensityWhenOff (numeric)
-Intesity of LED strip when off. 101 = Syncronized with default all LED strip intensity parameter..
+Intesity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..
 Value can be found in the published state on the `defaultLed7IntensityWhenOff` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLed7IntensityWhenOff": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed7IntensityWhenOff": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
-
-### DoubleTapUpForFullBrightness (enum)
-Result of a double tap on the up button..
-Value can be found in the published state on the `doubleTapUpForFullBrightness` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"doubleTapUpForFullBrightness": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"doubleTapUpForFullBrightness": NEW_VALUE}`.
-The possible values are: `Button Press Event Only`, `Button Press Event + Set Load to 100%`.
-
-### RelayClick (enum)
-In neutral on/off setups, the default is to have a clicking sound to notify you that the relay is open or closed. You may disable this sound by creating a, “simulated” on/off where the switch only will turn onto 100 or off to 0..
-Value can be found in the published state on the `relayClick` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"relayClick": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relayClick": NEW_VALUE}`.
-The possible values are: `Disabled (Click Sound On)`, `Enabled (Click Sound Off)`.
 
 ### DoubleTapClearNotifications (enum)
 Double-Tap the Config button to clear notifications..
@@ -531,6 +567,41 @@ Value can be found in the published state on the `doubleTapClearNotifications` p
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"doubleTapClearNotifications": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"doubleTapClearNotifications": NEW_VALUE}`.
 The possible values are: `Enabled (Default)`, `Disabled`.
+
+### ActivePowerReports (numeric)
+Percent power level change that will result in a new power report being sent. 0 = Disabled.
+Value can be found in the published state on the `activePowerReports` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"activePowerReports": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"activePowerReports": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+
+### PeriodicPowerAndEnergyReports (numeric)
+Time period between consecutive power & energy reports being sent (in seconds). The timer is reset after each report is sent..
+Value can be found in the published state on the `periodicPowerAndEnergyReports` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"periodicPowerAndEnergyReports": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"periodicPowerAndEnergyReports": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `32767`.
+
+### ActiveEnergyReports (numeric)
+Energy reports Energy level change which will result in sending a new energy report.0 = disabled, 1-32767 = 0.01kWh-327.67kWh. Default setting: 10 (0.1 kWh).
+Value can be found in the published state on the `activeEnergyReports` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"activeEnergyReports": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"activeEnergyReports": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `32767`.
+
+### LedBarScaling (enum)
+Method used for scaling..
+Value can be found in the published state on the `ledBarScaling` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ledBarScaling": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ledBarScaling": NEW_VALUE}`.
+The possible values are: `Gen3 method (VZM-style)`, `Gen2 method (LZW-style)`.
+
+### RelayClick (enum)
+In neutral on/off setups, the default is to have a clicking sound to notify you that the relay is open or closed. You may disable this sound by creating a, “simulated” on/off where the switch only will turn onto 100 or off to 0..
+Value can be found in the published state on the `relayClick` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"relayClick": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"relayClick": NEW_VALUE}`.
+The possible values are: `Disabled (Click Sound On)`, `Enabled (Click Sound Off)`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

@@ -42,14 +42,15 @@ devices:
 
 
 
+
 ## Exposes
 
-### Lock 
+### Child lock (lock)
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
 It's not possible to read (`/get`) this value.
 
-### Deadzone_temperature (numeric)
+### Deadzone temperature (numeric)
 The delta between local_temperature and current_heating_setpoint to trigger Heat.
 Value can be found in the published state on the `deadzone_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -57,7 +58,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `5`.
 The unit of this value is `°C`.
 
-### Max_temperature_limit (numeric)
+### Max temperature limit (numeric)
 Maximum temperature limit. Cuts the thermostat out regardless of air temperature if the external floor sensor exceeds this temperature. Only used by the thermostat when in AL sensor mode..
 Value can be found in the published state on the `max_temperature_limit` property.
 It's not possible to read (`/get`) this value.
@@ -65,8 +66,8 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `35`.
 The unit of this value is `°C`.
 
-### Min_temperature_limit (numeric)
-Minimum temperature limit for frost protection. Turns the thermostat on regardless of setpoint if the tempreature drops below this..
+### Min temperature limit (numeric)
+Minimum temperature limit for frost protection. Turns the thermostat on regardless of setpoint if the temperature drops below this..
 Value can be found in the published state on the `min_temperature_limit` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_temperature_limit": NEW_VALUE}`.
@@ -75,11 +76,11 @@ The unit of this value is `°C`.
 
 ### Climate 
 This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `local_temperature_calibration`, `system_mode`, `running_state`, `preset`.
-- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
+- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
-- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `hold`, `program`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
-- `running_state`: The current running state. Possible values are: `idle`, `heat`, `cool`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. Reading (`/get`) this attribute is not possible.
+- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `hold`, `program`. Reading (`/get`) this attribute is not possible.
+- `running_state`: The current running state. Possible values are: `idle`, `heat`, `cool`. Reading (`/get`) this attribute is not possible.
 - `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-30` and the maximum value is `30` with a step size of `0.1`.
 
 ### Sensor (enum)

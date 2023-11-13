@@ -45,6 +45,7 @@ If the selftest is executed successfully you will hear the device beep in 30 sec
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -59,11 +60,11 @@ Value can be found in the published state on the `smoke` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` smoke is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Tamper (binary)
 Indicates whether the device is tampered.
@@ -84,7 +85,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
-### Smoke_density (numeric)
+### Smoke density (numeric)
 Value can be found in the published state on the `smoke_density` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
@@ -106,13 +107,13 @@ Value can be found in the published state on the `test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

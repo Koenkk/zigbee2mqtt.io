@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -64,7 +65,7 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `recall_1`, `recall_2`, `recall_3`, `on`, `off`, `toggle`, `brightness_move_down`, `brightness_move_up`, `brightness_stop`.
 
-### Group_id (numeric)
+### Group id (numeric)
 The device sends commands with this group ID. Put dvices in this group to control them..
 Value can be found in the published state on the `group_id` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

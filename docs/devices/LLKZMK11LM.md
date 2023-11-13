@@ -28,7 +28,11 @@ pageClass: device-page
 
 ### Interlock
 This option allows to inter connect the relays which will make sure that only one relay is on at a time. To do this publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"interlock": true}` or `{"interlock": false}`. By default this option is `false`.
+
+### Binding
+The device allows zigbee [binding](../guide/usage/binding.html) for each individual channel.
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -73,7 +77,7 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -101,17 +105,17 @@ The current state of this switch is in the published state under the `state_l2` 
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Power_outage_memory (binary)
+### Power outage memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.
 Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-If value equals `true` power_outage_memory is ON, if `false` OFF.
+If value equals `true` power outage memory is ON, if `false` OFF.
 
 ### Interlock (binary)
 Enabling prevents both relais being on at the same time.

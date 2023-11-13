@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -42,7 +43,7 @@ pageClass: device-page
 
 ## Exposes
 
-### Co2 (numeric)
+### CO2 (numeric)
 The measured CO2 (carbon dioxide) value.
 Value can be found in the published state on the `co2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -60,14 +61,14 @@ Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Light_indicator (binary)
+### Light indicator (binary)
 Enable or Disable light_indicator.
 Value can be found in the published state on the `light_indicator` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_indicator": NEW_VALUE}`.
-If value equals `ON` light_indicator is ON, if `OFF` OFF.
+If value equals `ON` light indicator is ON, if `OFF` OFF.
 
-### Light_indicator_level (numeric)
+### Light indicator level (numeric)
 light_indicator_level.
 Value can be found in the published state on the `light_indicator_level` property.
 It's not possible to read (`/get`) this value.
@@ -75,7 +76,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Set_altitude (numeric)
+### Set altitude (numeric)
 Setting the altitude above sea level (for high accuracy of the CO2 sensor).
 Value can be found in the published state on the `set_altitude` property.
 It's not possible to read (`/get`) this value.
@@ -83,7 +84,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `3000`.
 The unit of this value is `meters`.
 
-### Temperature_offset (numeric)
+### Temperature offset (numeric)
 Adjust temperature.
 Value can be found in the published state on the `temperature_offset` property.
 It's not possible to read (`/get`) this value.
@@ -91,7 +92,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-30` and the maximum value is `60`.
 The unit of this value is `°C`.
 
-### Humidity_offset (numeric)
+### Humidity offset (numeric)
 Adjust humidity.
 Value can be found in the published state on the `humidity_offset` property.
 It's not possible to read (`/get`) this value.
@@ -99,14 +100,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `99`.
 The unit of this value is `%`.
 
-### Forced_recalibration (binary)
+### Forced recalibration (binary)
 Start FRC (Perform Forced Recalibration of the CO2 Sensor).
 Value can be found in the published state on the `forced_recalibration` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"forced_recalibration": NEW_VALUE}`.
-If value equals `ON` forced_recalibration is ON, if `OFF` OFF.
+If value equals `ON` forced recalibration is ON, if `OFF` OFF.
 
-### Manual_forced_recalibration (numeric)
+### Manual forced recalibration (numeric)
 Start Manual FRC (Perform Forced Recalibration of the CO2 Sensor).
 Value can be found in the published state on the `manual_forced_recalibration` property.
 It's not possible to read (`/get`) this value.
@@ -114,21 +115,21 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `5000`.
 The unit of this value is `ppm`.
 
-### Factory_reset_co2 (binary)
+### Factory reset co2 (binary)
 Factory Reset CO2 sensor.
 Value can be found in the published state on the `factory_reset_co2` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset_co2": NEW_VALUE}`.
-If value equals `ON` factory_reset_co2 is ON, if `OFF` OFF.
+If value equals `ON` factory reset co2 is ON, if `OFF` OFF.
 
-### Enable_gas (binary)
+### Enable gas (binary)
 Enable CO2 Gas Control.
 Value can be found in the published state on the `enable_gas` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_gas": NEW_VALUE}`.
-If value equals `ON` enable_gas is ON, if `OFF` OFF.
+If value equals `ON` enable gas is ON, if `OFF` OFF.
 
-### High_gas (numeric)
+### High gas (numeric)
 Setting High CO2 Gas Border.
 Value can be found in the published state on the `high_gas` property.
 It's not possible to read (`/get`) this value.
@@ -136,7 +137,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `400` and the maximum value is `2000`.
 The unit of this value is `ppm`.
 
-### Low_gas (numeric)
+### Low gas (numeric)
 Setting Low CO2 Gas Border.
 Value can be found in the published state on the `low_gas` property.
 It's not possible to read (`/get`) this value.
@@ -144,14 +145,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `400` and the maximum value is `2000`.
 The unit of this value is `ppm`.
 
-### Enable_temperature (binary)
+### Enable temperature (binary)
 Enable Temperature Control.
 Value can be found in the published state on the `enable_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_temperature": NEW_VALUE}`.
-If value equals `ON` enable_temperature is ON, if `OFF` OFF.
+If value equals `ON` enable temperature is ON, if `OFF` OFF.
 
-### High_temperature (numeric)
+### High temperature (numeric)
 Setting High Temperature Border.
 Value can be found in the published state on the `high_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -159,7 +160,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-5` and the maximum value is `50`.
 The unit of this value is `C`.
 
-### Low_temperature (numeric)
+### Low temperature (numeric)
 Setting Low Temperature Border.
 Value can be found in the published state on the `low_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -167,14 +168,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-5` and the maximum value is `50`.
 The unit of this value is `C`.
 
-### Enable_humidity (binary)
+### Enable humidity (binary)
 Enable Humidity Control.
 Value can be found in the published state on the `enable_humidity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_humidity": NEW_VALUE}`.
-If value equals `ON` enable_humidity is ON, if `OFF` OFF.
+If value equals `ON` enable humidity is ON, if `OFF` OFF.
 
-### High_humidity (numeric)
+### High humidity (numeric)
 Setting High Humidity Border.
 Value can be found in the published state on the `high_humidity` property.
 It's not possible to read (`/get`) this value.
@@ -182,7 +183,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `99`.
 The unit of this value is `C`.
 
-### Low_humidity (numeric)
+### Low humidity (numeric)
 Setting Low Humidity Border.
 Value can be found in the published state on the `low_humidity` property.
 It's not possible to read (`/get`) this value.

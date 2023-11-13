@@ -28,6 +28,10 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -56,13 +60,13 @@ Raw measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
-### Detection_period (numeric)
+### Detection period (numeric)
 Time interval in seconds to report after light changes.
 Value can be found in the published state on the `detection_period` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_period": ""}`.

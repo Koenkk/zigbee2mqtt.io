@@ -51,6 +51,7 @@ When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple swi
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)
@@ -72,7 +73,7 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `button_1_hold`, `button_1_release`, `button_1_single`, `button_1_double`, `button_1_triple`, `button_2_hold`, `button_2_release`, `button_2_single`, `button_2_double`, `button_2_triple`.
 
-### Operation_mode (enum)
+### Operation mode (enum)
 Operation mode, select "command" to enable bindings (wake up the device before changing modes!).
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.

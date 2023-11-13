@@ -28,6 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -47,26 +48,26 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`.
 
-### Device_mode (enum)
+### Device mode (enum)
 Device mode..
 Value can be found in the published state on the `device_mode` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `astro_clock`, `timer`, `daily_timer`, `weekly_timer`.
 
-### Device_enabled (binary)
+### Device enabled (binary)
 Turn the device on or off.
 Value can be found in the published state on the `device_enabled` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_enabled": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_enabled": NEW_VALUE}`.
-If value equals `ON` device_enabled is ON, if `OFF` OFF.
+If value equals `ON` device enabled is ON, if `OFF` OFF.
 
-### Child_lock (binary)
+### Child lock (binary)
 Physical input on the device enabled/disabled.
 Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `locked` child_lock is ON, if `unlocked` OFF.
+If value equals `locked` child lock is ON, if `unlocked` OFF.
 
-### Group_id (numeric)
+### Group id (numeric)
 The device sends commands with this group ID. Put devices in this group to control them..
 Value can be found in the published state on the `group_id` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

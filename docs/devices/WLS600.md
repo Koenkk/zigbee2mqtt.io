@@ -27,6 +27,7 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -34,17 +35,17 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Exposes
 
-### Water_leak (binary)
+### Water leak (binary)
 Indicates whether the device detected a water leak.
 Value can be found in the published state on the `water_leak` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` water_leak is ON, if `false` OFF.
+If value equals `true` water leak is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Tamper (binary)
 Indicates whether the device is tampered.

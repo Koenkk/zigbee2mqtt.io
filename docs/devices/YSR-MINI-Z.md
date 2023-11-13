@@ -30,6 +30,7 @@ Press and hold the on (`1`) and off (`0`) buttons for approimately 10 seconds un
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -56,7 +57,7 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `brightness_move_up`, `brightness_step_up`, `brightness_step_down`, `brightness_move_down`, `brightness_stop`, `color_temperature_step_down`, `color_temperature_step_up`, `1_single`, `1_double`, `1_hold`, `2_single`, `2_double`, `2_hold`, `3_single`, `3_double`, `3_hold`, `4_single`, `4_double`, `4_hold`.
 
-### Operation_mode (enum)
+### Operation mode (enum)
 Operation mode: "command" - for group control, "event" - for clicks.
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.

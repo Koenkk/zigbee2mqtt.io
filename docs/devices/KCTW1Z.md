@@ -30,6 +30,7 @@ Press the button on top of the device for at least 5 seconds but not more than 1
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -69,7 +70,7 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Temperature_unit (enum)
+### Temperature unit (enum)
 Current display unit.
 Value can be found in the published state on the `temperature_unit` property.
 It's not possible to read (`/get`) this value.

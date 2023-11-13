@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | SIN-4-RS-20_PRO  |
 | Vendor  | [NodOn](/supported-devices/#v=NodOn)  |
-| Description | Roller shutter controller |
+| Description | Roller shutter relay switch |
 | Exposes | cover (state, position), linkquality |
 | Picture | ![NodOn SIN-4-RS-20_PRO](https://www.zigbee2mqtt.io/images/devices/SIN-4-RS-20_PRO.jpg) |
 
@@ -26,6 +26,10 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options

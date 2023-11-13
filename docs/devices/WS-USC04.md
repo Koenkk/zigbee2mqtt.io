@@ -27,6 +27,7 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -63,37 +64,37 @@ The current state of this switch is in the published state under the `state_bott
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_bottom": "ON"}`, `{"state_bottom": "OFF"}` or `{"state_bottom": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_bottom": ""}`.
 
-### Operation_mode (enum, top endpoint)
+### Operation mode (enum, top endpoint)
 Decoupled mode for top button.
 Value can be found in the published state on the `operation_mode_top` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_top": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_top": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
 
-### Operation_mode (enum, bottom endpoint)
+### Operation mode (enum, bottom endpoint)
 Decoupled mode for bottom button.
 Value can be found in the published state on the `operation_mode_bottom` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_bottom": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_bottom": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages (since last pairing).
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Flip_indicator_light (binary)
+### Flip indicator light (binary)
 After turn on, the indicator light turns on while switch is off, and vice versa.
 Value can be found in the published state on the `flip_indicator_light` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"flip_indicator_light": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
-If value equals `ON` flip_indicator_light is ON, if `OFF` OFF.
+If value equals `ON` flip indicator light is ON, if `OFF` OFF.
 
 ### Power (numeric)
 Instantaneous measured power.
@@ -114,12 +115,12 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Power_outage_memory (binary)
+### Power outage memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.
 Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-If value equals `true` power_outage_memory is ON, if `false` OFF.
+If value equals `true` power outage memory is ON, if `false` OFF.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

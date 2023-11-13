@@ -50,6 +50,7 @@ Related issues:
 - https://github.com/dresden-elektronik/deconz-rest-plugin/issues/2127#issuecomment-587949747
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -100,25 +101,25 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Current_phase_b (numeric)
+### Current phase B (numeric)
 Instantaneous measured electrical current on phase B.
 Value can be found in the published state on the `current_phase_b` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
 
-### Voltage_phase_b (numeric)
+### Voltage phase B (numeric)
 Measured electrical potential value on phase B.
 Value can be found in the published state on the `voltage_phase_b` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Current_phase_c (numeric)
+### Current phase C (numeric)
 Instantaneous measured electrical current on phase C.
 Value can be found in the published state on the `current_phase_c` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
 
-### Voltage_phase_c (numeric)
+### Voltage phase C (numeric)
 Measured electrical potential value on phase C.
 Value can be found in the published state on the `voltage_phase_c` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZTH01  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature and humidity sensor |
-| Exposes | temperature, humidity, battery_state, battery_low, linkquality |
+| Exposes | temperature, humidity, battery_state, temperature_unit, linkquality |
 | Picture | ![TuYa ZTH01](https://www.zigbee2mqtt.io/images/devices/ZTH01.jpg) |
 
 
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -54,17 +55,18 @@ Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Battery_state (enum)
+### Battery state (enum)
 State of the battery.
 Value can be found in the published state on the `battery_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `low`, `medium`, `high`.
 
-### Battery_low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+### Temperature unit (enum)
+Temperature unit.
+Value can be found in the published state on the `temperature_unit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": NEW_VALUE}`.
+The possible values are: `celsius`, `fahrenheit`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

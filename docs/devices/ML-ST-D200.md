@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ML-ST-D200  |
 | Vendor  | [M-ELEC](/supported-devices/#v=M-ELEC)  |
-| Description | Stitchy Dim switchable wall module |
+| Description | Stitchy dim switchable wall module |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
 | Picture | ![M-ELEC ML-ST-D200](https://www.zigbee2mqtt.io/images/devices/ML-ST-D200.jpg) |
 
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -71,7 +72,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
-### Power_on_behavior (enum)
+### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.

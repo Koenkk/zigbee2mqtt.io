@@ -32,9 +32,9 @@ Uses a CR2450 battery
 Long press the pairing button for five seconds. The signal indicator on the display will begin to blink when in pairing mode.
 
 ### Temperature display
-Double click the pairing button to toggle the display between Celsius and Fahrenheit. This does not change the unit of the measured temperature value. 
-
+Double click the pairing button to toggle the display between Celsius and Fahrenheit. This does not change the unit of the measured temperature value.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

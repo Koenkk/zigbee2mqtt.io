@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | SIN-4-2-20_PRO  |
 | Vendor  | [NodOn](/supported-devices/#v=NodOn)  |
-| Description | Double LED relay |
+| Description | Lighting relay switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![NodOn SIN-4-2-20_PRO](https://www.zigbee2mqtt.io/images/devices/SIN-4-2-20_PRO.jpg) |
 
@@ -26,6 +26,10 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options

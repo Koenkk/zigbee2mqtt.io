@@ -23,9 +23,12 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+### Pairing
 
-
+To put the device in pairing mode, hold the reset button for 5 seconds. The LED light should blink quickly and it makes a beep sound once paired.
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -41,31 +44,31 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"feed": NEW_VALUE}`.
 The possible values are: ``, `START`.
 
-### Feeding_source (enum)
+### Feeding source (enum)
 Feeding source.
 Value can be found in the published state on the `feeding_source` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `schedule`, `manual`, `remote`.
 
-### Feeding_size (numeric)
+### Feeding size (numeric)
 Feeding size.
 Value can be found in the published state on the `feeding_size` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `portion`.
 
-### Portions_per_day (numeric)
+### Portions per day (numeric)
 Portions per day.
 Value can be found in the published state on the `portions_per_day` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Weight_per_day (numeric)
+### Weight per day (numeric)
 Weight per day.
 Value can be found in the published state on the `weight_per_day` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `g`.
 
 ### Error (binary)
-Indicates wether there is an error with the feeder.
+Indicates whether there is an error with the feeder.
 Value can be found in the published state on the `error` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` error is ON, if `false` OFF.
@@ -83,7 +86,7 @@ The current state of this switch is in the published state under the `led_indica
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_indicator": "ON"}`, `{"led_indicator": "OFF"}` or `{"led_indicator": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
 
-### Lock 
+### Child lock (lock)
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
 It's not possible to read (`/get`) this value.
@@ -95,7 +98,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
 The possible values are: `schedule`, `manual`.
 
-### Serving_size (numeric)
+### Serving size (numeric)
 One serving size.
 Value can be found in the published state on the `serving_size` property.
 It's not possible to read (`/get`) this value.
@@ -103,7 +106,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `10`.
 The unit of this value is `portion`.
 
-### Portion_weight (numeric)
+### Portion weight (numeric)
 Portion weight.
 Value can be found in the published state on the `portion_weight` property.
 It's not possible to read (`/get`) this value.
