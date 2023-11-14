@@ -231,22 +231,7 @@ sudo journalctl -u zigbee2mqtt.service -f
 To update Zigbee2MQTT to the latest version, execute:
 
 ```sh
-# Stop Zigbee2MQTT and go to directory
-sudo systemctl stop zigbee2mqtt
+# Run the update script from the Zigbee2MQTT directory
 cd /opt/zigbee2mqtt
-
-# Backup configuration
-cp -R data data-backup
-
-# Update
-git pull
-npm ci
-npm run build
-
-# Restore configuration
-cp -R data-backup/* data
-rm -rf data-backup
-
-# Start Zigbee2MQTT
-sudo systemctl start zigbee2mqtt
+./update.sh
 ```
