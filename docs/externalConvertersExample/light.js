@@ -12,32 +12,19 @@ const e = exposes.presets;
 const ea = exposes.access;
 
 const definition = {
-    fingerprint: tuya.fingerprint('TS011F', ['_TZ3000_jak16dll']),
-    model: 'TS011F_plug_2_gang',
-    description: 'Smart plug (with power monitoring)',
-    vendor: 'TuYa',
-    ota: ota.zigbeeOTA,
-    extend: tuya.extend.switch({
-        electricalMeasurements: true, powerOutageMemory: true, indicatorMode: true, childLock: true, endpoints: ['l1', 'l2']}),
-    whiteLabel: [
-        tuya.whitelabel('Immax', '07752L', 'NEO smart internal double socket', ['_TZ3000_jak16dll']),
-    ],
-    configure: async (device, coordinatorEndpoint, logger) => {
-        await tuya.configureMagicPacket(device, coordinatorEndpoint, logger);
-        const endpoint = device.getEndpoint(1);
-        await reporting.bind(endpoint, coordinatorEndpoint, ['genOnOff', 'haElectricalMeasurement', 'seMetering']);
-        await reporting.rmsVoltage(endpoint, {change: 5});
-        await reporting.rmsCurrent(endpoint, {change: 50});
-        await reporting.activePower(endpoint, {change: 10});
-        await reporting.currentSummDelivered(endpoint);
-        endpoint.saveClusterAttributeKeyValue('haElectricalMeasurement', {acCurrentDivisor: 1000, acCurrentMultiplier: 1});
-        endpoint.saveClusterAttributeKeyValue('seMetering', {divisor: 100, multiplier: 1});
-        device.save();
-    },
-    endpoint: (device) => {
-        return {'l1': 1, 'l2': 2};
-    },
-    meta: {multiEndpoint: true},
+    zigbeeModel: ['myZigbeeModel'],
+    model: 'myModel',
+    vendor: 'myVendor',
+    description: 'My super lamp!',
+    // Note that fromZigbee, toZigbee and exposes are missing here since we use extend here.
+    // Extend contains a default set of fromZigbee/toZigbee converters and expose for common device types.
+    // The following extends are available:
+    // - extend.switch
+    // - extend.light_onoff_brightness
+    // - extend.light_onoff_brightness_colortemp
+    // - extend.light_onoff_brightness_color
+    // - extend.light_onoff_brightness_colortemp_color
+    extend: extend.light_onoff_brightness_colortemp_color(),
 };
 
 module.exports = definition;
