@@ -226,6 +226,277 @@ sudo systemctl start zigbee2mqtt
 # View the log of Zigbee2MQTT
 sudo journalctl -u zigbee2mqtt.service -f
 ```
+## (Optional and alternatively) Running as a daemon with sysvinit.
+If you're using a systemd-free distribution, such as Devuan or equivalent,
+and you want to run Zigbee2MQTT as a daemon (in the background) and start it automatically on boot we will run Zigbee2MQTT with a sysvinit script
+and a corresponding configuration file.
+Yes, Devuan runs very well on a Raspberry Pi.
+
+```bash
+# Create a sysvinit configuration file for Zigbee2MQTT.
+# Here we use `nano`, but you could of course use your preferred editor.
+sudo nano /etc/zigbee2mqtt.conf
+```
+
+Copy and paste the following into this file:
+```
+#
+# Keep shell syntax in this file, it will be sourced by 'sh'.
+#
+# During manual installation of zigbee2mqtt, and following the
+# instructions on the software website, a particular directory
+# was created, software installed into the directory and
+# all files in this directory were given ownership for a specific
+# user on this computer.
+#
+# Here, define the user ID that shall run the zigbee2mqtt bridge.
+# Do not run the bridge as root, but run as an unpriviledged user.
+RUNAS='someuser'
+#
+# Define the directory where the bridge is installed,
+# the default being /opt/zigbee2mqtt'.
+RUN_DIR='/opt/zigbee2mqtt'
+#
+# Make the init script slightly more verbose.
+#VERBOSE='yes'
+#
+# EOF.
+```
+Save the file and exit the editor.
+
+> Make sure to correctly adjust the name of the user in `RUNAS=''` to the same user ID as was given the ownership of the installed software.
+> 
+> Also, if you installed the software to a different directory than the one proposed (/opt/zigbee2mqtt), you must modify the `RUN_DIR=''` accordingly.
+
+```bash
+# Create a sysvinit init script for Zigbee2MQTT.
+# Here again, we use `nano`, but you should use your preferred editor.
+sudo nano /etc/init.d/zigbee2mqtt
+```
+
+Carefully copy and paste the following into this file:
+```
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          zigbee2mqtt
+# Required-Start:    $local_fs $time $syslog
+# Required-Stop:     $local_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Zigbee to MQTT
+# Description:       Zigbee to MQTT bridge
+### END INIT INFO
+
+# Author: StafrGotar
+
+PIDFILE=/run/zigbee2mqtt.pid
+CONF=/etc/zigbee2mqtt.conf
+
+# PATH should only include /usr/* if it runs after the mountnfs.sh script
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+DESC="Zigbee to MQTT bridge"
+NAME=zigbee2mqtt
+
+SCRIPTNAME="/etc/init.d/${NAME}" # The name of this init-script.
+CONF_FILE="/etc/${NAME}.conf"    # The name of a configuration file.
+
+# This is the program which would be used to manually start zigbee2mqtt.
+DAEMON=/usr/bin/npm
+
+# Exit if the npm package is not installed.
+[ -x "$DAEMON" ] || exit 0
+
+# Load the VERBOSE setting and other rcS variables
+. /lib/init/vars.sh
+
+# Define LSB log_* functions.
+# Depend on lsb-base (>= 3.2-14) to ensure that this file is present
+# and status_of_proc is working.
+. /lib/lsb/init-functions
+
+if [ ! -f "${CONF_FILE}" ]; then
+    log_failure_msg " Missing configuration file ${CONF_FILE}." "${NAME}"
+    exit 1
+else
+    . "${CONF_FILE}"
+fi
+
+PGREP_BIN=$(which pgrep) # Exists and is executable.
+if [ "${?}" != 0 ]; then
+    log_failure_msg " Missing 'pgrep' binary." "${NAME}"
+    exit 1
+fi
+
+if [ ! -d "${RUN_DIR}" ]; then
+    log_failure_msg " Execution directory ${RUN_DIR} doesn't exist." "${NAME}"
+    exit 1
+fi
+
+do_start()
+{
+    start-stop-daemon --start \
+                      --oknodo \
+                      --quiet \
+                      --background \
+                      --make-pidfile \
+                      --pidfile "${PIDFILE}" \
+                      --chuid "${RUNAS}" \
+                      --chdir "${RUN_DIR}" \
+                      --exec "${DAEMON}" \
+                      --test -- 'start' || return 1
+    start-stop-daemon --start \
+                      --oknodo \
+                      --quiet \
+                      --background \
+                      --make-pidfile \
+                      --pidfile "${PIDFILE}" \
+                      --chuid "${RUNAS}" \
+                      --chdir "${RUN_DIR}" \
+                      --exec "${DAEMON}" -- 'start' || return 2
+}
+
+do_stop()
+{
+    # At start-up, the 'npm start' command leaves 3 processes running.
+    #
+    # 1) 'npm start' - This is where we obtain the PID we save at start-up.
+    # 2) 'sh -c node index.js'
+    # 3) 'node index.js'
+    #
+    # If we simply kill the 'npm' (1) process, then the 'sh' process (2)
+    # will be killed too, but the 'node' (3) process will be left dangling.
+    #
+    # If we kill the 'sh' (2) process, then the 'npm' process (1) will also terminate
+    # but will leave the 'node' (3) process dangling.
+    #
+    # We must explicitly kill the 'node' (3) process and then kill the 'npm' (1) process,
+    # which also will terminate the 'sh' (2) process.
+    # If successful, we may remove the .pid file.
+    #
+    # We will need to find the PID of the 'sh' (2) process to find the PID of the 'node' (3) process.
+    # The current user could run several nodejs programs, performing different tasks,
+    # potentially even several instances of zigbee2mqtt.
+    #
+    # We want to kill only the 'node' running this instance of zigbee2mqtt.
+    # This means we kill the 'node' who's parent is the 'sh' started by our zigbee2mqtt PID.
+    #
+    if [ ! -f "${PIDFILE}" ]; then
+        log_failure_msg "\n${NAME} is not running."
+        exit 1
+    fi
+    NPM_PID="$(cat ${PIDFILE})"
+    if [ -z "${NPM_PID}" ]; then
+        log_failure_msg " Failed to obtain the current 'npm' pid from the 'pid' file '${PIDFILE}'. Impossible to stop" "${NAME}"
+        exit 1
+    fi
+    SHELL_PID=$(pgrep -u "${RUNAS}" --full --exact 'sh -c node index.js')
+    if [ -z "${SHELL_PID}" ]; then
+        log_failure_msg " Failed to obtain the pid of the shell started by npm. Impossible to stop" "${NAME}"
+        exit 1
+    fi
+    NODE_PID=$(pgrep -u "${RUNAS}" --parent "${SHELL_PID}" --full --exact 'node index.js')
+    if [ -z "${NODE_PID}" ]; then
+        log_failure_msg " Failed to obtain the pid of the 'node' started by npm. Impossible to stop" "${NAME}"
+        exit 1
+    fi
+    [ "$VERBOSE" != no ] && log_warning_msg "\nWill kill 'node' with PID ${NODE_PID}."
+    kill "${NODE_PID}"
+    #
+    [ "$VERBOSE" != no ] && log_warning_msg  "Will kill 'npm' with PID ${NPM_PID}."
+    #
+    # Kill all processes started by the 'npm' process. (Wouldn't kill the 'node' subprocess of the 'sh -c').
+    start-stop-daemon --stop \
+                      --quiet \
+                      --oknodo \
+                      --ppid "${NPM_PID}"
+    RETVAL="${?}"
+    [ "${RETVAL}" = 2 ] && return 2
+    rm -f "${PIDFILE}"
+    return "${RETVAL}"
+}
+
+case "$1" in
+    start)
+        [ "$VERBOSE" != no ] && log_daemon_msg "Starting ${DESC}" "$NAME"
+        do_start
+        case "$?" in
+            0|1)
+                [ "$VERBOSE" != no ] && log_end_msg 0
+                ;;
+            2) [ "$VERBOSE" != no ] && log_end_msg 1
+                ;;
+        esac
+        ;;
+    stop)
+        [ "$VERBOSE" != no ] && log_daemon_msg "Stopping ${DESC}" "$NAME"
+        do_stop
+        case "$?" in
+            0|1)
+                [ "$VERBOSE" != no ] && log_end_msg 0
+                ;;
+            2)
+                [ "$VERBOSE" != no ] && log_end_msg 1
+                ;;
+        esac
+        ;;
+    restart)
+        [ "$VERBOSE" != no ] && log_daemon_msg "Restarting ${DESC}" "$NAME"
+        do_stop
+        case "$?" in
+            0|1)
+                do_start
+                case "$?" in
+                    0) log_end_msg 0 ;;
+                    1) log_end_msg 1 ;; # Old process is still running
+                    *) log_end_msg 1 ;; # Failed to start
+                esac
+                ;;
+            *)
+                # Failed to stop
+                log_end_msg 1
+                ;;
+        esac
+        ;;
+    status)
+        status_of_proc -p "${PIDFILE}" "${DAEMON}" "${NAME}" && exit 0 || exit $?
+        ;;
+    *)
+        log_action_msg "Usage: ${SCRIPTNAME} {start|stop|status|restart}"
+        exit 1
+        ;;
+esac
+
+exit 0
+```
+Save the file and exit the editor.
+
+```bash
+# Make sure to set the right access to the init script.
+sudo chmod 0755 /etc/init.d/zigbee2mqtt
+```
+
+## Starting Zigbee2MQTT with sysvinit
+Now that we have setup everything correctly we can start Zigbee2MQTT.
+
+```bash
+sudo /etc/init.d/zigbee2mqtt start
+```
+
+To stop the service:
+```bash
+sudo /etc/init.d/zigbee2mqtt stop
+```
+
+To check if the service is currently running:
+```bash
+sudo /etc/init.d/zigbee2mqtt status
+```
+
+If this works as expected, you can make sure the init script gets executed automatically at boot.
+```bash
+sudo update-rc.d zigbee2mqtt defaults
+```
+
 
 ## (For later) Update Zigbee2MQTT to the latest version
 To update Zigbee2MQTT to the latest version, execute:
