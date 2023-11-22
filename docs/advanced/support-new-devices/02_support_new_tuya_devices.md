@@ -102,7 +102,7 @@ The values in the mapped datapoint are as follows:
 3. The value converter, this converts the received value before publishing it (`tuya.valueConverter.raw` in this example). There are more value converters available, examples:
     - If the value needs to be divided by 10 you can use `tuya.valueConverter.divideBy10`
     - If the value needs to be mapped to a string you can use `tuya.valueConverterBasic.lookup({'single': 0, 'double': 1, 'hold': 2})`
-    - For more examples search for `tuyaDatapoints` in [`tuya.js`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices/tuya.js).
+    - For more examples search for `tuyaDatapoints` in [`tuya.ts`](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/devices/tuya.ts).
 
 Repeat this for all datapoints.
 
