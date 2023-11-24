@@ -728,6 +728,22 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     ![](../../images/wiren-board-7.jpg)
     </details>
 
+* JetHub D1+
+  * <details>
+    <summary> JetHome JetHub D1+</summary>
+
+    Controller with ZigBee module onboard with external antenna.
+
+    JetHub D1+ is DIN-rail home automation controller with Ubuntu/Debian OS and a lot of peripherals.
+
+    Based on Silabs EFR32MG21.
+
+    * [Documentation](https://docs.jethome.ru/en/controllers/linux/din_rail/d1p.html)
+    * [Buy](https://jethome.ru/d1p/)
+
+    ![](../../images/jethub_d1p_efr.png)
+    </details>
+
 ### Based on ZiGate
   
 Initial development started on experimental (alpha stage) support for various ZigGate adapters.  This includes all ZiGate compatible hardware adapters which are currently based on NXP Zigbee MCU chips like JN5168 and JN5169  with ZigGate 3.1d firmware or later.
