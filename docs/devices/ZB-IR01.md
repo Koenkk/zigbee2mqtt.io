@@ -26,45 +26,12 @@ pageClass: device-page
 ## Notes
 ## 1 Protocol Overview
 
-### 1.1 Protocol Description
 
-This agreement document is applicable to the following two methods:
+### 1.1 Description of ZCL communication method for accessing your own gateway
 
-Access through Zhiyi Technology ZYZBP008 coordinator module
+Users who develop their own gateway to access smart infrared remote control should refer to the standard cluster of the [07-5123-07-ZigbeeClusterLibrary_Revision_7.pdf](https://csa-iot.org/developer-resource/specifications-download-request/) protocol document to access it.
 
-Access your own gateway through ZCL protocol
-
-### 1.2 Serial communication process of accessing ZYZBP008
-
-#### 1.2.1 Definition of terms
-
-Host side: Need to implement networking and communicate with the server
-
-Coordinator: ZYZBP008 module, which can communicate with other Zigbee devices through serial port instructions
-
-Sub-device: that is, lights, sockets, switches, and various sensors and other equipment that need to be connected
-
-Router: Generally a device that supplies power for a long time, such as lights, switches, sockets, etc.
-
-Sleeping devices: generally sensors
-
-#### 1.2.2 The process of ZYZBP008 coordinator forwarding data of sub-device to Host:
-
- 
-
-#### 1.2.3 Process of Host sending data to sub-device
-
- 
-
-#### 1.2.4 Serial port protocol description
-
-For the serial port protocol, please refer to [3.12.2 Sending Custom Data] and [3.12.3 Receive Custom Data] in "Zigbee 3.0 Serial Port Protocol Document_v1.5.pdf", where the channel ID is 0 and the data length is 6. For data content, please refer to this protocol document [Control Command Load]
-
-### 1.3 Description of ZCL communication method for accessing your own gateway
-
-Users who develop their own gateway to access smart infrared remote control should refer to the standard cluster of the "07-5123-07-ZigbeeClusterLibrary_Revision_7.pdf" protocol document to access it.
-
-#### 1.3.1 Cluster identifier
+#### 1.1.1 Cluster identifier
 
 | **Identifier** | **Name**                |
 | -------------- | ----------------------- |
@@ -72,11 +39,11 @@ Users who develop their own gateway to access smart infrared remote control shou
 
 Table 1
 
-#### 1.3.2 Agreement process description
+#### 1.1.2 Agreement process description
 
 In order to simplify the communication process, the creation of transparent transmission channels required by the cluster is omitted, and transparent transmission commands are directly used to send and receive commands. The channel ID is fixed at 0.
 
-##### 1.3.2.1 Send data
+##### 1.1.2.1 Send data
 
 Use the [10.6.2.4.3 TransferData Command] command, the key parameters are as follows
 
@@ -92,11 +59,6 @@ Direction: Client->Server
 
 Table 2
 
-The transmission content is shown in Figure 3. The highlighted part is the transparent transmission data of the command in Chapter 3 (Control Command Payload):
-
-
-
-Figure 3
 
 ##### 1.3.2.2 Receive feedback data from infrared remote control
 
@@ -118,21 +80,16 @@ Direction: Server –>Client
 
 Table 3
 
-The transmission content is shown in Figure 4. The highlighted part is the transparent transmission data of the command in Chapter 3 (Control Command Payload):
 
- 
+### 1.2 Introduction to infrared remote control protocol
 
-Figure 4
-
-### 1.4 Introduction to infrared remote control protocol
-
-#### 1.4.1 Request data frame
+#### 1.2.1 Request data frame
 
 | Command | Data 1 | Data 2 | Data 3 | Data 4 | XOR check |
 | ------- | ------ | ------ | ------ | ------ | --------- |
 | 0x##    | 0x##   | 0x##   | 0x##   | 0x##   | 0x##      |
 
-#### 1.4.2 Response data frame
+#### 1.2.2 Response data frame
 
 | Command | Data 1 | Data 2 | Data 3 | Data 4 | XOR check |
 | ------- | ------ | ------ | ------ | ------ | --------- |
@@ -150,7 +107,7 @@ Data: Data transmitted to the infrared remote control
 
 XOR check: XOR and check
 
-#### 1.4.3 XOR verification algorithm (XOR and verification)
+#### 1.2.3 XOR verification algorithm (XOR and verification)
 
 Verification algorithm C language version:
 
@@ -208,7 +165,7 @@ Kfid: A 16bit remote control ID
 
 Obtain Kfid: a, call the one-click matching interface to obtain
 
-b. Obtained by consulting the brand and model correspondence table.
+b. Obtained by consulting the brand and model correspondence table(table 11 - table 14).
 
 Return: Success: 0x06,0x89,0x00,0x00,0x00,0x8F
 
@@ -433,9 +390,9 @@ Note: If you need detailed command explanation, please refer to [6.1 Infrared Da
 
 ### 5.1 Air conditioner button ID and status value
 
-| **Air conditioning button ID and status value** |                      |                                                              |
-| ----------------------------------------------- | -------------------- | ------------------------------------------------------------ |
+
 | Button ID                                       | Button name          | Button status ID (starting from 0)                           |
+| ------------------------------------------- | -------------------- | ------------------------------------------------------ |
 | 0                                               | Power                | On [Power], Off                                              |
 | 1                                               | Mode                 | Automatic [mode], cooling, dehumidification, air supply, heating, |
 | 2                                               | Temperature+         | 16[Temperature+],17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32 |
@@ -461,10 +418,8 @@ Note: If you need detailed command explanation, please refer to [6.1 Infrared Da
 Table 6
 
 ### 5.2 TV button ID
-
-| **TV Button ID** |                       |                                                              |
+| Button ID        | Button name           | Description        |
 | ---------------- | --------------------- | ------------------------------------------------------------ |
-| Button ID        | Button name           | Description                                                  |
 | 0x00             | Power on              |                                                              |
 | 0x01             | Power off             | Generally, power off and power on have the same code, so the power on and off status cannot be accurately distinguished |
 | 0x02             | Signal source         |                                                              |
@@ -514,9 +469,8 @@ Table 7
 
 ### 5.3 Set-top box button ID
 
-| **Set-top box button ID** |                       |                                                              |
-| ------------------------- | --------------------- | ------------------------------------------------------------ |
 | Button ID                 | Button name           | Description                                                  |
+| ------------------------- | --------------------- | ------------------------------------------------------------ |
 | 0x00                      | Power on              |                                                              |
 | 0x01                      | Power off             | Generally, power off and power on have the same code, so the power on and off status cannot be accurately distinguished |
 | 0x02                      | Home Page             |                                                              |
@@ -561,10 +515,8 @@ Table 7
 Table 8
 
 ### 5.4 TV box button ID
-
-| **TV box button ID** |               |                                                              |
+| Button ID            | Button name   | Description          |
 | -------------------- | ------------- | ------------------------------------------------------------ |
-| Button ID            | Button name   | Description                                                  |
 | 0x00                 | Power         |                                                              |
 | 0x01                 | Power off     | Generally, power off and power on have the same code, so the power on and off status cannot be accurately distinguished |
 | 0x02                 | Home Page     |                                                              |
@@ -608,10 +560,8 @@ Table 8
 Table 9
 
 ### 5.5 Fan button ID
-
-| **Fan button ID** |                   |                                                              |
-| ----------------- | ----------------- | ------------------------------------------------------------ |
 | Button ID         | Button name       | Description                                                  |
+| ----------------- | ----------------- | ------------------------------------------------------------ |
 | 0x00              | Power on          |                                                              |
 | 0x01              | Power off         | Generally, power off and power on have the same code, so the power on and off status cannot be accurately distinguished |
 | 0x02              | Timing            |                                                              |
@@ -656,7 +606,7 @@ Table 10
 | **0x00**    | Reserved bit, fixed to 0                                     |
 | **0xA9**    | Checksum (XOR sum calculation based on the previous data) Reference chapter [1.4.3 XOR check algorithm (XOR sum check)] |
 
-Kfid acquisition: Open the "Infrared Brand Model Correspondence Table.xlsx" and find the [Air Conditioner] page,, search for [Midea], and learn that Midea's kfid range is decimal [40-59], converted to hexadecimal is [0x28-0x3B]
+Kfid acquisition: Find Table 11, search for [Midea], and learn that Midea's kfid range is decimal [40-59], converted to hexadecimal is [0x28-0x3B]
 
  
 
@@ -668,8 +618,8 @@ Note: The kfid of infrared remote control has multiple values, 40, 41, 42...59 a
 | ----------- | ------------------------------------------------------------ |
 | **0x86**    | Command (send infrared data)                                 |
 | **0x01**    | Device type, 0x01 means air conditioner                      |
-| **0x00**    | Remote control ID, air conditioner corresponding [Table 6] (0 means switch) |
-| **0x00**    | Key value, corresponding to air conditioner [Table 6] (counting from 0) |
+| **0x00**    | Remote control ID, air conditioner corresponding Table 6 |
+| **0x00**    | Key value, corresponding to air conditioner Table 6 |
 | **0x00**    | Reserved bit, fixed to 0                                     |
 | **0x87**    | Checksum (XOR and calculation based on the previous data)    |
 
@@ -679,8 +629,8 @@ Note: The kfid of infrared remote control has multiple values, 40, 41, 42...59 a
 | ----------- | ------------------------------------------------------------ |
 | **0x86**    | Command (send infrared data)                                 |
 | **0x01**    | Device type, 0x01 means air conditioner                      |
-| **0x00**    | Remote control ID, air conditioner corresponding [Table 6] 0 means switch |
-| **0x01**    | Key value, corresponding to air conditioner [Table 6] (counting from 0) |
+| **0x00**    | Remote control ID, air conditioner corresponding Table 6 |
+| **0x01**    | Key value, corresponding to air conditioner Table 6 |
 | **0x00**    | Reserved bit, fixed to 0                                     |
 | **0x86**    | Checksum (XOR and calculation based on the previous data)    |
 
@@ -690,15 +640,15 @@ Note: The kfid of infrared remote control has multiple values, 40, 41, 42...59 a
 | ----------- | ------------------------------------------------------------ |
 | **0x86**    | Command (send infrared data)                                 |
 | **0x01**    | Device type, 0x01 means air conditioner                      |
-| **0x02**    | Remote control ID, air conditioner corresponding [Table 6] (02 means temperature button) |
-| **0x09**    | Key value, corresponding to air conditioner [Table 6] (counting from 0, 25℃ corresponds to the 9th one) |
+| **0x02**    | Remote control ID, air conditioner corresponding Table |
+| **0x09**    | Key value, corresponding to air conditioner Table 6 (counting from 0, 25℃ corresponds to the 9th one) |
 | **0x00**    | Reserved bit, fixed to 0                                     |
 | **0x8C**    | Checksum (XOR and calculation based on the previous data)    |
 
 
 ### Air conditioner brand code table (kfid)
 | 品牌(brand)                   | 代码(kfid code) | 品牌(brand)                         | 代码(kfid code) | 品牌(brand)          | 代码(kfid code) |
-| ----------------------------- | --------------- | ----------------------------------- | --------------- | -------------------- | --------------- |
+| ------------------- | ------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
 | 格力(Gree)                    | 0000-0019       | 金兴(JINXING)                       | 0900-0904       | 慕森(MUSEEN)         | 1274-1275       |
 | 海尔(Haier)                   | 0020-0039       | 弥特斯(MITSEIN)                     | 0905-0909       | 米林客(Millink)      | 1276-1277       |
 | 美的(Midea)                   | 0040-0059       | EK(EK)                              | 0910-0914       | 名氏风(Mistral)      | 1278-1279       |
@@ -800,10 +750,12 @@ Note: The kfid of infrared remote control has multiple values, 40, 41, 42...59 a
 | 本岛(BENDAO)                  | 0890-0894       | CIH(CIH)                            | 1270-1271       |                      |                 |
 | 东方三星(SUMSAXNG)            | 0895-0899       | 美歌(Meico)                         | 1272-1273       |                      |                 |
 
+Table 11
+
 ### TV brand code table (kfid)
 
-| 品牌(brand)               | 代码(kfid) | 品牌(brand)              | 代码(kfid) | 品牌(brand)                  | 代码(kfid) |
-| ------------------------- | ---------- | ------------------------ | ---------- | ---------------------------- | ---------- |
+| 品牌(brand)               | 代码(kfid code) | 品牌(brand)              | 代码(kfid code) | 品牌(brand)                  | 代码(kfid code) |
+| ------------------------- | ------------------ | ------------------------ | ------------------ | ---------------------------- | ------------------ |
 | Addsion(Addsion)          | 1          | 海虹(Haihong)            | 0575-0585  | SMVSVNUG(SM  VSVNUG)         | 1013       |
 | Ambassador(Am bassador)   | 2          | 瀚丽美(D&Q)              | 586        | SNAPR(SNAPR)                 | 1014       |
 | 奥丽维亚(OLEVIA)          | 0003-0005  | 瀚斯宝丽(Hannspree)      | 0587-0588  | Spectricon(Spect  ricon)     | 1015-1018  |
@@ -944,11 +896,12 @@ Note: The kfid of infrared remote control has multiple values, 40, 41, 42...59 a
 | 海尔(Haier)               | 0539-0570  | Scimitsu(Scimitsu)       | 1010       |                              |            |
 | 海得曼(Advante)           | 0571-0572  | Semivox(Semivox)         | 1011       |                              |            |
 | 海燕(Haiyan)              | 0573-0574  | SET(SET)                 | 1012       |                              |            |
+Table 12
 
 ### projector brand code table (kfid)
 
 | 品牌(brand)               | 代码 (kfid code) | 品牌(brand)                      | 代码 (kfid code) | 品牌(brand)                             | 代码 (kfid code) |
-| ------------------------- | ---------------- | -------------------------------- | ---------------- | --------------------------------------- | ---------------- |
+| ------------------------- | ------------------ | -------------------------------- | -------------------- | --------------------------------------- | -------------------- |
 | 3M(3M)                    | 0001-0005        | 鸿合(Honghe)                     | 152              | ROLY(ROLY)                              | 260              |
 | Alfawise(Alfawise)        | 6                | Igood(Igood)                     | 153              | 日电(NEC)                               | 0261-0266        |
 | AMOOWA(AMO OWA)           | 7                | 久量(DP)                         | 154              | 日立(Hitachi)                           | 0267-0273        |
@@ -1010,15 +963,14 @@ Note: The kfid of infrared remote control has multiple values, 40, 41, 42...59 a
 | 荟影(Huyin)               | 149              | RCA(RCA)                         | 256              |                                         |                  |
 | 轰天炮(Poner Saund)       | 0150-0151        | Rigae(Rigae)                     | 0257-0259        |                                         |                  |
 
-
+Table 13
 
 ### fan brand code table (kfid)
 
-|      |
-| ---- |
+
 
 | 品牌(brand)             | 代码(kfid code) | 品牌(brand)       | 代码(kfid code) | 品牌(brand)          | 代码(kfid code) |
-| ----------------------- | --------------- | ----------------- | --------------- | -------------------- | --------------- |
+| ----------------------- | ------------------- | ----------------- | ------------------- | -------------------- | ------------------- |
 | 3M(3M)                  | 1               | 卡帝亚(Kadder)    | 137             | 夏普(Sharp)          | 0290-0291       |
 | AAF(AAF)                | 0002-0003       | 康佳(Konka)       | 0138-0141       | 小天鹅(Littleswan)   | 0292-0298       |
 | Alpha(Alpha)            | 4               | 科龙(Kelon)       | 0142-0149       | 小行星(Xiaoxingxing) | 0299-0308       |
@@ -1070,6 +1022,7 @@ Note: The kfid of infrared remote control has multiple values, 40, 41, 42...59 a
 | 金龙(Jinlong)           | 134             | 先科(SAST)        | 279             |                      |                 |
 | KDK(KDK)                | 0135-0136       | 先锋(Pioneer)     | 0280-0289       |                      |                 |
 
+Table 14
 
 If you have additional technical problems, please email Technical support at support@easyiot.tech
 
