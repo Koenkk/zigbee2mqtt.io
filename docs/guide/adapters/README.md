@@ -595,7 +595,7 @@ Initial development started on experimental (beta stage) support for Silicon Lab
       adapter: ezsp
     ```
     * [Product page](https://smlight.tech/product/slzb-07/)
-    * [Buy](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-07-zigbee-usb-adapter-en)
+    * [Buy Store](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-07-zigbee-usb-adapter-en), [Buy Aliexpress](https://www.aliexpress.com/item/1005006273914143.html)  
   
     ![](https://smartlight.me/files/pics/2023/SLZB-07-Zigbee2MQTT.png)
     </details>
