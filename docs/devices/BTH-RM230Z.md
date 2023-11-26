@@ -1,6 +1,6 @@
 ---
-title: "Bosch RBSH-RTH0 control via MQTT"
-description: "Integrate your Bosch RBSH-RTH0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Bosch BTH-RM230Z control via MQTT"
+description: "Integrate your Bosch BTH-RM230Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-09-01T13:40:11
 pageClass: device-page
 ---
