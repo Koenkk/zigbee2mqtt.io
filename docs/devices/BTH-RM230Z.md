@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Bosch RBSH-RTH0
+# Bosch BTH-RM230Z
 
 |     |     |
 |-----|-----|
-| Model | RBSH-RTH0  |
+| Model | BTH-RM230Z  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
-| Description | Room thermostat II |
+| Description | Room Thermostat II 230V |
 | Exposes | humidity, climate (local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode), window_open, lock (state), display_ontime, display_brightness, linkquality |
-| Picture | ![Bosch RBSH-RTH0](https://www.zigbee2mqtt.io/images/devices/RBSH-RTH0.jpg) |
+| Picture | ![Bosch BTH-RM230Z](https://www.zigbee2mqtt.io/images/devices/BTH-RM230Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
