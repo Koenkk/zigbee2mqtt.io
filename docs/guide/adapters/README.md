@@ -357,7 +357,7 @@ _(in order of first appearance)_
   
     ![](../../images/LP-CC1352P7.jpg)
     </details>
-* JetHub D1+
+* Hub JetHub D1+
   * <details>
     <summary> JetHome JetHub D1+</summary>
 
@@ -728,7 +728,7 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     ![](../../images/wiren-board-7.jpg)
     </details>
 
-* JetHub D1+
+* Hub JetHub D1+
   * <details>
     <summary> JetHome JetHub D1+</summary>
 
