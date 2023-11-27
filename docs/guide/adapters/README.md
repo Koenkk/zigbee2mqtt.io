@@ -142,7 +142,7 @@ _(in order of first appearance)_
     * [Firmware](https://docs.jethome.ru/en/zigbee/software/ti_cc2652p.html#zigbee-software-ti-cc2652p)
     * Buy: [JetStick Z2](https://jethome.ru/z2/)
 
-    ![](../../images/jetstick_z2_white.png)
+    ![](../../images/jetstick_z2.png)
     </details>
 
 * Hybrid (network + USB)
@@ -636,7 +636,7 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     * [Firmware](https://docs.jethome.ru/en/zigbee/software/silabs_efr32.html#zigbee-software-silabs-efr32-mg21)
     * [Buy JetStick Z4](https://jethome.ru/z4/)
 
-    ![](../../images/jetstick_z4_white.png)
+    ![](../../images/jetstick_z4.png)
     </details>
 
 * Raspberry Pi
