@@ -357,9 +357,9 @@ _(in order of first appearance)_
   
     ![](../../images/LP-CC1352P7.jpg)
     </details>
-* Hub JetHub D1+
+* Hub
   * <details>
-    <summary> JetHome JetHub D1+</summary>
+    <summary>JetHome JetHub D1+</summary>
 
     Controller with ZigBee module onboard with external antenna.
 
@@ -713,9 +713,9 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     ![](../../images/z-wave_me_mpcie_adaptor.jpg)
     </details>
 
-* Wiren Board
+* Hub
   * <details>
-    <summary> Wiren Board 7 </summary>
+    <summary>Wiren Board 7</summary>
 
     Wiren Board 7 with Zigbee module with external antenna.
 
@@ -728,7 +728,6 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     ![](../../images/wiren-board-7.jpg)
     </details>
 
-* Hub JetHub D1+
   * <details>
     <summary> JetHome JetHub D1+</summary>
 
