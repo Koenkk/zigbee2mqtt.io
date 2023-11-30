@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | VES-ZB-DIM-004  |
 | Vendor  | [Vesternet](/supported-devices/#v=Vesternet)  |
 | Description | Zigbee dimmer |
-| Exposes | light (state, brightness), power, voltage, current, energy, power_on_behavior, linkquality |
+| Exposes | light (state, brightness, level_config), power, voltage, current, energy, power_on_behavior, linkquality |
 | Picture | ![Vesternet VES-ZB-DIM-004](https://www.zigbee2mqtt.io/images/devices/VES-ZB-DIM-004.jpg) |
 | White-label | Sunricher SR-ZG9040A |
 
@@ -57,7 +57,7 @@ pageClass: device-page
 ## Exposes
 
 ### Light 
-This light supports the following features: `state`, `brightness`.
+This light supports the following features: `state`, `brightness`, `level_config`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
 

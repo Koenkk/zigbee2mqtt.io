@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Smoke detector with siren |
 | Exposes | temperature, battery, smoke, battery_low, test, max_duration, alarm, reliability, fault, linkquality |
 | Picture | ![Develco SMSZB-120](https://www.zigbee2mqtt.io/images/devices/SMSZB-120.jpg) |
+| White-label | Frient 94430, Cavius 2103 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

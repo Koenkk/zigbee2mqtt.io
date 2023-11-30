@@ -1,6 +1,6 @@
 ---
-title: "MiBoxer FUT035Z control via MQTT"
-description: "Integrate your MiBoxer FUT035Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "MiBoxer FUT035Z+ control via MQTT"
+description: "Integrate your MiBoxer FUT035Z+ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-09-01T18:11:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# MiBoxer FUT035Z
+# MiBoxer FUT035Z+
 
 |     |     |
 |-----|-----|
-| Model | FUT035Z  |
+| Model | FUT035Z+  |
 | Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
 | Description | Dual white LED controller |
 | Exposes | light (state, brightness, color_temp), effect, do_not_disturb, linkquality |
-| Picture | ![MiBoxer FUT035Z](https://www.zigbee2mqtt.io/images/devices/FUT035Z.jpg) |
+| Picture | ![MiBoxer FUT035Z+](https://www.zigbee2mqtt.io/images/devices/FUT035Z+.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -38,7 +38,6 @@ Stepless dimming brightness.
 Long press PUSH switch:
 Long press and release your finger, then repeat long pressing
 to increase or decrease brightness.
-
 <!-- Notes END: Do not edit below this line -->
 
 

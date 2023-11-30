@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ML-ST-R200  |
 | Vendor  | [M-ELEC](/supported-devices/#v=M-ELEC)  |
 | Description | Stitchy switchable wall module |
-| Exposes | switch, power_on_behavior, linkquality |
+| Exposes | switch (state), power_on_behavior, linkquality |
 | Picture | ![M-ELEC ML-ST-R200](https://www.zigbee2mqtt.io/images/devices/ML-ST-R200.jpg) |
 
 
@@ -37,9 +37,10 @@ pageClass: device-page
 
 ## Exposes
 
-### Light 
-This light supports the following features: `state`.
-- `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+### Switch 
+The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.

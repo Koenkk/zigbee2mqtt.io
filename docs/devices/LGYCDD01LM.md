@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | LGYCDD01LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara Zigbee 3.0 LED strip T1 |
-| Exposes | light (state, brightness, color_temp, color_xy), linkquality |
+| Exposes | light (state, brightness, color_temp, color_xy), power_on_behavior, length, min_brightness, max_brightness, audio, audio_sensitivity, audio_effect, preset, speed, linkquality |
 | Picture | ![Xiaomi LGYCDD01LM](https://www.zigbee2mqtt.io/images/devices/LGYCDD01LM.jpg) |
 | White-label | Xiaomi RLS-K01D |
 
@@ -78,6 +78,72 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "color_temp_step": 99, // Increase color temperature by 99
 }
 ````
+
+### Power on behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `on`, `previous`, `off`.
+
+### Length (numeric)
+LED strip length.
+Value can be found in the published state on the `length` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"length": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"length": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `10`.
+The unit of this value is `m`.
+
+### Min brightness (numeric)
+Minimum brightness level.
+Value can be found in the published state on the `min_brightness` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_brightness": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_brightness": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `99`.
+The unit of this value is `%`.
+
+### Max brightness (numeric)
+Maximum brightness level.
+Value can be found in the published state on the `max_brightness` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_brightness": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_brightness": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Audio (binary)
+Enabling audio.
+Value can be found in the published state on the `audio` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"audio": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"audio": NEW_VALUE}`.
+If value equals `ON` audio is ON, if `OFF` OFF.
+
+### Audio sensitivity (enum)
+Audio sensitivity.
+Value can be found in the published state on the `audio_sensitivity` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"audio_sensitivity": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"audio_sensitivity": NEW_VALUE}`.
+The possible values are: `low`, `medium`, `high`.
+
+### Audio effect (enum)
+Audio effect.
+Value can be found in the published state on the `audio_effect` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"audio_effect": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"audio_effect": NEW_VALUE}`.
+The possible values are: `random`, `blink`, `rainbow`, `wave`.
+
+### Preset (numeric)
+Preset index (0-6 default presets).
+Value can be found in the published state on the `preset` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `32`.
+
+### Speed (numeric)
+Effect speed.
+Value can be found in the published state on the `speed` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"speed": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"speed": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `100`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

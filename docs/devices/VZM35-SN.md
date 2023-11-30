@@ -220,7 +220,7 @@ It's not possible to write (`/set`) this value.
 The minimal value is `undefined` and the maximum value is `undefined`.
 
 ### SmartBulbMode (enum)
-Use this mode to syncronize and control other fan switches or controllers..
+Use this mode to synchronize and control other fan switches or controllers..
 Value can be found in the published state on the `smartBulbMode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"smartBulbMode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smartBulbMode": NEW_VALUE}`.

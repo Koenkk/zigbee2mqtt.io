@@ -1,6 +1,6 @@
 ---
-title: "Easyiot ZB-IR01 control via MQTT"
-description: "Integrate your ZB-IR01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "easyiot ZB-IR01 control via MQTT"
+description: "Integrate your easyiot ZB-IR01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-11-23T16:23:11Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Easyiot
+# easyiot ZB-IR01
 
 |     |     |
 |-----|-----|
-| Model | ZB-IR01 |
-| Vendor  | [Easyiot](/supported-devices/#v=Easyiot)  |
-| Description | This is an infrared remote control equipped with a local code library, supporting devices such as air conditioners, televisions, projectors, and more. |
-| Exposes | send command, recv command, linkquality |
-| Picture | ![ZB-IR01](https://www.zigbee2mqtt.io/images/devices/ZB-IR01.jpg) |
+| Model | ZB-IR01  |
+| Vendor  | [easyiot](/supported-devices/#v=easyiot)  |
+| Description | This is an infrared remote control equipped with a local code library,supporting devices such as air conditioners, televisions, projectors, and more. |
+| Exposes | last_received_command, send_command, linkquality |
+| Picture | ![easyiot ZB-IR01](https://www.zigbee2mqtt.io/images/devices/ZB-IR01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -1025,9 +1025,28 @@ Table 13
 Table 14
 
 If you have additional technical problems, please email Technical support at support@easyiot.tech
-
 <!-- Notes END: Do not edit below this line -->
 
 
 
+
+## Exposes
+
+### Last received command (text)
+Received infrared control command.
+Value can be found in the published state on the `last_received_command` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Send command (text)
+Send infrared control command.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"send_command": NEW_VALUE}`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 

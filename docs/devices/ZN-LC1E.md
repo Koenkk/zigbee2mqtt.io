@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZN-LC1E  |
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Smart curtain/shutter switch |
-| Exposes | cover (state, position), moving, calibration, motor_reversal, backlight_mode, calibration_time, linkquality |
+| Exposes | cover (state, position), indicator_mode, backlight_mode, moving, calibration, motor_reversal, calibration_time, linkquality |
 | Picture | ![Zemismart ZN-LC1E](https://www.zigbee2mqtt.io/images/devices/ZN-LC1E.jpg) |
 
 
@@ -43,6 +43,20 @@ To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set`
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
+### Indicator mode (enum)
+LED indicator mode.
+Value can be found in the published state on the `indicator_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `off`, `off/on`, `on/off`, `on`.
+
+### Backlight mode (binary)
+Mode of the backlight.
+Value can be found in the published state on the `backlight_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+If value equals `ON` backlight mode is ON, if `OFF` OFF.
+
 ### Moving (enum)
 Value can be found in the published state on the `moving` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -59,12 +73,6 @@ Value can be found in the published state on the `motor_reversal` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_reversal": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": NEW_VALUE}`.
 If value equals `ON` motor reversal is ON, if `OFF` OFF.
-
-### Backlight mode (enum)
-Value can be found in the published state on the `backlight_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
-The possible values are: `low`, `medium`, `high`.
 
 ### Calibration time (numeric)
 Calibration time.

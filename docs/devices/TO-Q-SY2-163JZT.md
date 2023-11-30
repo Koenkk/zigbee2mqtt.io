@@ -159,7 +159,7 @@ Over-voltage threshold.
 Value can be found in the published state on the `over_voltage_threshold` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"over_voltage_threshold": NEW_VALUE}`.
-The minimal value is `220` and the maximum value is `260`.
+The minimal value is `220` and the maximum value is `265`.
 The unit of this value is `V`.
 
 ### Over voltage breaker (binary)
