@@ -4,3 +4,4 @@ node_modules
 dist
 .idea
 .DS_Store
+docgen/missing-device-images/
