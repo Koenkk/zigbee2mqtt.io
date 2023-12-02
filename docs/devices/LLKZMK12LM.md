@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Aqara dual relay module T2 |
 | Exposes | switch (state), power, current, energy, voltage, device_temperature, switch_type, power_on_behavior, operation_mode, action, interlock, mode, pulse_length, linkquality |
 | Picture | ![Xiaomi LLKZMK12LM](https://www.zigbee2mqtt.io/images/devices/LLKZMK12LM.jpg) |
+| White-label | Xiaomi DCM-K01 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
