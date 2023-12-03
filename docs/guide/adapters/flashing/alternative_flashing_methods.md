@@ -1,8 +1,13 @@
 ---
 ---
 # Alternative flashing methods
+  * [Raspberry pi](#raspberry_pi)
+  * [Arduino/ESP8266 + CCLoader](#arduino_ccloader)
+  * [Arduino/ESP8266 + CCLib](#arduino_cclib)
+  * [Drag-and-Drop with RP2040](#rp2040_dragndrop)
+---
 
-### With Raspberry Pi (~3min)
+### <a name=raspberry_pi></a> With Raspberry Pi (~3min)
 
 1. Install [wiringPi](https://github.com/WiringPi/WiringPi/releases), if not already installed.
 
@@ -15,8 +20,8 @@ git clone https://github.com/jmichault/flash_cc2531.git
  * pin 7 (reset)	-->	pin 35 (GPIO24, BCM19)
  * pin 3 (DC)	  -->	pin 36 (GPIO27, BCM16)
  * pin 4 (DD)	  -->	pin 38 (GPIO28, BCM20)
- 
- ![](../../../images/CC2531_wiring_raspi-header.jpg)
+
+  <img src="../../../images/CC2531_wiring_raspi-header.jpg" width="40%"/>
 
  Optionally, connecting Target Voltage Sense to a 3.3v source (Red wire) eliminates the need to plug the device into a usb port, so optionally connect the following too:
  * pin 2 (Target Voltage Sense) --> pin 1 or pin 17 (3.3v) on Raspi
@@ -27,7 +32,7 @@ A downloader cable CC2531 ![](../../../images/downloader_cable.png) and 4 Dupont
 
 Now insert the usb dongle in an USB port :
 
-![](https://raw.githubusercontent.com/jmichault/files/master/Raspberry-CC2531.jpg)
+ <img src="https://raw.githubusercontent.com/jmichault/files/master/Raspberry-CC2531.jpg" width="40%"/> 
 
 4. Test by running :
 
@@ -57,7 +62,7 @@ unzip CC2531_DEFAULT_20211115.zip
 ```
 It takes around 3 minutes.
 
-### Via Arduino Uno/ESP8266 with CCLoader (~3min)
+### <a name=arduino_ccloader></a>Via Arduino Uno/ESP8266 with CCLoader (~3min)
 
 **This has been tested with a Genuine Arduino Uno, an Arduino Pro Micro - China clone, and a NodeMCU ESP8266 and is significantly faster than CCLib**
 
@@ -113,7 +118,7 @@ int LED = 2; //GPIO2=D4 and the Blue LED on the WeMos D1 Mini and the ESP-12E mo
    | D5 | 3 | DC (Debug Clock) |
    | D6 | 4 | DD (Debug Data) |
 
-   ![](https://www.waveshare.com/img/devkit/CC-Debugger/CC-Debugger-JTAG-Header.jpg)
+<img src="https://www.waveshare.com/img/devkit/CC-Debugger/CC-Debugger-JTAG-Header.jpg" width="40%"/> <img src="https://user-images.githubusercontent.com/35885181/67834765-dcab2280-faad-11e9-8755-971f0e456217.jpg" width="20%"/> <img src="https://user-images.githubusercontent.com/35885181/67834764-dc128c00-faad-11e9-8e06-0937e1bb6790.jpg" width="23%"/>
 
    If you have a 3.3V Arduino you can optionally connect `3.3V -> Target Voltage Sense (Pin 2)` and program the CC2531 without connecting the CC2531 to USB (in the next step).
 
@@ -125,9 +130,6 @@ int LED = 2; //GPIO2=D4 and the Blue LED on the WeMos D1 Mini and the ESP-12E mo
    | D1/GPIO5 | 7 | RESETn |
    | D2/GPIO4 | 3 | DC (Debug Clock) |
    | D5/GPIO14 | 4 | DD (Debug Data) |
-
-   ![C2531 debug pins](https://user-images.githubusercontent.com/35885181/67834765-dcab2280-faad-11e9-8755-971f0e456217.jpg)
-   ![CC2531 stick and NodeMCU](https://user-images.githubusercontent.com/35885181/67834764-dc128c00-faad-11e9-8e06-0937e1bb6790.jpg)
 
 1. Connect Arduino/ESP8266 first, then within a couple seconds connect the CC2531 to USB power
 1. Place the prepared `CC2531ZNP-Prod.bin` next to the executable file
@@ -154,7 +156,7 @@ It should be done in a few minutes.
 
 If burning fails/gets stuck at `Request sent already! Waiting for respond...` - try again, check your wiring, try using `1` instead of `0` as the last parameter. Or try run command with `sudo`.
 
-### Via Arduino/ESP8266 with CCLib (~3hrs)
+### <a name=arduino_cclib></a> Via Arduino/ESP8266 with CCLib (~3hrs)
 Flashing firmware via Arduino is implemented using the project https://github.com/wavesoft/CCLib
 **But with minor improvements!!!**
 
@@ -195,14 +197,16 @@ or
 
 I connected only 3 specified contacts and GND. During the firmware, the stick and Arduino must be connected to the USB.
 
-![](../../../images/kirovilya/IMG_20180111_193941.jpg)
-![](../../../images/kirovilya/IMG_20180111_193923.jpg)
-![](../../../images/kirovilya/IMG_20180110_234401.jpg)
+<img src="../../../images/kirovilya/IMG_20180111_193941.jpg" width="35%"/> <img src="../../../images/kirovilya/IMG_20180111_193923.jpg" width="35%"/> <img src="../../../images/kirovilya/IMG_20180110_234401.jpg" width="15%"/>
 
 6. After that, try to get information about the chip - if it works, then the connection is correct (example for COM9 port - Arduino port):
 
 ```
 C:\Projects\CCLib\Python>python cc_info.py -p COM9
+```
+<details> <summary>Command output</summary>
+
+```  
 INFO: Found a CC2531 chip on COM9
 
 Chip information:
@@ -232,6 +236,9 @@ Debug config:
  [X] DMA_PAUSE
  [X] TIMER_SUSPEND
 ```
+
+</details>
+
 [Another example of connection on MacOS](https://github.com/wavesoft/CCLib/issues/22#issuecomment-384452424)
 
 7. If everything is successful, download [the firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin/).
@@ -239,9 +246,13 @@ Before we flash the firmware we need to make a modification to it. Open the `.he
 file in a text editor and **remove the second last line**. Now save the file.
 
 8. Start the flashing firmware (it takes a long time, about 2-3 hours):
-
 ```
 C:\Projects\ZigBee>python cc_write_flash.py -e -p COM9 --in=CC2531ZNP-Pro-Secure_LinkKeyJoin_mod.hex
+```
+<details>
+  <summary>Command output</summary>
+
+```
 INFO: Found a CC2531 chip on COM9
 
 Chip information:
@@ -276,7 +287,9 @@ Flashing:
 Completed
 ```
 
-### Via RP2040 board with [pico_cc_flasher](https://github.com/stolen/pico_cc_flasher) (~3 min)
+</details>
+
+### <a name=rp2040_dragndrop></a> Via RP2040 board with [pico_cc_flasher](https://github.com/stolen/pico_cc_flasher) (~3 min)
 This method does not need a specialized programmer software. Flashing is as easy as drag-and-drop to a USB drive.
 
 #### Prepare the firmware
@@ -302,7 +315,7 @@ I use Waveshare's RP2040-Zero, but on other boards the only difficulty should be
     * Unzip [release zip](https://github.com/stolen/pico_cc_flasher/releases/latest/download/pico_cc_flasher.zip) into a CircuitPython USB drive
 
 #### Connect RP2040 to CC2531 dongle
-<img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/overview.jpg" width="20%"> <img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/closeup.jpg" width="30%"> <img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/stick_pinout.png" width="35%">
+<img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/overview.jpg" width="20%"/> <img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/closeup.jpg" width="30%"/> <img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/stick_pinout.png" width="35%"/>
 Connect some pins to your CC2531 stick
   * `GND   ->    GND`
   * `GP27  ->    DD`
@@ -316,4 +329,4 @@ Then it restarts and you can browse to `cc25xx` directory:
   * Drop any `*.bin` file (except `data.read.bin`) into this directory to flash it
   * Remove `control.skip_flash_read` file to re-read flash
 
-<img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/shell_demo.png" width="40%"> <img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/filemanager.jpg" width="40%">
+<img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/shell_demo.png" width="40%"/> <img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/filemanager.jpg" width="40%"/>
