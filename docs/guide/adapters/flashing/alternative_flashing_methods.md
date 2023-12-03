@@ -275,3 +275,45 @@ Flashing:
 
 Completed
 ```
+
+### Via RP2040 board with [pico_cc_flasher](https://github.com/stolen/pico_cc_flasher) (~3 min)
+This method does not need a specialized programmer software. Flashing is as easy as drag-and-drop to a USB drive.
+
+#### Prepare the firmware
+1. Download the correct firmware (in this example we'll be using the [CC2531 firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_Home_1.2/bin/))
+1. Unpack firmware and convert the hex file to binary using `objcopy` (do not use the included binary file!)
+
+   ***Windows***: download `objcopy.exe` as per [this](https://stackoverflow.com/questions/11054534/how-to-use-install-gnu-binutils-objdump) answer from StackOverflow.
+   ```
+   objcopy.exe --gap-fill 0xFF --pad-to 0x040000 -I ihex CC2531ZNP-Prod.hex -O binary CC2531ZNP-Prod.bin
+   ```
+   **Linux or Bash on Ubuntu on Windows**: install the `binutils` package using your package manager
+   ```bash
+   objcopy --gap-fill 0xFF --pad-to 0x040000 -I ihex CC2531ZNP-Prod.hex -O binary /tmp/CC2531ZNP-Prod.bin
+   ```
+#### Flash your RP2040
+I use Waveshare's RP2040-Zero, but on other boards the only difficulty should be no visual indication.
+  * Automated installation
+    * clone repo `git clone https://github.com/stolen/pico_cc_flasher.git && cd pico_cc_flasher`
+    * Connect your RP2040 board in bootloader mode to your PC
+    * run `make install`
+  * Manual installation
+    * Install [CircuitPython](https://circuitpython.org/downloads)
+    * Unzip [release zip](https://github.com/stolen/pico_cc_flasher/releases/latest/download/pico_cc_flasher.zip) into a CircuitPython USB drive
+
+#### Connect RP2040 to CC2531 dongle
+<img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/overview.jpg" width="20%"> <img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/closeup.jpg" width="30%"> <img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/stick_pinout.png" width="35%">
+Connect some pins to your CC2531 stick
+  * `GND   ->    GND`
+  * `GP27  ->    DD`
+  * `GP28  ->    DC`
+  * `GP29  ->   nRST`
+
+#### Connect RP2040 to PC and dongle to any power source
+When pico_cc_flasher sees a chip, it reads chip firmware. This may take about a minute.  
+Then it restarts and you can browse to `cc25xx` directory:
+  * `data.read.bin` is the flash dump
+  * Drop any `*.bin` file (except `data.read.bin`) into this directory to flash it
+  * Remove `control.skip_flash_read` file to re-read flash
+
+<img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/shell_demo.png" width="40%"> <img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/filemanager.jpg" width="40%">
