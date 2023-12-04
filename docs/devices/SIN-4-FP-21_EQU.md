@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SIN-4-FP-21_EQU  |
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | Equation pilot wire heating module |
-| Exposes | switch (state), power, energy, mode, linkquality |
+| Exposes | switch (state), power, energy, pilot_wire_mode, linkquality |
 | Picture | ![ADEO SIN-4-FP-21_EQU](https://www.zigbee2mqtt.io/images/devices/SIN-4-FP-21_EQU.jpg) |
 
 
@@ -62,11 +62,12 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Mode (enum)
-Value can be found in the published state on the `mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
-The possible values are: `comfort`, `eco`, `anti-freeze`, `stop`, `comfort_-1`, `comfort_-2`.
+### Pilot wire mode (enum)
+Controls the target temperature of the heater, with respect to the temperature set on that heater. Possible values: comfort (target temperature = heater set temperature) eco (target temperature = heater set temperature - 3.5°C), frost_protection (target temperature = 7 to 8°C), off (heater stops heating), and the less commonly used comfort_-1 (target temperature = heater set temperature - 1°C), comfort_-2 (target temperature = heater set temperature - 2°C),..
+Value can be found in the published state on the `pilot_wire_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pilot_wire_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pilot_wire_mode": NEW_VALUE}`.
+The possible values are: `comfort`, `eco`, `frost_protection`, `off`, `comfort_-1`, `comfort_-2`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

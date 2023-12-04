@@ -1,7 +1,7 @@
 ---
 title: "Nous A1Z control via MQTT"
 description: "Integrate your Nous A1Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-10-03T08:43:08
+addedAt: 2023-12-04T09:23:50
 pageClass: device-page
 ---
 

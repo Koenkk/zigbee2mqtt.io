@@ -71,7 +71,7 @@ ${ device.whiteLabel ? `| White-label | ${ device.whiteLabel.map((d) => `${ d.ve
 ${ notes || "\n"}
 <!-- Notes END: Do not edit below this line -->
 ${ getNotes(device) }
-${ device.hasOwnProperty('ota') ? `
+${ device.ota ? `
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 ` : '' }
