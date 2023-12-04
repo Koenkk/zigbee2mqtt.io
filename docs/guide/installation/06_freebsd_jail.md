@@ -30,8 +30,8 @@ pkg install npm git gmake gcc
 
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
 # version has been installed
-node --version  # Should output v14.X, V16.x, V17.x or V18.X
-npm --version  # Should output 6.X, 7.X or 8.X
+node --version  # Should output V18.x, V20.x, V21.X
+npm --version  # Should output 9.X or 10.X
 
 # Create installation folder (/usr/local prefix is used for software not part of the base system)
 mkdir -p /usr/local/opt/zigbee2mqtt
