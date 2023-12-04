@@ -54,6 +54,19 @@ The sensitivity can be changed by publishing to `zigbee2mqtt/FRIENDLY_NAME/set`
 values: `low`, `medium`,  `high`.
 
 After setting the sensitivity you immediately have to start pressing the reset button with an interval of 1 second until you see Zigbee2MQTT publishing the new sensitivity to MQTT.
+
+
+### Calibration
+In order to improve the factory calibration or lack thereof, you can get a better result with a 2 step offset calibration:
+* Put the device on a level surface, face up.
+  * a few seconds after the tilt action the angles and ``raw_x``, ``raw_y``, ``raw_z`` values are updated
+  * ``raw_x`` and ``raw_y`` should be small, ``raw_z`` around 1000
+  * set the offset for x and y to the opposite values of ``raw_x`` and ``raw_y`` respectively.
+* Put the device on a side
+  * after a few seconds, ``raw_z`` should be small, as well as one of the ``raw_x`` or ``raw_y``, the other being around 1000
+  * set the offset for z to the opposite of ``raw_z``
+You can fine tune the values of the offset by trying other sides and picking values that match best.
+After calibration, you can remove the raw values from the payload by adding  ``raw_[xyz]`` to the ``filtered_attributes`` device setting 
 <!-- Notes END: Do not edit below this line -->
 
 
