@@ -4,7 +4,8 @@ import { imageBaseDir } from "./constants";
 import * as path from "path";
 import * as fs from "fs";
 import * as gis from 'async-g-i-s';
-import * as client from 'https';
+import * as httpsClient from 'https';
+import * as httpClient from 'http';
 import * as easyimage from 'easyimage';
 
 const missingImagesPath = path.join(__dirname, 'missing-device-images');
@@ -14,8 +15,7 @@ export async function getMissing(): Promise<{image: string, model: string, vendo
     await Promise.all(allDefinitions.map(async device => {
         const image = path.join(imageBaseDir, await getImage(device, imageBaseDir, ''));
         if (!await checkFileExists(image)) {
-            device.image = image;
-            missing.push(device);
+            missing.push({...device, image});
         }
     }));
 
@@ -23,6 +23,7 @@ export async function getMissing(): Promise<{image: string, model: string, vendo
 }
 
 export async function downloadImage(url: string, path: string) {
+    const client = url.startsWith('https') ? httpsClient : httpClient;
     return new Promise<void>((r) => {
         client.get(url, (res) => {
             res.pipe(fs.createWriteStream(path));
