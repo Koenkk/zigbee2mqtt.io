@@ -30,7 +30,7 @@ Uses a CR2032 battery
 
 ### Pairing
 Press the reset button for about 5 seconds. The LED lights up 3 times.
-Then press the button again every 2 seconds (maximum 20 times).
+Then press the button again every 2 seconds to keep it awake (maximum 20 times).
 
 *NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
 
@@ -47,13 +47,26 @@ Most of the times this happens because of the following reasons:
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
-
 ### Sensitivity
 The sensitivity can be changed by publishing to `zigbee2mqtt/FRIENDLY_NAME/set`
 `{"sensitivity": "SENSITIVITY"}` where `SENSITIVITY` is one of the following
 values: `low`, `medium`,  `high`.
 
 After setting the sensitivity you immediately have to start pressing the reset button with an interval of 1 second until you see Zigbee2MQTT publishing the new sensitivity to MQTT.
+
+
+### Calibration
+In order to improve the factory calibration or lack thereof, you can get a better result with a 2 step offset calibration:
+* Ensure the x, y and z offset are set to 0 in the device specific settings
+* Put the device on a level surface, face up.
+  * A few seconds after the tilt action, the angles and accelerometer values (``x_axis``, ``y_axis``, ``z_axis``) are updated
+  * ``x_axis`` and ``y_axis`` should be small, ``z_axis`` around 1000
+  * Set the offset for x and y to the opposite values of ``x_axis`` and ``y_axis`` to compensate.
+* Put the device on a side
+  * After a few seconds, te values update, and ``z_axis`` should be small, as well as one of the ``x_axis`` or ``y_axis``, the other being around ±1000
+  * Set the offset for z to the opposite of ``z_axis``
+You can fine tune the values of the offset by trying other sides and picking values that match best.
+Remember that the device sends accelerometer values a few seconds after the actual tilt event.
 <!-- Notes END: Do not edit below this line -->
 
 
