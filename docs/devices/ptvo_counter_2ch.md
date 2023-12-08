@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | ptvo_counter_2ch  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
-| Description | [Configurable firmware](https://ptvo.info/zigbee-configurable-firmware-features/) |
-| Exposes | battery, l3, l5, switch (state), linkquality |
+| Description | 2 channel counter |
+| Exposes | battery, l3, l5, switch (state), voltage, linkquality |
 | Picture | ![Custom devices (DiY) ptvo_counter_2ch](https://www.zigbee2mqtt.io/images/devices/ptvo_counter_2ch.jpg) |
 
 
@@ -31,12 +31,11 @@ Instructions on how to build this device, configure firmware can be found [here]
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `l3`: Counter value. Write zero or positive value to set a counter value. Write a negative value to set a wakeup interval in minutes.
-
-* `l5`: Counter value. Write zero or positive value to set a counter value. Write a negative value to set a wakeup interval in minutes.
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -48,20 +47,30 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### l3 (numeric)
-Counter value.
-Write zero or positive value to set a counter value. Write a negative value to set a wakeup interval in minutes.
-It's possible to write (`/set`) this value.
+### L3 (enum)
+Counter value. Write zero or positive value to set a counter value. Write a negative value to set a wakeup interval in minutes.
+Value can be found in the published state on the `l3` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l3": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l3": NEW_VALUE}`.
+The possible values are: `set`.
 
-### l5 (numeric)
-Counter value.
-Write zero or positive value to set a counter value. Write a negative value to set a wakeup interval in minutes.
-It's possible to write (`/set`) this value.
+### L5 (enum)
+Counter value. Write zero or positive value to set a counter value. Write a negative value to set a wakeup interval in minutes.
+Value can be found in the published state on the `l5` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"l5": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"l5": NEW_VALUE}`.
+The possible values are: `set`.
 
 ### Switch (l6 endpoint)
-Leakage sensor state.
 The current state of this switch is in the published state under the `state_l6` property (value is `ON` or `OFF`).
-Changes position to `ON` when contacts are connected. Default `OFF`.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l6": "ON"}`, `{"state_l6": "OFF"}` or `{"state_l6": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l6": ""}`.
+
+### Voltage (numeric)
+Voltage of the battery in millivolts.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `mV`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

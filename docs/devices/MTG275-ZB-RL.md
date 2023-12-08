@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | MTG275-ZB-RL  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | 24G MmWave radar human presence motion sensor |
-| Exposes | presence, illuminance_lux, target_distance, radar_sensitivity, entry_sensitivity, illuminance_threshold, detection_range, shield_range, entry_distance_indentation, entry_filter_time, departure_delay, block_time, breaker_status, breaker_mode, status_indication, linkquality |
+| Description | 2.4G/5.8G MmWave radar human presence motion sensor |
+| Exposes | presence, illuminance_lux, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance_indentation, entry_filter_time, departure_delay, block_time, breaker_status, breaker_mode, illuminance_threshold, status_indication, linkquality |
 | Picture | ![TuYa MTG275-ZB-RL](https://www.zigbee2mqtt.io/images/devices/MTG275-ZB-RL.jpg) |
 
 
@@ -51,29 +51,14 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `m`.
 
 ### Radar sensitivity (numeric)
-Sensitivity of the radar.
+Detection threshold for the strength of object energy.
 Value can be found in the published state on the `radar_sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `9`.
 
-### Entry sensitivity (numeric)
-Entry sensitivity.
-Value can be found in the published state on the `entry_sensitivity` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"entry_sensitivity": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `9`.
-
-### Illuminance threshold (numeric)
-Illumination threshold for switching on.
-Value can be found in the published state on the `illuminance_threshold` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_threshold": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `420`.
-The unit of this value is `lx`.
-
 ### Detection range (numeric)
-Detection range.
+Maximum distance detected by the sensor.
 Value can be found in the published state on the `detection_range` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_range": NEW_VALUE}`.
@@ -81,15 +66,22 @@ The minimal value is `0` and the maximum value is `8`.
 The unit of this value is `m`.
 
 ### Shield range (numeric)
-Shield range of the radar.
+Nearest distance detected by the sensor.
 Value can be found in the published state on the `shield_range` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"shield_range": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `8`.
 The unit of this value is `m`.
 
+### Entry sensitivity (numeric)
+Sensitivity threshold triggered for the first time when the target enters the detection range.
+Value can be found in the published state on the `entry_sensitivity` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"entry_sensitivity": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `9`.
+
 ### Entry distance indentation (numeric)
-Entry distance indentation.
+Indent the distance inward based on the dectection distance.
 Value can be found in the published state on the `entry_distance_indentation` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"entry_distance_indentation": NEW_VALUE}`.
@@ -97,7 +89,7 @@ The minimal value is `0` and the maximum value is `8`.
 The unit of this value is `m`.
 
 ### Entry filter time (numeric)
-Entry filter time.
+Sensitivity threshold triggered for the first time when the target enters the detection range .
 Value can be found in the published state on the `entry_filter_time` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"entry_filter_time": NEW_VALUE}`.
@@ -105,7 +97,7 @@ The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `s`.
 
 ### Departure delay (numeric)
-Turn off delay.
+Confirmation time after the target disappears.
 Value can be found in the published state on the `departure_delay` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"departure_delay": NEW_VALUE}`.
@@ -113,7 +105,7 @@ The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `s`.
 
 ### Block time (numeric)
-Block time.
+Time for the target to be detected again after switching from manned(occupy) to unmanned(unoccupy) mode.
 Value can be found in the published state on the `block_time` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"block_time": NEW_VALUE}`.
@@ -121,21 +113,29 @@ The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `s`.
 
 ### Breaker status (binary)
-Breaker status changes with breaker_mode->standard.
+Remotely control the breaker in standard mode.
 Value can be found in the published state on the `breaker_status` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breaker_status": NEW_VALUE}`.
 If value equals `ON` breaker status is ON, if `OFF` OFF.
 
 ### Breaker mode (enum)
-Status breaker mode: standard is external, local is auto.
+Breaker mode: standard is remotely controlled, local is automatic.
 Value can be found in the published state on the `breaker_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breaker_mode": NEW_VALUE}`.
 The possible values are: `standard`, `local`.
 
+### Illuminance threshold (numeric)
+Illumination threshold for local (automatic) switching mode operation.
+Value can be found in the published state on the `illuminance_threshold` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_threshold": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `420`.
+The unit of this value is `lx`.
+
 ### Status indication (enum)
-Led backlight when triggered.
+Indicator light will flash when human presence is detected.
 Value can be found in the published state on the `status_indication` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"status_indication": NEW_VALUE}`.

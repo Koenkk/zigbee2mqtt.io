@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | LYWSD03MMC  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | Xiaomi temperature & humidity sensor with custom firmware |
-| Exposes | temperature, humidity, battery, linkquality |
+| Exposes | temperature, humidity, battery, temperature_display_mode, linkquality |
 | Picture | ![Custom devices (DiY) LYWSD03MMC](https://www.zigbee2mqtt.io/images/devices/LYWSD03MMC.jpg) |
 
 
@@ -66,6 +66,13 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Temperature display mode (enum)
+The temperature format displayed on the screen.
+Value can be found in the published state on the `temperature_display_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_display_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_display_mode": NEW_VALUE}`.
+The possible values are: `celsius`, `fahrenheit`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

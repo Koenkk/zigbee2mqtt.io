@@ -1,6 +1,6 @@
 ---
-title: "TuYa DY-RQ500A control via MQTT"
-description: "Integrate your TuYa DY-RQ500A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "DYGSM DY-RQ500A control via MQTT"
+description: "Integrate your DYGSM DY-RQ500A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-11-01T18:54:40
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa DY-RQ500A
+# DYGSM DY-RQ500A
 
 |     |     |
 |-----|-----|
 | Model | DY-RQ500A  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [DYGSM](/supported-devices/#v=DYGSM)  |
 | Description | Gas sensor |
 | Exposes | gas, gas_value, self_test, self_test_result, silence, alarm_ringtone, alarm_time, preheat, linkquality |
-| Picture | ![TuYa DY-RQ500A](https://www.zigbee2mqtt.io/images/devices/DY-RQ500A.jpg) |
+| Picture | ![DYGSM DY-RQ500A](https://www.zigbee2mqtt.io/images/devices/DY-RQ500A.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -69,7 +69,7 @@ Ringtone of the alarm.
 Value can be found in the published state on the `alarm_ringtone` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_ringtone": NEW_VALUE}`.
-The possible values are: `1`, `2`, `3`, `4`, `5`.
+The possible values are: `melody_1`, `melody_2`, `melody_3`, `melody_4`, `melody_5`.
 
 ### Alarm time (numeric)
 Alarm time.

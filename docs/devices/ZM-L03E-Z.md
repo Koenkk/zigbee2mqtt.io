@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZM-L03E-Z  |
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | 3 gang switch with neutral |
-| Exposes | switch (state), power_on_behavior, indicator_mode, linkquality |
+| Exposes | switch (state), power_on_behavior, backlight_mode, indicator_mode, linkquality |
 | Picture | ![Zemismart ZM-L03E-Z](https://www.zigbee2mqtt.io/images/devices/ZM-L03E-Z.jpg) |
 
 
@@ -72,6 +72,13 @@ Value can be found in the published state on the `power_on_behavior_l3` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_l3": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l3": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
+
+### Backlight mode (binary)
+Mode of the backlight.
+Value can be found in the published state on the `backlight_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
 ### Indicator mode (enum)
 LED indicator mode.

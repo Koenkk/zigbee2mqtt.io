@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SIN-4-FP-21  |
 | Vendor  | [NodOn](/supported-devices/#v=NodOn)  |
 | Description | Pilot wire heating module |
-| Exposes | switch (state), power, energy, linkquality |
+| Exposes | switch (state), power, energy, mode, linkquality |
 | Picture | ![NodOn SIN-4-FP-21](https://www.zigbee2mqtt.io/images/devices/SIN-4-FP-21.jpg) |
 
 
@@ -64,6 +64,12 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Mode (enum)
+Value can be found in the published state on the `mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+The possible values are: `comfort`, `eco`, `anti-freeze`, `stop`, `comfort_-1`, `comfort_-2`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

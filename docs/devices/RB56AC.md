@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | RB56AC  |
 | Vendor  | [Acuity Brands Lighting (ABL)](/supported-devices/#v=Acuity%20Brands%20Lighting%20(ABL))  |
-| Description | Juno Retrobasics 4" and 6" LED adjustable smart downlight |
+| Description | Juno Retrobasics 4" and 6" LED smart adjustable downlight |
 | Exposes | light (state, brightness, color_temp), effect, power_on_behavior, linkquality |
 | Picture | ![Acuity Brands Lighting (ABL) RB56AC](https://www.zigbee2mqtt.io/images/devices/RB56AC.jpg) |
 
