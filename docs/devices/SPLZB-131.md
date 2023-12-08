@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SPLZB-131  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Power plug |
-| Exposes | switch (state), power, power_reactive, current, voltage, energy, ac_frequency, linkquality |
+| Exposes | switch (state), power, power_reactive, current, voltage, energy, device_temperature, ac_frequency, linkquality |
 | Picture | ![Develco SPLZB-131](https://www.zigbee2mqtt.io/images/devices/SPLZB-131.jpg) |
 
 
@@ -27,6 +27,9 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -49,6 +52,8 @@ pageClass: device-page
 * `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -87,6 +92,12 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Device temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
 
 ### AC frequency (numeric)
 Measured electrical AC frequency.

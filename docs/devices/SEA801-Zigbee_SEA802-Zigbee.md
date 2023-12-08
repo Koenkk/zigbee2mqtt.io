@@ -31,6 +31,37 @@ pageClass: device-page
 
 * SEA801-Zigbee (LCD display on the front, several buttons): Long hold the "AUTO/MANU" and "+" Button until the LCD display shows "----"
 * SEA802-Z01 (white LED display on the side, rotary plate): Turn the rotary plate to decrease the temperature until the LED dots show "OF", then long press until the display changes to "--"
+
+### Weekly Schedule
+
+It's not possible to read (`/get`) this value.
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload
+
+`dayofweek` 1-7, 1=sunday
+`transitionTime` Minutes after midnight
+`numoftrans` It seems that the maximum number of transitions is 4 
+
+``` json
+{
+  "weekly_schedule": {
+    "1": {
+      "dayofweek": 1,
+      "numoftrans": 2,
+      "mode": 1,
+      "transitions": [
+        {
+          "transitionTime": 360,
+          "heatSetpoint": 23
+        },
+        {
+          "transitionTime": 570,
+          "heatSetpoint": 2200
+        }
+      ]
+    }
+  }
+}
+```
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -75,7 +106,7 @@ This climate device supports the following features: `current_heating_setpoint`,
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`, `auto`. Reading (`/get`) this attribute is not possible.
-- `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-6` and the maximum value is `6` with a step size of `1`.
+- `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-6` and the maximum value is `6` with a step size of `1`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -1,6 +1,6 @@
 ---
-title: "Orvibo RL804CZB control via MQTT"
-description: "Integrate your Orvibo RL804CZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "ORVIBO RL804CZB control via MQTT"
+description: "Integrate your ORVIBO RL804CZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-04-08T17:49:06Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Orvibo RL804CZB
+# ORVIBO RL804CZB
 
 |     |     |
 |-----|-----|
 | Model | RL804CZB  |
-| Vendor  | [Orvibo](/supported-devices/#v=Orvibo)  |
+| Vendor  | [ORVIBO](/supported-devices/#v=ORVIBO)  |
 | Description | Zigbee LED controller RGB + CCT or RGBW |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![Orvibo RL804CZB](https://www.zigbee2mqtt.io/images/devices/RL804CZB.jpg) |
+| Picture | ![ORVIBO RL804CZB](https://www.zigbee2mqtt.io/images/devices/RL804CZB.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

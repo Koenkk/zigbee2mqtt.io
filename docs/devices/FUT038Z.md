@@ -1,6 +1,6 @@
 ---
-title: "Miboxer FUT038Z control via MQTT"
-description: "Integrate your Miboxer FUT038Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "MiBoxer FUT038Z control via MQTT"
+description: "Integrate your MiBoxer FUT038Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-11-30T20:10:17
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Miboxer FUT038Z
+# MiBoxer FUT038Z
 
 |     |     |
 |-----|-----|
 | Model | FUT038Z  |
-| Vendor  | [Miboxer](/supported-devices/#v=Miboxer)  |
+| Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
 | Description | RGBW LED controller |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![Miboxer FUT038Z](https://www.zigbee2mqtt.io/images/devices/FUT038Z.jpg) |
+| Picture | ![MiBoxer FUT038Z](https://www.zigbee2mqtt.io/images/devices/FUT038Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

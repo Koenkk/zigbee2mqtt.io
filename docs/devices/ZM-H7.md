@@ -1,6 +1,6 @@
 ---
-title: "ZemiSmart ZM-H7 control via MQTT"
-description: "Integrate your ZemiSmart ZM-H7 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Zemismart ZM-H7 control via MQTT"
+description: "Integrate your Zemismart ZM-H7 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-04-27T17:39:27
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# ZemiSmart ZM-H7
+# Zemismart ZM-H7
 
 |     |     |
 |-----|-----|
 | Model | ZM-H7  |
-| Vendor  | [ZemiSmart](/supported-devices/#v=ZemiSmart)  |
+| Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Hand wave wall smart switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![ZemiSmart ZM-H7](https://www.zigbee2mqtt.io/images/devices/ZM-H7.jpg) |
+| Picture | ![Zemismart ZM-H7](https://www.zigbee2mqtt.io/images/devices/ZM-H7.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

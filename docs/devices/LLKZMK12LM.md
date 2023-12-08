@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | LLKZMK12LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara dual relay module T2 |
-| Exposes | switch (state), power, current, energy, voltage, device_temperature, linkquality |
+| Exposes | switch (state), power, current, energy, voltage, device_temperature, switch_type, power_on_behavior, operation_mode, action, interlock, mode, pulse_length, linkquality |
 | Picture | ![Xiaomi LLKZMK12LM](https://www.zigbee2mqtt.io/images/devices/LLKZMK12LM.jpg) |
 
 
@@ -97,6 +97,62 @@ Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
+
+### Switch type (enum)
+External switch type.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `toggle`, `momentary`, `none`.
+
+### Power on behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `on`, `previous`, `off`, `toggle`.
+
+### Operation mode (enum, l1 endpoint)
+Decoupled mode for 1st relay.
+Value can be found in the published state on the `operation_mode_l1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_l1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_l1": NEW_VALUE}`.
+The possible values are: `decoupled`, `control_relay`.
+
+### Operation mode (enum, l2 endpoint)
+Decoupled mode for 2nd relay.
+Value can be found in the published state on the `operation_mode_l2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_l2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_l2": NEW_VALUE}`.
+The possible values are: `decoupled`, `control_relay`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`.
+
+### Interlock (binary)
+Enabling prevents both relays being on at the same time (Interlock).
+Value can be found in the published state on the `interlock` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"interlock": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interlock": NEW_VALUE}`.
+If value equals `ON` interlock is ON, if `OFF` OFF.
+
+### Mode (enum)
+Work mode: Power mode, Dry mode with impulse, Dry mode.
+Value can be found in the published state on the `mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+The possible values are: `power`, `pulse`, `dry`.
+
+### Pulse length (numeric)
+Impulse length in Dry mode with impulse.
+Value can be found in the published state on the `pulse_length` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pulse_length": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pulse_length": NEW_VALUE}`.
+The minimal value is `200` and the maximum value is `2000`.
+The unit of this value is `ms`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

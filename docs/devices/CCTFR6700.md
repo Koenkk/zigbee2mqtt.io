@@ -35,7 +35,7 @@ It supports two modes:
 ### Pairing and configuring
 After pairing the device requires:
 - the pilot mode to be configured (Contactor/Pilot)
-- an external temperature measurement, either through a bind from a sensor, or report from the coordinator trhough automation. The temperature must be refreshed at least every 10mn
+- an external temperature measurement, either through a bind from a sensor, or report from the coordinator through automation. The temperature must be refreshed at least every 10mn
 - the target thermostat set point
 
 ### Local temperature

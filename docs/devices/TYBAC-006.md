@@ -49,7 +49,7 @@ This climate device supports the following features: `local_temperature`, `curre
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `cool`, `heat`, `fan_only`. Reading (`/get`) this attribute is not possible.
-- `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-5` and the maximum value is `5` with a step size of `0.5`.
+- `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-5` and the maximum value is `5` with a step size of `0.5`.
 
 ### Min temperature (numeric)
 Minimum temperature.
@@ -99,10 +99,10 @@ The minimal value is `0` and the maximum value is `5`.
 The unit of this value is `°C`.
 
 ### Valve (binary)
-3-Way Valve status.
+3-Way Valve State.
 Value can be found in the published state on the `valve` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `CLOSED` valve is ON, if `OPEN` OFF.
+If value equals `OPEN` valve is ON, if `CLOSE` OFF.
 
 ### Manual mode (binary)
 Manual = ON or Schedule = OFF.

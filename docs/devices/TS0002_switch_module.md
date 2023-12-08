@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | 2 gang switch module |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
 | Picture | ![TuYa TS0002_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0002_switch_module.jpg) |
-| White-label | OXT SWTZ22 |
+| White-label | OXT SWTZ22, MOES ZM-104B-M |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,7 +28,7 @@ pageClass: device-page
 
 ### Binding
 
-No sensible [binding](../guide/usage/binding.md) functionallity available. 
+No sensible [binding](../guide/usage/binding.md) functionality available. 
 
 Only the genOta and genTime clusters can be bound.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TYWB 4ch-RF  |
 | Vendor  | [MHCOZY](/supported-devices/#v=MHCOZY)  |
 | Description | 4 channel relay |
-| Exposes | switch (state), power_on_behavior, linkquality |
+| Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
 | Picture | ![MHCOZY TYWB 4ch-RF](https://www.zigbee2mqtt.io/images/devices/TYWB-4ch-RF.jpg) |
 
 
@@ -84,6 +84,13 @@ Value can be found in the published state on the `power_on_behavior_l4` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_l4": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l4": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
+
+### Backlight mode (binary)
+Mode of the backlight.
+Value can be found in the published state on the `backlight_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
