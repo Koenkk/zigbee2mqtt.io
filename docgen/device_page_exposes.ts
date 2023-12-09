@@ -53,6 +53,16 @@ function compositeDocs(composite) {
 function getExposeDocs(expose, definition) {
   const lines = [];
   const title = [];
+
+  const onWithTimedOff = () => {
+      lines.push(``);
+      lines.push(`#### On with timed off`);
+      lines.push(`When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property \`on_time\` to the payload which is the time in seconds the state should remain on.`);
+      lines.push(`Additionnaly an \`off_wait_time\` property can be added to the payload to specify the cooldown time in seconds when the ${expose.type} will not answer to other on with timed off commands.`);
+      lines.push(`Support depend on the ${expose.type} firmware. Some devices might require both \`on_time\` and \`off_wait_time\` to work`);
+      lines.push(`Examples : \`{"state" : "ON", "on_time": 300}\`, \`{"state" : "ON", "on_time": 300, "off_wait_time": 120}\`.`);
+    }
+
   if (expose.label) title.push(expose.type);
   if (expose.endpoint) title.push(`${expose.endpoint} endpoint`);
   lines.push(`### ${capitalizeFirstLetter(expose.label ? expose.label : expose.type)} ${title.length > 0 ? `(${title.join(', ')})` : ''}`);
@@ -130,6 +140,12 @@ function getExposeDocs(expose, definition) {
       lines.push(`It's not possible to read (\`/get\`) this value.`);
     }
 
+    const on_time = definition.toZigbee.find((t) => t.key.includes('on_time'));
+    if (on_time && expose.type === 'switch' && (state.access & access.SET)) {
+      onWithTimedOff();
+    }
+
+
     if (expose.type === 'cover') {
       for (const e of expose.features.filter((e) => e.name === 'position' || e.name === 'tilt')) {
         lines.push(`To change the ${uncapitalizeFirstLetter(e.label)} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${e.property}": VALUE}\` where \`VALUE\` is a number between \`${e.value_min}\` and \`${e.value_max}\`.`);
@@ -184,6 +200,10 @@ function getExposeDocs(expose, definition) {
       lines.push(`  - HSL space (hue, saturation, lightness)\`{"color": {"h": H, "s": S, "l": L}}\` e.g. \`{"color":{"h":360,"s":100,"l":100}}\` or \`{"color": {"hsl": "H,S,L"}}\` e.g. \`{"color":{"hsl":"360,100,100"}}\``);
     }
 
+    const on_time = definition.toZigbee.find((t) => t.key.includes('on_time'));
+    if (on_time) {
+      onWithTimedOff();
+    }
     const transition = definition.toZigbee.find((t) => t.key.includes('transition'));
     if (transition) {
       lines.push(``);
