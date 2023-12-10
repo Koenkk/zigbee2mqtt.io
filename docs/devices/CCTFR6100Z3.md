@@ -23,10 +23,25 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+Note that the device's firmware will slowly turn off the valve as the set-point temperature is reached to prevent temperature overshoot.
+The valve position changes dynamically depending upon set and actual position; it's not a simple on/off device.
+
+### Factory Reset Device
+Twist the control dial to + and hold for 10 secs until a solid Red LED is shown. The valve will fully open.
+Once factory reset has completed, a solid Yellow LED is shown and the Red / Blue LEDs will flash continuously indicating the device is in the factory delivered state.
+
+### Initial Device Setup
+* Insert batteries paying attention to the polarity. A solid Yellow LED will be shown and the Red / Blue LEDs will flash continuously indicating the device is in the factory delivered state.
+* Twist the control dial to + and hold for 4 secs until a solid Green LED is shown indicating the device is in binding mode. Once binding is complete, a solid Green LED will show and the and the Red / Blue LEDs will flash continuously.
+* Perform 'thermostatic head calibration' - see below.
+
+### Thermostatic Head Calibration
+At any time after initial setup, ideally each time after removing and refitting the valve, the endpoint (off) valve position should be set.
+* Twist the control dial to - and hold until the a solid blue LED is shown. All LEDs will extinguish after calibration is complete.
 
 
 <!-- Notes END: Do not edit below this line -->
-
 
 
 ## Options
