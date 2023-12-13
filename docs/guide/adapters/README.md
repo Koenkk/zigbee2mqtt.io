@@ -525,7 +525,7 @@ Initial development started on experimental (beta stage) support for Silicon Lab
 
     While the RCP firmware allows you to utilize the adapter with other protocols such as Thread, it requires offloading large parts of the application onto the host computer using an additional service, Zigbeed (Zigbee daemon) instead. This service is not currently included with Zigbee2MQTT/zigbee-herdsman and you will be required to install and maintain the dependency yourself. More discussion can be found [here](https://github.com/zigpy/zigpy/discussions/894).
 
-    If Zigbee2MQTT fails to start, try adding the following to your zigbee2mqtt `configuration.yaml` (inside the `/config/zigbee2mqtt/` folder)
+    If Zigbee2MQTT fails to start, try adding the following to your Zigbee2MQTT `configuration.yaml` (for the Home Assistant addon inside the `/config/zigbee2mqtt/` folder)
     ```yaml
     serial:
       adapter: ezsp
