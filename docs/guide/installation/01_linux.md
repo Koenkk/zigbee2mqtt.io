@@ -33,15 +33,15 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 ## Installing
 ```bash
 # Set up Node.js repository and install Node.js + required dependencies
-# NOTE 1: Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v16.15.0/ e.g. Version 16.15.0 should work.
+# NOTE 1: Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/ e.g. Version 20.9.0 should work.
 # NOTE 2: For Ubuntu see tip below
-sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs git make g++ gcc
 
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
 # version has been installed
-node --version  # Should output V16.x, V17.x, V18.X or V20.X
-npm --version  # Should output 6.X, 7.X or 8.X
+node --version  # Should output V18.x, V20.x, V21.X
+npm --version  # Should output 9.X or 10.X
 
 # Create a directory for zigbee2mqtt and set your user as owner of it
 sudo mkdir /opt/zigbee2mqtt

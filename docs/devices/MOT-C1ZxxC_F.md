@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MOT-C1ZxxC/F  |
 | Vendor  | [Profalux](/supported-devices/#v=Profalux)  |
 | Description | Cover |
-| Exposes | cover (state, position), linkquality |
+| Exposes | cover (state, position, tilt), linkquality |
 | Picture | ![Profalux MOT-C1ZxxC/F](https://www.zigbee2mqtt.io/images/devices/MOT-C1ZxxC-F.jpg) |
 
 
@@ -42,6 +42,7 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
+To change the tilt publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tilt": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -11,13 +11,13 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# NodOn SIN-4-FP-21-EQU
+# ADEO SIN-4-FP-21_EQU
 
 |     |     |
 |-----|-----|
 | Model | SIN-4-FP-21_EQU  |
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
-| Description | Pilot wire heating module (Leroy Merlin version) |
+| Description | Equation pilot wire heating module |
 | Exposes | switch (state), power, energy, mode, linkquality |
 | Picture | ![ADEO SIN-4-FP-21_EQU](https://www.zigbee2mqtt.io/images/devices/SIN-4-FP-21_EQU.jpg) |
 
@@ -27,9 +27,6 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
-
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -66,8 +63,10 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### Mode (enum)
-Set the mode to apply
-The mode can be one of the following: comfort, comfort-1, comfort-2, eco, anti-freeze, stop
+Value can be found in the published state on the `mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
+The possible values are: `comfort`, `eco`, `anti-freeze`, `stop`, `comfort_-1`, `comfort_-2`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

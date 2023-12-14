@@ -25,7 +25,7 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Router functionallity
+### Router functionality
 This device **does not** work as a Zigbee router.
 
 ### Debounce

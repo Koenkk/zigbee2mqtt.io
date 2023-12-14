@@ -23,10 +23,33 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+Firmware 1.0.3 can be misbehaving, as of December 2023 upgrade to 1.0.5 is recommended.
 
+Additional settings currently not exposed in Z2M can be adjusted via the Dev console:
+### Sensitivity
+Select the msOccupancySensing Cluster, ultrasonicUToOThreshold Attribute is the sensitivity setting.
+
+
+1 represents low sensitivity with a detection distance of 2.5m.  
+2 represents medium sensitivity with a detection distance of 3.5m.  
+3 represents high sensitivity with a detection distance of 4m.
+
+### Detection duration
+Select the msOccupancySensing Cluster, ultrasonicOToUDelay is the detection duration setting.
+
+
+On firmware versions lower than 1.0.5, the shortest detection duration is 30 (seconds), otherwise, the sensor will stay permanently on detected status.
+
+Firmware version 1.0.5 and above allows setting the shortest detection duration to 15 (seconds).
+
+[Source - Sonoff documentation](https://sonoff.tech/product-review/tutorial/snzb-06p-firmware-upgrade-and-home-assistant-operation-guide/)
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
