@@ -23,8 +23,8 @@ First check if the device page ([Supported devices](../../supported-devices/), c
 If no instructions are available, the device can probably be paired by factory resetting it.
 
 Once you see something similar to below in the log your device is paired.
+
 ```
 Zigbee2MQTT:info  2019-11-09T12:19:56: Successfully interviewed '0x00158d0001dc126a', device has successfully been paired
 ```
-## interference  
-Note that zigbee can suffer from interference as demonstrated [here](https://youtu.be/tHqZhNcFEvA?si=NTL8F7R6hRGWyrfo), always check with a usb-extention if this could be the issue if pairing fails.
+In case there are issues when pairing, see the [FAQ](../../guide/faq/#why-does-my-device-not-or-fail-to-pair) for possible fixes. 
