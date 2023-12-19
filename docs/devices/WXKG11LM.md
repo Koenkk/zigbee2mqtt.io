@@ -45,7 +45,7 @@ devices:
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
-After this the device will automatically join. If this doesn't work, try with a single short button press.
+After this the device will automatically join. If this doesn't work, try pressing the reset button once per second right after holding it for ~10 seconds (the light pattern indicates when the button can be released after holding it).
 
 
 ### Troubleshooting: device stops sending messages/disconnects from network
