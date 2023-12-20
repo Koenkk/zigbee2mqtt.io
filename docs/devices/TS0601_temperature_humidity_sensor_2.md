@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_temperature_humidity_sensor_2  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature and humidity sensor |
-| Exposes | temperature, humidity, battery_state, battery_low, linkquality |
+| Exposes | temperature, humidity, battery_state, temperature_unit, linkquality |
 | Picture | ![TuYa TS0601_temperature_humidity_sensor_2](https://www.zigbee2mqtt.io/images/devices/TS0601_temperature_humidity_sensor_2.jpg) |
 
 
@@ -28,9 +28,9 @@ pageClass: device-page
 
 ### Pairing
 Press and hold the pairing button on top for 5 seconds. When the signal icon flashes fast, release the button. It will search 20 seconds for network. 
-The signal icon will stay once connected to indicate successful connection
+The signal icon will stay once connected to indicate a successful connection.
 
-Pressing more than 10 secons cancels the pairing.
+Pressing more than 10 seconds cancels the pairing.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -67,11 +67,12 @@ Value can be found in the published state on the `battery_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `low`, `medium`, `high`.
 
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
+### Temperature unit (enum)
+Temperature unit.
+Value can be found in the published state on the `temperature_unit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": NEW_VALUE}`.
+The possible values are: `celsius`, `fahrenheit`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

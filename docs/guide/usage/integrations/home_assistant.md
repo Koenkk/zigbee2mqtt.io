@@ -118,7 +118,7 @@ devices:
         type: light
         object_id: light
       light:
-        name: my_switch
+        name: null
         value_template: null
         state_value_template: '{{ value_json.state }}'
       # OR if your devices has multiple endpoints (e.g. left/right)
@@ -138,7 +138,7 @@ devices:
         state_value_template: '{{ value_json.state_right }}'
 ```
 ### Changing device properties
-As an advanced example to show changing any MQTT property can be overriden, the following configuration changes the `suggested_area` property of the `device`. The example shows that you can just copy the given MQTT discovery hierarchy underneath the `homeassistant` property (given that `suggested_area` is underneath the `device` property). Please note, that other `device` properties are possibly set by Zigbee2MQTT (e.g. `manufacturer`).
+As an advanced example to show changing any MQTT property can be overridden, the following configuration changes the `suggested_area` property of the `device`. The example shows that you can just copy the given MQTT discovery hierarchy underneath the `homeassistant` property (given that `suggested_area` is underneath the `device` property). Please note, that other `device` properties are possibly set by Zigbee2MQTT (e.g. `manufacturer`).
 
 This example changes the [light's device's `suggested area` discovery property](https://www.home-assistant.io/integrations/light.mqtt/#device) to "Living Room":
 
@@ -168,18 +168,6 @@ The following Home Assistant configuration allows you to control Zigbee2MQTT fro
 You can add it to the appropriate section of your `configuration.yaml`, or you can add it as a [Home Assistant Package](https://www.home-assistant.io/docs/configuration/packages/) by adding the following to `zigbee2mqtt.yaml` in your packages folder.
 
 ```yaml
-# Input select for Zigbee2MQTT debug level
-input_select:
-  zigbee2mqtt_log_level:
-    name: Zigbee2MQTT Log Level
-    options:
-      - debug
-      - info
-      - warn
-      - error
-    initial: info
-    icon: mdi:format-list-bulleted
-
 # Input number for joining time remaining (in minutes)
 input_number:
   zigbee2mqtt_join_minutes:
@@ -195,12 +183,15 @@ input_text:
   zigbee2mqtt_old_name:
     name: Zigbee2MQTT Old Name
     initial: ""
+    icon: "mdi:moon-full"
   zigbee2mqtt_new_name:
     name: Zigbee2MQTT New Name
     initial: ""
+    icon: "mdi:moon-new"
   zigbee2mqtt_remove:
     name: Zigbee2MQTT Remove
     initial: ""
+    icon: "mdi:trash-can"
 
 # Input boolean to set the force remove flag for devices
 input_boolean:
@@ -213,6 +204,7 @@ input_boolean:
 script:
   zigbee2mqtt_rename:
     alias: Zigbee2MQTT Rename
+    icon: "mdi:pencil"
     sequence:
       service: mqtt.publish
       data_template:
@@ -224,6 +216,7 @@ script:
           }
   zigbee2mqtt_remove:
     alias: Zigbee2MQTT Remove
+    icon: "mdi:trash-can"
     sequence:
       service: mqtt.publish
       data_template:
@@ -234,122 +227,8 @@ script:
             "force": {% if states.input_boolean.zigbee2mqtt_force_remove.state == "off" %}false{% else %}true{% endif %}
           }
 
-# Timer for joining time remaining (254 sec)
-timer:
-  zigbee_permit_join:
-    name: Time remaining
-    duration: 254
-
-mqtt:
-  sensor:
-    # Sensor for monitoring the bridge state
-    - name: Bridge state
-      unique_id: zigbee2mqtt_bridge_state_sensor
-      state_topic: "zigbee2mqtt/bridge/state"
-      value_template: "{{ value_json.state }}"
-      icon: mdi:router-wireless
-      entity_category: diagnostic
-      device:
-        identifiers: zigbee2mqtt
-        name: "Zigbee2MQTT"
-        model: "Zigbee2MQTT"
-        manufacturer: "Zigbee2MQTT"  
-    # Sensor for Showing the Zigbee2MQTT Version
-    - name: Version
-      unique_id: zigbee2mqtt_version_sensor
-      state_topic: "zigbee2mqtt/bridge/info"
-      value_template: "{{ value_json.version }}"
-      icon: mdi:zigbee
-      entity_category: diagnostic
-      device:
-        identifiers: zigbee2mqtt
-        name: "Zigbee2MQTT"
-        model: "Zigbee2MQTT"
-        manufacturer: "Zigbee2MQTT"  
-    # Sensor for Showing the Coordinator Version
-    - name: Coordinator Version
-      unique_id: zigbee2mqtt_coordinator_version_sensor
-      state_topic: "zigbee2mqtt/bridge/info"
-      value_template: "{{ value_json.coordinator.meta.revision }}"
-      icon: mdi:chip
-      entity_category: diagnostic
-      device:
-        identifiers: zigbee2mqtt
-        name: "Zigbee2MQTT"
-        model: "Zigbee2MQTT"
-        manufacturer: "Zigbee2MQTT"  
-    - name: Networkmap
-      unique_id: zigbee2mqtt_networkmap_sensor
-      # if you change base_topic of Zigbee2mqtt, change state_topic accordingly
-      state_topic: zigbee2mqtt/bridge/response/networkmap
-      value_template: >-
-        {{ now().strftime('%Y-%m-%d %H:%M:%S') }}
-      # again, if you change base_topic of Zigbee2mqtt, change json_attributes_topic accordingly
-      json_attributes_topic: zigbee2mqtt/bridge/response/networkmap
-      json_attributes_template: "{{ value_json.data.value | tojson }}"
-      entity_category: diagnostic
-      device:
-        identifiers: zigbee2mqtt
-        name: "Zigbee2MQTT"
-        model: "Zigbee2MQTT"
-        manufacturer: "Zigbee2MQTT"
-
-  # Switch for enabling joining
-  switch:
-    - name: "Main join"
-      unique_id: zigbee2mqtt_main_join_switch
-      state_topic: "zigbee2mqtt/bridge/info"
-      value_template: '{{ value_json.permit_join | lower }}'
-      command_topic: "zigbee2mqtt/bridge/request/permit_join"
-      payload_on: "true"
-      payload_off: "false"
-      device:
-        identifiers: zigbee2mqtt
-        name: "Zigbee2MQTT"
-        model: "Zigbee2MQTT"
-        manufacturer: "Zigbee2MQTT"
 
 automation:
-  # Automation for sending MQTT message on input select change
-  - alias: Zigbee2MQTT Log Level
-    initial_state: "on"
-    trigger:
-      platform: state
-      entity_id: input_select.zigbee2mqtt_log_level
-    action:
-      - service: mqtt.publish
-        data:
-          payload_template: "{{ states('input_select.zigbee2mqtt_log_level') }}"
-          topic: zigbee2mqtt/bridge/request/config/log_level
-  # Automation to start timer when enable join is turned on
-  - id: zigbee_join_enabled
-    alias: Zigbee Join Enabled
-    trigger:
-      platform: state
-      entity_id: switch.zigbee2mqtt_main_join
-      to: "on"
-    action:
-      service: timer.start
-      entity_id: timer.zigbee_permit_join
-      data_template:
-        duration: "{{ '00:0%i:00' % (states('input_number.zigbee2mqtt_join_minutes') | int ) }}"
-  # Automation to stop timer when switch turned off and turn off switch when timer finished
-  - id: zigbee_join_disabled
-    alias: Zigbee Join Disabled
-    trigger:
-      - platform: event
-        event_type: timer.finished
-        event_data:
-          entity_id: timer.zigbee_permit_join
-      - platform: state
-        entity_id: switch.zigbee2mqtt_main_join
-        to: "off"
-    action:
-      - service: timer.cancel
-        data:
-          entity_id: timer.zigbee_permit_join
-      - service: switch.turn_off
-        entity_id: switch.zigbee2mqtt_main_join
   - id: "zigbee2mqtt_create_notification_on_successful_interview"
     alias: Zigbee Device Joined Notification
     trigger:
@@ -377,14 +256,13 @@ title: Zigbee2MQTT
 type: entities
 show_header_toggle: false
 entities:
-  - entity: sensor.zigbee2mqtt_bridge_state
-  - entity: sensor.zigbee2mqtt_version
-  - entity: sensor.zigbee2mqtt_coordinator_version
-  - entity: input_select.zigbee2mqtt_log_level
+  - entity: binary_sensor.zigbee2mqtt_bridge_connection_state
+  - entity: sensor.zigbee2mqtt_bridge_version
+  - entity: sensor.zigbee2mqtt_bridge_coordinator_version
   - type: divider
-  - entity: switch.zigbee2mqtt_main_join
+  - entity: switch.zigbee2mqtt_bridge_permit_join
   - entity: input_number.zigbee2mqtt_join_minutes
-  - entity: timer.zigbee_permit_join
+  - entity: sensor.zigbee2mqtt_bridge_permit_join_timeout
   - type: divider
   - entity: input_text.zigbee2mqtt_old_name
   - entity: input_text.zigbee2mqtt_new_name

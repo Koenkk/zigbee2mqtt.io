@@ -43,11 +43,11 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `production`: If you produce energy back to the grid (works ONLY when linky_mode: standard, default: auto). The value must be one of `auto`, `true`, `false`
 
-* `tarif`: Overrides the automatic current tarif. This option will exclude unnecesary attributes. Open a issue to support more of them. Default: auto. The value must be one of `Historique - BASE`, `Historique - HCHP`, `Historique - EJP`, `Historique - BBR`, `Standard - Sem WE Lundi`, `Standard - Sem WE Mercredi`, `Standard - Sem WE Vendredi`, `Standard - BASE`, `Standard - Heure Pleine Heure Creuse`, `Standard - TEMPO`, `auto`
+* `tarif`: Overrides the automatic current tarif. This option will exclude unnecessary attributes. Open a issue to support more of them. Default: auto. The value must be one of `Historique - BASE`, `Historique - HCHP`, `Historique - EJP`, `Historique - BBR`, `Standard - Sem WE Lundi`, `Standard - Sem WE Mercredi`, `Standard - Sem WE Vendredi`, `Standard - BASE`, `Standard - Heure Pleine Heure Creuse`, `Standard - Heures Super Creuses`, `Standard - TEMPO`, `Standard - ZEN Flex`, `auto`
 
 * `kWh_precision`: Number of digits after decimal point for kWh, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `measurement_poll_chunk`: During the poll, request multiple exposes to the Zlinky at once for reducing Zigbee network overload. Too much request at once could exceed device limit. Requieres Z2M restart. Default: 1. The value must be a number with a minimum value of `1`
+* `measurement_poll_chunk`: During the poll, request multiple exposes to the Zlinky at once for reducing Zigbee network overload. Too much request at once could exceed device limit. Requires Z2M restart. Default: 1. The value must be a number with a minimum value of `1`
 
 * `tic_command_whitelist`: List of TIC commands to be exposed (separated by comma). Reconfigure device after change. Default: all. The value must be textual.
 

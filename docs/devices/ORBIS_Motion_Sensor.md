@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ORBIS Motion Sensor  |
 | Vendor  | [Niceboy](/supported-devices/#v=Niceboy)  |
 | Description | Motion sensor |
-| Exposes | occupancy, battery_low, battery, voltage, linkquality |
+| Exposes | occupancy, battery_low, battery, voltage, tamper, linkquality |
 | Picture | ![Niceboy ORBIS Motion Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Motion-Sensor.jpg) |
 
 
@@ -56,6 +56,12 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Tamper (binary)
+Indicates whether the device is tampered.
+Value can be found in the published state on the `tamper` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` tamper is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

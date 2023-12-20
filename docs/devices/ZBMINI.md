@@ -25,6 +25,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Re-pairing
+ZBMINI can be factory reset / re-paired with a help of a Hue dimmer switch. This is extremely helpful when your device isn't easily reachable to use the reset pin (i.e. when already hidden in a back box). See [instructions on Hue dimmer switch page](https://www.zigbee2mqtt.io/devices/324131092621.html#using-the-dimmer-to-reset-other-zigbee-devices).
 
 ### Device stuck
 In case of switching the coordinators a device may stuck in error state which is indicated by slowly blinking light (about 1 flash per second).

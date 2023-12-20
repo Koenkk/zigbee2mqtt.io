@@ -8,6 +8,8 @@
     "dev": "cross-env EXCLUDE_DEVICES=yes vuepress dev docs",
     "build": "cross-env NODE_OPTIONS=--max_old_space_size=8000 vuepress build docs",
     "docgen": "ts-node docgen",
+    "download-missing-device-images": "ts-node docgen/missing_device_images download",
+    "move-missing-device-images": "ts-node docgen/missing_device_images move",
     "test": "ts-node docgen/tests"
   },
   "author": "",
@@ -23,7 +25,9 @@
     "@vuepress/plugin-docsearch": "^2.0.0-beta.53",
     "@vuepress/plugin-google-analytics": "^2.0.0-beta.53",
     "@vuepress/plugin-register-components": "^2.0.0-beta.53",
+    "async-g-i-s": "^1.5.1",
     "cross-env": "^7.0.3",
+    "easyimage": "^3.1.1",
     "glob": "^8.0.3",
     "image-size": "^1.0.2",
     "pug": "^3.0.2",
@@ -35,6 +39,6 @@
     "typescript": "^4.9.3",
     "vuepress": "^2.0.0-beta.53",
     "vuepress-plugin-sitemap2": "^2.0.0-beta.122",
-    "zigbee-herdsman-converters": "15.67.0"
+    "zigbee-herdsman-converters": "15.130.1"
   }
 }

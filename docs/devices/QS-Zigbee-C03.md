@@ -64,7 +64,7 @@ If value equals `ON` motor reversal is ON, if `OFF` OFF.
 Calibration time.
 Value can be found in the published state on the `calibration_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `S`.
+The unit of this value is `s`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | QBKG32LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart wall switch H1 Pro (with neutral, tripple rocker) |
-| Exposes | switch (state), power, energy, voltage, device_temperature, power_outage_memory, led_disabled_night, flip_indicator_light, action, operation_mode, linkquality |
+| Description | Aqara smart wall switch H1 Pro (with neutral, triple rocker) |
+| Exposes | switch (state), power, energy, voltage, device_temperature, power_outage_memory, led_disabled_night, flip_indicator_light, action, operation_mode, power_outage_count, linkquality |
 | Picture | ![Xiaomi QBKG32LM](https://www.zigbee2mqtt.io/images/devices/QBKG32LM.jpg) |
 
 
@@ -135,11 +135,16 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `control_relay`, `decoupled`.
 
 ### Operation mode (enum, center endpoint)
-Decoupled mode for right button.
+Decoupled mode for center button.
 Value can be found in the published state on the `operation_mode_center` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_center": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_center": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
+
+### Power outage count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SRTS-A01  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara Smart Radiator Thermostat E1 |
-| Exposes | setup, climate (occupied_heating_setpoint, local_temperature, system_mode, preset), sensor, calibrated, lock (state), switch (state), window_open, valve_alarm, away_preset_temperature, voltage, battery, power_outage_count, device_temperature, schedule_settings, linkquality |
+| Exposes | setup, climate (occupied_heating_setpoint, local_temperature, system_mode, preset), sensor, calibrated, calibrate, lock (state), switch (state), window_open, valve_alarm, away_preset_temperature, voltage, battery, power_outage_count, device_temperature, schedule_settings, linkquality |
 | Picture | ![Xiaomi SRTS-A01](https://www.zigbee2mqtt.io/images/devices/SRTS-A01.jpg) |
 
 
@@ -63,10 +63,17 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `internal`, `external`.
 
 ### Calibrated (binary)
-Is the valve calibrated.
+Indicates if this valve is calibrated, use the calibrate option to calibrate.
 Value can be found in the published state on the `calibrated` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` calibrated is ON, if `false` OFF.
+
+### Calibrate (enum)
+Calibrates the valve.
+Value can be found in the published state on the `calibrate` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibrate": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibrate": NEW_VALUE}`.
+The possible values are: `calibrate`.
 
 ### Child lock (lock)
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).

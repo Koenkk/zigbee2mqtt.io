@@ -1,6 +1,6 @@
 ---
-title: "AUBESS ZXZIR-02 control via MQTT"
-description: "Integrate your AUBESS ZXZIR-02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aubess ZXZIR-02 control via MQTT"
+description: "Integrate your Aubess ZXZIR-02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-05-28T16:23:11Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# AUBESS ZXZIR-02
+# Aubess ZXZIR-02
 
 |     |     |
 |-----|-----|
 | Model | ZXZIR-02  |
-| Vendor  | [AUBESS](/supported-devices/#v=AUBESS)  |
+| Vendor  | [Aubess](/supported-devices/#v=Aubess)  |
 | Description | Universal smart IR remote control |
 | Exposes | switch (state), learned_ir_code, ir_code_to_send, linkquality |
-| Picture | ![AUBESS ZXZIR-02](https://www.zigbee2mqtt.io/images/devices/ZXZIR-02.jpg) |
+| Picture | ![Aubess ZXZIR-02](https://www.zigbee2mqtt.io/images/devices/ZXZIR-02.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -70,7 +70,7 @@ _(in order of first appearance)_
   * <details>
     <summary>ZigStar Stick v4</summary>
   
-    Powerfull Open source dongle with external antenna based on CC2652P  
+    Powerful Open source dongle with external antenna based on CC2652P  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)  
     * [Description](https://zig-star.com/projects/zigbee-stick-v4/)  
@@ -133,6 +133,17 @@ _(in order of first appearance)_
     ![](../../images/cc26x2r1_dongle.jpg)
     </details>
 
+  * <details>
+    <summary>JetHome JetStick Z2/ZB6UX CC2652P1</summary>
+
+    Powerful CC2652P1 factory-made Zigbee USB dongle with external antenna.
+    * [Documentation](https://docs.jethome.ru/en/zigbee/sticks/jetstick_z2.html)
+    * [Flash instructions](https://docs.jethome.ru/en/zigbee/howto/cc_2538_bsl.html#zigbee-howto-2538-bsl)
+    * [Firmware](https://docs.jethome.ru/en/zigbee/software/ti_cc2652p.html#zigbee-software-ti-cc2652p)
+    * Buy: [JetStick Z2](https://jethome.ru/z2/)
+
+    ![](../../images/jetstick_z2.png)
+    </details>
 
 * Hybrid (network + USB)
   * <details>
@@ -151,7 +162,7 @@ _(in order of first appearance)_
   * <details>
     <summary>ZigStar LAN Coordinator</summary>
   
-    Powerfull Open source LAN Coordinator with external antenna on CC2652P  
+    Powerful Open source LAN Coordinator with external antenna on CC2652P  
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)  
     * [Description](https://zig-star.com/projects/zigbee-gw-lan/)  
@@ -175,9 +186,9 @@ _(in order of first appearance)_
     </details>
     
   * <details>
-    <summary>SMLIGHT SLZB-06 Zigbee ethernet USB POE WiFi LAN adapter</summary>
+    <summary>SMLIGHT SLZB-06 Zigbee Ethernet USB POE WiFi LAN adapter</summary>
   
-    Powerfull, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed and ready to use Zigbee adapter. Supports Zigbee 3.0, Ethernet, LAN, USB and WiFi connections. Rich packing that includes SLZB-06 adapter, +5dB antenna, screws, adhesive tapes, screwdriver, microUSB-typeC adapter, screw-fix-helper and QR-manual. Distant update, modern UI open-source firmware. Optoelectronic isolation for Ethernet, LEDs and physical button for interacting with user. Fits home and business use.
+    Powerful, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed and ready to use Zigbee adapter. Supports Zigbee 3.0, Ethernet, LAN, USB and WiFi connections. Rich packing that includes SLZB-06 adapter, +5dB antenna, screws, adhesive tapes, screwdriver, microUSB-typeC adapter, screw-fix-helper and QR-manual. Distant update, modern UI open-source firmware. Optoelectronic isolation for Ethernet, LEDs and physical button for interacting with user. Fits home and business use.
     * [Coordinator firmware (CC2652P)](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20230507.zip)  
     * [ESP32 firmware](https://github.com/smlight-dev/slzb-06-firmware/)  
     * [Manual](https://smlight.tech/manual/slzb-06/)
@@ -196,7 +207,7 @@ _(in order of first appearance)_
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/)  
     * [Official site](https://uzg.zig-star.com) with documentation
     * [Flashing instructions](https://uzg.zig-star.com/flashing-and-updating/) or see [Flashing CC1352/CC2652/CC2538 based adapters](#flashing-cc1352-cc2652-cc2538-based-adapters)
-    * Buy: [Official Store](https://uzg.zig-star.com) or [Tindie](https://www.tindie.com/stores/zigstar/)
+    * Buy: [Official Store](https://uzg.zig-star.com),[Tindie](https://www.tindie.com/stores/zigstar/),[Elecrow](https://www.elecrow.com/zigstar-uzg-01-universal-zigbee-gateway.html)
 
     |           ZigStar UZG-01              |                  Dimensions           | 
     | :-----------------------------------: | :-----------------------------------: | 
@@ -215,7 +226,7 @@ _(in order of first appearance)_
     * [Flashing instructions](https://github.com/tube0013/tube_gateways) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
     * [Buy](https://www.tubeszb.com/)
   
-    ![](../../images/Tubes_Zigbee_Gateways_CC2652P2_variant.jpeg) ![](../../images/Tubes_Zigbee_PoE_Coordinator_CC2652P2_variant.jpeg)
+    ![](../../images/Tubes_Zigbee_Gateways_CC2652P2_variant.jpg) ![](../../images/Tubes_Zigbee_PoE_Coordinator_CC2652P2_variant.jpg)
     </details>
 
   * <details>
@@ -280,7 +291,7 @@ _(in order of first appearance)_
   * <details>
     <summary>ZigStar ZigiHAT PoE </summary>
   
-    Powerfull Open source Pi HAT based on CC2652P with PoE,RTC onboard
+    Powerful Open source Pi HAT based on CC2652P with PoE,RTC onboard
     * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)  
     * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)  
     * [Description](https://zig-star.com/projects/zigbee-zigihat/)  
@@ -346,21 +357,46 @@ _(in order of first appearance)_
   
     ![](../../images/LP-CC1352P7.jpg)
     </details>
+* Hub
+  * <details>
+    <summary>JetHome JetHub D1+</summary>
+
+    Controller with ZigBee module onboard with external antenna.
+
+    JetHub D1+ is DIN-rail home automation controller with Ubuntu/Debian OS and a lot of peripherals.
+
+    Based on TI CC2652P1.
+
+    * [Documentation](https://docs.jethome.ru/en/controllers/linux/din_rail/d1p.html)
+    * [Buy](https://jethome.ru/d1p/)
+
+    ![](../../images/jethub_d1_full.png)
+    </details>
 
 ### Other
   * <details>
-    <summary>ConBee / ConBee II / RaspBee / RaspBee II</summary>
-  
-    USB connected adapters (ConBee and ConBee II) and Raspberry Pi GPIO modules (RaspBee and RaspBee II).
+    <summary>ConBee / ConBee II / ConBee III / RaspBee / RaspBee II</summary>
+    
+    <br />
+    
+    USB connected adapters (ConBee / ConBee II / ConBee III) and Raspberry Pi GPIO modules (RaspBee and RaspBee II).
     If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
     ```yaml
     serial:
       adapter: deconz
     ```
+    Add the correct baudrate to the `configuration.yaml` into the serial section.
+    * For ConBee2: specifying the baudrate is not necessary
+    * For RaspBee2 it is 38400
+    * For ConBee3 it is 115200
+    
+    <br />
+    
     **Warning:** Conbee 2 firmware versions newer than 0x26580700 will result in an unstable network with devices dropping randomly, see [Issue 9554](https://github.com/Koenkk/zigbee2mqtt/issues/9554)
     * [Coordinator firmware](https://deconz.dresden-elektronik.de/deconz-firmware/)
     * [Flashing](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually)
     * [Buy](https://phoscon.de/conbee2#buy) (ConBee II)
+    * [Buy](https://phoscon.de/conbee3#buy) (ConBee III)
     * [Buy](https://phoscon.de/raspbee2#buy) (RaspBee II)
   
     ![](../../images/conbee.jpg)
@@ -485,9 +521,11 @@ Initial development started on experimental (beta stage) support for Silicon Lab
   
     USB connected adapter with integrated antenna.
 
-    This dongle/stick ships with standard Silicon Labs EmberZNet Zigbee NCP firmware so it works like other ezsp adapters out-of-the-box as long as you do not change firmware from NCP (Network Co-Processor) to RPC (Radio Co-Processor) firmware architecture for the EmberZNet Zigbee protocol stack. If you plan on using it only with Zigbee2MQTT then it is therefore currently not recommended to flash/upgrade to an RPC Multi-PAN firmware for it as that enables multiprotocol support for the radio which adds an extra prerequisite of running a service called "Zigbeed" (Zigbee daemon) on the same computer as the RCP Multi-PAN design offloads the Silicon Labs EmberZNet Zigbee protocol stack from the radio adapter, and that required Zigbee daemon for Silicon Labs EmberZNet is not yet included as a dependency with Zigbee2MQTT/zigbee-herdsman, meaning that you need to install and maintain that dependency yourself.
+    This dongle/stick ships with standard Silicon Labs EmberZNet Zigbee NCP (Network Co-Processor, Zigbee only) firmware as opposed to the RCP (Radio Co-Processor, multi-protocol) firmware. It is recommended you remain on an NCP firmware which will allow it to work out-of-the-box like any other EZSP adapter.
 
-    If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+    While the RCP firmware allows you to utilize the adapter with other protocols such as Thread, it requires offloading large parts of the application onto the host computer using an additional service, Zigbeed (Zigbee daemon) instead. This service is not currently included with Zigbee2MQTT/zigbee-herdsman and you will be required to install and maintain the dependency yourself. More discussion can be found [here](https://github.com/zigpy/zigpy/discussions/894).
+
+    If Zigbee2MQTT fails to start, try adding the following to your Zigbee2MQTT `configuration.yaml` (for the Home Assistant addon inside the `/config/zigbee2mqtt/` folder)
     ```yaml
     serial:
       adapter: ezsp
@@ -526,7 +564,7 @@ Initial development started on experimental (beta stage) support for Silicon Lab
 
     USB dongle is originally a DIY design from [Modkam (Russian speaking Zigbee DIY community)](https://modkam.ru/2021/02/28/proshivka-stikov-efr32/) and it using pre-flashed ["SM-011 V1.0" (ZYZBP008) radio module from CoolKit-Technologies](https://github.com/CoolKit-Technologies/DevDocs/tree/master/Zigbee) (which has a Silabs EFR32MG21 Zigbee SoC chip on it). 
 
-    Warning! Before buying understand that the "SM-011 V1.0" module/board used in this is missing electromagnetic interference shielding and have relativly low-quality circuit board antenna with less than optimal hardware tuning so it has been reported signal reception with these is very sensitive to all types of interference unless connect it via a very long USB extension cable that is properly shielded to get it away from any sources of EMF/EMI/RMI.
+    Warning! Before buying understand that the "SM-011 V1.0" module/board used in this is missing electromagnetic interference shielding and have relatively low-quality circuit board antenna with less than optimal hardware tuning so it has been reported signal reception with these is very sensitive to all types of interference unless connect it via a very long USB extension cable that is properly shielded to get it away from any sources of EMF/EMI/RMI.
 
     Note that the same USB dongle is also sold pre-flashed with Zigbee Router firmware as a lower price and it is reported to act much better as a Zigbee Router than what it does as a Zigbee Coordinator.
 
@@ -563,6 +601,38 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     * [Buy](https://z-wave.me/products/z-station/)
 
     ![](../../images/z-station.jpg)
+    </details>
+
+  * <details>
+    
+    <summary>SMLIGHT SLZB-07 Zigbee USB adapter with +3dB antenna</summary>
+  
+    Zigbee USB adapter with +3dB external antenna and Thread/Matter-over-Thread ready.
+
+    Zigbee USB adapter based on EFR32 and CP2102 Silicon Labs SoCs. External +3dB antenna secures a strong LQI signal all around your place. Pre-flashed, tested and and ready-to-use with both Zigbee2MQTT and ZHA Home Assistant. Supports Thread/Matter-over-Thread firmware architecture for the EmberZNet Zigbee protocol stack.
+
+    Zigbee2MQTT settings in `configuration.yaml`
+    ```yaml
+    serial:
+      adapter: ezsp
+    ```
+    * [Product page](https://smlight.tech/product/slzb-07/)
+    * [Buy Store](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-07-zigbee-usb-adapter-en), [Buy Aliexpress](https://www.aliexpress.com/item/1005006273914143.html)  
+  
+    ![](https://smartlight.me/files/pics/2023/SLZB-07-Zigbee2MQTT.png)
+    </details>
+
+  * <details>
+    <summary>JetHome JetStick Z4</summary>
+
+    Powerful EFR32MG21 based factory-made Zigbee USB dongle with external antenna.
+
+    * [Documentation](https://docs.jethome.ru/en/zigbee/sticks/jetstick_z4.html)
+    * [Flash instructions](https://docs.jethome.ru/en/zigbee/howto/silabs_flashing.html#zigbee-howto-silabs-flashing)
+    * [Firmware](https://docs.jethome.ru/en/zigbee/software/silabs_efr32.html#zigbee-software-silabs-efr32-mg21)
+    * [Buy JetStick Z4](https://jethome.ru/z4/)
+
+    ![](../../images/jetstick_z4.png)
     </details>
 
 * Raspberry Pi
@@ -606,6 +676,16 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     ![](../../images/TubesZB_efr32.jpg)
     </details>
 
+  * <details>
+    <summary>SMLIGHT SLZB-06M EFR32MG21 Zigbee Ethernet USB POE WiFi LAN adapter</summary>
+
+    Powerful, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed, and ready-to-use Zigbee adapter. Supports Zigbee 3.0, Ethernet, LAN, USB, and WiFi connections. Rich packing that includes SLZB-06M adapter, +5dB antenna, screws, adhesive tapes, screwdriver, microUSB-typeC adapter, screw-fix-helper, and QR-manual. Distant update, modern UI open-source firmware. Optoelectronic isolation for Ethernet, LEDs, and physical buttons for interacting with the user. It fits home and business use.
+    * [Product site](https://smlight.tech/product/slzb-06m/)
+    * Buy: [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-06m-zigbee-adapter)
+
+    ![](https://smartlight.me/ebay/images/slzb-06/slzb06logo.jpg)
+    </details>
+
 * mPCIe adapter
   * <details>
     <summary>Z-Wave.Me dual Zigbee & Z-Wave mPCIe adapter</summary>
@@ -629,9 +709,9 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     ![](../../images/z-wave_me_mpcie_adaptor.jpg)
     </details>
 
-* Wiren Board
+* Hub
   * <details>
-    <summary> Wiren Board 7 </summary>
+    <summary>Wiren Board 7</summary>
 
     Wiren Board 7 with Zigbee module with external antenna.
 
@@ -642,6 +722,21 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     * [Buy](https://z-wave.me/products/wirenboard-7/)
 
     ![](../../images/wiren-board-7.jpg)
+    </details>
+
+  * <details>
+    <summary> JetHome JetHub D1+</summary>
+
+    Controller with ZigBee module onboard with external antenna.
+
+    JetHub D1+ is DIN-rail home automation controller with Ubuntu/Debian OS and a lot of peripherals.
+
+    Based on Silabs EFR32MG21.
+
+    * [Documentation](https://docs.jethome.ru/en/controllers/linux/din_rail/d1p.html)
+    * [Buy](https://jethome.ru/d1p/)
+
+    ![](../../images/jethub_d1p_efr.png)
     </details>
 
 ### Based on ZiGate
@@ -681,11 +776,18 @@ Note that only adapters based on a Texas Instruments chip (CC2530/CC2531/CC2538/
 
 ### Flashing CC1352/CC2652/CC2538 based adapters
 Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the bootloader. See your adapter manual on how to do this. After you have done this one of the following tools can be used to flash it.
-- [ZigStar GW Multi tool](https://github.com/xyzroe/ZigStarGW-MT) (multi platform GUI tool)
-- [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) (multi platform Python based command line tool) ([instructions](./flashing/flashing_via_cc2538-bsl.md))
-- [llama-bsl](https://github.com/electrolama/llama-bsl) (multi platform Python based command line tool, a fork of cc2538-bsl with added features)
-- Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)  
+- UI tools
+  - Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)  
+  - [ZigStar GW Multi tool](https://github.com/xyzroe/ZigStarGW-MT) (multi platform GUI tool)
+- CLI tools (multi platform Python based command line tools)
+  - [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) ([instructions](./flashing/flashing_via_cc2538-bsl.md))
+  - [llama-bsl](https://github.com/electrolama/llama-bsl) (fork of cc2538-bsl with added features)
+- Home Assistant addon
+  - [TubesZB TI CC2652 FW Flasher](https://github.com/tube0013/tubeszb_addons)
+  - [ZigStar TI CC2652 FW Flasher](https://github.com/mercenaruss/zigstar_addons) (fork of TubesZB with added features)
+
 - Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
+
 <img src="../../images/flashing/web-interface-ota-flashing.jpg" title="SLZB-06 WEB OTA Zigbee Flashing" class="float-left" height=300 />
 
 

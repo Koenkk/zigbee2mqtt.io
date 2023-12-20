@@ -17,14 +17,16 @@ pageClass: device-page
 |-----|-----|
 | Model | PA-44Z  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | Smoke detector |
+| Description | Photoelectric smoke detector |
 | Exposes | smoke, battery, test, smoke_concentration, device_fault, linkquality |
 | Picture | ![TuYa PA-44Z](https://www.zigbee2mqtt.io/images/devices/PA-44Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+Press test button for 10 seconds.
 <!-- Notes END: Do not edit below this line -->
 
 

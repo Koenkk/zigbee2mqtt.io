@@ -123,6 +123,7 @@ The unit of this value is `A`.
 Measured electrical potential value on phase C.
 Value can be found in the published state on the `voltage_phase_c` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
