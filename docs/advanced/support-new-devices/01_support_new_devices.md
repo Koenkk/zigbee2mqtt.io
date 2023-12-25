@@ -5,7 +5,7 @@ This page will guide you through the process of adding support for new devices t
 
 In case you require any help feel free to create an [issue](https://github.com/Koenkk/zigbee2mqtt/issues).
 
-**Before** starting, first check if your device is not already supported in the Zigbee2MQTT dev branch! This can be done by searching on your Zigbee model (see step 1 below) in any of the files [here](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices).
+**Before** starting, first check if your device is not already supported in the Zigbee2MQTT dev branch! This can be done by checking the [changelog](https://gist.github.com/Koenkk/bfd4c3d1725a2cccacc11d6ba51008ba#new-supported-devices) of the dev branch.
 
 ## Instructions
 ### 1. Pairing the device with Zigbee2MQTT
@@ -21,23 +21,39 @@ Zigbee2MQTT:warn  2019-11-09T12:19:56: Device '0x00158d0001dc126a' with Zigbee m
 Make sure that joining is enabled, otherwise new devices cannot join the network.
 :::
 
-### 2. Adding your device
-The next step is to create an external converter file. This file has to be created next to the `configuration.yaml`, in this example we will call it `WSDCGQ01LM.js` (make sure it ends with `.js`). In order to provide support for e.g. the `lumi.sens` from step 1 we would add the following to this file:
+### 2. Creating the external definition
+When pairing an unsupported device with Zigbee2MQTT, it will attempt to discover features supported by this device. To check what has already been discovered, go to the "Zigbeee2MQTT frontend -> device -> Exposes tab". See if the exposed features work by checking if values are reported and/or it's controllable (in case of e.g. a light).
+Note that feature discovery is still WIP, not all features may be discovered or it may not be possible discovery all features due to a non-standard implementation of the device (commonly the case for TuYa devices).
+
+Next generate the external definition by going to the device -> "Dev console" tab and press "Generate external definition". 
+If all features work and all the expected features are there, you are lucky and can continue with step 3.
+If not, we continue by extending the external definition.
+
+### 2.1. Extending the external definition
+To extend the generated external definition, save it next to the Zigbee2MQTT `configuration.yaml`. In this example we will call it `WSDCGQ01LM.js` (make sure it ends with `.js`). Add the lines like described below:
 
 ```js
+const {} = require('zigbee-herdsman-converters/lib/modernExtend');
+// Add the lines below
 const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
 const tz = require('zigbee-herdsman-converters/converters/toZigbee');
 const exposes = require('zigbee-herdsman-converters/lib/exposes');
 const reporting = require('zigbee-herdsman-converters/lib/reporting');
 const extend = require('zigbee-herdsman-converters/lib/extend');
+const ota = require('zigbee-herdsman-converters/lib/ota');
+const tuya = require('zigbee-herdsman-converters/lib/tuya');
+const {} = require('zigbee-herdsman-converters/lib/tuya');
+const utils = require('zigbee-herdsman-converters/lib/utils');
+const globalStore = require('zigbee-herdsman-converters/lib/store');
 const e = exposes.presets;
 const ea = exposes.access;
 
 const definition = {
-    zigbeeModel: ['lumi.sens'], // The model ID from: Device with modelID 'lumi.sens' is not supported.
-    model: 'WSDCGQ01LM', // Vendor model number, look on the device for a model number
-    vendor: 'Xiaomi', // Vendor of the device (only used for documentation and startup logging)
+    zigbeeModel: ['lumi.sens'],
+    model: 'WSDCGQ01LM', // Update this with the real model of the device (written on the device itself or product page)
+    vendor: 'Xiaomi', // Update this with the real vendor of the device (written on the device itself or product page)
     description: 'MiJia temperature & humidity sensor', // Description of the device, copy from vendor site. (only used for documentation and startup logging)
+    extend: [],
     fromZigbee: [], // We will add this later
     toZigbee: [], // Should be empty, unless device can be controlled (e.g. lights, switches).
     exposes: [e.battery(), e.temperature(), e.humidity()], // Defines what this device exposes, used for e.g. Home Assistant discovery and in the frontend
@@ -46,7 +62,7 @@ const definition = {
 module.exports = definition;
 ```
 
-Now set the Zigbee2MQTT `log_level` to `debug` and enable the external converter by adding the following to your Zigbee2MQTT `configuration.yaml`.
+Now set the Zigbee2MQTT `log_level` to `debug` and enable the external definition by adding the following to your Zigbee2MQTT `configuration.yaml`.
 
 ```yaml
 advanced:
@@ -74,7 +90,7 @@ Some basic external converter examples:
 - [Advanced example](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.js)
 - Definitions of already supported devices can be found [here](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices). It may help to look at devices from the same vendor or type.
 
-### 3. Adding converter(s) for your device
+### 2.2. Adding converter(s) for your device
 In order to parse the messages of your Zigbee device we need to add converter(s). Existing converters can probably be reused, those can be found [here](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/fromZigbee.ts).
 
 For e.g. the following message we could use the already existing [`fz.temperature` converter](https://github.com/Koenkk/zigbee-herdsman-converters/blob/4a8d546d9c1150d81e42d56a85e2315c32c4ed11/src/converters/fromZigbee.ts#L397):
@@ -84,11 +100,17 @@ Zigbee2MQTT:debug  2019-11-09T12:24:22: No converter available for 'WSDCGQ01LM' 
 
 Now update your external converter.
 ```js
+const {} = require('zigbee-herdsman-converters/lib/modernExtend');
 const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
 const tz = require('zigbee-herdsman-converters/converters/toZigbee');
 const exposes = require('zigbee-herdsman-converters/lib/exposes');
 const reporting = require('zigbee-herdsman-converters/lib/reporting');
 const extend = require('zigbee-herdsman-converters/lib/extend');
+const ota = require('zigbee-herdsman-converters/lib/ota');
+const tuya = require('zigbee-herdsman-converters/lib/tuya');
+const {} = require('zigbee-herdsman-converters/lib/tuya');
+const utils = require('zigbee-herdsman-converters/lib/utils');
+const globalStore = require('zigbee-herdsman-converters/lib/store');
 const e = exposes.presets;
 const ea = exposes.access;
 
@@ -97,9 +119,10 @@ const definition = {
     model: 'WSDCGQ01LM',
     vendor: 'Xiaomi',
     description: 'MiJia temperature & humidity sensor',
+    extend: [],
     fromZigbee: [fz.temperature], // <-- added here all clusters reported from zigbee
     toZigbee: [], // <-- add here all clusters to send commands to zigbee
-    exposes: [e.battery(), e.temperature(), e.humidity()], // <-- this will define which fields will be exposed in the definition message to configure a front end (e.g. the z2m frontend, Home Assistant, Domoticz)
+    exposes: [e.battery(), e.temperature(), e.humidity()], // <-- this will define which fields will be exposed in the definition message to configure a frontend (e.g. the Z2M frontend, Home Assistant, Domoticz)
 };
 
 module.exports = definition;
@@ -109,32 +132,7 @@ Repeat until your device does not produce any more log messages like: `2018-5-1 
 
 If none of the existing converters fit you can add custom ones, an external converter example for this can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.js).
 
-#### 3.1 Retrieving color temperature range (only required for lights which support color temperature)
-If your device is a light and supports color temperature you need to define the color temperature range. This range indicates the minimum and maximum color temperature values the light supports. This can be retrieved by clicking on your device in the frontend, go to "Dev console". For cluster select `LColorCtrl`, for attribute `colorTempPhysicalMin` and `colorTempPhysicalMax`, after that click on "Read". Now the min/max color temperature will be read as marked below
-
-![colortemp_min_max](../../images/colortemp_min_max.png)
-
-Alternatively this can be retrieved from the light by sending to `zigbee2mqtt/DEVICE_FRIENDLY_NAME/set` with payload `{"read": {"cluster": "lightingColorCtrl", "attributes": ["colorTempPhysicalMin", "colorTempPhysicalMax"]}}`
-
-The result will be logged to the Zigbee2MQTT log, e.g.
-
-```
-Zigbee2MQTT:info  2021-03-21 21:10:40: Read result of 'lightingColorCtrl': {"colorTempPhysicalMin":153,"colorTempPhysicalMax":454}
-```
-
-In the above example set `colorTempRange` to `{colorTempRange: [153, 454]}`, e.g.:
-
-```js
-const definition = {
-    zigbeeModel: ['myZigbeeModel'],
-    model: 'myModel',
-    vendor: 'myVendor',
-    description: 'Super bulb',
-    extend: extend.light_onoff_brightness_colortemp({colorTempRange: [153, 454]}), // <---
-},
-```
-
-### 4. Add device picture to zigbee2mqtt.io documentation
+### 3. Add device picture to zigbee2mqtt.io documentation
 To make sure a picture is available for this device on the supported devices page and in the frontend:
 
 1. Clone [zigbee2mqtt.io](https://github.com/Koenkk/zigbee2mqtt.io)
@@ -148,5 +146,5 @@ To make sure a picture is available for this device on the supported devices pag
 
 On the next release of Zigbee2MQTT, the documentation will be updated and your device file will be linked in `../../supported-devices.md` automatically.
 
-### Done!
+### 4. Done!
 Now it's time to submit a pull request to [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) so this device is supported out of the box by Zigbee2MQTT. This can be done by adding the definition to the [vendor file](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) of your device. :smiley:
