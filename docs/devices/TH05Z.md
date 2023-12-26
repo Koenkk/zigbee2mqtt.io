@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | TH05Z  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | Temperature and humidity sensor with clock |
-| Exposes | temperature, humidity, battery, temperature_report_interval, humidity_report_interval, temperature_unit_convert, temperature_alarm, max_temperature, min_temperature, temperature_sensitivity, humidity_alarm, max_humidity, min_humidity, humidity_sensitivity, linkquality |
+| Description | Temperature & humidity sensor with clock |
+| Exposes | temperature, humidity, battery, temperature_report_interval, temperature_unit_convert, temperature_alarm, max_temperature, min_temperature, humidity_alarm, max_humidity, min_humidity, linkquality |
 | Picture | ![TuYa TH05Z](https://www.zigbee2mqtt.io/images/devices/TH05Z.jpg) |
 
 
@@ -67,15 +67,7 @@ Temperature Report interval.
 Value can be found in the published state on the `temperature_report_interval` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_report_interval": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `120`.
-The unit of this value is `min`.
-
-### Humidity report interval (numeric)
-Humidity Report interval.
-Value can be found in the published state on the `humidity_report_interval` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_report_interval": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `120`.
+The minimal value is `5` and the maximum value is `60`.
 The unit of this value is `min`.
 
 ### Temperature unit convert (enum)
@@ -107,14 +99,6 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-20` and the maximum value is `60`.
 The unit of this value is `°C`.
 
-### Temperature sensitivity (numeric)
-Temperature sensitivity.
-Value can be found in the published state on the `temperature_sensitivity` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensitivity": NEW_VALUE}`.
-The minimal value is `0.1` and the maximum value is `50`.
-The unit of this value is `°C`.
-
 ### Humidity alarm (enum)
 Humidity alarm status.
 Value can be found in the published state on the `humidity_alarm` property.
@@ -135,14 +119,6 @@ Value can be found in the published state on the `min_humidity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_humidity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
-
-### Humidity sensitivity (numeric)
-Humidity sensitivity.
-Value can be found in the published state on the `humidity_sensitivity` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_sensitivity": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Linkquality (numeric)

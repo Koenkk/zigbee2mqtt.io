@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZiPulses  |
 | Vendor  | [LiXee](/supported-devices/#v=LiXee)  |
 | Description | Lixee ZiPulses |
-| Exposes | voltage, temperature, multiplier, divisor, unitOfMeasure, energy, linkquality |
+| Exposes | battery, voltage, temperature, multiplier, divisor, unitOfMeasure, energy, linkquality |
 | Picture | ![LiXee ZiPulses](https://www.zigbee2mqtt.io/images/devices/ZiPulses.jpg) |
 
 
@@ -42,6 +42,13 @@ pageClass: device-page
 
 
 ## Exposes
+
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported..
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Voltage (numeric)
 Voltage of the battery in millivolts.

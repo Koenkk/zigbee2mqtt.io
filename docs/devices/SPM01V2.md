@@ -1,7 +1,7 @@
 ---
-title: "Yagusmart SPM01-D2TZ control via MQTT"
-description: "Integrate your Yagusmart SPM01-D2TZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-11-01T18:54:40
+title: "TuYa SPM01V2 control via MQTT"
+description: "Integrate your TuYa SPM01V2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2023-12-26T18:38:16
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Yagusmart SPM01-D2TZ
+# TuYa SPM01V2
 
 |     |     |
 |-----|-----|
-| Model | SPM01-D2TZ  |
-| Vendor  | [Yagusmart](/supported-devices/#v=Yagusmart)  |
+| Model | SPM01V2  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart energy monitor for 1P+N system |
-| Exposes | voltage, power, current, energy, produced_energy, linkquality |
-| Picture | ![Yagusmart SPM01-D2TZ](https://www.zigbee2mqtt.io/images/devices/SPM01-D2TZ.jpg) |
+| Exposes | voltage, power, current, energy, produced_energy, power_factor, ac_frequency, linkquality |
+| Picture | ![TuYa SPM01V2](https://www.zigbee2mqtt.io/images/devices/SPM01V2.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -80,6 +80,18 @@ Total reverse active energy.
 Value can be found in the published state on the `produced_energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Power factor (numeric)
+Instantaneous measured power factor.
+Value can be found in the published state on the `power_factor` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `%`.
+
+### AC frequency (numeric)
+Measured electrical AC frequency.
+Value can be found in the published state on the `ac_frequency` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `Hz`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

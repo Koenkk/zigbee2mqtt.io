@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | DJT11LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara vibration sensor |
-| Exposes | battery, device_temperature, vibration, action, strength, sensitivity, angle_x, angle_y, angle_z, voltage, power_outage_count, linkquality |
+| Exposes | battery, device_temperature, vibration, action, strength, sensitivity, angle_x, angle_y, angle_z, x_axis, y_axis, z_axis, voltage, power_outage_count, linkquality |
 | Picture | ![Xiaomi DJT11LM](https://www.zigbee2mqtt.io/images/devices/DJT11LM.jpg) |
 
 
@@ -78,6 +78,12 @@ Remember that the device sends accelerometer values a few seconds after the actu
 
 * `vibration_timeout`: Time in seconds after which vibration is cleared after detecting it (default 90 seconds). The value must be a number with a minimum value of `0`
 
+* `x_calibration`: Calibrates the x value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `y_calibration`: Calibrates the y value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `z_calibration`: Calibrates the z value (absolute offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
@@ -133,6 +139,21 @@ Value can be found in the published state on the `angle_z` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-90` and the maximum value is `90`.
 The unit of this value is `°`.
+
+### X axis (numeric)
+Accelerometer X value.
+Value can be found in the published state on the `x_axis` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Y axis (numeric)
+Accelerometer Y value.
+Value can be found in the published state on the `y_axis` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Z axis (numeric)
+Accelerometer Z value.
+Value can be found in the published state on the `z_axis` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Voltage (numeric)
 Voltage of the battery in millivolts.

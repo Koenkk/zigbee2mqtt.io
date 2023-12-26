@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZCR1-40EM  |
 | Vendor  | [RTX](/supported-devices/#v=RTX)  |
 | Description | Zigbee DIN energy meter |
-| Exposes | switch (state), ac_frequency, energy, power, power_factor, voltage, current, produced_energy, linkquality |
+| Exposes | switch (state), ac_frequency, energy, power, power_factor, voltage, current, produced_energy, power_reactive, energy_reactive, total_energy, linkquality |
 | Picture | ![RTX ZCR1-40EM](https://www.zigbee2mqtt.io/images/devices/ZCR1-40EM.jpg) |
 
 
@@ -87,6 +87,24 @@ The unit of this value is `A`.
 ### Produced energy (numeric)
 Sum of produced energy.
 Value can be found in the published state on the `produced_energy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Power reactive (numeric)
+Instantaneous measured reactive power.
+Value can be found in the published state on the `power_reactive` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `VAR`.
+
+### Energy reactive (numeric)
+Sum of reactive energy.
+Value can be found in the published state on the `energy_reactive` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kVArh`.
+
+### Total energy (numeric)
+Total consumed and produced energy.
+Value can be found in the published state on the `total_energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
