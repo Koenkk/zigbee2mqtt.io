@@ -179,7 +179,7 @@ WantedBy=multi-user.target
 
 > If you want to use another directory to place all Zigbee2MQTT data, add `Environment=ZIGBEE2MQTT_DATA=/path/to/data` below `[Service]`
 
-> Using `Type=exec` is convenient so the systemctl is informed if the service can't start becaus of problems in the unit definition.
+> Using `Type=exec` is convenient so the systemctl is informed if the service can't start because of problems in the unit definition.
 
 Save the file and exit.
 
