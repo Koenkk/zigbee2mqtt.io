@@ -186,3 +186,9 @@ The correct revision is: **E** like shown below.
 ![cc26xr1_revision](../../images/cc26xr1_revision.png)
 
 All earlier version are not supported (these are development boards). Return this board to the seller immediately.
+
+## Multiple cheap USB-UART
+
+If You have multiple devices connected that are running cheap USB-UART converters (CH341) they may be indistinguishable to your system, since they all possibly have the same idProduct, SerialNumber etc. thus they will share the same /dev/serial/by-id.
+
+
