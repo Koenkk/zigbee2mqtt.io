@@ -24,6 +24,11 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Notes
+
+A triple click of the button switches operation modes.
+This is indicated by the received payload `{"action": null, "operation_mode": NEW_VALUE}` with values rotating between the modes listed in the respective section below.
+Depending on mode, the actions emitted by single click, double click and hold differ.
 
 <!-- Notes END: Do not edit below this line -->
 
