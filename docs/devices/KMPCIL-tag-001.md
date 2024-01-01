@@ -44,13 +44,13 @@ Please visit https://community.home-assistant.io/t/zigbee-arrival-sensor-for-car
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
 * `presence_timeout_dc`: Time in seconds after which presence is cleared after detecting it (default 60 seconds) while in DC. The value must be a number with a minimum value of `60`
 
 * `presence_timeout_battery`: Time in seconds after which presence is cleared after detecting it (default 420 seconds) while in Battery. The value must be a number with a minimum value of `120`
-
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

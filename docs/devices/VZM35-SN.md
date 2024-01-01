@@ -217,7 +217,6 @@ The number of devices currently bound (excluding gateways) and counts one group 
 Value can be found in the published state on the `deviceBindNumber` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"deviceBindNumber": ""}`.
 It's not possible to write (`/set`) this value.
-The minimal value is `undefined` and the maximum value is `undefined`.
 
 ### SmartBulbMode (enum)
 Use this mode to synchronize and control other fan switches or controllers..

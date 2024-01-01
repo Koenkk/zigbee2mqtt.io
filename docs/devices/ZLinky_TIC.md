@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZLinky_TIC  |
 | Vendor  | [LiXee](/supported-devices/#v=LiXee)  |
 | Description | Lixee ZLinky |
-| Exposes | EAST, EAIT, EASF01, EASF02, EASF03, EASF04, EASF05, EASF06, EASF07, EASF08, EASF09, EASF10, ADSC, PRM, PREF, PCOUP, VTIC, CCASN, CCASN-1, UMOY1, ERQ1, ERQ2, ERQ3, ERQ4, IRMS1, URMS1, EASD01, EASD02, EASD03, EASD04, DATE, NTARF, LTARF, NGTF, NJOURF, NJOURF+1, PJOURF+1, PPOINTE1, CCAIN, CCAIN-1, SINSTI, SMAXIN, SMAXIN-1, MSG1, MSG2, RELAIS, DPM1, DPM2, DPM3, STGE, FPM1, FPM2, FPM3, SMAXN, SINSTS, SMAXN-1, SMAXN2, SMAXN3, SINSTS2, SINSTS3, UMOY3, UMOY2, IRMS2, IRMS3, URMS2, URMS3, SMAXN2-1, SMAXN3-1, PTEC, MOTDETAT, HHPHC, PEJP, DEMAIN, IMAX, ADPS, IMAX2, IMAX3, PPOT, ADIR1, ADIR2, ADIR3, linkquality |
+| Exposes | EAST, EAIT, EASF01, EASF02, EASF03, EASF04, EASF05, EASF06, EASF07, EASF08, EASF09, EASF10, ADSC, PRM, PREF, PCOUP, VTIC, CCASN, CCASN-1, UMOY1, ERQ1, ERQ2, ERQ3, ERQ4, IRMS1, URMS1, EASD01, EASD02, EASD03, EASD04, DATE, NTARF, LTARF, NGTF, NJOURF, NJOURF+1, PJOURF+1, PPOINTE1, CCAIN, CCAIN-1, SINSTI, SMAXIN, SMAXIN-1, MSG1, MSG2, RELAIS, RELAIS1, RELAIS2, RELAIS3, RELAIS4, RELAIS5, RELAIS6, RELAIS7, RELAIS8, DPM1, DPM2, DPM3, STGE, FPM1, FPM2, FPM3, SMAXN, SINSTS, SMAXN-1, SMAXN2, SMAXN3, SINSTS2, SINSTS3, UMOY3, UMOY2, IRMS2, IRMS3, URMS2, URMS3, SMAXN2-1, SMAXN3-1, PTEC, MOTDETAT, HHPHC, PEJP, DEMAIN, IMAX, ADPS, IMAX2, IMAX3, PPOT, ADIR1, ADIR2, ADIR3, linkquality |
 | Picture | ![LiXee ZLinky_TIC](https://www.zigbee2mqtt.io/images/devices/ZLinky_TIC.jpg) |
 
 
@@ -45,7 +45,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `tarif`: Overrides the automatic current tarif. This option will exclude unnecessary attributes. Open a issue to support more of them. Default: auto. The value must be one of `Historique - BASE`, `Historique - HCHP`, `Historique - EJP`, `Historique - BBR`, `Standard - Sem WE Lundi`, `Standard - Sem WE Mercredi`, `Standard - Sem WE Vendredi`, `Standard - BASE`, `Standard - Heure Pleine Heure Creuse`, `Standard - Heures Super Creuses`, `Standard - TEMPO`, `Standard - ZEN Flex`, `auto`
 
-* `kWh_precision`: Number of digits after decimal point for kWh, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `kWh_precision`: Number of digits after decimal point for kWh, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `measurement_poll_chunk`: During the poll, request multiple exposes to the Zlinky at once for reducing Zigbee network overload. Too much request at once could exceed device limit. Requires Z2M restart. Default: 1. The value must be a number with a minimum value of `1`
 
@@ -313,6 +313,38 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### RELAIS (numeric)
 Value can be found in the published state on the `relais` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### RELAIS1 (numeric)
+Value can be found in the published state on the `relais1` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### RELAIS2 (numeric)
+Value can be found in the published state on the `relais2` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### RELAIS3 (numeric)
+Value can be found in the published state on the `relais3` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### RELAIS4 (numeric)
+Value can be found in the published state on the `relais4` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### RELAIS5 (numeric)
+Value can be found in the published state on the `relais5` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### RELAIS6 (numeric)
+Value can be found in the published state on the `relais6` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### RELAIS7 (numeric)
+Value can be found in the published state on the `relais7` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### RELAIS8 (numeric)
+Value can be found in the published state on the `relais8` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### DPM1 (numeric)

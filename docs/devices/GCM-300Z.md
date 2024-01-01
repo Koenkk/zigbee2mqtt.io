@@ -52,7 +52,7 @@ Value can be found in the published state on the `close_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"close_timeout": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"close_timeout": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `540`.
-The unit of this value is `Miniute`.
+The unit of this value is `min`.
 
 ### Close remain timeout (numeric)
 Set the time or remaining time until the gas valve closes..
@@ -60,7 +60,7 @@ Value can be found in the published state on the `close_remain_timeout` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"close_remain_timeout": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"close_remain_timeout": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `540`.
-The unit of this value is `Miniute`.
+The unit of this value is `min`.
 
 ### Volume (enum)
 Values observed are `1` (Voice), `2` (High) or `3` (Low)..

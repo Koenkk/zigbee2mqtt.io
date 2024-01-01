@@ -29,6 +29,11 @@ pageClass: device-page
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `co_calibration`: Calibrates the co value (absolute offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 

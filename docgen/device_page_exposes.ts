@@ -94,7 +94,7 @@ function getExposeDocs(expose, definition) {
     }
 
     if (expose.type === 'numeric') {
-      if (expose.hasOwnProperty('value_min') && expose.hasOwnProperty('value_max')) {
+      if (expose.value_min !== undefined && expose.value_max !== undefined) {
         lines.push(`The minimal value is \`${expose.value_min}\` and the maximum value is \`${expose.value_max}\`.`);
       }
 
@@ -108,7 +108,7 @@ function getExposeDocs(expose, definition) {
     }
 
     if (expose.type === 'binary') {
-      if (expose.hasOwnProperty('value_on') && expose.hasOwnProperty('value_off')) {
+      if (expose.value_on !== undefined && expose.value_off !== undefined) {
         lines.push(`If value equals \`${expose.value_on}\` ${uncapitalizeFirstLetter(expose.label)} is ON, if \`${expose.value_off}\` OFF.`);
       }
     }
@@ -281,7 +281,7 @@ function getExposeDocs(expose, definition) {
       if (localTemperature.access & access.GET) {
         line += `To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${localTemperature.property}": ""}\`.`
       }
-      if (localTemperatureCalibration.hasOwnProperty('value_min')) {
+      if (localTemperatureCalibration.value_min !== undefined) {
         line += `The minimal value is \`${localTemperatureCalibration.value_min}\` and the maximum value is \`${localTemperatureCalibration.value_max}\` with a step size of \`${localTemperatureCalibration.value_step}\`.`;
       }
       
