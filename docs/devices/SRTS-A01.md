@@ -63,6 +63,7 @@ Value can be found in the published state on the `sensor` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensor": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
 The possible values are: `internal`, `external`.
+When the `sensor` property is set to `external`, you should set the value of the temperature sensor by publishing a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_temp": NEW_VALUE}`.
 
 ### Calibrated (binary)
 Indicates if this valve is calibrated, use the calibrate option to calibrate.
