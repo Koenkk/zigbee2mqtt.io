@@ -65,6 +65,10 @@ advanced:
   # by firmware (for example to migrate heat, or by using an unsupported firmware).
   # For the CC2652R(B) this is 5 dBm, CC2652P/CC1352P-2 20 dBm.
   transmit_power: 5
+  # Optional: Set the adapter delay, only used for Conbee/Raspbee adapters (default 0).
+  # In case you are having issues try `200`.
+  # For more information see https://github.com/Koenkk/zigbee2mqtt/issues/4884
+  adapter_delay: 0
 ```
 
 ::: tip 
