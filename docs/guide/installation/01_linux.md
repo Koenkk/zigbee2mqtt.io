@@ -37,7 +37,7 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 # NOTE 2: For Ubuntu see tip below
 curl -SLO https://deb.nodesource.com/nsolid_setup_deb.sh
 chmod 500 nsolid_setup_deb.sh
-./nsolid_setup_deb.sh 21
+./nsolid_setup_deb.sh 20
 sudo apt-get install nodejs -y
 sudo apt-get install -y nodejs git make g++ gcc
 
