@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Zigbee wall controller - 8 button |
 | Exposes | battery, action, linkquality |
 | Picture | ![Vesternet VES-ZB-WAL-012](https://www.zigbee2mqtt.io/images/devices/VES-ZB-WAL-012.jpg) |
-| White-label | Sunricher SR-ZG9001K8-DIM |
+| White-label | Sunricher SR-ZG9001K8-DIM, YPHIX 50208691 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
