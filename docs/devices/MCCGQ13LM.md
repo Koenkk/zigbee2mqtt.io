@@ -18,12 +18,11 @@ pageClass: device-page
 | Model | MCCGQ13LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara P1 door & window contact sensor |
-| Exposes | contact, battery, voltage, battery_cover, detection_distance, linkquality |
+| Exposes | contact, battery, voltage, tamper, detection_distance, linkquality |
 | Picture | ![Xiaomi MCCGQ13LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ13LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Pairing
 
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking). After this the device will automatically join.
@@ -32,7 +31,6 @@ If this doesn't work, after starting the pairing process with the long press, ke
 ## Battery
 
 Uses a CR123A battery
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -59,10 +57,11 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Battery cover (binary)
-Value can be found in the published state on the `battery_cover` property.
+### Tamper (binary)
+Indicates whether the device is tampered.
+Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `OPEN` battery cover is ON, if `CLOSE` OFF.
+If value equals `true` tamper is ON, if `false` OFF.
 
 ### Detection distance (enum)
 The sensor will be considered "off" within the set distance. Please press the device button before setting.

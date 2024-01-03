@@ -24,8 +24,47 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Arming/Disarming from the server
+To set arming mode publish the following payload to `zigbee2mqtt/FRIENDLY_NAME/set` topic:
 
+```js
+{
+    "arm_mode": {
+        "mode": "arm_all_zones"
+    }
+}
+```
+Valid `mode` values as per ZCL specifications are `disarm`, `arm_day_zones`, `arm_night_zones`, `arm_all_zones`, `exit_delay`, `entry_delay`, `not_ready`, `in_alarm`, `arming_stay`, `arming_night`, `arming_away`.
+
+### Arming/Disarming from the keypad
+When an attempt to set arm mode is done on the keypad, Zigbee2MQTT will publish the following payload to topic `zigbee2mqtt/FRIENDLY_NAME`:
+
+```js
+{
+    "action": "arm_all_zones", // This is the example
+    "action_code": "123", // The code being entered
+    "action_zone": 23, // The zone being armed (default 23)
+    "action_transaction": 99 // The transaction number
+}
+```
+
+The automation server must validate the request and send a notification to the keypad, confirming or denying the request.
+
+Do so by sending the following payload to `zigbee2mqtt/FRIENDLY_NAME/set`:
+
+```js
+{
+    "arm_mode": {
+        "transaction": 99, // Transaction number (this must be the same as the keypad request `action_transaction`)
+        "mode": "arm_all_zones" // Mode (this must be the same as the keypad request `action`)
+    }
+}
+```
+Valid `mode` values are `disarm`, `arm_day_zones`, `arm_night_zones`, `arm_all_zones`, `invalid_code`, `not_ready`, `already_disarmed`
+
+The automation server must follow the notification with an actual change to the correct arm mode. For the example above, the server should respond with `exit_delay`, count the elapsed time (e.g 30 secs), then change mode again to `arm_all_zones` (see "Arming/Disarming from the server" section above)
 <!-- Notes END: Do not edit below this line -->
 
 

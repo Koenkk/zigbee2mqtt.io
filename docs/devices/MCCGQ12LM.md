@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MCCGQ12LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara T1 door & window contact sensor |
-| Exposes | contact, battery_low, linkquality |
+| Exposes | contact, battery, linkquality |
 | Picture | ![Xiaomi MCCGQ12LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ12LM.jpg) |
 
 
@@ -58,11 +58,12 @@ Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
 
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported..
+Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

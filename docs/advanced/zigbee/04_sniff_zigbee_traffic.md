@@ -128,6 +128,6 @@ Once you have the application running, you should see it connect to and start sn
 
 After that, open up Wireshark and start capturing on the loopback adapter.
 
-Then, apply a filter `udp.port == 17754` in order to filter down to only Zigbee traffic.
+Then, apply a filter `udp port 17754` in order to filter down to only Zigbee traffic.
 
 Lastly, follow the steps of the CC2531 instructions above to set up your encryption keys the same.

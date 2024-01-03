@@ -32,6 +32,11 @@ Factory resetting by pushing the "Reset-Button" longer than 5 seconds or by usin
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 

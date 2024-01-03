@@ -62,21 +62,21 @@ The possible values are: `tilt`, `lift`.
 
 ### Set upper limit (enum)
 Set the upper limit, to reset limits use factory_reset.
-Value can be found in the published state on the `set_upper_limit` property.
+Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_upper_limit": NEW_VALUE}`.
 The possible values are: `SET`.
 
 ### Set bottom limit (enum)
 Set the bottom limit, to reset limits use factory_reset.
-Value can be found in the published state on the `set_bottom_limit` property.
+Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"set_bottom_limit": NEW_VALUE}`.
 The possible values are: `SET`.
 
 ### Factory reset (binary)
 Factory reset the device.
-Value can be found in the published state on the `factory_reset` property.
+Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset": NEW_VALUE}`.
 If value equals `true` factory reset is ON, if `false` OFF.

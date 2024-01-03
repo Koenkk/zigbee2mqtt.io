@@ -20,7 +20,6 @@ pageClass: device-page
 | Description | 1 channel dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), light_type, power_on_behavior, linkquality |
 | Picture | ![TuYa TS110E_1gang_2](https://www.zigbee2mqtt.io/images/devices/TS110E_1gang_2.jpg) |
-| White-label | RTX QS-Zigbee-D02-TRIAC-LN |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,6 +27,9 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options

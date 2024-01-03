@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_thermostat  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Radiator valve with thermostat |
-| Exposes | lock (state), switch (state), window_open, battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, preset, running_state), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, away_preset_temperature, programming_mode, linkquality |
+| Exposes | lock (state), switch (state), window_open, battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, preset, running_state), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, away_preset_temperature, workdays_schedule, holidays_schedule, linkquality |
 | Picture | ![TuYa TS0601_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat.jpg) |
 | White-label | Moes HY368, Moes HY369RT, SHOJZJ 378RT, Silvercrest TVR01, Immax 07732B, Evolveo Heat M30 |
 
@@ -244,11 +244,17 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-10` and the maximum value is `35`.
 The unit of this value is `°C`.
 
-### Programming mode (composite)
-Schedule MODE ⏱ - In this mode, the device executes a preset week programming temperature time and temperature..
-- `week` (enum): Week format user for schedule allowed values: `5+2`, `6+1`, `7`
-- `workdays_schedule` (text) 
-- `holidays_schedule` (text) 
+### Workdays schedule (text)
+Workdays schedule, 6 entries max, example: "00:20/5°C 01:20/5°C 6:59/15°C 18:00/5°C 20:00/5°C 23:30/5°C".
+Value can be found in the published state on the `workdays_schedule` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"workdays_schedule": NEW_VALUE}`.
+
+### Holidays schedule (text)
+Holidays schedule, 6 entries max, example: "00:20/5°C 01:20/5°C 6:59/15°C 18:00/5°C 20:00/5°C 23:30/5°C".
+Value can be found in the published state on the `holidays_schedule` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"holidays_schedule": NEW_VALUE}`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

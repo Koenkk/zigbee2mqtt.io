@@ -159,6 +159,7 @@ After=network.target
 
 [Service]
 Environment=NODE_ENV=production
+Type=exec
 ExecStart=/usr/bin/npm start
 WorkingDirectory=/opt/zigbee2mqtt
 StandardOutput=inherit
@@ -180,6 +181,8 @@ WantedBy=multi-user.target
 > > Keep only the `journalctl` logging --> set [`advanced.log_output = ['console']`](https://www.zigbee2mqtt.io/guide/configuration/logging.html) in Zigbee2MQTT configuration.
 
 > If you want to use another directory to place all Zigbee2MQTT data, add `Environment=ZIGBEE2MQTT_DATA=/path/to/data` below `[Service]`
+
+> Using `Type=exec` is convenient so the systemctl is informed if the service can't start because of problems in the unit definition.
 
 Save the file and exit.
 

@@ -53,6 +53,16 @@ function compositeDocs(composite) {
 function getExposeDocs(expose, definition) {
   const lines = [];
   const title = [];
+
+  const onWithTimedOff = () => {
+      lines.push(``);
+      lines.push(`#### On with timed off`);
+      lines.push(`When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property \`on_time\` to the payload which is the time in seconds the state should remain on.`);
+      lines.push(`Additionnaly an \`off_wait_time\` property can be added to the payload to specify the cooldown time in seconds when the ${expose.type} will not answer to other on with timed off commands.`);
+      lines.push(`Support depend on the ${expose.type} firmware. Some devices might require both \`on_time\` and \`off_wait_time\` to work`);
+      lines.push(`Examples : \`{"state" : "ON", "on_time": 300}\`, \`{"state" : "ON", "on_time": 300, "off_wait_time": 120}\`.`);
+    }
+
   if (expose.label) title.push(expose.type);
   if (expose.endpoint) title.push(`${expose.endpoint} endpoint`);
   lines.push(`### ${capitalizeFirstLetter(expose.label ? expose.label : expose.type)} ${title.length > 0 ? `(${title.join(', ')})` : ''}`);
@@ -84,7 +94,7 @@ function getExposeDocs(expose, definition) {
     }
 
     if (expose.type === 'numeric') {
-      if (expose.hasOwnProperty('value_min') && expose.hasOwnProperty('value_max')) {
+      if (expose.value_min !== undefined && expose.value_max !== undefined) {
         lines.push(`The minimal value is \`${expose.value_min}\` and the maximum value is \`${expose.value_max}\`.`);
       }
 
@@ -98,7 +108,7 @@ function getExposeDocs(expose, definition) {
     }
 
     if (expose.type === 'binary') {
-      if (expose.hasOwnProperty('value_on') && expose.hasOwnProperty('value_off')) {
+      if (expose.value_on !== undefined && expose.value_off !== undefined) {
         lines.push(`If value equals \`${expose.value_on}\` ${uncapitalizeFirstLetter(expose.label)} is ON, if \`${expose.value_off}\` OFF.`);
       }
     }
@@ -129,6 +139,12 @@ function getExposeDocs(expose, definition) {
     } else {
       lines.push(`It's not possible to read (\`/get\`) this value.`);
     }
+
+    const on_time = definition.toZigbee.find((t) => t.key.includes('on_time'));
+    if (on_time && expose.type === 'switch' && (state.access & access.SET)) {
+      onWithTimedOff();
+    }
+
 
     if (expose.type === 'cover') {
       for (const e of expose.features.filter((e) => e.name === 'position' || e.name === 'tilt')) {
@@ -184,6 +200,10 @@ function getExposeDocs(expose, definition) {
       lines.push(`  - HSL space (hue, saturation, lightness)\`{"color": {"h": H, "s": S, "l": L}}\` e.g. \`{"color":{"h":360,"s":100,"l":100}}\` or \`{"color": {"hsl": "H,S,L"}}\` e.g. \`{"color":{"hsl":"360,100,100"}}\``);
     }
 
+    const on_time = definition.toZigbee.find((t) => t.key.includes('on_time'));
+    if (on_time) {
+      onWithTimedOff();
+    }
     const transition = definition.toZigbee.find((t) => t.key.includes('transition'));
     if (transition) {
       lines.push(``);
@@ -261,7 +281,7 @@ function getExposeDocs(expose, definition) {
       if (localTemperature.access & access.GET) {
         line += `To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${localTemperature.property}": ""}\`.`
       }
-      if (localTemperatureCalibration.hasOwnProperty('value_min')) {
+      if (localTemperatureCalibration.value_min !== undefined) {
         line += `The minimal value is \`${localTemperatureCalibration.value_min}\` and the maximum value is \`${localTemperatureCalibration.value_max}\` with a step size of \`${localTemperatureCalibration.value_step}\`.`;
       }
       

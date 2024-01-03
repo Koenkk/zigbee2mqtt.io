@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | VOCKQJK11LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara TVOC air quality monitor |
-| Exposes | temperature, humidity, voc, device_temperature, battery, voltage, display_unit, linkquality |
+| Exposes | device_temperature, battery, voltage, air_quality, voc, temperature, humidity, display_unit, linkquality |
 | Picture | ![Xiaomi VOCKQJK11LM](https://www.zigbee2mqtt.io/images/devices/VOCKQJK11LM.jpg) |
 | White-label | Xiaomi AAQS-S01 |
 
@@ -47,36 +47,20 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `voc_calibration`: Calibrates the voc value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes
-
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
-
-### Humidity (numeric)
-Measured relative humidity.
-Value can be found in the published state on the `humidity` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `%`.
-
-### VOC (numeric)
-Measured VOC value.
-Value can be found in the published state on the `voc` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppb`.
 
 ### Device temperature (numeric)
 Temperature of the device.
@@ -96,6 +80,34 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Air quality (enum)
+Measured air quality.
+Value can be found in the published state on the `air_quality` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"air_quality": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `excellent`, `good`, `moderate`, `poor`, `unhealthy`.
+
+### Voc (numeric)
+Measured VOC value.
+Value can be found in the published state on the `voc` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voc": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `ppb`.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `ºC`.
+
+### Humidity (numeric)
+Measured relative humidity.
+Value can be found in the published state on the `humidity` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `%`.
 
 ### Display unit (enum)
 Units to show on the display.

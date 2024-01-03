@@ -61,11 +61,11 @@ export function getAddedAt(deviceContent: string) {
 const allDefinitionsTemp = [...definitions];
 for (const definition of definitions) {
   if (definition.whiteLabel) {
-    for (const whiteLabel of definition.whiteLabel.filter((w) => w.fingerprint)) {
+    for (const whiteLabel of definition.whiteLabel.filter((w) => 'fingerprint' in w && w.fingerprint)) {
       const {vendor, model, description} = whiteLabel;
       allDefinitionsTemp.push({...definition, vendor, model, description: description || definition.description, whiteLabel: undefined})
     }
-    definition.whiteLabel = definition.whiteLabel.filter((w) => !w.fingerprint);
+    definition.whiteLabel = definition.whiteLabel.filter((w) => !('fingerprint' in w) || !w.fingerprint);
     if (definition.whiteLabel.length === 0) {
       delete definition.whiteLabel;
     }

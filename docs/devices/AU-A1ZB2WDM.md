@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | AU-A1ZB2WDM  |
 | Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
 | Description | AOne 250W smart rotary dimmer module |
-| Exposes | light (state, brightness), effect, power_on_behavior, backlight_led, linkquality |
+| Exposes | backlight_led, light (state, brightness), effect, power_on_behavior, linkquality |
 | Picture | ![Aurora Lighting AU-A1ZB2WDM](https://www.zigbee2mqtt.io/images/devices/AU-A1ZB2WDM.jpg) |
 
 
@@ -44,10 +44,23 @@ The connected load, and the red LED indicator behind the dimmer knob will flash 
 
 ## Exposes
 
+### Backlight led (binary)
+Enable or disable the blue backlight LED.
+Value can be found in the published state on the `backlight_led` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_led": NEW_VALUE}`.
+If value equals `ON` backlight led is ON, if `OFF` OFF.
+
 ### Light 
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depend on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
@@ -83,13 +96,6 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
-
-### Backlight led (binary)
-Enable or disable the blue backlight LED.
-Value can be found in the published state on the `backlight_led` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_led": NEW_VALUE}`.
-If value equals `ON` backlight led is ON, if `OFF` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

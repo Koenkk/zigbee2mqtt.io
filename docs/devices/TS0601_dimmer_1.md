@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | 1 gang smart dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), countdown, light_type, power_on_behavior, backlight_mode, linkquality |
 | Picture | ![TuYa TS0601_dimmer_1](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_1.jpg) |
-| White-label | Moes MS-105Z, Lerlink X706U, Moes ZS-EUD_1gang |
+| White-label | Lerlink X706U, Moes ZS-EUD_1gang |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BMCT-SLZ  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Light/shutter control unit II |
-| Exposes | device_type, switch_type, switch (state), power_on_behavior, child_lock, cover (state, position), motor_state, calibration_closing_time, calibration_opening_time, linkquality |
+| Exposes | device_mode, switch_type, switch (state), power_on_behavior, child_lock, cover (state, position), motor_state, calibration, linkquality |
 | Picture | ![Bosch BMCT-SLZ](https://www.zigbee2mqtt.io/images/devices/BMCT-SLZ.jpg) |
 
 
@@ -36,6 +36,8 @@ To pair this device you have to install the device via its installation code. Th
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `device_mode`: Device mode. The value must be one of `light`, `shutter`
+
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
@@ -43,29 +45,41 @@ To pair this device you have to install the device via its installation code. Th
 
 ## Exposes
 
-### Device type (enum)
-Device type: .
-Value can be found in the published state on the `device_type` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_type": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_type": NEW_VALUE}`.
-The possible values are: `light`, `shutter`.
+### Device mode (enum)
+Device mode.
+Value can be found in the published state on the `device_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_mode": NEW_VALUE}`.
+The possible values are: `light`, `shutter`, `disabled`.
 
 ### Switch type (enum)
 Module controlled by a rocker switch or a button.
 Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
-The possible values are: `button`, `button_key_change`, `rocker_switch`, `rocker_rwitch_key_change`.
+The possible values are: `button`, `button_key_change`, `rocker_switch`, `rocker_switch_key_change`.
 
 ### Switch (left endpoint)
 The current state of this switch is in the published state under the `state_left` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_left": "ON"}`, `{"state_left": "OFF"}` or `{"state_left": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_left": ""}`.
 
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
 ### Switch (right endpoint)
 The current state of this switch is in the published state under the `state_right` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Power-on behavior (enum, right endpoint)
 Controls the behavior when the device is powered on after power loss.
@@ -114,16 +128,16 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
 If value equals `ON` child lock is ON, if `OFF` OFF.
 
-### Calibration closing time (numeric)
-Calibration opening time.
+### Calibration (numeric, closing_time endpoint)
+Calibration closing time.
 Value can be found in the published state on the `calibration_closing_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_closing_time": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_closing_time": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `90`.
 The unit of this value is `s`.
 
-### Calibration opening time (numeric)
-Calibration closing time.
+### Calibration (numeric, opening_time endpoint)
+Calibration opening time.
 Value can be found in the published state on the `calibration_opening_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_opening_time": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_opening_time": NEW_VALUE}`.
