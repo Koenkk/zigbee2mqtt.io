@@ -23,7 +23,17 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Reset energy
+
+To reset `Sum of consumed energy`, use the Dev console and execute:  
+`Endpoint`: `1`   
+`Cluster`: `0x00`  
+`Command`: `0`  
+`Payload`: (don't change this)  
+
+Next time the plug gets polled, `Sum of consumed energy` will start from zero again.
 
 <!-- Notes END: Do not edit below this line -->
 
