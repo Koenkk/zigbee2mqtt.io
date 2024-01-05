@@ -25,6 +25,12 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Troubleshoot
+In case the sensor got stucked and will not send (correct) data anymore, try the following steps to restore it.
+1. Force remove the device via the frontend
+2. Restart Zigbee2MQTT
+3. Re-pair the device
+
 ### Battery
 Uses a CR2450 battery
 
