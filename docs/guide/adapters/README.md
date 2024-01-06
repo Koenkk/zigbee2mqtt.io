@@ -503,6 +503,8 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     Note before buying that ITead slightly confusingly now sells both the "ZBDongle-E" (based on EFR32MG21) and "ZBDongle-P" (based on CC2652P).
     This section is about the "ZBDongle-E", for "ZBDongle-P" see above.
 
+    It's recommended to flash a different firmware using this [web flasher](https://dialedin.com.au/blog/sonoff-zbdongle-e-rcp-firmware). The pre-flashed firmware ncp-uart-sw_EZNet6.10.3_V1.0.1 has issues with loosing connection to various devices (typically Xiaomi/Aqara)
+    
     If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
     ```yaml
     serial:
