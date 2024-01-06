@@ -503,8 +503,7 @@ Initial development started on experimental (beta stage) support for Silicon Lab
     Note before buying that ITead slightly confusingly now sells both the "ZBDongle-E" (based on EFR32MG21) and "ZBDongle-P" (based on CC2652P).
     This section is about the "ZBDongle-E", for "ZBDongle-P" see above.
 
-    This Zigbee adapter is being tested as Coordinator on a setup with 90+ devices connected, however with original pre-flashed [coordinator firmware ncp-uart-sw_EZNet6.10.3_V1.0.1](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E/NCP), the setup has issues with regular loosing of Zigbee devices - typically Xiaomi/Aqara (buttons/switches, human body sensors and door/window sensors).
-    Issue has been solved by flashing a newer firmware - simple flashing method using a [web flasher](https://dialedin.com.au/blog/sonoff-zbdongle-e-rcp-firmware), which automatically offers firmware update after detecting the dongle.
+    It's recommended to flash a different firmware using this [web flasher](https://dialedin.com.au/blog/sonoff-zbdongle-e-rcp-firmware). The pre-flashed firmware ncp-uart-sw_EZNet6.10.3_V1.0.1 has issues with loosing connection to various devices (typically Xiaomi/Aqara)
     
     If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
     ```yaml
