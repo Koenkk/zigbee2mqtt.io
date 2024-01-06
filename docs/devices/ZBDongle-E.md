@@ -48,14 +48,18 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
   * Connect to the device with the serial software (for serial connection parameters, see guide)
       
       `putty -serial -sercfg 115200,8,n,1 /dev/ttyACM0`  
-      <img src="../../docs/images/putty-bootloader-1.png" width="350" height="250"/>
+      <img src="../../docs/images/putty-bootloader-1.png" width="350" height="250"/>  
+      If you get the error `PuTTY: unable to load font "server:fixed"`, run `export GDK_BACKEND=x11` previous to the putty command.
 
   * Press and hold the "BOOT" button (upper button in the lower right corner next to the USB plug in the photo below)
   * and then press the "RST." button (lower button in the lower right corner next to the USB plug in the photo below) to restart the device 
   <img src="https://www.zigbee2mqtt.io/images/guides/SONOFF-DongleE-Router/dongle-e-naked.jpg" width="648" height="242"/>
 * Fifth, to upload the file, in the bootloader terminal press '1' to initiate the upload  
   <img src="../../docs/images/putty-bootloader-2.png" width="350" height="250"/>
-  * Open another terminal on the host system to send the file through XMODEM    
+  * Open another terminal on the host system. Download the router firmware *.gbl file from [here](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E/Router), e.g.
+
+      `wget https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/blob/master/Dongle-E/Router/Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl`
+  * Send the file through XMODEM    
 
       `sx Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl < /dev/ttyACM0 > /dev/ttyACM0`
   * Wait for 'Serial upload complete', then press '2' in the Bootloader Terminal to restart the dongle.
