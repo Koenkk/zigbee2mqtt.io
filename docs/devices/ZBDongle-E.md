@@ -37,11 +37,13 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
 * Second, you need a **software supporting the [XMODEM file transfer protocol](https://en.wikipedia.org/wiki/XMODEM)** for sending the firmware image to the device. On Debian Linux like Ubuntu you can use lrzsz, 
   * install XMODEM transfer protocol and terminal emulator Putty with 
   
-      `sudo apt install lrzsz putty`
+      debian based OS: `sudo apt install lrzsz putty`
+      arch based OS: `sudo paxman -S lrzsz putty`
   * user needs to be in dialout group in order to access serial ports
       
-      `sudo adduser $USER dialout`
-  * log in and out so that group membership comes into effect
+      debian based OS: `sudo adduser $USER dialout`
+      arch based OS: `sudo usermod -a -G uucp $USER`
+  * log in and out so that group membership comes into effect (You can check by running `id`)
 * Third, you must operate on the naked logic board while it is plugged in. This is a lot easier if you use a **USB extension cable**.
 * Forth, to enter the Bootloader Mode, you have to
   * Plug the device in
@@ -61,7 +63,8 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
       `wget https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/blob/master/Dongle-E/Router/Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl`
   * Send the file through XMODEM    
 
-      `sx Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl < /dev/ttyACM0 > /dev/ttyACM0`
+      debian based OS: `sx Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl < /dev/ttyACM0 > /dev/ttyACM0`
+      arch based OS: `lrzsz-sx -X Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl < /dev/ttyACM0 > /dev/ttyACM0` (Without the -X it will not use the xmodem protocol)
   * Wait for 'Serial upload complete', then press '2' in the Bootloader Terminal to restart the dongle.
 * Finally, the dongle LED blinks green, inidicating it is in paring mode. Pair as usual with Z2M.
 * Note: The dongle may not pair successfully if it is plugged into a USB 3.x socket, if it fails to pair try moving it to a USB 2 socket or a standalone USB charger.
