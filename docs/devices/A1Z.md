@@ -34,7 +34,6 @@ To reset `Sum of consumed energy`, use the Dev console and execute:
 `Payload`: (don't change this)  
 
 Next time the plug gets polled, `Sum of consumed energy` will start from zero again.
-
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_cover_8  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Cover motor |
-| Exposes | work_state, cover (state, position), reverse_direction, motor_fault, linkquality |
+| Exposes | cover (state, position), reverse_direction, motor_fault, linkquality |
 | Picture | ![TuYa TS0601_cover_8](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_8.jpg) |
 
 
@@ -28,11 +28,14 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
-## Exposes
 
-### Work state (text)
-Value can be found in the published state on the `work_state` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
+
+## Exposes
 
 ### Cover 
 The current state of this cover is in the published state under the `state` property (value is `OPEN` or `CLOSE`).
@@ -40,14 +43,18 @@ To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set`
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
-
 ### Reverse direction (enum)
-Motor side.
+Reverse the motor direction.
 Value can be found in the published state on the `reverse_direction` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": NEW_VALUE}`.
 The possible values are: `forward`, `back`.
 
+### Motor fault (binary)
+Motor Fault.
+Value can be found in the published state on the `motor_fault` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` motor fault is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

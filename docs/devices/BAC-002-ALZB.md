@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BAC-002-ALZB  |
 | Vendor  | [HKGK](/supported-devices/#v=HKGK)  |
 | Description | BAC series thermostat |
-| Exposes | lock (state), climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, preset, fan_mode), sensor, workdays_schedule, holidays_schedule, linkquality |
+| Exposes | lock (state), climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, preset, fan_mode), sensor, week, workdays_schedule, holidays_schedule, linkquality |
 | Picture | ![HKGK BAC-002-ALZB](https://www.zigbee2mqtt.io/images/devices/BAC-002-ALZB.jpg) |
 
 
@@ -63,6 +63,13 @@ Value can be found in the published state on the `sensor` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
 The possible values are: `IN`, `AL`, `OU`.
+
+### Week (enum)
+Week format user for schedule.
+Value can be found in the published state on the `week` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"week": NEW_VALUE}`.
+The possible values are: `5+2`, `6+1`, `7`.
 
 ### Workdays schedule (text)
 Workdays schedule, 6 entries max, example: "00:20/5°C 01:20/5°C 6:59/15°C 18:00/5°C 20:00/5°C 23:30/5°C".

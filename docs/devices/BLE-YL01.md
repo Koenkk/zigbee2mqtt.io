@@ -150,7 +150,7 @@ The unit of this value is `mg/L`.
 Salt value.
 Value can be found in the published state on the `salinity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `µS/cm`.
+The unit of this value is `ppm`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

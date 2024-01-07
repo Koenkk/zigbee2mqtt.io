@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SRTS-A01  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Aqara Smart Radiator Thermostat E1 |
-| Exposes | setup, climate (occupied_heating_setpoint, local_temperature, system_mode, preset), sensor, calibrated, calibrate, lock (state), switch (state), window_open, valve_alarm, away_preset_temperature, voltage, battery, power_outage_count, device_temperature, schedule_settings, linkquality |
+| Exposes | setup, climate (occupied_heating_setpoint, local_temperature, system_mode, preset), sensor, sensor_temp, calibrated, calibrate, lock (state), switch (state), window_open, valve_alarm, away_preset_temperature, voltage, battery, power_outage_count, device_temperature, schedule_settings, linkquality |
 | Picture | ![Xiaomi SRTS-A01](https://www.zigbee2mqtt.io/images/devices/SRTS-A01.jpg) |
 
 
@@ -63,6 +63,14 @@ Value can be found in the published state on the `sensor` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensor": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
 The possible values are: `internal`, `external`.
+
+### Sensor temp (numeric)
+Input for remote temperature sensor (when sensor is set to external).
+Value can be found in the published state on the `sensor_temp` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensor_temp": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor_temp": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `55`.
+The unit of this value is `°C`.
 
 ### Calibrated (binary)
 Indicates if this valve is calibrated, use the calibrate option to calibrate.

@@ -100,7 +100,7 @@ Measured temperature value.
 Value can be found in the published state on the `temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
 It's not possible to write (`/set`) this value.
-The unit of this value is `ºC`.
+The unit of this value is `°C`.
 
 ### Humidity (numeric)
 Measured relative humidity.

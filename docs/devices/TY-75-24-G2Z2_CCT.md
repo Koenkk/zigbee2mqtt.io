@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TY-75-24-G2Z2_CCT  |
 | Vendor  | [Ltech](/supported-devices/#v=Ltech)  |
 | Description | 150W 24V Zigbee CV tunable white LED driver |
-| Exposes | light (state, brightness), linkquality |
+| Exposes | light (state, brightness, color_temp), linkquality |
 | Picture | ![Ltech TY-75-24-G2Z2_CCT](https://www.zigbee2mqtt.io/images/devices/TY-75-24-G2Z2_CCT.jpg) |
 
 
@@ -33,9 +33,10 @@ pageClass: device-page
 ## Exposes
 
 ### Light 
-This light supports the following features: `state`, `brightness`.
+This light supports the following features: `state`, `brightness`, `color_temp`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `250` and `454`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warm`, `warmest`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
