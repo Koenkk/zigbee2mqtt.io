@@ -33,7 +33,6 @@ Examples:
 - A Philips 7146060PH Hue Go light exposes effect (e.g. to trigger a flashing effect). This can only be `/set`. Access will be `2` (binary: `0b010`)
 - A Xiaomi ZNCZ02LM power plug exposes a numeric power sensor. This can be `/get` and is published in the state. Access will be `5` (binary: `0b101`)
 
-### 
 ## Generic
 
 ### Binary
