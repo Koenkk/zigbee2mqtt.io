@@ -5,7 +5,7 @@ sidebar: auto
 # Home Assistant
 
 ::: warning ATTENTION
-'Silicon Labs Multiprotocol' add-on is not officially supported. If you still decide to use it, make sure to turn off auto-update for that add-on, and ensure any new firmware versions it introduces are supported by Zigbee2MQTT before manually updating it.
+'Silicon Labs Multiprotocol' add-on is experimental and may break your Zigbee2MQTT setup. If you still decide to use it, make sure to turn off auto-update for that add-on, and ensure any new firmware versions it introduces are supported by Zigbee2MQTT before manually updating it.
 :::
 
 ## MQTT discovery
