@@ -23,7 +23,17 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+
+Pair the switch to Zigbee2MQTT by pressing 3 times to enter pairing mode. When the LED is blinking in amber, it is in Zigbee pairing mode. If the LED indication is other than flashing amber, the device is in BLE mode. 
+
+Set the device to Zigbee mode by short pressing the push-button for 4 times and hold it for 20 secs, until, the red LED flashes in high frequency.
+
+**NOTE**: Do not release the button when it flashes at a low frequency.
+
+Release the button and wait until the LED blinks red and green or there is no LED indication.
 
 <!-- Notes END: Do not edit below this line -->
 
