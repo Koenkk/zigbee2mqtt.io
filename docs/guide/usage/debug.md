@@ -37,5 +37,7 @@ To grab all the logs, log in via SSH and execute:
 docker logs CONTAINER_ID > log.txt 2>&1
 ```
 
+To determine the `CONTAINER_ID` execute `docker ps`.
+
 ## Change log level during runtime
 See [MQTT topics and message structure](./mqtt_topics_and_messages.md)
