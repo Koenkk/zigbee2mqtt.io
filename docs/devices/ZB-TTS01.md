@@ -24,58 +24,6 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-## 1 Protocol Overview
-
-
-### 1.1 Description of ZCL communication method for accessing your own gateway
-
-Users who develop their own gateway to access smart infrared remote control should refer to the standard cluster of the [07-5123-07-ZigbeeClusterLibrary_Revision_7.pdf](https://csa-iot.org/developer-resource/specifications-download-request/) protocol document to access it.
-
-#### 1.1.1 Cluster identifier
-
-| **Identifier** | **Name**                |
-| -------------- | ----------------------- |
-| **0x0704**     | Tunneling(Smart Energy) |
-
-Table 1
-
-#### 1.1.2 Agreement process description
-
-In order to simplify the communication process, the creation of transparent transmission channels required by the cluster is omitted, and transparent transmission commands are directly used to send and receive commands. The channel ID is fixed at 0.
-
-##### 1.1.2.1 Send data
-
-Use the [10.6.2.4.3 TransferData Command] command, the key parameters are as follows
-
-Direction: Client->Server
-
- 
-
-| **Description**                      | **Length** | **Value**                       |
-| ------------------------------------ | ---------- | ------------------------------- |
-| **Cluster Command**                  | 1          | 0x02                            |
-| **TunnelID**                         | 2          | 0x0000                          |
-| **Transparent transmission of data** | 6          | The protocol shown in Chapter 3 |
-
-Table 2
-
-
-##### 1.3.2.2 Receive feedback data from infrared remote control
-
-Use the [10.6.2.5.2 TransferData Command] command, the key parameters are as follows
-
-Direction: Server –>Client
-
- 
- 
-
-| **Description**                      | **Length** | **Value**                       |
-| ------------------------------------ | ---------- | ------------------------------- |
-| **Cluster Command**                  | 1          | 0x01                            |
-| **TunnelID**                         | 2          | 0x0000                          |
-| **Transparent transmission of data** | 6          | The protocol shown in Chapter 3 |
-
-Table 3
 
 ## Because this speaker can only convert Chinese, only the Chinese version of the protocol instructions is provided.
 
@@ -83,8 +31,8 @@ Table 3
 
 |              | 格式                                         | 备注                                                         |
 | ------------ | -------------------------------------------- | ------------------------------------------------------------ |
-| 普通文本     | 中文-GB2312编码  英文-26个英文字母  数字-0~9 | 例：“谢谢使用”对应的GB2312十六进制编码为0xD0 0xBB 0xD0 0xBB 0xCA 0xB9 0xD3 0xC3，发送数据不要0x和空格 |
-| 调节音量     | [v*]                                         | *代表数字0~9，比如[v5]，下发必须包含小写方括号，例：设置音量为5发送"5B76325D" |
+| 普通文本     | 中文-GB2312编码  英文-26个英文字母  数字-0~9 | 例：“谢谢使用”|
+| 调节音量     | [v*]                                         | *代表数字0~9，比如设置音量为5发送内容为：[v5]，下发必须包含小写方括号 |
 | 调节语速     | [s*]                                         | 参考调节音量                                                 |
 | 调节语调     | [t*]                                         | 参考调节音量                                                 |
 | 播放内置铃声 | ring_*                                       | *代表数字1-5，比如ring_1                                     |
@@ -93,15 +41,15 @@ Table 3
 
  
 
-### 2.1 文本标记功能
+### 1.1 文本标记功能
 
 智能解析常见标点符号，常见多音字、数字。支持常用英文单位（需小写）、特殊数字发音。单句无停顿标点符号句子长度超过50 字将自动切断。
 
-### 2.2 文本分析功能
+### 1.2 文本分析功能
 
 支持文本标记，可标记多音字发音、数字发音、短停顿。 
 
-#### 2.2.1 多音字标记方式
+#### 1.2.1 多音字标记方式
 
 [=*] 标记前一汉字的拼音
 
@@ -111,7 +59,7 @@ Table 3
 
 其中，拼音格式为拼音+声调，声调数值范围1-5，分别代表（1:阴平2:阳平3:上声4:去声5:轻声）。拼音中ü用字母v 代替，字母均为小写
 
-#### 2.2.2 数字标记方式
+#### 1.2.2 数字标记方式
 
 [n*]，指定该标记后的数字发音方式，*为1时按数字发音，*为2时按数值发音，*为3时按电话号码格式发音。该标记后必须跟数字才能有效转换
 
@@ -121,7 +69,7 @@ Table 3
 | 请拨打电话[n1]95511     | 请拨打电话九五五一一           |
 | 手机号码[n3]18812341121 | 手机号码幺八八幺二三四幺幺二幺 |
 
-#### 2.2.3 短停标记方式
+#### 1.2.3 短停标记方式
 
 [w0]，指定该位置做短暂停顿。 
 
