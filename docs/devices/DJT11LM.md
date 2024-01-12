@@ -37,6 +37,11 @@ Then press the button again every 2 seconds to keep it awake (maximum 20 times).
 ### Meaning of `strength` value
 The `strength` value, which is reported every 300 seconds after vibration is detected, is the max strength measured during a period of 300 second.
 
+### Frequency of `vibration` actions
+
+The `vibration` action and associated JSON payloads are emitted about one second after onset, but not more frequently than once per minute regardless of whether vibrations are continuous or intermittent within that minute.
+
+If vibrations should persist, another `vibration` action will be emitted after that minute interval expires.  There is no evident way of changing the duration of this hold-off period.
 
 ### Troubleshooting: device stops sending messages/disconnects from network
 Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes happens that they disconnect from the network.
