@@ -1,7 +1,7 @@
 ---
 title: "Heimgard Technologies HT-INS-2 control via MQTT"
 description: "Integrate your Heimgard Technologies HT-INS-2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2019-07-22T20:08:17Z
+addedAt: 2024-01-13T01:00:40Z
 pageClass: device-page
 ---
 
