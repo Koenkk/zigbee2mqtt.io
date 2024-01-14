@@ -19,8 +19,8 @@ The availability feature works differently for active and passive devices.
 - Passive devices (everything that is not an active device, mostly battery powered devices): these devices need to
   check-in every 25 hours, they cannot be pinged so if they don't they will be marked as `offline`.
 
-Note that this timeout is persisted between Zigbee2MQTT restarts. So if you e.g. stop Zigbee2MQTT for longer than 10
-minutes, all yours active devices will be marked as `offline` initially.
+Note that this timeout is persisted between Zigbee2MQTT restarts. So if you for example stop Zigbee2MQTT for longer than 10
+minutes, all your active devices will be marked as `offline` initially.
 
 ## Availability advanced configuration
 
@@ -57,7 +57,7 @@ your `configuration.yaml` but specify it for that device only, e.g.
 devices:
   '0x87654321':
     friendly_name: 'my_switch'
-    # Enable avaiability for just 'my_switch'
+    # Enable availability for just 'my_switch'
     availability: true
 ```
 
