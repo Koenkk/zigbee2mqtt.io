@@ -25,8 +25,6 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-## Because this speaker can only convert Chinese, only the Chinese version of the protocol instructions is provided.
-
 ### 输入内容
 
 |              | 格式                                         | 备注                                                         |
