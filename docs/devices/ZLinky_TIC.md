@@ -23,6 +23,7 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
 ### Pairing
 Pair the sensor to Zigbee2MQTT by long pressing the pair button for more than 10 seconds. The blue light on the front side should flash rapidly.
