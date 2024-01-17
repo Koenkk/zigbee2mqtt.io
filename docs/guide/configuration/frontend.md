@@ -25,7 +25,7 @@ frontend:
   port: 8080
   # Optional, empty by default to listen on both IPv4 and IPv6. Opens a unix socket when given a path instead of an address (e.g. '/run/zigbee2mqtt/zigbee2mqtt.sock')
   host: 0.0.0.0
-  # Optional, enables authentication, disabled by default
+  # Optional, enables authentication, disabled by default, cleartext (no hashing required)
   auth_token: your-secret-token
   # Optional, url on which the frontend can be reached, currently only used for the Home Assistant device configuration page
   url: 'https://zigbee2mqtt.myhouse.org'
