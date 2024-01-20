@@ -143,7 +143,7 @@ The possible values are: `decoupled`, `control_relay`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`.
+The possible values are: `single_l1`, `off_l1`, `single_l2`,  `off_l2`.
 
 ### Interlock (binary)
 Enabling prevents both relays being on at the same time (Interlock).
