@@ -26,7 +26,7 @@ pageClass: device-page
 ## Notes
 
 ### Description
-Wiren Board WB-MSW v.3 — hybrid digital sensor of temperature, humidity, illumination, noise, CO2 and VOC level. It is equipped with the IR blaster (and the receiver for learning). Designed for climate control in residential and office premises.
+Wiren Board WB-MSW v.3 — hybrid digital sensor of motion, temperature, humidity, illumination, noise, CO2 and VOC level. It is equipped with the IR blaster (and the receiver for learning). Designed for climate control in residential and office premises.
 
 ### Configuring IR
 The sensor contains 32 banks for storing IR commands. Training takes place through the built-in IR receiver.

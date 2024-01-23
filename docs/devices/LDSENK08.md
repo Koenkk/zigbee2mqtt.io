@@ -23,7 +23,13 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
+## Notes
+### Reset/pairing:
+- To reset, the battery cover must first be removed.
+Then press the main button for at least 5 seconds and the red LED start fast flashing.
+- Then loose the button, the red LED starts goes to normal flashing, the flashing frequency is 0.5 s on and 0.5 s off, and keep on flashing 3 mins.
+- If the vibration sensor is paired successfully, the red LED turns green, and for about 10 seconds, then stop blinking and turns off.
+- If the vibration sensor fails to join in the network, the red LED will keep on flashing 3 minutes, then turn off.
 
 <!-- Notes END: Do not edit below this line -->
 

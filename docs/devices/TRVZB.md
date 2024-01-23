@@ -23,7 +23,18 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+To pair the device you first need to have it powered, attached to the valve and displaying the temperature.
+
+If the device is showing `FS` or `RD` press the button on the top of the unit and it should now show `,,7`
+
+Once this stops flashing hold the top button for about 5 seconds at which point the unit should now show the temperature.
+
+Keep turning the dial counter-clockwise unil the display shows `OF` and finally hold down the top button for 3 seconds.
+
+You should now see a flashing signal icon and it will try and pair.
 
 <!-- Notes END: Do not edit below this line -->
 

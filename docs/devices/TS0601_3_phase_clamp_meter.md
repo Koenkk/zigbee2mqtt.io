@@ -25,6 +25,9 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Notes
+
+Device is powered through wire A/L1.
 
 <!-- Notes END: Do not edit below this line -->
 
