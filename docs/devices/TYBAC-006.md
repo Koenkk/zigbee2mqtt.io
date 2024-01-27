@@ -23,8 +23,11 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
 
+While the thermostat is off, press and hold the "temperature down" button until the display shows the "network" icon.
 <!-- Notes END: Do not edit below this line -->
 
 
