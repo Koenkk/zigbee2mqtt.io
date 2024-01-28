@@ -28,6 +28,9 @@ pageClass: device-page
 ### Router functionality
 This device **does not** work as a Zigbee router.
 
+### Power meter functionality
+This device **does not** support power metering.
+
 ### Deprecated click event
 By default this device exposes a deprecated `click` event. It's recommended to use the `action` event instead.
 
