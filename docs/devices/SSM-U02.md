@@ -23,7 +23,13 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Router functionality
+This device **does not** work as a Zigbee router.
+
+### Power meter functionality
+This device **does not** support power metering.
 
 <!-- Notes END: Do not edit below this line -->
 

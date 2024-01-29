@@ -28,6 +28,9 @@ pageClass: device-page
 ### Router functionality
 This device **does not** work as a Zigbee router.
 
+### Power meter functionality
+This device **does not** support power metering.
+
 ### Debounce
 It is recommended to not use the `debounce` option for this device since this will prevent the `single` and `hold_release` actions from being sent.
 
