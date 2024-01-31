@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QS-Zigbee-D02-TRIAC-2C-LN  |
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | 2 gang smart dimmer switch module with neutral |
-| Exposes | light (state, brightness, min_brightness), linkquality |
+| Exposes | light (state, brightness, min_brightness), effect, do_not_disturb, linkquality |
 | Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-2C-LN](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-D02-TRIAC-2C-LN.jpg) |
 
 
@@ -105,6 +105,20 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_step": 40 // Increases brightness by 40
 }
 ````
+
+### Effect (enum)
+Triggers an effect on the light (e.g. make light blink for a few seconds).
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
+The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
+
+### Do not disturb (binary)
+Do not disturb mode, when enabled this function will keep the light OFF after a power outage.
+Value can be found in the published state on the `do_not_disturb` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_not_disturb": NEW_VALUE}`.
+If value equals `true` do not disturb is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

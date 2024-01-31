@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi HLQDQ01LM control via MQTT"
-description: "Integrate your Xiaomi HLQDQ01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara HLQDQ01LM control via MQTT"
+description: "Integrate your Aqara HLQDQ01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-08-11T22:17:44Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi HLQDQ01LM
+# Aqara HLQDQ01LM
 
 |     |     |
 |-----|-----|
 | Model | HLQDQ01LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara zigbee LED-controller  |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart LED controller |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![Xiaomi HLQDQ01LM](https://www.zigbee2mqtt.io/images/devices/HLQDQ01LM.jpg) |
+| Picture | ![Aqara HLQDQ01LM](https://www.zigbee2mqtt.io/images/devices/HLQDQ01LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

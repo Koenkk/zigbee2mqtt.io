@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi TDL01LM control via MQTT"
-description: "Integrate your Xiaomi TDL01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara TDL01LM control via MQTT"
+description: "Integrate your Aqara TDL01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-11-30T19:41:12
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi TDL01LM
+# Aqara TDL01LM
 
 |     |     |
 |-----|-----|
 | Model | TDL01LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara spotlight T3 |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Spotlight T3 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![Xiaomi TDL01LM](https://www.zigbee2mqtt.io/images/devices/TDL01LM.jpg) |
+| Picture | ![Aqara TDL01LM](https://www.zigbee2mqtt.io/images/devices/TDL01LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

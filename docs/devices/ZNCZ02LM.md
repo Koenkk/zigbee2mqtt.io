@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ZNCZ02LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Mi power plug ZigBee |
+| Description | Mi smart plug |
 | Exposes | switch (state), power, energy, device_temperature, power_outage_memory, linkquality |
 | Picture | ![Xiaomi ZNCZ02LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ02LM.jpg) |
 

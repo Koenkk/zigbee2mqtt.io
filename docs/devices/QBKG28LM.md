@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi QBKG28LM control via MQTT"
-description: "Integrate your Xiaomi QBKG28LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara QBKG28LM control via MQTT"
+description: "Integrate your Aqara QBKG28LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-03-01T15:36:38
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi QBKG28LM
+# Aqara QBKG28LM
 
 |     |     |
 |-----|-----|
 | Model | QBKG28LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart wall switch H1 Pro (no neutral, double rocker) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch H1 Pro (no neutral, double rocker) |
 | Exposes | switch (state), device_temperature, operation_mode, action, power_outage_memory, flip_indicator_light, led_disabled_night, linkquality |
-| Picture | ![Xiaomi QBKG28LM](https://www.zigbee2mqtt.io/images/devices/QBKG28LM.jpg) |
+| Picture | ![Aqara QBKG28LM](https://www.zigbee2mqtt.io/images/devices/QBKG28LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

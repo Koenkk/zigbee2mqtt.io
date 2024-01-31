@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNJLBL01LM control via MQTT"
-description: "Integrate your Xiaomi ZNJLBL01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNJLBL01LM control via MQTT"
+description: "Integrate your Aqara ZNJLBL01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-09-01T18:11:17Z
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNJLBL01LM
+# Aqara ZNJLBL01LM
 
 |     |     |
 |-----|-----|
 | Model | ZNJLBL01LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara roller shade companion E1 |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Roller shade driver E1 |
 | Exposes | cover (state, position), battery, device_temperature, charging_status, motor_state, running, linkquality |
-| Picture | ![Xiaomi ZNJLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNJLBL01LM.jpg) |
-| White-label | Xiaomi RSD-M01 |
+| Picture | ![Aqara ZNJLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNJLBL01LM.jpg) |
+| White-label | Aqara RSD-M01 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -75,7 +75,7 @@ To read the current state of this cover publish a message to topic `zigbee2mqtt/
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
 It's not possible to write (`/set`) this value.

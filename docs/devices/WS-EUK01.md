@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi WS-EUK01 control via MQTT"
-description: "Integrate your Xiaomi WS-EUK01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara WS-EUK01 control via MQTT"
+description: "Integrate your Aqara WS-EUK01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-08-01T20:41:55Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi WS-EUK01
+# Aqara WS-EUK01
 
 |     |     |
 |-----|-----|
 | Model | WS-EUK01  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart wall switch H1 EU (no neutral, single rocker) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch H1 EU (no neutral, single rocker) |
 | Exposes | switch (state), action, power_outage_memory, flip_indicator_light, led_disabled_night, power_outage_count, device_temperature, operation_mode, mode_switch, linkquality |
-| Picture | ![Xiaomi WS-EUK01](https://www.zigbee2mqtt.io/images/devices/WS-EUK01.jpg) |
+| Picture | ![Aqara WS-EUK01](https://www.zigbee2mqtt.io/images/devices/WS-EUK01.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -93,14 +93,14 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Operation mode (enum)
-Decoupled mode.
+Switches between direct relay control and action sending only.
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
 
 ### Mode switch (enum)
-Anti flicker mode can be used to solve blinking issues of some lights.Quick mode makes the device respond faster..
+Features. Anti flicker mode can be used to solve blinking issues of some lights.Quick mode makes the device respond faster..
 Value can be found in the published state on the `mode_switch` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode_switch": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_switch": NEW_VALUE}`.

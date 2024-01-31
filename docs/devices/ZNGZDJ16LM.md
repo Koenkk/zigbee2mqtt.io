@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNGZDJ16LM control via MQTT"
-description: "Integrate your Xiaomi ZNGZDJ16LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNGZDJ16LM control via MQTT"
+description: "Integrate your Aqara ZNGZDJ16LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-12-26T18:38:16
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNGZDJ16LM
+# Aqara ZNGZDJ16LM
 
 |     |     |
 |-----|-----|
 | Model | ZNGZDJ16LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara roller shade motor T1C |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Roller shade controller T1C |
 | Exposes | cover (state, position), running, linkquality |
-| Picture | ![Xiaomi ZNGZDJ16LM](https://www.zigbee2mqtt.io/images/devices/ZNGZDJ16LM.jpg) |
+| Picture | ![Aqara ZNGZDJ16LM](https://www.zigbee2mqtt.io/images/devices/ZNGZDJ16LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -1,7 +1,7 @@
 ---
 title: "Lilistore TS0601_lilistore control via MQTT"
 description: "Integrate your Lilistore TS0601_lilistore via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2024-01-31T19:37:46
 pageClass: device-page
 ---
 

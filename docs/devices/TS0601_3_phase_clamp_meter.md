@@ -20,15 +20,13 @@ pageClass: device-page
 | Description | 3-phase clamp power meter |
 | Exposes | ac_frequency, temperature, current, power, energy, energy_a, energy_b, energy_c, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, power_factor_a, power_factor_b, power_factor_c, linkquality |
 | Picture | ![TuYa TS0601_3_phase_clamp_meter](https://www.zigbee2mqtt.io/images/devices/TS0601_3_phase_clamp_meter.jpg) |
-| White-label | MatSee Plus PC321-Z-TY |
+| White-label | MatSee Plus PC321-Z-TY, Owon PC321-Z-TY |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 
 Device is powered through wire A/L1.
-
 <!-- Notes END: Do not edit below this line -->
 
 

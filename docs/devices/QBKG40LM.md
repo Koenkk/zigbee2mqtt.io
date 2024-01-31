@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi QBKG40LM control via MQTT"
-description: "Integrate your Xiaomi QBKG40LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara QBKG40LM control via MQTT"
+description: "Integrate your Aqara QBKG40LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-08-01T20:41:55Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi QBKG40LM
+# Aqara QBKG40LM
 
 |     |     |
 |-----|-----|
 | Model | QBKG40LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara E1 1 gang switch (with neutral) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch E1 (with neutral, single rocker) |
 | Exposes | switch (state), action, power_outage_memory, device_temperature, flip_indicator_light, operation_mode, linkquality |
-| Picture | ![Xiaomi QBKG40LM](https://www.zigbee2mqtt.io/images/devices/QBKG40LM.jpg) |
+| Picture | ![Aqara QBKG40LM](https://www.zigbee2mqtt.io/images/devices/QBKG40LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

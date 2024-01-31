@@ -30,7 +30,16 @@ export async function downloadImage(url: string, path: string) {
             r();
         });
     });
-    
+}
+
+export async function ensureJpg(imagePath: string) {
+    if (path.parse(imagePath).ext !== '.jpg') {
+        const imagePathJpg  = `${path.join(missingImagesPath, path.parse(imagePath).name)}.jpg`;
+        await easyimage.convert({src: imagePath, dst: imagePathJpg});
+        fs.rmSync(imagePath);
+        imagePath = imagePathJpg;
+    }
+    return imagePath;
 }
 
 export async function downloadMissing() {
@@ -52,12 +61,7 @@ export async function downloadMissing() {
                 await downloadImage(image.url, imagePath);
 
                 // Convert to jpg
-                if (path.parse(imagePath).ext !== '.jpg') {
-                    const imagePathJpg  = `${path.join(missingImagesPath, path.parse(imagePath).name)}.jpg`;
-                    await easyimage.convert({src: imagePath, dst: imagePathJpg});
-                    fs.rmSync(imagePath);
-                    imagePath = imagePathJpg;
-                }
+                imagePath = await ensureJpg(imagePath);
 
                 // Make sqaure
                 const info = await easyimage.info(imagePath);
@@ -78,18 +82,18 @@ export async function downloadMissing() {
 
 async function moveMissing() {
     for (const file of fs.readdirSync(missingImagesPath)) {
-        if (path.parse(file).ext === '.jpg') {
-            try {
-                const match = file.match('(.+)_\\d+\\.jpg');
-                if (!match) throw new Error(`Failed to match '${file}'`)
-                const source = path.join(missingImagesPath, file);
-                const target = path.join(imageBaseDir, `${match[1]}.jpg`);
-                fs.copyFileSync(source, target);
-                const size = 150;
-                await easyimage.resize({width: size, height: size, src: target, dst: target});
-            } catch (error) {
-                console.error(`Failed to handle '${file}' (${error})`)
-            }
+        try {
+            let source = path.join(missingImagesPath, file);
+            source = await ensureJpg(source);
+            const name = path.basename(source);
+            const match = name.match('(.+)_\\d+\\.jpg');
+            if (!match) throw new Error(`Failed to match '${name}'`)
+            const target = path.join(imageBaseDir, `${match[1]}.jpg`);
+            fs.copyFileSync(source, target);
+            const size = 150;
+            await easyimage.resize({width: size, height: size, src: target, dst: target});
+        } catch (error) {
+            console.error(`Failed to handle '${file}' (${error})`)
         }
     }
     console.log('Done!');

@@ -1,7 +1,7 @@
 ---
 title: "BITUO TECHNIK SPM01-D2TZ-U01 control via MQTT"
 description: "Integrate your BITUO TECHNIK SPM01-D2TZ-U01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2024-01-31T19:37:46
 pageClass: device-page
 ---
 

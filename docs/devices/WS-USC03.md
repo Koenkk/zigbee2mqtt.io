@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi WS-USC03 control via MQTT"
-description: "Integrate your Xiaomi WS-USC03 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara WS-USC03 control via MQTT"
+description: "Integrate your Aqara WS-USC03 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-09-30T20:52:56Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi WS-USC03
+# Aqara WS-USC03
 
 |     |     |
 |-----|-----|
 | Model | WS-USC03  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart wall switch (neutral, single rocker) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch (with neutral, single rocker), US |
 | Exposes | switch (state), action, flip_indicator_light, power_outage_count, device_temperature, power, energy, voltage, power_outage_memory, operation_mode, linkquality |
-| Picture | ![Xiaomi WS-USC03](https://www.zigbee2mqtt.io/images/devices/WS-USC03.jpg) |
+| Picture | ![Aqara WS-USC03](https://www.zigbee2mqtt.io/images/devices/WS-USC03.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

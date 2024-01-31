@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNMS13LM control via MQTT"
-description: "Integrate your Xiaomi ZNMS13LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNMS13LM control via MQTT"
+description: "Integrate your Aqara ZNMS13LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-09-08T21:16:00Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNMS13LM
+# Aqara ZNMS13LM
 
 |     |     |
 |-----|-----|
 | Model | ZNMS13LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara S2 lock pro |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart door lock S2 Pro |
 | Exposes | state, reverse, action, linkquality |
-| Picture | ![Xiaomi ZNMS13LM](https://www.zigbee2mqtt.io/images/devices/ZNMS13LM.jpg) |
+| Picture | ![Aqara ZNMS13LM](https://www.zigbee2mqtt.io/images/devices/ZNMS13LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi WXKG20LM control via MQTT"
-description: "Integrate your Xiaomi WXKG20LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara WXKG20LM control via MQTT"
+description: "Integrate your Aqara WXKG20LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-10-11T07:03:55Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi WXKG20LM
+# Aqara WXKG20LM
 
 |     |     |
 |-----|-----|
 | Model | WXKG20LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara E1 wireless mini switch |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Wireless mini switch E1 |
 | Exposes | battery, voltage, action, device_temperature, power_outage_count, linkquality |
-| Picture | ![Xiaomi WXKG20LM](https://www.zigbee2mqtt.io/images/devices/WXKG20LM.jpg) |
+| Picture | ![Aqara WXKG20LM](https://www.zigbee2mqtt.io/images/devices/WXKG20LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -38,7 +38,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

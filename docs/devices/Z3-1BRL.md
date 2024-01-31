@@ -38,7 +38,6 @@ For previously paired devices:
 See this [configuration guide](https://www.lutron.com/TechnicalDocumentLibrary/0301916_Aurora_Advanced_Install_Guide.pdf#page=7) for more information.
 
 If a red light flashes, the battery is low and must be replaced before pairing.
-
 <!-- Notes END: Do not edit below this line -->
 
 

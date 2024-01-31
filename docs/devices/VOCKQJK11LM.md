@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi VOCKQJK11LM control via MQTT"
-description: "Integrate your Xiaomi VOCKQJK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara VOCKQJK11LM control via MQTT"
+description: "Integrate your Aqara VOCKQJK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-08-01T20:41:55Z
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi VOCKQJK11LM
+# Aqara VOCKQJK11LM
 
 |     |     |
 |-----|-----|
 | Model | VOCKQJK11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara TVOC air quality monitor |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | TVOC air quality monitor |
 | Exposes | device_temperature, battery, voltage, air_quality, voc, temperature, humidity, display_unit, linkquality |
-| Picture | ![Xiaomi VOCKQJK11LM](https://www.zigbee2mqtt.io/images/devices/VOCKQJK11LM.jpg) |
-| White-label | Xiaomi AAQS-S01 |
+| Picture | ![Aqara VOCKQJK11LM](https://www.zigbee2mqtt.io/images/devices/VOCKQJK11LM.jpg) |
+| White-label | Aqara AAQS-S01 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -69,7 +69,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -86,7 +86,7 @@ Measured air quality.
 Value can be found in the published state on the `air_quality` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"air_quality": ""}`.
 It's not possible to write (`/set`) this value.
-The possible values are: `excellent`, `good`, `moderate`, `poor`, `unhealthy`.
+The possible values are: `excellent`, `good`, `moderate`, `poor`, `unhealthy`, `unknown`.
 
 ### Voc (numeric)
 Measured VOC value.

@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi DJT12LM control via MQTT"
-description: "Integrate your Xiaomi DJT12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara DJT12LM control via MQTT"
+description: "Integrate your Aqara DJT12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-06-10T16:45:59Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi DJT12LM
+# Aqara DJT12LM
 
 |     |     |
 |-----|-----|
 | Model | DJT12LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara T1 vibration sensor |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Vibration sensor T1 |
 | Exposes | action, linkquality |
-| Picture | ![Xiaomi DJT12LM](https://www.zigbee2mqtt.io/images/devices/DJT12LM.jpg) |
+| Picture | ![Aqara DJT12LM](https://www.zigbee2mqtt.io/images/devices/DJT12LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

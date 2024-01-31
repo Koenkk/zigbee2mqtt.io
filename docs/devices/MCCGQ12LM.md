@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi MCCGQ12LM control via MQTT"
-description: "Integrate your Xiaomi MCCGQ12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara MCCGQ12LM control via MQTT"
+description: "Integrate your Aqara MCCGQ12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-08-17T18:57:09Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi MCCGQ12LM
+# Aqara MCCGQ12LM
 
 |     |     |
 |-----|-----|
 | Model | MCCGQ12LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara T1 door & window contact sensor |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Door and window sensor T1 |
 | Exposes | contact, battery, linkquality |
-| Picture | ![Xiaomi MCCGQ12LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ12LM.jpg) |
+| Picture | ![Aqara MCCGQ12LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ12LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -59,7 +59,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

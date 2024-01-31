@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi QBKG21LM control via MQTT"
-description: "Integrate your Xiaomi QBKG21LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara QBKG21LM control via MQTT"
+description: "Integrate your Aqara QBKG21LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-06-29T17:33:31Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi QBKG21LM
+# Aqara QBKG21LM
 
 |     |     |
 |-----|-----|
 | Model | QBKG21LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara D1 single gang smart wall switch (no neutral wire) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch D1 (no neutral, single rocker) |
 | Exposes | switch (state), action, operation_mode, linkquality |
-| Picture | ![Xiaomi QBKG21LM](https://www.zigbee2mqtt.io/images/devices/QBKG21LM.jpg) |
+| Picture | ![Aqara QBKG21LM](https://www.zigbee2mqtt.io/images/devices/QBKG21LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

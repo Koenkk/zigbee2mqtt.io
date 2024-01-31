@@ -82,8 +82,7 @@ The possible values are: `low`, `medium`, `high`.
 ### Illumination (enum)
 Only updated when occupancy is detected.
 Value can be found in the published state on the `illumination` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illumination": ""}`.
-It's not possible to write (`/set`) this value.
+It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `dim`, `bright`.
 
 ### Linkquality (numeric)

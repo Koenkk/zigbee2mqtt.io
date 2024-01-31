@@ -1,7 +1,7 @@
 ---
 title: "Profalux MAI-ZTM20C control via MQTT"
 description: "Integrate your Profalux MAI-ZTM20C via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-01-07T12:36:48.016Z
+addedAt: 2024-01-07T12:36:48
 pageClass: device-page
 ---
 

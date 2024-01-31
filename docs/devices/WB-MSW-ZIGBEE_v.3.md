@@ -1,6 +1,6 @@
 ---
-title: "Sprut.device WB-MSW-ZIGBEE v.3 control via MQTT"
-description: "Integrate your Sprut.device WB-MSW-ZIGBEE v.3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Wirenboard WB-MSW-ZIGBEE v.3 control via MQTT"
+description: "Integrate your Wirenboard WB-MSW-ZIGBEE v.3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-12-31T16:51:16
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Sprut.device WB-MSW-ZIGBEE v.3
+# Wirenboard WB-MSW-ZIGBEE v.3
 
 |     |     |
 |-----|-----|
 | Model | WB-MSW-ZIGBEE v.3  |
-| Vendor  | [Sprut.device](/supported-devices/#v=Sprut.device)  |
+| Vendor  | [Wirenboard](/supported-devices/#v=Wirenboard)  |
 | Description | Wall-mounted Zigbee sensor |
 | Exposes | temperature, illuminance, illuminance_lux, humidity, occupancy, occupancy_level, co2, voc, noise, noise_detected, switch (state), noise_timeout, occupancy_timeout, temperature_offset, occupancy_sensitivity, noise_detect_level, co2_autocalibration, co2_manual_calibration, th_heater, linkquality |
-| Picture | ![Sprut.device WB-MSW-ZIGBEE v.3](https://www.zigbee2mqtt.io/images/devices/WB-MSW-ZIGBEE-v.3.jpg) |
+| Picture | ![Wirenboard WB-MSW-ZIGBEE v.3](https://www.zigbee2mqtt.io/images/devices/WB-MSW-ZIGBEE-v.3.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

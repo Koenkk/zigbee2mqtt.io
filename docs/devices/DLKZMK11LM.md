@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi DLKZMK11LM control via MQTT"
-description: "Integrate your Xiaomi DLKZMK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara DLKZMK11LM control via MQTT"
+description: "Integrate your Aqara DLKZMK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-01T17:18:02Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi DLKZMK11LM
+# Aqara DLKZMK11LM
 
 |     |     |
 |-----|-----|
 | Model | DLKZMK11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara single switch module T1 (with neutral) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Single switch module T1 (with neutral), CN |
 | Exposes | switch (state), power, energy, device_temperature, voltage, current, power_outage_memory, led_disabled_night, switch_type, linkquality |
-| Picture | ![Xiaomi DLKZMK11LM](https://www.zigbee2mqtt.io/images/devices/DLKZMK11LM.jpg) |
+| Picture | ![Aqara DLKZMK11LM](https://www.zigbee2mqtt.io/images/devices/DLKZMK11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

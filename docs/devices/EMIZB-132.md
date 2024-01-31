@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EMIZB-132  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Wattle AMS HAN power-meter sensor |
-| Exposes | power, energy, current, voltage, current_phase_b, voltage_phase_b, current_phase_c, voltage_phase_c, linkquality |
+| Exposes | power, power_reactive, energy, current, voltage, current_phase_b, voltage_phase_b, current_phase_c, voltage_phase_c, linkquality |
 | Picture | ![Develco EMIZB-132](https://www.zigbee2mqtt.io/images/devices/EMIZB-132.jpg) |
 
 
@@ -94,10 +94,16 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Power (numeric)
-Instantaneous measured power.
+Total active power.
 Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
+
+### Power reactive (numeric)
+Total reactive power.
+Value can be found in the published state on the `power_reactive` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `VAr`.
 
 ### Energy (numeric)
 Sum of consumed energy.

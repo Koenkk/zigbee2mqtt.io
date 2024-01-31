@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi MFKZQ01LM control via MQTT"
-description: "Integrate your Xiaomi MFKZQ01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara MFKZQ01LM control via MQTT"
+description: "Integrate your Aqara MFKZQ01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:54
 pageClass: device-page
 ---
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi MFKZQ01LM
+# Aqara MFKZQ01LM
 
 |     |     |
 |-----|-----|
 | Model | MFKZQ01LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Mi/Aqara smart home cube |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Cube |
 | Exposes | battery, voltage, action_angle, device_temperature, power_outage_count, action_from_side, action_side, action_to_side, side, action, linkquality |
-| Picture | ![Xiaomi MFKZQ01LM](https://www.zigbee2mqtt.io/images/devices/MFKZQ01LM.jpg) |
+| Picture | ![Aqara MFKZQ01LM](https://www.zigbee2mqtt.io/images/devices/MFKZQ01LM.jpg) |
+| White-label | Xiaomi MFKZQ01LM |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -40,7 +41,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

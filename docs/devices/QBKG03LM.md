@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi QBKG03LM control via MQTT"
-description: "Integrate your Xiaomi QBKG03LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara QBKG03LM control via MQTT"
+description: "Integrate your Aqara QBKG03LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi QBKG03LM
+# Aqara QBKG03LM
 
 |     |     |
 |-----|-----|
 | Model | QBKG03LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara double key wired wall switch without neutral wire. Doesn't work as a router and doesn't support power meter |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch (no neutral, double rocker) |
 | Exposes | switch (state), device_temperature, action, operation_mode, linkquality |
-| Picture | ![Xiaomi QBKG03LM](https://www.zigbee2mqtt.io/images/devices/QBKG03LM.jpg) |
+| Picture | ![Aqara QBKG03LM](https://www.zigbee2mqtt.io/images/devices/QBKG03LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

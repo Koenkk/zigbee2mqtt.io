@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNGZDJ11LM control via MQTT"
-description: "Integrate your Xiaomi ZNGZDJ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNGZDJ11LM control via MQTT"
+description: "Integrate your Aqara ZNGZDJ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-07-01T08:15:09
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNGZDJ11LM
+# Aqara ZNGZDJ11LM
 
 |     |     |
 |-----|-----|
 | Model | ZNGZDJ11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara roller shade motor |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Roller shade controller |
 | Exposes | cover (state, position), running, linkquality |
-| Picture | ![Xiaomi ZNGZDJ11LM](https://www.zigbee2mqtt.io/images/devices/ZNGZDJ11LM.jpg) |
-| White-label | Xiaomi SRSC-M01 |
+| Picture | ![Aqara ZNGZDJ11LM](https://www.zigbee2mqtt.io/images/devices/ZNGZDJ11LM.jpg) |
+| White-label | Aqara SRSC-M01 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

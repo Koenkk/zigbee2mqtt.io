@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNQBKG26LM control via MQTT"
-description: "Integrate your Xiaomi ZNQBKG26LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNQBKG26LM control via MQTT"
+description: "Integrate your Aqara ZNQBKG26LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-01T08:16:21
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNQBKG26LM
+# Aqara ZNQBKG26LM
 
 |     |     |
 |-----|-----|
 | Model | ZNQBKG26LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart wall switch H1M (with neutral, triple rocker) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch H1M (with neutral, triple rocker) |
 | Exposes | switch (state), operation_mode, action, device_temperature, flip_indicator_light, linkquality |
-| Picture | ![Xiaomi ZNQBKG26LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG26LM.jpg) |
+| Picture | ![Aqara ZNQBKG26LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG26LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

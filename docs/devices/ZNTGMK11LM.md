@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNTGMK11LM control via MQTT"
-description: "Integrate your Xiaomi ZNTGMK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNTGMK11LM control via MQTT"
+description: "Integrate your Aqara ZNTGMK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-08-11T22:17:44Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNTGMK11LM
+# Aqara ZNTGMK11LM
 
 |     |     |
 |-----|-----|
 | Model | ZNTGMK11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart RGBW light controller |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart RGBW light controller |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, power_on_behavior, linkquality |
-| Picture | ![Xiaomi ZNTGMK11LM](https://www.zigbee2mqtt.io/images/devices/ZNTGMK11LM.jpg) |
+| Picture | ![Aqara ZNTGMK11LM](https://www.zigbee2mqtt.io/images/devices/ZNTGMK11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

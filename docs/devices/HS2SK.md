@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Smart metering plug |
 | Exposes | switch (state), power, current, voltage, energy, linkquality |
 | Picture | ![HEIMAN HS2SK](https://www.zigbee2mqtt.io/images/devices/HS2SK.jpg) |
+| White-label | Schneider Electric CCTFR6500 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

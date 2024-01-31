@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi RTCZCGQ11LM control via MQTT"
-description: "Integrate your Xiaomi RTCZCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara RTCZCGQ11LM control via MQTT"
+description: "Integrate your Aqara RTCZCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi RTCZCGQ11LM
+# Aqara RTCZCGQ11LM
 
 |     |     |
 |-----|-----|
 | Model | RTCZCGQ11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara presence detector FP1 |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Presence sensor FP1 |
 | Exposes | presence, device_temperature, power_outage_count, presence_event, monitoring_mode, approach_distance, motion_sensitivity, reset_nopresence_status, action, region_upsert, region_delete, linkquality |
-| Picture | ![Xiaomi RTCZCGQ11LM](https://www.zigbee2mqtt.io/images/devices/RTCZCGQ11LM.jpg) |
+| Picture | ![Aqara RTCZCGQ11LM](https://www.zigbee2mqtt.io/images/devices/RTCZCGQ11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -30,7 +30,6 @@ Then press the main button for at least 5 seconds and the red LED start fast fla
 - Then loose the button, the red LED starts goes to normal flashing, the flashing frequency is 0.5 s on and 0.5 s off, and keep on flashing 3 mins.
 - If the vibration sensor is paired successfully, the red LED turns green, and for about 10 seconds, then stop blinking and turns off.
 - If the vibration sensor fails to join in the network, the red LED will keep on flashing 3 minutes, then turn off.
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -63,7 +62,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

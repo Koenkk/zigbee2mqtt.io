@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | RSH-HS06  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | Temperature & humidity sensor |
-| Exposes | battery, temperature, humidity, voltage, linkquality |
+| Description | Temperature and humidity sensor |
+| Exposes | battery, temperature, humidity, linkquality |
 | Picture | ![TuYa RSH-HS06](https://www.zigbee2mqtt.io/images/devices/RSH-HS06.jpg) |
 
 
@@ -46,7 +46,7 @@ Press and hold the reset switch on the device, the pin hole on the side of the d
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -63,12 +63,6 @@ Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
-
-### Voltage (numeric)
-Voltage of the battery in millivolts.
-Value can be found in the published state on the `voltage` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mV`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

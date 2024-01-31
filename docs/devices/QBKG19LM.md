@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi QBKG19LM control via MQTT"
-description: "Integrate your Xiaomi QBKG19LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara QBKG19LM control via MQTT"
+description: "Integrate your Aqara QBKG19LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi QBKG19LM
+# Aqara QBKG19LM
 
 |     |     |
 |-----|-----|
 | Model | QBKG19LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart wall switch T1 (with neutral, single rocker) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch T1 (with neutral, double rocker) |
 | Exposes | switch (state), action, power, energy, voltage, device_temperature, power_outage_memory, led_disabled_night, flip_indicator_light, operation_mode, linkquality |
-| Picture | ![Xiaomi QBKG19LM](https://www.zigbee2mqtt.io/images/devices/QBKG19LM.jpg) |
+| Picture | ![Aqara QBKG19LM](https://www.zigbee2mqtt.io/images/devices/QBKG19LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

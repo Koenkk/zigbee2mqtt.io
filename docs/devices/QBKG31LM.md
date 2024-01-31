@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi QBKG31LM control via MQTT"
-description: "Integrate your Xiaomi QBKG31LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara QBKG31LM control via MQTT"
+description: "Integrate your Aqara QBKG31LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-09-01T18:11:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi QBKG31LM
+# Aqara QBKG31LM
 
 |     |     |
 |-----|-----|
 | Model | QBKG31LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart wall switch H1 Pro (with neutral, double rocker) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch H1 Pro (with neutral, double rocker) |
 | Exposes | switch (state), power, energy, voltage, device_temperature, power_outage_memory, led_disabled_night, flip_indicator_light, action, operation_mode, power_outage_count, linkquality |
-| Picture | ![Xiaomi QBKG31LM](https://www.zigbee2mqtt.io/images/devices/QBKG31LM.jpg) |
+| Picture | ![Aqara QBKG31LM](https://www.zigbee2mqtt.io/images/devices/QBKG31LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

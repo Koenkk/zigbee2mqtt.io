@@ -34,7 +34,6 @@ Set the device to Zigbee mode by short pressing the push-button for 4 times and 
 **NOTE**: Do not release the button when it flashes at a low frequency.
 
 Release the button and wait until the LED blinks red and green or there is no LED indication.
-
 <!-- Notes END: Do not edit below this line -->
 
 

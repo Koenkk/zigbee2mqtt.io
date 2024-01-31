@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi SJCGQ12LM control via MQTT"
-description: "Integrate your Xiaomi SJCGQ12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara SJCGQ12LM control via MQTT"
+description: "Integrate your Aqara SJCGQ12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:54
 pageClass: device-page
 ---
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi SJCGQ12LM
+# Aqara SJCGQ12LM
 
 |     |     |
 |-----|-----|
 | Model | SJCGQ12LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara T1 water leak sensor |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Water leak sensor T1 |
 | Exposes | battery, water_leak, battery_low, tamper, voltage, linkquality |
-| Picture | ![Xiaomi SJCGQ12LM](https://www.zigbee2mqtt.io/images/devices/SJCGQ12LM.jpg) |
+| Picture | ![Aqara SJCGQ12LM](https://www.zigbee2mqtt.io/images/devices/SJCGQ12LM.jpg) |
+| White-label | Aqara WL-S02D |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -36,7 +37,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

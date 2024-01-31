@@ -27,7 +27,6 @@ pageClass: device-page
 
 ### Pairing
 Pair the sensor to Zigbee2MQTT by long pressing the pair button for more than 10 seconds. The blue light on the front side should flash rapidly.
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -212,25 +211,25 @@ The unit of this value is `V`.
 
 ### EASD01 (numeric)
 Active energy withdrawn Distributor (index 01).
-Value can be found in the published state on the `active_enerfy_out_d01` property.
+Value can be found in the published state on the `active_energy_out_d01` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### EASD02 (numeric)
 Active energy withdrawn Distributor (index 02).
-Value can be found in the published state on the `active_enerfy_out_d02` property.
+Value can be found in the published state on the `active_energy_out_d02` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### EASD03 (numeric)
 Active energy withdrawn Distributor (index 03).
-Value can be found in the published state on the `active_enerfy_out_d03` property.
+Value can be found in the published state on the `active_energy_out_d03` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### EASD04 (numeric)
 Active energy withdrawn Distributor (index 04).
-Value can be found in the published state on the `active_enerfy_out_d04` property.
+Value can be found in the published state on the `active_energy_out_d04` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 

@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi WS-EUK04 control via MQTT"
-description: "Integrate your Xiaomi WS-EUK04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara WS-EUK04 control via MQTT"
+description: "Integrate your Aqara WS-EUK04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-09-01T18:11:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi WS-EUK04
+# Aqara WS-EUK04
 
 |     |     |
 |-----|-----|
 | Model | WS-EUK04  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart wall switch H1 EU (with neutral, double rocker) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch H1 EU (with neutral, double rocker) |
 | Exposes | switch (state), power, energy, operation_mode, action, device_temperature, power_outage_memory, flip_indicator_light, led_disabled_night, power_outage_count, linkquality |
-| Picture | ![Xiaomi WS-EUK04](https://www.zigbee2mqtt.io/images/devices/WS-EUK04.jpg) |
+| Picture | ![Aqara WS-EUK04](https://www.zigbee2mqtt.io/images/devices/WS-EUK04.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

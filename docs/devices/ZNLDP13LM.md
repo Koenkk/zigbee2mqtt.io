@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNLDP13LM control via MQTT"
-description: "Integrate your Xiaomi ZNLDP13LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNLDP13LM control via MQTT"
+description: "Integrate your Aqara ZNLDP13LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNLDP13LM
+# Aqara ZNLDP13LM
 
 |     |     |
 |-----|-----|
 | Model | ZNLDP13LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara T1 smart LED bulb |
-| Exposes | light (state, brightness, color_temp), power_outage_memory, device_temperature, power_outage_count, linkquality |
-| Picture | ![Xiaomi ZNLDP13LM](https://www.zigbee2mqtt.io/images/devices/ZNLDP13LM.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Light bulb T1 |
+| Exposes | light (state, brightness, color_temp), device_temperature, power_outage_count, power_outage_memory, linkquality |
+| Picture | ![Aqara ZNLDP13LM](https://www.zigbee2mqtt.io/images/devices/ZNLDP13LM.jpg) |
+| White-label | Aqara LEDLBT1-L01 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -82,13 +83,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 }
 ````
 
-### Power outage memory (binary)
-Enable/disable the power outage memory, this recovers the on/off mode after power failure.
-Value can be found in the published state on the `power_outage_memory` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-If value equals `true` power outage memory is ON, if `false` OFF.
-
 ### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
@@ -99,6 +93,13 @@ The unit of this value is `°C`.
 Number of power outages (since last pairing).
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Power outage memory (binary)
+Enable/disable the power outage memory, this recovers the on/off mode after power failure.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+If value equals `true` power outage memory is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

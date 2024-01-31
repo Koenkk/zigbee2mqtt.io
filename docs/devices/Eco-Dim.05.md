@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | Eco-Dim.05  |
 | Vendor  | [EcoDim](/supported-devices/#v=EcoDim)  |
 | Description | LED dimmer duo 2x 0-100W |
-| Exposes | light (state, brightness), linkquality |
+| Exposes | light (state, brightness), power_on_behavior, linkquality |
 | Picture | ![EcoDim Eco-Dim.05](https://www.zigbee2mqtt.io/images/devices/Eco-Dim.05.jpg) |
 
 
@@ -102,6 +102,13 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_step": 40 // Increases brightness by 40
 }
 ````
+
+### Power-on behavior (enum)
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi KQJCMB11LM control via MQTT"
-description: "Integrate your Xiaomi KQJCMB11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara KQJCMB11LM control via MQTT"
+description: "Integrate your Aqara KQJCMB11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-01-01T08:59:10
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi KQJCMB11LM
+# Aqara KQJCMB11LM
 
 |     |     |
 |-----|-----|
 | Model | KQJCMB11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara air monitoring panel S1 |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Air monitoring panel S1 |
 | Exposes | temperature, humidity, pm25, co2, linkquality |
-| Picture | ![Xiaomi KQJCMB11LM](https://www.zigbee2mqtt.io/images/devices/KQJCMB11LM.jpg) |
+| Picture | ![Aqara KQJCMB11LM](https://www.zigbee2mqtt.io/images/devices/KQJCMB11LM.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
