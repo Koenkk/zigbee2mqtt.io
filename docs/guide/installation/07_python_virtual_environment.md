@@ -75,7 +75,12 @@ Description=zigbee2mqtt
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c 'source /opt/zigbee2mqtt/bin/activate; /opt/zigbee2mqtt/bin/npm start'
+Type=notify
+Environment=NODE_PATH=/opt/zigbee2mqtt/lib/node_modules
+Environment=NPM_CONFIG_PREFIX=/opt/zigbee2mqtt
+Environment=npm_config_prefix=/opt/zigbee2mqtt
+Environment=NODE_ENV=production
+ExecStart=/opt/zigbee2mqtt/bin/node index.js
 WorkingDirectory=/opt/zigbee2mqtt
 StandardOutput=inherit
 StandardError=inherit
