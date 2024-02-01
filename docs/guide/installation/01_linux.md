@@ -156,12 +156,13 @@ After=network.target
 
 [Service]
 Environment=NODE_ENV=production
-Type=exec
-ExecStart=/usr/bin/npm start
+Type=notify
+ExecStart=/usr/bin/node index.js
 WorkingDirectory=/opt/zigbee2mqtt
 StandardOutput=inherit
 # Or use StandardOutput=null if you don't want Zigbee2MQTT messages filling syslog, for more options see systemd.exec(5)
 StandardError=inherit
+WatchdogSec=10s
 Restart=always
 RestartSec=10s
 User=pi
@@ -170,7 +171,7 @@ User=pi
 WantedBy=multi-user.target
 ```
 
-> If you are using a Raspberry Pi 1 or Zero AND if you followed this [guide](https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb), replace `ExecStart=/usr/bin/npm start` with `ExecStart=/usr/local/bin/npm start`.
+> If you are using a Raspberry Pi 1 or Zero AND if you followed this [guide](https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb), replace `ExecStart=/usr/bin/node index.js` with `ExecStart=/usr/local/bin/node index.js`.
 
 > If you are using a Raspberry Pi or a system running from a SD card, you will likely want to minimize the amount of log files written to disk. Systemd service with `StandardOutput=inherit` will result in logging everything twice: once in `journalctl` through the systemd unit and once from Zigbee2MQTT default logging to files under `data/log`. You will likely want to keep only one of them: 
 > > Keep only the logs under `data/log` --> use `StandardOutput=null` in the systemd unit.  **or** 
@@ -179,7 +180,7 @@ WantedBy=multi-user.target
 
 > If you want to use another directory to place all Zigbee2MQTT data, add `Environment=ZIGBEE2MQTT_DATA=/path/to/data` below `[Service]`
 
-> Using `Type=exec` is convenient so the systemctl is informed if the service can't start because of problems in the unit definition.
+> Using `Type=notify` makes systemd aware of when zigbee2mqtt has started up and is e.g. listening on its [Frontend](../configuration/frontend.md) sockets. This is useful for starting other, dependent systemd units or for using the `ExecStartPost=` attribute. For example, to allow a [Reverse Proxy](../configuration/frontend.md#nginx-proxy-configuration) to access zigbee2mqtt's Unix socket, you could add `ExecStartPost=setfacl -m u:www-data:rw /run/zigbee2mqtt/zigbee2mqtt.sock` to the `[Service]` section and `apt install acl`.
 
 Save the file and exit.
 
@@ -200,9 +201,7 @@ pi@raspberry:/opt/zigbee2mqtt $ systemctl status zigbee2mqtt.service
    Active: active (running) since Thu 2018-06-07 20:27:22 BST; 3s ago
  Main PID: 665 (npm)
    CGroup: /system.slice/zigbee2mqtt.service
-           ├─665 npm
-           ├─678 sh -c node index.js
-           └─679 node index.js
+           └─679 /usr/bin/node index.js
 
 Jun 07 20:27:22 raspberry systemd[1]: Started zigbee2mqtt.
 Jun 07 20:27:23 raspberry npm[665]: > zigbee2mqtt@1.6.0 start /opt/zigbee2mqtt
