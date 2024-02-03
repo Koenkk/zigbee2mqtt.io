@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Nexelec](/supported-devices/#v=Nexelec)  |
 | Description | 3-in-1 room sensor |
 | Exposes | temperature, humidity, co2, battery, linkquality |
-| Picture | ![Nexelec Open'R](https://www.zigbee2mqtt.io/images/devices/Open'R.jpg) |
+| Picture | ![Nexelec Open'R](https://www.zigbee2mqtt.io/images/devices/Open-R.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

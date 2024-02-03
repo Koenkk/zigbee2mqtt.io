@@ -15,6 +15,7 @@ function getImageName(model) {
   const replaceByDash = [
     new RegExp('/', 'g'),
     new RegExp(':', 'g'),
+    new RegExp(`'`, 'g'),
     new RegExp(' ', 'g'),
   ];
   let image = model;
