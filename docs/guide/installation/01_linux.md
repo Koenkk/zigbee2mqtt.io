@@ -36,7 +36,7 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 # NOTE 1: Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/ e.g. Version 20.9.0 should work.
 # NOTE 2: For Ubuntu see tip below
 sudo curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y nodejs git make g++ gcc
+sudo apt-get install -y nodejs git make g++ gcc libsystemd-dev
 
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
 # version has been installed
