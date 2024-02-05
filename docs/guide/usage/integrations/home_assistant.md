@@ -215,8 +215,8 @@ script:
         topic: zigbee2mqtt/bridge/request/device/rename
         payload_template: >-
           {
-            "from": "{{ states.input_text.zigbee2mqtt_old_name.state | string }}",
-            "to": "{{ states.input_text.zigbee2mqtt_new_name.state | string }}"
+            "from": "{{ states('input_text.zigbee2mqtt_old_name') }}",
+            "to": "{{ states('input_text.zigbee2mqtt_new_name') }}"
           }
   zigbee2mqtt_remove:
     alias: Zigbee2MQTT Remove
@@ -227,8 +227,8 @@ script:
         topic: zigbee2mqtt/bridge/request/device/remove
         payload_template: >-
           {
-            "id": "{{ states.input_text.zigbee2mqtt_remove.state | string }}",
-            "force": {% if states.input_boolean.zigbee2mqtt_force_remove.state == "off" %}false{% else %}true{% endif %}
+            "id": "{{ states('input_text.zigbee2mqtt_remove') }}",
+            "force": {{ is_state('input_boolean.zigbee2mqtt_force_remove', 'on') }}
           }
 
 
