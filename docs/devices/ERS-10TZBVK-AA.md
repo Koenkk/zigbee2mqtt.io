@@ -54,12 +54,12 @@ Action_Rate = Keeps "No value" all the time
 - `EVENT` mode
 
 | User Action  | `action` property |
-| ------------- | ------------- |
-| Rotate Left | rotate_left |
-| Rotate Left | rotate_right |
+|--------------| ------------- |
+| Rotate Left  | rotate_left |
+| Rotate Right | rotate_right |
 | Single Click | single |
 | Double Click | double |
-| Hold | hold |
+| Hold         | hold |
 
 action_step_size, action_transition_time, action_rate are still present but show "no value"
 <!-- Notes END: Do not edit below this line -->
