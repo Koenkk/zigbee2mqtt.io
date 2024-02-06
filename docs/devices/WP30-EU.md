@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LELLKI](/supported-devices/#v=LELLKI)  |
 | Description | Power cord 4 sockets EU (with power monitoring) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
-| Picture | ![LELLKI WP30-EU](https://www.zigbee2mqtt.io/images/devices/WP30-EU.jpg) |
+| Picture | ![LELLKI WP30-EU](https://www.zigbee2mqtt.io/images/devices/WP30-EU.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

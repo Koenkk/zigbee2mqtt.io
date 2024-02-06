@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart emergency button |
 | Exposes | battery, action, linkquality |
-| Picture | ![HEIMAN HS1EB/HS1EB-E](https://www.zigbee2mqtt.io/images/devices/HS1EB-HS1EB-E.jpg) |
+| Picture | ![HEIMAN HS1EB/HS1EB-E](https://www.zigbee2mqtt.io/images/devices/HS1EB-HS1EB-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Door windows sensor |
 | Exposes | contact, battery, linkquality |
-| Picture | ![Sunricher SR-ZG9010A](https://www.zigbee2mqtt.io/images/devices/SR-ZG9010A.jpg) |
+| Picture | ![Sunricher SR-ZG9010A](https://www.zigbee2mqtt.io/images/devices/SR-ZG9010A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

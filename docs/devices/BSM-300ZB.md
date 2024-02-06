@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS remote control |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![ShinaSystem BSM-300ZB](https://www.zigbee2mqtt.io/images/devices/BSM-300ZB.jpg) |
+| Picture | ![ShinaSystem BSM-300ZB](https://www.zigbee2mqtt.io/images/devices/BSM-300ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 3 gang wall ac outlet |
 | Exposes | switch (state), power_outage_memory, lock (state), linkquality |
-| Picture | ![TuYa TS011F_3_gang](https://www.zigbee2mqtt.io/images/devices/TS011F_3_gang.jpg) |
+| Picture | ![TuYa TS011F_3_gang](https://www.zigbee2mqtt.io/images/devices/TS011F_3_gang.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

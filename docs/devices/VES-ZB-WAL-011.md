@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Vesternet](/supported-devices/#v=Vesternet)  |
 | Description | Zigbee wall controller - 4 button |
 | Exposes | battery, action, linkquality |
-| Picture | ![Vesternet VES-ZB-WAL-011](https://www.zigbee2mqtt.io/images/devices/VES-ZB-WAL-011.jpg) |
+| Picture | ![Vesternet VES-ZB-WAL-011](https://www.zigbee2mqtt.io/images/devices/VES-ZB-WAL-011.png) |
 | White-label | Sunricher SR-ZG9001K4-DIM2 |
 
 

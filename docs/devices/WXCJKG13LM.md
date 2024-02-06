@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Opple wireless switch (triple band) |
 | Exposes | battery, voltage, action, operation_mode, power_outage_count, linkquality |
-| Picture | ![Aqara WXCJKG13LM](https://www.zigbee2mqtt.io/images/devices/WXCJKG13LM.jpg) |
+| Picture | ![Aqara WXCJKG13LM](https://www.zigbee2mqtt.io/images/devices/WXCJKG13LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

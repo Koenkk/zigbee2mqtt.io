@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Feibit](/supported-devices/#v=Feibit)  |
 | Description | Smart light switch - 2 gang |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Feibit TZSW22FW-L4](https://www.zigbee2mqtt.io/images/devices/TZSW22FW-L4.jpg) |
+| Picture | ![Feibit TZSW22FW-L4](https://www.zigbee2mqtt.io/images/devices/TZSW22FW-L4.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

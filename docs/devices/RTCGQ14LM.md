@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Motion sensor P1 |
 | Exposes | occupancy, illuminance_lux, illuminance, motion_sensitivity, detection_interval, trigger_indicator, device_temperature, battery, voltage, linkquality |
-| Picture | ![Aqara RTCGQ14LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ14LM.jpg) |
+| Picture | ![Aqara RTCGQ14LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ14LM.png) |
 | White-label | Aqara MS-S02 |
 
 

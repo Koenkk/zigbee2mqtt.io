@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [frient](/supported-devices/#v=frient)  |
 | Description | Smart powermeter Zigbee bridge |
 | Exposes | battery, power, energy, linkquality |
-| Picture | ![frient EMIZB-141](https://www.zigbee2mqtt.io/images/devices/EMIZB-141.jpg) |
+| Picture | ![frient EMIZB-141](https://www.zigbee2mqtt.io/images/devices/EMIZB-141.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

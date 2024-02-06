@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart smoke alarm |
 | Exposes | smoke, fault_alarm, battery_state, battery, silence, self_test, smoke_concentration, linkquality |
-| Picture | ![TuYa ZSS-QY-SSD-A-EN](https://www.zigbee2mqtt.io/images/devices/ZSS-QY-SSD-A-EN.jpg) |
+| Picture | ![TuYa ZSS-QY-SSD-A-EN](https://www.zigbee2mqtt.io/images/devices/ZSS-QY-SSD-A-EN.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

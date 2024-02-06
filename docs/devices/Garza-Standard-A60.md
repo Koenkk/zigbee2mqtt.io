@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Garza Smart](/supported-devices/#v=Garza%20Smart)  |
 | Description | Standard A60 bulb |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![Garza Smart Garza-Standard-A60](https://www.zigbee2mqtt.io/images/devices/Garza-Standard-A60.jpg) |
+| Picture | ![Garza Smart Garza-Standard-A60](https://www.zigbee2mqtt.io/images/devices/Garza-Standard-A60.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

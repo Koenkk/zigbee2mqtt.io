@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Cover motor |
 | Exposes | battery, cover (state, position), reverse_direction, border, click_control, motor_fault, linkquality |
-| Picture | ![TuYa TS0601_cover_3](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_3.jpg) |
+| Picture | ![TuYa TS0601_cover_3](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_3.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Paul Neuhaus](/supported-devices/#v=Paul%20Neuhaus)  |
 | Description | Various RGB + tunable white lights (e.g. 100.470.92) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![Paul Neuhaus NLG-RGB-TW light](https://www.zigbee2mqtt.io/images/devices/NLG-RGB-TW-light.jpg) |
+| Picture | ![Paul Neuhaus NLG-RGB-TW light](https://www.zigbee2mqtt.io/images/devices/NLG-RGB-TW-light.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

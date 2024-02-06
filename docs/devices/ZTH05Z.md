@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature and humidity sensor |
 | Exposes | temperature, humidity, battery, temperature_unit, max_temperature_alarm, min_temperature_alarm, max_humidity_alarm, min_humidity_alarm, temperature_alarm, humidity_alarm, temperature_periodic_report, humidity_periodic_report, temperature_sensitivity, humidity_sensitivity, linkquality |
-| Picture | ![TuYa ZTH05Z](https://www.zigbee2mqtt.io/images/devices/ZTH05Z.jpg) |
+| Picture | ![TuYa ZTH05Z](https://www.zigbee2mqtt.io/images/devices/ZTH05Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

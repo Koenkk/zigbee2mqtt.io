@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Mi temperature and humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
-| Picture | ![Xiaomi WSDCGQ01LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ01LM.jpg) |
+| Picture | ![Xiaomi WSDCGQ01LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ01LM.png) |
 | White-label | Xiaomi YTC4042GL, Xiaomi YTC4007CN, Xiaomi YTC4018CN |
 
 

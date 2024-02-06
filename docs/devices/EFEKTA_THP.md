@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | [DIY temperature, humidity and atmospheric pressure sensor, long battery life](http://efektalab.com/eON_THP) |
 | Exposes | battery, temperature, humidity, pressure, linkquality |
-| Picture | ![Custom devices (DiY) EFEKTA_THP](https://www.zigbee2mqtt.io/images/devices/EFEKTA_THP.jpg) |
+| Picture | ![Custom devices (DiY) EFEKTA_THP](https://www.zigbee2mqtt.io/images/devices/EFEKTA_THP.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

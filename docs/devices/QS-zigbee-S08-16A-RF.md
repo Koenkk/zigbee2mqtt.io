@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Wall switch module |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
-| Picture | ![TuYa QS-zigbee-S08-16A-RF](https://www.zigbee2mqtt.io/images/devices/QS-zigbee-S08-16A-RF.jpg) |
+| Picture | ![TuYa QS-zigbee-S08-16A-RF](https://www.zigbee2mqtt.io/images/devices/QS-zigbee-S08-16A-RF.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

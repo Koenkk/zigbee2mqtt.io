@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Rylike](/supported-devices/#v=Rylike)  |
 | Description | 2 gang socket outlet AU |
 | Exposes | switch (state), power_on_behavior, backlight_mode, lock (state), linkquality |
-| Picture | ![Rylike RY-WS02Z](https://www.zigbee2mqtt.io/images/devices/RY-WS02Z.jpg) |
+| Picture | ![Rylike RY-WS02Z](https://www.zigbee2mqtt.io/images/devices/RY-WS02Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

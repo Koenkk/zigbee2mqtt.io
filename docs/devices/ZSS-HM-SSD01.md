@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smoke sensor |
 | Exposes | smoke, battery, battery_state, silence, self_test, linkquality |
-| Picture | ![Moes ZSS-HM-SSD01](https://www.zigbee2mqtt.io/images/devices/ZSS-HM-SSD01.jpg) |
+| Picture | ![Moes ZSS-HM-SSD01](https://www.zigbee2mqtt.io/images/devices/ZSS-HM-SSD01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

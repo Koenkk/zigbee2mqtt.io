@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LifeControl](/supported-devices/#v=LifeControl)  |
 | Description | Water leak switch |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
-| Picture | ![LifeControl MCLH-07](https://www.zigbee2mqtt.io/images/devices/MCLH-07.jpg) |
+| Picture | ![LifeControl MCLH-07](https://www.zigbee2mqtt.io/images/devices/MCLH-07.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

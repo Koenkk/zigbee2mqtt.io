@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Livolo](/supported-devices/#v=Livolo)  |
 | Description | Zigbee dimmer |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![Livolo TI0001-dimmer](https://www.zigbee2mqtt.io/images/devices/TI0001-dimmer.jpg) |
+| Picture | ![Livolo TI0001-dimmer](https://www.zigbee2mqtt.io/images/devices/TI0001-dimmer.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

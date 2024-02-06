@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | Inline Switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Mercator Ikuü SISW01](https://www.zigbee2mqtt.io/images/devices/SISW01.jpg) |
+| Picture | ![Mercator Ikuü SISW01](https://www.zigbee2mqtt.io/images/devices/SISW01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

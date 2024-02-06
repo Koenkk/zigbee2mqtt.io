@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | mTouch One OP, touch thermostat |
 | Exposes | lock (state), climate (occupied_heating_setpoint, local_temperature, system_mode, preset, running_state), load, display_text, regulator_mode, mean_power, floor_temp, frost_guard, regulator_setpoint, air_temp, linkquality |
-| Picture | ![CTM Lyng mTouch_One](https://www.zigbee2mqtt.io/images/devices/mTouch_One.jpg) |
+| Picture | ![CTM Lyng mTouch_One](https://www.zigbee2mqtt.io/images/devices/mTouch_One.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

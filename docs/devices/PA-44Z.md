@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Photoelectric smoke detector |
 | Exposes | smoke, battery, test, smoke_concentration, device_fault, linkquality |
-| Picture | ![TuYa PA-44Z](https://www.zigbee2mqtt.io/images/devices/PA-44Z.jpg) |
+| Picture | ![TuYa PA-44Z](https://www.zigbee2mqtt.io/images/devices/PA-44Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

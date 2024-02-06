@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Zipato](/supported-devices/#v=Zipato)  |
 | Description | RGBW LED bulb with dimmer |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![Zipato rgbw2.zbee27](https://www.zigbee2mqtt.io/images/devices/rgbw2.zbee27.jpg) |
+| Picture | ![Zipato rgbw2.zbee27](https://www.zigbee2mqtt.io/images/devices/rgbw2.zbee27.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

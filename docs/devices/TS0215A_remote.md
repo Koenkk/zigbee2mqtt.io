@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Security remote control |
 | Exposes | battery, action, linkquality |
-| Picture | ![TuYa TS0215A_remote](https://www.zigbee2mqtt.io/images/devices/TS0215A_remote.jpg) |
+| Picture | ![TuYa TS0215A_remote](https://www.zigbee2mqtt.io/images/devices/TS0215A_remote.png) |
 | White-label | Woox R7054, Nedis ZBRC10WT |
 
 

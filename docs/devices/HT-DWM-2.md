@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Heimgard Technologies](/supported-devices/#v=Heimgard%20Technologies)  |
 | Description | Door sensor |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
-| Picture | ![Heimgard Technologies HT-DWM-2](https://www.zigbee2mqtt.io/images/devices/HT-DWM-2.jpg) |
+| Picture | ![Heimgard Technologies HT-DWM-2](https://www.zigbee2mqtt.io/images/devices/HT-DWM-2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

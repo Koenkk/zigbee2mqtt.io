@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart RGBW light controller |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, power_on_behavior, linkquality |
-| Picture | ![Aqara ZNTGMK11LM](https://www.zigbee2mqtt.io/images/devices/ZNTGMK11LM.jpg) |
+| Picture | ![Aqara ZNTGMK11LM](https://www.zigbee2mqtt.io/images/devices/ZNTGMK11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

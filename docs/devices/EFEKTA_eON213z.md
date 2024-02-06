@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | [Temperature and humidity sensor with e-ink2.13](http://efektalab.com/eON213z) |
 | Exposes | battery, temperature, humidity, linkquality |
-| Picture | ![Custom devices (DiY) EFEKTA_eON213z](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eON213z.jpg) |
+| Picture | ![Custom devices (DiY) EFEKTA_eON213z](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eON213z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

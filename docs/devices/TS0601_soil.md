@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Soil sensor |
 | Exposes | temperature, soil_moisture, temperature_unit, battery, battery_state, linkquality |
-| Picture | ![TuYa TS0601_soil](https://www.zigbee2mqtt.io/images/devices/TS0601_soil.jpg) |
+| Picture | ![TuYa TS0601_soil](https://www.zigbee2mqtt.io/images/devices/TS0601_soil.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

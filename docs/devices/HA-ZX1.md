@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Halemeier](/supported-devices/#v=Halemeier)  |
 | Description | X-Mitter smart remote control |
 | Exposes | action, battery, linkquality |
-| Picture | ![Halemeier HA-ZX1](https://www.zigbee2mqtt.io/images/devices/HA-ZX1.jpg) |
+| Picture | ![Halemeier HA-ZX1](https://www.zigbee2mqtt.io/images/devices/HA-ZX1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

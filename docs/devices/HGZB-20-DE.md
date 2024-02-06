@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Smart Home Pty](/supported-devices/#v=Smart%20Home%20Pty)  |
 | Description | Power plug |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Smart Home Pty HGZB-20-DE](https://www.zigbee2mqtt.io/images/devices/HGZB-20-DE.jpg) |
+| Picture | ![Smart Home Pty HGZB-20-DE](https://www.zigbee2mqtt.io/images/devices/HGZB-20-DE.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

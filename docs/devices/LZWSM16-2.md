@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [AVATTO](/supported-devices/#v=AVATTO)  |
 | Description | 2 gang switch module - (without neutral) |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
-| Picture | ![AVATTO LZWSM16-2](https://www.zigbee2mqtt.io/images/devices/LZWSM16-2.jpg) |
+| Picture | ![AVATTO LZWSM16-2](https://www.zigbee2mqtt.io/images/devices/LZWSM16-2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

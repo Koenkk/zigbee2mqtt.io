@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LivingWise](/supported-devices/#v=LivingWise)  |
 | Description | ZigBee smart in-wall switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![LivingWise LVS-ZB15S](https://www.zigbee2mqtt.io/images/devices/LVS-ZB15S.jpg) |
+| Picture | ![LivingWise LVS-ZB15S](https://www.zigbee2mqtt.io/images/devices/LVS-ZB15S.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

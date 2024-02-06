@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Cube |
 | Exposes | battery, voltage, action_angle, device_temperature, power_outage_count, action_from_side, action_side, action_to_side, side, action, linkquality |
-| Picture | ![Aqara MFKZQ01LM](https://www.zigbee2mqtt.io/images/devices/MFKZQ01LM.jpg) |
+| Picture | ![Aqara MFKZQ01LM](https://www.zigbee2mqtt.io/images/devices/MFKZQ01LM.png) |
 | White-label | Xiaomi MFKZQ01LM |
 
 

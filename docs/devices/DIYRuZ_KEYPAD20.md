@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
 | Description | [DiY 20 button keypad](http://modkam.ru/?p=1114) |
 | Exposes | battery, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_KEYPAD20](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_KEYPAD20.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_KEYPAD20](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_KEYPAD20.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

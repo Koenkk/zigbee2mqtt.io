@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee 5W GU10 Bulb RGBW |
 | Exposes | light (state, brightness, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-S-003Z](https://www.zigbee2mqtt.io/images/devices/GL-S-003Z.jpg) |
+| Picture | ![Gledopto GL-S-003Z](https://www.zigbee2mqtt.io/images/devices/GL-S-003Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

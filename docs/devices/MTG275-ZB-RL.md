@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2.4G/5.8G MmWave radar human presence motion sensor |
 | Exposes | presence, illuminance_lux, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance_indentation, entry_filter_time, departure_delay, block_time, breaker_status, breaker_mode, illuminance_threshold, status_indication, linkquality |
-| Picture | ![TuYa MTG275-ZB-RL](https://www.zigbee2mqtt.io/images/devices/MTG275-ZB-RL.jpg) |
+| Picture | ![TuYa MTG275-ZB-RL](https://www.zigbee2mqtt.io/images/devices/MTG275-ZB-RL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Mi smart plug US |
 | Exposes | switch (state), power, energy, device_temperature, voltage, current, consumer_connected, led_disabled_night, power_outage_memory, auto_off, overload_protection, linkquality |
-| Picture | ![Xiaomi ZNCZ12LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ12LM.jpg) |
+| Picture | ![Xiaomi ZNCZ12LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ12LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

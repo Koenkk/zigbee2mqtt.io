@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [iCasa](/supported-devices/#v=iCasa)  |
 | Description | Zigbee 3.0 Filament Lamp 60/64/95/125 mm, 806 lumen, dimmable, clear |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![iCasa ICZB-B1FC60/B3FC64/B2FC95/B2FC125](https://www.zigbee2mqtt.io/images/devices/ICZB-B1FC60-B3FC64-B2FC95-B2FC125.jpg) |
+| Picture | ![iCasa ICZB-B1FC60/B3FC64/B2FC95/B2FC125](https://www.zigbee2mqtt.io/images/devices/ICZB-B1FC60-B3FC64-B2FC95-B2FC125.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

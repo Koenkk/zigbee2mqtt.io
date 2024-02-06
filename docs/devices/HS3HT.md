@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Temperature & humidity sensor with display |
 | Exposes | battery, temperature, humidity, linkquality |
-| Picture | ![HEIMAN HS3HT](https://www.zigbee2mqtt.io/images/devices/HS3HT.jpg) |
+| Picture | ![HEIMAN HS3HT](https://www.zigbee2mqtt.io/images/devices/HS3HT.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | 5 zone remote and dimmer |
 | Exposes | battery, action, linkquality |
-| Picture | ![Sunricher SR-ZG9001K12-DIM-Z5](https://www.zigbee2mqtt.io/images/devices/SR-ZG9001K12-DIM-Z5.jpg) |
+| Picture | ![Sunricher SR-ZG9001K12-DIM-Z5](https://www.zigbee2mqtt.io/images/devices/SR-ZG9001K12-DIM-Z5.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

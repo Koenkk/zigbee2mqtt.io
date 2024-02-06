@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | 10A EU smart plug |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![ADEO LDSENK01F](https://www.zigbee2mqtt.io/images/devices/LDSENK01F.jpg) |
+| Picture | ![ADEO LDSENK01F](https://www.zigbee2mqtt.io/images/devices/LDSENK01F.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

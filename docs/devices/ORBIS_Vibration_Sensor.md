@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Niceboy](/supported-devices/#v=Niceboy)  |
 | Description | Vibration sensor |
 | Exposes | battery, voltage, vibration, sensitivity, linkquality |
-| Picture | ![Niceboy ORBIS Vibration Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Vibration-Sensor.jpg) |
+| Picture | ![Niceboy ORBIS Vibration Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Vibration-Sensor.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

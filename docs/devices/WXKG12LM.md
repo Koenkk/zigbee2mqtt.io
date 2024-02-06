@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless mini switch (with gyroscope) |
 | Exposes | battery, action, voltage, linkquality |
-| Picture | ![Aqara WXKG12LM](https://www.zigbee2mqtt.io/images/devices/WXKG12LM.jpg) |
+| Picture | ![Aqara WXKG12LM](https://www.zigbee2mqtt.io/images/devices/WXKG12LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

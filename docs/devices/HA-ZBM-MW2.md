@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Halemeier](/supported-devices/#v=Halemeier)  |
 | Description | S-Mitter basic MultiWhite² 1-channel sender Zigbee  |
 | Exposes | battery, action, linkquality |
-| Picture | ![Halemeier HA-ZBM-MW2](https://www.zigbee2mqtt.io/images/devices/HA-ZBM-MW2.jpg) |
+| Picture | ![Halemeier HA-ZBM-MW2](https://www.zigbee2mqtt.io/images/devices/HA-ZBM-MW2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

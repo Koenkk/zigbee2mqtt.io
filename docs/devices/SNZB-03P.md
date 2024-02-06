@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee PIR sensor |
 | Exposes | occupancy, battery_low, battery, motion_timeout, illumination, linkquality |
-| Picture | ![SONOFF SNZB-03P](https://www.zigbee2mqtt.io/images/devices/SNZB-03P.jpg) |
+| Picture | ![SONOFF SNZB-03P](https://www.zigbee2mqtt.io/images/devices/SNZB-03P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

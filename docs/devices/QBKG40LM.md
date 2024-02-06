@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch E1 (with neutral, single rocker) |
 | Exposes | switch (state), action, power_outage_memory, device_temperature, flip_indicator_light, operation_mode, linkquality |
-| Picture | ![Aqara QBKG40LM](https://www.zigbee2mqtt.io/images/devices/QBKG40LM.jpg) |
+| Picture | ![Aqara QBKG40LM](https://www.zigbee2mqtt.io/images/devices/QBKG40LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

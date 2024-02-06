@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | In-wall outlet |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![TuYa TS011F_wall_outlet](https://www.zigbee2mqtt.io/images/devices/TS011F_wall_outlet.jpg) |
+| Picture | ![TuYa TS011F_wall_outlet](https://www.zigbee2mqtt.io/images/devices/TS011F_wall_outlet.png) |
 | White-label | Teekar SWP86-01OG, BSEED Zigbee Socket |
 
 

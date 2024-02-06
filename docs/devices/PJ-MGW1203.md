@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Clamp meter |
 | Exposes | current, power, voltage, energy, linkquality |
-| Picture | ![TuYa PJ-MGW1203](https://www.zigbee2mqtt.io/images/devices/PJ-MGW1203.jpg) |
+| Picture | ![TuYa PJ-MGW1203](https://www.zigbee2mqtt.io/images/devices/PJ-MGW1203.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

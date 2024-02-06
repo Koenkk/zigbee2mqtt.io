@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee LED bulb |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![TuYa CK-BL702-AL-01](https://www.zigbee2mqtt.io/images/devices/CK-BL702-AL-01.jpg) |
+| Picture | ![TuYa CK-BL702-AL-01](https://www.zigbee2mqtt.io/images/devices/CK-BL702-AL-01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

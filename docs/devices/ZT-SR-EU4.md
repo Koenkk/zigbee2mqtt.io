@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Star Ring 4 Gang Scene Switch |
 | Exposes | battery, action, linkquality |
-| Picture | ![Moes ZT-SR-EU4](https://www.zigbee2mqtt.io/images/devices/ZT-SR-EU4.jpg) |
+| Picture | ![Moes ZT-SR-EU4](https://www.zigbee2mqtt.io/images/devices/ZT-SR-EU4.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

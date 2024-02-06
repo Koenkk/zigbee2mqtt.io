@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 24G radar human presence motion sensor. |
 | Exposes | illuminance, presence, presence_sensitivity, detection_range, detection_delay, illuminance_treshold_max, illuminance_treshold_min, presence_illuminance_switch, light_switch, light_linkage, detection_method, indicator_light, identify, linkquality |
-| Picture | ![TuYa CTL-R1-TY-Zigbee](https://www.zigbee2mqtt.io/images/devices/CTL-R1-TY-Zigbee.jpg) |
+| Picture | ![TuYa CTL-R1-TY-Zigbee](https://www.zigbee2mqtt.io/images/devices/CTL-R1-TY-Zigbee.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

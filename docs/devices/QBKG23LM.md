@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch D1 (with neutral, single rocker) |
 | Exposes | switch (state), power, energy, device_temperature, voltage, action, operation_mode, linkquality |
-| Picture | ![Aqara QBKG23LM](https://www.zigbee2mqtt.io/images/devices/QBKG23LM.jpg) |
+| Picture | ![Aqara QBKG23LM](https://www.zigbee2mqtt.io/images/devices/QBKG23LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

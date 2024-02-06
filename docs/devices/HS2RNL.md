@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart repeater & night light |
 | Exposes | switch (state), battery, linkquality |
-| Picture | ![HEIMAN HS2RNL](https://www.zigbee2mqtt.io/images/devices/HS2RNL.jpg) |
+| Picture | ![HEIMAN HS2RNL](https://www.zigbee2mqtt.io/images/devices/HS2RNL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

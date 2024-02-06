@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | Heating thermostat remote control |
 | Exposes | battery, linkquality |
-| Picture | ![Hive SLT3d](https://www.zigbee2mqtt.io/images/devices/SLT3d.jpg) |
+| Picture | ![Hive SLT3d](https://www.zigbee2mqtt.io/images/devices/SLT3d.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

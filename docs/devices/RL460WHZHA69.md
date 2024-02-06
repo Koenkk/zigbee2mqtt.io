@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Eaton/Halo LED](/supported-devices/#v=Eaton%2FHalo%20LED)  |
 | Description | Wireless Controlled LED retrofit downlight |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![Eaton/Halo LED RL460WHZHA69](https://www.zigbee2mqtt.io/images/devices/RL460WHZHA69.jpg) |
+| Picture | ![Eaton/Halo LED RL460WHZHA69](https://www.zigbee2mqtt.io/images/devices/RL460WHZHA69.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

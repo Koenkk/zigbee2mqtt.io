@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [KURVIA](/supported-devices/#v=KURVIA)  |
 | Description | GU10 GRBWC built from AliExpress |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![KURVIA ZB-CL01](https://www.zigbee2mqtt.io/images/devices/ZB-CL01.jpg) |
+| Picture | ![KURVIA ZB-CL01](https://www.zigbee2mqtt.io/images/devices/ZB-CL01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Vesternet](/supported-devices/#v=Vesternet)  |
 | Description | Zigbee motor controller |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Vesternet VES-ZB-MOT-019](https://www.zigbee2mqtt.io/images/devices/VES-ZB-MOT-019.jpg) |
+| Picture | ![Vesternet VES-ZB-MOT-019](https://www.zigbee2mqtt.io/images/devices/VES-ZB-MOT-019.png) |
 | White-label | Sunricher SR-ZG9080A |
 
 

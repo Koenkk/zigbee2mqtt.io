@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [WETEN](/supported-devices/#v=WETEN)  |
 | Description | PC switch |
 | Exposes | state, buzzer_feedback, lock (state), rf_pairing, linkquality |
-| Picture | ![WETEN PCI E](https://www.zigbee2mqtt.io/images/devices/PCI-E.jpg) |
+| Picture | ![WETEN PCI E](https://www.zigbee2mqtt.io/images/devices/PCI-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

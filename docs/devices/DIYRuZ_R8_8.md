@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
 | Description | [DiY 8 Relays + 8 switches](https://modkam.ru/?p=1638) |
 | Exposes | switch (state), linkquality |
-| Picture | ![DIYRuZ DIYRuZ_R8_8](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_R8_8.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_R8_8](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_R8_8.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

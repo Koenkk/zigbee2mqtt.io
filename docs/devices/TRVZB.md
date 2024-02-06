@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee thermostatic radiator valve |
 | Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), battery, battery_low, child_lock, open_window, frost_protection_temperature, idle_steps, closing_steps, valve_opening_limit_voltage, valve_closing_limit_voltage, valve_motor_running_voltage, schedule, linkquality |
-| Picture | ![SONOFF TRVZB](https://www.zigbee2mqtt.io/images/devices/TRVZB.jpg) |
+| Picture | ![SONOFF TRVZB](https://www.zigbee2mqtt.io/images/devices/TRVZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

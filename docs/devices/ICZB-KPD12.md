@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [iCasa](/supported-devices/#v=iCasa)  |
 | Description | Zigbee 3.0 Keypad Pulse 2 |
 | Exposes | battery, action, linkquality |
-| Picture | ![iCasa ICZB-KPD12](https://www.zigbee2mqtt.io/images/devices/ICZB-KPD12.jpg) |
+| Picture | ![iCasa ICZB-KPD12](https://www.zigbee2mqtt.io/images/devices/ICZB-KPD12.png) |
 | White-label | Sunricher SR-ZG9001K2-DIM |
 
 

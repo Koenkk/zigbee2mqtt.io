@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Neo](/supported-devices/#v=Neo)  |
 | Description | Outdoor solar alarm |
 | Exposes | alarm_state, alarm_switch, tamper_alarm_switch, tamper_alarm, alarm_melody, alarm_mode, alarm_time, charging, battery, linkquality |
-| Picture | ![Neo NAS-AB06B2](https://www.zigbee2mqtt.io/images/devices/NAS-AB06B2.jpg) |
+| Picture | ![Neo NAS-AB06B2](https://www.zigbee2mqtt.io/images/devices/NAS-AB06B2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

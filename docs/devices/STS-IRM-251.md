@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Motion sensor (2017 model) |
 | Exposes | temperature, occupancy, battery_low, tamper, battery, linkquality |
-| Picture | ![SmartThings STS-IRM-251](https://www.zigbee2mqtt.io/images/devices/STS-IRM-251.jpg) |
+| Picture | ![SmartThings STS-IRM-251](https://www.zigbee2mqtt.io/images/devices/STS-IRM-251.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

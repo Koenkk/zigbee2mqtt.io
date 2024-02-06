@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LDS](/supported-devices/#v=LDS)  |
 | Description | Ynoa smart LED E27 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![LDS ZBT-RGBWLight-A0000](https://www.zigbee2mqtt.io/images/devices/ZBT-RGBWLight-A0000.jpg) |
+| Picture | ![LDS ZBT-RGBWLight-A0000](https://www.zigbee2mqtt.io/images/devices/ZBT-RGBWLight-A0000.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

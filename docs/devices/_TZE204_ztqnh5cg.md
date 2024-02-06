@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [iHenso](/supported-devices/#v=iHenso)  |
 | Description | Human presence sensor |
 | Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, linkquality |
-| Picture | ![iHenso _TZE204_ztqnh5cg](https://www.zigbee2mqtt.io/images/devices/_TZE204_ztqnh5cg.jpg) |
+| Picture | ![iHenso _TZE204_ztqnh5cg](https://www.zigbee2mqtt.io/images/devices/_TZE204_ztqnh5cg.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

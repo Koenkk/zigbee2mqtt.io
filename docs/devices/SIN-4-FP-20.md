@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [NodOn](/supported-devices/#v=NodOn)  |
 | Description | Pilot wire heating module |
 | Exposes | power, energy, pilot_wire_mode, linkquality |
-| Picture | ![NodOn SIN-4-FP-20](https://www.zigbee2mqtt.io/images/devices/SIN-4-FP-20.jpg) |
+| Picture | ![NodOn SIN-4-FP-20](https://www.zigbee2mqtt.io/images/devices/SIN-4-FP-20.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart switch (no neutral) |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![SONOFF ZBMINI-L](https://www.zigbee2mqtt.io/images/devices/ZBMINI-L.jpg) |
+| Picture | ![SONOFF ZBMINI-L](https://www.zigbee2mqtt.io/images/devices/ZBMINI-L.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

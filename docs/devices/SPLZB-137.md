@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Power plug |
 | Exposes | switch (state), power, current, voltage, energy, ac_frequency, linkquality |
-| Picture | ![Develco SPLZB-137](https://www.zigbee2mqtt.io/images/devices/SPLZB-137.jpg) |
+| Picture | ![Develco SPLZB-137](https://www.zigbee2mqtt.io/images/devices/SPLZB-137.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

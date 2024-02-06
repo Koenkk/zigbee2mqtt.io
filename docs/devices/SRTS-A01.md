@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart radiator thermostat E1 |
 | Exposes | setup, climate (occupied_heating_setpoint, local_temperature, system_mode, preset), sensor, external_temperature_input, calibrated, calibrate, child_lock, window_detection, window_open, valve_detection, valve_alarm, away_preset_temperature, voltage, battery, power_outage_count, device_temperature, schedule, schedule_settings, linkquality |
-| Picture | ![Aqara SRTS-A01](https://www.zigbee2mqtt.io/images/devices/SRTS-A01.jpg) |
+| Picture | ![Aqara SRTS-A01](https://www.zigbee2mqtt.io/images/devices/SRTS-A01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

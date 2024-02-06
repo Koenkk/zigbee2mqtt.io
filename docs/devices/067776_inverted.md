@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Netatmo wired shutter switch |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Legrand 067776_inverted](https://www.zigbee2mqtt.io/images/devices/067776_inverted.jpg) |
+| Picture | ![Legrand 067776_inverted](https://www.zigbee2mqtt.io/images/devices/067776_inverted.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

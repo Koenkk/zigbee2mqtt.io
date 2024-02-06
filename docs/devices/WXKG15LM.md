@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless remote switch H1 (double rocker) |
 | Exposes | battery, voltage, action, click_mode, operation_mode, linkquality |
-| Picture | ![Aqara WXKG15LM](https://www.zigbee2mqtt.io/images/devices/WXKG15LM.jpg) |
+| Picture | ![Aqara WXKG15LM](https://www.zigbee2mqtt.io/images/devices/WXKG15LM.png) |
 | White-label | Aqara WRS-R02 |
 
 

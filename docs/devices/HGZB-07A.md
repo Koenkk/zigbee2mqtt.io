@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Smart Home Pty](/supported-devices/#v=Smart%20Home%20Pty)  |
 | Description | RGBW Downlight |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![Smart Home Pty HGZB-07A](https://www.zigbee2mqtt.io/images/devices/HGZB-07A.jpg) |
+| Picture | ![Smart Home Pty HGZB-07A](https://www.zigbee2mqtt.io/images/devices/HGZB-07A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch D1 (with neutral, double rocker) |
 | Exposes | switch (state), energy, power, action, operation_mode, linkquality |
-| Picture | ![Aqara QBKG24LM](https://www.zigbee2mqtt.io/images/devices/QBKG24LM.jpg) |
+| Picture | ![Aqara QBKG24LM](https://www.zigbee2mqtt.io/images/devices/QBKG24LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

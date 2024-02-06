@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Shenzhen Homa](/supported-devices/#v=Shenzhen%20Homa)  |
 | Description | Smart LED driver RGB |
 | Exposes | light (state, brightness, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![Shenzhen Homa HOMA1001_RGB](https://www.zigbee2mqtt.io/images/devices/HOMA1001_RGB.jpg) |
+| Picture | ![Shenzhen Homa HOMA1001_RGB](https://www.zigbee2mqtt.io/images/devices/HOMA1001_RGB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

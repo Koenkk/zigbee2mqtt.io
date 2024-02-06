@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | Contact sensor |
 | Exposes | contact, battery_low, tamper, battery, voltage, linkquality |
-| Picture | ![Mercator Ikuü SMA04P](https://www.zigbee2mqtt.io/images/devices/SMA04P.jpg) |
+| Picture | ![Mercator Ikuü SMA04P](https://www.zigbee2mqtt.io/images/devices/SMA04P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [JAVIS](/supported-devices/#v=JAVIS)  |
 | Description | Intelligent biometric digital lock |
 | Exposes | battery, action, linkquality |
-| Picture | ![JAVIS JS-SLK2-ZB](https://www.zigbee2mqtt.io/images/devices/JS-SLK2-ZB.jpg) |
+| Picture | ![JAVIS JS-SLK2-ZB](https://www.zigbee2mqtt.io/images/devices/JS-SLK2-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [KOJIMA](/supported-devices/#v=KOJIMA)  |
 | Description | Temperature and humidity sensor |
 | Exposes | temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, linkquality |
-| Picture | ![KOJIMA KOJIMA-THS-ZG-LCD](https://www.zigbee2mqtt.io/images/devices/KOJIMA-THS-ZG-LCD.jpg) |
+| Picture | ![KOJIMA KOJIMA-THS-ZG-LCD](https://www.zigbee2mqtt.io/images/devices/KOJIMA-THS-ZG-LCD.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

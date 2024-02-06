@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee dimmer module 2 channel |
 | Exposes | light (state, brightness, min_brightness), effect, do_not_disturb, linkquality |
-| Picture | ![TuYa TS1101_dimmer_module_2ch](https://www.zigbee2mqtt.io/images/devices/TS1101_dimmer_module_2ch.jpg) |
+| Picture | ![TuYa TS1101_dimmer_module_2ch](https://www.zigbee2mqtt.io/images/devices/TS1101_dimmer_module_2ch.png) |
 | White-label | OXT SWTZ25 |
 
 

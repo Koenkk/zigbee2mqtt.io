@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature & humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
-| Picture | ![TuYa RSH-HS06_1](https://www.zigbee2mqtt.io/images/devices/RSH-HS06_1.jpg) |
+| Picture | ![TuYa RSH-HS06_1](https://www.zigbee2mqtt.io/images/devices/RSH-HS06_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall outlet T1 |
 | Exposes | switch (state), power, energy, device_temperature, voltage, current, power_outage_memory, led_disabled_night, button_lock, overload_protection, linkquality |
-| Picture | ![Aqara QBCZ14LM](https://www.zigbee2mqtt.io/images/devices/QBCZ14LM.jpg) |
+| Picture | ![Aqara QBCZ14LM](https://www.zigbee2mqtt.io/images/devices/QBCZ14LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

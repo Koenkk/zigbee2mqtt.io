@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [iHORN](/supported-devices/#v=iHORN)  |
 | Description | Door or window contact switch |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
-| Picture | ![iHORN HO-09ZB](https://www.zigbee2mqtt.io/images/devices/HO-09ZB.jpg) |
+| Picture | ![iHORN HO-09ZB](https://www.zigbee2mqtt.io/images/devices/HO-09ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart plug T1, CN |
 | Exposes | switch (state), power, energy, device_temperature, voltage, current, consumer_connected, power_outage_memory, led_disabled_night, button_lock, overload_protection, linkquality |
-| Picture | ![Aqara ZNCZ15LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ15LM.jpg) |
+| Picture | ![Aqara ZNCZ15LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ15LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

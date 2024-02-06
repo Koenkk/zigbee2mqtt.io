@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | Xiaomi temperature & humidity sensor with custom firmware |
 | Exposes | battery, temperature, humidity, temperature_display_mode, show_smile, temperature_calibration, humidity_calibration, comfort_temperature_min, comfort_temperature_max, comfort_humidity_min, comfort_humidity_max, linkquality |
-| Picture | ![Custom devices (DiY) MHO-C401N](https://www.zigbee2mqtt.io/images/devices/MHO-C401N.jpg) |
+| Picture | ![Custom devices (DiY) MHO-C401N](https://www.zigbee2mqtt.io/images/devices/MHO-C401N.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

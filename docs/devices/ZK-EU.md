@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smart wallsocket (with power monitoring) |
 | Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
-| Picture | ![Moes ZK-EU](https://www.zigbee2mqtt.io/images/devices/ZK-EU.jpg) |
+| Picture | ![Moes ZK-EU](https://www.zigbee2mqtt.io/images/devices/ZK-EU.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

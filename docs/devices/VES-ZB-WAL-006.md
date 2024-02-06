@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Vesternet](/supported-devices/#v=Vesternet)  |
 | Description | Zigbee wall controller - 2 button |
 | Exposes | battery, action, linkquality |
-| Picture | ![Vesternet VES-ZB-WAL-006](https://www.zigbee2mqtt.io/images/devices/VES-ZB-WAL-006.jpg) |
+| Picture | ![Vesternet VES-ZB-WAL-006](https://www.zigbee2mqtt.io/images/devices/VES-ZB-WAL-006.png) |
 | White-label | Sunricher SR-ZG9001K2-DIM2 |
 
 

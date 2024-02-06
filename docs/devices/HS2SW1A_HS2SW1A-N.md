@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart switch - 1 gang with neutral wire |
 | Exposes | switch (state), device_temperature, linkquality |
-| Picture | ![HEIMAN HS2SW1A/HS2SW1A-N](https://www.zigbee2mqtt.io/images/devices/HS2SW1A-HS2SW1A-N.jpg) |
+| Picture | ![HEIMAN HS2SW1A/HS2SW1A-N](https://www.zigbee2mqtt.io/images/devices/HS2SW1A-HS2SW1A-N.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Smart button |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![Develco SBTZB-110](https://www.zigbee2mqtt.io/images/devices/SBTZB-110.jpg) |
+| Picture | ![Develco SBTZB-110](https://www.zigbee2mqtt.io/images/devices/SBTZB-110.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

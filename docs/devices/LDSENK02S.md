@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN 16A EU smart plug |
 | Exposes | switch (state), power_on_behavior, power, voltage, current, energy, linkquality |
-| Picture | ![ADEO LDSENK02S](https://www.zigbee2mqtt.io/images/devices/LDSENK02S.jpg) |
+| Picture | ![ADEO LDSENK02S](https://www.zigbee2mqtt.io/images/devices/LDSENK02S.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

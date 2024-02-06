@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [D-Link](/supported-devices/#v=D-Link)  |
 | Description | Wireless smart door window sensor with vibration |
 | Exposes | battery_low, contact, vibration, tamper, battery, linkquality |
-| Picture | ![D-Link DCH-B112](https://www.zigbee2mqtt.io/images/devices/DCH-B112.jpg) |
+| Picture | ![D-Link DCH-B112](https://www.zigbee2mqtt.io/images/devices/DCH-B112.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

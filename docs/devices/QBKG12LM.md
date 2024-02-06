@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch (with neutral, double rocker) |
 | Exposes | switch (state), device_temperature, energy, power, action, operation_mode, linkquality |
-| Picture | ![Aqara QBKG12LM](https://www.zigbee2mqtt.io/images/devices/QBKG12LM.jpg) |
+| Picture | ![Aqara QBKG12LM](https://www.zigbee2mqtt.io/images/devices/QBKG12LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

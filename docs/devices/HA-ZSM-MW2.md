@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Halemeier](/supported-devices/#v=Halemeier)  |
 | Description | S-Mitter MultiWhite2 smart remote control |
 | Exposes | action_group, battery, action, linkquality |
-| Picture | ![Halemeier HA-ZSM-MW2](https://www.zigbee2mqtt.io/images/devices/HA-ZSM-MW2.jpg) |
+| Picture | ![Halemeier HA-ZSM-MW2](https://www.zigbee2mqtt.io/images/devices/HA-ZSM-MW2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

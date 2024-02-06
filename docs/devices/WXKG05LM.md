@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless remote switch T1 (single rocker) |
 | Exposes | action, battery, linkquality |
-| Picture | ![Aqara WXKG05LM](https://www.zigbee2mqtt.io/images/devices/WXKG05LM.jpg) |
+| Picture | ![Aqara WXKG05LM](https://www.zigbee2mqtt.io/images/devices/WXKG05LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

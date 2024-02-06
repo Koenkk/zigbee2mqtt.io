@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Konke](/supported-devices/#v=Konke)  |
 | Description | Temperature and humidity sensor |
 | Exposes | temperature, humidity, battery, linkquality |
-| Picture | ![Konke 2AJZ4KPFT](https://www.zigbee2mqtt.io/images/devices/2AJZ4KPFT.jpg) |
+| Picture | ![Konke 2AJZ4KPFT](https://www.zigbee2mqtt.io/images/devices/2AJZ4KPFT.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

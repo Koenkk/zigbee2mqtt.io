@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Thermostatic radiator valve |
 | Exposes | battery, lock (state), max_temperature, min_temperature, position, switch (state), window, alarm_switch, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset, system_mode, running_state), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, boost_heating, boost_time, linkquality |
-| Picture | ![TuYa TS0601_thermostat_1](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat_1.jpg) |
+| Picture | ![TuYa TS0601_thermostat_1](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

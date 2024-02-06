@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 3 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa MG-ZG03W](https://www.zigbee2mqtt.io/images/devices/MG-ZG03W.jpg) |
+| Picture | ![TuYa MG-ZG03W](https://www.zigbee2mqtt.io/images/devices/MG-ZG03W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

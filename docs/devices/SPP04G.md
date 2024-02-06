@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | Quad power point |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
-| Picture | ![Mercator Ikuü SPP04G](https://www.zigbee2mqtt.io/images/devices/SPP04G.jpg) |
+| Picture | ![Mercator Ikuü SPP04G](https://www.zigbee2mqtt.io/images/devices/SPP04G.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

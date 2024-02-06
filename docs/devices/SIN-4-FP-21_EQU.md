@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | Equation pilot wire heating module |
 | Exposes | switch (state), power, energy, pilot_wire_mode, linkquality |
-| Picture | ![ADEO SIN-4-FP-21_EQU](https://www.zigbee2mqtt.io/images/devices/SIN-4-FP-21_EQU.jpg) |
+| Picture | ![ADEO SIN-4-FP-21_EQU](https://www.zigbee2mqtt.io/images/devices/SIN-4-FP-21_EQU.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

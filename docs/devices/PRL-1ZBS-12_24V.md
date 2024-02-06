@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Zigbee 12-24V relay controller |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Climax PRL-1ZBS-12/24V](https://www.zigbee2mqtt.io/images/devices/PRL-1ZBS-12-24V.jpg) |
+| Picture | ![Climax PRL-1ZBS-12/24V](https://www.zigbee2mqtt.io/images/devices/PRL-1ZBS-12-24V.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

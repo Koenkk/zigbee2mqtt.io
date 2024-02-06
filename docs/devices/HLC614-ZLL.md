@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Shenzhen Homa](/supported-devices/#v=Shenzhen%20Homa)  |
 | Description | 3 channel relay module |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Shenzhen Homa HLC614-ZLL](https://www.zigbee2mqtt.io/images/devices/HLC614-ZLL.jpg) |
+| Picture | ![Shenzhen Homa HLC614-ZLL](https://www.zigbee2mqtt.io/images/devices/HLC614-ZLL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

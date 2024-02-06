@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [easyiot](/supported-devices/#v=easyiot)  |
 | Description | This is a Simplified Chinese (GB2312) TTS converter that can convert GB2312 encoded text to speech |
 | Exposes | last_received_status, send_tts, linkquality |
-| Picture | ![easyiot ZB-TTS01](https://www.zigbee2mqtt.io/images/devices/ZB-TTS01.jpg) |
+| Picture | ![easyiot ZB-TTS01](https://www.zigbee2mqtt.io/images/devices/ZB-TTS01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

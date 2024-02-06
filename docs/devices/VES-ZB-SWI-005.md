@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Vesternet](/supported-devices/#v=Vesternet)  |
 | Description | Zigbee switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Vesternet VES-ZB-SWI-005](https://www.zigbee2mqtt.io/images/devices/VES-ZB-SWI-005.jpg) |
+| Picture | ![Vesternet VES-ZB-SWI-005](https://www.zigbee2mqtt.io/images/devices/VES-ZB-SWI-005.png) |
 | White-label | Sunricher SR-ZG9100A-S |
 
 

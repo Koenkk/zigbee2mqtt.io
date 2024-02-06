@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Vibration sensor T1 |
 | Exposes | action, linkquality |
-| Picture | ![Aqara DJT12LM](https://www.zigbee2mqtt.io/images/devices/DJT12LM.jpg) |
+| Picture | ![Aqara DJT12LM](https://www.zigbee2mqtt.io/images/devices/DJT12LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

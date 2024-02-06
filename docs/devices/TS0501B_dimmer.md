@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee dimmer |
 | Exposes | light (state, brightness), do_not_disturb, linkquality |
-| Picture | ![TuYa TS0501B_dimmer](https://www.zigbee2mqtt.io/images/devices/TS0501B_dimmer.jpg) |
+| Picture | ![TuYa TS0501B_dimmer](https://www.zigbee2mqtt.io/images/devices/TS0501B_dimmer.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

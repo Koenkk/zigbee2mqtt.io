@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Envilar](/supported-devices/#v=Envilar)  |
 | Description | Touchlink remote |
 | Exposes | battery, action, linkquality |
-| Picture | ![Envilar ZGR904-S](https://www.zigbee2mqtt.io/images/devices/ZGR904-S.jpg) |
+| Picture | ![Envilar ZGR904-S](https://www.zigbee2mqtt.io/images/devices/ZGR904-S.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

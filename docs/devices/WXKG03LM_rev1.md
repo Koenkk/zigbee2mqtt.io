@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless remote switch (single rocker), 2016 model |
 | Exposes | battery, action, voltage, linkquality |
-| Picture | ![Aqara WXKG03LM_rev1](https://www.zigbee2mqtt.io/images/devices/WXKG03LM_rev1.jpg) |
+| Picture | ![Aqara WXKG03LM_rev1](https://www.zigbee2mqtt.io/images/devices/WXKG03LM_rev1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [IT Commander](/supported-devices/#v=IT%20Commander)  |
 | Description | Contact Sensor |
 | Exposes | contact, battery, voltage, linkquality |
-| Picture | ![IT Commander ITCMDR_Contact](https://www.zigbee2mqtt.io/images/devices/ITCMDR_Contact.jpg) |
+| Picture | ![IT Commander ITCMDR_Contact](https://www.zigbee2mqtt.io/images/devices/ITCMDR_Contact.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

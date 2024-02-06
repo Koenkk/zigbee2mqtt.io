@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EssentielB](/supported-devices/#v=EssentielB)  |
 | Description | E27 A60 RGBW light bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![EssentielB EB-E27-A60-RGBW](https://www.zigbee2mqtt.io/images/devices/EB-E27-A60-RGBW.jpg) |
+| Picture | ![EssentielB EB-E27-A60-RGBW](https://www.zigbee2mqtt.io/images/devices/EB-E27-A60-RGBW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

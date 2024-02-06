@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Envilar](/supported-devices/#v=Envilar)  |
 | Description | Zigbee AC in wall switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Envilar ZG302-BOX-RELAY](https://www.zigbee2mqtt.io/images/devices/ZG302-BOX-RELAY.jpg) |
+| Picture | ![Envilar ZG302-BOX-RELAY](https://www.zigbee2mqtt.io/images/devices/ZG302-BOX-RELAY.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

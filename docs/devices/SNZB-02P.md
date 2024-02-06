@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Temperature and humidity sensor |
 | Exposes | battery, temperature, humidity, battery_low, voltage, linkquality |
-| Picture | ![SONOFF SNZB-02P](https://www.zigbee2mqtt.io/images/devices/SNZB-02P.jpg) |
+| Picture | ![SONOFF SNZB-02P](https://www.zigbee2mqtt.io/images/devices/SNZB-02P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

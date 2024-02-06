@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | Open'R  |
 | Vendor  | [Nexelec](/supported-devices/#v=Nexelec)  |
-| Description | 3-in-1 room sensor |
+| Description | Open'R CO2, Temperature and Humidity sensor |
 | Exposes | temperature, humidity, co2, battery, linkquality |
-| Picture | ![Nexelec Open'R](https://www.zigbee2mqtt.io/images/devices/Open-R.jpg) |
+| Picture | ![Nexelec Open'R](https://www.zigbee2mqtt.io/images/devices/Open-R.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

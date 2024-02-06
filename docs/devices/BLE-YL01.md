@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart WiFi Zigbee chlorine meter |
 | Exposes | tds, temperature, battery, ph, ec, orp, free_chlorine, ph_max, ph_min, ec_max, ec_min, orp_max, orp_min, free_chlorine_max, free_chlorine_min, salinity, linkquality |
-| Picture | ![TuYa BLE-YL01](https://www.zigbee2mqtt.io/images/devices/BLE-YL01.jpg) |
+| Picture | ![TuYa BLE-YL01](https://www.zigbee2mqtt.io/images/devices/BLE-YL01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

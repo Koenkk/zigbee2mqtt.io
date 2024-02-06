@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Third Reality](/supported-devices/#v=Third%20Reality)  |
 | Description | Door sensor |
 | Exposes | contact, battery_low, battery, voltage, linkquality |
-| Picture | ![Third Reality 3RDS17BZ](https://www.zigbee2mqtt.io/images/devices/3RDS17BZ.jpg) |
+| Picture | ![Third Reality 3RDS17BZ](https://www.zigbee2mqtt.io/images/devices/3RDS17BZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

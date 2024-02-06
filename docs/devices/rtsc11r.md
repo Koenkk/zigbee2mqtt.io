@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 5.8G human presence sensor with relay |
 | Exposes | presence, illuminance, detection_delay, detection_distance, sensitivity, keep_time, minimum_range, maximum_range, linkquality |
-| Picture | ![TuYa rtsc11r](https://www.zigbee2mqtt.io/images/devices/rtsc11r.jpg) |
+| Picture | ![TuYa rtsc11r](https://www.zigbee2mqtt.io/images/devices/rtsc11r.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

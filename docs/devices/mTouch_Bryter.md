@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | mTouch Bryter OP, 3 channel switch |
 | Exposes | battery, temperature, action, group_id, linkquality |
-| Picture | ![CTM Lyng mTouch_Bryter](https://www.zigbee2mqtt.io/images/devices/mTouch_Bryter.jpg) |
+| Picture | ![CTM Lyng mTouch_Bryter](https://www.zigbee2mqtt.io/images/devices/mTouch_Bryter.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

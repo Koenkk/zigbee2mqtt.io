@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Konke](/supported-devices/#v=Konke)  |
 | Description | Occupancy sensor |
 | Exposes | occupancy, voltage, battery_low, tamper, battery, linkquality |
-| Picture | ![Konke KK-BS-J01W](https://www.zigbee2mqtt.io/images/devices/KK-BS-J01W.jpg) |
+| Picture | ![Konke KK-BS-J01W](https://www.zigbee2mqtt.io/images/devices/KK-BS-J01W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

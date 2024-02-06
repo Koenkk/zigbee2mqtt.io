@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Mycket](/supported-devices/#v=Mycket)  |
 | Description | E27 RGBW bulb |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![Mycket MS-SP-LE27WRGB](https://www.zigbee2mqtt.io/images/devices/MS-SP-LE27WRGB.jpg) |
+| Picture | ![Mycket MS-SP-LE27WRGB](https://www.zigbee2mqtt.io/images/devices/MS-SP-LE27WRGB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

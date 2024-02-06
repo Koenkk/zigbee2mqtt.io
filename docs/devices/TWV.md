@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [UHome](/supported-devices/#v=UHome)  |
 | Description | Smart valve |
 | Exposes | battery, switch (state), linkquality |
-| Picture | ![UHome TWV](https://www.zigbee2mqtt.io/images/devices/TWV.jpg) |
+| Picture | ![UHome TWV](https://www.zigbee2mqtt.io/images/devices/TWV.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Door and window sensor E1 |
 | Exposes | contact, battery, battery_low, voltage, linkquality |
-| Picture | ![Aqara MCCGQ14LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ14LM.jpg) |
+| Picture | ![Aqara MCCGQ14LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ14LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -35,9 +35,6 @@ In order for this device to work (fully), at least the following firmware is req
 *Note that if you have already paired the device you will need to repair it after upgrading your adapter firmware.*
 <!-- Notes END: Do not edit below this line -->
 
-
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 

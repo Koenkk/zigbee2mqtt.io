@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Dawon DNS](/supported-devices/#v=Dawon%20DNS)  |
 | Description | IoT SMART temperature and humidity sensor |
 | Exposes | battery, temperature, humidity, linkquality |
-| Picture | ![Dawon DNS TH-110-ZB](https://www.zigbee2mqtt.io/images/devices/TH-110-ZB.jpg) |
+| Picture | ![Dawon DNS TH-110-ZB](https://www.zigbee2mqtt.io/images/devices/TH-110-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

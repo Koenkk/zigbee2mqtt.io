@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [BITUO TECHNIK](/supported-devices/#v=BITUO%20TECHNIK)  |
 | Description | Smart energy sensor |
 | Exposes | ac_frequency, power, power_reactive, power_apparent, current, voltage, power_factor, energy, produced_energy, linkquality |
-| Picture | ![BITUO TECHNIK SPM01-D2TZ-U01](https://www.zigbee2mqtt.io/images/devices/SPM01-D2TZ-U01.jpg) |
+| Picture | ![BITUO TECHNIK SPM01-D2TZ-U01](https://www.zigbee2mqtt.io/images/devices/SPM01-D2TZ-U01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

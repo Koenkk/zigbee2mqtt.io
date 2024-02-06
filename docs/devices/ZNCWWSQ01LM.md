@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart pet feeder C1 |
 | Exposes | feed, feeding_source, feeding_size, portions_per_day, weight_per_day, error, schedule, switch (state), lock (state), mode, serving_size, portion_weight, linkquality |
-| Picture | ![Aqara ZNCWWSQ01LM](https://www.zigbee2mqtt.io/images/devices/ZNCWWSQ01LM.jpg) |
+| Picture | ![Aqara ZNCWWSQ01LM](https://www.zigbee2mqtt.io/images/devices/ZNCWWSQ01LM.png) |
 | White-label | Aqara PETC1-M01 |
 
 

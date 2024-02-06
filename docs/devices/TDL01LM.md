@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Spotlight T3 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![Aqara TDL01LM](https://www.zigbee2mqtt.io/images/devices/TDL01LM.jpg) |
+| Picture | ![Aqara TDL01LM](https://www.zigbee2mqtt.io/images/devices/TDL01LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

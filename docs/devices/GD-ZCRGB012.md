@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [GIDERWEL](/supported-devices/#v=GIDERWEL)  |
 | Description | Smart Zigbee RGB LED strip controller |
 | Exposes | light (state, brightness, color_xy, color_hs), effect, power_on_behavior, linkquality |
-| Picture | ![GIDERWEL GD-ZCRGB012](https://www.zigbee2mqtt.io/images/devices/GD-ZCRGB012.jpg) |
+| Picture | ![GIDERWEL GD-ZCRGB012](https://www.zigbee2mqtt.io/images/devices/GD-ZCRGB012.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

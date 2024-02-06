@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS gas valve |
 | Exposes | gas_valve_state, battery, close_timeout, close_remain_timeout, volume, overheat_mode, linkquality |
-| Picture | ![ShinaSystem GCM-300Z](https://www.zigbee2mqtt.io/images/devices/GCM-300Z.jpg) |
+| Picture | ![ShinaSystem GCM-300Z](https://www.zigbee2mqtt.io/images/devices/GCM-300Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

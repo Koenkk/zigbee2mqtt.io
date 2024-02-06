@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [NodOn](/supported-devices/#v=NodOn)  |
 | Description | Roller shutter relay switch |
 | Exposes | cover (state, position, tilt), linkquality |
-| Picture | ![NodOn SIN-4-RS-20](https://www.zigbee2mqtt.io/images/devices/SIN-4-RS-20.jpg) |
+| Picture | ![NodOn SIN-4-RS-20](https://www.zigbee2mqtt.io/images/devices/SIN-4-RS-20.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Soil sensor |
 | Exposes | battery, temperature, humidity, illuminance, linkquality |
-| Picture | ![TuYa QT-07S](https://www.zigbee2mqtt.io/images/devices/QT-07S.jpg) |
+| Picture | ![TuYa QT-07S](https://www.zigbee2mqtt.io/images/devices/QT-07S.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

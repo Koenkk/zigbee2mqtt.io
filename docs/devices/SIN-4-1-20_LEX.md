@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN 3680W single output relay |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![ADEO SIN-4-1-20_LEX](https://www.zigbee2mqtt.io/images/devices/SIN-4-1-20_LEX.jpg) |
+| Picture | ![ADEO SIN-4-1-20_LEX](https://www.zigbee2mqtt.io/images/devices/SIN-4-1-20_LEX.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

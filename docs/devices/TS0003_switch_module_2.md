@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 3 gang switch module |
 | Exposes | switch (state), power_on_behavior, switch_type, indicator_mode, linkquality |
-| Picture | ![TuYa TS0003_switch_module_2](https://www.zigbee2mqtt.io/images/devices/TS0003_switch_module_2.jpg) |
+| Picture | ![TuYa TS0003_switch_module_2](https://www.zigbee2mqtt.io/images/devices/TS0003_switch_module_2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

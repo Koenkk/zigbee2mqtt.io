@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Spotmau](/supported-devices/#v=Spotmau)  |
 | Description | Smart wall switch - 1 gang |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Spotmau SP-PS1-02](https://www.zigbee2mqtt.io/images/devices/SP-PS1-02.jpg) |
+| Picture | ![Spotmau SP-PS1-02](https://www.zigbee2mqtt.io/images/devices/SP-PS1-02.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

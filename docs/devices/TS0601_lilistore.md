@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Lilistore](/supported-devices/#v=Lilistore)  |
 | Description | Cover motor |
 | Exposes | cover (state, position), reverse_direction, motor_fault, linkquality |
-| Picture | ![Lilistore TS0601_lilistore](https://www.zigbee2mqtt.io/images/devices/TS0601_lilistore.jpg) |
+| Picture | ![Lilistore TS0601_lilistore](https://www.zigbee2mqtt.io/images/devices/TS0601_lilistore.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

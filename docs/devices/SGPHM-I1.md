@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Propane gas sensor |
 | Exposes | gas, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN SGPHM-I1](https://www.zigbee2mqtt.io/images/devices/SGPHM-I1.jpg) |
+| Picture | ![HEIMAN SGPHM-I1](https://www.zigbee2mqtt.io/images/devices/SGPHM-I1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart air quality monitor |
 | Exposes | co2, battery, humidity, temperature, linkquality |
-| Picture | ![HEIMAN HS3AQ](https://www.zigbee2mqtt.io/images/devices/HS3AQ.jpg) |
+| Picture | ![HEIMAN HS3AQ](https://www.zigbee2mqtt.io/images/devices/HS3AQ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

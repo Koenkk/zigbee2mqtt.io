@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee 60W Floodlight RGB+CCT (pro) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-FL-006P](https://www.zigbee2mqtt.io/images/devices/GL-FL-006P.jpg) |
+| Picture | ![Gledopto GL-FL-006P](https://www.zigbee2mqtt.io/images/devices/GL-FL-006P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
 | Description | RGB+CCT LED Downlight |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![MiBoxer FUT066Z](https://www.zigbee2mqtt.io/images/devices/FUT066Z.jpg) |
+| Picture | ![MiBoxer FUT066Z](https://www.zigbee2mqtt.io/images/devices/FUT066Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

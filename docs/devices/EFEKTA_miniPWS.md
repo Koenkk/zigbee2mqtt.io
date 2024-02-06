@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | [Mini plant wattering sensor](http://efektalab.com/miniPWS) |
 | Exposes | soil_moisture, battery, report_delay, linkquality |
-| Picture | ![Custom devices (DiY) EFEKTA_miniPWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_miniPWS.jpg) |
+| Picture | ![Custom devices (DiY) EFEKTA_miniPWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_miniPWS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

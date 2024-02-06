@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | [Plant watering sensor EFEKTA PWS Max Pro,  long battery life](http://efektalab.com/PWS_MaxPro) |
 | Exposes | soil_moisture, battery, illuminance, temperature, humidity, linkquality |
-| Picture | ![Custom devices (DiY) EFEKTA_PWS_MaxPro](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PWS_MaxPro.jpg) |
+| Picture | ![Custom devices (DiY) EFEKTA_PWS_MaxPro](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PWS_MaxPro.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

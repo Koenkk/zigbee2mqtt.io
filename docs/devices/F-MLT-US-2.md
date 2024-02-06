@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Multipurpose sensor (2016 model) |
 | Exposes | temperature, contact, battery_low, tamper, battery, moving, x_axis, y_axis, z_axis, linkquality |
-| Picture | ![SmartThings F-MLT-US-2](https://www.zigbee2mqtt.io/images/devices/F-MLT-US-2.jpg) |
+| Picture | ![SmartThings F-MLT-US-2](https://www.zigbee2mqtt.io/images/devices/F-MLT-US-2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

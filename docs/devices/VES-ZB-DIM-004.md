@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Vesternet](/supported-devices/#v=Vesternet)  |
 | Description | Zigbee dimmer |
 | Exposes | light (state, brightness, level_config), power, voltage, current, energy, power_on_behavior, linkquality |
-| Picture | ![Vesternet VES-ZB-DIM-004](https://www.zigbee2mqtt.io/images/devices/VES-ZB-DIM-004.jpg) |
+| Picture | ![Vesternet VES-ZB-DIM-004](https://www.zigbee2mqtt.io/images/devices/VES-ZB-DIM-004.png) |
 | White-label | Sunricher SR-ZG9040A |
 
 

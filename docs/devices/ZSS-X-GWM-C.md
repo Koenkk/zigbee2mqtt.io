@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Door/window magnetic sensor |
 | Exposes | contact, battery_low, battery, voltage, tamper, linkquality |
-| Picture | ![Moes ZSS-X-GWM-C](https://www.zigbee2mqtt.io/images/devices/ZSS-X-GWM-C.jpg) |
+| Picture | ![Moes ZSS-X-GWM-C](https://www.zigbee2mqtt.io/images/devices/ZSS-X-GWM-C.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

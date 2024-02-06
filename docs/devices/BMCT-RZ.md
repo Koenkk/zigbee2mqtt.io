@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Relay, potential free |
 | Exposes | switch (state), linkquality |
-| Picture | ![Bosch BMCT-RZ](https://www.zigbee2mqtt.io/images/devices/BMCT-RZ.jpg) |
+| Picture | ![Bosch BMCT-RZ](https://www.zigbee2mqtt.io/images/devices/BMCT-RZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

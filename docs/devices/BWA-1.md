@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Zigbee smart water leak detector |
 | Exposes | water_leak, battery, tamper, alarm_on_motion, linkquality |
-| Picture | ![Bosch BWA-1](https://www.zigbee2mqtt.io/images/devices/BWA-1.jpg) |
+| Picture | ![Bosch BWA-1](https://www.zigbee2mqtt.io/images/devices/BWA-1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

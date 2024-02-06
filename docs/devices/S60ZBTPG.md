@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart plug |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![SONOFF S60ZBTPG](https://www.zigbee2mqtt.io/images/devices/S60ZBTPG.jpg) |
+| Picture | ![SONOFF S60ZBTPG](https://www.zigbee2mqtt.io/images/devices/S60ZBTPG.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

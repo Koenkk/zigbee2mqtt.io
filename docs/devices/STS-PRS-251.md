@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Arrival sensor |
 | Exposes | battery, presence, action, beep, linkquality |
-| Picture | ![SmartThings STS-PRS-251](https://www.zigbee2mqtt.io/images/devices/STS-PRS-251.jpg) |
+| Picture | ![SmartThings STS-PRS-251](https://www.zigbee2mqtt.io/images/devices/STS-PRS-251.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

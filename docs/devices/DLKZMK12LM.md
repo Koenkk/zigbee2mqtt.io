@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Single switch module T1 (no neutral), CN |
 | Exposes | switch (state), power_outage_memory, switch_type, linkquality |
-| Picture | ![Aqara DLKZMK12LM](https://www.zigbee2mqtt.io/images/devices/DLKZMK12LM.jpg) |
+| Picture | ![Aqara DLKZMK12LM](https://www.zigbee2mqtt.io/images/devices/DLKZMK12LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

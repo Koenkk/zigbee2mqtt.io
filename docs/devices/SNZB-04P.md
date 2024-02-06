@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Contact sensor |
 | Exposes | contact, battery_low, battery, voltage, tamper, linkquality |
-| Picture | ![SONOFF SNZB-04P](https://www.zigbee2mqtt.io/images/devices/SNZB-04P.jpg) |
+| Picture | ![SONOFF SNZB-04P](https://www.zigbee2mqtt.io/images/devices/SNZB-04P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

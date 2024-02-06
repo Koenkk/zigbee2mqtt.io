@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch T1 (no neutral, double rocker) |
 | Exposes | switch (state), action, power, energy, voltage, device_temperature, power_outage_memory, led_disabled_night, flip_indicator_light, operation_mode, linkquality |
-| Picture | ![Aqara QBKG18LM](https://www.zigbee2mqtt.io/images/devices/QBKG18LM.jpg) |
+| Picture | ![Aqara QBKG18LM](https://www.zigbee2mqtt.io/images/devices/QBKG18LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

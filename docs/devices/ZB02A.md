@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Netvox](/supported-devices/#v=Netvox)  |
 | Description | Wireless wall switch |
 | Exposes | action, linkquality |
-| Picture | ![Netvox ZB02A](https://www.zigbee2mqtt.io/images/devices/ZB02A.jpg) |
+| Picture | ![Netvox ZB02A](https://www.zigbee2mqtt.io/images/devices/ZB02A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

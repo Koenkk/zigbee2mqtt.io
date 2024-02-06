@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sercomm](/supported-devices/#v=Sercomm)  |
 | Description | Magnetic door & window contact sensor |
 | Exposes | contact, battery_low, tamper, temperature, battery, linkquality |
-| Picture | ![Sercomm XHS2-SE](https://www.zigbee2mqtt.io/images/devices/XHS2-SE.jpg) |
+| Picture | ![Sercomm XHS2-SE](https://www.zigbee2mqtt.io/images/devices/XHS2-SE.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

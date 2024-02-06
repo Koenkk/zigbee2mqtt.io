@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Feibit](/supported-devices/#v=Feibit)  |
 | Description | Power plug |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Feibit SFS01ZB](https://www.zigbee2mqtt.io/images/devices/SFS01ZB.jpg) |
+| Picture | ![Feibit SFS01ZB](https://www.zigbee2mqtt.io/images/devices/SFS01ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

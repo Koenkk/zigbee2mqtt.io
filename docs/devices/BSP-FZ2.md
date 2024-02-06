@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Plug compact EU |
 | Exposes | switch (state), power_on_behavior, power, energy, linkquality |
-| Picture | ![Bosch BSP-FZ2](https://www.zigbee2mqtt.io/images/devices/BSP-FZ2.jpg) |
+| Picture | ![Bosch BSP-FZ2](https://www.zigbee2mqtt.io/images/devices/BSP-FZ2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

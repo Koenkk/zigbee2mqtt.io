@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN GU-10 LED RGBW |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![ADEO 9CZA-M350ST-Q1A](https://www.zigbee2mqtt.io/images/devices/9CZA-M350ST-Q1A.jpg) |
+| Picture | ![ADEO 9CZA-M350ST-Q1A](https://www.zigbee2mqtt.io/images/devices/9CZA-M350ST-Q1A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

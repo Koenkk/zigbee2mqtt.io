@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LifeControl](/supported-devices/#v=LifeControl)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, battery, linkquality |
-| Picture | ![LifeControl MCLH-05](https://www.zigbee2mqtt.io/images/devices/MCLH-05.jpg) |
+| Picture | ![LifeControl MCLH-05](https://www.zigbee2mqtt.io/images/devices/MCLH-05.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Yushun](/supported-devices/#v=Yushun)  |
 | Description | Curtain motor |
 | Exposes | cover (state, position), options, linkquality |
-| Picture | ![Yushun YS-MT750L](https://www.zigbee2mqtt.io/images/devices/YS-MT750L.jpg) |
+| Picture | ![Yushun YS-MT750L](https://www.zigbee2mqtt.io/images/devices/YS-MT750L.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

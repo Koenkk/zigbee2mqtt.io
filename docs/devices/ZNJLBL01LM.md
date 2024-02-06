@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Roller shade driver E1 |
 | Exposes | cover (state, position), battery, device_temperature, charging_status, motor_state, running, linkquality |
-| Picture | ![Aqara ZNJLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNJLBL01LM.jpg) |
+| Picture | ![Aqara ZNJLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNJLBL01LM.png) |
 | White-label | Aqara RSD-M01 |
 
 

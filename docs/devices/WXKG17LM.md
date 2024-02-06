@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless remote switch E1 (double rocker) |
 | Exposes | battery, voltage, action, click_mode, linkquality |
-| Picture | ![Aqara WXKG17LM](https://www.zigbee2mqtt.io/images/devices/WXKG17LM.jpg) |
+| Picture | ![Aqara WXKG17LM](https://www.zigbee2mqtt.io/images/devices/WXKG17LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

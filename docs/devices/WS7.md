@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [JetHome](/supported-devices/#v=JetHome)  |
 | Description | 3-ch battery discrete input module |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![JetHome WS7](https://www.zigbee2mqtt.io/images/devices/WS7.jpg) |
+| Picture | ![JetHome WS7](https://www.zigbee2mqtt.io/images/devices/WS7.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

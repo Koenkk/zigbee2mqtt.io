@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee handheld remote CCT 4 channels |
 | Exposes | battery, action, linkquality |
-| Picture | ![Sunricher ZG2819S-CCT](https://www.zigbee2mqtt.io/images/devices/ZG2819S-CCT.jpg) |
+| Picture | ![Sunricher ZG2819S-CCT](https://www.zigbee2mqtt.io/images/devices/ZG2819S-CCT.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ORVIBO](/supported-devices/#v=ORVIBO)  |
 | Description | Multi-functional 3 gang relay |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![ORVIBO RL804QZB](https://www.zigbee2mqtt.io/images/devices/RL804QZB.jpg) |
+| Picture | ![ORVIBO RL804QZB](https://www.zigbee2mqtt.io/images/devices/RL804QZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

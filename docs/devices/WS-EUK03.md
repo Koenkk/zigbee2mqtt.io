@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch H1 EU (with neutral, single rocker) |
 | Exposes | switch (state), action, power, energy, flip_indicator_light, power_outage_memory, device_temperature, led_disabled_night, power_outage_count, operation_mode, linkquality |
-| Picture | ![Aqara WS-EUK03](https://www.zigbee2mqtt.io/images/devices/WS-EUK03.jpg) |
+| Picture | ![Aqara WS-EUK03](https://www.zigbee2mqtt.io/images/devices/WS-EUK03.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

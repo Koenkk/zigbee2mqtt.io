@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LELLKI](/supported-devices/#v=LELLKI)  |
 | Description | Touch switch 1 gang (with power monitoring) |
 | Exposes | switch (state), power_outage_memory, power, current, voltage, energy, linkquality |
-| Picture | ![LELLKI XF-EU-S100-1-M](https://www.zigbee2mqtt.io/images/devices/XF-EU-S100-1-M.jpg) |
+| Picture | ![LELLKI XF-EU-S100-1-M](https://www.zigbee2mqtt.io/images/devices/XF-EU-S100-1-M.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

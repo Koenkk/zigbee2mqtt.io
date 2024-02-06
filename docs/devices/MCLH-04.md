@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LifeControl](/supported-devices/#v=LifeControl)  |
 | Description | Door sensor |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
-| Picture | ![LifeControl MCLH-04](https://www.zigbee2mqtt.io/images/devices/MCLH-04.jpg) |
+| Picture | ![LifeControl MCLH-04](https://www.zigbee2mqtt.io/images/devices/MCLH-04.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

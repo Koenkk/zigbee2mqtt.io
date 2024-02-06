@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Konke](/supported-devices/#v=Konke)  |
 | Description | Contact sensor |
 | Exposes | contact, battery_low, tamper, battery, voltage, linkquality |
-| Picture | ![Konke KK-DS-J01W](https://www.zigbee2mqtt.io/images/devices/KK-DS-J01W.jpg) |
+| Picture | ![Konke KK-DS-J01W](https://www.zigbee2mqtt.io/images/devices/KK-DS-J01W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

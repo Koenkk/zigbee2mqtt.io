@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart IR Control |
 | Exposes | battery, linkquality |
-| Picture | ![HEIMAN HS2IRC](https://www.zigbee2mqtt.io/images/devices/HS2IRC.jpg) |
+| Picture | ![HEIMAN HS2IRC](https://www.zigbee2mqtt.io/images/devices/HS2IRC.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

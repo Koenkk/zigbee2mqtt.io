@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [GE](/supported-devices/#v=GE)  |
 | Description | Link smart LED light bulb, A19/BR30 cold white (5000K) |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![GE PQC19-DY01](https://www.zigbee2mqtt.io/images/devices/PQC19-DY01.jpg) |
+| Picture | ![GE PQC19-DY01](https://www.zigbee2mqtt.io/images/devices/PQC19-DY01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

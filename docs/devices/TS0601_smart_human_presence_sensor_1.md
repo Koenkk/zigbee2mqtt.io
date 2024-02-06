@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart Human presence sensor |
 | Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, self_test, linkquality |
-| Picture | ![TuYa TS0601_smart_human_presence_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_human_presence_sensor_1.jpg) |
+| Picture | ![TuYa TS0601_smart_human_presence_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_human_presence_sensor_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

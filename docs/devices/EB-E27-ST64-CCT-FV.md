@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EssentielB](/supported-devices/#v=EssentielB)  |
 | Description | Filament vintage edison light bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![EssentielB EB-E27-ST64-CCT-FV](https://www.zigbee2mqtt.io/images/devices/EB-E27-ST64-CCT-FV.jpg) |
+| Picture | ![EssentielB EB-E27-ST64-CCT-FV](https://www.zigbee2mqtt.io/images/devices/EB-E27-ST64-CCT-FV.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

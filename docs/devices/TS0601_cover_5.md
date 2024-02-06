@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Curtain/blind switch |
 | Exposes | cover (state, position), calibration, backlight_mode, motor_steering, child_lock, linkquality |
-| Picture | ![TuYa TS0601_cover_5](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_5.jpg) |
+| Picture | ![TuYa TS0601_cover_5](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_5.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

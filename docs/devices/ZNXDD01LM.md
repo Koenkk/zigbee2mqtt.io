@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Ceiling light L1-350 |
 | Exposes | light (state, brightness, color_temp), device_temperature, power_outage_count, power_outage_memory, linkquality |
-| Picture | ![Aqara ZNXDD01LM](https://www.zigbee2mqtt.io/images/devices/ZNXDD01LM.jpg) |
+| Picture | ![Aqara ZNXDD01LM](https://www.zigbee2mqtt.io/images/devices/ZNXDD01LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Livolo](/supported-devices/#v=Livolo)  |
 | Description | Zigbee Switch 2 gang |
 | Exposes | switch (state), linkquality |
-| Picture | ![Livolo TI0001-switch-2gang](https://www.zigbee2mqtt.io/images/devices/TI0001-switch-2gang.jpg) |
+| Picture | ![Livolo TI0001-switch-2gang](https://www.zigbee2mqtt.io/images/devices/TI0001-switch-2gang.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

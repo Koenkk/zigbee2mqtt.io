@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
 | Description | RGBW LED controller |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![MiBoxer FUT038Z](https://www.zigbee2mqtt.io/images/devices/FUT038Z.jpg) |
+| Picture | ![MiBoxer FUT038Z](https://www.zigbee2mqtt.io/images/devices/FUT038Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

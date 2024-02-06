@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | EFR32MG21 router |
 | Exposes | linkquality |
-| Picture | ![Custom devices (DiY) EFR32MG21.Router](https://www.zigbee2mqtt.io/images/devices/EFR32MG21.Router.jpg) |
+| Picture | ![Custom devices (DiY) EFR32MG21.Router](https://www.zigbee2mqtt.io/images/devices/EFR32MG21.Router.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

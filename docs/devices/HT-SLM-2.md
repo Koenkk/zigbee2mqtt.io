@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Heimgard Technologies](/supported-devices/#v=Heimgard%20Technologies)  |
 | Description | Doorlock with fingerprint |
 | Exposes | lock (state, lock_state), pin_code, battery, sound_volume, linkquality |
-| Picture | ![Heimgard Technologies HT-SLM-2](https://www.zigbee2mqtt.io/images/devices/HT-SLM-2.jpg) |
+| Picture | ![Heimgard Technologies HT-SLM-2](https://www.zigbee2mqtt.io/images/devices/HT-SLM-2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

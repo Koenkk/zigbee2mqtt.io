@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Cube T1 Pro |
 | Exposes | battery, voltage, power_outage_count, operation_mode, side, action, action_from_side, action_angle, linkquality |
-| Picture | ![Aqara CTP-R01](https://www.zigbee2mqtt.io/images/devices/CTP-R01.jpg) |
+| Picture | ![Aqara CTP-R01](https://www.zigbee2mqtt.io/images/devices/CTP-R01.png) |
 | White-label | Aqara MFCZQ12LM |
 
 

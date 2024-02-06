@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Wall-mount thermostat |
 | Exposes | climate (current_heating_setpoint, system_mode, running_state, preset, local_temperature), frost, linkquality |
-| Picture | ![TuYa ZWT07](https://www.zigbee2mqtt.io/images/devices/ZWT07.jpg) |
+| Picture | ![TuYa ZWT07](https://www.zigbee2mqtt.io/images/devices/ZWT07.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 1 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa MG-ZG01W](https://www.zigbee2mqtt.io/images/devices/MG-ZG01W.jpg) |
+| Picture | ![TuYa MG-ZG01W](https://www.zigbee2mqtt.io/images/devices/MG-ZG01W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

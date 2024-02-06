@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Nous](/supported-devices/#v=Nous)  |
 | Description | Smart plug (with power monitoring) |
 | Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
-| Picture | ![Nous A1Z](https://www.zigbee2mqtt.io/images/devices/A1Z.jpg) |
+| Picture | ![Nous A1Z](https://www.zigbee2mqtt.io/images/devices/A1Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LiXee](/supported-devices/#v=LiXee)  |
 | Description | Lixee ZLinky |
 | Exposes | EAST, EAIT, EASF01, EASF02, EASF03, EASF04, EASF05, EASF06, EASF07, EASF08, EASF09, EASF10, ADSC, PRM, PREF, PCOUP, VTIC, CCASN, CCASN-1, UMOY1, ERQ1, ERQ2, ERQ3, ERQ4, IRMS1, URMS1, EASD01, EASD02, EASD03, EASD04, DATE, NTARF, LTARF, NGTF, NJOURF, NJOURF+1, PJOURF+1, PPOINTE1, CCAIN, CCAIN-1, SINSTI, SMAXIN, SMAXIN-1, MSG1, MSG2, RELAIS, DPM1, DPM2, DPM3, STGE, FPM1, FPM2, FPM3, SMAXN, SINSTS, SMAXN-1, SMAXN2, SMAXN3, SINSTS2, SINSTS3, UMOY3, UMOY2, IRMS2, IRMS3, URMS2, URMS3, SMAXN2-1, SMAXN3-1, PTEC, MOTDETAT, HHPHC, PEJP, DEMAIN, IMAX, ADPS, IMAX2, IMAX3, PPOT, ADIR1, ADIR2, ADIR3, linkquality |
-| Picture | ![LiXee ZLinky_TIC](https://www.zigbee2mqtt.io/images/devices/ZLinky_TIC.jpg) |
+| Picture | ![LiXee ZLinky_TIC](https://www.zigbee2mqtt.io/images/devices/ZLinky_TIC.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

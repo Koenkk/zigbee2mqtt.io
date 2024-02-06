@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Mi motion sensor |
 | Exposes | battery, occupancy, voltage, power_outage_count, linkquality |
-| Picture | ![Xiaomi RTCGQ01LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ01LM.jpg) |
+| Picture | ![Xiaomi RTCGQ01LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ01LM.png) |
 | White-label | Xiaomi YTC4041GL, Xiaomi YTC4004CN, Xiaomi YTC4016CN, Xiaomi ZHTZ02LM |
 
 

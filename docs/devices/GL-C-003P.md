@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee LED Controller RGB (pro) |
 | Exposes | light (state, brightness, color_xy, color_hs), effect, power_on_behavior, linkquality |
-| Picture | ![Gledopto GL-C-003P](https://www.zigbee2mqtt.io/images/devices/GL-C-003P.jpg) |
+| Picture | ![Gledopto GL-C-003P](https://www.zigbee2mqtt.io/images/devices/GL-C-003P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

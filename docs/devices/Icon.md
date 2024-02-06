@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Danfoss](/supported-devices/#v=Danfoss)  |
 | Description | Icon floor heating (regulator, Zigbee module & thermostats) |
 | Exposes | battery, climate (occupied_heating_setpoint, local_temperature, running_state, system_mode), abs_min_heat_setpoint_limit, abs_max_heat_setpoint_limit, min_heat_setpoint_limit, max_heat_setpoint_limit, setpoint_change_source, output_status, room_status_code, system_status_code, system_status_water, multimaster_role, linkquality |
-| Picture | ![Danfoss Icon](https://www.zigbee2mqtt.io/images/devices/Icon.jpg) |
+| Picture | ![Danfoss Icon](https://www.zigbee2mqtt.io/images/devices/Icon.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

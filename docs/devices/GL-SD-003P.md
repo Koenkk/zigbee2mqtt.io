@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee DIN Rail triac AC dimmer |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![Gledopto GL-SD-003P](https://www.zigbee2mqtt.io/images/devices/GL-SD-003P.jpg) |
+| Picture | ![Gledopto GL-SD-003P](https://www.zigbee2mqtt.io/images/devices/GL-SD-003P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

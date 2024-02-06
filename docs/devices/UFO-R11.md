@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Universal smart IR remote control |
 | Exposes | switch (state), learned_ir_code, ir_code_to_send, battery, voltage, linkquality |
-| Picture | ![Moes UFO-R11](https://www.zigbee2mqtt.io/images/devices/UFO-R11.jpg) |
+| Picture | ![Moes UFO-R11](https://www.zigbee2mqtt.io/images/devices/UFO-R11.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

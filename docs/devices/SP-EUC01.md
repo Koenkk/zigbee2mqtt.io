@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart plug EU |
 | Exposes | switch (state), power, energy, power_outage_memory, voltage, current, device_temperature, consumer_connected, led_disabled_night, overload_protection, auto_off, button_lock, linkquality |
-| Picture | ![Aqara SP-EUC01](https://www.zigbee2mqtt.io/images/devices/SP-EUC01.jpg) |
+| Picture | ![Aqara SP-EUC01](https://www.zigbee2mqtt.io/images/devices/SP-EUC01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

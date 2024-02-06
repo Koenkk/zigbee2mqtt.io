@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Wireless motion detector |
 | Exposes | temperature, battery, occupancy, battery_low, tamper, linkquality |
-| Picture | ![Bosch RFPR-ZB-SH-EU](https://www.zigbee2mqtt.io/images/devices/RFPR-ZB-SH-EU.jpg) |
+| Picture | ![Bosch RFPR-ZB-SH-EU](https://www.zigbee2mqtt.io/images/devices/RFPR-ZB-SH-EU.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

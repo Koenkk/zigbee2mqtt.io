@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Dawon DNS](/supported-devices/#v=Dawon%20DNS)  |
 | Description | IOT smart plug 16A |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![Dawon DNS PM-B530-ZB](https://www.zigbee2mqtt.io/images/devices/PM-B530-ZB.jpg) |
+| Picture | ![Dawon DNS PM-B530-ZB](https://www.zigbee2mqtt.io/images/devices/PM-B530-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

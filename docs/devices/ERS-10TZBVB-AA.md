@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smart button |
 | Exposes | action, battery, operation_mode, linkquality |
-| Picture | ![Moes ERS-10TZBVB-AA](https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVB-AA.jpg) |
+| Picture | ![Moes ERS-10TZBVB-AA](https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVB-AA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

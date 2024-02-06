@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Trust](/supported-devices/#v=Trust)  |
 | Description | Smoke detector |
 | Exposes | smoke, battery_low, battery, linkquality |
-| Picture | ![Trust ZSDR-850](https://www.zigbee2mqtt.io/images/devices/ZSDR-850.jpg) |
+| Picture | ![Trust ZSDR-850](https://www.zigbee2mqtt.io/images/devices/ZSDR-850.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

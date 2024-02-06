@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HKGK](/supported-devices/#v=HKGK)  |
 | Description | BAC series thermostat |
 | Exposes | lock (state), climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, preset, fan_mode), sensor, week, workdays_schedule, holidays_schedule, linkquality |
-| Picture | ![HKGK BAC-002-ALZB](https://www.zigbee2mqtt.io/images/devices/BAC-002-ALZB.jpg) |
+| Picture | ![HKGK BAC-002-ALZB](https://www.zigbee2mqtt.io/images/devices/BAC-002-ALZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

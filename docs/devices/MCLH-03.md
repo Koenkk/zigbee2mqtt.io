@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LifeControl](/supported-devices/#v=LifeControl)  |
 | Description | Power plug |
 | Exposes | switch (state), power, current, voltage, energy, linkquality |
-| Picture | ![LifeControl MCLH-03](https://www.zigbee2mqtt.io/images/devices/MCLH-03.jpg) |
+| Picture | ![LifeControl MCLH-03](https://www.zigbee2mqtt.io/images/devices/MCLH-03.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

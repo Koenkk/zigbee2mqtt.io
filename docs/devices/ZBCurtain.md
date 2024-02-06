@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart curtain motor |
 | Exposes | cover (state, position), battery, linkquality |
-| Picture | ![SONOFF ZBCurtain](https://www.zigbee2mqtt.io/images/devices/ZBCurtain.jpg) |
+| Picture | ![SONOFF ZBCurtain](https://www.zigbee2mqtt.io/images/devices/ZBCurtain.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

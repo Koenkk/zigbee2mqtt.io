@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Water leak detector |
 | Exposes | water_leak, battery_low, battery, tamper, linkquality |
-| Picture | ![TuYa TS0207_water_leak_detector](https://www.zigbee2mqtt.io/images/devices/TS0207_water_leak_detector.jpg) |
+| Picture | ![TuYa TS0207_water_leak_detector](https://www.zigbee2mqtt.io/images/devices/TS0207_water_leak_detector.png) |
 | White-label | CR Smart Home TS0207 |
 
 

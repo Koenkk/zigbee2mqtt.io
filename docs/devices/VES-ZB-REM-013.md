@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Vesternet](/supported-devices/#v=Vesternet)  |
 | Description | Zigbee remote control - 12 button |
 | Exposes | battery, action, linkquality |
-| Picture | ![Vesternet VES-ZB-REM-013](https://www.zigbee2mqtt.io/images/devices/VES-ZB-REM-013.jpg) |
+| Picture | ![Vesternet VES-ZB-REM-013](https://www.zigbee2mqtt.io/images/devices/VES-ZB-REM-013.png) |
 | White-label | Sunricher SR-ZG9001K12-DIM-Z4 |
 
 

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall outlet H2 EU |
 | Exposes | switch (state), power_on_behavior, power, energy, voltage, current, device_temperature, overload_protection, led_indicator, button_lock, charging_protection, charging_limit, linkquality |
-| Picture | ![Aqara WP-P01D](https://www.zigbee2mqtt.io/images/devices/WP-P01D.jpg) |
+| Picture | ![Aqara WP-P01D](https://www.zigbee2mqtt.io/images/devices/WP-P01D.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Trust](/supported-devices/#v=Trust)  |
 | Description | Remote control |
 | Exposes | action, action_group, linkquality |
-| Picture | ![Trust ZYCT-202](https://www.zigbee2mqtt.io/images/devices/ZYCT-202.jpg) |
+| Picture | ![Trust ZYCT-202](https://www.zigbee2mqtt.io/images/devices/ZYCT-202.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

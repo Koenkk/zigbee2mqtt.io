@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | Ridley Floodlight |
 | Exposes | light (state, brightness), effect, do_not_disturb, linkquality |
-| Picture | ![Mercator Ikuü SMFL20W-ZB](https://www.zigbee2mqtt.io/images/devices/SMFL20W-ZB.jpg) |
+| Picture | ![Mercator Ikuü SMFL20W-ZB](https://www.zigbee2mqtt.io/images/devices/SMFL20W-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

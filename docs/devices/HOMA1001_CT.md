@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Shenzhen Homa](/supported-devices/#v=Shenzhen%20Homa)  |
 | Description | Smart LED driver CT |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![Shenzhen Homa HOMA1001_CT](https://www.zigbee2mqtt.io/images/devices/HOMA1001_CT.jpg) |
+| Picture | ![Shenzhen Homa HOMA1001_CT](https://www.zigbee2mqtt.io/images/devices/HOMA1001_CT.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

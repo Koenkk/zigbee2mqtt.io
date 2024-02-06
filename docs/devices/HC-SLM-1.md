@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Heimgard Technologies](/supported-devices/#v=Heimgard%20Technologies)  |
 | Description | Wattle door lock pro |
 | Exposes | lock (state, lock_state), battery, sound_volume, auto_relock_time, action_user, action_source_name, pin_code, linkquality |
-| Picture | ![Heimgard Technologies HC-SLM-1](https://www.zigbee2mqtt.io/images/devices/HC-SLM-1.jpg) |
+| Picture | ![Heimgard Technologies HC-SLM-1](https://www.zigbee2mqtt.io/images/devices/HC-SLM-1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

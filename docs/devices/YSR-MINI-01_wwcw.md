@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [YSRSAI](/supported-devices/#v=YSRSAI)  |
 | Description | Zigbee LED controller (WW/CW) |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![YSRSAI YSR-MINI-01_wwcw](https://www.zigbee2mqtt.io/images/devices/YSR-MINI-01_wwcw.jpg) |
+| Picture | ![YSRSAI YSR-MINI-01_wwcw](https://www.zigbee2mqtt.io/images/devices/YSR-MINI-01_wwcw.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

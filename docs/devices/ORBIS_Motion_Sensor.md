@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Niceboy](/supported-devices/#v=Niceboy)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, battery, voltage, tamper, linkquality |
-| Picture | ![Niceboy ORBIS Motion Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Motion-Sensor.jpg) |
+| Picture | ![Niceboy ORBIS Motion Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Motion-Sensor.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

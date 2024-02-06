@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [UNSH](/supported-devices/#v=UNSH)  |
 | Description | Smart Circuit Breaker |
 | Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, linkquality |
-| Picture | ![UNSH SMKG-1KNL-EU-Z](https://www.zigbee2mqtt.io/images/devices/SMKG-1KNL-EU-Z.jpg) |
+| Picture | ![UNSH SMKG-1KNL-EU-Z](https://www.zigbee2mqtt.io/images/devices/SMKG-1KNL-EU-Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

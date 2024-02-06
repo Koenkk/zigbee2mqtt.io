@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | TVOC air quality monitor |
 | Exposes | device_temperature, battery, voltage, air_quality, voc, temperature, humidity, display_unit, linkquality |
-| Picture | ![Aqara VOCKQJK11LM](https://www.zigbee2mqtt.io/images/devices/VOCKQJK11LM.jpg) |
+| Picture | ![Aqara VOCKQJK11LM](https://www.zigbee2mqtt.io/images/devices/VOCKQJK11LM.png) |
 | White-label | Aqara AAQS-S01 |
 
 

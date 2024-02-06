@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Wiser 40/300-Series Module AC Fan Controller |
 | Exposes | fan (state, mode), linkquality |
-| Picture | ![Schneider Electric 41ECSFWMZ-VW](https://www.zigbee2mqtt.io/images/devices/41ECSFWMZ-VW.jpg) |
+| Picture | ![Schneider Electric 41ECSFWMZ-VW](https://www.zigbee2mqtt.io/images/devices/41ECSFWMZ-VW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

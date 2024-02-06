@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Window sensor |
 | Exposes | contact, battery, battery_low, tamper, linkquality |
-| Picture | ![Develco WISZB-121](https://www.zigbee2mqtt.io/images/devices/WISZB-121.jpg) |
+| Picture | ![Develco WISZB-121](https://www.zigbee2mqtt.io/images/devices/WISZB-121.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

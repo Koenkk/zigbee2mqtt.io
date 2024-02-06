@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Smart window and door sensor |
 | Exposes | contact, battery_low, battery, voltage, tamper, linkquality |
-| Picture | ![Sengled E1D-G73WNA](https://www.zigbee2mqtt.io/images/devices/E1D-G73WNA.jpg) |
+| Picture | ![Sengled E1D-G73WNA](https://www.zigbee2mqtt.io/images/devices/E1D-G73WNA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

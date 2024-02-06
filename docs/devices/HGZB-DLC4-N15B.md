@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | RGB LED downlight |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![Zemismart HGZB-DLC4-N15B](https://www.zigbee2mqtt.io/images/devices/HGZB-DLC4-N15B.jpg) |
+| Picture | ![Zemismart HGZB-DLC4-N15B](https://www.zigbee2mqtt.io/images/devices/HGZB-DLC4-N15B.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

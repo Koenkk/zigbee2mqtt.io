@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Quotra](/supported-devices/#v=Quotra)  |
 | Description | RGB WW LED strip |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, linkquality |
-| Picture | ![Quotra B07JHL6DRV](https://www.zigbee2mqtt.io/images/devices/B07JHL6DRV.jpg) |
+| Picture | ![Quotra B07JHL6DRV](https://www.zigbee2mqtt.io/images/devices/B07JHL6DRV.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

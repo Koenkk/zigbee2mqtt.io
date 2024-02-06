@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [BSEED](/supported-devices/#v=BSEED)  |
 | Description | Zigbee curtain switch |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![BSEED BSEED_TS0601_cover](https://www.zigbee2mqtt.io/images/devices/BSEED_TS0601_cover.jpg) |
+| Picture | ![BSEED BSEED_TS0601_cover](https://www.zigbee2mqtt.io/images/devices/BSEED_TS0601_cover.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Nue / 3A](/supported-devices/#v=Nue%20%2F%203A)  |
 | Description | Door/window sensor |
 | Exposes | contact, battery_low, tamper, linkquality |
-| Picture | ![Nue / 3A HGZB-13A](https://www.zigbee2mqtt.io/images/devices/HGZB-13A.jpg) |
+| Picture | ![Nue / 3A HGZB-13A](https://www.zigbee2mqtt.io/images/devices/HGZB-13A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Letsleds](/supported-devices/#v=Letsleds)  |
 | Description | RGBW down light (color temp is inverted) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![Letsleds HLC929-Z-RGBW-4C-IA-OTA-3.0](https://www.zigbee2mqtt.io/images/devices/HLC929-Z-RGBW-4C-IA-OTA-3.0.jpg) |
+| Picture | ![Letsleds HLC929-Z-RGBW-4C-IA-OTA-3.0](https://www.zigbee2mqtt.io/images/devices/HLC929-Z-RGBW-4C-IA-OTA-3.0.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

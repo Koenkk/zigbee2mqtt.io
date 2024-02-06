@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart plug (without power monitoring) |
 | Exposes | switch (state), power_outage_memory, indicator_mode, lock (state), linkquality |
-| Picture | ![TuYa TS011F_plug_2](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_2.jpg) |
+| Picture | ![TuYa TS011F_plug_2](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

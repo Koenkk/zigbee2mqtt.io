@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ORVIBO](/supported-devices/#v=ORVIBO)  |
 | Description | Occupancy sensor |
 | Exposes | occupancy, battery_low, tamper, battery, linkquality |
-| Picture | ![ORVIBO SN10ZW](https://www.zigbee2mqtt.io/images/devices/SN10ZW.jpg) |
+| Picture | ![ORVIBO SN10ZW](https://www.zigbee2mqtt.io/images/devices/SN10ZW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [GS](/supported-devices/#v=GS)  |
 | Description | Smart metering plug |
 | Exposes | switch (state), power, voltage, current, energy, linkquality |
-| Picture | ![GS SKHMP30-I1](https://www.zigbee2mqtt.io/images/devices/SKHMP30-I1.jpg) |
+| Picture | ![GS SKHMP30-I1](https://www.zigbee2mqtt.io/images/devices/SKHMP30-I1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

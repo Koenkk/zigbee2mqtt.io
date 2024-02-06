@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Smart plug |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Sengled E1C-NB6](https://www.zigbee2mqtt.io/images/devices/E1C-NB6.jpg) |
+| Picture | ![Sengled E1C-NB6](https://www.zigbee2mqtt.io/images/devices/E1C-NB6.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

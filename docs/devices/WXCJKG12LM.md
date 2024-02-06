@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Opple wireless switch (double band) |
 | Exposes | battery, voltage, action, operation_mode, linkquality |
-| Picture | ![Aqara WXCJKG12LM](https://www.zigbee2mqtt.io/images/devices/WXCJKG12LM.jpg) |
+| Picture | ![Aqara WXCJKG12LM](https://www.zigbee2mqtt.io/images/devices/WXCJKG12LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

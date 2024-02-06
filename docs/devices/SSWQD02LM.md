@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart dimmer controller T1 Pro |
 | Exposes | light (state, brightness, color_temp), device_temperature, power_outage_count, power_outage_memory, linkquality |
-| Picture | ![Aqara SSWQD02LM](https://www.zigbee2mqtt.io/images/devices/SSWQD02LM.jpg) |
+| Picture | ![Aqara SSWQD02LM](https://www.zigbee2mqtt.io/images/devices/SSWQD02LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

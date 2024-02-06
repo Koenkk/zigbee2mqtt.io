@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Curtain controller C2 |
 | Exposes | cover (state, position), running, motor_state, power_outage_count, linkquality |
-| Picture | ![Aqara ZNCLDJ14LM](https://www.zigbee2mqtt.io/images/devices/ZNCLDJ14LM.jpg) |
+| Picture | ![Aqara ZNCLDJ14LM](https://www.zigbee2mqtt.io/images/devices/ZNCLDJ14LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

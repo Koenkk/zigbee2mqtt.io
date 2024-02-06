@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch H1 Pro (no neutral, double rocker) |
 | Exposes | switch (state), device_temperature, operation_mode, action, power_outage_memory, flip_indicator_light, led_disabled_night, linkquality |
-| Picture | ![Aqara QBKG28LM](https://www.zigbee2mqtt.io/images/devices/QBKG28LM.jpg) |
+| Picture | ![Aqara QBKG28LM](https://www.zigbee2mqtt.io/images/devices/QBKG28LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Star ring smart dimmer switch 1 gang |
 | Exposes | light (state, brightness, min_brightness, max_brightness), countdown, light_type, power_on_behavior, backlight_mode, linkquality |
-| Picture | ![Moes ZS-SR-EUD-1](https://www.zigbee2mqtt.io/images/devices/ZS-SR-EUD-1.jpg) |
+| Picture | ![Moes ZS-SR-EUD-1](https://www.zigbee2mqtt.io/images/devices/ZS-SR-EUD-1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

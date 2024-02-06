@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | Double power point IP54 |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
-| Picture | ![Mercator Ikuü SPP02GIP](https://www.zigbee2mqtt.io/images/devices/SPP02GIP.jpg) |
+| Picture | ![Mercator Ikuü SPP02GIP](https://www.zigbee2mqtt.io/images/devices/SPP02GIP.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

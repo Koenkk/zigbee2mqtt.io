@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EDP](/supported-devices/#v=EDP)  |
 | Description | re:dy switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![EDP SWITCH EDP RE:DY](https://www.zigbee2mqtt.io/images/devices/SWITCH-EDP-RE-DY.jpg) |
+| Picture | ![EDP SWITCH EDP RE:DY](https://www.zigbee2mqtt.io/images/devices/SWITCH-EDP-RE-DY.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

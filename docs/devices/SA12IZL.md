@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart smoke alarm |
 | Exposes | battery, smoke, battery_level, alarm, silence_siren, linkquality |
-| Picture | ![TuYa SA12IZL](https://www.zigbee2mqtt.io/images/devices/SA12IZL.jpg) |
+| Picture | ![TuYa SA12IZL](https://www.zigbee2mqtt.io/images/devices/SA12IZL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

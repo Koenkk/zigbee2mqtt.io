@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sercomm](/supported-devices/#v=Sercomm)  |
 | Description | PIR motion & temperature sensor |
 | Exposes | occupancy, tamper, illuminance, temperature, battery, voltage, linkquality |
-| Picture | ![Sercomm SZ-PIR04N](https://www.zigbee2mqtt.io/images/devices/SZ-PIR04N.jpg) |
+| Picture | ![Sercomm SZ-PIR04N](https://www.zigbee2mqtt.io/images/devices/SZ-PIR04N.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

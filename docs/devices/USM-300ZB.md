@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS multipurpose sensor |
 | Exposes | battery, voltage, temperature, humidity, occupancy, illuminance_lux, linkquality |
-| Picture | ![ShinaSystem USM-300ZB](https://www.zigbee2mqtt.io/images/devices/USM-300ZB.jpg) |
+| Picture | ![ShinaSystem USM-300ZB](https://www.zigbee2mqtt.io/images/devices/USM-300ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

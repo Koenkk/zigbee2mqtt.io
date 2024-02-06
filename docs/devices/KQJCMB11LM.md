@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Air monitoring panel S1 |
 | Exposes | temperature, humidity, pm25, co2, linkquality |
-| Picture | ![Aqara KQJCMB11LM](https://www.zigbee2mqtt.io/images/devices/KQJCMB11LM.jpg) |
+| Picture | ![Aqara KQJCMB11LM](https://www.zigbee2mqtt.io/images/devices/KQJCMB11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

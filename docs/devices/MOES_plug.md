@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smart plug (with power monitoring) |
 | Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
-| Picture | ![Moes MOES_plug](https://www.zigbee2mqtt.io/images/devices/MOES_plug.jpg) |
+| Picture | ![Moes MOES_plug](https://www.zigbee2mqtt.io/images/devices/MOES_plug.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

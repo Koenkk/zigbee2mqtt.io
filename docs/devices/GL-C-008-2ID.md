@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee LED Controller RGB+CCT (2 ID) |
 | Exposes | light (state, brightness, color_xy), light (state, brightness, color_temp, color_temp_startup), light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-C-008-2ID](https://www.zigbee2mqtt.io/images/devices/GL-C-008-2ID.jpg) |
+| Picture | ![Gledopto GL-C-008-2ID](https://www.zigbee2mqtt.io/images/devices/GL-C-008-2ID.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

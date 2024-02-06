@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Water leak sensor E1 |
 | Exposes | water_leak, battery, battery_low, voltage, device_temperature, power_outage_count, linkquality |
-| Picture | ![Aqara SJCGQ13LM](https://www.zigbee2mqtt.io/images/devices/SJCGQ13LM.jpg) |
+| Picture | ![Aqara SJCGQ13LM](https://www.zigbee2mqtt.io/images/devices/SJCGQ13LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

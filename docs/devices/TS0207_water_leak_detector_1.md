@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee water flood sensor + 1m probe cable |
 | Exposes | water_leak, battery_low, battery, tamper, linkquality |
-| Picture | ![TuYa TS0207_water_leak_detector_1](https://www.zigbee2mqtt.io/images/devices/TS0207_water_leak_detector_1.jpg) |
+| Picture | ![TuYa TS0207_water_leak_detector_1](https://www.zigbee2mqtt.io/images/devices/TS0207_water_leak_detector_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

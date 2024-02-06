@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Temperature & humidity sensor |
 | Exposes | temperature, humidity, battery, linkquality |
-| Picture | ![HEIMAN STHM-I1H](https://www.zigbee2mqtt.io/images/devices/STHM-I1H.jpg) |
+| Picture | ![HEIMAN STHM-I1H](https://www.zigbee2mqtt.io/images/devices/STHM-I1H.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

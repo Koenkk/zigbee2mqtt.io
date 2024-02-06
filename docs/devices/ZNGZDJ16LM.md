@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Roller shade controller T1C |
 | Exposes | cover (state, position), running, linkquality |
-| Picture | ![Aqara ZNGZDJ16LM](https://www.zigbee2mqtt.io/images/devices/ZNGZDJ16LM.jpg) |
+| Picture | ![Aqara ZNGZDJ16LM](https://www.zigbee2mqtt.io/images/devices/ZNGZDJ16LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

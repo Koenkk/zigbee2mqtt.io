@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SOHAN Electric](/supported-devices/#v=SOHAN%20Electric)  |
 | Description | DIN circuit breaker (1 pole / 2 poles) |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![SOHAN Electric RDCBC/Z](https://www.zigbee2mqtt.io/images/devices/RDCBC-Z.jpg) |
+| Picture | ![SOHAN Electric RDCBC/Z](https://www.zigbee2mqtt.io/images/devices/RDCBC-Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

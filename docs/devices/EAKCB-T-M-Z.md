@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EARU](/supported-devices/#v=EARU)  |
 | Description | Smart circuit breaker |
 | Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, linkquality |
-| Picture | ![EARU EAKCB-T-M-Z](https://www.zigbee2mqtt.io/images/devices/EAKCB-T-M-Z.jpg) |
+| Picture | ![EARU EAKCB-T-M-Z](https://www.zigbee2mqtt.io/images/devices/EAKCB-T-M-Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

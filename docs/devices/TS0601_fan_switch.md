@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Fan switch |
 | Exposes | switch (state), power_on_behavior, countdown, fan_speed, linkquality |
-| Picture | ![TuYa TS0601_fan_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_fan_switch.jpg) |
+| Picture | ![TuYa TS0601_fan_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_fan_switch.png) |
 | White-label | Lerlink T2-Z67/T2-W67 |
 
 

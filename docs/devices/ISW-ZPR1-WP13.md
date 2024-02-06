@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Motion sensor |
 | Exposes | temperature, battery, occupancy, battery_low, tamper, linkquality |
-| Picture | ![Bosch ISW-ZPR1-WP13](https://www.zigbee2mqtt.io/images/devices/ISW-ZPR1-WP13.jpg) |
+| Picture | ![Bosch ISW-ZPR1-WP13](https://www.zigbee2mqtt.io/images/devices/ISW-ZPR1-WP13.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

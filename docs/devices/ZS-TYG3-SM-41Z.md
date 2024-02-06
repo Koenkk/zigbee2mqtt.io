@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 4 gang smart switch with backlight and neutral wire |
 | Exposes | switch (state), backlight_mode, countdown, power_on_behavior, linkquality |
-| Picture | ![TuYa ZS-TYG3-SM-41Z](https://www.zigbee2mqtt.io/images/devices/ZS-TYG3-SM-41Z.jpg) |
+| Picture | ![TuYa ZS-TYG3-SM-41Z](https://www.zigbee2mqtt.io/images/devices/ZS-TYG3-SM-41Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

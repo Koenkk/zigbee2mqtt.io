@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Feibit](/supported-devices/#v=Feibit)  |
 | Description | Human body movement sensor |
 | Exposes | occupancy, battery_low, tamper, battery, linkquality |
-| Picture | ![Feibit SBM01ZB](https://www.zigbee2mqtt.io/images/devices/SBM01ZB.jpg) |
+| Picture | ![Feibit SBM01ZB](https://www.zigbee2mqtt.io/images/devices/SBM01ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

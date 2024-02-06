@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
 | Description | RGB+CCT Remote |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![MiBoxer FUT089Z](https://www.zigbee2mqtt.io/images/devices/FUT089Z.jpg) |
+| Picture | ![MiBoxer FUT089Z](https://www.zigbee2mqtt.io/images/devices/FUT089Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

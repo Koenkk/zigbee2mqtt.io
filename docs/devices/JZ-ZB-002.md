@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LELLKI](/supported-devices/#v=LELLKI)  |
 | Description | 2 gang touch switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![LELLKI JZ-ZB-002](https://www.zigbee2mqtt.io/images/devices/JZ-ZB-002.jpg) |
+| Picture | ![LELLKI JZ-ZB-002](https://www.zigbee2mqtt.io/images/devices/JZ-ZB-002.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

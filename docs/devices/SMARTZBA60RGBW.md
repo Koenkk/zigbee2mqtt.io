@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LEDVANCE](/supported-devices/#v=LEDVANCE)  |
 | Description | SMART+ lamp B22D RGBTW |
 | Exposes | light (state, brightness, color_temp, color_xy, color_hs), effect, linkquality |
-| Picture | ![LEDVANCE SMARTZBA60RGBW](https://www.zigbee2mqtt.io/images/devices/SMARTZBA60RGBW.jpg) |
+| Picture | ![LEDVANCE SMARTZBA60RGBW](https://www.zigbee2mqtt.io/images/devices/SMARTZBA60RGBW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

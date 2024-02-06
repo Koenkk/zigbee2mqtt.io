@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Leviton](/supported-devices/#v=Leviton)  |
 | Description | Indoor Decora smart Zigbee 3.0 certified plug-in outlet |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Leviton DG15A-1BW](https://www.zigbee2mqtt.io/images/devices/DG15A-1BW.jpg) |
+| Picture | ![Leviton DG15A-1BW](https://www.zigbee2mqtt.io/images/devices/DG15A-1BW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

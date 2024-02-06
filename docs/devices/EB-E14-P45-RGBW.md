@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EssentielB](/supported-devices/#v=EssentielB)  |
 | Description | Smart LED bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![EssentielB EB-E14-P45-RGBW](https://www.zigbee2mqtt.io/images/devices/EB-E14-P45-RGBW.jpg) |
+| Picture | ![EssentielB EB-E14-P45-RGBW](https://www.zigbee2mqtt.io/images/devices/EB-E14-P45-RGBW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

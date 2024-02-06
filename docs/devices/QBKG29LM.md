@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch H1 (no neutral, triple rocker) |
 | Exposes | switch (state), power_outage_memory, flip_indicator_light, led_disabled_night, power_outage_count, operation_mode, mode_switch, device_temperature, action, linkquality |
-| Picture | ![Aqara QBKG29LM](https://www.zigbee2mqtt.io/images/devices/QBKG29LM.jpg) |
+| Picture | ![Aqara QBKG29LM](https://www.zigbee2mqtt.io/images/devices/QBKG29LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

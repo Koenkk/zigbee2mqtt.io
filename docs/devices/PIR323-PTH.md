@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [OWON](/supported-devices/#v=OWON)  |
 | Description | Multi-sensor |
 | Exposes | occupancy, battery_low, temperature, humidity, linkquality |
-| Picture | ![OWON PIR323-PTH](https://www.zigbee2mqtt.io/images/devices/PIR323-PTH.jpg) |
+| Picture | ![OWON PIR323-PTH](https://www.zigbee2mqtt.io/images/devices/PIR323-PTH.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

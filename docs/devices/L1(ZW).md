@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Light dimmer 0-10V |
 | Exposes | light (state, brightness), do_not_disturb, linkquality |
-| Picture | ![TuYa L1(ZW)](https://www.zigbee2mqtt.io/images/devices/L1(ZW).jpg) |
+| Picture | ![TuYa L1(ZW)](https://www.zigbee2mqtt.io/images/devices/L1(ZW).png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

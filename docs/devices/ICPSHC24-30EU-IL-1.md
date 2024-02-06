@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [IKEA](/supported-devices/#v=IKEA)  |
 | Description | TRADFRI driver for wireless control (30 watt) |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![IKEA ICPSHC24-30EU-IL-1](https://www.zigbee2mqtt.io/images/devices/ICPSHC24-30EU-IL-1.jpg) |
+| Picture | ![IKEA ICPSHC24-30EU-IL-1](https://www.zigbee2mqtt.io/images/devices/ICPSHC24-30EU-IL-1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

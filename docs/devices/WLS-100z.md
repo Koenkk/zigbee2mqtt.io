@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Water leak sensor |
 | Exposes | battery, water_leak, linkquality |
-| Picture | ![TuYa WLS-100z](https://www.zigbee2mqtt.io/images/devices/WLS-100z.jpg) |
+| Picture | ![TuYa WLS-100z](https://www.zigbee2mqtt.io/images/devices/WLS-100z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart occupancy sensor |
 | Exposes | occupancy, battery, illuminance, linkquality |
-| Picture | ![HEIMAN HS1MIS-3.0](https://www.zigbee2mqtt.io/images/devices/HS1MIS-3.0.jpg) |
+| Picture | ![HEIMAN HS1MIS-3.0](https://www.zigbee2mqtt.io/images/devices/HS1MIS-3.0.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

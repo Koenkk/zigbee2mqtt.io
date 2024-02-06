@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 3-phase clamp power meter with relay |
 | Exposes | switch (state), power, energy, produced_energy, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, linkquality |
-| Picture | ![TuYa TS0601_3_phase_clamp_meter_relay](https://www.zigbee2mqtt.io/images/devices/TS0601_3_phase_clamp_meter_relay.jpg) |
+| Picture | ![TuYa TS0601_3_phase_clamp_meter_relay](https://www.zigbee2mqtt.io/images/devices/TS0601_3_phase_clamp_meter_relay.png) |
 | White-label | Wenzhou Taiye Electric TAC7361C BI |
 
 

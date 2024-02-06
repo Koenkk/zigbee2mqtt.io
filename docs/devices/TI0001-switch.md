@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Livolo](/supported-devices/#v=Livolo)  |
 | Description | Zigbee switch 1 gang |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Livolo TI0001-switch](https://www.zigbee2mqtt.io/images/devices/TI0001-switch.jpg) |
+| Picture | ![Livolo TI0001-switch](https://www.zigbee2mqtt.io/images/devices/TI0001-switch.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

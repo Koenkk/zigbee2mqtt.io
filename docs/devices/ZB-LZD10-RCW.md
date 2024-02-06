@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | 10W RGB+CCT Smart Downlight |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![Moes ZB-LZD10-RCW](https://www.zigbee2mqtt.io/images/devices/ZB-LZD10-RCW.jpg) |
+| Picture | ![Moes ZB-LZD10-RCW](https://www.zigbee2mqtt.io/images/devices/ZB-LZD10-RCW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Adaprox](/supported-devices/#v=Adaprox)  |
 | Description | Remote wireless switch (2-key) |
 | Exposes | action, linkquality |
-| Picture | ![Adaprox LKWSZ211](https://www.zigbee2mqtt.io/images/devices/LKWSZ211.jpg) |
+| Picture | ![Adaprox LKWSZ211](https://www.zigbee2mqtt.io/images/devices/LKWSZ211.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

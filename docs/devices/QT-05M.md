@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [QOTO](/supported-devices/#v=QOTO)  |
 | Description | Solar powered garden watering timer |
 | Exposes | water_flow, last_watering_duration, remaining_watering_time, valve_state, shutdown_timer, valve_state_auto_shutdown, battery, linkquality |
-| Picture | ![QOTO QT-05M](https://www.zigbee2mqtt.io/images/devices/QT-05M.jpg) |
+| Picture | ![QOTO QT-05M](https://www.zigbee2mqtt.io/images/devices/QT-05M.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

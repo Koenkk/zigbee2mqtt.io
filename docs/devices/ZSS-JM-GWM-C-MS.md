@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smart door and window sensor |
 | Exposes | contact, battery_low, battery, voltage, tamper, linkquality |
-| Picture | ![Moes ZSS-JM-GWM-C-MS](https://www.zigbee2mqtt.io/images/devices/ZSS-JM-GWM-C-MS.jpg) |
+| Picture | ![Moes ZSS-JM-GWM-C-MS](https://www.zigbee2mqtt.io/images/devices/ZSS-JM-GWM-C-MS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

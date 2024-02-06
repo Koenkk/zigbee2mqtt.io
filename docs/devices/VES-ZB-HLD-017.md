@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Vesternet](/supported-devices/#v=Vesternet)  |
 | Description | Zigbee high load switch |
 | Exposes | switch (state), power, current, voltage, energy, power_on_behavior, linkquality |
-| Picture | ![Vesternet VES-ZB-HLD-017](https://www.zigbee2mqtt.io/images/devices/VES-ZB-HLD-017.jpg) |
+| Picture | ![Vesternet VES-ZB-HLD-017](https://www.zigbee2mqtt.io/images/devices/VES-ZB-HLD-017.png) |
 | White-label | Sunricher SR-ZG9101SAC-HP-SWITCH-B |
 
 

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HUARUI](/supported-devices/#v=HUARUI)  |
 | Description | Lithium battery intelligent curtain opening and closing motor |
 | Exposes | cover (state, position), options, linkquality |
-| Picture | ![HUARUI CMD900LE](https://www.zigbee2mqtt.io/images/devices/CMD900LE.jpg) |
+| Picture | ![HUARUI CMD900LE](https://www.zigbee2mqtt.io/images/devices/CMD900LE.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

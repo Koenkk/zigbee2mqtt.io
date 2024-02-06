@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee on/off wall switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Gledopto GL-W-001Z](https://www.zigbee2mqtt.io/images/devices/GL-W-001Z.jpg) |
+| Picture | ![Gledopto GL-W-001Z](https://www.zigbee2mqtt.io/images/devices/GL-W-001Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature and humidity sensor |
 | Exposes | temperature, humidity, battery_state, temperature_unit, linkquality |
-| Picture | ![TuYa TS0601_temperature_humidity_sensor_2](https://www.zigbee2mqtt.io/images/devices/TS0601_temperature_humidity_sensor_2.jpg) |
+| Picture | ![TuYa TS0601_temperature_humidity_sensor_2](https://www.zigbee2mqtt.io/images/devices/TS0601_temperature_humidity_sensor_2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

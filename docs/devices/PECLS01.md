@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Perenio](/supported-devices/#v=Perenio)  |
 | Description | Flood alarm device |
 | Exposes | water_leak, battery_low, tamper, battery, linkquality |
-| Picture | ![Perenio PECLS01](https://www.zigbee2mqtt.io/images/devices/PECLS01.jpg) |
+| Picture | ![Perenio PECLS01](https://www.zigbee2mqtt.io/images/devices/PECLS01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

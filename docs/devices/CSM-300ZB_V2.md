@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS multipurpose ToF sensor |
 | Exposes | battery, voltage, status, people, rf_pairing_on, counting_freeze, tof_init, led_state, rf_state, transaction, fast_in, fast_out, linkquality |
-| Picture | ![ShinaSystem CSM-300ZB_V2](https://www.zigbee2mqtt.io/images/devices/CSM-300ZB_V2.jpg) |
+| Picture | ![ShinaSystem CSM-300ZB_V2](https://www.zigbee2mqtt.io/images/devices/CSM-300ZB_V2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

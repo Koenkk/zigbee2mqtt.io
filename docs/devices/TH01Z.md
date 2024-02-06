@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature and humidity sensor with clock |
 | Exposes | temperature, humidity, battery, temperature_report_interval, humidity_report_interval, temperature_unit_convert, temperature_alarm, max_temperature, min_temperature, temperature_sensitivity, humidity_alarm, max_humidity, min_humidity, humidity_sensitivity, linkquality |
-| Picture | ![TuYa TH01Z](https://www.zigbee2mqtt.io/images/devices/TH01Z.jpg) |
+| Picture | ![TuYa TH01Z](https://www.zigbee2mqtt.io/images/devices/TH01Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

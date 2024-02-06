@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2 gang switch module with power monitoring |
 | Exposes | switch (state), power_on_behavior, switch_type, power, current, voltage, energy, linkquality |
-| Picture | ![TuYa XSH01B](https://www.zigbee2mqtt.io/images/devices/XSH01B.jpg) |
+| Picture | ![TuYa XSH01B](https://www.zigbee2mqtt.io/images/devices/XSH01B.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

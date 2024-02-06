@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch H1M (with neutral, double rocker) |
 | Exposes | switch (state), operation_mode, action, device_temperature, flip_indicator_light, linkquality |
-| Picture | ![Aqara ZNQBKG25LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG25LM.jpg) |
+| Picture | ![Aqara ZNQBKG25LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG25LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

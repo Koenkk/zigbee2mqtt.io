@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart plug |
 | Exposes | switch (state), power, energy, device_temperature, voltage, power_outage_memory, led_disabled_night, auto_off, linkquality |
-| Picture | ![Aqara ZNCZ11LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ11LM.jpg) |
+| Picture | ![Aqara ZNCZ11LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

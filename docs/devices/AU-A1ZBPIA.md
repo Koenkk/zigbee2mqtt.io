@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
 | Description | Aurora smart plug |
 | Exposes | switch (state), power, voltage, current, device_temperature, energy, linkquality |
-| Picture | ![Aurora Lighting AU-A1ZBPIA](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBPIA.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZBPIA](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBPIA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

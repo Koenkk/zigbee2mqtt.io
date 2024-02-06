@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | GU10 warm white |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![Hive FWGU10Bulb02UK](https://www.zigbee2mqtt.io/images/devices/FWGU10Bulb02UK.jpg) |
+| Picture | ![Hive FWGU10Bulb02UK](https://www.zigbee2mqtt.io/images/devices/FWGU10Bulb02UK.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

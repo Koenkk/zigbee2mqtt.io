@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Third Reality](/supported-devices/#v=Third%20Reality)  |
 | Description | Smart button |
 | Exposes | battery, battery_low, voltage, action, linkquality |
-| Picture | ![Third Reality 3RSB22BZ](https://www.zigbee2mqtt.io/images/devices/3RSB22BZ.jpg) |
+| Picture | ![Third Reality 3RSB22BZ](https://www.zigbee2mqtt.io/images/devices/3RSB22BZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Phoscon](/supported-devices/#v=Phoscon)  |
 | Description | Battery powered smart LED light |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, battery, linkquality |
-| Picture | ![Phoscon Hive](https://www.zigbee2mqtt.io/images/devices/Hive.jpg) |
+| Picture | ![Phoscon Hive](https://www.zigbee2mqtt.io/images/devices/Hive.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

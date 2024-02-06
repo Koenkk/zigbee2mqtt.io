@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Roller shade controller |
 | Exposes | cover (state, position), running, linkquality |
-| Picture | ![Aqara ZNGZDJ11LM](https://www.zigbee2mqtt.io/images/devices/ZNGZDJ11LM.jpg) |
+| Picture | ![Aqara ZNGZDJ11LM](https://www.zigbee2mqtt.io/images/devices/ZNGZDJ11LM.png) |
 | White-label | Aqara SRSC-M01 |
 
 

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart scene switch |
 | Exposes | battery, action, linkquality |
-| Picture | ![HEIMAN HS2SS](https://www.zigbee2mqtt.io/images/devices/HS2SS.jpg) |
+| Picture | ![HEIMAN HS2SS](https://www.zigbee2mqtt.io/images/devices/HS2SS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

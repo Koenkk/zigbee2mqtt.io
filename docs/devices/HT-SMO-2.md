@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Heimgard Technologies](/supported-devices/#v=Heimgard%20Technologies)  |
 | Description | Smoke detector |
 | Exposes | smoke, battery_low, battery, linkquality |
-| Picture | ![Heimgard Technologies HT-SMO-2](https://www.zigbee2mqtt.io/images/devices/HT-SMO-2.jpg) |
+| Picture | ![Heimgard Technologies HT-SMO-2](https://www.zigbee2mqtt.io/images/devices/HT-SMO-2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

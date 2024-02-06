@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart water/gas valve |
 | Exposes | switch (state), power_on_behavior, indicator_mode, linkquality |
-| Picture | ![TuYa TS0111_valve](https://www.zigbee2mqtt.io/images/devices/TS0111_valve.jpg) |
+| Picture | ![TuYa TS0111_valve](https://www.zigbee2mqtt.io/images/devices/TS0111_valve.png) |
 | White-label | TuYa SM-AW713Z |
 
 

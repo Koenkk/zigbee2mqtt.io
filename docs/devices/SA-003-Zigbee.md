@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
 | Description | Zigbee smart plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![eWeLink SA-003-Zigbee](https://www.zigbee2mqtt.io/images/devices/SA-003-Zigbee.jpg) |
+| Picture | ![eWeLink SA-003-Zigbee](https://www.zigbee2mqtt.io/images/devices/SA-003-Zigbee.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

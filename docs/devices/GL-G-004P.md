@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee 7W garden light Pro RGB+CCT |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-G-004P](https://www.zigbee2mqtt.io/images/devices/GL-G-004P.jpg) |
+| Picture | ![Gledopto GL-G-004P](https://www.zigbee2mqtt.io/images/devices/GL-G-004P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

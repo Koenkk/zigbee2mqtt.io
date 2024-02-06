@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [AVATTO](/supported-devices/#v=AVATTO)  |
 | Description | 1 gang switch module |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
-| Picture | ![AVATTO ZWSM16-1-Zigbee](https://www.zigbee2mqtt.io/images/devices/ZWSM16-1-Zigbee.jpg) |
+| Picture | ![AVATTO ZWSM16-1-Zigbee](https://www.zigbee2mqtt.io/images/devices/ZWSM16-1-Zigbee.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

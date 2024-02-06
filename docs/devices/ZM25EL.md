@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Cover motor |
 | Exposes | battery, cover (state, position), reverse_direction, border, click_control, motor_fault, linkquality |
-| Picture | ![Zemismart ZM25EL](https://www.zigbee2mqtt.io/images/devices/ZM25EL.jpg) |
+| Picture | ![Zemismart ZM25EL](https://www.zigbee2mqtt.io/images/devices/ZM25EL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

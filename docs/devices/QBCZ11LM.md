@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall outlet |
 | Exposes | switch (state), power, energy, device_temperature, voltage, power_outage_memory, linkquality |
-| Picture | ![Aqara QBCZ11LM](https://www.zigbee2mqtt.io/images/devices/QBCZ11LM.jpg) |
+| Picture | ![Aqara QBCZ11LM](https://www.zigbee2mqtt.io/images/devices/QBCZ11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Stelpro](/supported-devices/#v=Stelpro)  |
 | Description | ORLÉANS fan heater |
 | Exposes | local_temperature, keypad_lockout, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
-| Picture | ![Stelpro SORB](https://www.zigbee2mqtt.io/images/devices/SORB.jpg) |
+| Picture | ![Stelpro SORB](https://www.zigbee2mqtt.io/images/devices/SORB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

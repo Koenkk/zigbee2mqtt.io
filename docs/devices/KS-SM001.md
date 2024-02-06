@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Ksentry Electronics](/supported-devices/#v=Ksentry%20Electronics)  |
 | Description | Zigbee on/off controller |
 | Exposes | switch (state), linkquality |
-| Picture | ![Ksentry Electronics KS-SM001](https://www.zigbee2mqtt.io/images/devices/KS-SM001.jpg) |
+| Picture | ![Ksentry Electronics KS-SM001](https://www.zigbee2mqtt.io/images/devices/KS-SM001.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

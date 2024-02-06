@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN E27 LED white |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![ADEO 9CZA-A806ST-Q1Z](https://www.zigbee2mqtt.io/images/devices/9CZA-A806ST-Q1Z.jpg) |
+| Picture | ![ADEO 9CZA-A806ST-Q1Z](https://www.zigbee2mqtt.io/images/devices/9CZA-A806ST-Q1Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

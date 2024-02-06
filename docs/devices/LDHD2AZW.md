@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Leedarson](/supported-devices/#v=Leedarson)  |
 | Description | Magnetic door & window contact sensor |
 | Exposes | contact, battery_low, tamper, temperature, battery, linkquality |
-| Picture | ![Leedarson LDHD2AZW](https://www.zigbee2mqtt.io/images/devices/LDHD2AZW.jpg) |
+| Picture | ![Leedarson LDHD2AZW](https://www.zigbee2mqtt.io/images/devices/LDHD2AZW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

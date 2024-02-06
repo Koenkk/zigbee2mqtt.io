@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Wireless switch with 6 buttons |
 | Exposes | battery, operation_mode, action, linkquality |
-| Picture | ![TuYa TS004F_6_button](https://www.zigbee2mqtt.io/images/devices/TS004F_6_button.jpg) |
+| Picture | ![TuYa TS004F_6_button](https://www.zigbee2mqtt.io/images/devices/TS004F_6_button.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

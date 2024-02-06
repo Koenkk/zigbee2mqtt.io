@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Nue / 3A](/supported-devices/#v=Nue%20%2F%203A)  |
 | Description | Smart switch 1 or 2 gang |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Nue / 3A HGZB-42-UK / HGZB-41 / HGZB-41-UK](https://www.zigbee2mqtt.io/images/devices/HGZB-42-UK---HGZB-41---HGZB-41-UK.jpg) |
+| Picture | ![Nue / 3A HGZB-42-UK / HGZB-41 / HGZB-41-UK](https://www.zigbee2mqtt.io/images/devices/HGZB-42-UK---HGZB-41---HGZB-41-UK.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

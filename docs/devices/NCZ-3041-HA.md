@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Nyce](/supported-devices/#v=Nyce)  |
 | Description | Wall motion sensor |
 | Exposes | occupancy, humidity, temperature, battery, battery_low, tamper, linkquality |
-| Picture | ![Nyce NCZ-3041-HA](https://www.zigbee2mqtt.io/images/devices/NCZ-3041-HA.jpg) |
+| Picture | ![Nyce NCZ-3041-HA](https://www.zigbee2mqtt.io/images/devices/NCZ-3041-HA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

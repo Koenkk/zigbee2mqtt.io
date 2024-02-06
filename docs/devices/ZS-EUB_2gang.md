@@ -1,7 +1,7 @@
 ---
-title: "Moes ZS-US2-WH-MS control via MQTT"
-description: "Integrate your Moes ZS-US2-WH-MS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-11-30T19:41:12
+title: "Moes ZS-EUB_2gang control via MQTT"
+description: "Integrate your Moes ZS-EUB_2gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-02-06T19:45:40
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Moes ZS-US2-WH-MS
+# Moes ZS-EUB_2gang
 
 |     |     |
 |-----|-----|
-| Model | ZS-US2-WH-MS  |
+| Model | ZS-EUB_2gang  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smart light switch - 2 gang |
 | Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
-| Picture | ![Moes ZS-US2-WH-MS](https://www.zigbee2mqtt.io/images/devices/ZS-US2-WH-MS.jpg) |
+| Picture | ![Moes ZS-EUB_2gang](https://www.zigbee2mqtt.io/images/devices/ZS-EUB_2gang.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Wenzhi](/supported-devices/#v=Wenzhi)  |
 | Description | Human presence sensor |
 | Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, linkquality |
-| Picture | ![Wenzhi WZ-M100-W](https://www.zigbee2mqtt.io/images/devices/WZ-M100-W.jpg) |
+| Picture | ![Wenzhi WZ-M100-W](https://www.zigbee2mqtt.io/images/devices/WZ-M100-W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

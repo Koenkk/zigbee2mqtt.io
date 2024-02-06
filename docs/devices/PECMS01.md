@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Perenio](/supported-devices/#v=Perenio)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, battery, linkquality |
-| Picture | ![Perenio PECMS01](https://www.zigbee2mqtt.io/images/devices/PECMS01.jpg) |
+| Picture | ![Perenio PECMS01](https://www.zigbee2mqtt.io/images/devices/PECMS01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

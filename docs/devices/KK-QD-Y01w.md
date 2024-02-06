@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Konke](/supported-devices/#v=Konke)  |
 | Description | Spotlight driver (cw mode) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![Konke KK-QD-Y01w](https://www.zigbee2mqtt.io/images/devices/KK-QD-Y01w.jpg) |
+| Picture | ![Konke KK-QD-Y01w](https://www.zigbee2mqtt.io/images/devices/KK-QD-Y01w.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

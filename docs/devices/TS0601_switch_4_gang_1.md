@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 4 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS0601_switch_4_gang_1](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_4_gang_1.jpg) |
+| Picture | ![TuYa TS0601_switch_4_gang_1](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_4_gang_1.png) |
 | White-label | Norklmes MKS-CM-W5, Somgoms ZSQB-SMB-ZB, Moes WS-EUB1-ZG, AVATTO ZGB-WS-EU |
 
 

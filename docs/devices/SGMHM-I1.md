@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Methane gas sensor |
 | Exposes | gas, linkquality |
-| Picture | ![HEIMAN SGMHM-I1](https://www.zigbee2mqtt.io/images/devices/SGMHM-I1.jpg) |
+| Picture | ![HEIMAN SGMHM-I1](https://www.zigbee2mqtt.io/images/devices/SGMHM-I1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

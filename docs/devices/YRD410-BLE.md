@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Yale](/supported-devices/#v=Yale)  |
 | Description | Assure lock 2 |
 | Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, auto_relock_time, sound_volume, battery_low, linkquality |
-| Picture | ![Yale YRD410-BLE](https://www.zigbee2mqtt.io/images/devices/YRD410-BLE.jpg) |
+| Picture | ![Yale YRD410-BLE](https://www.zigbee2mqtt.io/images/devices/YRD410-BLE.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EasyAccess](/supported-devices/#v=EasyAccess)  |
 | Description | EasyFinger V2 |
 | Exposes | lock (state, lock_state), battery, sound_volume, action, auto_relock, linkquality |
-| Picture | ![EasyAccess EasyCode903G2.1](https://www.zigbee2mqtt.io/images/devices/EasyCode903G2.1.jpg) |
+| Picture | ![EasyAccess EasyCode903G2.1](https://www.zigbee2mqtt.io/images/devices/EasyCode903G2.1.png) |
 | White-label | Datek Wireless EasyCode903G2.1 |
 
 

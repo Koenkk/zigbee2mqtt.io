@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | Double power point with USB |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
-| Picture | ![Mercator Ikuü SPPUSB02](https://www.zigbee2mqtt.io/images/devices/SPPUSB02.jpg) |
+| Picture | ![Mercator Ikuü SPPUSB02](https://www.zigbee2mqtt.io/images/devices/SPPUSB02.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch T1 (with neutral, three rocker) |
 | Exposes | switch (state), power, energy, voltage, flip_indicator_light, power_outage_memory, led_disabled_night, device_temperature, action, operation_mode, linkquality |
-| Picture | ![Aqara QBKG34LM](https://www.zigbee2mqtt.io/images/devices/QBKG34LM.jpg) |
+| Picture | ![Aqara QBKG34LM](https://www.zigbee2mqtt.io/images/devices/QBKG34LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

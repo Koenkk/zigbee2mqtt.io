@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless mini switch T1 |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![Aqara WXKG13LM](https://www.zigbee2mqtt.io/images/devices/WXKG13LM.jpg) |
+| Picture | ![Aqara WXKG13LM](https://www.zigbee2mqtt.io/images/devices/WXKG13LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

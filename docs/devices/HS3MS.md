@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart motion sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HS3MS](https://www.zigbee2mqtt.io/images/devices/HS3MS.jpg) |
+| Picture | ![HEIMAN HS3MS](https://www.zigbee2mqtt.io/images/devices/HS3MS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

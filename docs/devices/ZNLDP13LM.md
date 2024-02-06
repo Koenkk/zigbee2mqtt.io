@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Light bulb T1 |
 | Exposes | light (state, brightness, color_temp), device_temperature, power_outage_count, power_outage_memory, linkquality |
-| Picture | ![Aqara ZNLDP13LM](https://www.zigbee2mqtt.io/images/devices/ZNLDP13LM.jpg) |
+| Picture | ![Aqara ZNLDP13LM](https://www.zigbee2mqtt.io/images/devices/ZNLDP13LM.png) |
 | White-label | Aqara LEDLBT1-L01 |
 
 

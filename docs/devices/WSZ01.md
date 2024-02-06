@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [J.XUAN](/supported-devices/#v=J.XUAN)  |
 | Description | Wireless switch |
 | Exposes | action, battery, linkquality |
-| Picture | ![J.XUAN WSZ01](https://www.zigbee2mqtt.io/images/devices/WSZ01.jpg) |
+| Picture | ![J.XUAN WSZ01](https://www.zigbee2mqtt.io/images/devices/WSZ01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

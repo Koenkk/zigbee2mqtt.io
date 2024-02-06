@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Envilar](/supported-devices/#v=Envilar)  |
 | Description | Zigbee LED driver |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![Envilar ZG_LED_DRIVER42CC](https://www.zigbee2mqtt.io/images/devices/ZG_LED_DRIVER42CC.jpg) |
+| Picture | ![Envilar ZG_LED_DRIVER42CC](https://www.zigbee2mqtt.io/images/devices/ZG_LED_DRIVER42CC.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Profalux](/supported-devices/#v=Profalux)  |
 | Description | Cover remote |
 | Exposes | linkquality |
-| Picture | ![Profalux MAI-ZTM20C](https://www.zigbee2mqtt.io/images/devices/MAI-ZTM20C.jpg) |
+| Picture | ![Profalux MAI-ZTM20C](https://www.zigbee2mqtt.io/images/devices/MAI-ZTM20C.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

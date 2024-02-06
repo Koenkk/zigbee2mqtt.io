@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart door lock S2 Pro |
 | Exposes | state, reverse, action, linkquality |
-| Picture | ![Aqara ZNMS13LM](https://www.zigbee2mqtt.io/images/devices/ZNMS13LM.jpg) |
+| Picture | ![Aqara ZNMS13LM](https://www.zigbee2mqtt.io/images/devices/ZNMS13LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

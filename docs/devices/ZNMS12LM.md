@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart door lock S2 |
 | Exposes | battery, voltage, battery_low, state, reverse, action, linkquality |
-| Picture | ![Aqara ZNMS12LM](https://www.zigbee2mqtt.io/images/devices/ZNMS12LM.jpg) |
+| Picture | ![Aqara ZNMS12LM](https://www.zigbee2mqtt.io/images/devices/ZNMS12LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

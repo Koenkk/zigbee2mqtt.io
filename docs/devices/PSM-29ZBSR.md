@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Power plug |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![Climax PSM-29ZBSR](https://www.zigbee2mqtt.io/images/devices/PSM-29ZBSR.jpg) |
+| Picture | ![Climax PSM-29ZBSR](https://www.zigbee2mqtt.io/images/devices/PSM-29ZBSR.png) |
 | White-label | Blaupunkt PSM-S1 |
 
 

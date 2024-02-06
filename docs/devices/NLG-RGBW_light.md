@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Paul Neuhaus](/supported-devices/#v=Paul%20Neuhaus)  |
 | Description | Various RGBW lights (e.g. 100.110.39) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![Paul Neuhaus NLG-RGBW_light](https://www.zigbee2mqtt.io/images/devices/NLG-RGBW_light.jpg) |
+| Picture | ![Paul Neuhaus NLG-RGBW_light](https://www.zigbee2mqtt.io/images/devices/NLG-RGBW_light.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

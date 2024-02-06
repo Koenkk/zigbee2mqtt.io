@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ORVIBO](/supported-devices/#v=ORVIBO)  |
 | Description | Smart curtain motor |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![ORVIBO W45CZ](https://www.zigbee2mqtt.io/images/devices/W45CZ.jpg) |
+| Picture | ![ORVIBO W45CZ](https://www.zigbee2mqtt.io/images/devices/W45CZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

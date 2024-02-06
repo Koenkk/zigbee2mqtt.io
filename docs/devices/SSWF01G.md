@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | AC fan controller |
 | Exposes | switch (state), fan (state, mode), linkquality |
-| Picture | ![Mercator Ikuü SSWF01G](https://www.zigbee2mqtt.io/images/devices/SSWF01G.jpg) |
+| Picture | ![Mercator Ikuü SSWF01G](https://www.zigbee2mqtt.io/images/devices/SSWF01G.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Dual relay module T2 |
 | Exposes | switch (state), power, current, energy, voltage, device_temperature, switch_type, power_on_behavior, operation_mode, action, interlock, mode, pulse_length, linkquality |
-| Picture | ![Aqara LLKZMK12LM](https://www.zigbee2mqtt.io/images/devices/LLKZMK12LM.jpg) |
+| Picture | ![Aqara LLKZMK12LM](https://www.zigbee2mqtt.io/images/devices/LLKZMK12LM.png) |
 | White-label | Aqara DCM-K01 |
 
 

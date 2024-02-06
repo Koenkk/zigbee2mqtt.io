@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless remote switch D1 (single rocker) |
 | Exposes | battery, action, voltage, linkquality |
-| Picture | ![Aqara WXKG06LM](https://www.zigbee2mqtt.io/images/devices/WXKG06LM.jpg) |
+| Picture | ![Aqara WXKG06LM](https://www.zigbee2mqtt.io/images/devices/WXKG06LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aubess](/supported-devices/#v=Aubess)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, battery, sensitivity, keep_time, linkquality |
-| Picture | ![Aubess 40ZH-O](https://www.zigbee2mqtt.io/images/devices/40ZH-O.jpg) |
+| Picture | ![Aubess 40ZH-O](https://www.zigbee2mqtt.io/images/devices/40ZH-O.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

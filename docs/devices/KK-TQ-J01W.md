@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Konke](/supported-devices/#v=Konke)  |
 | Description | Smart 4 key scene switch |
 | Exposes | battery, voltage, battery_low, action, linkquality |
-| Picture | ![Konke KK-TQ-J01W](https://www.zigbee2mqtt.io/images/devices/KK-TQ-J01W.jpg) |
+| Picture | ![Konke KK-TQ-J01W](https://www.zigbee2mqtt.io/images/devices/KK-TQ-J01W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

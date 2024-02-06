@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Vibration sensor |
 | Exposes | battery_low, battery, temperature, vibration, tamper, linkquality |
-| Picture | ![Develco WISZB-137](https://www.zigbee2mqtt.io/images/devices/WISZB-137.jpg) |
+| Picture | ![Develco WISZB-137](https://www.zigbee2mqtt.io/images/devices/WISZB-137.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

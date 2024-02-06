@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Dual relay module |
 | Exposes | power, energy, device_temperature, voltage, current, switch (state), power_outage_count, power_outage_memory, interlock, linkquality |
-| Picture | ![Aqara LLKZMK11LM](https://www.zigbee2mqtt.io/images/devices/LLKZMK11LM.jpg) |
+| Picture | ![Aqara LLKZMK11LM](https://www.zigbee2mqtt.io/images/devices/LLKZMK11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

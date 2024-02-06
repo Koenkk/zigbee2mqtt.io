@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Linkoze](/supported-devices/#v=Linkoze)  |
 | Description | Door sensor with scene switch |
 | Exposes | action, contact, battery_low, tamper, battery, voltage, linkquality |
-| Picture | ![Linkoze LKDSZ001](https://www.zigbee2mqtt.io/images/devices/LKDSZ001.jpg) |
+| Picture | ![Linkoze LKDSZ001](https://www.zigbee2mqtt.io/images/devices/LKDSZ001.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

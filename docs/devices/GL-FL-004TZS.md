@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee 10W Floodlight RGB+CCT (plus) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-FL-004TZS](https://www.zigbee2mqtt.io/images/devices/GL-FL-004TZS.jpg) |
+| Picture | ![Gledopto GL-FL-004TZS](https://www.zigbee2mqtt.io/images/devices/GL-FL-004TZS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

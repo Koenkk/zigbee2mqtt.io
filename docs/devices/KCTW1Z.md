@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature & humidity sensor with LCD |
 | Exposes | temperature, humidity, battery, voltage, temperature_unit, linkquality |
-| Picture | ![TuYa KCTW1Z](https://www.zigbee2mqtt.io/images/devices/KCTW1Z.jpg) |
+| Picture | ![TuYa KCTW1Z](https://www.zigbee2mqtt.io/images/devices/KCTW1Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

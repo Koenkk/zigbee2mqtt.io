@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | IO module |
 | Exposes | input, switch (state), linkquality |
-| Picture | ![Develco IOMZB-110](https://www.zigbee2mqtt.io/images/devices/IOMZB-110.jpg) |
+| Picture | ![Develco IOMZB-110](https://www.zigbee2mqtt.io/images/devices/IOMZB-110.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

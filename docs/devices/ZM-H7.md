@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Hand wave wall smart switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Zemismart ZM-H7](https://www.zigbee2mqtt.io/images/devices/ZM-H7.jpg) |
+| Picture | ![Zemismart ZM-H7](https://www.zigbee2mqtt.io/images/devices/ZM-H7.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

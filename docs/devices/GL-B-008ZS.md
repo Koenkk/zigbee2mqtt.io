@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee 12W E26/E27 Bulb RGB+CCT (plus) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
-| Picture | ![Gledopto GL-B-008ZS](https://www.zigbee2mqtt.io/images/devices/GL-B-008ZS.jpg) |
+| Picture | ![Gledopto GL-B-008ZS](https://www.zigbee2mqtt.io/images/devices/GL-B-008ZS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

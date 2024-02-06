@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Photoelectric smoke detector |
 | Exposes | smoke, battery_state, linkquality |
-| Picture | ![TuYa TS0601_smoke_3](https://www.zigbee2mqtt.io/images/devices/TS0601_smoke_3.jpg) |
+| Picture | ![TuYa TS0601_smoke_3](https://www.zigbee2mqtt.io/images/devices/TS0601_smoke_3.png) |
 | White-label | KnockautX SMOAL024 |
 
 

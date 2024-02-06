@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, battery, voltage, tamper, linkquality |
-| Picture | ![TuYa ZMS01](https://www.zigbee2mqtt.io/images/devices/ZMS01.jpg) |
+| Picture | ![TuYa ZMS01](https://www.zigbee2mqtt.io/images/devices/ZMS01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

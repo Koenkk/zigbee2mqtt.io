@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee fingerbot plus |
 | Exposes | switch (state), battery, mode, lower, upper, delay, reverse, touch, linkquality |
-| Picture | ![TuYa TS0001_fingerbot](https://www.zigbee2mqtt.io/images/devices/TS0001_fingerbot.jpg) |
+| Picture | ![TuYa TS0001_fingerbot](https://www.zigbee2mqtt.io/images/devices/TS0001_fingerbot.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

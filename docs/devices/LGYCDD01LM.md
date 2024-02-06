@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Light strip T1 |
 | Exposes | light (state, brightness, color_temp, color_xy), power_on_behavior, length, min_brightness, max_brightness, audio, audio_sensitivity, audio_effect, preset, speed, linkquality |
-| Picture | ![Aqara LGYCDD01LM](https://www.zigbee2mqtt.io/images/devices/LGYCDD01LM.jpg) |
+| Picture | ![Aqara LGYCDD01LM](https://www.zigbee2mqtt.io/images/devices/LGYCDD01LM.png) |
 | White-label | Aqara RLS-K01D |
 
 

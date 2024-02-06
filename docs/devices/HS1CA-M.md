@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart carbon monoxide sensor |
 | Exposes | carbon_monoxide, battery_low, battery, linkquality |
-| Picture | ![HEIMAN HS1CA-M](https://www.zigbee2mqtt.io/images/devices/HS1CA-M.jpg) |
+| Picture | ![HEIMAN HS1CA-M](https://www.zigbee2mqtt.io/images/devices/HS1CA-M.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

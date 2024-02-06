@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | Multifunction relay switch with metering |
 | Exposes | switch (state), power_on_behavior, power, energy, linkquality |
-| Picture | ![ADEO SIN-4-1-21_EQU](https://www.zigbee2mqtt.io/images/devices/SIN-4-1-21_EQU.jpg) |
+| Picture | ![ADEO SIN-4-1-21_EQU](https://www.zigbee2mqtt.io/images/devices/SIN-4-1-21_EQU.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

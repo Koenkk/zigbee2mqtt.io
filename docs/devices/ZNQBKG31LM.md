@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch E1 (with neutral, triple rocker) |
 | Exposes | switch (state), operation_mode, action, power_outage_memory, device_temperature, flip_indicator_light, linkquality |
-| Picture | ![Aqara ZNQBKG31LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG31LM.jpg) |
+| Picture | ![Aqara ZNQBKG31LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG31LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Somgoms](/supported-devices/#v=Somgoms)  |
 | Description | Dimmer switch |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![Somgoms ZSTY-SM-1DMZG-US-W](https://www.zigbee2mqtt.io/images/devices/ZSTY-SM-1DMZG-US-W.jpg) |
+| Picture | ![Somgoms ZSTY-SM-1DMZG-US-W](https://www.zigbee2mqtt.io/images/devices/ZSTY-SM-1DMZG-US-W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

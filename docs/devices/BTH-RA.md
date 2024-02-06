@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Radiator thermostat II |
 | Exposes | climate (local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode, pi_heating_demand, running_state), boost, window_open, display_orientation, remote_temperature, display_ontime, display_brightness, displayed_temperature, lock (state), battery, setpoint_change_source, valve_adapt_status, valve_adapt_process, linkquality |
-| Picture | ![Bosch BTH-RA](https://www.zigbee2mqtt.io/images/devices/BTH-RA.jpg) |
+| Picture | ![Bosch BTH-RA](https://www.zigbee2mqtt.io/images/devices/BTH-RA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

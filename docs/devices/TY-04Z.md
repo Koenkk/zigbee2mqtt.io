@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ZYXH](/supported-devices/#v=ZYXH)  |
 | Description | 4 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![ZYXH TY-04Z](https://www.zigbee2mqtt.io/images/devices/TY-04Z.jpg) |
+| Picture | ![ZYXH TY-04Z](https://www.zigbee2mqtt.io/images/devices/TY-04Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

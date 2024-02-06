@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Thermostat radiator valve |
 | Exposes | battery_low, lock (state), open_window, open_window_temperature, comfort_temperature, eco_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint, system_mode), heating_stop, frost_protection, boost_timeset_countdown, holiday_temperature, holiday_start_stop, working_day, schedule, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, online, error_status, linkquality |
-| Picture | ![Moes ZTRV-ZX-TV01-MS](https://www.zigbee2mqtt.io/images/devices/ZTRV-ZX-TV01-MS.jpg) |
+| Picture | ![Moes ZTRV-ZX-TV01-MS](https://www.zigbee2mqtt.io/images/devices/ZTRV-ZX-TV01-MS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

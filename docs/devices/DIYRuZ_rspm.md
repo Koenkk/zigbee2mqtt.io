@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
 | Description | [DIYRuZ relay switch power meter](https://modkam.ru/?p=1309) |
 | Exposes | switch (state), power, current, cpu_temperature, action, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_rspm](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_rspm.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_rspm](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_rspm.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | mStikk OP, wall socket |
 | Exposes | power, current, voltage, switch (state), energy, linkquality |
-| Picture | ![CTM Lyng mStikk_Outlet](https://www.zigbee2mqtt.io/images/devices/mStikk_Outlet.jpg) |
+| Picture | ![CTM Lyng mStikk_Outlet](https://www.zigbee2mqtt.io/images/devices/mStikk_Outlet.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

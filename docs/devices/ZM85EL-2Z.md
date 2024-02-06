@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Roman Rod I type U curtains track |
 | Exposes | battery, cover (state, position), reverse_direction, border, click_control, motor_fault, linkquality |
-| Picture | ![Zemismart ZM85EL-2Z](https://www.zigbee2mqtt.io/images/devices/ZM85EL-2Z.jpg) |
+| Picture | ![Zemismart ZM85EL-2Z](https://www.zigbee2mqtt.io/images/devices/ZM85EL-2Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Remote dimmer switch |
 | Exposes | battery, action, linkquality |
-| Picture | ![Legrand WNAL63](https://www.zigbee2mqtt.io/images/devices/WNAL63.jpg) |
+| Picture | ![Legrand WNAL63](https://www.zigbee2mqtt.io/images/devices/WNAL63.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

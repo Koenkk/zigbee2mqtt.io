@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EssentielB](/supported-devices/#v=EssentielB)  |
 | Description | E14 flame CCT light bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![EssentielB EB-E14-FLA-CCT](https://www.zigbee2mqtt.io/images/devices/EB-E14-FLA-CCT.jpg) |
+| Picture | ![EssentielB EB-E14-FLA-CCT](https://www.zigbee2mqtt.io/images/devices/EB-E14-FLA-CCT.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

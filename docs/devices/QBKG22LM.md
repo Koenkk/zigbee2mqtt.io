@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch D1 (no neutral, double rocker) |
 | Exposes | switch (state), action, operation_mode, linkquality |
-| Picture | ![Aqara QBKG22LM](https://www.zigbee2mqtt.io/images/devices/QBKG22LM.jpg) |
+| Picture | ![Aqara QBKG22LM](https://www.zigbee2mqtt.io/images/devices/QBKG22LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

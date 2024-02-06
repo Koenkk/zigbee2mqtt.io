@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee LED Controller WW/CW (plus) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Gledopto GL-C-006S](https://www.zigbee2mqtt.io/images/devices/GL-C-006S.jpg) |
+| Picture | ![Gledopto GL-C-006S](https://www.zigbee2mqtt.io/images/devices/GL-C-006S.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

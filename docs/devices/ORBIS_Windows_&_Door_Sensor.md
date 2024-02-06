@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Niceboy](/supported-devices/#v=Niceboy)  |
 | Description | Door sensor |
 | Exposes | contact, battery_low, battery, voltage, tamper, linkquality |
-| Picture | ![Niceboy ORBIS Windows & Door Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Windows-&-Door-Sensor.jpg) |
+| Picture | ![Niceboy ORBIS Windows & Door Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Windows-&-Door-Sensor.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

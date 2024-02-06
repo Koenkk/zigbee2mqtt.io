@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Ubisys](/supported-devices/#v=Ubisys)  |
 | Description | Power switch S1-R |
 | Exposes | switch (state), action, power_on_behavior, power, energy, linkquality |
-| Picture | ![Ubisys S1-R](https://www.zigbee2mqtt.io/images/devices/S1-R.jpg) |
+| Picture | ![Ubisys S1-R](https://www.zigbee2mqtt.io/images/devices/S1-R.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

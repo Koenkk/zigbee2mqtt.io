@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LifeControl](/supported-devices/#v=LifeControl)  |
 | Description | Air sensor |
 | Exposes | temperature, humidity, voc, eco2, battery, linkquality |
-| Picture | ![LifeControl MCLH-08](https://www.zigbee2mqtt.io/images/devices/MCLH-08.jpg) |
+| Picture | ![LifeControl MCLH-08](https://www.zigbee2mqtt.io/images/devices/MCLH-08.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

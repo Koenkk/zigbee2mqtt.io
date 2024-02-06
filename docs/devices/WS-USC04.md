@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch (with neutral, double rocker), US |
 | Exposes | switch (state), operation_mode, power_outage_count, device_temperature, flip_indicator_light, power, energy, voltage, power_outage_memory, action, linkquality |
-| Picture | ![Aqara WS-USC04](https://www.zigbee2mqtt.io/images/devices/WS-USC04.jpg) |
+| Picture | ![Aqara WS-USC04](https://www.zigbee2mqtt.io/images/devices/WS-USC04.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

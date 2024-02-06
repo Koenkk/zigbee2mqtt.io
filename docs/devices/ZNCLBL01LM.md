@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Curtain driver E1 |
 | Exposes | cover (state, position), hand_open, limits_calibration, battery, voltage, device_temperature, illuminance_lux, action, motor_state, running, hooks_lock, hooks_state, target_position, power_source, charging, linkquality |
-| Picture | ![Aqara ZNCLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNCLBL01LM.jpg) |
+| Picture | ![Aqara ZNCLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNCLBL01LM.png) |
 | White-label | Aqara CM-M01, Aqara CM-M01R |
 
 

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
 | Description | Smart light switch - 5 gang |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![eWeLink ZB-SW05](https://www.zigbee2mqtt.io/images/devices/ZB-SW05.jpg) |
+| Picture | ![eWeLink ZB-SW05](https://www.zigbee2mqtt.io/images/devices/ZB-SW05.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

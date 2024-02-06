@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Haozee PIR sensor |
 | Exposes | occupancy, illuminance, battery, linkquality |
-| Picture | ![TuYa TS0601_pir](https://www.zigbee2mqtt.io/images/devices/TS0601_pir.jpg) |
+| Picture | ![TuYa TS0601_pir](https://www.zigbee2mqtt.io/images/devices/TS0601_pir.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

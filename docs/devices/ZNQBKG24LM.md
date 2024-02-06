@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch H1M (with neutral, single rocker) |
 | Exposes | switch (state), power, energy, voltage, device_temperature, action, operation_mode, power_outage_memory, led_disabled_night, flip_indicator_light, linkquality |
-| Picture | ![Aqara ZNQBKG24LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG24LM.jpg) |
+| Picture | ![Aqara ZNQBKG24LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG24LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

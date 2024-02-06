@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Hilux](/supported-devices/#v=Hilux)  |
 | Description | Spot 7W |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Hilux DZ8](https://www.zigbee2mqtt.io/images/devices/DZ8.jpg) |
+| Picture | ![Hilux DZ8](https://www.zigbee2mqtt.io/images/devices/DZ8.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

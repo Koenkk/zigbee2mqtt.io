@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart energy monitor for 3P+N system |
 | Exposes | voltage_X, voltage_Y, voltage_Z, power_X, power_Y, power_Z, current_X, current_Y, current_Z, energy, produced_energy, linkquality |
-| Picture | ![TuYa SPM02](https://www.zigbee2mqtt.io/images/devices/SPM02.jpg) |
+| Picture | ![TuYa SPM02](https://www.zigbee2mqtt.io/images/devices/SPM02.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

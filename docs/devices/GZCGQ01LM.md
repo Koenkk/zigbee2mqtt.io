@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Mi light sensor |
 | Exposes | battery, voltage, illuminance, illuminance_lux, linkquality |
-| Picture | ![Xiaomi GZCGQ01LM](https://www.zigbee2mqtt.io/images/devices/GZCGQ01LM.jpg) |
+| Picture | ![Xiaomi GZCGQ01LM](https://www.zigbee2mqtt.io/images/devices/GZCGQ01LM.png) |
 | White-label | Xiaomi YTC4043GL |
 
 

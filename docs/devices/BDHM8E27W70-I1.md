@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [GS](/supported-devices/#v=GS)  |
 | Description | Active light, warm to cool white (E27 & B22) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![GS BDHM8E27W70-I1](https://www.zigbee2mqtt.io/images/devices/BDHM8E27W70-I1.jpg) |
+| Picture | ![GS BDHM8E27W70-I1](https://www.zigbee2mqtt.io/images/devices/BDHM8E27W70-I1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

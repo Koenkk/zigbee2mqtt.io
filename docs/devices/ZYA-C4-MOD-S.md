@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Yale](/supported-devices/#v=Yale)  |
 | Description | Control4 module for Yale KeyFree/Keyless/Doorman/Assure/nexTouch locks |
 | Exposes | lock (state, lock_state), action, battery, battery_low, auto_lock_time, volume, linkquality |
-| Picture | ![Yale ZYA-C4-MOD-S](https://www.zigbee2mqtt.io/images/devices/ZYA-C4-MOD-S.jpg) |
+| Picture | ![Yale ZYA-C4-MOD-S](https://www.zigbee2mqtt.io/images/devices/ZYA-C4-MOD-S.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

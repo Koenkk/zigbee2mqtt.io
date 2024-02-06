@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HZC](/supported-devices/#v=HZC)  |
 | Description | Water leak sensor |
 | Exposes | water_leak, battery_low, battery, linkquality |
-| Picture | ![HZC S900W-ZG](https://www.zigbee2mqtt.io/images/devices/S900W-ZG.jpg) |
+| Picture | ![HZC S900W-ZG](https://www.zigbee2mqtt.io/images/devices/S900W-ZG.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

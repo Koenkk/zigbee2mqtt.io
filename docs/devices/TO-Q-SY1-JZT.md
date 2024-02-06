@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Tongou](/supported-devices/#v=Tongou)  |
 | Description | Din smart relay (with power monitoring via polling) |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, linkquality |
-| Picture | ![Tongou TO-Q-SY1-JZT](https://www.zigbee2mqtt.io/images/devices/TO-Q-SY1-JZT.jpg) |
+| Picture | ![Tongou TO-Q-SY1-JZT](https://www.zigbee2mqtt.io/images/devices/TO-Q-SY1-JZT.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, battery, sensitivity, keep_time, linkquality |
-| Picture | ![TuYa ZM-35H-Q](https://www.zigbee2mqtt.io/images/devices/ZM-35H-Q.jpg) |
+| Picture | ![TuYa ZM-35H-Q](https://www.zigbee2mqtt.io/images/devices/ZM-35H-Q.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

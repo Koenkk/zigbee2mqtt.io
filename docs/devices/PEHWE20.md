@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Perenio](/supported-devices/#v=Perenio)  |
 | Description | Two channel single wire mini-relay |
 | Exposes | switch (state), power_on_behavior, switch_type, last_message_lqi, last_message_rssi, linkquality |
-| Picture | ![Perenio PEHWE20](https://www.zigbee2mqtt.io/images/devices/PEHWE20.jpg) |
+| Picture | ![Perenio PEHWE20](https://www.zigbee2mqtt.io/images/devices/PEHWE20.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

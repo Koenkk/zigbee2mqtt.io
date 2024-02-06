@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Third Reality](/supported-devices/#v=Third%20Reality)  |
 | Description | Temperature and humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
-| Picture | ![Third Reality 3RTHS24BZ](https://www.zigbee2mqtt.io/images/devices/3RTHS24BZ.jpg) |
+| Picture | ![Third Reality 3RTHS24BZ](https://www.zigbee2mqtt.io/images/devices/3RTHS24BZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

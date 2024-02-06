@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Wiser radiator thermostat |
 | Exposes | climate (occupied_heating_setpoint, local_temperature, running_state, pi_heating_demand), linkquality |
-| Picture | ![Schneider Electric CCTFR6100Z3](https://www.zigbee2mqtt.io/images/devices/CCTFR6100Z3.jpg) |
+| Picture | ![Schneider Electric CCTFR6100Z3](https://www.zigbee2mqtt.io/images/devices/CCTFR6100Z3.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

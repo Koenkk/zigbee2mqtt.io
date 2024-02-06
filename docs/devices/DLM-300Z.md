@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | Sihas door lock |
 | Exposes | battery, lock (state, lock_state), door_state, action, action_source_name, action_user, pin_code, linkquality |
-| Picture | ![ShinaSystem DLM-300Z](https://www.zigbee2mqtt.io/images/devices/DLM-300Z.jpg) |
+| Picture | ![ShinaSystem DLM-300Z](https://www.zigbee2mqtt.io/images/devices/DLM-300Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart door lock |
 | Exposes | state, reverse, action, linkquality |
-| Picture | ![Aqara ZNMS11LM](https://www.zigbee2mqtt.io/images/devices/ZNMS11LM.jpg) |
+| Picture | ![Aqara ZNMS11LM](https://www.zigbee2mqtt.io/images/devices/ZNMS11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Danor](/supported-devices/#v=Danor)  |
 | Description | Smart curtain/shutter switch |
 | Exposes | cover (state, position), indicator_mode, backlight_mode, moving, calibration, motor_reversal, calibration_time, linkquality |
-| Picture | ![Danor SK-Z802C-US](https://www.zigbee2mqtt.io/images/devices/SK-Z802C-US.jpg) |
+| Picture | ![Danor SK-Z802C-US](https://www.zigbee2mqtt.io/images/devices/SK-Z802C-US.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

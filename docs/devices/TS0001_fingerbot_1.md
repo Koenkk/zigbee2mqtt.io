@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Adaprox](/supported-devices/#v=Adaprox)  |
 | Description | Zigbee fingerbot plus |
 | Exposes | switch (state), battery, mode, lower, upper, delay, reverse, touch, linkquality |
-| Picture | ![Adaprox TS0001_fingerbot_1](https://www.zigbee2mqtt.io/images/devices/TS0001_fingerbot_1.jpg) |
+| Picture | ![Adaprox TS0001_fingerbot_1](https://www.zigbee2mqtt.io/images/devices/TS0001_fingerbot_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

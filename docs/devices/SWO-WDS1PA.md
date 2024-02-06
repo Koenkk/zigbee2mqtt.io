@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Swann](/supported-devices/#v=Swann)  |
 | Description | Window/door sensor |
 | Exposes | contact, battery_low, tamper, linkquality |
-| Picture | ![Swann SWO-WDS1PA](https://www.zigbee2mqtt.io/images/devices/SWO-WDS1PA.jpg) |
+| Picture | ![Swann SWO-WDS1PA](https://www.zigbee2mqtt.io/images/devices/SWO-WDS1PA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

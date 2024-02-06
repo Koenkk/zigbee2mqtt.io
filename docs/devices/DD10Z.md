@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ORVIBO](/supported-devices/#v=ORVIBO)  |
 | Description | Smart spotlight |
 | Exposes | light (state, brightness, color_temp), effect, linkquality |
-| Picture | ![ORVIBO DD10Z](https://www.zigbee2mqtt.io/images/devices/DD10Z.jpg) |
+| Picture | ![ORVIBO DD10Z](https://www.zigbee2mqtt.io/images/devices/DD10Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

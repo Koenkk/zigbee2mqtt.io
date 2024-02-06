@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [smarthjemmet.dk](/supported-devices/#v=smarthjemmet.dk)  |
 | Description | [FUGA compatible switch from Smarthjemmet.dk](https://smarthjemmet.dk) |
 | Exposes | switch_type_1, switch_type_2, switch_type_3, switch_type_4, battery, action, voltage, linkquality |
-| Picture | ![smarthjemmet.dk QUAD-ZIG-SW](https://www.zigbee2mqtt.io/images/devices/QUAD-ZIG-SW.jpg) |
+| Picture | ![smarthjemmet.dk QUAD-ZIG-SW](https://www.zigbee2mqtt.io/images/devices/QUAD-ZIG-SW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

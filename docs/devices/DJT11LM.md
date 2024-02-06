@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Vibration sensor |
 | Exposes | battery, device_temperature, vibration, action, strength, sensitivity, angle_x, angle_y, angle_z, x_axis, y_axis, z_axis, voltage, power_outage_count, linkquality |
-| Picture | ![Aqara DJT11LM](https://www.zigbee2mqtt.io/images/devices/DJT11LM.jpg) |
+| Picture | ![Aqara DJT11LM](https://www.zigbee2mqtt.io/images/devices/DJT11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

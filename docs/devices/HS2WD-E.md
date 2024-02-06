@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart siren |
 | Exposes | battery, warning, linkquality |
-| Picture | ![HEIMAN HS2WD-E](https://www.zigbee2mqtt.io/images/devices/HS2WD-E.jpg) |
+| Picture | ![HEIMAN HS2WD-E](https://www.zigbee2mqtt.io/images/devices/HS2WD-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | Switch Mechanism |
 | Exposes | light (state, brightness, min_brightness, max_brightness), linkquality |
-| Picture | ![Mercator Ikuü SSWM-DIMZ](https://www.zigbee2mqtt.io/images/devices/SSWM-DIMZ.jpg) |
+| Picture | ![Mercator Ikuü SSWM-DIMZ](https://www.zigbee2mqtt.io/images/devices/SSWM-DIMZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

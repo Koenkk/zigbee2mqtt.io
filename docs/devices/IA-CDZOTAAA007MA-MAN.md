@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN E27 7.2 to 60W LED RGBW |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![ADEO IA-CDZOTAAA007MA-MAN](https://www.zigbee2mqtt.io/images/devices/IA-CDZOTAAA007MA-MAN.jpg) |
+| Picture | ![ADEO IA-CDZOTAAA007MA-MAN](https://www.zigbee2mqtt.io/images/devices/IA-CDZOTAAA007MA-MAN.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

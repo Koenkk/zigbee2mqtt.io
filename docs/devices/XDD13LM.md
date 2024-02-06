@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Opple MX480 |
 | Exposes | light (state, brightness, color_temp), device_temperature, power_outage_count, power_outage_memory, linkquality |
-| Picture | ![Aqara XDD13LM](https://www.zigbee2mqtt.io/images/devices/XDD13LM.jpg) |
+| Picture | ![Aqara XDD13LM](https://www.zigbee2mqtt.io/images/devices/XDD13LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

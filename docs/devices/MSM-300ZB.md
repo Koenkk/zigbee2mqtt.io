@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS remote control 4 button |
 | Exposes | action, battery, voltage, linkquality |
-| Picture | ![ShinaSystem MSM-300ZB](https://www.zigbee2mqtt.io/images/devices/MSM-300ZB.jpg) |
+| Picture | ![ShinaSystem MSM-300ZB](https://www.zigbee2mqtt.io/images/devices/MSM-300ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

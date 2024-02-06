@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee micro smart dimmer |
 | Exposes | light (state, brightness), power, voltage, current, energy, linkquality |
-| Picture | ![Sunricher SR-ZG9040A](https://www.zigbee2mqtt.io/images/devices/SR-ZG9040A.jpg) |
+| Picture | ![Sunricher SR-ZG9040A](https://www.zigbee2mqtt.io/images/devices/SR-ZG9040A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

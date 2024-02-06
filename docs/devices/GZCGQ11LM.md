@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Light sensor T1 |
 | Exposes | battery, voltage, illuminance, illuminance_lux, detection_period, linkquality |
-| Picture | ![Aqara GZCGQ11LM](https://www.zigbee2mqtt.io/images/devices/GZCGQ11LM.jpg) |
+| Picture | ![Aqara GZCGQ11LM](https://www.zigbee2mqtt.io/images/devices/GZCGQ11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Ltech](/supported-devices/#v=Ltech)  |
 | Description | 150W 24V Zigbee CV tunable white LED driver |
 | Exposes | light (state, brightness, color_temp), linkquality |
-| Picture | ![Ltech TY-75-24-G2Z2_CCT](https://www.zigbee2mqtt.io/images/devices/TY-75-24-G2Z2_CCT.jpg) |
+| Picture | ![Ltech TY-75-24-G2Z2_CCT](https://www.zigbee2mqtt.io/images/devices/TY-75-24-G2Z2_CCT.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

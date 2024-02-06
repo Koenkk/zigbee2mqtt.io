@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EssentielB](/supported-devices/#v=EssentielB)  |
 | Description | Smart button |
 | Exposes | battery, action, linkquality |
-| Picture | ![EssentielB EB-SB-1B](https://www.zigbee2mqtt.io/images/devices/EB-SB-1B.jpg) |
+| Picture | ![EssentielB EB-SB-1B](https://www.zigbee2mqtt.io/images/devices/EB-SB-1B.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

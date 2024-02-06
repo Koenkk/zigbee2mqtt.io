@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Single switch module T1 (no neutral) |
 | Exposes | switch (state), power_outage_memory, switch_type, power_outage_count, device_temperature, linkquality |
-| Picture | ![Aqara SSM-U02](https://www.zigbee2mqtt.io/images/devices/SSM-U02.jpg) |
+| Picture | ![Aqara SSM-U02](https://www.zigbee2mqtt.io/images/devices/SSM-U02.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

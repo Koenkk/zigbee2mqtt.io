@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Girier](/supported-devices/#v=Girier)  |
 | Description | 1 gang mini switch |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
-| Picture | ![Girier JR-ZDS01](https://www.zigbee2mqtt.io/images/devices/JR-ZDS01.jpg) |
+| Picture | ![Girier JR-ZDS01](https://www.zigbee2mqtt.io/images/devices/JR-ZDS01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

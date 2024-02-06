@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Smoke alarm detector |
 | Exposes | smoke, battery, battery_low, test, intruder_alarm_state, smoke_alarm_state, linkquality |
-| Picture | ![Bosch BSD-2](https://www.zigbee2mqtt.io/images/devices/BSD-2.jpg) |
+| Picture | ![Bosch BSD-2](https://www.zigbee2mqtt.io/images/devices/BSD-2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

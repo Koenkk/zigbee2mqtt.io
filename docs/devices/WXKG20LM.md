@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless mini switch E1 |
 | Exposes | battery, voltage, action, device_temperature, power_outage_count, linkquality |
-| Picture | ![Aqara WXKG20LM](https://www.zigbee2mqtt.io/images/devices/WXKG20LM.jpg) |
+| Picture | ![Aqara WXKG20LM](https://www.zigbee2mqtt.io/images/devices/WXKG20LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

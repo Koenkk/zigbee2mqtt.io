@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
 | Description | [DiY 4 Relays + 4 switches + 1 buzzer](http://modkam.ru/?p=1054) |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_R4_5](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_R4_5.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_R4_5](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_R4_5.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

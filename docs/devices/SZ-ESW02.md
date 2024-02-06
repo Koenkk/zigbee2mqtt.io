@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sercomm](/supported-devices/#v=Sercomm)  |
 | Description | Telstra smart plug 2 |
 | Exposes | switch (state), power, linkquality |
-| Picture | ![Sercomm SZ-ESW02](https://www.zigbee2mqtt.io/images/devices/SZ-ESW02.jpg) |
+| Picture | ![Sercomm SZ-ESW02](https://www.zigbee2mqtt.io/images/devices/SZ-ESW02.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

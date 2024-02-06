@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Onesti Products AS](/supported-devices/#v=Onesti%20Products%20AS)  |
 | Description | Zigbee module for EasyAccess code touch series |
 | Exposes | lock (state, lock_state), battery, sound_volume, last_unlock_source, last_unlock_user, last_lock_source, last_lock_user, last_used_pin_code, auto_relock, pin_code, linkquality |
-| Picture | ![Onesti Products AS easyCodeTouch_v1](https://www.zigbee2mqtt.io/images/devices/easyCodeTouch_v1.jpg) |
+| Picture | ![Onesti Products AS easyCodeTouch_v1](https://www.zigbee2mqtt.io/images/devices/easyCodeTouch_v1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

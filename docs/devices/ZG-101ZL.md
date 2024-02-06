@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Loginovo](/supported-devices/#v=Loginovo)  |
 | Description | Smart button |
 | Exposes | action, battery, operation_mode, linkquality |
-| Picture | ![Loginovo ZG-101ZL](https://www.zigbee2mqtt.io/images/devices/ZG-101ZL.jpg) |
+| Picture | ![Loginovo ZG-101ZL](https://www.zigbee2mqtt.io/images/devices/ZG-101ZL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

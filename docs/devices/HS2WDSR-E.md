@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Remote dimmer and color control |
 | Exposes | battery, action, linkquality |
-| Picture | ![HEIMAN HS2WDSR-E](https://www.zigbee2mqtt.io/images/devices/HS2WDSR-E.jpg) |
+| Picture | ![HEIMAN HS2WDSR-E](https://www.zigbee2mqtt.io/images/devices/HS2WDSR-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

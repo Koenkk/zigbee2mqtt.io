@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Mi wireless switch |
 | Exposes | battery, action, voltage, power_outage_count, linkquality |
-| Picture | ![Xiaomi WXKG01LM](https://www.zigbee2mqtt.io/images/devices/WXKG01LM.jpg) |
+| Picture | ![Xiaomi WXKG01LM](https://www.zigbee2mqtt.io/images/devices/WXKG01LM.png) |
 | White-label | Xiaomi YTC4040GL, Xiaomi YTC4006CN, Xiaomi YTC4017CN, Xiaomi ZHTZ02LM |
 
 

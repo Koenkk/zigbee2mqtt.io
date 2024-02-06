@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch D1 (with neutral, triple rocker) |
 | Exposes | switch (state), operation_mode, power, power_outage_memory, led_disabled_night, voltage, energy, device_temperature, flip_indicator_light, action, linkquality |
-| Picture | ![Aqara QBKG26LM](https://www.zigbee2mqtt.io/images/devices/QBKG26LM.jpg) |
+| Picture | ![Aqara QBKG26LM](https://www.zigbee2mqtt.io/images/devices/QBKG26LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

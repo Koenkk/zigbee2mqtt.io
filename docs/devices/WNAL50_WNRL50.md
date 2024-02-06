@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Smart dimmer switch with Netatmo |
 | Exposes | light (state, brightness), ballast_minimum_level, ballast_maximum_level, device_mode, led_in_dark, led_if_on, power_on_behavior, linkquality |
-| Picture | ![Legrand WNAL50/WNRL50](https://www.zigbee2mqtt.io/images/devices/WNAL50-WNRL50.jpg) |
+| Picture | ![Legrand WNAL50/WNRL50](https://www.zigbee2mqtt.io/images/devices/WNAL50-WNRL50.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

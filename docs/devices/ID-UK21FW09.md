@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Iolloi](/supported-devices/#v=Iolloi)  |
 | Description | Zigbee LED smart dimmer switch |
 | Exposes | light (state, brightness), power_on_behavior, linkquality |
-| Picture | ![Iolloi ID-UK21FW09](https://www.zigbee2mqtt.io/images/devices/ID-UK21FW09.jpg) |
+| Picture | ![Iolloi ID-UK21FW09](https://www.zigbee2mqtt.io/images/devices/ID-UK21FW09.png) |
 | White-label | Iolloi ID-EU20FW09 |
 
 

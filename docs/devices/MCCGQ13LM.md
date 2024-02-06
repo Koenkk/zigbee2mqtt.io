@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Door and window sensor P1 |
 | Exposes | contact, battery, voltage, tamper, detection_distance, linkquality |
-| Picture | ![Aqara MCCGQ13LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ13LM.jpg) |
+| Picture | ![Aqara MCCGQ13LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ13LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

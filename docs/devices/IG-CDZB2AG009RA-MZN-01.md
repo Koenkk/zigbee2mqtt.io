@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN E27 Led white bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![ADEO IG-CDZB2AG009RA-MZN-01](https://www.zigbee2mqtt.io/images/devices/IG-CDZB2AG009RA-MZN-01.jpg) |
+| Picture | ![ADEO IG-CDZB2AG009RA-MZN-01](https://www.zigbee2mqtt.io/images/devices/IG-CDZB2AG009RA-MZN-01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

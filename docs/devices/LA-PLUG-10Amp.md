@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Ynoa](/supported-devices/#v=Ynoa)  |
 | Description | Smart plug Zigbee 3.0 |
 | Exposes | switch (state), power, linkquality |
-| Picture | ![Ynoa LA-PLUG-10Amp](https://www.zigbee2mqtt.io/images/devices/LA-PLUG-10Amp.jpg) |
+| Picture | ![Ynoa LA-PLUG-10Amp](https://www.zigbee2mqtt.io/images/devices/LA-PLUG-10Amp.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

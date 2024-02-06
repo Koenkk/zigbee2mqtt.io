@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [AduroSmart](/supported-devices/#v=AduroSmart)  |
 | Description | ERIA smart plug |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![AduroSmart BPU3](https://www.zigbee2mqtt.io/images/devices/BPU3.jpg) |
+| Picture | ![AduroSmart BPU3](https://www.zigbee2mqtt.io/images/devices/BPU3.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee pro constant current CCT LED driver |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Gledopto GL-P-101P](https://www.zigbee2mqtt.io/images/devices/GL-P-101P.jpg) |
+| Picture | ![Gledopto GL-P-101P](https://www.zigbee2mqtt.io/images/devices/GL-P-101P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

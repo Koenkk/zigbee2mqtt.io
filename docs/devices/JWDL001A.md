@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Embedded spot led light |
 | Exposes | light (state, brightness, color_temp), device_temperature, power_outage_count, power_outage_memory, linkquality |
-| Picture | ![Aqara JWDL001A](https://www.zigbee2mqtt.io/images/devices/JWDL001A.jpg) |
+| Picture | ![Aqara JWDL001A](https://www.zigbee2mqtt.io/images/devices/JWDL001A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

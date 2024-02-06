@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN E14 LED white |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![ADEO IC-CDZFB2AC004HA-MZN](https://www.zigbee2mqtt.io/images/devices/IC-CDZFB2AC004HA-MZN.jpg) |
+| Picture | ![ADEO IC-CDZFB2AC004HA-MZN](https://www.zigbee2mqtt.io/images/devices/IC-CDZFB2AC004HA-MZN.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

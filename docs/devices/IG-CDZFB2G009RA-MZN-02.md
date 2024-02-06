@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN E27 LED white filament 1055 lumen |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![ADEO IG-CDZFB2G009RA-MZN-02](https://www.zigbee2mqtt.io/images/devices/IG-CDZFB2G009RA-MZN-02.jpg) |
+| Picture | ![ADEO IG-CDZFB2G009RA-MZN-02](https://www.zigbee2mqtt.io/images/devices/IG-CDZFB2G009RA-MZN-02.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

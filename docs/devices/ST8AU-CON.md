@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [OSRAM](/supported-devices/#v=OSRAM)  |
 | Description | OSRAM SubstiTUBE T8 Advanced UO Connected |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![OSRAM ST8AU-CON](https://www.zigbee2mqtt.io/images/devices/ST8AU-CON.jpg) |
+| Picture | ![OSRAM ST8AU-CON](https://www.zigbee2mqtt.io/images/devices/ST8AU-CON.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

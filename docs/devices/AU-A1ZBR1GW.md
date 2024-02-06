@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
 | Description | AOne one gang wireless battery rotary dimmer |
 | Exposes | battery, action, linkquality |
-| Picture | ![Aurora Lighting AU-A1ZBR1GW](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBR1GW.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZBR1GW](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBR1GW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

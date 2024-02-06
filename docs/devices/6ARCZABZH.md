@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Leedarson](/supported-devices/#v=Leedarson)  |
 | Description | 4-Key Remote Controller |
 | Exposes | battery, action, linkquality |
-| Picture | ![Leedarson 6ARCZABZH](https://www.zigbee2mqtt.io/images/devices/6ARCZABZH.jpg) |
+| Picture | ![Leedarson 6ARCZABZH](https://www.zigbee2mqtt.io/images/devices/6ARCZABZH.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

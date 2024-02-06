@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EcoSmart](/supported-devices/#v=EcoSmart)  |
 | Description | Tuneable white (BR30) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![EcoSmart A9BR3065WESDZ02](https://www.zigbee2mqtt.io/images/devices/A9BR3065WESDZ02.jpg) |
+| Picture | ![EcoSmart A9BR3065WESDZ02](https://www.zigbee2mqtt.io/images/devices/A9BR3065WESDZ02.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

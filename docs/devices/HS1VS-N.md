@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Vibration sensor |
 | Exposes | vibration, battery_low, tamper, battery, linkquality |
-| Picture | ![HEIMAN HS1VS-N](https://www.zigbee2mqtt.io/images/devices/HS1VS-N.jpg) |
+| Picture | ![HEIMAN HS1VS-N](https://www.zigbee2mqtt.io/images/devices/HS1VS-N.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

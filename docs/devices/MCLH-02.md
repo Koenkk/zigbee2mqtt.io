@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LifeControl](/supported-devices/#v=LifeControl)  |
 | Description | RGB LED lamp |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![LifeControl MCLH-02](https://www.zigbee2mqtt.io/images/devices/MCLH-02.jpg) |
+| Picture | ![LifeControl MCLH-02](https://www.zigbee2mqtt.io/images/devices/MCLH-02.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

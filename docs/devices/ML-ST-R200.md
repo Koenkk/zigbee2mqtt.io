@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [M-ELEC](/supported-devices/#v=M-ELEC)  |
 | Description | Stitchy switchable wall module |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![M-ELEC ML-ST-R200](https://www.zigbee2mqtt.io/images/devices/ML-ST-R200.jpg) |
+| Picture | ![M-ELEC ML-ST-R200](https://www.zigbee2mqtt.io/images/devices/ML-ST-R200.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

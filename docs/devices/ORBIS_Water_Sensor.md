@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Niceboy](/supported-devices/#v=Niceboy)  |
 | Description | Water leak sensor |
 | Exposes | water_leak, battery_low, battery, tamper, linkquality |
-| Picture | ![Niceboy ORBIS Water Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Water-Sensor.jpg) |
+| Picture | ![Niceboy ORBIS Water Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Water-Sensor.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart siren |
 | Exposes | alarm, type, volume, ringtone, power_type, duration, battery_level, battery, linkquality |
-| Picture | ![TuYa YXZBSL](https://www.zigbee2mqtt.io/images/devices/YXZBSL.jpg) |
+| Picture | ![TuYa YXZBSL](https://www.zigbee2mqtt.io/images/devices/YXZBSL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

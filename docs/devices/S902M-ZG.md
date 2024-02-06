@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HZC](/supported-devices/#v=HZC)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, battery, illuminance, tamper, linkquality |
-| Picture | ![HZC S902M-ZG](https://www.zigbee2mqtt.io/images/devices/S902M-ZG.jpg) |
+| Picture | ![HZC S902M-ZG](https://www.zigbee2mqtt.io/images/devices/S902M-ZG.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

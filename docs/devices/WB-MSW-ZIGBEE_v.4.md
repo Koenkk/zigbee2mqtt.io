@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Wirenboard](/supported-devices/#v=Wirenboard)  |
 | Description | Wall-mounted Zigbee sensor |
 | Exposes | temperature, illuminance, illuminance_lux, humidity, occupancy, occupancy_level, co2, voc, noise, noise_detected, switch (state), noise_timeout, occupancy_timeout, temperature_offset, occupancy_sensitivity, noise_detect_level, linkquality |
-| Picture | ![Wirenboard WB-MSW-ZIGBEE v.4](https://www.zigbee2mqtt.io/images/devices/WB-MSW-ZIGBEE-v.4.jpg) |
+| Picture | ![Wirenboard WB-MSW-ZIGBEE v.4](https://www.zigbee2mqtt.io/images/devices/WB-MSW-ZIGBEE-v.4.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

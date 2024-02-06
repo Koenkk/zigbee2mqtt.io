@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Water leakage sensor |
 | Exposes | water_leak, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN SWHM-I1](https://www.zigbee2mqtt.io/images/devices/SWHM-I1.jpg) |
+| Picture | ![HEIMAN SWHM-I1](https://www.zigbee2mqtt.io/images/devices/SWHM-I1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

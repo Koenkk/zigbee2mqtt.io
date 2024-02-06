@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | [DNCKAT double key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) |
 | Exposes | switch (state), action, linkquality |
-| Picture | ![Custom devices (DiY) DNCKATSW002](https://www.zigbee2mqtt.io/images/devices/DNCKATSW002.jpg) |
+| Picture | ![Custom devices (DiY) DNCKATSW002](https://www.zigbee2mqtt.io/images/devices/DNCKATSW002.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

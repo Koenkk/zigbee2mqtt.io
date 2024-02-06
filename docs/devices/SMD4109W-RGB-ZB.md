@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | 92mm Walter downlight RGB + CCT |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![Mercator Ikuü SMD4109W-RGB-ZB](https://www.zigbee2mqtt.io/images/devices/SMD4109W-RGB-ZB.jpg) |
+| Picture | ![Mercator Ikuü SMD4109W-RGB-ZB](https://www.zigbee2mqtt.io/images/devices/SMD4109W-RGB-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

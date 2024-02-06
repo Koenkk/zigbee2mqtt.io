@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Smartwings](/supported-devices/#v=Smartwings)  |
 | Description | Roller shade |
 | Exposes | cover (state, position), battery, linkquality |
-| Picture | ![Smartwings WM25L-Z](https://www.zigbee2mqtt.io/images/devices/WM25L-Z.jpg) |
+| Picture | ![Smartwings WM25L-Z](https://www.zigbee2mqtt.io/images/devices/WM25L-Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

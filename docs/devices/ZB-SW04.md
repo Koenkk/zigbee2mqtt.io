@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
 | Description | Smart light switch - 4 gang |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![eWeLink ZB-SW04](https://www.zigbee2mqtt.io/images/devices/ZB-SW04.jpg) |
+| Picture | ![eWeLink ZB-SW04](https://www.zigbee2mqtt.io/images/devices/ZB-SW04.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

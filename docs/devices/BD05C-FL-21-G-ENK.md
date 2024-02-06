@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN RGBCCT lamp |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
-| Picture | ![ADEO BD05C-FL-21-G-ENK](https://www.zigbee2mqtt.io/images/devices/BD05C-FL-21-G-ENK.jpg) |
+| Picture | ![ADEO BD05C-FL-21-G-ENK](https://www.zigbee2mqtt.io/images/devices/BD05C-FL-21-G-ENK.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

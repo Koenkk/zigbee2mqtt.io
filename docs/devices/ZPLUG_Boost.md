@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [CLEODE](/supported-devices/#v=CLEODE)  |
 | Description | ZPlug boost |
 | Exposes | switch (state), power, linkquality |
-| Picture | ![CLEODE ZPLUG_Boost](https://www.zigbee2mqtt.io/images/devices/ZPLUG_Boost.jpg) |
+| Picture | ![CLEODE ZPLUG_Boost](https://www.zigbee2mqtt.io/images/devices/ZPLUG_Boost.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

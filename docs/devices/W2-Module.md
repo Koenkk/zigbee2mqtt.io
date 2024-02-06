@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [FireAngel](/supported-devices/#v=FireAngel)  |
 | Description | Carbon monoxide sensor |
 | Exposes | carbon_monoxide, battery, linkquality |
-| Picture | ![FireAngel W2-Module](https://www.zigbee2mqtt.io/images/devices/W2-Module.jpg) |
+| Picture | ![FireAngel W2-Module](https://www.zigbee2mqtt.io/images/devices/W2-Module.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

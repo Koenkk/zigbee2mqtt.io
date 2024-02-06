@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LivingWise](/supported-devices/#v=LivingWise)  |
 | Description | ZigBee smart dimmer switch |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![LivingWise LVS-ZB500D](https://www.zigbee2mqtt.io/images/devices/LVS-ZB500D.jpg) |
+| Picture | ![LivingWise LVS-ZB500D](https://www.zigbee2mqtt.io/images/devices/LVS-ZB500D.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

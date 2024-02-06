@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart natural gas detector |
 | Exposes | gas, gas_density, gas_sensitivity, selftest, test, buzzer, buzzer_manual_alarm, buzzer_manual_mute, linkage_alarm, linkage_alarm_state, state, power_outage_count, linkquality |
-| Picture | ![Aqara JT-BZ-01AQ/A](https://www.zigbee2mqtt.io/images/devices/JT-BZ-01AQ-A.jpg) |
+| Picture | ![Aqara JT-BZ-01AQ/A](https://www.zigbee2mqtt.io/images/devices/JT-BZ-01AQ-A.png) |
 | White-label | Aqara JT-BZ-03AQ/A |
 
 

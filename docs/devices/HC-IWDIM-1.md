@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Heimgard Technologies](/supported-devices/#v=Heimgard%20Technologies)  |
 | Description | Dimmer |
 | Exposes | light (state, brightness), power, current, voltage, energy, linkquality |
-| Picture | ![Heimgard Technologies HC-IWDIM-1](https://www.zigbee2mqtt.io/images/devices/HC-IWDIM-1.jpg) |
+| Picture | ![Heimgard Technologies HC-IWDIM-1](https://www.zigbee2mqtt.io/images/devices/HC-IWDIM-1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

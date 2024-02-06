@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee water leak sensor |
 | Exposes | water_leak, battery_low, battery, tamper, linkquality |
-| Picture | ![TuYa TS0207_water_leak_detector_3](https://www.zigbee2mqtt.io/images/devices/TS0207_water_leak_detector_3.jpg) |
+| Picture | ![TuYa TS0207_water_leak_detector_3](https://www.zigbee2mqtt.io/images/devices/TS0207_water_leak_detector_3.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

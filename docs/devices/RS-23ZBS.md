@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Temperature & humidity sensor |
 | Exposes | temperature, humidity, linkquality |
-| Picture | ![Climax RS-23ZBS](https://www.zigbee2mqtt.io/images/devices/RS-23ZBS.jpg) |
+| Picture | ![Climax RS-23ZBS](https://www.zigbee2mqtt.io/images/devices/RS-23ZBS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

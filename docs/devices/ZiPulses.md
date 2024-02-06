@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LiXee](/supported-devices/#v=LiXee)  |
 | Description | Lixee ZiPulses |
 | Exposes | battery, voltage, temperature, multiplier, divisor, unitOfMeasure, energy, linkquality |
-| Picture | ![LiXee ZiPulses](https://www.zigbee2mqtt.io/images/devices/ZiPulses.jpg) |
+| Picture | ![LiXee ZiPulses](https://www.zigbee2mqtt.io/images/devices/ZiPulses.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

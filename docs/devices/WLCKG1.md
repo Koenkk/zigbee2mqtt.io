@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Wyze](/supported-devices/#v=Wyze)  |
 | Description | Lock |
 | Exposes | lock (state, lock_state), battery, linkquality |
-| Picture | ![Wyze WLCKG1](https://www.zigbee2mqtt.io/images/devices/WLCKG1.jpg) |
+| Picture | ![Wyze WLCKG1](https://www.zigbee2mqtt.io/images/devices/WLCKG1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

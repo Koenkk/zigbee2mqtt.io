@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Opple MX650 |
 | Exposes | light (state, brightness, color_temp), device_temperature, power_outage_count, power_outage_memory, linkquality |
-| Picture | ![Aqara XDD12LM](https://www.zigbee2mqtt.io/images/devices/XDD12LM.jpg) |
+| Picture | ![Aqara XDD12LM](https://www.zigbee2mqtt.io/images/devices/XDD12LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

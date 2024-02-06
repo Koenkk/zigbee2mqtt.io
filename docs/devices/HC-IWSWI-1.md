@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Heimgard Technologies](/supported-devices/#v=Heimgard%20Technologies)  |
 | Description | In wall light switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Heimgard Technologies HC-IWSWI-1](https://www.zigbee2mqtt.io/images/devices/HC-IWSWI-1.jpg) |
+| Picture | ![Heimgard Technologies HC-IWSWI-1](https://www.zigbee2mqtt.io/images/devices/HC-IWSWI-1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

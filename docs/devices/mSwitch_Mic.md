@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | Mikrofon, alarm detection microphone |
 | Exposes | temperature, battery, battery_low, smoke, action, group_id, linkquality |
-| Picture | ![CTM Lyng mSwitch_Mic](https://www.zigbee2mqtt.io/images/devices/mSwitch_Mic.jpg) |
+| Picture | ![CTM Lyng mSwitch_Mic](https://www.zigbee2mqtt.io/images/devices/mSwitch_Mic.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

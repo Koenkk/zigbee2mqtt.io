@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 3 gang smart dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), countdown, power_on_behavior, backlight_mode, linkquality |
-| Picture | ![TuYa TS0601_dimmer_3](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_3.jpg) |
+| Picture | ![TuYa TS0601_dimmer_3](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_3.png) |
 | White-label | Moes ZS-EUD_3gang |
 
 

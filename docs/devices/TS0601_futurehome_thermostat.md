@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Futurehome](/supported-devices/#v=Futurehome)  |
 | Description | Thermostat |
 | Exposes | climate (system_mode, preset, local_temperature, local_temperature_calibration, running_state, current_heating_setpoint), sensor, local_temperature_floor, lock (state), switch (state), hysteresis, max_temperature_protection, linkquality |
-| Picture | ![Futurehome TS0601_futurehome_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_futurehome_thermostat.jpg) |
+| Picture | ![Futurehome TS0601_futurehome_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_futurehome_thermostat.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

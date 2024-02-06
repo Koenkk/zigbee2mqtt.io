@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [NET2GRID](/supported-devices/#v=NET2GRID)  |
 | Description | White Net2Grid power outlet switch with power meter |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![NET2GRID N2G-SP](https://www.zigbee2mqtt.io/images/devices/N2G-SP.jpg) |
+| Picture | ![NET2GRID N2G-SP](https://www.zigbee2mqtt.io/images/devices/N2G-SP.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

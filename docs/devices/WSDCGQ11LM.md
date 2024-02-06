@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Temperature and humidity sensor |
 | Exposes | battery, temperature, humidity, pressure, voltage, linkquality |
-| Picture | ![Aqara WSDCGQ11LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ11LM.jpg) |
+| Picture | ![Aqara WSDCGQ11LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

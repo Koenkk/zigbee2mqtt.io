@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
 | Description | [Matrix intercom auto opener](https://diyruz.github.io/posts/zintercom/) |
 | Exposes | state, mode, sound, time_ring, time_talk, time_open, time_bell, time_report, battery, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_Zintercom](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_Zintercom.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_Zintercom](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_Zintercom.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

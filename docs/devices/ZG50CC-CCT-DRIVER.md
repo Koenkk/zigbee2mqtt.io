@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Envilar](/supported-devices/#v=Envilar)  |
 | Description | Zigbee CCT LED driver |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![Envilar ZG50CC-CCT-DRIVER](https://www.zigbee2mqtt.io/images/devices/ZG50CC-CCT-DRIVER.jpg) |
+| Picture | ![Envilar ZG50CC-CCT-DRIVER](https://www.zigbee2mqtt.io/images/devices/ZG50CC-CCT-DRIVER.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
