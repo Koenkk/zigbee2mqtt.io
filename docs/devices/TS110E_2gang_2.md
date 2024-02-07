@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | 2 channel dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), power_on_behavior, linkquality |
 | Picture | ![TuYa TS110E_2gang_2](https://www.zigbee2mqtt.io/images/devices/TS110E_2gang_2.png) |
+| White-label | LEDRON QS-Zigbee-D02-TRIAC-2C-LN |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
