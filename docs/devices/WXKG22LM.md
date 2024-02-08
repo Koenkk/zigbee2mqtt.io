@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi WXKG22LM control via MQTT"
-description: "Integrate your Xiaomi WXKG22LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara WXKG22LM control via MQTT"
+description: "Integrate your Aqara WXKG22LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-11-30T19:41:12
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi WXKG22LM
+# Aqara WXKG22LM
 
 |     |     |
 |-----|-----|
 | Model | WXKG22LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara wireless remote switch H1M (double rocker) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Wireless remote switch H1M (double rocker) |
 | Exposes | battery, voltage, action, click_mode, operation_mode, linkquality |
-| Picture | ![Xiaomi WXKG22LM](https://www.zigbee2mqtt.io/images/devices/WXKG22LM.jpg) |
+| Picture | ![Aqara WXKG22LM](https://www.zigbee2mqtt.io/images/devices/WXKG22LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,7 +33,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -19,13 +19,12 @@ pageClass: device-page
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Outdoor siren |
 | Exposes | alarm_state, light_delay, siren_delay, siren_duration, light_duration, siren_volume, siren_and_light, power_source, warning, test, tamper, battery, voltage, battery_low, ac_status, linkquality |
-| Picture | ![Bosch BSIR-EZ](https://www.zigbee2mqtt.io/images/devices/BSIR-EZ.jpg) |
+| Picture | ![Bosch BSIR-EZ](https://www.zigbee2mqtt.io/images/devices/BSIR-EZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 You will need to add the install code from the back of the unit in order to pair the siren. If you do not complete this step the interview will fail and the unit will be shown as unsupported. On the back of the siren is a QR code and a 36 digit code that is called "Install code" - do NOT use this 36 digit code. Instead, scan the QR code with your phone and this will return a 91 long code. Use this code by going to Z2M GUI, Settings, Tools, "Add Install Code".
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -110,7 +109,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

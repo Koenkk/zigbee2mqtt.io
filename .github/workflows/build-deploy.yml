@@ -23,7 +23,7 @@ jobs:
           echo "::set-output name=version::$(node -v)"
 
       - name: Restore Cache 📦
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: cache
         with:
           path: node_modules
@@ -39,12 +39,14 @@ jobs:
 #          echo "DEVELOP_BRANCH=yes" >> $GITHUB_ENV
 
       - name: Build 🛠
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
         run: npm run build
 
       - name: Run tests 🩺
         run: npm run test
 
       - name: Add build.txt 🗓
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
         run: |
           git log --pretty=format:'%h' -n 1 > dist/build.txt
           echo >> dist/build.txt

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Thermostatic radiator valve |
 | Exposes | lock (state), battery, battery_low, climate (current_heating_setpoint, local_temperature, preset, system_mode, local_temperature_calibration), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, holiday_temperature, comfort_temperature, eco_temperature, scale_protection, frost_protection, error, boost_heating, linkquality |
-| Picture | ![TuYa TS0601_thermostat_4](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat_4.jpg) |
+| Picture | ![TuYa TS0601_thermostat_4](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat_4.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -38,7 +38,7 @@ To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` 
 It's not possible to read (`/get`) this value.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

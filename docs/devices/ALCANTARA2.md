@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Acova](/supported-devices/#v=Acova)  |
 | Description | Alcantara 2 heater |
 | Exposes | climate (occupied_heating_setpoint, unoccupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
-| Picture | ![Acova ALCANTARA2](https://www.zigbee2mqtt.io/images/devices/ALCANTARA2.jpg) |
+| Picture | ![Acova ALCANTARA2](https://www.zigbee2mqtt.io/images/devices/ALCANTARA2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -25,7 +25,7 @@
     "@vuepress/plugin-docsearch": "^2.0.0-beta.53",
     "@vuepress/plugin-google-analytics": "^2.0.0-beta.53",
     "@vuepress/plugin-register-components": "^2.0.0-beta.53",
-    "async-g-i-s": "^1.5.1",
+    "async-g-i-s": "^1.5.2",
     "cross-env": "^7.0.3",
     "easyimage": "^3.1.1",
     "glob": "^8.0.3",
@@ -39,6 +39,6 @@
     "typescript": "^4.9.3",
     "vuepress": "^2.0.0-beta.53",
     "vuepress-plugin-sitemap2": "^2.0.0-beta.122",
-    "zigbee-herdsman-converters": "15.130.1"
+    "zigbee-herdsman-converters": "18.28.3"
   }
 }

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Flood alarm device  |
 | Exposes | battery_low, tamper, water_leak, temperature, voltage, linkquality |
-| Picture | ![Develco FLSZB-110](https://www.zigbee2mqtt.io/images/devices/FLSZB-110.jpg) |
+| Picture | ![Develco FLSZB-110](https://www.zigbee2mqtt.io/images/devices/FLSZB-110.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,9 +32,9 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes

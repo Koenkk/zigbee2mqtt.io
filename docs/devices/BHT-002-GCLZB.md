@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | BHT-002-GCLZB  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Moes BHT series Thermostat |
-| Exposes | lock (state), deadzone_temperature, max_temperature_limit, min_temperature_limit, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, preset), sensor, program, linkquality |
-| Picture | ![Moes BHT-002-GCLZB](https://www.zigbee2mqtt.io/images/devices/BHT-002-GCLZB.jpg) |
+| Exposes | linkquality, lock (state), deadzone_temperature, max_temperature_limit, min_temperature_limit, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, preset), sensor, program |
+| Picture | ![Moes BHT-002-GCLZB](https://www.zigbee2mqtt.io/images/devices/BHT-002-GCLZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -45,6 +45,13 @@ devices:
 
 ## Exposes
 
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+
 ### Child lock (lock)
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
@@ -63,7 +70,7 @@ Maximum temperature limit. Cuts the thermostat out regardless of air temperature
 Value can be found in the published state on the `max_temperature_limit` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_temperature_limit": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `35`.
+The minimal value is `0` and the maximum value is `45`.
 The unit of this value is `°C`.
 
 ### Min temperature limit (numeric)
@@ -129,11 +136,4 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"prog
 - `sunday_p4_hour` (numeric) max value is 23, unit is h
 - `sunday_p4_minute` (numeric) max value is 59, unit is m
 - `sunday_p4_temperature` (numeric) min value is 5, max value is 35, unit is °C
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

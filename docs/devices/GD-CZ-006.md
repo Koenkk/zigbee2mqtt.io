@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee LED Controller WW/CW |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Gledopto GD-CZ-006](https://www.zigbee2mqtt.io/images/devices/GD-CZ-006.jpg) |
+| Picture | ![Gledopto GD-CZ-006](https://www.zigbee2mqtt.io/images/devices/GD-CZ-006.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

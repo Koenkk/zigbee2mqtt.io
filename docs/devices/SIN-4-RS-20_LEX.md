@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | Roller shutter controller (Leroy Merlin version) |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![ADEO SIN-4-RS-20_LEX](https://www.zigbee2mqtt.io/images/devices/SIN-4-RS-20_LEX.jpg) |
+| Picture | ![ADEO SIN-4-RS-20_LEX](https://www.zigbee2mqtt.io/images/devices/SIN-4-RS-20_LEX.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

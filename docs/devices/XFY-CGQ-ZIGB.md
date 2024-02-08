@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Illuminance sensor |
 | Exposes | illuminance_lux, brightness_state, linkquality |
-| Picture | ![TuYa XFY-CGQ-ZIGB](https://www.zigbee2mqtt.io/images/devices/XFY-CGQ-ZIGB.jpg) |
+| Picture | ![TuYa XFY-CGQ-ZIGB](https://www.zigbee2mqtt.io/images/devices/XFY-CGQ-ZIGB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -31,8 +31,6 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `illuminance_lux_precision`: Number of digits after decimal point for illuminance_lux, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 

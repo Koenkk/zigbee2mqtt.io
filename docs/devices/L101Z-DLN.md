@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Lytko](/supported-devices/#v=Lytko)  |
 | Description | Dual channel Zigbee thermostat without screen |
 | Exposes | climate (local_temperature, occupied_heating_setpoint, system_mode, running_mode, local_temperature_calibration), min_setpoint_deadband, sensor_type, target_temp_first, linkquality |
-| Picture | ![Lytko L101Z-DLN](https://www.zigbee2mqtt.io/images/devices/L101Z-DLN.jpg) |
+| Picture | ![Lytko L101Z-DLN](https://www.zigbee2mqtt.io/images/devices/L101Z-DLN.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

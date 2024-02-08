@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Wireless motion detector |
 | Exposes | temperature, battery, occupancy, battery_low, tamper, linkquality |
-| Picture | ![Bosch RFPR-ZB-SH-EU](https://www.zigbee2mqtt.io/images/devices/RFPR-ZB-SH-EU.jpg) |
+| Picture | ![Bosch RFPR-ZB-SH-EU](https://www.zigbee2mqtt.io/images/devices/RFPR-ZB-SH-EU.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -34,9 +34,9 @@ To pair this device you have to install the device via its installation code. Th
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes
@@ -48,7 +48,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

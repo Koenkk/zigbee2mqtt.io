@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [OpenLumi](/supported-devices/#v=OpenLumi)  |
 | Description | [Lumi Router (JN5169)](https://github.com/igo-r/Lumi-Router-JN5169) |
 | Exposes | device_temperature, linkquality |
-| Picture | ![OpenLumi GWRJN5169](https://www.zigbee2mqtt.io/images/devices/GWRJN5169.jpg) |
+| Picture | ![OpenLumi GWRJN5169](https://www.zigbee2mqtt.io/images/devices/GWRJN5169.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

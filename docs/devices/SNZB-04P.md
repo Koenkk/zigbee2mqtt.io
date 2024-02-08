@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | SNZB-04P  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Contact sensor |
-| Exposes | contact, battery_low, battery, voltage, linkquality |
-| Picture | ![SONOFF SNZB-04P](https://www.zigbee2mqtt.io/images/devices/SNZB-04P.jpg) |
+| Exposes | contact, battery_low, battery, voltage, tamper, linkquality |
+| Picture | ![SONOFF SNZB-04P](https://www.zigbee2mqtt.io/images/devices/SNZB-04P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -48,7 +48,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -59,6 +59,13 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Tamper (binary)
+Tamper-proof status.
+Value can be found in the published state on the `tamper` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"tamper": ""}`.
+It's not possible to write (`/set`) this value.
+If value equals `true` tamper is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

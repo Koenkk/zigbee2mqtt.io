@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Curtain/blind switch with 2 Gang switch |
 | Exposes | cover (state, position), switch (state), calibration, backlight_mode, motor_steering, child_lock, linkquality |
-| Picture | ![TuYa TS0601_cover_with_2_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_with_2_switch.jpg) |
+| Picture | ![TuYa TS0601_cover_with_2_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_with_2_switch.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

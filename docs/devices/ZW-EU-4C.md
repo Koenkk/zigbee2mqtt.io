@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Nue / 3A](/supported-devices/#v=Nue%20%2F%203A)  |
 | Description | Zigbee smart curtain switch |
 | Exposes | cover (state, position), moving, linkquality |
-| Picture | ![Nue / 3A ZW-EU-4C](https://www.zigbee2mqtt.io/images/devices/ZW-EU-4C.jpg) |
+| Picture | ![Nue / 3A ZW-EU-4C](https://www.zigbee2mqtt.io/images/devices/ZW-EU-4C.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

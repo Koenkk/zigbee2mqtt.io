@@ -1,7 +1,7 @@
 ---
-title: "TuYa TS004F 6 button control via MQTT"
-description: "Integrate your TuYa TS004F 6 button via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-12-13T19:17:03Z
+title: "TuYa TS004F_6_button control via MQTT"
+description: "Integrate your TuYa TS004F_6_button via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-01-31T20:08:00
 pageClass: device-page
 ---
 
@@ -11,7 +11,7 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS004F 6 button
+# TuYa TS004F_6_button
 
 |     |     |
 |-----|-----|
@@ -19,26 +19,12 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Wireless switch with 6 buttons |
 | Exposes | battery, operation_mode, action, linkquality |
-| Picture | ![TuYa TS004F 6 button](https://www.zigbee2mqtt.io/images/devices/TS004F_6_button.jpg) |
+| Picture | ![TuYa TS004F_6_button](https://www.zigbee2mqtt.io/images/devices/TS004F_6_button.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
 
-### Button positions
-|1|3|5
-|-----|-----|-----|
-|2|4|6
 
-### Pairing
-To enter pairing mode hold button 1 and 2 (about 10 seconds) until all 6 LEDs start flashing.
-Note: When the battery is low, it will also flash all 6 leds, so if your pairing is failing, double check your battries.
-### Device modes
-This device has two modes:
-1. button mode  *(to have the 18 actions mentioned below)*
-2. scene mode
-
-To switch between modes hold buttons 2+3 (about 6 seconds) until light 3 flashes once.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -57,7 +43,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

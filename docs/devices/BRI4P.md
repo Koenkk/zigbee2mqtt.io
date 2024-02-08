@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Imhotep Creation](/supported-devices/#v=Imhotep%20Creation)  |
 | Description | BRI4P Bridge for underfloor heating central and local thermostats |
 | Exposes | linkquality |
-| Picture | ![Imhotep Creation BRI4P](https://www.zigbee2mqtt.io/images/devices/BRI4P.jpg) |
+| Picture | ![Imhotep Creation BRI4P](https://www.zigbee2mqtt.io/images/devices/BRI4P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

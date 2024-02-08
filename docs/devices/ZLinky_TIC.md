@@ -19,12 +19,14 @@ pageClass: device-page
 | Vendor  | [LiXee](/supported-devices/#v=LiXee)  |
 | Description | Lixee ZLinky |
 | Exposes | EAST, EAIT, EASF01, EASF02, EASF03, EASF04, EASF05, EASF06, EASF07, EASF08, EASF09, EASF10, ADSC, PRM, PREF, PCOUP, VTIC, CCASN, CCASN-1, UMOY1, ERQ1, ERQ2, ERQ3, ERQ4, IRMS1, URMS1, EASD01, EASD02, EASD03, EASD04, DATE, NTARF, LTARF, NGTF, NJOURF, NJOURF+1, PJOURF+1, PPOINTE1, CCAIN, CCAIN-1, SINSTI, SMAXIN, SMAXIN-1, MSG1, MSG2, RELAIS, DPM1, DPM2, DPM3, STGE, FPM1, FPM2, FPM3, SMAXN, SINSTS, SMAXN-1, SMAXN2, SMAXN3, SINSTS2, SINSTS3, UMOY3, UMOY2, IRMS2, IRMS3, URMS2, URMS3, SMAXN2-1, SMAXN3-1, PTEC, MOTDETAT, HHPHC, PEJP, DEMAIN, IMAX, ADPS, IMAX2, IMAX3, PPOT, ADIR1, ADIR2, ADIR3, linkquality |
-| Picture | ![LiXee ZLinky_TIC](https://www.zigbee2mqtt.io/images/devices/ZLinky_TIC.jpg) |
+| Picture | ![LiXee ZLinky_TIC](https://www.zigbee2mqtt.io/images/devices/ZLinky_TIC.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+Pair the sensor to Zigbee2MQTT by long pressing the pair button for more than 10 seconds. The blue light on the front side should flash rapidly.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -45,7 +47,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `tarif`: Overrides the automatic current tarif. This option will exclude unnecessary attributes. Open a issue to support more of them. Default: auto. The value must be one of `Historique - BASE`, `Historique - HCHP`, `Historique - EJP`, `Historique - BBR`, `Standard - Sem WE Lundi`, `Standard - Sem WE Mercredi`, `Standard - Sem WE Vendredi`, `Standard - BASE`, `Standard - Heure Pleine Heure Creuse`, `Standard - Heures Super Creuses`, `Standard - TEMPO`, `Standard - ZEN Flex`, `auto`
 
-* `kWh_precision`: Number of digits after decimal point for kWh, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `kWh_precision`: Number of digits after decimal point for kWh, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `measurement_poll_chunk`: During the poll, request multiple exposes to the Zlinky at once for reducing Zigbee network overload. Too much request at once could exceed device limit. Requires Z2M restart. Default: 1. The value must be a number with a minimum value of `1`
 
@@ -209,25 +211,25 @@ The unit of this value is `V`.
 
 ### EASD01 (numeric)
 Active energy withdrawn Distributor (index 01).
-Value can be found in the published state on the `active_enerfy_out_d01` property.
+Value can be found in the published state on the `active_energy_out_d01` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### EASD02 (numeric)
 Active energy withdrawn Distributor (index 02).
-Value can be found in the published state on the `active_enerfy_out_d02` property.
+Value can be found in the published state on the `active_energy_out_d02` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### EASD03 (numeric)
 Active energy withdrawn Distributor (index 03).
-Value can be found in the published state on the `active_enerfy_out_d03` property.
+Value can be found in the published state on the `active_energy_out_d03` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### EASD04 (numeric)
 Active energy withdrawn Distributor (index 04).
-Value can be found in the published state on the `active_enerfy_out_d04` property.
+Value can be found in the published state on the `active_energy_out_d04` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 

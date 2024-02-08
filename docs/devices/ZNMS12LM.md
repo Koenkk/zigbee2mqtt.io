@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNMS12LM control via MQTT"
-description: "Integrate your Xiaomi ZNMS12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNMS12LM control via MQTT"
+description: "Integrate your Aqara ZNMS12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNMS12LM
+# Aqara ZNMS12LM
 
 |     |     |
 |-----|-----|
 | Model | ZNMS12LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara S2 lock |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart door lock S2 |
 | Exposes | battery, voltage, battery_low, state, reverse, action, linkquality |
-| Picture | ![Xiaomi ZNMS12LM](https://www.zigbee2mqtt.io/images/devices/ZNMS12LM.jpg) |
+| Picture | ![Aqara ZNMS12LM](https://www.zigbee2mqtt.io/images/devices/ZNMS12LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -41,7 +41,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

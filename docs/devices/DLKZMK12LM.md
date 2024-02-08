@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi DLKZMK12LM control via MQTT"
-description: "Integrate your Xiaomi DLKZMK12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara DLKZMK12LM control via MQTT"
+description: "Integrate your Aqara DLKZMK12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-11-30T20:10:17
 pageClass: device-page
 ---
@@ -11,20 +11,25 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi DLKZMK12LM
+# Aqara DLKZMK12LM
 
 |     |     |
 |-----|-----|
 | Model | DLKZMK12LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara single switch module T1 (without neutral). Doesn't work as a router and doesn't support power meter |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Single switch module T1 (no neutral), CN |
 | Exposes | switch (state), power_outage_memory, switch_type, linkquality |
-| Picture | ![Xiaomi DLKZMK12LM](https://www.zigbee2mqtt.io/images/devices/DLKZMK12LM.jpg) |
+| Picture | ![Aqara DLKZMK12LM](https://www.zigbee2mqtt.io/images/devices/DLKZMK12LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Router functionality
+This device **does not** work as a Zigbee router.
 
+### Power meter functionality
+This device **does not** support power metering.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -41,6 +46,12 @@ pageClass: device-page
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Power outage memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.

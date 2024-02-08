@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [smarthjemmet.dk](/supported-devices/#v=smarthjemmet.dk)  |
 | Description | [FUGA compatible switch from Smarthjemmet.dk](https://smarthjemmet.dk) |
 | Exposes | switch_type_1, switch_type_2, switch_type_3, switch_type_4, battery, action, voltage, linkquality |
-| Picture | ![smarthjemmet.dk QUAD-ZIG-SW](https://www.zigbee2mqtt.io/images/devices/QUAD-ZIG-SW.jpg) |
+| Picture | ![smarthjemmet.dk QUAD-ZIG-SW](https://www.zigbee2mqtt.io/images/devices/QUAD-ZIG-SW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -84,7 +84,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `switch`, `multi-click`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

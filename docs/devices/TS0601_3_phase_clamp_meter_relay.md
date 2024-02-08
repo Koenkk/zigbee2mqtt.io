@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 3-phase clamp power meter with relay |
 | Exposes | switch (state), power, energy, produced_energy, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, linkquality |
-| Picture | ![TuYa TS0601_3_phase_clamp_meter_relay](https://www.zigbee2mqtt.io/images/devices/TS0601_3_phase_clamp_meter_relay.jpg) |
+| Picture | ![TuYa TS0601_3_phase_clamp_meter_relay](https://www.zigbee2mqtt.io/images/devices/TS0601_3_phase_clamp_meter_relay.png) |
 | White-label | Wenzhou Taiye Electric TAC7361C BI |
 
 
@@ -33,13 +33,13 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes

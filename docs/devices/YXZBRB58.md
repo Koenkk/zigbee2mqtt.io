@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart human presence sensor |
 | Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, radar_scene, linkquality |
-| Picture | ![TuYa YXZBRB58](https://www.zigbee2mqtt.io/images/devices/YXZBRB58.jpg) |
+| Picture | ![TuYa YXZBRB58](https://www.zigbee2mqtt.io/images/devices/YXZBRB58.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,6 +28,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

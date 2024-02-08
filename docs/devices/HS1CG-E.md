@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Combustible gas sensor |
 | Exposes | gas, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HS1CG-E](https://www.zigbee2mqtt.io/images/devices/HS1CG-E.jpg) |
+| Picture | ![HEIMAN HS1CG-E](https://www.zigbee2mqtt.io/images/devices/HS1CG-E.png) |
 | White-label | Piri HSIO18008 |
 
 

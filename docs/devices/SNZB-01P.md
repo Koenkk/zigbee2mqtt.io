@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Wireless button |
 | Exposes | battery, action, battery_low, voltage, linkquality |
-| Picture | ![SONOFF SNZB-01P](https://www.zigbee2mqtt.io/images/devices/SNZB-01P.jpg) |
+| Picture | ![SONOFF SNZB-01P](https://www.zigbee2mqtt.io/images/devices/SNZB-01P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -36,7 +36,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

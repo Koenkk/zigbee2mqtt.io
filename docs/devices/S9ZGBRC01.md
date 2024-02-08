@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Smart9](/supported-devices/#v=Smart9)  |
 | Description | Smart remote controller |
 | Exposes | battery, action, linkquality |
-| Picture | ![Smart9 S9ZGBRC01](https://www.zigbee2mqtt.io/images/devices/S9ZGBRC01.jpg) |
+| Picture | ![Smart9 S9ZGBRC01](https://www.zigbee2mqtt.io/images/devices/S9ZGBRC01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,7 +33,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Livolo](/supported-devices/#v=Livolo)  |
 | Description | Zigbee switch 1 gang |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Livolo TI0001-switch](https://www.zigbee2mqtt.io/images/devices/TI0001-switch.jpg) |
+| Picture | ![Livolo TI0001-switch](https://www.zigbee2mqtt.io/images/devices/TI0001-switch.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -62,7 +62,7 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss.
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.

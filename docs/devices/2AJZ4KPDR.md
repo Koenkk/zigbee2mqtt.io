@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Konke](/supported-devices/#v=Konke)  |
 | Description | Contact sensor |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
-| Picture | ![Konke 2AJZ4KPDR](https://www.zigbee2mqtt.io/images/devices/2AJZ4KPDR.jpg) |
+| Picture | ![Konke 2AJZ4KPDR](https://www.zigbee2mqtt.io/images/devices/2AJZ4KPDR.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -54,7 +54,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi WXCJKG11LM control via MQTT"
-description: "Integrate your Xiaomi WXCJKG11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara WXCJKG11LM control via MQTT"
+description: "Integrate your Aqara WXCJKG11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-12-15T17:27:48Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi WXCJKG11LM
+# Aqara WXCJKG11LM
 
 |     |     |
 |-----|-----|
 | Model | WXCJKG11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara Opple switch 1 band |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Opple wireless switch (single band) |
 | Exposes | battery, voltage, action, operation_mode, linkquality |
-| Picture | ![Xiaomi WXCJKG11LM](https://www.zigbee2mqtt.io/images/devices/WXCJKG11LM.jpg) |
+| Picture | ![Aqara WXCJKG11LM](https://www.zigbee2mqtt.io/images/devices/WXCJKG11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -55,7 +55,7 @@ When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple swi
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

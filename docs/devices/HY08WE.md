@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Wall-mount thermostat |
 | Exposes | climate (current_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
-| Picture | ![TuYa HY08WE](https://www.zigbee2mqtt.io/images/devices/HY08WE.jpg) |
+| Picture | ![TuYa HY08WE](https://www.zigbee2mqtt.io/images/devices/HY08WE.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

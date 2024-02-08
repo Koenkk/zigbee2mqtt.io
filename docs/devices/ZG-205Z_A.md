@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 5.8Ghz Human presence sensor |
 | Exposes | presence, illuminance, large_motion_detection_sensitivity, large_motion_detection_distance, motion_state, fading_time, medium_motion_detection_distance, medium_motion_detection_sensitivity, indicator, small_detection_distance, small_detection_sensitivity, linkquality |
-| Picture | ![TuYa ZG-205Z/A](https://www.zigbee2mqtt.io/images/devices/ZG-205Z-A.jpg) |
+| Picture | ![TuYa ZG-205Z/A](https://www.zigbee2mqtt.io/images/devices/ZG-205Z-A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,6 +32,11 @@ pairing process is in progress.
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

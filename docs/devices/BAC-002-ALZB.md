@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | BAC-002-ALZB  |
 | Vendor  | [HKGK](/supported-devices/#v=HKGK)  |
 | Description | BAC series thermostat |
-| Exposes | lock (state), climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, preset, fan_mode), sensor, programming_mode, linkquality |
-| Picture | ![HKGK BAC-002-ALZB](https://www.zigbee2mqtt.io/images/devices/BAC-002-ALZB.jpg) |
+| Exposes | lock (state), climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, preset, fan_mode), sensor, week, workdays_schedule, holidays_schedule, linkquality |
+| Picture | ![HKGK BAC-002-ALZB](https://www.zigbee2mqtt.io/images/devices/BAC-002-ALZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -53,7 +53,7 @@ It's not possible to read (`/get`) this value.
 This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `local_temperature_calibration`, `system_mode`, `preset`, `fan_mode`.
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `45`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `cool`. Reading (`/get`) this attribute is not possible.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `cool`, `heat`, `fan_only`. Reading (`/get`) this attribute is not possible.
 - `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `hold`, `program`. Reading (`/get`) this attribute is not possible.
 - `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-10` and the maximum value is `10` with a step size of `0.1`.
 
@@ -64,11 +64,24 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
 The possible values are: `IN`, `AL`, `OU`.
 
-### Programming mode (composite)
-Schedule MODE ⏱ - In this mode, the device executes a preset week programming temperature time and temperature..
-- `week` (enum): Week format user for schedule allowed values: `5+2`, `6+1`, `7`
-- `workdays_schedule` (text) 
-- `holidays_schedule` (text) 
+### Week (enum)
+Week format user for schedule.
+Value can be found in the published state on the `week` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"week": NEW_VALUE}`.
+The possible values are: `5+2`, `6+1`, `7`.
+
+### Workdays schedule (text)
+Workdays schedule, 6 entries max, example: "00:20/5°C 01:20/5°C 6:59/15°C 18:00/5°C 20:00/5°C 23:30/5°C".
+Value can be found in the published state on the `workdays_schedule` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"workdays_schedule": NEW_VALUE}`.
+
+### Holidays schedule (text)
+Holidays schedule, 6 entries max, example: "00:20/5°C 01:20/5°C 6:59/15°C 18:00/5°C 20:00/5°C 23:30/5°C".
+Value can be found in the published state on the `holidays_schedule` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"holidays_schedule": NEW_VALUE}`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

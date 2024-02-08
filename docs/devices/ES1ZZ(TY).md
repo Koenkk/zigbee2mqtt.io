@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Linptech](/supported-devices/#v=Linptech)  |
 | Description | mmWave Presence sensor |
 | Exposes | occupancy, illuminance, target_distance, motion_detection_distance, presence_keep_time, motion_detection_sensitivity, static_detection_sensitivity, fading_time, linkquality |
-| Picture | ![Linptech ES1ZZ(TY)](https://www.zigbee2mqtt.io/images/devices/ES1ZZ(TY).jpg) |
+| Picture | ![Linptech ES1ZZ(TY)](https://www.zigbee2mqtt.io/images/devices/ES1ZZ(TY).png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,6 +28,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

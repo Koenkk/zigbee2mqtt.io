@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | [Matts Wall Switch Remote](https://github.com/mattlokes/ZWallRemote) |
 | Exposes | action, linkquality |
-| Picture | ![Custom devices (DiY) ZWallRemote0](https://www.zigbee2mqtt.io/images/devices/ZWallRemote0.jpg) |
+| Picture | ![Custom devices (DiY) ZWallRemote0](https://www.zigbee2mqtt.io/images/devices/ZWallRemote0.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

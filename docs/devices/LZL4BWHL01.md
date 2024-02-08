@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Lutron](/supported-devices/#v=Lutron)  |
 | Description | Connected bulb remote control |
 | Exposes | action, linkquality |
-| Picture | ![Lutron LZL4BWHL01](https://www.zigbee2mqtt.io/images/devices/LZL4BWHL01.jpg) |
+| Picture | ![Lutron LZL4BWHL01](https://www.zigbee2mqtt.io/images/devices/LZL4BWHL01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

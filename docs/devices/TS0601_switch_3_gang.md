@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 3 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS0601_switch_3_gang](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_3_gang.jpg) |
+| Picture | ![TuYa TS0601_switch_3_gang](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_3_gang.png) |
 | White-label | NOVADIGITAL WS-US-ZB |
 
 

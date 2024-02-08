@@ -19,8 +19,8 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 1 gang smart dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), countdown, light_type, power_on_behavior, backlight_mode, linkquality |
-| Picture | ![TuYa TS0601_dimmer_1](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_1.jpg) |
-| White-label | Moes MS-105Z, Lerlink X706U, Moes ZS-EUD_1gang |
+| Picture | ![TuYa TS0601_dimmer_1](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_1.png) |
+| White-label | Lerlink X706U, Moes ZS-EUD_1gang |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -54,7 +54,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `led`, `incandescent`, `halogen`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss.
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.

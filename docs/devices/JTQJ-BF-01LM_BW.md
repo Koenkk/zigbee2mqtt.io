@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | JTQJ-BF-01LM/BW  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | MiJia gas leak detector  |
+| Description | Mijia Honeywell gas leak detector |
 | Exposes | gas, battery_low, tamper, sensitivity, gas_density, selftest, linkquality |
-| Picture | ![Xiaomi JTQJ-BF-01LM/BW](https://www.zigbee2mqtt.io/images/devices/JTQJ-BF-01LM-BW.jpg) |
+| Picture | ![Xiaomi JTQJ-BF-01LM/BW](https://www.zigbee2mqtt.io/images/devices/JTQJ-BF-01LM-BW.png) |
 | White-label | Xiaomi YTC4019RT |
 
 

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Repeater |
 | Exposes | linkquality |
-| Picture | ![TuYa TS0207_repeater](https://www.zigbee2mqtt.io/images/devices/TS0207_repeater.jpg) |
+| Picture | ![TuYa TS0207_repeater](https://www.zigbee2mqtt.io/images/devices/TS0207_repeater.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

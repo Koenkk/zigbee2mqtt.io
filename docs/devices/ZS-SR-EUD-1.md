@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Star ring smart dimmer switch 1 gang |
 | Exposes | light (state, brightness, min_brightness, max_brightness), countdown, light_type, power_on_behavior, backlight_mode, linkquality |
-| Picture | ![Moes ZS-SR-EUD-1](https://www.zigbee2mqtt.io/images/devices/ZS-SR-EUD-1.jpg) |
+| Picture | ![Moes ZS-SR-EUD-1](https://www.zigbee2mqtt.io/images/devices/ZS-SR-EUD-1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -53,7 +53,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `led`, `incandescent`, `halogen`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss.
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.

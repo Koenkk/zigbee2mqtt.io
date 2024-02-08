@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Neo](/supported-devices/#v=Neo)  |
 | Description | Alarm |
 | Exposes | battery_low, alarm, melody, duration, volume, battpercentage, linkquality |
-| Picture | ![Neo NAS-AB02B2](https://www.zigbee2mqtt.io/images/devices/NAS-AB02B2.jpg) |
+| Picture | ![Neo NAS-AB02B2](https://www.zigbee2mqtt.io/images/devices/NAS-AB02B2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

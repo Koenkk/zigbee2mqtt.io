@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Tubular motor |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Zemismart ZM25TQ](https://www.zigbee2mqtt.io/images/devices/ZM25TQ.jpg) |
+| Picture | ![Zemismart ZM25TQ](https://www.zigbee2mqtt.io/images/devices/ZM25TQ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

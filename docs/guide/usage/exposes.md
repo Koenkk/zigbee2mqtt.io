@@ -9,7 +9,17 @@ There are two types of exposes:
 - Generic: types like `numeric` and `binary`
 - Specific: represents a specific capability of a device like a `light` or `switch`.
 
-Both types will always have a `type` property. The generic types (except composite) will always have an `access` property and an optional `description` property. All generic types will always have a `name` property indicating the context and `label` property containing the name of the capability in the correct case and without using the underscore separator (e.g. `Device temperature`, `VOC`, `Power outage count`). All generic types will always have a `property` type indicating where the value is exposed on, usually this is equal to the name but in case when the `endpoint` is defined it is `name_endpoint`. The specific and the generic composite type will always have a `features` property, this is an array containing the generic exposes types. Optionally both types can have a property `endpoint`, indicating the device exposes this capability on a specific endpoint.
+Both types will always have a `type` property. 
+
+The generic types (except composite) will always have an `access` property and an optional `description` property. 
+
+All generic types will always have a `name` property indicating the context and `label` property containing the name of the capability in the correct case and without using the underscore separator (e.g. `Device temperature`, `VOC`, `Power outage count`). 
+
+All generic types will always have a `property` type indicating where the value is exposed on, usually this is equal to the name but in case when the `endpoint` is defined it is `name_endpoint`. 
+
+The specific and the generic composite type will always have a `features` property, this is an array containing the generic exposes types. Optionally both types can have a property `endpoint`, indicating the device exposes this capability on a specific endpoint. 
+
+Both types have an optional `category` attribute which can be set to either `config` or `diagnostic`. If it is set, it indicates that the expose is primarily for configuration (e.g. `operation_mode`, `power_on_behaviour`) or diagnostic purposes (e.g. `power_outage_count`, `device_temperature`). If it is not set, it indicates that the expose is for regular usage of the device (e.g. `switch`, `light`, `power`). A configuration expose must always be settable (see [access rights](#access)). A diagnostic expose must be read-only (otherwise it should be either a configuration or a regular expose). 
 
 ### Access
 The `access` property is a 3-bit bitmask.

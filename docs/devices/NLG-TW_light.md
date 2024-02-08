@@ -19,12 +19,24 @@ pageClass: device-page
 | Vendor  | [Paul Neuhaus](/supported-devices/#v=Paul%20Neuhaus)  |
 | Description | Various tunable white lights (e.g. 8195-55) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![Paul Neuhaus NLG-TW light](https://www.zigbee2mqtt.io/images/devices/NLG-TW-light.jpg) |
+| Picture | ![Paul Neuhaus NLG-TW light](https://www.zigbee2mqtt.io/images/devices/NLG-TW-light.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Options
+### Pairing
+You can reset the light either with a Q-remote (recommended) or via a click sequence with a connected switch to the light. After the light has been resetted, it automatically starts the pairing process. This should be the same for all Paul Neuhaus Q-lights (though untested!).
+#### Pairing with Q-remote
+1. Hold the Q-remote VERY close to the light. The distance to the light's antenna must be less than 10cm.
+2. Press the ON and OFF switch of the Q-remote simultaneously for more than 5 secondes.
 
+The status LED of the Q-remote flashes once per second. After 5 seconds the (ceiling) light flashes multiple times to signal the successful reset. A new flash sequence signals the pairing process. If the flashing ends the light should be paired successfully.  
+#### Pairing with a click sequence
+I got the pairing right with this method once. However, it is extremley difficult to get the timing right. Therefore the pairing with the Q-remote is recommended.
 
+1. Switch on the light for 5 to 10 seconds.
+2. Switch off the light.
+3. Switch on and off the light at least 4 times untill the light starts blinking several times. In this sequence assure to wait for 1-2 seconds between each new switch-on.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -47,6 +59,12 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
 - `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
 - `color_temp_startup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`, `previous`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depend on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
@@ -80,7 +98,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss.
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.

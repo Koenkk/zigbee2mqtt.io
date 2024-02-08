@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Imhotep Creation](/supported-devices/#v=Imhotep%20Creation)  |
 | Description | Towel heater thermostat THIE (TH ECTRL) and compliant |
 | Exposes | system_mode, local_temperature, climate (occupied_heating_setpoint, local_temperature), min_heat_setpoint_limit, max_heat_setpoint_limit, occupancy, linkquality |
-| Picture | ![Imhotep Creation RSS E-Ctrl](https://www.zigbee2mqtt.io/images/devices/RSS-E-Ctrl.jpg) |
+| Picture | ![Imhotep Creation RSS E-Ctrl](https://www.zigbee2mqtt.io/images/devices/RSS-E-Ctrl.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

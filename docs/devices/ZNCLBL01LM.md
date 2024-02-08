@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNCLBL01LM control via MQTT"
-description: "Integrate your Xiaomi ZNCLBL01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNCLBL01LM control via MQTT"
+description: "Integrate your Aqara ZNCLBL01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-07-01T08:14:12
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNCLBL01LM
+# Aqara ZNCLBL01LM
 
 |     |     |
 |-----|-----|
 | Model | ZNCLBL01LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara curtain driver E1 |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Curtain driver E1 |
 | Exposes | cover (state, position), hand_open, limits_calibration, battery, voltage, device_temperature, illuminance_lux, action, motor_state, running, hooks_lock, hooks_state, target_position, power_source, charging, linkquality |
-| Picture | ![Xiaomi ZNCLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNCLBL01LM.jpg) |
-| White-label | Xiaomi CM-M01 |
+| Picture | ![Aqara ZNCLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNCLBL01LM.png) |
+| White-label | Aqara CM-M01, Aqara CM-M01R |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -50,15 +50,11 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
-
-* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -84,7 +80,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `start`, `end`, `reset`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
 It's not possible to write (`/set`) this value.

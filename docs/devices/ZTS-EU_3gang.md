@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Wall touch light switch (3 gang) |
 | Exposes | switch (state), indicate_light, power_on_behavior, linkquality |
-| Picture | ![Moes ZTS-EU_3gang](https://www.zigbee2mqtt.io/images/devices/ZTS-EU_3gang.jpg) |
+| Picture | ![Moes ZTS-EU_3gang](https://www.zigbee2mqtt.io/images/devices/ZTS-EU_3gang.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

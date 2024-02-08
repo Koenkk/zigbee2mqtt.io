@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee LED Controller RGB (pro) |
 | Exposes | light (state, brightness, color_xy, color_hs), effect, power_on_behavior, linkquality |
-| Picture | ![Gledopto GL-C-003P](https://www.zigbee2mqtt.io/images/devices/GL-C-003P.jpg) |
+| Picture | ![Gledopto GL-C-003P](https://www.zigbee2mqtt.io/images/devices/GL-C-003P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -99,7 +99,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss.
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.

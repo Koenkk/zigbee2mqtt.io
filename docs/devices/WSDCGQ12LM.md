@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi WSDCGQ12LM control via MQTT"
-description: "Integrate your Xiaomi WSDCGQ12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara WSDCGQ12LM control via MQTT"
+description: "Integrate your Aqara WSDCGQ12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-06-10T16:45:59Z
 pageClass: device-page
 ---
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi WSDCGQ12LM
+# Aqara WSDCGQ12LM
 
 |     |     |
 |-----|-----|
 | Model | WSDCGQ12LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara T1 temperature, humidity and pressure sensor |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Temperature and humidity sensor T1 |
 | Exposes | temperature, humidity, pressure, device_temperature, battery, voltage, power_outage_count, linkquality |
-| Picture | ![Xiaomi WSDCGQ12LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ12LM.jpg) |
+| Picture | ![Aqara WSDCGQ12LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ12LM.png) |
+| White-label | Aqara TH-S02D |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -62,17 +63,17 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `pressure_calibration`: Calibrates the pressure value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `pressure_precision`: Number of digits after decimal point for pressure, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `pressure_precision`: Number of digits after decimal point for pressure, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
-
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -102,7 +103,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

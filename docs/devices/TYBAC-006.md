@@ -19,12 +19,15 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Wall-mount thermostat for 2-pipe fan-coil unit |
 | Exposes | state, lock (state), climate (local_temperature, current_heating_setpoint, system_mode, fan_mode, local_temperature_calibration), min_temperature, max_temperature, eco_mode, max_temperature_limit, min_temperature_limit, deadzone_temperature, valve, manual_mode, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, linkquality |
-| Picture | ![TuYa TYBAC-006](https://www.zigbee2mqtt.io/images/devices/TYBAC-006.jpg) |
+| Picture | ![TuYa TYBAC-006](https://www.zigbee2mqtt.io/images/devices/TYBAC-006.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
 
+While the thermostat is off, press and hold the "temperature down" button until the display shows the "network" icon.
 <!-- Notes END: Do not edit below this line -->
 
 

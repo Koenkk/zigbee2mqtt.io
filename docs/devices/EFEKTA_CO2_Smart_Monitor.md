@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | [EFEKTA CO2 Smart Monitor, ws2812b indicator, can control the relay, binding](https://efektalab.com/CO2_Monitor) |
 | Exposes | co2, temperature, humidity, light_indicator, light_indicator_level, set_altitude, temperature_offset, humidity_offset, forced_recalibration, manual_forced_recalibration, factory_reset_co2, enable_gas, high_gas, low_gas, enable_temperature, high_temperature, low_temperature, enable_humidity, high_humidity, low_humidity, linkquality |
-| Picture | ![Custom devices (DiY) EFEKTA_CO2_Smart_Monitor](https://www.zigbee2mqtt.io/images/devices/EFEKTA_CO2_Smart_Monitor.jpg) |
+| Picture | ![Custom devices (DiY) EFEKTA_CO2_Smart_Monitor](https://www.zigbee2mqtt.io/images/devices/EFEKTA_CO2_Smart_Monitor.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,13 +32,15 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `co2_calibration`: Calibrates the co2 value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes

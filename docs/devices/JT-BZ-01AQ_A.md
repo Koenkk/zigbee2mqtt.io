@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi JT-BZ-01AQ/A control via MQTT"
-description: "Integrate your Xiaomi JT-BZ-01AQ/A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara JT-BZ-01AQ/A control via MQTT"
+description: "Integrate your Aqara JT-BZ-01AQ/A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi JT-BZ-01AQ/A
+# Aqara JT-BZ-01AQ/A
 
 |     |     |
 |-----|-----|
 | Model | JT-BZ-01AQ/A  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart natural gas detector |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart natural gas detector |
 | Exposes | gas, gas_density, gas_sensitivity, selftest, test, buzzer, buzzer_manual_alarm, buzzer_manual_mute, linkage_alarm, linkage_alarm_state, state, power_outage_count, linkquality |
-| Picture | ![Xiaomi JT-BZ-01AQ/A](https://www.zigbee2mqtt.io/images/devices/JT-BZ-01AQ-A.jpg) |
+| Picture | ![Aqara JT-BZ-01AQ/A](https://www.zigbee2mqtt.io/images/devices/JT-BZ-01AQ-A.png) |
+| White-label | Aqara JT-BZ-03AQ/A |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

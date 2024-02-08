@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Vesternet](/supported-devices/#v=Vesternet)  |
 | Description | Zigbee remote control - 12 button |
 | Exposes | battery, action, linkquality |
-| Picture | ![Vesternet VES-ZB-REM-013](https://www.zigbee2mqtt.io/images/devices/VES-ZB-REM-013.jpg) |
+| Picture | ![Vesternet VES-ZB-REM-013](https://www.zigbee2mqtt.io/images/devices/VES-ZB-REM-013.png) |
 | White-label | Sunricher SR-ZG9001K12-DIM-Z4 |
 
 
@@ -44,7 +44,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

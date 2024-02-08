@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS remote control 4 button |
 | Exposes | action, battery, voltage, linkquality |
-| Picture | ![ShinaSystem MSM-300ZB](https://www.zigbee2mqtt.io/images/devices/MSM-300ZB.jpg) |
+| Picture | ![ShinaSystem MSM-300ZB](https://www.zigbee2mqtt.io/images/devices/MSM-300ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -39,7 +39,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `1_single`, `1_double`, `1_long`, `2_single`, `2_double`, `2_long`, `3_single`, `3_double`, `3_long`, `4_single`, `4_double`, `4_long`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Smart curtain/shutter switch |
 | Exposes | cover (state, position), indicator_mode, backlight_mode, moving, calibration, motor_reversal, calibration_time, linkquality |
-| Picture | ![Zemismart ZN-LC1E](https://www.zigbee2mqtt.io/images/devices/ZN-LC1E.jpg) |
+| Picture | ![Zemismart ZN-LC1E](https://www.zigbee2mqtt.io/images/devices/ZN-LC1E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

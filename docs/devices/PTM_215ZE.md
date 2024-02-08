@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EnOcean](/supported-devices/#v=EnOcean)  |
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
-| Picture | ![EnOcean PTM 215ZE](https://www.zigbee2mqtt.io/images/devices/PTM-215ZE.jpg) |
+| Picture | ![EnOcean PTM 215ZE](https://www.zigbee2mqtt.io/images/devices/PTM-215ZE.png) |
 | White-label | Easyfit by EnOcean EWSxZ, Trio2sys 20020002 |
 
 

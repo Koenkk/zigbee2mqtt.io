@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi SRTS-A01 control via MQTT"
-description: "Integrate your Xiaomi SRTS-A01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara SRTS-A01 control via MQTT"
+description: "Integrate your Aqara SRTS-A01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-09-30T20:52:51
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi SRTS-A01
+# Aqara SRTS-A01
 
 |     |     |
 |-----|-----|
 | Model | SRTS-A01  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara Smart Radiator Thermostat E1 |
-| Exposes | setup, climate (occupied_heating_setpoint, local_temperature, system_mode, preset), sensor, calibrated, calibrate, lock (state), switch (state), window_open, valve_alarm, away_preset_temperature, voltage, battery, power_outage_count, device_temperature, schedule_settings, linkquality |
-| Picture | ![Xiaomi SRTS-A01](https://www.zigbee2mqtt.io/images/devices/SRTS-A01.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart radiator thermostat E1 |
+| Exposes | setup, climate (occupied_heating_setpoint, local_temperature, system_mode, preset), sensor, external_temperature_input, calibrated, calibrate, child_lock, window_detection, window_open, valve_detection, valve_alarm, away_preset_temperature, voltage, battery, power_outage_count, device_temperature, schedule, schedule_settings, linkquality |
+| Picture | ![Aqara SRTS-A01](https://www.zigbee2mqtt.io/images/devices/SRTS-A01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -36,6 +36,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `thermostat_unit`: Controls the temperature unit of the thermostat (default celsius). The value must be one of `celsius`, `fahrenheit`
 
@@ -62,6 +64,14 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
 The possible values are: `internal`, `external`.
 
+### External temperature input (numeric)
+Input for remote temperature sensor (when sensor is set to external).
+Value can be found in the published state on the `external_temperature_input` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_temperature_input": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_temperature_input": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `55`.
+The unit of this value is `°C`.
+
 ### Calibrated (binary)
 Indicates if this valve is calibrated, use the calibrate option to calibrate.
 Value can be found in the published state on the `calibrated` property.
@@ -75,25 +85,32 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibrate": NEW_VALUE}`.
 The possible values are: `calibrate`.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
-To read the current state of this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
+### Child lock (binary)
+Unlocks/locks physical input on the device.
+Value can be found in the published state on the `child_lock` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `true` child lock is ON, if `false` OFF.
 
-### Window detection (switch)
-The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_detection": ""}`.
+### Window detection (binary)
+Enables/disables window detection on the device.
+Value can be found in the published state on the `window_detection` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_detection": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": NEW_VALUE}`.
+If value equals `true` window detection is ON, if `false` OFF.
 
 ### Window open (binary)
+Indicates if window is open.
 Value can be found in the published state on the `window_open` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` window open is ON, if `false` OFF.
 
-### Valve detection (switch)
-The current state of this switch is in the published state under the `valve_detection` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_detection": "ON"}`, `{"valve_detection": "OFF"}` or `{"valve_detection": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"valve_detection": ""}`.
+### Valve detection (binary)
+Determines if temperature control abnormalities should be detected.
+Value can be found in the published state on the `valve_detection` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"valve_detection": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_detection": NEW_VALUE}`.
+If value equals `true` valve detection is ON, if `false` OFF.
 
 ### Valve alarm (binary)
 Notifies of a temperature control abnormality if valve detection is enabled (e.g., thermostat not installed correctly, valve failure or incorrect calibration, incorrect link to external temperature sensor).
@@ -116,7 +133,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -133,10 +150,12 @@ Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Switch 
-The current state of this switch is in the published state under the `schedule` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule": "ON"}`, `{"schedule": "OFF"}` or `{"schedule": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule": ""}`.
+### Schedule (binary)
+When enabled, the device will change its state based on your schedule settings.
+Value can be found in the published state on the `schedule` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule": NEW_VALUE}`.
+If value equals `true` schedule is ON, if `false` OFF.
 
 ### Schedule settings (text)
 Smart schedule configuration (default: mon,tue,wed,thu,fri|8:00,24.0|18:00,17.0|23:00,22.0|8:00,22.0).

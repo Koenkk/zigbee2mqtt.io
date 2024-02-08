@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HZC](/supported-devices/#v=HZC)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, battery, illuminance, tamper, linkquality |
-| Picture | ![HZC S902M-ZG](https://www.zigbee2mqtt.io/images/devices/S902M-ZG.jpg) |
+| Picture | ![HZC S902M-ZG](https://www.zigbee2mqtt.io/images/devices/S902M-ZG.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,8 +33,6 @@ pageClass: device-page
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -52,7 +50,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

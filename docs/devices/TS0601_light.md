@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Light |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![TuYa TS0601_light](https://www.zigbee2mqtt.io/images/devices/TS0601_light.jpg) |
+| Picture | ![TuYa TS0601_light](https://www.zigbee2mqtt.io/images/devices/TS0601_light.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

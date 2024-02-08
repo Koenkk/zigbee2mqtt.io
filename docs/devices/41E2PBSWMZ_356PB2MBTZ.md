@@ -19,12 +19,21 @@ pageClass: device-page
 | Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Wiser 40/300-Series module switch 2A |
 | Exposes | switch (state), indicator_mode, power_on_behavior, linkquality |
-| Picture | ![Schneider Electric 41E2PBSWMZ/356PB2MBTZ](https://www.zigbee2mqtt.io/images/devices/41E2PBSWMZ-356PB2MBTZ.jpg) |
+| Picture | ![Schneider Electric 41E2PBSWMZ/356PB2MBTZ](https://www.zigbee2mqtt.io/images/devices/41E2PBSWMZ-356PB2MBTZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
 
+Pair the switch to Zigbee2MQTT by pressing 3 times to enter pairing mode. When the LED is blinking in amber, it is in Zigbee pairing mode. If the LED indication is other than flashing amber, the device is in BLE mode. 
+
+Set the device to Zigbee mode by short pressing the push-button for 4 times and hold it for 20 secs, until, the red LED flashes in high frequency.
+
+**NOTE**: Do not release the button when it flashes at a low frequency.
+
+Release the button and wait until the LED blinks red and green or there is no LED indication.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -45,6 +54,12 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
 ### Indicator mode (enum)
 Led Indicator Mode.
 Value can be found in the published state on the `indicator_mode` property.
@@ -53,7 +68,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `consistent_with_load`, `reverse_with_load`, `always_off`, `always_on`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss.
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.

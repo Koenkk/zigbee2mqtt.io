@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [RTX](/supported-devices/#v=RTX)  |
 | Description | Zigbee PIR sensor |
 | Exposes | battery_low, occupancy, linkquality |
-| Picture | ![RTX ZMS4](https://www.zigbee2mqtt.io/images/devices/ZMS4.jpg) |
+| Picture | ![RTX ZMS4](https://www.zigbee2mqtt.io/images/devices/ZMS4.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

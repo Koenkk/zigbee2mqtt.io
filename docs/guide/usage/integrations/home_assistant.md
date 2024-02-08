@@ -4,6 +4,10 @@ sidebar: auto
 
 # Home Assistant
 
+::: warning ATTENTION
+'Silicon Labs Multiprotocol' add-on is experimental and may break your Zigbee2MQTT setup. If you still decide to use it, make sure to turn off auto-update for that add-on, and ensure any new firmware versions it introduces are supported by Zigbee2MQTT before manually updating it.
+:::
+
 ## MQTT discovery
 The easiest way to integrate Zigbee2MQTT with Home Assistant is by
 using [MQTT discovery](https://www.home-assistant.io/integrations/mqtt#mqtt-discovery).
@@ -211,8 +215,8 @@ script:
         topic: zigbee2mqtt/bridge/request/device/rename
         payload_template: >-
           {
-            "from": "{{ states.input_text.zigbee2mqtt_old_name.state | string }}",
-            "to": "{{ states.input_text.zigbee2mqtt_new_name.state | string }}"
+            "from": "{{ states('input_text.zigbee2mqtt_old_name') }}",
+            "to": "{{ states('input_text.zigbee2mqtt_new_name') }}"
           }
   zigbee2mqtt_remove:
     alias: Zigbee2MQTT Remove
@@ -223,8 +227,8 @@ script:
         topic: zigbee2mqtt/bridge/request/device/remove
         payload_template: >-
           {
-            "id": "{{ states.input_text.zigbee2mqtt_remove.state | string }}",
-            "force": {% if states.input_boolean.zigbee2mqtt_force_remove.state == "off" %}false{% else %}true{% endif %}
+            "id": "{{ states('input_text.zigbee2mqtt_remove') }}",
+            "force": {{ is_state('input_boolean.zigbee2mqtt_force_remove', 'on') }}
           }
 
 

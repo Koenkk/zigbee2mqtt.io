@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![Develco MOSZB-130](https://www.zigbee2mqtt.io/images/devices/MOSZB-130.jpg) |
+| Picture | ![Develco MOSZB-130](https://www.zigbee2mqtt.io/images/devices/MOSZB-130.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Door sensor |
 | Exposes | contact, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HEIMAN-M1](https://www.zigbee2mqtt.io/images/devices/HEIMAN-M1.jpg) |
+| Picture | ![HEIMAN HEIMAN-M1](https://www.zigbee2mqtt.io/images/devices/HEIMAN-M1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

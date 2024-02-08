@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Thermostat radiator valve |
 | Exposes | battery_low, lock (state), open_window, frost_protection, error_status, climate (system_mode, preset, local_temperature_calibration, local_temperature, current_heating_setpoint), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, linkquality |
-| Picture | ![TuYa TS0601_thermostat_2](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat_2.jpg) |
+| Picture | ![TuYa TS0601_thermostat_2](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat_2.png) |
 | White-label | S366 Cloud Even |
 
 

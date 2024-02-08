@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Tubular motor |
 | Exposes | cover (state, position), goto_positon, motor_state, active_power, cycle_count, cycle_time, top_limit, bottom_limit, favorite_position, reverse_direction, motor_type, report, linkquality |
-| Picture | ![TuYa ZB-Sm](https://www.zigbee2mqtt.io/images/devices/ZB-Sm.jpg) |
+| Picture | ![TuYa ZB-Sm](https://www.zigbee2mqtt.io/images/devices/ZB-Sm.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

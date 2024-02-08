@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Siglis](/supported-devices/#v=Siglis)  |
 | Description | zigfred uno smart in-wall switch |
 | Exposes | action, linkquality |
-| Picture | ![Siglis ZFU-1D-CH](https://www.zigbee2mqtt.io/images/devices/ZFU-1D-CH.jpg) |
+| Picture | ![Siglis ZFU-1D-CH](https://www.zigbee2mqtt.io/images/devices/ZFU-1D-CH.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

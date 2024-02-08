@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi WXCJKG13LM control via MQTT"
-description: "Integrate your Xiaomi WXCJKG13LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara WXCJKG13LM control via MQTT"
+description: "Integrate your Aqara WXCJKG13LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-12-15T17:27:48Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi WXCJKG13LM
+# Aqara WXCJKG13LM
 
 |     |     |
 |-----|-----|
 | Model | WXCJKG13LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara Opple switch 3 bands |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Opple wireless switch (triple band) |
 | Exposes | battery, voltage, action, operation_mode, power_outage_count, linkquality |
-| Picture | ![Xiaomi WXCJKG13LM](https://www.zigbee2mqtt.io/images/devices/WXCJKG13LM.jpg) |
+| Picture | ![Aqara WXCJKG13LM](https://www.zigbee2mqtt.io/images/devices/WXCJKG13LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -60,7 +60,7 @@ When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple swi
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

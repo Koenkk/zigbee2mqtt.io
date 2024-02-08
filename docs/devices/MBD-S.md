@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | MBD-S, motion detector with 16A relay |
 | Exposes | switch (state), illuminance, illuminance_lux, occupancy, device_enabled, linkquality |
-| Picture | ![CTM Lyng MBD-S](https://www.zigbee2mqtt.io/images/devices/MBD-S.jpg) |
+| Picture | ![CTM Lyng MBD-S](https://www.zigbee2mqtt.io/images/devices/MBD-S.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

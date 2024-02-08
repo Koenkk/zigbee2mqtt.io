@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi LGYCDD01LM control via MQTT"
-description: "Integrate your Xiaomi LGYCDD01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara LGYCDD01LM control via MQTT"
+description: "Integrate your Aqara LGYCDD01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-09-01T13:40:11
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi LGYCDD01LM
+# Aqara LGYCDD01LM
 
 |     |     |
 |-----|-----|
 | Model | LGYCDD01LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara Zigbee 3.0 LED strip T1 |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Light strip T1 |
 | Exposes | light (state, brightness, color_temp, color_xy), power_on_behavior, length, min_brightness, max_brightness, audio, audio_sensitivity, audio_effect, preset, speed, linkquality |
-| Picture | ![Xiaomi LGYCDD01LM](https://www.zigbee2mqtt.io/images/devices/LGYCDD01LM.jpg) |
-| White-label | Xiaomi RLS-K01D |
+| Picture | ![Aqara LGYCDD01LM](https://www.zigbee2mqtt.io/images/devices/LGYCDD01LM.png) |
+| White-label | Aqara RLS-K01D |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -54,6 +54,12 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
   - `{"color": {"r": R, "g": G, "b": B}}` e.g. `{"color":{"r":46,"g":102,"b":150}}`
   - `{"color": {"rgb": "R,G,B"}}` e.g. `{"color":{"rgb":"46,102,150"}}`
   - `{"color": {"hex": HEX}}` e.g. `{"color":{"hex":"#547CFF"}}`
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depend on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.

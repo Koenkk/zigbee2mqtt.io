@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | SNZB-06P  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee occupancy sensor |
-| Exposes | occupancy, linkquality |
-| Picture | ![SONOFF SNZB-06P](https://www.zigbee2mqtt.io/images/devices/SNZB-06P.jpg) |
+| Exposes | occupancy, occupancy_timeout, occupancy_sensitivity, illumination, linkquality |
+| Picture | ![SONOFF SNZB-06P](https://www.zigbee2mqtt.io/images/devices/SNZB-06P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -44,7 +44,6 @@ On firmware versions lower than 1.0.5, the shortest detection duration is 30 (se
 Firmware version 1.0.5 and above allows setting the shortest detection duration to 15 (seconds).
 
 [Source - Sonoff documentation](https://sonoff.tech/product-review/tutorial/snzb-06p-firmware-upgrade-and-home-assistant-operation-guide/)
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -65,6 +64,26 @@ Indicates whether the device detected occupancy.
 Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
+
+### Occupancy timeout (numeric)
+Unoccupied to occupied delay.
+Value can be found in the published state on the `occupancy_timeout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
+The minimal value is `15` and the maximum value is `65535`.
+
+### Occupancy sensitivity (enum)
+Sensitivity of human presence detection.
+Value can be found in the published state on the `occupancy_sensitivity` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_sensitivity": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_sensitivity": NEW_VALUE}`.
+The possible values are: `low`, `medium`, `high`.
+
+### Illumination (enum)
+Only updated when occupancy is detected.
+Value can be found in the published state on the `illumination` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `dim`, `bright`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

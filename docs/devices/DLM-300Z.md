@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | Sihas door lock |
 | Exposes | battery, lock (state, lock_state), door_state, action, action_source_name, action_user, pin_code, linkquality |
-| Picture | ![ShinaSystem DLM-300Z](https://www.zigbee2mqtt.io/images/devices/DLM-300Z.jpg) |
+| Picture | ![ShinaSystem DLM-300Z](https://www.zigbee2mqtt.io/images/devices/DLM-300Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -41,7 +41,7 @@ To retrieve the state, send a `get` message to the device topic (`zigbee2mqtt/DE
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

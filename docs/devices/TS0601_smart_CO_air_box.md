@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart air box (carbon monoxide) |
 | Exposes | carbon_monoxide, co, linkquality |
-| Picture | ![TuYa TS0601_smart_CO_air_box](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_CO_air_box.jpg) |
+| Picture | ![TuYa TS0601_smart_CO_air_box](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_CO_air_box.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -31,8 +31,6 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `co_precision`: Number of digits after decimal point for co, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `co_calibration`: Calibrates the co value (absolute offset), takes into effect on next report of device. The value must be a number.
 

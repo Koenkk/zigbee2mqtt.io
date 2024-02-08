@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Shawader](/supported-devices/#v=Shawader)  |
 | Description | 1 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Shawader SMKG-1KNL-US/TZB-W](https://www.zigbee2mqtt.io/images/devices/SMKG-1KNL-US-TZB-W.jpg) |
+| Picture | ![Shawader SMKG-1KNL-US/TZB-W](https://www.zigbee2mqtt.io/images/devices/SMKG-1KNL-US-TZB-W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

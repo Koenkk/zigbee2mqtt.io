@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Door/window contact II |
 | Exposes | battery_low, contact, action, linkquality |
-| Picture | ![Bosch BSEN-C2](https://www.zigbee2mqtt.io/images/devices/BSEN-C2.jpg) |
+| Picture | ![Bosch BSEN-C2](https://www.zigbee2mqtt.io/images/devices/BSEN-C2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

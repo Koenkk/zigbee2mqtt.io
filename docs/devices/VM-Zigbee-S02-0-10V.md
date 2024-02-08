@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | 2 channel Zigbee 0-10V dimmer module |
 | Exposes | light (state, brightness, min_brightness, max_brightness), countdown, switch_type, power_on_behavior, linkquality |
-| Picture | ![Lonsonho VM-Zigbee-S02-0-10V](https://www.zigbee2mqtt.io/images/devices/VM-Zigbee-S02-0-10V.jpg) |
+| Picture | ![Lonsonho VM-Zigbee-S02-0-10V](https://www.zigbee2mqtt.io/images/devices/VM-Zigbee-S02-0-10V.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -73,7 +73,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `toggle`, `state`, `momentary`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss.
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.

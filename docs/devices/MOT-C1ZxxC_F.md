@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Profalux](/supported-devices/#v=Profalux)  |
 | Description | Cover |
 | Exposes | cover (state, position, tilt), linkquality |
-| Picture | ![Profalux MOT-C1ZxxC/F](https://www.zigbee2mqtt.io/images/devices/MOT-C1ZxxC-F.jpg) |
+| Picture | ![Profalux MOT-C1ZxxC/F](https://www.zigbee2mqtt.io/images/devices/MOT-C1ZxxC-F.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

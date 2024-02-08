@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Human presence sensor with fall function |
 | Exposes | illuminance_lux, presence, occupancy, motion_speed, motion_direction, radar_sensitivity, radar_scene, tumble_switch, fall_sensitivity, tumble_alarm_time, fall_down_status, static_dwell_alarm, linkquality |
-| Picture | ![TuYa MIR-HE200-TY](https://www.zigbee2mqtt.io/images/devices/MIR-HE200-TY.jpg) |
+| Picture | ![TuYa MIR-HE200-TY](https://www.zigbee2mqtt.io/images/devices/MIR-HE200-TY.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -31,6 +31,11 @@ Factory resetting by pushing the "Reset-Button" longer than 5 seconds or by usin
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

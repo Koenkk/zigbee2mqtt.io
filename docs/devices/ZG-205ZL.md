@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 24Ghz human presence sensor |
 | Exposes | presence, motion_state, illuminance_lux, fading_time, large_motion_detection_distance, large_motion_detection_sensitivity, small_motion_detection_distance, small_motion_detection_sensitivity, static_detection_distance, static_detection_sensitivity, mode, alarm_volume, alarm_time, light_mode, linkquality |
-| Picture | ![TuYa ZG-205ZL](https://www.zigbee2mqtt.io/images/devices/ZG-205ZL.jpg) |
+| Picture | ![TuYa ZG-205ZL](https://www.zigbee2mqtt.io/images/devices/ZG-205ZL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,6 +32,11 @@ pairing process is in progress.
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

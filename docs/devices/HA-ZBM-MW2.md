@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Halemeier](/supported-devices/#v=Halemeier)  |
 | Description | S-Mitter basic MultiWhite² 1-channel sender Zigbee  |
 | Exposes | battery, action, linkquality |
-| Picture | ![Halemeier HA-ZBM-MW2](https://www.zigbee2mqtt.io/images/devices/HA-ZBM-MW2.jpg) |
+| Picture | ![Halemeier HA-ZBM-MW2](https://www.zigbee2mqtt.io/images/devices/HA-ZBM-MW2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -43,7 +43,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
 It's not possible to write (`/set`) this value.

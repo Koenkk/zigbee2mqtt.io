@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
 | Description | [DiY 8/12/20 button keypad](http://modkam.ru/?p=1114) |
 | Exposes | battery, action, switch_type, switch_actions, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_FreePad](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_FreePad.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_FreePad](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_FreePad.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -51,7 +51,7 @@ TL functionality can work without connecting to network
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

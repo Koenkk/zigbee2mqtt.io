@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Curtain motor fixed speed |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![TuYa TS0601_cover_2](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_2.jpg) |
+| Picture | ![TuYa TS0601_cover_2](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_2.png) |
 | White-label | Zemismart BCM100DB |
 
 

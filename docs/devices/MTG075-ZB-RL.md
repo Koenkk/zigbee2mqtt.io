@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2.4G/5.8G human presence sensor with relay |
 | Exposes | presence, illuminance_lux, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance_indentation, entry_filter_time, departure_delay, block_time, breaker_status, breaker_mode, illuminance_threshold, status_indication, linkquality |
-| Picture | ![TuYa MTG075-ZB-RL](https://www.zigbee2mqtt.io/images/devices/MTG075-ZB-RL.jpg) |
+| Picture | ![TuYa MTG075-ZB-RL](https://www.zigbee2mqtt.io/images/devices/MTG075-ZB-RL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,6 +28,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

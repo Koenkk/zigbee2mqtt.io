@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | 1 channel dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), light_type, power_on_behavior, linkquality |
-| Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-L_1](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-D02-TRIAC-L_1.jpg) |
+| Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-L_1](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-D02-TRIAC-L_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,6 +27,9 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -50,7 +53,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `led`, `incandescent`, `halogen`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss.
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.

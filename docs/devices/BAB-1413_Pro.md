@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Thermostat radiator valve |
 | Exposes | battery, lock (state), max_temperature, min_temperature, switch (state), open_window_temperature, comfort_temperature, eco_temperature, holiday_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint, system_mode, running_state), frost_protection, boost_timeset_countdown, schedule, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, valve, factory_reset, error_status, linkquality |
-| Picture | ![TuYa BAB-1413_Pro](https://www.zigbee2mqtt.io/images/devices/BAB-1413_Pro.jpg) |
+| Picture | ![TuYa BAB-1413_Pro](https://www.zigbee2mqtt.io/images/devices/BAB-1413_Pro.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -40,7 +40,7 @@ While pairing, keep the valve close to the coordinator.
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

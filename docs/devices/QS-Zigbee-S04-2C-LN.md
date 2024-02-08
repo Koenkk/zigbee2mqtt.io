@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | 2 gang switch module with neutral wire |
 | Exposes | switch (state), linkquality |
-| Picture | ![Lonsonho QS-Zigbee-S04-2C-LN](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-S04-2C-LN.jpg) |
+| Picture | ![Lonsonho QS-Zigbee-S04-2C-LN](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-S04-2C-LN.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

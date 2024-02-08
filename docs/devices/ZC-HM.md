@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Carbon monoxide alarm |
 | Exposes | carbon_monoxide, co, self_test_result, battery, silence, linkquality |
-| Picture | ![Moes ZC-HM](https://www.zigbee2mqtt.io/images/devices/ZC-HM.jpg) |
+| Picture | ![Moes ZC-HM](https://www.zigbee2mqtt.io/images/devices/ZC-HM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,6 +28,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `co_calibration`: Calibrates the co value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -51,7 +56,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `checking`, `success`, `failure`, `others`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

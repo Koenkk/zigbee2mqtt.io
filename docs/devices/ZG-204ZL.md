@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Luminance motion sensor |
 | Exposes | occupancy, illuminance, battery, sensitivity, keep_time, illuminance_interval, linkquality |
-| Picture | ![TuYa ZG-204ZL](https://www.zigbee2mqtt.io/images/devices/ZG-204ZL.jpg) |
+| Picture | ![TuYa ZG-204ZL](https://www.zigbee2mqtt.io/images/devices/ZG-204ZL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -39,6 +39,11 @@ or set values (i.e. `sensitivity` or `keep_time`) will only work when the sensor
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
@@ -55,7 +60,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

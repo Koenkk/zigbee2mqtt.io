@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [D-Link](/supported-devices/#v=D-Link)  |
 | Description | Wireless smart door window sensor with vibration |
 | Exposes | battery_low, contact, vibration, tamper, battery, linkquality |
-| Picture | ![D-Link DCH-B112](https://www.zigbee2mqtt.io/images/devices/DCH-B112.jpg) |
+| Picture | ![D-Link DCH-B112](https://www.zigbee2mqtt.io/images/devices/DCH-B112.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -59,7 +59,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

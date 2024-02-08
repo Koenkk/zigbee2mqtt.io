@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Wireless and batteryless scenario switch (home arrival/departure, 1-4 switches, daytime day/night) |
 | Exposes | action, linkquality |
-| Picture | ![Legrand ZLGP14/ZLGP15/ZLGP16](https://www.zigbee2mqtt.io/images/devices/ZLGP14-ZLGP15-ZLGP16.jpg) |
+| Picture | ![Legrand ZLGP14/ZLGP15/ZLGP16](https://www.zigbee2mqtt.io/images/devices/ZLGP14-ZLGP15-ZLGP16.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

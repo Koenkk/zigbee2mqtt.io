@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [DYGSM](/supported-devices/#v=DYGSM)  |
 | Description | Gas sensor |
 | Exposes | gas, gas_value, self_test, self_test_result, silence, alarm_ringtone, alarm_time, preheat, linkquality |
-| Picture | ![DYGSM DY-RQ500A](https://www.zigbee2mqtt.io/images/devices/DY-RQ500A.jpg) |
+| Picture | ![DYGSM DY-RQ500A](https://www.zigbee2mqtt.io/images/devices/DY-RQ500A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Gear window shade motor |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![HEIMAN HS2CM-N-DC](https://www.zigbee2mqtt.io/images/devices/HS2CM-N-DC.jpg) |
+| Picture | ![HEIMAN HS2CM-N-DC](https://www.zigbee2mqtt.io/images/devices/HS2CM-N-DC.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

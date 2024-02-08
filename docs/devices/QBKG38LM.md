@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi QBKG38LM control via MQTT"
-description: "Integrate your Xiaomi QBKG38LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara QBKG38LM control via MQTT"
+description: "Integrate your Aqara QBKG38LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi QBKG38LM
+# Aqara QBKG38LM
 
 |     |     |
 |-----|-----|
 | Model | QBKG38LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara E1 1 gang switch (without neutral) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch E1 (no neutral, single rocker) |
 | Exposes | switch (state), power_outage_memory, action, device_temperature, flip_indicator_light, operation_mode, mode_switch, linkquality |
-| Picture | ![Xiaomi QBKG38LM](https://www.zigbee2mqtt.io/images/devices/QBKG38LM.jpg) |
+| Picture | ![Aqara QBKG38LM](https://www.zigbee2mqtt.io/images/devices/QBKG38LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -43,9 +43,9 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
-
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -54,6 +54,12 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Power outage memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.

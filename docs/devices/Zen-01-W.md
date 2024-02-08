@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Zen](/supported-devices/#v=Zen)  |
 | Description | Thermostat |
 | Exposes | climate (occupied_heating_setpoint, occupied_cooling_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration, fan_mode), linkquality |
-| Picture | ![Zen Zen-01-W](https://www.zigbee2mqtt.io/images/devices/Zen-01-W.jpg) |
+| Picture | ![Zen Zen-01-W](https://www.zigbee2mqtt.io/images/devices/Zen-01-W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

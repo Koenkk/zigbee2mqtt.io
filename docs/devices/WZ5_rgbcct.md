@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Skydance](/supported-devices/#v=Skydance)  |
 | Description | Zigbee & RF 5 in 1 LED controller (RGB+CCT mode) |
 | Exposes | light (state, brightness, color_hs, color_temp), white_brightness, linkquality |
-| Picture | ![Skydance WZ5_rgbcct](https://www.zigbee2mqtt.io/images/devices/WZ5_rgbcct.jpg) |
+| Picture | ![Skydance WZ5_rgbcct](https://www.zigbee2mqtt.io/images/devices/WZ5_rgbcct.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

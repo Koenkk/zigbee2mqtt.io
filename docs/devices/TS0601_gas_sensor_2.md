@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Gas sensor |
 | Exposes | gas, gas_value, self_test, self_test_result, silence, alarm_ringtone, alarm_time, preheat, linkquality |
-| Picture | ![TuYa TS0601_gas_sensor_2](https://www.zigbee2mqtt.io/images/devices/TS0601_gas_sensor_2.jpg) |
+| Picture | ![TuYa TS0601_gas_sensor_2](https://www.zigbee2mqtt.io/images/devices/TS0601_gas_sensor_2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

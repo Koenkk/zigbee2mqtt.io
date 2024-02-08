@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Lidl](/supported-devices/#v=Lidl)  |
 | Description | Parkside smart watering timer |
 | Exposes | battery, switch (state), timer, time_left, frost_lock, reset_frost_lock, schedule_mode, schedule_periodic, schedule_weekday, schedule_slot_1, schedule_slot_2, schedule_slot_3, schedule_slot_4, schedule_slot_5, schedule_slot_6, linkquality |
-| Picture | ![Lidl PSBZS A1](https://www.zigbee2mqtt.io/images/devices/PSBZS-A1.jpg) |
+| Picture | ![Lidl PSBZS A1](https://www.zigbee2mqtt.io/images/devices/PSBZS-A1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,7 +33,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

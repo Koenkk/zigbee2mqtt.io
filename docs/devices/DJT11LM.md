@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi DJT11LM control via MQTT"
-description: "Integrate your Xiaomi DJT11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara DJT11LM control via MQTT"
+description: "Integrate your Aqara DJT11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi DJT11LM
+# Aqara DJT11LM
 
 |     |     |
 |-----|-----|
 | Model | DJT11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara vibration sensor |
-| Exposes | battery, device_temperature, vibration, action, strength, sensitivity, angle_x, angle_y, angle_z, voltage, power_outage_count, linkquality |
-| Picture | ![Xiaomi DJT11LM](https://www.zigbee2mqtt.io/images/devices/DJT11LM.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Vibration sensor |
+| Exposes | battery, device_temperature, vibration, action, strength, sensitivity, angle_x, angle_y, angle_z, x_axis, y_axis, z_axis, voltage, power_outage_count, linkquality |
+| Picture | ![Aqara DJT11LM](https://www.zigbee2mqtt.io/images/devices/DJT11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -30,13 +30,17 @@ Uses a CR2032 battery
 
 ### Pairing
 Press the reset button for about 5 seconds. The LED lights up 3 times.
-Then press the button again every 2 seconds (maximum 20 times).
+Then press the button again every 2 seconds to keep it awake (maximum 20 times).
 
 *NOTE: When you fail to pair a device, try replacing the battery, this could solve the problem.*
 
 ### Meaning of `strength` value
 The `strength` value, which is reported every 300 seconds after vibration is detected, is the max strength measured during a period of 300 second.
 
+### Frequency of `vibration` actions
+The subtopic `/action` with payload `vibration` and associated status JSON blobs are emitted about one second after onset, but not more frequently than once per minute regardless of whether vibrations are continuous or intermittent within that minute.  This action message is distinct from the status JSON blob message emitted approximately every hour and after `vibration_timeout` described below.
+
+If vibrations should persist, another `vibration` action will be emitted after that minute interval expires.  There is no evident way of changing the duration of this hold-off period.
 
 ### Troubleshooting: device stops sending messages/disconnects from network
 Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes happens that they disconnect from the network.
@@ -47,13 +51,26 @@ Most of the times this happens because of the following reasons:
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 
-
 ### Sensitivity
 The sensitivity can be changed by publishing to `zigbee2mqtt/FRIENDLY_NAME/set`
 `{"sensitivity": "SENSITIVITY"}` where `SENSITIVITY` is one of the following
 values: `low`, `medium`,  `high`.
 
 After setting the sensitivity you immediately have to start pressing the reset button with an interval of 1 second until you see Zigbee2MQTT publishing the new sensitivity to MQTT.
+
+
+### Calibration
+In order to improve the factory calibration or lack thereof, you can get a better result with a 2 step offset calibration:
+* Ensure the x, y and z offset are set to 0 in the device specific settings
+* Put the device on a level surface, face up.
+  * A few seconds after the tilt action, the angles and accelerometer values (``x_axis``, ``y_axis``, ``z_axis``) are updated
+  * ``x_axis`` and ``y_axis`` should be small, ``z_axis`` around 1000
+  * Set the offset for x and y to the opposite values of ``x_axis`` and ``y_axis`` to compensate.
+* Put the device on a side
+  * After a few seconds, te values update, and ``z_axis`` should be small, as well as one of the ``x_axis`` or ``y_axis``, the other being around ±1000
+  * Set the offset for z to the opposite of ``z_axis``
+You can fine tune the values of the offset by trying other sides and picking values that match best.
+Remember that the device sends accelerometer values a few seconds after the actual tilt event.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -65,11 +82,17 @@ After setting the sensitivity you immediately have to start pressing the reset b
 
 * `vibration_timeout`: Time in seconds after which vibration is cleared after detecting it (default 90 seconds). The value must be a number with a minimum value of `0`
 
+* `x_calibration`: Calibrates the x value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `y_calibration`: Calibrates the y value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `z_calibration`: Calibrates the z value (absolute offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -120,6 +143,21 @@ Value can be found in the published state on the `angle_z` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-90` and the maximum value is `90`.
 The unit of this value is `°`.
+
+### X axis (numeric)
+Accelerometer X value.
+Value can be found in the published state on the `x_axis` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Y axis (numeric)
+Accelerometer Y value.
+Value can be found in the published state on the `y_axis` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Z axis (numeric)
+Accelerometer Z value.
+Value can be found in the published state on the `z_axis` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Voltage (numeric)
 Voltage of the battery in millivolts.
