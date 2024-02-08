@@ -180,6 +180,11 @@ WantedBy=multi-user.target
 
 Save the file and exit.
 
+You need some __systemd__ development files, on __Ubuntu__ these can be installed via:
+```
+$ sudo apt install libsystemd-dev
+```
+
 Verify that the configuration works:
 ```bash
 # Start Zigbee2MQTT
