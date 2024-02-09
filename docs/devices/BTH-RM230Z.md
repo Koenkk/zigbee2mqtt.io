@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BTH-RM230Z  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Room thermostat II 230V |
-| Exposes | climate (local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode, running_state), humidity, boost, window_open, lock (state), display_ontime, display_brightness, linkquality |
+| Exposes | climate (local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode, running_state), humidity, boost, window_detection, lock (state), display_ontime, display_brightness, linkquality |
 | Picture | ![Bosch BTH-RM230Z](https://www.zigbee2mqtt.io/images/devices/BTH-RM230Z.png) |
 
 
@@ -62,12 +62,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost": NEW_VALUE}`.
 If value equals `ON` boost is ON, if `OFF` OFF.
 
-### Window open (binary)
-Window open.
-Value can be found in the published state on the `window_open` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_open": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_open": NEW_VALUE}`.
-If value equals `ON` window open is ON, if `OFF` OFF.
+### Window detection (binary)
+Window detection.
+Value can be found in the published state on the `window_detection` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_detection": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": NEW_VALUE}`.
+If value equals `ON` window detection is ON, if `OFF` OFF.
 
 ### Child lock (lock)
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
