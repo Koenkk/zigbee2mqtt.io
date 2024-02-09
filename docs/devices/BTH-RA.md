@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BTH-RA  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Radiator thermostat II |
-| Exposes | climate (local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode, pi_heating_demand, running_state), boost, window_open, display_orientation, remote_temperature, display_ontime, display_brightness, displayed_temperature, lock (state), battery, setpoint_change_source, valve_adapt_status, valve_adapt_process, linkquality |
+| Exposes | climate (local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode, pi_heating_demand, running_state), boost, window_detection, display_orientation, remote_temperature, display_ontime, display_brightness, displayed_temperature, lock (state), battery, setpoint_change_source, valve_adapt_status, valve_adapt_process, linkquality |
 | Picture | ![Bosch BTH-RA](https://www.zigbee2mqtt.io/images/devices/BTH-RA.png) |
 
 
@@ -62,12 +62,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost": NEW_VALUE}`.
 If value equals `ON` boost is ON, if `OFF` OFF.
 
-### Window open (binary)
-Window open.
-Value can be found in the published state on the `window_open` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_open": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_open": NEW_VALUE}`.
-If value equals `ON` window open is ON, if `OFF` OFF.
+### Window detection (binary)
+Window detection.
+Value can be found in the published state on the `window_detection` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_detection": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": NEW_VALUE}`.
+If value equals `ON` window detection is ON, if `OFF` OFF.
 
 ### Display orientation (enum)
 Display orientation.
