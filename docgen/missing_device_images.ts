@@ -33,16 +33,10 @@ export async function downloadImage(url: string, path: string) {
     });
 }
 
-export async function ensurePngWithoutBackground(imagePath: string) {
-    if (path.parse(imagePath).ext !== '.png') {
-        const imagePathPng  = `${path.join(missingImagesPath, path.parse(imagePath).name)}.png`;
-        await easyimage.convert({src: imagePath, dst: imagePathPng});
-        fs.rmSync(imagePath);
-        imagePath = imagePathPng;
-    }
-    const imagePathBackground = `${imagePath}.background.png`
-    fs.renameSync(imagePath, imagePathBackground);
-    execSync(`rembg i ${imagePathBackground} ${imagePath}`);
+export async function removeBackground(imagePath: string) {
+    execSync(`transparent-background --fast --source ${imagePath} --dest ${path.parse(imagePath).dir}`);
+    const converted = path.join(path.parse(imagePath).dir, `${path.parse(imagePath).name}_rgba.png`);
+    fs.renameSync(converted, converted.replace('_rgba', ''));
     return imagePath;
 }
 
@@ -65,7 +59,7 @@ export async function downloadMissing() {
                 await downloadImage(image.url, imagePath);
 
                 // Convert to png
-                imagePath = await ensurePngWithoutBackground(imagePath);
+                imagePath = await removeBackground(imagePath);
 
                 // Make sqaure
                 const info = await easyimage.info(imagePath);
@@ -88,13 +82,16 @@ async function moveMissing() {
     for (const file of fs.readdirSync(missingImagesPath)) {
         try {
             let source = path.join(missingImagesPath, file);
-            // source = await ensurePngWithoutBackground(source);
             const name = path.basename(source);
             const match = name.match('(.+)_\\d+\\.png');
             if (!match) throw new Error(`Failed to match '${name}'`)
             const target = path.join(imageBaseDir, `${match[1]}.png`);
             fs.copyFileSync(source, target);
-            const size = 512;
+            const info = await easyimage.info(target);
+            const size = Math.min(info.width, info.height, 512);
+            if (size !== 512) {
+                throw new Error(`size too small: ${size}`);
+            }
             await easyimage.resize({width: size, height: size, src: target, dst: target});
         } catch (error) {
             console.error(`Failed to handle '${file}' (${error})`)
