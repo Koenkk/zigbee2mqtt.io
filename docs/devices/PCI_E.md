@@ -23,8 +23,12 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
 
+### Pairing
+Long press the reset button for 5s until the LED indicator flashes three times, which means the device has entered pairing mode. If buzzer feedback is on then you'll also hear 3 short beeps.
+The reset button can be found on the PCIe card.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -40,7 +44,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `ON` state is ON, if `OFF` OFF.
 
 ### Buzzer feedback (binary)
-ON means no buzzer noise.
+Enable buzzer feedback. It sounds on device actions like power state changes, child lock activation, etc.
 Value can be found in the published state on the `buzzer_feedback` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"buzzer_feedback": NEW_VALUE}`.
