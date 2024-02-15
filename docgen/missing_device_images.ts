@@ -4,8 +4,6 @@ import { imageBaseDir } from "./constants";
 import * as path from "path";
 import * as fs from "fs";
 import * as gis from 'async-g-i-s';
-import * as httpsClient from 'https';
-import * as httpClient from 'http';
 import * as easyimage from 'easyimage';
 import {execSync} from 'child_process';
 
@@ -24,13 +22,10 @@ export async function getMissing(): Promise<{image: string, model: string, vendo
 }
 
 export async function downloadImage(url: string, path: string) {
-    const client = url.startsWith('https') ? httpsClient : httpClient;
-    return new Promise<void>((r) => {
-        client.get(url, (res) => {
-            res.pipe(fs.createWriteStream(path));
-            r();
-        });
-    });
+    execSync(`curl ${url} -o ${path}`);
+    if (!fs.existsSync(path)) {
+        throw new Error('failed');
+    }
 }
 
 export async function ensurePngWithoutBackground(imagePath: string) {
@@ -40,9 +35,7 @@ export async function ensurePngWithoutBackground(imagePath: string) {
         fs.rmSync(imagePath);
         imagePath = imagePathPng;
     }
-    const imagePathBackground = `${imagePath}.background.png`
-    fs.renameSync(imagePath, imagePathBackground);
-    execSync(`rembg i ${imagePathBackground} ${imagePath}`);
+    // execSync(`transparent-background --source ${imagePath} --dest ${path.parse(imagePath).dir}`);
     return imagePath;
 }
 
@@ -57,26 +50,27 @@ export async function downloadMissing() {
         const query = `${definition.model} ${definition.vendor}`;
         console.log(`Querying '${query}'`);
         // @ts-expect-error
-        const images: {url: string}[] = (await gis(`${definition.model} ${definition.vendor}`)).slice(0, 5);
+        const images: {url: string}[] = (await gis(`${definition.model} ${definition.vendor}`))
+            .filter((r) => r.url.endsWith('.webp') || r.url.endsWith('.jpg') || r.url.endsWith('.jpeg') || r.url.endsWith('.png')).slice(0, 5);
         for (const image of images) {
             let imagePath = path.join(missingImagesPath, `${path.parse(path.basename(definition.image)).name}_${images.indexOf(image)}${path.extname(image.url)}`);
             try {
                 // Download
                 await downloadImage(image.url, imagePath);
 
-                // Convert to png
-                imagePath = await ensurePngWithoutBackground(imagePath);
-
-                // Make sqaure
+                // Make square
                 const info = await easyimage.info(imagePath);
                 if (info.height !== info.width) {
                     const size = Math.max(info.height, info.width);
                     await easyimage.execute('convert', [imagePath, '-resize', `${size}x${size}`, '-gravity', 'center', '-extent', `${size}x${size}`, imagePath])
                     
                 }
+
+                // Convert to png
+                imagePath = await ensurePngWithoutBackground(imagePath);
             } catch (error) {
                 console.error(`Failed to handle '${imagePath}' (${error}), removing...`);
-                fs.rmSync(imagePath);
+                if (fs.existsSync(imagePath)) fs.rmSync(imagePath);
             }
         }
     }
@@ -94,7 +88,11 @@ async function moveMissing() {
             if (!match) throw new Error(`Failed to match '${name}'`)
             const target = path.join(imageBaseDir, `${match[1]}.png`);
             fs.copyFileSync(source, target);
-            const size = 512;
+            const info = await easyimage.info(target);
+            if (info.height !== info.width) {
+                throw new Error(`${file} is not a square`)
+            }
+            const size = info.height >= 512 ? 512 : 150;
             await easyimage.resize({width: size, height: size, src: target, dst: target});
         } catch (error) {
             console.error(`Failed to handle '${file}' (${error})`)
