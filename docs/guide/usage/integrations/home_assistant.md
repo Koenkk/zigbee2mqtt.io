@@ -191,10 +191,10 @@ input_text:
 
 # Input select for choosing Zigbee2MQTT devices
 input_select:
-  zigbee2mqtt_old_name_select
+  zigbee2mqtt_old_name_select:
     name: Zigbee2MQTT Old Name
     icon: "mdi:moon-full"
-  zigbee2mqtt_remove_select
+  zigbee2mqtt_remove_select:
     name: Zigbee2MQTT Remove
     icon: "mdi:trash-can"
 
