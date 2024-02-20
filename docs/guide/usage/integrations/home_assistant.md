@@ -313,11 +313,11 @@ entities:
   - entity: input_number.zigbee2mqtt_join_minutes
   - entity: sensor.zigbee2mqtt_bridge_permit_join_timeout
   - type: divider
-  - entity: input_text.zigbee2mqtt_old_name
+  - entity: input_select.zigbee2mqtt_old_name_select
   - entity: input_text.zigbee2mqtt_new_name
   - entity: script.zigbee2mqtt_rename
   - type: divider
-  - entity: input_text.zigbee2mqtt_remove
+  - entity: input_select.zigbee2mqtt_remove_select
   - entity: input_boolean.zigbee2mqtt_force_remove
   - entity: script.zigbee2mqtt_remove
 ```
