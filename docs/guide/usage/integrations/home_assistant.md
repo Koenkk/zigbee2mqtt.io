@@ -194,9 +194,13 @@ input_select:
   zigbee2mqtt_old_name_select:
     name: Zigbee2MQTT Old Name
     icon: "mdi:moon-full"
+    options:
+      - Initial Option
   zigbee2mqtt_remove_select:
     name: Zigbee2MQTT Remove
     icon: "mdi:trash-can"
+    options:
+      - Initial Option
 
 # Input boolean to set the force remove flag for devices
 input_boolean:
