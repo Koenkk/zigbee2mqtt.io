@@ -24,6 +24,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+[Mini digital thermometer & hygrometer with e-ink1.02](http://efektalab.com/eTH102)
 
 
 ### Build guide

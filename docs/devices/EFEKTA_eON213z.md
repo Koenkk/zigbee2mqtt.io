@@ -24,6 +24,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+[Temperature and humidity sensor with e-ink2.13](http://efektalab.com/eON213z)
 
 
 ### Build guide

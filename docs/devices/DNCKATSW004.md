@@ -23,6 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+[DNCKAT quadruple key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/)
+
 
 
 <!-- Notes END: Do not edit below this line -->
