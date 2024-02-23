@@ -23,6 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+[CC2530 based ZigBee relais, switch, sensor and router](https://github.com/formtapez/ZigUP/)
+
 
 
 <!-- Notes END: Do not edit below this line -->

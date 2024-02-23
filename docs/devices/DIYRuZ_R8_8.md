@@ -24,6 +24,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+[DiY 8 Relays + 8 switches](https://modkam.ru/?p=1638)
 
 
 ### Deprecated click event

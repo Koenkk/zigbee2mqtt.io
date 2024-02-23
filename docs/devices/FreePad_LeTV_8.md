@@ -23,6 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+[LeTV 8key FreePad mod](https://modkam.ru/?p=1791)
+
 
 
 <!-- Notes END: Do not edit below this line -->

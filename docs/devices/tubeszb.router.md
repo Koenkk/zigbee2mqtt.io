@@ -23,6 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+[CC2652 Router](https://github.com/tube0013/tube_gateways/tree/main/tube_cc_router)
+
 
 
 <!-- Notes END: Do not edit below this line -->

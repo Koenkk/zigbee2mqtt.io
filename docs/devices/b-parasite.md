@@ -23,6 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+[b-parasite open source soil moisture sensor](https://github.com/rbaron/b-parasite)
+
 
 
 <!-- Notes END: Do not edit below this line -->
