@@ -23,6 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+[Matrix intercom auto opener](https://diyruz.github.io/posts/zintercom/)
+
 
 
 <!-- Notes END: Do not edit below this line -->

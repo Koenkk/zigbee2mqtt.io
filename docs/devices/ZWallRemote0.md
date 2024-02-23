@@ -23,6 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+[Matts Wall Switch Remote](https://github.com/mattlokes/ZWallRemote)
+
 
 
 <!-- Notes END: Do not edit below this line -->

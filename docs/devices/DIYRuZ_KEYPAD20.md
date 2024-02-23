@@ -23,6 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+[DiY 20 button keypad](http://modkam.ru/?p=1114)
+
 
 
 <!-- Notes END: Do not edit below this line -->
