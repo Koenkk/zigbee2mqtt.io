@@ -1,6 +1,6 @@
 ---
-title: "Moes ZLD-RCW_2 control via MQTT"
-description: "Integrate your Moes ZLD-RCW_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Moes ZB-TDA9-RCW-E27-MS control via MQTT"
+description: "Integrate your Moes ZB-TDA9-RCW-E27-MS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-10-03T08:44:52
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Moes ZLD-RCW_2
+# Moes ZB-TDA9-RCW-E27-MS
 
 |     |     |
 |-----|-----|
-| Model | ZLD-RCW_2  |
+| Model | ZB-TDA9-RCW-E27-MS  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
-| Description | RGB+CCT LED bulb |
+| Description | RGB+CCT E27 LED Bulb |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![Moes ZLD-RCW_2](https://www.zigbee2mqtt.io/images/devices/ZLD-RCW_2.png) |
+| Picture | ![Moes ZB-TDA9-RCW-E27-MS](https://www.zigbee2mqtt.io/images/devices/ZB-TDA9-RCW-E27-MS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
