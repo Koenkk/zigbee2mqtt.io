@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ZB-TDA9-RCW-E27-MS  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
-| Description | RGB+CCT E27 LED Bulb |
+| Description | RGB+CCT 9W E27 LED Bulb |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
 | Picture | ![Moes ZB-TDA9-RCW-E27-MS](https://www.zigbee2mqtt.io/images/devices/ZB-TDA9-RCW-E27-MS.png) |
 

@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ZB-TD5-RCW-GU10  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
-| Description | RGB+CCT GU10 LED Bulb |
+| Description | RGB+CCT 4.7W GU10 LED Bulb |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
 | Picture | ![Moes ZB-TD5-RCW-GU10](https://www.zigbee2mqtt.io/images/devices/ZB-TD5-RCW-GU10.png) |
 
