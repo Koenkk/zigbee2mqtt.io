@@ -1,6 +1,6 @@
 ---
-title: "Moes ZLD-RCW_2 control via MQTT"
-description: "Integrate your Moes ZLD-RCW_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Moes ZB-TD5-RCW-GU10 control via MQTT"
+description: "Integrate your Moes ZB-TD5-RCW-GU10 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-10-03T08:44:52
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Moes ZLD-RCW_2
+# Moes ZB-TD5-RCW-GU10
 
 |     |     |
 |-----|-----|
-| Model | ZLD-RCW_2  |
+| Model | ZB-TD5-RCW-GU10  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
-| Description | RGB+CCT LED bulb |
+| Description | RGB+CCT 4.7W GU10 LED Bulb |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![Moes ZLD-RCW_2](https://www.zigbee2mqtt.io/images/devices/ZLD-RCW_2.png) |
+| Picture | ![Moes ZB-TD5-RCW-GU10](https://www.zigbee2mqtt.io/images/devices/ZB-TD5-RCW-GU10.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
