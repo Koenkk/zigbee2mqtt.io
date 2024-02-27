@@ -31,7 +31,7 @@ Push the included pin in the small hole on the case of the device and hold for ~
 
 ### Triggering the alarm
 The alarm can be trigged by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` message
-`{"warning": {"duration": 10, "mode": "emergency", "strobe": false}}`.
+`{"warning": {"duration": "10", "mode": "emergency", "strobe": "false"}}`.
 
 Where:
 - `duration`: the number of seconds the alarm will be on (max is 1800 seconds)
@@ -52,7 +52,7 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Warning (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": VALUE, "level": VALUE, "strobe_level": VALUE, "strobe": VALUE, "strobe_duty_cycle": VALUE, "duration": VALUE}}`
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": "VALUE", "level": "VALUE", "strobe_level": "VALUE", "strobe": "VALUE", "strobe_duty_cycle": "VALUE", "duration": "VALUE"}}`
 - `mode` (enum): Mode of the warning (sound effect) allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
 - `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
 - `strobe_level` (enum): Intensity of the strobe allowed values: `low`, `medium`, `high`, `very_high`
