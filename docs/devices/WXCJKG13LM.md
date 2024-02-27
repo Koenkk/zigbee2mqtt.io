@@ -45,8 +45,8 @@ When bound to a light or a group of lights, the behavior is as follows (for a tr
 | Top<br>right | Single<br>Double<br>Long  | Turn on | Using `commandOn` command. |
 | Middle<br>left | Single<br>Double | Step up brightness | In steps of 33%, using `step` command. |
 | Middle<br>right | Single<br>Double | Step down brightness | In steps of 33%, using `step` command. |
-| Middle<br>left | Long | Smoothly increase brightness | In steps of 15 ponts (around 6%), using `commandMove` command.<br>Change stops only after the button released, using `commandStop` command. |
-| Middle<br>right | Long | Smoothly decrease brightness | In steps of 15 ponts (around 6%), using `commandMove` command.<br>Change stops only after the button released, using `commandStop` command. |
+| Middle<br>left | Long | Smoothly increase brightness | In steps of 15 points (around 6%), using `commandMove` command.<br>Change stops, using `commandStop` command, only after the button is released. |
+| Middle<br>right | Long | Smoothly decrease brightness | In steps of 15 points (around 6%), using `commandMove` command.<br>Change stops, using `commandStop` command, only after the button is released. |
 | Bottom<br>left | Single<br>Double | Step color temperature down | In steps of 69 mired, using `stepColorTemp` command.<br>I.e., make it warmer. |
 | Bottom<br>right | Single<br>Double | Step color temperature up | In steps of 69 mired, using `stepColorTemp` command.<br>I.e., make it colder. |
 | Bottom<br>left | Double | Smoothly decrease color temperature | In steps of 15 mired, using `commandMoveColorTemp` command.<br>I.e., make it warmer. |
