@@ -38,13 +38,13 @@ To do this, send the `{"operation_mode": "command"}` payload to `zigbee2mqtt/FRI
 
 As the device is sleeping by default, you need to wake it up after sending the bind/unbind command by pressing the reset button once.
 
-When bound to a light or a group of lights, the behavior is as follows (for a single band model):
+When endpoint `1` is bound to a light or a group of lights, the behavior is as follows (for a single band model):
 | Button | Click | Action | Comment |
 |-----|-----|-----|-----|
 | Left | Single  | Turn off | Using the `commandOff` command. |
 | Right  | Single  | Turn on | Using the `commandOn` command. |
-| Left | Double | Step up the brightness | In steps of 85 points (33%), using the `step` command. |
-| Right | Double | Step down the brightness | In steps of 85 points (33%), using the `step` command. |
+| Left | Double | Step down the brightness | In steps of 85 points (33%), using the `step` command. |
+| Right | Double | Step up the brightness | In steps of 85 points (33%), using the `step` command. |
 | Left | Long | Step the color temperature down | In steps of 69 mired using the `stepColorTemp` command.<br>I.e., make it warmer. |
 | Right | Long | Step the color temperature up | In steps of 69 mired using the `stepColorTemp` command.<br>I.e., make it colder. |
 
