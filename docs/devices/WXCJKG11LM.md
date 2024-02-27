@@ -25,28 +25,34 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-
 ### Pairing Instructions
-Press and hold the button on the backside of the device until the blue light starts blinking, release it and the pairing should begin.
+Press and hold the button on the backside of the device until the blue light starts blinking; release it, and the pairing should begin.
 
 ### Binding
-By default the switch is bound to the coordinator but this device can also be used to directly control other lights and switches in the network.
+By default, the device is bound to the coordinator, but it can also be used to directly control other lights and switches in the network (see [guide on binding](https://www.zigbee2mqtt.io/guide/usage/binding.html)).
 
-First unbind it from the coordinator, then you can bind it to any other device or group. (see ../guide/usage/binding.md )
+Note that this device can only be bound to one device or group at a time.
 
-Now change the operation mode of the device, by default it is in `event` mode, but when binding we need to change it to `command` mode.
-To do this send to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"operation_mode": "command"}`, right before doing this make sure to wakeup the device.
+For proper commands, you will need to change the operation mode of the device; by default, it is in `event` mode, but when binding, we need to change it to `command` mode.
+To do this, send the `{"operation_mode": "command"}` payload to `zigbee2mqtt/FRIENDLY_NAME/set` (or use the `operation_mode` parameter in the GUI). Right before doing this, make sure to wake up the device.
 
 As the device is sleeping by default, you need to wake it up after sending the bind/unbind command by pressing the reset button once.
 
+When endpoint `1` is bound to a light or a group of lights, the behavior is as follows (for a single band model):
+| Button | Click | Action | Comment |
+|-----|-----|-----|-----|
+| Left | Single  | Turn off | Using the `commandOff` command. |
+| Right  | Single  | Turn on | Using the `commandOn` command. |
+| Left | Double | Step down the brightness | In steps of 85 points (33%), using the `step` command. |
+| Right | Double | Step up the brightness | In steps of 85 points (33%), using the `step` command. |
+| Left | Long | Step the color temperature down | In steps of 69 mired using the `stepColorTemp` command.<br>I.e., make it warmer. |
+| Right | Long | Step the color temperature up | In steps of 69 mired using the `stepColorTemp` command.<br>I.e., make it colder. |
 
-When bound to a lamp, the behavior is as follows (for WXCJKG11LM Aqara Opple switch 1 band):
-- left click: turn off
-- right click: turn on
-- left double click: light dim down (by steps of 33%)
-- right double click: light dim up (by steps of 33%)
-- long left click: warm white
-- long right click: cold white
+### Battery Replacement
+All devices in the Opple line share the same internal design. First, you will need to remove the wireless switch part from its mount.
+Then use a long and thin object (preferably a plastic spudger, as the plastic is soft) to unclip the front button(s) from the frame by reaching underneath and carefully prying up.
+For the triple-band model, removing the side buttons will help with the center one. After removing buttons, the black frame must be unscrewed using a small Phillips screwdriver and then unclipped from the device case on the sides.
+When the logic board is exposed, simply remove it and turn it upside down, where a **single CR2032** battery is located. Be careful with the logic board removed, as it also holds a small pairing button in place on the other side.
 <!-- Notes END: Do not edit below this line -->
 
 
