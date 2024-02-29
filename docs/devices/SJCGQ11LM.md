@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SJCGQ11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Water leak sensor |
-| Exposes | battery, water_leak, battery_low, voltage, device_temperature, power_outage_count, linkquality |
+| Exposes | battery, water_leak, battery_low, voltage, device_temperature, power_outage_count, trigger_count, linkquality |
 | Picture | ![Aqara SJCGQ11LM](https://www.zigbee2mqtt.io/images/devices/SJCGQ11LM.png) |
 
 
@@ -76,6 +76,11 @@ The unit of this value is `°C`.
 ### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Trigger count (numeric)
+Indicates how many times the sensor was triggered (since last scheduled report).
+Value can be found in the published state on the `trigger_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)

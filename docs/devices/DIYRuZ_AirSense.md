@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | DIYRuZ_AirSense  |
 | Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
-| Description | [Air quality sensor](https://modkam.ru/?p=1715) |
+| Description | Air quality sensor |
 | Exposes | co2, temperature, humidity, pressure, led_feedback, enable_abc, threshold1, threshold2, temperature_offset, humidity_offset, pressure_offset, linkquality |
 | Picture | ![DIYRuZ DIYRuZ_AirSense](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_AirSense.png) |
 
@@ -25,9 +25,6 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [Air quality sensor](https://modkam.ru/?p=1715)
-
-
-
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNJLBL01LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Roller shade driver E1 |
-| Exposes | cover (state, position), battery, device_temperature, charging_status, motor_state, running, linkquality |
+| Exposes | cover (state, position), battery, device_temperature, charging_status, motor_state, running, motor_speed, linkquality |
 | Picture | ![Aqara ZNJLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNJLBL01LM.png) |
 | White-label | Aqara RSD-M01 |
 
@@ -106,6 +106,13 @@ Whether the motor is moving or not.
 Value can be found in the published state on the `running` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` running is ON, if `false` OFF.
+
+### Motor speed (enum)
+Controls the motor speed.
+Value can be found in the published state on the `motor_speed` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_speed": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_speed": NEW_VALUE}`.
+The possible values are: `low`, `medium`, `high`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -65,11 +65,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `254`.
 
 ### Indicator mode (enum)
-Led Indicator Mode.
+Set Indicator Mode..
 Value can be found in the published state on the `indicator_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
-The possible values are: `consistent_with_load`, `reverse_with_load`, `always_off`, `always_on`.
+The possible values are: `reverse_with_load`, `consistent_with_load`, `always_off`, `always_on`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

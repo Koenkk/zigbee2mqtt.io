@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | b-parasite  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
-| Description | [b-parasite open source soil moisture sensor](https://github.com/rbaron/b-parasite) |
+| Description | b-parasite open source soil moisture sensor |
 | Exposes | temperature, humidity, battery, soil_moisture, illuminance_lux, linkquality |
 | Picture | ![Custom devices (DiY) b-parasite](https://www.zigbee2mqtt.io/images/devices/b-parasite.png) |
 
@@ -25,9 +25,6 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [b-parasite open source soil moisture sensor](https://github.com/rbaron/b-parasite)
-
-
-
 <!-- Notes END: Do not edit below this line -->
 
 

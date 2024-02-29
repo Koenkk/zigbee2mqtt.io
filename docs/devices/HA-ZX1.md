@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HA-ZX1  |
 | Vendor  | [Halemeier](/supported-devices/#v=Halemeier)  |
 | Description | X-Mitter smart remote control |
-| Exposes | action, battery, linkquality |
+| Exposes | action, battery, identify, linkquality |
 | Picture | ![Halemeier HA-ZX1](https://www.zigbee2mqtt.io/images/devices/HA-ZX1.png) |
 
 
@@ -31,6 +31,8 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `identify_timeout`: Sets duration of identification procedure in seconds (i.e., how long device would flash). Value ranges from 1 to 30 seconds (default 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
 
 * `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval. Example:
 ```yaml
@@ -54,6 +56,13 @@ Value can be found in the published state on the `battery` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
+
+### Identify (enum)
+Ititiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

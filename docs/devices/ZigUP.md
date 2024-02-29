@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | ZigUP  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
-| Description | [CC2530 based ZigBee relais, switch, sensor and router](https://github.com/formtapez/ZigUP/) |
+| Description | CC2530 based ZigBee relais, switch, sensor and router |
 | Exposes | switch (state), linkquality |
 | Picture | ![Custom devices (DiY) ZigUP](https://www.zigbee2mqtt.io/images/devices/ZigUP.png) |
 
@@ -25,9 +25,6 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [CC2530 based ZigBee relais, switch, sensor and router](https://github.com/formtapez/ZigUP/)
-
-
-
 <!-- Notes END: Do not edit below this line -->
 
 

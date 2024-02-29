@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG20LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch T1 (with neutral, double rocker) |
-| Exposes | switch (state), power, energy, voltage, flip_indicator_light, power_outage_memory, led_disabled_night, device_temperature, action, operation_mode, linkquality |
+| Exposes | switch (state), device_temperature, power_outage_count, led_disabled_night, flip_indicator_light, action, energy, voltage, current, power, linkquality |
 | Picture | ![Aqara QBKG20LM](https://www.zigbee2mqtt.io/images/devices/QBKG20LM.png) |
 
 
@@ -35,9 +35,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -47,7 +45,13 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+* `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -76,11 +80,36 @@ Additionnaly an `off_wait_time` property can be added to the payload to specify 
 Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Power (numeric)
-Instantaneous measured power.
-Value can be found in the published state on the `power` property.
+### Device temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `W`.
+The unit of this value is `°C`.
+
+### Power outage count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Led disabled night (binary)
+Enables/disables LED indicator at night.
+Value can be found in the published state on the `led_disabled_night` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
+If value equals `true` led disabled night is ON, if `false` OFF.
+
+### Flip indicator light (binary)
+After turn on, the indicator light turns on while switch is off, and vice versa.
+Value can be found in the published state on the `flip_indicator_light` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"flip_indicator_light": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
+If value equals `ON` flip indicator light is ON, if `OFF` OFF.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`.
 
 ### Energy (numeric)
 Sum of consumed energy.
@@ -94,52 +123,17 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Flip indicator light (binary)
-After turn on, the indicator light turns on while switch is off, and vice versa.
-Value can be found in the published state on the `flip_indicator_light` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"flip_indicator_light": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
-If value equals `ON` flip indicator light is ON, if `OFF` OFF.
-
-### Power outage memory (binary)
-Enable/disable the power outage memory, this recovers the on/off mode after power failure.
-Value can be found in the published state on the `power_outage_memory` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-If value equals `true` power outage memory is ON, if `false` OFF.
-
-### LED disabled night (binary)
-Enable/disable the LED at night.
-Value can be found in the published state on the `led_disabled_night` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
-If value equals `true` lED disabled night is ON, if `false` OFF.
-
-### Device temperature (numeric)
-Temperature of the device.
-Value can be found in the published state on the `device_temperature` property.
+### Current (numeric)
+Instantaneous measured electrical current.
+Value can be found in the published state on the `current` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
+The unit of this value is `A`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
+### Power (numeric)
+Instantaneous measured power.
+Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_left`, `double_left`, `single_right`, `double_right`, `single_both`, `double_both`.
-
-### Operation mode (enum, left endpoint)
-Decoupled mode for left button.
-Value can be found in the published state on the `operation_mode_left` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_left": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_left": NEW_VALUE}`.
-The possible values are: `control_relay`, `decoupled`.
-
-### Operation mode (enum, right endpoint)
-Decoupled mode for right button.
-Value can be found in the published state on the `operation_mode_right` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_right": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": NEW_VALUE}`.
-The possible values are: `control_relay`, `decoupled`.
+The unit of this value is `W`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

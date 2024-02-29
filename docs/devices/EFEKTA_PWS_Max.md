@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_PWS_Max  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
-| Description | [Plant watering sensor EFEKTA PWS max](http://efektalab.com/PWS_Max) |
+| Description | Plant watering sensor EFEKTA PWS max |
 | Exposes | soil_moisture, battery, illuminance, temperature, humidity, linkquality |
 | Picture | ![Custom devices (DiY) EFEKTA_PWS_Max](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PWS_Max.png) |
 
@@ -25,9 +25,6 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [Plant watering sensor EFEKTA PWS max](http://efektalab.com/PWS_Max)
-
-
-
 <!-- Notes END: Do not edit below this line -->
 
 

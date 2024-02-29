@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | DNCKATSW003  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
-| Description | [DNCKAT triple key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/) |
+| Description | DNCKAT triple key wired wall light switch |
 | Exposes | switch (state), action, linkquality |
 | Picture | ![Custom devices (DiY) DNCKATSW003](https://www.zigbee2mqtt.io/images/devices/DNCKATSW003.png) |
 
@@ -25,9 +25,6 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [DNCKAT triple key wired wall light switch](https://github.com/dzungpv/dnckatsw00x/)
-
-
-
 <!-- Notes END: Do not edit below this line -->
 
 

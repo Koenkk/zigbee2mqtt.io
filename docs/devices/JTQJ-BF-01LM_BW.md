@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | JTQJ-BF-01LM/BW  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Mijia Honeywell gas leak detector |
-| Exposes | gas, battery_low, tamper, sensitivity, gas_density, selftest, linkquality |
+| Exposes | gas, tamper, sensitivity, gas_density, selftest, linkquality |
 | Picture | ![Xiaomi JTQJ-BF-01LM/BW](https://www.zigbee2mqtt.io/images/devices/JTQJ-BF-01LM-BW.png) |
 | White-label | Xiaomi YTC4019RT |
 
@@ -54,12 +54,6 @@ Indicates whether the device detected gas.
 Value can be found in the published state on the `gas` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` gas is ON, if `false` OFF.
-
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
 
 ### Tamper (binary)
 Indicates whether the device is tampered.
