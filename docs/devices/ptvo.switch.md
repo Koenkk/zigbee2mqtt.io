@@ -24,6 +24,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+[Multi-functional device](https://ptvo.info/zigbee-configurable-firmware-features/)
 
 
 ### Deprecated click event

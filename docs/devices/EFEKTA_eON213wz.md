@@ -24,6 +24,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+[Mini weather station, digital barometer, forecast, charts, temperature, humidity](http://efektalab.com/eON213wz)
 
 
 ### Build guide

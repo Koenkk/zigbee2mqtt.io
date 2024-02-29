@@ -24,6 +24,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+[Multi switch from Smarthjemmet.dk](https://smarthjemmet.dk)
 ### Pairing
 If the device did not automatically start in pairing mode (LED blinking), you can start it manually by powering on and off the device four times, keeping it on the 4th time.
 

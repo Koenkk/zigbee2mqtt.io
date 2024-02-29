@@ -23,6 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+[Plant Wattering Sensor with e-ink display 2.13](https://efektalab.com/eFlowerPro)
+
 
 
 <!-- Notes END: Do not edit below this line -->
