@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | WXKG14LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
-| Description | AWireless remote switch H1 (single rocker) |
+| Description | Wireless remote switch H1 (single rocker) |
 | Exposes | battery, voltage, action, click_mode, operation_mode, linkquality |
 | Picture | ![Aqara WXKG14LM](https://www.zigbee2mqtt.io/images/devices/WXKG14LM.png) |
 

@@ -60,14 +60,14 @@ Motion detection distance.
 Value can be found in the published state on the `motion_detection_distance` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_distance": NEW_VALUE}`.
-The minimal value is `75` and the maximum value is `600`.
+The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `cm`.
 
 ### Presence keep time (numeric)
 Presence keep time.
 Value can be found in the published state on the `presence_keep_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `s`.
+The unit of this value is `min`.
 
 ### Motion detection sensitivity (numeric)
 Motion detection sensitivity.
@@ -88,7 +88,7 @@ Time after which the device will check again for presence.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
-The minimal value is `10` and the maximum value is `10000`.
+The minimal value is `0` and the maximum value is `10000`.
 The unit of this value is `s`.
 
 ### Linkquality (numeric)

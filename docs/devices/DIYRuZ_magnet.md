@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | DIYRuZ_magnet  |
 | Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
-| Description | [DIYRuZ contact sensor](https://modkam.ru/?p=1220) |
+| Description | DIYRuZ contact sensor |
 | Exposes | battery, contact, linkquality |
 | Picture | ![DIYRuZ DIYRuZ_magnet](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_magnet.png) |
 
@@ -25,9 +25,6 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [DIYRuZ contact sensor](https://modkam.ru/?p=1220)
-
-
-
 <!-- Notes END: Do not edit below this line -->
 
 

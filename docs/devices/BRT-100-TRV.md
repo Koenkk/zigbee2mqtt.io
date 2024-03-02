@@ -86,7 +86,7 @@ Minimum temperature.
 Value can be found in the published state on the `min_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_temperature": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `15`.
+The minimal value is `0` and the maximum value is `15`.
 The unit of this value is `°C`.
 
 ### Valve state (binary)
@@ -114,7 +114,7 @@ If value equals `OPEN` window is ON, if `CLOSED` OFF.
 
 ### Climate 
 This climate device supports the following features: `local_temperature`, `current_heating_setpoint`, `local_temperature_calibration`, `system_mode`, `running_state`, `preset`.
-- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. Reading (`/get`) this attribute is not possible.
+- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `0` and `35`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `heat`. Reading (`/get`) this attribute is not possible.
 - `preset`: MANUAL MODE ☝ - In this mode, the device executes manual temperature setting. When the set temperature is lower than the "minimum temperature", the valve is closed (forced closed). PROGRAMMING MODE ⏱ - In this mode, the device executes a preset week programming temperature time and temperature. HOLIDAY MODE ⛱ - In this mode, for example, the vacation mode is set for 10 days and the temperature is setto 15 degrees Celsius. After 10 days, the device will automatically switch to programming mode. TEMPORARY MANUAL MODE - In this mode, ☝ icon will flash. At this time, the device executes the manually set temperature and returns to the weekly programming mode in the next time period. . To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `programming`, `manual`, `temporary_manual`, `holiday`. Reading (`/get`) this attribute is not possible.
@@ -142,11 +142,11 @@ The minimal value is `0` and the maximum value is `15`.
 The unit of this value is `min`.
 
 ### Boost heating countdown time set (numeric)
-Boost Time Setting 100 sec - 900 sec, (default = 300 sec).
+Boost Time Setting 0 sec - 900 sec, (default = 300 sec).
 Value can be found in the published state on the `boost_heating_countdown_time_set` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_heating_countdown_time_set": NEW_VALUE}`.
-The minimal value is `100` and the maximum value is `900`.
+The minimal value is `0` and the maximum value is `900`.
 The unit of this value is `s`.
 
 ### Linkquality (numeric)

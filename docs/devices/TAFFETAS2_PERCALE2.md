@@ -1,7 +1,7 @@
 ---
-title: "Acova TAFFETAS2 control via MQTT"
-description: "Integrate your Acova TAFFETAS2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-08-01T15:05:01
+title: "Acova TAFFETAS2/PERCALE2 control via MQTT"
+description: "Integrate your Acova TAFFETAS2/PERCALE2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-02-29T20:20:59
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Acova TAFFETAS2
+# Acova TAFFETAS2/PERCALE2
 
 |     |     |
 |-----|-----|
-| Model | TAFFETAS2  |
+| Model | TAFFETAS2/PERCALE2  |
 | Vendor  | [Acova](/supported-devices/#v=Acova)  |
-| Description | Taffetas 2 heater |
+| Description | Taffetas 2 / Percale 2 heater |
 | Exposes | climate (occupied_heating_setpoint, unoccupied_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration), occupancy, linkquality |
-| Picture | ![Acova TAFFETAS2](https://www.zigbee2mqtt.io/images/devices/TAFFETAS2.png) |
+| Picture | ![Acova TAFFETAS2/PERCALE2](https://www.zigbee2mqtt.io/images/devices/TAFFETAS2-PERCALE2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

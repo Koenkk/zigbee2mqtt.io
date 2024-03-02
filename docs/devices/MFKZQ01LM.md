@@ -34,7 +34,6 @@ Remove the back plate by using the included tool or a wedge to click it off.
 Press and hold the LINK button inside the device for +- 5 seconds (until the blue light blinks three times).
 After this the device will automatically join, but the interview process may not finish.
 If that happens, keep doing short presses to the LINK button to keep the light flashing, until the interview process finishes successfully.
-
 <!-- Notes END: Do not edit below this line -->
 
 

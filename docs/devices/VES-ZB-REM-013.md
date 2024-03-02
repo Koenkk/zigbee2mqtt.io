@@ -54,7 +54,7 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on_*`, `off_*`, `stop_*`, `brightness_move_up_*`, `brightness_move_down_*`, `brightness_stop_*`, `recall_*`.
+The possible values are: `on_1`, `off_1`, `stop_1`, `brightness_move_up_1`, `brightness_move_down_1`, `brightness_stop_1`, `on_2`, `off_2`, `stop_2`, `brightness_move_up_2`, `brightness_move_down_2`, `brightness_stop_2`, `on_3`, `off_3`, `stop_3`, `brightness_move_up_3`, `brightness_move_down_3`, `brightness_stop_3`, `on_4`, `off_4`, `stop_4`, `brightness_move_up_4`, `brightness_move_down_4`, `brightness_stop_4`, `recall_1_1`, `recall_1_2`, `recall_1_3`, `recall_1_4`, `recall_2_1`, `recall_2_2`, `recall_2_3`, `recall_2_4`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

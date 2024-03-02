@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | QBKG28LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
-| Description | Smart wall switch H1 Pro (no neutral, double rocker) |
-| Exposes | switch (state), device_temperature, operation_mode, action, power_outage_memory, flip_indicator_light, led_disabled_night, linkquality |
+| Description | Smart wall switch H1 (no neutral, double rocker) |
+| Exposes | switch (state), device_temperature, operation_mode, action, power_outage_memory, flip_indicator_light, led_disabled_night, mode_switch, linkquality |
 | Picture | ![Aqara QBKG28LM](https://www.zigbee2mqtt.io/images/devices/QBKG28LM.png) |
 
 
@@ -110,6 +110,13 @@ Value can be found in the published state on the `led_disabled_night` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_disabled_night": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_disabled_night": NEW_VALUE}`.
 If value equals `true` lED disabled night is ON, if `false` OFF.
+
+### Mode switch (enum)
+Anti flicker mode can be used to solve blinking issues of some lights.Quick mode makes the device respond faster..
+Value can be found in the published state on the `mode_switch` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode_switch": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_switch": NEW_VALUE}`.
+The possible values are: `anti_flicker_mode`, `quick_mode`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

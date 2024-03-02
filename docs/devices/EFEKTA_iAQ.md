@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_iAQ  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
-| Description | [CO2 Monitor with IPS TFT Display, outdoor temperature and humidity, date and time](http://efektalab.com/iAQ) |
+| Description | CO2 Monitor with IPS TFT Display, outdoor temperature and humidity, date and time |
 | Exposes | co2, temperature, humidity, illuminance, auto_brightness, long_chart_period, set_altitude, local_time, temperature_offset, humidity_offset, forced_recalibration, factory_reset_co2, manual_forced_recalibration, linkquality |
 | Picture | ![Custom devices (DiY) EFEKTA_iAQ](https://www.zigbee2mqtt.io/images/devices/EFEKTA_iAQ.png) |
 
@@ -25,9 +25,6 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 [CO2 Monitor with IPS TFT Display, outdoor temperature and humidity, date and time](http://efektalab.com/iAQ)
-
-
-
 <!-- Notes END: Do not edit below this line -->
 
 

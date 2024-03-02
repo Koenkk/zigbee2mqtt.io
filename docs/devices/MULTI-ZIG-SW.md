@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | MULTI-ZIG-SW  |
 | Vendor  | [smarthjemmet.dk](/supported-devices/#v=smarthjemmet.dk)  |
-| Description | [Multi switch from Smarthjemmet.dk](https://smarthjemmet.dk) |
+| Description | Multi switch from Smarthjemmet.dk |
 | Exposes | switch_type_1, switch_type_2, switch_type_3, switch_type_4, battery, action, voltage, linkquality |
 | Picture | ![smarthjemmet.dk MULTI-ZIG-SW](https://www.zigbee2mqtt.io/images/devices/MULTI-ZIG-SW.png) |
 

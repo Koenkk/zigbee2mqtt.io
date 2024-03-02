@@ -79,10 +79,10 @@ Additionnaly an `off_wait_time` property can be added to the payload to specify 
 Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Switch (middle endpoint)
-The current state of this switch is in the published state under the `state_middle` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_middle": "ON"}`, `{"state_middle": "OFF"}` or `{"state_middle": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_middle": ""}`.
+### Switch (center endpoint)
+The current state of this switch is in the published state under the `state_center` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_center": "ON"}`, `{"state_center": "OFF"}` or `{"state_center": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_center": ""}`.
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
@@ -122,11 +122,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_top": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
 
-### Operation mode (enum, middle endpoint)
-Decoupled mode for middle button.
-Value can be found in the published state on the `operation_mode_middle` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_middle": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_middle": NEW_VALUE}`.
+### Operation mode (enum, center endpoint)
+Decoupled mode for center button.
+Value can be found in the published state on the `operation_mode_center` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_center": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_center": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
 
 ### Operation mode (enum, bottom endpoint)
@@ -143,11 +143,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lock_relay_top": NEW_VALUE}`.
 If value equals `true` lock relay is ON, if `false` OFF.
 
-### Lock relay (binary, middle endpoint)
-Lock relay mode for middle button.
-Value can be found in the published state on the `lock_relay_middle` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lock_relay_middle": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lock_relay_middle": NEW_VALUE}`.
+### Lock relay (binary, center endpoint)
+Lock relay mode for center button.
+Value can be found in the published state on the `lock_relay_center` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lock_relay_center": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lock_relay_center": NEW_VALUE}`.
 If value equals `true` lock relay is ON, if `false` OFF.
 
 ### Lock relay (binary, bottom endpoint)
@@ -161,7 +161,7 @@ If value equals `true` lock relay is ON, if `false` OFF.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_top`, `single_middle`, `single_bottom`.
+The possible values are: `single_top`, `single_center`, `single_bottom`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

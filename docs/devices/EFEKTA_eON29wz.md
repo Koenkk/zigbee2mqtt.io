@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_eON29wz  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
-| Description | [Mini weather station, barometer, forecast, charts, temperature, humidity, light](http://efektalab.com/eON290wz) |
+| Description | Mini weather station, barometer, forecast, charts, temperature, humidity, light |
 | Exposes | battery, illuminance, temperature, humidity, pressure, linkquality |
 | Picture | ![Custom devices (DiY) EFEKTA_eON29wz](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eON29wz.png) |
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_dimmer_5  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 1 gang smart dimmer module |
-| Exposes | light (state, brightness, min_brightness, max_brightness), power_on_behavior, countdown, light_type, linkquality |
+| Exposes | light (state, brightness, min_brightness, max_brightness), power_on_behavior, countdown, light_type, switch_type, linkquality |
 | Picture | ![TuYa TS0601_dimmer_5](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_5.png) |
 | White-label | Moes MS-105-M |
 
@@ -58,6 +58,13 @@ Value can be found in the published state on the `light_type` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"light_type": NEW_VALUE}`.
 The possible values are: `led`, `incandescent`, `halogen`.
+
+### Switch type (enum)
+Type of the switch.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `toggle`, `state`, `momentary`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

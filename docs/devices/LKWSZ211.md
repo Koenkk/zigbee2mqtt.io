@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | LKWSZ211  |
 | Vendor  | [Adaprox](/supported-devices/#v=Adaprox)  |
 | Description | Remote wireless switch (2-key) |
-| Exposes | action, linkquality |
+| Exposes | battery, action, linkquality |
 | Picture | ![Adaprox LKWSZ211](https://www.zigbee2mqtt.io/images/devices/LKWSZ211.png) |
 
 
@@ -31,6 +31,13 @@ pageClass: device-page
 
 
 ## Exposes
+
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

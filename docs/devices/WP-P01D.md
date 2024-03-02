@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WP-P01D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall outlet H2 EU |
-| Exposes | switch (state), power_on_behavior, power, energy, voltage, current, device_temperature, overload_protection, led_indicator, button_lock, charging_protection, charging_limit, linkquality |
+| Exposes | switch (state), device_temperature, power_outage_count, power, energy, voltage, current, overload_protection, led_indicator, button_lock, charging_protection, charging_limit, linkquality |
 | Picture | ![Aqara WP-P01D](https://www.zigbee2mqtt.io/images/devices/WP-P01D.png) |
 
 
@@ -34,6 +34,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -51,8 +53,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
-
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
@@ -69,12 +69,16 @@ Additionnaly an `off_wait_time` property can be added to the payload to specify 
 Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Power on behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `on`, `previous`, `off`.
+### Device temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Power outage count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Power (numeric)
 Instantaneous measured power.
@@ -99,12 +103,6 @@ Instantaneous measured electrical current.
 Value can be found in the published state on the `current` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
-
-### Device temperature (numeric)
-Temperature of the device.
-Value can be found in the published state on the `device_temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
 
 ### Overload protection (numeric)
 Maximum allowed load, turns off if exceeded.
