@@ -25,6 +25,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Warning
+It is [reported](https://github.com/zigpy/zigpy/discussions/736#discussioncomment-730883) that this device does not relay messages of non TuYa devices, **this can break your network!**
 
 ### Pairing
 
