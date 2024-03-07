@@ -42,8 +42,10 @@ When using this autodetection, the following parameters in `configuration.yaml` 
 List of tested devices supporting mDNS Zeroconf autodiscovery:
 | Device  | MDNS service type |
 | :---    | :---:             |
-| SLZB-06 | slzb-06           |
+| [SLZB-06](https://smlight.tech/product/slzb-06/) | slzb-06           |
 | UZG-01  | uzg-01            |
+| [SLZB-06p7](https://smlight.tech/product/slzb-06p7/) | slzb-06           |
+| [SLZB-06p10](https://smlight.tech/product/slzb-06p10/) | slzb-06           |
 
 ```yaml
 serial:
@@ -57,20 +59,21 @@ serial:
 ## Advanced configuration.
 ```yaml
 advanced:
-  # Optional: configure adapter concurrency (e.g. 2 for CC2531 or 16 for CC26X2R1) (default: null, uses recommended value)
+  # Optional: configure adapter concurrency (e.g., 2 for CC2531 or 16 for CC26X2R1) (default: null, uses recommended value)
   adapter_concurrent: null
   # Optional: Transmit power setting in dBm (default: 5).
   # This will set the transmit power for devices that bring an inbuilt amplifier.
   # It can't go over the maximum of the respective hardware and might be limited
-  # by firmware (for example to migrate heat, or by using an unsupported firmware).
-  # For the CC2652R(B) this is 5 dBm, CC2652P/CC1352P-2 20 dBm.
+  # by firmware (for example, to migrate heat or by using an unsupported firmware).
+  # For the CC2652R(B) default is 5 dBm, CC2652P/CC1352P-2 default is 20 dBm, CC2674P10 default is 5dB)
   transmit_power: 5
   # Optional: Set the adapter delay, only used for Conbee/Raspbee adapters (default 0).
   # In case you are having issues try `200`.
-  # For more information see https://github.com/Koenkk/zigbee2mqtt/issues/4884
+  # For more information, see https://github.com/Koenkk/zigbee2mqtt/issues/4884
   adapter_delay: 0
 ```
 
 ::: tip 
 It's also possible to connect USB Adapters over TCP. See how to connect a [remote adapter](../../advanced/remote-adapter/connect_to_a_remote_adapter.md).
-:::
+Otherwise, you can use network-based Ethernet adapters; please see network-based or hybrid adapters in the recommended list. 
+:::  
