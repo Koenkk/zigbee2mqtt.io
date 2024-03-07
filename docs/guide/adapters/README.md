@@ -14,7 +14,35 @@ Want to migrate to a different adapter? Read [this](../faq/README.md#how-do-i-mi
 ## Recommended
 The adapters below are recommended because they use powerful chips, can handle large networks and are well-supported.
 
-### Based on Texas Instruments CC2652/CC1352 chip
+### Based on Texas Instruments CC2674P10 chip [RAM: 264kB | CPU: 48 MHz Arm Cortex-M33, 2016]
+_(in order of first appearance)_
+* Hybrid (network + USB)
+  * <details>
+    <summary>SMLIGHT SLZB-06p10 Zigbee Ethernet USB POE WiFi LAN adapter</summary>  
+
+    Based on CC2674P10 chip from TI, the newest, most powerful, tiny modern design was developed for Zigbee2MQTT, PoE supported, pre-flashed, and ready-to-use Zigbee adapter.  
+    It supports Zigbee 3.0, Ethernet, LAN, USB, and WiFi connections.  Rich packing that includes:
+    | Package includes | SLZB-06p10 adapter | +5dB antenna 360° | Adhesive tape | Screws | Screwdriver | MicroUSB-Type-C | Screw-fix helper |
+    |:-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+    |Quantity: |1 pcs|1 pcs|2 pcs|2 pcs|1 pcs|1 pcs|1 pcs|  
+    |Image| [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adapter-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adapter.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-antenna-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-antenna.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adhesive-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adhesive.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screws-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screws.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screwdriver-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screwdriver.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-microusb-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-microusb.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-qr-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-qr.jpg) |  
+
+    Remote update (Zigbee and Core), modern UI firmware. Optoelectronic isolation for Ethernet, LEDs and physical button for interacting with users. It fits home and business use.  
+    
+    - Zigbee firmware:  
+    -- [Zigbee chip update process OTA](https://smlight.tech/manual/slzb-06/guide/flashing-and-updating/updating-zigbee.html#zigbee-auto-update-over-the-web-interface-recommended) for automatic updates.  
+    - Core firmware:  
+    -- [Functionality and screenshots](https://smlight.tech/manual/slzb-06/guide/configuration/)  
+    -- [Video review](https://www.youtube.com/watch?v=q3cWHQ8CdcA)
+    - [Manual](https://smlight.tech/manual/slzb-06/)
+    - [Product page](https://smlight.tech/product/slzb-06p10/)
+    - Buy: [Official Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/coordinator-slzb-06p10) 
+
+     | Product picture | Interface screenshot | Youtube videoreview |
+     |:-:|:-:|:-:|
+     |[![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06p10/slzb-06p10-main-title-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06p10/slzb-06p10-main-title.jpg)|[![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06p10/slzb-06p10-main-firmware-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06p10/slzb-06p10-main-firmware.jpg)|[![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-main-videolink-small.jpg)](https://www.youtube.com/watch?v=q3cWHQ8CdcA)|     
+
+### Based on Texas Instruments CC2652/CC1352 chip [RAM: 88kB | CPU: 48 MHz Arm Cortex-M4F, 2010]
 _(in order of first appearance)_
 
 * USB connected (easiest)
