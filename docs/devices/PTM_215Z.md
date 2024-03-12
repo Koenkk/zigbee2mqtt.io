@@ -30,7 +30,7 @@ pageClass: device-page
 ### Green Power
 This is a Zigbee Green Power device which allows it to be very energy efficient.
 Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first.
-Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
+Not all Zigbee devices can do this translation. The devices known to do this are Philips Hue devices and some Ikea Tradfri bulbs (for example [LED2107C4](https://www.zigbee2mqtt.io/devices/LED2107C4.html) is confirmed to work). This means that the Green Power device has to be in range of one of these devices in order to use it.
 
 Green Power devices don't support binding and are not included in network scans.
 
