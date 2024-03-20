@@ -7,7 +7,7 @@ sidebarDepth: 0
 [[toc]]
 
 ## My network is unstable and/or performs poorly, what can I do?
-- Try to restart ZigBee device with poor/unstable connection. The route could be lost because of moving the coordinator to an other place at home.
+- Try to restart the Zigbee device with poor/unstable connection. The route could be lost because of moving the coordinator to an other place at home.
 - Read [Improve network range and stability](../../advanced/zigbee/02_improve_network_range_and_stability.md)
 
 ## Why does my device not or fail to pair?
