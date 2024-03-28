@@ -5,7 +5,7 @@ sidebarDepth: 1
 # Adapter settings
 
 ## Configuration of the Zigbee adapter
-For USB apdaters you can use `dmesg` command on Linux hosts to find the mounted device. Where possible you should use the `/dev/serial/by-id/` path of the stick, instead of `/dev/tty*`. This is because the `/dev/tty*` path can change - for example `/dev/ttyACM0` may become `/dev/ttyACM1` and then later back to `/dev/ttyACM0`. The `/dev/serial/by-id/` path won't change.
+For USB apdaters you can use `dmesg` command on Linux hosts to find the mounted device. Where possible you should use the `/dev/serial/by-id/` path of the stick, instead of `/dev/tty*`. This is because the `/dev/tty*` path can change - for example `/dev/ttyUSB0` may become `/dev/ttyUSB0` and then later back to `/dev/ttyUSB0`. The `/dev/serial/by-id/` path won't change.
 
 For Zigbee network adapters you need to find IP address of your adapter through router/switch web-interface.\
 ::: warning ATTENTION
@@ -16,10 +16,10 @@ IP address of the Zigbee network adapter can change if it has not been assigned 
 # Required: serial settings
 serial:
   # Required: location of the adapter (e.g. CC2531).
-  # USB adapters - use format "port: /dev/ttyACM0"
+  # USB adapters - use format "port: /dev/ttyUSB0"
   # To autodetect the USB port, set 'port: null'.
-  # Ethernet adapters - use format "port: tcp://192.168.1.12:6638"
-  port: /dev/ttyACM0 
+  # Ethernet adapters - use format "port: tcp://192.168.0.65:6638"
+  port: /dev/ttyUSB0
   # Optional: disable LED of the adapter if supported (default: false)
   disable_led: false
   # Optional: adapter type, not needed unless you are experiencing problems (default: shown below, options: zstack, deconz, ezsp)
