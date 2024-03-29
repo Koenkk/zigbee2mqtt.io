@@ -23,7 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-Pairing
+## Notes
+
+### Pairing
 If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the button at the top for about 5 seconds. The device will then go into pairing mode. It should then be connected to Zigbee2MQTT
 <!-- Notes END: Do not edit below this line -->
 
