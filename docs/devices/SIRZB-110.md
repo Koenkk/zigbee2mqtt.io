@@ -58,8 +58,8 @@ This alarm are preset to highest volume and using the mode `police_panic`
 Squawk are normally used to indicate activation and deactivation of an alarm system
 
 Examples:
-`{"squawk":{"level":"low","mode":"system_is_sarmed","strobe":false}}`
-`{"squawk":{"level":"low","mode":"system_is_disarmed","strobe":false}}`
+`{"squawk":{"level":"low","state":"system_is_armed","strobe":false}}`
+`{"squawk":{"level":"low","state":"system_is_disarmed","strobe":false}}`
 <!-- Notes END: Do not edit below this line -->
 
 
