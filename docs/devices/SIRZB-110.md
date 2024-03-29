@@ -26,6 +26,11 @@ pageClass: device-page
 ## Notes
 
 
+### Firmware version warning
+
+Only works with firmware 1.7.1 and lower (whatever hardware version). Firmware version 1.9.3 uses a different framework and these commands no longer work.
+
+
 ### Warning usage
 
 Duration of using `warning` can be shorter than `max_duration` but not longer. If `max_duration` are set to 60 seconds, and you try to set `warning` with `duration` of 90 seconds, the warning will only apply for 60 seconds. Default value of `max_duration` are 900 seconds
