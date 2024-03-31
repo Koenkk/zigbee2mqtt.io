@@ -1,0 +1,9 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+
+  "portsAttributes": {
+    "8080": {
+      "label": "client"
+    }
+  }
+}
