@@ -138,7 +138,7 @@ If none of the existing converters fit you can add custom ones, an external conv
 To make sure a picture is available for this device on the supported devices page and in the frontend:
 
 1. Clone [zigbee2mqtt.io](https://github.com/Koenkk/zigbee2mqtt.io)
-2. Add a device picture (`.png`, 512x512, transparent background) to `public/images/devices`. Use the [Adobe Express Remove Background tool](https://new.express.adobe.com/tools/remove-background) to make the background transparent.
+2. Add a device picture (`.png`, 512x512, transparent background) to `public/images/devices`. Use [remove.bg tool](https://www.remove.bg/) to make the background transparent.
 3. ***Optional:*** Add a markdown file for your device to `docs/devices`, use the `model` property of your definition as the filename.  Most of the contents of this file will be auto-generated through docgen but you can add your own notes in a notes section. Do not use h1 or h2 heading within "## Notes"-Section.
 >> \<!-- Notes BEGIN --><br>
 >> \## Notes<br>
