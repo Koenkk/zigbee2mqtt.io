@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG39LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch E1 (no neutral, double rocker) |
-| Exposes | switch (state), device_temperature, operation_mode, mode_switch, action, power_outage_memory, flip_indicator_light, linkquality |
+| Exposes | switch (state), device_temperature, operation_mode, mode_switch, power_outage_memory, flip_indicator_light, action, linkquality |
 | Picture | ![Aqara QBKG39LM](https://www.zigbee2mqtt.io/images/devices/QBKG39LM.png) |
 
 
@@ -99,12 +99,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_switch": NEW_VALUE}`.
 The possible values are: `anti_flicker_mode`, `quick_mode`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_left`, `double_left`, `single_right`, `double_right`, `single_both`, `double_both`.
-
 ### Power outage memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.
 Value can be found in the published state on the `power_outage_memory` property.
@@ -118,6 +112,12 @@ Value can be found in the published state on the `flip_indicator_light` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"flip_indicator_light": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
 If value equals `ON` flip indicator light is ON, if `OFF` OFF.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single_left`, `double_left`, `single_right`, `double_right`, `single_both`, `double_both`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | MCLH-07  |
 | Vendor  | [LifeControl](/supported-devices/#v=LifeControl)  |
-| Description | Water leak switch |
-| Exposes | water_leak, battery_low, tamper, battery, linkquality |
+| Description | Water leakage sensor |
+| Exposes | water_leak, tamper, battery_low, battery, linkquality |
 | Picture | ![LifeControl MCLH-07](https://www.zigbee2mqtt.io/images/devices/MCLH-07.png) |
 
 
@@ -38,22 +38,23 @@ Value can be found in the published state on the `water_leak` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` water leak is ON, if `false` OFF.
 
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
-
 ### Tamper (binary)
 Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
-### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
-Value can be found in the published state on the `battery` property.
+### Battery low (binary)
+Indicates whether the battery of the device is almost empty.
+Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery low is ON, if `false` OFF.
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WXKG17LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless remote switch E1 (double rocker) |
-| Exposes | battery, voltage, action, click_mode, linkquality |
+| Exposes | battery, voltage, click_mode, action, linkquality |
 | Picture | ![Aqara WXKG17LM](https://www.zigbee2mqtt.io/images/devices/WXKG17LM.png) |
 
 
@@ -53,18 +53,18 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_left`, `single_right`, `single_both`, `double_left`, `double_right`, `hold_left`, `hold_right`.
-
 ### Click mode (enum)
 Click mode, fast: only supports single click which will be send immediately after clicking, multi: supports more events like double and hold.
 Value can be found in the published state on the `click_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"click_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"click_mode": NEW_VALUE}`.
 The possible values are: `fast`, `multi`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single_left`, `single_right`, `single_both`, `double_left`, `double_right`, `hold_left`, `hold_right`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

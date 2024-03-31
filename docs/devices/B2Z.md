@@ -1,7 +1,7 @@
 ---
-title: "BITUO TECHNIK SPM01-D2TZ-U01 control via MQTT"
-description: "Integrate your BITUO TECHNIK SPM01-D2TZ-U01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-01-31T19:37:46
+title: "Nous B2Z control via MQTT"
+description: "Integrate your Nous B2Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-03-31T18:43:56
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# BITUO TECHNIK SPM01-D2TZ-U01
+# Nous B2Z
 
 |     |     |
 |-----|-----|
-| Model | SPM01-D2TZ-U01  |
-| Vendor  | [BITUO TECHNIK](/supported-devices/#v=BITUO%20TECHNIK)  |
-| Description | Smart energy sensor |
-| Exposes | ac_frequency, power, power_reactive, power_apparent, current, voltage, power_factor, energy, produced_energy, linkquality |
-| Picture | ![BITUO TECHNIK SPM01-D2TZ-U01](https://www.zigbee2mqtt.io/images/devices/SPM01-D2TZ-U01.png) |
+| Model | B2Z  |
+| Vendor  | [Nous](/supported-devices/#v=Nous)  |
+| Description | 1 gang switch with power monitoring |
+| Exposes | switch (state), power, current, voltage, energy, switch_type, power_outage_memory, linkquality |
+| Picture | ![Nous B2Z](https://www.zigbee2mqtt.io/images/devices/B2Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -48,32 +48,27 @@ pageClass: device-page
 
 * `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
 
 ## Exposes
 
-### AC frequency (numeric)
-Measured electrical AC frequency.
-Value can be found in the published state on the `ac_frequency` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `Hz`.
+### Switch 
+The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
-
-### Power reactive (numeric)
-Instantaneous measured reactive power.
-Value can be found in the published state on the `power_reactive` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `VAR`.
-
-### Power apparent (numeric)
-Instantaneous measured apparent power.
-Value can be found in the published state on the `power_apparent` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `VA`.
 
 ### Current (numeric)
 Instantaneous measured electrical current.
@@ -87,22 +82,25 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Power factor (numeric)
-Instantaneous measured power factor.
-Value can be found in the published state on the `power_factor` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
 ### Energy (numeric)
 Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Produced energy (numeric)
-Sum of produced energy.
-Value can be found in the published state on the `produced_energy` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `kWh`.
+### Switch type (enum)
+Type of the switch.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `toggle`, `state`, `momentary`.
+
+### Power outage memory (enum)
+Recover state after power outage.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+The possible values are: `on`, `off`, `restore`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

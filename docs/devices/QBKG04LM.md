@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG04LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch (no neutral, single rocker) |
-| Exposes | switch (state), action, operation_mode, linkquality |
+| Exposes | switch (state), operation_mode, action, linkquality |
 | Picture | ![Aqara QBKG04LM](https://www.zigbee2mqtt.io/images/devices/QBKG04LM.png) |
 
 
@@ -79,18 +79,18 @@ Additionnaly an `off_wait_time` property can be added to the payload to specify 
 Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `release`, `hold`, `double`, `single`, `hold_release`.
-
 ### Operation mode (enum)
 Decoupled mode.
 Value can be found in the published state on the `operation_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `release`, `hold`, `double`, `single`, `hold_release`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

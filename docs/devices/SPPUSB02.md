@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SPPUSB02  |
 | Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | Double power point with USB |
-| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, linkquality |
+| Exposes | switch (state), power_outage_memory, power, current, voltage, energy, linkquality |
 | Picture | ![Mercator Ikuü SPPUSB02](https://www.zigbee2mqtt.io/images/devices/SPPUSB02.png) |
 
 
@@ -75,21 +75,28 @@ Additionnaly an `off_wait_time` property can be added to the payload to specify 
 Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Power (numeric, left endpoint)
+### Power outage memory (enum)
+Recover state after power outage.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+The possible values are: `on`, `off`, `restore`.
+
+### Power (numeric)
 Instantaneous measured power.
-Value can be found in the published state on the `power_left` property.
+Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
 
-### Current (numeric, left endpoint)
+### Current (numeric)
 Instantaneous measured electrical current.
-Value can be found in the published state on the `current_left` property.
+Value can be found in the published state on the `current` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
 
-### Voltage (numeric, left endpoint)
+### Voltage (numeric)
 Measured electrical potential value.
-Value can be found in the published state on the `voltage_left` property.
+Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
@@ -98,13 +105,6 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Power outage memory (enum)
-Recover state after power outage.
-Value can be found in the published state on the `power_outage_memory` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-The possible values are: `on`, `off`, `restore`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

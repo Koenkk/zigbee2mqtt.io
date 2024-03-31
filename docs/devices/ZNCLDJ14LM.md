@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNCLDJ14LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Curtain controller C2 |
-| Exposes | cover (state, position), running, motor_state, power_outage_count, linkquality |
+| Exposes | cover (state, position), reverse_direction, hand_open, running, motor_state, power_outage_count, linkquality |
 | Picture | ![Aqara ZNCLDJ14LM](https://www.zigbee2mqtt.io/images/devices/ZNCLDJ14LM.png) |
 
 
@@ -37,6 +37,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
+* `limits_calibration`: Recalibrate the position limits. The value must be one of `calibrated`, `recalibrate`, `open`, `close`
+
 
 ## Exposes
 
@@ -45,6 +47,20 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 To read the current state of this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
+
+### Reverse direction (binary)
+Whether the curtain direction is inverted.
+Value can be found in the published state on the `reverse_direction` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"reverse_direction": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reverse_direction": NEW_VALUE}`.
+If value equals `true` reverse direction is ON, if `false` OFF.
+
+### Hand open (binary)
+Pulling curtains by hand starts the motor.
+Value can be found in the published state on the `hand_open` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"hand_open": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hand_open": NEW_VALUE}`.
+If value equals `true` hand open is ON, if `false` OFF.
 
 ### Running (binary)
 Whether the motor is moving or not.

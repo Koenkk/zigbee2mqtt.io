@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WZ5_rgb_1  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee & RF 5 in 1 LED controller (RGB mode) |
-| Exposes | light (state, brightness, color_hs, color_xy), do_not_disturb, color_power_on_behavior, linkquality |
+| Exposes | light (state, brightness, color_hs, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
 | Picture | ![TuYa WZ5_rgb_1](https://www.zigbee2mqtt.io/images/devices/WZ5_rgb_1.png) |
 
 
@@ -84,6 +84,13 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "saturation_step": 66, // Increase saturation by 66 (allowed value range: -255 till 255)
 }
 ````
+
+### Effect (enum)
+Triggers an effect on the light (e.g. make light blink for a few seconds).
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
+The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
 ### Do not disturb (binary)
 Do not disturb mode, when enabled this function will keep the light OFF after a power outage.

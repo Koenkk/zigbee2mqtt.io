@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RTCZCGQ11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Presence sensor FP1 |
-| Exposes | presence, device_temperature, power_outage_count, presence_event, monitoring_mode, approach_distance, motion_sensitivity, reset_nopresence_status, action, region_upsert, region_delete, linkquality |
+| Exposes | presence, device_temperature, power_outage_count, presence_event, monitoring_mode, approach_distance, motion_sensitivity, reset_nopresence_status, region_upsert, region_delete, action, linkquality |
 | Picture | ![Aqara RTCZCGQ11LM](https://www.zigbee2mqtt.io/images/devices/RTCZCGQ11LM.png) |
 
 
@@ -140,12 +140,6 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_nopresence_status": NEW_VALUE}`.
 The possible values are: ``.
 
-### Action (enum)
-Most recent region event. Event template is "region_<REGION_ID>_<EVENT_TYPE>", where <REGION_ID> is region number (1-10), <EVENT_TYPE> is one of "enter", "leave", "occupied", "unoccupied". "enter" / "leave" events are usually triggered first, followed by "occupied" / "unoccupied" after a couple of seconds..
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `region_*_enter`, `region_*_leave`, `region_*_occupied`, `region_*_unoccupied`.
-
 ### Region upsert (composite)
 Definition of a new region to be added (or replace existing one). Creating or modifying a region requires you to define which zones of a 7x4 detection grid should be active for that zone. Regions can overlap, meaning that a zone can be defined in more than one region (eg. "zone x = 1 & y = 1" can be added to region 1 & 2). "Zone x = 1 & y = 1" is the nearest zone on the right (from sensor's perspective, along the detection path)..
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"region_upsert": {"region_id": VALUE, "zones": VALUE}}`
@@ -156,6 +150,12 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"regi
 Region definition to be deleted from the device..
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"region_delete": {"region_id": VALUE}}`
 - `region_id` (numeric) min value is 1, max value is 10
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `region_*_enter`, `region_*_leave`, `region_*_occupied`, `region_*_unoccupied`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

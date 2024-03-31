@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZK-EU-2U  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Zigbee 3.0 dual USB wireless socket plug |
-| Exposes | switch (state), linkquality |
+| Exposes | switch (state), power_on_behavior, linkquality |
 | Picture | ![Moes ZK-EU-2U](https://www.zigbee2mqtt.io/images/devices/ZK-EU-2U.png) |
 
 
@@ -58,6 +58,13 @@ When setting the state to ON, it might be possible to specify an automatic shuto
 Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
 Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
+### Power-on behavior (enum)
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

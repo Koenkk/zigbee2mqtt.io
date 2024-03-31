@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RSH-HS06  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature and humidity sensor |
-| Exposes | battery, temperature, humidity, linkquality |
+| Exposes | temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, linkquality |
 | Picture | ![TuYa RSH-HS06](https://www.zigbee2mqtt.io/images/devices/RSH-HS06.png) |
 
 
@@ -45,13 +45,6 @@ Press and hold the reset switch on the device, the pin hole on the side of the d
 
 ## Exposes
 
-### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
-Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
-
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
@@ -62,6 +55,36 @@ The unit of this value is `°C`.
 Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `%`.
+
+### Temperature unit (enum)
+Temperature unit.
+Value can be found in the published state on the `temperature_unit` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": NEW_VALUE}`.
+The possible values are: `celsius`, `fahrenheit`.
+
+### Temperature calibration (numeric)
+Temperature calibration.
+Value can be found in the published state on the `temperature_calibration` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
+The minimal value is `-2` and the maximum value is `2`.
+The unit of this value is `°C`.
+
+### Humidity calibration (numeric)
+Humidity calibration.
+Value can be found in the published state on the `humidity_calibration` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
+The minimal value is `-30` and the maximum value is `30`.
+The unit of this value is `%`.
+
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Linkquality (numeric)

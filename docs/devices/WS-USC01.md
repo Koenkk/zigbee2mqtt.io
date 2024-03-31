@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WS-USC01  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch (no neutral, single rocker), US |
-| Exposes | switch (state), action, flip_indicator_light, power_outage_memory, operation_mode, mode_switch, power_outage_count, device_temperature, linkquality |
+| Exposes | switch (state), flip_indicator_light, power_outage_memory, operation_mode, mode_switch, power_outage_count, device_temperature, action, linkquality |
 | Picture | ![Aqara WS-USC01](https://www.zigbee2mqtt.io/images/devices/WS-USC01.png) |
 
 
@@ -52,12 +52,6 @@ When setting the state to ON, it might be possible to specify an automatic shuto
 Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
 Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
-
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`.
 
 ### Flip indicator light (binary)
 After turn on, the indicator light turns on while switch is off, and vice versa.
@@ -97,6 +91,12 @@ Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

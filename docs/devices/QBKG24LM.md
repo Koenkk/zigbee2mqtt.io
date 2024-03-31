@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG24LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch D1 (with neutral, double rocker) |
-| Exposes | switch (state), energy, power, action, operation_mode, linkquality |
+| Exposes | switch (state), energy, power, operation_mode, action, linkquality |
 | Picture | ![Aqara QBKG24LM](https://www.zigbee2mqtt.io/images/devices/QBKG24LM.png) |
 
 
@@ -90,12 +90,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `hold_left`, `single_left`, `double_left`, `single_right`, `double_right`, `single_both`, `double_both`.
-
 ### Operation mode (enum, left endpoint)
 Decoupled mode for left button.
 Value can be found in the published state on the `operation_mode_left` property.
@@ -109,6 +103,12 @@ Value can be found in the published state on the `operation_mode_right` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_right": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": NEW_VALUE}`.
 The possible values are: `control_right_relay`, `decoupled`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `hold_left`, `single_left`, `double_left`, `single_right`, `double_right`, `single_both`, `double_both`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

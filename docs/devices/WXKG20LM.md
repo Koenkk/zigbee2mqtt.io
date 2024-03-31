@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WXKG20LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless mini switch E1 |
-| Exposes | battery, voltage, action, device_temperature, power_outage_count, linkquality |
+| Exposes | battery, voltage, device_temperature, power_outage_count, action, linkquality |
 | Picture | ![Aqara WXKG20LM](https://www.zigbee2mqtt.io/images/devices/WXKG20LM.png) |
 
 
@@ -50,12 +50,6 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `hold`, `release`.
-
 ### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
@@ -66,6 +60,12 @@ The unit of this value is `°C`.
 Number of power outages (since last pairing).
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`, `hold`, `release`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

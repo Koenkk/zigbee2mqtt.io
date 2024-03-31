@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CTP-R01  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Cube T1 Pro |
-| Exposes | battery, voltage, power_outage_count, operation_mode, side, action, action_from_side, action_angle, linkquality |
+| Exposes | battery, voltage, power_outage_count, operation_mode, side, action_from_side, action_angle, action, linkquality |
 | Picture | ![Aqara CTP-R01](https://www.zigbee2mqtt.io/images/devices/CTP-R01.png) |
 | White-label | Aqara MFCZQ12LM |
 
@@ -122,12 +122,6 @@ Value can be found in the published state on the `side` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `6`.
 
-### Action (enum)
-Triggered action.
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `shake`, `throw`, `tap`, `slide`, `flip180`, `flip90`, `hold`, `side_up`, `rotate_left`, `rotate_right`, `1_min_inactivity`, `flip_to_side`.
-
 ### Action from side (numeric)
 Side of the cube.
 Value can be found in the published state on the `action_from_side` property.
@@ -139,6 +133,12 @@ Value can be found in the published state on the `action_angle` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-360` and the maximum value is `360`.
 The unit of this value is `°`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `shake`, `throw`, `tap`, `slide`, `flip180`, `flip90`, `hold`, `side_up`, `rotate_left`, `rotate_right`, `1_min_inactivity`, `flip_to_side`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

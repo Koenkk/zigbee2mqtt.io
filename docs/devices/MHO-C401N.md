@@ -53,6 +53,7 @@ Remaining battery in %.
 Value can be found in the published state on the `battery` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
 It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Temperature (numeric)

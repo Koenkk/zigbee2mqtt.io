@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG17LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch T1 (no neutral, single rocker) |
-| Exposes | switch (state), device_temperature, power_outage_count, led_disabled_night, flip_indicator_light, action, linkquality |
+| Exposes | switch (state), device_temperature, power_outage_count, power_outage_memory, operation_mode, led_disabled_night, flip_indicator_light, action, linkquality |
 | Picture | ![Aqara QBKG17LM](https://www.zigbee2mqtt.io/images/devices/QBKG17LM.png) |
 
 
@@ -63,6 +63,20 @@ The unit of this value is `°C`.
 Number of power outages (since last pairing).
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Power outage memory (binary)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+If value equals `true` power outage memory is ON, if `false` OFF.
+
+### Operation mode (enum)
+Decoupled mode for a button.
+Value can be found in the published state on the `operation_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
+The possible values are: `decoupled`, `control_relay`.
 
 ### Led disabled night (binary)
 Enables/disables LED indicator at night.

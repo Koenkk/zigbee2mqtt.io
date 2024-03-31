@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Wireless mini switch T1 |
 | Exposes | battery, voltage, action, linkquality |
 | Picture | ![Aqara WXKG13LM](https://www.zigbee2mqtt.io/images/devices/WXKG13LM.png) |
+| White-label | Aqara WB-R02D |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

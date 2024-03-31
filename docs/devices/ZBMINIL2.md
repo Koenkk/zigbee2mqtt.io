@@ -26,7 +26,6 @@ pageClass: device-page
 ## Notes
 ### Router functionality
 The device type is 'End Device' and cannot function as a Zigbee router.
-
 <!-- Notes END: Do not edit below this line -->
 
 
