@@ -31,9 +31,6 @@ _How to use calibration_
 * Set the number to 100 and press the refresh button
 * Close the shutter completely and when it comes to an end, press STOP.
 * Set the position to 0, press the refresh button and deactivate the calibration.
-
-
-
 <!-- Notes END: Do not edit below this line -->
 
 

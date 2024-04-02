@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WP-P01D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall outlet H2 EU |
-| Exposes | switch (state), device_temperature, power_outage_count, power, energy, voltage, current, overload_protection, led_indicator, button_lock, charging_protection, charging_limit, linkquality |
+| Exposes | switch (state), device_temperature, power_outage_count, power_on_behavior, power, energy, voltage, current, overload_protection, led_indicator, button_lock, charging_protection, charging_limit, linkquality |
 | Picture | ![Aqara WP-P01D](https://www.zigbee2mqtt.io/images/devices/WP-P01D.png) |
 
 
@@ -79,6 +79,13 @@ The unit of this value is `°C`.
 Number of power outages (since last pairing).
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Power on behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `on`, `previous`, `off`, `inverted`.
 
 ### Power (numeric)
 Instantaneous measured power.

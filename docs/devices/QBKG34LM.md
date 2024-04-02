@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG34LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch T1 (with neutral, triple rocker) |
-| Exposes | switch (state), device_temperature, power_outage_count, led_disabled_night, flip_indicator_light, action, energy, voltage, current, power, linkquality |
+| Exposes | switch (state), device_temperature, power_outage_count, power_outage_memory, operation_mode, led_disabled_night, flip_indicator_light, energy, voltage, current, power, action, linkquality |
 | Picture | ![Aqara QBKG34LM](https://www.zigbee2mqtt.io/images/devices/QBKG34LM.png) |
 
 
@@ -102,6 +102,34 @@ Number of power outages (since last pairing).
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
+### Power outage memory (binary)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+If value equals `true` power outage memory is ON, if `false` OFF.
+
+### Operation mode (enum, left endpoint)
+Decoupled mode for left button.
+Value can be found in the published state on the `operation_mode_left` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_left": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_left": NEW_VALUE}`.
+The possible values are: `decoupled`, `control_relay`.
+
+### Operation mode (enum, center endpoint)
+Decoupled mode for center button.
+Value can be found in the published state on the `operation_mode_center` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_center": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_center": NEW_VALUE}`.
+The possible values are: `decoupled`, `control_relay`.
+
+### Operation mode (enum, right endpoint)
+Decoupled mode for right button.
+Value can be found in the published state on the `operation_mode_right` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_right": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": NEW_VALUE}`.
+The possible values are: `decoupled`, `control_relay`.
+
 ### Led disabled night (binary)
 Enables/disables LED indicator at night.
 Value can be found in the published state on the `led_disabled_night` property.
@@ -115,12 +143,6 @@ Value can be found in the published state on the `flip_indicator_light` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"flip_indicator_light": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
 If value equals `ON` flip indicator light is ON, if `OFF` OFF.
-
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`.
 
 ### Energy (numeric)
 Sum of consumed energy.
@@ -145,6 +167,12 @@ Instantaneous measured power.
 Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

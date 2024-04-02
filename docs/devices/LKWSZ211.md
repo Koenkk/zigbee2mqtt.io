@@ -28,9 +28,7 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
-### Pairing
-The device will try to pair after installing batteries. If it fails or shows as unsupported, press and hold either button on the device for 10+ seconds (the light will come on then go off after a few seconds, and then start blinking after about 10 seconds).
-After this the device should successfully join. 
+
 
 ## Exposes
 

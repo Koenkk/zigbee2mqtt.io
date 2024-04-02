@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WXKG22LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless remote switch H1M (double rocker) |
-| Exposes | battery, voltage, action, click_mode, operation_mode, linkquality |
+| Exposes | battery, voltage, click_mode, operation_mode, action, linkquality |
 | Picture | ![Aqara WXKG22LM](https://www.zigbee2mqtt.io/images/devices/WXKG22LM.png) |
 
 
@@ -45,12 +45,6 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_left`, `single_right`, `single_both`, `double_left`, `double_right`, `double_both`, `triple_left`, `triple_right`, `triple_both`, `hold_left`, `hold_right`, `hold_both`.
-
 ### Click mode (enum)
 Click mode, fast: only supports single click which will be send immediately after clicking.multi: supports more events like double and hold.
 Value can be found in the published state on the `click_mode` property.
@@ -64,6 +58,12 @@ Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `command`, `event`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single_left`, `single_right`, `single_both`, `double_left`, `double_right`, `double_both`, `triple_left`, `triple_right`, `triple_both`, `hold_left`, `hold_right`, `hold_both`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

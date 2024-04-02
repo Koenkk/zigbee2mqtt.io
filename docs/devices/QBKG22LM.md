@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG22LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch D1 (no neutral, double rocker) |
-| Exposes | switch (state), action, operation_mode, linkquality |
+| Exposes | switch (state), operation_mode, action, linkquality |
 | Picture | ![Aqara QBKG22LM](https://www.zigbee2mqtt.io/images/devices/QBKG22LM.png) |
 
 
@@ -81,12 +81,6 @@ Additionnaly an `off_wait_time` property can be added to the payload to specify 
 Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `release_left`, `release_right`, `release_both`, `double_left`, `double_right`, `single_left`, `single_right`, `hold_release_left`, `hold_release_left`.
-
 ### Operation mode (enum, left endpoint)
 Operation mode for left button.
 Value can be found in the published state on the `operation_mode_left` property.
@@ -100,6 +94,12 @@ Value can be found in the published state on the `operation_mode_right` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode_right": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": NEW_VALUE}`.
 The possible values are: `control_left_relay`, `control_right_relay`, `decoupled`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `release_left`, `release_right`, `release_both`, `double_left`, `double_right`, `single_left`, `single_right`, `hold_release_left`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

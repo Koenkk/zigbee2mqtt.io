@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | YMF40/YDM4109+/YDF40  |
 | Vendor  | [Yale](/supported-devices/#v=Yale)  |
 | Description | Real living lock / Intelligent biometric digital lock |
-| Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, auto_relock_time, sound_volume, battery_low, linkquality |
+| Exposes | lock (state, lock_state), battery, pin_code, action_source_name, action_user, auto_relock_time, sound_volume, battery_low, action, linkquality |
 | Picture | ![Yale YMF40/YDM4109+/YDF40](https://www.zigbee2mqtt.io/images/devices/YMF40-YDM4109+-YDF40.png) |
 
 
@@ -58,12 +58,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `user_enabled` (binary): Whether the user is enabled/disabled allowed values: `true` or `false`
 - `pin_code` (numeric): Pincode to set, set pincode to null to clear 
 
-### Action (enum)
-Triggered action on the lock.
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `unknown`, `lock`, `unlock`, `lock_failure_invalid_pin_or_id`, `lock_failure_invalid_schedule`, `unlock_failure_invalid_pin_or_id`, `unlock_failure_invalid_schedule`, `one_touch_lock`, `key_lock`, `key_unlock`, `auto_lock`, `schedule_lock`, `schedule_unlock`, `manual_lock`, `manual_unlock`, `non_access_user_operational_event`.
-
 ### Action source name (enum)
 Source of the triggered action on the lock.
 Value can be found in the published state on the `action_source_name` property.
@@ -95,6 +89,12 @@ Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `unknown`, `lock`, `unlock`, `lock_failure_invalid_pin_or_id`, `lock_failure_invalid_schedule`, `unlock_failure_invalid_pin_or_id`, `unlock_failure_invalid_schedule`, `one_touch_lock`, `key_lock`, `key_unlock`, `auto_lock`, `schedule_lock`, `schedule_unlock`, `manual_lock`, `manual_unlock`, `non_access_user_operational_event`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

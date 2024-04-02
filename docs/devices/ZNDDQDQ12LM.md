@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNDDQDQ12LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | T1 light strip controller |
-| Exposes | light (state, brightness, color_temp), device_temperature, power_outage_count, power_outage_memory, linkquality |
+| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, power_outage_memory, linkquality |
 | Picture | ![Aqara ZNDDQDQ12LM](https://www.zigbee2mqtt.io/images/devices/ZNDDQDQ12LM.png) |
 
 
@@ -82,16 +82,16 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 }
 ````
 
+### Power outage count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
 ### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
-
-### Power outage count (numeric)
-Number of power outages (since last pairing).
-Value can be found in the published state on the `power_outage_count` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Power outage memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.

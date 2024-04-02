@@ -1,6 +1,6 @@
 ---
-title: "Custom devices (DiY) EFEKTA_eON29wz control via MQTT"
-description: "Integrate your Custom devices (DiY) EFEKTA_eON29wz via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "EFEKTA EFEKTA_eON29wz control via MQTT"
+description: "Integrate your EFEKTA EFEKTA_eON29wz via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-09-16T00:31:40Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Custom devices (DiY) EFEKTA_eON29wz
+# EFEKTA EFEKTA_eON29wz
 
 |     |     |
 |-----|-----|
 | Model | EFEKTA_eON29wz  |
-| Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
+| Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Mini weather station, barometer, forecast, charts, temperature, humidity, light |
-| Exposes | battery, illuminance, temperature, humidity, pressure, linkquality |
-| Picture | ![Custom devices (DiY) EFEKTA_eON29wz](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eON29wz.png) |
+| Exposes | battery, voltage, illuminance_lux, illuminance, temperature, humidity, pressure, linkquality |
+| Picture | ![EFEKTA EFEKTA_eON29wz](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eON29wz.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -35,6 +35,8 @@ Instructions on how to build this device can be found [here](https://github.com/
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -54,34 +56,53 @@ Instructions on how to build this device can be found [here](https://github.com/
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
+Remaining battery in %.
 Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Voltage (numeric)
+Reported battery voltage in millivolts.
+Value can be found in the published state on the `voltage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `mV`.
+
+### Illuminance lux (numeric)
+Measured illuminance in lux.
+Value can be found in the published state on the `illuminance_lux` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_lux": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `lx`.
 
 ### Illuminance (numeric)
 Raw measured illuminance.
 Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
+It's not possible to write (`/set`) this value.
 
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Humidity (numeric)
 Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Pressure (numeric)
 The measured atmospheric pressure.
 Value can be found in the published state on the `pressure` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `hPa`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pressure": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kPa`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -99,7 +99,7 @@ Presets for sensitivity for presence and movement.
 Value can be found in the published state on the `radar_scene` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_scene": NEW_VALUE}`.
-The possible values are: `default`, `bathroom`, `bedroom`, `sleeping`.
+The possible values are: `default`, `bathroom`, `bedroom`, `sleeping`, `unknown`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
