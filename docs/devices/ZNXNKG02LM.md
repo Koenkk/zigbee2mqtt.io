@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNXNKG02LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart rotary knob H1 (wireless) |
-| Exposes | battery, voltage, action, operation_mode, action_rotation_button_state, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, linkquality |
+| Exposes | battery, voltage, operation_mode, action_rotation_button_state, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, action, linkquality |
 | Picture | ![Aqara ZNXNKG02LM](https://www.zigbee2mqtt.io/images/devices/ZNXNKG02LM.png) |
 
 
@@ -53,12 +53,6 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `hold`, `release`, `start_rotating`, `rotation`, `stop_rotating`.
 
 ### Operation mode (enum)
 Button mode.
@@ -102,6 +96,12 @@ Rotation time.
 Value can be found in the published state on the `action_rotation_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ms`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`, `hold`, `release`, `start_rotating`, `rotation`, `stop_rotating`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

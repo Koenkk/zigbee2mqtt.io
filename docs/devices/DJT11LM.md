@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | DJT11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Vibration sensor |
-| Exposes | battery, device_temperature, vibration, action, strength, sensitivity, angle_x, angle_y, angle_z, x_axis, y_axis, z_axis, voltage, power_outage_count, linkquality |
+| Exposes | battery, device_temperature, vibration, strength, sensitivity, angle_x, angle_y, angle_z, x_axis, y_axis, z_axis, voltage, power_outage_count, action, linkquality |
 | Picture | ![Aqara DJT11LM](https://www.zigbee2mqtt.io/images/devices/DJT11LM.png) |
 
 
@@ -110,12 +110,6 @@ Value can be found in the published state on the `vibration` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` vibration is ON, if `false` OFF.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `vibration`, `tilt`, `drop`.
-
 ### Strength (numeric)
 Value can be found in the published state on the `strength` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -169,6 +163,12 @@ The unit of this value is `mV`.
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `vibration`, `tilt`, `drop`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

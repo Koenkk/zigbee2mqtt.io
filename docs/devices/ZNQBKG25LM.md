@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNQBKG25LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch H1M (with neutral, double rocker) |
-| Exposes | power, energy, voltage, switch (state), operation_mode, action, power_outage_memory, led_disabled_night, device_temperature, flip_indicator_light, linkquality |
+| Exposes | power, energy, voltage, switch (state), operation_mode, power_outage_memory, led_disabled_night, device_temperature, flip_indicator_light, action, linkquality |
 | Picture | ![Aqara ZNQBKG25LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG25LM.png) |
 
 
@@ -108,12 +108,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_left`, `double_left`, `single_right`, `double_right`, `single_left_right`, `double_left_right`, `single_all`, `double_all`.
-
 ### Power outage memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.
 Value can be found in the published state on the `power_outage_memory` property.
@@ -140,6 +134,12 @@ Value can be found in the published state on the `flip_indicator_light` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"flip_indicator_light": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
 If value equals `ON` flip indicator light is ON, if `OFF` OFF.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single_left`, `double_left`, `single_right`, `double_right`, `single_left_right`, `double_left_right`, `single_all`, `double_all`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

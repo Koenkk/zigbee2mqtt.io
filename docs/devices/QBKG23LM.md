@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG23LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch D1 (with neutral, single rocker) |
-| Exposes | switch (state), power, energy, device_temperature, voltage, action, operation_mode, linkquality |
+| Exposes | switch (state), power, energy, device_temperature, voltage, operation_mode, action, linkquality |
 | Picture | ![Aqara QBKG23LM](https://www.zigbee2mqtt.io/images/devices/QBKG23LM.png) |
 
 
@@ -93,18 +93,18 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `release`.
-
 ### Operation mode (enum)
 Decoupled mode.
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `release`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNQBKG24LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch H1M (with neutral, single rocker) |
-| Exposes | switch (state), power, energy, voltage, device_temperature, action, operation_mode, power_outage_memory, led_disabled_night, flip_indicator_light, linkquality |
+| Exposes | switch (state), power, energy, voltage, device_temperature, operation_mode, power_outage_memory, led_disabled_night, flip_indicator_light, action, linkquality |
 | Picture | ![Aqara ZNQBKG24LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG24LM.png) |
 
 
@@ -89,12 +89,6 @@ Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`.
-
 ### Operation mode (enum)
 Decoupled mode.
 Value can be found in the published state on the `operation_mode` property.
@@ -122,6 +116,12 @@ Value can be found in the published state on the `flip_indicator_light` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"flip_indicator_light": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
 If value equals `ON` flip indicator light is ON, if `OFF` OFF.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

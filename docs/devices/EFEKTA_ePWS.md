@@ -1,6 +1,6 @@
 ---
-title: "Custom devices (DiY) EFEKTA_ePWS control via MQTT"
-description: "Integrate your Custom devices (DiY) EFEKTA_ePWS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "EFEKTA EFEKTA_ePWS control via MQTT"
+description: "Integrate your EFEKTA EFEKTA_ePWS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Custom devices (DiY) EFEKTA_ePWS
+# EFEKTA EFEKTA_ePWS
 
 |     |     |
 |-----|-----|
 | Model | EFEKTA_ePWS  |
-| Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
+| Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Plant wattering sensor with e-ink display |
-| Exposes | soil_moisture, battery, temperature, linkquality |
-| Picture | ![Custom devices (DiY) EFEKTA_ePWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_ePWS.png) |
+| Exposes | battery, voltage, soil_moisture, temperature, linkquality |
+| Picture | ![EFEKTA EFEKTA_ePWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_ePWS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -43,23 +43,33 @@ pageClass: device-page
 
 ## Exposes
 
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Voltage (numeric)
+Reported battery voltage in millivolts.
+Value can be found in the published state on the `voltage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `mV`.
+
 ### Soil moisture (numeric)
 Measured soil moisture value.
 Value can be found in the published state on the `soil_moisture` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `%`.
-
-### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
-Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"soil_moisture": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Linkquality (numeric)

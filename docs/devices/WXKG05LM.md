@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WXKG05LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless remote switch T1 (single rocker) |
-| Exposes | action, battery, linkquality |
+| Exposes | battery, action, linkquality |
 | Picture | ![Aqara WXKG05LM](https://www.zigbee2mqtt.io/images/devices/WXKG05LM.png) |
 
 
@@ -37,18 +37,18 @@ pageClass: device-page
 
 ## Exposes
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `hold`.
-
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`, `hold`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

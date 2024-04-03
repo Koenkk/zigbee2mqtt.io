@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN SGPHM-I1 control via MQTT"
-description: "Integrate your HEIMAN SGPHM-I1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "GS SGPHM-I1 control via MQTT"
+description: "Integrate your GS SGPHM-I1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-06-01T15:08:55
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN SGPHM-I1
+# GS SGPHM-I1
 
 |     |     |
 |-----|-----|
 | Model | SGPHM-I1  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [GS](/supported-devices/#v=GS)  |
 | Description | Propane gas sensor |
-| Exposes | gas, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN SGPHM-I1](https://www.zigbee2mqtt.io/images/devices/SGPHM-I1.png) |
+| Exposes | gas, tamper, battery_low, linkquality |
+| Picture | ![GS SGPHM-I1](https://www.zigbee2mqtt.io/images/devices/SGPHM-I1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -38,17 +38,17 @@ Value can be found in the published state on the `gas` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` gas is ON, if `false` OFF.
 
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
-
 ### Tamper (binary)
 Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
+
+### Battery low (binary)
+Indicates whether the battery of the device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

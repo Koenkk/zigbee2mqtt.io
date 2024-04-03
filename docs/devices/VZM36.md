@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | VZM36  |
 | Vendor  | [Inovelli](/supported-devices/#v=Inovelli)  |
 | Description | Fan canopy module |
-| Exposes | light (state, brightness), fan (state, mode), breeze mode, dimmingSpeedUpRemote_1, rampRateOffToOnRemote_1, dimmingSpeedDownRemote_1, rampRateOnToOffRemote_1, minimumLevel_1, maximumLevel_1, autoTimerOff_1, defaultLevelRemote_1, stateAfterPowerRestored_1, higherOutputInNonNeutral_1, quickStartLightTime_1, quickStartLightLevel_1, smartBulbMode_1, ledColorWhenOn_1, ledIntensityWhenOn_1, outputMode_1, dimmingSpeedUpRemote_2, rampRateOffToOnRemote_2, dimmingSpeedDownRemote_2, rampRateOnToOffRemote_2, minimumLevel_2, maximumLevel_2, autoTimerOff_2, defaultLevelRemote_2, stateAfterPowerRestored_2, quickStartFan_2, smartBulbMode_2, outputMode_2, linkquality |
+| Exposes | light (state, brightness), fan (state, mode), breeze mode, dimmingSpeedUpRemote_1, rampRateOffToOnRemote_1, dimmingSpeedDownRemote_1, rampRateOnToOffRemote_1, minimumLevel_1, maximumLevel_1, autoTimerOff_1, defaultLevelRemote_1, stateAfterPowerRestored_1, higherOutputInNonNeutral_1, quickStartTime_1, quickStartLevel_1, smartBulbMode_1, ledColorWhenOn_1, ledIntensityWhenOn_1, outputMode_1, dimmingSpeedUpRemote_2, rampRateOffToOnRemote_2, dimmingSpeedDownRemote_2, rampRateOnToOffRemote_2, minimumLevel_2, maximumLevel_2, autoTimerOff_2, defaultLevelRemote_2, stateAfterPowerRestored_2, quickStartTime_2, smartBulbMode_2, outputMode_2, linkquality |
 | Picture | ![Inovelli VZM36](https://www.zigbee2mqtt.io/images/devices/VZM36.png) |
 
 
@@ -131,24 +131,24 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### HigherOutputInNonNeutral 1 (enum)
-Increase level in non-neutral mode.
+Increase level in non-neutral mode for light..
 Value can be found in the published state on the `higherOutputInNonNeutral_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"higherOutputInNonNeutral_1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"higherOutputInNonNeutral_1": NEW_VALUE}`.
 The possible values are: `Disabled (default)`, `Enabled`.
 
-### QuickStartLightTime 1 (numeric)
+### QuickStartTime 1 (numeric)
 Duration of full power output while lamp tranisitions from Off to On. In 60th of second. 0 = disable, 1 = 1/60s, 60 = 1s.
-Value can be found in the published state on the `quickStartLightTime_1` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"quickStartLightTime_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quickStartLightTime_1": NEW_VALUE}`.
+Value can be found in the published state on the `quickStartTime_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"quickStartTime_1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quickStartTime_1": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `60`.
 
-### QuickStartLightLevel 1 (numeric)
-Level of power output during Quick Start Light time (P34)..
-Value can be found in the published state on the `quickStartLightLevel_1` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"quickStartLightLevel_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quickStartLightLevel_1": NEW_VALUE}`.
+### QuickStartLevel 1 (numeric)
+Level of power output during Quick Start Light time (P23)..
+Value can be found in the published state on the `quickStartLevel_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"quickStartLevel_1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quickStartLevel_1": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `254`.
 
 ### SmartBulbMode 1 (enum)
@@ -245,11 +245,11 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"stateAfterPowerRestored_2": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
 
-### QuickStartFan 2 (numeric)
+### QuickStartTime 2 (numeric)
 Duration of full power output while fan tranisitions from Off to On. In 60th of second. 0 = disable, 1 = 1/60s, 60 = 1s.
-Value can be found in the published state on the `quickStartFan_2` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"quickStartFan_2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quickStartFan_2": NEW_VALUE}`.
+Value can be found in the published state on the `quickStartTime_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"quickStartTime_2": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quickStartTime_2": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `60`.
 
 ### SmartBulbMode 2 (enum)

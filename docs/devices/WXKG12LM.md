@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WXKG12LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless mini switch (with gyroscope) |
-| Exposes | battery, action, voltage, linkquality |
+| Exposes | battery, voltage, action, linkquality |
 | Picture | ![Aqara WXKG12LM](https://www.zigbee2mqtt.io/images/devices/WXKG12LM.png) |
 
 
@@ -71,17 +71,17 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `hold`, `release`, `shake`.
-
 ### Voltage (numeric)
 Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`, `hold`, `release`, `shake`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

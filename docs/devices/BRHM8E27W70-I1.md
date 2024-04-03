@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | BRHM8E27W70-I1  |
 | Vendor  | [GS](/supported-devices/#v=GS)  |
-| Description | Smart dimmable, RGB + white (E27 & B22) |
-| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, linkquality |
+| Description | Smart color light bulb |
+| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior, identify, linkquality |
 | Picture | ![GS BRHM8E27W70-I1](https://www.zigbee2mqtt.io/images/devices/BRHM8E27W70-I1.png) |
 
 
@@ -35,6 +35,8 @@ pageClass: device-page
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
 * `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -95,6 +97,13 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNCLBL01LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Curtain driver E1 |
-| Exposes | cover (state, position), hand_open, limits_calibration, battery, voltage, device_temperature, illuminance_lux, action, motor_state, running, hooks_lock, hooks_state, target_position, power_source, charging, linkquality |
+| Exposes | cover (state, position), hand_open, limits_calibration, battery, voltage, device_temperature, illuminance_lux, motor_state, running, hooks_lock, hooks_state, target_position, power_source, charging, action, linkquality |
 | Picture | ![Aqara ZNCLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNCLBL01LM.png) |
 | White-label | Aqara CM-M01, Aqara CM-M01R |
 
@@ -106,12 +106,6 @@ Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `manual_open`, `manual_close`.
-
 ### Motor state (enum)
 Motor state.
 Value can be found in the published state on the `motor_state` property.
@@ -157,6 +151,12 @@ Value can be found in the published state on the `charging` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"charging": ""}`.
 It's not possible to write (`/set`) this value.
 If value equals `true` charging is ON, if `false` OFF.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `manual_open`, `manual_close`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
