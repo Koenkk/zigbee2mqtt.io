@@ -16,8 +16,8 @@ advanced:
 
 In the logging you will see the following abbreviations:
 - `z2m`: Zigbee2MQTT
-- `zh`: [zigbee-herdsman](https://github.com/koenkk/zigbee-herdsman), this is the Zigbee library where Zigbee2MQTT is based up-on.
-- `zhc`: [zigbee-herdsman-converters](https://github.com/koenkk/zigbee-herdsman-converters), this is the library which contains all the device drivers.
+- `zh`: [zigbee-herdsman](https://github.com/koenkk/zigbee-herdsman), logged events from the Zigbee library used by Zigbee2MQTT.
+- `zhc`: [zigbee-herdsman-converters](https://github.com/koenkk/zigbee-herdsman-converters), logged events from the devices support library.
 
 ## Change log level during runtime
 See [MQTT topics and message structure](./mqtt_topics_and_messages.md)
