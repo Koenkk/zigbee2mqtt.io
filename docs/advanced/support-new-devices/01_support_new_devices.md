@@ -31,6 +31,8 @@ If not, we continue by extending the external definition.
 
 <img src="../../images/generate_external_definition.gif" height="300"/>
 
+By default, the external defenition will use modern extends. It tries to map known modern extends onto Zigbee clusters. This approach only works well, when devices implement Zigbee specification.
+
 ### 2.1. Extending the external definition
 To extend the generated external definition, save it next to the Zigbee2MQTT `configuration.yaml`. In this example we will call it `WSDCGQ01LM.js` (make sure it ends with `.js`). Add the lines like described below:
 
