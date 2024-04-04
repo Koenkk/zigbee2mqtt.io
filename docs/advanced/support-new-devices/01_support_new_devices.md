@@ -25,13 +25,20 @@ Make sure that joining is enabled, otherwise new devices cannot join the network
 When pairing an unsupported device with Zigbee2MQTT, it will attempt to discover features supported by this device. To check what has already been discovered, go to the "Zigbeee2MQTT frontend -> device -> Exposes tab". See if the exposed features work by checking if values are reported and/or it's controllable (in case of e.g. a light).
 Note that feature discovery is still WIP, not all features may be discovered or it may not be possible discovery all features due to a non-standard implementation of the device (commonly the case for TuYa devices).
 
-Next generate the external definition by going to the device -> "Dev console" tab and press "Generate external definition". 
-If all features work and all the expected features are there, you are lucky and can continue with step 3.
-If not, we continue by extending the external definition.
+Next generate the external definition by going to the device -> "Dev console" tab and press "Generate external definition".
 
 <img src="../../images/generate_external_definition.gif" height="300"/>
 
-By default, the external defenition will use modern extends. It tries to map known modern extends onto Zigbee clusters. This approach only works well, when devices implement Zigbee specification.
+By default, the external definition will use modern extends.
+This is done by mapping them to exposed Zigbee clusters.
+But this approach only works well when devices implement the Zigbee specification.
+If all features work and all the expected features are there, you are lucky and can continue with step 3.
+If not, we have to extend the external definition.
+
+::: tip
+Depending on the device, it could be possible to extend the definition using other modern extends.
+This process is recommended and is generally easier.
+:::
 
 ### 2.1. Extending the external definition
 To extend the generated external definition, save it next to the Zigbee2MQTT `configuration.yaml`. In this example we will call it `WSDCGQ01LM.js` (make sure it ends with `.js`). Add the lines like described below:
@@ -43,10 +50,7 @@ const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
 const tz = require('zigbee-herdsman-converters/converters/toZigbee');
 const exposes = require('zigbee-herdsman-converters/lib/exposes');
 const reporting = require('zigbee-herdsman-converters/lib/reporting');
-const extend = require('zigbee-herdsman-converters/lib/extend');
 const ota = require('zigbee-herdsman-converters/lib/ota');
-const tuya = require('zigbee-herdsman-converters/lib/tuya');
-const {} = require('zigbee-herdsman-converters/lib/tuya');
 const utils = require('zigbee-herdsman-converters/lib/utils');
 const globalStore = require('zigbee-herdsman-converters/lib/store');
 const e = exposes.presets;
@@ -109,10 +113,7 @@ const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
 const tz = require('zigbee-herdsman-converters/converters/toZigbee');
 const exposes = require('zigbee-herdsman-converters/lib/exposes');
 const reporting = require('zigbee-herdsman-converters/lib/reporting');
-const extend = require('zigbee-herdsman-converters/lib/extend');
 const ota = require('zigbee-herdsman-converters/lib/ota');
-const tuya = require('zigbee-herdsman-converters/lib/tuya');
-const {} = require('zigbee-herdsman-converters/lib/tuya');
 const utils = require('zigbee-herdsman-converters/lib/utils');
 const globalStore = require('zigbee-herdsman-converters/lib/store');
 const e = exposes.presets;
@@ -135,6 +136,30 @@ module.exports = definition;
 Repeat until your device does not produce any more log messages like: `2018-5-1 18:19:41 WARN No converter available for 'WSDCGQ01LM' with....`
 
 If none of the existing converters fit you can add custom ones, an external converter example for this can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.js).
+
+### 2.3 Using modern extend
+
+This exact same definition could be achieved using modern extends.
+
+```js
+const {temperature, humidity, battery} = require('zigbee-herdsman-converters/lib/modernExtend');
+// No other imports are necessary.
+
+const definition = {
+    zigbeeModel: ['lumi.sens'],
+    model: 'WSDCGQ01LM',
+    vendor: 'Xiaomi',
+    description: 'MiJia temperature & humidity sensor',
+    extend: [
+      // Modern extends are incapsulating fromZigbee, toZigbee, exposes and more.
+      temperature(),
+      humidity(),
+      battery(),
+    ],
+};
+
+module.exports = definition;
+```
 
 ### 3. Add device picture to zigbee2mqtt.io documentation
 To make sure a picture is available for this device on the supported devices page and in the frontend:
