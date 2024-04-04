@@ -1,5 +1,4 @@
-const modernExtend = require('zigbee-herdsman-converters/lib/modernExtend');
-const {light} = modernExtend;
+const {light} = require('zigbee-herdsman-converters/lib/modernExtend');
 
 const definition = {
     zigbeeModel: ['myZigbeeModel'],
