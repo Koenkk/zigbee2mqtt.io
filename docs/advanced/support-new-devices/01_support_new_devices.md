@@ -31,7 +31,7 @@ Next generate the external definition by going to the device -> "Dev console" ta
 
 By default, the external definition will use modern extends.
 This is done by mapping them to exposed Zigbee clusters.
-But this approach only works well when devices implement the Zigbee specification.
+But this approach only works well when devices implement the Zigbee ZCL specification.
 If all features work and all the expected features are there, you are lucky and can continue with step 3.
 If not, we have to extend the external definition.
 
