@@ -13,7 +13,7 @@ const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
 const tz = require('zigbee-herdsman-converters/converters/toZigbee');
 const exposes = require('zigbee-herdsman-converters/lib/exposes');
 const reporting = require('zigbee-herdsman-converters/lib/reporting');
-const extend = require('zigbee-herdsman-converters/lib/extend');
+const modernExtend = require('zigbee-herdsman-converters/lib/modernExtend');
 const e = exposes.presets;
 const ea = exposes.access;
 const tuya = require('zigbee-herdsman-converters/lib/tuya');
@@ -45,6 +45,9 @@ const definition = {
         tuyaDatapoints: [
         ],
     },
+    extend: [
+        // A preferred new way of extending functionality.
+    ],
 };
 
 module.exports = definition;
