@@ -43,12 +43,22 @@ connection: &con01
     kickolduser: true
 ```
 
-For a Slaesh coordinator, use the following configuration:
+With a Slaesh coordinator, you need to set the DTR and RTS pins of the RS232 interfece in a specific way. The current (2023-02-04) version of Raspberry Pi OS does not have recent enough of ser2net to do that correctly, see https://github.com/cminyard/ser2net/issues/46. You might need to build the "gensi" and the "ser2net" packages on your rpi yourself. Other distributions might already have a more recent version. Once you have a version of ser2net that supports the "dtr=off" setting, use the following configuration:
 
 ```
 connection: &con01
   accepter: tcp,20108
   connector: serialdev,/dev/ttyACM0,115200n81,local,dtr=off,rts=off
+  options:
+    kickolduser: true
+```
+
+For ConBee II / RaspBee II, use the following configuration:
+
+```
+connection: &con01
+  accepter: tcp,20108
+  connector: serialdev,/dev/ttyACM0,115200n81,nobreak,local
   options:
     kickolduser: true
 ```

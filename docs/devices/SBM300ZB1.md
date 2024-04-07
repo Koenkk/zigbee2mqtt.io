@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SBM300ZB1  |
-| Vendor  | ShinaSystem  |
+| Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS remote control |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![ShinaSystem SBM300ZB1](https://www.zigbee2mqtt.io/images/devices/SBM300ZB1.jpg) |
+| Picture | ![ShinaSystem SBM300ZB1](https://www.zigbee2mqtt.io/images/devices/SBM300ZB1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,10 +29,11 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

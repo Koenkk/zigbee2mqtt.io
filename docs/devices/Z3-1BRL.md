@@ -16,16 +16,30 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | Z3-1BRL  |
-| Vendor  | Lutron  |
+| Vendor  | [Lutron](/supported-devices/#v=Lutron)  |
 | Description | Aurora smart bulb dimmer |
 | Exposes | action, brightness, linkquality |
-| Picture | ![Lutron Z3-1BRL](https://www.zigbee2mqtt.io/images/devices/Z3-1BRL.jpg) |
+| Picture | ![Lutron Z3-1BRL](https://www.zigbee2mqtt.io/images/devices/Z3-1BRL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Enter pairing mode
 
+For new devices:
+* Quickly double tap the dimmer button.
+
+For previously paired devices:
+1. Quickly tap the dimmer button 4x.
+2. On the fourth tap, hold until the LED begins to blink.
+3. Immediately, quickly tap the dimmer button 3 more times.
+
+See this [configuration guide](https://www.lutron.com/TechnicalDocumentLibrary/0301916_Aurora_Advanced_Install_Guide.pdf#page=7) for more information.
+
+If a red light flashes, the battery is low and must be replaced before pairing.
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

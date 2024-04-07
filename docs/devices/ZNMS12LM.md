@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNMS12LM control via MQTT"
-description: "Integrate your Xiaomi ZNMS12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNMS12LM control via MQTT"
+description: "Integrate your Aqara ZNMS12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,21 +11,22 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNMS12LM
+# Aqara ZNMS12LM
 
 |     |     |
 |-----|-----|
 | Model | ZNMS12LM  |
-| Vendor  | Xiaomi  |
-| Description | Aqara S2 lock |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart door lock S2 |
 | Exposes | battery, voltage, battery_low, state, reverse, action, linkquality |
-| Picture | ![Xiaomi ZNMS12LM](https://www.zigbee2mqtt.io/images/devices/ZNMS12LM.jpg) |
+| Picture | ![Aqara ZNMS12LM](https://www.zigbee2mqtt.io/images/devices/ZNMS12LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -40,7 +41,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -52,11 +53,11 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### State (binary)
 Value can be found in the published state on the `state` property.
@@ -69,6 +70,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `UNLOCK` reverse is ON, if `LOCK` OFF.
 
 ### Action (enum)
+Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `finger_not_match`, `password_not_match`, `reverse_lock`, `reverse_lock_cancel`, `locked`, `lock_opened`, `finger_add`, `finger_delete`, `password_add`, `password_delete`, `lock_opened_inside`, `lock_opened_outside`, `ring_bell`, `change_language_to`, `finger_open`, `password_open`, `door_closed`.

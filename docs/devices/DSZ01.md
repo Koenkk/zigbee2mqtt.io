@@ -16,16 +16,17 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | DSZ01  |
-| Vendor  | J.XUAN  |
+| Vendor  | [J.XUAN](/supported-devices/#v=J.XUAN)  |
 | Description | Door or window contact switch |
 | Exposes | contact, battery_low, linkquality |
-| Picture | ![J.XUAN DSZ01](https://www.zigbee2mqtt.io/images/devices/DSZ01.jpg) |
+| Picture | ![J.XUAN DSZ01](https://www.zigbee2mqtt.io/images/devices/DSZ01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -37,11 +38,11 @@ Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS2AQ-EM  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Air quality monitor |
 | Exposes | battery, temperature, humidity, pm25, hcho, voc, aqi, pm10, battery_state, linkquality |
-| Picture | ![HEIMAN HS2AQ-EM](https://www.zigbee2mqtt.io/images/devices/HS2AQ-EM.jpg) |
+| Picture | ![HEIMAN HS2AQ-EM](https://www.zigbee2mqtt.io/images/devices/HS2AQ-EM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,22 +28,27 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `pm25_calibration`: Calibrates the pm25 value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `voc_calibration`: Calibrates the voc value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -61,36 +66,36 @@ Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Pm25 (numeric)
+### PM25 (numeric)
 Measured PM2.5 (particulate matter) concentration.
 Value can be found in the published state on the `pm25` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `µg/m³`.
 
-### Hcho (numeric)
-Measured Hcho value.
+### HCHO (numeric)
+Measured HCHO value.
 Value can be found in the published state on the `hcho` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mg/m³`.
 
-### Voc (numeric)
+### VOC (numeric)
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppb`.
+The unit of this value is `µg/m³`.
 
 ### Aqi (numeric)
 Air quality index.
 Value can be found in the published state on the `aqi` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
-### Pm10 (numeric)
+### PM10 (numeric)
 Measured PM10 (particulate matter) concentration.
 Value can be found in the published state on the `pm10` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `µg/m³`.
 
-### Battery_state (enum)
+### Battery state (enum)
 Value can be found in the published state on the `battery_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `not_charging`, `charging`, `charged`.

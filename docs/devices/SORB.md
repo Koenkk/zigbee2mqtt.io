@@ -16,16 +16,17 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SORB  |
-| Vendor  | Stelpro  |
+| Vendor  | [Stelpro](/supported-devices/#v=Stelpro)  |
 | Description | ORLÉANS fan heater |
 | Exposes | local_temperature, keypad_lockout, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
-| Picture | ![Stelpro SORB](https://www.zigbee2mqtt.io/images/devices/SORB.jpg) |
+| Picture | ![Stelpro SORB](https://www.zigbee2mqtt.io/images/devices/SORB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -36,14 +37,14 @@ pageClass: device-page
 
 ## Exposes
 
-### Local_temperature (numeric)
+### Local temperature (numeric)
 Current temperature measured on the device.
 Value can be found in the published state on the `local_temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Keypad_lockout (enum)
+### Keypad lockout (enum)
 Enables/disables physical input on the device.
 Value can be found in the published state on the `keypad_lockout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keypad_lockout": ""}`.

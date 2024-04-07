@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SMART-HEAT10  |
-| Vendor  | Alecto  |
+| Vendor  | [Alecto](/supported-devices/#v=Alecto)  |
 | Description | Radiator valve with thermostat |
 | Exposes | lock (state), switch (state), battery, climate (current_heating_setpoint, local_temperature, system_mode), linkquality |
-| Picture | ![Alecto SMART-HEAT10](https://www.zigbee2mqtt.io/images/devices/SMART-HEAT10.jpg) |
+| Picture | ![Alecto SMART-HEAT10](https://www.zigbee2mqtt.io/images/devices/SMART-HEAT10.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,20 +29,21 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
-### Lock 
+### Child lock (lock)
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
 It's not possible to read (`/get`) this value.
 
-### Switch 
+### Window detection (switch)
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -50,9 +51,9 @@ The unit of this value is `%`.
 
 ### Climate 
 This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `system_mode`.
-- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
+- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`. Reading (`/get`) this attribute is not possible.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZYCT-202  |
-| Vendor  | Trust  |
+| Vendor  | [Trust](/supported-devices/#v=Trust)  |
 | Description | Remote control |
 | Exposes | action, action_group, linkquality |
-| Picture | ![Trust ZYCT-202](https://www.zigbee2mqtt.io/images/devices/ZYCT-202.jpg) |
+| Picture | ![Trust ZYCT-202](https://www.zigbee2mqtt.io/images/devices/ZYCT-202.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -37,6 +37,7 @@ Press and hold the smart group button (button with two bulbs) and wait until the
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -51,7 +52,7 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `stop`, `brightness_stop`, `brightness_move_up`, `brightness_move_down`.
 
-### Action_group (numeric)
+### Action group (numeric)
 Group where the action was triggered on.
 Value can be found in the published state on the `action_group` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

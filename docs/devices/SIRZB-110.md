@@ -1,6 +1,6 @@
 ---
-title: "Develco Products A/S SIRZB-110 control via MQTT"
-description: "Integrate your Develco Products A/S SIRZB-110 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Develco SIRZB-110 control via MQTT"
+description: "Integrate your Develco SIRZB-110 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-08-22T21:01:09Z
 pageClass: device-page
 ---
@@ -11,19 +11,24 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Develco Products A/S SIRZB-110
+# Develco SIRZB-110
 
 |     |     |
 |-----|-----|
 | Model | SIRZB-110  |
-| Vendor  | Develco Products A/S  |
+| Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Customizable siren |
 | Exposes | battery, battery_low, test, warning, squawk, max_duration, alarm, linkquality |
-| Picture | ![Develco Products A/S SIRZB-110](https://www.zigbee2mqtt.io/images/devices/SIRZB-110.jpg) |
+| Picture | ![Develco SIRZB-110](https://www.zigbee2mqtt.io/images/devices/SIRZB-110.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+
+
+### Firmware version warning
+
+Only works with firmware 1.7.1 and lower (whatever hardware version). Firmware version 1.9.3 uses a different framework and these commands no longer work.
 
 
 ### Warning usage
@@ -58,33 +63,27 @@ This alarm are preset to highest volume and using the mode `police_panic`
 Squawk are normally used to indicate activation and deactivation of an alarm system
 
 Examples:
-`{"squawk":{"level":"low","mode":"system_is_sarmed","strobe":false}}`
-`{"squawk":{"level":"low","mode":"system_is_disarmed","strobe":false}}`
+`{"squawk":{"level":"low","state":"system_is_armed","strobe":false}}`
+`{"squawk":{"level":"low","state":"system_is_disarmed","strobe":false}}`
 <!-- Notes END: Do not edit below this line -->
 
 
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Test (binary)
 Indicates whether the device is being tested.
@@ -94,20 +93,20 @@ If value equals `true` test is ON, if `false` OFF.
 
 ### Warning (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warning": {"mode": VALUE, "level": VALUE, "strobe_level": VALUE, "strobe": VALUE, "strobe_duty_cycle": VALUE, "duration": VALUE}}`
-- `mode` (enum): Mode of the warning (sound effect). Allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
-- `level` (enum): Sound level. Allowed values: `low`, `medium`, `high`, `very_high`
-- `strobe_level` (enum): Intensity of the strobe. Allowed values: `low`, `medium`, `high`, `very_high`
-- `strobe` (binary): Turn on/off the strobe (light) during warning. Allowed values: `true` or `false`
-- `strobe_duty_cycle` (numeric): Length of the flash cycle. 
-- `duration` (numeric): Duration in seconds of the alarm. 
+- `mode` (enum): Mode of the warning (sound effect) allowed values: `stop`, `burglar`, `fire`, `emergency`, `police_panic`, `fire_panic`, `emergency_panic`
+- `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
+- `strobe_level` (enum): Intensity of the strobe allowed values: `low`, `medium`, `high`, `very_high`
+- `strobe` (binary): Turn on/off the strobe (light) during warning allowed values: `true` or `false`
+- `strobe_duty_cycle` (numeric): Length of the flash cycle max value is 10
+- `duration` (numeric): Duration in seconds of the alarm unit is s
 
 ### Squawk (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"squawk": {"state": VALUE, "level": VALUE, "strobe": VALUE}}`
-- `state` (enum): Set Squawk state. Allowed values: `system_is_armed`, `system_is_disarmed`
-- `level` (enum): Sound level. Allowed values: `low`, `medium`, `high`, `very_high`
-- `strobe` (binary): Turn on/off the strobe (light) for Squawk. Allowed values: `true` or `false`
+- `state` (enum): Set Squawk state allowed values: `system_is_armed`, `system_is_disarmed`
+- `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
+- `strobe` (binary): Turn on/off the strobe (light) for Squawk allowed values: `true` or `false`
 
-### Max_duration (numeric)
+### Max duration (numeric)
 Max duration of the siren.
 Value can be found in the published state on the `max_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.

@@ -16,16 +16,17 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LVS-SN10ZW_SN11  |
-| Vendor  | LivingWise  |
+| Vendor  | [LivingWise](/supported-devices/#v=LivingWise)  |
 | Description | Occupancy sensor |
 | Exposes | battery, occupancy, battery_low, tamper, linkquality |
-| Picture | ![LivingWise LVS-SN10ZW_SN11](https://www.zigbee2mqtt.io/images/devices/LVS-SN10ZW_SN11.jpg) |
+| Picture | ![LivingWise LVS-SN10ZW_SN11](https://www.zigbee2mqtt.io/images/devices/LVS-SN10ZW_SN11.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -37,7 +38,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -49,11 +50,11 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Tamper (binary)
 Indicates whether the device is tampered.

@@ -15,9 +15,11 @@ homeassistant: true
 ```yaml
 homeassistant:
   # Optional: Home Assistant discovery topic (default: shown below)
+  # Note: should be different from [MQTT base topic](../mqtt.md) to prevent errors in HA software
   discovery_topic: 'homeassistant'
   # Optional: Home Assistant status topic (default: shown below)
-  status_topic: 'homeassistant/status'
+  # Note: in addition to the `status_topic`, 'homeassistant/status' will also be used
+  status_topic: 'hass/status'
   # Optional: Home Assistant legacy entity attributes, (default: shown below), when enabled:
   # Zigbee2MQTT will send additional states as attributes with each entity. For example,
   # A temperature & humidity sensor will have 2 entities for the temperature and

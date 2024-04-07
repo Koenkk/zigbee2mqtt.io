@@ -16,16 +16,17 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZSTY-SM-1CTZG-US-W  |
-| Vendor  | Somgoms  |
+| Vendor  | [Somgoms](/supported-devices/#v=Somgoms)  |
 | Description | Curtain switch |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Somgoms ZSTY-SM-1CTZG-US-W](https://www.zigbee2mqtt.io/images/devices/ZSTY-SM-1CTZG-US-W.jpg) |
+| Picture | ![Somgoms ZSTY-SM-1CTZG-US-W](https://www.zigbee2mqtt.io/images/devices/ZSTY-SM-1CTZG-US-W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

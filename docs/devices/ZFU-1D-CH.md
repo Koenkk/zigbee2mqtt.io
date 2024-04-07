@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZFU-1D-CH  |
-| Vendor  | Siglis  |
+| Vendor  | [Siglis](/supported-devices/#v=Siglis)  |
 | Description | zigfred uno smart in-wall switch |
-| Exposes | light (state, brightness, color_xy), switch (state), light (state, brightness), action, linkquality |
-| Picture | ![Siglis ZFU-1D-CH](https://www.zigbee2mqtt.io/images/devices/ZFU-1D-CH.jpg) |
+| Exposes | action, linkquality |
+| Picture | ![Siglis ZFU-1D-CH](https://www.zigbee2mqtt.io/images/devices/ZFU-1D-CH.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,76 +28,26 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `front_surface_enabled`: Front Surface LED enabled. The value must be one of `auto`, `true`, `false`
+
+* `relay_enabled`: Relay enabled. The value must be one of `auto`, `true`, `false`
+
+* `dimmer_enabled`: Dimmer enabled. The value must be one of `auto`, `true`, `false`
+
+* `dimmer_dimming_enabled`: Dimmer dimmable. The value must be one of `auto`, `true`, `false`
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
 * `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
 
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
 
 ## Exposes
-
-### Light (l1 endpoint)
-This light supports the following features: `state`, `brightness`, `color_xy`.
-- `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l1": "ON"}`, `{"state_l1": "OFF"}` or `{"state_l1": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l1": ""}`.
-- `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_l1": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_l1": ""}`.
-- `color_xy`: To control the XY color (CIE 1931 color space) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_l1": {"x": X_VALUE, "y": Y_VALUE}}` (e.g. `{"color":{"x":0.123,"y":0.123}}`). To read the XY color send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_l1":{"x":"","y":""}}`. Alternatively it is possible to set the XY color via RGB:
-  - `{"color": {"r": R, "g": G, "b": B}}` e.g. `{"color":{"r":46,"g":102,"b":150}}`
-  - `{"color": {"rgb": "R,G,B"}}` e.g. `{"color":{"rgb":"46,102,150"}}`
-  - `{"color": {"hex": HEX}}` e.g. `{"color":{"hex":"#547CFF"}}`
-
-#### Transition
-For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
-Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
-
-#### Moving/stepping
-Instead of setting a value (e.g. brightness) directly it is also possible to:
-- move: this will automatically move the value over time, to stop send value `stop` or `0`.
-- step: this will increment/decrement the current value by the given one.
-
-The direction of move and step can be either up or down, provide a negative value to move/step down, a positive value to move/step up.
-To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
-
-**NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
-{
-  "brightness_move": -40, // Starts moving brightness down at 40 units per second
-  "brightness_move": 0, // Stop moving brightness
-  "brightness_step": 40 // Increases brightness by 40
-}
-````
-
-### Switch (l2 endpoint)
-The current state of this switch is in the published state under the `state_l2` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
-To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
-
-### Light (l3 endpoint)
-This light supports the following features: `state`, `brightness`.
-- `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l3": "ON"}`, `{"state_l3": "OFF"}` or `{"state_l3": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l3": ""}`.
-- `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_l3": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_l3": ""}`.
-
-#### Transition
-For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
-Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
-
-#### Moving/stepping
-Instead of setting a value (e.g. brightness) directly it is also possible to:
-- move: this will automatically move the value over time, to stop send value `stop` or `0`.
-- step: this will increment/decrement the current value by the given one.
-
-The direction of move and step can be either up or down, provide a negative value to move/step down, a positive value to move/step up.
-To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
-
-**NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
-{
-  "brightness_move": -40, // Starts moving brightness down at 40 units per second
-  "brightness_move": 0, // Stop moving brightness
-  "brightness_step": 40 // Increases brightness by 40
-}
-````
 
 ### Action (enum)
 Triggered action (e.g. a button click).

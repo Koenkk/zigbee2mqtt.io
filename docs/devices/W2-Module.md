@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | W2-Module  |
-| Vendor  | FireAngel  |
+| Vendor  | [FireAngel](/supported-devices/#v=FireAngel)  |
 | Description | Carbon monoxide sensor |
 | Exposes | carbon_monoxide, battery, linkquality |
-| Picture | ![FireAngel W2-Module](https://www.zigbee2mqtt.io/images/devices/W2-Module.jpg) |
+| Picture | ![FireAngel W2-Module](https://www.zigbee2mqtt.io/images/devices/W2-Module.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,16 +29,17 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
-### Carbon_monoxide (binary)
+### Carbon monoxide (binary)
 Indicates if CO (carbon monoxide) is detected.
 Value can be found in the published state on the `carbon_monoxide` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` carbon_monoxide is ON, if `false` OFF.
+If value equals `true` carbon monoxide is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

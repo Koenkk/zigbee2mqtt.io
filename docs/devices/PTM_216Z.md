@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PTM 216Z  |
-| Vendor  | EnOcean  |
+| Vendor  | [EnOcean](/supported-devices/#v=EnOcean)  |
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
-| Picture | ![EnOcean PTM 216Z](https://www.zigbee2mqtt.io/images/devices/PTM-216Z.jpg) |
+| Picture | ![EnOcean PTM 216Z](https://www.zigbee2mqtt.io/images/devices/PTM-216Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,6 +32,9 @@ Messages from Green Power devices cannot be "understood" by normal Zigbee device
 Not all Zigbee devices can do this translation, currently the only devices known to do this are Philips Hue devices. This means that the Green Power device has to be in range of a Philips Hue device in order to use it.
 
 Green Power devices don't support binding and are not included in network scans.
+
+Binding may work between this module and the actuator, depending if the actuator supports the Zigbee Green Power standard & if the actuators user interface supports "Finding & binding" or "EZ-mode". For more information, contact the supplier of the actuator.
+
 
 ### Pairing
 This device has 4 buttons:
@@ -58,8 +61,9 @@ Once the device is paired you need to confirm the channel. To do this press A1 a
 
 In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds.
 
-This device can work on any channel, not only 11, 15, 20 or 25. For this, please refer to the [EnOcean PTM 216Z manual chapter 5.3](https://www.enocean.com/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/).
+This device can work on any channel, not only 11, 15, 20 or 25. For this, please refer to the [EnOcean PTM 216Z manual chapter 5.3](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/PTM-216Z-User-Manual-1.pdf).
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -69,7 +73,7 @@ This device can work on any channel, not only 11, 15, 20 or 25. For this, please
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `press_1`, `press_2`, `press_1_and_2`, `press_3`, `press_1_and_3`, `press_3_and_4`, `press_1_and_2_and_3`, `press_4`, `press_1_and_4`, `press_2_and_4`, `press_1_and_2_and_4`, `press_3_and_4`, `press_1_and_3_and_4`, `press_2_and_3_and_4`, `press_all`, `press_energy_bar`, `release`.
+The possible values are: `press_1`, `press_2`, `press_1_and_2`, `press_3`, `press_1_and_3`, `press_3_and_4`, `press_1_and_2_and_3`, `press_4`, `press_1_and_4`, `press_2_and_4`, `press_1_and_2_and_4`, `press_3_and_4`, `press_1_and_3_and_4`, `press_2_and_3_and_4`, `press_all`, `press_energy_bar`, `release`, `short_press_2_of_2`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

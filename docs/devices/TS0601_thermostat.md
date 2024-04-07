@@ -16,11 +16,11 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_thermostat  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Radiator valve with thermostat |
-| Exposes | lock (state), switch (state), window_open, battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, away_mode, preset, running_state), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, away_preset_temperature, programming_mode, linkquality |
-| Picture | ![TuYa TS0601_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat.jpg) |
-| White-label | Moes HY368, Moes HY369RT, SHOJZJ 378RT, Silvercrest TVR01 |
+| Exposes | lock (state), switch (state), window_open, battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, preset, running_state), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, away_preset_temperature, week, workdays_schedule, holidays_schedule, linkquality |
+| Picture | ![TuYa TS0601_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat.png) |
+| White-label | Moes HY368, Moes HY369RT, SHOJZJ 378RT, Silvercrest TVR01, Immax 07732B, Evolveo Heat M30 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -48,9 +48,11 @@ After this command thermostat responds with two messages. One for calibration ch
 
 ### Controlling device specific features
 
-- If all you need is to control on and off, you can set "force" with topic `zigbee2mqtt/FRIENDLY_NAME/set`. The payload values are:
-  open -> fully opens valve and stays there
-  close -> fully closes valve and stays there
+- If all you need is to control on and off, you can set "force" with topic `zigbee2mqtt/FRIENDLY_NAME/set`.
+  
+  The payload values are:\
+  open -> fully opens valve and stays there\
+  close -> fully closes valve and stays there\
   normal -> normal valve operation
 
     ```json
@@ -120,6 +122,7 @@ After this command thermostat responds with two messages. One for calibration ch
     ```
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -127,29 +130,29 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Exposes
 
-### Lock 
+### Child lock (lock)
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
 To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
 It's not possible to read (`/get`) this value.
 
-### Switch 
+### Window detection (switch)
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
 
-### Window_open (binary)
+### Window open (binary)
 Window open?.
 Value can be found in the published state on the `window_open` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `undefined` window_open is ON, if `undefined` OFF.
+If value equals `true` window open is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
-### Switch 
+### Valve detection (switch)
 The current state of this switch is in the published state under the `valve_detection` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"valve_detection": "ON"}`, `{"valve_detection": "OFF"}` or `{"valve_detection": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
@@ -161,33 +164,32 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Climate 
-This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `system_mode`, `local_temperature_calibration`, `away_mode`, `preset`, `running_state`.
-- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_heating_setpoint": ""}`.
+This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `system_mode`, `local_temperature_calibration`, `preset`, `running_state`.
+- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
-- `system_mode`: Mode of this device, in the `heat` mode the TS0601 will remain continuously heating, i.e. it does not regulate to the desired temperature. If you want TRV to properly regulate the temperature you need to use mode `auto` instead setting the desired temperature.. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `heat`, `auto`, `off`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
-- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `schedule`, `manual`, `boost`, `complex`, `comfort`, `eco`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
-- `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
-- `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`
-- `away_mode`: Away mode. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_mode": "ON"}` or `{"away_mode": "OFF"}`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"away_mode": ""}`.
+- `system_mode`: Mode of this device, in the `heat` mode the TS0601 will remain continuously heating, i.e. it does not regulate to the desired temperature. If you want TRV to properly regulate the temperature you need to use mode `auto` instead setting the desired temperature.. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `heat`, `auto`, `off`. Reading (`/get`) this attribute is not possible.
+- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `schedule`, `manual`, `boost`, `complex`, `comfort`, `eco`, `away`. Reading (`/get`) this attribute is not possible.
+- `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
+- `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-9` and the maximum value is `9` with a step size of `0.5`.
 
-### Switch 
+### Auto lock (switch)
 The current state of this switch is in the published state under the `auto_lock` property (value is `AUTO` or `MANUAL`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_lock": "AUTO"}`, `{"auto_lock": "MANUAL"}` or `{"auto_lock": "undefined"}`.
 It's not possible to read (`/get`) this value.
 
-### Switch 
+### Away mode (switch)
 The current state of this switch is in the published state under the `away_mode` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_mode": "ON"}`, `{"away_mode": "OFF"}` or `{"away_mode": "undefined"}`.
 It's not possible to read (`/get`) this value.
 
-### Away_preset_days (numeric)
+### Away preset days (numeric)
 Away preset days.
 Value can be found in the published state on the `away_preset_days` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"away_preset_days": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
-### Boost_time (numeric)
+### Boost time (numeric)
 Boost time.
 Value can be found in the published state on the `boost_time` property.
 It's not possible to read (`/get`) this value.
@@ -195,7 +197,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `900`.
 The unit of this value is `s`.
 
-### Comfort_temperature (numeric)
+### Comfort temperature (numeric)
 Comfort temperature.
 Value can be found in the published state on the `comfort_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -203,7 +205,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `30`.
 The unit of this value is `°C`.
 
-### Eco_temperature (numeric)
+### Eco temperature (numeric)
 Eco temperature.
 Value can be found in the published state on the `eco_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -218,15 +220,15 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"force": NEW_VALUE}`.
 The possible values are: `normal`, `open`, `close`.
 
-### Max_temperature (numeric)
+### Max temperature (numeric)
 Maximum temperature.
 Value can be found in the published state on the `max_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_temperature": NEW_VALUE}`.
-The minimal value is `15` and the maximum value is `35`.
+The minimal value is `16` and the maximum value is `70`.
 The unit of this value is `°C`.
 
-### Min_temperature (numeric)
+### Min temperature (numeric)
 Minimum temperature.
 Value can be found in the published state on the `min_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -234,7 +236,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `1` and the maximum value is `15`.
 The unit of this value is `°C`.
 
-### Away_preset_temperature (numeric)
+### Away preset temperature (numeric)
 Away preset temperature.
 Value can be found in the published state on the `away_preset_temperature` property.
 It's not possible to read (`/get`) this value.
@@ -242,11 +244,24 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-10` and the maximum value is `35`.
 The unit of this value is `°C`.
 
-### Programming_mode (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"undefined": {"week": VALUE, "workdays_schedule": VALUE, "holidays_schedule": VALUE}}`
-- `week` (enum): Week format user for schedule. Allowed values: `5+2`, `6+1`, `7`
-- `workdays_schedule` (text): undefined. 
-- `holidays_schedule` (text): undefined. 
+### Week (enum)
+Week format user for schedule.
+Value can be found in the published state on the `week` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"week": NEW_VALUE}`.
+The possible values are: `5+2`, `6+1`, `7`.
+
+### Workdays schedule (text)
+Workdays schedule, 6 entries max, example: "00:20/5°C 01:20/5°C 6:59/15°C 18:00/5°C 20:00/5°C 23:30/5°C".
+Value can be found in the published state on the `workdays_schedule` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"workdays_schedule": NEW_VALUE}`.
+
+### Holidays schedule (text)
+Holidays schedule, 6 entries max, example: "00:20/5°C 01:20/5°C 6:59/15°C 18:00/5°C 20:00/5°C 23:30/5°C".
+Value can be found in the published state on the `holidays_schedule` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"holidays_schedule": NEW_VALUE}`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

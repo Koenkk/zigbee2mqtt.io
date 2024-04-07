@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | PJ-ZGD01  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Garage door opener |
 | Exposes | trigger, garage_door_contact, linkquality |
-| Picture | ![TuYa PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.jpg) |
+| Picture | ![TuYa PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.png) |
 | White-label | MatSee Plus PJ-ZGD01 |
 
 
@@ -27,6 +27,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -39,10 +40,10 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger": NEW_VALUE}`.
 If value equals `true` trigger is ON, if `false` OFF.
 
-### Garage_door_contact (binary)
+### Garage door contact (binary)
 Value can be found in the published state on the `garage_door_contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` garage_door_contact is ON, if `false` OFF.
+If value equals `true` garage door contact is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

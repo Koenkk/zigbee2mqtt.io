@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ITCMDR_Click  |
-| Vendor  | IT Commander  |
+| Vendor  | [IT Commander](/supported-devices/#v=IT%20Commander)  |
 | Description | Button |
 | Exposes | action, battery, voltage, linkquality |
-| Picture | ![IT Commander ITCMDR_Click](https://www.zigbee2mqtt.io/images/devices/ITCMDR_Click.jpg) |
+| Picture | ![IT Commander ITCMDR_Click](https://www.zigbee2mqtt.io/images/devices/ITCMDR_Click.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,6 +27,14 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes
@@ -38,7 +46,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `triple`, `hold`, `release`, `many`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

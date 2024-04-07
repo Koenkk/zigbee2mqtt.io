@@ -16,37 +16,40 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | DIYRuZ_AirSense  |
-| Vendor  | DIYRuZ  |
-| Description | [Air quality sensor](https://modkam.ru/?p=1715) |
+| Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
+| Description | Air quality sensor |
 | Exposes | co2, temperature, humidity, pressure, led_feedback, enable_abc, threshold1, threshold2, temperature_offset, humidity_offset, pressure_offset, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_AirSense](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_AirSense.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_AirSense](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_AirSense.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Notes
+[Air quality sensor](https://modkam.ru/?p=1715)
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `co2_calibration`: Calibrates the co2 value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `pressure_precision`: Number of digits after decimal point for pressure, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `pressure_calibration`: Calibrates the pressure value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `pressure_precision`: Number of digits after decimal point for pressure, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes
 
-### Co2 (numeric)
+### CO2 (numeric)
 The measured CO2 (carbon dioxide) value.
 Value can be found in the published state on the `co2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -70,19 +73,19 @@ Value can be found in the published state on the `pressure` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `hPa`.
 
-### Led_feedback (binary)
+### Led feedback (binary)
 Enable LEDs feedback.
 Value can be found in the published state on the `led_feedback` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_feedback": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_feedback": NEW_VALUE}`.
-If value equals `ON` led_feedback is ON, if `OFF` OFF.
+If value equals `ON` led feedback is ON, if `OFF` OFF.
 
-### Enable_abc (binary)
+### Enable abc (binary)
 Enable ABC (Automatic Baseline Correction).
 Value can be found in the published state on the `enable_abc` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_abc": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_abc": NEW_VALUE}`.
-If value equals `ON` enable_abc is ON, if `OFF` OFF.
+If value equals `ON` enable abc is ON, if `OFF` OFF.
 
 ### Threshold1 (numeric)
 Warning (LED2) CO2 level.
@@ -100,7 +103,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `50000`.
 The unit of this value is `ppm`.
 
-### Temperature_offset (numeric)
+### Temperature offset (numeric)
 Adjust temperature.
 Value can be found in the published state on the `temperature_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
@@ -108,7 +111,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-20` and the maximum value is `20`.
 The unit of this value is `°C`.
 
-### Humidity_offset (numeric)
+### Humidity offset (numeric)
 Adjust humidity.
 Value can be found in the published state on the `humidity_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_offset": ""}`.
@@ -116,7 +119,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
 
-### Pressure_offset (numeric)
+### Pressure offset (numeric)
 Adjust pressure.
 Value can be found in the published state on the `pressure_offset` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pressure_offset": ""}`.

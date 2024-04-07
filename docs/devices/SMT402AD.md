@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SMT402AD  |
-| Vendor  | Stelpro  |
+| Vendor  | [Stelpro](/supported-devices/#v=Stelpro)  |
 | Description | Maestro, line-voltage thermostat |
 | Exposes | local_temperature, keypad_lockout, humidity, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
-| Picture | ![Stelpro SMT402AD](https://www.zigbee2mqtt.io/images/devices/SMT402AD.jpg) |
+| Picture | ![Stelpro SMT402AD](https://www.zigbee2mqtt.io/images/devices/SMT402AD.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,28 +28,29 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `thermostat_unit`: Controls the temperature unit of the thermostat (default celsius). The value must be one of `celsius`, `fahrenheit`
 
 * `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
-
 
 ## Exposes
 
-### Local_temperature (numeric)
+### Local temperature (numeric)
 Current temperature measured on the device.
 Value can be found in the published state on the `local_temperature` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Keypad_lockout (enum)
+### Keypad lockout (enum)
 Enables/disables physical input on the device.
 Value can be found in the published state on the `keypad_lockout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keypad_lockout": ""}`.

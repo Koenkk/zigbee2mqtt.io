@@ -16,16 +16,17 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZSTY-SM-11ZG-US-W  |
-| Vendor  | Somgoms  |
+| Vendor  | [Somgoms](/supported-devices/#v=Somgoms)  |
 | Description | 1 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Somgoms ZSTY-SM-11ZG-US-W](https://www.zigbee2mqtt.io/images/devices/ZSTY-SM-11ZG-US-W.jpg) |
+| Picture | ![Somgoms ZSTY-SM-11ZG-US-W](https://www.zigbee2mqtt.io/images/devices/ZSTY-SM-11ZG-US-W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

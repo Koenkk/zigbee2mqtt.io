@@ -34,6 +34,8 @@ array or device object (refer to the definition in the `devices` folder of zigbe
 can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/tree/master/docs/externalConvertersExample). For this
 example put the files in the `data` folder and add the following to `configuration.yaml`:
 
+Note that external converters take precedence of standard converters
+
 ```yaml
 external_converters:
   - freepad_ext.js

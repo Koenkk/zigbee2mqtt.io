@@ -16,16 +16,17 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SBM300ZB2  |
-| Vendor  | ShinaSystem  |
+| Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS remote control 2 button |
 | Exposes | action, battery, voltage, linkquality |
-| Picture | ![ShinaSystem SBM300ZB2](https://www.zigbee2mqtt.io/images/devices/SBM300ZB2.jpg) |
+| Picture | ![ShinaSystem SBM300ZB2](https://www.zigbee2mqtt.io/images/devices/SBM300ZB2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -38,7 +39,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `1_single`, `1_double`, `1_long`, `2_single`, `2_double`, `2_long`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -16,16 +16,17 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TI0001-curtain-switch  |
-| Vendor  | Livolo  |
+| Vendor  | [Livolo](/supported-devices/#v=Livolo)  |
 | Description | Zigbee curtain switch (can only read status, control does not work yet) |
 | Exposes | switch (state), linkquality |
-| Picture | ![Livolo TI0001-curtain-switch](https://www.zigbee2mqtt.io/images/devices/TI0001-curtain-switch.jpg) |
+| Picture | ![Livolo TI0001-curtain-switch](https://www.zigbee2mqtt.io/images/devices/TI0001-curtain-switch.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WM25L-Z  |
-| Vendor  | Smartwings  |
+| Vendor  | [Smartwings](/supported-devices/#v=Smartwings)  |
 | Description | Roller shade |
 | Exposes | cover (state, position), battery, linkquality |
-| Picture | ![Smartwings WM25L-Z](https://www.zigbee2mqtt.io/images/devices/WM25L-Z.jpg) |
+| Picture | ![Smartwings WM25L-Z](https://www.zigbee2mqtt.io/images/devices/WM25L-Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,15 +27,20 @@ pageClass: device-page
 
 
 ### Pairing
-It's recommend to first pair the included TRADFRI signal repeater in the room where you want to put the blinds.
-Now press both buttons on the blind (next to battery lid) for 5 seconds until a white light between both buttons is turned on.
-The device is now awake and ready to pair for 2 minutes.
-After that pair the blind by holding the blind battery lid very close to the TRADFRI signal repeater until the white light is turned off (this should mean the pairing is successful).
+Press and hold the button on the motor head for 6 seconds until the motor feedback twice then release the button. The red led light on indicate to enter the pairing mode.
 
 ### End Position
 The roller blind maximum extension can be set by moving the blind to the desired position and then double pressing the up or down button.
 To reset the end position so you can define a newer more extended end position, open the blind fully. Then double press the up or down button. You can now set the blind extension again.
+
+### Open/Close Behavior
+If the unit is shipped with the open and close actions swapped (where OPEN causes the shade to lengthen instead of shorten?), it can be reversed with the included remote. To reverse the open/close behavior:
+
+1. open the back of the remote and press the P (program buttom) once - the motor will activate once briefly
+2. press and hold the UP and DOWN arrow buttons on the remote briefly until you hear the motor activate once briefly
+3. the open/close behavior should now be reversed
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -53,7 +58,7 @@ It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

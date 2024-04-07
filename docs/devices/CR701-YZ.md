@@ -16,16 +16,17 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | CR701-YZ  |
-| Vendor  | Oujiabao  |
+| Vendor  | [Oujiabao](/supported-devices/#v=Oujiabao)  |
 | Description | Gas and carbon monoxide alarm |
 | Exposes | gas, carbon_monoxide, tamper, battery_low, linkquality |
-| Picture | ![Oujiabao CR701-YZ](https://www.zigbee2mqtt.io/images/devices/CR701-YZ.jpg) |
+| Picture | ![Oujiabao CR701-YZ](https://www.zigbee2mqtt.io/images/devices/CR701-YZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -37,11 +38,11 @@ Value can be found in the published state on the `gas` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` gas is ON, if `false` OFF.
 
-### Carbon_monoxide (binary)
+### Carbon monoxide (binary)
 Indicates if CO (carbon monoxide) is detected.
 Value can be found in the published state on the `carbon_monoxide` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` carbon_monoxide is ON, if `false` OFF.
+If value equals `true` carbon monoxide is ON, if `false` OFF.
 
 ### Tamper (binary)
 Indicates whether the device is tampered.
@@ -49,11 +50,11 @@ Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

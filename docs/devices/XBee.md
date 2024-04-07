@@ -16,16 +16,17 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | XBee  |
-| Vendor  | Digi  |
+| Vendor  | [Digi](/supported-devices/#v=Digi)  |
 | Description | Router |
 | Exposes | linkquality |
-| Picture | ![Digi XBee](https://www.zigbee2mqtt.io/images/devices/XBee.jpg) |
+| Picture | ![Digi XBee](https://www.zigbee2mqtt.io/images/devices/XBee.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

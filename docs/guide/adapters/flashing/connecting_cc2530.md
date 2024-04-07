@@ -110,7 +110,7 @@ Wire the CC2530 to the ESP8266 using the following scheme:
 | GND     | P05 |
 
 ### Option 1 - Flashing the ESP8266 with ESPEasy
-The ESP8266 needs to be flashed with ESPEasy. ESPEasy has suficient documentation on how to get you up and running:
+The ESP8266 needs to be flashed with ESPEasy. ESPEasy has sufficient documentation on how to get you up and running:
 - [How to flash the ESP8266 with ESPEasy](https://www.letscontrolit.com/wiki/index.php?title=Tutorial_ESPEasy_Firmware_Upload)
 - ESP8266 firmware: [ESP_Easy_mega-XXXXXXXX_normal_ESP8266_4096.bin](https://github.com/letscontrolit/ESPEasy/releases)
 - [More information about ESPEasy](https://www.letscontrolit.com/wiki/index.php/ESPEasy#Introduction)
@@ -160,6 +160,7 @@ Now add the following to the Zigbee2MQTT `configuration.yaml`:
 ```yaml
 serial:
     port: 'tcp://192.168.2.13:20108'
+    adapter: zstack
 ```
 
 Note to change the IP address and port.

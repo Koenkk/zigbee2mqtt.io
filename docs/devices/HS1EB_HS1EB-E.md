@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS1EB/HS1EB-E  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart emergency button |
 | Exposes | battery, action, linkquality |
-| Picture | ![HEIMAN HS1EB/HS1EB-E](https://www.zigbee2mqtt.io/images/devices/HS1EB-HS1EB-E.jpg) |
+| Picture | ![HEIMAN HS1EB/HS1EB-E](https://www.zigbee2mqtt.io/images/devices/HS1EB-HS1EB-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -40,6 +40,7 @@ devices:
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -49,7 +50,7 @@ devices:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

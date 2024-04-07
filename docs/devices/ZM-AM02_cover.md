@@ -16,16 +16,17 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZM-AM02_cover  |
-| Vendor  | Zemismart  |
+| Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Zigbee/RF curtain converter |
 | Exposes | cover (state, position), options, motor_working_mode, percent_state, mode, motor_direction, border, linkquality |
-| Picture | ![Zemismart ZM-AM02_cover](https://www.zigbee2mqtt.io/images/devices/ZM-AM02_cover.jpg) |
+| Picture | ![Zemismart ZM-AM02_cover](https://www.zigbee2mqtt.io/images/devices/ZM-AM02_cover.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -43,16 +44,15 @@ It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Options (composite)
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"options": {"motor_speed": VALUE}}`
-- `motor_speed` (numeric): Motor speed. 
+- `motor_speed` (numeric): Motor speed max value is 255
 
-### Motor_working_mode (enum)
+### Motor working mode (enum)
 Value can be found in the published state on the `motor_working_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_working_mode": NEW_VALUE}`.
 The possible values are: `continuous`, `intermittently`.
 
-### Percent_state (numeric)
+### Percent state (numeric)
 Value can be found in the published state on the `percent_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -64,7 +64,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode": NEW_VALUE}`.
 The possible values are: `morning`, `night`.
 
-### Motor_direction (enum)
+### Motor direction (enum)
 Value can be found in the published state on the `motor_direction` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_direction": NEW_VALUE}`.

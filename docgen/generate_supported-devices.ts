@@ -1,13 +1,11 @@
 /**
  * This script generates the supported devices page.
  */
-import { devices } from 'zigbee-herdsman-converters';
-import throat from "throat";
-import * as path from "path";
 import { promises as fsp } from "fs";
-import { generatePage, getAddedAt, getImage, normalizeModel } from "./utils";
+import { generatePage, getAddedAt, getImage, normalizeModel, allDefinitions } from "./utils";
 import { imageBaseDir } from "./constants";
 import { resolveDeviceFile } from "./generate_device";
+import { Definition } from "zigbee-herdsman-converters";
 
 const vendors = new Set();
 
@@ -18,35 +16,36 @@ export default async function generate_supportedDevices() {
   } catch(e) {
   }
 
-  let devicesMapped = [...devices];
+  let definitions: (Definition & {isWhiteLabel?: boolean, whiteLabelOf?: Definition})[]  = [...allDefinitions];
 
-  for (const device of devices) {
-    if (device.whiteLabel) {
-      for (const whiteLabel of device.whiteLabel) {
-        const whiteLabelDevice = {
-          ...device,
+  for (const definition of allDefinitions) {
+    if (definition.whiteLabel) {
+      for (const whiteLabel of definition.whiteLabel) {
+        const whiteLabelDefinition = {
+          ...definition,
           model: whiteLabel.model,
           vendor: whiteLabel.vendor,
-          description: whiteLabel.description,
+          description: whiteLabel.description ?? definition.description,
           isWhiteLabel: true,
-          whiteLabelOf: device,
+          whiteLabelOf: definition,
         };
 
-        delete whiteLabelDevice.whiteLabel;
+        delete whiteLabelDefinition.whiteLabel;
 
-        devicesMapped.push(whiteLabelDevice);
+        definitions.push(whiteLabelDefinition);
       }
     }
   }
 
-  devicesMapped = await Promise.all(devicesMapped.map(async (d) => {
+  let mappedDefinitions = await Promise.all(definitions.map(async (d) => {
     const model = d.model;
-    const baseModel = d.whiteLabelOf ? d.whiteLabelOf.model : d.model;
+    const baseModel = d.whiteLabelOf?.model ?? d.model;
     const image = await getImage(d, imageBaseDir, '../images/devices');
-    const description = d.description || d.whiteLabelOf.description;
+    const description = d.description;
     const link = `../devices/${ normalizeModel(baseModel) }.html`;
+    if (d.exposes ==  null) throw new Error('Exposes null');
     const exposes = Array.from(new Set(
-      (typeof d.exposes === 'function' ? d.exposes() : d.exposes)
+      (typeof d.exposes === 'function' ? d.exposes(undefined, undefined) : d.exposes)
         .map((e) => e.name ? e.name : e.type)
         .filter((e) => e !== 'linkquality' && e !== 'effect'),
     ));
@@ -74,7 +73,7 @@ export default async function generate_supportedDevices() {
   }));
 
 
-  devicesMapped = devicesMapped.sort((a, b) => (b.addedAt < a.addedAt) ? -1 : ((b.addedAt > a.addedAt) ? 1 : 0));
+  mappedDefinitions = mappedDefinitions.sort((a, b) => (b.addedAt < a.addedAt) ? -1 : ((b.addedAt > a.addedAt) ? 1 : 0));
 
   const result = `---
 sidebar: false
@@ -86,12 +85,12 @@ pageClass: supported-devices-page
 <!-- ATTENTION: This file is auto-generated through docgen, do not edit! -->
 <!-- !!!! -->
 
-Currently **${ devicesMapped.length }** devices are supported from **${ vendors.size }** different vendors.
+Currently **${ mappedDefinitions.length }** devices are supported from **${ vendors.size }** different vendors.
 In case you own a Zigbee device which is NOT listed here, please see [How to support new devices](../advanced/support-new-devices/01_support_new_devices.md).
 
 <script>
 if (!__VUEPRESS_SSR__) {
-  window.ZIGBEE2MQTT_SUPPORTED_DEVICES = ${ JSON.stringify(devicesMapped) };
+  window.ZIGBEE2MQTT_SUPPORTED_DEVICES = ${ JSON.stringify(mappedDefinitions) };
 }
 </script>
 

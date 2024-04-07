@@ -16,22 +16,25 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | YSR-MINI-Z  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2 in 1 dimming remote control and scene control |
 | Exposes | battery, action, operation_mode, linkquality |
-| Picture | ![TuYa YSR-MINI-Z](https://www.zigbee2mqtt.io/images/devices/YSR-MINI-Z.jpg) |
+| Picture | ![TuYa YSR-MINI-Z](https://www.zigbee2mqtt.io/images/devices/YSR-MINI-Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+Press and hold the on (`1`) and off (`0`) buttons for approimately 10 seconds until the indicator light flashes rapidly.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. Example:
+* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval. Example:
 ```yaml
 simulated_brightness:
   delta: 20 # delta per interval, default = 20
@@ -42,7 +45,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -54,7 +57,7 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `brightness_move_up`, `brightness_step_up`, `brightness_step_down`, `brightness_move_down`, `brightness_stop`, `color_temperature_step_down`, `color_temperature_step_up`, `1_single`, `1_double`, `1_hold`, `2_single`, `2_double`, `2_hold`, `3_single`, `3_double`, `3_hold`, `4_single`, `4_double`, `4_hold`.
 
-### Operation_mode (enum)
+### Operation mode (enum)
 Operation mode: "command" - for group control, "event" - for clicks.
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.

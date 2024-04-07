@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TW-S1  |
-| Vendor  | Konke  |
+| Vendor  | [Konke](/supported-devices/#v=Konke)  |
 | Description | Photoelectric smoke detector |
 | Exposes | smoke, battery_low, linkquality |
-| Picture | ![Konke TW-S1](https://www.zigbee2mqtt.io/images/devices/TW-S1.jpg) |
+| Picture | ![Konke TW-S1](https://www.zigbee2mqtt.io/images/devices/TW-S1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,6 +32,7 @@ Konke devices only work on Zigbee channel 15, 20 and 25.
 
 
 
+
 ## Exposes
 
 ### Smoke (binary)
@@ -40,11 +41,11 @@ Value can be found in the published state on the `smoke` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` smoke is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

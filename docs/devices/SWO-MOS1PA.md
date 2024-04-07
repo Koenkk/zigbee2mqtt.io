@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SWO-MOS1PA  |
-| Vendor  | Swann  |
+| Vendor  | [Swann](/supported-devices/#v=Swann)  |
 | Description | Motion and temperature sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
-| Picture | ![Swann SWO-MOS1PA](https://www.zigbee2mqtt.io/images/devices/SWO-MOS1PA.jpg) |
+| Picture | ![Swann SWO-MOS1PA](https://www.zigbee2mqtt.io/images/devices/SWO-MOS1PA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,6 +32,7 @@ Device is listed as having temperature detection. This feature is still being in
 
 
 
+
 ## Exposes
 
 ### Occupancy (binary)
@@ -40,11 +41,11 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Tamper (binary)
 Indicates whether the device is tampered.

@@ -37,7 +37,7 @@ To only store the state of a single light in a scene for a group send e.g. `{"sc
 ```
 
 In case a `scene_store` is called with the same `SCENE_ID` all values except the `transition` are overridden. In this way it's possible to have a transition for a scene created through `scene_store`.
-Equaling `scene_store` a `group_id` can be provided when calling `scene_add` for a single light. In that scenario the state will be applied when the scene is recalled on the group. This is powerfull in providing support for transitions while also allowing each light to have a different state in the scene and thus also allowing different transition times per light when the scene is recalled on the group.
+Equaling `scene_store` a `group_id` can be provided when calling `scene_add` for a single light. In that scenario the state will be applied when the scene is recalled on the group. This is powerful in providing support for transitions while also allowing each light to have a different state in the scene and thus also allowing different transition times per light when the scene is recalled on the group.
 
 ## Recall scene
 To recall the scene send a command to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]/set` with payload `{"scene_recall": SCENE_ID}` where `SCENE_ID` is a number (e.g. `1`).
@@ -46,3 +46,32 @@ To recall the scene send a command to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAM
 To remove a scene send a command to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]/set` with payload `{"scene_remove": SCENE_ID}` where `SCENE_ID` is a number (e.g. `1`).
 
 Alternatively if you want to remove all scenes send a command to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]/set` with payload `{"scene_remove_all": ""}`
+
+## Using transitions in scenes
+Scene transition times can only be set with the `scene_add` command. To make use of the `scene_store` command and use transitions, first create a new scene using the `scene_add` command:
+
+```
+{
+    "scene_add": {
+        "ID": 0,
+        "name": "Scene Name",
+        "transition": 5
+    }
+}
+```
+
+That will create an empty scene. You can then set the values of your devices and call the `scene_store` command, using the same `ID` provided in the `scene_add` command:
+
+```
+{
+    "scene_store": {
+        "ID": 0,
+        "name": "Scene Name"
+    }
+}
+```
+
+The `scene_store` command overrites all values _except_ the `transition` value.
+
+## Rename scene
+In order to change (or set) the name for an existing scene, a command can be sent to `zigbee2mqtt/[GROUP_OR_DEVICE_FRIENDLY_NAME]/set` with payload `{"scene_rename": {"ID": SCENE_ID, "name": SCENE_NAME}}` where `SCENE_ID` is a number and `SCENE_NAME` is a string representing the new name. For example: `{"scene_rename": {"ID": 1, "name": "My new scene name"}}`.

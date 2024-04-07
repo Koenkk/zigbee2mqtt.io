@@ -22,6 +22,8 @@ groups:
     transition: 2
     # Optional: Change group state when one of the devices in it changes state, see 'State changes' below (default: true)
     optimistic: true
+    # Optional: Control when state OFF is published for a group, see "State changes" below (default: all_members_off)
+    off_state: 'all_members_off'
     # Optional: Devices of this group,
     # Note: This can be the ieeeAddr of the device or the friendly_name (default: empty)
     devices:
@@ -53,10 +55,14 @@ Controlling a group is similar to controlling a single device. For example to tu
 ```
 
 ## State changes
-By default when one of the devices in a group changes its state, the group state will update to reflect the change. If any lights within the group have a state of `on`, the group state will stay `on`. Also when the state of a group is changed by a command (so not via a state change of a device in it; see previous line), all devices in the group will also change its state. This behavior can be disabled by setting `optimistic: false` for the group.
+By default when one of the devices in a group changes its state, the group state will update to reflect the change. The behaviour of the `state` property can be controlled through the `off_state` option. There are 2 possible options:
+- `all_members_off` (default): The group `state` will stay `ON` if at least one of the group member is in `state` `ON`.
+- `last_member_state`: The group `state` will equal the `state` of the member who last changed state.
+
+When the state of a group is changed by a command (so not via a state change of a device in it), all devices in the group will also change its state. This behavior can be disabled by setting `optimistic: false` for the group.
 
 ## How do groups work?
-By using the above `add` command above, a device will be added to a group. The device itself is responsible for storing to which groups it belongs. Others, e.g. the coordinator, do not have knowledge to which device a groups belongs.
+By using the above `add` command above, a device will be added to a group. The device itself is responsible for storing to which groups it belongs. Others, e.g. the coordinator, do not have knowledge to which groups a device belongs.
 
 When using the `set` command, e.g. to turn on all devices in a group, a broadcast request is send to **all** devices in the network. The device itself then determines if it belongs to that group and if it should execute the command.
 

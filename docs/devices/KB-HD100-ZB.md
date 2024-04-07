@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | KB-HD100-ZB  |
-| Vendor  | Dawon DNS  |
+| Vendor  | [Dawon DNS](/supported-devices/#v=Dawon%20DNS)  |
 | Description | IOT Card holder |
 | Exposes | card, battery_low, linkquality |
-| Picture | ![Dawon DNS KB-HD100-ZB](https://www.zigbee2mqtt.io/images/devices/KB-HD100-ZB.jpg) |
+| Picture | ![Dawon DNS KB-HD100-ZB](https://www.zigbee2mqtt.io/images/devices/KB-HD100-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,19 +33,21 @@ After this the device will automatically join.
 
 
 
+
 ## Exposes
 
 ### Card (binary)
 Indicates if the card is inserted (= true) or not (= false).
 Value can be found in the published state on the `card` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"card": ""}`.
+It's not possible to write (`/set`) this value.
 If value equals `true` card is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

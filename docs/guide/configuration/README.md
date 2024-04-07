@@ -13,14 +13,19 @@ permit_join: true
 mqtt:
   server: mqtt://localhost:1883
 serial:
+  # Could be either USB port (/dev/ttyUSB0), network Zigbee adapters (tcp://192.168.1.1:6638) or mDNS adapter (mdns://my-adapter).
   port: /dev/ttyUSB0
-frontend:
-  port: 8080
+# Will run frontend on port 8080
+frontend: true 
 ```
 
 ::: tip CONVENTION
 The _dot-notation_ of a config-key like `mqtt.server` means `server` property within the `mqtt`
 section. All _dot-notation_ references are absolute.
+:::
+
+::: warning ATTENTION
+Be aware of the implications using `permit_join: true` and read the details in the [Permit join](zigbee-network.md#permit-join) documentation.
 :::
 
 ## Environment variables

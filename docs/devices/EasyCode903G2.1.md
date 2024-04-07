@@ -16,16 +16,18 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | EasyCode903G2.1  |
-| Vendor  | EasyAccess  |
+| Vendor  | [EasyAccess](/supported-devices/#v=EasyAccess)  |
 | Description | EasyFinger V2 |
 | Exposes | lock (state, lock_state), battery, sound_volume, action, auto_relock, linkquality |
-| Picture | ![EasyAccess EasyCode903G2.1](https://www.zigbee2mqtt.io/images/devices/EasyCode903G2.1.jpg) |
+| Picture | ![EasyAccess EasyCode903G2.1](https://www.zigbee2mqtt.io/images/devices/EasyCode903G2.1.png) |
+| White-label | Datek Wireless EasyCode903G2.1 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -38,13 +40,13 @@ To read the current state of this lock publish a message to topic `zigbee2mqtt/F
 This lock exposes a lock state which can be found in the published state under the `lock_state` property. It's not possible to read (`/get`) or write (`/set`) this value. The possible values are: `not_fully_locked`, `locked`, `unlocked`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Sound_volume (enum)
+### Sound volume (enum)
 Sound volume of the lock.
 Value can be found in the published state on the `sound_volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sound_volume": ""}`.
@@ -57,12 +59,12 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `zigbee_unlock`, `lock`, `rfid_unlock`, `keypad_unlock`.
 
-### Auto_relock (binary)
+### Auto relock (binary)
 Auto relock after 7 seconds..
 Value can be found in the published state on the `auto_relock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_relock": NEW_VALUE}`.
-If value equals `true` auto_relock is ON, if `false` OFF.
+If value equals `true` auto relock is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

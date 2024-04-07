@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi WXKG12LM control via MQTT"
-description: "Integrate your Xiaomi WXKG12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara WXKG12LM control via MQTT"
+description: "Integrate your Aqara WXKG12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi WXKG12LM
+# Aqara WXKG12LM
 
 |     |     |
 |-----|-----|
 | Model | WXKG12LM  |
-| Vendor  | Xiaomi  |
-| Description | Aqara wireless switch (with gyroscope) |
-| Exposes | battery, action, voltage, linkquality |
-| Picture | ![Xiaomi WXKG12LM](https://www.zigbee2mqtt.io/images/devices/WXKG12LM.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Wireless mini switch (with gyroscope) |
+| Exposes | battery, voltage, action, linkquality |
+| Picture | ![Aqara WXKG12LM](https://www.zigbee2mqtt.io/images/devices/WXKG12LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -49,10 +49,11 @@ Since Xiaomi devices do not fully comply to the Zigbee standard, it sometimes ha
 Most of the times this happens because of the following reasons:
 - Device has a weak signal, you can see the signal quality in the published messages as `linkquality`. A linkquality < 20 is considered weak.
 - Low battery voltage, this can even happen when the battery still appears full. Try a different battery.
-- The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, OSRAM, Sylvania, SmartThings, Securifi.
+- The device is connected through a router which cannot deal with Xiaomi devices. This is known to happen devices from: Centralite, General Electric, Iris, Ledvance, Legrand, OSRAM, Sylvania, SmartThings, Securifi. A possible solution is to connect the device directly to the central coordinator by pushing the reset button while being physically close to it.
 
 More detailed information about this can be found [here](https://community.hubitat.com/t/xiaomi-aqara-devices-pairing-keeping-them-connected/623).
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -64,23 +65,23 @@ More detailed information about this can be found [here](https://community.hubit
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `hold`, `release`, `shake`.
 
 ### Voltage (numeric)
 Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`, `hold`, `release`, `shake`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

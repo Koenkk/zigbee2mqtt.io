@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZSTY-SM-1DMZG-US-W  |
-| Vendor  | Somgoms  |
+| Vendor  | [Somgoms](/supported-devices/#v=Somgoms)  |
 | Description | Dimmer switch |
 | Exposes | light (state, brightness), linkquality |
-| Picture | ![Somgoms ZSTY-SM-1DMZG-US-W](https://www.zigbee2mqtt.io/images/devices/ZSTY-SM-1DMZG-US-W.jpg) |
+| Picture | ![Somgoms ZSTY-SM-1DMZG-US-W](https://www.zigbee2mqtt.io/images/devices/ZSTY-SM-1DMZG-US-W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,33 +29,13 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
 ### Light 
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
-
-#### Transition
-For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
-Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
-
-#### Moving/stepping
-Instead of setting a value (e.g. brightness) directly it is also possible to:
-- move: this will automatically move the value over time, to stop send value `stop` or `0`.
-- step: this will increment/decrement the current value by the given one.
-
-The direction of move and step can be either up or down, provide a negative value to move/step down, a positive value to move/step up.
-To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
-
-**NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
-{
-  "brightness_move": -40, // Starts moving brightness down at 40 units per second
-  "brightness_move": 0, // Stop moving brightness
-  "brightness_step": 40 // Increases brightness by 40
-}
-````
 
 ### Linkquality (numeric)
 Link quality (signal strength).

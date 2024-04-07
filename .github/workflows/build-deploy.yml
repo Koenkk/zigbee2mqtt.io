@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🚚
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js ⚗
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: 20
 
       - name: Determine node version №
         id: node-version
@@ -23,7 +23,7 @@ jobs:
           echo "::set-output name=version::$(node -v)"
 
       - name: Restore Cache 📦
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: cache
         with:
           path: node_modules
@@ -39,12 +39,14 @@ jobs:
 #          echo "DEVELOP_BRANCH=yes" >> $GITHUB_ENV
 
       - name: Build 🛠
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
         run: npm run build
 
       - name: Run tests 🩺
         run: npm run test
 
       - name: Add build.txt 🗓
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
         run: |
           git log --pretty=format:'%h' -n 1 > dist/build.txt
           echo >> dist/build.txt
@@ -52,7 +54,7 @@ jobs:
 
       - name: Deploy 🚀
         if: github.ref == 'refs/heads/master'
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: dist # The folder the action should deploy.
@@ -63,7 +65,7 @@ jobs:
 
 #      - name: Deploy to /develop 🚀
 #        if: github.ref == 'refs/heads/develop'
-#        uses: JamesIves/github-pages-deploy-action@4.1.5
+#        uses: JamesIves/github-pages-deploy-action@v4.5.0
 #        with:
 #          branch: gh-pages
 #          folder: dist

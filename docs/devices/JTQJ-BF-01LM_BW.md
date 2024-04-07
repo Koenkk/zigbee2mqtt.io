@@ -16,10 +16,11 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | JTQJ-BF-01LM/BW  |
-| Vendor  | Xiaomi  |
-| Description | MiJia gas leak detector  |
-| Exposes | gas, battery_low, tamper, sensitivity, gas_density, selftest, linkquality |
-| Picture | ![Xiaomi JTQJ-BF-01LM/BW](https://www.zigbee2mqtt.io/images/devices/JTQJ-BF-01LM-BW.jpg) |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
+| Description | Mijia Honeywell gas leak detector |
+| Exposes | gas, tamper, sensitivity, gas_density, selftest, linkquality |
+| Picture | ![Xiaomi JTQJ-BF-01LM/BW](https://www.zigbee2mqtt.io/images/devices/JTQJ-BF-01LM-BW.png) |
+| White-label | Xiaomi YTC4019RT |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -45,6 +46,7 @@ If the selftest is executed successfully you will hear the device beep in 30 sec
 
 
 
+
 ## Exposes
 
 ### Gas (binary)
@@ -52,12 +54,6 @@ Indicates whether the device detected gas.
 Value can be found in the published state on the `gas` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` gas is ON, if `false` OFF.
-
-### Battery_low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
 
 ### Tamper (binary)
 Indicates whether the device is tampered.
@@ -71,7 +67,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
-### Gas_density (numeric)
+### Gas density (numeric)
 Value can be found in the published state on the `gas_density` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 

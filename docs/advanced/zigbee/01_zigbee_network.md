@@ -14,9 +14,9 @@ End devices do not route traffic. They may also sleep, which makes end devices a
 ### Router
 Routers are responsible for routing traffic between different nodes. Routers may not sleep. As such, routers are not a suitable choice for battery operated devices. Routers are also responsible for receiving and storing messages intended for their children. In addition to this, routers are the gate keepers to the network. They are responsible for allowing new nodes to join the network.
 
-*Examples: LED1545G12, 7146060PH, ZNCZ02LM, [CC2531 USB sniffer flashed with the  router firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/CC2531/bin)*
+*Examples: LED1545G12, 7146060PH, ZNCZ02LM, [CC2531 USB sniffer flashed with the  router firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_Home_1.2/bin), [SONOFF ZBDongle-E-based router](https://www.zigbee2mqtt.io/devices/ZBDongle-E.html)*
 
-*Note: Xiaomi Wall Switches (without neutral line - QBKG03LM and QBKG04LM) are not working as routers in the Zigbee network.*
+*Note: Some devices advertising router functionality in a Zigbee network perform poorly and can thus effectively lower the stability of your Zigbee network.*  
 
 
 ### Coordinator
@@ -30,6 +30,17 @@ Zigbee2MQTT logs the device type of your devices on startup, e.g.:
 2018-5-28 20:39:46 INFO 0x00158d00018255df (0x00158d00018255df): ZNCZ02LM - Xiaomi Mi power plug ZigBee (Router)
 2018-5-28 20:39:46 INFO 0x00158d0001b79111 (0x00158d0001b79111): WSDCGQ01LM - Xiaomi MiJia temperature & humidity sensor (EndDevice)
 ```
+
+### Green Power devices
+Zigbee Green Power devices are special end devices that are designed to be very energy efficient. Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first by a Green Power "proxy". This means the Green Power device must be in range of a regular Zigbee device that supports the Green Power proxy role. Examples are Philips Hue and (at least some) Ikea Tradfri bulbs.
+
+Green Power devices don't support binding and are not included in network scans.
+
+When pairing a Green Power device, you must choose whether translated messages should be re-transmitted by unicast or broadcast. Only [enable join](../../guide/usage/pairing_devices.md) on a specific device to use unicast for this Green Power device. Enable join on all devices to use broadcast. Do note that each proxy will generate a unique broadcast for each Green Power event, and a single keypress may generate more than one event (e.g. "key down" then "key up"). If there are multiple proxies paired with a Green Power device, this may generate *a lot* of traffic.
+
+*Example Green Power devices: PTM 215Z, SR-ZGP2801K-5C, SR-ZGP2801K2-DIM, SR-ZGP2801K4-DIM*
+
+*Note: Heavy use of broadcasts can negatively impact performance of your network (See [Broadcasts](./02_improve_network_range_and_stability.md)).*
 
 ## Zigbee networking
 

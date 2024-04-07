@@ -16,16 +16,17 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LeTV.8KEY  |
-| Vendor  | LeTV  |
+| Vendor  | [LeTV](/supported-devices/#v=LeTV)  |
 | Description | 8key switch |
 | Exposes | action, linkquality |
-| Picture | ![LeTV LeTV.8KEY](https://www.zigbee2mqtt.io/images/devices/LeTV.8KEY.jpg) |
+| Picture | ![LeTV LeTV.8KEY](https://www.zigbee2mqtt.io/images/devices/LeTV.8KEY.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

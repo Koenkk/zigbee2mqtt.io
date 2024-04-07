@@ -16,16 +16,20 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WISZB-121  |
-| Vendor  | Develco  |
+| Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Window sensor |
-| Exposes | contact, battery_low, linkquality |
-| Picture | ![Develco WISZB-121](https://www.zigbee2mqtt.io/images/devices/WISZB-121.jpg) |
+| Exposes | contact, battery, battery_low, tamper, linkquality |
+| Picture | ![Develco WISZB-121](https://www.zigbee2mqtt.io/images/devices/WISZB-121.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 
@@ -37,11 +41,24 @@ Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
 
-### Battery_low (binary)
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
+
+### Tamper (binary)
+Indicates whether the device is tampered.
+Value can be found in the published state on the `tamper` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` tamper is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

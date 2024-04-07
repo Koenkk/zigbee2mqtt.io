@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS1CG-E  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Combustible gas sensor |
 | Exposes | gas, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HS1CG-E](https://www.zigbee2mqtt.io/images/devices/HS1CG-E.jpg) |
+| Picture | ![HEIMAN HS1CG-E](https://www.zigbee2mqtt.io/images/devices/HS1CG-E.png) |
 | White-label | Piri HSIO18008 |
 
 
@@ -27,6 +27,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -38,11 +39,11 @@ Value can be found in the published state on the `gas` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` gas is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Tamper (binary)
 Indicates whether the device is tampered.

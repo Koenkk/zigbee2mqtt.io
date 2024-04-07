@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SLR2  |
-| Vendor  | Hive  |
+| Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | Dual channel heating and hot water thermostat |
 | Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration, linkquality |
-| Picture | ![Hive SLR2](https://www.zigbee2mqtt.io/images/devices/SLR2.jpg) |
+| Picture | ![Hive SLR2](https://www.zigbee2mqtt.io/images/devices/SLR2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -64,9 +64,9 @@ To start one, or modify an already active one, send the following payload to the
 ```js
 {
    "system_mode_heat":"emergency_heating",
-   "temperature_setpoint_hold_duration_heat":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
-   "temperature_setpoint_hold_heat":"1",
-   "occupied_heating_setpoint_heat":"18"  // Replace with desired temperature. Between 5 and 32 C
+   "temperature_setpoint_hold_duration_heat":30,  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold_heat":1,
+   "occupied_heating_setpoint_heat":18  // Replace with desired temperature. Between 5 and 32 C
 }
 ```
 Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
@@ -78,8 +78,8 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 ```js
 {
    "system_mode_heat":"heat",
-   "temperature_setpoint_hold_heat":"1",
-   "occupied_heating_setpoint_heat":"20" // Replace with desired temperature. Between 5 and 32 C
+   "temperature_setpoint_hold_heat":1,
+   "occupied_heating_setpoint_heat":20 // Replace with desired temperature. Between 5 and 32 C
 }
 ```
 Note: You will also notice that `temperature_setpoint_hold_duration_heat` automatically changes to `65535` which means `undefined` (indefinite).
@@ -92,7 +92,7 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 ```js
 {
    "system_mode_heat":"off",
-   "temperature_setpoint_hold_heat":"0"
+   "temperature_setpoint_hold_heat":0
 }
 ```
 Note: You will also notice that `temperature_setpoint_hold_duration_heat` automatically changes to `0` which means `not set`. `occupied_heating_setpoint_heat` automatically changes to `1` degree C.
@@ -107,8 +107,8 @@ To start one, or modify an already active one, send the following payload to the
 ```js
 {
    "system_mode_water":"emergency_heating",
-   "temperature_setpoint_hold_duration_water":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
-   "temperature_setpoint_hold_water":"1"
+   "temperature_setpoint_hold_duration_water":30,  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold_water":1
 }
 ```
 Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
@@ -118,7 +118,7 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 ```js
 {
    "system_mode_water":"heat",
-   "temperature_setpoint_hold_water":"1"
+   "temperature_setpoint_hold_water":1
 }
 ```
 Note: You will also notice that `temperature_setpoint_hold_duration_heat` automatically changes to `65535` which means `undefined` (indefinite).
@@ -131,7 +131,7 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 ```js
 {
    "system_mode_water":"off",
-   "temperature_setpoint_hold_water":"0"
+   "temperature_setpoint_hold_water":0
 }
 ```
 Note: You will also notice that `temperature_setpoint_hold_duration_heat` automatically changes to `0` which means `not set`.
@@ -141,6 +141,7 @@ This will also stop any native boosts that are currently active.
 ### Local and occupied temperature (water endpoint)
 The water endpoint functions as what could be considered an on/off switch based on `system_mode_water`. Because of that, the device uses fixed values for temperature. `local_temperature_water` is always 21 and `occupied_heating_setpoint_water` is always 22.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -158,14 +159,14 @@ This climate device supports the following features: `occupied_heating_setpoint`
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_heat": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_heat": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state_heat": ""}`.
 
-### Temperature_setpoint_hold (binary, heat endpoint)
+### Temperature setpoint hold (binary, heat endpoint)
 Prevent changes. `false` = run normally. `true` = prevent from making changes. Must be set to `false` when system_mode = off or `true` for heat.
 Value can be found in the published state on the `temperature_setpoint_hold_heat` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_setpoint_hold_heat": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_setpoint_hold_heat": NEW_VALUE}`.
-If value equals `true` temperature_setpoint_hold is ON, if `false` OFF.
+If value equals `true` temperature setpoint hold is ON, if `false` OFF.
 
-### Temperature_setpoint_hold_duration (numeric, heat endpoint)
+### Temperature setpoint hold duration (numeric, heat endpoint)
 Period in minutes for which the setpoint hold will be active. 65535 = attribute not used. 0 to 360 to match the remote display.
 Value can be found in the published state on the `temperature_setpoint_hold_duration_heat` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_setpoint_hold_duration_heat": ""}`.
@@ -179,14 +180,14 @@ This climate device supports the following features: `occupied_heating_setpoint`
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode_water": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`, `emergency_heating`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode_water": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state_water": ""}`.
 
-### Temperature_setpoint_hold (binary, water endpoint)
+### Temperature setpoint hold (binary, water endpoint)
 Prevent changes. `false` = run normally. `true` = prevent from making changes. Must be set to `false` when system_mode = off or `true` for heat.
 Value can be found in the published state on the `temperature_setpoint_hold_water` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_setpoint_hold_water": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_setpoint_hold_water": NEW_VALUE}`.
-If value equals `true` temperature_setpoint_hold is ON, if `false` OFF.
+If value equals `true` temperature setpoint hold is ON, if `false` OFF.
 
-### Temperature_setpoint_hold_duration (numeric, water endpoint)
+### Temperature setpoint hold duration (numeric, water endpoint)
 Period in minutes for which the setpoint hold will be active. 65535 = attribute not used. 0 to 360 to match the remote display.
 Value can be found in the published state on the `temperature_setpoint_hold_duration_water` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_setpoint_hold_duration_water": ""}`.

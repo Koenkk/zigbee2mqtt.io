@@ -16,16 +16,17 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SGA01ZB  |
-| Vendor  | Feibit  |
+| Vendor  | [Feibit](/supported-devices/#v=Feibit)  |
 | Description | Combustible gas sensor |
-| Exposes | gas, battery_low, tamper, linkquality |
-| Picture | ![Feibit SGA01ZB](https://www.zigbee2mqtt.io/images/devices/SGA01ZB.jpg) |
+| Exposes | gas, linkquality |
+| Picture | ![Feibit SGA01ZB](https://www.zigbee2mqtt.io/images/devices/SGA01ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -36,18 +37,6 @@ Indicates whether the device detected gas.
 Value can be found in the published state on the `gas` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` gas is ON, if `false` OFF.
-
-### Battery_low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
-
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

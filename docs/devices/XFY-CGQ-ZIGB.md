@@ -16,10 +16,10 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | XFY-CGQ-ZIGB  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Illuminance sensor |
 | Exposes | illuminance_lux, brightness_state, linkquality |
-| Picture | ![TuYa XFY-CGQ-ZIGB](https://www.zigbee2mqtt.io/images/devices/XFY-CGQ-ZIGB.jpg) |
+| Picture | ![TuYa XFY-CGQ-ZIGB](https://www.zigbee2mqtt.io/images/devices/XFY-CGQ-ZIGB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,23 +28,22 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `illuminance_lux_precision`: Number of digits after decimal point for illuminance_lux, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
-### Brightness_state (enum)
+### Brightness state (enum)
 Brightness state.
 Value can be found in the published state on the `brightness_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

@@ -16,16 +16,17 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZTS-EU_1gang  |
-| Vendor  | Moes  |
+| Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Wall touch light switch (1 gang) |
 | Exposes | switch (state), indicate_light, power_on_behavior, linkquality |
-| Picture | ![Moes ZTS-EU_1gang](https://www.zigbee2mqtt.io/images/devices/ZTS-EU_1gang.jpg) |
+| Picture | ![Moes ZTS-EU_1gang](https://www.zigbee2mqtt.io/images/devices/ZTS-EU_1gang.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -36,14 +37,14 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
 
-### Indicate_light (enum)
+### Indicate light (enum)
 Indicator light status.
 Value can be found in the published state on the `indicate_light` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicate_light": NEW_VALUE}`.
 The possible values are: `off`, `switch`, `position`, `freeze`.
 
-### Power_on_behavior (enum)
+### Power on behavior (enum)
 Controls the behavior when the device is powered on.
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.

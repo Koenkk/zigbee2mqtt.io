@@ -16,16 +16,24 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SCM-5ZBS  |
-| Vendor  | Climax  |
+| Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Roller shutter |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Climax SCM-5ZBS](https://www.zigbee2mqtt.io/images/devices/SCM-5ZBS.jpg) |
+| Picture | ![Climax SCM-5ZBS](https://www.zigbee2mqtt.io/images/devices/SCM-5ZBS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Calibration
+1. Before calibration, the external local switches must be connected to the Shutter Control.
+2. Press and hold the Function button for 3~10 seconds and release to enter Calibration mode. The Shutter Controller will roll toward the "Open" direction for 4 minutes upon entering Calibration mode.
+3. Wait for 4 minutes for Shutter Control to stop rolling to "Open" direction, then activate the connected external local "Close" switch to close the shutter.
+4. Activate the "Open" external local switch the moment the shutter is fully closed. The Shutter control will record the time it took between step 3 and 4 as the new "close time"
+5. The Shutter control will roll toward an open direction after step 4
+6. Activate the "Close" external local switch the moment the shutter is fully opened. The Shutter control will record the time it took between step 5 and 6 as the new "open time"
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
