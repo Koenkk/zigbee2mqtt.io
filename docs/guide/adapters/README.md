@@ -145,6 +145,30 @@ _(in order of first appearance)_
     ![](../../images/jetstick_z2.png)
     </details>
 
+  * <details>
+    <summary>SMLIGHT SLZB-07p7 CC2652P7 Zigbee USB adapter - the first CC2652P7 USB adapter</summary>  
+
+    Powerful, tiny modern design, developed for Zigbee2MQTT, pre-flashed and ready to use Zigbee adapter. Autodiscovery in Home Assistant. AutoBSL (remote update) enabled.  
+    Rich packing that includes:
+    | Package includes | SLZB-07p7 adapter | +3dB antenna 360° | QR-manual |
+    |:-|:-:|:-:|:-:|
+    |Quantity: |1 pcs|1 pcs|1 pcs|1 pcs|  
+    |Image| [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7-adapter-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7-adapter.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07x-antenna-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07x-antenna.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07x-qr-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07x-qr.jpg) |  
+
+    Remote Zigbee update, autodiscovery, LEDs, and flashing pins. It fits home and business use.  
+    
+    - Zigbee firmware:  
+    -- [Firmwares folder](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) for manual updates - use CC2652P7 firmwares.    
+    - [Product page](https://smlight.tech/product/slzb-07p7/).  
+    - Buy: [Official Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/coordinator-slzb-07p7).  
+Local fast delivery: [AU](https://shop.dialedin.com.au/products/smlight-slzb-07p7-usb-zigbee-adapter), [FR](https://www.domadoo.fr/fr/interface-domotique/7045-smlight-dongle-usb-zigbee-cc2652p7-soc-antenne-3db-zigbee2mqtt-et-zha.html).
+
+     | Product picture 1 | Product picture 2 | Product picture 3 |
+     |:-:|:-:|:-:|
+     |[![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7-main1-title-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7-main1-title.jpg)|[![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7-main2-title-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7-main2-title.jpg)|[![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7-main3-title-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7-main3-title.jpg)|     
+    
+    </details>
+
 * Hybrid (network + USB)
   * <details>
     <summary>Gio-dot Z-Bee Duo with CC2652P</summary>
