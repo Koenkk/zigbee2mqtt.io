@@ -54,7 +54,7 @@ jobs:
 
       - name: Deploy 🚀
         if: github.ref == 'refs/heads/master'
-        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        uses: JamesIves/github-pages-deploy-action@v4.6.0
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: dist # The folder the action should deploy.
@@ -65,7 +65,7 @@ jobs:
 
 #      - name: Deploy to /develop 🚀
 #        if: github.ref == 'refs/heads/develop'
-#        uses: JamesIves/github-pages-deploy-action@v4.5.0
+#        uses: JamesIves/github-pages-deploy-action@v4.6.0
 #        with:
 #          branch: gh-pages
 #          folder: dist
