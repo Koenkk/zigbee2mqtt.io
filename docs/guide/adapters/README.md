@@ -158,7 +158,8 @@ _(in order of first appearance)_
     Remote Zigbee update, autodiscovery, LEDs, and flashing pins. It fits home and business use.  
     
     - Zigbee firmware:  
-    -- [Firmwares folder](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) for manual updates - use CC2652P7 firmwares.    
+    --[v20230507](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P7_coordinator_20230507.zip).  
+    --[Up to date firmware folder](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin) for manual updates - use CC2652P7 firmware, for example `cc1352p7_coordinator_20230507`.    
     - [Product page](https://smlight.tech/product/slzb-07p7/).  
     - Buy: [Official Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/coordinator-slzb-07p7), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005006273914143.html).  
 Local fast delivery: [Australia](https://shop.dialedin.com.au/products/smlight-slzb-07p7-usb-zigbee-adapter), [France](https://www.domadoo.fr/fr/interface-domotique/7045-smlight-dongle-usb-zigbee-cc2652p7-soc-antenne-3db-zigbee2mqtt-et-zha.html), [Poland](https://pcblab.io/szukaj?controller=search&s=slzb).  
