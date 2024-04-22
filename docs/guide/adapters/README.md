@@ -533,9 +533,13 @@ The adapters below are well-supported but use outdated chips.
 ## Experimental
 The adapters below are experimental, don't use these if you want a stable setup.
 
-### Based on Silicon Labs EFR32MG2x/MGM21x and EFR32MG1x/MGM1x series
+### Based on Silicon Labs EFR32MG2x/MGM2xx and EFR32MG1x/MGM1xx series
 
-Initial development started on experimental (beta stage) support for Silicon Labs based Zigbee adapters. This includes all EM35X, EFR32MG12, EFR32MG13, EFR32MG21, EFR32MG24 SoCs/Modules families with Silabs EmberZNet NCP 6.7.8 firmware or later via EZSP version 8 (EmberZNet Serial Protocol) interface. 
+There is experimental (a.k.a. alpha stage) support for Silicon Labs based Zigbee adapters with Silabs EmberZNet NCP 6.7.8 firmware or newer via EZSP version 8 (EmberZNet Serial Protocol) interface or later.
+
+This currently includes compatibility with EM35X/EM35XX, EFR32MG12, EFR32MG13, EFR32MG21, EFR32MG24, and EFR32MG26 SoCs families +  MGM12, MGM210, and MGM240 radio modules.
+
+Note! Before purchasing/using adapters, be aware that older Silabs based adapter may be based on obsolete hardware and/or legacy firmware that is no longer maintained or updated by manufacturers/community.
 
 * USB connected
   * <details>
