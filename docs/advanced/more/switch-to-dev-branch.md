@@ -39,4 +39,4 @@ sudo systemctl start zigbee2mqtt
 Use the Docker image with the `latest-dev` tag.
 
 ## Home Assistant addon
-Use the `edge` version.
+Use the [`edge`](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt) version.
