@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Temperature and humidity sensor T1 |
 | Exposes | temperature, humidity, pressure, device_temperature, battery, voltage, power_outage_count, linkquality |
 | Picture | ![Aqara WSDCGQ12LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ12LM.png) |
-| White-label | Aqara TH-S02D |
+| White-label | Aqara TH-S02D, Yandex YNDX-00523 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

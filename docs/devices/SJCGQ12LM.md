@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Water leak sensor T1 |
 | Exposes | battery, water_leak, battery_low, tamper, voltage, linkquality |
 | Picture | ![Aqara SJCGQ12LM](https://www.zigbee2mqtt.io/images/devices/SJCGQ12LM.png) |
-| White-label | Aqara WL-S02D |
+| White-label | Aqara WL-S02D, Yandex YNDX-00521 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

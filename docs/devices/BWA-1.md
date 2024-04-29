@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BWA-1  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Zigbee smart water leak detector |
-| Exposes | water_leak, battery, tamper, alarm_on_motion, linkquality |
+| Exposes | water_leak, tamper, battery, battery_low, alarm_on_motion, linkquality |
 | Picture | ![Bosch BWA-1](https://www.zigbee2mqtt.io/images/devices/BWA-1.png) |
 
 
@@ -40,6 +40,12 @@ Value can be found in the published state on the `water_leak` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` water leak is ON, if `false` OFF.
 
+### Tamper (binary)
+Indicates whether the device is tampered.
+Value can be found in the published state on the `tamper` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` tamper is ON, if `false` OFF.
+
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
@@ -47,11 +53,11 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
+### Battery low (binary)
+Indicates if the battery of this device is almost empty.
+Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Alarm on motion (binary)
 Enable/Disable sound alarm on motion.

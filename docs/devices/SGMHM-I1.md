@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SGMHM-I1  |
 | Vendor  | [GS](/supported-devices/#v=GS)  |
 | Description | Methane gas sensor |
-| Exposes | gas, tamper, battery_low, linkquality |
+| Exposes | gas, linkquality |
 | Picture | ![GS SGMHM-I1](https://www.zigbee2mqtt.io/images/devices/SGMHM-I1.png) |
 
 
@@ -37,18 +37,6 @@ Indicates whether the device detected gas.
 Value can be found in the published state on the `gas` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` gas is ON, if `false` OFF.
-
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
-
-### Battery low (binary)
-Indicates whether the battery of the device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

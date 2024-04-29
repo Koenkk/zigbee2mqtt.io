@@ -23,13 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 ### Pairing
 Press button for 5 seconds.
-
-
-
 <!-- Notes END: Do not edit below this line -->
 
 

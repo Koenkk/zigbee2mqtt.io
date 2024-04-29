@@ -260,11 +260,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `Disabled`, `Smart Fan Mode`.
 
 ### OutputMode 2 (enum)
-Use device as a Dimmer or an On/Off switch..
+Use device in ceiling fan (3-Speed) or in exhaust fan (On/Off) mode..
 Value can be found in the published state on the `outputMode_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"outputMode_2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"outputMode_2": NEW_VALUE}`.
-The possible values are: `Dimmer`, `On/Off`.
+The possible values are: `Ceiling Fan (3-Speed)`, `Exhaust Fan (On/Off)`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

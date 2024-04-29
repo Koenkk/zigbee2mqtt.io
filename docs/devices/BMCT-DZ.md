@@ -1,7 +1,7 @@
 ---
-title: "IKEA ICPSHC24-10EU-IL-1 control via MQTT"
-description: "Integrate your IKEA ICPSHC24-10EU-IL-1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2019-07-22T20:08:17Z
+title: "Bosch BMCT-DZ control via MQTT"
+description: "Integrate your Bosch BMCT-DZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 
 pageClass: device-page
 ---
 
@@ -11,27 +11,20 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# IKEA ICPSHC24-10EU-IL-1
+# Bosch BMCT-DZ
 
 |     |     |
 |-----|-----|
-| Model | ICPSHC24-10EU-IL-1  |
-| Vendor  | [IKEA](/supported-devices/#v=IKEA)  |
-| Description | TRADFRI driver for wireless control (10 watt) |
-| Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![IKEA ICPSHC24-10EU-IL-1](https://www.zigbee2mqtt.io/images/devices/ICPSHC24-10EU-IL-1.png) |
+| Model | BMCT-DZ  |
+| Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
+| Description | Phase-cut dimmer |
+| Exposes | identify, light (state, brightness), power_on_behavior, linkquality |
+| Picture | ![Bosch BMCT-DZ](https://www.zigbee2mqtt.io/images/devices/BMCT-DZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
 
 
-### Pairing
-To factory reset the TRADFRI drivers use a
-small pin or paperclip to push the reset button once.
-NB: you HAVE to put the device VERY close to the zigbee device, otherwise it won't be able to detect.
-
-If this doesn't work, try holding the button for 5 seconds.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -42,12 +35,21 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
 ### Light 
 This light supports the following features: `state`, `brightness`.
@@ -80,13 +82,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_step": 40 // Increases brightness by 40
 }
 ````
-
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..

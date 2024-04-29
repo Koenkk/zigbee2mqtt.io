@@ -40,10 +40,10 @@ export async function ensurePngWithoutBackground(imagePath: string) {
 }
 
 export async function downloadMissing() {
-    if (fs.existsSync(missingImagesPath)) {
-        fs.rmSync(missingImagesPath, {recursive: true});
-    }
-    fs.mkdirSync(missingImagesPath);
+    // if (fs.existsSync(missingImagesPath)) {
+    //     fs.rmSync(missingImagesPath, {recursive: true});
+    // }
+    // fs.mkdirSync(missingImagesPath);
 
     const missing = await getMissing();
     for (const definition of missing) {
@@ -78,6 +78,29 @@ export async function downloadMissing() {
     console.log(`Done! Filter and update all the files under '${missingImagesPath}', execute 'npm run move-missing-device-images'`)
 }
 
+export async function prepareMissing() {
+    for (const file of fs.readdirSync(missingImagesPath)) {
+        let imagePath = path.join(missingImagesPath, file);
+
+        try {
+            // Make square
+            const info = await easyimage.info(imagePath);
+            if (info.height !== info.width) {
+                const size = Math.max(info.height, info.width);
+                await easyimage.execute('convert', [imagePath, '-resize', `${size}x${size}`, '-gravity', 'center', '-extent', `${size}x${size}`, imagePath])
+                
+            }
+
+            // Convert to png
+            imagePath = await ensurePngWithoutBackground(imagePath);
+        } catch (error) {
+            console.error(`Failed to handle '${imagePath}' (${error}), removing...`);
+            if (fs.existsSync(imagePath)) fs.rmSync(imagePath);
+        }
+    }
+    console.log(`Done! Filter and update all the files under '${missingImagesPath}', execute 'npm run move-missing-device-images'`)
+}
+
 async function moveMissing() {
     for (const file of fs.readdirSync(missingImagesPath)) {
         try {
@@ -107,6 +130,8 @@ if (require.main === module) {
         const arg = process.argv[process.argv.length -1];
         if (arg === "download") {
             await downloadMissing();
+        } else if (arg === "prepare") {
+            await prepareMissing();
         } else if (arg === "move") {
             await moveMissing();
         } else {

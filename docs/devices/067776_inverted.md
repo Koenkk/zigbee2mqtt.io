@@ -37,6 +37,15 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
+* `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
+
+* `identity_effect`: Defines the identification effect to simplify the device identification. Example:
+```yaml
+identity_effect:
+  effect: blink 3 # allowed: 'blink 3', 'fixed', 'blink green', 'blink blue'
+  color: red # allowed: 'default', 'red', 'green', 'blue', 'lightblue', 'yellow', 'pink', 'white'
+```
+
 
 ## Exposes
 

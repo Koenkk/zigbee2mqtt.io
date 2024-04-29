@@ -28,9 +28,19 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `identity_effect`: Defines the identification effect to simplify the device identification. Example:
+```yaml
+identity_effect:
+  effect: blink 3 # allowed: 'blink 3', 'fixed', 'blink green', 'blink blue'
+  color: red # allowed: 'default', 'red', 'green', 'blue', 'lightblue', 'yellow', 'pink', 'white'
+```
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
@@ -61,14 +71,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `dimmer_on` device mode is ON, if `dimmer_off` OFF.
 
 ### Led in dark (binary)
-Enables the LED when the light is turned off, allowing to see the switch in the dark.
+Enables the built-in LED allowing to see the switch in the dark.
 Value can be found in the published state on the `led_in_dark` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_in_dark": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_in_dark": NEW_VALUE}`.
 If value equals `ON` led in dark is ON, if `OFF` OFF.
 
 ### Led if on (binary)
-Enables the LED when the light is turned on.
+Enables the LED on activity.
 Value can be found in the published state on the `led_if_on` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_if_on": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_if_on": NEW_VALUE}`.

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MTG275-ZB-RL  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2.4G/5.8G MmWave radar human presence motion sensor |
-| Exposes | presence, illuminance_lux, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance_indentation, entry_filter_time, departure_delay, block_time, breaker_status, breaker_mode, illuminance_threshold, status_indication, linkquality |
+| Exposes | presence, illuminance_lux, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance_indentation, entry_filter_time, departure_delay, block_time, breaker_status, breaker_mode, illuminance_threshold, status_indication, sensor, linkquality |
 | Picture | ![TuYa MTG275-ZB-RL](https://www.zigbee2mqtt.io/images/devices/MTG275-ZB-RL.png) |
 
 
@@ -145,6 +145,13 @@ Value can be found in the published state on the `status_indication` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"status_indication": NEW_VALUE}`.
 The possible values are: `OFF`, `ON`.
+
+### Sensor (enum)
+The radar sensor can be set in four states: on, off, occupied and unoccupied. For example, if set to occupied, it will continue to maintain presence regardless of whether someone is present or not. If set to unoccupied, the unoccupied state will be maintained permanently..
+Value can be found in the published state on the `sensor` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
+The possible values are: `on`, `off`, `occupied`, `unoccupied`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

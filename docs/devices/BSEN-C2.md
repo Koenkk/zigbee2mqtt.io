@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BSEN-C2  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Door/window contact II |
-| Exposes | battery_low, contact, action, linkquality |
+| Exposes | battery, battery_low, contact, action, linkquality |
 | Picture | ![Bosch BSEN-C2](https://www.zigbee2mqtt.io/images/devices/BSEN-C2.png) |
 
 
@@ -40,6 +40,13 @@ To factory reset the device remove the batteries. While pressing and holding the
 
 
 ## Exposes
+
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Battery low (binary)
 Indicates if the battery of this device is almost empty.

@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | WS-K01D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
-| Description | Smart 20A Switch H1 (single rocker) |
+| Description | Smart wall switch H1 20A (with neutral, single rocker) |
 | Exposes | switch (state), device_temperature, power_outage_count, power_outage_memory, operation_mode, energy, voltage, current, power, led_disabled_night, flip_indicator_light, action, linkquality |
 | Picture | ![Aqara WS-K01D](https://www.zigbee2mqtt.io/images/devices/WS-K01D.png) |
 

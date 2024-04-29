@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Motion sensor T1 |
 | Exposes | occupancy, illuminance_lux, illuminance, detection_interval, device_temperature, battery, voltage, power_outage_count, linkquality |
 | Picture | ![Aqara RTCGQ12LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ12LM.png) |
+| White-label | Yandex YNDX-00522 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

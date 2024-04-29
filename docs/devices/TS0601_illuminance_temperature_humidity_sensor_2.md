@@ -49,12 +49,13 @@ pageClass: device-page
 Raw measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
 
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
+The unit of this value is `°C`.
 
 ### Humidity (numeric)
 Measured relative humidity.

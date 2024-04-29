@@ -1,7 +1,7 @@
 ---
 title: "LELLKI WP33-EU/WP34-EU control via MQTT"
 description: "Integrate your LELLKI WP33-EU/WP34-EU via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-06-01T15:08:55
+addedAt: 2024-04-29T19:24:39.071Z
 pageClass: device-page
 ---
 

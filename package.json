@@ -10,6 +10,7 @@
     "docgen": "ts-node docgen",
     "download-missing-device-images": "ts-node docgen/missing_device_images download",
     "move-missing-device-images": "ts-node docgen/missing_device_images move",
+    "prepare-missing-device-images": "ts-node docgen/missing_device_images prepare",
     "test": "ts-node docgen/tests"
   },
   "author": "",
@@ -39,6 +40,6 @@
     "typescript": "^4.9.3",
     "vuepress": "^2.0.0-beta.53",
     "vuepress-plugin-sitemap2": "^2.0.0-beta.122",
-    "zigbee-herdsman-converters": "19.11.2"
+    "zigbee-herdsman-converters": "19.31.0"
   }
 }

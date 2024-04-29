@@ -1,7 +1,7 @@
 ---
-title: "IKEA LED1934G3_E27 control via MQTT"
-description: "Integrate your IKEA LED1934G3_E27 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2021-10-01T17:18:02Z
+title: "IKEA ICPSHC24-30EU-IL-1/ICPSHC24-10EU-IL-2 control via MQTT"
+description: "Integrate your IKEA ICPSHC24-30EU-IL-1/ICPSHC24-10EU-IL-2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 
 pageClass: device-page
 ---
 
@@ -11,29 +11,20 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# IKEA LED1934G3_E27
+# IKEA ICPSHC24-30EU-IL-1/ICPSHC24-10EU-IL-2
 
 |     |     |
 |-----|-----|
-| Model | LED1934G3_E27  |
+| Model | ICPSHC24-30EU-IL-1/ICPSHC24-10EU-IL-2  |
 | Vendor  | [IKEA](/supported-devices/#v=IKEA)  |
-| Description | TRADFRI LED bulb E27 WW clear 250 lumen, dimmable |
-| Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![IKEA LED1934G3_E27](https://www.zigbee2mqtt.io/images/devices/LED1934G3_E27.png) |
+| Description | TRADFRI LED driver, 30 w |
+| Exposes | light (state, brightness), effect, power_on_behavior, identify, linkquality |
+| Picture | ![IKEA ICPSHC24-30EU-IL-1/ICPSHC24-10EU-IL-2](https://www.zigbee2mqtt.io/images/devices/ICPSHC24-30EU-IL-1-ICPSHC24-10EU-IL-2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
 
 
-### Pairing
-Factory reset the light bulb ([video](https://www.youtube.com/watch?v=npxOrPxVfe0)).
-After resetting the bulb will automatically connect.
-
-While pairing, keep the bulb close to the coordinator (adapter).
-
-What works is to use (very) short “on’s” and a little bit longer “off’s”, where you kill the light as soon as the bulb shows signs of turning on.
-Start with bulb on, then off, and then 6 “on’s”, wait in the 6th ON state. (If you try play safe and go for 7 "on's" the reset sometimes fails.)
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -45,6 +36,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -96,6 +89,13 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

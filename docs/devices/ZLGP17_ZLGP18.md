@@ -47,6 +47,9 @@ This device can work on any channel, not only 11. For this, please refer to the 
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 
 ## Exposes

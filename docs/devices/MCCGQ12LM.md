@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Door and window sensor T1 |
 | Exposes | contact, battery, voltage, linkquality |
 | Picture | ![Aqara MCCGQ12LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ12LM.png) |
-| White-label | Aqara DW-S03D |
+| White-label | Aqara DW-S03D, Yandex YNDX-00520 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

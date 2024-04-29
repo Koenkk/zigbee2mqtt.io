@@ -28,6 +28,9 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -49,14 +52,14 @@ Support depend on the switch firmware. Some devices might require both `on_time`
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Led in dark (binary)
-Enables the LED when the light is turned off, allowing to see the switch in the dark.
+Enables the built-in LED allowing to see the switch in the dark.
 Value can be found in the published state on the `led_in_dark` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_in_dark": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_in_dark": NEW_VALUE}`.
 If value equals `ON` led in dark is ON, if `OFF` OFF.
 
 ### Led if on (binary)
-Enables the LED when the light is turned on.
+Enables the LED on activity.
 Value can be found in the published state on the `led_if_on` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_if_on": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_if_on": NEW_VALUE}`.
