@@ -1,7 +1,7 @@
 ---
 title: "Aqara ZNXNKG01LM control via MQTT"
 description: "Integrate your Aqara ZNXNKG01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-04-29T19:24:38.918Z
+addedAt: 2024-04-29T19:24:38
 pageClass: device-page
 ---
 

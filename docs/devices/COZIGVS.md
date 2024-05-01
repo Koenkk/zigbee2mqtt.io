@@ -1,7 +1,7 @@
 ---
 title: "Conecto COZIGVS control via MQTT"
 description: "Integrate your Conecto COZIGVS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-04-29T19:24:38.938Z
+addedAt: 2024-04-29T19:24:38
 pageClass: device-page
 ---
 

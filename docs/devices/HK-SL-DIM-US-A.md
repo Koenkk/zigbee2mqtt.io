@@ -1,7 +1,7 @@
 ---
 title: "Sunricher HK-SL-DIM-US-A control via MQTT"
 description: "Integrate your Sunricher HK-SL-DIM-US-A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-04-29T19:24:38.959Z
+addedAt: 2024-04-29T19:24:38
 pageClass: device-page
 ---
 

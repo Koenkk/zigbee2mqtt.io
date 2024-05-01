@@ -1,7 +1,7 @@
 ---
 title: "IKEA ICPSHC24-30EU-IL-1/ICPSHC24-10EU-IL-2 control via MQTT"
 description: "Integrate your IKEA ICPSHC24-30EU-IL-1/ICPSHC24-10EU-IL-2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2024-05-01T19:17:56
 pageClass: device-page
 ---
 

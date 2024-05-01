@@ -1,6 +1,6 @@
 ---
-title: "Linkoze LKWSZ211 control via MQTT"
-description: "Integrate your Linkoze LKWSZ211 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Adaprox LKWSZ211 control via MQTT"
+description: "Integrate your Adaprox LKWSZ211 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-01-31T19:37:46
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Linkoze LKWSZ211
+# Adaprox LKWSZ211
 
 |     |     |
 |-----|-----|
 | Model | LKWSZ211  |
-| Vendor  | [Linkoze](/supported-devices/#v=Linkoze)  |
-| Description | Wireless switch (2-key) |
+| Vendor  | [Adaprox](/supported-devices/#v=Adaprox)  |
+| Description | Remote wireless switch (2-key) |
 | Exposes | battery, action, linkquality |
-| Picture | ![Linkoze LKWSZ211](https://www.zigbee2mqtt.io/images/devices/LKWSZ211.png) |
+| Picture | ![Adaprox LKWSZ211](https://www.zigbee2mqtt.io/images/devices/LKWSZ211.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -51,6 +51,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
-
-lqi`.
 

@@ -1,7 +1,7 @@
 ---
 title: "OWON PIR313-P control via MQTT"
 description: "Integrate your OWON PIR313-P via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-04-29T19:24:39.042Z
+addedAt: 2024-04-29T19:24:39
 pageClass: device-page
 ---
 

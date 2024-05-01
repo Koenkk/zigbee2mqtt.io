@@ -1,7 +1,7 @@
 ---
 title: "Bosch BMCT-DZ control via MQTT"
 description: "Integrate your Bosch BMCT-DZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2024-05-01T19:17:56
 pageClass: device-page
 ---
 

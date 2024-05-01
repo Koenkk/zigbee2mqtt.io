@@ -1,7 +1,7 @@
 ---
 title: "Frient A/S SMRZB-153 control via MQTT"
 description: "Integrate your Frient A/S SMRZB-153 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2024-05-01T19:17:56
 pageClass: device-page
 ---
 

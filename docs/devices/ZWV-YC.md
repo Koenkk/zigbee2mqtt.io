@@ -1,7 +1,7 @@
 ---
 title: "Moes ZWV-YC control via MQTT"
 description: "Integrate your Moes ZWV-YC via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-04-29T19:24:39.061Z
+addedAt: 2024-04-29T19:24:39
 pageClass: device-page
 ---
 

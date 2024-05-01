@@ -1,7 +1,7 @@
 ---
-title: "Nous A1Z control via MQTT"
-description: "Integrate your Nous A1Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-05-01T19:18:32
+title: "Colorock CR-MNZ1 control via MQTT"
+description: "Integrate your Colorock CR-MNZ1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-05-01T19:18:17
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Nous A1Z
+# Colorock CR-MNZ1
 
 |     |     |
 |-----|-----|
-| Model | A1Z  |
-| Vendor  | [Nous](/supported-devices/#v=Nous)  |
-| Description | Smart plug (with power monitoring) |
-| Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
-| Picture | ![Nous A1Z](https://www.zigbee2mqtt.io/images/devices/A1Z.png) |
+| Model | CR-MNZ1  |
+| Vendor  | [Colorock](/supported-devices/#v=Colorock)  |
+| Description | 1 gang switch 30A with power monitoring |
+| Exposes | switch (state), power, current, voltage, energy, switch_type, power_outage_memory, linkquality |
+| Picture | ![Colorock CR-MNZ1](https://www.zigbee2mqtt.io/images/devices/CR-MNZ1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,9 +27,6 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
-
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -67,20 +64,6 @@ Additionnaly an `off_wait_time` property can be added to the payload to specify 
 Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Power outage memory (enum)
-Recover state after power outage.
-Value can be found in the published state on the `power_outage_memory` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-The possible values are: `on`, `off`, `restore`.
-
-### Indicator mode (enum)
-LED indicator mode.
-Value can be found in the published state on the `indicator_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
-The possible values are: `off`, `off/on`, `on/off`, `on`.
-
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
@@ -105,10 +88,19 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
-It's not possible to read (`/get`) this value.
+### Switch type (enum)
+Type of the switch.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `toggle`, `state`, `momentary`.
+
+### Power outage memory (enum)
+Recover state after power outage.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+The possible values are: `on`, `off`, `restore`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

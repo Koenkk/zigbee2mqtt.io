@@ -1,7 +1,7 @@
 ---
 title: "TuYa TS0601_fan_5_levels_and_light_switch control via MQTT"
 description: "Integrate your TuYa TS0601_fan_5_levels_and_light_switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-04-29T19:24:38.935Z
+addedAt: 2024-04-29T19:24:38
 pageClass: device-page
 ---
 

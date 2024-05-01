@@ -1,7 +1,7 @@
 ---
 title: "TuYa SZT06 V2.0 control via MQTT"
 description: "Integrate your TuYa SZT06 V2.0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-04-29T19:24:38.931Z
+addedAt: 2024-04-29T19:24:38
 pageClass: device-page
 ---
 
@@ -60,7 +60,7 @@ It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Identify (enum)
-Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the indetify command..
+Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.

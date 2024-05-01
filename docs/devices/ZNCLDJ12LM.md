@@ -119,7 +119,7 @@ If value equals `true` running is ON, if `false` OFF.
 The current state of the motor..
 Value can be found in the published state on the `motor_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `closing`, `opening`, `stop`.
+The possible values are: `closing`, `opening`, `stopped`.
 
 ### Power outage count (numeric)
 Number of power outages (since last pairing).

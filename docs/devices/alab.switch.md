@@ -1,7 +1,7 @@
 ---
 title: "Alab alab.switch control via MQTT"
 description: "Integrate your Alab alab.switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-04-29T19:24:39.136Z
+addedAt: 2024-04-29T19:24:39
 pageClass: device-page
 ---
 

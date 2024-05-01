@@ -1,7 +1,7 @@
 ---
 title: "LELLKI JZ-ZB-001 control via MQTT"
 description: "Integrate your LELLKI JZ-ZB-001 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-04-29T19:24:39.071Z
+addedAt: 2024-04-29T19:24:39
 pageClass: device-page
 ---
 

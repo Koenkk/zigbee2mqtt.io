@@ -99,7 +99,7 @@ If value equals `true` charging status is ON, if `false` OFF.
 The current state of the motor..
 Value can be found in the published state on the `motor_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `declining`, `rising`, `pause`, `blocked`.
+The possible values are: `closing`, `opening`, `stopped`, `blocked`.
 
 ### Running (binary)
 Whether the motor is moving or not.
