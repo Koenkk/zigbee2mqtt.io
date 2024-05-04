@@ -23,8 +23,21 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+
+### Pairing
+If the indicator light does not flash rapidly, press the button for 5 to 7 seconds to reset the smart plug parameters to factory settings.
 
 
+### Reset energy
+
+To reset `Sum of consumed energy`, use the Dev console and execute:  
+`Endpoint`: `1`   
+`Cluster`: `0x00`  
+`Command`: `0`  
+`Payload`: (don't change this)  
+
+Next time the plug gets polled, `Sum of consumed energy` will start from zero again.
 <!-- Notes END: Do not edit below this line -->
 
 
