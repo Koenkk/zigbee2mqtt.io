@@ -1,13 +1,13 @@
 # deCONZ (Dresden Elektronik)
 
-### Note
-
-If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+### Configuration
 
 ```yaml
 serial:
   adapter: deconz
 ```
+
+[Other settings](../configuration/adapter-settings.md)
 
 ## Hardware
 

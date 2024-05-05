@@ -6,14 +6,14 @@ Firmware release notes: https://www.silabs.com/developers/zigbee-emberznet?tab=d
 
 <em>Multiprotocol is not currently supported due to the various issues associated with it. The recommended alternative to establish multiple networks is to use one adapter per protocol.</em>
 
-### Note
-
-If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+### Configuration
 
 ```yaml
 serial:
   adapter: ember
 ```
+
+[Other settings](../configuration/adapter-settings.md)
 
 ::: tip TIP
 If you are experiencing issues with your adapter and it has hardware flow control support (check list below), try to flash a [firmware with hardware flow control disabled](https://github.com/darkxst/silabs-firmware-builder/tree/ember-nohw/firmware_builds/) and use the following setting instead:
@@ -22,6 +22,10 @@ If you are experiencing issues with your adapter and it has hardware flow contro
 serial:
   rtscts: false
 ```
+:::
+
+::: tip TIP
+The use of `adapter: ezsp` is now deprecated. See https://github.com/Koenkk/zigbee2mqtt/discussions/21462
 :::
 
 ### Firmware flashing

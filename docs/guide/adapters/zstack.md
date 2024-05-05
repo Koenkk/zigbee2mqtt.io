@@ -1,13 +1,13 @@
 # zStack adapters (Texas Instruments)
 
-### Note
-
-If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+### Configuration
 
 ```yaml
 serial:
   adapter: zstack
 ```
+
+[Other settings](../configuration/adapter-settings.md)
 
 ### Firmware flashing
 
@@ -543,7 +543,3 @@ Raspberry pinout compatible HAT with CC2538 and optional external antenna
 
 <img src="../../images/cc2538hat.jpg" width="200" />
 </details>
-
-## Logging specific to this stack
-
-TODO

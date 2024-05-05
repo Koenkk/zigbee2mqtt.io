@@ -6,14 +6,14 @@ Initial development started on experimental (alpha stage) support for various Zi
 zigbee-herdsman is looking for maintainers for the ZiGate adapter. See https://github.com/Koenkk/zigbee-herdsman/issues/1037
 :::
 
-### Note
-
-If Zigbee2MQTT fails to start, try adding the following to your `configuration.yaml`
+### Configuration
 
 ```yaml
 serial:
   adapter: zigate
 ```
+
+[Other settings](../configuration/adapter-settings.md)
 
 ## Hardware
 
