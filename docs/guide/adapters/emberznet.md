@@ -151,15 +151,29 @@ serial:
 
 ## Not recommended
 
-### Known issues
+<details>
+<summary>All Series 0/1 based-devices</summary>
 
-- SMLight SLZB-06M
+Older hardware.
 
-### Old or low-resources hardware
+See [Silicon Labs announcement](https://www.silabs.com/documents/public/release-notes/emberznet-release-notes-7.4.3.0.pdf).
 
-- All EFR32 Series 1 based-devices (support dropped by Silicon Labs from EmberZNet 7.5)
-- Easyiot ZB-GW04 (v1.2)
-- Easyiot ZB-GW04 (v1.1)
+</details>
+
+<details>
+<summary>Easyiot ZB-GW04 (v1.1, v1.2)</summary>
+
+Low-resources hardware.
+
+</details>
+
+<details>
+<summary>SMLIGHT SLZB-06m (EFR32MG21)</summary>
+
+Has had firmware issues (some still pending).
+Recommended to look for the more recent SMLIGHT SLZB-06mg24.
+
+</details>
 
 ## Logging specific to this stack
 
