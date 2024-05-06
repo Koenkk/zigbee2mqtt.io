@@ -48,7 +48,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m
-  url: https://chart.zigbee2mqtt.io/index
+  url: https://charts.zigbee2mqtt.io/index
 
 ```
 
