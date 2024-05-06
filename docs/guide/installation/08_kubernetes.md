@@ -22,7 +22,7 @@ into the statefulSet persistentVolumeClaim which can link to existing volumes.
 ## helm
 To install the chart manually using helm, first you need to add your the helm repository to your local helm installation:
 ```bash
-helm repo add zigbee2mqtt  https://chart.zigbee2mqtt.io/index
+helm repo add zigbee2mqtt  https://charts.zigbee2mqtt.io/index
 ```
 
 Load the charts from the repository:
