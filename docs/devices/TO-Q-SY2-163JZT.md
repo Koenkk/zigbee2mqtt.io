@@ -1,6 +1,6 @@
 ---
-title: "TONGOU TO-Q-SY2-163JZT control via MQTT"
-description: "Integrate your TONGOU TO-Q-SY2-163JZT via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tongou TO-Q-SY2-163JZT control via MQTT"
+description: "Integrate your Tongou TO-Q-SY2-163JZT via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-04-30T17:38:24
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TONGOU TO-Q-SY2-163JZT
+# Tongou TO-Q-SY2-163JZT
 
 |     |     |
 |-----|-----|
 | Model | TO-Q-SY2-163JZT  |
-| Vendor  | [TONGOU](/supported-devices/#v=TONGOU)  |
+| Vendor  | [Tongou](/supported-devices/#v=TONGOU)  |
 | Description | Smart circuit breaker |
 | Exposes | temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, linkquality |
-| Picture | ![TONGOU TO-Q-SY2-163JZT](https://www.zigbee2mqtt.io/images/devices/TO-Q-SY2-163JZT.png) |
+| Picture | ![Tongou TO-Q-SY2-163JZT](https://www.zigbee2mqtt.io/images/devices/TO-Q-SY2-163JZT.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
