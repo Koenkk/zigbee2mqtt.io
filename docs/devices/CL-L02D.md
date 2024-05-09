@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CL-L02D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Ceiling light T1M |
-| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, power_outage_memory, light (state, brightness, color_temp, color_xy, color_hs), linkquality |
+| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, light (state, brightness, color_temp, color_xy, color_hs), linkquality |
 | Picture | ![Aqara CL-L02D](https://www.zigbee2mqtt.io/images/devices/CL-L02D.png) |
 
 
@@ -92,13 +92,6 @@ Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
-
-### Power outage memory (binary)
-Enable/disable the power outage memory, this recovers the on/off mode after power failure.
-Value can be found in the published state on the `power_outage_memory` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-If value equals `true` power outage memory is ON, if `false` OFF.
 
 ### Light (rgb endpoint)
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_xy`, `color_hs`.

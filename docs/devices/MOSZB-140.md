@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MOSZB-140  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Motion sensor |
-| Exposes | occupancy, temperature, illuminance_lux, tamper, battery_low, battery, linkquality |
+| Exposes | occupancy, temperature, tamper, battery_low, battery, linkquality, illuminance_lux, illuminance |
 | Picture | ![Develco MOSZB-140](https://www.zigbee2mqtt.io/images/devices/MOSZB-140.png) |
 
 
@@ -41,6 +41,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
@@ -55,12 +57,6 @@ Measured temperature value.
 Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
-
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
 
 ### Tamper (binary)
 Indicates whether the device is tampered.
@@ -87,4 +83,17 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+
+### Illuminance lux (numeric)
+Measured illuminance in lux.
+Value can be found in the published state on the `illuminance_lux` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_lux": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `lx`.
+
+### Illuminance (numeric)
+Raw measured illuminance.
+Value can be found in the published state on the `illuminance` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
+It's not possible to write (`/set`) this value.
 

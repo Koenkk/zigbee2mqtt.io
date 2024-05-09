@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TO-Q-SY2-163JZT  |
-| Vendor  | [Tongou](/supported-devices/#v=TONGOU)  |
+| Vendor  | [Tongou](/supported-devices/#v=Tongou)  |
 | Description | Smart circuit breaker |
 | Exposes | temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, linkquality |
 | Picture | ![Tongou TO-Q-SY2-163JZT](https://www.zigbee2mqtt.io/images/devices/TO-Q-SY2-163JZT.png) |
