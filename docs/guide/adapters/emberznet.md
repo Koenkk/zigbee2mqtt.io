@@ -113,8 +113,12 @@ With external antenna.
 
 ### Hybrid (USB + Network)
 <details>
-<summary>SMLIGHT SLZB-06M EFR32MG21 Zigbee Ethernet USB POE WiFi LAN adapter</summary>
-
+<summary>SMLIGHT SLZB-06M EFR32MG21 Zigbee Ethernet USB POE WiFi LAN adapter</summary>  
+  
+**For optimal performance with Ember, ensure your Zigbee firmware is above version 20240510**.  
+- To unlock  Ember driver support, update your Core firmware to a version higher than 2.2.0, followed by a Radio (Zigbee) firmware update to version 20240510 or higher, if any.  
+- Currently, please avoid using Ember firmware with a Wi-Fi connection, as it can cause some interferences.  
+  
 Powerful, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed, and ready-to-use Zigbee adapter.
 It supports Zigbee 3.0, Ethernet, LAN, USB, and WiFi connections. Rich packing that includes:
 | Package includes | SLZB-06M adapter | +5dB antenna 360° | Adhesive tape | Screws | Screwdriver | MicroUSB-Type-C | Screw-fix helper |
@@ -124,7 +128,7 @@ It supports Zigbee 3.0, Ethernet, LAN, USB, and WiFi connections. Rich packing t
 
 Remote update (Zigbee and Core), modern UI firmware. Optoelectronic isolation for Ethernet, LEDs and physical button for interacting with users. It fits home and business use.  
 - Zigbee firmware:  
--- [Zigbee chip update process OTA](https://smlight.tech/manual/slzb-06/guide/flashing-and-updating/updating-zigbee.html#zigbee-auto-update-over-the-web-interface-recommended) for automatic updates.  
+-- [Zigbee chip update process OTA](https://smlight.tech/manual/slzb-06/guide/flashing-and-updating/updating-zigbee.html#zigbee-auto-update-over-the-web-interface-recommended) for automatic updates. For optimal performance with Ember, ensure your Zigbee firmware is above version 20240510.  
 - Core firmware:  
 -- [Functionality and screenshots](https://smlight.tech/manual/slzb-06/guide/configuration/)  
 -- [Video review](https://www.youtube.com/watch?v=q3cWHQ8CdcA)
