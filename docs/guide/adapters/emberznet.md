@@ -114,21 +114,17 @@ With external antenna.
 ### Hybrid (USB + Network)
 <details>
 <summary>SMLIGHT SLZB-06M EFR32MG21 Zigbee Ethernet USB POE WiFi LAN adapter</summary>  
-  
-**For optimal performance with Ember, ensure your Zigbee firmware is above version 20240510**.  
-- To unlock  Ember driver support, update your Core firmware to a version higher than 2.2.0, followed by a Radio (Zigbee) firmware update to version 20240510 or higher, if any.  
-- Currently, please avoid using Ember firmware with a Wi-Fi connection, as it can cause some interferences.  
-  
-Powerful, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed, and ready-to-use Zigbee adapter.
-It supports Zigbee 3.0, Ethernet, LAN, USB, and WiFi connections. Rich packing that includes:
-| Package includes | SLZB-06M adapter | +5dB antenna 360° | Adhesive tape | Screws | Screwdriver | MicroUSB-Type-C | Screw-fix helper |
-|:-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|Quantity: |1pcs|1 pcs|2 pcs|2 pcs|1 pcs|1pcs|1pcs|  
-|Image| [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adapter-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adapter.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-antenna-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-antenna.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adhesive-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adhesive.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screws-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screws.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screwdriver-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screwdriver.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-microusb-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-microusb.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-qr-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-qr.jpg) |  
 
-Remote update (Zigbee and Core), modern UI firmware. Optoelectronic isolation for Ethernet, LEDs and physical button for interacting with users. It fits home and business use.  
+  
+SMLIGHT SLZB-06M is an EFR32MG21 chip-based adapter. Powerful, tiny, modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed, and ready-to-use Zigbee adapter.
+It supports Zigbee 3.0, Thread, and Bluetooth with Ethernet, LAN, USB, and WiFi connections.  
+[![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06m-main-title-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06m-main-title.jpg)  
+  
+**For optimal performance with Ember, ensure your Zigbee firmware is above version 20240510 (requires Core firmware to a version higher than 2.2.0)**.  
+Currently, please avoid using Ember firmware with a Wi-Fi connection, as it can cause some interference.  
+  
 - Zigbee firmware:  
--- [Zigbee chip update process OTA](https://smlight.tech/manual/slzb-06/guide/flashing-and-updating/updating-zigbee.html#zigbee-auto-update-over-the-web-interface-recommended) for automatic updates. For optimal performance with Ember, ensure your Zigbee firmware is above version 20240510.  
+-- [Zigbee chip update process OTA](https://smlight.tech/manual/slzb-06/guide/flashing-and-updating/updating-zigbee.html#zigbee-auto-update-over-the-web-interface-recommended) for automatic updates. For optimal performance with Ember, ensure your Zigbee firmware is above version 20240510 (requires core v2.2.0 and above).  
 - Core firmware:  
 -- [Functionality and screenshots](https://smlight.tech/manual/slzb-06/guide/configuration/)  
 -- [Video review](https://www.youtube.com/watch?v=q3cWHQ8CdcA)
@@ -136,10 +132,6 @@ Remote update (Zigbee and Core), modern UI firmware. Optoelectronic isolation fo
 - [Product page](https://smlight.tech/product/slzb-06m/)
 - Buy: [Official Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-06m-zigbee-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Tindie - Worldwide](https://www.tindie.com/products/smartlightme/smlight-slzb-06-zigbee-ethernet-poe-usb-wifi-adapt/).  
 Local fast delivery: [AU](https://shop.dialedin.com.au/products/smlight-slzb-06m-efr32mg21-lan-zigbee-adapter), [AT](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [BE](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [CH](https://shop.swiss-domotique.ch/en/gateways-antennas/2390-smlight-slzb-06m-adaptateur-zigbee-ethernet-poe-usb-wifi.html), [EE](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [FR](https://www.domadoo.fr/fr/box-domotique/7043-smlight-adaptateur-usb-ethernet-poe-zigbee-30-efr32mg21-zigbee2mqtt-et-zha.html), [DE](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [LT](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [LV](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [PL](https://pcblab.io/slzb-06m-adapter-zigbee-efr32mg21-ethernet-poe-usb-lan-wifi.html), [TH](https://shopee.co.th/Zigbee-SLZB-06-LAN-POE-USB-WIFI-Hybrid-Coordinator-CC2652P-SMARTLIGHT-SLZB-06-HASS-Zigbee2mqtt-ZHA-CC2652-CC2531-i.25068823.21062349644), [US official](https://cloudfree.shop/product/smlight-zigbee-ethernet-adapter/), [US Amazon](https://www.amazon.com/SMLIGHT-SLZB-06-Ethernet-Zigbee2MQTT-Assistant/dp/B0BL6DQSB3).  
-   
-     | Product picture | Youtube videoreview |
-     |:-:|:-:|
-     |[![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06m-main-title-small.jpg)](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06m-main-title.jpg) | [![](https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-main-videolink-small.jpg)](https://www.youtube.com/watch?v=q3cWHQ8CdcA)|     
 
 </details>
 
