@@ -12,6 +12,9 @@ The log-level can be adjusted at runtime, see [MQTT Topics and Messages](../usag
 advanced:
   # Optional: Logging level, options: debug, info, warn, error (default: info)
   log_level: info
+  # Optional: Configure (override) the logging level per namespace (default: {})
+  log_namespaced_levels:
+    z2m:mqtt: debug
   # Optional: log timestamp format (default: shown below)
   timestamp_format: 'YYYY-MM-DD HH:mm:ss'
   # Optional: Location of log directory (default: shown below)
