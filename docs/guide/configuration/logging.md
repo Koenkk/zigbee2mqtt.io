@@ -12,9 +12,9 @@ The log-level can be adjusted at runtime, see [MQTT Topics and Messages](../usag
 advanced:
   # Optional: Logging level, options: debug, info, warn, error (default: info)
   log_level: info
-  # Optional: Configure (override) the logging level per namespace (default: {})
+  # Optional: Configure the logging level per namespace (default: {})
   log_namespaced_levels:
-    z2m:mqtt: debug
+    z2m:mqtt: warning
   # Optional: log timestamp format (default: shown below)
   timestamp_format: 'YYYY-MM-DD HH:mm:ss'
   # Optional: Location of log directory (default: shown below)
@@ -43,4 +43,15 @@ advanced:
     app_name: Zigbee2MQTT # The name of the application (Default: Zigbee2MQTT).
     eol: '\n' # The end of line character to be added to the end of the message (Default: Message without modifications).
 
+```
+
+## Reducing MQTT traffic
+
+Logging can have a significant impact on MQTT traffic. For that reason, only `info` level and above are published to MQTT by default (see below if you want to change this behavior). You can reduce it further by increasing specific levels for certain namespaces you do not need to log with the setting `log_namespaced_levels`. One of the big factors in traffic from logging is the namespace `z2m:mqtt`, you can increase its level while keeping the rest at `info` using:
+
+```yaml
+advanced:
+  log_level: info
+  log_namespaced_levels:
+    z2m:mqtt: warning
 ```
