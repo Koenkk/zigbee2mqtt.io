@@ -234,18 +234,6 @@ Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6
 <img src="https://smartlight.me/ebay/images/slzb_05/smartlight-zigbee-lan-slzb-05.jpg" width="200" />
 </details>
 
-<details>
-<summary>cod.m ZigBee CC2652P2 TCP Coordinator</summary>
-
-CC2652P2 ZigBee Ethernet Coordinator, ethernet part based on [USR-K6](https://www.pusr.com/products/low-cost-ttl-to-ethernet-modules-usr-k6.html) module. POE possible with external splitter. Comes complete with 3d printed case and antenna.
-* [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)
-* [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
-* [Flashing instructions](https://github.com/codm/cc2652p2-tcp-zigbee#update)
-* [Buy](https://shop.codm.de/automation/zigbee/40/zigbee-cc2652p2-tcp-ethernet-coordinator)
-
-<img src="../../images/codm-cc2652p-tcp-zigbee-coordinator-case.jpg" width="200" /> <img src="../../images/codm-cc2652p-tcp-zigbee-coordinator.jpg" width="200" />
-</details>
-
 ### Hybrid (USB + Network)
 
 <details>
@@ -360,6 +348,30 @@ Local fast delivery: [AU](https://shop.dialedin.com.au/products/smlight-slzb-06p
     |:-:|:-:|:-:|
     |<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06p7-main-title.jpg" width="200" />|<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06p7-main-firmware.jpg" width="200" />|[<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-main-videolink-small.jpg" width="200" />](https://www.youtube.com/watch?v=q3cWHQ8CdcA)|     
 
+</details>
+
+<details>
+<summary>cod.m Zigbee Coordinator CC2652P7 (CZC-1.0)</summary>
+
+cod.m ZigBee Coordinator (CZC) - Network (LAN/Wi-Fi) with Power over Ethernet (optional) or USB-C.
+
+Features:
+* CC2652P7 Texas Instruments multiprotocol 2.4GHz radio module
+* ZigBee 3.x, Z-Stack firmware (Koenkk)
+* LAN, WLAN or USB mode PoE (802.3af) or USB-C power, <1W power consumption
+* ESP32 open source firmware ([cod.m UZG Fork](https://github.com/codm/czc-firmware/releases))
+* ZigBee firmware update via network and in future via web interface
+* ESP32 firmware update via web interface or USB-C (Auto-BSL)
+* [3D-printed housing (CC-BY-NC-SA)](https://www.printables.com/de/model/857864-codm-zigbee-coordinator-cases-czc-10)
+* Made in Germany, CE, RoHS, WEEE
+
+Links:
+* [ESP32 firmware](https://github.com/codm/czc-firmware/releases)
+* [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.x.0/bin)
+* [Documentation](https://docs.codm.de/en/zigbee/coordinator/)
+* [Buy](https://shop.codm.de/en/automation/zigbee/40/zigbee-coordinator-cc2652p7-PoE)
+
+<img src="../../images/codm-cc2652p7-zigbee-coordinator.jpg" width="200" /> <img src="../../images/codm-cc2652p7-zigbee-coordinator-schematic.png" width="200" />
 </details>
 
 ### Hub
