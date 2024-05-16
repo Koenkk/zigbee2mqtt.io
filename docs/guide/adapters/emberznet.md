@@ -114,6 +114,23 @@ With external antenna.
 ### Hybrid (USB + Network)
 
 <details>
+<summary>SMLIGHT SLZB-06M (EFR32MG21)</summary>
+
+With external antenna.
+
+**For optimal performance, ensure your firmware is at least version 20240510 (requires Core firmware version 2.2.0 or higher).
+Not suitable for WiFi or other high latency connections.**
+
+* [Recommended firmware](https://github.com/darkxst/silabs-firmware-builder/raw/main/firmware_builds/slzb-06m/ncp-uart-hw-v7.4.1.0-slzb-06m-115200.gbl), baud rate settings is 115200.  
+* [Product page](https://smlight.tech/product/slzb-06m/)
+* Buy: [Official Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-06m-zigbee-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Tindie - Worldwide](https://www.tindie.com/products/smartlightme/smlight-slzb-06-zigbee-ethernet-poe-usb-wifi-adapt/).  
+Local fast delivery: [AU](https://shop.dialedin.com.au/products/smlight-slzb-06m-efr32mg21-lan-zigbee-adapter), [AT](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [BE](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [CH](https://shop.swiss-domotique.ch/en/gateways-antennas/2390-smlight-slzb-06m-adaptateur-zigbee-ethernet-poe-usb-wifi.html), [EE](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [FR](https://www.domadoo.fr/fr/box-domotique/7043-smlight-adaptateur-usb-ethernet-poe-zigbee-30-efr32mg21-zigbee2mqtt-et-zha.html), [DE](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [LT](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [LV](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [PL](https://pcblab.io/slzb-06m-adapter-zigbee-efr32mg21-ethernet-poe-usb-lan-wifi.html), [TH](https://shopee.co.th/Zigbee-SLZB-06-LAN-POE-USB-WIFI-Hybrid-Coordinator-CC2652P-SMARTLIGHT-SLZB-06-HASS-Zigbee2mqtt-ZHA-CC2652-CC2531-i.25068823.21062349644), [US official](https://cloudfree.shop/product/smlight-zigbee-ethernet-adapter/), [US Amazon](https://www.amazon.com/SMLIGHT-SLZB-06-Ethernet-Zigbee2MQTT-Assistant/dp/B0BL6DQSB3).  
+
+<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06m-main-title.jpg" width="200" />
+
+</details>
+
+<details>
 <summary>SMLIGHT SLZB-06mg24 (EFR32MG24)</summary>
 
 With external antenna.
@@ -164,14 +181,6 @@ See [Silicon Labs announcement](https://www.silabs.com/documents/public/release-
 <summary>Easyiot ZB-GW04 (v1.1, v1.2)</summary>
 
 Low-resources hardware.
-
-</details>
-
-<details>
-<summary>SMLIGHT SLZB-06m (EFR32MG21)</summary>
-
-Has had firmware issues (some still pending).
-Recommended to look for the more recent SMLIGHT SLZB-06mg24.
 
 </details>
 
