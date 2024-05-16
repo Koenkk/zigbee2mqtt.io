@@ -184,14 +184,6 @@ Low-resources hardware.
 
 </details>
 
-<details>
-<summary>SMLIGHT SLZB-06m (EFR32MG21)</summary>
-
-Has had firmware issues (some still pending).
-Recommended to look for the more recent SMLIGHT SLZB-06mg24.
-
-</details>
-
 ## Logging specific to this stack
 
 ### `info` level
