@@ -26,6 +26,14 @@ pageClass: device-page
 ## Notes
 ### Router functionality
 The device type is 'End Device' and cannot function as a Zigbee router.
+
+### Pairing
+There are two different options to reset the device and enter pairing mode:
+
+* button: Press and hold the device button for 5 seconds.
+* switch: Toggle an connected external switch 10 times consecutively. This is especially useful when there is no direct physical access to the button.
+
+The device will stay in "state" : "OFF" and cannot be switched while it is in pairing mode. If not successfully paired, it will exit pairing mode after 180 seconds.  
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -65,15 +73,3 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
-
-## Notes
-
-### Pairing
-There are two different options to reset the device and enter pairing mode:
-
-* button: Press and hold the device button for 5 seconds.
-* switch: Toggle an connected external switch 10 times consecutively. This is especially useful when there is no direct physical access to the button.
-
-The device will stay in "state" : "OFF" and cannot be switched while it is in pairing mode. If not successfully paired, it will exit pairing mode after 180 seconds.  
-
-
