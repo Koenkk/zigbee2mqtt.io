@@ -75,7 +75,7 @@ The `dataReport`and `dataResponse` types of the `manuSpecificTuYa` cluster have 
 Some datapoints are 'report only' (they report changes that happen within the device) others are 'issue and report' (they can report by themselves, but also respond with a report when set). Data points are not unified across all TuYa devices so they can differ per device.
 
 ### 4. Mapping the datapoints
-Now we have to map the datapoints in `tuyaDatapoints`. Start Zigbee2MQTT with [debug logging](../../guide/usage/debug.md) enabled and trigger some actions on the device. You will now see logging like:
+Now we have to map the datapoints in `tuyaDatapoints`. Start Zigbee2MQTT with [debug logging](../../guide/configuration/logging.md#debugging) enabled and trigger some actions on the device. You will now see logging like:
 
 ```
 Zigbee2MQTT:debug 2022-11-30 18:29:19: Datapoint '106' with value '77' not defined for '_TZE200_d0yu2xgi'
