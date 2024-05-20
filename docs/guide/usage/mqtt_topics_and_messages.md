@@ -219,6 +219,26 @@ A device definition will always have an `exposes` and `options` property which a
 - `exposes` This contains all the device capabilities (e.g. switch, light, occupancy)
 - `options` Contains all the device options (e.g. `temperature_precision`) which can be set through `zigbee2mqtt/bridge/request/device/options`
 
+## zigbee2mqtt/bridge/definitions
+Contains the zigbee clusters definitions of the devices, this message is published as retained and is structured with 2 parts:
+* `clusters`: contains the official cluster definition from the `zigbee-herdsman` package, organized by cluster name
+* `custom_clusters`: contains the custom cluster definitions from the `zigbee-herdsman-converts` package, of devices currently used
+
+```json
+{
+  "clusters": {
+    "genBasic": {ID: 0, ...},
+    "genPowerCfg" : {ID: 1, ...},
+  },
+  "custom_clusters": {
+    "0x12345678": {
+       "myManuspecificCluster": {"ID": 0xFC01, ...},
+    }
+  }
+}
+```
+
+The message is updated at startup and when a device is joining/leaving/reconfiguring.
 
 ## zigbee2mqtt/bridge/groups
 Contains the groups, this message is published as retained.
