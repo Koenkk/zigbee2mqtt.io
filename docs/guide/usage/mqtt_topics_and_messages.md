@@ -224,6 +224,7 @@ Contains the zigbee clusters definitions of the devices, this message is publish
 * `clusters`: contains the official cluster definition from the `zigbee-herdsman` package, organized by cluster name
 * `custom_clusters`: contains the custom cluster definitions from the `zigbee-herdsman-converts` package, of devices currently used
 
+Example payload:
 ```json
 {
   "clusters": {
