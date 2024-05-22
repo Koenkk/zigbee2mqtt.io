@@ -221,3 +221,69 @@ Failed delivery of a message. The target device could not be reached. There can 
 Failed request. Message should be self-explanatory, and give a `status` indicating the reason of the failure.
 
 NCP Fatal Error. The coordinator failed (the reason should be given in the message). Zigbee2MQTT will attempt to reset it and resume communication. If unsuccessful, Zigbee2MQTT will be stopped completely and the system's watchdog (if any) will attempt to restart it.
+
+## [ADVANCED] Customizing stack configuration
+
+::: warning ATTENTION
+This feature modifies the behavior of your adapter, and the network. Using improper values for your network can completely break it. Only modify any of these values if you are absolutely sure your network will benefit from it. Most networks will be just fine with the defaults.
+:::
+
+::: warning ATTENTION
+Do not open a new issue in Zigbee2MQTT before confirming the problem is present with the default configuration.
+:::
+
+You can modify the EmberZNet default stack configuration by creating a file `stack_config.json` in the same folder as your `coordinator_backup.json`. This configuration can only be done manually.
+
+Format, available and default values are as below:
+```json
+{
+  "CONCENTRATOR_RAM_TYPE": "high",
+  "CONCENTRATOR_MIN_TIME": 5,
+  "CONCENTRATOR_MAX_TIME": 60,
+  "CONCENTRATOR_ROUTE_ERROR_THRESHOLD": 3,
+  "CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD": 1,
+  "CONCENTRATOR_MAX_HOPS": 0,
+  "MAX_END_DEVICE_CHILDREN": 32,
+  "APS_UNICAST_MESSAGE_COUNT": 32,
+  "RETRY_QUEUE_SIZE": 16,
+  "ADDRESS_TABLE_SIZE": 16,
+  "TRUST_CENTER_ADDRESS_CACHE_SIZE": 2,
+  "KEY_TABLE_SIZE": 0,
+  "BINDING_TABLE_SIZE": 32,
+  "BROADCAST_TABLE_SIZE": 15,
+  "MULTICAST_TABLE_SIZE": 16,
+  "NEIGHBOR_TABLE_SIZE": 26,
+  "SOURCE_ROUTE_TABLE_SIZE": 200,
+  "TRANSIENT_DEVICE_TIMEOUT": 10000,
+  "END_DEVICE_POLL_TIMEOUT": 8,
+  "TRANSIENT_KEY_TIMEOUT_S": 300
+}
+```
+
+Any value that is omitted from the JSON file, invalid or out of range, will use the default instead.
+
+Documentation on these values and their behavior is documented in [SiLabs UG100 - 2.3.1](https://www.silabs.com/documents/public/user-guides/ug100-ezsp-reference-guide.pdf).
+
+The driver further restricts values to the below:
+- CONCENTRATOR_RAM_TYPE: 'high' or 'low'
+- CONCENTRATOR_MIN_TIME: min 1, max 60
+- CONCENTRATOR_MAX_TIME: min 30, max 300
+- CONCENTRATOR_ROUTE_ERROR_THRESHOLD: min 1, max 100
+- CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD: min 1, max 100
+- CONCENTRATOR_MAX_HOPS: min 0, max 30
+- MAX_END_DEVICE_CHILDREN: min 6, max 64
+- APS_UNICAST_MESSAGE_COUNT: min 1, max 255
+- RETRY_QUEUE_SIZE: min 0, max 255
+- ADDRESS_TABLE_SIZE: min 1, max 250
+- TRUST_CENTER_ADDRESS_CACHE_SIZE: min 0, max 4
+- KEY_TABLE_SIZE: min 0, max 127
+- BINDING_TABLE_SIZE: min 0, max 127
+- BROADCAST_TABLE_SIZE: min 15, max 254
+- MULTICAST_TABLE_SIZE: min 5, max 250
+- NEIGHBOR_TABLE_SIZE: 16 or 26
+- SOURCE_ROUTE_TABLE_SIZE: min 0, max 254
+- TRANSIENT_DEVICE_TIMEOUT: min 0, max 65535
+- END_DEVICE_POLL_TIMEOUT: min 0, max 14
+- TRANSIENT_KEY_TIMEOUT_S: min 0, max 65535
+
+**Note that values are not only restricted by these ranges, but also by the memory available in your adapter. If any value (or combination) is too great for your adapter to handle, it will default to the firmware value(s) instead.**
