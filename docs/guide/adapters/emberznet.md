@@ -222,7 +222,7 @@ Failed request. Message should be self-explanatory, and give a `status` indicati
 
 NCP Fatal Error. The coordinator failed (the reason should be given in the message). Zigbee2MQTT will attempt to reset it and resume communication. If unsuccessful, Zigbee2MQTT will be stopped completely and the system's watchdog (if any) will attempt to restart it.
 
-## [ADVANCED] Customizing stack configuration
+## [EXPERT] Customizing stack configuration
 
 ::: warning ATTENTION
 This feature modifies the behavior of your adapter, and the network. Using improper values for your network can completely break it. Only modify any of these values if you are absolutely sure your network will benefit from it. Most networks will be just fine with the defaults.
