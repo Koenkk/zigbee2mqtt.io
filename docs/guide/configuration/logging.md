@@ -10,7 +10,7 @@ The log-level can be adjusted at runtime, see [MQTT Topics and Messages](../usag
 
 ```yaml
 advanced:
-  # Optional: Logging level, options: debug, info, warn, error (default: info)
+  # Optional: Logging level, options: debug, info, warning, error (default: info)
   log_level: info
   # Optional: Set individual log levels for certain namespaces (default: {})
   log_namespaced_levels:
