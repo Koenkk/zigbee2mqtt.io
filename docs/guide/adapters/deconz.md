@@ -5,6 +5,9 @@
 ```yaml
 serial:
   adapter: deconz
+  port: /dev/xyz    <<< e.g. ttyUSB0. use `dmesg | grep tty` after plugging the conbee into the usb
+  adapter: deconz
+  baudrate: 115200  <<< see below
 ```
 
 [Other settings](../configuration/adapter-settings.md)
