@@ -359,6 +359,11 @@ See [OTA updates](./ota_updates.md).
 Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected (e.g. not reporting certain values), not all devices can be configured (only when the definition has a `configure` in its [definition](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices)). Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_remote"}` or `my_remote`, response: `{"data":{"id": "my_remote"},"status":"ok"}`.
 
 
+#### zigbee2mqtt/bridge/request/device/interview
+
+Allows you to manually trigger an interview of the device, which is the reading of a device's endpoints, clusters, and basic attributes. An interview usually only occurs after the initial pairing of the device, but it is sometimes useful to interview a device after a firmware upgrade adds new functionality. Payload format is `{"id": "deviceID"}` where deviceID can be the `ieee_address` or `friendly_name` of the device, example: `{"id": "my_bulb"}`, response: `{"data":{"id": "my_bulb"},"status":"ok"}`. 
+
+
 #### zigbee2mqtt/bridge/request/device/options
 
 Allows you to change device options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"id": deviceID,"options": OPTIONS}` where deviceID can be the `ieee_address` or `friendly_name` of the device, example: `{"id": "my_bulb", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"id":"my_bulb","restart_required":false},"status":"ok"}`. Some options may require restarting Zigbee2MQTT, in this case `restart_required` is set to `true`. Note that `restart_required` is also published to `zigbee2mqtt/bridge/info`. Use `zigbee2mqtt/bridge/request/restart` to restart Zigbee2MQTT.
