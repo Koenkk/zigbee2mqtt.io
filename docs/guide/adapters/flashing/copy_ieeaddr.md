@@ -27,7 +27,7 @@ Supports: CC2652, CC1352, CC2538
 1. Plug in your adapter and put it in BSL mode, consult your adapters manual on how to put it in BSL mode (if necessary, some adapters have an autobootloader, e.g. [this one](https://slae.sh/projects/cc2652/#flash-it))
 1. Run `./cc2538-bsl.py -evw --ieee-address 00:12:4b:aa:bb:cc:dd:ee -p /dev/tty.usbserial-10 ./fw.hex`, replace:
     - `00:12:4b:aa:bb:cc:dd:ee` with your coordinator ieee address (first `0x` can be skipped)
-    - `/dev/tty.usbserial-10` with the path to your adapter
+    - `/dev/tty.usbserial-10` with the path to your adapter (for Sonoff Zigbee USB Dongle Plus `--bootloader-sonoff-usb` is needed as well)
     - `./fw.hex` with the path to your adapters firmware.
 
 ## FLASH-PROGRAMMER-2
