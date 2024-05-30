@@ -361,7 +361,7 @@ Allows to manually trigger a re-configure of the device. Should only be used whe
 
 #### zigbee2mqtt/bridge/request/device/interview
 
-Allows you to manually trigger an interview of the device, which is the reading of a device's endpoints, clusters, and basic attributes. An interview usually only occurs after the initial pairing of the device, but it is sometimes useful to interview a device after a firmware upgrade adds new functionality. Payload format is `{"id": "deviceID"}` where deviceID can be the `ieee_address` or `friendly_name` of the device, example: `{"id": "my_bulb"}`, response: `{"data":{"id": "my_bulb"},"status":"ok"}`. 
+Allows you to manually trigger an interview for a specified device, causing zigbee2mqtt to reads its endpoints, clusters, and basic attributes. A device interview usually only occurs after the initial pairing, but it is sometimes useful to perform an interview after a firmware upgrade adds new functionality. Payload format is `{"id": "deviceID"}` where deviceID can be the `ieee_address` or `friendly_name` of the device, example: `{"id": "my_bulb"}`, response: `{"data":{"id": "my_bulb"},"status":"ok"}`. 
 
 
 #### zigbee2mqtt/bridge/request/device/options
