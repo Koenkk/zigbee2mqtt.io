@@ -29,7 +29,7 @@ pip install --upgrade pip wheel setuptools
 pip install nodeenv
 
 # Init node environment
-nodeenv -p -n 16.15.0
+nodeenv -p -n 20.14.0
 
 # Deactivate and activate environment to be sure
 deactivate
