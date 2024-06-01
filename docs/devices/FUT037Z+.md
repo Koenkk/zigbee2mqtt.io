@@ -1,7 +1,7 @@
 ---
-title: "TuYa TS0505B_1_3 control via MQTT"
-description: "Integrate your TuYa TS0505B_1_3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-06-01T08:16:21
+title: "MiBoxer FUT037Z+ control via MQTT"
+description: "Integrate your MiBoxer FUT037Z+ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-06-01T08:47:21
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0505B_1_3
+# MiBoxer FUT037Z+
 
 |     |     |
 |-----|-----|
-| Model | TS0505B_1_3  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | Zigbee 10W Downlight RGB CCW |
+| Model | FUT037Z+  |
+| Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
+| Description | RGB led controller |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![TuYa TS0505B_1_3](https://www.zigbee2mqtt.io/images/devices/TS0505B_1_3.png) |
+| Picture | ![MiBoxer FUT037Z+](https://www.zigbee2mqtt.io/images/devices/FUT037Z+.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

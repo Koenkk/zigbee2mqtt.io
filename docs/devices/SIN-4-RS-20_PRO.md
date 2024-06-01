@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SIN-4-RS-20_PRO  |
 | Vendor  | [NodOn](/supported-devices/#v=NodOn)  |
 | Description | Roller shutter relay switch |
-| Exposes | cover (state, position, tilt), calibration, calibration_vertical_run_time_up, calibration_vertical_run_time_down, calibration_rotation_run_time_up, calibration_rotation_run_time_down, linkquality |
+| Exposes | cover (state, position, tilt), cover_mode, calibration_vertical_run_time_up, calibration_vertical_run_time_down, calibration_rotation_run_time_up, calibration_rotation_run_time_down, linkquality |
 | Picture | ![NodOn SIN-4-RS-20_PRO](https://www.zigbee2mqtt.io/images/devices/SIN-4-RS-20_PRO.png) |
 
 
@@ -49,12 +49,13 @@ It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 To change the tilt publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tilt": VALUE}` where `VALUE` is a number between `0` and `100`.
 
-### Calibration (enum)
-Automatic calibration of the roller shutter..
-Value can be found in the published state on the `calibration` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": NEW_VALUE}`.
-The possible values are: `stop`, `start`.
+### Cover mode (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"cover_mode": {"reversed": VALUE, "calibration": VALUE, "maintenance": VALUE, "led": VALUE}}`
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"cover_mode": ""}`.
+- `reversed` (binary): Reversal of the motor rotating direction allowed values: `true` or `false`
+- `calibration` (binary): Set the cover calibration mode allowed values: `true` or `false`
+- `maintenance` (binary): Set the cover maintenance mode, enabling will disable the cover motor allowed values: `true` or `false`
+- `led` (binary): Set the LED allowed values: `true` or `false`
 
 ### Calibration vertical run time up (numeric)
 Manuel calibration: Set vertical run time up of the roller shutter. Do not change it if your roller shutter is already calibrated..

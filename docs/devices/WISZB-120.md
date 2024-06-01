@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WISZB-120  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Window sensor |
-| Exposes | contact, battery, battery_low, tamper, temperature, linkquality |
+| Exposes | contact, battery, battery_low, tamper, temperature, voltage, linkquality |
 | Picture | ![Develco WISZB-120](https://www.zigbee2mqtt.io/images/devices/WISZB-120.png) |
 
 
@@ -38,6 +38,10 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes
@@ -72,6 +76,12 @@ Measured temperature value.
 Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
+
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `V`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
