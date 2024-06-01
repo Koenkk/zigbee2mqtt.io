@@ -1,12 +1,12 @@
-# Support new TuYa devices
-TuYa devices use a custom `manuSpecificTuya` cluster, the instructions below will help you understand it better and provide some tools to ease discovery of their functions
+# Support new Tuya devices
+Tuya devices use a custom `manuSpecificTuya` cluster, the instructions below will help you understand it better and provide some tools to ease discovery of their functions
 
 ## Instructions
 ### 1. Standard part of the setup
 Read through basic [howto](./01_support_new_devices.md) for instructions on how to setup an external converter
 
 ### 2. Adding your device
-Adding support for TuYa devices is a bit different. In order to provide support for E.G. the `TS0601` model ID you would create the following external converter:
+Adding support for Tuya devices is a bit different. In order to provide support for E.G. the `TS0601` model ID you would create the following external converter:
 
 ```js
 const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
@@ -19,7 +19,7 @@ const ea = exposes.access;
 const tuya = require('zigbee-herdsman-converters/lib/tuya');
 
 const definition = {
-    // Since a lot of TuYa devices use the same modelID, but use different datapoints
+    // Since a lot of Tuya devices use the same modelID, but use different datapoints
     // it's necessary to provide a fingerprint instead of a zigbeeModel
     fingerprint: [
         {
@@ -31,7 +31,7 @@ const definition = {
         },
     ],
     model: 'TS0601_new',
-    vendor: 'TuYa',
+    vendor: 'Tuya',
     description: 'Fill in a description of the device here',
     fromZigbee: [tuya.fz.datapoints],
     toZigbee: [tuya.tz.datapoints],
@@ -53,15 +53,15 @@ const definition = {
 module.exports = definition;
 ```
 
-### 3. Understanding TuYa datapoints
-The `dataReport`and `dataResponse` types of the `manuSpecificTuYa` cluster have their own format:
+### 3. Understanding Tuya datapoints
+The `dataReport`and `dataResponse` types of the `manuSpecificTuya` cluster have their own format:
 
 ```js
     {name: 'seq', type: DataType.uint16},
     {name: 'dpValues', type: BuffaloZclDataType.LIST_TUYA_DATAPOINT_VALUES},
 ```
 
-`seq` is the transaction number of the payload. `dpValues` is an array of "Data Points" (type: `TuYaDataPointValue`). Such a datapoint value consists of:
+`seq` is the transaction number of the payload. `dpValues` is an array of "Data Points" (type: `TuyaDataPointValue`). Such a datapoint value consists of:
 
 ```js
     dp: DataType.uint8;
@@ -69,10 +69,10 @@ The `dataReport`and `dataResponse` types of the `manuSpecificTuYa` cluster have 
     data: Buffer;
 ```
 
-- `dp` is so called "Data Point ID" which is at the core of TuYa devices. From the point of view of a device the DPIDs are the functions that the device provides.
+- `dp` is so called "Data Point ID" which is at the core of Tuya devices. From the point of view of a device the DPIDs are the functions that the device provides.
 - `datatype` is the type of data contained in the `data` field, see `dataTypes` in `node_modules/zigbee-herdsman-converters/lib/tuya.js`
 
-Some datapoints are 'report only' (they report changes that happen within the device) others are 'issue and report' (they can report by themselves, but also respond with a report when set). Data points are not unified across all TuYa devices so they can differ per device.
+Some datapoints are 'report only' (they report changes that happen within the device) others are 'issue and report' (they can report by themselves, but also respond with a report when set). Data points are not unified across all Tuya devices so they can differ per device.
 
 ### 4. Mapping the datapoints
 Now we have to map the datapoints in `tuyaDatapoints`. Start Zigbee2MQTT with [debug logging](../../guide/configuration/logging.md#debugging) enabled and trigger some actions on the device. You will now see logging like:
@@ -82,8 +82,8 @@ Zigbee2MQTT:debug 2022-11-30 18:29:19: Datapoint '106' with value '77' not defin
 ```
 
 Next we have to find out what this datapoint means (`106` in this example), there are different ways to do this:
-- [Find TuYa datapoint using the TuYa gateway](./03_find_tuya_data_points.md) (easiest but requires TuYa gateway)
-- Check if an already supported TuYa device has this datapoint mapped ([search](https://github.com/Koenkk/zigbee-herdsman-converters/search?q=tuyaDatapoints))
+- [Find Tuya datapoint using the Tuya gateway](./03_find_tuya_data_points.md) (easiest but requires Tuya gateway)
+- Check if an already supported Tuya device has this datapoint mapped ([search](https://github.com/Koenkk/zigbee-herdsman-converters/search?q=tuyaDatapoints))
 - Guess based on the value
 
 For this device we know that datapoint `106` is the humidity, we can now update the `exposes` and `tuyaDatapoints` section of the external converter:
@@ -110,7 +110,7 @@ The values in the mapped datapoint are as follows:
 Repeat this for all datapoints.
 
 ### 6. BONUS: Contacting the manufacturer
-When contacting a manufacturer of TuYa compatible device DO NOT ask for Zigbee protocol of the device, they usually have no idea how the TuYa radio that they bought communicates over Zigbee. Instead ask for the UART protocol for their device, this should give you a better cooperation. You can also ask them about DPIDs and data formats for their functions.
+When contacting a manufacturer of Tuya compatible device DO NOT ask for Zigbee protocol of the device, they usually have no idea how the Tuya radio that they bought communicates over Zigbee. Instead ask for the UART protocol for their device, this should give you a better cooperation. You can also ask them about DPIDs and data formats for their functions.
 
 ### 7. BONUS 2: Further reading
-You can read more about how the device communicates with TuYa Zigbee radio module [here](https://developer.tuya.com/en/docs/iot/device-development/access-mode-mcu/zigbee-general-solution/tuya-zigbee-module-uart-communication-protocol/tuya-zigbee-module-uart-communication-protocol?id=K9ear5khsqoty)
+You can read more about how the device communicates with Tuya Zigbee radio module [here](https://developer.tuya.com/en/docs/iot/device-development/access-mode-mcu/zigbee-general-solution/tuya-zigbee-module-uart-communication-protocol/tuya-zigbee-module-uart-communication-protocol?id=K9ear5khsqoty)
