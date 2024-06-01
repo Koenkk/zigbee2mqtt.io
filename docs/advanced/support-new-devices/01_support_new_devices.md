@@ -23,7 +23,7 @@ Make sure that joining is enabled, otherwise new devices cannot join the network
 
 ### 2. Creating the external definition
 When pairing an unsupported device with Zigbee2MQTT, it will attempt to discover features supported by this device. To check what has already been discovered, go to the "Zigbeee2MQTT frontend -> device -> Exposes tab". See if the exposed features work by checking if values are reported and/or it's controllable (in case of e.g. a light).
-Note that feature discovery is still WIP, not all features may be discovered or it may not be possible discovery all features due to a non-standard implementation of the device (commonly the case for TuYa devices).
+Note that feature discovery is still WIP, not all features may be discovered or it may not be possible discovery all features due to a non-standard implementation of the device (commonly the case for Tuya devices).
 
 Next generate the external definition by going to the device -> "Dev console" tab and press "Generate external definition".
 
@@ -87,7 +87,7 @@ Zigbee2MQTT:debug  2019-11-09T12:24:22: No converter available for 'WSDCGQ01LM' 
 If your device is not reporting anything, it could be that this device requires additional configuration. This can be done by adding a `configure:` section. It may help to look at similar [devices](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/devices).
 
 ::: tip
-If your device is advertised as TuYa compatible or reports anything with `manuSpecificTuya` additional instructions for adding your device can be found [here](./02_support_new_tuya_devices.md).
+If your device is advertised as Tuya compatible or reports anything with `manuSpecificTuya` additional instructions for adding your device can be found [here](./02_support_new_tuya_devices.md).
 :::
 
 In case your device does not report anything out of the blue, the Clusters page at Zigbee2MQTT's frontend (found under the device in the dashboard) also exposes the clusters.
