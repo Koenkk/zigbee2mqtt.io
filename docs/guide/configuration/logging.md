@@ -12,7 +12,7 @@ The log-level can be adjusted at runtime, see [MQTT Topics and Messages](../usag
 advanced:
   # Optional: Logging level, options: debug, info, warning, error (default: info)
   log_level: info
-  # Optional: Set individual log levels for certain namespaces (default: {})
+  # Optional: Set log levels for certain namespaces hierarchies (default: {})
   log_namespaced_levels:
     z2m:mqtt: warning
   # Optional: log timestamp format (default: shown below)
@@ -53,8 +53,24 @@ Logging can have a significant impact on MQTT traffic. For that reason, only `in
 advanced:
   log_level: info
   log_namespaced_levels:
-    z2m:mqtt: warning
+    'z2m:mqtt': warning
 ```
+
+## Defining levels for specific namespace hierarchy
+The log levels defined in `log_namespaced_levels` will apply to the namespace itself and all namespaces below unless explicitely configured.
+In addition to the regex based debug filter [#preventing-specific-namespaces-from-being-logged] it allows to fine tune your logging needs to great detail.
+```yaml
+advanced:
+  log_level: warning
+  log_namespaced_levels:
+    'zhc': info
+    'zhc:legacy:fz' : debug
+```
+
+- All namespaces bellow `zhc` will be logged as info
+- Except all namespaces bellow `zhc:legacy:fz` that will be logged as debug
+- All the rest uses the `warning` level`
+ 
 
 ## Debugging
 
