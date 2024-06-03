@@ -3,7 +3,7 @@
 Initial development started on experimental (alpha stage) support for various ZigGate adapters.  This includes all ZiGate compatible hardware adapters which are currently based on NXP Zigbee MCU chips like JN5168 and JN5169 with ZigGate 3.1d firmware or later.
 
 ::: warning ATTENTION
-zigbee-herdsman is looking for maintainers for the ZiGate adapter. See https://github.com/Koenkk/zigbee-herdsman/issues/1037
+zigbee-herdsman is looking for maintainers for the ZiGate adapter. See [https://github.com/Koenkk/zigbee-herdsman/issues/1037](https://github.com/Koenkk/zigbee-herdsman/issues/1037)
 :::
 
 ### Configuration

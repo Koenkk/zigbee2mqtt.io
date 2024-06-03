@@ -10,8 +10,11 @@ The log-level can be adjusted at runtime, see [MQTT Topics and Messages](../usag
 
 ```yaml
 advanced:
-  # Optional: Logging level, options: debug, info, warn, error (default: info)
+  # Optional: Logging level, options: debug, info, warning, error (default: info)
   log_level: info
+  # Optional: Set individual log levels for certain namespaces (default: {})
+  log_namespaced_levels:
+    z2m:mqtt: warning
   # Optional: log timestamp format (default: shown below)
   timestamp_format: 'YYYY-MM-DD HH:mm:ss'
   # Optional: Location of log directory (default: shown below)
@@ -41,3 +44,70 @@ advanced:
     eol: '\n' # The end of line character to be added to the end of the message (Default: Message without modifications).
 
 ```
+
+## Reducing MQTT traffic
+
+Logging can have a significant impact on MQTT traffic. For that reason, only `info` level and above are published to MQTT by default (see below if you want to change this behavior). You can reduce it further by increasing specific levels for certain namespaces you do not need to log with the setting `log_namespaced_levels`. One of the big factors in traffic from logging is the namespace `z2m:mqtt`, you can increase its level while keeping the rest at `info` using:
+
+```yaml
+advanced:
+  log_level: info
+  log_namespaced_levels:
+    z2m:mqtt: warning
+```
+
+## Debugging
+
+In case Zigbee2MQTT isn't working as expected the following tips can help you in finding the problem.
+First enable debug logging by adding the following in your `configuration.yaml`:
+
+```yaml
+advanced:
+  log_level: debug
+```
+
+In the logging you will see the following abbreviations:
+- `z2m`: Zigbee2MQTT
+- `zh`: [zigbee-herdsman](https://github.com/koenkk/zigbee-herdsman), logged events from the Zigbee library used by Zigbee2MQTT.
+- `zhc`: [zigbee-herdsman-converters](https://github.com/koenkk/zigbee-herdsman-converters), logged events from the devices support library.
+
+To change log level at runtime, use the frontend or [MQTT](../usage/mqtt_topics_and_messages.md)
+
+### Publishing to MQTT and to frontend
+
+In an effort to improve performance, `debug`-level logs are no longer published to MQTT and to frontend by default. If you want them published, you can use the following setting:
+
+```yaml
+advanced:
+  log_debug_to_mqtt_frontend: true
+```
+
+### Preventing specific namespaces from being logged
+
+A regex-based way to filter out certain `debug` lines based on their namespaces.
+
+Examples:
+
+Filter out log namespaces starting with:
+
+- `zhc:legacy:fz:tuya`
+- or `zhc:legacy:fz:moes`
+
+```yaml
+advanced:
+  log_debug_namespace_ignore: '^zhc:legacy:fz:(tuya|moes)'
+```
+
+Filter out log namespaces starting with:
+
+- `zhc:legacy:fz:tuya`
+- or `zhc:legacy:fz:moes`
+- or `zh:ember:uart:` (any namespace below `uart`)
+- or `zh:controller` (any namespace below `controller` and `controller` itself)
+
+```yaml
+advanced:
+  log_debug_namespace_ignore: '^zhc:legacy:fz:(tuya|moes)|^zh:ember:uart:|^zh:controller'
+```
+
+See [https://regex101.com/](https://regex101.com/) if you need some help building a regex. Make sure to use Flavor: `ECMAScript (JavaScript)`.

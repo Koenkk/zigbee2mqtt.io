@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-204ZM  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | PIR 24Ghz human presence sensor |
-| Exposes | presence, motion_state, illuminance_lux, battery, fading_time, static_detection_distance, static_detection_sensitivity, indicator, linkquality |
+| Exposes | presence, motion_state, illuminance_lux, battery, fading_time, static_detection_distance, static_detection_sensitivity, indicator, motion_detection_mode, motion_detection_sensitivity, linkquality |
 | Picture | ![TuYa ZG-204ZM](https://www.zigbee2mqtt.io/images/devices/ZG-204ZM.png) |
 
 
@@ -92,6 +92,21 @@ Value can be found in the published state on the `indicator` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator": NEW_VALUE}`.
 If value equals `ON` indicator is ON, if `OFF` OFF.
+
+### Motion detection mode (enum)
+Motion detection mode (Firmware version>=0122052017).
+Value can be found in the published state on the `motion_detection_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_mode": NEW_VALUE}`.
+The possible values are: `Only PIR`, `PIR+Dadar`, `Only Dadar`.
+
+### Motion detection sensitivity (numeric)
+Motion detection sensitivity (Firmware version>=0122052017).
+Value can be found in the published state on the `motion_detection_sensitivity` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_sensitivity": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10`.
+The unit of this value is `x`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

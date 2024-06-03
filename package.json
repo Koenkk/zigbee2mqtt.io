@@ -31,7 +31,7 @@
     "easyimage": "^3.1.1",
     "glob": "^8.0.3",
     "image-size": "^1.0.2",
-    "pug": "^3.0.2",
+    "pug": "^3.0.3",
     "pug-plain-loader": "^1.1.0",
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
@@ -40,6 +40,6 @@
     "typescript": "^4.9.3",
     "vuepress": "^2.0.0-beta.53",
     "vuepress-plugin-sitemap2": "^2.0.0-beta.122",
-    "zigbee-herdsman-converters": "19.37.2"
+    "zigbee-herdsman-converters": "19.47.1"
   }
 }
