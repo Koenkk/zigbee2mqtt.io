@@ -1024,7 +1024,14 @@ Table 13
 
 Table 14
 
-If you have additional technical problems, please email Technical support at support@easyiot.tech
+# Notes
+
+* If you have additional technical problems, please email Technical support at [support@easyiot.tech](mailto:support@easyiot.tech)
+
+
+* This is a UI interface of ZB-IR01 in HA. Thank you very much @shing6326
+https://github.com/shing6326/hacs-zb-ir01-to-climate/tree/master
+
 <!-- Notes END: Do not edit below this line -->
 
 
