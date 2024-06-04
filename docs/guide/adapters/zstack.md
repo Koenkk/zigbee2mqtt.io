@@ -180,6 +180,26 @@ Local fast delivery: [Australia](https://shop.dialedin.com.au/products/smlight-s
     |<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07p7-main1-title.jpg" width="200">|<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07p7-main2-title.jpg" width="200">|<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07p7-main3-title.jpg" width="200">|     
 
 </details>
+<details>
+<summary>ZigStar ZBStick-P2 - Zigbee USB Adapter</summary>  
+
+ZigStar is back with upgraded Zigbee Dongle. Developed for Zigbee2MQTT, pre-flashed and ready to use Zigbee adapter.
+Remote Zigbee update( AutoBSL enabled ), LEDs and flashing pins. It fits any situation.  
+
+- Zigbee firmware:
+  * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_3.x.0/bin/CC1352P7_coordinator_20230507.zip).
+  * [Router firmware](https://github.com/mercenaruss/zigstar_gateways/raw/main/files/Firmware/CC1352P7_Router.zip).
+
+- [Product page](https://zig-star.com/projects/zigbee-stick-v4/).  
+- Buy: [Official Store - Worldwide](https://zig-star.com/projects/zigbee-stick-v4/),[Tindie](https://www.tindie.com/products/zigstar/zigstar-stick-v4/), 
+[Elecrow](https://www.elecrow.com/zbstick-p-zigstar-stick-pro.html)
+
+    | Picture 1 | Picture 2 | Picture 3 |
+    |:-:|:-:|:-:|
+    |<img src="https://zig-star.com/assets/images/zbstick-pro/7.jpg" width="200">|<img src="https://zig-star.com/assets/images/zbstick-pro/1.jpg" width="200">|<img src="https://zig-star.com/assets/images/zbstick-pro/3.jpg" width="200">|     
+
+</details>
+
 
 ### Network (TCP)
 
