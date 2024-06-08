@@ -11,7 +11,7 @@ It is based on [VuePress v2](https://v2.vuepress.vuejs.org/).
 **Directory-Structure:**
 
 * `docgen`: Some scripts to test and generate the Device-Pages.
-* `docs`: The actual documentation.
+* `docs`: The current documentation.
 * `docs/.vuepress`: Some VuePress enhancements like Stylesheets.
 * `public`: Static assets.
 * `supported-devices-component`: Vue.js component rendering the devices-overview page.
