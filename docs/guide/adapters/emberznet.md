@@ -214,7 +214,7 @@ _NOT READY - Signaling NCP_: `ember` driver is temporarily overloaded. The coord
 
 _NCP EZSP protocol version of XX does not match Host version 13_: `ember` currently requires a firmware with EZSP v13 (EmberZNet firmware 7.4.x). You will need to upgrade your adapter's firmware. [Check the first two posts here](https://github.com/Koenkk/zigbee2mqtt/discussions/21462).
 
-_[BACKUP] Current backup file is from an unsupported EZSP version_: `ember` currently only supports EZSP v12 and above backups (can be identified by opening the `coordinator_backup.json` file). You will need to rename/move/delete the backup file. _An alternative is to upgrade your firmware to 7.3.1 and start `ezsp` once (which will create a more recent backup), then upgrade to 7.4.1 and switch to `ember`._
+_[BACKUP] Current backup file is from an unsupported EZSP version_: `ember` currently only supports EZSP v12 and above backups (can be identified by opening the `coordinator_backup.json` file). The file has been renamed automatically. A new one will be created by `ember` upon successful start.
 
 Failed delivery of a message. The target device could not be reached. There can be several causes for this, the rest of the logs should help identify which.
 
