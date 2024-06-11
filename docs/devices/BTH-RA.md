@@ -32,7 +32,7 @@ To pair this device you have to install the device via its installation code. Th
 ### Factory resetting
 To factory reset the device remove one of the batteries. While pressing and holding the device's main button on the front, insert the battery back. As soon as the device's LED is starting to blink orange while showing "RES", release the main button and press and hold it again until the device's LED is lighting up green. The device will then restart into the calibration process and look for a Zigbee network to join. In case something went wrong, the device's LED will start to blink red. The process has then to be start all over again.
 
-### Using the manufactor specific operation mode
+### Using the manufacturer specific operation mode
 The `system_mode` exposed by the device according to zigbee specification is always 'heat'. To set or read the actual operation mode of the device, use the manufacturer-specific feature 'operating mode' (see below)
 
 <!-- Notes END: Do not edit below this line -->
