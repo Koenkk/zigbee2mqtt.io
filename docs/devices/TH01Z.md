@@ -67,7 +67,7 @@ Temperature Report interval.
 Value can be found in the published state on the `temperature_report_interval` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_report_interval": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `120`.
+The minimal value is `5` and the maximum value is `20`.
 The unit of this value is `min`.
 
 ### Humidity report interval (numeric)
@@ -75,7 +75,7 @@ Humidity Report interval.
 Value can be found in the published state on the `humidity_report_interval` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_report_interval": NEW_VALUE}`.
-The minimal value is `5` and the maximum value is `120`.
+The minimal value is `5` and the maximum value is `20`.
 The unit of this value is `min`.
 
 ### Temperature unit convert (enum)
