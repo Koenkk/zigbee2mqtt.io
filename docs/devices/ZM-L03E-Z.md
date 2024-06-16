@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | 3 gang switch with neutral |
 | Exposes | switch (state), power_on_behavior, backlight_mode, indicator_mode, linkquality |
-| Picture | ![Zemismart ZM-L03E-Z](https://www.zigbee2mqtt.io/images/devices/ZM-L03E-Z.jpg) |
+| Picture | ![Zemismart ZM-L03E-Z](https://www.zigbee2mqtt.io/images/devices/ZM-L03E-Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

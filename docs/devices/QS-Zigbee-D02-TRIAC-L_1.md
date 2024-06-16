@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | 1 channel dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), light_type, power_on_behavior, linkquality |
-| Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-L_1](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-D02-TRIAC-L_1.jpg) |
+| Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-L_1](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-D02-TRIAC-L_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

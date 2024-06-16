@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TERNCY](/supported-devices/#v=TERNCY)  |
 | Description | Awareness switch |
 | Exposes | temperature, occupancy, illuminance_lux, illuminance, action, linkquality |
-| Picture | ![TERNCY TERNCY-PP01](https://www.zigbee2mqtt.io/images/devices/TERNCY-PP01.jpg) |
+| Picture | ![TERNCY TERNCY-PP01](https://www.zigbee2mqtt.io/images/devices/TERNCY-PP01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

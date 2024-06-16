@@ -58,7 +58,7 @@ Introducing a router ([read more about this](./01_zigbee_network.md)) can improv
 
 ![Routers can stabilize the complete message roundtrip.](https://www.zigbee2mqtt.io/images/routing3.jpg)
 
-You might choose a dedicated router (for example, a [SONOFF ZBDongle-E based router](https://www.zigbee2mqtt.io/devices/ZBDongle-E.html)) or a mains-powered Zigbee device (for example, a [Hue lamp](https://www.zigbee2mqtt.io/devices/8719514301481.html#philips-8719514301481)) to stabilize your network. Almost all AC powered devices will serve as a router.
+You might choose a dedicated router (for example, a [SONOFF ZBDongle-E based router](https://www.zigbee2mqtt.io/devices/ZBDongle-E.html)) or a mains-powered Zigbee device (for example, a [Hue lamp](https://www.zigbee2mqtt.io/devices/8719514301481.html#philips-8719514301481)) to stabilize your network. Almost all AC powered devices will serve as a router (exceptions are most AC powered relays that do not require a neutral wire).
 
 Please note that there are routers of mediocre quality that might not harmonize well with your network (for example, some versions of the [SONOFF Smart Plug S26R2ZB](https://www.zigbee2mqtt.io/devices/S26R2ZB.html) are [known to be limited](https://github.com/Koenkk/zigbee2mqtt/issues/10282)). This may yield in message routing errors. In case you have such devices in your network, it might help to add additional routers of better quality and bind your devices to these routers (re-pairing devices with “Permit join” restricted to the new/better router) to improve the overall network performance.
 

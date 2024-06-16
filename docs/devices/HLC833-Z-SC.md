@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Shenzhen Homa](/supported-devices/#v=Shenzhen%20Homa)  |
 | Description | Wireless dimmable controller |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![Shenzhen Homa HLC833-Z-SC](https://www.zigbee2mqtt.io/images/devices/HLC833-Z-SC.jpg) |
+| Picture | ![Shenzhen Homa HLC833-Z-SC](https://www.zigbee2mqtt.io/images/devices/HLC833-Z-SC.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

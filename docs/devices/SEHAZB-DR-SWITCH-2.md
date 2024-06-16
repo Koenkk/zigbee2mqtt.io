@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SolarEdge](/supported-devices/#v=SolarEdge)  |
 | Description | Smart energy switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![SolarEdge SEHAZB-DR-SWITCH-2](https://www.zigbee2mqtt.io/images/devices/SEHAZB-DR-SWITCH-2.jpg) |
+| Picture | ![SolarEdge SEHAZB-DR-SWITCH-2](https://www.zigbee2mqtt.io/images/devices/SEHAZB-DR-SWITCH-2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

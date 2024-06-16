@@ -120,9 +120,10 @@ No extra software besides `ZigbeeSniffer.jar` and Wireshark is needed. Some EZSP
 Download and install https://nmap.org/npcap/ and make sure you select to install the "Npcap Loopback Adapter" when installing. It shouldn't matter whether or not you use Winpcap compatibility mode.
 
 ### 3. Sniffing traffic
-In a terminal or command line, run `java -jar ZigbeeSniffer.jar -baud 115200 -flow hardware -port {PORT} -c {CHANNEL}`.
+In a terminal or command line, run `java -jar ZigbeeSniffer.jar -baud 115200 -flow {OPTION} -port {PORT} -c {CHANNEL}`.
 On Windows, `PORT` should be replaced by `COM5` or whatever you wrote down in step 1.
 On linux, `PORT` will be something like `/dev/ttyUSB0` or wherever you plugged in your HUSBZB-1 device.
+Depending on your adapter, `OPTION` should be replaced by `none` (e.g. Sonof Dongle-E) or `hardware` (HUSBZB-1).
 
 Once you have the application running, you should see it connect to and start sniffing traffic on the network.
 

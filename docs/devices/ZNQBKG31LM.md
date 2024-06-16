@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNQBKG31LM control via MQTT"
-description: "Integrate your Xiaomi ZNQBKG31LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNQBKG31LM control via MQTT"
+description: "Integrate your Aqara ZNQBKG31LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-03-01T15:36:38
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNQBKG31LM
+# Aqara ZNQBKG31LM
 
 |     |     |
 |-----|-----|
 | Model | ZNQBKG31LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara E1 3 gang switch (with neutral) |
-| Exposes | switch (state), operation_mode, action, power_outage_memory, device_temperature, flip_indicator_light, linkquality |
-| Picture | ![Xiaomi ZNQBKG31LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG31LM.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch E1 (with neutral, triple rocker) |
+| Exposes | switch (state), operation_mode, power_outage_memory, device_temperature, flip_indicator_light, action, linkquality |
+| Picture | ![Aqara ZNQBKG31LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG31LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -96,12 +96,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_left`, `double_left`, `single_center`, `double_center`, `single_right`, `double_right`, `single_left_center`, `double_left_center`, `single_left_right`, `double_left_right`, `single_center_right`, `double_center_right`, `single_all`, `double_all`.
-
 ### Power outage memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.
 Value can be found in the published state on the `power_outage_memory` property.
@@ -121,6 +115,12 @@ Value can be found in the published state on the `flip_indicator_light` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"flip_indicator_light": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
 If value equals `ON` flip indicator light is ON, if `OFF` OFF.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single_left`, `double_left`, `single_center`, `double_center`, `single_right`, `double_right`, `single_left_center`, `double_left_center`, `single_left_right`, `double_left_right`, `single_center_right`, `double_center_right`, `single_all`, `double_all`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Smart LED multicolor A19 bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), power, energy, linkquality |
-| Picture | ![Sengled E21-N1EA](https://www.zigbee2mqtt.io/images/devices/E21-N1EA.jpg) |
+| Picture | ![Sengled E21-N1EA](https://www.zigbee2mqtt.io/images/devices/E21-N1EA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -99,13 +99,15 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
 
 ### Energy (numeric)
 Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### Linkquality (numeric)

@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | ZG-205ZL  |
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | 24Ghz human presence sensor |
+| Description | 24Ghz/5.8GHz human presence sensor |
 | Exposes | presence, motion_state, illuminance_lux, fading_time, large_motion_detection_distance, large_motion_detection_sensitivity, small_motion_detection_distance, small_motion_detection_sensitivity, static_detection_distance, static_detection_sensitivity, mode, alarm_volume, alarm_time, light_mode, linkquality |
-| Picture | ![TuYa ZG-205ZL](https://www.zigbee2mqtt.io/images/devices/ZG-205ZL.jpg) |
+| Picture | ![TuYa ZG-205ZL](https://www.zigbee2mqtt.io/images/devices/ZG-205ZL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

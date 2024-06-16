@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Halemeier](/supported-devices/#v=Halemeier)  |
 | Description | LED driver |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![Halemeier HA-ZGMW2-E](https://www.zigbee2mqtt.io/images/devices/HA-ZGMW2-E.jpg) |
+| Picture | ![Halemeier HA-ZGMW2-E](https://www.zigbee2mqtt.io/images/devices/HA-ZGMW2-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

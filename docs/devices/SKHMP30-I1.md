@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN SKHMP30-I1 control via MQTT"
-description: "Integrate your HEIMAN SKHMP30-I1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "GS SKHMP30-I1 control via MQTT"
+description: "Integrate your GS SKHMP30-I1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-01-14T19:34:25Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN SKHMP30-I1
+# GS SKHMP30-I1
 
 |     |     |
 |-----|-----|
 | Model | SKHMP30-I1  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
-| Description | Smart metering plug |
-| Exposes | switch (state), power, current, voltage, linkquality |
-| Picture | ![HEIMAN SKHMP30-I1](https://www.zigbee2mqtt.io/images/devices/SKHMP30-I1.jpg) |
+| Vendor  | [GS](/supported-devices/#v=GS)  |
+| Description | Smart socket |
+| Exposes | switch (state), power, voltage, current, energy, identify, linkquality |
+| Picture | ![GS SKHMP30-I1](https://www.zigbee2mqtt.io/images/devices/SKHMP30-I1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -36,13 +36,19 @@ pageClass: device-page
 
 * `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+* `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -63,20 +69,37 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
-
-### Current (numeric)
-Instantaneous measured electrical current.
-Value can be found in the published state on the `current` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `A`.
 
 ### Voltage (numeric)
 Measured electrical potential value.
 Value can be found in the published state on the `voltage` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `V`.
+
+### Current (numeric)
+Instantaneous measured electrical current.
+Value can be found in the published state on the `current` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `A`.
+
+### Energy (numeric)
+Sum of consumed energy.
+Value can be found in the published state on the `energy` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

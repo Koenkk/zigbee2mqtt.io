@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [UseeLink](/supported-devices/#v=UseeLink)  |
 | Description | AU 4 plug 10A power board + USB |
 | Exposes | switch (state), power_outage_memory, lock (state), linkquality |
-| Picture | ![UseeLink SM-O301-AZ](https://www.zigbee2mqtt.io/images/devices/SM-O301-AZ.jpg) |
+| Picture | ![UseeLink SM-O301-AZ](https://www.zigbee2mqtt.io/images/devices/SM-O301-AZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

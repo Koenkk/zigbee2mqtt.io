@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Nue / 3A](/supported-devices/#v=Nue%20%2F%203A)  |
 | Description | Zigbee smart curtain switch |
 | Exposes | cover (state, position), moving, linkquality |
-| Picture | ![Nue / 3A ZW-EU-4C](https://www.zigbee2mqtt.io/images/devices/ZW-EU-4C.jpg) |
+| Picture | ![Nue / 3A ZW-EU-4C](https://www.zigbee2mqtt.io/images/devices/ZW-EU-4C.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,6 +33,8 @@ pageClass: device-page
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
+* `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
 
 ## Exposes

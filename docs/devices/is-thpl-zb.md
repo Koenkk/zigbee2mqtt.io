@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EFK](/supported-devices/#v=EFK)  |
 | Description | 4 in 1 multi sensor |
 | Exposes | occupancy, tamper, illuminance_lux, illuminance, temperature, humidity, battery, voltage, battery2, illuminance_calibration, temperature_calibration, humidity_calibration, reporting_enable, reporting_time, led_enable, pir_enable, sensitivity, keep_time, linkquality |
-| Picture | ![EFK is-thpl-zb](https://www.zigbee2mqtt.io/images/devices/is-thpl-zb.jpg) |
+| Picture | ![EFK is-thpl-zb](https://www.zigbee2mqtt.io/images/devices/is-thpl-zb.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -83,7 +83,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

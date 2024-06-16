@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
 | Description | AOne 4W smart dimmable Vintage GLS lamp 1900K |
 | Exposes | light (state, brightness), power_on_behavior, linkquality |
-| Picture | ![Aurora Lighting AU-A1VGSZ5E/19](https://www.zigbee2mqtt.io/images/devices/AU-A1VGSZ5E-19.jpg) |
+| Picture | ![Aurora Lighting AU-A1VGSZ5E/19](https://www.zigbee2mqtt.io/images/devices/AU-A1VGSZ5E-19.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

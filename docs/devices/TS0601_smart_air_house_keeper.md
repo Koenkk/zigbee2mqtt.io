@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart air house keeper |
 | Exposes | temperature, humidity, co2, voc, formaldehyd, pm25, linkquality |
-| Picture | ![TuYa TS0601_smart_air_house_keeper](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_air_house_keeper.jpg) |
+| Picture | ![TuYa TS0601_smart_air_house_keeper](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_air_house_keeper.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

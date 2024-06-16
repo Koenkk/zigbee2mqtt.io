@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Third Reality](/supported-devices/#v=Third%20Reality)  |
 | Description | Zigbee / BLE smart plug |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Third Reality 3RSP019BZ](https://www.zigbee2mqtt.io/images/devices/3RSP019BZ.jpg) |
+| Picture | ![Third Reality 3RSP019BZ](https://www.zigbee2mqtt.io/images/devices/3RSP019BZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

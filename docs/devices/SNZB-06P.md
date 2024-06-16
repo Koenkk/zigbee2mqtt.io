@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee occupancy sensor |
 | Exposes | occupancy, occupancy_timeout, occupancy_sensitivity, illumination, linkquality |
-| Picture | ![SONOFF SNZB-06P](https://www.zigbee2mqtt.io/images/devices/SNZB-06P.jpg) |
+| Picture | ![SONOFF SNZB-06P](https://www.zigbee2mqtt.io/images/devices/SNZB-06P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -82,8 +82,7 @@ The possible values are: `low`, `medium`, `high`.
 ### Illumination (enum)
 Only updated when occupancy is detected.
 Value can be found in the published state on the `illumination` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illumination": ""}`.
-It's not possible to write (`/set`) this value.
+It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `dim`, `bright`.
 
 ### Linkquality (numeric)

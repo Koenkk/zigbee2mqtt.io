@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi RTCGQ11LM control via MQTT"
-description: "Integrate your Xiaomi RTCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara RTCGQ11LM control via MQTT"
+description: "Integrate your Aqara RTCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi RTCGQ11LM
+# Aqara RTCGQ11LM
 
 |     |     |
 |-----|-----|
 | Model | RTCGQ11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara human body movement and illuminance sensor |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Motion sensor |
 | Exposes | battery, occupancy, device_temperature, voltage, illuminance_lux, illuminance, power_outage_count, linkquality |
-| Picture | ![Xiaomi RTCGQ11LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ11LM.jpg) |
+| Picture | ![Aqara RTCGQ11LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -76,7 +76,7 @@ is needed.
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

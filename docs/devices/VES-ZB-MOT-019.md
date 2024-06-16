@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Vesternet](/supported-devices/#v=Vesternet)  |
 | Description | Zigbee motor controller |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Vesternet VES-ZB-MOT-019](https://www.zigbee2mqtt.io/images/devices/VES-ZB-MOT-019.jpg) |
+| Picture | ![Vesternet VES-ZB-MOT-019](https://www.zigbee2mqtt.io/images/devices/VES-ZB-MOT-019.png) |
 | White-label | Sunricher SR-ZG9080A |
 
 
@@ -34,6 +34,8 @@ pageClass: device-page
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
+* `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
 
 ## Exposes

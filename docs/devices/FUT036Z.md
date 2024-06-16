@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
 | Description | Single color LED controller |
 | Exposes | light (state, brightness), effect, do_not_disturb, linkquality |
-| Picture | ![MiBoxer FUT036Z](https://www.zigbee2mqtt.io/images/devices/FUT036Z.jpg) |
+| Picture | ![MiBoxer FUT036Z](https://www.zigbee2mqtt.io/images/devices/FUT036Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

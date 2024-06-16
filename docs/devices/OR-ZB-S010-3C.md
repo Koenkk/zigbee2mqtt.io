@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ORVIBO](/supported-devices/#v=ORVIBO)  |
 | Description | Smart socket |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![ORVIBO OR-ZB-S010-3C](https://www.zigbee2mqtt.io/images/devices/OR-ZB-S010-3C.jpg) |
+| Picture | ![ORVIBO OR-ZB-S010-3C](https://www.zigbee2mqtt.io/images/devices/OR-ZB-S010-3C.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Universal Electronics Inc](/supported-devices/#v=Universal%20Electronics%20Inc)  |
 | Description | Xfinity security keypad |
 | Exposes | battery, voltage, occupancy, battery_low, tamper, presence, contact, temperature, action_code, action_transaction, action_zone, action, linkquality |
-| Picture | ![Universal Electronics Inc XHK1-UE](https://www.zigbee2mqtt.io/images/devices/XHK1-UE.jpg) |
+| Picture | ![Universal Electronics Inc XHK1-UE](https://www.zigbee2mqtt.io/images/devices/XHK1-UE.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -80,7 +80,7 @@ The automation server must follow the notification with an actual change to the 
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN SGMHM-I1 control via MQTT"
-description: "Integrate your HEIMAN SGMHM-I1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "GS SGMHM-I1 control via MQTT"
+description: "Integrate your GS SGMHM-I1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-02-04T20:38:05Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN SGMHM-I1
+# GS SGMHM-I1
 
 |     |     |
 |-----|-----|
 | Model | SGMHM-I1  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [GS](/supported-devices/#v=GS)  |
 | Description | Methane gas sensor |
 | Exposes | gas, linkquality |
-| Picture | ![HEIMAN SGMHM-I1](https://www.zigbee2mqtt.io/images/devices/SGMHM-I1.jpg) |
+| Picture | ![GS SGMHM-I1](https://www.zigbee2mqtt.io/images/devices/SGMHM-I1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

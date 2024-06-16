@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa MG-ZG02W](https://www.zigbee2mqtt.io/images/devices/MG-ZG02W.jpg) |
+| Picture | ![TuYa MG-ZG02W](https://www.zigbee2mqtt.io/images/devices/MG-ZG02W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [MHCOZY](/supported-devices/#v=MHCOZY)  |
 | Description | 4 channel relay |
 | Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
-| Picture | ![MHCOZY TYWB 4ch-RF](https://www.zigbee2mqtt.io/images/devices/TYWB-4ch-RF.jpg) |
+| Picture | ![MHCOZY TYWB 4ch-RF](https://www.zigbee2mqtt.io/images/devices/TYWB-4ch-RF.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

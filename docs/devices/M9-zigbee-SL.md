@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart Switch (4 gang + 4 scene) with neutral wire and motion sensing |
 | Exposes | switch (state), power_on_behavior, switch_mode, light_mode, backlight_mode, action, presence, delay, linkquality |
-| Picture | ![TuYa M9-zigbee-SL](https://www.zigbee2mqtt.io/images/devices/M9-zigbee-SL.jpg) |
+| Picture | ![TuYa M9-zigbee-SL](https://www.zigbee2mqtt.io/images/devices/M9-zigbee-SL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

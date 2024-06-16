@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [frient](/supported-devices/#v=frient)  |
 | Description | Smart powermeter Zigbee bridge |
 | Exposes | battery, power, energy, linkquality |
-| Picture | ![frient EMIZB-141](https://www.zigbee2mqtt.io/images/devices/EMIZB-141.jpg) |
+| Picture | ![frient EMIZB-141](https://www.zigbee2mqtt.io/images/devices/EMIZB-141.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -44,7 +44,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

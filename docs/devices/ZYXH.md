@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 24 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa ZYXH](https://www.zigbee2mqtt.io/images/devices/ZYXH.jpg) |
+| Picture | ![TuYa ZYXH](https://www.zigbee2mqtt.io/images/devices/ZYXH.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

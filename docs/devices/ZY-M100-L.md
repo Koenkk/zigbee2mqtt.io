@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Ceiling human breathe sensor |
 | Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, self_test, linkquality |
-| Picture | ![TuYa ZY-M100-L](https://www.zigbee2mqtt.io/images/devices/ZY-M100-L.jpg) |
+| Picture | ![TuYa ZY-M100-L](https://www.zigbee2mqtt.io/images/devices/ZY-M100-L.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

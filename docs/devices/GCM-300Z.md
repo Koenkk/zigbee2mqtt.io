@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS gas valve |
 | Exposes | gas_valve_state, battery, close_timeout, close_remain_timeout, volume, overheat_mode, linkquality |
-| Picture | ![ShinaSystem GCM-300Z](https://www.zigbee2mqtt.io/images/devices/GCM-300Z.jpg) |
+| Picture | ![ShinaSystem GCM-300Z](https://www.zigbee2mqtt.io/images/devices/GCM-300Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -40,7 +40,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `OPEN` gas valve state is ON, if `CLOSE` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -63,18 +63,18 @@ The minimal value is `0` and the maximum value is `540`.
 The unit of this value is `min`.
 
 ### Volume (enum)
-Values observed are `1` (Voice), `2` (High) or `3` (Low)..
+Values observed are `1` (voice), `2` (high) or `3` (low)..
 Value can be found in the published state on the `volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"volume": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": NEW_VALUE}`.
-The possible values are: `Voice`, `High`, `Low`.
+The possible values are: `voice`, `high`, `low`.
 
 ### Overheat mode (enum)
 Temperature overheating condition..
 Value can be found in the published state on the `overheat_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"overheat_mode": ""}`.
 It's not possible to write (`/set`) this value.
-The possible values are: `Normal`, `OverHeat`.
+The possible values are: `normal`, `overheat`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

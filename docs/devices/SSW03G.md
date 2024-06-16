@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | Triple switch |
 | Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
-| Picture | ![Mercator Ikuü SSW03G](https://www.zigbee2mqtt.io/images/devices/SSW03G.jpg) |
+| Picture | ![Mercator Ikuü SSW03G](https://www.zigbee2mqtt.io/images/devices/SSW03G.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

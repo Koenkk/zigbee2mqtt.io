@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Leedarson](/supported-devices/#v=Leedarson)  |
 | Description | LED PAR16 50 GU10 tunable white |
 | Exposes | light (state, brightness, color_temp), effect, power_on_behavior, linkquality |
-| Picture | ![Leedarson ZM350STW1TCF](https://www.zigbee2mqtt.io/images/devices/ZM350STW1TCF.jpg) |
+| Picture | ![Leedarson ZM350STW1TCF](https://www.zigbee2mqtt.io/images/devices/ZM350STW1TCF.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

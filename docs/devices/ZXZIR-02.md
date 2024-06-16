@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aubess](/supported-devices/#v=Aubess)  |
 | Description | Universal smart IR remote control |
 | Exposes | switch (state), learned_ir_code, ir_code_to_send, linkquality |
-| Picture | ![Aubess ZXZIR-02](https://www.zigbee2mqtt.io/images/devices/ZXZIR-02.jpg) |
+| Picture | ![Aubess ZXZIR-02](https://www.zigbee2mqtt.io/images/devices/ZXZIR-02.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

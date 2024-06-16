@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Power plug |
 | Exposes | switch (state), power, current, voltage, energy, ac_frequency, linkquality |
-| Picture | ![Develco SPLZB-141](https://www.zigbee2mqtt.io/images/devices/SPLZB-141.jpg) |
+| Picture | ![Develco SPLZB-141](https://www.zigbee2mqtt.io/images/devices/SPLZB-141.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,6 +27,9 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options

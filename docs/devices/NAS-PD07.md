@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Neo](/supported-devices/#v=Neo)  |
 | Description | Motion, temperature & humidity sensor |
 | Exposes | occupancy, humidity, temperature, tamper, battery_low, power_type, alarm, temperature_min, temperature_max, temperature_scale, humidity_min, humidity_max, linkquality |
-| Picture | ![Neo NAS-PD07](https://www.zigbee2mqtt.io/images/devices/NAS-PD07.jpg) |
+| Picture | ![Neo NAS-PD07](https://www.zigbee2mqtt.io/images/devices/NAS-PD07.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

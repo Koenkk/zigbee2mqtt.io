@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Hommyn](/supported-devices/#v=Hommyn)  |
 | Description | Occupancy sensor |
 | Exposes | battery, occupancy, battery_low, tamper, linkquality |
-| Picture | ![Hommyn MS-20-Z](https://www.zigbee2mqtt.io/images/devices/MS-20-Z.jpg) |
+| Picture | ![Hommyn MS-20-Z](https://www.zigbee2mqtt.io/images/devices/MS-20-Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -38,7 +38,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

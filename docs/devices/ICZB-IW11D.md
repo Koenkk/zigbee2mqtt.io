@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [iCasa](/supported-devices/#v=iCasa)  |
 | Description | ZigBee AC dimmer |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![iCasa ICZB-IW11D](https://www.zigbee2mqtt.io/images/devices/ICZB-IW11D.jpg) |
+| Picture | ![iCasa ICZB-IW11D](https://www.zigbee2mqtt.io/images/devices/ICZB-IW11D.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

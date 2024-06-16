@@ -1,7 +1,7 @@
 ---
 title: "Nous A1Z control via MQTT"
 description: "Integrate your Nous A1Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-12-04T09:23:50
+addedAt: 2024-05-01T19:18:32
 pageClass: device-page
 ---
 
@@ -18,12 +18,16 @@ pageClass: device-page
 | Model | A1Z  |
 | Vendor  | [Nous](/supported-devices/#v=Nous)  |
 | Description | Smart plug (with power monitoring) |
-| Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
-| Picture | ![Nous A1Z](https://www.zigbee2mqtt.io/images/devices/A1Z.jpg) |
+| Exposes | switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
+| Picture | ![Nous A1Z](https://www.zigbee2mqtt.io/images/devices/A1Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+
+### Pairing
+If the indicator light does not flash rapidly, press the button for 5 to 7 seconds to reset the smart plug parameters to factory settings.
+
 
 ### Reset energy
 
@@ -70,11 +74,13 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
-#### On with timed off
-When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
-Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
-Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+### Countdown (numeric)
+Countdown to turn device off after a certain time.
+Value can be found in the published state on the `countdown` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `43200`.
+The unit of this value is `s`.
 
 ### Power outage memory (enum)
 Recover state after power outage.

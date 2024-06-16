@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi WXKG15LM control via MQTT"
-description: "Integrate your Xiaomi WXKG15LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara WXKG15LM control via MQTT"
+description: "Integrate your Aqara WXKG15LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-07-01T08:15:09
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi WXKG15LM
+# Aqara WXKG15LM
 
 |     |     |
 |-----|-----|
 | Model | WXKG15LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara wireless remote switch H1 (double rocker) |
-| Exposes | battery, voltage, action, click_mode, operation_mode, linkquality |
-| Picture | ![Xiaomi WXKG15LM](https://www.zigbee2mqtt.io/images/devices/WXKG15LM.jpg) |
-| White-label | Xiaomi WRS-R02 |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Wireless remote switch H1 (double rocker) |
+| Exposes | battery, voltage, click_mode, operation_mode, action, linkquality |
+| Picture | ![Aqara WXKG15LM](https://www.zigbee2mqtt.io/images/devices/WXKG15LM.png) |
+| White-label | Aqara WRS-R02 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -41,7 +41,7 @@ Please note, that currently you will only get one endpoint for binding even thou
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -52,12 +52,6 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_left`, `single_right`, `single_both`, `double_left`, `double_right`, `double_both`, `triple_left`, `triple_right`, `triple_both`, `hold_left`, `hold_right`, `hold_both`.
 
 ### Click mode (enum)
 Click mode, fast: only supports single click which will be send immediately after clicking.multi: supports more events like double and hold.
@@ -72,6 +66,12 @@ Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `command`, `event`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single_left`, `single_right`, `single_both`, `double_left`, `double_right`, `double_both`, `triple_left`, `triple_right`, `triple_both`, `hold_left`, `hold_right`, `hold_both`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

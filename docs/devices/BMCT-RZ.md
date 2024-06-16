@@ -1,7 +1,7 @@
 ---
 title: "Bosch BMCT-RZ control via MQTT"
 description: "Integrate your Bosch BMCT-RZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-01-07T12:36:48.281Z
+addedAt: 2024-01-07T12:36:48
 pageClass: device-page
 ---
 
@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Relay, potential free |
 | Exposes | switch (state), linkquality |
-| Picture | ![Bosch BMCT-RZ](https://www.zigbee2mqtt.io/images/devices/BMCT-RZ.jpg) |
+| Picture | ![Bosch BMCT-RZ](https://www.zigbee2mqtt.io/images/devices/BMCT-RZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

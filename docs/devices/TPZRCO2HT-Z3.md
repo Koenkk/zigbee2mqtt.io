@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Titan Products](/supported-devices/#v=Titan%20Products)  |
 | Description | Room CO2, humidity & temperature sensor |
 | Exposes | voltage, battery_low, humidity, temperature, co2, linkquality |
-| Picture | ![Titan Products TPZRCO2HT-Z3](https://www.zigbee2mqtt.io/images/devices/TPZRCO2HT-Z3.jpg) |
+| Picture | ![Titan Products TPZRCO2HT-Z3](https://www.zigbee2mqtt.io/images/devices/TPZRCO2HT-Z3.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

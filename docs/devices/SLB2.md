@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | Signal booster |
 | Exposes | linkquality |
-| Picture | ![Hive SLB2](https://www.zigbee2mqtt.io/images/devices/SLB2.jpg) |
+| Picture | ![Hive SLB2](https://www.zigbee2mqtt.io/images/devices/SLB2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

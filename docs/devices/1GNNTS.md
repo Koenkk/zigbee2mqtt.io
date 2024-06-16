@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [WETEN](/supported-devices/#v=WETEN)  |
 | Description | 1 gang no neutral touch wall switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![WETEN 1GNNTS](https://www.zigbee2mqtt.io/images/devices/1GNNTS.jpg) |
+| Picture | ![WETEN 1GNNTS](https://www.zigbee2mqtt.io/images/devices/1GNNTS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

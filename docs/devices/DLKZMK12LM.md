@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi DLKZMK12LM control via MQTT"
-description: "Integrate your Xiaomi DLKZMK12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara DLKZMK12LM control via MQTT"
+description: "Integrate your Aqara DLKZMK12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-11-30T20:10:17
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi DLKZMK12LM
+# Aqara DLKZMK12LM
 
 |     |     |
 |-----|-----|
 | Model | DLKZMK12LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara single switch module T1 (without neutral). Doesn't work as a router and doesn't support power meter |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Single switch module T1 (no neutral), CN |
 | Exposes | switch (state), power_outage_memory, switch_type, linkquality |
-| Picture | ![Xiaomi DLKZMK12LM](https://www.zigbee2mqtt.io/images/devices/DLKZMK12LM.jpg) |
+| Picture | ![Aqara DLKZMK12LM](https://www.zigbee2mqtt.io/images/devices/DLKZMK12LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -30,7 +30,6 @@ This device **does not** work as a Zigbee router.
 
 ### Power meter functionality
 This device **does not** support power metering.
-
 <!-- Notes END: Do not edit below this line -->
 
 

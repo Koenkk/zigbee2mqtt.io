@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ORVIBO](/supported-devices/#v=ORVIBO)  |
 | Description | Multi-functional 3 gang relay |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![ORVIBO CM10ZW](https://www.zigbee2mqtt.io/images/devices/CM10ZW.jpg) |
+| Picture | ![ORVIBO CM10ZW](https://www.zigbee2mqtt.io/images/devices/CM10ZW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

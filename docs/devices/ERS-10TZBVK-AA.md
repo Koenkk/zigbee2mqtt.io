@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart knob |
 | Exposes | action, action_step_size, action_transition_time, action_rate, battery, operation_mode, linkquality |
-| Picture | ![TuYa ERS-10TZBVK-AA](https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVK-AA.jpg) |
+| Picture | ![TuYa ERS-10TZBVK-AA](https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVK-AA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -54,12 +54,12 @@ Action_Rate = Keeps "No value" all the time
 - `EVENT` mode
 
 | User Action  | `action` property |
-| ------------- | ------------- |
-| Rotate Left | rotate_left |
-| Rotate Left | rotate_right |
+|--------------| ------------- |
+| Rotate Left  | rotate_left |
+| Rotate Right | rotate_right |
 | Single Click | single |
 | Double Click | double |
-| Hold | hold |
+| Hold         | hold |
 
 action_step_size, action_transition_time, action_rate are still present but show "no value"
 <!-- Notes END: Do not edit below this line -->
@@ -101,7 +101,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

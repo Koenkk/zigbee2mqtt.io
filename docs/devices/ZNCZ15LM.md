@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNCZ15LM control via MQTT"
-description: "Integrate your Xiaomi ZNCZ15LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNCZ15LM control via MQTT"
+description: "Integrate your Aqara ZNCZ15LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-08-01T20:41:55Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNCZ15LM
+# Aqara ZNCZ15LM
 
 |     |     |
 |-----|-----|
 | Model | ZNCZ15LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart plug T1 (china standard) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart plug T1, CN |
 | Exposes | switch (state), power, energy, device_temperature, voltage, current, consumer_connected, power_outage_memory, led_disabled_night, button_lock, overload_protection, linkquality |
-| Picture | ![Xiaomi ZNCZ15LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ15LM.jpg) |
+| Picture | ![Aqara ZNCZ15LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ15LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Water leak sensor |
 | Exposes | water_leak, linkquality |
-| Picture | ![TuYa SNTZ009](https://www.zigbee2mqtt.io/images/devices/SNTZ009.jpg) |
+| Picture | ![TuYa SNTZ009](https://www.zigbee2mqtt.io/images/devices/SNTZ009.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [DNAKE](/supported-devices/#v=DNAKE)  |
 | Description | Smart socket |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![DNAKE CS-Z-CZ-2402](https://www.zigbee2mqtt.io/images/devices/CS-Z-CZ-2402.jpg) |
+| Picture | ![DNAKE CS-Z-CZ-2402](https://www.zigbee2mqtt.io/images/devices/CS-Z-CZ-2402.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

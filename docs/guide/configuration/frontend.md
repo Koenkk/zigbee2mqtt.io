@@ -24,6 +24,7 @@ frontend:
   # Optional, default 8080
   port: 8080
   # Optional, empty by default to listen on both IPv4 and IPv6. Opens a unix socket when given a path instead of an address (e.g. '/run/zigbee2mqtt/zigbee2mqtt.sock')
+  # Don't set this if you use Docker or the Home Assistant add-on unless you're sure the chosen IP is available inside the container
   host: 0.0.0.0
   # Optional, enables authentication, disabled by default, cleartext (no hashing required)
   auth_token: your-secret-token

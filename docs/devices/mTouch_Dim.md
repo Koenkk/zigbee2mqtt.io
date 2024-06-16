@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | mTouch Dim OP, touch dimmer |
 | Exposes | light (state, brightness), ballast_minimum_level, ballast_maximum_level, ballast_power_on_level, linkquality |
-| Picture | ![CTM Lyng mTouch_Dim](https://www.zigbee2mqtt.io/images/devices/mTouch_Dim.jpg) |
+| Picture | ![CTM Lyng mTouch_Dim](https://www.zigbee2mqtt.io/images/devices/mTouch_Dim.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,6 +27,9 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options

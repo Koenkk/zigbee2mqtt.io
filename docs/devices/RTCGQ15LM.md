@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi RTCGQ15LM control via MQTT"
-description: "Integrate your Xiaomi RTCGQ15LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara RTCGQ15LM control via MQTT"
+description: "Integrate your Aqara RTCGQ15LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-08-31T11:26:27
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi RTCGQ15LM
+# Aqara RTCGQ15LM
 
 |     |     |
 |-----|-----|
 | Model | RTCGQ15LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara E1 human body movement and illuminance sensor |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Motion sensor E1 |
 | Exposes | occupancy, illuminance_lux, illuminance, detection_interval, device_temperature, battery, voltage, power_outage_count, linkquality |
-| Picture | ![Xiaomi RTCGQ15LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ15LM.jpg) |
+| Picture | ![Aqara RTCGQ15LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ15LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -81,7 +81,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

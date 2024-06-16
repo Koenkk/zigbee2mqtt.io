@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [easyiot](/supported-devices/#v=easyiot)  |
 | Description | This is an infrared remote control equipped with a local code library,supporting devices such as air conditioners, televisions, projectors, and more. |
 | Exposes | last_received_command, send_command, linkquality |
-| Picture | ![easyiot ZB-IR01](https://www.zigbee2mqtt.io/images/devices/ZB-IR01.jpg) |
+| Picture | ![easyiot ZB-IR01](https://www.zigbee2mqtt.io/images/devices/ZB-IR01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -1024,7 +1024,14 @@ Table 13
 
 Table 14
 
-If you have additional technical problems, please email Technical support at support@easyiot.tech
+# Notes
+
+* If you have additional technical problems, please email Technical support at [support@easyiot.tech](mailto:support@easyiot.tech)
+
+
+* This is a UI interface of ZB-IR01 in HA. Thank you very much @shing6326
+https://github.com/shing6326/hacs-zb-ir01-to-climate/tree/master
+
 <!-- Notes END: Do not edit below this line -->
 
 

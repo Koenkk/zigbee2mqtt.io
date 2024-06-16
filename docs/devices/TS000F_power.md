@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Switch with power monitoring |
 | Exposes | switch (state), power, current, voltage, energy, power_on_behavior, switch_type, linkquality |
-| Picture | ![TuYa TS000F_power](https://www.zigbee2mqtt.io/images/devices/TS000F_power.jpg) |
+| Picture | ![TuYa TS000F_power](https://www.zigbee2mqtt.io/images/devices/TS000F_power.png) |
 | White-label | Aubess WHD02 |
 
 

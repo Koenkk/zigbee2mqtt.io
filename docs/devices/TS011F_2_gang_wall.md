@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2 gang wall outlet |
 | Exposes | switch (state), power_on_behavior, backlight_mode, lock (state), linkquality |
-| Picture | ![TuYa TS011F_2_gang_wall](https://www.zigbee2mqtt.io/images/devices/TS011F_2_gang_wall.jpg) |
+| Picture | ![TuYa TS011F_2_gang_wall](https://www.zigbee2mqtt.io/images/devices/TS011F_2_gang_wall.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,6 +27,9 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options

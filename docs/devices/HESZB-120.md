@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Fire detector with siren |
 | Exposes | temperature, battery, smoke, battery_low, test, max_duration, alarm, reliability, fault, linkquality |
-| Picture | ![Develco HESZB-120](https://www.zigbee2mqtt.io/images/devices/HESZB-120.jpg) |
+| Picture | ![Develco HESZB-120](https://www.zigbee2mqtt.io/images/devices/HESZB-120.png) |
 | White-label | Frient 94431 |
 
 
@@ -28,6 +28,9 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -47,7 +50,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

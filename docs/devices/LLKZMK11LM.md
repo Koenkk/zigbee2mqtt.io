@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi LLKZMK11LM control via MQTT"
-description: "Integrate your Xiaomi LLKZMK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara LLKZMK11LM control via MQTT"
+description: "Integrate your Aqara LLKZMK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi LLKZMK11LM
+# Aqara LLKZMK11LM
 
 |     |     |
 |-----|-----|
 | Model | LLKZMK11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara wireless relay controller |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Dual relay module |
 | Exposes | power, energy, device_temperature, voltage, current, switch (state), power_outage_count, power_outage_memory, interlock, linkquality |
-| Picture | ![Xiaomi LLKZMK11LM](https://www.zigbee2mqtt.io/images/devices/LLKZMK11LM.jpg) |
+| Picture | ![Aqara LLKZMK11LM](https://www.zigbee2mqtt.io/images/devices/LLKZMK11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee 3.0 smart light switch module 2 gang |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
-| Picture | ![TuYa QS-Zigbee-SEC02-U](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-SEC02-U.jpg) |
+| Picture | ![TuYa QS-Zigbee-SEC02-U](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-SEC02-U.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

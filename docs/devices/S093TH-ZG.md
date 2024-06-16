@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HZC Electric](/supported-devices/#v=HZC%20Electric)  |
 | Description | Temperature and humidity sensor |
 | Exposes | temperature, humidity, linkquality |
-| Picture | ![HZC Electric S093TH-ZG](https://www.zigbee2mqtt.io/images/devices/S093TH-ZG.jpg) |
+| Picture | ![HZC Electric S093TH-ZG](https://www.zigbee2mqtt.io/images/devices/S093TH-ZG.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

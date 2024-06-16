@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | 15A Zigbee smart plug |
 | Exposes | switch (state), linkquality |
-| Picture | ![SONOFF S40ZBTPB](https://www.zigbee2mqtt.io/images/devices/S40ZBTPB.jpg) |
+| Picture | ![SONOFF S40ZBTPB](https://www.zigbee2mqtt.io/images/devices/S40ZBTPB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

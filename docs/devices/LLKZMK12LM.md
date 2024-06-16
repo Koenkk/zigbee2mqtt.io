@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi LLKZMK12LM control via MQTT"
-description: "Integrate your Xiaomi LLKZMK12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara LLKZMK12LM control via MQTT"
+description: "Integrate your Aqara LLKZMK12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-09-28T10:54:36
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi LLKZMK12LM
+# Aqara LLKZMK12LM
 
 |     |     |
 |-----|-----|
 | Model | LLKZMK12LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara dual relay module T2 |
-| Exposes | switch (state), power, current, energy, voltage, device_temperature, switch_type, power_on_behavior, operation_mode, action, interlock, mode, pulse_length, linkquality |
-| Picture | ![Xiaomi LLKZMK12LM](https://www.zigbee2mqtt.io/images/devices/LLKZMK12LM.jpg) |
-| White-label | Xiaomi DCM-K01 |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Dual relay module T2 |
+| Exposes | switch (state), power, current, energy, voltage, device_temperature, switch_type, power_on_behavior, operation_mode, interlock, mode, pulse_length, action, linkquality |
+| Picture | ![Aqara LLKZMK12LM](https://www.zigbee2mqtt.io/images/devices/LLKZMK12LM.png) |
+| White-label | Aqara DCM-K01 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -139,12 +139,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_l2": NEW_VALUE}`.
 The possible values are: `decoupled`, `control_relay`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_l1`, `single_l2`.
-
 ### Interlock (binary)
 Enabling prevents both relays being on at the same time (Interlock).
 Value can be found in the published state on the `interlock` property.
@@ -166,6 +160,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pulse_length": NEW_VALUE}`.
 The minimal value is `200` and the maximum value is `2000`.
 The unit of this value is `ms`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single_l1`, `single_l2`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

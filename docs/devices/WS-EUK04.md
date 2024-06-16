@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi WS-EUK04 control via MQTT"
-description: "Integrate your Xiaomi WS-EUK04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara WS-EUK04 control via MQTT"
+description: "Integrate your Aqara WS-EUK04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-09-01T18:11:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi WS-EUK04
+# Aqara WS-EUK04
 
 |     |     |
 |-----|-----|
 | Model | WS-EUK04  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart wall switch H1 EU (with neutral, double rocker) |
-| Exposes | switch (state), power, energy, operation_mode, action, device_temperature, power_outage_memory, flip_indicator_light, led_disabled_night, power_outage_count, linkquality |
-| Picture | ![Xiaomi WS-EUK04](https://www.zigbee2mqtt.io/images/devices/WS-EUK04.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch H1 EU (with neutral, double rocker) |
+| Exposes | switch (state), power, energy, operation_mode, device_temperature, power_outage_memory, flip_indicator_light, led_disabled_night, power_outage_count, action, linkquality |
+| Picture | ![Aqara WS-EUK04](https://www.zigbee2mqtt.io/images/devices/WS-EUK04.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -96,12 +96,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode_right": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_left`, `double_left`, `single_right`, `double_right`, `single_both`, `double_both`.
-
 ### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
@@ -133,6 +127,12 @@ If value equals `true` lED disabled night is ON, if `false` OFF.
 Number of power outages (since last pairing).
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single_left`, `double_left`, `single_right`, `double_right`, `single_both`, `double_both`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

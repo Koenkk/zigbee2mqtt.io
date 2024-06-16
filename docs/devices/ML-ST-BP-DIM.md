@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [M-ELEC](/supported-devices/#v=M-ELEC)  |
 | Description | Stitchy dim mechanism |
 | Exposes | light (state, brightness), power_on_behavior, linkquality |
-| Picture | ![M-ELEC ML-ST-BP-DIM](https://www.zigbee2mqtt.io/images/devices/ML-ST-BP-DIM.jpg) |
+| Picture | ![M-ELEC ML-ST-BP-DIM](https://www.zigbee2mqtt.io/images/devices/ML-ST-BP-DIM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

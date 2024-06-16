@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNCLDJ11LM control via MQTT"
-description: "Integrate your Xiaomi ZNCLDJ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNCLDJ11LM control via MQTT"
+description: "Integrate your Aqara ZNCLDJ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNCLDJ11LM
+# Aqara ZNCLDJ11LM
 
 |     |     |
 |-----|-----|
 | Model | ZNCLDJ11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara curtain motor |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Curtain controller |
 | Exposes | cover (state, position), running, motor_state, linkquality |
-| Picture | ![Xiaomi ZNCLDJ11LM](https://www.zigbee2mqtt.io/images/devices/ZNCLDJ11LM.jpg) |
+| Picture | ![Aqara ZNCLDJ11LM](https://www.zigbee2mqtt.io/images/devices/ZNCLDJ11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

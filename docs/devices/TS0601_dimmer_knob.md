@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Zigbee smart knob dimmer |
 | Exposes | light (state, brightness, min_brightness), light_type, indicator_mode, linkquality |
-| Picture | ![TuYa TS0601_dimmer_knob](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_knob.jpg) |
+| Picture | ![TuYa TS0601_dimmer_knob](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_knob.png) |
 | White-label | Moes WS-SY-EURD, Moes WS-SY-EURD-WH-MS |
 
 

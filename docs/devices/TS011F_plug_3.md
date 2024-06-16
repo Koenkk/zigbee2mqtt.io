@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart plug (with power monitoring by polling) |
 | Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
-| Picture | ![TuYa TS011F_plug_3](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_3.jpg) |
+| Picture | ![TuYa TS011F_plug_3](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_3.png) |
 | White-label | VIKEFON TS011F, BlitzWolf BW-SHP15, AVATTO MIUCOT10Z, Neo NAS-WR01B, Neo PLUG-001SPB2 |
 
 

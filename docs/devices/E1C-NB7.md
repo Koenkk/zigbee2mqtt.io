@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Smart plug with energy tracker |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![Sengled E1C-NB7](https://www.zigbee2mqtt.io/images/devices/E1C-NB7.jpg) |
+| Picture | ![Sengled E1C-NB7](https://www.zigbee2mqtt.io/images/devices/E1C-NB7.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -59,13 +59,15 @@ Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300,
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
 
 ### Energy (numeric)
 Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### Linkquality (numeric)

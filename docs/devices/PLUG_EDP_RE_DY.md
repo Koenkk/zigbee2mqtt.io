@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EDP](/supported-devices/#v=EDP)  |
 | Description | re:dy plug |
 | Exposes | switch (state), power, energy, linkquality |
-| Picture | ![EDP PLUG EDP RE:DY](https://www.zigbee2mqtt.io/images/devices/PLUG-EDP-RE-DY.jpg) |
+| Picture | ![EDP PLUG EDP RE:DY](https://www.zigbee2mqtt.io/images/devices/PLUG-EDP-RE-DY.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

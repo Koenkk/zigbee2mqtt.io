@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | 2 channel Zigbee 0-10V dimmer module |
 | Exposes | light (state, brightness, min_brightness, max_brightness), countdown, switch_type, power_on_behavior, linkquality |
-| Picture | ![Lonsonho VM-Zigbee-S02-0-10V](https://www.zigbee2mqtt.io/images/devices/VM-Zigbee-S02-0-10V.jpg) |
+| Picture | ![Lonsonho VM-Zigbee-S02-0-10V](https://www.zigbee2mqtt.io/images/devices/VM-Zigbee-S02-0-10V.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

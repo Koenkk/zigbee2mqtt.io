@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Wireless motion detector |
 | Exposes | temperature, battery, occupancy, battery_low, tamper, illuminance, illuminance_lux, linkquality |
-| Picture | ![Bosch RADON TriTech ZB](https://www.zigbee2mqtt.io/images/devices/RADON-TriTech-ZB.jpg) |
+| Picture | ![Bosch RADON TriTech ZB](https://www.zigbee2mqtt.io/images/devices/RADON-TriTech-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -50,7 +50,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LivingWise](/supported-devices/#v=LivingWise)  |
 | Description | Zigbee smart outlet |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![LivingWise LVS-ZB15R](https://www.zigbee2mqtt.io/images/devices/LVS-ZB15R.jpg) |
+| Picture | ![LivingWise LVS-ZB15R](https://www.zigbee2mqtt.io/images/devices/LVS-ZB15R.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

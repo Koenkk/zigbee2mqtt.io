@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ORVIBO](/supported-devices/#v=ORVIBO)  |
 | Description | 0-10v dimmer |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![ORVIBO DM10ZW](https://www.zigbee2mqtt.io/images/devices/DM10ZW.jpg) |
+| Picture | ![ORVIBO DM10ZW](https://www.zigbee2mqtt.io/images/devices/DM10ZW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

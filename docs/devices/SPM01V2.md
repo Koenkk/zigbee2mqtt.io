@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart energy monitor for 1P+N system |
 | Exposes | voltage, power, current, energy, produced_energy, power_factor, ac_frequency, linkquality |
-| Picture | ![TuYa SPM01V2](https://www.zigbee2mqtt.io/images/devices/SPM01V2.jpg) |
+| Picture | ![TuYa SPM01V2](https://www.zigbee2mqtt.io/images/devices/SPM01V2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

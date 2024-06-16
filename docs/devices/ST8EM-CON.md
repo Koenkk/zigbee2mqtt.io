@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [LEDVANCE](/supported-devices/#v=LEDVANCE)  |
 | Description | SubstiTUBE connected advanced ultra output |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![LEDVANCE ST8EM-CON](https://www.zigbee2mqtt.io/images/devices/ST8EM-CON.jpg) |
+| Picture | ![LEDVANCE ST8EM-CON](https://www.zigbee2mqtt.io/images/devices/ST8EM-CON.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

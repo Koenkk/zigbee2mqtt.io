@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Water leak sensor |
 | Exposes | water_leak, linkquality |
-| Picture | ![TuYa TS0601_water_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_water_sensor.jpg) |
+| Picture | ![TuYa TS0601_water_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_water_sensor.png) |
 | White-label | Neo NAS-WS02B0 |
 
 

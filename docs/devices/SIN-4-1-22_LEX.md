@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | ENKI LEXMAN Access Control |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![ADEO SIN-4-1-22_LEX](https://www.zigbee2mqtt.io/images/devices/SIN-4-1-22_LEX.jpg) |
+| Picture | ![ADEO SIN-4-1-22_LEX](https://www.zigbee2mqtt.io/images/devices/SIN-4-1-22_LEX.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

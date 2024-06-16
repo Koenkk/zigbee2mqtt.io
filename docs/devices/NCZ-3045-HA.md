@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Nyce](/supported-devices/#v=Nyce)  |
 | Description | Curtain motion sensor |
 | Exposes | occupancy, humidity, temperature, battery, battery_low, tamper, linkquality |
-| Picture | ![Nyce NCZ-3045-HA](https://www.zigbee2mqtt.io/images/devices/NCZ-3045-HA.jpg) |
+| Picture | ![Nyce NCZ-3045-HA](https://www.zigbee2mqtt.io/images/devices/NCZ-3045-HA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -64,7 +64,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

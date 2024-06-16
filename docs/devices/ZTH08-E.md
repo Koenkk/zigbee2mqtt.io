@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature and humidity sensor |
 | Exposes | temperature, humidity, battery_state, temperature_unit, linkquality |
-| Picture | ![TuYa ZTH08-E](https://www.zigbee2mqtt.io/images/devices/ZTH08-E.jpg) |
+| Picture | ![TuYa ZTH08-E](https://www.zigbee2mqtt.io/images/devices/ZTH08-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

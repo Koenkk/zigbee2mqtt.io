@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | GP-WOU019BBDWG  |
 | Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Outlet with power meter |
-| Exposes | switch (state), power, energy, power_on_behavior, linkquality |
-| Picture | ![SmartThings GP-WOU019BBDWG](https://www.zigbee2mqtt.io/images/devices/GP-WOU019BBDWG.jpg) |
+| Exposes | switch (state), power_on_behavior, power, voltage, current, energy, linkquality |
+| Picture | ![SmartThings GP-WOU019BBDWG](https://www.zigbee2mqtt.io/images/devices/GP-WOU019BBDWG.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -37,6 +37,14 @@ This plug does not support voltage and current reporting, see [this issue](https
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -58,24 +66,40 @@ Additionnaly an `off_wait_time` property can be added to the payload to specify 
 Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Power (numeric)
-Instantaneous measured power.
-Value can be found in the published state on the `power` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `W`.
-
-### Energy (numeric)
-Sum of consumed energy.
-Value can be found in the published state on the `energy` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `kWh`.
-
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### Power (numeric)
+Instantaneous measured power.
+Value can be found in the published state on the `power` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `W`.
+
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `V`.
+
+### Current (numeric)
+Instantaneous measured electrical current.
+Value can be found in the published state on the `current` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `A`.
+
+### Energy (numeric)
+Sum of consumed energy.
+Value can be found in the published state on the `energy` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

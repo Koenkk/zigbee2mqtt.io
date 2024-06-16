@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [OSRAM](/supported-devices/#v=OSRAM)  |
 | Description | LIGHTIFY RT5/6 LED |
 | Exposes | light (state, brightness, color_temp, color_xy, color_hs), effect, linkquality |
-| Picture | ![OSRAM 73741_LIGHTIFY](https://www.zigbee2mqtt.io/images/devices/73741_LIGHTIFY.jpg) |
+| Picture | ![OSRAM 73741_LIGHTIFY](https://www.zigbee2mqtt.io/images/devices/73741_LIGHTIFY.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -97,7 +97,7 @@ Triggers an effect on the light (e.g. make light blink for a few seconds).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
+The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`, `colorloop`, `stop_colorloop`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

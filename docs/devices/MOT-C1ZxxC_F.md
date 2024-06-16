@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Profalux](/supported-devices/#v=Profalux)  |
 | Description | Cover |
 | Exposes | cover (state, position, tilt), linkquality |
-| Picture | ![Profalux MOT-C1ZxxC/F](https://www.zigbee2mqtt.io/images/devices/MOT-C1ZxxC-F.jpg) |
+| Picture | ![Profalux MOT-C1ZxxC/F](https://www.zigbee2mqtt.io/images/devices/MOT-C1ZxxC-F.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,6 +33,8 @@ pageClass: device-page
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
+* `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
 
 ## Exposes

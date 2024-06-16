@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart metering plug |
 | Exposes | switch (state), power, current, voltage, linkquality |
-| Picture | ![HEIMAN HS2SK_nxp](https://www.zigbee2mqtt.io/images/devices/HS2SK_nxp.jpg) |
+| Picture | ![HEIMAN HS2SK_nxp](https://www.zigbee2mqtt.io/images/devices/HS2SK_nxp.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

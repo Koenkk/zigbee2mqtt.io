@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Universal Electronics Inc](/supported-devices/#v=Universal%20Electronics%20Inc)  |
 | Description | Wireless digital pet resistant PIR detector |
 | Exposes | occupancy, battery_low, tamper, temperature, battery, linkquality |
-| Picture | ![Universal Electronics Inc XHS1-UE](https://www.zigbee2mqtt.io/images/devices/XHS1-UE.jpg) |
+| Picture | ![Universal Electronics Inc XHS1-UE](https://www.zigbee2mqtt.io/images/devices/XHS1-UE.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -64,7 +64,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

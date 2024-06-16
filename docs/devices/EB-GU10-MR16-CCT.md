@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EssentielB](/supported-devices/#v=EssentielB)  |
 | Description | GU10 MR16 CCT light bulb |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![EssentielB EB-GU10-MR16-CCT](https://www.zigbee2mqtt.io/images/devices/EB-GU10-MR16-CCT.jpg) |
+| Picture | ![EssentielB EB-GU10-MR16-CCT](https://www.zigbee2mqtt.io/images/devices/EB-GU10-MR16-CCT.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

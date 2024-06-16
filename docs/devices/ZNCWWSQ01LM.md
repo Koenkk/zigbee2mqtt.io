@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNCWWSQ01LM control via MQTT"
-description: "Integrate your Xiaomi ZNCWWSQ01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNCWWSQ01LM control via MQTT"
+description: "Integrate your Aqara ZNCWWSQ01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-12-01T15:07:19
 pageClass: device-page
 ---
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNCWWSQ01LM
+# Aqara ZNCWWSQ01LM
 
 |     |     |
 |-----|-----|
 | Model | ZNCWWSQ01LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara pet feeder C1 |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart pet feeder C1 |
 | Exposes | feed, feeding_source, feeding_size, portions_per_day, weight_per_day, error, schedule, switch (state), lock (state), mode, serving_size, portion_weight, linkquality |
-| Picture | ![Xiaomi ZNCWWSQ01LM](https://www.zigbee2mqtt.io/images/devices/ZNCWWSQ01LM.jpg) |
+| Picture | ![Aqara ZNCWWSQ01LM](https://www.zigbee2mqtt.io/images/devices/ZNCWWSQ01LM.png) |
+| White-label | Aqara PETC1-M01 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

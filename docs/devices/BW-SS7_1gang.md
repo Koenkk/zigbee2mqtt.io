@@ -19,12 +19,14 @@ pageClass: device-page
 | Vendor  | [BlitzWolf](/supported-devices/#v=BlitzWolf)  |
 | Description | Zigbee 3.0 smart light switch module 1 gang |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![BlitzWolf BW-SS7_1gang](https://www.zigbee2mqtt.io/images/devices/BW-SS7_1gang.jpg) |
+| Picture | ![BlitzWolf BW-SS7_1gang](https://www.zigbee2mqtt.io/images/devices/BW-SS7_1gang.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+Connect a switch between L and S1 or S2 according to user manual. Once device is powered shortly switch ON and OFF the switch for at least five times to start pairing. Once paired the device will do one long beep.
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Fan & light switch |
 | Exposes | status_indication, switch (state), power_on_behavior, fan_speed, linkquality |
-| Picture | ![TuYa TS0601_fan_and_light_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_fan_and_light_switch.jpg) |
+| Picture | ![TuYa TS0601_fan_and_light_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_fan_and_light_switch.png) |
 | White-label | Liwokit Fan+Light-01 |
 
 

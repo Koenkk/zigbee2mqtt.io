@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 4 gang switch with backlight |
 | Exposes | switch (state), backlight_mode, linkquality |
-| Picture | ![TuYa TS0601_switch_4_gang_2](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_4_gang_2.jpg) |
+| Picture | ![TuYa TS0601_switch_4_gang_2](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_4_gang_2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

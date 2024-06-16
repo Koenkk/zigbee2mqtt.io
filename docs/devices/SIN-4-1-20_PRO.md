@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | SIN-4-1-20_PRO  |
 | Vendor  | [NodOn](/supported-devices/#v=NodOn)  |
 | Description | Multifunction relay switch |
-| Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![NodOn SIN-4-1-20_PRO](https://www.zigbee2mqtt.io/images/devices/SIN-4-1-20_PRO.jpg) |
+| Exposes | switch (state), power_on_behavior, impulse_mode_configuration, linkquality |
+| Picture | ![NodOn SIN-4-1-20_PRO](https://www.zigbee2mqtt.io/images/devices/SIN-4-1-20_PRO.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -57,6 +57,14 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### Impulse mode configuration (numeric)
+Set the impulse duration in milliseconds (set value to 0 to deactivate the impulse mode)..
+Value can be found in the published state on the `impulse_mode_configuration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"impulse_mode_configuration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"impulse_mode_configuration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10000`.
+The unit of this value is `ms`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -19,12 +19,14 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Repeater |
 | Exposes | linkquality |
-| Picture | ![TuYa TS0207_repeater](https://www.zigbee2mqtt.io/images/devices/TS0207_repeater.jpg) |
+| Picture | ![TuYa TS0207_repeater](https://www.zigbee2mqtt.io/images/devices/TS0207_repeater.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Warning
+It is [reported](https://github.com/zigpy/zigpy/discussions/736#discussioncomment-730883) that this device does not relay messages of non TuYa devices, **this can break your network!**
 
 ### Pairing
 

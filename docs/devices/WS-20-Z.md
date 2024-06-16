@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Hommyn](/supported-devices/#v=Hommyn)  |
 | Description | Water leakage sensor |
 | Exposes | water_leak, battery_low, tamper, linkquality |
-| Picture | ![Hommyn WS-20-Z](https://www.zigbee2mqtt.io/images/devices/WS-20-Z.jpg) |
+| Picture | ![Hommyn WS-20-Z](https://www.zigbee2mqtt.io/images/devices/WS-20-Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

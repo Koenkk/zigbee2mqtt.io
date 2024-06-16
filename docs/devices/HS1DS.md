@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Door sensor |
 | Exposes | contact, battery_low, tamper, battery, linkquality |
-| Picture | ![HEIMAN HS1DS](https://www.zigbee2mqtt.io/images/devices/HS1DS.jpg) |
+| Picture | ![HEIMAN HS1DS](https://www.zigbee2mqtt.io/images/devices/HS1DS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -51,7 +51,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

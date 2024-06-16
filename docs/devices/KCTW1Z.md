@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature & humidity sensor with LCD |
 | Exposes | temperature, humidity, battery, voltage, temperature_unit, linkquality |
-| Picture | ![TuYa KCTW1Z](https://www.zigbee2mqtt.io/images/devices/KCTW1Z.jpg) |
+| Picture | ![TuYa KCTW1Z](https://www.zigbee2mqtt.io/images/devices/KCTW1Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -58,7 +58,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

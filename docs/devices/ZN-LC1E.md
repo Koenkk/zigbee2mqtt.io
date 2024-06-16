@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Smart curtain/shutter switch |
 | Exposes | cover (state, position), indicator_mode, backlight_mode, moving, calibration, motor_reversal, calibration_time, linkquality |
-| Picture | ![Zemismart ZN-LC1E](https://www.zigbee2mqtt.io/images/devices/ZN-LC1E.jpg) |
+| Picture | ![Zemismart ZN-LC1E](https://www.zigbee2mqtt.io/images/devices/ZN-LC1E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,6 +33,8 @@ pageClass: device-page
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
+* `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
 
 ## Exposes

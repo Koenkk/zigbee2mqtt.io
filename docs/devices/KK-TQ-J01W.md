@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Konke](/supported-devices/#v=Konke)  |
 | Description | Smart 4 key scene switch |
 | Exposes | battery, voltage, battery_low, action, linkquality |
-| Picture | ![Konke KK-TQ-J01W](https://www.zigbee2mqtt.io/images/devices/KK-TQ-J01W.jpg) |
+| Picture | ![Konke KK-TQ-J01W](https://www.zigbee2mqtt.io/images/devices/KK-TQ-J01W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,7 +33,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | SNZB-02P  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Temperature and humidity sensor |
-| Exposes | battery, temperature, humidity, battery_low, voltage, linkquality |
-| Picture | ![SONOFF SNZB-02P](https://www.zigbee2mqtt.io/images/devices/SNZB-02P.jpg) |
+| Exposes | battery, temperature, humidity, linkquality |
+| Picture | ![SONOFF SNZB-02P](https://www.zigbee2mqtt.io/images/devices/SNZB-02P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,9 +27,6 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
-
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -47,35 +44,26 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %.
 Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Humidity (numeric)
 Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
-
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
-
-### Voltage (numeric)
-Voltage of the battery in millivolts.
-Value can be found in the published state on the `voltage` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mV`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi MCCGQ11LM control via MQTT"
-description: "Integrate your Xiaomi MCCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara MCCGQ11LM control via MQTT"
+description: "Integrate your Aqara MCCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi MCCGQ11LM
+# Aqara MCCGQ11LM
 
 |     |     |
 |-----|-----|
 | Model | MCCGQ11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara door & window contact sensor |
-| Exposes | battery, contact, device_temperature, voltage, power_outage_count, linkquality |
-| Picture | ![Xiaomi MCCGQ11LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ11LM.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Door and window sensor |
+| Exposes | battery, contact, device_temperature, voltage, power_outage_count, trigger_count, linkquality |
+| Picture | ![Aqara MCCGQ11LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -67,7 +67,7 @@ E.g. (devices.yaml)
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -94,6 +94,11 @@ The unit of this value is `mV`.
 ### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Trigger count (numeric)
+Indicates how many times the sensor was triggered (since last scheduled report).
+Value can be found in the published state on the `trigger_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)

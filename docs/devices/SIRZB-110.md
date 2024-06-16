@@ -19,11 +19,16 @@ pageClass: device-page
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Customizable siren |
 | Exposes | battery, battery_low, test, warning, squawk, max_duration, alarm, linkquality |
-| Picture | ![Develco SIRZB-110](https://www.zigbee2mqtt.io/images/devices/SIRZB-110.jpg) |
+| Picture | ![Develco SIRZB-110](https://www.zigbee2mqtt.io/images/devices/SIRZB-110.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+
+
+### Firmware version warning
+
+Only works with firmware 1.7.1 and lower (whatever hardware version). Firmware version 1.9.3 uses a different framework and these commands no longer work.
 
 
 ### Warning usage
@@ -58,8 +63,8 @@ This alarm are preset to highest volume and using the mode `police_panic`
 Squawk are normally used to indicate activation and deactivation of an alarm system
 
 Examples:
-`{"squawk":{"level":"low","mode":"system_is_sarmed","strobe":false}}`
-`{"squawk":{"level":"low","mode":"system_is_disarmed","strobe":false}}`
+`{"squawk":{"level":"low","state":"system_is_armed","strobe":false}}`
+`{"squawk":{"level":"low","state":"system_is_disarmed","strobe":false}}`
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -68,7 +73,7 @@ Examples:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

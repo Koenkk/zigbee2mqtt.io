@@ -19,12 +19,13 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature and humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
-| Picture | ![TuYa TH02Z](https://www.zigbee2mqtt.io/images/devices/TH02Z.jpg) |
+| Picture | ![TuYa TH02Z](https://www.zigbee2mqtt.io/images/devices/TH02Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Notes
+### Pairing
+Press button for 5 seconds.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -44,7 +45,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

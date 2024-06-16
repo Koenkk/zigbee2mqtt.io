@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi QBKG38LM control via MQTT"
-description: "Integrate your Xiaomi QBKG38LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara QBKG38LM control via MQTT"
+description: "Integrate your Aqara QBKG38LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi QBKG38LM
+# Aqara QBKG38LM
 
 |     |     |
 |-----|-----|
 | Model | QBKG38LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara E1 1 gang switch (without neutral) |
-| Exposes | switch (state), power_outage_memory, action, device_temperature, flip_indicator_light, operation_mode, mode_switch, linkquality |
-| Picture | ![Xiaomi QBKG38LM](https://www.zigbee2mqtt.io/images/devices/QBKG38LM.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch E1 (no neutral, single rocker) |
+| Exposes | switch (state), power_outage_memory, device_temperature, flip_indicator_light, operation_mode, mode_switch, action, linkquality |
+| Picture | ![Aqara QBKG38LM](https://www.zigbee2mqtt.io/images/devices/QBKG38LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -68,12 +68,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 If value equals `true` power outage memory is ON, if `false` OFF.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`.
-
 ### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
@@ -100,6 +94,12 @@ Value can be found in the published state on the `mode_switch` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mode_switch": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mode_switch": NEW_VALUE}`.
 The possible values are: `anti_flicker_mode`, `quick_mode`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

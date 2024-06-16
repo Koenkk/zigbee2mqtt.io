@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | 50W Zigbee CCT LED driver (constant current) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![Sunricher HK-ZD-CCT-A](https://www.zigbee2mqtt.io/images/devices/HK-ZD-CCT-A.jpg) |
+| Picture | ![Sunricher HK-ZD-CCT-A](https://www.zigbee2mqtt.io/images/devices/HK-ZD-CCT-A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee PIR sensor |
 | Exposes | occupancy, battery_low, battery, motion_timeout, illumination, linkquality |
-| Picture | ![SONOFF SNZB-03P](https://www.zigbee2mqtt.io/images/devices/SNZB-03P.jpg) |
+| Picture | ![SONOFF SNZB-03P](https://www.zigbee2mqtt.io/images/devices/SNZB-03P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -53,7 +53,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -69,8 +69,7 @@ The minimal value is `5` and the maximum value is `60`.
 ### Illumination (enum)
 Only updated when occupancy is detected.
 Value can be found in the published state on the `illumination` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illumination": ""}`.
-It's not possible to write (`/set`) this value.
+It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `dim`, `bright`.
 
 ### Linkquality (numeric)

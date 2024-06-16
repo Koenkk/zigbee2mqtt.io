@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Heimgard Technologies](/supported-devices/#v=Heimgard%20Technologies)  |
 | Description | In wall light switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Heimgard Technologies HC-IWSWI-1](https://www.zigbee2mqtt.io/images/devices/HC-IWSWI-1.jpg) |
+| Picture | ![Heimgard Technologies HC-IWSWI-1](https://www.zigbee2mqtt.io/images/devices/HC-IWSWI-1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -31,6 +31,8 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `identify_timeout`: Sets duration of identification procedure in seconds (i.e., how long device would flash). Value ranges from 1 to 30 seconds (default 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 

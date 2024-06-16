@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi RTCGQ14LM control via MQTT"
-description: "Integrate your Xiaomi RTCGQ14LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara RTCGQ14LM control via MQTT"
+description: "Integrate your Aqara RTCGQ14LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-04-30T08:00:58
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi RTCGQ14LM
+# Aqara RTCGQ14LM
 
 |     |     |
 |-----|-----|
 | Model | RTCGQ14LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara P1 human body movement and illuminance sensor |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Motion sensor P1 |
 | Exposes | occupancy, illuminance_lux, illuminance, motion_sensitivity, detection_interval, trigger_indicator, device_temperature, battery, voltage, linkquality |
-| Picture | ![Xiaomi RTCGQ14LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ14LM.jpg) |
-| White-label | Xiaomi MS-S02 |
+| Picture | ![Aqara RTCGQ14LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ14LM.png) |
+| White-label | Aqara MS-S02 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -84,14 +84,14 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
 ### Motion sensitivity (enum)
-. Press pairing button right before changing this otherwise it will fail..
+Select motion sensitivity to use. Press pairing button right before changing this otherwise it will fail..
 Value can be found in the published state on the `motion_sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motion_sensitivity": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_sensitivity": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Detection interval (numeric)
-Time interval for detecting actions. Press pairing button right before changing this otherwise it will fail..
+Time interval between action detection. Press pairing button right before changing this otherwise it will fail..
 Value can be found in the published state on the `detection_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_interval": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_interval": NEW_VALUE}`.
@@ -112,7 +112,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EnOcean](/supported-devices/#v=EnOcean)  |
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
-| Picture | ![EnOcean PTM 216Z](https://www.zigbee2mqtt.io/images/devices/PTM-216Z.jpg) |
+| Picture | ![EnOcean PTM 216Z](https://www.zigbee2mqtt.io/images/devices/PTM-216Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -73,7 +73,7 @@ This device can work on any channel, not only 11, 15, 20 or 25. For this, please
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `press_1`, `press_2`, `press_1_and_2`, `press_3`, `press_1_and_3`, `press_3_and_4`, `press_1_and_2_and_3`, `press_4`, `press_1_and_4`, `press_2_and_4`, `press_1_and_2_and_4`, `press_3_and_4`, `press_1_and_3_and_4`, `press_2_and_3_and_4`, `press_all`, `press_energy_bar`, `release`.
+The possible values are: `press_1`, `press_2`, `press_1_and_2`, `press_3`, `press_1_and_3`, `press_3_and_4`, `press_1_and_2_and_3`, `press_4`, `press_1_and_4`, `press_2_and_4`, `press_1_and_2_and_4`, `press_3_and_4`, `press_1_and_3_and_4`, `press_2_and_3_and_4`, `press_all`, `press_energy_bar`, `release`, `short_press_2_of_2`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Leedarson](/supported-devices/#v=Leedarson)  |
 | Description | LED E27 tunable white |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![Leedarson ZA806SQ1TCF](https://www.zigbee2mqtt.io/images/devices/ZA806SQ1TCF.jpg) |
+| Picture | ![Leedarson ZA806SQ1TCF](https://www.zigbee2mqtt.io/images/devices/ZA806SQ1TCF.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

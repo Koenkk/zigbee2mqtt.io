@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNLDP12LM control via MQTT"
-description: "Integrate your Xiaomi ZNLDP12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNLDP12LM control via MQTT"
+description: "Integrate your Aqara ZNLDP12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNLDP12LM
+# Aqara ZNLDP12LM
 
 |     |     |
 |-----|-----|
 | Model | ZNLDP12LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart LED bulb |
-| Exposes | light (state, brightness, color_temp), device_temperature, power_outage_count, power_outage_memory, linkquality |
-| Picture | ![Xiaomi ZNLDP12LM](https://www.zigbee2mqtt.io/images/devices/ZNLDP12LM.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Light bulb |
+| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, power_outage_memory, linkquality |
+| Picture | ![Aqara ZNLDP12LM](https://www.zigbee2mqtt.io/images/devices/ZNLDP12LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -85,16 +85,16 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 }
 ````
 
+### Power outage count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
 ### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
-
-### Power outage count (numeric)
-Number of power outages (since last pairing).
-Value can be found in the published state on the `power_outage_count` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Power outage memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.

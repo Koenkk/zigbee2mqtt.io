@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi QBCZ11LM control via MQTT"
-description: "Integrate your Xiaomi QBCZ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara QBCZ11LM control via MQTT"
+description: "Integrate your Aqara QBCZ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi QBCZ11LM
+# Aqara QBCZ11LM
 
 |     |     |
 |-----|-----|
 | Model | QBCZ11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara socket Zigbee |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall outlet |
 | Exposes | switch (state), power, energy, device_temperature, voltage, power_outage_memory, linkquality |
-| Picture | ![Xiaomi QBCZ11LM](https://www.zigbee2mqtt.io/images/devices/QBCZ11LM.jpg) |
+| Picture | ![Aqara QBCZ11LM](https://www.zigbee2mqtt.io/images/devices/QBCZ11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

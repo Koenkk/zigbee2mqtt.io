@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Leedarson](/supported-devices/#v=Leedarson)  |
 | Description | LED E27 warm white |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![Leedarson ZBT-DIMLight-GLS0800](https://www.zigbee2mqtt.io/images/devices/ZBT-DIMLight-GLS0800.jpg) |
+| Picture | ![Leedarson ZBT-DIMLight-GLS0800](https://www.zigbee2mqtt.io/images/devices/ZBT-DIMLight-GLS0800.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ELKO](/supported-devices/#v=ELKO)  |
 | Description | ZigBee in-wall smart dimmer |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![ELKO 316GLEDRF](https://www.zigbee2mqtt.io/images/devices/316GLEDRF.jpg) |
+| Picture | ![ELKO 316GLEDRF](https://www.zigbee2mqtt.io/images/devices/316GLEDRF.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

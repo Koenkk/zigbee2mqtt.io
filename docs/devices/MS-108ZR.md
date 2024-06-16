@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Zigbee + RF curtain switch module |
 | Exposes | cover (state, position), calibration_time, moving, motor_reversal, linkquality |
-| Picture | ![Moes MS-108ZR](https://www.zigbee2mqtt.io/images/devices/MS-108ZR.jpg) |
+| Picture | ![Moes MS-108ZR](https://www.zigbee2mqtt.io/images/devices/MS-108ZR.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -36,6 +36,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
+* `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
 
 ## Exposes

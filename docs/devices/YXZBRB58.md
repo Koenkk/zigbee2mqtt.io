@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart human presence sensor |
 | Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, radar_scene, linkquality |
-| Picture | ![TuYa YXZBRB58](https://www.zigbee2mqtt.io/images/devices/YXZBRB58.jpg) |
+| Picture | ![TuYa YXZBRB58](https://www.zigbee2mqtt.io/images/devices/YXZBRB58.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -99,7 +99,7 @@ Presets for sensitivity for presence and movement.
 Value can be found in the published state on the `radar_scene` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_scene": NEW_VALUE}`.
-The possible values are: `default`, `bathroom`, `bedroom`, `sleeping`.
+The possible values are: `default`, `bathroom`, `bedroom`, `sleeping`, `unknown`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

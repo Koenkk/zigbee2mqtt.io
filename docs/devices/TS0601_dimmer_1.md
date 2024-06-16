@@ -19,8 +19,8 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 1 gang smart dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), countdown, light_type, power_on_behavior, backlight_mode, linkquality |
-| Picture | ![TuYa TS0601_dimmer_1](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_1.jpg) |
-| White-label | Lerlink X706U, Moes ZS-EUD_1gang |
+| Picture | ![TuYa TS0601_dimmer_1](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_1.png) |
+| White-label | Lerlink X706U, Moes ZS-EUD_1gang, Larkkey ZSTY-SM-1DMZG-EU, Earda EDM-1ZAA-EU, Earda EDM-1ZAB-EU, Earda EDM-1ZBA-EU, Mercator Ikuü SSWD01, Moes ZS-USD, Moes EDM-1ZBB-EU |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

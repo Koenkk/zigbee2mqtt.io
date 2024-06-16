@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [CASAIA](/supported-devices/#v=CASAIA)  |
 | Description | Dry contact relay switch module in 220v AC for gas boiler |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![CASAIA CSLC601-D-E](https://www.zigbee2mqtt.io/images/devices/CSLC601-D-E.jpg) |
+| Picture | ![CASAIA CSLC601-D-E](https://www.zigbee2mqtt.io/images/devices/CSLC601-D-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

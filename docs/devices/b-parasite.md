@@ -17,14 +17,14 @@ pageClass: device-page
 |-----|-----|
 | Model | b-parasite  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
-| Description | [b-parasite open source soil moisture sensor](https://github.com/rbaron/b-parasite) |
+| Description | b-parasite open source soil moisture sensor |
 | Exposes | temperature, humidity, battery, soil_moisture, illuminance_lux, linkquality |
-| Picture | ![Custom devices (DiY) b-parasite](https://www.zigbee2mqtt.io/images/devices/b-parasite.jpg) |
+| Picture | ![Custom devices (DiY) b-parasite](https://www.zigbee2mqtt.io/images/devices/b-parasite.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Notes
+[b-parasite open source soil moisture sensor](https://github.com/rbaron/b-parasite)
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -62,7 +62,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

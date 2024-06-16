@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [NodOn](/supported-devices/#v=NodOn)  |
 | Description | Lighting relay switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![NodOn SIN-4-2-20_PRO](https://www.zigbee2mqtt.io/images/devices/SIN-4-2-20_PRO.jpg) |
+| Picture | ![NodOn SIN-4-2-20_PRO](https://www.zigbee2mqtt.io/images/devices/SIN-4-2-20_PRO.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

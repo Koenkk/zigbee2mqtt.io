@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Outlet with power consumption monitoring |
 | Exposes | switch (state), action, power, linkquality |
-| Picture | ![Legrand WNRR15/WNRR20](https://www.zigbee2mqtt.io/images/devices/WNRR15-WNRR20.jpg) |
+| Picture | ![Legrand WNRR15/WNRR20](https://www.zigbee2mqtt.io/images/devices/WNRR15-WNRR20.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -38,6 +38,13 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `identity_effect`: Defines the identification effect to simplify the device identification. Example:
+```yaml
+identity_effect:
+  effect: blink 3 # allowed: 'blink 3', 'fixed', 'blink green', 'blink blue'
+  color: red # allowed: 'default', 'red', 'green', 'blue', 'lightblue', 'yellow', 'pink', 'white'
+```
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 

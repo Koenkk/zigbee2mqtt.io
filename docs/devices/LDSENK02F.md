@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | 10A/16A EU smart plug |
 | Exposes | switch (state), power_on_behavior, power, voltage, current, energy, linkquality |
-| Picture | ![ADEO LDSENK02F](https://www.zigbee2mqtt.io/images/devices/LDSENK02F.jpg) |
+| Picture | ![ADEO LDSENK02F](https://www.zigbee2mqtt.io/images/devices/LDSENK02F.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

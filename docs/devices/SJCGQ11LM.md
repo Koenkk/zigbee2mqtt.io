@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi SJCGQ11LM control via MQTT"
-description: "Integrate your Xiaomi SJCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara SJCGQ11LM control via MQTT"
+description: "Integrate your Aqara SJCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:54
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi SJCGQ11LM
+# Aqara SJCGQ11LM
 
 |     |     |
 |-----|-----|
 | Model | SJCGQ11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara water leak sensor |
-| Exposes | battery, water_leak, battery_low, voltage, device_temperature, power_outage_count, linkquality |
-| Picture | ![Xiaomi SJCGQ11LM](https://www.zigbee2mqtt.io/images/devices/SJCGQ11LM.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Water leak sensor |
+| Exposes | battery, water_leak, battery_low, voltage, device_temperature, power_outage_count, trigger_count, linkquality |
+| Picture | ![Aqara SJCGQ11LM](https://www.zigbee2mqtt.io/images/devices/SJCGQ11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -43,7 +43,7 @@ Press and hold the reset button by pressing hard on the top of the device (water
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -76,6 +76,11 @@ The unit of this value is `°C`.
 ### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Trigger count (numeric)
+Indicates how many times the sensor was triggered (since last scheduled report).
+Value can be found in the published state on the `trigger_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)

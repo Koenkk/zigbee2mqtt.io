@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Vesternet](/supported-devices/#v=Vesternet)  |
 | Description | Zigbee 2 channel switch |
 | Exposes | switch (state), power, current, voltage, energy, power_on_behavior, linkquality |
-| Picture | ![Vesternet VES-ZB-SWI-015](https://www.zigbee2mqtt.io/images/devices/VES-ZB-SWI-015.jpg) |
+| Picture | ![Vesternet VES-ZB-SWI-015](https://www.zigbee2mqtt.io/images/devices/VES-ZB-SWI-015.png) |
 | White-label | Sunricher SR-ZG9101SAC-HP-SWITCH-2CH |
 
 

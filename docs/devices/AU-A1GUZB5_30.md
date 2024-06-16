@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
 | Description | AOne 4.8W smart dimmable GU10 lamp 3000K |
 | Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![Aurora Lighting AU-A1GUZB5/30](https://www.zigbee2mqtt.io/images/devices/AU-A1GUZB5-30.jpg) |
+| Picture | ![Aurora Lighting AU-A1GUZB5/30](https://www.zigbee2mqtt.io/images/devices/AU-A1GUZB5-30.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 3-Gang switch with backlight |
 | Exposes | switch (state), power_on_behavior, backlight_mode, indicator_mode, linkquality |
-| Picture | ![TuYa TS0003_switch_3_gang_with_backlight](https://www.zigbee2mqtt.io/images/devices/TS0003_switch_3_gang_with_backlight.jpg) |
+| Picture | ![TuYa TS0003_switch_3_gang_with_backlight](https://www.zigbee2mqtt.io/images/devices/TS0003_switch_3_gang_with_backlight.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Combustible gas sensor |
 | Exposes | gas, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HS1CG-E_3.0](https://www.zigbee2mqtt.io/images/devices/HS1CG-E_3.0.jpg) |
+| Picture | ![HEIMAN HS1CG-E_3.0](https://www.zigbee2mqtt.io/images/devices/HS1CG-E_3.0.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [RTX](/supported-devices/#v=RTX)  |
 | Description | Zigbee DIN energy meter |
 | Exposes | switch (state), ac_frequency, energy, power, power_factor, voltage, current, produced_energy, power_reactive, energy_reactive, total_energy, linkquality |
-| Picture | ![RTX ZCR1-40EM](https://www.zigbee2mqtt.io/images/devices/ZCR1-40EM.jpg) |
+| Picture | ![RTX ZCR1-40EM](https://www.zigbee2mqtt.io/images/devices/ZCR1-40EM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Dawon DNS](/supported-devices/#v=Dawon%20DNS)  |
 | Description | IOT smart switch 1 gang router without neutral wire |
 | Exposes | switch (state), linkquality |
-| Picture | ![Dawon DNS PM-S140R-ZB](https://www.zigbee2mqtt.io/images/devices/PM-S140R-ZB.jpg) |
+| Picture | ![Dawon DNS PM-S140R-ZB](https://www.zigbee2mqtt.io/images/devices/PM-S140R-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

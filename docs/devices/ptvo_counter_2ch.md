@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | 2 channel counter |
 | Exposes | battery, l3, l5, switch (state), voltage, linkquality |
-| Picture | ![Custom devices (DiY) ptvo_counter_2ch](https://www.zigbee2mqtt.io/images/devices/ptvo_counter_2ch.jpg) |
+| Picture | ![Custom devices (DiY) ptvo_counter_2ch](https://www.zigbee2mqtt.io/images/devices/ptvo_counter_2ch.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -41,7 +41,7 @@ Instructions on how to build this device, configure firmware can be found [here]
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

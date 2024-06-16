@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee LED Controller W (plus) |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Gledopto GL-C-009S](https://www.zigbee2mqtt.io/images/devices/GL-C-009S.jpg) |
+| Picture | ![Gledopto GL-C-009S](https://www.zigbee2mqtt.io/images/devices/GL-C-009S.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

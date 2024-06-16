@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Security remote control |
 | Exposes | battery, action, linkquality |
-| Picture | ![TuYa TS0215A_remote](https://www.zigbee2mqtt.io/images/devices/TS0215A_remote.jpg) |
+| Picture | ![TuYa TS0215A_remote](https://www.zigbee2mqtt.io/images/devices/TS0215A_remote.png) |
 | White-label | Woox R7054, Nedis ZBRC10WT |
 
 
@@ -34,7 +34,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

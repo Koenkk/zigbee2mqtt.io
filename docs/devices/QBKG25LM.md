@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi QBKG25LM control via MQTT"
-description: "Integrate your Xiaomi QBKG25LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara QBKG25LM control via MQTT"
+description: "Integrate your Aqara QBKG25LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi QBKG25LM
+# Aqara QBKG25LM
 
 |     |     |
 |-----|-----|
 | Model | QBKG25LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara D1 3 gang smart wall switch (no neutral wire) |
-| Exposes | switch (state), operation_mode, mode_switch, power_outage_memory, led_disabled_night, device_temperature, flip_indicator_light, action, power_outage_count, linkquality |
-| Picture | ![Xiaomi QBKG25LM](https://www.zigbee2mqtt.io/images/devices/QBKG25LM.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch D1 (no neutral, triple rocker) |
+| Exposes | switch (state), operation_mode, mode_switch, power_outage_memory, led_disabled_night, device_temperature, flip_indicator_light, power_outage_count, action, linkquality |
+| Picture | ![Aqara QBKG25LM](https://www.zigbee2mqtt.io/images/devices/QBKG25LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -147,16 +147,16 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
 If value equals `ON` flip indicator light is ON, if `OFF` OFF.
 
+### Power outage count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `left_single`, `left_double`, `center_single`, `center_double`, `right_single`, `right_double`, `single_left_center`, `double_left_center`, `single_left_right`, `double_left_right`, `single_center_right`, `double_center_right`, `single_all`, `double_all`.
-
-### Power outage count (numeric)
-Number of power outages (since last pairing).
-Value can be found in the published state on the `power_outage_count` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

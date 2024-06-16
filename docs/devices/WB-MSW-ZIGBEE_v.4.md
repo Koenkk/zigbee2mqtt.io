@@ -1,6 +1,6 @@
 ---
-title: "Sprut.device WB-MSW-ZIGBEE v.4 control via MQTT"
-description: "Integrate your Sprut.device WB-MSW-ZIGBEE v.4 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Wirenboard WB-MSW-ZIGBEE v.4 control via MQTT"
+description: "Integrate your Wirenboard WB-MSW-ZIGBEE v.4 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-08-01T15:09:09
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Sprut.device WB-MSW-ZIGBEE v.4
+# Wirenboard WB-MSW-ZIGBEE v.4
 
 |     |     |
 |-----|-----|
 | Model | WB-MSW-ZIGBEE v.4  |
-| Vendor  | [Sprut.device](/supported-devices/#v=Sprut.device)  |
-| Description | Wall-mounted Zigbee sensor |
-| Exposes | temperature, illuminance, illuminance_lux, humidity, occupancy, occupancy_level, co2, voc, noise, noise_detected, switch (state), noise_timeout, occupancy_timeout, temperature_offset, occupancy_sensitivity, noise_detect_level, linkquality |
-| Picture | ![Sprut.device WB-MSW-ZIGBEE v.4](https://www.zigbee2mqtt.io/images/devices/WB-MSW-ZIGBEE-v.4.jpg) |
+| Vendor  | [Wirenboard](/supported-devices/#v=Wirenboard)  |
+| Description | Wall-mounted multi sensor |
+| Exposes | switch (state), activity_led, temperature, temperature_offset, humidity, th_heater, co2, illuminance_lux, illuminance, occupancy, occupancy_sensitivity, occupancy_level, occupancy_timeout, noise, noise_detect_level, noise_detected, noise_timeout, voc, linkquality |
+| Picture | ![Wirenboard WB-MSW-ZIGBEE v.4](https://www.zigbee2mqtt.io/images/devices/WB-MSW-ZIGBEE-v.4.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,6 +27,14 @@ pageClass: device-page
 
 ### Description
 Wiren Board WB-MSW v.4 — hybrid digital sensor of motion, temperature, humidity, illumination, noise, CO2 and VOC level. It is equipped with the IR blaster (and the receiver for learning). Designed for climate control in residential and office premises.
+
+### Switch endpoints
+The device allways exposes 3 on/off endpoints named `l1`, `l2` and `l3`. Frist two of them only work if illuminannce + IR blaster addon is installed. Their finctuons as follows:
+- `l1` – controls blinking red led
+- `l2` – controls blinking green led
+- `l3` – controlls buzzer
+
+Warning, the installed buzzer is very loud.
 
 ### Configuring IR
 The sensor contains 80 banks for storing IR commands. Training takes place through the built-in IR receiver.
@@ -116,82 +124,24 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
-
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `co2_calibration`: Calibrates the co2 value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `voc_calibration`: Calibrates the voc value (absolute offset), takes into effect on next report of device. The value must be a number.
+* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voc_calibration`: Calibrates the voc value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
+* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
+
 
 ## Exposes
-
-### Temperature (numeric)
-Measured temperature value.
-Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `°C`.
-
-### Illuminance (numeric)
-Raw measured illuminance.
-Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
-
-### Humidity (numeric)
-Measured relative humidity.
-Value can be found in the published state on the `humidity` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `%`.
-
-### Occupancy (binary)
-Indicates whether the device detected occupancy.
-Value can be found in the published state on the `occupancy` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` occupancy is ON, if `false` OFF.
-
-### Occupancy level (numeric)
-The measured occupancy value.
-Value can be found in the published state on the `occupancy_level` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### CO2 (numeric)
-The measured CO2 (carbon dioxide) value.
-Value can be found in the published state on the `co2` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppm`.
-
-### VOC (numeric)
-Measured VOC value.
-Value can be found in the published state on the `voc` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `µg/m³`.
-
-### Noise (numeric)
-The measured noise value.
-Value can be found in the published state on the `noise` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `dBA`.
-
-### Noise detected (binary)
-Indicates whether the device detected noise.
-Value can be found in the published state on the `noise_detected` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` noise detected is ON, if `false` OFF.
 
 ### Switch (l1 endpoint)
 The current state of this switch is in the published state under the `state_l1` property (value is `ON` or `OFF`).
@@ -226,13 +176,81 @@ Additionnaly an `off_wait_time` property can be added to the payload to specify 
 Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Noise timeout (numeric)
-Time in seconds after which noise is cleared after detecting it (default: 60).
-Value can be found in the published state on the `noise_timeout` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"noise_timeout": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_timeout": NEW_VALUE}`.
+### Activity led (binary, indicator endpoint)
+Controls green activity LED.
+Value can be found in the published state on the `activity_led_indicator` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"activity_led_indicator": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"activity_led_indicator": NEW_VALUE}`.
+If value equals `true` activity led is ON, if `false` OFF.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Temperature offset (numeric)
+Self-heating compensation. The compensation value is subtracted from the measured temperature (default: 0).
+Value can be found in the published state on the `temperature_offset` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_offset": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
+The minimal value is `-10` and the maximum value is `10`.
+The unit of this value is `°C`.
+
+### Humidity (numeric)
+Measured relative humidity.
+Value can be found in the published state on the `humidity` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `%`.
+
+### Th heater (binary)
+Turn on when working in conditions of high humidity (more than 70 %, RH) or condensation, if the sensor shows 0 or 100 %..
+Value can be found in the published state on the `th_heater` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"th_heater": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"th_heater": NEW_VALUE}`.
+If value equals `true` th heater is ON, if `false` OFF.
+
+### CO2 (numeric)
+Measured value.
+Value can be found in the published state on the `co2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"co2": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `ppm`.
+
+### Illuminance lux (numeric)
+Measured illuminance in lux.
+Value can be found in the published state on the `illuminance_lux` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_lux": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `lx`.
+
+### Illuminance (numeric)
+Raw measured illuminance.
+Value can be found in the published state on the `illuminance` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
+It's not possible to write (`/set`) this value.
+
+### Occupancy (binary)
+Indicates whether the device detected occupancy.
+Value can be found in the published state on the `occupancy` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy": ""}`.
+It's not possible to write (`/set`) this value.
+If value equals `true` occupancy is ON, if `false` OFF.
+
+### Occupancy sensitivity (numeric)
+If the sensor is triggered by the slightest movement, reduce the sensitivity, otherwise increase it (default: 50).
+Value can be found in the published state on the `occupancy_sensitivity` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_sensitivity": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `2000`.
-The unit of this value is `s`.
+
+### Occupancy level (numeric)
+Measured occupancy level.
+Value can be found in the published state on the `occupancy_level` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_level": ""}`.
+It's not possible to write (`/set`) this value.
 
 ### Occupancy timeout (numeric)
 Time in seconds after which occupancy is cleared after detecting it (default: 60).
@@ -242,20 +260,12 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `2000`.
 The unit of this value is `s`.
 
-### Temperature offset (numeric)
-Self-heating compensation. The compensation value is subtracted from the measured temperature (default: 0).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_offset": NEW_VALUE}`.
-The minimal value is `-10` and the maximum value is `10`.
-The unit of this value is `°C`.
-
-### Occupancy sensitivity (numeric)
-If the sensor is triggered by the slightest movement, reduce the sensitivity, otherwise increase it (default: 50).
-Value can be found in the published state on the `occupancy_sensitivity` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_sensitivity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_sensitivity": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `2000`.
+### Noise (numeric)
+Measured noise level.
+Value can be found in the published state on the `noise` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"noise": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `dBA`.
 
 ### Noise detect level (numeric)
 The minimum noise level at which the detector will work (default: 50).
@@ -264,6 +274,28 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_detect_level": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `150`.
 The unit of this value is `dBA`.
+
+### Noise detected (binary)
+Indicates whether the device detected noise.
+Value can be found in the published state on the `noise_detected` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"noise_detected": ""}`.
+It's not possible to write (`/set`) this value.
+If value equals `true` noise detected is ON, if `false` OFF.
+
+### Noise timeout (numeric)
+Time in seconds after which noise is cleared after detecting it (default: 60).
+Value can be found in the published state on the `noise_timeout` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"noise_timeout": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"noise_timeout": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `2000`.
+The unit of this value is `s`.
+
+### VOC (numeric)
+Measured VOC level.
+Value can be found in the published state on the `voc` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voc": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `µg/m³`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

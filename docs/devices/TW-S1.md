@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Konke](/supported-devices/#v=Konke)  |
 | Description | Photoelectric smoke detector |
 | Exposes | smoke, battery_low, linkquality |
-| Picture | ![Konke TW-S1](https://www.zigbee2mqtt.io/images/devices/TW-S1.jpg) |
+| Picture | ![Konke TW-S1](https://www.zigbee2mqtt.io/images/devices/TW-S1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

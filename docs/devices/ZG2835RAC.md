@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | ZG2835RAC  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | ZigBee knob smart dimmer |
-| Exposes | light (state, brightness), power, voltage, current, energy, linkquality |
-| Picture | ![Sunricher ZG2835RAC](https://www.zigbee2mqtt.io/images/devices/ZG2835RAC.jpg) |
+| Exposes | light (state, brightness), effect, power_on_behavior, power, voltage, current, energy, linkquality |
+| Picture | ![Sunricher ZG2835RAC](https://www.zigbee2mqtt.io/images/devices/ZG2835RAC.png) |
 | White-label | YPHIX 50208695, Samotech SM311 |
 
 
@@ -88,28 +88,46 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 }
 ````
 
+### Effect (enum)
+Triggers an effect on the light (e.g. make light blink for a few seconds).
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
+The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
+
+### Power-on behavior (enum)
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
+
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
 
 ### Voltage (numeric)
 Measured electrical potential value.
 Value can be found in the published state on the `voltage` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `V`.
 
 ### Current (numeric)
 Instantaneous measured electrical current.
 Value can be found in the published state on the `current` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `A`.
 
 ### Energy (numeric)
 Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
 ### Linkquality (numeric)

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature & humidity LCD sensor |
 | Exposes | temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, linkquality |
-| Picture | ![TuYa ZG-227ZL](https://www.zigbee2mqtt.io/images/devices/ZG-227ZL.jpg) |
+| Picture | ![TuYa ZG-227ZL](https://www.zigbee2mqtt.io/images/devices/ZG-227ZL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -79,7 +79,7 @@ The minimal value is `-30` and the maximum value is `30`.
 The unit of this value is `%`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

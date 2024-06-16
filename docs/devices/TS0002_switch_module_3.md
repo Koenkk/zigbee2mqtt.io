@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2 gang switch with backlight |
 | Exposes | switch (state), power_on_behavior, indicator_mode, linkquality |
-| Picture | ![TuYa TS0002_switch_module_3](https://www.zigbee2mqtt.io/images/devices/TS0002_switch_module_3.jpg) |
+| Picture | ![TuYa TS0002_switch_module_3](https://www.zigbee2mqtt.io/images/devices/TS0002_switch_module_3.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

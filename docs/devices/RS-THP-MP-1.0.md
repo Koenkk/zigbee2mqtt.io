@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Keen Home](/supported-devices/#v=Keen%20Home)  |
 | Description | Temperature Sensor |
 | Exposes | battery, temperature, humidity, pressure, voltage, linkquality |
-| Picture | ![Keen Home RS-THP-MP-1.0](https://www.zigbee2mqtt.io/images/devices/RS-THP-MP-1.0.jpg) |
+| Picture | ![Keen Home RS-THP-MP-1.0](https://www.zigbee2mqtt.io/images/devices/RS-THP-MP-1.0.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -48,7 +48,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

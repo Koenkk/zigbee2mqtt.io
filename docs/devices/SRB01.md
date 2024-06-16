@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Evvr](/supported-devices/#v=Evvr)  |
 | Description | In-wall relay switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Evvr SRB01](https://www.zigbee2mqtt.io/images/devices/SRB01.jpg) |
+| Picture | ![Evvr SRB01](https://www.zigbee2mqtt.io/images/devices/SRB01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Flood alarm device  |
 | Exposes | battery_low, tamper, water_leak, temperature, voltage, linkquality |
-| Picture | ![Develco FLSZB-110](https://www.zigbee2mqtt.io/images/devices/FLSZB-110.jpg) |
+| Picture | ![Develco FLSZB-110](https://www.zigbee2mqtt.io/images/devices/FLSZB-110.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -27,6 +27,9 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options

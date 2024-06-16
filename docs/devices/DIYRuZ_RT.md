@@ -17,14 +17,14 @@ pageClass: device-page
 |-----|-----|
 | Model | DIYRuZ_RT  |
 | Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
-| Description | [DiY CC2530 Zigbee 3.0 firmware](https://habr.com/ru/company/iobroker/blog/495926/) |
+| Description | DiY CC2530 Zigbee 3.0 firmware |
 | Exposes | switch (state), temperature, linkquality |
-| Picture | ![DIYRuZ DIYRuZ_RT](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_RT.jpg) |
+| Picture | ![DIYRuZ DIYRuZ_RT](https://www.zigbee2mqtt.io/images/devices/DIYRuZ_RT.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Notes
+[DiY CC2530 Zigbee 3.0 firmware](https://habr.com/ru/company/iobroker/blog/495926/)
 <!-- Notes END: Do not edit below this line -->
 
 

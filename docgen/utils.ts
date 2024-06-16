@@ -15,11 +15,12 @@ function getImageName(model) {
   const replaceByDash = [
     new RegExp('/', 'g'),
     new RegExp(':', 'g'),
+    new RegExp(`'`, 'g'),
     new RegExp(' ', 'g'),
   ];
   let image = model;
   replaceByDash.forEach((r) => image = image.replace(r, '-'));
-  return `${ image }.jpg`;
+  return `${ image }.png`;
 }
 
 export async function generatePage(content, target) {

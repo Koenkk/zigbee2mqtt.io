@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | VZM35-SN  |
 | Vendor  | [Inovelli](/supported-devices/#v=Inovelli)  |
 | Description | Fan controller |
-| Exposes | fan (state, mode), led_effect, individual_led_effect, dimmingSpeedUpRemote, dimmingSpeedUpLocal, rampRateOffToOnRemote, rampRateOffToOnLocal, dimmingSpeedDownRemote, dimmingSpeedDownLocal, rampRateOnToOffRemote, rampRateOnToOffLocal, minimumLevel, maximumLevel, invertSwitch, autoTimerOff, defaultLevelLocal, defaultLevelRemote, stateAfterPowerRestored, loadLevelIndicatorTimeout, powerType, switchType, higherOutputInNonNeutral, internalTemperature, overheat, buttonDelay, deviceBindNumber, smartBulbMode, doubleTapUpToParam55, doubleTapDownToParam56, brightnessLevelForDoubleTapUp, brightnessLevelForDoubleTapDown, ledColorWhenOn, ledColorWhenOff, ledIntensityWhenOn, ledIntensityWhenOff, auxSwitchUniqueScenes, bindingOffToOnSyncLevel, localProtection, remoteProtection, outputMode, onOffLedMode, firmwareUpdateInProgressIndicator, defaultLed1ColorWhenOn, defaultLed1ColorWhenOff, defaultLed1IntensityWhenOn, defaultLed1IntensityWhenOff, defaultLed2ColorWhenOn, defaultLed2ColorWhenOff, defaultLed2IntensityWhenOn, defaultLed2IntensityWhenOff, defaultLed3ColorWhenOn, defaultLed3ColorWhenOff, defaultLed3IntensityWhenOn, defaultLed3IntensityWhenOff, defaultLed4ColorWhenOn, defaultLed4ColorWhenOff, defaultLed4IntensityWhenOn, defaultLed4IntensityWhenOff, defaultLed5ColorWhenOn, defaultLed5ColorWhenOff, defaultLed5IntensityWhenOn, defaultLed5IntensityWhenOff, defaultLed6ColorWhenOn, defaultLed6ColorWhenOff, defaultLed6IntensityWhenOn, defaultLed6IntensityWhenOff, defaultLed7ColorWhenOn, defaultLed7ColorWhenOff, defaultLed7IntensityWhenOn, defaultLed7IntensityWhenOff, doubleTapClearNotifications, nonNeutralAuxMediumGear, nonNeutralAuxLowGear, fanLedLevelType, action, linkquality |
-| Picture | ![Inovelli VZM35-SN](https://www.zigbee2mqtt.io/images/devices/VZM35-SN.jpg) |
+| Exposes | fan (state, mode), led_effect, individual_led_effect, breeze mode, dimmingSpeedUpRemote, dimmingSpeedUpLocal, rampRateOffToOnRemote, rampRateOffToOnLocal, dimmingSpeedDownRemote, dimmingSpeedDownLocal, rampRateOnToOffRemote, rampRateOnToOffLocal, minimumLevel, maximumLevel, invertSwitch, autoTimerOff, defaultLevelLocal, defaultLevelRemote, stateAfterPowerRestored, loadLevelIndicatorTimeout, powerType, switchType, internalTemperature, overheat, buttonDelay, deviceBindNumber, smartBulbMode, doubleTapUpToParam55, doubleTapDownToParam56, brightnessLevelForDoubleTapUp, brightnessLevelForDoubleTapDown, ledColorWhenOn, ledColorWhenOff, ledIntensityWhenOn, ledIntensityWhenOff, singleTapBehavior, fanTimerMode, fanControlMode, lowLevelForFanControlMode, mediumLevelForFanControlMode, highLevelForFanControlMode, ledColorForFanControlMode, auxSwitchUniqueScenes, bindingOffToOnSyncLevel, localProtection, remoteProtection, onOffLedMode, firmwareUpdateInProgressIndicator, defaultLed1ColorWhenOn, defaultLed1ColorWhenOff, defaultLed1IntensityWhenOn, defaultLed1IntensityWhenOff, defaultLed2ColorWhenOn, defaultLed2ColorWhenOff, defaultLed2IntensityWhenOn, defaultLed2IntensityWhenOff, defaultLed3ColorWhenOn, defaultLed3ColorWhenOff, defaultLed3IntensityWhenOn, defaultLed3IntensityWhenOff, defaultLed4ColorWhenOn, defaultLed4ColorWhenOff, defaultLed4IntensityWhenOn, defaultLed4IntensityWhenOff, defaultLed5ColorWhenOn, defaultLed5ColorWhenOff, defaultLed5IntensityWhenOn, defaultLed5IntensityWhenOff, defaultLed6ColorWhenOn, defaultLed6ColorWhenOff, defaultLed6IntensityWhenOn, defaultLed6IntensityWhenOff, defaultLed7ColorWhenOn, defaultLed7ColorWhenOff, defaultLed7IntensityWhenOn, defaultLed7IntensityWhenOff, outputMode, doubleTapClearNotifications, fanLedLevelType, quickStartTime, nonNeutralAuxMediumGear, nonNeutralAuxLowGear, action, linkquality |
+| Picture | ![Inovelli VZM35-SN](https://www.zigbee2mqtt.io/images/devices/VZM35-SN.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -39,7 +39,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 The current state of this fan is in the published state under the `fan_state` property (value is `ON` or `OFF`).
 To control this fan publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_state": "ON"}` or `{"fan_state": "OFF"}`.
 To read the current state of this fan publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fan_state": ""}`.
-To change the mode publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_mode": VALUE}` where `VALUE` can be: `low`, `medium`, `high`, `on`.
+To change the mode publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_mode": VALUE}` where `VALUE` can be: `low`, `smart`, `medium`, `high`, `on`.
 
 ### Led effect (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_effect": {"effect": VALUE, "color": VALUE, "level": VALUE, "duration": VALUE}}`
@@ -55,6 +55,19 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indi
 - `color` (numeric): Calculated by using a hue color circle(value/255*360) If color = 255 display white max value is 255
 - `level` (numeric): Brightness of the LED max value is 100
 - `duration` (numeric): 1-60 is in seconds calculated 61-120 is in minutes calculated by(value-60) Example a value of 65 would be 65-60 = 5 minutes - 120-254 Is in hours calculated by(value-120)  Example a value of 132 would be 132-120 would be 12 hours. - 255 Indefinitely max value is 255
+
+### Breeze mode (composite)
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breezeMode": {"speed1": VALUE, "time1": VALUE, "speed2": VALUE, "time2": VALUE, "speed3": VALUE, "time3": VALUE, "speed4": VALUE, "time4": VALUE, "speed5": VALUE, "time5": VALUE}}`
+- `speed1` (enum): Step 1 Speed allowed values: `low`, `medium`, `high`
+- `time1` (numeric): Duration (s) for fan in Step 1   min value is 1, max value is 80
+- `speed2` (enum): Step 2 Speed allowed values: `low`, `medium`, `high`
+- `time2` (numeric): Duration (s) for fan in Step 2   min value is 1, max value is 80
+- `speed3` (enum): Step 3 Speed allowed values: `low`, `medium`, `high`
+- `time3` (numeric): Duration (s) for fan in Step 3   min value is 1, max value is 80
+- `speed4` (enum): Step 4 Speed allowed values: `low`, `medium`, `high`
+- `time4` (numeric): Duration (s) for fan in Step 4   min value is 1, max value is 80
+- `speed5` (enum): Step 5 Speed allowed values: `low`, `medium`, `high`
+- `time5` (numeric): Duration (s) for fan in Step 5   min value is 1, max value is 80
 
 ### DimmingSpeedUpRemote (numeric)
 This changes the speed that the light dims up when controlled from the hub. A setting of 0 turns the light immediately on. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 25 (2.5s).
@@ -143,14 +156,14 @@ The unit of this value is `seconds`.
 Besides the numeric values the following values are accepted: `Disabled`.
 
 ### DefaultLevelLocal (numeric)
-Default level for the dimmer when it is turned on at the switch. A setting of 255 means that the switch will return to the level that it was on before it was turned off..
+Default level for the load when it is turned on at the switch. A setting of 255 means that the switch will return to the level that it was on before it was turned off..
 Value can be found in the published state on the `defaultLevelLocal` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLevelLocal": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLevelLocal": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
 
 ### DefaultLevelRemote (numeric)
-Default level for the dimmer when it is turned on from the hub. A setting of 255 means that the switch will return to the level that it was on before it was turned off..
+Default level for the load when it is turned on from the hub. A setting of 255 means that the switch will return to the level that it was on before it was turned off..
 Value can be found in the published state on the `defaultLevelRemote` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"defaultLevelRemote": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLevelRemote": NEW_VALUE}`.
@@ -184,13 +197,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switchType": NEW_VALUE}`.
 The possible values are: `Single Pole`, `Aux Switch`.
 
-### HigherOutputInNonNeutral (enum)
-Increase level in non-neutral mode.
-Value can be found in the published state on the `higherOutputInNonNeutral` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"higherOutputInNonNeutral": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"higherOutputInNonNeutral": NEW_VALUE}`.
-The possible values are: `Disabled (default)`, `Enabled`.
-
 ### InternalTemperature (numeric)
 The temperature measured by the temperature sensor inside the chip, in degrees Celsius.
 Value can be found in the published state on the `internalTemperature` property.
@@ -219,39 +225,39 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 
 ### SmartBulbMode (enum)
-Use this mode to synchronize and control other fan switches or controllers..
+For use with Smart Fans that need constant power and are controlled via commands rather than power..
 Value can be found in the published state on the `smartBulbMode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"smartBulbMode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smartBulbMode": NEW_VALUE}`.
-The possible values are: `Disabled`, `Remote Control Mode`.
+The possible values are: `Disabled`, `Smart Fan Mode`.
 
 ### DoubleTapUpToParam55 (enum)
-Enable or Disable setting brightness to parameter 55 on double-tap UP..
+Enable or Disable setting level to parameter 55 on double-tap UP..
 Value can be found in the published state on the `doubleTapUpToParam55` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"doubleTapUpToParam55": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"doubleTapUpToParam55": NEW_VALUE}`.
 The possible values are: `Disabled`, `Enabled`.
 
 ### DoubleTapDownToParam56 (enum)
-Enable or Disable setting brightness to parameter 56 on double-tap DOWN..
+Enable or Disable setting level to parameter 56 on double-tap DOWN..
 Value can be found in the published state on the `doubleTapDownToParam56` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"doubleTapDownToParam56": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"doubleTapDownToParam56": NEW_VALUE}`.
 The possible values are: `Disabled`, `Enabled`.
 
 ### BrightnessLevelForDoubleTapUp (numeric)
-Set this level on double-tap UP (if enabled by P53)..
+Set this level on double-tap UP (if enabled by P53). 255 = send ON command..
 Value can be found in the published state on the `brightnessLevelForDoubleTapUp` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightnessLevelForDoubleTapUp": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightnessLevelForDoubleTapUp": NEW_VALUE}`.
-The minimal value is `2` and the maximum value is `254`.
+The minimal value is `2` and the maximum value is `255`.
 
 ### BrightnessLevelForDoubleTapDown (numeric)
-Set this level on double-tap DOWN (if enabled by P54)..
+Set this level on double-tap DOWN (if enabled by P54). 255 = send OFF command..
 Value can be found in the published state on the `brightnessLevelForDoubleTapDown` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightnessLevelForDoubleTapDown": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightnessLevelForDoubleTapDown": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `254`.
+The minimal value is `0` and the maximum value is `255`.
 
 ### LedColorWhenOn (numeric)
 Set the color of the LED Indicator when the load is on..
@@ -283,6 +289,56 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ledIntensityWhenOff": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
+### SingleTapBehavior (enum)
+Behavior of single tapping the on or off button. Old behavior turns the switch on or off. New behavior cycles through the levels set by P131-133. Down Always Off is like the new behavior but down always turns the switch off instead of going to next lower speed..
+Value can be found in the published state on the `singleTapBehavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"singleTapBehavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"singleTapBehavior": NEW_VALUE}`.
+The possible values are: `Old Behavior`, `New Behavior`, `Down Always Off`.
+
+### FanTimerMode (enum)
+Enable or disable advanced timer mode to have the switch act like a bathroom fan timer.
+Value can be found in the published state on the `fanTimerMode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fanTimerMode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fanTimerMode": NEW_VALUE}`.
+The possible values are: `Disabled`, `Enabled`.
+
+### FanControlMode (enum)
+Which mode to use when binding EP3 (config button) to another device (like a fan module)..
+Value can be found in the published state on the `fanControlMode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fanControlMode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fanControlMode": NEW_VALUE}`.
+The possible values are: `Disabled`, `Multi Tap`, `Cycle`.
+
+### LowLevelForFanControlMode (numeric)
+Level to send to device bound to EP3 when set to low..
+Value can be found in the published state on the `lowLevelForFanControlMode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"lowLevelForFanControlMode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lowLevelForFanControlMode": NEW_VALUE}`.
+The minimal value is `2` and the maximum value is `254`.
+
+### MediumLevelForFanControlMode (numeric)
+Level to send to device bound to EP3 when set to medium..
+Value can be found in the published state on the `mediumLevelForFanControlMode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"mediumLevelForFanControlMode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"mediumLevelForFanControlMode": NEW_VALUE}`.
+The minimal value is `2` and the maximum value is `254`.
+
+### HighLevelForFanControlMode (numeric)
+Level to send to device bound to EP3 when set to high..
+Value can be found in the published state on the `highLevelForFanControlMode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"highLevelForFanControlMode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"highLevelForFanControlMode": NEW_VALUE}`.
+The minimal value is `2` and the maximum value is `254`.
+
+### LedColorForFanControlMode (numeric)
+LED color used to display fan control mode..
+Value can be found in the published state on the `ledColorForFanControlMode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ledColorForFanControlMode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ledColorForFanControlMode": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `255`.
+Besides the numeric values the following values are accepted: `Red`, `Orange`, `Yellow`, `Green`, `Cyan`, `Blue`, `Violet`, `Pink`, `White`.
+
 ### AuxSwitchUniqueScenes (enum)
 Have unique scene numbers for scenes activated with the aux switch..
 Value can be found in the published state on the `auxSwitchUniqueScenes` property.
@@ -310,13 +366,6 @@ Value can be found in the published state on the `remoteProtection` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"remoteProtection": ""}`.
 It's not possible to write (`/set`) this value.
 The possible values are: `Disabled`, `Enabled`.
-
-### OutputMode (enum)
-Use device as a Dimmer or an On/Off switch..
-Value can be found in the published state on the `outputMode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"outputMode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"outputMode": NEW_VALUE}`.
-The possible values are: `Dimmer`, `On/Off`.
 
 ### OnOffLedMode (enum)
 When the device is in On/Off mode, use full LED bar or just one LED..
@@ -528,12 +577,34 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"defaultLed7IntensityWhenOff": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `101`.
 
+### OutputMode (enum)
+Use device in ceiling fan (3-Speed) or in exhaust fan (On/Off) mode..
+Value can be found in the published state on the `outputMode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"outputMode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"outputMode": NEW_VALUE}`.
+The possible values are: `Ceiling Fan (3-Speed)`, `Exhaust Fan (On/Off)`.
+
 ### DoubleTapClearNotifications (enum)
 Double-Tap the Config button to clear notifications..
 Value can be found in the published state on the `doubleTapClearNotifications` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"doubleTapClearNotifications": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"doubleTapClearNotifications": NEW_VALUE}`.
 The possible values are: `Enabled (Default)`, `Disabled`.
+
+### FanLedLevelType (numeric)
+Level display of the LED Strip.
+Value can be found in the published state on the `fanLedLevelType` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fanLedLevelType": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fanLedLevelType": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `10`.
+Besides the numeric values the following values are accepted: `Limitless (like VZM31)`, `Adaptive LED`.
+
+### QuickStartTime (numeric)
+Duration of full power output while fan tranisitions from Off to On. In 60th of second. 0 = disable, 1 = 1/60s, 60 = 1s.
+Value can be found in the published state on the `quickStartTime` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"quickStartTime": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quickStartTime": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `60`.
 
 ### NonNeutralAuxMediumGear (numeric)
 Identification value in Non-nuetral, medium gear, aux switch.
@@ -548,14 +619,6 @@ Value can be found in the published state on the `nonNeutralAuxLowGear` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"nonNeutralAuxLowGear": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"nonNeutralAuxLowGear": NEW_VALUE}`.
 The minimal value is `42` and the maximum value is `135`.
-
-### FanLedLevelType (numeric)
-Level display of the LED Strip.
-Value can be found in the published state on the `fanLedLevelType` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fanLedLevelType": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fanLedLevelType": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `10`.
-Besides the numeric values the following values are accepted: `Limitless (like VZM31)`, `Adaptive LED`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

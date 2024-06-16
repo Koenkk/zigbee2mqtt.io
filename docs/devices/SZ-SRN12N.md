@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Smart siren |
 | Exposes | warning, linkquality |
-| Picture | ![SmartThings SZ-SRN12N](https://www.zigbee2mqtt.io/images/devices/SZ-SRN12N.jpg) |
+| Picture | ![SmartThings SZ-SRN12N](https://www.zigbee2mqtt.io/images/devices/SZ-SRN12N.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

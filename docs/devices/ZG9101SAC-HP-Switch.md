@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee AC in wall switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![Sunricher ZG9101SAC-HP-Switch](https://www.zigbee2mqtt.io/images/devices/ZG9101SAC-HP-Switch.jpg) |
+| Picture | ![Sunricher ZG9101SAC-HP-Switch](https://www.zigbee2mqtt.io/images/devices/ZG9101SAC-HP-Switch.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

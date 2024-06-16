@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Carbon monoxide sensor gas leak detector |
 | Exposes | gas, gas_value, carbon_monoxide, co, linkquality |
-| Picture | ![TuYa DCR-RQJ](https://www.zigbee2mqtt.io/images/devices/DCR-RQJ.jpg) |
+| Picture | ![TuYa DCR-RQJ](https://www.zigbee2mqtt.io/images/devices/DCR-RQJ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

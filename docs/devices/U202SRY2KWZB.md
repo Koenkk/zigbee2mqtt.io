@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Ulti 240V 9.1 A 2 gangs relay switch impress switch module, amber LED |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Schneider Electric U202SRY2KWZB](https://www.zigbee2mqtt.io/images/devices/U202SRY2KWZB.jpg) |
+| Picture | ![Schneider Electric U202SRY2KWZB](https://www.zigbee2mqtt.io/images/devices/U202SRY2KWZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

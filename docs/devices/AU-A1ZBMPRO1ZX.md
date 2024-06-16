@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
 | Description | AOne MPROZX fixed IP65 fire rated smart tuneable LED downlight |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Aurora Lighting AU-A1ZBMPRO1ZX](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBMPRO1ZX.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZBMPRO1ZX](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBMPRO1ZX.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

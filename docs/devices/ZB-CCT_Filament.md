@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Ajax Online](/supported-devices/#v=Ajax%20Online)  |
 | Description | Zigbee LED filament light dimmable E27, edison ST64, flame 2200K |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![Ajax Online ZB-CCT_Filament](https://www.zigbee2mqtt.io/images/devices/ZB-CCT_Filament.jpg) |
+| Picture | ![Ajax Online ZB-CCT_Filament](https://www.zigbee2mqtt.io/images/devices/ZB-CCT_Filament.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

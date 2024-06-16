@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Illuminance sensor |
 | Exposes | illuminance, temperature, humidity, linkquality |
-| Picture | ![TuYa TS0601_illuminance_temperature_humidity_sensor_2](https://www.zigbee2mqtt.io/images/devices/TS0601_illuminance_temperature_humidity_sensor_2.jpg) |
+| Picture | ![TuYa TS0601_illuminance_temperature_humidity_sensor_2](https://www.zigbee2mqtt.io/images/devices/TS0601_illuminance_temperature_humidity_sensor_2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -49,12 +49,13 @@ pageClass: device-page
 Raw measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
 
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
+The unit of this value is `°C`.
 
 ### Humidity (numeric)
 Measured relative humidity.

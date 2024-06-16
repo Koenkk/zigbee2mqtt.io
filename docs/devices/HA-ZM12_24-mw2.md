@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Halemeier](/supported-devices/#v=Halemeier)  |
 | Description | MultiWhite 1-channel smart receiver 12V |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![Halemeier HA-ZM12/24-mw2](https://www.zigbee2mqtt.io/images/devices/HA-ZM12-24-mw2.jpg) |
+| Picture | ![Halemeier HA-ZM12/24-mw2](https://www.zigbee2mqtt.io/images/devices/HA-ZM12-24-mw2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

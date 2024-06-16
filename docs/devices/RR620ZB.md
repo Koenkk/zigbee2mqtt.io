@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [pcblab.io](/supported-devices/#v=pcblab.io)  |
 | Description | 2 gang Zigbee switch module |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
-| Picture | ![pcblab.io RR620ZB](https://www.zigbee2mqtt.io/images/devices/RR620ZB.jpg) |
+| Picture | ![pcblab.io RR620ZB](https://www.zigbee2mqtt.io/images/devices/RR620ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

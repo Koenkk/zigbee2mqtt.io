@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi SSM-U01 control via MQTT"
-description: "Integrate your Xiaomi SSM-U01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara SSM-U01 control via MQTT"
+description: "Integrate your Aqara SSM-U01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-11-01T12:47:02Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi SSM-U01
+# Aqara SSM-U01
 
 |     |     |
 |-----|-----|
 | Model | SSM-U01  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara single switch module T1 (with neutral) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Single switch module T1 (with neutral) |
 | Exposes | switch (state), energy, power, device_temperature, power_outage_memory, power_outage_count, switch_type, voltage, current, linkquality |
-| Picture | ![Xiaomi SSM-U01](https://www.zigbee2mqtt.io/images/devices/SSM-U01.jpg) |
+| Picture | ![Aqara SSM-U01](https://www.zigbee2mqtt.io/images/devices/SSM-U01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

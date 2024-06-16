@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | PRL-1ZBS-12/24V  |
 | Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Zigbee 12-24V relay controller |
-| Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Climax PRL-1ZBS-12/24V](https://www.zigbee2mqtt.io/images/devices/PRL-1ZBS-12-24V.jpg) |
+| Exposes | identify, switch (state), power_on_behavior, linkquality |
+| Picture | ![Climax PRL-1ZBS-12/24V](https://www.zigbee2mqtt.io/images/devices/PRL-1ZBS-12-24V.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -39,10 +39,19 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).

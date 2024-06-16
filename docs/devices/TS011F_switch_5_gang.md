@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 2 gang 2 usb 1 wall ac outlet |
 | Exposes | switch (state), power_outage_memory, lock (state), linkquality |
-| Picture | ![TuYa TS011F_switch_5_gang](https://www.zigbee2mqtt.io/images/devices/TS011F_switch_5_gang.jpg) |
+| Picture | ![TuYa TS011F_switch_5_gang](https://www.zigbee2mqtt.io/images/devices/TS011F_switch_5_gang.png) |
 | White-label | Milfra M11Z |
 
 

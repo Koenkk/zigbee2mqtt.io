@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Filament LED light bulb E27 G95 7W pro |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, linkquality |
-| Picture | ![Gledopto GL-B-004P](https://www.zigbee2mqtt.io/images/devices/GL-B-004P.jpg) |
+| Picture | ![Gledopto GL-B-004P](https://www.zigbee2mqtt.io/images/devices/GL-B-004P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

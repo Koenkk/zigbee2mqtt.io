@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Adaprox](/supported-devices/#v=Adaprox)  |
 | Description | Zigbee fingerbot plus |
 | Exposes | switch (state), battery, mode, lower, upper, delay, reverse, touch, linkquality |
-| Picture | ![Adaprox TS0001_fingerbot_1](https://www.zigbee2mqtt.io/images/devices/TS0001_fingerbot_1.jpg) |
+| Picture | ![Adaprox TS0001_fingerbot_1](https://www.zigbee2mqtt.io/images/devices/TS0001_fingerbot_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -49,7 +49,7 @@ Support depend on the switch firmware. Some devices might require both `on_time`
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

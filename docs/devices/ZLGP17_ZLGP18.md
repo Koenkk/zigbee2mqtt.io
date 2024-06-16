@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Wireless and batteryless (double) lighting control |
 | Exposes | action, linkquality |
-| Picture | ![Legrand ZLGP17/ZLGP18](https://www.zigbee2mqtt.io/images/devices/ZLGP17-ZLGP18.jpg) |
+| Picture | ![Legrand ZLGP17/ZLGP18](https://www.zigbee2mqtt.io/images/devices/ZLGP17-ZLGP18.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -46,6 +46,9 @@ Note: each side of the device is treated as a single ZLGP17.
 This device can work on any channel, not only 11. For this, please refer to the [Legrand ZLGP18 manual chapter 6.2](https://www.admin.legrandoc.com/files/documents/S000112516EN-00.pdf).
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 

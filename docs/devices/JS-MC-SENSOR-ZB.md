@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [JAVIS](/supported-devices/#v=JAVIS)  |
 | Description | Microwave sensor |
 | Exposes | occupancy, illuminance_lux, led_enable, keep_time, sensitivity, illuminance_calibration, linkquality |
-| Picture | ![JAVIS JS-MC-SENSOR-ZB](https://www.zigbee2mqtt.io/images/devices/JS-MC-SENSOR-ZB.jpg) |
+| Picture | ![JAVIS JS-MC-SENSOR-ZB](https://www.zigbee2mqtt.io/images/devices/JS-MC-SENSOR-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

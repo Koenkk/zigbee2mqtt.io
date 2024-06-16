@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [MakeGood](/supported-devices/#v=MakeGood)  |
 | Description | Double Zigbee power point |
 | Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, linkquality |
-| Picture | ![MakeGood MG-AUZG01](https://www.zigbee2mqtt.io/images/devices/MG-AUZG01.jpg) |
+| Picture | ![MakeGood MG-AUZG01](https://www.zigbee2mqtt.io/images/devices/MG-AUZG01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi QBKG40LM control via MQTT"
-description: "Integrate your Xiaomi QBKG40LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara QBKG40LM control via MQTT"
+description: "Integrate your Aqara QBKG40LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-08-01T20:41:55Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi QBKG40LM
+# Aqara QBKG40LM
 
 |     |     |
 |-----|-----|
 | Model | QBKG40LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara E1 1 gang switch (with neutral) |
-| Exposes | switch (state), action, power_outage_memory, device_temperature, flip_indicator_light, operation_mode, linkquality |
-| Picture | ![Xiaomi QBKG40LM](https://www.zigbee2mqtt.io/images/devices/QBKG40LM.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch E1 (with neutral, single rocker) |
+| Exposes | switch (state), power_outage_memory, device_temperature, flip_indicator_light, operation_mode, action, linkquality |
+| Picture | ![Aqara QBKG40LM](https://www.zigbee2mqtt.io/images/devices/QBKG40LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -61,12 +61,6 @@ Additionnaly an `off_wait_time` property can be added to the payload to specify 
 Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`.
-
 ### Power outage memory (binary)
 Enable/disable the power outage memory, this recovers the on/off mode after power failure.
 Value can be found in the published state on the `power_outage_memory` property.
@@ -93,6 +87,12 @@ Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

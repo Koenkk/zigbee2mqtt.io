@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | 4 ports switch with 2 usb ports (no metering) |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Sunricher SR-ZG9023A-EU](https://www.zigbee2mqtt.io/images/devices/SR-ZG9023A-EU.jpg) |
+| Picture | ![Sunricher SR-ZG9023A-EU](https://www.zigbee2mqtt.io/images/devices/SR-ZG9023A-EU.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
 | Description | AOne one gang wireless battery rotary dimmer |
 | Exposes | battery, action, linkquality |
-| Picture | ![Aurora Lighting AU-A1ZBR1GW](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBR1GW.jpg) |
+| Picture | ![Aurora Lighting AU-A1ZBR1GW](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBR1GW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -43,7 +43,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

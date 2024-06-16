@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Linkoze](/supported-devices/#v=Linkoze)  |
 | Description | Door sensor with scene switch |
 | Exposes | action, contact, battery_low, tamper, battery, voltage, linkquality |
-| Picture | ![Linkoze LKDSZ001](https://www.zigbee2mqtt.io/images/devices/LKDSZ001.jpg) |
+| Picture | ![Linkoze LKDSZ001](https://www.zigbee2mqtt.io/images/devices/LKDSZ001.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -57,7 +57,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

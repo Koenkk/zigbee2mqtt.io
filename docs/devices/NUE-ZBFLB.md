@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Nue / 3A](/supported-devices/#v=Nue%20%2F%203A)  |
 | Description | Smart fan light switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Nue / 3A NUE-ZBFLB](https://www.zigbee2mqtt.io/images/devices/NUE-ZBFLB.jpg) |
+| Picture | ![Nue / 3A NUE-ZBFLB](https://www.zigbee2mqtt.io/images/devices/NUE-ZBFLB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

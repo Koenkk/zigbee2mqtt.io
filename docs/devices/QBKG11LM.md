@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi QBKG11LM control via MQTT"
-description: "Integrate your Xiaomi QBKG11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara QBKG11LM control via MQTT"
+description: "Integrate your Aqara QBKG11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi QBKG11LM
+# Aqara QBKG11LM
 
 |     |     |
 |-----|-----|
 | Model | QBKG11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara single key wired wall switch |
-| Exposes | switch (state), power, device_temperature, energy, action, operation_mode, linkquality |
-| Picture | ![Xiaomi QBKG11LM](https://www.zigbee2mqtt.io/images/devices/QBKG11LM.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch (with neutral, single rocker) |
+| Exposes | switch (state), power, device_temperature, energy, operation_mode, action, linkquality |
+| Picture | ![Aqara QBKG11LM](https://www.zigbee2mqtt.io/images/devices/QBKG11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -100,18 +100,18 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`, `release`, `hold`.
-
 ### Operation mode (enum)
 Decoupled mode.
 Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`, `release`, `hold`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

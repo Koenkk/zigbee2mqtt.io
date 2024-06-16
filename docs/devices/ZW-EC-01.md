@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Nue / 3A](/supported-devices/#v=Nue%20%2F%203A)  |
 | Description | Zigbee smart curtain switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Nue / 3A ZW-EC-01](https://www.zigbee2mqtt.io/images/devices/ZW-EC-01.jpg) |
+| Picture | ![Nue / 3A ZW-EC-01](https://www.zigbee2mqtt.io/images/devices/ZW-EC-01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

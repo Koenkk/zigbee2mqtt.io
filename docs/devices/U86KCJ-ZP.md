@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Smart 6 key scene wall switch |
 | Exposes | action, linkquality |
-| Picture | ![TuYa U86KCJ-ZP](https://www.zigbee2mqtt.io/images/devices/U86KCJ-ZP.jpg) |
+| Picture | ![TuYa U86KCJ-ZP](https://www.zigbee2mqtt.io/images/devices/U86KCJ-ZP.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

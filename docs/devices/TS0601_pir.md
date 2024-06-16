@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Haozee PIR sensor |
 | Exposes | occupancy, illuminance, battery, linkquality |
-| Picture | ![TuYa TS0601_pir](https://www.zigbee2mqtt.io/images/devices/TS0601_pir.jpg) |
+| Picture | ![TuYa TS0601_pir](https://www.zigbee2mqtt.io/images/devices/TS0601_pir.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -49,7 +49,7 @@ Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

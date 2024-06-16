@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 5 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS0601_switch_5_gang](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_5_gang.jpg) |
+| Picture | ![TuYa TS0601_switch_5_gang](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_5_gang.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

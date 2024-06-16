@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Neo](/supported-devices/#v=Neo)  |
 | Description | Outdoor solar alarm |
 | Exposes | alarm_state, alarm_switch, tamper_alarm_switch, tamper_alarm, alarm_melody, alarm_mode, alarm_time, charging, battery, linkquality |
-| Picture | ![Neo NAS-AB06B2](https://www.zigbee2mqtt.io/images/devices/NAS-AB06B2.jpg) |
+| Picture | ![Neo NAS-AB06B2](https://www.zigbee2mqtt.io/images/devices/NAS-AB06B2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -87,7 +87,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` charging is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

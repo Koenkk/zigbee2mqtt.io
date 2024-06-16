@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [id3](/supported-devices/#v=id3)  |
 | Description | Thermostatic radiator valve |
 | Exposes | battery, lock (state), max_temperature, min_temperature, position, switch (state), window, alarm_switch, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset, system_mode, running_state), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, boost_heating, boost_time, linkquality |
-| Picture | ![id3 GTZ06](https://www.zigbee2mqtt.io/images/devices/GTZ06.jpg) |
+| Picture | ![id3 GTZ06](https://www.zigbee2mqtt.io/images/devices/GTZ06.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,7 +33,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

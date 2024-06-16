@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Honyar](/supported-devices/#v=Honyar)  |
 | Description | Smart Power Socket 16A (with power monitoring) |
 | Exposes | switch (state), power, current, voltage, energy, linkquality |
-| Picture | ![Honyar U86Z13A16-ZJH(HA)](https://www.zigbee2mqtt.io/images/devices/U86Z13A16-ZJH(HA).jpg) |
+| Picture | ![Honyar U86Z13A16-ZJH(HA)](https://www.zigbee2mqtt.io/images/devices/U86Z13A16-ZJH(HA).png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

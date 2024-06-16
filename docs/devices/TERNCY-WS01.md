@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TERNCY](/supported-devices/#v=TERNCY)  |
 | Description | Smart light switch - 4 gang without neutral wire |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![TERNCY TERNCY-WS01](https://www.zigbee2mqtt.io/images/devices/TERNCY-WS01.jpg) |
+| Picture | ![TERNCY TERNCY-WS01](https://www.zigbee2mqtt.io/images/devices/TERNCY-WS01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

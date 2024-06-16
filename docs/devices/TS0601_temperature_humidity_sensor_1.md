@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Temperature & humidity sensor |
 | Exposes | temperature, humidity, battery, battery_low, battery_level, linkquality |
-| Picture | ![TuYa TS0601_temperature_humidity_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_temperature_humidity_sensor_1.jpg) |
+| Picture | ![TuYa TS0601_temperature_humidity_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_temperature_humidity_sensor_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -62,7 +62,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

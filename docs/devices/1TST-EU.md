@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [eCozy](/supported-devices/#v=eCozy)  |
 | Description | Smart heating thermostat |
 | Exposes | battery, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration, pi_heating_demand), linkquality |
-| Picture | ![eCozy 1TST-EU](https://www.zigbee2mqtt.io/images/devices/1TST-EU.jpg) |
+| Picture | ![eCozy 1TST-EU](https://www.zigbee2mqtt.io/images/devices/1TST-EU.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -202,7 +202,7 @@ tz.thermostat_relay_status_log_rsp
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -7,7 +7,8 @@ sidebarDepth: 0
 [[toc]]
 
 ## My network is unstable and/or performs poorly, what can I do?
-Read [Improve network range and stability](../../advanced/zigbee/02_improve_network_range_and_stability.md)
+- Try to restart the Zigbee device with poor/unstable connection. The route could be lost because of moving the coordinator to an other place at home.
+- Read [Improve network range and stability](../../advanced/zigbee/02_improve_network_range_and_stability.md)
 
 ## Why does my device not or fail to pair?
 This problem can be divided in 2 categories; no logging is shown at all OR interview fails.
@@ -30,7 +31,7 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 - There can be too much interference, try connecting the coordinator USB through an USB extension cable. This problem occurs a lot when used in combination with a Raspberry Pi 4.
 - If it’s a battery powered device, try replacing the battery. Try to keep the device awake by pressing the button of the device (if any) every 3 seconds.
 - Try re-pairing the device again for 2 or 3 times.
-- This might be a Zigbee2MQTT bug, [Create a new issue](https://github.com/Koenkk/zigbee2mqtt/issues/new) with the zigbee-herdsman debug logging attached to it. [How to enable zigbee-herdsman debug logging](../usage/debug.md#zigbee-herdsman-debug-logging).
+- This might be a Zigbee2MQTT bug, [Create a new issue](https://github.com/Koenkk/zigbee2mqtt/issues/new) with the debug logging attached to it. [How to enable debug logging](../configuration/logging.md#debugging).
 - If device joins with `0x000000000000000` as `ieeeAddress` (you will see: `Starting interview of '0x0000000000000000'` in the Zigbee2MQTT log) your CC253X might be broken. [See issue #2761](https://github.com/Koenkk/zigbee2mqtt/issues/2761).
 - In case the device is a bulb, try resetting it through [Touchlink](../usage/touchlink.md)
 - Try pairing close to a bulb (light) router instead of the coordinator.

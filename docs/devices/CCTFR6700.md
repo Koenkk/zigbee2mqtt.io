@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Heating thermostat |
 | Exposes | power, energy, schneider_pilot_mode, climate (occupied_heating_setpoint, local_temperature, system_mode, pi_heating_demand), linkquality |
-| Picture | ![Schneider Electric CCTFR6700](https://www.zigbee2mqtt.io/images/devices/CCTFR6700.jpg) |
+| Picture | ![Schneider Electric CCTFR6700](https://www.zigbee2mqtt.io/images/devices/CCTFR6700.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

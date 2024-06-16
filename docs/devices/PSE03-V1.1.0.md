@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EVOLOGY](/supported-devices/#v=EVOLOGY)  |
 | Description | Sound and flash siren |
 | Exposes | warning, linkquality |
-| Picture | ![EVOLOGY PSE03-V1.1.0](https://www.zigbee2mqtt.io/images/devices/PSE03-V1.1.0.jpg) |
+| Picture | ![EVOLOGY PSE03-V1.1.0](https://www.zigbee2mqtt.io/images/devices/PSE03-V1.1.0.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Siglis](/supported-devices/#v=Siglis)  |
 | Description | zigfred plus smart in-wall switch |
 | Exposes | action, linkquality |
-| Picture | ![Siglis ZFP-1A-CH](https://www.zigbee2mqtt.io/images/devices/ZFP-1A-CH.jpg) |
+| Picture | ![Siglis ZFP-1A-CH](https://www.zigbee2mqtt.io/images/devices/ZFP-1A-CH.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

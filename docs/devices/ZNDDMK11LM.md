@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNDDMK11LM control via MQTT"
-description: "Integrate your Xiaomi ZNDDMK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNDDMK11LM control via MQTT"
+description: "Integrate your Aqara ZNDDMK11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-09-30T16:40:20Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNDDMK11LM
+# Aqara ZNDDMK11LM
 
 |     |     |
 |-----|-----|
 | Model | ZNDDMK11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart lightstrip driver |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart lightstrip driver |
 | Exposes | power, energy, voltage, device_temperature, power_outage_memory, light (state, brightness, color_temp, color_xy), light (state, brightness, color_temp), dimmer_mode, linkquality |
-| Picture | ![Xiaomi ZNDDMK11LM](https://www.zigbee2mqtt.io/images/devices/ZNDDMK11LM.jpg) |
+| Picture | ![Aqara ZNDDMK11LM](https://www.zigbee2mqtt.io/images/devices/ZNDDMK11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

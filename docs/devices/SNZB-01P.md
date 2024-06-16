@@ -18,13 +18,15 @@ pageClass: device-page
 | Model | SNZB-01P  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Wireless button |
-| Exposes | battery, action, battery_low, voltage, linkquality |
-| Picture | ![SONOFF SNZB-01P](https://www.zigbee2mqtt.io/images/devices/SNZB-01P.jpg) |
+| Exposes | battery, voltage, action, linkquality |
+| Picture | ![SONOFF SNZB-01P](https://www.zigbee2mqtt.io/images/devices/SNZB-01P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+If brand new, when powered on it will attempt to pair to Zigbee2MQTT automatically. If not (or if has been paired before and needs to be re-paired) - press and hold the button at the top for about 5 seconds. The device will then go into pairing mode. It should then be connected to Zigbee2MQTT
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -36,29 +38,25 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %.
 Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Voltage (numeric)
+Reported battery voltage in millivolts.
+Value can be found in the published state on the `voltage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `mV`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `long`.
-
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
-
-### Voltage (numeric)
-Voltage of the battery in millivolts.
-Value can be found in the published state on the `voltage` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `mV`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

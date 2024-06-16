@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 6 gang wall switch |
 | Exposes | switch (state), current, power, voltage, linkquality |
-| Picture | ![TuYa SWS6TZ-WHITE](https://www.zigbee2mqtt.io/images/devices/SWS6TZ-WHITE.jpg) |
+| Picture | ![TuYa SWS6TZ-WHITE](https://www.zigbee2mqtt.io/images/devices/SWS6TZ-WHITE.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

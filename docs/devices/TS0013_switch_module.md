@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 3 gang switch module - (without neutral) |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
-| Picture | ![TuYa TS0013_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0013_switch_module.jpg) |
+| Picture | ![TuYa TS0013_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0013_switch_module.png) |
 | White-label | AVATTO 3gang N-ZLWSM01 |
 
 

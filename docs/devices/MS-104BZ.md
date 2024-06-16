@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smart light switch module (2 gang) |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![Moes MS-104BZ](https://www.zigbee2mqtt.io/images/devices/MS-104BZ.jpg) |
+| Picture | ![Moes MS-104BZ](https://www.zigbee2mqtt.io/images/devices/MS-104BZ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -1,7 +1,7 @@
 ---
 title: "Lilistore TS0601_lilistore control via MQTT"
 description: "Integrate your Lilistore TS0601_lilistore via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2024-01-31T19:37:46
 pageClass: device-page
 ---
 
@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Lilistore](/supported-devices/#v=Lilistore)  |
 | Description | Cover motor |
 | Exposes | cover (state, position), reverse_direction, motor_fault, linkquality |
-| Picture | ![Lilistore TS0601_lilistore](https://www.zigbee2mqtt.io/images/devices/TS0601_lilistore.jpg) |
+| Picture | ![Lilistore TS0601_lilistore](https://www.zigbee2mqtt.io/images/devices/TS0601_lilistore.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

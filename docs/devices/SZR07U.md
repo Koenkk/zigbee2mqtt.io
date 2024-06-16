@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 24GHz millimeter wave radar |
 | Exposes | presence, detection_range, radar_sensitivity, target_distance, indicator, fading_time, linkquality |
-| Picture | ![TuYa SZR07U](https://www.zigbee2mqtt.io/images/devices/SZR07U.jpg) |
+| Picture | ![TuYa SZR07U](https://www.zigbee2mqtt.io/images/devices/SZR07U.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

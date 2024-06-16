@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Leedarson](/supported-devices/#v=Leedarson)  |
 | Description | Motion Sensor |
 | Exposes | battery, occupancy, linkquality |
-| Picture | ![Leedarson 8A-SS-BA-H0](https://www.zigbee2mqtt.io/images/devices/8A-SS-BA-H0.jpg) |
+| Picture | ![Leedarson 8A-SS-BA-H0](https://www.zigbee2mqtt.io/images/devices/8A-SS-BA-H0.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,7 +33,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Woolley](/supported-devices/#v=Woolley)  |
 | Description | Zigbee 3.0 smart plug |
 | Exposes | power, current, voltage, switch (state), linkquality |
-| Picture | ![Woolley BSD29/BSD59](https://www.zigbee2mqtt.io/images/devices/BSD29-BSD59.jpg) |
+| Picture | ![Woolley BSD29/BSD59](https://www.zigbee2mqtt.io/images/devices/BSD29-BSD59.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | Ikon ceiling light |
 | Exposes | light (state, brightness, color_temp), effect, do_not_disturb, linkquality |
-| Picture | ![Mercator Ikuü SMCL01-ZB](https://www.zigbee2mqtt.io/images/devices/SMCL01-ZB.jpg) |
+| Picture | ![Mercator Ikuü SMCL01-ZB](https://www.zigbee2mqtt.io/images/devices/SMCL01-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

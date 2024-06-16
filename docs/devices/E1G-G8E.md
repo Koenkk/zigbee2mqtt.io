@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Multicolor light strip (2M) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), linkquality |
-| Picture | ![Sengled E1G-G8E](https://www.zigbee2mqtt.io/images/devices/E1G-G8E.jpg) |
+| Picture | ![Sengled E1G-G8E](https://www.zigbee2mqtt.io/images/devices/E1G-G8E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
 | Description | Zigbee smart switch |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![eWeLink SWITCH-ZR03-1](https://www.zigbee2mqtt.io/images/devices/SWITCH-ZR03-1.jpg) |
+| Picture | ![eWeLink SWITCH-ZR03-1](https://www.zigbee2mqtt.io/images/devices/SWITCH-ZR03-1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

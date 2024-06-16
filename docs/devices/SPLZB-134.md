@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Power plug (type G) |
 | Exposes | switch (state), power, current, voltage, energy, device_temperature, linkquality |
-| Picture | ![Develco SPLZB-134](https://www.zigbee2mqtt.io/images/devices/SPLZB-134.jpg) |
+| Picture | ![Develco SPLZB-134](https://www.zigbee2mqtt.io/images/devices/SPLZB-134.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

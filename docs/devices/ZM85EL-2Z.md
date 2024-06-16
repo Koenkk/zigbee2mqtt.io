@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Roman Rod I type U curtains track |
 | Exposes | battery, cover (state, position), reverse_direction, border, click_control, motor_fault, linkquality |
-| Picture | ![Zemismart ZM85EL-2Z](https://www.zigbee2mqtt.io/images/devices/ZM85EL-2Z.jpg) |
+| Picture | ![Zemismart ZM85EL-2Z](https://www.zigbee2mqtt.io/images/devices/ZM85EL-2Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -38,7 +38,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

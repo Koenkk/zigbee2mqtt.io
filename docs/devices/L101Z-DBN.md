@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Lytko](/supported-devices/#v=Lytko)  |
 | Description | Dual channel zigbee thermostat |
 | Exposes | climate (local_temperature, occupied_heating_setpoint, system_mode, running_mode, local_temperature_calibration), min_setpoint_deadband, sensor_type, target_temp_first, keypad_lockout, brightness, brightness_standby, linkquality |
-| Picture | ![Lytko L101Z-DBN](https://www.zigbee2mqtt.io/images/devices/L101Z-DBN.jpg) |
+| Picture | ![Lytko L101Z-DBN](https://www.zigbee2mqtt.io/images/devices/L101Z-DBN.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

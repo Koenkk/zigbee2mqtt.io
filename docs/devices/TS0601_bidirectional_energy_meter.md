@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | Bidirectional energy meter with 150A Current Clamp |
 | Exposes | energy, produced_energy, power, voltage, current, energy_flow, linkquality |
-| Picture | ![TuYa TS0601_bidirectional_energy meter](https://www.zigbee2mqtt.io/images/devices/TS0601_bidirectional_energy-meter.jpg) |
+| Picture | ![TuYa TS0601_bidirectional_energy meter](https://www.zigbee2mqtt.io/images/devices/TS0601_bidirectional_energy-meter.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

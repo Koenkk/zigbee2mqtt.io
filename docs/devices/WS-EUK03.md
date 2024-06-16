@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi WS-EUK03 control via MQTT"
-description: "Integrate your Xiaomi WS-EUK03 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara WS-EUK03 control via MQTT"
+description: "Integrate your Aqara WS-EUK03 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-09-01T18:11:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi WS-EUK03
+# Aqara WS-EUK03
 
 |     |     |
 |-----|-----|
 | Model | WS-EUK03  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart wall switch H1 EU (with neutral, single rocker) |
-| Exposes | switch (state), action, power, energy, flip_indicator_light, power_outage_memory, device_temperature, led_disabled_night, power_outage_count, operation_mode, linkquality |
-| Picture | ![Xiaomi WS-EUK03](https://www.zigbee2mqtt.io/images/devices/WS-EUK03.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch H1 EU (with neutral, single rocker) |
+| Exposes | switch (state), power, energy, flip_indicator_light, power_outage_memory, device_temperature, led_disabled_night, power_outage_count, operation_mode, action, linkquality |
+| Picture | ![Aqara WS-EUK03](https://www.zigbee2mqtt.io/images/devices/WS-EUK03.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -60,12 +60,6 @@ When setting the state to ON, it might be possible to specify an automatic shuto
 Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
 Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
-
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single`, `double`.
 
 ### Power (numeric)
 Instantaneous measured power.
@@ -118,6 +112,12 @@ Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `control_relay`, `decoupled`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single`, `double`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

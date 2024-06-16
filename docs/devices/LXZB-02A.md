@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Nue / 3A](/supported-devices/#v=Nue%20%2F%203A)  |
 | Description | Smart light controller |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Nue / 3A LXZB-02A](https://www.zigbee2mqtt.io/images/devices/LXZB-02A.jpg) |
+| Picture | ![Nue / 3A LXZB-02A](https://www.zigbee2mqtt.io/images/devices/LXZB-02A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

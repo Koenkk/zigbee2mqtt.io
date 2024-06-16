@@ -22,7 +22,7 @@ serial:
   port: /dev/ttyACM0 
   # Optional: disable LED of the adapter if supported (default: false)
   disable_led: false
-  # Optional: adapter type, not needed unless you are experiencing problems (default: shown below, options: zstack, deconz, ezsp)
+  # Optional: adapter type, specify if you are experiencing startup problems (default: shown below, options: zstack, deconz, ember, zigate)
   adapter: null
   # Optional: Baud rate speed for serial port, this can be anything firmware support but default is 115200 for Z-Stack and EZSP, 38400 for Deconz, however note that some EZSP firmware need 57600.
   baudrate: 115200

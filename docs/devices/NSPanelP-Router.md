@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Router |
 | Exposes | linkquality |
-| Picture | ![SONOFF NSPanelP-Router](https://www.zigbee2mqtt.io/images/devices/NSPanelP-Router.jpg) |
+| Picture | ![SONOFF NSPanelP-Router](https://www.zigbee2mqtt.io/images/devices/NSPanelP-Router.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

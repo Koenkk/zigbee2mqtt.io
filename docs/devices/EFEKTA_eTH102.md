@@ -1,6 +1,6 @@
 ---
-title: "Custom devices (DiY) EFEKTA_eTH102 control via MQTT"
-description: "Integrate your Custom devices (DiY) EFEKTA_eTH102 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "EFEKTA EFEKTA_eTH102 control via MQTT"
+description: "Integrate your EFEKTA EFEKTA_eTH102 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-09-16T00:31:40Z
 pageClass: device-page
 ---
@@ -11,19 +11,20 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Custom devices (DiY) EFEKTA_eTH102
+# EFEKTA EFEKTA_eTH102
 
 |     |     |
 |-----|-----|
 | Model | EFEKTA_eTH102  |
-| Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
-| Description | [Mini digital thermometer & hygrometer with e-ink1.02](http://efektalab.com/eTH102) |
-| Exposes | battery, temperature, humidity, linkquality |
-| Picture | ![Custom devices (DiY) EFEKTA_eTH102](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eTH102.jpg) |
+| Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
+| Description | Mini digital thermometer & hygrometer with e-ink1.02 |
+| Exposes | battery, voltage, temperature, humidity, linkquality |
+| Picture | ![EFEKTA EFEKTA_eTH102](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eTH102.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+[Mini digital thermometer & hygrometer with e-ink1.02](http://efektalab.com/eTH102)
 
 
 ### Build guide
@@ -47,22 +48,32 @@ Instructions on how to build this device can be found [here](https://github.com/
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %.
 Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Voltage (numeric)
+Reported battery voltage in millivolts.
+Value can be found in the published state on the `voltage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `mV`.
 
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Humidity (numeric)
 Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Linkquality (numeric)

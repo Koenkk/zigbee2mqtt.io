@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sercomm](/supported-devices/#v=Sercomm)  |
 | Description | Water leak detector |
 | Exposes | water_leak, battery_low, linkquality |
-| Picture | ![Sercomm SZ-WTD03](https://www.zigbee2mqtt.io/images/devices/SZ-WTD03.jpg) |
+| Picture | ![Sercomm SZ-WTD03](https://www.zigbee2mqtt.io/images/devices/SZ-WTD03.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

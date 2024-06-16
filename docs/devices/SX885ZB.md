@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Salus Controls](/supported-devices/#v=Salus%20Controls)  |
 | Description | miniSmartPlug |
 | Exposes | switch (state), power_on_behavior, power, energy, linkquality |
-| Picture | ![Salus Controls SX885ZB](https://www.zigbee2mqtt.io/images/devices/SX885ZB.jpg) |
+| Picture | ![Salus Controls SX885ZB](https://www.zigbee2mqtt.io/images/devices/SX885ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [EnOcean](/supported-devices/#v=EnOcean)  |
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
-| Picture | ![EnOcean PTM 215ZE](https://www.zigbee2mqtt.io/images/devices/PTM-215ZE.jpg) |
+| Picture | ![EnOcean PTM 215ZE](https://www.zigbee2mqtt.io/images/devices/PTM-215ZE.png) |
 | White-label | Easyfit by EnOcean EWSxZ, Trio2sys 20020002 |
 
 
@@ -58,7 +58,7 @@ Then, press the selected button contact shortly (< 7s) to select radio channel 1
 
 Once the device is paired you need to confirm the channel. To do this, press any button other than the one used previously.
 
-For more informations, please refer to the [EnOcean PTM 215ZE manual chapter 3.6](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/PTM-215ZE-User-Manual.pdf).
+For more informations, please refer to the [EnOcean PTM 215ZE manual chapter 3.6](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/PTM_215ZE_User_Manual-1.pdf).
 <!-- Notes END: Do not edit below this line -->
 
 

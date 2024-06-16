@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi QBKG32LM control via MQTT"
-description: "Integrate your Xiaomi QBKG32LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara QBKG32LM control via MQTT"
+description: "Integrate your Aqara QBKG32LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-09-01T13:40:11
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi QBKG32LM
+# Aqara QBKG32LM
 
 |     |     |
 |-----|-----|
 | Model | QBKG32LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara smart wall switch H1 Pro (with neutral, triple rocker) |
-| Exposes | switch (state), power, energy, voltage, device_temperature, power_outage_memory, led_disabled_night, flip_indicator_light, action, operation_mode, power_outage_count, linkquality |
-| Picture | ![Xiaomi QBKG32LM](https://www.zigbee2mqtt.io/images/devices/QBKG32LM.jpg) |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Smart wall switch H1 Pro (with neutral, triple rocker) |
+| Exposes | switch (state), power, energy, voltage, device_temperature, power_outage_memory, led_disabled_night, flip_indicator_light, operation_mode, power_outage_count, action, linkquality |
+| Picture | ![Aqara QBKG32LM](https://www.zigbee2mqtt.io/images/devices/QBKG32LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -132,12 +132,6 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"flip_indicator_light": NEW_VALUE}`.
 If value equals `ON` flip indicator light is ON, if `OFF` OFF.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `single_left`, `double_left`, `single_center`, `double_center`, `single_right`, `double_right`, `single_left_center`, `double_left_center`, `single_left_right`, `double_left_right`, `single_center_right`, `double_center_right`, `single_all`, `double_all`.
-
 ### Operation mode (enum, left endpoint)
 Decoupled mode for left button.
 Value can be found in the published state on the `operation_mode_left` property.
@@ -163,6 +157,12 @@ The possible values are: `control_relay`, `decoupled`.
 Number of power outages (since last pairing).
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `single_left`, `double_left`, `single_center`, `double_center`, `single_right`, `double_right`, `single_left_center`, `double_left_center`, `single_left_right`, `double_left_right`, `single_center_right`, `double_center_right`, `single_all`, `double_all`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

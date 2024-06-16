@@ -39,12 +39,14 @@ jobs:
 #          echo "DEVELOP_BRANCH=yes" >> $GITHUB_ENV
 
       - name: Build 🛠
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
         run: npm run build
 
       - name: Run tests 🩺
         run: npm run test
 
       - name: Add build.txt 🗓
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
         run: |
           git log --pretty=format:'%h' -n 1 > dist/build.txt
           echo >> dist/build.txt
@@ -52,7 +54,7 @@ jobs:
 
       - name: Deploy 🚀
         if: github.ref == 'refs/heads/master'
-        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        uses: JamesIves/github-pages-deploy-action@v4.6.1
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: dist # The folder the action should deploy.
@@ -63,7 +65,7 @@ jobs:
 
 #      - name: Deploy to /develop 🚀
 #        if: github.ref == 'refs/heads/develop'
-#        uses: JamesIves/github-pages-deploy-action@v4.5.0
+#        uses: JamesIves/github-pages-deploy-action@v4.6.1
 #        with:
 #          branch: gh-pages
 #          folder: dist

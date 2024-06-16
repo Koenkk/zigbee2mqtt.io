@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Zigbee/RF curtain converter |
 | Exposes | cover (state, position), options, motor_working_mode, percent_state, mode, motor_direction, border, linkquality |
-| Picture | ![Zemismart ZM-AM02_cover](https://www.zigbee2mqtt.io/images/devices/ZM-AM02_cover.jpg) |
+| Picture | ![Zemismart ZM-AM02_cover](https://www.zigbee2mqtt.io/images/devices/ZM-AM02_cover.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

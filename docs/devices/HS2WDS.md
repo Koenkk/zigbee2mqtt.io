@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | LED 9W CCT E27 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![HEIMAN HS2WDS](https://www.zigbee2mqtt.io/images/devices/HS2WDS.jpg) |
+| Picture | ![HEIMAN HS2WDS](https://www.zigbee2mqtt.io/images/devices/HS2WDS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Halemeier](/supported-devices/#v=Halemeier)  |
 | Description | S-Mitter MultiWhite2 smart remote control |
 | Exposes | action_group, battery, action, linkquality |
-| Picture | ![Halemeier HA-ZSM-MW2](https://www.zigbee2mqtt.io/images/devices/HA-ZSM-MW2.jpg) |
+| Picture | ![Halemeier HA-ZSM-MW2](https://www.zigbee2mqtt.io/images/devices/HA-ZSM-MW2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -48,7 +48,7 @@ Value can be found in the published state on the `action_group` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
 It's not possible to write (`/set`) this value.

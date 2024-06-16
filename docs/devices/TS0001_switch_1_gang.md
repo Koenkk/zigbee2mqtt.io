@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 1-Gang switch with backlight |
 | Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
-| Picture | ![TuYa TS0001_switch_1_gang](https://www.zigbee2mqtt.io/images/devices/TS0001_switch_1_gang.jpg) |
+| Picture | ![TuYa TS0001_switch_1_gang](https://www.zigbee2mqtt.io/images/devices/TS0001_switch_1_gang.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

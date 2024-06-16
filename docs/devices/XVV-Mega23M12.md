@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Dresden Elektronik](/supported-devices/#v=Dresden%20Elektronik)  |
 | Description | ZigBee Light Link wireless electronic ballast color temperature |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![Dresden Elektronik XVV-Mega23M12](https://www.zigbee2mqtt.io/images/devices/XVV-Mega23M12.jpg) |
+| Picture | ![Dresden Elektronik XVV-Mega23M12](https://www.zigbee2mqtt.io/images/devices/XVV-Mega23M12.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

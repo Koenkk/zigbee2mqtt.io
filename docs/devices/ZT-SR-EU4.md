@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Star Ring 4 Gang Scene Switch |
 | Exposes | battery, action, linkquality |
-| Picture | ![Moes ZT-SR-EU4](https://www.zigbee2mqtt.io/images/devices/ZT-SR-EU4.jpg) |
+| Picture | ![Moes ZT-SR-EU4](https://www.zigbee2mqtt.io/images/devices/ZT-SR-EU4.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,7 +33,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

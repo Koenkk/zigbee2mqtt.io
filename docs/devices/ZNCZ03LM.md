@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | ZNCZ03LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Mi power plug ZigBee TW |
+| Description | Mi smart plug TW |
 | Exposes | switch (state), power, energy, device_temperature, voltage, linkquality |
-| Picture | ![Xiaomi ZNCZ03LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ03LM.jpg) |
+| Picture | ![Xiaomi ZNCZ03LM](https://www.zigbee2mqtt.io/images/devices/ZNCZ03LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

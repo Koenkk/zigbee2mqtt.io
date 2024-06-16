@@ -19,12 +19,24 @@ pageClass: device-page
 | Vendor  | [Paul Neuhaus](/supported-devices/#v=Paul%20Neuhaus)  |
 | Description | Various tunable white lights (e.g. 8195-55) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![Paul Neuhaus NLG-TW light](https://www.zigbee2mqtt.io/images/devices/NLG-TW-light.jpg) |
+| Picture | ![Paul Neuhaus NLG-TW light](https://www.zigbee2mqtt.io/images/devices/NLG-TW-light.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Options
+### Pairing
+You can reset the light either with a Q-remote (recommended) or via a click sequence with a connected switch to the light. After the light has been resetted, it automatically starts the pairing process. This should be the same for all Paul Neuhaus Q-lights (though untested!).
+#### Pairing with Q-remote
+1. Hold the Q-remote VERY close to the light. The distance to the light's antenna must be less than 10cm.
+2. Press the ON and OFF switch of the Q-remote simultaneously for more than 5 secondes.
 
+The status LED of the Q-remote flashes once per second. After 5 seconds the (ceiling) light flashes multiple times to signal the successful reset. A new flash sequence signals the pairing process. If the flashing ends the light should be paired successfully.  
+#### Pairing with a click sequence
+I got the pairing right with this method once. However, it is extremley difficult to get the timing right. Therefore the pairing with the Q-remote is recommended.
 
+1. Switch on the light for 5 to 10 seconds.
+2. Switch off the light.
+3. Switch on and off the light at least 4 times untill the light starts blinking several times. In this sequence assure to wait for 1-2 seconds between each new switch-on.
 <!-- Notes END: Do not edit below this line -->
 
 

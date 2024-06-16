@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | Active light, warm to cool white (GU10) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
-| Picture | ![Hive HV-GUCXZB5](https://www.zigbee2mqtt.io/images/devices/HV-GUCXZB5.jpg) |
+| Picture | ![Hive HV-GUCXZB5](https://www.zigbee2mqtt.io/images/devices/HV-GUCXZB5.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
