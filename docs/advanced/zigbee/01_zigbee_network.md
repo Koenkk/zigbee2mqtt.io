@@ -42,6 +42,30 @@ When pairing a Green Power device, you must choose whether translated messages s
 
 *Note: Heavy use of broadcasts can negatively impact performance of your network (See [Broadcasts](./02_improve_network_range_and_stability.md)).*
 
+#### GP Proxies & Sinks
+
+The following Zigbee routers have already been confirmed to support (at least some) ZGP features. Other devices very likely also work without issues, they just haven't been added to this table yet.
+
+| Zigbee Router                                           | GP Proxy | GP Sink  | Unicast |
+| :---                                                    | :---:    | :---:    | :---:   |
+| [Philips 9290024896](../../devices/9290024896.md)       | Y        | N        | Y
+| [Philips 9290022169](../../devices/9290022169.md)       | Y        | N        | Y
+| [Philips 8719514491106](../../devices/8719514491106.md) | Y        | N        | Y
+| [Philips 929001953301](../../devices/929001953301.md)   | Y        | N        | Y
+| [Philips 5062131P7](../../devices/5062131P7.md)         | Y        | N        | Y
+| [Philips 3261031P6](../../devices/3261031P6.md)         | Y        | N        | Y
+| [Philips 3418931P6](../../devices/3418931P6.md)         | Y        | N        | Y
+| [Philips 1742930P7](../../devices/1742930P7.md)         | Y        | N        | Y
+| [Philips 3216131P5](../../devices/3216131P5.md)         | Y        | Y        | Nⁱ
+| [Philips 4034031P7](../../devices/4034031P7.md)         | Y        | Y        | Nⁱ
+| [Philips 3261030P7](../../devices/3261030P7.md)         | Y        | Y        | Nⁱ
+| [Philips 4023330P7](../../devices/4023330P7.md)         | Y        | Y        | Nⁱ
+| [Philips 4090230P9](../../devices/4090230P9.md)         | Y        | Y        | Nⁱ
+| [Philips 3261331P7](../../devices/3261331P7.md)         | Y        | Y        | Nⁱ
+| [IKEA LED2101G4](../../devices/LED2101G4.md)            | Y        | Y        | Y
+
+*ⁱ ZGP frames are always being re-transmitted as broadcast, even if unicast was requested by the coordinator. Might be a [firmware bug](https://github.com/Koenkk/zigbee2mqtt/issues/22897#issuecomment-2158291085).*
+
 ## Zigbee networking
 
 This section is an overview of how the Zigbee protocol stack divides into layers (See [Wikipedia - IP layers](https://en.wikipedia.org/wiki/Internet_protocol_suite#Layer_names_and_number_of_layers_in_the_literature) ).  The number of layers in this type of description often varies; this discussion uses 4:
