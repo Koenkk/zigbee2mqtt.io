@@ -44,7 +44,7 @@ When pairing a Green Power device, you must choose whether translated messages s
 
 #### GP Proxies & Sinks
 
-The following Zigbee routers have been confirmed to support (at least some) ZGP features.
+The following Zigbee routers have already been confirmed to support (at least some) ZGP features. Other devices very likely also work without issues, they just haven't been added to this table yet.
 
 | Zigbee Router                                           | GP Proxy | GP Sink  | Unicast |
 | :---                                                    | :---:    | :---:    | :---:   |
@@ -64,7 +64,7 @@ The following Zigbee routers have been confirmed to support (at least some) ZGP 
 | [Philips 3261331P7](../../devices/3261331P7.md)         | Y        | Y        | Nⁱ
 | [IKEA LED2101G4](../../devices/LED2101G4.md)            | Y        | Y        | Y
 
-*ⁱ ZGP telegramms are being re-transmitted as broadcast, even if unicast was requested by the coordinator. Might be a [firmware bug](https://github.com/Koenkk/zigbee2mqtt/issues/22897#issuecomment-2158291085).*
+*ⁱ ZGP frames are always being re-transmitted as broadcast, even if unicast was requested by the coordinator. Might be a [firmware bug](https://github.com/Koenkk/zigbee2mqtt/issues/22897#issuecomment-2158291085).*
 
 ## Zigbee networking
 
