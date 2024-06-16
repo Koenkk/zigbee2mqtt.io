@@ -72,7 +72,7 @@ serial:
 
 * [Product page](https://www.home-assistant.io/skyconnect)
 * [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
-* [Recommended firmware](https://github.com/darkxst/silabs-firmware-builder/raw/ember-nohw/firmware_builds/skyconnect/ncp-uart-hw-v7.4.1.0-skyconnect-115200.gbl), set rtscts to false with this firmware.
+* [Recommended firmware](https://github.com/darkxst/silabs-firmware-builder/raw/ember-nohw/firmware_builds/skyconnect/ncp-uart-hw-v7.4.1.0-skyconnect-115200.gbl), do not use rtscts with this firmware.
 * [Flashing](https://skyconnect.home-assistant.io/)
 * [Buy](https://www.home-assistant.io/skyconnect)
 
