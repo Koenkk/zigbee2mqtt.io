@@ -37,6 +37,19 @@ Binding may work between this module and the actuator, depending if the actuator
 
 
 ### Pairing
+For model built after 2020, pairing may be done via NFC or the physical buttons.
+
+**NFC:**
+
+The easiest way is to use a compatible smartphone (iOS, android) with NFC capabily.
+
+The required tool “EnOcean Tool” is available from the [Google Play Store](https://play.google.com/store/apps/details?id=de.enocean.easytool&hl=en) and from the [Apple Store](https://apps.apple.com/de/app/enocean-tool/id1497283202).
+
+For the first configuration, the QR-Code behind the PTM 216Z shall be scanned in order to get the built-in NFC pin to unlock the device. Then, the user may define a specific one if required. More details are available in the documentation [EnOcean PTM 216Z manual chapter 4 (NFC interface)](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/PTM-216Z-User-Manual-1.pdf).
+
+
+**Physical buttons:**
+
 This device has 4 buttons:
 
 | Number | Button | Position |
