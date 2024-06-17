@@ -74,7 +74,7 @@ Once the device is paired you need to confirm the channel. To do this press A1 a
 
 In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds.
 
-This device can work on any channel, not only 11, 15, 20 or 25. For this, please refer to the [EnOcean PTM 216Z manual chapter 5.3](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/PTM-216Z-User-Manual-1.pdf).
+This device can work on any channel, not only 11, 15, 20 or 25. For this, please refer to the [EnOcean PTM 216Z manual chapter 3.6.3](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/PTM-216Z-User-Manual-2.pdf).
 <!-- Notes END: Do not edit below this line -->
 
 
