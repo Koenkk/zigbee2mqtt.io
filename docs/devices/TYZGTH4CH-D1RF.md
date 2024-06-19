@@ -12,7 +12,7 @@ manufacturer_id: "_TZ3218_ya5d6wth"
 
 The Mumubiz TYZGTH4CH-D1RF is a 4 channel Zigbee smart switch that supports temperature measurement.
 
-![Mumubiz TYZGTH4CH-D1RF](../../images/devices/TYZGTH4CH-D1RF.png)
+![Mumubiz TYZGTH4CH-D1RF](../../images/devices/Mumubiz_TYZGTH4CH-D1RF.png)
 
 ### Supported Features
 
@@ -43,3 +43,7 @@ module.exports = {
         return {'l1': 1, 'l2': 2, 'l3': 3, 'l4': 4};
     },
 };
+<!-- Notes BEGIN -->
+
+https://www.aliexpress.com/item/1005007040718331.html?spm=a2g0o.order_list.order_list_main.11.40631c24rqqw2w
+<!-- Notes END -->
