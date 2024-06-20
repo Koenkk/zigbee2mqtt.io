@@ -48,9 +48,9 @@ The following Zigbee routers have already been confirmed to support (at least so
 
 | Zigbee Router                                                                       | GP Proxy | GP Sink  | Unicast |
 | :---                                                                                | :---:    | :---:    | :---:   |
-| [IKEA ICPSHC24-10EU-IL-2](../../ICPSHC24-10EU-IL-1_ICPSHC24-10EU-IL-2devices/.md)²  | Y        | Y        | Y
+| [IKEA ICPSHC24-10EU-IL-2](../../devices/ICPSHC24-10EU-IL-1_ICPSHC24-10EU-IL-2.md)²  | Y        | Y        | Y
 | [IKEA LED2101G4](../../devices/LED2101G4.md)                                        | Y        | Y        | Y
-| [IKEA LED2103G5](../../devices/LED2103G5.md)            				                    | Y        | Y        | Y
+| [IKEA LED2103G5](../../devices/LED2103G5.md)            				              | Y        | Y        | Y
 | [IKEA LED2109G6](../../devices/LED2109G6.md)                                        | Y        | Y        | Y
 | [IKEA E1603/E1702/E1708](../../devices/E1603_E1702_E1708.md)                        | Y        | N        | Y
 | [Philips 1742930P7](../../devices/1742930P7.md)                                     | Y        | N        | Y
@@ -69,7 +69,7 @@ The following Zigbee routers have already been confirmed to support (at least so
 | [Philips 929001953301](../../devices/929001953301.md)                               | Y        | N        | Y
 | [Philips 8718696548738](../../devices/8718696548738.md)                             | Y        | Y        | Nⁱ
 | [Philips 8719514491106](../../devices/8719514491106.md)                             | Y        | N        | Y
-| [Sonoff ZBDongle-E](../../devices/ZBDongle-E.md)        				                    | Y        | N        | Y
+| [Sonoff ZBDongle-E](../../devices/ZBDongle-E.md)        				              | Y        | N        | Y
 | [Sunricher SR-ZG9040A](../../devices/SR-ZG9040A.md)                                 | Y        | Y        | Y
 | [Sunricher SR-ZG9101SAC-HP-SWITCH-2CH](../../devices/SR-ZG9101SAC-HP-SWITCH-2CH.md) | Y        | Y        | Y
 | [Ubisys C4](../../devices/C4.md)                                                    | Y        | N        | Y
