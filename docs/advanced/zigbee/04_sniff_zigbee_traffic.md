@@ -123,7 +123,7 @@ Download and install https://nmap.org/npcap/ and make sure you select to install
 In a terminal or command line, run `java -jar ZigbeeSniffer.jar -baud 115200 -flow {OPTION} -port {PORT} -c {CHANNEL}`.
 On Windows, `PORT` should be replaced by `COM5` or whatever you wrote down in step 1.
 On linux, `PORT` will be something like `/dev/ttyUSB0` or wherever you plugged in your HUSBZB-1 device.
-Depending on your adapter, `OPTION` should be replaced by `none` (e.g. Sonof Dongle-E) or `hardware` (HUSBZB-1).
+Depending on your adapter, `OPTION` should be replaced by `none` (e.g. Sonoff Dongle-E) or `hardware` (HUSBZB-1).
 
 Once you have the application running, you should see it connect to and start sniffing traffic on the network.
 
