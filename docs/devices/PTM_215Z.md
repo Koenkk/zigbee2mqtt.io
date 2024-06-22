@@ -58,6 +58,11 @@ Alternatively, you should be able to reset the switch with the following pattern
 3. press top right (B0) and bottom left (A1) at the same time 
 4. press top left (A0)
 Note: Please make sure the module is positioned the right way up.
+
+## Home Assistant
+The user, vandalon, over at the Home Assistant community forum has made a nice Automation Blueprint that works well with this device: https://community.home-assistant.io/t/zigbee2mqtt-enocean-ptm-215z-friends-of-hue-switch/429770
+It adds functionality like `held_#` which is nice to use to for example increase or decrease the brightness of a light.
+
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -77,7 +82,3 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
-
-## Home Assistant
-The user, vandalon, over at the Home Assistant community forum has made a nice Automation Blueprint that works well with this device: https://community.home-assistant.io/t/zigbee2mqtt-enocean-ptm-215z-friends-of-hue-switch/429770
-It adds functionality like `held_#` which is nice to use to for example increase or decrease the brightness of a light.
