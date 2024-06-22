@@ -7,7 +7,7 @@ These instructions explain how to run Zigbee2MQTT on Windows.
 
 ::: tip TIP
 Before starting make sure you have an MQTT broker installed on your system.
-There are many tutorials available on how to do this, [example](https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/).
+There are many tutorials available on how to do this, [example](https://cedalo.com/blog/how-to-install-mosquitto-mqtt-broker-on-windows/).
 Mosquitto is the recommended MQTT broker but others should also work fine.
 :::
 
