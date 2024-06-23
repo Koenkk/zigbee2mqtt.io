@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BHI-US  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Universal Switch II |
-| Exposes | battery_low, voltage, config_led_top_left_press, config_led_top_right_press, config_led_bottom_left_press, config_led_bottom_right_press, config_led_top_left_longpress, config_led_top_right_longpress, config_led_bottom_left_longpress, config_led_bottom_right_longpress, linkquality |
+| Exposes | battery_low, voltage, action, config_led_top_left_press, config_led_top_right_press, config_led_bottom_left_press, config_led_bottom_right_press, config_led_top_left_longpress, config_led_top_right_longpress, config_led_bottom_left_longpress, config_led_bottom_right_longpress, linkquality |
 | Picture | ![Bosch BHI-US](https://www.zigbee2mqtt.io/images/devices/BHI-US.png) |
 
 
