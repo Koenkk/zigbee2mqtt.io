@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BHI-US  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Universal Switch II |
-| Exposes | battery_low, voltage, config_led_top_left_press, config_led_top_right_press, config_led_bottom_left_press, config_led_bottom_right_press, config_led_top_left_longpress, config_led_top_right_longpress, config_led_bottom_left_longpress, config_led_bottom_right_longpress, linkquality |
+| Exposes | battery_low, voltage, action, config_led_top_left_press, config_led_top_right_press, config_led_bottom_left_press, config_led_bottom_right_press, config_led_top_left_longpress, config_led_top_right_longpress, config_led_bottom_left_longpress, config_led_bottom_right_longpress, linkquality |
 | Picture | ![Bosch BHI-US](https://www.zigbee2mqtt.io/images/devices/BHI-US.png) |
 
 
@@ -35,11 +35,11 @@ To reset the device to factory settings, remove one of the batteries. While pres
 ### LED Configuration
 The blinking pattern and color of the device LED can be configured individually for each button short/long press and for the confirmation indication.
 
-The configuration is an 18-byte hex string as follows:
+The configuration is an 9-byte hex string as follows:
 
-* RGB color (6 bytes), e.g. `22bbff` for light blue
-* Position (2 bytes), `01` = upper half, `02` = lower half, `00` = both
-* Light Pattern (fade-in duration, light on duration, fade-out duration, light off duration; 2 bytes each, e.g. `010f0102` for fast fade-in and fade-out (`01`), long light on duration `0f`, and a short pause in between `02`.
+* RGB color (3 bytes), e.g. `22bbff` for light blue
+* Position (1 bytes), `01` = upper half, `02` = lower half, `00` = both
+* Light Pattern (fade-in duration, light on duration, fade-out duration, light off duration; 1 bytes each, e.g. `010f0102` for fast fade-in and fade-out (`01`), long light on duration `0f`, and a short pause in between `02`.
 * Number of repetitions, e.g. `01` for single execution, `05` for flashing 5 times
 
 Examples:
@@ -78,6 +78,12 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `button_top_left_release`, `button_top_right_release`, `button_bottom_left_release`, `button_bottom_right_release`, `button_top_left_longpress`, `button_top_right_longpress`, `button_bottom_left_longpress`, `button_bottom_right_longpress`, `button_top_left_longpress_release`, `button_top_right_longpress_release`, `button_bottom_left_longpress_release`, `button_bottom_right_longpress_release`.
 
 ### LED config (top left short press) (text)
 Specifies LED color (rgb) and pattern on short press as hex string.
