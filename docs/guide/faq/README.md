@@ -6,6 +6,19 @@ sidebarDepth: 0
 
 [[toc]]
 
+
+##  General limitations that apply to all Zigbee implementations
+
+Note that each Zigbee2MQTT installation instance only supports connecting a single dedicated Zigbee Coordinator radio adapter or module with a single Zigbee network and that the Zigbee Coordinator cannot already be connected or used by any other application. Any devices that are or have previously been connected to another Zigbee implementation will also need to first be reset to their factory default settings before they can be paired/joined to Zigbee2MQTT, please see each device manufacturer's documentation.
+
+Any Zigbee device is limited to only be paired/joined to one Zigbee Coordinator and only be part of one Zigbee network, meaning that Zigbee devices can only be connected to a single Zigbee gateway. If you want to move a Zigbee device to a different Zigbee network then you need to factory reset that Zigbee device and re-pair/re-join it to the other Zigbee Gateway. This is a limitation in the current (as well as previous) Zigbee protocol specifications, governed by the [CSA (Connectivity Standards Alliance)](https://csa-iot.org/all-solutions/zigbee/), and as such, that limitation applies to all Zigbee implementations, not just the Zigbee2MQTT implementation. This also makes the Zigbee Coordinator a SPOF (Single-Point-Of-Failure) in your Zigbee network, so it needs to be available for your Zigbee devices to stay connected.
+
+Another limitation that applies to all Zigbee implementations is that there is no such thing as "Zigbee over IP" or "Zigbee over LAN/WAN" in the Zigbee protocol specifications. It is therefore not possible to extend the same Zigbee network to two separate locations or sites that can not be reached directly via Zigbee radio signals within the Zigbee network mesh. That means that there is no way to use a so-called "Zigbee network adapter" or similar solutions to convert and bridge a single Zigbee network communication over a different medium such as Ethernet or VPN. As such there are no network-attached remote Zigbee adapters that can span a Zigbee network to remote sites, regardless if the marketing material of such products makes it sound like they can do in "Zigbee Router" mode. The fact is that the "Zigbee Router" feature of such "Zigbee network adapter" products puts their Zigbee radio chip into stand-alone mode so it works like any Zigbee Router device, disconnected from the Ethernet network part in those products.
+
+Support for commissioning Zigbee 3.0 devices via "Install Code" or "QR Code" has so far only been implemented for 'zstack' (Texas Instruments ZNP) and 'ember' (Silicon Labs EmberZNet) adapter type radios in Zigbee2MQTT. Other radio adapter types are either missing support in their respective adapter/driver for [zigbee-herdsman](https://github.com/Koenkk/zigbee-herdsman) or more likely missing in the manufacturer's firmware commands/APIs and documentation.
+
+Zigbee2MQTT does not currently support devices that can only use the ZSE ("Zigbee Smart Energy") profile, that is however due to the "Zigbee SE" specification not being part of the standard Zigbee 3.0 specification that includes the more common Zigbee Home Automation + Zigbee lighting and o and thus not implemented in most of the Zigbee Coordinator firmware that is commonly available Zigbee Coordinator radio adapters and modules, usually because the manufacturer offers separate Zigbee protocol stack SDK for Zigbee Smart Energy.
+
 ## My network is unstable and/or performs poorly, what can I do?
 - Try to restart the Zigbee device with poor/unstable connection. The route could be lost because of moving the coordinator to an other place at home.
 - Read [Improve network range and stability](../../advanced/zigbee/02_improve_network_range_and_stability.md)
