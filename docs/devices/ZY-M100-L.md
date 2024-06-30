@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZY-M100-L control via MQTT"
-description: "Integrate your TuYa ZY-M100-L via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZY-M100-L control via MQTT"
+description: "Integrate your Tuya ZY-M100-L via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-27T19:46:17
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZY-M100-L
+# Tuya ZY-M100-L
 
 |     |     |
 |-----|-----|
 | Model | ZY-M100-L  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Ceiling human breathe sensor |
 | Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, self_test, linkquality |
-| Picture | ![TuYa ZY-M100-L](https://www.zigbee2mqtt.io/images/devices/ZY-M100-L.png) |
+| Picture | ![Tuya ZY-M100-L](https://www.zigbee2mqtt.io/images/devices/ZY-M100-L.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

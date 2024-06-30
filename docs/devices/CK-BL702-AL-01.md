@@ -1,6 +1,6 @@
 ---
-title: "TuYa CK-BL702-AL-01 control via MQTT"
-description: "Integrate your TuYa CK-BL702-AL-01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya CK-BL702-AL-01 control via MQTT"
+description: "Integrate your Tuya CK-BL702-AL-01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-01-01T08:59:10
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa CK-BL702-AL-01
+# Tuya CK-BL702-AL-01
 
 |     |     |
 |-----|-----|
 | Model | CK-BL702-AL-01  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee LED bulb |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![TuYa CK-BL702-AL-01](https://www.zigbee2mqtt.io/images/devices/CK-BL702-AL-01.png) |
+| Picture | ![Tuya CK-BL702-AL-01](https://www.zigbee2mqtt.io/images/devices/CK-BL702-AL-01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -100,7 +100,7 @@ Power on behavior state.
 Value can be found in the published state on the `color_power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_power_on_behavior": NEW_VALUE}`.
-The possible values are: `initial`, `previous`, `cutomized`.
+The possible values are: `initial`, `previous`, `customized`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

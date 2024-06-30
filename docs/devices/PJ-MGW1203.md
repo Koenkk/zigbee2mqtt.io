@@ -1,6 +1,6 @@
 ---
-title: "TuYa PJ-MGW1203 control via MQTT"
-description: "Integrate your TuYa PJ-MGW1203 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya PJ-MGW1203 control via MQTT"
+description: "Integrate your Tuya PJ-MGW1203 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-01T08:16:21
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa PJ-MGW1203
+# Tuya PJ-MGW1203
 
 |     |     |
 |-----|-----|
 | Model | PJ-MGW1203  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Clamp meter |
 | Exposes | current, power, voltage, energy, linkquality |
-| Picture | ![TuYa PJ-MGW1203](https://www.zigbee2mqtt.io/images/devices/PJ-MGW1203.png) |
+| Picture | ![Tuya PJ-MGW1203](https://www.zigbee2mqtt.io/images/devices/PJ-MGW1203.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

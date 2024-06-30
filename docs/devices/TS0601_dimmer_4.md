@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_dimmer_4 control via MQTT"
-description: "Integrate your TuYa TS0601_dimmer_4 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_dimmer_4 control via MQTT"
+description: "Integrate your Tuya TS0601_dimmer_4 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-11-30T19:41:12
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_dimmer_4
+# Tuya TS0601_dimmer_4
 
 |     |     |
 |-----|-----|
 | Model | TS0601_dimmer_4  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 gang smart dimmer module |
 | Exposes | light (state, brightness, min_brightness, max_brightness), countdown, light_type, power_on_behavior, linkquality |
-| Picture | ![TuYa TS0601_dimmer_4](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_4.png) |
+| Picture | ![Tuya TS0601_dimmer_4](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_4.png) |
 | White-label | Moes MS-105B-M |
 
 

@@ -1,6 +1,6 @@
 ---
-title: "TuYa WHD02 control via MQTT"
-description: "Integrate your TuYa WHD02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya WHD02 control via MQTT"
+description: "Integrate your Tuya WHD02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-03-30T20:29:35Z
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa WHD02
+# Tuya WHD02
 
 |     |     |
 |-----|-----|
 | Model | WHD02  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Wall switch module |
 | Exposes | switch (state), countdown, power_on_behavior, switch_type, linkquality |
-| Picture | ![TuYa WHD02](https://www.zigbee2mqtt.io/images/devices/WHD02.png) |
-| White-label | TuYa iHSW02, Aubess TMZ02 |
+| Picture | ![Tuya WHD02](https://www.zigbee2mqtt.io/images/devices/WHD02.png) |
+| White-label | Tuya iHSW02, Aubess TMZ02 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

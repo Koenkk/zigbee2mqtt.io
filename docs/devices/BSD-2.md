@@ -52,14 +52,14 @@ Toggle the smoke alarm siren.
 Value can be found in the published state on the `alarm_smoke` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_smoke": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_smoke": NEW_VALUE}`.
-If value equals `ON` alarm smoke is ON, if `OFF` OFF.
+If value equals `true` alarm smoke is ON, if `false` OFF.
 
 ### Alarm burglar (binary)
 Toggle the burglar alarm siren.
 Value can be found in the published state on the `alarm_burglar` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_burglar": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_burglar": NEW_VALUE}`.
-If value equals `ON` alarm burglar is ON, if `OFF` OFF.
+If value equals `true` alarm burglar is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %.

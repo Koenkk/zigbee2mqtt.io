@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_fan_switch control via MQTT"
-description: "Integrate your TuYa TS0601_fan_switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_fan_switch control via MQTT"
+description: "Integrate your Tuya TS0601_fan_switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-03-01T15:36:38
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_fan_switch
+# Tuya TS0601_fan_switch
 
 |     |     |
 |-----|-----|
 | Model | TS0601_fan_switch  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Fan switch |
 | Exposes | switch (state), power_on_behavior, countdown, fan_speed, linkquality |
-| Picture | ![TuYa TS0601_fan_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_fan_switch.png) |
+| Picture | ![Tuya TS0601_fan_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_fan_switch.png) |
 | White-label | Lerlink T2-Z67/T2-W67 |
 
 

@@ -1,6 +1,6 @@
 ---
-title: "TuYa MTG275-ZB-RL control via MQTT"
-description: "Integrate your TuYa MTG275-ZB-RL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya MTG275-ZB-RL control via MQTT"
+description: "Integrate your Tuya MTG275-ZB-RL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-11-01T18:54:40
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa MTG275-ZB-RL
+# Tuya MTG275-ZB-RL
 
 |     |     |
 |-----|-----|
 | Model | MTG275-ZB-RL  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2.4G/5.8G MmWave radar human presence motion sensor |
 | Exposes | presence, illuminance_lux, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance_indentation, entry_filter_time, departure_delay, block_time, breaker_status, breaker_mode, illuminance_threshold, status_indication, sensor, linkquality |
-| Picture | ![TuYa MTG275-ZB-RL](https://www.zigbee2mqtt.io/images/devices/MTG275-ZB-RL.png) |
+| Picture | ![Tuya MTG275-ZB-RL](https://www.zigbee2mqtt.io/images/devices/MTG275-ZB-RL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

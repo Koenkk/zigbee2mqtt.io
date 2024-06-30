@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS004F_6_button control via MQTT"
-description: "Integrate your TuYa TS004F_6_button via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS004F_6_button control via MQTT"
+description: "Integrate your Tuya TS004F_6_button via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-01-31T20:08:00
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS004F_6_button
+# Tuya TS004F_6_button
 
 |     |     |
 |-----|-----|
 | Model | TS004F_6_button  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Wireless switch with 6 buttons |
 | Exposes | battery, operation_mode, action, linkquality |
-| Picture | ![TuYa TS004F_6_button](https://www.zigbee2mqtt.io/images/devices/TS004F_6_button.png) |
+| Picture | ![Tuya TS004F_6_button](https://www.zigbee2mqtt.io/images/devices/TS004F_6_button.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

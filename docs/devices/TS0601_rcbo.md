@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_rcbo control via MQTT"
-description: "Integrate your TuYa TS0601_rcbo via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_rcbo control via MQTT"
+description: "Integrate your Tuya TS0601_rcbo via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_rcbo
+# Tuya TS0601_rcbo
 
 |     |     |
 |-----|-----|
 | Model | TS0601_rcbo  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | DIN mount RCBO with smart energy metering |
 | Exposes | meter_number, state, alarm, trip, child_lock, power_on_behavior, countdown_timer, voltage_rms, current, current_average, power, voltage, energy, temperature, power_l1, power_l2, power_l3, energy_consumed, clear_device_data, linkquality |
-| Picture | ![TuYa TS0601_rcbo](https://www.zigbee2mqtt.io/images/devices/TS0601_rcbo.png) |
+| Picture | ![Tuya TS0601_rcbo](https://www.zigbee2mqtt.io/images/devices/TS0601_rcbo.png) |
 | White-label | HOCH ZJSBL7-100Z, WDYK ZJSBL7-100Z |
 
 

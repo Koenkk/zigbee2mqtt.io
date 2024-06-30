@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_light control via MQTT"
-description: "Integrate your TuYa TS0601_light via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_light control via MQTT"
+description: "Integrate your Tuya TS0601_light via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-08-01T15:13:29
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_light
+# Tuya TS0601_light
 
 |     |     |
 |-----|-----|
 | Model | TS0601_light  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Light |
 | Exposes | light (state, brightness), power_on_behavior, linkquality |
-| Picture | ![TuYa TS0601_light](https://www.zigbee2mqtt.io/images/devices/TS0601_light.png) |
+| Picture | ![Tuya TS0601_light](https://www.zigbee2mqtt.io/images/devices/TS0601_light.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -1,7 +1,7 @@
 ---
 title: "Livolo TI0001-hygrometer control via MQTT"
 description: "Integrate your Livolo TI0001-hygrometer via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2024-06-30T19:11:08
 pageClass: device-page
 ---
 
@@ -23,7 +23,6 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 
 After pairing device will be shown as "TI0001" device. Need to manually trigger a re-configure of the device either using web-frontend
@@ -49,7 +48,6 @@ If you decided to create a new network, you should specify another 'pan_id'.
 advanced:
   pan_id: 6756
 ```
-
 <!-- Notes END: Do not edit below this line -->
 
 

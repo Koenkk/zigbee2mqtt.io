@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_thermostat_2 control via MQTT"
-description: "Integrate your TuYa TS0601_thermostat_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_thermostat_2 control via MQTT"
+description: "Integrate your Tuya TS0601_thermostat_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-12-01T15:07:19
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_thermostat_2
+# Tuya TS0601_thermostat_2
 
 |     |     |
 |-----|-----|
 | Model | TS0601_thermostat_2  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Thermostat radiator valve |
 | Exposes | battery_low, lock (state), open_window, frost_protection, error_status, climate (system_mode, preset, local_temperature_calibration, local_temperature, current_heating_setpoint), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, linkquality |
-| Picture | ![TuYa TS0601_thermostat_2](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat_2.png) |
+| Picture | ![Tuya TS0601_thermostat_2](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat_2.png) |
 | White-label | S366 Cloud Even |
 
 

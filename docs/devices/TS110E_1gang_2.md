@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS110E_1gang_2 control via MQTT"
-description: "Integrate your TuYa TS110E_1gang_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS110E_1gang_2 control via MQTT"
+description: "Integrate your Tuya TS110E_1gang_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-01-01T08:59:10
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS110E_1gang_2
+# Tuya TS110E_1gang_2
 
 |     |     |
 |-----|-----|
 | Model | TS110E_1gang_2  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 1 channel dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), light_type, power_on_behavior, linkquality |
-| Picture | ![TuYa TS110E_1gang_2](https://www.zigbee2mqtt.io/images/devices/TS110E_1gang_2.png) |
+| Picture | ![Tuya TS110E_1gang_2](https://www.zigbee2mqtt.io/images/devices/TS110E_1gang_2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

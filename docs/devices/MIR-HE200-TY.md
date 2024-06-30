@@ -1,6 +1,6 @@
 ---
-title: "TuYa MIR-HE200-TY control via MQTT"
-description: "Integrate your TuYa MIR-HE200-TY via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya MIR-HE200-TY control via MQTT"
+description: "Integrate your Tuya MIR-HE200-TY via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa MIR-HE200-TY
+# Tuya MIR-HE200-TY
 
 |     |     |
 |-----|-----|
 | Model | MIR-HE200-TY  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Human presence sensor with fall function |
 | Exposes | illuminance_lux, presence, occupancy, motion_speed, motion_direction, radar_sensitivity, radar_scene, tumble_switch, fall_sensitivity, tumble_alarm_time, fall_down_status, static_dwell_alarm, linkquality |
-| Picture | ![TuYa MIR-HE200-TY](https://www.zigbee2mqtt.io/images/devices/MIR-HE200-TY.png) |
+| Picture | ![Tuya MIR-HE200-TY](https://www.zigbee2mqtt.io/images/devices/MIR-HE200-TY.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0003_switch_3_gang_with_backlight control via MQTT"
-description: "Integrate your TuYa TS0003_switch_3_gang_with_backlight via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0003_switch_3_gang_with_backlight control via MQTT"
+description: "Integrate your Tuya TS0003_switch_3_gang_with_backlight via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-08-01T15:13:29
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0003_switch_3_gang_with_backlight
+# Tuya TS0003_switch_3_gang_with_backlight
 
 |     |     |
 |-----|-----|
 | Model | TS0003_switch_3_gang_with_backlight  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 3-Gang switch with backlight |
 | Exposes | switch (state), power_on_behavior, backlight_mode, indicator_mode, linkquality |
-| Picture | ![TuYa TS0003_switch_3_gang_with_backlight](https://www.zigbee2mqtt.io/images/devices/TS0003_switch_3_gang_with_backlight.png) |
+| Picture | ![Tuya TS0003_switch_3_gang_with_backlight](https://www.zigbee2mqtt.io/images/devices/TS0003_switch_3_gang_with_backlight.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

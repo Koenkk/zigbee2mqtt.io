@@ -1,6 +1,6 @@
 ---
-title: "TuYa L1(ZW) control via MQTT"
-description: "Integrate your TuYa L1(ZW) via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya L1(ZW) control via MQTT"
+description: "Integrate your Tuya L1(ZW) via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-01-31T20:08:01
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa L1(ZW)
+# Tuya L1(ZW)
 
 |     |     |
 |-----|-----|
 | Model | L1(ZW)  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Light dimmer 0-10V |
 | Exposes | light (state, brightness), do_not_disturb, linkquality |
-| Picture | ![TuYa L1(ZW)](https://www.zigbee2mqtt.io/images/devices/L1(ZW).png) |
+| Picture | ![Tuya L1(ZW)](https://www.zigbee2mqtt.io/images/devices/L1(ZW).png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

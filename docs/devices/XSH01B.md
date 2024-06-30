@@ -1,6 +1,6 @@
 ---
-title: "TuYa XSH01B control via MQTT"
-description: "Integrate your TuYa XSH01B via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya XSH01B control via MQTT"
+description: "Integrate your Tuya XSH01B via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-01T08:16:21
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa XSH01B
+# Tuya XSH01B
 
 |     |     |
 |-----|-----|
 | Model | XSH01B  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 gang switch module with power monitoring |
 | Exposes | switch (state), power_on_behavior, switch_type, power, current, voltage, energy, linkquality |
-| Picture | ![TuYa XSH01B](https://www.zigbee2mqtt.io/images/devices/XSH01B.png) |
+| Picture | ![Tuya XSH01B](https://www.zigbee2mqtt.io/images/devices/XSH01B.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

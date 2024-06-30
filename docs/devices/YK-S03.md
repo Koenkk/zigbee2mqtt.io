@@ -1,7 +1,7 @@
 ---
-title: "TuYa YK-S03 control via MQTT"
-description: "Integrate your TuYa YK-S03 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-06-08T00.22.00+02:00
+title: "Tuya YK-S03 control via MQTT"
+description: "Integrate your Tuya YK-S03 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-06-08T00
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa YK-S03
+# Tuya YK-S03
 
 |     |     |
 |-----|-----|
 | Model | YK-S03  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | Smart WiFi Zigbee chlorine meter |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Description | Smart pH and Chlorine Tester for Swimming Pool |
 | Exposes | tds, temperature, battery, ph, ec, orp, free_chlorine, ph_max, ph_min, ec_max, ec_min, orp_max, orp_min, free_chlorine_max, free_chlorine_min, salinity, linkquality |
-| Picture | ![TuYa BLE-YL01](https://www.zigbee2mqtt.io/images/devices/YK-S03.png) |
+| Picture | ![Tuya YK-S03](https://www.zigbee2mqtt.io/images/devices/YK-S03.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

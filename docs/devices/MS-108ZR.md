@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MS-108ZR  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Zigbee + RF curtain switch module |
-| Exposes | cover (state, position), calibration_time, moving, motor_reversal, linkquality |
+| Exposes | cover (state, position), moving, calibration, motor_reversal, calibration_time, indicator_mode, backlight_mode, linkquality |
 | Picture | ![Moes MS-108ZR](https://www.zigbee2mqtt.io/images/devices/MS-108ZR.png) |
 
 
@@ -27,9 +27,6 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
-
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -48,22 +45,42 @@ To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set`
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
-### Calibration time (numeric)
-Value can be found in the published state on the `calibration_time` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `100`.
-
 ### Moving (enum)
 Value can be found in the published state on the `moving` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `UP`, `STOP`, `DOWN`.
+
+### Calibration (binary)
+Value can be found in the published state on the `calibration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": NEW_VALUE}`.
+If value equals `ON` calibration is ON, if `OFF` OFF.
 
 ### Motor reversal (binary)
 Value can be found in the published state on the `motor_reversal` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_reversal": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": NEW_VALUE}`.
 If value equals `ON` motor reversal is ON, if `OFF` OFF.
+
+### Calibration time (numeric)
+Calibration time.
+Value can be found in the published state on the `calibration_time` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `s`.
+
+### Indicator mode (enum)
+LED indicator mode.
+Value can be found in the published state on the `indicator_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `off`, `off/on`, `on/off`, `on`.
+
+### Backlight mode (binary)
+Mode of the backlight.
+Value can be found in the published state on the `backlight_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

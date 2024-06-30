@@ -1,6 +1,6 @@
 ---
-title: "TuYa WZ5_rgb_1 control via MQTT"
-description: "Integrate your TuYa WZ5_rgb_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya WZ5_rgb_1 control via MQTT"
+description: "Integrate your Tuya WZ5_rgb_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-08-31T11:26:27
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa WZ5_rgb_1
+# Tuya WZ5_rgb_1
 
 |     |     |
 |-----|-----|
 | Model | WZ5_rgb_1  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee & RF 5 in 1 LED controller (RGB mode) |
 | Exposes | light (state, brightness, color_hs, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![TuYa WZ5_rgb_1](https://www.zigbee2mqtt.io/images/devices/WZ5_rgb_1.png) |
+| Picture | ![Tuya WZ5_rgb_1](https://www.zigbee2mqtt.io/images/devices/WZ5_rgb_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -104,7 +104,7 @@ Power on behavior state.
 Value can be found in the published state on the `color_power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_power_on_behavior": NEW_VALUE}`.
-The possible values are: `initial`, `previous`, `cutomized`.
+The possible values are: `initial`, `previous`, `customized`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZS-TYG3-SM-41Z control via MQTT"
-description: "Integrate your TuYa ZS-TYG3-SM-41Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZS-TYG3-SM-41Z control via MQTT"
+description: "Integrate your Tuya ZS-TYG3-SM-41Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-08-01T15:13:29
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZS-TYG3-SM-41Z
+# Tuya ZS-TYG3-SM-41Z
 
 |     |     |
 |-----|-----|
 | Model | ZS-TYG3-SM-41Z  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 4 gang smart switch with backlight and neutral wire |
 | Exposes | switch (state), backlight_mode, countdown, power_on_behavior, linkquality |
-| Picture | ![TuYa ZS-TYG3-SM-41Z](https://www.zigbee2mqtt.io/images/devices/ZS-TYG3-SM-41Z.png) |
+| Picture | ![Tuya ZS-TYG3-SM-41Z](https://www.zigbee2mqtt.io/images/devices/ZS-TYG3-SM-41Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

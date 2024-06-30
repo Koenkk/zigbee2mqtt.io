@@ -1,6 +1,6 @@
 ---
-title: "TuYa QS-Zigbee-SEC02-U control via MQTT"
-description: "Integrate your TuYa QS-Zigbee-SEC02-U via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya QS-Zigbee-SEC02-U control via MQTT"
+description: "Integrate your Tuya QS-Zigbee-SEC02-U via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-05-03T11:57:51Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa QS-Zigbee-SEC02-U
+# Tuya QS-Zigbee-SEC02-U
 
 |     |     |
 |-----|-----|
 | Model | QS-Zigbee-SEC02-U  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee 3.0 smart light switch module 2 gang |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
-| Picture | ![TuYa QS-Zigbee-SEC02-U](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-SEC02-U.png) |
+| Picture | ![Tuya QS-Zigbee-SEC02-U](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-SEC02-U.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

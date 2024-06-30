@@ -1,6 +1,6 @@
 ---
-title: "TuYa WSD500A control via MQTT"
-description: "Integrate your TuYa WSD500A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya WSD500A control via MQTT"
+description: "Integrate your Tuya WSD500A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-12-31T16:51:16
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa WSD500A
+# Tuya WSD500A
 
 |     |     |
 |-----|-----|
 | Model | WSD500A  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Temperature & humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
-| Picture | ![TuYa WSD500A](https://www.zigbee2mqtt.io/images/devices/WSD500A.png) |
+| Picture | ![Tuya WSD500A](https://www.zigbee2mqtt.io/images/devices/WSD500A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

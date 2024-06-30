@@ -1,6 +1,6 @@
 ---
-title: "TuYa PA-44Z control via MQTT"
-description: "Integrate your TuYa PA-44Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya PA-44Z control via MQTT"
+description: "Integrate your Tuya PA-44Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-01T08:16:21
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa PA-44Z
+# Tuya PA-44Z
 
 |     |     |
 |-----|-----|
 | Model | PA-44Z  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Photoelectric smoke detector |
 | Exposes | smoke, battery, test, smoke_concentration, device_fault, linkquality |
-| Picture | ![TuYa PA-44Z](https://www.zigbee2mqtt.io/images/devices/PA-44Z.png) |
+| Picture | ![Tuya PA-44Z](https://www.zigbee2mqtt.io/images/devices/PA-44Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

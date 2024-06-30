@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS011F_plug_3 control via MQTT"
-description: "Integrate your TuYa TS011F_plug_3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS011F_plug_3 control via MQTT"
+description: "Integrate your Tuya TS011F_plug_3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS011F_plug_3
+# Tuya TS011F_plug_3
 
 |     |     |
 |-----|-----|
 | Model | TS011F_plug_3  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart plug (with power monitoring by polling) |
 | Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
-| Picture | ![TuYa TS011F_plug_3](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_3.png) |
+| Picture | ![Tuya TS011F_plug_3](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_3.png) |
 | White-label | VIKEFON TS011F, BlitzWolf BW-SHP15, AVATTO MIUCOT10Z, Neo NAS-WR01B, Neo PLUG-001SPB2 |
 
 

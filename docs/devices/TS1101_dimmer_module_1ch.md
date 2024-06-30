@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS1101_dimmer_module_1ch control via MQTT"
-description: "Integrate your TuYa TS1101_dimmer_module_1ch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS1101_dimmer_module_1ch control via MQTT"
+description: "Integrate your Tuya TS1101_dimmer_module_1ch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-12-31T16:51:16
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS1101_dimmer_module_1ch
+# Tuya TS1101_dimmer_module_1ch
 
 |     |     |
 |-----|-----|
 | Model | TS1101_dimmer_module_1ch  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee dimmer module 1 channel |
 | Exposes | light (state, brightness, min_brightness), effect, do_not_disturb, linkquality |
-| Picture | ![TuYa TS1101_dimmer_module_1ch](https://www.zigbee2mqtt.io/images/devices/TS1101_dimmer_module_1ch.png) |
+| Picture | ![Tuya TS1101_dimmer_module_1ch](https://www.zigbee2mqtt.io/images/devices/TS1101_dimmer_module_1ch.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

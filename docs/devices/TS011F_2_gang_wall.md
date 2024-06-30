@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS011F_2_gang_wall control via MQTT"
-description: "Integrate your TuYa TS011F_2_gang_wall via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS011F_2_gang_wall control via MQTT"
+description: "Integrate your Tuya TS011F_2_gang_wall via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-02-28T13:58:01Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS011F_2_gang_wall
+# Tuya TS011F_2_gang_wall
 
 |     |     |
 |-----|-----|
 | Model | TS011F_2_gang_wall  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 gang wall outlet |
 | Exposes | switch (state), power_on_behavior, backlight_mode, lock (state), linkquality |
-| Picture | ![TuYa TS011F_2_gang_wall](https://www.zigbee2mqtt.io/images/devices/TS011F_2_gang_wall.png) |
+| Picture | ![Tuya TS011F_2_gang_wall](https://www.zigbee2mqtt.io/images/devices/TS011F_2_gang_wall.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

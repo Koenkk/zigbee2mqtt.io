@@ -34,7 +34,6 @@ To factory reset the device remove one of the batteries. While pressing and hold
 
 ### Using the manufacturer specific operation mode
 The `system_mode` exposed by the device according to zigbee specification is always 'heat'. To set or read the actual operation mode of the device, use the manufacturer-specific feature 'operating mode' (see below)
-
 <!-- Notes END: Do not edit below this line -->
 
 

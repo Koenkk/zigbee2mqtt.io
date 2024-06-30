@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS011F_socket_module control via MQTT"
-description: "Integrate your TuYa TS011F_socket_module via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS011F_socket_module control via MQTT"
+description: "Integrate your Tuya TS011F_socket_module via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-12-01T19:02:25Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS011F_socket_module
+# Tuya TS011F_socket_module
 
 |     |     |
 |-----|-----|
 | Model | TS011F_socket_module  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Socket module |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![TuYa TS011F_socket_module](https://www.zigbee2mqtt.io/images/devices/TS011F_socket_module.png) |
+| Picture | ![Tuya TS011F_socket_module](https://www.zigbee2mqtt.io/images/devices/TS011F_socket_module.png) |
 | White-label | LoraTap RR400ZB, LoraTap SP400ZB |
 
 

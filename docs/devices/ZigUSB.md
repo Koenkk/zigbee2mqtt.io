@@ -72,7 +72,7 @@ The unit of this value is `seconds`.
 Value can be found in the published state on the `button_mode_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"button_mode_l1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_mode_l1": NEW_VALUE}`.
-The possible values are: `single click`, `multi click`.
+The possible values are: `single_click`, `multi_click`.
 
 ### Link to output (enum, l1 endpoint)
 Value can be found in the published state on the `link_to_output_l1` property.
