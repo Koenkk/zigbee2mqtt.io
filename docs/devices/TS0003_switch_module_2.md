@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0003_switch_module_2 control via MQTT"
-description: "Integrate your TuYa TS0003_switch_module_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0003_switch_module_2 control via MQTT"
+description: "Integrate your Tuya TS0003_switch_module_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-03-01T15:36:38
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0003_switch_module_2
+# Tuya TS0003_switch_module_2
 
 |     |     |
 |-----|-----|
 | Model | TS0003_switch_module_2  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 3 gang switch module |
 | Exposes | switch (state), power_on_behavior, switch_type, indicator_mode, linkquality |
-| Picture | ![TuYa TS0003_switch_module_2](https://www.zigbee2mqtt.io/images/devices/TS0003_switch_module_2.png) |
+| Picture | ![Tuya TS0003_switch_module_2](https://www.zigbee2mqtt.io/images/devices/TS0003_switch_module_2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

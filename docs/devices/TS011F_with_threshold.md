@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS011F_with_threshold control via MQTT"
-description: "Integrate your TuYa TS011F_with_threshold via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS011F_with_threshold control via MQTT"
+description: "Integrate your Tuya TS011F_with_threshold via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-04-30T17:38:24
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS011F_with_threshold
+# Tuya TS011F_with_threshold
 
 |     |     |
 |-----|-----|
 | Model | TS011F_with_threshold  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Din rail switch with power monitoring and threshold settings |
 | Exposes | temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, linkquality |
-| Picture | ![TuYa TS011F_with_threshold](https://www.zigbee2mqtt.io/images/devices/TS011F_with_threshold.png) |
+| Picture | ![Tuya TS011F_with_threshold](https://www.zigbee2mqtt.io/images/devices/TS011F_with_threshold.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

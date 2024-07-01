@@ -1,6 +1,6 @@
 ---
-title: "TuYa BLE-YL01 control via MQTT"
-description: "Integrate your TuYa BLE-YL01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya BLE-YL01 control via MQTT"
+description: "Integrate your Tuya BLE-YL01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-09-28T10:54:36
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa BLE-YL01
+# Tuya BLE-YL01
 
 |     |     |
 |-----|-----|
 | Model | BLE-YL01  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart WiFi Zigbee chlorine meter |
 | Exposes | tds, temperature, battery, ph, ec, orp, free_chlorine, ph_max, ph_min, ec_max, ec_min, orp_max, orp_min, free_chlorine_max, free_chlorine_min, salinity, linkquality |
-| Picture | ![TuYa BLE-YL01](https://www.zigbee2mqtt.io/images/devices/BLE-YL01.png) |
+| Picture | ![Tuya BLE-YL01](https://www.zigbee2mqtt.io/images/devices/BLE-YL01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS011F_switch_5_gang control via MQTT"
-description: "Integrate your TuYa TS011F_switch_5_gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS011F_switch_5_gang control via MQTT"
+description: "Integrate your Tuya TS011F_switch_5_gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-04-27T17:39:26
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS011F_switch_5_gang
+# Tuya TS011F_switch_5_gang
 
 |     |     |
 |-----|-----|
 | Model | TS011F_switch_5_gang  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 gang 2 usb 1 wall ac outlet |
 | Exposes | switch (state), power_outage_memory, lock (state), linkquality |
-| Picture | ![TuYa TS011F_switch_5_gang](https://www.zigbee2mqtt.io/images/devices/TS011F_switch_5_gang.png) |
+| Picture | ![Tuya TS011F_switch_5_gang](https://www.zigbee2mqtt.io/images/devices/TS011F_switch_5_gang.png) |
 | White-label | Milfra M11Z |
 
 

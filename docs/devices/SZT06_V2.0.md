@@ -1,6 +1,6 @@
 ---
-title: "TuYa SZT06 V2.0 control via MQTT"
-description: "Integrate your TuYa SZT06 V2.0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya SZT06 V2.0 control via MQTT"
+description: "Integrate your Tuya SZT06 V2.0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-04-29T19:24:38
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa SZT06 V2.0
+# Tuya SZT06 V2.0
 
 |     |     |
 |-----|-----|
 | Model | SZT06 V2.0  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart mini temperature and humidity sensor |
 | Exposes | temperature, humidity, identify, battery, voltage, linkquality |
-| Picture | ![TuYa SZT06 V2.0](https://www.zigbee2mqtt.io/images/devices/SZT06-V2.0.png) |
+| Picture | ![Tuya SZT06 V2.0](https://www.zigbee2mqtt.io/images/devices/SZT06-V2.0.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

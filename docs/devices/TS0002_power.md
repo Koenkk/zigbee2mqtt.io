@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0002_power control via MQTT"
-description: "Integrate your TuYa TS0002_power via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0002_power control via MQTT"
+description: "Integrate your Tuya TS0002_power via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0002_power
+# Tuya TS0002_power
 
 |     |     |
 |-----|-----|
 | Model | TS0002_power  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 gang switch with power monitoring |
 | Exposes | switch (state), power_on_behavior, switch_type, power, current, voltage, energy, linkquality |
-| Picture | ![TuYa TS0002_power](https://www.zigbee2mqtt.io/images/devices/TS0002_power.png) |
+| Picture | ![Tuya TS0002_power](https://www.zigbee2mqtt.io/images/devices/TS0002_power.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

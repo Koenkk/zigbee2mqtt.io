@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0501B_dimmer control via MQTT"
-description: "Integrate your TuYa TS0501B_dimmer via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0501B_dimmer control via MQTT"
+description: "Integrate your Tuya TS0501B_dimmer via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-01-31T20:08:00
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0501B_dimmer
+# Tuya TS0501B_dimmer
 
 |     |     |
 |-----|-----|
 | Model | TS0501B_dimmer  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee dimmer |
 | Exposes | light (state, brightness), do_not_disturb, linkquality |
-| Picture | ![TuYa TS0501B_dimmer](https://www.zigbee2mqtt.io/images/devices/TS0501B_dimmer.png) |
+| Picture | ![Tuya TS0501B_dimmer](https://www.zigbee2mqtt.io/images/devices/TS0501B_dimmer.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

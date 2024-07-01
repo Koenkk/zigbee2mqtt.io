@@ -1,6 +1,6 @@
 ---
-title: "TuYa MTG035-ZB-RL control via MQTT"
-description: "Integrate your TuYa MTG035-ZB-RL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya MTG035-ZB-RL control via MQTT"
+description: "Integrate your Tuya MTG035-ZB-RL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-05-09T20:14:11
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa MTG035-ZB-RL
+# Tuya MTG035-ZB-RL
 
 |     |     |
 |-----|-----|
 | Model | MTG035-ZB-RL  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Human presence sensor with relay |
 | Exposes | presence, illuminance_lux, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance_indentation, entry_filter_time, departure_delay, block_time, breaker_status, breaker_mode, illuminance_threshold, status_indication, sensor, linkquality |
-| Picture | ![TuYa MTG035-ZB-RL](https://www.zigbee2mqtt.io/images/devices/MTG035-ZB-RL.png) |
+| Picture | ![Tuya MTG035-ZB-RL](https://www.zigbee2mqtt.io/images/devices/MTG035-ZB-RL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

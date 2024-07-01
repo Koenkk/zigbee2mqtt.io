@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0505A_led control via MQTT"
-description: "Integrate your TuYa TS0505A_led via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0505A_led control via MQTT"
+description: "Integrate your Tuya TS0505A_led via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-11-01T12:47:02Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0505A_led
+# Tuya TS0505A_led
 
 |     |     |
 |-----|-----|
 | Model | TS0505A_led  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | RGB+CCT LED |
 | Exposes | light (state, brightness, color_temp, color_hs), linkquality |
-| Picture | ![TuYa TS0505A_led](https://www.zigbee2mqtt.io/images/devices/TS0505A_led.png) |
+| Picture | ![Tuya TS0505A_led](https://www.zigbee2mqtt.io/images/devices/TS0505A_led.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

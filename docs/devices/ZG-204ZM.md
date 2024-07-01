@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZG-204ZM control via MQTT"
-description: "Integrate your TuYa ZG-204ZM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZG-204ZM control via MQTT"
+description: "Integrate your Tuya ZG-204ZM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-03-31T18:43:56
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZG-204ZM
+# Tuya ZG-204ZM
 
 |     |     |
 |-----|-----|
 | Model | ZG-204ZM  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | PIR 24Ghz human presence sensor |
 | Exposes | presence, motion_state, illuminance_lux, battery, fading_time, static_detection_distance, static_detection_sensitivity, indicator, motion_detection_mode, motion_detection_sensitivity, linkquality |
-| Picture | ![TuYa ZG-204ZM](https://www.zigbee2mqtt.io/images/devices/ZG-204ZM.png) |
+| Picture | ![Tuya ZG-204ZM](https://www.zigbee2mqtt.io/images/devices/ZG-204ZM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -97,8 +97,8 @@ If value equals `ON` indicator is ON, if `OFF` OFF.
 Motion detection mode (Firmware version>=0122052017).
 Value can be found in the published state on the `motion_detection_mode` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_mode": "NEW_VALUE"}`.
-The possible values are: `only_pir`, `pir_and_dadar`, `only_dadar`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_mode": NEW_VALUE}`.
+The possible values are: `only_pir`, `pir_and_radar`, `only_radar`.
 
 ### Motion detection sensitivity (numeric)
 Motion detection sensitivity (Firmware version>=0122052017).

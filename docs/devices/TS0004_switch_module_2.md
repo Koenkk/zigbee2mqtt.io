@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0004_switch_module_2 control via MQTT"
-description: "Integrate your TuYa TS0004_switch_module_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0004_switch_module_2 control via MQTT"
+description: "Integrate your Tuya TS0004_switch_module_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-12-26T18:38:16
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0004_switch_module_2
+# Tuya TS0004_switch_module_2
 
 |     |     |
 |-----|-----|
 | Model | TS0004_switch_module_2  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 4 gang switch module |
 | Exposes | switch (state), power_on_behavior, switch_type, indicator_mode, linkquality |
-| Picture | ![TuYa TS0004_switch_module_2](https://www.zigbee2mqtt.io/images/devices/TS0004_switch_module_2.png) |
+| Picture | ![Tuya TS0004_switch_module_2](https://www.zigbee2mqtt.io/images/devices/TS0004_switch_module_2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

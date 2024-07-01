@@ -1,7 +1,7 @@
 ---
-title: "TuYa TS0601_dimmer_1 control via MQTT"
-description: "Integrate your TuYa TS0601_dimmer_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-10-01T07:36:39
+title: "Tuya TS0601_dimmer_1_gang_1 control via MQTT"
+description: "Integrate your Tuya TS0601_dimmer_1_gang_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-06-30T19:12:33
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_dimmer_1
+# Tuya TS0601_dimmer_1_gang_1
 
 |     |     |
 |-----|-----|
-| Model | TS0601_dimmer_1  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Model | TS0601_dimmer_1_gang_1  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 1 gang smart dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), countdown, light_type, power_on_behavior, backlight_mode, linkquality |
-| Picture | ![TuYa TS0601_dimmer_1](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_1.png) |
+| Picture | ![Tuya TS0601_dimmer_1_gang_1](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_1_gang_1.png) |
 | White-label | Lerlink X706U, Moes ZS-EUD_1gang, Larkkey ZSTY-SM-1DMZG-EU, Earda EDM-1ZAA-EU, Earda EDM-1ZAB-EU, Earda EDM-1ZBA-EU, Mercator Ikuü SSWD01, Moes ZS-USD, Moes EDM-1ZBB-EU |
 
 

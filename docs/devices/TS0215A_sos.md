@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0215A_sos control via MQTT"
-description: "Integrate your TuYa TS0215A_sos via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0215A_sos control via MQTT"
+description: "Integrate your Tuya TS0215A_sos via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-12-01T19:02:25Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0215A_sos
+# Tuya TS0215A_sos
 
 |     |     |
 |-----|-----|
 | Model | TS0215A_sos  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | SOS button |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![TuYa TS0215A_sos](https://www.zigbee2mqtt.io/images/devices/TS0215A_sos.png) |
+| Picture | ![Tuya TS0215A_sos](https://www.zigbee2mqtt.io/images/devices/TS0215A_sos.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

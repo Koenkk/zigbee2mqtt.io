@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | VZM35-SN  |
 | Vendor  | [Inovelli](/supported-devices/#v=Inovelli)  |
 | Description | Fan controller |
-| Exposes | fan (state, mode), led_effect, individual_led_effect, breeze mode, dimmingSpeedUpRemote, dimmingSpeedUpLocal, rampRateOffToOnRemote, rampRateOffToOnLocal, dimmingSpeedDownRemote, dimmingSpeedDownLocal, rampRateOnToOffRemote, rampRateOnToOffLocal, minimumLevel, maximumLevel, invertSwitch, autoTimerOff, defaultLevelLocal, defaultLevelRemote, stateAfterPowerRestored, loadLevelIndicatorTimeout, powerType, switchType, internalTemperature, overheat, buttonDelay, deviceBindNumber, smartBulbMode, doubleTapUpToParam55, doubleTapDownToParam56, brightnessLevelForDoubleTapUp, brightnessLevelForDoubleTapDown, ledColorWhenOn, ledColorWhenOff, ledIntensityWhenOn, ledIntensityWhenOff, singleTapBehavior, fanTimerMode, fanControlMode, lowLevelForFanControlMode, mediumLevelForFanControlMode, highLevelForFanControlMode, ledColorForFanControlMode, auxSwitchUniqueScenes, bindingOffToOnSyncLevel, localProtection, remoteProtection, onOffLedMode, firmwareUpdateInProgressIndicator, defaultLed1ColorWhenOn, defaultLed1ColorWhenOff, defaultLed1IntensityWhenOn, defaultLed1IntensityWhenOff, defaultLed2ColorWhenOn, defaultLed2ColorWhenOff, defaultLed2IntensityWhenOn, defaultLed2IntensityWhenOff, defaultLed3ColorWhenOn, defaultLed3ColorWhenOff, defaultLed3IntensityWhenOn, defaultLed3IntensityWhenOff, defaultLed4ColorWhenOn, defaultLed4ColorWhenOff, defaultLed4IntensityWhenOn, defaultLed4IntensityWhenOff, defaultLed5ColorWhenOn, defaultLed5ColorWhenOff, defaultLed5IntensityWhenOn, defaultLed5IntensityWhenOff, defaultLed6ColorWhenOn, defaultLed6ColorWhenOff, defaultLed6IntensityWhenOn, defaultLed6IntensityWhenOff, defaultLed7ColorWhenOn, defaultLed7ColorWhenOff, defaultLed7IntensityWhenOn, defaultLed7IntensityWhenOff, outputMode, doubleTapClearNotifications, fanLedLevelType, quickStartTime, nonNeutralAuxMediumGear, nonNeutralAuxLowGear, action, linkquality |
+| Exposes | fan (state, mode), led_effect, individual_led_effect, breeze mode, dimmingSpeedUpRemote, dimmingSpeedUpLocal, rampRateOffToOnRemote, rampRateOffToOnLocal, dimmingSpeedDownRemote, dimmingSpeedDownLocal, rampRateOnToOffRemote, rampRateOnToOffLocal, minimumLevel, maximumLevel, invertSwitch, autoTimerOff, defaultLevelLocal, defaultLevelRemote, stateAfterPowerRestored, loadLevelIndicatorTimeout, powerType, switchType, internalTemperature, overheat, buttonDelay, deviceBindNumber, smartBulbMode, doubleTapUpToParam55, doubleTapDownToParam56, brightnessLevelForDoubleTapUp, brightnessLevelForDoubleTapDown, ledColorWhenOn, ledColorWhenOff, ledIntensityWhenOn, ledIntensityWhenOff, singleTapBehavior, fanControlMode, lowLevelForFanControlMode, mediumLevelForFanControlMode, highLevelForFanControlMode, ledColorForFanControlMode, auxSwitchUniqueScenes, bindingOffToOnSyncLevel, localProtection, remoteProtection, onOffLedMode, firmwareUpdateInProgressIndicator, defaultLed1ColorWhenOn, defaultLed1ColorWhenOff, defaultLed1IntensityWhenOn, defaultLed1IntensityWhenOff, defaultLed2ColorWhenOn, defaultLed2ColorWhenOff, defaultLed2IntensityWhenOn, defaultLed2IntensityWhenOff, defaultLed3ColorWhenOn, defaultLed3ColorWhenOff, defaultLed3IntensityWhenOn, defaultLed3IntensityWhenOff, defaultLed4ColorWhenOn, defaultLed4ColorWhenOff, defaultLed4IntensityWhenOn, defaultLed4IntensityWhenOff, defaultLed5ColorWhenOn, defaultLed5ColorWhenOff, defaultLed5IntensityWhenOn, defaultLed5IntensityWhenOff, defaultLed6ColorWhenOn, defaultLed6ColorWhenOff, defaultLed6IntensityWhenOn, defaultLed6IntensityWhenOff, defaultLed7ColorWhenOn, defaultLed7ColorWhenOff, defaultLed7IntensityWhenOn, defaultLed7IntensityWhenOff, outputMode, doubleTapClearNotifications, fanLedLevelType, quickStartTime, nonNeutralAuxMediumGear, nonNeutralAuxLowGear, fanTimerMode, action, linkquality |
 | Picture | ![Inovelli VZM35-SN](https://www.zigbee2mqtt.io/images/devices/VZM35-SN.png) |
 
 
@@ -39,7 +39,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 The current state of this fan is in the published state under the `fan_state` property (value is `ON` or `OFF`).
 To control this fan publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_state": "ON"}` or `{"fan_state": "OFF"}`.
 To read the current state of this fan publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fan_state": ""}`.
-To change the mode publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_mode": VALUE}` where `VALUE` can be: `low`, `smart`, `medium`, `high`, `on`.
+To change the mode publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_mode": VALUE}` where `VALUE` can be: `off`, `low`, `smart`, `medium`, `high`, `on`.
 
 ### Led effect (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_effect": {"effect": VALUE, "color": VALUE, "level": VALUE, "duration": VALUE}}`
@@ -295,13 +295,6 @@ Value can be found in the published state on the `singleTapBehavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"singleTapBehavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"singleTapBehavior": NEW_VALUE}`.
 The possible values are: `Old Behavior`, `New Behavior`, `Down Always Off`.
-
-### FanTimerMode (enum)
-Enable or disable advanced timer mode to have the switch act like a bathroom fan timer.
-Value can be found in the published state on the `fanTimerMode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fanTimerMode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fanTimerMode": NEW_VALUE}`.
-The possible values are: `Disabled`, `Enabled`.
 
 ### FanControlMode (enum)
 Which mode to use when binding EP3 (config button) to another device (like a fan module)..
@@ -619,6 +612,13 @@ Value can be found in the published state on the `nonNeutralAuxLowGear` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"nonNeutralAuxLowGear": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"nonNeutralAuxLowGear": NEW_VALUE}`.
 The minimal value is `42` and the maximum value is `135`.
+
+### FanTimerMode (enum)
+Enable or disable advanced timer mode to have the switch act like a bathroom fan timer.
+Value can be found in the published state on the `fanTimerMode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"fanTimerMode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fanTimerMode": NEW_VALUE}`.
+The possible values are: `Disabled`, `Enabled`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

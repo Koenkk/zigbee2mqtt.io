@@ -1,6 +1,6 @@
 ---
-title: "TuYa YXZBSL control via MQTT"
-description: "Integrate your TuYa YXZBSL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya YXZBSL control via MQTT"
+description: "Integrate your Tuya YXZBSL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-08-01T15:13:29
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa YXZBSL
+# Tuya YXZBSL
 
 |     |     |
 |-----|-----|
 | Model | YXZBSL  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart siren |
 | Exposes | alarm, type, volume, ringtone, power_type, duration, battery_level, battery, linkquality |
-| Picture | ![TuYa YXZBSL](https://www.zigbee2mqtt.io/images/devices/YXZBSL.png) |
+| Picture | ![Tuya YXZBSL](https://www.zigbee2mqtt.io/images/devices/YXZBSL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

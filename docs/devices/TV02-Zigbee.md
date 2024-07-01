@@ -1,6 +1,6 @@
 ---
-title: "TuYa TV02-Zigbee control via MQTT"
-description: "Integrate your TuYa TV02-Zigbee via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TV02-Zigbee control via MQTT"
+description: "Integrate your Tuya TV02-Zigbee via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-11-30T20:10:17
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TV02-Zigbee
+# Tuya TV02-Zigbee
 
 |     |     |
 |-----|-----|
 | Model | TV02-Zigbee  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Thermostat radiator valve |
 | Exposes | battery_low, lock (state), open_window, open_window_temperature, comfort_temperature, eco_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint, system_mode), heating_stop, frost_protection, boost_timeset_countdown, holiday_temperature, holiday_start_stop, working_day, schedule, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, online, error_status, linkquality |
-| Picture | ![TuYa TV02-Zigbee](https://www.zigbee2mqtt.io/images/devices/TV02-Zigbee.png) |
+| Picture | ![Tuya TV02-Zigbee](https://www.zigbee2mqtt.io/images/devices/TV02-Zigbee.png) |
 | White-label | Moes TV01-ZB, AVATTO TRV06, Tesla Smart TSL-TRV-TV01ZG, Unknown/id3.pl GTZ08 |
 
 

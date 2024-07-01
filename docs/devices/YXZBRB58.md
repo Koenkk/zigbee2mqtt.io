@@ -1,6 +1,6 @@
 ---
-title: "TuYa YXZBRB58 control via MQTT"
-description: "Integrate your TuYa YXZBRB58 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya YXZBRB58 control via MQTT"
+description: "Integrate your Tuya YXZBRB58 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-08-01T15:13:29
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa YXZBRB58
+# Tuya YXZBRB58
 
 |     |     |
 |-----|-----|
 | Model | YXZBRB58  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart human presence sensor |
 | Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, radar_scene, linkquality |
-| Picture | ![TuYa YXZBRB58](https://www.zigbee2mqtt.io/images/devices/YXZBRB58.png) |
+| Picture | ![Tuya YXZBRB58](https://www.zigbee2mqtt.io/images/devices/YXZBRB58.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

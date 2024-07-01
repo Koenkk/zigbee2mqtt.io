@@ -1,6 +1,6 @@
 ---
-title: "TuYa QT-07S control via MQTT"
-description: "Integrate your TuYa QT-07S via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya QT-07S control via MQTT"
+description: "Integrate your Tuya QT-07S via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-01T08:16:21
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa QT-07S
+# Tuya QT-07S
 
 |     |     |
 |-----|-----|
 | Model | QT-07S  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Soil sensor |
 | Exposes | battery, temperature, humidity, illuminance, linkquality |
-| Picture | ![TuYa QT-07S](https://www.zigbee2mqtt.io/images/devices/QT-07S.png) |
+| Picture | ![Tuya QT-07S](https://www.zigbee2mqtt.io/images/devices/QT-07S.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

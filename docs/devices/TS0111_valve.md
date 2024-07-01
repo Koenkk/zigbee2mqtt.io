@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0111_valve control via MQTT"
-description: "Integrate your TuYa TS0111_valve via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0111_valve control via MQTT"
+description: "Integrate your Tuya TS0111_valve via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0111_valve
+# Tuya TS0111_valve
 
 |     |     |
 |-----|-----|
 | Model | TS0111_valve  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart water/gas valve |
 | Exposes | switch (state), power_on_behavior, indicator_mode, linkquality |
-| Picture | ![TuYa TS0111_valve](https://www.zigbee2mqtt.io/images/devices/TS0111_valve.png) |
-| White-label | TuYa SM-AW713Z |
+| Picture | ![Tuya TS0111_valve](https://www.zigbee2mqtt.io/images/devices/TS0111_valve.png) |
+| White-label | Tuya SM-AW713Z |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

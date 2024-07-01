@@ -1,6 +1,6 @@
 ---
-title: "TuYa S-LUX-ZB control via MQTT"
-description: "Integrate your TuYa S-LUX-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya S-LUX-ZB control via MQTT"
+description: "Integrate your Tuya S-LUX-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-08-01T20:41:55Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa S-LUX-ZB
+# Tuya S-LUX-ZB
 
 |     |     |
 |-----|-----|
 | Model | S-LUX-ZB  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Light sensor |
 | Exposes | battery, illuminance_lux, linkquality, brightness_level |
-| Picture | ![TuYa S-LUX-ZB](https://www.zigbee2mqtt.io/images/devices/S-LUX-ZB.png) |
+| Picture | ![Tuya S-LUX-ZB](https://www.zigbee2mqtt.io/images/devices/S-LUX-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

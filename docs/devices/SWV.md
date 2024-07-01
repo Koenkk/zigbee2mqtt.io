@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SWV  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart water valve |
-| Exposes | flow, battery, current_device_status, switch (state), cyclic_timed_irrigation, cyclic_quantitative_irrigation, linkquality |
+| Exposes | flow, battery, switch (state), current_device_status, cyclic_timed_irrigation, cyclic_quantitative_irrigation, linkquality |
 | Picture | ![SONOFF SWV](https://www.zigbee2mqtt.io/images/devices/SWV.png) |
 
 
@@ -54,13 +54,6 @@ It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Current device status (enum)
-The water valve is in normal state, water shortage or water leakage.
-Value can be found in the published state on the `current_device_status` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_device_status": ""}`.
-It's not possible to write (`/set`) this value.
-The possible values are: `normal_state`, `water_shortage`, `water_leakage`, `water_shortage & water_leakage`.
-
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
@@ -71,6 +64,13 @@ When setting the state to ON, it might be possible to specify an automatic shuto
 Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
 Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
+### Current device status (enum)
+The water valve is in normal state, water shortage or water leakage.
+Value can be found in the published state on the `current_device_status` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_device_status": ""}`.
+It's not possible to write (`/set`) this value.
+The possible values are: `normal_state`, `water_shortage`, `water_leakage`, `water_shortage & water_leakage`.
 
 ### Cyclic timed irrigation (composite)
 Smart water valve cycle timing irrigation.

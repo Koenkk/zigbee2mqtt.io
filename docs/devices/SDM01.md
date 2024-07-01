@@ -1,6 +1,6 @@
 ---
-title: "TuYa SDM01 control via MQTT"
-description: "Integrate your TuYa SDM01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya SDM01 control via MQTT"
+description: "Integrate your Tuya SDM01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-04-29T19:24:38
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa SDM01
+# Tuya SDM01
 
 |     |     |
 |-----|-----|
 | Model | SDM01  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart energy monitor for 3P+N system |
 | Exposes | voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, energy, produced_energy, power_factor, power, ac_frequency, energy_a, energy_b, energy_c, energy_produced_a, energy_produced_b, energy_produced_c, power_factor_a, power_factor_b, power_factor_c, linkquality |
-| Picture | ![TuYa SDM01](https://www.zigbee2mqtt.io/images/devices/SDM01.png) |
+| Picture | ![Tuya SDM01](https://www.zigbee2mqtt.io/images/devices/SDM01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

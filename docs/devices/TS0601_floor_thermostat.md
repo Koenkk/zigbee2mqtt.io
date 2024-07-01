@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_floor_thermostat control via MQTT"
-description: "Integrate your TuYa TS0601_floor_thermostat via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_floor_thermostat control via MQTT"
+description: "Integrate your Tuya TS0601_floor_thermostat via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-04-29T19:24:38
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_floor_thermostat
+# Tuya TS0601_floor_thermostat
 
 |     |     |
 |-----|-----|
 | Model | TS0601_floor_thermostat  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee thermostat for electric floors |
 | Exposes | climate (system_mode, preset, running_state, current_heating_setpoint, local_temperature, local_temperature_calibration), deadzone_temperature, lock (state), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, linkquality |
-| Picture | ![TuYa TS0601_floor_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_floor_thermostat.png) |
+| Picture | ![Tuya TS0601_floor_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_floor_thermostat.png) |
 | White-label | ELECTSMART EST-120Z |
 
 

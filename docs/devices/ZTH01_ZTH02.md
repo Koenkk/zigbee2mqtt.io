@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZTH01/ZTH02 control via MQTT"
-description: "Integrate your TuYa ZTH01/ZTH02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZTH01/ZTH02 control via MQTT"
+description: "Integrate your Tuya ZTH01/ZTH02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-27T19:46:17
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZTH01/ZTH02
+# Tuya ZTH01/ZTH02
 
 |     |     |
 |-----|-----|
 | Model | ZTH01/ZTH02  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Temperature and humidity sensor |
 | Exposes | battery, temperature, humidity, voltage, linkquality |
-| Picture | ![TuYa ZTH01/ZTH02](https://www.zigbee2mqtt.io/images/devices/ZTH01-ZTH02.png) |
+| Picture | ![Tuya ZTH01/ZTH02](https://www.zigbee2mqtt.io/images/devices/ZTH01-ZTH02.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -1,6 +1,6 @@
 ---
-title: "TuYa SPM02 control via MQTT"
-description: "Integrate your TuYa SPM02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya SPM02 control via MQTT"
+description: "Integrate your Tuya SPM02 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-08-01T15:13:29
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa SPM02
+# Tuya SPM02
 
 |     |     |
 |-----|-----|
 | Model | SPM02  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart energy monitor for 3P+N system |
 | Exposes | voltage_X, voltage_Y, voltage_Z, power_X, power_Y, power_Z, current_X, current_Y, current_Z, energy, produced_energy, linkquality |
-| Picture | ![TuYa SPM02](https://www.zigbee2mqtt.io/images/devices/SPM02.png) |
+| Picture | ![Tuya SPM02](https://www.zigbee2mqtt.io/images/devices/SPM02.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

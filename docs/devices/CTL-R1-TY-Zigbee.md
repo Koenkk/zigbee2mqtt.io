@@ -1,6 +1,6 @@
 ---
-title: "TuYa CTL-R1-TY-Zigbee control via MQTT"
-description: "Integrate your TuYa CTL-R1-TY-Zigbee via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya CTL-R1-TY-Zigbee control via MQTT"
+description: "Integrate your Tuya CTL-R1-TY-Zigbee via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-11-01T18:54:40
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa CTL-R1-TY-Zigbee
+# Tuya CTL-R1-TY-Zigbee
 
 |     |     |
 |-----|-----|
 | Model | CTL-R1-TY-Zigbee  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 24G radar human presence motion sensor. |
 | Exposes | illuminance, presence, presence_sensitivity, detection_range, detection_delay, illuminance_treshold_max, illuminance_treshold_min, presence_illuminance_switch, light_switch, light_linkage, detection_method, indicator_light, identify, linkquality |
-| Picture | ![TuYa CTL-R1-TY-Zigbee](https://www.zigbee2mqtt.io/images/devices/CTL-R1-TY-Zigbee.png) |
+| Picture | ![Tuya CTL-R1-TY-Zigbee](https://www.zigbee2mqtt.io/images/devices/CTL-R1-TY-Zigbee.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

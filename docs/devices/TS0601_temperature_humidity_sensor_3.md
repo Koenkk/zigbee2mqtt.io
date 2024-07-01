@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_temperature_humidity_sensor_3 control via MQTT"
-description: "Integrate your TuYa TS0601_temperature_humidity_sensor_3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_temperature_humidity_sensor_3 control via MQTT"
+description: "Integrate your Tuya TS0601_temperature_humidity_sensor_3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-06-01T08:47:20
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_temperature_humidity_sensor_3
+# Tuya TS0601_temperature_humidity_sensor_3
 
 |     |     |
 |-----|-----|
 | Model | TS0601_temperature_humidity_sensor_3  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Temperature & humidity sensor |
 | Exposes | temperature, humidity, battery, temperature_unit, linkquality |
-| Picture | ![TuYa TS0601_temperature_humidity_sensor_3](https://www.zigbee2mqtt.io/images/devices/TS0601_temperature_humidity_sensor_3.png) |
+| Picture | ![Tuya TS0601_temperature_humidity_sensor_3](https://www.zigbee2mqtt.io/images/devices/TS0601_temperature_humidity_sensor_3.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

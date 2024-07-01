@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0121_plug control via MQTT"
-description: "Integrate your TuYa TS0121_plug via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0121_plug control via MQTT"
+description: "Integrate your Tuya TS0121_plug via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-09-01T19:56:51Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0121_plug
+# Tuya TS0121_plug
 
 |     |     |
 |-----|-----|
 | Model | TS0121_plug  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 10A UK or 16A EU smart plug |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, linkquality |
-| Picture | ![TuYa TS0121_plug](https://www.zigbee2mqtt.io/images/devices/TS0121_plug.png) |
+| Picture | ![Tuya TS0121_plug](https://www.zigbee2mqtt.io/images/devices/TS0121_plug.png) |
 | White-label | BlitzWolf BW-SHP13, Connecte 4500990, Connecte 4500991, Connecte 4500992, Connecte 4500993 |
 
 

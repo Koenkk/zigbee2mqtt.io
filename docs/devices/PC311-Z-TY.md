@@ -1,6 +1,6 @@
 ---
-title: "TuYa PC311-Z-TY control via MQTT"
-description: "Integrate your TuYa PC311-Z-TY via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya PC311-Z-TY control via MQTT"
+description: "Integrate your Tuya PC311-Z-TY via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-02-29T20:20:58
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa PC311-Z-TY
+# Tuya PC311-Z-TY
 
 |     |     |
 |-----|-----|
 | Model | PC311-Z-TY  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Bidirectional energy meter with 80A current clamp |
 | Exposes | ac_frequency, voltage, power, current, energy, energy_produced, power_a, power_b, current_a, current_b, power_factor_a, power_factor_b, energy_a, energy_b, energy_produced_a, energy_produced_b, linkquality |
-| Picture | ![TuYa PC311-Z-TY](https://www.zigbee2mqtt.io/images/devices/PC311-Z-TY.png) |
+| Picture | ![Tuya PC311-Z-TY](https://www.zigbee2mqtt.io/images/devices/PC311-Z-TY.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

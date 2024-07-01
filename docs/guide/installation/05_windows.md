@@ -3,6 +3,13 @@ next: ../configuration/
 ---
 
 # Windows
+These instructions explain how to run Zigbee2MQTT on Windows.
+
+::: tip TIP
+Before starting make sure you have an MQTT broker installed on your system.
+There are many tutorials available on how to do this, [example](https://cedalo.com/blog/how-to-install-mosquitto-mqtt-broker-on-windows/).
+Mosquitto is the recommended MQTT broker but others should also work fine.
+:::
 
 ## Install a USB-to-UART Bridge Virtual COM Port driver
 In order to be able to communicate with your USB device over a virtual COM port, you might need a driver for your OS in order for it to be able to be found by your flashing software.
@@ -46,12 +53,16 @@ In order to be able to communicate with your USB device over a virtual COM port,
 1. Change the serial port configuration to match your setup
     ```yaml
     serial:
-        port: \\.\COM4
+        port: COM4
     ```
 1. Make sure other settings are correct as well
 1. Save and exit
 
 Congratulations, you're now ready to start your Zigbee2MQTT installation
+
+::: warning ATTENTION
+Some Windows drivers for adapters may prevent auto-detect from working properly. Make sure to specify the port as indicated above.
+:::
 
 ## Starting Zigbee2MQTT
 

@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS011F_wall_outlet control via MQTT"
-description: "Integrate your TuYa TS011F_wall_outlet via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS011F_wall_outlet control via MQTT"
+description: "Integrate your Tuya TS011F_wall_outlet via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-05-01T14:47:09Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS011F_wall_outlet
+# Tuya TS011F_wall_outlet
 
 |     |     |
 |-----|-----|
 | Model | TS011F_wall_outlet  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | In-wall outlet |
 | Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![TuYa TS011F_wall_outlet](https://www.zigbee2mqtt.io/images/devices/TS011F_wall_outlet.png) |
+| Picture | ![Tuya TS011F_wall_outlet](https://www.zigbee2mqtt.io/images/devices/TS011F_wall_outlet.png) |
 | White-label | Teekar SWP86-01OG, BSEED Zigbee Socket |
 
 

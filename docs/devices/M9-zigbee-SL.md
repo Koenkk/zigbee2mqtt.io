@@ -1,6 +1,6 @@
 ---
-title: "TuYa M9-zigbee-SL control via MQTT"
-description: "Integrate your TuYa M9-zigbee-SL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya M9-zigbee-SL control via MQTT"
+description: "Integrate your Tuya M9-zigbee-SL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-08-01T15:13:29
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa M9-zigbee-SL
+# Tuya M9-zigbee-SL
 
 |     |     |
 |-----|-----|
 | Model | M9-zigbee-SL  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart Switch (4 gang + 4 scene) with neutral wire and motion sensing |
 | Exposes | switch (state), power_on_behavior, switch_mode, light_mode, backlight_mode, action, presence, delay, linkquality |
-| Picture | ![TuYa M9-zigbee-SL](https://www.zigbee2mqtt.io/images/devices/M9-zigbee-SL.png) |
+| Picture | ![Tuya M9-zigbee-SL](https://www.zigbee2mqtt.io/images/devices/M9-zigbee-SL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

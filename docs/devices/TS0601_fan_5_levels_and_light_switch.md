@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_fan_5_levels_and_light_switch control via MQTT"
-description: "Integrate your TuYa TS0601_fan_5_levels_and_light_switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_fan_5_levels_and_light_switch control via MQTT"
+description: "Integrate your Tuya TS0601_fan_5_levels_and_light_switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-04-29T19:24:38
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_fan_5_levels_and_light_switch
+# Tuya TS0601_fan_5_levels_and_light_switch
 
 |     |     |
 |-----|-----|
 | Model | TS0601_fan_5_levels_and_light_switch  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Fan with 5 levels & light switch |
 | Exposes | status_indication, switch (state), power_on_behavior, fan_speed, linkquality |
-| Picture | ![TuYa TS0601_fan_5_levels_and_light_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_fan_5_levels_and_light_switch.png) |
+| Picture | ![Tuya TS0601_fan_5_levels_and_light_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_fan_5_levels_and_light_switch.png) |
 | White-label | Liwokit Fan+Light-01 |
 
 

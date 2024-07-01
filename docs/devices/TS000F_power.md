@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS000F_power control via MQTT"
-description: "Integrate your TuYa TS000F_power via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS000F_power control via MQTT"
+description: "Integrate your Tuya TS000F_power via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-12-01T15:07:19
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS000F_power
+# Tuya TS000F_power
 
 |     |     |
 |-----|-----|
 | Model | TS000F_power  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Switch with power monitoring |
 | Exposes | switch (state), power, current, voltage, energy, power_on_behavior, switch_type, linkquality |
-| Picture | ![TuYa TS000F_power](https://www.zigbee2mqtt.io/images/devices/TS000F_power.png) |
+| Picture | ![Tuya TS000F_power](https://www.zigbee2mqtt.io/images/devices/TS000F_power.png) |
 | White-label | Aubess WHD02 |
 
 

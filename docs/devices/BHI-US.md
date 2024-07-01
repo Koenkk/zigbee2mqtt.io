@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BHI-US  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Universal Switch II |
-| Exposes | battery_low, voltage, action, config_led_top_left_press, config_led_top_right_press, config_led_bottom_left_press, config_led_bottom_right_press, config_led_top_left_longpress, config_led_top_right_longpress, config_led_bottom_left_longpress, config_led_bottom_right_longpress, linkquality |
+| Exposes | battery_low, voltage, config_led_top_left_press, config_led_top_right_press, config_led_bottom_left_press, config_led_bottom_right_press, config_led_top_left_longpress, config_led_top_right_longpress, config_led_bottom_left_longpress, config_led_bottom_right_longpress, action, linkquality |
 | Picture | ![Bosch BHI-US](https://www.zigbee2mqtt.io/images/devices/BHI-US.png) |
 
 
@@ -50,9 +50,6 @@ Examples:
 <!-- Notes END: Do not edit below this line -->
 
 
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
-
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
@@ -78,12 +75,6 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `button_top_left_release`, `button_top_right_release`, `button_bottom_left_release`, `button_bottom_right_release`, `button_top_left_longpress`, `button_top_right_longpress`, `button_bottom_left_longpress`, `button_bottom_right_longpress`, `button_top_left_longpress_release`, `button_top_right_longpress_release`, `button_bottom_left_longpress_release`, `button_bottom_right_longpress_release`.
 
 ### LED config (top left short press) (text)
 Specifies LED color (rgb) and pattern on short press as hex string.
@@ -172,6 +163,12 @@ Example: ff4200000502050001.
 Value can be found in the published state on the `config_led_bottom_right_longpress` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"config_led_bottom_right_longpress": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"config_led_bottom_right_longpress": NEW_VALUE}`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `button_top_left_release`, `button_top_right_release`, `button_bottom_left_release`, `button_bottom_right_release`, `button_top_left_longpress`, `button_top_right_longpress`, `button_bottom_left_longpress`, `button_bottom_right_longpress`, `button_top_left_longpress_release`, `button_top_right_longpress_release`, `button_bottom_left_longpress_release`, `button_bottom_right_longpress_release`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -1,6 +1,6 @@
 ---
-title: "TuYa U86KWF-ZPSJ control via MQTT"
-description: "Integrate your TuYa U86KWF-ZPSJ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya U86KWF-ZPSJ control via MQTT"
+description: "Integrate your Tuya U86KWF-ZPSJ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-08-11T22:17:44Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa U86KWF-ZPSJ
+# Tuya U86KWF-ZPSJ
 
 |     |     |
 |-----|-----|
 | Model | U86KWF-ZPSJ  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Environment controller |
 | Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration, pi_heating_demand), linkquality |
-| Picture | ![TuYa U86KWF-ZPSJ](https://www.zigbee2mqtt.io/images/devices/U86KWF-ZPSJ.png) |
+| Picture | ![Tuya U86KWF-ZPSJ](https://www.zigbee2mqtt.io/images/devices/U86KWF-ZPSJ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
