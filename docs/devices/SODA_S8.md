@@ -23,7 +23,15 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+The handles are from [SODA GmBh](https://soda-gmbh.de/) and sold on [Amazon Germany](https://www.amazon.de/sp?ie=UTF8&isAmazonFulfilled=0&marketplaceSeller=1&seller=AS4J66PXH3SHW).
 
+[Documentation/Manual](https://soda-gmbh.de/assets/download/S8_Premium_Anleitung.pdf)
+
+### Pairing & Resetting
+* To pair, press left button while inserting the batteries.
+
+* To reset, press both buttons while inserting batteries.
 
 <!-- Notes END: Do not edit below this line -->
 
