@@ -39,7 +39,7 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 # NOTE 2: For Ubuntu see tip below
 # NOTE 3: Curl might have to be installed first via apt update && apt install curl
 sudo curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y nodejs git make g++ gcc libsystemd-dev make
+sudo apt-get install -y nodejs git make g++ gcc libsystemd-dev
 
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
 # version has been installed
