@@ -23,8 +23,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Notes
+[xyzroe ZigUSB](https://xyzroe.cc/ZigUSB)
 <!-- Notes END: Do not edit below this line -->
 
 
