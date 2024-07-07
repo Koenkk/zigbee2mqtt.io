@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | 3 gang switch module - (without neutral) |
 | Exposes | switch (state), power_on_behavior, switch_type, linkquality |
 | Picture | ![Tuya TS0013_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0013_switch_module.png) |
-| White-label | AVATTO 3gang N-ZLWSM01 |
+| White-label | AVATTO 3gang N-ZLWSM01, Girier 3CH Switch Model-L ZB08 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
