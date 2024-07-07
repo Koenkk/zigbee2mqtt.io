@@ -7,7 +7,7 @@ sidebarDepth: 0
 Zigbee2MQTT supports a simple watchdog for "soft failures" (failures that Zigbee2MQTT can handle properly without crashing, like "adapter disconnected"). The normal operation is to have to restart the Zigbee2MQTT process, or reset the container (for a containerized installation). This watchdog allows Zigbee2MQTT to try restarting internally without exiting the process. This is optional, and only enabled if the `env` variable is set and valid.
 
 ```bash
-Z2M_WATCHDOG=default npm start
+Z2M_WATCHDOG=default
 ```
 
 Start Zigbee2MQTT with the watchdog's default retry delays (1min, 5min, 15min, 30min, 60min).
@@ -27,7 +27,7 @@ In non-containerized environments, to handle NodeJS crashes, you will need a ded
 ## Customized delays
 
 ```bash
-Z2M_WATCHDOG=minutes_csv npm start
+Z2M_WATCHDOG=minutes_csv
 ```
 
 Start Zigbee2MQTT with the watchdog's retry delays of your choosing.
@@ -36,20 +36,20 @@ Start Zigbee2MQTT with the watchdog's retry delays of your choosing.
 Examples:
 
 ```bash
-Z2M_WATCHDOG=5,10,30 npm start
+Z2M_WATCHDOG=5,10,30
 ```
 
 Start Zigbee2MQTT with the watchdog's retry delays as: 5min, 10min, 30min. This will result in 3 retry attempts.
 
 ```bash
-Z2M_WATCHDOG=0.5,3,6,15 npm start
+Z2M_WATCHDOG=0.5,3,6,15
 ```
 
 Start Zigbee2MQTT with the watchdog's retry delays as: 30sec, 3min, 6min, 15min. This will result in 4 retry attempts.
 
 
 ```bash
-Z2M_WATCHDOG=1 npm start
+Z2M_WATCHDOG=1
 ```
 
 Start Zigbee2MQTT with the watchdog's retry delays as: 1min. This will result in 1 retry attempt.
