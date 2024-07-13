@@ -5,6 +5,7 @@ sidebarDepth: 1
 # Zigbee network
 
 ## Permit join
+
 ```yaml
 # Optional: allow new devices to join.
 permit_join: true
@@ -25,7 +26,8 @@ advanced:
   pan_id: 0x1a62
   # Optional: Zigbee extended pan ID, GENERATE will make Zigbee2MQTT generate a new extended panID on next startup (default: shown below)
   ext_pan_id: [0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD]
-  # Optional: ZigBee channel, changing requires re-pairing of all devices. (Note: use a ZLL channel: 11, 15, 20, or 25 to avoid Problems)
+  TODO
+  # Optional: Zigbee channel, changing might require re-pairing of some devices (see docs below). (Note: use a ZLL channel: 11, 15, 20, or 25 to avoid problems)
   # (default: 11)
   channel: 11
   # Optional: network encryption key
@@ -43,6 +45,21 @@ Set `network_key: GENERATE` to let Zigbee2MQTT generate a new random key on the 
 channel](../../advanced/zigbee/02_improve_network_range_and_stability.html#reduce-wi-fi-interference-by-changing-the-zigbee-channel.md)
 :::
 
+### Changing the Zigbee channel
+
+Changing the channel of an existing Zigbee network is supported. In Zigbee, this is done by broadcasting a network update indicating the channel change. However, there is a caveat: devices that are asleep during the broadcast will not switch to the new channel and will thus become unreachable. These are typically battery-powered end devices, and the only way to move them to the new channel is by re-pairing them.
+
+Zigbee2MQTT will send this broadcast during startup if the channel in the configuration has been changed. The following logging will be produced:
+
+```
+[2024-07-12 16:28:27] info: 	z2m: Starting Zigbee2MQTT version 1.39.0 (commit #e3fa0bfb)
+...
+[2024-07-12 16:28:27] warning: 	zh:controller: Changing channel from '18' to '19'
+[2024-07-12 16:28:37] warning: 	zh:controller: Channel changed to '19'
+...
+[2024-07-12 16:28:37] info: 	z2m: Zigbee2MQTT started!
+```
+
 ### Specifying network_key in a different file
 
 To specify the network_key in a different file, e.g `secret.yaml`, use the following configuration.
@@ -52,7 +69,7 @@ To specify the network_key in a different file, e.g `secret.yaml`, use the follo
 ```yaml
 # IMPORTANT: Don't forget the quotes!
 advanced:
-  network_key: '!secret.yaml network_key'
+  network_key: "!secret.yaml network_key"
 ```
 
 **secret.yaml**
