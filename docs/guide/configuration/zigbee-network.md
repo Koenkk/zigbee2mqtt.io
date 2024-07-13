@@ -54,6 +54,7 @@ Zigbee2MQTT will send this broadcast during startup if the channel in the config
 ```
 [2024-07-12 16:28:27] info: 	z2m: Starting Zigbee2MQTT version 1.39.0 (commit #e3fa0bfb)
 ...
+[2024-07-12 16:28:27] warning: 	zh:controller: Configured channel '18' does not match adapter channel '19', changing channel
 [2024-07-12 16:28:27] warning: 	zh:controller: Changing channel from '18' to '19'
 [2024-07-12 16:28:37] warning: 	zh:controller: Channel changed to '19'
 ...
