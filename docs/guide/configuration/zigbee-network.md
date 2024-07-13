@@ -49,6 +49,10 @@ channel](../../advanced/zigbee/02_improve_network_range_and_stability.html#reduc
 
 Changing the channel of an existing Zigbee network is supported. In Zigbee, this is done by broadcasting a network update indicating the channel change. However, there is a caveat: devices that are asleep during the broadcast will not switch to the new channel and will thus become unreachable. These are typically battery-powered end devices, and the only way to move them to the new channel is by re-pairing them.
 
+::: warning
+Changing channels is only supported for the `zstack` and `ember` adapter.
+:::
+
 Zigbee2MQTT will send this broadcast during startup if the channel in the configuration has been changed. The following logging will be produced:
 
 ```
