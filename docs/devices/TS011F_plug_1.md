@@ -66,7 +66,7 @@ Pair this device with a long press (5 seconds) on the on/off button. The button 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
-An alternative firmware version can be installed by creating a custom my_index.json file and setting zigbee_ota_override_index_location as described in the [guide](../guide/usage/ota_updates.md#local-ota-index-and-firmware-files). To use v1.0.13 use the following json file:
+An alternative firmware version can be installed by creating a custom my_index.json file and setting zigbee_ota_override_index_location as described in the [guide](../guide/usage/ota_updates.md#local-ota-index-and-firmware-files). This firmware can be used if the plug automatically turns off indeterminably or when the overvoltage protection from later versions is unwanted. To use v1.0.13 use the following json file:
 
 ```
 [
