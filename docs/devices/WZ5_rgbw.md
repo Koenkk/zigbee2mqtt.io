@@ -19,13 +19,14 @@ pageClass: device-page
 | Vendor  | [Skydance](/supported-devices/#v=Skydance)  |
 | Description | Zigbee & RF 5 in 1 LED controller (RGBW mode) |
 | Exposes | light (state, brightness, color_hs), white_brightness, linkquality |
-| Picture | ![Skydance WZ5_rgbw](https://www.zigbee2mqtt.io/images/devices/WZ5_rgbw.jpg) |
+| Picture | ![Skydance WZ5_rgbw](https://www.zigbee2mqtt.io/images/devices/WZ5_rgbw.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -40,7 +41,7 @@ This light supports the following features: `state`, `brightness`, `color_hs`.
   - HSV space (hue, saturation, value):`{"color": {"h": H, "s": S, "v": V}}` e.g. `{"color":{"h":360,"s":100,"v":100}}` or `{"color": {"hsv": "H,S,V"}}` e.g. `{"color":{"hsv":"360,100,100"}}`
   - HSL space (hue, saturation, lightness)`{"color": {"h": H, "s": S, "l": L}}` e.g. `{"color":{"h":360,"s":100,"l":100}}` or `{"color": {"hsl": "H,S,L"}}` e.g. `{"color":{"hsl":"360,100,100"}}`
 
-### White_brightness (numeric)
+### White brightness (numeric)
 White brightness of this light.
 Value can be found in the published state on the `white_brightness` property.
 It's not possible to read (`/get`) this value.

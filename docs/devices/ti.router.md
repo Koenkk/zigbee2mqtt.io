@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | Texas Instruments router |
 | Exposes | transmit_power, linkquality |
-| Picture | ![Custom devices (DiY) ti.router](https://www.zigbee2mqtt.io/images/devices/ti.router.jpg) |
+| Picture | ![Custom devices (DiY) ti.router](https://www.zigbee2mqtt.io/images/devices/ti.router.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,9 +32,10 @@ This is a Texas Instruments CC1352P-2, CC2652RB or CC2652R flashed with the foll
 
 
 
+
 ## Exposes
 
-### Transmit_power (numeric)
+### Transmit power (numeric)
 Transmit power, supported from firmware 20221102. The max for CC1352 is 20 dBm and 5 dBm for CC2652 (any higher value is converted to 5dBm).
 Value can be found in the published state on the `transmit_power` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"transmit_power": ""}`.

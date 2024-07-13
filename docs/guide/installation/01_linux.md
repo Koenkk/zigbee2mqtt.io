@@ -9,9 +9,11 @@ For the sake of simplicity this guide assumes running on a Raspberry Pi 4 with R
 
 Therefore the user `pi` is used the following examples, but the user may differ between distributions e.g. `openhabian` should be used on Openhabian.
 
+::: tip TIP
 Before starting make sure you have an MQTT broker installed on your system.
 There are many tutorials available on how to do this, [example](https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/).
 Mosquitto is the recommended MQTT broker but others should also work fine.
+:::
 
 ## Determine location of the adapter and checking user permissions
 We first need to determine the location of the adapter. Connect the adapter to your Raspberry Pi. Most of the times the location is `/dev/ttyACM0`. This can be verified by:
@@ -33,15 +35,16 @@ lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC_
 ## Installing
 ```bash
 # Set up Node.js repository and install Node.js + required dependencies
-# NOTE 1: Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v16.15.0/ e.g. Version 16.15.0 should work.
+# NOTE 1: Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/ e.g. Version 20.9.0 should work.
 # NOTE 2: For Ubuntu see tip below
-sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-sudo apt-get install -y nodejs git make g++ gcc
+# NOTE 3: Curl might have to be installed first via apt update && apt install curl
+sudo curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs git make g++ gcc libsystemd-dev
 
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
 # version has been installed
-node --version  # Should output v14.X, V16.x, V17.x or V18.X
-npm --version  # Should output 6.X, 7.X or 8.X
+node --version  # Should output V18.x, V20.x, V21.X
+npm --version  # Should output 9.X or 10.X
 
 # Create a directory for zigbee2mqtt and set your user as owner of it
 sudo mkdir /opt/zigbee2mqtt
@@ -53,6 +56,10 @@ git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
 npm ci
+# If this command fails and returns an ERR_SOCKET_TIMEOUT error, run this command instead: npm ci  --maxsockets 1
+
+# Build the app
+npm run build
 ```
 
 If everything went correctly the output of `npm ci` is similar to (the number of packages and seconds is probably different on your device):
@@ -81,10 +88,11 @@ node --version
 :::
 
 ## Configuring
-Before we can start Zigbee2MQTT we need to edit the `configuration.yaml` file. This file contains the configuration which will be used by Zigbee2MQTT.
+Before we can start Zigbee2MQTT we need to copy and edit the `configuration.yaml` file. This file contains the configuration which will be used by Zigbee2MQTT.
 
-Open the configuration file:
+Copy and open the configuration file:
 ```bash
+cp /opt/zigbee2mqtt/data/configuration.example.yaml /opt/zigbee2mqtt/data/configuration.yaml
 nano /opt/zigbee2mqtt/data/configuration.yaml
 ```
 
@@ -105,19 +113,6 @@ mqtt:
 serial:
   # Location of the adapter (see first step of this guide)
   port: /dev/ttyACM0
-```
-
-It is recommended to use a custom network key. This can be done by adding the following to your `configuration.yaml`. With this Zigbee2MQTT will generate a network key on next startup.
-
-```yaml
-advanced:
-    network_key: GENERATE
-```
-
-To enable the frontend add the following (see the [Frontend](../configuration/frontend.md) page for more settings):
-
-```yaml
-frontend: true
 ```
 
 Save the file and exit.
@@ -164,11 +159,13 @@ After=network.target
 
 [Service]
 Environment=NODE_ENV=production
-ExecStart=/usr/bin/npm start
+Type=notify
+ExecStart=/usr/bin/node index.js
 WorkingDirectory=/opt/zigbee2mqtt
 StandardOutput=inherit
 # Or use StandardOutput=null if you don't want Zigbee2MQTT messages filling syslog, for more options see systemd.exec(5)
 StandardError=inherit
+WatchdogSec=10s
 Restart=always
 RestartSec=10s
 User=pi
@@ -177,7 +174,7 @@ User=pi
 WantedBy=multi-user.target
 ```
 
-> If you are using a Raspberry Pi 1 or Zero AND if you followed this [guide](https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb), replace `ExecStart=/usr/bin/npm start` with `ExecStart=/usr/local/bin/npm start`.
+> If you are using a Raspberry Pi 1 or Zero AND if you followed this [guide](https://gist.github.com/Koenkk/11fe6d4845f5275a2a8791d04ea223cb), replace `ExecStart=/usr/bin/node index.js` with `ExecStart=/usr/local/bin/node index.js`.
 
 > If you are using a Raspberry Pi or a system running from a SD card, you will likely want to minimize the amount of log files written to disk. Systemd service with `StandardOutput=inherit` will result in logging everything twice: once in `journalctl` through the systemd unit and once from Zigbee2MQTT default logging to files under `data/log`. You will likely want to keep only one of them: 
 > > Keep only the logs under `data/log` --> use `StandardOutput=null` in the systemd unit.  **or** 
@@ -186,7 +183,14 @@ WantedBy=multi-user.target
 
 > If you want to use another directory to place all Zigbee2MQTT data, add `Environment=ZIGBEE2MQTT_DATA=/path/to/data` below `[Service]`
 
+> Using `Type=notify` makes systemd aware of when zigbee2mqtt has started up and is e.g. listening on its [Frontend](../configuration/frontend.md) sockets. This is useful for starting other, dependent systemd units or for using the `ExecStartPost=` attribute. For example, to allow a [Reverse Proxy](../configuration/frontend.md#nginx-proxy-configuration) to access zigbee2mqtt's Unix socket, you could add `ExecStartPost=setfacl -m u:www-data:rw /run/zigbee2mqtt/zigbee2mqtt.sock` to the `[Service]` section and `apt install acl`.
+
 Save the file and exit.
+
+You need some __systemd__ development files, on __Ubuntu__ these can be installed via:
+```
+$ sudo apt install g++ make libsystemd-dev make
+```
 
 Verify that the configuration works:
 ```bash
@@ -205,9 +209,7 @@ pi@raspberry:/opt/zigbee2mqtt $ systemctl status zigbee2mqtt.service
    Active: active (running) since Thu 2018-06-07 20:27:22 BST; 3s ago
  Main PID: 665 (npm)
    CGroup: /system.slice/zigbee2mqtt.service
-           ├─665 npm
-           ├─678 sh -c node index.js
-           └─679 node index.js
+           └─679 /usr/bin/node index.js
 
 Jun 07 20:27:22 raspberry systemd[1]: Started zigbee2mqtt.
 Jun 07 20:27:23 raspberry npm[665]: > zigbee2mqtt@1.6.0 start /opt/zigbee2mqtt
@@ -239,21 +241,7 @@ sudo journalctl -u zigbee2mqtt.service -f
 To update Zigbee2MQTT to the latest version, execute:
 
 ```sh
-# Stop Zigbee2MQTT and go to directory
-sudo systemctl stop zigbee2mqtt
+# Run the update script from the Zigbee2MQTT directory
 cd /opt/zigbee2mqtt
-
-# Backup configuration
-cp -R data data-backup
-
-# Update
-git pull
-npm ci
-
-# Restore configuration
-cp -R data-backup/* data
-rm -rf data-backup
-
-# Start Zigbee2MQTT
-sudo systemctl start zigbee2mqtt
+./update.sh
 ```

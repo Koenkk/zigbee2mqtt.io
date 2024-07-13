@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | LTFY004  |
 | Vendor  | [Sylvania](/supported-devices/#v=Sylvania)  |
 | Description | LIGHTIFY LED gardenspot mini RGB |
-| Exposes | light (state, brightness, color_xy, color_hs), effect, power_on_behavior, linkquality |
-| Picture | ![Sylvania LTFY004](https://www.zigbee2mqtt.io/images/devices/LTFY004.jpg) |
+| Exposes | light (state, brightness, color_xy, color_hs), effect, linkquality |
+| Picture | ![Sylvania LTFY004](https://www.zigbee2mqtt.io/images/devices/LTFY004.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -52,6 +52,7 @@ is manually switched off then on. Lights will remember their respective attribut
 **INFO**: Value is true, false (boolean)
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -80,6 +81,12 @@ This light supports the following features: `state`, `brightness`, `color_xy`, `
   - HSB space (hue, saturation, brightness): `{"color": {"h": H, "s": S, "b": B}}` e.g. `{"color":{"h":360,"s":100,"b":100}}` or `{"color": {"hsb": "H,S,B"}}` e.g. `{"color":{"hsb":"360,100,100"}}`
   - HSV space (hue, saturation, value):`{"color": {"h": H, "s": S, "v": V}}` e.g. `{"color":{"h":360,"s":100,"v":100}}` or `{"color": {"hsv": "H,S,V"}}` e.g. `{"color":{"hsv":"360,100,100"}}`
   - HSL space (hue, saturation, lightness)`{"color": {"h": H, "s": S, "l": L}}` e.g. `{"color":{"h":360,"s":100,"l":100}}` or `{"color": {"hsl": "H,S,L"}}` e.g. `{"color":{"hsl":"360,100,100"}}`
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depend on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
@@ -111,14 +118,7 @@ Triggers an effect on the light (e.g. make light blink for a few seconds).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
-
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
-The possible values are: `off`, `on`, `toggle`, `previous`.
+The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`, `colorloop`, `stop_colorloop`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

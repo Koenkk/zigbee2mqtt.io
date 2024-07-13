@@ -39,6 +39,14 @@ simulated_brightness:
   interval: 200 # interval in milliseconds, default = 200
 \`\`\`
 `
+  } else if (option.type === 'composite' && option.property === 'identity_effect') {
+    extra = `Example:
+\`\`\`yaml
+identity_effect:
+  effect: blink 3 # allowed: 'blink 3', 'fixed', 'blink green', 'blink blue'
+  color: red # allowed: 'default', 'red', 'green', 'blue', 'lightblue', 'yellow', 'pink', 'white'
+\`\`\`
+`
   }
 
   assert(extra != null, `No option doc generator for '${JSON.stringify(option)}'`);

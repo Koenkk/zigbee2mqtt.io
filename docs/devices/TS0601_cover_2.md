@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_cover_2 control via MQTT"
-description: "Integrate your TuYa TS0601_cover_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_cover_2 control via MQTT"
+description: "Integrate your Tuya TS0601_cover_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_cover_2
+# Tuya TS0601_cover_2
 
 |     |     |
 |-----|-----|
 | Model | TS0601_cover_2  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Curtain motor fixed speed |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![TuYa TS0601_cover_2](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_2.jpg) |
+| Picture | ![Tuya TS0601_cover_2](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_2.png) |
 | White-label | Zemismart BCM100DB |
 
 
@@ -30,6 +30,7 @@ pageClass: device-page
 On 2-button units; press down and set simultaneously until LED flashes blue.
 On 1-button units; press the set key 3 times in 5 seconds until the LED flashes blue.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

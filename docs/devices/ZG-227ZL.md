@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZG-227ZL control via MQTT"
-description: "Integrate your TuYa ZG-227ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZG-227ZL control via MQTT"
+description: "Integrate your Tuya ZG-227ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-11-09T12:35:00Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZG-227ZL
+# Tuya ZG-227ZL
 
 |     |     |
 |-----|-----|
 | Model | ZG-227ZL  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Temperature & humidity LCD sensor |
 | Exposes | temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, linkquality |
-| Picture | ![TuYa ZG-227ZL](https://www.zigbee2mqtt.io/images/devices/ZG-227ZL.jpg) |
+| Picture | ![Tuya ZG-227ZL](https://www.zigbee2mqtt.io/images/devices/ZG-227ZL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,16 +28,17 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes
@@ -54,14 +55,14 @@ Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Temperature_unit (enum)
+### Temperature unit (enum)
 Temperature unit.
 Value can be found in the published state on the `temperature_unit` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_unit": NEW_VALUE}`.
 The possible values are: `celsius`, `fahrenheit`.
 
-### Temperature_calibration (numeric)
+### Temperature calibration (numeric)
 Temperature calibration.
 Value can be found in the published state on the `temperature_calibration` property.
 It's not possible to read (`/get`) this value.
@@ -69,7 +70,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-2` and the maximum value is `2`.
 The unit of this value is `°C`.
 
-### Humidity_calibration (numeric)
+### Humidity calibration (numeric)
 Humidity calibration.
 Value can be found in the published state on the `humidity_calibration` property.
 It's not possible to read (`/get`) this value.
@@ -78,7 +79,7 @@ The minimal value is `-30` and the maximum value is `30`.
 The unit of this value is `%`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

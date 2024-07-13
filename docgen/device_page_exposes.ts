@@ -19,6 +19,10 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+function uncapitalizeFirstLetter(string) {
+  return string.charAt(0).toLowerCase() + string.slice(1);
+}
+
 function compositeDocs(composite) {
   const value = `{${composite.features.map((e) => `"${e.property}": VALUE`).join(', ')}}`;
 
@@ -49,9 +53,19 @@ function compositeDocs(composite) {
 function getExposeDocs(expose, definition) {
   const lines = [];
   const title = [];
-  if (expose.name) title.push(expose.type);
+
+  const onWithTimedOff = () => {
+      lines.push(``);
+      lines.push(`#### On with timed off`);
+      lines.push(`When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property \`on_time\` to the payload which is the time in seconds the state should remain on.`);
+      lines.push(`Additionnaly an \`off_wait_time\` property can be added to the payload to specify the cooldown time in seconds when the ${expose.type} will not answer to other on with timed off commands.`);
+      lines.push(`Support depend on the ${expose.type} firmware. Some devices might require both \`on_time\` and \`off_wait_time\` to work`);
+      lines.push(`Examples : \`{"state" : "ON", "on_time": 300}\`, \`{"state" : "ON", "on_time": 300, "off_wait_time": 120}\`.`);
+    }
+
+  if (expose.label) title.push(expose.type);
   if (expose.endpoint) title.push(`${expose.endpoint} endpoint`);
-  lines.push(`### ${capitalizeFirstLetter(expose.name ? expose.name : expose.type)} ${title.length > 0 ? `(${title.join(', ')})` : ''}`);
+  lines.push(`### ${capitalizeFirstLetter(expose.label ? expose.label : expose.type)} ${title.length > 0 ? `(${title.join(', ')})` : ''}`);
 
   if (['numeric', 'binary', 'text', 'enum'].includes(expose.type)) {
     if (expose.description) {
@@ -80,7 +94,7 @@ function getExposeDocs(expose, definition) {
     }
 
     if (expose.type === 'numeric') {
-      if (expose.hasOwnProperty('value_min') && expose.hasOwnProperty('value_max')) {
+      if (expose.value_min !== undefined && expose.value_max !== undefined) {
         lines.push(`The minimal value is \`${expose.value_min}\` and the maximum value is \`${expose.value_max}\`.`);
       }
 
@@ -89,13 +103,13 @@ function getExposeDocs(expose, definition) {
       }
 
       if (expose.presets) {
-        lines.push(`Besides the numeric values the following values are accepected: ${expose.presets.map((p) => `\`${p.name}\``).join(', ')}.`)
+        lines.push(`Besides the numeric values the following values are accepted: ${expose.presets.map((p) => `\`${p.name}\``).join(', ')}.`)
       }
     }
 
     if (expose.type === 'binary') {
-      if (expose.hasOwnProperty('value_on') && expose.hasOwnProperty('value_off')) {
-        lines.push(`If value equals \`${expose.value_on}\` ${expose.name} is ON, if \`${expose.value_off}\` OFF.`);
+      if (expose.value_on !== undefined && expose.value_off !== undefined) {
+        lines.push(`If value equals \`${expose.value_on}\` ${uncapitalizeFirstLetter(expose.label)} is ON, if \`${expose.value_off}\` OFF.`);
       }
     }
 
@@ -126,9 +140,15 @@ function getExposeDocs(expose, definition) {
       lines.push(`It's not possible to read (\`/get\`) this value.`);
     }
 
+    const on_time = definition.toZigbee.find((t) => t.key.includes('on_time'));
+    if (on_time && expose.type === 'switch' && (state.access & access.SET)) {
+      onWithTimedOff();
+    }
+
+
     if (expose.type === 'cover') {
       for (const e of expose.features.filter((e) => e.name === 'position' || e.name === 'tilt')) {
-        lines.push(`To change the ${e.name} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${e.property}": VALUE}\` where \`VALUE\` is a number between \`${e.value_min}\` and \`${e.value_max}\`.`);
+        lines.push(`To change the ${uncapitalizeFirstLetter(e.label)} publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${e.property}": VALUE}\` where \`VALUE\` is a number between \`${e.value_min}\` and \`${e.value_max}\`.`);
       }
     }
 
@@ -160,11 +180,11 @@ function getExposeDocs(expose, definition) {
       lines.push(`- \`brightness\`: To control the brightness publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${brightness.property}": VALUE}\` where \`VALUE\` is a number between \`${brightness.value_min}\` and \`${brightness.value_max}\`. To read the brightness send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${brightness.property}": ""}\`.`);
     }
     if (colorTemp) {
-      const presets = `Besides the numeric values the following values are accepected: ${colorTemp.presets.map((p) => `\`${p.name}\``).join(', ')}.`;
+      const presets = `Besides the numeric values the following values are accepted: ${colorTemp.presets.map((p) => `\`${p.name}\``).join(', ')}.`;
       lines.push(`- \`color_temp\`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorTemp.property}": VALUE}\` where \`VALUE\` is a number between \`${colorTemp.value_min}\` and \`${colorTemp.value_max}\`, the higher the warmer the color. To read the color temperature send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorTemp.property}": ""}\`. ${presets}`);
     }
     if (colorTempStartup) {
-      const presets = `Besides the numeric values the following values are accepected: ${colorTempStartup.presets.map((p) => `\`${p.name}\``).join(', ')}.`;
+      const presets = `Besides the numeric values the following values are accepted: ${colorTempStartup.presets.map((p) => `\`${p.name}\``).join(', ')}.`;
       lines.push(`- \`color_temp_startup\`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${colorTempStartup.property}": VALUE}\` where \`VALUE\` is a number between \`${colorTempStartup.value_min}\` and \`${colorTempStartup.value_max}\`, the higher the warmer the color. To read the startup color temperature send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${colorTempStartup.property}": ""}\`. ${presets}`);
     }
     if (colorXY) {
@@ -180,6 +200,10 @@ function getExposeDocs(expose, definition) {
       lines.push(`  - HSL space (hue, saturation, lightness)\`{"color": {"h": H, "s": S, "l": L}}\` e.g. \`{"color":{"h":360,"s":100,"l":100}}\` or \`{"color": {"hsl": "H,S,L"}}\` e.g. \`{"color":{"hsl":"360,100,100"}}\``);
     }
 
+    const on_time = definition.toZigbee.find((t) => t.key.includes('on_time'));
+    if (on_time) {
+      onWithTimedOff();
+    }
     const transition = definition.toZigbee.find((t) => t.key.includes('transition'));
     if (transition) {
       lines.push(``);
@@ -224,28 +248,31 @@ function getExposeDocs(expose, definition) {
       lines.push(`\`\`\`\``);
     }
   } else if (expose.type === 'climate') {
+    const readGet = (expose) => {
+      if (expose.access & access.GET) {
+        return `To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${expose.property}": ""}\`.`;
+      } else {
+        return `Reading (\`/get\`) this attribute is not possible.`;
+      }
+    }
+
     lines.push(`This climate device supports the following features: ${expose.features.map((e) => `\`${e.name}\``).join(', ')}.`);
     for (const f of expose.features.filter((e) => ['occupied_heating_setpoint', 'occupied_cooling_setpoint', 'current_heating_setpoint', 'pi_heating_demand'].includes(e.name))) {
-      lines.push(`- \`${f.name}\`: ${f.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is the ${f.unit} between \`${f.value_min}\` and \`${f.value_max}\`. To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${f.property}": ""}\`.`);
+      lines.push(`- \`${f.name}\`: ${f.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is the ${f.unit} between \`${f.value_min}\` and \`${f.value_max}\`. ${readGet(f)}`);
     }
 
     const localTemperature = expose.features.find((e) => e.name === 'local_temperature');
     if (localTemperature) {
-      lines.push(`- \`${localTemperature.name}\`: ${localTemperature.description} (in ${localTemperature.unit}).`);
-      if (localTemperature.access & access.GET) {
-        lines[lines.length - 1] += ` To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${localTemperature.property}": ""}\`.`;
-      } else {
-        lines[lines.length - 1] += ` Reading (\`/get\`) this attribute is not possible.`;
-      }
+      lines.push(`- \`${localTemperature.name}\`: ${localTemperature.description} (in ${localTemperature.unit}). ${readGet(localTemperature)}`);
     }
 
     for (const f of expose.features.filter((e) => ['system_mode', 'preset', 'mode'].includes(e.name))) {
-      lines.push(`- \`${f.name}\`: ${f.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is one of: ${f.values.map((v) => `\`${v}\``).join(', ')}. To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${f.property}": ""}\`.`);
+      lines.push(`- \`${f.name}\`: ${f.description}. To control publish a message to topic \`zigbee2mqtt/FRIENDLY_NAME/set\` with payload \`{"${f.property}": VALUE}\` where \`VALUE\` is one of: ${f.values.map((v) => `\`${v}\``).join(', ')}. ${readGet(f)}`);
     }
 
     const runningState = expose.features.find((e) => e.name === 'running_state');
     if (runningState) {
-      lines.push(`- \`${runningState.name}\`: ${runningState.description}. Possible values are: ${runningState.values.map((v) => `\`${v}\``).join(', ')}. To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${runningState.property}": ""}\`.`);
+      lines.push(`- \`${runningState.name}\`: ${runningState.description}. Possible values are: ${runningState.values.map((v) => `\`${v}\``).join(', ')}. ${readGet(runningState)}`);
     }
 
     const localTemperatureCalibration = expose.features.find((e) => e.name === 'local_temperature_calibration');
@@ -254,7 +281,7 @@ function getExposeDocs(expose, definition) {
       if (localTemperature.access & access.GET) {
         line += `To read send a message to \`zigbee2mqtt/FRIENDLY_NAME/get\` with payload \`{"${localTemperature.property}": ""}\`.`
       }
-      if (localTemperatureCalibration.hasOwnProperty('value_min')) {
+      if (localTemperatureCalibration.value_min !== undefined) {
         line += `The minimal value is \`${localTemperatureCalibration.value_min}\` and the maximum value is \`${localTemperatureCalibration.value_max}\` with a step size of \`${localTemperatureCalibration.value_step}\`.`;
       }
       

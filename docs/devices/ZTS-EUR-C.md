@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Zigbee + RF curtain switch |
 | Exposes | cover (state, position), backlight, calibration, motor_reversal, linkquality |
-| Picture | ![Moes ZTS-EUR-C](https://www.zigbee2mqtt.io/images/devices/ZTS-EUR-C.jpg) |
+| Picture | ![Moes ZTS-EUR-C](https://www.zigbee2mqtt.io/images/devices/ZTS-EUR-C.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -34,6 +34,7 @@ Calibration procedure:
 5. Press stop when closed
 6. Turn calibration off
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -62,7 +63,7 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": NEW_VALUE}`.
 The possible values are: `OFF`, `ON`.
 
-### Motor_reversal (enum)
+### Motor reversal (enum)
 Value can be found in the published state on the `motor_reversal` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": NEW_VALUE}`.

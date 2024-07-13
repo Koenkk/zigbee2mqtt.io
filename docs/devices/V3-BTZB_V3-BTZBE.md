@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Danalock](/supported-devices/#v=Danalock)  |
 | Description | BT/ZB smartlock |
 | Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, linkquality |
-| Picture | ![Danalock V3-BTZB/V3-BTZBE](https://www.zigbee2mqtt.io/images/devices/V3-BTZB-V3-BTZBE.jpg) |
+| Picture | ![Danalock V3-BTZB/V3-BTZBE](https://www.zigbee2mqtt.io/images/devices/V3-BTZB-V3-BTZBE.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -43,6 +43,7 @@ For the pin code to work, you must also send user_status and set it to enabled.
 To remove a pin code, just send MQTT /set request : {"pin_code":{"user":0}} (user take value 0 to 19)
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -62,13 +63,13 @@ To read the current state of this lock publish a message to topic `zigbee2mqtt/F
 This lock exposes a lock state which can be found in the published state under the `lock_state` property. It's not possible to read (`/get`) or write (`/set`) this value. The possible values are: `not_fully_locked`, `locked`, `unlocked`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Pin_code (composite)
+### Pin code (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "user_type": VALUE, "user_enabled": VALUE, "pin_code": VALUE}}`
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pin_code": ""}`.
 - `user` (numeric): User ID to set or clear the pincode for 
@@ -82,13 +83,13 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `unknown`, `lock`, `unlock`, `lock_failure_invalid_pin_or_id`, `lock_failure_invalid_schedule`, `unlock_failure_invalid_pin_or_id`, `unlock_failure_invalid_schedule`, `one_touch_lock`, `key_lock`, `key_unlock`, `auto_lock`, `schedule_lock`, `schedule_unlock`, `manual_lock`, `manual_unlock`, `non_access_user_operational_event`.
 
-### Action_source_name (enum)
+### Action source name (enum)
 Source of the triggered action on the lock.
 Value can be found in the published state on the `action_source_name` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `keypad`, `rfid`, `manual`, `rf`.
 
-### Action_user (numeric)
+### Action user (numeric)
 ID of user that triggered the action on the lock.
 Value can be found in the published state on the `action_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

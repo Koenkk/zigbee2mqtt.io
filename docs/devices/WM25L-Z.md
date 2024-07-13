@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Smartwings](/supported-devices/#v=Smartwings)  |
 | Description | Roller shade |
 | Exposes | cover (state, position), battery, linkquality |
-| Picture | ![Smartwings WM25L-Z](https://www.zigbee2mqtt.io/images/devices/WM25L-Z.jpg) |
+| Picture | ![Smartwings WM25L-Z](https://www.zigbee2mqtt.io/images/devices/WM25L-Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,13 +32,23 @@ Press and hold the button on the motor head for 6 seconds until the motor feedba
 ### End Position
 The roller blind maximum extension can be set by moving the blind to the desired position and then double pressing the up or down button.
 To reset the end position so you can define a newer more extended end position, open the blind fully. Then double press the up or down button. You can now set the blind extension again.
+
+### Open/Close Behavior
+If the unit is shipped with the open and close actions swapped (where OPEN causes the shade to lengthen instead of shorten?), it can be reversed with the included remote. To reverse the open/close behavior:
+
+1. open the back of the remote and press the P (program buttom) once - the motor will activate once briefly
+2. press and hold the UP and DOWN arrow buttons on the remote briefly until you hear the motor activate once briefly
+3. the open/close behavior should now be reversed
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
+* `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -50,7 +60,7 @@ It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

@@ -51,7 +51,67 @@ Click on the `Device Logs` tab, and you will see a list of all events that the d
 ![09_device_logs](../../images/how_tos/tuya_dp/09_device_logs.png)
 
 ### 8. Find your Data Point!!
-Select the Data Point for-which you wish to find the ID for in the drop-down list above the events table. Open up Dev Tools by pressing `ctrl` + `shift` + `i` on your keyboard, or going to the `3-dot menu` at the top-right of the Chrome window->`More Tools`->`Dev Tools`. When Dev Tools is open, click on the `Network` Tab, then click the `Search` button in the Tuya IoT Platform window.
+
+#### **Automatic**
+
+Once on the `Device Logs` tab, open up Dev Tools by pressing `ctrl` + `shift` + `i` (Windows) or `cmd` + `alt` + `i` (macOS) on your keyboard, or going to the `3-dot menu` at the top-right of the Chrome window->`More Tools`->`Dev Tools`. When Dev Tools is open, click on the `Console` Tab, then paste the [code below](#automatic-script) in to the console and press `Enter` on your keyboard. Next, open the `DP ID` drop-down list and hover over each item. The running code will automatically fetch the data point ID for each item. Once you have finished, run `export_codes()` in the console. This will output the data point ID-Name correspondences.
+
+![11_automatic_data_points_fetch](../../images/how_tos/tuya_dp/11_automatic_data_points_fetch.gif)
+
+##### *Automatic script*
+
+> WARNING: Never run code that you do not understand. It is your responsibility to ensure that you understand what the code is doing before running it.
+
+The code of the selected/hovered data point ID in the drop-down list as well as the previous and the next IDs are stored in the DOM under `<div id="code_list">`. The code below fetches these three codes each time the div is updated and stores them in the dictionary `codes`.
+
+```javascript
+function waitForElm(selector) {
+    /** Wait for an HTML element to appear in the DOM.
+     * 
+     * Answer of Yong Wang (https://stackoverflow.com/users/4556536/yong-wang) to
+     * https://stackoverflow.com/questions/5525071/how-to-wait-until-an-element-exists
+     */
+    return new Promise(resolve => {
+        if (document.querySelector(selector)) return resolve(document.querySelector(selector));
+
+        const observer = new MutationObserver(mutations => {
+            if (document.querySelector(selector)) {
+                resolve(document.querySelector(selector));
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(document.body, {childList: true, subtree: true});
+    });
+}
+
+let codes_selector = "#code_list";
+let codes = {};
+
+// Wait for the code list to appear in the DOM.
+waitForElm(codes_selector).then((elm) => {
+    // Create an observer to watch for changes and update the codes dictionary.
+    var observer = new MutationObserver(mutations => {
+        let code_items = document.getElementById("code_list").getElementsByTagName("div");
+        for (const code_item of code_items) {
+            codes[code_item.textContent] = code_item.getAttribute("aria-label");
+        }
+    });
+
+    observer.observe(document.querySelector(codes_selector), {childList: true});
+});
+
+
+function export_codes() {
+    /** Export the codes dictionary to the console in a copy-friendly format. */
+    let codes_str = JSON.stringify(codes);
+    console.log(codes_str);
+}
+```
+
+#### **Manual**
+
+Select the Data Point for-which you wish to find the ID for in the drop-down list above the events table. Open up Dev Tools by pressing `ctrl` + `shift` + `i` (Windows) or `cmd` + `alt` + `i` (macOS) on your keyboard, or going to the `3-dot menu` at the top-right of the Chrome window->`More Tools`->`Dev Tools`. When Dev Tools is open, click on the `Network` Tab, then click the `Search` button in the Tuya IoT Platform window.
 
 ![10_dev_tools](../../images/how_tos/tuya_dp/10_dev_tools.png)
 

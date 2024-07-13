@@ -7,7 +7,7 @@ sidebarDepth: 1
 Ongoing discussion about the frontend can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/4266)
 :::
 
-Zigbee2MQTT has a built-in webbased frontend. 
+Zigbee2MQTT has a built-in web-based frontend. 
 
 ![Frontend](../../images/frontend.png)
 
@@ -23,9 +23,10 @@ frontend: true
 frontend:
   # Optional, default 8080
   port: 8080
-  # Optional, default 0.0.0.0
+  # Optional, empty by default to listen on both IPv4 and IPv6. Opens a unix socket when given a path instead of an address (e.g. '/run/zigbee2mqtt/zigbee2mqtt.sock')
+  # Don't set this if you use Docker or the Home Assistant add-on unless you're sure the chosen IP is available inside the container
   host: 0.0.0.0
-  # Optional, enables authentication, disabled by default
+  # Optional, enables authentication, disabled by default, cleartext (no hashing required)
   auth_token: your-secret-token
   # Optional, url on which the frontend can be reached, currently only used for the Home Assistant device configuration page
   url: 'https://zigbee2mqtt.myhouse.org'
@@ -84,7 +85,7 @@ server {
 ```
 
 ## Apache2 proxy configuration
-Credit: Florian Metzger-Noel https://stackoverflow.com/a/60506715
+Credit: [Florian Metzger-Noel](https://stackoverflow.com/questions/38838567/proxy-websocket-wss-to-ws-apache/60506715#60506715)
 
 Enable these modules using 
 ```a2enmod proxy proxy_wstunnel proxy_http rewrite```

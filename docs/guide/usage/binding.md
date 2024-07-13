@@ -3,12 +3,14 @@ sidebarDepth: 1
 ---
 
 # Binding
-Zigbee has support for binding which makes it possible that devices can directly control each other without the intervention of Zigbee2MQTT or any home automation software.
+
+Zigbee supports binding, allowing devices to directly control each other without the intervention of Zigbee2MQTT or any home automation software.
 
 ## When to use this
-A use case for this is e.g. the TRADFRI wireless dimmer. Binding the dimmer directly to a bulb or group has the following advantages:
-- Smoothness; this will greatly improve the dimming feedback as the dimmer directly dims the bulb and thus does not have to make the MQTT/home automation software roundtrip.
-- It will work even when home automation software, Zigbee2MQTT or the coordinator is down.
+
+A use case for binding is, for example, the TRADFRI wireless dimmer. Binding the dimmer directly to a bulb or group has the following advantages:
+- **Smoothness:** Improves dimming feedback by directly controlling the bulb, reducing the need for MQTT/home automation software roundtrip.
+- **Reliability:** Works even when home automation software, Zigbee2MQTT, or the coordinator is down.
 
 ## Commands
 ::: tip

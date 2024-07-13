@@ -8,7 +8,7 @@ This feature allows to update your Zigbee devices over-the-air.
 
 ::: tip TIP
 Always check if the firmware update will bring you advantages. Firmware updates are NOT made for Zigbee2MQTT, but for working with apps and hubs from the brand.
-In some cases the firmware update can cause that your device will react different then Zigbee2MQTT expects, making that you can't use it the way you want, at least untill Zigbee2MQTT is changed to react to those changes.
+In some cases the firmware update can cause that your device will react different then Zigbee2MQTT expects, making that you can't use it the way you want, at least until Zigbee2MQTT is changed to react to those changes.
 If you get annoyed by the notifications that there are updates available, then turn the automatic check off.
 :::
 
@@ -109,4 +109,5 @@ Please note, even though Zigbee specification basically allows firmware version 
 
 ## Troubleshooting
 - `Device didn't respond to OTA request` or `Update failed with reason: 'aborted by device'`: try restarting the device by disconnecting the power/battery for a few seconds and try again, make sure to activate the device by pressing a button on it right before sending the update request.
-- For battery powered devices make sure that the battery is 70%+ as OTA updating is very power consuming.
+- For battery powered devices make sure that the battery is 70%+ as OTA updating is very power consuming. Some devices check for a minimum battery level prior to updating and refuse to update.
+- Make sure your log level is set to "info" - when set to warning - the UI will not report the correct info.

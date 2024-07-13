@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [databyte.ch](/supported-devices/#v=databyte.ch)  |
 | Description | Wall touchsensor with 4 keys |
 | Exposes | battery, linkquality, key_1, key_2, key_3, key_4 |
-| Picture | ![databyte.ch Touch4](https://www.zigbee2mqtt.io/images/devices/Touch4.jpg) |
+| Picture | ![databyte.ch Touch4](https://www.zigbee2mqtt.io/images/devices/Touch4.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -31,10 +31,11 @@ More information about this devices can be found here: https://databyte.ch/proje
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -47,23 +48,23 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
-### Key_1 (binary)
+### Key 1 (binary)
 Value can be found in the published state on the `key_1` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `ON` key_1 is ON, if `OFF` OFF.
+If value equals `ON` key 1 is ON, if `OFF` OFF.
 
-### Key_2 (binary)
+### Key 2 (binary)
 Value can be found in the published state on the `key_2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `ON` key_2 is ON, if `OFF` OFF.
+If value equals `ON` key 2 is ON, if `OFF` OFF.
 
-### Key_3 (binary)
+### Key 3 (binary)
 Value can be found in the published state on the `key_3` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `ON` key_3 is ON, if `OFF` OFF.
+If value equals `ON` key 3 is ON, if `OFF` OFF.
 
-### Key_4 (binary)
+### Key 4 (binary)
 Value can be found in the published state on the `key_4` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `ON` key_4 is ON, if `OFF` OFF.
+If value equals `ON` key 4 is ON, if `OFF` OFF.
 

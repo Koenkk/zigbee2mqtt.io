@@ -8,10 +8,10 @@ This page describes which MQTT topics are used by Zigbee2MQTT. Note that the bas
 
 ## zigbee2mqtt/FRIENDLY_NAME
 
-The `FRIENDLY_NAME` is the IEEE-address or, if defined, the `friendly_name` of a device.
+The `FRIENDLY_NAME` is the IEEE-address or, if defined, the `friendly_name` of a device or group.
 
 ::: tip
-You can use the `/` separator in `friendly_name` to structure devices.
+You can use the `/` separator in `friendly_name` to structure devices and groups.
 For example, using a `friendly_name` like `kitchen/floor_light` would result in a corresponding MQTT structure with `kitchen` as folder containing `floor_light` in MQTT Explorer.
 :::
 
@@ -52,7 +52,7 @@ Published messages are **always** in a JSON format. Each device produces a diffe
 If ["Device-Availability"](../configuration/device-availability.md) is configured the online/offline status will be published when it changes.
 
 ## zigbee2mqtt/FRIENDLY_NAME/set
-Publishing messages to this topic allows you to control your Zigbee devices via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH). How to control a specific device can be found in the *Exposes* section on the device page which can be accessed via ["Supported devices"](../../supported-devices/).
+Publishing messages to this topic allows you to control your Zigbee devices or groups via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH). How to control a specific device can be found in the *Exposes* section on the device page which can be accessed via ["Supported devices"](../../supported-devices/).
 
 ```js
 {
@@ -61,6 +61,8 @@ Publishing messages to this topic allows you to control your Zigbee devices via 
   "color": {"x": 0.123, "y": 0.123} // Color in XY
 }
 ```
+
+If FRIENDLY_NAME refers to a group, it will set the state for all devices in that group.
 
 ### Without JSON
 In case you don't want to use JSON, publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set/state` with payload `ON` is the same as publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"state": "ON"}`.
@@ -90,6 +92,8 @@ Example payload:
         "type":"zStack30x",
         "meta":{"revision":20190425, "transportrev":2, "product":2, "majorrel":2, "minorrel":7, "maintrel":2}
     },
+    "zigbee_herdsman_converters":{"version":"15.98.0"},
+    "zigbee_herdsman":{"version":"0.20.0"},
     "network":{"channel":15,"pan_id":5674,"extended_pan_id":[0,11,22]},
     "log_level":"debug",
     "permit_join":true,
@@ -108,7 +112,7 @@ Contains the state of the bridge, this message is published as retained. Payload
 If `advanced.legacy_availability_payload` is set to `false` the payload will be a JSON object (`{"state":"online"}`/`{"state":"offline"}`).
 
 ## zigbee2mqtt/bridge/logging
-All Zigbee2MQTT logging is published to this topic in the form of `{"level": LEVEL, "message": MESSAGE}`, example: `{"level": "info", "message": "Zigbee: allowing new devices to join."}`.
+All Zigbee2MQTT logging, except the `debug` level, is published to this topic in the form of `{"level": LEVEL, "message": MESSAGE}`, example: `{"level": "info", "message": "Zigbee: allowing new devices to join."}`.
 
 ## zigbee2mqtt/bridge/devices
 Contains the devices connected to the bridge, this message is published as retained.
@@ -215,6 +219,27 @@ A device definition will always have an `exposes` and `options` property which a
 - `exposes` This contains all the device capabilities (e.g. switch, light, occupancy)
 - `options` Contains all the device options (e.g. `temperature_precision`) which can be set through `zigbee2mqtt/bridge/request/device/options`
 
+## zigbee2mqtt/bridge/definitions
+Contains the zigbee clusters definitions of the devices, this message is published as retained and is structured with 2 parts:
+* `clusters`: contains the official cluster definition from the `zigbee-herdsman` package, organized by cluster name
+* `custom_clusters`: contains the custom cluster definitions from the `zigbee-herdsman-converts` package, of devices currently used
+
+Example payload:
+```json
+{
+  "clusters": {
+    "genBasic": {ID: 0, ...},
+    "genPowerCfg" : {ID: 1, ...},
+  },
+  "custom_clusters": {
+    "0x12345678": {
+       "myManuspecificCluster": {"ID": 0xFC01, ...},
+    }
+  }
+}
+```
+
+The message is updated at startup and when a device is joining/leaving/reconfiguring.
 
 ## zigbee2mqtt/bridge/groups
 Contains the groups, this message is published as retained.
@@ -274,6 +299,18 @@ To allow joining for only a specific amount of time add the `time` property (in 
 
 Allows to check whether Zigbee2MQTT is healthy. Payload has to be empty, example response: `{"data":{"healthy":true},"status":"ok"}`.
 
+#### zigbee2mqtt/bridge/request/coordinator_check
+
+Allows to check to execute a coordinator check. Payload has to be empty, example response: `{"data":{"missing_routers":[{"friendly_name":"bulb","ieee_address":"0x000b57fffec6a5b2"}]},"status":"ok"}`.
+
+This check is only supported for Texas Instruments based adapters (e.g. CC2652/CC1352). It checks whether any routers are missing from the coordinator memory. In case routers are missing, you may experience one of the following problems:
+- Unable to pair devices to your network, pairing might fail for any device that tries to joins the network via this missing router.
+- Devices falling of the network. Sometimes devices that are in the network re-join it, if they try to re-join via this missing router, re-joining will fail.
+
+The solution is to re-pair the missing routers. There are 2 known reasons for routers to go missing:
+- Migration from a Zigbee 1.2 coordinator to 3.0 (e.g. CC2530/CC2531 -> CC2652/CC1352) without re-pairing any devices. This is because Zigbee 1.2 has less strict security requirements.
+- Upgrading of the firmware, this seems to occur because of a bug in the Texas Instruments SDK.
+
 #### zigbee2mqtt/bridge/request/restart
 
 Restarts Zigbee2MQTT. Payload has to be empty, example response: `{"data":{},"status":"ok"}`.
@@ -306,7 +343,7 @@ Creates a backup of the `data` folder (without the `data/log` directory). Payloa
 
 #### zigbee2mqtt/bridge/request/install_code/add
 
-Allows to add an install code to the coordinator. Use this when you want to pair a Zigbee 3.0 devices which can only be paired with an install code. These devices typicaly have a QR code on it. When scanning this QR code you will get a code, e.g. `ZB10SG0D831018234800400000000000000000009035EAFFFE424793DLKAE3B287281CF11F550733A0CFC38AA31E802`. Publish this code to `zigbee2mqtt/bridge/request/install_code/add` with payload `{"value":"THE_CODE"}`. Example response: `{"data":{"value":"THE_CODE"},"status":"ok"}`.
+Allows to add an install code to the coordinator. Use this when you want to pair a Zigbee 3.0 devices which can only be paired with an install code. These devices typically have a QR code on it. When scanning this QR code you will get a code, e.g. `ZB10SG0D831018234800400000000000000000009035EAFFFE424793DLKAE3B287281CF11F550733A0CFC38AA31E802`. Publish this code to `zigbee2mqtt/bridge/request/install_code/add` with payload `{"value":"THE_CODE"}`. Example response: `{"data":{"value":"THE_CODE"},"status":"ok"}`.
 
 ### Device
 
@@ -343,6 +380,11 @@ See [OTA updates](./ota_updates.md).
 Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected (e.g. not reporting certain values), not all devices can be configured (only when the definition has a `configure` in its [definition](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices)). Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_remote"}` or `my_remote`, response: `{"data":{"id": "my_remote"},"status":"ok"}`.
 
 
+#### zigbee2mqtt/bridge/request/device/interview
+
+Allows you to manually trigger an interview for a specified device, causing zigbee2mqtt to reads its endpoints, clusters, and basic attributes. A device interview usually only occurs after the initial pairing, but it is sometimes useful to perform an interview after a firmware upgrade adds new functionality. Payload format is `{"id": "deviceID"}` where deviceID can be the `ieee_address` or `friendly_name` of the device, example: `{"id": "my_bulb"}`, response: `{"data":{"id": "my_bulb"},"status":"ok"}`. 
+
+
 #### zigbee2mqtt/bridge/request/device/options
 
 Allows you to change device options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"id": deviceID,"options": OPTIONS}` where deviceID can be the `ieee_address` or `friendly_name` of the device, example: `{"id": "my_bulb", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"id":"my_bulb","restart_required":false},"status":"ok"}`. Some options may require restarting Zigbee2MQTT, in this case `restart_required` is set to `true`. Note that `restart_required` is also published to `zigbee2mqtt/bridge/info`. Use `zigbee2mqtt/bridge/request/restart` to restart Zigbee2MQTT.
@@ -368,7 +410,28 @@ See [Binding](./binding.md).
 
 #### zigbee2mqtt/bridge/request/device/configure_reporting
 
-Allows to send a Zigbee configure reporting command to a device. Refer to the Configure Reporting Command in the [ZigBee Cluster Library](https://github.com/Koenkk/zigbee-herdsman/blob/master/docs/07-5123-08-Zigbee-Cluster-Library.pdf) for more information. Example payload is `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10}`. In this case the response would be `{"data":{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":"10","reportable_change":10},"status":"ok"}`.
+Allows to send a Zigbee configure reporting command to a device. Zigbee devices often have attributes that can report changes in their state, such as temperature, humidity, battery level, etc. Attribute reporting allows these devices to automatically send updates when there is a change in the values of these attributes.
+One example is when you change brightness of a bulb with its remote instead of Zigbee2MQTT, the state becomes out of sync.
+By setting up reporting for the bulb it will send notifications to Zigbee2MQTT about the brightness change and can update state in Zigbee2MQTT.
+
+It is a good practice to keep a balance between staying updated with relevant information and conserving energy, especially in the case of battery-powered devices.
+
+Refer to the Configure Reporting Command in the [ZigBee Cluster Library](https://github.com/Koenkk/zigbee-herdsman/blob/master/docs/07-5123-08-Zigbee-Cluster-Library.pdf) for more information. Example payload is `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10}`. In this case the response would be `{"data":{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":"10","reportable_change":10},"status":"ok"}`.
+
+Parameters
+
+**Minimum reporting interval** (minimum_report_interval)
+In other words: how long after the attribute changes on the device should it send an update.
+A value of 0 means: send an update as soon as the attribute (e.g.: temperature) changes.
+
+**Maximum reporting interval** (maximum_report_interval)
+In other words: how frequently shall the device send a report if there is no change in the attribute constantly. 
+A value of 60 means: if the bulb is off for 30 minutes, it still sends 30 updates (every 60 seconds) even if there was no any attribute changes(e.g.: it was not turned on or off).
+
+**Minimum reporting change** (reportable_change)
+The Minimum Reporting Change is like telling your device to speak up only when something significant happens. 
+If you set a minimum reporting change of 1 degree for a temperature sensor, it means the sensor won't bother you with updates unless the temperature changes by at least 1 degree.
+It's a way to filter out minor fluctuations and focus on important changes in the environment.
 
 To disable reporting set the `maximum_report_interval` to `65535`.
 
@@ -376,7 +439,7 @@ Notes:
 - Not all devices support the Zigbee configure reporting command (e.g. Xiaomi WSDCGQ11LM temperature/humidity sensors don't support it)
 - If configure reporting fails for a battery powered device make sure to wake it up right before sending the command.
 - The `reportable_change` value depends on the unit of the attribute, e.g. for temperature 100 means in general 1°C of change.
-- To specify options, e.g. the manufactuerCode use e.g. `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10,"options":{"manufacturerCode":1234}}`
+- To specify options, e.g. the manufacturerCode use e.g. `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10,"options":{"manufacturerCode":1234}}`
 
 ### Group
 

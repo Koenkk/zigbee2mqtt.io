@@ -1,7 +1,7 @@
 ---
 title: "LELLKI WP33-EU/WP34-EU control via MQTT"
 description: "Integrate your LELLKI WP33-EU/WP34-EU via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-06-01T15:08:55
+addedAt: 2024-04-29T19:24:39
 pageClass: device-page
 ---
 
@@ -18,14 +18,15 @@ pageClass: device-page
 | Model | WP33-EU/WP34-EU  |
 | Vendor  | [LELLKI](/supported-devices/#v=LELLKI)  |
 | Description | Multiprise with 4 AC outlets and 2 USB super charging ports (16A) |
-| Exposes | switch (state), linkquality |
-| Picture | ![LELLKI WP33-EU/WP34-EU](https://www.zigbee2mqtt.io/images/devices/WP33-EU-WP34-EU.jpg) |
+| Exposes | power_on_behavior, switch (state), linkquality |
+| Picture | ![LELLKI WP33-EU/WP34-EU](https://www.zigbee2mqtt.io/images/devices/WP33-EU-WP34-EU.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -36,30 +37,67 @@ pageClass: device-page
 
 ## Exposes
 
+### Power-on behavior (enum)
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `previous`, `on`.
+
 ### Switch (l1 endpoint)
 The current state of this switch is in the published state under the `state_l1` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l1": "ON"}`, `{"state_l1": "OFF"}` or `{"state_l1": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l1": ""}`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Switch (l2 endpoint)
 The current state of this switch is in the published state under the `state_l2` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l2": "ON"}`, `{"state_l2": "OFF"}` or `{"state_l2": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l2": ""}`.
 
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
 ### Switch (l3 endpoint)
 The current state of this switch is in the published state under the `state_l3` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l3": "ON"}`, `{"state_l3": "OFF"}` or `{"state_l3": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l3": ""}`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Switch (l4 endpoint)
 The current state of this switch is in the published state under the `state_l4` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l4": "ON"}`, `{"state_l4": "OFF"}` or `{"state_l4": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l4": ""}`.
 
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
 ### Switch (l5 endpoint)
 The current state of this switch is in the published state under the `state_l5` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l5": "ON"}`, `{"state_l5": "OFF"}` or `{"state_l5": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_l5": ""}`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

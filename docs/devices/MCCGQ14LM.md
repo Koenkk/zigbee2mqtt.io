@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi MCCGQ14LM control via MQTT"
-description: "Integrate your Xiaomi MCCGQ14LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara MCCGQ14LM control via MQTT"
+description: "Integrate your Aqara MCCGQ14LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-11-30T20:10:17
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi MCCGQ14LM
+# Aqara MCCGQ14LM
 
 |     |     |
 |-----|-----|
 | Model | MCCGQ14LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara E1 door & window contact sensor |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Door and window sensor E1 |
 | Exposes | contact, battery, battery_low, voltage, linkquality |
-| Picture | ![Xiaomi MCCGQ14LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ14LM.jpg) |
+| Picture | ![Aqara MCCGQ14LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ14LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -35,8 +35,6 @@ In order for this device to work (fully), at least the following firmware is req
 *Note that if you have already paired the device you will need to repair it after upgrading your adapter firmware.*
 <!-- Notes END: Do not edit below this line -->
 
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 
@@ -49,17 +47,17 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Voltage (numeric)
 Voltage of the battery in millivolts.

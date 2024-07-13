@@ -30,8 +30,8 @@ pkg install npm git gmake gcc
 
 # Verify that the correct nodejs and npm (automatically installed with nodejs)
 # version has been installed
-node --version  # Should output v14.X, V16.x, V17.x or V18.X
-npm --version  # Should output 6.X, 7.X or 8.X
+node --version  # Should output V18.x, V20.x, V21.X
+npm --version  # Should output 9.X or 10.X
 
 # Create installation folder (/usr/local prefix is used for software not part of the base system)
 mkdir -p /usr/local/opt/zigbee2mqtt
@@ -171,22 +171,7 @@ service zigbee2mqtt start
 To update Zigbee2MQTT to the latest version, execute:
 
 ```sh
-# Stop Zigbee2MQTT and go to directory
-service zigbee2mqtt stop
-cd /usr/local/opt/zigbee2mqtt
-
-# Backup configuration
-cp -R data data-backup
-
-# Update
-git checkout HEAD -- npm-shrinkwrap.json
-git pull
-npm ci
-
-# Restore configuration
-cp -R data-backup/* data
-rm -rf data-backup
-
-# Start Zigbee2MQTT
-service zigbee2mqtt start
+# Run the update script from the Zigbee2MQTT directory
+cd /opt/zigbee2mqtt
+./update.sh
 ```

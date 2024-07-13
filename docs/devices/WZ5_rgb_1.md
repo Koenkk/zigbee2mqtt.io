@@ -1,6 +1,6 @@
 ---
-title: "TuYa WZ5_rgb_1 control via MQTT"
-description: "Integrate your TuYa WZ5_rgb_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya WZ5_rgb_1 control via MQTT"
+description: "Integrate your Tuya WZ5_rgb_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-08-31T11:26:27
 pageClass: device-page
 ---
@@ -11,21 +11,22 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa WZ5_rgb_1
+# Tuya WZ5_rgb_1
 
 |     |     |
 |-----|-----|
 | Model | WZ5_rgb_1  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee & RF 5 in 1 LED controller (RGB mode) |
-| Exposes | light (state, brightness, color_hs, color_xy), do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![TuYa WZ5_rgb_1](https://www.zigbee2mqtt.io/images/devices/WZ5_rgb_1.jpg) |
+| Exposes | light (state, brightness, color_hs, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
+| Picture | ![Tuya WZ5_rgb_1](https://www.zigbee2mqtt.io/images/devices/WZ5_rgb_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -53,6 +54,12 @@ This light supports the following features: `state`, `brightness`, `color_hs`, `
   - HSV space (hue, saturation, value):`{"color": {"h": H, "s": S, "v": V}}` e.g. `{"color":{"h":360,"s":100,"v":100}}` or `{"color": {"hsv": "H,S,V"}}` e.g. `{"color":{"hsv":"360,100,100"}}`
   - HSL space (hue, saturation, lightness)`{"color": {"h": H, "s": S, "l": L}}` e.g. `{"color":{"h":360,"s":100,"l":100}}` or `{"color": {"hsl": "H,S,L"}}` e.g. `{"color":{"hsl":"360,100,100"}}`
 
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depend on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
 Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
@@ -78,19 +85,26 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 }
 ````
 
-### Do_not_disturb (binary)
+### Effect (enum)
+Triggers an effect on the light (e.g. make light blink for a few seconds).
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
+The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`, `colorloop`, `stop_colorloop`.
+
+### Do not disturb (binary)
 Do not disturb mode, when enabled this function will keep the light OFF after a power outage.
 Value can be found in the published state on the `do_not_disturb` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_not_disturb": NEW_VALUE}`.
-If value equals `true` do_not_disturb is ON, if `false` OFF.
+If value equals `true` do not disturb is ON, if `false` OFF.
 
-### Color_power_on_behavior (enum)
+### Color power on behavior (enum)
 Power on behavior state.
 Value can be found in the published state on the `color_power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_power_on_behavior": NEW_VALUE}`.
-The possible values are: `initial`, `previous`, `cutomized`.
+The possible values are: `initial`, `previous`, `customized`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

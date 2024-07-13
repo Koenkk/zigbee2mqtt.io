@@ -31,6 +31,55 @@ Zigbee2MQTT logs the device type of your devices on startup, e.g.:
 2018-5-28 20:39:46 INFO 0x00158d0001b79111 (0x00158d0001b79111): WSDCGQ01LM - Xiaomi MiJia temperature & humidity sensor (EndDevice)
 ```
 
+### Green Power devices
+Zigbee Green Power devices are special end devices that are designed to be very energy efficient. Messages from Green Power devices cannot be "understood" by normal Zigbee devices, therefore they need to be "translated" first by a Green Power "proxy". This means the Green Power device must be in range of a regular Zigbee device that supports the Green Power proxy role. Examples are Philips Hue and (at least some) Ikea Tradfri bulbs.
+
+Green Power devices don't support binding and are not included in network scans.
+
+When pairing a Green Power device, you must choose whether translated messages should be re-transmitted by unicast or broadcast. Only [enable join](../../guide/usage/pairing_devices.md) on a specific device to use unicast for this Green Power device. Enable join on all devices to use broadcast. Do note that each proxy will generate a unique broadcast for each Green Power event, and a single keypress may generate more than one event (e.g. "key down" then "key up"). If there are multiple proxies paired with a Green Power device, this may generate *a lot* of traffic.
+
+*Example Green Power devices: PTM 215Z, SR-ZGP2801K-5C, SR-ZGP2801K2-DIM, SR-ZGP2801K4-DIM*
+
+*Note: Heavy use of broadcasts can negatively impact performance of your network (See [Broadcasts](./02_improve_network_range_and_stability.md)).*
+
+#### GP Proxies & Sinks
+
+The following Zigbee routers have already been confirmed to support (at least some) ZGP features. Other devices very likely also work without issues, they just haven't been added to this table yet.
+
+| Zigbee Router                                                                       | GP Proxy | GP Sink  | Unicast |
+| :---                                                                                | :---:    | :---:    | :---:   |
+| [IKEA ICPSHC24-10EU-IL-2](../../devices/ICPSHC24-10EU-IL-1_ICPSHC24-10EU-IL-2.md)²  | Y        | Y        | Y
+| [IKEA LED2101G4](../../devices/LED2101G4.md)                                        | Y        | Y        | Y
+| [IKEA LED2103G5](../../devices/LED2103G5.md)            				              | Y        | Y        | Y
+| [IKEA LED2109G6](../../devices/LED2109G6.md)                                        | Y        | Y        | Y
+| [IKEA E1603/E1702/E1708](../../devices/E1603_E1702_E1708.md)                        | Y        | N        | Y
+| [Philips 1742930P7](../../devices/1742930P7.md)                                     | Y        | N        | Y
+| [Philips 3216131P5](../../devices/3216131P5.md)                                     | Y        | Y        | Nⁱ
+| [Philips 3261030P7](../../devices/3261030P7.md)                                     | Y        | Y        | Nⁱ
+| [Philips 3261031P6](../../devices/3261031P6.md)                                     | Y        | N        | Y
+| [Philips 3261331P7](../../devices/3261331P7.md)                                     | Y        | Y        | Nⁱ
+| [Philips 3418931P6](../../devices/3418931P6.md)                                     | Y        | N        | Y
+| [Philips 4023330P7](../../devices/4023330P7.md)                                     | Y        | Y        | Nⁱ
+| [Philips 4034031P7](../../devices/4034031P7.md)                                     | Y        | Y        | Nⁱ
+| [Philips 4090230P9](../../devices/4090230P9.md)                                     | Y        | Y        | Nⁱ
+| [Philips 5047130P9](../../devices/5047130P9.md)                                     | Y        | N        | Y
+| [Philips 5062131P7](../../devices/5062131P7.md)                                     | Y        | N        | Y
+| [Philips 9290024896](../../devices/9290024896.md)                                   | Y        | N        | Y
+| [Philips 9290022169](../../devices/9290022169.md)                                   | Y        | N        | Y
+| [Philips 929001953301](../../devices/929001953301.md)                               | Y        | N        | Y
+| [Philips 8718696548738](../../devices/8718696548738.md)                             | Y        | Y        | Nⁱ
+| [Philips 8719514491106](../../devices/8719514491106.md)                             | Y        | N        | Y
+| [Sonoff ZBDongle-E](../../devices/ZBDongle-E.md)        				              | Y        | N        | Y
+| [Sunricher SR-ZG9040A](../../devices/SR-ZG9040A.md)                                 | Y        | Y        | Y
+| [Sunricher SR-ZG9101SAC-HP-SWITCH-2CH](../../devices/SR-ZG9101SAC-HP-SWITCH-2CH.md) | Y        | Y        | Y
+| [Ubisys C4](../../devices/C4.md)                                                    | Y        | N        | Y
+| [Ubisys S2](../../devices/S2.md)                                                    | Y        | Y        | Y
+| [Vesternet VES-ZB-SWI-015](../../devices/VES-ZB-SWI-015.md)                         | Y        | Y        | Y
+
+*ⁱ ZGP frames are always being re-transmitted as broadcast, even if unicast was requested by the coordinator. Might be a [firmware bug](https://github.com/Koenkk/zigbee2mqtt/issues/22897#issuecomment-2158291085).*
+
+*² Only ICPSHC24-10EU-IL-2 (new version) is able to translate ZGP frames.*
+
 ## Zigbee networking
 
 This section is an overview of how the Zigbee protocol stack divides into layers (See [Wikipedia - IP layers](https://en.wikipedia.org/wiki/Internet_protocol_suite#Layer_names_and_number_of_layers_in_the_literature) ).  The number of layers in this type of description often varies; this discussion uses 4:

@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | GZCGQ01LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | MiJia light intensity sensor |
-| Exposes | battery, voltage, illuminance, illuminance_lux, power_outage_count, linkquality |
-| Picture | ![Xiaomi GZCGQ01LM](https://www.zigbee2mqtt.io/images/devices/GZCGQ01LM.jpg) |
+| Description | Mi light sensor |
+| Exposes | battery, voltage, illuminance, illuminance_lux, linkquality |
+| Picture | ![Xiaomi GZCGQ01LM](https://www.zigbee2mqtt.io/images/devices/GZCGQ01LM.png) |
 | White-label | Xiaomi YTC4043GL |
 
 
@@ -46,6 +46,7 @@ This device uses a CR2450 battery.
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -57,7 +58,7 @@ This device uses a CR2450 battery.
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -75,17 +76,12 @@ Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance_lux` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_lux": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `lx`.
-
-### Power_outage_count (numeric)
-Number of power outages.
-Value can be found in the published state on the `power_outage_count` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

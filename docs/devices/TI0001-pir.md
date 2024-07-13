@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Livolo](/supported-devices/#v=Livolo)  |
 | Description | Zigbee motion Sensor |
 | Exposes | occupancy, linkquality |
-| Picture | ![Livolo TI0001-pir](https://www.zigbee2mqtt.io/images/devices/TI0001-pir.jpg) |
+| Picture | ![Livolo TI0001-pir](https://www.zigbee2mqtt.io/images/devices/TI0001-pir.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -49,6 +49,7 @@ advanced:
   pan_id: 6756
 ```
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

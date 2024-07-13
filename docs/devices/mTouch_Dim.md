@@ -19,13 +19,17 @@ pageClass: device-page
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | mTouch Dim OP, touch dimmer |
 | Exposes | light (state, brightness), ballast_minimum_level, ballast_maximum_level, ballast_power_on_level, linkquality |
-| Picture | ![CTM Lyng mTouch_Dim](https://www.zigbee2mqtt.io/images/devices/mTouch_Dim.jpg) |
+| Picture | ![CTM Lyng mTouch_Dim](https://www.zigbee2mqtt.io/images/devices/mTouch_Dim.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -43,21 +47,27 @@ This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
 
-### Ballast_minimum_level (numeric)
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depend on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
+### Ballast minimum level (numeric)
 Specifies the minimum brightness value.
 Value can be found in the published state on the `ballast_minimum_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_minimum_level": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_minimum_level": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `99`.
 
-### Ballast_maximum_level (numeric)
+### Ballast maximum level (numeric)
 Specifies the maximum brightness value.
 Value can be found in the published state on the `ballast_maximum_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_maximum_level": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_maximum_level": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `99`.
 
-### Ballast_power_on_level (numeric)
+### Ballast power on level (numeric)
 Specifies the initialisation light level. Can not be set lower than "ballast_minimum_level".
 Value can be found in the published state on the `ballast_power_on_level` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_power_on_level": ""}`.

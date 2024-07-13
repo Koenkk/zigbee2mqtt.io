@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | EFR32MG21 router |
 | Exposes | linkquality |
-| Picture | ![Custom devices (DiY) EFR32MG21.Router](https://www.zigbee2mqtt.io/images/devices/EFR32MG21.Router.jpg) |
+| Picture | ![Custom devices (DiY) EFR32MG21.Router](https://www.zigbee2mqtt.io/images/devices/EFR32MG21.Router.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -44,6 +44,7 @@ Firmware can be used with Sonoff Zigbee 3.0 USB Dongle Plus–ZBDongle-E and eas
 
 Link: https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle-NoSigned/RouterForDongle
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

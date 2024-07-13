@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_gas_sensor_1 control via MQTT"
-description: "Integrate your TuYa TS0601_gas_sensor_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_gas_sensor_1 control via MQTT"
+description: "Integrate your Tuya TS0601_gas_sensor_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-01-01T08:59:10
 pageClass: device-page
 ---
@@ -11,21 +11,22 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_gas_sensor_1
+# Tuya TS0601_gas_sensor_1
 
 |     |     |
 |-----|-----|
 | Model | TS0601_gas_sensor_1  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Gas sensor |
 | Exposes | gas, self_test, self_test_result, fault_alarm, silence, linkquality |
-| Picture | ![TuYa TS0601_gas_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_gas_sensor_1.jpg) |
+| Picture | ![Tuya TS0601_gas_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_gas_sensor_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -37,24 +38,24 @@ Value can be found in the published state on the `gas` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` gas is ON, if `false` OFF.
 
-### Self_test (binary)
+### Self test (binary)
 Indicates whether the device is being self-tested.
 Value can be found in the published state on the `self_test` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"self_test": NEW_VALUE}`.
-If value equals `true` self_test is ON, if `false` OFF.
+If value equals `true` self test is ON, if `false` OFF.
 
-### Self_test_result (enum)
+### Self test result (enum)
 Result of the self-test.
 Value can be found in the published state on the `self_test_result` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `checking`, `success`, `failure`, `others`.
 
-### Fault_alarm (binary)
+### Fault alarm (binary)
 Indicates whether a fault was detected.
 Value can be found in the published state on the `fault_alarm` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` fault_alarm is ON, if `false` OFF.
+If value equals `true` fault alarm is ON, if `false` OFF.
 
 ### Silence (binary)
 Silence the alarm.

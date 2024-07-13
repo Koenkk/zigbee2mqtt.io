@@ -1,6 +1,6 @@
 ---
-title: "Miboxer FUT039Z control via MQTT"
-description: "Integrate your Miboxer FUT039Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "MiBoxer FUT039Z control via MQTT"
+description: "Integrate your MiBoxer FUT039Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-08-01T20:41:55Z
 pageClass: device-page
 ---
@@ -11,21 +11,22 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Miboxer FUT039Z
+# MiBoxer FUT039Z
 
 |     |     |
 |-----|-----|
 | Model | FUT039Z  |
-| Vendor  | [Miboxer](/supported-devices/#v=Miboxer)  |
+| Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
 | Description | RGB+CCT LED controller |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![Miboxer FUT039Z](https://www.zigbee2mqtt.io/images/devices/FUT039Z.jpg) |
+| Picture | ![MiBoxer FUT039Z](https://www.zigbee2mqtt.io/images/devices/FUT039Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -44,11 +45,17 @@ pageClass: device-page
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_xy`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
-- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `500`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepected: `coolest`, `cool`, `neutral`, `warm`, `warmest`.
+- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `500`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warm`, `warmest`.
 - `color_xy`: To control the XY color (CIE 1931 color space) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color": {"x": X_VALUE, "y": Y_VALUE}}` (e.g. `{"color":{"x":0.123,"y":0.123}}`). To read the XY color send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color":{"x":"","y":""}}`. Alternatively it is possible to set the XY color via RGB:
   - `{"color": {"r": R, "g": G, "b": B}}` e.g. `{"color":{"r":46,"g":102,"b":150}}`
   - `{"color": {"rgb": "R,G,B"}}` e.g. `{"color":{"rgb":"46,102,150"}}`
   - `{"color": {"hex": HEX}}` e.g. `{"color":{"hex":"#547CFF"}}`
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depend on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
@@ -79,21 +86,21 @@ Triggers an effect on the light (e.g. make light blink for a few seconds).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
+The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`, `colorloop`, `stop_colorloop`.
 
-### Do_not_disturb (binary)
+### Do not disturb (binary)
 Do not disturb mode, when enabled this function will keep the light OFF after a power outage.
 Value can be found in the published state on the `do_not_disturb` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"do_not_disturb": NEW_VALUE}`.
-If value equals `true` do_not_disturb is ON, if `false` OFF.
+If value equals `true` do not disturb is ON, if `false` OFF.
 
-### Color_power_on_behavior (enum)
+### Color power on behavior (enum)
 Power on behavior state.
 Value can be found in the published state on the `color_power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_power_on_behavior": NEW_VALUE}`.
-The possible values are: `initial`, `previous`, `cutomized`.
+The possible values are: `initial`, `previous`, `customized`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

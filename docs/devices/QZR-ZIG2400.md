@@ -19,13 +19,14 @@ pageClass: device-page
 | Vendor  | [Qmotion](/supported-devices/#v=Qmotion)  |
 | Description | 5 channel remote |
 | Exposes | action, position, linkquality |
-| Picture | ![Qmotion QZR-ZIG2400](https://www.zigbee2mqtt.io/images/devices/QZR-ZIG2400.jpg) |
+| Picture | ![Qmotion QZR-ZIG2400](https://www.zigbee2mqtt.io/images/devices/QZR-ZIG2400.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

@@ -29,7 +29,7 @@ pip install --upgrade pip wheel setuptools
 pip install nodeenv
 
 # Init node environment
-nodeenv -p -n 16.15.0
+nodeenv -p -n 20.14.0
 
 # Deactivate and activate environment to be sure
 deactivate
@@ -75,7 +75,12 @@ Description=zigbee2mqtt
 After=network.target
 
 [Service]
-ExecStart=/bin/bash -c 'source /opt/zigbee2mqtt/bin/activate; /opt/zigbee2mqtt/bin/npm start'
+Type=notify
+Environment=NODE_PATH=/opt/zigbee2mqtt/lib/node_modules
+Environment=NPM_CONFIG_PREFIX=/opt/zigbee2mqtt
+Environment=npm_config_prefix=/opt/zigbee2mqtt
+Environment=NODE_ENV=production
+ExecStart=/opt/zigbee2mqtt/bin/node index.js
 WorkingDirectory=/opt/zigbee2mqtt
 StandardOutput=inherit
 StandardError=inherit
@@ -92,27 +97,7 @@ Now continue with *Verify that the configuration works:* from the *Running Zigbe
 To update Zigbee2MQTT to the latest version, execute:
 
 ```sh
-# Stop Zigbee2MQTT and go to directory
-sudo systemctl stop zigbee2mqtt
+# Run the update script from the Zigbee2MQTT directory
 cd /opt/zigbee2mqtt
-
-# Activate environment
-source /opt/zigbee2mqtt/bin/activate
-
-# Backup configuration
-cp -R data data-backup
-
-# Update
-git pull
-npm ci
-
-# Restore configuration
-cp -R data-backup/* data
-rm -rf data-backup
-
-# Deactivate environment
-deactivate
-
-# Start Zigbee2MQTT
-sudo systemctl start zigbee2mqtt
+./update.sh
 ```

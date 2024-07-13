@@ -19,13 +19,14 @@ pageClass: device-page
 | Vendor  | [Envilar](/supported-devices/#v=Envilar)  |
 | Description | Touchlink remote |
 | Exposes | battery, action, linkquality |
-| Picture | ![Envilar ZGR904-S](https://www.zigbee2mqtt.io/images/devices/ZGR904-S.jpg) |
+| Picture | ![Envilar ZGR904-S](https://www.zigbee2mqtt.io/images/devices/ZGR904-S.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -42,7 +43,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

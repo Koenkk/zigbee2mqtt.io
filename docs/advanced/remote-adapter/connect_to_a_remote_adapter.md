@@ -4,7 +4,13 @@ We will use ser2net for this which allows to connect to a serial port over TCP.
 In this way you can e.g. setup a Raspberry Pi Zero with the adapter connected while running Zigbee2MQTT on a different system. The instructions below have to be executed on the system where the adapter is connected to.
 
 ::: warning
-WiFi-based Serial-to-IP bridges are not recommended as the serial protocol does not have enough fault-tolerance to handle packet loss or latency delays that can normally occur over WiFi connections.
+Be aware that it is not recommended to use a Zigbee Coordinator via a Serial-Proxy-Server (also known as Serial-to-IP bridge or Ser2Net remote adapter) over a WiFi, WAN, or VPN connection.
+
+Serial protocols used by Zigbee Coordinator do not have enough robustness, resilience, or fault-tolerance to handle packet loss and latency delays that can occur over unstable connections.
+
+Zigbee Coordinator requires a stable local connection to its serial port interface with no drops in communication between it and the Zigbee gateway application running on the host computer.
+
+Thus be warned that connecting to a network-attached remote Zigbee Coordinator over WiFi/WAN/VPN using Ser2Net or other Serial Proxy/Forwarding Tunnel is not supported for normal operation.
 :::
 
 ## 1. Install ser2net

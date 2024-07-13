@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNCLBL01LM control via MQTT"
-description: "Integrate your Xiaomi ZNCLBL01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNCLBL01LM control via MQTT"
+description: "Integrate your Aqara ZNCLBL01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-07-01T08:14:12
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNCLBL01LM
+# Aqara ZNCLBL01LM
 
 |     |     |
 |-----|-----|
 | Model | ZNCLBL01LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara curtain driver E1 |
-| Exposes | cover (state, position), hand_open, limits_calibration, battery, voltage, device_temperature, action, motor_state, running, hooks_lock, hooks_state, target_position, power_source, charging, linkquality |
-| Picture | ![Xiaomi ZNCLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNCLBL01LM.jpg) |
-| White-label | Xiaomi CM-M01 |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Curtain driver E1 |
+| Exposes | cover (state, position), hand_open, limits_calibration, battery, voltage, device_temperature, illuminance_lux, motor_state, running, hooks_lock, hooks_state, target_position, power_source, charging, action, linkquality |
+| Picture | ![Aqara ZNCLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNCLBL01LM.png) |
+| White-label | Aqara CM-M01, Aqara CM-M01R |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -42,6 +42,7 @@ After this the device will automatically join. If this doesn't work, try with a 
 ![ZNCLBL01LM pairing](../images/pairing/ZNCLBL01LM_pairing.jpg)
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -49,13 +50,11 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
-
-* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -66,14 +65,14 @@ To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set`
 To read the current state of this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
-### Hand_open (binary)
+### Hand open (binary)
 Pulling curtains by hand starts the motor.
 Value can be found in the published state on the `hand_open` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"hand_open": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hand_open": NEW_VALUE}`.
-If value equals `true` hand_open is ON, if `false` OFF.
+If value equals `true` hand open is ON, if `false` OFF.
 
-### Limits_calibration (enum)
+### Limits calibration (enum)
 Calibrate the position limits.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
@@ -81,7 +80,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `start`, `end`, `reset`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
 It's not possible to write (`/set`) this value.
@@ -95,19 +94,19 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
+### Illuminance (lux) (numeric)
+Measured illuminance in lux.
+Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `manual_open`, `manual_close`.
+The unit of this value is `lx`.
 
-### Motor_state (enum)
+### Motor state (enum)
 Motor state.
 Value can be found in the published state on the `motor_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -119,27 +118,27 @@ Value can be found in the published state on the `running` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` running is ON, if `false` OFF.
 
-### Hooks_lock (enum)
+### Hooks lock (enum)
 Lock the curtain driver hooks.
 Value can be found in the published state on the `hooks_lock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"hooks_lock": NEW_VALUE}`.
 The possible values are: `LOCK`, `UNLOCK`.
 
-### Hooks_state (enum)
+### Hooks state (enum)
 Hooks state.
 Value can be found in the published state on the `hooks_state` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"hooks_state": ""}`.
 It's not possible to write (`/set`) this value.
 The possible values are: `unlocked`, `locked`, `locking`, `unlocking`.
 
-### Target_position (numeric)
+### Target position (numeric)
 Target position.
 Value can be found in the published state on the `target_position` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Power_source (enum)
+### Power source (enum)
 The current power source.
 Value can be found in the published state on the `power_source` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_source": ""}`.
@@ -152,6 +151,12 @@ Value can be found in the published state on the `charging` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"charging": ""}`.
 It's not possible to write (`/set`) this value.
 If value equals `true` charging is ON, if `false` OFF.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `manual_open`, `manual_close`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

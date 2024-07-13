@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0001_switch_module control via MQTT"
-description: "Integrate your TuYa TS0001_switch_module via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0001_switch_module control via MQTT"
+description: "Integrate your Tuya TS0001_switch_module via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0001_switch_module
+# Tuya TS0001_switch_module
 
 |     |     |
 |-----|-----|
 | Model | TS0001_switch_module  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 1 gang switch module |
-| Exposes | switch (state), power_on_behavior, switch_type, linkquality |
-| Picture | ![TuYa TS0001_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0001_switch_module.jpg) |
-| White-label | OXT SWTZ21 |
+| Exposes | switch (state), countdown, power_on_behavior, switch_type, linkquality |
+| Picture | ![Tuya TS0001_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0001_switch_module.png) |
+| White-label | OXT SWTZ21, Moes ZM-104-M |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,7 +28,7 @@ pageClass: device-page
 
 ### Binding
 
-No sensible [binding](../guide/usage/binding.md) functionallity available. 
+No sensible [binding](../guide/usage/binding.md) functionality available. 
 
 Only the genOta and genTime clusters can be bound.
 
@@ -36,6 +36,7 @@ Only the genOta and genTime clusters can be bound.
 
 No over the air firmware update support.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -51,14 +52,22 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
-### Power_on_behavior (enum)
-Controls the behavior when the device is powered on after power loss.
+### Countdown (numeric)
+Countdown to turn device off after a certain time.
+Value can be found in the published state on the `countdown` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `43200`.
+The unit of this value is `s`.
+
+### Power-on behavior (enum)
+Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
 
-### Switch_type (enum)
+### Switch type (enum)
 Type of the switch.
 Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.

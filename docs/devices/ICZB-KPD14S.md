@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [iCasa](/supported-devices/#v=iCasa)  |
 | Description | Zigbee 3.0 Keypad Pulse 4S |
 | Exposes | battery, action, linkquality |
-| Picture | ![iCasa ICZB-KPD14S](https://www.zigbee2mqtt.io/images/devices/ICZB-KPD14S.jpg) |
+| Picture | ![iCasa ICZB-KPD14S](https://www.zigbee2mqtt.io/images/devices/ICZB-KPD14S.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -53,6 +53,7 @@ To disable the legacy integration add the following to your `configuration.yaml`
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -69,7 +70,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -79,7 +80,7 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `recall_*`, `on`, `off`, `brightness_move_up`, `brightenss_move_down`, `brightness_stop`.
+The possible values are: `on`, `off`, `brightness_stop`, `brightness_move_up`, `brightness_move_down`, `recall_1`, `recall_2`, `recall_3`, `recall_4`, `store_1`, `store_2`, `store_3`, `store_4`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

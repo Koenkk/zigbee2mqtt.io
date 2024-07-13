@@ -90,6 +90,8 @@ $bgColor: #F2F2F2;
   .desc {
     padding: 0.3rem 0.5rem;
     font-size: 12px;
+    overflow: hidden;
+    max-height: 3.24rem;
   }
 
   .model {

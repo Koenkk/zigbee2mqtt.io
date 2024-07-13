@@ -22,6 +22,7 @@ cp -R data data-backup
 
 # Update
 git fetch origin dev
+# If you get an `error: pathspec 'dev' did not match any file(s) known to git` execute: `git fetch origin --unshallow`
 git checkout dev # Change 'dev' to 'master' to switch back to the release version
 git pull
 npm ci
@@ -38,4 +39,4 @@ sudo systemctl start zigbee2mqtt
 Use the Docker image with the `latest-dev` tag.
 
 ## Home Assistant addon
-Use the `edge` version.
+Use the [`edge`](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt) version.

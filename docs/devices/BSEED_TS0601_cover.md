@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [BSEED](/supported-devices/#v=BSEED)  |
 | Description | Zigbee curtain switch |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![BSEED BSEED_TS0601_cover](https://www.zigbee2mqtt.io/images/devices/BSEED_TS0601_cover.jpg) |
+| Picture | ![BSEED BSEED_TS0601_cover](https://www.zigbee2mqtt.io/images/devices/BSEED_TS0601_cover.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,8 +29,9 @@ pageClass: device-page
 Press down and set simultaneously until LED flashes red.
  
 ### Calibration
-Calibration can be done manualy by pressing and holding pause button until it start blinking then press open and wait the time needed then press open again.
+Calibration can be done manually by pressing and holding pause button until it start blinking then press open and wait the time needed then press open again.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

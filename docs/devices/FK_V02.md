@@ -19,13 +19,14 @@ pageClass: device-page
 | Vendor  | [FrankEver](/supported-devices/#v=FrankEver)  |
 | Description | Zigbee smart water valve |
 | Exposes | switch (state), threshold, timer, linkquality |
-| Picture | ![FrankEver FK_V02](https://www.zigbee2mqtt.io/images/devices/FK_V02.jpg) |
+| Picture | ![FrankEver FK_V02](https://www.zigbee2mqtt.io/images/devices/FK_V02.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

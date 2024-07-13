@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee LED Controller W (plus) |
 | Exposes | light (state, brightness), effect, linkquality |
-| Picture | ![Gledopto GL-C-009S](https://www.zigbee2mqtt.io/images/devices/GL-C-009S.jpg) |
+| Picture | ![Gledopto GL-C-009S](https://www.zigbee2mqtt.io/images/devices/GL-C-009S.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,6 +32,7 @@ pageClass: device-page
 3. Repeat off/on four times.
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

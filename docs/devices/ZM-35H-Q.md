@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZM-35H-Q control via MQTT"
-description: "Integrate your TuYa ZM-35H-Q via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZM-35H-Q control via MQTT"
+description: "Integrate your Tuya ZM-35H-Q via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:02:38
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZM-35H-Q
+# Tuya ZM-35H-Q
 
 |     |     |
 |-----|-----|
 | Model | ZM-35H-Q  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Motion sensor |
-| Exposes | occupancy, battery_low, tamper, battery, sensitivity, keep_time, linkquality |
-| Picture | ![TuYa ZM-35H-Q](https://www.zigbee2mqtt.io/images/devices/ZM-35H-Q.jpg) |
+| Exposes | occupancy, battery_low, battery, sensitivity, keep_time, linkquality |
+| Picture | ![Tuya ZM-35H-Q](https://www.zigbee2mqtt.io/images/devices/ZM-35H-Q.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -40,6 +40,7 @@ typically. Instead, they will be queued and sent on the next occasion.
 
 
 
+
 ## Exposes
 
 ### Occupancy (binary)
@@ -48,20 +49,14 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
-
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -74,7 +69,7 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
-### Keep_time (enum)
+### Keep time (enum)
 PIR keep time in seconds.
 Value can be found in the published state on the `keep_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keep_time": ""}`.

@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_water_sensor control via MQTT"
-description: "Integrate your TuYa TS0601_water_sensor via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_water_sensor control via MQTT"
+description: "Integrate your Tuya TS0601_water_sensor via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-09-01T18:11:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_water_sensor
+# Tuya TS0601_water_sensor
 
 |     |     |
 |-----|-----|
 | Model | TS0601_water_sensor  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Water leak sensor |
 | Exposes | water_leak, linkquality |
-| Picture | ![TuYa TS0601_water_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_water_sensor.jpg) |
+| Picture | ![Tuya TS0601_water_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_water_sensor.png) |
 | White-label | Neo NAS-WS02B0 |
 
 
@@ -30,13 +30,14 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
-### Water_leak (binary)
+### Water leak (binary)
 Indicates whether the device detected a water leak.
 Value can be found in the published state on the `water_leak` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` water_leak is ON, if `false` OFF.
+If value equals `true` water leak is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

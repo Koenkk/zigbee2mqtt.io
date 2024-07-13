@@ -19,13 +19,14 @@ pageClass: device-page
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS multipurpose ToF sensor |
 | Exposes | battery, voltage, status, people, rf_pairing_on, counting_freeze, tof_init, led_state, rf_state, transaction, fast_in, fast_out, linkquality |
-| Picture | ![ShinaSystem CSM-300ZB_V2](https://www.zigbee2mqtt.io/images/devices/CSM-300ZB_V2.jpg) |
+| Picture | ![ShinaSystem CSM-300ZB_V2](https://www.zigbee2mqtt.io/images/devices/CSM-300ZB_V2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -35,7 +36,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -60,40 +61,40 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"people": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
-### Rf_pairing_on (enum)
+### Rf pairing on (enum)
 Run RF pairing mode.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"rf_pairing_on": NEW_VALUE}`.
 The possible values are: `run`.
 
-### Counting_freeze (binary)
+### Counting freeze (binary)
 Counting Freeze ON/OFF, not reporting people value when is ON.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"counting_freeze": NEW_VALUE}`.
-If value equals `ON` counting_freeze is ON, if `OFF` OFF.
+If value equals `ON` counting freeze is ON, if `OFF` OFF.
 
-### Tof_init (enum)
+### Tof init (enum)
 ToF sensor initial.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"tof_init": NEW_VALUE}`.
 The possible values are: `initial`.
 
-### Led_state (binary)
+### Led state (binary)
 Indicate LED enable/disable, default : enable.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_state": NEW_VALUE}`.
-If value equals `enable` led_state is ON, if `disable` OFF.
+If value equals `enable` led state is ON, if `disable` OFF.
 
-### Rf_state (binary)
+### Rf state (binary)
 RF function enable/disable, default : disable.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"rf_state": NEW_VALUE}`.
-If value equals `enable` rf_state is ON, if `disable` OFF.
+If value equals `enable` rf state is ON, if `disable` OFF.
 
 ### Transaction (enum)
 Transaction interval, default : 400ms.
@@ -102,19 +103,19 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"transaction": NEW_VALUE}`.
 The possible values are: `0ms`, `200ms`, `400ms`, `600ms`, `800ms`, `1,000ms`.
 
-### Fast_in (binary)
+### Fast in (binary)
 Fast process enable/disable when people 0 to 1. default : enable.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fast_in": NEW_VALUE}`.
-If value equals `enable` fast_in is ON, if `disable` OFF.
+If value equals `enable` fast in is ON, if `disable` OFF.
 
-### Fast_out (binary)
+### Fast out (binary)
 Fast process enable/disable when people 1 to 0. default : enable.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fast_out": NEW_VALUE}`.
-If value equals `enable` fast_out is ON, if `disable` OFF.
+If value equals `enable` fast out is ON, if `disable` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
