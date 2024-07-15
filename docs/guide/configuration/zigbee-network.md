@@ -26,14 +26,13 @@ advanced:
   pan_id: 0x1a62
   # Optional: Zigbee extended pan ID, GENERATE will make Zigbee2MQTT generate a new extended panID on next startup (default: shown below)
   ext_pan_id: [0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD]
-  TODO
   # Optional: Zigbee channel, changing might require re-pairing of some devices (see docs below). (Note: use a ZLL channel: 11, 15, 20, or 25 to avoid problems)
   # (default: 11)
   channel: 11
   # Optional: network encryption key
   # GENERATE will make Zigbee2MQTT generate a new network key on next startup
   # Note: changing requires repairing of all devices (default: shown below)
-  network_key: [ 1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13 ]
+  network_key: [1, 3, 5, 7, 9, 11, 13, 15, 0, 2, 4, 6, 8, 10, 12, 13]
 ```
 
 ::: tip
@@ -47,7 +46,11 @@ channel](../../advanced/zigbee/02_improve_network_range_and_stability.html#reduc
 
 ### Changing the Zigbee channel
 
-Changing the channel of an existing Zigbee network is supported. In Zigbee, this is done by broadcasting a network update indicating the channel change. However, there is a caveat: devices that are asleep during the broadcast will not switch to the new channel and will thus become unreachable. These are typically battery-powered end devices, and the only way to move them to the new channel is by re-pairing them.
+Changing the channel of an existing Zigbee network is supported. In Zigbee, this is done by broadcasting a network update indicating the channel change. Devices that are asleep during the broadcast (usually battery powered end devices) will not switch immediately, but the next time they wake-up. It is therefore adviced to trigger them after the channel change.
+
+::: warning
+Not all Zigbee devices might support a channel change, in case devices become unresponsive after the channel change, it is advised to re-pair them.
+:::
 
 ::: warning
 Changing channels is only supported for the `zstack` and `ember` adapter.

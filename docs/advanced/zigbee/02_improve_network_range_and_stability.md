@@ -29,7 +29,7 @@ RF connection between the adapter and other devices also depends on the way it i
 
 ## Reduce Wi-Fi interference by changing the Zigbee channel
 
-**Changing the Zigbee channel might require repairing some of your devices, read the [documentation for more info](../../guide/configuration/zigbee-network.md#changing-the-zigbee-channel)**
+**Changing the Zigbee channel might require re-pairing some of your devices, read the [documentation for more info](../../guide/configuration/zigbee-network.md#changing-the-zigbee-channel)**
 
 As Wi-Fi and Zigbee both operate on the same frequency space (2.4 GHz), they can interfere with each other. By using the correct Zigbee channel, interference with Wi-Fi can (partly) be avoided. A good article explaining this is [Zigbee and Wi-Fi Coexistence](https://www.metageek.com/training/resources/zigbee-wifi-coexistence/).
 
