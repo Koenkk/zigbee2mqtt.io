@@ -46,10 +46,10 @@ channel](../../advanced/zigbee/02_improve_network_range_and_stability.html#reduc
 
 ### Changing the Zigbee channel
 
-Changing the channel of an existing Zigbee network is supported. In Zigbee, this is done by broadcasting a network update indicating the channel change. Devices that are asleep during the broadcast (usually battery powered end devices) will not switch immediately, but the next time they wake-up. It is therefore adviced to trigger them after the channel change.
+Changing the channel of an existing Zigbee network is supported. In Zigbee, this is done by broadcasting a network update indicating the channel change. Devices that are asleep during the broadcast (usually battery powered end devices) will not switch immediately, but the next time they wake-up. It is therefore advised to trigger them after the channel change.
 
 ::: warning
-Not all Zigbee devices might support a channel change, in case devices become unresponsive after the channel change, it is advised to re-pair them.
+Some Zigbee devices do not support changing channels. In case a device remains unresponsive several minutes after the change, and after having been triggered/woken up, you may have to re-pair it manually.
 :::
 
 ::: warning
