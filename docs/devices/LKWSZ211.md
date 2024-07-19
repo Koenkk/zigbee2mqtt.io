@@ -1,7 +1,7 @@
 ---
 title: "Adaprox LKWSZ211 control via MQTT"
 description: "Integrate your Adaprox LKWSZ211 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-01-31T19:37:46
+addedAt: 2024-07-19T08:55:00.564Z
 pageClass: device-page
 ---
 
