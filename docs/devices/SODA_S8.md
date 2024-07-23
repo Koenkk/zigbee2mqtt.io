@@ -32,7 +32,6 @@ The handles are from [SODA GmBh](https://soda-gmbh.de/) and sold on [Amazon Germ
 * To pair, press left button while inserting the batteries.
 
 * To reset, press both buttons while inserting batteries.
-
 <!-- Notes END: Do not edit below this line -->
 
 
