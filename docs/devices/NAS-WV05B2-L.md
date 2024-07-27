@@ -1,6 +1,6 @@
 ---
-title: "NEO NAS-WV03B2 control via MQTT"
-description: "Integrate your NEO NAS-WV03B2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "NEO NAS-WV05B2-L control via MQTT"
+description: "Integrate your NEO NAS-WV05B2-L via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# NEO NAS-WV03B2
+# NEO NAS-WV05B2-L
 
 |     |     |
 |-----|-----|
-| Model | NAS-WV03B2  |
+| Model | NAS-WV05B2-L  |
 | Vendor  | [NEO](/supported-devices/#v=NEO)  |
 | Description | Smart sprinkler timer |
-| Exposes | switch (state), status, countdown, countdown_left, child_lock, battery_percentage, linkquality |
-| Picture | ![NEO NAS-WV03B2](https://www.zigbee2mqtt.io/images/devices/NAS-WV03B2.png) |
+| Exposes | switch (state), status, countdown, countdown_left, water_total, water_current, current_switch, reset_switch, child_lock, battery_percentage, linkquality |
+| Picture | ![NEO NAS-WV05B2-L](https://www.zigbee2mqtt.io/images/devices/NAS-WV05B2-L.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -57,6 +57,32 @@ Value can be found in the published state on the `countdown_left` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `1` and the maximum value is `60`.
 The unit of this value is `min`.
+
+### Water total (numeric)
+Water total (L).
+Value can be found in the published state on the `water_total` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `L`.
+
+### Water current (numeric)
+Current water flow (L/min).
+Value can be found in the published state on the `water_current` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `L/min`.
+
+### Current switch (binary)
+Flow switch.
+Value can be found in the published state on the `current_switch` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_switch": NEW_VALUE}`.
+If value equals `ON` current switch is ON, if `OFF` OFF.
+
+### Reset switch (binary)
+Total flow reset switch.
+Value can be found in the published state on the `reset_switch` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_switch": NEW_VALUE}`.
+If value equals `ON` reset switch is ON, if `OFF` OFF.
 
 ### Child lock (binary)
 Child lock.
