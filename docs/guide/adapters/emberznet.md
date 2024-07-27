@@ -1,6 +1,10 @@
 # EmberZNet adapters (Silicon Labs)
 
-Currently supported firmware version: 7.4.x
+Currently supported firmware version: 7.4.x, 8.0.x
+
+::: warning ATTENTION
+Use of 8.0.0 is currently not recommended due to some pending firmware issues that may affect stability on networks with spamming devices.
+:::
 
 Firmware release notes: [https://www.silabs.com/developers/zigbee-emberznet?tab=documentation](https://www.silabs.com/developers/zigbee-emberznet?tab=documentation)
 
@@ -32,10 +36,11 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
 
 - Web-based
   - Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
-  - Nabu Casa Home Assistant: [SkyConnect Flasher](https://skyconnect.home-assistant.io/firmware-update/)
+  - For SkyConnect by [@NabuCasa](https://github.com/NabuCasa): [SkyConnect Flasher](https://skyconnect.home-assistant.io/firmware-update/)
   - SMLight: [Flasher](https://smlight.tech/flasher/)
 - Command-line based:
-  - Multi-devices by Nabu Casa: [Universal Silicon Labs Flasher](https://github.com/NabuCasa/universal-silabs-flasher) (also available via [Home Assistant add-on](https://github.com/home-assistant/addons/tree/master/silabs_flasher))
+  - Multi-devices by [@NabuCasa](https://github.com/NabuCasa): [Universal Silicon Labs Flasher](https://github.com/NabuCasa/universal-silabs-flasher) (also available via [Home Assistant add-on](https://github.com/home-assistant/addons/tree/master/silabs_flasher))
+  - Multi-devices by [@Nerivec](https://github.com/Nerivec/): [Ember ZLI](https://github.com/Nerivec/ember-zli)
 - Other:
   - Standalone J-Link Flash Tool (also included in [Simplicity Studio](https://www.silabs.com/developers/simplicity-studio)): [Simplicity Commander](https://www.silabs.com/developers/simplicity-studio/simplicity-commander)
 - Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
@@ -222,6 +227,26 @@ Failed request. Message should be self-explanatory, and give a `status` indicati
 
 NCP Fatal Error. The coordinator failed (the reason should be given in the message). Zigbee2MQTT will attempt to reset it and resume communication. If unsuccessful, Zigbee2MQTT will be stopped completely and the system's watchdog (if any) will attempt to restart it.
 
+## Tools
+
+### Ember ZLI
+
+[https://github.com/Nerivec/ember-zli/](https://github.com/Nerivec/ember-zli/)
+
+NodeJS command line tool that allows firmware flashing, interacting with the adapter's stack, sniffing, etc. using [zigbee-herdsman](https://github.com/Koenkk/zigbee-herdsman/). Check out the [Wiki](https://github.com/Nerivec/ember-zli/wiki) for more details.
+
+### Bellows CLI
+
+[https://github.com/zigpy/bellows](https://github.com/zigpy/bellows)
+
+Python command line tool that allows interacting with the adapter's stack.
+
+### Zigbee2MQTT Ember Helper
+
+[https://nerivec.github.io/z2m-ember-helper/](https://nerivec.github.io/z2m-ember-helper/)
+
+Analyze log files in your browser and get an automated review of your network.
+
 ## [EXPERT] Customizing stack configuration
 
 ::: warning ATTENTION
@@ -244,16 +269,6 @@ Format, available and default values are as below:
   "CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD": 1,
   "CONCENTRATOR_MAX_HOPS": 0,
   "MAX_END_DEVICE_CHILDREN": 32,
-  "APS_UNICAST_MESSAGE_COUNT": 32,
-  "RETRY_QUEUE_SIZE": 16,
-  "ADDRESS_TABLE_SIZE": 16,
-  "TRUST_CENTER_ADDRESS_CACHE_SIZE": 2,
-  "KEY_TABLE_SIZE": 0,
-  "BINDING_TABLE_SIZE": 32,
-  "BROADCAST_TABLE_SIZE": 15,
-  "MULTICAST_TABLE_SIZE": 16,
-  "NEIGHBOR_TABLE_SIZE": 26,
-  "SOURCE_ROUTE_TABLE_SIZE": 200,
   "TRANSIENT_DEVICE_TIMEOUT": 10000,
   "END_DEVICE_POLL_TIMEOUT": 8,
   "TRANSIENT_KEY_TIMEOUT_S": 300
@@ -262,7 +277,7 @@ Format, available and default values are as below:
 
 Any value that is omitted from the JSON file, invalid or out of range, will use the default instead.
 
-Documentation on these values and their behavior is documented in [SiLabs UG100 - 2.3.1](https://www.silabs.com/documents/public/user-guides/ug100-ezsp-reference-guide.pdf).
+Documentation on these values and their behavior can be found in [SiLabs UG100 - 2.3.1 PDF](https://www.silabs.com/documents/public/user-guides/ug100-ezsp-reference-guide.pdf) and [concentrator article](https://community.silabs.com/s/article/how-does-the-concentrator-plugin-work-x?language=en_US).
 
 The driver further restricts values to the below:
 - CONCENTRATOR_RAM_TYPE: 'high' or 'low'
@@ -272,18 +287,8 @@ The driver further restricts values to the below:
 - CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD: min 1, max 100
 - CONCENTRATOR_MAX_HOPS: min 0, max 30
 - MAX_END_DEVICE_CHILDREN: min 6, max 64
-- APS_UNICAST_MESSAGE_COUNT: min 1, max 255
-- RETRY_QUEUE_SIZE: min 0, max 255
-- ADDRESS_TABLE_SIZE: min 1, max 250
-- TRUST_CENTER_ADDRESS_CACHE_SIZE: min 0, max 4
-- KEY_TABLE_SIZE: min 0, max 127
-- BINDING_TABLE_SIZE: min 0, max 127
-- BROADCAST_TABLE_SIZE: min 15, max 254
-- MULTICAST_TABLE_SIZE: min 5, max 250
-- NEIGHBOR_TABLE_SIZE: 16 or 26
-- SOURCE_ROUTE_TABLE_SIZE: min 0, max 254
 - TRANSIENT_DEVICE_TIMEOUT: min 0, max 65535
 - END_DEVICE_POLL_TIMEOUT: min 0, max 14
 - TRANSIENT_KEY_TIMEOUT_S: min 0, max 65535
 
-**Note that values are not only restricted by these ranges, but also by the memory available in your adapter. If any value (or combination) is too great for your adapter to handle, it will default to the firmware value(s) instead.**
+**Note that some values are not only restricted by these ranges, but also by the memory available in your adapter. If any value (or combination) is too great for your adapter to handle, it will default to the firmware value(s) instead.**

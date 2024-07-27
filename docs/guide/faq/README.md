@@ -73,9 +73,11 @@ Migration from one adapter to another requires backup and restore support which 
 Details about your network are stored in both the coordinator and files under the `data/` directory. To move your instance to another environment move the contents of the `data` directory and update the path to your coordinator in your `configuration.yaml`. Now you can start Zigbee2MQTT.
 
 ## What does and does not require repairing of all devices?
+
 ### Requires repairing
 You need to re-pair all you devices when:
-- Changing the network key (`network_key`), Zigbee channel (`channel`) or panID (`pan_id`)  in `configuration.yaml`.
+- Changing the network key (`network_key`) or panID (`pan_id`)  in `configuration.yaml`.
+- Changing the Zigbee channel (`channel`) in the `configuration.yaml` might require repairing **some** devices, read the [documentation for more info](../configuration/zigbee-network.md#changing-the-zigbee-channel).
 - Switching between adapters requires repairing, **except when**:
   - When adapters are the same repairing is **not** required (e.g. CC2531 -> CC2531)
   - Switching from a CC2530 or CC2531 based adapter to a CC2538/CC2652/CC1352 based adapter does **not** require repairing (e.g. CC2531 -> CC2652)
