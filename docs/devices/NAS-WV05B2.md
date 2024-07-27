@@ -1,6 +1,6 @@
 ---
-title: "NEO NAS-WV03B2 control via MQTT"
-description: "Integrate your NEO NAS-WV03B2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "NEO NAS-WV05B2 control via MQTT"
+description: "Integrate your NEO NAS-WV05B2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 
 pageClass: device-page
 ---
@@ -11,14 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# NEO NAS-WV03B2
+# NEO NAS-WV05B2
 
 |     |     |
 |-----|-----|
-| Model | NAS-WV03B2  |
+| Model | NAS-WV05B2  |
 | Vendor  | [NEO](/supported-devices/#v=NEO)  |
 | Description | Smart sprinkler timer |
-| Picture | ![NEO NAS-WV03B2](https://www.zigbee2mqtt.io/images/devices/NAS-WV03B2.png) |
+| Exposes | switch (state), status, countdown, countdown_left, water_total, water_current, current_switch, reset_switch, child_lock, battery_percentage, linkquality |
+| Picture | ![NEO NAS-WV05B2](https://www.zigbee2mqtt.io/images/devices/NAS-WV05B2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -30,6 +31,11 @@ pageClass: device-page
 
 
 ## Exposes
+
+### Switch 
+The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
+To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
 ### Status (enum)
 Status.
@@ -51,6 +57,32 @@ Value can be found in the published state on the `countdown_left` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `1` and the maximum value is `60`.
 The unit of this value is `min`.
+
+### Water total (numeric)
+Water total (gal).
+Value can be found in the published state on the `water_total` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `gal`.
+
+### Water current (numeric)
+Current water flow (gal/min).
+Value can be found in the published state on the `water_current` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `gal/min`.
+
+### Current switch (binary)
+Flow switch.
+Value can be found in the published state on the `current_switch` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_switch": NEW_VALUE}`.
+If value equals `ON` current switch is ON, if `OFF` OFF.
+
+### Reset switch (binary)
+Total flow reset switch.
+Value can be found in the published state on the `reset_switch` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_switch": NEW_VALUE}`.
+If value equals `ON` reset switch is ON, if `OFF` OFF.
 
 ### Child lock (binary)
 Child lock.
