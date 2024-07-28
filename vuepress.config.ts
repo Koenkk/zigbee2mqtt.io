@@ -6,7 +6,7 @@ import defaultTheme from '@vuepress/theme-default';
 import webpackBundler from "@vuepress/bundler-webpack";
 import * as DefinePlugin from "webpack/lib/DefinePlugin.js";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
-import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
+import { sitemapPlugin } from '@vuepress/plugin-sitemap';
 import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { defineUserConfig } from "vuepress";

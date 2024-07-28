@@ -31,19 +31,19 @@ jobs:
 
       - name: Install dependencies 🌐
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
-#      - name: Set DEVELOP_BRANCH env var
-#        if: github.ref == 'refs/heads/develop'
-#        run: |
-#          echo "DEVELOP_BRANCH=yes" >> $GITHUB_ENV
+      #      - name: Set DEVELOP_BRANCH env var
+      #        if: github.ref == 'refs/heads/develop'
+      #        run: |
+      #          echo "DEVELOP_BRANCH=yes" >> $GITHUB_ENV
 
       - name: Build 🛠
         if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
-        run: npm run build
+        run: pnpm run build
 
       - name: Run tests 🩺
-        run: npm run test
+        run: pnpm run test
 
       - name: Add build.txt 🗓
         if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
