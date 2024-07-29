@@ -40,8 +40,7 @@ Set `network_key: GENERATE` to let Zigbee2MQTT generate a new random key on the 
 :::
 
 ::: tip
-[Reduce Wi-Fi interference by changing the Zigbee
-channel](../../advanced/zigbee/02_improve_network_range_and_stability.html#reduce-wi-fi-interference-by-changing-the-zigbee-channel.md)
+[Reduce Wi-Fi interference by changing the Zigbee channel](../../advanced/zigbee/02_improve_network_range_and_stability.md#reduce-wi-fi-interference-by-changing-the-zigbee-channel)
 :::
 
 ### Changing the Zigbee channel

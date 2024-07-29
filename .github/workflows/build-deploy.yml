@@ -12,38 +12,26 @@ jobs:
       - name: Checkout 🚚
         uses: actions/checkout@v4
 
+      - name: Setup pnpm ⚗
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
       - name: Setup Node.js ⚗
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      - name: Determine node version №
-        id: node-version
-        run: |
-          echo "::set-output name=version::$(node -v)"
-
-      - name: Restore Cache 📦
-        uses: actions/cache@v4
-        id: cache
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ steps.node-version.outputs.version }}-${{ hashFiles('package-lock.json') }}
+          cache: pnpm
 
       - name: Install dependencies 🌐
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci
-
-#      - name: Set DEVELOP_BRANCH env var
-#        if: github.ref == 'refs/heads/develop'
-#        run: |
-#          echo "DEVELOP_BRANCH=yes" >> $GITHUB_ENV
+        run: pnpm install --frozen-lockfile
 
       - name: Build 🛠
         if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
-        run: npm run build
+        run: pnpm run build
 
       - name: Run tests 🩺
-        run: npm run test
+        run: pnpm run test
 
       - name: Add build.txt 🗓
         if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
