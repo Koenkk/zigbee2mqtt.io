@@ -30,125 +30,126 @@
             |  to search for wall OR switch.
 </template>
 
-
 <script>
-import QIcon from "quasar/src/components/icon/QIcon";
-import QInput from "quasar/src/components/input/QInput";
-import QTooltip from "quasar/src/components/tooltip/QTooltip";
-import { defineComponent, ref, watch } from "vue";
+import QIcon from 'quasar/src/components/icon/QIcon';
+import QInput from 'quasar/src/components/input/QInput';
+import QTooltip from 'quasar/src/components/tooltip/QTooltip';
+import {defineComponent, ref, watch} from 'vue';
 import MultiSelect from '../components/multi-select.vue';
-import { exposes, vendors } from "../devices";
+import {exposes, vendors} from '../devices';
 import hashStore from '../hash-store';
 
 hashStore.arrayKeys.push('v');
 hashStore.arrayKeys.push('e');
 
 export default defineComponent({
-  name: "filters",
-  components: {
-    QInput, QTooltip, QIcon,
-    MultiSelect
-  },
-  props: ['modelValue'],
+    name: 'filters',
+    components: {
+        QInput,
+        QTooltip,
+        QIcon,
+        MultiSelect,
+    },
+    props: ['modelValue'],
 
-  setup(props, { emit }) {
-    const filtersFromHash = hashStore.parseHash();
+    setup(props, {emit}) {
+        const filtersFromHash = hashStore.parseHash();
 
-    const exposesFilter = ref(filtersFromHash.e || null);
-    const vendorsFilter = ref(filtersFromHash.v || null);
-    const searchFilter = ref(filtersFromHash.s || null);
+        const exposesFilter = ref(filtersFromHash.e || null);
+        const vendorsFilter = ref(filtersFromHash.v || null);
+        const searchFilter = ref(filtersFromHash.s || null);
 
-    const emptyArrToNull = ref => () => {
-      if (Array.isArray(ref.value) && ref.value.length === 0) {
-        ref.value = null;
-      }
-    };
+        const emptyArrToNull = (ref) => () => {
+            if (Array.isArray(ref.value) && ref.value.length === 0) {
+                ref.value = null;
+            }
+        };
 
-    watch(() => props.modelValue, modelValue => {
-      if(!modelValue) return;
-      const { exposes, vendors, search } = modelValue;
-      if(exposes) exposesFilter.value = exposes;
-      if(vendors) vendorsFilter.value = vendors;
-      if(search) searchFilter.value = search;
-    });
+        watch(
+            () => props.modelValue,
+            (modelValue) => {
+                if (!modelValue) return;
+                const {exposes, vendors, search} = modelValue;
+                if (exposes) exposesFilter.value = exposes;
+                if (vendors) vendorsFilter.value = vendors;
+                if (search) searchFilter.value = search;
+            },
+        );
 
-    const emitFilters = () => {
-      hashStore.updateHash({
-        e: exposesFilter.value,
-        v: vendorsFilter.value,
-        s: searchFilter.value,
-      });
+        const emitFilters = () => {
+            hashStore.updateHash({
+                e: exposesFilter.value,
+                v: vendorsFilter.value,
+                s: searchFilter.value,
+            });
 
-      if(exposesFilter.value || vendorsFilter.value || searchFilter.value) {
-        emit('update:modelValue', {
-          exposes: exposesFilter.value,
-          vendors: vendorsFilter.value,
-          search: searchFilter.value,
-        });
-      } else {
-        emit('update:modelValue', null);
-      }
-    }
-    emitFilters();
+            if (exposesFilter.value || vendorsFilter.value || searchFilter.value) {
+                emit('update:modelValue', {
+                    exposes: exposesFilter.value,
+                    vendors: vendorsFilter.value,
+                    search: searchFilter.value,
+                });
+            } else {
+                emit('update:modelValue', null);
+            }
+        };
+        emitFilters();
 
-    // Clear using chip-remove results in empty arrays
-    watch(exposesFilter, emptyArrToNull(exposesFilter));
-    watch(vendorsFilter, emptyArrToNull(vendorsFilter));
+        // Clear using chip-remove results in empty arrays
+        watch(exposesFilter, emptyArrToNull(exposesFilter));
+        watch(vendorsFilter, emptyArrToNull(vendorsFilter));
 
-    watch(exposesFilter, emitFilters);
-    watch(vendorsFilter, emitFilters);
-    watch(searchFilter, emitFilters);
+        watch(exposesFilter, emitFilters);
+        watch(vendorsFilter, emitFilters);
+        watch(searchFilter, emitFilters);
 
-    // const searchKeyHandler = (ev) => {
-    //   if (ev.key === '/' && ev.target.tagName !== 'INPUT') {
-    //     ev.preventDefault();
-    //     document.querySelector('.search-filter input').focus();
-    //   }
-    // };
-    //
-    // onMounted(() => {
-    //   document.body.addEventListener('keypress', searchKeyHandler);
-    // });
-    //
-    // onBeforeUnmount(() => {
-    //   document.removeEventListener('keypress', searchKeyHandler);
-    // })
+        // const searchKeyHandler = (ev) => {
+        //   if (ev.key === '/' && ev.target.tagName !== 'INPUT') {
+        //     ev.preventDefault();
+        //     document.querySelector('.search-filter input').focus();
+        //   }
+        // };
+        //
+        // onMounted(() => {
+        //   document.body.addEventListener('keypress', searchKeyHandler);
+        // });
+        //
+        // onBeforeUnmount(() => {
+        //   document.removeEventListener('keypress', searchKeyHandler);
+        // })
 
-    return {
-      // searchPlaceholder: ref('Press / to search'),
-      exposes,
-      vendors,
-      exposesFilter,
-      vendorFilter: vendorsFilter,
-      searchFilter,
-    };
-  }
+        return {
+            // searchPlaceholder: ref('Press / to search'),
+            exposes,
+            vendors,
+            exposesFilter,
+            vendorFilter: vendorsFilter,
+            searchFilter,
+        };
+    },
 });
 </script>
 
-
 <style lang="scss">
 @import 'quasar/src/css/variables.sass';
-@import "quasar/src/components/tooltip/QTooltip";
+@import 'quasar/src/components/tooltip/QTooltip';
 
 .device-filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-  > div {
-    margin-top: 10px !important;
-    width: 345px;
-    @media screen and (max-width: 720px) {
-      margin-right: 0;
+    > div {
+        margin-top: 10px !important;
+        width: 345px;
+        @media screen and (max-width: 720px) {
+            margin-right: 0;
+        }
+        @media screen and (min-width: 720px) and (max-width: 1080px) {
+            &:last-child {
+                flex-grow: 1;
+            }
+        }
     }
-    @media screen and (min-width: 720px) and (max-width: 1080px) {
-      &:last-child {
-        flex-grow: 1;
-      }
-    }
-
-  }
-
 }
 </style>

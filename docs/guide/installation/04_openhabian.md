@@ -5,7 +5,9 @@ next: ../configuration/
 # openHABian
 
 ## Installation
-If you are using openHABian on a Raspberry Pi then the installation is pretty easy: 
+
+If you are using openHABian on a Raspberry Pi then the installation is pretty easy:
+
 1. Launch the configuration utility with `sudo openhabian-config`.
 1. Under "Select Branch" choose option "main".
 1. Go to "optional components".
@@ -13,8 +15,8 @@ If you are using openHABian on a Raspberry Pi then the installation is pretty ea
 1. After selecting your Zigbee USB adapter you have to enter your MQTT username and if necessary a password.
 1. After about 3 to 4 minutes Zigbee2MQTT should be up and running. You can test if the configuration page is available on port 8081.
 
+## Update
 
-## Update 
 1. Go to "optional components".
 2. Select "Zigbee2MQTT".
 3. After are asked if you want to update.
