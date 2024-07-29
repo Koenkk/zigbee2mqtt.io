@@ -27,18 +27,18 @@ jobs:
               run: pnpm install --frozen-lockfile
 
             - name: Lint
-              if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
+              if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
               run: pnpm run pretty:check
 
             - name: Build 🛠
-              if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
+              if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
               run: pnpm run build
 
             - name: Run tests 🩺
               run: pnpm run test
 
             - name: Add build.txt 🗓
-              if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
+              if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
               run: |
                   git log --pretty=format:'%h' -n 1 > dist/build.txt
                   echo >> dist/build.txt
@@ -52,15 +52,3 @@ jobs:
                   folder: dist # The folder the action should deploy.
                   single-commit: true
                   clean: true
-#          clean-exclude: |
-#            develop
-
-#      - name: Deploy to /develop 🚀
-#        if: github.ref == 'refs/heads/develop'
-#        uses: JamesIves/github-pages-deploy-action@v4.6.3
-#        with:
-#          branch: gh-pages
-#          folder: dist
-#          target-folder: develop
-#          single-commit: true
-#          clean: true
