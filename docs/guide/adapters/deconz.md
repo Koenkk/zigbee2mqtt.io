@@ -1,5 +1,16 @@
 # deCONZ (Dresden Elektronik)
 
+::: warning ATTENTION
+Various features are not supported by this adapter, in case you depend on these features, consider a different adapter.
+
+-   [Changing the channel](../configuration/zigbee-network.md#changing-the-zigbee-channel), changing requires re-pairing all devices.
+-   Adding [install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd), which is required to pair some devices.
+-   [Backups](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestbackup)
+-   Inter-PAN, which is required for [touchlink](../../guide/usage/touchlink.md)
+-   Changing the [transmit power](../../guide/configuration/adapter-settings.md)
+
+:::
+
 ### Configuration
 
 ```yaml
