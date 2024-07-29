@@ -21,7 +21,6 @@
     "quasar": "2.16.6"
   },
   "devDependencies": {
-    "@types/glob": "8.1.0",
     "@vuepress/bundler-webpack": "2.0.0-rc.14",
     "@vuepress/client": "2.0.0-rc.14",
     "@vuepress/plugin-docsearch": "2.0.0-rc.40",
