@@ -17,8 +17,8 @@
 
 <script>
 import { darkModeSymbol } from "@vuepress/theme-default/lib/client/composables/useDarkMode.js"
-import Dark from "quasar/src/plugins/Dark";
-import SessionStorage from "quasar/src/plugins/SessionStorage";
+import Dark from "quasar/src/plugins/dark/Dark";
+import SessionStorage from "quasar/src/plugins/storage/SessionStorage";
 import { inject, onMounted, ref, watch } from 'vue'
 import Device from "./components/device.vue";
 import Filters from './components/filters.vue'

@@ -6,7 +6,7 @@ import defaultTheme from '@vuepress/theme-default';
 import webpackBundler from "@vuepress/bundler-webpack";
 import * as DefinePlugin from "webpack/lib/DefinePlugin.js";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
-import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
+import { sitemapPlugin } from '@vuepress/plugin-sitemap';
 import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { defineUserConfig } from "vuepress";
@@ -84,7 +84,7 @@ const conf = defineUserConfig({
     repo: 'Koenkk/zigbee2mqtt.io',
     repoLabel: 'GitHub (docs)',
     docsBranch: isDevelop ? 'develop' : 'master',
-    editLinkText: '✏ Help to make the docu better and edit this page on Github ✌',
+    editLinkText: 'Help to make the docu better and edit this page on Github ✌',
     logo: '/logo.png',
     docsDir: 'docs',
     navbar,
