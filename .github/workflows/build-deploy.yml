@@ -23,7 +23,7 @@ jobs:
           version: 9
           run_install:
             args:
-              - --frozen-lockfile
+              - "--frozen-lockfile"
 
       - name: Build 🛠
         if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
