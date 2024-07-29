@@ -5,7 +5,7 @@ const notes = {
 ## Warning: degrades network performance
 AwoX devices are known to cause network instability. If your Zigbee network has poor performance or you are seeing errors like \`NO_NETWORK_ROUTE\` you should remove this device from the network.
 It [may help](https://github.com/Koenkk/zigbee2mqtt/discussions/18366) to OTA update your device via the "AwoX HomeControl" app over Bluetooth.
-`
+`;
         }
     },
     hueRouterPair: (definition) => {
@@ -78,7 +78,7 @@ Rules:
 - When setting \`hue_power_on_behavior\` = \`on\`, any not provided values will be reset to their factory defaults
 
 Note: if \`hue_power_on_behavior\` is set to \`off\`, then the only way to turn the bulb on will be through a paired smart device (see pairing above). You will NOT be able to turn the bulb on by sequentially switching power on and off.    
-`
+`;
         }
     },
     sengledBulbs: (definition) => {
@@ -86,11 +86,14 @@ Note: if \`hue_power_on_behavior\` is set to \`off\`, then the only way to turn 
             return `
 ## Device Type
 Sengled bulbs are Zigbee [end devices](/advanced/zigbee/01_zigbee_network.html#end-device), not [routers](/advanced/zigbee/01_zigbee_network.html#router), and therefore will not extend the reach of your Zigbee network. For more information see the [Sengled FAQ](https://support.sengled.com/hc/en-us/articles/115010871308-Do-any-Sengled-Zigbee-devices-act-as-Zigbee-repeaters-).
-`
+`;
         }
     },
-}
+};
 
 export function getNotes(definition) {
-    return Object.values(notes).map((n) => n(definition)).filter((n) => n).join('\n');
+    return Object.values(notes)
+        .map((n) => n(definition))
+        .filter((n) => n)
+        .join('\n');
 }

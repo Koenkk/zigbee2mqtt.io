@@ -16,9 +16,10 @@ The number of configured delays is the de facto number of times the watchdog wil
 The watchdog will retry after 1min on first failure, then after 5min on second failure, then after 15min on third failure, then after 30min on fourth failure, then after 60min on fifth failure, then exit if sixth start fails. Any successful start resets that to the beginning.
 
 In addition, the following behaviors always apply:
-- The watchdog will only trigger on failure after the initial (manual) start is successful.
-- A problem with settings will always ignore the watchdog and stop Z2M.
-- A manual stop/restart (like `CTRL+C`) will ignore the watchdog to comply with user intent.
+
+-   The watchdog will only trigger on failure after the initial (manual) start is successful.
+-   A problem with settings will always ignore the watchdog and stop Z2M.
+-   A manual stop/restart (like `CTRL+C`) will ignore the watchdog to comply with user intent.
 
 ::: tip TIP
 In non-containerized environments, to handle NodeJS crashes, you will need a dedicated watchdog program on your operating system to allow restarting the Zigbee2MQTT process automatically.
@@ -47,10 +48,8 @@ Z2M_WATCHDOG=0.5,3,6,15
 
 Start Zigbee2MQTT with the watchdog's retry delays as: 30sec, 3min, 6min, 15min. This will result in 4 retry attempts.
 
-
 ```bash
 Z2M_WATCHDOG=1
 ```
 
 Start Zigbee2MQTT with the watchdog's retry delays as: 1min. This will result in 1 retry attempt.
-
