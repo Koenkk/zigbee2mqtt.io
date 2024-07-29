@@ -21,9 +21,8 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 9
-          run_install:
-            args:
-              - "--frozen-lockfile"
+          run_install: |
+            - args: [--frozen-lockfile]
 
       - name: Build 🛠
         if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
