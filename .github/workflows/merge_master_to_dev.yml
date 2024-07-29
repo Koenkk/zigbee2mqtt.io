@@ -1,4 +1,4 @@
-name: Merge master to develop
+name: Merge master to dev
 
 on:
     push:
@@ -10,10 +10,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
-            - name: Merge master -> develop
+            - name: Merge master -> dev
               uses: devmasx/merge-branch@master
               with:
                   type: now
                   head_to_merge: master
-                  target_branch: develop
+                  target_branch: dev
                   github_token: ${{ github.token }}
