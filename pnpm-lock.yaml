@@ -54,6 +54,9 @@ importers:
       image-size:
         specifier: 1.1.1
         version: 1.1.1
+      prettier:
+        specifier: 3.3.3
+        version: 3.3.3
       pug:
         specifier: 3.0.3
         version: 3.0.3
@@ -2605,6 +2608,11 @@ packages:
 
   preact@10.23.1:
     resolution: {integrity: sha512-O5UdRsNh4vdZaTieWe3XOgSpdMAmkIYBCT3VhQDlKrzyCm8lUYsk0fmVEvoQQifoOjFRTaHZO69ylrzTW2BH+A==}
+
+  prettier@3.3.3:
+    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   pretty-error@4.0.0:
     resolution: {integrity: sha512-AoJ5YMAcXKYxKhuJGdcvse+Voc6v1RgnsR3nWcYU7q4t6z0Q6T86sv5Zq8VIRbOWWFpvdGE83LtdSMNd+6Y0xw==}
@@ -6093,6 +6101,8 @@ snapshots:
       source-map-js: 1.2.0
 
   preact@10.23.1: {}
+
+  prettier@3.3.3: {}
 
   pretty-error@4.0.0:
     dependencies:

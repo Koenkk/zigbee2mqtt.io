@@ -26,6 +26,10 @@ jobs:
       - name: Install dependencies 🌐
         run: pnpm install --frozen-lockfile
 
+      - name: Lint
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
+        run: pnpm run pretty:check
+
       - name: Build 🛠
         if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
         run: pnpm run build
