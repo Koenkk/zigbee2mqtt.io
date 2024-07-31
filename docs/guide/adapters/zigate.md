@@ -23,7 +23,7 @@ serial:
     adapter: zigate
 ```
 
-[Other settings](../configuration/adapter-settings.md)
+Other supported settings are: `adapter_concurrent` and `transmit_power` ([docs](../configuration/adapter-settings.md)).
 
 ## Hardware
 
