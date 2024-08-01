@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | UFO-R11  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Universal smart IR remote control |
-| Exposes | switch (state), learned_ir_code, ir_code_to_send, linkquality, battery, voltage |
+| Exposes | learn_ir_code, learned_ir_code, ir_code_to_send, linkquality, battery, voltage |
 | Picture | ![Moes UFO-R11](https://www.zigbee2mqtt.io/images/devices/UFO-R11.png) |
 
 
@@ -57,10 +57,12 @@ Request:
 
 ## Exposes
 
-### Switch 
-The current state of this switch is in the published state under the `learn_ir_code` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learn_ir_code": "ON"}`, `{"learn_ir_code": "OFF"}` or `{"learn_ir_code": "undefined"}`.
+### Learn ir code (binary)
+Turn on to learn new IR code.
+Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"learn_ir_code": NEW_VALUE}`.
+If value equals `ON` learn ir code is ON, if `OFF` OFF.
 
 ### Learned ir code (text)
 The IR code learned by device.

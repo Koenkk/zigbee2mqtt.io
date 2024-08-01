@@ -1,7 +1,7 @@
 ---
 title: "NEO NAS-WV05B2-L control via MQTT"
 description: "Integrate your NEO NAS-WV05B2-L via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2024-08-01T18:23:33
 pageClass: device-page
 ---
 
@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | NAS-WV05B2-L  |
 | Vendor  | [NEO](/supported-devices/#v=NEO)  |
 | Description | Smart sprinkler timer |
-| Exposes | switch (state), status, countdown, countdown_left, water_total, water_current, current_switch, reset_switch, child_lock, battery_percentage, linkquality |
+| Exposes | switch (state), status, countdown, countdown_left, water_total, water_current, current_switch, reset_switch, child_lock, battery, linkquality |
 | Picture | ![NEO NAS-WV05B2-L](https://www.zigbee2mqtt.io/images/devices/NAS-WV05B2-L.png) |
 
 
@@ -91,9 +91,9 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
 If value equals `ON` child lock is ON, if `OFF` OFF.
 
-### Battery percentage (numeric)
-Battery percentage.
-Value can be found in the published state on the `battery_percentage` property.
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.

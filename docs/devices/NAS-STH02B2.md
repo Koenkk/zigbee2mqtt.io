@@ -1,7 +1,7 @@
 ---
 title: "NEO NAS-STH02B2 control via MQTT"
 description: "Integrate your NEO NAS-STH02B2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2024-08-01T18:23:33
 pageClass: device-page
 ---
 
@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | NAS-STH02B2  |
 | Vendor  | [NEO](/supported-devices/#v=NEO)  |
 | Description | Soil moisture, temperature, and ec |
-| Exposes | ec, fertility, humidity, temperature, temperature_f, temperature_sensitivity, humidity_sensitivity, temperature_alarm, humidity_alarm, max_temperature_alarm, min_temperature_alarm, max_humidity_alarm, min_humidity_alarm, schedule_periodic, battery_percentage, linkquality |
+| Exposes | ec, fertility, humidity, temperature, temperature_f, temperature_sensitivity, humidity_sensitivity, temperature_alarm, humidity_alarm, max_temperature_alarm, min_temperature_alarm, max_humidity_alarm, min_humidity_alarm, schedule_periodic, battery, linkquality |
 | Picture | ![NEO NAS-STH02B2](https://www.zigbee2mqtt.io/images/devices/NAS-STH02B2.png) |
 
 
@@ -145,9 +145,9 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `5` and the maximum value is `60`.
 The unit of this value is `min`.
 
-### Battery percentage (numeric)
-Battery percentage.
-Value can be found in the published state on the `battery_percentage` property.
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.

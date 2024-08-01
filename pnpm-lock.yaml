@@ -18,6 +18,9 @@ importers:
         specifier: 2.16.6
         version: 2.16.6
     devDependencies:
+      '@types/node':
+        specifier: 22.0.2
+        version: 22.0.2
       '@vuepress/bundler-webpack':
         specifier: 2.0.0-rc.14
         version: 2.0.0-rc.14(typescript@5.5.4)
@@ -74,7 +77,7 @@ importers:
         version: 6.0.2
       ts-node:
         specifier: 10.9.2
-        version: 10.9.2(@types/node@22.0.0)(typescript@5.5.4)
+        version: 10.9.2(@types/node@22.0.2)(typescript@5.5.4)
       typescript:
         specifier: 5.5.4
         version: 5.5.4
@@ -88,8 +91,8 @@ importers:
         specifier: 5.93.0
         version: 5.93.0
       zigbee-herdsman-converters:
-        specifier: 19.62.0
-        version: 19.62.0
+        specifier: 19.72.0
+        version: 19.72.0
 
 packages:
 
@@ -586,8 +589,8 @@ packages:
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
 
-  '@types/node@22.0.0':
-    resolution: {integrity: sha512-VT7KSYudcPOzP5Q0wfbowyNLaVR8QWUdw+088uFWwfvpY6uCWaXpqV6ieLAu9WBcnTa7H4Z5RLK8I5t2FuOcqw==}
+  '@types/node@22.0.2':
+    resolution: {integrity: sha512-yPL6DyFwY5PiMVEwymNeqUTKsDczQBJ/5T7W/46RwLU/VH+AA8aT5TZkvBviLKLbbm0hlfftEkGrNzfRk/fofQ==}
 
   '@types/qs@6.9.15':
     resolution: {integrity: sha512-uXHQKES6DQKKCLh441Xv/dwxOq1TVS3JPUMlEqoEglvlhR6Mxnlew/Xq/LRVHpLyk7iK3zODe1qYHIMltO7XGg==}
@@ -3341,11 +3344,11 @@ packages:
     resolution: {integrity: sha512-GQHQqAopRhwU8Kt1DDM8NjibDXHC8eoh1erhGAJPEyveY9qqVeXvVikNKrDz69sHowPMorbPUrH/mx8c50eiBQ==}
     engines: {node: '>=18'}
 
-  zigbee-herdsman-converters@19.62.0:
-    resolution: {integrity: sha512-rtS1kmuANiUH8qwwtQI+OtoIGcmKrjhglwaagDtgi3AOIQMW6yHD4qAbuvI7WbGlCdIKWJXrah5a/ylxzUIYHA==}
+  zigbee-herdsman-converters@19.72.0:
+    resolution: {integrity: sha512-wIRQOf4hDbfGaUxX1D4OjFWy8VdOiWent80kn2OlJbMLhUfzW6jn2ld0U4yQTdFckpkKPavKLHlLOPTYNp2EgA==}
 
-  zigbee-herdsman@0.50.1:
-    resolution: {integrity: sha512-vYIFI3bCrEVNmdVv/RrYxSVgvg9lF9SN3xlov6NOG+xYGXKmqHJ4HgSJXSdgC8DIKN291Fz2kjx+dCF4ye3zYg==}
+  zigbee-herdsman@0.55.3:
+    resolution: {integrity: sha512-8sAa7hIznlNZeOzsigvqnLdeWw86UA7PHjSRyPGc5tAjMKnpilbt/7UMNAW5B77+vTjZNv5rQ98iw34QclEH5Q==}
 
 snapshots:
 
@@ -3594,7 +3597,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
       '@types/yargs': 17.0.32
       chalk: 4.1.2
 
@@ -3755,20 +3758,20 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
 
   '@types/bonjour@3.5.13':
     dependencies:
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
 
   '@types/connect-history-api-fallback@1.5.4':
     dependencies:
       '@types/express-serve-static-core': 4.19.5
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
 
   '@types/debug@4.1.12':
     dependencies:
@@ -3788,7 +3791,7 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.5':
     dependencies:
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
       '@types/qs': 6.9.15
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -3803,7 +3806,7 @@ snapshots:
   '@types/fs-extra@11.0.4':
     dependencies:
       '@types/jsonfile': 6.1.4
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
 
   '@types/hash-sum@1.0.2': {}
 
@@ -3813,7 +3816,7 @@ snapshots:
 
   '@types/http-proxy@1.17.14':
     dependencies:
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
 
   '@types/istanbul-lib-coverage@2.0.6': {}
 
@@ -3829,7 +3832,7 @@ snapshots:
 
   '@types/jsonfile@6.1.4':
     dependencies:
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
 
   '@types/linkify-it@5.0.0': {}
 
@@ -3850,11 +3853,11 @@ snapshots:
 
   '@types/node-forge@1.3.11':
     dependencies:
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
 
   '@types/node@17.0.45': {}
 
-  '@types/node@22.0.0':
+  '@types/node@22.0.2':
     dependencies:
       undici-types: 6.11.1
 
@@ -3866,12 +3869,12 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 22.0.2
 
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
 
   '@types/serve-index@1.9.4':
     dependencies:
@@ -3880,12 +3883,12 @@ snapshots:
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
       '@types/send': 0.17.4
 
   '@types/sockjs@0.3.36':
     dependencies:
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
 
   '@types/web-bluetooth@0.0.20': {}
 
@@ -3893,7 +3896,7 @@ snapshots:
 
   '@types/ws@8.5.12':
     dependencies:
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -5509,7 +5512,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -5517,13 +5520,13 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -6624,14 +6627,14 @@ snapshots:
 
   ts-debounce@4.0.0: {}
 
-  ts-node@10.9.2(@types/node@22.0.0)(typescript@5.5.4):
+  ts-node@10.9.2(@types/node@22.0.2)(typescript@5.5.4):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.0.0
+      '@types/node': 22.0.2
       acorn: 8.12.1
       acorn-walk: 8.3.3
       arg: 4.1.3
@@ -6889,7 +6892,7 @@ snapshots:
 
   yoctocolors@2.1.1: {}
 
-  zigbee-herdsman-converters@19.62.0:
+  zigbee-herdsman-converters@19.72.0:
     dependencies:
       axios: 1.7.2
       buffer-crc32: 1.0.0
@@ -6897,19 +6900,18 @@ snapshots:
       iconv-lite: 0.6.3
       semver: 7.6.3
       tar-stream: 3.1.7
-      zigbee-herdsman: 0.50.1
+      zigbee-herdsman: 0.55.3
     transitivePeerDependencies:
       - debug
       - supports-color
 
-  zigbee-herdsman@0.50.1:
+  zigbee-herdsman@0.55.3:
     dependencies:
       '@serialport/bindings-cpp': 12.0.1
       '@serialport/parser-delimiter': 12.0.0
       '@serialport/stream': 12.0.0
       bonjour-service: 1.2.1
       debounce: 2.1.0
-      debug: 4.3.6
       fast-deep-equal: 3.1.3
       mixin-deep: 2.0.1
       mz: 2.7.0
