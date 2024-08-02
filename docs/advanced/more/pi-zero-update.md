@@ -49,8 +49,8 @@ umount /media/ubuntu/bootfs
 Mount the microsd in your mountpoint:
 ```bash
 # Use drive letter from before
-sudo mount -o rw /dev/sde1 /mnt
-sudo mount -o rw /dev/sde2 /mnt/boot
+sudo mount -o rw /dev/sdc1 /mnt
+sudo mount -o rw /dev/sdc2 /mnt/boot
 ```
 
 Mount the binds:
@@ -85,6 +85,11 @@ chroot /mnt /bin/bash
 ```
 
 ### Updating
+
+Login as your user:
+```bash
+su USER
+```
 
 Now you should be able to follow the same update steps as normally.
 
