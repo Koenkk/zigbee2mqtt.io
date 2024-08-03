@@ -291,7 +291,7 @@ automation:
                     {%- set find_integration = 'mqtt' %} 
                      {%- set devices = states | map(attribute='entity_id') | map('device_id') | unique | reject('eq',None) | list %}
                      {%- set ns = namespace(entities = []) %}
-                     {%- for device in devices %}
+                     {%- for device in devices if device_attr(device, 'identifiers') %}
                        {%- set ids = device_attr(device, 'identifiers') | list | first %}
                        {%- if ids and ids | length == 2 and ids[0] == find_integration %}
                          {% set names = device_attr(device, 'name').split('\n') | list %}
