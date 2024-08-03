@@ -7,7 +7,7 @@ serial:
     adapter: zstack
 ```
 
-[Other settings](../configuration/adapter-settings.md)
+Other supported settings are: `disable_led`, `adapter_concurrent` and `transmit_power` ([docs](../configuration/adapter-settings.md)).
 
 ### Firmware flashing
 

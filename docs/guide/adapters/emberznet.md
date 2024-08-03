@@ -17,7 +17,7 @@ serial:
     adapter: ember
 ```
 
-[Other settings](../configuration/adapter-settings.md)
+Other supported settings are: `adapter_concurrent` and `transmit_power` ([docs](../configuration/adapter-settings.md)).
 
 ::: tip TIP
 If you are experiencing issues with your adapter and it has hardware flow control support (check list below), try to flash a [firmware with hardware flow control disabled](https://github.com/darkxst/silabs-firmware-builder/tree/ember-nohw/firmware_builds/) and use the following setting instead:
