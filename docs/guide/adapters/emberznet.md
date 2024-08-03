@@ -1,6 +1,10 @@
 # EmberZNet adapters (Silicon Labs)
 
-Currently supported firmware version: 7.4.x
+Currently supported firmware version: 7.4.x, 8.0.x
+
+::: warning ATTENTION
+Use of 8.0.0 is currently not recommended due to some pending firmware issues that may affect stability on networks with spamming devices.
+:::
 
 Firmware release notes: [https://www.silabs.com/developers/zigbee-emberznet?tab=documentation](https://www.silabs.com/developers/zigbee-emberznet?tab=documentation)
 
@@ -10,7 +14,7 @@ _Multiprotocol is not currently supported due to the various issues associated w
 
 ```yaml
 serial:
-  adapter: ember
+    adapter: ember
 ```
 
 [Other settings](../configuration/adapter-settings.md)
@@ -20,8 +24,9 @@ If you are experiencing issues with your adapter and it has hardware flow contro
 
 ```yaml
 serial:
-  rtscts: false
+    rtscts: false
 ```
+
 :::
 
 ::: tip TIP
@@ -30,15 +35,16 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
 
 ### Firmware flashing
 
-- Web-based
-  - Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
-  - Nabu Casa Home Assistant: [SkyConnect Flasher](https://skyconnect.home-assistant.io/firmware-update/)
-  - SMLight: [Flasher](https://smlight.tech/flasher/)
-- Command-line based:
-  - Multi-devices by Nabu Casa: [Universal Silicon Labs Flasher](https://github.com/NabuCasa/universal-silabs-flasher) (also available via [Home Assistant add-on](https://github.com/home-assistant/addons/tree/master/silabs_flasher))
-- Other:
-  - Standalone J-Link Flash Tool (also included in [Simplicity Studio](https://www.silabs.com/developers/simplicity-studio)): [Simplicity Commander](https://www.silabs.com/developers/simplicity-studio/simplicity-commander)
-- Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
+-   Web-based
+    -   Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
+    -   For SkyConnect by [@NabuCasa](https://github.com/NabuCasa): [SkyConnect Flasher](https://skyconnect.home-assistant.io/firmware-update/)
+    -   SMLight: [Flasher](https://smlight.tech/flasher/)
+-   Command-line based:
+    -   Multi-devices by [@NabuCasa](https://github.com/NabuCasa): [Universal Silicon Labs Flasher](https://github.com/NabuCasa/universal-silabs-flasher) (also available via [Home Assistant add-on](https://github.com/home-assistant/addons/tree/master/silabs_flasher))
+    -   Multi-devices by [@Nerivec](https://github.com/Nerivec/): [Ember ZLI](https://github.com/Nerivec/ember-zli)
+-   Other:
+    -   Standalone J-Link Flash Tool (also included in [Simplicity Studio](https://www.silabs.com/developers/simplicity-studio)): [Simplicity Commander](https://www.silabs.com/developers/simplicity-studio/simplicity-commander)
+-   Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
 
 ## Recommended
 
@@ -51,11 +57,11 @@ With external antenna.
 
 **This section is about the "ZBDongle-E", for "ZBDongle-P" see [zStack](./zstack.md).**
 
-* [Product Page](https://sonoff.tech/product/gateway-and-sensors/sonoff-zigbee-3-0-usb-dongle-plus-e/)
-* [Coordinator firmware](https://sonoff.tech/product-review/how-to-use-sonoff-dongle-plus-on-home-assistant-how-to-flash-firmware/)
-* [Recommended firmware](https://github.com/darkxst/silabs-firmware-builder/raw/main/firmware_builds/zbdonglee/ncp-uart-hw-v7.4.1.0-zbdonglee-115200.gbl)
-* [Flashing](https://sonoff.tech/wp-content/uploads/2022/08/SONOFF-Zigbee-3.0-USB-dongle-plus-firmware-flashing-.pdf)
-* [Buy](https://itead.cc/product/zigbee-3-0-usb-dongle/)
+-   [Product Page](https://sonoff.tech/product/gateway-and-sensors/sonoff-zigbee-3-0-usb-dongle-plus-e/)
+-   [Coordinator firmware](https://sonoff.tech/product-review/how-to-use-sonoff-dongle-plus-on-home-assistant-how-to-flash-firmware/)
+-   [Recommended firmware](https://github.com/darkxst/silabs-firmware-builder/raw/main/firmware_builds/zbdonglee/ncp-uart-hw-v7.4.1.0-zbdonglee-115200.gbl)
+-   [Flashing](https://sonoff.tech/wp-content/uploads/2022/08/SONOFF-Zigbee-3.0-USB-dongle-plus-firmware-flashing-.pdf)
+-   [Buy](https://itead.cc/product/zigbee-3-0-usb-dongle/)
 
 <img src="../../images/dongle-e.jpg" width="200" />
 </details>
@@ -67,14 +73,14 @@ With integrated antenna and hardware flow control support.
 
 ```yaml
 serial:
-  rtscts: true
+    rtscts: true
 ```
 
-* [Product page](https://www.home-assistant.io/skyconnect)
-* [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
-* [Recommended firmware](https://github.com/darkxst/silabs-firmware-builder/raw/ember-nohw/firmware_builds/skyconnect/ncp-uart-hw-v7.4.1.0-skyconnect-115200.gbl), do not use rtscts with this firmware.
-* [Flashing](https://skyconnect.home-assistant.io/)
-* [Buy](https://www.home-assistant.io/skyconnect)
+-   [Product page](https://www.home-assistant.io/skyconnect)
+-   [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
+-   [Recommended firmware](https://github.com/darkxst/silabs-firmware-builder/raw/ember-nohw/firmware_builds/skyconnect/ncp-uart-hw-v7.4.1.0-skyconnect-115200.gbl), do not use rtscts with this firmware.
+-   [Flashing](https://skyconnect.home-assistant.io/)
+-   [Buy](https://www.home-assistant.io/skyconnect)
 
 <img src="../../images/skyconnect_isometric.jpg" width="200" />
 </details>
@@ -86,13 +92,13 @@ With external antenna and hardware flow control support.
 
 ```yaml
 serial:
-  rtscts: true
+    rtscts: true
 ```
 
-* [Product page](https://smlight.tech/product/slzb-07/)
-* [Recommended firmware](https://github.com/darkxst/silabs-firmware-builder/raw/ember-nohw/firmware_builds/slzb-07/ncp-uart-hw-v7.4.1.0-slzb-07-115200.gbl)
-* Buy: [Official Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-07-zigbee-usb-adapter-en), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005006273914143.html).  
-Local fast delivery: [Australia](https://shop.dialedin.com.au/products/smlight-slzb-07-usb-zigbee-adapter), [Austria, Belgium, Germany, Netherlands](https://www.hobbyelectronica.nl/product/slzb-07-zigbee-coordinator-usb/), [France](https://www.domadoo.fr/fr/interface-domotique/7044-smlight-dongle-usb-zigbee-efr32mg21-cp2102n-soc-antenne-3db-zigbee2mqtt-et-zha.html), [Poland](https://pcblab.io/szukaj?controller=search&s=slzb), [US Amazon](https://www.amazon.com/LOAMLIN-SMLIGHT-SLZB-07-Zigbee-Coordinator/dp/B0CNVBCCR3)
+-   [Product page](https://smlight.tech/product/slzb-07/)
+-   [Recommended firmware](https://github.com/darkxst/silabs-firmware-builder/raw/ember-nohw/firmware_builds/slzb-07/ncp-uart-hw-v7.4.1.0-slzb-07-115200.gbl)
+-   Buy: [Official Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-07-zigbee-usb-adapter-en), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005006273914143.html).  
+    Local fast delivery: [Australia](https://shop.dialedin.com.au/products/smlight-slzb-07-usb-zigbee-adapter), [Austria, Belgium, Germany, Netherlands](https://www.hobbyelectronica.nl/product/slzb-07-zigbee-coordinator-usb/), [France](https://www.domadoo.fr/fr/interface-domotique/7044-smlight-dongle-usb-zigbee-efr32mg21-cp2102n-soc-antenne-3db-zigbee2mqtt-et-zha.html), [Poland](https://pcblab.io/szukaj?controller=search&s=slzb), [US Amazon](https://www.amazon.com/LOAMLIN-SMLIGHT-SLZB-07-Zigbee-Coordinator/dp/B0CNVBCCR3)
 
 <img src="../../images/smlight-slzb-07.jpg" width="200" />
 
@@ -100,20 +106,18 @@ Local fast delivery: [Australia](https://shop.dialedin.com.au/products/smlight-s
 
 ### Network (TCP)
 
-
 <details>
 <summary>TubeZB EFR32 MGM24 POE (MGM240PB32VNN)</summary>
 
 With external antenna.
 
-* [Product page](https://tubeszb.com/product/efr32-mgm24-poe-coordinator/)
-* [Recommended firmware](https://github.com/tube0013/tube_gateways/raw/main/models/current/tubeszb-efr32-MGM24/firmware/mgm24/ncp/4.4.1/tubesZB-EFR32-MGM24_NCP_7.4.1.gbl)
-* [Buy](https://tubeszb.com/product/efr32-mgm24-poe-coordinator/)
+-   [Product page](https://tubeszb.com/product/efr32-mgm24-poe-coordinator/)
+-   [Recommended firmware](https://github.com/tube0013/tube_gateways/raw/main/models/current/tubeszb-efr32-MGM24/firmware/mgm24/ncp/4.4.1/tubesZB-EFR32-MGM24_NCP_7.4.1.gbl)
+-   [Buy](https://tubeszb.com/product/efr32-mgm24-poe-coordinator/)
 
 <img src="../../images/tubezb-mgm24-poe.jpg" width="200" />
 
 </details>
-
 
 ### Hybrid (USB + Network)
 
@@ -125,10 +129,10 @@ With external antenna.
 **For optimal performance, ensure your firmware is at least version 20240510 (requires Core firmware version 2.2.0 or higher).
 Not suitable for WiFi or other high latency connections.**
 
-* [Recommended firmware](https://github.com/darkxst/silabs-firmware-builder/raw/main/firmware_builds/slzb-06m/ncp-uart-hw-v7.4.1.0-slzb-06m-115200.gbl), baud rate settings is 115200.  
-* [Product page](https://smlight.tech/product/slzb-06m/)
-* Buy: [Official Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-06m-zigbee-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Tindie - Worldwide](https://www.tindie.com/products/smartlightme/smlight-slzb-06-zigbee-ethernet-poe-usb-wifi-adapt/).  
-Local fast delivery: [AU](https://shop.dialedin.com.au/products/smlight-slzb-06m-efr32mg21-lan-zigbee-adapter), [AT](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [BE](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [CH](https://shop.swiss-domotique.ch/en/gateways-antennas/2390-smlight-slzb-06m-adaptateur-zigbee-ethernet-poe-usb-wifi.html), [EE](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [FR](https://www.domadoo.fr/fr/box-domotique/7043-smlight-adaptateur-usb-ethernet-poe-zigbee-30-efr32mg21-zigbee2mqtt-et-zha.html), [DE](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [LT](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [LV](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [PL](https://pcblab.io/slzb-06m-adapter-zigbee-efr32mg21-ethernet-poe-usb-lan-wifi.html), [TH](https://shopee.co.th/Zigbee-SLZB-06-LAN-POE-USB-WIFI-Hybrid-Coordinator-CC2652P-SMARTLIGHT-SLZB-06-HASS-Zigbee2mqtt-ZHA-CC2652-CC2531-i.25068823.21062349644), [US official](https://cloudfree.shop/product/smlight-zigbee-ethernet-adapter/), [US Amazon](https://www.amazon.com/SMLIGHT-SLZB-06-Ethernet-Zigbee2MQTT-Assistant/dp/B0BL6DQSB3).  
+-   [Recommended firmware](https://github.com/darkxst/silabs-firmware-builder/raw/main/firmware_builds/slzb-06m/ncp-uart-hw-v7.4.1.0-slzb-06m-115200.gbl), baud rate settings is 115200.
+-   [Product page](https://smlight.tech/product/slzb-06m/)
+-   Buy: [Official Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-06m-zigbee-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Tindie - Worldwide](https://www.tindie.com/products/smartlightme/smlight-slzb-06-zigbee-ethernet-poe-usb-wifi-adapt/).  
+    Local fast delivery: [AU](https://shop.dialedin.com.au/products/smlight-slzb-06m-efr32mg21-lan-zigbee-adapter), [AT](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [BE](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [CH](https://shop.swiss-domotique.ch/en/gateways-antennas/2390-smlight-slzb-06m-adaptateur-zigbee-ethernet-poe-usb-wifi.html), [EE](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [FR](https://www.domadoo.fr/fr/box-domotique/7043-smlight-adaptateur-usb-ethernet-poe-zigbee-30-efr32mg21-zigbee2mqtt-et-zha.html), [DE](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [LT](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [LV](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [PL](https://pcblab.io/slzb-06m-adapter-zigbee-efr32mg21-ethernet-poe-usb-lan-wifi.html), [TH](https://shopee.co.th/Zigbee-SLZB-06-LAN-POE-USB-WIFI-Hybrid-Coordinator-CC2652P-SMARTLIGHT-SLZB-06-HASS-Zigbee2mqtt-ZHA-CC2652-CC2531-i.25068823.21062349644), [US official](https://cloudfree.shop/product/smlight-zigbee-ethernet-adapter/), [US Amazon](https://www.amazon.com/SMLIGHT-SLZB-06-Ethernet-Zigbee2MQTT-Assistant/dp/B0BL6DQSB3).
 
 <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06m-main-title.jpg" width="200" />
 
@@ -139,14 +143,13 @@ Local fast delivery: [AU](https://shop.dialedin.com.au/products/smlight-slzb-06m
 
 With external antenna.
 
-* [Product page](https://smlight.tech/product/slzb-06mg24/)
-* [Recommended firmware] UPCOMING
-* [Buy] UPCOMING
+-   [Product page](https://smlight.tech/product/slzb-06mg24/)
+-   [Recommended firmware] UPCOMING
+-   [Buy] UPCOMING
 
 <img src="../../images/smlight-slzb-06mg24.jpg" width="200" />
 
 </details>
-
 
 ### Hub
 
@@ -157,20 +160,19 @@ With integrated antenna and hardware flow control support.
 
 ```yaml
 serial:
-  rtscts: true
+    rtscts: true
 ```
 
-* [Product page](https://www.home-assistant.io/yellow)
-* [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
-* [Recommended firmware](https://github.com/darkxst/silabs-firmware-builder/raw/ember-nohw/firmware_builds/yellow/ncp-uart-hw-v7.4.1.0-yellow-115200.gbl)
-* [Flashing](https://skyconnect.home-assistant.io/)
-* [Buy](https://www.home-assistant.io/yellow)
+-   [Product page](https://www.home-assistant.io/yellow)
+-   [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
+-   [Recommended firmware](https://github.com/darkxst/silabs-firmware-builder/raw/ember-nohw/firmware_builds/yellow/ncp-uart-hw-v7.4.1.0-yellow-115200.gbl)
+-   [Flashing](https://skyconnect.home-assistant.io/)
+-   [Buy](https://www.home-assistant.io/yellow)
 
 <img src="../../images/yellow.jpg" width="200" />
 </details>
 
 ### Custom
-
 
 ## Not recommended
 
@@ -222,6 +224,26 @@ Failed request. Message should be self-explanatory, and give a `status` indicati
 
 NCP Fatal Error. The coordinator failed (the reason should be given in the message). Zigbee2MQTT will attempt to reset it and resume communication. If unsuccessful, Zigbee2MQTT will be stopped completely and the system's watchdog (if any) will attempt to restart it.
 
+## Tools
+
+### Ember ZLI
+
+[https://github.com/Nerivec/ember-zli/](https://github.com/Nerivec/ember-zli/)
+
+NodeJS command line tool that allows firmware flashing, interacting with the adapter's stack, sniffing, etc. using [zigbee-herdsman](https://github.com/Koenkk/zigbee-herdsman/). Check out the [Wiki](https://github.com/Nerivec/ember-zli/wiki) for more details.
+
+### Bellows CLI
+
+[https://github.com/zigpy/bellows](https://github.com/zigpy/bellows)
+
+Python command line tool that allows interacting with the adapter's stack.
+
+### Zigbee2MQTT Ember Helper
+
+[https://nerivec.github.io/z2m-ember-helper/](https://nerivec.github.io/z2m-ember-helper/)
+
+Analyze log files in your browser and get an automated review of your network.
+
 ## [EXPERT] Customizing stack configuration
 
 ::: warning ATTENTION
@@ -235,55 +257,37 @@ Do not open a new issue in Zigbee2MQTT before confirming the problem is present 
 You can modify the EmberZNet default stack configuration by creating a file `stack_config.json` in the same folder as your `coordinator_backup.json`. This configuration can only be done manually.
 
 Format, available and default values are as below:
+
 ```json
 {
-  "CONCENTRATOR_RAM_TYPE": "high",
-  "CONCENTRATOR_MIN_TIME": 5,
-  "CONCENTRATOR_MAX_TIME": 60,
-  "CONCENTRATOR_ROUTE_ERROR_THRESHOLD": 3,
-  "CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD": 1,
-  "CONCENTRATOR_MAX_HOPS": 0,
-  "MAX_END_DEVICE_CHILDREN": 32,
-  "APS_UNICAST_MESSAGE_COUNT": 32,
-  "RETRY_QUEUE_SIZE": 16,
-  "ADDRESS_TABLE_SIZE": 16,
-  "TRUST_CENTER_ADDRESS_CACHE_SIZE": 2,
-  "KEY_TABLE_SIZE": 0,
-  "BINDING_TABLE_SIZE": 32,
-  "BROADCAST_TABLE_SIZE": 15,
-  "MULTICAST_TABLE_SIZE": 16,
-  "NEIGHBOR_TABLE_SIZE": 26,
-  "SOURCE_ROUTE_TABLE_SIZE": 200,
-  "TRANSIENT_DEVICE_TIMEOUT": 10000,
-  "END_DEVICE_POLL_TIMEOUT": 8,
-  "TRANSIENT_KEY_TIMEOUT_S": 300
+    "CONCENTRATOR_RAM_TYPE": "high",
+    "CONCENTRATOR_MIN_TIME": 5,
+    "CONCENTRATOR_MAX_TIME": 60,
+    "CONCENTRATOR_ROUTE_ERROR_THRESHOLD": 3,
+    "CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD": 1,
+    "CONCENTRATOR_MAX_HOPS": 0,
+    "MAX_END_DEVICE_CHILDREN": 32,
+    "TRANSIENT_DEVICE_TIMEOUT": 10000,
+    "END_DEVICE_POLL_TIMEOUT": 8,
+    "TRANSIENT_KEY_TIMEOUT_S": 300
 }
 ```
 
 Any value that is omitted from the JSON file, invalid or out of range, will use the default instead.
 
-Documentation on these values and their behavior is documented in [SiLabs UG100 - 2.3.1](https://www.silabs.com/documents/public/user-guides/ug100-ezsp-reference-guide.pdf).
+Documentation on these values and their behavior can be found in [SiLabs UG100 - 2.3.1 PDF](https://www.silabs.com/documents/public/user-guides/ug100-ezsp-reference-guide.pdf) and [concentrator article](https://community.silabs.com/s/article/how-does-the-concentrator-plugin-work-x?language=en_US).
 
 The driver further restricts values to the below:
-- CONCENTRATOR_RAM_TYPE: 'high' or 'low'
-- CONCENTRATOR_MIN_TIME: min 1, max 60
-- CONCENTRATOR_MAX_TIME: min 30, max 300
-- CONCENTRATOR_ROUTE_ERROR_THRESHOLD: min 1, max 100
-- CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD: min 1, max 100
-- CONCENTRATOR_MAX_HOPS: min 0, max 30
-- MAX_END_DEVICE_CHILDREN: min 6, max 64
-- APS_UNICAST_MESSAGE_COUNT: min 1, max 255
-- RETRY_QUEUE_SIZE: min 0, max 255
-- ADDRESS_TABLE_SIZE: min 1, max 250
-- TRUST_CENTER_ADDRESS_CACHE_SIZE: min 0, max 4
-- KEY_TABLE_SIZE: min 0, max 127
-- BINDING_TABLE_SIZE: min 0, max 127
-- BROADCAST_TABLE_SIZE: min 15, max 254
-- MULTICAST_TABLE_SIZE: min 5, max 250
-- NEIGHBOR_TABLE_SIZE: 16 or 26
-- SOURCE_ROUTE_TABLE_SIZE: min 0, max 254
-- TRANSIENT_DEVICE_TIMEOUT: min 0, max 65535
-- END_DEVICE_POLL_TIMEOUT: min 0, max 14
-- TRANSIENT_KEY_TIMEOUT_S: min 0, max 65535
 
-**Note that values are not only restricted by these ranges, but also by the memory available in your adapter. If any value (or combination) is too great for your adapter to handle, it will default to the firmware value(s) instead.**
+-   CONCENTRATOR_RAM_TYPE: 'high' or 'low'
+-   CONCENTRATOR_MIN_TIME: min 1, max 60
+-   CONCENTRATOR_MAX_TIME: min 30, max 300
+-   CONCENTRATOR_ROUTE_ERROR_THRESHOLD: min 1, max 100
+-   CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD: min 1, max 100
+-   CONCENTRATOR_MAX_HOPS: min 0, max 30
+-   MAX_END_DEVICE_CHILDREN: min 6, max 64
+-   TRANSIENT_DEVICE_TIMEOUT: min 0, max 65535
+-   END_DEVICE_POLL_TIMEOUT: min 0, max 14
+-   TRANSIENT_KEY_TIMEOUT_S: min 0, max 65535
+
+**Note that some values are not only restricted by these ranges, but also by the memory available in your adapter. If any value (or combination) is too great for your adapter to handle, it will default to the firmware value(s) instead.**

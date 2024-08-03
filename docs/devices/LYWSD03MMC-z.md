@@ -102,7 +102,7 @@ Comfort parameters/Humidity minimum, in 1% steps, default 40.00%.
 Value can be found in the published state on the `comfort_humidity_min` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_humidity_min": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_min": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `9999`.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Comfort humidity max (numeric)
@@ -110,7 +110,7 @@ Comfort parameters/Humidity maximum, in 1% steps, default 60.00%..
 Value can be found in the published state on the `comfort_humidity_max` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"comfort_humidity_max": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"comfort_humidity_max": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `9999`.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Temperature calibration (numeric)

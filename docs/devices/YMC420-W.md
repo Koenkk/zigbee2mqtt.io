@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | YMC420-W  |
 | Vendor  | [Yale](/supported-devices/#v=Yale)  |
-| Description | Digital lock |
+| Description | Fechadura Digital YMC 420 W |
 | Exposes | lock (state, lock_state), battery, pin_code, action_source_name, action_user, auto_relock_time, sound_volume, battery_low, action, linkquality |
 | Picture | ![Yale YMC420-W](https://www.zigbee2mqtt.io/images/devices/YMC420-W.png) |
 
