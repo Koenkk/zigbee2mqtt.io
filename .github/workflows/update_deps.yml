@@ -34,7 +34,7 @@ jobs:
             - name: Update dependencies
               run: |
                   npx npm-check-updates -u -x sass-loader -x zigbee-herdsman-converters
-                  npx npm-check-updates -u --target @next -x typescript
+                  npx npm-check-updates -u --target @next -x typescript -x prettier
                   rm -rf pnpm-lock.yaml
                   pnpm install
 
