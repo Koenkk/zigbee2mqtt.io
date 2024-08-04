@@ -33,6 +33,7 @@ Press and hold the reset button on the device for +- 5 seconds (until the blue l
 After this the device will automatically join. If this doesn't work, try with a single short button press.
 
 In some cases where users are using a CC2531 USB stick (see https://github.com/Koenkk/zigbee2mqtt/issues/839) performing a shutdown of Zigbee2MQTT, removing and reinserting the USB stick, then restarting Zigbee2MQTT has proven successful for pairing via the above method when it has not been working.
+Switching to the ember adapter after [upgrading the stick firmware](https://darkxst.github.io/silabs-firmware-builder/) might solve this pairing issue.
 
 
 ### Troubleshooting: device stops sending messages/disconnects from network
