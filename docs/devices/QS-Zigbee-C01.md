@@ -68,6 +68,12 @@ Value can be found in the published state on the `calibration_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `s`.
 
+It's only possible to change the value using Console Dev :
+Endpoint = 1
+Cluster = Closure
+Attribute = moesCalibrationTime
+read / write the value (ex 285 for 28.5 s)
+
 ### Linkquality (numeric)
 Link quality (signal strength).
 Value can be found in the published state on the `linkquality` property.
