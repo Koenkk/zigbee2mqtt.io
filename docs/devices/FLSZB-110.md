@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | FLSZB-110  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Flood alarm device  |
-| Exposes | battery_low, tamper, water_leak, temperature, voltage, linkquality |
+| Exposes | battery_low, tamper, water_leak, temperature, battery, voltage, linkquality |
 | Picture | ![Develco FLSZB-110](https://www.zigbee2mqtt.io/images/devices/FLSZB-110.png) |
 
 
@@ -63,13 +63,23 @@ If value equals `true` water leak is ON, if `false` OFF.
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
 ### Voltage (numeric)
-Voltage of the battery in millivolts.
+Reported battery voltage in millivolts.
 Value can be found in the published state on the `voltage` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `mV`.
 
 ### Linkquality (numeric)

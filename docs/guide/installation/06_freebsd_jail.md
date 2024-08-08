@@ -13,6 +13,7 @@ For the sake of simplicity this guide assumes running on [TrueNAS CORE](https://
 First we have to create the jail that will run both Zigbee2MQTT and Mosquitto. We can do that by opening the TrueNAS Web UI, navigating to `Plugins`, selecting `Community` plugins and then `Mosquitto MQTT`.
 
 To enter the jail's terminal, we can use the Web UI's _Shell_ feature under _Jails_, or SSH into TrueNAS and then
+
 ```sh
 sudo iocage console <jail-name>
 ```
@@ -45,6 +46,7 @@ npm ci
 ```
 
 If everything went correctly the output of `npm ci` is similar to (the number of packages and seconds is probably different on your device):
+
 ```bash
 node-pre-gyp info ok
 added 383 packages in 111.613s
@@ -57,16 +59,19 @@ Note that the `npm ci` produces some `warning` which can be ignored.
 Configuration is the same as on [Linux](01_linux.md#configuring).
 
 Note that the `configuration.yaml` is at a different location:
+
 ```
 /usr/local/opt/zigbee2mqtt/data/configuration.yaml
 ```
 
 Also note that if you need `nano` for editing the configuration, you'll have to install it first:
+
 ```sh
 pkg install nano
 ```
 
 ## Starting Zigbee2MQTT
+
 Now that we have setup everything correctly we can start Zigbee2MQTT.
 
 ```bash
@@ -75,6 +80,7 @@ npm start
 ```
 
 When started successfully, you will see something like:
+
 ```bash
 Zigbee2MQTT:info  2019-11-09T13:04:01: Logging to directory: '/opt/zigbee2mqtt/data/log/2019-11-09.14-04-01'
 Zigbee2MQTT:info  2019-11-09T13:04:01: Starting Zigbee2MQTT version 1.6.0 (commit #720e393)
@@ -102,6 +108,7 @@ nano /usr/local/etc/rc.d/zigbee2mqtt
 ```
 
 Add the following to this file:
+
 ```
 #!/bin/sh
 
@@ -132,11 +139,13 @@ run_rc_command "$1"
 Save the file and exit.
 
 Make it executable:
+
 ```sh
 chmod +x /usr/local/etc/rc.d/zigbee2mqtt
 ```
 
 Verify that the configuration works:
+
 ```sh
 # Start Zigbee2MQTT without enabling it
 service zigbee2mqtt onestart
@@ -146,12 +155,14 @@ service zigbee2mqtt onestatus
 ```
 
 Output should look like:
+
 ```
 root@zigbee2mqtt:/usr/local/opt/zigbee2mqtt # service zigbee2mqtt onestatus
 zigbee2mqtt is running as pid 80246.
 ```
 
 Now that everything works, we want the init system to start Zigbee2MQTT automatically when the jail starts. This can be done by executing:
+
 ```sh
 service zigbee2mqtt enable
 ```
@@ -159,6 +170,7 @@ service zigbee2mqtt enable
 Done! 😃
 
 Some tips that can be handy later:
+
 ```sh
 # Stopping Zigbee2MQTT
 service zigbee2mqtt stop
@@ -168,6 +180,7 @@ service zigbee2mqtt start
 ```
 
 ## (For later) Update Zigbee2MQTT to the latest version
+
 To update Zigbee2MQTT to the latest version, execute:
 
 ```sh

@@ -12,6 +12,7 @@ This branch is a development branch! It could be less stable than the release ve
 :::
 
 ## Linux
+
 ```bash
 # Stop Zigbee2MQTT and go to directory
 sudo systemctl stop zigbee2mqtt
@@ -36,7 +37,9 @@ sudo systemctl start zigbee2mqtt
 ```
 
 ## Docker
+
 Use the Docker image with the `latest-dev` tag.
 
 ## Home Assistant addon
+
 Use the [`edge`](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt) version.

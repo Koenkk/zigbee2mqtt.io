@@ -3,11 +3,13 @@ next: ../configuration/
 ---
 
 # Python Virtual Environment
+
 It is possible to run Zigbee2MQTT in a virtual environment, this has been tested with a Raspberry Pi 3B+.
 
 This guide is similar to the [Running Zigbee2MQTT on Linux guide](./01_linux.md), follow the steps from there by replacing the steps with the ones from below.
 
 ## Installing
+
 ```bash
 # Clone Zigbee2MQTT repository
 sudo git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
@@ -44,6 +46,7 @@ deactivate
 ```
 
 ## Starting Zigbee2MQTT
+
 ```bash
 # Enter folder
 cd /opt/zigbee2mqtt
@@ -61,7 +64,9 @@ deactivate
 ```
 
 ## (Optional) Running as a daemon with systemctl
+
 To run Zigbee2MQTT as daemon (in background) and start it automatically on boot we will run Zigbee2MQTT with systemctl.
+
 ```bash
 # Create a systemctl configuration file for Zigbee2MQTT
 sudo nano /etc/systemd/system/zigbee2mqtt.service
@@ -91,9 +96,10 @@ User=pi
 WantedBy=multi-user.target
 ```
 
-Now continue with *Verify that the configuration works:* from the *Running Zigbee2MQTT guide*.
+Now continue with _Verify that the configuration works:_ from the _Running Zigbee2MQTT guide_.
 
 ## (For later) Update Zigbee2MQTT to the latest version
+
 To update Zigbee2MQTT to the latest version, execute:
 
 ```sh

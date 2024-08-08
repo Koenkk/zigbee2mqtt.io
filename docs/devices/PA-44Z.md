@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PA-44Z  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Photoelectric smoke detector |
-| Exposes | smoke, battery, test, smoke_concentration, device_fault, linkquality |
+| Exposes | smoke, battery, silence, test, smoke_concentration, device_fault, linkquality |
 | Picture | ![Tuya PA-44Z](https://www.zigbee2mqtt.io/images/devices/PA-44Z.png) |
 
 
@@ -46,6 +46,13 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Silence (binary)
+Silence the alarm.
+Value can be found in the published state on the `silence` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence": NEW_VALUE}`.
+If value equals `true` silence is ON, if `false` OFF.
 
 ### Test (binary)
 Indicates whether the device is being tested.
