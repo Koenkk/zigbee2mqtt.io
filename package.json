@@ -20,10 +20,10 @@
     "dependencies": {
         "@quasar/extras": "1.16.12",
         "core-js": "3.38.0",
-        "quasar": "2.16.6"
+        "quasar": "2.16.8"
     },
     "devDependencies": {
-        "@types/node": "22.1.0",
+        "@types/node": "22.2.0",
         "@vuepress/bundler-webpack": "2.0.0-rc.14",
         "@vuepress/client": "2.0.0-rc.14",
         "@vuepress/plugin-docsearch": "2.0.0-rc.40",
@@ -44,7 +44,7 @@
         "throat": "6.0.2",
         "ts-node": "10.9.2",
         "typescript": "5.5.4",
-        "vue": "3.4.35",
+        "vue": "3.4.37",
         "vuepress": "2.0.0-rc.14",
         "webpack": "5.93.0",
         "zigbee-herdsman-converters": "19.72.0"
