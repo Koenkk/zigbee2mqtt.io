@@ -27,8 +27,8 @@ pageClass: device-page
 
 
 ### Pairing
-Follow instructions from
-[How do I reset my Hive Active Light?](https://www.hivehome.com/ca/support/Help_installing_Hive/HIH_Hive_Active_Light/How-do-I-reset-my-Hive-Active-Light). After resetting the bulb will automatically connect.
+Follow instructions from step 1
+[Why is my Hive Light showing as Offline in my app or online dashboard?](https://www.hivehome.com/ie/support/Help_Using_Hive/HUH_Hive_Active_Light/Why-is-my-Hive-Active-Light-showing-as-Offline-in-my-app-or-online-dashboard). After resetting the bulb will automatically connect.
 <!-- Notes END: Do not edit below this line -->
 
 
