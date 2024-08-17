@@ -11,9 +11,13 @@ Other supported settings are: `disable_led`, `adapter_concurrent` and `transmit_
 
 ### Firmware flashing (CC2652/CC1352)
 
-Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the BSL (bootloader) mode. See the "Vendor flashing instructions" of your adapter below on how to do this. After you have done this one of the following tools can be used to flash it.
+Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the BSL (bootloader) mode.
+See the "Vendor flashing instructions" of your adapter below on how to do this.
+Once you've successfully put your adapter into BSL mode, use any of the tools below to flash it.
 
 -   UI tools
+    -   [SMLIGHT firmware updater](https://smlight.tech/flasher/#other_cc) (**recommended**)
+        -   Allows for flashing your adapter from the browser, eliminating the need for any software installation.
     -   Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)
     -   [ZigStar GW Multi tool](https://github.com/xyzroe/ZigStarGW-MT) (multi platform GUI tool)
 -   CLI tools (multi platform Python based command line tools)
