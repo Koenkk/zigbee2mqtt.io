@@ -9,9 +9,9 @@ serial:
 
 Other supported settings are: `disable_led`, `adapter_concurrent` and `transmit_power` ([docs](../configuration/adapter-settings.md)).
 
-### Firmware flashing
+### Firmware flashing (CC2652/CC1352)
 
-Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the bootloader. See your adapter manual on how to do this. After you have done this one of the following tools can be used to flash it.
+Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the BSL (bootloader) mode. See the "Vendor flashing instructions" of your adapter below on how to do this. After you have done this one of the following tools can be used to flash it.
 
 -   UI tools
     -   Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)
@@ -28,7 +28,7 @@ Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the b
 
 <img src="../../images/flashing/web-interface-ota-flashing.jpg" title="SLZB-06 WEB OTA Zigbee Flashing" height=300 />
 
-## Recommended
+## Recommended (CC2652/CC1352)
 
 ### USB
 
@@ -38,7 +38,7 @@ Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the b
 USB connected adapter with external antenna based on CC2652R chip  
 * [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC2652R_coordinator_20230507.zip)  
 * [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC2652R_router_20221102.zip)  
-* [Flashing instructions](https://electrolama.com/radio-docs/#step-3-flash-the-firmware-on-your-stick) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+* [Vendor flashing instructions](https://electrolama.com/radio-docs/#step-3-flash-the-firmware-on-your-stick)
 * [Buy](https://shop.electrolama.com/collections/usb-rf-sticks/products/zzh-multiprotocol-rf-stick)
 
 <img src="../../images/zzh.jpg" width="200" />
@@ -51,7 +51,7 @@ USB connected adapter with external antenna based on CC2652RB chip
 
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC2652RB_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC2652RB_router_20221102.zip)
--   [Flashing instructions](https://slae.sh/projects/cc2652/#flashing) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](https://slae.sh/projects/cc2652/#flashing)
 -   [Buy](https://slae.sh/projects/cc2652/)
 
 <img src="../../images/slaeshs_cc2652rb_stick.jpg" width="200" />
@@ -64,7 +64,7 @@ Open source hardware CC2652P based USB connected adapter with external antenna a
 
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
--   [Flashing instructions](https://github.com/tube0013/tube_gateways) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](https://github.com/tube0013/tube_gateways)
 -   [Buy](https://www.tubeszb.com/)
 
 <img src="../../images/Tubes_USB_Coordinator_CC2652P2_variant.png" width="200" />
@@ -77,7 +77,7 @@ Powerful CC2652P Zigbee USB dongle and Raspberry Pi GPIO module. Available in Eb
 
 -   Coordinator firmware: [Ebyte](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20230507.zip) [RFSTAR](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)
 -   Router firmware: [Ebyte](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20221102.zip) [RFSTAR](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
--   [Flashing instructions](https://github.com/egony/cc2652p_E72-2G4M20S1E/wiki/Flashing-EN) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](https://github.com/egony/cc2652p_E72-2G4M20S1E/wiki/Flashing-EN)
 -   Description: [Ebyte](https://github.com/egony/cc2652p_E72-2G4M20S1E/wiki/Home-EN) [RFSTAR](https://github.com/egony/cc2652p_cc1352p_RF-STAR/wiki/Home-EN)
 -   [Contact](http://t.me/Egony)
 
@@ -93,7 +93,7 @@ Powerful Open source dongle with external antenna based on CC2652P
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
 -   [Description](https://zig-star.com/projects/zigbee-stick-v4/)
--   [Flashing instructions](https://zig-star.com/radio-docs/flash-cc-bsl/) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](https://zig-star.com/radio-docs/flash-cc-bsl/)
 -   [Buy](https://zig-star.com)
 
 <img src="../../images/ZigStar-USB.png" width="200" />
@@ -106,7 +106,7 @@ CC2652P based USB connected adapter pre-programmed with Z-Stack
 
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
--   [Flashing instructions](https://circuitsetup.us/product/usb-zigbee-stick-z-stack-coordinator/) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](https://circuitsetup.us/product/usb-zigbee-stick-z-stack-coordinator/)
 -   [Buy](https://circuitsetup.us/product/usb-zigbee-stick-z-stack-coordinator/)
 
 <img src="../../images/circset_cc2652.jpg" width="200" />
@@ -120,7 +120,7 @@ CC2652P factory-made Zigbee USB coordinator with external 6dB antenna and worldw
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20221102.zip)
 -   [Description](https://smartlight.me/smart-home-devices/zigbee-devices/zigbee-coordinator-v4-cc2652p)
--   [Flashing instructions](https://smartlight.me/flashing_slzb-02) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](https://smartlight.me/flashing_slzb-02)
 -   Buy: [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/zigbee-coordinator-v4-cc2652p), [Tindie](https://www.tindie.com/products/smartlightme/zigbee-cc2652p-coordinator-dongle-stick-adapter/)
 
 <img src="../../images/CC2652P_smartlight_zigbee_coordinator.png" width="200" />
@@ -136,7 +136,7 @@ This section is about the "ZBDongle-P", for "ZBDongle-E" see below.
 
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
--   [Flashing instructions](https://sonoff.tech/wp-content/uploads/2021/09/Zigbee-3.0-USB-dongle-plus-firmware-flashing-1-1.docx) ([PDF version](https://github.com/Koenkk/zigbee2mqtt.io/raw/master/docs/guide/adapters/flashing/zigbee-3.0-usb-dongle-plus-firmware_flashing-1-1.pdf) and [required python script](https://github.com/Koenkk/zigbee2mqtt.io/raw/master/docs/guide/adapters/flashing/zigbee-3.0-usb-dongle-plus-uartLog.zip)) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](https://sonoff.tech/wp-content/uploads/2021/09/Zigbee-3.0-USB-dongle-plus-firmware-flashing-1-1.docx) ([PDF version](https://github.com/Koenkk/zigbee2mqtt.io/raw/master/docs/guide/adapters/flashing/zigbee-3.0-usb-dongle-plus-firmware_flashing-1-1.pdf) and [required python script](https://github.com/Koenkk/zigbee2mqtt.io/raw/master/docs/guide/adapters/flashing/zigbee-3.0-usb-dongle-plus-uartLog.zip))
 -   [Buy](https://itead.cc/product/sonoff-zigbee-3-0-usb-dongle-plus/)
 
 <img src="../../images/sonoff_plus_dongle.png" width="200" />
@@ -149,7 +149,7 @@ Adapter or small development board based on CC2652R (VS201) or CC2652P (VS202)
 Coordinator firmware: [VS201](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC2652R_coordinator_20230507.zip) [VS202](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)  
 Router firmware: [VS201](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC2652R_router_20221102.zip) [VS202](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
 
--   [Flashing instructions](https://www.aliexpress.com/item/1005002823262979.html?spm=a2g0o.productlist.0.0.1a1640b82yeViq&algo_pvid=e01b1872-ca85-4814-971f-ce9b058855b8&algo_exp_id=e01b1872-ca85-4814-971f-ce9b058855b8-0&pdp_ext_f=%7B%22sku_id%22%3A%2212000022351543786%22%7D) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](https://www.aliexpress.com/item/1005002823262979.html?spm=a2g0o.productlist.0.0.1a1640b82yeViq&algo_pvid=e01b1872-ca85-4814-971f-ce9b058855b8&algo_exp_id=e01b1872-ca85-4814-971f-ce9b058855b8-0&pdp_ext_f=%7B%22sku_id%22%3A%2212000022351543786%22%7D)
 -   Buy: [VS201](https://www.aliexpress.com/item/1005002809329614.html) [VS202](https://www.aliexpress.com/item/1005003393047763.html)
 
 <img src="../../images/cc26x2r1_dongle.jpg" width="200" />
@@ -161,7 +161,7 @@ Router firmware: [VS201](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_
 Powerful CC2652P1 factory-made Zigbee USB dongle with external antenna.
 
 -   [Documentation](https://docs.jethome.ru/en/zigbee/sticks/jetstick_z2.html)
--   [Flash instructions](https://docs.jethome.ru/en/zigbee/howto/cc_2538_bsl.html#zigbee-howto-2538-bsl)
+-   [Vendor flashing instructions](https://docs.jethome.ru/en/zigbee/howto/cc_2538_bsl.html#zigbee-howto-2538-bsl)
 -   [Firmware](https://docs.jethome.ru/en/zigbee/software/ti_cc2652p.html#zigbee-software-ti-cc2652p)
 -   Buy: [JetStick Z2](https://jethome.ru/z2/)
 
@@ -201,7 +201,7 @@ Open source hardware CC2652P and ESP32 based Zigbee to Ethernet Coordinator (lef
 
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
--   [Flashing instructions](https://github.com/tube0013/tube_gateways) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](https://github.com/tube0013/tube_gateways)
 -   [Buy](https://www.tubeszb.com/)
 
 <img src="../../images/Tubes_Zigbee_Gateways_CC2652P2_variant.jpg" width="200" /> <img src="../../images/Tubes_Zigbee_PoE_Coordinator_CC2652P2_variant.jpg" width="200" />
@@ -215,7 +215,6 @@ An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs
 
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
--   Flashing instructions; see "Flashing CC1352/CC2652/CC2538 based adapters" below
 -   [Description](https://github.com/cyijun/OpenZ3Gateway)
 -   [Tindie](https://www.tindie.com/products/cyijun/openz3gateway/)
 
@@ -229,7 +228,6 @@ An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs
 
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
--   Flashing instructions; see "Flashing CC1352/CC2652/CC2538 based adapters" below
 -   [Description](https://shop68536829.taobao.com/)
 -   [Buy](https://shop68536829.taobao.com/)
 
@@ -244,7 +242,6 @@ Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20221102.zip)
 -   [Description](https://smartlight.me/smart-home-devices/zigbee-devices/smlight-zigbee-lan-adapter-slzb-05en)
--   Flashing instructions; see "Flashing CC1352/CC2652/CC2538 based adapters" below
 -   Buy: [eBay](https://www.ebay.com/itm/165178757770) [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/smlight-zigbee-lan-adapter-slzb-05en) [Telegram](https://t.me/smartlightme)
 
 <img src="https://smartlight.me/ebay/images/slzb_05/smartlight-zigbee-lan-slzb-05.jpg" width="200" />
@@ -260,7 +257,7 @@ Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6
 -   [Description](https://gio-dot.github.io/Z-Bee-Duo/)
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/blob/master/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20221102.zip)
--   [Flashing instructions](https://gio-dot.github.io/Z-Bee-Duo/Firmware-upgrade) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](https://gio-dot.github.io/Z-Bee-Duo/Firmware-upgrade)
 -   [Buy](https://www.tindie.com/products/gio_dot/z-bee-duo-modular-cc2652p-zigbee-30-adapter/)
 
 <img src="../../images/Z-Bee_Duo-ico.jpg" width="200" />
@@ -274,7 +271,7 @@ Powerful Open source LAN Coordinator with external antenna on CC2652P
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
 -   [Description](https://zig-star.com/projects/zigbee-gw-lan/)
--   [Flashing instructions](https://zig-star.com/radio-docs/flash-cc-bsl/) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](https://zig-star.com/radio-docs/flash-cc-bsl/)
 -   [Buy](https://zig-star.com) [Tindie](https://www.tindie.com/products/zigstar/zigstar-lan-gateway/)
 
 <img src="../../images/ZigStar-LAN.png" width="200" />
@@ -288,7 +285,7 @@ Open source PoE af Coordinator with external antenna on CC2652P
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
 -   [Description](https://zig-star.com/projects/zigstar-olizig/)
--   [Flashing instructions](https://zig-star.com/radio-docs/zigstar-multi-tool/) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](https://zig-star.com/radio-docs/zigstar-multi-tool/)
 -   [Buy](https://zig-star.com) [Tindie](https://www.tindie.com/products/zigstar/zigstar-olizig-poe/)
 
 <img src="../../images/ZigStar-PoE.png" width="200" />
@@ -332,7 +329,7 @@ Open source PoE af Coordinator with external antenna on CC2652P
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/)
 -   [Official site](https://uzg.zig-star.com) with documentation
--   [Flashing instructions](https://uzg.zig-star.com/flashing-and-updating/) or see [Flashing CC1352/CC2652/CC2538 based adapters](#flashing-cc1352-cc2652-cc2538-based-adapters)
+-   [Vendor flashing instructions](https://uzg.zig-star.com/flashing-and-updating/)
 -   Buy: [Official Store](https://uzg.zig-star.com),[Tindie](https://www.tindie.com/stores/zigstar/),[Elecrow](https://www.elecrow.com/zigstar-uzg-01-universal-zigbee-gateway.html)
 
 |                       ZigStar UZG-01                       |                         Dimensions                         |
@@ -423,7 +420,7 @@ Raspberry Pi GPIO module with CC2652P and integrated power amplifier (+20dBm)
 
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
--   [Flashing instructions](https://github.com/codm/cc2652-raspberry-pi-module#firmware) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](https://github.com/codm/cc2652-raspberry-pi-module#firmware)
 -   [Buy](https://shop.codm.de/automation/zigbee/33/zigbee-cc2652p2-raspberry-pi-module)
 
 <img src="../../images/codm-cc2652p-rpi.jpg" width="200" />
@@ -436,7 +433,7 @@ Powerful Open source Pi HAT based on CC2652P with PoE,RTC onboard
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
 -   [Description](https://zig-star.com/projects/zigbee-zigihat/)
--   [Flashing instructions](https://zig-star.com/projects/zigbee-zigihat/#flashing) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](https://zig-star.com/projects/zigbee-zigihat/#flashing)
 -   [Buy](https://zig-star.com)
 
 <img src="../../images/ZigiHAT.png" width="200" />
@@ -451,7 +448,7 @@ An external antenna can be connected which could increase range: [requires resol
 
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
--   [Flashing instructions](./flashing/flashing_via_uniflash.md) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](./flashing/flashing_via_uniflash.md)
 -   [Buy](http://www.ti.com/tool/LAUNCHXL-CC1352P)
 
 <img src="../../images/cc1352p2.jpg" width="200" />
@@ -466,7 +463,7 @@ An external antenna can be connected which could increase range: [requires resol
 
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC2652R_coordinator_20230507.zip)
 -   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC2652R_router_20221102.zip)
--   [Flashing instructions](./flashing/flashing_via_uniflash.md) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](./flashing/flashing_via_uniflash.md)
 -   [Buy](http://www.ti.com/tool/LAUNCHXL-CC26X2R1)
 
 <img src="../../images/cc26x2r1.jpg" width="200" />
@@ -479,7 +476,7 @@ USB connected development kit, based on CC2652R7 chip
 These devices have two serial devices built in. Make sure you put the right serial device in the [configuration](../configuration/) or use auto detect (completely remove the `serial` section from `configuration.yaml`) if you only have one Texas Instruments CC device connected to your system.
 
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC2652R7_coordinator_20230507.zip)
--   [Flashing instructions](./flashing/flashing_via_uniflash.md) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](./flashing/flashing_via_uniflash.md)
 -   [Buy](http://www.ti.com/tool/LP-CC2652R7)
 
 <img src="../../images/CC2652R7.png" width="200" />
@@ -492,13 +489,13 @@ USB connected development kit, based on CC1352P7 chip
 These devices have two serial devices built in. Make sure you put the right serial device in the [configuration](../configuration/) or use auto detect (completely remove the `serial` section from `configuration.yaml`) if you only have one Texas Instruments CC device connected to your system.
 
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_coordinator_20230507/coordinator/Z-Stack_3.x.0/bin/CC1352P7_coordinator_20230507.zip)
--   [Flashing instructions](./flashing/flashing_via_uniflash.md) or see "Flashing CC1352/CC2652/CC2538 based adapters" below
+-   [Vendor flashing instructions](./flashing/flashing_via_uniflash.md)
 -   [Buy](https://www.ti.com/tool/LP-CC1352P7)
 
 <img src="../../images/LP-CC1352P7.jpg" width="200" />
 </details>
 
-## Not recommended
+## Not recommended (CC2530/CC2531/CC2538)
 
 ### USB
 
@@ -553,7 +550,7 @@ Serial connected adapter with external antenna optionally with CC2591 or CC2592 
 Serial connected adapter with CC2592 RF Amplifier
 
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
--   [Flashing](./flashing/flashing_the_cc2538.md)
+-   [Flashing instructions](./flashing/flashing_the_cc2538.md)
 -   Buy: [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2538)
 
 <img src="../../images/cc2538.jpg" width="200" />
@@ -580,7 +577,7 @@ Coordinator firmware: [XGG 38PZ2MGateway](https://github.com/Koenkk/Z-Stack-firm
 Raspberry pinout compatible HAT with CC2538 and optional external antenna
 
 -   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
--   [Flashing](./flashing/flashing_the_cc2538.md)
+-   [Flashing instructions](./flashing/flashing_the_cc2538.md)
 -   [Buy](https://www.tindie.com/products/GiovanniCas/zigbee-hat-with-cc2538-for-raspberry/)
 
 <img src="../../images/cc2538hat.jpg" width="200" />
