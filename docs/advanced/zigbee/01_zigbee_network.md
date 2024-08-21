@@ -58,6 +58,7 @@ The following Zigbee routers have already been confirmed to support (at least so
 | [IKEA LED2101G4](../../devices/LED2101G4.md)                                        |    Y     |    Y    |    Y    |
 | [IKEA LED2103G5](../../devices/LED2103G5.md)                                        |    Y     |    Y    |    Y    |
 | [IKEA LED2109G6](../../devices/LED2109G6.md)                                        |    Y     |    Y    |    Y    |
+| [IKEA LED2107C4](../../devices/LED2107C4.md)                                        |    Y     |    N    |    Y    |
 | [IKEA E1603/E1702/E1708](../../devices/E1603_E1702_E1708.md)                        |    Y     |    N    |    Y    |
 | [Philips 1742930P7](../../devices/1742930P7.md)                                     |    Y     |    N    |    Y    |
 | [Philips 3216131P5](../../devices/3216131P5.md)                                     |    Y     |    Y    |   Nⁱ    |
@@ -71,6 +72,7 @@ The following Zigbee routers have already been confirmed to support (at least so
 | [Philips 5047130P9](../../devices/5047130P9.md)                                     |    Y     |    N    |    Y    |
 | [Philips 5062131P7](../../devices/5062131P7.md)                                     |    Y     |    N    |    Y    |
 | [Philips 9290024896](../../devices/9290024896.md)                                   |    Y     |    N    |    Y    |
+| [Philips 9290022166](../../devices/9290022166.md)                                   |    Y     |    N    |   Nⁱ    |
 | [Philips 9290022169](../../devices/9290022169.md)                                   |    Y     |    N    |    Y    |
 | [Philips 929001953301](../../devices/929001953301.md)                               |    Y     |    N    |    Y    |
 | [Philips 8718696548738](../../devices/8718696548738.md)                             |    Y     |    Y    |   Nⁱ    |

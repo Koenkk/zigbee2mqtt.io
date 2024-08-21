@@ -24,6 +24,14 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+
+This device needs an zigbee-3.0 capable coordinator (will not work with cc2531-based coordinators)! 
+
+### Pairing
+To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the device with your smartphone. Then get the device into pairing mode. In zigbee2mqtt navigate to "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK" which will get zigbee2mqtt into pairing mode automatically. Wait for your device to be joined.
+
+
+### Misc
 The device can operate in two modes. The operation mode is set after the initial pairing. Currently only Mode 1 works and is set by default. Mode 2 is not supported yet.
 
 Mode 1: On/Off
