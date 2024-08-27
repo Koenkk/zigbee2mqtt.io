@@ -1,5 +1,9 @@
 # ZBOSS adapters
+::: warning ATTENTION
 
+Support for this adapter is **experimental**, not recommended yet for production setups
+
+:::
 The adapter for the ZBOSS protocol is based on the example of ZBOSS NCP Host [Zigbee NCP (Network Co-Processor)](https://docs.nordicsemi.com/bundle/ncs-latest/page/nrf/samples/zigbee/ncp/README.html) for Nordic Semiconductor chips, such as nRF5340, nRF52840, nRF52833, nRF21540.
 
 The interaction between the chip and the host occurs according to [ZBOSS NCP Serial Protocol](https://cloud.dsr-corporation.com/index.php/s/BAn4LtRWbJjFiAm).
