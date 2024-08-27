@@ -13,6 +13,7 @@ Currently, this adapter does not support various functions, so if you depend on 
 -   Adding [install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd), which is required to pair some devices.
 -   [Backups](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestbackup)
 -   Inter-PAN, which is required for [touchlink](../../guide/usage/touchlink.md)
+
 :::
 
 ### Configuration
