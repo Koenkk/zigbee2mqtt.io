@@ -11,6 +11,7 @@ All officially supported adapters are listed on this page. Note that before an a
 -   [EmberZNet based (Silicon Labs)](./emberznet.md)
 -   [deCONZ based (Dresden Elektronik)](./deconz.md)
 -   [ZiGate based](./zigate.md)
+-   [ZBOSS based (Nordic Semiconductor)](./zboss.md)
 
 ::: tip TIP
 Want to migrate to a different adapter? Read [this](../faq/README.md#how-do-i-migrate-from-one-adapter-to-another)
