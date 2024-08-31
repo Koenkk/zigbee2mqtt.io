@@ -53,7 +53,7 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
 <details>
 <summary>Sonoff ZBDongle-E (V2 model, EFR32MG21)</summary>
 
-With external antenna.
+With external antenna. Only supports software flow control (make sure not to set `rtscts: true`).
 
 **This section is about the "ZBDongle-E", for "ZBDongle-P" see [zStack](./zstack.md).**
 
