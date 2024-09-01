@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SNZB-03P  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee PIR sensor |
-| Exposes | occupancy, battery_low, battery, motion_timeout, illumination, linkquality |
+| Exposes | occupancy, battery, motion_timeout, illumination, linkquality |
 | Picture | ![SONOFF SNZB-03P](https://www.zigbee2mqtt.io/images/devices/SNZB-03P.png) |
 
 
@@ -45,12 +45,6 @@ Indicates whether the device detected occupancy.
 Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
-
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.

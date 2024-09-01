@@ -41,7 +41,7 @@ importers:
         version: 2.0.0-rc.42(typescript@5.5.4)(vuepress@2.0.0-rc.15(@vuepress/bundler-webpack@2.0.0-rc.15(typescript@5.5.4))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))
       '@vuepress/theme-default':
         specifier: 2.0.0-rc.42
-        version: 2.0.0-rc.42(markdown-it@14.1.0)(sass-loader@15.0.0(sass@1.77.8)(webpack@5.94.0))(typescript@5.5.4)(vuepress@2.0.0-rc.15(@vuepress/bundler-webpack@2.0.0-rc.15(typescript@5.5.4))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))
+        version: 2.0.0-rc.42(markdown-it@14.1.0)(sass-loader@16.0.1(sass@1.77.8)(webpack@5.94.0))(typescript@5.5.4)(vuepress@2.0.0-rc.15(@vuepress/bundler-webpack@2.0.0-rc.15(typescript@5.5.4))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))
       async-g-i-s:
         specifier: 1.5.4
         version: 1.5.4(node-fetch@2.7.0)
@@ -70,8 +70,8 @@ importers:
         specifier: 1.77.8
         version: 1.77.8
       sass-loader:
-        specifier: 15.0.0
-        version: 15.0.0(sass@1.77.8)(webpack@5.94.0)
+        specifier: 16.0.1
+        version: 16.0.1(sass@1.77.8)(webpack@5.94.0)
       throat:
         specifier: 6.0.2
         version: 6.0.2
@@ -91,8 +91,8 @@ importers:
         specifier: 5.94.0
         version: 5.94.0
       zigbee-herdsman-converters:
-        specifier: 19.72.0
-        version: 19.72.0
+        specifier: 20.8.2
+        version: 20.8.2
 
 packages:
 
@@ -938,9 +938,6 @@ packages:
   ansi-styles@6.2.1:
     resolution: {integrity: sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==}
     engines: {node: '>=12'}
-
-  any-promise@1.3.0:
-    resolution: {integrity: sha512-7UvmKalWRt1wgjL1RrGxoSJW/0QZFIegpeGvZG9kjp8vrRu55XTHbwnqq2GpXm9uLbcuhxm3IqX9OB4MZR1b2A==}
 
   anymatch@3.1.3:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
@@ -2266,9 +2263,6 @@ packages:
     resolution: {integrity: sha512-2eznPJP8z2BFLX50tf0LuODrpINqP1RVIm/CObbTcBRITQgmC/TjcREF1NeTBzIcR5XO/ukWo+YHOjBbFwIupg==}
     hasBin: true
 
-  mz@2.7.0:
-    resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
-
   nanoid@1.3.4:
     resolution: {integrity: sha512-4ug4BsuHxiVHoRUe1ud6rUFT3WUMmjXt1W0quL0CviZQANdan7D8kqN5/maw53hmAApY/jfzMRkC57BNNs60ZQ==}
 
@@ -2822,8 +2816,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sass-loader@15.0.0:
-    resolution: {integrity: sha512-mbXAL7sI/fgt3skXR6xHxtKkaGyxRrGf7zrU4hLLWxBDJEcAe0QsoNy92qKttCb3zfMniTkU2kD9yakUKtW7vQ==}
+  sass-loader@16.0.1:
+    resolution: {integrity: sha512-xACl1ToTsKnL9Ce5yYpRxrLj9QUDCnwZNhzpC7tKiFyA8zXsd3Ap+HGVnbCgkdQcm43E+i6oKAWBsvGA6ZoiMw==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
@@ -3084,13 +3078,6 @@ packages:
 
   text-decoder@1.1.1:
     resolution: {integrity: sha512-8zll7REEv4GDD3x4/0pW+ppIxSNs7H1J10IKFZsuOMscumCdM2a+toDGLPA3T+1+fLBql4zbt5z83GEQGGV5VA==}
-
-  thenify-all@1.6.0:
-    resolution: {integrity: sha512-RNxQH/qI8/t3thXJDwcstUO4zeqo64+Uy/+sNVRBx4Xn2OX+OZ9oP+iJnNFqplFra2ZUVeKCSa2oVWi3T4uVmA==}
-    engines: {node: '>=0.8'}
-
-  thenify@3.3.1:
-    resolution: {integrity: sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==}
 
   thingies@1.21.0:
     resolution: {integrity: sha512-hsqsJsFMsV+aD4s3CWKk85ep/3I9XzYV/IXaSouJMYIoDlgyi11cBhsqYe9/geRfB0YIikBQg6raRaM+nIMP9g==}
@@ -3391,11 +3378,11 @@ packages:
     resolution: {integrity: sha512-GQHQqAopRhwU8Kt1DDM8NjibDXHC8eoh1erhGAJPEyveY9qqVeXvVikNKrDz69sHowPMorbPUrH/mx8c50eiBQ==}
     engines: {node: '>=18'}
 
-  zigbee-herdsman-converters@19.72.0:
-    resolution: {integrity: sha512-wIRQOf4hDbfGaUxX1D4OjFWy8VdOiWent80kn2OlJbMLhUfzW6jn2ld0U4yQTdFckpkKPavKLHlLOPTYNp2EgA==}
+  zigbee-herdsman-converters@20.8.2:
+    resolution: {integrity: sha512-kijsgcrWXVGuMJM/WFuwbXHgj5PgzCAw1RAz/ZIzq94fpEZzbyRqdFuxaJ0fCal+KL6OC/0TLOfho+iuvIQ9qg==}
 
-  zigbee-herdsman@0.55.5:
-    resolution: {integrity: sha512-8UG2UhPgSOd5vGO2cpFobMR3ruumqFcJkT1Dhl7KrYLSVayVQTffJN+z3mVbIPokuQcepbZrMerCOEr1WrHF9w==}
+  zigbee-herdsman@0.57.1:
+    resolution: {integrity: sha512-ZMHa/w4UmIPty9Dzw5ViI+fH5bti1d8EjohCmGv6qVyX86CZd3nTul+jwMLWWHM0pYKyUHgRfUeX/WGHH9N33w==}
 
 snapshots:
 
@@ -4267,7 +4254,7 @@ snapshots:
     dependencies:
       '@mdit-vue/types': 2.1.0
 
-  '@vuepress/theme-default@2.0.0-rc.42(markdown-it@14.1.0)(sass-loader@15.0.0(sass@1.77.8)(webpack@5.94.0))(typescript@5.5.4)(vuepress@2.0.0-rc.15(@vuepress/bundler-webpack@2.0.0-rc.15(typescript@5.5.4))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))':
+  '@vuepress/theme-default@2.0.0-rc.42(markdown-it@14.1.0)(sass-loader@16.0.1(sass@1.77.8)(webpack@5.94.0))(typescript@5.5.4)(vuepress@2.0.0-rc.15(@vuepress/bundler-webpack@2.0.0-rc.15(typescript@5.5.4))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))':
     dependencies:
       '@vuepress/helper': 2.0.0-rc.42(typescript@5.5.4)(vuepress@2.0.0-rc.15(@vuepress/bundler-webpack@2.0.0-rc.15(typescript@5.5.4))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))
       '@vuepress/plugin-active-header-links': 2.0.0-rc.42(typescript@5.5.4)(vuepress@2.0.0-rc.15(@vuepress/bundler-webpack@2.0.0-rc.15(typescript@5.5.4))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)))
@@ -4289,7 +4276,7 @@ snapshots:
       vue: 3.4.38(typescript@5.5.4)
       vuepress: 2.0.0-rc.15(@vuepress/bundler-webpack@2.0.0-rc.15(typescript@5.5.4))(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))
     optionalDependencies:
-      sass-loader: 15.0.0(sass@1.77.8)(webpack@5.94.0)
+      sass-loader: 16.0.1(sass@1.77.8)(webpack@5.94.0)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - markdown-it
@@ -4493,8 +4480,6 @@ snapshots:
       color-convert: 2.0.1
 
   ansi-styles@6.2.1: {}
-
-  any-promise@1.3.0: {}
 
   anymatch@3.1.3:
     dependencies:
@@ -5839,12 +5824,6 @@ snapshots:
       dns-packet: 5.6.1
       thunky: 1.1.0
 
-  mz@2.7.0:
-    dependencies:
-      any-promise: 1.3.0
-      object-assign: 4.1.1
-      thenify-all: 1.6.0
-
   nanoid@1.3.4: {}
 
   nanoid@3.3.7: {}
@@ -6389,7 +6368,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass-loader@15.0.0(sass@1.77.8)(webpack@5.94.0):
+  sass-loader@16.0.1(sass@1.77.8)(webpack@5.94.0):
     dependencies:
       neo-async: 2.6.2
     optionalDependencies:
@@ -6678,14 +6657,6 @@ snapshots:
   text-decoder@1.1.1:
     dependencies:
       b4a: 1.6.6
-
-  thenify-all@1.6.0:
-    dependencies:
-      thenify: 3.3.1
-
-  thenify@3.3.1:
-    dependencies:
-      any-promise: 1.3.0
 
   thingies@1.21.0(tslib@2.7.0):
     dependencies:
@@ -6985,7 +6956,7 @@ snapshots:
 
   yoctocolors@2.1.1: {}
 
-  zigbee-herdsman-converters@19.72.0:
+  zigbee-herdsman-converters@20.8.2:
     dependencies:
       axios: 1.7.7
       buffer-crc32: 1.0.0
@@ -6993,12 +6964,12 @@ snapshots:
       iconv-lite: 0.6.3
       semver: 7.6.3
       tar-stream: 3.1.7
-      zigbee-herdsman: 0.55.5
+      zigbee-herdsman: 0.57.1
     transitivePeerDependencies:
       - debug
       - supports-color
 
-  zigbee-herdsman@0.55.5:
+  zigbee-herdsman@0.57.1:
     dependencies:
       '@serialport/bindings-cpp': 12.0.1
       '@serialport/parser-delimiter': 12.0.0
@@ -7007,7 +6978,6 @@ snapshots:
       debounce: 2.1.0
       fast-deep-equal: 3.1.3
       mixin-deep: 2.0.1
-      mz: 2.7.0
       slip: 1.0.2
     transitivePeerDependencies:
       - supports-color

@@ -1,7 +1,7 @@
 ---
 title: "Zemismart LXN56-SS27LX1.1 control via MQTT"
 description: "Integrate your Zemismart LXN56-SS27LX1.1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2021-06-12T19:37:13Z
+addedAt: 2024-09-01T12:36:27
 pageClass: device-page
 ---
 

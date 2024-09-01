@@ -1,7 +1,7 @@
 ---
 title: "Zemismart ZMR4 control via MQTT"
 description: "Integrate your Zemismart ZMR4 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-08-01T18:23:40
+addedAt: 2024-09-01T12:36:27
 pageClass: device-page
 ---
 

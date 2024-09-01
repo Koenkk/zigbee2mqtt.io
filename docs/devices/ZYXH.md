@@ -1,7 +1,7 @@
 ---
 title: "Tuya ZYXH control via MQTT"
 description: "Integrate your Tuya ZYXH via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-08-01T15:13:29
+addedAt: 2024-09-01T12:36:44
 pageClass: device-page
 ---
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SWV  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart water valve |
-| Exposes | flow, battery, switch (state), current_device_status, cyclic_timed_irrigation, cyclic_quantitative_irrigation, linkquality |
+| Exposes | flow, battery, switch (state), current_device_status, auto_close_when_water_shortage, cyclic_timed_irrigation, cyclic_quantitative_irrigation, linkquality |
 | Picture | ![SONOFF SWV](https://www.zigbee2mqtt.io/images/devices/SWV.png) |
 
 
@@ -71,6 +71,13 @@ Value can be found in the published state on the `current_device_status` propert
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current_device_status": ""}`.
 It's not possible to write (`/set`) this value.
 The possible values are: `normal_state`, `water_shortage`, `water_leakage`, `water_shortage & water_leakage`.
+
+### Auto close when water shortage (binary)
+Automatically shut down the water valve after the water shortage exceeds 30 minutes..
+Value can be found in the published state on the `auto_close_when_water_shortage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"auto_close_when_water_shortage": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_close_when_water_shortage": NEW_VALUE}`.
+If value equals `ENABLE` auto close when water shortage is ON, if `DISABLE` OFF.
 
 ### Cyclic timed irrigation (composite)
 Smart water valve cycle timing irrigation.
