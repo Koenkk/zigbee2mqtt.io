@@ -23,7 +23,7 @@
         "quasar": "2.16.9"
     },
     "devDependencies": {
-        "@types/node": "22.5.0",
+        "@types/node": "22.5.1",
         "@vuepress/bundler-webpack": "2.0.0-rc.15",
         "@vuepress/client": "2.0.0-rc.15",
         "@vuepress/plugin-docsearch": "2.0.0-rc.42",
