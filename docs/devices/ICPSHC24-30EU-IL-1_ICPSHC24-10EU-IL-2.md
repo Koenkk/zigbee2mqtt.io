@@ -24,6 +24,8 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Pair
+To pair this device, push the little hole for a few seconds on the backside of the driver. The on/off sequence you might read about, doesn't work.
 
 <!-- Notes END: Do not edit below this line -->
 
