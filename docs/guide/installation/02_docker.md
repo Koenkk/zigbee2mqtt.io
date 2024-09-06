@@ -183,7 +183,7 @@ You can optionally skip `zigbee2mqtt` and it will pull any new images for all co
 
 ## Notes for Raspberry Pi users
 
--   If you are running Raspbian Buster (not Bullseye!) (find out by executing `grep "PRETTY_NAME" /etc/os-release`) you need to install `libseccomp2`, this can be done by executing the following commands:
+-   If you are running Raspbian Buster (not Bullseye nor Bookworm!) (find out by executing `grep "PRETTY_NAME" /etc/os-release`) you need to install `libseccomp2`, this can be done by executing the following commands:
 
 ```bash
 sudo apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv-keys 04EE7237B7D453EC 648ACFD622F3D138
@@ -512,7 +512,7 @@ This workaround only works with cgroup v1, which is not enabled on many newer di
 
     In the above example, `proxy_traefik-net` is the network to connect to the mqtt broker. The constraint makes sure Docker deploys only to this (`rpi-3`) node, where the serial adapter is connected to. The volume binding `/mnt/docker-cluster/zigbee2mqtt/data` is the zigbee2mqtt persistent directory, where `configuration.yaml` is saved.
 
-    The zigbee2Zigbee2MQTTmqtt `configuration.yaml` should point to `/dev/zigbee-serial`:
+    The Zigbee2MQTT `configuration.yaml` should point to `/dev/zigbee-serial`:
 
     ```yaml
     [...]
