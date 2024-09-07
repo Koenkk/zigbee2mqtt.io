@@ -91,8 +91,8 @@ importers:
         specifier: 5.94.0
         version: 5.94.0
       zigbee-herdsman-converters:
-        specifier: 20.8.2
-        version: 20.8.2
+        specifier: 20.12.1
+        version: 20.12.1
 
 packages:
 
@@ -3378,11 +3378,11 @@ packages:
     resolution: {integrity: sha512-GQHQqAopRhwU8Kt1DDM8NjibDXHC8eoh1erhGAJPEyveY9qqVeXvVikNKrDz69sHowPMorbPUrH/mx8c50eiBQ==}
     engines: {node: '>=18'}
 
-  zigbee-herdsman-converters@20.8.2:
-    resolution: {integrity: sha512-kijsgcrWXVGuMJM/WFuwbXHgj5PgzCAw1RAz/ZIzq94fpEZzbyRqdFuxaJ0fCal+KL6OC/0TLOfho+iuvIQ9qg==}
+  zigbee-herdsman-converters@20.12.1:
+    resolution: {integrity: sha512-ylV6hfbe/+AIl5cVlGd3KI4s5OE7xZ1IEsEftxb/0atwS+ldToDqfB31dq256XMFNZU/Atet1H90OAwXS2IHrA==}
 
-  zigbee-herdsman@0.57.1:
-    resolution: {integrity: sha512-ZMHa/w4UmIPty9Dzw5ViI+fH5bti1d8EjohCmGv6qVyX86CZd3nTul+jwMLWWHM0pYKyUHgRfUeX/WGHH9N33w==}
+  zigbee-herdsman@0.57.3:
+    resolution: {integrity: sha512-WpJFb5GpqqCWTrUOSP4MbUZoPudVp+G2ehbpgSQOG8ITsVHsQyQ6iA52l77pG9DXGGwUgmycIXKFmsG6U5zCbA==}
 
 snapshots:
 
@@ -6956,7 +6956,7 @@ snapshots:
 
   yoctocolors@2.1.1: {}
 
-  zigbee-herdsman-converters@20.8.2:
+  zigbee-herdsman-converters@20.12.1:
     dependencies:
       axios: 1.7.7
       buffer-crc32: 1.0.0
@@ -6964,12 +6964,12 @@ snapshots:
       iconv-lite: 0.6.3
       semver: 7.6.3
       tar-stream: 3.1.7
-      zigbee-herdsman: 0.57.1
+      zigbee-herdsman: 0.57.3
     transitivePeerDependencies:
       - debug
       - supports-color
 
-  zigbee-herdsman@0.57.1:
+  zigbee-herdsman@0.57.3:
     dependencies:
       '@serialport/bindings-cpp': 12.0.1
       '@serialport/parser-delimiter': 12.0.0

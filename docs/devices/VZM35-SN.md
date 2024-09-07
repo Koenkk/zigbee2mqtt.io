@@ -135,14 +135,14 @@ The minimal value is `0` and the maximum value is `127`.
 Value can be found in the published state on the `minimumLevel` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"minimumLevel": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimumLevel": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `253`.
+The minimal value is `1` and the maximum value is `254`.
 
 ### MaximumLevel (numeric)
 2-84: The level corresponding to the fan is Low, Medium, High..
 Value can be found in the published state on the `maximumLevel` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"maximumLevel": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"maximumLevel": NEW_VALUE}`.
-The minimal value is `2` and the maximum value is `254`.
+The minimal value is `2` and the maximum value is `255`.
 
 ### InvertSwitch (enum)
 Inverts the orientation of the switch. Useful when the switch is installed upside down. Essentially up becomes down and down becomes up..

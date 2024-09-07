@@ -1,7 +1,7 @@
 ---
-title: "Tuya TS0002_switch_module_3 control via MQTT"
-description: "Integrate your Tuya TS0002_switch_module_3 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-06-27T19:46:16
+title: "Tuya TS0002_basic control via MQTT"
+description: "Integrate your Tuya TS0002_basic via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-09-07T11:16:42
 pageClass: device-page
 ---
 
@@ -11,15 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya TS0002_switch_module_3
+# Tuya TS0002_basic
 
 |     |     |
 |-----|-----|
-| Model | TS0002_switch_module_3  |
+| Model | TS0002_basic  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | 2 gang switch with backlight |
-| Exposes | switch (state), power_on_behavior, indicator_mode, linkquality |
-| Picture | ![Tuya TS0002_switch_module_3](https://www.zigbee2mqtt.io/images/devices/TS0002_switch_module_3.png) |
+| Description | 2 gang switch module |
+| Exposes | switch (state), power_on_behavior, switch_type, linkquality |
+| Picture | ![Tuya TS0002_basic](https://www.zigbee2mqtt.io/images/devices/TS0002_basic.png) |
+| White-label | OXT SWTZ22, Moes ZM-104B-M |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -59,26 +60,19 @@ Additionally an `off_wait_time` property can be added to the payload to specify 
 Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Power-on behavior (enum, l1 endpoint)
+### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
-Value can be found in the published state on the `power_on_behavior_l1` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_l1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l1": NEW_VALUE}`.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
 
-### Power-on behavior (enum, l2 endpoint)
-Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
-Value can be found in the published state on the `power_on_behavior_l2` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_l2": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l2": NEW_VALUE}`.
-The possible values are: `off`, `previous`, `on`.
-
-### Indicator mode (enum)
-LED indicator mode.
-Value can be found in the published state on the `indicator_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
-The possible values are: `off`, `off/on`, `on/off`, `on`.
+### Switch type (enum)
+Type of the switch.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `toggle`, `state`, `momentary`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

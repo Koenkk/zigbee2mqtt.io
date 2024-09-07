@@ -103,14 +103,14 @@ The minimum level that the dimmer allows the bulb to be dimmed to. Useful when t
 Value can be found in the published state on the `minimumLevel_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"minimumLevel_1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimumLevel_1": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `253`.
+The minimal value is `1` and the maximum value is `254`.
 
 ### MaximumLevel 1 (numeric)
 The maximum level that the dimmer allows the bulb to be dimmed to.Useful when the user has an LED bulb that reaches its maximum level before the dimmer value of 99 or when the user wants to limit the maximum brightness..
 Value can be found in the published state on the `maximumLevel_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"maximumLevel_1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"maximumLevel_1": NEW_VALUE}`.
-The minimal value is `2` and the maximum value is `254`.
+The minimal value is `2` and the maximum value is `255`.
 
 ### AutoTimerOff 1 (numeric)
 Automatically turns the light off after this many seconds. When the light is turned on a timer is started. When the timer expires, the light is turned off. 0 = Auto off is disabled..
@@ -225,14 +225,14 @@ The minimum level that the fan can be set to..
 Value can be found in the published state on the `minimumLevel_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"minimumLevel_2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimumLevel_2": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `253`.
+The minimal value is `1` and the maximum value is `254`.
 
 ### MaximumLevel 2 (numeric)
 The maximum level that the fan can be set to..
 Value can be found in the published state on the `maximumLevel_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"maximumLevel_2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"maximumLevel_2": NEW_VALUE}`.
-The minimal value is `2` and the maximum value is `254`.
+The minimal value is `2` and the maximum value is `255`.
 
 ### AutoTimerOff 2 (numeric)
 Automatically turns the fan off after this many seconds. When the fan is turned on a timer is started. When the timer expires, the switch is turned off. 0 = Auto off is disabled..
