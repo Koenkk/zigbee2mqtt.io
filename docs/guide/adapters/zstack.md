@@ -36,20 +36,19 @@ Once you've successfully put your adapter into BSL mode, use any of the tools be
 
 ### USB
 
-<details>
-<summary>Electrolama zig-a-zig-ah! (zzh!)</summary>
-    
-USB connected adapter with external antenna based on CC2652R chip  
-* [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC2652R_coordinator_20240710.zip)  
-* [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC2652R_router_20221102.zip)  
-* [Vendor flashing instructions](https://electrolama.com/radio-docs/#step-3-flash-the-firmware-on-your-stick)
-* [Buy](https://shop.electrolama.com/collections/usb-rf-sticks/products/zzh-multiprotocol-rf-stick)
+::: details Electrolama zig-a-zig-ah! (zzh!)
+
+USB connected adapter with external antenna based on CC2652R chip
+
+-   [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC2652R_coordinator_20240710.zip)
+-   [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC2652R_router_20221102.zip)
+-   [Vendor flashing instructions](https://electrolama.com/radio-docs/#step-3-flash-the-firmware-on-your-stick)
+-   [Buy](https://shop.electrolama.com/collections/usb-rf-sticks/products/zzh-multiprotocol-rf-stick)
 
 <img src="../../images/zzh.jpg" width="200" />
-</details>
+:::
 
-<details>
-<summary>Slaesh's CC2652RB stick</summary>
+::: details Slaesh's CC2652RB stick
 
 USB connected adapter with external antenna based on CC2652RB chip
 
@@ -59,10 +58,9 @@ USB connected adapter with external antenna based on CC2652RB chip
 -   [Buy](https://slae.sh/projects/cc2652/)
 
 <img src="../../images/slaeshs_cc2652rb_stick.jpg" width="200" />
-</details>
+:::
 
-<details>
-<summary>Tube's CC2652P2 USB Coordinator</summary>
+::: details Tube's CC2652P2 USB Coordinator
 
 Open source hardware CC2652P based USB connected adapter with external antenna and USB extension cable
 
@@ -72,10 +70,9 @@ Open source hardware CC2652P based USB connected adapter with external antenna a
 -   [Buy](https://www.tubeszb.com/)
 
 <img src="../../images/Tubes_USB_Coordinator_CC2652P2_variant.png" width="200" />
-</details>
+:::
 
-<details>
-<summary>Egony Stick V4</summary>
+::: details Egony Stick V4
 
 Powerful CC2652P Zigbee USB dongle and Raspberry Pi GPIO module. Available in Ebyte (left picture) and RFSTAR (right picture) version.
 
@@ -87,10 +84,9 @@ Powerful CC2652P Zigbee USB dongle and Raspberry Pi GPIO module. Available in Eb
 
 <img src="../../images/Egony_v4_E72.jpg" widht="200" /> <img src="../../images/Egony_v4_RFS.jpg" width="200" />
 
-</details>
+:::
 
-<details>
-<summary>ZigStar Stick v4</summary>
+::: details ZigStar Stick v4
 
 Powerful Open source dongle with external antenna based on CC2652P
 
@@ -101,10 +97,9 @@ Powerful Open source dongle with external antenna based on CC2652P
 -   [Buy](https://zig-star.com)
 
 <img src="../../images/ZigStar-USB.png" width="200" />
-</details>
+:::
 
-<details>
-<summary>CircuitSetup's CC2652P2 USB Coordinator</summary>
+::: details CircuitSetup's CC2652P2 USB Coordinator
 
 CC2652P based USB connected adapter pre-programmed with Z-Stack
 
@@ -114,10 +109,9 @@ CC2652P based USB connected adapter pre-programmed with Z-Stack
 -   [Buy](https://circuitsetup.us/product/usb-zigbee-stick-z-stack-coordinator/)
 
 <img src="../../images/circset_cc2652.jpg" width="200" />
-</details>
+:::
 
-<details>
-<summary>SMLIGHT CC2652P Zigbee USB Adapter SLZB-02</summary>
+::: details SMLIGHT CC2652P Zigbee USB Adapter SLZB-02
 
 CC2652P factory-made Zigbee USB coordinator with external 6dB antenna and worldwide delivery
 
@@ -128,10 +122,9 @@ CC2652P factory-made Zigbee USB coordinator with external 6dB antenna and worldw
 -   Buy: [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/zigbee-coordinator-v4-cc2652p), [Tindie](https://www.tindie.com/products/smartlightme/zigbee-cc2652p-coordinator-dongle-stick-adapter/)
 
 <img src="../../images/CC2652P_smartlight_zigbee_coordinator.png" width="200" />
-</details>
+:::
 
-<details>
-<summary>SONOFF Zigbee 3.0 USB Dongle Plus ZBDongle-P</summary>
+::: details SONOFF Zigbee 3.0 USB Dongle Plus ZBDongle-P
 
 CC2652P based USB connected adapter pre-programmed and with enclosure.
 
@@ -144,10 +137,9 @@ This section is about the "ZBDongle-P", for "ZBDongle-E" see below.
 -   [Buy](https://itead.cc/product/sonoff-zigbee-3-0-usb-dongle-plus/)
 
 <img src="../../images/sonoff_plus_dongle.png" width="200" />
-</details>
+:::
 
-<details>
-<summary>Vision CC2652 dongle</summary>
+::: details Vision CC2652 dongle
 
 Adapter or small development board based on CC2652R (VS201) or CC2652P (VS202)  
 Coordinator firmware: [VS201](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC2652R_coordinator_20240710.zip) [VS202](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC1352P2_CC2652P_launchpad_coordinator_20240710.zip)  
@@ -157,10 +149,9 @@ Router firmware: [VS201](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_
 -   Buy: [VS201](https://www.aliexpress.com/item/1005002809329614.html) [VS202](https://www.aliexpress.com/item/1005003393047763.html)
 
 <img src="../../images/cc26x2r1_dongle.jpg" width="200" />
-</details>
+:::
 
-<details>
-<summary>JetHome JetStick Z2/ZB6UX CC2652P1</summary>
+::: details JetHome JetStick Z2/ZB6UX CC2652P1
 
 Powerful CC2652P1 factory-made Zigbee USB dongle with external antenna.
 
@@ -170,10 +161,9 @@ Powerful CC2652P1 factory-made Zigbee USB dongle with external antenna.
 -   Buy: [JetStick Z2](https://jethome.ru/z2/)
 
 <img src="../../images/jetstick_z2.png" width="200" />
-</details>
+:::
 
-<details>
-<summary>SMLIGHT SLZB-07p7 Zigbee USB CC2652P7 adapter</summary>
+::: details SMLIGHT SLZB-07p7 Zigbee USB CC2652P7 adapter
 
 Powerful, tiny modern design, developed for Zigbee2MQTT, pre-flashed and ready to use Zigbee adapter. Autodiscovery in Home Assistant. AutoBSL (remote update) enabled.  
 Rich packing that includes:
@@ -194,12 +184,11 @@ Remote Zigbee update, autodiscovery, LEDs, and flashing pins. It fits home and b
         |:-:|:-:|:-:|
         |<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07p7-main1-title.jpg" width="200">|<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07p7-main2-title.jpg" width="200">|<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-07p7/slzb-07p7-main3-title.jpg" width="200">|
 
-</details>
+:::
 
 ### Network (TCP)
 
-<details>
-<summary>Tube's Zigbee Gateways (CC2652P2 variant)</summary>
+::: details Tube's Zigbee Gateways (CC2652P2 variant)
 
 Open source hardware CC2652P and ESP32 based Zigbee to Ethernet Coordinator (left picture), POE variant is also available (right picture)
 
@@ -210,10 +199,9 @@ Open source hardware CC2652P and ESP32 based Zigbee to Ethernet Coordinator (lef
 
 <img src="../../images/Tubes_Zigbee_Gateways_CC2652P2_variant.jpg" width="200" /> <img src="../../images/Tubes_Zigbee_PoE_Coordinator_CC2652P2_variant.jpg" width="200" />
 
-</details>
+:::
 
-<details>
-<summary>cyijun OpenZ3Gateway</summary>
+::: details cyijun OpenZ3Gateway
 
 An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs less than 60 CNY in China.
 
@@ -223,10 +211,9 @@ An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs
 -   [Tindie](https://www.tindie.com/products/cyijun/openz3gateway/)
 
 <img src="../../images/openz3gateway.jpg" width="200" />
-</details>
+:::
 
-<details>
-<summary>XGG 52PZ2MGateway</summary>
+::: details XGG 52PZ2MGateway
 
 An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs less than 60 CNY in China.
 
@@ -236,10 +223,9 @@ An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs
 -   [Buy](https://shop68536829.taobao.com/)
 
 <img src="../../images/CC2652P-Z2M.jpg" width="200" />
-</details>
+:::
 
-<details>
-<summary>SMLIGHT Zigbee LAN Adapter CC2652P Model SLZB-05</summary>
+::: details SMLIGHT Zigbee LAN Adapter CC2652P Model SLZB-05
 
 Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6dB antenna, worldwide delivery, Zigbee firmware can be manually updated via USB in 5 easy steps, customer/tech support, fast order processing.
 
@@ -249,12 +235,11 @@ Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6
 -   Buy: [eBay](https://www.ebay.com/itm/165178757770) [Official store](https://smartlight.me/smart-home-devices/zigbee-devices/smlight-zigbee-lan-adapter-slzb-05en) [Telegram](https://t.me/smartlightme)
 
 <img src="https://smartlight.me/ebay/images/slzb_05/smartlight-zigbee-lan-slzb-05.jpg" width="200" />
-</details>
+:::
 
 ### Hybrid (USB + Network)
 
-<details>
-<summary>Gio-dot Z-Bee Duo with CC2652P</summary>
+::: details Gio-dot Z-Bee Duo with CC2652P
 
 4 in 1 zigbee adapter: USB Stick, WiFi, LAN, PI Zero Hat, with external antenna and 3D printed case.
 
@@ -265,10 +250,9 @@ Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6
 -   [Buy](https://www.tindie.com/products/gio_dot/z-bee-duo-modular-cc2652p-zigbee-30-adapter/)
 
 <img src="../../images/Z-Bee_Duo-ico.jpg" width="200" />
-</details>
+:::
 
-<details>
-<summary>ZigStar LAN Coordinator</summary>
+::: details ZigStar LAN Coordinator
 
 Powerful Open source LAN Coordinator with external antenna on CC2652P
 
@@ -279,10 +263,9 @@ Powerful Open source LAN Coordinator with external antenna on CC2652P
 -   [Buy](https://zig-star.com) [Tindie](https://www.tindie.com/products/zigstar/zigstar-lan-gateway/)
 
 <img src="../../images/ZigStar-LAN.png" width="200" />
-</details>
+:::
 
-<details>
-<summary>ZigStar PoE Coordinator</summary>
+::: details ZigStar PoE Coordinator
 
 Open source PoE af Coordinator with external antenna on CC2652P
 
@@ -293,10 +276,9 @@ Open source PoE af Coordinator with external antenna on CC2652P
 -   [Buy](https://zig-star.com) [Tindie](https://www.tindie.com/products/zigstar/zigstar-olizig-poe/)
 
 <img src="../../images/ZigStar-PoE.png" width="200" />
-</details>
+:::
 
-<details>
-<summary>SMLIGHT SLZB-06 Zigbee+Matter/Thread+Bluetooth Ethernet USB POE WiFi LAN adapter</summary>
+::: details SMLIGHT SLZB-06 Zigbee+Matter/Thread+Bluetooth Ethernet USB POE WiFi LAN adapter
 
 Powerful, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed and ready to use Zigbee adapter.  
 It supports **Zigbee 3.0**, experimental **Matter-over-Thread** and **Bluetooth**. Connections: Ethernet (+PoE), LAN, USB, and WiFi. Rich packing that includes:
@@ -322,10 +304,9 @@ Remote update (Zigbee and Core), modern UI firmware. Optoelectronic isolation fo
         |:-:|:-:|:-:|
         |<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-main-title.jpg" width="200" />|<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-main-firmware.jpg" width="200" />|[<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-main-videolink-small.jpg" width="200" />](https://www.youtube.com/watch?v=q3cWHQ8CdcA)|
 
-</details>
+:::
 
-<details>
-<summary>ZigStar UZG-01 - Universal ZigBee Gateway</summary>
+::: details ZigStar UZG-01 - Universal ZigBee Gateway
 
 Open source PoE af Coordinator with external antenna on CC2652P
 
@@ -340,10 +321,9 @@ Open source PoE af Coordinator with external antenna on CC2652P
 | :--------------------------------------------------------: | :--------------------------------------------------------: |
 | <img src="../../images/Zigstar-UZG01-1.png" width="200" /> | <img src="../../images/Zigstar-UZG01-2.png" width="200" /> |
 
-</details>
+:::
 
-<details>
-<summary>SMLIGHT SLZB-06p7 Zigbee Ethernet USB POE WiFi LAN adapter</summary>
+::: details SMLIGHT SLZB-06p7 Zigbee Ethernet USB POE WiFi LAN adapter
 
 Powerful, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed and ready to use Zigbee adapter.  
 It supports Zigbee 3.0, Ethernet, LAN, USB, and WiFi connections. Rich packing that includes:
@@ -369,10 +349,9 @@ Remote update (Zigbee and Core), modern UI firmware. Optoelectronic isolation fo
         |:-:|:-:|:-:|
         |<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06p7-main-title.jpg" width="200" />|<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06p7-main-firmware.jpg" width="200" />|[<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-main-videolink-small.jpg" width="200" />](https://www.youtube.com/watch?v=q3cWHQ8CdcA)|
 
-</details>
+:::
 
-<details>
-<summary>cod.m Zigbee Coordinator CC2652P7 (CZC-1.0)</summary>
+::: details cod.m Zigbee Coordinator CC2652P7 (CZC-1.0)
 
 cod.m ZigBee Coordinator (CZC) - Network (LAN/Wi-Fi) with Power over Ethernet (optional) or USB-C.
 
@@ -396,12 +375,11 @@ Links:
 
 <img src="../../images/codm-cc2652p7-zigbee-coordinator.jpg" width="200" /> <img src="../../images/codm-cc2652p7-zigbee-coordinator-schematic.png" width="200" />
 
-</details>
+:::
 
 ### Hub
 
-<details>
-<summary>JetHome JetHub D1+</summary>
+::: details JetHome JetHub D1+
 
 Controller with ZigBee module onboard with external antenna.
 
@@ -413,12 +391,11 @@ Based on TI CC2652P1.
 -   [Buy](https://jethome.ru/d1p/)
 
 <img src="../../images/jethub_d1_full.png" width="200" />
-</details>
+:::
 
 ### Custom
 
-<details>
-<summary>cod.m Zigbee CC2652P RPi Module</summary>
+::: details cod.m Zigbee CC2652P RPi Module
 
 Raspberry Pi GPIO module with CC2652P and integrated power amplifier (+20dBm)
 
@@ -428,9 +405,9 @@ Raspberry Pi GPIO module with CC2652P and integrated power amplifier (+20dBm)
 -   [Buy](https://shop.codm.de/automation/zigbee/33/zigbee-cc2652p2-raspberry-pi-module)
 
 <img src="../../images/codm-cc2652p-rpi.jpg" width="200" />
-</details>
-<details>
-<summary>ZigStar ZigiHAT PoE </summary>
+:::
+
+::: details ZigStar ZigiHAT PoE
 
 Powerful Open source Pi HAT based on CC2652P with PoE,RTC onboard
 
@@ -441,10 +418,9 @@ Powerful Open source Pi HAT based on CC2652P with PoE,RTC onboard
 -   [Buy](https://zig-star.com)
 
 <img src="../../images/ZigiHAT.png" width="200" />
-</details>
+:::
 
-<details>
-<summary>Texas Instruments LAUNCHXL-CC1352P-2</summary>
+::: details Texas Instruments LAUNCHXL-CC1352P-2
 
 USB connected development kit, based on CC1352P chip  
 These devices have two serial devices built in. Make sure you put the right serial device in the [configuration](../configuration/) or use auto detect (completely remove the `serial` section from `configuration.yaml`) if you only have one Texas Instruments CC device connected to your system.  
@@ -456,10 +432,9 @@ An external antenna can be connected which could increase range: [requires resol
 -   [Buy](http://www.ti.com/tool/LAUNCHXL-CC1352P)
 
 <img src="../../images/cc1352p2.jpg" width="200" />
-</details>
+:::
 
-<details>
-<summary>Texas Instruments LAUNCHXL-CC26X2R1</summary>
+::: details Texas Instruments LAUNCHXL-CC26X2R1
 
 USB connected development kit, based on CC2652R chip  
 These devices have two serial devices built in. Make sure you put the right serial device in the [configuration](../configuration/) or use auto detect (completely remove the `serial` section from `configuration.yaml`) if you only have one Texas Instruments CC device connected to your system.  
@@ -471,10 +446,9 @@ An external antenna can be connected which could increase range: [requires resol
 -   [Buy](http://www.ti.com/tool/LAUNCHXL-CC26X2R1)
 
 <img src="../../images/cc26x2r1.jpg" width="200" />
-</details>
+:::
 
-<details>
-<summary>Texas Instruments LP-CC2652R7</summary>
+::: details Texas Instruments LP-CC2652R7
 
 USB connected development kit, based on CC2652R7 chip  
 These devices have two serial devices built in. Make sure you put the right serial device in the [configuration](../configuration/) or use auto detect (completely remove the `serial` section from `configuration.yaml`) if you only have one Texas Instruments CC device connected to your system.
@@ -484,10 +458,9 @@ These devices have two serial devices built in. Make sure you put the right seri
 -   [Buy](http://www.ti.com/tool/LP-CC2652R7)
 
 <img src="../../images/CC2652R7.png" width="200" />
-</details>
+:::
 
-<details>
-<summary>Texas Instruments LP-CC1352P7</summary>
+::: details Texas Instruments LP-CC1352P7
 
 USB connected development kit, based on CC1352P7 chip  
 These devices have two serial devices built in. Make sure you put the right serial device in the [configuration](../configuration/) or use auto detect (completely remove the `serial` section from `configuration.yaml`) if you only have one Texas Instruments CC device connected to your system.
@@ -497,14 +470,13 @@ These devices have two serial devices built in. Make sure you put the right seri
 -   [Buy](https://www.ti.com/tool/LP-CC1352P7)
 
 <img src="../../images/LP-CC1352P7.jpg" width="200" />
-</details>
+:::
 
 ## Not recommended (CC2530/CC2531/CC2538)
 
 ### USB
 
-<details>
-<summary>Texas Instruments CC2531</summary>
+::: details Texas Instruments CC2531
 
 USB connected Zigbee adapter with PCB antenna  
 **Warning 1:** requires additional hardware to flash (CC debugger + download cable)  
@@ -517,12 +489,11 @@ USB connected Zigbee adapter with PCB antenna
 -   [Buy](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2531)
 
 <img src="../../images/cc2531.jpg" width="200" />
-</details>
+:::
 
 ### Serial
 
-<details>
-<summary>Vision CC2538+CC2592 Dongle(VS203)</summary>
+::: details Vision CC2538+CC2592 Dongle(VS203)
 
 Adapter or small development board based on CC2538 and CC2592 chip
 
@@ -531,10 +502,9 @@ Adapter or small development board based on CC2538 and CC2592 chip
 -   [Buy](https://www.aliexpress.com/item/1005002809329614.html?spm=a2g0o.store_pc_allProduct.8148356.2.4d7f1012TTc3uX)
 
 <img src="../../images/cc2538_cc2592_dongle.jpg" width="200" />
-</details>
+:::
 
-<details>
-<summary>Texas Instruments CC2530</summary>
+::: details Texas Instruments CC2530
 
 Serial connected adapter with external antenna optionally with CC2591 or CC2592 RF frontend  
 **Warning 1:** requires additional hardware to flash (CC debugger + download cable)  
@@ -547,9 +517,9 @@ Serial connected adapter with external antenna optionally with CC2591 or CC2592 
 -   Buy: [AliExpress](http://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20181213104041&SearchText=cc2530) [GBAN](http://www.gban.cn/en/product_show.asp?id=43) [Tindie](https://www.tindie.com/products/GiovanniCas/cc2530-cc2592-zigbee-dongle/)
 
 <img src="../../images/cc2530.jpg" width="200" />
-</details>
-<details>
-<summary>Texas Instruments CC2538</summary>
+:::
+
+::: details Texas Instruments CC2538
 
 Serial connected adapter with CC2592 RF Amplifier
 
@@ -558,12 +528,11 @@ Serial connected adapter with CC2592 RF Amplifier
 -   Buy: [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20191108075039&SearchText=cc2538)
 
 <img src="../../images/cc2538.jpg" width="200" />
-</details>
+:::
 
 ### Network
 
-<details>
-<summary>XGG gateway</summary>
+::: details XGG gateway
 
 An open source zigbee gateway powered by ESP8266 and CC2538+CC2592PA (XGG 38PZ2MGateway) or CC2530 (XGG 30Z2MGateway)  
 Coordinator firmware: [XGG 38PZ2MGateway](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin) [XGG 30Z2MGateway](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin)
@@ -571,12 +540,11 @@ Coordinator firmware: [XGG 38PZ2MGateway](https://github.com/Koenkk/Z-Stack-firm
 -   [Contact](https://shop68536829.taobao.com/)
 
 <img src="../../images/CC2652P-Z2M.jpg" width="200" />
-</details>
+:::
 
 ### Custom
 
-<details>
-<summary>Texas Instruments CC2538 HAT</summary>
+::: details Texas Instruments CC2538 HAT
 
 Raspberry pinout compatible HAT with CC2538 and optional external antenna
 
@@ -585,4 +553,4 @@ Raspberry pinout compatible HAT with CC2538 and optional external antenna
 -   [Buy](https://www.tindie.com/products/GiovanniCas/zigbee-hat-with-cc2538-for-raspberry/)
 
 <img src="../../images/cc2538hat.jpg" width="200" />
-</details>
+:::

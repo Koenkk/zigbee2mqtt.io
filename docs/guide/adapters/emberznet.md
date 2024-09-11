@@ -50,8 +50,7 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
 
 ### USB
 
-<details>
-<summary>Sonoff ZBDongle-E (V2 model, EFR32MG21)</summary>
+::: details Sonoff ZBDongle-E (V2 model, EFR32MG21)
 
 With external antenna. Only supports software flow control (make sure not to set `rtscts: true`).
 
@@ -64,10 +63,9 @@ With external antenna. Only supports software flow control (make sure not to set
 -   [Buy](https://itead.cc/product/zigbee-3-0-usb-dongle/)
 
 <img src="../../images/dongle-e.jpg" width="200" />
-</details>
+:::
 
-<details>
-<summary>Nabu Casa Home Assistant SkyConnect (EFR32MG21)</summary>
+::: details Nabu Casa Home Assistant SkyConnect (EFR32MG21)
 
 With integrated antenna and hardware flow control support.
 
@@ -83,10 +81,9 @@ serial:
 -   [Buy](https://www.home-assistant.io/skyconnect)
 
 <img src="../../images/skyconnect_isometric.jpg" width="200" />
-</details>
+:::
 
-<details>
-<summary>SMLIGHT SLZB-07 (EFR32MG21)</summary>
+::: details SMLIGHT SLZB-07 (EFR32MG21)
 
 With external antenna and hardware flow control support.
 
@@ -102,12 +99,11 @@ serial:
 
 <img src="../../images/smlight-slzb-07.jpg" width="200" />
 
-</details>
+:::
 
 ### Network (TCP)
 
-<details>
-<summary>TubeZB EFR32 MGM24 POE (MGM240PB32VNN)</summary>
+::: details TubeZB EFR32 MGM24 POE (MGM240PB32VNN)
 
 With external antenna.
 
@@ -117,12 +113,11 @@ With external antenna.
 
 <img src="../../images/tubezb-mgm24-poe.jpg" width="200" />
 
-</details>
+:::
 
 ### Hybrid (USB + Network)
 
-<details>
-<summary>SMLIGHT SLZB-06M (EFR32MG21)</summary>
+::: details SMLIGHT SLZB-06M (EFR32MG21)
 
 With external antenna.
 
@@ -136,10 +131,9 @@ Not suitable for WiFi or other high latency connections.**
 
 <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06m-main-title.jpg" width="200" />
 
-</details>
+:::
 
-<details>
-<summary>SMLIGHT SLZB-06mg24 (EFR32MG24)</summary>
+::: details SMLIGHT SLZB-06mg24 (EFR32MG24)
 
 With external antenna.
 
@@ -149,12 +143,11 @@ With external antenna.
 
 <img src="../../images/smlight-slzb-06mg24.jpg" width="200" />
 
-</details>
+:::
 
 ### Hub
 
-<details>
-<summary>Nabu Casa Home Assistant Yellow (MGM210P)</summary>
+::: details Nabu Casa Home Assistant Yellow (MGM210P)
 
 With integrated antenna and hardware flow control support.
 
@@ -170,27 +163,25 @@ serial:
 -   [Buy](https://www.home-assistant.io/yellow)
 
 <img src="../../images/yellow.jpg" width="200" />
-</details>
+:::
 
 ### Custom
 
 ## Not recommended
 
-<details>
-<summary>All Series 0/1 based-devices</summary>
+::: details All Series 0/1 based-devices
 
 Older hardware.
 
 See [Silicon Labs announcement](https://www.silabs.com/documents/public/release-notes/emberznet-release-notes-7.4.3.0.pdf).
 
-</details>
+:::
 
-<details>
-<summary>Easyiot ZB-GW04 (v1.1, v1.2)</summary>
+::: details Easyiot ZB-GW04 (v1.1, v1.2)
 
 Low-resources hardware.
 
-</details>
+:::
 
 ## Logging specific to this stack
 
