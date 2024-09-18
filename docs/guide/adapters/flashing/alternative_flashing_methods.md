@@ -233,7 +233,7 @@ I connected only 3 specified contacts and GND. During the firmware, the stick an
 C:\Projects\CCLib\Python>python cc_info.py -p COM9
 ```
 
-<details> <summary>Command output</summary>
+::: details Command output
 
 ```
 INFO: Found a CC2531 chip on COM9
@@ -266,7 +266,7 @@ Debug config:
  [X] TIMER_SUSPEND
 ```
 
-</details>
+:::
 
 [Another example of connection on MacOS](https://github.com/wavesoft/CCLib/issues/22#issuecomment-384452424)
 
@@ -280,8 +280,7 @@ Debug config:
 C:\Projects\ZigBee>python cc_write_flash.py -e -p COM9 --in=CC2531ZNP-Pro-Secure_LinkKeyJoin_mod.hex
 ```
 
-<details>
-  <summary>Command output</summary>
+::: details Command output
 
 ```
 INFO: Found a CC2531 chip on COM9
@@ -318,7 +317,7 @@ Flashing:
 Completed
 ```
 
-</details>
+:::
 
 ### <a name=rp2040_dragndrop></a> Via RP2040 board with [pico_cc_flasher](https://github.com/stolen/pico_cc_flasher) (~3 min)
 

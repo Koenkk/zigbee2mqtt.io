@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZWSM16-2-Zigbee  |
 | Vendor  | [AVATTO](/supported-devices/#v=AVATTO)  |
 | Description | 2 gang switch module |
-| Exposes | switch (state), power_on_behavior, switch_type, indicator_mode, linkquality |
+| Exposes | switch (state), power_on_behavior, switch_type, backlight_mode, indicator_mode, linkquality |
 | Picture | ![AVATTO ZWSM16-2-Zigbee](https://www.zigbee2mqtt.io/images/devices/ZWSM16-2-Zigbee.png) |
 
 
@@ -72,6 +72,13 @@ Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
 The possible values are: `toggle`, `state`, `momentary`.
+
+### Backlight mode (binary)
+Mode of the backlight.
+Value can be found in the published state on the `backlight_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
 ### Indicator mode (enum)
 LED indicator mode.

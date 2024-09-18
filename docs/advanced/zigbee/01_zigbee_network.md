@@ -54,6 +54,7 @@ The following Zigbee routers have already been confirmed to support (at least so
 
 | Zigbee Router                                                                       | GP Proxy | GP Sink | Unicast |
 | :---------------------------------------------------------------------------------- | :------: | :-----: | :-----: |
+| [Custom devices (DiY) TI Router](../../devices/ti.router.md)                        |    Y     |    N    |    Y    |
 | [IKEA E1603/E1702/E1708](../../devices/E1603_E1702_E1708.md)                        |    Y     |    N    |    Y    |
 | [IKEA E2204](../../devices/E2204.md)                                                |    Y     |    Y    |    Y    |
 | [IKEA ICPSHC24-10EU-IL-2](../../devices/ICPSHC24-10EU-IL-1_ICPSHC24-10EU-IL-2.md)²  |    Y     |    Y    |    Y    |
@@ -62,21 +63,21 @@ The following Zigbee routers have already been confirmed to support (at least so
 | [IKEA LED2109G6](../../devices/LED2109G6.md)                                        |    Y     |    Y    |    Y    |
 | [IKEA LED2107C4](../../devices/LED2107C4.md)                                        |    Y     |    N    |    Y    |
 | [Philips 1742930P7](../../devices/1742930P7.md)                                     |    Y     |    N    |    Y    |
-| [Philips 3216131P5](../../devices/3216131P5.md)                                     |    Y     |    Y    |   Nⁱ    |
-| [Philips 3261030P7](../../devices/3261030P7.md)                                     |    Y     |    Y    |   Nⁱ    |
+| [Philips 3216131P5](../../devices/3216131P5.md)                                     |    Y     |    Y    |    Nⁱ   |
+| [Philips 3261030P7](../../devices/3261030P7.md)                                     |    Y     |    Y    |    Nⁱ   |
 | [Philips 3261031P6](../../devices/3261031P6.md)                                     |    Y     |    N    |    Y    |
-| [Philips 3261331P7](../../devices/3261331P7.md)                                     |    Y     |    Y    |   Nⁱ    |
+| [Philips 3261331P7](../../devices/3261331P7.md)                                     |    Y     |    Y    |    Nⁱ   |
 | [Philips 3418931P6](../../devices/3418931P6.md)                                     |    Y     |    N    |    Y    |
-| [Philips 4023330P7](../../devices/4023330P7.md)                                     |    Y     |    Y    |   Nⁱ    |
-| [Philips 4034031P7](../../devices/4034031P7.md)                                     |    Y     |    Y    |   Nⁱ    |
-| [Philips 4090230P9](../../devices/4090230P9.md)                                     |    Y     |    Y    |   Nⁱ    |
+| [Philips 4023330P7](../../devices/4023330P7.md)                                     |    Y     |    Y    |    Nⁱ   |
+| [Philips 4034031P7](../../devices/4034031P7.md)                                     |    Y     |    Y    |    Nⁱ   |
+| [Philips 4090230P9](../../devices/4090230P9.md)                                     |    Y     |    Y    |    Nⁱ   |
 | [Philips 5047130P9](../../devices/5047130P9.md)                                     |    Y     |    N    |    Y    |
 | [Philips 5062131P7](../../devices/5062131P7.md)                                     |    Y     |    N    |    Y    |
 | [Philips 9290024896](../../devices/9290024896.md)                                   |    Y     |    N    |    Y    |
-| [Philips 9290022166](../../devices/9290022166.md)                                   |    Y     |    N    |   Nⁱ    |
+| [Philips 9290022166](../../devices/9290022166.md)                                   |    Y     |    N    |    Nⁱ   |
 | [Philips 9290022169](../../devices/9290022169.md)                                   |    Y     |    N    |    Y    |
 | [Philips 929001953301](../../devices/929001953301.md)                               |    Y     |    N    |    Y    |
-| [Philips 8718696548738](../../devices/8718696548738.md)                             |    Y     |    Y    |   Nⁱ    |
+| [Philips 8718696548738](../../devices/8718696548738.md)                             |    Y     |    Y    |    Nⁱ   |
 | [Philips 8719514491106](../../devices/8719514491106.md)                             |    Y     |    N    |    Y    |
 | [Sonoff ZBDongle-E](../../devices/ZBDongle-E.md)                                    |    Y     |    N    |    Y    |
 | [Sunricher SR-ZG9040A](../../devices/SR-ZG9040A.md)                                 |    Y     |    Y    |    Y    |
