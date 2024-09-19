@@ -1,7 +1,7 @@
 ---
-title: "Tuya TS0002_switch_module_2 control via MQTT"
-description: "Integrate your Tuya TS0002_switch_module_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-03-31T18:55:00
+title: "Tuya TS0002_limited control via MQTT"
+description: "Integrate your Tuya TS0002_limited via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-09-07T11:16:42
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya TS0002_switch_module_2
+# Tuya TS0002_limited
 
 |     |     |
 |-----|-----|
-| Model | TS0002_switch_module_2  |
+| Model | TS0002_limited  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 gang switch module |
-| Exposes | switch (state), power_on_behavior, switch_type, indicator_mode, linkquality |
-| Picture | ![Tuya TS0002_switch_module_2](https://www.zigbee2mqtt.io/images/devices/TS0002_switch_module_2.png) |
+| Exposes | switch (state), power_on_behavior, switch_type, backlight_mode, indicator_mode, linkquality |
+| Picture | ![Tuya TS0002_limited](https://www.zigbee2mqtt.io/images/devices/TS0002_limited.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -72,6 +72,13 @@ Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
 The possible values are: `toggle`, `state`, `momentary`.
+
+### Backlight mode (binary)
+Mode of the backlight.
+Value can be found in the published state on the `backlight_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
+If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
 ### Indicator mode (enum)
 LED indicator mode.
