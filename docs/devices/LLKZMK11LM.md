@@ -30,7 +30,7 @@ pageClass: device-page
 This option allows to inter connect the relays which will make sure that only one relay is on at a time. To do this publish to `zigbee2mqtt/FRIENDLY_NAME/set` payload `{"interlock": true}` or `{"interlock": false}`. By default this option is `false`.
 
 ### Binding
-The device allows zigbee [binding](../guide/usage/binding.html) for each individual channel.
+The device allows zigbee [binding](../guide/usage/binding.html) to each individual channel. There are no output clusters however so it can't be used as a remote for other devices.
 <!-- Notes END: Do not edit below this line -->
 
 
