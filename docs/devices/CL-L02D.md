@@ -23,7 +23,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+Turn the light on and off 5 times to pair. After this the device will automatically join.
 
 <!-- Notes END: Do not edit below this line -->
 
