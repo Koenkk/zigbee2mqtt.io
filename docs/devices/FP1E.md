@@ -67,5 +67,3 @@ The unit of this value is `°C`.
 Number of power outages (since last pairing).
 Value can be found in the published state on the `power_outage_count` property.
 It is not possible to read (`/get`) or write (`/set`) this value.
-
-<!-- Notes END -->
