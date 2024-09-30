@@ -1,10 +1,11 @@
-<!-- Notes BEGIN -->
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
 After this the device will automatically join. If this doesn't work, try with a single short button press.
 
+<!-- Notes END: Do not edit below this line -->
 ## Exposes
 
 ### Presence (binary)
