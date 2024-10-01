@@ -1,7 +1,7 @@
 ---
-title: "Sunricher SR-ZG9040A control via MQTT"
-description: "Integrate your Sunricher SR-ZG9040A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2020-12-30T11:31:00Z
+title: "Sunricher SR-ZG9040A/ZG9041A-D control via MQTT"
+description: "Integrate your Sunricher SR-ZG9040A/ZG9041A-D via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-10-01T19:01:34
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Sunricher SR-ZG9040A
+# Sunricher SR-ZG9040A/ZG9041A-D
 
 |     |     |
 |-----|-----|
-| Model | SR-ZG9040A  |
+| Model | SR-ZG9040A/ZG9041A-D  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee micro smart dimmer |
 | Exposes | light (state, brightness), effect, power_on_behavior, power, voltage, current, energy, linkquality |
-| Picture | ![Sunricher SR-ZG9040A](https://www.zigbee2mqtt.io/images/devices/SR-ZG9040A.png) |
+| Picture | ![Sunricher SR-ZG9040A/ZG9041A-D](https://www.zigbee2mqtt.io/images/devices/SR-ZG9040A-ZG9041A-D.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

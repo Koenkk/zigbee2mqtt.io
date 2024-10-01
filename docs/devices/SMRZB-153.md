@@ -1,6 +1,6 @@
 ---
-title: "Frient A/S SMRZB-153 control via MQTT"
-description: "Integrate your Frient A/S SMRZB-153 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Frient SMRZB-153 control via MQTT"
+description: "Integrate your Frient SMRZB-153 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-05-01T19:17:56
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Frient A/S SMRZB-153
+# Frient SMRZB-153
 
 |     |     |
 |-----|-----|
 | Model | SMRZB-153  |
-| Vendor  | [Frient A/S](/supported-devices/#v=Frient%20A%2FS)  |
+| Vendor  | [Frient](/supported-devices/#v=Frient)  |
 | Description | Smart Cable - Power switch with power measurement |
 | Exposes | switch (state), power_on_behavior, power, voltage, current, energy, linkquality |
-| Picture | ![Frient A/S SMRZB-153](https://www.zigbee2mqtt.io/images/devices/SMRZB-153.png) |
+| Picture | ![Frient SMRZB-153](https://www.zigbee2mqtt.io/images/devices/SMRZB-153.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

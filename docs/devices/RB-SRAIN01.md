@@ -59,7 +59,7 @@ The unit of this value is `lx`.
 Cleaning reminder.
 Value can be found in the published state on the `cleaning_reminder` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `ON` cleaning reminder is ON, if `OFF` OFF.
+If value equals `true` cleaning reminder is ON, if `false` OFF.
 
 ### Rain intensity (numeric)
 Rainfall intensity.

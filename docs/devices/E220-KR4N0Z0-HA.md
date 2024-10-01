@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Multiprise with 4 AC outlets and 2 USB super charging ports (16A) |
 | Exposes | switch (state), power_on_behavior, linkquality |
 | Picture | ![Tuya E220-KR4N0Z0-HA](https://www.zigbee2mqtt.io/images/devices/E220-KR4N0Z0-HA.png) |
-| White-label | LEELKI WP33-EU |
+| White-label | LELLKI WP33-EU |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

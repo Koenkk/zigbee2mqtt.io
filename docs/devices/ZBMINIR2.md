@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZBMINIR2  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart switch |
-| Exposes | switch (state), power_on_behavior, turbo_mode, delayed_power_on_state, delayed_power_on_time, detach_relay_mode, external_trigger_mode, inching_control_set, linkquality |
+| Exposes | switch (state), power_on_behavior, turbo_mode, delayed_power_on_state, delayed_power_on_time, detach_relay_mode, external_trigger_mode, inching_control_set, action, linkquality |
 | Picture | ![SONOFF ZBMINIR2](https://www.zigbee2mqtt.io/images/devices/ZBMINIR2.png) |
 
 
@@ -100,6 +100,12 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"inch
 - `inching_control` (binary): Enable/disable inching function. allowed values: `ENABLE` or `DISABLE`
 - `inching_time` (numeric): Delay time for executing a inching action. min value is 0.5, max value is 3599.5, unit is seconds
 - `inching_mode` (binary): Set inching off or inching on mode. allowed values: `ON` or `OFF`
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `toggle`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

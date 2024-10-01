@@ -27,7 +27,6 @@ pageClass: device-page
 
 ### Pairing
 Turn the light on and off 5 times to pair. After this the device will automatically join.
-
 <!-- Notes END: Do not edit below this line -->
 
 

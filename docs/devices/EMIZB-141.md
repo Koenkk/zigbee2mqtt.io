@@ -1,6 +1,6 @@
 ---
-title: "frient EMIZB-141 control via MQTT"
-description: "Integrate your frient EMIZB-141 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Frient EMIZB-141 control via MQTT"
+description: "Integrate your Frient EMIZB-141 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-12-01T09:53:36
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# frient EMIZB-141
+# Frient EMIZB-141
 
 |     |     |
 |-----|-----|
 | Model | EMIZB-141  |
-| Vendor  | [frient](/supported-devices/#v=frient)  |
+| Vendor  | [Frient](/supported-devices/#v=Frient)  |
 | Description | Smart powermeter Zigbee bridge |
 | Exposes | battery, power, energy, linkquality |
-| Picture | ![frient EMIZB-141](https://www.zigbee2mqtt.io/images/devices/EMIZB-141.png) |
+| Picture | ![Frient EMIZB-141](https://www.zigbee2mqtt.io/images/devices/EMIZB-141.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
