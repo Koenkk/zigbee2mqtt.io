@@ -105,7 +105,7 @@ Throttle processing of messages from this device. When setting e.g. `throttle: 1
 
 Setting this option reduces the number of MQTT messages sent for a particular device. This is directly linked to how high the option is set. When used on misbehaving devices with proper values, it can drastically reduce the size of external databases that store history (like Home Assistant), and yet have little to no impact on the quality of said history.
 
-Some ambient sensors like `TS0601_air_quality_sensor` and some water level sensors at least are know to get improved behaviour with this setting.
+Some ambient sensors like `TS0601_air_quality_sensor` and some water level sensors, among others, are known to benefit from this option
 
 **`retrieve_state`**  
 (DEPRECATED) Retrieves the state after setting it. Should only be enabled when the reporting feature
