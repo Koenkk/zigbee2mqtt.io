@@ -103,9 +103,9 @@ Throttle processing of messages from this device. When setting e.g. `throttle: 1
 
 `debounce` option has priority over `throttle`; if both are present for one device, only `debounce` will have any effect.
 
-This is handy for some sensor devices that keep sending messages each second, e.g. 'TS0601_air_quality_sensor', even without considerable changes of values, like some water level sensors and ambient sensors.
+Setting this option reduces the number of MQTT messages sent for a particular device. This is directly linked to how high the option is set. When used on misbehaving devices with proper values, it can drastically reduce the size of external databases that store history (like Home Assistant), and yet have little to no impact on the quality of said history.
 
-This option will reduce the MQTT messages sent for this device and also reduce storage if the states are stored in homeassistant.
+Some ambient sensors like `TS0601_air_quality_sensor` and some water level sensors at least are know to get improved behaviour with this setting.
 
 **`retrieve_state`**  
 (DEPRECATED) Retrieves the state after setting it. Should only be enabled when the reporting feature
