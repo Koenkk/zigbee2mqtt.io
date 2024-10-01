@@ -99,9 +99,9 @@ hand `debounce: 1` with `debounce_ignore: - action` will publish all unique acti
 e.g. `action: rotate_left` and `action: rotate_stop`)
 
 **`throttle`**  
-Throttle messages of this device. When setting e.g. `throttle: 10` the first message from device is accepted but all other messages in next 10 seconds will be ignored. Be carefull when using this option, unlike debounce that can ignore some attributes this will drop entire message.
+Throttle processing of messages from this device. When setting e.g. `throttle: 10` the first message from the device is processed but all other messages within the next 10 seconds are ignored. Be careful when using this option, unlike `debounce` that can ignore some attributes, this will drop the entire message.
 
-For now this option will only work when debounce is disabled.
+`debounce` option has priority over `throttle`; if both are present for one device, only `debounce` will have any effect.
 
 This is handy for some sensor devices that keep sending messages each second, e.g. 'TS0601_air_quality_sensor', even without considerable changes of values, like some water level sensors and ambient sensors.
 
