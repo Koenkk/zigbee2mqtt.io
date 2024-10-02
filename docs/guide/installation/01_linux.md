@@ -16,25 +16,6 @@ There are many tutorials available on how to do this, [example](https://randomne
 Mosquitto is the recommended MQTT broker but others should also work fine.
 :::
 
-## Determine location of the adapter and checking user permissions
-
-We first need to determine the location of the adapter. Connect the adapter to your Raspberry Pi. Most of the times the location is `/dev/ttyACM0`. This can be verified by:
-
-```bash
-pi@raspberry:~ $ ls -l /dev/ttyACM0
-crw-rw---- 1 root dialout 166, 0 May 16 19:15 /dev/ttyACM0  # <-- adapter (CC2531 in this case) on /dev/ttyACM0
-```
-
-Alternately, if you are using an ethernet connected adapter, follow the instructions given for your specific device.
-
-However, it is **recommended** to use "by ID" mapping of the device (see [Adapter settings](../configuration/adapter-settings.md)). This kind of device path mapping is more stable, but can also be handy if you have multiple serial devices connected to your Raspberry Pi. In the example below the device location is: `/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00`
-
-```bash
-pi@raspberry:/ $ ls -l /dev/serial/by-id
-total 0
-lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00 -> ../../ttyACM0
-```
-
 ## Installing
 
 ```bash
@@ -104,7 +85,7 @@ cp /opt/zigbee2mqtt/data/configuration.example.yaml /opt/zigbee2mqtt/data/config
 nano /opt/zigbee2mqtt/data/configuration.yaml
 ```
 
-For a basic configuration, the default settings are probably good. The only thing we need to change is the MQTT server url/authentication and the serial port (in some cases, your adapter might need additional configuration parameters, see [supported Adapters](../adapters/README.md)). This can be done by changing the section below in your `configuration.yaml`.
+For a basic configuration, the default settings are probably good. The only thing we need to change is the MQTT server settings. This can be done by changing the section below in your `configuration.yaml`.
 
 ```yaml
 # MQTT settings
@@ -116,11 +97,6 @@ mqtt:
     # MQTT server authentication, uncomment if required:
     # user: my_user
     # password: my_password
-
-# Serial settings
-serial:
-    # Location of the adapter (see first step of this guide)
-    port: /dev/ttyACM0
 ```
 
 Save the file and exit.
@@ -152,6 +128,12 @@ Zigbee2MQTT:info  2019-11-09T13:04:03: Connected to MQTT server
 ```
 
 Zigbee2MQTT can be stopped by pressing `CTRL + C`.
+
+::: warning ATTENTION
+
+In case Zigbee2MQTT fails to start with `USB adapter discovery error (No valid USB adapter found). Specify valid 'adapter' and 'port' in your configuration.` see the [serial configuration docs](../configuration/)
+
+:::
 
 ## (Optional) Running as a daemon with systemctl
 
