@@ -80,7 +80,7 @@ The following Zigbee routers have already been confirmed to support (at least so
 | [Philips 8718696548738](../../devices/8718696548738.md)                             |    Y     |    Y    |   Nⁱ    |
 | [Philips 8719514491106](../../devices/8719514491106.md)                             |    Y     |    N    |    Y    |
 | [Sonoff ZBDongle-E](../../devices/ZBDongle-E.md)                                    |    Y     |    N    |    Y    |
-| [Sunricher SR-ZG9040A](../../devices/SR-ZG9040A.md)                                 |    Y     |    Y    |    Y    |
+| [Sunricher R-ZG9040A-ZG9041A-D](../../devices/SR-ZG9040A_ZG9041A-D.md)              |    Y     |    Y    |    Y    |
 | [Sunricher SR-ZG9101SAC-HP-SWITCH-2CH](../../devices/SR-ZG9101SAC-HP-SWITCH-2CH.md) |    Y     |    Y    |    Y    |
 | [Ubisys C4](../../devices/C4.md)                                                    |    Y     |    N    |    Y    |
 | [Ubisys S2](../../devices/S2.md)                                                    |    Y     |    Y    |    Y    |
