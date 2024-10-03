@@ -18,7 +18,7 @@ serial:
     adapter: deconz
 ```
 
-Other supported settings are: `adapter_concurrent` ([docs](../configuration/adapter-settings.md)).
+Other supported settings are: `adapter_concurrent` and `adapter_delay` ([docs](../configuration/adapter-settings.md)).
 
 ## Hardware
 

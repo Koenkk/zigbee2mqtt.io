@@ -32,7 +32,7 @@ Given the example of the USB adapter above in combination with a `zstack` adapte
 
 ```yaml
 serial:
-    # Location of the adapter (e.g. CC2531).
+    # Location of the adapter
     # USB adapters - use format "port: /dev/ttyACM0"
     # Ethernet adapters - use format "port: tcp://192.168.1.12:6638"
     port: /dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00
@@ -86,6 +86,10 @@ advanced:
     baudrate: 115200
     # Optional: RTS / CTS Hardware Flow Control for serial port (default: false)
     rtscts: false
+    # Optional: Set the adapter delay, only used for Conbee/Raspbee adapters (default 0).
+    # In case you are having issues try `200`.
+    # For more information see https://github.com/Koenkk/zigbee2mqtt/issues/4884
+    adapter_delay: 0
 ```
 
 <!-- TODO: some notes about rtscts? Is it useful, which adapter supports it? -->
