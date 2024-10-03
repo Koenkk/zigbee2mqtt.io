@@ -33,7 +33,7 @@ Given the example of the USB adapter above in combination with a `zstack` adapte
 ```yaml
 serial:
     # Location of the adapter
-    # USB adapters - use format "port: /dev/ttyACM0"
+    # USB adapters - use format "port: /dev/serial/by-id/XXX"
     # Ethernet adapters - use format "port: tcp://192.168.1.12:6638"
     port: /dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00
     # Adapter type, allowed values: `zstack`, `ember`, `deconz`, `zigate` or `zboss`
