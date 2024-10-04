@@ -1,6 +1,6 @@
 ---
-title: "Tomzn TOB9Z-M control via MQTT"
-description: "Integrate your Tomzn TOB9Z-M via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tomzn TOB9Z-VAP control via MQTT"
+description: "Integrate your Tomzn TOB9Z-VAP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-08-01T18:23:41
 pageClass: device-page
 ---
@@ -11,11 +11,11 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tomzn TOB9Z-M
+# Tomzn TOB9Z-VAP
 
 |     |     |
 |-----|-----|
-| Model | TOB9Z-M  |
+| Model | TOB9Z-VAP  |
 | Vendor  | [Tomzn](/supported-devices/#v=Tomzn)  |
 | Description | Smart circuit breaker |
 | Exposes | linkquality, temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy |
@@ -23,7 +23,12 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+Picture is a TOB9Z-M, TOB9Z-VAP is esthetically similar.
 
+TOB9Z-M only includes switch and power monitoring, and is currently recognised (v1.40.2) as Tuya TS011F_plug_3.
+
+TOB9Z-T only features switch functionnality
 
 <!-- Notes END: Do not edit below this line -->
 
