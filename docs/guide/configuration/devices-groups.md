@@ -98,10 +98,6 @@ and `debounce` option without `debounce_ignore` publishes only last payload with
 hand `debounce: 1` with `debounce_ignore: - action` will publish all unique action messages, at least two (
 e.g. `action: rotate_left` and `action: rotate_stop`)
 
-**`retrieve_state`**  
-(DEPRECATED) Retrieves the state after setting it. Should only be enabled when the reporting feature
-does not work for this device.
-
 **`filtered_attributes`**  
 Allows preventing certain attributes from being published. When a device would e.g.
 publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will
