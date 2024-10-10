@@ -8,6 +8,10 @@ Most of the time this is caused by Zigbee2MQTT not being able to communicate wit
 
 [[toc]]
 
+## Error: `USB adapter discovery error (No valid USB adapter found). Specify valid 'adapter' and 'port' in your configuration.`
+
+Configure the `serial` section as described [here](../configuration/adapter-settings.md).
+
 ## Error: `SRSP - SYS - ping after 6000ms`
 
 5 common reasons of this error:

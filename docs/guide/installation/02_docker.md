@@ -9,7 +9,7 @@ It is possible to run Zigbee2MQTT in a Docker container using the official [Zigb
 This image support the following architectures: `386`, `amd64`, `arm/v6`, `arm/v7`, `arm64`.
 Since Zigbee2MQTT images are manifest listed, Docker will auto-detect the architecture and pull the right image.
 
-Start by figuring out the location of your adapter as explained [here](./01_linux.md#determine-location-of-the-adapter-and-checking-user-permissions).
+Start by figuring out the location of your adapter as explained [here](../configuration/adapter-settings.md#determine-location-of-the-adapter).
 
 **IMPORTANT**: Using a Raspberry Pi? Make sure to check [Notes for Raspberry Pi users](#notes-for-raspberry-pi-users).
 
@@ -18,7 +18,7 @@ Start by figuring out the location of your adapter as explained [here](./01_linu
 Navigate to the directory where you will store the Zigbee2MQTT data and execute the following command:
 
 ```bash
-wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.yaml -P data
+wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.example.yaml -P data
 ```
 
 Now configure the MQTT server and adapter location as explained [here](./01_linux.md#configuring).
@@ -45,8 +45,8 @@ $ docker run \
 -   `--restart=unless-stopped`: Automatically start on boot and restart after a crash
 -   `--device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0`: Location of adapter (e.g. CC2531). The path before the `:` is the path on the host, the path after it is the path that is mapped to inside the container. You should always use the `/dev/serial/by-id/` path on the host.
 -   `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration (pwd maps to the current working directory)
--   `-v /run/udev:/run/udev:ro`: only required for auto-detecting the port and some adapters like ConBee
--   `-e TZ=Europe/Amsterdam`: Configure the timezone
+-   `-v /run/udev:/run/udev:ro`: required for auto-detecting the adapter
+-   `-e TZ=Europe/Amsterdam`: configure the timezone
 -   `-p 8080:8080`: port forwarding from inside Docker container to host (for the frontend)
 
 ::: tip
