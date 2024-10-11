@@ -312,11 +312,33 @@ For requests where a device is involved you can select a specific endpoint by ad
 
 #### zigbee2mqtt/bridge/request/permit_join
 
-Allows to permit or disable joining of new devices. Allowed payloads are `{"value": true}`, `{"value": false}`, `true` or `false`. Example response: `{"data":{"value":true},"status":"ok"}`. This is not persistent (will not be saved to `configuration.yaml`).
+Allows or disallows joining of new devices for the specified duration (in seconds).
 
-To allow joining via a specific device set the `friendly_name` in the `device` property. E.g. `{"value": true, "device": "my_bulb"}`.
+Allowed payloads:
 
-To allow joining for only a specific amount of time add the `time` property (in seconds). E.g. `{"value": true, "time": 20}` (will allow joining for 20 seconds).
+> Enable for maximum duration:
+>
+> ```json
+> {"time": 254}
+> ```
+>
+> Disable:
+>
+> ```json
+> {"time": 0}
+> ```
+>
+> Enable only for device with given `friendly_name`:
+>
+> ```json
+> {"time": 60, "device": "bulb"}
+> ```
+>
+> Enable only for coordinator:
+>
+> ```json
+> {"time": 60, "device": "coordinator"}
+> ```
 
 #### zigbee2mqtt/bridge/request/health_check
 
