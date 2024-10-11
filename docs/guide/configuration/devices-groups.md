@@ -98,6 +98,15 @@ and `debounce` option without `debounce_ignore` publishes only last payload with
 hand `debounce: 1` with `debounce_ignore: - action` will publish all unique action messages, at least two (
 e.g. `action: rotate_left` and `action: rotate_stop`)
 
+**`throttle`**  
+Throttle processing of messages from this device. When setting e.g. `throttle: 10` the first message from the device is processed but all other messages within the next 10 seconds are ignored. Be careful when using this option, unlike `debounce` that can ignore some attributes, this will drop the entire message.
+
+`debounce` option has priority over `throttle`; if both are present for one device, only `debounce` will have any effect.
+
+Setting this option reduces the number of MQTT messages sent for a particular device. This is directly linked to how high the option is set. When used on misbehaving devices with proper values, it can drastically reduce the size of external databases that store history (like Home Assistant), and yet have little to no impact on the quality of said history.
+
+Some ambient sensors like `TS0601_air_quality_sensor` and some water level sensors, among others, are known to benefit from this option
+
 **`filtered_attributes`**  
 Allows preventing certain attributes from being published. When a device would e.g.
 publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will
