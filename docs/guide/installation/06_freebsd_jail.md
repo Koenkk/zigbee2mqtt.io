@@ -185,6 +185,6 @@ To update Zigbee2MQTT to the latest version, execute:
 
 ```sh
 # Run the update script from the Zigbee2MQTT directory
-cd /opt/zigbee2mqtt
+cd /usr/local/opt/zigbee2mqtt
 ./update.sh
 ```
