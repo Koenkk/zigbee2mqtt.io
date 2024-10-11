@@ -117,10 +117,8 @@ Example payload:
 
 Contains the state of the bridge, this message is published as retained. Payloads are:
 
--   `online`: published when the bridge is running (on startup)
--   `offline`: published right before the bridge stops
-
-If `advanced.legacy_availability_payload` is set to `false` the payload will be a JSON object (`{"state":"online"}`/`{"state":"offline"}`).
+-   `{"state":"online"}`: published when the bridge is running (on startup)
+-   `{"state":"offline"}`: published right before the bridge stops
 
 ## zigbee2mqtt/bridge/logging
 
