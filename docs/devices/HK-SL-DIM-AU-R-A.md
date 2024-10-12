@@ -15,7 +15,7 @@ pageClass: device-page
 
 |     |     |
 |-----|-----|
-| Model | ZG2835RAC  |
+| Model | HK-SL-DIM-AU-R-A  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | ZigBee knob smart dimmer |
 | Exposes | light (state, brightness), effect, power_on_behavior, power, voltage, current, energy, linkquality |
