@@ -56,7 +56,7 @@ _NOTE: there is also a property `update_available` which is deprecated_.
 
 ## Manually check if an update is available
 
-To check if an update is available for your device send a message to `zigbee2mqtt/bridge/request/device/ota_update/check` with payload `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_remote"}` or `my_remote`, response: `{"data":{"id": "my_remote","updateAvailable":true},"status":"ok"}`. For battery powered end-devices you may need to trigger them by e.g. pushing a button right before checking for an OTA.
+To check if an update is available for your device send a message to `zigbee2mqtt/bridge/request/device/ota_update/check` with payload `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_remote"}` or `my_remote`, response: `{"data":{"id": "my_remote","update_available":true},"status":"ok"}`. For battery powered end-devices you may need to trigger them by e.g. pushing a button right before checking for an OTA.
 
 ## Update to latest firmware
 
