@@ -19,17 +19,17 @@ Mosquitto is the recommended MQTT broker but others should also work fine.
 ## Installing
 
 ```bash
-# Set up Node.js repository and install Node.js + required dependencies
+# Set up Node.js repository, install Node.js, pnpm and required dependencies
 # NOTE 1: Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/ e.g. Version 20.9.0 should work.
 # NOTE 2: For Ubuntu see tip below
 # NOTE 3: Curl might have to be installed first via apt update && apt install curl
 sudo curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs git make g++ gcc libsystemd-dev
+npm install -g pnpm
 
-# Verify that the correct nodejs and npm (automatically installed with nodejs)
-# version has been installed
-node --version  # Should output V18.x, V20.x, V21.X
-npm --version  # Should output 9.X or 10.X
+# Verify that the correct nodejs and pnpm version has been installed
+node --version  # Should output V18.x, V20.x, V22.X
+pnpm --version  # Should output 9.X
 
 # Create a directory for zigbee2mqtt and set your user as owner of it
 sudo mkdir /opt/zigbee2mqtt
@@ -40,21 +40,11 @@ git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
-npm ci
-# If this command fails and returns an ERR_SOCKET_TIMEOUT error, run this command instead: npm ci  --maxsockets 1
+pnpm i --frozen-lockfile
 
-# Build the app
-npm run build
+# Build Zigbee2MQTT
+pnpm run build
 ```
-
-If everything went correctly the output of `npm ci` is similar to (the number of packages and seconds is probably different on your device):
-
-```bash
-node-pre-gyp info ok
-added 383 packages in 111.613s
-```
-
-Note that the `npm ci` produces some `warning` which can be ignored.
 
 ::: tip TIP
 On Ubuntu, Node.js can be installed through Snap
@@ -64,12 +54,14 @@ On Ubuntu, Node.js can be installed through Snap
 # The --classic argument is required here as Node.js needs full access to your system in order to be useful.
 # You can also use the --channel=XX argument to install a legacy version where XX is the version you want to install (we need 14+).
 sudo snap install node --classic
+npm install -g pnpm
 
 # Verify node has been installed
 # If you encounter an error at this stage and used the snap store instructions, adjust the BIN path as follows:
 ## PATH=$PATH:/snap/node/current/bin
-# then re-verify nodejs and npm versions as above
+# then re-verify nodejs and pnpm versions as above
 node --version
+pnpm --version
 ```
 
 :::
@@ -107,7 +99,7 @@ Now that we have setup everything correctly we can start Zigbee2MQTT.
 
 ```bash
 cd /opt/zigbee2mqtt
-npm start
+pnpm start
 ```
 
 When started successfully, you will see something like:
@@ -205,15 +197,15 @@ pi@raspberry:/opt/zigbee2mqtt $ systemctl status zigbee2mqtt.service
 ● zigbee2mqtt.service - zigbee2mqtt
    Loaded: loaded (/etc/systemd/system/zigbee2mqtt.service; disabled; vendor preset: enabled)
    Active: active (running) since Thu 2018-06-07 20:27:22 BST; 3s ago
- Main PID: 665 (npm)
+ Main PID: 665 (pnpm)
    CGroup: /system.slice/zigbee2mqtt.service
            └─679 /usr/bin/node index.js
 
 Jun 07 20:27:22 raspberry systemd[1]: Started zigbee2mqtt.
-Jun 07 20:27:23 raspberry npm[665]: > zigbee2mqtt@1.6.0 start /opt/zigbee2mqtt
-Jun 07 20:27:23 raspberry npm[665]: > node index.js
-Jun 07 20:27:24 raspberry npm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Logging to directory: '/opt/zigbee2mqtt/data/log/2019-11-09.14-04-01'
-Jun 07 20:27:25 raspberry npm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Starting Zigbee2MQTT version 1.6.0 (commit #720e393)
+Jun 07 20:27:23 raspberry pnpm[665]: > zigbee2mqtt@1.6.0 start /opt/zigbee2mqtt
+Jun 07 20:27:23 raspberry pnpm[665]: > node index.js
+Jun 07 20:27:24 raspberry pnpm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Logging to directory: '/opt/zigbee2mqtt/data/log/2019-11-09.14-04-01'
+Jun 07 20:27:25 raspberry pnpm[665]: Zigbee2MQTT:info  2019-11-09T13:04:01: Starting Zigbee2MQTT version 1.6.0 (commit #720e393)
 ```
 
 Now that everything works, we want systemctl to start Zigbee2MQTT automatically on boot, this can be done by executing:
