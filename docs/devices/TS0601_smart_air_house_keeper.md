@@ -90,8 +90,35 @@ The unit of this value is `µg/m³`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
+
 Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
+
+## Troubleshoot
+
+This sensor tends to flood the ZigBee network with messages around about 4 times a second. To reduce the configuration.yaml for zigbee2mqtt can be adjusted.
+In the configuration file, there is a section 'devices'. In this section, the sensor will be addressed something like:
+devices:
+  '0xa4c1388d5a716dd5':
+    friendly_name: my_friendly_Name
+    temperature_calibration: 0
+    humidity_calibration: 0
+    co2_calibration: 0
+    voc_calibration: 0
+    formaldehyd_calibration: 0
+    pm25_calibration: 0
+
+Simply the label debounce with a value of 3 needs to be added. Afterward, the payload will be sent something like every 5 seconds.
+devices:
+  '0xa4c1388d5a716dd5':
+    friendly_name: my_friendly_Name
+    debounce: 3
+    temperature_calibration: 0
+    humidity_calibration: 0
+    co2_calibration: 0
+    voc_calibration: 0
+    formaldehyd_calibration: 0
+    pm25_calibration: 0
