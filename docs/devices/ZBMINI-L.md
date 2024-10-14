@@ -23,7 +23,15 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+Press and hold the button on device for 5 seconds to reset the device and enter pairing mode.
+
+### Device mode
+The device supports two modes for the connected external switch: rocker switch mode (which is the default state after pairing) and push button mode.
+
+The mode can be changed by short-pressing the button on the device 3 times. The device will indicate the change by flashing the LED 3 times.
 
 <!-- Notes END: Do not edit below this line -->
 
