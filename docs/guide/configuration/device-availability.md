@@ -5,7 +5,7 @@ sidebarDepth: 1
 # Device-Availability
 
 The availability feature checks whether your devices are online. The availability state of a device is published
-to `zigbee2mqtt/[FRIENDLY_NAME]/availability` (this message is a retained MQTT message).
+to `zigbee2mqtt/[FRIENDLY_NAME]/availability` with payload `{"state":"online"}` or `{"state":"offline"}` (this message is a retained MQTT message).
 
 ```yaml
 # Optional: Enable the availability feature (default = false)
@@ -71,18 +71,6 @@ following attributes will be read: `state`, `brightness`, `color_temp` and `colo
 
 -   The pinging can be heavy on the coordinator, especially if you are using a CC2530 or CC2531 adapter.
 -   Higher `timeout` for active devices results in less pinging so less stress on the coordinator.
-
-## Availability payload
-
-By default the published availability payload is in legacy mode (`online`/`offline`). If the legacy mode is disabled the payload will be a JSON object (`{"state":"online"}`/`{"state":"offline"}`). Note that this changes the payload for `zigbee2mqtt/bridge/state` and `zigbee2mqtt/MY_DEVICE/availability`.
-
-```yaml
-advanced:
-    # Whether to use legacy mode for the availability message payload (default: true)
-    # true = online/offline
-    # false = {"state":"online"} / {"state":"offline"}
-    legacy_availability_payload: true
-```
 
 ## Groups
 

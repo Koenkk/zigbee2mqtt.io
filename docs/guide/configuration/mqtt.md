@@ -80,11 +80,6 @@ advanced:
     last_seen: 'disable'
     # Optional: Add an elapsed attribute to MQTT messages, contains milliseconds since the previous msg (default: false)
     elapsed: false
-    # Optional: Enables report feature, this feature is DEPRECATED since reporting is now setup by default
-    # when binding devices. Docs can still be found here: https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/information/report.md
-    report: true
-    # Optional: disables the legacy api (default: shown below)
-    legacy_api: true
     # Optional: MQTT output type: json, attribute or attribute_and_json (default: shown below)
     # Examples when 'state' of a device is published
     # json: topic: 'zigbee2mqtt/my_bulb' payload '{"state": "ON"}'

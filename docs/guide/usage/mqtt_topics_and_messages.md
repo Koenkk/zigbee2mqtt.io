@@ -117,10 +117,8 @@ Example payload:
 
 Contains the state of the bridge, this message is published as retained. Payloads are:
 
--   `online`: published when the bridge is running (on startup)
--   `offline`: published right before the bridge stops
-
-If `advanced.legacy_availability_payload` is set to `false` the payload will be a JSON object (`{"state":"online"}`/`{"state":"offline"}`).
+-   `{"state":"online"}`: published when the bridge is running (on startup)
+-   `{"state":"offline"}`: published right before the bridge stops
 
 ## zigbee2mqtt/bridge/logging
 
@@ -521,30 +519,6 @@ See [Groups](./groups.md).
 #### zigbee2mqtt/bridge/request/options
 
 Allows to set any option. The JSON schema of this can be found [here](https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/util/settings.schema.json) (is also published to `zigbee2mqtt/bridge/info` in the `config_schema` property). Example to set `permit_join`; send to `zigbee2mqtt/bridge/request/options` payload `{"options": {"permit_join": true}}`, response: `{"data":{"restart_required": false},"status":"ok"}`. Some options may require restarting Zigbee2MQTT, in this case `restart_required` is set to `true`. Note that `restart_required` is also published to `zigbee2mqtt/bridge/info`. Use `zigbee2mqtt/bridge/request/restart` to restart Zigbee2MQTT.
-
-#### zigbee2mqtt/bridge/request/config/last_seen
-
-**Deprecated:** use `zigbee2mqtt/bridge/request/options` with payload `{"options": {"advanced": {"last_seen": VALUE}}}` instead.
-
-Sets `advanced` -> `last_seen` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":"disable"}`, response: `{"data":{"value": "disable"},"status":"ok"}`. See [Configuration](../../guide/configuration/) for possible values.
-
-#### zigbee2mqtt/bridge/request/config/elapsed
-
-**Deprecated:** use `zigbee2mqtt/bridge/request/options` with payload `{"options": {"advanced": {"elapsed": VALUE}}}` instead.
-
-Sets `advanced` -> `elapsed` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":true}`, response: `{"data":{"value": true},"status":"ok"}`. See [Configuration](../../guide/configuration/) for possible values.
-
-#### zigbee2mqtt/bridge/request/config/log_level
-
-**Deprecated:** use `zigbee2mqtt/bridge/request/options` with payload `{"options": {"advanced": {"log_level": VALUE}}}` instead.
-
-Sets `advanced` -> `log_level` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":"debug"}`, response: `{"data":{"value": "debug"},"status":"ok"}`. See [Configuration](../../guide/configuration/) for possible values.
-
-#### zigbee2mqtt/bridge/request/config/homeassistant
-
-**Deprecated:** use `zigbee2mqtt/bridge/request/options` with payload `{"options": {"homeassistant": true}}` instead.
-
-Enable or disable the Home Assistant integration on the fly (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":true}`, response: `{"data":{"value": "true"},"status":"ok"}`. Possible values are `true` or `false`.
 
 ### Touchlink
 

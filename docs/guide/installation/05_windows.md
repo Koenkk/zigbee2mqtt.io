@@ -27,15 +27,20 @@ In order to be able to communicate with your USB device over a virtual COM port,
     ```bash
     node --version
     ```
+1. Install pnpm
+    ```bash
+    npm install -g pnpm
+    pnpm --version
+    ```
 1. Choose a suitable directory for Zigbee2MQTT and copy all the files from the [Zigbee2MQTT repository](https://github.com/koenkk/zigbee2mqtt)
     - if you prefer to use git (which you should), just clone the whole repository
         ```bash
         git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt/
         ```
     - otherwise use the green `Clone or download` button to download the zip archive, then extract it
-1. Change to the newly created directory and install dependencies with Node.js own package manager `npm`
+1. Change to the newly created directory and install dependencies with pnpm:
     ```bash
-    npm ci
+    pnpm i --frozen-lockfile
     ```
 
 ## Configuring
@@ -53,7 +58,7 @@ Congratulations, you're now ready to start your Zigbee2MQTT installation
 Just change to the root directory of your installation and run the application:
 
 ```bash
-npm start
+pnpm start
 ```
 
 A successful setup produces an output similar to this:
@@ -100,13 +105,13 @@ It is recommended to back up the Zigbee2MQTT `\data` subdirectory before perform
     ```bat
     git pull
     ```
-1. Update NPM dependencies
+1. Update dependencies
     ```bat
-    npm ci
+    pnpm i --frozen-lockfile
     ```
 1. Restart Zigbee2MQTT
     ```bat
-    npm start
+    pnpm start
     ```
 
 Below is a sample PowerShell script to run which will take care of:
@@ -156,9 +161,9 @@ Copy-Item -Path $z2mDataPath -Destination $z2mBackupPath -Recurse
 # Pull the latest release:
 "Running ""git pull""" | Write-Host
 & git pull
-# Update NPM dependencies:
-"Running ""npm ci""" | Write-Host
-& npm ci
+# Update dependencies:
+"Running ""pnpm i --frozen-lockfile""" | Write-Host
+& pnpm i --frozen-lockfile
 # Restore backed-up data:
 "Restore backed up data directory" | Write-Host
 Copy-Item -Path "$($z2mBackupPath)\*" -Destination $z2mDataPath -Recurse -Force

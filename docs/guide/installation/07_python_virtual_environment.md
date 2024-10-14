@@ -33,13 +33,16 @@ pip install nodeenv
 # Init node environment
 nodeenv -p -n 20.14.0
 
+# Install pnpm
+npm install -g pnpm
+
 # Deactivate and activate environment to be sure
 deactivate
 source /opt/zigbee2mqtt/bin/activate
 
 # Install dependencies
 cd /opt/zigbee2mqtt
-npm ci
+pnpm i --frozen-lockfile
 
 # Deactivate environment
 deactivate
@@ -55,7 +58,7 @@ cd /opt/zigbee2mqtt
 source /opt/zigbee2mqtt/bin/activate
 
 # Start
-npm start
+pnpm start
 
 # ctrl + c to quit
 
