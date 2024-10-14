@@ -4,7 +4,7 @@ sidebarDepth: 1
 
 # Devices and Groups
 
-Zigbee2MQTT also stores the definitions of Devices and Groups in the `configuration.yml`.
+Zigbee2MQTT also stores the definitions of devices and groups in the `configuration.yml`.
 
 Most options are optional, only the IEEE address (or MAC) as the `key` and a `friendly_name` are required.
 
@@ -148,7 +148,8 @@ device_options:
 
 ## Groups
 
-You can define groups of devices which are applied to the Zigbee network. Also see the [Groups guide](../usage/groups.md).
+Groups can be defined in the `configuration.yaml`, devices can be added to the group via the frontend or [MQTT](../usage/mqtt_topics_and_messages.md#group).
+See the [groups guide](../usage/groups.md) for more information.
 
 ```yaml
 groups:
@@ -160,19 +161,10 @@ groups:
         transition: 2
         # Optional: Change group state when one of the devices in it changes state, see 'State changes' below (default: true)
         optimistic: true
-        # Optional: Devices of this group,
-        # Note: This can be the ieeeAddr of the device or the friendly_name (default: empty)
-        devices:
-            - 0x84fd27fffe4082ca
-            - 0x000b3cfffef8ed66
-            # Only add specific endpoint to the group
-            - 0x000d6ffffee405eb/1
-            - 0x001788010818fc75
-            - some_device_friendly_name
 ```
 
 ::: warning
-The Group-key has to be unique and a quoted integer.
+The group key has to be unique and a quoted integer.
 :::
 
 ## Extract config to separate files
