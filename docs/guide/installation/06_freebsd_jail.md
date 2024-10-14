@@ -119,6 +119,9 @@ rcvar=zigbee2mqtt_enable
 
 : ${zigbee2mqtt_enable:="NO"}
 
+# enable watchdog
+zigbee2mqtt_env="Z2M_WATCHDOG=default"
+
 # daemon
 pidfile="/var/run/${name}.pid"
 node="/usr/local/bin/node"
