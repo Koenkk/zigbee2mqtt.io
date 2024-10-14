@@ -6,8 +6,11 @@
 Zigbee2MQTT has support for Zigbee groups. By using Zigbee groups you can control multiple devices simultaneously with one command.
 
 ::: tip
-Groups can also be managed via the frontend _Groups_ tab.
+Groups are much more efficient than controlling devices separately as it significantly reduces the stress on a network when controlling multiple devices at once.
 :::
+
+## Creating a group
+Groups can be created via the frontend (easiest), [MQTT](./mqtt_topics_and_messages.md#zigbee2mqttbridgerequestgroupadd) or by adding them to the `configuration.yaml` as shown below.
 
 ## Configuration
 
@@ -27,18 +30,15 @@ groups:
         optimistic: true
         # Optional: Control when state OFF is published for a group, see "State changes" below (default: all_members_off)
         off_state: 'all_members_off'
-        # Optional: Devices of this group,
-        # Note: This can be the ieeeAddr of the device or the friendly_name (default: empty)
-        devices:
-            - '0x00158d00018255df'
-            - 'some_device_friendly_name'
 ```
 
 The groupID (in the above example `'1'`) should be a numerical string. In case you want to use a hexadecimal groupID (e.g. `0xe24c`) you should first convert it to a numerical string (e.g. `57932`).
 
-If using the Hassio add-on, restart it after modifying your `configuration.yaml` as above.
+If using the Home Assistant add-on, restart it after modifying your `configuration.yaml` as above.
 
 ## MQTT commands
+
+To add, remove, rename and change the options of a group, see [MQTT Topics and Messages groups section](./mqtt_topics_and_messages.md#group)
 
 Devices can also be added/removed from groups via MQTT, the possible topics are:
 
