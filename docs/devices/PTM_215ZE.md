@@ -37,18 +37,18 @@ Green Power devices don't support binding and are not included in network scans.
 ### Pairing
 This device has 4 buttons:
 
-| Number | Button | Position |
-|-|-|-|
-| 1 | A0 | top left |
-| 2 | A1 | bottom left |
-| 3 | B0 | top right |
-| 4 | B1 | bottom right |
+| Number | Button | Position | Zigbee Channel |
+|-|-|-|-|
+| 1 | A0 | top left | 15 |
+| 2 | A1 | bottom left | 20 |
+| 3 | B0 | top right | 11 |
+| 4 | B1 | bottom right | 25 |
 
 In case the module is integrated in a single rocker switch, you need to remove the caps to expose all buttons. A button can be pressed by holding the contact of that button and then push the energy bar.
 
 To pair it, start by shortly (less than 7 seconds) pressing two different buttons one after another. Any button of the device (A0, A1, B0, B1) can be used.
 
-Next, select one button of the device (A0, A1, B0, or B1) and execute the following long-short-long sequence:
+Next, read the table above and find the Zigbee channel your network runs at (if you don't know this, it's probably channel 11, as this is zigbee2mqtt's default). Select the button of the device (A0, A1, B0, or B1) that fits your desired channel and execute the following long-short-long sequence:
 
 1. Press and hold the selected button for more than 7 seconds before releasing it
 2. Press the selected button quickly (hold for less than 2 seconds)
@@ -58,7 +58,7 @@ Then, press the selected button contact shortly (< 7s) to select radio channel 1
 
 Once the device is paired you need to confirm the channel. To do this, press any button other than the one used previously.
 
-For more informations, please refer to the [EnOcean PTM 215ZE manual chapter 3.6](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/PTM_215ZE_User_Manual-1.pdf).
+For more informations, please refer to the [EnOcean PTM 215ZE manual chapter 3.6.2.1](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/PTM_215ZE_User_Manual-1.pdf).
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Zemismart ZM-AM02_cover control via MQTT"
 description: "Integrate your Zemismart ZM-AM02_cover via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-03-01T09:06:16
+addedAt: 2024-09-01T12:36:27
 pageClass: device-page
 ---
 

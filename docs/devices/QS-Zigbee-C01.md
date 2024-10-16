@@ -65,7 +65,9 @@ If value equals `ON` motor reversal is ON, if `OFF` OFF.
 ### Calibration time (numeric)
 Calibration time.
 Value can be found in the published state on the `calibration_time` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `s`.
 
 ### Linkquality (numeric)

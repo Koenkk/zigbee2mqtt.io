@@ -157,7 +157,7 @@ function getExposeDocs(expose, definition) {
             lines.push(`It's not possible to read (\`/get\`) this value.`);
         }
 
-        const on_time = definition.toZigbee.find((t) => t.key.includes('on_time'));
+        const on_time = definition.toZigbee.find((t) => t.key?.includes('on_time'));
         if (on_time && expose.type === 'switch' && state.access & access.SET) {
             onWithTimedOff();
         }
@@ -240,11 +240,11 @@ function getExposeDocs(expose, definition) {
             );
         }
 
-        const on_time = definition.toZigbee.find((t) => t.key.includes('on_time'));
+        const on_time = definition.toZigbee.find((t) => t.key?.includes('on_time'));
         if (on_time) {
             onWithTimedOff();
         }
-        const transition = definition.toZigbee.find((t) => t.key.includes('transition'));
+        const transition = definition.toZigbee.find((t) => t.key?.includes('transition'));
         if (transition) {
             lines.push(``);
             lines.push(`#### Transition`);
@@ -254,8 +254,8 @@ function getExposeDocs(expose, definition) {
             lines.push(`Examples: \`{"brightness":156,"transition":3}\`, \`{"color_temp":241,"transition":1}\`.`);
         }
 
-        const brightnessMove = definition.toZigbee.find((t) => t.key.includes('brightness_move'));
-        const brightnessStep = definition.toZigbee.find((t) => t.key.includes('brightness_step'));
+        const brightnessMove = definition.toZigbee.find((t) => t.key?.includes('brightness_move'));
+        const brightnessStep = definition.toZigbee.find((t) => t.key?.includes('brightness_step'));
         if (brightnessMove && brightnessStep) {
             lines.push(``);
             lines.push(`#### Moving/stepping`);

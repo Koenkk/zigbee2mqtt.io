@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | VZM35-SN  |
 | Vendor  | [Inovelli](/supported-devices/#v=Inovelli)  |
 | Description | Fan controller |
-| Exposes | fan (state, mode), led_effect, individual_led_effect, breeze mode, dimmingSpeedUpRemote, dimmingSpeedUpLocal, rampRateOffToOnRemote, rampRateOffToOnLocal, dimmingSpeedDownRemote, dimmingSpeedDownLocal, rampRateOnToOffRemote, rampRateOnToOffLocal, minimumLevel, maximumLevel, invertSwitch, autoTimerOff, defaultLevelLocal, defaultLevelRemote, stateAfterPowerRestored, loadLevelIndicatorTimeout, powerType, switchType, internalTemperature, overheat, buttonDelay, deviceBindNumber, smartBulbMode, doubleTapUpToParam55, doubleTapDownToParam56, brightnessLevelForDoubleTapUp, brightnessLevelForDoubleTapDown, ledColorWhenOn, ledColorWhenOff, ledIntensityWhenOn, ledIntensityWhenOff, singleTapBehavior, fanControlMode, lowLevelForFanControlMode, mediumLevelForFanControlMode, highLevelForFanControlMode, ledColorForFanControlMode, auxSwitchUniqueScenes, bindingOffToOnSyncLevel, localProtection, remoteProtection, onOffLedMode, firmwareUpdateInProgressIndicator, defaultLed1ColorWhenOn, defaultLed1ColorWhenOff, defaultLed1IntensityWhenOn, defaultLed1IntensityWhenOff, defaultLed2ColorWhenOn, defaultLed2ColorWhenOff, defaultLed2IntensityWhenOn, defaultLed2IntensityWhenOff, defaultLed3ColorWhenOn, defaultLed3ColorWhenOff, defaultLed3IntensityWhenOn, defaultLed3IntensityWhenOff, defaultLed4ColorWhenOn, defaultLed4ColorWhenOff, defaultLed4IntensityWhenOn, defaultLed4IntensityWhenOff, defaultLed5ColorWhenOn, defaultLed5ColorWhenOff, defaultLed5IntensityWhenOn, defaultLed5IntensityWhenOff, defaultLed6ColorWhenOn, defaultLed6ColorWhenOff, defaultLed6IntensityWhenOn, defaultLed6IntensityWhenOff, defaultLed7ColorWhenOn, defaultLed7ColorWhenOff, defaultLed7IntensityWhenOn, defaultLed7IntensityWhenOff, outputMode, doubleTapClearNotifications, fanLedLevelType, quickStartTime, nonNeutralAuxMediumGear, nonNeutralAuxLowGear, fanTimerMode, action, identify, linkquality |
+| Exposes | fan (state, mode), led_effect, individual_led_effect, breeze mode, dimmingSpeedUpRemote, dimmingSpeedUpLocal, rampRateOffToOnRemote, rampRateOffToOnLocal, dimmingSpeedDownRemote, dimmingSpeedDownLocal, rampRateOnToOffRemote, rampRateOnToOffLocal, minimumLevel, maximumLevel, invertSwitch, autoTimerOff, defaultLevelLocal, defaultLevelRemote, stateAfterPowerRestored, loadLevelIndicatorTimeout, powerType, switchType, internalTemperature, overheat, buttonDelay, deviceBindNumber, smartBulbMode, doubleTapUpToParam55, doubleTapDownToParam56, brightnessLevelForDoubleTapUp, brightnessLevelForDoubleTapDown, ledColorWhenOn, ledColorWhenOff, ledIntensityWhenOn, ledIntensityWhenOff, singleTapBehavior, fanControlMode, lowLevelForFanControlMode, mediumLevelForFanControlMode, highLevelForFanControlMode, ledColorForFanControlMode, auxSwitchUniqueScenes, bindingOffToOnSyncLevel, localProtection, remoteProtection, onOffLedMode, firmwareUpdateInProgressIndicator, defaultLed1ColorWhenOn, defaultLed1ColorWhenOff, defaultLed1IntensityWhenOn, defaultLed1IntensityWhenOff, defaultLed2ColorWhenOn, defaultLed2ColorWhenOff, defaultLed2IntensityWhenOn, defaultLed2IntensityWhenOff, defaultLed3ColorWhenOn, defaultLed3ColorWhenOff, defaultLed3IntensityWhenOn, defaultLed3IntensityWhenOff, defaultLed4ColorWhenOn, defaultLed4ColorWhenOff, defaultLed4IntensityWhenOn, defaultLed4IntensityWhenOff, defaultLed5ColorWhenOn, defaultLed5ColorWhenOff, defaultLed5IntensityWhenOn, defaultLed5IntensityWhenOff, defaultLed6ColorWhenOn, defaultLed6ColorWhenOff, defaultLed6IntensityWhenOn, defaultLed6IntensityWhenOff, defaultLed7ColorWhenOn, defaultLed7ColorWhenOff, defaultLed7IntensityWhenOn, defaultLed7IntensityWhenOff, outputMode, doubleTapClearNotifications, fanLedLevelType, quickStartTime, nonNeutralAuxMediumGear, nonNeutralAuxLowGear, fanTimerMode, identify, action, linkquality |
 | Picture | ![Inovelli VZM35-SN](https://www.zigbee2mqtt.io/images/devices/VZM35-SN.png) |
 
 
@@ -135,14 +135,14 @@ The minimal value is `0` and the maximum value is `127`.
 Value can be found in the published state on the `minimumLevel` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"minimumLevel": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimumLevel": NEW_VALUE}`.
-The minimal value is `1` and the maximum value is `253`.
+The minimal value is `1` and the maximum value is `254`.
 
 ### MaximumLevel (numeric)
 2-84: The level corresponding to the fan is Low, Medium, High..
 Value can be found in the published state on the `maximumLevel` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"maximumLevel": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"maximumLevel": NEW_VALUE}`.
-The minimal value is `2` and the maximum value is `254`.
+The minimal value is `2` and the maximum value is `255`.
 
 ### InvertSwitch (enum)
 Inverts the orientation of the switch. Useful when the switch is installed upside down. Essentially up becomes down and down becomes up..
@@ -625,18 +625,18 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fanTimerMode": NEW_VALUE}`.
 The possible values are: `Disabled`, `Enabled`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `down_single`, `up_single`, `config_single`, `down_release`, `up_release`, `config_release`, `down_held`, `up_held`, `config_held`, `down_double`, `up_double`, `config_double`, `down_triple`, `up_triple`, `config_triple`, `down_quadruple`, `up_quadruple`, `config_quadruple`, `down_quintuple`, `up_quintuple`, `config_quintuple`.
-
 ### Identify (enum)
 Initiate device identification.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
 The possible values are: `identify`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `down_single`, `up_single`, `config_single`, `down_release`, `up_release`, `config_release`, `down_held`, `up_held`, `config_held`, `down_double`, `up_double`, `config_double`, `down_triple`, `up_triple`, `config_triple`, `down_quadruple`, `up_quadruple`, `config_quadruple`, `down_quintuple`, `up_quintuple`, `config_quintuple`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

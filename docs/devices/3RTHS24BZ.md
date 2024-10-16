@@ -49,13 +49,15 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ### Temperature (numeric)
 Measured temperature value.
 Value can be found in the published state on the `temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Humidity (numeric)
 Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Battery (numeric)

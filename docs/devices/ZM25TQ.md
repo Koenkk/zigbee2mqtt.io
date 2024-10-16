@@ -1,7 +1,7 @@
 ---
 title: "Zemismart ZM25TQ control via MQTT"
 description: "Integrate your Zemismart ZM25TQ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-04-30T08:00:58
+addedAt: 2024-09-01T12:36:27
 pageClass: device-page
 ---
 

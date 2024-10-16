@@ -293,7 +293,7 @@ automation:
                      {%- set ns = namespace(entities = []) %}
                      {%- for device in devices if device_attr(device, 'identifiers') %}
                        {%- set ids = device_attr(device, 'identifiers') | list | first %}
-                       {%- if ids and ids | length == 2 and ids[0] == find_integration %}
+                       {%- if ids and ids | length == 2 and ids[0] == find_integration and "zigbee2mqtt" in ids[1] %}
                          {% set names = device_attr(device, 'name').split('\n') | list %}
                          {%- set ns.entities = ns.entities + names %}
                        {%- endif %}

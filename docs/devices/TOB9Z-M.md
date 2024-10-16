@@ -23,8 +23,12 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
+Picture is a TOB9Z-M, TOB9Z-VAP is esthetically similar.
 
+TOB9Z-M only includes switch and power monitoring, and is currently recognised (v1.40.2) as Tuya TS011F_plug_3.
 
+TOB9Z-T only features switch functionnality
 <!-- Notes END: Do not edit below this line -->
 
 

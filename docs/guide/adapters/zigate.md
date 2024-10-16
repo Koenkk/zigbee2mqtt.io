@@ -1,5 +1,11 @@
 # ZiGate adapters
 
+::: warning ATTENTION
+
+Support for this adapter is **experimental**, not recommended yet for production setups
+
+:::
+
 Initial development started on experimental (alpha stage) support for various ZigGate adapters. This includes all ZiGate compatible hardware adapters which are currently based on NXP Zigbee MCU chips like JN5168 and JN5169 with ZigGate 3.1d firmware or later.
 
 ::: warning ATTENTION

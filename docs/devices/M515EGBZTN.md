@@ -1,7 +1,7 @@
 ---
 title: "Zemismart M515EGBZTN control via MQTT"
 description: "Integrate your Zemismart M515EGBZTN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-08-31T11:26:27
+addedAt: 2024-09-01T12:36:27
 pageClass: device-page
 ---
 

@@ -182,7 +182,7 @@ Install drivers (whichever works for your adapter):
     -   Windows machine (tested with Windows 11)
     -   MacOS machine
 -   EmberZNet or HUSBZB-1 adapter
--   Wireshark
+-   Wireshark (optional, can write directly to a [PCAP file](https://github.com/Nerivec/ember-zli/wiki/Sniff#sending-to-pcap-file) instead)
 -   NodeJS / npm (if using npm-based installation method)
 
 #### 1. Installing required tools
