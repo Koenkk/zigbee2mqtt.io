@@ -124,6 +124,9 @@ rcvar=zigbee2mqtt_enable
 
 : ${zigbee2mqtt_enable:="NO"}
 
+# enable watchdog
+zigbee2mqtt_env="Z2M_WATCHDOG=default"
+
 # daemon
 pidfile="/var/run/${name}.pid"
 node="/usr/local/bin/node"
@@ -185,6 +188,6 @@ To update Zigbee2MQTT to the latest version, execute:
 
 ```sh
 # Run the update script from the Zigbee2MQTT directory
-cd /opt/zigbee2mqtt
+cd /usr/local/opt/zigbee2mqtt
 ./update.sh
 ```

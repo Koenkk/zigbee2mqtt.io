@@ -1,6 +1,6 @@
 ---
-title: "HZC S902M-ZG control via MQTT"
-description: "Integrate your HZC S902M-ZG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HZC Electric S902M-ZG control via MQTT"
+description: "Integrate your HZC Electric S902M-ZG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-01T08:16:21
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HZC S902M-ZG
+# HZC Electric S902M-ZG
 
 |     |     |
 |-----|-----|
 | Model | S902M-ZG  |
-| Vendor  | [HZC](/supported-devices/#v=HZC)  |
+| Vendor  | [HZC Electric](/supported-devices/#v=HZC%20Electric)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, battery, illuminance, tamper, linkquality |
-| Picture | ![HZC S902M-ZG](https://www.zigbee2mqtt.io/images/devices/S902M-ZG.png) |
+| Picture | ![HZC Electric S902M-ZG](https://www.zigbee2mqtt.io/images/devices/S902M-ZG.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Thermostat radiator valve |
 | Exposes | battery_low, lock (state), open_window, open_window_temperature, comfort_temperature, eco_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint, system_mode), heating_stop, frost_protection, boost_timeset_countdown, holiday_temperature, holiday_start_stop, working_day, schedule, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, online, error_status, linkquality |
 | Picture | ![Tuya TV02-Zigbee](https://www.zigbee2mqtt.io/images/devices/TV02-Zigbee.png) |
-| White-label | Moes TV01-ZB, AVATTO TRV06, Tesla Smart TSL-TRV-TV01ZG, Unknown/id3.pl GTZ08 |
+| White-label | Moes TV01-ZB, AVATTO TRV06-1, Tesla Smart TSL-TRV-TV01ZG, Unknown/id3.pl GTZ08 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

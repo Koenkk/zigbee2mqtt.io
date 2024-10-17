@@ -82,12 +82,12 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sche
 - `minute` (numeric) 
 - `size` (numeric) 
 
-### Led indicator (binary)
-Led indicator.
+### Disable LED at night (binary)
+LED indicator will be disabled every day from 21:00 to 09:00.
 Value can be found in the published state on the `led_indicator` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_indicator": NEW_VALUE}`.
-If value equals `ON` led indicator is ON, if `OFF` OFF.
+If value equals `ON` disable LED at night is ON, if `OFF` OFF.
 
 ### Child lock (lock)
 The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
