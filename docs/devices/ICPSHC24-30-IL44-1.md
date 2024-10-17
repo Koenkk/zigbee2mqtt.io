@@ -30,6 +30,10 @@ pageClass: device-page
 Factory reset the drivers by holding the dedicated reset button for few seconds, connected ligts will start pulsing after factory reset.
 <!-- Notes END: Do not edit below this line -->
 
+## Transition
+IKEA lights only support transitions on 1 attribute at a time.
+If you would for example change the color temperature and brightness in 1 command, the color temperature transition is ignored.
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

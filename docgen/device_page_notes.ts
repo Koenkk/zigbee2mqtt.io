@@ -92,6 +92,15 @@ Note: if \`hue_power_on_behavior\` is set to \`off\`, then the only way to turn 
 `;
         }
     },
+    ikeaLight: (definition) => {
+        if (definition.vendor === 'IKEA' && definition.exposes.find((e) => e.type === 'light')) {
+            return `
+## Transition
+IKEA lights only support transitions on 1 attribute at a time.
+If you would for example change the color temperature and brightness in 1 command, the color temperature transition is ignored.
+`;
+        }
+    },
     sengledBulbs: (definition) => {
         if (definition.vendor === 'Sengled' && definition.exposes.find((e) => e.type === 'light')) {
             return `
