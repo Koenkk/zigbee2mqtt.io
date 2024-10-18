@@ -47,16 +47,16 @@ The MQTT device triggers are discovered by Zigbee2MQTT **once the event is trigg
 ```yaml
 automation:
     - alias: Respond to button click
-      trigger:
-          - device_id: ad44cabee4c646f493814306aa6446e1
-            discovery_id: 0x000b57fffecb472d action_arrow_left_click
-            domain: mqtt
-            platform: device
-            subtype: arrow_left_click
-            type: action
-      action:
-          entity_id: light.my_bulb_light
-          service: light.toggle
+      triggers:
+        - trigger: device
+          domain: mqtt
+          device_id: ad44cabee4c646f493814306aa6446e1
+          type: action
+          subtype: arrow_left_click
+      actions:
+        - action: light.toggle
+          target:
+            entity_id: light.bedroom
 ```
 
 If you only plan to use this and want to disable the _Via Home Assistant entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
@@ -68,13 +68,14 @@ This method work by responding to the state change event of a sensor.
 ```yaml
 automation:
     - alias: Respond to button click
-      trigger:
-          platform: state
+      triggers:
+        - trigger: state
           entity_id: sensor.my_switch_click
           to: 'single'
-      action:
-          entity_id: light.my_bulb_light
-          service: light.toggle
+      actions:
+        - action: light.toggle
+          target:
+            entity_id: light.bedroom
 ```
 
 ### Via MQTT
@@ -84,15 +85,16 @@ As an alternative to the above way of integrating, you can also listen to MQTT t
 ```yaml
 automation:
     - alias: Respond to button clicks
-      trigger:
-          platform: mqtt
+      triggers:
+        - trigger: mqtt
           topic: 'zigbee2mqtt/<FRIENDLY_NAME'
-      condition:
-          condition: template
-          value_template: '{{ "single" == trigger.payload_json.click }}'
-      action:
-          entity_id: light.bedroom
-          service: light.toggle
+          condition:
+              condition: template
+              value_template: '{{ "single" == trigger.payload_json.click }}'
+      actions:
+        - action:
+            entity_id: light.bedroom
+            service: light.toggle
 ```
 
 ## Groups
