@@ -23,8 +23,81 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+# Issues with Moes ZS-EUB_2gang
 
+There are some issues with the Moes ZS-EUB_2gang smart switch. When you activate either the left or right switch, both switches are triggered simultaneously. To fix this issue, follow the steps below.
 
+1. **Modify `configuration.yaml`**
+
+   Add the following code to your `configuration.yaml` file, located inside the `zigbee2mqtt` folder in Home Assistant:
+
+   ```yaml
+   external_converters:
+     - ext_converter_ts0012.js
+   ```
+
+2. **Add ext_converter_ts0012.js**
+   
+   Inside the `zigbee2mqtt` folder, create a new file called `ext_converter_ts0012.js` and add the following code to it:
+    ```javascript
+    const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
+    const tz = require('zigbee-herdsman-converters/converters/toZigbee');
+    const exposes = require('zigbee-herdsman-converters/lib/exposes');
+    const reporting = require('zigbee-herdsman-converters/lib/reporting');
+    const extend = require('zigbee-herdsman-converters/lib/extend');
+    const ota = require('zigbee-herdsman-converters/lib/ota');
+    const tuya = require('zigbee-herdsman-converters/lib/tuya');
+    const e = exposes.presets;
+    const ea = exposes.access;
+
+    const definition = {
+        zigbeeModel: ['TS0012'],
+        model: 'TS0012',
+        vendor: 'Moes',
+        description: 'Smart light switch - 2 gang without neutral wire',
+        extend: extend.switch(),
+        toZigbee: extend.switch().toZigbee.concat([tz.moes_power_on_behavior, tz.tuya_backlight_mode]),
+        fromZigbee: extend.switch().fromZigbee.concat([tz.moes_power_on_behavior, tz.tuya_backlight_mode]),
+        exposes: [
+            e.switch().withEndpoint('left'), 
+            e.switch().withEndpoint('right'),
+            exposes.enum('power_on_behavior', ea.ALL, Object.values(tuya.moesSwitch.powerOnBehavior)),
+            exposes.enum('backlight_mode', ea.ALL, ['LOW', 'MEDIUM', 'HIGH'])
+                .withDescription('Indicator light status: LOW: Off | MEDIUM: On | HIGH: Inverted')
+        ],
+        endpoint: (device) => {
+            return { 'left': 1, 'right': 2 };
+        },
+        whiteLabel: [{ vendor: 'TUYATEC', model: 'GDKES-02TZXD' }],
+        meta: { multiEndpoint: true },
+        configure: async (device, coordinatorEndpoint, logger) => {
+            await device.getEndpoint(1).read('genBasic', [
+                'manufacturerName', 'zclVersion', 'appVersion', 'modelId', 'powerSource', 0xfffe
+            ]);
+            try {
+                for (const ID of [1, 2]) {
+                    const endpoint = device.getEndpoint(ID);
+                    await reporting.bind(endpoint, coordinatorEndpoint, ['genOnOff']);
+                }
+            } catch (e) {
+                // Some failures reported: https://github.com/Koenkk/zigbee2mqtt/issues/4872
+            }
+            device.powerSource = 'Mains (single phase)';
+            device.save();
+        },
+    };
+
+    module.exports = definition;
+    ```
+  4. **Restart Zigbee2MQTT**
+
+      After saving the file, restart the Zigbee2MQTT add-on to apply the changes.
+
+Credits
+
+Thanks to [guasgue](https://community.home-assistant.io/u/guasgue) from the Home Assistant community for adapting this fix.
+
+[Source](https://community.home-assistant.io/t/zigbee2mqtt-moes-switch-problem/451248/32)
 <!-- Notes END: Do not edit below this line -->
 
 
