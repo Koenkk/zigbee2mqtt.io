@@ -39,10 +39,32 @@ The device specific configuration allows you to modify the discovery payload. He
 
 To respond to button clicks (e.g. WXKG01LM) you can use one of the following three Home Assistant configurations.
 
-### Via MQTT device trigger (recommended)
+### Via Home Assistant `event` entity (recommended)
 
-[MQTT device trigger](https://www.home-assistant.io/integrations/device_trigger.mqtt/) is the recommended way to respond to button clicks.
-The MQTT device triggers are discovered by Zigbee2MQTT **once the event is triggered on the device at least once**.
+This method work by responding to the state change of an [`event` entity](https://www.home-assistant.io/integrations/event). The specific event can be targetted via the `event_type` attribute.
+
+```yaml
+automation:
+    - alias: Respond to button click
+      triggers:
+        - trigger: state
+          entity_id: event.my_switch_click
+          attribute: event_type
+          to: 'single'
+      conditions:
+        - condition: template
+          value_template: "{{trigger.from_state.state != 'unavailable'}}"
+      actions:
+        - action: light.toggle
+          target:
+            entity_id: light.bedroom
+```
+
+If you only plan to use this (or MQTT device triggers) and want to disable the _Via Home Assistant entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
+
+### Via MQTT device trigger
+
+The [MQTT device triggers](https://www.home-assistant.io/integrations/device_trigger.mqtt/) are discovered by Zigbee2MQTT **once the event is triggered on the device at least once**.
 
 ```yaml
 automation:
@@ -59,11 +81,11 @@ automation:
             entity_id: light.bedroom
 ```
 
-If you only plan to use this and want to disable the _Via Home Assistant entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
+If you only plan to use this (or Home Assistant `event` entities) and want to disable the _Via Home Assistant `sensor` entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
 
-### Via Home Assistant entity
+### Via Home Assistant `sensor` entity (deprecated)
 
-This method work by responding to the state change event of a sensor.
+This method work by responding to the state change event of a legacy `sensor` entity. These entities will be removed in Zigbee2MQTT 2.x. Please migrate your automations to use `event` entities before then.
 
 ```yaml
 automation:
@@ -290,7 +312,7 @@ automation:
             metadata: {}
             data:
                 options: |
-                    {%- set find_integration = 'mqtt' %} 
+                    {%- set find_integration = 'mqtt' %}
                      {%- set devices = states | map(attribute='entity_id') | map('device_id') | unique | reject('eq',None) | list %}
                      {%- set ns = namespace(entities = []) %}
                      {%- for device in devices if device_attr(device, 'identifiers') %}
