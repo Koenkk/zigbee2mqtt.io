@@ -23,9 +23,15 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+Power cycle three times: on-off, on-off, on-off, ON >> [up to 5 seconds] >>> starts flashing.
+A gap of 3+ seconds between off and on should be applied so the power drains out. 
 
 <!-- Notes END: Do not edit below this line -->
+
+
 
 
 
