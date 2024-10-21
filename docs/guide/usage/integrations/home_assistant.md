@@ -83,7 +83,7 @@ automation:
 
 If you only plan to use this (or Home Assistant `event` entities) and want to disable the _Via Home Assistant `sensor` entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
 
-### Via Home Assistant `sensor` entity (deprecated)
+### Via Home Assistant `sensor` entity (deprecated, will be removed in 2.0.0)
 
 This method work by responding to the state change event of a legacy `sensor` entity. These entities will be removed in Zigbee2MQTT 2.x. Please migrate your automations to use `event` entities before then.
 
