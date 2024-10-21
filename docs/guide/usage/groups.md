@@ -10,6 +10,7 @@ Groups are much more efficient than controlling devices separately as it signifi
 :::
 
 ## Creating a group
+
 Groups can be created via the frontend (easiest), [MQTT](./mqtt_topics_and_messages.md#zigbee2mqttbridgerequestgroupadd) or by adding them to the `configuration.yaml` as shown below.
 
 ## Configuration
@@ -46,7 +47,7 @@ Devices can also be added/removed from groups via MQTT, the possible topics are:
 -   `zigbee2mqtt/bridge/request/group/members/remove` remove a device from a group
 -   `zigbee2mqtt/bridge/request/group/members/remove_all` remove a device from all groups
 
-The payload should be `{"group": GROUP, "device": DEVICE}` where `GROUP` is the `friendly_name` of the group you want to add/remove the device from, `DEVICE` is the `friendly_name` of the device you want to add/remove from the group. Example payload: `{"group":"my_group","device":"my_bulb"}`, example response: `{"data":{"device":"my_bulb","group":"my_group"},"status":"ok"}`. In case of executing a `remove_all` the `group` property in the request can be omitted.
+The payload should be `{"group": GROUP, "device": DEVICE}` where `GROUP` is the `friendly_name` of the group you want to add/remove the device from, `DEVICE` is the `friendly_name` of the device you want to add/remove from the group. Example payload: `{"group":"my_group","device":"my_bulb"}`, example response: `{"data":{"device":"my_bulb","endpoint":"default","group":"my_group"},"status":"ok"}`. In case of executing a `remove_all` the `group` property in the request can be omitted.
 
 When removing a device from a group and when the group has any devices bound to it. The reporting of this members will be disabled, if you want to skip this use `skip_disable_reporting` (e.g. `{"group":"my_group","device":"my_bulb", "skip_disable_reporting": true}`).
 
@@ -77,4 +78,4 @@ When using the `set` command, e.g. to turn on all devices in a group, a broadcas
 
 ## Adding a specific endpoint
 
-In case you want to add a device to a group with multiple endpoints, e.g. a QBKG03LM with 2 buttons you can specify it by adding the endpoint name to the `DEVICE` in the request payload in the format of `DEVICE/ENDPOINT`. Example request payload `{"group":"my_group","device":"my_switch/right"}`.
+In case you want to add a device to a group with multiple endpoints, e.g. a QBKG03LM with 2 buttons, you can specify it with the request payload `{"group": GROUP, "device": DEVICE, "endpoint": ENDPOINT}` where `ENDPOINT` is the desired endpoint name or ID. Example request payload `{"group":"my_group","device":"my_switch","endpoint":"right"}`.
