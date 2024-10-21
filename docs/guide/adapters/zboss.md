@@ -38,3 +38,5 @@ Currently tested on nRF52840 Dongle.
 -   [Pre build coordinator firmware for Nordic Semiconductor with nRF52840 SoC](https://github.com/kardia-as/nrf-zboss-ncp)
 
 <img src="https://docs-be.nordicsemi.com/bundle/ncs-latest/page/nrf/_images/zigbee_ncp_sample_overview.svg" width="500" />
+
+-   [Experimental ESP32-C6 firmware](https://github.com/andryblack/esp-coordinator)
