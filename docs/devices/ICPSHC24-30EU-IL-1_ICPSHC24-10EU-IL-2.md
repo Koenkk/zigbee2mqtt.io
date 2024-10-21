@@ -27,6 +27,10 @@ pageClass: device-page
 To pair this device, push the little hole for a few seconds on the backside of the driver. The on/off sequence you might read about, doesn't work.
 <!-- Notes END: Do not edit below this line -->
 
+## Transition
+IKEA lights only support transitions on 1 attribute at a time.
+If you would for example change the color temperature and brightness in 1 command, the color temperature transition is ignored.
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
