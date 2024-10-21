@@ -100,25 +100,6 @@ automation:
             entity_id: light.bedroom
 ```
 
-### Via MQTT
-
-As an alternative to the above way of integrating, you can also listen to MQTT topics.
-
-```yaml
-automation:
-    - alias: Respond to button clicks
-      triggers:
-        - trigger: mqtt
-          topic: 'zigbee2mqtt/<FRIENDLY_NAME'
-          condition:
-              condition: template
-              value_template: '{{ "single" == trigger.payload_json.click }}'
-      actions:
-        - action:
-            entity_id: light.bedroom
-            service: light.toggle
-```
-
 ## Groups
 
 Groups discovery is supported for groups of lights, switches, locks and covers. For other types you have to manually create a config in the Home Assistant `configuration.yaml`.
