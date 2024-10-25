@@ -23,7 +23,11 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+
+Press power button and hold for 10 seconds to enter pairing mode. 
 
 <!-- Notes END: Do not edit below this line -->
 
