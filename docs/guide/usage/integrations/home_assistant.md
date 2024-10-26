@@ -59,24 +59,6 @@ automation:
           service: light.toggle
 ```
 
-If you only plan to use this and want to disable the _Via Home Assistant entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
-
-### Via Home Assistant entity
-
-This method work by responding to the state change event of a sensor.
-
-```yaml
-automation:
-    - alias: Respond to button click
-      trigger:
-          platform: state
-          entity_id: sensor.my_switch_click
-          to: 'single'
-      action:
-          entity_id: light.my_bulb_light
-          service: light.toggle
-```
-
 ### Via MQTT
 
 As an alternative to the above way of integrating, you can also listen to MQTT topics.

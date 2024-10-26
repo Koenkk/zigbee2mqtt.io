@@ -28,8 +28,4 @@ homeassistant:
     # an temperature and humidity attribute.
     # Note: Disabling this option, requires a Home Assistant restart
     legacy_entity_attributes: true
-    # Optional: Home Assistant legacy triggers (default: shown below), when enabled:
-    # - Zigbee2mqt will send an empty 'action' or 'click' after one has been send
-    # - A 'sensor_action' and 'sensor_click' will be discoverd
-    legacy_triggers: true
 ```
