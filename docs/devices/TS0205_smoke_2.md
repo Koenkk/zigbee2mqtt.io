@@ -23,8 +23,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+Press the reset button on the side for about 5 seconds until the green led starts blinking. Release the button and it should pair - on successful pairing the LED will light up solid green for a few seconds and then turn off.
 <!-- Notes END: Do not edit below this line -->
 
 
