@@ -23,8 +23,11 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
 
+### Pairing
+To factory reset the light bulb, first start with the light bulb ON and then quickly turn it OFF and ON at least 10 times, ending in an ON state. If the reset is successful, the light bulb will flash five times, indicating that it is in pairing mode. If the light bulb does not flash, please try again.
 <!-- Notes END: Do not edit below this line -->
 
 ## Device Type
