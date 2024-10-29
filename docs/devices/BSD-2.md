@@ -28,6 +28,9 @@ pageClass: device-page
 - Before starting the pairing process the device's install code needs to be added to Zigbee2MQTT. Scan the QR code printed on the bottom of the device with the camera of your mobile phone and copy the received value (Attention: The install code printed in plain text on the device is not sufficient!) 
 - The install code can be found inside the device before attaching it to the mounting plate
 - Add this install code under Settings -> Tools -> Add install code
+
+### Factory resetting
+To factory reset the device remove the battery and wait 20 seconds or briefly press the device's main button. While pressing and holding the device's main button, insert the battery back. As soon as the device's LED on the front is starting to blink red, release the device's main button and press and hold it again until the device beeps. The device will reboot, which can take up to a minute. [Watch on Youtube](https://www.youtube.com/watch?v=PRAIsw4PoqE)
 <!-- Notes END: Do not edit below this line -->
 
 
