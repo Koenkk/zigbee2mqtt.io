@@ -94,7 +94,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `ON` reverse is ON, if `OFF` OFF.
 
 ### Touch (binary)
-Touch controll.
+Touch control.
 Value can be found in the published state on the `touch` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"touch": NEW_VALUE}`.

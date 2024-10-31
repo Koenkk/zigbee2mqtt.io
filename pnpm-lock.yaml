@@ -41,7 +41,7 @@ importers:
         version: 2.0.0-rc.57(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-webpack@2.0.0-rc.18(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
       '@vuepress/theme-default':
         specifier: 2.0.0-rc.58
-        version: 2.0.0-rc.58(markdown-it@14.1.0)(sass-loader@16.0.1(sass@1.80.4)(webpack@5.95.0))(sass@1.80.4)(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-webpack@2.0.0-rc.18(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
+        version: 2.0.0-rc.58(markdown-it@14.1.0)(sass-loader@16.0.2(sass@1.80.4)(webpack@5.95.0))(sass@1.80.4)(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-webpack@2.0.0-rc.18(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
       async-g-i-s:
         specifier: 1.5.4
         version: 1.5.4(node-fetch@2.7.0)
@@ -70,8 +70,8 @@ importers:
         specifier: 1.80.4
         version: 1.80.4
       sass-loader:
-        specifier: 16.0.1
-        version: 16.0.1(sass@1.80.4)(webpack@5.95.0)
+        specifier: 16.0.2
+        version: 16.0.2(sass@1.80.4)(webpack@5.95.0)
       throat:
         specifier: 6.0.2
         version: 6.0.2
@@ -91,8 +91,8 @@ importers:
         specifier: 5.95.0
         version: 5.95.0
       zigbee-herdsman-converters:
-        specifier: 20.21.0
-        version: 20.21.0
+        specifier: 20.38.0
+        version: 20.38.0
 
 packages:
 
@@ -2876,8 +2876,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sass-loader@16.0.1:
-    resolution: {integrity: sha512-xACl1ToTsKnL9Ce5yYpRxrLj9QUDCnwZNhzpC7tKiFyA8zXsd3Ap+HGVnbCgkdQcm43E+i6oKAWBsvGA6ZoiMw==}
+  sass-loader@16.0.2:
+    resolution: {integrity: sha512-Ll6iXZ1EYwYT19SqW4mSBb76vSSi8JgzElmzIerhEGgzB5hRjDQIWsPmuk1UrAXkR16KJHqVY0eH+5/uw9Tmfw==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
@@ -3435,11 +3435,11 @@ packages:
     resolution: {integrity: sha512-GQHQqAopRhwU8Kt1DDM8NjibDXHC8eoh1erhGAJPEyveY9qqVeXvVikNKrDz69sHowPMorbPUrH/mx8c50eiBQ==}
     engines: {node: '>=18'}
 
-  zigbee-herdsman-converters@20.21.0:
-    resolution: {integrity: sha512-D+dyU0zXl4ZgilminLBY7/4rcGf/H/GqnbZ+iZPmQ0FELNUHvfWoJzcjVxDrNNZQ1j9/x7KN6+zxYVNiFhQe6A==}
+  zigbee-herdsman-converters@20.38.0:
+    resolution: {integrity: sha512-6mIuvcSvV+jMVks8w8w87+nkHwzHRAaENGDQ3xBFlLn76bWZtHrsA/y8qnxhlDQhh+XZn5K6ttupU0UVC97mfQ==}
 
-  zigbee-herdsman@2.1.5:
-    resolution: {integrity: sha512-Eolr7RSzunPFkJ3wigaBMECiUYEhG4eoGJddd1GWytAMdgGF35BBMfu33D0uOoycaOSMzM0eczOQcsoqOY0EPw==}
+  zigbee-herdsman@2.1.7:
+    resolution: {integrity: sha512-Je1XsF+CIx2Ai1IYyjGenB58VqWXvTbY770dVyPwU+mUTG+hrbsF/rV9fybBzNkgg4EhJbbheIBBWfnqcRlfBQ==}
 
 snapshots:
 
@@ -4426,7 +4426,7 @@ snapshots:
     dependencies:
       '@mdit-vue/types': 2.1.0
 
-  '@vuepress/theme-default@2.0.0-rc.58(markdown-it@14.1.0)(sass-loader@16.0.1(sass@1.80.4)(webpack@5.95.0))(sass@1.80.4)(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-webpack@2.0.0-rc.18(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))':
+  '@vuepress/theme-default@2.0.0-rc.58(markdown-it@14.1.0)(sass-loader@16.0.2(sass@1.80.4)(webpack@5.95.0))(sass@1.80.4)(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-webpack@2.0.0-rc.18(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))':
     dependencies:
       '@vuepress/helper': 2.0.0-rc.57(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-webpack@2.0.0-rc.18(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
       '@vuepress/plugin-active-header-links': 2.0.0-rc.55(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-webpack@2.0.0-rc.18(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
@@ -4448,7 +4448,7 @@ snapshots:
       vuepress: 2.0.0-rc.18(@vuepress/bundler-webpack@2.0.0-rc.18(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))
     optionalDependencies:
       sass: 1.80.4
-      sass-loader: 16.0.1(sass@1.80.4)(webpack@5.95.0)
+      sass-loader: 16.0.2(sass@1.80.4)(webpack@5.95.0)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - markdown-it
@@ -6481,7 +6481,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass-loader@16.0.1(sass@1.80.4)(webpack@5.95.0):
+  sass-loader@16.0.2(sass@1.80.4)(webpack@5.95.0):
     dependencies:
       neo-async: 2.6.2
     optionalDependencies:
@@ -7064,7 +7064,7 @@ snapshots:
 
   yoctocolors@2.1.1: {}
 
-  zigbee-herdsman-converters@20.21.0:
+  zigbee-herdsman-converters@20.38.0:
     dependencies:
       axios: 1.7.7
       buffer-crc32: 1.0.0
@@ -7072,12 +7072,13 @@ snapshots:
       iconv-lite: 0.6.3
       semver: 7.6.3
       tar-stream: 3.1.7
-      zigbee-herdsman: 2.1.5
+      uri-js: 4.4.1
+      zigbee-herdsman: 2.1.7
     transitivePeerDependencies:
       - debug
       - supports-color
 
-  zigbee-herdsman@2.1.5:
+  zigbee-herdsman@2.1.7:
     dependencies:
       '@serialport/bindings-cpp': 12.0.1
       '@serialport/parser-delimiter': 12.0.0

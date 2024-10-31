@@ -1,7 +1,7 @@
 ---
-title: "NodOn SDO-4-1-20 control via MQTT"
-description: "Integrate your NodOn SDO-4-1-20 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-12-26T18:38:16
+title: "easyiot ZB-WB08 control via MQTT"
+description: "Integrate your easyiot ZB-WB08 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-10-31T20:34:53
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# NodOn SDO-4-1-20
+# easyiot ZB-WB08
 
 |     |     |
 |-----|-----|
-| Model | SDO-4-1-20  |
-| Vendor  | [NodOn](/supported-devices/#v=NodOn)  |
-| Description | Door & window opening sensor |
-| Exposes | contact, battery_low, battery, linkquality |
-| Picture | ![NodOn SDO-4-1-20](https://www.zigbee2mqtt.io/images/devices/SDO-4-1-20.png) |
+| Model | ZB-WB08  |
+| Vendor  | [easyiot](/supported-devices/#v=easyiot)  |
+| Description | 8-button remote control |
+| Exposes | action, battery, linkquality |
+| Picture | ![easyiot ZB-WB08](https://www.zigbee2mqtt.io/images/devices/ZB-WB08.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,24 +28,15 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
-## OTA updates
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
-
 
 
 ## Exposes
 
-### Contact (binary)
-Indicates if the contact is closed (= true) or open (= false).
-Value can be found in the published state on the `contact` property.
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `false` contact is ON, if `true` OFF.
-
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
+The possible values are: `1_single`, `1_double`, `1_long`, `2_single`, `2_double`, `2_long`, `3_single`, `3_double`, `3_long`, `4_single`, `4_double`, `4_long`, `5_single`, `5_double`, `5_long`, `6_single`, `6_double`, `6_long`, `7_single`, `7_double`, `7_long`, `8_single`, `8_double`, `8_long`.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
