@@ -365,6 +365,8 @@ function getExposeDocs(expose, definition) {
         let txt = {value: '', note: []};
         if (expose.item_type.type === 'composite') {
             txt = compositeDocs(expose.item_type);
+        } else if (expose.item_type.type === 'enum') {
+            txt['value'] = expose.item_type.values.map((v) => `"${v}"`).join(', ');
         } else if (expose.item_type.type === 'text') {
             // Empty on purpose
         } else {

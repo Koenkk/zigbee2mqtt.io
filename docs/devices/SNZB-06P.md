@@ -62,7 +62,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ### Occupancy (binary)
 Indicates whether the device detected occupancy.
 Value can be found in the published state on the `occupancy` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy": ""}`.
+It's not possible to write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
 ### Occupancy timeout (numeric)

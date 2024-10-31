@@ -15,7 +15,7 @@ pageClass: device-page
 
 |     |     |
 |-----|-----|
-| Model | GL-SD-301P |
+| Model | GL-SD-301P  |
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee triac AC dimmer |
 | Exposes | light (state, brightness), effect, linkquality |
@@ -36,9 +36,7 @@ pageClass: device-page
 The device allows zigbee [binding](../guide/usage/binding.html).
 <!-- Notes END: Do not edit below this line -->
 
-## OTA updates
 
-This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*

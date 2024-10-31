@@ -81,11 +81,32 @@ Additionally an `off_wait_time` property can be added to the payload to specify 
 Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
-### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
-Value can be found in the published state on the `power_on_behavior` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+### Power-on behavior (enum, button_light endpoint)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior_button_light` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_button_light": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_button_light": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### Power-on behavior (enum, button_fan_high endpoint)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior_button_fan_high` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_button_fan_high": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_button_fan_high": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### Power-on behavior (enum, button_fan_med endpoint)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior_button_fan_med` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_button_fan_med": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_button_fan_med": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### Power-on behavior (enum, button_fan_low endpoint)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior_button_fan_low` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_button_fan_low": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_button_fan_low": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
 ### Linkquality (numeric)
