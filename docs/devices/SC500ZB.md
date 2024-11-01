@@ -24,6 +24,9 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Notes
+
+Power-on behavior: according to position of the physical switch connected to it, ie the blinds will either open or close depending on the position of the physical switch, no matter what the previous Zigbee command was.
 
 <!-- Notes END: Do not edit below this line -->
 
