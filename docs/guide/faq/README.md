@@ -125,10 +125,6 @@ LQI (Link Quality Index) values can be hard to interpret for Zigbee. This is bec
 -   In general, a positive high LQI value is better and a lower LQI value is worse. However, depending on your devices, that might not be the reality.
 -   Usually, if a device stays at an LQI value of 40+ or above then that link can usually be considered acceptable for normal operational conditions.
 
-## Why is the `action` property always empty?
-
-When the Home Assistant integration is enabled (`homeassistant: true` in your `configuration.yaml`) the `action` property of your e.g. buttons will almost always be empty. Whenever an `action` is published e.g. `{"action": "single"}` it will be immediately followed up by a `{"action": ""}`. This is to trigger a state change in the Home Assistant action sensor (so that it can be used in e.g. automations).
-
 ## I read that Zigbee2MQTT has a limit of 20 devices (when using a CC2530/CC2531 adapter), is this true?
 
 Definitely not! Example given: the default Zigbee2MQTT CC2531 firmware indeed supports 20 devices connected **directly** to the coordinator. However, by having routers in your network the network size can be extended. Probably all AC powered devices e.g. bulbs serve as a router, you can even use another [CC2530/CC2531 as a router](../../advanced/zigbee/05_create_a_cc2530_router.md) (which has a limit of 21 devices).
