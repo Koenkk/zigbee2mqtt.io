@@ -39,9 +39,9 @@ The device specific configuration allows you to modify the discovery payload. He
 
 To respond to button clicks (e.g. WXKG01LM) you can use one of the following three Home Assistant configurations.
 
-### Via Home Assistant `event` entity (recommended)
+### Via Home Assistant `event` entity (experimental)
 
-This method work by responding to the state change of an [`event` entity](https://www.home-assistant.io/integrations/event). The specific event can be targetted via the `event_type` attribute.
+This method work by responding to the state change of an [`event` entity](https://www.home-assistant.io/integrations/event). The specific event can be targetted via the `event_type` attribute. This will become the recommended method with 2.0.0. Until then, the event types and additional attributes are subject to change and you have to enable `event` entities explicitely by setting `homeassistant: {experimental_event_entities: true}` (see [Configuration](../../configuration/homeassistant.md) for more info).
 
 ```yaml
 automation:
@@ -62,7 +62,7 @@ automation:
 
 If you only plan to use this (or MQTT device triggers) and want to disable the _Via Home Assistant entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
 
-### Via MQTT device trigger
+### Via MQTT device trigger (recommended)
 
 The [MQTT device triggers](https://www.home-assistant.io/integrations/device_trigger.mqtt/) are discovered by Zigbee2MQTT **once the event is triggered on the device at least once**.
 

@@ -32,4 +32,8 @@ homeassistant:
     # - Zigbee2mqt will send an empty 'action' or 'click' after one has been send
     # - A 'sensor_action' and 'sensor_click' will be discoverd
     legacy_triggers: true
+    # Optional: Experimental support for Home Assistant event entities (default: shown below) when enabled:
+    # - An `event` entity will be discovered for each 'action'.
+    # - The `event_type` attribute will contain the action itself, additional attributes like `button` will have further information.
+    experimental_event_entities: false
 ```
