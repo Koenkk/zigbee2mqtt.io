@@ -41,58 +41,65 @@ To respond to button clicks (e.g. WXKG01LM) you can use one of the following thr
 
 ### Via MQTT device trigger (recommended)
 
-[MQTT device trigger](https://www.home-assistant.io/integrations/device_trigger.mqtt/) is the recommended way to respond to button clicks.
-The MQTT device triggers are discovered by Zigbee2MQTT **once the event is triggered on the device at least once**.
+The [MQTT device triggers](https://www.home-assistant.io/integrations/device_trigger.mqtt/) are discovered by Zigbee2MQTT **once the event is triggered on the device at least once**.
 
 ```yaml
 automation:
     - alias: Respond to button click
-      trigger:
-          - device_id: ad44cabee4c646f493814306aa6446e1
-            discovery_id: 0x000b57fffecb472d action_arrow_left_click
-            domain: mqtt
-            platform: device
-            subtype: arrow_left_click
-            type: action
-      action:
-          entity_id: light.my_bulb_light
-          service: light.toggle
+      triggers:
+        - trigger: device
+          domain: mqtt
+          device_id: ad44cabee4c646f493814306aa6446e1
+          type: action
+          subtype: arrow_left_click
+      actions:
+        - action: light.toggle
+          target:
+            entity_id: light.bedroom
 ```
 
-If you only plan to use this and want to disable the _Via Home Assistant entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
+If you only plan to use this (or Home Assistant `event` entities) and want to disable the _Via Home Assistant `sensor` entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
 
-### Via Home Assistant entity
+### Via Home Assistant `event` entity (experimental)
 
-This method work by responding to the state change event of a sensor.
+Note: `event` entity is **experimental** and may **break** in the future.
+
+This method work by responding to the state change of an [`event` entity](https://www.home-assistant.io/integrations/event). The specific event can be targetted via the `event_type` attribute. This will become the recommended method with 2.0.0. Until then, the event types and additional attributes are subject to change and you have to enable `event` entities explicitely by setting `homeassistant: {experimental_event_entities: true}` (see [Configuration](../../configuration/homeassistant.md) for more info).
 
 ```yaml
 automation:
     - alias: Respond to button click
-      trigger:
-          platform: state
+      triggers:
+        - trigger: state
+          entity_id: event.my_switch_click
+          attribute: event_type
+          to: 'single'
+      conditions:
+        - condition: template
+          value_template: "{{trigger.from_state.state != 'unavailable'}}"
+      actions:
+        - action: light.toggle
+          target:
+            entity_id: light.bedroom
+```
+
+If you only plan to use this (or MQTT device triggers) and want to disable the _Via Home Assistant entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
+
+### Via Home Assistant `sensor` entity (deprecated, will be removed in 2.0.0)
+
+This method work by responding to the state change event of a legacy `sensor` entity. These entities will be removed in Zigbee2MQTT 2.x. Please migrate your automations to use `event` entities before then.
+
+```yaml
+automation:
+    - alias: Respond to button click
+      triggers:
+        - trigger: state
           entity_id: sensor.my_switch_click
           to: 'single'
-      action:
-          entity_id: light.my_bulb_light
-          service: light.toggle
-```
-
-### Via MQTT
-
-As an alternative to the above way of integrating, you can also listen to MQTT topics.
-
-```yaml
-automation:
-    - alias: Respond to button clicks
-      trigger:
-          platform: mqtt
-          topic: 'zigbee2mqtt/<FRIENDLY_NAME'
-      condition:
-          condition: template
-          value_template: '{{ "single" == trigger.payload_json.click }}'
-      action:
-          entity_id: light.bedroom
-          service: light.toggle
+      actions:
+        - action: light.toggle
+          target:
+            entity_id: light.bedroom
 ```
 
 ## Groups
@@ -288,7 +295,7 @@ automation:
             metadata: {}
             data:
                 options: |
-                    {%- set find_integration = 'mqtt' %} 
+                    {%- set find_integration = 'mqtt' %}
                      {%- set devices = states | map(attribute='entity_id') | map('device_id') | unique | reject('eq',None) | list %}
                      {%- set ns = namespace(entities = []) %}
                      {%- for device in devices if device_attr(device, 'identifiers') %}
