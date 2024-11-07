@@ -53,7 +53,8 @@ Request:
 <!-- Notes END: Do not edit below this line -->
 
 
-
+### Pairing
+Open the back and press the reset button until the LED on the front start blinking.
 
 ## Exposes
 
