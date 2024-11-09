@@ -418,6 +418,14 @@ See [OTA updates](./ota_updates.md).
 
 See [OTA updates](./ota_updates.md).
 
+#### zigbee2mqtt/bridge/request/device/ota_update/check/downgrade
+
+See [OTA updates](./ota_updates.md).
+
+#### zigbee2mqtt/bridge/request/device/ota_update/update/downgrade
+
+See [OTA updates](./ota_updates.md).
+
 #### zigbee2mqtt/bridge/request/device/configure
 
 Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected (e.g. not reporting certain values), not all devices can be configured (only when the definition has a `configure` in its [definition](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices)). Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_remote"}` or `my_remote`, response: `{"data":{"id": "my_remote"},"status":"ok"}`.
