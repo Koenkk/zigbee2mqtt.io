@@ -50,6 +50,9 @@ Request:
     "ir_code_to_send": "<previously learned IR code>"
 }
 ```
+
+### Pairing
+Open the back and press the reset button until the LED on the front start blinking.
 <!-- Notes END: Do not edit below this line -->
 
 
