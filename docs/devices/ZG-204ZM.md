@@ -23,7 +23,11 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+The manufacturer provides a good [technical in-depth document](https://doc.szalarm.com/zg-205Z/en/) that explains
+what the various settings mean, good default values for those, a recommended method for trimming these values and 
+various other considerations (like installation position) to get good results. 
 
 <!-- Notes END: Do not edit below this line -->
 
