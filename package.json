@@ -18,19 +18,19 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@quasar/extras": "1.16.12",
+        "@quasar/extras": "1.16.13",
         "core-js": "3.39.0",
-        "quasar": "2.17.1"
+        "quasar": "2.17.2"
     },
     "devDependencies": {
-        "@types/node": "22.8.6",
+        "@types/node": "22.9.0",
         "@vuepress/bundler-webpack": "2.0.0-rc.18",
         "@vuepress/client": "2.0.0-rc.18",
-        "@vuepress/plugin-docsearch": "2.0.0-rc.57",
+        "@vuepress/plugin-docsearch": "2.0.0-rc.60",
         "@vuepress/plugin-google-analytics": "2.0.0-rc.54",
         "@vuepress/plugin-register-components": "2.0.0-rc.54",
-        "@vuepress/plugin-sitemap": "2.0.0-rc.57",
-        "@vuepress/theme-default": "2.0.0-rc.58",
+        "@vuepress/plugin-sitemap": "2.0.0-rc.60",
+        "@vuepress/theme-default": "2.0.0-rc.60",
         "async-g-i-s": "1.5.4",
         "cross-env": "7.0.3",
         "easyimage": "3.1.1",
