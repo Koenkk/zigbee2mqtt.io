@@ -28,7 +28,7 @@ pageClass: device-page
 
 
 ### Pairing
-Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking). The reset button is the small button on the 'top' of the device. After this the device will automatically join.
+Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking). The reset button is the small button on the 'top' of the device. After this the device will automatically join. Please be close to the Zigbee gateway when pairing the device.
 
 
 ### Troubleshooting: device stops sending messages/disconnects from network
