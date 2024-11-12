@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | GL-C-003P  |
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
-| Description | Zigbee LED Controller CCT (pro) |
+| Description | Zigbee LED Controller RGB(pro) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, identify, linkquality |
 | Picture | ![Gledopto GL-C-003P](https://www.zigbee2mqtt.io/images/devices/GL-C-003P.png) |
 
