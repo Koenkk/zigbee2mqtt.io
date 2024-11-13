@@ -8,7 +8,7 @@ Use of 8.0.0 and 8.0.1 is not recommended due to firmware issues that have been 
 
 Firmware release notes: [https://www.silabs.com/developers/zigbee-emberznet?tab=documentation](https://www.silabs.com/developers/zigbee-emberznet?tab=documentation)
 
-_Multiprotocol is not currently supported due to the various issues associated with it. The recommended alternative to establish multiple networks is to use one adapter per protocol._
+_Multiprotocol firmware is not supported. The recommended alternative to establish multiple networks is to use one adapter per protocol._
 
 ### Configuration
 
@@ -36,26 +36,66 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
 ### Firmware flashing
 
 -   Firmware repositories:
-    -   Multi-devices by [@darkxst](https://github.com/darkxst/): [https://github.com/darkxst/silabs-firmware-builder/](https://github.com/darkxst/silabs-firmware-builder/)
+    -   Multi-devices by [@darkxst](https://github.com/darkxst/): [https://github.com/darkxst/silabs-firmware-builder/releases](https://github.com/darkxst/silabs-firmware-builder/releases)
     -   [@NabuCasa](https://github.com/NabuCasa) / Home Assistant devices: [https://github.com/NabuCasa/silabs-firmware-builder/releases](https://github.com/NabuCasa/silabs-firmware-builder/releases)
     -   [@TubesZB](https://github.com/tube0013) devices: [https://github.com/tube0013/tube_gateways/](https://github.com/tube0013/tube_gateways/)
     -   _**Experimental**_ multi-devices by [@Nerivec](https://github.com/Nerivec/): [https://github.com/Nerivec/silabs-firmware-builder/releases](https://github.com/Nerivec/silabs-firmware-builder/releases)
+        -   Router firmware also available
 -   Web-based
     -   Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
     -   For SkyConnect by [@NabuCasa](https://github.com/NabuCasa): [SkyConnect Flasher](https://skyconnect.home-assistant.io/firmware-update/)
     -   SMLight: [Flasher](https://smlight.tech/flasher/)
 -   Command-line based:
-    -   Multi-devices by [@NabuCasa](https://github.com/NabuCasa): [Universal Silicon Labs Flasher](https://github.com/NabuCasa/universal-silabs-flasher) (also available via [Home Assistant add-on](https://github.com/home-assistant/addons/tree/master/silabs_flasher))
-    -   Multi-devices by [@Nerivec](https://github.com/Nerivec/): [Ember ZLI](https://github.com/Nerivec/ember-zli)
+    -   Multi-devices by [@NabuCasa](https://github.com/NabuCasa) using Python: [Universal Silicon Labs Flasher](https://github.com/NabuCasa/universal-silabs-flasher) (also available via [Home Assistant add-on](https://github.com/home-assistant/addons/tree/master/silabs_flasher))
+    -   Multi-devices by [@Nerivec](https://github.com/Nerivec/) using NodeJS: [Ember ZLI](https://github.com/Nerivec/ember-zli)
 -   Other:
     -   Standalone J-Link Flash Tool (also included in [Simplicity Studio](https://www.silabs.com/developers/simplicity-studio)): [Simplicity Commander](https://www.silabs.com/developers/simplicity-studio/simplicity-commander)
 -   Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
 
 ## Recommended
 
+Each category is ordered by chip, newer series first.
+
 ### USB
 
-::: details Sonoff ZBDongle-E (V2 model, EFR32MG21)
+::: details SMLIGHT SLZB-07mg24
+
+Chip: [efr32mg24a020f1024im40](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a020f1024im40?tab=specs)
+
+With external antenna and hardware flow control support.
+
+```yaml
+serial:
+    rtscts: true
+```
+
+-   [Product page](https://smlight.tech/product/slzb-07mg24/)
+
+<img src="../../images/smlight-slzb-07mg24.jpg" width="200" />
+
+:::
+
+::: details Aeotec Zi-Stick (ZGA008)
+
+Chip: [efr32mg21a020f1024im32](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-socs/device.efr32mg21a020f1024im32?tab=specs)
+
+With onboard antenna and hardware flow control support.
+
+```yaml
+serial:
+    rtscts: true
+```
+
+-   [Product page](https://aeotec.com/products/aeotec-z-stick-zigbee/)
+-   [Buy](https://store.aeotec.com/products/zi-stick-zigbee-zga008)
+
+<img src="../../images/aeotec-zi-stick-zga008.jpg" width="200" />
+
+:::
+
+::: details Sonoff ZBDongle-E (V2 model)
+
+Chip: [efr32mg21a020f768im32](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-socs/device.efr32mg21a020f768im32?tab=specs)
 
 With external antenna. Only supports software flow control (make sure not to set `rtscts: true`).
 
@@ -69,24 +109,9 @@ With external antenna. Only supports software flow control (make sure not to set
 <img src="../../images/dongle-e.jpg" width="200" />
 :::
 
-::: details Nabu Casa Home Assistant SkyConnect (EFR32MG21)
+::: details SMLIGHT SLZB-07
 
-With integrated antenna and hardware flow control support.
-
-```yaml
-serial:
-    rtscts: true
-```
-
--   [Product page](https://www.home-assistant.io/skyconnect)
--   [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
--   [Flashing](https://skyconnect.home-assistant.io/)
--   [Buy](https://www.home-assistant.io/skyconnect)
-
-<img src="../../images/skyconnect_isometric.jpg" width="200" />
-:::
-
-::: details SMLIGHT SLZB-07 (EFR32MG21)
+Chip: [efr32mg21a020f768im32](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-socs/device.efr32mg21a020f768im32?tab=specs)
 
 With external antenna and hardware flow control support.
 
@@ -103,11 +128,34 @@ serial:
 
 :::
 
+::: details Nabu Casa Home Assistant SkyConnect
+
+Chip: [efr32mg21a020f512im32](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-socs/device.efr32mg21a020f512im32?tab=specs)
+
+With onboard antenna and hardware flow control support.
+
+```yaml
+serial:
+    rtscts: true
+```
+
+-   [Product page](https://www.home-assistant.io/skyconnect)
+-   [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
+-   [Flashing](https://skyconnect.home-assistant.io/)
+-   [Buy](https://www.home-assistant.io/skyconnect)
+
+<img src="../../images/skyconnect_isometric.jpg" width="200" />
+:::
+
 ### Network (TCP)
 
-::: details TubeZB EFR32 MGM24 POE (MGM240PB32VNN)
+::: details TubeZB EFR32 MGM24 POE
+
+Chip: [mgm240pa32vnn](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-modules/device.mgm240pa32vnn?tab=specs)
 
 With external antenna.
+
+Note: can also be powered via USB (with a special case) and used with a simple Ethernet cable (do not use USB and POE at the same time!).
 
 -   [Product page](https://tubeszb.com/product/efr32-mgm24-poe-coordinator/)
 -   [Buy](https://tubeszb.com/product/efr32-mgm24-poe-coordinator/)
@@ -118,7 +166,21 @@ With external antenna.
 
 ### Hybrid (USB + Network)
 
-::: details SMLIGHT SLZB-06M (EFR32MG21)
+::: details SMLIGHT SLZB-06mg24
+
+Chip: [efr32mg24a020f1024im40](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a020f1024im40?tab=specs)
+
+With external antenna.
+
+-   [Product page](https://smlight.tech/product/slzb-06mg24/)
+
+<img src="../../images/smlight-slzb-06mg24.jpg" width="200" />
+
+:::
+
+::: details SMLIGHT SLZB-06M
+
+Chip: [efr32mg21a020f768im32](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-socs/device.efr32mg21a020f768im32?tab=specs)
 
 With external antenna.
 
@@ -133,23 +195,13 @@ Not suitable for WiFi or other high latency connections.**
 
 :::
 
-::: details SMLIGHT SLZB-06mg24 (EFR32MG24)
-
-With external antenna.
-
--   [Product page](https://smlight.tech/product/slzb-06mg24/)
--   [Recommended firmware] UPCOMING
--   [Buy] UPCOMING
-
-<img src="../../images/smlight-slzb-06mg24.jpg" width="200" />
-
-:::
-
 ### Hub
 
-::: details Nabu Casa Home Assistant Yellow (MGM210P)
+::: details Nabu Casa Home Assistant Yellow
 
-With integrated antenna and hardware flow control support.
+Chip: [mgm210pa32jia](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-modules/device.mgm210pa32jia?tab=specs)
+
+With onboard antenna and hardware flow control support.
 
 ```yaml
 serial:
@@ -166,19 +218,30 @@ serial:
 
 ### Custom
 
-## Not recommended
+::: details Seeed Studio XIAO MG24
 
-::: details All Series 0/1 based-devices
+Chip: [efr32mg24b220f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24b220f1536im48?tab=specs)
 
-Older hardware.
+-   [Product page](https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html)
+-   [Product page - Sense variant](https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html)
+-   [Getting started](https://wiki.seeedstudio.com/xiao_mg24_getting_started/)
 
-See [Silicon Labs announcement](https://www.silabs.com/documents/public/release-notes/emberznet-release-notes-7.4.3.0.pdf).
-
+<img src="../../images/seeed-studio-xiao-mg24.jpg" width="200" />
 :::
+
+## Not recommended
 
 ::: details Easyiot ZB-GW04 (v1.1, v1.2)
 
 Low-resources hardware.
+
+:::
+
+::: details All Series 0/1 based-devices
+
+Older hardware, no longer supported by Silabs in newer firmware versions (>= 8.0.0).
+
+See [Silicon Labs announcement](https://www.silabs.com/documents/public/release-notes/emberznet-release-notes-7.4.3.0.pdf).
 
 :::
 
