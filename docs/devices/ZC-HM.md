@@ -28,7 +28,7 @@ pageClass: device-page
 
 ### Pairing
 
-To enable pairing, press the device button 3 times
+To enable pairing, wait for the device led to stop, then press the device button 3 times, led should start blinking green while in pairing mode.
 
 <!-- Notes END: Do not edit below this line -->
 
