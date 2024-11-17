@@ -26,23 +26,34 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-
 ### Pairing
 1. Switch on your device.
 2. Now switch off and on within 2 seconds.
 3. Repeat off/on four times.
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
-### GL-C-001P
-The Gledopto GL-C-001P is a 5 in 1 smart LED controller which can identify itself as one of the 5 different Gledopto controllers (the indicator light colour matches the model):
+## Multi-mode 5-in-1 and 3-in-1 devices
+Gledopto produces devices that allow you to select one of up to 5 different LED Controller types with each mode displaying a different [Indicator Light] **color**.
 
-* [White] RGB+CCT: GL-C-008P  
-* [Yellow] RGBW: GL-C-007P 
-* [Blue] RGB: GL-C-003P 
-* [Green] CCT: GL-C-006P 
-* [Red] Dimmer: GL-C-009P 
+* `RGB+CCT` [GL-C-008P](./GL-C-008P.md) [White]
+* `RGBW` [GL-C-007P](./GL-C-007P.md) [Yellow]
+* `RGB` [GL-C-003P](./GL-C-003P.md) [Blue]
+* `CCT` [GL-C-006P](./GL-C-006P.md) [Green]
+* `Dimmer` [GL-C-009P](./GL-C-009P.md) [Red]
 
-You can switch between the modes using the `Opt` button on the device. After switching modes Zigbee2MQTT will automatically detect the new mode. Note that during the pairing process the log message `identified as: Gledopto Zigbee LED Controller XXX`  might state  model that differs from currently selected one. You should wait for the log message `Detected Gledopto device mode change` that should follow shortly afterwards meaning that Zigbee2MQTT has recognized the currently selected mode.
+This `GL-C-008P` mode is available as a `modelId` in the following models:
+
+* **GL-C-001P** - Zigbee Pro 5 in 1 Smart LED Controller
+* **GL-C-002P** - Zigbee Pro 5 in 1 LED Controller Mini Ultra Thin
+* **GL-C-011P** - Zigbee Pro 5 in 1 Smart LED Controller DIN Rail
+* **GL-C-201P** - Zigbee Pro+ 5 in 1 Smart LED Controller
+* **GL-C-202P** - Zigbee Pro+ 3 in 1 Smart LED Controller
+* **GL-C-301P** - Zigbee Pro+ 5 in 1 Smart LED Controller Ultra-Mini
+
+You can switch to this `GL-C-008P` mode by short pressing the `Opt` button on the device until the Indicator Light is `White`.
+
+To pair with, or change modes on, Zigbee2MQTT, press the `Reset` button 4 times
+
 <!-- Notes END: Do not edit below this line -->
 
 

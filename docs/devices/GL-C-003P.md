@@ -25,15 +25,41 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-
 ### Pairing
 1. Switch on your device.
 2. Now switch off and on within 2 seconds.
 3. Repeat off/on four times.
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
-### GL-C-001P
-See [GL-C-008P](./GL-C-008P.md#GL-C-001P).
+## Multi-mode 5-in-1 and 3-in-1 devices
+Gledopto produces devices that allow you to select one of up to 5 different LED Controller types with each mode displaying a different [Indicator Light] **color**.
+
+* `RGB+CCT` [GL-C-008P](./GL-C-008P.md) [White]
+* `RGBW` [GL-C-007P](./GL-C-007P.md) [Yellow]
+* `RGB` [GL-C-003P](./GL-C-003P.md) [Blue]
+* `CCT` [GL-C-006P](./GL-C-006P.md) [Green]
+* `Dimmer` [GL-C-009P](./GL-C-009P.md) [Red]
+
+
+This `GL-C-003P` mode is available as a `modelId` in the following models:
+
+* **GL-C-001P** - Zigbee Pro 5 in 1 Smart LED Controller
+* **GL-C-002P** - Zigbee Pro 5 in 1 LED Controller Mini Ultra Thin
+* **GL-C-011P** - Zigbee Pro 5 in 1 Smart LED Controller DIN Rail
+* **GL-C-201P** - Zigbee Pro+ 5 in 1 Smart LED Controller
+* **GL-C-202P** - Zigbee Pro+ 3 in 1 Smart LED Controller
+* **GL-C-301P** - Zigbee Pro+ 5 in 1 Smart LED Controller Ultra-Mini
+
+You can switch to this `GL-C-003P` mode by short pressing the `Opt` button on the device until the Indicator Light is `Blue`.
+
+To pair with, or change modes on, Zigbee2MQTT, press the `Reset` button 4 times
+
+## Model: GL-C-003P 
+
+**Important Note:** Gledopto never actually released a dedicated/single-mode `RGB` Controller with the Model No. GL-C-003P.  The `GL-C-003P` signal is only able to be communicated to Zigbee2MQTT by White-label devices, and the Multi-mode devices listed above when `RGB` mode is selected.
+
+There is a **GL-C-003P Zigbee Pro 3-wire/2-wire 2 in 1 CCT/DIM LED Controller** but this cannot control the RGB devices that use this `RGB` mode or or send the `GL-C-003P` ModelID. For the use of this device, see `CCT` [GL-C-006P](./GL-C-006P.md) and `Dimmer` [GL-C-009P](./GL-C-009P.md).
+
 <!-- Notes END: Do not edit below this line -->
 
 

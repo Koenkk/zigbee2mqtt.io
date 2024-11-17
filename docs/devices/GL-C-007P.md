@@ -25,15 +25,34 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-
 ### Pairing
 1. Switch on your device.
 2. Now switch off and on within 2 seconds.
 3. Repeat off/on four times.
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
-### GL-C-001P
-See [GL-C-008P](./GL-C-008P.md#GL-C-001P).
+## Multi-mode 5-in-1 and 3-in-1 devices
+Gledopto produces devices that allow you to select one of up to 5 different LED Controller types with each mode displaying a different [Indicator Light] **color**.
+
+* `RGB+CCT` [GL-C-008P](./GL-C-008P.md) [White]
+* `RGBW` [GL-C-007P](./GL-C-007P.md) [Yellow]
+* `RGB` [GL-C-003P](./GL-C-003P.md) [Blue]
+* `CCT` [GL-C-006P](./GL-C-006P.md) [Green]
+* `Dimmer` [GL-C-009P](./GL-C-009P.md) [Red]
+
+This `GL-C-007P` mode is available as a `modelId` in the following models:
+
+* **GL-C-001P** - Zigbee Pro 5 in 1 Smart LED Controller
+* **GL-C-002P** - Zigbee Pro 5 in 1 LED Controller Mini Ultra Thin
+* **GL-C-011P** - Zigbee Pro 5 in 1 Smart LED Controller DIN Rail
+* **GL-C-201P** - Zigbee Pro+ 5 in 1 Smart LED Controller
+* **GL-C-202P** - Zigbee Pro+ 3 in 1 Smart LED Controller
+* **GL-C-301P** - Zigbee Pro+ 5 in 1 Smart LED Controller Ultra-Mini
+
+You can switch to this `GL-C-007P` mode by short pressing the `Opt` button on the device until the Indicator Light is `Yellow`.
+
+To pair with, or change modes on, Zigbee2MQTT, press the `Reset` button 4 times
+
 <!-- Notes END: Do not edit below this line -->
 
 
