@@ -103,6 +103,25 @@ serial:
 
 :::
 
+::: details Z-WAVE>ME Z-Station
+
+With external antenna.
+
+Requires Z-Station Firmware 2024.04.22 or later.
+
+```yaml
+serial:
+    rtscts: false
+```
+
+-   [Product page](https://z-wave.me/products/z-station/)
+-   [Firmware](https://z-wave.me/support/tools-for-zigbee-openthread-ble/)
+-   Buy: [Official Store - Worldwide](https://smartsd.ch/z-station-usb-adaptor-for-z-wave-zigbee-thread-ble/)
+
+<img src="../../images/z-station.jpg" width="200" />
+
+:::
+
 ### Network (TCP)
 
 ::: details TubeZB EFR32 MGM24 POE (MGM240PB32VNN)
