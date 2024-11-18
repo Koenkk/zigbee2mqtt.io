@@ -20,7 +20,7 @@
     "dependencies": {
         "@quasar/extras": "1.16.13",
         "core-js": "3.39.0",
-        "quasar": "2.17.2"
+        "quasar": "2.17.3"
     },
     "devDependencies": {
         "@types/node": "22.9.0",
@@ -39,12 +39,12 @@
         "prettier": "3.3.3",
         "pug": "3.0.3",
         "pug-plain-loader": "1.1.0",
-        "sass": "1.80.6",
+        "sass": "1.81.0",
         "sass-loader": "16.0.2",
         "throat": "6.0.2",
         "ts-node": "10.9.2",
         "typescript": "5.6.3",
-        "vue": "3.5.12",
+        "vue": "3.5.13",
         "vuepress": "2.0.0-rc.18",
         "webpack": "5.96.1",
         "zigbee-herdsman-converters": "20.38.0"

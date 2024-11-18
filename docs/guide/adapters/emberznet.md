@@ -145,6 +145,26 @@ serial:
 -   [Buy](https://www.home-assistant.io/skyconnect)
 
 <img src="../../images/skyconnect_isometric.jpg" width="200" />
+
+:::
+
+::: details Z-WAVE>ME Z-Station (EFR32MG21P)
+
+With external antenna.
+
+Requires Z-Station firmware 2024.04.22 or later.
+
+```yaml
+serial:
+    rtscts: false
+```
+
+-   [Product page](https://z-wave.me/products/z-station/)
+-   [Firmware](https://z-wave.me/support/tools-for-zigbee-openthread-ble/)
+-   Buy: [Official Store - Worldwide](https://smartsd.ch/z-station-usb-adaptor-for-z-wave-zigbee-thread-ble/)
+
+<img src="../../images/z-station.jpg" width="200" />
+
 :::
 
 ### Network (TCP)
