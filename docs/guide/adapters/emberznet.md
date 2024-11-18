@@ -103,11 +103,11 @@ serial:
 
 :::
 
-::: details Z-WAVE>ME Z-Station
+::: details Z-WAVE>ME Z-Station (EFR32MG21P)
 
 With external antenna.
 
-Requires Z-Station Firmware 2024.04.22 or later.
+Requires Z-Station firmware 2024.04.22 or later.
 
 ```yaml
 serial:
