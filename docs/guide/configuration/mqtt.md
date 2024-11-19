@@ -35,10 +35,12 @@ mqtt:
     # Optional: MQTT protocol version (default: 4), set this to 5 if you
     # use the 'retention' device specific configuration
     version: 4
-    # Optional: Disable retain for all send messages. ONLY enable if you MQTT broker doesn't
+    # Optional: Disable retain for all send messages. ONLY enable if your MQTT broker doesn't
     # support retained message (e.g. AWS IoT core, Azure IoT Hub, Google Cloud IoT core, IBM Watson IoT Platform).
     # Enabling will break the Home Assistant integration. (default: false)
     force_disable_retain: false
+    # Specifies the maximum allowed packet length (in bytes) that the server can send to Zigbee2MQTT. NOTE: The same value exists in your MQTT broker but for the length the client can send to it instead. (default: 1048576)
+    maximum_packet_size: 1048576
 ```
 
 ### Specifying MQTT server/user/password and network_key in a different file
