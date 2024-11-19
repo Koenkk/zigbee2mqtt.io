@@ -292,7 +292,11 @@ Events will be published to this topic. Possible types are `device_joined`, `dev
 
 ## zigbee2mqtt/bridge/extensions
 
-See [User extensions](../../advanced/more/user_extensions.md).
+See [External extensions](../../advanced/more/external_extensions.md).
+
+## zigbee2mqtt/bridge/converters
+
+See [External converters](../../advanced/more/external_converters.md).
 
 ## zigbee2mqtt/bridge/request/+
 
@@ -381,7 +385,19 @@ Links are labelled with link quality (0..255) and active routes (listed by short
 
 #### zigbee2mqtt/bridge/request/extension/save
 
-See [User extensions](../../advanced/more/user_extensions.md).
+See [External extensions](../../advanced/more/external_extensions.md).
+
+#### zigbee2mqtt/bridge/request/extension/remove
+
+See [External extensions](../../advanced/more/external_extensions.md).
+
+#### zigbee2mqtt/bridge/request/converter/save
+
+See [External converters](../../advanced/more/external_converters.md).
+
+#### zigbee2mqtt/bridge/request/converter/remove
+
+See [External converters](../../advanced/more/external_converters.md).
 
 #### zigbee2mqtt/bridge/request/backup
 
