@@ -86,10 +86,8 @@ automation:
     - alias: Respond to button clicks
       trigger:
           platform: mqtt
-          topic: 'zigbee2mqtt/<FRIENDLY_NAME'
-      condition:
-          condition: template
-          value_template: '{{ "single" == trigger.payload_json.click }}'
+          topic: 'zigbee2mqtt/<FRIENDLY_NAME>/action'
+          payload: 'single'
       action:
           entity_id: light.bedroom
           service: light.toggle
