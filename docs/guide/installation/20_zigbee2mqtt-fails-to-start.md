@@ -12,20 +12,19 @@ Most of the time this is caused by Zigbee2MQTT not being able to communicate wit
 
 Configure the `serial` section as described [here](../configuration/adapter-settings.md).
 
-## Error: `SRSP - SYS - ping after 6000ms`
+## Error: `SRSP - SYS - ping after 6000ms` for zStack or `HOST_FATAL_ERROR` for EmberZNet
 
-5 common reasons of this error:
+Common reasons for this error:
 
 1. The port of your serial adapter changed.
-   Check [this](../installation/01_linux.md#1-determine-location-of-the-adapter-and-checking-user-permissions) to find
-   out the port of your adapter.
+   Check [this](../installation/01_linux.md#1-determine-location-of-the-adapter-and-checking-user-permissions) to find out the port of your adapter.
 2. If you are using a CC2530 or CC2531; it is a common issue for this adapter to crash (due to its outdated hardware).
-   Reflashing the firmware should fix the problem. If it happens often consider flashing the [source routing firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/source_routing) or upgrade to
-   a [more powerful adapter](../adapters/README.md).
+   Reflashing the firmware should fix the problem. If it happens often consider flashing the [source routing firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/source_routing) or upgrade to a [more powerful adapter](../adapters/README.md).
 3. Your adapter requires additional configuration parameters. Check [supported Adapters](../adapters/README.md) section to find out if your adapter requires extra parameters (eg. ConBee II / RaspBee II).
 4. Home Assistant's "Zigbee Home Automation" (ZHA) integration is enabled. Try to disable the ZHA integration and restart the Zigbee2MQTT add-on.
 5. Your hardware adapter is flashed with the router firmware and not with the coordinator firmware.
 6. Your network Zigbee adapter is not accessible over the LAN network.
+7. Another software on your machine (including Home Assistant integration) is interfering with USB devices (example: [HA EDL21 integration](https://www.home-assistant.io/integrations/edl21) trying to find a USB device).
 
 ## Verify that you put the correct port in configuration.yaml
 
@@ -128,7 +127,7 @@ In case you see message like below when running `dmesg -w` you are using a bad p
 [44889.075627] Voltage normalised (0x00000000)
 ```
 
-When you have a SSD connected to the Pi, try connecting the adapter via a powered USB hub.
+Also try connecting the adapter via a powered USB hub (especially if you have an SSD connected to the Pi).
 
 ## Make sure the extension cable works
 
@@ -190,7 +189,18 @@ The correct revision is: **E** like shown below.
 
 All earlier version are not supported (these are development boards). Return this board to the seller immediately.
 
+## EmberZNet coordinators only
+
+See [EmberZNet errors](../adapters/emberznet.md#error-level).
+
 ## Multiple cheap USB-UART
 
 If you have multiple devices connected that are running cheap USB-UART converters (CH341) they may be indistinguishable to your system, since they all possibly have the same idProduct, SerialNumber etc. so they will share the same /dev/serial/by-id.
 The easiest solution is to change one of your devices to something with a different uart-usb converter. The second solution would be swapping the whole converter or adding external EEPROM memory to a chip that does not have one (like CH341) so you would be able to add a serial number.
+
+## MQTT v5 disconnecting
+
+If you use an MQTT broker with version 5 of the MQTT specification, you may get disconnects when something is misbehaving.
+This can happen, for example, when "maximum packet size" is exceeded (large networks).
+
+To remedy that, configure your broker accordingly, and check if Zigbee2MQTT has a corresponding setting to adjust too. See [MQTT configuration](../configuration/mqtt.md#server-connection).
