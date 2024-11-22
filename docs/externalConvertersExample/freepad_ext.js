@@ -2,7 +2,6 @@ const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
 const tz = require('zigbee-herdsman-converters/converters/toZigbee');
 const exposes = require('zigbee-herdsman-converters/lib/exposes');
 const reporting = require('zigbee-herdsman-converters/lib/reporting');
-const extend = require('zigbee-herdsman-converters/lib/extend');
 const e = exposes.presets;
 const ea = exposes.access;
 
@@ -79,24 +78,28 @@ const definition = {
     description: '[DiY 8/12/20 button keypad](http://modkam.ru/?p=1114)',
     fromZigbee: [fzLocal.diyruz_freepad_clicks, fz.battery],
     toZigbee: [tzLocal.diyruz_freepad_on_off_config, tz.factory_reset],
-    exposes: [e.battery(), e.action([
-        'button_*_hold', 'button_*_single', 'button_*_double', 'button_*_triple', 'button_*_quadruple', 'button_*_release'])],
+    exposes: [
+        e.battery(),
+        e.action(['button_*_hold', 'button_*_single', 'button_*_double', 'button_*_triple', 'button_*_quadruple', 'button_*_release']),
+    ],
     configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
         await bind(endpoint, coordinatorEndpoint, ['genPowerCfg']);
-        const payload = [{
-            attribute: 'batteryPercentageRemaining',
-            minimumReportInterval: 0,
-            maximumReportInterval: 3600,
-            reportableChange: 0,
-        }, {
-            attribute: 'batteryVoltage',
-            minimumReportInterval: 0,
-            maximumReportInterval: 3600,
-            reportableChange: 0,
-        }];
+        const payload = [
+            {
+                attribute: 'batteryPercentageRemaining',
+                minimumReportInterval: 0,
+                maximumReportInterval: 3600,
+                reportableChange: 0,
+            },
+            {
+                attribute: 'batteryVoltage',
+                minimumReportInterval: 0,
+                maximumReportInterval: 3600,
+                reportableChange: 0,
+            },
+        ];
         await endpoint.configureReporting('genPowerCfg', payload);
-
 
         device.endpoints.forEach(async (ep) => {
             await bind(ep, coordinatorEndpoint, ['genMultistateInput']);

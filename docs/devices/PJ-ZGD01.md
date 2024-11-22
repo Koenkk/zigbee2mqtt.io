@@ -1,6 +1,6 @@
 ---
-title: "TuYa PJ-ZGD01 control via MQTT"
-description: "Integrate your TuYa PJ-ZGD01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya PJ-ZGD01 control via MQTT"
+description: "Integrate your Tuya PJ-ZGD01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa PJ-ZGD01
+# Tuya PJ-ZGD01
 
 |     |     |
 |-----|-----|
 | Model | PJ-ZGD01  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Garage door opener |
 | Exposes | trigger, garage_door_contact, linkquality |
-| Picture | ![TuYa PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.jpg) |
+| Picture | ![Tuya PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.png) |
 | White-label | MatSee Plus PJ-ZGD01 |
 
 
@@ -27,6 +27,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 
@@ -39,10 +40,10 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger": NEW_VALUE}`.
 If value equals `true` trigger is ON, if `false` OFF.
 
-### Garage_door_contact (binary)
+### Garage door contact (binary)
 Value can be found in the published state on the `garage_door_contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` garage_door_contact is ON, if `false` OFF.
+If value equals `true` garage door contact is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

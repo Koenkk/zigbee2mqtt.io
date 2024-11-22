@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi RTCGQ11LM control via MQTT"
-description: "Integrate your Xiaomi RTCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara RTCGQ11LM control via MQTT"
+description: "Integrate your Aqara RTCGQ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,26 +11,29 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi RTCGQ11LM
+# Aqara RTCGQ11LM
 
 |     |     |
 |-----|-----|
 | Model | RTCGQ11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara human body movement and illuminance sensor |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Motion sensor |
 | Exposes | battery, occupancy, device_temperature, voltage, illuminance_lux, illuminance, power_outage_count, linkquality |
-| Picture | ![Xiaomi RTCGQ11LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ11LM.jpg) |
+| Picture | ![Aqara RTCGQ11LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ11LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Battery
+Uses a CR2450 battery.
 
 ### Pairing
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
 After this the device will automatically join. If this doesn't work, try with a single short button press.
 
 In some cases where users are using a CC2531 USB stick (see https://github.com/Koenkk/zigbee2mqtt/issues/839) performing a shutdown of Zigbee2MQTT, removing and reinserting the USB stick, then restarting Zigbee2MQTT has proven successful for pairing via the above method when it has not been working.
+Switching to the ember adapter after [upgrading the stick firmware](https://darkxst.github.io/silabs-firmware-builder/) might solve this pairing issue.
 
 
 ### Troubleshooting: device stops sending messages/disconnects from network
@@ -56,6 +59,7 @@ is needed.
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -73,7 +77,7 @@ is needed.
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -85,7 +89,7 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -97,7 +101,7 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Illuminance_lux (numeric)
+### Illuminance (lux) (numeric)
 Measured illuminance in lux.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
@@ -109,7 +113,7 @@ Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

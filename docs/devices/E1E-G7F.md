@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Smart switch |
 | Exposes | action, linkquality |
-| Picture | ![Sengled E1E-G7F](https://www.zigbee2mqtt.io/images/devices/E1E-G7F.jpg) |
+| Picture | ![Sengled E1E-G7F](https://www.zigbee2mqtt.io/images/devices/E1E-G7F.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,7 +33,10 @@ If device won't go in to pairing mode, try installing a fresh battery.
 
 ### Long press action
 The device will sometimes output a single push in addition to a long press. You can mitigate this by using the Debounce device configuration. Refer to *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*.
+
+For the `up` and `down` buttons, they will first output the action, and then output `{action}_long` every approximately 1 second, repeating until the button is released.
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

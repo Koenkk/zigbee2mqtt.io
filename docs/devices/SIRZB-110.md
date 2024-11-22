@@ -18,12 +18,17 @@ pageClass: device-page
 | Model | SIRZB-110  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Customizable siren |
-| Exposes | battery, battery_low, test, warning, squawk, max_duration, alarm, linkquality |
-| Picture | ![Develco SIRZB-110](https://www.zigbee2mqtt.io/images/devices/SIRZB-110.jpg) |
+| Exposes | battery_low, test, warning, squawk, max_duration, alarm, temperature, battery, voltage, linkquality |
+| Picture | ![Develco SIRZB-110](https://www.zigbee2mqtt.io/images/devices/SIRZB-110.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+
+
+### Firmware version warning
+
+Only works with firmware 1.7.1 and lower (whatever hardware version). Firmware version 1.9.3 uses a different framework and these commands no longer work.
 
 
 ### Warning usage
@@ -58,33 +63,27 @@ This alarm are preset to highest volume and using the mode `police_panic`
 Squawk are normally used to indicate activation and deactivation of an alarm system
 
 Examples:
-`{"squawk":{"level":"low","mode":"system_is_sarmed","strobe":false}}`
-`{"squawk":{"level":"low","mode":"system_is_disarmed","strobe":false}}`
+`{"squawk":{"level":"low","state":"system_is_armed","strobe":false}}`
+`{"squawk":{"level":"low","state":"system_is_disarmed","strobe":false}}`
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes
 
-### Battery (numeric)
-Remaining battery in %.
-Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
-
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Test (binary)
 Indicates whether the device is being tested.
@@ -107,7 +106,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"squa
 - `level` (enum): Sound level allowed values: `low`, `medium`, `high`, `very_high`
 - `strobe` (binary): Turn on/off the strobe (light) for Squawk allowed values: `true` or `false`
 
-### Max_duration (numeric)
+### Max duration (numeric)
 Max duration of the siren.
 Value can be found in the published state on the `max_duration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_duration": ""}`.
@@ -121,6 +120,28 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm": NEW_VALUE}`.
 If value equals `START` alarm is ON, if `OFF` OFF.
+
+### Temperature (numeric)
+Measured temperature value.
+Value can be found in the published state on the `temperature` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Voltage (numeric)
+Reported battery voltage in millivolts.
+Value can be found in the published state on the `voltage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `mV`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

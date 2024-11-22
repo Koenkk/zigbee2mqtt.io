@@ -1,7 +1,7 @@
 ---
 title: "Zemismart ZM25TQ control via MQTT"
 description: "Integrate your Zemismart ZM25TQ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-04-30T08:00:58
+addedAt: 2024-09-01T12:36:27
 pageClass: device-page
 ---
 
@@ -19,13 +19,14 @@ pageClass: device-page
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Tubular motor |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Zemismart ZM25TQ](https://www.zigbee2mqtt.io/images/devices/ZM25TQ.jpg) |
+| Picture | ![Zemismart ZM25TQ](https://www.zigbee2mqtt.io/images/devices/ZM25TQ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

@@ -1,1 +1,1 @@
-declare module "zigbee-herdsman-converters";
+declare module 'zigbee-herdsman-converters';

@@ -1,0 +1,157 @@
+---
+title: "Aqara HCXDD12LM control via MQTT"
+description: "Integrate your Aqara HCXDD12LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-03-31T18:43:56
+pageClass: device-page
+---
+
+<!-- !!!! -->
+<!-- ATTENTION: This file is auto-generated through docgen! -->
+<!-- You can only edit the "Notes"-Section between the two comment lines "Notes BEGIN" and "Notes END". -->
+<!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
+<!-- !!!! -->
+
+# Aqara HCXDD12LM
+
+|     |     |
+|-----|-----|
+| Model | HCXDD12LM  |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Ceiling light T1 |
+| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, power_outage_memory, light (state, brightness, color_temp, color_xy, color_hs), linkquality |
+| Picture | ![Aqara HCXDD12LM](https://www.zigbee2mqtt.io/images/devices/HCXDD12LM.png) |
+
+
+<!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+
+
+<!-- Notes END: Do not edit below this line -->
+
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
+
+* `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
+
+## Exposes
+
+### Light (white endpoint)
+This light supports the following features: `state`, `brightness`, `color_temp`.
+- `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_white": "ON"}`, `{"state_white": "OFF"}` or `{"state_white": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_white": ""}`.
+- `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_white": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_white": ""}`.
+- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_white": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_white": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
+#### Transition
+For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
+Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
+
+#### Moving/stepping
+Instead of setting a value (e.g. brightness) directly it is also possible to:
+- move: this will automatically move the value over time, to stop send value `stop` or `0`.
+- step: this will increment/decrement the current value by the given one.
+
+The direction of move and step can be either up or down, provide a negative value to move/step down, a positive value to move/step up.
+To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
+
+**NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
+````js
+{
+  "brightness_move": -40, // Starts moving brightness down at 40 units per second
+  "brightness_move": 0, // Stop moving brightness
+  "brightness_step": 40 // Increases brightness by 40
+  "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
+  "color_temp_move": "stop", // Stop moving color temperature
+  "color_temp_step": 99, // Increase color temperature by 99
+}
+````
+
+### Power outage count (numeric)
+Number of power outages (since last pairing).
+Value can be found in the published state on the `power_outage_count` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Device temperature (numeric)
+Temperature of the device.
+Value can be found in the published state on the `device_temperature` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `°C`.
+
+### Power outage memory (binary)
+Enable/disable the power outage memory, this recovers the on/off mode after power failure.
+Value can be found in the published state on the `power_outage_memory` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+If value equals `true` power outage memory is ON, if `false` OFF.
+
+### Light (rgb endpoint)
+This light supports the following features: `state`, `brightness`, `color_temp`, `color_xy`, `color_hs`.
+- `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_rgb": "ON"}`, `{"state_rgb": "OFF"}` or `{"state_rgb": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_rgb": ""}`.
+- `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_rgb": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_rgb": ""}`.
+- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_rgb": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_rgb": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
+- `color_xy`: To control the XY color (CIE 1931 color space) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_rgb": {"x": X_VALUE, "y": Y_VALUE}}` (e.g. `{"color":{"x":0.123,"y":0.123}}`). To read the XY color send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_rgb":{"x":"","y":""}}`. Alternatively it is possible to set the XY color via RGB:
+  - `{"color": {"r": R, "g": G, "b": B}}` e.g. `{"color":{"r":46,"g":102,"b":150}}`
+  - `{"color": {"rgb": "R,G,B"}}` e.g. `{"color":{"rgb":"46,102,150"}}`
+  - `{"color": {"hex": HEX}}` e.g. `{"color":{"hex":"#547CFF"}}`
+- `color_hs`: To control the hue/saturation (color) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_rgb": {"hue": HUE, "saturation": SATURATION}}` (e.g. `{"color":{"hue":360,"saturation":100}}`). To read the hue/saturation send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_rgb":{"hue":"","saturation":""}}`. Alternatively it is possible to set the hue/saturation via:
+  - HSB space (hue, saturation, brightness): `{"color": {"h": H, "s": S, "b": B}}` e.g. `{"color":{"h":360,"s":100,"b":100}}` or `{"color": {"hsb": "H,S,B"}}` e.g. `{"color":{"hsb":"360,100,100"}}`
+  - HSV space (hue, saturation, value):`{"color": {"h": H, "s": S, "v": V}}` e.g. `{"color":{"h":360,"s":100,"v":100}}` or `{"color": {"hsv": "H,S,V"}}` e.g. `{"color":{"hsv":"360,100,100"}}`
+  - HSL space (hue, saturation, lightness)`{"color": {"h": H, "s": S, "l": L}}` e.g. `{"color":{"h":360,"s":100,"l":100}}` or `{"color": {"hsl": "H,S,L"}}` e.g. `{"color":{"hsl":"360,100,100"}}`
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
+#### Transition
+For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
+Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
+
+#### Moving/stepping
+Instead of setting a value (e.g. brightness) directly it is also possible to:
+- move: this will automatically move the value over time, to stop send value `stop` or `0`.
+- step: this will increment/decrement the current value by the given one.
+
+The direction of move and step can be either up or down, provide a negative value to move/step down, a positive value to move/step up.
+To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
+
+**NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
+````js
+{
+  "brightness_move": -40, // Starts moving brightness down at 40 units per second
+  "brightness_move": 0, // Stop moving brightness
+  "brightness_step": 40 // Increases brightness by 40
+  "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
+  "color_temp_move": "stop", // Stop moving color temperature
+  "color_temp_step": 99, // Increase color temperature by 99
+  "hue_move": 40, // Starts moving hue up at 40 units per second, will endlessly loop (allowed value range: -255 till 255)
+  "hue_step": -90, // Decrease hue by 90 (allowed value range: -255 till 255)
+  "saturation_move": -55, // Starts moving saturation down at -55 units per second (allowed value range: -255 till 255)
+  "saturation_step": 66, // Increase saturation by 66 (allowed value range: -255 till 255)
+}
+````
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
+

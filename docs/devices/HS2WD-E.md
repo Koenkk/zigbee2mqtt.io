@@ -19,12 +19,15 @@ pageClass: device-page
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart siren |
 | Exposes | battery, warning, linkquality |
-| Picture | ![HEIMAN HS2WD-E](https://www.zigbee2mqtt.io/images/devices/HS2WD-E.jpg) |
+| Picture | ![HEIMAN HS2WD-E](https://www.zigbee2mqtt.io/images/devices/HS2WD-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Pairing 
+
+Push the included pin in the small hole on the case of the device and hold for ~5 seconds until the LED starts flashing.
 
 ### Triggering the alarm
 The alarm can be trigged by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` message
@@ -38,10 +41,11 @@ Where:
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

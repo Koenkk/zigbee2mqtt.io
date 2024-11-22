@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Acova](/supported-devices/#v=Acova)  |
 | Description | Alcantara 2 heater |
 | Exposes | climate (occupied_heating_setpoint, unoccupied_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
-| Picture | ![Acova ALCANTARA2](https://www.zigbee2mqtt.io/images/devices/ALCANTARA2.jpg) |
+| Picture | ![Acova ALCANTARA2](https://www.zigbee2mqtt.io/images/devices/ALCANTARA2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -35,6 +35,7 @@ pageClass: device-page
 - Wait for pairing. The device should show up in zigbee2mqtt in a few seconds and the screen should now display `On`
 - Press and hold the `Mode` button to leave configuration mode (or wait for ~ 30 sec to 1 minute). The device should now display "Box" on the top right corner of the screen and the temperature setpoint
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

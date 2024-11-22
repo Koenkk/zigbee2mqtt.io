@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | AX Water Sensor, water leakage detector |
 | Exposes | battery, battery_low, water_leak, active_water_leak, linkquality |
-| Picture | ![CTM Lyng AX_Water_Sensor](https://www.zigbee2mqtt.io/images/devices/AX_Water_Sensor.jpg) |
+| Picture | ![CTM Lyng AX_Water_Sensor](https://www.zigbee2mqtt.io/images/devices/AX_Water_Sensor.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,32 +29,33 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
-### Water_leak (binary)
+### Water leak (binary)
 Indicates whether the device detected a water leak.
 Value can be found in the published state on the `water_leak` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` water_leak is ON, if `false` OFF.
+If value equals `true` water leak is ON, if `false` OFF.
 
-### Active_water_leak (binary)
+### Active water leak (binary)
 Indicates whether there is an active water leak.
 Value can be found in the published state on the `active_water_leak` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` active_water_leak is ON, if `false` OFF.
+If value equals `true` active water leak is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

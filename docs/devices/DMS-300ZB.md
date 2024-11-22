@@ -19,13 +19,14 @@ pageClass: device-page
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS dual motion sensor |
 | Exposes | battery, voltage, occupancy_in, occupancy_out, occupancy_or, occupancy_and, occupancy_timeout, linkquality |
-| Picture | ![ShinaSystem DMS-300ZB](https://www.zigbee2mqtt.io/images/devices/DMS-300ZB.jpg) |
+| Picture | ![ShinaSystem DMS-300ZB](https://www.zigbee2mqtt.io/images/devices/DMS-300ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -40,7 +41,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -52,36 +53,36 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Occupancy_in (binary)
+### Occupancy in (binary)
 Indicates whether "IN" Sensor of the device detected occupancy.
 Value can be found in the published state on the `occupancy_in` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` occupancy_in is ON, if `false` OFF.
+If value equals `true` occupancy in is ON, if `false` OFF.
 
-### Occupancy_out (binary)
+### Occupancy out (binary)
 Indicates whether "OUT" Sensor of the device detected occupancy.
 Value can be found in the published state on the `occupancy_out` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` occupancy_out is ON, if `false` OFF.
+If value equals `true` occupancy out is ON, if `false` OFF.
 
-### Occupancy_or (binary)
+### Occupancy or (binary)
 Indicates whether "IN or OUT" Sensor of the device detected occupancy.
 Value can be found in the published state on the `occupancy_or` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` occupancy_or is ON, if `false` OFF.
+If value equals `true` occupancy or is ON, if `false` OFF.
 
-### Occupancy_and (binary)
+### Occupancy and (binary)
 Indicates whether "IN and OUT" Sensor of the device detected occupancy.
 Value can be found in the published state on the `occupancy_and` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` occupancy_and is ON, if `false` OFF.
+If value equals `true` occupancy and is ON, if `false` OFF.
 
-### Occupancy_timeout (numeric)
+### Occupancy timeout (numeric)
 Value can be found in the published state on the `occupancy_timeout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_timeout": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `3600`.
-The unit of this value is `second`.
+The unit of this value is `s`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

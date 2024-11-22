@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | RTCGQ01LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | MiJia human body movement sensor |
+| Description | Mi motion sensor |
 | Exposes | battery, occupancy, voltage, power_outage_count, linkquality |
-| Picture | ![Xiaomi RTCGQ01LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ01LM.jpg) |
+| Picture | ![Xiaomi RTCGQ01LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ01LM.png) |
 | White-label | Xiaomi YTC4041GL, Xiaomi YTC4004CN, Xiaomi YTC4016CN, Xiaomi ZHTZ02LM |
 
 
@@ -57,6 +57,7 @@ is needed.
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
@@ -68,7 +69,7 @@ is needed.
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -86,7 +87,7 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Power_outage_count (numeric)
+### Power outage count (numeric)
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.

@@ -1,6 +1,6 @@
 ---
-title: "TuYa SNTZ009 control via MQTT"
-description: "Integrate your TuYa SNTZ009 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya SNTZ009 control via MQTT"
+description: "Integrate your Tuya SNTZ009 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-08-11T22:17:44Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa SNTZ009
+# Tuya SNTZ009
 
 |     |     |
 |-----|-----|
 | Model | SNTZ009  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Water leak sensor |
 | Exposes | water_leak, linkquality |
-| Picture | ![TuYa SNTZ009](https://www.zigbee2mqtt.io/images/devices/SNTZ009.jpg) |
+| Picture | ![Tuya SNTZ009](https://www.zigbee2mqtt.io/images/devices/SNTZ009.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,13 +29,14 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
-### Water_leak (binary)
+### Water leak (binary)
 Indicates whether the device detected a water leak.
 Value can be found in the published state on the `water_leak` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` water_leak is ON, if `false` OFF.
+If value equals `true` water leak is ON, if `false` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

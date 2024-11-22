@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_switch control via MQTT"
-description: "Integrate your TuYa TS0601_switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_switch control via MQTT"
+description: "Integrate your Tuya TS0601_switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-09-30T20:52:56Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_switch
+# Tuya TS0601_switch
 
 |     |     |
 |-----|-----|
 | Model | TS0601_switch  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 1, 2, 3 or 4 gang switch |
 | Exposes | switch (state), linkquality |
-| Picture | ![TuYa TS0601_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_switch.jpg) |
+| Picture | ![Tuya TS0601_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_switch.png) |
 | White-label | Norklmes MKS-CM-W5, Somgoms ZSQB-SMB-ZB, Moes WS-EUB1-ZG, AVATTO ZGB-WS-EU |
 
 
@@ -29,6 +29,7 @@ pageClass: device-page
 
 Press any button 5 times, after this, click the button one more and hold the button.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

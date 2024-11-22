@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [RTX](/supported-devices/#v=RTX)  |
 | Description | Zigbee PIR sensor |
 | Exposes | battery_low, occupancy, linkquality |
-| Picture | ![RTX ZMS4](https://www.zigbee2mqtt.io/images/devices/ZMS4.jpg) |
+| Picture | ![RTX ZMS4](https://www.zigbee2mqtt.io/images/devices/ZMS4.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,13 +29,14 @@ pageClass: device-page
 
 
 
+
 ## Exposes
 
-### Battery_low (binary)
+### Battery low (binary)
 Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery_low is ON, if `false` OFF.
+If value equals `true` battery low is ON, if `false` OFF.
 
 ### Occupancy (binary)
 Indicates whether the device detected occupancy.

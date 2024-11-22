@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZG-102ZL control via MQTT"
-description: "Integrate your TuYa ZG-102ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZG-102ZL control via MQTT"
+description: "Integrate your Tuya ZG-102ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-11-9T1:17:42
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZG-102ZL
+# Tuya ZG-102ZL
 
 |     |     |
 |-----|-----|
 | Model | ZG-102ZL  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Luminance door sensor |
-| Exposes | contact, illuminance, battery, linkquality |
-| Picture | ![TuYa ZG-102ZL](https://www.zigbee2mqtt.io/images/devices/ZG-102ZL.jpg) |
+| Exposes | contact, illuminance, battery, illuminance_interval, linkquality |
+| Picture | ![Tuya ZG-102ZL](https://www.zigbee2mqtt.io/images/devices/ZG-102ZL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -31,6 +31,12 @@ pin/paperclip for approx. 5 seconds. The led will turn on, then start blinking w
 pairing process is in progress.
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -48,11 +54,19 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
+
+### Illuminance interval (numeric)
+Brightness acquisition interval (refresh and update only while active).
+Value can be found in the published state on the `illuminance_interval` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_interval": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `720`.
+The unit of this value is `minutes`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNJLBL01LM control via MQTT"
-description: "Integrate your Xiaomi ZNJLBL01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNJLBL01LM control via MQTT"
+description: "Integrate your Aqara ZNJLBL01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-09-01T18:11:17Z
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNJLBL01LM
+# Aqara ZNJLBL01LM
 
 |     |     |
 |-----|-----|
 | Model | ZNJLBL01LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara roller shade companion E1 |
-| Exposes | cover (state, position), battery, device_temperature, charging_status, motor_state, running, linkquality |
-| Picture | ![Xiaomi ZNJLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNJLBL01LM.jpg) |
-| White-label | Xiaomi RSD-M01 |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Roller shade driver E1 |
+| Exposes | cover (state, position), battery, device_temperature, charging_status, motor_state, running, motor_speed, linkquality |
+| Picture | ![Aqara ZNJLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNJLBL01LM.png) |
+| White-label | Aqara RSD-M01 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -53,6 +53,7 @@ In order for this device to work (fully), at least the following firmware is req
 *Note that if you have already paired the device you will need to repair it after upgrading your adapter firmware.*
 <!-- Notes END: Do not edit below this line -->
 
+
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
@@ -60,9 +61,9 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
-
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -74,37 +75,44 @@ To read the current state of this cover publish a message to topic `zigbee2mqtt/
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
 It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Device_temperature (numeric)
+### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Charging_status (binary)
+### Charging status (binary)
 The current charging status..
 Value can be found in the published state on the `charging_status` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"charging_status": ""}`.
 It's not possible to write (`/set`) this value.
-If value equals `true` charging_status is ON, if `false` OFF.
+If value equals `true` charging status is ON, if `false` OFF.
 
-### Motor_state (enum)
+### Motor state (enum)
 The current state of the motor..
 Value can be found in the published state on the `motor_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `declining`, `rising`, `pause`, `blocked`.
+The possible values are: `closing`, `opening`, `stopped`, `blocked`.
 
 ### Running (binary)
 Whether the motor is moving or not.
 Value can be found in the published state on the `running` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` running is ON, if `false` OFF.
+
+### Motor speed (enum)
+Controls the motor speed.
+Value can be found in the published state on the `motor_speed` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"motor_speed": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_speed": NEW_VALUE}`.
+The possible values are: `low`, `medium`, `high`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

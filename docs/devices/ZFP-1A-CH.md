@@ -19,13 +19,14 @@ pageClass: device-page
 | Vendor  | [Siglis](/supported-devices/#v=Siglis)  |
 | Description | zigfred plus smart in-wall switch |
 | Exposes | action, linkquality |
-| Picture | ![Siglis ZFP-1A-CH](https://www.zigbee2mqtt.io/images/devices/ZFP-1A-CH.jpg) |
+| Picture | ![Siglis ZFP-1A-CH](https://www.zigbee2mqtt.io/images/devices/ZFP-1A-CH.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -60,6 +61,8 @@ pageClass: device-page
 * `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 

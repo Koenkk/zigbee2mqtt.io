@@ -1,7 +1,7 @@
 ---
 title: "Zemismart ZM-CSW032-D control via MQTT"
 description: "Integrate your Zemismart ZM-CSW032-D via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2019-11-09T18:37:38Z
+addedAt: 2024-09-01T12:36:27
 pageClass: device-page
 ---
 
@@ -19,13 +19,14 @@ pageClass: device-page
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Curtain/roller blind switch |
 | Exposes | cover (state, position), linkquality |
-| Picture | ![Zemismart ZM-CSW032-D](https://www.zigbee2mqtt.io/images/devices/ZM-CSW032-D.jpg) |
+| Picture | ![Zemismart ZM-CSW032-D](https://www.zigbee2mqtt.io/images/devices/ZM-CSW032-D.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options

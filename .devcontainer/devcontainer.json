@@ -1,0 +1,11 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+
+    "postCreateCommand": "npm install",
+
+    "portsAttributes": {
+        "8080": {
+            "label": "client"
+        }
+    }
+}

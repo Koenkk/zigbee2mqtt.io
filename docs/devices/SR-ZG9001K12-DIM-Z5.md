@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | 5 zone remote and dimmer |
 | Exposes | battery, action, linkquality |
-| Picture | ![Sunricher SR-ZG9001K12-DIM-Z5](https://www.zigbee2mqtt.io/images/devices/SR-ZG9001K12-DIM-Z5.jpg) |
+| Picture | ![Sunricher SR-ZG9001K12-DIM-Z5](https://www.zigbee2mqtt.io/images/devices/SR-ZG9001K12-DIM-Z5.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,6 +32,7 @@ Press and hold the All On button on the Remote until the Status LED turns on. Th
 ### Resetting
 Press and hold the All On button on the Remote until the Status LED turns on. Then immediately press 5 times the All On button. The Status LED will blink 3 times to indicate successful reset.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -48,7 +49,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

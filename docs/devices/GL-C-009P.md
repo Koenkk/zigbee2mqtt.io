@@ -18,13 +18,12 @@ pageClass: device-page
 | Model | GL-C-009P  |
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee LED Controller W (pro) |
-| Exposes | light (state, brightness), effect, power_on_behavior, linkquality |
-| Picture | ![Gledopto GL-C-009P](https://www.zigbee2mqtt.io/images/devices/GL-C-009P.jpg) |
+| Exposes | light (state, brightness), effect, power_on_behavior, identify, linkquality |
+| Picture | ![Gledopto GL-C-009P](https://www.zigbee2mqtt.io/images/devices/GL-C-009P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-
 
 ### Pairing
 1. Switch on your device.
@@ -32,9 +31,45 @@ pageClass: device-page
 3. Repeat off/on four times.
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
-### GL-C-001P
-See [GL-C-008P](./GL-C-008P.md#GL-C-001P).
+## Multi-mode 5-in-1 devices
+Gledopto produces devices that allow you to select one of up to 5 different LED Controller types with each mode displaying a different [Indicator Light] **color**.
+
+* `RGB+CCT` [GL-C-008P](./GL-C-008P.md) [White]
+* `RGBW` [GL-C-007P](./GL-C-007P.md) [Yellow]
+* `RGB` [GL-C-003P](./GL-C-003P.md) [Blue]
+* `CCT` [GL-C-006P](./GL-C-006P.md) [Green]
+* `Dimmer` [GL-C-009P](./GL-C-009P.md) [Red]
+
+This `GL-C-009P` mode is available as a `modelId` in the following models:
+
+* **GL-C-001P** - Zigbee Pro 5 in 1 Smart LED Controller
+* **GL-C-002P** - Zigbee Pro 5 in 1 LED Controller Mini Ultra Thin
+* **GL-C-011P** - Zigbee Pro 5 in 1 Smart LED Controller DIN Rail
+* **GL-C-201P** - Zigbee Pro+ 5 in 1 Smart LED Controller
+* **GL-C-301P** - Zigbee Pro+ 5 in 1 Smart LED Controller Ultra-Mini
+
+You can switch to this `GL-C-009P` mode by short pressing the `Opt` button on the device until the Indicator Light is `Red`.
+
+To pair with, or change modes on, Zigbee2MQTT, press the `Reset` button 4 times
+
+## Dual-mode 2-in-1 devices
+Gledopto produces devices that allow you to select one of up to 2 different LED Controller types with each mode displaying a different [Indicator Light] **status**.
+
+* `CCT` [GL-C-006P](./GL-C-006P.md) [Indicator Light Off]
+* `Dimmer` [GL-C-009P](./GL-C-009P.md) [Indicator Light On]
+
+This `GL-C-009P` mode is available as a `modelId` in the following models:
+* **GL-C-003P**† - Zigbee Pro 3-wire/2-wire 2 in 1 CCT/DIM LED Controller
+* **GL-C-203P** - Zigbee Pro+ 3-wire/2-wire 2 in 1 CCT/DIM LED Controller
+
+You can switch to this `GL-C-009P` mode by short pressing the `Reset` button on the device until the Indicator Light is `On`.
+
+To pair with, or change modes on, Zigbee2MQTT, long press the `Reset` button for more that 2 seconds.
+
+† Note that this **GL-C-003P** Model is not an RGB Controller and not capable of being selected as an `RGB` controller or sending the `GL-C-003P` ModelId to Zigbee2MQTT. See [GL-C-003P](./GL-C-003P.md) for devices that can do this.
+
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -45,6 +80,10 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
 
 ## Exposes
 
@@ -52,6 +91,12 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
@@ -81,12 +126,19 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
-### Power_on_behavior (enum)
+### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).
