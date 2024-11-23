@@ -1,7 +1,7 @@
-import type {SidebarConfig} from '@vuepress/theme-default';
+import type {SidebarOptions} from '@vuepress/theme-default';
 import {getFiles} from './navbar';
 
-export const sidebar: SidebarConfig = {
+export const sidebar: SidebarOptions = {
     '/guide/': [
         '/guide/getting-started/',
         {
@@ -32,6 +32,7 @@ export const sidebar: SidebarConfig = {
                 '/guide/configuration/device-availability.md',
                 '/guide/configuration/homeassistant.md',
                 '/guide/configuration/more-config-options.md',
+                '/guide/configuration/configuration-update.md',
             ],
         },
         {
