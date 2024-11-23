@@ -44,6 +44,13 @@ After this the device will automatically join. If this doesn't work, try with a 
 *Note: When you fail to pair a device, try replacing the battery, this could solve the problem.*
 <!-- Notes END: Do not edit below this line -->
 
+If you are having a hard time pairing this device then try this suggestion from github user [`Programmierus`](https://github.com/Programmierus):
+[`Github Issue`](https://github.com/Koenkk/zigbee2mqtt/issues/17696#issuecomment-1832316394)
+> 1. Disable Zigbee2MQTT network join.
+> 2. Wait a few minutes.
+> 3. **VERY IMPORTANT** - Put the P1 device into pairing mode by holding its button for more than 5 seconds (*Zigbee2MQTT joining must remain disabled!*).
+> 4. Enable Zigbee2MQTT network join.
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
