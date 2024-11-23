@@ -17,7 +17,7 @@ Configure the `serial` section as described [here](../configuration/adapter-sett
 Common reasons for this error:
 
 1. The port of your serial adapter changed.
-   Check [this](../installation/01_linux.md#1-determine-location-of-the-adapter-and-checking-user-permissions) to find out the port of your adapter.
+   Check [this](../configuration/adapter-settings.md) to find out the port of your adapter.
 2. If you are using a CC2530 or CC2531; it is a common issue for this adapter to crash (due to its outdated hardware).
    Reflashing the firmware should fix the problem. If it happens often consider flashing the [source routing firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/source_routing) or upgrade to a [more powerful adapter](../adapters/README.md).
 3. Your adapter requires additional configuration parameters. Check [supported Adapters](../adapters/README.md) section to find out if your adapter requires extra parameters (eg. ConBee II / RaspBee II).
