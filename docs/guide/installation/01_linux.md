@@ -123,7 +123,7 @@ Zigbee2MQTT can be stopped by pressing `CTRL + C`.
 
 ::: warning ATTENTION
 
-In case Zigbee2MQTT fails to start with `USB adapter discovery error (No valid USB adapter found). Specify valid 'adapter' and 'port' in your configuration.` see the [serial configuration docs](../configuration/)
+In case Zigbee2MQTT fails to start with `USB adapter discovery error (No valid USB adapter found). Specify valid 'adapter' and 'port' in your configuration.` see the [serial configuration docs](../configuration/adapter-settings.md)
 
 :::
 
