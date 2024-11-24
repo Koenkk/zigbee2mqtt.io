@@ -63,8 +63,9 @@ If you only plan to use this and want to disable the _Via Home Assistant entity_
 
 ### Via Home Assistant entity
 
-> [!WARNING]
-> This is a legacy feature and will not be supported anymore as of [Zigbee2MQTT 2.0.0](https://github.com/Koenkk/zigbee2mqtt/discussions/24198).
+::: warning ATTENTION
+This is a legacy feature and will not be supported anymore as of [Zigbee2MQTT 2.0.0](https://github.com/Koenkk/zigbee2mqtt/discussions/24198).
+:::
 
 This method work by responding to the state change event of a sensor.
 
