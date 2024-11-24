@@ -47,15 +47,15 @@ The [MQTT device triggers](https://www.home-assistant.io/integrations/device_tri
 automation:
     - alias: Respond to button click
       triggers:
-        - trigger: device
-          domain: mqtt
-          device_id: ad44cabee4c646f493814306aa6446e1
-          type: action
-          subtype: arrow_left_click
+          - trigger: device
+            domain: mqtt
+            device_id: ad44cabee4c646f493814306aa6446e1
+            type: action
+            subtype: arrow_left_click
       actions:
-        - action: light.toggle
-          target:
-            entity_id: light.bedroom
+          - action: light.toggle
+            target:
+                entity_id: light.bedroom
 ```
 
 If you only plan to use this (or Home Assistant `event` entities) and want to disable the _Via Home Assistant `sensor` entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
@@ -70,17 +70,17 @@ This method work by responding to the state change of an [`event` entity](https:
 automation:
     - alias: Respond to button click
       triggers:
-        - trigger: state
-          entity_id: event.my_switch_click
-          attribute: event_type
-          to: 'single'
+          - trigger: state
+            entity_id: event.my_switch_click
+            attribute: event_type
+            to: 'single'
       conditions:
-        - condition: template
-          value_template: "{{trigger.from_state.state != 'unavailable'}}"
+          - condition: template
+            value_template: "{{trigger.from_state.state != 'unavailable'}}"
       actions:
-        - action: light.toggle
-          target:
-            entity_id: light.bedroom
+          - action: light.toggle
+            target:
+                entity_id: light.bedroom
 ```
 
 If you only plan to use this (or MQTT device triggers) and want to disable the _Via Home Assistant entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
@@ -93,13 +93,13 @@ This method work by responding to the state change event of a legacy `sensor` en
 automation:
     - alias: Respond to button click
       triggers:
-        - trigger: state
-          entity_id: sensor.my_switch_click
-          to: 'single'
+          - trigger: state
+            entity_id: sensor.my_switch_click
+            to: 'single'
       actions:
-        - action: light.toggle
-          target:
-            entity_id: light.bedroom
+          - action: light.toggle
+            target:
+                entity_id: light.bedroom
 ```
 
 ## Groups
