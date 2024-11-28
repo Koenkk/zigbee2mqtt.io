@@ -82,6 +82,44 @@ Publishing messages depends on the MQTT client you use. For example to publish a
  mosquitto_pub -t 'zigbee2mqtt/0x0fffffffffffffff/set' -m '{ "state": "ON" }'
 ```
 
+#### Directly reading/writing ZCL attributes
+For development/debug purposes it's possible to directly send read/write attribute requests to a device through this endpoint.
+Clusters and attributes can be referred to either by name or ID. 
+For all available names within zigbee2mqtt please refer to [cluster.ts](https://github.com/Koenkk/zigbee-herdsman/blob/master/src/zspec/zcl/definition/cluster.ts).
+
+##### Read requests:
+
+```js
+{
+  "read": {
+    "cluster": genBasic, // Either name (if defined in standard) or ID of cluster can be used
+    "attributes": [1]    // Either name (if defined in standard) or ID of attribute can be used
+  }
+}
+```
+##### Write requests:
+
+Writing one or multiple attributes can be done in multiple ways:
+
+```js
+{
+  "write": {
+    "cluster": "genBasic" // Either the name or ID can be used.
+    "payload" {
+      // If the attribute ID is one of the predefined types you can directly write using key:value
+      "manufacturerName": "Best Manufacturer"
+      // If the attribute ID is not a predefined one (out of the ZCL specifications) 
+      // it still can be written with the following syntax.
+      "0": // ID
+      {
+          "value": "Best Manufacturer",
+          "type": 66 // type enum as defined in ZCL specifications. Can be found using a `read` command or from specifications.
+      }
+    }
+  }
+}
+```
+
 ## zigbee2mqtt/FRIENDLY_NAME/get
 
 This is the counterpart of the `set` command. It allows you to read a value from a device. To read e.g. the state of a device send the payload `{"state": ""}`. What you can `/get` is specified on the device page under the _Exposes_ section.
