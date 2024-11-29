@@ -122,7 +122,7 @@ Contains the state of the bridge, this message is published as retained. Payload
 
 ## zigbee2mqtt/bridge/logging
 
-All Zigbee2MQTT logging, except the `debug` level, is published to this topic in the form of `{"level": LEVEL, "message": MESSAGE}`, example: `{"level": "info", "message": "Zigbee: allowing new devices to join."}`.
+All Zigbee2MQTT logging, except the `debug` level, is published to this topic in the form of `{"level": LEVEL, "message": MESSAGE, "namespace": NAMESPACE}`, example: `{"level": "info", "message": "Zigbee: allowing new devices to join.", "namespace": "z2m"}`.
 
 ## zigbee2mqtt/bridge/devices
 
@@ -401,7 +401,7 @@ See [External converters](../../advanced/more/external_converters.md).
 
 #### zigbee2mqtt/bridge/request/backup
 
-Creates a backup of the `data` folder (without the `data/log` directory). Payload has to be empty, example response: `{"data":{"zip":"WklHQkVFMk1RVFQuUk9DS1M="},"status":"ok"}`. The `zip` property represents a zip file encoded via Base64. Note that only adapters based on a Texas Instruments chip (CC2530/CC2531/CC2538/CC2652/CC1352) support a coordinator backup (`coordinator_backup.json`).
+Creates a backup of the `data` folder (without the `data/log` directory). Payload has to be empty, example response: `{"data":{"zip":"WklHQkVFMk1RVFQuUk9DS1M="},"status":"ok"}`. The `zip` property represents a zip file encoded via Base64. Note that not all adapters support backup (`coordinator_backup.json`), see [adapters](../adapters/README.md) for more details.
 
 #### zigbee2mqtt/bridge/request/install_code/add
 
@@ -542,7 +542,7 @@ See [Groups](./groups.md).
 
 #### zigbee2mqtt/bridge/request/options
 
-Allows to set any option. The JSON schema of this can be found [here](https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/util/settings.schema.json) (is also published to `zigbee2mqtt/bridge/info` in the `config_schema` property). Example to set `permit_join`; send to `zigbee2mqtt/bridge/request/options` payload `{"options": {"permit_join": true}}`, response: `{"data":{"restart_required": false},"status":"ok"}`. Some options may require restarting Zigbee2MQTT, in this case `restart_required` is set to `true`. Note that `restart_required` is also published to `zigbee2mqtt/bridge/info`. Use `zigbee2mqtt/bridge/request/restart` to restart Zigbee2MQTT.
+Allows to set any option. The JSON schema of this can be found [here](https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/util/settings.schema.json) (is also published to `zigbee2mqtt/bridge/info` in the `config_schema` property). Example to set `log_level`; send to `zigbee2mqtt/bridge/request/options` payload `{"options": {"advanced": { "log_level": "debug" }}}`, response: `{"data":{"restart_required": false},"status":"ok"}`. Some options may require restarting Zigbee2MQTT, in this case `restart_required` is set to `true`. Note that `restart_required` is also published to `zigbee2mqtt/bridge/info`. Use `zigbee2mqtt/bridge/request/restart` to restart Zigbee2MQTT.
 
 ### Touchlink
 
