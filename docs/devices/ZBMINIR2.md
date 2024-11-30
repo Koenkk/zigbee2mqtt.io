@@ -23,8 +23,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Re-pair / starting pairing mode again
+Quickly press rocker switch 10 times.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -114,5 +116,3 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
 
-### Re-pair / starting pairing mode again
-Quickly press rocker switch 10 times.
