@@ -23,8 +23,10 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Re-pair / starting pairing mode again
+Quickly press rocker switch 10 times.
 <!-- Notes END: Do not edit below this line -->
 
 
