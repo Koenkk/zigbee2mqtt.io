@@ -83,8 +83,9 @@ Publishing messages depends on the MQTT client you use. For example to publish a
 ```
 
 #### Directly reading/writing ZCL attributes
+
 For development/debug purposes it's possible to directly send read/write attribute requests to a device through this endpoint.
-Clusters and attributes can be referred to either by name or ID. 
+Clusters and attributes can be referred to either by name or ID.
 For all available names within Zigbee2MQTT please refer to [cluster.ts](https://github.com/Koenkk/zigbee-herdsman/blob/master/src/zspec/zcl/definition/cluster.ts).
 
 ##### Read requests:
@@ -97,6 +98,7 @@ For all available names within Zigbee2MQTT please refer to [cluster.ts](https://
   }
 }
 ```
+
 ##### Write requests:
 
 Writing one or multiple attributes can be done in multiple ways:
@@ -108,7 +110,7 @@ Writing one or multiple attributes can be done in multiple ways:
     "payload" {
       // If the attribute ID is one of the predefined types you can directly write using key:value
       "manufacturerName": "Best Manufacturer"
-      // If the attribute ID is not a predefined one (out of the ZCL specifications) 
+      // If the attribute ID is not a predefined one (out of the ZCL specifications)
       // it still can be written with the following syntax.
       "0": // ID
       {
