@@ -1,7 +1,7 @@
 ---
-title: "easyiot RS485 control via MQTT"
-description: "Integrate your easyiot RS485 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-10-31T20:34:53
+title: "easyiot ZB-RS485 control via MQTT"
+description: "Integrate your easyiot ZB-RS485 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-11-30T20:27:20
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# easyiot RS485
+# easyiot ZB-RS485
 
 |     |     |
 |-----|-----|
-| Model | RS485  |
+| Model | ZB-RS485  |
 | Vendor  | [easyiot](/supported-devices/#v=easyiot)  |
 | Description | Zigbee to RS485 controller |
 | Exposes | last_received_command, send_command, linkquality |
-| Picture | ![easyiot RS485](https://www.zigbee2mqtt.io/images/devices/RS485.png) |
+| Picture | ![easyiot ZB-RS485](https://www.zigbee2mqtt.io/images/devices/ZB-RS485.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Zigbee LED Controller WW/CW (pro) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, identify, linkquality |
 | Picture | ![Gledopto GL-C-006P](https://www.zigbee2mqtt.io/images/devices/GL-C-006P.png) |
+| White-label | Gledopto GL-C-006P_mini, Gledopto GL-C-003P_1, Gledopto GL-C-203P |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -67,7 +68,6 @@ You can switch to this `GL-C-009P` mode by short pressing the `Reset` button on 
 To pair with, or change modes on, Zigbee2MQTT, long press the `Reset` button for more that 2 seconds.
 
 † Note that this **GL-C-003P** Model is not an RGB Controller and not capable of being selected as an `RGB` controller or sending the `GL-C-003P` ModelId to Zigbee2MQTT. See [GL-C-003P](./GL-C-003P.md) for devices that can do this.
-
 <!-- Notes END: Do not edit below this line -->
 
 

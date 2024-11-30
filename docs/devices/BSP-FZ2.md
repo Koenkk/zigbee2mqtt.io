@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BSP-FZ2  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Plug compact EU |
-| Exposes | switch (state), power_on_behavior, power, voltage, current, energy, linkquality |
+| Exposes | switch (state), power_on_behavior, power, energy, linkquality |
 | Picture | ![Bosch BSP-FZ2](https://www.zigbee2mqtt.io/images/devices/BSP-FZ2.png) |
 
 
@@ -44,14 +44,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -86,20 +78,6 @@ Value can be found in the published state on the `power` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
-
-### Voltage (numeric)
-Measured electrical potential value.
-Value can be found in the published state on the `voltage` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `V`.
-
-### Current (numeric)
-Instantaneous measured electrical current.
-Value can be found in the published state on the `current` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `A`.
 
 ### Energy (numeric)
 Sum of consumed energy.

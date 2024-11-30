@@ -23,13 +23,11 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 
 ### Pairing
 
 To enable pairing, wait for the device led to stop, then press the device button 3 times, led should start blinking green while in pairing mode.
-
 <!-- Notes END: Do not edit below this line -->
 
 

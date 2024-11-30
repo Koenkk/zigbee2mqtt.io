@@ -1,6 +1,6 @@
 ---
-title: "SONOFF SNZB-01 control via MQTT"
-description: "Integrate your SONOFF SNZB-01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "eWeLink SNZB-01 control via MQTT"
+description: "Integrate your eWeLink SNZB-01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-07-10T21:02:58Z
 pageClass: device-page
 ---
@@ -11,16 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# SONOFF SNZB-01
+# eWeLink SNZB-01
 
 |     |     |
 |-----|-----|
 | Model | SNZB-01  |
-| Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
+| Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
 | Description | Wireless button |
 | Exposes | battery, voltage, action, linkquality |
-| Picture | ![SONOFF SNZB-01](https://www.zigbee2mqtt.io/images/devices/SNZB-01.png) |
-| White-label | eWeLink RHK07 |
+| Picture | ![eWeLink SNZB-01](https://www.zigbee2mqtt.io/images/devices/SNZB-01.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

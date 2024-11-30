@@ -1,6 +1,6 @@
 ---
-title: "Tuya 8-Gang Wall Touch Switch Board"
-description: "Integrate your Tuya WLS098-ZIGBEE 8 gang wall touch switch via Zigbee2MQTT with a zigbee gateway."
+title: "Tuya WLS098-ZIGBEE control via MQTT"
+description: "Integrate your Tuya WLS098-ZIGBEE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-03-01T08:00:00
 pageClass: device-page
 ---
@@ -15,11 +15,12 @@ pageClass: device-page
 
 |     |     |
 |-----|-----|
-| Model | WLS098-ZIGBEE |
-| Vendor | [Tuya](/supported-devices/#v=Tuya) |
+| Model | WLS098-ZIGBEE  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 8 gang wall touch switch board |
-| Exposes | switch (l1, l2, l3, l4, l5, l6, l7, l8), linkquality |
+| Exposes | switch (state), linkquality |
 | Picture | ![Tuya WLS098-ZIGBEE](https://www.zigbee2mqtt.io/images/devices/WLS098-ZIGBEE.png) |
+
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
@@ -30,6 +31,8 @@ Long press any button for 5 seconds until the LED indicator starts flashing rapi
 ### Endpoints
 This device exposes 8 switches through endpoints l1-l8. Each switch can be controlled independently.
 <!-- Notes END: Do not edit below this line -->
+
+
 
 
 ## Exposes
@@ -80,3 +83,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+

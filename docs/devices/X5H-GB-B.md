@@ -29,7 +29,6 @@ pageClass: device-page
 
 ### Pairing
 When the thermostat is on, long press the temperature up button for 5 seconds. Now the WiFi-like icon starts flashing indicating readiness for pairing the device.
-
 <!-- Notes END: Do not edit below this line -->
 
 

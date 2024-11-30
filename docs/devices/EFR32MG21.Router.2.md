@@ -1,7 +1,7 @@
 ---
-title: "Custom devices (DiY) EFR32MG21.Router control via MQTT"
-description: "Integrate your Custom devices (DiY) EFR32MG21.Router via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-10-26T20:00:00Z
+title: "Custom devices (DiY) EFR32MG21.Router.2 control via MQTT"
+description: "Integrate your Custom devices (DiY) EFR32MG21.Router.2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-11-30T20:27:20
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Custom devices (DiY) EFR32MG21.Router
+# Custom devices (DiY) EFR32MG21.Router.2
 
 |     |     |
 |-----|-----|
-| Model | EFR32MG21.Router  |
+| Model | EFR32MG21.Router.2  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | EFR32MG21 router |
 | Exposes | linkquality |
-| Picture | ![Custom devices (DiY) EFR32MG21.Router](https://www.zigbee2mqtt.io/images/devices/EFR32MG21.Router.png) |
+| Picture | ![Custom devices (DiY) EFR32MG21.Router.2](https://www.zigbee2mqtt.io/images/devices/EFR32MG21.Router.2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

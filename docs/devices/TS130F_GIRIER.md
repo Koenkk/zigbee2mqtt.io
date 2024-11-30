@@ -1,7 +1,7 @@
 ---
-title: "QA QACZ1 control via MQTT"
-description: "Integrate your QA QACZ1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-06-30T19:12:33
+title: "Girier TS130F_GIRIER control via MQTT"
+description: "Integrate your Girier TS130F_GIRIER via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2024-11-30T20:27:20
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# QA QACZ1
+# Girier TS130F_GIRIER
 
 |     |     |
 |-----|-----|
-| Model | QACZ1  |
-| Vendor  | [QA](/supported-devices/#v=QA)  |
-| Description | Curtain switch |
+| Model | TS130F_GIRIER  |
+| Vendor  | [Girier](/supported-devices/#v=Girier)  |
+| Description | Smart curtain switch |
 | Exposes | cover (state, position), calibration_time, moving, motor_reversal, linkquality |
-| Picture | ![QA QACZ1](https://www.zigbee2mqtt.io/images/devices/QACZ1.png) |
+| Picture | ![Girier TS130F_GIRIER](https://www.zigbee2mqtt.io/images/devices/TS130F_GIRIER.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

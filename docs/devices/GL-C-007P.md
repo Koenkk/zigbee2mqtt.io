@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Zigbee LED Controller RGBW (pro) |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, power_on_behavior, identify, linkquality |
 | Picture | ![Gledopto GL-C-007P](https://www.zigbee2mqtt.io/images/devices/GL-C-007P.png) |
+| White-label | Gledopto GL-C-007P_mini |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -52,7 +53,6 @@ This `GL-C-007P` mode is available as a `modelId` in the following models:
 You can switch to this `GL-C-007P` mode by short pressing the `Opt` button on the device until the Indicator Light is `Yellow`.
 
 To pair with, or change modes on, Zigbee2MQTT, press the `Reset` button 4 times
-
 <!-- Notes END: Do not edit below this line -->
 
 

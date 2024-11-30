@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | RMDZB-1PNL63  |
 | Vendor  | [TNCE](/supported-devices/#v=TNCE)  |
-| Description | Zigbee DIN single phase RCBO energy meter |
+| Description | Zigbee DIN single phase energy meter |
 | Exposes | switch (state), energy, fault, voltage_a, power_a, current_a, temperature, over_current_breaker, over_current_threshold, over_voltage_breaker, over_voltage_threshold, under_voltage_breaker, under_voltage_threshold, high_temperature_breaker, high_temperature_threshold, linkquality |
 | Picture | ![TNCE RMDZB-1PNL63](https://www.zigbee2mqtt.io/images/devices/RMDZB-1PNL63.png) |
 | White-label | TNCE RMDZB-1PNL63 |

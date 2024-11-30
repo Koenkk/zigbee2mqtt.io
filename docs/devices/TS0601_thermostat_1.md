@@ -75,7 +75,7 @@ It's not possible to read (`/get`) this value.
 Window status closed or open .
 Value can be found in the published state on the `window` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `CLOSED` window is ON, if `OPEN` OFF.
+If value equals `CLOSE` window is ON, if `OPEN` OFF.
 
 ### Alarm switch (binary)
 Thermostat in error state.
