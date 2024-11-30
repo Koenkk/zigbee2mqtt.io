@@ -44,18 +44,19 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
       debian based OS: `sudo adduser $USER dialout`
       arch based OS: `sudo usermod -a -G uucp $USER`
   * log in and out so that group membership comes into effect (You can check by running `id`)
-* Third, you must operate on the naked logic board while it is plugged in. This is a lot easier if you use a **USB extension cable**.
+* Third, plug in the device. You must operate on the naked logic board while it is plugged in. This is a lot easier if you use a **USB extension cable**.
 * Forth, to enter the Bootloader Mode, you have to
   * Plug the device in
   * Connect to the device with the serial software (for serial connection parameters, see guide)
       
-      `putty -serial -sercfg 115200,8,n,1 /dev/ttyACM0`  
-      <img src="../../docs/images/putty-bootloader-1.png" width="350" height="250"/>  
+      `putty -serial -sercfg 115200,8,n,1 /dev/ttyACM0` 
+
       If you get the error `PuTTY: unable to load font "server:fixed"`, run `export GDK_BACKEND=x11` previous to the putty command.
 
-  * Press and hold the "BOOT" button (upper button in the lower right corner next to the USB plug in the photo below)
-  * and then press the "RST." button (lower button in the lower right corner next to the USB plug in the photo below) to restart the device 
-  <img src="https://www.zigbee2mqtt.io/images/guides/SONOFF-DongleE-Router/dongle-e-naked.jpg" width="648" height="242"/>
+  * Press and hold the "BOOT" button (see image below)
+  <img src="https://www.zigbee2mqtt.io/images/guides/SONOFF-DongleE-Router/dongle-e-buttons.jpg" width="648" height="242"/>
+  * While holding the "BOOT" button press the "RST" button once to restart the device. You should see the output below. Release the "BOOT" button.
+  <img src="../../docs/images/putty-bootloader-1.png" width="350" height="250"/>  
 * Fifth, to upload the file, in the bootloader terminal press '1' to initiate the upload  
   <img src="../../docs/images/putty-bootloader-2.png" width="350" height="250"/>
   * Open another terminal on the host system. Download the router firmware *.gbl file from [here](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E/Router), e.g.
