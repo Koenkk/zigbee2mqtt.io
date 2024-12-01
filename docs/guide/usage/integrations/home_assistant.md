@@ -37,7 +37,7 @@ The device specific configuration allows you to modify the discovery payload. He
 
 ## Responding to button clicks
 
-To respond to button clicks (e.g. WXKG01LM) you can use one of the following three Home Assistant configurations.
+To respond to button clicks you can use one of the following three Home Assistant configurations.
 
 ### Via MQTT device trigger (recommended)
 
@@ -58,8 +58,6 @@ automation:
                 entity_id: light.bedroom
 ```
 
-If you only plan to use this (or Home Assistant `event` entities) and want to disable the _Via Home Assistant `sensor` entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
-
 ### Via Home Assistant `event` entity (experimental)
 
 Note: `event` entity is **experimental** and may **break** in the future.
@@ -77,25 +75,6 @@ automation:
       conditions:
           - condition: template
             value_template: "{{trigger.from_state.state != 'unavailable'}}"
-      actions:
-          - action: light.toggle
-            target:
-                entity_id: light.bedroom
-```
-
-If you only plan to use this (or MQTT device triggers) and want to disable the _Via Home Assistant entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
-
-### Via Home Assistant `sensor` entity (deprecated, will be removed in 2.0.0)
-
-This method work by responding to the state change event of a legacy `sensor` entity. These entities will be removed in Zigbee2MQTT 2.x. Please migrate your automations to use `event` entities before then.
-
-```yaml
-automation:
-    - alias: Respond to button click
-      triggers:
-          - trigger: state
-            entity_id: sensor.my_switch_click
-            to: 'single'
       actions:
           - action: light.toggle
             target:

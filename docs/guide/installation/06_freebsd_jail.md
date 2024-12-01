@@ -24,15 +24,16 @@ Enter the following commands inside the jail's shell:
 
 ```bash
 # Install Node.js and required dependencies:
-# - It is recommended to install Node 16 from the official Node repository. Check https://github.com/nodesource/distributions/blob/master/README.md on how to do this.
-# - Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v16.15.0/ e.g. Version 16.15.0 should work.
+# - It is recommended to install Node 20 from the official Node repository. Check https://github.com/nodesource/distributions/blob/master/README.md on how to do this.
+# - Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/ e.g. Version 20.9.0 should work.
 # - Selecting `npm` also installs `node`.
 pkg install npm git gmake gcc
+npm install -g pnpm
 
-# Verify that the correct nodejs and npm (automatically installed with nodejs)
+# Verify that the correct nodejs and pnpm (automatically installed with nodejs)
 # version has been installed
 node --version  # Should output V18.x, V20.x, V21.X
-npm --version  # Should output 9.X or 10.X
+pnpm --version  # Should output 9.X
 
 # Create installation folder (/usr/local prefix is used for software not part of the base system)
 mkdir -p /usr/local/opt/zigbee2mqtt
@@ -42,17 +43,11 @@ cd /usr/local/opt/zigbee2mqtt
 git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git .
 
 # Install dependencies
-npm ci
+pnpm i --frozen-lockfile
+
+# Build Zigbee2MQTT
+pnpm run build
 ```
-
-If everything went correctly the output of `npm ci` is similar to (the number of packages and seconds is probably different on your device):
-
-```bash
-node-pre-gyp info ok
-added 383 packages in 111.613s
-```
-
-Note that the `npm ci` produces some `warning` which can be ignored.
 
 ## Configuring
 
@@ -76,7 +71,7 @@ Now that we have setup everything correctly we can start Zigbee2MQTT.
 
 ```bash
 cd /usr/local/opt/zigbee2mqtt
-npm start
+pnpm start
 ```
 
 When started successfully, you will see something like:

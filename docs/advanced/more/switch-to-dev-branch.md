@@ -26,7 +26,7 @@ git fetch origin dev
 # If you get an `error: pathspec 'dev' did not match any file(s) known to git` execute: `git fetch origin --unshallow`
 git checkout dev # Change 'dev' to 'master' to switch back to the release version
 git pull
-npm ci
+pnpm i --frozen-lockfile
 
 # Restore configuration
 cp -R data-backup/* data

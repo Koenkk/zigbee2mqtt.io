@@ -19,7 +19,7 @@ A use case for binding is, for example, the TRADFRI wireless dimmer. Binding the
 All commands below can also be executed via the frontend, click on your device and go to the _Bind_ tab.
 :::
 
-Binding can be configured by using either `zigbee2mqtt/bridge/request/device/bind` to bind and `zigbee2mqtt/bridge/request/device/unbind` to unbind. The payload should be `{"from": SOURCE, "to": TARGET}` where `SOURCE` and `TARGET` can be the `friendly_name` of a group or device. Example request payload: `{"from": "my_remote", "to": "my_bulb"}`, example response payload: `{"data":{"from":"my_remote","to":"my_bulb","clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`. The `clusters` in the response indicate the bound/unbound clusters, `failed` indicates any failed to bind/unbind clusters. In case all clusters fail to bind the `status` is set to `error`.
+Binding can be configured by using either `zigbee2mqtt/bridge/request/device/bind` to bind and `zigbee2mqtt/bridge/request/device/unbind` to unbind. The payload should be `{"from": SOURCE, "to": TARGET}` where `SOURCE` and `TARGET` can be the `friendly_name` of a group or device. Example request payload: `{"from": "my_remote", "to": "my_bulb"}`, example response payload: `{"data":{"from":"my_remote","from_endpoint":"default","to":"my_bulb","clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`. The `clusters` in the response indicate the bound/unbound clusters, `failed` indicates any failed to bind/unbind clusters. In case all clusters fail to bind the `status` is set to `error`.
 
 By default all supported clusters are bound. To restrict which clusters are being bound/unbound add `clusters` to the request payload e.g. `{"from": "my_remote", "to": "my_bulb", "clusters": ["genOnOff"]}`. Possible clusters are: `genScenes`, `genOnOff`, `genLevelCtrl`, `lightingColorCtrl` and `closuresWindowCovering`.
 
@@ -33,9 +33,13 @@ In the above example, the TRADFRI wireless dimmer would be the `SOURCE` device a
 
 **This is not applicable for most users**
 
-By default, the first endpoint is taken. In case your device has multiple endpoints, e.g. `left` and `right`. You can specify `SOURCE` or `TARGET` as e.g. `my_switch/right` to bind/unbind the `right` endpoint.
+If wanting to bind to specific endpoints instead of the default ones, specify the payload `{"from": SOURCE, "from_endpoint": SOURCE_ENDPOINT, "to": TARGET, "to_endpoint": TARGET_ENDPOINT}` where `SOURCE_ENDPOINT` and `TARGET_ENDPOINT` are the desired endpoints ID or name. Example request payload: `{"from": "my_remote", "from_endpoint": "top", "to": "my_bulb", "to_endpoint": 3}`, example response payload: `{"data":{"from":"my_remote","from_endpoint":"top","to":"my_bulb","to_endpoint":3,"clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`
 
-It is also possible to specify the endpoints in numeric, use e.g. `my_switch/3` for the `SOURCE` or `TARGET`.
+`SOURCE_ENDPOINT` and `TARGET_ENDPOINT` are optional. `SOURCE_ENDPOINT` will default to the default endpoint for the `SOURCE` device if not supplied. `TARGET_ENDPOINT` behaves the same, but is only used if `TARGET` is a device.
+
+::: tip
+The default endpoint for a device is the first registered endpoint (most often endpoint ID 1).
+:::
 
 ### Binding a remote to a group
 

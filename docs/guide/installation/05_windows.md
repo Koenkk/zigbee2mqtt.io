@@ -19,16 +19,6 @@ In order to be able to communicate with your USB device over a virtual COM port,
 -   For CP210x based chipsets, there is a driver available at [Silicon Labs' website](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
 -   For CC1352/CC2652/CC2538 based chipsets, have a look at [FTDI chip's website](https://ftdichip.com/drivers/vcp-drivers/) for drivers.
 
-## Determine which COM port is assigned to your device
-
-1. Connect your sniffer device
-1. Open up Start menu and start typing `Device Manager`
-1. Expand `Ports (COM & LPT)`
-1. Look for a node similar to `USB Serial Device (COM4)`
-1. Take note of the port number, it will be needed during configuration
-
-![Device Manager](../../images/devicemanager.png)
-
 ## Installing
 
 1. Download and install Node.js 20 LTS from [their website](https://nodejs.org/)
@@ -37,41 +27,38 @@ In order to be able to communicate with your USB device over a virtual COM port,
     ```bash
     node --version
     ```
+1. Install pnpm
+    ```bash
+    npm install -g pnpm
+    pnpm --version
+    ```
 1. Choose a suitable directory for Zigbee2MQTT and copy all the files from the [Zigbee2MQTT repository](https://github.com/koenkk/zigbee2mqtt)
     - if you prefer to use git (which you should), just clone the whole repository
         ```bash
         git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt/
         ```
     - otherwise use the green `Clone or download` button to download the zip archive, then extract it
-1. Change to the newly created directory and install dependencies with Node.js own package manager `npm`
+1. Change to the newly created directory and install dependencies with pnpm:
     ```bash
-    npm ci
+    pnpm i --frozen-lockfile
     ```
 
 ## Configuring
 
 1. Copy `data\configuration.example.yaml` to `data\configuration.yaml`
 1. Open `data\configuration.yaml` in a text editor
-1. Change the serial port configuration to match your setup
-    ```yaml
-    serial:
-        port: COM4
-    ```
+1. Change the MQTT configuration to match your setup, see the [documentation](../configuration/mqtt.md) for more info.
 1. Make sure other settings are correct as well
 1. Save and exit
 
 Congratulations, you're now ready to start your Zigbee2MQTT installation
-
-::: warning ATTENTION
-Some Windows drivers for adapters may prevent auto-detect from working properly. Make sure to specify the port as indicated above.
-:::
 
 ## Starting Zigbee2MQTT
 
 Just change to the root directory of your installation and run the application:
 
 ```bash
-npm start
+pnpm start
 ```
 
 A successful setup produces an output similar to this:
@@ -91,6 +78,23 @@ The `Coordinator firmware version: '20190608'` entry means that Zigbee2MQTT has 
 
 Zigbee2MQTT can be stopped anytime by pressing `CTRL + C` and then confirming with `Y`.
 
+::: warning ATTENTION
+
+In case Zigbee2MQTT fails to start with `USB adapter discovery error (No valid USB adapter found). Specify valid 'adapter' and 'port' in your configuration.`, we need to configure the `serial` section in the `configuration.yaml`.
+
+First determine which COM port is assigned to your device:
+
+1. Open up Start menu and start typing `Device Manager`
+1. Expand `Ports (COM & LPT)`
+1. Look for a node similar to `USB Serial Device (COM4)`
+
+![Device Manager](../../images/devicemanager.png)
+
+For the example above, we would use `port: COM4` in the `configuration.yaml`.
+Next configure the `serial` section as described [here](../configuration/adapter-settings.md).
+
+:::
+
 ## Updating Zigbee2MQTT
 
 It is recommended to back up the Zigbee2MQTT `\data` subdirectory before performing any modifications.
@@ -101,13 +105,13 @@ It is recommended to back up the Zigbee2MQTT `\data` subdirectory before perform
     ```bat
     git pull
     ```
-1. Update NPM dependencies
+1. Update dependencies
     ```bat
-    npm ci
+    pnpm i --frozen-lockfile
     ```
 1. Restart Zigbee2MQTT
     ```bat
-    npm start
+    pnpm start
     ```
 
 Below is a sample PowerShell script to run which will take care of:
@@ -157,9 +161,9 @@ Copy-Item -Path $z2mDataPath -Destination $z2mBackupPath -Recurse
 # Pull the latest release:
 "Running ""git pull""" | Write-Host
 & git pull
-# Update NPM dependencies:
-"Running ""npm ci""" | Write-Host
-& npm ci
+# Update dependencies:
+"Running ""pnpm i --frozen-lockfile""" | Write-Host
+& pnpm i --frozen-lockfile
 # Restore backed-up data:
 "Restore backed up data directory" | Write-Host
 Copy-Item -Path "$($z2mBackupPath)\*" -Destination $z2mDataPath -Recurse -Force

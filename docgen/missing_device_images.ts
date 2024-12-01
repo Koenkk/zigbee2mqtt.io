@@ -88,7 +88,7 @@ export async function downloadMissing() {
         }
     }
 
-    console.log(`Done! Filter and update all the files under '${missingImagesPath}', execute 'npm run move-missing-device-images'`);
+    console.log(`Done! Filter and update all the files under '${missingImagesPath}', execute 'pnpm run move-missing-device-images'`);
 }
 
 export async function prepareMissing() {
@@ -119,7 +119,7 @@ export async function prepareMissing() {
             if (fs.existsSync(imagePath)) fs.rmSync(imagePath);
         }
     }
-    console.log(`Done! Filter and update all the files under '${missingImagesPath}', execute 'npm run move-missing-device-images'`);
+    console.log(`Done! Filter and update all the files under '${missingImagesPath}', execute 'pnpm run move-missing-device-images'`);
 }
 
 async function moveMissing() {
