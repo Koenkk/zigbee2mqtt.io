@@ -16,12 +16,15 @@ File: `data/external_extensions/my-first-extension.js`
 
 ```js
 class MyExampleExtension {
-    constructor(zigbee, mqtt, state, publishEntityState, eventBus, settings, logger) {
+    constructor(zigbee, mqtt, state, publishEntityState, eventBus, enableDisableExtension, restartCallback, addExtension, settings, logger) {
         this.zigbee = zigbee;
         this.mqtt = mqtt;
         this.state = state;
         this.publishEntityState = publishEntityState;
         this.eventBus = eventBus;
+        this.enableDisableExtension = enableDisableExtension;
+        this.restartCallback = restartCallback;
+        this.addExtension = addExtension;
         this.settings = settings;
         this.logger = logger;
 
@@ -52,6 +55,23 @@ class MyExampleExtension {
 
 module.exports = MyExampleExtension;
 ```
+
+The typing for the constructor parameters is as below:
+
+```typescript
+zigbee: Zigbee, // see https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/zigbee.ts
+mqtt: MQTT, // see https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/mqtt.ts
+state: State, // see https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/state.ts
+publishEntityState: PublishEntityState,
+eventBus: EventBus, // see https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/eventBus.ts
+enableDisableExtension: (enable: boolean, name: string) => Promise<void>,
+restartCallback: () => Promise<void>,
+addExtension: (extension: Extension) => Promise<void>,
+logger: typeof import logger, // see https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/util/logger.ts
+settings: typeof import settings, // see https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/util/settings.ts
+```
+
+See [https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/types/types.d.ts](https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/types/types.d.ts) for more typing details.
 
 ## Extensions list
 
