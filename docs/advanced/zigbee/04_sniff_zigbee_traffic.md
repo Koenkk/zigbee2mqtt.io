@@ -227,3 +227,19 @@ Open the Device Manager (Win+X, M) and find which COM port your adapter is using
 ##### Linux
 
 `PORT` will be something like `/dev/ttyUSB0` or wherever you plugged in your HUSBZB-1 device.
+
+## With nRF52 adapter
+
+### Prerequisites
+
+-   Ubuntu Linux / macOS 10.14+ / Windows 10+
+-   [nRF52 dongle](https://www.digikey.com/en/products/detail/nordic-semiconductor-asa/NRF52840-DONGLE/9491124) or [development kit](https://www.digikey.com/en/products/detail/nordic-semiconductor-asa/nrf52840-dk/8593726)
+-   Wireshark v3.0+
+
+### 1. Programming dongle, installing required tools
+
+[Installing nRF Sniffer for 802.15.4](https://docs.nordicsemi.com/bundle/ug_sniffer_802154/page/UG/sniffer_802154/installing_sniffer_802154.html)
+
+### 2. Sniffing traffic
+
+[Capturing data with the nRF Sniffer](https://docs.nordicsemi.com/bundle/ug_sniffer_802154/page/UG/sniffer_802154/capturing_data_sniffer_802154.html)
