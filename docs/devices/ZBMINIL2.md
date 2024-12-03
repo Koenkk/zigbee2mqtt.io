@@ -36,6 +36,9 @@ There are two different options to reset the device and enter pairing mode:
 The device will stay in "state" : "OFF" and cannot be switched while it is in pairing mode. If not successfully paired, it will exit pairing mode after 180 seconds.
 <!-- Notes END: Do not edit below this line -->
 
+## Change Switch Type
+The device supports rocker switch by default. If you want to change the switch type, press the button 3 times and see the green Led indicator flash 3 times quickly, then the switch type is switched successfully.
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
