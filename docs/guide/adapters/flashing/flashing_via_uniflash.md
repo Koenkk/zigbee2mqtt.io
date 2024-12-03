@@ -6,11 +6,11 @@ UNIFLASH can be used to flash certain Texas Instruments MCUs (e.g. CC26X2R1 and 
 
 **Note for flashing on Linux:** Uniflash does not work well on some distributions. specifically, Fedora 31 may have some issue. Combinations that are verified to be working are:
 
--   _Ubuntu 18.4 (LTS)_:
-    -   fresh install
-    -   `# sudo apt install libgconf-2-4`
-    -   `# sudo apt install libusb-0.1-4`
-    -   ... then follow the instructions below
+- _Ubuntu 18.4 (LTS)_:
+    - fresh install
+    - `# sudo apt install libgconf-2-4`
+    - `# sudo apt install libusb-0.1-4`
+    - ... then follow the instructions below
 
 ## Instructions
 

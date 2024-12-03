@@ -16,8 +16,8 @@ Mosquitto is the recommended MQTT broker but others should also work fine.
 
 In order to be able to communicate with your USB device over a virtual COM port, you might need a driver for your OS in order for it to be able to be found by your flashing software.
 
--   For CP210x based chipsets, there is a driver available at [Silicon Labs' website](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
--   For CC1352/CC2652/CC2538 based chipsets, have a look at [FTDI chip's website](https://ftdichip.com/drivers/vcp-drivers/) for drivers.
+- For CP210x based chipsets, there is a driver available at [Silicon Labs' website](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
+- For CC1352/CC2652/CC2538 based chipsets, have a look at [FTDI chip's website](https://ftdichip.com/drivers/vcp-drivers/) for drivers.
 
 ## Determine which COM port is assigned to your device
 
@@ -112,9 +112,9 @@ It is recommended to back up the Zigbee2MQTT `\data` subdirectory before perform
 
 Below is a sample PowerShell script to run which will take care of:
 
--   Backing up the data directory
--   Updating Zigbee2MQTT
--   Restoring the data directory contents
+- Backing up the data directory
+- Updating Zigbee2MQTT
+- Restoring the data directory contents
 
 The script will automatically check if node is running (in case Zigbee2MQTT is still running) and ask to close if it is. You will need to manually stop and restart it afterwards.
 

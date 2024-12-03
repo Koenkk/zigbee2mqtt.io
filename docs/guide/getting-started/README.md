@@ -57,10 +57,10 @@ Here we can see that the adapter is owned by `root` and accessible from all user
 
 Zigbee2MQTT supports mDNS autodiscovery feature for network Zigbee adapters. If your network Zigbee adapter supports mDNS, you do not need to know the IP address of your network Zigbee adapter, Zigbee2MQTT will detect it and configure. Otherwise, you need to know the network Zigbee adapter's IP address:
 
--   Connect your adapter to your LAN network either over Ethernet or Wi-Fi, depending on your adapter.
--   Go to your router/switch setting and find the list of connected device.
--   Find the IP address and of your Ethernet Zigbee adapter.
--   You also need to know the communication port of your Ethernet Zigbee-Adapter. In most cases (TubeZB, SLZB-06) the default port is `6638`. You can check the port at your Adapter's user manual.
+- Connect your adapter to your LAN network either over Ethernet or Wi-Fi, depending on your adapter.
+- Go to your router/switch setting and find the list of connected device.
+- Find the IP address and of your Ethernet Zigbee adapter.
+- You also need to know the communication port of your Ethernet Zigbee-Adapter. In most cases (TubeZB, SLZB-06) the default port is `6638`. You can check the port at your Adapter's user manual.
 
 ### 2.) Setup and start Zigbee2MQTT
 
