@@ -27,7 +27,7 @@ git clone https://github.com/jmichault/flash_cc2531.git
 - pin 3 (DC) --> pin 36 (GPIO27, BCM16)
 - pin 4 (DD) --> pin 38 (GPIO28, BCM20)
 
-        <img src="../../../images/CC2531_wiring_raspi-header.jpg" width="40%"/>
+<img src="../../../images/CC2531_wiring_raspi-header.jpg" width="40%"/>
 
 Optionally, connecting Target Voltage Sense to a 3.3v source (Red wire) eliminates the need to plug the device into a usb port, so optionally connect the following too:
 
