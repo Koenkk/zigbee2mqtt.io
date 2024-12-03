@@ -17,10 +17,10 @@ The adapter code is based on the [zigpy-zboss library](https://github.com/kardia
 ::: warning ATTENTION
 Currently, this adapter does not support various functions, so if you depend on these functions, consider using a different adapter.
 
--   [Changing the channel](../configuration/zigbee-network.md#changing-the-zigbee-channel), changing requires re-pairing all devices.
--   Adding [install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd), which is required to pair some devices.
--   [Backups](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestbackup)
--   Inter-PAN, which is required for [touchlink](../../guide/usage/touchlink.md)
+- [Changing the channel](../configuration/zigbee-network.md#changing-the-zigbee-channel), changing requires re-pairing all devices.
+- Adding [install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd), which is required to pair some devices.
+- [Backups](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestbackup)
+- Inter-PAN, which is required for [touchlink](../../guide/usage/touchlink.md)
 
 :::
 
@@ -37,10 +37,10 @@ Other supported settings are: `adapter_concurrent` and `transmit_power` ([docs](
 
 Currently tested on nRF52840 Dongle and ESP32-C6/H2 devboards.
 
--   [Pre build coordinator firmware for Nordic Semiconductor with nRF52840 SoC](https://github.com/kardia-as/nrf-zboss-ncp)
+- [Pre build coordinator firmware for Nordic Semiconductor with nRF52840 SoC](https://github.com/kardia-as/nrf-zboss-ncp)
 
 <img src="https://docs-be.nordicsemi.com/bundle/ncs-latest/page/nrf/_images/zigbee_ncp_sample_overview.svg" width="500" />
 
--   [Experimental ESP32-C6 firmware](https://github.com/andryblack/esp-coordinator)
+- [Experimental ESP32-C6 firmware](https://github.com/andryblack/esp-coordinator)
 
 <img src="https://docs.espressif.com/projects/esp-dev-kits/en/latest/_images/esp32-c6-devkitc-1-isometric_v1.2.png" width="200" />

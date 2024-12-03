@@ -42,9 +42,9 @@ If using the Hassio add-on, restart it after modifying your `configuration.yaml`
 
 Devices can also be added/removed from groups via MQTT, the possible topics are:
 
--   `zigbee2mqtt/bridge/request/group/members/add`: add a device to a group
--   `zigbee2mqtt/bridge/request/group/members/remove` remove a device from a group
--   `zigbee2mqtt/bridge/request/group/members/remove_all` remove a device from all groups
+- `zigbee2mqtt/bridge/request/group/members/add`: add a device to a group
+- `zigbee2mqtt/bridge/request/group/members/remove` remove a device from a group
+- `zigbee2mqtt/bridge/request/group/members/remove_all` remove a device from all groups
 
 The payload should be `{"group": GROUP, "device": DEVICE}` where `GROUP` is the `friendly_name` of the group you want to add/remove the device from, `DEVICE` is the `friendly_name` of the device you want to add/remove from the group. Example payload: `{"group":"my_group","device":"my_bulb"}`, example response: `{"data":{"device":"my_bulb","group":"my_group"},"status":"ok"}`. In case of executing a `remove_all` the `group` property in the request can be omitted.
 
@@ -64,8 +64,8 @@ Controlling a group is similar to controlling a single device. For example to tu
 
 By default when one of the devices in a group changes its state, the group state will update to reflect the change. The behaviour of the `state` property can be controlled through the `off_state` option. There are 2 possible options:
 
--   `all_members_off` (default): The group `state` will stay `ON` if at least one of the group member is in `state` `ON`.
--   `last_member_state`: The group `state` will equal the `state` of the member who last changed state.
+- `all_members_off` (default): The group `state` will stay `ON` if at least one of the group member is in `state` `ON`.
+- `last_member_state`: The group `state` will equal the `state` of the member who last changed state.
 
 When the state of a group is changed by a command (so not via a state change of a device in it), all devices in the group will also change its state. This behavior can be disabled by setting `optimistic: false` for the group.
 

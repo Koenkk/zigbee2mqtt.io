@@ -27,7 +27,6 @@ jobs:
               run: pnpm install --frozen-lockfile
 
             - name: Lint
-              if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
               run: pnpm run pretty:check
 
             - name: Build 🛠
@@ -46,7 +45,7 @@ jobs:
 
             - name: Deploy 🚀
               if: github.ref == 'refs/heads/master'
-              uses: JamesIves/github-pages-deploy-action@v4.7.1
+              uses: JamesIves/github-pages-deploy-action@v4.7.2
               with:
                   branch: gh-pages # The branch the action should deploy to.
                   folder: dist # The folder the action should deploy.
