@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 1 gang smart dimmer module |
 | Exposes | light (state, brightness, min_brightness, max_brightness), power_on_behavior, countdown, light_type, switch_type, linkquality |
-| Picture | ![Tuya TS0601_dimmer_5](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_5.png) |
+| Picture | ![Tuya TS0601_dimmer_5](https://github.com/user-attachments/assets/2975ad22-4659-4f85-ae12-b8c13c9c0d56) |
 | White-label | Moes MS-105-M |
 
 
