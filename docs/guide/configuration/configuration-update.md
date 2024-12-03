@@ -48,11 +48,11 @@ For more details, see https://github.com/Koenkk/zigbee2mqtt/discussions/24198
 
 In this scenario:
 
--   You had set both `advanced.homeassistant_discovery_topic` and `homeassistant.discovery_topic`, the latter was retained, the former removed.
--   You had set `advanced.baudrate`, it was moved to `serial.baudrate`.
--   You had set both `advanced.rtscts` and `serial.rtscts`, the latter was retained, the former removed.
--   You had set `ban`, it was merged into `passlist`.
--   You had set `log_level` to `warn`, it was renamed to `warning`.
--   `version: 2` was added (future migrations will automatically update it).
--   You had set `advanced.legacy_api` to true. This is no longer supported, the setting was removed.
--   You had set `retrieve_state` to true for one or more devices or groups under `devices` or `groups`. This is no longer supported, the setting was removed.
+- You had set both `advanced.homeassistant_discovery_topic` and `homeassistant.discovery_topic`, the latter was retained, the former removed.
+- You had set `advanced.baudrate`, it was moved to `serial.baudrate`.
+- You had set both `advanced.rtscts` and `serial.rtscts`, the latter was retained, the former removed.
+- You had set `ban`, it was merged into `passlist`.
+- You had set `log_level` to `warn`, it was renamed to `warning`.
+- `version: 2` was added (future migrations will automatically update it).
+- You had set `advanced.legacy_api` to true. This is no longer supported, the setting was removed.
+- You had set `retrieve_state` to true for one or more devices or groups under `devices` or `groups`. This is no longer supported, the setting was removed.

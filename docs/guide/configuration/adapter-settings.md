@@ -14,7 +14,7 @@ In case Zigbee2MQTT cannot automatically detect your adapter (fails to start wit
 
 First determine the port of your adapter:
 
--   For USB adapters: when running on Windows see [these instructions](../installation/05_windows.md#starting-zigbee2mqtt), for Linux execute `ls -l /dev/serial/by-id`:
+- For USB adapters: when running on Windows see [these instructions](../installation/05_windows.md#starting-zigbee2mqtt), for Linux execute `ls -l /dev/serial/by-id`:
 
     ```bash
     pi@raspberry:/ $ ls -l /dev/serial/by-id
@@ -22,8 +22,8 @@ First determine the port of your adapter:
     lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00 -> ../../ttyACM0
     ```
 
--   For network adapters you need to find the IP address of your adapter through router/switch web-interface. Make sure that the adapter has been assigned a static IP address!
-    -   Alternatively, in case your adapter supports mDNS, see the mDNS docs below.
+- For network adapters you need to find the IP address of your adapter through router/switch web-interface. Make sure that the adapter has been assigned a static IP address!
+    - Alternatively, in case your adapter supports mDNS, see the mDNS docs below.
 
 Next determine what `adapter` you are using by going to your [adapter page](../adapters/README.md).
 Possible adapters are `zstack`, `ember`, `deconz`, `zigate` or `zboss`.
