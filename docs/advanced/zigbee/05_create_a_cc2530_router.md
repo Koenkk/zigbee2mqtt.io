@@ -54,11 +54,11 @@ Now the CC2530 can be flashed using the same instructions as [Flashing the CC253
 
 The following steps have to be followed:
 
--   Drill 2 holes in the enclosure; one for the antenna, one for the power cable
--   Lay a knot in the power cable; this serves as strain relief
--   Solder the power cable on to the AC pins of the HLK-PM03
--   Use 2 female to female jumper wires to connect the VC+ pin of the HLK-PM03 to the VCC pin of the CC2530 and the VC- pin of the HLK-PM03 to the GND pin of the CC2530
--   Use double sided tape to fix the CC2530 and HLK-PM03 into the enclosure
+- Drill 2 holes in the enclosure; one for the antenna, one for the power cable
+- Lay a knot in the power cable; this serves as strain relief
+- Solder the power cable on to the AC pins of the HLK-PM03
+- Use 2 female to female jumper wires to connect the VC+ pin of the HLK-PM03 to the VCC pin of the CC2530 and the VC- pin of the HLK-PM03 to the GND pin of the CC2530
+- Use double sided tape to fix the CC2530 and HLK-PM03 into the enclosure
 
 ### Result
 

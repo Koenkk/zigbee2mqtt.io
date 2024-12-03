@@ -73,8 +73,8 @@ datatype: DataType.uint8;
 data: Buffer;
 ```
 
--   `dp` is so called "Data Point ID" which is at the core of Tuya devices. From the point of view of a device the DPIDs are the functions that the device provides.
--   `datatype` is the type of data contained in the `data` field, see `dataTypes` in `node_modules/zigbee-herdsman-converters/lib/tuya.js`
+- `dp` is so called "Data Point ID" which is at the core of Tuya devices. From the point of view of a device the DPIDs are the functions that the device provides.
+- `datatype` is the type of data contained in the `data` field, see `dataTypes` in `node_modules/zigbee-herdsman-converters/lib/tuya.js`
 
 Some datapoints are 'report only' (they report changes that happen within the device) others are 'issue and report' (they can report by themselves, but also respond with a report when set). Data points are not unified across all Tuya devices so they can differ per device.
 
@@ -88,9 +88,9 @@ Zigbee2MQTT:debug 2022-11-30 18:29:19: Datapoint '106' with value '77' not defin
 
 Next we have to find out what this datapoint means (`106` in this example), there are different ways to do this:
 
--   [Find Tuya datapoint using the Tuya gateway](./03_find_tuya_data_points.md) (easiest but requires Tuya gateway)
--   Check if an already supported Tuya device has this datapoint mapped ([search](https://github.com/Koenkk/zigbee-herdsman-converters/search?q=tuyaDatapoints))
--   Guess based on the value
+- [Find Tuya datapoint using the Tuya gateway](./03_find_tuya_data_points.md) (easiest but requires Tuya gateway)
+- Check if an already supported Tuya device has this datapoint mapped ([search](https://github.com/Koenkk/zigbee-herdsman-converters/search?q=tuyaDatapoints))
+- Guess based on the value
 
 For this device we know that datapoint `106` is the humidity, we can now update the `exposes` and `tuyaDatapoints` section of the external converter:
 

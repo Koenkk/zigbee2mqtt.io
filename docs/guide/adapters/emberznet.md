@@ -35,22 +35,22 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
 
 ### Firmware flashing
 
--   Firmware repositories:
-    -   Multi-devices by [@darkxst](https://github.com/darkxst/): [https://github.com/darkxst/silabs-firmware-builder/releases](https://github.com/darkxst/silabs-firmware-builder/releases)
-    -   [@NabuCasa](https://github.com/NabuCasa) / Home Assistant devices: [https://github.com/NabuCasa/silabs-firmware-builder/releases](https://github.com/NabuCasa/silabs-firmware-builder/releases)
-    -   [@TubesZB](https://github.com/tube0013) devices: [https://github.com/tube0013/tube_gateways/](https://github.com/tube0013/tube_gateways/)
-    -   _**Experimental**_ multi-devices by [@Nerivec](https://github.com/Nerivec/): [https://github.com/Nerivec/silabs-firmware-builder/releases](https://github.com/Nerivec/silabs-firmware-builder/releases)
-        -   Router firmware also available
--   Web-based
-    -   Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
-    -   For SkyConnect by [@NabuCasa](https://github.com/NabuCasa): [SkyConnect Flasher](https://skyconnect.home-assistant.io/firmware-update/)
-    -   SMLight: [Flasher](https://smlight.tech/flasher/)
--   Command-line based:
-    -   Multi-devices by [@NabuCasa](https://github.com/NabuCasa) using Python: [Universal Silicon Labs Flasher](https://github.com/NabuCasa/universal-silabs-flasher) (also available via [Home Assistant add-on](https://github.com/home-assistant/addons/tree/master/silabs_flasher))
-    -   Multi-devices by [@Nerivec](https://github.com/Nerivec/) using NodeJS: [Ember ZLI](https://github.com/Nerivec/ember-zli)
--   Other:
-    -   Standalone J-Link Flash Tool (also included in [Simplicity Studio](https://www.silabs.com/developers/simplicity-studio)): [Simplicity Commander](https://www.silabs.com/developers/simplicity-studio/simplicity-commander)
--   Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
+- Firmware repositories:
+    - Multi-devices by [@darkxst](https://github.com/darkxst/): [https://github.com/darkxst/silabs-firmware-builder/releases](https://github.com/darkxst/silabs-firmware-builder/releases)
+    - [@NabuCasa](https://github.com/NabuCasa) / Home Assistant devices: [https://github.com/NabuCasa/silabs-firmware-builder/releases](https://github.com/NabuCasa/silabs-firmware-builder/releases)
+    - [@TubesZB](https://github.com/tube0013) devices: [https://github.com/tube0013/tube_gateways/](https://github.com/tube0013/tube_gateways/)
+    - _**Experimental**_ multi-devices by [@Nerivec](https://github.com/Nerivec/): [https://github.com/Nerivec/silabs-firmware-builder/releases](https://github.com/Nerivec/silabs-firmware-builder/releases)
+        - Router firmware also available
+- Web-based
+    - Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
+    - For SkyConnect by [@NabuCasa](https://github.com/NabuCasa): [SkyConnect Flasher](https://skyconnect.home-assistant.io/firmware-update/)
+    - SMLight: [Flasher](https://smlight.tech/flasher/)
+- Command-line based:
+    - Multi-devices by [@NabuCasa](https://github.com/NabuCasa) using Python: [Universal Silicon Labs Flasher](https://github.com/NabuCasa/universal-silabs-flasher) (also available via [Home Assistant add-on](https://github.com/home-assistant/addons/tree/master/silabs_flasher))
+    - Multi-devices by [@Nerivec](https://github.com/Nerivec/) using NodeJS: [Ember ZLI](https://github.com/Nerivec/ember-zli)
+- Other:
+    - Standalone J-Link Flash Tool (also included in [Simplicity Studio](https://www.silabs.com/developers/simplicity-studio)): [Simplicity Commander](https://www.silabs.com/developers/simplicity-studio/simplicity-commander)
+- Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
 
 ## Recommended
 
@@ -69,7 +69,7 @@ serial:
     rtscts: true
 ```
 
--   [Product page](https://smlight.tech/product/slzb-07mg24/)
+- [Product page](https://smlight.tech/product/slzb-07mg24/)
 
 <img src="../../images/smlight-slzb-07mg24.jpg" width="200" />
 
@@ -86,8 +86,8 @@ serial:
     rtscts: true
 ```
 
--   [Product page](https://aeotec.com/products/aeotec-z-stick-zigbee/)
--   [Buy](https://store.aeotec.com/products/zi-stick-zigbee-zga008)
+- [Product page](https://aeotec.com/products/aeotec-z-stick-zigbee/)
+- [Buy](https://store.aeotec.com/products/zi-stick-zigbee-zga008)
 
 <img src="../../images/aeotec-zi-stick-zga008.jpg" width="200" />
 
@@ -101,10 +101,10 @@ With external antenna. Only supports software flow control (make sure not to set
 
 **This section is about the "ZBDongle-E", for "ZBDongle-P" see [zStack](./zstack.md).**
 
--   [Product Page](https://sonoff.tech/product/gateway-and-sensors/sonoff-zigbee-3-0-usb-dongle-plus-e/)
--   [Coordinator firmware](https://sonoff.tech/product-review/how-to-use-sonoff-dongle-plus-on-home-assistant-how-to-flash-firmware/)
--   [Flashing](https://sonoff.tech/wp-content/uploads/2022/08/SONOFF-Zigbee-3.0-USB-dongle-plus-firmware-flashing-.pdf)
--   [Buy](https://itead.cc/product/zigbee-3-0-usb-dongle/)
+- [Product Page](https://sonoff.tech/product/gateway-and-sensors/sonoff-zigbee-3-0-usb-dongle-plus-e/)
+- [Coordinator firmware](https://sonoff.tech/product-review/how-to-use-sonoff-dongle-plus-on-home-assistant-how-to-flash-firmware/)
+- [Flashing](https://sonoff.tech/wp-content/uploads/2022/08/SONOFF-Zigbee-3.0-USB-dongle-plus-firmware-flashing-.pdf)
+- [Buy](https://itead.cc/product/zigbee-3-0-usb-dongle/)
 
 <img src="../../images/dongle-e.jpg" width="200" />
 :::
@@ -120,9 +120,9 @@ serial:
     rtscts: true
 ```
 
--   [Product page](https://smlight.tech/product/slzb-07/)
--   Buy: [Official Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-07-zigbee-usb-adapter-en), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005006273914143.html).  
-    Local fast delivery: [Australia](https://shop.dialedin.com.au/products/smlight-slzb-07-usb-zigbee-adapter), [Austria, Belgium, Germany, Netherlands](https://www.hobbyelectronica.nl/product/slzb-07-zigbee-coordinator-usb/), [France](https://www.domadoo.fr/fr/interface-domotique/7044-smlight-dongle-usb-zigbee-efr32mg21-cp2102n-soc-antenne-3db-zigbee2mqtt-et-zha.html), [Poland](https://pcblab.io/szukaj?controller=search&s=slzb), [US Amazon](https://www.amazon.com/LOAMLIN-SMLIGHT-SLZB-07-Zigbee-Coordinator/dp/B0CNVBCCR3)
+- [Product page](https://smlight.tech/product/slzb-07/)
+- Buy: [Official Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-07-zigbee-usb-adapter-en), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005006273914143.html).  
+  Local fast delivery: [Australia](https://shop.dialedin.com.au/products/smlight-slzb-07-usb-zigbee-adapter), [Austria, Belgium, Germany, Netherlands](https://www.hobbyelectronica.nl/product/slzb-07-zigbee-coordinator-usb/), [France](https://www.domadoo.fr/fr/interface-domotique/7044-smlight-dongle-usb-zigbee-efr32mg21-cp2102n-soc-antenne-3db-zigbee2mqtt-et-zha.html), [Poland](https://pcblab.io/szukaj?controller=search&s=slzb), [US Amazon](https://www.amazon.com/LOAMLIN-SMLIGHT-SLZB-07-Zigbee-Coordinator/dp/B0CNVBCCR3)
 
 <img src="../../images/smlight-slzb-07.jpg" width="200" />
 
@@ -139,10 +139,10 @@ serial:
     rtscts: true
 ```
 
--   [Product page](https://www.home-assistant.io/skyconnect)
--   [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
--   [Flashing](https://skyconnect.home-assistant.io/)
--   [Buy](https://www.home-assistant.io/skyconnect)
+- [Product page](https://www.home-assistant.io/skyconnect)
+- [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
+- [Flashing](https://skyconnect.home-assistant.io/)
+- [Buy](https://www.home-assistant.io/skyconnect)
 
 <img src="../../images/skyconnect_isometric.jpg" width="200" />
 
@@ -159,9 +159,9 @@ serial:
     rtscts: false
 ```
 
--   [Product page](https://z-wave.me/products/z-station/)
--   [Firmware](https://z-wave.me/support/tools-for-zigbee-openthread-ble/)
--   Buy: [Official Store - Worldwide](https://smartsd.ch/z-station-usb-adaptor-for-z-wave-zigbee-thread-ble/)
+- [Product page](https://z-wave.me/products/z-station/)
+- [Firmware](https://z-wave.me/support/tools-for-zigbee-openthread-ble/)
+- Buy: [Official Store - Worldwide](https://smartsd.ch/z-station-usb-adaptor-for-z-wave-zigbee-thread-ble/)
 
 <img src="../../images/z-station.jpg" width="200" />
 
@@ -177,8 +177,8 @@ With external antenna.
 
 Note: can also be powered via USB (with a special case) and used with a simple Ethernet cable (do not use USB and POE at the same time!).
 
--   [Product page](https://tubeszb.com/product/efr32-mgm24-poe-coordinator/)
--   [Buy](https://tubeszb.com/product/efr32-mgm24-poe-coordinator/)
+- [Product page](https://tubeszb.com/product/efr32-mgm24-poe-coordinator/)
+- [Buy](https://tubeszb.com/product/efr32-mgm24-poe-coordinator/)
 
 <img src="../../images/tubezb-mgm24-poe.jpg" width="200" />
 
@@ -192,7 +192,7 @@ Chip: [efr32mg24a020f1024im40](https://www.silabs.com/wireless/zigbee/efr32mg24-
 
 With external antenna.
 
--   [Product page](https://smlight.tech/product/slzb-06mg24/)
+- [Product page](https://smlight.tech/product/slzb-06mg24/)
 
 <img src="../../images/smlight-slzb-06mg24.jpg" width="200" />
 
@@ -207,9 +207,9 @@ With external antenna.
 **For optimal performance, ensure your firmware is at least version 20240510 (requires Core firmware version 2.2.0 or higher).
 Not suitable for WiFi or other high latency connections.**
 
--   [Product page](https://smlight.tech/product/slzb-06m/)
--   Buy: [Official Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-06m-zigbee-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Tindie - Worldwide](https://www.tindie.com/products/smartlightme/smlight-slzb-06-zigbee-ethernet-poe-usb-wifi-adapt/).  
-    Local fast delivery: [AU](https://shop.dialedin.com.au/products/smlight-slzb-06m-efr32mg21-lan-zigbee-adapter), [AT](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [BE](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [CH](https://shop.swiss-domotique.ch/en/gateways-antennas/2390-smlight-slzb-06m-adaptateur-zigbee-ethernet-poe-usb-wifi.html), [EE](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [FR](https://www.domadoo.fr/fr/box-domotique/7043-smlight-adaptateur-usb-ethernet-poe-zigbee-30-efr32mg21-zigbee2mqtt-et-zha.html), [DE](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [LT](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [LV](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [PL](https://pcblab.io/slzb-06m-adapter-zigbee-efr32mg21-ethernet-poe-usb-lan-wifi.html), [TH](https://shopee.co.th/Zigbee-SLZB-06-LAN-POE-USB-WIFI-Hybrid-Coordinator-CC2652P-SMARTLIGHT-SLZB-06-HASS-Zigbee2mqtt-ZHA-CC2652-CC2531-i.25068823.21062349644), [US official](https://cloudfree.shop/product/smlight-zigbee-ethernet-adapter/), [US Amazon](https://www.amazon.com/SMLIGHT-SLZB-06-Ethernet-Zigbee2MQTT-Assistant/dp/B0BL6DQSB3).
+- [Product page](https://smlight.tech/product/slzb-06m/)
+- Buy: [Official Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-06m-zigbee-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Tindie - Worldwide](https://www.tindie.com/products/smartlightme/smlight-slzb-06-zigbee-ethernet-poe-usb-wifi-adapt/).  
+  Local fast delivery: [AU](https://shop.dialedin.com.au/products/smlight-slzb-06m-efr32mg21-lan-zigbee-adapter), [AT](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [BE](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [CH](https://shop.swiss-domotique.ch/en/gateways-antennas/2390-smlight-slzb-06m-adaptateur-zigbee-ethernet-poe-usb-wifi.html), [EE](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [FR](https://www.domadoo.fr/fr/box-domotique/7043-smlight-adaptateur-usb-ethernet-poe-zigbee-30-efr32mg21-zigbee2mqtt-et-zha.html), [DE](https://www.hobbyelectronica.nl/product/slzb-06m-zigbee-ethernet-poe-usb-adapter/), [LT](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [LV](https://improveit.lt/produktas/smlight-slzb-06m-zigbee-ethernet-poe-usb-lan-wifi-adapteris-zha-integracijai/), [PL](https://pcblab.io/slzb-06m-adapter-zigbee-efr32mg21-ethernet-poe-usb-lan-wifi.html), [TH](https://shopee.co.th/Zigbee-SLZB-06-LAN-POE-USB-WIFI-Hybrid-Coordinator-CC2652P-SMARTLIGHT-SLZB-06-HASS-Zigbee2mqtt-ZHA-CC2652-CC2531-i.25068823.21062349644), [US official](https://cloudfree.shop/product/smlight-zigbee-ethernet-adapter/), [US Amazon](https://www.amazon.com/SMLIGHT-SLZB-06-Ethernet-Zigbee2MQTT-Assistant/dp/B0BL6DQSB3).
 
 <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06m-main-title.jpg" width="200" />
 
@@ -228,10 +228,10 @@ serial:
     rtscts: true
 ```
 
--   [Product page](https://www.home-assistant.io/yellow)
--   [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
--   [Flashing](https://skyconnect.home-assistant.io/)
--   [Buy](https://www.home-assistant.io/yellow)
+- [Product page](https://www.home-assistant.io/yellow)
+- [Coordinator firmware](https://github.com/NabuCasa/silabs-firmware)
+- [Flashing](https://skyconnect.home-assistant.io/)
+- [Buy](https://www.home-assistant.io/yellow)
 
 <img src="../../images/yellow.jpg" width="200" />
 :::
@@ -242,9 +242,9 @@ serial:
 
 Chip: [efr32mg24b220f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24b220f1536im48?tab=specs)
 
--   [Product page](https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html)
--   [Product page - Sense variant](https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html)
--   [Getting started](https://wiki.seeedstudio.com/xiao_mg24_getting_started/)
+- [Product page](https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html)
+- [Product page - Sense variant](https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html)
+- [Getting started](https://wiki.seeedstudio.com/xiao_mg24_getting_started/)
 
 <img src="../../images/seeed-studio-xiao-mg24.jpg" width="200" />
 :::
@@ -353,21 +353,21 @@ Documentation on these values and their behavior can be found in [SiLabs UG100 -
 
 The driver further restricts values to the below:
 
--   CONCENTRATOR_RAM_TYPE: "high" or "low"
--   CONCENTRATOR_MIN_TIME: min 1, max 60
--   CONCENTRATOR_MAX_TIME: min 30, max 300
--   CONCENTRATOR_ROUTE_ERROR_THRESHOLD: min 1, max 100
--   CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD: min 1, max 100
--   CONCENTRATOR_MAX_HOPS: min 0, max 30
--   MAX_END_DEVICE_CHILDREN: min 6, max 64
--   TRANSIENT_DEVICE_TIMEOUT: min 0, max 65535
--   END_DEVICE_POLL_TIMEOUT: min 0, max 14
--   TRANSIENT_KEY_TIMEOUT_S: min 0, max 65535
--   CCA_MODE: defaults to undefined (i.e. left to firmware default), possible values:
-    -   "RSSI": RSSI-based CCA. CCA reports a busy medium upon detecting any energy above -75 (default).
-    -   "SIGNAL": Signal Identifier-based CCA. CCA reports a busy medium only upon the detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
-    -   "SIGNAL_OR_RSSI": RSSI or signal identifier-based CCA. CCA reports a busy medium on either detecting any energy above -75 (default) or detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
-    -   "SIGNAL_AND_RSSI": RSSI and signal identifier-based CCA. CCA reports a busy medium only on detecting any energy above -75 (default) of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
-    -   "ALWAYS_TRANSMIT": ALOHA. Always transmit CCA=1. CCA always reports an idle medium.
+- CONCENTRATOR_RAM_TYPE: "high" or "low"
+- CONCENTRATOR_MIN_TIME: min 1, max 60
+- CONCENTRATOR_MAX_TIME: min 30, max 300
+- CONCENTRATOR_ROUTE_ERROR_THRESHOLD: min 1, max 100
+- CONCENTRATOR_DELIVERY_FAILURE_THRESHOLD: min 1, max 100
+- CONCENTRATOR_MAX_HOPS: min 0, max 30
+- MAX_END_DEVICE_CHILDREN: min 6, max 64
+- TRANSIENT_DEVICE_TIMEOUT: min 0, max 65535
+- END_DEVICE_POLL_TIMEOUT: min 0, max 14
+- TRANSIENT_KEY_TIMEOUT_S: min 0, max 65535
+- CCA_MODE: defaults to undefined (i.e. left to firmware default), possible values:
+    - "RSSI": RSSI-based CCA. CCA reports a busy medium upon detecting any energy above -75 (default).
+    - "SIGNAL": Signal Identifier-based CCA. CCA reports a busy medium only upon the detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
+    - "SIGNAL_OR_RSSI": RSSI or signal identifier-based CCA. CCA reports a busy medium on either detecting any energy above -75 (default) or detection of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
+    - "SIGNAL_AND_RSSI": RSSI and signal identifier-based CCA. CCA reports a busy medium only on detecting any energy above -75 (default) of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
+    - "ALWAYS_TRANSMIT": ALOHA. Always transmit CCA=1. CCA always reports an idle medium.
 
 **Note that some values are not only restricted by these ranges, but also by the memory available in your adapter. If any value (or combination) is too great for your adapter to handle, it will default to the firmware value(s) instead.**

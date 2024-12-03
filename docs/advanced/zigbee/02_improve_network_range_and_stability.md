@@ -46,8 +46,8 @@ Any device using the open 2.4 GHz spectrum could interfere with Zigbee such as B
 
 This includes devices that you may not realize _are_ 2.4 GHz. Check anything that is wireless including wireless audio transmitters such as:
 
--   [JL Audio JL Link TRX](https://www.crutchfield.com/S-kjc9jL5lfL6/p_136TRX/JL-Audio-JLINK-TRX-High-Fidelity-Audio-Transmitter-Receiver-Kit.html)
--   [SVS Soundpath (gen 1)](https://www.svsound.com/products/soundpath-wireless-audio-adapter)
+- [JL Audio JL Link TRX](https://www.crutchfield.com/S-kjc9jL5lfL6/p_136TRX/JL-Audio-JLINK-TRX-High-Fidelity-Audio-Transmitter-Receiver-Kit.html)
+- [SVS Soundpath (gen 1)](https://www.svsound.com/products/soundpath-wireless-audio-adapter)
 
 Utility companies are known to use Zigbee with their "smart meters" but may not advertise them as Zigbee.
 Other devices that broadcast Zigbee, or modified versions of Zigbee are known to cause issues.
@@ -83,8 +83,8 @@ Although Zigbee2MQTT does not require many resources, the hardware you are runni
 
 Zigbee traffic can be categorized as either _Unicast_ or _Broadcast_:
 
--   _Unicast_ is an addressed message, usually between a Zigbee device and the coordinator, possibly through some intermediate devices
--   _Broadcast_ is a special type of message that is designed to reach **all** devices in the network
+- _Unicast_ is an addressed message, usually between a Zigbee device and the coordinator, possibly through some intermediate devices
+- _Broadcast_ is a special type of message that is designed to reach **all** devices in the network
 
 When a device receives a broadcast message for the first time, it will re-transmit it at least once. The device keeps track of broadcasts that have recently been re-transmitted to prevent repeating messages forever. For large networks, broadcasts can generate a lot of traffic, and it takes time for the message to propagate to all devices.
 

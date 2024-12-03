@@ -67,9 +67,9 @@ advanced:
         zhc:legacy:fz: debug
 ```
 
--   `zhc` and below namespaces will be logged as `info` (examples: `zhc`, `zhc:ota:common`, `zhc:legacy:tz`)
--   `zhc:legacy:fz` and below namespaces will be logged as `debug` (examples: `zhc:legacy:fz`, `zhc:legacy:fz:tuya`)
--   Other unspecified namespaces will use `log_level`, in this case, `warning` (examples: `z2m:mqtt`, `zh:zstack`)
+- `zhc` and below namespaces will be logged as `info` (examples: `zhc`, `zhc:ota:common`, `zhc:legacy:tz`)
+- `zhc:legacy:fz` and below namespaces will be logged as `debug` (examples: `zhc:legacy:fz`, `zhc:legacy:fz:tuya`)
+- Other unspecified namespaces will use `log_level`, in this case, `warning` (examples: `z2m:mqtt`, `zh:zstack`)
 
 ## Debugging
 
@@ -83,9 +83,9 @@ advanced:
 
 In the logging you will see the following abbreviations:
 
--   `z2m`: Zigbee2MQTT
--   `zh`: [zigbee-herdsman](https://github.com/koenkk/zigbee-herdsman), logged events from the Zigbee library used by Zigbee2MQTT.
--   `zhc`: [zigbee-herdsman-converters](https://github.com/koenkk/zigbee-herdsman-converters), logged events from the devices support library.
+- `z2m`: Zigbee2MQTT
+- `zh`: [zigbee-herdsman](https://github.com/koenkk/zigbee-herdsman), logged events from the Zigbee library used by Zigbee2MQTT.
+- `zhc`: [zigbee-herdsman-converters](https://github.com/koenkk/zigbee-herdsman-converters), logged events from the devices support library.
 
 To change log level at runtime, use the frontend or [MQTT](../usage/mqtt_topics_and_messages.md)
 
@@ -106,8 +106,8 @@ Examples:
 
 Filter out log namespaces starting with:
 
--   `zhc:legacy:fz:tuya`
--   or `zhc:legacy:fz:moes`
+- `zhc:legacy:fz:tuya`
+- or `zhc:legacy:fz:moes`
 
 ```yaml
 advanced:
@@ -116,10 +116,10 @@ advanced:
 
 Filter out log namespaces starting with:
 
--   `zhc:legacy:fz:tuya`
--   or `zhc:legacy:fz:moes`
--   or `zh:ember:uart:` (any namespace below `uart`)
--   or `zh:controller` (any namespace below `controller` and `controller` itself)
+- `zhc:legacy:fz:tuya`
+- or `zhc:legacy:fz:moes`
+- or `zh:ember:uart:` (any namespace below `uart`)
+- or `zh:controller` (any namespace below `controller` and `controller` itself)
 
 ```yaml
 advanced:
