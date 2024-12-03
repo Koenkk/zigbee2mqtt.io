@@ -13,13 +13,13 @@ pageClass: device-page
 
 # SONOFF ZBMINIL2
 
-|     |     |
-|-----|-----|
-| Model | ZBMINIL2  |
-| Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
-| Description | Zigbee smart switch (no neutral) |
-| Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![SONOFF ZBMINIL2](https://www.zigbee2mqtt.io/images/devices/ZBMINIL2.png) |
+|             |                                                                            |
+| ----------- | -------------------------------------------------------------------------- |
+| Model       | ZBMINIL2                                                                   |
+| Vendor      | [SONOFF](/supported-devices/#v=SONOFF)                                     |
+| Description | Zigbee smart switch (no neutral)                                           |
+| Exposes     | switch (state), power_on_behavior, linkquality                             |
+| Picture     | ![SONOFF ZBMINIL2](https://www.zigbee2mqtt.io/images/devices/ZBMINIL2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
