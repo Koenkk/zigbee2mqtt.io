@@ -41,13 +41,13 @@ $ docker run \
 
 **Parameters explanation:**
 
--   `--name zigbee2mqtt`: Name of container
--   `--restart=unless-stopped`: Automatically start on boot and restart after a crash
--   `--device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0`: Location of adapter (e.g. CC2531). The path before the `:` is the path on the host, the path after it is the path that is mapped to inside the container. You should always use the `/dev/serial/by-id/` path on the host.
--   `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration (pwd maps to the current working directory)
--   `-v /run/udev:/run/udev:ro`: required for auto-detecting the adapter
--   `-e TZ=Europe/Amsterdam`: configure the timezone
--   `-p 8080:8080`: port forwarding from inside Docker container to host (for the frontend)
+- `--name zigbee2mqtt`: Name of container
+- `--restart=unless-stopped`: Automatically start on boot and restart after a crash
+- `--device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0`: Location of adapter (e.g. CC2531). The path before the `:` is the path on the host, the path after it is the path that is mapped to inside the container. You should always use the `/dev/serial/by-id/` path on the host.
+- `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration (pwd maps to the current working directory)
+- `-v /run/udev:/run/udev:ro`: required for auto-detecting the adapter
+- `-e TZ=Europe/Amsterdam`: configure the timezone
+- `-p 8080:8080`: port forwarding from inside Docker container to host (for the frontend)
 
 ::: tip
 If you run the MQTT-Server on the same host (localhost) you could use the IP
@@ -92,8 +92,8 @@ $ sudo docker run \
 
 **Parameters explanation:**
 
--   `--user 1001:1001`: Run the Zigbee2MQTT process within the container using the provided UserID and GroupID
--   `--group-add dialout`: Assign the `dialout` group to the user to be able to access the device
+- `--user 1001:1001`: Run the Zigbee2MQTT process within the container using the provided UserID and GroupID
+- `--group-add dialout`: Assign the `dialout` group to the user to be able to access the device
 
 ### Rootless with Podman (>3.2)
 
@@ -124,9 +124,9 @@ docker rm -f zigbee2mqtt
 
 The following tags are available:
 
--   Latest release version: `latest`
--   Latest dev version (based on [`dev`](https://github.com/Koenkk/zigbee2mqtt/tree/dev) branch): `latest-dev`
--   Specific release version, e.g: `1.7.0`
+- Latest release version: `latest`
+- Latest dev version (based on [`dev`](https://github.com/Koenkk/zigbee2mqtt/tree/dev) branch): `latest-dev`
+- Specific release version, e.g: `1.7.0`
 
 ## Docker Compose
 
@@ -183,7 +183,7 @@ You can optionally skip `zigbee2mqtt` and it will pull any new images for all co
 
 ## Notes for Raspberry Pi users
 
--   If you are running Raspbian Buster (not Bullseye nor Bookworm!) (find out by executing `grep "PRETTY_NAME" /etc/os-release`) you need to install `libseccomp2`, this can be done by executing the following commands:
+- If you are running Raspbian Buster (not Bullseye nor Bookworm!) (find out by executing `grep "PRETTY_NAME" /etc/os-release`) you need to install `libseccomp2`, this can be done by executing the following commands:
 
 ```bash
 sudo apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv-keys 04EE7237B7D453EC 648ACFD622F3D138
@@ -204,8 +204,8 @@ If you do not do this you will get the following error when starting the Zigbee2
 #FailureMessage Object: 0x7eace25c
 ```
 
--   For Raspberry Pi 1 and zero users: there is a bug in Docker which selects the wrong image architecture.
-    Before executing `docker run` pull the correct image with `docker pull koenkk/zigbee2mqtt --platform linux/arm/v6`.
+- For Raspberry Pi 1 and zero users: there is a bug in Docker which selects the wrong image architecture.
+  Before executing `docker run` pull the correct image with `docker pull koenkk/zigbee2mqtt --platform linux/arm/v6`.
 
 ## Docker Stack device mapping
 

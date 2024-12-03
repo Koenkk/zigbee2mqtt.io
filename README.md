@@ -10,14 +10,14 @@ It is based on [VuePress v2](https://v2.vuepress.vuejs.org/).
 
 **Directory-Structure:**
 
--   `docgen`: Some scripts to test and generate the Device-Pages.
--   `docs`: The current documentation.
--   `docs/.vuepress`: Some VuePress enhancements like Stylesheets.
--   `public`: Static assets.
--   `supported-devices-component`: Vue.js component rendering the devices-overview page.
--   `navbar.ts`: Configuration for the top navigation.
--   `sidebar.ts`: Configuration for the sidebars by individual sections (like _Guide_).
--   `vuepress.config.ts`: The [VuePress config file](https://v2.vuepress.vuejs.org/reference/config.html).
+- `docgen`: Some scripts to test and generate the Device-Pages.
+- `docs`: The current documentation.
+- `docs/.vuepress`: Some VuePress enhancements like Stylesheets.
+- `public`: Static assets.
+- `supported-devices-component`: Vue.js component rendering the devices-overview page.
+- `navbar.ts`: Configuration for the top navigation.
+- `sidebar.ts`: Configuration for the sidebars by individual sections (like _Guide_).
+- `vuepress.config.ts`: The [VuePress config file](https://v2.vuepress.vuejs.org/reference/config.html).
 
 ## Docgen
 
@@ -40,8 +40,8 @@ pnpm run docgen
 
 Docgen includes some scripts to help testing the page.
 
--   `check-device-images`: Checks for missing device images
--   `check-links`: Checks for broken internal links
+- `check-device-images`: Checks for missing device images
+- `check-links`: Checks for broken internal links
 
 **Attention**: `check-links` iterates over the generated VuePress files, so you have to build the page first!
 

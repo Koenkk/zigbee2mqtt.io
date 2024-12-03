@@ -1,4 +1,4 @@
 docs/devices/*.md
-pnpm-lock.yaml
 public/images/**/*
 docs/images/**/*
+pnpm-lock.yaml

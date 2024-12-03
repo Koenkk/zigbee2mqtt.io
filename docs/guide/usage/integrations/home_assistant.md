@@ -12,8 +12,8 @@ This allows Zigbee2MQTT to automatically add devices to Home Assistant.
 
 To achieve the best possible integration (including MQTT discovery):
 
--   In your **Zigbee2MQTT** `configuration.yaml` set `homeassistant: true`
--   Enable the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/) in Home Assistant
+- In your **Zigbee2MQTT** `configuration.yaml` set `homeassistant: true`
+- Enable the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/) in Home Assistant
 
 ## Device/group page
 

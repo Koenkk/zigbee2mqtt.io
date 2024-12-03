@@ -24,9 +24,9 @@ Your Zigbee devices can request a firmware update check. Upon reception of such 
 The update state will be published to `zigbee2mqtt/[DEVICE_FRIENDLY_NAME]`, example payload: `{"update": {"state": "available"}}`.
 The possible states are:
 
--   `available`: An update is available for this device
--   `updating`: Update is in progress. During this the progress in % and remaining time in seconds is also added to the payload, example: `{"update": {"state": "updating","progress":13.37,"remaining": 219}}`.
--   `idle`: No update available/in progress
+- `available`: An update is available for this device
+- `updating`: Update is in progress. During this the progress in % and remaining time in seconds is also added to the payload, example: `{"update": {"state": "updating","progress":13.37,"remaining": 219}}`.
+- `idle`: No update available/in progress
 
 You can set the minimum time that should pass between two firmware update checks, in minutes. The default is 1440 minutes (1 day). Here it is set to check at most every two days:
 
@@ -124,9 +124,9 @@ Even though Zigbee specification allows firmware downgrading, some devices may r
 
 ## Troubleshooting
 
--   `Device didn't respond to OTA request` or `Update failed with reason: 'aborted by device'`: try restarting the device by disconnecting the power/battery for a few seconds, then try OTA again, make sure to activate the device by pressing a button on it right before sending the update request.
--   For battery powered devices make sure that the battery is 70%+ as OTA updating is very power consuming. Some devices check for a minimum battery level prior to updating and will refuse to update if too low.
--   Make sure your log level is set to `info`. When set to `warning` or `error`, frontend will not report some messages indicating the current OTA status.
+- `Device didn't respond to OTA request` or `Update failed with reason: 'aborted by device'`: try restarting the device by disconnecting the power/battery for a few seconds, then try OTA again, make sure to activate the device by pressing a button on it right before sending the update request.
+- For battery powered devices make sure that the battery is 70%+ as OTA updating is very power consuming. Some devices check for a minimum battery level prior to updating and will refuse to update if too low.
+- Make sure your log level is set to `info`. When set to `warning` or `error`, frontend will not report some messages indicating the current OTA status.
 
 ## Advanced configuration
 

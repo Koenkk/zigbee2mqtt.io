@@ -157,8 +157,8 @@ Example payload:
 
 Contains the state of the bridge, this message is published as retained. Payloads are:
 
--   `{"state":"online"}`: published when the bridge is running (on startup)
--   `{"state":"offline"}`: published right before the bridge stops
+- `{"state":"online"}`: published when the bridge is running (on startup)
+- `{"state":"offline"}`: published right before the bridge stops
 
 ## zigbee2mqtt/bridge/logging
 
@@ -269,15 +269,15 @@ Example payload:
 
 A device definition will always have an `exposes` and `options` property which are a lists containing expose objects. The expose format is documented in [Exposes](./exposes.md).
 
--   `exposes` This contains all the device capabilities (e.g. switch, light, occupancy)
--   `options` Contains all the device options (e.g. `temperature_precision`) which can be set through `zigbee2mqtt/bridge/request/device/options`
+- `exposes` This contains all the device capabilities (e.g. switch, light, occupancy)
+- `options` Contains all the device options (e.g. `temperature_precision`) which can be set through `zigbee2mqtt/bridge/request/device/options`
 
 ## zigbee2mqtt/bridge/definitions
 
 Contains the zigbee clusters definitions of the devices, this message is published as retained and is structured with 2 parts:
 
--   `clusters`: contains the official cluster definition from the `zigbee-herdsman` package, organized by cluster name
--   `custom_clusters`: contains the custom cluster definitions from the `zigbee-herdsman-converts` package, of devices currently used
+- `clusters`: contains the official cluster definition from the `zigbee-herdsman` package, organized by cluster name
+- `custom_clusters`: contains the custom cluster definitions from the `zigbee-herdsman-converts` package, of devices currently used
 
 Example payload:
 
@@ -323,12 +323,12 @@ Example payload:
 
 Events will be published to this topic. Possible types are `device_joined`, `device_interview`, `device_leave`, `device_announce`. Example payloads:
 
--   `{"type":"device_joined","data":{"friendly_name":"0x90fd9ffffe6494fc","ieee_address":"0x90fd9ffffe6494fc"}}`
--   `{"type":"device_announce","data":{"friendly_name":"0x90fd9ffffe6494fc","ieee_address":"0x90fd9ffffe6494fc"}}`
--   `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"started","ieee_address":"0x90fd9ffffe6494fc"}}`
--   `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"successful","ieee_address":"0x90fd9ffffe6494fc","supported":true,"definition":{"model":"LED1624G9","vendor":"IKEA","description":"TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white"}}}`
--   `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"failed","ieee_address":"0x90fd9ffffe6494fc"}}`
--   `{"type":"device_leave","data":{"ieee_address":"0x90fd9ffffe6494fc","friendly_name":"my_bulb"}}`
+- `{"type":"device_joined","data":{"friendly_name":"0x90fd9ffffe6494fc","ieee_address":"0x90fd9ffffe6494fc"}}`
+- `{"type":"device_announce","data":{"friendly_name":"0x90fd9ffffe6494fc","ieee_address":"0x90fd9ffffe6494fc"}}`
+- `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"started","ieee_address":"0x90fd9ffffe6494fc"}}`
+- `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"successful","ieee_address":"0x90fd9ffffe6494fc","supported":true,"definition":{"model":"LED1624G9","vendor":"IKEA","description":"TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white"}}}`
+- `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"failed","ieee_address":"0x90fd9ffffe6494fc"}}`
+- `{"type":"device_leave","data":{"ieee_address":"0x90fd9ffffe6494fc","friendly_name":"my_bulb"}}`
 
 ## zigbee2mqtt/bridge/extensions
 
@@ -392,13 +392,13 @@ Allows to check to execute a coordinator check. Payload has to be empty, example
 
 This check is only supported for Texas Instruments based adapters (e.g. CC2652/CC1352). It checks whether any routers are missing from the coordinator memory. In case routers are missing, you may experience one of the following problems:
 
--   Unable to pair devices to your network, pairing might fail for any device that tries to joins the network via this missing router.
--   Devices falling of the network. Sometimes devices that are in the network re-join it, if they try to re-join via this missing router, re-joining will fail.
+- Unable to pair devices to your network, pairing might fail for any device that tries to joins the network via this missing router.
+- Devices falling of the network. Sometimes devices that are in the network re-join it, if they try to re-join via this missing router, re-joining will fail.
 
 The solution is to re-pair the missing routers. There are 2 known reasons for routers to go missing:
 
--   Migration from a Zigbee 1.2 coordinator to 3.0 (e.g. CC2530/CC2531 -> CC2652/CC1352) without re-pairing any devices. This is because Zigbee 1.2 has less strict security requirements.
--   Upgrading of the firmware, this seems to occur because of a bug in the Texas Instruments SDK.
+- Migration from a Zigbee 1.2 coordinator to 3.0 (e.g. CC2530/CC2531 -> CC2652/CC1352) without re-pairing any devices. This is because Zigbee 1.2 has less strict security requirements.
+- Upgrading of the firmware, this seems to occur because of a bug in the Texas Instruments SDK.
 
 #### zigbee2mqtt/bridge/request/restart
 
@@ -414,14 +414,14 @@ Use [webgraphviz.com](http://www.webgraphviz.com/) (for `graphviz`), [planttext.
 
 The graphviz map shows the devices as follows:
 
--   **Coordinator:** rectangle with bold outline
--   **Router:** rectangle with rounded corners
--   **End device:** rectangle with rounded corners and dashed outline
+- **Coordinator:** rectangle with bold outline
+- **Router:** rectangle with rounded corners
+- **End device:** rectangle with rounded corners and dashed outline
 
 Links are labelled with link quality (0..255) and active routes (listed by short 16 bit destination address). Arrow indicates direction of messaging. Coordinator and routers will typically have two lines for each connection showing bi-directional message path. Line style is:
 
--   To **end devices**: normal line
--   To and between **coordinator** and **routers**: heavy line for active routes or thin line for no active routes
+- To **end devices**: normal line
+- To and between **coordinator** and **routers**: heavy line for active routes or thin line for no active routes
 
 #### zigbee2mqtt/bridge/request/extension/save
 
@@ -539,10 +539,10 @@ To disable reporting set the `maximum_report_interval` to `65535`.
 
 Notes:
 
--   Not all devices support the Zigbee configure reporting command (e.g. Xiaomi WSDCGQ11LM temperature/humidity sensors don't support it)
--   If configure reporting fails for a battery powered device make sure to wake it up right before sending the command.
--   The `reportable_change` value depends on the unit of the attribute, e.g. for temperature 100 means in general 1°C of change.
--   To specify options, e.g. the manufacturerCode use e.g. `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10,"options":{"manufacturerCode":1234}}`
+- Not all devices support the Zigbee configure reporting command (e.g. Xiaomi WSDCGQ11LM temperature/humidity sensors don't support it)
+- If configure reporting fails for a battery powered device make sure to wake it up right before sending the command.
+- The `reportable_change` value depends on the unit of the attribute, e.g. for temperature 100 means in general 1°C of change.
+- To specify options, e.g. the manufacturerCode use e.g. `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10,"options":{"manufacturerCode":1234}}`
 
 ### Group
 
