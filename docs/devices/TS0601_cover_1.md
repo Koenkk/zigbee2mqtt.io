@@ -27,8 +27,11 @@ pageClass: device-page
 ## Notes
 
 ## Pairing
-On 2-button units; press down and set simultaneously until LED flashes blue.
-On 1-button units; press the set key 3 times in 5 seconds until the LED flashes blue.
+
+- On 2-button units: press down and set simultaneously until LED flashes blue.
+- On 1-button units: press the set key 3 times in 5 seconds until the LED flashes blue.
+- On Tuya/Zemismart bead curtain motor: Press set once shortly, then press set again for 5 seconds until LED flashes blue.
+  - If the sequence was not started with the initial short press, the 5 second press will turn the device off. In this case press set again for 5 seconds to turn it back on)
 
 ### Configuration of device attributes
 By publishing to `zigbee2mqtt/FRIENDLY_NAME/set` various device attributes can be configured:
