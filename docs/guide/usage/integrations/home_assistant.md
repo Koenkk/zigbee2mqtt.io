@@ -70,11 +70,12 @@ automation:
       triggers:
           - trigger: state
             entity_id: event.my_switch_click
-            attribute: event_type
-            to: 'single'
+            to: ~
       conditions:
           - condition: template
             value_template: "{{trigger.from_state.state != 'unavailable'}}"
+          - condition: template
+            value_template: "{{trigger.to_state.attributes.event_type == 'single'}}"
       actions:
           - action: light.toggle
             target:
