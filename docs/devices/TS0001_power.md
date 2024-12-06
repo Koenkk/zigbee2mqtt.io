@@ -13,17 +13,20 @@ pageClass: device-page
 
 # Tuya TS0001_power
 
-|     |     |
-|-----|-----|
-| Model | TS0001_power  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | Switch with power monitoring |
-| Exposes | switch (state), power, current, voltage, energy, switch_type, power_outage_memory, linkquality |
-| Picture | ![Tuya TS0001_power](https://www.zigbee2mqtt.io/images/devices/TS0001_power.png) |
+|             |                                                                                                |
+| ----------- | ---------------------------------------------------------------------------------------------- |
+| Model       | TS0001_power                                                                                   |
+| Vendor      | [Tuya](/supported-devices/#v=Tuya)                                                             |
+| Description | Switch with power monitoring                                                                   |
+| Exposes     | switch (state), power, current, voltage, energy, switch_type, power_outage_memory, linkquality |
+| Picture     | ![Tuya TS0001_power](https://www.zigbee2mqtt.io/images/devices/TS0001_power.png)               |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+### Re-Pairing
+- long press Button until the indicator light flashes 
+- if there is a physical switch conntected, you can turn on/off 5 times, then the indicator light will flash 
 
 <!-- Notes END: Do not edit below this line -->
 
