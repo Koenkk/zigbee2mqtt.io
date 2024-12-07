@@ -18,41 +18,47 @@ For example, using a `friendly_name` like `kitchen/floor_light` would result in 
 Published messages are **always** in a JSON format. Each device produces a different JSON message. To see what your device publishes check the "Exposes" section on the device page which can be accessed via ["Supported devices"](../../supported-devices/). Some examples:
 
 **Xiaomi MiJia temperature & humidity sensor (WSDCGQ01LM)**
+
 ```json
 {
-  "temperature": 27.34,
-  "humidity": 44.72
+    "temperature": 27.34,
+    "humidity": 44.72
 }
 ```
 
 **Xiaomi MiJia wireless switch (WXKG01LM)**
+
 ```json
 {
-  "action": "single"
+    "action": "single"
 }
 ```
 
 **Xiaomi MiJia human body movement sensor (RTCGQ01LM)**
+
 ```json
 {
-  "occupancy": true
+    "occupancy": true
 }
 ```
 
 **IKEA TRADFRI LED bulb E27 980 lumen, dimmable, white spectrum, opal white (LED1545G12)**
+
 ```json
 {
-  "state": "ON",
-  "brightness": 215,
-  "color_temp": 325
+    "state": "ON",
+    "brightness": 215,
+    "color_temp": 325
 }
 ```
 
 ## zigbee2mqtt/FRIENDLY_NAME/availability
+
 If ["Device-Availability"](../configuration/device-availability.md) is configured the online/offline status will be published when it changes.
 
 ## zigbee2mqtt/FRIENDLY_NAME/set
-Publishing messages to this topic allows you to control your Zigbee devices or groups via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH). How to control a specific device can be found in the *Exposes* section on the device page which can be accessed via ["Supported devices"](../../supported-devices/).
+
+Publishing messages to this topic allows you to control your Zigbee devices or groups via MQTT. Only accepts JSON messages. An example to control a Philips Hue Go (7146060PH). How to control a specific device can be found in the _Exposes_ section on the device page which can be accessed via ["Supported devices"](../../supported-devices/).
 
 ```js
 {
@@ -65,6 +71,7 @@ Publishing messages to this topic allows you to control your Zigbee devices or g
 If FRIENDLY_NAME refers to a group, it will set the state for all devices in that group.
 
 ### Without JSON
+
 In case you don't want to use JSON, publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set/state` with payload `ON` is the same as publishing to `zigbee2mqtt/[FRIENDLY_NAME]/set` payload `{"state": "ON"}`.
 
 ### Publishing messages
@@ -75,10 +82,52 @@ Publishing messages depends on the MQTT client you use. For example to publish a
  mosquitto_pub -t 'zigbee2mqtt/0x0fffffffffffffff/set' -m '{ "state": "ON" }'
 ```
 
+#### Directly reading/writing ZCL attributes
+
+For development/debug purposes it's possible to directly send read/write attribute requests to a device through this endpoint.
+Clusters and attributes can be referred to either by name or ID.
+For all available names within Zigbee2MQTT please refer to [cluster.ts](https://github.com/Koenkk/zigbee-herdsman/blob/master/src/zspec/zcl/definition/cluster.ts).
+
+##### Read requests:
+
+```js
+{
+  "read": {
+    "cluster": genBasic, // Either name (if defined in standard) or ID of cluster can be used
+    "attributes": [1]    // Either name (if defined in standard) or ID of attribute can be used
+  }
+}
+```
+
+##### Write requests:
+
+Writing one or multiple attributes can be done in multiple ways:
+
+```js
+{
+  "write": {
+    "cluster": "genBasic" // Either the name or ID can be used.
+    "payload" {
+      // If the attribute ID is one of the predefined types you can directly write using key:value
+      "manufacturerName": "Best Manufacturer"
+      // If the attribute ID is not a predefined one (out of the ZCL specifications)
+      // it still can be written with the following syntax.
+      "0": // ID
+      {
+          "value": "Best Manufacturer",
+          "type": 66 // type enum as defined in ZCL specifications. Can be found using a `read` command or from specifications.
+      }
+    }
+  }
+}
+```
+
 ## zigbee2mqtt/FRIENDLY_NAME/get
-This is the counterpart of the `set` command. It allows you to read a value from a device. To read e.g. the state of a device send the payload `{"state": ""}`. What you can `/get` is specified on the device page under the *Exposes* section.
+
+This is the counterpart of the `set` command. It allows you to read a value from a device. To read e.g. the state of a device send the payload `{"state": ""}`. What you can `/get` is specified on the device page under the _Exposes_ section.
 
 ## zigbee2mqtt/bridge/info
+
 Contains information of the bridge.
 Whenever one of the attributes in the payload changes, this is republished.
 Example payload:
@@ -105,16 +154,20 @@ Example payload:
 ```
 
 ## zigbee2mqtt/bridge/state
+
 Contains the state of the bridge, this message is published as retained. Payloads are:
-* `online`: published when the bridge is running (on startup)
-* `offline`: published right before the bridge stops
+
+- `online`: published when the bridge is running (on startup)
+- `offline`: published right before the bridge stops
 
 If `advanced.legacy_availability_payload` is set to `false` the payload will be a JSON object (`{"state":"online"}`/`{"state":"offline"}`).
 
 ## zigbee2mqtt/bridge/logging
+
 All Zigbee2MQTT logging, except the `debug` level, is published to this topic in the form of `{"level": LEVEL, "message": MESSAGE}`, example: `{"level": "info", "message": "Zigbee: allowing new devices to join."}`.
 
 ## zigbee2mqtt/bridge/devices
+
 Contains the devices connected to the bridge, this message is published as retained.
 Whenever a devices joins or leaves this is republished.
 In case `supported` is `false`, `definition` will be `null`.
@@ -215,12 +268,39 @@ Example payload:
 ```
 
 ### Exposes/options
+
 A device definition will always have an `exposes` and `options` property which are a lists containing expose objects. The expose format is documented in [Exposes](./exposes.md).
+
 - `exposes` This contains all the device capabilities (e.g. switch, light, occupancy)
 - `options` Contains all the device options (e.g. `temperature_precision`) which can be set through `zigbee2mqtt/bridge/request/device/options`
 
+## zigbee2mqtt/bridge/definitions
+
+Contains the zigbee clusters definitions of the devices, this message is published as retained and is structured with 2 parts:
+
+- `clusters`: contains the official cluster definition from the `zigbee-herdsman` package, organized by cluster name
+- `custom_clusters`: contains the custom cluster definitions from the `zigbee-herdsman-converts` package, of devices currently used
+
+Example payload:
+
+```json
+{
+  "clusters": {
+    "genBasic": {ID: 0, ...},
+    "genPowerCfg" : {ID: 1, ...},
+  },
+  "custom_clusters": {
+    "0x12345678": {
+       "myManuspecificCluster": {"ID": 0xFC01, ...},
+    }
+  }
+}
+```
+
+The message is updated at startup and when a device is joining/leaving/reconfiguring.
 
 ## zigbee2mqtt/bridge/groups
+
 Contains the groups, this message is published as retained.
 Whenever a group is added/removed or when devices are added/removed from a group this is republished.
 Example payload:
@@ -228,13 +308,13 @@ Example payload:
 ```json
 [
     {
-        "id":1,
-        "friendly_name":"my_group",
+        "id": 1,
+        "friendly_name": "my_group",
         "scenes": [{"id": 1, "name": "Scene 1"}],
-        "members":[
+        "members": [
             {
-                "ieee_address":"0x90fd9ffffe6494fc",
-                "endpoint":1
+                "ieee_address": "0x90fd9ffffe6494fc",
+                "endpoint": 1
             }
         ]
     }
@@ -242,7 +322,9 @@ Example payload:
 ```
 
 ## zigbee2mqtt/bridge/event
+
 Events will be published to this topic. Possible types are `device_joined`, `device_interview`, `device_leave`, `device_announce`. Example payloads:
+
 - `{"type":"device_joined","data":{"friendly_name":"0x90fd9ffffe6494fc","ieee_address":"0x90fd9ffffe6494fc"}}`
 - `{"type":"device_announce","data":{"friendly_name":"0x90fd9ffffe6494fc","ieee_address":"0x90fd9ffffe6494fc"}}`
 - `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"started","ieee_address":"0x90fd9ffffe6494fc"}}`
@@ -251,9 +333,11 @@ Events will be published to this topic. Possible types are `device_joined`, `dev
 - `{"type":"device_leave","data":{"ieee_address":"0x90fd9ffffe6494fc","friendly_name":"my_bulb"}}`
 
 ## zigbee2mqtt/bridge/extensions
+
 See [User extensions](../../advanced/more/user_extensions.md).
 
 ## zigbee2mqtt/bridge/request/+
+
 This can be used to e.g. configure certain settings like allowing new devices to join. Zigbee2MQTT will always respond with the same topic on `zigbee2mqtt/bridge/response/+`. The response payload will at least contain a `status` and `data` property, `status` is either `ok` or `error`. If `status` is `error` it will also contain an `error` property containing a description of the error.
 
 Example: when publishing `zigbee2mqtt/bridge/request/permit_join` with payload `{"value": true}` Zigbee2MQTT will respond to `zigbee2mqtt/bridge/response/permit_join` with payload `{"data":{"value":true},"status":"ok"}`. In case this request failed the response will be `{"data":{}, "error": "Failed to connect to adapter","status":"error"}`.
@@ -283,10 +367,12 @@ Allows to check whether Zigbee2MQTT is healthy. Payload has to be empty, example
 Allows to check to execute a coordinator check. Payload has to be empty, example response: `{"data":{"missing_routers":[{"friendly_name":"bulb","ieee_address":"0x000b57fffec6a5b2"}]},"status":"ok"}`.
 
 This check is only supported for Texas Instruments based adapters (e.g. CC2652/CC1352). It checks whether any routers are missing from the coordinator memory. In case routers are missing, you may experience one of the following problems:
+
 - Unable to pair devices to your network, pairing might fail for any device that tries to joins the network via this missing router.
 - Devices falling of the network. Sometimes devices that are in the network re-join it, if they try to re-join via this missing router, re-joining will fail.
 
 The solution is to re-pair the missing routers. There are 2 known reasons for routers to go missing:
+
 - Migration from a Zigbee 1.2 coordinator to 3.0 (e.g. CC2530/CC2531 -> CC2652/CC1352) without re-pairing any devices. This is because Zigbee 1.2 has less strict security requirements.
 - Upgrading of the firmware, this seems to occur because of a bug in the Texas Instruments SDK.
 
@@ -303,14 +389,15 @@ Allows you to retrieve a map of your Zigbee network. Payload format is `{"type":
 Use [webgraphviz.com](http://www.webgraphviz.com/) (for `graphviz`), [planttext.com](https://www.planttext.com/) (for `plantuml`), or other tools to generate the network graph.
 
 The graphviz map shows the devices as follows:
-* **Coordinator:** rectangle with bold outline
-* **Router:** rectangle with rounded corners
-* **End device:** rectangle with rounded corners and dashed outline
+
+- **Coordinator:** rectangle with bold outline
+- **Router:** rectangle with rounded corners
+- **End device:** rectangle with rounded corners and dashed outline
 
 Links are labelled with link quality (0..255) and active routes (listed by short 16 bit destination address). Arrow indicates direction of messaging. Coordinator and routers will typically have two lines for each connection showing bi-directional message path. Line style is:
-* To **end devices**: normal line
-* To and between **coordinator** and **routers**: heavy line for active routes or thin line for no active routes
 
+- To **end devices**: normal line
+- To and between **coordinator** and **routers**: heavy line for active routes or thin line for no active routes
 
 #### zigbee2mqtt/bridge/request/extension/save
 
@@ -343,21 +430,21 @@ To force remove a device add the optional `force` property (default `false`) to 
 
 In case you also want to block the device the optional `block` property (default `false`) can be added, example: `{"id":"my_bulb","block":true}`. Note that Zigbee doesn't have a block functionality, therefore when a device is blocked, Zigbee2MQTT will immediately request the device to remove itself from the network when it joins.
 
-
 #### zigbee2mqtt/bridge/request/device/ota_update/check
 
 See [OTA updates](./ota_updates.md).
-
 
 #### zigbee2mqtt/bridge/request/device/ota_update/update
 
 See [OTA updates](./ota_updates.md).
 
-
 #### zigbee2mqtt/bridge/request/device/configure
 
 Allows to manually trigger a re-configure of the device. Should only be used when the device is not working as expected (e.g. not reporting certain values), not all devices can be configured (only when the definition has a `configure` in its [definition](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices)). Allowed payloads are `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_remote"}` or `my_remote`, response: `{"data":{"id": "my_remote"},"status":"ok"}`.
 
+#### zigbee2mqtt/bridge/request/device/interview
+
+Allows you to manually trigger an interview for a specified device, causing zigbee2mqtt to reads its endpoints, clusters, and basic attributes. A device interview usually only occurs after the initial pairing, but it is sometimes useful to perform an interview after a firmware upgrade adds new functionality. Payload format is `{"id": "deviceID"}` where deviceID can be the `ieee_address` or `friendly_name` of the device, example: `{"id": "my_bulb"}`, response: `{"data":{"id": "my_bulb"},"status":"ok"}`.
 
 #### zigbee2mqtt/bridge/request/device/options
 
@@ -371,16 +458,13 @@ In case you are using Home Assistant discovery and also want to update the entit
 
 In case you want to rename the last joined device, omit the `from` property and set `last` to `true`. Example: `{"last": true, "to": "my_bulb_new_name"}`.
 
-
 #### zigbee2mqtt/bridge/request/device/bind
 
 See [Binding](./binding.md).
 
-
 #### zigbee2mqtt/bridge/request/device/unbind
 
 See [Binding](./binding.md).
-
 
 #### zigbee2mqtt/bridge/request/device/configure_reporting
 
@@ -399,21 +483,22 @@ In other words: how long after the attribute changes on the device should it sen
 A value of 0 means: send an update as soon as the attribute (e.g.: temperature) changes.
 
 **Maximum reporting interval** (maximum_report_interval)
-In other words: how frequently shall the device send a report if there is no change in the attribute constantly. 
+In other words: how frequently shall the device send a report if there is no change in the attribute constantly.
 A value of 60 means: if the bulb is off for 30 minutes, it still sends 30 updates (every 60 seconds) even if there was no any attribute changes(e.g.: it was not turned on or off).
 
 **Minimum reporting change** (reportable_change)
-The Minimum Reporting Change is like telling your device to speak up only when something significant happens. 
+The Minimum Reporting Change is like telling your device to speak up only when something significant happens.
 If you set a minimum reporting change of 1 degree for a temperature sensor, it means the sensor won't bother you with updates unless the temperature changes by at least 1 degree.
 It's a way to filter out minor fluctuations and focus on important changes in the environment.
 
 To disable reporting set the `maximum_report_interval` to `65535`.
 
 Notes:
+
 - Not all devices support the Zigbee configure reporting command (e.g. Xiaomi WSDCGQ11LM temperature/humidity sensors don't support it)
 - If configure reporting fails for a battery powered device make sure to wake it up right before sending the command.
 - The `reportable_change` value depends on the unit of the attribute, e.g. for temperature 100 means in general 1°C of change.
-- To specify options, e.g. the manufactuerCode use e.g. `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10,"options":{"manufacturerCode":1234}}`
+- To specify options, e.g. the manufacturerCode use e.g. `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10,"options":{"manufacturerCode":1234}}`
 
 ### Group
 
@@ -423,11 +508,9 @@ Removes a group. Allowed payloads are `{"id": "groupID"}` or `groupID` where gro
 
 Group removal can fail if one of the devices fails to remove itself from the group (e.g. due to being offline). In this case you can force a group removal by setting the optional `force` property to `true`, example payload `{"id": "my_group", "force": true}`. Note that in this case the device will still be in the group, in case the groupID is later reused, the device will be part of that group.
 
-
 #### zigbee2mqtt/bridge/request/group/add
 
 Adds a group. Allowed payloads are `{"friendly_name": NAME, "id": NUMBER}` or `NAME`. Example; request: `{"id": 9, "friendly_name": "new_group"}` or `new_group`, response: `{"data":{"id": 9,"friendly_name":"new_group"},"status":"ok"}`. The `id` property is optional.
-
 
 #### zigbee2mqtt/bridge/request/group/rename
 
@@ -439,16 +522,13 @@ In case you are using Home Assistant discovery and also want to update the entit
 
 Allows you to change group options on the fly. Existing options can be changed or new ones can be added. Payload format is `{"id": groupID,"options": OPTIONS}` where groupID can be the `group_ID` or `friendly_name` of the group, example: `{"id": "my_group", "options":{"transition":1}}`. Response will be `{"data":{"from":{"retain":false},"to":{"retain":false,"transition":1},"id":"my_group","restart_required":false},"status":"ok"}`. Some options may require restarting Zigbee2MQTT, in this case `restart_required` is set to `true`. Note that `restart_required` is also published to `zigbee2mqtt/bridge/info`. Use `zigbee2mqtt/bridge/request/restart` to restart Zigbee2MQTT.
 
-
 #### zigbee2mqtt/bridge/request/group/members/add
 
 See [Groups](./groups.md).
 
-
 #### zigbee2mqtt/bridge/request/group/members/remove
 
 See [Groups](./groups.md).
-
 
 #### zigbee2mqtt/bridge/request/group/members/remove_all
 
@@ -466,20 +546,17 @@ Allows to set any option. The JSON schema of this can be found [here](https://gi
 
 Sets `advanced` -> `last_seen` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":"disable"}`, response: `{"data":{"value": "disable"},"status":"ok"}`. See [Configuration](../../guide/configuration/) for possible values.
 
-
 #### zigbee2mqtt/bridge/request/config/elapsed
 
 **Deprecated:** use `zigbee2mqtt/bridge/request/options` with payload `{"options": {"advanced": {"elapsed": VALUE}}}` instead.
 
 Sets `advanced` -> `elapsed` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":true}`, response: `{"data":{"value": true},"status":"ok"}`. See [Configuration](../../guide/configuration/) for possible values.
 
-
 #### zigbee2mqtt/bridge/request/config/log_level
 
 **Deprecated:** use `zigbee2mqtt/bridge/request/options` with payload `{"options": {"advanced": {"log_level": VALUE}}}` instead.
 
 Sets `advanced` -> `log_level` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":"debug"}`, response: `{"data":{"value": "debug"},"status":"ok"}`. See [Configuration](../../guide/configuration/) for possible values.
-
 
 #### zigbee2mqtt/bridge/request/config/homeassistant
 
@@ -489,16 +566,13 @@ Enable or disable the Home Assistant integration on the fly (persistent). Payloa
 
 ### Touchlink
 
-
 #### zigbee2mqtt/bridge/request/touchlink/factory_reset
 
 See [Touchlink](./touchlink.md).
 
-
 #### zigbee2mqtt/bridge/request/touchlink/scan
 
 See [Touchlink](./touchlink.md).
-
 
 #### zigbee2mqtt/bridge/request/touchlink/identify
 

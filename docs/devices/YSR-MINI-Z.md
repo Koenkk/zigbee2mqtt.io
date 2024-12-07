@@ -1,6 +1,6 @@
 ---
-title: "TuYa YSR-MINI-Z control via MQTT"
-description: "Integrate your TuYa YSR-MINI-Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya YSR-MINI-Z control via MQTT"
+description: "Integrate your Tuya YSR-MINI-Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa YSR-MINI-Z
+# Tuya YSR-MINI-Z
 
 |     |     |
 |-----|-----|
 | Model | YSR-MINI-Z  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 in 1 dimming remote control and scene control |
 | Exposes | battery, action, operation_mode, linkquality |
-| Picture | ![TuYa YSR-MINI-Z](https://www.zigbee2mqtt.io/images/devices/YSR-MINI-Z.png) |
+| Picture | ![Tuya YSR-MINI-Z](https://www.zigbee2mqtt.io/images/devices/YSR-MINI-Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

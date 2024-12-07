@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_smart_human_presence_sensor_1 control via MQTT"
-description: "Integrate your TuYa TS0601_smart_human_presence_sensor_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_smart_human_presence_sensor_1 control via MQTT"
+description: "Integrate your Tuya TS0601_smart_human_presence_sensor_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-01T08:16:21
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_smart_human_presence_sensor_1
+# Tuya TS0601_smart_human_presence_sensor_1
 
 |     |     |
 |-----|-----|
 | Model | TS0601_smart_human_presence_sensor_1  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart Human presence sensor |
 | Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, self_test, linkquality |
-| Picture | ![TuYa TS0601_smart_human_presence_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_human_presence_sensor_1.png) |
+| Picture | ![Tuya TS0601_smart_human_presence_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_human_presence_sensor_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

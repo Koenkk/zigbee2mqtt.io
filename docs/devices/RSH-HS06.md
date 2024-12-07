@@ -1,6 +1,6 @@
 ---
-title: "TuYa RSH-HS06 control via MQTT"
-description: "Integrate your TuYa RSH-HS06 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya RSH-HS06 control via MQTT"
+description: "Integrate your Tuya RSH-HS06 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-12-26T18:35:42
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa RSH-HS06
+# Tuya RSH-HS06
 
 |     |     |
 |-----|-----|
 | Model | RSH-HS06  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Temperature and humidity sensor |
 | Exposes | temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, linkquality |
-| Picture | ![TuYa RSH-HS06](https://www.zigbee2mqtt.io/images/devices/RSH-HS06.png) |
+| Picture | ![Tuya RSH-HS06](https://www.zigbee2mqtt.io/images/devices/RSH-HS06.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

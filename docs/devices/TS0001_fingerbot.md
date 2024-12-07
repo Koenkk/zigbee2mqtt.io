@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0001_fingerbot control via MQTT"
-description: "Integrate your TuYa TS0001_fingerbot via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0001_fingerbot control via MQTT"
+description: "Integrate your Tuya TS0001_fingerbot via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-27T19:46:16
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0001_fingerbot
+# Tuya TS0001_fingerbot
 
 |     |     |
 |-----|-----|
 | Model | TS0001_fingerbot  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee fingerbot plus |
 | Exposes | switch (state), battery, mode, lower, upper, delay, reverse, touch, linkquality |
-| Picture | ![TuYa TS0001_fingerbot](https://www.zigbee2mqtt.io/images/devices/TS0001_fingerbot.png) |
+| Picture | ![Tuya TS0001_fingerbot](https://www.zigbee2mqtt.io/images/devices/TS0001_fingerbot.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -44,8 +44,8 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
-Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Battery (numeric)
@@ -94,7 +94,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `ON` reverse is ON, if `OFF` OFF.
 
 ### Touch (binary)
-Touch controll.
+Touch control.
 Value can be found in the published state on the `touch` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"touch": NEW_VALUE}`.

@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_cover_with_2_switch control via MQTT"
-description: "Integrate your TuYa TS0601_cover_with_2_switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_cover_with_2_switch control via MQTT"
+description: "Integrate your Tuya TS0601_cover_with_2_switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-04-10T16:00:00Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_cover_with_2_switch
+# Tuya TS0601_cover_with_2_switch
 
 |     |     |
 |-----|-----|
 | Model | TS0601_cover_with_2_switch  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Curtain/blind switch with 2 Gang switch |
 | Exposes | cover (state, position), switch (state), calibration, backlight_mode, motor_steering, child_lock, linkquality |
-| Picture | ![TuYa TS0601_cover_with_2_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_with_2_switch.png) |
+| Picture | ![Tuya TS0601_cover_with_2_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_with_2_switch.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

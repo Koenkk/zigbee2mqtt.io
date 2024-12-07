@@ -1,6 +1,6 @@
 ---
-title: "TuYa HY08WE control via MQTT"
-description: "Integrate your TuYa HY08WE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya HY08WE control via MQTT"
+description: "Integrate your Tuya HY08WE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-11-01T12:47:02Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa HY08WE
+# Tuya HY08WE
 
 |     |     |
 |-----|-----|
 | Model | HY08WE  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Wall-mount thermostat |
 | Exposes | climate (current_heating_setpoint, local_temperature, system_mode, running_state), linkquality |
-| Picture | ![TuYa HY08WE](https://www.zigbee2mqtt.io/images/devices/HY08WE.png) |
+| Picture | ![Tuya HY08WE](https://www.zigbee2mqtt.io/images/devices/HY08WE.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

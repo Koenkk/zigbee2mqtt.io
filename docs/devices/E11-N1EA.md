@@ -23,8 +23,11 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
 
+### Pairing
+To factory reset the light bulb, first start with the light bulb ON and then quickly turn it OFF and ON at least 10 times, ending in an ON state. If the reset is successful, the light bulb will flash five times, indicating that it is in pairing mode. If the light bulb does not flash, please try again.
 <!-- Notes END: Do not edit below this line -->
 
 ## Device Type
@@ -68,8 +71,8 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
-Support depend on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 #### Transition

@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0121_plug control via MQTT"
-description: "Integrate your TuYa TS0121_plug via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0121_plug control via MQTT"
+description: "Integrate your Tuya TS0121_plug via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-09-01T19:56:51Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0121_plug
+# Tuya TS0121_plug
 
 |     |     |
 |-----|-----|
 | Model | TS0121_plug  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 10A UK or 16A EU smart plug |
 | Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, linkquality |
-| Picture | ![TuYa TS0121_plug](https://www.zigbee2mqtt.io/images/devices/TS0121_plug.png) |
+| Picture | ![Tuya TS0121_plug](https://www.zigbee2mqtt.io/images/devices/TS0121_plug.png) |
 | White-label | BlitzWolf BW-SHP13, Connecte 4500990, Connecte 4500991, Connecte 4500992, Connecte 4500993 |
 
 
@@ -32,6 +32,17 @@ Since early 2022, BlitzWolf changed firmware of the BW-SHP13. Those new devices 
 
 ### Pairing
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
+
+
+
+### Reset energy
+To reset Sum of consumed energy, use the Dev console and execute:
+Endpoint: 1
+Cluster: 0x00
+Command: 0
+Payload: (don't change this)
+
+Next time the plug gets polled, Sum of consumed energy will start from zero again.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -69,8 +80,8 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
-Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Power (numeric)

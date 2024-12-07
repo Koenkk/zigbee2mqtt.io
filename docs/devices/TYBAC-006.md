@@ -1,6 +1,6 @@
 ---
-title: "TuYa TYBAC-006 control via MQTT"
-description: "Integrate your TuYa TYBAC-006 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TYBAC-006 control via MQTT"
+description: "Integrate your Tuya TYBAC-006 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-09-28T10:54:36
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TYBAC-006
+# Tuya TYBAC-006
 
 |     |     |
 |-----|-----|
 | Model | TYBAC-006  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Wall-mount thermostat for 2-pipe fan-coil unit |
 | Exposes | state, lock (state), climate (local_temperature, current_heating_setpoint, system_mode, fan_mode, local_temperature_calibration), min_temperature, max_temperature, eco_mode, max_temperature_limit, min_temperature_limit, deadzone_temperature, valve, manual_mode, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, linkquality |
-| Picture | ![TuYa TYBAC-006](https://www.zigbee2mqtt.io/images/devices/TYBAC-006.png) |
+| Picture | ![Tuya TYBAC-006](https://www.zigbee2mqtt.io/images/devices/TYBAC-006.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

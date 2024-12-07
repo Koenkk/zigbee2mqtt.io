@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QS-Zigbee-D02-TRIAC-L_1  |
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | 1 channel dimmer |
-| Exposes | light (state, brightness, min_brightness, max_brightness), light_type, power_on_behavior, linkquality |
+| Exposes | light (state, brightness, min_brightness, max_brightness), light_type, power_on_behavior, switch_type, linkquality |
 | Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-L_1](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-D02-TRIAC-L_1.png) |
 
 
@@ -53,11 +53,18 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `led`, `incandescent`, `halogen`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
+Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `previous`, `on`.
+
+### Switch type (enum)
+Type of the switch.
+Value can be found in the published state on the `switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
+The possible values are: `toggle`, `state`, `momentary`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

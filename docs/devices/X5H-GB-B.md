@@ -1,6 +1,6 @@
 ---
-title: "TuYa X5H-GB-B control via MQTT"
-description: "Integrate your TuYa X5H-GB-B via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya X5H-GB-B control via MQTT"
+description: "Integrate your Tuya X5H-GB-B via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-08-01T15:06:58
 pageClass: device-page
 ---
@@ -11,21 +11,24 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa X5H-GB-B
+# Tuya X5H-GB-B
 
 |     |     |
 |-----|-----|
 | Model | X5H-GB-B  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Wall-mount thermostat |
 | Exposes | climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, preset), sensor, schedule, lock (state), week, brightness_state, sound, frost_protection, factory_reset, heating_temp_limit, deadzone_temperature, upper_temp, linkquality |
-| Picture | ![TuYa X5H-GB-B](https://www.zigbee2mqtt.io/images/devices/X5H-GB-B.png) |
+| Picture | ![Tuya X5H-GB-B](https://www.zigbee2mqtt.io/images/devices/X5H-GB-B.png) |
 | White-label | Beok TGR85-ZB, AVATTO ZWT-100-16A |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
 
+### Pairing
+When the thermostat is on, long press the temperature up button for 5 seconds. Now the WiFi-like icon starts flashing indicating readiness for pairing the device.
 <!-- Notes END: Do not edit below this line -->
 
 

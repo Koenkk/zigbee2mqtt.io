@@ -39,7 +39,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
 ### Battery low (binary)
-Indicates if the battery of this device is almost empty.
+Indicates whether the battery of the device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.

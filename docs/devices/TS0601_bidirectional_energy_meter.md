@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_bidirectional_energy meter control via MQTT"
-description: "Integrate your TuYa TS0601_bidirectional_energy meter via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_bidirectional_energy meter control via MQTT"
+description: "Integrate your Tuya TS0601_bidirectional_energy meter via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-27T19:46:16
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_bidirectional_energy meter
+# Tuya TS0601_bidirectional_energy meter
 
 |     |     |
 |-----|-----|
 | Model | TS0601_bidirectional_energy meter  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Bidirectional energy meter with 150A Current Clamp |
 | Exposes | energy, produced_energy, power, voltage, current, energy_flow, linkquality |
-| Picture | ![TuYa TS0601_bidirectional_energy meter](https://www.zigbee2mqtt.io/images/devices/TS0601_bidirectional_energy-meter.png) |
+| Picture | ![Tuya TS0601_bidirectional_energy meter](https://www.zigbee2mqtt.io/images/devices/TS0601_bidirectional_energy-meter.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

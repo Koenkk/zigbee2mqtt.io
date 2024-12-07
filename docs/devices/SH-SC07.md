@@ -1,6 +1,6 @@
 ---
-title: "TuYa SH-SC07 control via MQTT"
-description: "Integrate your TuYa SH-SC07 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya SH-SC07 control via MQTT"
+description: "Integrate your Tuya SH-SC07 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-11-01T18:54:40
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa SH-SC07
+# Tuya SH-SC07
 
 |     |     |
 |-----|-----|
 | Model | SH-SC07  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Button scene switch |
 | Exposes | battery, action, linkquality |
-| Picture | ![TuYa SH-SC07](https://www.zigbee2mqtt.io/images/devices/SH-SC07.png) |
+| Picture | ![Tuya SH-SC07](https://www.zigbee2mqtt.io/images/devices/SH-SC07.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

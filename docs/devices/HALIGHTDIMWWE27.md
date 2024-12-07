@@ -27,8 +27,8 @@ pageClass: device-page
 
 
 ### Pairing
-Follow instructions from
-[How do I reset my Hive Active Light?](https://www.hivehome.com/ca/support/Help_installing_Hive/HIH_Hive_Active_Light/How-do-I-reset-my-Hive-Active-Light). After resetting the bulb will automatically connect.
+Follow instructions from step 1
+[Why is my Hive Light showing as Offline in my app or online dashboard?](https://www.hivehome.com/ie/support/Help_Using_Hive/HUH_Hive_Active_Light/Why-is-my-Hive-Active-Light-showing-as-Offline-in-my-app-or-online-dashboard). After resetting the bulb will automatically connect.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -50,8 +50,8 @@ This light supports the following features: `state`, `brightness`.
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
-Support depend on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 #### Transition

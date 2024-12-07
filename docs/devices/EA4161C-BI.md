@@ -1,6 +1,6 @@
 ---
-title: "TuYa EA4161C-BI control via MQTT"
-description: "Integrate your TuYa EA4161C-BI via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya EA4161C-BI control via MQTT"
+description: "Integrate your Tuya EA4161C-BI via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-03-31T18:43:56
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa EA4161C-BI
+# Tuya EA4161C-BI
 
 |     |     |
 |-----|-----|
 | Model | EA4161C-BI  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Single-phase multifunction energy meter (DIN Module) |
 | Exposes | current, power, voltage, energy, meter_id, linkquality |
-| Picture | ![TuYa EA4161C-BI](https://www.zigbee2mqtt.io/images/devices/EA4161C-BI.png) |
+| Picture | ![Tuya EA4161C-BI](https://www.zigbee2mqtt.io/images/devices/EA4161C-BI.png) |
 | White-label | XOCA DAC4121C |
 
 

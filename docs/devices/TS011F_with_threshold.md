@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS011F_with_threshold control via MQTT"
-description: "Integrate your TuYa TS011F_with_threshold via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS011F_with_threshold control via MQTT"
+description: "Integrate your Tuya TS011F_with_threshold via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-04-30T17:38:24
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS011F_with_threshold
+# Tuya TS011F_with_threshold
 
 |     |     |
 |-----|-----|
 | Model | TS011F_with_threshold  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Din rail switch with power monitoring and threshold settings |
-| Exposes | temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, linkquality |
-| Picture | ![TuYa TS011F_with_threshold](https://www.zigbee2mqtt.io/images/devices/TS011F_with_threshold.png) |
+| Exposes | linkquality, temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy |
+| Picture | ![Tuya TS011F_with_threshold](https://www.zigbee2mqtt.io/images/devices/TS011F_with_threshold.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -59,6 +59,13 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 
 ## Exposes
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -148,8 +155,8 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
-Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Power outage memory (enum)
@@ -189,11 +196,4 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

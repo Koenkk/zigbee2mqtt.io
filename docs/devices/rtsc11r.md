@@ -1,6 +1,6 @@
 ---
-title: "TuYa rtsc11r control via MQTT"
-description: "Integrate your TuYa rtsc11r via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya rtsc11r control via MQTT"
+description: "Integrate your Tuya rtsc11r via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-09-28T10:54:36
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa rtsc11r
+# Tuya rtsc11r
 
 |     |     |
 |-----|-----|
 | Model | rtsc11r  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 5.8G human presence sensor with relay |
 | Exposes | presence, illuminance, detection_delay, detection_distance, sensitivity, keep_time, minimum_range, maximum_range, linkquality |
-| Picture | ![TuYa rtsc11r](https://www.zigbee2mqtt.io/images/devices/rtsc11r.png) |
+| Picture | ![Tuya rtsc11r](https://www.zigbee2mqtt.io/images/devices/rtsc11r.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

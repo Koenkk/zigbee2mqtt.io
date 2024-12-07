@@ -1,6 +1,6 @@
 ---
-title: "HZC S900W-ZG control via MQTT"
-description: "Integrate your HZC S900W-ZG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HZC Electric S900W-ZG control via MQTT"
+description: "Integrate your HZC Electric S900W-ZG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-03-30T17:14:41
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HZC S900W-ZG
+# HZC Electric S900W-ZG
 
 |     |     |
 |-----|-----|
 | Model | S900W-ZG  |
-| Vendor  | [HZC](/supported-devices/#v=HZC)  |
+| Vendor  | [HZC Electric](/supported-devices/#v=HZC%20Electric)  |
 | Description | Water leak sensor |
 | Exposes | water_leak, battery_low, battery, linkquality |
-| Picture | ![HZC S900W-ZG](https://www.zigbee2mqtt.io/images/devices/S900W-ZG.png) |
+| Picture | ![HZC Electric S900W-ZG](https://www.zigbee2mqtt.io/images/devices/S900W-ZG.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

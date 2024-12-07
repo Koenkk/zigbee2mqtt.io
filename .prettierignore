@@ -1,0 +1,3 @@
+docs/devices/*.md
+public/images/devices
+pnpm-lock.yaml

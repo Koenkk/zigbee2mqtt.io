@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_dimmer_2 control via MQTT"
-description: "Integrate your TuYa TS0601_dimmer_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_dimmer_2 control via MQTT"
+description: "Integrate your Tuya TS0601_dimmer_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-11-01T16:06:49
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_dimmer_2
+# Tuya TS0601_dimmer_2
 
 |     |     |
 |-----|-----|
 | Model | TS0601_dimmer_2  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 gang smart dimmer |
 | Exposes | light (state, brightness, min_brightness, max_brightness), countdown, power_on_behavior, backlight_mode, linkquality |
-| Picture | ![TuYa TS0601_dimmer_2](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_2.png) |
+| Picture | ![Tuya TS0601_dimmer_2](https://www.zigbee2mqtt.io/images/devices/TS0601_dimmer_2.png) |
 | White-label | Moes ZS-EUD_2gang, Moes MS-105B |
 
 
@@ -61,7 +61,7 @@ The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
+Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.

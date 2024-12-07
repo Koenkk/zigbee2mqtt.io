@@ -20,7 +20,7 @@ pageClass: device-page
 | Description | Pushbutton transmitter module |
 | Exposes | action, linkquality |
 | Picture | ![EnOcean PTM 215Z](https://www.zigbee2mqtt.io/images/devices/PTM-215Z.png) |
-| White-label | Niko 91004, NodOn CWS-4-1-01_HUE, Vimar 03906, Sunricher SR-ZGP2801K4-FOH-E, LED-Trading 9125, Feller 4120.2.S.FMI.61 |
+| White-label | Niko 91004, NodOn CWS-4-1-01_HUE, Vimar 03906, Sunricher SR-ZGP2801K4-FOH-E, LED-Trading 9125, Feller 4120.2.S.FMI.61, Namron 4512727 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -58,6 +58,10 @@ Alternatively, you should be able to reset the switch with the following pattern
 3. press top right (B0) and bottom left (A1) at the same time 
 4. press top left (A0)
 Note: Please make sure the module is positioned the right way up.
+
+## Home Assistant
+The user, vandalon, over at the Home Assistant community forum has made a nice Automation Blueprint that works well with this device: https://community.home-assistant.io/t/zigbee2mqtt-enocean-ptm-215z-friends-of-hue-switch/429770
+It adds functionality like `held_#` which is nice to use to for example increase or decrease the brightness of a light.
 <!-- Notes END: Do not edit below this line -->
 
 

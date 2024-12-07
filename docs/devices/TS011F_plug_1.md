@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS011F_plug_1 control via MQTT"
-description: "Integrate your TuYa TS011F_plug_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS011F_plug_1 control via MQTT"
+description: "Integrate your Tuya TS011F_plug_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS011F_plug_1
+# Tuya TS011F_plug_1
 
 |     |     |
 |-----|-----|
 | Model | TS011F_plug_1  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart plug (with power monitoring) |
-| Exposes | switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
-| Picture | ![TuYa TS011F_plug_1](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_1.png) |
+| Exposes | switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
+| Picture | ![Tuya TS011F_plug_1](https://www.zigbee2mqtt.io/images/devices/TS011F_plug_1.png) |
 | White-label | LELLKI TS011F_plug, Neo NAS-WR01B, BlitzWolf BW-SHP15, BlitzWolf BW-SHP13, MatSee Plus PJ-ZSW01, MODEMIX MOD037, MODEMIX MOD048, Coswall CS-AJ-DE2U-ZG-11, Aubess TS011F_plug_1 |
 
 
@@ -60,6 +60,22 @@ To reset `Child Lock` without Z2M, quickly press the physical button 4 times
 
 ### Pairing
 Pair this device with a long press (5 seconds) on the on/off button. The button will flash blue to indicate it's in pairing mode. When the blue flashing stops it should be paired and the led will turn solid red. If the led is solid blue, the device is not paired or paring was not successful.
+
+### Alternative firmware
+An alternative firmware version can be installed by creating a custom my_index.json file and setting zigbee_ota_override_index_location as described in the [guide](../guide/usage/ota_updates.md#local-ota-index-and-firmware-files). This firmware can be used if the plug automatically turns off indeterminably or when the overvoltage protection from later versions is unwanted. To use v1.0.13 use the following json file:
+
+```
+[
+    {
+        "fileVersion": 77,
+        "fileSize": 307682,
+        "manufacturerCode": 4417,
+        "imageType": 54179,
+        "sha512": "97ea8413e8ab662f2bebf3b013b3030754cbc2c0744b91b14741fff17a2d8d99e7088aa22a3b6e43b3595ccd65433f96d32516fc057fddcc13a816c921af8c97",
+        "url": "https://github.com/Koenkk/zigbee-OTA/raw/master/images/Telink/1654157434-oem_zg_tl8258_plug_OTA_1.0.13.bin"
+    }
+]
+```
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -96,11 +112,13 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
-#### On with timed off
-When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
-Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
-Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+### Countdown (numeric)
+Countdown to turn device off after a certain time.
+Value can be found in the published state on the `countdown` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `43200`.
+The unit of this value is `s`.
 
 ### Power outage memory (enum)
 Recover state after power outage.

@@ -10,4 +10,3 @@ Almost any function of Zigbee2MQTT and its paired devices can be controlled usin
 The frontend provides the basic controlling of devices and managing of the features around Zigbee.
 To integrate with other systems MQTT is the way to go. Applications like HomeAssistant, NodeRED and many others
 gives you much possibilities to use visualizations and implement custom logics.
-

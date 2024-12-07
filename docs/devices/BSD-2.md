@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BSD-2  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Smoke alarm II |
-| Exposes | smoke, battery, battery_low, test, alarm_burglar, alarm_smoke, sensitivity, broadcast_alarm, linkquality |
+| Exposes | smoke, test, alarm_smoke, alarm_burglar, battery, sensitivity, broadcast_alarm, linkquality |
 | Picture | ![Bosch BSD-2](https://www.zigbee2mqtt.io/images/devices/BSD-2.png) |
 
 
@@ -28,6 +28,9 @@ pageClass: device-page
 - Before starting the pairing process the device's install code needs to be added to Zigbee2MQTT. Scan the QR code printed on the bottom of the device with the camera of your mobile phone and copy the received value (Attention: The install code printed in plain text on the device is not sufficient!) 
 - The install code can be found inside the device before attaching it to the mounting plate
 - Add this install code under Settings -> Tools -> Add install code
+
+### Factory resetting
+To factory reset the device remove the battery and wait 20 seconds or briefly press the device's main button. While pressing and holding the device's main button, insert the battery back. As soon as the device's LED on the front is starting to blink red, release the device's main button and press and hold it again until the device beeps. The device will reboot, which can take up to a minute. [Watch on Youtube](https://www.youtube.com/watch?v=PRAIsw4PoqE)
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -41,48 +44,43 @@ Value can be found in the published state on the `smoke` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` smoke is ON, if `false` OFF.
 
-### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
-Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `100`.
-The unit of this value is `%`.
-
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
-
 ### Test (binary)
-Indicates whether the device is being tested.
+Indicates whether the device is currently performing a test.
 Value can be found in the published state on the `test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
 
-### Alarm burglar (binary)
-Toggle the burglar alarm on or off.
-Value can be found in the published state on the `alarm_burglar` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_burglar": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_burglar": NEW_VALUE}`.
-If value equals `ON` alarm burglar is ON, if `OFF` OFF.
-
 ### Alarm smoke (binary)
-Toggle the smoke alarm on or off.
+Toggle the smoke alarm siren.
 Value can be found in the published state on the `alarm_smoke` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_smoke": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_smoke": NEW_VALUE}`.
-If value equals `ON` alarm smoke is ON, if `OFF` OFF.
+If value equals `true` alarm smoke is ON, if `false` OFF.
+
+### Alarm burglar (binary)
+Toggle the burglar alarm siren.
+Value can be found in the published state on the `alarm_burglar` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"alarm_burglar": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"alarm_burglar": NEW_VALUE}`.
+If value equals `true` alarm burglar is ON, if `false` OFF.
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
 
 ### Sensitivity (enum)
-Sensitivity of the smoke alarm.
+Sensitivity of the smoke detector.
 Value can be found in the published state on the `sensitivity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
 ### Broadcast alarm (enum)
-Set alarm state of all BSD-2 via broadcast.
+Set siren state of all BSD-2 via broadcast.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"broadcast_alarm": NEW_VALUE}`.

@@ -23,8 +23,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Notes
+[xyzroe ZigUSB](https://xyzroe.cc/ZigUSB)
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -56,8 +56,8 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
-Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Restart (numeric, l1 endpoint)
@@ -72,7 +72,7 @@ The unit of this value is `seconds`.
 Value can be found in the published state on the `button_mode_l1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"button_mode_l1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_mode_l1": NEW_VALUE}`.
-The possible values are: `single click`, `multi click`.
+The possible values are: `single_click`, `multi_click`.
 
 ### Link to output (enum, l1 endpoint)
 Value can be found in the published state on the `link_to_output_l1` property.

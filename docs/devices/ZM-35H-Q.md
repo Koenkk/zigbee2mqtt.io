@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZM-35H-Q control via MQTT"
-description: "Integrate your TuYa ZM-35H-Q via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZM-35H-Q control via MQTT"
+description: "Integrate your Tuya ZM-35H-Q via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:02:38
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZM-35H-Q
+# Tuya ZM-35H-Q
 
 |     |     |
 |-----|-----|
 | Model | ZM-35H-Q  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Motion sensor |
 | Exposes | occupancy, battery_low, battery, sensitivity, keep_time, linkquality |
-| Picture | ![TuYa ZM-35H-Q](https://www.zigbee2mqtt.io/images/devices/ZM-35H-Q.png) |
+| Picture | ![Tuya ZM-35H-Q](https://www.zigbee2mqtt.io/images/devices/ZM-35H-Q.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

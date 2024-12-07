@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0505A_led control via MQTT"
-description: "Integrate your TuYa TS0505A_led via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0505A_led control via MQTT"
+description: "Integrate your Tuya TS0505A_led via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-11-01T12:47:02Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0505A_led
+# Tuya TS0505A_led
 
 |     |     |
 |-----|-----|
 | Model | TS0505A_led  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | RGB+CCT LED |
 | Exposes | light (state, brightness, color_temp, color_hs), linkquality |
-| Picture | ![TuYa TS0505A_led](https://www.zigbee2mqtt.io/images/devices/TS0505A_led.png) |
+| Picture | ![Tuya TS0505A_led](https://www.zigbee2mqtt.io/images/devices/TS0505A_led.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -51,8 +51,8 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
-Support depend on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Linkquality (numeric)

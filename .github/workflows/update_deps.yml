@@ -1,0 +1,47 @@
+name: Update dependencies
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: '0 0 * * 0'
+
+permissions:
+    contents: read
+
+jobs:
+    update_deps:
+        permissions:
+            contents: write # for peter-evans/create-pull-request to create branch
+            pull-requests: write # for peter-evans/create-pull-request to create a PR
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  ref: master
+                  token: ${{ secrets.GH_TOKEN }}
+
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                  version: 9
+
+            - name: Setup node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: pnpm
+
+            - name: Update dependencies
+              run: |
+                  npx npm-check-updates -u -x sass-loader -x zigbee-herdsman-converters
+                  npx npm-check-updates -u --target @next -x typescript -x prettier
+                  rm -rf pnpm-lock.yaml
+                  pnpm install
+
+            - name: Create pull request
+              uses: peter-evans/create-pull-request@v7
+              with:
+                  commit-message: 'fix(ignore): update dependencies'
+                  branch: 'deps/all'
+                  title: Update dependencies
+                  token: ${{ secrets.GH_TOKEN }}

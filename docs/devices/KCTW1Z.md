@@ -1,6 +1,6 @@
 ---
-title: "TuYa KCTW1Z control via MQTT"
-description: "Integrate your TuYa KCTW1Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya KCTW1Z control via MQTT"
+description: "Integrate your Tuya KCTW1Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-08-01T15:06:58
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa KCTW1Z
+# Tuya KCTW1Z
 
 |     |     |
 |-----|-----|
 | Model | KCTW1Z  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Temperature & humidity sensor with LCD |
 | Exposes | temperature, humidity, battery, voltage, temperature_unit, linkquality |
-| Picture | ![TuYa KCTW1Z](https://www.zigbee2mqtt.io/images/devices/KCTW1Z.png) |
+| Picture | ![Tuya KCTW1Z](https://www.zigbee2mqtt.io/images/devices/KCTW1Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

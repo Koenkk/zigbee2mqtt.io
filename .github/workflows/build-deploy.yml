@@ -3,72 +3,51 @@ name: Build ⚙ and Deploy 🚀
 on: [push, pull_request]
 
 concurrency:
-  group: ${{ github.ref }}
+    group: ${{ github.ref }}
 
 jobs:
-  build_and_deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout 🚚
-        uses: actions/checkout@v4
+    build_and_deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout 🚚
+              uses: actions/checkout@v4
 
-      - name: Setup Node.js ⚗
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+            - name: Setup pnpm ⚗
+              uses: pnpm/action-setup@v4
+              with:
+                  version: 9
 
-      - name: Determine node version №
-        id: node-version
-        run: |
-          echo "::set-output name=version::$(node -v)"
+            - name: Setup Node.js ⚗
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: pnpm
 
-      - name: Restore Cache 📦
-        uses: actions/cache@v4
-        id: cache
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ steps.node-version.outputs.version }}-${{ hashFiles('package-lock.json') }}
+            - name: Install dependencies 🌐
+              run: pnpm install --frozen-lockfile
 
-      - name: Install dependencies 🌐
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci
+            - name: Lint
+              run: pnpm run pretty:check
 
-#      - name: Set DEVELOP_BRANCH env var
-#        if: github.ref == 'refs/heads/develop'
-#        run: |
-#          echo "DEVELOP_BRANCH=yes" >> $GITHUB_ENV
+            - name: Build 🛠
+              if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
+              run: pnpm run build
 
-      - name: Build 🛠
-        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
-        run: npm run build
+            - name: Run tests 🩺
+              run: pnpm run test
 
-      - name: Run tests 🩺
-        run: npm run test
+            - name: Add build.txt 🗓
+              if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
+              run: |
+                  git log --pretty=format:'%h' -n 1 > dist/build.txt
+                  echo >> dist/build.txt
+                  date +%F_%T >> dist/build.txt
 
-      - name: Add build.txt 🗓
-        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop'
-        run: |
-          git log --pretty=format:'%h' -n 1 > dist/build.txt
-          echo >> dist/build.txt
-          date +%F_%T >> dist/build.txt
-
-      - name: Deploy 🚀
-        if: github.ref == 'refs/heads/master'
-        uses: JamesIves/github-pages-deploy-action@v4.6.0
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: dist # The folder the action should deploy.
-          single-commit: true
-          clean: true
-#          clean-exclude: |
-#            develop
-
-#      - name: Deploy to /develop 🚀
-#        if: github.ref == 'refs/heads/develop'
-#        uses: JamesIves/github-pages-deploy-action@v4.6.0
-#        with:
-#          branch: gh-pages
-#          folder: dist
-#          target-folder: develop
-#          single-commit: true
-#          clean: true
+            - name: Deploy 🚀
+              if: github.ref == 'refs/heads/master'
+              uses: JamesIves/github-pages-deploy-action@v4.7.2
+              with:
+                  branch: gh-pages # The branch the action should deploy to.
+                  folder: dist # The folder the action should deploy.
+                  single-commit: true
+                  clean: true

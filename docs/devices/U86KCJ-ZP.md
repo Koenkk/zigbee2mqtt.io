@@ -1,6 +1,6 @@
 ---
-title: "TuYa U86KCJ-ZP control via MQTT"
-description: "Integrate your TuYa U86KCJ-ZP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya U86KCJ-ZP control via MQTT"
+description: "Integrate your Tuya U86KCJ-ZP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-02-04T20:38:05Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa U86KCJ-ZP
+# Tuya U86KCJ-ZP
 
 |     |     |
 |-----|-----|
 | Model | U86KCJ-ZP  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart 6 key scene wall switch |
 | Exposes | action, linkquality |
-| Picture | ![TuYa U86KCJ-ZP](https://www.zigbee2mqtt.io/images/devices/U86KCJ-ZP.png) |
+| Picture | ![Tuya U86KCJ-ZP](https://www.zigbee2mqtt.io/images/devices/U86KCJ-ZP.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

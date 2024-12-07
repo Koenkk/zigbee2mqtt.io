@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_din control via MQTT"
-description: "Integrate your TuYa TS0601_din via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_din control via MQTT"
+description: "Integrate your Tuya TS0601_din via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-05-01T14:47:09Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_din
+# Tuya TS0601_din
 
 |     |     |
 |-----|-----|
 | Model | TS0601_din  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee smart energy meter DDS238-2 Zigbee |
 | Exposes | switch (state), voltage, power, current, energy, linkquality |
-| Picture | ![TuYa TS0601_din](https://www.zigbee2mqtt.io/images/devices/TS0601_din.png) |
+| Picture | ![Tuya TS0601_din](https://www.zigbee2mqtt.io/images/devices/TS0601_din.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

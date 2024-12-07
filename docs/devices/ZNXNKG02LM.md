@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNXNKG02LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart rotary knob H1 (wireless) |
-| Exposes | operation_mode, battery, voltage, action_rotation_button_state, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, action, linkquality |
+| Exposes | operation_mode, battery, voltage, action_rotation_button_state, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, sensitivity, action, linkquality |
 | Picture | ![Aqara ZNXNKG02LM](https://www.zigbee2mqtt.io/images/devices/ZNXNKG02LM.png) |
 
 
@@ -91,6 +91,13 @@ Rotation time.
 Value can be found in the published state on the `action_rotation_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ms`.
+
+### Sensitivity (enum)
+Rotation sensitivity.
+Value can be found in the published state on the `sensitivity` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sensitivity": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+The possible values are: `low`, `medium`, `high`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).

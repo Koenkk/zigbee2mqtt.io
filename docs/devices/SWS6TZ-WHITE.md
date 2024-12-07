@@ -1,6 +1,6 @@
 ---
-title: "TuYa SWS6TZ-WHITE control via MQTT"
-description: "Integrate your TuYa SWS6TZ-WHITE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya SWS6TZ-WHITE control via MQTT"
+description: "Integrate your Tuya SWS6TZ-WHITE via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-07-01T06:38:46
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa SWS6TZ-WHITE
+# Tuya SWS6TZ-WHITE
 
 |     |     |
 |-----|-----|
 | Model | SWS6TZ-WHITE  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 6 gang wall switch |
 | Exposes | switch (state), current, power, voltage, linkquality |
-| Picture | ![TuYa SWS6TZ-WHITE](https://www.zigbee2mqtt.io/images/devices/SWS6TZ-WHITE.png) |
+| Picture | ![Tuya SWS6TZ-WHITE](https://www.zigbee2mqtt.io/images/devices/SWS6TZ-WHITE.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

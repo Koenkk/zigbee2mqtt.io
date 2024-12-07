@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZWT198/ZWT100-BH control via MQTT"
-description: "Integrate your TuYa ZWT198/ZWT100-BH via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZWT198/ZWT100-BH control via MQTT"
+description: "Integrate your Tuya ZWT198/ZWT100-BH via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-01-31T20:08:00
 pageClass: device-page
 ---
@@ -11,20 +11,23 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZWT198/ZWT100-BH
+# Tuya ZWT198/ZWT100-BH
 
 |     |     |
 |-----|-----|
 | Model | ZWT198/ZWT100-BH  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Avatto wall thermostat |
 | Exposes | factory_reset, lock (state), sensor, climate (system_mode, preset, current_heating_setpoint, running_state, local_temperature, local_temperature_calibration), frost_protection, max_temperature_limit, deadzone_temperature, backlight_mode, working_day, schedule_weekday, schedule_holiday, linkquality |
-| Picture | ![TuYa ZWT198/ZWT100-BH](https://www.zigbee2mqtt.io/images/devices/ZWT198-ZWT100-BH.png) |
+| Picture | ![Tuya ZWT198/ZWT100-BH](https://www.zigbee2mqtt.io/images/devices/ZWT198-ZWT100-BH.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
 
+### Pairing
+When the thermostat is on, long press the temperature up button for 5 seconds. Now the WiFi-like icon starts flashing indicating readiness for pairing the device.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -81,7 +84,7 @@ The delta between local_temperature (5<t<35)and current_heating_setpoint to trig
 Value can be found in the published state on the `deadzone_temperature` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"deadzone_temperature": NEW_VALUE}`.
-The minimal value is `0.5` and the maximum value is `10`.
+The minimal value is `0.1` and the maximum value is `10`.
 The unit of this value is `°C`.
 Besides the numeric values the following values are accepted: `default`.
 

@@ -1,6 +1,6 @@
 ---
-title: "TuYa SPM01V2 control via MQTT"
-description: "Integrate your TuYa SPM01V2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya SPM01V2 control via MQTT"
+description: "Integrate your Tuya SPM01V2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-12-26T18:38:16
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa SPM01V2
+# Tuya SPM01V2
 
 |     |     |
 |-----|-----|
 | Model | SPM01V2  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart energy monitor for 1P+N system |
 | Exposes | voltage, power, current, energy, produced_energy, power_factor, ac_frequency, linkquality |
-| Picture | ![TuYa SPM01V2](https://www.zigbee2mqtt.io/images/devices/SPM01V2.png) |
+| Picture | ![Tuya SPM01V2](https://www.zigbee2mqtt.io/images/devices/SPM01V2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -47,6 +47,8 @@ pageClass: device-page
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `ac_frequency_calibration`: Calibrates the ac_frequency value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

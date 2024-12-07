@@ -1,6 +1,6 @@
 ---
-title: "TuYa BAC-002-ALZB control via MQTT"
-description: "Integrate your TuYa BAC-002-ALZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya BAC-002-ALZB control via MQTT"
+description: "Integrate your Tuya BAC-002-ALZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-03-28T13:25:07Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa BAC-002-ALZB
+# Tuya BAC-002-ALZB
 
 |     |     |
 |-----|-----|
 | Model | BAC-002-ALZB  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | FCU thermostat temperature controller |
 | Exposes | climate (local_temperature, system_mode, fan_mode, current_heating_setpoint, preset, local_temperature_calibration), deadzone_temperature, lock (state), schedule, linkquality |
-| Picture | ![TuYa BAC-002-ALZB](https://www.zigbee2mqtt.io/images/devices/BAC-002-ALZB.png) |
+| Picture | ![Tuya BAC-002-ALZB](https://www.zigbee2mqtt.io/images/devices/BAC-002-ALZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_3_phase_clamp_meter control via MQTT"
-description: "Integrate your TuYa TS0601_3_phase_clamp_meter via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_3_phase_clamp_meter control via MQTT"
+description: "Integrate your Tuya TS0601_3_phase_clamp_meter via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-12-01T15:07:19
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_3_phase_clamp_meter
+# Tuya TS0601_3_phase_clamp_meter
 
 |     |     |
 |-----|-----|
 | Model | TS0601_3_phase_clamp_meter  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 3-phase clamp power meter |
 | Exposes | ac_frequency, temperature, current, power, energy, energy_a, energy_b, energy_c, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, power_factor_a, power_factor_b, power_factor_c, linkquality |
-| Picture | ![TuYa TS0601_3_phase_clamp_meter](https://www.zigbee2mqtt.io/images/devices/TS0601_3_phase_clamp_meter.png) |
-| White-label | MatSee Plus PC321-Z-TY, Owon PC321-Z-TY |
+| Picture | ![Tuya TS0601_3_phase_clamp_meter](https://www.zigbee2mqtt.io/images/devices/TS0601_3_phase_clamp_meter.png) |
+| White-label | MatSee Plus PC321-Z-TY, OWON PC321-Z-TY |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,6 +33,8 @@ Device is powered through wire A/L1.
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `ac_frequency_calibration`: Calibrates the ac_frequency value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 

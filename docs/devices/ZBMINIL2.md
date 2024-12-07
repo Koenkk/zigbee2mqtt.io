@@ -13,21 +13,32 @@ pageClass: device-page
 
 # SONOFF ZBMINIL2
 
-|     |     |
-|-----|-----|
-| Model | ZBMINIL2  |
-| Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
-| Description | Zigbee smart switch (no neutral) |
-| Exposes | switch (state), power_on_behavior, linkquality |
-| Picture | ![SONOFF ZBMINIL2](https://www.zigbee2mqtt.io/images/devices/ZBMINIL2.png) |
+|             |                                                                            |
+| ----------- | -------------------------------------------------------------------------- |
+| Model       | ZBMINIL2                                                                   |
+| Vendor      | [SONOFF](/supported-devices/#v=SONOFF)                                     |
+| Description | Zigbee smart switch (no neutral)                                           |
+| Exposes     | switch (state), power_on_behavior, linkquality                             |
+| Picture     | ![SONOFF ZBMINIL2](https://www.zigbee2mqtt.io/images/devices/ZBMINIL2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 ### Router functionality
 The device type is 'End Device' and cannot function as a Zigbee router.
-<!-- Notes END: Do not edit below this line -->
 
+### Pairing
+There are two different options to reset the device and enter pairing mode:
+
+* button: Press and hold the device button for 5 seconds.
+* switch: Toggle an connected external switch 10 times consecutively. This is especially useful when there is no direct physical access to the button.
+
+The device will stay in "state" : "OFF" and cannot be switched while it is in pairing mode. If not successfully paired, it will exit pairing mode after 180 seconds.
+
+## Change Switch Type
+The device supports rocker switch by default. If you want to change the switch type, press the button 3 times and see the green Led indicator flash 3 times quickly, then the switch type is switched successfully.
+
+<!-- Notes END: Do not edit below this line -->
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
@@ -48,12 +59,12 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
-Support depend on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the switch will not answer to other on with timed off commands.
+Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
+Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.

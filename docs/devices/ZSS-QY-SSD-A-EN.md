@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZSS-QY-SSD-A-EN control via MQTT"
-description: "Integrate your TuYa ZSS-QY-SSD-A-EN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZSS-QY-SSD-A-EN control via MQTT"
+description: "Integrate your Tuya ZSS-QY-SSD-A-EN via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-27T19:46:16
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZSS-QY-SSD-A-EN
+# Tuya ZSS-QY-SSD-A-EN
 
 |     |     |
 |-----|-----|
 | Model | ZSS-QY-SSD-A-EN  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart smoke alarm |
 | Exposes | smoke, fault_alarm, battery_state, battery, silence, self_test, smoke_concentration, linkquality |
-| Picture | ![TuYa ZSS-QY-SSD-A-EN](https://www.zigbee2mqtt.io/images/devices/ZSS-QY-SSD-A-EN.png) |
+| Picture | ![Tuya ZSS-QY-SSD-A-EN](https://www.zigbee2mqtt.io/images/devices/ZSS-QY-SSD-A-EN.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

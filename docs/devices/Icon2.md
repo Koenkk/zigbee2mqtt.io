@@ -81,7 +81,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 1 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_1": ""}`.
 It's not possible to write (`/set`) this value.
@@ -167,7 +167,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 2 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_2": ""}`.
 It's not possible to write (`/set`) this value.
@@ -253,7 +253,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 3 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_3": ""}`.
 It's not possible to write (`/set`) this value.
@@ -339,7 +339,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 4 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_4": ""}`.
 It's not possible to write (`/set`) this value.
@@ -425,7 +425,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 5 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_5` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_5": ""}`.
 It's not possible to write (`/set`) this value.
@@ -511,7 +511,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 6 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_6` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_6": ""}`.
 It's not possible to write (`/set`) this value.
@@ -597,7 +597,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 7 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_7` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_7": ""}`.
 It's not possible to write (`/set`) this value.
@@ -683,7 +683,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 8 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_8` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_8": ""}`.
 It's not possible to write (`/set`) this value.
@@ -769,7 +769,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 9 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_9` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_9": ""}`.
 It's not possible to write (`/set`) this value.
@@ -855,7 +855,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 10 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_10` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_10": ""}`.
 It's not possible to write (`/set`) this value.
@@ -941,7 +941,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 11 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_11` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_11": ""}`.
 It's not possible to write (`/set`) this value.
@@ -1027,7 +1027,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 12 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_12` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_12": ""}`.
 It's not possible to write (`/set`) this value.
@@ -1113,7 +1113,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 13 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_13` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_13": ""}`.
 It's not possible to write (`/set`) this value.
@@ -1199,7 +1199,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 14 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_14` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_14": ""}`.
 It's not possible to write (`/set`) this value.
@@ -1285,7 +1285,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `manual`, `schedule`, `externally`.
 
 ### Output status (enum, 15 endpoint)
-Actuator status).
+Actuator status.
 Value can be found in the published state on the `output_status_15` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"output_status_15": ""}`.
 It's not possible to write (`/set`) this value.

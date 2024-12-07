@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZG-227ZL control via MQTT"
-description: "Integrate your TuYa ZG-227ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZG-227ZL control via MQTT"
+description: "Integrate your Tuya ZG-227ZL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-11-09T12:35:00Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZG-227ZL
+# Tuya ZG-227ZL
 
 |     |     |
 |-----|-----|
 | Model | ZG-227ZL  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Temperature & humidity LCD sensor |
 | Exposes | temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, linkquality |
-| Picture | ![TuYa ZG-227ZL](https://www.zigbee2mqtt.io/images/devices/ZG-227ZL.png) |
+| Picture | ![Tuya ZG-227ZL](https://www.zigbee2mqtt.io/images/devices/ZG-227ZL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

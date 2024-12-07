@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_smart_air_house_keeper control via MQTT"
-description: "Integrate your TuYa TS0601_smart_air_house_keeper via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_smart_air_house_keeper control via MQTT"
+description: "Integrate your Tuya TS0601_smart_air_house_keeper via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_smart_air_house_keeper
+# Tuya TS0601_smart_air_house_keeper
 
 |     |     |
 |-----|-----|
 | Model | TS0601_smart_air_house_keeper  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart air house keeper |
 | Exposes | temperature, humidity, co2, voc, formaldehyd, pm25, linkquality |
-| Picture | ![TuYa TS0601_smart_air_house_keeper](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_air_house_keeper.png) |
+| Picture | ![Tuya TS0601_smart_air_house_keeper](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_air_house_keeper.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -73,7 +73,7 @@ The unit of this value is `ppm`.
 Measured VOC value.
 Value can be found in the published state on the `voc` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ppm`.
+The unit of this value is `ppb`.
 
 ### Formaldehyd (numeric)
 The measured formaldehyd value.

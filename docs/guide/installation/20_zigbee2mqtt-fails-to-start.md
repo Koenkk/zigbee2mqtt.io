@@ -49,8 +49,7 @@ lrwxrwxrwx 1 root root 13 Jan  6 19:07 usb-Texas_Instruments_XDS110__03.00.00.05
 lrwxrwxrwx 1 root root 13 Jan  6 19:07 usb-Texas_Instruments_XDS110__03.00.00.05__Embed_with_CMSIS-DAP_L1100BTD-if03 -> ../../ttyACM1
 ```
 
-The device with id ending with *if00* is for device data. Use this port in your configuration.
-
+The device with id ending with _if00_ is for device data. Use this port in your configuration.
 
 ## Verify that the user you run Zigbee2MQTT as has write access to the port
 
@@ -62,7 +61,7 @@ executing: `sudo chown [USER] [PORT]` (e.g. `sudo chown pi /dev/ttyACM0`).
 
 if it outputs `failure`, then you need to permanently give your user permission to the device.
 
-### Method 1: Give your user permissions on every reboot. ####
+### Method 1: Give your user permissions on every reboot.
 
 You can create a 'udev' rule to give your user permissions after every reboot:
 
@@ -83,12 +82,12 @@ port: /dev/ttyUSB.CC2531-01 …`
 
 After reboot your device will have the right permissions and always the same name.
 
-### Method 2: Add your user to specific groups ####
+### Method 2: Add your user to specific groups
 
 As mentioned on https://github.com/esp8266/source-code-examples/issues/26 , depending on your linux installation,
 various groups could have ownership of the device.
 
-Add your user to the `uucp ` ,  `tty `  ,  `dialout `   groups:
+Add your user to the `uucp ` , `tty ` , `dialout ` groups:
 
 ```
 sudo usermod -a -G uucp $USER
@@ -100,7 +99,7 @@ Reboot your device and now your user should have access to the device.
 
 ## Error: `Coordinator failed to start, probably the panID is already in use, try a different panID or channel`
 
-- If you still get this error after increasing the panID (as explained [here](../configuration/zigbee-network.md#network-config)) 
+- If you still get this error after increasing the panID (as explained [here](../configuration/zigbee-network.md#network-config))
   and you are using a Raspberry Pi with other USB devices attached (e.g. SSD) try connecting the SSD or adapter through a powered USB hub.
 - In case you are getting this after first starting successfully and pairing a device it might be that the firmware has
   been flashed incorrectly. Try flashing the stick on a different
@@ -179,7 +178,7 @@ Now try starting Zigbee2MQTT again.
 
 ## Texas Instruments LAUNCHXL-CC26X2R1 coordinator only: verify that you have the correct revision
 
-The revision of your board can be seen in UniFlash by clicking *more info* in the top, now press *Read device info*.
+The revision of your board can be seen in UniFlash by clicking _more info_ in the top, now press _Read device info_.
 
 The correct revision is: **E** like shown below.
 
@@ -191,6 +190,3 @@ All earlier version are not supported (these are development boards). Return thi
 
 If you have multiple devices connected that are running cheap USB-UART converters (CH341) they may be indistinguishable to your system, since they all possibly have the same idProduct, SerialNumber etc. so they will share the same /dev/serial/by-id.
 The easiest solution is to change one of your devices to something with a different uart-usb converter. The second solution would be swapping the whole converter or adding external EEPROM memory to a chip that does not have one (like CH341) so you would be able to add a serial number.
-
-
-

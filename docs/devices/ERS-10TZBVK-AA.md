@@ -1,6 +1,6 @@
 ---
-title: "TuYa ERS-10TZBVK-AA control via MQTT"
-description: "Integrate your TuYa ERS-10TZBVK-AA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ERS-10TZBVK-AA control via MQTT"
+description: "Integrate your Tuya ERS-10TZBVK-AA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-12-31T16:51:16
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ERS-10TZBVK-AA
+# Tuya ERS-10TZBVK-AA
 
 |     |     |
 |-----|-----|
 | Model | ERS-10TZBVK-AA  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart knob |
 | Exposes | action, action_step_size, action_transition_time, action_rate, battery, operation_mode, linkquality |
-| Picture | ![TuYa ERS-10TZBVK-AA](https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVK-AA.png) |
+| Picture | ![Tuya ERS-10TZBVK-AA](https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVK-AA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

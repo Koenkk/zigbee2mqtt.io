@@ -33,6 +33,8 @@ If device won't go in to pairing mode, try installing a fresh battery.
 
 ### Long press action
 The device will sometimes output a single push in addition to a long press. You can mitigate this by using the Debounce device configuration. Refer to *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*.
+
+For the `up` and `down` buttons, they will first output the action, and then output `{action}_long` every approximately 1 second, repeating until the button is released.
 <!-- Notes END: Do not edit below this line -->
 
 

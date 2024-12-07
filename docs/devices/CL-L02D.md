@@ -18,13 +18,15 @@ pageClass: device-page
 | Model | CL-L02D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Ceiling light T1M |
-| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, power_outage_memory, light (state, brightness, color_temp, color_xy, color_hs), linkquality |
+| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, light (state, brightness, color_temp, color_xy, color_hs), linkquality |
 | Picture | ![Aqara CL-L02D](https://www.zigbee2mqtt.io/images/devices/CL-L02D.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+Turn the light on and off 5 times to pair. After this the device will automatically join.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -54,8 +56,8 @@ This light supports the following features: `state`, `brightness`, `color_temp`.
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
-Support depend on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 #### Transition
@@ -93,13 +95,6 @@ Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Power outage memory (binary)
-Enable/disable the power outage memory, this recovers the on/off mode after power failure.
-Value can be found in the published state on the `power_outage_memory` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
-If value equals `true` power outage memory is ON, if `false` OFF.
-
 ### Light (rgb endpoint)
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_xy`, `color_hs`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_rgb": "ON"}`, `{"state_rgb": "OFF"}` or `{"state_rgb": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_rgb": ""}`.
@@ -116,8 +111,8 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionnaly an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
-Support depend on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 #### Transition

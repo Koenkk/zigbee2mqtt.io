@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TRVZB  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee thermostatic radiator valve |
-| Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), battery, battery_low, child_lock, open_window, frost_protection_temperature, idle_steps, closing_steps, valve_opening_limit_voltage, valve_closing_limit_voltage, valve_motor_running_voltage, valve_opening_degree, valve_closing_degree, schedule, linkquality |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), battery, child_lock, open_window, frost_protection_temperature, idle_steps, closing_steps, valve_opening_limit_voltage, valve_closing_limit_voltage, valve_motor_running_voltage, valve_opening_degree, valve_closing_degree, schedule, linkquality |
 | Picture | ![SONOFF TRVZB](https://www.zigbee2mqtt.io/images/devices/TRVZB.png) |
 
 
@@ -56,7 +56,7 @@ This climate device supports the following features: `occupied_heating_setpoint`
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
 - `system_mode`: Mode of the thermostat. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `auto`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 - `running_state`: The current running state. Possible values are: `idle`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"running_state": ""}`.
-- `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-7` and the maximum value is `7` with a step size of `0.2`.
+- `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.The minimal value is `-12.8` and the maximum value is `12.7` with a step size of `0.2`.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
@@ -64,12 +64,6 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
 
 ### Child lock (binary)
 Enables/disables physical input on the device.
