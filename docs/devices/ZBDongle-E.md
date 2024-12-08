@@ -37,12 +37,12 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
 * Second, you need a **software supporting the [XMODEM file transfer protocol](https://en.wikipedia.org/wiki/XMODEM)** for sending the firmware image to the device. On Debian Linux like Ubuntu you can use lrzsz, 
   * install XMODEM transfer protocol and terminal emulator Putty with 
   
-      debian based OS: `sudo apt install lrzsz putty`
-      arch based OS: `sudo paxman -S lrzsz putty`
+      * debian based OS: `sudo apt install lrzsz putty`
+      * arch based OS: `sudo paxman -S lrzsz putty`
   * user needs to be in dialout group in order to access serial ports
       
-      debian based OS: `sudo adduser $USER dialout`
-      arch based OS: `sudo usermod -a -G uucp $USER`
+      * debian based OS: `sudo adduser $USER dialout`
+      * arch based OS: `sudo usermod -a -G uucp $USER`
   * log in and out so that group membership comes into effect (You can check by running `id`)
 * Third, plug in the device. You must operate on the naked logic board while it is plugged in. This is a lot easier if you use a **USB extension cable**.
 * Forth, to enter the Bootloader Mode, you have to
@@ -54,18 +54,22 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
       If you get the error `PuTTY: unable to load font "server:fixed"`, run `export GDK_BACKEND=x11` previous to the putty command.
 
   * Press and hold the "BOOT" button (see image below)
-  <img src="https://www.zigbee2mqtt.io/images/guides/SONOFF-DongleE-Router/dongle-e-buttons.jpg" width="648" height="242"/>
+  
+      <img src="https://www.zigbee2mqtt.io/images/guides/SONOFF-DongleE-Router/dongle-e-buttons.png" width="648" height="242"/>
   * While holding the "BOOT" button press the "RST" button once to restart the device. You should see the output below. Release the "BOOT" button.
-  <img src="../../docs/images/putty-bootloader-1.png" width="350" height="250"/>  
-* Fifth, to upload the file, in the bootloader terminal press '1' to initiate the upload  
-  <img src="../../docs/images/putty-bootloader-2.png" width="350" height="250"/>
+  
+      <img src="../../docs/images/putty-bootloader-1.png" width="350" height="250"/>  
+* Fifth, to upload the file
+  * In the bootloader terminal press '1' to initiate the upload  
+
+      <img src="../../docs/images/putty-bootloader-2.png" width="350" height="250"/>
   * Open another terminal on the host system. Download the router firmware *.gbl file from [here](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E/Router), e.g.
 
       `wget https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/blob/master/Dongle-E/Router/Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl`
   * Send the file through XMODEM    
 
-      debian based OS: `sx Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl < /dev/ttyACM0 > /dev/ttyACM0`
-      arch based OS: `lrzsz-sx -X Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl < /dev/ttyACM0 > /dev/ttyACM0` (Without the -X it will not use the xmodem protocol)
+      * debian based OS: `sx Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl < /dev/ttyACM0 > /dev/ttyACM0`
+      * arch based OS: `lrzsz-sx -X Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl < /dev/ttyACM0 > /dev/ttyACM0` (Without the -X it will not use the xmodem protocol)
   * Wait for 'Serial upload complete', then press '2' in the Bootloader Terminal to restart the dongle.
 * Finally, the dongle LED blinks green, inidicating it is in paring mode. Pair as usual with Z2M.
 * Note: The dongle may not pair successfully if it is plugged into a USB 3.x socket, if it fails to pair try moving it to a USB 2 socket or a standalone USB charger.
