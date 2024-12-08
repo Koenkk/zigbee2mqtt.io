@@ -312,7 +312,6 @@ entities:
     - type: divider
     - entity: switch.zigbee2mqtt_bridge_permit_join
     - entity: input_number.zigbee2mqtt_join_minutes
-    - entity: sensor.zigbee2mqtt_bridge_permit_join_timeout
     - type: divider
     - entity: input_select.zigbee2mqtt_old_name_select
     - entity: input_text.zigbee2mqtt_new_name

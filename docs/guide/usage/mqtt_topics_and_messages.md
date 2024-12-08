@@ -146,7 +146,7 @@ Example payload:
     "network":{"channel":15,"pan_id":5674,"extended_pan_id":[0,11,22]},
     "log_level":"debug",
     "permit_join":true,
-    "permit_join_timeout": 10, // Time in seconds till permit join is disabled, `undefined` in case of no timeout
+    "permit_join_end": 1733666394, // Epoch time when permit join will end, `undefined` if permit join is disabled.
     "config": {...}, // Will contain the complete Zigbee2MQTT config expect the network_key
     "config_schema": {...}, // Will contain the JSON schema of the config
     "restart_required": false // Indicates whether Zigbee2MQTT needs to be restarted to apply options set through zigbee2mqtt/request/bridge/options
