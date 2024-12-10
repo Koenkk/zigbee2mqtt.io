@@ -85,9 +85,10 @@ You need to re-pair all you devices when:
 
 - Changing the network key (`network_key`) or panID (`pan_id`) in `configuration.yaml`.
 - Changing the Zigbee channel (`channel`) in the `configuration.yaml` might require repairing **some** devices, read the [documentation for more info](../configuration/zigbee-network.md#changing-the-zigbee-channel).
+- Changing from zStack 1.x to 3.x.
 - Switching between adapters requires repairing, **except when**:
     - When adapters are the same repairing is **not** required (e.g. CC2531 -> CC2531)
-    - Switching from a CC2530 or CC2531 based adapter to a CC2538/CC2652/CC1352 based adapter does **not** require repairing (e.g. CC2531 -> CC2652)
+    - Switching from a CC2530 or CC2531 based adapter to a CC2538/CC2652/CC1352 based adapter does **not** require repairing (e.g. CC2531 -> CC2652) (except when it changes the zStack version, see above).
     - Switching between CC2538, CC2652 and CC1352 based adapters does **not** require repairing (e.g. CC2538 -> CC2652)
 
 ### Doesn't require repairing
