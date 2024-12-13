@@ -6,7 +6,7 @@ next: ../configuration/
 
 It is possible to run Zigbee2MQTT in a Docker container using the official [Zigbee2MQTT Docker image](https://hub.docker.com/r/koenkk/zigbee2mqtt/).
 
-This image support the following architectures: `386`, `amd64`, `arm/v6`, `arm/v7`, `arm64`.
+This image support the following architectures: `i386`, `amd64`, `arm/v6`, `arm/v7`, `arm64` and `riscv64`.
 Since Zigbee2MQTT images are manifest listed, Docker will auto-detect the architecture and pull the right image.
 
 Start by figuring out the location of your adapter as explained [here](../configuration/adapter-settings.md#determine-location-of-the-adapter).
