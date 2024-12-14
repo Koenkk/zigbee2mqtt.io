@@ -35,9 +35,9 @@ without having to restart Home Assistant. It also makes it possible to show whic
 
 The device specific configuration allows you to modify the discovery payload. Here you can also prevent a device from being discovered. See [Device specific configuration](../../configuration/devices-groups.html#specific-device-options) for the available options.
 
-## Responding to button clicks
+## Responding to button actions
 
-To respond to button clicks you can use one of the following three Home Assistant configurations.
+To respond to button actions you can use one of the following Home Assistant configurations.
 
 ### Via MQTT device trigger (recommended)
 
@@ -80,6 +80,26 @@ automation:
           - action: light.toggle
             target:
                 entity_id: light.bedroom
+```
+
+### Via Home Assistant action sensor (deprecated)
+
+This method works by responding to the state change event of a sensor. For this `homeassistant.legacy_action_sensor: true` needs to be set in your `configuration.yaml`. See the [docs](../../configuration/homeassistant.md) for more info.
+
+::: warning
+Note that this feature is deprecated and will be removed in the future. It's recommended to use the MQTT device trigger instead.
+:::
+
+```yaml
+automation:
+    - alias: Respond to button action
+      trigger:
+          platform: state
+          entity_id: sensor.my_switch_action
+          to: 'single'
+      action:
+          entity_id: light.my_bulb_light
+          service: light.toggle
 ```
 
 ## Groups
