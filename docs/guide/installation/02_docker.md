@@ -18,7 +18,7 @@ Start by figuring out the location of your adapter as explained [here](../config
 Navigate to the directory where you will store the Zigbee2MQTT data and execute the following command:
 
 ```bash
-wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.example.yaml -P data
+mkdir data && wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.example.yaml -O data/configuration.yaml
 ```
 
 Now configure the MQTT server and adapter location as explained [here](./01_linux.md#configuring).
