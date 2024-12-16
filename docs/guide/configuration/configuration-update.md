@@ -22,9 +22,9 @@ Do not edit the `version` setting manually. If you do, you run the risk of corru
 
 ## Migration notes
 
-The migration system will consider every migrations required for a particular version and build a log for you to easily identify what needed changing in your `configuration.yaml` and has an impact on your new configuration. The file will be named according to the Zigbee2MQTT version change, for example `data/migration-1.x.x-to-2.0.0.log`.
+The migration system will consider every migrations required for a particular version and build a log for you to easily identify what needed changing in your `configuration.yaml` and has an impact on your new configuration. The file will be named according to the Zigbee2MQTT version change, for example `data/migration-1-to-2.log`.
 
-### Example migration notes from v1.x.x to v2.0.0
+### Example migration notes from v1 to v2
 
 ```
 [REMOVAL] HA discovery_topic was moved from advanced.homeassistant_discovery_topic to homeassistant.discovery_topic.
