@@ -41,6 +41,8 @@ In order for this device to work, at least the following firmware is required on
 Press and hold the reset button on the device for +- 5 seconds (until the blue light starts blinking).
 After this the device will automatically join. If this doesn't work, try with a single short button press.
 
+Sometimes the device gets stuck. You have to pay attention to the LED when the device boots - it needs to flash once, then shortly after flash twice. If you only see the single flash, it's stuck and needs a special reset. One method is to keep pressing the button for 12 seconds after plugging it into a power source, till you see the double flash - it often takes a few tries to get it right. Directly after it's unstuck, put it into pairing-mode.
+
 ![RTCZCGQ11LM pairing](../images/pairing/RTCZCGQ11LM_pairing.jpg)
 
 ### Feature support
