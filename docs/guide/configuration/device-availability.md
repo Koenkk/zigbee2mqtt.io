@@ -8,8 +8,10 @@ The availability feature checks whether your devices are online. The availabilit
 to `zigbee2mqtt/[FRIENDLY_NAME]/availability` with payload `{"state":"online"}` or `{"state":"offline"}` (this message is a retained MQTT message).
 
 ```yaml
-# Optional: Enable the availability feature (default = false)
-availability: true
+# Optional: Availability feature
+availability:
+    # Enable the feature (default: false)
+    enabled: true
 ```
 
 The availability feature works differently for active and passive devices.
@@ -22,13 +24,12 @@ The availability feature works differently for active and passive devices.
 Note that this timeout is persisted between Zigbee2MQTT restarts. So if you for example stop Zigbee2MQTT for longer than 10
 minutes, all your active devices will be marked as `offline` initially.
 
-## Availability advanced configuration
-
-Instead of setting `availability: true` in your `configuration.yaml` you can provide a more advanced configuration:
+## Advanced configuration
 
 ```yaml
 # Note: all options are optional
 availability:
+    enabled: true
     active:
         # Time after which an active device will be marked as offline in
         # minutes (default = 10 minutes)
@@ -50,7 +51,7 @@ devices:
             timeout: 3
 ```
 
-If you want to enable the availability feature for only certain devices, don't add `availability: true` in
+If you want to enable the availability feature for only certain devices, don't add `availability: enabled: true` in
 your `configuration.yaml` but specify it for that device only, e.g.
 
 ```yaml

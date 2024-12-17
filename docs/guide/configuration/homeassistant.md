@@ -7,14 +7,17 @@ sidebarDepth: 1
 See: [Home Assistant integration guide](../usage/integrations/home_assistant.md).
 
 ```yaml
-# Optional: Home Assistant integration (MQTT discovery) (default: false)
-homeassistant: true
+# Optional: Home Assistant integration (MQTT discovery)
+homeassistant:
+    # Enable the integration (default: false)
+    enabled: true
 ```
 
 ## Advanced configuration
 
 ```yaml
 homeassistant:
+    enabled: true
     # Optional: Home Assistant discovery topic (default: shown below)
     # Note: should be different from [MQTT base topic](../mqtt.md) to prevent errors in HA software
     discovery_topic: 'homeassistant'
