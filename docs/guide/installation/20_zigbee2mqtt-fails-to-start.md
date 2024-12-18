@@ -190,3 +190,18 @@ All earlier version are not supported (these are development boards). Return thi
 
 If you have multiple devices connected that are running cheap USB-UART converters (CH341) they may be indistinguishable to your system, since they all possibly have the same idProduct, SerialNumber etc. so they will share the same /dev/serial/by-id.
 The easiest solution is to change one of your devices to something with a different uart-usb converter. The second solution would be swapping the whole converter or adding external EEPROM memory to a chip that does not have one (like CH341) so you would be able to add a serial number.
+
+## Error: `startup failed - configuration-adapter mismatch - see logs above for more information`
+
+This happens when you edit one or more of the `pan_id`, `network_key` or `ext_pan_id` values in `configuration.yml`. If your intent was to do this, the easiest way to resolve this error is to remove the `data/coordinator-backup.json` file and restart again. Otherwise, you can revert back to the previous value(s). In that case, look a few lines before the error in the log, you'll find something like this:
+```
+[2024-12-14 20:25:39] error: 	zh:adapter:zstack:manager: Configuration is not consistent with adapter state/backup!
+[2024-12-14 20:25:39] error: 	zh:adapter:zstack:manager: - PAN ID: configured=****, adapter=****
+[2024-12-14 20:25:39] error: 	zh:adapter:zstack:manager: - Extended PAN ID: configured=****, adapter=****
+[2024-12-14 20:25:39] error: 	zh:adapter:zstack:manager: - Network Key: configured=****, adapter=****
+[2024-12-14 20:25:39] error: 	zh:adapter:zstack:manager: - Channel List: configured=**, adapter=**
+```
+(In this example the actual values are replaced with `*`s) You can used the values that are listed for the adapter and put them back in the configuration file. Note that you can't just paste them back: in the logs the keys are printed as hexadecimal strings, but in the config file, `ext_pan_id` and `ext_pan_id` should be entered as arrays. Suppose your network key shows as `39af4d83h2dcb389` in the logs, then you should put the following in your config file:
+```
+ext_pan_id: [0x39,0xaf,0x4d,0x83,0xh2,0xdc,0xb3,0x89]
+```
