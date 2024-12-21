@@ -22,8 +22,7 @@ homeassistant:
     # Note: should be different from [MQTT base topic](../mqtt.md) to prevent errors in HA software
     discovery_topic: 'homeassistant'
     # Optional: Home Assistant status topic (default: shown below)
-    # Note: in addition to the `status_topic`, 'homeassistant/status' will also be used
-    status_topic: 'hass/status'
+    status_topic: 'homeassistant/status'
     # Optional: Experimental support for Home Assistant event entities, may break in the future (default: shown below) when enabled:
     # - An `event` entity will be discovered for each 'action'.
     # - The `event_type` attribute will contain the action itself, additional attributes like `button` will have further information.
