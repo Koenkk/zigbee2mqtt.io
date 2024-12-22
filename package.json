@@ -26,7 +26,7 @@
         "@types/node": "22.10.2",
         "@vuepress/bundler-webpack": "2.0.0-rc.19",
         "@vuepress/client": "2.0.0-rc.19",
-        "@vuepress/plugin-docsearch": "2.0.0-rc.66",
+        "@vuepress/plugin-docsearch": "2.0.0-rc.67",
         "@vuepress/plugin-google-analytics": "2.0.0-rc.66",
         "@vuepress/plugin-register-components": "2.0.0-rc.66",
         "@vuepress/plugin-sitemap": "2.0.0-rc.66",
