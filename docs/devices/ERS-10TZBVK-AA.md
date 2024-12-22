@@ -41,13 +41,13 @@ Device can be set in two modes : COMMAND and EVENT (Current Mode is published on
 
 | User Action  | `action` property |
 | ------------- | ------------- |
-| Rotate Left | Brightness_Step_Up|
-| Rotate Right | Brightness_Step_Down|
-| Single Click | Toggle|
-| HOLD more than 3s | Hue_Move|
-| UnHold button | Hue_Stop|
-| Push+Hold and Rotate Left | color_temperature_step_up|
+| Rotate Left | brightness_step_down|
+| Rotate Right | brightness_step_up|
+| Single Click | toggle|
+| Push+Hold > 3s | hue_move|
+| Release | hue_Stop|
 | Push+Hold and Rotate Left | color_temperature_step_down|
+| Push+Hold and Rotate Right | color_temperature_step_up|
 
 Action_Step_Size = %Numeric_Value (0_255)
 Action_Rate = Keeps "No value" all the time
