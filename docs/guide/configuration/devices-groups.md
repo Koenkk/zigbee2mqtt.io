@@ -37,7 +37,7 @@ devices:
         friendly_name: 'Kitchen bulb'
 ```
 
-## Common device options
+## Generic device options
 
 Every Zigbee Device supports the following list of options.
 
@@ -130,6 +130,9 @@ Disabled: Zigbee2MQTT will only update its internal state after the device repor
 **`filtered_optimistic`**  
 Same as the `filtered_attributes` option but only applies to the optimistic published
 attributes. Has no effect when `optimistic: false` is set. Example: `filtered_optimistic: ["color_mode", "color"]`.
+
+**`icon`**
+Allows to override the device icon (image) shown on the frontend. This should be a path to an image e.g. `device_icons/my-device.png`, note that the image must be inside the `device_icons` directory next to the Zigbee2MQTT `configuration.yaml`. Other directories are not allowed.
 
 ## Specific device options
 
