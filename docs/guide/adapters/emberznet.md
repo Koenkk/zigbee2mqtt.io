@@ -69,7 +69,7 @@ serial:
     rtscts: true
 ```
 
-- [Product page](https://smlight.tech/product/slzb-07mg24/)
+- [Product page](https://smlight.tech/product/slzb-07mg24/) (not available yet, so link doesn't work)
 
 <img src="../../images/smlight-slzb-07mg24.jpg" width="200" />
 
