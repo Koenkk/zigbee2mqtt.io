@@ -116,7 +116,7 @@ Allows preventing certain attributes from being published. When a device would e
 publish `{"temperature": 10, "battery": 20}` and you set `filtered_attributes: ["battery"]` it will
 publish `{"temperature": 10}`.
 
-**`filtered_cache`**
+**`filtered_cache`**  
 Allows preventing certain attributes from ending up in the cache.
 This prevents attributes from being published when the value did not change.
 
@@ -131,8 +131,11 @@ Disabled: Zigbee2MQTT will only update its internal state after the device repor
 Same as the `filtered_attributes` option but only applies to the optimistic published
 attributes. Has no effect when `optimistic: false` is set. Example: `filtered_optimistic: ["color_mode", "color"]`.
 
-**`icon`**
-Allows to override the device icon (image) shown on the frontend. This should be a path to an image e.g. `device_icons/my-device.png`, note that the image must be inside the `device_icons` directory next to the Zigbee2MQTT `configuration.yaml`. Other directories are not allowed.
+**`icon`**  
+Allows to override the device icon (image) shown on the frontend, should be one of:
+
+- A path to an image e.g. `device_icons/my-device.png`, note that the image must be inside the `device_icons` directory next to the Zigbee2MQTT `configuration.yaml`. Other directories are not allowed.
+- A full URL link to an image, e.g. `https://SOME.SITE/MODEL123.jpg`.
 
 ## Specific device options
 
