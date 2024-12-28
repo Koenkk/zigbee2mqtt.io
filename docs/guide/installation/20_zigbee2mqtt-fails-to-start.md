@@ -2,7 +2,7 @@
 sidebarDepth: 0
 ---
 
-# Zigbee2MQTT fails to start/crashes runtime
+# Zigbee2MQTT fails to start
 
 Most of the time this is caused by Zigbee2MQTT not being able to communicate with your Zigbee adapter.
 
@@ -208,34 +208,3 @@ This happens when you edit one or more of the `pan_id`, `network_key` or `ext_pa
 ```
 ext_pan_id: [0x39,0xaf,0x4d,0x83,0xh2,0xdc,0xb3,0x89]
 ```
-
-## Error: runtime crash with `status=HASH_ERROR_TIMEOUTS` or fail to start with `status=HOST_FATAL_ERROR`
-
-These errors may occur when the serial communication between the ZigBee dongle and Zigbee2MQTT unexpectedly stops working.
-
-Possible reasons that may cause this error:
-
-1. The hardware connection between the host computer and the ZigBee dongle is unreliable.
-   In the following example a cheap USB cable causing unreliable connection is compared with a good USB cable:
-   ![good-vs-bad-usb-cable](../../images/good-vs-bad-usb-cable.jpg)
-   With such cheap cable it is enough to touch the cable to cause USB disconnections.
-
-2. Zigbee2MQTT is running in a Virtual Machine and the USB passthrough between the host and the VM is unreliable.
-   This can be caused by the virtualization environment, the USB hardware or a combination of both.
-   If these error appear, we can do something to reduce the complexity of the setup, improve stability and help investigating the usb connection with the host.
-   Instead of passing through to the VM the full USB device we passthrough the serial device.
-   The VM configuration changes from
-   host-(USB passtrough)->VM->USB-serial->serial(for Zigbee2MQTT configuration)
-   to
-   host-(serial passtrough)->VM->serial(for Zigbee2MQTT configuration)
-
-As an example, this is the procedure to passthrough the serial device to a Proxmox Home Assistant OS installation:
-
-- Add a serial0 (or serial1 or 2 or 3) to the proxmox VM hardware  
-  By default the serial port is a socket in the Proxmox hardware VM config ("serial0: socket") so we have to change this parameter in the VM configuration file /etc/pve/quemu-server/{VMID}.conf to point to the real serial device, for example: "serial0: /dev/serial/by-id/usb-ITEAD_SONOFF_Zigbee_3.0_USB_Dongle_Plus_V2_20240122184528-if00"
-- Free up the ttyS0 serial port from getty in Home Assistant OS  
-  In the VM this serial port passed through is recognized as ttyS0, but the Home Assistant OS systemd by default is spawning an agetty on /dev/ttyS0, in factin the file /mnt/boot/cmdline.txt kernel commandline parameters the ttyS0 is set as console (content is "console=ttyS0 console=tty0").
-  We have to change this cmdline.txt file in the VM so that systemd leaves ttyS0 alone without spawning agetty, therefore we remove the ttyS0 part and the cmdline.txt becomes "console=tty0".
-
-Now Zigbee2MQTT is able to reach the dongle through /dev/ttyS0 which is a "real" serial port inside the VM.
-Any issue with the USB device is logged by the host kernel and can be easily spotted with dmesg in this way we isolate them from the issues on the serial device.
