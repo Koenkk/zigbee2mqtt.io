@@ -209,7 +209,7 @@ This happens when you edit one or more of the `pan_id`, `network_key` or `ext_pa
 ext_pan_id: [0x39,0xaf,0x4d,0x83,0xh2,0xdc,0xb3,0x89]
 ```
 
-## Error: regular crashes with timeout errors or failure to start after the serial port is opened
+## Error: runtime crash with `status=HASH_ERROR_TIMEOUTS` or fail to start with `status=HOST_FATAL_ERROR`
 
 These errors may occur when the serial communication between the ZigBee dongle and Zigbee2MQTT unexpectedly stops working.
 
