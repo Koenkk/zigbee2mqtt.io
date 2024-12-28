@@ -29,9 +29,6 @@ The `## Notes` section of each page is written by hand and does not come from `z
 Docgen is written in Typescript, so you need a recent version of Node.js and NPM.
 
 ```bash
-# One-time initialize package-lock.json otherwise 'npm ci' may fail due tu dependancies
-npm install
-
 # Install dependencies
 pnpm i --frozen-lockfile
 
