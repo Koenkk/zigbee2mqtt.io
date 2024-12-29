@@ -1,7 +1,7 @@
 ---
 title: "YOKIS MTV300E-UP control via MQTT"
 description: "Integrate your YOKIS MTV300E-UP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2024-12-29T16:26:41
 pageClass: device-page
 ---
 
@@ -18,14 +18,12 @@ pageClass: device-page
 | Model | MTV300E-UP  |
 | Vendor  | [YOKIS](/supported-devices/#v=YOKIS)  |
 | Description | Remote dimmer with timer 300W |
-| Exposes | light (state, brightness), effect, identify, PrevState, eOnTimer, onTimer, ePreOnDelay, PreOnDelay, ePreOffDelay, PreOffDelay, PulseDuration, TimeType, LongOnDuration, OperatingMode, eStopAnnounce, StopAnnounceTime, eDeaf, DeafBlinkAmount, DeafBlinkTime, eBlink, BlinkAmount, BlinkOnTime, BlinkOffTime, StateAfterBlink, eNcCommand, moveToPositionCommand, pulseCommand, blinkCommand, deafBlinkCommand, longOnCommand, CurrentPosition, MemoryPosition, eRampUp, RampUp, eRampDown, RampDown, RampContinuousTime, StepUp, LowDimLimit, HighDimLimit, NightLightStartingDelay, NightLightStartingBrightness, NightLightEndingBrightness, NightLightRampTime, NightLightOnTime, FavoritePosition1, FavoritePosition2, FavoritePosition3, StepControllerMode, MemoryPositionMode, StepDown, StepContinuous, StepNightLigth, dimmerDim, DimmerUpDown, dimmerDimMinMax, DimmerMoveToFavorite1, DimmerStarnightModeCurrent, dimmerStartNightLightMode, linkquality |
+| Exposes | light (state, brightness), effect, identify, PrevState, onTimer, ePreOnDelay, PreOnDelay, ePreOffDelay, PreOffDelay, PulseDuration, TimeType, LongOnDuration, OperatingMode, eStopAnnounce, StopAnnounceTime, eDeaf, DeafBlinkAmount, DeafBlinkTime, eBlink, BlinkAmount, BlinkOnTime, BlinkOffTime, StateAfterBlink, eNcCommand, moveToPositionCommand, pulseCommand, blinkCommand, deafBlinkCommand, longOnCommand, uc_ResetAction, RelaunchBleAdvert, eShortPress, eLongPress, LongPressDuration, TimeBetweenPress, eR12MLongPress, eLocalConfigLock, powerFailureMode, CurrentPosition, MemoryPosition, eRampUp, RampUp, eRampDown, RampDown, RampContinuousTime, StepUp, LowDimLimit, HighDimLimit, NightLightStartingDelay, NightLightStartingBrightness, NightLightEndingBrightness, NightLightRampTime, NightLightOnTime, FavoritePosition1, FavoritePosition2, FavoritePosition3, StepControllerMode, MemoryPositionMode, StepDown, StepContinuous, StepNightLigth, dimmerDim, DimmerUpDown, dimmerDimMinMax, DimmerMoveToFavorite1, DimmerStarnightModeCurrent, dimmerStartNightLightMode, linkquality |
 | Picture | ![YOKIS MTV300E-UP](https://www.zigbee2mqtt.io/images/devices/MTV300E-UP.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 - [CSA product page](https://csa-iot.org/csa_product/mtv300e-up/)
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -95,15 +93,8 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 If value equals `ON` prevState is ON, if `OFF` OFF.
 
-### EOnTimer (binary)
-Enable (0x01) / Disable (0x00) use of onTimer..
-Value can be found in the published state on the `eOnTimer` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eOnTimer": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eOnTimer": NEW_VALUE}`.
-If value equals `ON` eOnTimer is ON, if `OFF` OFF.
-
 ### OnTimer (numeric)
-Define the ON embedded timer duration in seconds..
+Define the ON embedded timer duration in seconds. A `0` value will deactivate the timer.
 Value can be found in the published state on the `onTimer` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"onTimer": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"onTimer": NEW_VALUE}`.
@@ -111,14 +102,14 @@ The minimal value is `0` and the maximum value is `3600`.
 The unit of this value is `s`.
 
 ### EPreOnDelay (binary)
-Enable (0x01) / Disable (0x00) PreOn delay..
+Enable (`0x01`) / Disable (`0x00`) PreOn delay.
 Value can be found in the published state on the `ePreOnDelay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ePreOnDelay": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ePreOnDelay": NEW_VALUE}`.
 If value equals `ON` ePreOnDelay is ON, if `OFF` OFF.
 
 ### PreOnDelay (numeric)
-Define the PreOn embedded delay in seconds..
+Define the PreOn embedded delay in seconds.
 Value can be found in the published state on the `PreOnDelay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"PreOnDelay": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"PreOnDelay": NEW_VALUE}`.
@@ -126,14 +117,14 @@ The minimal value is `0` and the maximum value is `3600`.
 The unit of this value is `s`.
 
 ### EPreOffDelay (binary)
-Enable (0x01) / Disable (0x00) PreOff delay..
+Enable (`0x01`) / Disable (`0x00`) PreOff delay.
 Value can be found in the published state on the `ePreOffDelay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ePreOffDelay": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ePreOffDelay": NEW_VALUE}`.
 If value equals `ON` ePreOffDelay is ON, if `OFF` OFF.
 
 ### PreOffDelay (numeric)
-Define the PreOff embedded delay in seconds..
+Define the PreOff embedded delay in seconds.
 Value can be found in the published state on the `PreOffDelay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"PreOffDelay": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"PreOffDelay": NEW_VALUE}`.
@@ -141,7 +132,7 @@ The minimal value is `0` and the maximum value is `3600`.
 The unit of this value is `s`.
 
 ### PulseDuration (numeric)
-Set the value of ON pulse length..
+Set the value of ON pulse length.
 Value can be found in the published state on the `PulseDuration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"PulseDuration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"PulseDuration": NEW_VALUE}`.
@@ -176,7 +167,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `Timer`, `Staircase`, `Pulse`.
 
 ### EStopAnnounce (binary)
-Enable (0x01) / Disable (0x00) the announcement before turning OFF.
+Enable (`0x01`) / Disable (`0x00`) the announcement before turning OFF.
 Value can be found in the published state on the `eStopAnnounce` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eStopAnnounce": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eStopAnnounce": NEW_VALUE}`.
@@ -191,14 +182,14 @@ The minimal value is `0` and the maximum value is `4233600`.
 The unit of this value is `s`.
 
 ### EDeaf (binary)
-Enable (0x01) / Disable (0x00) Deaf Actions.
+Enable (`0x01`) / Disable (`0x00`) Deaf Actions.
 Value can be found in the published state on the `eDeaf` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eDeaf": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eDeaf": NEW_VALUE}`.
 If value equals `ON` eDeaf is ON, if `OFF` OFF.
 
 ### DeafBlinkAmount (numeric)
-Define number of blink to do when receiving the DEAF action. One blink is considered as one ON step followed by one OFF step..
+Define number of blink to do when receiving the DEAF action. One blink is considered as one ON step followed by one OFF step.
 Value can be found in the published state on the `DeafBlinkAmount` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"DeafBlinkAmount": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"DeafBlinkAmount": NEW_VALUE}`.
@@ -212,14 +203,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `100` and the maximum value is `20000`.
 
 ### EBlink (binary)
-Enable (0x01) / Disable (0x00) Blink  Actions.
+Enable (`0x01`) / Disable (`0x00`) Blink  Actions.
 Value can be found in the published state on the `eBlink` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eBlink": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eBlink": NEW_VALUE}`.
 If value equals `ON` eBlink is ON, if `OFF` OFF.
 
 ### BlinkAmount (numeric)
-Number of blinks done when receiving the corresponding order. One blink is considered as one ON step followed by one OFF step..
+Number of blinks done when receiving the corresponding order. One blink is considered as one ON step followed by one OFF step.
 Value can be found in the published state on the `BlinkAmount` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"BlinkAmount": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"BlinkAmount": NEW_VALUE}`.
@@ -269,7 +260,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move
 - `ul_TransitionTime` (numeric) 
 
 ### PulseCommand (composite)
-This command allows the relay to be controlled with an impulse. The pulse time is defined by PulseLength..
+This command allows the relay to be controlled with an impulse. The pulse time is defined by PulseLength.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pulseProp": {"pulseLength": VALUE}}`
 - `pulseLength` (numeric): Pulse length max value is 65535, unit is ms
 
@@ -283,12 +274,12 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"blin
 - `b_DoPeriodicCycle` (binary): If set to true the blinking will be “infinite” allowed values: `true` or `false`
 
 ### DeafBlinkCommand (composite)
-Start a deaf sequene on a device only if the attribute “eDeaf” is set to Enable..
+Start a deaf sequene on a device only if the attribute “eDeaf” is set to Enable.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"deafBlinkProp": {"uc_BlinkAmount": VALUE, "ul_BlinkOnTime": VALUE, "uc_SequenceAmount": VALUE, "tuc_BlinkAmount": VALUE}}`
-- `uc_BlinkAmount` (numeric): If defined will force the number of blink to be done during one sequence (only for this order).if not the device will use its own value. 
+- `uc_BlinkAmount` (numeric): If defined will force the number of blink to be done during one sequence (only for this order).if not the device will use its own value 
 - `ul_BlinkOnTime` (numeric): If defined will force the blink’s “on time” (only for this order) if not the device will use its own value 
 - `uc_SequenceAmount` (numeric): If defined will set the number of sequence to be done. Each sequence is spaced by 1 second. (Max 6) max value is 6
-- `tuc_BlinkAmount` (list): Array with the number of blink to be done for each sequence. Will override “uc_BlinkAmount“. 
+- `tuc_BlinkAmount` (list): Array with the number of blink to be done for each sequence. Will override “uc_BlinkAmount“ 
 
 ### LongOnCommand (enum)
 Ititiate long duration on.
@@ -296,6 +287,71 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"longOnCommand": NEW_VALUE}`.
 The possible values are: `longOnAction`.
+
+### Uc ResetAction (enum)
+Ititiate long duration on.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"uc_ResetAction": NEW_VALUE}`.
+The possible values are: `Factory reset`, `Configuration Reset`, `Network Reset`.
+
+### RelaunchBleAdvert (enum)
+Relaunch BLE advertising for 15 minutes.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"RelaunchBleAdvert": NEW_VALUE}`.
+The possible values are: `RelaunchBle`.
+
+### EShortPress (binary)
+Use to enable short press action.
+Value can be found in the published state on the `eShortPress` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eShortPress": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eShortPress": NEW_VALUE}`.
+If value equals `ON` eShortPress is ON, if `OFF` OFF.
+
+### ELongPress (binary)
+Use to enable long press action.
+Value can be found in the published state on the `eLongPress` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eLongPress": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eLongPress": NEW_VALUE}`.
+If value equals `ON` eLongPress is ON, if `OFF` OFF.
+
+### LongPressDuration (numeric)
+Define long Press duration in milliseconds.
+Value can be found in the published state on the `LongPressDuration` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"LongPressDuration": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"LongPressDuration": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `5000`.
+The unit of this value is `ms`.
+
+### TimeBetweenPress (numeric)
+Define the maximum time between 2 press to keep in a sequence (In milliseconds).
+Value can be found in the published state on the `TimeBetweenPress` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"TimeBetweenPress": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"TimeBetweenPress": NEW_VALUE}`.
+The minimal value is `100` and the maximum value is `600`.
+The unit of this value is `ms`.
+
+### ER12MLongPress (binary)
+Enable R12M Long Press action.
+Value can be found in the published state on the `eR12MLongPress` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eR12MLongPress": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eR12MLongPress": NEW_VALUE}`.
+If value equals `ON` eR12MLongPress is ON, if `OFF` OFF.
+
+### ELocalConfigLock (binary)
+Disable local configuration.
+Value can be found in the published state on the `eLocalConfigLock` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eLocalConfigLock": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eLocalConfigLock": NEW_VALUE}`.
+If value equals `ON` eLocalConfigLock is ON, if `OFF` OFF.
+
+### PowerFailureMode (enum)
+Define the device behavior after power failure.
+Value can be found in the published state on the `powerFailureMode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"powerFailureMode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"powerFailureMode": NEW_VALUE}`.
+The possible values are: `last_state`, `off`, `on`, `blink`.
 
 ### CurrentPosition (numeric)
 This attribute defines the current position, in %.
@@ -310,42 +366,42 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 
 ### ERampUp (binary)
-This attribute defines if a ramp up should be used or not..
+This attribute defines if a ramp up should be used or not.
 Value can be found in the published state on the `eRampUp` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eRampUp": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eRampUp": NEW_VALUE}`.
 If value equals `ON` eRampUp is ON, if `OFF` OFF.
 
 ### RampUp (numeric)
-This attribute defines the time taken during the ramp up in ms..
+This attribute defines the time taken during the ramp up in ms.
 Value can be found in the published state on the `RampUp` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"RampUp": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"RampUp": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `86400000`.
 
 ### ERampDown (binary)
-This attribute defines if a ramp down should be used or not..
+This attribute defines if a ramp down should be used or not.
 Value can be found in the published state on the `eRampDown` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eRampDown": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eRampDown": NEW_VALUE}`.
 If value equals `ON` eRampDown is ON, if `OFF` OFF.
 
 ### RampDown (numeric)
-This attribute defines the time taken during the ramp down in ms..
+This attribute defines the time taken during the ramp down in ms.
 Value can be found in the published state on the `RampDown` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"RampDown": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"RampDown": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `86400000`.
 
 ### RampContinuousTime (numeric)
-This attribute defines the time taken during the ramp loop in ms..
+This attribute defines the time taken during the ramp loop in ms.
 Value can be found in the published state on the `RampContinuousTime` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"RampContinuousTime": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"RampContinuousTime": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `86400000`.
 
 ### StepUp (numeric)
-This attribute defines the value of each step during a dimming up. This value is set in %..
+This attribute defines the value of each step during a dimming up. This value is set in %.
 Value can be found in the published state on the `StepUp` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"StepUp": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"StepUp": NEW_VALUE}`.
@@ -366,91 +422,91 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `100`.
 
 ### NightLightStartingDelay (numeric)
-This attribute defines the time before the nightlight begin. This value is set in seconds..
+This attribute defines the time before the nightlight begin. This value is set in seconds.
 Value can be found in the published state on the `NightLightStartingDelay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"NightLightStartingDelay": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"NightLightStartingDelay": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `4294967294`.
 
 ### NightLightStartingBrightness (numeric)
-This attribute defines the dimming value at the start of the nightlight. This value is set in %..
+This attribute defines the dimming value at the start of the nightlight. This value is set in %.
 Value can be found in the published state on the `NightLightStartingBrightness` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"NightLightStartingBrightness": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"NightLightStartingBrightness": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### NightLightEndingBrightness (numeric)
-This attribute defines the dimming value at the last step of the nightlight. This attribute must be lower than 0x000D : Nightlight starting brightness. This value is set in %..
+This attribute defines the dimming value at the last step of the nightlight. This attribute must be lower than 0x000D : Nightlight starting brightness. This value is set in %.
 Value can be found in the published state on the `NightLightEndingBrightness` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"NightLightEndingBrightness": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"NightLightEndingBrightness": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### NightLightRampTime (numeric)
-This attribute defines the ramp duration of the nightlight. The ramp is running after the end of the starting delay and until the ending bright is reached. This value is set in seconds..
+This attribute defines the ramp duration of the nightlight. The ramp is running after the end of the starting delay and until the ending bright is reached. This value is set in seconds.
 Value can be found in the published state on the `NightLightRampTime` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"NightLightRampTime": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"NightLightRampTime": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `86400000`.
 
 ### NightLightOnTime (numeric)
-This attribute defines the total duration of the nightlight. It must not be lower than 0x000F : Nightlight ramp time. This value is set in seconds..
+This attribute defines the total duration of the nightlight. It must not be lower than 0x000F : Nightlight ramp time. This value is set in seconds.
 Value can be found in the published state on the `NightLightOnTime` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"NightLightOnTime": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"NightLightOnTime": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `4233600`.
 
 ### FavoritePosition1 (numeric)
-This attribute defines the value of the favorite position 1. This value is set in %..
+This attribute defines the value of the favorite position 1. This value is set in %.
 Value can be found in the published state on the `FavoritePosition1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"FavoritePosition1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"FavoritePosition1": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### FavoritePosition2 (numeric)
-This attribute defines the value of the favorite position 2. This value is set in %..
+This attribute defines the value of the favorite position 2. This value is set in %.
 Value can be found in the published state on the `FavoritePosition2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"FavoritePosition2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"FavoritePosition2": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### FavoritePosition3 (numeric)
-This attribute defines the value of the favorite position 3. This value is set in %..
+This attribute defines the value of the favorite position 3. This value is set in %.
 Value can be found in the published state on the `FavoritePosition3` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"FavoritePosition3": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"FavoritePosition3": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### StepControllerMode (binary)
-This attribute enables or disables the 2-step controller mode. This mode enable product to run without any ramp before and after ON or OFF. It acts like a relay..
+This attribute enables or disables the 2-step controller mode. This mode enable product to run without any ramp before and after ON or OFF. It acts like a relay.
 Value can be found in the published state on the `StepControllerMode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"StepControllerMode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"StepControllerMode": NEW_VALUE}`.
 If value equals `ON` stepControllerMode is ON, if `OFF` OFF.
 
 ### MemoryPositionMode (binary)
-This attribute enables or disables the memory position mode at first push button release. .
+This attribute enables or disables the memory position mode at first push button release.
 Value can be found in the published state on the `MemoryPositionMode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"MemoryPositionMode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"MemoryPositionMode": NEW_VALUE}`.
 If value equals `ON` memoryPositionMode is ON, if `OFF` OFF.
 
 ### StepDown (numeric)
-This attribute defines the value of each step during a dimming down. This value is set in %..
+This attribute defines the value of each step during a dimming down. This value is set in %.
 Value can be found in the published state on the `StepDown` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"StepDown": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"StepDown": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### StepContinuous (numeric)
-This attribute defines the value of each step during a dimming loop. This value is set in %..
+This attribute defines the value of each step during a dimming loop. This value is set in %.
 Value can be found in the published state on the `StepContinuous` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"StepContinuous": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"StepContinuous": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 
 ### StepNightLigth (numeric)
-This attribute defines the value of each step during the ramp down of the nightlight mode. This value is set in %..
+This attribute defines the value of each step during the ramp down of the nightlight mode. This value is set in %.
 Value can be found in the published state on the `StepNightLigth` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"StepNightLigth": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"StepNightLigth": NEW_VALUE}`.
@@ -459,8 +515,8 @@ The minimal value is `0` and the maximum value is `100`.
 ### DimmerDim (composite)
 Start the dimming loop process for the selected duration..
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimProp": {"ul_RampContinuousDuration": VALUE, "uc_StepContinuous": VALUE}}`
-- `ul_RampContinuousDuration` (numeric): Set the duration of the ramp for the continuous variation, otherwise use 0xFFFFFFFF to use the one configured in the product. unit is ms
-- `uc_StepContinuous` (numeric): Set the step size, otherwise use 0xFF to use the one configured in the product.. Value is in %. unit is s
+- `ul_RampContinuousDuration` (numeric): Set the duration of the ramp for the continuous variation, otherwise use 0xFFFFFFFF to use the one configured in the product unit is ms
+- `uc_StepContinuous` (numeric): Set the step size, otherwise use 0xFF to use the one configured in the product. Value is in % unit is s
 
 ### DimmerUpDown (enum)
 Dim up or Down.
@@ -472,7 +528,7 @@ The possible values are: `dimUp`, `dimDown`.
 ### DimmerDimMinMax (composite)
 Start dimming to the min or max value set in the device.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimMinMaxProp": {"ul_TransitionTime": VALUE, "action": VALUE}}`
-- `ul_TransitionTime` (numeric): Set the transition time to the selected value, otherwise use 0xFFFFFFFF to use the one configured in the product. Value is in ms. unit is ms
+- `ul_TransitionTime` (numeric): Set the transition time to the selected value, otherwise use 0xFFFFFFFF to use the one configured in the product. Value is in ms unit is ms
 - `action` (enum) allowed values: `dimToMin`, `dimToMax`
 
 ### DimmerMoveToFavorite1 (enum)
@@ -492,12 +548,12 @@ The possible values are: `startNightLightModeCurrent`.
 ### DimmerStartNightLightMode (composite)
 Start the nightlight mode with the given parameters.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimmerStartNightLightModeProp": {"ul_ChildModeStartingDelay": VALUE, "uc_ChildModeBrightnessStart": VALUE, "uc_ChildModeBrightnessEnd": VALUE, "ul_ChildModeRampDuration": VALUE, "ul_ChildModeOnDuration": VALUE, "uc_ChildStep": VALUE}}`
-- `ul_ChildModeStartingDelay` (numeric): Set the starting delay value, used before the start of the nightlight, otherwise use 0xFFFFFFFF to use the one configured in the product. Value is in ms. unit is ms
-- `uc_ChildModeBrightnessStart` (numeric): Set the brightness at the beginning of the ramp, otherwise use 0xFF to use the one configured in the product. Value is in %. unit is %
-- `uc_ChildModeBrightnessEnd` (numeric): Set the brightness at the end of the ramp, otherwise use 0xFF to use the one configured in the product. Value is in %. unit is %
-- `ul_ChildModeRampDuration` (numeric): Set the ramp duration, otherwise use 0xFFFFFFFF to use the one configured in the product. Value is in ms. unit is ms
-- `ul_ChildModeOnDuration` (numeric): Set the total duration of the nightlight, otherwise use 0xFFFFFFFF to use the one configured in the product. Value is in ms. unit is ms
-- `uc_ChildStep` (numeric): Set the step size between each dim, otherwise use 0xFF to use the one configured in the product. Value is in %. unit is %
+- `ul_ChildModeStartingDelay` (numeric): Set the starting delay value, used before the start of the nightlight, otherwise use 0xFFFFFFFF to use the one configured in the product. Value is in ms unit is ms
+- `uc_ChildModeBrightnessStart` (numeric): Set the brightness at the beginning of the ramp, otherwise use 0xFF to use the one configured in the product. Value is in % unit is %
+- `uc_ChildModeBrightnessEnd` (numeric): Set the brightness at the end of the ramp, otherwise use 0xFF to use the one configured in the product. Value is in % unit is %
+- `ul_ChildModeRampDuration` (numeric): Set the ramp duration, otherwise use 0xFFFFFFFF to use the one configured in the product. Value is in ms unit is ms
+- `ul_ChildModeOnDuration` (numeric): Set the total duration of the nightlight, otherwise use 0xFFFFFFFF to use the one configured in the product. Value is in ms unit is ms
+- `uc_ChildStep` (numeric): Set the step size between each dim, otherwise use 0xFF to use the one configured in the product. Value is in % unit is %
 
 ### Linkquality (numeric)
 Link quality (signal strength).

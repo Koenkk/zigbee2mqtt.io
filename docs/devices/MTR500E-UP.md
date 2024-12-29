@@ -1,7 +1,7 @@
 ---
 title: "YOKIS MTR500E-UP control via MQTT"
 description: "Integrate your YOKIS MTR500E-UP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2024-12-29T16:26:41
 pageClass: device-page
 ---
 
@@ -18,18 +18,16 @@ pageClass: device-page
 | Model | MTR500E-UP  |
 | Vendor  | [YOKIS](/supported-devices/#v=YOKIS)  |
 | Description | Remote power switch with timer 500W |
-| Exposes | switch (state), identify, PrevState, eOnTimer, onTimer, ePreOnDelay, PreOnDelay, ePreOffDelay, PreOffDelay, PulseDuration, TimeType, LongOnDuration, OperatingMode, eStopAnnounce, StopAnnounceTime, eDeaf, DeafBlinkAmount, DeafBlinkTime, eBlink, BlinkAmount, BlinkOnTime, BlinkOffTime, StateAfterBlink, eNcCommand, moveToPositionCommand, pulseCommand, blinkCommand, deafBlinkCommand, longOnCommand, ConfigurationChanged, uc_ResetAction, RelaunchBleAdvert, OpenNetworkCommand, InputMode, ContactMode, LastLocalCommandState, LastBPConnectState, BacklightIntensity, SendPress, SendRelease, uc_InputMode, eShortPress, eLongPress, LongPressDuration, TimeBetweenPress, eR12MLongPress, eLocalConfigLock, powerFailureMode, linkquality |
+| Exposes | switch (state), identify, PrevState, onTimer, ePreOnDelay, PreOnDelay, ePreOffDelay, PreOffDelay, PulseDuration, TimeType, LongOnDuration, OperatingMode, eStopAnnounce, StopAnnounceTime, eDeaf, DeafBlinkAmount, DeafBlinkTime, eBlink, BlinkAmount, BlinkOnTime, BlinkOffTime, StateAfterBlink, eNcCommand, moveToPositionCommand, pulseCommand, blinkCommand, deafBlinkCommand, longOnCommand, uc_ResetAction, RelaunchBleAdvert, eShortPress, eLongPress, LongPressDuration, TimeBetweenPress, eR12MLongPress, eLocalConfigLock, powerFailureMode, linkquality |
 | Picture | ![YOKIS MTR500E-UP](https://www.zigbee2mqtt.io/images/devices/MTR500E-UP.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 
 - [CSA product page](https://csa-iot.org/csa_product/mtr500e-up/)
 - `On with timed off` is not supported by this device. Use `OnTimer` instead.
 - `powerOnBehavior` from the OnOff cluster is not supported but `powerFailureMode` has the same purpose.
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -69,15 +67,8 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 If value equals `ON` prevState is ON, if `OFF` OFF.
 
-### EOnTimer (binary)
-Enable (0x01) / Disable (0x00) use of onTimer..
-Value can be found in the published state on the `eOnTimer` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eOnTimer": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eOnTimer": NEW_VALUE}`.
-If value equals `ON` eOnTimer is ON, if `OFF` OFF.
-
 ### OnTimer (numeric)
-Define the ON embedded timer duration in seconds..
+Define the ON embedded timer duration in seconds. A `0` value will deactivate the timer.
 Value can be found in the published state on the `onTimer` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"onTimer": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"onTimer": NEW_VALUE}`.
@@ -85,14 +76,14 @@ The minimal value is `0` and the maximum value is `3600`.
 The unit of this value is `s`.
 
 ### EPreOnDelay (binary)
-Enable (0x01) / Disable (0x00) PreOn delay..
+Enable (`0x01`) / Disable (`0x00`) PreOn delay.
 Value can be found in the published state on the `ePreOnDelay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ePreOnDelay": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ePreOnDelay": NEW_VALUE}`.
 If value equals `ON` ePreOnDelay is ON, if `OFF` OFF.
 
 ### PreOnDelay (numeric)
-Define the PreOn embedded delay in seconds..
+Define the PreOn embedded delay in seconds.
 Value can be found in the published state on the `PreOnDelay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"PreOnDelay": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"PreOnDelay": NEW_VALUE}`.
@@ -100,14 +91,14 @@ The minimal value is `0` and the maximum value is `3600`.
 The unit of this value is `s`.
 
 ### EPreOffDelay (binary)
-Enable (0x01) / Disable (0x00) PreOff delay..
+Enable (`0x01`) / Disable (`0x00`) PreOff delay.
 Value can be found in the published state on the `ePreOffDelay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ePreOffDelay": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ePreOffDelay": NEW_VALUE}`.
 If value equals `ON` ePreOffDelay is ON, if `OFF` OFF.
 
 ### PreOffDelay (numeric)
-Define the PreOff embedded delay in seconds..
+Define the PreOff embedded delay in seconds.
 Value can be found in the published state on the `PreOffDelay` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"PreOffDelay": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"PreOffDelay": NEW_VALUE}`.
@@ -115,7 +106,7 @@ The minimal value is `0` and the maximum value is `3600`.
 The unit of this value is `s`.
 
 ### PulseDuration (numeric)
-Set the value of ON pulse length..
+Set the value of ON pulse length.
 Value can be found in the published state on the `PulseDuration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"PulseDuration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"PulseDuration": NEW_VALUE}`.
@@ -150,7 +141,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `Timer`, `Staircase`, `Pulse`.
 
 ### EStopAnnounce (binary)
-Enable (0x01) / Disable (0x00) the announcement before turning OFF.
+Enable (`0x01`) / Disable (`0x00`) the announcement before turning OFF.
 Value can be found in the published state on the `eStopAnnounce` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eStopAnnounce": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eStopAnnounce": NEW_VALUE}`.
@@ -165,14 +156,14 @@ The minimal value is `0` and the maximum value is `4233600`.
 The unit of this value is `s`.
 
 ### EDeaf (binary)
-Enable (0x01) / Disable (0x00) Deaf Actions.
+Enable (`0x01`) / Disable (`0x00`) Deaf Actions.
 Value can be found in the published state on the `eDeaf` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eDeaf": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eDeaf": NEW_VALUE}`.
 If value equals `ON` eDeaf is ON, if `OFF` OFF.
 
 ### DeafBlinkAmount (numeric)
-Define number of blink to do when receiving the DEAF action. One blink is considered as one ON step followed by one OFF step..
+Define number of blink to do when receiving the DEAF action. One blink is considered as one ON step followed by one OFF step.
 Value can be found in the published state on the `DeafBlinkAmount` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"DeafBlinkAmount": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"DeafBlinkAmount": NEW_VALUE}`.
@@ -186,14 +177,14 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `100` and the maximum value is `20000`.
 
 ### EBlink (binary)
-Enable (0x01) / Disable (0x00) Blink  Actions.
+Enable (`0x01`) / Disable (`0x00`) Blink  Actions.
 Value can be found in the published state on the `eBlink` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"eBlink": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"eBlink": NEW_VALUE}`.
 If value equals `ON` eBlink is ON, if `OFF` OFF.
 
 ### BlinkAmount (numeric)
-Number of blinks done when receiving the corresponding order. One blink is considered as one ON step followed by one OFF step..
+Number of blinks done when receiving the corresponding order. One blink is considered as one ON step followed by one OFF step.
 Value can be found in the published state on the `BlinkAmount` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"BlinkAmount": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"BlinkAmount": NEW_VALUE}`.
@@ -243,7 +234,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"move
 - `ul_TransitionTime` (numeric) 
 
 ### PulseCommand (composite)
-This command allows the relay to be controlled with an impulse. The pulse time is defined by PulseLength..
+This command allows the relay to be controlled with an impulse. The pulse time is defined by PulseLength.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pulseProp": {"pulseLength": VALUE}}`
 - `pulseLength` (numeric): Pulse length max value is 65535, unit is ms
 
@@ -257,12 +248,12 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"blin
 - `b_DoPeriodicCycle` (binary): If set to true the blinking will be “infinite” allowed values: `true` or `false`
 
 ### DeafBlinkCommand (composite)
-Start a deaf sequene on a device only if the attribute “eDeaf” is set to Enable..
+Start a deaf sequene on a device only if the attribute “eDeaf” is set to Enable.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"deafBlinkProp": {"uc_BlinkAmount": VALUE, "ul_BlinkOnTime": VALUE, "uc_SequenceAmount": VALUE, "tuc_BlinkAmount": VALUE}}`
-- `uc_BlinkAmount` (numeric): If defined will force the number of blink to be done during one sequence (only for this order).if not the device will use its own value. 
+- `uc_BlinkAmount` (numeric): If defined will force the number of blink to be done during one sequence (only for this order).if not the device will use its own value 
 - `ul_BlinkOnTime` (numeric): If defined will force the blink’s “on time” (only for this order) if not the device will use its own value 
 - `uc_SequenceAmount` (numeric): If defined will set the number of sequence to be done. Each sequence is spaced by 1 second. (Max 6) max value is 6
-- `tuc_BlinkAmount` (list): Array with the number of blink to be done for each sequence. Will override “uc_BlinkAmount“. 
+- `tuc_BlinkAmount` (list): Array with the number of blink to be done for each sequence. Will override “uc_BlinkAmount“ 
 
 ### LongOnCommand (enum)
 Ititiate long duration on.
@@ -270,13 +261,6 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"longOnCommand": NEW_VALUE}`.
 The possible values are: `longOnAction`.
-
-### ConfigurationChanged (numeric)
-Indicate if the device configuration has changed. 0 to 0xFFFE -> No Change, 0xFFFF -> Change have been detected.
-Value can be found in the published state on the `ConfigurationChanged` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ConfigurationChanged": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `3600`.
 
 ### Uc ResetAction (enum)
 Ititiate long duration on.
@@ -291,74 +275,6 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"RelaunchBleAdvert": NEW_VALUE}`.
 The possible values are: `RelaunchBle`.
-
-### OpenNetworkCommand (composite)
-Open ZigBee network.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"OpenNetworkProp": {"uc_OpeningTime": VALUE}}`
-- `uc_OpeningTime` (numeric): Opening time wanted from 1 to 255 seconds,0 means closing the network. max value is 255, unit is s
-
-### InputMode (enum)
-Indicate how the input should be handle:
-        - 0 -> Unknow
-        - 1 -> Push button
-        - 2 -> Switch
-        - 3 -> Relay
-        - 4 -> FP_IN.
-Value can be found in the published state on the `InputMode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"InputMode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"InputMode": NEW_VALUE}`.
-The possible values are: `Unknown`, `Push button`, `Switch`, `Relay`, `FP_IN`.
-
-### ContactMode (enum)
-Indicate the contact nature of the entry:
-        - 0 -> NC
-        - 1 -> NO.
-Value can be found in the published state on the `ContactMode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ContactMode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ContactMode": NEW_VALUE}`.
-The possible values are: `NC`, `NO`.
-
-### LastLocalCommandState (binary)
-Indicate the last known state of the local BP.
-Value can be found in the published state on the `LastLocalCommandState` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"LastLocalCommandState": ""}`.
-It's not possible to write (`/set`) this value.
-If value equals `ON` lastLocalCommandState is ON, if `OFF` OFF.
-
-### LastBPConnectState (binary)
-Indicate the last known state of the Bp connect.
-Value can be found in the published state on the `LastBPConnectState` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"LastBPConnectState": ""}`.
-It's not possible to write (`/set`) this value.
-If value equals `ON` lastBPConnectState is ON, if `OFF` OFF.
-
-### BacklightIntensity (numeric)
-Indicate the backlight intensity applied on the keys. Only use for “Simon” product.
-Value can be found in the published state on the `BacklightIntensity` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"BacklightIntensity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"BacklightIntensity": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `100`.
-
-### SendPress (enum)
-Send to the server cluster a button press.
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"SendPress": NEW_VALUE}`.
-The possible values are: `SendPress`.
-
-### SendRelease (enum)
-Send to the server cluster a button release.
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"SendRelease": NEW_VALUE}`.
-The possible values are: `SendRelease`.
-
-### Uc InputMode (enum)
-Change the Input mode to use switch input, wired relay or simple push button.
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"uc_InputMode": NEW_VALUE}`.
-The possible values are: `Unknown`, `Push button`, `Switch`, `Relay`, `FP_IN`.
 
 ### EShortPress (binary)
 Use to enable short press action.
@@ -405,7 +321,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `ON` eLocalConfigLock is ON, if `OFF` OFF.
 
 ### PowerFailureMode (enum)
-Define the device behavior after power failure .
+Define the device behavior after power failure.
 Value can be found in the published state on the `powerFailureMode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"powerFailureMode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"powerFailureMode": NEW_VALUE}`.

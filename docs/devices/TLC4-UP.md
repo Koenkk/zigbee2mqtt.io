@@ -1,7 +1,7 @@
 ---
 title: "YOKIS TLC4-UP control via MQTT"
 description: "Integrate your YOKIS TLC4-UP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2024-12-29T16:26:41
 pageClass: device-page
 ---
 
@@ -23,9 +23,7 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 - [CSA product page](https://csa-iot.org/csa_product/tlc4-up/)
-
 <!-- Notes END: Do not edit below this line -->
 
 

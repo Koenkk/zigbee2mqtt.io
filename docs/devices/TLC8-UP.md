@@ -1,7 +1,7 @@
 ---
 title: "YOKIS TLC8-UP control via MQTT"
 description: "Integrate your YOKIS TLC8-UP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2024-12-29T16:26:41
 pageClass: device-page
 ---
 
@@ -18,14 +18,12 @@ pageClass: device-page
 | Model | TLC8-UP  |
 | Vendor  | [YOKIS](/supported-devices/#v=YOKIS)  |
 | Description | Keyring Design series 8-button remote control |
-| Exposes | identify, ConfigurationChanged, uc_ResetAction, RelaunchBleAdvert, OpenNetworkCommand, action, linkquality |
+| Exposes | identify, action, linkquality |
 | Picture | ![YOKIS TLC8-UP](https://www.zigbee2mqtt.io/images/devices/TLC8-UP.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 - [CSA product page](https://csa-iot.org/csa_product/tlc8-up/)
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -51,32 +49,6 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
 The possible values are: `identify`.
-
-### ConfigurationChanged (numeric)
-Indicate if the device configuration has changed. 0 to 0xFFFE -> No Change, 0xFFFF -> Change have been detected.
-Value can be found in the published state on the `ConfigurationChanged` property.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ConfigurationChanged": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `3600`.
-
-### Uc ResetAction (enum)
-Ititiate long duration on.
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"uc_ResetAction": NEW_VALUE}`.
-The possible values are: `Factory reset`, `Configuration Reset`, `Network Reset`.
-
-### RelaunchBleAdvert (enum)
-Relaunch BLE advertising for 15 minutes.
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"RelaunchBleAdvert": NEW_VALUE}`.
-The possible values are: `RelaunchBle`.
-
-### OpenNetworkCommand (composite)
-Open ZigBee network.
-Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"OpenNetworkProp": {"uc_OpeningTime": VALUE}}`
-- `uc_OpeningTime` (numeric): Opening time wanted from 1 to 255 seconds,0 means closing the network. max value is 255, unit is s
 
 ### Action (enum)
 Triggered action (e.g. a button click).
