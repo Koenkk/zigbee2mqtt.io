@@ -24,6 +24,7 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+- [CSA product page](https://csa-iot.org/csa_product/tlm1t503-up/)
 
 <!-- Notes END: Do not edit below this line -->
 
