@@ -57,6 +57,7 @@ The following Zigbee routers have already been confirmed to support (at least so
 | [Custom devices (DiY) TI Router](../../devices/ti.router.md)                        |    Y     |    N    |    Y    |
 | [IKEA E1603/E1702/E1708](../../devices/E1603_E1702_E1708.md)                        |    Y     |    N    |    Y    |
 | [IKEA E2204](../../devices/E2204.md)                                                |    Y     |    Y    |    Y    |
+| [IKEA LED2112](../../devices/LED2112.md)                                            |    Y     |    y    |    Y    |
 | [IKEA ICPSHC24-10EU-IL-2](../../devices/ICPSHC24-10EU-IL-1_ICPSHC24-10EU-IL-2.md)²  |    Y     |    Y    |    Y    |
 | [IKEA LED2101G4](../../devices/LED2101G4.md)                                        |    Y     |    Y    |    Y    |
 | [IKEA LED2103G5](../../devices/LED2103G5.md)                                        |    Y     |    Y    |    Y    |
