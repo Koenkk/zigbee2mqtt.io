@@ -76,7 +76,7 @@ sure to set `mqtt.version` to `5` (see `mqtt` configuration above)
 QoS level for MQTT messages of this device. [What is QoS?](https://www.npmjs.com/package/mqtt#about-qos)
 
 **`homeassistant`**  
-Allows overriding the values of the Home Assistant discovery payload. See example below.
+Allows overriding the values of the Home Assistant discovery payload. See example above.
 
 **`debounce`**  
 Debounces messages of this device. When setting e.g. `debounce: 1` and a message from a device is
