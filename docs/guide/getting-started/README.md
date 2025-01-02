@@ -72,6 +72,7 @@ First, we create a folder where we want the project to reside `mkdir folder-name
 version: '3.8'
 services:
     mqtt:
+        container_name: eclipse-mosquitto
         image: eclipse-mosquitto:2.0
         restart: unless-stopped
         volumes:
@@ -94,6 +95,7 @@ services:
             - TZ=Europe/Berlin
         devices:
             - /dev/ttyUSB0:/dev/ttyUSB0
+        network_mode: host
 ```
 
 In the next step we'll create a simple [Zigbee2MQTT config file](../configuration/) in `zigbee2mqtt-data/configuration.yaml`.
