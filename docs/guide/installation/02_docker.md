@@ -110,6 +110,10 @@ $ podman run \
    koenkk/zigbee2mqtt
 ```
 
+::: tip
+With SELinux enabled you may need to append a `:z` suffix to the volume mount: `-v $(pwd)/data:/app/data:z`
+:::
+
 ## Updating
 
 To update to the latest Docker image:
