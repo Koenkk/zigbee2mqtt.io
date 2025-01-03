@@ -1,6 +1,6 @@
 ---
-title: "YOKIS E2BP-UP control via MQTT"
-description: "Integrate your YOKIS E2BP-UP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "YOKIS E2BPA-UP control via MQTT"
+description: "Integrate your YOKIS E2BPA-UP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-12-29T16:26:41
 pageClass: device-page
 ---
@@ -11,19 +11,19 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# YOKIS E2BP-UP
+# YOKIS E2BPA-UP
 
 |     |     |
 |-----|-----|
-| Model | E2BP-UP  |
+| Model | E2BPA-UP  |
 | Vendor  | [YOKIS](/supported-devices/#v=YOKIS)  |
-| Description | Flush-mounted independent 2-channel transmitter |
-| Exposes | identify, action |
-| Picture | ![YOKIS E2BP-UP](https://www.zigbee2mqtt.io/images/devices/E2BP-UP.png) |
+| Description | Flush-mounted independent 2-channel transmitter (main powered) |
+| Exposes | identify, action, linkquality |
+| Picture | ![YOKIS E2BPA-UP](https://www.zigbee2mqtt.io/images/devices/E2BPA-UP.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-- [CSA product page](https://csa-iot.org/csa_product/e2bp-up/)
+- [CSA product page](https://csa-iot.org/csa_product/e2bpa-up/)
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -55,4 +55,11 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `toggle`, `brightness_move_to_level`, `brightness_move_up`, `brightness_move_down`, `brightness_step_up`, `brightness_step_down`, `brightness_stop`, `open`, `close`, `stop`.
+
+### Linkquality (numeric)
+Link quality (signal strength).
+Value can be found in the published state on the `linkquality` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+The unit of this value is `lqi`.
 
