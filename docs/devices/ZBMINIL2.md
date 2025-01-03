@@ -13,13 +13,13 @@ pageClass: device-page
 
 # SONOFF ZBMINIL2
 
-|             |                                                                            |
-| ----------- | -------------------------------------------------------------------------- |
-| Model       | ZBMINIL2                                                                   |
-| Vendor      | [SONOFF](/supported-devices/#v=SONOFF)                                     |
-| Description | Zigbee smart switch (no neutral)                                           |
-| Exposes     | switch (state), power_on_behavior, linkquality                             |
-| Picture     | ![SONOFF ZBMINIL2](https://www.zigbee2mqtt.io/images/devices/ZBMINIL2.png) |
+|     |     |
+|-----|-----|
+| Model | ZBMINIL2  |
+| Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
+| Description | Zigbee smart switch (no neutral) |
+| Exposes | switch (state), power_on_behavior, linkquality |
+| Picture | ![SONOFF ZBMINIL2](https://www.zigbee2mqtt.io/images/devices/ZBMINIL2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -37,8 +37,8 @@ The device will stay in "state" : "OFF" and cannot be switched while it is in pa
 
 ## Change Switch Type
 The device supports rocker switch by default. If you want to change the switch type, press the button 3 times and see the green Led indicator flash 3 times quickly, then the switch type is switched successfully.
-
 <!-- Notes END: Do not edit below this line -->
+
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).

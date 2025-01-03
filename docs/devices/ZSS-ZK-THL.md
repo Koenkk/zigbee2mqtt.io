@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZSS-ZK-THL  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smart temperature and humidity meter with display |
-| Exposes | battery, illuminance, illuminance_lux, humidity, temperature, linkquality |
+| Exposes | battery, illuminance, humidity, temperature, linkquality |
 | Picture | ![Moes ZSS-ZK-THL](https://www.zigbee2mqtt.io/images/devices/ZSS-ZK-THL.png) |
 
 
@@ -46,8 +46,6 @@ The device reports illuminance variations instantly. Therefore temperature is re
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
-
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
@@ -67,13 +65,8 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

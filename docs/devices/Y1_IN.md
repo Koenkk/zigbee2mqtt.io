@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | Y1_IN  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart human presence sensor 24G |
-| Exposes | presence, illuminance_lux, keep_sensitivity, trigger_sensitivity, fading_time, target_distance, linkquality |
+| Exposes | presence, illuminance, keep_sensitivity, trigger_sensitivity, fading_time, target_distance, linkquality |
 | Picture | ![Tuya Y1_IN](https://www.zigbee2mqtt.io/images/devices/Y1_IN.png) |
 
 
@@ -32,7 +32,7 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -43,9 +43,9 @@ Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TY_24G_Sensor_V2  |
 | Vendor  | [iHseno](/supported-devices/#v=iHseno)  |
 | Description | Human presence sensor 24G |
-| Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, linkquality |
+| Exposes | illuminance, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, linkquality |
 | Picture | ![iHseno TY_24G_Sensor_V2](https://www.zigbee2mqtt.io/images/devices/TY_24G_Sensor_V2.png) |
 
 
@@ -32,14 +32,14 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
 
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

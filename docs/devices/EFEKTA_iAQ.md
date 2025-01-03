@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_iAQ  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | CO2 Monitor with IPS TFT Display, outdoor temperature and humidity, date and time |
-| Exposes | co2, temperature, humidity, illuminance_lux, illuminance, auto_brightness, long_chart_period, set_altitude, temperature_offset, humidity_offset, forced_recalibration, factory_reset_co2, manual_forced_recalibration, linkquality |
+| Exposes | co2, temperature, humidity, illuminance, auto_brightness, long_chart_period, set_altitude, temperature_offset, humidity_offset, forced_recalibration, factory_reset_co2, manual_forced_recalibration, linkquality |
 | Picture | ![EFEKTA EFEKTA_iAQ](https://www.zigbee2mqtt.io/images/devices/EFEKTA_iAQ.png) |
 
 
@@ -41,8 +41,6 @@ pageClass: device-page
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -70,18 +68,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
-### Illuminance lux (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_lux": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `lx`.
-
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.
+The unit of this value is `lx`.
 
 ### Auto brightness (binary)
 Enable or Disable Auto Brightness of the Display.

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | KK-ES-J01W  |
 | Vendor  | [Konke](/supported-devices/#v=Konke)  |
 | Description | Temperature, relative humidity and illuminance sensor |
-| Exposes | battery, voltage, illuminance, illuminance_lux, humidity, temperature, linkquality |
+| Exposes | battery, voltage, illuminance, humidity, temperature, linkquality |
 | Picture | ![Konke KK-ES-J01W](https://www.zigbee2mqtt.io/images/devices/KK-ES-J01W.png) |
 
 
@@ -33,8 +33,6 @@ pageClass: device-page
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
@@ -61,13 +59,8 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

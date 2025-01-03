@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | VNTH-T2  |
 | Vendor  | [TECH](/supported-devices/#v=TECH)  |
 | Description | Smart radiator valve |
-| Exposes | lock (state), switch (state), window_open, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, preset, running_state), temperature_sensitivity, comfort_temperature, eco_temperature, holiday_temperature, min_temperature_limit, frost_protection, valve_alarm, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, linkquality |
+| Exposes | child_lock, switch (state), window_open, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, preset, running_state), temperature_sensitivity, comfort_temperature, eco_temperature, holiday_temperature, min_temperature_limit, frost_protection, valve_alarm, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, linkquality |
 | Picture | ![TECH VNTH-T2](https://www.zigbee2mqtt.io/images/devices/VNTH-T2.png) |
 
 
@@ -35,10 +35,12 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Exposes
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Window detection (switch)
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).

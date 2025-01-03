@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BAB-1413_Pro  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Thermostat radiator valve |
-| Exposes | battery, lock (state), max_temperature, min_temperature, switch (state), open_window_temperature, comfort_temperature, eco_temperature, holiday_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint, system_mode, running_state), frost_protection, boost_timeset_countdown, schedule, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, valve, factory_reset, error_status, linkquality |
+| Exposes | battery, child_lock, max_temperature, min_temperature, switch (state), open_window_temperature, comfort_temperature, eco_temperature, holiday_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint, system_mode, running_state), frost_protection, boost_timeset_countdown, schedule, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, valve, factory_reset, error_status, linkquality |
 | Picture | ![Tuya BAB-1413_Pro](https://www.zigbee2mqtt.io/images/devices/BAB-1413_Pro.png) |
 
 
@@ -46,10 +46,12 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Max temperature (numeric)
 Maximum temperature.

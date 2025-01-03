@@ -65,8 +65,6 @@ More detailed information about this can be found [here](https://community.hubit
 
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
-
 
 ## Exposes
 

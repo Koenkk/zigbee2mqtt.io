@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TYZGTH1CH-D1RF  |
 | Vendor  | [Mumubiz](/supported-devices/#v=Mumubiz)  |
 | Description | Smart switch with temperature/humidity sensor |
-| Exposes | switch (state), power_outage_memory, lock (state), temperature, humidity, temperature_calibration, humidity_calibration, temperature_sensitivity, humidity_sensitivity, manual_mode, auto_settings, linkquality |
+| Exposes | switch (state), power_outage_memory, child_lock, temperature, humidity, temperature_calibration, humidity_calibration, temperature_sensitivity, humidity_sensitivity, manual_mode, auto_settings, linkquality |
 | Picture | ![Mumubiz TYZGTH1CH-D1RF](https://www.zigbee2mqtt.io/images/devices/TYZGTH1CH-D1RF.png) |
 
 
@@ -63,10 +63,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 The possible values are: `on`, `off`, `restore`.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Temperature (numeric)
 Measured temperature value.

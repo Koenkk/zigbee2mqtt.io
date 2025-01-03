@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RADON TriTech ZB  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Wireless motion detector |
-| Exposes | temperature, battery, occupancy, battery_low, tamper, illuminance, illuminance_lux, linkquality |
+| Exposes | temperature, battery, occupancy, battery_low, tamper, illuminance, linkquality |
 | Picture | ![Bosch RADON TriTech ZB](https://www.zigbee2mqtt.io/images/devices/RADON-TriTech-ZB.png) |
 
 
@@ -37,8 +37,6 @@ pageClass: device-page
 * `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -75,13 +73,8 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

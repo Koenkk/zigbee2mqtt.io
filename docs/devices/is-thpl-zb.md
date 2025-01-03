@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | is-thpl-zb  |
 | Vendor  | [EFK](/supported-devices/#v=EFK)  |
 | Description | 4 in 1 multi sensor |
-| Exposes | occupancy, tamper, illuminance_lux, illuminance, temperature, humidity, battery, voltage, battery2, illuminance_calibration, temperature_calibration, humidity_calibration, reporting_enable, reporting_time, led_enable, pir_enable, sensitivity, keep_time, linkquality |
+| Exposes | occupancy, tamper, illuminance, temperature, humidity, battery, voltage, battery2, illuminance_calibration, temperature_calibration, humidity_calibration, reporting_enable, reporting_time, led_enable, pir_enable, sensitivity, keep_time, linkquality |
 | Picture | ![EFK is-thpl-zb](https://www.zigbee2mqtt.io/images/devices/is-thpl-zb.png) |
 
 
@@ -31,8 +31,6 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -59,16 +57,11 @@ Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
-
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
 
 ### Temperature (numeric)
 Measured temperature value.

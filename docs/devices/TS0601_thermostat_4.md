@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_thermostat_4  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Thermostatic radiator valve |
-| Exposes | lock (state), battery, battery_low, climate (current_heating_setpoint, local_temperature, preset, system_mode, local_temperature_calibration), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, holiday_temperature, comfort_temperature, eco_temperature, scale_protection, frost_protection, error, boost_heating, linkquality |
+| Exposes | child_lock, battery, battery_low, climate (current_heating_setpoint, local_temperature, preset, system_mode, local_temperature_calibration), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, holiday_temperature, comfort_temperature, eco_temperature, scale_protection, frost_protection, error, boost_heating, linkquality |
 | Picture | ![Tuya TS0601_thermostat_4](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat_4.png) |
 
 
@@ -32,10 +32,12 @@ pageClass: device-page
 
 ## Exposes
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.

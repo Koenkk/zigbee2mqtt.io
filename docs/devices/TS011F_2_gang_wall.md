@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS011F_2_gang_wall  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 gang wall outlet |
-| Exposes | switch (state), power_on_behavior, backlight_mode, lock (state), linkquality |
+| Exposes | switch (state), power_on_behavior, backlight_mode, child_lock, linkquality |
 | Picture | ![Tuya TS011F_2_gang_wall](https://www.zigbee2mqtt.io/images/devices/TS011F_2_gang_wall.png) |
 
 
@@ -76,10 +76,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
 The possible values are: `low`, `medium`, `high`.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

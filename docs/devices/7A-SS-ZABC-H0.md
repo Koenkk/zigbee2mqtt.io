@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | 7A-SS-ZABC-H0  |
 | Vendor  | [Leedarson](/supported-devices/#v=Leedarson)  |
 | Description | 4-in-1-Sensor |
-| Exposes | battery, occupancy, temperature, illuminance, illuminance_lux, humidity, linkquality |
+| Exposes | battery, occupancy, temperature, illuminance, humidity, linkquality |
 | Picture | ![Leedarson 7A-SS-ZABC-H0](https://www.zigbee2mqtt.io/images/devices/7A-SS-ZABC-H0.png) |
 
 
@@ -37,8 +37,6 @@ pageClass: device-page
 * `temperature_precision`: Number of digits after decimal point for temperature, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
@@ -67,13 +65,8 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

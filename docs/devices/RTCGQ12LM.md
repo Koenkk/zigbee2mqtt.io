@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RTCGQ12LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Motion sensor T1 |
-| Exposes | occupancy, illuminance_lux, illuminance, detection_interval, device_temperature, battery, voltage, power_outage_count, linkquality |
+| Exposes | occupancy, illuminance, detection_interval, device_temperature, battery, voltage, power_outage_count, linkquality |
 | Picture | ![Aqara RTCGQ12LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ12LM.png) |
 | White-label | Yandex YNDX-00522 |
 
@@ -52,8 +52,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
-
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
@@ -71,14 +69,8 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
-
 ### Illuminance (numeric)
-Measured illuminance in lux.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.

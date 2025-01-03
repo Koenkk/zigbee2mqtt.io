@@ -71,8 +71,6 @@ More detailed information about this can be found [here](https://community.hubit
 
 * `hold_timeout_expire`: Sometimes it happens that the button does not send a release. To avoid problems a release is automatically send after a timeout. The default timeout is 4000 ms, you can increase it with this option (value is in ms). The value must be a number with a minimum value of `0`
 
-* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
-
 
 ## Exposes
 

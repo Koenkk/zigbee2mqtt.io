@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WB-MSW-ZIGBEE v.4  |
 | Vendor  | [Wirenboard](/supported-devices/#v=Wirenboard)  |
 | Description | Wall-mounted multi sensor |
-| Exposes | switch (state), activity_led, temperature, temperature_offset, humidity, th_heater, co2, illuminance_lux, illuminance, occupancy, occupancy_sensitivity, occupancy_level, occupancy_timeout, noise, noise_detect_level, noise_detected, noise_timeout, voc, linkquality |
+| Exposes | switch (state), activity_led, temperature, temperature_offset, humidity, th_heater, co2, illuminance, occupancy, occupancy_sensitivity, occupancy_level, occupancy_timeout, noise, noise_detect_level, noise_detected, noise_timeout, voc, linkquality |
 | Picture | ![Wirenboard WB-MSW-ZIGBEE v.4](https://www.zigbee2mqtt.io/images/devices/WB-MSW-ZIGBEE-v.4.png) |
 
 
@@ -130,8 +130,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `co2_calibration`: Calibrates the co2 value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
-
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `voc_calibration`: Calibrates the voc value (absolute offset), takes into effect on next report of device. The value must be a number.
@@ -219,18 +217,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `ppm`.
 
-### Illuminance lux (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_lux": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `lx`.
-
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.
+The unit of this value is `lx`.
 
 ### Occupancy (binary)
 Indicates whether the device detected occupancy.

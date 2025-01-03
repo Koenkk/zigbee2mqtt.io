@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PIR313-E  |
 | Vendor  | [OWON](/supported-devices/#v=OWON)  |
 | Description | Motion sensor |
-| Exposes | occupancy, tamper, battery_low, illuminance, illuminance_lux, temperature, humidity, linkquality |
+| Exposes | occupancy, tamper, battery_low, illuminance, temperature, humidity, linkquality |
 | Picture | ![OWON PIR313-E](https://www.zigbee2mqtt.io/images/devices/PIR313-E.png) |
 
 
@@ -33,8 +33,6 @@ pageClass: device-page
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `temperature_calibration`: Calibrates the temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
@@ -66,13 +64,8 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

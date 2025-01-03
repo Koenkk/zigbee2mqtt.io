@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | JS-MC-SENSOR-ZB  |
 | Vendor  | [JAVIS](/supported-devices/#v=JAVIS)  |
 | Description | Microwave sensor |
-| Exposes | occupancy, illuminance_lux, led_enable, keep_time, sensitivity, illuminance_calibration, linkquality |
+| Exposes | occupancy, illuminance, led_enable, keep_time, sensitivity, illuminance_calibration, linkquality |
 | Picture | ![JAVIS JS-MC-SENSOR-ZB](https://www.zigbee2mqtt.io/images/devices/JS-MC-SENSOR-ZB.png) |
 
 
@@ -32,7 +32,7 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -43,9 +43,9 @@ Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

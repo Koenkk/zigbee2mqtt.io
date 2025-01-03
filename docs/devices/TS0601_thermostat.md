@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_thermostat  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Radiator valve with thermostat |
-| Exposes | lock (state), switch (state), window_open, battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, preset, running_state), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, away_preset_temperature, week, workdays_schedule, holidays_schedule, linkquality |
+| Exposes | child_lock, switch (state), window_open, battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, preset, running_state), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, away_preset_temperature, week, workdays_schedule, holidays_schedule, linkquality |
 | Picture | ![Tuya TS0601_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat.png) |
 | White-label | Moes HY368, Moes HY369RT, SHOJZJ 378RT, Silvercrest TVR01, Immax 07732B, Evolveo Heat M30 |
 
@@ -130,10 +130,12 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Exposes
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Window detection (switch)
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).

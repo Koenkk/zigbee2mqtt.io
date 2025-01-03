@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_eON29wz  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Mini weather station, barometer, forecast, charts, temperature, humidity, light |
-| Exposes | battery, voltage, illuminance_lux, illuminance, temperature, humidity, pressure, linkquality |
+| Exposes | battery, voltage, illuminance, temperature, humidity, pressure, linkquality |
 | Picture | ![EFEKTA EFEKTA_eON29wz](https://www.zigbee2mqtt.io/images/devices/EFEKTA_eON29wz.png) |
 
 
@@ -35,8 +35,6 @@ Instructions on how to build this device can be found [here](https://github.com/
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -70,18 +68,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Illuminance lux (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_lux": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `lx`.
-
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.
+The unit of this value is `lx`.
 
 ### Temperature (numeric)
 Measured temperature value.

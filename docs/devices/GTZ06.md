@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | GTZ06  |
 | Vendor  | [id3](/supported-devices/#v=id3)  |
 | Description | Thermostatic radiator valve |
-| Exposes | battery, lock (state), max_temperature, min_temperature, position, switch (state), window, alarm_switch, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset, system_mode, running_state), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, boost_heating, boost_time, linkquality |
+| Exposes | battery, child_lock, max_temperature, min_temperature, position, switch (state), window, alarm_switch, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset, system_mode, running_state), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, boost_heating, boost_time, linkquality |
 | Picture | ![id3 GTZ06](https://www.zigbee2mqtt.io/images/devices/GTZ06.png) |
 
 
@@ -39,10 +39,12 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Max temperature (numeric)
 Maximum temperature.

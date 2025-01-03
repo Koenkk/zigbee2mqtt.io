@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SMART-HEAT10  |
 | Vendor  | [Alecto](/supported-devices/#v=Alecto)  |
 | Description | Radiator valve with thermostat |
-| Exposes | lock (state), switch (state), battery, climate (current_heating_setpoint, local_temperature, system_mode), linkquality |
+| Exposes | child_lock, switch (state), battery, climate (current_heating_setpoint, local_temperature, system_mode), linkquality |
 | Picture | ![Alecto SMART-HEAT10](https://www.zigbee2mqtt.io/images/devices/SMART-HEAT10.png) |
 
 
@@ -32,10 +32,12 @@ pageClass: device-page
 
 ## Exposes
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Window detection (switch)
 The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).

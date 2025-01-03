@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNCLBL01LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Curtain driver E1 |
-| Exposes | cover (state, position), hand_open, limits_calibration, battery, voltage, device_temperature, illuminance_lux, motor_state, running, hooks_lock, hooks_state, target_position, power_source, charging, action, linkquality |
+| Exposes | cover (state, position), hand_open, limits_calibration, battery, voltage, device_temperature, illuminance, motor_state, running, hooks_lock, hooks_state, target_position, power_source, charging, action, linkquality |
 | Picture | ![Aqara ZNCLBL01LM](https://www.zigbee2mqtt.io/images/devices/ZNCLBL01LM.png) |
 | White-label | Aqara CM-M01, Aqara CM-M01R |
 
@@ -52,7 +52,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
 
@@ -100,9 +100,9 @@ Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

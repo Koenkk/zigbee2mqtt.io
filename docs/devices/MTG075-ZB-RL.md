@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MTG075-ZB-RL  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2.4G/5.8G human presence sensor with relay |
-| Exposes | presence, illuminance_lux, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance_indentation, entry_filter_time, departure_delay, block_time, breaker_status, breaker_mode, illuminance_threshold, status_indication, sensor, linkquality |
+| Exposes | presence, illuminance, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance_indentation, entry_filter_time, departure_delay, block_time, breaker_status, breaker_mode, illuminance_threshold, status_indication, sensor, linkquality |
 | Picture | ![Tuya MTG075-ZB-RL](https://www.zigbee2mqtt.io/images/devices/MTG075-ZB-RL.png) |
 
 
@@ -32,7 +32,7 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -43,9 +43,9 @@ Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

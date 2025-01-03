@@ -23,8 +23,13 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
+Long press any button for 5 seconds until the LED indicator starts flashing rapidly to enter pairing mode.
 
+### Endpoints
+This device exposes 8 switches through endpoints l1-l8. Each switch can be controlled independently.
 <!-- Notes END: Do not edit below this line -->
 
 

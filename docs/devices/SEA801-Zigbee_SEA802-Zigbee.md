@@ -18,9 +18,9 @@ pageClass: device-page
 | Model | SEA801-Zigbee/SEA802-Zigbee  |
 | Vendor  | [Saswell](/supported-devices/#v=Saswell)  |
 | Description | Thermostatic radiator valve |
-| Exposes | battery_low, switch (state), lock (state), heating, climate (current_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration), linkquality |
+| Exposes | battery_low, switch (state), child_lock, heating, climate (current_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration), linkquality |
 | Picture | ![Saswell SEA801-Zigbee/SEA802-Zigbee](https://www.zigbee2mqtt.io/images/devices/SEA801-Zigbee-SEA802-Zigbee.png) |
-| White-label | HiHome WZB-TRVL, Hama 00176592, RTX ZB-RT1, SETTI+ TRV001 |
+| White-label | HiHome WZB-TRVL, Hama 00176592, Maginon WT-1, RTX ZB-RT1, SETTI+ TRV001, Royal Thermo RTE 77.001B |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -66,11 +66,6 @@ To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 
 
 
-## Options
-*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
-
 
 ## Exposes
 
@@ -85,10 +80,12 @@ The current state of this switch is in the published state under the `window_det
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Away mode (switch)
 The current state of this switch is in the published state under the `away_mode` property (value is `ON` or `OFF`).

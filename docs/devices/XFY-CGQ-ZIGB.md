@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | XFY-CGQ-ZIGB  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Illuminance sensor |
-| Exposes | illuminance_lux, brightness_state, linkquality |
+| Exposes | illuminance, brightness_state, linkquality |
 | Picture | ![Tuya XFY-CGQ-ZIGB](https://www.zigbee2mqtt.io/images/devices/XFY-CGQ-ZIGB.png) |
 
 
@@ -32,14 +32,14 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
 
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

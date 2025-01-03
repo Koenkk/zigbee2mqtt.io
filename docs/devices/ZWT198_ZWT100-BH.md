@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZWT198/ZWT100-BH  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Avatto wall thermostat |
-| Exposes | factory_reset, lock (state), sensor, climate (system_mode, preset, current_heating_setpoint, running_state, local_temperature, local_temperature_calibration), frost_protection, max_temperature_limit, deadzone_temperature, backlight_mode, working_day, schedule_weekday, schedule_holiday, linkquality |
+| Exposes | factory_reset, child_lock, sensor, climate (system_mode, preset, current_heating_setpoint, running_state, local_temperature, local_temperature_calibration), frost_protection, max_temperature_limit, deadzone_temperature, backlight_mode, working_day, schedule_weekday, schedule_holiday, linkquality |
 | Picture | ![Tuya ZWT198/ZWT100-BH](https://www.zigbee2mqtt.io/images/devices/ZWT198-ZWT100-BH.png) |
 
 
@@ -42,10 +42,12 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset": NEW_VALUE}`.
 If value equals `ON` factory reset is ON, if `OFF` OFF.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Sensor (enum)
 Select temperature sensor to use.

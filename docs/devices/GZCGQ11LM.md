@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | GZCGQ11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Light sensor T1 |
-| Exposes | battery, voltage, illuminance, illuminance_lux, detection_period, linkquality |
+| Exposes | battery, voltage, illuminance, detection_period, linkquality |
 | Picture | ![Aqara GZCGQ11LM](https://www.zigbee2mqtt.io/images/devices/GZCGQ11LM.png) |
 
 
@@ -37,8 +37,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
-
 
 ## Exposes
 
@@ -56,13 +54,8 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

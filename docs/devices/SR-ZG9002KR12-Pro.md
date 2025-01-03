@@ -23,7 +23,6 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Home Assistant
 
 For easy integration with Home Assistant, you can use our blueprint. This blueprint helps you:
@@ -35,8 +34,10 @@ For easy integration with Home Assistant, you can use our blueprint. This bluepr
 <a href="https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fraw.githubusercontent.com%2Fmaginawin%2Fsr_ha_blueprints%2Frefs%2Fheads%2Fmain%2Fblueprints%2FSR-ZG9002KR12-Pro%2Fbutton-trigger.yaml"><img src="https://my.home-assistant.io/badges/blueprint_import.svg" width="200"></a>
 
 Click the badge above to import the blueprint into your Home Assistant instance.
-
 <!-- Notes END: Do not edit below this line -->
+
+
+
 
 ## Exposes
 
@@ -60,3 +61,4 @@ Value can be found in the published state on the `linkquality` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `255`.
 The unit of this value is `lqi`.
+

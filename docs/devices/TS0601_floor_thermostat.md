@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_floor_thermostat  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee thermostat for electric floors |
-| Exposes | climate (system_mode, preset, running_state, current_heating_setpoint, local_temperature, local_temperature_calibration), deadzone_temperature, lock (state), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, linkquality |
+| Exposes | climate (system_mode, preset, running_state, current_heating_setpoint, local_temperature, local_temperature_calibration), deadzone_temperature, child_lock, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, linkquality |
 | Picture | ![Tuya TS0601_floor_thermostat](https://www.zigbee2mqtt.io/images/devices/TS0601_floor_thermostat.png) |
 | White-label | ELECTSMART EST-120Z |
 
@@ -50,10 +50,12 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `5`.
 The unit of this value is `°C`.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Schedule monday (text)
 Schedule for monday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".

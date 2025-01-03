@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | GL-D-008P  |
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
-| Description | Na Versiion Smart Led 9w downlight |
+| Description | Na Versiion smart led 9w downlight |
 | Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, linkquality |
 | Picture | ![Gledopto GL-D-008P](https://www.zigbee2mqtt.io/images/devices/GL-D-008P.png) |
 

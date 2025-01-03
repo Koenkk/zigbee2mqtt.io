@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | AU-A1ZBPIRS  |
 | Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
 | Description | AOne PIR sensor |
-| Exposes | occupancy, battery_low, tamper, illuminance, illuminance_lux, linkquality |
+| Exposes | occupancy, battery_low, tamper, illuminance, linkquality |
 | Picture | ![Aurora Lighting AU-A1ZBPIRS](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBPIRS.png) |
 
 
@@ -33,8 +33,6 @@ pageClass: device-page
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
-
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -58,13 +56,8 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

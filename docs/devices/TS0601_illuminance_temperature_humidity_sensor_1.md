@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_illuminance_temperature_humidity_sensor_1  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Illuminance, temperature & humidity sensor |
-| Exposes | temperature, humidity, illuminance_lux, battery, linkquality |
+| Exposes | temperature, humidity, illuminance, battery, linkquality |
 | Picture | ![Tuya TS0601_illuminance_temperature_humidity_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_illuminance_temperature_humidity_sensor_1.png) |
 
 
@@ -40,7 +40,7 @@ pageClass: device-page
 
 * `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -57,9 +57,9 @@ Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

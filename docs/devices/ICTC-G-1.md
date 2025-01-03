@@ -97,8 +97,6 @@ simulated_brightness:
   interval: 200 # interval in milliseconds, default = 200
 ```
 
-* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
-
 
 ## Exposes
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_iAQ3  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | CO2 Monitor with IPS TFT Display, outdoor temperature and humidity, date and time |
-| Exposes | co2, temperature, humidity, voc_index, voc_raw_data, illuminance_lux, illuminance, auto_brightness, night_onoff_backlight, night_on_backlight, night_off_backlight, rotate, long_chart_period, long_chart_period2, set_altitude, temperature_offset, humidity_offset, internal_or_external, automatic_scal, forced_recalibration, factory_reset_co2, manual_forced_recalibration, enable_gas, invert_logic_gas, high_gas, low_gas, linkquality |
+| Exposes | co2, temperature, humidity, voc_index, voc_raw_data, illuminance, auto_brightness, night_onoff_backlight, night_on_backlight, night_off_backlight, rotate, long_chart_period, long_chart_period2, set_altitude, temperature_offset, humidity_offset, internal_or_external, automatic_scal, forced_recalibration, factory_reset_co2, manual_forced_recalibration, enable_gas, invert_logic_gas, high_gas, low_gas, linkquality |
 | Picture | ![EFEKTA EFEKTA_iAQ3](https://www.zigbee2mqtt.io/images/devices/EFEKTA_iAQ3.png) |
 
 
@@ -41,8 +41,6 @@ pageClass: device-page
 * `humidity_calibration`: Calibrates the humidity value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 * `humidity_precision`: Number of digits after decimal point for humidity, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
-
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -96,16 +94,11 @@ Value can be found in the published state on the `voc_raw_data` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ticks`.
 
-### Illuminance lux (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
-
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `lx`.
 
 ### Auto brightness (binary)
 Enable or Disable Auto Brightness of the Display.

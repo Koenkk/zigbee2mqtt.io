@@ -25,7 +25,6 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 Go [here (pvvx github)](https://github.com/pvvx/ATC_MiThermometer) for the firmware file & instructions on how to flash
-
 <!-- Notes END: Do not edit below this line -->
 
 

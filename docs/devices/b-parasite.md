@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | b-parasite  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | b-parasite open source soil moisture sensor |
-| Exposes | temperature, humidity, battery, soil_moisture, illuminance_lux, linkquality |
+| Exposes | temperature, humidity, battery, soil_moisture, illuminance, linkquality |
 | Picture | ![Custom devices (DiY) b-parasite](https://www.zigbee2mqtt.io/images/devices/b-parasite.png) |
 
 
@@ -44,7 +44,7 @@ pageClass: device-page
 
 * `soil_moisture_precision`: Number of digits after decimal point for soil_moisture, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `illuminance_lux_calibration`: Calibrates the illuminance_lux value (percentual offset), takes into effect on next report of device. The value must be a number.
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -74,9 +74,9 @@ Value can be found in the published state on the `soil_moisture` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 

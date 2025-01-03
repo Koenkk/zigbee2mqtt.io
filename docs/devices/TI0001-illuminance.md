@@ -66,7 +66,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` noise detected is ON, if `false` OFF.
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
