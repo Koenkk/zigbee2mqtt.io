@@ -73,6 +73,16 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
   * Wait for 'Serial upload complete', then press '2' in the Bootloader Terminal to restart the dongle.
 * Finally, the dongle LED blinks green, inidicating it is in paring mode. Pair as usual with Z2M.
 * Note: The dongle may not pair successfully if it is plugged into a USB 3.x socket, if it fails to pair try moving it to a USB 2 socket or a standalone USB charger.
+* If you have to repair the dongle and it does not show up you can try this step by step guide:
+    1. Disassemble the device
+    2. Re-attach the antenna (to avoid burnout)
+    3. Provide power to the device
+    4. Permit join (allow pairing) to zigbee2mqtt Coordinator
+    5. Press the boot button for about 5 seconds (green LED might not flash)
+    6. Monitor device becoming available
+    7. Power down device, remove antenna
+    8. Re-assemble device and attach antenna
+    9. Place router to it’s designed location
 <!-- Notes END: Do not edit below this line -->
 
 
