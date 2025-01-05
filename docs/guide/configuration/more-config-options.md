@@ -30,8 +30,7 @@ map_options:
 You can define external converters to e.g. add support for a DiY device. The extension can be a file with `.js`
 extension in the `data/external_converters/` directory or a NPM package. Ensure that default export from your external converter exports an
 array or device object (refer to the definition in the `devices` folder of zigbee-herdsman-converters). Some examples
-can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/tree/master/docs/externalConvertersExample). For this
-example put the files in the `data` folder and add the following to `configuration.yaml`:
+can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/tree/master/docs/externalConvertersExample).
 
 Note that external converters take precedence of standard converters
 
