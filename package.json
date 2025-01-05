@@ -20,10 +20,10 @@
     "dependencies": {
         "@quasar/extras": "1.16.15",
         "core-js": "3.39.0",
-        "quasar": "2.17.5"
+        "quasar": "2.17.6"
     },
     "devDependencies": {
-        "@types/node": "22.10.2",
+        "@types/node": "22.10.5",
         "@vuepress/bundler-webpack": "2.0.0-rc.19",
         "@vuepress/client": "2.0.0-rc.19",
         "@vuepress/plugin-docsearch": "2.0.0-rc.68",
@@ -39,7 +39,7 @@
         "prettier": "3.4.2",
         "pug": "3.0.3",
         "pug-plain-loader": "1.1.0",
-        "sass": "1.83.0",
+        "sass": "1.83.1",
         "sass-loader": "16.0.2",
         "throat": "6.0.2",
         "ts-node": "10.9.2",
