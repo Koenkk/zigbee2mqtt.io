@@ -25,6 +25,9 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+### Factory resetting
+To factory reset the device, press and hold the only button until the red light starts blinking continuously. The device will reset and become available for pairing again.
+
 The technical manual from Develco states that SMSZB-120 scans Zigbee channels 11-24 when searching for a network to join.
 
 ### Warning usage
