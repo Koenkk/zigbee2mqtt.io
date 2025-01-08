@@ -23,7 +23,17 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Operation mode
+You can switch between the "command" and "event" operation mode with a triple click
 
+Command mode enables on/off mode :
+single click : on
+double click : off
+long press (>5s) and release : brightness_move_to_level
+
+You can then use OnOff and LevelCtrl binding in this mode
+
+Event mode enables click : single/double/hold
 
 <!-- Notes END: Do not edit below this line -->
 
