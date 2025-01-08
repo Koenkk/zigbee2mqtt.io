@@ -23,7 +23,7 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
+## Operation mode
 You can switch between the "command" and "event" operation mode with a triple click
 
 Command mode enables on/off mode :
