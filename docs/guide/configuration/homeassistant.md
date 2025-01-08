@@ -29,6 +29,6 @@ homeassistant:
     experimental_event_entities: false
     # Optional: Home Assistant legacy action sensor (default: `false`), when enabled:
     # - Zigbee2MQTT will send an empty 'action' after one has been send
-    # - A 'sensor_action' will be discoverd
+    # - A 'sensor_action' will be discovered
     legacy_action_sensor: false
 ```
