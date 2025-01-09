@@ -64,6 +64,8 @@ Zigbee2MQTT supports mDNS autodiscovery feature for network Zigbee adapters. If 
 
 ### 2.) Setup and start Zigbee2MQTT
 
+#### 2.1) Configure Docker
+
 It's assumed, that you have a recent version of Docker and Docker Compose installed.
 
 First, we create a folder where we want the project to reside `mkdir folder-name`. In the folder, we create we save the `docker-compose.yml` file which defines how Docker would run our containers. The following file consists of two services, one for the MQTT-Server and one for Zigbee2MQTT itself. Be sure to adjust the file to your needs and match the devices-mount in the case your adapter was not mounted on `/dev/ttyUSB0` or in case you use a network adapter.
@@ -96,27 +98,15 @@ services:
             - /dev/ttyUSB0:/dev/ttyUSB0
 ```
 
+#### 2.2) Configure Zigbee2MQTT
+
 In the next step we'll create a simple [Zigbee2MQTT config file](../configuration/) in `zigbee2mqtt-data/configuration.yaml`.
 
-```yaml
-# Let new devices join our zigbee network
-permit_join: true
-# Docker Compose makes the MQTT-Server available using "mqtt" hostname
-mqtt:
-    base_topic: zigbee2mqtt
-    server: mqtt://mqtt
-# Zigbee Adapter path
-serial:
-    port: /dev/ttyUSB0
-# Enable the Zigbee2MQTT frontend
-frontend:
-    port: 8080
-# Let Zigbee2MQTT generate a new network key on first start
-advanced:
-    network_key: GENERATE
-```
+NOTE: Docker Compose makes the MQTT-Server available using "mqtt" hostname.
 
-For network adapters, `serial` settings should look like this:
+<Configurator mqtt="mqtt://mqtt" serial="/dev/ttyUSB0" portType="Serial" adapter="zstack" />
+
+For network adapters, `serial` > `port` settings should look like this:
 
 ```yaml
 serial:
@@ -133,6 +123,8 @@ serial:
 ```
 
 Where `slzb-06` is the mDNS name of your network Zigbee adapter.
+
+#### 2.3) Start Zigbee2MQTT
 
 We should now have two files in our directory and can start the stack:
 
