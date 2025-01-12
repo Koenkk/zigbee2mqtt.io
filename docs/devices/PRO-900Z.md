@@ -23,8 +23,9 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Pairing
+With the device in the 'on' state, press and hold the control knob to turn the unit off. While the knob is pressed, press and hold the 'clock' button for 8 seconds. The device will now enter the pairing mode, and the zigbee signal indicator will start flashing on the display.
+***
 <!-- Notes END: Do not edit below this line -->
 
 
