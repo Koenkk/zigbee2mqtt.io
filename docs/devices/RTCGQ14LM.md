@@ -41,7 +41,9 @@ After this the device will automatically join. If this doesn't work, try with a 
 
 ![RTCGQ14LM pairing](../images/pairing/RTCGQ14LM_pairing.jpg)
 
-*Note: When you fail to pair a device, try replacing the battery, this could solve the problem.*
+*Note: When you fail to pair a device, try:
+- replacing the battery
+- to hold the reset button on the Aqara P1 sensor +- 5 seconds, wait for the lights to flash, just after that activate "Permit joining" to the closest zigbee router (or your coordinator) (credits: https://community.home-assistant.io/t/aqara-p1-will-not-connect/620395/4)
 <!-- Notes END: Do not edit below this line -->
 
 
