@@ -23,7 +23,13 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+/|\ Important Information /|\
+Some of these devices (if not all) randomly switch off.
+Recommendation is not to use these for critical appliances as freezers or fridges, nor appliances which would be stopped during a programs like washing machines.
+Only solution found so far is to monitor them and setup some automations to restart these when their status is off for a certain duration.
+As of Jan 2025, no OTA update is available.
 
 <!-- Notes END: Do not edit below this line -->
 
