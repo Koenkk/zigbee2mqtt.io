@@ -223,6 +223,16 @@ This happens when you edit one or more of the `pan_id`, `network_key` or `ext_pa
 ext_pan_id: [0x39,0xaf,0x4d,0x83,0xh2,0xdc,0xb3,0x89]
 ```
 
+## Zigbee adapters over the network: use good network adapters on Zigbee2MQTT server
+
+If you have a WiFi or ethernet-connected Zigbee adapter, Zigbee2MQTT is communicating with the Zigbee adapter over the LAN through serial-over-IP protocol.  
+The best setup for this situation is to use the ethernet port embedded into the Zigbee2MQTT server motherboard which guarantees reliability of communications in all load conditions.  
+As a second choice you can use the onboard WiFi adapter which should as well be designed for reliability, but also consider the stability of your WiFi network.  
+If all the onboard adapters are in use and you need to add another network adapter, the best choice is to install an internal network card on the PCIe bus, with proper cooling design.
+
+The use of USB-WiFi or USB-ethernet adapters is discouraged because despite the apparent equivalence to the onboard adapters in terms of specifications, they are designed in small enclosures, often not well ventilated and tend to overheat.  
+These adapters are known to stall or stop working in case of high loads or overheating.
+
 ## Error: regular crashes with timeout errors or failure to start after the serial port is opened
 
 These errors may occur when the serial communication between the ZigBee dongle and Zigbee2MQTT unexpectedly stops working.
