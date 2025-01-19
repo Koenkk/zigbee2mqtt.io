@@ -6,12 +6,16 @@ Also see the [OTA firmware update usage guide](../usage/ota_updates.md).
 # Optional: OTA update settings
 # See https://www.zigbee2mqtt.io/guide/usage/ota_updates.html for more info
 ota:
-    # Optional: use IKEA TRADFRI OTA test server, see OTA updates documentation (default: false)
-    ikea_ota_use_test_url: false
-    # Minimum time between OTA update checks
+    # Optional: Minimum time between OTA update checks
     update_check_interval: 1440
-    # Disable automatic update checks
+    # Optional: Disable automatic update checks
     disable_automatic_update_check: false
+    # Optional: Limits the rate of requests (in milliseconds) during OTA updates to reduce network congestion.
+    # You can increase this value if your network appears unstable during OTA
+    image_block_response_delay: 250
+    # Optional: The size of file chunks sent during an update (in bytes).
+    # Note: This value may get ignored for manufacturers that require specific values.
+    default_maximum_data_size: 50
 ```
 
 ## OTA Index override file
