@@ -25,6 +25,12 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+Note, that some devices are marked as "CP03" instead of "C03", althoug identical.
+
+_How to reset_
+* Press the reset key (upper right in hole) 5 times until the indicator LED inside the module flashes quickly.
+* Alternatively turn on/off the wired switch for 5 times until the indicator LED inside the module flashes quickly.
+
 _How to use calibration_
 * Activate calibration mode
 * Open the shutter completely and press stop
