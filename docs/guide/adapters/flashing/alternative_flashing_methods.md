@@ -56,6 +56,8 @@ it should return :
 
 If you see 0000 or ffff, something is wrong and you should probably check your wiring.
 
+If you get `./cc_chipid: cannot execute: required file not found`, then you need to run `make` command
+
 5. Download and extract the latest firmware [CC2531_DEFAULT_20211115.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip).
 
 ```bash
