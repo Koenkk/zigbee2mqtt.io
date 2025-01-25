@@ -104,6 +104,7 @@ With external antenna. Only supports software flow control (make sure not to set
 - [Product Page](https://sonoff.tech/product/gateway-and-sensors/sonoff-zigbee-3-0-usb-dongle-plus-e/)
 - [Coordinator firmware](https://sonoff.tech/product-review/how-to-use-sonoff-dongle-plus-on-home-assistant-how-to-flash-firmware/)
 - [Flashing](https://sonoff.tech/wp-content/uploads/2022/08/SONOFF-Zigbee-3.0-USB-dongle-plus-firmware-flashing-.pdf)
+    - **Note**: The PDF links to an old firmware. See all [NCP_X.Y.Z](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E) versions and pick [7.4.4](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E/NCP_7.4.4) or newer.
 - [Buy](https://itead.cc/product/zigbee-3-0-usb-dongle/)
 
 <img src="../../images/dongle-e.jpg" width="200" />
