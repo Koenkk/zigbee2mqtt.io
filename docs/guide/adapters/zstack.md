@@ -129,7 +129,8 @@ CC2652P factory-made Zigbee USB coordinator with external 6dB antenna and worldw
 CC2652P based USB connected adapter pre-programmed and with enclosure.
 
 Note before buying that ITead slightly confusingly now sells both the Dongle Plus "ZBDongle-P" (based on CC2652P), and the Dongle Plus V2 "ZBDongle-E" (based on EFR32MG21).
-This section is about the "ZBDongle-P", for "ZBDongle-E" see below.
+
+**This section is about the "ZBDongle-P", for "ZBDongle-E" see [EmberZNet](./emberznet.md).**
 
 - [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC1352P2_CC2652P_launchpad_coordinator_20240710.zip)
 - [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
