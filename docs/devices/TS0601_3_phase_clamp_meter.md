@@ -27,6 +27,27 @@ pageClass: device-page
 ## Notes
 
 Device is powered through wire A/L1.
+
+
+The device can be <ins>**modified**</ins> to work in systems <ins>**without a neutral**</ins>, like the Norwegian <ins>**IT-system**</ins> (isolé-terre).
+This modification should only be conducted by someone with knowledge about mains electricity. All three phases have to be connected to ensure propper function and avoid short circuits. Make 100% sure that you have no more than 240 V between any two phases. 
+
+First, the voltage sensing transformers (VT) have to be isolated from the common neutral line (N) by scratching away the copper traces:
+
+![PC321-Z-TY_trace](https://github.com/user-attachments/assets/534a8b4d-6deb-47a8-8749-fc23f91868fd)
+Note that a capacitor was removed temporarily for better access. The copper traces were removed thoroughly to absolutely guarantee that no short circuit could occur.
+
+Afterwards, the inputs have to be re-connected to the voltage transformers (VT):
+
+![PC321-Z-TY_input](https://github.com/user-attachments/assets/70425e25-db41-4691-a02d-1990275997ac)
+In this example, phase 3 (L3) has been connected to neutral (N). This will power the device from L1 & L3.
+Use propper mains cables; although the current is very low (2 mA) the insulation has to be able to withstand mains voltage and voltage spikes.
+
+Here is a circuit diagram, created with TinyCAD (https://www.tinycad.net), comparing the original wiring with the modification:
+
+![power_meter](https://github.com/user-attachments/assets/8749ef72-538a-4b16-905c-1382163fc094)
+
+
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -56,7 +77,8 @@ Device is powered through wire A/L1.
 ## Exposes
 
 ### AC frequency (numeric)
-Measured electrical AC frequency.
+Measu![PC321-Z-TY_trace](https://github.com/user-attachments/assets/1f174c2b-7b60-4a0f-81fe-61acc4f1f6f4)
+red electrical AC frequency.
 Value can be found in the published state on the `ac_frequency` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `Hz`.
