@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | GW003-AS-IN-TE-FC  |
 | Vendor  | [Atlantic Group](/supported-devices/#v=Atlantic%20Group)  |
 | Description | Interface Naviclim for Takao air conditioners |
-| Exposes | programming_operation_mode, climate (local_temperature, occupied_cooling_setpoint, occupied_heating_setpoint, system_mode, preset, fan_mode, swing_mode), quiet_fan, ac_louver_position, linkquality |
+| Exposes | programming_operation_mode, climate (local_temperature, occupied_cooling_setpoint, occupied_heating_setpoint, system_mode, preset, fan_mode, swing_mode), quiet_fan, ac_louver_position |
 | Picture | ![Atlantic Group GW003-AS-IN-TE-FC](https://www.zigbee2mqtt.io/images/devices/GW003-AS-IN-TE-FC.png) |
 
 
@@ -65,11 +65,4 @@ Value can be found in the published state on the `ac_louver_position` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ac_louver_position": NEW_VALUE}`.
 The possible values are: `quarter_open`, `half_open`, `three_quarters_open`, `fully_open`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

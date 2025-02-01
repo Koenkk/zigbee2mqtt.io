@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SDM02V1  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart energy monitor for 2P+N system |
-| Exposes | voltage_l1, voltage_l2, power_l1, power_l2, current_l1, current_l2, energy, produced_energy, power_factor, power, ac_frequency, energy_l1, energy_l2, energy_produced_l1, energy_produced_l2, power_factor_l1, power_factor_l2, linkquality |
+| Exposes | voltage_l1, voltage_l2, power_l1, power_l2, current_l1, current_l2, energy, produced_energy, power_factor, power, ac_frequency, energy_l1, energy_l2, energy_produced_l1, energy_produced_l2, power_factor_l1, power_factor_l2 |
 | Picture | ![Tuya SDM02V1](https://www.zigbee2mqtt.io/images/devices/SDM02V1.png) |
 
 
@@ -146,11 +146,4 @@ Instantaneous measured power factor (phase L2).
 Value can be found in the published state on the `power_factor_l2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

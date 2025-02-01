@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SPM01V2.5  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart energy monitor for 1P+N system |
-| Exposes | voltage, power, current, energy, produced_energy, power_factor, ac_frequency, linkquality |
+| Exposes | voltage, power, current, energy, produced_energy, power_factor, ac_frequency |
 | Picture | ![Tuya SPM01V2.5](https://www.zigbee2mqtt.io/images/devices/SPM01V2.5.png) |
 
 
@@ -94,11 +94,4 @@ Measured electrical AC frequency.
 Value can be found in the published state on the `ac_frequency` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `Hz`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

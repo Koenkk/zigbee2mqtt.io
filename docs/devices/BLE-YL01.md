@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BLE-YL01  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart WiFi Zigbee chlorine meter |
-| Exposes | tds, temperature, battery, ph, ec, orp, free_chlorine, ph_max, ph_min, ec_max, ec_min, orp_max, orp_min, free_chlorine_max, free_chlorine_min, salinity, linkquality |
+| Exposes | tds, temperature, battery, ph, ec, orp, free_chlorine, ph_max, ph_min, ec_max, ec_min, orp_max, orp_min, free_chlorine_max, free_chlorine_min, salinity |
 | Picture | ![Tuya BLE-YL01](https://www.zigbee2mqtt.io/images/devices/BLE-YL01.png) |
 
 
@@ -151,11 +151,4 @@ Salt value.
 Value can be found in the published state on the `salinity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `ppm`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

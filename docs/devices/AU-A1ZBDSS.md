@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | AU-A1ZBDSS  |
 | Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
 | Description | Double smart socket UK |
-| Exposes | switch (state), power, brightness, linkquality |
+| Exposes | switch (state), power, brightness |
 | Picture | ![Aurora Lighting AU-A1ZBDSS](https://www.zigbee2mqtt.io/images/devices/AU-A1ZBDSS.png) |
 
 
@@ -86,11 +86,4 @@ Value can be found in the published state on the `brightness` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `254`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

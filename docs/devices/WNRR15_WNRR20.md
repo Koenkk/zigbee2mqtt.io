@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WNRR15/WNRR20  |
 | Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Outlet with power consumption monitoring |
-| Exposes | switch (state), action, power, linkquality |
+| Exposes | switch (state), action, power |
 | Picture | ![Legrand WNRR15/WNRR20](https://www.zigbee2mqtt.io/images/devices/WNRR15-WNRR20.png) |
 
 
@@ -73,11 +73,4 @@ Instantaneous measured power.
 Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

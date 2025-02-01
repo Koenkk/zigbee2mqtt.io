@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CCTFR6730  |
 | Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Wiser power micromodule |
-| Exposes | switch (state), power_on_behavior, power, energy, identify, linkquality |
+| Exposes | switch (state), power_on_behavior, power, energy, identify |
 | Picture | ![Schneider Electric CCTFR6730](https://www.zigbee2mqtt.io/images/devices/CCTFR6730.png) |
 | White-label | Elko EKO20004 |
 
@@ -86,11 +86,4 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
 The possible values are: `identify`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

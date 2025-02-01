@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | mTouch_One  |
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | mTouch One OP, touch thermostat |
-| Exposes | child_lock, climate (occupied_heating_setpoint, local_temperature, system_mode, preset, running_state), load, display_text, regulator_mode, mean_power, floor_temp, frost_guard, regulator_setpoint, air_temp, linkquality |
+| Exposes | child_lock, climate (occupied_heating_setpoint, local_temperature, system_mode, preset, running_state), load, display_text, regulator_mode, mean_power, floor_temp, frost_guard, regulator_setpoint, air_temp |
 | Picture | ![CTM Lyng mTouch_One](https://www.zigbee2mqtt.io/images/devices/mTouch_One.png) |
 
 
@@ -111,11 +111,4 @@ Value can be found in the published state on the `air_temp` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"air_temp": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

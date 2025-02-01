@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PO-BOCO-ELEC  |
 | Vendor  | [Powernity](/supported-devices/#v=Powernity)  |
 | Description | Pilot wire heating module |
-| Exposes | climate (preset, local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode), auto_mode, manual_mode, frost_protection, humidity, child_lock, switch (state), window_opening_mode, window_opening_mode_duration, temperature_unit, boost_heating, boost_timeset_countdown, power_rating, energy_consumed, mode_switching, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, holiday_start_stop, reset_consumption, linkquality |
+| Exposes | climate (preset, local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode), auto_mode, manual_mode, frost_protection, humidity, child_lock, switch (state), window_opening_mode, window_opening_mode_duration, temperature_unit, boost_heating, boost_timeset_countdown, power_rating, energy_consumed, mode_switching, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, holiday_start_stop, reset_consumption |
 | Picture | ![Powernity PO-BOCO-ELEC](https://www.zigbee2mqtt.io/images/devices/PO-BOCO-ELEC.png) |
 
 
@@ -197,11 +197,4 @@ Value can be found in the published state on the `reset_consumption` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reset_consumption": NEW_VALUE}`.
 If value equals `ON` reset consumption is ON, if `OFF` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

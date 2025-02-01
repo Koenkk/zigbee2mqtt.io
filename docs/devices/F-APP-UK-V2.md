@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | F-APP-UK-V2  |
 | Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Zigbee Outlet UK with power meter |
-| Exposes | switch (state), power, current, voltage, linkquality |
+| Exposes | switch (state), power, current, voltage |
 | Picture | ![SmartThings F-APP-UK-V2](https://www.zigbee2mqtt.io/images/devices/F-APP-UK-V2.png) |
 
 
@@ -77,11 +77,4 @@ Measured electrical potential value.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

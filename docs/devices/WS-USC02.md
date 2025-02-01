@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WS-USC02  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch (no neutral, double rocker), US |
-| Exposes | switch (state), operation_mode, mode_switch, power_outage_count, device_temperature, flip_indicator_light, power_outage_memory, action, linkquality |
+| Exposes | switch (state), operation_mode, mode_switch, power_outage_count, device_temperature, flip_indicator_light, power_outage_memory, action |
 | Picture | ![Aqara WS-USC02](https://www.zigbee2mqtt.io/images/devices/WS-USC02.png) |
 
 
@@ -115,11 +115,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single_top`, `single_bottom`, `single_both`, `double_top`, `double_bottom`, `double_both`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

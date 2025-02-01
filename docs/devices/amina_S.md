@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | amina S  |
 | Vendor  | [Amina Distribution AS](/supported-devices/#v=Amina%20Distribution%20AS)  |
 | Description | Amina S EV Charger |
-| Exposes | ev_status, alarms, switch (state), charge_limit, total_active_power, total_active_energy, last_session_energy, ev_connected, charging, derated, alarm_active, power, voltage, current, ac_frequency, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, single_phase, enable_offline, time_to_offline, offline_current, offline_single_phase, linkquality |
+| Exposes | ev_status, alarms, switch (state), charge_limit, total_active_power, total_active_energy, last_session_energy, ev_connected, charging, derated, alarm_active, power, voltage, current, ac_frequency, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, single_phase, enable_offline, time_to_offline, offline_current, offline_single_phase |
 | Picture | ![Amina Distribution AS amina S](https://www.zigbee2mqtt.io/images/devices/amina-S.png) |
 
 
@@ -258,11 +258,4 @@ Value can be found in the published state on the `offline_single_phase` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"offline_single_phase": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"offline_single_phase": NEW_VALUE}`.
 If value equals `enable` offline single phase is ON, if `disable` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TERNCY-PP01  |
 | Vendor  | [TERNCY](/supported-devices/#v=TERNCY)  |
 | Description | Awareness switch |
-| Exposes | temperature, occupancy, illuminance, action, linkquality |
+| Exposes | temperature, occupancy, illuminance, action |
 | Picture | ![TERNCY TERNCY-PP01](https://www.zigbee2mqtt.io/images/devices/TERNCY-PP01.png) |
 
 
@@ -54,6 +54,8 @@ devices:
 
 * `no_occupancy_since`: Sends a message the last time occupancy (occupancy: true) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
 
+* `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
+
 
 ## Exposes
 
@@ -72,7 +74,8 @@ If value equals `true` occupancy is ON, if `false` OFF.
 ### Illuminance (numeric)
 Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `lx`.
 
 ### Action (enum)
@@ -80,11 +83,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `triple`, `quadruple`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

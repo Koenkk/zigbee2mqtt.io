@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BSIR-EZ  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Outdoor siren |
-| Exposes | alarm_state, light_delay, siren_delay, siren_duration, light_duration, siren_volume, siren_and_light, power_source, warning, test, tamper, battery, voltage, battery_low, ac_status, linkquality |
+| Exposes | alarm_state, light_delay, siren_delay, siren_duration, light_duration, siren_volume, siren_and_light, power_source, warning, test, tamper, battery, voltage, battery_low, ac_status |
 | Picture | ![Bosch BSIR-EZ](https://www.zigbee2mqtt.io/images/devices/BSIR-EZ.png) |
 
 
@@ -132,11 +132,4 @@ Is the device plugged in.
 Value can be found in the published state on the `ac_status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` ac status is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

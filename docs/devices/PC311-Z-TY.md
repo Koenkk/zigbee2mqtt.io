@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PC311-Z-TY  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Bidirectional energy meter with 80A current clamp |
-| Exposes | ac_frequency, voltage, power, current, energy, energy_produced, power_a, power_b, current_a, current_b, power_factor_a, power_factor_b, energy_a, energy_b, energy_produced_a, energy_produced_b, linkquality |
+| Exposes | ac_frequency, voltage, power, current, energy, energy_produced, power_a, power_b, current_a, current_b, power_factor_a, power_factor_b, energy_a, energy_b, energy_produced_a, energy_produced_b |
 | Picture | ![Tuya PC311-Z-TY](https://www.zigbee2mqtt.io/images/devices/PC311-Z-TY.png) |
 
 
@@ -148,11 +148,4 @@ Sum of produced energy (phase B).
 Value can be found in the published state on the `energy_produced_b` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

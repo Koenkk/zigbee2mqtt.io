@@ -8,8 +8,8 @@ It [may help](https://github.com/Koenkk/zigbee2mqtt/discussions/18366) to OTA up
 `;
         }
     },
-    hueRouterPair: (definition) => {
-        if (definition.vendor === 'Philips' && definition.exposes.find((e) => e.type === 'light')) {
+    hueRouterPair: (definition, exposes) => {
+        if (definition.vendor === 'Philips' && exposes.find((e) => e.type === 'light')) {
             const hueGo = `
 ### Button long-press
 The first-generation Hue Go can be reset by long pressing the button on the bottom of the unit, [as advised by Philips on Twitter](https://twitter.com/tweethue/status/937713840728559621).
@@ -92,8 +92,8 @@ Note: if \`hue_power_on_behavior\` is set to \`off\`, then the only way to turn 
 `;
         }
     },
-    ikeaLight: (definition) => {
-        if (definition.vendor === 'IKEA' && definition.exposes.find((e) => e.type === 'light')) {
+    ikeaLight: (definition, exposes) => {
+        if (definition.vendor === 'IKEA' && exposes.find((e) => e.type === 'light')) {
             return `
 ## Transition
 IKEA lights only support transitions on 1 attribute at a time.
@@ -101,8 +101,8 @@ If you would for example change the color temperature and brightness in 1 comman
 `;
         }
     },
-    sengledBulbs: (definition) => {
-        if (definition.vendor === 'Sengled' && definition.exposes.find((e) => e.type === 'light')) {
+    sengledBulbs: (definition, exposes) => {
+        if (definition.vendor === 'Sengled' && exposes.find((e) => e.type === 'light')) {
             return `
 ## Device Type
 Sengled bulbs are Zigbee [end devices](/advanced/zigbee/01_zigbee_network.html#end-device), not [routers](/advanced/zigbee/01_zigbee_network.html#router), and therefore will not extend the reach of your Zigbee network. For more information see the [Sengled FAQ](https://support.sengled.com/hc/en-us/articles/115010871308-Do-any-Sengled-Zigbee-devices-act-as-Zigbee-repeaters-).
@@ -111,9 +111,9 @@ Sengled bulbs are Zigbee [end devices](/advanced/zigbee/01_zigbee_network.html#e
     },
 };
 
-export function getNotes(definition) {
+export function getNotes(definition, exposes) {
     return Object.values(notes)
-        .map((n) => n(definition))
+        .map((n) => n(definition, exposes))
         .filter((n) => n)
         .join('\n');
 }

@@ -72,7 +72,7 @@ ${device.whiteLabel ? `| White-label | ${device.whiteLabel.map((d) => `${d.vendo
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ${notes || '\n'}
 <!-- Notes END: Do not edit below this line -->
-${getNotes(device)}
+${getNotes(device, exposes)}
 ${
     device.ota
         ? `

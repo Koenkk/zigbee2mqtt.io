@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EA4161C-BI  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Single-phase multifunction energy meter (DIN Module) |
-| Exposes | current, power, voltage, energy, meter_id, linkquality |
+| Exposes | current, power, voltage, energy, meter_id |
 | Picture | ![Tuya EA4161C-BI](https://www.zigbee2mqtt.io/images/devices/EA4161C-BI.png) |
 | White-label | XOCA DAC4121C |
 
@@ -80,11 +80,4 @@ The unit of this value is `kWh`.
 Meter ID (ID of device).
 Value can be found in the published state on the `meter_id` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

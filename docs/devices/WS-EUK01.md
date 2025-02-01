@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WS-EUK01  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch H1 EU (no neutral, single rocker) |
-| Exposes | switch (state), power_outage_memory, flip_indicator_light, led_disabled_night, power_outage_count, device_temperature, operation_mode, mode_switch, action, linkquality |
+| Exposes | switch (state), power_outage_memory, flip_indicator_light, led_disabled_night, power_outage_count, device_temperature, operation_mode, mode_switch, action |
 | Picture | ![Aqara WS-EUK01](https://www.zigbee2mqtt.io/images/devices/WS-EUK01.png) |
 
 
@@ -105,11 +105,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

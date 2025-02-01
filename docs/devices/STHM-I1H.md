@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | STHM-I1H  |
 | Vendor  | [GS](/supported-devices/#v=GS)  |
 | Description | Temperature and humidity sensor |
-| Exposes | temperature, humidity, battery, voltage, linkquality |
+| Exposes | temperature, humidity, battery, voltage |
 | Picture | ![GS STHM-I1H](https://www.zigbee2mqtt.io/images/devices/STHM-I1H.png) |
 
 
@@ -71,11 +71,4 @@ Value can be found in the published state on the `voltage` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

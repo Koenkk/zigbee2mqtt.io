@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | E4BP-UP  |
 | Vendor  | [YOKIS](/supported-devices/#v=YOKIS)  |
 | Description | Flush-mounted independent 4-channel transmitter |
-| Exposes | identify, action, linkquality |
+| Exposes | identify, action |
 | Picture | ![YOKIS E4BP-UP](https://www.zigbee2mqtt.io/images/devices/E4BP-UP.png) |
 
 
@@ -56,11 +56,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `toggle`, `brightness_move_to_level`, `brightness_move_up`, `brightness_move_down`, `brightness_step_up`, `brightness_step_down`, `brightness_stop`, `open`, `close`, `stop`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

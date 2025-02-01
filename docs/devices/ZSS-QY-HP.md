@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZSS-QY-HP  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Human presence sensor |
-| Exposes | illuminance, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, self_test, linkquality |
+| Exposes | illuminance, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, self_test |
 | Picture | ![Moes ZSS-QY-HP](https://www.zigbee2mqtt.io/images/devices/ZSS-QY-HP.png) |
 
 
@@ -99,11 +99,4 @@ Self_test, possible results: checking, check_success, check_failure, others, com
 Value can be found in the published state on the `self_test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `checking`, `check_success`, `check_failure`, `others`, `comm_fault`, `radar_fault`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

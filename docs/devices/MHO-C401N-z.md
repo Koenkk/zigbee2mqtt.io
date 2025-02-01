@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MHO-C401N-z  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | E-Ink temperature & humidity sensor with custom firmware (pvxx/ZigbeeTLc) |
-| Exposes | battery, temperature, humidity, temperature_display_mode, smiley, temperature_calibration, humidity_calibration, comfort_temperature_min, comfort_temperature_max, comfort_humidity_min, comfort_humidity_max, measurement_interval, linkquality |
+| Exposes | battery, temperature, humidity, temperature_display_mode, smiley, temperature_calibration, humidity_calibration, comfort_temperature_min, comfort_temperature_max, comfort_humidity_min, comfort_humidity_max, measurement_interval |
 | Picture | ![Xiaomi MHO-C401N-z](https://www.zigbee2mqtt.io/images/devices/MHO-C401N-z.png) |
 
 
@@ -138,11 +138,4 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurement_interval": NEW_VALUE}`.
 The minimal value is `3` and the maximum value is `255`.
 The unit of this value is `s`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

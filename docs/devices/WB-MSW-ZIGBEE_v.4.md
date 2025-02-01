@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WB-MSW-ZIGBEE v.4  |
 | Vendor  | [Wirenboard](/supported-devices/#v=Wirenboard)  |
 | Description | Wall-mounted multi sensor |
-| Exposes | switch (state), activity_led, temperature, temperature_offset, humidity, th_heater, co2, illuminance, occupancy, occupancy_sensitivity, occupancy_level, occupancy_timeout, noise, noise_detect_level, noise_detected, noise_timeout, voc, linkquality |
+| Exposes | switch (state), activity_led, uart_connection, temperature, temperature_offset, humidity, th_heater, co2, illuminance, occupancy, occupancy_sensitivity, occupancy_level, occupancy_timeout, noise, noise_detect_level, noise_detected, noise_timeout, voc, uart_baud_rate |
 | Picture | ![Wirenboard WB-MSW-ZIGBEE v.4](https://www.zigbee2mqtt.io/images/devices/WB-MSW-ZIGBEE-v.4.png) |
 
 
@@ -136,6 +136,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
+* `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
+
 * `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
 
 
@@ -180,6 +182,13 @@ Value can be found in the published state on the `activity_led_indicator` proper
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"activity_led_indicator": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"activity_led_indicator": NEW_VALUE}`.
 If value equals `true` activity led is ON, if `false` OFF.
+
+### Uart connection (binary)
+Indicates whether the device is communicating with sensors via UART.
+Value can be found in the published state on the `uart_connection` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"uart_connection": ""}`.
+It's not possible to write (`/set`) this value.
+If value equals `true` uart connection is ON, if `false` OFF.
 
 ### Temperature (numeric)
 Measured temperature value.
@@ -289,10 +298,10 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `µg/m³`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+### Uart baud rate (enum)
+UART baud rate.
+Value can be found in the published state on the `uart_baud_rate` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"uart_baud_rate": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"uart_baud_rate": NEW_VALUE}`.
+The possible values are: `9600`, `19200`, `38400`, `57600`, `115200`.
 

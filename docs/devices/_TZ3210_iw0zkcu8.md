@@ -1,7 +1,7 @@
 ---
-title: "Lidl HG07834C/HG08131C control via MQTT"
-description: "Integrate your Lidl HG07834C/HG08131C via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-11-30T20:27:20
+title: "TechToy _TZ3210_iw0zkcu8 control via MQTT"
+description: "Integrate your TechToy _TZ3210_iw0zkcu8 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-02-01T20:12:31
 pageClass: device-page
 ---
 
@@ -11,22 +11,20 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Lidl HG07834C/HG08131C
+# TechToy _TZ3210_iw0zkcu8
 
 |     |     |
 |-----|-----|
-| Model | HG07834C/HG08131C  |
-| Vendor  | [Lidl](/supported-devices/#v=Lidl)  |
-| Description | Livarno Home E27 bulb RGB+CCT |
-| Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
-| Picture | ![Lidl HG07834C/HG08131C](https://www.zigbee2mqtt.io/images/devices/HG07834C-HG08131C.png) |
+| Model | _TZ3210_iw0zkcu8  |
+| Vendor  | [TechToy](/supported-devices/#v=TechToy)  |
+| Description | Smart bulb RGB 9W E27 |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior |
+| Picture | ![TechToy _TZ3210_iw0zkcu8](https://www.zigbee2mqtt.io/images/devices/_TZ3210_iw0zkcu8.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
 
-### Pairing
-Factory resetting: 3 x power ON/OFF
+
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -52,12 +50,6 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
   - `{"color": {"r": R, "g": G, "b": B}}` e.g. `{"color":{"r":46,"g":102,"b":150}}`
   - `{"color": {"rgb": "R,G,B"}}` e.g. `{"color":{"rgb":"46,102,150"}}`
   - `{"color": {"hex": HEX}}` e.g. `{"color":{"hex":"#547CFF"}}`
-
-#### On with timed off
-When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
-Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
-Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
-Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
@@ -103,11 +95,4 @@ Value can be found in the published state on the `color_power_on_behavior` prope
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_power_on_behavior": NEW_VALUE}`.
 The possible values are: `initial`, `previous`, `customized`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

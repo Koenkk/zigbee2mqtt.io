@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MOSZB-153  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Motion sensor 2 pet |
-| Exposes | linkquality, temperature, illuminance, battery, voltage, occupancy |
+| Exposes | temperature, illuminance, battery, voltage, occupancy |
 | Picture | ![Develco MOSZB-153](https://www.zigbee2mqtt.io/images/devices/MOSZB-153.png) |
 | White-label | Frient MOSZB-153 |
 
@@ -42,15 +42,10 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
+* `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
+
 
 ## Exposes
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 
 ### Temperature (numeric)
 Measured temperature value.

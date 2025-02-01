@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-205Z/A  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 5.8Ghz/24Ghz Human presence sensor |
-| Exposes | presence, illuminance, large_motion_detection_sensitivity, large_motion_detection_distance, motion_state, fading_time, medium_motion_detection_distance, medium_motion_detection_sensitivity, indicator, small_detection_distance, small_detection_sensitivity, linkquality |
+| Exposes | presence, illuminance, large_motion_detection_sensitivity, large_motion_detection_distance, motion_state, fading_time, medium_motion_detection_distance, medium_motion_detection_sensitivity, indicator, small_detection_distance, small_detection_sensitivity |
 | Picture | ![Tuya ZG-205Z/A](https://www.zigbee2mqtt.io/images/devices/ZG-205Z-A.png) |
 
 
@@ -73,7 +73,7 @@ The unit of this value is `m`.
 State of the motion.
 Value can be found in the published state on the `motion_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `none`, `small`, `medium`, `large`.
+The possible values are: `none`, `small`, `medium`, `large`, `huge`, `gigantic`.
 
 ### Fading time (numeric)
 For how much time presence should stay true after detecting it.
@@ -121,11 +121,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"small_detection_sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `x`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

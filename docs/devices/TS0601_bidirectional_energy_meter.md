@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_bidirectional_energy meter  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Bidirectional energy meter with 150A Current Clamp |
-| Exposes | energy, produced_energy, power, voltage, current, energy_flow, linkquality |
+| Exposes | energy, produced_energy, power, voltage, current, energy_flow |
 | Picture | ![Tuya TS0601_bidirectional_energy meter](https://www.zigbee2mqtt.io/images/devices/TS0601_bidirectional_energy-meter.png) |
 
 
@@ -86,11 +86,4 @@ Direction of energy.
 Value can be found in the published state on the `energy_flow` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `consuming`, `producing`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

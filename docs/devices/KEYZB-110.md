@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | KEYZB-110  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Keypad |
-| Exposes | battery_low, tamper, action_code, action_transaction, action_zone, battery, voltage, action, linkquality |
+| Exposes | battery_low, tamper, action_code, action_transaction, action_zone, battery, voltage, action |
 | Picture | ![Develco KEYZB-110](https://www.zigbee2mqtt.io/images/devices/KEYZB-110.png) |
 | White-label | Frient KEPZB-110 |
 
@@ -122,11 +122,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `disarm`, `arm_day_zones`, `arm_night_zones`, `arm_all_zones`, `exit_delay`, `emergency`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

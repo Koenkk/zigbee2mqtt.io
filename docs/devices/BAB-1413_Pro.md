@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BAB-1413_Pro  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Thermostat radiator valve |
-| Exposes | battery, child_lock, max_temperature, min_temperature, switch (state), open_window_temperature, comfort_temperature, eco_temperature, holiday_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint, system_mode, running_state), frost_protection, boost_timeset_countdown, schedule, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, valve, factory_reset, error_status, linkquality |
+| Exposes | battery, child_lock, max_temperature, min_temperature, switch (state), open_window_temperature, comfort_temperature, eco_temperature, holiday_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint, system_mode, running_state), frost_protection, boost_timeset_countdown, schedule, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, valve, factory_reset, error_status |
 | Picture | ![Tuya BAB-1413_Pro](https://www.zigbee2mqtt.io/images/devices/BAB-1413_Pro.png) |
 
 
@@ -137,37 +137,37 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sche
 - `schedule` (text) 
 
 ### Schedule monday (text)
-Schedule for monday, format: "HH:MM/C".
+Schedule for monday, example: "HH:MM/C".
 Value can be found in the published state on the `schedule_monday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Schedule tuesday (text)
-Schedule for tuesday, format: "HH:MM/C".
+Schedule for tuesday, example: "HH:MM/C".
 Value can be found in the published state on the `schedule_tuesday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Schedule wednesday (text)
-Schedule for wednesday, format: "HH:MM/C".
+Schedule for wednesday, example: "HH:MM/C".
 Value can be found in the published state on the `schedule_wednesday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Schedule thursday (text)
-Schedule for thursday, format: "HH:MM/C".
+Schedule for thursday, example: "HH:MM/C".
 Value can be found in the published state on the `schedule_thursday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Schedule friday (text)
-Schedule for friday, format: "HH:MM/C".
+Schedule for friday, example: "HH:MM/C".
 Value can be found in the published state on the `schedule_friday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Schedule saturday (text)
-Schedule for saturday, format: "HH:MM/C".
+Schedule for saturday, example: "HH:MM/C".
 Value can be found in the published state on the `schedule_saturday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Schedule sunday (text)
-Schedule for sunday, format: "HH:MM/C".
+Schedule for sunday, example: "HH:MM/C".
 Value can be found in the published state on the `schedule_sunday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
@@ -187,11 +187,4 @@ The possible values are: `SET`.
 Error status.
 Value can be found in the published state on the `error_status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

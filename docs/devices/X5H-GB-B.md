@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | X5H-GB-B  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Wall-mount thermostat |
-| Exposes | climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, preset), sensor, schedule, child_lock, week, brightness_state, sound, frost_protection, factory_reset, heating_temp_limit, deadzone_temperature, upper_temp, linkquality |
+| Exposes | climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, preset), sensor, schedule, child_lock, week, brightness_state, sound, frost_protection, factory_reset, heating_temp_limit, deadzone_temperature, upper_temp |
 | Picture | ![Tuya X5H-GB-B](https://www.zigbee2mqtt.io/images/devices/X5H-GB-B.png) |
 | White-label | Beok TGR85-ZB, AVATTO ZWT-100-16A |
 
@@ -125,11 +125,4 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `35` and the maximum value is `95`.
 The unit of this value is `°C`.
 Besides the numeric values the following values are accepted: `default`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

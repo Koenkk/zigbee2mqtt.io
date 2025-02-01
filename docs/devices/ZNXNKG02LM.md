@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNXNKG02LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart rotary knob H1 (wireless) |
-| Exposes | operation_mode, battery, voltage, action_rotation_button_state, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, sensitivity, action, linkquality |
+| Exposes | operation_mode, battery, voltage, action_rotation_button_state, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, sensitivity, action |
 | Picture | ![Aqara ZNXNKG02LM](https://www.zigbee2mqtt.io/images/devices/ZNXNKG02LM.png) |
 
 
@@ -104,11 +104,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `hold`, `single`, `double`, `release`, `start_rotating`, `rotation`, `stop_rotating`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

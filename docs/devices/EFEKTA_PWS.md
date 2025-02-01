@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_PWS  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | [Plant Wattering Sensor, CR2450, CR2477 batteries, temperature ] |
-| Exposes | soil_moisture, battery, voltage, temperature, report_delay, linkquality |
+| Exposes | soil_moisture, battery, voltage, temperature, report_delay |
 | Picture | ![EFEKTA EFEKTA_PWS](https://www.zigbee2mqtt.io/images/devices/EFEKTA_PWS.png) |
 
 
@@ -82,11 +82,4 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"report_delay": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `240`.
 The unit of this value is `min`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -1,7 +1,7 @@
 ---
-title: "Ubisys S1-R-2 control via MQTT"
-description: "Integrate your Ubisys S1-R-2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-09-07T11:16:42
+title: "Gewiss GWA1201_TWO_WAY_SWITCH control via MQTT"
+description: "Integrate your Gewiss GWA1201_TWO_WAY_SWITCH via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-02-01T20:12:30
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Ubisys S1-R-2
+# Gewiss GWA1201_TWO_WAY_SWITCH
 
 |     |     |
 |-----|-----|
-| Model | S1-R-2  |
-| Vendor  | [Ubisys](/supported-devices/#v=Ubisys)  |
-| Description | Power switch S1-R (Series 2) |
-| Exposes | identify, switch (state), power, energy, action, linkquality |
-| Picture | ![Ubisys S1-R-2](https://www.zigbee2mqtt.io/images/devices/S1-R-2.png) |
+| Model | GWA1201_TWO_WAY_SWITCH  |
+| Vendor  | [Gewiss](/supported-devices/#v=Gewiss)  |
+| Description | GWA1201 |
+| Exposes | switch (state), power_on_behavior, power, voltage, current, energy, identify |
+| Picture | ![Gewiss GWA1201_TWO_WAY_SWITCH](https://www.zigbee2mqtt.io/images/devices/GWA1201_TWO_WAY_SWITCH.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,15 +28,24 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds, set to -1 to disable. The value must be a number with a minimum value of `-1`
-
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `power_precision`: Number of digits after decimal point for power, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `voltage_calibration`: Calibrates the voltage value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -46,22 +55,8 @@ pageClass: device-page
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
-* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval. Example:
-```yaml
-simulated_brightness:
-  delta: 20 # delta per interval, default = 20
-  interval: 200 # interval in milliseconds, default = 200
-```
-
 
 ## Exposes
-
-### Identify (enum)
-Initiate device identification.
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
-The possible values are: `identify`.
 
 ### Switch 
 The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
@@ -74,12 +69,33 @@ Additionally an `off_wait_time` property can be added to the payload to specify 
 Support depends on the switch firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
+### Power-on behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `off`, `on`, `toggle`, `previous`.
+
 ### Power (numeric)
 Instantaneous measured power.
 Value can be found in the published state on the `power` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `W`.
+
+### Voltage (numeric)
+Measured electrical potential value.
+Value can be found in the published state on the `voltage` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `V`.
+
+### Current (numeric)
+Instantaneous measured electrical current.
+Value can be found in the published state on the `current` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `A`.
 
 ### Energy (numeric)
 Sum of consumed energy.
@@ -88,16 +104,10 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Action (enum)
-Triggered action (e.g. a button click).
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `on_2`, `on_3`, `off_2`, `off_3`, `toggle_2`, `toggle_3`, `brightness_move_to_level_2`, `brightness_move_to_level_3`, `brightness_move_up_2`, `brightness_move_up_3`, `brightness_move_down_2`, `brightness_move_down_3`, `brightness_step_up_2`, `brightness_step_up_3`, `brightness_step_down_2`, `brightness_step_down_3`, `brightness_stop_2`, `brightness_stop_3`, `color_temperature_move_stop_2`, `color_temperature_move_stop_3`, `color_temperature_move_up_2`, `color_temperature_move_up_3`, `color_temperature_move_down_2`, `color_temperature_move_down_3`, `color_temperature_step_up_2`, `color_temperature_step_up_3`, `color_temperature_step_down_2`, `color_temperature_step_down_3`, `enhanced_move_to_hue_and_saturation_2`, `enhanced_move_to_hue_and_saturation_3`, `move_to_hue_and_saturation_2`, `move_to_hue_and_saturation_3`, `color_hue_step_up_2`, `color_hue_step_up_3`, `color_hue_step_down_2`, `color_hue_step_down_3`, `color_saturation_step_up_2`, `color_saturation_step_up_3`, `color_saturation_step_down_2`, `color_saturation_step_down_3`, `color_loop_set_2`, `color_loop_set_3`, `color_temperature_move_2`, `color_temperature_move_3`, `color_move_2`, `color_move_3`, `hue_move_2`, `hue_move_3`, `hue_stop_2`, `hue_stop_3`, `move_to_saturation_2`, `move_to_saturation_3`, `move_to_hue_2`, `move_to_hue_3`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 

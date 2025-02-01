@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | NAS-PS10B2  |
 | Vendor  | [NEO](/supported-devices/#v=NEO)  |
 | Description | Human presence sensor |
-| Exposes | presence, human_motion_state, dis_current, presence_time, motion_far_detection, motion_sensitivity_value, motionless_sensitivity, work_mode, output_switch, output_time, led_switch, lux_value, linkquality |
+| Exposes | presence, human_motion_state, dis_current, presence_time, motion_far_detection, motion_sensitivity_value, motionless_sensitivity, work_mode, output_switch, output_time, led_switch, lux_value |
 | Picture | ![NEO NAS-PS10B2](https://www.zigbee2mqtt.io/images/devices/NAS-PS10B2.png) |
 
 
@@ -116,11 +116,4 @@ Value can be found in the published state on the `lux_value` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_value": NEW_VALUE}`.
 The possible values are: `10 lux`, `20 lux`, `50 lux`, `24h`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

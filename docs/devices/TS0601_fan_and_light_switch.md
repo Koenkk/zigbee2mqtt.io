@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_fan_and_light_switch  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Fan & light switch |
-| Exposes | status_indication, switch (state), power_on_behavior, fan_speed, linkquality |
+| Exposes | status_indication, switch (state), power_on_behavior, fan_speed |
 | Picture | ![Tuya TS0601_fan_and_light_switch](https://www.zigbee2mqtt.io/images/devices/TS0601_fan_and_light_switch.png) |
 | White-label | Liwokit Fan+Light-01 |
 
@@ -58,11 +58,4 @@ Value can be found in the published state on the `fan_speed` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fan_speed": NEW_VALUE}`.
 The possible values are: `minimum`, `medium`, `maximum`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

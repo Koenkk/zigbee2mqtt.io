@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SR-ZG9033TH  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee temperature and humidity sensor |
-| Exposes | battery, temperature, humidity, temperature_sensor_compensation, temperature_display_unit, humidity_sensor_compensation, linkquality |
+| Exposes | battery, temperature, humidity, temperature_sensor_compensation, temperature_display_unit, humidity_sensor_compensation |
 | Picture | ![Sunricher SR-ZG9033TH](https://www.zigbee2mqtt.io/images/devices/SR-ZG9033TH.png) |
 
 
@@ -87,11 +87,4 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_sensor_compensation_2": NEW_VALUE}`.
 The minimal value is `-5` and the maximum value is `5`.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

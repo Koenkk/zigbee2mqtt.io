@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNCLDJ14LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Curtain controller C2 |
-| Exposes | cover (state, position), reverse_direction, hand_open, running, motor_state, power_outage_count, linkquality |
+| Exposes | cover (state, position), reverse_direction, hand_open, running, motor_state, power_outage_count |
 | Picture | ![Aqara ZNCLDJ14LM](https://www.zigbee2mqtt.io/images/devices/ZNCLDJ14LM.png) |
 
 
@@ -78,11 +78,4 @@ The possible values are: `closing`, `opening`, `stopped`.
 Number of power outages (since last pairing).
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

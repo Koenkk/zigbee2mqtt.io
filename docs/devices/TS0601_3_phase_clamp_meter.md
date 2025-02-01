@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_3_phase_clamp_meter  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 3-phase clamp power meter |
-| Exposes | ac_frequency, temperature, current, power, energy, energy_a, energy_b, energy_c, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, power_factor_a, power_factor_b, power_factor_c, linkquality |
+| Exposes | ac_frequency, temperature, current, power, energy, energy_a, energy_b, energy_c, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, power_factor_a, power_factor_b, power_factor_c |
 | Picture | ![Tuya TS0601_3_phase_clamp_meter](https://www.zigbee2mqtt.io/images/devices/TS0601_3_phase_clamp_meter.png) |
 | White-label | MatSee Plus PC321-Z-TY, OWON PC321-Z-TY |
 
@@ -46,8 +46,6 @@ Use propper mains cables; although the current is very low (2 mA) the insulation
 Here is a circuit diagram, created with TinyCAD (https://www.tinycad.net), comparing the original wiring with the modification:
 
 ![power_meter](https://github.com/user-attachments/assets/8749ef72-538a-4b16-905c-1382163fc094)
-
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -77,8 +75,7 @@ Here is a circuit diagram, created with TinyCAD (https://www.tinycad.net), compa
 ## Exposes
 
 ### AC frequency (numeric)
-Measu![PC321-Z-TY_trace](https://github.com/user-attachments/assets/1f174c2b-7b60-4a0f-81fe-61acc4f1f6f4)
-red electrical AC frequency.
+Measured electrical AC frequency.
 Value can be found in the published state on the `ac_frequency` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `Hz`.
@@ -196,11 +193,4 @@ Instantaneous measured power factor (phase C).
 Value can be found in the published state on the `power_factor_c` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

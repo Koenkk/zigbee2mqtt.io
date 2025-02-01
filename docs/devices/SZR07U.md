@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SZR07U  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 24GHz millimeter wave radar |
-| Exposes | presence, detection_range, radar_sensitivity, target_distance, indicator, fading_time, linkquality |
+| Exposes | presence, detection_range, radar_sensitivity, target_distance, indicator, fading_time |
 | Picture | ![Tuya SZR07U](https://www.zigbee2mqtt.io/images/devices/SZR07U.png) |
 
 
@@ -74,11 +74,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
 The minimal value is `3` and the maximum value is `1799`.
 The unit of this value is `s`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

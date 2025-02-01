@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | VNTH-T2  |
 | Vendor  | [TECH](/supported-devices/#v=TECH)  |
 | Description | Smart radiator valve |
-| Exposes | child_lock, switch (state), window_open, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, preset, running_state), temperature_sensitivity, comfort_temperature, eco_temperature, holiday_temperature, min_temperature_limit, frost_protection, valve_alarm, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, linkquality |
+| Exposes | child_lock, switch (state), window_open, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, preset, running_state), temperature_sensitivity, comfort_temperature, eco_temperature, holiday_temperature, min_temperature_limit, frost_protection, valve_alarm, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday |
 | Picture | ![TECH VNTH-T2](https://www.zigbee2mqtt.io/images/devices/VNTH-T2.png) |
 
 
@@ -120,51 +120,44 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` valve alarm is ON, if `false` OFF.
 
 ### Schedule monday (text)
-Schedule for monday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Schedule for monday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_monday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_monday": NEW_VALUE}`.
 
 ### Schedule tuesday (text)
-Schedule for tuesday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Schedule for tuesday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_tuesday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_tuesday": NEW_VALUE}`.
 
 ### Schedule wednesday (text)
-Schedule for wednesday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Schedule for wednesday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_wednesday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_wednesday": NEW_VALUE}`.
 
 ### Schedule thursday (text)
-Schedule for thursday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Schedule for thursday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_thursday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_thursday": NEW_VALUE}`.
 
 ### Schedule friday (text)
-Schedule for friday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Schedule for friday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_friday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_friday": NEW_VALUE}`.
 
 ### Schedule saturday (text)
-Schedule for saturday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Schedule for saturday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_saturday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_saturday": NEW_VALUE}`.
 
 ### Schedule sunday (text)
-Schedule for sunday, format: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
+Schedule for sunday, example: "HH:MM/C HH:MM/C HH:MM/C HH:MM/C".
 Value can be found in the published state on the `schedule_sunday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_sunday": NEW_VALUE}`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

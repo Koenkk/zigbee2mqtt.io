@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RTCGQ11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Motion sensor |
-| Exposes | battery, occupancy, device_temperature, voltage, illuminance, power_outage_count, linkquality |
+| Exposes | battery, occupancy, device_temperature, voltage, illuminance, power_outage_count |
 | Picture | ![Aqara RTCGQ11LM](https://www.zigbee2mqtt.io/images/devices/RTCGQ11LM.png) |
 
 
@@ -109,11 +109,4 @@ The unit of this value is `lx`.
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

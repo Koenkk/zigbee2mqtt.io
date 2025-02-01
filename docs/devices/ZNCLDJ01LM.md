@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNCLDJ01LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Curtain controller C3 |
-| Exposes | limits_calibration, automatic_calibration, cover (state, position), curtain_speed, manual_open_close, adaptive_pulling_speed, manual_stop, reverse_direction, status, last_manual_operation, curtain_position, traverse_time, calibration_status, calibrated, identify_beep, identify, linkquality |
+| Exposes | limits_calibration, automatic_calibration, cover (state, position), curtain_speed, manual_open_close, adaptive_pulling_speed, manual_stop, reverse_direction, status, last_manual_operation, curtain_position, traverse_time, calibration_status, calibrated, identify_beep, identify |
 | Picture | ![Aqara ZNCLDJ01LM](https://www.zigbee2mqtt.io/images/devices/ZNCLDJ01LM.png) |
 
 
@@ -150,11 +150,4 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
 The possible values are: `identify`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

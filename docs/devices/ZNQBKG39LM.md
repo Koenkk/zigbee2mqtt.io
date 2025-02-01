@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNQBKG39LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch Z1 (double rocker) |
-| Exposes | switch (state), device_temperature, power_outage_count, power_on_behavior, operation_mode, lock_relay, energy, voltage, current, power, led_disabled_night, click_mode, action, linkquality |
+| Exposes | switch (state), device_temperature, power_outage_count, power_on_behavior, operation_mode, lock_relay, energy, voltage, current, power, led_disabled_night, click_mode, action |
 | Picture | ![Aqara ZNQBKG39LM](https://www.zigbee2mqtt.io/images/devices/ZNQBKG39LM.png) |
 
 
@@ -169,11 +169,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single_top`, `single_bottom`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

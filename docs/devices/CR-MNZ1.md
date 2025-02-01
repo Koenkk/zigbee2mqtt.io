@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CR-MNZ1  |
 | Vendor  | [Colorock](/supported-devices/#v=Colorock)  |
 | Description | 1 gang switch 30A with power monitoring |
-| Exposes | switch (state), power, current, voltage, energy, switch_type, power_outage_memory, linkquality |
+| Exposes | switch (state), power, current, voltage, energy, switch_type, power_outage_memory |
 | Picture | ![Colorock CR-MNZ1](https://www.zigbee2mqtt.io/images/devices/CR-MNZ1.png) |
 
 
@@ -101,11 +101,4 @@ Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 The possible values are: `on`, `off`, `restore`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

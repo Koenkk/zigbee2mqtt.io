@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PTM 215ZE  |
 | Vendor  | [EnOcean](/supported-devices/#v=EnOcean)  |
 | Description | Pushbutton transmitter module |
-| Exposes | action, linkquality |
+| Exposes | action |
 | Picture | ![EnOcean PTM 215ZE](https://www.zigbee2mqtt.io/images/devices/PTM-215ZE.png) |
 | White-label | Easyfit by EnOcean EWSxZ, Trio2sys 20020002 |
 
@@ -71,11 +71,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `press_1`, `release_1`, `press_2`, `release_2`, `press_3`, `release_3`, `press_4`, `release_4`, `press_1_and_2`, `release_1_and_2`, `press_1_and_3`, `release_1_and_3`, `press_1_and_4`, `release_1_and_4`, `press_2_and_3`, `release_2_and_3`, `press_2_and_4`, `release_2_and_4`, `press_3_and_4`, `release_3_and_4`, `press_energy_bar`, `release_energy_bar`, `press_or_release_all`, `lock`, `unlock`, `half_open`, `tilt`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

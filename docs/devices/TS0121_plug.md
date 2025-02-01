@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0121_plug  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 10A UK or 16A EU smart plug |
-| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, linkquality |
+| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode |
 | Picture | ![Tuya TS0121_plug](https://www.zigbee2mqtt.io/images/devices/TS0121_plug.png) |
 | White-label | BlitzWolf BW-SHP13, Connecte 4500990, Connecte 4500991, Connecte 4500992, Connecte 4500993 |
 
@@ -121,11 +121,4 @@ Value can be found in the published state on the `indicator_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
 The possible values are: `off`, `off/on`, `on/off`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

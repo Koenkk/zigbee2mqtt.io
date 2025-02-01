@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZLinky_TIC  |
 | Vendor  | [LiXee](/supported-devices/#v=LiXee)  |
 | Description | Lixee ZLinky |
-| Exposes | EAST, EAIT, EASF01, EASF02, EASF03, EASF04, EASF05, EASF06, EASF07, EASF08, EASF09, EASF10, ADSC, PRM, PREF, PCOUP, VTIC, CCASN, CCASN-1, UMOY1, ERQ1, ERQ2, ERQ3, ERQ4, IRMS1, URMS1, EASD01, EASD02, EASD03, EASD04, DATE, NTARF, LTARF, NGTF, NJOURF, NJOURF+1, PJOURF+1, PPOINTE1, CCAIN, CCAIN-1, SINSTI, SMAXIN, SMAXIN-1, MSG1, MSG2, RELAIS, DPM1, DPM2, DPM3, STGE, FPM1, FPM2, FPM3, SMAXN, SINSTS, SMAXN-1, SMAXN2, SMAXN3, SINSTS2, SINSTS3, UMOY3, UMOY2, IRMS2, IRMS3, URMS2, URMS3, SMAXN2-1, SMAXN3-1, PTEC, MOTDETAT, HHPHC, PEJP, DEMAIN, IMAX, ADPS, IMAX2, IMAX3, PPOT, ADIR1, ADIR2, ADIR3, linkquality |
+| Exposes | EAST, EAIT, EASF01, EASF02, EASF03, EASF04, EASF05, EASF06, EASF07, EASF08, EASF09, EASF10, ADSC, PRM, PREF, PCOUP, VTIC, CCASN, CCASN-1, UMOY1, ERQ1, ERQ2, ERQ3, ERQ4, IRMS1, URMS1, EASD01, EASD02, EASD03, EASD04, DATE, NTARF, Tariff, LTARF, NGTF, NJOURF, NJOURF+1, PJOURF+1, PPOINTE1, CCAIN, CCAIN-1, SINSTI, SMAXIN, SMAXIN-1, MSG1, MSG2, RELAIS, DPM1, DPM2, DPM3, STGE, FPM1, FPM2, FPM3, SMAXN, SINSTS, SMAXN-1, SMAXN2, SMAXN3, SINSTS2, SINSTS3, UMOY3, UMOY2, IRMS2, IRMS3, URMS2, URMS3, SMAXN2-1, SMAXN3-1, PTEC, MOTDETAT, HHPHC, PEJP, DEMAIN, IMAX, ADPS, IMAX2, IMAX3, PPOT, ADIR1, ADIR2, ADIR3 |
 | Picture | ![LiXee ZLinky_TIC](https://www.zigbee2mqtt.io/images/devices/ZLinky_TIC.png) |
 
 
@@ -49,7 +49,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `kWh_precision`: Number of digits after decimal point for kWh, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `measurement_poll_chunk`: During the poll, request multiple exposes to the Zlinky at once for reducing Zigbee network overload. Too much request at once could exceed device limit. Requires Z2M restart. Default: 1. The value must be a number with a minimum value of `1`
+* `measurement_poll_chunk`: During the poll, request multiple exposes to the Zlinky at once for reducing Zigbee network overload. Too much request at once could exceed device limit. Requires Z2M restart. Default: 2. The value must be a number with a minimum value of `1`
 
 * `tic_command_whitelist`: List of TIC commands to be exposed (separated by comma). Reconfigure device after change. Default: all. The value must be textual.
 
@@ -241,6 +241,11 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 ### NTARF (numeric)
 Current tariff index number.
 Value can be found in the published state on the `current_index_tarif` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Tariff (text)
+Tariff Period.
+Value can be found in the published state on the `tariff_period` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### LTARF (text)
@@ -520,11 +525,4 @@ Over Current Warning (phase 3).
 Value can be found in the published state on the `warn_d_i_r3` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

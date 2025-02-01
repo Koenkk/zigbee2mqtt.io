@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0111_valve  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart water/gas valve |
-| Exposes | switch (state), power_on_behavior, indicator_mode, linkquality |
+| Exposes | switch (state), power_on_behavior, indicator_mode |
 | Picture | ![Tuya TS0111_valve](https://www.zigbee2mqtt.io/images/devices/TS0111_valve.png) |
 | White-label | Tuya SM-AW713Z |
 
@@ -62,11 +62,4 @@ Value can be found in the published state on the `indicator_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
 The possible values are: `off`, `off/on`, `on/off`, `on`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

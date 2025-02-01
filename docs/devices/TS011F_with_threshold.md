@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS011F_with_threshold  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Din rail switch with power monitoring and threshold settings |
-| Exposes | linkquality, temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy |
+| Exposes | temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy |
 | Picture | ![Tuya TS011F_with_threshold](https://www.zigbee2mqtt.io/images/devices/TS011F_with_threshold.png) |
 
 
@@ -59,13 +59,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 
 ## Exposes
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 
 ### Temperature (numeric)
 Measured temperature value.

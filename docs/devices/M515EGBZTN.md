@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | M515EGBZTN  |
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Roller shade driver |
-| Exposes | cover (state, position), motor_direction, border, linkquality |
+| Exposes | cover (state, position), motor_direction, border |
 | Picture | ![Zemismart M515EGBZTN](https://www.zigbee2mqtt.io/images/devices/M515EGBZTN.png) |
 
 
@@ -54,11 +54,4 @@ Value can be found in the published state on the `border` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"border": NEW_VALUE}`.
 The possible values are: `up`, `down`, `down_delete`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 
