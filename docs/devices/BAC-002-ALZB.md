@@ -46,6 +46,8 @@ devices:
 
 * `control_sequence_of_operation`: Operating environment of the thermostat. The value must be one of `cooling_only`, `cooling_and_heating_4-pipes`
 
+* `expose_device_state`: Expose device power state as a separate property when enabled. The value must be `true` or `false`
+
 
 ## Exposes
 

@@ -223,10 +223,10 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
 
-### Occupancy (binary)
+### Occupancy (binary, 2 endpoint)
 Indicates whether the device detected occupancy.
-Value can be found in the published state on the `occupancy` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy": ""}`.
+Value can be found in the published state on the `occupancy_2` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy_2": ""}`.
 It's not possible to write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 

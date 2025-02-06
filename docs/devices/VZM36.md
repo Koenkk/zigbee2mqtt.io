@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | VZM36  |
 | Vendor  | [Inovelli](/supported-devices/#v=Inovelli)  |
 | Description | Fan canopy module |
-| Exposes | light (state, brightness), fan (state, mode), breeze mode, dimmingSpeedUpRemote_1, rampRateOffToOnRemote_1, dimmingSpeedDownRemote_1, rampRateOnToOffRemote_1, minimumLevel_1, maximumLevel_1, autoTimerOff_1, defaultLevelRemote_1, stateAfterPowerRestored_1, higherOutputInNonNeutral_1, quickStartTime_1, quickStartLevel_1, leadingTrailingEdge_1, smartBulbMode_1, ledColorWhenOn_1, ledIntensityWhenOn_1, outputMode_1, dimmingSpeedUpRemote_2, rampRateOffToOnRemote_2, dimmingSpeedDownRemote_2, rampRateOnToOffRemote_2, minimumLevel_2, maximumLevel_2, autoTimerOff_2, defaultLevelRemote_2, stateAfterPowerRestored_2, quickStartTime_2, smartBulbMode_2, outputMode_2, identify |
+| Exposes | light (state, brightness), fan (state, mode), breeze mode, dimmingSpeedUpRemote_1, rampRateOffToOnRemote_1, dimmingSpeedDownRemote_1, rampRateOnToOffRemote_1, minimumLevel_1, maximumLevel_1, autoTimerOff_1, defaultLevelRemote_1, stateAfterPowerRestored_1, quickStartTime_1, quickStartLevel_1, higherOutputInNonNeutral_1, dimmingMode_1, smartBulbMode_1, ledColorWhenOn_1, ledIntensityWhenOn_1, outputMode_1, dimmingSpeedUpRemote_2, rampRateOffToOnRemote_2, dimmingSpeedDownRemote_2, rampRateOnToOffRemote_2, minimumLevel_2, maximumLevel_2, autoTimerOff_2, defaultLevelRemote_2, stateAfterPowerRestored_2, quickStartTime_2, smartBulbMode_2, outputMode_2, identify |
 | Picture | ![Inovelli VZM36](https://www.zigbee2mqtt.io/images/devices/VZM36.png) |
 
 
@@ -37,6 +37,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `identify_timeout`: Sets duration of identification procedure in seconds (i.e., how long device would flash). Value ranges from 1 to 30 seconds (default 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
 
+* `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
+
 
 ## Exposes
 
@@ -50,6 +52,23 @@ When setting the state to ON, it might be possible to specify an automatic shuto
 Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
 Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
 Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
+#### Moving/stepping
+Instead of setting a value (e.g. brightness) directly it is also possible to:
+- move: this will automatically move the value over time, to stop send value `stop` or `0`.
+- step: this will increment/decrement the current value by the given one.
+
+The direction of move and step can be either up or down, provide a negative value to move/step down, a positive value to move/step up.
+To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
+
+**NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
+````js
+{
+  "brightness_move": -40, // Starts moving brightness down at 40 units per second
+  "brightness_move": 0, // Stop moving brightness
+  "brightness_step": 40 // Increases brightness by 40
+}
+````
 
 ### Fan 
 The current state of this fan is in the published state under the `fan_state` property (value is `ON` or `OFF`).
@@ -135,15 +154,8 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"stateAfterPowerRestored_1": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `255`.
 
-### HigherOutputInNonNeutral 1 (enum)
-Increase level in non-neutral mode for light..
-Value can be found in the published state on the `higherOutputInNonNeutral_1` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"higherOutputInNonNeutral_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"higherOutputInNonNeutral_1": NEW_VALUE}`.
-The possible values are: `Disabled (default)`, `Enabled`.
-
 ### QuickStartTime 1 (numeric)
-Duration of full power output while lamp tranisitions from Off to On. In 60th of second. 0 = disable, 1 = 1/60s, 60 = 1s.
+Duration of full power output while lamp transitions from Off to On. In 60th of second. 0 = disable, 1 = 1/60s, 60 = 1s.
 Value can be found in the published state on the `quickStartTime_1` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"quickStartTime_1": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quickStartTime_1": NEW_VALUE}`.
@@ -156,12 +168,19 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quickStartLevel_1": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `254`.
 
-### LeadingTrailingEdge 1 (enum)
-Leading Edge has a value of 0 and is the default value, whereas Trailing Edge has a value of 1. Please note that Trailing Edge is only available on neutral single-pole and neutral multi-way with an aux/add-on switch (multi-way with a dumb/existing switch and non-neutral setups are not supported and will default back to Leading Edge)..
-Value can be found in the published state on the `leadingTrailingEdge_1` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"leadingTrailingEdge_1": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"leadingTrailingEdge_1": NEW_VALUE}`.
-The possible values are: `Leading Edge`, `Trailing Edge`.
+### HigherOutputInNonNeutral 1 (enum)
+Increase level in non-neutral mode for light..
+Value can be found in the published state on the `higherOutputInNonNeutral_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"higherOutputInNonNeutral_1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"higherOutputInNonNeutral_1": NEW_VALUE}`.
+The possible values are: `Disabled (default)`, `Enabled`.
+
+### DimmingMode 1 (enum)
+Switches the dimming mode from leading edge (default) to trailing edge. 1. Trailing Edge is only available on neutral single-pole and neutral multi-way with an aux/add-on switch (multi-way with a dumb/existing switch and non-neutral setups are not supported and will default back to Leading Edge)..
+Value can be found in the published state on the `dimmingMode_1` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimmingMode_1": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimmingMode_1": NEW_VALUE}`.
+The possible values are: `Leading edge`, `Trailing edge`.
 
 ### SmartBulbMode 1 (enum)
 For use with Smart Bulbs that need constant power and are controlled via commands rather than power..
@@ -258,7 +277,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `255`.
 
 ### QuickStartTime 2 (numeric)
-Duration of full power output while fan tranisitions from Off to On. In 60th of second. 0 = disable, 1 = 1/60s, 60 = 1s.
+Duration of full power output while fan transitions from Off to On. In 60th of second. 0 = disable, 1 = 1/60s, 60 = 1s.
 Value can be found in the published state on the `quickStartTime_2` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"quickStartTime_2": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"quickStartTime_2": NEW_VALUE}`.

@@ -61,6 +61,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `identify_timeout`: Sets duration of identification procedure in seconds (i.e., how long device would flash). Value ranges from 1 to 30 seconds (default 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
 
+* `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
+
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
@@ -74,6 +76,23 @@ This light supports the following features: `state`, `brightness`.
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
 Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
+
+#### Moving/stepping
+Instead of setting a value (e.g. brightness) directly it is also possible to:
+- move: this will automatically move the value over time, to stop send value `stop` or `0`.
+- step: this will increment/decrement the current value by the given one.
+
+The direction of move and step can be either up or down, provide a negative value to move/step down, a positive value to move/step up.
+To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
+
+**NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
+````js
+{
+  "brightness_move": -40, // Starts moving brightness down at 40 units per second
+  "brightness_move": 0, // Stop moving brightness
+  "brightness_step": 40 // Increases brightness by 40
+}
+````
 
 ### Led effect (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_effect": {"effect": VALUE, "color": VALUE, "level": VALUE, "duration": VALUE}}`

@@ -1,7 +1,7 @@
 ---
-title: "YOKIS MTR2000E-UP control via MQTT"
-description: "Integrate your YOKIS MTR2000E-UP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-12-29T16:26:41
+title: "YOKIS MTR1300EB-UP control via MQTT"
+description: "Integrate your YOKIS MTR1300EB-UP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-02-06T19:24:12
 pageClass: device-page
 ---
 
@@ -11,23 +11,20 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# YOKIS MTR2000E-UP
+# YOKIS MTR1300EB-UP
 
 |     |     |
 |-----|-----|
-| Model | MTR2000E-UP  |
+| Model | MTR1300EB-UP  |
 | Vendor  | [YOKIS](/supported-devices/#v=YOKIS)  |
-| Description | Remote power switch with timer 2000W |
+| Description | Remote power switch with timer 1300W |
 | Exposes | switch (state), identify, power_failure_mode, prev_state, on_timer, enable_pre_on_delay, pre_on_delay, enable_pre_off_delay, pre_off_delay, pulse_duration, time_type, long_on_duration, operating_mode, enable_stop_announce, stop_announce_time, enable_deaf, deaf_blink_amount, deaf_blink_time, enable_blink, blink_amount, blink_on_time, blink_off_time, state_after_blink, enable_nc_command, move_to_position_command, pulse_command, blink_command, deaf_blink_command, long_on_command, reset_to_factory_settings, relaunch_ble_advert, input_mode, contact_mode, last_local_command_state, last_bp_connect_state, send_press, send_release, select_input_mode, enable_short_press, enable_long_press, long_press_duration, time_between_press, enable_R12M_long_press, enable_local_config_lock |
-| Picture | ![YOKIS MTR2000E-UP](https://www.zigbee2mqtt.io/images/devices/MTR2000E-UP.png) |
+| Picture | ![YOKIS MTR1300EB-UP](https://www.zigbee2mqtt.io/images/devices/MTR1300EB-UP.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-## Notes
 
-- [CSA product page](https://csa-iot.org/csa_product/mtr2000e-up/)
-- `On with timed off` is not supported by this device. Use `OnTimer` instead.
-- `powerOnBehavior` from the OnOff cluster is not supported but `powerFailureMode` has the same purpose.
+
 <!-- Notes END: Do not edit below this line -->
 
 

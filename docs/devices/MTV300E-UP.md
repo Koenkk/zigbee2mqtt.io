@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MTV300E-UP  |
 | Vendor  | [YOKIS](/supported-devices/#v=YOKIS)  |
 | Description | Remote dimmer with timer 300W |
-| Exposes | light (state, brightness), effect, identify, prev_state, on_timer, enable_pre_on_delay, pre_on_delay, enable_pre_off_delay, pre_off_delay, pulse_duration, time_type, long_on_duration, operating_mode, enable_stop_announce, stop_announce_time, enable_deaf, deaf_blink_amount, deaf_blink_time, enable_blink, blink_amount, blink_on_time, blink_off_time, state_after_blink, enable_nc_command, move_to_position_command, pulse_command, blink_command, deaf_blink_command, long_on_command, power_failure_mode, current_position, memory_position, enable_ramp_up, ramp_up, enable_ramp_down, ramp_down, ramp_continuous_time, step_up, low_dim_limit, high_dim_limit, nightlight_starting_delay, nightlight_starting_brightness, nightlight_ending_brightness, nightlight_ramp_time, nightlight_on_time, favorite_position_1, favorite_position_2, favorite_position_3, step_controller_mode, memory_position_mode, step_down, step_continuous, step_nightlight, dimmer_loop_command, dimmer_Up_down_command, dimmer_min_max_command, dimmer_move_to_favorite, dimmer_start_nightlight_command, dimmer_start_nightlight_custom_command, reset_to_factory_settings, relaunch_ble_advert, input_mode, contact_mode, last_local_command_state, last_bp_connect_state, send_press, send_release, select_input_mode, enable_short_press, enable_long_press, long_press_duration, time_between_press, enable_R12M_long_press, enable_local_config_lock |
+| Exposes | light (state, brightness), identify, prev_state, on_timer, enable_pre_on_delay, pre_on_delay, enable_pre_off_delay, pre_off_delay, pulse_duration, time_type, long_on_duration, operating_mode, enable_stop_announce, stop_announce_time, enable_deaf, deaf_blink_amount, deaf_blink_time, enable_blink, blink_amount, blink_on_time, blink_off_time, state_after_blink, enable_nc_command, move_to_position_command, pulse_command, blink_command, deaf_blink_command, long_on_command, power_failure_mode, current_position, memory_position, enable_ramp_up, ramp_up, enable_ramp_down, ramp_down, ramp_continuous_time, step_up, low_dim_limit, high_dim_limit, nightlight_starting_delay, nightlight_starting_brightness, nightlight_ending_brightness, nightlight_ramp_time, nightlight_on_time, favorite_position_1, favorite_position_2, favorite_position_3, step_controller_mode, memory_position_mode, step_down, step_continuous, step_nightlight, dimmer_loop_command, dimmer_Up_down_command, dimmer_min_max_command, dimmer_move_to_favorite, dimmer_start_nightlight_command, dimmer_start_nightlight_custom_command, reset_to_factory_settings, relaunch_ble_advert, input_mode, contact_mode, last_local_command_state, last_bp_connect_state, send_press, send_release, select_input_mode, enable_short_press, enable_long_press, long_press_duration, time_between_press, enable_R12M_long_press, enable_local_config_lock |
 | Picture | ![YOKIS MTV300E-UP](https://www.zigbee2mqtt.io/images/devices/MTV300E-UP.png) |
 
 
@@ -65,13 +65,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_step": 40 // Increases brightness by 40
 }
 ````
-
-### Effect (enum)
-Triggers an effect on the light (e.g. make light blink for a few seconds).
-Value will **not** be published in the state.
-It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
 ### Identify (enum)
 Initiate device identification.
