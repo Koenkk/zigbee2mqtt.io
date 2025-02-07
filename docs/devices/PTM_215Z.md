@@ -35,6 +35,8 @@ Not all Zigbee devices can do this translation. The devices known to do this are
 Green Power devices don't support binding and are not included in network scans.
 
 ### Pairing
+Before starting a pairing attempt, please read carefully this section from the **[documentation ](https://www.zigbee2mqtt.io/advanced/zigbee/01_zigbee_network.html#green-power-devices)**
+
 This device has 4 buttons:
 
 | Number | Button | Position | Channel |
