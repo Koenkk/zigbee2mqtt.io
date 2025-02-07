@@ -37,6 +37,8 @@ Binding may work between this module and the actuator, depending if the actuator
 
 
 ### Pairing
+Before starting a pairing attempt, please read carefully this section from the **[documentation ](https://www.zigbee2mqtt.io/advanced/zigbee/01_zigbee_network.html#green-power-devices)**
+
 For model built after 2020, pairing may be done via NFC or the physical buttons.
 
 #### NFC
