@@ -35,6 +35,8 @@ Not all Zigbee devices can do this translation, currently the only devices known
 Green Power devices don't support binding and are not included in network scans.
 
 ### Pairing
+Before starting a pairing attempt, please read carefully this section from the **[documentation ](https://www.zigbee2mqtt.io/advanced/zigbee/01_zigbee_network.html#green-power-devices)**
+
 The pairing may be done via NFC or the physical buttons. The use of NFC is highly recommended in order to ease the paring process and as the direct commisioning mode is disabled by default.
 
 #### NFC
