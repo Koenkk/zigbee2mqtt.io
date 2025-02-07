@@ -35,6 +35,18 @@ Not all Zigbee devices can do this translation, currently the only devices known
 Green Power devices don't support binding and are not included in network scans.
 
 ### Pairing
+Before starting a pairing attempt, please read carefully this section from the **[documentation ](https://www.zigbee2mqtt.io/advanced/zigbee/01_zigbee_network.html#green-power-devices)**
+
+The pairing may be done via NFC or the physical buttons. The use of NFC is highly recommended in order to ease the paring process and as the direct commisioning mode is disabled by default.
+
+#### NFC
+The easiest way is to use a compatible smartphone (iOS, android) with NFC capability.
+
+The required tool “EnOcean Tool” is available from the [Google Play Store](https://play.google.com/store/apps/details?id=de.enocean.easytool&hl=en) and from the [Apple Store](https://apps.apple.com/de/app/enocean-tool/id1497283202).
+
+For the first configuration, the QR-Code behind the PTM 215ZE shall be scanned in order to get the built-in NFC pin to unlock the device. Then, the user may define a specific one if required. More details are available in the documentation [EnOcean PTM 215ZE manual chapter 4 (NFC interface)](https://www.enocean.com/wp-content/uploads/redaktion/pdf/enocean_modules_24ghz/ptm-215ze/user-manual-pdf/PTM_215ZE_User_Manual-1.pdf).
+
+#### Physical buttons
 This device has 4 buttons:
 
 | Number | Button | Position | Zigbee Channel |
