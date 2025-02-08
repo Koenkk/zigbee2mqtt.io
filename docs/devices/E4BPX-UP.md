@@ -1,7 +1,7 @@
 ---
 title: "YOKIS E4BPX-UP control via MQTT"
 description: "Integrate your YOKIS E4BPX-UP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2025-02-06T19:22:59
 pageClass: device-page
 ---
 
@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | E4BPX-UP  |
 | Vendor  | [YOKIS](/supported-devices/#v=YOKIS)  |
 | Description | Flush-mounted independent 4-channel transmitter (with antenna) |
-| Exposes | identify, action, linkquality |
+| Exposes | identify, action |
 | Picture | ![YOKIS E4BPX-UP](https://www.zigbee2mqtt.io/images/devices/E4BPX-UP.png) |
 
 
@@ -56,11 +56,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `toggle`, `brightness_move_to_level`, `brightness_move_up`, `brightness_move_down`, `brightness_step_up`, `brightness_step_down`, `brightness_stop`, `open`, `close`, `stop`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -159,6 +159,12 @@ support zigbee but bluetooth. This can be verified by looking at the chip.
 ModemManager, which is default installed on e.g. Ubuntu, is known to cause problems. It can easily be fixed by removing
 ModemManager through `sudo apt-get purge modemmanager`.
 
+## Make sure your computer has enough resources available
+
+Serial communication may experience instability if your computer is low on resources.
+If your CPU and memory consistently operate at full capacity, it might suggest a shortage of resources.
+For instance, using the Zigee2MQTT addon in Home Assistant on a Raspberry Pi 3 can lead to resource exhaustion.
+
 ## hciuart is running
 
 hciuart can be disabled by executing: `sudo systemctl disable hciuart`.

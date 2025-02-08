@@ -1,7 +1,7 @@
 ---
 title: "YOKIS GALET4-UP control via MQTT"
 description: "Integrate your YOKIS GALET4-UP via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-01-03T19:19:55.077Z
+addedAt: 2025-01-03T19:19:55
 pageClass: device-page
 ---
 
