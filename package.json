@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "private": true,
-    "packageManager": "pnpm@9.15.4",
+    "packageManager": "pnpm@10.2.1",
     "scripts": {
         "dev:devices": "cross-env NODE_OPTIONS=--max_old_space_size=8000 vuepress dev docs",
         "dev": "cross-env EXCLUDE_DEVICES=yes vuepress dev docs",
@@ -24,7 +24,7 @@
         "quasar": "2.17.7"
     },
     "devDependencies": {
-        "@types/node": "22.13.0",
+        "@types/node": "22.13.1",
         "@vuepress/bundler-webpack": "2.0.0-rc.19",
         "@vuepress/client": "2.0.0-rc.19",
         "@vuepress/plugin-docsearch": "2.0.0-rc.74",
@@ -40,7 +40,7 @@
         "prettier": "3.4.2",
         "pug": "3.0.3",
         "pug-plain-loader": "1.1.0",
-        "sass": "1.83.4",
+        "sass": "1.84.0",
         "sass-loader": "16.0.2",
         "throat": "6.0.2",
         "ts-node": "10.9.2",
