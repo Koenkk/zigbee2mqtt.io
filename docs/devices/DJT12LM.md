@@ -27,6 +27,8 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+## Pairing
+Long press the reset button for more than 5 seconds, until the blue light blinks 3 times.
 
 ## OTA updates
 This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
