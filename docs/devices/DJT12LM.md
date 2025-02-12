@@ -27,8 +27,10 @@ pageClass: device-page
 ## Notes
 
 ### Pairing
+
 Long press the reset button for more than 5 seconds, until the blue light blinks 3 times.
 
+![DJT12LM pairing](../images/pairing/DJT12LM_pairing.png)
 <!-- Notes END: Do not edit below this line -->
 
 
