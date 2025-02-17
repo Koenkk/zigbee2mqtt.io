@@ -65,20 +65,22 @@ for (const definition of baseDefinitions) {
 
     allDefinitionsTemp.push(resolvedDefinition);
 
-    if ('whiteLabel' in definition && definition.whiteLabel) {
-        for (const whiteLabel of definition.whiteLabel.filter((w) => 'fingerprint' in w && w.fingerprint)) {
+    if ('whiteLabel' in resolvedDefinition && resolvedDefinition.whiteLabel) {
+        for (const whiteLabel of resolvedDefinition.whiteLabel.filter((w) => 'fingerprint' in w && w.fingerprint)) {
             const {vendor, model, description} = whiteLabel;
             allDefinitionsTemp.push({
                 ...resolvedDefinition,
                 vendor,
                 model,
-                description: description || definition.description,
+                description: description || resolvedDefinition.description,
                 whiteLabel: undefined,
             });
         }
-        definition.whiteLabel = definition.whiteLabel.filter((w) => !('fingerprint' in w) || !w.fingerprint);
-        if (definition.whiteLabel.length === 0) {
-            delete definition.whiteLabel;
+
+        resolvedDefinition.whiteLabel = resolvedDefinition.whiteLabel.filter((w) => !('fingerprint' in w) || !w.fingerprint);
+
+        if (resolvedDefinition.whiteLabel.length === 0) {
+            delete resolvedDefinition.whiteLabel;
         }
     }
 }
