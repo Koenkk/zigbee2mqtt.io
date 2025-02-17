@@ -19,6 +19,8 @@ advanced:
     timestamp_format: 'YYYY-MM-DD HH:mm:ss'
     # Optional: Location of log directory (default: shown below)
     log_directory: data/log/%TIMESTAMP%
+    # Optional: Number of log directories to keep before deleting the oldest one (default: shown below)
+    log_directories_to_keep: 10
     # Optional: Log file name, can also contain timestamp, e.g.: zigbee2mqtt_%TIMESTAMP%.log (default: shown below)
     log_file: log.txt
     # Optional: Rotate log every 10MB around 3 files (default: true)
