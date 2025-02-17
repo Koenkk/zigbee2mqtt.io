@@ -16,7 +16,7 @@ ${definition.options.map((e) => getOptionDocs(e)).join('\n\n')}
 }
 
 function getOptionDocs(option) {
-    let extra = null;
+    let extra: string | undefined;
 
     if (option.type === 'numeric') {
         extra = 'The value must be a number';
@@ -49,7 +49,7 @@ identity_effect:
 `;
     }
 
-    assert(extra != null, `No option doc generator for '${JSON.stringify(option)}'`);
+    assert(extra !== undefined, `No option doc generator for '${JSON.stringify(option)}'`);
 
     return `* \`${option.property}\`: ${addTrailingDot(option.description)} ${addTrailingDot(extra)}`;
 }

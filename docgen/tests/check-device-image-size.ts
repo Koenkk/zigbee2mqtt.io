@@ -14,7 +14,7 @@ export async function checkDeviceImageSize() {
     await Promise.all(
         images.map(async (img) => {
             const dimensions = await sizeOfP(path.resolve(imageBaseDir, img));
-            const size = `${dimensions.width}x${dimensions.height}`;
+            const size = `${dimensions?.width}x${dimensions?.height}`;
             if (!allowedDimensions.includes(size)) {
                 invalid[img] = size;
             }

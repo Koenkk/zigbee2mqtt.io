@@ -3,7 +3,7 @@ import {docsDir, findDeviceFiles} from './utils';
 
 export async function checkDeviceNotesCommentLines() {
     console.log('* Test if every device md-file has Notes BEGIN and END comment lines...');
-    const errors = [];
+    const errors: string[] = [];
     const deviceFiles = await findDeviceFiles();
     await Promise.all(
         deviceFiles.map(async (file) => {
@@ -20,12 +20,12 @@ export async function checkDeviceNotesCommentLines() {
                 }
             }
 
-            const relativeFile = file.substr(docsDir.length + 1);
+            const relativeFile = file.substring(docsDir.length + 1);
 
-            notesBegin === 0 && errors.push(`No "Notes BEGIN" comment found in ${relativeFile}`);
-            notesBegin > 1 && errors.push(`Multiple "Notes BEGIN" comments found in ${relativeFile}`);
-            notesEnd === 0 && errors.push(`No "Notes END" comment found in ${relativeFile}`);
-            notesEnd > 1 && errors.push(`Multiple "Notes END" comments found in ${relativeFile}`);
+            if (notesBegin === 0) errors.push(`No "Notes BEGIN" comment found in ${relativeFile}`);
+            if (notesBegin > 1) errors.push(`Multiple "Notes BEGIN" comments found in ${relativeFile}`);
+            if (notesEnd === 0) errors.push(`No "Notes END" comment found in ${relativeFile}`);
+            if (notesEnd > 1) errors.push(`Multiple "Notes END" comments found in ${relativeFile}`);
         }),
     );
 
