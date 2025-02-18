@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SR-ZG9030F-PS  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Smart human presence sensor |
-| Exposes | illuminance, occupancy, action |
+| Exposes | illuminance, occupancy, indicator_light, detection_area, illuminance_threshold, action |
 | Picture | ![Sunricher SR-ZG9030F-PS](https://www.zigbee2mqtt.io/images/devices/SR-ZG9030F-PS.png) |
 
 
@@ -54,6 +54,29 @@ Value can be found in the published state on the `occupancy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy": ""}`.
 It's not possible to write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
+
+### Indicator light (enum)
+Enable/disable the LED indicator.
+Value can be found in the published state on the `indicator_light` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_light": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_light": NEW_VALUE}`.
+The possible values are: `on`, `off`.
+
+### Detection area (numeric)
+Detection area range (default: 50%).
+Value can be found in the published state on the `detection_area` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_area": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_area": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Illuminance threshold (numeric)
+Illuminance threshold for triggering (default: 100).
+Value can be found in the published state on the `illuminance_threshold` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance_threshold": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"illuminance_threshold": NEW_VALUE}`.
+The minimal value is `10` and the maximum value is `100`.
+The unit of this value is `lx`.
 
 ### Action (enum)
 Triggered action (e.g. a button click).
