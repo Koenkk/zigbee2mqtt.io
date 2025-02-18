@@ -1,7 +1,7 @@
 ---
-title: "TECH VNTH-T2 control via MQTT"
-description: "Integrate your TECH VNTH-T2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-11-30T20:27:20
+title: "TECH VNTH-T2_v1 control via MQTT"
+description: "Integrate your TECH VNTH-T2_v1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-02-18T15:00:49
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TECH VNTH-T2
+# TECH VNTH-T2_v1
 
 |     |     |
 |-----|-----|
-| Model | VNTH-T2  |
+| Model | VNTH-T2_v1  |
 | Vendor  | [TECH](/supported-devices/#v=TECH)  |
 | Description | Smart radiator valve |
 | Exposes | child_lock, switch (state), window_open, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, preset, running_state), temperature_sensitivity, comfort_temperature, eco_temperature, holiday_temperature, min_temperature_limit, frost_protection, valve_alarm, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday |
-| Picture | ![TECH VNTH-T2](https://www.zigbee2mqtt.io/images/devices/VNTH-T2.png) |
+| Picture | ![TECH VNTH-T2_v1](https://www.zigbee2mqtt.io/images/devices/VNTH-T2_v1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

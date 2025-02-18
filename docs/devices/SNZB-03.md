@@ -62,3 +62,5 @@ Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
 
+true` battery low is ON, if `false` OFF.
+
