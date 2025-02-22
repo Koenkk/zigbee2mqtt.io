@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "private": true,
-    "packageManager": "pnpm@10.4.0",
+    "packageManager": "pnpm@10.4.1",
     "scripts": {
         "dev:devices": "cross-env NODE_OPTIONS=--max_old_space_size=8000 vuepress dev docs",
         "dev": "cross-env EXCLUDE_DEVICES=yes vuepress dev docs",
