@@ -41,6 +41,12 @@ jobs:
                   echo >> dist/build.txt
                   date +%F_%T >> dist/build.txt
 
+            # Disable Jekyll to prevent files starting with _ not working properly.
+            - name: Create .nojekyll
+              if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
+              run: |
+                  touch dist/.nojekyll
+
             - name: Deploy 🚀
               if: github.ref == 'refs/heads/master'
               uses: JamesIves/github-pages-deploy-action@v4.7.3
