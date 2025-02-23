@@ -1,7 +1,7 @@
 # deCONZ (Dresden Elektronik)
 
 ::: warning ATTENTION
-Various features are not supported by this adapter, in case you depend on these features, consider a different adapter.
+Various features are not supported by this coordinator, in case you depend on these features, consider a different coordinator.
 
 - [Changing the channel](../configuration/zigbee-network.md#changing-the-zigbee-channel), changing requires re-pairing all devices.
 - Adding [install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd), which is required to pair some devices.
@@ -24,7 +24,7 @@ Other supported settings are: `adapter_concurrent` and `adapter_delay` ([docs](.
 
 ConBee / ConBee II / ConBee III / RaspBee / RaspBee II
 
-USB connected adapters (ConBee / ConBee II / ConBee III) and Raspberry Pi GPIO modules (RaspBee and RaspBee II).
+USB connected coordinators (ConBee / ConBee II / ConBee III) and Raspberry Pi GPIO modules (RaspBee and RaspBee II).
 
 Add the correct baudrate to the `configuration.yaml` into the serial section.
 

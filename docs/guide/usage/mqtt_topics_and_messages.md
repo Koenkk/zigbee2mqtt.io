@@ -390,7 +390,7 @@ Allows to check whether Zigbee2MQTT is healthy. Payload has to be empty, example
 
 Allows to check to execute a coordinator check. Payload has to be empty, example response: `{"data":{"missing_routers":[{"friendly_name":"bulb","ieee_address":"0x000b57fffec6a5b2"}]},"status":"ok"}`.
 
-This check is only supported for Texas Instruments based adapters (e.g. CC2652/CC1352). It checks whether any routers are missing from the coordinator memory. In case routers are missing, you may experience one of the following problems:
+This check is only supported for Texas Instruments based coordinators (e.g. CC2652/CC1352). It checks whether any routers are missing from the coordinator memory. In case routers are missing, you may experience one of the following problems:
 
 - Unable to pair devices to your network, pairing might fail for any device that tries to joins the network via this missing router.
 - Devices falling of the network. Sometimes devices that are in the network re-join it, if they try to re-join via this missing router, re-joining will fail.
@@ -441,7 +441,7 @@ See [External converters](../../advanced/more/external_converters.md).
 
 #### zigbee2mqtt/bridge/request/backup
 
-Creates a backup of the `data` folder (without the `data/log` directory). Payload has to be empty, example response: `{"data":{"zip":"WklHQkVFMk1RVFQuUk9DS1M="},"status":"ok"}`. The `zip` property represents a zip file encoded via Base64. Note that not all adapters support backup (`coordinator_backup.json`), see [adapters](../adapters/README.md) for more details.
+Creates a backup of the `data` folder (without the `data/log` directory). Payload has to be empty, example response: `{"data":{"zip":"WklHQkVFMk1RVFQuUk9DS1M="},"status":"ok"}`. The `zip` property represents a zip file encoded via Base64. Note that not all coordinators support backup (`coordinator_backup.json`), see [coordinators](../adapters/README.md) for more details.
 
 #### zigbee2mqtt/bridge/request/install_code/add
 

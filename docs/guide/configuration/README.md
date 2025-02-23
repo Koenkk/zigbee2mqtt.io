@@ -1,5 +1,5 @@
 ---
-next: adapter-settings.md
+next: coordinator-settings.md
 ---
 
 # Configuration
@@ -17,7 +17,7 @@ permit_join: true
 mqtt:
     server: mqtt://localhost:1883
 serial:
-    # Could be either USB port (/dev/ttyUSB0), network Zigbee adapters (tcp://192.168.1.1:6638) or mDNS adapter (mdns://my-adapter).
+    # Could be either USB port (/dev/ttyUSB0), network Zigbee coordinators (tcp://192.168.1.1:6638) or mDNS coordinator (mdns://my-coordinator).
     port: /dev/ttyUSB0
 # Will run frontend on port 8080
 frontend:

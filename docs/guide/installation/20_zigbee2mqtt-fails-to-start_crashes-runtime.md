@@ -4,11 +4,11 @@ sidebarDepth: 0
 
 # Zigbee2MQTT fails to start/crashes runtime
 
-Most of the time this is caused by Zigbee2MQTT not being able to communicate with your Zigbee adapter.
+Most of the time this is caused by Zigbee2MQTT not being able to communicate with your Zigbee coordinator.
 
 [[toc]]
 
-## Error: `USB adapter discovery error (No valid USB adapter found). Specify valid 'adapter' and 'port' in your configuration.`
+## Error: `USB coordinator discovery error (No valid USB coordinator found). Specify valid 'coordinator' and 'port' in your configuration.`
 
 Configure the `serial` section as described [here](../configuration/adapter-settings.md).
 
@@ -16,14 +16,14 @@ Configure the `serial` section as described [here](../configuration/adapter-sett
 
 Common reasons for this error:
 
-1. The port of your serial adapter changed.
-   Check [this](../configuration/adapter-settings.md) to find out the port of your adapter.
-2. If you are using a CC2530 or CC2531; it is a common issue for this adapter to crash (due to its outdated hardware).
-   Reflashing the firmware should fix the problem. If it happens often consider flashing the [source routing firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/source_routing) or upgrade to a [more powerful adapter](../adapters/README.md).
-3. Your adapter requires additional configuration parameters. Check [supported Adapters](../adapters/README.md) section to find out if your adapter requires extra parameters (eg. ConBee II / RaspBee II).
+1. The port of your serial coordinator changed.
+   Check [this](../configuration/adapter-settings.md) to find out the port of your coordinator.
+2. If you are using a CC2530 or CC2531; it is a common issue for this coordinator to crash (due to its outdated hardware).
+   Reflashing the firmware should fix the problem. If it happens often consider flashing the [source routing firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin/source_routing) or upgrade to a [more powerful coordinator](../adapters/README.md).
+3. Your coordinator requires additional configuration parameters. Check [supported Coordinators](../adapters/README.md) section to find out if your coordinator requires extra parameters (eg. ConBee II / RaspBee II).
 4. Home Assistant's "Zigbee Home Automation" (ZHA) integration is enabled. Try to disable the ZHA integration and restart the Zigbee2MQTT add-on.
-5. Your hardware adapter is flashed with the router firmware and not with the coordinator firmware.
-6. Your network Zigbee adapter is not accessible over the LAN network.
+5. Your hardware coordinator is flashed with the router firmware and not with the coordinator firmware.
+6. Your network Zigbee coordinator is not accessible over the LAN network.
 7. Another software on your machine (including Home Assistant integration) is interfering with USB devices (example: [HA EDL21 integration](https://www.home-assistant.io/integrations/edl21) trying to find a USB device).
 
 ## Verify that you put the correct port in configuration.yaml
@@ -103,16 +103,16 @@ Reboot your device and now your user should have access to the device.
 ## Error: `Coordinator failed to start, probably the panID is already in use, try a different panID or channel`
 
 - If you still get this error after increasing the panID (as explained [here](../configuration/zigbee-network.md#network-config))
-  and you are using a Raspberry Pi with other USB devices attached (e.g. SSD) try connecting the SSD or adapter through a powered USB hub.
+  and you are using a Raspberry Pi with other USB devices attached (e.g. SSD) try connecting the SSD or coordinator through a powered USB hub.
 - In case you are getting this after first starting successfully and pairing a device it might be that the firmware has
   been flashed incorrectly. Try flashing the stick on a different
   computer ([detailed info](https://github.com/Koenkk/zigbee2mqtt/issues/6302)). This issue mainly occurs in combination with a Slaesh's CC2652RB stick.
-- If you had your Zigbee network before and such an error appears with the new Zigbee adapter, try to switch off the Zigbee routers that were connected to your previous Zigbee network and restart Zigbee2MQTT.
+- If you had your Zigbee network before and such an error appears with the new Zigbee coordinator, try to switch off the Zigbee routers that were connected to your previous Zigbee network and restart Zigbee2MQTT.
 
 ## Error: `Resource temporarily unavailable Cannot lock port`
 
-This error occurs when another program is already using (and thus locking) the adapter. You can find out which via the
-following command: `ls -l /proc/[0-9]/fd/ |grep /dev/ttyACM0` (replace `/dev/ttyACM0` with your adapter port).
+This error occurs when another program is already using (and thus locking) the coordinator. You can find out which via the
+following command: `ls -l /proc/[0-9]/fd/ |grep /dev/ttyACM0` (replace `/dev/ttyACM0` with your coordinator port).
 
 ## Raspberry Pi users: use a good power supply
 
@@ -127,11 +127,11 @@ In case you see message like below when running `dmesg -w` you are using a bad p
 [44889.075627] Voltage normalised (0x00000000)
 ```
 
-Also try connecting the adapter via a powered USB hub (especially if you have an SSD connected to the Pi).
+Also try connecting the coordinator via a powered USB hub (especially if you have an SSD connected to the Pi).
 
 ## Make sure the extension cable works
 
-A bad extension cable can lead to connection issues between the system and the adapter. Symptoms of this are
+A bad extension cable can lead to connection issues between the system and the coordinator. Symptoms of this are
 disconnection messages in the `dmesg -w` log like below.
 
 ```
@@ -149,7 +149,7 @@ The Openhab zwave binding interferes with Zigbee2MQTT,
 click [here](https://community.openhab.org/t/apparently-the-zwave-binding-blocks-the-dev-ttyusb0-port-in-combination-with-a-cc2652rb-zigbee2mqtt-dongle/103245)
 for more information.
 
-## In case of a CC2530 or CC2531 adapter, verify that don't have a CC2540
+## In case of a CC2530 or CC2531 coordinator, verify that don't have a CC2540
 
 The CC2540 can be confused easily with the CC2531 as it looks (almost) exactly the same. However, this device does not
 support zigbee but bluetooth. This can be verified by looking at the chip.
@@ -174,7 +174,7 @@ hciuart can be disabled by executing: `sudo systemctl disable hciuart`.
 If Zigbee2MQTT fails to start with a Texas Instruments LAUNCHXL-CC1352P-2/CC26X2R1 with `Error: SRSP - SYS - version after 6000ms`, you most probably have connected your device to a system that requires pressing the reset button (the one next to the USB connector)
 momentarily/shortly after connecting the USB cable. This issue has primarily been observed on x86 architectures only (
 e.g., Intel NUC, HPE Microserver, i7 laptop), see also [#2162](https://github.com/Koenkk/zigbee2mqtt/issues/2162). The
-procedure has to be repeated every time the adapter is re-connected and it's not clear yet, whether this can be fixed
+procedure has to be repeated every time the coordinator is re-connected and it's not clear yet, whether this can be fixed
 at all. It does not seem to occur on ARM based boards (Raspberry Pi, ODROID XU4).
 
 Something that can also solve the issue is to replug the USB cable.
@@ -223,18 +223,18 @@ This happens when you edit one or more of the `pan_id`, `network_key` or `ext_pa
 [2024-12-14 20:25:39] error: 	zh:adapter:zstack:manager: - Channel List: configured=**, adapter=**
 ```
 
-(In this example the actual values are replaced with `*`s) You can used the values that are listed for the adapter and put them back in the configuration file. Note that you can't just paste them back: in the logs the keys are printed as hexadecimal strings, but in the config file, `ext_pan_id` and `ext_pan_id` should be entered as arrays. Suppose your network key shows as `39af4d83h2dcb389` in the logs, then you should put the following in your config file:
+(In this example the actual values are replaced with `*`s) You can used the values that are listed for the coordinator and put them back in the configuration file. Note that you can't just paste them back: in the logs the keys are printed as hexadecimal strings, but in the config file, `ext_pan_id` and `ext_pan_id` should be entered as arrays. Suppose your network key shows as `39af4d83h2dcb389` in the logs, then you should put the following in your config file:
 
 ```
 ext_pan_id: [0x39,0xaf,0x4d,0x83,0xh2,0xdc,0xb3,0x89]
 ```
 
-## Zigbee adapters over the network: use robust and reliable network adapters on Zigbee2MQTT server
+## Zigbee coordinators over the network: use robust and reliable network coordinators on Zigbee2MQTT server
 
-If you have a WiFi or ethernet-connected Zigbee adapter, Zigbee2MQTT is communicating with the Zigbee adapter over the LAN through serial-over-IP protocol.
+If you have a WiFi or ethernet-connected Zigbee coordinator, Zigbee2MQTT is communicating with the Zigbee coordinator over the LAN through serial-over-IP protocol.
 
-The use of USB-WiFi or USB-ethernet adapters on the Zigbee2MQTT server is discouraged because despite the apparent equivalence to the onboard adapters in terms of specifications, they are designed in small enclosures, often not well ventilated and tend to overheat.  
-These adapters are known to stall or stop working in case of high loads or overheating, causing errors like:
+The use of USB-WiFi or USB-ethernet coordinators on the Zigbee2MQTT server is discouraged because despite the apparent equivalence to the onboard coordinators in terms of specifications, they are designed in small enclosures, often not well ventilated and tend to overheat.  
+These coordinators are known to stall or stop working in case of high loads or overheating, causing errors like:
 
 ```
 [2024-06-24 03:37:22] error: zh:ember:uart:ash: Received ERROR from NCP while connecting, with code=ERROR_EXCEEDED_MAXIMUM_ACK_TIMEOUT_COUNT.
@@ -263,8 +263,8 @@ which shows a communication out of sync between host and NCP but also, and this 
 where Zigbee2MQTT could not connect to the MQTT server over the LAN.
 
 The best setup for this situation is to use the ethernet port embedded into the Zigbee2MQTT server motherboard which guarantees reliability of communications in all load conditions.  
-As a second choice you can use the onboard WiFi adapter which should as well be designed for reliability, but also consider the stability of your WiFi network.  
-If all the onboard adapters are in use and you need to add another network adapter, the best choice is to install an internal network card on the PCIe bus, with proper cooling design.
+As a second choice you can use the onboard WiFi coordinator which should as well be designed for reliability, but also consider the stability of your WiFi network.  
+If all the onboard coordinators are in use and you need to add another network coordinator, the best choice is to install an internal network card on the PCIe bus, with proper cooling design.
 
 ## Error: regular crashes with timeout errors or failure to start after the serial port is opened
 

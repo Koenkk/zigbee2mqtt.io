@@ -43,7 +43,7 @@ Some Zigbee devices do not support changing channels. In case a device remains u
 :::
 
 ::: warning
-Changing channels is only supported for the `zstack` and `ember` adapter.
+Changing channels is only supported for the `zstack` and `ember` coordinator.
 :::
 
 Zigbee2MQTT will send this broadcast during startup if the channel in the configuration has been changed. The following logging will be produced:

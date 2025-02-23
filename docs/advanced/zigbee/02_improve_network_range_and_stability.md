@@ -5,30 +5,30 @@
 
 In case you are experiencing an unstable or bad network range you can do the following things to improve your network.
 
-## Adapter
+## Coordinator
 
-Use a [recommended](../../guide/adapters/README.md) adapter, especially the CC2530 and CC2531 are known to perform poorly.
+Use a [recommended](../../guide/adapters/README.md) coordinator, especially the CC2530 and CC2531 are known to perform poorly.
 
 ## Avoid devices from AwoX
 
 It is known that AwoX devices cause network issues. In case you are having issues, remove them from your network.
 It [may help](https://github.com/Koenkk/zigbee2mqtt/discussions/18366) to OTA update your device via the "AwoX HomeControl" app over Bluetooth.
 
-## USB based adapter
+## USB based coordinator
 
-The range of these adapters can greatly be improved when connecting them with an USB extension
-cable instead of directly plugging it into the computer (e.g. Raspberry Pi). When plugged directly into the computer, the antenna suffers from interference of radio signals and electrical components of the computer. Also be sure not to position the adapter too close
+The range of these coordinators can greatly be improved when connecting them with an USB extension
+cable instead of directly plugging it into the computer (e.g. Raspberry Pi). When plugged directly into the computer, the antenna suffers from interference of radio signals and electrical components of the computer. Also be sure not to position the coordinator too close
 to any other radio transmitting devices (e.g. a Wi-Fi router) or an SSD.
 
 A **USB extension cable** of 50 cm is already enough to reduce the interference. Preferably get one with shielding as this may give better results ([source](https://www.reddit.com/r/homeassistant/comments/10ebkis/psareminder_about_zigbee_interference/)).
 
-**Do not underestimate this!** Placing your adapter close to an USB port can kill the radio signal entirely as demonstrated in [this article](https://www.unit3compliance.co.uk/2-4ghz-intra-system-or-self-platform-interference-demonstration/).
+**Do not underestimate this!** Placing your coordinator close to an USB port can kill the radio signal entirely as demonstrated in [this article](https://www.unit3compliance.co.uk/2-4ghz-intra-system-or-self-platform-interference-demonstration/).
 
-Additionally, it may help to plug the adapter to a USB 2 instead of USB 3 port.
+Additionally, it may help to plug the coordinator to a USB 2 instead of USB 3 port.
 
-### Try different orientations of the adapter
+### Try different orientations of the coordinator
 
-RF connection between the adapter and other devices also depends on the way it is oriented in space. You might be having very poor `linkquality` reports and intermittent ping failures but once the adapter is rotated a little it all can change greatly without re-locating the coordinator far away. Try to experiment with positioning and orienting the adapter in space while monitoring the `linkquality` values reported. You might find it useful to buy a small rotating USB connector like this:
+RF connection between the coordinator and other devices also depends on the way it is oriented in space. You might be having very poor `linkquality` reports and intermittent ping failures but once the coordinator is rotated a little it all can change greatly without re-locating the coordinator far away. Try to experiment with positioning and orienting the coordinator in space while monitoring the `linkquality` values reported. You might find it useful to buy a small rotating USB connector like this:
 
 ![rotating USB connector](https://i.imgur.com/AI41Oxz.png)
 

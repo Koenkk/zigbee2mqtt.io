@@ -9,7 +9,7 @@ It is possible to run Zigbee2MQTT in a Docker container using the official [Zigb
 This image support the following architectures: `linux/386`, `linux/amd64`, `linux/arm/v6`, `linux/arm/v7`, `linux/arm64` and `linux/riscv64`.
 Since Zigbee2MQTT images are manifest listed, Docker will auto-detect the architecture and pull the right image.
 
-Start by figuring out the location of your adapter as explained [here](../configuration/adapter-settings.md#determine-location-of-the-adapter).
+Start by figuring out the location of your coordinator as explained [here](../configuration/adapter-settings.md#determine-location-of-the-adapter).
 
 **IMPORTANT**: Using a Raspberry Pi? Make sure to check [Notes for Raspberry Pi users](#notes-for-raspberry-pi-users).
 
@@ -21,11 +21,11 @@ Navigate to the directory where you will store the Zigbee2MQTT data and execute 
 mkdir data && wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.example.yaml -O data/configuration.yaml
 ```
 
-Now configure the MQTT server and adapter location as explained [here](./01_linux.md#configuring).
+Now configure the MQTT server and coordinator location as explained [here](./01_linux.md#configuring).
 
 ## Running the container
 
-Execute the following command, update the `--device` parameter to match the location of your adapter.
+Execute the following command, update the `--device` parameter to match the location of your coordinator.
 
 ```bash
 $ docker run \
@@ -43,9 +43,9 @@ $ docker run \
 
 - `--name zigbee2mqtt`: Name of container
 - `--restart=unless-stopped`: Automatically start on boot and restart after a crash
-- `--device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0`: Location of adapter (e.g. CC2531). The path before the `:` is the path on the host, the path after it is the path that is mapped to inside the container. You should always use the `/dev/serial/by-id/` path on the host.
+- `--device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0`: Location of coordinator (e.g. CC2531). The path before the `:` is the path on the host, the path after it is the path that is mapped to inside the container. You should always use the `/dev/serial/by-id/` path on the host.
 - `-v $(pwd)/data:/app/data`: Directory where Zigbee2MQTT stores it configuration (pwd maps to the current working directory)
-- `-v /run/udev:/run/udev:ro`: required for auto-detecting the adapter
+- `-v /run/udev:/run/udev:ro`: required for auto-detecting the coordinator
 - `-e TZ=Europe/Amsterdam`: configure the timezone
 - `-p 8080:8080`: port forwarding from inside Docker container to host (for the frontend)
 
@@ -58,7 +58,7 @@ of the `docker0` bridge to establish the connection: `server: mqtt://172.17.0.1`
 
 To improve the security of the deployment you may want to run Zigbee2MQTT as a _non-root_ user.
 
-1. Identify the group that has access to the adapter (in Ubuntu, e.g. it might be assigned to `dialout`). Update `ttyACM0` to match your adapter location.
+1. Identify the group that has access to the coordinator (in Ubuntu, e.g. it might be assigned to `dialout`). Update `ttyACM0` to match your coordinator location.
 
 ```
 $ ls -l /dev/ttyACM0
@@ -152,7 +152,7 @@ services:
         environment:
             - TZ=Europe/Berlin
         devices:
-            # Make sure this matched your adapter location
+            # Make sure this matched your coordinator location
             - /dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0
 ```
 
@@ -256,8 +256,8 @@ A workaround is to manually set the right permissions. The workaround is based o
 
 This workaround only works with cgroup v1, which is not enabled on many newer distro releases.
 
-1. Identify serial adapter
-   Identify the serial adapter using the following command:
+1. Identify serial coordinator
+   Identify the serial coordinator using the following command:
 
     ```shell
     sudo lsusb -v
@@ -357,7 +357,7 @@ This workaround only works with cgroup v1, which is not enabled on many newer di
 
 2. UDEV Rules
 
-    Create a new udev rule for serial adapter, `idVendor` and `idProduct` must be equal to values from `lsusb` command. The rule below creates device `/dev/zigbee-serial`:
+    Create a new udev rule for serial coordinator, `idVendor` and `idProduct` must be equal to values from `lsusb` command. The rule below creates device `/dev/zigbee-serial`:
 
     ```shell
     echo "SUBSYSTEM==\"tty\", ATTRS{idVendor}==\"0451\", ATTRS{idProduct}==\"16a8\", SYMLINK+=\"zigbee-serial\",  RUN+=\"/usr/local/bin/docker-setup-zigbee-serial.sh\"" | sudo tee /etc/udev/rules.d/99-zigbee-serial.rules
@@ -434,7 +434,7 @@ This workaround only works with cgroup v1, which is not enabled on many newer di
 
     ```shell
     [Unit]
-    Description=Docker Event Listener for Zigbee serial adapter
+    Description=Docker Event Listener for Zigbee serial coordinator
     After=network.target
     StartLimitIntervalSec=0
     [Service]
@@ -480,7 +480,7 @@ This workaround only works with cgroup v1, which is not enabled on many newer di
 
 6. Verify and deploy Zigbee2MQTT stack
 
-    Now reconnect the serial adapter. Verify using the following command:
+    Now reconnect the serial coordinator. Verify using the following command:
 
     ```shell
     ls -al /dev/zigbee-serial
@@ -514,7 +514,7 @@ This workaround only works with cgroup v1, which is not enabled on many newer di
     	external: true
     ```
 
-    In the above example, `proxy_traefik-net` is the network to connect to the mqtt broker. The constraint makes sure Docker deploys only to this (`rpi-3`) node, where the serial adapter is connected to. The volume binding `/mnt/docker-cluster/zigbee2mqtt/data` is the zigbee2mqtt persistent directory, where `configuration.yaml` is saved.
+    In the above example, `proxy_traefik-net` is the network to connect to the mqtt broker. The constraint makes sure Docker deploys only to this (`rpi-3`) node, where the serial coordinator is connected to. The volume binding `/mnt/docker-cluster/zigbee2mqtt/data` is the zigbee2mqtt persistent directory, where `configuration.yaml` is saved.
 
     The Zigbee2MQTT `configuration.yaml` should point to `/dev/zigbee-serial`:
 

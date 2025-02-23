@@ -1,11 +1,11 @@
-# Connect to a remote adapter
+# Connect to a remote coordinator
 
-This how-to explains how to run Zigbee2MQTT with an adapter on a remote location.
+This how-to explains how to run Zigbee2MQTT with an coordinator on a remote location.
 We will use ser2net for this which allows to connect to a serial port over TCP.
-In this way you can e.g. setup a Raspberry Pi Zero with the adapter connected while running Zigbee2MQTT on a different system. The instructions below have to be executed on the system where the adapter is connected to.
+In this way you can e.g. setup a Raspberry Pi Zero with the coordinator connected while running Zigbee2MQTT on a different system. The instructions below have to be executed on the system where the coordinator is connected to.
 
 ::: warning
-Be aware that it is not recommended to use a Zigbee Coordinator via a Serial-Proxy-Server (also known as Serial-to-IP bridge or Ser2Net remote adapter) over a WiFi, WAN, or VPN connection.
+Be aware that it is not recommended to use a Zigbee Coordinator via a Serial-Proxy-Server (also known as Serial-to-IP bridge or Ser2Net remote coordinator) over a WiFi, WAN, or VPN connection.
 
 Serial protocols used by Zigbee Coordinator do not have enough robustness, resilience, or fault-tolerance to handle packet loss and latency delays that can occur over unstable connections.
 
@@ -26,7 +26,7 @@ sudo apt-get install ser2net
 sudo nano /etc/ser2net.conf
 ```
 
-Add the following entry, replace `/dev/ttyACM0` with the correct path to your adapter.
+Add the following entry, replace `/dev/ttyACM0` with the correct path to your coordinator.
 
 ```
 20108:raw:0:/dev/ttyACM0:115200 8DATABITS NONE 1STOPBIT
@@ -44,7 +44,7 @@ reboot
 sudo nano /etc/ser2net.yaml
 ```
 
-Add the following entry, replace `/dev/ttyACM0` with the correct path to your adapter.
+Add the following entry, replace `/dev/ttyACM0` with the correct path to your coordinator.
 
 ```
 connection: &con01
@@ -82,7 +82,7 @@ reboot
 
 ## 3. Configure
 
-Now edit the Zigbee2MQTT `configuration.yaml` accordingly, replace `192.168.2.13` with the IP or hostname of your system where the adapter is connected to.
+Now edit the Zigbee2MQTT `configuration.yaml` accordingly, replace `192.168.2.13` with the IP or hostname of your system where the coordinator is connected to.
 
 ```yaml
 serial:
