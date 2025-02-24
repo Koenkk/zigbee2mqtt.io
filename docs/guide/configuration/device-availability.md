@@ -70,7 +70,7 @@ following attributes will be read: `state`, `brightness`, `color_temp` and `colo
 
 ## Performance considerations
 
-- The pinging can be heavy on the coordinator, especially if you are using a CC2530 or CC2531 adapter.
+- The pinging can be heavy on the coordinator, especially if you are using a CC2530 or CC2531 coordinator.
 - Higher `timeout` for active devices results in less pinging so less stress on the coordinator.
 
 ## Groups

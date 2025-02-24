@@ -50,7 +50,7 @@ The sonoff feature is in the master since 20.01.2022.
 
 ### Download the Firmware
 
-Download the firmware for your adapter from the [Supported adapter page](../README.md) and unzip it in the `c2538-bsl` directory. So everything needed is in one folder.
+Download the firmware for your coordinator from the [Supported coordinator page](../README.md) and unzip it in the `c2538-bsl` directory. So everything needed is in one folder.
 
 4. In this case we will flash `CC1352P2_CC2652P_launchpad_coordinator_***.zip`.
 

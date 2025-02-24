@@ -1,4 +1,4 @@
-# EmberZNet adapters (Silicon Labs)
+# EmberZNet coordinators (Silicon Labs)
 
 Currently supported firmware version: 7.4.x, 8.0.x
 
@@ -8,7 +8,7 @@ Use of 8.0.0 and 8.0.1 is not recommended due to firmware issues that have been 
 
 Firmware release notes: [https://www.silabs.com/developers/zigbee-emberznet?tab=documentation](https://www.silabs.com/developers/zigbee-emberznet?tab=documentation)
 
-_Multiprotocol firmware is not supported. The recommended alternative to establish multiple networks is to use one adapter per protocol._
+_Multiprotocol firmware is not supported. The recommended alternative to establish multiple networks is to use one coordinator per protocol._
 
 ### Configuration
 
@@ -20,7 +20,7 @@ serial:
 Other supported settings are: `adapter_concurrent` and `transmit_power` ([docs](../configuration/adapter-settings.md)).
 
 ::: tip TIP
-If you are experiencing issues with your adapter and it has hardware flow control support (check list below), try to flash a [firmware with hardware flow control disabled](https://github.com/darkxst/silabs-firmware-builder/tree/ember-nohw/firmware_builds/) and use the following setting instead:
+If you are experiencing issues with your coordinator and it has hardware flow control support (check list below), try to flash a [firmware with hardware flow control disabled](https://github.com/darkxst/silabs-firmware-builder/tree/ember-nohw/firmware_builds/) and use the following setting instead:
 
 ```yaml
 serial:
@@ -50,7 +50,7 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
     - Multi-devices by [@Nerivec](https://github.com/Nerivec/) using NodeJS: [Ember ZLI](https://github.com/Nerivec/ember-zli)
 - Other:
     - Standalone J-Link Flash Tool (also included in [Simplicity Studio](https://www.silabs.com/developers/simplicity-studio)): [Simplicity Commander](https://www.silabs.com/developers/simplicity-studio/simplicity-commander)
-- Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality.
+- Some Ethernet coordinators support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee coordinator for this functionality.
 
 ## Recommended
 
@@ -288,7 +288,7 @@ _NOT READY - Signaling NCP_: `ember` driver is temporarily overloaded. The coord
 
 ### `error` level
 
-_NCP EZSP protocol version of XX does not match Host version 13_: `ember` currently requires a firmware with EZSP v13 (EmberZNet firmware 7.4.x). You will need to upgrade your adapter's firmware. [Check the first two posts here](https://github.com/Koenkk/zigbee2mqtt/discussions/21462).
+_NCP EZSP protocol version of XX does not match Host version 13_: `ember` currently requires a firmware with EZSP v13 (EmberZNet firmware 7.4.x). You will need to upgrade your coordinator's firmware. [Check the first two posts here](https://github.com/Koenkk/zigbee2mqtt/discussions/21462).
 
 _[BACKUP] Current backup file is from an unsupported EZSP version_: `ember` currently only supports EZSP v12 and above backups (can be identified by opening the `coordinator_backup.json` file). The file has been renamed automatically. A new one will be created by `ember` upon successful start.
 
@@ -304,13 +304,13 @@ NCP Fatal Error. The coordinator failed (the reason should be given in the messa
 
 [https://github.com/Nerivec/ember-zli/](https://github.com/Nerivec/ember-zli/)
 
-NodeJS command line tool that allows firmware flashing, interacting with the adapter's stack, sniffing, etc. using [zigbee-herdsman](https://github.com/Koenkk/zigbee-herdsman/). Check out the [Wiki](https://github.com/Nerivec/ember-zli/wiki) for more details.
+NodeJS command line tool that allows firmware flashing, interacting with the coordinator's stack, sniffing, etc. using [zigbee-herdsman](https://github.com/Koenkk/zigbee-herdsman/). Check out the [Wiki](https://github.com/Nerivec/ember-zli/wiki) for more details.
 
 ### Bellows CLI
 
 [https://github.com/zigpy/bellows](https://github.com/zigpy/bellows)
 
-Python command line tool that allows interacting with the adapter's stack.
+Python command line tool that allows interacting with the coordinator's stack.
 
 ### Zigbee2MQTT Ember Helper
 
@@ -321,7 +321,7 @@ Analyze log files in your browser and get an automated review of your network.
 ## [EXPERT] Customizing stack configuration
 
 ::: warning ATTENTION
-This feature modifies the behavior of your adapter, and the network. Using improper values for your network can completely break it. Only modify any of these values if you are absolutely sure your network will benefit from it. Most networks will be just fine with the defaults.
+This feature modifies the behavior of your coordinator, and the network. Using improper values for your network can completely break it. Only modify any of these values if you are absolutely sure your network will benefit from it. Most networks will be just fine with the defaults.
 :::
 
 ::: warning ATTENTION
@@ -371,4 +371,4 @@ The driver further restricts values to the below:
     - "SIGNAL_AND_RSSI": RSSI and signal identifier-based CCA. CCA reports a busy medium only on detecting any energy above -75 (default) of a signal compliant with this standard with the same modulation and spreading characteristics of the PHY that is currently in use.
     - "ALWAYS_TRANSMIT": ALOHA. Always transmit CCA=1. CCA always reports an idle medium.
 
-**Note that some values are not only restricted by these ranges, but also by the memory available in your adapter. If any value (or combination) is too great for your adapter to handle, it will default to the firmware value(s) instead.**
+**Note that some values are not only restricted by these ranges, but also by the memory available in your coordinator. If any value (or combination) is too great for your coordinator to handle, it will default to the firmware value(s) instead.**

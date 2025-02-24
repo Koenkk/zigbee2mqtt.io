@@ -1,4 +1,4 @@
-# zStack adapters (Texas Instruments)
+# zStack coordinators (Texas Instruments)
 
 ### Configuration
 
@@ -11,13 +11,13 @@ Other supported settings are: `disable_led`, `adapter_concurrent` and `transmit_
 
 ### Firmware flashing (CC2652/CC1352)
 
-Adapters based on CC1352 or CC2652 chips can be flashed by putting them in the BSL (bootloader) mode.
-See the "Vendor flashing instructions" of your adapter below on how to do this.
-Once you've successfully put your adapter into BSL mode, use any of the tools below to flash it.
+Coordinators based on CC1352 or CC2652 chips can be flashed by putting them in the BSL (bootloader) mode.
+See the "Vendor flashing instructions" of your coordinator below on how to do this.
+Once you've successfully put your coordinator into BSL mode, use any of the tools below to flash it.
 
 - UI tools
     - [SMLIGHT firmware updater](https://smlight.tech/flasher/#other_cc) (**recommended**)
-        - Allows for flashing your adapter from the browser, eliminating the need for any software installation.
+        - Allows for flashing your coordinator from the browser, eliminating the need for any software installation.
     - Texas Instruments [FLASH PROGRAMMER 2](https://www.ti.com/tool/FLASH-PROGRAMMER) (Windows only) (can't find your device? read below!)
     - [ZigStar GW Multi tool](https://github.com/xyzroe/ZigStarGW-MT) (multi platform GUI tool)
 - CLI tools (multi platform Python based command line tools)
@@ -28,7 +28,7 @@ Once you've successfully put your adapter into BSL mode, use any of the tools be
     - [TubesZB TI CC2652 FW Flasher](https://github.com/tube0013/tubeszb_addons)
     - [ZigStar TI CC2652 FW Flasher](https://github.com/mercenaruss/zigstar_addons) (fork of TubesZB with added features)
 
-- Some Ethernet adapters support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee adapter for this functionality. For example the universal [XZG Firmware](https://github.com/xyzroe/XZG) that fits any CC1352/CC2652 based gateway ([video](https://github.com/Koenkk/zigbee2mqtt.io/assets/6440415/c2ca1d4c-166a-4bd9-b642-86595da1dcdb))
+- Some Ethernet coordinators support flashing Zigbee firmware over their own web-interface. In this case you do not need any external software and hardware. Just go to the webinterface and press "Update Zigbee firmware". Please refer to the manual of your particular Zigbee coordinator for this functionality. For example the universal [XZG Firmware](https://github.com/xyzroe/XZG) that fits any CC1352/CC2652 based gateway ([video](https://github.com/Koenkk/zigbee2mqtt.io/assets/6440415/c2ca1d4c-166a-4bd9-b642-86595da1dcdb))
 
 <img src="../../images/flashing/web-interface-ota-flashing.jpg" title="SLZB-06 WEB OTA Zigbee Flashing" height=300 />
 
@@ -38,7 +38,7 @@ Once you've successfully put your adapter into BSL mode, use any of the tools be
 
 ::: details Electrolama zig-a-zig-ah! (zzh!)
 
-USB connected adapter with external antenna based on CC2652R chip
+USB connected coordinator with external antenna based on CC2652R chip
 
 - [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC2652R_coordinator_20240710.zip)
 - [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC2652R_router_20221102.zip)
@@ -50,7 +50,7 @@ USB connected adapter with external antenna based on CC2652R chip
 
 ::: details Slaesh's CC2652RB stick
 
-USB connected adapter with external antenna based on CC2652RB chip
+USB connected coordinator with external antenna based on CC2652RB chip
 
 - [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC2652RB_coordinator_20240710.zip)
 - [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC2652RB_router_20221102.zip)
@@ -62,7 +62,7 @@ USB connected adapter with external antenna based on CC2652RB chip
 
 ::: details Tube's CC2652P2 USB Coordinator
 
-Open source hardware CC2652P based USB connected adapter with external antenna and USB extension cable
+Open source hardware CC2652P based USB connected coordinator with external antenna and USB extension cable
 
 - [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC1352P2_CC2652P_launchpad_coordinator_20240710.zip)
 - [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
@@ -101,7 +101,7 @@ Powerful Open source dongle with external antenna based on CC2652P
 
 ::: details CircuitSetup's CC2652P2 USB Coordinator
 
-CC2652P based USB connected adapter pre-programmed with Z-Stack
+CC2652P based USB connected coordinator pre-programmed with Z-Stack
 
 - [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC1352P2_CC2652P_launchpad_coordinator_20240710.zip)
 - [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
@@ -111,7 +111,7 @@ CC2652P based USB connected adapter pre-programmed with Z-Stack
 <img src="../../images/circset_cc2652.jpg" width="200" />
 :::
 
-::: details SMLIGHT CC2652P Zigbee USB Adapter SLZB-02
+::: details SMLIGHT CC2652P Zigbee USB Coordinator SLZB-02
 
 CC2652P factory-made Zigbee USB coordinator with external 6dB antenna and worldwide delivery
 
@@ -126,7 +126,7 @@ CC2652P factory-made Zigbee USB coordinator with external 6dB antenna and worldw
 
 ::: details SONOFF Zigbee 3.0 USB Dongle Plus ZBDongle-P
 
-CC2652P based USB connected adapter pre-programmed and with enclosure.
+CC2652P based USB connected coordinator pre-programmed and with enclosure.
 
 Note before buying that ITead slightly confusingly now sells both the Dongle Plus "ZBDongle-P" (based on CC2652P), and the Dongle Plus V2 "ZBDongle-E" (based on EFR32MG21).
 
@@ -142,7 +142,7 @@ Note before buying that ITead slightly confusingly now sells both the Dongle Plu
 
 ::: details Vision CC2652 dongle
 
-Adapter or small development board based on CC2652R (VS201) or CC2652P (VS202)  
+Coordinator or small development board based on CC2652R (VS201) or CC2652P (VS202)  
 Coordinator firmware: [VS201](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC2652R_coordinator_20240710.zip) [VS202](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC1352P2_CC2652P_launchpad_coordinator_20240710.zip)  
 Router firmware: [VS201](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC2652R_router_20221102.zip) [VS202](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_router_20221102.zip)
 
@@ -164,9 +164,9 @@ Powerful CC2652P1 factory-made Zigbee USB dongle with external antenna.
 <img src="../../images/jetstick_z2.png" width="200" />
 :::
 
-::: details SMLIGHT SLZB-07p7 Zigbee USB CC2652P7 adapter
+::: details SMLIGHT SLZB-07p7 Zigbee USB CC2652P7 coordinator
 
-Powerful, tiny modern design, developed for Zigbee2MQTT, pre-flashed and ready to use Zigbee adapter. Autodiscovery in Home Assistant. AutoBSL (remote update) enabled.  
+Powerful, tiny modern design, developed for Zigbee2MQTT, pre-flashed and ready to use Zigbee coordinator. Autodiscovery in Home Assistant. AutoBSL (remote update) enabled.  
 Rich packing that includes:
 | Package includes | SLZB-07p7 adapter | +3dB antenna 360° | QR-manual |
 |:-|:-:|:-:|:-:|
@@ -226,9 +226,9 @@ An open source Zstack3 gateway powered by ESP8266 and CC2652P modules. One costs
 <img src="../../images/CC2652P-Z2M.jpg" width="200" />
 :::
 
-::: details SMLIGHT Zigbee LAN Adapter CC2652P Model SLZB-05
+::: details SMLIGHT Zigbee LAN Coordinator CC2652P Model SLZB-05
 
-Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6dB antenna, worldwide delivery, Zigbee firmware can be manually updated via USB in 5 easy steps, customer/tech support, fast order processing.
+Pre-flashed ready-to-use Zigbee LAN CC2652P Coordinator, factory made, metal case, 6dB antenna, worldwide delivery, Zigbee firmware can be manually updated via USB in 5 easy steps, customer/tech support, fast order processing.
 
 - [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC1352P2_CC2652P_other_coordinator_20240710.zip)
 - [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_3.x.0_router_20221102/router/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_other_router_20221102.zip)
@@ -242,7 +242,7 @@ Pre-flashed ready-to-use Zigbee LAN CC2652P Adapter, factory made, metal case, 6
 
 ::: details Gio-dot Z-Bee Duo with CC2652P
 
-4 in 1 zigbee adapter: USB Stick, WiFi, LAN, PI Zero Hat, with external antenna and 3D printed case.
+4 in 1 zigbee coordinator: USB Stick, WiFi, LAN, PI Zero Hat, with external antenna and 3D printed case.
 
 - [Description](https://gio-dot.github.io/Z-Bee-Duo/)
 - [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC1352P2_CC2652P_other_coordinator_20240710.zip)
@@ -279,11 +279,11 @@ Open source PoE af Coordinator with external antenna on CC2652P
 <img src="../../images/ZigStar-PoE.png" width="200" />
 :::
 
-::: details SMLIGHT SLZB-06 Zigbee+Matter/Thread+Bluetooth Ethernet USB POE WiFi LAN adapter
+::: details SMLIGHT SLZB-06 Zigbee+Matter/Thread+Bluetooth Ethernet USB POE WiFi LAN coordinator
 
-Powerful, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed and ready to use Zigbee adapter.  
+Powerful, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed and ready to use Zigbee coordinator.  
 It supports **Zigbee 3.0**, experimental **Matter-over-Thread** and **Bluetooth**. Connections: Ethernet (+PoE), LAN, USB, and WiFi. Rich packing that includes:
-| Package includes | SLZB-06 adapter | +5dB antenna 360° | Adhesive tape | Screws | Screwdriver | MicroUSB-Type-C | Screw-fix helper |
+| Package includes | SLZB-06 coordinator | +5dB antenna 360° | Adhesive tape | Screws | Screwdriver | MicroUSB-Type-C | Screw-fix helper |
 |:-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |Quantity: |1 pcs|1 pcs|2 pcs|2 pcs|1 pcs|1 pcs|1 pcs|  
 |Image| <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adapter.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-antenna.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adhesive.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screws.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screwdriver.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-microusb.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-qr.jpg" width="200" /> |
@@ -324,11 +324,11 @@ Open source PoE af Coordinator with external antenna on CC2652P
 
 :::
 
-::: details SMLIGHT SLZB-06p7 Zigbee Ethernet USB POE WiFi LAN adapter
+::: details SMLIGHT SLZB-06p7 Zigbee Ethernet USB POE WiFi LAN coordinator
 
-Powerful, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed and ready to use Zigbee adapter.  
+Powerful, tiny modern design, developed for Zigbee2MQTT, PoE supported, pre-flashed and ready to use Zigbee coordinator.  
 It supports Zigbee 3.0, Ethernet, LAN, USB, and WiFi connections. Rich packing that includes:
-| Package includes | SLZB-06p7 adapter | +5dB antenna 360° | Adhesive tape | Screws | Screwdriver | MicroUSB-Type-C | Screw-fix helper |
+| Package includes | SLZB-06p7 coordinator | +5dB antenna 360° | Adhesive tape | Screws | Screwdriver | MicroUSB-Type-C | Screw-fix helper |
 |:-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |Quantity: |1 pcs|1 pcs|2 pcs|2 pcs|1 pcs|1 pcs|1 pcs|  
 |Image| <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06p7-adapter.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-antenna.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-adhesive.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screws.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-screwdriver.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-microusb.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-06-qr.jpg" width="200" /> |
@@ -479,10 +479,10 @@ These devices have two serial devices built in. Make sure you put the right seri
 
 ::: details Texas Instruments CC2531
 
-USB connected Zigbee adapter with PCB antenna  
+USB connected Zigbee coordinator with PCB antenna  
 **Warning 1:** requires additional hardware to flash (CC debugger + download cable)  
 **Warning 2:** might not be powerful enough to handle networks of 20+ devices  
-**Warning 3:** this adapter has bad range
+**Warning 3:** this coordinator has bad range
 
 - [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_Home_1.2/bin)
 - [Router firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/router/Z-Stack_Home_1.2/bin)
@@ -496,7 +496,7 @@ USB connected Zigbee adapter with PCB antenna
 
 ::: details Vision CC2538+CC2592 Dongle(VS203)
 
-Adapter or small development board based on CC2538 and CC2592 chip
+Coordinator or small development board based on CC2538 and CC2592 chip
 
 - [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
 - [Flashing instructions](https://www.aliexpress.com/item/1005002809329614.html?spm=a2g0o.store_pc_allProduct.8148356.2.4d7f1012TTc3uX)
@@ -507,7 +507,7 @@ Adapter or small development board based on CC2538 and CC2592 chip
 
 ::: details Texas Instruments CC2530
 
-Serial connected adapter with external antenna optionally with CC2591 or CC2592 RF frontend  
+Serial connected coordinator with external antenna optionally with CC2591 or CC2592 RF frontend  
 **Warning 1:** requires additional hardware to flash (CC debugger + download cable)  
 **Warning 2:** might not be powerful enough to handle networks of 20+ devices
 
@@ -522,7 +522,7 @@ Serial connected adapter with external antenna optionally with CC2591 or CC2592 
 
 ::: details Texas Instruments CC2538
 
-Serial connected adapter with CC2592 RF Amplifier
+Serial connected coordinator with CC2592 RF Amplifier
 
 - [Coordinator firmware](https://github.com/Koenkk/Z-Stack-firmware/tree/master/coordinator/Z-Stack_3.0.x/bin)
 - [Flashing instructions](./flashing/flashing_the_cc2538.md)

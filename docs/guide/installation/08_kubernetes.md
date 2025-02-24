@@ -13,7 +13,7 @@ configuration required for you.
 The Zigbee2MQTT config section in the values.yaml is a 1:1 mapping of the usual config file, it simply is created on a configmap
 during the helm release creation. If you don't provide any additional values, sensible defaults are used in the deployment.
 
-If you are planning to use an usb adapter directly plugged into a node of the cluster, most likely you need to
+If you are planning to use an usb coordinator directly plugged into a node of the cluster, most likely you need to
 specify a `.values.statefulset.nodeSelector` so the pods are scheduled in the right node.
 
 By default, storage is not enabled, which is great for testing.

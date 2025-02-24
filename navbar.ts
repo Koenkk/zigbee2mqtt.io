@@ -16,7 +16,7 @@ export const navbar: NavbarConfig = [
             '/guide/getting-started/',
             {
                 link: '/guide/adapters/',
-                text: 'Supported Adapters',
+                text: 'Supported Coordinators',
                 activeMatch: '(/guide/adapters/|/guide/supported-hardware)',
             },
             {
@@ -43,7 +43,7 @@ export const navbar: NavbarConfig = [
         children: [
             {text: 'Zigbee', children: getFiles('advanced/zigbee')},
             {text: 'Support new devices', children: getFiles('advanced/support-new-devices')},
-            {text: 'Remote Adapter', children: getFiles('advanced/remote-adapter')},
+            {text: 'Remote Coordinator', children: getFiles('advanced/remote-adapter')},
             {text: 'More', children: getFiles('advanced/more')},
         ],
     },
