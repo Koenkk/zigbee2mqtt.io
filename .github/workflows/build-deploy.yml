@@ -18,7 +18,7 @@ jobs:
             - name: Setup Node.js ⚗
               uses: actions/setup-node@v4
               with:
-                  node-version: 20
+                  node-version: 22
                   cache: pnpm
 
             - name: Install dependencies 🌐
@@ -40,6 +40,12 @@ jobs:
                   git log --pretty=format:'%h' -n 1 > dist/build.txt
                   echo >> dist/build.txt
                   date +%F_%T >> dist/build.txt
+
+            # Disable Jekyll to prevent files starting with _ not working properly.
+            - name: Create .nojekyll
+              if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
+              run: |
+                  touch dist/.nojekyll
 
             - name: Deploy 🚀
               if: github.ref == 'refs/heads/master'
