@@ -31,6 +31,9 @@ Uses CR2032 battery.
 ### Pairing
 Press and hold the reset button by pressing hard on the top of the device (water drop logo) for +- 5 seconds (until the blue light inside the device, under the water drop starts blinking). After this the device will automatically join.
 In some cases, the sensor may not want to pair. Remove the battery and while you put it back in, keep the reset button pressed until the paring is complete.
+
+### Unknown states
+By default, `water_leak` and `battery_low` properties will be set to `null`. They will switch their value to true the first time they are triggered, and from there they can switch between true and false. Therefore assuming that these properties can be only true or false is incorrect.
 <!-- Notes END: Do not edit below this line -->
 
 
