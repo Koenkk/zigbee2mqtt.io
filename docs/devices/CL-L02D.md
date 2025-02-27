@@ -99,7 +99,7 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
   - `{"color_rgb": {"rgb": "R,G,B"}}` e.g. `{"color_rgb":{"rgb":"46,102,150"}}`
   - `{"color_rgb": {"hex": HEX}}` e.g. `{"color_rgb":{"hex":"#547CFF"}}`
 - `color_hs`: To control the hue/saturation (color) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_rgb": {"hue": HUE, "saturation": SATURATION}}` (e.g. `{"color_rgb":{"hue":360,"saturation":100}}`). To read the hue/saturation send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_rgb":{"hue":"","saturation":""}}`. Alternatively it is possible to set the hue/saturation via:
-  - HSB space (hue, saturation, brightness): `{"color_rgb": {"h": H, "s": S, "b": B}}` e.g. `color_rgb` or `{"color_rgb": {"hsb": "H,S,B"}}` e.g. `{"color_rgb":{"hsb":"360,100,100"}}`
+  - HSB space (hue, saturation, brightness): `{"color_rgb": {"h": H, "s": S, "b": B}}` e.g. `{"color_rgb":{"h":360,"s":100,"b":100}}` or `{"color_rgb": {"hsb": "H,S,B"}}` e.g. `{"color_rgb":{"hsb":"360,100,100"}}`
   - HSV space (hue, saturation, value):`{"color_rgb": {"h": H, "s": S, "v": V}}` e.g. `{"color_rgb":{"h":360,"s":100,"v":100}}` or `{"color_rgb": {"hsv": "H,S,V"}}` e.g. `{"color_rgb":{"hsv":"360,100,100"}}`
   - HSL space (hue, saturation, lightness)`{"color_rgb": {"h": H, "s": S, "l": L}}` e.g. `{"color_rgb":{"h":360,"s":100,"l":100}}` or `{"color_rgb": {"hsl": "H,S,L"}}` e.g. `{"color_rgb":{"hsl":"360,100,100"}}`
 
