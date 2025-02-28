@@ -26,8 +26,20 @@ pageClass: device-page
 ## Notes
 
 ### Pairing
-To pair this device you have to install the device via its installation code. The installation code can be obtained by scanning the QR-code on the inside of the battery cover with your smartphone. Then put the device into pairing mode, by reseating a battery. The device is in pairing mode, when the display shows ">o<". Don't press the button on the valve, before pairing is completed. In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the code you got from the QR-code and confirm by clicking "OK" which will get zigbee2mqtt into pairing mode automatically. Wait for your device to be joined. The valve should still show ">o<" on its display. Now you can press the button on the valve to initiate valve adaption. If you have variant with Matter (Smart radiator thermostat II [+M]), QR code is for Matter only. You can construct Install code from the IEEE Address and Install code (it is next to QR code): Bosch prefix (40 characters), IEEE Address (16), DLK, Install code (36). Example of Install code: `RB01SG0D83101826480080000000000000000000XXXXXXXXXXXXXXXXDLKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+To pair this device you have to install the device via its installation code. Since this TRC comes in two different flavors (Zigbee only vs. Zigbee and Matter), the pairing process slightly differs between the two.
 
+#### Pairing Zigbee Only TRV (Non-Matter variant)
+The installation code can be obtained by scanning the QR-code on the inside of the battery cover with your smartphone. Then put the device into pairing mode, by reseating a battery. The device is in pairing mode, when the display shows ">o<". Don't press the button on the valve, before pairing is completed. Now proceed to section "Zigbee2MQTT Install Code" below.
+
+#### Pairing Zigbee and Matter TRV (`Smart radiator thermostat II [+M]`)
+In case you are trying to pair the variant with Matter-support, the QR code is for Matter only. You can construct Install code from the IEEE Address and Install code (it is next to QR code): Bosch prefix (40 characters), IEEE Address (16), DLK, Install code (36). Example of Install code: `RB01SG0D83101826480080000000000000000000XXXXXXXXXXXXXXXXDLKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+The device also needs to be in Zigbee-pairing mode. After resetting it, it will indicate its pairing mode by LED-flash:
+- Blue flashing: Matter pairing Mode
+- Orange flashing: Zigbee pairing Mode
+To leave Matter pairing Mode and enter Zigbee pairing mode, hold the main button for 3 seconds after Factory reset. The display should confirm with a "Z" that you switched to Zigbee paring Mode. Now proceed to section "Zigbee2MQTT Install Code" below.
+
+### Enter Install Code in Zigbee2MQTT
+In zigbee2mqtt navigate to  "Settings" --> "Tools" and click on "Add install code". Paste the Install Code and confirm by clicking "OK" which will get zigbee2mqtt into pairing mode automatically. Wait for your device to be joined. The valve should still show ">o<" on its display. Now you can press the button on the valve to initiate valve adaption.
 
 ### Factory resetting
 To factory reset the device remove one of the batteries. While pressing and holding the device's main button on the front, insert the battery back. As soon as the device's LED is starting to blink orange while showing "RES", release the main button and press and hold it again until the device's LED is lighting up green. The device will then restart into the calibration process and look for a Zigbee network to join. In case something went wrong, the device's LED will start to blink red. The process has then to be start all over again.
