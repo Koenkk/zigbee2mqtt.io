@@ -26,7 +26,7 @@ pageClass: device-page
 ## Notes
 
 ### Pairing
-To pair this device you have to install the device via its installation code. Since this TRC comes in two different flavors (Zigbee only vs. Zigbee and Matter), the pairing process slightly differs between the two.
+To pair this device you have to install the device via its installation code. Since this TRV comes in two different flavors (Zigbee only vs. Zigbee and Matter), the pairing process slightly differs between the two.
 
 #### Pairing Zigbee Only TRV (Non-Matter variant)
 The installation code can be obtained by scanning the QR-code on the inside of the battery cover with your smartphone. Then put the device into pairing mode, by reseating a battery. The device is in pairing mode, when the display shows ">o<". Don't press the button on the valve, before pairing is completed. Now proceed to section "Zigbee2MQTT Install Code" below.
