@@ -1,6 +1,7 @@
 import {promises as fsp} from 'fs';
 import * as path from 'path';
 import * as fs from 'fs';
+// @ts-expect-error TODO fix paths
 import baseDefinitions from 'zigbee-herdsman-converters/devices/index';
 import {Definition, prepareDefinition} from 'zigbee-herdsman-converters';
 
@@ -59,7 +60,6 @@ const allDefinitionsTemp: Definition[] = [];
 
 for (const definition of baseDefinitions) {
     const resolvedDefinition = prepareDefinition(
-        // @ts-expect-error inferred type is wrong
         definition,
     );
 
