@@ -52,11 +52,11 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 This light supports the following features: `state`, `brightness`, `color_temp`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_white": "ON"}`, `{"state_white": "OFF"}` or `{"state_white": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_white": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_white": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_white": ""}`.
-- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_white": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_white": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
-
-#### Transition
-For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
-Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
+- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_white": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_white": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest` (representing values of 153, 250, 370, 370 respectively).
+- Alternatively it is possible to set the hue/saturation via:
+  - HSB space (hue, saturation, brightness): `{"color_white": {"h": H, "s": S, "b": B}}` e.g. `{"color_white":{"h":360,"s":100,"b":100}}` or `{"color_white": {"hsb": "H,S,B"}}` e.g. `{"color_white":{"hsb":"360,100,100"}}`
+  - HSV space (hue, saturation, value):`{"color_white": {"h": H, "s": S, "v": V}}` e.g. `{"color_white":{"h":360,"s":100,"v":100}}` or `{"color_white": {"hsv": "H,S,V"}}` e.g. `{"color_white":{"hsv":"360,100,100"}}`
+  - HSL space (hue, saturation, lightness)`{"color_white": {"h": H, "s": S, "l": L}}` e.g. `{"color_white":{"h":360,"s":100,"l":100}}` or `{"color_white": {"hsl": "H,S,L"}}` e.g. `{"color_white":{"hsl":"360,100,100"}}`
 
 #### Moving/stepping
 Instead of setting a value (e.g. brightness) directly it is also possible to:
@@ -67,6 +67,8 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
+**NOTE**: as of now, move just always set to 100 if positive and 0 if negative, rather than being a per second rate
+**NOTE**: the ones listed here can also be referenced with  suffix `_white` for the same result (e.g. `brightness_move_white`)
 ````js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
@@ -90,7 +92,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Light (rgb endpoint)
-This light supports the following features: `state`, `brightness`, `color_temp`, `color_xy`, `color_hs`.
+This light supports the following features: `state`, `brightness`, `color_temp`, `color_xy`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_rgb": "ON"}`, `{"state_rgb": "OFF"}` or `{"state_rgb": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_rgb": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_rgb": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_rgb": ""}`.
 - `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_rgb": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_rgb": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
@@ -98,14 +100,10 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
   - `{"color_rgb": {"r": R, "g": G, "b": B}}` e.g. `{"color_rgb":{"r":46,"g":102,"b":150}}`
   - `{"color_rgb": {"rgb": "R,G,B"}}` e.g. `{"color_rgb":{"rgb":"46,102,150"}}`
   - `{"color_rgb": {"hex": HEX}}` e.g. `{"color_rgb":{"hex":"#547CFF"}}`
-- `color_hs`: To control the hue/saturation (color) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_rgb": {"hue": HUE, "saturation": SATURATION}}` (e.g. `{"color_rgb":{"hue":360,"saturation":100}}`). To read the hue/saturation send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_rgb":{"hue":"","saturation":""}}`. Alternatively it is possible to set the hue/saturation via:
+-  Alternatively it is possible to set the hue/saturation via:
   - HSB space (hue, saturation, brightness): `{"color_rgb": {"h": H, "s": S, "b": B}}` e.g. `{"color_rgb":{"h":360,"s":100,"b":100}}` or `{"color_rgb": {"hsb": "H,S,B"}}` e.g. `{"color_rgb":{"hsb":"360,100,100"}}`
   - HSV space (hue, saturation, value):`{"color_rgb": {"h": H, "s": S, "v": V}}` e.g. `{"color_rgb":{"h":360,"s":100,"v":100}}` or `{"color_rgb": {"hsv": "H,S,V"}}` e.g. `{"color_rgb":{"hsv":"360,100,100"}}`
   - HSL space (hue, saturation, lightness)`{"color_rgb": {"h": H, "s": S, "l": L}}` e.g. `{"color_rgb":{"h":360,"s":100,"l":100}}` or `{"color_rgb": {"hsl": "H,S,L"}}` e.g. `{"color_rgb":{"hsl":"360,100,100"}}`
-
-#### Transition
-For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
-Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
 
 #### Moving/stepping
 Instead of setting a value (e.g. brightness) directly it is also possible to:
@@ -116,18 +114,20 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
+**NOTE**: as of now, move just always set to 100 if positive and 0 if negative, rather than being a per second rate
+**NOTE**: as of now, hue and saturation have no effect
 ````js
 {
-  "brightness_move": -40, // Starts moving brightness down at 40 units per second
-  "brightness_move": 0, // Stop moving brightness
-  "brightness_step": 40 // Increases brightness by 40
-  "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
-  "color_temp_move": "stop", // Stop moving color temperature
-  "color_temp_step": 99, // Increase color temperature by 99
-  "hue_move": 40, // Starts moving hue up at 40 units per second, will endlessly loop (allowed value range: -255 till 255)
-  "hue_step": -90, // Decrease hue by 90 (allowed value range: -255 till 255)
-  "saturation_move": -55, // Starts moving saturation down at -55 units per second (allowed value range: -255 till 255)
-  "saturation_step": 66, // Increase saturation by 66 (allowed value range: -255 till 255)
+  "brightness_move_rgb": -40, // Starts moving brightness down at 40 units per second
+  "brightness_move_rgb": 0, // Stop moving brightness
+  "brightness_step_rgb": 40 // Increases brightness by 40
+  "color_temp_move_rgb": 60, // Starts moving color temperature up at 60 units per second
+  "color_temp_move_rgb": "stop", // Stop moving color temperature
+  "color_temp_step_rgb": 99, // Increase color temperature by 99
+  "hue_move_rgb": 40, // Starts moving hue up at 40 units per second, will endlessly loop (allowed value range: -255 till 255)
+  "hue_step_rgb": -90, // Decrease hue by 90 (allowed value range: -255 till 255)
+  "saturation_move_rgb": -55, // Starts moving saturation down at -55 units per second (allowed value range: -255 till 255)
+  "saturation_step_rgb": 66, // Increase saturation by 66 (allowed value range: -255 till 255)
 }
 ````
 
