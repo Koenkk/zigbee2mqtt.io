@@ -59,9 +59,7 @@ export function getAddedAt(deviceContent: string) {
 const allDefinitionsTemp: Definition[] = [];
 
 for (const definition of baseDefinitions) {
-    const resolvedDefinition = prepareDefinition(
-        definition,
-    );
+    const resolvedDefinition = prepareDefinition(definition);
 
     allDefinitionsTemp.push(resolvedDefinition);
 
