@@ -95,7 +95,7 @@ The unit of this value is `°C`.
 This light supports the following features: `state`, `brightness`, `color_temp`, `color_xy`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_rgb": "ON"}`, `{"state_rgb": "OFF"}` or `{"state_rgb": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_rgb": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness_rgb": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness_rgb": ""}`.
-- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_rgb": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_rgb": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
+- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_rgb": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_rgb": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest` (representing values of 153, 250, 370, 370 respectively).
 - `color_xy`: To control the XY color (CIE 1931 color space) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_rgb": {"x": X_VALUE, "y": Y_VALUE}}` (e.g. `{"color_rgb":{"x":0.123,"y":0.123}}`). To read the XY color send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_rgb":{"x":"","y":""}}`. Alternatively it is possible to set the XY color via RGB:
   - `{"color_rgb": {"r": R, "g": G, "b": B}}` e.g. `{"color_rgb":{"r":46,"g":102,"b":150}}`
   - `{"color_rgb": {"rgb": "R,G,B"}}` e.g. `{"color_rgb":{"rgb":"46,102,150"}}`
@@ -104,6 +104,10 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
   - HSB space (hue, saturation, brightness): `{"color_rgb": {"h": H, "s": S, "b": B}}` e.g. `{"color_rgb":{"h":360,"s":100,"b":100}}` or `{"color_rgb": {"hsb": "H,S,B"}}` e.g. `{"color_rgb":{"hsb":"360,100,100"}}`
   - HSV space (hue, saturation, value):`{"color_rgb": {"h": H, "s": S, "v": V}}` e.g. `{"color_rgb":{"h":360,"s":100,"v":100}}` or `{"color_rgb": {"hsv": "H,S,V"}}` e.g. `{"color_rgb":{"hsv":"360,100,100"}}`
   - HSL space (hue, saturation, lightness)`{"color_rgb": {"h": H, "s": S, "l": L}}` e.g. `{"color_rgb":{"h":360,"s":100,"l":100}}` or `{"color_rgb": {"hsl": "H,S,L"}}` e.g. `{"color_rgb":{"hsl":"360,100,100"}}`
+
+#### Transition
+For `color_temp` it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
+Example: `{"color_temp_rgb":241,"transition":1}`.
 
 #### Moving/stepping
 Instead of setting a value (e.g. brightness) directly it is also possible to:
