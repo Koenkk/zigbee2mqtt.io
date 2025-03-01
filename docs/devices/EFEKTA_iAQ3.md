@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_iAQ3  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | CO2 Monitor with IPS TFT Display, outdoor temperature and humidity, date and time |
-| Exposes | co2, temperature, humidity, voc_index, voc_raw_data, illuminance, auto_brightness, night_onoff_backlight, night_on_backlight, night_off_backlight, rotate, long_chart_period, long_chart_period2, set_altitude, temperature_offset, humidity_offset, internal_or_external, automatic_scal, forced_recalibration, factory_reset_co2, manual_forced_recalibration, enable_gas, invert_logic_gas, high_gas, low_gas |
+| Exposes | co2, temperature, humidity, voc_index, illuminance, auto_brightness, night_onoff_backlight, night_on_backlight, night_off_backlight, rotate, long_chart_period, long_chart_period2, set_altitude, temperature_offset, humidity_offset, internal_or_external, automatic_scal, forced_recalibration, factory_reset_co2, manual_forced_recalibration, enable_gas, invert_logic_gas, high_gas, low_gas |
 | Picture | ![EFEKTA EFEKTA_iAQ3](https://www.zigbee2mqtt.io/images/devices/EFEKTA_iAQ3.png) |
 
 
@@ -89,12 +89,6 @@ VOC index.
 Value can be found in the published state on the `voc_index` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `VOC Index points`.
-
-### Voc raw data (numeric)
-SRAW_VOC, digital raw value.
-Value can be found in the published state on the `voc_raw_data` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `ticks`.
 
 ### Illuminance (numeric)
 Measured illuminance.

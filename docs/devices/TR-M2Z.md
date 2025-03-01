@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TR-M2Z  |
 | Vendor  | [MAZDA](/supported-devices/#v=MAZDA)  |
 | Description | Thermostatic radiator valve |
-| Exposes | battery, child_lock, switch (state), frost_protection, alarm_switch, comfort_temperature, eco_temperature, holiday_temperature, temperature_sensitivity, climate (local_temperature, current_heating_setpoint, preset, running_state, system_mode, local_temperature_calibration), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday |
+| Exposes | battery, child_lock, window_detection, frost_protection, alarm_switch, comfort_temperature, eco_temperature, holiday_temperature, temperature_sensitivity, climate (local_temperature, current_heating_setpoint, preset, running_state, system_mode, local_temperature_calibration), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday |
 | Picture | ![MAZDA TR-M2Z](https://www.zigbee2mqtt.io/images/devices/TR-M2Z.png) |
 
 
@@ -47,10 +47,12 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
-### Window detection (switch)
-The current state of this switch is in the published state under the `window_detection` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": "ON"}`, `{"window_detection": "OFF"}` or `{"window_detection": "TOGGLE"}`.
-It's not possible to read (`/get`) this value.
+### Window detection (binary)
+Enables/disables window detection on the device.
+Value can be found in the published state on the `window_detection` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"window_detection": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"window_detection": NEW_VALUE}`.
+If value equals `true` window detection is ON, if `false` OFF.
 
 ### Frost protection (binary)
 When Anti-Freezing function is activated, the temperature in the house is kept at 8 °C..

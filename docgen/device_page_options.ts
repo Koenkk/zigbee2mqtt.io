@@ -16,7 +16,7 @@ ${definition.options.map((e) => getOptionDocs(e)).join('\n\n')}
 }
 
 function getOptionDocs(option) {
-    let extra = null;
+    let extra: string | undefined;
 
     if (option.type === 'numeric') {
         extra = 'The value must be a number';
@@ -47,9 +47,27 @@ identity_effect:
   color: red # allowed: 'default', 'red', 'green', 'blue', 'lightblue', 'yellow', 'pink', 'white'
 \`\`\`
 `;
+    } else if (option.type === 'composite' && option.property === 'simulated_brightness') {
+        extra = `Example:
+\`\`\`yaml
+simulated_brightness:
+  delta: 20 # delta per interval, default = 20
+  interval: 200 # interval in milliseconds, default = 200
+\`\`\`
+`;
+    } else if (option.type === 'composite' && option.property === 'switch_actions') {
+        extra = `Example:
+\`\`\`yaml
+switch_actions:
+  sceneid: 1 # Scene id to recall. Set to 0 to recall none (0-255).
+  sceneturnoffrelay: 3 # Relay id which set sceneid will change to off when scene is recalled. Set to 0 if no relay is affected by the scene. (0-4)
+  relaynumber: 3 # Relay number to act on. Set to 0 to act on none. (0-4)
+  relayaction: 2 # Relay operation to execute. 0 = OFF, 1 = ON, 2 = TOGGLE. (0-2)
+\`\`\`
+`;
     }
 
-    assert(extra != null, `No option doc generator for '${JSON.stringify(option)}'`);
+    assert(extra !== undefined, `No option doc generator for '${JSON.stringify(option)}'`);
 
-    return `* \`${option.property}\`: ${addTrailingDot(option.description)} ${addTrailingDot(extra)}`;
+    return `* \`${option.property}\`: ${addTrailingDot(option.description ?? '')} ${addTrailingDot(extra)}`;
 }

@@ -1,7 +1,7 @@
 ---
-title: "Honyar U2-86Z13A16ZJ-GY control via MQTT"
-description: "Integrate your Honyar U2-86Z13A16ZJ-GY via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2023-06-27T19:46:17
+title: "Nous D2Z control via MQTT"
+description: "Integrate your Nous D2Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-03-01T20:31:41
 pageClass: device-page
 ---
 
@@ -11,27 +11,31 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Honyar U2-86Z13A16ZJ-GY
+# Nous D2Z
 
 |     |     |
 |-----|-----|
-| Model | U2-86Z13A16ZJ-GY)  |
-| Vendor  | [Honyar](/supported-devices/#v=Honyar)  |
-| Description | Smart Power Socket 16A (with power monitoring) |
-| Exposes | switch (state), power, current, voltage, energy |
-| Picture | ![Honyar U2-86Z13A16ZJ-GY](https://www.zigbee2mqtt.io/images/devices/U86Z13A16-ZJH(HA).png) |
+| Model | D2Z  |
+| Vendor  | [Nous](/supported-devices/#v=Nous)  |
+| Description | Din smart relay (with power monitoring via polling) |
+| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode |
+| Picture | ![Nous D2Z](https://www.zigbee2mqtt.io/images/devices/D2Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-Zigbee Model:HY0106
-Zigbee Manufacturer:REXENSE
+
 
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `measurement_poll_interval`: This device does not support reporting electric measurements so it is polled instead. The default poll interval is 60 seconds, set to -1 to disable. The value must be a number with a minimum value of `-1`
 
 * `power_calibration`: Calibrates the power value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -88,4 +92,18 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
+
+### Power outage memory (enum)
+Recover state after power outage.
+Value can be found in the published state on the `power_outage_memory` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
+The possible values are: `on`, `off`, `restore`.
+
+### Indicator mode (enum)
+Relay LED indicator mode.
+Value can be found in the published state on the `indicator_mode` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
+The possible values are: `off`, `on_off`, `off_on`.
 

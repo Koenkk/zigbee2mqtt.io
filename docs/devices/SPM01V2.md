@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SPM01V2  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart energy monitor for 1P+N system |
-| Exposes | voltage, power, current, energy, produced_energy, power_factor, ac_frequency |
+| Exposes | voltage, power, current, energy, produced_energy, power_factor, ac_frequency, data_report_duration |
 | Picture | ![Tuya SPM01V2](https://www.zigbee2mqtt.io/images/devices/SPM01V2.png) |
 
 
@@ -49,6 +49,8 @@ pageClass: device-page
 * `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `ac_frequency_calibration`: Calibrates the ac_frequency value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `ac_frequency_precision`: Number of digits after decimal point for ac_frequency, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 
 ## Exposes
@@ -94,4 +96,11 @@ Measured electrical AC frequency.
 Value can be found in the published state on the `ac_frequency` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `Hz`.
+
+### Data report duration (numeric)
+WARNING: You must update device firmware to V3.1.3 before changing this setting! Use Tuya gateway/app to update firmware. Data report duration set (Threshold value range 5~3600 seconds).
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"data_report_duration": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `3600`.
 
