@@ -11,7 +11,7 @@ actions:
       type: primary
 features:
     - title: Compatible
-      details: Zigbee2MQTT supports various Zigbee adapters and a big bunch of devices.
+      details: Zigbee2MQTT supports various Zigbee coordinators and a big bunch of devices.
     - title: Integrations
       details: Zigbee2MQTT integrates well with most home automation solutions because it uses MQTT.
     - title: Open Source

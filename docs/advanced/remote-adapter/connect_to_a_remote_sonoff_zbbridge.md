@@ -19,7 +19,7 @@ For flashing procedure follow [DigiBlurs guide](https://www.digiblur.com/2020/07
 
 ## 2. Configure
 
-Now edit the Zigbee2MQTT `configuration.yaml` accordingly, replace `192.168.2.13` with the IP or hostname of your system where the adapter is connected to. Also replace `20108` with the port you configured while flashing the Gateway (in step 6 from previous point).
+Now edit the Zigbee2MQTT `configuration.yaml` accordingly, replace `192.168.2.13` with the IP or hostname of your system where the coordinator is connected to. Also replace `20108` with the port you configured while flashing the Gateway (in step 6 from previous point).
 
 Keep in mind that the EZSP support is currently **experimental**.
 

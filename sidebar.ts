@@ -8,7 +8,7 @@ export const sidebar: SidebarOptions = {
             text: 'Supported Hardware',
             link: '/guide/supported-hardware.md',
             children: [
-                {text: 'Adapters', link: '/guide/adapters/'},
+                {text: 'Coordinators', link: '/guide/adapters/'},
                 {text: 'Devices', link: '/supported-devices/'},
             ],
         },

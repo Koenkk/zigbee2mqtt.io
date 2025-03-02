@@ -25,7 +25,7 @@ Download and install [Npcap](https://nmap.org/npcap/) and make sure you select t
 
 ### Usage
 
-Use Adapter for loopback traffic capture. Then set the Zigbee protocol filter: `udp.port==17754` (default ZEP port) to only see Zigbee traffic.
+Use Coordinator for loopback traffic capture. Then set the Zigbee protocol filter: `udp.port==17754` (default ZEP port) to only see Zigbee traffic.
 
 Wireshark will start and log the Zigbee messages once the sniffer is started. As these messages are encrypted we need to add 2 encryption keys. The first one is the Trust Center link key, which is the same for (almost) every Zigbee network. The second one is the network encryption key (Transport Key).
 
@@ -81,9 +81,9 @@ Now Wireshark is able to decrypt the messages. When e.g. turning on a light you 
 - Computer
     - Ubuntu / Debian machine (tested with Ubuntu 18.04 / 18.10 and Debian 10)
     - Windows machine (tested with Windows 10)
-- CC2531 adapter
+- CC2531 coordinator
 
-### 1. Flashing the CC2531 adapter
+### 1. Flashing the CC2531 coordinator
 
 The CC2531 needs to be flashed with a sniffer firmware. Flash the firmware using the instructions from [Flashing the CC2531](../../guide/adapters/flashing/flashing_the_cc2531.md).
 
@@ -155,17 +155,17 @@ Run the ZBOSS executable in `gui\zboss_sniffer.exe`, enter the path to your Wire
 - If you get `couldn't run /usr/bin/dumpcap in child process: permission denied` when running whsniff, check if /usr/bin/dumpcap is executable for everyone. Or `chmod 755 /usr/bin/dumpcap`.
 - You may need to remove `modemmanager` as this has been known to cause issues. [Howto](../../guide/faq/README.md#modemmanager-is-installed)
 
-## With EmberZNet and HUSBZB-1 adapters
+## With EmberZNet and HUSBZB-1 coordinators
 
-### Prerequisites for USB adapters
+### Prerequisites for USB coordinators
 
 #### Linux
 
-The adapter should work out of the box and require no extra step.
+The coordinator should work out of the box and require no extra step.
 
 #### Windows
 
-Install drivers (whichever works for your adapter):
+Install drivers (whichever works for your coordinator):
 
 - [Silicon Labs CP210x Universal Windows Driver](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
     - Extract drivers to a folder
@@ -181,7 +181,7 @@ Install drivers (whichever works for your adapter):
     - Linux machine (tested with Debian 12 64-bit)
     - Windows machine (tested with Windows 11)
     - MacOS machine
-- EmberZNet or HUSBZB-1 adapter
+- EmberZNet or HUSBZB-1 coordinator
 - Wireshark (optional, can write directly to a [PCAP file](https://github.com/Nerivec/ember-zli/wiki/Sniff#sending-to-pcap-file) instead)
 - NodeJS / npm (if using npm-based installation method)
 
@@ -200,7 +200,7 @@ Install drivers (whichever works for your adapter):
 - Computer
     - Linux machine (tested with Ubuntu 18.10)
     - Windows machine (tested with Windows 10)
-- EmberZNet or HUSBZB-1 adapter
+- EmberZNet or HUSBZB-1 coordinator
 - Wireshark
 - Java
 
@@ -211,24 +211,24 @@ Both Windows and Linux use the same program for sniffing. You can fetch a precom
 You can also find a PDF documentation from ZSmart Systems [here](https://www.opensmarthouse.org/files/download/ZigBeeWiresharkSniffer.pdf).
 
 ::: tip TIP
-Linux: Some EmberZNet adapters use the exact same USB identifiers as a brltty udev-registered device, so if your EmberZNet USB dongle is not recognized, just disable the rule of brltty for idVendor=1a86, idProduct=7523 (same as the CH340 serial converter used in the EmberZNet adapter). Edit /`usr/lib/udev/rules.d/85-brltty.rules` and comment `# ENV{PRODUCT}=="1a86/7523/*", ENV{BRLTTY_BRAILLE_DRIVER}="bm", GOTO="brltty_usb_run"`. Unplug and replug the EmberZNet adapter.
+Linux: Some EmberZNet coordinators use the exact same USB identifiers as a brltty udev-registered device, so if your EmberZNet USB dongle is not recognized, just disable the rule of brltty for idVendor=1a86, idProduct=7523 (same as the CH340 serial converter used in the EmberZNet coordinator). Edit /`usr/lib/udev/rules.d/85-brltty.rules` and comment `# ENV{PRODUCT}=="1a86/7523/*", ENV{BRLTTY_BRAILLE_DRIVER}="bm", GOTO="brltty_usb_run"`. Unplug and replug the EmberZNet coordinator.
 :::
 
 #### 2. Sniffing traffic
 
 In a terminal or command line, run `java -jar ZigbeeSniffer.jar -baud 115200 -flow {OPTION} -port {PORT} -c {CHANNEL}`.
 
-Depending on your adapter, `OPTION` should be replaced by `none` (Sonoff Dongle-E, SLZB-06m...) or `hardware` (HUSBZB-1, SkyConnect...).
+Depending on your coordinator, `OPTION` should be replaced by `none` (Sonoff Dongle-E, SLZB-06m...) or `hardware` (HUSBZB-1, SkyConnect...).
 
 ##### Windows
 
-Open the Device Manager (Win+X, M) and find which COM port your adapter is using in `Ports (COM & LPT)`. It should be something like COM3, COM6. `PORT` should be replaced by that value.
+Open the Device Manager (Win+X, M) and find which COM port your coordinator is using in `Ports (COM & LPT)`. It should be something like COM3, COM6. `PORT` should be replaced by that value.
 
 ##### Linux
 
 `PORT` will be something like `/dev/ttyUSB0` or wherever you plugged in your HUSBZB-1 device.
 
-## With nRF52 adapter
+## With nRF52 coordinator
 
 ### Prerequisites
 

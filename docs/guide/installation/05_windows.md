@@ -80,7 +80,7 @@ Zigbee2MQTT can be stopped anytime by pressing `CTRL + C` and then confirming wi
 
 ::: warning ATTENTION
 
-In case Zigbee2MQTT fails to start with `USB adapter discovery error (No valid USB adapter found). Specify valid 'adapter' and 'port' in your configuration.`, we need to configure the `serial` section in the `configuration.yaml`.
+In case Zigbee2MQTT fails to start with `USB coordinator discovery error (No valid USB coordinator found). Specify valid 'adapter' and 'port' in your configuration.`, we need to configure the `serial` section in the `configuration.yaml`.
 
 First determine which COM port is assigned to your device:
 
