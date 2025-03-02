@@ -24,7 +24,9 @@ jobs:
                   node-version: 22
                   cache: pnpm
 
-            - run: pnpm up --latest --exclude zigbee-herdsman-converters
+            - run: |
+                  pnpm self-update
+                  pnpm up --latest --filter '!zigbee-herdsman-converters'
 
             - uses: peter-evans/create-pull-request@v7
               id: cpr
