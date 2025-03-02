@@ -3,7 +3,7 @@ name: Update Algolia-Search index
 # Only trigger, when the build workflow succeeded on branch master
 on:
     workflow_run:
-        workflows: ['Build ⚙ and Deploy 🚀']
+        workflows: ['Build and Deploy']
         branches: [master]
         types: [completed]
 

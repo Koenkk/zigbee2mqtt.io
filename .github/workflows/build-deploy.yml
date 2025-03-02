@@ -1,4 +1,4 @@
-name: Build ⚙ and Deploy 🚀
+name: Build and deploy
 
 on: [push, pull_request]
 
@@ -6,35 +6,35 @@ concurrency:
     group: ${{ github.ref }}
 
 jobs:
-    build_and_deploy:
+    build-and-deploy:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout 🚚
+            - name: Checkout
               uses: actions/checkout@v4
 
-            - name: Setup pnpm ⚗
+            - name: Setup pnpm
               uses: pnpm/action-setup@v4
 
-            - name: Setup Node.js ⚗
+            - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
                   node-version: 22
                   cache: pnpm
 
-            - name: Install dependencies 🌐
+            - name: Install dependencies
               run: pnpm install --frozen-lockfile
 
             - name: Lint
               run: pnpm run pretty:check
 
-            - name: Build 🛠
+            - name: Build
               if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
               run: pnpm run build
 
-            - name: Run tests 🩺
+            - name: Run tests
               run: pnpm run test
 
-            - name: Add build.txt 🗓
+            - name: Add build.txt
               if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
               run: |
                   git log --pretty=format:'%h' -n 1 > dist/build.txt
@@ -47,7 +47,7 @@ jobs:
               run: |
                   touch dist/.nojekyll
 
-            - name: Deploy 🚀
+            - name: Deploy
               if: github.ref == 'refs/heads/master'
               uses: JamesIves/github-pages-deploy-action@v4.7.3
               with:
