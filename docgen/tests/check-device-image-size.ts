@@ -1,6 +1,6 @@
 import {imageBaseDir} from '../constants';
-import {promises as fsp} from 'fs';
-import {imageSizeFromFile} from 'image-size/fromFile';
+import {promises as fsp, readFileSync} from 'fs';
+import {imageSize} from 'image-size';
 import * as path from 'path';
 
 const ignore = ['.DS_Store'];
@@ -11,7 +11,7 @@ export async function checkDeviceImageSize() {
     const images = (await fsp.readdir(imageBaseDir)).filter((f) => !ignore.includes(f));
     await Promise.all(
         images.map(async (img) => {
-            const dimensions = await imageSizeFromFile(path.resolve(imageBaseDir, img));
+            const dimensions = await imageSize(readFileSync(path.resolve(imageBaseDir, img)));
             const size = `${dimensions?.width}x${dimensions?.height}`;
             if (!allowedDimensions.includes(size)) {
                 invalid[img] = size;
