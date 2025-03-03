@@ -1,6 +1,6 @@
 import {imageBaseDir} from '../constants';
 import {promises as fsp} from 'fs';
-import { imageSizeFromFile } from 'image-size/fromFile'
+import {imageSizeFromFile} from 'image-size/fromFile';
 import * as path from 'path';
 
 const ignore = ['.DS_Store'];
