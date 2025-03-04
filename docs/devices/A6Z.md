@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Nous](/supported-devices/#v=Nous)  |
 | Description | Outdoor smart socket |
 | Exposes | switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, child_lock |
-| Picture | ![Nous A6Z](https://www.zigbee2mqtt.io/images/devices/A6Z.png) |
+| Picture | ![Nous A6Z](https://nous.technology/share/uploads/image/ShopProduct/251/A6Z.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
