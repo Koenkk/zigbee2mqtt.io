@@ -25,6 +25,16 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Firmware updates
+Aqara does not provide publicly available firmware files for the DJT11LM. 
+Therefore, updating its firmware via Zigbee2MQTT (or any other third-party OTA mechanism) 
+is currently not possible.
+
+If Aqara ever releases an update, it would typically be distributed through the 
+official Aqara or Mi Home gateway/app. However, no standalone files have been 
+made available for manual updates.
+
+
 ### Battery
 Uses a CR2032 battery
 
@@ -73,7 +83,13 @@ You can fine tune the values of the offset by trying other sides and picking val
 Remember that the device sends accelerometer values a few seconds after the actual tilt event.
 <!-- Notes END: Do not edit below this line -->
 
+**Important note on software-based calibration**  
+The calibration offsets (`x_calibration`, `y_calibration`, `z_calibration`) are only applied **inside** Zigbee2MQTT after the sensor has already sent its raw data. This means:
 
+- **Raw values** (`x_axis`, `y_axis`, `z_axis`) in logs, MQTT messages, and the Zigbee2MQTT UI will remain the same as reported by the hardware.  
+- The offsets will *not* change what Home Assistant (or other software) sees if you are directly reading those raw properties.  
+- If you want to work with the "corrected" or "calibrated" values in another system (e.g., Home Assistant), you would need to create a [template sensor](https://www.home-assistant.io/integrations/template/) or otherwise apply the offsets yourself.  
+- Seeing the same raw numbers after setting offsets does **not** mean calibration isn't working—it's simply that the sensor output itself is never altered by the offsets.
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
