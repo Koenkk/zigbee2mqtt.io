@@ -33,6 +33,27 @@ Next generate the external definition by navigating to the `Dev console` tab of 
 <img src="../../images/generate_external_definition.gif" height="300"/>
 
 By default, the external definition will map exposed Zigbee clusters to features according to the Zigbee ZCL specification. Of course, if the device does not conform to the specification, it may not work properly or at all.
+Locate your z2m-Homedir. Normaly homeassistant/zigbee2mqtt.
+If not already existing, you have to create a Directory "external_converters" under your z2m-Homedir.
+Create a file (eg: myconverter.js) in this directory and put your code in.
+Then add the following lines to you z2m configuration.yaml
+
+external_converters:
+  - myconverter.js
+
+so the start of your config looks like this:
+
+homeassistant:
+  enabled: true
+external_converters:
+  - myconverter.js
+advanced:
+  network_key:
+  ...
+
+Now Restart z2m via the UI. You find that in Zigbee2MQTT /  Upper menu gear / Tools / Restart.
+If you set the z2m-loglevel to info, you check in the z2m logfiles if your module gets loaded.
+
 If all features work and all expected features are present, you are lucky and can skip to step 3.
 If not, you will have to extend the external definition.
 
