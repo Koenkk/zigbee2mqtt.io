@@ -38,11 +38,14 @@ If not already existing, you have to create a Directory "external_converters" un
 Create a file (eg: myconverter.js) in this directory and put your code in.
 Then add the following lines to you z2m configuration.yaml
 
+```
 external_converters:
   - myconverter.js
+```
 
 so the start of your config looks like this:
 
+```
 homeassistant:
   enabled: true
 external_converters:
@@ -50,7 +53,7 @@ external_converters:
 advanced:
   network_key:
   ...
-
+```
 Now Restart z2m via the UI. You find that in Zigbee2MQTT /  Upper menu gear / Tools / Restart.
 If you set the z2m-loglevel to info, you check in the z2m logfiles if your module gets loaded.
 
