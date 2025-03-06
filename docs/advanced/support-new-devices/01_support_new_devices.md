@@ -54,8 +54,9 @@ advanced:
   network_key:
   ...
 ```
-Now Restart z2m via the UI. You find that in Zigbee2MQTT /  Upper menu gear / Tools / Restart.
-If you set the z2m-loglevel to info, you check in the z2m logfiles if your module gets loaded.
+
+Now Restart z2m via the UI. You find that in Zigbee2MQTT -  Upper menu gear - Tools - Restart.
+If you set the z2m-loglevel to info, you can check in the z2m logfiles if your module gets loaded.
 
 If all features work and all expected features are present, you are lucky and can skip to step 3.
 If not, you will have to extend the external definition.
