@@ -26,7 +26,7 @@ Keep in mind that the EZSP support is currently **experimental**.
 ```yaml
 serial:
     port: 'tcp://192.168.2.13:20108'
-    adapter: ezsp
+    adapter: zstack
 ```
 
 Done! Now you can start Zigbee2MQTT.
