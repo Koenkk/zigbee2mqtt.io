@@ -27,7 +27,7 @@ pageClass: device-page
 
 
 ### Actions
-The `triple`, `quadruple`, `hold` and `release` is not supported by all versions of this device.
+The `triple`, `quadruple` is not supported by all versions of this device.
 
 
 ### Deprecated click event
