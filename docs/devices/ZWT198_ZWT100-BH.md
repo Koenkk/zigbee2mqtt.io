@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | ZWT198/ZWT100-BH  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | Avatto wall thermostat |
-| Exposes | factory_reset, child_lock, sensor, climate (system_mode, preset, current_heating_setpoint, running_state, local_temperature, local_temperature_calibration), frost_protection, max_temperature_limit, deadzone_temperature, backlight_mode, working_day, schedule_weekday, schedule_holiday, linkquality |
+| Description | Wall thermostat |
+| Exposes | factory_reset, child_lock, sensor, climate (system_mode, preset, current_heating_setpoint, running_state, local_temperature, local_temperature_calibration), frost_protection, max_temperature_limit, deadzone_temperature, backlight_mode, working_day, schedule_weekday, schedule_holiday |
 | Picture | ![Tuya ZWT198/ZWT100-BH](https://www.zigbee2mqtt.io/images/devices/ZWT198-ZWT100-BH.png) |
 
 
@@ -115,11 +115,4 @@ Holidays (2 times `hh:mm/cc.c°C)`.
 Value can be found in the published state on the `schedule_holiday` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_holiday": NEW_VALUE}`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

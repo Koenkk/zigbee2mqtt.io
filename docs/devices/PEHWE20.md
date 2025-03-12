@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PEHWE20  |
 | Vendor  | [Perenio](/supported-devices/#v=Perenio)  |
 | Description | Two channel single wire mini-relay |
-| Exposes | switch (state), power_on_behavior, switch_type, last_message_lqi, last_message_rssi, linkquality |
+| Exposes | switch (state), power_on_behavior, switch_type, last_message_lqi, last_message_rssi |
 | Picture | ![Perenio PEHWE20](https://www.zigbee2mqtt.io/images/devices/PEHWE20.png) |
 
 
@@ -98,11 +98,4 @@ Value can be found in the published state on the `last_message_rssi` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-128` and the maximum value is `127`.
 The unit of this value is `dB`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

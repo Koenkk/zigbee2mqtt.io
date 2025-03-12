@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TYZGTH1CH-D1RF  |
 | Vendor  | [Mumubiz](/supported-devices/#v=Mumubiz)  |
 | Description | Smart switch with temperature/humidity sensor |
-| Exposes | switch (state), power_outage_memory, child_lock, temperature, humidity, temperature_calibration, humidity_calibration, temperature_sensitivity, humidity_sensitivity, manual_mode, auto_settings, linkquality |
+| Exposes | switch (state), power_outage_memory, child_lock, temperature, humidity, temperature_calibration, humidity_calibration, temperature_sensitivity, humidity_sensitivity, manual_mode, auto_settings |
 | Picture | ![Mumubiz TYZGTH1CH-D1RF](https://www.zigbee2mqtt.io/images/devices/TYZGTH1CH-D1RF.png) |
 
 
@@ -128,11 +128,4 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto
 - `temp_greater_value` (numeric): Temperature greater than value min value is -20, max value is 80, unit is *C
 - `temp_lower_then` (enum): Lower action allowed values: `on`, `off`, `none`
 - `temp_lower_value` (numeric): Temperature lower than value min value is -20, max value is 80, unit is *C
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

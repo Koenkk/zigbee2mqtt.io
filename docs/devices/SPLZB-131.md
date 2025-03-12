@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SPLZB-131  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Power plug |
-| Exposes | device_temperature, power, voltage, ac_frequency, current, energy, switch (state), power_on_behavior, linkquality |
+| Exposes | device_temperature, power, voltage, ac_frequency, current, energy, switch (state), power_on_behavior |
 | Picture | ![Develco SPLZB-131](https://www.zigbee2mqtt.io/images/devices/SPLZB-131.png) |
 
 
@@ -46,6 +46,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 * `voltage_precision`: Number of digits after decimal point for voltage, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `ac_frequency_calibration`: Calibrates the ac_frequency value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `ac_frequency_precision`: Number of digits after decimal point for ac_frequency, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -119,11 +121,4 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

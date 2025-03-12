@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TH-110-ZB  |
 | Vendor  | [Dawon DNS](/supported-devices/#v=Dawon%20DNS)  |
 | Description | IoT SMART temperature and humidity sensor |
-| Exposes | battery, temperature, humidity, linkquality |
+| Exposes | battery, temperature, humidity |
 | Picture | ![Dawon DNS TH-110-ZB](https://www.zigbee2mqtt.io/images/devices/TH-110-ZB.png) |
 
 
@@ -61,11 +61,4 @@ Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

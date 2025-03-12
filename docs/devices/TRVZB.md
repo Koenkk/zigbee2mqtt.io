@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TRVZB  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee thermostatic radiator valve |
-| Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), battery, child_lock, open_window, frost_protection_temperature, idle_steps, closing_steps, valve_opening_limit_voltage, valve_closing_limit_voltage, valve_motor_running_voltage, valve_opening_degree, valve_closing_degree, schedule, linkquality |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), battery, child_lock, open_window, frost_protection_temperature, temperature_sensor_select, external_temperature_input, idle_steps, closing_steps, valve_opening_limit_voltage, valve_closing_limit_voltage, valve_motor_running_voltage, valve_opening_degree, valve_closing_degree, schedule |
 | Picture | ![SONOFF TRVZB](https://www.zigbee2mqtt.io/images/devices/TRVZB.png) |
 
 
@@ -30,7 +30,7 @@ To pair the device you first need to have it powered, attached to the valve and 
 
 If the device is showing `FS` or `RD` press the button on the top of the unit and it should now show `,,7`
 
-Once this stops flashing hold the top button for about 5 seconds at which point the unit should now show the temperature.
+Once this stops flashing hold the top button for about 5 seconds at which point the unit should now show the temperature. (If the temperature does not show, the valve calibration might have failed. this can happen if you did not mount it properly. Then you need to remount the thermostat and start with the previous step.)
 
 Keep turning the dial counter-clockwise unil the display shows `OF` and finally hold down the top button for 3 seconds.
 
@@ -85,6 +85,21 @@ Value can be found in the published state on the `frost_protection_temperature` 
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"frost_protection_temperature": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"frost_protection_temperature": NEW_VALUE}`.
 The minimal value is `4` and the maximum value is `35`.
+The unit of this value is `°C`.
+
+### Temperature sensor (enum)
+Whether to use the value of the internal temperature sensor or an external temperature sensor for the perceived local temperature. Using an external sensor does not require local temperature calibration..
+Value can be found in the published state on the `temperature_sensor_select` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_sensor_select": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensor_select": NEW_VALUE}`.
+The possible values are: `internal`, `external`.
+
+### External temperature (numeric)
+The value of an external temperature sensor. Note: synchronisation of this value with the external temperature sensor needs to happen outside of Zigbee2MQTT..
+Value can be found in the published state on the `external_temperature_input` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_temperature_input": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_temperature_input": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `99.9`.
 The unit of this value is `°C`.
 
 ### Idle steps (numeric)
@@ -146,11 +161,4 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"week
 - `thursday` (text) 
 - `friday` (text) 
 - `saturday` (text) 
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

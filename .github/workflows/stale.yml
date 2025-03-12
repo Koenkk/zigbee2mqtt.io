@@ -1,4 +1,4 @@
-name: 'Close stale issues/pull requests'
+name: Stale
 on:
     schedule:
         - cron: '0 0 * * *'

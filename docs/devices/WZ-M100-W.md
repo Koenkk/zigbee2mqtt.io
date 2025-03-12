@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WZ-M100-W  |
 | Vendor  | [Wenzhi](/supported-devices/#v=Wenzhi)  |
 | Description | Human presence sensor |
-| Exposes | illuminance, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, linkquality |
+| Exposes | illuminance, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time |
 | Picture | ![Wenzhi WZ-M100-W](https://www.zigbee2mqtt.io/images/devices/WZ-M100-W.png) |
 
 
@@ -93,11 +93,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
 The minimal value is `0.5` and the maximum value is `1500`.
 The unit of this value is `s`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

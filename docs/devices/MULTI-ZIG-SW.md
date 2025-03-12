@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MULTI-ZIG-SW  |
 | Vendor  | [smarthjemmet.dk](/supported-devices/#v=smarthjemmet.dk)  |
 | Description | Multi switch from Smarthjemmet.dk |
-| Exposes | switch_type_1, switch_type_2, switch_type_3, switch_type_4, battery, action, voltage, linkquality |
+| Exposes | switch_type_1, switch_type_2, switch_type_3, switch_type_4, battery, action, voltage |
 | Picture | ![smarthjemmet.dk MULTI-ZIG-SW](https://www.zigbee2mqtt.io/images/devices/MULTI-ZIG-SW.png) |
 
 
@@ -102,11 +102,4 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

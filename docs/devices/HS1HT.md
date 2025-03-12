@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HS1HT  |
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart temperature & humidity Sensor |
-| Exposes | battery, temperature, humidity, linkquality |
+| Exposes | battery, temperature, humidity |
 | Picture | ![HEIMAN HS1HT](https://www.zigbee2mqtt.io/images/devices/HS1HT.png) |
 | White-label | Ferguson TH-T_V14 |
 
@@ -62,11 +62,4 @@ Measured relative humidity.
 Value can be found in the published state on the `humidity` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

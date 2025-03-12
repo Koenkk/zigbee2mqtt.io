@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RMDZB-1PNL63  |
 | Vendor  | [TNCE](/supported-devices/#v=TNCE)  |
 | Description | Zigbee DIN single phase energy meter |
-| Exposes | switch (state), energy, fault, voltage_a, power_a, current_a, temperature, over_current_breaker, over_current_threshold, over_voltage_breaker, over_voltage_threshold, under_voltage_breaker, under_voltage_threshold, high_temperature_breaker, high_temperature_threshold, linkquality |
+| Exposes | switch (state), energy, fault, voltage_a, power_a, current_a, temperature, over_current_breaker, over_current_threshold, over_voltage_breaker, over_voltage_threshold, under_voltage_breaker, under_voltage_threshold, high_temperature_breaker, high_temperature_threshold |
 | Picture | ![TNCE RMDZB-1PNL63](https://www.zigbee2mqtt.io/images/devices/RMDZB-1PNL63.png) |
 | White-label | TNCE RMDZB-1PNL63 |
 
@@ -144,11 +144,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature_threshold": NEW_VALUE}`.
 The minimal value is `40` and the maximum value is `100`.
 The unit of this value is `°C`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

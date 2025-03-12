@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG24LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch D1 (with neutral, double rocker) |
-| Exposes | switch (state), energy, power, operation_mode, action, linkquality |
+| Exposes | switch (state), energy, power, operation_mode, action |
 | Picture | ![Aqara QBKG24LM](https://www.zigbee2mqtt.io/images/devices/QBKG24LM.png) |
 
 
@@ -109,11 +109,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `hold_left`, `single_left`, `double_left`, `single_right`, `double_right`, `single_both`, `double_both`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

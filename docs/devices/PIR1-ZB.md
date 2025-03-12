@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PIR1-ZB  |
 | Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
 | Description | PIR sensor |
-| Exposes | occupancy, battery_low, battery, voltage, tamper, linkquality |
+| Exposes | occupancy, battery_low, battery, voltage, tamper |
 | Picture | ![MiBoxer PIR1-ZB](https://www.zigbee2mqtt.io/images/devices/PIR1-ZB.png) |
 
 
@@ -62,11 +62,4 @@ Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

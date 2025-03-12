@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZigUSB_C6  |
 | Vendor  | [xyzroe](/supported-devices/#v=xyzroe)  |
 | Description | Zigbee USB switch with monitoring |
-| Exposes | restart, identify, power, voltage, current, temperature, switch (state), power_on_behavior, alarm_1, linkquality |
+| Exposes | restart, identify, power, voltage, current, temperature, switch (state), power_on_behavior, alarm_1 |
 | Picture | ![xyzroe ZigUSB_C6](https://www.zigbee2mqtt.io/images/devices/ZigUSB_C6.png) |
 
 
@@ -146,11 +146,4 @@ Over current alarm.
 Value can be found in the published state on the `alarm_1` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` alarm 1 is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

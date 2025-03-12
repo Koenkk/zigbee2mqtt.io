@@ -18,13 +18,15 @@ pageClass: device-page
 | Model | TV01-ZB  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Thermostat radiator valve |
-| Exposes | battery_low, child_lock, open_window, open_window_temperature, comfort_temperature, eco_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint, system_mode), heating_stop, frost_protection, boost_timeset_countdown, holiday_temperature, holiday_start_stop, working_day, schedule, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, online, error_status, linkquality |
+| Exposes | battery_low, child_lock, open_window, open_window_temperature, comfort_temperature, eco_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint, system_mode), heating_stop, frost_protection, boost_timeset_countdown, holiday_temperature, holiday_start_stop, working_day, schedule, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, online, error_status |
 | Picture | ![Moes TV01-ZB](https://www.zigbee2mqtt.io/images/devices/TV01-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+This TRV is slow to send updates of the measured local temperature, or might not do so at all. To force the TRV to send an update, write `ON` to the `online` property.
+When using Home Assistant, this can be done through an automation that executes "Turn on *TRVNAME* Online".
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -102,7 +104,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `ON` frost protection is ON, if `OFF` OFF.
 
 ### Boost timeset countdown (numeric)
-Setting minimum 0 - maximum 465 seconds boost time. The boost (â¨) function is activated. The remaining time for the function will be counted down in seconds ( 465 to 0 )..
+Setting minimum 0 - maximum 465 seconds boost time. The boost (♨) function is activated. The remaining time for the function will be counted down in seconds ( 465 to 0 )..
 Value can be found in the published state on the `boost_timeset_countdown` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"boost_timeset_countdown": NEW_VALUE}`.
@@ -137,37 +139,37 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sche
 - `schedule` (text) 
 
 ### Schedule monday (text)
-Schedule for monday, format: "HH:MM/C".
+Schedule for monday, example: "HH:MM/C".
 Value can be found in the published state on the `schedule_monday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Schedule tuesday (text)
-Schedule for tuesday, format: "HH:MM/C".
+Schedule for tuesday, example: "HH:MM/C".
 Value can be found in the published state on the `schedule_tuesday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Schedule wednesday (text)
-Schedule for wednesday, format: "HH:MM/C".
+Schedule for wednesday, example: "HH:MM/C".
 Value can be found in the published state on the `schedule_wednesday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Schedule thursday (text)
-Schedule for thursday, format: "HH:MM/C".
+Schedule for thursday, example: "HH:MM/C".
 Value can be found in the published state on the `schedule_thursday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Schedule friday (text)
-Schedule for friday, format: "HH:MM/C".
+Schedule for friday, example: "HH:MM/C".
 Value can be found in the published state on the `schedule_friday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Schedule saturday (text)
-Schedule for saturday, format: "HH:MM/C".
+Schedule for saturday, example: "HH:MM/C".
 Value can be found in the published state on the `schedule_saturday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
 ### Schedule sunday (text)
-Schedule for sunday, format: "HH:MM/C".
+Schedule for sunday, example: "HH:MM/C".
 Value can be found in the published state on the `schedule_sunday` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 
@@ -182,11 +184,4 @@ If value equals `ON` online is ON, if `OFF` OFF.
 Error status.
 Value can be found in the published state on the `error_status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

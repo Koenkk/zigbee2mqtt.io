@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | S-LUX-ZB  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Light sensor |
-| Exposes | battery, illuminance, linkquality, brightness_level |
+| Exposes | battery, illuminance, brightness_level |
 | Picture | ![Tuya S-LUX-ZB](https://www.zigbee2mqtt.io/images/devices/S-LUX-ZB.png) |
 
 
@@ -49,13 +49,6 @@ Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 
 ### Brightness level (enum)
 Value can be found in the published state on the `brightness_level` property.

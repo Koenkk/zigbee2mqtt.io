@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CK-BL702-ROUTER-01(7018)  |
 | Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
 | Description | USB router |
-| Exposes | linkquality |
+| Exposes |  |
 | Picture | ![eWeLink CK-BL702-ROUTER-01(7018)](https://www.zigbee2mqtt.io/images/devices/CK-BL702-ROUTER-01(7018).png) |
 
 
@@ -32,10 +32,5 @@ pageClass: device-page
 
 ## Exposes
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+
 

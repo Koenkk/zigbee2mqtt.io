@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WSDCGQ01LM  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | Mi temperature and humidity sensor |
-| Exposes | battery, temperature, humidity, voltage, linkquality |
+| Exposes | battery, temperature, humidity, voltage |
 | Picture | ![Xiaomi WSDCGQ01LM](https://www.zigbee2mqtt.io/images/devices/WSDCGQ01LM.png) |
 | White-label | Xiaomi YTC4042GL, Xiaomi YTC4007CN, Xiaomi YTC4018CN |
 
@@ -81,11 +81,4 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

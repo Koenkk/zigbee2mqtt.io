@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TERNCY-WS01  |
 | Vendor  | [TERNCY](/supported-devices/#v=TERNCY)  |
 | Description | Smart light switch - 4 gang without neutral wire |
-| Exposes | switch (state), power_on_behavior, linkquality |
+| Exposes | switch (state), power_on_behavior |
 | Picture | ![TERNCY TERNCY-WS01](https://www.zigbee2mqtt.io/images/devices/TERNCY-WS01.png) |
 
 
@@ -108,11 +108,4 @@ Value can be found in the published state on the `power_on_behavior_l4` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior_l4": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior_l4": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

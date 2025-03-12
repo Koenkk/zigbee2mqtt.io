@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG9101SAC-HP-Switch  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Zigbee AC in wall switch |
-| Exposes | switch (state), external_switch_type, linkquality |
+| Exposes | switch (state), external_switch_type |
 | Picture | ![Sunricher ZG9101SAC-HP-Switch](https://www.zigbee2mqtt.io/images/devices/ZG9101SAC-HP-Switch.png) |
 
 
@@ -53,11 +53,4 @@ Value can be found in the published state on the `external_switch_type` property
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_switch_type": NEW_VALUE}`.
 The possible values are: `push_button`, `normal_on_off`, `three_way`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

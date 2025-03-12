@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | DNCKATSW002  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | DNCKAT double key wired wall light switch |
-| Exposes | switch (state), power_on_behavior, action, linkquality |
+| Exposes | switch (state), power_on_behavior, action |
 | Picture | ![Custom devices (DiY) DNCKATSW002](https://www.zigbee2mqtt.io/images/devices/DNCKATSW002.png) |
 
 
@@ -78,11 +78,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `release_left`, `hold_left`, `release_right`, `hold_right`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

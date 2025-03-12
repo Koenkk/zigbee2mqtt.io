@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | STH01ZB  |
 | Vendor  | [Feibit](/supported-devices/#v=Feibit)  |
 | Description | Smart temperature & humidity Sensor |
-| Exposes | temperature, humidity, battery, linkquality |
+| Exposes | temperature, humidity, battery |
 | Picture | ![Feibit STH01ZB](https://www.zigbee2mqtt.io/images/devices/STH01ZB.png) |
 
 
@@ -61,11 +61,4 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

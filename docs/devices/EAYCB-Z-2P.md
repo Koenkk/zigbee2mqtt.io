@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EAYCB-Z-2P  |
 | Vendor  | [EARU](/supported-devices/#v=EARU)  |
 | Description | Smart circuit breaker with leakage protection |
-| Exposes | linkquality, temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy |
+| Exposes | temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), power_outage_memory, indicator_mode, power, current, voltage, energy |
 | Picture | ![EARU EAYCB-Z-2P](https://www.zigbee2mqtt.io/images/devices/EAYCB-Z-2P.png) |
 
 
@@ -59,13 +59,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 
 ## Exposes
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 
 ### Temperature (numeric)
 Measured temperature value.

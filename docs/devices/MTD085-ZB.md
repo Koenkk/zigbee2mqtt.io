@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MTD085-ZB  |
 | Vendor  | [LeapMMW](/supported-devices/#v=LeapMMW)  |
 | Description | Human presence sensor |
-| Exposes | occupancy, illuminance, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance, entry_filter_time, departure_delay, block_time, status_indication, sensor, scene_preset, distance_report_mode, debug_mode, debug_distance, debug_countdown, linkquality |
+| Exposes | occupancy, illuminance, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance, entry_filter_time, departure_delay, block_time, status_indication, sensor, scene_preset, distance_report_mode, debug_mode, debug_distance, debug_countdown |
 | Picture | ![LeapMMW MTD085-ZB](https://www.zigbee2mqtt.io/images/devices/MTD085-ZB.png) |
 
 
@@ -165,11 +165,4 @@ Time before the target disappears.
 Value can be found in the published state on the `debug_countdown` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `s`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

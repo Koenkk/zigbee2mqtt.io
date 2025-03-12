@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WP-P01D  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall outlet H2 EU |
-| Exposes | switch (state), device_temperature, power_outage_count, power_on_behavior, power, energy, voltage, current, overload_protection, led_indicator, button_lock, charging_protection, charging_limit, linkquality |
+| Exposes | switch (state), device_temperature, power_outage_count, power_on_behavior, power, energy, voltage, current, overload_protection, led_indicator, button_lock, charging_protection, charging_limit |
 | Picture | ![Aqara WP-P01D](https://www.zigbee2mqtt.io/images/devices/WP-P01D.png) |
 
 
@@ -147,11 +147,4 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"charging_limit": NEW_VALUE}`.
 The minimal value is `0.1` and the maximum value is `2`.
 The unit of this value is `W`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

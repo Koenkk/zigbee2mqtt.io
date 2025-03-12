@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SPP02G  |
 | Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | Double power point |
-| Exposes | switch (state), power_outage_memory, power, current, voltage, energy, linkquality |
+| Exposes | switch (state), power_outage_memory, power, current, voltage, energy |
 | Picture | ![Mercator Ikuü SPP02G](https://www.zigbee2mqtt.io/images/devices/SPP02G.png) |
 
 
@@ -105,11 +105,4 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

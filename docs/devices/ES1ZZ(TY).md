@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ES1ZZ(TY)  |
 | Vendor  | [Linptech](/supported-devices/#v=Linptech)  |
 | Description | mmWave Presence sensor |
-| Exposes | occupancy, illuminance, target_distance, motion_detection_distance, presence_keep_time, motion_detection_sensitivity, static_detection_sensitivity, fading_time, led_indicator, linkquality |
+| Exposes | occupancy, illuminance, target_distance, motion_detection_distance, presence_keep_time, motion_detection_sensitivity, static_detection_sensitivity, fading_time, led_indicator |
 | Picture | ![Linptech ES1ZZ(TY)](https://www.zigbee2mqtt.io/images/devices/ES1ZZ(TY).png) |
 
 
@@ -97,11 +97,4 @@ Value can be found in the published state on the `led_indicator` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_indicator": NEW_VALUE}`.
 If value equals `true` led indicator is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

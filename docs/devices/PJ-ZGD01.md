@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PJ-ZGD01  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Garage door opener |
-| Exposes | trigger, countdown, garage_door_contact, run_time, open_alarm_time, status, linkquality |
+| Exposes | trigger, countdown, garage_door_contact, run_time, open_alarm_time, status |
 | Picture | ![Tuya PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.png) |
 | White-label | MatSee Plus PJ-ZGD01 |
 
@@ -75,11 +75,4 @@ Indicates run time alarm, door open alarm or noraml status, will not retunr to n
 Value can be found in the published state on the `status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `Open Time Alarm`, `Run Time Alarm`, `Normal`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

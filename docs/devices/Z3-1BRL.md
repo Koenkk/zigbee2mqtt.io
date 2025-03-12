@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | Z3-1BRL  |
 | Vendor  | [Lutron](/supported-devices/#v=Lutron)  |
 | Description | Aurora smart bulb dimmer |
-| Exposes | action, brightness, linkquality |
+| Exposes | brightness, battery, action |
 | Picture | ![Lutron Z3-1BRL](https://www.zigbee2mqtt.io/images/devices/Z3-1BRL.png) |
 
 
@@ -58,20 +58,21 @@ simulated_brightness:
 
 ## Exposes
 
+### Brightness (numeric)
+Value can be found in the published state on the `brightness` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Battery (numeric)
+Remaining battery in %.
+Value can be found in the published state on the `battery` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
 ### Action (enum)
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `brightness`.
-
-### Brightness (numeric)
-Value can be found in the published state on the `brightness` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

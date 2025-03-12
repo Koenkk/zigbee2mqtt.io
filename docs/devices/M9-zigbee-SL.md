@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | M9-zigbee-SL  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart Switch (4 gang + 4 scene) with neutral wire and motion sensing |
-| Exposes | switch (state), power_on_behavior, switch_mode, light_mode, backlight_mode, action, presence, delay, linkquality |
+| Exposes | switch (state), power_on_behavior, switch_mode, light_mode, backlight_mode, action, presence, delay |
 | Picture | ![Tuya M9-zigbee-SL](https://www.zigbee2mqtt.io/images/devices/M9-zigbee-SL.png) |
 
 
@@ -298,11 +298,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"delay": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `1000`.
 The unit of this value is `sec`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

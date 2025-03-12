@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SSM-U02  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Single switch module T1 (no neutral) |
-| Exposes | switch (state), power_outage_memory, switch_type, power_outage_count, device_temperature, linkquality |
+| Exposes | switch (state), power_outage_memory, switch_type, power_outage_count, device_temperature |
 | Picture | ![Aqara SSM-U02](https://www.zigbee2mqtt.io/images/devices/SSM-U02.png) |
 
 
@@ -79,11 +79,4 @@ Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

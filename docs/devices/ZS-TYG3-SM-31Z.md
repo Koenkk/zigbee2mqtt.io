@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZS-TYG3-SM-31Z  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 3 gang smart switch with backlight and neutral wire |
-| Exposes | switch (state), backlight_mode, countdown, power_on_behavior, linkquality |
+| Exposes | switch (state), backlight_mode, countdown, power_on_behavior |
 | Picture | ![Tuya ZS-TYG3-SM-31Z](https://www.zigbee2mqtt.io/images/devices/ZS-TYG3-SM-31Z.png) |
 
 
@@ -89,11 +89,4 @@ Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `previous`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

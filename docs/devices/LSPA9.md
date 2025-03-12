@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | LSPA9  |
 | Vendor  | [Elivco](/supported-devices/#v=Elivco)  |
 | Description | Smart plug (with power monitoring) |
-| Exposes | switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, child_lock, linkquality |
+| Exposes | switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, child_lock |
 | Picture | ![Elivco LSPA9](https://www.zigbee2mqtt.io/images/devices/LSPA9.png) |
 
 
@@ -30,7 +30,6 @@ Some of these devices (if not all) randomly switch off.
 Recommendation is not to use these for critical appliances as freezers or fridges, nor appliances which would be stopped during a programs like washing machines.
 Only solution found so far is to monitor them and setup some automations to restart these when their status is off for a certain duration.
 As of Jan 2025, no OTA update is available.
-
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -119,11 +118,4 @@ Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

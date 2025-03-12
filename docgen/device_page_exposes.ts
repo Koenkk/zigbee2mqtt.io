@@ -25,8 +25,8 @@ function uncapitalizeFirstLetter(string) {
 
 function compositeDocs(composite) {
     const value = `{${composite.features.map((e) => `"${e.property}": VALUE`).join(', ')}}`;
+    const note: string[] = [];
 
-    let note = [];
     for (const feature of composite.features) {
         let ft = '';
         if (feature.type === 'binary') {
@@ -53,8 +53,8 @@ function compositeDocs(composite) {
 }
 
 function getExposeDocs(expose, definition) {
-    const lines = [];
-    const title = [];
+    const lines: string[] = [];
+    const title: string[] = [];
 
     const onWithTimedOff = () => {
         lines.push(``);
@@ -362,7 +362,7 @@ function getExposeDocs(expose, definition) {
         if (expose.description) {
             lines.push(expose.description + '.');
         }
-        let txt = {value: '', note: []};
+        let txt: {value: string; note: string[]} = {value: '', note: []};
         if (expose.item_type.type === 'composite') {
             txt = compositeDocs(expose.item_type);
         } else if (expose.item_type.type === 'enum') {

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ti.router  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | Texas Instruments router |
-| Exposes | transmit_power, linkquality |
+| Exposes | transmit_power |
 | Picture | ![Custom devices (DiY) ti.router](https://www.zigbee2mqtt.io/images/devices/ti.router.png) |
 
 
@@ -42,11 +42,4 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"transmit_power": NEW_VALUE}`.
 The minimal value is `-20` and the maximum value is `20`.
 The unit of this value is `dBm`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

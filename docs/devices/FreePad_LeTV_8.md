@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | FreePad_LeTV_8  |
 | Vendor  | [DIYRuZ](/supported-devices/#v=DIYRuZ)  |
 | Description | LeTV 8key FreePad mod |
-| Exposes | battery, action, switch_type, switch_actions, linkquality |
+| Exposes | battery, action, switch_type, switch_actions |
 | Picture | ![DIYRuZ FreePad_LeTV_8](https://www.zigbee2mqtt.io/images/devices/FreePad_LeTV_8.png) |
 
 
@@ -140,11 +140,4 @@ Value can be found in the published state on the `switch_actions_button_8` prope
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_actions_button_8": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_actions_button_8": NEW_VALUE}`.
 The possible values are: `on`, `off`, `toggle`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

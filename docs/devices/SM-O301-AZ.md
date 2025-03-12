@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SM-O301-AZ  |
 | Vendor  | [UseeLink](/supported-devices/#v=UseeLink)  |
 | Description | AU 4 plug 10A power board + USB |
-| Exposes | switch (state), power_outage_memory, child_lock, linkquality |
+| Exposes | switch (state), power_outage_memory, child_lock |
 | Picture | ![UseeLink SM-O301-AZ](https://www.zigbee2mqtt.io/images/devices/SM-O301-AZ.png) |
 
 
@@ -105,11 +105,4 @@ Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

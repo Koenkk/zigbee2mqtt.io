@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SIN-4-1-20_PRO  |
 | Vendor  | [NodOn](/supported-devices/#v=NodOn)  |
 | Description | Multifunction relay switch |
-| Exposes | switch (state), power_on_behavior, impulse_mode_configuration, switch_type, linkquality |
+| Exposes | switch (state), power_on_behavior, impulse_mode_configuration, switch_type |
 | Picture | ![NodOn SIN-4-1-20_PRO](https://www.zigbee2mqtt.io/images/devices/SIN-4-1-20_PRO.png) |
 
 
@@ -72,11 +72,4 @@ Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
 The possible values are: `bistable`, `monostable`, `auto_detect`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

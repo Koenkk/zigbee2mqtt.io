@@ -55,8 +55,8 @@ The following Zigbee routers have already been confirmed to support (at least so
 | Zigbee Router                                                                       | GP Proxy | GP Sink | Unicast |
 | :---------------------------------------------------------------------------------- | :------: | :-----: | :-----: |
 | [Custom devices (DiY) TI Router](../../devices/ti.router.md)                        |    Y     |    N    |    Y    |
-| [IKEA E1603/E1702/E1708](../../devices/E1603_E1702_E1708.md)                        |    Y     |    N    |    Y    |
-| [IKEA E2204](../../devices/E2204.md)                                                |    Y     |    Y    |    Y    |
+| [IKEA E160x/E170x/E190x](../../devices/E160x_E170x_E190x.md)                        |    Y     |    N    |    Y    |
+| [IKEA E22x4](../../devices/E22x4.md)                                                |    Y     |    Y    |    Y    |
 | [IKEA ICPSHC24-10EU-IL-2](../../devices/ICPSHC24-10EU-IL-1_ICPSHC24-10EU-IL-2.md)²  |    Y     |    Y    |    Y    |
 | [IKEA L2112](../../devices/L2112.md)                                                |    Y     |    y    |    Y    |
 | [IKEA LED2101G4](../../devices/LED2101G4.md)                                        |    Y     |    Y    |    Y    |
@@ -82,6 +82,7 @@ The following Zigbee routers have already been confirmed to support (at least so
 | [Philips 929001953301](../../devices/929001953301.md)                               |    Y     |    N    |    Y    |
 | [Philips 8718696548738](../../devices/8718696548738.md)                             |    Y     |    Y    |   Nⁱ    |
 | [Philips 8719514491106](../../devices/8719514491106.md)                             |    Y     |    N    |    Y    |
+| [Silabs series 2 router](../../devices/Silabs_series_2_router.md)                   |    Y     |    N    |    Y    |
 | [Sonoff ZBDongle-E](../../devices/ZBDongle-E.md)                                    |    Y     |    N    |    Y    |
 | [Sunricher R-ZG9040A-ZG9041A-D](../../devices/SR-ZG9040A_ZG9041A-D.md)              |    Y     |    Y    |    Y    |
 | [Sunricher SR-ZG9101SAC-HP-SWITCH-2CH](../../devices/SR-ZG9101SAC-HP-SWITCH-2CH.md) |    Y     |    Y    |    Y    |

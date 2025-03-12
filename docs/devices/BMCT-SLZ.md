@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BMCT-SLZ  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Light/shutter control unit II |
-| Exposes | device_mode, linkquality |
+| Exposes | device_mode |
 | Picture | ![Bosch BMCT-SLZ](https://www.zigbee2mqtt.io/images/devices/BMCT-SLZ.png) |
 
 
@@ -55,11 +55,4 @@ Value can be found in the published state on the `device_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"device_mode": NEW_VALUE}`.
 The possible values are: `light`, `shutter`, `disabled`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -1,6 +1,6 @@
 ---
-title: "NovaDigital WS-US-ZB control via MQTT"
-description: "Integrate your NovaDigital WS-US-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Nova Digital WS-US-ZB control via MQTT"
+description: "Integrate your Nova Digital WS-US-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-10-31T20:36:06
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# NovaDigital WS-US-ZB
+# Nova Digital WS-US-ZB
 
 |     |     |
 |-----|-----|
 | Model | WS-US-ZB  |
-| Vendor  | [NovaDigital](/supported-devices/#v=NovaDigital)  |
+| Vendor  | [Nova Digital](/supported-devices/#v=Nova%20Digital)  |
 | Description | 3 Gang switch with backlight |
-| Exposes | switch (state), power_on_behavior, backlight_mode, linkquality |
-| Picture | ![NovaDigital WS-US-ZB](https://www.zigbee2mqtt.io/images/devices/WS-US-ZB.png) |
+| Exposes | switch (state), power_on_behavior, backlight_mode |
+| Picture | ![Nova Digital WS-US-ZB](https://www.zigbee2mqtt.io/images/devices/WS-US-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -97,11 +97,4 @@ Value can be found in the published state on the `backlight_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
 If value equals `ON` backlight mode is ON, if `OFF` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MYDY25Z-1  |
 | Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
 | Description | Dooya Curtain |
-| Exposes | battery, voltage, cover (state, position), motor_direction, motor_mode, motor_clb_position, motor_clb_position_result, motor_info, motor_speed, supported_max_motor_speed, linkquality |
+| Exposes | battery, voltage, cover (state, position), motor_direction, motor_mode, motor_clb_position, motor_clb_position_result, motor_info, motor_speed, supported_max_motor_speed |
 | Picture | ![eWeLink MYDY25Z-1](https://www.zigbee2mqtt.io/images/devices/MYDY25Z-1.png) |
 
 
@@ -105,11 +105,4 @@ The minimal value is `0` and the maximum value is `14`.
 Supported max motor speed.
 Value can be found in the published state on the `supported_max_motor_speed` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

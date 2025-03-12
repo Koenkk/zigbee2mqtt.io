@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HS2SW2A/HS2SW2A-N  |
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart switch - 2 gang with neutral wire |
-| Exposes | switch (state), device_temperature, linkquality |
+| Exposes | switch (state), device_temperature |
 | Picture | ![HEIMAN HS2SW2A/HS2SW2A-N](https://www.zigbee2mqtt.io/images/devices/HS2SW2A-HS2SW2A-N.png) |
 
 
@@ -66,11 +66,4 @@ Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

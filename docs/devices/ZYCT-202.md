@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZYCT-202  |
 | Vendor  | [Trust](/supported-devices/#v=Trust)  |
 | Description | Remote control |
-| Exposes | action, action_group, linkquality |
+| Exposes | action, action_group |
 | Picture | ![Trust ZYCT-202](https://www.zigbee2mqtt.io/images/devices/ZYCT-202.png) |
 
 
@@ -61,11 +61,4 @@ The possible values are: `on`, `off`, `stop`, `brightness_stop`, `brightness_mov
 Group where the action was triggered on.
 Value can be found in the published state on the `action_group` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS011F_2_gang_2_usb_wall  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 gang 2 usb wall outlet |
-| Exposes | switch (state), power_on_behavior, backlight_mode, child_lock, linkquality |
+| Exposes | switch (state), power_on_behavior, backlight_mode, child_lock |
 | Picture | ![Tuya TS011F_2_gang_2_usb_wall](https://www.zigbee2mqtt.io/images/devices/TS011F_2_gang_2_usb_wall.png) |
 
 
@@ -101,11 +101,4 @@ Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
 If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

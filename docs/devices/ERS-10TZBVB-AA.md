@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ERS-10TZBVB-AA  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smart button |
-| Exposes | action, battery, operation_mode, linkquality |
+| Exposes | action, battery, operation_mode |
 | Picture | ![Moes ERS-10TZBVB-AA](https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVB-AA.png) |
 
 
@@ -64,11 +64,4 @@ Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `command`, `event`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

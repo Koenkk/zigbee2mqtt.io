@@ -18,12 +18,15 @@ pageClass: device-page
 | Model | TLM1-UP  |
 | Vendor  | [YOKIS](/supported-devices/#v=YOKIS)  |
 | Description | Wall-mounted 1-button transmitter |
-| Exposes | identify, action, linkquality |
+| Exposes | identify, action |
 | Picture | ![YOKIS TLM1-UP](https://www.zigbee2mqtt.io/images/devices/TLM1-UP.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-- [CSA product page](https://csa-iot.org/csa_product/tlm1t503-up/)
+## Notes
+
+- [CSA product page: TLM1-UP](https://csa-iot.org/csa_product/tlm1-up/)
+- [CSA product page: TLM1T503-UP](https://csa-iot.org/csa_product/tlm1t503-up/)
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -55,11 +58,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `toggle`, `brightness_move_to_level`, `brightness_move_up`, `brightness_move_down`, `brightness_step_up`, `brightness_step_down`, `brightness_stop`, `open`, `close`, `stop`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 
