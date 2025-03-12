@@ -7,7 +7,7 @@ sidebar: auto
 ::: warning
 Migration from one adapter to another requires backup and restore support which is so far only implemented for the `zstack` (Texas Instrument) and `ember` adapters in Z2M.
 Backup and restore is **not officially supported** for any other adapters (`conbee`, `ezsp`, `zboss` and `zigate`).
-Please don't open issues about this method, but feel free to discuss it in the discussions board.
+Please don't open issues about this method, but feel free to [discuss it in the discussions board](https://github.com/Koenkk/zigbee2mqtt/discussions/26716).
 :::
 
 ::: warning
@@ -21,6 +21,8 @@ This _should_ work for any combinations, but you might want to wait for more fee
 ::: tip Current successful migration attempted
 
 - Conbee 2 to Sonoff Dongle P (zigpy-cli 1.1.1, z2m 2.1.3)
+
+[A more up to date list might be found in the discussion board.](https://github.com/Koenkk/zigbee2mqtt/discussions/26716)
 
 :::
 
