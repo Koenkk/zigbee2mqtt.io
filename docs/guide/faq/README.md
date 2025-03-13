@@ -76,7 +76,7 @@ Note that when switching from `zstack` -> `ember` or `ember` -> `zstack` re-pair
 - If re-pairing was **not** required and your devices do not respond; restart some routers by removing them from the mains power for a few seconds.
 
 Migration from one adapter to another requires backup and restore support which is so far only implemented for the `zstack` (Texas Instrument) and `ember` adapters.
-Backup and restore is **not officially supported** for any other adapters (`conbee`, `ezsp`, `zboss` and `zigate`). However you might have success using [this method](../../advanced/more/migrate_adapter_zigpy.md).
+Backup and restore is **not officially supported** for any other adapters (`conbee`, `ezsp`, `zboss` and `zigate`). However you might have success using [this method](https://github.com/Koenkk/zigbee2mqtt/discussions/26716).
 
 ## How do I move my Zigbee2MQTT instance to a different environment?
 
