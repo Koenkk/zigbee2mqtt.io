@@ -1,6 +1,6 @@
-const {temperature, humidity, battery} = require('zigbee-herdsman-converters/lib/modernExtend');
+import {temperature, humidity, battery} from 'zigbee-herdsman-converters/lib/modernExtend';
 
-const definition = {
+export default {
     zigbeeModel: ['lumi.sens'],
     model: 'WSDCGQ01LM',
     vendor: 'Xiaomi',
@@ -10,5 +10,3 @@ const definition = {
      */
     extend: [temperature(), humidity(), battery()],
 };
-
-module.exports = definition;

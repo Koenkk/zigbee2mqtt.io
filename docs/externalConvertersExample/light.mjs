@@ -1,6 +1,6 @@
-const {light} = require('zigbee-herdsman-converters/lib/modernExtend');
+import {light} from 'zigbee-herdsman-converters/lib/modernExtend';
 
-const definition = {
+export default {
     zigbeeModel: ['myZigbeeModel'],
     model: 'myModel',
     vendor: 'myVendor',
@@ -9,5 +9,3 @@ const definition = {
     // Modern extends contain all of them and are the preferred way of supporting new devices.
     extend: [light({colorTemp: {range: undefined}, color: true})],
 };
-
-module.exports = definition;
