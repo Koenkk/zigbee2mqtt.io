@@ -1,9 +1,6 @@
-const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
-const tz = require('zigbee-herdsman-converters/converters/toZigbee');
-const exposes = require('zigbee-herdsman-converters/lib/exposes');
-const reporting = require('zigbee-herdsman-converters/lib/reporting');
-const e = exposes.presets;
-const ea = exposes.access;
+import {battery} from 'zigbee-herdsman-converters/converters/fromZigbee';
+import {factory_reset} from 'zigbee-herdsman-converters/converters/toZigbee';
+import {presets} from 'zigbee-herdsman-converters/lib/exposes';
 
 const getKey = (object, value) => {
     for (const key in object) {
@@ -71,16 +68,16 @@ const tzLocal = {
     },
 };
 
-const definition = {
+export default {
     zigbeeModel: ['DIYRuZ_FreePad_ext'],
     model: 'DIYRuZ_FreePad_ext',
     vendor: 'DIYRuZ',
     description: '[DiY 8/12/20 button keypad](http://modkam.ru/?p=1114)',
-    fromZigbee: [fzLocal.diyruz_freepad_clicks, fz.battery],
-    toZigbee: [tzLocal.diyruz_freepad_on_off_config, tz.factory_reset],
+    fromZigbee: [fzLocal.diyruz_freepad_clicks, battery],
+    toZigbee: [tzLocal.diyruz_freepad_on_off_config, factory_reset],
     exposes: [
-        e.battery(),
-        e.action(['button_*_hold', 'button_*_single', 'button_*_double', 'button_*_triple', 'button_*_quadruple', 'button_*_release']),
+        presets.battery(),
+        presets.action(['button_*_hold', 'button_*_single', 'button_*_double', 'button_*_triple', 'button_*_quadruple', 'button_*_release']),
     ],
     configure: async (device, coordinatorEndpoint, logger) => {
         const endpoint = device.getEndpoint(1);
@@ -130,5 +127,3 @@ const definition = {
         };
     },
 };
-
-module.exports = definition;
