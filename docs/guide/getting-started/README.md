@@ -28,9 +28,48 @@ You can run Zigbee2MQTT in different ways, see [Installation](../installation/).
 [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) is used to
 set up and run Zigbee2MQTT.
 
+### Onboarding
+
+Zigbee2MQTT offers an onboarding process on first run (when no `configuration.yaml` exists).
+
+The onboarding page, by default, is reachable at the same URL as the frontend (`http://localhost:8080`). _Note: This URL may be different for specific setups (like Home Assistant)._
+
+If you successfully configure everything during onboarding, you can skip the following steps in the guide below: `1.1`, `1.2`, and `2.2`.
+If the `adapter type` is unknown by the discovery process, you can find a list of the most common adapters in the corresponding pages: [zstack](../adapters/zstack.md), [ember](../adapters/emberznet.md), [deconz](../adapters/deconz.md), [zigate](../adapters/zigate.md), [zboss](../adapters/zboss.md).
+
+:::tip TIP
+The adapter discovery process will try to find serial and mDNS-discoverable devices.
+Refreshing the page will re-execute the discovery process.
+
+_Note: This may not be available on all setups. If not, you will have to enter the adapter path and type manually._
+:::
+
+If Zigbee2MQTT fails validation after submitting the configuration, the page will show the error details.
+
+If Zigbee2MQTT fails to start after submitting the initial configuration (due to something like a wrong adapter path), the onboarding will be executed again on the following start.
+
+:::tip TIP
+Onboarding failure pages will hold the `node` process from exiting until the page's `Close` button is triggered or the process is manually exited.
+:::
+
+:::tip TIP
+You can also force the onboarding to run later (if configuration needs changing) with the environment variable `Z2M_ONBOARD_FORCE_RUN=1`.
+Depending on your setup, this may be offered in form of a toggle (Home Assistant add-on for example), or you may have to set it manually for the `node` process.
+:::
+
+:::details Environment variables available to customize the onboarding process
+The following environment variables are available, if your setup requires customizing the onboarding server:
+
+- `Z2M_ONBOARD_NO_SERVER=1` => disable onboarding server completely (_supersedes all below_)
+- `Z2M_ONBOARD_URL=http://localhost:8080` => set the URL where the onboarding page can be reached
+- `Z2M_ONBOARD_NO_FAILURE_PAGE=1` => disable failure pages (_failure is logged, and the process exits immediately_)
+- `Z2M_ONBOARD_FORCE_RUN=1` => see above TIP
+- `Z2M_ONBOARD_NO_REDIRECT=1` => if frontend is enabled, prevent the onboarding validation page from trying to redirect to frontend (_useful for setups where frontend has an unusual URL_)
+  :::
+
 ### 1.) Find the Zigbee-Adapter
 
-#### 1.1) USB Zigbee adapter
+:::details 1.1) USB Zigbee adapter
 
 After you plug the adapter in see the `dmesg` output to find the device location:
 
@@ -52,8 +91,9 @@ crw-rw---- 1 root dialout 188, May 16 19:15 /dev/ttyUSB0
 ```
 
 Here we can see that the adapter is owned by `root` and accessible from all users in the `dialout` group.
+:::
 
-#### 1.2) Network Zigbee adapter
+:::details 1.2) Network Zigbee adapter
 
 Zigbee2MQTT supports mDNS autodiscovery feature for network Zigbee adapters. If your network Zigbee adapter supports mDNS, you do not need to know the IP address of your network Zigbee adapter, Zigbee2MQTT will detect it and configure. Otherwise, you need to know the network Zigbee adapter's IP address:
 
@@ -61,10 +101,11 @@ Zigbee2MQTT supports mDNS autodiscovery feature for network Zigbee adapters. If 
 - Go to your router/switch setting and find the list of connected device.
 - Find the IP address and of your Ethernet Zigbee adapter.
 - You also need to know the communication port of your Ethernet Zigbee-Adapter. In most cases (TubeZB, SLZB-06) the default port is `6638`. You can check the port at your Adapter's user manual.
+  :::
 
 ### 2.) Setup and start Zigbee2MQTT
 
-#### 2.1) Configure Docker
+:::details 2.1) Configure Docker
 
 It's assumed, that you have a recent version of Docker and Docker Compose installed.
 
@@ -98,7 +139,9 @@ services:
             - /dev/ttyUSB0:/dev/ttyUSB0
 ```
 
-#### 2.2) Configure Zigbee2MQTT
+:::
+
+:::details 2.2) Configure Zigbee2MQTT
 
 In the next step we'll create a simple [Zigbee2MQTT config file](../configuration/) in `zigbee2mqtt-data/configuration.yaml`.
 
@@ -123,8 +166,9 @@ serial:
 ```
 
 Where `slzb-06` is the mDNS name of your network Zigbee adapter.
+:::
 
-#### 2.3) Start Zigbee2MQTT
+:::details 2.3) Start Zigbee2MQTT
 
 We should now have two files in our directory and can start the stack:
 
@@ -144,6 +188,7 @@ After some short time you should see some log messages that Mosquitto and Zigbee
 You can open the frontend using [http://localhost:8080](http://localhost:8080) (or the hostname of your remote server).
 
 We can now go on and pair our first device.
+:::
 
 ## Connect a device
 
@@ -156,8 +201,3 @@ Once you see something similar to below in the log your device is paired and you
 ```
 Zigbee2MQTT:info  2019-11-09T12:19:56: Successfully interviewed '0x00158d0001dc126a', device has successfully been paired
 ```
-
-::: warning ATTENTION
-It's important that `permit_join` is set to `false` in your `configuration.yaml` after initial setup is
-done to keep your Zigbee network safe and to avoid accidental joining of other Zigbee devices.
-:::
