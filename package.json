@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "private": true,
-    "packageManager": "pnpm@10.5.2",
+    "packageManager": "pnpm@10.6.1",
     "scripts": {
         "dev:devices": "cross-env NODE_OPTIONS=--max_old_space_size=8000 vuepress dev docs",
         "dev": "cross-env EXCLUDE_DEVICES=yes vuepress dev docs",
@@ -21,10 +21,10 @@
     "dependencies": {
         "@quasar/extras": "1.16.17",
         "core-js": "3.41.0",
-        "quasar": "2.18.0"
+        "quasar": "2.18.1"
     },
     "devDependencies": {
-        "@types/node": "22.13.8",
+        "@types/node": "22.13.10",
         "@vuepress/bundler-webpack": "2.0.0-rc.19",
         "@vuepress/client": "2.0.0-rc.19",
         "@vuepress/plugin-docsearch": "2.0.0-rc.78",
@@ -36,8 +36,8 @@
         "cross-env": "7.0.3",
         "easyimage": "3.1.1",
         "glob": "11.0.1",
-        "image-size": "2.0.0",
-        "prettier": "3.5.2",
+        "image-size": "2.0.1",
+        "prettier": "3.5.3",
         "pug": "3.0.3",
         "pug-plain-loader": "1.1.0",
         "sass": "1.85.1",
@@ -48,7 +48,7 @@
         "vue": "3.5.13",
         "vuepress": "2.0.0-rc.19",
         "webpack": "5.98.0",
-        "zigbee-herdsman-converters": "23.2.0"
+        "zigbee-herdsman-converters": "23.4.0"
     },
     "pnpm": {
         "onlyBuiltDependencies": [
