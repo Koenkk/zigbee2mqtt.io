@@ -45,6 +45,10 @@ In order to be able to communicate with your USB device over a virtual COM port,
 
 ## Configuring
 
+:::tip TIP
+See [Onboarding](../getting-started/README.md#onboarding) to make this step easier.
+:::
+
 1. Copy `data\configuration.example.yaml` to `data\configuration.yaml`
 1. Open `data\configuration.yaml` in a text editor
 1. Change the MQTT configuration to match your setup, see the [documentation](../configuration/mqtt.md) for more info.

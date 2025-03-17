@@ -51,6 +51,10 @@ pnpm run build
 
 ## Configuring
 
+:::tip TIP
+See [Onboarding](../getting-started/README.md#onboarding) to make this step easier.
+:::
+
 Configuration is the same as on [Linux](01_linux.md#configuring).
 
 Note that the `configuration.yaml` is at a different location:

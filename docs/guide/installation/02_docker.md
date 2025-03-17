@@ -15,10 +15,20 @@ Start by figuring out the location of your adapter as explained [here](../config
 
 ## Creating the initial configuration
 
-Navigate to the directory where you will store the Zigbee2MQTT data and execute the following command:
+Navigate to the directory where you will store the Zigbee2MQTT data and execute the following command to create the folder:
 
 ```bash
-mkdir data && wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.example.yaml -O data/configuration.yaml
+mkdir data
+```
+
+:::tip TIP
+See [Onboarding](../getting-started/README.md#onboarding) to make the below easier. It will allow you to configure this on container start via a simple frontend page.
+:::
+
+You can grab the default `configuration.yaml` with the following command:
+
+```bash
+wget https://raw.githubusercontent.com/Koenkk/zigbee2mqtt/master/data/configuration.example.yaml -O data/configuration.yaml
 ```
 
 Now configure the MQTT server and adapter location as explained [here](./01_linux.md#configuring).
