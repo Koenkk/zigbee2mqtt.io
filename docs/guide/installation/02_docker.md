@@ -22,7 +22,7 @@ mkdir data
 ```
 
 :::tip TIP
-See [Onboarding](../getting-started/README.md#onboarding) to make the below easier. It will allow you to configure this on container start via a simple frontend page.
+As an alternative of this, you can also use [Onboarding](../getting-started/README.md#onboarding). It will allow you to configure this on container start via a simple frontend page.
 :::
 
 You can grab the default `configuration.yaml` with the following command:

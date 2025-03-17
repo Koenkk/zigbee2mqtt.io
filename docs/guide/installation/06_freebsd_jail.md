@@ -52,7 +52,7 @@ pnpm run build
 ## Configuring
 
 :::tip TIP
-See [Onboarding](../getting-started/README.md#onboarding) to make this step easier.
+As an alternative of this, you can also use [Onboarding](../getting-started/README.md#onboarding).
 :::
 
 Configuration is the same as on [Linux](01_linux.md#configuring).

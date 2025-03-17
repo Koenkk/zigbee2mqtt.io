@@ -69,7 +69,7 @@ pnpm --version
 ## Configuring
 
 :::tip TIP
-See [Onboarding](../getting-started/README.md#onboarding) to make this step easier.
+As an alternative of this, you can also use [Onboarding](../getting-started/README.md#onboarding).
 :::
 
 Before we can start Zigbee2MQTT we need to copy and edit the `configuration.yaml` file. This file contains the configuration which will be used by Zigbee2MQTT.

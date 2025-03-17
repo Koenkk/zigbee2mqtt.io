@@ -46,7 +46,7 @@ In order to be able to communicate with your USB device over a virtual COM port,
 ## Configuring
 
 :::tip TIP
-See [Onboarding](../getting-started/README.md#onboarding) to make this step easier.
+As an alternative of this, you can also use [Onboarding](../getting-started/README.md#onboarding).
 :::
 
 1. Copy `data\configuration.example.yaml` to `data\configuration.yaml`
