@@ -30,26 +30,6 @@ export default {
 };
 ```
 
-::: details Using Common JS
-
-File: `data/external_converters/my-first-converter.js` (`.cjs` file extension also supported)
-
-```js
-const {temperature, humidity, battery} = require('zigbee-herdsman-converters/lib/modernExtend');
-
-const definition = {
-    zigbeeModel: ['lumi.sens'],
-    model: 'WSDCGQ01LM',
-    vendor: 'Xiaomi',
-    description: 'MiJia temperature & humidity sensor',
-    extend: [temperature(), humidity(), battery()],
-};
-
-module.exports = definition;
-```
-
-:::
-
 ### More examples
 
 - [Sensor using modern extends](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/sensor_me.mjs) (same as above)
@@ -87,24 +67,6 @@ To optimize imports, you can import only the required items instead. For example
 import {onOff} from 'zigbee-herdsman-converters/lib/modernExtend';
 import {presets, access} from 'zigbee-herdsman-converters/lib/exposes';
 ```
-
-::: details Using Common JS
-
-```js
-const m = require('zigbee-herdsman-converters/lib/modernExtend');
-const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
-const tz = require('zigbee-herdsman-converters/converters/toZigbee');
-const exposes = require('zigbee-herdsman-converters/lib/exposes');
-const reporting = require('zigbee-herdsman-converters/lib/reporting');
-const ota = require('zigbee-herdsman-converters/lib/ota');
-const utils = require('zigbee-herdsman-converters/lib/utils');
-const globalStore = require('zigbee-herdsman-converters/lib/store');
-
-// exposes.presets
-// exposes.access
-```
-
-:::
 
 ## Converters list
 

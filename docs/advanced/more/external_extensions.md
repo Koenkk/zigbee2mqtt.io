@@ -60,56 +60,6 @@ export default class MyExampleExtension {
 }
 ```
 
-::: details Using Common JS
-
-File: `data/external_extensions/my-first-extension.js` (`.cjs` file extension also supported)
-
-```js
-const {posix} = require('node:path');
-
-class MyExampleExtension {
-    constructor(zigbee, mqtt, state, publishEntityState, eventBus, enableDisableExtension, restartCallback, addExtension, settings, logger) {
-        this.zigbee = zigbee;
-        this.mqtt = mqtt;
-        this.state = state;
-        this.publishEntityState = publishEntityState;
-        this.eventBus = eventBus;
-        this.enableDisableExtension = enableDisableExtension;
-        this.restartCallback = restartCallback;
-        this.addExtension = addExtension;
-        this.settings = settings;
-        this.logger = logger;
-
-        logger.info('Loaded  MyExampleExtension');
-    }
-
-    /**
-     * Called when the extension starts (on Zigbee2MQTT startup, or when the extension is saved at runtime)
-     */
-    start() {
-        this.mqtt.publish('example/extension', `hello from MyExampleExtension, ${posix.join('just', 'a', 'test')}`);
-
-        // All possible events can be seen here: https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/eventBus.ts
-
-        // Subscribe to MQTT messages
-        this.eventBus.onMQTTMessage(this, (data) => {
-            console.log(`Received MQTT message on topic '${data.topic}' with message '${data.message}'`);
-        });
-    }
-
-    /**
-     * Called when the extension stops (on Zigbee2MQTT shutdown, or when the extension is saved/removed at runtime)
-     */
-    stop() {
-        this.eventBus.removeListeners(this);
-    }
-}
-
-module.exports = MyExampleExtension;
-```
-
-:::
-
 The typing for the constructor parameters is as below:
 
 ```typescript
