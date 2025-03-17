@@ -22,7 +22,6 @@ In order to use Zigbee2MQTT we need the following hardware:
 See [Improve network range and stability](../../advanced/zigbee/02_improve_network_range_and_stability.md). <br class="clear" />
 :::
 
-
 ## Onboarding
 
 You can run Zigbee2MQTT in different ways, see [Installation](../installation/).
