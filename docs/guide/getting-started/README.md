@@ -9,13 +9,13 @@ next: ../usage/
 
 In order to use Zigbee2MQTT we need the following hardware:
 
-1. <img src="../../images/zzh.jpg" title="ZZH" class="float-left" /> **A Zigbee Adapter** which is the interface between the Computer (or Server) where you run Zigbee2MQTT and the Zigbee radio
+1. <img src="../../images/zzh.jpg" title="ZZH" class="float-left" /> **A Zigbee adapter** which is the interface between the host system where you run Zigbee2MQTT and the Zigbee radio
    communication. Zigbee2MQTT supports a variety of adapters with different kind of connections like USB, GPIO or remote via WIFI or Ethernet.
-   Recommended adapters have a chip starting with CC2652 or CC1352. See [supported Adapters](../adapters/README.md). It's recommended to check out your adapter's recommendation details before the installation process, to find out whether it needs any additional configuration parameters. <br class="clear" />
+   Recommended adapters are [zStack](../adapters/zstack.md) and [EmberZNet](../adapters/emberznet.md). See [Supported Adapters](../adapters/README.md) for all supported adapters. It's recommended to check out your adapter's recommendation details before the installation process, to find out whether it needs any additional configuration parameters. <br class="clear" />
 
-2. <img src="../../images/pi.jpg" title="Raspberry Pi" class="float-left" /> **A Server** where you would run Zigbee2MQTT. Most Raspberry-Pi models are known to work but you can run it on many computers and platforms including Linux, Windows and MacOS. It should have an MQTT broker installed. [Mosquitto](https://www.mosquitto.org/download/) ([Tutorial for Raspberry-Pi](https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/)) is the recommended MQTT broker but [others](https://mqtt.org/software/) should also work fine. <br class="clear" />
+2. <img src="../../images/pi.jpg" title="Raspberry Pi" class="float-left" /> **A host system** where you would run Zigbee2MQTT (e.g. a Raspberry Pi or Intel NUC). Zigee2MQTT runs on many computers and platforms including Linux, Windows and MacOS. It should have an MQTT broker installed. [Mosquitto](https://www.mosquitto.org/download/) ([tutorial for Raspberry-Pi](https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/)) is the recommended MQTT broker but [others](https://mqtt.org/software/) should also work fine. <br class="clear" />
 
-3. <img src="../../images/xiaomi_sensors.jpg" title="Zigbee devices" class="float-left" /> One or more **Zigbee Devices** which will be paired with Zigbee2MQTT. <br class="clear" />
+3. <img src="../../images/xiaomi_sensors.jpg" title="Zigbee devices" class="float-left" /> One or more **Zigbee devices** which will be paired with Zigbee2MQTT. <br class="clear" />
 
 ::: tip TIP
 <img alt="USB Cable" src="../../images/usb_extension_cable.jpg" class="float-left" /> To improve network range and stability use a USB extension cable. If you experience ANY trouble with device (timeouts, not pairing, devices unreachable, devices dropping from the network, etc.) this is the first thing to do to avoid interference.
@@ -28,13 +28,12 @@ The next step is to install Zigbee2MQTT, follow [installation instructions](../i
 
 ## Onboarding
 
-You can run Zigbee2MQTT in different ways, see [Installation](../installation/).
-
 Zigbee2MQTT offers an onboarding process on first run (when no `configuration.yaml` exists).
 
 The onboarding page, by default, is reachable at the same URL as the frontend (`http://localhost:8080`). _Note: This URL may be different for specific setups (like Home Assistant)._
 
-If you successfully configure everything during onboarding, you can skip the following steps in the guide below: `1.1`, `1.2`, and `2.2`.
+<img src="../../images/onboarding.png" alt="Onboarding" style="border: 2px solid black;">
+
 If the `adapter type` is unknown by the discovery process, you can find a list of the most common adapters in the corresponding pages: [zstack](../adapters/zstack.md), [ember](../adapters/emberznet.md), [deconz](../adapters/deconz.md), [zigate](../adapters/zigate.md), [zboss](../adapters/zboss.md).
 
 :::tip TIP
