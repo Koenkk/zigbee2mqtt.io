@@ -88,9 +88,18 @@ If value equals `true` auto relock is ON, if `false` OFF.
 
 ### Pin code (composite)
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"pin_code": {"user": VALUE, "user_type": VALUE, "user_enabled": VALUE, "pin_code": VALUE}}`
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pin_code": ""}`.
+It's not possible to read (`/get`) this value.
 - `user` (numeric): User ID to set or clear the pincode for 
 - `user_type` (enum): Type of user, unrestricted: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock allowed values: `unrestricted`, `year_day_schedule`, `week_day_schedule`, `master`, `non_access`
 - `user_enabled` (binary): Whether the user is enabled/disabled allowed values: `true` or `false`
-- `pin_code` (numeric): Pincode to set, set pincode to null to clear 
+- `pin_code` (numeric): Pincode to set, set pincode to (null or "null") to clear 
 
+### Last successful Pincode Clear (text)
+Timestamp for the last deleted `pin_code`.
+Value can be found in the published state on the `last_successful_pincode_clear` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Last successful Pincode Save (text)
+Timestamp for the last saved `pin_code`.
+Value can be found in the published state on the `last_successful_pincode_save` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
