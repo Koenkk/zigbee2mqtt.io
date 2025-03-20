@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | TS0205_smoke_2  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | Smoke sensor |
+| Description | Optical smoke sensor (model YG500A on the PCB) |
 | Exposes | battery, smoke, tamper |
 | Picture | ![Tuya TS0205_smoke_2](https://www.zigbee2mqtt.io/images/devices/TS0205_smoke_2.png) |
 

@@ -57,7 +57,7 @@ This problem can be divided in 2 categories; no logging is shown at all OR inter
 Want to migrate from e.g. a CC2530/CC2531 to a more powerful adapter (e.g. CC2652/CC1352)? Then follow these instructions below:
 
 ::: warning
-Migration from one adapter to another requires backup and restore support which is so far only implemented for the `zstack` (Texas Instrument) and `ember` adapters. Backup and restore is **not supported** for any other adapters (`conbee`, `ezsp`, `zboss` and `zigate`).
+Migration from one adapter to another requires backup and restore support which is so far only implemented for the `zstack` (Texas Instrument) and `ember` adapters. Backup and restore is **not supported** for any other adapters (`conbee`, `ezsp`, `zboss` and `zigate`). However you might have success using [this method](https://github.com/Koenkk/zigbee2mqtt/discussions/26716).
 
 Note that when switching from `zstack` -> `ember` or `ember` -> `zstack` re-pairing **might not** be required, however results might vary as this is not officially supported. After switching, check if all devices are working and re-pair the ones that are not. In case pairing new devices is not working, re-pair some routers close to the coordinator while only permitting joining via the coordinator. Pairing should then work via routers that have been re-paired.
 :::

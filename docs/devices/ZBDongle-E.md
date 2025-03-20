@@ -65,7 +65,7 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
       <img src="../../docs/images/putty-bootloader-2.png" width="350" height="250"/>
   * Open another terminal on the host system. Download the router firmware *.gbl file from [here](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E/Router), e.g.
 
-      `wget https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/blob/master/Dongle-E/Router/Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl`
+      `wget https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/raw/refs/heads/master/Dongle-E/Router/Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl`
   * Send the file through XMODEM    
 
       * debian based OS: `sx Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl < /dev/ttyACM0 > /dev/ttyACM0`

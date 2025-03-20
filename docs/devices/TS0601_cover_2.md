@@ -17,10 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | TS0601_cover_2  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | Curtain motor fixed speed |
+| Description | Curtain motor or roller blind motor with fixed speed |
 | Exposes | cover (state, position) |
 | Picture | ![Tuya TS0601_cover_2](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_2.png) |
-| White-label | Zemismart BCM100DB |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

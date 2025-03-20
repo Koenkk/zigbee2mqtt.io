@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | EFEKTA_CO2_Smart_Monitor  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
-| Description | EFEKTA CO2 Smart Monitor, ws2812b indicator, can control the relay, binding |
-| Exposes | co2, temperature, humidity, light_indicator, light_indicator_level, set_altitude, temperature_offset, humidity_offset, forced_recalibration, factory_reset_co2, manual_forced_recalibration, enable_gas, high_gas, low_gas, enable_temperature, high_temperature, low_temperature, enable_humidity, high_humidity, low_humidity |
+| Description | EFEKTA CO2 Smart Monitor, rgb indicator, can control the relay, binding |
+| Exposes | co2, temperature, humidity, reading_interval, light_indicator, light_indicator_level, set_altitude, temperature_offset, humidity_offset, automatic_calibrations, forced_recalibration, factory_reset_co2, manual_forced_recalibration, enable_gas, invert_logic_gas, high_gas, low_gas |
 | Picture | ![EFEKTA EFEKTA_CO2_Smart_Monitor](https://www.zigbee2mqtt.io/images/devices/EFEKTA_CO2_Smart_Monitor.png) |
 
 
@@ -66,6 +66,14 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
+### Reading interval (numeric)
+Setting the sensor reading interval..
+Value can be found in the published state on the `reading_interval` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"reading_interval": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": NEW_VALUE}`.
+The minimal value is `15` and the maximum value is `300`.
+The unit of this value is `seconds`.
+
 ### Light indicator (binary)
 Enable or Disable light indicator.
 Value can be found in the published state on the `light_indicator` property.
@@ -105,6 +113,13 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
 
+### Automatic calibrations (binary)
+Automatic calibration of the CO2 sensor.
+Value can be found in the published state on the `automatic_calibrations` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"automatic_calibrations": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"automatic_calibrations": NEW_VALUE}`.
+If value equals `ON` automatic calibrations is ON, if `OFF` OFF.
+
 ### Forced recalibration (binary)
 Start FRC (Perform Forced Recalibration of the CO2 Sensor).
 Value can be found in the published state on the `forced_recalibration` property.
@@ -134,12 +149,19 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_gas": NEW_VALUE}`.
 If value equals `ON` enable gas is ON, if `OFF` OFF.
 
+### Invert logic gas (binary)
+Enable invert logic CO2 Gas Control.
+Value can be found in the published state on the `invert_logic_gas` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"invert_logic_gas": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"invert_logic_gas": NEW_VALUE}`.
+If value equals `ON` invert logic gas is ON, if `OFF` OFF.
+
 ### High gas (numeric)
 Setting High CO2 Gas Border.
 Value can be found in the published state on the `high_gas` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"high_gas": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_gas": NEW_VALUE}`.
-The minimal value is `400` and the maximum value is `2000`.
+The minimal value is `400` and the maximum value is `5000`.
 The unit of this value is `ppm`.
 
 ### Low gas (numeric)
@@ -147,52 +169,6 @@ Setting Low CO2 Gas Border.
 Value can be found in the published state on the `low_gas` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"low_gas": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_gas": NEW_VALUE}`.
-The minimal value is `400` and the maximum value is `2000`.
+The minimal value is `400` and the maximum value is `5000`.
 The unit of this value is `ppm`.
-
-### Enable temperature (binary)
-Enable Temperature Control.
-Value can be found in the published state on the `enable_temperature` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_temperature": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_temperature": NEW_VALUE}`.
-If value equals `ON` enable temperature is ON, if `OFF` OFF.
-
-### High temperature (numeric)
-Setting High Temperature Border.
-Value can be found in the published state on the `high_temperature` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"high_temperature": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature": NEW_VALUE}`.
-The minimal value is `-5` and the maximum value is `50`.
-The unit of this value is `°C`.
-
-### Low temperature (numeric)
-Setting Low Temperature Border.
-Value can be found in the published state on the `low_temperature` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"low_temperature": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_temperature": NEW_VALUE}`.
-The minimal value is `-5` and the maximum value is `50`.
-The unit of this value is `°C`.
-
-### Enable humidity (binary)
-Enable Humidity Control.
-Value can be found in the published state on the `enable_humidity` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_humidity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_humidity": NEW_VALUE}`.
-If value equals `ON` enable humidity is ON, if `OFF` OFF.
-
-### High humidity (numeric)
-Setting High Humidity Border.
-Value can be found in the published state on the `high_humidity` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"high_humidity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_humidity": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `99`.
-The unit of this value is `%`.
-
-### Low humidity (numeric)
-Setting Low Humidity Border.
-Value can be found in the published state on the `low_humidity` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"low_humidity": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"low_humidity": NEW_VALUE}`.
-The minimal value is `0` and the maximum value is `99`.
-The unit of this value is `%`.
 

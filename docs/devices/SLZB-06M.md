@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SLZB-06M  |
 | Vendor  | [SMLIGHT](/supported-devices/#v=SMLIGHT)  |
 | Description | Router |
-| Exposes | linkquality |
+| Exposes |  |
 | Picture | ![SMLIGHT SLZB-06M](https://www.zigbee2mqtt.io/images/devices/SLZB-06M.png) |
 
 
@@ -32,10 +32,5 @@ pageClass: device-page
 
 ## Exposes
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+
 

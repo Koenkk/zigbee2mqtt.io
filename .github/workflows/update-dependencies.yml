@@ -1,0 +1,49 @@
+name: Update dependencies
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: '0 0 * * 0'
+
+permissions:
+    contents: write
+    pull-requests: write
+
+jobs:
+    update-dependencies:
+        if: github.repository == 'Koenkk/zigbee2mqtt.io'
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  token: ${{ secrets.GH_TOKEN }}
+
+            - uses: pnpm/action-setup@v4
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: pnpm
+
+            - run: |
+                  pnpm self-update
+                  ZHC_VERSION=$(cat package.json | jq -r '.devDependencies."zigbee-herdsman-converters"')
+                  SASS_VERSION=$(cat package.json | jq -r '.devDependencies."sass"')
+                  pnpm up --latest
+                  # Don't upgrade zhc and sass (because of nasty deprecation warnings which can't be fixed due to Quasar)
+                  pnpm i zigbee-herdsman-converters@$ZHC_VERSION sass@SASS_VERSION
+
+            - uses: peter-evans/create-pull-request@v7
+              id: cpr
+              with:
+                  commit-message: 'fix(ignore): update dependencies'
+                  branch: 'deps/all'
+                  title: 'fix(ignore): update dependencies'
+                  token: ${{ secrets.GH_TOKEN }}
+
+            - uses: peter-evans/create-or-update-comment@v4
+              if: ${{ steps.cpr.outputs.pull-request-number }}
+              with:
+                  issue-number: ${{ steps.cpr.outputs.pull-request-number }}
+                  body: |
+                      CC: @Koenkk

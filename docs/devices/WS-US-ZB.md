@@ -1,6 +1,6 @@
 ---
-title: "NovaDigital WS-US-ZB control via MQTT"
-description: "Integrate your NovaDigital WS-US-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Nova Digital WS-US-ZB control via MQTT"
+description: "Integrate your Nova Digital WS-US-ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-10-31T20:36:06
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# NovaDigital WS-US-ZB
+# Nova Digital WS-US-ZB
 
 |     |     |
 |-----|-----|
 | Model | WS-US-ZB  |
-| Vendor  | [NovaDigital](/supported-devices/#v=NovaDigital)  |
+| Vendor  | [Nova Digital](/supported-devices/#v=Nova%20Digital)  |
 | Description | 3 Gang switch with backlight |
 | Exposes | switch (state), power_on_behavior, backlight_mode |
-| Picture | ![NovaDigital WS-US-ZB](https://www.zigbee2mqtt.io/images/devices/WS-US-ZB.png) |
+| Picture | ![Nova Digital WS-US-ZB](https://www.zigbee2mqtt.io/images/devices/WS-US-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

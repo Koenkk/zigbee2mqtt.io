@@ -27,7 +27,10 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
-
+## Linking
+* Download and install the "Smart Shades" app in the [Apple App Store](https://apps.apple.com/us/app/smart-shades/id1016406862) or [Google Play Store](https://play.google.com/store/apps/details?id=com.wazombi.RISE)
+* Configure the max up and down positions in the app first. If that is done, you will have access to the settings menu.
+* In the settings menu of the SmartShades3 app, you can enable Zigbee now.
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*

@@ -17,8 +17,8 @@ They suggest keeping the button pressed for 35 seconds. After about 25 seconds t
 `;
             return `
 ## Pairing
-New Bulbs are automatically in pairing mode. 
-Factory resetting a Hue bulb can be accomplished in 6 ways which are described below. After resetting the bulb will automatically connect.
+New lights are automatically in pairing mode. 
+Factory resetting a Hue light can be accomplished in 6 ways which are described below. After resetting the light will automatically connect.
 
 ### Power Cycling
 
@@ -26,7 +26,7 @@ Repeat 5 times, starting with the bulb on:
 
 - Turn off for 2 seconds, turn on for 8 seconds
 
-The bulb will pulse when factory reset and allow joining on Z2M
+The light will pulse when factory reset and allow joining on Z2M
 
 Source: [Reddit](https://www.reddit.com/r/Hue/comments/vznv5q/hue_bulb_hardware_reset_only_bulb_required/)
 Verification: [GitHub PR Comment](https://github.com/Koenkk/zigbee2mqtt.io/pull/2965#issuecomment-2406964209)
@@ -35,17 +35,17 @@ Verification: [GitHub PR Comment](https://github.com/Koenkk/zigbee2mqtt.io/pull/
 See [Touchlink](../guide/usage/touchlink.md)
 
 ### Hue bridge
-When the bulb is still connected to the Hue bridge, you can simply factory reset the bulb
-by removing it from the bridge via the Hue app. Orphaned bulbs (configured to connect to a non-existing Zigbee network) can be adopted by a Hue bridge by entering the 6 character serial number in the Philips Hue app.
+When the light is still connected to the Hue bridge, you can simply factory reset the light
+by removing it from the bridge via the Hue app. Orphaned lights (configured to connect to a non-existing Zigbee network) can be adopted by a Hue bridge by entering the 6 character serial number in the Philips Hue app.
 
 ### Hue dimmer switch
-With [one](./324131092621.md) of the [two](./929002398602.md) Hue Dimmer switches it is possible to put the bulbs into a factory reset.
+With [one](./324131092621.md) of the [two](./929002398602.md) Hue Dimmer switches it is possible to put the lights into a factory reset.
 
-1. Powercycle the bulb (if the bulb is on for too long this procedure might not work)
-2. Bring the dimmer switch next to the bulb, as close as possible
+1. Powercycle the light (if the bulb is on for too long this procedure might not work)
+2. Bring the dimmer switch next to the light, as close as possible
 3. Hold the I/On and 0/Off button pressed simultaneously for 10 to 12 seconds until…
-4. The bulb flashes a couple of times. Don't release the buttons until the last flash + a safety second
-5. Switch the bulb off and on again: it can now be paired again.
+4. The light flashes a couple of times. Don't release the buttons until the last flash + a safety second
+5. Switch the light off and on again: it can now be paired again.
 
 See also the [VIDEO: Factory reset a Hue bulb with Hue dimmer switch](https://www.youtube.com/watch?v=qvlEAELiJKs).
 
