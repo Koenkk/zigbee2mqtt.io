@@ -16,29 +16,27 @@ Once your converter is ready, open a [pull request](https://github.com/Koenkk/zi
 
 Example:
 
-File: `data/external_converters/my-first-converter.js`
+File: `data/external_converters/my-first-converter.mjs`
 
 ```js
-const {temperature, humidity, battery} = require('zigbee-herdsman-converters/lib/modernExtend');
+import {temperature, humidity, battery} from 'zigbee-herdsman-converters/lib/modernExtend';
 
-const definition = {
+export default {
     zigbeeModel: ['lumi.sens'],
     model: 'WSDCGQ01LM',
     vendor: 'Xiaomi',
     description: 'MiJia temperature & humidity sensor',
     extend: [temperature(), humidity(), battery()],
 };
-
-module.exports = definition;
 ```
 
 ### More examples
 
-- [Sensor using modern extends](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/sensor_me.js) (same as above)
-- [Sensor using non modern extends](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/sensor.js)
-- [Bulb (light)](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/light.js)
-- [Plug (switch)](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/switch.js)
-- [Advanced example](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.js)
+- [Sensor using modern extends](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/sensor_me.mjs) (same as above)
+- [Sensor using non modern extends](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/sensor.mjs)
+- [Bulb (light)](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/light.mjs)
+- [Plug (switch)](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/switch.mjs)
+- [Advanced example](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.mjs)
 - Definitions of already supported devices can be found [here](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices). It may help to look at devices from the same vendor or type.
 
 ### Using modern extends
@@ -50,15 +48,24 @@ The entire API can be found [here](https://github.com/Koenkk/zigbee-herdsman-con
 The most common API endpoints are accessible from the following imports:
 
 ```js
-const fz = require('zigbee-herdsman-converters/converters/fromZigbee');
-const tz = require('zigbee-herdsman-converters/converters/toZigbee');
-const exposes = require('zigbee-herdsman-converters/lib/exposes');
-const reporting = require('zigbee-herdsman-converters/lib/reporting');
-const ota = require('zigbee-herdsman-converters/lib/ota');
-const utils = require('zigbee-herdsman-converters/lib/utils');
-const globalStore = require('zigbee-herdsman-converters/lib/store');
-const e = exposes.presets;
-const ea = exposes.access;
+import * as m from 'zigbee-herdsman-converters/lib/modernExtend';
+import * as fz from 'zigbee-herdsman-converters/converters/fromZigbee';
+import * as tz from 'zigbee-herdsman-converters/converters/toZigbee';
+import * as exposes from 'zigbee-herdsman-converters/lib/exposes';
+import * as reporting from 'zigbee-herdsman-converters/lib/reporting';
+import * as ota from 'zigbee-herdsman-converters/lib/ota';
+import * as utils from 'zigbee-herdsman-converters/lib/utils';
+import * as globalStore from 'zigbee-herdsman-converters/lib/store';
+
+// exposes.presets
+// exposes.access
+```
+
+To optimize imports, you can import only the required items instead. For example:
+
+```js
+import {onOff} from 'zigbee-herdsman-converters/lib/modernExtend';
+import {presets, access} from 'zigbee-herdsman-converters/lib/exposes';
 ```
 
 ## Converters list

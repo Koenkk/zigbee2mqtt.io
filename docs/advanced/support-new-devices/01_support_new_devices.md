@@ -75,7 +75,7 @@ _Note: This converter would actually be covered by the appropriate modern extend
 
 Repeat this last step until your device no longer produces log messages like `No converter available for 'WSDCGQ01LM' with cluster...`
 
-If none of the existing converters fit, you can add custom ones, an example for this can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.js).
+If none of the existing converters fit, you can add custom ones, an example for this can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.mjs).
 
 ### 3. Add device picture to zigbee2mqtt.io documentation
 
