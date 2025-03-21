@@ -4,7 +4,7 @@ next: ../configuration/
 
 # Docker
 
-It is possible to run Zigbee2MQTT in a Docker container using the official [Zigbee2MQTT Docker image](https://hub.docker.com/r/koenkk/zigbee2mqtt/).
+It is possible to run Zigbee2MQTT in a Docker container using the official [Zigbee2MQTT Docker image](https://github.com/Koenkk/zigbee2mqtt/pkgs/container/zigbee2mqtt).
 
 This image support the following architectures: `linux/386`, `linux/amd64`, `linux/arm/v6`, `linux/arm/v7`, `linux/arm64` and `linux/riscv64`.
 Since Zigbee2MQTT images are manifest listed, Docker will auto-detect the architecture and pull the right image.
@@ -36,7 +36,7 @@ $ docker run \
    -v $(pwd)/data:/app/data \
    -v /run/udev:/run/udev:ro \
    -e TZ=Europe/Amsterdam \
-   koenkk/zigbee2mqtt
+   ghcr.io/koenkk/zigbee2mqtt
 ```
 
 **Parameters explanation:**
@@ -85,7 +85,7 @@ $ sudo docker run \
    --user 1001:1001 \
    --group-add dialout \
    -e TZ=Europe/Amsterdam \
-   koenkk/zigbee2mqtt
+   gchr.io/koenkk/zigbee2mqtt
 ```
 
 3.1
@@ -107,7 +107,7 @@ $ podman run \
    --device=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0 \
    --group-add keep-groups \
    -e TZ=Europe/Amsterdam \
-   koenkk/zigbee2mqtt
+   ghcr.io/koenkk/zigbee2mqtt
 ```
 
 ::: tip
@@ -119,7 +119,7 @@ With SELinux enabled you may need to append a `:z` suffix to the volume mount: `
 To update to the latest Docker image:
 
 ```bash
-docker pull koenkk/zigbee2mqtt:latest
+docker pull ghcr.io/koenkk/zigbee2mqtt:latest
 docker rm -f zigbee2mqtt
 # Now run the container again with the instructions above
 ```
@@ -141,7 +141,7 @@ version: '3.8'
 services:
     zigbee2mqtt:
         container_name: zigbee2mqtt
-        image: koenkk/zigbee2mqtt
+        image: ghcr.io/koenkk/zigbee2mqtt
         restart: unless-stopped
         volumes:
             - ./data:/app/data
@@ -209,7 +209,7 @@ If you do not do this you will get the following error when starting the Zigbee2
 ```
 
 - For Raspberry Pi 1 and zero users: there is a bug in Docker which selects the wrong image architecture.
-  Before executing `docker run` pull the correct image with `docker pull koenkk/zigbee2mqtt --platform linux/arm/v6`.
+  Before executing `docker run` pull the correct image with `docker pull ghcr.io/koenkk/zigbee2mqtt --platform linux/arm/v6`.
 
 ## Docker Stack device mapping
 
