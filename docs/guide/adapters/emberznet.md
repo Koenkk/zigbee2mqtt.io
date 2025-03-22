@@ -168,6 +168,23 @@ serial:
 
 :::
 
+::: details Easyiot ZB-GW04 (v1.1, v1.2)
+
+Chip: [efr32mg21a020f768im32](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-socs/device.efr32mg21a020f768im32?tab=specs)
+
+v1.2 supports hardware flow control, but the factory firmware uses software flow control.
+
+```yaml
+serial:
+    rtscts: false
+```
+
+- [Firmware](https://github.com/xsp1989/zigbeeFirmware/tree/master/firmware/Zigbee3.0_Dongle-NoSigned/EZSP)
+
+<img src="../../images/zb-gw04.jpg" width="200" />
+
+:::
+
 ### Network (TCP)
 
 ::: details TubeZB EFR32 MGM24 POE
@@ -251,12 +268,6 @@ Chip: [efr32mg24b220f1536im48](https://www.silabs.com/wireless/zigbee/efr32mg24-
 :::
 
 ## Not recommended
-
-::: details Easyiot ZB-GW04 (v1.1, v1.2)
-
-Low-resources hardware.
-
-:::
 
 ::: details All Series 0/1 based-devices
 
