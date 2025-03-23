@@ -31,7 +31,7 @@ jobs:
                   SASS_VERSION=$(cat package.json | jq -r '.devDependencies."sass"')
                   pnpm up --latest
                   # Don't upgrade zhc and sass (because of nasty deprecation warnings which can't be fixed due to Quasar)
-                  pnpm i zigbee-herdsman-converters@$ZHC_VERSION sass@SASS_VERSION
+                  pnpm i zigbee-herdsman-converters@$ZHC_VERSION sass@$SASS_VERSION
 
             - uses: peter-evans/create-pull-request@v7
               id: cpr
