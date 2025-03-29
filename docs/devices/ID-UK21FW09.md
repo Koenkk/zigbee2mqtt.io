@@ -30,9 +30,19 @@ pageClass: device-page
 Re-pairing requires the device is removed from any existing network first, this requires a factory reset if the dimmer cannot be gracefully removed from the previous network. Unfortunately the user manual does not cover this procedure, but it is quite simple:
 To perform a factory reset. Turn on the light, press the knob for 5 times and long press the 5th time for 3 seconds. Once reset successfully, the lamp will flicker for 5 times.
 To start paring, turn on the light, press the knob for 2 times and long press the 2nd time for 3 seconds. Once pairing starts, the lamp will flicker for 2 times. When pairing is complete, the lamp will flash once more.
+
+#### Re-pairing Using the Reset Button
+
+Follow these steps to manage pairing using the reset button:
+
+- **Graceful Un-pairing:** Press the reset button **3 times quickly** to gracefully remove the device from its current network. The indicator light will flash **purple**, then turn solid purple for **10 seconds**, confirming the un-pairing.
+
+  > **Note:** If graceful un-pairing is not possible, perform a factory reset.
+
+- **Manual Factory Reset:** Press and **hold** the reset button for more than **5 seconds**. The indicator light will turn solid **red** for **10 seconds**, confirming the device has been reset to factory settings.
+
+- **Start Pairing:** Press the reset button **2 times quickly** to initiate pairing mode. The indicator light will flash **blue**, indicating pairing mode is active. Pairing mode remains active for **15 minutes**.
 <!-- Notes END: Do not edit below this line -->
-
-
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
