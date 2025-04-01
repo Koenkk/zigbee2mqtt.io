@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QS-Zigbee-D02-TRIAC-L_1  |
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | 1 channel dimmer |
-| Exposes | light (state, brightness, min_brightness, max_brightness), light_type, power_on_behavior, switch_type |
+| Exposes | light (state, brightness, min_brightness, max_brightness), light_type, power_on_behavior, switch_type, countdown |
 | Picture | ![Lonsonho QS-Zigbee-D02-TRIAC-L_1](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-D02-TRIAC-L_1.png) |
 
 
@@ -65,4 +65,12 @@ Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
 The possible values are: `toggle`, `state`, `momentary`.
+
+### Countdown (numeric)
+Countdown to turn device off after a certain time.
+Value can be found in the published state on the `countdown` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `43200`.
+The unit of this value is `s`.
 

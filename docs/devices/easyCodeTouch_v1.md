@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | easyCodeTouch_v1  |
 | Vendor  | [Onesti Products AS](/supported-devices/#v=Onesti%20Products%20AS)  |
 | Description | Zigbee module for EasyAccess code touch series |
-| Exposes | lock (state, lock_state), battery, sound_volume, last_unlock_source, last_unlock_user, last_lock_source, last_lock_user, last_used_pin_code, auto_relock, pin_code |
+| Exposes | lock (state, lock_state), battery, sound_volume, last_unlock_source, last_unlock_user, last_lock_source, last_lock_user, last_used_pin_code, auto_relock, pin_code, last_successful_pincode_clear, last_successful_pincode_save |
 | Picture | ![Onesti Products AS easyCodeTouch_v1](https://www.zigbee2mqtt.io/images/devices/easyCodeTouch_v1.png) |
 
 
@@ -93,4 +93,14 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `user_type` (enum): Type of user, unrestricted: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock allowed values: `unrestricted`, `year_day_schedule`, `week_day_schedule`, `master`, `non_access`
 - `user_enabled` (binary): Whether the user is enabled/disabled allowed values: `true` or `false`
 - `pin_code` (numeric): Pincode to set, set pincode to null to clear 
+
+### Last successful pincode clear (text)
+Last deleted Pincode.
+Value can be found in the published state on the `last_successful_pincode_clear` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+
+### Last successful pincode save (text)
+Last saved Pincode.
+Value can be found in the published state on the `last_successful_pincode_save` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 

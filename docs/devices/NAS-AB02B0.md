@@ -23,7 +23,6 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
 ## Notes
 Alarm melodies sounds/tunes:
 1 - fuer elise
@@ -44,7 +43,6 @@ Alarm melodies sounds/tunes:
 16 - alarm clock
 17 - psycho
 18 - doorbell
-
 <!-- Notes END: Do not edit below this line -->
 
 

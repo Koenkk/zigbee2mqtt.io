@@ -27,7 +27,6 @@ pageClass: device-page
 
 ### Pairing
 Press the test button three times in a row and a LED should be flashing green to indicate pairing mode.
-
 <!-- Notes END: Do not edit below this line -->
 
 
