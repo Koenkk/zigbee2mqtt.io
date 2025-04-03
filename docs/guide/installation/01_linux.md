@@ -4,6 +4,11 @@ next: ../configuration/
 
 # Linux
 
+::: warning
+We recommend using [Docker](./02_docker.md) for installation instead.
+This eliminates common setup challenges such as setting up NodeJS and installing dependencies.
+:::
+
 These instructions explain how to run Zigbee2MQTT on Linux.
 
 For the sake of simplicity this guide assumes running on a Raspberry Pi 4, but it should work on any Linux machine.
@@ -23,7 +28,7 @@ Mosquitto is the recommended MQTT broker but others should also work fine.
 # NOTE 1: Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/ e.g. Version 20.9.0 should work.
 # NOTE 2: For Ubuntu see installing through Snap below.
 sudo apt-get install -y curl
-sudo curl -fsSL ttps://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs git make g++ gcc libsystemd-dev
 npm install -g pnpm
 
