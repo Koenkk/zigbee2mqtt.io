@@ -91,8 +91,8 @@ importers:
         specifier: 5.98.0
         version: 5.98.0
       zigbee-herdsman-converters:
-        specifier: 23.18.0
-        version: 23.18.0
+        specifier: 23.20.1
+        version: 23.20.1
 
 packages:
 
@@ -3275,8 +3275,8 @@ packages:
     resolution: {integrity: sha512-GQHQqAopRhwU8Kt1DDM8NjibDXHC8eoh1erhGAJPEyveY9qqVeXvVikNKrDz69sHowPMorbPUrH/mx8c50eiBQ==}
     engines: {node: '>=18'}
 
-  zigbee-herdsman-converters@23.18.0:
-    resolution: {integrity: sha512-AL3jFKWWefk9PTOb2jX6IfyWCfvLbIIEqvvfLiC2gqXzPnjmo1Qd4kseEMM9z5Ia5IjoKjKZRV0Uf9FNAFBSFg==}
+  zigbee-herdsman-converters@23.20.1:
+    resolution: {integrity: sha512-cNlOnZcY3Hyqhbd28llqzaJzRMrtjk/CxbXBK2ADcJFztARpx1L2h5ySdvcrzLvUXGlWvJXNRy5M7larwDUvZg==}
 
   zigbee-herdsman@3.4.11:
     resolution: {integrity: sha512-OzJXvkmXXWgy0rBUaKAeSPvggGJnr+0XfWf1gUaiBrCvlbpSPYRzAqpiqM1dgfX3Cg6zJ5cofy5eEd9UW0sBlQ==}
@@ -6746,7 +6746,7 @@ snapshots:
 
   yoctocolors@2.1.1: {}
 
-  zigbee-herdsman-converters@23.18.0:
+  zigbee-herdsman-converters@23.20.1:
     dependencies:
       buffer-crc32: 1.0.0
       iconv-lite: 0.6.3

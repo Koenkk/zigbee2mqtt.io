@@ -1,7 +1,7 @@
 ---
-title: "Tuya LKWSZ211 control via MQTT"
-description: "Integrate your Tuya LKWSZ211 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-01-31T19:37:46
+title: "Tuya ZG-101Z/D control via MQTT"
+description: "Integrate your Tuya ZG-101Z/D via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya LKWSZ211
+# Tuya ZG-101Z/D
 
 |     |     |
 |-----|-----|
-| Model | LKWSZ211  |
+| Model | ZG-101Z/D  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | Scene remote with 2 keys |
+| Description | Smart knob |
 | Exposes | battery, action |
-| Picture | ![Tuya LKWSZ211](https://www.zigbee2mqtt.io/images/devices/LKWSZ211.png) |
+| Picture | ![Tuya ZG-101Z/D](https://www.zigbee2mqtt.io/images/devices/ZG-101Z-D.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,9 +33,10 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported.
+Remaining battery in %.
 Value can be found in the published state on the `battery` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
+It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
@@ -43,7 +44,5 @@ The unit of this value is `%`.
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `button_1_single`, `button_1_double`, `button_1_hold`, `button_2_single`, `button_2_double`, `button_2_hold`.
-
-button_2_hold`.
+The possible values are: `rotate_left`, `rotate_right`.
 

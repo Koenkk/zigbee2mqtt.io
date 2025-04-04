@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | S4SW-001X8EU  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
-| Description | Mini gen 4 |
+| Description | 1 Mini Gen 4 |
 | Exposes | switch (state) |
 | Picture | ![Shelly S4SW-001X8EU](https://www.zigbee2mqtt.io/images/devices/S4SW-001X8EU.png) |
 

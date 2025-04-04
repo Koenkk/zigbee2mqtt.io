@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SRP-ZG9105-CC  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Constant Current Zigbee LED dimmable driver |
-| Exposes | light (state, brightness), effect, power_on_behavior |
+| Exposes | light (state, brightness), effect, power_on_behavior, external_switch_type |
 | Picture | ![Sunricher SRP-ZG9105-CC](https://www.zigbee2mqtt.io/images/devices/SRP-ZG9105-CC.png) |
 
 
@@ -84,4 +84,10 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### External switch type (enum)
+Value can be found in the published state on the `external_switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_switch_type": NEW_VALUE}`.
+The possible values are: `push_button`, `normal_on_off`, `three_way`.
 
