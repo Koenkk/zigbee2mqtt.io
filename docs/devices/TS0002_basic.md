@@ -19,7 +19,7 @@ pageClass: device-page
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 gang switch module |
 | Exposes | switch (state), power_on_behavior, switch_type |
-| Picture | ![Tuya TS0002_basic](https://github.com/onurece/zigbee2mqtt.io/tree/master/public/images/devices/ZM-104B-M.png) |
+| Picture | ![Tuya TS0002_basic](https://www.zigbee2mqtt.io/images/devices/TS0002_basic.png) |
 | White-label | OXT SWTZ22, Moes ZM-104B-M |
 
 
