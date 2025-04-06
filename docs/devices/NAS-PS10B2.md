@@ -115,5 +115,5 @@ Lux Value.
 Value can be found in the published state on the `lux_value` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"lux_value": NEW_VALUE}`.
-The possible values are: `10 lux`, `20 lux`, `50 lux`, `24h`.
+The possible values are: `10_lux`, `20_lux`, `50_lux`, `24h`.
 

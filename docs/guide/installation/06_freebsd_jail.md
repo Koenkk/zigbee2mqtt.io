@@ -24,7 +24,7 @@ Enter the following commands inside the jail's shell:
 
 ```bash
 # Install Node.js and required dependencies:
-# - It is recommended to install Node 20 from the official Node repository. Check https://github.com/nodesource/distributions/blob/master/README.md on how to do this.
+# - It is recommended to install Node 22 from the official Node repository. Check https://github.com/nodesource/distributions/blob/master/README.md on how to do this.
 # - Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/ e.g. Version 20.9.0 should work.
 # - Selecting `npm` also installs `node`.
 pkg install npm git gmake gcc
@@ -32,8 +32,8 @@ npm install -g pnpm
 
 # Verify that the correct nodejs and pnpm (automatically installed with nodejs)
 # version has been installed
-node --version  # Should output V18.x, V20.x, V21.X
-pnpm --version  # Should output 9.X
+node --version  # Should output V20.x, V22.X
+pnpm --version  # Should output 10.X
 
 # Create installation folder (/usr/local prefix is used for software not part of the base system)
 mkdir -p /usr/local/opt/zigbee2mqtt
@@ -49,22 +49,6 @@ pnpm i --frozen-lockfile
 pnpm run build
 ```
 
-## Configuring
-
-Configuration is the same as on [Linux](01_linux.md#configuring).
-
-Note that the `configuration.yaml` is at a different location:
-
-```
-/usr/local/opt/zigbee2mqtt/data/configuration.yaml
-```
-
-Also note that if you need `nano` for editing the configuration, you'll have to install it first:
-
-```sh
-pkg install nano
-```
-
 ## Starting Zigbee2MQTT
 
 Now that we have setup everything correctly we can start Zigbee2MQTT.
@@ -74,7 +58,11 @@ cd /usr/local/opt/zigbee2mqtt
 pnpm start
 ```
 
-When started successfully, you will see something like:
+On first start, Zigbee2MQTT will start the onboarding on port 8080.
+Navigate to this board and configure accordingly.
+More information about [onboarding](../getting-started/README.md#onboarding).
+
+Once the onboarding is completed, you will see something like:
 
 ```bash
 Zigbee2MQTT:info  2019-11-09T13:04:01: Logging to directory: '/opt/zigbee2mqtt/data/log/2019-11-09.14-04-01'

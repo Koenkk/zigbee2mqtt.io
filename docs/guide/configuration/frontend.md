@@ -39,6 +39,9 @@ frontend:
     ssl_key: /config/etc/letsencrypt/live/mydomain.com/privkey.pem
     # Optional, base URL for the frontend, when served from a subpath, e.g. behind the proxy. Default value is '/'
     base_url: /zigbee2mqtt
+    # Optional, list of regular expressions to hide notifications, the example below hides notifications for failed device pings
+    notification_filter:
+        - 'z2m: Failed to ping.*'
 ```
 
 To specify the `auth_token` in a different file set e.g. `auth_token: '!secret.yaml auth_token'`, create a file called `secret.yaml` next to `configuration.yaml` with content `auth_token: super-secret-token`.

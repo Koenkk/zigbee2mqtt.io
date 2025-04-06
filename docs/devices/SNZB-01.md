@@ -57,3 +57,5 @@ Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `long`.
 
+ngle`, `double`, `long`.
+
