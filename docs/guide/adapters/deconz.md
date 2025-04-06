@@ -1,6 +1,11 @@
 # deCONZ (Dresden Elektronik)
 
 ::: warning ATTENTION
+The implementation of this adapter is **not maintained** anymore.
+Consider buying one of the recommended adapters instead.
+:::
+
+::: warning ATTENTION
 Various features are not supported by this adapter, in case you depend on these features, consider a different adapter.
 
 - [Changing the channel](../configuration/zigbee-network.md#changing-the-zigbee-channel), changing requires re-pairing all devices.
