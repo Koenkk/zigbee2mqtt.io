@@ -114,7 +114,18 @@ Reboot your device and now your user should have access to the device.
 This error occurs when another program is already using (and thus locking) the adapter. You can find out which via the
 following command: `ls -l /proc/[0-9]/fd/ |grep /dev/ttyACM0` (replace `/dev/ttyACM0` with your adapter port).
 
-## Raspberry Pi users: use a good power supply
+## Raspberry Pi users
+
+## Raspberry Pi OS
+
+Make sure that you are using at least Raspberry Pi OS 11.
+To figure out which version you are running execute:
+
+```bash
+cat /etc/issue.net
+```
+
+## Use a good power supply
 
 A bad power supply can make your system and its USB devices unstable. Make sure to use a good power supply.
 
