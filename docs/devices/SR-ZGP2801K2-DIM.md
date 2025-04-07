@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | SR-ZGP2801K2-DIM  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Pushbutton transmitter module |
-| Exposes | action, linkquality |
-| Picture | ![Sunricher SR-ZGP2801K2-DIM](https://www.zigbee2mqtt.io/images/devices/SR-ZGP2801K2-DIM.jpg) |
+| Exposes | action |
+| Picture | ![Sunricher SR-ZGP2801K2-DIM](https://www.zigbee2mqtt.io/images/devices/SR-ZGP2801K2-DIM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -78,11 +78,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `press_on`, `press_off`, `hold_on`, `hold_off`, `release`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | HS2DB  |
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart doorbell button |
-| Exposes | battery, action, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HS2DB](https://www.zigbee2mqtt.io/images/devices/HS2DB.jpg) |
+| Exposes | battery, action, battery_low, tamper |
+| Picture | ![HEIMAN HS2DB](https://www.zigbee2mqtt.io/images/devices/HS2DB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,7 +33,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -56,11 +56,4 @@ Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

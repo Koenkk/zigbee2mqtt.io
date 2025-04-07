@@ -1,6 +1,6 @@
 ---
-title: "HZC S900W-ZG control via MQTT"
-description: "Integrate your HZC S900W-ZG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "HZC Electric S900W-ZG control via MQTT"
+description: "Integrate your HZC Electric S900W-ZG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-03-30T17:14:41
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HZC S900W-ZG
+# HZC Electric S900W-ZG
 
 |     |     |
 |-----|-----|
 | Model | S900W-ZG  |
-| Vendor  | [HZC](/supported-devices/#v=HZC)  |
+| Vendor  | [HZC Electric](/supported-devices/#v=HZC%20Electric)  |
 | Description | Water leak sensor |
-| Exposes | water_leak, battery_low, battery, linkquality |
-| Picture | ![HZC S900W-ZG](https://www.zigbee2mqtt.io/images/devices/S900W-ZG.jpg) |
+| Exposes | water_leak, battery_low, battery |
+| Picture | ![HZC Electric S900W-ZG](https://www.zigbee2mqtt.io/images/devices/S900W-ZG.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -45,16 +45,9 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

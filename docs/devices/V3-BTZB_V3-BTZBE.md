@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | V3-BTZB/V3-BTZBE  |
 | Vendor  | [Danalock](/supported-devices/#v=Danalock)  |
 | Description | BT/ZB smartlock |
-| Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user, linkquality |
-| Picture | ![Danalock V3-BTZB/V3-BTZBE](https://www.zigbee2mqtt.io/images/devices/V3-BTZB-V3-BTZBE.jpg) |
+| Exposes | lock (state, lock_state), battery, pin_code, action, action_source_name, action_user |
+| Picture | ![Danalock V3-BTZB/V3-BTZBE](https://www.zigbee2mqtt.io/images/devices/V3-BTZB-V3-BTZBE.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -63,7 +63,7 @@ To read the current state of this lock publish a message to topic `zigbee2mqtt/F
 This lock exposes a lock state which can be found in the published state under the `lock_state` property. It's not possible to read (`/get`) or write (`/set`) this value. The possible values are: `not_fully_locked`, `locked`, `unlocked`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -93,11 +93,4 @@ The possible values are: `keypad`, `rfid`, `manual`, `rf`.
 ID of user that triggered the action on the lock.
 Value can be found in the published state on the `action_user` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

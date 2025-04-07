@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | JTQJ-BF-01LM/BW  |
 | Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | MiJia gas leak detector  |
-| Exposes | gas, battery_low, tamper, sensitivity, gas_density, selftest, linkquality |
-| Picture | ![Xiaomi JTQJ-BF-01LM/BW](https://www.zigbee2mqtt.io/images/devices/JTQJ-BF-01LM-BW.jpg) |
+| Description | Mijia Honeywell gas leak detector |
+| Exposes | gas, tamper, sensitivity, gas_density, selftest |
+| Picture | ![Xiaomi JTQJ-BF-01LM/BW](https://www.zigbee2mqtt.io/images/devices/JTQJ-BF-01LM-BW.png) |
 | White-label | Xiaomi YTC4019RT |
 
 
@@ -55,12 +55,6 @@ Value can be found in the published state on the `gas` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` gas is ON, if `false` OFF.
 
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
-
 ### Tamper (binary)
 Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
@@ -82,11 +76,4 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"selftest": NEW_VALUE}`.
 The possible values are: ``.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

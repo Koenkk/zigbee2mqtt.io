@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZM-35H-Q control via MQTT"
-description: "Integrate your TuYa ZM-35H-Q via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZM-35H-Q control via MQTT"
+description: "Integrate your Tuya ZM-35H-Q via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:02:38
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZM-35H-Q
+# Tuya ZM-35H-Q
 
 |     |     |
 |-----|-----|
 | Model | ZM-35H-Q  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Motion sensor |
-| Exposes | occupancy, battery_low, battery, sensitivity, keep_time, linkquality |
-| Picture | ![TuYa ZM-35H-Q](https://www.zigbee2mqtt.io/images/devices/ZM-35H-Q.jpg) |
+| Exposes | occupancy, battery_low, battery, sensitivity, keep_time |
+| Picture | ![Tuya ZM-35H-Q](https://www.zigbee2mqtt.io/images/devices/ZM-35H-Q.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -56,7 +56,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -75,11 +75,4 @@ Value can be found in the published state on the `keep_time` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keep_time": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keep_time": NEW_VALUE}`.
 The possible values are: `30`, `60`, `120`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

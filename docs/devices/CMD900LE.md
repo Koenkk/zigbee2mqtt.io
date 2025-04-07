@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | CMD900LE  |
 | Vendor  | [HUARUI](/supported-devices/#v=HUARUI)  |
 | Description | Lithium battery intelligent curtain opening and closing motor |
-| Exposes | cover (state, position), options, linkquality |
-| Picture | ![HUARUI CMD900LE](https://www.zigbee2mqtt.io/images/devices/CMD900LE.jpg) |
+| Exposes | cover (state, position), options |
+| Picture | ![HUARUI CMD900LE](https://www.zigbee2mqtt.io/images/devices/CMD900LE.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -47,11 +47,4 @@ To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"options": {"motor_speed": VALUE, "reverse_direction": VALUE}}`
 - `motor_speed` (numeric): Motor speed max value is 255
 - `reverse_direction` (binary): Reverse the motor direction allowed values: `true` or `false`
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

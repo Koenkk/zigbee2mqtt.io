@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | HA-ZBM-MW2  |
 | Vendor  | [Halemeier](/supported-devices/#v=Halemeier)  |
 | Description | S-Mitter basic MultiWhite² 1-channel sender Zigbee  |
-| Exposes | battery, action, linkquality |
-| Picture | ![Halemeier HA-ZBM-MW2](https://www.zigbee2mqtt.io/images/devices/HA-ZBM-MW2.jpg) |
+| Exposes | battery, action |
+| Picture | ![Halemeier HA-ZBM-MW2](https://www.zigbee2mqtt.io/images/devices/HA-ZBM-MW2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -43,7 +43,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"battery": ""}`.
 It's not possible to write (`/set`) this value.
@@ -55,11 +55,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `recall_1`, `recall_2`, `recall_3`, `recall_4`, `color_temperature_step_up`, `color_temperature_step_down`, `brightness_step_up`, `brightness_step_down`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

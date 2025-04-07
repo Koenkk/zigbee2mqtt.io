@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | HR-C99C-Z-C045  |
 | Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
 | Description | RGB CTT LEXMAN ENKI remote control |
-| Exposes | battery, action, linkquality |
-| Picture | ![ADEO HR-C99C-Z-C045](https://www.zigbee2mqtt.io/images/devices/HR-C99C-Z-C045.jpg) |
+| Exposes | battery, action |
+| Picture | ![ADEO HR-C99C-Z-C045](https://www.zigbee2mqtt.io/images/devices/HR-C99C-Z-C045.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -54,7 +54,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -65,11 +65,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `scene_1`, `scene_2`, `scene_3`, `scene_4`, `color_saturation_step_up`, `color_saturation_step_down`, `color_stop`, `color_hue_step_up`, `color_hue_step_down`, `color_temperature_step_up`, `color_temperature_step_down`, `brightness_step_up`, `brightness_step_down`, `brightness_stop`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

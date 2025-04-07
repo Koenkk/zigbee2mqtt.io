@@ -1,6 +1,6 @@
 ---
-title: "TuYa PJ-ZGD01 control via MQTT"
-description: "Integrate your TuYa PJ-ZGD01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya PJ-ZGD01 control via MQTT"
+description: "Integrate your Tuya PJ-ZGD01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa PJ-ZGD01
+# Tuya PJ-ZGD01
 
 |     |     |
 |-----|-----|
 | Model | PJ-ZGD01  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Garage door opener |
-| Exposes | trigger, garage_door_contact, linkquality |
-| Picture | ![TuYa PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.jpg) |
+| Exposes | trigger, countdown, garage_door_contact, run_time, open_alarm_time, status |
+| Picture | ![Tuya PJ-ZGD01](https://www.zigbee2mqtt.io/images/devices/PJ-ZGD01.png) |
 | White-label | MatSee Plus PJ-ZGD01 |
 
 
@@ -34,21 +34,45 @@ pageClass: device-page
 ## Exposes
 
 ### Trigger (binary)
-Trigger the door movement.
+Request door to close (= false) or open (= true), will not pulse output if contact shows door is already in requested state.
 Value can be found in the published state on the `trigger` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"trigger": NEW_VALUE}`.
 If value equals `true` trigger is ON, if `false` OFF.
 
+### Countdown (numeric)
+Countdown to trigger door movement after a certain time, will pulse output in all cases.
+Value can be found in the published state on the `countdown` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `43200`.
+The unit of this value is `s`.
+
 ### Garage door contact (binary)
+Indicates if the garage door contact is closed (= true) or open (= false).
 Value can be found in the published state on the `garage_door_contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` garage door contact is ON, if `false` OFF.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
+### Run time (numeric)
+Configure the time to wait for the door contact status to change before triggering a run time alarm.
+Value can be found in the published state on the `run_time` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"run_time": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `120`.
+The unit of this value is `s`.
+
+### Open alarm time (numeric)
+Configure the amount of time the door may be open before an open time alarm is triggered.
+Value can be found in the published state on the `open_alarm_time` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"open_alarm_time": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `86400`.
+The unit of this value is `s`.
+
+### Status (enum)
+Indicates run time alarm, door open alarm or noraml status, will not retunr to normal until door is triggered again.
+Value can be found in the published state on the `status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+The possible values are: `Open Time Alarm`, `Run Time Alarm`, `Normal`.
 

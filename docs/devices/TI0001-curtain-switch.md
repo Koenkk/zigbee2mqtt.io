@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | TI0001-curtain-switch  |
 | Vendor  | [Livolo](/supported-devices/#v=Livolo)  |
 | Description | Zigbee curtain switch (can only read status, control does not work yet) |
-| Exposes | switch (state), linkquality |
-| Picture | ![Livolo TI0001-curtain-switch](https://www.zigbee2mqtt.io/images/devices/TI0001-curtain-switch.jpg) |
+| Exposes | switch (state) |
+| Picture | ![Livolo TI0001-curtain-switch](https://www.zigbee2mqtt.io/images/devices/TI0001-curtain-switch.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -41,11 +41,4 @@ To read the current state of this switch publish a message to topic `zigbee2mqtt
 The current state of this switch is in the published state under the `state_right` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

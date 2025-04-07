@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | WZ5_rgb  |
 | Vendor  | [Skydance](/supported-devices/#v=Skydance)  |
 | Description | Zigbee & RF 5 in 1 LED controller (RGB mode) |
-| Exposes | light (state, brightness, color_hs), linkquality |
-| Picture | ![Skydance WZ5_rgb](https://www.zigbee2mqtt.io/images/devices/WZ5_rgb.jpg) |
+| Exposes | light (state, brightness, color_hs) |
+| Picture | ![Skydance WZ5_rgb](https://www.zigbee2mqtt.io/images/devices/WZ5_rgb.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -40,11 +40,4 @@ This light supports the following features: `state`, `brightness`, `color_hs`.
   - HSB space (hue, saturation, brightness): `{"color": {"h": H, "s": S, "b": B}}` e.g. `{"color":{"h":360,"s":100,"b":100}}` or `{"color": {"hsb": "H,S,B"}}` e.g. `{"color":{"hsb":"360,100,100"}}`
   - HSV space (hue, saturation, value):`{"color": {"h": H, "s": S, "v": V}}` e.g. `{"color":{"h":360,"s":100,"v":100}}` or `{"color": {"hsv": "H,S,V"}}` e.g. `{"color":{"hsv":"360,100,100"}}`
   - HSL space (hue, saturation, lightness)`{"color": {"h": H, "s": S, "l": L}}` e.g. `{"color":{"h":360,"s":100,"l":100}}` or `{"color": {"hsl": "H,S,L"}}` e.g. `{"color":{"hsl":"360,100,100"}}`
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

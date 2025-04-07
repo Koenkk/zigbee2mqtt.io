@@ -1,6 +1,6 @@
 ---
-title: "TuYa YXZBRB58 control via MQTT"
-description: "Integrate your TuYa YXZBRB58 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya YXZBRB58 control via MQTT"
+description: "Integrate your Tuya YXZBRB58 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-08-01T15:13:29
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa YXZBRB58
+# Tuya YXZBRB58
 
 |     |     |
 |-----|-----|
 | Model | YXZBRB58  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart human presence sensor |
-| Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, radar_scene, linkquality |
-| Picture | ![TuYa YXZBRB58](https://www.zigbee2mqtt.io/images/devices/YXZBRB58.jpg) |
+| Exposes | illuminance, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, radar_scene |
+| Picture | ![Tuya YXZBRB58](https://www.zigbee2mqtt.io/images/devices/YXZBRB58.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,12 +29,17 @@ pageClass: device-page
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
@@ -94,12 +99,5 @@ Presets for sensitivity for presence and movement.
 Value can be found in the published state on the `radar_scene` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"radar_scene": NEW_VALUE}`.
-The possible values are: `default`, `bathroom`, `bedroom`, `sleeping`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+The possible values are: `default`, `bathroom`, `bedroom`, `sleeping`, `unknown`.
 

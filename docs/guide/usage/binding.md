@@ -3,19 +3,23 @@ sidebarDepth: 1
 ---
 
 # Binding
-Zigbee has support for binding which makes it possible that devices can directly control each other without the intervention of Zigbee2MQTT or any home automation software.
+
+Zigbee supports binding, allowing devices to directly control each other without the intervention of Zigbee2MQTT or any home automation software.
 
 ## When to use this
-A use case for this is e.g. the TRADFRI wireless dimmer. Binding the dimmer directly to a bulb or group has the following advantages:
-- Smoothness; this will greatly improve the dimming feedback as the dimmer directly dims the bulb and thus does not have to make the MQTT/home automation software roundtrip.
-- It will work even when home automation software, Zigbee2MQTT or the coordinator is down.
+
+A use case for binding is, for example, the TRADFRI wireless dimmer. Binding the dimmer directly to a bulb or group has the following advantages:
+
+- **Smoothness:** Improves dimming feedback by directly controlling the bulb, reducing the need for MQTT/home automation software roundtrip.
+- **Reliability:** Works even when home automation software, Zigbee2MQTT, or the coordinator is down.
 
 ## Commands
+
 ::: tip
-All commands below can also be executed via the frontend, click on your device and go to the *Bind* tab.
+All commands below can also be executed via the frontend, click on your device and go to the _Bind_ tab.
 :::
 
-Binding can be configured by using either `zigbee2mqtt/bridge/request/device/bind` to bind and `zigbee2mqtt/bridge/request/device/unbind` to unbind. The payload should be `{"from": SOURCE, "to": TARGET}` where `SOURCE` and `TARGET` can be the `friendly_name` of a group or device. Example request payload: `{"from": "my_remote", "to": "my_bulb"}`, example response payload: `{"data":{"from":"my_remote","to":"my_bulb","clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`. The `clusters` in the response indicate the bound/unbound clusters, `failed` indicates any failed to bind/unbind clusters. In case all clusters fail to bind the `status` is set to `error`.
+Binding can be configured by using either `zigbee2mqtt/bridge/request/device/bind` to bind and `zigbee2mqtt/bridge/request/device/unbind` to unbind. The payload should be `{"from": SOURCE, "to": TARGET}` where `SOURCE` and `TARGET` can be the `friendly_name` of a group or device. Example request payload: `{"from": "my_remote", "to": "my_bulb"}`, example response payload: `{"data":{"from":"my_remote","from_endpoint":"default","to":"my_bulb","clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`. The `clusters` in the response indicate the bound/unbound clusters, `failed` indicates any failed to bind/unbind clusters. In case all clusters fail to bind the `status` is set to `error`.
 
 By default all supported clusters are bound. To restrict which clusters are being bound/unbound add `clusters` to the request payload e.g. `{"from": "my_remote", "to": "my_bulb", "clusters": ["genOnOff"]}`. Possible clusters are: `genScenes`, `genOnOff`, `genLevelCtrl`, `lightingColorCtrl` and `closuresWindowCovering`.
 
@@ -26,18 +30,25 @@ When binding/unbinding of a battery powered device fails, this is most of the ti
 In the above example, the TRADFRI wireless dimmer would be the `SOURCE` device and the bulb the `TARGET` device. When using a group as target, using the group's friendly name is mandatory, group ID will not work.
 
 ### Binding specific endpoint
+
 **This is not applicable for most users**
 
-By default, the first endpoint is taken. In case your device has multiple endpoints, e.g. `left` and `right`. You can specify `SOURCE` or `TARGET` as e.g. `my_switch/right` to bind/unbind the `right` endpoint.
+If wanting to bind to specific endpoints instead of the default ones, specify the payload `{"from": SOURCE, "from_endpoint": SOURCE_ENDPOINT, "to": TARGET, "to_endpoint": TARGET_ENDPOINT}` where `SOURCE_ENDPOINT` and `TARGET_ENDPOINT` are the desired endpoints ID or name. Example request payload: `{"from": "my_remote", "from_endpoint": "top", "to": "my_bulb", "to_endpoint": 3}`, example response payload: `{"data":{"from":"my_remote","from_endpoint":"top","to":"my_bulb","to_endpoint":3,"clusters":["genScenes","genOnOff","genLevelCtrl"],"failed":[]},"status":"ok"}`
 
-It is also possible to specify the endpoints in numeric, use e.g. `my_switch/3` for the `SOURCE` or `TARGET`.
+`SOURCE_ENDPOINT` and `TARGET_ENDPOINT` are optional. `SOURCE_ENDPOINT` will default to the default endpoint for the `SOURCE` device if not supplied. `TARGET_ENDPOINT` behaves the same, but is only used if `TARGET` is a device.
+
+::: tip
+The default endpoint for a device is the first registered endpoint (most often endpoint ID 1).
+:::
 
 ### Binding a remote to a group
+
 Binding a remote to a group allows a remote to directly control a group of devices without intervention of Zigbee2MQTT.
 
 When we for example have an IKEA E1743 remote called `my_remote` and two bulbs called `bulb_1` and `bulb_2`, we can control the 2 bulbs with the remote by putting them in the same group and binding the remote to it.
 
 To do this execute the following steps:
+
 1. Create a new group in `configuration.yaml` and give it a `friendly_name` (see [Groups](./groups.md)). In this example we will set the `friendly_name` to `my_group`.
 2. Add the 2 bulbs to the group by sending the following two MQTT messages.
     - `zigbee2mqtt/bridge/request/group/members/add` with payload `{"group":"my_group","device":"bulb_1"}`
@@ -46,22 +57,24 @@ To do this execute the following steps:
     - `zigbee2mqtt/bridge/request/device/bind` with payload `{"from": "my_remote", "to": "my_group"}`
 
 ## Devices
+
 Not all devices support this, it basically comes down to the Zigbee implementation of the device itself. Check the device specific page for more info (can be reached via the supported devices page)
 
 ## State changes
+
 When a devices is being bound to, Zigbee2MQTT will automatically configure reporting for these devices. This will make the device report state changes when the state is changed through a bound device.
 
 In order for this feature to work, the device has to support it. As devices from the same manufacturer (mostly) have the same features the table below might help to find out if your device supports it.
 
-| Brand            | On/Off    | Brightness | Color | Color temperature | Color Mode |
-| :---             | :---:     | :---:      | :---: | :---:             | :---:
-| Philips Hue      | N(1)      | N(2)       | N     | N                 | N
-| Philips Hue (BT) | Y         | Y          | Y     | Y                 | N
-| Trådfri(3)       | Y         | Y          | Y     | N                 | Y
-| Innr             | Y         | Y          | Y     | Y                 | Y
-| GLEDOPTO         | N         | N          | N     | N                 | N
-| OSRAM            | Y         | Y          | N     | N                 | Y
-| Müller Licht     | N         | N          | N     | N                 | Y
+| Brand            | On/Off | Brightness | Color | Color temperature | Color Mode |
+| :--------------- | :----: | :--------: | :---: | :---------------: | :--------: |
+| Philips Hue      |  N(1)  |    N(2)    |   N   |         N         |     N      |
+| Philips Hue (BT) |   Y    |     Y      |   Y   |         Y         |     N      |
+| Trådfri(3)       |   Y    |     Y      |   Y   |         N         |     Y      |
+| Innr             |   Y    |     Y      |   Y   |         Y         |     Y      |
+| GLEDOPTO         |   N    |     N      |   N   |         N         |     N      |
+| OSRAM            |   Y    |     Y      |   N   |         N         |     Y      |
+| Müller Licht     |   N    |     N      |   N   |         N         |     Y      |
 
 1. Bulbs on old firmware (date 20170908 or older) do report On/Off
 2. Zigbee2MQTT will manual poll for change if a binding updates the bulb.

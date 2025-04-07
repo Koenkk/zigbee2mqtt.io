@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi ZNGZDJ11LM control via MQTT"
-description: "Integrate your Xiaomi ZNGZDJ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara ZNGZDJ11LM control via MQTT"
+description: "Integrate your Aqara ZNGZDJ11LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-07-01T08:15:09
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi ZNGZDJ11LM
+# Aqara ZNGZDJ11LM
 
 |     |     |
 |-----|-----|
 | Model | ZNGZDJ11LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara roller shade motor |
-| Exposes | cover (state, position), running, linkquality |
-| Picture | ![Xiaomi ZNGZDJ11LM](https://www.zigbee2mqtt.io/images/devices/ZNGZDJ11LM.jpg) |
-| White-label | Xiaomi SRSC-M01 |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Roller shade controller |
+| Exposes | cover (state, position), running |
+| Picture | ![Aqara ZNGZDJ11LM](https://www.zigbee2mqtt.io/images/devices/ZNGZDJ11LM.png) |
+| White-label | Aqara SRSC-M01 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -52,11 +52,4 @@ Whether the motor is moving or not.
 Value can be found in the published state on the `running` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` running is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

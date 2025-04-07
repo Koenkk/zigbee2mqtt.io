@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | HEIMAN-M1  |
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Door sensor |
-| Exposes | contact, battery_low, tamper, linkquality |
-| Picture | ![HEIMAN HEIMAN-M1](https://www.zigbee2mqtt.io/images/devices/HEIMAN-M1.jpg) |
+| Exposes | contact, battery_low, tamper |
+| Picture | ![HEIMAN HEIMAN-M1](https://www.zigbee2mqtt.io/images/devices/HEIMAN-M1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -49,11 +49,4 @@ Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

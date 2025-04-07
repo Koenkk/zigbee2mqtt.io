@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | SR-ZG9001K12-DIM-Z4  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | 4 zone remote and dimmer |
-| Exposes | battery, action, linkquality |
-| Picture | ![Sunricher SR-ZG9001K12-DIM-Z4](https://www.zigbee2mqtt.io/images/devices/SR-ZG9001K12-DIM-Z4.jpg) |
+| Exposes | battery, action |
+| Picture | ![Sunricher SR-ZG9001K12-DIM-Z4](https://www.zigbee2mqtt.io/images/devices/SR-ZG9001K12-DIM-Z4.png) |
 | White-label | RGB Genie ZGRC-KEY-013 |
 
 
@@ -59,13 +59,11 @@ simulated_brightness:
   interval: 200 # interval in milliseconds, default = 200
 ```
 
-* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
-
 
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -76,11 +74,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `brightness_move_up`, `brightness_move_down`, `brightness_stop`, `on`, `off`, `recall_*`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

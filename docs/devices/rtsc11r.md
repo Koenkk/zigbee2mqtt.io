@@ -1,6 +1,6 @@
 ---
-title: "TuYa rtsc11r control via MQTT"
-description: "Integrate your TuYa rtsc11r via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya rtsc11r control via MQTT"
+description: "Integrate your Tuya rtsc11r via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-09-28T10:54:36
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa rtsc11r
+# Tuya rtsc11r
 
 |     |     |
 |-----|-----|
 | Model | rtsc11r  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 5.8G human presence sensor with relay |
-| Exposes | presence, illuminance, detection_delay, detection_distance, sensitivity, keep_time, minimum_range, maximum_range, linkquality |
-| Picture | ![TuYa rtsc11r](https://www.zigbee2mqtt.io/images/devices/rtsc11r.jpg) |
+| Exposes | presence, illuminance, detection_delay, detection_distance, sensitivity, keep_time, minimum_range, maximum_range |
+| Picture | ![Tuya rtsc11r](https://www.zigbee2mqtt.io/images/devices/rtsc11r.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,6 +28,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -39,7 +44,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
@@ -89,11 +94,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"maximum_range": NEW_VALUE}`.
 The minimal value is `50` and the maximum value is `1000`.
 The unit of this value is `m`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_smart_human_presence_sensor_1 control via MQTT"
-description: "Integrate your TuYa TS0601_smart_human_presence_sensor_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_smart_human_presence_sensor_1 control via MQTT"
+description: "Integrate your Tuya TS0601_smart_human_presence_sensor_1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-06-01T08:16:21
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_smart_human_presence_sensor_1
+# Tuya TS0601_smart_human_presence_sensor_1
 
 |     |     |
 |-----|-----|
 | Model | TS0601_smart_human_presence_sensor_1  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart Human presence sensor |
-| Exposes | illuminance_lux, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, self_test, linkquality |
-| Picture | ![TuYa TS0601_smart_human_presence_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_human_presence_sensor_1.jpg) |
+| Exposes | illuminance, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, self_test |
+| Picture | ![Tuya TS0601_smart_human_presence_sensor_1](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_human_presence_sensor_1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -29,12 +29,17 @@ pageClass: device-page
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
-### Illuminance (lux) (numeric)
-Measured illuminance in lux.
-Value can be found in the published state on the `illuminance_lux` property.
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
 
@@ -94,11 +99,4 @@ Self_test, possible results: checking, check_success, check_failure, others, com
 Value can be found in the published state on the `self_test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `checking`, `check_success`, `check_failure`, `others`, `comm_fault`, `radar_fault`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

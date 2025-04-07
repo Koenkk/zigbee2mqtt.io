@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | AJ_ZB_GU10  |
 | Vendor  | [Ajax Online](/supported-devices/#v=Ajax%20Online)  |
 | Description | Smart Zigbee pro GU10 spotlight bulb |
-| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), power_on_behavior, linkquality |
-| Picture | ![Ajax Online AJ_ZB_GU10](https://www.zigbee2mqtt.io/images/devices/AJ_ZB_GU10.jpg) |
+| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), power_on_behavior |
+| Picture | ![Ajax Online AJ_ZB_GU10](https://www.zigbee2mqtt.io/images/devices/AJ_ZB_GU10.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -52,6 +52,12 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
   - `{"color": {"rgb": "R,G,B"}}` e.g. `{"color":{"rgb":"46,102,150"}}`
   - `{"color": {"hex": HEX}}` e.g. `{"color":{"hex":"#547CFF"}}`
 
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
 Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
@@ -82,11 +88,4 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

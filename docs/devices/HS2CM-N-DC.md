@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | HS2CM-N-DC  |
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Gear window shade motor |
-| Exposes | cover (state, position), linkquality |
-| Picture | ![HEIMAN HS2CM-N-DC](https://www.zigbee2mqtt.io/images/devices/HS2CM-N-DC.jpg) |
+| Exposes | cover (state, position) |
+| Picture | ![HEIMAN HS2CM-N-DC](https://www.zigbee2mqtt.io/images/devices/HS2CM-N-DC.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -42,11 +42,4 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 To read the current state of this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

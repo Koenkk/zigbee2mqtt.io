@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | SN10ZW  |
 | Vendor  | [ORVIBO](/supported-devices/#v=ORVIBO)  |
 | Description | Occupancy sensor |
-| Exposes | occupancy, battery_low, tamper, battery, linkquality |
-| Picture | ![ORVIBO SN10ZW](https://www.zigbee2mqtt.io/images/devices/SN10ZW.jpg) |
+| Exposes | occupancy, battery_low, tamper, battery |
+| Picture | ![ORVIBO SN10ZW](https://www.zigbee2mqtt.io/images/devices/SN10ZW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -56,16 +56,9 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

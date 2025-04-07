@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | DMS-300ZB  |
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS dual motion sensor |
-| Exposes | battery, voltage, occupancy_in, occupancy_out, occupancy_or, occupancy_and, occupancy_timeout, linkquality |
-| Picture | ![ShinaSystem DMS-300ZB](https://www.zigbee2mqtt.io/images/devices/DMS-300ZB.jpg) |
+| Exposes | battery, voltage, occupancy_in, occupancy_out, occupancy_or, occupancy_and, occupancy_timeout |
+| Picture | ![ShinaSystem DMS-300ZB](https://www.zigbee2mqtt.io/images/devices/DMS-300ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -41,7 +41,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -83,11 +83,4 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupancy_timeout": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `3600`.
 The unit of this value is `s`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

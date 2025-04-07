@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | QZR-ZIG2400  |
 | Vendor  | [Qmotion](/supported-devices/#v=Qmotion)  |
 | Description | 5 channel remote |
-| Exposes | action, position, linkquality |
-| Picture | ![Qmotion QZR-ZIG2400](https://www.zigbee2mqtt.io/images/devices/QZR-ZIG2400.jpg) |
+| Exposes | action, position |
+| Picture | ![Qmotion QZR-ZIG2400](https://www.zigbee2mqtt.io/images/devices/QZR-ZIG2400.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -46,11 +46,4 @@ The possible values are: `identify`.
 ### Position (numeric)
 Value can be found in the published state on the `position` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

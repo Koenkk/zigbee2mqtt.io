@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | WS-15ZBS  |
 | Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Water leak sensor |
-| Exposes | water_leak, battery_low, tamper, linkquality |
-| Picture | ![Climax WS-15ZBS](https://www.zigbee2mqtt.io/images/devices/WS-15ZBS.jpg) |
+| Exposes | water_leak, battery_low, tamper |
+| Picture | ![Climax WS-15ZBS](https://www.zigbee2mqtt.io/images/devices/WS-15ZBS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -49,11 +49,4 @@ Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

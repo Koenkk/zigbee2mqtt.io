@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0012_switch_module control via MQTT"
-description: "Integrate your TuYa TS0012_switch_module via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0012_switch_module control via MQTT"
+description: "Integrate your Tuya TS0012_switch_module via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-11-30T20:10:17
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0012_switch_module
+# Tuya TS0012_switch_module
 
 |     |     |
 |-----|-----|
 | Model | TS0012_switch_module  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 2 gang switch module - (without neutral) |
-| Exposes | switch (state), power_on_behavior, switch_type, linkquality |
-| Picture | ![TuYa TS0012_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0012_switch_module.jpg) |
+| Exposes | switch (state), countdown, power_on_behavior, switch_type |
+| Picture | ![Tuya TS0012_switch_module](https://www.zigbee2mqtt.io/images/devices/TS0012_switch_module.png) |
 | White-label | AVATTO 2gang N-ZLWSM01 |
 
 
@@ -48,6 +48,22 @@ The current state of this switch is in the published state under the `state_righ
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_right": "ON"}`, `{"state_right": "OFF"}` or `{"state_right": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state_right": ""}`.
 
+### Countdown (numeric, left endpoint)
+Countdown to turn device off after a certain time.
+Value can be found in the published state on the `countdown_left` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown_left": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_left": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `43200`.
+The unit of this value is `s`.
+
+### Countdown (numeric, right endpoint)
+Countdown to turn device off after a certain time.
+Value can be found in the published state on the `countdown_right` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown_right": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown_right": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `43200`.
+The unit of this value is `s`.
+
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
@@ -61,11 +77,4 @@ Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
 The possible values are: `toggle`, `state`, `momentary`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | VES-ZB-WAL-012  |
 | Vendor  | [Vesternet](/supported-devices/#v=Vesternet)  |
 | Description | Zigbee wall controller - 8 button |
-| Exposes | battery, action, linkquality |
-| Picture | ![Vesternet VES-ZB-WAL-012](https://www.zigbee2mqtt.io/images/devices/VES-ZB-WAL-012.jpg) |
+| Exposes | battery, action |
+| Picture | ![Vesternet VES-ZB-WAL-012](https://www.zigbee2mqtt.io/images/devices/VES-ZB-WAL-012.png) |
 | White-label | Sunricher SR-ZG9001K8-DIM |
 
 
@@ -44,7 +44,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -55,11 +55,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on_1`, `off_1`, `stop_1`, `brightness_move_up_1`, `brightness_move_down_1`, `brightness_stop_1`, `on_2`, `off_2`, `stop_2`, `brightness_move_up_2`, `brightness_move_down_2`, `brightness_stop_2`, `on_3`, `off_3`, `stop_3`, `brightness_move_up_3`, `brightness_move_down_3`, `brightness_stop_3`, `on_4`, `off_4`, `stop_4`, `brightness_move_up_4`, `brightness_move_down_4`, `brightness_stop_4`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

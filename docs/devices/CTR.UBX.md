@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | CTR.UBX  |
 | Vendor  | [Airam](/supported-devices/#v=Airam)  |
 | Description | CTR.U remote BX |
-| Exposes | action, linkquality |
-| Picture | ![Airam CTR.UBX](https://www.zigbee2mqtt.io/images/devices/CTR.UBX.jpg) |
+| Exposes | action |
+| Picture | ![Airam CTR.UBX](https://www.zigbee2mqtt.io/images/devices/CTR.UBX.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -47,11 +47,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `brightness_step_up`, `brightness_step_down`, `brightness_move_up`, `brightness_move_down`, `brightness_stop`, `recall_*`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

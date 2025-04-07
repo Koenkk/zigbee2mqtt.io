@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | ZWSM16-1-Zigbee  |
 | Vendor  | [AVATTO](/supported-devices/#v=AVATTO)  |
 | Description | 1 gang switch module |
-| Exposes | switch (state), power_on_behavior, switch_type, linkquality |
-| Picture | ![AVATTO ZWSM16-1-Zigbee](https://www.zigbee2mqtt.io/images/devices/ZWSM16-1-Zigbee.jpg) |
+| Exposes | switch (state), countdown, power_on_behavior, switch_type |
+| Picture | ![AVATTO ZWSM16-1-Zigbee](https://www.zigbee2mqtt.io/images/devices/ZWSM16-1-Zigbee.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -42,6 +42,14 @@ The current state of this switch is in the published state under the `state` pro
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 To read the current state of this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 
+### Countdown (numeric)
+Countdown to turn device off after a certain time.
+Value can be found in the published state on the `countdown` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"countdown": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"countdown": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `43200`.
+The unit of this value is `s`.
+
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
@@ -55,11 +63,4 @@ Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
 The possible values are: `toggle`, `state`, `momentary`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

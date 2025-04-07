@@ -18,13 +18,25 @@ pageClass: device-page
 | Model | QS-Zigbee-C03  |
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | Curtain/blind motor controller |
-| Exposes | cover (state, position), moving, calibration, motor_reversal, calibration_time, linkquality |
-| Picture | ![Lonsonho QS-Zigbee-C03](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-C03.jpg) |
+| Exposes | cover (state, position), moving, calibration, motor_reversal, calibration_time |
+| Picture | ![Lonsonho QS-Zigbee-C03](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-C03.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+Note, that some devices are marked as "CP03" instead of "C03", althoug identical.
 
+_How to reset_
+* Press the reset key (upper right in hole) 5 times until the indicator LED inside the module flashes quickly.
+* Alternatively turn on/off the wired switch for 5 times until the indicator LED inside the module flashes quickly.
+
+_How to use calibration_
+* Activate calibration mode
+* Open the shutter completely and press stop
+* Set the number to 100 and press the refresh button
+* Close the shutter completely and when it comes to an end, press STOP.
+* Set the position to 0, press the refresh button and deactivate the calibration.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -33,6 +45,8 @@ pageClass: device-page
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
+* `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -65,11 +79,4 @@ Calibration time.
 Value can be found in the published state on the `calibration_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `s`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | HT-SLM-2  |
 | Vendor  | [Heimgard Technologies](/supported-devices/#v=Heimgard%20Technologies)  |
 | Description | Doorlock with fingerprint |
-| Exposes | lock (state, lock_state), pin_code, battery, sound_volume, linkquality |
-| Picture | ![Heimgard Technologies HT-SLM-2](https://www.zigbee2mqtt.io/images/devices/HT-SLM-2.jpg) |
+| Exposes | lock (state, lock_state), pin_code, battery, sound_volume |
+| Picture | ![Heimgard Technologies HT-SLM-2](https://www.zigbee2mqtt.io/images/devices/HT-SLM-2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -34,6 +34,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `identify_timeout`: Sets duration of identification procedure in seconds (i.e., how long device would flash). Value ranges from 1 to 30 seconds (default 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
 
 * `expose_pin`: Expose pin of this lock in the published payload (default false). The value must be `true` or `false`
 
@@ -55,7 +57,7 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `pin_code` (numeric): Pincode to set, set pincode to null to clear 
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -67,11 +69,4 @@ Value can be found in the published state on the `sound_volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"sound_volume": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sound_volume": NEW_VALUE}`.
 The possible values are: `silent_mode`, `low_volume`, `high_volume`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

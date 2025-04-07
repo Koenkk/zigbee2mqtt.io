@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | ZTS-EU_1gang  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Wall touch light switch (1 gang) |
-| Exposes | switch (state), indicate_light, power_on_behavior, linkquality |
-| Picture | ![Moes ZTS-EU_1gang](https://www.zigbee2mqtt.io/images/devices/ZTS-EU_1gang.jpg) |
+| Exposes | switch (state), indicate_light, power_on_behavior |
+| Picture | ![Moes ZTS-EU_1gang](https://www.zigbee2mqtt.io/images/devices/ZTS-EU_1gang.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -50,11 +50,4 @@ Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `previous`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

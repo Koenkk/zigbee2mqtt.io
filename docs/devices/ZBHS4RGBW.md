@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | ZBHS4RGBW  |
 | Vendor  | [EVN](/supported-devices/#v=EVN)  |
 | Description | Zigbee 4 channel RGBW remote control |
-| Exposes | battery, action, linkquality |
-| Picture | ![EVN ZBHS4RGBW](https://www.zigbee2mqtt.io/images/devices/ZBHS4RGBW.jpg) |
+| Exposes | battery, action |
+| Picture | ![EVN ZBHS4RGBW](https://www.zigbee2mqtt.io/images/devices/ZBHS4RGBW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -43,7 +43,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -54,11 +54,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `color_move`, `color_temperature_move`, `brightness_step_up`, `brightness_step_down`, `brightness_move_up`, `brightness_move_down`, `brightness_stop`, `hue_move`, `hue_stop`, `recall_*`, `on`, `off`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

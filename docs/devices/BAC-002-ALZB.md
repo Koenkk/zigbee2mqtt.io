@@ -1,6 +1,6 @@
 ---
-title: "HKGK BAC-002-ALZB control via MQTT"
-description: "Integrate your HKGK BAC-002-ALZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya BAC-002-ALZB control via MQTT"
+description: "Integrate your Tuya BAC-002-ALZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-03-28T13:25:07Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HKGK BAC-002-ALZB
+# Tuya BAC-002-ALZB
 
 |     |     |
 |-----|-----|
 | Model | BAC-002-ALZB  |
-| Vendor  | [HKGK](/supported-devices/#v=HKGK)  |
-| Description | BAC series thermostat |
-| Exposes | lock (state), climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, preset, fan_mode), sensor, programming_mode, linkquality |
-| Picture | ![HKGK BAC-002-ALZB](https://www.zigbee2mqtt.io/images/devices/BAC-002-ALZB.jpg) |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Description | FCU thermostat temperature controller |
+| Exposes | climate (local_temperature, system_mode, fan_mode, current_heating_setpoint, preset, local_temperature_calibration), child_lock, schedule, max_temperature, deadzone_temperature |
+| Picture | ![Tuya BAC-002-ALZB](https://www.zigbee2mqtt.io/images/devices/BAC-002-ALZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -41,39 +41,53 @@ devices:
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `control_sequence_of_operation`: Operating environment of the thermostat. The value must be one of `cooling_only`, `cooling_and_heating_4-pipes`
+
+* `expose_device_state`: Expose device power state as a separate property when enabled. The value must be `true` or `false`
+
 
 ## Exposes
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
-It's not possible to read (`/get`) this value.
-
 ### Climate 
-This climate device supports the following features: `current_heating_setpoint`, `local_temperature`, `local_temperature_calibration`, `system_mode`, `preset`, `fan_mode`.
-- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `45`. Reading (`/get`) this attribute is not possible.
+This climate device supports the following features: `local_temperature`, `system_mode`, `fan_mode`, `current_heating_setpoint`, `preset`, `local_temperature_calibration`.
+- `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
-- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `cool`. Reading (`/get`) this attribute is not possible.
-- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `hold`, `program`. Reading (`/get`) this attribute is not possible.
-- `local_temperature_calibration`: Offset to be used in the local_temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-10` and the maximum value is `10` with a step size of `0.1`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `cool`, `heat`, `fan_only`. Reading (`/get`) this attribute is not possible.
+- `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `auto`, `manual`. Reading (`/get`) this attribute is not possible.
+- `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-3` and the maximum value is `3` with a step size of `1`.
 
-### Sensor (enum)
-Select temperature sensor to use.
-Value can be found in the published state on the `sensor` property.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensor": NEW_VALUE}`.
-The possible values are: `IN`, `AL`, `OU`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
-### Programming mode (composite)
-Schedule MODE ⏱ - In this mode, the device executes a preset week programming temperature time and temperature..
-- `week` (enum): Week format user for schedule allowed values: `5+2`, `6+1`, `7`
-- `workdays_schedule` (text) 
-- `holidays_schedule` (text) 
+### Schedule (composite)
+Auto-mode schedule, 4 periods each per category. Example: "06:00/20 11:30/21 13:30/22 17:30/23.5"..
+Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule": {"weekdays": VALUE, "saturday": VALUE, "sunday": VALUE}}`
+- `weekdays` (text): Schedule (1-5), 4 periods in format "hh:mm/tt". 
+- `saturday` (text): Schedule (6), 4 periods in format "hh:mm/tt". 
+- `sunday` (text): Schedule (7), 4 periods in format "hh:mm/tt". 
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+### Max temperature (numeric)
+Maximum temperature.
+Value can be found in the published state on the `max_temperature` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_temperature": NEW_VALUE}`.
+The minimal value is `35` and the maximum value is `45`.
+The unit of this value is `°C`.
+Besides the numeric values the following values are accepted: `default`.
+
+### Deadzone temperature (numeric)
+The delta between local_temperature and current_heating_setpoint to trigger activity.
+Value can be found in the published state on the `deadzone_temperature` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"deadzone_temperature": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `5`.
+The unit of this value is `°C`.
+Besides the numeric values the following values are accepted: `default`.
 
