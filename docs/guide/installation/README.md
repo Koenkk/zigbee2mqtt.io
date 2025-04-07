@@ -11,7 +11,6 @@ Zigbee2MQTT was written in Node.js and runs almost on every platform with afford
 - [openHABian](./04_openhabian.md)
 - [Windows](./05_windows.md)
 - [FreeBSD jail](./06_freebsd_jail.md)
-- [Python virtual-environment](./07_python_virtual_environment.md)
 - [Kubernetes](./08_kubernetes.md)
 
 ## Optional

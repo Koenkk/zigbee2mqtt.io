@@ -115,17 +115,18 @@ The minimal value is `1` and the maximum value is `10`.
 The unit of this value is `%`.
 
 ### Manual mode (binary)
-Manual mode or automatic.
+Manual mode, ON = auto settings disabled, OFF = auto settings enabled.
 Value can be found in the published state on the `manual_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"manual_mode": NEW_VALUE}`.
 If value equals `ON` manual mode is ON, if `OFF` OFF.
 
 ### Auto settings (composite)
+Automatically switch ON/OFF, make sure manual mode is turned OFF otherwise auto settings are not applied..
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"auto_settings": {"enabled": VALUE, "temp_greater_then": VALUE, "temp_greater_value": VALUE, "temp_lower_then": VALUE, "temp_lower_value": VALUE}}`
-- `enabled` (enum): Enable auto settings allowed values: `on`, `off`, `none`
-- `temp_greater_then` (enum): Greater action allowed values: `on`, `off`, `none`
-- `temp_greater_value` (numeric): Temperature greater than value min value is -20, max value is 80, unit is *C
-- `temp_lower_then` (enum): Lower action allowed values: `on`, `off`, `none`
-- `temp_lower_value` (numeric): Temperature lower than value min value is -20, max value is 80, unit is *C
+- `enabled` (binary): Enable auto settings allowed values: `true` or `false`
+- `temp_greater_then` (enum): Greater action allowed values: `ON`, `OFF`
+- `temp_greater_value` (numeric): Temperature greater than value min value is -20, max value is 80, unit is °C
+- `temp_lower_then` (enum): Lower action allowed values: `ON`, `OFF`
+- `temp_lower_value` (numeric): Temperature lower than value min value is -20, max value is 80, unit is °C
 

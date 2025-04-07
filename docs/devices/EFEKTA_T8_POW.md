@@ -1,6 +1,6 @@
 ---
-title: "EfektaLab EFEKTA_T8_POW control via MQTT"
-description: "Integrate your EfektaLab EFEKTA_T8_POW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "EFEKTA EFEKTA_T8_POW control via MQTT"
+description: "Integrate your EFEKTA EFEKTA_T8_POW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-02-18T14:54:46
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# EfektaLab EFEKTA_T8_POW
+# EFEKTA EFEKTA_T8_POW
 
 |     |     |
 |-----|-----|
 | Model | EFEKTA_T8_POW  |
-| Vendor  | [EfektaLab](/supported-devices/#v=EfektaLab)  |
+| Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | Temperature sensor with a signal amplifier, support up to 8 DS18B20 |
 | Exposes | temperature, battery, battery_low, number_of_sensors, uptime, mains_voltage, reading_interval, tx_radio_power, smart_sleep |
-| Picture | ![EfektaLab EFEKTA_T8_POW](https://www.zigbee2mqtt.io/images/devices/EFEKTA_T8_POW.png) |
+| Picture | ![EFEKTA EFEKTA_T8_POW](https://www.zigbee2mqtt.io/images/devices/EFEKTA_T8_POW.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -122,7 +122,7 @@ The unit of this value is `V`.
 ### Reading interval (numeric)
 Setting the sensor reading interval in seconds, by default 15 seconds.
 Value can be found in the published state on the `reading_interval` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"reading_interval": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"reading_interval": NEW_VALUE}`.
 The minimal value is `3` and the maximum value is `360`.
 The unit of this value is `sec`.
@@ -137,7 +137,7 @@ The possible values are: `4dbm`, `19dbm`.
 ### Smart sleep (binary)
 Enable Smart Sleep, short wakeup every 2-7 seconds.
 Value can be found in the published state on the `smart_sleep` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"smart_sleep": ""}`.
+It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"smart_sleep": NEW_VALUE}`.
 If value equals `ON` smart sleep is ON, if `OFF` OFF.
 

@@ -21,7 +21,7 @@ In order to be able to communicate with your USB device over a virtual COM port,
 
 ## Installing
 
-1. Download and install Node.js 20 LTS from [their website](https://nodejs.org/)
+1. Download and install Node.js 22 LTS from [their website](https://nodejs.org/)
 1. Open up a `Command prompt` or `Powershell` from the Start menu (Powershell has prettier colors)
 1. Verify Node.js was successfully installed
     ```bash
@@ -43,38 +43,28 @@ In order to be able to communicate with your USB device over a virtual COM port,
     pnpm i --frozen-lockfile
     ```
 
-## Configuring
-
-1. Copy `data\configuration.example.yaml` to `data\configuration.yaml`
-1. Open `data\configuration.yaml` in a text editor
-1. Change the MQTT configuration to match your setup, see the [documentation](../configuration/mqtt.md) for more info.
-1. Make sure other settings are correct as well
-1. Save and exit
-
-Congratulations, you're now ready to start your Zigbee2MQTT installation
-
 ## Starting Zigbee2MQTT
 
-Just change to the root directory of your installation and run the application:
+Now that we have setup everything correctly we can start Zigbee2MQTT.
+Change to the root directory of your installation and run the Zigbee2MQTT:
 
 ```bash
 pnpm start
 ```
 
-A successful setup produces an output similar to this:
+On first start, Zigbee2MQTT will start the onboarding on port 8080.
+Navigate to this board and configure accordingly.
+More information about [onboarding](../getting-started/README.md#onboarding).
+
+Once the onboarding is completed, you will see something like:
 
 ```
-> zigbee2mqtt@1.6.0 start C:\Users\me\Documents\GitHub\zigbee2mqtt
-> node index.js
-
-  Zigbee2MQTT:info 2019-10-18 10:56:22 PM Logging to directory: 'D:\Documents\GitHub\zigbee2mqtt\data\log\2019-10-18.22-56-22'
-  Zigbee2MQTT:info 2019-10-18 10:56:22 PM Starting Zigbee2MQTT version 1.6.0 (commit #e26ad2a)
-  Zigbee2MQTT:info 2019-10-18 10:56:22 PM Starting zigbee-shepherd
-  Zigbee2MQTT:info 2019-10-18 10:56:24 PM zigbee-shepherd started
-  Zigbee2MQTT:info 2019-10-18 10:56:24 PM Coordinator firmware version: '20190608'
+Zigbee2MQTT:info 2019-10-18 10:56:22 PM Logging to directory: 'D:\Documents\GitHub\zigbee2mqtt\data\log\2019-10-18.22-56-22'
+Zigbee2MQTT:info 2019-10-18 10:56:22 PM Starting Zigbee2MQTT version 1.6.0 (commit #e26ad2a)
+Zigbee2MQTT:info 2019-10-18 10:56:22 PM Starting zigbee-shepherd
+Zigbee2MQTT:info 2019-10-18 10:56:24 PM zigbee-shepherd started
+Zigbee2MQTT:info 2019-10-18 10:56:24 PM Coordinator firmware version: '20190608'
 ```
-
-The `Coordinator firmware version: '20190608'` entry means that Zigbee2MQTT has successfully communicated with the USB sniffer.
 
 Zigbee2MQTT can be stopped anytime by pressing `CTRL + C` and then confirming with `Y`.
 
