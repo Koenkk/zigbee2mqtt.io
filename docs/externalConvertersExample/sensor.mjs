@@ -1,11 +1,12 @@
-import {temperature} from 'zigbee-herdsman-converters/converters/fromZigbee';
-import {presets} from 'zigbee-herdsman-converters/lib/exposes';
+import {temperature} from "zigbee-herdsman-converters/converters/fromZigbee";
+import {presets} from "zigbee-herdsman-converters/lib/exposes";
 
+/** @type{import('zigbee-herdsman-converters/lib/types').DefinitionWithExtend | import('zigbee-herdsman-converters/lib/types').DefinitionWithExtend[]} */
 export default {
-    zigbeeModel: ['lumi.sens'],
-    model: 'WSDCGQ01LM',
-    vendor: 'Xiaomi',
-    description: 'MiJia temperature & humidity sensor',
+    zigbeeModel: ["lumi.sens"],
+    model: "WSDCGQ01LM",
+    vendor: "Xiaomi",
+    description: "MiJia temperature & humidity sensor",
     extend: [],
     /**
      * Clusters reporting "from zigbee"
