@@ -1,10 +1,6 @@
 # EmberZNet adapters (Silicon Labs)
 
-Currently supported firmware version: 7.4.x, 8.0.x
-
-::: warning ATTENTION
-Use of 8.0.0 and 8.0.1 is not recommended due to firmware issues that have been resolved in 8.0.2.
-:::
+Currently supported firmware version: 7.4.x, 8.0.x, 8.1.x
 
 Firmware release notes: [https://www.silabs.com/developers/zigbee-emberznet?tab=documentation](https://www.silabs.com/developers/zigbee-emberznet?tab=documentation)
 
@@ -18,16 +14,6 @@ serial:
 ```
 
 Other supported settings are: `adapter_concurrent` and `transmit_power` ([docs](../configuration/adapter-settings.md)).
-
-::: tip TIP
-If you are experiencing issues with your adapter and it has hardware flow control support (check list below), try to flash a [firmware with hardware flow control disabled](https://github.com/darkxst/silabs-firmware-builder/tree/ember-nohw/firmware_builds/) and use the following setting instead:
-
-```yaml
-serial:
-    rtscts: false
-```
-
-:::
 
 ::: tip TIP
 The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zigbee2mqtt/discussions/21462](https://github.com/Koenkk/zigbee2mqtt/discussions/21462)
