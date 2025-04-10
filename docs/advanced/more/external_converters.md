@@ -14,6 +14,10 @@ External converters are stored in `data/external_converters` folder and have to 
 Once your converter is ready, open a [pull request](https://github.com/Koenkk/zigbee-herdsman-converters/pulls) so it can be integrated into Zigbee2MQTT for all to use. Once the new Zigbee2MQTT version is released, you can just delete the external converter.
 :::
 
+:::tip TIP
+The easiest way to develop is by using the [external converter development environment](https://github.com/Nerivec/z2m-external-converter-dev?tab=readme-ov-file#how-to-use)
+:::
+
 Example:
 
 File: `data/external_converters/my-first-converter.mjs`
