@@ -45,6 +45,7 @@ The use of `adapter: ezsp` is now deprecated. See [https://github.com/Koenkk/zig
     - Multi-devices by [@darkxst](https://github.com/darkxst/): [Silabs Firmware Flasher](https://darkxst.github.io/silabs-firmware-builder/)
     - For SkyConnect by [@NabuCasa](https://github.com/NabuCasa): [SkyConnect Flasher](https://skyconnect.home-assistant.io/firmware-update/)
     - SMLight: [Flasher](https://smlight.tech/flasher/)
+    - For SONOFF Dongle: [SONOFF Dongle Quick Flasher](https://dongle.sonoff.tech/sonoff-dongle-quick-flasher/)
 - Command-line based:
     - Multi-devices by [@NabuCasa](https://github.com/NabuCasa) using Python: [Universal Silicon Labs Flasher](https://github.com/NabuCasa/universal-silabs-flasher) (also available via [Home Assistant add-on](https://github.com/home-assistant/addons/tree/master/silabs_flasher))
     - Multi-devices by [@Nerivec](https://github.com/Nerivec/) using NodeJS: [Ember ZLI](https://github.com/Nerivec/ember-zli)
@@ -103,8 +104,7 @@ With external antenna. Only supports software flow control (make sure not to set
 
 - [Product Page](https://sonoff.tech/product/gateway-and-sensors/sonoff-zigbee-3-0-usb-dongle-plus-e/)
 - [Coordinator firmware](https://sonoff.tech/product-review/how-to-use-sonoff-dongle-plus-on-home-assistant-how-to-flash-firmware/)
-- [Flashing](https://sonoff.tech/wp-content/uploads/2022/08/SONOFF-Zigbee-3.0-USB-dongle-plus-firmware-flashing-.pdf)
-    - **Note**: The PDF links to an old firmware. See all [NCP_X.Y.Z](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E) versions and pick [7.4.4](https://github.com/itead/Sonoff_Zigbee_Dongle_Firmware/tree/master/Dongle-E/NCP_7.4.4) or newer.
+- [Flashing](https://dongle.sonoff.tech/sonoff-dongle-quick-flasher/)
 - [Buy](https://itead.cc/product/zigbee-3-0-usb-dongle/)
 
 <img src="../../images/dongle-e.jpg" width="200" />
