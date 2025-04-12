@@ -53,7 +53,7 @@ Use the [`edge`](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt) version.
 - Start the `Edge` add-on (and configure `Start on boot`, `Watchdog` & `Show in sidebar` as desired)
 
 :::caution CAUTION
-Do not start both add-ons with the same configuration at the same. That will fail.
+Do not start both add-ons with the same configuration at the same time. That will fail.
 :::
 
 :::tip TIP
