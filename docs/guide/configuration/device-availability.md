@@ -40,7 +40,7 @@ availability:
         # Enable timeout backoff on failed availability pings (default: true)
         # Pattern used: x1.5, x3, x6, x12... (with default timeout of 10min: 10, 15, 30, 60, 120...)
         backoff: true
-        # Pause availability pings when backoff reaches over this limit (until device updates its 'last seen'). (default: 0, min: 0)
+        # Pause availability pings when backoff reaches over this limit until a new Zigbee message is received from the device. (default: 0, min: 0)
         # A value of zero disables pausing, else see `backoff` pattern above.
         pause_on_backoff_gt: 0
     passive:
