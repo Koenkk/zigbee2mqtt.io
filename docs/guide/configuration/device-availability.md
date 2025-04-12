@@ -24,7 +24,7 @@ The availability feature works differently for active and passive devices, since
 Note that this timeout is persisted between Zigbee2MQTT restarts. So if you for example stop Zigbee2MQTT for longer than 10
 minutes, all your active devices will be marked as `offline` initially until they check-in\*\* again.
 
-\*\* A check-in is any kind of device-initiated update that reaches Zigbee2MQTT (even internal updates that are not displayed/reported).
+\*\* A check-in is any kind of Zigbee message from the device that reaches Zigbee2MQTT (even internal updates that are not displayed/reported).
 
 ## Advanced configuration
 
