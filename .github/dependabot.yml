@@ -12,3 +12,5 @@ updates:
       groups:
           all:
               applies-to: version-updates
+              patterns:
+                  - '*'
