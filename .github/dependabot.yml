@@ -4,13 +4,14 @@ updates:
       directory: /
       schedule:
           interval: weekly
+      ignore:
+          # Updated with the monthly z2m release
+          - dependency-name: zigbee-herdsman-converters
+          # Don't upgrade zhc and sass (because of nasty deprecation warnings which can't be fixed due to Quasar)
+          - dependency-name: sass
       groups:
           major-minor-patch:
               applies-to: version-updates
-              exclude-patterns:
-                  - zigbee-herdsman-converters
-                  # Don't upgrade zhc and sass (because of nasty deprecation warnings which can't be fixed due to Quasar)
-                  - sass
               update-types:
                   - major
                   - minor
