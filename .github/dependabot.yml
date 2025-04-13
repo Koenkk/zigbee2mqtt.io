@@ -10,9 +10,5 @@ updates:
           # Don't upgrade zhc and sass (because of nasty deprecation warnings which can't be fixed due to Quasar)
           - dependency-name: sass
       groups:
-          major-minor-patch:
+          all:
               applies-to: version-updates
-              update-types:
-                  - major
-                  - minor
-                  - patch
