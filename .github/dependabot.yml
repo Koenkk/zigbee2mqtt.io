@@ -9,6 +9,8 @@ updates:
               applies-to: version-updates
               exclude-patterns:
                   - zigbee-herdsman-converters
+                  # Don't upgrade zhc and sass (because of nasty deprecation warnings which can't be fixed due to Quasar)
+                  - sass
               update-types:
                   - major
                   - minor
