@@ -25,7 +25,7 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ### Re-Pairing
 - long press Button until the indicator light flashes 
-- if there is a physical switch conntected, you can turn on/off 5 times, then the indicator light will flash
+- if there is a physical switch connected, you can turn on/off 5 times, then the indicator light will flash
 <!-- Notes END: Do not edit below this line -->
 
 
