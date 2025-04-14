@@ -36,7 +36,7 @@ I got the pairing right with this method once. However, it is extremley difficul
 
 1. Switch on the light for 5 to 10 seconds.
 2. Switch off the light.
-3. Switch on and off the light at least 4 times untill the light starts blinking several times. In this sequence assure to wait for 1-2 seconds between each new switch-on.
+3. Switch on and off the light at least 4 times until the light starts blinking several times. In this sequence assure to wait for 1-2 seconds between each new switch-on.
 <!-- Notes END: Do not edit below this line -->
 
 

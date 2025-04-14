@@ -26,7 +26,7 @@ pageClass: device-page
 ## Notes
 
 ### Pairing
-Press and hold the on (`1`) and off (`0`) buttons for approimately 10 seconds until the indicator light flashes rapidly.
+Press and hold the on (`1`) and off (`0`) buttons for approximately 10 seconds until the indicator light flashes rapidly.
 <!-- Notes END: Do not edit below this line -->
 
 

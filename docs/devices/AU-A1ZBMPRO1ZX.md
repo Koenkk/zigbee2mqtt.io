@@ -28,7 +28,7 @@ pageClass: device-page
 ### Pairing
 
 The first time the downlight is powered on, it will be in pairing mode.  
-Once the downlight has successfully paired it will change from a warm white to a cool white color to indicate a succesfull pairing. 
+Once the downlight has successfully paired it will change from a warm white to a cool white color to indicate a successful pairing. 
 
 In order to put the downlight into pairing mode after the initial pairing, power cycle the downlight 6 times in quick succession.
 <!-- Notes END: Do not edit below this line -->

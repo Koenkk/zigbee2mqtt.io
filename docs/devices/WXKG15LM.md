@@ -32,7 +32,7 @@ Factory reset the switch by pressing and holding left and right rocker for 10 se
 If you have issues changing the click_mode with Zigbee2MQTT you can switch between click mode physically. This is done by clicking either of the two rockers quickly five times. The click mode will then toggle between fast mode and multi mode.
 
 ### Binding
-Please note, that currently you will only get one endpoint for binding even though there are two rockers (see https://github.com/Koenkk/zigbee-herdsman-converters/blob/eed5fde987891f996c428339569dbff1893e62a1/devices/xiaomi.js#L2370). You will always receive the `toggle_1` event no matter whick rocker you use.
+Please note, that currently you will only get one endpoint for binding even though there are two rockers (see https://github.com/Koenkk/zigbee-herdsman-converters/blob/eed5fde987891f996c428339569dbff1893e62a1/devices/xiaomi.js#L2370). You will always receive the `toggle_1` event no matter which rocker you use.
 <!-- Notes END: Do not edit below this line -->
 
 
