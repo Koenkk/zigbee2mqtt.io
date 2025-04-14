@@ -293,9 +293,9 @@ Possible reasons that may cause this error:
    If these error appear, we can do something to reduce the complexity of the setup, improve stability and help investigating the usb connection with the host.
    Instead of passing through to the VM the full USB device we passthrough the serial device.
    The VM configuration changes from
-   host-(USB passtrough)->VM->USB-serial->serial(for Zigbee2MQTT configuration)
+   host-(USB passthrough)->VM->USB-serial->serial(for Zigbee2MQTT configuration)
    to
-   host-(serial passtrough)->VM->serial(for Zigbee2MQTT configuration)
+   host-(serial passthrough)->VM->serial(for Zigbee2MQTT configuration)
 
 As an example, this is the procedure to passthrough the serial device to a Proxmox Home Assistant OS installation:
 
