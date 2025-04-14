@@ -82,7 +82,7 @@ Powerful CC2652P Zigbee USB dongle and Raspberry Pi GPIO module. Available in Eb
 - Description: [Ebyte](https://github.com/egony/cc2652p_E72-2G4M20S1E/wiki/Home-EN) [RFSTAR](https://github.com/egony/cc2652p_cc1352p_RF-STAR/wiki/Home-EN)
 - [Contact](http://t.me/Egony)
 
-<img src="../../images/Egony_v4_E72.jpg" widht="200" /> <img src="../../images/Egony_v4_RFS.jpg" width="200" />
+<img src="../../images/Egony_v4_E72.jpg" width="200" /> <img src="../../images/Egony_v4_RFS.jpg" width="200" />
 
 :::
 
