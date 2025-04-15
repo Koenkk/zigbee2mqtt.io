@@ -41,7 +41,7 @@ The fully open position can be set by setting the shade to the desired position 
 The fully closed position can be set by setting the shade to the desired position and then pressing the down button 5 times in succession. If successful the light turns blue and flashes 3 times.
 
 ### Change button directions
-If the up and down buttons are working in the oppsite direction of how your blinds opreate, they can be swapped by pressing the reset button 3 times. If successful the light turns solid blue for 1 second.
+If the up and down buttons are working in the opposite direction of how your blinds operate, they can be swapped by pressing the reset button 3 times. If successful the light turns solid blue for 1 second.
 
 ### Adapter firmware
 In order for this device to work (fully), at least the following firmware is required on your adapter:
