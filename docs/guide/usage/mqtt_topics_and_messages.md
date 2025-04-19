@@ -193,7 +193,7 @@ Example payload:
         "date_code":"02-28-2017",
         "model_id":"lumi.plug",
         "scenes": [{"id": 3, "name": "Chill scene"}],
-        // Can be: PENDING, IN_PROGRESS, SUCCESSFUL or FAILED 
+        // Can be: PENDING, IN_PROGRESS, SUCCESSFUL or FAILED
         "interview_state": "SUCCESSFUL",
         // `interviewing` and `interview_completed` are deprecated, use `interview_state`.
         "interviewing":false,
