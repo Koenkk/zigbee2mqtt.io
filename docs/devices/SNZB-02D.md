@@ -31,6 +31,9 @@ In case the sensor gets stuck and stops reporting (correct) data, you can try to
   2. Restart Zigbee2MQTT.
   3. Re-pair the device.
 
+Zigbee2MQTT version v2.3.0 introduced firmware version v2.3.0 which seems to improve data reporting. \
+To update your device, short press the pairing button once and use the web interface to start the firmware update.
+
 ### Battery
 Uses a CR2450 battery
 
