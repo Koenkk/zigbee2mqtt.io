@@ -26,7 +26,6 @@ pageClass: device-page
 ## Notes
 
 It can be quite finicky to pair this device. The first interview will likely fail. After the first interview fails, take out the batteries and put them back in, then click interview (blue `i` on the device dashboard in z2m). Do this once or twice until the device successfully pairs.
-
 <!-- Notes END: Do not edit below this line -->
 
 

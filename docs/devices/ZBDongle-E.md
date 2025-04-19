@@ -71,7 +71,7 @@ The guide from SONOFF is not very detailed. Here are some additional hints:
       * debian based OS: `sx Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl < /dev/ttyACM0 > /dev/ttyACM0`
       * arch based OS: `lrzsz-sx -X Z3RouterUSBDonlge_EZNet6.10.3_V1.0.0.gbl < /dev/ttyACM0 > /dev/ttyACM0` (Without the -X it will not use the xmodem protocol)
   * Wait for 'Serial upload complete', then press '2' in the Bootloader Terminal to restart the dongle.
-* Finally, the dongle LED blinks green, inidicating it is in paring mode. Pair as usual with Z2M.
+* Finally, the dongle LED blinks green, indicating it is in paring mode. Pair as usual with Z2M.
 * Note: The dongle may not pair successfully if it is plugged into a USB 3.x socket, if it fails to pair try moving it to a USB 2 socket or a standalone USB charger.
 * If you have to re-pair the dongle and it does not show up you can try this step by step guide:
     1. Disassemble the device
