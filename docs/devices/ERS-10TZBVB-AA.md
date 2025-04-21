@@ -28,6 +28,10 @@ pageClass: device-page
 A triple click of the button switches operation modes.
 This is indicated by the received payload `{"action": null, "operation_mode": NEW_VALUE}` with values rotating between the modes listed in the respective section below.
 Depending on mode, the actions emitted by single click, double click and hold differ.
+
+### Pairing
+
+Open the backcover with a screwdriver. Hold the reset button for 6s until the green LED starts flashing.
 <!-- Notes END: Do not edit below this line -->
 
 

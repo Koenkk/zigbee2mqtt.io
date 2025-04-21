@@ -30,6 +30,18 @@ pageClass: device-page
 Re-pairing requires the device is removed from any existing network first, this requires a factory reset if the dimmer cannot be gracefully removed from the previous network. Unfortunately the user manual does not cover this procedure, but it is quite simple:
 To perform a factory reset. Turn on the light, press the knob for 5 times and long press the 5th time for 3 seconds. Once reset successfully, the lamp will flicker for 5 times.
 To start paring, turn on the light, press the knob for 2 times and long press the 2nd time for 3 seconds. Once pairing starts, the lamp will flicker for 2 times. When pairing is complete, the lamp will flash once more.
+
+#### Re-pairing Using the Reset Button
+
+Follow these steps to manage pairing using the reset button:
+
+- **Graceful Un-pairing:** Press the reset button **3 times quickly** to gracefully remove the device from its current network. The indicator light will flash **purple**, then turn solid purple for **10 seconds**, confirming the un-pairing.
+
+  > **Note:** If graceful un-pairing is not possible, perform a factory reset.
+
+- **Manual Factory Reset:** Press and **hold** the reset button for more than **5 seconds**. The indicator light will turn solid **red** for **10 seconds**, confirming the device has been reset to factory settings.
+
+- **Start Pairing:** Press the reset button **2 times quickly** to initiate pairing mode. The indicator light will flash **blue**, indicating pairing mode is active. Pairing mode remains active for **15 minutes**.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -48,6 +60,12 @@ To start paring, turn on the light, press the knob for 2 times and long press th
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.

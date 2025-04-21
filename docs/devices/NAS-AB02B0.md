@@ -23,8 +23,26 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Notes
+Alarm melodies sounds/tunes:
+1 - fuer elise
+2 - big ben
+3 - ring ring
+4 - lone ranger
+5 - turkish march
+6 - high pitch siren
+7 - red alert
+8 - cricket
+9 - beep beep
+10 - dogs
+11 - police
+12 - chime
+13 - phone ring
+14 - firetruck
+15 - clock chime
+16 - alarm clock
+17 - psycho
+18 - doorbell
 <!-- Notes END: Do not edit below this line -->
 
 

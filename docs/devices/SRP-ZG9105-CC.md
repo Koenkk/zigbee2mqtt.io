@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SRP-ZG9105-CC  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
 | Description | Constant Current Zigbee LED dimmable driver |
-| Exposes | light (state, brightness), effect, power_on_behavior |
+| Exposes | light (state, brightness), effect, power_on_behavior, external_switch_type |
 | Picture | ![Sunricher SRP-ZG9105-CC](https://www.zigbee2mqtt.io/images/devices/SRP-ZG9105-CC.png) |
 
 
@@ -43,6 +43,12 @@ pageClass: device-page
 This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
+
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
 
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
@@ -78,4 +84,10 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### External switch type (enum)
+Value can be found in the published state on the `external_switch_type` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"external_switch_type": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"external_switch_type": NEW_VALUE}`.
+The possible values are: `push_button`, `normal_on_off`, `three_way`.
 
