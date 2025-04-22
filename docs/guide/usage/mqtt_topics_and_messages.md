@@ -193,6 +193,9 @@ Example payload:
         "date_code":"02-28-2017",
         "model_id":"lumi.plug",
         "scenes": [{"id": 3, "name": "Chill scene"}],
+        // Can be: PENDING, IN_PROGRESS, SUCCESSFUL or FAILED
+        "interview_state": "SUCCESSFUL",
+        // `interviewing` and `interview_completed` are deprecated, use `interview_state`.
         "interviewing":false,
         "interview_completed":true
     },
@@ -216,6 +219,7 @@ Example payload:
         "model_id":"TRADFRI bulb E27 CWS opal 600lm",
         "scenes": [],
         "date_code":"20180410",
+        "interview_state": "SUCCESSFUL",
         "interviewing":false,
         "interview_completed":true
     },
@@ -243,6 +247,7 @@ Example payload:
         "date_code":"04-28-2019",
         "model_id":null,
         "scenes": [],
+        "interview_state": "SUCCESSFUL",
         "interviewing":false,
         "interview_completed":true
     },
@@ -259,6 +264,7 @@ Example payload:
         "date_code":null,
         "scenes": [],
         "model_id":null,
+        "interview_state": "SUCCESSFUL",
         "interviewing":false,
         "interview_completed":true
     },
