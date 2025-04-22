@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_RTX_DIN  |
 | Vendor  | [RTX](/supported-devices/#v=RTX)  |
 | Description | Din rail switch |
-| Exposes | switch (state), power, current, voltage, energy, temperature, leakage, linkquality |
+| Exposes | switch (state), power, current, voltage, energy, temperature, leakage |
 | Picture | ![RTX TS0601_RTX_DIN](https://www.zigbee2mqtt.io/images/devices/TS0601_RTX_DIN.png) |
 
 
@@ -95,11 +95,4 @@ Current leakage.
 Value can be found in the published state on the `leakage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mA`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

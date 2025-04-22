@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TO-Q-SY1-JZT  |
 | Vendor  | [Tongou](/supported-devices/#v=Tongou)  |
 | Description | Din smart relay (with power monitoring via polling) |
-| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode, linkquality |
+| Exposes | switch (state), power, current, voltage, energy, power_outage_memory, indicator_mode |
 | Picture | ![Tongou TO-Q-SY1-JZT](https://www.zigbee2mqtt.io/images/devices/TO-Q-SY1-JZT.png) |
 
 
@@ -106,11 +106,4 @@ Value can be found in the published state on the `indicator_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
 The possible values are: `off`, `on_off`, `off_on`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

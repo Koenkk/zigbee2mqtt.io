@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZB-RGBCW  |
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | Zigbee 3.0 LED-bulb, RGBW LED |
-| Exposes | light (state, brightness, color_temp, color_xy), linkquality |
+| Exposes | light (state, brightness, color_temp, color_xy) |
 | Picture | ![Lonsonho ZB-RGBCW](https://www.zigbee2mqtt.io/images/devices/ZB-RGBCW.png) |
 
 
@@ -85,11 +85,4 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "color_temp_step": 99, // Increase color temperature by 99
 }
 ````
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

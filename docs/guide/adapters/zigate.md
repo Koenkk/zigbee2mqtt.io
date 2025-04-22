@@ -1,6 +1,11 @@
 # ZiGate adapters
 
 ::: warning ATTENTION
+The implementation of this adapter is **not maintained** anymore.
+Consider buying one of the recommended adapters instead.
+:::
+
+::: warning ATTENTION
 
 Support for this adapter is **experimental**, not recommended yet for production setups
 
@@ -11,10 +16,10 @@ Initial development started on experimental (alpha stage) support for various Zi
 ::: warning ATTENTION
 Various features are not supported by this adapter, in case you depend on these features, consider a different adapter.
 
--   [Changing the channel](../configuration/zigbee-network.md#changing-the-zigbee-channel), changing requires re-pairing all devices.
--   Adding [install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd), which is required to pair some devices.
--   [Backups](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestbackup)
--   Inter-PAN, which is required for [touchlink](../../guide/usage/touchlink.md)
+- [Changing the channel](../configuration/zigbee-network.md#changing-the-zigbee-channel), changing requires re-pairing all devices.
+- Adding [install codes](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestinstall_codeadd), which is required to pair some devices.
+- [Backups](../../guide/usage/mqtt_topics_and_messages.md#zigbee2mqttbridgerequestbackup)
+- Inter-PAN, which is required for [touchlink](../../guide/usage/touchlink.md)
 
 :::
 
@@ -33,8 +38,8 @@ Other supported settings are: `adapter_concurrent` and `transmit_power` ([docs](
 
 ## Hardware
 
--   [Coordinator firmware](https://zigate.fr/tag/firmware/)
--   [Discussion](https://github.com/Koenkk/zigbee-herdsman/issues/242)
--   [Buy](https://zigate.fr/boutique/?orderby=date_desc)
+- [Coordinator firmware](https://zigate.fr/tag/firmware/)
+- [Discussion](https://github.com/Koenkk/zigbee-herdsman/issues/242)
+- [Buy](https://zigate.fr/boutique/?orderby=date_desc)
 
 <img src="../../images/zigate_usb_ttl.png" width="200" />

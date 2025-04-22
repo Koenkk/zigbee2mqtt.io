@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | B07KG5KF5R  |
 | Vendor  | [GMY Smart Bulb](/supported-devices/#v=GMY%20Smart%20Bulb)  |
 | Description | GMY Smart bulb, 470lm, vintage dimmable, 2700-6500k, E27 |
-| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior |
 | Picture | ![GMY Smart Bulb B07KG5KF5R](https://www.zigbee2mqtt.io/images/devices/B07KG5KF5R.png) |
 
 
@@ -86,16 +86,9 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
+Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

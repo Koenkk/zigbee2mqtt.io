@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | JM-TRH-ZGB-V1  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Temperature & humidity sensor with clock |
-| Exposes | temperature, humidity, battery, temperature_report_interval, temperature_unit_convert, temperature_alarm, max_temperature, min_temperature, humidity_alarm, max_humidity, min_humidity, linkquality |
+| Exposes | temperature, humidity, battery, temperature_report_interval, temperature_unit_convert, temperature_alarm, max_temperature, min_temperature, humidity_alarm, max_humidity, min_humidity |
 | Picture | ![Tuya JM-TRH-ZGB-V1](https://www.zigbee2mqtt.io/images/devices/JM-TRH-ZGB-V1.png) |
 
 
@@ -120,11 +120,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_humidity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

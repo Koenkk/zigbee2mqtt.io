@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SIN-4-RS-20  |
 | Vendor  | [NodOn](/supported-devices/#v=NodOn)  |
 | Description | Roller shutter relay switch |
-| Exposes | cover (state, position, tilt), cover_mode, calibration_vertical_run_time_up, calibration_vertical_run_time_down, calibration_rotation_run_time_up, calibration_rotation_run_time_down, linkquality |
+| Exposes | cover (state, position, tilt), cover_mode, calibration_vertical_run_time_up, calibration_vertical_run_time_down, calibration_rotation_run_time_up, calibration_rotation_run_time_down |
 | Picture | ![NodOn SIN-4-RS-20](https://www.zigbee2mqtt.io/images/devices/SIN-4-RS-20.png) |
 
 
@@ -88,11 +88,4 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_rotation_run_time_down": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
 The unit of this value is `ms`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

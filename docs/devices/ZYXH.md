@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZYXH  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 24 gang switch |
-| Exposes | switch (state), linkquality |
+| Exposes | switch (state) |
 | Picture | ![Tuya ZYXH](https://www.zigbee2mqtt.io/images/devices/ZYXH.png) |
 
 
@@ -151,11 +151,4 @@ It's not possible to read (`/get`) this value.
 The current state of this switch is in the published state under the `state_l24` property (value is `ON` or `OFF`).
 To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l24": "ON"}`, `{"state_l24": "OFF"}` or `{"state_l24": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

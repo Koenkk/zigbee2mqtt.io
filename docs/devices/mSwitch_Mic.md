@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | mSwitch_Mic  |
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | Mikrofon, alarm detection microphone |
-| Exposes | temperature, battery, battery_low, smoke, action, group_id, linkquality |
+| Exposes | temperature, battery, battery_low, smoke, action, group_id |
 | Picture | ![CTM Lyng mSwitch_Mic](https://www.zigbee2mqtt.io/images/devices/mSwitch_Mic.png) |
 
 
@@ -74,11 +74,4 @@ The possible values are: `on`, `off`.
 The device sends commands with this group ID. Put devices in this group to control them..
 Value can be found in the published state on the `group_id` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

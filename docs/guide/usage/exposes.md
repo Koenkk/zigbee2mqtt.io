@@ -8,8 +8,8 @@ Zigbee2MQTT exposes the device capabilities through the `exposes` property in [`
 
 There are two types of exposes:
 
--   Generic: types like `numeric` and `binary`
--   Specific: represents a specific capability of a device like a `light` or `switch`.
+- Generic: types like `numeric` and `binary`
+- Specific: represents a specific capability of a device like a `light` or `switch`.
 
 Both types will always have a `type` property.
 
@@ -27,16 +27,16 @@ Both types have an optional `category` attribute which can be set to either `con
 
 The `access` property is a 3-bit bitmask.
 
--   Bit 1: The property can be found in the published state of this device.
--   Bit 2: The property can be set with a `/set` command
--   Bit 3: The property can be retrieved with a `/get` command (when this bit is true, bit 1 will also be true)
+- Bit 1: The property can be found in the published state of this device.
+- Bit 2: The property can be set with a `/set` command
+- Bit 3: The property can be retrieved with a `/get` command (when this bit is true, bit 1 will also be true)
 
 Examples:
 
--   A Xiaomi WSDCGQ01LM climate sensor exposes a numeric temperature sensor. Since the device is sleeping most of the time it cannot be retrieved with a `/get` command. Access will be `1` (binary: `0b001`).
--   A Philips 7146060PH Hue Go light exposes brightness. This can be `/get`, `/set` and is also in the published state. Access will be `7` (binary: `0b111`)
--   A Philips 7146060PH Hue Go light exposes effect (e.g. to trigger a flashing effect). This can only be `/set`. Access will be `2` (binary: `0b010`)
--   A Xiaomi ZNCZ02LM power plug exposes a numeric power sensor. This can be `/get` and is published in the state. Access will be `5` (binary: `0b101`)
+- A Xiaomi WSDCGQ01LM climate sensor exposes a numeric temperature sensor. Since the device is sleeping most of the time it cannot be retrieved with a `/get` command. Access will be `1` (binary: `0b001`).
+- A Philips 7146060PH Hue Go light exposes brightness. This can be `/get`, `/set` and is also in the published state. Access will be `7` (binary: `0b111`)
+- A Philips 7146060PH Hue Go light exposes effect (e.g. to trigger a flashing effect). This can only be `/set`. Access will be `2` (binary: `0b010`)
+- A Xiaomi ZNCZ02LM power plug exposes a numeric power sensor. This can be `/get` and is published in the state. Access will be `5` (binary: `0b101`)
 
 ## Generic
 
@@ -464,10 +464,10 @@ Example:
 
 Indicates this device exposes climate functionality.
 
--   Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `occupied_cooling_setpoint`, `unoccupied_heating_setpoint`, `unoccupied_cooling_setpoint`, `local_temperature`, `system_mode`, `running_state`, `fan_mode`, `preset`, `local_temperature_calibration`, `pi_heating_demand`, `running_mode`, `ac_louver_position`, `control_sequence_of_operation` and `swing_mode`.
--   Never has both `occupied_heating_setpoint` and `current_heating_setpoint`.
--   Possible values for `system_mode` are `off`, `heat`, `cool`, `auto`, `dry` and `fan_only`.
--   Possible values for `running_state` are `idle`, `heat`, `cool`.
+- Possible features are: `occupied_heating_setpoint`, `current_heating_setpoint`, `occupied_cooling_setpoint`, `unoccupied_heating_setpoint`, `unoccupied_cooling_setpoint`, `local_temperature`, `system_mode`, `running_state`, `fan_mode`, `preset`, `local_temperature_calibration`, `pi_heating_demand`, `running_mode`, `ac_louver_position`, `control_sequence_of_operation` and `swing_mode`.
+- Never has both `occupied_heating_setpoint` and `current_heating_setpoint`.
+- Possible values for `system_mode` are `off`, `heat`, `cool`, `auto`, `dry` and `fan_only`.
+- Possible values for `running_state` are `idle`, `heat`, `cool`.
 
 Example:
 

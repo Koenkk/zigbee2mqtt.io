@@ -38,16 +38,16 @@ Credits to [@Frans-Willem](https://github.com/frans-Willem) for majority of inst
 
 1. Install prerequisites for [CC-Tool](https://github.com/dashesy/cc-tool) using a package manager (e.g. [Homebrew](https://brew.sh/) for macOS)
 
--   Ubuntu (version >= 20.04): install cc-tool with `sudo apt install cc-tool` & go on with 3.
--   Ubuntu/Debian: libusb-1.0-0-dev, libboost-all-dev, autoconf, libtool
--   Fedora: dh-autoreconf, boost-devel, libusb1-devel, gcc-c++
--   Archlinux: dh-autoreconf, libusb, boost
--   macOS: `brew install autoconf automake libusb boost pkgconfig libtool`
--   Raspbian: dh-autoreconf, libusb-1.0-0-dev, libboost-all-dev
+- Ubuntu (version >= 20.04): install cc-tool with `sudo apt install cc-tool` & go on with 3.
+- Ubuntu/Debian: libusb-1.0-0-dev, libboost-all-dev, autoconf, libtool
+- Fedora: dh-autoreconf, boost-devel, libusb1-devel, gcc-c++
+- Archlinux: dh-autoreconf, libusb, boost
+- macOS: `brew install autoconf automake libusb boost pkgconfig libtool`
+- Raspbian: dh-autoreconf, libusb-1.0-0-dev, libboost-all-dev
 
 2. Build cc-tool
 
--   Linux:
+- Linux:
 
 ```bash
 
@@ -67,7 +67,7 @@ LIBUSB_CFLAGS="-I/usr/local/include/libusb-1.0" \
 make
 ```
 
--   macOS:
+- macOS:
 
 ```bash
 

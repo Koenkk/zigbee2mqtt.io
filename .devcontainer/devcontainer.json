@@ -1,7 +1,7 @@
 {
     "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
 
-    "postCreateCommand": "npm install",
+    "postCreateCommand": "pnpm i --frozen-lockfile",
 
     "portsAttributes": {
         "8080": {

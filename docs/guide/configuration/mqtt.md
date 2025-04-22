@@ -35,10 +35,12 @@ mqtt:
     # Optional: MQTT protocol version (default: 4), set this to 5 if you
     # use the 'retention' device specific configuration
     version: 4
-    # Optional: Disable retain for all send messages. ONLY enable if you MQTT broker doesn't
+    # Optional: Disable retain for all send messages. ONLY enable if your MQTT broker doesn't
     # support retained message (e.g. AWS IoT core, Azure IoT Hub, Google Cloud IoT core, IBM Watson IoT Platform).
     # Enabling will break the Home Assistant integration. (default: false)
     force_disable_retain: false
+    # Specifies the maximum allowed packet length (in bytes) that the server can send to Zigbee2MQTT. NOTE: The same value exists in your MQTT broker but for the length the client can send to it instead. (default: 1048576)
+    maximum_packet_size: 1048576
 ```
 
 ### Specifying MQTT server/user/password and network_key in a different file
@@ -80,11 +82,6 @@ advanced:
     last_seen: 'disable'
     # Optional: Add an elapsed attribute to MQTT messages, contains milliseconds since the previous msg (default: false)
     elapsed: false
-    # Optional: Enables report feature, this feature is DEPRECATED since reporting is now setup by default
-    # when binding devices. Docs can still be found here: https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/information/report.md
-    report: true
-    # Optional: disables the legacy api (default: shown below)
-    legacy_api: true
     # Optional: MQTT output type: json, attribute or attribute_and_json (default: shown below)
     # Examples when 'state' of a device is published
     # json: topic: 'zigbee2mqtt/my_bulb' payload '{"state": "ON"}'

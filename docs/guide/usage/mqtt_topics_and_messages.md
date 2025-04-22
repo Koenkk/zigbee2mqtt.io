@@ -82,6 +82,46 @@ Publishing messages depends on the MQTT client you use. For example to publish a
  mosquitto_pub -t 'zigbee2mqtt/0x0fffffffffffffff/set' -m '{ "state": "ON" }'
 ```
 
+#### Directly reading/writing ZCL attributes
+
+For development/debug purposes it's possible to directly send read/write attribute requests to a device through this endpoint.
+Clusters and attributes can be referred to either by name or ID.
+For all available names within Zigbee2MQTT please refer to [cluster.ts](https://github.com/Koenkk/zigbee-herdsman/blob/master/src/zspec/zcl/definition/cluster.ts).
+
+##### Read requests:
+
+```js
+{
+  "read": {
+    "cluster": genBasic, // Either name (if defined in standard) or ID of cluster can be used
+    "attributes": [1]    // Either name (if defined in standard) or ID of attribute can be used
+  }
+}
+```
+
+##### Write requests:
+
+Writing one or multiple attributes can be done in multiple ways:
+
+```js
+{
+  "write": {
+    "cluster": "genBasic" // Either the name or ID can be used.
+    "payload" {
+      // If the attribute ID is one of the predefined types you can directly write using key:value
+      "manufacturerName": "Best Manufacturer"
+      // If the attribute ID is not a predefined one (out of the ZCL specifications)
+      // it still can be written with the following syntax.
+      "0": // ID
+      {
+          "value": "Best Manufacturer",
+          "type": 66 // type enum as defined in ZCL specifications. Can be found using a `read` command or from specifications.
+      }
+    }
+  }
+}
+```
+
 ## zigbee2mqtt/FRIENDLY_NAME/get
 
 This is the counterpart of the `set` command. It allows you to read a value from a device. To read e.g. the state of a device send the payload `{"state": ""}`. What you can `/get` is specified on the device page under the _Exposes_ section.
@@ -106,7 +146,7 @@ Example payload:
     "network":{"channel":15,"pan_id":5674,"extended_pan_id":[0,11,22]},
     "log_level":"debug",
     "permit_join":true,
-    "permit_join_timeout": 10, // Time in seconds till permit join is disabled, `undefined` in case of no timeout
+    "permit_join_end": 1733666394, // Epoch time when permit join will end, `undefined` if permit join is disabled.
     "config": {...}, // Will contain the complete Zigbee2MQTT config expect the network_key
     "config_schema": {...}, // Will contain the JSON schema of the config
     "restart_required": false // Indicates whether Zigbee2MQTT needs to be restarted to apply options set through zigbee2mqtt/request/bridge/options
@@ -117,14 +157,12 @@ Example payload:
 
 Contains the state of the bridge, this message is published as retained. Payloads are:
 
--   `online`: published when the bridge is running (on startup)
--   `offline`: published right before the bridge stops
-
-If `advanced.legacy_availability_payload` is set to `false` the payload will be a JSON object (`{"state":"online"}`/`{"state":"offline"}`).
+- `{"state":"online"}`: published when the bridge is running (on startup)
+- `{"state":"offline"}`: published right before the bridge stops
 
 ## zigbee2mqtt/bridge/logging
 
-All Zigbee2MQTT logging, except the `debug` level, is published to this topic in the form of `{"level": LEVEL, "message": MESSAGE}`, example: `{"level": "info", "message": "Zigbee: allowing new devices to join."}`.
+All Zigbee2MQTT logging, except the `debug` level, is published to this topic in the form of `{"level": LEVEL, "message": MESSAGE, "namespace": NAMESPACE}`, example: `{"level": "info", "message": "Zigbee: allowing new devices to join.", "namespace": "z2m"}`.
 
 ## zigbee2mqtt/bridge/devices
 
@@ -231,15 +269,15 @@ Example payload:
 
 A device definition will always have an `exposes` and `options` property which are a lists containing expose objects. The expose format is documented in [Exposes](./exposes.md).
 
--   `exposes` This contains all the device capabilities (e.g. switch, light, occupancy)
--   `options` Contains all the device options (e.g. `temperature_precision`) which can be set through `zigbee2mqtt/bridge/request/device/options`
+- `exposes` This contains all the device capabilities (e.g. switch, light, occupancy)
+- `options` Contains all the device options (e.g. `temperature_precision`) which can be set through `zigbee2mqtt/bridge/request/device/options`
 
 ## zigbee2mqtt/bridge/definitions
 
 Contains the zigbee clusters definitions of the devices, this message is published as retained and is structured with 2 parts:
 
--   `clusters`: contains the official cluster definition from the `zigbee-herdsman` package, organized by cluster name
--   `custom_clusters`: contains the custom cluster definitions from the `zigbee-herdsman-converts` package, of devices currently used
+- `clusters`: contains the official cluster definition from the `zigbee-herdsman` package, organized by cluster name
+- `custom_clusters`: contains the custom cluster definitions from the `zigbee-herdsman-converts` package, of devices currently used
 
 Example payload:
 
@@ -285,16 +323,20 @@ Example payload:
 
 Events will be published to this topic. Possible types are `device_joined`, `device_interview`, `device_leave`, `device_announce`. Example payloads:
 
--   `{"type":"device_joined","data":{"friendly_name":"0x90fd9ffffe6494fc","ieee_address":"0x90fd9ffffe6494fc"}}`
--   `{"type":"device_announce","data":{"friendly_name":"0x90fd9ffffe6494fc","ieee_address":"0x90fd9ffffe6494fc"}}`
--   `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"started","ieee_address":"0x90fd9ffffe6494fc"}}`
--   `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"successful","ieee_address":"0x90fd9ffffe6494fc","supported":true,"definition":{"model":"LED1624G9","vendor":"IKEA","description":"TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white"}}}`
--   `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"failed","ieee_address":"0x90fd9ffffe6494fc"}}`
--   `{"type":"device_leave","data":{"ieee_address":"0x90fd9ffffe6494fc","friendly_name":"my_bulb"}}`
+- `{"type":"device_joined","data":{"friendly_name":"0x90fd9ffffe6494fc","ieee_address":"0x90fd9ffffe6494fc"}}`
+- `{"type":"device_announce","data":{"friendly_name":"0x90fd9ffffe6494fc","ieee_address":"0x90fd9ffffe6494fc"}}`
+- `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"started","ieee_address":"0x90fd9ffffe6494fc"}}`
+- `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"successful","ieee_address":"0x90fd9ffffe6494fc","supported":true,"definition":{"model":"LED1624G9","vendor":"IKEA","description":"TRADFRI LED bulb E14/E26/E27 600 lumen, dimmable, color, opal white"}}}`
+- `{"type":"device_interview","data":{"friendly_name":"0x90fd9ffffe6494fc","status":"failed","ieee_address":"0x90fd9ffffe6494fc"}}`
+- `{"type":"device_leave","data":{"ieee_address":"0x90fd9ffffe6494fc","friendly_name":"my_bulb"}}`
 
 ## zigbee2mqtt/bridge/extensions
 
-See [User extensions](../../advanced/more/user_extensions.md).
+See [External extensions](../../advanced/more/external_extensions.md).
+
+## zigbee2mqtt/bridge/converters
+
+See [External converters](../../advanced/more/external_converters.md).
 
 ## zigbee2mqtt/bridge/request/+
 
@@ -312,11 +354,33 @@ For requests where a device is involved you can select a specific endpoint by ad
 
 #### zigbee2mqtt/bridge/request/permit_join
 
-Allows to permit or disable joining of new devices. Allowed payloads are `{"value": true}`, `{"value": false}`, `true` or `false`. Example response: `{"data":{"value":true},"status":"ok"}`. This is not persistent (will not be saved to `configuration.yaml`).
+Allows or disallows joining of new devices for the specified duration (in seconds).
 
-To allow joining via a specific device set the `friendly_name` in the `device` property. E.g. `{"value": true, "device": "my_bulb"}`.
+Allowed payloads:
 
-To allow joining for only a specific amount of time add the `time` property (in seconds). E.g. `{"value": true, "time": 20}` (will allow joining for 20 seconds).
+> Enable for maximum duration:
+>
+> ```json
+> {"time": 254}
+> ```
+>
+> Disable:
+>
+> ```json
+> {"time": 0}
+> ```
+>
+> Enable only for device with given `friendly_name`:
+>
+> ```json
+> {"time": 60, "device": "bulb"}
+> ```
+>
+> Enable only for coordinator:
+>
+> ```json
+> {"time": 60, "device": "coordinator"}
+> ```
 
 #### zigbee2mqtt/bridge/request/health_check
 
@@ -328,13 +392,13 @@ Allows to check to execute a coordinator check. Payload has to be empty, example
 
 This check is only supported for Texas Instruments based adapters (e.g. CC2652/CC1352). It checks whether any routers are missing from the coordinator memory. In case routers are missing, you may experience one of the following problems:
 
--   Unable to pair devices to your network, pairing might fail for any device that tries to joins the network via this missing router.
--   Devices falling of the network. Sometimes devices that are in the network re-join it, if they try to re-join via this missing router, re-joining will fail.
+- Unable to pair devices to your network, pairing might fail for any device that tries to joins the network via this missing router.
+- Devices falling of the network. Sometimes devices that are in the network re-join it, if they try to re-join via this missing router, re-joining will fail.
 
 The solution is to re-pair the missing routers. There are 2 known reasons for routers to go missing:
 
--   Migration from a Zigbee 1.2 coordinator to 3.0 (e.g. CC2530/CC2531 -> CC2652/CC1352) without re-pairing any devices. This is because Zigbee 1.2 has less strict security requirements.
--   Upgrading of the firmware, this seems to occur because of a bug in the Texas Instruments SDK.
+- Migration from a Zigbee 1.2 coordinator to 3.0 (e.g. CC2530/CC2531 -> CC2652/CC1352) without re-pairing any devices. This is because Zigbee 1.2 has less strict security requirements.
+- Upgrading of the firmware, this seems to occur because of a bug in the Texas Instruments SDK.
 
 #### zigbee2mqtt/bridge/request/restart
 
@@ -350,22 +414,34 @@ Use [webgraphviz.com](http://www.webgraphviz.com/) (for `graphviz`), [planttext.
 
 The graphviz map shows the devices as follows:
 
--   **Coordinator:** rectangle with bold outline
--   **Router:** rectangle with rounded corners
--   **End device:** rectangle with rounded corners and dashed outline
+- **Coordinator:** rectangle with bold outline
+- **Router:** rectangle with rounded corners
+- **End device:** rectangle with rounded corners and dashed outline
 
 Links are labelled with link quality (0..255) and active routes (listed by short 16 bit destination address). Arrow indicates direction of messaging. Coordinator and routers will typically have two lines for each connection showing bi-directional message path. Line style is:
 
--   To **end devices**: normal line
--   To and between **coordinator** and **routers**: heavy line for active routes or thin line for no active routes
+- To **end devices**: normal line
+- To and between **coordinator** and **routers**: heavy line for active routes or thin line for no active routes
 
 #### zigbee2mqtt/bridge/request/extension/save
 
-See [User extensions](../../advanced/more/user_extensions.md).
+See [External extensions](../../advanced/more/external_extensions.md).
+
+#### zigbee2mqtt/bridge/request/extension/remove
+
+See [External extensions](../../advanced/more/external_extensions.md).
+
+#### zigbee2mqtt/bridge/request/converter/save
+
+See [External converters](../../advanced/more/external_converters.md).
+
+#### zigbee2mqtt/bridge/request/converter/remove
+
+See [External converters](../../advanced/more/external_converters.md).
 
 #### zigbee2mqtt/bridge/request/backup
 
-Creates a backup of the `data` folder (without the `data/log` directory). Payload has to be empty, example response: `{"data":{"zip":"WklHQkVFMk1RVFQuUk9DS1M="},"status":"ok"}`. The `zip` property represents a zip file encoded via Base64. Note that only adapters based on a Texas Instruments chip (CC2530/CC2531/CC2538/CC2652/CC1352) support a coordinator backup (`coordinator_backup.json`).
+Creates a backup of the `data` folder (without the `data/log` directory). Payload has to be empty, example response: `{"data":{"zip":"WklHQkVFMk1RVFQuUk9DS1M="},"status":"ok"}`. The `zip` property represents a zip file encoded via Base64. Note that not all adapters support backup (`coordinator_backup.json`), see [adapters](../adapters/README.md) for more details.
 
 #### zigbee2mqtt/bridge/request/install_code/add
 
@@ -395,6 +471,14 @@ In case you also want to block the device the optional `block` property (default
 See [OTA updates](./ota_updates.md).
 
 #### zigbee2mqtt/bridge/request/device/ota_update/update
+
+See [OTA updates](./ota_updates.md).
+
+#### zigbee2mqtt/bridge/request/device/ota_update/check/downgrade
+
+See [OTA updates](./ota_updates.md).
+
+#### zigbee2mqtt/bridge/request/device/ota_update/update/downgrade
 
 See [OTA updates](./ota_updates.md).
 
@@ -434,7 +518,7 @@ By setting up reporting for the bulb it will send notifications to Zigbee2MQTT a
 
 It is a good practice to keep a balance between staying updated with relevant information and conserving energy, especially in the case of battery-powered devices.
 
-Refer to the Configure Reporting Command in the [ZigBee Cluster Library](https://github.com/Koenkk/zigbee-herdsman/blob/master/docs/07-5123-08-Zigbee-Cluster-Library.pdf) for more information. Example payload is `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10}`. In this case the response would be `{"data":{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":"10","reportable_change":10},"status":"ok"}`.
+Refer to the Configure Reporting Command in the [ZigBee Cluster Library](https://github.com/Koenkk/zigbee-herdsman/wiki/References#csa-zigbee-alliance-spec) for more information. Example payload is `{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10}`. In this case the response would be `{"data":{"id":"my_bulb","endpoint":1,"cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":"10","reportable_change":10},"status":"ok"}`.
 
 Parameters
 
@@ -455,10 +539,10 @@ To disable reporting set the `maximum_report_interval` to `65535`.
 
 Notes:
 
--   Not all devices support the Zigbee configure reporting command (e.g. Xiaomi WSDCGQ11LM temperature/humidity sensors don't support it)
--   If configure reporting fails for a battery powered device make sure to wake it up right before sending the command.
--   The `reportable_change` value depends on the unit of the attribute, e.g. for temperature 100 means in general 1°C of change.
--   To specify options, e.g. the manufacturerCode use e.g. `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10,"options":{"manufacturerCode":1234}}`
+- Not all devices support the Zigbee configure reporting command (e.g. Xiaomi WSDCGQ11LM temperature/humidity sensors don't support it)
+- If configure reporting fails for a battery powered device make sure to wake it up right before sending the command.
+- The `reportable_change` value depends on the unit of the attribute, e.g. for temperature 100 means in general 1°C of change.
+- To specify options, e.g. the manufacturerCode use e.g. `{"id":"my_bulb","cluster":"genLevelCtrl","attribute":"currentLevel","minimum_report_interval":5,"maximum_report_interval":10,"reportable_change":10,"options":{"manufacturerCode":1234}}`
 
 ### Group
 
@@ -498,31 +582,7 @@ See [Groups](./groups.md).
 
 #### zigbee2mqtt/bridge/request/options
 
-Allows to set any option. The JSON schema of this can be found [here](https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/util/settings.schema.json) (is also published to `zigbee2mqtt/bridge/info` in the `config_schema` property). Example to set `permit_join`; send to `zigbee2mqtt/bridge/request/options` payload `{"options": {"permit_join": true}}`, response: `{"data":{"restart_required": false},"status":"ok"}`. Some options may require restarting Zigbee2MQTT, in this case `restart_required` is set to `true`. Note that `restart_required` is also published to `zigbee2mqtt/bridge/info`. Use `zigbee2mqtt/bridge/request/restart` to restart Zigbee2MQTT.
-
-#### zigbee2mqtt/bridge/request/config/last_seen
-
-**Deprecated:** use `zigbee2mqtt/bridge/request/options` with payload `{"options": {"advanced": {"last_seen": VALUE}}}` instead.
-
-Sets `advanced` -> `last_seen` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":"disable"}`, response: `{"data":{"value": "disable"},"status":"ok"}`. See [Configuration](../../guide/configuration/) for possible values.
-
-#### zigbee2mqtt/bridge/request/config/elapsed
-
-**Deprecated:** use `zigbee2mqtt/bridge/request/options` with payload `{"options": {"advanced": {"elapsed": VALUE}}}` instead.
-
-Sets `advanced` -> `elapsed` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":true}`, response: `{"data":{"value": true},"status":"ok"}`. See [Configuration](../../guide/configuration/) for possible values.
-
-#### zigbee2mqtt/bridge/request/config/log_level
-
-**Deprecated:** use `zigbee2mqtt/bridge/request/options` with payload `{"options": {"advanced": {"log_level": VALUE}}}` instead.
-
-Sets `advanced` -> `log_level` (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":"debug"}`, response: `{"data":{"value": "debug"},"status":"ok"}`. See [Configuration](../../guide/configuration/) for possible values.
-
-#### zigbee2mqtt/bridge/request/config/homeassistant
-
-**Deprecated:** use `zigbee2mqtt/bridge/request/options` with payload `{"options": {"homeassistant": true}}` instead.
-
-Enable or disable the Home Assistant integration on the fly (persistent). Payload format is `{"value": VALUE}` or `VALUE`, example: `{"value":true}`, response: `{"data":{"value": "true"},"status":"ok"}`. Possible values are `true` or `false`.
+Allows to set any option. The JSON schema of this can be found [here](https://github.com/Koenkk/zigbee2mqtt/blob/master/lib/util/settings.schema.json) (is also published to `zigbee2mqtt/bridge/info` in the `config_schema` property). Example to set `log_level`; send to `zigbee2mqtt/bridge/request/options` payload `{"options": {"advanced": { "log_level": "debug" }}}`, response: `{"data":{"restart_required": false},"status":"ok"}`. Some options may require restarting Zigbee2MQTT, in this case `restart_required` is set to `true`. Note that `restart_required` is also published to `zigbee2mqtt/bridge/info`. Use `zigbee2mqtt/bridge/request/restart` to restart Zigbee2MQTT.
 
 ### Touchlink
 

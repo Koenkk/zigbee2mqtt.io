@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | LLKZMK11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Dual relay module |
-| Exposes | power, energy, device_temperature, voltage, current, switch (state), power_outage_count, power_outage_memory, interlock, linkquality |
+| Exposes | power, energy, device_temperature, voltage, current, switch (state), power_outage_count, power_outage_memory, interlock |
 | Picture | ![Aqara LLKZMK11LM](https://www.zigbee2mqtt.io/images/devices/LLKZMK11LM.png) |
 
 
@@ -135,11 +135,4 @@ Value can be found in the published state on the `interlock` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interlock": NEW_VALUE}`.
 If value equals `true` interlock is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

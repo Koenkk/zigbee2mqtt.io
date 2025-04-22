@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QBKG11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart wall switch (with neutral, single rocker) |
-| Exposes | switch (state), power, device_temperature, energy, operation_mode, action, linkquality |
+| Exposes | switch (state), power, device_temperature, energy, operation_mode, action |
 | Picture | ![Aqara QBKG11LM](https://www.zigbee2mqtt.io/images/devices/QBKG11LM.png) |
 
 
@@ -65,8 +65,6 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 
 * `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
-
 
 ## Exposes
 
@@ -112,11 +110,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `release`, `hold`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

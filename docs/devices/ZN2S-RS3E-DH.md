@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZN2S-RS3E-DH  |
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | 3 gang dimmer |
-| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, power_on_behavior, backlight_mode, linkquality |
+| Exposes | light (state, brightness, min_brightness, max_brightness), countdown, power_on_behavior, backlight_mode |
 | Picture | ![Zemismart ZN2S-RS3E-DH](https://www.zigbee2mqtt.io/images/devices/ZN2S-RS3E-DH.png) |
 
 
@@ -72,7 +72,7 @@ The minimal value is `0` and the maximum value is `43200`.
 The unit of this value is `s`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
+Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
@@ -84,11 +84,4 @@ Value can be found in the published state on the `backlight_mode` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
 The possible values are: `off`, `normal`, `inverted`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

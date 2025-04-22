@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MEAZON_DINRAIL  |
 | Vendor  | [Meazon](/supported-devices/#v=Meazon)  |
 | Description | DinRail 1-phase meter |
-| Exposes | switch (state), power, voltage, current, linkquality |
+| Exposes | switch (state), power, voltage, current |
 | Picture | ![Meazon MEAZON_DINRAIL](https://www.zigbee2mqtt.io/images/devices/MEAZON_DINRAIL.png) |
 
 
@@ -56,8 +56,6 @@ devices:
 
 * `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
-
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
@@ -91,11 +89,4 @@ Instantaneous measured electrical current.
 Value can be found in the published state on the `current` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

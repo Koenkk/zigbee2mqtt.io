@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | XF-EU-S100-1-M  |
 | Vendor  | [LELLKI](/supported-devices/#v=LELLKI)  |
 | Description | Touch switch 1 gang (with power monitoring) |
-| Exposes | switch (state), power_outage_memory, power, current, voltage, energy, linkquality |
+| Exposes | switch (state), power_outage_memory, power, current, voltage, energy |
 | Picture | ![LELLKI XF-EU-S100-1-M](https://www.zigbee2mqtt.io/images/devices/XF-EU-S100-1-M.png) |
 
 
@@ -96,11 +96,4 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

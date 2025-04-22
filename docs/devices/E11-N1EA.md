@@ -18,13 +18,16 @@ pageClass: device-page
 | Model | E11-N1EA  |
 | Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Element plus color (A19) |
-| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), power, energy, linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), power, energy |
 | Picture | ![Sengled E11-N1EA](https://www.zigbee2mqtt.io/images/devices/E11-N1EA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
 
+### Pairing
+To factory reset the light bulb, first start with the light bulb ON and then quickly turn it OFF and ON at least 10 times, ending in an ON state. If the reset is successful, the light bulb will flash five times, indicating that it is in pairing mode. If the light bulb does not flash, please try again.
 <!-- Notes END: Do not edit below this line -->
 
 ## Device Type
@@ -109,11 +112,4 @@ Value can be found in the published state on the `energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

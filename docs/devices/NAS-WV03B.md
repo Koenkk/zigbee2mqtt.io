@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | NAS-WV03B  |
 | Vendor  | [Neo](/supported-devices/#v=Neo)  |
 | Description | Smart sprinkler timer |
-| Exposes | switch (state), status, countdown, countdown_left, water_current, battery_percentage, water_total, fault, weather_delay, normal_timer, switch_enabled, smart_irrigation, total_flow_reset_switch, quantitative_watering, flow_switch, child_lock, surplus_flow, single_watering_duration, single_watering_amount, linkquality |
+| Exposes | switch (state), status, countdown, countdown_left, water_current, battery_percentage, water_total, fault, weather_delay, normal_timer, switch_enabled, smart_irrigation, total_flow_reset_switch, quantitative_watering, flow_switch, child_lock, surplus_flow, single_watering_duration, single_watering_amount |
 | Picture | ![Neo NAS-WV03B](https://www.zigbee2mqtt.io/images/devices/NAS-WV03B.png) |
 
 
@@ -153,11 +153,4 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Single watering amount.
 Value can be found in the published state on the `single_watering_amount` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

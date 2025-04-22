@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | mStikk_Outlet  |
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | mStikk OP, wall socket |
-| Exposes | power, current, voltage, switch (state), energy, linkquality |
+| Exposes | power, current, voltage, switch (state), energy |
 | Picture | ![CTM Lyng mStikk_Outlet](https://www.zigbee2mqtt.io/images/devices/mStikk_Outlet.png) |
 
 
@@ -90,11 +90,4 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

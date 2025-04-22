@@ -1,7 +1,7 @@
 ---
 title: "Nous A1Z control via MQTT"
 description: "Integrate your Nous A1Z via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2024-08-01T18:23:53
+addedAt: 2024-10-31T20:36:52
 pageClass: device-page
 ---
 
@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | A1Z  |
 | Vendor  | [Nous](/supported-devices/#v=Nous)  |
 | Description | Smart plug (with power monitoring) |
-| Exposes | switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, lock (state), linkquality |
+| Exposes | switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy, child_lock |
 | Picture | ![Nous A1Z](https://www.zigbee2mqtt.io/images/devices/A1Z.png) |
 
 
@@ -27,15 +27,12 @@ pageClass: device-page
 
 ### Pairing
 If the indicator light does not flash rapidly, press the button for 5 to 7 seconds to reset the smart plug parameters to factory settings.
-
-
 ### Reset energy
 To reset `Sum of consumed energy`, use the Dev console and execute:
 `Endpoint`: `1`
 `Cluster`: `0x00`
 `Command`: `0`
 `Payload`: (don't change this)
-
 Next time the plug gets polled, `Sum of consumed energy` will start from zero again.
 <!-- Notes END: Do not edit below this line -->
 
@@ -119,15 +116,10 @@ Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 

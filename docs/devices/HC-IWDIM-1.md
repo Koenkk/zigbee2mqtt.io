@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HC-IWDIM-1  |
 | Vendor  | [Heimgard Technologies](/supported-devices/#v=Heimgard%20Technologies)  |
 | Description | Dimmer |
-| Exposes | light (state, brightness), power, current, voltage, energy, linkquality |
+| Exposes | light (state, brightness), power, current, voltage, energy |
 | Picture | ![Heimgard Technologies HC-IWDIM-1](https://www.zigbee2mqtt.io/images/devices/HC-IWDIM-1.png) |
 
 
@@ -92,11 +92,4 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

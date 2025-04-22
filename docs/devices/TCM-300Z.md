@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TCM-300Z  |
 | Vendor  | [ShinaSystem](/supported-devices/#v=ShinaSystem)  |
 | Description | SiHAS Zigbee thermostat |
-| Exposes | climate (system_mode, local_temperature, occupied_heating_setpoint, occupied_cooling_setpoint), keypad_lockout, linkquality |
+| Exposes | climate (system_mode, local_temperature, occupied_heating_setpoint, occupied_cooling_setpoint), keypad_lockout |
 | Picture | ![ShinaSystem TCM-300Z](https://www.zigbee2mqtt.io/images/devices/TCM-300Z.png) |
 
 
@@ -27,6 +27,9 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
 
 
 ## Options
@@ -50,11 +53,4 @@ Value can be found in the published state on the `keypad_lockout` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"keypad_lockout": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"keypad_lockout": NEW_VALUE}`.
 The possible values are: `unlock`, `lock1`, `lock2`, `lock3`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

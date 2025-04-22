@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | NLG-TW light  |
 | Vendor  | [Paul Neuhaus](/supported-devices/#v=Paul%20Neuhaus)  |
 | Description | Various tunable white lights (e.g. 8195-55) |
-| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior |
 | Picture | ![Paul Neuhaus NLG-TW light](https://www.zigbee2mqtt.io/images/devices/NLG-TW-light.png) |
 
 
@@ -36,7 +36,7 @@ I got the pairing right with this method once. However, it is extremley difficul
 
 1. Switch on the light for 5 to 10 seconds.
 2. Switch off the light.
-3. Switch on and off the light at least 4 times untill the light starts blinking several times. In this sequence assure to wait for 1-2 seconds between each new switch-on.
+3. Switch on and off the light at least 4 times until the light starts blinking several times. In this sequence assure to wait for 1-2 seconds between each new switch-on.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -98,16 +98,9 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
+Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

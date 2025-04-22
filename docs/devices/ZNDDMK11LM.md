@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNDDMK11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart lightstrip driver |
-| Exposes | power, energy, voltage, device_temperature, power_outage_memory, light (state, brightness, color_temp, color_xy), light (state, brightness, color_temp), dimmer_mode, linkquality |
+| Exposes | power, energy, voltage, device_temperature, power_outage_memory, light (state, brightness, color_temp, color_xy), light (state, brightness, color_temp), dimmer_mode |
 | Picture | ![Aqara ZNDDMK11LM](https://www.zigbee2mqtt.io/images/devices/ZNDDMK11LM.png) |
 
 
@@ -175,11 +175,4 @@ Value can be found in the published state on the `dimmer_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"dimmer_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"dimmer_mode": NEW_VALUE}`.
 The possible values are: `rgbw`, `dual_ct`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

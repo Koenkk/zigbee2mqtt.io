@@ -1,7 +1,9 @@
 import {promises as fsp} from 'fs';
 import * as path from 'path';
 import * as fs from 'fs';
-import {definitions} from 'zigbee-herdsman-converters';
+// @ts-expect-error TODO fix paths
+import baseDefinitions from 'zigbee-herdsman-converters/devices/index';
+import {Definition, prepareDefinition} from 'zigbee-herdsman-converters';
 
 export async function checkFileExists(filepath) {
     return new Promise((resolve, reject) => {
@@ -54,16 +56,29 @@ export function getAddedAt(deviceContent: string) {
 // For this site: all definitions are the definitions + whitelabels with fingerprint
 // Whitelabels that have a fingerprint will get a separate page and will not
 // appear as a whitelabel on the original device page
-const allDefinitionsTemp = [...definitions];
-for (const definition of definitions) {
-    if (definition.whiteLabel) {
-        for (const whiteLabel of definition.whiteLabel.filter((w) => 'fingerprint' in w && w.fingerprint)) {
+const allDefinitionsTemp: Definition[] = [];
+
+for (const definition of baseDefinitions) {
+    const resolvedDefinition = prepareDefinition(definition);
+
+    allDefinitionsTemp.push(resolvedDefinition);
+
+    if ('whiteLabel' in resolvedDefinition && resolvedDefinition.whiteLabel) {
+        for (const whiteLabel of resolvedDefinition.whiteLabel.filter((w) => 'fingerprint' in w && w.fingerprint)) {
             const {vendor, model, description} = whiteLabel;
-            allDefinitionsTemp.push({...definition, vendor, model, description: description || definition.description, whiteLabel: undefined});
+            allDefinitionsTemp.push({
+                ...resolvedDefinition,
+                vendor,
+                model,
+                description: description || resolvedDefinition.description,
+                whiteLabel: undefined,
+            });
         }
-        definition.whiteLabel = definition.whiteLabel.filter((w) => !('fingerprint' in w) || !w.fingerprint);
-        if (definition.whiteLabel.length === 0) {
-            delete definition.whiteLabel;
+
+        resolvedDefinition.whiteLabel = resolvedDefinition.whiteLabel.filter((w) => !('fingerprint' in w) || !w.fingerprint);
+
+        if (resolvedDefinition.whiteLabel.length === 0) {
+            delete resolvedDefinition.whiteLabel;
         }
     }
 }

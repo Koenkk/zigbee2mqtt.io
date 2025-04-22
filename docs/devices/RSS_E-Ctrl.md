@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RSS E-Ctrl  |
 | Vendor  | [Imhotep Creation](/supported-devices/#v=Imhotep%20Creation)  |
 | Description | Towel heater thermostat THIE (TH ECTRL) and compliant |
-| Exposes | system_mode, local_temperature, climate (occupied_heating_setpoint, local_temperature), min_heat_setpoint_limit, max_heat_setpoint_limit, occupancy, linkquality |
+| Exposes | climate (system_mode, local_temperature, occupied_heating_setpoint), min_heat_setpoint_limit, max_heat_setpoint_limit, occupancy |
 | Picture | ![Imhotep Creation RSS E-Ctrl](https://www.zigbee2mqtt.io/images/devices/RSS-E-Ctrl.png) |
 
 
@@ -39,24 +39,11 @@ pageClass: device-page
 
 ## Exposes
 
-### System mode (enum)
-Heater mode (Off or Heat).
-Value can be found in the published state on the `system_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": NEW_VALUE}`.
-The possible values are: `off`, `heat`.
-
-### Local temperature (numeric)
-Current temperature measured on the device.
-Value can be found in the published state on the `local_temperature` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
-It's not possible to write (`/set`) this value.
-The unit of this value is `°C`.
-
 ### Climate 
-This climate device supports the following features: `occupied_heating_setpoint`, `local_temperature`.
+This climate device supports the following features: `system_mode`, `local_temperature`, `occupied_heating_setpoint`.
 - `occupied_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"occupied_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `30`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupied_heating_setpoint": ""}`.
 - `local_temperature`: Current temperature measured on the device (in °C). To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"local_temperature": ""}`.
+- `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. To read send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"system_mode": ""}`.
 
 ### Min heat setpoint limit (numeric)
 Minimum Heating set point limit.
@@ -79,11 +66,4 @@ Indicates whether the device detected occupancy.
 Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

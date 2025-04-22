@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BSD-2  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Smoke alarm II |
-| Exposes | smoke, test, alarm_smoke, alarm_burglar, battery, sensitivity, broadcast_alarm, linkquality |
+| Exposes | smoke, test, alarm_smoke, alarm_burglar, battery, sensitivity, broadcast_alarm |
 | Picture | ![Bosch BSD-2](https://www.zigbee2mqtt.io/images/devices/BSD-2.png) |
 
 
@@ -28,6 +28,9 @@ pageClass: device-page
 - Before starting the pairing process the device's install code needs to be added to Zigbee2MQTT. Scan the QR code printed on the bottom of the device with the camera of your mobile phone and copy the received value (Attention: The install code printed in plain text on the device is not sufficient!) 
 - The install code can be found inside the device before attaching it to the mounting plate
 - Add this install code under Settings -> Tools -> Add install code
+
+### Factory resetting
+To factory reset the device remove the battery and wait 20 seconds or briefly press the device's main button. While pressing and holding the device's main button, insert the battery back. As soon as the device's LED on the front is starting to blink red, release the device's main button and press and hold it again until the device beeps. The device will reboot, which can take up to a minute. [Watch on Youtube](https://www.youtube.com/watch?v=PRAIsw4PoqE)
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -82,11 +85,4 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"broadcast_alarm": NEW_VALUE}`.
 The possible values are: `smoke_off`, `smoke_on`, `burglar_off`, `burglar_on`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

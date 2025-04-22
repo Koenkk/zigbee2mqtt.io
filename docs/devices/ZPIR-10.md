@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZPIR-10  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Treatlife human presence sensor |
-| Exposes | occupancy, battery, illuminance, linkquality |
+| Exposes | occupancy, battery, illuminance |
 | Picture | ![Tuya ZPIR-10](https://www.zigbee2mqtt.io/images/devices/ZPIR-10.png) |
 
 
@@ -51,14 +51,8 @@ The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+The unit of this value is `lx`.
 

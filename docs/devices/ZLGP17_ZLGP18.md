@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZLGP17/ZLGP18  |
 | Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Wireless and batteryless (double) lighting control |
-| Exposes | action, linkquality |
+| Exposes | action |
 | Picture | ![Legrand ZLGP17/ZLGP18](https://www.zigbee2mqtt.io/images/devices/ZLGP17-ZLGP18.png) |
 
 
@@ -59,11 +59,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `press_once`, `press_twice`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

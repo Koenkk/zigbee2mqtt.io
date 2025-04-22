@@ -8,32 +8,39 @@ sidebarDepth: 1
 Not all features are supported for every adapter, to see what's supported, go to your [adapter page](../../guide/adapters/README.md).
 :::
 
-## Configuration of the Zigbee adapter
+## Basic configuration
 
-For USB apdaters you can use `dmesg` command on Linux hosts to find the mounted device. Where possible you should use the `/dev/serial/by-id/` path of the stick, instead of `/dev/tty*`. This is because the `/dev/tty*` path can change - for example `/dev/ttyACM0` may become `/dev/ttyACM1` and then later back to `/dev/ttyACM0`. The `/dev/serial/by-id/` path won't change.
+In case Zigbee2MQTT cannot automatically detect your adapter (fails to start with: `USB adapter discovery error (No valid USB adapter found). Specify valid 'adapter' and 'port' in your configuration.`) we need to configure the `serial` section in the `configuration.yaml`.
 
-For Zigbee network adapters you need to find IP address of your adapter through router/switch web-interface.\
-::: warning ATTENTION
-IP address of the Zigbee network adapter can change if it has not been assigned a static IP address
-:::
+First determine the port of your adapter:
+
+- For USB adapters: when running on Windows see [these instructions](../installation/05_windows.md#starting-zigbee2mqtt), for Linux execute `ls -l /dev/serial/by-id`:
+
+    ```bash
+    pi@raspberry:/ $ ls -l /dev/serial/by-id
+    total 0
+    lrwxrwxrwx. 1 root root 13 Oct 19 19:26 usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00 -> ../../ttyACM0
+    ```
+
+- For network adapters you need to find the IP address of your adapter through router/switch web-interface. Make sure that the adapter has been assigned a static IP address!
+    - Alternatively, in case your adapter supports mDNS, see the mDNS docs below.
+
+Next determine what `adapter` you are using by going to your [adapter page](../adapters/README.md).
+Possible adapters are `zstack`, `ember`, `deconz`, `zigate` or `zboss`.
+
+Given the example of the USB adapter above in combination with a `zstack` adapter, we would add the following to the `configuration.yaml`:
 
 ```yaml
-# Required: serial settings
 serial:
-    # Required: location of the adapter (e.g. CC2531).
-    # USB adapters - use format "port: /dev/ttyACM0"
-    # To autodetect the USB port, set 'port: null'.
+    # Location of the adapter
+    # USB adapters - use format "port: /dev/serial/by-id/XXX"
     # Ethernet adapters - use format "port: tcp://192.168.1.12:6638"
-    port: /dev/ttyACM0
-    # Optional: disable LED of the adapter if supported (default: false)
-    disable_led: false
-    # Optional: adapter type, specify if you are experiencing startup problems (default: shown below, options: zstack, deconz, ember, zigate)
-    adapter: null
-    # Optional: Baud rate speed for serial port, this can be anything firmware support but default is 115200 for Z-Stack and EZSP, 38400 for Deconz, however note that some EZSP firmware need 57600.
-    baudrate: 115200
-    # Optional: RTS / CTS Hardware Flow Control for serial port (default: false)
-    rtscts: false
+    port: /dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00
+    # Adapter type, allowed values: `zstack`, `ember`, `deconz`, `zigate` or `zboss`
+    adapter: zstack
 ```
+
+This serial configuration should be enough to make Zigbee2MQTT start.
 
 ## mDNS Zeroconf discovery.
 
@@ -59,11 +66,13 @@ serial:
     # port: mdns://czc
     # Optional: disable LED of the adapter if supported (default: false)
     disable_led: false
+    # Optional: Baud rate speed for serial port, this can be anything firmware support but default is 115200 for Z-Stack and EZSP, 38400 for Deconz, however note that some EZSP firmware need 57600.
+    baudrate: 115200
+    # Optional: RTS / CTS Hardware Flow Control for serial port (default: false)
+    rtscts: false
 ```
 
-<!-- TODO: some notes about rtscts? Is it useful, which adapter supports it? -->
-
-## Advanced configuration.
+## Advanced configuration
 
 ```yaml
 advanced:
@@ -80,6 +89,8 @@ advanced:
     # For more information see https://github.com/Koenkk/zigbee2mqtt/issues/4884
     adapter_delay: 0
 ```
+
+<!-- TODO: some notes about rtscts? Is it useful, which adapter supports it? -->
 
 ::: tip
 It's also possible to connect USB Adapters over TCP. See how to connect a [remote adapter](../../advanced/remote-adapter/connect_to_a_remote_adapter.md).

@@ -10,14 +10,14 @@ It is based on [VuePress v2](https://v2.vuepress.vuejs.org/).
 
 **Directory-Structure:**
 
--   `docgen`: Some scripts to test and generate the Device-Pages.
--   `docs`: The current documentation.
--   `docs/.vuepress`: Some VuePress enhancements like Stylesheets.
--   `public`: Static assets.
--   `supported-devices-component`: Vue.js component rendering the devices-overview page.
--   `navbar.ts`: Configuration for the top navigation.
--   `sidebar.ts`: Configuration for the sidebars by individual sections (like _Guide_).
--   `vuepress.config.ts`: The [VuePress config file](https://v2.vuepress.vuejs.org/reference/config.html).
+- `docgen`: Some scripts to test and generate the Device-Pages.
+- `docs`: The current documentation.
+- `docs/.vuepress`: Some VuePress enhancements like Stylesheets.
+- `public`: Static assets.
+- `supported-devices-component`: Vue.js component rendering the devices-overview page.
+- `navbar.ts`: Configuration for the top navigation.
+- `sidebar.ts`: Configuration for the sidebars by individual sections (like _Guide_).
+- `vuepress.config.ts`: The [VuePress config file](https://v2.vuepress.vuejs.org/reference/config.html).
 
 ## Docgen
 
@@ -29,39 +29,42 @@ The `## Notes` section of each page is written by hand and does not come from `z
 Docgen is written in Typescript, so you need a recent version of Node.js and NPM.
 
 ```bash
+# One-time initialize package-lock.json otherwise 'pnpm i' may fail due tu dependencies
+pnpm install
+
 # Install dependencies
-npm ci
+pnpm i --frozen-lockfile
 
 # Run docgen
-npm run docgen
+pnpm run docgen
 ```
 
 ### Docgen Tests
 
 Docgen includes some scripts to help testing the page.
 
--   `check-device-images`: Checks for missing device images
--   `check-links`: Checks for broken internal links
+- `check-device-images`: Checks for missing device images
+- `check-links`: Checks for broken internal links
 
 **Attention**: `check-links` iterates over the generated VuePress files, so you have to build the page first!
 
 ## VuePress
 
-Use Node.js 18 for building VuePress (other versions are not officially supported).
+Use Node.js 20 for building VuePress (other versions are not officially supported).
 
 ```bash
-# Switch to node 18 (for nvm or nvm-compatible tool users)
+# Switch to node 20 (for nvm or nvm-compatible tool users)
 nvm use
 
 # Install dependencies
-npm ci
+pnpm i --frozen-lockfile
 ```
 
 ### Building
 
 ```bash
 # Run vuepress build
-npm run build
+pnpm run build
 ```
 
 The build-artifact gets written to `dist` directory.
@@ -70,11 +73,11 @@ The build-artifact gets written to `dist` directory.
 
 ```bash
 # Run vuepress in dev mode with hot-reloading
-npm run dev
+pnpm run dev
 ```
 
 The `dev`-Mode **excludes** the huge amount device-pages which slows down the build process drastically.
-If you are interested in the device-pages you could include them by using the `npm run dev:devices` npm-run script.
+If you are interested in the device-pages you could include them by using the `pnpm run dev:devices` npm-run script.
 
 #### Include specific device
 
@@ -84,10 +87,10 @@ Useful when working on improving notes of just one device.
 
 ```bash
 # Run vuepress in dev mode with specific device included
-npx cross-env INCLUDE_DEVICE=<DEVICE_FILE_NAME> npm run dev
+npx cross-env INCLUDE_DEVICE=<DEVICE_FILE_NAME> pnpm run dev
 
 # Example for TS011F_plug_1
-npx cross-env INCLUDE_DEVICE=TS011F_plug_1 npm run dev
+npx cross-env INCLUDE_DEVICE=TS011F_plug_1 pnpm run dev
 ```
 
 #### Change development port
@@ -96,10 +99,10 @@ You can change development server port when the default one (8080) is taken on y
 
 ```bash
 # Run vuepress in dev mode on specified port
-npx cross-env DEV_PORT=<PORT_NUMBER> npm run dev
+npx cross-env DEV_PORT=<PORT_NUMBER> pnpm run dev
 
 # Example for port no 15080
-npx cross-env DEV_PORT=15080 npm run dev
+npx cross-env DEV_PORT=15080 pnpm run dev
 ```
 
 ## Docker
@@ -109,6 +112,6 @@ You can also just use a docker-image include Node.js.
 ```bash
 $ docker run --rm -v $PWD:/app -u $UID -ti node:18-slim bash
 node@87e1438ef553:/$ cd /app
-node@87e1438ef553:/app$ npm ci
-node@87e1438ef553:/app$ npm run dev
+node@87e1438ef553:/app$ pnpm i --frozen-lockfile
+node@87e1438ef553:/app$ pnpm run dev
 ```

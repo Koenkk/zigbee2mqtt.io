@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_water_sensor  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Water leak sensor |
-| Exposes | water_leak, linkquality |
+| Exposes | water_leak |
 | Picture | ![Tuya TS0601_water_sensor](https://www.zigbee2mqtt.io/images/devices/TS0601_water_sensor.png) |
 | White-label | Neo NAS-WS02B0 |
 
@@ -38,11 +38,4 @@ Indicates whether the device detected a water leak.
 Value can be found in the published state on the `water_leak` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` water leak is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

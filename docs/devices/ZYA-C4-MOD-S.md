@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZYA-C4-MOD-S  |
 | Vendor  | [Yale](/supported-devices/#v=Yale)  |
 | Description | Control4 module for Yale KeyFree/Keyless/Doorman/Assure/nexTouch locks |
-| Exposes | lock (state, lock_state), action, battery, battery_low, auto_lock_time, volume, linkquality |
+| Exposes | lock (state, lock_state), action, battery, battery_low, auto_lock_time, volume |
 | Picture | ![Yale ZYA-C4-MOD-S](https://www.zigbee2mqtt.io/images/devices/ZYA-C4-MOD-S.png) |
 
 
@@ -73,11 +73,4 @@ Value can be found in the published state on the `volume` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"volume": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"volume": NEW_VALUE}`.
 The possible values are: `silent`, `low`, `high`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

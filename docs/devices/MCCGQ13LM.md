@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MCCGQ13LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Door and window sensor P1 |
-| Exposes | contact, battery, voltage, tamper, detection_distance, linkquality |
+| Exposes | contact, battery, voltage, tamper, detection_distance |
 | Picture | ![Aqara MCCGQ13LM](https://www.zigbee2mqtt.io/images/devices/MCCGQ13LM.png) |
 
 
@@ -69,11 +69,4 @@ Value can be found in the published state on the `detection_distance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"detection_distance": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"detection_distance": NEW_VALUE}`.
 The possible values are: `10mm`, `20mm`, `30mm`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

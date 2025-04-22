@@ -3,25 +3,21 @@
 
 # Allowing devices to join
 
-To allow devices to join the network joining has to be permitted. There are various ways to do this:
+To allow devices to join the network, joining has to be permitted. There are various ways to do this:
 
-### Frontend (recommended)
+### Frontend
 
-Enabling joining via the frontend ensures that joining is disabled automatically after 255 seconds.
-The joining button can be found in the right top.
+Enabling joining via the frontend will open the network for 254 seconds.
+The joining button can be found at the top right of the navigation bar, and also be used to close the network manually before the end of the timer.
 
-## Pairing via a specific device
+#### Pairing via a specific device
 
-To the right of Permit join (All) button is an arrow pointing down. This will allow you to pick any router to join from.
-That is not a guarantee the router is chosen. This can be useful especially for Aqara devices or a switch to a light bulb.
+To the right of `Permit join (All)` button is an arrow pointing down. This will allow you to pick the coordinator, or any router to join from specifically, instead of letting the device chose on its own.
+That is not a guarantee the router will be chosen (or remain long-term). However, this can be useful for devices that are awkward in router selection, like Aqara, or when wanting to link a switch to a light bulb.
 
-### MQTT (recommended)
+### MQTT
 
-The `zigbee2mqtt/bridge/request/permit_join` MQTT topic can be used to enable joining. It is recommended to provide a value for `time` to ensure joining is automatically disabled. See [MQTT topic and messages](./mqtt_topics_and_messages.md#zigbee2mqtt-bridge-request-permit-join) for more information.
-
-### Configuration.yaml (not recommended)
-
-By setting `permit_join: true` in your `configuration.yaml` the joining will automatically be enabled when starting Zigbee2MQTT. Joining is **not** automatically disabled.
+The `zigbee2mqtt/bridge/request/permit_join` MQTT topic can be used to enable joining. See [MQTT topic and messages](./mqtt_topics_and_messages.md#zigbee2mqtt-bridge-request-permit-join) for more information.
 
 ## Pairing
 

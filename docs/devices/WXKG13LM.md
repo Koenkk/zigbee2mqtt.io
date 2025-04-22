@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WXKG13LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Wireless mini switch T1 |
-| Exposes | battery, voltage, action, linkquality |
+| Exposes | battery, voltage, action |
 | Picture | ![Aqara WXKG13LM](https://www.zigbee2mqtt.io/images/devices/WXKG13LM.png) |
 | White-label | Aqara WB-R02D, Yandex YNDX-00524 |
 
@@ -54,11 +54,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `triple`, `quadruple`, `quintuple`, `hold`, `release`, `many`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 
