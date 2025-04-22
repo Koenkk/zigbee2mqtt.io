@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | NAS-WV05B2  |
 | Vendor  | [NEO](/supported-devices/#v=NEO)  |
 | Description | Smart sprinkler timer |
-| Exposes | switch (state), status, countdown, countdown_left, water_total, water_current, current_switch, reset_switch, child_lock, battery, linkquality |
+| Exposes | switch (state), status, countdown, countdown_left, water_total, water_current, current_switch, reset_switch, child_lock, battery |
 | Picture | ![NEO NAS-WV05B2](https://www.zigbee2mqtt.io/images/devices/NAS-WV05B2.png) |
 
 
@@ -97,11 +97,4 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

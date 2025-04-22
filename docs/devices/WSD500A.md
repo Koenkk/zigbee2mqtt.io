@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WSD500A  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Temperature & humidity sensor |
-| Exposes | battery, temperature, humidity, voltage, linkquality |
+| Exposes | battery, temperature, humidity, voltage |
 | Picture | ![Tuya WSD500A](https://www.zigbee2mqtt.io/images/devices/WSD500A.png) |
 
 
@@ -73,11 +73,4 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

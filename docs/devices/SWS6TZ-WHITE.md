@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SWS6TZ-WHITE  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 6 gang wall switch |
-| Exposes | switch (state), current, power, voltage, linkquality |
+| Exposes | switch (state), current, power, voltage |
 | Picture | ![Tuya SWS6TZ-WHITE](https://www.zigbee2mqtt.io/images/devices/SWS6TZ-WHITE.png) |
 
 
@@ -94,11 +94,4 @@ Measured electrical potential value.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

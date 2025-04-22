@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | mKomfy_Sensor  |
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | mKomfy, stove guard |
-| Exposes | battery, battery_low, temperature, alarm_status, active, linkquality |
+| Exposes | battery, battery_low, temperature, alarm_status, active |
 | Picture | ![CTM Lyng mKomfy_Sensor](https://www.zigbee2mqtt.io/images/devices/mKomfy_Sensor.png) |
 
 
@@ -69,11 +69,4 @@ Stove guard active/inactive (Stove in use).
 Value can be found in the published state on the `active` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` active is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

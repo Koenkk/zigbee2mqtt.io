@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | WNAL10/WNRL10  |
 | Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Smart switch with Netatmo |
-| Exposes | switch (state), led_in_dark, led_if_on, linkquality |
+| Exposes | switch (state), led_in_dark, led_if_on |
 | Picture | ![Legrand WNAL10/WNRL10](https://www.zigbee2mqtt.io/images/devices/WNAL10-WNRL10.png) |
 
 
@@ -64,11 +64,4 @@ Value can be found in the published state on the `led_if_on` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"led_if_on": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_if_on": NEW_VALUE}`.
 If value equals `ON` led if on is ON, if `OFF` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

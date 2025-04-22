@@ -17,14 +17,16 @@ pageClass: device-page
 |-----|-----|
 | Model | TS0205_smoke_2  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
-| Description | Smoke sensor |
-| Exposes | battery, smoke, tamper, linkquality |
+| Description | Optical smoke sensor (model YG500A on the PCB) |
+| Exposes | battery, smoke, tamper |
 | Picture | ![Tuya TS0205_smoke_2](https://www.zigbee2mqtt.io/images/devices/TS0205_smoke_2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+Press the reset button on the side for about 5 seconds until the green led starts blinking. Release the button and it should pair - on successful pairing the LED will light up solid green for a few seconds and then turn off.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -51,11 +53,4 @@ Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

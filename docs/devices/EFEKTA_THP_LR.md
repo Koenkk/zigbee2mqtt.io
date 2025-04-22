@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EFEKTA_THP_LR  |
 | Vendor  | [EFEKTA](/supported-devices/#v=EFEKTA)  |
 | Description | DIY outdoor long-range sensor for temperature, humidity and atmospheric pressure |
-| Exposes | battery, voltage, temperature, humidity, pressure, linkquality |
+| Exposes | battery, voltage, temperature, humidity, pressure |
 | Picture | ![EFEKTA EFEKTA_THP_LR](https://www.zigbee2mqtt.io/images/devices/EFEKTA_THP_LR.png) |
 
 
@@ -85,11 +85,4 @@ Value can be found in the published state on the `pressure` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"pressure": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kPa`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

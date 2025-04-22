@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HS2DB  |
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart doorbell button |
-| Exposes | battery, action, battery_low, tamper, linkquality |
+| Exposes | battery, action, battery_low, tamper |
 | Picture | ![HEIMAN HS2DB](https://www.zigbee2mqtt.io/images/devices/HS2DB.png) |
 
 
@@ -56,11 +56,4 @@ Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

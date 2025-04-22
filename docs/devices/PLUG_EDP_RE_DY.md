@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | PLUG EDP RE:DY  |
 | Vendor  | [EDP](/supported-devices/#v=EDP)  |
 | Description | re:dy plug |
-| Exposes | switch (state), power, energy, linkquality |
+| Exposes | switch (state), power, energy |
 | Picture | ![EDP PLUG EDP RE:DY](https://www.zigbee2mqtt.io/images/devices/PLUG-EDP-RE-DY.png) |
 
 
@@ -70,11 +70,4 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

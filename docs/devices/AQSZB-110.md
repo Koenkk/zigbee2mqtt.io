@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | AQSZB-110  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Air quality sensor |
-| Exposes | voc, air_quality, temperature, humidity, battery, voltage, battery_low, linkquality |
+| Exposes | voc, air_quality, temperature, humidity, battery, voltage, battery_low |
 | Picture | ![Develco AQSZB-110](https://www.zigbee2mqtt.io/images/devices/AQSZB-110.png) |
 
 
@@ -95,11 +95,4 @@ Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

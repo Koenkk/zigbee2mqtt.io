@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | JT-BZ-01AQ/A  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart natural gas detector |
-| Exposes | gas, gas_density, gas_sensitivity, selftest, test, buzzer, buzzer_manual_alarm, buzzer_manual_mute, linkage_alarm, linkage_alarm_state, state, power_outage_count, linkquality |
+| Exposes | gas, gas_density, gas_sensitivity, selftest, test, buzzer, buzzer_manual_alarm, buzzer_manual_mute, linkage_alarm, linkage_alarm_state, state, power_outage_count |
 | Picture | ![Aqara JT-BZ-01AQ/A](https://www.zigbee2mqtt.io/images/devices/JT-BZ-01AQ-A.png) |
 | White-label | Aqara JT-BZ-03AQ/A |
 
@@ -130,11 +130,4 @@ Number of power outages (since last pairing).
 Value can be found in the published state on the `power_outage_count` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_count": ""}`.
 It's not possible to write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

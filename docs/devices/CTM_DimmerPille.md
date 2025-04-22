@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CTM_DimmerPille  |
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | CTM Lyng DimmerPille |
-| Exposes | light (state, brightness), ballast_minimum_level, ballast_maximum_level, ballast_power_on_level, linkquality |
+| Exposes | light (state, brightness), ballast_minimum_level, ballast_maximum_level, ballast_power_on_level |
 | Picture | ![CTM Lyng CTM_DimmerPille](https://www.zigbee2mqtt.io/images/devices/CTM_DimmerPille.png) |
 
 
@@ -73,11 +73,4 @@ Value can be found in the published state on the `ballast_power_on_level` proper
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"ballast_power_on_level": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"ballast_power_on_level": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `99`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

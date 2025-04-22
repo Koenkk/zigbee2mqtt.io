@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | DLKZMK11LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Single switch module T1 (with neutral), CN |
-| Exposes | switch (state), power, energy, device_temperature, voltage, current, power_outage_memory, led_disabled_night, switch_type, linkquality |
+| Exposes | switch (state), power, energy, device_temperature, voltage, current, power_outage_memory, led_disabled_night, switch_type |
 | Picture | ![Aqara DLKZMK11LM](https://www.zigbee2mqtt.io/images/devices/DLKZMK11LM.png) |
 
 
@@ -120,11 +120,4 @@ Value can be found in the published state on the `switch_type` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type": NEW_VALUE}`.
 The possible values are: `toggle`, `momentary`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | RB-SRAIN01  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Solar rain sensor |
-| Exposes | illuminance, illuminance_average_20min, illuminance_maximum_today, cleaning_reminder, rain_intensity, rain, battery, linkquality |
+| Exposes | illuminance, illuminance_average_20min, illuminance_maximum_today, cleaning_reminder, rain_intensity, rain, battery |
 | Picture | ![Tuya RB-SRAIN01](https://www.zigbee2mqtt.io/images/devices/RB-SRAIN01.png) |
 
 
@@ -38,7 +38,7 @@ pageClass: device-page
 ## Exposes
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
@@ -80,11 +80,4 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

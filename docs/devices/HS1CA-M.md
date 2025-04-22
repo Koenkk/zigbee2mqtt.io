@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HS1CA-M  |
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart carbon monoxide sensor |
-| Exposes | carbon_monoxide, battery_low, battery, linkquality |
+| Exposes | carbon_monoxide, battery_low, battery |
 | Picture | ![HEIMAN HS1CA-M](https://www.zigbee2mqtt.io/images/devices/HS1CA-M.png) |
 
 
@@ -50,11 +50,4 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

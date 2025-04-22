@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | VES-ZB-WAL-006  |
 | Vendor  | [Vesternet](/supported-devices/#v=Vesternet)  |
 | Description | Zigbee wall controller - 2 button |
-| Exposes | battery, action, linkquality |
+| Exposes | battery, action |
 | Picture | ![Vesternet VES-ZB-WAL-006](https://www.zigbee2mqtt.io/images/devices/VES-ZB-WAL-006.png) |
 | White-label | Sunricher SR-ZG9001K2-DIM2 |
 
@@ -55,11 +55,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on_1`, `off_1`, `stop_1`, `brightness_move_up_1`, `brightness_move_down_1`, `brightness_stop_1`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

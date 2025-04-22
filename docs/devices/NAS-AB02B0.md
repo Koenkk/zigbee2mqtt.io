@@ -18,13 +18,31 @@ pageClass: device-page
 | Model | NAS-AB02B0  |
 | Vendor  | [Neo](/supported-devices/#v=Neo)  |
 | Description | Temperature & humidity sensor and alarm |
-| Exposes | temperature, humidity, humidity_alarm, battery_low, temperature_alarm, alarm, melody, duration, temperature_min, temperature_max, humidity_min, humidity_max, volume, power_type, linkquality |
+| Exposes | temperature, humidity, humidity_alarm, battery_low, temperature_alarm, alarm, melody, duration, temperature_min, temperature_max, humidity_min, humidity_max, volume, power_type |
 | Picture | ![Neo NAS-AB02B0](https://www.zigbee2mqtt.io/images/devices/NAS-AB02B0.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Notes
+Alarm melodies sounds/tunes:
+1 - fuer elise
+2 - big ben
+3 - ring ring
+4 - lone ranger
+5 - turkish march
+6 - high pitch siren
+7 - red alert
+8 - cricket
+9 - beep beep
+10 - dogs
+11 - police
+12 - chime
+13 - phone ring
+14 - firetruck
+15 - clock chime
+16 - alarm clock
+17 - psycho
+18 - doorbell
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -130,11 +148,4 @@ The possible values are: `low`, `medium`, `high`.
 Value can be found in the published state on the `power_type` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `battery_full`, `battery_high`, `battery_medium`, `battery_low`, `usb`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -15,13 +15,15 @@ Zigbee2MQTT has a built-in web-based frontend.
 To enable the frontend add the following to your `configuration.yaml`. This will start the frontend on port `8080`.
 
 ```yaml
-frontend: true
+frontend:
+    enabled: true
 ```
 
 ## Advanced configuration
 
 ```yaml
 frontend:
+    enabled: true
     # Optional, default 8080
     port: 8080
     # Optional, empty by default to listen on both IPv4 and IPv6. Opens a unix socket when given a path instead of an address (e.g. '/run/zigbee2mqtt/zigbee2mqtt.sock')
@@ -35,6 +37,11 @@ frontend:
     ssl_cert: /config/etc/letsencrypt/live/mydomain.com/fullchain.pem
     # Optional, private key file path for exposing HTTPS. The sibling property 'ssl_cert' must be set for HTTPS to be activated
     ssl_key: /config/etc/letsencrypt/live/mydomain.com/privkey.pem
+    # Optional, base URL for the frontend, when served from a subpath, e.g. behind the proxy. Default value is '/'
+    base_url: /zigbee2mqtt
+    # Optional, list of regular expressions to hide notifications, the example below hides notifications for failed device pings
+    notification_filter:
+        - 'z2m: Failed to ping.*'
 ```
 
 To specify the `auth_token` in a different file set e.g. `auth_token: '!secret.yaml auth_token'`, create a file called `secret.yaml` next to `configuration.yaml` with content `auth_token: super-secret-token`.

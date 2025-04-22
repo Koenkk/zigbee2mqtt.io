@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNLDP12LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Light bulb |
-| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, power_outage_memory, linkquality |
+| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, power_outage_memory |
 | Picture | ![Aqara ZNLDP12LM](https://www.zigbee2mqtt.io/images/devices/ZNLDP12LM.png) |
 
 
@@ -102,11 +102,4 @@ Value can be found in the published state on the `power_outage_memory` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 If value equals `true` power outage memory is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

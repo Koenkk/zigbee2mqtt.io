@@ -17,9 +17,9 @@ The watchdog will retry after 1min on first failure, then after 5min on second f
 
 In addition, the following behaviors always apply:
 
--   The watchdog will only trigger on failure after the initial (manual) start is successful.
--   A problem with settings will always ignore the watchdog and stop Z2M.
--   A manual stop/restart (like `CTRL+C`) will ignore the watchdog to comply with user intent.
+- The watchdog will only trigger on failure after the initial (manual) start is successful.
+- A problem with settings will always ignore the watchdog and stop Z2M.
+- A manual stop/restart (like `CTRL+C`) will ignore the watchdog to comply with user intent.
 
 ::: tip TIP
 In non-containerized environments, to handle NodeJS crashes, you will need a dedicated watchdog program on your operating system to allow restarting the Zigbee2MQTT process automatically.

@@ -18,12 +18,18 @@ pageClass: device-page
 | Model | QS-Zigbee-C03  |
 | Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | Curtain/blind motor controller |
-| Exposes | cover (state, position), moving, calibration, motor_reversal, calibration_time, linkquality |
+| Exposes | cover (state, position), moving, calibration, motor_reversal, calibration_time |
 | Picture | ![Lonsonho QS-Zigbee-C03](https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-C03.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+
+Note, that some devices are marked as "CP03" instead of "C03", althoug identical.
+
+_How to reset_
+* Press the reset key (upper right in hole) 5 times until the indicator LED inside the module flashes quickly.
+* Alternatively turn on/off the wired switch for 5 times until the indicator LED inside the module flashes quickly.
 
 _How to use calibration_
 * Activate calibration mode
@@ -73,11 +79,4 @@ Calibration time.
 Value can be found in the published state on the `calibration_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `s`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

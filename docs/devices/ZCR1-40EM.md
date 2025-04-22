@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZCR1-40EM  |
 | Vendor  | [RTX](/supported-devices/#v=RTX)  |
 | Description | Zigbee DIN energy meter |
-| Exposes | switch (state), ac_frequency, energy, power, power_factor, voltage, current, produced_energy, power_reactive, energy_reactive, total_energy, linkquality |
+| Exposes | switch (state), ac_frequency, energy, power, power_factor, voltage, current, produced_energy, power_reactive, energy_reactive, total_energy |
 | Picture | ![RTX ZCR1-40EM](https://www.zigbee2mqtt.io/images/devices/ZCR1-40EM.png) |
 
 
@@ -33,6 +33,8 @@ pageClass: device-page
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `ac_frequency_calibration`: Calibrates the ac_frequency value (absolute offset), takes into effect on next report of device. The value must be a number.
+
+* `ac_frequency_precision`: Number of digits after decimal point for ac_frequency, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
 
@@ -117,11 +119,4 @@ Total consumed and produced energy.
 Value can be found in the published state on the `total_energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

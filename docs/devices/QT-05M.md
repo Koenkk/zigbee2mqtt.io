@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | QT-05M  |
 | Vendor  | [QOTO](/supported-devices/#v=QOTO)  |
 | Description | Solar powered garden watering timer |
-| Exposes | water_flow, last_watering_duration, remaining_watering_time, valve_state, valve_state_auto_shutdown, shutdown_timer, battery, linkquality |
+| Exposes | water_flow, last_watering_duration, remaining_watering_time, valve_state, valve_state_auto_shutdown, shutdown_timer, battery |
 | Picture | ![QOTO QT-05M](https://www.zigbee2mqtt.io/images/devices/QT-05M.png) |
 
 
@@ -80,11 +80,4 @@ Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

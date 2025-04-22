@@ -18,13 +18,18 @@ pageClass: device-page
 | Model | SJCGQ13LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Water leak sensor E1 |
-| Exposes | water_leak, battery, battery_low, voltage, device_temperature, power_outage_count, linkquality |
+| Exposes | water_leak, battery, battery_low, voltage, device_temperature, power_outage_count |
 | Picture | ![Aqara SJCGQ13LM](https://www.zigbee2mqtt.io/images/devices/SJCGQ13LM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Battery
+Uses CR2032 battery.
 
+### Pairing
+Press and hold the reset button by pressing hard on the top of the device (water drop logo) for +- 5 seconds (until the blue light inside the device, under the water drop starts blinking). After this the device will automatically join.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -75,11 +80,4 @@ The unit of this value is `°C`.
 Number of power outages.
 Value can be found in the published state on the `power_outage_count` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

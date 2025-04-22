@@ -18,13 +18,13 @@ pageClass: device-page
 | Model | GL-C-007P  |
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee LED Controller RGBW (pro) |
-| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, power_on_behavior, identify, linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, power_on_behavior, identify |
 | Picture | ![Gledopto GL-C-007P](https://www.zigbee2mqtt.io/images/devices/GL-C-007P.png) |
+| White-label | Gledopto GL-C-007P_mini |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-
 
 ### Pairing
 1. Switch on your device.
@@ -32,8 +32,27 @@ pageClass: device-page
 3. Repeat off/on four times.
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
-### GL-C-001P
-See [GL-C-008P](./GL-C-008P.md#GL-C-001P).
+## Multi-mode 5-in-1 and 3-in-1 devices
+Gledopto produces devices that allow you to select one of up to 5 different LED Controller types with each mode displaying a different [Indicator Light] **color**.
+
+* `RGB+CCT` [GL-C-008P](./GL-C-008P.md) [White]
+* `RGBW` [GL-C-007P](./GL-C-007P.md) [Yellow]
+* `RGB` [GL-C-003P](./GL-C-003P.md) [Blue]
+* `CCT` [GL-C-006P](./GL-C-006P.md) [Green]
+* `Dimmer` [GL-C-009P](./GL-C-009P.md) [Red]
+
+This `GL-C-007P` mode is available as a `modelId` in the following models:
+
+* **GL-C-001P** - Zigbee Pro 5 in 1 Smart LED Controller
+* **GL-C-002P** - Zigbee Pro 5 in 1 LED Controller Mini Ultra Thin
+* **GL-C-011P** - Zigbee Pro 5 in 1 Smart LED Controller DIN Rail
+* **GL-C-201P** - Zigbee Pro+ 5 in 1 Smart LED Controller
+* **GL-C-202P** - Zigbee Pro+ 3 in 1 Smart LED Controller
+* **GL-C-301P** - Zigbee Pro+ 5 in 1 Smart LED Controller Ultra-Mini
+
+You can switch to this `GL-C-007P` mode by short pressing the `Opt` button on the device until the Indicator Light is `Yellow`.
+
+To pair with, or change modes on, Zigbee2MQTT, press the `Reset` button 4 times
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -112,7 +131,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`, `colorloop`, `stop_colorloop`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
+Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
@@ -124,11 +143,4 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
 The possible values are: `identify`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

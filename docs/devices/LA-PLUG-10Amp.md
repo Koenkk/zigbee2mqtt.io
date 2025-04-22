@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | LA-PLUG-10Amp  |
 | Vendor  | [Ynoa](/supported-devices/#v=Ynoa)  |
 | Description | Smart plug Zigbee 3.0 |
-| Exposes | switch (state), power, linkquality |
+| Exposes | switch (state), power |
 | Picture | ![Ynoa LA-PLUG-10Amp](https://www.zigbee2mqtt.io/images/devices/LA-PLUG-10Amp.png) |
 
 
@@ -57,11 +57,4 @@ Instantaneous measured power.
 Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZB-TTS01  |
 | Vendor  | [easyiot](/supported-devices/#v=easyiot)  |
 | Description | This is a Simplified Chinese (GB2312) TTS converter that can convert GB2312 encoded text to speech |
-| Exposes | last_received_status, send_tts, linkquality |
+| Exposes | last_received_status, send_tts |
 | Picture | ![easyiot ZB-TTS01](https://www.zigbee2mqtt.io/images/devices/ZB-TTS01.png) |
 
 
@@ -92,11 +92,4 @@ Please enter text.
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"send_tts": NEW_VALUE}`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

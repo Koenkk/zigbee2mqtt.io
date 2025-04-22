@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SWV  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Zigbee smart water valve |
-| Exposes | flow, battery, switch (state), current_device_status, auto_close_when_water_shortage, cyclic_timed_irrigation, cyclic_quantitative_irrigation, linkquality |
+| Exposes | flow, battery, switch (state), current_device_status, auto_close_when_water_shortage, cyclic_timed_irrigation, cyclic_quantitative_irrigation |
 | Picture | ![SONOFF SWV](https://www.zigbee2mqtt.io/images/devices/SWV.png) |
 
 
@@ -96,11 +96,4 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `total_number` (numeric): Total times of circulating irrigation max value is 100, unit is times
 - `irrigation_capacity` (numeric): Single irrigation capacity max value is 6500, unit is liter
 - `irrigation_interval` (numeric): Time interval between two adjacent irrigation max value is 86400, unit is seconds
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,13 +18,13 @@ pageClass: device-page
 | Model | TGM50-ZB  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Beok wall thermostat |
-| Exposes | lock (state), sensor, climate (system_mode, preset, current_heating_setpoint, running_state, local_temperature, local_temperature_calibration), backlight_mode, frost_protection, max_temperature_limit, temperature_delta, factory_reset, linkquality |
+| Exposes | child_lock, sensor, climate (system_mode, preset, current_heating_setpoint, running_state, local_temperature, local_temperature_calibration), backlight_mode, frost_protection, max_temperature_limit, temperature_delta, factory_reset |
 | Picture | ![Tuya TGM50-ZB](https://www.zigbee2mqtt.io/images/devices/TGM50-ZB.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Pairing
+In power on state, press and hold the '^' key (bottom right key) for 5-8 seconds, the Wi-Fi icon flashes on the thermostat display, and the thermostat enters pairing state.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -32,10 +32,12 @@ pageClass: device-page
 
 ## Exposes
 
-### Child lock (lock)
-The current state of this lock is in the published state under the `child_lock` property (value is `LOCK` or `UNLOCK`).
-To control this lock publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": "LOCK"}` or `{"child_lock": "UNLOCK"}`.
+### Child lock (binary)
+Enables/disables physical input on the device.
+Value can be found in the published state on the `child_lock` property.
 It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Sensor (enum)
 Select temperature sensor to use.
@@ -91,11 +93,4 @@ Value can be found in the published state on the `factory_reset` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset": NEW_VALUE}`.
 If value equals `ON` factory reset is ON, if `OFF` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

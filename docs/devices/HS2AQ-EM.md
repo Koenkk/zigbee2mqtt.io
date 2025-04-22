@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | HS2AQ-EM  |
 | Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Air quality monitor |
-| Exposes | battery, temperature, humidity, pm25, hcho, voc, aqi, pm10, battery_state, linkquality |
+| Exposes | battery, temperature, humidity, pm25, hcho, voc, aqi, pm10, battery_state |
 | Picture | ![HEIMAN HS2AQ-EM](https://www.zigbee2mqtt.io/images/devices/HS2AQ-EM.png) |
 
 
@@ -99,11 +99,4 @@ The unit of this value is `µg/m³`.
 Value can be found in the published state on the `battery_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `not_charging`, `charging`, `charged`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

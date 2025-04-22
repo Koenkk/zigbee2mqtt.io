@@ -18,13 +18,13 @@ pageClass: device-page
 | Model | GL-C-006P  |
 | Vendor  | [Gledopto](/supported-devices/#v=Gledopto)  |
 | Description | Zigbee LED Controller WW/CW (pro) |
-| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, identify, linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior, identify |
 | Picture | ![Gledopto GL-C-006P](https://www.zigbee2mqtt.io/images/devices/GL-C-006P.png) |
+| White-label | Gledopto GL-C-006P_mini, Gledopto GL-C-003P_1, Gledopto GL-C-203P |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
-
 
 ### Pairing
 1. Switch on your device.
@@ -32,8 +32,42 @@ pageClass: device-page
 3. Repeat off/on four times.
 4. Reset is done when the device is switched on in the fifth time and the light stays on after blinking 4 times
 
-### GL-C-001P
-See [GL-C-008P](./GL-C-008P.md#GL-C-001P).
+## Multi-mode 5-in-1 devices
+Gledopto produces devices that allow you to select one of up to 5 different LED Controller types with each mode displaying a different [Indicator Light] **color**.
+
+* `RGB+CCT` [GL-C-008P](./GL-C-008P.md) [White]
+* `RGBW` [GL-C-007P](./GL-C-007P.md) [Yellow]
+* `RGB` [GL-C-003P](./GL-C-003P.md) [Blue]
+* `CCT` [GL-C-006P](./GL-C-006P.md) [Green]
+* `Dimmer` [GL-C-009P](./GL-C-009P.md) [Red]
+
+This `GL-C-006P` mode is available as a `modelId` in the following models:
+
+* **GL-C-001P** - Zigbee Pro 5 in 1 Smart LED Controller
+* **GL-C-002P** - Zigbee Pro 5 in 1 LED Controller Mini Ultra Thin
+* **GL-C-011P** - Zigbee Pro 5 in 1 Smart LED Controller DIN Rail
+* **GL-C-201P** - Zigbee Pro+ 5 in 1 Smart LED Controller
+* **GL-C-301P** - Zigbee Pro+ 5 in 1 Smart LED Controller Ultra-Mini
+
+You can switch to this `GL-C-006P` mode by short pressing the `Opt` button on the device until the Indicator Light is `Green`.
+
+To pair with, or change modes on, Zigbee2MQTT, press the `Reset` button 4 times
+
+## Dual-mode 2-in-1 devices
+Gledopto produces devices that allow you to select one of up to 2 different LED Controller types with each mode displaying a different [Indicator Light] **status**.
+
+* `CCT` [GL-C-006P](./GL-C-006P.md) [Indicator Light Off]
+* `Dimmer` [GL-C-009P](./GL-C-009P.md) [Indicator Light On]
+
+This `GL-C-006P` mode is available as a `modelId` in the following models:
+* **GL-C-003P**† - Zigbee Pro 3-wire/2-wire 2 in 1 CCT/DIM LED Controller
+* **GL-C-203P** - Zigbee Pro+ 3-wire/2-wire 2 in 1 CCT/DIM LED Controller
+
+You can switch to this `GL-C-009P` mode by short pressing the `Reset` button on the device until the Indicator Light is `Off`.
+
+To pair with, or change modes on, Zigbee2MQTT, long press the `Reset` button for more that 2 seconds.
+
+† Note that this **GL-C-003P** Model is not an RGB Controller and not capable of being selected as an `RGB` controller or sending the `GL-C-003P` ModelId to Zigbee2MQTT. See [GL-C-003P](./GL-C-003P.md) for devices that can do this.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -100,7 +134,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
 ### Power-on behavior (enum)
-Controls the behavior when the device is powered on after power loss. If you get an `UNSUPPORTED_ATTRIBUTE` error, the device does not support it..
+Controls the behavior when the device is powered on after power loss.
 Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
@@ -112,11 +146,4 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
 The possible values are: `identify`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

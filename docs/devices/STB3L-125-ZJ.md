@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | STB3L-125-ZJ  |
 | Vendor  | [SUTON](/supported-devices/#v=SUTON)  |
 | Description | Zigbee DIN RCBO energy meter |
-| Exposes | switch (state), energy, fault, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, temperature, leakage_test, over_current_breaker, over_current_threshold, over_voltage_breaker, over_voltage_threshold, under_voltage_breaker, under_voltage_threshold, insufficient_balance_breaker, insufficient_balance_threshold, overload_breaker, overload_threshold, leakage_breaker, leakage_threshold, high_temperature_breaker, high_temperature_threshold, linkquality |
+| Exposes | switch (state), energy, fault, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, temperature, leakage_test, over_current_breaker, over_current_threshold, over_voltage_breaker, over_voltage_threshold, under_voltage_breaker, under_voltage_threshold, insufficient_balance_breaker, insufficient_balance_threshold, overload_breaker, overload_threshold, leakage_breaker, leakage_threshold, high_temperature_breaker, high_temperature_threshold |
 | Picture | ![SUTON STB3L-125-ZJ](https://www.zigbee2mqtt.io/images/devices/STB3L-125-ZJ.png) |
 | White-label | SUTON STB3L-125/ZJ |
 
@@ -232,11 +232,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"high_temperature_threshold": NEW_VALUE}`.
 The minimal value is `40` and the maximum value is `100`.
 The unit of this value is `°C`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

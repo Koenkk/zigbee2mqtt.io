@@ -18,13 +18,16 @@ pageClass: device-page
 | Model | ZC-HM  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Carbon monoxide alarm |
-| Exposes | carbon_monoxide, co, self_test_result, battery, silence, linkquality |
+| Exposes | carbon_monoxide, co, self_test_result, battery, silence |
 | Picture | ![Moes ZC-HM](https://www.zigbee2mqtt.io/images/devices/ZC-HM.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+### Pairing
 
+To enable pairing, wait for the device led to stop, then press the device button 3 times, led should start blinking green while in pairing mode.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -68,11 +71,4 @@ Value can be found in the published state on the `silence` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"silence": NEW_VALUE}`.
 If value equals `true` silence is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

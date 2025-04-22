@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | 8A-SS-BA-H0  |
 | Vendor  | [Leedarson](/supported-devices/#v=Leedarson)  |
 | Description | Motion Sensor |
-| Exposes | battery, occupancy, linkquality |
+| Exposes | battery, occupancy |
 | Picture | ![Leedarson 8A-SS-BA-H0](https://www.zigbee2mqtt.io/images/devices/8A-SS-BA-H0.png) |
 
 
@@ -44,11 +44,4 @@ Indicates whether the device detected occupancy.
 Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

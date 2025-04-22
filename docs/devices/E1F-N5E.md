@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | E1F-N5E  |
 | Vendor  | [Sengled](/supported-devices/#v=Sengled)  |
 | Description | Element color plus E12 |
-| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), power, energy, linkquality |
+| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), power, energy |
 | Picture | ![Sengled E1F-N5E](https://www.zigbee2mqtt.io/images/devices/E1F-N5E.png) |
 
 
@@ -109,11 +109,4 @@ Value can be found in the published state on the `energy` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

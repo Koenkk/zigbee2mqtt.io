@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SGPHM-I1  |
 | Vendor  | [GS](/supported-devices/#v=GS)  |
 | Description | Propane gas sensor |
-| Exposes | gas, linkquality |
+| Exposes | gas |
 | Picture | ![GS SGPHM-I1](https://www.zigbee2mqtt.io/images/devices/SGPHM-I1.png) |
 
 
@@ -37,11 +37,4 @@ Indicates whether the device detected gas.
 Value can be found in the published state on the `gas` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` gas is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

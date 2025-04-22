@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | AU-A1ZB110  |
 | Vendor  | [Aurora Lighting](/supported-devices/#v=Aurora%20Lighting)  |
 | Description | AOne 1-10V in-line dimmer |
-| Exposes | identify, light (state, brightness), effect, linkquality |
+| Exposes | identify, light (state, brightness), effect |
 | Picture | ![Aurora Lighting AU-A1ZB110](https://www.zigbee2mqtt.io/images/devices/AU-A1ZB110.png) |
 
 
@@ -86,11 +86,4 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
 The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

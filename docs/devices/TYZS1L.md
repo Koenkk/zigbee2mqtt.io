@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TYZS1L  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Led strip controller HSB |
-| Exposes | light (state, color_hs), linkquality |
+| Exposes | light (state, color_hs) |
 | Picture | ![Tuya TYZS1L](https://www.zigbee2mqtt.io/images/devices/TYZS1L.png) |
 
 
@@ -56,11 +56,4 @@ This light supports the following features: `state`, `color_hs`.
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
 Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

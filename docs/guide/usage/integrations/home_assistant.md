@@ -12,8 +12,14 @@ This allows Zigbee2MQTT to automatically add devices to Home Assistant.
 
 To achieve the best possible integration (including MQTT discovery):
 
--   In your **Zigbee2MQTT** `configuration.yaml` set `homeassistant: true`
--   Enable the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/) in Home Assistant
+- In your **Zigbee2MQTT** `configuration.yaml` set:
+
+    ```yaml
+    homeassistant:
+        enabled: true
+    ```
+
+- Enable the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/) in Home Assistant
 
 ## Device/group page
 
@@ -35,63 +41,70 @@ without having to restart Home Assistant. It also makes it possible to show whic
 
 The device specific configuration allows you to modify the discovery payload. Here you can also prevent a device from being discovered. See [Device specific configuration](../../configuration/devices-groups.html#specific-device-options) for the available options.
 
-## Responding to button clicks
+## Responding to button actions
 
-To respond to button clicks (e.g. WXKG01LM) you can use one of the following three Home Assistant configurations.
+To respond to button actions you can use one of the following Home Assistant configurations.
 
 ### Via MQTT device trigger (recommended)
 
-[MQTT device trigger](https://www.home-assistant.io/integrations/device_trigger.mqtt/) is the recommended way to respond to button clicks.
-The MQTT device triggers are discovered by Zigbee2MQTT **once the event is triggered on the device at least once**.
+The [MQTT device triggers](https://www.home-assistant.io/integrations/device_trigger.mqtt/) are discovered by Zigbee2MQTT **once the event is triggered on the device at least once**.
 
 ```yaml
 automation:
     - alias: Respond to button click
-      trigger:
-          - device_id: ad44cabee4c646f493814306aa6446e1
-            discovery_id: 0x000b57fffecb472d action_arrow_left_click
+      triggers:
+          - trigger: device
             domain: mqtt
-            platform: device
-            subtype: arrow_left_click
+            device_id: ad44cabee4c646f493814306aa6446e1
             type: action
-      action:
-          entity_id: light.my_bulb_light
-          service: light.toggle
+            subtype: arrow_left_click
+      actions:
+          - action: light.toggle
+            target:
+                entity_id: light.bedroom
 ```
 
-If you only plan to use this and want to disable the _Via Home Assistant entity_ integration below, set `homeassistant: {legacy_triggers: false}` (see [Configuration](../../configuration/homeassistant.md) for more info).
+### Via Home Assistant `event` entity (experimental)
 
-### Via Home Assistant entity
+Note: `event` entity is **experimental** and may **break** in the future.
 
-This method work by responding to the state change event of a sensor.
+This method work by responding to the state change of an [`event` entity](https://www.home-assistant.io/integrations/event). The specific event can be targeted via the `event_type` attribute. Until the implementation becomes finalized, the event types and additional attributes are subject to change and you have to enable `event` entities explicitly by setting `homeassistant: {experimental_event_entities: true}` (see [Configuration](../../configuration/homeassistant.md) for more info).
 
 ```yaml
 automation:
     - alias: Respond to button click
+      triggers:
+          - trigger: state
+            entity_id: event.my_switch_click
+            to: ~
+      conditions:
+          - condition: template
+            value_template: "{{trigger.from_state.state != 'unavailable'}}"
+          - condition: template
+            value_template: "{{trigger.to_state.attributes.event_type == 'single'}}"
+      actions:
+          - action: light.toggle
+            target:
+                entity_id: light.bedroom
+```
+
+### Via Home Assistant action sensor (deprecated)
+
+This method works by responding to the state change event of a sensor. For this `homeassistant.legacy_action_sensor: true` needs to be set in your `configuration.yaml`. See the [docs](../../configuration/homeassistant.md) for more info.
+
+::: warning
+Note that this feature is deprecated and will be removed in the future. It's recommended to use the MQTT device trigger instead.
+:::
+
+```yaml
+automation:
+    - alias: Respond to button action
       trigger:
           platform: state
-          entity_id: sensor.my_switch_click
+          entity_id: sensor.my_switch_action
           to: 'single'
       action:
           entity_id: light.my_bulb_light
-          service: light.toggle
-```
-
-### Via MQTT
-
-As an alternative to the above way of integrating, you can also listen to MQTT topics.
-
-```yaml
-automation:
-    - alias: Respond to button clicks
-      trigger:
-          platform: mqtt
-          topic: 'zigbee2mqtt/<FRIENDLY_NAME'
-      condition:
-          condition: template
-          value_template: '{{ "single" == trigger.payload_json.click }}'
-      action:
-          entity_id: light.bedroom
           service: light.toggle
 ```
 
@@ -288,7 +301,7 @@ automation:
             metadata: {}
             data:
                 options: |
-                    {%- set find_integration = 'mqtt' %} 
+                    {%- set find_integration = 'mqtt' %}
                      {%- set devices = states | map(attribute='entity_id') | map('device_id') | unique | reject('eq',None) | list %}
                      {%- set ns = namespace(entities = []) %}
                      {%- for device in devices if device_attr(device, 'identifiers') %}
@@ -325,7 +338,6 @@ entities:
     - type: divider
     - entity: switch.zigbee2mqtt_bridge_permit_join
     - entity: input_number.zigbee2mqtt_join_minutes
-    - entity: sensor.zigbee2mqtt_bridge_permit_join_timeout
     - type: divider
     - entity: input_select.zigbee2mqtt_old_name_select
     - entity: input_text.zigbee2mqtt_new_name

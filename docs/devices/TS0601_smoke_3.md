@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_smoke_3  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Photoelectric smoke detector |
-| Exposes | smoke, battery_state, linkquality |
+| Exposes | smoke, battery_state |
 | Picture | ![Tuya TS0601_smoke_3](https://www.zigbee2mqtt.io/images/devices/TS0601_smoke_3.png) |
 | White-label | KnockautX SMOAL024 |
 
@@ -44,11 +44,4 @@ State of the battery.
 Value can be found in the published state on the `battery_state` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `low`, `medium`, `high`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

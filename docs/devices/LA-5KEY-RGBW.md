@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | LA-5KEY-RGBW  |
 | Vendor  | [Ynoa](/supported-devices/#v=Ynoa)  |
 | Description | 5 key control for RGBW light |
-| Exposes | battery, battery_low, action, linkquality |
+| Exposes | battery, battery_low, action |
 | Picture | ![Ynoa LA-5KEY-RGBW](https://www.zigbee2mqtt.io/images/devices/LA-5KEY-RGBW.png) |
 
 
@@ -60,11 +60,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `brightness_move_to_level`, `color_temperature_move`, `color_move`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

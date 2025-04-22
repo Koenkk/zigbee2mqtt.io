@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZY_HPS01  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | mmWave radar 5.8GHz |
-| Exposes | illuminance, occupancy, presence_timeout, move_sensitivity, move_minimum_range, move_maximum_range, breath_sensitivity, breath_minimum_range, breath_maximum_range, linkquality |
+| Exposes | illuminance, occupancy, presence_timeout, move_sensitivity, move_minimum_range, move_maximum_range, breath_sensitivity, breath_minimum_range, breath_maximum_range |
 | Picture | ![Tuya ZY_HPS01](https://www.zigbee2mqtt.io/images/devices/ZY_HPS01.png) |
 
 
@@ -38,7 +38,7 @@ pageClass: device-page
 ## Exposes
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
@@ -104,11 +104,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"breath_maximum_range": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `cm`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 
