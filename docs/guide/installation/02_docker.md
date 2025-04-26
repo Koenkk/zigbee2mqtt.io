@@ -89,7 +89,7 @@ $ sudo docker run \
    --user 1001:1001 \
    --group-add dialout \
    -e TZ=Europe/Amsterdam \
-   gchr.io/koenkk/zigbee2mqtt
+   ghcr.io/koenkk/zigbee2mqtt
 ```
 
 **Parameters explanation:**

@@ -45,7 +45,7 @@ Device can be set in two modes : COMMAND and EVENT (Current Mode is published on
 | Rotate Right | brightness_step_up|
 | Single Click | toggle|
 | Push+Hold > 3s | hue_move|
-| Release | hue_Stop|
+| Release | hue_stop|
 | Push+Hold and Rotate Left | color_temperature_step_down|
 | Push+Hold and Rotate Right | color_temperature_step_up|
 
@@ -83,7 +83,7 @@ simulated_brightness:
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `toggle`, `brightness_step_up`, `brightness_step_down`, `color_temperature_step_up`, `color_temperature_step_down`, `saturation_move`, `hue_move`, `hue_stop`, `single`, `double`, `hold`, `rotate_left`, `rotate_right`.
+The possible values are: `toggle`, `brightness_step_up`, `brightness_step_down`, `color_temperature_step_up`, `color_temperature_step_down`, `hue_move`, `hue_stop`, `single`, `double`, `hold`, `rotate_left`, `rotate_right`.
 
 ### Action step size (numeric)
 Value can be found in the published state on the `action_step_size` property.
