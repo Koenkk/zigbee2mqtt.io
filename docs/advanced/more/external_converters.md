@@ -20,7 +20,7 @@ The easiest way to develop is by using the [external converter development envir
 
 Example:
 
-File: `data/external_converters/my-first-converter.mjs`
+File: `data/external_converters/my-first-converter.js`
 
 ```js
 import {temperature, humidity, battery} from 'zigbee-herdsman-converters/lib/modernExtend';
