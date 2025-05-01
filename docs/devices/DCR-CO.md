@@ -1,7 +1,7 @@
 ---
-title: "Tuya TS0601_smart_CO_air_box control via MQTT"
-description: "Integrate your Tuya TS0601_smart_CO_air_box via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-03-01T09:06:16
+title: "Tuya DCR-CO control via MQTT"
+description: "Integrate your Tuya DCR-CO via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-05-01T17:59:09
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya TS0601_smart_CO_air_box
+# Tuya DCR-CO
 
 |     |     |
 |-----|-----|
-| Model | TS0601_smart_CO_air_box  |
+| Model | DCR-CO  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart air box (carbon monoxide) |
 | Exposes | carbon_monoxide, co |
-| Picture | ![Tuya TS0601_smart_CO_air_box](https://www.zigbee2mqtt.io/images/devices/TS0601_smart_CO_air_box.png) |
+| Picture | ![Tuya DCR-CO](https://www.zigbee2mqtt.io/images/devices/DCR-CO.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -41,7 +41,7 @@ pageClass: device-page
 Indicates if CO (carbon monoxide) is detected.
 Value can be found in the published state on the `carbon_monoxide` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` carbon monoxide is ON, if `false` OFF.
+If value equals `ON` carbon monoxide is ON, if `OFF` OFF.
 
 ### CO (numeric)
 The measured CO (carbon monoxide) value.

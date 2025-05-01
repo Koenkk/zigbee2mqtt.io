@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | FUT106ZR  |
 | Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
-| Description | GU10 bulb |
+| Description | GU10 RGB+CCT |
 | Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior |
 | Picture | ![MiBoxer FUT106ZR](https://www.zigbee2mqtt.io/images/devices/FUT106ZR.png) |
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SDM02V1  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart energy monitor for 2P+N system |
-| Exposes | voltage_l1, voltage_l2, power_l1, power_l2, current_l1, current_l2, energy, produced_energy, power_factor, power, ac_frequency, energy_l1, energy_l2, energy_produced_l1, energy_produced_l2, power_factor_l1, power_factor_l2 |
+| Exposes | voltage_l1, voltage_l2, power_l1, power_l2, current_l1, current_l2, energy, produced_energy, power_factor, power, ac_frequency, energy_l1, energy_l2, energy_produced_l1, energy_produced_l2, power_factor_l1, power_factor_l2, update_frequency |
 | Picture | ![Tuya SDM02V1](https://www.zigbee2mqtt.io/images/devices/SDM02V1.png) |
 
 
@@ -148,4 +148,13 @@ Instantaneous measured power factor (phase L2).
 Value can be found in the published state on the `power_factor_l2` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
+
+### Update frequency (numeric)
+Update frequency.
+Value can be found in the published state on the `update_frequency` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"update_frequency": NEW_VALUE}`.
+The minimal value is `5` and the maximum value is `3600`.
+The unit of this value is `s`.
+Besides the numeric values the following values are accepted: `default`.
 

@@ -91,8 +91,8 @@ importers:
         specifier: 5.99.7
         version: 5.99.7
       zigbee-herdsman-converters:
-        specifier: 23.20.1
-        version: 23.20.1
+        specifier: 23.36.0
+        version: 23.36.0
 
 packages:
 
@@ -3452,14 +3452,14 @@ packages:
     resolution: {integrity: sha512-GQHQqAopRhwU8Kt1DDM8NjibDXHC8eoh1erhGAJPEyveY9qqVeXvVikNKrDz69sHowPMorbPUrH/mx8c50eiBQ==}
     engines: {node: '>=18'}
 
-  zigbee-herdsman-converters@23.20.1:
-    resolution: {integrity: sha512-cNlOnZcY3Hyqhbd28llqzaJzRMrtjk/CxbXBK2ADcJFztARpx1L2h5ySdvcrzLvUXGlWvJXNRy5M7larwDUvZg==}
+  zigbee-herdsman-converters@23.36.0:
+    resolution: {integrity: sha512-gaNFt8YmqYVzeqOrH2cdyzZ8Ah0raeO+CY8Jc7gmhD2X030o76Qai2SFryQEuMAkbyUkI3bKRHWk1Uz84z+RtQ==}
 
-  zigbee-herdsman@3.5.1:
-    resolution: {integrity: sha512-XhRZSiJ40KibUyh9zxRJKInWoRjsktD+YHFjUKZ7graKhHJkKbqePl37Z+cQbCEfy03px5lmwIokf01OW4JOPQ==}
+  zigbee-herdsman@4.0.0:
+    resolution: {integrity: sha512-DdNOW8yOvS+1t5VX3Qi4FurF/jryDST4wju73JcvZ7rkEPXSfD+bhLprUX4a0QOP26DDYmDKVpygHBYXk1NMCA==}
 
-  zigbee-on-host@0.1.10:
-    resolution: {integrity: sha512-RP1LNZynW4C2y79W5qihw5/NNV8lVmmu4wAr7Kitj3isDFOAt7RXX2eiDrz98wiLmbFwBIOhfArrG/Pb/jaZIA==}
+  zigbee-on-host@0.1.11:
+    resolution: {integrity: sha512-xtA5xlK6DyQtI/yH8P86W2X+RYh6hI9BtB7Eu/drwWGFMSbhHA28CQCbllUkX+j6puL0xJZoy8Qwi8f/i6a1LQ==}
     engines: {node: '>=20.17.0'}
 
   zwitch@2.0.4:
@@ -7157,16 +7157,16 @@ snapshots:
 
   yoctocolors@2.1.1: {}
 
-  zigbee-herdsman-converters@23.20.1:
+  zigbee-herdsman-converters@23.36.0:
     dependencies:
       buffer-crc32: 1.0.0
       iconv-lite: 0.6.3
       semver: 7.7.1
-      zigbee-herdsman: 3.5.1
+      zigbee-herdsman: 4.0.0
     transitivePeerDependencies:
       - supports-color
 
-  zigbee-herdsman@3.5.1:
+  zigbee-herdsman@4.0.0:
     dependencies:
       '@serialport/bindings-cpp': 13.0.1
       '@serialport/parser-delimiter': 13.0.0
@@ -7176,10 +7176,10 @@ snapshots:
       fast-deep-equal: 3.1.3
       mixin-deep: 2.0.1
       slip: 1.0.2
-      zigbee-on-host: 0.1.10
+      zigbee-on-host: 0.1.11
     transitivePeerDependencies:
       - supports-color
 
-  zigbee-on-host@0.1.10: {}
+  zigbee-on-host@0.1.11: {}
 
   zwitch@2.0.4: {}
