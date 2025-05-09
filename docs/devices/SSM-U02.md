@@ -24,6 +24,12 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+### Pairing
+#### If you have access to the device
+Long press the button for 8S: reset/connect to network.
+
+#### With connected switch
+Turn on and off 5 times and the device will reset.
 
 ### Router functionality
 This device **does not** work as a Zigbee router.
