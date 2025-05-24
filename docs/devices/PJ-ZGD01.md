@@ -71,7 +71,7 @@ The minimal value is `0` and the maximum value is `86400`.
 The unit of this value is `s`.
 
 ### Status (enum)
-Indicates run time alarm, door open alarm or noraml status, will not retunr to normal until door is triggered again.
+Indicates run time alarm, door open alarm or normal status, will not return to normal until door is triggered again.
 Value can be found in the published state on the `status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `Open Time Alarm`, `Run Time Alarm`, `Normal`.

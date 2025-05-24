@@ -25,6 +25,10 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
+### Pairing
+Pair the device to Zigbee2MQTT by resetting it:
+1. Remove the batteries and re-insert them.
+2. When the “Wiser” startup screen appears, press the + and - buttons at the same time for 20 seconds until the unit restarts.
 
 ### Device info
 This device is a

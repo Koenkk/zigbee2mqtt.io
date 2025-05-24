@@ -88,7 +88,7 @@ The minimal value is `10` and the maximum value is `100`.
 The unit of this value is `%`.
 
 ### Entry distance (numeric)
-Dectection distance when unoccupied.
+Detection distance when unoccupied.
 Value can be found in the published state on the `entry_distance` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"entry_distance": NEW_VALUE}`.
