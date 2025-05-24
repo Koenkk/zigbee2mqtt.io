@@ -25,7 +25,8 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
 This device does not act as a Zigbee router, even when the optional neutral connection is used. In addition the vendor does not provide a firmware update to enable the router functionality.
-Pairing.
+
+### Pairing
 
 Press and hold the _left_ switch for 7 seconds, until the indicator on the switch flashes fast. After about 3 seconds pairing should be complete.
 
