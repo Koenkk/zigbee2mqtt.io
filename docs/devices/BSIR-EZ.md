@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | BSIR-EZ  |
 | Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Outdoor siren |
-| Exposes | alarm_state, light_delay, siren_delay, siren_duration, light_duration, siren_volume, siren_and_light, power_source, warning, test, tamper, battery, voltage, battery_low, ac_status |
+| Exposes | alarm_state, light_delay, siren_delay, siren_duration, light_duration, siren_volume, siren_and_light, power_source, warning, test, battery, voltage, ac_status, alarm, tamper, battery_low |
 | Picture | ![Bosch BSIR-EZ](https://www.zigbee2mqtt.io/images/devices/BSIR-EZ.png) |
 
 
@@ -102,12 +102,6 @@ Value can be found in the published state on the `test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` test is ON, if `false` OFF.
 
-### Tamper (binary)
-Indicates whether the device is tampered.
-Value can be found in the published state on the `tamper` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` tamper is ON, if `false` OFF.
-
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
@@ -121,15 +115,27 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Battery low (binary)
-Indicates if the battery of this device is almost empty.
-Value can be found in the published state on the `battery_low` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` battery low is ON, if `false` OFF.
-
 ### Ac status (binary)
 Is the device plugged in.
 Value can be found in the published state on the `ac_status` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` ac status is ON, if `false` OFF.
+
+### Alarm (binary)
+Indicates whether the alarm is triggered.
+Value can be found in the published state on the `alarm` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` alarm is ON, if `false` OFF.
+
+### Tamper (binary)
+Indicates whether the device is tampered.
+Value can be found in the published state on the `tamper` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` tamper is ON, if `false` OFF.
+
+### Battery low (binary)
+Indicates whether the battery of the device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery low is ON, if `false` OFF.
 

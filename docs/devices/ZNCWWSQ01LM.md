@@ -28,6 +28,8 @@ pageClass: device-page
 ### Pairing
 
 To put the device in pairing mode, hold the reset button for 5 seconds. The LED light should blink quickly and it makes a beep sound once paired.
+
+Some users required waiting until the pet feeder performs two audible beeps before turning pairing on in z2m for the device to join the mesh.
 <!-- Notes END: Do not edit below this line -->
 
 

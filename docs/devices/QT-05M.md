@@ -45,7 +45,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `sec`.
 
 ### Remaining watering time (numeric)
-Remaning watering time (for auto shutdown). Updates every minute, and every 10s in the last minute..
+Remaining watering time (for auto shutdown). Updates every minute, and every 10s in the last minute..
 Value can be found in the published state on the `remaining_watering_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `sec`.
