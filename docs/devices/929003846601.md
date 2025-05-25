@@ -1,4 +1,2 @@
 <!-- Notes BEGIN -->
->> ## Notes
-...
->> <!-- Notes END -->
+<!-- Notes END -->
