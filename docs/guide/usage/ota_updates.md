@@ -42,6 +42,10 @@ ota:
     disable_automatic_update_check: true
 ```
 
+:::tip TIP
+Disabling automatic update checks does not disable [scheduling](#scheduling-update-on-next-device-request).
+:::
+
 ## Manually check if an update is available
 
 To check if an upgrade is available for your device send a message to `zigbee2mqtt/bridge/request/device/ota_update/check` with payload `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device. Example; request: `{"id": "my_remote"}` or `my_remote`, response: `{"data":{"id": "my_remote","update_available":true},"status":"ok"}`. For battery powered end-devices you may need to trigger them by e.g. pushing a button right before checking for an OTA.
@@ -61,6 +65,25 @@ An update typically takes 10-20 minutes (although some devices may take a lot lo
 ### Downgrade
 
 Same as above but send the message to `zigbee2mqtt/bridge/request/device/ota_update/update/downgrade` instead.
+
+### Scheduling update on next device request
+
+:::tip TIP
+This can help for battery-powered devices that will usually fail to respond to [manual update requests](#update-firmware) unless physically woken up right before triggering.
+:::
+
+You can schedule an update for when the device next requests a check for OTA update.
+Send a message to `zigbee2mqtt/bridge/request/device/ota_update/schedule` with payload `{"id": "deviceID"}` or `deviceID` where deviceID can be the `ieee_address` or `friendly_name` of the device, example request: `{"id": "my_remote"}` or `my_remote`. The same applies for downgrade with topic `zigbee2mqtt/bridge/request/device/ota_update/schedule/downgrade`.
+
+To unschedule, send the same payload, but with the topic `zigbee2mqtt/bridge/request/device/ota_update/unschedule`.
+
+Any new schedule request for the same device will automatically unschedule the previous (if any). For e.g. sending a downgrade schedule request while an upgrade is already scheduled will result in downgrade being scheduled, and upgrade being unscheduled.
+
+Any [manual update request](#update-firmware) will automatically unschedule any existing schedule for the device.
+
+If a scheduled update fails, it will be automatically rescheduled (after the failure has been _effectively_ reported).
+
+If no image is available when a scheduled update triggers, the device is informed of that fact and the scheduling is simply removed.
 
 ## Local OTA index and firmware files
 

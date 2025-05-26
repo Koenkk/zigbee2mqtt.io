@@ -235,7 +235,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `previous`, `off`, `on`, `infinite`.
 
 ### Enable nc command (binary)
-Define the output relay as Normaly close.
+Define the output relay as Normally close.
 Value can be found in the published state on the `enable_nc_command` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_nc_command": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_nc_command": NEW_VALUE}`.
@@ -267,7 +267,7 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"blin
 - `do_periodic_cycle` (binary): If set to true the blinking will be “infinite” allowed values: `true` or `false`
 
 ### Deaf blink command (composite)
-Start a deaf sequene on a device only if the attribute “eDeaf” is set to Enable.
+Start a deaf sequence on a device only if the attribute “eDeaf” is set to Enable.
 Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"deaf_blink_prop": {"blink_amount": VALUE, "blink_on_time": VALUE, "sequence_amount": VALUE, "sequence_of_blinks": VALUE}}`
 - `blink_amount` (numeric): If defined will force the number of blink to be done during one sequence (only for this order) if not the device will use its own value 
 - `blink_on_time` (numeric): If defined will force the blink’s “on time” (only for this order) if not the device will use its own value 
@@ -506,7 +506,7 @@ The possible values are: `relaunch_ble_advert`.
 
 ### Input mode (enum)
 Indicate how the input should be handle:
-        - 0 -> Unknow
+        - 0 -> Unknown
         - 1 -> Push button
         - 2 -> Switch
         - 3 -> Relay

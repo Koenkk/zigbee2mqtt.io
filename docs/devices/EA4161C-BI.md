@@ -20,7 +20,6 @@ pageClass: device-page
 | Description | Single-phase multifunction energy meter (DIN Module) |
 | Exposes | current, power, voltage, energy, meter_id |
 | Picture | ![Tuya EA4161C-BI](https://www.zigbee2mqtt.io/images/devices/EA4161C-BI.png) |
-| White-label | XOCA DAC4121C |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

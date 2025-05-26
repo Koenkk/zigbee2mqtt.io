@@ -63,6 +63,7 @@ The following Zigbee routers have already been confirmed to support (at least so
 | [IKEA LED2103G5](../../devices/LED2103G5.md)                                        |    Y     |    Y    |    Y    |
 | [IKEA LED2109G6](../../devices/LED2109G6.md)                                        |    Y     |    Y    |    Y    |
 | [IKEA LED2107C4](../../devices/LED2107C4.md)                                        |    Y     |    N    |    Y    |
+| [IKEA LED2110R3](../../devices/LED2110R3.md)                                        |    Y     |    Y    |    Y    |
 | [Innr RB 249 T](../../devices/RB_249_T.md)                                          |    Y     |    N    |    Y    |
 | [Innr RB 286 C](../../devices/RB_286_C.md)                                          |    Y     |    N    |    Y    |
 | [Philips 1742930P7](../../devices/1742930P7.md)                                     |    Y     |    N    |    Y    |
