@@ -1,7 +1,7 @@
 ---
 title: "Shelly S4SW-001P8EU control via MQTT"
 description: "Integrate your Shelly S4SW-001P8EU via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2025-05-01T17:56:32
 pageClass: device-page
 ---
 
