@@ -15,4 +15,4 @@ updates:
               patterns:
                   - '*'
       commit-message:
-        prefix: fix(ignore)
+          prefix: fix(ignore)
