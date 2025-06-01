@@ -58,11 +58,12 @@ The original frontend.
 ![Frontend](../../images/frontend.png)
 Details: [https://github.com/nurikk/zigbee2mqtt-frontend](https://github.com/nurikk/zigbee2mqtt-frontend)
 
-###### zigbee2mqtt-windfront
+###### Experimental: zigbee2mqtt-windfront
 
 A remake of the original frontend with new code, new design, new features...
 ![WindFront](../../images/windfront.png)
 Details: [https://github.com/Nerivec/zigbee2mqtt-windfront](https://github.com/Nerivec/zigbee2mqtt-windfront)
+Feedback can be provided in [#27564](https://github.com/Koenkk/zigbee2mqtt/discussions/27564).
 
 ## Nginx proxy configuration
 
