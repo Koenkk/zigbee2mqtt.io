@@ -1,7 +1,7 @@
 ---
 title: "Bacchus Duck Pool Thermometer control via MQTT"
 description: "Integrate your Bacchus Duck Pool Thermometer via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-05-31T11:45:45.868Z
+addedAt: 2025-05-31T11:45:45
 pageClass: device-page
 ---
 

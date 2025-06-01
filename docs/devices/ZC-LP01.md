@@ -1,7 +1,7 @@
 ---
 title: "Moes ZC-LP01 control via MQTT"
 description: "Integrate your Moes ZC-LP01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2025-06-01T17:54:42
 pageClass: device-page
 ---
 

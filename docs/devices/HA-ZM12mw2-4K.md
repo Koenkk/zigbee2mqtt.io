@@ -1,7 +1,7 @@
 ---
 title: "Halemeier HA-ZM12mw2-4K control via MQTT"
 description: "Integrate your Halemeier HA-ZM12mw2-4K via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-05-31T11:45:45.929Z
+addedAt: 2025-05-31T11:45:45
 pageClass: device-page
 ---
 

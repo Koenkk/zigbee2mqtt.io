@@ -1,7 +1,7 @@
 ---
 title: "Qingping CGG1 control via MQTT"
 description: "Integrate your Qingping CGG1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-05-31T11:45:46.289Z
+addedAt: 2025-05-31T11:45:46
 pageClass: device-page
 ---
 

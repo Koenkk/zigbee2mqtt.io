@@ -1,7 +1,7 @@
 ---
 title: "Tuya TS0601_water_switch control via MQTT"
 description: "Integrate your Tuya TS0601_water_switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2025-06-01T17:54:42
 pageClass: device-page
 ---
 
