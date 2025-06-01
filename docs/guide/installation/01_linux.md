@@ -105,9 +105,6 @@ Zigbee2MQTT can be stopped by pressing `CTRL + C`.
 To run Zigbee2MQTT as daemon (in background) and start it automatically on boot we will run Zigbee2MQTT with systemctl.
 
 ```bash
-# Install dependencies
-sudo apt-get install -y g++ make libsystemd-dev
-
 # Create a systemctl configuration file for Zigbee2MQTT
 sudo nano /etc/systemd/system/zigbee2mqtt.service
 ```
