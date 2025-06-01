@@ -31,7 +31,6 @@ To do this you must download the Aqara Home app and sign up.   The device should
 The device will page will state that the current protocol is Thread but ignore the button at the bottom and instead click the link to switch to Zigbee Protocol.
 
 Once updated the device should be in pairing mode and can be added.   If it fails to add hold the reset button on the back until the signal strength bar starts flashing and the device will re-enter pairing mode.
-
 <!-- Notes END: Do not edit below this line -->
 
 

@@ -1,6 +1,6 @@
 ---
-title: "Neo NAS-AB02B0 control via MQTT"
-description: "Integrate your Neo NAS-AB02B0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "NEO NAS-AB02B0 control via MQTT"
+description: "Integrate your NEO NAS-AB02B0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-08-11T22:17:44Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Neo NAS-AB02B0
+# NEO NAS-AB02B0
 
 |     |     |
 |-----|-----|
 | Model | NAS-AB02B0  |
-| Vendor  | [Neo](/supported-devices/#v=Neo)  |
+| Vendor  | [NEO](/supported-devices/#v=NEO)  |
 | Description | Temperature & humidity sensor and alarm |
 | Exposes | temperature, humidity, humidity_alarm, battery_low, temperature_alarm, alarm, melody, duration, temperature_min, temperature_max, humidity_min, humidity_max, volume, power_type |
-| Picture | ![Neo NAS-AB02B0](https://www.zigbee2mqtt.io/images/devices/NAS-AB02B0.png) |
+| Picture | ![NEO NAS-AB02B0](https://www.zigbee2mqtt.io/images/devices/NAS-AB02B0.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

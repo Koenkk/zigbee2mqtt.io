@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | CGDK2  |
 | Vendor  | [Qingping](/supported-devices/#v=Qingping)  |
 | Description | Temp & RH Monitor Lite (pvxx/ZigbeeTLc) |
-| Exposes | temperature, humidity, display, temperature_display_mode, temperature_calibration, humidity_calibration, measurement_interval, battery, voltage |
+| Exposes | temperature, humidity, enable_display, temperature_display_mode, temperature_calibration, humidity_calibration, measurement_interval, battery, voltage |
 | Picture | ![Qingping CGDK2](https://www.zigbee2mqtt.io/images/devices/CGDK2.png) |
 
 
@@ -60,12 +60,12 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
 
-### Display (binary)
+### Enable display (binary)
 Whether to enable the device display..
-Value can be found in the published state on the `display` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"display": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"display": NEW_VALUE}`.
-If value equals `on` display is ON, if `off` OFF.
+Value can be found in the published state on the `enable_display` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"enable_display": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"enable_display": NEW_VALUE}`.
+If value equals `true` enable display is ON, if `false` OFF.
 
 ### Temperature display mode (enum)
 The unit of the temperature displayed on the device screen..
@@ -75,7 +75,7 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `celsius`, `fahrenheit`.
 
 ### Temperature calibration (numeric)
-Temperature calibration, in 0.01° steps, default 0 °C..
+Offset to add/subtract to the reported temperature (default 0°C)..
 Value can be found in the published state on the `temperature_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_calibration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_calibration": NEW_VALUE}`.
@@ -83,7 +83,7 @@ The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `°C`.
 
 ### Humidity calibration (numeric)
-Humidity calibration, in 0.01% steps, default 0%..
+Offset to add/subtract to the reported relative humidity (default 0%)..
 Value can be found in the published state on the `humidity_calibration` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity_calibration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"humidity_calibration": NEW_VALUE}`.
@@ -91,11 +91,11 @@ The minimal value is `-50` and the maximum value is `50`.
 The unit of this value is `%`.
 
 ### Measurement interval (numeric)
-Measurement interval, default 10 seconds..
+Configure sensor measurement interval (default 10 seconds)..
 Value can be found in the published state on the `measurement_interval` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"measurement_interval": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"measurement_interval": NEW_VALUE}`.
-The minimal value is `3` and the maximum value is `255`.
+The minimal value is `3` and the maximum value is `30`.
 The unit of this value is `s`.
 
 ### Battery (numeric)

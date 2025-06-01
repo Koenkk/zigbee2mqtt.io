@@ -46,6 +46,7 @@ Open source firmware can be found here: [Github](https://github.com/igo-r/Lumi-R
 ### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_temperature": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
 

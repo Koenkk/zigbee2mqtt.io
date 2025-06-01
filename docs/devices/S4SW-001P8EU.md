@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | S4SW-001P8EU  |
 | Vendor  | [Shelly](/supported-devices/#v=Shelly)  |
 | Description | 1PM Mini Gen 4 |
-| Exposes | switch (state), power, voltage, ac_frequency, current, produced_energy |
+| Exposes | switch (state), power, voltage, ac_frequency, current, energy, produced_energy |
 | Picture | ![Shelly S4SW-001P8EU](https://www.zigbee2mqtt.io/images/devices/S4SW-001P8EU.png) |
 
 
@@ -47,6 +47,10 @@ pageClass: device-page
 * `current_calibration`: Calibrates the current value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 * `current_precision`: Number of digits after decimal point for current, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
+
+* `energy_calibration`: Calibrates the energy value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -91,6 +95,13 @@ Value can be found in the published state on the `current` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"current": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `A`.
+
+### Energy (numeric)
+Sum of consumed energy.
+Value can be found in the published state on the `energy` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"energy": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `kWh`.
 
 ### Produced energy (numeric)
 Sum of produced energy.

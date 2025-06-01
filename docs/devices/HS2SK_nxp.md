@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS2SK_nxp control via MQTT"
-description: "Integrate your HEIMAN HS2SK_nxp via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS2SK_nxp control via MQTT"
+description: "Integrate your Heiman HS2SK_nxp via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-11-01T12:47:02Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS2SK_nxp
+# Heiman HS2SK_nxp
 
 |     |     |
 |-----|-----|
 | Model | HS2SK_nxp  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart metering plug |
 | Exposes | switch (state), power, current, voltage |
-| Picture | ![HEIMAN HS2SK_nxp](https://www.zigbee2mqtt.io/images/devices/HS2SK_nxp.png) |
+| Picture | ![Heiman HS2SK_nxp](https://www.zigbee2mqtt.io/images/devices/HS2SK_nxp.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

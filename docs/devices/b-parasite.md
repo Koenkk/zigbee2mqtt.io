@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | b-parasite  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | b-parasite open source soil moisture sensor |
-| Exposes | temperature, humidity, battery, soil_moisture, illuminance |
+| Exposes | temperature, humidity, battery, soil_moisture, illuminance, identify |
 | Picture | ![Custom devices (DiY) b-parasite](https://www.zigbee2mqtt.io/images/devices/b-parasite.png) |
 
 
@@ -45,6 +45,8 @@ pageClass: device-page
 * `soil_moisture_precision`: Number of digits after decimal point for soil_moisture, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
 * `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
+* `identify_timeout`: Sets the duration of the identification procedure in seconds (i.e., how long the device would flash).The value ranges from 1 to 30 seconds (default: 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
 
 * `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
 
@@ -82,4 +84,11 @@ Value can be found in the published state on the `illuminance` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `lx`.
+
+### Identify (enum)
+Initiate device identification.
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
+The possible values are: `identify`.
 

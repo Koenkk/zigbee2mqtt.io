@@ -36,8 +36,6 @@ In some cases, the sensor may not want to pair. Remove the battery and while you
 > In case you experience pairing issues:
 > - Try to press the reset button +-5 seconds until it flashes, wait 1 second, push the button short 2x times to enforce communication.
 > - If migrating the device from another network, turn off the old network before pairing with the new one.
-
-
 <!-- Notes END: Do not edit below this line -->
 
 

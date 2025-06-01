@@ -20,6 +20,7 @@ pageClass: device-page
 | Description | Smart button |
 | Exposes | action, battery, operation_mode |
 | Picture | ![Moes ERS-10TZBVB-AA](https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVB-AA.png) |
+| White-label | COOLO ZG-101ZL |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

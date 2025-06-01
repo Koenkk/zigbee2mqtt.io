@@ -1,6 +1,6 @@
 ---
-title: "Neo NAS-AB02B2 control via MQTT"
-description: "Integrate your Neo NAS-AB02B2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "NEO NAS-AB02B2 control via MQTT"
+description: "Integrate your NEO NAS-AB02B2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-01-31T17:42:44
 pageClass: device-page
 ---
@@ -11,21 +11,20 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Neo NAS-AB02B2
+# NEO NAS-AB02B2
 
 |     |     |
 |-----|-----|
 | Model | NAS-AB02B2  |
-| Vendor  | [Neo](/supported-devices/#v=Neo)  |
+| Vendor  | [NEO](/supported-devices/#v=NEO)  |
 | Description | Alarm |
 | Exposes | battery_low, alarm, melody, duration, volume, battpercentage |
-| Picture | ![Neo NAS-AB02B2](https://www.zigbee2mqtt.io/images/devices/NAS-AB02B2.png) |
+| Picture | ![NEO NAS-AB02B2](https://www.zigbee2mqtt.io/images/devices/NAS-AB02B2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 Alarm melodies sounds/tunes: 1 - fuer elise 2 - big ben 3 - ring ring 4 - lone ranger 5 - turkish march 6 - high pitch siren 7 - red alert 8 - cricket 9 - beep beep 10 - dogs 11 - police 12 - chime 13 - phone ring 14 - firetruck 15 - clock chime 16 - alarm clock 17 - psycho 18 - doorbell
-
 <!-- Notes END: Do not edit below this line -->
 
 

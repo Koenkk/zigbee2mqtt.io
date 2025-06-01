@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS2ESK-E control via MQTT"
-description: "Integrate your HEIMAN HS2ESK-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS2ESK-E control via MQTT"
+description: "Integrate your Heiman HS2ESK-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-02-04T20:38:05Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS2ESK-E
+# Heiman HS2ESK-E
 
 |     |     |
 |-----|-----|
 | Model | HS2ESK-E  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart in wall plug |
 | Exposes | switch (state), power, current, voltage |
-| Picture | ![HEIMAN HS2ESK-E](https://www.zigbee2mqtt.io/images/devices/HS2ESK-E.png) |
+| Picture | ![Heiman HS2ESK-E](https://www.zigbee2mqtt.io/images/devices/HS2ESK-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

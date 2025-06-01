@@ -17,8 +17,8 @@ pageClass: device-page
 |-----|-----|
 | Model | ZG-102ZM  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
-| Description | Rainwater detection sensor |
-| Exposes | rainwater, illuminance,sensitivity,battery,illuminance_sampling |
+| Description | Vibration sensor |
+| Exposes | vibration, contact, battery, sensitivity |
 | Picture | ![HOBEIAN ZG-102ZM](https://www.zigbee2mqtt.io/images/devices/ZG-102ZM.png) |
 
 
@@ -28,26 +28,21 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+
 ## Exposes
 
-### vibration (binary)
-Indicates whether the device detected a rainwater.
+### Vibration (binary)
+Indicates whether the device detected vibration.
 Value can be found in the published state on the `vibration` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `true` rainwater is vibration, if `false` NONE.
+If value equals `true` vibration is ON, if `false` OFF.
 
 ### Contact (binary)
 Indicates if the contact is closed (= true) or open (= false).
 Value can be found in the published state on the `contact` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `false` contact is ON, if `true` OFF.
-
-### sensitivity (numeric)
-The higher the sensitivity value, the more sensitive the detection will be
-It's possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `9`.
-The unit of this value is `x`.
-
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
@@ -56,5 +51,11 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-
+### Sensitivity (numeric)
+The larger the value, the more sensitive it is (refresh and update only while active).
+Value can be found in the published state on the `sensitivity` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `50`.
+The unit of this value is `x`.
 
