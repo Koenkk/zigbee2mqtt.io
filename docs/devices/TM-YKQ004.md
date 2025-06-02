@@ -26,8 +26,7 @@ pageClass: device-page
 ## Notes
 
 ### Reset/Re-pairing
-Unfortunately it is currently unknown how to bring the device in reset or re-pairing mode.
-Please be that kind and add this information, if your are in knowledge of it.
+Long press any key for about 10 seconds until the indicator light starts to flash.
 <!-- Notes END: Do not edit below this line -->
 
 
