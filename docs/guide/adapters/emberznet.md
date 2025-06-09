@@ -204,6 +204,8 @@ Not suitable for WiFi or other high latency connections.**
 
 ::: details SMLIGHT SLZB-MR2 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter
 
+Chip: [efr32mg21a020f768im32](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-socs/device.efr32mg21a020f768im32?tab=specs)
+
 SLZB-MR2 is a compact multi-radio smart home adapter featuring CC2652P, EFR32MG21, and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs. It connects via Ethernet, Wi-Fi, or USB, and supports PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT.
 
 |                                                     Product picture                                                      |                                                    Interface screenshot                                                     |                                                                           Youtube videoreview                                                                            |
@@ -225,7 +227,7 @@ Powered by SLZB-OS with the following functionalities:
 ⚙️ Automatic config generators for Zigbee2MQTT and ZHA.
 
 - [Product page](https://smlight.tech/product/slzb-mr2/)
-- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr2-multiradio-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).  Add commentMore actions
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr2-multiradio-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).
   Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr2-zigbee-and-thread-adapter),
 
 :::
