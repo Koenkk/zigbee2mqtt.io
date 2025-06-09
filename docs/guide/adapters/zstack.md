@@ -378,6 +378,34 @@ Links:
 
 :::
 
+::: details SMLIGHT SLZB-MR3 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter
+
+SLZB-MR3 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32MG24 and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs. It connects via Ethernet, Wi-Fi, or USB, and supports PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT.
+
+|                                                     Product picture                                                      |                                                    Interface screenshot                                                     |                                                                           Youtube videoreview                                                                            |
+| :----------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-mr-series/slzb-mr3-device.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-mr-series/slzb-mr3-interface.jpg" width="200" /> | [<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-mr-series/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
+
+Powered by SLZB-OS with the following functionalities:  
+🔄 One-click CC2674P10 & EFR32MG24 SoCs firmware updates;  
+🏠 Native Home Assistant integrations (ZHA, Matter, MQTT, etc.);  
+🔐 Built-in VPN (WireGuard) support for secure remote access;  
+🌐 Switchable USB / Ethernet / Wi-Fi modes for flexible connectivity;  
+🧭 Zigbee Hub mode for local control with MQTT client;  
+📜 Built-in scripting and local automation engine;  
+🌍 20+ languages supported in the web interface;  
+🔧 IEEE address override and one-click re-pairing;  
+🔁 Ethernet-to-Wi-Fi IoT bridge functionality;  
+📶 Bluetooth support for BLE integrations;  
+🌱 IPv6 support for future-ready networking;  
+⚙️ Automatic config generators for Zigbee2MQTT and ZHA.
+
+- [Product page](https://smlight.tech/product/slzb-mr3/)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr3-multiradio-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).  
+  Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr3-zigbee-and-thread-adapter),
+
+:::
+
 ### Hub
 
 ::: details JetHome JetHub D1+
