@@ -378,6 +378,35 @@ Links:
 
 :::
 
+::: details SMLIGHT SLZB-MR1 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter
+
+SLZB-MR1 is a compact multi-radio smart home adapter featuring CC2652P7, EFR32MG21 and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs. It connects via Ethernet, Wi-Fi, or USB, and supports PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT.  
+
+|                                                Product picture                                                 |                                               Interface screenshot                                                |                                                                          Youtube videoreview                                                                          |
+| :------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-mr-series/slzb-mr1-device.jpg" width="200" /> | <img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-mr-series/slzb-mr1-interface.jpg" width="200" /> | [<img src="https://smlight.tech/external-content/images/zigbee2mqtt-io/slzb-mr-series/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
+
+Powered by SLZB-OS with the following functionalities:  
+🔄 One-click CC2652P7 & EFR32MG21 SoCs firmware updates;  
+🏠 Native Home Assistant integrations (ZHA, Matter, MQTT, etc.);  
+🔐 Built-in VPN (WireGuard) support for secure remote access;  
+🌐 Switchable USB / Ethernet / Wi-Fi modes for flexible connectivity;  
+🧭 Zigbee Hub mode for local control with MQTT client;  
+📜 Built-in scripting and local automation engine;  
+🌍 20+ languages supported in the web interface;  
+🔧 IEEE address override and one-click re-pairing;  
+🔁 Ethernet-to-Wi-Fi IoT bridge functionality;  
+📶 Bluetooth support for BLE integrations;  
+🌱 IPv6 support for future-ready networking;  
+⚙️ Automatic config generators for Zigbee2MQTT and ZHA.  
+
+- [Product page](https://smlight.tech/product/slzb-mr1/)
+- Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr1-multiradio-coordinator), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html).  
+  Local fast delivery: [AU](https://shop.dialedin.com.au/products/slzb-mr1-zigbee-and-thread-adapter), [AT](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [CZ](https://www.homebrainz.shop/de/p/smlight-slzb-mr1?srsltid=AfmBOorf9TiY1ZBQD7a7hUwDemKbCFsH_dv8ru9uDCT5yoq19AlyHy6z), [FR+EU](https://www.domadoo.fr/de/smart-home-produkte/7773-smlight-slzb-mr1-usb-ethernet-poe-zigbee-thread-matter-adapter.html), [BE](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [DE](https://mediarath.de/en/products/smlight-slzb-mr1-zigbee-thread-multiradio-cc2652p7-efr32mg21-lan-poe-usb-wifi-adapter), [NL](https://www.hobbyelectronica.nl/product/slzb-mr1-zigbee-ethernet-poe-usb-adapter/), [PL](https://pcblab.io/koordynator-slzb-mr1-multiradio-zigbee-thread.html), [SE](https://www.lohelectronics.se/hemautomation/zigbee/controllers-1473/smlight-slzb-mr1-zigbee-3-0-lan-gateway-med-poe-och-z2m), [CH](https://www.swiss-domotique.ch/en/gateways-antennas/2752-smlight-slzb-06-adaptateur-zigbee-ethernet-poe-usb-wifi-2.html), [FI](https://verkkokauppa.nurkantakaa.fi/tuote/smlight-slzb-mr1/), [UK](https://zigbeesmart.com/de-de/products/zigbee-lan-poe-coordinator-smlight-slzb-mr1-multiradio), [US](https://cloudfree.shop/product/smlight-slzb-mr1-zigbee-thread/), 
+
+:::
+
+
 ### Hub
 
 ::: details JetHome JetHub D1+
