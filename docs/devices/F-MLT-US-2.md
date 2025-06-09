@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | F-MLT-US-2  |
 | Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Multipurpose sensor (2016 model) |
-| Exposes | temperature, contact, battery_low, tamper, battery, moving, x_axis, y_axis, z_axis, linkquality |
+| Exposes | temperature, contact, battery_low, tamper, battery, moving, x_axis, y_axis, z_axis |
 | Picture | ![SmartThings F-MLT-US-2](https://www.zigbee2mqtt.io/images/devices/F-MLT-US-2.png) |
 
 
@@ -92,11 +92,4 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 Accelerometer Z value.
 Value can be found in the published state on the `z_axis` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

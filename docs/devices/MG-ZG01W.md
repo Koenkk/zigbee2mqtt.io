@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | MG-ZG01W  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 1 gang switch with power meter |
-| Exposes | switch (state), voltage, current, power, linkquality |
+| Exposes | switch (state), voltage, current, power |
 | Picture | ![Tuya MG-ZG01W](https://www.zigbee2mqtt.io/images/devices/MG-ZG01W.png) |
 
 
@@ -47,9 +47,9 @@ pageClass: device-page
 
 ## Exposes
 
-### Switch (l1 endpoint)
-The current state of this switch is in the published state under the `state_l1` property (value is `ON` or `OFF`).
-To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state_l1": "ON"}`, `{"state_l1": "OFF"}` or `{"state_l1": "TOGGLE"}`.
+### Switch 
+The current state of this switch is in the published state under the `state` property (value is `ON` or `OFF`).
+To control this switch publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`.
 It's not possible to read (`/get`) this value.
 
 ### Voltage (numeric)
@@ -69,11 +69,4 @@ Instantaneous measured power.
 Value can be found in the published state on the `power` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `W`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

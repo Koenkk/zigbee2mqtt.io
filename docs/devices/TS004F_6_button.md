@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS004F_6_button  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Wireless switch with 6 buttons |
-| Exposes | battery, operation_mode, action, linkquality |
+| Exposes | battery, operation_mode, action |
 | Picture | ![Tuya TS004F_6_button](https://www.zigbee2mqtt.io/images/devices/TS004F_6_button.png) |
 
 
@@ -61,11 +61,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `brightness_step_up`, `brightness_step_down`, `brightness_move_up`, `brightness_move_down`, `1_single`, `1_double`, `1_hold`, `2_single`, `2_double`, `2_hold`, `3_single`, `3_double`, `3_hold`, `4_single`, `4_double`, `4_hold`, `5_single`, `5_double`, `5_hold`, `6_single`, `6_double`, `6_hold`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

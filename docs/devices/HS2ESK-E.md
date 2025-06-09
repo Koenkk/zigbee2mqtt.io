@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS2ESK-E control via MQTT"
-description: "Integrate your HEIMAN HS2ESK-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS2ESK-E control via MQTT"
+description: "Integrate your Heiman HS2ESK-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-02-04T20:38:05Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS2ESK-E
+# Heiman HS2ESK-E
 
 |     |     |
 |-----|-----|
 | Model | HS2ESK-E  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart in wall plug |
-| Exposes | switch (state), power, current, voltage, linkquality |
-| Picture | ![HEIMAN HS2ESK-E](https://www.zigbee2mqtt.io/images/devices/HS2ESK-E.png) |
+| Exposes | switch (state), power, current, voltage |
+| Picture | ![Heiman HS2ESK-E](https://www.zigbee2mqtt.io/images/devices/HS2ESK-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -77,11 +77,4 @@ Measured electrical potential value.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

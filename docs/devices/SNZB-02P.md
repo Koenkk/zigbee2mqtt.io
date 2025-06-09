@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SNZB-02P  |
 | Vendor  | [SONOFF](/supported-devices/#v=SONOFF)  |
 | Description | Temperature and humidity sensor |
-| Exposes | battery, temperature, humidity, linkquality |
+| Exposes | battery, temperature, humidity |
 | Picture | ![SONOFF SNZB-02P](https://www.zigbee2mqtt.io/images/devices/SNZB-02P.png) |
 
 
@@ -64,11 +64,4 @@ Value can be found in the published state on the `humidity` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"humidity": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

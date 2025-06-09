@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZNLDP13LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Light bulb T1 |
-| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, power_outage_memory, linkquality |
+| Exposes | light (state, brightness, color_temp), power_outage_count, device_temperature, power_outage_memory |
 | Picture | ![Aqara ZNLDP13LM](https://www.zigbee2mqtt.io/images/devices/ZNLDP13LM.png) |
 | White-label | Aqara LEDLBT1-L01 |
 
@@ -72,7 +72,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
@@ -100,11 +100,4 @@ Value can be found in the published state on the `power_outage_memory` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_outage_memory": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_outage_memory": NEW_VALUE}`.
 If value equals `true` power outage memory is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | mTouch_Bryter  |
 | Vendor  | [CTM Lyng](/supported-devices/#v=CTM%20Lyng)  |
 | Description | mTouch Bryter OP, 3 channel switch |
-| Exposes | battery, temperature, action, group_id, linkquality |
+| Exposes | battery, temperature, action, group_id |
 | Picture | ![CTM Lyng mTouch_Bryter](https://www.zigbee2mqtt.io/images/devices/mTouch_Bryter.png) |
 
 
@@ -69,11 +69,4 @@ The possible values are: `recall_1`, `recall_2`, `recall_3`, `on`, `off`, `toggl
 The device sends commands with this group ID. Put dvices in this group to control them..
 Value can be found in the published state on the `group_id` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

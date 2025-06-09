@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0601_din  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee smart energy meter DDS238-2 Zigbee |
-| Exposes | switch (state), voltage, power, current, energy, linkquality |
+| Exposes | switch (state), voltage, power, current, energy |
 | Picture | ![Tuya TS0601_din](https://www.zigbee2mqtt.io/images/devices/TS0601_din.png) |
 
 
@@ -92,11 +92,4 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,13 +18,16 @@ pageClass: device-page
 | Model | ZB-TD5-RCW-GU10  |
 | Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | RGB+CCT 4.7W GU10 LED bulb |
-| Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior, linkquality |
+| Exposes | light (state, brightness, color_temp, color_xy), effect, do_not_disturb, color_power_on_behavior |
 | Picture | ![Moes ZB-TD5-RCW-GU10](https://www.zigbee2mqtt.io/images/devices/ZB-TD5-RCW-GU10.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+Power cycle three times: on-off, on-off, on-off, ON >> [up to 5 seconds] >>> starts flashing.
+A gap of 3+ seconds between off and on should be applied so the power drains out.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -70,7 +73,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
@@ -101,11 +104,4 @@ Value can be found in the published state on the `color_power_on_behavior` prope
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_power_on_behavior": NEW_VALUE}`.
 The possible values are: `initial`, `previous`, `customized`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

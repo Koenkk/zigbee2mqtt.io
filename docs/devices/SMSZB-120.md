@@ -18,13 +18,16 @@ pageClass: device-page
 | Model | SMSZB-120  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Smoke detector with siren |
-| Exposes | smoke, battery_low, test, max_duration, alarm, reliability, fault, temperature, battery, voltage, linkquality |
+| Exposes | smoke, battery_low, test, max_duration, alarm, reliability, fault, temperature, battery, voltage |
 | Picture | ![Develco SMSZB-120](https://www.zigbee2mqtt.io/images/devices/SMSZB-120.png) |
 | White-label | Frient 94430, Cavius 2103 |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+### Factory resetting
+To factory reset the device, press and hold the only button until the red light starts blinking continuously. The device will reset and become available for pairing again.
+
 The technical manual from Develco states that SMSZB-120 scans Zigbee channels 11-24 when searching for a network to join.
 
 ### Warning usage
@@ -137,11 +140,4 @@ Value can be found in the published state on the `voltage` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"voltage": ""}`.
 It's not possible to write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

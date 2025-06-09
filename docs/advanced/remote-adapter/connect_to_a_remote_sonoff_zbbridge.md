@@ -1,6 +1,6 @@
 # Connect to a remote Sonoff ZBBridge
 
-This how-to explains how to run Zigbee2MQTT with a comercial Sonoff ZBBridge Gateway.
+This how-to explains how to run Zigbee2MQTT with a commercial Sonoff ZBBridge Gateway.
 We will use a Sonoff ZBBridge Gateway with custom firmware to connect to a serial port over TCP.
 In this way you can use a simple premade Hub/Gateway flash it with custom firmware and then use it as your coordinator.
 

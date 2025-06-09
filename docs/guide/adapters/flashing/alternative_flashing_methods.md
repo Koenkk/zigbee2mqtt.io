@@ -3,10 +3,10 @@
 
 # Alternative flashing methods
 
--   [Raspberry pi](#raspberry_pi)
--   [Arduino/ESP8266 + CCLoader](#arduino_ccloader)
--   [Arduino/ESP8266 + CCLib](#arduino_cclib)
--   [Drag-and-Drop with RP2040](#rp2040_dragndrop)
+- [Raspberry pi](#raspberry_pi)
+- [Arduino/ESP8266 + CCLoader](#arduino_ccloader)
+- [Arduino/ESP8266 + CCLib](#arduino_cclib)
+- [Drag-and-Drop with RP2040](#rp2040_dragndrop)
 
 ---
 
@@ -22,16 +22,16 @@ git clone https://github.com/jmichault/flash_cc2531.git
 
 3. Connect the following pins of the debug port to the GPIO port :
 
--   pin 1 (GND) --> pin 39 (GND)
--   pin 7 (reset) --> pin 35 (GPIO24, BCM19)
--   pin 3 (DC) --> pin 36 (GPIO27, BCM16)
--   pin 4 (DD) --> pin 38 (GPIO28, BCM20)
+- pin 1 (GND) --> pin 39 (GND)
+- pin 7 (reset) --> pin 35 (GPIO24, BCM19)
+- pin 3 (DC) --> pin 36 (GPIO27, BCM16)
+- pin 4 (DD) --> pin 38 (GPIO28, BCM20)
 
-  <img src="../../../images/CC2531_wiring_raspi-header.jpg" width="40%"/>
+<img src="../../../images/CC2531_wiring_raspi-header.jpg" width="40%"/>
 
 Optionally, connecting Target Voltage Sense to a 3.3v source (Red wire) eliminates the need to plug the device into a usb port, so optionally connect the following too:
 
--   pin 2 (Target Voltage Sense) --> pin 1 or pin 17 (3.3v) on Raspi
+- pin 2 (Target Voltage Sense) --> pin 1 or pin 17 (3.3v) on Raspi
 
 See above for the dispositions of pins on CC2531, and at [https://pinout.xyz/](https://pinout.xyz/) for pins on Raspberry.
 
@@ -55,6 +55,8 @@ it should return :
 ```
 
 If you see 0000 or ffff, something is wrong and you should probably check your wiring.
+
+If you get `./cc_chipid: cannot execute: required file not found`, then you need to run `make` command
 
 5. Download and extract the latest firmware [CC2531_DEFAULT_20211115.zip](https://github.com/Koenkk/Z-Stack-firmware/raw/Z-Stack_Home_1.2_20211115/20211116/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20211115.zip).
 
@@ -190,10 +192,10 @@ Flashing firmware via Arduino is implemented using the project https://github.co
 
 As described [I made a fork of the CCLib library with minor changes](https://github.com/kirovilya/CCLib) for flashing firmware via Arduino:
 
--   Timeouts of operations
--   After opening the port (I have in Windows 7) Arduino reboots and, accordingly, does not respond to requests - made a 3 seconds pause (found somewhere in internet).
--   The port speed is reduced to 9600, because at another speed leaving communication errors:
-    `ERROR: Could not read from the serial port!`
+- Timeouts of operations
+- After opening the port (I have in Windows 7) Arduino reboots and, accordingly, does not respond to requests - made a 3 seconds pause (found somewhere in internet).
+- The port speed is reduced to 9600, because at another speed leaving communication errors:
+  `ERROR: Could not read from the serial port!`
 
 Flashing process:
 
@@ -233,7 +235,7 @@ I connected only 3 specified contacts and GND. During the firmware, the stick an
 C:\Projects\CCLib\Python>python cc_info.py -p COM9
 ```
 
-<details> <summary>Command output</summary>
+::: details Command output
 
 ```
 INFO: Found a CC2531 chip on COM9
@@ -266,7 +268,7 @@ Debug config:
  [X] TIMER_SUSPEND
 ```
 
-</details>
+:::
 
 [Another example of connection on MacOS](https://github.com/wavesoft/CCLib/issues/22#issuecomment-384452424)
 
@@ -280,8 +282,7 @@ Debug config:
 C:\Projects\ZigBee>python cc_write_flash.py -e -p COM9 --in=CC2531ZNP-Pro-Secure_LinkKeyJoin_mod.hex
 ```
 
-<details>
-  <summary>Command output</summary>
+::: details Command output
 
 ```
 INFO: Found a CC2531 chip on COM9
@@ -318,7 +319,7 @@ Flashing:
 Completed
 ```
 
-</details>
+:::
 
 ### <a name=rp2040_dragndrop></a> Via RP2040 board with [pico_cc_flasher](https://github.com/stolen/pico_cc_flasher) (~3 min)
 
@@ -345,31 +346,31 @@ This method does not need a specialized programmer software. Flashing is as easy
 
 I use Waveshare's RP2040-Zero, but on other boards the only difficulty should be no visual indication.
 
--   Automated installation
-    -   clone repo `git clone https://github.com/stolen/pico_cc_flasher.git && cd pico_cc_flasher`
-    -   Connect your RP2040 board in bootloader mode to your PC
-    -   run `make install`
--   Manual installation
-    -   Install [CircuitPython](https://circuitpython.org/downloads)
-    -   Unzip [release zip](https://github.com/stolen/pico_cc_flasher/releases/latest/download/pico_cc_flasher.zip) into a CircuitPython USB drive
+- Automated installation
+    - clone repo `git clone https://github.com/stolen/pico_cc_flasher.git && cd pico_cc_flasher`
+    - Connect your RP2040 board in bootloader mode to your PC
+    - run `make install`
+- Manual installation
+    - Install [CircuitPython](https://circuitpython.org/downloads)
+    - Unzip [release zip](https://github.com/stolen/pico_cc_flasher/releases/latest/download/pico_cc_flasher.zip) into a CircuitPython USB drive
 
 #### Connect RP2040 to CC2531 dongle
 
 <img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/overview.jpg" width="20%"/> <img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/closeup.jpg" width="30%"/> <img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/stick_pinout.png" width="35%"/>
 Connect some pins to your CC2531 stick
 
--   `GND   ->    GND`
--   `GP27  ->    DD`
--   `GP28  ->    DC`
--   `GP29  ->   nRST`
+- `GND   ->    GND`
+- `GP27  ->    DD`
+- `GP28  ->    DC`
+- `GP29  ->   nRST`
 
 #### Connect RP2040 to PC and dongle to any power source
 
 When pico_cc_flasher sees a chip, it reads chip firmware. This may take about a minute.  
 Then it restarts and you can browse to `cc25xx` directory:
 
--   `data.read.bin` is the flash dump
--   Drop any `*.bin` file (except `data.read.bin`) into this directory to flash it
--   Remove `control.skip_flash_read` file to re-read flash
+- `data.read.bin` is the flash dump
+- Drop any `*.bin` file (except `data.read.bin`) into this directory to flash it
+- Remove `control.skip_flash_read` file to re-read flash
 
 <img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/shell_demo.png" width="40%"/> <img src="https://github.com/stolen/pico_cc_flasher/raw/master/pictures/filemanager.jpg" width="40%"/>

@@ -2,7 +2,7 @@ import {navbar} from './navbar';
 import {sidebar} from './sidebar';
 import * as path from 'path';
 import {PageOptions} from '@vuepress/core';
-import defaultTheme from '@vuepress/theme-default';
+import {defaultTheme} from '@vuepress/theme-default';
 import webpackBundler from '@vuepress/bundler-webpack';
 import * as DefinePlugin from 'webpack/lib/DefinePlugin.js';
 import {googleAnalyticsPlugin} from '@vuepress/plugin-google-analytics';

@@ -4,9 +4,9 @@ This guide explains how to retrieve a TuYa or Xiaomi OTA file for your device. T
 
 Prerequisites:
 
--   Docker
--   TuYa bridge or Xiaomi gateway
--   [Android Studio](https://developer.android.com/studio)
+- Docker
+- TuYa bridge or Xiaomi gateway
+- [Android Studio](https://developer.android.com/studio)
 
 ## Step 1: running the proxy
 
@@ -41,8 +41,8 @@ Start Android Studio and create a new empty project:
 
 NOTE: This only works for native Aqara gateways which can be connected to the Aqara Home app (not the Xiaomi home app!)
 
--   Works: ZHWG16LM/HE1-G0, ZHWG15LM, ZHWG12LM
--   Doesn't work: ZNDMWG03LM, DGNWG02LM
+- Works: ZHWG16LM/HE1-G0, ZHWG15LM, ZHWG12LM
+- Doesn't work: ZNDMWG03LM, DGNWG02LM
 
 1. Download the Aqara home app apk from [this link](https://apkpure.com/nl/aqara-home/com.lumiunited.aqarahome), tested with version 2.2.5. Drag the downloaded apk on the emulator (which will install it).
 1. Open the Aqara home app in the emulator, log in with your account

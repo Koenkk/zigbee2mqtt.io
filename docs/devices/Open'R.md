@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | Open'R  |
 | Vendor  | [Nexelec](/supported-devices/#v=Nexelec)  |
 | Description | Open'R CO2, Temperature and Humidity sensor |
-| Exposes | temperature, humidity, co2, battery, identify, linkquality |
+| Exposes | temperature, humidity, co2, battery, identify |
 | Picture | ![Nexelec Open'R](https://www.zigbee2mqtt.io/images/devices/Open-R.png) |
 
 
@@ -82,11 +82,4 @@ Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"identify": NEW_VALUE}`.
 The possible values are: `identify`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

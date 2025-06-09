@@ -1,16 +1,18 @@
 # Integrations
 
--   [Home Assistant](./integrations/home_assistant.md)
--   [Homey](https://community.homey.app/t/83214)
--   [node-red-contrib-zigbee2mqtt](https://flows.nodered.org/node/node-red-contrib-zigbee2mqtt)
--   [Domoticz](https://github.com/stas-demydiuk/domoticz-zigbee2mqtt-plugin)
--   [Majordomo](https://github.com/directman66/majordomo-zigbee2mqtt/) (Russian)
--   [Mozilla IoT WebThings Gateway via Zigbee2MQTT adapter](https://github.com/kabbi/zigbee2mqtt-adapter)
--   [openHAB](./integrations/openhab.md)
--   [Homebridge plugin](https://github.com/itavero/homebridge-z2m/#readme) (Apple HomeKit)
--   [Symcon Automation Solutions](https://github.com/Schnittcher/IPS-Zigbee2MQTT)
--   [Gladys Assistant](https://gladysassistant.com/docs/integrations/zigbee2mqtt/)
--   [HomeSeer](https://shop.homeseer.com/products/homeseer-zigbee-plus-plugin-for-hs4)
+- [Home Assistant](./integrations/home_assistant.md)
+- [Homey](https://community.homey.app/t/83214)
+- [node-red-contrib-zigbee2mqtt](https://flows.nodered.org/node/node-red-contrib-zigbee2mqtt)
+- [Domoticz](https://github.com/stas-demydiuk/domoticz-zigbee2mqtt-plugin)
+- [Majordomo](https://github.com/directman66/majordomo-zigbee2mqtt/) (Russian)
+- [Mozilla IoT WebThings Gateway via Zigbee2MQTT adapter](https://github.com/kabbi/zigbee2mqtt-adapter)
+- [openHAB](./integrations/openhab.md)
+- [Homebridge plugin](https://github.com/itavero/homebridge-z2m/#readme) (Apple HomeKit)
+- [Symcon Automation Solutions](https://github.com/Schnittcher/IPS-Zigbee2MQTT)
+- [Gladys Assistant](https://gladysassistant.com/docs/integrations/zigbee2mqtt/)
+- [HomeSeer](https://shop.homeseer.com/products/homeseer-zigbee-plus-plugin-for-hs4)
+- [Matterbridge Zigbee2MQTT Plugin](https://github.com/Luligu/matterbridge-zigbee2mqtt) (Apple HomeKit and Google Home)
+- [Zigbee2MQTT Automations](https://github.com/Luligu/zigbee2mqtt-automations)
 
 This list gives only a narrow overview. To use Zigbee2MQTT with other systems it's not
 mandatory to have a _native_ integration but support for MQTT. A native integration just makes things more easy and "clickable".

@@ -4,6 +4,10 @@ next: adapter-settings.md
 
 # Configuration
 
+::: warning ATTENTION
+Never rely solely on configurations produced by LLMs like ChatGPT! Always verify the generated configurations against the relevant documentation. Not doing so can potentially break your setup.
+:::
+
 Zigbee2MQTT is configured using [YAML](https://en.wikipedia.org/wiki/YAML) based `configuration.yaml` file.
 The file have to be located in the `data` directory within your installation. The `data` directory and the `configuration.yaml` has to be writeable for Zigbee2MQTT process because it can get updated - e.g. if you change the settings in the frontend. It's possible specify a custom data directory by setting the `ZIGBEE2MQTT_DATA` environment variable.
 
@@ -16,7 +20,8 @@ serial:
     # Could be either USB port (/dev/ttyUSB0), network Zigbee adapters (tcp://192.168.1.1:6638) or mDNS adapter (mdns://my-adapter).
     port: /dev/ttyUSB0
 # Will run frontend on port 8080
-frontend: true
+frontend:
+    enabled: true
 ```
 
 ::: tip CONVENTION

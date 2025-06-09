@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | NAS-PS09B2  |
 | Vendor  | [Neo](/supported-devices/#v=Neo)  |
 | Description | Human presence sensor |
-| Exposes | occupancy, human_motion_state, departure_delay, radar_range, radar_sensitivity, presence_sensitivity, dis_current, linkquality |
+| Exposes | occupancy, human_motion_state, departure_delay, radar_range, radar_sensitivity, presence_sensitivity, dis_current |
 | Picture | ![Neo NAS-PS09B2](https://www.zigbee2mqtt.io/images/devices/NAS-PS09B2.png) |
 
 
@@ -80,11 +80,4 @@ Value can be found in the published state on the `dis_current` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `1000`.
 The unit of this value is `cm`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | E8334RWMZB  |
 | Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Wiser AvatarOn 4K Freelocate |
-| Exposes | indicator_luminance_level, indicator_color, linkquality |
+| Exposes | indicator_luminance_level, indicator_color |
 | Picture | ![Schneider Electric E8334RWMZB](https://www.zigbee2mqtt.io/images/devices/E8334RWMZB.png) |
 
 
@@ -45,11 +45,4 @@ Value can be found in the published state on the `indicator_color` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_color": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_color": NEW_VALUE}`.
 The possible values are: `white`, `blue`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

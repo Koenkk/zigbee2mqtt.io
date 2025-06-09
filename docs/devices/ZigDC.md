@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZigDC  |
 | Vendor  | [xyzroe](/supported-devices/#v=xyzroe)  |
 | Description | ZigDC |
-| Exposes | current, voltage, power, temperature, humidity, action, cpu_temperature, switch_type, switch_actions, bind_command, uptime, interval, linkquality |
+| Exposes | current, voltage, power, temperature, humidity, action, cpu_temperature, switch_type, switch_actions, bind_command, uptime, interval |
 | Picture | ![xyzroe ZigDC](https://www.zigbee2mqtt.io/images/devices/ZigDC.png) |
 
 
@@ -257,11 +257,4 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"interval": NEW_VALUE}`.
 The minimal value is `5` and the maximum value is `600`.
 The unit of this value is `sec`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

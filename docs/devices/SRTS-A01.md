@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SRTS-A01  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart radiator thermostat E1 |
-| Exposes | setup, climate (occupied_heating_setpoint, local_temperature, system_mode, preset), sensor, external_temperature_input, calibrated, calibrate, child_lock, window_detection, window_open, valve_detection, valve_alarm, away_preset_temperature, voltage, battery, power_outage_count, device_temperature, schedule, schedule_settings, linkquality |
+| Exposes | setup, climate (occupied_heating_setpoint, local_temperature, system_mode, preset), sensor, external_temperature_input, calibrated, calibrate, child_lock, window_detection, window_open, valve_detection, valve_alarm, away_preset_temperature, voltage, battery, power_outage_count, device_temperature, schedule, schedule_settings |
 | Picture | ![Aqara SRTS-A01](https://www.zigbee2mqtt.io/images/devices/SRTS-A01.png) |
 
 
@@ -86,11 +86,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The possible values are: `calibrate`.
 
 ### Child lock (binary)
-Unlocks/locks physical input on the device.
+Enables/disables physical input on the device.
 Value can be found in the published state on the `child_lock` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"child_lock": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"child_lock": NEW_VALUE}`.
-If value equals `true` child lock is ON, if `false` OFF.
+If value equals `LOCK` child lock is ON, if `UNLOCK` OFF.
 
 ### Window detection (binary)
 Enables/disables window detection on the device.
@@ -162,11 +162,4 @@ Smart schedule configuration (default: mon,tue,wed,thu,fri|8:00,24.0|18:00,17.0|
 Value can be found in the published state on the `schedule_settings` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"schedule_settings": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"schedule_settings": NEW_VALUE}`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

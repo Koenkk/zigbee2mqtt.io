@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TDL01LM  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Spotlight T3 |
-| Exposes | light (state, brightness, color_temp, level_config), power_outage_count, device_temperature, power_on_behavior, min_brightness, max_brightness, linkquality |
+| Exposes | light (state, brightness, color_temp, level_config), power_outage_count, device_temperature, power_on_behavior, min_brightness, max_brightness |
 | Picture | ![Aqara TDL01LM](https://www.zigbee2mqtt.io/images/devices/TDL01LM.png) |
 | White-label | Aqara MZSD11LM, Aqara MZSD12LM, Aqara MZTD11LM |
 
@@ -72,7 +72,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
@@ -116,11 +116,4 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_brightness": NEW_VALUE}`.
 The minimal value is `1` and the maximum value is `100`.
 The unit of this value is `%`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

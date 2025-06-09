@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0001_fingerbot  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Zigbee fingerbot plus |
-| Exposes | switch (state), battery, mode, lower, upper, delay, reverse, touch, linkquality |
+| Exposes | switch (state), battery, mode, lower, upper, delay, reverse, touch |
 | Picture | ![Tuya TS0001_fingerbot](https://www.zigbee2mqtt.io/images/devices/TS0001_fingerbot.png) |
 
 
@@ -94,16 +94,9 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `ON` reverse is ON, if `OFF` OFF.
 
 ### Touch (binary)
-Touch controll.
+Touch control.
 Value can be found in the published state on the `touch` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"touch": NEW_VALUE}`.
 If value equals `ON` touch is ON, if `OFF` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

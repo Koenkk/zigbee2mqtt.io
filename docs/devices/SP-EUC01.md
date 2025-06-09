@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SP-EUC01  |
 | Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
 | Description | Smart plug EU |
-| Exposes | switch (state), power, energy, power_outage_memory, voltage, current, device_temperature, consumer_connected, led_disabled_night, overload_protection, auto_off, button_lock, linkquality |
+| Exposes | switch (state), power, energy, power_outage_memory, voltage, current, device_temperature, consumer_connected, led_disabled_night, overload_protection, auto_off, button_lock |
 | Picture | ![Aqara SP-EUC01](https://www.zigbee2mqtt.io/images/devices/SP-EUC01.png) |
 
 
@@ -145,11 +145,4 @@ Value can be found in the published state on the `button_lock` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"button_lock": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"button_lock": NEW_VALUE}`.
 If value equals `ON` button lock is ON, if `OFF` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

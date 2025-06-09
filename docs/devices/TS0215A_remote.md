@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0215A_remote  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Security remote control |
-| Exposes | battery, action, linkquality |
+| Exposes | battery, action |
 | Picture | ![Tuya TS0215A_remote](https://www.zigbee2mqtt.io/images/devices/TS0215A_remote.png) |
 | White-label | Woox R7054, Nedis ZBRC10WT |
 
@@ -45,11 +45,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `disarm`, `arm_day_zones`, `arm_night_zones`, `arm_all_zones`, `exit_delay`, `emergency`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

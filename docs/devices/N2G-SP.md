@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | N2G-SP  |
 | Vendor  | [NET2GRID](/supported-devices/#v=NET2GRID)  |
 | Description | White Net2Grid power outlet switch with power meter |
-| Exposes | switch (state), power, energy, linkquality |
+| Exposes | switch (state), power, energy |
 | Picture | ![NET2GRID N2G-SP](https://www.zigbee2mqtt.io/images/devices/N2G-SP.png) |
 
 
@@ -52,8 +52,6 @@ devices:
 
 * `energy_precision`: Number of digits after decimal point for energy, takes into effect on next report of device. This option can only decrease the precision, not increase it. The value must be a number with a minimum value of `0` and with a with a maximum value of `3`
 
-* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
-
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
@@ -81,11 +79,4 @@ Sum of consumed energy.
 Value can be found in the published state on the `energy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `kWh`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

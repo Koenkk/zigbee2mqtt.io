@@ -1,6 +1,6 @@
 ---
-title: "Tuya TOQCB2-80 control via MQTT"
-description: "Integrate your Tuya TOQCB2-80 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tongou TOQCB2-80 control via MQTT"
+description: "Integrate your Tongou TOQCB2-80 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2024-08-01T18:23:40
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya TOQCB2-80
+# Tongou TOQCB2-80
 
 |     |     |
 |-----|-----|
 | Model | TOQCB2-80  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Vendor  | [Tongou](/supported-devices/#v=Tongou)  |
 | Description | Smart circuit breaker |
-| Exposes | switch (state), energy, power, voltage, current, temperature, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, last_event, over_current_setting, current_threshold, under_voltage_setting, under_voltage_threshold, over_voltage_setting, over_voltage_threshold, over_power_setting, over_power_threshold, temperature_setting, temperature_threshold, clear_fault, factory_reset, linkquality |
-| Picture | ![Tuya TOQCB2-80](https://www.zigbee2mqtt.io/images/devices/TOQCB2-80.png) |
+| Exposes | switch (state), energy, power, voltage, current, temperature, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, last_event, over_current_setting, current_threshold, under_voltage_setting, under_voltage_threshold, over_voltage_setting, over_voltage_threshold, over_power_setting, over_power_threshold, temperature_setting, temperature_threshold, clear_fault, factory_reset |
+| Picture | ![Tongou TOQCB2-80](https://www.zigbee2mqtt.io/images/devices/TOQCB2-80.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -238,11 +238,4 @@ Value can be found in the published state on the `factory_reset` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset": NEW_VALUE}`.
 If value equals `ON` factory reset is ON, if `OFF` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

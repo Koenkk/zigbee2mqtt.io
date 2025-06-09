@@ -18,13 +18,14 @@ pageClass: device-page
 | Model | PRO-900Z  |
 | Vendor  | [ElectSmart](/supported-devices/#v=ElectSmart)  |
 | Description | Thermostat for electric floor |
-| Exposes | child_lock, eco_mode, eco_temperature, valve_state, climate (system_mode, preset, current_heating_setpoint, local_temperature, local_temperature_calibration), deadzone_temperature, min_temperature, max_temperature, min_temperature_limit, max_temperature_limit, sensor, external_temperature_input, brightness, display_brightness, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, factory_reset, linkquality |
+| Exposes | child_lock, eco_mode, eco_temperature, climate (system_mode, preset, current_heating_setpoint, local_temperature, local_temperature_calibration, running_state), deadzone_temperature, min_temperature, max_temperature, min_temperature_limit, max_temperature_limit, sensor, external_temperature_input, brightness, display_brightness, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, factory_reset |
 | Picture | ![ElectSmart PRO-900Z](https://www.zigbee2mqtt.io/images/devices/PRO-900Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Pairing
+With the device in the 'on' state, press and hold the control knob to turn the unit off. While the knob is pressed, press and hold the 'clock' button for 8 seconds. The device will now enter the pairing mode, and the zigbee signal indicator will start flashing on the display.
+***
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -53,17 +54,13 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `5` and the maximum value is `30`.
 The unit of this value is `°C`.
 
-### Heating in process (binary)
-Value can be found in the published state on the `valve_state` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-If value equals `false` heating in process is ON, if `true` OFF.
-
 ### Climate 
-This climate device supports the following features: `system_mode`, `preset`, `current_heating_setpoint`, `local_temperature`, `local_temperature_calibration`.
+This climate device supports the following features: `system_mode`, `preset`, `current_heating_setpoint`, `local_temperature`, `local_temperature_calibration`, `running_state`.
 - `current_heating_setpoint`: Temperature setpoint. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"current_heating_setpoint": VALUE}` where `VALUE` is the °C between `5` and `35`. Reading (`/get`) this attribute is not possible.
 - `local_temperature`: Current temperature measured on the device (in °C). Reading (`/get`) this attribute is not possible.
 - `system_mode`: Mode of this device. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"system_mode": VALUE}` where `VALUE` is one of: `off`, `heat`. Reading (`/get`) this attribute is not possible.
 - `preset`: Mode of this device (similar to system_mode). To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": VALUE}` where `VALUE` is one of: `manual`, `auto`. Reading (`/get`) this attribute is not possible.
+- `running_state`: The current running state. Possible values are: `idle`, `heat`. Reading (`/get`) this attribute is not possible.
 - `local_temperature_calibration`: Offset to add/subtract to the local temperature. To control publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"local_temperature_calibration": VALUE}.`The minimal value is `-9` and the maximum value is `9` with a step size of `1`.
 
 ### Deadzone temperature (numeric)
@@ -181,11 +178,4 @@ Value can be found in the published state on the `factory_reset` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"factory_reset": NEW_VALUE}`.
 The possible values are: `factory reset`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

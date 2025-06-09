@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZM-AM02_cover  |
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Zigbee/RF curtain converter |
-| Exposes | cover (state, position), options, motor_working_mode, percent_state, mode, motor_direction, border, linkquality |
+| Exposes | cover (state, position), options, motor_working_mode, percent_state, mode, motor_direction, border |
 | Picture | ![Zemismart ZM-AM02_cover](https://www.zigbee2mqtt.io/images/devices/ZM-AM02_cover.png) |
 
 
@@ -75,11 +75,4 @@ Value can be found in the published state on the `border` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"border": NEW_VALUE}`.
 The possible values are: `up`, `down`, `down_delete`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

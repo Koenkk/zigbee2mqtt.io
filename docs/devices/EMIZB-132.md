@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | EMIZB-132  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Wattle AMS HAN power-meter sensor |
-| Exposes | power, power_reactive, energy, current, voltage, current_phase_b, voltage_phase_b, current_phase_c, voltage_phase_c, linkquality |
+| Exposes | power, power_reactive, energy, current, voltage, current_phase_b, voltage_phase_b, current_phase_c, voltage_phase_c |
 | Picture | ![Develco EMIZB-132](https://www.zigbee2mqtt.io/images/devices/EMIZB-132.png) |
 
 
@@ -146,11 +146,4 @@ Measured electrical potential value on phase C.
 Value can be found in the published state on the `voltage_phase_c` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `V`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

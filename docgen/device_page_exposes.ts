@@ -25,8 +25,8 @@ function uncapitalizeFirstLetter(string) {
 
 function compositeDocs(composite) {
     const value = `{${composite.features.map((e) => `"${e.property}": VALUE`).join(', ')}}`;
+    const note: string[] = [];
 
-    let note = [];
     for (const feature of composite.features) {
         let ft = '';
         if (feature.type === 'binary') {
@@ -53,8 +53,8 @@ function compositeDocs(composite) {
 }
 
 function getExposeDocs(expose, definition) {
-    const lines = [];
-    const title = [];
+    const lines: string[] = [];
+    const title: string[] = [];
 
     const onWithTimedOff = () => {
         lines.push(``);
@@ -271,7 +271,7 @@ function getExposeDocs(expose, definition) {
                     `\n**NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use \`brightness_move_onoff\`/\`brightness_step_onoff\``,
                 );
             }
-            lines.push(`\`\`\`\`js`);
+            lines.push(`\`\`\`js`);
             lines.push(`{`);
             if (brightness) {
                 lines.push(`  "brightness_move": -40, // Starts moving brightness down at 40 units per second`);
@@ -362,9 +362,11 @@ function getExposeDocs(expose, definition) {
         if (expose.description) {
             lines.push(expose.description + '.');
         }
-        let txt = {value: '', note: []};
+        let txt: {value: string; note: string[]} = {value: '', note: []};
         if (expose.item_type.type === 'composite') {
             txt = compositeDocs(expose.item_type);
+        } else if (expose.item_type.type === 'enum') {
+            txt['value'] = expose.item_type.values.map((v) => `"${v}"`).join(', ');
         } else if (expose.item_type.type === 'text') {
             // Empty on purpose
         } else {

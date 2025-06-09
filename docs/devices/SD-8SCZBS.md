@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SD-8SCZBS  |
 | Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Smoke detector |
-| Exposes | smoke, battery, battery_low, tamper, warning, linkquality |
+| Exposes | smoke, battery, battery_low, tamper, warning |
 | Picture | ![Climax SD-8SCZBS](https://www.zigbee2mqtt.io/images/devices/SD-8SCZBS.png) |
 
 
@@ -65,11 +65,4 @@ Can be set by publishing to `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"warn
 - `strobe` (binary): Turn on/off the strobe (light) during warning allowed values: `true` or `false`
 - `strobe_duty_cycle` (numeric): Length of the flash cycle max value is 10
 - `duration` (numeric): Duration in seconds of the alarm unit is s
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 
