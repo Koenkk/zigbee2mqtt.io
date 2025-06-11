@@ -24,17 +24,16 @@ Mosquitto is the recommended MQTT broker but others should also work fine.
 ## Installing
 
 ```bash
-# Set up Node.js repository, install Node.js, pnpm and required dependencies
+# Set up Node.js repository, install Node.js and required dependencies.
 # NOTE 1: Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/ e.g. Version 20.9.0 should work.
 # NOTE 2: For Ubuntu see installing through Snap below.
 sudo apt-get install -y curl
 sudo curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs git make g++ gcc libsystemd-dev
-npm install -g pnpm
+corepack enable
 
-# Verify that the correct nodejs and pnpm version has been installed
+# Verify that the correct Node.js version has been installed
 node --version  # Should output V20.x, V22.X
-pnpm --version  # Should output 10.X
 
 # Create a directory for zigbee2mqtt and set your user as owner of it
 sudo mkdir /opt/zigbee2mqtt
@@ -45,7 +44,7 @@ git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git /opt/zigbee2mqtt
 
 # Install dependencies (as user "pi")
 cd /opt/zigbee2mqtt
-pnpm i --frozen-lockfile
+pnpm install --frozen-lockfile
 ```
 
 ::: tip TIP
@@ -56,14 +55,13 @@ On Ubuntu, Node.js can be installed through Snap
 # The --classic argument is required here as Node.js needs full access to your system in order to be useful.
 # You can also use the --channel=XX argument to install a legacy version where XX is the version you want to install (we need 14+).
 sudo snap install node --classic
-npm install -g pnpm
+corepack enable
 
 # Verify node has been installed
 # If you encounter an error at this stage and used the snap store instructions, adjust the BIN path as follows:
 ## PATH=$PATH:/snap/node/current/bin
-# then re-verify nodejs and pnpm versions as above
+# then re-verify Node.js as above
 node --version
-pnpm --version
 ```
 
 :::

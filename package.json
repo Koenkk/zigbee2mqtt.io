@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "private": true,
-    "packageManager": "pnpm@10.6.1",
+    "packageManager": "pnpm@10.12.1",
     "scripts": {
         "dev:devices": "cross-env NODE_OPTIONS=--max_old_space_size=8000 vuepress dev docs",
         "dev": "cross-env EXCLUDE_DEVICES=yes vuepress dev docs",
@@ -20,18 +20,18 @@
     "license": "ISC",
     "dependencies": {
         "@quasar/extras": "1.17.0",
-        "core-js": "3.42.0",
+        "core-js": "3.43.0",
         "quasar": "2.18.1"
     },
     "devDependencies": {
-        "@types/node": "22.15.29",
+        "@types/node": "22.15.30",
         "@vuepress/bundler-webpack": "2.0.0-rc.23",
         "@vuepress/client": "2.0.0-rc.23",
-        "@vuepress/plugin-docsearch": "2.0.0-rc.106",
-        "@vuepress/plugin-google-analytics": "2.0.0-rc.103",
+        "@vuepress/plugin-docsearch": "2.0.0-rc.108",
+        "@vuepress/plugin-google-analytics": "2.0.0-rc.107",
         "@vuepress/plugin-register-components": "2.0.0-rc.103",
-        "@vuepress/plugin-sitemap": "2.0.0-rc.106",
-        "@vuepress/theme-default": "2.0.0-rc.106",
+        "@vuepress/plugin-sitemap": "2.0.0-rc.108",
+        "@vuepress/theme-default": "2.0.0-rc.108",
         "async-g-i-s": "1.5.5",
         "cross-env": "7.0.3",
         "easyimage": "3.1.1",
