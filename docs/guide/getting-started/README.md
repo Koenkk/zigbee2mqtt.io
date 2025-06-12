@@ -64,6 +64,7 @@ The following environment variables are available, if your setup requires custom
 - `Z2M_ONBOARD_NO_FAILURE_PAGE=1` => disable failure pages (_failure is logged, and the process exits immediately_)
 - `Z2M_ONBOARD_FORCE_RUN=1` => see above TIP
 - `Z2M_ONBOARD_NO_REDIRECT=1` => if frontend is enabled, prevent the onboarding validation page from trying to redirect to frontend (_useful for setups where frontend has an unusual URL_)
+
 :::
 
 ## Connect a device
