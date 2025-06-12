@@ -384,7 +384,7 @@ SLZB-MR1 is a compact multi-radio smart home adapter featuring CC2652P7, EFR32MG
 
 |                                   Product picture                                    |                                  Interface screenshot                                   |                                                        Youtube videoreview                                                         |
 | :----------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="/docs/images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-device.jpg" width="200" /> | <img src="/docs/images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-interface.jpg" width="200" /> | [<img src="/docs/images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
+| <img src="../../images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-device.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-MR1/slzb-mr1-interface.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
 
 - [Product page](https://smlight.tech/product/slzb-mr1/)
 - Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr1-multiradio-coordinator), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html).  
@@ -394,13 +394,11 @@ SLZB-MR1 is a compact multi-radio smart home adapter featuring CC2652P7, EFR32MG
 
 ::: details SMLIGHT SLZB-MR2 MultiRadio Zigbee+Matter-over-Thread Ethernet USB POE WiFi LAN adapter
 
-Chip: [efr32mg21a020f768im32](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-socs/device.efr32mg21a020f768im32?tab=specs)
-
 SLZB-MR2 is a compact multi-radio smart home adapter featuring CC2652P, EFR32MG21, and ESP32 chips, enabling simultaneous support for Zigbee 3.0 and Matter-over-Thread run on different SoCs. It connects via Ethernet, Wi-Fi, or USB, and supports PoE for flexible, remote deployment. Its multi-SoC architecture ensures high performance and full compatibility with platforms like Home Assistant and Zigbee2MQTT. Powered by SLZB-OS with OTA firmware updates, VPN, HA Integration, 20+ languages, IPv6, Ethernet-to-Wi-Fi bridge, and so on.
 
 |                                   Product picture                                    |                                  Interface screenshot                                   |                                                        Youtube videoreview                                                         |
 | :----------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="/docs/images/adapters/SMLIGHT/SLZB-MR2/slzb-mr2-device.jpg" width="200" /> | <img src="/docs/images/adapters/SMLIGHT/SLZB-MR2/slzb-mr2-interface.jpg" width="200" /> | [<img src="/docs/images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
+| <img src="../../images/adapters/SMLIGHT/SLZB-MR2/slzb-mr2-device.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-MR2/slzb-mr2-interface.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
 
 - [Product page](https://smlight.tech/product/slzb-mr2/)
 - Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr2-multiradio-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).
@@ -414,7 +412,7 @@ SLZB-MR3 is a compact multi-radio smart home adapter featuring CC2674P10, EFR32M
 
 |                                   Product picture                                    |                                  Interface screenshot                                   |                                                        Youtube videoreview                                                         |
 | :----------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="/docs/images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-device.jpg" width="200" /> | <img src="/docs/images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-interface.jpg" width="200" /> | [<img src="/docs/images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
+| <img src="../../images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-device.jpg" width="200" /> | <img src="../../images/adapters/SMLIGHT/SLZB-MR3/slzb-mr3-interface.jpg" width="200" /> | [<img src="../../images/adapters/SMLIGHT/Common/slzb-mrx-youtube.jpg" width="200" />](https://www.youtube.com/watch?v=_ER3Hnij1l0) |
 
 - [Product page](https://smlight.tech/product/slzb-mr3/)
 - Buy: [Authorized Store - Worldwide](https://smartlight.me/smart-home-devices/zigbee-devices/slzb-mr3-multiradio-adapter), [Aliexpress - Worldwide](https://www.aliexpress.com/item/1005004942648430.html), [Aliexpress-2 - Worldwide](https://www.aliexpress.com/item/1005008814854495.html).  
