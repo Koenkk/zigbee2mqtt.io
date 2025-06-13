@@ -24,10 +24,6 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
-## Notes
-Not working(I dont know how to disable it):
- - Color temp warmest
- - All efects
 
 <!-- Notes END: Do not edit below this line -->
 
