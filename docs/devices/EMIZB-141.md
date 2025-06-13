@@ -23,8 +23,13 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+To pair or reset this device for Zigbee pairing mode:
+1. Open the casing of the device.
+2. Press and hold the menu button until the LED flashes numerous times in a row, and then release the button again.
+3. After a successful reset the yellow LED will start flashing which indicates network search.
 <!-- Notes END: Do not edit below this line -->
 
 
