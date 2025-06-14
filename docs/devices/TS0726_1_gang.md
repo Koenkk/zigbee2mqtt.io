@@ -1,6 +1,6 @@
 ---
-title: "Tuya TS0726_1_gang control via MQTT"
-description: "Integrate your Tuya TS0726_1_gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "BSEED TS0726_1_gang control via MQTT"
+description: "Integrate your BSEED TS0726_1_gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2025-06-01T17:54:42
 pageClass: device-page
 ---
@@ -11,12 +11,12 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Tuya TS0726_1_gang
+# BSEED TS0726_1_gang
 
 |     |     |
 |-----|-----|
 | Model | TS0726_1_gang  |
-| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Vendor  | [BSEED](/supported-devices/#v=BSEED)  |
 | Description | 1 gang switch with neutral wire |
 | Exposes | switch (state), power_on_behavior, switch_mode, action |
 | Picture | ![Tuya TS0726_1_gang](https://www.zigbee2mqtt.io/images/devices/TS0726_1_gang.png) |
