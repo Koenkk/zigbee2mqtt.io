@@ -24,6 +24,13 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Notes
+
+### Pairing
+
+1. Hold the top of the paddle for 7 seconds. Status light will turn amber.
+2. To start joining mode tap the top of the paddle 1 time. The status light will ﬂash green rapidly to indicate it is in joining mode.
+3. To stop joining mode tap the top of the paddle 1 time. The dimmer will leave joining mode.
 
 <!-- Notes END: Do not edit below this line -->
 
