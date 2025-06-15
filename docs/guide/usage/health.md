@@ -8,7 +8,7 @@ Health related info is published to the `zigbee2mqtt/bridge/health` topic, examp
 
 ```json
 {
-    "response_time": 1749991304357, // Timestamp when this info was generated (Unix time format) 
+    "response_time": 1749991304357, // Timestamp when this info was generated (Unix time format)
     "os": {
         "load_average": [15.8, 13.2, 19.2], // Average CPU load of the system ([1 minute, 5 minutes, 15 minutes])
         "memory_used_mb": 1098.2, // Amount of  used memory of the system in MB
