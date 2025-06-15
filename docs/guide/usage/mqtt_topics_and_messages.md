@@ -149,9 +149,23 @@ Example payload:
     "permit_join_end": 1733666394, // Epoch time when permit join will end, `undefined` if permit join is disabled.
     "config": {...}, // Will contain the complete Zigbee2MQTT config expect the network_key
     "config_schema": {...}, // Will contain the JSON schema of the config
-    "restart_required": false // Indicates whether Zigbee2MQTT needs to be restarted to apply options set through zigbee2mqtt/request/bridge/options
+    "restart_required": false, // Indicates whether Zigbee2MQTT needs to be restarted to apply options set through zigbee2mqtt/request/bridge/options
+    "os": {
+        "version": "Linux - 0.0.1 - x64", // OS version
+        "node_version": "v1.2.3", // Node.js version
+        "cpus": "Intel Core i7-9999 (x1)", // CPU types + cores
+        "memory_mb": 10, // Total amount of system memory in MB
+    },
+    "mqtt": {
+        "server": "mqtt://localhost:1883", // MQTT server
+        "version": 5, // MQTT protocol version
+    }
 }
 ```
+
+## zigbee2mqtt/bridge/health
+
+See [Health](./health.md).
 
 ## zigbee2mqtt/bridge/state
 
