@@ -8,13 +8,13 @@
         "dev:devices": "cross-env NODE_OPTIONS=--max_old_space_size=8000 vuepress dev docs",
         "dev": "cross-env EXCLUDE_DEVICES=yes vuepress dev docs",
         "build": "cross-env NODE_OPTIONS=--max_old_space_size=8000 vuepress build docs",
-        "docgen": "ts-node docgen",
-        "download-missing-device-images": "ts-node docgen/missing_device_images download",
-        "move-missing-device-images": "ts-node docgen/missing_device_images move",
-        "prepare-missing-device-images": "ts-node docgen/missing_device_images prepare",
+        "docgen": "ts-node docgen/index.ts",
+        "download-missing-device-images": "ts-node docgen/missing_device_images.ts download",
+        "move-missing-device-images": "ts-node docgen/missing_device_images.ts move",
+        "prepare-missing-device-images": "ts-node docgen/missing_device_images.ts prepare",
         "pretty:write": "prettier --write .",
         "pretty:check": "prettier --check .",
-        "test": "ts-node docgen/tests"
+        "test": "ts-node docgen/tests/index.ts"
     },
     "author": "",
     "license": "ISC",
