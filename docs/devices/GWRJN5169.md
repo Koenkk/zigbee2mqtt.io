@@ -17,13 +17,14 @@ pageClass: device-page
 |-----|-----|
 | Model | GWRJN5169  |
 | Vendor  | [OpenLumi](/supported-devices/#v=OpenLumi)  |
-| Description | [Lumi Router (JN5169)](https://github.com/igo-r/Lumi-Router-JN5169) |
-| Exposes | device_temperature, linkquality |
-| Picture | ![OpenLumi GWRJN5169](https://www.zigbee2mqtt.io/images/devices/GWRJN5169.jpg) |
+| Description | Lumi Router (JN5169) |
+| Exposes | device_temperature |
+| Picture | ![OpenLumi GWRJN5169](https://www.zigbee2mqtt.io/images/devices/GWRJN5169.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+[Lumi Router (JN5169)](https://github.com/igo-r/Lumi-Router-JN5169)
 
 
 ### Firmware
@@ -45,13 +46,7 @@ Open source firmware can be found here: [Github](https://github.com/igo-r/Lumi-R
 ### Device temperature (numeric)
 Temperature of the device.
 Value can be found in the published state on the `device_temperature` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"device_temperature": ""}`.
+It's not possible to write (`/set`) this value.
 The unit of this value is `°C`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

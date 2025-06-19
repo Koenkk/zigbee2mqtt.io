@@ -17,9 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | SLR2  |
 | Vendor  | [Hive](/supported-devices/#v=Hive)  |
-| Description | Dual channel heating and hot water thermostat |
-| Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration, linkquality |
-| Picture | ![Hive SLR2](https://www.zigbee2mqtt.io/images/devices/SLR2.jpg) |
+| Description | Dual channel heating and hot water receiver |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration |
+| Picture | ![Hive SLR2](https://www.zigbee2mqtt.io/images/devices/SLR2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,13 +28,13 @@ pageClass: device-page
 
 ### Pairing
 
-To pair the thermostat with Zigbee2MQTT, follow these steps:
+To pair the receiver with Zigbee2MQTT, follow these steps:
 
-1. Temporarily disconnect any thermostat controllers connected to the thermostat by remove a battery from them.
-2. Turn the thermostat and boiler off, then on again to ensure it is not trying to connect to any thermostat controllers.
-3. Once the thermostat and boiler are on, hold down the Central heating button on the device until the Central heating'light turns white/ pink, then release the button. This will enable stand-alone mode on the thermostat.
+1. Temporarily disconnect any thermostat controllers connected to the receiver by removing a battery from them.
+2. Turn the receiver and boiler off, then on again to ensure it is not trying to connect to any thermostat controllers.
+3. Once the receiver and boiler are on, hold down the Central heating button on the device until the Central heating'light turns white/ pink, then release the button. This will enable stand-alone mode on the receiver.
 4. Hold down the central heating button again until the Central heating light begins to flash amber. The device is now in pairing mode and should be found by Zigbee2MQTT.
-5. You can now re-insert the battery back into any thermostat controllers disconnected in step 1 and pair them to the boiler (and optionally Zigbee2MQTT). For information on pairing the thermostat controllers see the pairing instructions for the [Hive SLT3B](./SLT3.md). Note that the thermostat's Central heating light will remain amber until a controller is paired with the thermostat, however the thermostat will still function correctly.
+5. You can now re-insert the battery back into any thermostat controllers disconnected in step 1 and pair them to the receiver (and optionally Zigbee2MQTT). For information on pairing the thermostat controllers see the pairing instructions for the [Hive SLT3B](./SLT3.md). Note that the receiver's Central heating light will remain amber until a thermostat controller is paired with the receiver, however the receiver will still function correctly.
 
 
 ### Sending payloads on dual channel receivers
@@ -64,9 +64,9 @@ To start one, or modify an already active one, send the following payload to the
 ```js
 {
    "system_mode_heat":"emergency_heating",
-   "temperature_setpoint_hold_duration_heat":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
-   "temperature_setpoint_hold_heat":"1",
-   "occupied_heating_setpoint_heat":"18"  // Replace with desired temperature. Between 5 and 32 C
+   "temperature_setpoint_hold_duration_heat":30,  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold_heat":1,
+   "occupied_heating_setpoint_heat":18  // Replace with desired temperature. Between 5 and 32 C
 }
 ```
 Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
@@ -78,8 +78,8 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 ```js
 {
    "system_mode_heat":"heat",
-   "temperature_setpoint_hold_heat":"1",
-   "occupied_heating_setpoint_heat":"20" // Replace with desired temperature. Between 5 and 32 C
+   "temperature_setpoint_hold_heat":1,
+   "occupied_heating_setpoint_heat":20 // Replace with desired temperature. Between 5 and 32 C
 }
 ```
 Note: You will also notice that `temperature_setpoint_hold_duration_heat` automatically changes to `65535` which means `undefined` (indefinite).
@@ -92,7 +92,7 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 ```js
 {
    "system_mode_heat":"off",
-   "temperature_setpoint_hold_heat":"0"
+   "temperature_setpoint_hold_heat":0
 }
 ```
 Note: You will also notice that `temperature_setpoint_hold_duration_heat` automatically changes to `0` which means `not set`. `occupied_heating_setpoint_heat` automatically changes to `1` degree C.
@@ -107,8 +107,8 @@ To start one, or modify an already active one, send the following payload to the
 ```js
 {
    "system_mode_water":"emergency_heating",
-   "temperature_setpoint_hold_duration_water":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
-   "temperature_setpoint_hold_water":"1"
+   "temperature_setpoint_hold_duration_water":30,  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold_water":1
 }
 ```
 Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
@@ -118,7 +118,7 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 ```js
 {
    "system_mode_water":"heat",
-   "temperature_setpoint_hold_water":"1"
+   "temperature_setpoint_hold_water":1
 }
 ```
 Note: You will also notice that `temperature_setpoint_hold_duration_heat` automatically changes to `65535` which means `undefined` (indefinite).
@@ -131,7 +131,7 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 ```js
 {
    "system_mode_water":"off",
-   "temperature_setpoint_hold_water":"0"
+   "temperature_setpoint_hold_water":0
 }
 ```
 Note: You will also notice that `temperature_setpoint_hold_duration_heat` automatically changes to `0` which means `not set`.
@@ -193,11 +193,4 @@ Value can be found in the published state on the `temperature_setpoint_hold_dura
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_setpoint_hold_duration_water": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_setpoint_hold_duration_water": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

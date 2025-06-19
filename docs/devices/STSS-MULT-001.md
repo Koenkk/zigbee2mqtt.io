@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | STSS-MULT-001  |
 | Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Multipurpose sensor |
-| Exposes | contact, battery_low, tamper, linkquality |
-| Picture | ![SmartThings STSS-MULT-001](https://www.zigbee2mqtt.io/images/devices/STSS-MULT-001.jpg) |
+| Exposes | contact, battery_low, tamper |
+| Picture | ![SmartThings STSS-MULT-001](https://www.zigbee2mqtt.io/images/devices/STSS-MULT-001.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -49,11 +49,4 @@ Indicates whether the device is tampered.
 Value can be found in the published state on the `tamper` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

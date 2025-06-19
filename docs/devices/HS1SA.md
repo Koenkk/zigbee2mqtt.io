@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS1SA control via MQTT"
-description: "Integrate your HEIMAN HS1SA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS1SA control via MQTT"
+description: "Integrate your Heiman HS1SA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-11-01T12:47:02Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS1SA
+# Heiman HS1SA
 
 |     |     |
 |-----|-----|
 | Model | HS1SA  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smoke detector |
-| Exposes | smoke, battery_low, battery, linkquality |
-| Picture | ![HEIMAN HS1SA](https://www.zigbee2mqtt.io/images/devices/HS1SA.jpg) |
+| Exposes | smoke, battery_low, battery, test |
+| Picture | ![Heiman HS1SA](https://www.zigbee2mqtt.io/images/devices/HS1SA.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -80,16 +80,15 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
 The unit of this value is `%`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
+### Test (binary)
+Indicates whether the device is being tested.
+Value can be found in the published state on the `test` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+If value equals `true` test is ON, if `false` OFF.
 

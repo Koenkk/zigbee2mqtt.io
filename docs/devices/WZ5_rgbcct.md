@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | WZ5_rgbcct  |
 | Vendor  | [Skydance](/supported-devices/#v=Skydance)  |
 | Description | Zigbee & RF 5 in 1 LED controller (RGB+CCT mode) |
-| Exposes | light (state, brightness, color_hs, color_temp), white_brightness, linkquality |
-| Picture | ![Skydance WZ5_rgbcct](https://www.zigbee2mqtt.io/images/devices/WZ5_rgbcct.jpg) |
+| Exposes | light (state, brightness, color_hs, color_temp), white_brightness |
+| Picture | ![Skydance WZ5_rgbcct](https://www.zigbee2mqtt.io/images/devices/WZ5_rgbcct.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -48,11 +48,4 @@ Value can be found in the published state on the `white_brightness` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"white_brightness": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `254`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

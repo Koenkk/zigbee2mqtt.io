@@ -1,7 +1,7 @@
 ---
 title: "Zemismart ZM25TQ control via MQTT"
 description: "Integrate your Zemismart ZM25TQ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2022-04-30T08:00:58
+addedAt: 2024-09-01T12:36:27
 pageClass: device-page
 ---
 
@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | ZM25TQ  |
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Tubular motor |
-| Exposes | cover (state, position), linkquality |
-| Picture | ![Zemismart ZM25TQ](https://www.zigbee2mqtt.io/images/devices/ZM25TQ.jpg) |
+| Exposes | cover (state, position) |
+| Picture | ![Zemismart ZM25TQ](https://www.zigbee2mqtt.io/images/devices/ZM25TQ.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -42,11 +42,4 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

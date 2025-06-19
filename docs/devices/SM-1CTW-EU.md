@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | SM-1CTW-EU  |
 | Vendor  | [Somgoms](/supported-devices/#v=Somgoms)  |
 | Description | Curtain switch |
-| Exposes | cover (state, position), linkquality |
-| Picture | ![Somgoms SM-1CTW-EU](https://www.zigbee2mqtt.io/images/devices/SM-1CTW-EU.jpg) |
+| Exposes | cover (state, position) |
+| Picture | ![Somgoms SM-1CTW-EU](https://www.zigbee2mqtt.io/images/devices/SM-1CTW-EU.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -42,11 +42,4 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

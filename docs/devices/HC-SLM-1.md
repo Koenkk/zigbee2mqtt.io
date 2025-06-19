@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | HC-SLM-1  |
 | Vendor  | [Heimgard Technologies](/supported-devices/#v=Heimgard%20Technologies)  |
 | Description | Wattle door lock pro |
-| Exposes | lock (state, lock_state), battery, sound_volume, auto_relock_time, action_user, action_source_name, pin_code, linkquality |
-| Picture | ![Heimgard Technologies HC-SLM-1](https://www.zigbee2mqtt.io/images/devices/HC-SLM-1.jpg) |
+| Exposes | lock (state, lock_state), battery, sound_volume, auto_relock_time, action_user, action_source_name, pin_code |
+| Picture | ![Heimgard Technologies HC-SLM-1](https://www.zigbee2mqtt.io/images/devices/HC-SLM-1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -35,6 +35,8 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `identify_timeout`: Sets duration of identification procedure in seconds (i.e., how long device would flash). Value ranges from 1 to 30 seconds (default 3). The value must be a number with a minimum value of `1` and with a with a maximum value of `30`
+
 * `expose_pin`: Expose pin of this lock in the published payload (default false). The value must be `true` or `false`
 
 
@@ -47,7 +49,7 @@ To read the current state of this lock publish a message to topic `zigbee2mqtt/F
 This lock exposes a lock state which can be found in the published state under the `lock_state` property. It's not possible to read (`/get`) or write (`/set`) this value. The possible values are: `not_fully_locked`, `locked`, `unlocked`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -86,11 +88,4 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `user_type` (enum): Type of user, unrestricted: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock allowed values: `unrestricted`, `year_day_schedule`, `week_day_schedule`, `master`, `non_access`
 - `user_enabled` (binary): Whether the user is enabled/disabled allowed values: `true` or `false`
 - `pin_code` (numeric): Pincode to set, set pincode to null to clear 
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | FZB8708HD-S1  |
 | Vendor  | [Brimate](/supported-devices/#v=Brimate)  |
 | Description | Smart motion sensor |
-| Exposes | occupancy, battery_low, linkquality |
-| Picture | ![Brimate FZB8708HD-S1](https://www.zigbee2mqtt.io/images/devices/FZB8708HD-S1.jpg) |
+| Exposes | occupancy, battery_low |
+| Picture | ![Brimate FZB8708HD-S1](https://www.zigbee2mqtt.io/images/devices/FZB8708HD-S1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -43,11 +43,4 @@ Indicates if the battery of this device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

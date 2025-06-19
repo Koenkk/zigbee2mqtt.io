@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | TI0001-pir  |
 | Vendor  | [Livolo](/supported-devices/#v=Livolo)  |
 | Description | Zigbee motion Sensor |
-| Exposes | occupancy, linkquality |
-| Picture | ![Livolo TI0001-pir](https://www.zigbee2mqtt.io/images/devices/TI0001-pir.jpg) |
+| Exposes | occupancy |
+| Picture | ![Livolo TI0001-pir](https://www.zigbee2mqtt.io/images/devices/TI0001-pir.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -60,11 +60,4 @@ Indicates whether the device detected occupancy.
 Value can be found in the published state on the `occupancy` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

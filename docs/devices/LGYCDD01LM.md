@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi LGYCDD01LM control via MQTT"
-description: "Integrate your Xiaomi LGYCDD01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara LGYCDD01LM control via MQTT"
+description: "Integrate your Aqara LGYCDD01LM via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-09-01T13:40:11
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi LGYCDD01LM
+# Aqara LGYCDD01LM
 
 |     |     |
 |-----|-----|
 | Model | LGYCDD01LM  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara Zigbee 3.0 LED strip T1 |
-| Exposes | light (state, brightness, color_temp, color_xy), linkquality |
-| Picture | ![Xiaomi LGYCDD01LM](https://www.zigbee2mqtt.io/images/devices/LGYCDD01LM.jpg) |
-| White-label | Xiaomi RLS-K01D |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Light strip T1 |
+| Exposes | light (state, brightness, color_temp, color_xy), power_on_behavior, length, min_brightness, max_brightness, audio, audio_sensitivity, audio_effect, preset, speed |
+| Picture | ![Aqara LGYCDD01LM](https://www.zigbee2mqtt.io/images/devices/LGYCDD01LM.png) |
+| White-label | Aqara RLS-K01D |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -55,6 +55,12 @@ This light supports the following features: `state`, `brightness`, `color_temp`,
   - `{"color": {"rgb": "R,G,B"}}` e.g. `{"color":{"rgb":"46,102,150"}}`
   - `{"color": {"hex": HEX}}` e.g. `{"color":{"hex":"#547CFF"}}`
 
+#### On with timed off
+When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
+Additionally an `off_wait_time` property can be added to the payload to specify the cooldown time in seconds when the light will not answer to other on with timed off commands.
+Support depends on the light firmware. Some devices might require both `on_time` and `off_wait_time` to work
+Examples : `{"state" : "ON", "on_time": 300}`, `{"state" : "ON", "on_time": 300, "off_wait_time": 120}`.
+
 #### Transition
 For all of the above mentioned features it is possible to do a transition of the value over time. To do this add an additional property `transition` to the payload which is the transition time in seconds.
 Examples: `{"brightness":156,"transition":3}`, `{"color_temp":241,"transition":1}`.
@@ -68,7 +74,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
@@ -79,10 +85,69 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 }
 ````
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+### Power on behavior (enum)
+Controls the behavior when the device is powered on after power loss.
+Value can be found in the published state on the `power_on_behavior` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
+The possible values are: `on`, `previous`, `off`, `inverted`.
+
+### Length (numeric)
+LED strip length.
+Value can be found in the published state on the `length` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"length": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"length": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `10`.
+The unit of this value is `m`.
+
+### Min brightness (numeric)
+Minimum brightness level.
+Value can be found in the published state on the `min_brightness` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"min_brightness": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"min_brightness": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `99`.
+The unit of this value is `%`.
+
+### Max brightness (numeric)
+Maximum brightness level.
+Value can be found in the published state on the `max_brightness` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"max_brightness": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"max_brightness": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Audio (binary)
+Enabling audio.
+Value can be found in the published state on the `audio` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"audio": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"audio": NEW_VALUE}`.
+If value equals `ON` audio is ON, if `OFF` OFF.
+
+### Audio sensitivity (enum)
+Audio sensitivity.
+Value can be found in the published state on the `audio_sensitivity` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"audio_sensitivity": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"audio_sensitivity": NEW_VALUE}`.
+The possible values are: `low`, `medium`, `high`.
+
+### Audio effect (enum)
+Audio effect.
+Value can be found in the published state on the `audio_effect` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"audio_effect": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"audio_effect": NEW_VALUE}`.
+The possible values are: `random`, `blink`, `rainbow`, `wave`.
+
+### Preset (numeric)
+Preset index (0-6 default presets).
+Value can be found in the published state on the `preset` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"preset": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"preset": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `32`.
+
+### Speed (numeric)
+Effect speed.
+Value can be found in the published state on the `speed` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"speed": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"speed": NEW_VALUE}`.
+The minimal value is `1` and the maximum value is `100`.
 

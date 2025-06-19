@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | ZM25EL  |
 | Vendor  | [Zemismart](/supported-devices/#v=Zemismart)  |
 | Description | Cover motor |
-| Exposes | battery, cover (state, position), reverse_direction, border, click_control, motor_fault, linkquality |
-| Picture | ![Zemismart ZM25EL](https://www.zigbee2mqtt.io/images/devices/ZM25EL.jpg) |
+| Exposes | battery, cover (state, position), reverse_direction, border, click_control, motor_fault |
+| Picture | ![Zemismart ZM25EL](https://www.zigbee2mqtt.io/images/devices/ZM25EL.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -38,7 +38,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -74,11 +74,4 @@ The possible values are: `up`, `down`.
 Value can be found in the published state on the `motor_fault` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` motor fault is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

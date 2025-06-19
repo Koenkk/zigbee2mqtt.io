@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | FUT089Z  |
 | Vendor  | [MiBoxer](/supported-devices/#v=MiBoxer)  |
 | Description | RGB+CCT Remote |
-| Exposes | battery, voltage, linkquality |
-| Picture | ![MiBoxer FUT089Z](https://www.zigbee2mqtt.io/images/devices/FUT089Z.jpg) |
+| Exposes | battery, voltage, action |
+| Picture | ![MiBoxer FUT089Z](https://www.zigbee2mqtt.io/images/devices/FUT089Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -34,7 +34,7 @@ To pair the device:
 By default, the controls of the remote are not exposed. This is due to the non-standard way the remote communicates.
 
 In order to expose the controls, you need to:
-- Open `Zigbee2MQTT` (the web interafce)
+- Open `Zigbee2MQTT` (the web interface)
 - Go to the `Extensions` tab
 - Click the `+`-button to add a new extension file
 - Enter a name for the extension file, e.g.: `miboxer-fut089z-controls-exposer.js`
@@ -52,7 +52,7 @@ By default they will report 3 sensors
 The extension adds 3 more sensors:
 - `Brightness` (%)
 - `Color Temperature` (mireds)
-- `Color` (not implmented yet)
+- `Color` (not implemented yet)
 
 As well as on trigger for each button:
 - button_group_1_on
@@ -84,7 +84,7 @@ mode: restart
 (You can easily create them automatically by going to the Device in Home Assistant and adding an Automation from there.)
 
 Example automation using the brightness slider:  
-(If you ccreate such an Automation automatically thorugh the Device's page in Home Assistant, it will create a buggy `platform: device` automation, please use `platform: state` instead as shown blow.)
+(If you create such an Automation automatically through the Device's page in Home Assistant, it will create a buggy `platform: device` automation, please use `platform: state` instead as shown blow.)
 ``` YAML
 alias: MiBoxerRemote1_BrightnessSlider
 description: ""
@@ -123,7 +123,7 @@ To directly control lights or smartplugs without going through MQTT (and Home As
 - first create a ZigBee group with the correct ID (10X), 
 - name it like you wish,
 - then add the devices you intend to control to that group (pay attention to use the right termination point).
-  Very important : do NOT add the remote itself to the group.
+  Very important: do NOT add the remote itself to the group.
 
 The `ON` and `OFF` Master Buttons on top of the remote control an extra zone with Group ID 108. 
 You can for instance use it as a master switch or for just another light/smartplug etc...
@@ -144,11 +144,21 @@ The remote supports Touchlink. It is unclear how the Touchlink configuration int
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `simulated_brightness`: Simulate a brightness value. If this device provides a brightness_move_up or brightness_move_down action it is possible to specify the update interval and delta. The action_brightness_delta indicates the delta for each interval. Example:
+```yaml
+simulated_brightness:
+  delta: 20 # delta per interval, default = 20
+  interval: 200 # interval in milliseconds, default = 200
+```
+
 
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -160,10 +170,9 @@ Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+The possible values are: `on`, `off`, `brightness_move_to_level`, `color_temperature_move`, `move_to_hue_and_saturation`, `tuya_switch_scene`.
 

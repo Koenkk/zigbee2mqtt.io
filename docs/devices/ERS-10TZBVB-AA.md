@@ -1,6 +1,6 @@
 ---
-title: "TuYa ERS-10TZBVB-AA control via MQTT"
-description: "Integrate your TuYa ERS-10TZBVB-AA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Moes ERS-10TZBVB-AA control via MQTT"
+description: "Integrate your Moes ERS-10TZBVB-AA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-06-01T15:08:55
 pageClass: device-page
 ---
@@ -11,20 +11,28 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ERS-10TZBVB-AA
+# Moes ERS-10TZBVB-AA
 
 |     |     |
 |-----|-----|
 | Model | ERS-10TZBVB-AA  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
+| Vendor  | [Moes](/supported-devices/#v=Moes)  |
 | Description | Smart button |
-| Exposes | action, battery, operation_mode, linkquality |
-| Picture | ![TuYa ERS-10TZBVB-AA](https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVB-AA.jpg) |
+| Exposes | action, battery, operation_mode |
+| Picture | ![Moes ERS-10TZBVB-AA](https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVB-AA.png) |
+| White-label | COOLO ZG-101ZL |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
+A triple click of the button switches operation modes.
+This is indicated by the received payload `{"action": null, "operation_mode": NEW_VALUE}` with values rotating between the modes listed in the respective section below.
+Depending on mode, the actions emitted by single click, double click and hold differ.
 
+### Pairing
+
+Open the backcover with a screwdriver. Hold the reset button for 6s until the green LED starts flashing.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -49,7 +57,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `single`, `double`, `hold`, `brightness_move_to_level`, `color_temperature_move`, `brightness_step_up`, `brightness_step_down`, `on`, `off`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -61,11 +69,4 @@ Value can be found in the published state on the `operation_mode` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
 The possible values are: `command`, `event`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

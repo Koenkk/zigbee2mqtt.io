@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | SMA04P  |
 | Vendor  | [Mercator Ikuü](/supported-devices/#v=Mercator%20Iku%C3%BC)  |
 | Description | Contact sensor |
-| Exposes | contact, battery_low, tamper, battery, voltage, linkquality |
-| Picture | ![Mercator Ikuü SMA04P](https://www.zigbee2mqtt.io/images/devices/SMA04P.jpg) |
+| Exposes | contact, battery_low, tamper, battery, voltage |
+| Picture | ![Mercator Ikuü SMA04P](https://www.zigbee2mqtt.io/images/devices/SMA04P.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -51,7 +51,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` tamper is ON, if `false` OFF.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -62,11 +62,4 @@ Voltage of the battery in millivolts.
 Value can be found in the published state on the `voltage` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `mV`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

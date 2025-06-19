@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | ORBIS Vibration Sensor  |
 | Vendor  | [Niceboy](/supported-devices/#v=Niceboy)  |
 | Description | Vibration sensor |
-| Exposes | battery, voltage, vibration, sensitivity, linkquality |
-| Picture | ![Niceboy ORBIS Vibration Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Vibration-Sensor.jpg) |
+| Exposes | battery, voltage, vibration, sensitivity |
+| Picture | ![Niceboy ORBIS Vibration Sensor](https://www.zigbee2mqtt.io/images/devices/ORBIS-Vibration-Sensor.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -38,7 +38,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -57,15 +57,9 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` vibration is ON, if `false` OFF.
 
 ### Sensitivity (numeric)
+Sensitivity of the sensor (0 = highest sensitivity, 50 = lowest sensitivity). Press button on the device right before changing this.
 Value can be found in the published state on the `sensitivity` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"sensitivity": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `50`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

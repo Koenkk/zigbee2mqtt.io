@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | PTM 216Z  |
 | Vendor  | [EnOcean](/supported-devices/#v=EnOcean)  |
 | Description | Pushbutton transmitter module |
-| Exposes | action, linkquality |
-| Picture | ![EnOcean PTM 216Z](https://www.zigbee2mqtt.io/images/devices/PTM-216Z.jpg) |
+| Exposes | action |
+| Picture | ![EnOcean PTM 216Z](https://www.zigbee2mqtt.io/images/devices/PTM-216Z.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -37,6 +37,19 @@ Binding may work between this module and the actuator, depending if the actuator
 
 
 ### Pairing
+Before starting a pairing attempt, please read carefully this section from the **[documentation ](https://www.zigbee2mqtt.io/advanced/zigbee/01_zigbee_network.html#green-power-devices)**
+
+For model built after 2020, pairing may be done via NFC or the physical buttons.
+
+#### NFC
+The easiest way is to use a compatible smartphone (iOS, android) with NFC capability.
+
+The required tool “EnOcean Tool” is available from the [Google Play Store](https://play.google.com/store/apps/details?id=de.enocean.easytool&hl=en) and from the [Apple Store](https://apps.apple.com/de/app/enocean-tool/id1497283202).
+
+For the first configuration, the QR-Code behind the PTM 216Z shall be scanned in order to get the built-in NFC pin to unlock the device. Then, the user may define a specific one if required. More details are available in the documentation [EnOcean PTM 216Z manual chapter 4 (NFC interface)](https://www.enocean.com/wp-content/uploads/redaktion/pdf/enocean_modules_24ghz/ptm-216z/user-manual-pdf/PTM-216Z-User-Manual-2.pdf).
+
+
+#### Physical buttons
 This device has 4 buttons:
 
 | Number | Button | Position |
@@ -61,7 +74,16 @@ Once the device is paired you need to confirm the channel. To do this press A1 a
 
 In case you want to pair it to a different channel you have to factory reset the device. This can be done by pressing all buttons (A0, A1, B0 and B1) simultaneously for at least 7 seconds.
 
-This device can work on any channel, not only 11, 15, 20 or 25. For this, please refer to the [EnOcean PTM 216Z manual chapter 5.3](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/PTM-216Z-User-Manual-1.pdf).
+This device can work on any channel, not only 11, 15, 20 or 25. For this, please refer to the [EnOcean PTM 216Z manual chapter 3.6.3](https://www.enocean.com/wp-content/uploads/downloads-produkte/en/products/enocean_modules_24ghz/ptm-216z/user-manual-pdf/PTM-216Z-User-Manual-2.pdf).
+
+
+## Home Assistant
+In the Home Assistant community forum, you may find some nice Automation Blueprints that works well with this device:
+
+@chris-1243
+https://community.home-assistant.io/t/zigbee2mqtt-ptm215z-ze-and-ptm216z/873595
+
+They add functionality like `held_#` which is nice to use to for example increase or decrease the brightness of a light.
 <!-- Notes END: Do not edit below this line -->
 
 
@@ -73,12 +95,5 @@ This device can work on any channel, not only 11, 15, 20 or 25. For this, please
 Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `press_1`, `press_2`, `press_1_and_2`, `press_3`, `press_1_and_3`, `press_3_and_4`, `press_1_and_2_and_3`, `press_4`, `press_1_and_4`, `press_2_and_4`, `press_1_and_2_and_4`, `press_3_and_4`, `press_1_and_3_and_4`, `press_2_and_3_and_4`, `press_all`, `press_energy_bar`, `release`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+The possible values are: `press_1`, `press_2`, `press_1_and_2`, `press_3`, `press_1_and_3`, `press_2_and_3`, `press_1_and_2_and_3`, `press_4`, `press_1_and_4`, `press_2_and_4`, `press_1_and_2_and_4`, `press_3_and_4`, `press_1_and_3_and_4`, `press_2_and_3_and_4`, `press_all`, `press_energy_bar`, `release`, `short_press_2_of_2`.
 

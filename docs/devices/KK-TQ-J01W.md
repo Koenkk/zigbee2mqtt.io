@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | KK-TQ-J01W  |
 | Vendor  | [Konke](/supported-devices/#v=Konke)  |
 | Description | Smart 4 key scene switch |
-| Exposes | battery, voltage, battery_low, action, linkquality |
-| Picture | ![Konke KK-TQ-J01W](https://www.zigbee2mqtt.io/images/devices/KK-TQ-J01W.jpg) |
+| Exposes | battery, voltage, battery_low, action |
+| Picture | ![Konke KK-TQ-J01W](https://www.zigbee2mqtt.io/images/devices/KK-TQ-J01W.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,7 +33,7 @@ pageClass: device-page
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -56,11 +56,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `hexagon`, `square`, `triangle`, `circle`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

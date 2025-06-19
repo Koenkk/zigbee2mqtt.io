@@ -1,6 +1,6 @@
 ---
-title: "Xiaomi CTP-R01 control via MQTT"
-description: "Integrate your Xiaomi CTP-R01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Aqara CTP-R01 control via MQTT"
+description: "Integrate your Aqara CTP-R01 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:22
 pageClass: device-page
 ---
@@ -11,16 +11,16 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Xiaomi CTP-R01
+# Aqara CTP-R01
 
 |     |     |
 |-----|-----|
 | Model | CTP-R01  |
-| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
-| Description | Aqara magic cube T1 Pro |
-| Exposes | battery, voltage, power_outage_count, operation_mode, side, action, action_from_side, action_angle, linkquality |
-| Picture | ![Xiaomi CTP-R01](https://www.zigbee2mqtt.io/images/devices/CTP-R01.jpg) |
-| White-label | Xiaomi MFCZQ12LM |
+| Vendor  | [Aqara](/supported-devices/#v=Aqara)  |
+| Description | Cube T1 Pro |
+| Exposes | battery, voltage, power_outage_count, operation_mode, side, action_from_side, action_angle, action |
+| Picture | ![Aqara CTP-R01](https://www.zigbee2mqtt.io/images/devices/CTP-R01.png) |
+| White-label | Aqara MFCZQ12LM |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -87,7 +87,7 @@ This device supports OTA updates, for more information see [OTA updates](../guid
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -117,12 +117,6 @@ Value can be found in the published state on the `side` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `6`.
 
-### Action (enum)
-Triggered action.
-Value can be found in the published state on the `action` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `shake`, `throw`, `tap`, `slide`, `flip180`, `flip90`, `hold`, `side_up`, `rotate_left`, `rotate_right`, `1_min_inactivity`, `flip_to_side`.
-
 ### Action from side (numeric)
 Side of the cube.
 Value can be found in the published state on the `action_from_side` property.
@@ -135,10 +129,9 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `-360` and the maximum value is `360`.
 The unit of this value is `°`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+The possible values are: `shake`, `throw`, `tap`, `slide`, `flip180`, `flip90`, `hold`, `side_up`, `rotate_left`, `rotate_right`, `1_min_inactivity`, `flip_to_side`.
 

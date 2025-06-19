@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | SLR1  |
 | Vendor  | [Hive](/supported-devices/#v=Hive)  |
 | Description | Heating thermostat |
-| Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration, linkquality |
-| Picture | ![Hive SLR1](https://www.zigbee2mqtt.io/images/devices/SLR1.jpg) |
+| Exposes | climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration |
+| Picture | ![Hive SLR1](https://www.zigbee2mqtt.io/images/devices/SLR1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -45,9 +45,9 @@ To start one, or modify an already active one, send the following payload to the
 ```js
 {
    "system_mode":"emergency_heating",
-   "temperature_setpoint_hold_duration":"30",  // Replace with desired duration in minutes. Max 360. 0 to stop
-   "temperature_setpoint_hold":"1",
-   "occupied_heating_setpoint":"18"  // Replace with desired temperature. Between 5 and 32 C
+   "temperature_setpoint_hold_duration":30,  // Replace with desired duration in minutes. Max 360. 0 to stop
+   "temperature_setpoint_hold":1,
+   "occupied_heating_setpoint":18  // Replace with desired temperature. Between 5 and 32 C
 }
 ```
 Note: For device timing reasons, the payload needs to be sent as one single command. Sending individual commands or settings attributes manually using the Frontend will not work.
@@ -59,8 +59,8 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 ```js
 {
    "system_mode":"heat",
-   "temperature_setpoint_hold":"1",
-   "occupied_heating_setpoint":"20" // Replace with desired temperature. Between 5 and 32 C
+   "temperature_setpoint_hold":1,
+   "occupied_heating_setpoint":20 // Replace with desired temperature. Between 5 and 32 C
 }
 ```
 Note: You will also notice that `temperature_setpoint_hold_duration` automatically changes to `65535` which means `undefined` (indefinite).
@@ -73,7 +73,7 @@ Send the following payload to the topic `zigbee2mqtt/FRIENDLY_NAME/set`:
 ```js
 {
    "system_mode":"off",
-   "temperature_setpoint_hold":"0"
+   "temperature_setpoint_hold":0
 }
 ```
 Note: You will also notice that `temperature_setpoint_hold_duration` automatically changes to `0` which means `not set`. `occupied_heating_setpoint` automatically changes to `1` degree C.
@@ -111,11 +111,4 @@ Value can be found in the published state on the `temperature_setpoint_hold_dura
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_setpoint_hold_duration": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_setpoint_hold_duration": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `65535`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

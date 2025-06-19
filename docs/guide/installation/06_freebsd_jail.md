@@ -13,6 +13,7 @@ For the sake of simplicity this guide assumes running on [TrueNAS CORE](https://
 First we have to create the jail that will run both Zigbee2MQTT and Mosquitto. We can do that by opening the TrueNAS Web UI, navigating to `Plugins`, selecting `Community` plugins and then `Mosquitto MQTT`.
 
 To enter the jail's terminal, we can use the Web UI's _Shell_ feature under _Jails_, or SSH into TrueNAS and then
+
 ```sh
 sudo iocage console <jail-name>
 ```
@@ -23,15 +24,14 @@ Enter the following commands inside the jail's shell:
 
 ```bash
 # Install Node.js and required dependencies:
-# - It is recommended to install Node 16 from the official Node repository. Check https://github.com/nodesource/distributions/blob/master/README.md on how to do this.
-# - Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v16.15.0/ e.g. Version 16.15.0 should work.
+# - It is recommended to install Node 22 from the official Node repository. Check https://github.com/nodesource/distributions/blob/master/README.md on how to do this.
+# - Older i386 hardware can work with [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/v20.9.0/ e.g. Version 20.9.0 should work.
 # - Selecting `npm` also installs `node`.
-pkg install npm git gmake gcc
+pkg install git gmake gcc
+corepack enable
 
-# Verify that the correct nodejs and npm (automatically installed with nodejs)
-# version has been installed
-node --version  # Should output v14.X, V16.x, V17.x or V18.X
-npm --version  # Should output 6.X, 7.X or 8.X
+# Verify that the correct Node.js version has been installed
+node --version  # Should output V20.x, V22.X
 
 # Create installation folder (/usr/local prefix is used for software not part of the base system)
 mkdir -p /usr/local/opt/zigbee2mqtt
@@ -41,40 +41,27 @@ cd /usr/local/opt/zigbee2mqtt
 git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git .
 
 # Install dependencies
-npm ci
-```
+pnpm install --frozen-lockfile
 
-If everything went correctly the output of `npm ci` is similar to (the number of packages and seconds is probably different on your device):
-```bash
-node-pre-gyp info ok
-added 383 packages in 111.613s
-```
-
-Note that the `npm ci` produces some `warning` which can be ignored.
-
-## Configuring
-
-Configuration is the same as on [Linux](01_linux.md#configuring).
-
-Note that the `configuration.yaml` is at a different location:
-```
-/usr/local/opt/zigbee2mqtt/data/configuration.yaml
-```
-
-Also note that if you need `nano` for editing the configuration, you'll have to install it first:
-```sh
-pkg install nano
+# Build Zigbee2MQTT
+pnpm run build
 ```
 
 ## Starting Zigbee2MQTT
+
 Now that we have setup everything correctly we can start Zigbee2MQTT.
 
 ```bash
 cd /usr/local/opt/zigbee2mqtt
-npm start
+pnpm start
 ```
 
-When started successfully, you will see something like:
+On first start, Zigbee2MQTT will start the onboarding on port 8080.
+Navigate to this board and configure accordingly.
+More information about [onboarding](../getting-started/README.md#onboarding).
+
+Once the onboarding is completed, you will see something like:
+
 ```bash
 Zigbee2MQTT:info  2019-11-09T13:04:01: Logging to directory: '/opt/zigbee2mqtt/data/log/2019-11-09.14-04-01'
 Zigbee2MQTT:info  2019-11-09T13:04:01: Starting Zigbee2MQTT version 1.6.0 (commit #720e393)
@@ -102,6 +89,7 @@ nano /usr/local/etc/rc.d/zigbee2mqtt
 ```
 
 Add the following to this file:
+
 ```
 #!/bin/sh
 
@@ -116,6 +104,9 @@ name="zigbee2mqtt"
 rcvar=zigbee2mqtt_enable
 
 : ${zigbee2mqtt_enable:="NO"}
+
+# enable watchdog
+zigbee2mqtt_env="Z2M_WATCHDOG=default"
 
 # daemon
 pidfile="/var/run/${name}.pid"
@@ -132,11 +123,13 @@ run_rc_command "$1"
 Save the file and exit.
 
 Make it executable:
+
 ```sh
 chmod +x /usr/local/etc/rc.d/zigbee2mqtt
 ```
 
 Verify that the configuration works:
+
 ```sh
 # Start Zigbee2MQTT without enabling it
 service zigbee2mqtt onestart
@@ -146,12 +139,14 @@ service zigbee2mqtt onestatus
 ```
 
 Output should look like:
+
 ```
 root@zigbee2mqtt:/usr/local/opt/zigbee2mqtt # service zigbee2mqtt onestatus
 zigbee2mqtt is running as pid 80246.
 ```
 
 Now that everything works, we want the init system to start Zigbee2MQTT automatically when the jail starts. This can be done by executing:
+
 ```sh
 service zigbee2mqtt enable
 ```
@@ -159,6 +154,7 @@ service zigbee2mqtt enable
 Done! 😃
 
 Some tips that can be handy later:
+
 ```sh
 # Stopping Zigbee2MQTT
 service zigbee2mqtt stop
@@ -168,25 +164,11 @@ service zigbee2mqtt start
 ```
 
 ## (For later) Update Zigbee2MQTT to the latest version
+
 To update Zigbee2MQTT to the latest version, execute:
 
 ```sh
-# Stop Zigbee2MQTT and go to directory
-service zigbee2mqtt stop
+# Run the update script from the Zigbee2MQTT directory
 cd /usr/local/opt/zigbee2mqtt
-
-# Backup configuration
-cp -R data data-backup
-
-# Update
-git checkout HEAD -- npm-shrinkwrap.json
-git pull
-npm ci
-
-# Restore configuration
-cp -R data-backup/* data
-rm -rf data-backup
-
-# Start Zigbee2MQTT
-service zigbee2mqtt start
+./update.sh
 ```

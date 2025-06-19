@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | ZLGP14/ZLGP15/ZLGP16  |
 | Vendor  | [Legrand](/supported-devices/#v=Legrand)  |
 | Description | Wireless and batteryless scenario switch (home arrival/departure, 1-4 switches, daytime day/night) |
-| Exposes | action, linkquality |
-| Picture | ![Legrand ZLGP14/ZLGP15/ZLGP16](https://www.zigbee2mqtt.io/images/devices/ZLGP14-ZLGP15-ZLGP16.jpg) |
+| Exposes | action |
+| Picture | ![Legrand ZLGP14/ZLGP15/ZLGP16](https://www.zigbee2mqtt.io/images/devices/ZLGP14-ZLGP15-ZLGP16.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -45,6 +45,9 @@ For further details, please refer to manufacturer documentation below.
 <!-- Notes END: Do not edit below this line -->
 
 
+## OTA updates
+This device supports OTA updates, for more information see [OTA updates](../guide/usage/ota_updates.md).
+
 
 
 ## Exposes
@@ -54,11 +57,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `home_arrival`, `home_departure`, `press_1`, `press_2`, `press_3`, `press_4`, `daytime_day`, `daytime_night`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

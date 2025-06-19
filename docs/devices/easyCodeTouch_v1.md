@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | easyCodeTouch_v1  |
 | Vendor  | [Onesti Products AS](/supported-devices/#v=Onesti%20Products%20AS)  |
 | Description | Zigbee module for EasyAccess code touch series |
-| Exposes | lock (state, lock_state), battery, sound_volume, last_unlock_source, last_unlock_user, last_lock_source, last_lock_user, last_used_pin_code, auto_relock, pin_code, linkquality |
-| Picture | ![Onesti Products AS easyCodeTouch_v1](https://www.zigbee2mqtt.io/images/devices/easyCodeTouch_v1.jpg) |
+| Exposes | lock (state, lock_state), battery, sound_volume, last_unlock_source, last_unlock_user, last_lock_source, last_lock_user, last_used_pin_code, auto_relock, pin_code, last_successful_pincode_clear, last_successful_pincode_save |
+| Picture | ![Onesti Products AS easyCodeTouch_v1](https://www.zigbee2mqtt.io/images/devices/easyCodeTouch_v1.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -39,7 +39,7 @@ To read the current state of this lock publish a message to topic `zigbee2mqtt/F
 This lock exposes a lock state which can be found in the published state under the `lock_state` property. It's not possible to read (`/get`) or write (`/set`) this value. The possible values are: `not_fully_locked`, `locked`, `unlocked`.
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -94,10 +94,13 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 - `user_enabled` (binary): Whether the user is enabled/disabled allowed values: `true` or `false`
 - `pin_code` (numeric): Pincode to set, set pincode to null to clear 
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
+### Last successful pincode clear (text)
+Last deleted Pincode.
+Value can be found in the published state on the `last_successful_pincode_clear` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+
+### Last successful pincode save (text)
+Last saved Pincode.
+Value can be found in the published state on the `last_successful_pincode_save` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
 

@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | ICZB-RM11S  |
 | Vendor  | [iCasa](/supported-devices/#v=iCasa)  |
 | Description | Zigbee 3.0 remote control |
-| Exposes | battery, action, linkquality |
-| Picture | ![iCasa ICZB-RM11S](https://www.zigbee2mqtt.io/images/devices/ICZB-RM11S.jpg) |
+| Exposes | battery, action |
+| Picture | ![iCasa ICZB-RM11S](https://www.zigbee2mqtt.io/images/devices/ICZB-RM11S.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -52,7 +52,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -63,11 +63,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `recall_*`, `on`, `off`, `brightness_stop`, `brightness_move_up`, `brightness_move_down`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

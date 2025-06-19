@@ -1,6 +1,6 @@
 ---
-title: "TuYa TS0601_cover_2 control via MQTT"
-description: "Integrate your TuYa TS0601_cover_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya TS0601_cover_2 control via MQTT"
+description: "Integrate your Tuya TS0601_cover_2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-02-01T14:45:57
 pageClass: device-page
 ---
@@ -11,16 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa TS0601_cover_2
+# Tuya TS0601_cover_2
 
 |     |     |
 |-----|-----|
 | Model | TS0601_cover_2  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | Curtain motor fixed speed |
-| Exposes | cover (state, position), linkquality |
-| Picture | ![TuYa TS0601_cover_2](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_2.jpg) |
-| White-label | Zemismart BCM100DB |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Description | Curtain motor or roller blind motor with fixed speed |
+| Exposes | cover (state, position) |
+| Picture | ![Tuya TS0601_cover_2](https://www.zigbee2mqtt.io/images/devices/TS0601_cover_2.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -46,11 +45,4 @@ The current state of this cover is in the published state under the `state` prop
 To control this cover publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "OPEN"}`, `{"state": "CLOSE"}`, `{"state": "STOP"}`.
 It's not possible to read (`/get`) this value.
 To change the position publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"position": VALUE}` where `VALUE` is a number between `0` and `100`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

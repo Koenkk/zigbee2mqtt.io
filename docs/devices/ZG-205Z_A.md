@@ -1,6 +1,6 @@
 ---
-title: "TuYa ZG-205Z/A control via MQTT"
-description: "Integrate your TuYa ZG-205Z/A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Tuya ZG-205Z/A control via MQTT"
+description: "Integrate your Tuya ZG-205Z/A via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2023-08-26T06:45:18
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# TuYa ZG-205Z/A
+# Tuya ZG-205Z/A
 
 |     |     |
 |-----|-----|
 | Model | ZG-205Z/A  |
-| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
-| Description | 5.8Ghz Human presence sensor |
-| Exposes | presence, illuminance, large_motion_detection_sensitivity, large_motion_detection_distance, motion_state, fading_time, medium_motion_detection_distance, medium_motion_detection_sensitivity, indicator, small_detection_distance, small_detection_sensitivity, linkquality |
-| Picture | ![TuYa ZG-205Z/A](https://www.zigbee2mqtt.io/images/devices/ZG-205Z-A.jpg) |
+| Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
+| Description | 5.8Ghz/24Ghz Human presence sensor |
+| Exposes | presence, motion_state, target_distance, illuminance, large_motion_detection_sensitivity, large_motion_detection_distance, fading_time, medium_motion_detection_distance, medium_motion_detection_sensitivity, indicator, small_detection_distance, small_detection_sensitivity, minimum_range |
+| Picture | ![Tuya ZG-205Z/A](https://www.zigbee2mqtt.io/images/devices/ZG-205Z-A.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -33,6 +33,11 @@ pairing process is in progress.
 
 
 
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 
 ## Exposes
 
@@ -42,8 +47,20 @@ Value can be found in the published state on the `presence` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` presence is ON, if `false` OFF.
 
+### Motion state (enum)
+State of the motion.
+Value can be found in the published state on the `motion_state` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `none`, `small`, `medium`, `large`, `far`, `near`.
+
+### Target distance (numeric)
+Distance to target.
+Value can be found in the published state on the `target_distance` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `m`.
+
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
@@ -63,12 +80,6 @@ It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"large_motion_detection_distance": NEW_VALUE}`.
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `m`.
-
-### Motion state (enum)
-State of the motion.
-Value can be found in the published state on the `motion_state` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The possible values are: `none`, `small`, `medium`, `large`.
 
 ### Fading time (numeric)
 For how much time presence should stay true after detecting it.
@@ -117,10 +128,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The minimal value is `0` and the maximum value is `10`.
 The unit of this value is `x`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+### Minimum range (numeric)
+Minimum range.
+Value can be found in the published state on the `minimum_range` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"minimum_range": NEW_VALUE}`.
+The minimal value is `0` and the maximum value is `6`.
+The unit of this value is `m`.
 

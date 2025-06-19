@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | ES1ZZ(TY)  |
 | Vendor  | [Linptech](/supported-devices/#v=Linptech)  |
 | Description | mmWave Presence sensor |
-| Exposes | occupancy, illuminance, target_distance, motion_detection_distance, presence_keep_time, motion_detection_sensitivity, static_detection_sensitivity, fading_time, linkquality |
-| Picture | ![Linptech ES1ZZ(TY)](https://www.zigbee2mqtt.io/images/devices/ES1ZZ(TY).jpg) |
+| Exposes | occupancy, illuminance, target_distance, motion_detection_distance, presence_keep_time, motion_detection_sensitivity, static_detection_sensitivity, fading_time, led_indicator |
+| Picture | ![Linptech ES1ZZ(TY)](https://www.zigbee2mqtt.io/images/devices/ES1ZZ(TY).png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -28,6 +28,11 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes
@@ -39,7 +44,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
 ### Illuminance (numeric)
-Raw measured illuminance.
+Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `lx`.
@@ -55,14 +60,14 @@ Motion detection distance.
 Value can be found in the published state on the `motion_detection_distance` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motion_detection_distance": NEW_VALUE}`.
-The minimal value is `75` and the maximum value is `600`.
+The minimal value is `0` and the maximum value is `600`.
 The unit of this value is `cm`.
 
 ### Presence keep time (numeric)
 Presence keep time.
 Value can be found in the published state on the `presence_keep_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `s`.
+The unit of this value is `min`.
 
 ### Motion detection sensitivity (numeric)
 Motion detection sensitivity.
@@ -83,13 +88,13 @@ Time after which the device will check again for presence.
 Value can be found in the published state on the `fading_time` property.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"fading_time": NEW_VALUE}`.
-The minimal value is `10` and the maximum value is `10000`.
+The minimal value is `0` and the maximum value is `10000`.
 The unit of this value is `s`.
 
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
+### Led indicator (binary)
+LED Presence Indicator.
+Value can be found in the published state on the `led_indicator` property.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"led_indicator": NEW_VALUE}`.
+If value equals `true` led indicator is ON, if `false` OFF.
 

@@ -18,8 +18,8 @@ pageClass: device-page
 | Model | MOSZB-141  |
 | Vendor  | [Develco](/supported-devices/#v=Develco)  |
 | Description | Motion sensor |
-| Exposes | occupancy, battery_low, linkquality |
-| Picture | ![Develco MOSZB-141](https://www.zigbee2mqtt.io/images/devices/MOSZB-141.jpg) |
+| Exposes | occupancy, battery_low |
+| Picture | ![Develco MOSZB-141](https://www.zigbee2mqtt.io/images/devices/MOSZB-141.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -39,15 +39,8 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` occupancy is ON, if `false` OFF.
 
 ### Battery low (binary)
-Indicates if the battery of this device is almost empty.
+Indicates whether the battery of the device is almost empty.
 Value can be found in the published state on the `battery_low` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 If value equals `true` battery low is ON, if `false` OFF.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 

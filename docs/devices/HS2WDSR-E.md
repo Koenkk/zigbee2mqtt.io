@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS2WDSR-E control via MQTT"
-description: "Integrate your HEIMAN HS2WDSR-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS2WDSR-E control via MQTT"
+description: "Integrate your Heiman HS2WDSR-E via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-09-16T01:20:00Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS2WDSR-E
+# Heiman HS2WDSR-E
 
 |     |     |
 |-----|-----|
 | Model | HS2WDSR-E  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Remote dimmer and color control |
-| Exposes | battery, action, linkquality |
-| Picture | ![HEIMAN HS2WDSR-E](https://www.zigbee2mqtt.io/images/devices/HS2WDSR-E.jpg) |
+| Exposes | battery, action |
+| Picture | ![Heiman HS2WDSR-E](https://www.zigbee2mqtt.io/images/devices/HS2WDSR-E.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -43,7 +43,7 @@ simulated_brightness:
 ## Exposes
 
 ### Battery (numeric)
-Remaining battery in %, can take up to 24 hours before reported..
+Remaining battery in %, can take up to 24 hours before reported.
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.
@@ -54,11 +54,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `on`, `off`, `move`, `stop`, `color_move`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 
