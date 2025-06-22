@@ -23,10 +23,6 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-Here’s a more cohesive and unified version of the text, with a consistent tone and structure:
-
----
-
 ## Notes
 
 ### Pairing the Device
