@@ -25,15 +25,22 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Re-pairing
-ZBMINI can be factory reset / re-paired with a help of a Hue dimmer switch. This is extremely helpful when your device isn't easily reachable to use the reset pin (i.e. when already hidden in a back box). See [instructions on Hue dimmer switch page](https://www.zigbee2mqtt.io/devices/324131092621.html#using-the-dimmer-to-reset-other-zigbee-devices).
+### Pairing the Device
 
-### Device stuck
-In case of switching the coordinators a device may stuck in error state which is indicated by slowly blinking light (about 1 flash per second).
-To switch a device to a pairing mode power it off for 10 sec. After power on it enters pairing mode automatically.
+To manually pair the device, press and hold the pairing button for approximately 5 seconds until the ZigBee LED indicator starts flashing, then release the button.
+
+Be aware that the device also enters pairing mode automatically after a power cycle. Therefore, whenever power is restored, make sure pairing mode is active.
+
+### Device Stuck After Coordinator Change
+
+When switching ZigBee coordinators, the device may enter an error state—indicated by a slow blinking light (approximately one flash per second).
+To resolve this, power off the device for at least 10 seconds. Upon powering it back on, the device will automatically enter pairing mode.
+
+### Re-pairing with a Hue Dimmer Remote
+
+If the ZBMINI is not easily accessible (e.g. mounted inside a wall box), it can be reset or re-paired using a Hue dimmer switch. For detailed instructions, refer to the [Hue dimmer reset guide](https://www.zigbee2mqtt.io/devices/324131092621.html#using-the-dimmer-to-reset-other-zigbee-devices).
+
 <!-- Notes END: Do not edit below this line -->
-
-
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
