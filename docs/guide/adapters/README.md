@@ -16,6 +16,7 @@ All officially supported adapters are listed on this page. Note that before an a
 ## Not recommended
 
 ### Not maintained
+
 - [ZiGate based](./zigate.md)
 
 ### Experimental
