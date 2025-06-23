@@ -24,6 +24,8 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 
+## Notes
+Warning: This device is shipped with Thread/Matter firmware. A smartphone, the Aqara Home app and an Aqara account is required for flashing the Zigbee firmware. The color of the indicator ring shows the wireless standard: blue flashing means Thread/Matter pairing, while Zigbee pairing is shown by a purple flashing indicator ring.
 
 <!-- Notes END: Do not edit below this line -->
 
