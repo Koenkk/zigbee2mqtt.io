@@ -24,7 +24,6 @@ Once you've successfully put your adapter into BSL mode, use any of the tools be
     - [CC2538-BSL](https://github.com/JelmerT/cc2538-bsl) ([instructions](./flashing/flashing_via_cc2538-bsl.md))
     - [llama-bsl](https://github.com/electrolama/llama-bsl) (fork of cc2538-bsl with added features)
 - Home Assistant addon
-
     - [TubesZB TI CC2652 FW Flasher](https://github.com/tube0013/tubeszb_addons)
     - [ZigStar TI CC2652 FW Flasher](https://github.com/mercenaruss/zigstar_addons) (fork of TubesZB with added features)
 
