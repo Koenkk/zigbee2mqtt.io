@@ -23,8 +23,8 @@ pageClass: device-page
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
-
-
+## Notes
+Supported variants: "_TZ3002_aewsvjcu", "_TZ3002_phu8ygaw"
 <!-- Notes END: Do not edit below this line -->
 
 
