@@ -39,8 +39,9 @@ To resolve this, power off the device for at least 10 seconds. Upon powering it 
 ### Re-pairing with a Hue Dimmer Remote
 
 If the ZBMINI is not easily accessible (e.g. mounted inside a wall box), it can be reset or re-paired using a Hue dimmer switch. For detailed instructions, refer to the [Hue dimmer reset guide](https://www.zigbee2mqtt.io/devices/324131092621.html#using-the-dimmer-to-reset-other-zigbee-devices).
-
 <!-- Notes END: Do not edit below this line -->
+
+
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*

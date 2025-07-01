@@ -1,6 +1,6 @@
 ---
 title: "HOBEIAN ZG-101ZS control via MQTT"
-description: "Integrate your HOBEIAN ZG-101ZSvia Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+description: "Integrate your HOBEIAN ZG-101ZS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-09-30T20:52:56Z
 pageClass: device-page
 ---
@@ -17,10 +17,9 @@ pageClass: device-page
 |-----|-----|
 | Model | ZG-101ZS  |
 | Vendor  | [HOBEIAN](/supported-devices/#v=HOBEIAN)  |
-| Description | Wireless switch with 4 buttons |
+| Description | Star Ring 4 Gang Scene Switch |
 | Exposes | battery, action |
-| Picture | ![ZG-101ZS](https://www.zigbee2mqtt.io/images/devices/ZG-101ZS.png) |
-| White-label | HOBEIAN ZG-101ZS |
+| Picture | ![HOBEIAN ZG-101ZS](https://www.zigbee2mqtt.io/images/devices/ZG-101ZS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

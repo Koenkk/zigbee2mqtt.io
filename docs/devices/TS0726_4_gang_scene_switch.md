@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | TS0726_4_gang_scene_switch  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | 4 gang switch with scene and backlight |
-| Exposes | switch (state), countdown, power_on_behavior, backlight_mode, indicator_mode, switch_mode |
+| Exposes | switch (state), countdown, power_on_behavior, backlight_mode, indicator_mode, switch_mode, action |
 | Picture | ![Tuya TS0726_4_gang_scene_switch](https://www.zigbee2mqtt.io/images/devices/TS0726_4_gang_scene_switch.png) |
 
 
@@ -158,4 +158,10 @@ Value can be found in the published state on the `switch_mode_l4` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_mode_l4": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_mode_l4": NEW_VALUE}`.
 The possible values are: `switch`, `scene`.
+
+### Action (enum)
+Triggered action (e.g. a button click).
+Value can be found in the published state on the `action` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The possible values are: `scene_1`, `scene_2`, `scene_3`, `scene_4`.
 

@@ -91,8 +91,8 @@ importers:
         specifier: 5.99.9
         version: 5.99.9
       zigbee-herdsman-converters:
-        specifier: 23.53.0
-        version: 23.53.0
+        specifier: 23.69.0
+        version: 23.69.0
 
 packages:
 
@@ -3460,8 +3460,8 @@ packages:
     resolution: {integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==}
     engines: {node: '>=6'}
 
-  zigbee-herdsman-converters@23.53.0:
-    resolution: {integrity: sha512-e/Lqt5Whu+sGUKBQPVLp8v0w00dUF+FdBBBGzKTY/DkXysXwIxSoATNFmb8N7aM1HORIjONplC2jGXJenDkFpA==}
+  zigbee-herdsman-converters@23.69.0:
+    resolution: {integrity: sha512-JHppwhLJEf8P4cSa3T0bF0nDS3Kwk2Bk1ZKtH3ec/1jUFwUGY+L9OFoz1Q0JF3L/lIR2E5ioehl5TgGG61YjVg==}
 
   zigbee-herdsman@4.0.0:
     resolution: {integrity: sha512-DdNOW8yOvS+1t5VX3Qi4FurF/jryDST4wju73JcvZ7rkEPXSfD+bhLprUX4a0QOP26DDYmDKVpygHBYXk1NMCA==}
@@ -7177,7 +7177,7 @@ snapshots:
 
   yn@3.1.1: {}
 
-  zigbee-herdsman-converters@23.53.0:
+  zigbee-herdsman-converters@23.69.0:
     dependencies:
       buffer-crc32: 1.0.0
       iconv-lite: 0.6.3

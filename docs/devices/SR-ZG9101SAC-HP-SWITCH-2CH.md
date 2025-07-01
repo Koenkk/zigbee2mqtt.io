@@ -17,9 +17,10 @@ pageClass: device-page
 |-----|-----|
 | Model | SR-ZG9101SAC-HP-SWITCH-2CH  |
 | Vendor  | [Sunricher](/supported-devices/#v=Sunricher)  |
-| Description | Zigbee 2 channel switch |
+| Description | Zigbee 2 channels switch |
 | Exposes | switch (state), power, current, voltage, energy, power_on_behavior |
 | Picture | ![Sunricher SR-ZG9101SAC-HP-SWITCH-2CH](https://www.zigbee2mqtt.io/images/devices/SR-ZG9101SAC-HP-SWITCH-2CH.png) |
+| White-label | LED-Trading UP-SA-9127D |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

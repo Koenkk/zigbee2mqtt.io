@@ -1,7 +1,7 @@
 ---
-title: "ADEO ZBEK-30 control via MQTT"
-description: "Integrate your ADEO ZBEK-30 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-06-10T22:14:42
+title: "iLightsIn HSSA18-Z-MID control via MQTT"
+description: "Integrate your iLightsIn HSSA18-Z-MID via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+addedAt: 2025-07-01T17:54:38
 pageClass: device-page
 ---
 
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# ADEO ZBEK-30
+# iLightsIn HSSA18-Z-MID
 
 |     |     |
 |-----|-----|
-| Model | ZBEK-30  |
-| Vendor  | [ADEO](/supported-devices/#v=ADEO)  |
-| Description | ENKI LEXMAN Gdansk 2900lm 60x30 RGB |
-| Exposes | light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior |
-| Picture | ![ADEO ZBEK-30](https://www.zigbee2mqtt.io/images/devices/ZBEK-30.png) |
+| Model | HSSA18-Z-MID  |
+| Vendor  | [iLightsIn](/supported-devices/#v=iLightsIn)  |
+| Description | Zhaga module |
+| Exposes | light (state, brightness), effect, power_on_behavior, illuminance, occupancy, occupancy_alarm_1, occupancy_alarm_2, tamper, battery_low |
+| Picture | ![iLightsIn HSSA18-Z-MID](https://www.zigbee2mqtt.io/images/devices/HSSA18-Z-MID.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -32,25 +32,23 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `illuminance_calibration`: Calibrates the illuminance value (percentual offset), takes into effect on next report of device. The value must be a number.
+
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
-* `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
-
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
+* `illuminance_raw`: Expose the raw illuminance value. The value must be `true` or `false`
+
+* `no_occupancy_since`: Sends a message after the last time no occupancy (occupancy: false) was detected. When setting this for example to [10, 60] a `{"no_occupancy_since": 10}` will be send after 10 seconds and a `{"no_occupancy_since": 60}` after 60 seconds. The value must be a list of [object Object].
 
 
 ## Exposes
 
 ### Light 
-This light supports the following features: `state`, `brightness`, `color_temp`, `color_temp_startup`, `color_xy`.
+This light supports the following features: `state`, `brightness`.
 - `state`: To control the state publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"state": "ON"}`, `{"state": "OFF"}` or `{"state": "TOGGLE"}`. To read the state send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"state": ""}`.
 - `brightness`: To control the brightness publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"brightness": VALUE}` where `VALUE` is a number between `0` and `254`. To read the brightness send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"brightness": ""}`.
-- `color_temp`: To control the color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`.
-- `color_temp_startup`: To set the startup color temperature (in reciprocal megakelvin a.k.a. mired scale) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color_temp_startup": VALUE}` where `VALUE` is a number between `153` and `370`, the higher the warmer the color. To read the startup color temperature send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color_temp_startup": ""}`. Besides the numeric values the following values are accepted: `coolest`, `cool`, `neutral`, `warmest`, `previous`.
-- `color_xy`: To control the XY color (CIE 1931 color space) publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"color": {"x": X_VALUE, "y": Y_VALUE}}` (e.g. `{"color":{"x":0.123,"y":0.123}}`). To read the XY color send a message to `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"color":{"x":"","y":""}}`. Alternatively it is possible to set the XY color via RGB:
-  - `{"color": {"r": R, "g": G, "b": B}}` e.g. `{"color":{"r":46,"g":102,"b":150}}`
-  - `{"color": {"rgb": "R,G,B"}}` e.g. `{"color":{"rgb":"46,102,150"}}`
-  - `{"color": {"hex": HEX}}` e.g. `{"color":{"hex":"#547CFF"}}`
 
 #### On with timed off
 When setting the state to ON, it might be possible to specify an automatic shutoff after a certain amount of time. To do this add an additional property `on_time` to the payload which is the time in seconds the state should remain on.
@@ -76,9 +74,6 @@ To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness
   "brightness_step": 40 // Increases brightness by 40
-  "color_temp_move": 60, // Starts moving color temperature up at 60 units per second
-  "color_temp_move": "stop", // Stop moving color temperature
-  "color_temp_step": 99, // Increase color temperature by 99
 }
 ````
 
@@ -87,7 +82,7 @@ Triggers an effect on the light (e.g. make light blink for a few seconds).
 Value will **not** be published in the state.
 It's not possible to read (`/get`) this value.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"effect": NEW_VALUE}`.
-The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`, `colorloop`, `stop_colorloop`.
+The possible values are: `blink`, `breathe`, `okay`, `channel_change`, `finish_effect`, `stop_effect`.
 
 ### Power-on behavior (enum)
 Controls the behavior when the device is powered on after power loss.
@@ -95,4 +90,42 @@ Value can be found in the published state on the `power_on_behavior` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"power_on_behavior": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"power_on_behavior": NEW_VALUE}`.
 The possible values are: `off`, `on`, `toggle`, `previous`.
+
+### Illuminance (numeric)
+Measured illuminance.
+Value can be found in the published state on the `illuminance` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"illuminance": ""}`.
+It's not possible to write (`/set`) this value.
+The unit of this value is `lx`.
+
+### Occupancy (binary)
+Indicates whether the device detected occupancy.
+Value can be found in the published state on the `occupancy` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"occupancy": ""}`.
+It's not possible to write (`/set`) this value.
+If value equals `true` occupancy is ON, if `false` OFF.
+
+### Occupancy alarm 1 (binary)
+Indicates whether the device detected occupancy (alarm_1).
+Value can be found in the published state on the `occupancy_alarm_1` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` occupancy alarm 1 is ON, if `false` OFF.
+
+### Occupancy alarm 2 (binary)
+Indicates whether the device detected occupancy (alarm_2).
+Value can be found in the published state on the `occupancy_alarm_2` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` occupancy alarm 2 is ON, if `false` OFF.
+
+### Tamper (binary)
+Indicates whether the device is tampered.
+Value can be found in the published state on the `tamper` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` tamper is ON, if `false` OFF.
+
+### Battery low (binary)
+Indicates whether the battery of the device is almost empty.
+Value can be found in the published state on the `battery_low` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+If value equals `true` battery low is ON, if `false` OFF.
 
