@@ -36,6 +36,7 @@ pageClass: device-page
 * `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
 
+
 ## Exposes
 
 ### Cover 
@@ -77,6 +78,7 @@ Device behavior for externally connected switch type:
 * Flip-switch: For such kind of switch the button remains after the push in its position and does not return into neutral position.
 * Sync-switch: This mode is a special option for a button-switch. “Sync” means that the relay will be automatically synchronized with the physical switch. This mode allows e.g. a more precise angle control of jalousies. 
 * Button-switch: Such kind of switch only transmits a signal as long as button is actually pressed. After the button-push the button returns into neutral position. However, there are 2 ways to press the button, either with a short or longer (typically >1s) push. In dependency of the push the modul generates a different behavior.
+
 
 
 ## Comment
