@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SC500ZB-v4  |
 | Vendor  | [LoraTap](/supported-devices/#v=LoraTap)  |
 | Description | Smart curtain/shutter switch |
-| Exposes | cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode |
+| Exposes | cover (state, position), moving, motor_reversal, calibration_to_open, calibration_to_close, calibration_time_to_open, calibration_time_to_close, switch_type_curtain |
 | Picture | ![LoraTap SC500ZB-v4](https://www.zigbee2mqtt.io/images/devices/SC500ZB-v4.png) |
 
 
