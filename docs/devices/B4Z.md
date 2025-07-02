@@ -28,20 +28,21 @@ pageClass: device-page
 <!-- Notes END: Do not edit below this line -->
 
 
-
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
+* `position`: This parameter motivates to drive the shutter in a certain opening grade (in percent) or provides information about the assumed opening grade.
+
 * `motor_reversal`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
+* `calibration`: This option allows the determination of "calibration_time" by actual shutter closing. For more details refer to manufacture's manual.
 
 * `calibration_time`:Defines open-to-close period directly by setting a value (seconds). Publish calibration time attribute only, when "Calibration"-mode is inactive. 
 
 * `switch_time_curtain`: Device behavior for externally connected switch type: 0: flip-switch, 1: sync-switch, 2: button-switch
-Button-switch: Such kind of switch only transmits a signal as long as button is actually pressed. After the button-push the button returns into neutral position.
-However there are 2 ways to press the button, either with a short or longer (typically >1s) push. In dependency of the push the modul generates a different behavior.
-Flip-switch: For such kind of switch the button remains after the push in its position and does not return into neutral position.
-Sync-switch: On Nous B4Z switch this mode allows a more precise angle control of jalousies. The remaining behavior I would rate as identical with "Flip-switch"-mode.
-LoraTap SC500ZBv2 seems not to show a difference compared to "Button-switch"-mode.
+1. Flip-switch: For such kind of switch the button remains after the push in its position and does not return into neutral position.
+2. Sync-switch: This mode is a special option for a button-switch. “Sync” means that the relay will be automatically synchronized with the physical switch. This mode allows e.g. a more precise angle control of jalousies. 
+3. Button-switch: Such kind of switch only transmits a signal as long as button is actually pressed. After the button-push the button returns into neutral position. However, there are 2 ways to press the button, either with a short or longer (typically >1s) push. In dependency of the push the modul generates a different behavior.
 
 * `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
@@ -78,8 +79,11 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 The unit of this value is `s`. A value with 1 decimal is allowed (e.g. 60.4).
 
 ### Switch type curtain (enum)
-Value can be found in the published state on the `moving` property.
+Value can be found in the published state on the `switch_type_curtain` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_curtain": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_curtain": NEW_VALUE}`.
+The possible values are: `flip-switch`, `sync-switch`, `button-switch`.
 
 
-## Comments
-* Consider that indicator_mode and backlight_mode properties are effectively not supported on that device, although actually foreseen in Tuya specs.
+## Comment
+Consider that indicator_mode and backlight_mode properties are effectively not supported on that device, although actually foreseen in Tuya specs.
