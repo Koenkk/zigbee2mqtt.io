@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | B4Z  |
 | Vendor  | [Nous](/supported-devices/#v=Nous)  |
 | Description | Curtain switch |
-| Exposes | cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode |
+| Exposes | cover (state, position), moving, motor_reversal, calibration, calibration_time, switch_type_curtain |
 | Picture | ![Nous B4Z](https://www.zigbee2mqtt.io/images/devices/B4Z.png) |
 
 
@@ -32,7 +32,16 @@ pageClass: device-page
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
-* `invert_cover`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+* `motor_reversal`: Inverts the cover position, false: open=100,close=0, true: open=0,close=100 (default false). The value must be `true` or `false`
+
+* `calibration_time`:Defines open-to-close period directly by setting a value (seconds). Publish calibration time attribute only, when "Calibration"-mode is inactive. 
+
+* `switch_time_curtain`: Device behavior for externally connected switch type: 0: flip-switch, 1: sync-switch, 2: button-switch
+Button-switch: Such kind of switch only transmits a signal as long as button is actually pressed. After the button-push the button returns into neutral position.
+However there are 2 ways to press the button, either with a short or longer (typically >1s) push. In dependency of the push the modul generates a different behavior.
+Flip-switch: For such kind of switch the button remains after the push in its position and does not return into neutral position.
+Sync-switch: On Nous B4Z switch this mode allows a more precise angle control of jalousies. The remaining behavior I would rate as identical with "Flip-switch"-mode.
+LoraTap SC500ZBv2 seems not to show a difference compared to "Button-switch"-mode.
 
 * `cover_position_tilt_disable_report`: Do not publish set cover target position as a normal 'position' value (default false). The value must be `true` or `false`
 
@@ -64,20 +73,13 @@ If value equals `ON` calibration is ON, if `OFF` OFF.
 
 ### Calibration time (numeric)
 Value can be found in the published state on the `calibration_time` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `s`.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time": NEW_VALUE}`.
+The unit of this value is `s`. A value with 1 decimal is allowed (e.g. 60.4).
 
-### Indicator mode (enum)
-LED indicator mode.
-Value can be found in the published state on the `indicator_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
-The possible values are: `off`, `off/on`, `on/off`, `on`.
+### Switch type curtain (enum)
+Value can be found in the published state on the `moving` property.
 
-### Backlight mode (binary)
-Mode of the backlight.
-Value can be found in the published state on the `backlight_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
-If value equals `ON` backlight mode is ON, if `OFF` OFF.
 
+## Comments
+* Consider that indicator_mode and backlight_mode properties are effectively not supported on that device, although actually foreseen in Tuya specs.
