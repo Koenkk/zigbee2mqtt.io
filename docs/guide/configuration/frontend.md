@@ -4,13 +4,7 @@ sidebarDepth: 1
 
 # Frontend
 
-::: tip
-Ongoing discussion about the frontend can be found [here](https://github.com/Koenkk/zigbee2mqtt/issues/4266)
-:::
-
 Zigbee2MQTT has a built-in web-based frontend.
-
-![Frontend](../../images/frontend.png)
 
 To enable the frontend add the following to your `configuration.yaml`. This will start the frontend on port `8080`.
 
@@ -24,7 +18,9 @@ frontend:
 ```yaml
 frontend:
     enabled: true
-    # Optional, default 8080
+    # Optional, default: zigbee2mqtt-frontend, possible: zigbee2mqtt-frontend, zigbee2mqtt-windfront
+    package: zigbee2mqtt-frontend
+    # Optional, default: 8080
     port: 8080
     # Optional, empty by default to listen on both IPv4 and IPv6. Opens a unix socket when given a path instead of an address (e.g. '/run/zigbee2mqtt/zigbee2mqtt.sock')
     # Don't set this if you use Docker or the Home Assistant add-on unless you're sure the chosen IP is available inside the container
@@ -47,6 +43,27 @@ frontend:
 To specify the `auth_token` in a different file set e.g. `auth_token: '!secret.yaml auth_token'`, create a file called `secret.yaml` next to `configuration.yaml` with content `auth_token: super-secret-token`.
 
 **NOTE:** If you are running Zigbee2MQTT via the Home Assistant addon you cannot change the port. The addon will force the frontend to run on port 8099 as Home Assistant Ingress requires this.
+
+### `package` setting details
+
+You can change the package used for frontend (requires a restart of Zigbee2MQTT). This will change the web-based UI of Zigbee2MQTT accordingly.
+
+::: warning IMPORTANT
+The features, links and general design in each package will vary.
+:::
+
+###### zigbee2mqtt-frontend
+
+The original frontend.
+![Frontend](../../images/frontend.png)
+Details: [https://github.com/nurikk/zigbee2mqtt-frontend](https://github.com/nurikk/zigbee2mqtt-frontend)
+
+###### Experimental: zigbee2mqtt-windfront
+
+A remake of the original frontend with new code, new design, new features...
+![WindFront](../../images/windfront.png)
+Details: [https://github.com/Nerivec/zigbee2mqtt-windfront](https://github.com/Nerivec/zigbee2mqtt-windfront)
+Feedback can be provided in [#27564](https://github.com/Koenkk/zigbee2mqtt/discussions/27564).
 
 ## Nginx proxy configuration
 

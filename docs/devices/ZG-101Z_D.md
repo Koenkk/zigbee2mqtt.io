@@ -1,7 +1,7 @@
 ---
 title: "Tuya ZG-101Z/D control via MQTT"
 description: "Integrate your Tuya ZG-101Z/D via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2025-05-01T17:56:32
 pageClass: device-page
 ---
 
@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | ZG-101Z/D  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart knob |
-| Exposes | battery, action |
+| Exposes | operation_mode, battery, action |
 | Picture | ![Tuya ZG-101Z/D](https://www.zigbee2mqtt.io/images/devices/ZG-101Z-D.png) |
 
 
@@ -31,6 +31,13 @@ pageClass: device-page
 
 
 ## Exposes
+
+### Operation mode (enum)
+Operation mode: "command" - for group control, "event" - for clicks.
+Value can be found in the published state on the `operation_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
+The possible values are: `command`, `event`.
 
 ### Battery (numeric)
 Remaining battery in %.
@@ -45,4 +52,32 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `rotate_left`, `rotate_right`.
+
+ate on the `action_step_size` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+
+### Action transition time (numeric)
+Value can be found in the published state on the `action_transition_time` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `s`.
+
+### Action rate (numeric)
+Value can be found in the published state on the `action_rate` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `255`.
+
+### Battery (numeric)
+Remaining battery in %, can take up to 24 hours before reported.
+Value can be found in the published state on the `battery` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The minimal value is `0` and the maximum value is `100`.
+The unit of this value is `%`.
+
+### Operation mode (enum)
+Operation mode: "command" - for group control, "event" - for clicks.
+Value can be found in the published state on the `operation_mode` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"operation_mode": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"operation_mode": NEW_VALUE}`.
+The possible values are: `command`, `event`.
 

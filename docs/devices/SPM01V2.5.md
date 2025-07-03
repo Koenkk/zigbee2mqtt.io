@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | SPM01V2.5  |
 | Vendor  | [Tuya](/supported-devices/#v=Tuya)  |
 | Description | Smart energy monitor for 1P+N system |
-| Exposes | voltage, power, current, energy, produced_energy, power_factor, ac_frequency |
+| Exposes | voltage, power, current, energy, produced_energy, power_factor, ac_frequency, data_report_duration |
 | Picture | ![Tuya SPM01V2.5](https://www.zigbee2mqtt.io/images/devices/SPM01V2.5.png) |
 
 
@@ -96,4 +96,11 @@ Measured electrical AC frequency.
 Value can be found in the published state on the `ac_frequency` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `Hz`.
+
+### Data report duration (numeric)
+WARNING: You must update device firmware to V3.2.2 before changing this setting! Use Tuya gateway/app to update firmware. Data report duration set (Threshold value range 5~3600 seconds).
+Value will **not** be published in the state.
+It's not possible to read (`/get`) this value.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"data_report_duration": NEW_VALUE}`.
+The minimal value is `30` and the maximum value is `3600`.
 

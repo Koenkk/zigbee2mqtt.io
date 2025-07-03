@@ -1,6 +1,6 @@
 ---
-title: "Neo NAS-PD07 control via MQTT"
-description: "Integrate your Neo NAS-PD07 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "NEO NAS-PD07 control via MQTT"
+description: "Integrate your NEO NAS-PD07 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-10-30T12:58:50
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# Neo NAS-PD07
+# NEO NAS-PD07
 
 |     |     |
 |-----|-----|
 | Model | NAS-PD07  |
-| Vendor  | [Neo](/supported-devices/#v=Neo)  |
+| Vendor  | [NEO](/supported-devices/#v=NEO)  |
 | Description | Motion, temperature & humidity sensor |
 | Exposes | occupancy, humidity, temperature, tamper, battery_low, power_type, alarm, temperature_min, temperature_max, temperature_scale, humidity_min, humidity_max |
-| Picture | ![Neo NAS-PD07](https://www.zigbee2mqtt.io/images/devices/NAS-PD07.png) |
+| Picture | ![NEO NAS-PD07](https://www.zigbee2mqtt.io/images/devices/NAS-PD07.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->

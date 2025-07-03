@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS2WDS control via MQTT"
-description: "Integrate your HEIMAN HS2WDS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS2WDS control via MQTT"
+description: "Integrate your Heiman HS2WDS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2022-09-30T20:52:51
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS2WDS
+# Heiman HS2WDS
 
 |     |     |
 |-----|-----|
 | Model | HS2WDS  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | LED 9W CCT E27 |
 | Exposes | light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior |
-| Picture | ![HEIMAN HS2WDS](https://www.zigbee2mqtt.io/images/devices/HS2WDS.png) |
+| Picture | ![Heiman HS2WDS](https://www.zigbee2mqtt.io/images/devices/HS2WDS.png) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -67,7 +67,7 @@ The direction of move and step can be either up or down, provide a negative valu
 To do this send a payload like below to `zigbee2mqtt/FRIENDLY_NAME/set`
 
 **NOTE**: brightness move/step will stop at the minimum brightness and won't turn on the light when it's off. In this case use `brightness_move_onoff`/`brightness_step_onoff`
-````js
+```js
 {
   "brightness_move": -40, // Starts moving brightness down at 40 units per second
   "brightness_move": 0, // Stop moving brightness

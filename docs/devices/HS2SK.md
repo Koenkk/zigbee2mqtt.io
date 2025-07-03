@@ -1,6 +1,6 @@
 ---
-title: "HEIMAN HS2SK control via MQTT"
-description: "Integrate your HEIMAN HS2SK via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
+title: "Heiman HS2SK control via MQTT"
+description: "Integrate your Heiman HS2SK via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -11,15 +11,15 @@ pageClass: device-page
 <!-- Do not use h1 or h2 heading within "## Notes"-Section. -->
 <!-- !!!! -->
 
-# HEIMAN HS2SK
+# Heiman HS2SK
 
 |     |     |
 |-----|-----|
 | Model | HS2SK  |
-| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Vendor  | [Heiman](/supported-devices/#v=Heiman)  |
 | Description | Smart metering plug |
 | Exposes | switch (state), power, current, voltage, energy |
-| Picture | ![HEIMAN HS2SK](https://www.zigbee2mqtt.io/images/devices/HS2SK.png) |
+| Picture | ![Heiman HS2SK](https://www.zigbee2mqtt.io/images/devices/HS2SK.png) |
 | White-label | Schneider Electric CCTFR6500 |
 
 

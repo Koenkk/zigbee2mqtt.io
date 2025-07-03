@@ -17,7 +17,7 @@ pageClass: device-page
 |-----|-----|
 | Model | SC500ZB  |
 | Vendor  | [LoraTap](/supported-devices/#v=LoraTap)  |
-| Description | Roller Shutter Blind Module |
+| Description | Smart curtain/shutter switch |
 | Exposes | cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode |
 | Picture | ![LoraTap SC500ZB](https://www.zigbee2mqtt.io/images/devices/SC500ZB.png) |
 
@@ -64,7 +64,6 @@ To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/
 If value equals `ON` calibration is ON, if `OFF` OFF.
 
 ### Calibration time (numeric)
-Calibration time.
 Value can be found in the published state on the `calibration_time` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `s`.

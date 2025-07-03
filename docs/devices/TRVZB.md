@@ -92,7 +92,7 @@ Whether to use the value of the internal temperature sensor or an external tempe
 Value can be found in the published state on the `temperature_sensor_select` property.
 To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"temperature_sensor_select": ""}`.
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"temperature_sensor_select": NEW_VALUE}`.
-The possible values are: `internal`, `external`.
+The possible values are: `internal`, `external`, `external_2`, `external_3`.
 
 ### External temperature (numeric)
 The value of an external temperature sensor. Note: synchronisation of this value with the external temperature sensor needs to happen outside of Zigbee2MQTT..

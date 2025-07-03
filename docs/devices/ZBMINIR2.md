@@ -25,8 +25,13 @@ pageClass: device-page
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
 
-### Re-pair / starting pairing mode again
-Quickly press rocker switch 10 times.
+### Pairing
+There are two different options to reset the device and enter pairing mode:
+
+* button: Press and hold the device button for 5 seconds.
+* switch: Toggle an connected external switch 10 times consecutively. This is especially useful when there is no direct physical access to the button.
+
+The device will stay in "state" : "OFF" and cannot be switched while it is in pairing mode. If not successfully paired, it will exit pairing mode after 180 seconds.
 <!-- Notes END: Do not edit below this line -->
 
 
