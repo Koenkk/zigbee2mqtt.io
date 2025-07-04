@@ -283,7 +283,7 @@ function getExposeDocs(expose, definition) {
                 lines.push(`  "color_temp_move": -40, // Starts moving color temperature down at 40 units per second`);
                 lines.push(`  "color_temp_move": "stop", // Stop moving color temperature`);
                 lines.push(`  "color_temp_move": "release", // Stop moving color temperature`);
-                lines.push(`  "color_temp_move": "0", // Stop moving color temperature`);
+                lines.push(`  "color_temp_move": 0, // Stop moving color temperature`);
                 lines.push(`  "color_temp_move": "up", // Move to warmer color temperature at default rate`);
                 lines.push(`  "color_temp_move": 1, // Move to warmer color temperature at default rate`);
                 lines.push(`  "color_temp_move": "down", // Move to cooler color temperature at default rate`);
