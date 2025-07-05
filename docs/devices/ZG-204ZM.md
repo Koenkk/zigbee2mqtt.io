@@ -28,6 +28,10 @@ pageClass: device-page
 The manufacturer provides a good [technical in-depth document](https://doc.szalarm.com/zg-205Z/en/) that explains
 what the various settings mean, good default values for those, a recommended method for trimming these values and 
 various other considerations (like installation position) to get good results.
+
+There seem to be multiple versions of this device which visually look the same. 
+Devices which are detected as `Zigbee Model=TS0601, Zigbee Manufacturer=_TZE200_kb5noeto` are known to get stuck in "presence detected" state. See this [review](https://smarthomescene.com/reviews/zigbee-battery-powered-presence-sensor-zg-204zm-review/) for more user experiences.
+One of the suggestions is to remove residual solder-flux from the PCB and/or to resolder some components. 
 <!-- Notes END: Do not edit below this line -->
 
 
