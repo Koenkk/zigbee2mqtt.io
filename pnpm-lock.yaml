@@ -12,8 +12,8 @@ importers:
         specifier: 1.17.0
         version: 1.17.0
       core-js:
-        specifier: 3.43.0
-        version: 3.43.0
+        specifier: 3.44.0
+        version: 3.44.0
       quasar:
         specifier: 2.18.1
         version: 2.18.1
@@ -1270,8 +1270,8 @@ packages:
     peerDependencies:
       webpack: ^5.1.0
 
-  core-js@3.43.0:
-    resolution: {integrity: sha512-N6wEbTTZSYOY2rYAn85CuvWWkCK6QweMn7/4Nr3w+gDBeBhk/x4EJeY6FPo4QzDoJZxVTv8U7CMvgWk6pOHHqA==}
+  core-js@3.44.0:
+    resolution: {integrity: sha512-aFCtd4l6GvAXwVEh3XbbVqJGHDJt0OZRa+5ePGx3LLwi12WfexqQxcsohb2wgsa/92xtl19Hd66G/L+TaAxDMw==}
 
   core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
@@ -4921,7 +4921,7 @@ snapshots:
       tinyglobby: 0.2.14
       webpack: 5.99.9
 
-  core-js@3.43.0: {}
+  core-js@3.44.0: {}
 
   core-util-is@1.0.3: {}
 
