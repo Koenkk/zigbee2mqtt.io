@@ -24,6 +24,8 @@ pageClass: device-page
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
 ## Notes
+There is an [issue pending](https://github.com/Koenkk/zigbee2mqtt/issues/18950) 
+that the reported values are much too high. 
 
 ### Pairing
 To start pairing, press the button (pinhole on the side of the device) using a
@@ -57,7 +59,7 @@ If value equals `true` occupancy is ON, if `false` OFF.
 Measured illuminance.
 Value can be found in the published state on the `illuminance` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
-The unit of this value is `lx`.
+The unit of this value is `lx`. 
 
 ### Battery (numeric)
 Remaining battery in %, can take up to 24 hours before reported.
