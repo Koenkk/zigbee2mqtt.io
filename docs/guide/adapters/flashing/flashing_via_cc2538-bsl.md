@@ -58,7 +58,7 @@ Download the firmware for your adapter from the [Supported adapter page](../READ
 wget https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC1352P2_CC2652P_launchpad_coordinator_20240710.zip
 unzip CC1352P2_CC2652P_launchpad_coordinator_20240710.zip
 
-sudo python3 cc2538-bsl.py -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb ./CC1352P2_CC2652P_launchpad_coordinator_20240710.hex
+sudo python3 cc2538_bsl/cc2538_bsl.py -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb ./CC1352P2_CC2652P_launchpad_coordinator_20240710.hex
 ```
 
 `-ewv` means Mass **e**rase, **w**rite, **v**erify  
