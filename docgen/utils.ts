@@ -73,7 +73,7 @@ for (const definition of baseDefinitions) {
                 description: description || resolvedDefinition.description,
                 whiteLabel: undefined,
                 // @ts-expect-error for expose generator
-                whiteLabelFingerprint: 'fingerprint' in whiteLabel ? whiteLabel.fingerprint : undefined, 
+                whiteLabelFingerprint: 'fingerprint' in whiteLabel ? whiteLabel.fingerprint : undefined,
             });
         }
 
