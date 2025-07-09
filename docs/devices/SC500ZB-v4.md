@@ -56,28 +56,34 @@ To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME
 To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"motor_reversal": NEW_VALUE}`.
 If value equals `ON` motor reversal is ON, if `OFF` OFF.
 
-### Calibration (binary)
-Value can be found in the published state on the `calibration` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration": NEW_VALUE}`.
-If value equals `ON` calibration is ON, if `OFF` OFF.
+### Calibration to open (binary)
+Value can be found in the published state on the `calibration_to_open` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_to_open": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_to_open": NEW_VALUE}`.
+If value equals `ON` calibration to open is ON, if `OFF` OFF.
 
-### Calibration time (numeric)
-Value can be found in the published state on the `calibration_time` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
+### Calibration to close (binary)
+Value can be found in the published state on the `calibration_to_close` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_to_close": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_to_close": NEW_VALUE}`.
+If value equals `ON` calibration to close is ON, if `OFF` OFF.
+
+### Calibration time to open (numeric)
+Value can be found in the published state on the `calibration_time_to_open` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time_to_open": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time_to_open": NEW_VALUE}`.
 The unit of this value is `s`.
 
-### Indicator mode (enum)
-LED indicator mode.
-Value can be found in the published state on the `indicator_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"indicator_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"indicator_mode": NEW_VALUE}`.
-The possible values are: `off`, `off/on`, `on/off`, `on`.
+### Calibration time to close (numeric)
+Value can be found in the published state on the `calibration_time_to_close` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"calibration_time_to_close": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"calibration_time_to_close": NEW_VALUE}`.
+The unit of this value is `s`.
 
-### Backlight mode (binary)
-Mode of the backlight.
-Value can be found in the published state on the `backlight_mode` property.
-To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"backlight_mode": ""}`.
-To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"backlight_mode": NEW_VALUE}`.
-If value equals `ON` backlight mode is ON, if `OFF` OFF.
+### Switch type curtain (enum)
+External switch type.
+Value can be found in the published state on the `switch_type_curtain` property.
+To read (`/get`) the value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/get` with payload `{"switch_type_curtain": ""}`.
+To write (`/set`) a value publish a message to topic `zigbee2mqtt/FRIENDLY_NAME/set` with payload `{"switch_type_curtain": NEW_VALUE}`.
+The possible values are: `flip-switch`, `sync-switch`, `button-switch`, `button2-switch`.
 

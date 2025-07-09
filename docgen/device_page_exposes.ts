@@ -8,10 +8,11 @@ const access = {
 };
 
 export function generateExpose(definition) {
+    const manufacturerName = definition.whiteLabelFingerprint?.[0].manufacturerName;
     return `
 ## Exposes
 
-${(typeof definition.exposes === 'function' ? definition.exposes() : definition.exposes).map((e) => getExposeDocs(e, definition)).join('\n\n')}
+${(typeof definition.exposes === 'function' ? definition.exposes({isDummyDevice: true, manufacturerName}, {}) : definition.exposes).map((e) => getExposeDocs(e, definition)).join('\n\n')}
 `;
 }
 
