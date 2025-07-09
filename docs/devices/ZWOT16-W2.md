@@ -1,7 +1,7 @@
 ---
 title: "AVATTO ZWOT16-W2 control via MQTT"
 description: "Integrate your AVATTO ZWOT16-W2 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2025-07-09T18:35:13.228Z
 pageClass: device-page
 ---
 

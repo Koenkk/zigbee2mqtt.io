@@ -1,7 +1,7 @@
 ---
 title: "Tuya TS0001_1_gang_switch control via MQTT"
 description: "Integrate your Tuya TS0001_1_gang_switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2025-07-09T18:35:13.260Z
 pageClass: device-page
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Tuya TS0726_1_gang_scene_switch control via MQTT"
 description: "Integrate your Tuya TS0726_1_gang_scene_switch via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 
+addedAt: 2025-07-09T18:35:13.260Z
 pageClass: device-page
 ---
 
