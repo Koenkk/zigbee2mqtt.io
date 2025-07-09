@@ -18,6 +18,10 @@ export const sidebar: SidebarOptions = {
             children: [...getFiles('guide/installation')],
         },
         {
+            text: 'Settings',
+            link: '/guide/settings.md',
+        },
+        {
             text: 'Configuration',
             link: '/guide/configuration/',
             children: [
