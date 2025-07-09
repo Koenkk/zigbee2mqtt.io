@@ -1,7 +1,7 @@
 ---
 title: "Conecto COZIGPMS control via MQTT"
 description: "Integrate your Conecto COZIGPMS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
-addedAt: 2025-07-09T18:35:13.243Z
+addedAt: 2025-07-09T18:35:13
 pageClass: device-page
 ---
 
