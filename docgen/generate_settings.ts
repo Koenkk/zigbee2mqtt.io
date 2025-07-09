@@ -104,7 +104,7 @@ ${groupProperties(definition.properties, depth + 1, definition.required).join('\
 export default async function generate_settings() {
     console.log(`Generating settings`);
 
-    const schemaRsp = await fetch('https://github.com/Koenkk/zigbee2mqtt/raw/refs/heads/master/lib/util/settings.schema.json');
+    const schemaRsp = await fetch('https://github.com/Koenkk/zigbee2mqtt/raw/refs/heads/dev/lib/util/settings.schema.json');
     const schemaJson = await schemaRsp.json();
 
     const result = `---
