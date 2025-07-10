@@ -14,7 +14,7 @@ In this case we use a Sonoff Zigbee 3.0 USB Dongle Plus and flash the firmware w
 ```bash
 docker run --rm \
     --device /dev/ttyUSB0:/dev/ttyUSB0 \
-    -e FIRMWARE_URL=https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC1352P2_CC2652P_launchpad_coordinator_20240710.zip \
+    -e FIRMWARE_URL=https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20250321/CC1352P2_CC2652P_launchpad_coordinator_20250321.zip \
     ckware/ti-cc-tool -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb
 ```
 
@@ -55,10 +55,10 @@ Download the firmware for your adapter from the [Supported adapter page](../READ
 4. In this case we will flash `CC1352P2_CC2652P_launchpad_coordinator_***.zip`.
 
 ```bash
-wget https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20240710/CC1352P2_CC2652P_launchpad_coordinator_20240710.zip
-unzip CC1352P2_CC2652P_launchpad_coordinator_20240710.zip
+wget https://github.com/Koenkk/Z-Stack-firmware/releases/download/Z-Stack_3.x.0_coordinator_20250321/CC1352P2_CC2652P_launchpad_coordinator_20250321.zip
+unzip CC1352P2_CC2652P_launchpad_coordinator_20250321.zip
 
-sudo python3 cc2538_bsl/cc2538_bsl.py -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb ./CC1352P2_CC2652P_launchpad_coordinator_20240710.hex
+sudo python3 cc2538_bsl/cc2538_bsl.py -ewv -p /dev/ttyUSB0 --bootloader-sonoff-usb ./CC1352P2_CC2652P_launchpad_coordinator_20250321.hex
 ```
 
 `-ewv` means Mass **e**rase, **w**rite, **v**erify  
@@ -70,7 +70,7 @@ If the flash process was successfully done, an output like this appears:
 ```
 sonoff
 Opening port /dev/ttyUSB0, baud 500000
-Reading data from ../CC1352P2_CC2652P_launchpad_coordinator_20240710.hex
+Reading data from ../CC1352P2_CC2652P_launchpad_coordinator_20250321.hex
 Your firmware looks like an Intel Hex file
 Connecting to target...
 CC1350 PG2.0 (7x7mm): 352KB Flash, 20KB SRAM, CCFG.BL_CONFIG at 0x00057FD8
@@ -90,7 +90,7 @@ Verifying by comparing CRC32 calculations.
 Zigbee2MQTT will output the installed firmware version to the Zigbee2MQTT log on startup:
 
 ```
-Zigbee2MQTT:info  2022-01-05 22:36:34: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20240710,"transportrev":2},"type":"zStack3x0"}''
+Zigbee2MQTT:info  2022-01-05 22:36:34: Coordinator firmware version: '{"meta":{"maintrel":1,"majorrel":2,"minorrel":7,"product":1,"revision":20250321,"transportrev":2},"type":"zStack3x0"}''
 ```
 
-In the above example the version is `20240710`.
+In the above example the version is `20250321`.
