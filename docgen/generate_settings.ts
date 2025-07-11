@@ -212,7 +212,7 @@ pageClass: settings-page
 <!-- ATTENTION: This file is auto-generated through docgen, do not edit! -->
 <!-- !!!! -->
 
-# Settings
+# All Settings
 
 This page contains all currently supported settings in \`configuration.yaml\`.
 
@@ -223,5 +223,5 @@ The code blocks show an **example value** for each setting (may be the default o
 ${groupProperties(schemaJson.properties, [], schemaJson.required, schemaJson.definitions).sort().join('\r\n')}
 `;
 
-    return generatePage(result, 'docs/guide/settings.md');
+    return generatePage(result, 'docs/guide/configuration/all-settings.md');
 }

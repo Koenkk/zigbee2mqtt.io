@@ -24,11 +24,6 @@ export const navbar: NavbarOptions = [
                 link: '/supported-devices/',
             },
             '/guide/installation/',
-            {
-                text: 'Settings',
-                link: '/guide/settings.md',
-                activeMatch: '/guide/settings',
-            },
             '/guide/configuration/',
             {
                 text: 'Usage',

@@ -18,10 +18,6 @@ export const sidebar: SidebarOptions = {
             children: [...getFiles('guide/installation')],
         },
         {
-            text: 'Settings',
-            link: '/guide/settings.md',
-        },
-        {
             text: 'Configuration',
             link: '/guide/configuration/',
             children: [
@@ -37,6 +33,7 @@ export const sidebar: SidebarOptions = {
                 '/guide/configuration/homeassistant.md',
                 '/guide/configuration/more-config-options.md',
                 '/guide/configuration/configuration-update.md',
+                '/guide/configuration/all-settings.md',
             ],
         },
         {
