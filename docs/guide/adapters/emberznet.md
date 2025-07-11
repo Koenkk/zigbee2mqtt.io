@@ -173,6 +173,18 @@ Note: can also be powered via USB (with a special case) and used with a simple E
 
 ### Hybrid (USB + Network)
 
+::: details SMLIGHT SLZB-06mg26
+
+Chip: [efr32mg26b420f3200im48](https://www.silabs.com/wireless/zigbee/efr32mg26-series-2-socs/device.efr32mg26b420f3200im48?tab=specs)
+
+With external antenna.
+
+- [Product page](https://smlight.tech/product/slzb-06mg26/)
+
+<img src="../../images/smlight-slzb-06mg24.jpg" width="200" />
+
+:::
+
 ::: details SMLIGHT SLZB-06mg24
 
 Chip: [efr32mg24a020f1024im40](https://www.silabs.com/wireless/zigbee/efr32mg24-series-2-socs/device.efr32mg24a020f1024im40?tab=specs)
